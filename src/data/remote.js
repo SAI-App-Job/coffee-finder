@@ -1,4 +1,4 @@
-const BASE_URL = "https://raw.githubusercontent.com/SAI-App-Job/coffee-finder/main/data/";
+const BASE_URL = "https://raw.githubusercontent.com/SAI-App-Job/coffee-finder/master/data/";
 
 async function fetchJSON(path) {
   const res = await fetch(BASE_URL + path, { cache: "no-store" });
