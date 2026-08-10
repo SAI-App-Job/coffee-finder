@@ -28,6 +28,17 @@ last_scraped_at/scraped_atを毎回の実行時刻でナイーブに上書きす
 というワークフロー側の意図が壊れる。そのため、タイムスタンプ以外の内容が
 前回コミット時と同一の場合は、タイムスタンプも前回の値をそのまま引き継ぐ
 (stabilize_timestampで比較・引き継ぎを行う)。
+
+【手動入力データ(scraper/manual/shops/*.json)の扱い】
+公式サイトを持たずスクレイピング対象にできない店舗(Instagram/Googleマップ
+のみで営業している等)は、scraper/manual/README.mdの運用に従い
+scraper/manual/shops/配下に手動でJSONを置く。このスクリプトは毎回の実行時に
+このディレクトリも読み込み、data_source: "manual" のタグを保持したまま
+data/shops.json・data/products.jsonへマージする。手動データは実際の
+スクレイピング(data_*.json)とは無関係に処理されるため、対応するスクレイパー
+が無くても取り込まれる。値は人間が確認・入力したものをそのまま使うため、
+scraped_at/last_scraped_atのような自動タイムスタンプは付与しない
+(代わりに人間が更新するlast_verified_atをそのまま保持する)。
 """
 
 import json
@@ -36,6 +47,7 @@ from pathlib import Path
 
 SCRAPER_DIR = Path(__file__).resolve().parent
 DATA_DIR = SCRAPER_DIR.parent / "data"
+MANUAL_SHOPS_DIR = SCRAPER_DIR / "manual" / "shops"
 
 SOURCE_FILES = {
     "Denim bis": "data_denimbis.json",
@@ -172,6 +184,68 @@ def build_product(record: dict, shop_map_query: str, now_iso: str) -> dict:
     }
 
 
+def load_manual_shop_files() -> list[Path]:
+    if not MANUAL_SHOPS_DIR.exists():
+        return []
+    # TEMPLATE.json自体は manual/ 直下にありshops/配下には置かない運用のため、
+    # ここではshops/内の*.jsonをそのまま全件対象にすればよい
+    return sorted(MANUAL_SHOPS_DIR.glob("*.json"))
+
+
+def build_manual_shop(raw_shop: dict) -> dict:
+    return {
+        "name": raw_shop["name"],
+        "url": raw_shop.get("url"),
+        "instagram_url": raw_shop.get("instagram_url"),
+        "platform": raw_shop.get("platform"),
+        "shop_type": raw_shop.get("shop_type", "single_location"),
+        "address": raw_shop.get("address"),
+        "prefecture": raw_shop.get("prefecture"),
+        "hours": raw_shop.get("hours"),
+        "map_query": raw_shop.get("google_maps_query") or raw_shop["name"],
+        "data_source": "manual",
+        "source_note": raw_shop.get("source_note"),
+        "last_verified_at": raw_shop.get("last_verified_at"),
+    }
+
+
+def build_manual_product(
+    raw_product: dict, shop_id: str, shop_name: str, shop_map_query: str, shop_source_note: str | None
+) -> dict:
+    return {
+        # 手動データにはproduct_urlが無いため、店舗スラッグ+商品名で安定したIDを作る
+        "id": f"manual:{shop_id}:{raw_product['raw_name']}",
+        "shop_name": shop_name,
+        "raw_name": raw_product["raw_name"],
+        "category": "ストレート",
+        "is_flavored": False,
+        "flavor_name": None,
+        "category_hint": None,
+        "origin_country": raw_product.get("originCountry"),
+        "origin_source": None,
+        "designated_brand": None,
+        "processing_method": raw_product.get("processingMethod"),
+        "grade": None,
+        "roast_level": raw_product.get("roast"),
+        "roast_selectable": False,
+        "roast_hint": None,
+        "farm_note": raw_product.get("farmNote"),
+        "flavor_notes": raw_product.get("flavorNotes"),
+        "price": raw_product.get("price"),
+        "price_min": None,
+        "price_max": None,
+        "weight_g": raw_product.get("weightG"),
+        "unit_note": None,
+        "out_of_stock": False,
+        "decaf_process": None,
+        "product_url": None,
+        "map_query": shop_map_query,
+        "scraped_at": None,
+        "data_source": "manual",
+        "source_note": raw_product.get("source_note") or shop_source_note,
+    }
+
+
 def main():
     now_iso = datetime.now(timezone.utc).isoformat()
 
@@ -181,6 +255,7 @@ def main():
 
     merged_shops_by_name = {}
     all_products = []
+    covered_shop_names = set()
 
     for shop_name in SOURCE_FILES:
         source = load_source(shop_name)
@@ -188,6 +263,7 @@ def main():
 
         merged_shop = merge_shop(source["shop"], existing_shop, now_iso)
         merged_shops_by_name[shop_name] = merged_shop
+        covered_shop_names.add(shop_name)
 
         for record in source.get("products", []):
             # フレーバーコーヒーは産地・精選方法の個性を扱う本アプリの趣旨と異なるため
@@ -198,11 +274,31 @@ def main():
             stabilize_timestamp(product, existing_products.get(product["id"]), "scraped_at")
             all_products.append(product)
 
-    # このワークフローがスクレイピング対象としない店舗(例: 珈琲問屋。対応する
-    # scrape_*.pyがまだ無い)の商品は、上書きせず既存のレコードをそのまま残す
-    scraped_shop_names = set(SOURCE_FILES.keys())
+    # 手動入力の店舗(公式サイトを持たずスクレイピング対象にできない店舗)。
+    # 週次の自動スクレイピングとは無関係に、毎回scraper/manual/shops/*.jsonを
+    # 読み込んでマージする
+    for manual_path in load_manual_shop_files():
+        with manual_path.open(encoding="utf-8") as f:
+            manual_data = json.load(f)
+        raw_shop = manual_data["shop"]
+        shop_id = raw_shop.get("id") or manual_path.stem
+        shop_name = raw_shop["name"]
+
+        manual_shop = build_manual_shop(raw_shop)
+        merged_shops_by_name[shop_name] = manual_shop
+        covered_shop_names.add(shop_name)
+
+        for raw_product in manual_data.get("products", []):
+            all_products.append(
+                build_manual_product(
+                    raw_product, shop_id, shop_name, manual_shop["map_query"], manual_shop.get("source_note")
+                )
+            )
+
+    # このワークフローが対象としない店舗(自動スクレイパーも手動ファイルも無い。
+    # 例: 珈琲問屋)の商品は、上書きせず既存のレコードをそのまま残す
     for product in existing_products.values():
-        if product.get("shop_name") not in scraped_shop_names:
+        if product.get("shop_name") not in covered_shop_names:
             all_products.append(product)
 
     # 既存の店舗の並び順を維持しつつ、今回のスクレイパー対象外の店舗(将来増える想定)は

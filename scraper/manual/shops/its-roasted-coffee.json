@@ -1,0 +1,31 @@
+{
+  "shop": {
+    "id": "its-roasted-coffee",
+    "name": "It's roasted coffee",
+    "url": null,
+    "instagram_url": "https://www.instagram.com/itsroastedcoffee/?locale=ja_JP",
+    "google_maps_query": "It's roasted coffee",
+    "address": null,
+    "prefecture": null,
+    "hours": null,
+    "platform": "手動入力(Instagram/Googleマップのみ、公式サイトなし)",
+    "shop_type": "single_location",
+    "data_source": "manual",
+    "source_note": "Instagram(@itsroastedcoffee)とGoogleマップのメニュー機能を目視確認して入力。公式サイトは確認できず",
+    "last_verified_at": "2026-08-10"
+  },
+  "products": [
+    {
+      "raw_name": "Ethiopia / Shantawew Natural(エチオピア シャンタウェネ ナチュラル)",
+      "originCountry": "エチオピア",
+      "processingMethod": "ナチュラル",
+      "roast": "中煎り",
+      "flavorNotes": "Raspberry, jasmine, tropical",
+      "farmNote": "品種: 74110、エチオピア在来種。企画G1。標高2200〜2300m。2024年12月〜2025年2月収穫、24/25年クロップ。生産者: ニグセ ゲメダムゲ氏、地域の小規模生産者",
+      "price": 600,
+      "weightG": null,
+      "data_source": "manual",
+      "source_note": "GoogleマップのメニューよりPour Over(ハンドドリップ)価格を記載。豆売り単価は未確認"
+    }
+  ]
+}

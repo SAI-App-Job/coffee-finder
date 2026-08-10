@@ -1,0 +1,31 @@
+{
+  "shop": {
+    "id": "店舗スラッグ(英数字とハイフンのみ、例: its-roasted-coffee)",
+    "name": "店舗名",
+    "url": null,
+    "instagram_url": "InstagramのURL(ある場合。ない場合はnull)",
+    "google_maps_query": "Googleマップ検索用の店名+住所(既存のmapQueryと同じ形式)",
+    "address": "住所(分かる範囲で)",
+    "prefecture": "都道府県",
+    "hours": "営業時間(分かる範囲で)",
+    "platform": "手動入力(Instagram/Googleマップのみ、公式サイトなし)",
+    "shop_type": "single_location",
+    "data_source": "manual",
+    "source_note": "どこで確認した情報か(例: Instagram(@アカウント名)とGoogleマップのメニュー機能を目視確認)",
+    "last_verified_at": "確認した日付(YYYY-MM-DD)"
+  },
+  "products": [
+    {
+      "raw_name": "商品名(産地・銘柄・精選方法等、原文のまま)",
+      "originCountry": "産地国",
+      "processingMethod": "精選方法(ウォッシュド/ナチュラル等。不明ならnull)",
+      "roast": "焙煎度(浅煎り/中煎り等。不明ならnull)",
+      "flavorNotes": "テイスティングノート(原文のまま。例: Raspberry, jasmine, tropical)",
+      "farmNote": "生産者・農園情報(分かる範囲で)",
+      "price": "価格(数値。不明ならnull)",
+      "weightG": "内容量g(不明ならnull)",
+      "data_source": "manual",
+      "source_note": "商品ごとに個別の出典が必要な場合のみ記載(店舗と同じ出典ならshop側のsource_noteで足りるため省略可)"
+    }
+  ]
+}
