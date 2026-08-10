@@ -1,0 +1,130 @@
+[
+  {
+    "name": "Denim bis",
+    "url": "https://www.denimbis.com/",
+    "platform": "おちゃのこネット",
+    "shop_type": "single_location",
+    "robots_txt_status": null,
+    "last_scraped_at": null,
+    "address": "神奈川県川崎市",
+    "prefecture": "神奈川県",
+    "hours": "11:00〜18:00(火・水定休)",
+    "map_query": "Denim bis 川崎市",
+    "locations": [
+      {
+        "label": null,
+        "address": "神奈川県川崎市",
+        "prefecture": "神奈川県",
+        "hours": "11:00〜18:00(火・水定休)",
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "Denim bis 川崎市"
+      }
+    ]
+  },
+  {
+    "name": "珈琲問屋",
+    "url": "https://www.tonya.co.jp/",
+    "platform": "独自EC",
+    "shop_type": "single_location",
+    "robots_txt_status": null,
+    "last_scraped_at": null,
+    "address": "愛知県名古屋市",
+    "prefecture": "愛知県",
+    "hours": "9:00〜18:00(年中無休・通販中心)",
+    "map_query": "珈琲問屋 名古屋市",
+    "locations": [
+      {
+        "label": null,
+        "address": "愛知県名古屋市",
+        "prefecture": "愛知県",
+        "hours": "9:00〜18:00(年中無休・通販中心)",
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "珈琲問屋 名古屋市"
+      }
+    ]
+  },
+  {
+    "name": "MiLL Coffee",
+    "url": "https://www.baisenmill.com/",
+    "platform": "Wix",
+    "shop_type": "single_location",
+    "robots_txt_status": null,
+    "last_scraped_at": null,
+    "address": "神奈川県川崎市多摩区",
+    "prefecture": "神奈川県",
+    "hours": "10:00〜17:00(月曜定休)",
+    "map_query": "MiLL Coffee 川崎市多摩区南生田",
+    "locations": [
+      {
+        "label": null,
+        "address": "神奈川県川崎市多摩区",
+        "prefecture": "神奈川県",
+        "hours": "10:00〜17:00(月曜定休)",
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "MiLL Coffee 川崎市多摩区南生田"
+      }
+    ]
+  },
+  {
+    "name": "PHILOCOFFEA",
+    "url": "https://philocoffea.com/",
+    "platform": "カラーミーショップ",
+    "shop_type": "multi_location",
+    "robots_txt_status": null,
+    "last_scraped_at": null,
+    "address": "千葉県船橋市(オンラインストア+実店舗5箇所)",
+    "prefecture": "千葉県",
+    "hours": "店舗により異なる",
+    "map_query": "PHILOCOFFEA 千葉県",
+    "locations": [
+      {
+        "label": "シャポー船橋店",
+        "address": "千葉県船橋市本町7-1-1 シャポー船橋南館内1階",
+        "prefecture": "千葉県",
+        "hours": "10:00-21:00",
+        "tel": "047-409-5655",
+        "is_headquarters": false,
+        "map_query": "PHILOCOFFEA シャポー船橋店"
+      },
+      {
+        "label": "プラッツ習志野店",
+        "address": "千葉県習志野市本大久保3-8-21 プラッツ習志野内",
+        "prefecture": "千葉県",
+        "hours": "10:00-18:00(不定休)",
+        "tel": "047-411-7175",
+        "is_headquarters": false,
+        "map_query": "PHILOCOFFEA プラッツ習志野店"
+      },
+      {
+        "label": "201(本店)",
+        "address": "千葉県船橋市本町2-2-13 雑居ビル2階",
+        "prefecture": "千葉県",
+        "hours": "10:00-18:00",
+        "tel": "047-401-5950",
+        "is_headquarters": false,
+        "map_query": "PHILOCOFFEA 201 船橋市"
+      },
+      {
+        "label": "表参道店",
+        "address": "東京都港区北青山3-8-15 GREEN TERRACE表参道B1F",
+        "prefecture": "東京都",
+        "hours": "10:00-19:00",
+        "tel": "03-6450-6105",
+        "is_headquarters": false,
+        "map_query": "PHILOCOFFEA 表参道店"
+      },
+      {
+        "label": "焙煎所",
+        "address": "千葉県船橋市本町2-3-29",
+        "prefecture": "千葉県",
+        "hours": "10:00-18:00(不定休)",
+        "tel": "047-460-9415",
+        "is_headquarters": true,
+        "map_query": "PHILOCOFFEA 焙煎所 船橋市本町2-3-29"
+      }
+    ]
+  }
+]

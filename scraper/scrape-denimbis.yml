@@ -1,0 +1,31 @@
+name: scrape-denimbis
+
+on:
+  schedule:
+    # 毎日 日本時間 6:00(UTC 21:00前日)に実行。無料枠(月2,000分)に収まる想定。
+    - cron: "0 21 * * *"
+  workflow_dispatch: {}  # 手動実行・外部cronサービスからの起動用
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install requests beautifulsoup4
+
+      - name: Run scraper
+        run: python scrape_denimbis.py
+
+      - name: Commit updated data
+        run: |
+          git config user.name "coffee-finder-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data_denimbis.json
+          git diff --staged --quiet || git commit -m "chore: update denimbis data $(date -u +%Y-%m-%d)"
+          git push

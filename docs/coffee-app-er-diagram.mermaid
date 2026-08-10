@@ -1,0 +1,171 @@
+erDiagram
+    SHOP ||--o{ PRODUCT : "販売する"
+    SHOP ||--o{ SHOP_LOCATION : "実店舗(0件以上)"
+    PRODUCT }o--o| ORIGIN_REGION : "産地(地域)"
+    ORIGIN_REGION }o--|| ORIGIN_COUNTRY : "属する"
+    PRODUCT }o--o| DESIGNATED_BRAND : "該当する場合"
+    DESIGNATED_BRAND }o--|| ORIGIN_COUNTRY : "定義される国"
+    PRODUCT }o--o| PROCESSING_METHOD : "精選方法"
+    PRODUCT }o--o| ROAST_LEVEL : "焙煎度"
+    PRODUCT }o--o| COUNTRY_GRADE : "国別グレード"
+    COUNTRY_GRADE }o--|| ORIGIN_COUNTRY : "基準を持つ国"
+    PRODUCT }o--o{ CERTIFICATION_TAG : "認証タグ(多対多)"
+    PRODUCT }o--o{ POST_PROCESSING_TAG : "後処理タグ(多対多)"
+    PRODUCT }o--o| PRODUCER_LOT : "生産者ロット(判明する場合)"
+    PRODUCER_LOT }o--o| ORIGIN_REGION : "紐づく産地(地域)"
+    PRODUCT ||--o| PARSE_LOG : "解析ログ"
+    EVENT_SOURCE ||--o{ EVENT : "主催・収集元"
+    EVENT }o--o| ORIGIN_COUNTRY : "対象国(該当する場合。例:Cup of Excellence各国大会)"
+    EVENT }o--o| DESIGNATED_BRAND : "関連銘柄(該当する場合)"
+
+    SHOP {
+        int id PK
+        string name
+        string url
+        string platform "Ocnk等"
+        string shop_type "online_only/single_location/multi_location"
+        string robots_txt_status
+        datetime last_scraped_at
+    }
+
+    SHOP_LOCATION {
+        int id PK
+        int shop_id FK
+        string label "店舗名(例:シャポー船橋店、201、表参道店)"
+        string address
+        string prefecture "都道府県。addressから抽出する派生情報"
+        string hours
+        string tel "nullable"
+        float lat "nullable"
+        float lng "nullable"
+        boolean is_headquarters "本社・焙煎所等、来店・購入対象ではない拠点を区別するフラグ"
+        string mapQuery "Googleマップ検索用クエリ(店舗名+住所)"
+    }
+
+    PRODUCT {
+        int id PK
+        int shop_id FK
+        string raw_name "商品名(原文)"
+        string category "ブレンド/ストレート/フレーバー"
+        boolean is_flavored "人工的に香り付けされたコーヒー。trueの場合、産地等の解析は行わない"
+        string flavor_name "フレーバー名(ココナッツ/アーモンド等)。is_flavored=trueの場合のみ"
+        string category_hint "店舗のカテゴリ・タグ原文(産地推定の補完情報)"
+        int origin_region_id FK "nullable"
+        int origin_source "産地の判定根拠(brand/country_name/region_name/category_hint/product_description)"
+        int designated_brand_id FK "nullable"
+        int processing_method_id FK "nullable"
+        int roast_level_id FK "nullable"
+        int country_grade_id FK "nullable"
+        int producer_lot_id FK "nullable。生産者・農園情報が判明した場合のみ"
+        boolean specialty_flag
+        float cupping_score "nullable"
+        string roast_hint "店舗が推奨する焙煎度(参考表示。roast_selectableな商品向け)"
+        string unit_note "販売単位の原文(例:230g焙煎)"
+        boolean out_of_stock
+        string decaf_process "カフェイン除去方法の原文(例:マウンテンウォーター製法)。デカフェ商品のみ"
+        string flavor_notes "テイスティングノートの原文(店舗の見出しは味わい/風味/フレーバー等で表記ゆれ)"
+        int price "nullable。price_min/maxがある店舗はそちらを使用"
+        int price_min "nullable"
+        int price_max "nullable"
+        int weight_g
+        string product_url
+        datetime scraped_at
+    }
+
+    PRODUCER_LOT {
+        int id PK
+        string producer_name "生産者(例:Kebir Coffee Trading社)"
+        string farm_name "nullable。生産者と別に農園名が判明する場合"
+        int origin_region_id FK "nullable。中分類地域(産地マスタ)と紐付け"
+        string region_detail "生産地の原文(例:ベンチマジ、ゲシャ村。産地マスタの粒度より細かい)"
+        int altitude_min_m "nullable。標高(m)"
+        int altitude_max_m "nullable"
+        string variety "品種(例:ゲイシャ、ティピカ、パカマラ)"
+        string source_note "抽出元の原文全体(検証・再パース用に保持)"
+    }
+
+    ORIGIN_COUNTRY {
+        int id PK
+        string name
+    }
+
+    ORIGIN_REGION {
+        int id PK
+        int country_id FK
+        string name
+        string parent_region "中分類/小分類の階層用"
+    }
+
+    DESIGNATED_BRAND {
+        int id PK
+        string name "14特定銘柄"
+        int country_id FK
+        string region_name
+        string exclusion_rule "例:ブコバ地区産を除く"
+        float min_blend_ratio "0.3"
+    }
+
+    PROCESSING_METHOD {
+        int id PK
+        string name "ウォッシュド/ナチュラル等"
+    }
+
+    ROAST_LEVEL {
+        int id PK
+        string name "8段階"
+        int agtron_min
+        int agtron_max
+    }
+
+    COUNTRY_GRADE {
+        int id PK
+        int country_id FK
+        string code "G1/AA/SHB等"
+        string criteria_type "標高/スクリーン/欠点数/カップ品質"
+    }
+
+    CERTIFICATION_TAG {
+        int id PK
+        string name "オーガニック/フェアトレード/COE"
+    }
+
+    POST_PROCESSING_TAG {
+        int id PK
+        string name "バレルエイジド/樽熟成等"
+        string description "精選方法とは別軸の後加工処理"
+    }
+
+    PARSE_LOG {
+        int id PK
+        int product_id FK
+        float confidence_score
+        string unmatched_keywords "未分類のまま残った語句"
+        datetime parsed_at
+    }
+
+    EVENT_SOURCE {
+        int id PK
+        string name "SCA/ACE・Cup of Excellence/SCAJ/WCC(World Coffee Championships)等"
+        string url "イベント一覧・カレンダーページのURL"
+        string robots_txt_status
+        string update_cadence "商品より変化が少ないため月次を想定"
+        datetime last_scraped_at
+    }
+
+    EVENT {
+        int id PK
+        int event_source_id FK
+        string name "大会・イベント名(例:World Barista Championship 2026)"
+        string event_type "competition(競技会)/exhibition(展示会)/auction(オークション)/conference(カンファレンス)"
+        string host_country "開催国(nullable、オンライン開催等)"
+        string venue "会場(nullable)"
+        date start_date
+        date end_date "nullable(単日開催の場合はstart_dateと同じ)"
+        int edition_year "第◯回/開催年"
+        int related_country_id FK "nullable。Cup of Excellenceの対象国大会等"
+        int related_brand_id FK "nullable。特定銘柄に関連する場合"
+        string description
+        string source_url "個別イベントページのURL"
+        datetime scraped_at
+    }
+

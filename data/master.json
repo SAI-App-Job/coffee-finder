@@ -1,0 +1,62 @@
+{
+  "origin_countries": [
+    { "name": "エチオピア", "aliases": ["エチオピア"] },
+    { "name": "タンザニア", "aliases": ["タンザニア"] },
+    { "name": "コロンビア", "aliases": ["コロンビア"] },
+    { "name": "ジャマイカ", "aliases": ["ジャマイカ"] },
+    { "name": "パナマ", "aliases": ["パナマ"] },
+    { "name": "ルワンダ", "aliases": ["ルワンダ"] },
+    { "name": "インドネシア", "aliases": ["インドネシア"] },
+    { "name": "ケニア", "aliases": ["ケニア"] },
+    { "name": "グアテマラ", "aliases": ["グアテマラ", "グァテマラ", "ガテマラ"] },
+    { "name": "ブラジル", "aliases": ["ブラジル"] },
+    { "name": "コスタリカ", "aliases": ["コスタリカ"] },
+    { "name": "イエメン", "aliases": ["イエメン"] },
+    { "name": "ベトナム", "aliases": ["ベトナム"] },
+    { "name": "ハワイ", "aliases": ["ハワイ"] }
+  ],
+
+  "designated_brands": [
+    { "name": "ブルーマウンテン", "country": "ジャマイカ", "exclusion_rule": null, "min_blend_ratio": 0.3 },
+    { "name": "ハイマウンテン", "country": "ジャマイカ", "exclusion_rule": null, "min_blend_ratio": 0.3 },
+    { "name": "ジャマイカ", "country": "ジャマイカ", "exclusion_rule": "ブルーマウンテン・ハイマウンテン以外", "min_blend_ratio": 0.3 },
+    { "name": "クリスタルマウンテン", "country": null, "exclusion_rule": "キューバ産(地図の対象国には未収録)", "min_blend_ratio": 0.3 },
+    { "name": "グアテマラアンティグア", "country": "グアテマラ", "exclusion_rule": null, "min_blend_ratio": 0.3 },
+    { "name": "コロンビアスプレモ", "country": "コロンビア", "exclusion_rule": null, "min_blend_ratio": 0.3 },
+    { "name": "モカ・ハラー", "country": "エチオピア", "exclusion_rule": "ハラー地区産のみ", "min_blend_ratio": 0.3 },
+    { "name": "モカ・マタリ", "country": "イエメン", "exclusion_rule": null, "min_blend_ratio": 0.3 },
+    { "name": "キリマンジャロ", "country": "タンザニア", "exclusion_rule": "ブコバ地区産を除く", "min_blend_ratio": 0.3 },
+    { "name": "トラジャ", "country": "インドネシア", "exclusion_rule": "スラウェシ島トラジャ地区産", "min_blend_ratio": 0.3 },
+    { "name": "カロシ", "country": "インドネシア", "exclusion_rule": "スラウェシ島カロシ地区産", "min_blend_ratio": 0.3 },
+    { "name": "ガヨマウンテン", "country": "インドネシア", "exclusion_rule": "スマトラ島タケンゴン地区産", "min_blend_ratio": 0.3 },
+    { "name": "マンデリン", "country": "インドネシア", "exclusion_rule": "ガヨマウンテン地区を除く", "min_blend_ratio": 0.3 },
+    { "name": "ハワイコナ", "country": "ハワイ", "exclusion_rule": null, "min_blend_ratio": 0.3 }
+  ],
+
+  "processing_methods": [
+    { "name": "ウォッシュド", "description": "果肉除去→水槽で発酵・ミューシレージ除去→水洗い→乾燥という工程。クリーンで明瞭な酸味が特徴で、雑味が少ない。" },
+    { "name": "ナチュラル", "description": "チェリーのまま天日/機械乾燥させ、まとめて脱穀する方法。フルーティで甘みが強く、個性が出やすい。" },
+    { "name": "ハニー", "description": "果肉除去のみ行い、ミューシレージを残したまま乾燥させる方法。ウォッシュドとナチュラルの中間的な性質。" },
+    { "name": "ウェットハルド", "description": "インドネシア特有の2段階乾燥方式。生豆が高含水率のまま脱穀され、重厚なボディと土っぽい風味が生まれる。" },
+    { "name": "アナエロビック", "description": "密閉容器内でチェリーを発酵させる処理。ワインやフルーツ様の強い個性的な風味が出やすい、比較的新しい手法。" },
+    { "name": "マウンテンウォータープロセス(デカフェ用)", "description": "カフェイン以外の旨み成分が飽和した水にコーヒー生豆を浸し、カフェインだけを溶け出させて抽出する脱カフェイン方法。" }
+  ],
+
+  "roast_levels": [
+    { "order": 1, "key": "ライト", "label": "ライト", "color": "#E8C89A" },
+    { "order": 2, "key": "シナモン", "label": "シナモン", "color": "#C99A5B" },
+    { "order": 3, "key": "ミディアム", "label": "ミディアム", "color": "#A97A3E" },
+    { "order": 4, "key": "ハイ", "label": "ハイ", "color": "#8B5E2E" },
+    { "order": 5, "key": "シティ", "label": "シティ", "color": "#6E4620" },
+    { "order": 6, "key": "フルシティ", "label": "フルシティ", "color": "#543319" },
+    { "order": 7, "key": "フレンチ", "label": "フレンチ", "color": "#3B2211" },
+    { "order": 8, "key": "イタリアン", "label": "イタリアン", "color": "#24140A" }
+  ],
+
+  "country_grades": [
+    { "country": "エチオピア", "code": "G1", "criteria_type": "欠点数(0〜3個)" },
+    { "country": "インドネシア", "code": "G1", "criteria_type": "欠点数(0〜11個、エチオピアと基準が異なる)" },
+    { "country": "ケニア", "code": "AA", "criteria_type": "スクリーンサイズ" },
+    { "country": "グアテマラ", "code": "SHB", "criteria_type": "標高" }
+  ]
+}

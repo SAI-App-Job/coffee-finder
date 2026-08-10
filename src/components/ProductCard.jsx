@@ -1,0 +1,248 @@
+import { useState } from "react";
+import { Sparkles, Coffee, MapPin, ExternalLink } from "lucide-react";
+import { DISCOVERY_FACTS } from "../data/discoveryFacts";
+import { PROCESSING_EXPLANATIONS, DESIGNATED_BRAND_EXPLANATIONS } from "../data/explanations";
+import { getGradeExplanation } from "../utils/grade";
+import { categorizeFlavorNotes } from "../utils/flavor";
+import { roastColor, cityFromAddress } from "../utils/format";
+
+export function DiscoveryFactCard() {
+  const [index, setIndex] = useState(() => Math.floor(Math.random() * DISCOVERY_FACTS.length));
+  const fact = DISCOVERY_FACTS[index];
+
+  const showAnother = () => {
+    setIndex((prev) => {
+      if (DISCOVERY_FACTS.length <= 1) return prev;
+      let next = Math.floor(Math.random() * DISCOVERY_FACTS.length);
+      while (next === prev) next = Math.floor(Math.random() * DISCOVERY_FACTS.length);
+      return next;
+    });
+  };
+
+  return (
+    <div className="rounded-2xl bg-[#2F241A] border border-[#4A3A2A] p-4 flex flex-col gap-2">
+      <div className="flex items-center justify-between">
+        <div className="flex items-center gap-1.5">
+          <Sparkles size={13} className="text-[#D4A24E]" strokeWidth={1.75} />
+          <p className="text-[11px] tracking-[0.15em] text-[#8B5E2E] uppercase">Discovery</p>
+        </div>
+        <button
+          onClick={showAnother}
+          className="text-[11px] text-[#8B7361] hover:text-[#D4A24E] transition-colors"
+        >
+          別の話を見る
+        </button>
+      </div>
+      <h3 className="font-serif text-[16px] text-[#F2E9DD]">{fact.title}</h3>
+      <p className="text-[13px] leading-relaxed text-[#B8A891]">{fact.text}</p>
+    </div>
+  );
+}
+
+export function HoverExplainTag({ label, category, detail }) {
+  // マウスホバーで解説をポップ表示するタグ。タッチ端末では代わりにタップで
+  // 開閉できるよう、ホバーとクリックの両方をトリガーにしている。
+  //
+  // ふきだしの配置・背景色はTailwindクラスに頼らずインラインstyleで指定している。
+  // 以前、Tailwindの任意値クラスが環境によって解釈されない不具合が発生したため、
+  // 見た目の根幹に関わる部分(背景の不透明度・重なり順)は確実な方法を優先した。
+  const [open, setOpen] = useState(false);
+
+  return (
+    <span
+      style={{ position: "relative", display: "inline-block" }}
+      onMouseEnter={() => setOpen(true)}
+      onMouseLeave={() => setOpen(false)}
+    >
+      <button
+        onClick={() => setOpen((o) => !o)}
+        className="text-[11px] px-2 py-0.5 rounded-full bg-[#3B2211] text-[#C9A876] border border-[#4A3A2A] border-dashed hover:border-[#D4A24E] hover:text-[#D4A24E] transition-colors"
+      >
+        {label}
+      </button>
+
+      {open && detail && (
+        <div
+          style={{
+            position: "absolute",
+            zIndex: 50,
+            bottom: "calc(100% + 8px)",
+            left: "50%",
+            transform: "translateX(-50%)",
+            width: 224,
+            borderRadius: 12,
+            backgroundColor: "#100b07",
+            border: "1px solid #4A3A2A",
+            padding: 12,
+            boxShadow: "0 8px 24px rgba(0,0,0,0.55)",
+          }}
+        >
+          <p
+            style={{
+              margin: 0,
+              fontSize: 10,
+              color: "#C99A5B",
+              textTransform: "uppercase",
+              letterSpacing: "0.05em",
+            }}
+          >
+            {category}
+          </p>
+          <p
+            style={{
+              marginTop: 4,
+              marginBottom: 0,
+              fontSize: 12,
+              lineHeight: 1.6,
+              color: "#E8DCC8",
+            }}
+          >
+            {detail}
+          </p>
+          {/* ふきだしの三角形 */}
+          <div
+            style={{
+              position: "absolute",
+              left: "50%",
+              transform: "translateX(-50%)",
+              top: "100%",
+              width: 0,
+              height: 0,
+              borderLeft: "6px solid transparent",
+              borderRight: "6px solid transparent",
+              borderTop: "6px solid #4A3A2A",
+            }}
+          />
+        </div>
+      )}
+    </span>
+  );
+}
+
+export function ProductCard({ product, onOpenMap, onLearnOrigin }) {
+  const processingDetail = product.processingMethod
+    ? PROCESSING_EXPLANATIONS[product.processingMethod]
+    : null;
+  const gradeDetail = getGradeExplanation(product.grade, product.originCountry, product.designatedBrand);
+  const flavorCategories = categorizeFlavorNotes(product.flavorNotes);
+
+  const staticTags = [product.farmNote].filter(Boolean);
+
+  return (
+    <div className="relative rounded-2xl bg-[#2F241A] border border-[#4A3A2A] flex">
+      {/* 焙煎度カラーバー(未選択=注文時選択の場合はストライプで示す)
+          カード側のoverflow-hiddenは、ホバーで飛び出すツールチップまで
+          切り取ってしまうため使わず、カラーバー自体の左端だけを丸めている */}
+      <div
+        className="w-1.5 shrink-0 rounded-l-2xl"
+        style={
+          product.roast
+            ? { backgroundColor: roastColor(product.roast) }
+            : {
+                backgroundImage:
+                  "repeating-linear-gradient(135deg, #E8C89A 0 4px, #24140A 4px 8px)",
+              }
+        }
+        aria-hidden="true"
+      />
+
+      <div className="flex-1 p-4 flex flex-col gap-2.5">
+        <div className="flex items-start justify-between gap-3">
+          <div>
+            <p className="text-[11px] tracking-wider text-[#8B5E2E] font-medium uppercase">
+              {product.originCountry}
+            </p>
+            <h3 className="font-serif text-[17px] leading-snug text-[#F2E9DD] mt-0.5">
+              {product.rawName}
+            </h3>
+          </div>
+          <div className="text-right shrink-0">
+            <p className="font-mono text-[#F2E9DD] text-[15px]">
+              ¥{product.price.toLocaleString()}
+            </p>
+            <p className="font-mono text-[11px] text-[#8B7361]">{product.weightG}g</p>
+          </div>
+        </div>
+
+        {(product.designatedBrand || staticTags.length > 0 || product.processingMethod || product.grade || flavorCategories.length > 0) && (
+          <div className="flex flex-wrap gap-1.5">
+            {product.designatedBrand && (
+              <HoverExplainTag
+                label={product.designatedBrand}
+                category="特定銘柄"
+                detail={
+                  DESIGNATED_BRAND_EXPLANATIONS[product.designatedBrand] ||
+                  "この銘柄についての解説はまだ用意されていません。"
+                }
+              />
+            )}
+            {product.processingMethod && (
+              <HoverExplainTag
+                label={product.processingMethod}
+                category="精選方法"
+                detail={processingDetail || "この精選方法についての解説はまだ用意されていません。"}
+              />
+            )}
+            {product.grade && (
+              <HoverExplainTag label={product.grade} category="グレード" detail={gradeDetail} />
+            )}
+            {flavorCategories.map((cat) => (
+              <HoverExplainTag
+                key={cat.en}
+                label={
+                  <span className="flex items-center gap-1.5">
+                    <span className="w-1.5 h-1.5 rounded-full shrink-0" style={{ backgroundColor: cat.color }} />
+                    {cat.ja}
+                  </span>
+                }
+                category="フレーバーホイール"
+                detail={`テイスティングノート「${product.flavorNotes}」から、SCA/WCRフレーバーホイールの「${cat.en}」カテゴリに該当すると自動分類。`}
+              />
+            ))}
+            {staticTags.map((tag) => (
+              <span
+                key={tag}
+                className="text-[11px] px-2 py-0.5 rounded-full bg-[#3B2211] text-[#C9A876] border border-[#4A3A2A]"
+              >
+                {tag}
+              </span>
+            ))}
+            {product.roastSelectable && (
+              <span className="text-[11px] px-2 py-0.5 rounded-full bg-transparent text-[#8B7361] border border-dashed border-[#4A3A2A]">
+                焙煎度は注文時に選択
+              </span>
+            )}
+          </div>
+        )}
+
+        <div className="flex items-center justify-between pt-1.5 mt-auto border-t border-[#4A3A2A]">
+          <div className="flex items-center gap-1 text-[12px] text-[#8B7361]">
+            <Coffee size={13} strokeWidth={1.75} />
+            <span>{product.shopName}</span>
+            {product.shopAddress && (
+              <span className="text-[#8B7361]/70">・{cityFromAddress(product.shopAddress)}</span>
+            )}
+          </div>
+          <button
+            onClick={() => onOpenMap(product)}
+            className="flex items-center gap-1 text-[12px] text-[#D4A24E] hover:text-[#E8C89A] transition-colors"
+          >
+            <MapPin size={13} strokeWidth={1.75} />
+            <span>地図で開く</span>
+            <ExternalLink size={11} strokeWidth={1.75} />
+          </button>
+        </div>
+
+        {onLearnOrigin && (
+          <button
+            onClick={() => onLearnOrigin(product.originCountry)}
+            className="flex items-center justify-center gap-1.5 text-[12px] text-[#8B5E2E] hover:text-[#D4A24E] transition-colors py-1"
+          >
+            <Sparkles size={12} strokeWidth={1.75} />
+            <span>{product.originCountry}という産地をもっと知る</span>
+          </button>
+        )}
+      </div>
+    </div>
+  );
+}
