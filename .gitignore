@@ -9,3 +9,6 @@ __pycache__
 # 各スクレイパーが出力する中間ファイル(集約前の生データ)。
 # コミット対象はaggregate_*.pyが生成する /data/*.json のみ。
 scraper/data_*.json
+
+# explore_candidate.pyが構造確認用に保存する候補サイトのHTML
+scraper/candidates/
