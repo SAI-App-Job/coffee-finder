@@ -1,0 +1,49 @@
+name: scrape-events
+
+on:
+  schedule:
+    # 毎月1日 21:00 UTC(日本時間 2日 6:00)に実行。大会・展示会の日程は
+    # 商品在庫と違い日次で変わるものではないため月次更新とする
+    # (docs/coffee-app-data-model.md 19章 EVENT_SOURCE.update_cadence の設計を踏襲)。
+    - cron: "0 21 1 * *"
+  workflow_dispatch: {} # 手動実行用
+
+permissions:
+  contents: write # data/events.json をコミット・pushするために必要
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install requests beautifulsoup4
+
+      - name: Scrape WCC(World Coffee Championships)
+        working-directory: scraper
+        run: python scrape_events_wcc.py
+
+      - name: Scrape SCAJ
+        working-directory: scraper
+        run: python scrape_events_scaj.py
+
+      - name: Scrape ACE(Cup of Excellence)
+        working-directory: scraper
+        run: python scrape_events_ace.py
+
+      - name: Aggregate into data/events.json
+        working-directory: scraper
+        run: python aggregate_events.py
+
+      - name: Commit updated data (no-op if unchanged)
+        run: |
+          git config user.name "coffee-finder-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/events.json
+          git diff --staged --quiet || git commit -m "chore: update events data $(date -u +%Y-%m-%d)"
+          git push

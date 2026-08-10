@@ -1,0 +1,50 @@
+name: scrape-shops
+
+on:
+  schedule:
+    # 毎週月曜 21:00 UTC(日本時間 火曜 6:00)に実行。店舗・商品情報は大会日程等の
+    # 静的な情報より変化しやすいため週次で更新する
+    # (docs/coffee-app-data-model.md の update_cadence 設計を踏まえ、
+    #  イベント(月次)より高頻度に設定)。
+    - cron: "0 21 * * 1"
+  workflow_dispatch: {} # 手動実行用
+
+permissions:
+  contents: write # data/*.json をコミット・pushするために必要
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install requests beautifulsoup4
+
+      - name: Scrape Denim bis
+        working-directory: scraper
+        run: python scrape_denimbis.py
+
+      - name: Scrape MiLL Coffee
+        working-directory: scraper
+        run: python scrape_millcoffee.py
+
+      - name: Scrape PHILOCOFFEA
+        working-directory: scraper
+        run: python scrape_philocoffea.py
+
+      - name: Aggregate into data/shops.json and data/products.json
+        working-directory: scraper
+        run: python aggregate_shops.py
+
+      - name: Commit updated data (no-op if unchanged)
+        run: |
+          git config user.name "coffee-finder-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/shops.json data/products.json
+          git diff --staged --quiet || git commit -m "chore: update shops/products data $(date -u +%Y-%m-%d)"
+          git push

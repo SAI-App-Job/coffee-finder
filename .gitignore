@@ -5,3 +5,7 @@ dist
 __pycache__
 *.pyc
 .claude/settings.local.json
+
+# 各スクレイパーが出力する中間ファイル(集約前の生データ)。
+# コミット対象はaggregate_*.pyが生成する /data/*.json のみ。
+scraper/data_*.json
