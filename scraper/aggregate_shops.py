@@ -118,7 +118,13 @@ def normalize_category_hint(value) -> str | None:
 def compose_farm_note(record: dict) -> str | None:
     """farm_note(自由記述)は、スクレイパーが取得したPRODUCER_LOT相当の断片
     (生産者名・農園名・地区・標高・品種)をそのまま連結して作る。存在しない
-    項目は含めない(推測で埋めない)。"""
+    項目は含めない(推測で埋めない)。
+
+    差分ベーススクレイピングで前回のレコード(=既にfarm_noteを持つ集約後
+    スキーマ)がそのまま渡ってくる場合は、断片から再合成せずそれを優先する
+    (断片フィールドが無いため再合成すると空になってしまうため)。"""
+    if record.get("farm_note"):
+        return record["farm_note"]
     parts = []
     if record.get("farm_name"):
         parts.append(f"農園: {record['farm_name']}")

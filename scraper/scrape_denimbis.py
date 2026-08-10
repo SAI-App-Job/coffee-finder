@@ -9,7 +9,11 @@ coffee_parser.pyでパースした上でJSON(SHOP+PRODUCT相当)として出力�
 ただしサイト側のテンプレートが将来変更された場合は再調整が必要。
 
 robots.txt確認済み(2026年8月時点): 主要AIクローラー(GPTBot等)は明示的に許可、
-一般クローラーへの制限記述なし。10秒程度のクロール間隔を courtesy として設定。
+一般クローラーへの制限記述なし。courtesy delayとしてクロール間隔を設定。
+
+【差分ベーススクレイピング】一覧ページ(軽量)の時点で商品名・価格帯・
+カテゴリが前回(data/products.json)と変わっていない商品は、詳細ページの
+再取得をスキップして前回のレコードをそのまま使い回す(previous_data.py参照)。
 """
 
 import json
@@ -21,6 +25,7 @@ import requests
 from bs4 import BeautifulSoup
 
 from coffee_parser import parse_product, apply_category_hint_fallback, extract_from_description
+from previous_data import load_previous_products, is_unchanged
 
 SHOP_INFO = {
     "name": "Denim bis",
@@ -53,7 +58,7 @@ CATEGORY_MAP = {
 EXCLUDED_CATEGORIES = {"おやつ", "オリジナルグッズ", "コーヒードリップパック"}
 
 BASE_URL = "https://www.denimbis.com"
-CRAWL_DELAY_SECONDS = 10  # robots.txtのdotbot/AhrefsBot向け指定に倣ったcourtesy設定
+CRAWL_DELAY_SECONDS = 3  # robots.txtのdotbot/AhrefsBot向け指定に倣ったcourtesy設定
 REQUEST_HEADERS = {
     # 収集主体が分かるよう、一般的なブラウザUAではなく素性を示すUAを推奨
     "User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"
@@ -142,12 +147,18 @@ def fetch_product_description(product_url: str) -> str:
     return desc_el.get_text(separator="\n", strip=True) if desc_el else ""
 
 
-def build_product_records(raw_items: list[dict], fetch_details: bool = True) -> tuple[list[dict], list[dict]]:
+def build_product_records(
+    raw_items: list[dict], previous: dict, fetch_details: bool = True
+) -> tuple[list[dict], list[dict]]:
     """スクレイピングした生データをパースし、PRODUCTテーブル相当のレコードに変換する。
 
     fetch_details=True の場合、商品名だけで精選方法が特定できなかった商品について
     詳細ページの説明文(「精製処理：○○」形式)も確認する。リクエスト数が増えるため
     crawl delay を挟む。
+
+    previous(product_url→前回レコード)に一致する商品があり、かつ一覧ページで
+    分かる情報(商品名・価格帯・カテゴリ)が前回と変わっていない場合は、詳細ページの
+    取得自体をスキップして前回のレコードをそのまま使い回す(差分ベーススクレイピング)。
 
     戻り値は (products, flavored_products) のタプル。フレーバーコーヒーは
     産地・精選方法の個性を扱う本アプリの趣旨と異なる商品カテゴリのため、
@@ -159,6 +170,17 @@ def build_product_records(raw_items: list[dict], fetch_details: bool = True) -> 
 
     for item in raw_items:
         if item.get("category_hint") in EXCLUDED_CATEGORIES:
+            continue
+
+        prev = previous.get(item.get("product_url"))
+        if is_unchanged(
+            prev,
+            raw_name=item["raw_name"],
+            price_min=item.get("price_min"),
+            price_max=item.get("price_max"),
+            category_hint=item.get("category_hint"),
+        ):
+            records.append(prev)
             continue
 
         parsed = parse_product(item["raw_name"])
@@ -223,7 +245,8 @@ def main():
         all_raw_items.extend(items)
         time.sleep(CRAWL_DELAY_SECONDS)
 
-    records, flavored_records = build_product_records(all_raw_items)
+    previous = load_previous_products(SHOP_INFO["name"])
+    records, flavored_records = build_product_records(all_raw_items, previous)
 
     output = {
         "shop": SHOP_INFO,

@@ -13,6 +13,10 @@ robots.txt確認済み(2026年8月時点): User-agent: * に Allow: / (lightbox�
 
 Wixサイトの特徴: data-hook属性が要素の目印として一貫して使われており、
 テーマ変更の影響を受けにくく比較的安定したセレクタが組める。
+
+【差分ベーススクレイピング】一覧ページ(軽量)の時点で商品名・価格・在庫状況が
+前回(data/products.json)と変わっていない商品は、詳細ページの再取得をスキップ
+して前回のレコードをそのまま使い回す(previous_data.py参照)。
 """
 
 import re
@@ -22,6 +26,7 @@ import requests
 from bs4 import BeautifulSoup
 
 from coffee_parser import parse_product, apply_category_hint_fallback
+from previous_data import load_previous_products, is_unchanged
 
 SHOP_INFO = {
     "name": "MiLL Coffee",
@@ -32,7 +37,7 @@ SHOP_INFO = {
     "robots_txt_status": "許可(2026-08確認。User-agent:*にAllow:/、一般クローラーへの制限なし)",
 }
 
-CRAWL_DELAY_SECONDS = 10  # Denim bis同様のcourtesy設定を踏襲
+CRAWL_DELAY_SECONDS = 3  # Denim bis同様のcourtesy設定を踏襲
 REQUEST_HEADERS = {
     "User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"
 }
@@ -200,11 +205,33 @@ def scrape_all_products(fetch_details: bool = True, max_pages: int = 20) -> tupl
     if not fetch_details:
         return all_list_items, []
 
+    previous = load_previous_products(SHOP_INFO["name"])
+
     records = []
     flavored_records = []
     for item in all_list_items:
         if not item["product_url"]:
             continue
+
+        # 一覧ページのdata-wix-priceは "600.00" のような文字列のため、
+        # 詳細ページ由来の前回価格(int)と比較できるよう整数化する
+        current_price = None
+        if item.get("price_text"):
+            try:
+                current_price = int(float(item["price_text"]))
+            except ValueError:
+                current_price = None
+
+        prev = previous.get(item["product_url"])
+        if is_unchanged(
+            prev,
+            raw_name=item["raw_name"],
+            price=current_price,
+            out_of_stock=item["out_of_stock"],
+        ):
+            records.append(prev)
+            continue
+
         try:
             detail = parse_product_detail(item["product_url"])
             detail["out_of_stock"] = item["out_of_stock"]

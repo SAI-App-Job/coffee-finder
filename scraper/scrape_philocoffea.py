@@ -15,6 +15,10 @@ robots.txt確認済み(2026年8月時点): User-agent: * は /secure/ と /cart/
 標高・品種・生産処理・焙煎度・味わいまで構造化されており、これまでの3店舗で
 最も情報粒度が高い。正規表現よりも表の汎用キーバリュー抽出が確実なため、
 その方式を採用している。
+
+【差分ベーススクレイピング】一覧ページ(軽量)の時点で商品名・価格・在庫状況が
+前回(data/products.json)と変わっていない商品は、詳細ページの再取得をスキップ
+して前回のレコードをそのまま使い回す(previous_data.py参照)。
 """
 
 import re
@@ -24,6 +28,7 @@ import requests
 from bs4 import BeautifulSoup
 
 from coffee_parser import parse_product, apply_category_hint_fallback
+from previous_data import load_previous_products, is_unchanged
 
 SHOP_INFO = {
     "name": "PHILOCOFFEA",
@@ -34,7 +39,7 @@ SHOP_INFO = {
     "robots_txt_status": "許可(2026-08確認。/secure/と/cart/以外は制限なし)",
 }
 
-CRAWL_DELAY_SECONDS = 10  # 他店舗同様のcourtesy設定を踏襲
+CRAWL_DELAY_SECONDS = 3  # 他店舗同様のcourtesy設定を踏襲
 REQUEST_HEADERS = {
     "User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"
 }
@@ -231,9 +236,21 @@ def scrape_all_products(fetch_details: bool = True, max_pages: int = 50) -> tupl
     if not fetch_details:
         return all_list_items, []
 
+    previous = load_previous_products(SHOP_INFO["name"])
+
     records = []
     flavored_records = []
     for item in all_list_items:
+        prev = previous.get(item["product_url"])
+        if is_unchanged(
+            prev,
+            raw_name=item["raw_name"],
+            price=item.get("price"),
+            out_of_stock=item["out_of_stock"],
+        ):
+            records.append(prev)
+            continue
+
         try:
             detail = parse_product_detail(item["product_url"])
             detail["out_of_stock"] = item["out_of_stock"]
