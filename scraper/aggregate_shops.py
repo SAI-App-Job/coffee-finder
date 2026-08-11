@@ -2,18 +2,18 @@
 """
 aggregate_shops.py
 
-scrape_denimbis.py / scrape_millcoffee.py / scrape_philocoffea.py が出力する
-data_denimbis.json / data_millcoffee.json / data_philocoffea.json を統合し、
-docs/coffee-app-data-model.md 準拠のスキーマで /data/shops.json と
-/data/products.json を更新する。
+scrape_denimbis.py / scrape_millcoffee.py / scrape_philocoffea.py /
+scrape_fuglen.py が出力する data_denimbis.json / data_millcoffee.json /
+data_philocoffea.json / data_fuglen.json を統合し、docs/coffee-app-data-model.md
+準拠のスキーマで /data/shops.json と /data/products.json を更新する。
 
 【店舗ごとに出力フィールドが異なる理由】
-各スクレイパーはサイト構造(Ocnk/Wix/カラーミーショップ)に依存しており、
+各スクレイパーはサイト構造(Ocnk/Wix/カラーミーショップ/Shopify)に依存しており、
 取得できる情報がまちまち(例: Denim bisはprice_min/price_max、MiLL Coffee/
-PHILOCOFFEAは単一price。PHILOCOFFEAのみBEANS DATA表からflavor_notes・
-producer_name等のPRODUCER_LOT相当の情報が取れる)。本スクリプトはこれらを
-共通スキーマへ正規化し、スクレイパーが取得できない項目はnullのまま保持する
-(存在しない情報を推測・創作しない)。
+PHILOCOFFEA/FUGLENは単一price。PHILOCOFFEA・FUGLENはBEANS DATA相当の表から
+flavor_notes・producer_name等のPRODUCER_LOT相当の情報が取れる)。本スクリプトは
+これらを共通スキーマへ正規化し、スクレイパーが取得できない項目はnullのまま
+保持する(存在しない情報を推測・創作しない)。
 
 【営業時間・地図クエリ・実店舗一覧を上書きしない理由】
 hours(営業時間)・map_query(Googleマップ検索用クエリ)・locations(実店舗一覧)・
@@ -59,6 +59,7 @@ SOURCE_FILES = {
     "Denim bis": "data_denimbis.json",
     "MiLL Coffee": "data_millcoffee.json",
     "PHILOCOFFEA": "data_philocoffea.json",
+    "FUGLEN COFFEE ROASTERS": "data_fuglen.json",
 }
 
 
@@ -148,6 +149,8 @@ def compose_farm_note(record: dict) -> str | None:
     variety = record.get("variety") or record.get("variety_note")
     if variety:
         parts.append(f"品種: {variety}")
+    if record.get("harvest_note"):
+        parts.append(f"収穫時期: {record['harvest_note']}")
     return "、".join(parts) if parts else None
 
 

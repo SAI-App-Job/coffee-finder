@@ -18,17 +18,18 @@ on:
           - denimbis
           - millcoffee
           - philocoffea
+          - fuglen
 
 permissions:
   contents: write # data/*.json をコミット・pushするために必要
 
 jobs:
-  # 3店舗を並列に実行する。各店舗は独立したサイトへのスクレイピングなので、
+  # 4店舗を並列に実行する。各店舗は独立したサイトへのスクレイピングなので、
   # 直列にする理由がない(courtesy delayは店舗ごとの各リクエスト間隔の話であり、
   # 店舗同士を並列化しても対象サイトへの負荷は増えない)。
   #
   # workflow_dispatchでshopを指定した場合は、該当する1店舗だけスクレイピングを
-  # 実行する(他の2店舗はScrape/Uploadステップがスキップされ、Uploadされない
+  # 実行する(他の店舗はScrape/Uploadステップがスキップされ、Uploadされない
   # =後続のaggregateはその店舗のdata_*.jsonを受け取らず、既存データをそのまま
   # 残す。aggregate_shops.py側で欠損店舗を許容する設計にしている)。matrixコンテキストは
   # ジョブレベルのifでは使えないため、対象を絞る条件はステップ単位で指定する。
@@ -47,6 +48,9 @@ jobs:
           - id: philocoffea
             script: scrape_philocoffea.py
             output: data_philocoffea.json
+          - id: fuglen
+            script: scrape_fuglen.py
+            output: data_fuglen.json
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4 # 差分ベーススクレイピングがdata/products.jsonを参照するため必須
