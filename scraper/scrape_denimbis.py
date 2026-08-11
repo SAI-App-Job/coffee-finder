@@ -75,11 +75,20 @@ def scrape_category(category_id: int, category_name: str) -> list[dict]:
     """1カテゴリ分の商品一覧をページネーション込みで取得する。
 
     実データ確認済みの構造(2026-08時点):
-    - 商品は `li.list_item_cell` > `div.item_data[data-product-id]`
+    - 商品一覧本体は `div.page_box.itemlist` の中の `li.list_item_cell` >
+      `div.item_data[data-product-id]`
     - 商品名は `p.item_name span.goods_name`
     - 商品リンクは `a.item_data_link`(絶対URL)
     - 価格は `span.figure` に「890円～4,010円」のような範囲表記
     - 次ページの有無は `a.to_next_page` の存在で判定
+
+    【重要】`li.list_item_cell` はカテゴリ本体の商品一覧だけでなく、全カテゴリ
+    ページ共通のサイドバー「おすすめ商品」ウィジェット(`div.side_box.item_box.recommend`)
+    内の商品にも同じクラスが使われている。ページ全体を対象にセレクタを掛けると、
+    このおすすめ商品(常に同じ2〜3商品)が全カテゴリで重複して取得されてしまう
+    不具合が実データで確認された(45件中24件が重複という形で顕在化)。
+    そのため、カテゴリ本体のコンテナ(`div.page_box.itemlist`)に範囲を絞って
+    から商品セルを探す。
     """
     products = []
     page = 1
@@ -90,7 +99,8 @@ def scrape_category(category_id: int, category_name: str) -> list[dict]:
             url += f"?page={page}"
 
         soup = fetch_page(url)
-        items = soup.select("li.list_item_cell")
+        container = soup.select_one("div.page_box.itemlist")
+        items = container.select("li.list_item_cell") if container else []
         if not items:
             break
 
@@ -237,6 +247,30 @@ def build_product_records(
     return records, flavored_records
 
 
+def dedupe_raw_items(raw_items: list[dict]) -> list[dict]:
+    """product_url(無ければproduct_id)をキーに1商品1件へ統合する安全策。
+
+    scrape_categoryのセレクタ修正でサイドバー「おすすめ商品」由来の重複は
+    解消したが、商品が実際に複数の実カテゴリ(例: 南米諸国 かつ カフェインレス)
+    に属していて正規のカテゴリ一覧同士で重複するケースは今後もありうるため、
+    保険として残す。除外カテゴリ由来のエントリより通常カテゴリ由来のエントリを
+    優先する(除外カテゴリに先に出現しただけで、実際は通常カテゴリにも属する
+    商品が丸ごと除外されてしまわないように)。
+    """
+    best_by_key: dict[str, dict] = {}
+    for item in raw_items:
+        key = item.get("product_url") or item.get("product_id")
+        if not key:
+            continue
+        existing = best_by_key.get(key)
+        if existing is None:
+            best_by_key[key] = item
+            continue
+        if existing.get("category_hint") in EXCLUDED_CATEGORIES and item.get("category_hint") not in EXCLUDED_CATEGORIES:
+            best_by_key[key] = item
+    return list(best_by_key.values())
+
+
 def main():
     all_raw_items = []
     for category_id, category_name in CATEGORY_MAP.items():
@@ -244,6 +278,11 @@ def main():
         items = scrape_category(category_id, category_name)
         all_raw_items.extend(items)
         time.sleep(CRAWL_DELAY_SECONDS)
+
+    before_dedupe = len(all_raw_items)
+    all_raw_items = dedupe_raw_items(all_raw_items)
+    if before_dedupe != len(all_raw_items):
+        print(f"[info] 重複除去: {before_dedupe}件 → {len(all_raw_items)}件(product_url基準)")
 
     previous = load_previous_products(SHOP_INFO["name"])
     records, flavored_records = build_product_records(all_raw_items, previous)
