@@ -12,6 +12,7 @@ function mapLocation(loc) {
     address: loc.address,
     hours: loc.hours,
     tel: loc.tel,
+    email: loc.email,
     mapQuery: loc.map_query,
   };
 }

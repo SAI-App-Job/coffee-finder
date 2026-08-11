@@ -52,11 +52,25 @@ export function LocationCard({ location, onOpenMap }) {
     <div className="rounded-xl bg-[#3B2211] border border-[#4A3A2A] p-3 flex flex-col gap-1.5">
       <p className="text-[14px] font-medium text-[#F2E9DD]">{location.label}</p>
       <p className="text-[12px] text-[#B8A891]">{location.address}</p>
-      <div className="flex items-center gap-1.5 text-[12px] text-[#8B7361]">
-        <Clock size={12} strokeWidth={1.75} />
-        <span>{location.hours}</span>
-        {location.tel && <span className="ml-1">・{location.tel}</span>}
-      </div>
+      {(location.hours || location.tel || location.email) && (
+        <div className="flex flex-wrap items-center gap-x-1.5 gap-y-0.5 text-[12px] text-[#8B7361]">
+          {location.hours && (
+            <span className="flex items-center gap-1.5">
+              <Clock size={12} strokeWidth={1.75} />
+              {location.hours}
+            </span>
+          )}
+          {location.tel && <span>{location.hours ? "・" : ""}{location.tel}</span>}
+          {location.email && (
+            <a
+              href={`mailto:${location.email}`}
+              className="text-[#D4A24E] hover:text-[#E8C89A] transition-colors"
+            >
+              {location.hours || location.tel ? "・" : ""}{location.email}
+            </a>
+          )}
+        </div>
+      )}
       <button
         onClick={() => onOpenMap(location)}
         className="mt-1 self-start flex items-center gap-1.5 text-[12px] text-[#D4A24E] hover:text-[#E8C89A] transition-colors"

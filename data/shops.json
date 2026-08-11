@@ -145,12 +145,94 @@
     "name": "FUGLEN COFFEE ROASTERS",
     "url": "https://fuglencoffee.jp/",
     "platform": "Shopify(collections/coffeebeans/products.jsonエンドポイントを利用)",
-    "shop_type": "single_location",
+    "shop_type": "multi_location",
     "robots_txt_status": "許可(2026-08確認。User-agent:*にAllow:/。collections/products.jsonは対象外のDisallowなし)",
-    "address": "東京都渋谷区富ヶ谷1-16-11",
+    "address": "東京都渋谷区(オンラインストア+実店舗8拠点)",
     "prefecture": "東京都",
-    "hours": null,
+    "hours": "店舗により異なる",
     "map_query": "FUGLEN COFFEE ROASTERS",
-    "last_scraped_at": "2026-08-11T05:54:05.004822+00:00"
+    "last_scraped_at": "2026-08-11T05:54:05.004822+00:00",
+    "locations": [
+      {
+        "label": "代々木公園(本店)",
+        "address": "東京都渋谷区富ヶ谷1-16-11",
+        "prefecture": "東京都",
+        "hours": null,
+        "tel": null,
+        "email": "tokyo@fuglen.no",
+        "is_headquarters": false,
+        "map_query": "FUGLEN TOKYO"
+      },
+      {
+        "label": "浅草",
+        "address": "東京都台東区浅草2丁目6-15",
+        "prefecture": "東京都",
+        "hours": null,
+        "tel": null,
+        "email": "tokyo@fuglen.no",
+        "is_headquarters": false,
+        "map_query": "FUGLEN ASAKUSA"
+      },
+      {
+        "label": "羽根木公園",
+        "address": "東京都世田谷区代田4-36-14 1F",
+        "prefecture": "東京都",
+        "hours": null,
+        "tel": null,
+        "email": "tokyo@fuglen.no",
+        "is_headquarters": false,
+        "map_query": "FUGLEN HANEGI KŌEN"
+      },
+      {
+        "label": "参宮橋",
+        "address": "東京都渋谷区代々木4-20-10",
+        "prefecture": "東京都",
+        "hours": null,
+        "tel": null,
+        "email": "sangubashi@fuglen.no",
+        "is_headquarters": false,
+        "map_query": "FUGLEN SANGŪBASHI"
+      },
+      {
+        "label": "登戸(ロースタリー)",
+        "address": "神奈川県川崎市多摩区登戸3506 RIVERSIDE POINT 1F",
+        "prefecture": "神奈川県",
+        "hours": null,
+        "tel": null,
+        "email": "roastery@fuglen.no",
+        "is_headquarters": false,
+        "map_query": "FUGLEN COFFEE ROASTERS 川崎市多摩区登戸"
+      },
+      {
+        "label": "京都",
+        "address": "京都府京都市北区紫竹東栗栖町38-3 A HOUSE 1階",
+        "prefecture": "京都府",
+        "hours": null,
+        "tel": null,
+        "email": "kyoto@fuglen.no",
+        "is_headquarters": false,
+        "map_query": "FUGLEN KYOTO"
+      },
+      {
+        "label": "福岡(博多駅東)",
+        "address": "福岡県福岡市博多区博多駅東1丁目18-33 博多イーストテラス1階",
+        "prefecture": "福岡県",
+        "hours": null,
+        "tel": null,
+        "email": "fukuoka@fuglen.no",
+        "is_headquarters": false,
+        "map_query": "FUGLEN FUKUOKA"
+      },
+      {
+        "label": "福岡(けやき通り)",
+        "address": "福岡県福岡市中央区赤坂3丁目10-38",
+        "prefecture": "福岡県",
+        "hours": null,
+        "tel": null,
+        "email": "fukuoka@fuglen.no",
+        "is_headquarters": false,
+        "map_query": "FUGLEN KEYAKI DORI"
+      }
+    ]
   }
 ]
