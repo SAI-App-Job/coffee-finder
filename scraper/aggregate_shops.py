@@ -191,7 +191,7 @@ def build_product(record: dict, shop_map_query: str, now_iso: str) -> dict:
         "price": record.get("price"),
         "price_min": record.get("price_min"),
         "price_max": record.get("price_max"),
-        "weight_g": None,  # 現行スクレイパーはいずれも重量(g)を抽出していない
+        "weight_g": record.get("weight_g"),  # FUGLENはバリアントのgramsから取得できる。他店舗はnullのまま
         "unit_note": record.get("unit_note"),
         "out_of_stock": bool(record.get("out_of_stock", False)),
         "decaf_process": record.get("decaf_process"),
