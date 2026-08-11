@@ -140,5 +140,17 @@
     "data_source": "manual",
     "source_note": "Instagram(@itsroastedcoffee)とGoogleマップのメニュー機能を目視確認して入力。公式サイトは確認できず",
     "last_verified_at": "2026-08-10"
+  },
+  {
+    "name": "FUGLEN COFFEE ROASTERS",
+    "url": "https://fuglencoffee.jp/",
+    "platform": "Shopify(collections/coffeebeans/products.jsonエンドポイントを利用)",
+    "shop_type": "single_location",
+    "robots_txt_status": "許可(2026-08確認。User-agent:*にAllow:/。collections/products.jsonは対象外のDisallowなし)",
+    "address": "東京都渋谷区富ヶ谷1-16-11",
+    "prefecture": "東京都",
+    "hours": null,
+    "map_query": "FUGLEN COFFEE ROASTERS",
+    "last_scraped_at": "2026-08-11T05:54:05.004822+00:00"
   }
 ]
