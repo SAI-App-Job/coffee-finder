@@ -2,14 +2,14 @@
   {
     "name": "Denim bis",
     "url": "https://www.denimbis.com/",
-    "platform": "おちゃのこネット",
+    "platform": "おちゃのこネット(Ocnk)",
     "shop_type": "single_location",
-    "robots_txt_status": null,
-    "last_scraped_at": null,
+    "robots_txt_status": "許可(2026-08確認。一般クローラーへの制限なし)",
     "address": "神奈川県川崎市",
     "prefecture": "神奈川県",
     "hours": "11:00〜18:00(火・水定休)",
     "map_query": "Denim bis 川崎市",
+    "last_scraped_at": "2026-08-11T02:11:17.380311+00:00",
     "locations": [
       {
         "label": null,
@@ -50,12 +50,12 @@
     "url": "https://www.baisenmill.com/",
     "platform": "Wix",
     "shop_type": "single_location",
-    "robots_txt_status": null,
-    "last_scraped_at": null,
-    "address": "神奈川県川崎市多摩区",
+    "robots_txt_status": "許可(2026-08確認。User-agent:*にAllow:/、一般クローラーへの制限なし)",
+    "address": "神奈川県川崎市多摩区南生田1-22-23",
     "prefecture": "神奈川県",
     "hours": "10:00〜17:00(月曜定休)",
     "map_query": "MiLL Coffee 川崎市多摩区南生田",
+    "last_scraped_at": "2026-08-11T02:11:17.380311+00:00",
     "locations": [
       {
         "label": null,
@@ -71,14 +71,14 @@
   {
     "name": "PHILOCOFFEA",
     "url": "https://philocoffea.com/",
-    "platform": "カラーミーショップ",
+    "platform": "カラーミーショップ(shop-pro.jp)",
     "shop_type": "multi_location",
-    "robots_txt_status": null,
-    "last_scraped_at": null,
-    "address": "千葉県船橋市(オンラインストア+実店舗5箇所)",
+    "robots_txt_status": "許可(2026-08確認。/secure/と/cart/以外は制限なし)",
+    "address": "千葉県",
     "prefecture": "千葉県",
     "hours": "店舗により異なる",
     "map_query": "PHILOCOFFEA 千葉県",
+    "last_scraped_at": "2026-08-11T02:11:17.380311+00:00",
     "locations": [
       {
         "label": "シャポー船橋店",
@@ -126,5 +126,19 @@
         "map_query": "PHILOCOFFEA 焙煎所 船橋市本町2-3-29"
       }
     ]
+  },
+  {
+    "name": "It's roasted coffee",
+    "url": null,
+    "instagram_url": "https://www.instagram.com/itsroastedcoffee/?locale=ja_JP",
+    "platform": "手動入力(Instagram/Googleマップのみ、公式サイトなし)",
+    "shop_type": "single_location",
+    "address": null,
+    "prefecture": null,
+    "hours": null,
+    "map_query": "It's roasted coffee",
+    "data_source": "manual",
+    "source_note": "Instagram(@itsroastedcoffee)とGoogleマップのメニュー機能を目視確認して入力。公式サイトは確認できず",
+    "last_verified_at": "2026-08-10"
   }
 ]
