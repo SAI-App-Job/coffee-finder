@@ -39,6 +39,12 @@ data/shops.json・data/products.jsonへマージする。手動データは実�
 が無くても取り込まれる。値は人間が確認・入力したものをそのまま使うため、
 scraped_at/last_scraped_atのような自動タイムスタンプは付与しない
 (代わりに人間が更新するlast_verified_atをそのまま保持する)。
+
+【一部店舗のみ実行された場合の扱い】
+scrape-shops.ymlのworkflow_dispatchでshopを1店舗に絞って実行した場合(特定の
+バグ修正の検証時など)や、いずれかの店舗のスクレイパーが失敗した場合、対応する
+data_*.jsonが存在しないことがある。その場合はエラーにせず、その店舗の既存の
+shops.json/products.jsonのレコードをそのまま変更せず残す(load_source()参照)。
 """
 
 import json
@@ -56,12 +62,14 @@ SOURCE_FILES = {
 }
 
 
-def load_source(shop_name: str) -> dict:
+def load_source(shop_name: str) -> dict | None:
+    """該当店舗のスクレイパー出力を読み込む。ファイルが無い場合はNoneを返す
+    (ワークフロー側でshopを絞って一部店舗だけ実行した場合や、その店舗の
+    ジョブが失敗した場合を想定。呼び出し側は既存データをそのまま残す)。"""
     path = SCRAPER_DIR / SOURCE_FILES[shop_name]
     if not path.exists():
-        raise FileNotFoundError(
-            f"{path} が見つかりません({shop_name}のスクレイパーが正常終了したか確認してください)"
-        )
+        print(f"[info] {path} が見つからないため、{shop_name}は今回スキップします(既存データを保持)")
+        return None
     with path.open(encoding="utf-8") as f:
         return json.load(f)
 
@@ -265,6 +273,10 @@ def main():
 
     for shop_name in SOURCE_FILES:
         source = load_source(shop_name)
+        if source is None:
+            # 今回スクレイピング対象外だった店舗(shopを絞った手動実行、または
+            # そのジョブが失敗した場合)。既存データを一切変更せず残す
+            continue
         existing_shop = existing_shops.get(shop_name)
 
         merged_shop = merge_shop(source["shop"], existing_shop, now_iso)

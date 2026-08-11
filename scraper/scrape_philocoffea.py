@@ -21,6 +21,7 @@ robots.txt確認済み(2026年8月時点): User-agent: * は /secure/ と /cart/
 して前回のレコードをそのまま使い回す(previous_data.py参照)。
 """
 
+import json
 import re
 import time
 
@@ -58,6 +59,14 @@ BEANS_DATA_FIELD_MAP = {
 
 ALTITUDE_PATTERN = re.compile(r"([\d,]+)\s*-\s*([\d,]+)\s*m")
 
+# 商品詳細ページに埋め込まれた `var Colorme = {...};` から価格を取る際のパターン。
+# strong.price のテキスト(例:「3,100円(税込3,348円)」)は税抜・税込の2つの金額を
+# 含んでおり、単純な数字抽出(digitのみ残す)だと両方の数字が連結されて
+# 「31003348」のような誤った値になる不具合が実データで確認された。
+# ページに埋め込まれた構造化データ(product.sales_price_including_tax)を
+# 優先的に使うことでこれを回避する。
+COLORME_JSON_PATTERN = re.compile(r"var\s+Colorme\s*=\s*(\{.*\});", re.DOTALL)
+
 
 def fetch_page(url: str) -> BeautifulSoup:
     resp = requests.get(url, headers=REQUEST_HEADERS, timeout=15)
@@ -93,6 +102,23 @@ def parse_beans_data_table(soup: BeautifulSoup) -> dict:
     return raw
 
 
+def extract_price_including_tax(soup: BeautifulSoup) -> int | None:
+    """`var Colorme = {...}` に埋め込まれた商品JSONから税込価格
+    (product.sales_price_including_tax)を取得する。見つからない/パースできない
+    場合はNoneを返す(呼び出し側でstrong.priceのテキストにフォールバックする)。"""
+    for script in soup.find_all("script"):
+        text = script.string or script.get_text() or ""
+        m = COLORME_JSON_PATTERN.search(text)
+        if not m:
+            continue
+        try:
+            data = json.loads(m.group(1))
+        except json.JSONDecodeError:
+            return None
+        return data.get("product", {}).get("sales_price_including_tax")
+    return None
+
+
 def parse_product_detail(url: str) -> dict:
     """商品詳細ページ1件をパースする。
 
@@ -106,8 +132,11 @@ def parse_product_detail(url: str) -> dict:
     group_tag_els = soup.select("ul#groupTag a")
 
     raw_name = name_el.get_text(strip=True) if name_el else ""
-    price = None
-    if price_el:
+
+    price = extract_price_including_tax(soup)
+    if price is None and price_el:
+        # フォールバック: 構造化データが見つからない場合のみテキストから推定
+        # (税抜・税込が併記されていると誤った値になりうるので最終手段扱い)
         price_digits = re.sub(r"[^\d]", "", price_el.get_text(strip=True))
         price = int(price_digits) if price_digits else None
 
@@ -181,6 +210,11 @@ LIST_BASE_URL = "https://philocoffea.com/?mode=srh&keyword=&sort=n"
 # 産地・精選方法を論じる対象にならないため、商品名のキーワードで除外する
 NON_BEAN_KEYWORDS = ["リキッドコーヒー", "アソートギフト", "コールドブリューバッグ", "COLD BREW BAG"]
 
+# 一覧ページの価格表示も詳細ページ同様「3,100円(税込3,348円)」のように税抜・税込の
+# 2つの金額が併記されている。税込側だけを取り出す(単純な数字抽出だと両方の数字が
+# 連結され、桁違いの誤った値になってしまうため)。
+LIST_PRICE_TAX_INCLUDED_PATTERN = re.compile(r"税込([\d,]+)円")
+
 
 def scrape_product_list_page(page: int) -> list[dict]:
     url = LIST_BASE_URL if page == 1 else f"{LIST_BASE_URL}&page={page}"
@@ -204,8 +238,15 @@ def scrape_product_list_page(page: int) -> list[dict]:
 
         price = None
         if price_el:
-            price_digits = re.sub(r"[^\d]", "", price_el.get_text(strip=True))
-            price = int(price_digits) if price_digits else None
+            price_text = price_el.get_text(strip=True)
+            tax_included_match = LIST_PRICE_TAX_INCLUDED_PATTERN.search(price_text)
+            if tax_included_match:
+                price = int(tax_included_match.group(1).replace(",", ""))
+            else:
+                # フォールバック: 税込表記が見つからない場合(セール品等で書式が
+                # 異なる可能性)は、これまで通り数字のみを抽出する
+                price_digits = re.sub(r"[^\d]", "", price_text)
+                price = int(price_digits) if price_digits else None
 
         results.append({
             "raw_name": raw_name,

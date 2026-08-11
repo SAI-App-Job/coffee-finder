@@ -7,7 +7,17 @@ on:
     # (docs/coffee-app-data-model.md の update_cadence 設計を踏まえ、
     #  イベント(月次)より高頻度に設定)。
     - cron: "0 21 * * 1"
-  workflow_dispatch: {} # 手動実行用
+  workflow_dispatch:
+    inputs:
+      shop:
+        description: "対象店舗(特定バグの検証等で1店舗だけ再実行したい場合に指定。既定はall=全店舗)"
+        type: choice
+        default: all
+        options:
+          - all
+          - denimbis
+          - millcoffee
+          - philocoffea
 
 permissions:
   contents: write # data/*.json をコミット・pushするために必要
@@ -16,6 +26,12 @@ jobs:
   # 3店舗を並列に実行する。各店舗は独立したサイトへのスクレイピングなので、
   # 直列にする理由がない(courtesy delayは店舗ごとの各リクエスト間隔の話であり、
   # 店舗同士を並列化しても対象サイトへの負荷は増えない)。
+  #
+  # workflow_dispatchでshopを指定した場合は、該当する1店舗のジョブだけを実行する
+  # (他の2店舗のジョブはスキップ扱いになるが、これはaggregateジョブのneeds判定上は
+  # 失敗ではないため後続のaggregateは問題なく実行される。aggregate_shops.py側も
+  # スキップされた店舗のdata_*.jsonが存在しないケースを許容し、その店舗の既存データを
+  # そのまま残す設計にしている)。定期実行(schedule)では常に全店舗を実行する。
   scrape:
     strategy:
       fail-fast: false # 1店舗が失敗しても他の店舗の結果は活かす
@@ -31,6 +47,7 @@ jobs:
             script: scrape_philocoffea.py
             output: data_philocoffea.json
     runs-on: ubuntu-latest
+    if: github.event_name != 'workflow_dispatch' || github.event.inputs.shop == 'all' || github.event.inputs.shop == matrix.shop.id
     steps:
       - uses: actions/checkout@v4 # 差分ベーススクレイピングがdata/products.jsonを参照するため必須
 

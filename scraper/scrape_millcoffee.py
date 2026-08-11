@@ -213,12 +213,15 @@ def scrape_all_products(fetch_details: bool = True, max_pages: int = 20) -> tupl
         if not item["product_url"]:
             continue
 
-        # 一覧ページのdata-wix-priceは "600.00" のような文字列のため、
-        # 詳細ページ由来の前回価格(int)と比較できるよう整数化する
+        # 一覧ページのdata-wix-priceは "￥1,900" のような通貨記号・カンマ付き
+        # 文字列(数値のみの "600.00" 形式ではなかった。実データで確認済み)。
+        # 詳細ページ由来の前回価格(int)と比較できるよう、通貨記号・カンマを
+        # 除いてから整数化する。
         current_price = None
         if item.get("price_text"):
+            price_digits = re.sub(r"[^\d.]", "", item["price_text"])
             try:
-                current_price = int(float(item["price_text"]))
+                current_price = int(float(price_digits)) if price_digits else None
             except ValueError:
                 current_price = None
 
