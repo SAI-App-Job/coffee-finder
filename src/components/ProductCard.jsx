@@ -4,7 +4,7 @@ import { DISCOVERY_FACTS } from "../data/discoveryFacts";
 import { PROCESSING_EXPLANATIONS, DESIGNATED_BRAND_EXPLANATIONS } from "../data/explanations";
 import { getGradeExplanation } from "../utils/grade";
 import { categorizeFlavorNotes } from "../utils/flavor";
-import { roastColor, cityFromAddress } from "../utils/format";
+import { roastColor, cityFromAddress, formatPrice } from "../utils/format";
 
 export function DiscoveryFactCard() {
   const [index, setIndex] = useState(() => Math.floor(Math.random() * DISCOVERY_FACTS.length));
@@ -158,9 +158,11 @@ export function ProductCard({ product, onOpenMap, onLearnOrigin }) {
           </div>
           <div className="text-right shrink-0">
             <p className="font-mono text-[#F2E9DD] text-[15px]">
-              ¥{product.price.toLocaleString()}
+              {formatPrice(product) ?? "価格未確認"}
             </p>
-            <p className="font-mono text-[11px] text-[#8B7361]">{product.weightG}g</p>
+            {typeof product.weightG === "number" && (
+              <p className="font-mono text-[11px] text-[#8B7361]">{product.weightG}g</p>
+            )}
           </div>
         </div>
 

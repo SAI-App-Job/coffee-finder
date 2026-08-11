@@ -49,6 +49,8 @@ function mapProduct(raw, shopsByName) {
     roast: raw.roast_level,
     roastSelectable: raw.roast_selectable,
     price: raw.price,
+    priceMin: raw.price_min,
+    priceMax: raw.price_max,
     weightG: raw.weight_g,
     flavorNotes: raw.flavor_notes,
     mapQuery: raw.map_query,
