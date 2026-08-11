@@ -27,11 +27,12 @@ jobs:
   # 直列にする理由がない(courtesy delayは店舗ごとの各リクエスト間隔の話であり、
   # 店舗同士を並列化しても対象サイトへの負荷は増えない)。
   #
-  # workflow_dispatchでshopを指定した場合は、該当する1店舗のジョブだけを実行する
-  # (他の2店舗のジョブはスキップ扱いになるが、これはaggregateジョブのneeds判定上は
-  # 失敗ではないため後続のaggregateは問題なく実行される。aggregate_shops.py側も
-  # スキップされた店舗のdata_*.jsonが存在しないケースを許容し、その店舗の既存データを
-  # そのまま残す設計にしている)。定期実行(schedule)では常に全店舗を実行する。
+  # workflow_dispatchでshopを指定した場合は、該当する1店舗だけスクレイピングを
+  # 実行する(他の2店舗はScrape/Uploadステップがスキップされ、Uploadされない
+  # =後続のaggregateはその店舗のdata_*.jsonを受け取らず、既存データをそのまま
+  # 残す。aggregate_shops.py側で欠損店舗を許容する設計にしている)。matrixコンテキストは
+  # ジョブレベルのifでは使えないため、対象を絞る条件はステップ単位で指定する。
+  # 定期実行(schedule)では常に全店舗を実行する。
   scrape:
     strategy:
       fail-fast: false # 1店舗が失敗しても他の店舗の結果は活かす
@@ -47,7 +48,6 @@ jobs:
             script: scrape_philocoffea.py
             output: data_philocoffea.json
     runs-on: ubuntu-latest
-    if: github.event_name != 'workflow_dispatch' || github.event.inputs.shop == 'all' || github.event.inputs.shop == matrix.shop.id
     steps:
       - uses: actions/checkout@v4 # 差分ベーススクレイピングがdata/products.jsonを参照するため必須
 
@@ -59,10 +59,12 @@ jobs:
         run: pip install requests beautifulsoup4
 
       - name: Scrape ${{ matrix.shop.id }}
+        if: github.event_name != 'workflow_dispatch' || github.event.inputs.shop == 'all' || github.event.inputs.shop == matrix.shop.id
         working-directory: scraper
         run: python ${{ matrix.shop.script }}
 
       - name: Upload ${{ matrix.shop.id }} output
+        if: github.event_name != 'workflow_dispatch' || github.event.inputs.shop == 'all' || github.event.inputs.shop == matrix.shop.id
         uses: actions/upload-artifact@v4
         with:
           name: scrape-${{ matrix.shop.id }}
