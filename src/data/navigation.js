@@ -1,7 +1,8 @@
-import { Coffee, Store, Award, BookOpen, Palette, Tag, Dna, Droplet, Trophy } from "lucide-react";
+import { Coffee, Store, Award, BookOpen, Palette, Tag, Dna, Droplet, Trophy, Heart } from "lucide-react";
 
 export const TAB_ITEMS = [
   { id: "products", icon: Coffee, ja: "商品", en: "Products" },
+  { id: "favorites", icon: Heart, ja: "お気に入り", en: "Favorites" },
   { id: "shops", icon: Store, ja: "店舗", en: "Shops" },
   { id: "guide", icon: Award, ja: "産地", en: "Origin" },
   { id: "trivia", icon: BookOpen, ja: "豆知識", en: "Trivia" },

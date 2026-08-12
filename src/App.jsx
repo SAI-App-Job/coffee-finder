@@ -6,9 +6,11 @@ import { EVENTS } from "./data/events";
 import { TAB_ITEMS } from "./data/navigation";
 import { categorizeFlavorNotes } from "./utils/flavor";
 import { loadRemoteData } from "./data/remote";
+import { useFavorites } from "./hooks/useFavorites";
 import { ProductCard, DiscoveryFactCard } from "./components/ProductCard";
 import { FilterSheet } from "./components/FilterSheet";
 import { ShopListView, ShopDetailView } from "./components/ShopViews";
+import { FavoritesView } from "./components/FavoritesView";
 import { BuyingGuideView } from "./components/BuyingGuideView";
 import { TriviaView } from "./components/TriviaView";
 import { MapLinkModal } from "./components/common";
@@ -33,7 +35,9 @@ export default function CoffeeProductList() {
     };
   }, []);
 
-  const [tab, setTab] = useState("products"); // "products" | "shops"
+  const { isFavorite, toggleFavorite } = useFavorites();
+
+  const [tab, setTab] = useState("products"); // "products" | "favorites" | "shops"
   const [filters, setFilters] = useState({
     country: new Set(),
     prefecture: new Set(),
@@ -243,10 +247,22 @@ export default function CoffeeProductList() {
                 product={product}
                 onOpenMap={openMapForProduct}
                 onLearnOrigin={learnAboutOrigin}
+                isFavorite={isFavorite}
+                onToggleFavorite={toggleFavorite}
               />
             ))
           )}
         </main>
+      )}
+
+      {tab === "favorites" && (
+        <FavoritesView
+          products={products}
+          isFavorite={isFavorite}
+          onToggleFavorite={toggleFavorite}
+          onOpenMap={openMapForProduct}
+          onLearnOrigin={learnAboutOrigin}
+        />
       )}
 
       {tab === "shops" && !selectedShop && (
@@ -260,6 +276,8 @@ export default function CoffeeProductList() {
           onBack={() => setSelectedShop(null)}
           onOpenMap={() => openMapForShop(selectedShop)}
           onOpenLocationMap={openMapForLocation}
+          isFavorite={isFavorite}
+          onToggleFavorite={toggleFavorite}
         />
       )}
 

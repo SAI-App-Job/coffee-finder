@@ -82,7 +82,15 @@ export function LocationCard({ location, onOpenMap }) {
   );
 }
 
-export function ShopDetailView({ shop, products, onBack, onOpenMap, onOpenLocationMap }) {
+export function ShopDetailView({
+  shop,
+  products,
+  onBack,
+  onOpenMap,
+  onOpenLocationMap,
+  isFavorite,
+  onToggleFavorite,
+}) {
   const hasMultipleLocations = shop.locations && shop.locations.length > 0;
 
   return (
@@ -149,7 +157,13 @@ export function ShopDetailView({ shop, products, onBack, onOpenMap, onOpenLocati
       <div className="px-5 py-5 flex flex-col gap-3">
         <p className="text-[12px] text-[#8B7361]">取扱商品 {products.length}件</p>
         {products.map((product) => (
-          <ProductCard key={product.id} product={product} onOpenMap={onOpenMap} />
+          <ProductCard
+            key={product.id}
+            product={product}
+            onOpenMap={onOpenMap}
+            isFavorite={isFavorite}
+            onToggleFavorite={onToggleFavorite}
+          />
         ))}
       </div>
     </div>

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Sparkles, Coffee, MapPin, ExternalLink } from "lucide-react";
+import { Sparkles, Coffee, MapPin, ExternalLink, Heart } from "lucide-react";
 import { DISCOVERY_FACTS } from "../data/discoveryFacts";
 import { PROCESSING_EXPLANATIONS, DESIGNATED_BRAND_EXPLANATIONS } from "../data/explanations";
 import { getGradeExplanation } from "../utils/grade";
@@ -119,7 +119,7 @@ export function HoverExplainTag({ label, category, detail }) {
   );
 }
 
-export function ProductCard({ product, onOpenMap, onLearnOrigin }) {
+export function ProductCard({ product, onOpenMap, onLearnOrigin, isFavorite, onToggleFavorite }) {
   const processingDetail = product.processingMethod
     ? PROCESSING_EXPLANATIONS[product.processingMethod]
     : null;
@@ -127,6 +127,7 @@ export function ProductCard({ product, onOpenMap, onLearnOrigin }) {
   const flavorCategories = categorizeFlavorNotes(product.flavorNotes);
 
   const staticTags = [product.farmNote].filter(Boolean);
+  const favorited = isFavorite?.(product.id) ?? false;
 
   return (
     <div className="relative rounded-2xl bg-[#2F241A] border border-[#4A3A2A] flex">
@@ -156,7 +157,19 @@ export function ProductCard({ product, onOpenMap, onLearnOrigin }) {
               {product.rawName}
             </h3>
           </div>
-          <div className="text-right shrink-0">
+          <div className="text-right shrink-0 flex flex-col items-end gap-1">
+            <button
+              onClick={() => onToggleFavorite?.(product.id)}
+              aria-label={favorited ? "お気に入りから削除" : "お気に入りに追加"}
+              aria-pressed={favorited}
+              className="p-1 -m-1 text-[#8B7361] hover:text-[#D4A24E] transition-colors"
+            >
+              <Heart
+                size={17}
+                strokeWidth={2}
+                className={favorited ? "fill-[#D4A24E] text-[#D4A24E]" : ""}
+              />
+            </button>
             <p className="font-mono text-[#F2E9DD] text-[15px]">
               {formatPrice(product) ?? "価格未確認"}
             </p>
