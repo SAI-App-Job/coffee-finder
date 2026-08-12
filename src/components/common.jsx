@@ -3,7 +3,7 @@ import { MapPin, X } from "lucide-react";
 export function SectionHeading({ en, ja, className = "" }) {
   return (
     <div className={className}>
-      <p className="text-[11px] tracking-[0.2em] text-[#8B5E2E] uppercase">{en}</p>
+      <p className="text-[11px] tracking-[0.2em] text-[var(--accent-label)] uppercase">{en}</p>
       <h2 className="font-serif text-[22px] leading-tight text-[#F2E9DD] mt-1">{ja}</h2>
     </div>
   );
@@ -35,7 +35,7 @@ export function MapLinkModal({ target, onClose }) {
       >
         <div className="flex items-start justify-between mb-3">
           <div>
-            <p className="text-[11px] text-[#8B5E2E] uppercase tracking-wider">店舗へ行く</p>
+            <p className="text-[11px] text-[var(--accent-label)] uppercase tracking-wider">店舗へ行く</p>
             <h4 className="font-serif text-[18px] text-[#F2E9DD] mt-0.5">{target.shopName}</h4>
             <p className="text-[13px] text-[#8B7361] mt-0.5">{target.shopAddress}</p>
           </div>
@@ -51,7 +51,7 @@ export function MapLinkModal({ target, onClose }) {
           href={mapUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center justify-center gap-2 w-full py-3 rounded-xl bg-[#D4A24E] text-[#231810] font-medium text-[14px] hover:bg-[#E8C89A] transition-colors"
+          className="flex items-center justify-center gap-2 w-full py-3 rounded-xl bg-[var(--accent)] text-[#231810] font-medium text-[14px] hover:bg-[var(--accent-soft)] transition-colors"
         >
           <MapPin size={16} strokeWidth={2} />
           Googleマップで開く

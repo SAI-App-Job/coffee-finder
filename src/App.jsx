@@ -7,12 +7,16 @@ import { TAB_ITEMS } from "./data/navigation";
 import { categorizeFlavorNotes } from "./utils/flavor";
 import { loadRemoteData } from "./data/remote";
 import { useFavorites } from "./hooks/useFavorites";
+import { useAccentTheme } from "./hooks/useAccentTheme";
+import { usePremium } from "./hooks/usePremium";
 import { ProductCard, DiscoveryFactCard } from "./components/ProductCard";
 import { FilterSheet } from "./components/FilterSheet";
 import { ShopListView, ShopDetailView } from "./components/ShopViews";
 import { FavoritesView } from "./components/FavoritesView";
 import { BuyingGuideView } from "./components/BuyingGuideView";
 import { TriviaView } from "./components/TriviaView";
+import { MyPageView } from "./components/MyPageView";
+import { AdBannerPlaceholder } from "./components/AdBanner";
 import { MapLinkModal } from "./components/common";
 
 export default function CoffeeProductList() {
@@ -35,9 +39,11 @@ export default function CoffeeProductList() {
     };
   }, []);
 
-  const { isFavorite, toggleFavorite } = useFavorites();
+  const { favoriteIds, isFavorite, toggleFavorite, importFavorites } = useFavorites();
+  const { themeId, setThemeId, themes } = useAccentTheme();
+  const { isPremium, setPremium } = usePremium();
 
-  const [tab, setTab] = useState("products"); // "products" | "favorites" | "shops"
+  const [tab, setTab] = useState("products"); // "products" | "favorites" | "shops" | "guide" | "trivia" | "mypage"
   const [filters, setFilters] = useState({
     country: new Set(),
     prefecture: new Set(),
@@ -137,16 +143,23 @@ export default function CoffeeProductList() {
     setMapTarget({ shopName: location.label, shopAddress: location.address, mapQuery: location.mapQuery });
 
   return (
-    <div className="min-h-full bg-[#231810] text-[#F2E9DD]">
+    <div className={`min-h-full bg-[#231810] text-[#F2E9DD] ${!isPremium ? "pb-16" : ""}`}>
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
+        :root {
+          --accent: #D4A24E;
+          --accent-soft: #E8C89A;
+          --accent-muted: #C9A876;
+          --accent-label: #8B5E2E;
+          --accent-glow: rgba(212, 162, 78, 0.35);
+        }
         .font-serif { font-family: 'Fraunces', serif; }
         * { font-family: 'Inter', sans-serif; }
         .font-mono { font-family: 'IBM Plex Mono', monospace; }
       `}</style>
 
       <header className="px-5 pt-6 pb-3 border-b border-[#4A3A2A] sticky top-0 bg-[#231810]/95 backdrop-blur-sm z-10">
-        <p className="text-[11px] tracking-[0.2em] text-[#8B5E2E] uppercase">
+        <p className="text-[11px] tracking-[0.2em] text-[var(--accent-label)] uppercase">
           Coffee Finder
         </p>
         <h1 className="font-serif text-[26px] leading-tight mt-1">
@@ -160,7 +173,7 @@ export default function CoffeeProductList() {
               key={id}
               onClick={() => { setTab(id); setSelectedShop(null); }}
               className={`flex items-center gap-1.5 shrink-0 px-3.5 py-1.5 rounded-full transition-colors ${
-                tab === id ? "bg-[#D4A24E] text-[#231810]" : "text-[#B8A891]"
+                tab === id ? "bg-[var(--accent)] text-[#231810]" : "text-[#B8A891]"
               }`}
             >
               <Icon size={13} strokeWidth={2} />
@@ -191,7 +204,7 @@ export default function CoffeeProductList() {
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder="商品名・産地・銘柄・店舗名・住所で検索"
-              className="w-full pl-9 pr-9 py-2.5 rounded-xl bg-[#2F241A] border border-[#4A3A2A] text-[13px] text-[#F2E9DD] placeholder:text-[#8B7361] focus:outline-none focus:border-[#8B5E2E]"
+              className="w-full pl-9 pr-9 py-2.5 rounded-xl bg-[#2F241A] border border-[#4A3A2A] text-[13px] text-[#F2E9DD] placeholder:text-[#8B7361] focus:outline-none focus:border-[var(--accent-label)]"
             />
             {searchQuery && (
               <button
@@ -206,12 +219,12 @@ export default function CoffeeProductList() {
           <div className="flex items-center gap-2 mt-3">
             <button
               onClick={() => setSheetOpen(true)}
-              className="flex items-center gap-1.5 shrink-0 text-[13px] px-3.5 py-1.5 rounded-full border border-[#8B5E2E] text-[#D4A24E] hover:bg-[#3B2211] transition-colors"
+              className="flex items-center gap-1.5 shrink-0 text-[13px] px-3.5 py-1.5 rounded-full border border-[var(--accent-label)] text-[var(--accent)] hover:bg-[#3B2211] transition-colors"
             >
               <SlidersHorizontal size={13} strokeWidth={2} />
               絞り込み
               {activeCount > 0 && (
-                <span className="ml-0.5 text-[11px] bg-[#D4A24E] text-[#231810] rounded-full w-4 h-4 flex items-center justify-center font-medium">
+                <span className="ml-0.5 text-[11px] bg-[var(--accent)] text-[#231810] rounded-full w-4 h-4 flex items-center justify-center font-medium">
                   {activeCount}
                 </span>
               )}
@@ -221,7 +234,7 @@ export default function CoffeeProductList() {
                 <button
                   key={`${dim}-${v}`}
                   onClick={() => removeFilter(dim, v)}
-                  className="shrink-0 flex items-center gap-1 text-[12px] pl-2.5 pr-1.5 py-1 rounded-full bg-[#3B2211] text-[#C9A876] border border-[#4A3A2A]"
+                  className="shrink-0 flex items-center gap-1 text-[12px] pl-2.5 pr-1.5 py-1 rounded-full bg-[#3B2211] text-[var(--accent-muted)] border border-[#4A3A2A]"
                 >
                   {v}
                   <X size={11} />
@@ -286,6 +299,18 @@ export default function CoffeeProductList() {
       )}
       {tab === "trivia" && <TriviaView onLearnOrigin={learnAboutOrigin} events={events} />}
 
+      {tab === "mypage" && (
+        <MyPageView
+          themeId={themeId}
+          setThemeId={setThemeId}
+          themes={themes}
+          isPremium={isPremium}
+          setPremium={setPremium}
+          favoriteIds={favoriteIds}
+          importFavorites={importFavorites}
+        />
+      )}
+
       <FilterSheet
         open={sheetOpen}
         onClose={() => setSheetOpen(false)}
@@ -294,6 +319,7 @@ export default function CoffeeProductList() {
         resultCount={filtered.length}
       />
       <MapLinkModal target={mapTarget} onClose={() => setMapTarget(null)} />
+      {!isPremium && <AdBannerPlaceholder />}
     </div>
   );
 }

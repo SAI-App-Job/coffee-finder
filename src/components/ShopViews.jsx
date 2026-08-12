@@ -6,18 +6,18 @@ export function ShopCard({ shop, productCount, onSelect }) {
   return (
     <button
       onClick={onSelect}
-      className="w-full text-left rounded-2xl bg-[#2F241A] border border-[#4A3A2A] p-4 flex flex-col gap-2 hover:border-[#8B5E2E] transition-colors"
+      className="w-full text-left rounded-2xl bg-[#2F241A] border border-[#4A3A2A] p-4 flex flex-col gap-2 hover:border-[var(--accent-label)] transition-colors"
     >
       <div className="flex items-start justify-between gap-3">
         <div>
-          <p className="text-[11px] tracking-wider text-[#8B5E2E] font-medium uppercase">
+          <p className="text-[11px] tracking-wider text-[var(--accent-label)] font-medium uppercase">
             {shop.prefecture}
           </p>
           <h3 className="font-serif text-[18px] leading-snug text-[#F2E9DD] mt-0.5">
             {shop.name}
           </h3>
         </div>
-        <span className="shrink-0 text-[11px] px-2 py-0.5 rounded-full bg-[#3B2211] text-[#C9A876] border border-[#4A3A2A] flex items-center gap-1">
+        <span className="shrink-0 text-[11px] px-2 py-0.5 rounded-full bg-[#3B2211] text-[var(--accent-muted)] border border-[#4A3A2A] flex items-center gap-1">
           <Package size={11} />
           {productCount}件
         </span>
@@ -64,7 +64,7 @@ export function LocationCard({ location, onOpenMap }) {
           {location.email && (
             <a
               href={`mailto:${location.email}`}
-              className="text-[#D4A24E] hover:text-[#E8C89A] transition-colors"
+              className="text-[var(--accent)] hover:text-[var(--accent-soft)] transition-colors"
             >
               {location.hours || location.tel ? "・" : ""}{location.email}
             </a>
@@ -73,7 +73,7 @@ export function LocationCard({ location, onOpenMap }) {
       )}
       <button
         onClick={() => onOpenMap(location)}
-        className="mt-1 self-start flex items-center gap-1.5 text-[12px] text-[#D4A24E] hover:text-[#E8C89A] transition-colors"
+        className="mt-1 self-start flex items-center gap-1.5 text-[12px] text-[var(--accent)] hover:text-[var(--accent-soft)] transition-colors"
       >
         <MapPin size={12} strokeWidth={2} />
         この店舗をGoogleマップで開く
@@ -104,7 +104,7 @@ export function ShopDetailView({
           店舗一覧に戻る
         </button>
 
-        <p className="text-[11px] tracking-wider text-[#8B5E2E] font-medium uppercase">
+        <p className="text-[11px] tracking-wider text-[var(--accent-label)] font-medium uppercase">
           {shop.prefecture} ・ {shop.platform}
         </p>
         <h2 className="font-serif text-[24px] text-[#F2E9DD] mt-1">{shop.name}</h2>
@@ -121,7 +121,7 @@ export function ShopDetailView({
           {!hasMultipleLocations && (
             <button
               onClick={onOpenMap}
-              className="flex-1 flex items-center justify-center gap-1.5 py-2.5 rounded-xl bg-[#D4A24E] text-[#231810] text-[13px] font-medium"
+              className="flex-1 flex items-center justify-center gap-1.5 py-2.5 rounded-xl bg-[var(--accent)] text-[#231810] text-[13px] font-medium"
             >
               <MapPin size={14} strokeWidth={2} />
               Googleマップで開く

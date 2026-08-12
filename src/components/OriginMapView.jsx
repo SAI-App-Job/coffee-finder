@@ -235,7 +235,7 @@ export function OriginMapView({ origins, selected, onSelect }) {
   return (
     <div className="rounded-2xl bg-[#2F241A] border border-[#4A3A2A]" style={{ padding: 16 }}>
       <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 8 }}>
-        <p className="text-[11px] tracking-[0.15em] text-[#8B5E2E] uppercase">Coffee Belt Map</p>
+        <p className="text-[11px] tracking-[0.15em] text-[var(--accent-label)] uppercase">Coffee Belt Map</p>
         <span className="text-[10px] text-[#8B7361]">ピンチ/ホイールで拡大縮小、ドラッグで移動</span>
       </div>
 
@@ -244,7 +244,7 @@ export function OriginMapView({ origins, selected, onSelect }) {
           <button
             key={region}
             onClick={() => setViewBox(MAP_REGION_PRESETS[region])}
-            className="text-[11px] px-3 py-1 rounded-full border border-[#8B5E2E] text-[#D4A24E] hover:bg-[#3B2211] transition-colors"
+            className="text-[11px] px-3 py-1 rounded-full border border-[var(--accent-label)] text-[var(--accent)] hover:bg-[#3B2211] transition-colors"
           >
             {region}
           </button>
@@ -252,7 +252,7 @@ export function OriginMapView({ origins, selected, onSelect }) {
         {isZoomed && (
           <button
             onClick={resetZoom}
-            className="text-[11px] px-3 py-1 rounded-full border border-[#4A3A2A] text-[#8B7361] hover:text-[#D4A24E] transition-colors"
+            className="text-[11px] px-3 py-1 rounded-full border border-[#4A3A2A] text-[#8B7361] hover:text-[var(--accent)] transition-colors"
           >
             全体表示
           </button>
@@ -285,8 +285,8 @@ export function OriginMapView({ origins, selected, onSelect }) {
         ))}
 
         {/* 赤道の帯(正距円筒図法でlat=0はy=250) */}
-        <line x1="80" y1="250" x2="1000" y2="250" stroke="#8B5E2E" strokeOpacity="0.4" strokeDasharray="6 6" />
-        <text x="88" y="244" fontSize="11" fill="#8B5E2E" opacity="0.8">赤道</text>
+        <line x1="80" y1="250" x2="1000" y2="250" stroke="var(--accent-label)" strokeOpacity="0.4" strokeDasharray="6 6" />
+        <text x="88" y="244" fontSize="11" fill="var(--accent-label)" opacity="0.8">赤道</text>
 
         {/* 日本(特別な強調はせず、大陸と同じ背景色で自然に溶け込ませる) */}
         <path d={JAPAN_PATH} fill="#2F241A" stroke="#3B2211" strokeWidth="0.6" />
@@ -296,9 +296,9 @@ export function OriginMapView({ origins, selected, onSelect }) {
           <path
             key={name}
             d={d}
-            fill="#8B5E2E"
+            fill="var(--accent-label)"
             fillOpacity={isSelected(name) ? 1 : 0.85}
-            stroke={isSelected(name) ? "#E8C89A" : "#D4A24E"}
+            stroke={isSelected(name) ? "var(--accent-soft)" : "var(--accent)"}
             strokeWidth={isSelected(name) ? 1.4 : 1}
             onClick={() => {
               const origin = origins.find((o) => o.country === name);
@@ -350,7 +350,7 @@ export function OriginMapView({ origins, selected, onSelect }) {
                   cx={pos.x}
                   cy={pos.y}
                   r={selected_ ? 6 : 4.5}
-                  fill={selected_ ? "#D4A24E" : "#E8C89A"}
+                  fill={selected_ ? "var(--accent)" : "var(--accent-soft)"}
                   stroke="#231810"
                   strokeWidth="1"
                 />
@@ -360,7 +360,7 @@ export function OriginMapView({ origins, selected, onSelect }) {
                     y1={pos.y}
                     x2={labelX}
                     y2={lineEndY}
-                    stroke={selected_ ? "#D4A24E" : "#8B7361"}
+                    stroke={selected_ ? "var(--accent)" : "#8B7361"}
                     strokeWidth="0.8"
                   />
                 )}
@@ -370,7 +370,7 @@ export function OriginMapView({ origins, selected, onSelect }) {
                   width={textWidth}
                   height="16"
                   rx="8"
-                  fill={selected_ ? "#D4A24E" : "#3B2211"}
+                  fill={selected_ ? "var(--accent)" : "#3B2211"}
                   fillOpacity="0.95"
                 />
                 <text

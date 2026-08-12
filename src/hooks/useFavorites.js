@@ -35,5 +35,20 @@ export function useFavorites() {
     );
   }, []);
 
-  return { favoriteIds, isFavorite, toggleFavorite };
+  // バックアップファイルからの復元用。既存のお気に入りは失わないよう、
+  // 上書きではなく差分(未登録分)だけを追加するマージ方式にしている。
+  const importFavorites = useCallback(
+    (ids) => {
+      const incoming = Array.isArray(ids) ? [...new Set(ids.map(String))] : [];
+      const existing = new Set(favoriteIds);
+      const newOnes = incoming.filter((id) => !existing.has(id));
+      if (newOnes.length > 0) {
+        setFavoriteIds((prev) => [...prev, ...newOnes]);
+      }
+      return { total: incoming.length, added: newOnes.length };
+    },
+    [favoriteIds]
+  );
+
+  return { favoriteIds, isFavorite, toggleFavorite, importFavorites };
 }

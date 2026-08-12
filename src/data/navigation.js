@@ -1,4 +1,4 @@
-import { Coffee, Store, Award, BookOpen, Palette, Tag, Dna, Droplet, Trophy, Heart } from "lucide-react";
+import { Coffee, Store, Award, BookOpen, Palette, Tag, Dna, Droplet, Trophy, Heart, Settings } from "lucide-react";
 
 export const TAB_ITEMS = [
   { id: "products", icon: Coffee, ja: "商品", en: "Products" },
@@ -6,6 +6,7 @@ export const TAB_ITEMS = [
   { id: "shops", icon: Store, ja: "店舗", en: "Shops" },
   { id: "guide", icon: Award, ja: "産地", en: "Origin" },
   { id: "trivia", icon: BookOpen, ja: "豆知識", en: "Trivia" },
+  { id: "mypage", icon: Settings, ja: "マイページ", en: "My Page" },
 ];
 
 // 「豆知識」タブ内のサブナビゲーション(旧: 用語解説/品種/淹れ方タブを統合)

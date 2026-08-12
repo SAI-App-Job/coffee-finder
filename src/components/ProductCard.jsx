@@ -23,12 +23,12 @@ export function DiscoveryFactCard() {
     <div className="rounded-2xl bg-[#2F241A] border border-[#4A3A2A] p-4 flex flex-col gap-2">
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-1.5">
-          <Sparkles size={13} className="text-[#D4A24E]" strokeWidth={1.75} />
-          <p className="text-[11px] tracking-[0.15em] text-[#8B5E2E] uppercase">Discovery</p>
+          <Sparkles size={13} className="text-[var(--accent)]" strokeWidth={1.75} />
+          <p className="text-[11px] tracking-[0.15em] text-[var(--accent-label)] uppercase">Discovery</p>
         </div>
         <button
           onClick={showAnother}
-          className="text-[11px] text-[#8B7361] hover:text-[#D4A24E] transition-colors"
+          className="text-[11px] text-[#8B7361] hover:text-[var(--accent)] transition-colors"
         >
           別の話を見る
         </button>
@@ -56,7 +56,7 @@ export function HoverExplainTag({ label, category, detail }) {
     >
       <button
         onClick={() => setOpen((o) => !o)}
-        className="text-[11px] px-2 py-0.5 rounded-full bg-[#3B2211] text-[#C9A876] border border-[#4A3A2A] border-dashed hover:border-[#D4A24E] hover:text-[#D4A24E] transition-colors"
+        className="text-[11px] px-2 py-0.5 rounded-full bg-[#3B2211] text-[var(--accent-muted)] border border-[#4A3A2A] border-dashed hover:border-[var(--accent)] hover:text-[var(--accent)] transition-colors"
       >
         {label}
       </button>
@@ -141,7 +141,7 @@ export function ProductCard({ product, onOpenMap, onLearnOrigin, isFavorite, onT
             ? { backgroundColor: roastColor(product.roast) }
             : {
                 backgroundImage:
-                  "repeating-linear-gradient(135deg, #E8C89A 0 4px, #24140A 4px 8px)",
+                  "repeating-linear-gradient(135deg, var(--accent-soft) 0 4px, #24140A 4px 8px)",
               }
         }
         aria-hidden="true"
@@ -150,7 +150,7 @@ export function ProductCard({ product, onOpenMap, onLearnOrigin, isFavorite, onT
       <div className="flex-1 p-4 flex flex-col gap-2.5">
         <div className="flex items-start justify-between gap-3">
           <div>
-            <p className="text-[11px] tracking-wider text-[#8B5E2E] font-medium uppercase">
+            <p className="text-[11px] tracking-wider text-[var(--accent-label)] font-medium uppercase">
               {product.originCountry}
             </p>
             <h3 className="font-serif text-[17px] leading-snug text-[#F2E9DD] mt-0.5">
@@ -162,12 +162,12 @@ export function ProductCard({ product, onOpenMap, onLearnOrigin, isFavorite, onT
               onClick={() => onToggleFavorite?.(product.id)}
               aria-label={favorited ? "お気に入りから削除" : "お気に入りに追加"}
               aria-pressed={favorited}
-              className="p-1 -m-1 text-[#8B7361] hover:text-[#D4A24E] transition-colors"
+              className="p-1 -m-1 text-[#8B7361] hover:text-[var(--accent)] transition-colors"
             >
               <Heart
                 size={17}
                 strokeWidth={2}
-                className={favorited ? "fill-[#D4A24E] text-[#D4A24E]" : ""}
+                className={favorited ? "fill-[var(--accent)] text-[var(--accent)]" : ""}
               />
             </button>
             <p className="font-mono text-[#F2E9DD] text-[15px]">
@@ -217,7 +217,7 @@ export function ProductCard({ product, onOpenMap, onLearnOrigin, isFavorite, onT
             {staticTags.map((tag) => (
               <span
                 key={tag}
-                className="text-[11px] px-2 py-0.5 rounded-full bg-[#3B2211] text-[#C9A876] border border-[#4A3A2A]"
+                className="text-[11px] px-2 py-0.5 rounded-full bg-[#3B2211] text-[var(--accent-muted)] border border-[#4A3A2A]"
               >
                 {tag}
               </span>
@@ -240,7 +240,7 @@ export function ProductCard({ product, onOpenMap, onLearnOrigin, isFavorite, onT
           </div>
           <button
             onClick={() => onOpenMap(product)}
-            className="flex items-center gap-1 text-[12px] text-[#D4A24E] hover:text-[#E8C89A] transition-colors"
+            className="flex items-center gap-1 text-[12px] text-[var(--accent)] hover:text-[var(--accent-soft)] transition-colors"
           >
             <MapPin size={13} strokeWidth={1.75} />
             <span>地図で開く</span>
@@ -251,7 +251,7 @@ export function ProductCard({ product, onOpenMap, onLearnOrigin, isFavorite, onT
         {onLearnOrigin && (
           <button
             onClick={() => onLearnOrigin(product.originCountry)}
-            className="flex items-center justify-center gap-1.5 text-[12px] text-[#8B5E2E] hover:text-[#D4A24E] transition-colors py-1"
+            className="flex items-center justify-center gap-1.5 text-[12px] text-[var(--accent-label)] hover:text-[var(--accent)] transition-colors py-1"
           >
             <Sparkles size={12} strokeWidth={1.75} />
             <span>{product.originCountry}という産地をもっと知る</span>

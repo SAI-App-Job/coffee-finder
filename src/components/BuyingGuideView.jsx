@@ -10,8 +10,8 @@ export function OriginSection({ icon: Icon, label, children }) {
   return (
     <div>
       <div className="flex items-center gap-1.5 mb-1">
-        <Icon size={12} className="text-[#8B5E2E]" strokeWidth={1.75} />
-        <span className="text-[11px] tracking-wide text-[#8B5E2E] uppercase">{label}</span>
+        <Icon size={12} className="text-[var(--accent-label)]" strokeWidth={1.75} />
+        <span className="text-[11px] tracking-wide text-[var(--accent-label)] uppercase">{label}</span>
       </div>
       <p className="text-[13px] leading-relaxed text-[#B8A891]">{children}</p>
     </div>
@@ -26,20 +26,20 @@ export function OriginGuideCard({ origin, onViewProducts }) {
     <div className="rounded-2xl bg-[#2F241A] border border-[#4A3A2A] p-4 flex flex-col gap-2.5">
       <div className="flex items-center justify-between gap-2">
         <div className="flex items-center gap-2">
-          <Globe2 size={15} className="text-[#8B5E2E]" strokeWidth={1.75} />
+          <Globe2 size={15} className="text-[var(--accent-label)]" strokeWidth={1.75} />
           <h3 className="font-serif text-[18px] text-[#F2E9DD]">{origin.country}</h3>
         </div>
         {onViewProducts && (
           <button
             onClick={() => onViewProducts(origin.country)}
-            className="flex items-center gap-1 shrink-0 text-[11px] px-2.5 py-1.5 rounded-full bg-[#D4A24E] text-[#231810] font-medium hover:bg-[#E8C89A] transition-colors"
+            className="flex items-center gap-1 shrink-0 text-[11px] px-2.5 py-1.5 rounded-full bg-[var(--accent)] text-[#231810] font-medium hover:bg-[var(--accent-soft)] transition-colors"
           >
             <Coffee size={11} strokeWidth={2} />
             この産地の商品を見る
           </button>
         )}
       </div>
-      <p className="text-[13px] text-[#D4A24E]">{origin.tagline}</p>
+      <p className="text-[13px] text-[var(--accent)]">{origin.tagline}</p>
       <p className="text-[12px] text-[#8B7361]">代表地域: {origin.regions}</p>
 
       {relatedBrands.length > 0 && (
@@ -48,7 +48,7 @@ export function OriginGuideCard({ origin, onViewProducts }) {
           {relatedBrands.map((b) => (
             <span
               key={b.name}
-              className="text-[12px] px-2.5 py-1 rounded-full bg-[#D4A24E] text-[#231810] font-medium"
+              className="text-[12px] px-2.5 py-1 rounded-full bg-[var(--accent)] text-[#231810] font-medium"
               title={b.note ?? undefined}
             >
               {b.name}
@@ -68,8 +68,8 @@ export function OriginGuideCard({ origin, onViewProducts }) {
           {origin.subRegions && (
             <div>
               <div className="flex items-center gap-1.5 mb-2">
-                <MapPin size={12} className="text-[#8B5E2E]" strokeWidth={1.75} />
-                <span className="text-[11px] tracking-wide text-[#8B5E2E] uppercase">Sub-Regions / サブリージョン</span>
+                <MapPin size={12} className="text-[var(--accent-label)]" strokeWidth={1.75} />
+                <span className="text-[11px] tracking-wide text-[var(--accent-label)] uppercase">Sub-Regions / サブリージョン</span>
               </div>
               <div className="flex flex-col gap-2">
                 {origin.subRegions.map((sr) => (
@@ -83,7 +83,7 @@ export function OriginGuideCard({ origin, onViewProducts }) {
           )}
 
           <div className="flex items-start gap-1.5 text-[12px] text-[#8B7361] bg-[#3B2211] rounded-lg p-2.5">
-            <Award size={13} className="shrink-0 mt-0.5 text-[#8B5E2E]" strokeWidth={1.75} />
+            <Award size={13} className="shrink-0 mt-0.5 text-[var(--accent-label)]" strokeWidth={1.75} />
             <span>{origin.officialBody}</span>
           </div>
         </div>
@@ -91,7 +91,7 @@ export function OriginGuideCard({ origin, onViewProducts }) {
         <div className="pt-2 mt-1 border-t border-[#4A3A2A] flex flex-col gap-2">
           <p className="text-[13px] leading-relaxed text-[#B8A891]">{origin.note}</p>
           <div className="flex items-start gap-1.5 text-[12px] text-[#8B7361] bg-[#3B2211] rounded-lg p-2.5">
-            <Award size={13} className="shrink-0 mt-0.5 text-[#8B5E2E]" strokeWidth={1.75} />
+            <Award size={13} className="shrink-0 mt-0.5 text-[var(--accent-label)]" strokeWidth={1.75} />
             <span>{origin.officialBody}</span>
           </div>
         </div>

@@ -7,7 +7,7 @@ export function GlossaryItem({ item, open, onToggle }) {
   return (
     <div
       className={`rounded-2xl bg-[#2F241A] border-2 overflow-hidden transition-colors ${
-        open ? "border-[#D4A24E]" : "border-[#4A3A2A]"
+        open ? "border-[var(--accent)]" : "border-[#4A3A2A]"
       }`}
     >
       <button
@@ -18,8 +18,8 @@ export function GlossaryItem({ item, open, onToggle }) {
           <span
             className={`text-[11px] px-2 py-0.5 rounded-full border transition-colors ${
               open
-                ? "bg-[#D4A24E] text-[#231810] border-[#D4A24E] font-medium"
-                : "bg-[#3B2211] text-[#C9A876] border-[#4A3A2A]"
+                ? "bg-[var(--accent)] text-[#231810] border-[var(--accent)] font-medium"
+                : "bg-[#3B2211] text-[var(--accent-muted)] border-[#4A3A2A]"
             }`}
           >
             {item.category}
@@ -29,7 +29,7 @@ export function GlossaryItem({ item, open, onToggle }) {
         </div>
         <ChevronDown
           size={16}
-          className={`shrink-0 transition-transform mt-1 ${open ? "rotate-180 text-[#D4A24E]" : "text-[#8B5E2E]"}`}
+          className={`shrink-0 transition-transform mt-1 ${open ? "rotate-180 text-[var(--accent)]" : "text-[var(--accent-label)]"}`}
         />
       </button>
       {open && (

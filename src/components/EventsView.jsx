@@ -8,7 +8,7 @@ export function EventCard({ event, onLearnOrigin }) {
     <div className="rounded-2xl bg-[#2F241A] border border-[#4A3A2A] p-4 flex flex-col gap-2">
       <div className="flex items-start justify-between gap-2">
         <div>
-          <p className="text-[11px] tracking-[0.1em] text-[#8B5E2E] uppercase">{event.source}</p>
+          <p className="text-[11px] tracking-[0.1em] text-[var(--accent-label)] uppercase">{event.source}</p>
           <h3 className="font-serif text-[16px] text-[#F2E9DD] mt-0.5">{event.name}</h3>
         </div>
         <span
@@ -21,11 +21,11 @@ export function EventCard({ event, onLearnOrigin }) {
 
       <div className="flex flex-col gap-1 text-[12px] text-[#B8A891]">
         <div className="flex items-center gap-1.5">
-          <Calendar size={12} className="text-[#8B5E2E] shrink-0" strokeWidth={1.75} />
+          <Calendar size={12} className="text-[var(--accent-label)] shrink-0" strokeWidth={1.75} />
           <span>{event.dateRange}</span>
         </div>
         <div className="flex items-center gap-1.5">
-          <MapPin size={12} className="text-[#8B5E2E] shrink-0" strokeWidth={1.75} />
+          <MapPin size={12} className="text-[var(--accent-label)] shrink-0" strokeWidth={1.75} />
           <span>{event.venue}</span>
         </div>
       </div>
@@ -36,7 +36,7 @@ export function EventCard({ event, onLearnOrigin }) {
         {event.relatedCountry ? (
           <button
             onClick={() => onLearnOrigin(event.relatedCountry)}
-            className="text-[11px] text-[#D4A24E] hover:text-[#E8C89A] transition-colors"
+            className="text-[11px] text-[var(--accent)] hover:text-[var(--accent-soft)] transition-colors"
           >
             産地タブで{event.relatedCountry}を見る →
           </button>

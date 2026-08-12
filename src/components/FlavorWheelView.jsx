@@ -19,7 +19,7 @@ export function FlavorWheelCategory({ cat, open, onToggle }) {
         </div>
         <ChevronDown
           size={15}
-          className={`shrink-0 text-[#8B5E2E] transition-transform ${open ? "rotate-180" : ""}`}
+          className={`shrink-0 text-[var(--accent-label)] transition-transform ${open ? "rotate-180" : ""}`}
         />
       </button>
       {open && (
@@ -31,7 +31,7 @@ export function FlavorWheelCategory({ cat, open, onToggle }) {
                 {s.terms.map((t) => (
                   <span
                     key={t}
-                    className="text-[12px] px-2.5 py-1 rounded-full bg-[#3B2211] text-[#C9A876] border border-[#4A3A2A]"
+                    className="text-[12px] px-2.5 py-1 rounded-full bg-[#3B2211] text-[var(--accent-muted)] border border-[#4A3A2A]"
                   >
                     {t}
                   </span>

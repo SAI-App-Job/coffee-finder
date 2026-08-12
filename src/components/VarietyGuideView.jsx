@@ -5,16 +5,16 @@ export function VarietyCard({ v }) {
   return (
     <div className="rounded-2xl bg-[#2F241A] border border-[#4A3A2A] p-4 flex flex-col gap-2.5">
       <div>
-        <p className="text-[11px] tracking-[0.15em] text-[#8B5E2E] uppercase">{v.english}</p>
+        <p className="text-[11px] tracking-[0.15em] text-[var(--accent-label)] uppercase">{v.english}</p>
         <h3 className="font-serif text-[19px] text-[#F2E9DD] mt-0.5">{v.lineage}</h3>
-        <p className="text-[13px] text-[#D4A24E] mt-1">{v.tagline}</p>
+        <p className="text-[13px] text-[var(--accent)] mt-1">{v.tagline}</p>
       </div>
 
       <div className="flex flex-wrap gap-1.5">
         {v.varieties.map((name) => (
           <span
             key={name}
-            className="text-[12px] px-2.5 py-1 rounded-full bg-[#3B2211] text-[#C9A876] border border-[#4A3A2A]"
+            className="text-[12px] px-2.5 py-1 rounded-full bg-[#3B2211] text-[var(--accent-muted)] border border-[#4A3A2A]"
           >
             {name}
           </span>

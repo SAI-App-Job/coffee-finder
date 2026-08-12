@@ -23,7 +23,7 @@ export function FilterSection({ title, options, selected, onToggle, getColor }) 
       <div className="flex items-center justify-between mb-2">
         <p className="text-[12px] text-[#8B7361]">{title}</p>
         {selected.size > 0 && (
-          <span className="text-[11px] text-[#D4A24E] font-medium">{selected.size}件選択中</span>
+          <span className="text-[11px] text-[var(--accent)] font-medium">{selected.size}件選択中</span>
         )}
       </div>
 
@@ -35,7 +35,7 @@ export function FilterSection({ title, options, selected, onToggle, getColor }) 
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             placeholder={`${title}で検索(${options.length}件)`}
-            className="w-full pl-7 pr-2.5 py-1.5 rounded-lg bg-[#3B2211] border border-[#4A3A2A] text-[12px] text-[#F2E9DD] placeholder:text-[#8B7361] focus:outline-none focus:border-[#8B5E2E]"
+            className="w-full pl-7 pr-2.5 py-1.5 rounded-lg bg-[#3B2211] border border-[#4A3A2A] text-[12px] text-[#F2E9DD] placeholder:text-[#8B7361] focus:outline-none focus:border-[var(--accent-label)]"
           />
         </div>
       )}
@@ -53,8 +53,8 @@ export function FilterSection({ title, options, selected, onToggle, getColor }) 
               onClick={() => onToggle(opt)}
               className={`flex items-center gap-1.5 text-[13px] px-3 py-1.5 rounded-full border-2 transition-all ${
                 active
-                  ? "bg-white text-[#231810] border-white font-medium shadow-[0_0_0_3px_rgba(212,162,78,0.35)]"
-                  : "border-[#4A3A2A] text-[#B8A891] hover:border-[#8B5E2E]"
+                  ? "bg-white text-[#231810] border-white font-medium shadow-[0_0_0_3px_var(--accent-glow)]"
+                  : "border-[#4A3A2A] text-[#B8A891] hover:border-[var(--accent-label)]"
               }`}
             >
               {dotColor && (
@@ -214,7 +214,7 @@ export function FilterSheet({ open, onClose, filters, setFilters, resultCount })
         <div className="flex flex-col gap-2.5 mt-6 pt-4 border-t border-[#4A3A2A]">
           <button
             onClick={onClose}
-            className="w-full py-3.5 rounded-xl bg-[#D4A24E] text-[#231810] text-[15px] font-bold shadow-[0_4px_16px_rgba(212,162,78,0.35)] hover:bg-[#E8C89A] transition-colors"
+            className="w-full py-3.5 rounded-xl bg-[var(--accent)] text-[#231810] text-[15px] font-bold shadow-[0_4px_16px_var(--accent-glow)] hover:bg-[var(--accent-soft)] transition-colors"
           >
             結果を見る({resultCount}件)
           </button>
