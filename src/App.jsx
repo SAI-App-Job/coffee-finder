@@ -12,6 +12,7 @@ import { usePremium } from "./hooks/usePremium";
 import { useToast } from "./hooks/useToast";
 import { useViewHistory } from "./hooks/useViewHistory";
 import { useComparison } from "./hooks/useComparison";
+import { useRatings } from "./hooks/useRatings";
 import { ProductCard, DiscoveryFactCard } from "./components/ProductCard";
 import { ProductDetailModal } from "./components/ProductDetailModal";
 import { FilterSheet } from "./components/FilterSheet";
@@ -57,6 +58,7 @@ export default function CoffeeProductList() {
     clearCompare,
     limit: compareLimit,
   } = useComparison(isPremium, showToast);
+  const { getRating, setRating } = useRatings();
 
   const [tab, setTab] = useState("products"); // "products" | "favorites" | "shops" | "guide" | "trivia" | "mypage"
   const [detailProduct, setDetailProduct] = useState(null);
@@ -356,6 +358,9 @@ export default function CoffeeProductList() {
           favoriteIds={favoriteIds}
           importFavorites={importFavorites}
           historyItems={historyItems}
+          products={products}
+          getRating={getRating}
+          onOpenDetail={openProductDetail}
         />
       )}
 
@@ -375,6 +380,8 @@ export default function CoffeeProductList() {
         onToggleFavorite={toggleFavorite}
         isComparing={isComparing}
         onToggleCompare={toggleCompare}
+        rating={detailProduct ? getRating(detailProduct.id) : 0}
+        onRate={setRating}
       />
       {compareModalOpen && (
         <ComparisonModal

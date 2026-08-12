@@ -1,4 +1,4 @@
-import { MapPin, X } from "lucide-react";
+import { MapPin, Star, X } from "lucide-react";
 
 export function SectionHeading({ en, ja, className = "" }) {
   return (
@@ -23,6 +23,33 @@ export function Toast({ message, onDismiss }) {
           <X size={14} />
         </button>
       </div>
+    </div>
+  );
+}
+
+export function StarRating({ value = 0, onChange, size = 20, readOnly = false }) {
+  return (
+    <div className="flex items-center gap-1">
+      {[1, 2, 3, 4, 5].map((star) => (
+        <button
+          key={star}
+          type="button"
+          disabled={readOnly}
+          onClick={(e) => {
+            e.stopPropagation();
+            onChange?.(star === value ? 0 : star);
+          }}
+          aria-label={`${star}つ星`}
+          aria-pressed={star <= value}
+          className={readOnly ? "cursor-default" : "p-0.5 -m-0.5"}
+        >
+          <Star
+            size={size}
+            strokeWidth={1.75}
+            className={star <= value ? "fill-[var(--accent)] text-[var(--accent)]" : "text-[#8B7361]"}
+          />
+        </button>
+      ))}
     </div>
   );
 }

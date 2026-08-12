@@ -1,6 +1,7 @@
 import { useRef, useState } from "react";
 import { Palette, Check, Sparkles, Heart, Download, Upload, Info, History } from "lucide-react";
 import { SectionHeading } from "./common";
+import { TasteProfile } from "./TasteProfile";
 import { FREE_FAVORITES_LIMIT } from "../hooks/useFavorites";
 import { FREE_COMPARE_LIMIT } from "../hooks/useComparison";
 import { FREE_HISTORY_RETENTION_DAYS } from "../hooks/useViewHistory";
@@ -15,6 +16,9 @@ export function MyPageView({
   favoriteIds,
   importFavorites,
   historyItems,
+  products,
+  getRating,
+  onOpenDetail,
 }) {
   const fileInputRef = useRef(null);
   const [importMessage, setImportMessage] = useState(null);
@@ -184,6 +188,8 @@ export function MyPageView({
           </div>
         )}
       </section>
+
+      <TasteProfile products={products} getRating={getRating} onOpenDetail={onOpenDetail} />
     </main>
   );
 }

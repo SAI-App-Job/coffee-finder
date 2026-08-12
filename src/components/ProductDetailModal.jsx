@@ -3,6 +3,7 @@ import { PROCESSING_EXPLANATIONS, DESIGNATED_BRAND_EXPLANATIONS } from "../data/
 import { getGradeExplanation } from "../utils/grade";
 import { categorizeFlavorNotes } from "../utils/flavor";
 import { cityFromAddress, formatPrice } from "../utils/format";
+import { StarRating } from "./common";
 
 function DetailRow({ label, value, detail }) {
   if (!value) return null;
@@ -18,7 +19,17 @@ function DetailRow({ label, value, detail }) {
 // 商品カードをタップすると開く軽量な詳細モーダル。新しいデータは持たず、
 // 既存のProductCardが扱っているフィールドをそのまま並べて表示するだけの画面。
 // この画面を開いた時点を「閲覧」として履歴に記録し、比較への追加もここから行う。
-export function ProductDetailModal({ product, onClose, onOpenMap, isFavorite, onToggleFavorite, isComparing, onToggleCompare }) {
+export function ProductDetailModal({
+  product,
+  onClose,
+  onOpenMap,
+  isFavorite,
+  onToggleFavorite,
+  isComparing,
+  onToggleCompare,
+  rating,
+  onRate,
+}) {
   if (!product) return null;
 
   const processingDetail = product.processingMethod ? PROCESSING_EXPLANATIONS[product.processingMethod] : null;
@@ -54,11 +65,16 @@ export function ProductDetailModal({ product, onClose, onOpenMap, isFavorite, on
           </button>
         </div>
 
-        <div className="flex items-center justify-between mb-4 pb-4 border-b border-[#4A3A2A]">
+        <div className="flex items-center justify-between mb-3">
           <p className="font-mono text-[#F2E9DD] text-[18px]">{formatPrice(product) ?? "価格未確認"}</p>
           {typeof product.weightG === "number" && (
             <p className="font-mono text-[12px] text-[#8B7361]">{product.weightG}g</p>
           )}
+        </div>
+
+        <div className="flex items-center justify-between gap-3 mb-4 pb-4 border-b border-[#4A3A2A]">
+          <p className="text-[12px] text-[#8B7361]">この商品を評価</p>
+          <StarRating value={rating} onChange={(stars) => onRate?.(product.id, stars)} />
         </div>
 
         <div className="flex flex-col gap-3.5 mb-4">
