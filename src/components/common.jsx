@@ -9,6 +9,24 @@ export function SectionHeading({ en, ja, className = "" }) {
   );
 }
 
+export function Toast({ message, onDismiss }) {
+  if (!message) return null;
+  return (
+    <div className="fixed top-3 inset-x-0 z-50 flex justify-center px-5 pointer-events-none">
+      <div className="pointer-events-auto max-w-xl w-full flex items-center gap-3 bg-[#100b07] border border-[var(--accent)] rounded-xl px-4 py-3 shadow-[0_8px_24px_rgba(0,0,0,0.55)]">
+        <p className="text-[13px] text-[#F2E9DD] leading-snug flex-1">{message}</p>
+        <button
+          onClick={onDismiss}
+          className="text-[#8B7361] hover:text-[#F2E9DD] transition-colors shrink-0"
+          aria-label="閉じる"
+        >
+          <X size={14} />
+        </button>
+      </div>
+    </div>
+  );
+}
+
 export function SourceCredit({ sources }) {
   return (
     <div className="mt-2 pt-3 border-t border-[#4A3A2A]">

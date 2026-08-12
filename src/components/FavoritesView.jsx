@@ -1,7 +1,7 @@
 import { Heart } from "lucide-react";
 import { ProductCard } from "./ProductCard";
 
-export function FavoritesView({ products, isFavorite, onToggleFavorite, onOpenMap, onLearnOrigin }) {
+export function FavoritesView({ products, isFavorite, onToggleFavorite, onOpenMap, onLearnOrigin, onOpenDetail }) {
   const favorites = products.filter((p) => isFavorite(p.id));
 
   return (
@@ -22,6 +22,7 @@ export function FavoritesView({ products, isFavorite, onToggleFavorite, onOpenMa
             onLearnOrigin={onLearnOrigin}
             isFavorite={isFavorite}
             onToggleFavorite={onToggleFavorite}
+            onOpenDetail={onOpenDetail}
           />
         ))
       )}

@@ -1,8 +1,21 @@
 import { useRef, useState } from "react";
-import { Palette, Check, Sparkles, Heart, Download, Upload, Info } from "lucide-react";
+import { Palette, Check, Sparkles, Heart, Download, Upload, Info, History } from "lucide-react";
 import { SectionHeading } from "./common";
+import { FREE_FAVORITES_LIMIT } from "../hooks/useFavorites";
+import { FREE_COMPARE_LIMIT } from "../hooks/useComparison";
+import { FREE_HISTORY_RETENTION_DAYS } from "../hooks/useViewHistory";
+import { formatRelativeTime } from "../utils/format";
 
-export function MyPageView({ themeId, setThemeId, themes, isPremium, setPremium, favoriteIds, importFavorites }) {
+export function MyPageView({
+  themeId,
+  setThemeId,
+  themes,
+  isPremium,
+  setPremium,
+  favoriteIds,
+  importFavorites,
+  historyItems,
+}) {
   const fileInputRef = useRef(null);
   const [importMessage, setImportMessage] = useState(null);
 
@@ -79,8 +92,13 @@ export function MyPageView({ themeId, setThemeId, themes, isPremium, setPremium,
           <h3 className="text-[14px] font-medium text-[#F2E9DD]">プレミアム(広告非表示)</h3>
         </div>
         <p className="text-[12px] text-[#8B7361] leading-relaxed">
-          月額100円で広告を非表示にできます(決済機能は準備中です)。
+          月額100円で、広告非表示に加えてお気に入り・閲覧履歴・比較の件数上限がすべて無制限になります(決済機能は準備中です)。
         </p>
+        <ul className="text-[11px] text-[#8B7361] leading-relaxed list-disc pl-4 flex flex-col gap-0.5">
+          <li>お気に入り: 無料{FREE_FAVORITES_LIMIT}件 → 有料は無制限</li>
+          <li>閲覧履歴の保存期間: 無料{FREE_HISTORY_RETENTION_DAYS}日間 → 有料は無制限</li>
+          <li>比較できる商品数: 無料{FREE_COMPARE_LIMIT}件 → 有料は無制限</li>
+        </ul>
         <div className="flex items-center justify-between gap-3 rounded-xl bg-[#3B2211] border border-[#4A3A2A] px-3.5 py-3">
           <div>
             <p className="text-[13px] text-[#F2E9DD]">{isPremium ? "プレミアム有効" : "無料プラン"}</p>
@@ -110,6 +128,7 @@ export function MyPageView({ themeId, setThemeId, themes, isPremium, setPremium,
         </div>
         <p className="text-[12px] text-[#8B7361] leading-relaxed">
           お気に入りは端末内にのみ保存されています。機種変更前や念のためのバックアップとして、ファイルへの書き出し・読み込みができます。
+          {!isPremium && `(無料プランは${FREE_FAVORITES_LIMIT}件まで保存できます)`}
         </p>
         <div className="flex gap-2">
           <button
@@ -133,6 +152,36 @@ export function MyPageView({ themeId, setThemeId, themes, isPremium, setPremium,
           <p className={`text-[12px] ${importMessage.type === "error" ? "text-[#C9506B]" : "text-[var(--accent)]"}`}>
             {importMessage.text}
           </p>
+        )}
+      </section>
+
+      <section className="rounded-2xl bg-[#2F241A] border border-[#4A3A2A] p-4 flex flex-col gap-3">
+        <div className="flex items-center gap-1.5">
+          <History size={14} className="text-[var(--accent)]" strokeWidth={1.75} />
+          <h3 className="text-[14px] font-medium text-[#F2E9DD]">閲覧履歴</h3>
+        </div>
+        <p className="text-[12px] text-[#8B7361] leading-relaxed">
+          {isPremium
+            ? "閲覧履歴は無制限に保存されます。"
+            : `無料プランでは直近${FREE_HISTORY_RETENTION_DAYS}日分のみ保存されます(有料プランでは無制限)。`}
+        </p>
+        {historyItems.length === 0 ? (
+          <p className="text-[12px] text-[#8B7361]">商品をタップすると、ここに閲覧履歴が表示されます。</p>
+        ) : (
+          <div className="flex flex-col gap-2">
+            {historyItems.slice(0, 8).map(({ product, viewedAt }) => (
+              <div
+                key={product.id}
+                className="flex items-center justify-between gap-3 rounded-xl bg-[#3B2211] border border-[#4A3A2A] px-3.5 py-2.5"
+              >
+                <div className="min-w-0">
+                  <p className="text-[12px] text-[#F2E9DD] truncate">{product.rawName}</p>
+                  <p className="text-[11px] text-[#8B7361] mt-0.5">{product.shopName}</p>
+                </div>
+                <p className="text-[10px] text-[#8B7361] shrink-0">{formatRelativeTime(viewedAt)}</p>
+              </div>
+            ))}
+          </div>
         )}
       </section>
     </main>

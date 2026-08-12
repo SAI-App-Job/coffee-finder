@@ -55,7 +55,10 @@ export function HoverExplainTag({ label, category, detail }) {
       onMouseLeave={() => setOpen(false)}
     >
       <button
-        onClick={() => setOpen((o) => !o)}
+        onClick={(e) => {
+          e.stopPropagation();
+          setOpen((o) => !o);
+        }}
         className="text-[11px] px-2 py-0.5 rounded-full bg-[#3B2211] text-[var(--accent-muted)] border border-[#4A3A2A] border-dashed hover:border-[var(--accent)] hover:text-[var(--accent)] transition-colors"
       >
         {label}
@@ -119,7 +122,7 @@ export function HoverExplainTag({ label, category, detail }) {
   );
 }
 
-export function ProductCard({ product, onOpenMap, onLearnOrigin, isFavorite, onToggleFavorite }) {
+export function ProductCard({ product, onOpenMap, onLearnOrigin, isFavorite, onToggleFavorite, onOpenDetail }) {
   const processingDetail = product.processingMethod
     ? PROCESSING_EXPLANATIONS[product.processingMethod]
     : null;
@@ -130,7 +133,12 @@ export function ProductCard({ product, onOpenMap, onLearnOrigin, isFavorite, onT
   const favorited = isFavorite?.(product.id) ?? false;
 
   return (
-    <div className="relative rounded-2xl bg-[#2F241A] border border-[#4A3A2A] flex">
+    <div
+      className={`relative rounded-2xl bg-[#2F241A] border border-[#4A3A2A] flex ${onOpenDetail ? "cursor-pointer" : ""}`}
+      onClick={() => onOpenDetail?.(product)}
+      role={onOpenDetail ? "button" : undefined}
+      tabIndex={onOpenDetail ? 0 : undefined}
+    >
       {/* 焙煎度カラーバー(未選択=注文時選択の場合はストライプで示す)
           カード側のoverflow-hiddenは、ホバーで飛び出すツールチップまで
           切り取ってしまうため使わず、カラーバー自体の左端だけを丸めている */}
@@ -159,7 +167,10 @@ export function ProductCard({ product, onOpenMap, onLearnOrigin, isFavorite, onT
           </div>
           <div className="text-right shrink-0 flex flex-col items-end gap-1">
             <button
-              onClick={() => onToggleFavorite?.(product.id)}
+              onClick={(e) => {
+                e.stopPropagation();
+                onToggleFavorite?.(product.id);
+              }}
               aria-label={favorited ? "お気に入りから削除" : "お気に入りに追加"}
               aria-pressed={favorited}
               className="p-1 -m-1 text-[#8B7361] hover:text-[var(--accent)] transition-colors"
@@ -239,7 +250,10 @@ export function ProductCard({ product, onOpenMap, onLearnOrigin, isFavorite, onT
             )}
           </div>
           <button
-            onClick={() => onOpenMap(product)}
+            onClick={(e) => {
+              e.stopPropagation();
+              onOpenMap(product);
+            }}
             className="flex items-center gap-1 text-[12px] text-[var(--accent)] hover:text-[var(--accent-soft)] transition-colors"
           >
             <MapPin size={13} strokeWidth={1.75} />
@@ -250,7 +264,10 @@ export function ProductCard({ product, onOpenMap, onLearnOrigin, isFavorite, onT
 
         {onLearnOrigin && (
           <button
-            onClick={() => onLearnOrigin(product.originCountry)}
+            onClick={(e) => {
+              e.stopPropagation();
+              onLearnOrigin(product.originCountry);
+            }}
             className="flex items-center justify-center gap-1.5 text-[12px] text-[var(--accent-label)] hover:text-[var(--accent)] transition-colors py-1"
           >
             <Sparkles size={12} strokeWidth={1.75} />

@@ -9,7 +9,11 @@ import { loadRemoteData } from "./data/remote";
 import { useFavorites } from "./hooks/useFavorites";
 import { useAccentTheme } from "./hooks/useAccentTheme";
 import { usePremium } from "./hooks/usePremium";
+import { useToast } from "./hooks/useToast";
+import { useViewHistory } from "./hooks/useViewHistory";
+import { useComparison } from "./hooks/useComparison";
 import { ProductCard, DiscoveryFactCard } from "./components/ProductCard";
+import { ProductDetailModal } from "./components/ProductDetailModal";
 import { FilterSheet } from "./components/FilterSheet";
 import { ShopListView, ShopDetailView } from "./components/ShopViews";
 import { FavoritesView } from "./components/FavoritesView";
@@ -17,7 +21,8 @@ import { BuyingGuideView } from "./components/BuyingGuideView";
 import { TriviaView } from "./components/TriviaView";
 import { MyPageView } from "./components/MyPageView";
 import { AdBannerPlaceholder } from "./components/AdBanner";
-import { MapLinkModal } from "./components/common";
+import { CompareTray, ComparisonModal } from "./components/Compare";
+import { MapLinkModal, Toast } from "./components/common";
 
 export default function CoffeeProductList() {
   // 初期値はローカルのモックデータ(=フォールバック)。GitHub上のJSONの取得に
@@ -39,11 +44,23 @@ export default function CoffeeProductList() {
     };
   }, []);
 
-  const { favoriteIds, isFavorite, toggleFavorite, importFavorites } = useFavorites();
   const { themeId, setThemeId, themes } = useAccentTheme();
   const { isPremium, setPremium } = usePremium();
+  const { message: toastMessage, showToast, dismissToast } = useToast();
+  const { favoriteIds, isFavorite, toggleFavorite, importFavorites } = useFavorites(isPremium, showToast);
+  const { history, recordView } = useViewHistory(isPremium);
+  const {
+    compareIds,
+    isComparing,
+    toggleCompare,
+    removeFromCompare,
+    clearCompare,
+    limit: compareLimit,
+  } = useComparison(isPremium, showToast);
 
   const [tab, setTab] = useState("products"); // "products" | "favorites" | "shops" | "guide" | "trivia" | "mypage"
+  const [detailProduct, setDetailProduct] = useState(null);
+  const [compareModalOpen, setCompareModalOpen] = useState(false);
   const [filters, setFilters] = useState({
     country: new Set(),
     prefecture: new Set(),
@@ -119,6 +136,26 @@ export default function CoffeeProductList() {
     return map;
   }, [products]);
 
+  const productsById = useMemo(() => new Map(products.map((p) => [String(p.id), p])), [products]);
+
+  const compareProducts = useMemo(
+    () => compareIds.map((id) => productsById.get(id)).filter(Boolean),
+    [compareIds, productsById]
+  );
+
+  const historyItems = useMemo(
+    () =>
+      history
+        .map((entry) => ({ product: productsById.get(entry.id), viewedAt: entry.viewedAt }))
+        .filter((entry) => entry.product),
+    [history, productsById]
+  );
+
+  const openProductDetail = (product) => {
+    setDetailProduct(product);
+    recordView(product.id);
+  };
+
   const removeFilter = (dim, value) => {
     setFilters((prev) => {
       const next = new Set(prev[dim]);
@@ -142,8 +179,15 @@ export default function CoffeeProductList() {
   const openMapForLocation = (location) =>
     setMapTarget({ shopName: location.label, shopAddress: location.address, mapQuery: location.mapQuery });
 
+  const bothBarsVisible = !isPremium && compareIds.length > 0;
+  const bottomBarVisible = !isPremium || compareIds.length > 0;
+
   return (
-    <div className={`min-h-full bg-[#231810] text-[#F2E9DD] ${!isPremium ? "pb-16" : ""}`}>
+    <div
+      className={`min-h-full bg-[#231810] text-[#F2E9DD] ${
+        bothBarsVisible ? "pb-32" : bottomBarVisible ? "pb-16" : ""
+      }`}
+    >
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
         :root {
@@ -262,6 +306,7 @@ export default function CoffeeProductList() {
                 onLearnOrigin={learnAboutOrigin}
                 isFavorite={isFavorite}
                 onToggleFavorite={toggleFavorite}
+                onOpenDetail={openProductDetail}
               />
             ))
           )}
@@ -275,6 +320,7 @@ export default function CoffeeProductList() {
           onToggleFavorite={toggleFavorite}
           onOpenMap={openMapForProduct}
           onLearnOrigin={learnAboutOrigin}
+          onOpenDetail={openProductDetail}
         />
       )}
 
@@ -291,6 +337,7 @@ export default function CoffeeProductList() {
           onOpenLocationMap={openMapForLocation}
           isFavorite={isFavorite}
           onToggleFavorite={toggleFavorite}
+          onOpenDetail={openProductDetail}
         />
       )}
 
@@ -308,6 +355,7 @@ export default function CoffeeProductList() {
           setPremium={setPremium}
           favoriteIds={favoriteIds}
           importFavorites={importFavorites}
+          historyItems={historyItems}
         />
       )}
 
@@ -319,7 +367,43 @@ export default function CoffeeProductList() {
         resultCount={filtered.length}
       />
       <MapLinkModal target={mapTarget} onClose={() => setMapTarget(null)} />
-      {!isPremium && <AdBannerPlaceholder />}
+      <ProductDetailModal
+        product={detailProduct}
+        onClose={() => setDetailProduct(null)}
+        onOpenMap={openMapForProduct}
+        isFavorite={isFavorite}
+        onToggleFavorite={toggleFavorite}
+        isComparing={isComparing}
+        onToggleCompare={toggleCompare}
+      />
+      {compareModalOpen && (
+        <ComparisonModal
+          products={compareProducts}
+          onClose={() => setCompareModalOpen(false)}
+          onRemove={removeFromCompare}
+          onClearAll={() => {
+            clearCompare();
+            setCompareModalOpen(false);
+          }}
+          isPremium={isPremium}
+          limit={compareLimit}
+        />
+      )}
+      <Toast message={toastMessage} onDismiss={dismissToast} />
+
+      {(compareIds.length > 0 || !isPremium) && (
+        <div className="fixed bottom-0 inset-x-0 z-20 bg-[#1C140D]/95 backdrop-blur-sm">
+          {compareIds.length > 0 && (
+            <CompareTray
+              count={compareIds.length}
+              limit={compareLimit}
+              isPremium={isPremium}
+              onOpen={() => setCompareModalOpen(true)}
+            />
+          )}
+          {!isPremium && <AdBannerPlaceholder />}
+        </div>
+      )}
     </div>
   );
 }

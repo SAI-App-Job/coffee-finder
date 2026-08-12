@@ -90,6 +90,7 @@ export function ShopDetailView({
   onOpenLocationMap,
   isFavorite,
   onToggleFavorite,
+  onOpenDetail,
 }) {
   const hasMultipleLocations = shop.locations && shop.locations.length > 0;
 
@@ -163,6 +164,7 @@ export function ShopDetailView({
             onOpenMap={onOpenMap}
             isFavorite={isFavorite}
             onToggleFavorite={onToggleFavorite}
+            onOpenDetail={onOpenDetail}
           />
         ))}
       </div>

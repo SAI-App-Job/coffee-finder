@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useState } from "react";
 
 const STORAGE_KEY = "coffee-finder:favorites";
+export const FREE_FAVORITES_LIMIT = 20;
 
 // 商品IDは実データ(product_url由来の文字列)とモックデータ(数値)が混在するため、
 // 比較・保存の際は常にStringに揃えて型の不一致による誤判定を防ぐ。
@@ -15,8 +16,9 @@ function loadFavoriteIds() {
   }
 }
 
-export function useFavorites() {
+export function useFavorites(isPremium, showToast) {
   const [favoriteIds, setFavoriteIds] = useState(loadFavoriteIds);
+  const limit = isPremium ? Infinity : FREE_FAVORITES_LIMIT;
 
   useEffect(() => {
     try {
@@ -28,15 +30,26 @@ export function useFavorites() {
 
   const isFavorite = useCallback((id) => favoriteIds.includes(String(id)), [favoriteIds]);
 
-  const toggleFavorite = useCallback((id) => {
-    const key = String(id);
-    setFavoriteIds((prev) =>
-      prev.includes(key) ? prev.filter((existing) => existing !== key) : [...prev, key]
-    );
-  }, []);
+  const toggleFavorite = useCallback(
+    (id) => {
+      const key = String(id);
+      setFavoriteIds((prev) => {
+        if (prev.includes(key)) return prev.filter((existing) => existing !== key);
+        if (!isPremium && prev.length >= FREE_FAVORITES_LIMIT) {
+          showToast?.(
+            `お気に入りは無料プランで${FREE_FAVORITES_LIMIT}件までです。有料プランでは無制限に保存できます。`
+          );
+          return prev;
+        }
+        return [...prev, key];
+      });
+    },
+    [isPremium, showToast]
+  );
 
   // バックアップファイルからの復元用。既存のお気に入りは失わないよう、
   // 上書きではなく差分(未登録分)だけを追加するマージ方式にしている。
+  // 無料プランの上限は超えて追加できる(復元操作をデータ欠落で失敗させないため)。
   const importFavorites = useCallback(
     (ids) => {
       const incoming = Array.isArray(ids) ? [...new Set(ids.map(String))] : [];
@@ -50,5 +63,5 @@ export function useFavorites() {
     [favoriteIds]
   );
 
-  return { favoriteIds, isFavorite, toggleFavorite, importFavorites };
+  return { favoriteIds, isFavorite, toggleFavorite, importFavorites, limit };
 }
