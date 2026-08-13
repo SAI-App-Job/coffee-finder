@@ -8,6 +8,8 @@ export const SHOPS = [
     platform: "おちゃのこネット",
     url: "https://www.denimbis.com/",
     mapQuery: "Denim bis 川崎市",
+    lat: 35.530664,
+    lng: 139.703767,
   },
   {
     name: "珈琲問屋",
@@ -17,6 +19,8 @@ export const SHOPS = [
     platform: "独自EC",
     url: "https://www.tonya.co.jp/",
     mapQuery: "珈琲問屋 名古屋市",
+    lat: 35.185105,
+    lng: 136.899844,
   },
   {
     name: "MiLL Coffee",
@@ -26,6 +30,8 @@ export const SHOPS = [
     platform: "Wix",
     url: "https://www.baisenmill.com/",
     mapQuery: "MiLL Coffee 川崎市多摩区南生田",
+    lat: 35.619533,
+    lng: 139.562098,
   },
   {
     name: "PHILOCOFFEA",
@@ -35,6 +41,8 @@ export const SHOPS = [
     platform: "カラーミーショップ",
     url: "https://philocoffea.com/",
     mapQuery: "PHILOCOFFEA 千葉県",
+    lat: 35.694033,
+    lng: 139.976026,
     locations: [
       {
         label: "シャポー船橋店",
@@ -42,6 +50,8 @@ export const SHOPS = [
         hours: "10:00-21:00",
         tel: "047-409-5655",
         mapQuery: "PHILOCOFFEA シャポー船橋店",
+        lat: 35.694033,
+        lng: 139.976026,
       },
       {
         label: "プラッツ習志野店",
@@ -49,6 +59,8 @@ export const SHOPS = [
         hours: "10:00-18:00(不定休)",
         tel: "047-411-7175",
         mapQuery: "PHILOCOFFEA プラッツ習志野店",
+        lat: 35.685967,
+        lng: 140.048186,
       },
       {
         label: "201(本店)",
@@ -56,6 +68,8 @@ export const SHOPS = [
         hours: "10:00-18:00",
         tel: "047-401-5950",
         mapQuery: "PHILOCOFFEA 201 船橋市",
+        lat: 35.694033,
+        lng: 139.976026,
       },
       {
         label: "表参道店",
@@ -63,6 +77,8 @@ export const SHOPS = [
         hours: "10:00-19:00",
         tel: "03-6450-6105",
         mapQuery: "PHILOCOFFEA 表参道店",
+        lat: 35.6706,
+        lng: 139.715929,
       },
       {
         label: "焙煎所",
@@ -70,6 +86,8 @@ export const SHOPS = [
         hours: "10:00-18:00(不定休)",
         tel: "047-460-9415",
         mapQuery: "PHILOCOFFEA 焙煎所 船橋市本町2-3-29",
+        lat: 35.694033,
+        lng: 139.976026,
       },
     ],
   },

@@ -18,9 +18,13 @@
         "hours": "11:00〜18:00(火・水定休)",
         "tel": null,
         "is_headquarters": false,
-        "map_query": "Denim bis 川崎市"
+        "map_query": "Denim bis 川崎市",
+        "lat": 35.530664,
+        "lng": 139.703767
       }
-    ]
+    ],
+    "lat": 35.530664,
+    "lng": 139.703767
   },
   {
     "name": "珈琲問屋",
@@ -41,9 +45,13 @@
         "hours": "9:00〜18:00(年中無休・通販中心)",
         "tel": null,
         "is_headquarters": false,
-        "map_query": "珈琲問屋 名古屋市"
+        "map_query": "珈琲問屋 名古屋市",
+        "lat": 35.185105,
+        "lng": 136.899844
       }
-    ]
+    ],
+    "lat": 35.185105,
+    "lng": 136.899844
   },
   {
     "name": "MiLL Coffee",
@@ -64,9 +72,13 @@
         "hours": "10:00〜17:00(月曜定休)",
         "tel": null,
         "is_headquarters": false,
-        "map_query": "MiLL Coffee 川崎市多摩区南生田"
+        "map_query": "MiLL Coffee 川崎市多摩区南生田",
+        "lat": 35.619533,
+        "lng": 139.562098
       }
-    ]
+    ],
+    "lat": 35.619533,
+    "lng": 139.562098
   },
   {
     "name": "PHILOCOFFEA",
@@ -87,7 +99,9 @@
         "hours": "10:00-21:00",
         "tel": "047-409-5655",
         "is_headquarters": false,
-        "map_query": "PHILOCOFFEA シャポー船橋店"
+        "map_query": "PHILOCOFFEA シャポー船橋店",
+        "lat": 35.694033,
+        "lng": 139.976026
       },
       {
         "label": "プラッツ習志野店",
@@ -96,7 +110,9 @@
         "hours": "10:00-18:00(不定休)",
         "tel": "047-411-7175",
         "is_headquarters": false,
-        "map_query": "PHILOCOFFEA プラッツ習志野店"
+        "map_query": "PHILOCOFFEA プラッツ習志野店",
+        "lat": 35.685967,
+        "lng": 140.048186
       },
       {
         "label": "201(本店)",
@@ -105,7 +121,9 @@
         "hours": "10:00-18:00",
         "tel": "047-401-5950",
         "is_headquarters": false,
-        "map_query": "PHILOCOFFEA 201 船橋市"
+        "map_query": "PHILOCOFFEA 201 船橋市",
+        "lat": 35.694033,
+        "lng": 139.976026
       },
       {
         "label": "表参道店",
@@ -114,7 +132,9 @@
         "hours": "10:00-19:00",
         "tel": "03-6450-6105",
         "is_headquarters": false,
-        "map_query": "PHILOCOFFEA 表参道店"
+        "map_query": "PHILOCOFFEA 表参道店",
+        "lat": 35.6706,
+        "lng": 139.715929
       },
       {
         "label": "焙煎所",
@@ -123,9 +143,13 @@
         "hours": "10:00-18:00(不定休)",
         "tel": "047-460-9415",
         "is_headquarters": true,
-        "map_query": "PHILOCOFFEA 焙煎所 船橋市本町2-3-29"
+        "map_query": "PHILOCOFFEA 焙煎所 船橋市本町2-3-29",
+        "lat": 35.694033,
+        "lng": 139.976026
       }
-    ]
+    ],
+    "lat": 35.694033,
+    "lng": 139.976026
   },
   {
     "name": "It's roasted coffee",
@@ -161,7 +185,9 @@
         "tel": null,
         "email": "tokyo@fuglen.no",
         "is_headquarters": false,
-        "map_query": "FUGLEN TOKYO"
+        "map_query": "FUGLEN TOKYO",
+        "lat": 35.666644,
+        "lng": 139.692426
       },
       {
         "label": "浅草",
@@ -171,7 +197,9 @@
         "tel": null,
         "email": "tokyo@fuglen.no",
         "is_headquarters": false,
-        "map_query": "FUGLEN ASAKUSA"
+        "map_query": "FUGLEN ASAKUSA",
+        "lat": 35.71429,
+        "lng": 139.79397
       },
       {
         "label": "羽根木公園",
@@ -181,7 +209,9 @@
         "tel": null,
         "email": "tokyo@fuglen.no",
         "is_headquarters": false,
-        "map_query": "FUGLEN HANEGI KŌEN"
+        "map_query": "FUGLEN HANEGI KŌEN",
+        "lat": 35.658168,
+        "lng": 139.660692
       },
       {
         "label": "参宮橋",
@@ -191,7 +221,9 @@
         "tel": null,
         "email": "sangubashi@fuglen.no",
         "is_headquarters": false,
-        "map_query": "FUGLEN SANGŪBASHI"
+        "map_query": "FUGLEN SANGŪBASHI",
+        "lat": 35.682304,
+        "lng": 139.691736
       },
       {
         "label": "登戸(ロースタリー)",
@@ -201,7 +233,9 @@
         "tel": null,
         "email": "roastery@fuglen.no",
         "is_headquarters": false,
-        "map_query": "FUGLEN COFFEE ROASTERS 川崎市多摩区登戸"
+        "map_query": "FUGLEN COFFEE ROASTERS 川崎市多摩区登戸",
+        "lat": 35.621462,
+        "lng": 139.571755
       },
       {
         "label": "京都",
@@ -211,7 +245,9 @@
         "tel": null,
         "email": "kyoto@fuglen.no",
         "is_headquarters": false,
-        "map_query": "FUGLEN KYOTO"
+        "map_query": "FUGLEN KYOTO",
+        "lat": 35.049928,
+        "lng": 135.745525
       },
       {
         "label": "福岡(博多駅東)",
@@ -221,7 +257,9 @@
         "tel": null,
         "email": "fukuoka@fuglen.no",
         "is_headquarters": false,
-        "map_query": "FUGLEN FUKUOKA"
+        "map_query": "FUGLEN FUKUOKA",
+        "lat": 33.590184,
+        "lng": 130.425169
       },
       {
         "label": "福岡(けやき通り)",
@@ -231,8 +269,12 @@
         "tel": null,
         "email": "fukuoka@fuglen.no",
         "is_headquarters": false,
-        "map_query": "FUGLEN KEYAKI DORI"
+        "map_query": "FUGLEN KEYAKI DORI",
+        "lat": 33.582506,
+        "lng": 130.381949
       }
-    ]
+    ],
+    "lat": 35.666644,
+    "lng": 139.692426
   }
 ]

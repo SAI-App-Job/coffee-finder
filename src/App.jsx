@@ -23,6 +23,7 @@ import { FavoritesView } from "./components/FavoritesView";
 import { BuyingGuideView } from "./components/BuyingGuideView";
 import { TriviaView } from "./components/TriviaView";
 import { MyPageView } from "./components/MyPageView";
+import { MyMapView } from "./components/MyMapView";
 import { AdBannerPlaceholder } from "./components/AdBanner";
 import { CompareTray, ComparisonModal } from "./components/Compare";
 import { MapLinkModal, Toast } from "./components/common";
@@ -63,7 +64,7 @@ export default function CoffeeProductList() {
   const { getRating, setRating } = useRatings();
   const { getLogs, addLog, deleteLog } = useTastingLog();
 
-  const [tab, setTab] = useState("products"); // "products" | "favorites" | "shops" | "guide" | "trivia" | "mypage"
+  const [tab, setTab] = useState("products"); // "products" | "favorites" | "shops" | "mymap" | "guide" | "trivia" | "mypage"
   const [detailProduct, setDetailProduct] = useState(null);
   const [tastingLogProduct, setTastingLogProduct] = useState(null);
   const [compareModalOpen, setCompareModalOpen] = useState(false);
@@ -143,6 +144,15 @@ export default function CoffeeProductList() {
   }, [products]);
 
   const productsById = useMemo(() => new Map(products.map((p) => [String(p.id), p])), [products]);
+
+  // 「お気に入り店舗」は独立した機能ではなく、お気に入り商品を扱う店舗を
+  // 自動的に導出する派生値(マイマップ用)。店舗側に専用のお気に入りボタンは置かない。
+  const favoriteShops = useMemo(() => {
+    const favoriteShopNames = new Set(
+      products.filter((p) => isFavorite(p.id)).map((p) => p.shopName)
+    );
+    return shops.filter((s) => favoriteShopNames.has(s.name));
+  }, [products, isFavorite, shops]);
 
   const compareProducts = useMemo(
     () => compareIds.map((id) => productsById.get(id)).filter(Boolean),
@@ -346,6 +356,8 @@ export default function CoffeeProductList() {
           onOpenDetail={openProductDetail}
         />
       )}
+
+      {tab === "mymap" && <MyMapView favoriteShops={favoriteShops} />}
 
       {tab === "guide" && (
         <BuyingGuideView pendingOriginCountry={pendingOriginCountry} onViewProducts={viewProductsForCountry} />

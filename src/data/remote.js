@@ -14,6 +14,8 @@ function mapLocation(loc) {
     tel: loc.tel,
     email: loc.email,
     mapQuery: loc.map_query,
+    lat: typeof loc.lat === "number" ? loc.lat : null,
+    lng: typeof loc.lng === "number" ? loc.lng : null,
   };
 }
 
@@ -26,6 +28,8 @@ function mapShop(raw) {
     platform: raw.platform,
     url: raw.url,
     mapQuery: raw.map_query,
+    lat: typeof raw.lat === "number" ? raw.lat : null,
+    lng: typeof raw.lng === "number" ? raw.lng : null,
   };
   // 実店舗が複数ある場合のみlocationsを持たせる(単一店舗はSHOPの直接フィールドのみを
   // 見るShopDetailViewの`hasMultipleLocations`判定に合わせるため)
