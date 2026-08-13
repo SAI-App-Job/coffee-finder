@@ -27,6 +27,7 @@ function popupHtml(pin) {
       ${pin.label ? `<p style="font-size:11px;color:var(--accent-label);text-transform:uppercase;letter-spacing:0.05em;margin:0 0 2px">${pin.label}</p>` : ""}
       <p style="font-size:14px;font-weight:600;color:#231810;margin:0 0 4px">${pin.shopName}</p>
       ${pin.address ? `<p style="font-size:12px;color:#4A3A2A;margin:0 0 8px">${pin.address}</p>` : ""}
+      ${pin.approximate ? `<p style="font-size:10px;color:#8B7361;margin:0 0 8px">※近隣に他拠点があるため位置は目安です</p>` : ""}
       <a href="${mapsUrl}" target="_blank" rel="noopener noreferrer" style="font-size:12px;color:var(--accent-label);text-decoration:underline">Googleマップで開く</a>
     </div>
   `;
@@ -65,6 +66,11 @@ export function MyMapView({ favoriteShops }) {
 
     markersRef.current.forEach((marker) => marker.remove());
     markersRef.current = pins.map((pin) => L.marker([pin.lat, pin.lng]).bindPopup(popupHtml(pin)).addTo(map));
+
+    // タブ切替直後は親要素のレイアウトが確定する前にLeafletがコンテナサイズを
+    // キャッシュしてしまい、fitBoundsのズーム計算が大きくずれることがある。
+    // 表示のたびにコンテナサイズを再計測させてから範囲調整する。
+    map.invalidateSize();
 
     if (pins.length > 0) {
       const bounds = L.latLngBounds(pins.map((p) => [p.lat, p.lng]));

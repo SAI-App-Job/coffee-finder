@@ -34,7 +34,7 @@ export function shopToPins(shop) {
 // 日本の住所ジオコーディングは町丁目レベルまでしか解決できないことがあり、
 // 同じ町内の複数拠点が同一座標に重なる場合がある。表示上だけ小さな円状に
 // 分散させて、すべてのピンをクリックできるようにする(実データの座標は変更しない)。
-const OVERLAP_OFFSET_DEG = 0.0006; // およそ50〜60m相当
+const OVERLAP_OFFSET_DEG = 0.0025; // およそ250〜280m相当(近くまでズームしないと判別できないほど小さいと意味がないため)
 
 export function spreadOverlappingPins(pins) {
   const groups = new Map();
@@ -56,6 +56,7 @@ export function spreadOverlappingPins(pins) {
         ...pin,
         lat: pin.lat + OVERLAP_OFFSET_DEG * Math.sin(angle),
         lng: pin.lng + OVERLAP_OFFSET_DEG * Math.cos(angle),
+        approximate: true,
       });
     });
   });
