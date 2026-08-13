@@ -54,6 +54,40 @@ export function StarRating({ value = 0, onChange, size = 20, readOnly = false })
   );
 }
 
+// Dial-in Score(0〜100)を半円のアークゲージで表示する。読み取り専用表示にも、
+// スライダー入力のライブプレビューにも同じコンポーネントを使う。
+export function DialInGauge({ value = 0, size = 120 }) {
+  const clamped = Math.max(0, Math.min(100, value));
+  const strokeWidth = 10;
+  const radius = size / 2 - strokeWidth;
+  const center = size / 2;
+  const circumference = Math.PI * radius;
+  const offset = circumference * (1 - clamped / 100);
+  const arcPath = `M ${strokeWidth} ${center} A ${radius} ${radius} 0 0 1 ${size - strokeWidth} ${center}`;
+
+  return (
+    <svg width={size} height={size / 2 + strokeWidth} viewBox={`0 0 ${size} ${size / 2 + strokeWidth}`}>
+      <path d={arcPath} fill="none" stroke="#3B2211" strokeWidth={strokeWidth} strokeLinecap="round" />
+      <path
+        d={arcPath}
+        fill="none"
+        stroke="var(--accent)"
+        strokeWidth={strokeWidth}
+        strokeLinecap="round"
+        strokeDasharray={circumference}
+        strokeDashoffset={offset}
+        style={{ transition: "stroke-dashoffset 0.2s ease" }}
+      />
+      <text x={center} y={center - 4} textAnchor="middle" fontSize="20" fontWeight="600" fill="#F2E9DD">
+        {clamped}
+      </text>
+      <text x={center} y={center + 12} textAnchor="middle" fontSize="9" fill="#8B7361">
+        / 100
+      </text>
+    </svg>
+  );
+}
+
 export function SourceCredit({ sources }) {
   return (
     <div className="mt-2 pt-3 border-t border-[#4A3A2A]">

@@ -1,4 +1,4 @@
-import { X, MapPin, ExternalLink, Heart, ArrowLeftRight, Check, Coffee, Sparkles } from "lucide-react";
+import { X, MapPin, ExternalLink, Heart, ArrowLeftRight, Check, Coffee, Sparkles, NotebookPen } from "lucide-react";
 import { PROCESSING_EXPLANATIONS, DESIGNATED_BRAND_EXPLANATIONS } from "../data/explanations";
 import { getGradeExplanation } from "../utils/grade";
 import { categorizeFlavorNotes } from "../utils/flavor";
@@ -29,6 +29,8 @@ export function ProductDetailModal({
   onToggleCompare,
   rating,
   onRate,
+  logCount = 0,
+  onOpenTastingLog,
 }) {
   if (!product) return null;
 
@@ -151,6 +153,13 @@ export function ProductDetailModal({
               {comparing ? "比較に追加済み" : "比較に追加"}
             </button>
           </div>
+          <button
+            onClick={() => onOpenTastingLog?.(product)}
+            className="flex items-center justify-center gap-1.5 py-2.5 rounded-xl border border-[#4A3A2A] text-[#B8A891] text-[13px] hover:border-[var(--accent)] transition-colors"
+          >
+            <NotebookPen size={14} strokeWidth={2} />
+            テイスティングログを記録{logCount > 0 ? `(${logCount}件記録済み)` : ""}
+          </button>
         </div>
 
         {product.originCountry && (

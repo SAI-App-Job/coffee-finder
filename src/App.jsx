@@ -13,8 +13,10 @@ import { useToast } from "./hooks/useToast";
 import { useViewHistory } from "./hooks/useViewHistory";
 import { useComparison } from "./hooks/useComparison";
 import { useRatings } from "./hooks/useRatings";
+import { useTastingLog } from "./hooks/useTastingLog";
 import { ProductCard, DiscoveryFactCard } from "./components/ProductCard";
 import { ProductDetailModal } from "./components/ProductDetailModal";
+import { TastingLogModal } from "./components/TastingLogModal";
 import { FilterSheet } from "./components/FilterSheet";
 import { ShopListView, ShopDetailView } from "./components/ShopViews";
 import { FavoritesView } from "./components/FavoritesView";
@@ -59,9 +61,11 @@ export default function CoffeeProductList() {
     limit: compareLimit,
   } = useComparison(isPremium, showToast);
   const { getRating, setRating } = useRatings();
+  const { getLogs, addLog, deleteLog } = useTastingLog();
 
   const [tab, setTab] = useState("products"); // "products" | "favorites" | "shops" | "guide" | "trivia" | "mypage"
   const [detailProduct, setDetailProduct] = useState(null);
+  const [tastingLogProduct, setTastingLogProduct] = useState(null);
   const [compareModalOpen, setCompareModalOpen] = useState(false);
   const [filters, setFilters] = useState({
     country: new Set(),
@@ -382,6 +386,15 @@ export default function CoffeeProductList() {
         onToggleCompare={toggleCompare}
         rating={detailProduct ? getRating(detailProduct.id) : 0}
         onRate={setRating}
+        logCount={detailProduct ? getLogs(detailProduct.id).length : 0}
+        onOpenTastingLog={setTastingLogProduct}
+      />
+      <TastingLogModal
+        product={tastingLogProduct}
+        logs={tastingLogProduct ? getLogs(tastingLogProduct.id) : []}
+        onAddLog={(entry) => addLog(tastingLogProduct.id, entry)}
+        onDeleteLog={(entryId) => deleteLog(tastingLogProduct.id, entryId)}
+        onClose={() => setTastingLogProduct(null)}
       />
       {compareModalOpen && (
         <ComparisonModal

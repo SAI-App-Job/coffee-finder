@@ -37,3 +37,15 @@ export const formatRelativeTime = (isoString) => {
   const days = Math.floor(hours / 24);
   return `${days}日前`;
 };
+
+// テイスティングログ等、同じ豆の複数記録を日時で見分けるための絶対日時表記
+export const formatDateTime = (isoString) => {
+  const d = new Date(isoString);
+  return d.toLocaleString("ja-JP", {
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+    hour: "2-digit",
+    minute: "2-digit",
+  });
+};
