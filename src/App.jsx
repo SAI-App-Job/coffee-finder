@@ -1,5 +1,5 @@
 import { useState, useMemo, useEffect } from "react";
-import { Search, X, SlidersHorizontal, Coffee } from "lucide-react";
+import { Search, X, SlidersHorizontal, Coffee, Bell } from "lucide-react";
 import { MOCK_PRODUCTS } from "./data/products";
 import { SHOPS } from "./data/shops";
 import { EVENTS } from "./data/events";
@@ -14,9 +14,11 @@ import { useViewHistory } from "./hooks/useViewHistory";
 import { useComparison } from "./hooks/useComparison";
 import { useRatings } from "./hooks/useRatings";
 import { useTastingLog } from "./hooks/useTastingLog";
+import { useAlerts } from "./hooks/useAlerts";
 import { ProductCard, DiscoveryFactCard } from "./components/ProductCard";
 import { ProductDetailModal } from "./components/ProductDetailModal";
 import { TastingLogModal } from "./components/TastingLogModal";
+import { AlertsPanel } from "./components/AlertsPanel";
 import { FilterSheet } from "./components/FilterSheet";
 import { ShopListView, ShopDetailView } from "./components/ShopViews";
 import { FavoritesView } from "./components/FavoritesView";
@@ -34,6 +36,7 @@ export default function CoffeeProductList() {
   const [products, setProducts] = useState(MOCK_PRODUCTS);
   const [shops, setShops] = useState(SHOPS);
   const [events, setEvents] = useState(EVENTS);
+  const [remoteLoaded, setRemoteLoaded] = useState(false);
 
   useEffect(() => {
     let cancelled = false;
@@ -42,6 +45,7 @@ export default function CoffeeProductList() {
       setProducts(data.products);
       setShops(data.shops);
       setEvents(data.events);
+      setRemoteLoaded(true);
     });
     return () => {
       cancelled = true;
@@ -154,6 +158,13 @@ export default function CoffeeProductList() {
     return shops.filter((s) => favoriteShopNames.has(s.name));
   }, [products, isFavorite, shops]);
 
+  const favoriteShopNameSet = useMemo(
+    () => new Set(favoriteShops.map((s) => s.name)),
+    [favoriteShops]
+  );
+  const { alerts, dismissAlerts } = useAlerts(products, favoriteIds, favoriteShopNameSet, remoteLoaded);
+  const [alertsPanelOpen, setAlertsPanelOpen] = useState(false);
+
   const compareProducts = useMemo(
     () => compareIds.map((id) => productsById.get(id)).filter(Boolean),
     [compareIds, productsById]
@@ -219,13 +230,29 @@ export default function CoffeeProductList() {
       `}</style>
 
       <header className="px-5 pt-6 pb-3 border-b border-[#4A3A2A] sticky top-0 bg-[#231810]/95 backdrop-blur-sm z-10">
-        <p className="text-[11px] tracking-[0.2em] text-[var(--accent-label)] uppercase">
-          Coffee Finder
-        </p>
-        <h1 className="font-serif text-[26px] leading-tight mt-1">
-          近くの自家焙煎豆を探す
-        </h1>
-        <p className="text-[12px] text-[#8B7361] mt-0.5">Find Local Roasters Near You</p>
+        <div className="flex items-start justify-between gap-3">
+          <div>
+            <p className="text-[11px] tracking-[0.2em] text-[var(--accent-label)] uppercase">
+              Coffee Finder
+            </p>
+            <h1 className="font-serif text-[26px] leading-tight mt-1">
+              近くの自家焙煎豆を探す
+            </h1>
+            <p className="text-[12px] text-[#8B7361] mt-0.5">Find Local Roasters Near You</p>
+          </div>
+          <button
+            onClick={() => setAlertsPanelOpen(true)}
+            className="relative shrink-0 mt-1 p-1.5 text-[#B8A891] hover:text-[#F2E9DD] transition-colors"
+            aria-label="お知らせ"
+          >
+            <Bell size={20} strokeWidth={1.75} />
+            {alerts.length > 0 && (
+              <span className="absolute top-0.5 right-0.5 min-w-[16px] h-4 px-1 rounded-full bg-[var(--accent)] text-[#231810] text-[10px] font-bold flex items-center justify-center">
+                {alerts.length > 9 ? "9+" : alerts.length}
+              </span>
+            )}
+          </button>
+        </div>
 
         <div className="flex gap-1 mt-4 p-1 rounded-full bg-[#3B2211] w-fit overflow-x-auto max-w-full">
           {TAB_ITEMS.map(({ id, icon: Icon, ja, en }) => (
@@ -422,6 +449,20 @@ export default function CoffeeProductList() {
         />
       )}
       <Toast message={toastMessage} onDismiss={dismissToast} />
+      <AlertsPanel
+        open={alertsPanelOpen}
+        alerts={alerts}
+        products={products}
+        onOpenDetail={(product) => {
+          setAlertsPanelOpen(false);
+          dismissAlerts();
+          openProductDetail(product);
+        }}
+        onClose={() => {
+          setAlertsPanelOpen(false);
+          dismissAlerts();
+        }}
+      />
 
       {(compareIds.length > 0 || !isPremium) && (
         <div className="fixed bottom-0 inset-x-0 z-20 bg-[#1C140D]/95 backdrop-blur-sm">

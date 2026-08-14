@@ -60,6 +60,7 @@ function mapProduct(raw, shopsByName) {
     flavorNotes: raw.flavor_notes,
     mapQuery: raw.map_query,
     farmNote: raw.farm_note,
+    outOfStock: typeof raw.out_of_stock === "boolean" ? raw.out_of_stock : null,
   };
 }
 
