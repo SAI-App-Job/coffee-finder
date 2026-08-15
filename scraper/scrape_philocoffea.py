@@ -174,11 +174,21 @@ def parse_product_detail(url: str) -> dict:
 
     beans_data = parse_beans_data_table(soup)
 
-    # 新テンプレートのBEANS DATA表、旧テンプレートの＜豆情報＞ブロックの
-    # どちらも存在しない場合は、コーヒー豆商品ではない(器具・グッズ等)と
-    # みなして除外する。カテゴリ除外(EXCLUDED_CATEGORY_GIDS)をすり抜けた
-    # 商品や、今後追加される未知の器具・グッズに対する保険的なチェック。
-    if not beans_data and LEGACY_BEAN_INFO_MARKER not in soup.get_text():
+    # 新テンプレートのBEANS DATA表、旧テンプレートの＜豆情報＞ブロック、
+    # 商品名から解析できる産地国(parsed["origin_country"])のいずれも
+    # 存在しない場合のみ、コーヒー豆商品ではない(器具・グッズ等)とみなして
+    # 除外する。カテゴリ除外(EXCLUDED_CATEGORY_GIDS)をすり抜けた商品や、
+    # 今後追加される未知の器具・グッズに対する保険的なチェック。
+    # 産地国チェックが必要な理由: gid=3105307(コーヒーバッグ)の一部の
+    # ギフト向け商品(例: 「296 Colombia La Roca Geisha Washed」)は、
+    # BEANS DATA表も＜豆情報＞ブロックも持たないギフト訴求文のみの詳細
+    # ページだが、商品名に産地国名を含む正規の単一産地コーヒー豆である
+    # ため、これを産地国名だけで誤って除外しないようにする。
+    if (
+        not beans_data
+        and LEGACY_BEAN_INFO_MARKER not in soup.get_text()
+        and not parsed.get("origin_country")
+    ):
         return {
             "shop_name": SHOP_INFO["name"],
             "raw_name": raw_name,
