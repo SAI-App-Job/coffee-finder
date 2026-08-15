@@ -90,7 +90,7 @@
     "prefecture": "千葉県",
     "hours": "店舗により異なる",
     "map_query": "PHILOCOFFEA 千葉県",
-    "last_scraped_at": "2026-08-11T02:11:17.380311+00:00",
+    "last_scraped_at": "2026-08-15T20:34:21.145916+00:00",
     "locations": [
       {
         "label": "シャポー船橋店",
@@ -147,9 +147,7 @@
         "lat": 35.694033,
         "lng": 139.976026
       }
-    ],
-    "lat": 35.694033,
-    "lng": 139.976026
+    ]
   },
   {
     "name": "It's roasted coffee",
