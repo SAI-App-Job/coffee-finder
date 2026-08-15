@@ -45,6 +45,23 @@ REQUEST_HEADERS = {
     "User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"
 }
 
+# 器具・グッズ等、コーヒー豆ではない商品を含むカテゴリ(gid)。Denim bisの
+# EXCLUDED_CATEGORIESと同じ考え方で、クロール対象から丸ごと除外する。
+# gid=2805103は実データ確認済み(2026-08時点、31件): ドリッパー・ペーパー
+# フィルター・ケトル・コーヒー関連書籍等。コーヒー豆は0件だった。
+EXCLUDED_CATEGORY_GIDS = {
+    2805103: "コーヒー器具",
+}
+CATEGORY_LIST_BASE_URL = "https://philocoffea.com/?mode=grp"
+
+# 「BEANS DATA」表(新テンプレート)を持たない商品ページの一部は、単に
+# コーヒー豆ではない(器具・グッズ)のではなく、古い終売コーヒー豆が旧テンプレート
+# (表ではなく商品ストーリー内の自由記述ブロック)のまま残っているケースがある
+# ことが実データで確認された(2026-08時点、457件中325件が終売表記で、その
+# 多くが旧テンプレート)。旧テンプレートは「＜豆情報＞」という見出しで
+# 農園・生産者等を記載しているため、これを第二の判定材料として使う。
+LEGACY_BEAN_INFO_MARKER = "＜豆情報＞"
+
 # BEANS DATAの表キー名 → 内部フィールド名の対応(店舗依存の日本語見出しを正規化)
 BEANS_DATA_FIELD_MAP = {
     "農園": "farm_name",
@@ -157,6 +174,18 @@ def parse_product_detail(url: str) -> dict:
 
     beans_data = parse_beans_data_table(soup)
 
+    # 新テンプレートのBEANS DATA表、旧テンプレートの＜豆情報＞ブロックの
+    # どちらも存在しない場合は、コーヒー豆商品ではない(器具・グッズ等)と
+    # みなして除外する。カテゴリ除外(EXCLUDED_CATEGORY_GIDS)をすり抜けた
+    # 商品や、今後追加される未知の器具・グッズに対する保険的なチェック。
+    if not beans_data and LEGACY_BEAN_INFO_MARKER not in soup.get_text():
+        return {
+            "shop_name": SHOP_INFO["name"],
+            "raw_name": raw_name,
+            "non_bean": True,
+            "product_url": url,
+        }
+
     # BEANS DATAの表は商品名パースより確実な一次情報として優先的に反映する
     if beans_data.get("生産処理"):
         raw_method = beans_data["生産処理"]
@@ -258,12 +287,50 @@ def scrape_product_list_page(page: int) -> list[dict]:
     return results
 
 
-def scrape_all_products(fetch_details: bool = True, max_pages: int = 50) -> tuple[list[dict], list[dict]]:
+def scrape_excluded_category_urls() -> set[str]:
+    """EXCLUDED_CATEGORY_GIDSに列挙したカテゴリ(器具・グッズ等)の商品URLを集める。
+
+    PHILOCOFFEAはDenim bisと異なり、カテゴリ単位ではなく全カテゴリ横断のサイト内
+    検索(?mode=srh)で一覧を取得している。そのため、カテゴリ単位でクロールして
+    除外するのではなく、除外対象カテゴリ(?mode=grp&gid=...)の商品URL一覧を別途
+    取得し、サイト内検索結果からこの集合に含まれるものを差し引く方式で
+    Denim bisのEXCLUDED_CATEGORIESと同じ効果を得る。
+    """
+    excluded_urls: set[str] = set()
+    for gid, category_name in EXCLUDED_CATEGORY_GIDS.items():
+        page = 1
+        count = 0
+        while True:
+            url = f"{CATEGORY_LIST_BASE_URL}&gid={gid}"
+            if page > 1:
+                url += f"&page={page}"
+            soup = fetch_page(url)
+            items = soup.select("li.productList__unit")
+            if not items:
+                break
+            for item in items:
+                link = item.select_one('a[href*="?pid="]')
+                if not link:
+                    continue
+                href = link.get("href", "")
+                product_url = f"https://philocoffea.com/{href}" if href.startswith("?") else href
+                excluded_urls.add(product_url)
+                count += 1
+            page += 1
+            time.sleep(CRAWL_DELAY_SECONDS)
+        print(f"[info] 除外カテゴリ「{category_name}」(gid={gid}): {count}件")
+    return excluded_urls
+
+
+def scrape_all_products(fetch_details: bool = True, max_pages: int = 50) -> tuple[list[dict], list[dict], list[dict]]:
     """一覧ページを全ページ辿り、各商品の詳細ページもパースして結合する。
 
-    戻り値は (products, flavored_products) のタプル。フレーバーコーヒーと
-    非・豆形状の商品(リキッドコーヒー等)はいずれも本体のproductsに含めない。
+    戻り値は (products, flavored_products, non_bean_products) のタプル。
+    フレーバーコーヒー・非・豆形状の商品(リキッドコーヒー等)・コーヒー豆ではない
+    商品(器具・グッズ等)はいずれも本体のproductsに含めない。
     """
+    excluded_urls = scrape_excluded_category_urls()
+
     all_list_items = []
     for page in range(1, max_pages + 1):
         items = scrape_product_list_page(page)
@@ -271,16 +338,19 @@ def scrape_all_products(fetch_details: bool = True, max_pages: int = 50) -> tupl
             break
         # 豆の形状ではない商品は一覧の時点で除外
         items = [i for i in items if not any(kw in i["raw_name"] for kw in NON_BEAN_KEYWORDS)]
+        # 器具・グッズ等、除外対象カテゴリの商品も一覧の時点で除外
+        items = [i for i in items if i["product_url"] not in excluded_urls]
         all_list_items.extend(items)
         time.sleep(CRAWL_DELAY_SECONDS)
 
     if not fetch_details:
-        return all_list_items, []
+        return all_list_items, [], []
 
     previous = load_previous_products(SHOP_INFO["name"])
 
     records = []
     flavored_records = []
+    non_bean_records = []
     for item in all_list_items:
         prev = previous.get(item["product_url"])
         if is_unchanged(
@@ -295,7 +365,9 @@ def scrape_all_products(fetch_details: bool = True, max_pages: int = 50) -> tupl
         try:
             detail = parse_product_detail(item["product_url"])
             detail["out_of_stock"] = item["out_of_stock"]
-            if detail.get("is_flavored"):
+            if detail.get("non_bean"):
+                non_bean_records.append(detail)
+            elif detail.get("is_flavored"):
                 flavored_records.append(detail)
             else:
                 records.append(detail)
@@ -303,7 +375,7 @@ def scrape_all_products(fetch_details: bool = True, max_pages: int = 50) -> tupl
         except requests.RequestException as e:
             print(f"[warn] 詳細ページ取得失敗: {item['product_url']} ({e})")
 
-    return records, flavored_records
+    return records, flavored_records, non_bean_records
 
 
 if __name__ == "__main__":
@@ -314,13 +386,15 @@ if __name__ == "__main__":
         result = parse_product_detail(sys.argv[1])
         print(json.dumps(result, ensure_ascii=False, indent=2))
     else:
-        records, flavored_records = scrape_all_products()
+        records, flavored_records, non_bean_records = scrape_all_products()
         output = {
             "shop": SHOP_INFO,
             "products": records,
             "flavored_products_excluded": flavored_records,
+            "non_bean_products_excluded": non_bean_records,
         }
         with open("data_philocoffea.json", "w", encoding="utf-8") as f:
             json.dump(output, f, ensure_ascii=False, indent=2)
         print(f"[done] {len(records)}件を data_philocoffea.json に出力しました"
-              f"(フレーバーコーヒー{len(flavored_records)}件は別枠に分離)")
+              f"(フレーバーコーヒー{len(flavored_records)}件、"
+              f"非コーヒー豆{len(non_bean_records)}件は別枠に分離)")
