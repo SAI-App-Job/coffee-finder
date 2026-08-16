@@ -152,6 +152,50 @@ def normalize_processing_method(raw_method):
     """
     return detect_processing_method(raw_method) or raw_method
 
+
+# --- 在庫状態マスタ(日英表記ゆれの正規化) ------------------------------------
+# 店舗によって在庫状態の表記が「終売」「完売」「SOLD OUT」等バラバラな上、
+# 「終売」(再入荷なし)と「完売」(再入荷の可能性あり)のように意味の異なる
+# 状態が同じ「品切れ」として扱われがちなことが実データ調査で判明した。
+# PROCESSING_METHOD_SYNONYMSと同じ発想で、data/stock_status_synonyms.json
+# を唯一の情報源として3段階(終売/一時的に品切れ/販売中)に正規化する。
+_STOCK_STATUS_SYNONYMS_PATH = os.path.join(
+    os.path.dirname(os.path.abspath(__file__)), "..", "data", "stock_status_synonyms.json"
+)
+with open(_STOCK_STATUS_SYNONYMS_PATH, encoding="utf-8") as _f:
+    _STOCK_STATUS_MASTER = json.load(_f)
+
+STOCK_STATUS_SYNONYMS = {
+    canonical: entry["synonyms"] for canonical, entry in _STOCK_STATUS_MASTER.items()
+}
+
+
+def detect_stock_status(raw_name, structural_out_of_stock=False):
+    """商品名のテキストと、店舗サイトの構造化された在庫フラグ(取得できる場合)を
+    組み合わせて、在庫状態を「終売」「一時的に品切れ」「販売中」の3段階に正規化する。
+
+    優先順位: (1)商品名に「終売」相当の表記があれば終売、(2)商品名に「完売」
+    相当の表記があれば一時的に品切れ、(3)店舗サイト側の構造化された品切れ
+    フラグ(structural_out_of_stock)が立っていれば一時的に品切れ、
+    (4)いずれでもなければ販売中。
+
+    商品名のテキストを構造化フラグより先に見る理由: PHILOCOFFEAは商品名に
+    「終売」「完売」を明記する一方、一覧ページの品切れ表示要素はHTMLコメント内
+    にしか存在せず(実データ調査で判明、常にコメントアウトされておりBeautiful
+    Soupのタグ検索では絶対にヒットしない)、構造化フラグが実質的に機能して
+    いない。商品名のテキストの方が確実な一次情報となる店舗があるため。
+    """
+    for kw in STOCK_STATUS_SYNONYMS.get("終売", []):
+        if kw.lower() in raw_name.lower():
+            return "終売"
+    for kw in STOCK_STATUS_SYNONYMS.get("一時的に品切れ", []):
+        if kw.lower() in raw_name.lower():
+            return "一時的に品切れ"
+    if structural_out_of_stock:
+        return "一時的に品切れ"
+    return "販売中"
+
+
 # --- 後処理タグマスタ --------------------------------------------------------
 POST_PROCESSING_KEYWORDS = {
     "バレルエイジド": "バレルエイジド(樽熟成)",
