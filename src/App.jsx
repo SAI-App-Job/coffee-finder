@@ -84,6 +84,7 @@ export default function CoffeeProductList() {
   const [selectedShop, setSelectedShop] = useState(null);
   const [pendingOriginCountry, setPendingOriginCountry] = useState(null);
   const [searchQuery, setSearchQuery] = useState("");
+  const [showOutOfStock, setShowOutOfStock] = useState(false);
 
   const learnAboutOrigin = (country) => {
     setPendingOriginCountry(country);
@@ -109,6 +110,9 @@ export default function CoffeeProductList() {
   const filtered = useMemo(() => {
     const q = searchQuery.trim().toLowerCase();
     return products.filter((p) => {
+      // 在庫状態が不明な商品(モックデータ等)は隠さない。チェックボックスが
+      // オフの間は「一時的に品切れ」「終売」のどちらも一覧から除外する。
+      if (!showOutOfStock && p.stockStatus && p.stockStatus !== "販売中") return false;
       if (filters.country.size && !filters.country.has(p.originCountry)) return false;
       if (filters.prefecture.size && !filters.prefecture.has(p.prefecture)) return false;
       if (filters.shop.size && !filters.shop.has(p.shopName)) return false;
@@ -136,7 +140,7 @@ export default function CoffeeProductList() {
       }
       return true;
     });
-  }, [products, filters, searchQuery]);
+  }, [products, filters, searchQuery, showOutOfStock]);
 
   const productsByShop = useMemo(() => {
     const map = {};
@@ -329,6 +333,15 @@ export default function CoffeeProductList() {
               ))}
             </div>
           </div>
+          <label className="flex items-center gap-1.5 mt-2.5 text-[12px] text-[#8B7361] cursor-pointer select-none w-fit">
+            <input
+              type="checkbox"
+              checked={showOutOfStock}
+              onChange={(e) => setShowOutOfStock(e.target.checked)}
+              className="accent-[var(--accent)] w-3.5 h-3.5"
+            />
+            売り切れ商品も表示
+          </label>
         </div>
       )}
 

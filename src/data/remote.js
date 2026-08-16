@@ -65,6 +65,9 @@ function mapProduct(raw, shopsByName) {
     mapQuery: raw.map_query,
     farmNote: raw.farm_note,
     outOfStock: typeof raw.out_of_stock === "boolean" ? raw.out_of_stock : null,
+    // 「販売中」「一時的に品切れ」「終売」の3段階。データに無い場合(モックデータ等)は
+    // 販売中扱いにする(在庫状態が分からないことを理由に一覧から隠さないため)。
+    stockStatus: raw.stock_status || "販売中",
   };
 }
 

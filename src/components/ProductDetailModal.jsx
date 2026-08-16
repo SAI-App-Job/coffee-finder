@@ -53,9 +53,22 @@ export function ProductDetailModal({
       >
         <div className="flex items-start justify-between gap-3 mb-3">
           <div>
-            <p className="text-[11px] tracking-wider text-[var(--accent-label)] font-medium uppercase">
-              {product.originCountry}
-            </p>
+            <div className="flex items-center gap-1.5">
+              <p className="text-[11px] tracking-wider text-[var(--accent-label)] font-medium uppercase">
+                {product.originCountry}
+              </p>
+              {product.stockStatus && product.stockStatus !== "販売中" && (
+                <span
+                  className={`text-[10px] px-1.5 py-0.5 rounded-full font-medium leading-none ${
+                    product.stockStatus === "終売"
+                      ? "bg-[#3B2211] text-[#8B7361] border border-[#4A3A2A]"
+                      : "bg-[#4A2E12] text-[#E8B86D] border border-[#6B4A22]"
+                  }`}
+                >
+                  {product.stockStatus === "終売" ? "終売" : "売り切れ"}
+                </span>
+              )}
+            </div>
             <h3 className="font-serif text-[19px] leading-snug text-[#F2E9DD] mt-0.5">{product.rawName}</h3>
           </div>
           <button
