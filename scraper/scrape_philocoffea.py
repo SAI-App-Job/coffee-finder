@@ -155,6 +155,14 @@ def parse_product_detail(url: str) -> dict:
 
     raw_name = name_el.get_text(strip=True) if name_el else ""
 
+    # 商品名に「終売」「完売」等の表記が一切無いまま品切れになるケースが
+    # 実データ調査で確認された(例: 「World Champion Series」等の限定商品)。
+    # このdiv要素は一覧ページのp.productList__soldOutと違い、コメントアウト
+    # されておらず実際に機能している(在庫がある商品では要素自体が存在しない
+    # ことを確認済み)ため、商品名テキストと合わせた第二のシグナルとして使う。
+    sold_out_el = soup.select_one("div.sold_out")
+    stock_status = detect_stock_status(raw_name, bool(sold_out_el))
+
     price = extract_price_including_tax(soup)
     if price is None and price_el:
         # フォールバック: 構造化データが見つからない場合のみテキストから推定
@@ -174,6 +182,7 @@ def parse_product_detail(url: str) -> dict:
             "is_flavored": True,
             "flavor_name": parsed["flavor_name"],
             "price": price,
+            "stock_status": stock_status,
             "product_url": url,
         }
 
@@ -205,6 +214,7 @@ def parse_product_detail(url: str) -> dict:
             "shop_name": SHOP_INFO["name"],
             "raw_name": raw_name,
             "non_bean": True,
+            "stock_status": stock_status,
             "product_url": url,
         }
 
@@ -245,6 +255,7 @@ def parse_product_detail(url: str) -> dict:
         "flavor_notes": beans_data.get("味わい"),  # 新しい軸: テイスティングノート
         "source_note": str(beans_data),
         "price": price,
+        "stock_status": stock_status,
         "product_url": url,
     }
 
@@ -392,9 +403,9 @@ def scrape_all_products(fetch_details: bool = True, max_pages: int = 50) -> tupl
 
         try:
             detail = parse_product_detail(item["product_url"])
-            # 商品名(h1#itemName、一覧ページの商品名と基本一致するはずだが
-            # 詳細ページの方がより一次情報に近いため、こちらで再判定する)
-            detail["stock_status"] = detect_stock_status(detail["raw_name"])
+            # stock_statusはparse_product_detail内で、商品名テキストに加え
+            # 詳細ページのdiv.sold_out要素(実際に機能している構造化シグナル)
+            # も踏まえて判定済み。ここではout_of_stockを一貫させるだけでよい。
             detail["out_of_stock"] = detail["stock_status"] != "販売中"
             if detail.get("non_bean"):
                 non_bean_records.append(detail)

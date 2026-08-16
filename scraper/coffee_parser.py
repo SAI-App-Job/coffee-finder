@@ -169,6 +169,13 @@ STOCK_STATUS_SYNONYMS = {
     canonical: entry["synonyms"] for canonical, entry in _STOCK_STATUS_MASTER.items()
 }
 
+# 「まもなく終売」(近日終売予定、現時点ではまだ購入可能)のように、「終売」を
+# 含みながら実際にはまだ販売中の予告表現が実データ調査で見つかった(該当2件とも
+# div.sold_out要素が存在せず、実際に購入可能なことを確認済み)。この予告表現を
+# 先に取り除いてから判定することで、「終売」という単語自体は含むが実際は
+# まだ終売していない商品を誤って終売と判定しないようにする。
+STOCK_STATUS_NOT_YET_PATTERNS = ["まもなく終売"]
+
 
 def detect_stock_status(raw_name, structural_out_of_stock=False):
     """商品名のテキストと、店舗サイトの構造化された在庫フラグ(取得できる場合)を
@@ -185,11 +192,16 @@ def detect_stock_status(raw_name, structural_out_of_stock=False):
     Soupのタグ検索では絶対にヒットしない)、構造化フラグが実質的に機能して
     いない。商品名のテキストの方が確実な一次情報となる店舗があるため。
     """
+    sanitized = raw_name or ""
+    for pattern in STOCK_STATUS_NOT_YET_PATTERNS:
+        sanitized = sanitized.replace(pattern, "")
+    lowered = sanitized.lower()
+
     for kw in STOCK_STATUS_SYNONYMS.get("終売", []):
-        if kw.lower() in raw_name.lower():
+        if kw.lower() in lowered:
             return "終売"
     for kw in STOCK_STATUS_SYNONYMS.get("一時的に品切れ", []):
-        if kw.lower() in raw_name.lower():
+        if kw.lower() in lowered:
             return "一時的に品切れ"
     if structural_out_of_stock:
         return "一時的に品切れ"
