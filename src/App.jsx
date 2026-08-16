@@ -113,7 +113,14 @@ export default function CoffeeProductList() {
       // 在庫状態が不明な商品(モックデータ等)は隠さない。チェックボックスが
       // オフの間は「一時的に品切れ」「終売」のどちらも一覧から除外する。
       if (!showOutOfStock && p.stockStatus && p.stockStatus !== "販売中") return false;
-      if (filters.country.size && !filters.country.has(p.originCountry)) return false;
+      if (filters.country.size) {
+        // ブレンド商品はorigin_countryを持たないため、blendComponentsの
+        // いずれかの産地国が絞り込み条件に一致すればヒットさせる。
+        const countries = p.blendComponents?.length
+          ? p.blendComponents.map((c) => c.originCountry).filter(Boolean)
+          : [p.originCountry];
+        if (!countries.some((c) => filters.country.has(c))) return false;
+      }
       if (filters.prefecture.size && !filters.prefecture.has(p.prefecture)) return false;
       if (filters.shop.size && !filters.shop.has(p.shopName)) return false;
       if (filters.flavorCategory.size) {
@@ -129,9 +136,13 @@ export default function CoffeeProductList() {
         if (!matchesFixedRoast && !p.roastSelectable) return false;
       }
       if (q) {
+        const blendCountries = p.blendComponents?.length
+          ? p.blendComponents.map((c) => c.originCountry)
+          : [];
         const haystack = [
           p.rawName, p.originCountry, p.designatedBrand, p.processingMethod,
           p.grade, p.farmNote, p.shopName, p.shopAddress, p.prefecture,
+          ...blendCountries,
         ]
           .filter(Boolean)
           .join(" ")

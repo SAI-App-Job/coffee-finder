@@ -41,6 +41,9 @@ export function ProductDetailModal({
   const flavorCategories = categorizeFlavorNotes(product.flavorNotes);
   const favorited = isFavorite?.(product.id) ?? false;
   const comparing = isComparing?.(product.id) ?? false;
+  const blendCountries = product.blendComponents?.length
+    ? [...new Set(product.blendComponents.map((c) => c.originCountry).filter(Boolean))]
+    : [];
 
   return (
     <div
@@ -53,10 +56,21 @@ export function ProductDetailModal({
       >
         <div className="flex items-start justify-between gap-3 mb-3">
           <div>
-            <div className="flex items-center gap-1.5">
-              <p className="text-[11px] tracking-wider text-[var(--accent-label)] font-medium uppercase">
-                {product.originCountry}
-              </p>
+            <div className="flex items-center gap-1.5 flex-wrap">
+              {blendCountries.length > 0 ? (
+                blendCountries.map((country) => (
+                  <span
+                    key={country}
+                    className="text-[11px] px-2 py-0.5 rounded-full bg-[#3B2211] text-[var(--accent-muted)] border border-[#4A3A2A]"
+                  >
+                    {country}
+                  </span>
+                ))
+              ) : (
+                <p className="text-[11px] tracking-wider text-[var(--accent-label)] font-medium uppercase">
+                  {product.originCountry}
+                </p>
+              )}
               {product.stockStatus && product.stockStatus !== "販売中" && (
                 <span
                   className={`text-[10px] px-1.5 py-0.5 rounded-full font-medium leading-none ${
@@ -128,7 +142,45 @@ export function ProductDetailModal({
               </div>
             </div>
           )}
-          <DetailRow label="農園情報" value={product.farmNote} />
+          {product.blendComponents?.length > 0 ? (
+            <div>
+              <p className="text-[11px] tracking-wide text-[var(--accent-label)] uppercase mb-2">
+                ブレンドの構成(産地別)
+              </p>
+              <div className="flex flex-col gap-2.5">
+                {product.blendComponents.map((c, i) => {
+                  const details = [
+                    c.farm && `農園: ${c.farm}`,
+                    c.producer && `生産者: ${c.producer}`,
+                    c.variety && `品種: ${c.variety}`,
+                    c.altitude && `標高: ${c.altitude}`,
+                    c.processingMethod && `精選方法: ${c.processingMethod}`,
+                  ].filter(Boolean);
+                  return (
+                    <div key={i} className="rounded-xl bg-[#3B2211] border border-[#4A3A2A] p-3">
+                      <div className="flex items-center justify-between gap-2">
+                        <p className="text-[13px] text-[#F2E9DD] font-medium">
+                          {c.originCountry ?? "産地不明"}
+                        </p>
+                        {typeof c.percentage === "number" && (
+                          <span className="text-[11px] text-[var(--accent)] font-mono shrink-0">
+                            {c.percentage}%
+                          </span>
+                        )}
+                      </div>
+                      {details.length > 0 && (
+                        <p className="text-[12px] text-[#B8A891] leading-relaxed mt-1">
+                          {details.join(" ／ ")}
+                        </p>
+                      )}
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          ) : (
+            <DetailRow label="農園情報" value={product.farmNote} />
+          )}
         </div>
 
         <div className="flex items-center gap-1.5 text-[12px] text-[#8B7361] pt-3 border-t border-[#4A3A2A] mb-4">

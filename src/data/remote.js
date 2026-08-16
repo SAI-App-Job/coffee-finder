@@ -68,6 +68,19 @@ function mapProduct(raw, shopsByName) {
     // 「販売中」「一時的に品切れ」「終売」の3段階。データに無い場合(モックデータ等)は
     // 販売中扱いにする(在庫状態が分からないことを理由に一覧から隠さないため)。
     stockStatus: raw.stock_status || "販売中",
+    // ブレンドの産地別内訳(現状PHILOCOFFEAのみ)。各要素は判明した項目のみ
+    // 埋まっている前提で、無い項目はnullのまま(欠けている項目を推測で埋めない)。
+    blendComponents: Array.isArray(raw.blend_components)
+      ? raw.blend_components.map((c) => ({
+          originCountry: c.origin_country ?? null,
+          percentage: typeof c.percentage === "number" ? c.percentage : null,
+          producer: c.producer ?? null,
+          farm: c.farm ?? null,
+          variety: c.variety ?? null,
+          altitude: c.altitude ?? null,
+          processingMethod: c.processing_method ? normalizeProcessingMethod(c.processing_method) : null,
+        }))
+      : [],
   };
 }
 

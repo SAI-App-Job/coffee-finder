@@ -131,6 +131,11 @@ export function ProductCard({ product, onOpenMap, onLearnOrigin, isFavorite, onT
 
   const staticTags = [product.farmNote].filter(Boolean);
   const favorited = isFavorite?.(product.id) ?? false;
+  // ブレンドは単一のoriginCountryを持たないため、構成国をタグとして
+  // 表示する(ストレート商品の産地表示と同じ見た目=既存のタグpillスタイルを流用)
+  const blendCountries = product.blendComponents?.length
+    ? [...new Set(product.blendComponents.map((c) => c.originCountry).filter(Boolean))]
+    : [];
 
   return (
     <div
@@ -158,10 +163,21 @@ export function ProductCard({ product, onOpenMap, onLearnOrigin, isFavorite, onT
       <div className="flex-1 p-4 flex flex-col gap-2.5">
         <div className="flex items-start justify-between gap-3">
           <div>
-            <div className="flex items-center gap-1.5">
-              <p className="text-[11px] tracking-wider text-[var(--accent-label)] font-medium uppercase">
-                {product.originCountry}
-              </p>
+            <div className="flex items-center gap-1.5 flex-wrap">
+              {blendCountries.length > 0 ? (
+                blendCountries.map((country) => (
+                  <span
+                    key={country}
+                    className="text-[11px] px-2 py-0.5 rounded-full bg-[#3B2211] text-[var(--accent-muted)] border border-[#4A3A2A]"
+                  >
+                    {country}
+                  </span>
+                ))
+              ) : (
+                <p className="text-[11px] tracking-wider text-[var(--accent-label)] font-medium uppercase">
+                  {product.originCountry}
+                </p>
+              )}
               {product.stockStatus && product.stockStatus !== "販売中" && (
                 <span
                   className={`text-[10px] px-1.5 py-0.5 rounded-full font-medium leading-none ${
