@@ -1,3 +1,5 @@
+import { normalizeProcessingMethod } from "../utils/processingMethod";
+
 const BASE_URL = "https://raw.githubusercontent.com/SAI-App-Job/coffee-finder/master/data/";
 
 async function fetchJSON(path) {
@@ -49,7 +51,9 @@ function mapProduct(raw, shopsByName) {
     rawName: raw.raw_name,
     originCountry: raw.origin_country,
     designatedBrand: raw.designated_brand,
-    processingMethod: raw.processing_method,
+    // データ取得時点で正規化しておく(未正規化の生の表記が紛れ込んでいても、
+    // タグの解説を確実に引けるようにするための保険。詳細はutils/processingMethod.js参照)
+    processingMethod: normalizeProcessingMethod(raw.processing_method),
     grade: raw.grade,
     roast: raw.roast_level,
     roastSelectable: raw.roast_selectable,
