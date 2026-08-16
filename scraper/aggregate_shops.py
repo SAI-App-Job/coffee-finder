@@ -170,6 +170,10 @@ def build_product_id(record: dict) -> str:
 
 
 def build_product(record: dict, shop_map_query: str, now_iso: str) -> dict:
+    # stock_status(販売中/一時的に品切れ/終売)を唯一の情報源とし、out_of_stockは
+    # そこから機械的に導出する(スクレイパー側が個別にout_of_stockを設定し忘れても
+    # ここで矛盾なく揃う)。値が無い場合(未対応店舗等)は販売中として扱う。
+    stock_status = record.get("stock_status") or "販売中"
     return {
         "id": build_product_id(record),
         "shop_name": record["shop_name"],
@@ -193,7 +197,8 @@ def build_product(record: dict, shop_map_query: str, now_iso: str) -> dict:
         "price_max": record.get("price_max"),
         "weight_g": record.get("weight_g"),  # FUGLENはバリアントのgramsから取得できる。他店舗はnullのまま
         "unit_note": record.get("unit_note"),
-        "out_of_stock": bool(record.get("out_of_stock", False)),
+        "stock_status": stock_status,
+        "out_of_stock": stock_status != "販売中",
         "decaf_process": record.get("decaf_process"),
         "product_url": record.get("product_url"),
         "map_query": shop_map_query,
@@ -253,6 +258,7 @@ def build_manual_product(
         "price_max": None,
         "weight_g": raw_product.get("weightG"),
         "unit_note": None,
+        "stock_status": "販売中",  # 手動入力は人間が確認済みの状態のみ登録する運用のため固定
         "out_of_stock": False,
         "decaf_process": None,
         "product_url": None,

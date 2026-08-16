@@ -25,7 +25,7 @@ import time
 import requests
 from bs4 import BeautifulSoup
 
-from coffee_parser import parse_product, apply_category_hint_fallback
+from coffee_parser import parse_product, apply_category_hint_fallback, detect_stock_status
 from previous_data import load_previous_products, is_unchanged
 
 SHOP_INFO = {
@@ -173,12 +173,16 @@ def scrape_product_list_page(page: int) -> list[dict]:
         if not (root and link and name_el):
             continue
 
+        raw_name = name_el.get_text(strip=True)
+        stock_status = detect_stock_status(raw_name, bool(oos_el))
+
         results.append({
             "slug": root.get("data-slug"),
-            "raw_name": name_el.get_text(strip=True),
+            "raw_name": raw_name,
             "product_url": link.get("href"),
             "price_text": price_el.get("data-wix-price") if price_el else None,
-            "out_of_stock": bool(oos_el),
+            "stock_status": stock_status,
+            "out_of_stock": stock_status != "販売中",
         })
     return results
 
@@ -230,14 +234,15 @@ def scrape_all_products(fetch_details: bool = True, max_pages: int = 20) -> tupl
             prev,
             raw_name=item["raw_name"],
             price=current_price,
-            out_of_stock=item["out_of_stock"],
+            stock_status=item["stock_status"],
         ):
             records.append(prev)
             continue
 
         try:
             detail = parse_product_detail(item["product_url"])
-            detail["out_of_stock"] = item["out_of_stock"]
+            detail["stock_status"] = detect_stock_status(detail["raw_name"], item["out_of_stock"])
+            detail["out_of_stock"] = detail["stock_status"] != "販売中"
             if detail.get("is_flavored"):
                 flavored_records.append(detail)
             else:

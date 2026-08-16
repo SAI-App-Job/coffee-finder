@@ -35,7 +35,12 @@ from datetime import datetime, timezone
 import requests
 from bs4 import BeautifulSoup
 
-from coffee_parser import parse_product, apply_category_hint_fallback, normalize_processing_method
+from coffee_parser import (
+    parse_product,
+    apply_category_hint_fallback,
+    normalize_processing_method,
+    detect_stock_status,
+)
 from previous_data import load_previous_products, is_unchanged
 
 SHOP_INFO = {
@@ -141,7 +146,11 @@ def build_record(product: dict) -> dict:
         parsed["processing_method"] = normalize_processing_method(processing_ja)
 
     variant = pick_canonical_variant(product.get("variants", []))
-    out_of_stock = not any(v.get("available") for v in product.get("variants", []))
+    # 全バリアントが品切れかどうかの構造化フラグ(Shopifyのavailable)を、
+    # 商品名の「SOLD OUT」表記(実データ確認済み: FUGLENは品切れ商品の
+    # タイトル先頭に【SOLD OUT】を付ける運用)と合わせて正規化する。
+    structural_out_of_stock = not any(v.get("available") for v in product.get("variants", []))
+    stock_status = detect_stock_status(title, structural_out_of_stock)
 
     return {
         "shop_name": SHOP_INFO["name"],
@@ -163,7 +172,8 @@ def build_record(product: dict) -> dict:
         "flavor_notes": details["flavor_notes"],
         "price": int(float(variant["price"])) if variant else None,
         "weight_g": variant.get("grams") if variant else None,
-        "out_of_stock": out_of_stock,
+        "stock_status": stock_status,
+        "out_of_stock": stock_status != "販売中",
         "product_url": product_url,
     }
 

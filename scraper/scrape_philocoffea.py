@@ -28,7 +28,12 @@ import time
 import requests
 from bs4 import BeautifulSoup
 
-from coffee_parser import parse_product, apply_category_hint_fallback, normalize_processing_method
+from coffee_parser import (
+    parse_product,
+    apply_category_hint_fallback,
+    normalize_processing_method,
+    detect_stock_status,
+)
 from previous_data import load_previous_products, is_unchanged
 
 SHOP_INFO = {
@@ -271,7 +276,6 @@ def scrape_product_list_page(page: int) -> list[dict]:
         name_el = item.select_one("div.productList__name")
         price_el = item.select_one("div.productList__price")
         tag_els = item.select("div.productList__tags span")
-        soldout_el = item.select_one("p.productList__soldOut")
 
         if not (link and name_el):
             continue
@@ -292,12 +296,21 @@ def scrape_product_list_page(page: int) -> list[dict]:
                 price_digits = re.sub(r"[^\d]", "", price_text)
                 price = int(price_digits) if price_digits else None
 
+        # 一覧ページの品切れ表示要素(p.productList__soldOut)は実データ調査の
+        # 結果、常にHTMLコメント内にしか存在せず(恐らくJS側で動的に表示する
+        # 前提のテンプレートが、コメントアウトされたまま出荷されている)、
+        # BeautifulSoupのタグ検索では絶対にヒットしないことが判明した。
+        # PHILOCOFFEAは代わりに商品名へ「終売」「完売」等を明記する運用の
+        # ため、構造化フラグに頼らず商品名テキストのみで在庫状態を判定する。
+        stock_status = detect_stock_status(raw_name)
+
         results.append({
             "raw_name": raw_name,
             "product_url": product_url,
             "price": price,
             "tags": [t.get_text(strip=True) for t in tag_els],
-            "out_of_stock": bool(soldout_el),
+            "stock_status": stock_status,
+            "out_of_stock": stock_status != "販売中",
         })
     return results
 
@@ -372,14 +385,17 @@ def scrape_all_products(fetch_details: bool = True, max_pages: int = 50) -> tupl
             prev,
             raw_name=item["raw_name"],
             price=item.get("price"),
-            out_of_stock=item["out_of_stock"],
+            stock_status=item["stock_status"],
         ):
             records.append(prev)
             continue
 
         try:
             detail = parse_product_detail(item["product_url"])
-            detail["out_of_stock"] = item["out_of_stock"]
+            # 商品名(h1#itemName、一覧ページの商品名と基本一致するはずだが
+            # 詳細ページの方がより一次情報に近いため、こちらで再判定する)
+            detail["stock_status"] = detect_stock_status(detail["raw_name"])
+            detail["out_of_stock"] = detail["stock_status"] != "販売中"
             if detail.get("non_bean"):
                 non_bean_records.append(detail)
             elif detail.get("is_flavored"):

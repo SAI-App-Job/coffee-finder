@@ -24,7 +24,12 @@ from datetime import datetime, timezone
 import requests
 from bs4 import BeautifulSoup
 
-from coffee_parser import parse_product, apply_category_hint_fallback, extract_from_description
+from coffee_parser import (
+    parse_product,
+    apply_category_hint_fallback,
+    extract_from_description,
+    detect_stock_status,
+)
 from previous_data import load_previous_products, is_unchanged
 
 SHOP_INFO = {
@@ -182,6 +187,11 @@ def build_product_records(
         if item.get("category_hint") in EXCLUDED_CATEGORIES:
             continue
 
+        # Denim bisの一覧・詳細ページには品切れ・終売を示す構造化要素が見当たらない
+        # (実データ調査で確認済み: 売り切れ商品は一覧から単に消えるだけで、
+        # バッジ等の表示は無い)。商品名のテキストマーカーのみで判定する。
+        stock_status = detect_stock_status(item["raw_name"])
+
         prev = previous.get(item.get("product_url"))
         if is_unchanged(
             prev,
@@ -189,6 +199,7 @@ def build_product_records(
             price_min=item.get("price_min"),
             price_max=item.get("price_max"),
             category_hint=item.get("category_hint"),
+            stock_status=stock_status,
         ):
             records.append(prev)
             continue
@@ -241,6 +252,8 @@ def build_product_records(
             "price_min": item.get("price_min"),
             "price_max": item.get("price_max"),
             "product_url": item.get("product_url"),
+            "stock_status": stock_status,
+            "out_of_stock": stock_status != "販売中",
             "scraped_at": now,
         })
 
