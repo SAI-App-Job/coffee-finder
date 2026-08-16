@@ -7,6 +7,8 @@
 再利用できるようモジュール化したもの。
 """
 
+import json
+import os
 import re
 
 # --- 産地マスタ: 国名キーワード(日本語) -------------------------------------
@@ -82,16 +84,54 @@ DESIGNATED_BRAND_KEYWORDS = {
     "ハワイコナ": ("ハワイコナ", "アメリカ", None),
 }
 
-# --- 精選方法マスタ(日英) ---------------------------------------------------
-PROCESSING_KEYWORDS = {
-    "ウォッシュド": "ウォッシュド", "ウォッシュト": "ウォッシュド", "WS": "ウォッシュド",
-    "washed": "ウォッシュド",
-    "ナチュラル": "ナチュラル", "natural": "ナチュラル",
-    "ハニー": "ハニー", "honey": "ハニー", "パルプドナチュラル": "ハニー",
-    "ウェットハル": "ウェットハルド", "wet hulled": "ウェットハルド",
-    "アナエロビック": "アナエロビック", "anaerobic": "アナエロビック",
-    "マウンテンウォーター": "マウンテンウォータープロセス(デカフェ用)",
+# --- 精選方法マスタ(日英表記ゆれの正規化) ------------------------------------
+# 店舗によって精選方法の表記が日本語(「ウォッシュド」)だったり英語
+# (「Washed」)だったり、綴りゆれ(wet hulled / wet-hulled / giling basah等)も
+# あるため、意味が同じでも別の値として扱われてしまう問題が実データ調査で
+# 判明した。正規化ルールはPython(このファイル)とフロントエンド(用語解説
+# タブの英語併記表示)の両方から参照するため、`data/processing_method_synonyms.json`
+# を唯一の情報源とし、英語名を別の場所にハードコードで二重管理しない。
+#
+# マッチ順序について: 「Anaerobic Natural(36 hours aerobic fermentation
+# followed by 48 hours anaerobic fermentation)」のような複合的な精選方法の
+# 説明文では、より具体的な工程名(アナエロビック等)を、出現しやすい一般的な
+# 語(「natural」等)より先に判定できるよう、JSON側のキー順を「特殊な工程 →
+# 一般的な工程」にしている(dictはPython 3.7+で挿入順を保持する)。
+_PROCESSING_METHOD_SYNONYMS_PATH = os.path.join(
+    os.path.dirname(os.path.abspath(__file__)), "..", "data", "processing_method_synonyms.json"
+)
+with open(_PROCESSING_METHOD_SYNONYMS_PATH, encoding="utf-8") as _f:
+    _PROCESSING_METHOD_MASTER = json.load(_f)
+
+PROCESSING_METHOD_SYNONYMS = {
+    canonical: entry["synonyms"] for canonical, entry in _PROCESSING_METHOD_MASTER.items()
 }
+
+
+def detect_processing_method(text):
+    """テキスト中から精選方法のシノニムを検出し、正規化した日本語名を返す。
+
+    商品名のようなフリーテキストから「そこに精選方法への言及があるかどうか」を
+    判定する用途(見つからなければNoneを返し、商品名全体を誤って精選方法として
+    扱わないようにする)。
+    """
+    if not text:
+        return None
+    lowered = text.lower()
+    for canonical, synonyms in PROCESSING_METHOD_SYNONYMS.items():
+        for kw in synonyms:
+            if kw.lower() in lowered:
+                return canonical
+    return None
+
+
+def normalize_processing_method(raw_method):
+    """店舗の構造化データ等から既に抽出済みの精選方法ラベルを正規化する。
+
+    シノニム辞書に一致すれば正式名称を返し、一致しなければ(未知の表記の
+    可能性があるため)情報を失わないよう元のテキストをそのまま返す。
+    """
+    return detect_processing_method(raw_method) or raw_method
 
 # --- 後処理タグマスタ --------------------------------------------------------
 POST_PROCESSING_KEYWORDS = {
@@ -294,14 +334,11 @@ def parse_product(raw_name: str) -> dict:
                 result["origin_source"] = "region_name"
                 break
 
-    # 精選方法(大文字小文字無視)
-    lowered_name = raw_name.lower()
-    for kw, method in PROCESSING_KEYWORDS.items():
-        if kw.lower() in lowered_name:
-            result["processing_method"] = method
-            break
+    # 精選方法(大文字小文字無視・日英表記ゆれ正規化)
+    result["processing_method"] = detect_processing_method(raw_name)
 
     # 後処理タグ(複数可)
+    lowered_name = raw_name.lower()
     for kw, tag in POST_PROCESSING_KEYWORDS.items():
         if kw.lower() in lowered_name and tag not in result["post_processing_tags"]:
             result["post_processing_tags"].append(tag)
@@ -360,8 +397,8 @@ def extract_from_description(description_text: str) -> dict:
     m = DESC_PROCESSING_PATTERN.search(description_text)
     if m:
         raw_method = m.group(1)
-        # PROCESSING_KEYWORDSと照合して正規化(完全一致しなければ生の文字列を保持)
-        extra["processing_method"] = PROCESSING_KEYWORDS.get(raw_method, raw_method)
+        # PROCESSING_METHOD_SYNONYMSと照合して正規化(一致しなければ生の文字列を保持)
+        extra["processing_method"] = normalize_processing_method(raw_method)
 
     m2 = DESC_VARIETY_PATTERN.search(description_text)
     if m2:

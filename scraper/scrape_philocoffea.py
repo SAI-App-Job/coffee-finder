@@ -28,7 +28,7 @@ import time
 import requests
 from bs4 import BeautifulSoup
 
-from coffee_parser import parse_product, apply_category_hint_fallback
+from coffee_parser import parse_product, apply_category_hint_fallback, normalize_processing_method
 from previous_data import load_previous_products, is_unchanged
 
 SHOP_INFO = {
@@ -198,9 +198,7 @@ def parse_product_detail(url: str) -> dict:
 
     # BEANS DATAの表は商品名パースより確実な一次情報として優先的に反映する
     if beans_data.get("生産処理"):
-        raw_method = beans_data["生産処理"]
-        from coffee_parser import PROCESSING_KEYWORDS
-        parsed["processing_method"] = PROCESSING_KEYWORDS.get(raw_method, raw_method)
+        parsed["processing_method"] = normalize_processing_method(beans_data["生産処理"])
 
     altitude_min, altitude_max = None, None
     if beans_data.get("標高"):

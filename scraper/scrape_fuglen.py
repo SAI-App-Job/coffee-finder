@@ -35,7 +35,7 @@ from datetime import datetime, timezone
 import requests
 from bs4 import BeautifulSoup
 
-from coffee_parser import parse_product, apply_category_hint_fallback, PROCESSING_KEYWORDS
+from coffee_parser import parse_product, apply_category_hint_fallback, normalize_processing_method
 from previous_data import load_previous_products, is_unchanged
 
 SHOP_INFO = {
@@ -138,7 +138,7 @@ def build_record(product: dict) -> dict:
     processing_raw = table.get("精製方法")
     if processing_raw:
         processing_ja = extract_paren_text(processing_raw) or processing_raw
-        parsed["processing_method"] = PROCESSING_KEYWORDS.get(processing_ja, processing_ja)
+        parsed["processing_method"] = normalize_processing_method(processing_ja)
 
     variant = pick_canonical_variant(product.get("variants", []))
     out_of_stock = not any(v.get("available") for v in product.get("variants", []))

@@ -1,0 +1,26 @@
+{
+  "アナエロビック": {
+    "en": "Anaerobic",
+    "synonyms": ["アナエロビック", "嫌気性発酵", "anaerobic"]
+  },
+  "ウェットハルド": {
+    "en": "Wet Hulled",
+    "synonyms": ["ウェットハルド", "ウェットハル", "スマトラ式", "wet hulled", "wet-hulled", "giling basah"]
+  },
+  "ハニー": {
+    "en": "Honey",
+    "synonyms": ["ハニー", "パルプドナチュラル", "honey", "pulped natural", "miel"]
+  },
+  "ウォッシュド": {
+    "en": "Washed",
+    "synonyms": ["ウォッシュド", "ウォッシュト", "washed", "fully washed"]
+  },
+  "ナチュラル": {
+    "en": "Natural",
+    "synonyms": ["ナチュラル", "natural", "dry process", "dry-process"]
+  },
+  "マウンテンウォータープロセス(デカフェ用)": {
+    "en": "Mountain Water Process",
+    "synonyms": ["マウンテンウォーター", "mountain water process", "mountain water"]
+  }
+}
