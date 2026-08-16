@@ -34,9 +34,19 @@ ORIGIN_COUNTRY_KEYWORDS = {
     "ジャマイカ": "ジャマイカ",
     "コスタリカ": "コスタリカ",
     "ホンジュラス": "ホンジュラス",
+    "ボリビア": "ボリビア",
+    "ペルー": "ペルー",
+    "エクアドル": "エクアドル",
+    "スーダン": "スーダン",
 }
 
 # --- 産地マスタ: 国名キーワード(英語) ---------------------------------------
+# 注意: "dominica"(ドミニカ国。カリブ海の小島嶼国で、"dominican republic"
+# =ドミニカ共和国とは別の国)は、"dominican republic"の文字列に前方一致で
+# 含まれてしまう("dominican republic".startswith("dominica"))。dictの反復は
+# 挿入順で先勝ちのため、"dominica"は必ず"dominican republic"より後ろに
+# 置くこと(先に置くと、本来ドミニカ共和国と判定すべき商品まで
+# ドミニカ国と誤判定してしまう)。
 ORIGIN_COUNTRY_KEYWORDS_EN = {
     "ethiopia": "エチオピア", "guatemala": "グアテマラ", "brazil": "ブラジル",
     "colombia": "コロンビア", "kenya": "ケニア", "tanzania": "タンザニア",
@@ -45,6 +55,8 @@ ORIGIN_COUNTRY_KEYWORDS_EN = {
     "honduras": "ホンジュラス", "yemen": "イエメン", "mexico": "メキシコ",
     "dominican republic": "ドミニカ共和国", "papua new guinea": "パプアニューギニア",
     "burundi": "ブルンジ", "el salvador": "エルサルバドル", "nicaragua": "ニカラグア",
+    "bolivia": "ボリビア", "peru": "ペルー", "ecuador": "エクアドル", "sudan": "スーダン",
+    "dominica": "ドミニカ国",
 }
 
 # --- 地域名マスタ(国への逆引き用) -------------------------------------------
@@ -65,6 +77,7 @@ REGION_TO_COUNTRY = {
     "バリ": "インドネシア", "ガヨ": "インドネシア",
     "コナ": "アメリカ(ハワイ)", "シグリ": "パプアニューギニア",
     "ハラバコア": "ドミニカ共和国",
+    "Los Pirineos": "エルサルバドル",  # Finca Los Pirineos(パカマラ種の発祥農園として知られる)
 }
 
 # --- 特定銘柄マスタ(全日本コーヒー公正取引協議会 14銘柄) ----------------------
@@ -149,7 +162,10 @@ ROAST_KEYWORDS = {
     "フレンチ": "フレンチロースト", "イタリアン": "イタリアンロースト",
 }
 
-BLEND_KEYWORDS = ["ブレンド"]
+# 実データ調査で判明: PHILOCOFFEAの看板ブレンド("011 TOKYO BLEND"・
+# "RUDDER BLEND"等)は英語の"BLEND"表記のみで、日本語の「ブレンド」を
+# 含まない商品名が多い。両方を検出できるようにする(大文字小文字は無視)。
+BLEND_KEYWORDS = ["ブレンド", "blend"]
 
 # --- フレーバーコーヒー検出マスタ ---------------------------------------------
 # 焙煎時・焙煎後に人工的な香り付けを施したコーヒー。産地・精選方法・グレードの
@@ -278,7 +294,7 @@ def parse_product(raw_name: str) -> dict:
     result = {
         "raw_name": raw_name,
         "category": "フレーバー" if is_flavored
-                    else ("ブレンド" if any(kw in raw_name for kw in BLEND_KEYWORDS) else "ストレート"),
+                    else ("ブレンド" if any(kw.lower() in raw_name.lower() for kw in BLEND_KEYWORDS) else "ストレート"),
         "is_flavored": is_flavored,
         "flavor_name": None,
         "origin_country": None,

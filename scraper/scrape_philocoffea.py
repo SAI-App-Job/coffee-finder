@@ -175,19 +175,26 @@ def parse_product_detail(url: str) -> dict:
     beans_data = parse_beans_data_table(soup)
 
     # 新テンプレートのBEANS DATA表、旧テンプレートの＜豆情報＞ブロック、
-    # 商品名から解析できる産地国(parsed["origin_country"])のいずれも
-    # 存在しない場合のみ、コーヒー豆商品ではない(器具・グッズ等)とみなして
-    # 除外する。カテゴリ除外(EXCLUDED_CATEGORY_GIDS)をすり抜けた商品や、
-    # 今後追加される未知の器具・グッズに対する保険的なチェック。
+    # 商品名から解析できる産地国(parsed["origin_country"])、ブレンド判定
+    # (parsed["category"] == "ブレンド")のいずれも存在しない場合のみ、
+    # コーヒー豆商品ではない(器具・グッズ等)とみなして除外する。
+    # カテゴリ除外(EXCLUDED_CATEGORY_GIDS)をすり抜けた商品や、今後追加
+    # される未知の器具・グッズに対する保険的なチェック。
     # 産地国チェックが必要な理由: gid=3105307(コーヒーバッグ)の一部の
     # ギフト向け商品(例: 「296 Colombia La Roca Geisha Washed」)は、
     # BEANS DATA表も＜豆情報＞ブロックも持たないギフト訴求文のみの詳細
     # ページだが、商品名に産地国名を含む正規の単一産地コーヒー豆である
     # ため、これを産地国名だけで誤って除外しないようにする。
+    # ブレンド判定が必要な理由: 「011 TOKYO BLEND」等の看板ブレンドは、
+    # 単一農園・単一産地の情報を持たない(=複数産地の豆を配合した商品の
+    # 性質上、BEANS DATA表・＜豆情報＞・単一産地国のいずれも本来存在
+    # しない)ため、他の3シグナルだけでは正規のブレンド商品まで
+    # 器具・グッズと誤って除外してしまうことが実データ調査で判明した。
     if (
         not beans_data
         and LEGACY_BEAN_INFO_MARKER not in soup.get_text()
         and not parsed.get("origin_country")
+        and parsed.get("category") != "ブレンド"
     ):
         return {
             "shop_name": SHOP_INFO["name"],
