@@ -344,6 +344,24 @@ VARIETY_KEYWORDS = {
 }
 
 
+def detect_country_name(text: str) -> str | None:
+    """テキスト中の国名直接表記(日本語→英語の順)を検出する。特定銘柄・地域名
+    逆引きは含まない、素の国名マッチングのみの軽量版(parse_product()と、
+    ブレンド商品のBEANS DATA表の産地グループ見出し(例:"Kenya Kariaini")
+    から国名部分だけを取り出す用途の両方で共有する)。
+    """
+    if not text:
+        return None
+    for kw, country in ORIGIN_COUNTRY_KEYWORDS.items():
+        if kw in text:
+            return country
+    lowered = text.lower()
+    for kw, country in ORIGIN_COUNTRY_KEYWORDS_EN.items():
+        if kw in lowered:
+            return country
+    return None
+
+
 def parse_product(raw_name: str) -> dict:
     """商品名(原文)を解析し、産地・精選方法・グレード・焙煎度等を抽出する。
 
@@ -387,22 +405,12 @@ def parse_product(raw_name: str) -> dict:
             result["origin_source"] = "brand"
             break
 
-    # 国名直接表記(日本語)
+    # 国名直接表記(日本語→英語の順)
     if not result["origin_country"]:
-        for kw, country in ORIGIN_COUNTRY_KEYWORDS.items():
-            if kw in raw_name:
-                result["origin_country"] = country
-                result["origin_source"] = "country_name"
-                break
-
-    # 国名直接表記(英語、大文字小文字無視)
-    if not result["origin_country"]:
-        lowered = raw_name.lower()
-        for kw, country in ORIGIN_COUNTRY_KEYWORDS_EN.items():
-            if kw in lowered:
-                result["origin_country"] = country
-                result["origin_source"] = "country_name"
-                break
+        country = detect_country_name(raw_name)
+        if country:
+            result["origin_country"] = country
+            result["origin_source"] = "country_name"
 
     # 地域名からの逆引き
     if not result["origin_country"]:

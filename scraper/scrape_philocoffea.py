@@ -33,6 +33,7 @@ from coffee_parser import (
     apply_category_hint_fallback,
     normalize_processing_method,
     detect_stock_status,
+    detect_country_name,
 )
 from previous_data import load_previous_products, is_unchanged
 
@@ -124,6 +125,72 @@ def parse_beans_data_table(soup: BeautifulSoup) -> dict:
     return raw
 
 
+def parse_blend_components(soup: BeautifulSoup) -> list[dict]:
+    """ブレンド商品のBEANS DATA表をパースする。
+
+    実データ調査(013 RUDDER BLEND等)で判明: ブレンドのBEANS DATA表は、
+    ストレート商品と同じth/td形式の表の中に、産地ごとの内訳が
+    <tr><th colspan="2">＊{産地ラベル}</th></tr>という見出し行で区切られて
+    複数並ぶ形式になっている(見出し行だけtdを持たない)。この見出し行を
+    境界に、後続のth/td行を産地ごとにグルーピングする。parse_beans_data_table()
+    は見出し行(td無し)を素通りし、後続の同名キー(農園/エリア等)を単純に
+    上書きしてしまうため、複数産地の情報が最後の1件を除いて消えてしまう
+    (このバグがブレンド商品の産地情報欠落の直接の原因だった)。
+
+    産地ラベルは「Kenya Kariaini」「Colombia Finca Villa Fátima」のように
+    英語の国名を含むことが多いが、「Las Flores農園」のように農園名のみで
+    国名を含まないラベルも実データで確認された。その場合はグループ内の
+    「エリア」欄(例:「Acevedo, Huila, Colombia」)から国名を拾う
+    フォールバックを行う。
+
+    見出し行が1つも見つからない(=単一原産地の表)場合は空リストを返す。
+    """
+    table = soup.select_one("table.product_description__table")
+    if not table:
+        return []
+    tbody = table.select_one("tbody")
+    if not tbody:
+        return []
+
+    groups = []
+    current = None
+    for tr in tbody.select("tr"):
+        th = tr.select_one("th")
+        td = tr.select_one("td")
+        if th and not td:
+            label = th.get_text(strip=True).lstrip("＊*").strip()
+            current = {"label": label, "fields": {}}
+            groups.append(current)
+        elif th and td and current is not None:
+            value = td.get_text()
+            value = re.sub(r"\n+", ", ", value)
+            value = re.sub(r",\s*,", ",", value)
+            value = re.sub(r"\s{2,}", " ", value).strip(" ,")
+            current["fields"][th.get_text(strip=True)] = value
+
+    components = []
+    for group in groups:
+        fields = group["fields"]
+        origin_country = detect_country_name(group["label"]) or detect_country_name(fields.get("エリア", ""))
+        # 割合(%)表記が見つかった場合のみ保持する(実データでは未記載の商品が
+        # 大半だった。013 RUDDER BLEND含め今回サンプルした商品はいずれも
+        # 割合の記載が無かったが、将来記載される商品があった場合に備える)
+        percentage = None
+        pct_match = re.search(r"(\d{1,3})\s*%", group["label"])
+        if pct_match:
+            percentage = int(pct_match.group(1))
+        components.append({
+            "origin_country": origin_country,
+            "percentage": percentage,
+            "producer": fields.get("生産者"),
+            "farm": fields.get("農園") or fields.get("WS"),  # WSはWashing Station(ケニア等の共同水洗場)
+            "variety": fields.get("品種"),
+            "altitude": fields.get("標高"),
+            "processing_method": normalize_processing_method(fields["生産処理"]) if fields.get("生産処理") else None,
+        })
+    return components
+
+
 def extract_price_including_tax(soup: BeautifulSoup) -> int | None:
     """`var Colorme = {...}` に埋め込まれた商品JSONから税込価格
     (product.sales_price_including_tax)を取得する。見つからない/パースできない
@@ -187,6 +254,11 @@ def parse_product_detail(url: str) -> dict:
         }
 
     beans_data = parse_beans_data_table(soup)
+    # ブレンド商品はBEANS DATA表が産地ごとに複数グループへ分かれている
+    # (013 RUDDER BLEND等で確認済み)。beans_data(上のparse_beans_data_table)
+    # は見出し行を無視して同名キーを単純に上書きするため、ブレンドでは
+    # 最後の産地グループの値しか残らない。産地ごとの内訳はこちらで別途取得する。
+    blend_components = parse_blend_components(soup) if parsed.get("category") == "ブレンド" else []
 
     # 新テンプレートのBEANS DATA表、旧テンプレートの＜豆情報＞ブロック、
     # 商品名から解析できる産地国(parsed["origin_country"])、ブレンド判定
@@ -219,11 +291,13 @@ def parse_product_detail(url: str) -> dict:
         }
 
     # BEANS DATAの表は商品名パースより確実な一次情報として優先的に反映する
-    if beans_data.get("生産処理"):
+    # (ブレンドは産地ごとの内訳がblend_componentsにあるため、beans_data由来の
+    # 単一値(=最後の産地グループの値)をここに反映すると誤解を招くので使わない)
+    if beans_data.get("生産処理") and not blend_components:
         parsed["processing_method"] = normalize_processing_method(beans_data["生産処理"])
 
     altitude_min, altitude_max = None, None
-    if beans_data.get("標高"):
+    if beans_data.get("標高") and not blend_components:
         m = ALTITUDE_PATTERN.search(beans_data["標高"])
         if m:
             altitude_min = int(m.group(1).replace(",", ""))
@@ -244,15 +318,18 @@ def parse_product_detail(url: str) -> dict:
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],  # 商品名からの8段階判定(取れないことが多い)
         "post_processing_tags": parsed["post_processing_tags"],
-        # PRODUCER_LOT相当のフィールド(BEANS DATA表から取得)
-        "producer_name": beans_data.get("生産者"),
-        "farm_name": beans_data.get("農園"),
-        "region_detail": beans_data.get("エリア"),
+        # PRODUCER_LOT相当のフィールド(BEANS DATA表から取得)。ブレンドは
+        # 産地ごとの内訳がblend_componentsにあるため、こちらは空にする
+        # (最後の産地グループの値だけが残る誤解を招く表示を避けるため)
+        "producer_name": None if blend_components else beans_data.get("生産者"),
+        "farm_name": None if blend_components else beans_data.get("農園"),
+        "region_detail": None if blend_components else beans_data.get("エリア"),
         "altitude_min_m": altitude_min,
         "altitude_max_m": altitude_max,
-        "variety": beans_data.get("品種"),
+        "variety": None if blend_components else beans_data.get("品種"),
         "decaf_process": beans_data.get("ディカフェ処理"),  # 新しい軸: カフェインレス処理方法
         "flavor_notes": beans_data.get("味わい"),  # 新しい軸: テイスティングノート
+        "blend_components": blend_components,  # ブレンドの産地別内訳(産地国/割合/生産者/農園/品種/標高/精選方法)
         "source_note": str(beans_data),
         "price": price,
         "stock_status": stock_status,

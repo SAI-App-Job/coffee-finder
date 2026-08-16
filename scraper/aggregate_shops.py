@@ -192,6 +192,10 @@ def build_product(record: dict, shop_map_query: str, now_iso: str) -> dict:
         "roast_hint": record.get("roast_hint"),
         "farm_note": compose_farm_note(record),
         "flavor_notes": record.get("flavor_notes"),
+        # ブレンドの産地別内訳(現状PHILOCOFFEAのみ提供)。各要素はorigin_country/
+        # percentage/producer/farm/variety/altitude/processing_methodを持つが、
+        # 判明した項目のみ埋まる(欠けている項目は単にnullのまま)
+        "blend_components": record.get("blend_components") or [],
         "price": record.get("price"),
         "price_min": record.get("price_min"),
         "price_max": record.get("price_max"),
@@ -253,6 +257,7 @@ def build_manual_product(
         "roast_hint": None,
         "farm_note": raw_product.get("farmNote"),
         "flavor_notes": raw_product.get("flavorNotes"),
+        "blend_components": [],
         "price": raw_product.get("price"),
         "price_min": None,
         "price_max": None,
