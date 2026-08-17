@@ -210,8 +210,8 @@ export function ProductCard({ product, onOpenMap, onLearnOrigin, isFavorite, onT
                 className={favorited ? "fill-[var(--accent)] text-[var(--accent)]" : ""}
               />
             </button>
-            <p className="font-mono text-[#F2E9DD] text-[15px]">
-              {formatPrice(product) ?? product.priceNote ?? "価格未確認"}
+            <p className="font-mono text-[#F2E9DD] text-[15px] max-w-[100px] whitespace-normal break-words">
+              {formatPrice(product) ?? (product.priceNote ? "要問合せ" : "価格未確認")}
             </p>
             {typeof product.weightG === "number" && (
               <p className="font-mono text-[11px] text-[#8B7361]">{product.weightG}g</p>
