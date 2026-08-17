@@ -422,11 +422,12 @@
     "url": "https://themoderncoffee.jp/",
     "platform": "Shopify(products.jsonエンドポイントを利用)",
     "shop_type": "single_location",
-    "robots_txt_status": null,
+    "robots_txt_status": "許可(2026-08確認。標準的なShopify robots.txt。User-agent:*にAllow:/、/products.jsonへの制限なし)",
     "address": "神奈川県川崎市宮前区鷺沼1-12-2 鷺沼ビラスズキ1F",
     "prefecture": "神奈川県",
     "hours": "12:00-18:00(L.O. 17:30、火曜・第2/4水曜定休)",
     "map_query": "THE MODERN COFFEE 鷺沼",
+    "last_scraped_at": "2026-08-17T13:01:36.471794+00:00",
     "locations": [
       {
         "label": null,
