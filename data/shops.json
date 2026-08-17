@@ -61,7 +61,7 @@
     "prefecture": "神奈川県",
     "hours": "10:00〜17:00(月曜定休)",
     "map_query": "MiLL Coffee 川崎市多摩区南生田",
-    "last_scraped_at": "2026-08-11T02:11:17.380311+00:00",
+    "last_scraped_at": "2026-08-17T03:18:04.449560+00:00",
     "locations": [
       {
         "label": null,
@@ -74,9 +74,7 @@
         "lat": 35.619533,
         "lng": 139.562098
       }
-    ],
-    "lat": 35.619533,
-    "lng": 139.562098
+    ]
   },
   {
     "name": "PHILOCOFFEA",
