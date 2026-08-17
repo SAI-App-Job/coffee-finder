@@ -71,6 +71,13 @@ PLATFORM_FINGERPRINTS = [
         "note": "Fluid Engineはブロックのクラス名がハッシュ値で不安定。CSS構造よりテキストパターンでの正規表現抽出を推奨。",
     },
     {
+        "platform": "crayon(クレヨン)",
+        "patterns": [r"crayonsite\.net", r"crayon\.e-shops\.jp", r"crayonimg\.e-shops\.jp", r"powered by crayon"],
+        "similar_scraper": "scrape_rakuen.py",
+        "note": "個別商品ページを持たず、1つの一覧ページの<p>タグ内に<br>区切りで商品名・価格が"
+                "自由記述で埋め込まれるパターンが確認されている(楽園)。価格の全角/半角表記ゆれに注意。",
+    },
+    {
         "platform": "Shopify",
         "patterns": [r"cdn\.shopify\.com", r"Shopify\.theme", r"shopify-section"],
         "similar_scraper": None,

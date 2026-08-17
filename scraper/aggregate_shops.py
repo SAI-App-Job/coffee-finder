@@ -62,6 +62,9 @@ SOURCE_FILES = {
     "FUGLEN COFFEE ROASTERS": "data_fuglen.json",
     "Roast Design Coffee": "data_roastdesign.json",
     "珈琲丸": "data_coffeemaru.json",
+    "豆コネクト": "data_mameconnect.json",
+    "楽園": "data_rakuen.json",
+    "Rhizomag": "data_rhizomag.json",
 }
 
 
@@ -207,6 +210,9 @@ def build_product(record: dict, shop_map_query: str, now_iso: str) -> dict:
         "price": record.get("price"),
         "price_min": record.get("price_min"),
         "price_max": record.get("price_max"),
+        # 価格が店舗サイトに一切掲載されていない場合の案内文(例:豆コネクトの
+        # 「価格は店舗にお問い合わせください」)。price系が全てnullの店舗でのみ設定される。
+        "price_note": record.get("price_note"),
         "weight_g": record.get("weight_g"),  # FUGLENはバリアントのgramsから取得できる。他店舗はnullのまま
         "unit_note": record.get("unit_note"),
         "stock_status": stock_status,
@@ -269,6 +275,7 @@ def build_manual_product(
         "price": raw_product.get("price"),
         "price_min": None,
         "price_max": None,
+        "price_note": None,
         "weight_g": raw_product.get("weightG"),
         "unit_note": None,
         "stock_status": "販売中",  # 手動入力は人間が確認済みの状態のみ登録する運用のため固定

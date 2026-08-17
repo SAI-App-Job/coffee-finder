@@ -60,6 +60,9 @@ function mapProduct(raw, shopsByName) {
     price: raw.price,
     priceMin: raw.price_min,
     priceMax: raw.price_max,
+    // 価格が店舗サイトに一切掲載されていない場合の案内文(例:豆コネクトの
+    // 「価格は店舗にお問い合わせください」)。priceが取れなかった場合の表示分岐に使う
+    priceNote: raw.price_note ?? null,
     weightG: raw.weight_g,
     flavorNotes: raw.flavor_notes,
     mapQuery: raw.map_query,

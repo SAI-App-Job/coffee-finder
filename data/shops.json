@@ -311,7 +311,9 @@
         "lat": 35.620836,
         "lng": 139.570016
       }
-    ]
+    ],
+    "lat": 35.592099,
+    "lng": 139.500189
   },
   {
     "name": "珈琲丸",
@@ -336,6 +338,86 @@
         "lat": 35.613353,
         "lng": 139.618821
       }
-    ]
+    ],
+    "lat": 35.613353,
+    "lng": 139.618821
+  },
+  {
+    "name": "豆コネクト",
+    "url": "https://www.mame-connect.com/",
+    "platform": "WordPress(静的1ページ。個別商品ページ・カート機能なし)",
+    "shop_type": "single_location",
+    "robots_txt_status": null,
+    "address": "神奈川県川崎市中原区小杉町2-294-6 エスカリエ1F",
+    "prefecture": "神奈川県",
+    "hours": "金・土・日 11:00-19:30",
+    "map_query": "豆コネクト 武蔵小杉",
+    "locations": [
+      {
+        "label": null,
+        "address": "神奈川県川崎市中原区小杉町2-294-6 エスカリエ1F",
+        "prefecture": "神奈川県",
+        "hours": "金・土・日 11:00-19:30",
+        "tel": "044-322-8255",
+        "is_headquarters": false,
+        "map_query": "豆コネクト 武蔵小杉",
+        "lat": 35.577515,
+        "lng": 139.657455
+      }
+    ],
+    "lat": 35.577515,
+    "lng": 139.657455
+  },
+  {
+    "name": "楽園",
+    "url": "https://rakuen-beans.crayonsite.net/",
+    "platform": "crayon(クレヨン)",
+    "shop_type": "single_location",
+    "robots_txt_status": null,
+    "address": "神奈川県川崎市宮前区平2-1-5",
+    "prefecture": "神奈川県",
+    "hours": "10:00-20:00(定休日:水曜日、月末は午後から営業)",
+    "map_query": "楽園 川崎市宮前区平",
+    "locations": [
+      {
+        "label": null,
+        "address": "神奈川県川崎市宮前区平2-1-5",
+        "prefecture": "神奈川県",
+        "hours": "10:00-20:00(定休日:水曜日、月末は午後から営業)",
+        "tel": "044-877-5400",
+        "is_headquarters": false,
+        "map_query": "楽園 川崎市宮前区平",
+        "lat": 35.5989082088,
+        "lng": 139.573221762
+      }
+    ],
+    "lat": 35.5989082088,
+    "lng": 139.573221762
+  },
+  {
+    "name": "Rhizomag",
+    "url": "https://rhizomag.shop-pro.jp/",
+    "platform": "カラーミーショップ(shop-pro.jp)",
+    "shop_type": "single_location",
+    "robots_txt_status": null,
+    "address": "神奈川県川崎市多摩区宿河原7-14-13 毬ビル102",
+    "prefecture": "神奈川県",
+    "hours": "10:00-18:00(定休日:火曜日/隔週水曜日)",
+    "map_query": "Rhizomag 宿河原",
+    "locations": [
+      {
+        "label": null,
+        "address": "神奈川県川崎市多摩区宿河原7-14-13 毬ビル102",
+        "prefecture": "神奈川県",
+        "hours": "10:00-18:00(定休日:火曜日/隔週水曜日)",
+        "tel": "044-819-6769",
+        "is_headquarters": false,
+        "map_query": "Rhizomag 宿河原",
+        "lat": 35.615797272220284,
+        "lng": 139.5862705197471
+      }
+    ],
+    "lat": 35.615797272220284,
+    "lng": 139.5862705197471
   }
 ]

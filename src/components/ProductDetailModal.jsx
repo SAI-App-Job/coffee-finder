@@ -95,7 +95,9 @@ export function ProductDetailModal({
         </div>
 
         <div className="flex items-center justify-between mb-3">
-          <p className="font-mono text-[#F2E9DD] text-[18px]">{formatPrice(product) ?? "価格未確認"}</p>
+          <p className="font-mono text-[#F2E9DD] text-[18px]">
+            {formatPrice(product) ?? product.priceNote ?? "価格未確認"}
+          </p>
           {typeof product.weightG === "number" && (
             <p className="font-mono text-[12px] text-[#8B7361]">{product.weightG}g</p>
           )}

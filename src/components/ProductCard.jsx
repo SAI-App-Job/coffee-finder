@@ -211,7 +211,7 @@ export function ProductCard({ product, onOpenMap, onLearnOrigin, isFavorite, onT
               />
             </button>
             <p className="font-mono text-[#F2E9DD] text-[15px]">
-              {formatPrice(product) ?? "価格未確認"}
+              {formatPrice(product) ?? product.priceNote ?? "価格未確認"}
             </p>
             {typeof product.weightG === "number" && (
               <p className="font-mono text-[11px] text-[#8B7361]">{product.weightG}g</p>
