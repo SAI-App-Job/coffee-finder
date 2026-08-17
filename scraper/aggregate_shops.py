@@ -65,6 +65,7 @@ SOURCE_FILES = {
     "豆コネクト": "data_mameconnect.json",
     "楽園": "data_rakuen.json",
     "Rhizomag": "data_rhizomag.json",
+    "THE MODERN COFFEE": "data_themoderncoffee.json",
 }
 
 

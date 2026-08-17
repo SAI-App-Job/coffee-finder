@@ -78,6 +78,18 @@ PLATFORM_FINGERPRINTS = [
                 "自由記述で埋め込まれるパターンが確認されている(楽園)。価格の全角/半角表記ゆれに注意。",
     },
     {
+        "platform": "Tsuku2(ツクツク)",
+        "patterns": [r"ec\.tsuku2\.jp", r"tsuku2\.jp/shop", r"api-internal/item-ranking"],
+        "similar_scraper": None,
+        "note": "未対応(実データ確認済み、2026-08時点)。robots.txtはUser-agent:*にDisallow:なし"
+                "(全面許可)だが、ドメイン全体がAkamai Bot Manager配下にあり、requests/WebFetch等の"
+                "非ブラウザクライアントはTLSハンドシェイク段階でスタール・切断される(robots.txt自体も"
+                "取得不可なほど厳格)。実ブラウザ(このリポジトリのbrowserツール等)経由でのみ閲覧・"
+                "調査ができ、GitHub Actions上のPython requestsでは同様にブロックされる可能性が高い。"
+                "商品グリッド自体はサーバー側で描画済み(在庫状態のみ/api-internal/item-stock-with-child"
+                "で後から取得)なので、Akamaiさえ突破できればHTML構造の解析自体は難しくない。",
+    },
+    {
         "platform": "Shopify",
         "patterns": [r"cdn\.shopify\.com", r"Shopify\.theme", r"shopify-section"],
         "similar_scraper": None,

@@ -416,5 +416,29 @@
         "lng": 139.5862705197471
       }
     ]
+  },
+  {
+    "name": "THE MODERN COFFEE",
+    "url": "https://themoderncoffee.jp/",
+    "platform": "Shopify(products.jsonエンドポイントを利用)",
+    "shop_type": "single_location",
+    "robots_txt_status": null,
+    "address": "神奈川県川崎市宮前区鷺沼1-12-2 鷺沼ビラスズキ1F",
+    "prefecture": "神奈川県",
+    "hours": "12:00-18:00(L.O. 17:30、火曜・第2/4水曜定休)",
+    "map_query": "THE MODERN COFFEE 鷺沼",
+    "locations": [
+      {
+        "label": null,
+        "address": "神奈川県川崎市宮前区鷺沼1-12-2 鷺沼ビラスズキ1F",
+        "prefecture": "神奈川県",
+        "hours": "12:00-18:00(L.O. 17:30、火曜・第2/4水曜定休)",
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "THE MODERN COFFEE 鷺沼",
+        "lat": 35.57720934327819,
+        "lng": 139.5714423147842
+      }
+    ]
   }
 ]
