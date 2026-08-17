@@ -234,7 +234,8 @@ def load_manual_shop_files() -> list[Path]:
 
 
 def build_manual_shop(raw_shop: dict) -> dict:
-    return {
+    map_query = raw_shop.get("google_maps_query") or raw_shop["name"]
+    merged = {
         "name": raw_shop["name"],
         "url": raw_shop.get("url"),
         "instagram_url": raw_shop.get("instagram_url"),
@@ -243,11 +244,29 @@ def build_manual_shop(raw_shop: dict) -> dict:
         "address": raw_shop.get("address"),
         "prefecture": raw_shop.get("prefecture"),
         "hours": raw_shop.get("hours"),
-        "map_query": raw_shop.get("google_maps_query") or raw_shop["name"],
+        "map_query": map_query,
         "data_source": "manual",
         "source_note": raw_shop.get("source_note"),
         "last_verified_at": raw_shop.get("last_verified_at"),
     }
+    # lat/lngが分かっている場合のみlocations(自動スクレイピング店舗と同じ構造)を持たせる。
+    # MyMapViewは自動スクレイピング店舗と同様にlocations経由で座標を参照するため
+    # (geocode-shops.jsもlocationsが無い店舗はスキップする設計になっている)。
+    if isinstance(raw_shop.get("lat"), (int, float)) and isinstance(raw_shop.get("lng"), (int, float)):
+        merged["locations"] = [{
+            "label": None,
+            "address": raw_shop.get("address"),
+            "prefecture": raw_shop.get("prefecture"),
+            "hours": raw_shop.get("hours"),
+            "tel": raw_shop.get("tel"),
+            "is_headquarters": False,
+            "map_query": map_query,
+            "lat": raw_shop["lat"],
+            "lng": raw_shop["lng"],
+        }]
+        merged["lat"] = raw_shop["lat"]
+        merged["lng"] = raw_shop["lng"]
+    return merged
 
 
 def build_manual_product(
