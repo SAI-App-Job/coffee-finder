@@ -19,12 +19,14 @@ on:
           - millcoffee
           - philocoffea
           - fuglen
+          - roastdesign
+          - coffeemaru
 
 permissions:
   contents: write # data/*.json をコミット・pushするために必要
 
 jobs:
-  # 4店舗を並列に実行する。各店舗は独立したサイトへのスクレイピングなので、
+  # 6店舗を並列に実行する。各店舗は独立したサイトへのスクレイピングなので、
   # 直列にする理由がない(courtesy delayは店舗ごとの各リクエスト間隔の話であり、
   # 店舗同士を並列化しても対象サイトへの負荷は増えない)。
   #
@@ -51,6 +53,12 @@ jobs:
           - id: fuglen
             script: scrape_fuglen.py
             output: data_fuglen.json
+          - id: roastdesign
+            script: scrape_roastdesign.py
+            output: data_roastdesign.json
+          - id: coffeemaru
+            script: scrape_coffeemaru.py
+            output: data_coffeemaru.json
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4 # 差分ベーススクレイピングがdata/products.jsonを参照するため必須
@@ -75,7 +83,7 @@ jobs:
           path: scraper/${{ matrix.shop.output }}
           retention-days: 1
 
-  # 3店舗すべてのスクレイピングが完了してから、まとめて集約・コミットする
+  # 6店舗すべてのスクレイピングが完了してから、まとめて集約・コミットする
   # (店舗ごとに個別コミットすると、data/shops.json・data/products.jsonの
   # 内容が実行順に依存して揺れるため)。
   aggregate:

@@ -43,6 +43,9 @@ ORIGIN_COUNTRY_KEYWORDS = {
     "ペルー": "ペルー",
     "エクアドル": "エクアドル",
     "スーダン": "スーダン",
+    "コンゴ": "コンゴ民主共和国",  # 実データ確認済み(珈琲丸)。コンゴ共和国(Republic of
+    # the Congo)よりコンゴ民主共和国(旧ザイール)の方がスペシャルティコーヒーでは
+    # 一般的なため、こちらを既定の変換先とする。
 }
 
 # --- 産地マスタ: 国名キーワード(英語) ---------------------------------------
@@ -61,7 +64,7 @@ ORIGIN_COUNTRY_KEYWORDS_EN = {
     "dominican republic": "ドミニカ共和国", "papua new guinea": "パプアニューギニア",
     "burundi": "ブルンジ", "el salvador": "エルサルバドル", "nicaragua": "ニカラグア",
     "bolivia": "ボリビア", "peru": "ペルー", "ecuador": "エクアドル", "sudan": "スーダン",
-    "thailand": "タイ",
+    "thailand": "タイ", "dr congo": "コンゴ民主共和国", "congo": "コンゴ民主共和国",
     "dominica": "ドミニカ国",
 }
 

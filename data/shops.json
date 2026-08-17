@@ -22,7 +22,9 @@
         "lat": 35.530664,
         "lng": 139.703767
       }
-    ]
+    ],
+    "lat": 35.530664,
+    "lng": 139.703767
   },
   {
     "name": "珈琲問屋",
@@ -74,7 +76,9 @@
         "lat": 35.619533,
         "lng": 139.562098
       }
-    ]
+    ],
+    "lat": 35.619533,
+    "lng": 139.562098
   },
   {
     "name": "PHILOCOFFEA",
@@ -143,7 +147,9 @@
         "lat": 35.694033,
         "lng": 139.976026
       }
-    ]
+    ],
+    "lat": 35.694033,
+    "lng": 139.976026
   },
   {
     "name": "It's roasted coffee",
@@ -270,5 +276,68 @@
     ],
     "lat": 35.666644,
     "lng": 139.692426
+  },
+  {
+    "name": "Roast Design Coffee",
+    "url": "https://roastdesigncoffee.com/",
+    "platform": "カラーミーショップ(shop-pro.jp)",
+    "shop_type": "multi_location",
+    "robots_txt_status": null,
+    "address": "神奈川県川崎市麻生区上麻生1-6-3 マプレGF階",
+    "prefecture": "神奈川県",
+    "hours": "店舗により異なる",
+    "map_query": "Roast Design Coffee 新百合ヶ丘",
+    "locations": [
+      {
+        "label": "本店(マプレ新百合ヶ丘)",
+        "address": "神奈川県川崎市麻生区上麻生1-6-3 マプレGF階",
+        "prefecture": "神奈川県",
+        "hours": "10:00-19:00(水曜定休、祝日の場合は営業)",
+        "tel": "050-3743-3304",
+        "is_headquarters": true,
+        "map_query": "Roast Design Coffee 新百合ヶ丘 マプレ",
+        "lat": 35.592099,
+        "lng": 139.500189
+      },
+      {
+        "label": "B-side向ヶ丘遊園・登戸店",
+        "address": "神奈川県川崎市多摩区登戸2499 GRANT's48 102",
+        "prefecture": "神奈川県",
+        "hours": "平日12:00-18:00、土日祝11:00-19:00(月曜定休、祝日の場合は営業)",
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "Roast Design Coffee B-side 登戸",
+        "lat": 35.620836,
+        "lng": 139.570016
+      }
+    ],
+    "lat": 35.592099,
+    "lng": 139.500189
+  },
+  {
+    "name": "珈琲丸",
+    "url": "https://coffee-maru.store/",
+    "platform": "Shopify",
+    "shop_type": "single_location",
+    "robots_txt_status": null,
+    "address": "神奈川県川崎市高津区二子2-18-9 HOME194-C",
+    "prefecture": "神奈川県",
+    "hours": "平日12:00-20:00、土日12:00-19:00(月曜定休)",
+    "map_query": "珈琲丸 高津本店",
+    "locations": [
+      {
+        "label": null,
+        "address": "神奈川県川崎市高津区二子2-18-9 HOME194-C",
+        "prefecture": "神奈川県",
+        "hours": "平日12:00-20:00、土日12:00-19:00(月曜定休)",
+        "tel": "044-819-7739",
+        "is_headquarters": false,
+        "map_query": "珈琲丸 高津本店",
+        "lat": 35.613353,
+        "lng": 139.618821
+      }
+    ],
+    "lat": 35.613353,
+    "lng": 139.618821
   }
 ]

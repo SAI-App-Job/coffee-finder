@@ -60,6 +60,8 @@ SOURCE_FILES = {
     "MiLL Coffee": "data_millcoffee.json",
     "PHILOCOFFEA": "data_philocoffea.json",
     "FUGLEN COFFEE ROASTERS": "data_fuglen.json",
+    "Roast Design Coffee": "data_roastdesign.json",
+    "珈琲丸": "data_coffeemaru.json",
 }
 
 
@@ -151,6 +153,8 @@ def compose_farm_note(record: dict) -> str | None:
         parts.append(f"品種: {variety}")
     if record.get("harvest_note"):
         parts.append(f"収穫時期: {record['harvest_note']}")
+    if record.get("grade_note"):  # 珈琲丸の「規格」欄(例:「キブ3 スクリーン15UP」)
+        parts.append(f"規格: {record['grade_note']}")
     return "、".join(parts) if parts else None
 
 
