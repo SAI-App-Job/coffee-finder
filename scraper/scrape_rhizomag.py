@@ -165,7 +165,11 @@ def parse_product_detail(url: str) -> dict:
     raw_name = ""
     variants = []
     if colorme_product:
-        raw_name = (colorme_product.get("name") or "").replace("\n", " ").strip()
+        # var Colorme のnameは<script>内のJSON文字列値であり、fetch_page()の
+        # soup.find_all("br")によるDOM上の<br>置換が効かない(実データ確認済み:
+        # "インドネシア<br>マンデリン ミトラ G1"のようにリテラル文字列"<br>"を
+        # そのまま含む)。ここで明示的に置換する。
+        raw_name = (colorme_product.get("name") or "").replace("<br>", " ").replace("\n", " ").strip()
         variants = colorme_product.get("variants") or []
     if not raw_name:
         name_el = soup.select_one("h1, div.p-product-detail-head__name")
