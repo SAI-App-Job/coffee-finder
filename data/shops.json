@@ -347,11 +347,12 @@
     "url": "https://www.mame-connect.com/",
     "platform": "WordPress(静的1ページ。個別商品ページ・カート機能なし)",
     "shop_type": "single_location",
-    "robots_txt_status": null,
+    "robots_txt_status": "許可(2026-08確認。mame-connect.com→www.mame-connect.comへ301リダイレクト。robots.txtは/cms/wp-admin/のみ制限、コンテンツ全般への制限なし)",
     "address": "神奈川県川崎市中原区小杉町2-294-6 エスカリエ1F",
     "prefecture": "神奈川県",
     "hours": "金・土・日 11:00-19:30",
     "map_query": "豆コネクト 武蔵小杉",
+    "last_scraped_at": "2026-08-17T09:18:10.110686+00:00",
     "locations": [
       {
         "label": null,
@@ -364,9 +365,7 @@
         "lat": 35.577515,
         "lng": 139.657455
       }
-    ],
-    "lat": 35.577515,
-    "lng": 139.657455
+    ]
   },
   {
     "name": "楽園",
