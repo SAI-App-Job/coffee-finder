@@ -317,13 +317,14 @@
   {
     "name": "珈琲丸",
     "url": "https://coffee-maru.store/",
-    "platform": "Shopify",
+    "platform": "Shopify(products.jsonエンドポイントを利用)",
     "shop_type": "single_location",
-    "robots_txt_status": null,
+    "robots_txt_status": "許可(2026-08確認。Shopify標準のUser-agent:*にAllow:/。/products.jsonへの制限記述なし)",
     "address": "神奈川県川崎市高津区二子2-18-9 HOME194-C",
     "prefecture": "神奈川県",
     "hours": "平日12:00-20:00、土日12:00-19:00(月曜定休)",
     "map_query": "珈琲丸 高津本店",
+    "last_scraped_at": "2026-08-17T07:32:56.052500+00:00",
     "locations": [
       {
         "label": null,
@@ -336,8 +337,6 @@
         "lat": 35.613353,
         "lng": 139.618821
       }
-    ],
-    "lat": 35.613353,
-    "lng": 139.618821
+    ]
   }
 ]
