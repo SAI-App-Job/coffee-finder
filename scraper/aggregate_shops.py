@@ -192,9 +192,13 @@ def build_product(record: dict, shop_map_query: str, now_iso: str) -> dict:
         "roast_hint": record.get("roast_hint"),
         "farm_note": compose_farm_note(record),
         "flavor_notes": record.get("flavor_notes"),
-        # ブレンドの産地別内訳(現状PHILOCOFFEAのみ提供)。各要素はorigin_country/
-        # percentage/producer/farm/variety/altitude/processing_methodを持つが、
-        # 判明した項目のみ埋まる(欠けている項目は単にnullのまま)
+        # ブレンドの産地別内訳。各要素はorigin_country/percentage/producer/farm/
+        # variety/altitude/processing_methodを持つが、判明した項目のみ埋まる
+        # (欠けている項目は単にnullのまま)。店舗ごとに公開情報の粒度が大きく
+        # 異なる(PHILOCOFFEAは表形式で農園・品種等まで、Denim bis/MiLL Coffeeは
+        # 産地国名のみ言及されることが多い)ため、産地国しか埋まらない、あるいは
+        # 空配列のままの商品があるのは想定通りの挙動。FUGLENは現時点でブレンド
+        # 商品自体を扱っていないため未対応(実データが無く構造を検証できない)。
         "blend_components": record.get("blend_components") or [],
         "price": record.get("price"),
         "price_min": record.get("price_min"),

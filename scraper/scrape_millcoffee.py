@@ -25,7 +25,13 @@ import time
 import requests
 from bs4 import BeautifulSoup
 
-from coffee_parser import parse_product, apply_category_hint_fallback, detect_stock_status
+from coffee_parser import (
+    parse_product,
+    apply_category_hint_fallback,
+    detect_stock_status,
+    ORIGIN_COUNTRY_KEYWORDS,
+    ORIGIN_COUNTRY_KEYWORDS_EN,
+)
 from previous_data import load_previous_products, is_unchanged
 
 SHOP_INFO = {
@@ -52,6 +58,45 @@ VARIETY_PATTERN = re.compile(r"品種【([^】]+)】")
 PRODUCER_PATTERN = re.compile(r"生産者[：:]\s*([^\n]+)")
 REGION_DETAIL_PATTERN = re.compile(r"生産地[：:]\s*([^\n]+)")
 ALTITUDE_PATTERN = re.compile(r"標高[：:]\s*([^\n]+)")
+
+
+def parse_blend_components_from_region_info(region_info_text: str) -> list[dict]:
+    """「生産地情報」欄のフリーテキストから、言及されている産地国を抽出する。
+
+    実データ調査で判明: MiLL CoffeeはPHILOCOFFEAのような表形式の産地内訳を
+    持たず、この欄に「ケニア中心のブレンド」「エチオピア、ホンジュラス中心の
+    ブレンド」のような短い説明文を書く運用がある。国名を一切含まない商品
+    (例:「4種類のブレンド」)もあり、その場合は空リストを返す。
+
+    産地国以外の情報(割合・生産者・農園等)はそもそも記載が無いため、
+    origin_countryのみを埋め、他フィールドはnullのままにする。カンマ等の
+    区切り文字に依存せず、テキスト全体から国名キーワードを総当たりで
+    拾う方式にしている(「エチオピア数種類の」のように区切り文字を伴わない
+    表記もあるため)。
+    """
+    if not region_info_text:
+        return []
+    countries = []
+    for kw, country in ORIGIN_COUNTRY_KEYWORDS.items():
+        if kw in region_info_text and country not in countries:
+            countries.append(country)
+    if not countries:
+        lowered = region_info_text.lower()
+        for kw, country in ORIGIN_COUNTRY_KEYWORDS_EN.items():
+            if kw in lowered and country not in countries:
+                countries.append(country)
+    return [
+        {
+            "origin_country": country,
+            "percentage": None,
+            "producer": None,
+            "farm": None,
+            "variety": None,
+            "altitude": None,
+            "processing_method": None,
+        }
+        for country in countries
+    ]
 
 
 def fetch_page(url: str) -> BeautifulSoup:
@@ -119,6 +164,9 @@ def parse_product_detail(url: str) -> dict:
     producer = PRODUCER_PATTERN.search(region_info_text)
     region_detail = REGION_DETAIL_PATTERN.search(region_info_text)
     altitude = ALTITUDE_PATTERN.search(region_info_text)
+    blend_components = (
+        parse_blend_components_from_region_info(region_info_text) if parsed["category"] == "ブレンド" else []
+    )
 
     # 説明文の「原産国＝」表記があれば、商品名パースより優先して信頼する
     # (店舗が明示的に記載しているため、キーワード推測より確実)
@@ -144,6 +192,7 @@ def parse_product_detail(url: str) -> dict:
         "producer_note": producer.group(1).strip() if producer else None,
         "region_detail": region_detail.group(1).strip() if region_detail else None,
         "altitude_note": altitude.group(1).strip() if altitude else None,
+        "blend_components": blend_components,  # ブレンドの産地内訳(現状産地国のみ、判明する場合のみ)
         "price": price,
         "product_url": url,
     }

@@ -149,6 +149,48 @@ def scrape_category(category_id: int, category_name: str) -> list[dict]:
     return products
 
 
+BLEND_COMPOSITION_PATTERN = re.compile(r"《([^》]+)》")
+
+
+def parse_blend_components_from_description(description_text: str) -> list[dict]:
+    """商品説明文の冒頭にある「《産地1、産地2、...》」という構成表記から、
+    ブレンドの産地内訳を抽出する。実データ調査で判明: Denim bisは
+    PHILOCOFFEAのような構造化表を持たず、一部のブレンド商品(BIsブレンド・
+    デニムブレンド・アイスコーヒーブレンド等)は説明文の先頭にこの記法で
+    構成産地を列挙する運用がある一方、この記法を使わない商品(川崎ブレンド
+    は文中に「ブラジル、コロンビア、グアテマラの3種類を...」と地の文で
+    書く、夏ブレンドは産地の記載自体が無い)もあり、店舗側で表記が統一
+    されていない。誤検出のリスクが低い《》記法のみを対象とし、地の文からの
+    抽出はしない(該当が無ければ空リストを返し、無理に埋めない)。
+
+    産地国以外の情報(割合・生産者・農園等)はそもそも説明文に記載が無いため、
+    origin_countryのみを埋め、他フィールドはnullのままにする。国名解決には
+    parse_product()の判定カスケード(特定銘柄→国名直接表記→地域名逆引き)を
+    そのまま再利用する(例:「モカシダモ」は地域名「シダモ」からエチオピアと
+    判定できる)。
+    """
+    if not description_text:
+        return []
+    m = BLEND_COMPOSITION_PATTERN.search(description_text)
+    if not m:
+        return []
+
+    labels = [s.strip() for s in re.split(r"[、,]", m.group(1)) if s.strip()]
+    components = []
+    for label in labels:
+        origin_country = parse_product(label)["origin_country"]
+        components.append({
+            "origin_country": origin_country,
+            "percentage": None,
+            "producer": None,
+            "farm": None,
+            "variety": None,
+            "altitude": None,
+            "processing_method": None,
+        })
+    return components
+
+
 def fetch_product_description(product_url: str) -> str:
     """商品詳細ページの説明文を取得する(精選方法・栽培品種の補強用)。
 
@@ -223,13 +265,22 @@ def build_product_records(
         parsed = apply_category_hint_fallback(parsed, item.get("category_hint"))
 
         variety_note = None
-        if fetch_details and not parsed["processing_method"] and item.get("product_url"):
+        blend_components = []
+        # ブレンドは処理方法の有無によらず必ず説明文を確認する(《産地構成》
+        # 記法の有無を確認するため)。それ以外は従来通り、商品名だけで
+        # 精選方法が特定できなかった場合のみ確認する。
+        needs_description = fetch_details and item.get("product_url") and (
+            not parsed["processing_method"] or parsed["category"] == "ブレンド"
+        )
+        if needs_description:
             try:
                 description = fetch_product_description(item["product_url"])
                 extra = extract_from_description(description)
                 if extra["processing_method"]:
                     parsed["processing_method"] = extra["processing_method"]
                 variety_note = extra["variety_note"]
+                if parsed["category"] == "ブレンド":
+                    blend_components = parse_blend_components_from_description(description)
                 time.sleep(CRAWL_DELAY_SECONDS)
             except requests.RequestException as e:
                 print(f"[warn] 詳細ページ取得失敗: {item.get('product_url')} ({e})")
@@ -249,6 +300,7 @@ def build_product_records(
             "roast_level": parsed["roast_level"],  # Denim bisは注文時選択のため基本null
             "roast_selectable": parsed["roast_level"] is None and parsed["category"] == "ストレート",
             "post_processing_tags": parsed["post_processing_tags"],
+            "blend_components": blend_components,  # ブレンドの産地内訳(現状産地国のみ、判明する場合のみ)
             "price_min": item.get("price_min"),
             "price_max": item.get("price_max"),
             "product_url": item.get("product_url"),
