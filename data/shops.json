@@ -441,5 +441,19 @@
         "lng": 139.5714423147842
       }
     ]
+  },
+  {
+    "name": "シモト珈琲",
+    "url": "https://ec.tsuku2.jp/shop/0000208281",
+    "instagram_url": "https://www.instagram.com/shimotocoffee",
+    "platform": "Tsuku2(ツクツク)、手動確認(自動スクレイピング非対応)",
+    "shop_type": "single_location",
+    "address": "神奈川県川崎市高津区向ヶ丘129",
+    "prefecture": "神奈川県",
+    "hours": "11:00-17:00(ラストオーダー16:30、月曜定休)",
+    "map_query": "シモト珈琲 川崎市高津区向ヶ丘",
+    "data_source": "manual",
+    "source_note": "https://ec.tsuku2.jp/shop/0000208281 をブラウザで直接確認して入力(2026-08-17)。ドメイン全体がAkamai Bot Managerの保護下にあり、requests/WebFetch等の非ブラウザクライアントはrobots.txt自体も取得できずTLS接続段階でブロックされるため、GitHub Actions上の自動スクレイピングは不可と判断(explore_candidate.pyのTsuku2指紋にも記載)。全39件の商品のうち、「様専用」の個別注文控え・月替わり福袋セット・定期便を除いた、単一産地/オリジナルブレンドの実商品のみを収録",
+    "last_verified_at": "2026-08-17"
   }
 ]
