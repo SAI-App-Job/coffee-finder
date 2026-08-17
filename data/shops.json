@@ -397,11 +397,12 @@
     "url": "https://rhizomag.shop-pro.jp/",
     "platform": "カラーミーショップ(shop-pro.jp)",
     "shop_type": "single_location",
-    "robots_txt_status": null,
+    "robots_txt_status": "許可(2026-08確認。/secure/と/cart/以外は制限なし。PHILOCOFFEA/Roast Design Coffeeと同一の記述)",
     "address": "神奈川県川崎市多摩区宿河原7-14-13 毬ビル102",
     "prefecture": "神奈川県",
     "hours": "10:00-18:00(定休日:火曜日/隔週水曜日)",
     "map_query": "Rhizomag 宿河原",
+    "last_scraped_at": "2026-08-17T09:22:46.391262+00:00",
     "locations": [
       {
         "label": null,
@@ -414,8 +415,6 @@
         "lat": 35.615797272220284,
         "lng": 139.5862705197471
       }
-    ],
-    "lat": 35.615797272220284,
-    "lng": 139.5862705197471
+    ]
   }
 ]
