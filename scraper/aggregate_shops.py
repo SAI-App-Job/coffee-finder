@@ -253,17 +253,22 @@ def build_manual_shop(raw_shop: dict) -> dict:
 def build_manual_product(
     raw_product: dict, shop_id: str, shop_name: str, shop_map_query: str, shop_source_note: str | None
 ) -> dict:
+    # category/stockStatusは既定値(ストレート/販売中)を持たせつつ、シモト珈琲のように
+    # ブレンド商品や売り切れ商品が実在する店舗では手動データ側で明示的に上書きできる
+    # ようにする(it's roasted coffeeのようにフィールド自体が無い既存データとの後方互換を保つ)。
+    stock_status = raw_product.get("stockStatus", "販売中")
     return {
-        # 手動データにはproduct_urlが無いため、店舗スラッグ+商品名で安定したIDを作る
-        "id": f"manual:{shop_id}:{raw_product['raw_name']}",
+        # productUrlが分かる場合はそれをIDにする(product_urlベースの他店舗と衝突しない
+        # よう一意な実在URL)。無い場合のみ店舗スラッグ+商品名にフォールバックする
+        "id": raw_product.get("productUrl") or f"manual:{shop_id}:{raw_product['raw_name']}",
         "shop_name": shop_name,
         "raw_name": raw_product["raw_name"],
-        "category": "ストレート",
+        "category": raw_product.get("category", "ストレート"),
         "is_flavored": False,
         "flavor_name": None,
         "category_hint": None,
         "origin_country": raw_product.get("originCountry"),
-        "origin_source": None,
+        "origin_source": "product_description" if raw_product.get("originCountry") else None,
         "designated_brand": None,
         "processing_method": raw_product.get("processingMethod"),
         "grade": None,
@@ -279,10 +284,10 @@ def build_manual_product(
         "price_note": None,
         "weight_g": raw_product.get("weightG"),
         "unit_note": None,
-        "stock_status": "販売中",  # 手動入力は人間が確認済みの状態のみ登録する運用のため固定
-        "out_of_stock": False,
-        "decaf_process": None,
-        "product_url": None,
+        "stock_status": stock_status,
+        "out_of_stock": stock_status != "販売中",
+        "decaf_process": raw_product.get("decafProcess"),
+        "product_url": raw_product.get("productUrl"),
         "map_query": shop_map_query,
         "scraped_at": None,
         "data_source": "manual",

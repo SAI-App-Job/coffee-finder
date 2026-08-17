@@ -17,13 +17,17 @@
   "products": [
     {
       "raw_name": "商品名(産地・銘柄・精選方法等、原文のまま)",
+      "category": "ストレート/ブレンド(省略時はストレート扱い)",
       "originCountry": "産地国",
       "processingMethod": "精選方法(ウォッシュド/ナチュラル等。不明ならnull)",
       "roast": "焙煎度(浅煎り/中煎り等。不明ならnull)",
       "flavorNotes": "テイスティングノート(原文のまま。例: Raspberry, jasmine, tropical)",
       "farmNote": "生産者・農園情報(分かる範囲で)",
+      "decafProcess": "カフェイン除去方法(デカフェ商品のみ。不明・非該当ならnull)",
       "price": "価格(数値。不明ならnull)",
       "weightG": "内容量g(不明ならnull)",
+      "stockStatus": "販売中/一時的に品切れ/終売(省略時は販売中扱い)",
+      "productUrl": "商品ページの実URL(分かる場合。無ければnull=店舗スラッグ+商品名でIDを生成)",
       "data_source": "manual",
       "source_note": "商品ごとに個別の出典が必要な場合のみ記載(店舗と同じ出典ならshop側のsource_noteで足りるため省略可)"
     }
