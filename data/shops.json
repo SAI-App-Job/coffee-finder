@@ -282,11 +282,12 @@
     "url": "https://roastdesigncoffee.com/",
     "platform": "カラーミーショップ(shop-pro.jp)",
     "shop_type": "multi_location",
-    "robots_txt_status": null,
+    "robots_txt_status": "許可(2026-08確認。/secure/と/cart/以外は制限なし。PHILOCOFFEAと同一の記述)",
     "address": "神奈川県川崎市麻生区上麻生1-6-3 マプレGF階",
     "prefecture": "神奈川県",
     "hours": "店舗により異なる",
     "map_query": "Roast Design Coffee 新百合ヶ丘",
+    "last_scraped_at": "2026-08-17T07:53:26.702574+00:00",
     "locations": [
       {
         "label": "本店(マプレ新百合ヶ丘)",
@@ -310,9 +311,7 @@
         "lat": 35.620836,
         "lng": 139.570016
       }
-    ],
-    "lat": 35.592099,
-    "lng": 139.500189
+    ]
   },
   {
     "name": "珈琲丸",
