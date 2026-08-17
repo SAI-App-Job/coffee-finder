@@ -46,7 +46,8 @@ SHOP_INFO = {
     "robots_txt_status": "許可(2026-08確認。/secure/と/cart/以外は制限なし)",
 }
 
-CRAWL_DELAY_SECONDS = 3  # 他店舗同様のcourtesy設定を踏襲
+CRAWL_DELAY_SECONDS = 1  # robots.txt確認済み(2026-08時点): Crawl-delay指定なし。個人開発の反復スピード
+# 優先だが、小規模個人店が多いためcourtesy設定(間隔を空けること自体)は維持する
 REQUEST_HEADERS = {
     "User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"
 }

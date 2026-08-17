@@ -43,7 +43,10 @@ SHOP_INFO = {
     "robots_txt_status": "許可(2026-08確認。User-agent:*にAllow:/、一般クローラーへの制限なし)",
 }
 
-CRAWL_DELAY_SECONDS = 3  # Denim bis同様のcourtesy設定を踏襲
+# robots.txt確認済み(2026-08時点): User-agent: dotbot/AhrefsBotに対し明示的にCrawl-delay: 10の
+# 指定がある(User-agent: *自体には指定なし)。他店舗のような1秒への短縮は行わず、
+# 「行儀の良いボットへの配慮」を明記しているサイト運営者の意図を尊重して3秒のまま維持する。
+CRAWL_DELAY_SECONDS = 3
 REQUEST_HEADERS = {
     "User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"
 }

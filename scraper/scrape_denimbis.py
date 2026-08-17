@@ -63,7 +63,8 @@ CATEGORY_MAP = {
 EXCLUDED_CATEGORIES = {"おやつ", "オリジナルグッズ", "コーヒードリップパック"}
 
 BASE_URL = "https://www.denimbis.com"
-CRAWL_DELAY_SECONDS = 3  # robots.txtのdotbot/AhrefsBot向け指定に倣ったcourtesy設定
+CRAWL_DELAY_SECONDS = 1  # robots.txt確認済み(2026-08時点): Crawl-delay指定なし(GPTBot等AI学習クローラーの
+# 全面Disallowのみ)。個人開発の反復スピード優先だが、小規模個人店が多いためcourtesy設定は維持する
 REQUEST_HEADERS = {
     # 収集主体が分かるよう、一般的なブラウザUAではなく素性を示すUAを推奨
     "User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"
