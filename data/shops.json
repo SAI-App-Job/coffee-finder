@@ -372,11 +372,12 @@
     "url": "https://rakuen-beans.crayonsite.net/",
     "platform": "crayon(クレヨン)",
     "shop_type": "single_location",
-    "robots_txt_status": null,
+    "robots_txt_status": "許可(2026-08確認。robots.txt自体が存在しない[HTTP 404、crayon標準のカスタム404ページが返るのみ]。Disallow指定なし)",
     "address": "神奈川県川崎市宮前区平2-1-5",
     "prefecture": "神奈川県",
     "hours": "10:00-20:00(定休日:水曜日、月末は午後から営業)",
     "map_query": "楽園 川崎市宮前区平",
+    "last_scraped_at": "2026-08-17T09:18:59.122946+00:00",
     "locations": [
       {
         "label": null,
@@ -389,9 +390,7 @@
         "lat": 35.5989082088,
         "lng": 139.573221762
       }
-    ],
-    "lat": 35.5989082088,
-    "lng": 139.573221762
+    ]
   },
   {
     "name": "Rhizomag",
