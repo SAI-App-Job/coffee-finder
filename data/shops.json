@@ -520,11 +520,12 @@
     "url": "https://405coffee.shop-pro.jp/",
     "platform": "カラーミーショップ(shop-pro.jp)",
     "shop_type": "single_location",
-    "robots_txt_status": null,
+    "robots_txt_status": "許可(2026-08確認。/secure/と/cart/以外は制限なし。PHILOCOFFEA等と同一の記述)",
     "address": "神奈川県横浜市西区中央2-24-6 西前市場1階",
     "prefecture": "神奈川県",
     "hours": "10:00-19:00(日曜・月曜定休、不定休あり)",
     "map_query": "405 COFFEE ROASTERS 西前市場",
+    "last_scraped_at": "2026-08-18T04:10:06.448447+00:00",
     "locations": [
       {
         "label": null,
@@ -537,8 +538,6 @@
         "lat": 35.453579,
         "lng": 139.616871
       }
-    ],
-    "lat": 35.453579,
-    "lng": 139.616871
+    ]
   }
 ]
