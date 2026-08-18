@@ -78,10 +78,12 @@ NON_BEAN_KEYWORDS = [
     "CERAMUG", "トートバッグ", "エコバッグ", "ドリッパー", "ミル", "グラインダー",
     "ゼリー", "プリン", "ようかん", "グラノーラ", "チョコレート",
     "ギフトセット", "ギフトボックス", "豆缶", "BOX", "リキッド",
+    "ダンクバッグ", "水出し",  # 豆・粉ではなくドリップバッグ相当の別形態(実データ確認済み)
 ]
 
 COLORME_JSON_PATTERN = re.compile(r"var\s+Colorme\s*=\s*(\{.*\});", re.DOTALL)
 IMG_TAG_PATTERN = re.compile(r"<img[^>]*/?>", re.IGNORECASE)
+BR_TAG_PATTERN = re.compile(r"<br\s*/?>", re.IGNORECASE)
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*g")
 LABEL_PATTERN = re.compile(r"■(ローストタイプ|生産国|生豆生産国|地域|農地|標高|品種|精製)：\s*([^\n]+)")
 
@@ -123,7 +125,10 @@ def extract_colorme_product(soup: BeautifulSoup) -> dict | None:
 
 def clean_name_segments(raw_name_html: str) -> list[str]:
     without_img = IMG_TAG_PATTERN.sub("", raw_name_html or "")
-    normalized = without_img.replace("<br>", "\n").replace("<br />", "\n").replace("\r", "")
+    # 実データ確認済み: TERAのvar Colorme のproduct.nameは<br/>(スペース無し、
+    # TSUKIKOYAで見られた<br>とは異なる自己終端表記)区切り。BR_TAG_PATTERNで
+    # 表記ゆれを吸収する
+    normalized = BR_TAG_PATTERN.sub("\n", without_img).replace("\r", "")
     segments = [seg.strip() for seg in normalized.split("\n")]
     return [seg for seg in segments if seg]
 
