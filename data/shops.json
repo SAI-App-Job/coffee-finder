@@ -522,11 +522,12 @@
     "url": "https://www.coffee-mameya.co.jp/",
     "platform": "カラーミーショップ(shop-pro.jp、独自ドメイン)",
     "shop_type": "single_location",
-    "robots_txt_status": null,
+    "robots_txt_status": "許可(2026-08確認。/secure/と/cart/以外は制限なし。PHILOCOFFEA等と同一の記述)",
     "address": "神奈川県横浜市中区伊勢佐木町5-126",
     "prefecture": "神奈川県",
     "hours": "10:00-19:00(変更有り、不定休)",
     "map_query": "Mameya Roastery 伊勢佐木町",
+    "last_scraped_at": "2026-08-18T11:50:19.132606+00:00",
     "locations": [
       {
         "label": null,
@@ -539,9 +540,7 @@
         "lat": 35.443506,
         "lng": 139.629862
       }
-    ],
-    "lat": 35.443506,
-    "lng": 139.629862
+    ]
   },
   {
     "name": "フォレスト自家焙煎コーヒー豆店",
