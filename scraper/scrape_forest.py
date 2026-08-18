@@ -189,7 +189,7 @@ def parse_product_detail(url: str) -> dict:
 
 def scrape_product_list_page() -> list[dict]:
     soup = fetch_page(LIST_URL)
-    items = soup.select("article.article-item")
+    items = soup.select("article.g-col-6")
 
     results = []
     for item in items:
