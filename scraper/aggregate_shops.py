@@ -66,6 +66,8 @@ SOURCE_FILES = {
     "楽園": "data_rakuen.json",
     "Rhizomag": "data_rhizomag.json",
     "THE MODERN COFFEE": "data_themoderncoffee.json",
+    "TSUKIKOYA COFFEE ROASTER": "data_tsukikoya.json",
+    "405 COFFEE ROASTERS": "data_405coffee.json",
 }
 
 

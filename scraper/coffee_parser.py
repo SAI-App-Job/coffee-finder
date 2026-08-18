@@ -48,6 +48,13 @@ ORIGIN_COUNTRY_KEYWORDS = {
     "コンゴ": "コンゴ民主共和国",  # 実データ確認済み(珈琲丸)。コンゴ共和国(Republic of
     # the Congo)よりコンゴ民主共和国(旧ザイール)の方がスペシャルティコーヒーでは
     # 一般的なため、こちらを既定の変換先とする。
+    "エルサルバドル": "エルサルバドル",  # 実データ確認済み(TSUKIKOYA COFFEE ROASTER)。
+    # 英語表記("el salvador")はORIGIN_COUNTRY_KEYWORDS_ENに既にあったが、
+    # 日本語カタカナ表記がJP側の辞書に無く未検出だった(ニカラグアと同種の抜け)。
+    "インド": "インド",  # 実データ確認済み(TSUKIKOYA COFFEE ROASTER、"INDIA Balmaadi"の
+    # 日本語表記想定)。「インドネシア」の部分文字列になるため、dictの挿入順で
+    # 必ず「インドネシア」より後ろに置くこと(先に置くとインドネシア産の商品を
+    # 誤ってインド産と判定してしまう)。
 }
 
 # --- 産地マスタ: 国名キーワード(英語) ---------------------------------------
@@ -227,6 +234,8 @@ POST_PROCESSING_KEYWORDS = {
     "バレルエイジド": "バレルエイジド(樽熟成)",
     "樽熟成": "バレルエイジド(樽熟成)",
     "barrel aged": "バレルエイジド(樽熟成)",
+    "whiskey barrel": "バレルエイジド(樽熟成)",  # 実データ確認済み(TSUKIKOYA COFFEE ROASTER)。
+    # 「WHISKEY BARREL」という商品名表記のみで「barrel aged」を含まないため別途追加
 }
 
 GRADE_PATTERN = re.compile(r"(SHB|G[1-6]|No\.\d+|Aグレード|AA)")
