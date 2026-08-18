@@ -486,7 +486,9 @@
         "lat": 35.442906,
         "lng": 139.651451
       }
-    ]
+    ],
+    "lat": 35.307766,
+    "lng": 139.636748
   },
   {
     "name": "405 COFFEE ROASTERS",
@@ -511,6 +513,160 @@
         "lat": 35.453579,
         "lng": 139.616871
       }
-    ]
+    ],
+    "lat": 35.453579,
+    "lng": 139.616871
+  },
+  {
+    "name": "Mameya Roastery",
+    "url": "https://www.coffee-mameya.co.jp/",
+    "platform": "カラーミーショップ(shop-pro.jp、独自ドメイン)",
+    "shop_type": "single_location",
+    "robots_txt_status": null,
+    "address": "神奈川県横浜市中区伊勢佐木町5-126",
+    "prefecture": "神奈川県",
+    "hours": "10:00-19:00(変更有り、不定休)",
+    "map_query": "Mameya Roastery 伊勢佐木町",
+    "locations": [
+      {
+        "label": null,
+        "address": "神奈川県横浜市中区伊勢佐木町5-126",
+        "prefecture": "神奈川県",
+        "hours": "10:00-19:00(変更有り、不定休)",
+        "tel": "045-242-5526",
+        "is_headquarters": false,
+        "map_query": "Mameya Roastery 伊勢佐木町",
+        "lat": 35.443506,
+        "lng": 139.629862
+      }
+    ],
+    "lat": 35.443506,
+    "lng": 139.629862
+  },
+  {
+    "name": "フォレスト自家焙煎コーヒー豆店",
+    "url": "https://www.nsforest.com/",
+    "platform": "WordPress + Welcart",
+    "shop_type": "single_location",
+    "robots_txt_status": null,
+    "address": "神奈川県横浜市泉区緑園6-1-27",
+    "prefecture": "神奈川県",
+    "hours": "10:00-18:30(火・水定休)",
+    "map_query": "フォレスト自家焙煎コーヒー豆店 緑園",
+    "locations": [
+      {
+        "label": null,
+        "address": "神奈川県横浜市泉区緑園6-1-27",
+        "prefecture": "神奈川県",
+        "hours": "10:00-18:30(火・水定休)",
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "フォレスト自家焙煎コーヒー豆店 緑園",
+        "lat": 35.439291,
+        "lng": 139.522097
+      }
+    ],
+    "lat": 35.439291,
+    "lng": 139.522097
+  },
+  {
+    "name": "NAGI COFFEE",
+    "url": "https://www.nagicoffee.com/",
+    "platform": "THE SHOP(BASE系)",
+    "shop_type": "single_location",
+    "robots_txt_status": null,
+    "address": "神奈川県横浜市神奈川区松本町3-22-8",
+    "prefecture": "神奈川県",
+    "hours": "7:30-19:00(店舗により異なる)",
+    "map_query": "NAGI COFFEE 反町",
+    "locations": [
+      {
+        "label": null,
+        "address": "神奈川県横浜市神奈川区松本町3-22-8",
+        "prefecture": "神奈川県",
+        "hours": "7:30-19:00(店舗により異なる)",
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "NAGI COFFEE 反町",
+        "lat": 35.47638,
+        "lng": 139.61683
+      }
+    ],
+    "lat": 35.47638,
+    "lng": 139.61683
+  },
+  {
+    "name": "COFFEE ROASTERY MEGURO",
+    "url": "https://roasterymeguro.com/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": null,
+    "address": "神奈川県横浜市中区元町・中華街",
+    "prefecture": "神奈川県",
+    "hours": "店舗にお問い合わせください",
+    "map_query": "COFFEE ROASTERY MEGURO 元町",
+    "locations": [
+      {
+        "label": null,
+        "address": "神奈川県横浜市中区元町・中華街",
+        "prefecture": "神奈川県",
+        "hours": "店舗にお問い合わせください",
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "COFFEE ROASTERY MEGURO 元町",
+        "lat": 35.442117,
+        "lng": 139.650913
+      }
+    ],
+    "lat": 35.442117,
+    "lng": 139.650913
+  },
+  {
+    "name": "TERA COFFEE and ROASTER",
+    "url": "https://teracoffee.jp/",
+    "platform": "カラーミーショップ(shop-pro.jp、独自ドメイン)",
+    "shop_type": "multi_location",
+    "robots_txt_status": null,
+    "address": "神奈川県横浜市港北区大倉山1丁目3-20",
+    "prefecture": "神奈川県",
+    "hours": "店舗により異なる",
+    "map_query": "TERA COFFEE and ROASTER 大倉山",
+    "locations": [
+      {
+        "label": "大倉山店",
+        "address": "神奈川県横浜市港北区大倉山1丁目3-20",
+        "prefecture": "神奈川県",
+        "hours": null,
+        "tel": "045-541-6016",
+        "is_headquarters": false,
+        "map_query": "TERA COFFEE and ROASTER 大倉山店",
+        "lat": 35.520156,
+        "lng": 139.63125
+      },
+      {
+        "label": "白楽店",
+        "address": "神奈川県横浜市神奈川区白楽129番地",
+        "prefecture": "神奈川県",
+        "hours": null,
+        "tel": "045-309-8686",
+        "is_headquarters": false,
+        "map_query": "TERA COFFEE and ROASTER 白楽店",
+        "lat": 35.489645,
+        "lng": 139.627709
+      },
+      {
+        "label": "菊名店",
+        "address": "神奈川県横浜市港北区菊名1-12-11",
+        "prefecture": "神奈川県",
+        "hours": null,
+        "tel": "045-710-0002",
+        "is_headquarters": false,
+        "map_query": "TERA COFFEE and ROASTER 菊名店",
+        "lat": 35.509686,
+        "lng": 139.630273
+      }
+    ],
+    "lat": 35.520156,
+    "lng": 139.63125
   }
 ]

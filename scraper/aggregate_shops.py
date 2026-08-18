@@ -68,6 +68,11 @@ SOURCE_FILES = {
     "THE MODERN COFFEE": "data_themoderncoffee.json",
     "TSUKIKOYA COFFEE ROASTER": "data_tsukikoya.json",
     "405 COFFEE ROASTERS": "data_405coffee.json",
+    "Mameya Roastery": "data_mameya.json",
+    "フォレスト自家焙煎コーヒー豆店": "data_forest.json",
+    "NAGI COFFEE": "data_nagi.json",
+    "COFFEE ROASTERY MEGURO": "data_meguro.json",
+    "TERA COFFEE and ROASTER": "data_tera.json",
 }
 
 

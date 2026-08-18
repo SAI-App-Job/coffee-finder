@@ -27,12 +27,17 @@ on:
           - themoderncoffee
           - tsukikoya
           - coffee405
+          - mameya
+          - forest
+          - nagi
+          - meguro
+          - tera
 
 permissions:
   contents: write # data/*.json をコミット・pushするために必要
 
 jobs:
-  # 12店舗を並列に実行する。各店舗は独立したサイトへのスクレイピングなので、
+  # 17店舗を並列に実行する。各店舗は独立したサイトへのスクレイピングなので、
   # 直列にする理由がない(courtesy delayは店舗ごとの各リクエスト間隔の話であり、
   # 店舗同士を並列化しても対象サイトへの負荷は増えない)。
   #
@@ -83,6 +88,21 @@ jobs:
           - id: coffee405
             script: scrape_405coffee.py
             output: data_405coffee.json
+          - id: mameya
+            script: scrape_mameya.py
+            output: data_mameya.json
+          - id: forest
+            script: scrape_forest.py
+            output: data_forest.json
+          - id: nagi
+            script: scrape_nagi.py
+            output: data_nagi.json
+          - id: meguro
+            script: scrape_meguro.py
+            output: data_meguro.json
+          - id: tera
+            script: scrape_tera.py
+            output: data_tera.json
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4 # 差分ベーススクレイピングがdata/products.jsonを参照するため必須
@@ -107,7 +127,7 @@ jobs:
           path: scraper/${{ matrix.shop.output }}
           retention-days: 1
 
-  # 12店舗すべてのスクレイピングが完了してから、まとめて集約・コミットする
+  # 17店舗すべてのスクレイピングが完了してから、まとめて集約・コミットする
   # (店舗ごとに個別コミットすると、data/shops.json・data/products.jsonの
   # 内容が実行順に依存して揺れるため)。
   aggregate:
