@@ -210,6 +210,7 @@ def build_product(record: dict, shop_map_query: str, now_iso: str) -> dict:
         # 空配列のままの商品があるのは想定通りの挙動。FUGLENは現時点でブレンド
         # 商品自体を扱っていないため未対応(実データが無く構造を検証できない)。
         "blend_components": record.get("blend_components") or [],
+        "post_processing_tags": record.get("post_processing_tags") or [],
         "price": record.get("price"),
         "price_min": record.get("price_min"),
         "price_max": record.get("price_max"),
@@ -299,6 +300,7 @@ def build_manual_product(
         "farm_note": raw_product.get("farmNote"),
         "flavor_notes": raw_product.get("flavorNotes"),
         "blend_components": [],
+        "post_processing_tags": [],
         "price": raw_product.get("price"),
         "price_min": None,
         "price_max": None,
