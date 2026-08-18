@@ -89,7 +89,10 @@ LIST_BASE_URL = "https://405coffee.shop-pro.jp/?mode=srh&keyword=&sort=n"
 NON_BEAN_KEYWORDS = ["ドリップバッグ"]
 
 COLORME_JSON_PATTERN = re.compile(r"var\s+Colorme\s*=\s*(\{.*\});", re.DOTALL)
-VARIANT_WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
+# 単一重量のみの商品はvariantのoption2_valueが空文字列で、重量は商品名にしか
+# 出てこない(実データ確認済み: 「タンザニア スノートップ 200g 中深煎り」)ため、
+# バリアントからの抽出に失敗した場合は商品名からも試す。
+WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
 DESC_LABEL_PATTERN = re.compile(r"(生産地|標高|収穫時期|品種|精選方法|乾燥方法|土壌)\t([^\n]+)")
 ROAST_HINT_KEYWORDS = ["中深煎り", "中浅煎り", "深煎り", "浅煎り", "中煎り"]
 
@@ -118,10 +121,13 @@ def extract_colorme_product(soup: BeautifulSoup) -> dict | None:
     return None
 
 
-def weight_from_variant(variant: dict | None) -> int | None:
-    if not variant:
-        return None
-    m = VARIANT_WEIGHT_PATTERN.search(variant.get("option2_value") or "")
+def weight_from_variant(variant: dict | None, fallback_text: str = "") -> int | None:
+    if variant:
+        m = WEIGHT_PATTERN.search(variant.get("option2_value") or "")
+        if m:
+            return int(m.group(1))
+    # 単一重量のみの商品はoption2_valueが空文字列なので、商品名から拾う
+    m = WEIGHT_PATTERN.search(fallback_text or "")
     return int(m.group(1)) if m else None
 
 
@@ -163,7 +169,9 @@ def parse_description(description_html: str) -> dict:
 
 
 def build_record(product_url: str, colorme_product: dict, description_html: str, list_exp: str | None) -> dict:
-    title = colorme_product.get("name", "")
+    # var Colorme のproduct.nameは末尾に\r\nが付いていることがある(実データ確認済み:
+    # 「405 バリューブレンドA」500g/300g)ため、明示的にstripする
+    title = (colorme_product.get("name") or "").strip()
     parsed = parse_product(title)
 
     if parsed["is_flavored"]:
@@ -236,7 +244,7 @@ def build_record(product_url: str, colorme_product: dict, description_html: str,
         "flavor_notes": desc["intro"] or list_exp,
         "blend_components": [],  # ブレンド商品の産地別内訳は実データで見つからず未対応
         "price": variant.get("option_price_including_tax") if variant else None,
-        "weight_g": weight_from_variant(variant),
+        "weight_g": weight_from_variant(variant, title),
         "stock_status": stock_status,
         "out_of_stock": stock_status != "販売中",
         "product_url": product_url,

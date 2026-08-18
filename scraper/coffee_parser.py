@@ -75,6 +75,7 @@ ORIGIN_COUNTRY_KEYWORDS_EN = {
     "bolivia": "ボリビア", "peru": "ペルー", "ecuador": "エクアドル", "sudan": "スーダン",
     "thailand": "タイ", "dr congo": "コンゴ民主共和国", "congo": "コンゴ民主共和国",
     "dominica": "ドミニカ国",
+    "india": "インド",  # 実データ確認済み(TSUKIKOYA COFFEE ROASTER、"INDIA Balmaadi"表記)
 }
 
 # --- 地域名マスタ(国への逆引き用) -------------------------------------------

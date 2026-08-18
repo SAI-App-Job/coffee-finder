@@ -119,6 +119,18 @@ WEIGHT_PATTERN = re.compile(r"\((\d+)\s*g")
 INFO_LABEL_PATTERN = re.compile(r"(農園|標高|エリア|生産者|品種|生産処理)\s*[：:]\s*([^\n]+)")
 FLAVOR_LABEL_PATTERN = re.compile(r"《[^/》]+/([^》]+)》\s*([^\n]+)")
 
+# 実データ確認済み: variantsのoption1/option2のどちらが焙煎度でどちらが挽き方かは
+# 商品ごとに入れ替わる(例:複数焙煎度を選べる商品はoption1=焙煎度/option2=挽き方だが、
+# 単一焙煎度のみの商品はoption1=挽き方/option2=焙煎度になっている)。スロット位置に
+# 依存せず、値そのものがこの既知の焙煎度表記を含むかどうかで判定する(部分一致。
+# 「浅煎り（full flover roast）」のように英語注記が付いた値も実データで確認済み
+# のため、完全一致ではなく部分一致にしている)。
+ROAST_TERMS = ["中深煎り", "中浅煎り", "浅煎り", "中煎り", "深煎り"]
+
+
+def is_roast_value(value: str | None) -> bool:
+    return bool(value) and any(term in value for term in ROAST_TERMS)
+
 
 def fetch_page(url: str) -> BeautifulSoup:
     resp = requests.get(url, headers=REQUEST_HEADERS, timeout=15)
@@ -217,8 +229,15 @@ def build_record(product_url: str, colorme_product: dict, description_html: str)
             "product_url": product_url,
         }
 
-    # 焙煎度: option1_valueの選択肢が複数あれば「注文時選択」、1つのみなら固定属性として扱う
-    roast_options = sorted({v.get("option1_value") for v in colorme_product.get("variants", []) if v.get("option1_value")})
+    # 焙煎度: option1/option2どちらのスロットにあっても、値が既知の焙煎度表記と
+    # 一致するものだけを集める(スロット位置に依存しない判定。上のROAST_TERMS参照)。
+    # 選択肢が複数あれば「注文時選択」、1つのみなら固定属性として扱う。
+    roast_options = sorted({
+        v.get(key)
+        for v in colorme_product.get("variants", [])
+        for key in ("option1_value", "option2_value")
+        if is_roast_value(v.get(key))
+    })
     roast_hint = "／".join(roast_options) if roast_options else None
     roast_selectable = len(roast_options) > 1
 
