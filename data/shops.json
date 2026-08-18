@@ -484,11 +484,12 @@
     "url": "https://tsukikoyacoffee.shop-pro.jp/",
     "platform": "カラーミーショップ(shop-pro.jp)",
     "shop_type": "multi_location",
-    "robots_txt_status": null,
+    "robots_txt_status": "許可(2026-08確認。/secure/と/cart/以外は制限なし。PHILOCOFFEA等と同一の記述)",
     "address": "神奈川県横須賀市浦郷町3-51",
     "prefecture": "神奈川県",
     "hours": "店舗により異なる",
     "map_query": "TSUKIKOYA COFFEE ROASTER 追浜",
+    "last_scraped_at": "2026-08-18T04:07:58.237461+00:00",
     "locations": [
       {
         "label": "追浜本店",
@@ -512,9 +513,7 @@
         "lat": 35.442906,
         "lng": 139.651451
       }
-    ],
-    "lat": 35.307766,
-    "lng": 139.636748
+    ]
   },
   {
     "name": "405 COFFEE ROASTERS",
