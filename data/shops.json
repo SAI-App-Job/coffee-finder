@@ -547,11 +547,12 @@
     "url": "https://www.nsforest.com/",
     "platform": "WordPress + Welcart",
     "shop_type": "single_location",
-    "robots_txt_status": null,
+    "robots_txt_status": "許可(2026-08確認。/wp-admin/以外は制限なし、標準的なWordPress設定)",
     "address": "神奈川県横浜市泉区緑園6-1-27",
     "prefecture": "神奈川県",
     "hours": "10:00-18:30(火・水定休)",
     "map_query": "フォレスト自家焙煎コーヒー豆店 緑園",
+    "last_scraped_at": "2026-08-18T11:51:19.288280+00:00",
     "locations": [
       {
         "label": null,
@@ -564,9 +565,7 @@
         "lat": 35.439291,
         "lng": 139.522097
       }
-    ],
-    "lat": 35.439291,
-    "lng": 139.522097
+    ]
   },
   {
     "name": "NAGI COFFEE",
