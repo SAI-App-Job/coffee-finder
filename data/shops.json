@@ -27,33 +27,6 @@
     "lng": 139.703767
   },
   {
-    "name": "珈琲問屋",
-    "url": "https://www.tonya.co.jp/",
-    "platform": "独自EC",
-    "shop_type": "single_location",
-    "robots_txt_status": null,
-    "last_scraped_at": null,
-    "address": "愛知県名古屋市",
-    "prefecture": "愛知県",
-    "hours": "9:00〜18:00(年中無休・通販中心)",
-    "map_query": "珈琲問屋 名古屋市",
-    "locations": [
-      {
-        "label": null,
-        "address": "愛知県名古屋市",
-        "prefecture": "愛知県",
-        "hours": "9:00〜18:00(年中無休・通販中心)",
-        "tel": null,
-        "is_headquarters": false,
-        "map_query": "珈琲問屋 名古屋市",
-        "lat": 35.185105,
-        "lng": 136.899844
-      }
-    ],
-    "lat": 35.185105,
-    "lng": 136.899844
-  },
-  {
     "name": "MiLL Coffee",
     "url": "https://www.baisenmill.com/",
     "platform": "Wix",

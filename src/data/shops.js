@@ -12,17 +12,6 @@ export const SHOPS = [
     lng: 139.703767,
   },
   {
-    name: "珈琲問屋",
-    address: "愛知県名古屋市",
-    prefecture: "愛知県",
-    hours: "9:00〜18:00(年中無休・通販中心)",
-    platform: "独自EC",
-    url: "https://www.tonya.co.jp/",
-    mapQuery: "珈琲問屋 名古屋市",
-    lat: 35.185105,
-    lng: 136.899844,
-  },
-  {
     name: "MiLL Coffee",
     address: "神奈川県川崎市多摩区",
     prefecture: "神奈川県",

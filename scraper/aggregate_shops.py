@@ -371,8 +371,8 @@ def main():
                 )
             )
 
-    # このワークフローが対象としない店舗(自動スクレイパーも手動ファイルも無い。
-    # 例: 珈琲問屋)の商品は、上書きせず既存のレコードをそのまま残す
+    # このワークフローが対象としない店舗(自動スクレイパーも手動ファイルも無い)の
+    # 商品は、上書きせず既存のレコードをそのまま残す
     for product in existing_products.values():
         if product.get("shop_name") not in covered_shop_names:
             all_products.append(product)

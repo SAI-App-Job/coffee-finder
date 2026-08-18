@@ -1,5 +1,5 @@
 // ---------------------------------------------------------------------------
-// モックデータ: これまでの店舗調査(Denim bis / 珈琲問屋 / MiLL Coffee)を
+// モックデータ: これまでの店舗調査(Denim bis / MiLL Coffee)を
 // 元にした商品サンプル。実装後はスクレイピング結果に差し替える想定。
 // ---------------------------------------------------------------------------
 export const MOCK_PRODUCTS = [
@@ -19,23 +19,6 @@ export const MOCK_PRODUCTS = [
     weightG: 100,
     flavorNotes: "Jasmine, Bergamot, Lemon, Floral, Honey",
     mapQuery: "Denim bis 川崎市",
-  },
-  {
-    id: 2,
-    shopName: "珈琲問屋",
-    shopAddress: "愛知県名古屋市",
-    prefecture: "愛知県",
-    rawName: "キリマンジャロAA（生豆時500g）",
-    originCountry: "タンザニア",
-    designatedBrand: "キリマンジャロ",
-    processingMethod: null,
-    grade: "AA",
-    roast: "シティ",
-    roastSelectable: false,
-    price: 2400,
-    weightG: 500,
-    flavorNotes: "ブラックカラント、グレープフルーツ、しっかりしたコク",
-    mapQuery: "珈琲問屋 名古屋市",
   },
   {
     id: 3,
@@ -87,22 +70,6 @@ export const MOCK_PRODUCTS = [
     weightG: 100,
     farmNote: "ゴールデンビートル農園",
     mapQuery: "Denim bis 川崎市",
-  },
-  {
-    id: 6,
-    shopName: "珈琲問屋",
-    shopAddress: "愛知県名古屋市",
-    prefecture: "愛知県",
-    rawName: "モカシダモG4（生豆時500g）",
-    originCountry: "エチオピア",
-    designatedBrand: null,
-    processingMethod: null,
-    grade: "G4",
-    roast: "フルシティ",
-    roastSelectable: false,
-    price: 2100,
-    weightG: 500,
-    mapQuery: "珈琲問屋 名古屋市",
   },
   {
     id: 7,
