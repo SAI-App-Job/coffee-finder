@@ -578,7 +578,7 @@
   {
     "id": "https://405coffee.shop-pro.jp/?pid=170397194",
     "shop_name": "405 COFFEE ROASTERS",
-    "raw_name": "405 バリューブレンドA 500g\r\n",
+    "raw_name": "405 バリューブレンドA 500g",
     "category": "ブレンド",
     "is_flavored": false,
     "flavor_name": null,
@@ -598,19 +598,19 @@
     "price_min": null,
     "price_max": null,
     "price_note": null,
-    "weight_g": null,
+    "weight_g": 500,
     "unit_note": null,
     "stock_status": "販売中",
     "out_of_stock": false,
     "decaf_process": null,
     "product_url": "https://405coffee.shop-pro.jp/?pid=170397194",
     "map_query": "405 COFFEE ROASTERS 西前市場",
-    "scraped_at": "2026-08-18T04:10:06.448447+00:00"
+    "scraped_at": "2026-08-18T05:58:46.401815+00:00"
   },
   {
     "id": "https://405coffee.shop-pro.jp/?pid=170397116",
     "shop_name": "405 COFFEE ROASTERS",
-    "raw_name": "405 バリューブレンドA 300g\r\n",
+    "raw_name": "405 バリューブレンドA 300g",
     "category": "ブレンド",
     "is_flavored": false,
     "flavor_name": null,
@@ -630,14 +630,14 @@
     "price_min": null,
     "price_max": null,
     "price_note": null,
-    "weight_g": null,
+    "weight_g": 300,
     "unit_note": null,
     "stock_status": "販売中",
     "out_of_stock": false,
     "decaf_process": null,
     "product_url": "https://405coffee.shop-pro.jp/?pid=170397116",
     "map_query": "405 COFFEE ROASTERS 西前市場",
-    "scraped_at": "2026-08-18T04:10:06.448447+00:00"
+    "scraped_at": "2026-08-18T05:58:46.401815+00:00"
   },
   {
     "id": "https://405coffee.shop-pro.jp/?pid=170396806",
@@ -790,14 +790,14 @@
     "price_min": null,
     "price_max": null,
     "price_note": null,
-    "weight_g": null,
+    "weight_g": 200,
     "unit_note": null,
     "stock_status": "一時的に品切れ",
     "out_of_stock": true,
     "decaf_process": null,
     "product_url": "https://405coffee.shop-pro.jp/?pid=170400848",
     "map_query": "405 COFFEE ROASTERS 西前市場",
-    "scraped_at": "2026-08-18T04:10:06.448447+00:00"
+    "scraped_at": "2026-08-18T05:58:46.401815+00:00"
   },
   {
     "id": "manual:its-roasted-coffee:Ethiopia / Shantawew Natural(エチオピア シャンタウェネ ナチュラル)",
