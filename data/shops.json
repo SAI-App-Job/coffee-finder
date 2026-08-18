@@ -622,11 +622,12 @@
     "url": "https://teracoffee.jp/",
     "platform": "カラーミーショップ(shop-pro.jp、独自ドメイン)",
     "shop_type": "multi_location",
-    "robots_txt_status": null,
+    "robots_txt_status": "許可(2026-08確認。/secure/と/cart/以外は制限なし。PHILOCOFFEA等と同一の記述)",
     "address": "神奈川県横浜市港北区大倉山1丁目3-20",
     "prefecture": "神奈川県",
     "hours": "店舗により異なる",
     "map_query": "TERA COFFEE and ROASTER 大倉山",
+    "last_scraped_at": "2026-08-18T12:19:03.357836+00:00",
     "locations": [
       {
         "label": "大倉山店",
@@ -661,8 +662,6 @@
         "lat": 35.509686,
         "lng": 139.630273
       }
-    ],
-    "lat": 35.520156,
-    "lng": 139.63125
+    ]
   }
 ]
