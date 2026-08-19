@@ -86,6 +86,8 @@ export function OriginGuideCard({ origin, onViewProducts }) {
             <Award size={13} className="shrink-0 mt-0.5 text-[var(--accent-label)]" strokeWidth={1.75} />
             <span>{origin.officialBody}</span>
           </div>
+
+          {origin.sources && <SourceCredit sources={origin.sources} />}
         </div>
       ) : (
         <div className="pt-2 mt-1 border-t border-[#4A3A2A] flex flex-col gap-2">
