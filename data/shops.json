@@ -787,11 +787,12 @@
     "url": "https://shibacoffee.shop-pro.jp/",
     "platform": "カラーミーショップ(shop-pro.jp)",
     "shop_type": "single_location",
-    "robots_txt_status": null,
+    "robots_txt_status": "許可(2026-08確認。/secure/と/cart/以外は制限なし。PHILOCOFFEA等と同一の記述)",
     "address": "神奈川県川崎市中原区新丸子東1-826 シャトレKOYO 1階",
     "prefecture": "神奈川県",
     "hours": "店舗にお問い合わせください",
     "map_query": "SHIBACOFFEE 新丸子東",
+    "last_scraped_at": "2026-08-19T14:11:53.108110+00:00",
     "locations": [
       {
         "label": null,
@@ -804,8 +805,6 @@
         "lat": 35.577187,
         "lng": 139.661986
       }
-    ],
-    "lat": 35.577187,
-    "lng": 139.661986
+    ]
   }
 ]
