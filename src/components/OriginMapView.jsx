@@ -320,6 +320,7 @@ export function OriginMapView({ origins, selected, onSelect }) {
             "エチオピア": { dx: -10, dy: -14, anchor: "end" },
             "コスタリカ": { dx: -8, dy: 24, anchor: "end" },
             "コロンビア": { dx: 12, dy: -14, anchor: "start" },
+            "エルサルバドル": { dx: -6, dy: 2, anchor: "end" },
           };
           return origins.map((origin) => {
             const pos = COUNTRY_MAP_POSITIONS[origin.country];
