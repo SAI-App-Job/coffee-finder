@@ -762,11 +762,12 @@
     "url": "https://leafletter.official.ec/",
     "platform": "BASE",
     "shop_type": "single_location",
-    "robots_txt_status": null,
+    "robots_txt_status": "実質許可(2026-08確認。COFFEE ROASTERY MEGURO等のBASEと同一の記述。/cart/・/web_cart/・/shops/・/api/shops/以外はUser-agent: *でAllow)",
     "address": "神奈川県川崎市幸区柳町8-3 柳町ビル101",
     "prefecture": "神奈川県",
     "hours": "不定休",
     "map_query": "LEAFLETTER 柳町",
+    "last_scraped_at": "2026-08-19T14:10:34.808960+00:00",
     "locations": [
       {
         "label": null,
@@ -779,9 +780,7 @@
         "lat": 35.529191,
         "lng": 139.688988
       }
-    ],
-    "lat": 35.529191,
-    "lng": 139.688988
+    ]
   },
   {
     "name": "SHIBACOFFEE",
