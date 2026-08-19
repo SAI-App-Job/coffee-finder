@@ -704,11 +704,12 @@
     "url": "https://roastery-hoshikawa225.myshopify.com/",
     "platform": "Shopify",
     "shop_type": "single_location",
-    "robots_txt_status": null,
-    "address": "神奈川県横浜市保土ケ谷区星川2丁目2-5",
+    "robots_txt_status": "許可(2026-08確認。Shopify標準の記述。/cart/・/checkout・/account等の取引系パス以外はUser-agent: *でAllow)",
+    "address": "神奈川県横浜市保土ケ谷区星川",
     "prefecture": "神奈川県",
     "hours": "店舗にお問い合わせください",
     "map_query": "自家焙煎星川珈琲 星川",
+    "last_scraped_at": "2026-08-19T13:36:52.877504+00:00",
     "locations": [
       {
         "label": null,
@@ -721,9 +722,7 @@
         "lat": 35.45937,
         "lng": 139.591723
       }
-    ],
-    "lat": 35.45937,
-    "lng": 139.591723
+    ]
   },
   {
     "name": "coffee roast 福田珈琲焙煎所",
