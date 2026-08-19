@@ -75,6 +75,8 @@ SOURCE_FILES = {
     "TERA COFFEE and ROASTER": "data_tera.json",
     "COFFEE TERMINAL": "data_terminal.json",
     "自家焙煎星川珈琲": "data_hoshikawa.json",
+    "LEAFLETTER": "data_leafletter.json",
+    "SHIBACOFFEE": "data_shibacoffee.json",
 }
 
 

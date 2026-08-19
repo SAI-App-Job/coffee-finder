@@ -697,7 +697,9 @@
         "lat": 35.537015,
         "lng": 139.563079
       }
-    ]
+    ],
+    "lat": 35.537015,
+    "lng": 139.563079
   },
   {
     "name": "自家焙煎星川珈琲",
@@ -722,7 +724,9 @@
         "lat": 35.45937,
         "lng": 139.591723
       }
-    ]
+    ],
+    "lat": 35.45937,
+    "lng": 139.591723
   },
   {
     "name": "coffee roast 福田珈琲焙煎所",
@@ -752,5 +756,57 @@
     ],
     "lat": 35.487967,
     "lng": 139.609983
+  },
+  {
+    "name": "LEAFLETTER",
+    "url": "https://leafletter.official.ec/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": null,
+    "address": "神奈川県川崎市幸区柳町8-3 柳町ビル101",
+    "prefecture": "神奈川県",
+    "hours": "不定休",
+    "map_query": "LEAFLETTER 柳町",
+    "locations": [
+      {
+        "label": null,
+        "address": "神奈川県川崎市幸区柳町8-3 柳町ビル101",
+        "prefecture": "神奈川県",
+        "hours": "不定休",
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "LEAFLETTER 柳町",
+        "lat": 35.529191,
+        "lng": 139.688988
+      }
+    ],
+    "lat": 35.529191,
+    "lng": 139.688988
+  },
+  {
+    "name": "SHIBACOFFEE",
+    "url": "https://shibacoffee.shop-pro.jp/",
+    "platform": "カラーミーショップ(shop-pro.jp)",
+    "shop_type": "single_location",
+    "robots_txt_status": null,
+    "address": "神奈川県川崎市中原区新丸子東1-826 シャトレKOYO 1階",
+    "prefecture": "神奈川県",
+    "hours": "店舗にお問い合わせください",
+    "map_query": "SHIBACOFFEE 新丸子東",
+    "locations": [
+      {
+        "label": null,
+        "address": "神奈川県川崎市中原区新丸子東1-826 シャトレKOYO 1階",
+        "prefecture": "神奈川県",
+        "hours": "店舗にお問い合わせください",
+        "tel": "044-863-7223",
+        "is_headquarters": false,
+        "map_query": "SHIBACOFFEE 新丸子東",
+        "lat": 35.577187,
+        "lng": 139.661986
+      }
+    ],
+    "lat": 35.577187,
+    "lng": 139.661986
   }
 ]
