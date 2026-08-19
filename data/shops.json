@@ -679,11 +679,12 @@
     "url": "https://www.coffee-terminal.net/",
     "platform": "カラーミーショップ(shop-pro.jp、独自ドメイン)",
     "shop_type": "single_location",
-    "robots_txt_status": null,
+    "robots_txt_status": "許可(2026-08確認。/secure/と/cart/以外は制限なし。PHILOCOFFEA等と同一の記述)",
     "address": "神奈川県横浜市都筑区葛が谷14-7",
     "prefecture": "神奈川県",
     "hours": "9:00-18:00(日曜・第2または第3月曜定休)",
     "map_query": "COFFEE TERMINAL 葛が谷",
+    "last_scraped_at": "2026-08-19T13:35:18.684833+00:00",
     "locations": [
       {
         "label": null,
@@ -696,9 +697,7 @@
         "lat": 35.537015,
         "lng": 139.563079
       }
-    ],
-    "lat": 35.537015,
-    "lng": 139.563079
+    ]
   },
   {
     "name": "自家焙煎星川珈琲",
@@ -725,5 +724,34 @@
     ],
     "lat": 35.45937,
     "lng": 139.591723
+  },
+  {
+    "name": "coffee roast 福田珈琲焙煎所",
+    "url": null,
+    "instagram_url": "https://www.instagram.com/fukuda.coffeebaisen/",
+    "platform": "手動入力(Instagram/ローカルメディア記事のみ、公式サイトなし)",
+    "shop_type": "single_location",
+    "address": "神奈川県横浜市神奈川区神大寺4-1-7 フローラ神大寺1F",
+    "prefecture": "神奈川県",
+    "hours": "10:00-19:00(ラストオーダー18:45、火・水定休)",
+    "map_query": "coffee roast 福田珈琲焙煎所 横浜市神奈川区神大寺",
+    "data_source": "manual",
+    "source_note": "公式サイトなし。住所・営業時間・定休日はローカルメディア記事(https://kandaijinavi.com/report/ca3/fukudacoffeeroast/、2026年時点の内容として確認)を出典とし、商品情報はInstagram(@fukuda.coffeebaisen)のフィード投稿の商品写真(価格タグ入り)を目視確認して入力(2026-08-19)。カフェ営業は行っておらず豆販売専門。フィードの価格タグは一貫して「生豆」(焙煎前の生豆状態)の重量・価格表記だったため、収録した価格・重量もすべて生豆ベース(店頭で焙煎度を選んで購入時に焙煎してもらう形態と推測されるが、焙煎豆の価格表記そのものはフィード上で確認できなかった)。フォロワー数の都合等で閲覧できた投稿は一部のみのため、実際の取り扱い品目はここに記載した6件よりも多い可能性が高い",
+    "last_verified_at": "2026-08-19",
+    "locations": [
+      {
+        "label": null,
+        "address": "神奈川県横浜市神奈川区神大寺4-1-7 フローラ神大寺1F",
+        "prefecture": "神奈川県",
+        "hours": "10:00-19:00(ラストオーダー18:45、火・水定休)",
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "coffee roast 福田珈琲焙煎所 横浜市神奈川区神大寺",
+        "lat": 35.487967,
+        "lng": 139.609983
+      }
+    ],
+    "lat": 35.487967,
+    "lng": 139.609983
   }
 ]
