@@ -73,6 +73,8 @@ SOURCE_FILES = {
     "NAGI COFFEE": "data_nagi.json",
     "COFFEE ROASTERY MEGURO": "data_meguro.json",
     "TERA COFFEE and ROASTER": "data_tera.json",
+    "COFFEE TERMINAL": "data_terminal.json",
+    "自家焙煎星川珈琲": "data_hoshikawa.json",
 }
 
 
