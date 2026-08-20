@@ -608,7 +608,7 @@
     "prefecture": "神奈川県",
     "hours": "店舗にお問い合わせください",
     "map_query": "COFFEE ROASTERY MEGURO 元町",
-    "last_scraped_at": "2026-08-18T12:13:11.959243+00:00",
+    "last_scraped_at": "2026-08-20T14:15:43.659273+00:00",
     "locations": [
       {
         "label": null,
@@ -621,9 +621,7 @@
         "lat": 35.442117,
         "lng": 139.650913
       }
-    ],
-    "lat": 35.442117,
-    "lng": 139.650913
+    ]
   },
   {
     "name": "TERA COFFEE and ROASTER",
