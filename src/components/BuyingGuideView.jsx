@@ -1,5 +1,5 @@
 import { useState, useRef } from "react";
-import { Globe2, Clock, Dna, Package, BookOpen, MapPin, Coffee, Award } from "lucide-react";
+import { Globe2, Clock, Dna, Package, BookOpen, MapPin, Coffee, Award, Gauge } from "lucide-react";
 import { SectionHeading, SourceCredit } from "./common";
 import { OriginMapView } from "./OriginMapView";
 import { DESIGNATED_BRANDS } from "../data/designatedBrands";
@@ -64,6 +64,7 @@ export function OriginGuideCard({ origin, onViewProducts }) {
           <OriginSection icon={Dna} label="Varieties / 栽培品種">{origin.varietiesDetail}</OriginSection>
           <OriginSection icon={Package} label="Farm Structure / 農園規模">{origin.farmStructure}</OriginSection>
           <OriginSection icon={BookOpen} label="History / 歴史">{origin.history}</OriginSection>
+          <OriginSection icon={Gauge} label="Grade System / グレード基準">{origin.gradeSystem}</OriginSection>
 
           {origin.subRegions && (
             <div>
