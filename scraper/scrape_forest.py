@@ -52,6 +52,7 @@ from bs4 import BeautifulSoup
 from coffee_parser import (
     parse_product,
     apply_category_hint_fallback,
+    detect_colombia_grade,
     detect_processing_method,
     detect_stock_status,
 )
@@ -120,7 +121,13 @@ def build_record(product_url: str, title: str, description_text: str, price: int
 
     desc = parse_description(description_text)
     if desc["grade"]:
-        parsed["grade"] = desc["grade"]
+        # 「規格：」欄はコロンビア産の場合サブグレード名(「スプレモ」等)が単独で
+        # 書かれており、parse_product()と同じくFNCの「エクセルソ+サブ名」複合語に
+        # 正規化する(正規化できなければ、情報を失わないよう元の表記のまま使う)。
+        if parsed["origin_country"] == "コロンビア":
+            parsed["grade"] = detect_colombia_grade(desc["grade"]) or desc["grade"]
+        else:
+            parsed["grade"] = desc["grade"]
     if not parsed["processing_method"]:
         parsed["processing_method"] = detect_processing_method(description_text)
     parsed = apply_category_hint_fallback(parsed, None)
