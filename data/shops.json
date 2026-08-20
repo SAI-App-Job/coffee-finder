@@ -579,7 +579,7 @@
     "prefecture": "神奈川県",
     "hours": "7:30-19:00(店舗により異なる)",
     "map_query": "NAGI COFFEE 反町",
-    "last_scraped_at": "2026-08-18T12:11:23.854986+00:00",
+    "last_scraped_at": "2026-08-20T14:29:22.810739+00:00",
     "locations": [
       {
         "label": null,
@@ -592,9 +592,7 @@
         "lat": 35.47638,
         "lng": 139.61683
       }
-    ],
-    "lat": 35.47638,
-    "lng": 139.61683
+    ]
   },
   {
     "name": "COFFEE ROASTERY MEGURO",
