@@ -241,6 +241,41 @@ POST_PROCESSING_KEYWORDS = {
 
 GRADE_PATTERN = re.compile(r"(SHB|G[1-6]|No\.\d+|Aグレード|AA)")
 
+# --- コロンビア産グレードマスタ(FNC公式: cafedecolombia.jp/colombia/specialty/grade/) --
+# 「エクセルソ(Excelso)」は7サブグレード共通の親カテゴリ名であり、単独では
+# 商品を特定できない(スクリーンサイズにより意味が変わる)。そのため実データの
+# 商品名にはサブグレード名(スプレモ等)のみが書かれ、「エクセルソ」自体が
+# 省略されているケースが多い(実データ確認済み: COFFEE ROASTERY MEGUROの
+# 「コロンビア　スプレモ」は商品名に「エクセルソ」を含まない)。よって判定は
+# サブグレード名の検出を起点にし、見つかった場合のみ「エクセルソ+サブ名」の
+# 複合語を組み立てて返す(サブグレードが特定できない「エクセルソ」単独の
+# 表記は、7グレードのどれを指すか商品名からは判別できないため、あえてタグを
+# 付与しない)。「エクセルソ」「エキセルソ」の表記ゆれは、常にこちら側で
+# 「エクセルソ」に正規化して組み立てるため、シノニム辞書に別途持つ必要はない。
+_COLOMBIA_GRADE_SYNONYMS_PATH = os.path.join(
+    os.path.dirname(os.path.abspath(__file__)), "..", "data", "colombia_grade_synonyms.json"
+)
+with open(_COLOMBIA_GRADE_SYNONYMS_PATH, encoding="utf-8") as _f:
+    _COLOMBIA_GRADE_MASTER = json.load(_f)
+
+COLOMBIA_GRADE_SYNONYMS = {
+    canonical: entry["synonyms"] for canonical, entry in _COLOMBIA_GRADE_MASTER.items()
+}
+
+
+def detect_colombia_grade(text):
+    """コロンビア産商品のテキストからFNCのサブグレードを検出し、
+    「エクセルソ+サブ名」の複合語として返す(検出できなければNone)。
+    """
+    if not text:
+        return None
+    lowered = text.lower()
+    for canonical, synonyms in COLOMBIA_GRADE_SYNONYMS.items():
+        for kw in synonyms:
+            if kw.lower() in lowered:
+                return f"エクセルソ {canonical}"
+    return None
+
 ROAST_KEYWORDS = {
     "ライト": "ライトロースト", "シナモン": "シナモンロースト",
     "ミディアム": "ミディアムロースト", "ハイ": "ハイロースト",
@@ -453,10 +488,14 @@ def parse_product(raw_name: str) -> dict:
         if kw.lower() in lowered_name and tag not in result["post_processing_tags"]:
             result["post_processing_tags"].append(tag)
 
-    # グレード
-    m = GRADE_PATTERN.search(raw_name)
-    if m:
-        result["grade"] = m.group(1)
+    # グレード(コロンビア産はFNC公式のサブグレード名から「エクセルソ+サブ名」を
+    # 組み立てる。それ以外の産地は従来通りGRADE_PATTERNの一般的な等級表記に従う)
+    if result["origin_country"] == "コロンビア":
+        result["grade"] = detect_colombia_grade(raw_name)
+    else:
+        m = GRADE_PATTERN.search(raw_name)
+        if m:
+            result["grade"] = m.group(1)
 
     # 焙煎度
     for kw, roast in ROAST_KEYWORDS.items():
@@ -477,6 +516,11 @@ def apply_category_hint_fallback(parsed: dict, category_hint: str) -> dict:
             parsed["origin_country"] = country
             parsed["origin_source"] = "category_hint"
             break
+    # 産地がカテゴリ情報からしか判明しなかった場合、parse_product内では
+    # まだコロンビアと確定していないためグレード判定が走っていない。
+    # ここで改めて商品名からのコロンビアグレード検出を試みる。
+    if parsed["origin_country"] == "コロンビア" and not parsed["grade"]:
+        parsed["grade"] = detect_colombia_grade(parsed["raw_name"])
     return parsed
 
 

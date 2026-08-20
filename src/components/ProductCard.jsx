@@ -255,9 +255,14 @@ export function ProductCard({ product, onOpenMap, onLearnOrigin, isFavorite, onT
               />
             ))}
             {staticTags.map((tag) => (
+              // farmNoteは店舗によって数百字の自由記述になり得るため(例:
+              // COFFEE ROASTERY MEGUROの産地解説)、一覧カードでは1行に
+              // truncateして簡潔に表示する。全文は商品詳細モーダル
+              // (ProductDetailModalのDetailRow)側で省略せず表示する。
               <span
                 key={tag}
-                className="text-[11px] px-2 py-0.5 rounded-full bg-[#3B2211] text-[var(--accent-muted)] border border-[#4A3A2A]"
+                title={tag}
+                className="text-[11px] px-2 py-0.5 rounded-full bg-[#3B2211] text-[var(--accent-muted)] border border-[#4A3A2A] max-w-[220px] truncate whitespace-nowrap"
               >
                 {tag}
               </span>

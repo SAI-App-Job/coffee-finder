@@ -1,0 +1,37 @@
+{
+  "スプレモ": {
+    "en": "Supremo",
+    "screen_size": "17以上",
+    "synonyms": ["スプレモ", "supremo"]
+  },
+  "プレミアム": {
+    "en": "Premium",
+    "screen_size": "14-18",
+    "synonyms": ["プレミアム", "premium"]
+  },
+  "エクストラ": {
+    "en": "Extra",
+    "screen_size": "16",
+    "synonyms": ["エクストラ", "extra"]
+  },
+  "ヨーロッパ": {
+    "en": "Europa",
+    "screen_size": "15以上",
+    "synonyms": ["ヨーロッパ", "エウロパ", "europa"]
+  },
+  "UGQ": {
+    "en": "UGQ",
+    "screen_size": "14-15",
+    "synonyms": ["UGQ", "ugq"]
+  },
+  "マラゴジッペ": {
+    "en": "Maragogype",
+    "screen_size": "17",
+    "synonyms": ["マラゴジッペ", "マラゴジペ", "maragogype"]
+  },
+  "カラコル": {
+    "en": "Caracol",
+    "screen_size": "12(平豆)",
+    "synonyms": ["カラコル", "ピーベリー", "peaberry", "caracol"]
+  }
+}

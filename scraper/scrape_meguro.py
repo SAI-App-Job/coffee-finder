@@ -126,7 +126,7 @@ def build_record(product_url: str, title: str, description_text: str, price: int
         "roast_hint": None,
         "roast_selectable": False,
         "post_processing_tags": parsed["post_processing_tags"],
-        "farm_note": description_text.strip()[:200] if description_text else None,
+        "farm_note": description_text.strip() if description_text else None,
         "flavor_notes": None,
         "blend_components": [],
         "decaf_process": decaf_process,

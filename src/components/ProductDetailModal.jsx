@@ -10,7 +10,7 @@ function DetailRow({ label, value, detail }) {
   return (
     <div>
       <p className="text-[11px] tracking-wide text-[var(--accent-label)] uppercase mb-1">{label}</p>
-      <p className="text-[13px] text-[#F2E9DD]">{value}</p>
+      <p className="text-[13px] text-[#F2E9DD] whitespace-pre-line">{value}</p>
       {detail && <p className="text-[12px] text-[#B8A891] leading-relaxed mt-1">{detail}</p>}
     </div>
   );

@@ -28,5 +28,10 @@ export function getGradeExplanation(grade, country, designatedBrand) {
     return "生産地・店舗によって意味が異なる通し番号やロット表記。ブラジルでは欠点数による等級(No.2〜8)を指すことが多い。";
   }
 
+  if (grade.startsWith("エクセルソ")) {
+    const subGrade = grade.replace(/^エクセルソ\s*/, "");
+    return `コロンビア(FNC)のスクリーンサイズ(豆の粒の大きさ)による等級体系。「エクセルソ」は7段階の等級群に共通する親カテゴリ名で、単独では等級を特定できないため常にサブグレード名と組み合わせて表記される。本商品のサブグレードは「${subGrade}」。`;
+  }
+
   return "国別グレードは、標高・スクリーンサイズ(粒の大きさ)・欠点数など、生産国ごとに異なる基準で決まる。同じ表記でも国が違えば意味が異なることがある。";
 }
