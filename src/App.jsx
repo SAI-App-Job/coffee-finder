@@ -75,7 +75,6 @@ export default function CoffeeProductList() {
   const [filters, setFilters] = useState({
     country: new Set(),
     prefecture: new Set(),
-    shop: new Set(),
     flavorCategory: new Set(),
     roast: new Set(),
   });
@@ -96,7 +95,6 @@ export default function CoffeeProductList() {
     setFilters({
       country: new Set([country]),
       prefecture: new Set(),
-      shop: new Set(),
       flavorCategory: new Set(),
       roast: new Set(),
     });
@@ -105,7 +103,7 @@ export default function CoffeeProductList() {
   };
 
   const activeCount =
-    filters.country.size + filters.prefecture.size + filters.shop.size + filters.flavorCategory.size + filters.roast.size;
+    filters.country.size + filters.prefecture.size + filters.flavorCategory.size + filters.roast.size;
 
   const filtered = useMemo(() => {
     const q = searchQuery.trim().toLowerCase();
@@ -122,7 +120,6 @@ export default function CoffeeProductList() {
         if (!countries.some((c) => filters.country.has(c))) return false;
       }
       if (filters.prefecture.size && !filters.prefecture.has(p.prefecture)) return false;
-      if (filters.shop.size && !filters.shop.has(p.shopName)) return false;
       if (filters.flavorCategory.size) {
         const productCats = categorizeFlavorNotes(p.flavorNotes).map((c) => c.ja);
         const hasMatch = productCats.some((ja) => filters.flavorCategory.has(ja));
@@ -209,7 +206,6 @@ export default function CoffeeProductList() {
   const activeChips = [
     ...[...filters.country].map((v) => ({ dim: "country", v })),
     ...[...filters.prefecture].map((v) => ({ dim: "prefecture", v })),
-    ...[...filters.shop].map((v) => ({ dim: "shop", v })),
     ...[...filters.flavorCategory].map((v) => ({ dim: "flavorCategory", v })),
     ...[...filters.roast].map((v) => ({ dim: "roast", v })),
   ];

@@ -1,9 +1,38 @@
 import { useState, useRef, useEffect } from "react";
 import { Search, Check, X } from "lucide-react";
 import { ROAST_LEVELS } from "../data/roastLevels";
-import { ORIGIN_COUNTRIES, PREFECTURES, SHOP_NAMES } from "../data/products";
+import { PREFECTURES } from "../data/products";
+import { ORIGIN_GUIDE, ORIGIN_ZONE_ORDER, ORIGIN_ZONE_LABELS } from "../data/originGuide";
 import { FLAVOR_WHEEL_DATA, FLAVOR_CATEGORY_OPTIONS } from "../data/flavorWheel";
 import { FILTER_SEARCH_THRESHOLD } from "../data/navigation";
+
+// 産地(国)フィルタの選択肢は、店舗の実データ(originCountryの表記ゆれが多い)
+// ではなく、17ヶ国を整理済みのORIGIN_GUIDEを唯一の情報源とする。アフリカ/
+// 中南米/アジアの3グループに分け、産地タブの地図と同じ見出し・順序で表示する。
+const COUNTRIES_BY_ZONE = ORIGIN_ZONE_ORDER.map((zone) => ({
+  zone,
+  label: ORIGIN_ZONE_LABELS[zone],
+  countries: ORIGIN_GUIDE.filter((o) => o.zone === zone).map((o) => o.country),
+}));
+
+function FilterChip({ opt, active, onToggle, dotColor }) {
+  return (
+    <button
+      onClick={() => onToggle(opt)}
+      className={`flex items-center gap-1.5 text-[13px] px-3 py-1.5 rounded-full border-2 transition-all ${
+        active
+          ? "bg-white text-[#231810] border-white font-medium shadow-[0_0_0_3px_var(--accent-glow)]"
+          : "border-[#4A3A2A] text-[#B8A891] hover:border-[var(--accent-label)]"
+      }`}
+    >
+      {dotColor && (
+        <span className="w-2 h-2 rounded-full shrink-0" style={{ backgroundColor: dotColor }} />
+      )}
+      {active && <Check size={12} strokeWidth={3} />}
+      {opt}
+    </button>
+  );
+}
 
 export function FilterSection({ title, options, selected, onToggle, getColor }) {
   const [query, setQuery] = useState("");
@@ -44,30 +73,71 @@ export function FilterSection({ title, options, selected, onToggle, getColor }) 
         {orderedOptions.length === 0 && (
           <p className="text-[12px] text-[#8B7361] py-1">「{query}」に一致する項目がありません</p>
         )}
-        {orderedOptions.map((opt) => {
-          const active = selected.has(opt);
-          const dotColor = getColor ? getColor(opt) : null;
-          return (
-            <button
-              key={opt}
-              onClick={() => onToggle(opt)}
-              className={`flex items-center gap-1.5 text-[13px] px-3 py-1.5 rounded-full border-2 transition-all ${
-                active
-                  ? "bg-white text-[#231810] border-white font-medium shadow-[0_0_0_3px_var(--accent-glow)]"
-                  : "border-[#4A3A2A] text-[#B8A891] hover:border-[var(--accent-label)]"
-              }`}
-            >
-              {dotColor && (
-                <span
-                  className="w-2 h-2 rounded-full shrink-0"
-                  style={{ backgroundColor: dotColor }}
-                />
-              )}
-              {active && <Check size={12} strokeWidth={3} />}
-              {opt}
-            </button>
-          );
-        })}
+        {orderedOptions.map((opt) => (
+          <FilterChip
+            key={opt}
+            opt={opt}
+            active={selected.has(opt)}
+            onToggle={onToggle}
+            dotColor={getColor ? getColor(opt) : null}
+          />
+        ))}
+      </div>
+    </div>
+  );
+}
+
+// 産地(国)専用の絞り込みセクション。アフリカ/中南米/アジアの見出しごとに
+// 国を分けて表示することで、17ヶ国が並んでも見渡しやすくする(産地タブの
+// マップと同じグルーピング)。検索時は各グループ内で絞り込み、該当なしの
+// グループは見出しごと非表示にする。
+function CountryFilterSection({ title, selected, onToggle }) {
+  const [query, setQuery] = useState("");
+  const totalCount = COUNTRIES_BY_ZONE.reduce((sum, g) => sum + g.countries.length, 0);
+  const isSearchable = totalCount > FILTER_SEARCH_THRESHOLD;
+  const q = query.trim().toLowerCase();
+
+  const visibleGroups = COUNTRIES_BY_ZONE.map((g) => ({
+    ...g,
+    countries: q ? g.countries.filter((c) => c.toLowerCase().includes(q)) : g.countries,
+  })).filter((g) => g.countries.length > 0);
+
+  return (
+    <div>
+      <div className="flex items-center justify-between mb-2">
+        <p className="text-[12px] text-[#8B7361]">{title}</p>
+        {selected.size > 0 && (
+          <span className="text-[11px] text-[var(--accent)] font-medium">{selected.size}件選択中</span>
+        )}
+      </div>
+
+      {isSearchable && (
+        <div className="relative mb-2">
+          <Search size={12} className="absolute left-2.5 top-1/2 -translate-y-1/2 text-[#8B7361]" strokeWidth={2} />
+          <input
+            type="text"
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+            placeholder={`${title}で検索(${totalCount}件)`}
+            className="w-full pl-7 pr-2.5 py-1.5 rounded-lg bg-[#3B2211] border border-[#4A3A2A] text-[12px] text-[#F2E9DD] placeholder:text-[#8B7361] focus:outline-none focus:border-[var(--accent-label)]"
+          />
+        </div>
+      )}
+
+      <div className="flex flex-col gap-3 max-h-[280px] overflow-y-auto overscroll-contain">
+        {visibleGroups.length === 0 && (
+          <p className="text-[12px] text-[#8B7361] py-1">「{query}」に一致する項目がありません</p>
+        )}
+        {visibleGroups.map((g) => (
+          <div key={g.zone}>
+            <p className="text-[10px] tracking-wide text-[#8B7361] uppercase mb-1.5">{g.label}</p>
+            <div className="flex flex-wrap gap-2">
+              {g.countries.map((opt) => (
+                <FilterChip key={opt} opt={opt} active={selected.has(opt)} onToggle={onToggle} />
+              ))}
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );
@@ -152,7 +222,7 @@ export function FilterSheet({ open, onClose, filters, setFilters, resultCount })
   };
 
   const clearAll = () =>
-    setFilters({ country: new Set(), prefecture: new Set(), shop: new Set(), flavorCategory: new Set(), roast: new Set() });
+    setFilters({ country: new Set(), prefecture: new Set(), flavorCategory: new Set(), roast: new Set() });
 
   return (
     <div
@@ -176,7 +246,21 @@ export function FilterSheet({ open, onClose, filters, setFilters, resultCount })
           </button>
         </div>
 
+        {/* 発見につながりやすい軸(産地・風味・焙煎度)を上に、地理的な絞り込み
+            (都道府県)を下に配置している */}
         <div className="flex flex-col gap-5">
+          <CountryFilterSection
+            title="産地(国)"
+            selected={filters.country}
+            onToggle={(v) => toggle("country", v)}
+          />
+          <FilterSection
+            title="風味カテゴリ(フレーバーホイール)"
+            options={FLAVOR_CATEGORY_OPTIONS}
+            selected={filters.flavorCategory}
+            onToggle={(v) => toggle("flavorCategory", v)}
+            getColor={(opt) => FLAVOR_WHEEL_DATA.find((c) => c.ja === opt)?.color}
+          />
           <FilterSection
             title="焙煎度(浅→深)"
             options={ROAST_LEVELS.map((r) => r.key)}
@@ -185,29 +269,10 @@ export function FilterSheet({ open, onClose, filters, setFilters, resultCount })
             getColor={(opt) => ROAST_LEVELS.find((r) => r.key === opt)?.color}
           />
           <FilterSection
-            title="産地(国)"
-            options={ORIGIN_COUNTRIES}
-            selected={filters.country}
-            onToggle={(v) => toggle("country", v)}
-          />
-          <FilterSection
             title="都道府県"
             options={PREFECTURES}
             selected={filters.prefecture}
             onToggle={(v) => toggle("prefecture", v)}
-          />
-          <FilterSection
-            title="店舗"
-            options={SHOP_NAMES}
-            selected={filters.shop}
-            onToggle={(v) => toggle("shop", v)}
-          />
-          <FilterSection
-            title="風味カテゴリ(フレーバーホイール)"
-            options={FLAVOR_CATEGORY_OPTIONS}
-            selected={filters.flavorCategory}
-            onToggle={(v) => toggle("flavorCategory", v)}
-            getColor={(opt) => FLAVOR_WHEEL_DATA.find((c) => c.ja === opt)?.color}
           />
         </div>
 

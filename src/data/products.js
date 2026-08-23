@@ -157,6 +157,4 @@ export const MOCK_PRODUCTS = [
   },
 ];
 
-export const ORIGIN_COUNTRIES = Array.from(new Set(MOCK_PRODUCTS.map((p) => p.originCountry)));
 export const PREFECTURES = Array.from(new Set(MOCK_PRODUCTS.map((p) => p.prefecture)));
-export const SHOP_NAMES = Array.from(new Set(MOCK_PRODUCTS.map((p) => p.shopName)));

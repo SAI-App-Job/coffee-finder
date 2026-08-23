@@ -189,6 +189,7 @@ export const ORIGIN_GUIDE = [
   },
   {
     country: "コスタリカ",
+    zone: "americas",
     tagline: "明るくクリーンな酸味と、しっかりしたコク。ハニープロセス発祥の地",
     regions: "タラス、ウエストバレー",
     terroir:
@@ -212,6 +213,7 @@ export const ORIGIN_GUIDE = [
   },
   {
     country: "タンザニア",
+    zone: "africa",
     tagline: "キリマンジャロ山麓が育む、明るい酸味とワインのような風味",
     regions: "キリマンジャロ山麓",
     terroir:
@@ -235,6 +237,11 @@ export const ORIGIN_GUIDE = [
   },
   {
     country: "イエメン",
+    // 地理的には中東だが、originMapPaths.jsのCOUNTRY_MAP_POSITIONS上の座標(x:204.1)は
+    // 「アフリカ」プリセット領域(x:80〜326)に含まれ「アジア」領域(x:247〜554)には
+    // 含まれない(紅海を挟んでアフリカの角に近い投影位置のため)。産地タブの地図の
+    // ズームボタンと矛盾しないよう、この座標に合わせてzoneをafricaとしている。
+    zone: "africa",
     tagline: "コーヒー文化発祥の地の一つ。ワイニーで複雑な風味",
     regions: "マタリ地区(バニーマタル)",
     terroir:
@@ -257,6 +264,7 @@ export const ORIGIN_GUIDE = [
   },
   {
     country: "ベトナム",
+    zone: "asia",
     tagline: "世界第2位の生産量。力強い苦味とコクのロブスタが主体",
     regions: "中部高原(ダクラク省等)",
     terroir:
@@ -280,6 +288,11 @@ export const ORIGIN_GUIDE = [
   },
   {
     country: "ハワイ",
+    // originMapPaths.jsの座標(x:622)は「アジア」領域(〜554)にも「中南米」領域(726〜)にも
+    // 含まれず太平洋上の空白部分にあるため、地図のズームボタンからは機械的に決められない。
+    // アメリカ合衆国の一部という政治的な区分に合わせ、他の北米産地(メキシコ等)と同じ
+    // 「中南米」グループに含めている。
+    zone: "americas",
     tagline: "アメリカ唯一のコーヒー産地。マイルドな酸味とナッツのような風味",
     regions: "コナ地区(南コナ・北コナ)",
     terroir:
@@ -303,6 +316,7 @@ export const ORIGIN_GUIDE = [
   },
   {
     country: "メキシコ",
+    zone: "americas",
     tagline: "小規模農家が支える、穏やかな酸とチョコレートのようなやさしい甘み",
     regions: "チアパス、オアハカ、ベラクルス、プエブラ",
     terroir:
@@ -326,6 +340,7 @@ export const ORIGIN_GUIDE = [
   },
   {
     country: "ペルー",
+    zone: "americas",
     tagline: "アンデスの小規模有機農家が育む、クリーンでバランスの取れた甘み",
     regions: "カハマルカ、サンマルティン、フニン(チャンチャマヨ)、クスコ",
     terroir:
@@ -352,6 +367,7 @@ export const ORIGIN_GUIDE = [
   },
   {
     country: "エルサルバドル",
+    zone: "americas",
     tagline: "内戦を経て残った伝統品種ブルボンが生む、上品でバランスの取れたカップ",
     regions: "アパネカ・イラマテペック、サンタアナ、テカパ・チチョンテペック",
     terroir:
@@ -378,6 +394,7 @@ export const ORIGIN_GUIDE = [
   },
   {
     country: "ルワンダ",
+    zone: "africa",
     tagline: "「千の丘の国」の高地ウォッシュドが生む、紅茶のように澄んだ酸とフローラルな香り",
     regions: "西部州(キブ湖岸・ニャマシェケ)、南部州(フイエ)、北部州(ガケンケ)",
     terroir:
@@ -404,6 +421,7 @@ export const ORIGIN_GUIDE = [
   },
   {
     country: "パナマ",
+    zone: "americas",
     tagline: "ゲイシャ種が世界の価格記録を塗り替え続ける、小さな名門産地",
     regions: "ボケテ、ボルカン",
     terroir:
@@ -425,3 +443,13 @@ export const ORIGIN_GUIDE = [
     sources: ["Sweet Maria's", "Cafe Imports", "Genuine Origin", "Royal Coffee"],
   },
 ];
+
+// 産地(国)フィルタをアフリカ/中南米/アジアの見出し付きで表示するための表示順・
+// ラベル。産地タブの地図のズームプリセット(originMapPaths.jsのMAP_REGION_PRESETS、
+// アフリカ→中南米→アジアの順)と揃えている。
+export const ORIGIN_ZONE_ORDER = ["africa", "americas", "asia"];
+export const ORIGIN_ZONE_LABELS = {
+  africa: "アフリカ",
+  americas: "中南米",
+  asia: "アジア",
+};
