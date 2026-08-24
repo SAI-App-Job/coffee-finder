@@ -2,42 +2,63 @@
 // 豆知識(Discovery Facts)。これまでの調査全体から、商品を探している最中にも
 // ふと発見・学びが得られるよう、短いトリビアとして抜粋している。
 // ---------------------------------------------------------------------------
+
+/**
+ * @typedef {Object} DiscoveryFact
+ * @property {string} title
+ * @property {string} text
+ * @property {string} [source] - 出典(docs/配下の調査資料ファイル名など)。
+ *   新規追加時は検証可能な出典を必ず添えること。2026-08時点で棚卸しの結果、
+ *   出典未特定のまま残っている既存エントリが12件あり、それらは暫定的な例外として
+ *   sourceを省略している(詳細はvalidateDiscoveryFacts()の警告を参照)。
+ */
+
+/** @type {DiscoveryFact[]} */
 export const DISCOVERY_FACTS = [
   {
     title: "「精選」と「精製」は別の言葉",
     text: "コーヒーチェリーを生豆にする工程は本来「精選」。「精製」は化学用語(混合物を純物質にする工程)からの誤用・慣用表記だが、実店舗ではどちらの表記も使われている。",
+    source: "docs/coffee-processing-and-grades.md",
   },
   {
     title: "クリスタルマウンテンはジャマイカ産ではない",
     text: "名前がブルーマウンテンと似ているため誤解されやすいが、特定銘柄としての「クリスタルマウンテン」はキューバ産のコーヒーを指す。",
+    source: "docs/coffee-designated-brands.md",
   },
   {
     title: "マンデリンとガヨマウンテンは排他的な関係",
     text: "どちらも北スマトラ島産だが、タケンゴン周辺(ガヨマウンテン地区)産かどうかで名乗れる特定銘柄名が変わる。同じ島でも重ならない。",
+    source: "docs/coffee-designated-brands.md",
   },
   {
     title: "スマトラ式は2段階で乾燥させる",
     text: "マンデリン等で使われる「ウェットハルド」は、農家段階での1次乾燥→高含水率のまま脱穀→2次乾燥という独自工程。生豆が深緑色になるのもこのため。",
+    source: "docs/coffee-processing-and-grades.md",
   },
   {
     title: "同じ「G1」でも国が違えば意味が違う",
     text: "エチオピアのG1は欠点0〜3個(300gあたり)の最高等級。インドネシアのG1は欠点0〜11個程度と、同じ表記でも基準の厳しさが異なる。",
+    source: "docs/coffee-processing-and-grades.md",
   },
   {
     title: "ブルーマウンテンは商標で守られている",
     text: "ジャマイカのJACRA(農産物規制庁)が「ブルーマウンテン」の名称を商標として独占保有し、認証を受けた業者しか名乗れない。",
+    source: "docs/coffee-country-associations.md",
   },
   {
     title: "ゲイシャはエチオピア原産",
     text: "華やかな香りで知られる「ゲイシャ(Geisha/Gesha)」種は、実はパナマではなくエチオピア原産。パナマの農園で栽培されたロットがオークションで高値を記録し有名になった。",
+    source: "docs/coffee-origin-new5-countries.md",
   },
   {
     title: "フレーバーホイールの生みの親",
     text: "SCAのコーヒーテイスターズフレーバーホイールは、カンザス州立大学が作成したWCR(ワールドコーヒーリサーチ)のセンサリーレキシコンが基になっている。",
+    source: "docs/coffee-world-coffee-research.md",
   },
   {
     title: "スペシャルティの基準は「点数」から「4つの軸」へ",
     text: "SCAは2024年、従来の「カッピングスコア80点以上」という単一基準から、物理・記述・嗜好・外的要因の4つを組み合わせるCVAという評価体系に移行した。",
+    source: "docs/coffee-value-assessment.md",
   },
   {
     title: "ハワイには「ハワイ産と名乗れる最低ライン」がある",
@@ -54,14 +75,17 @@ export const DISCOVERY_FACTS = [
   {
     title: "ブラジルの「タイプ1」は実在しない",
     text: "ブラジルの欠点数グレード(No.2〜8)は、最上位表記の「No.1」が理論上の基準として存在するのみで、実際の流通ではNo.2が事実上の最高等級として扱われる。",
+    source: "docs/coffee-processing-and-grades.md",
   },
   {
     title: "グアテマラだけの輸出税",
     text: "グアテマラでは輸出額の1%が唯一の輸出税として課され、Anacafé(全国コーヒー協会)の運営財源になっている。他国にはあまり見られない仕組み。",
+    source: "docs/coffee-country-associations.md",
   },
   {
     title: "最低輸出基準がある国とない国",
     text: "コロンビアは法律で「エキセルソ以上でなければ輸出できない」と定めているが、隣国グアテマラには最低輸出等級の定めがなく、低品質でも輸出自体は可能という対照的な制度。",
+    source: "docs/coffee-country-associations.md",
   },
   {
     title: "インドネシアには輸出者団体が2つある",
@@ -78,18 +102,22 @@ export const DISCOVERY_FACTS = [
   {
     title: "「フレーバー」には2つの意味がある",
     text: "風味を表す「フレーバー」と、人工的に香り付けした「フレーバーコーヒー」の略としての「フレーバー」は、まったく別の意味。パーサー開発中、この2つを混同しかけたことがある。",
+    source: "docs/coffee-flavor-notes.md",
   },
   {
     title: "香りにも専門用語の使い分けがある",
     text: "挽いた粉から香る「フレグランス」と、抽出液から立ち上る「アロマ」は、専門的には別の香りとして区別される。",
+    source: "docs/coffee-flavor-notes.md",
   },
   {
     title: "「シティロースト」はニューヨーク発祥",
     text: "焙煎度の呼び名「シティロースト」は、この焙煎度がニューヨーク・シティで最も好まれたことに由来する。",
+    source: "docs/coffee-roast-levels.md",
   },
   {
     title: "昔はヨーロッパの国ごとに好みの焙煎度が違った",
     text: "20世紀初頭、イギリスは浅煎り好み、フランス・イタリアは深煎り好みと、国によってコーヒーの焙煎文化がはっきり分かれていた。",
+    source: "docs/coffee-roast-levels.md",
   },
   {
     title: "「ヘアルーム」は品種名ではない",
@@ -98,6 +126,7 @@ export const DISCOVERY_FACTS = [
   {
     title: "コーヒーの木の寿命は20〜30年",
     text: "一度植えた品種は長期間栽培し続けることになるため、生産者にとって品種選びは20〜30年先まで影響する重い判断になる。",
+    source: "docs/coffee-world-coffee-research.md",
   },
   {
     title: "ジャマイカは2025年のハリケーンで収穫の4割を失った",
@@ -122,57 +151,106 @@ export const DISCOVERY_FACTS = [
   {
     title: "コロンビア・ケニア・タンザニアは「同じ仲間」",
     text: "世界のコーヒー価格指標(I-CIP)では、地理的に離れたこの3カ国だけで「Colombian Milds」という一つの価格グループを構成する。共通点は地理ではなく、完全ウォッシュド・高地栽培という精選品質。",
+    source: "docs/coffee-ico.md",
   },
   {
     title: "エチオピアは価格上「ブラジルの仲間」",
     text: "国際コーヒー機関(ICO)の価格指標では、エチオピアはブラジルと同じ「Brazilian Naturals」グループに分類される。産地の性格は正反対だが、「ナチュラル精選」という製法軸でグループ化されているため。",
+    source: "docs/coffee-ico.md",
   },
   {
     title: "コーヒー価格の重み付けは生きている",
     text: "世界のコーヒー価格指標(I-CIP)を構成する4グループの重み付けは、2005年に「13/24/29/34%」だったものが2007年には「14/20/31/35%」に改定されるなど、世界の生産構造の変化に応じて定期的に見直される。",
+    source: "docs/coffee-ico.md",
   },
   {
     title: "「80点基準」はSCA自身が2021年に卒業していた",
     text: "「スペシャルティコーヒー=カッピング80点以上」という基準は、実はSCA自身が2021年に「特性ゆえに市場で高い価値を持つコーヒー」という定性的な定義に置き換えている。ただし旧基準は業界の通説として今も根強く使われ続けている。",
+    source: "docs/coffee-value-assessment.md",
   },
   {
     title: "コーヒー鑑定士資格「Qグレーダー」の運営元が変わった",
     text: "コーヒーの品質を国際基準で鑑定する資格「Qグレーダー」は、2003年からCQI(コーヒー品質協会)が運営してきたが、2025年10月からSCAへ完全移管された。新制度はCVA(4軸評価体系)を基盤にしている。",
+    source: "docs/coffee-industry-bodies.md",
   },
   {
     title: "ロブスタの鑑定士はウガンダが認定する",
     text: "アラビカ用のQグレーダー資格とは別に、ロブスタ版のQグレーダーは、ウガンダコーヒー開発公社(UCDA)という一国の政府機関が国際的な認定を担っている。",
+    source: "docs/coffee-industry-bodies.md",
   },
   {
     title: "「コーヒーのオリンピック」はブラジルのオークションから始まった",
     text: "国際品評会Cup of Excellenceは、1999年にブラジルで行われた「Best Brazil」というオンラインオークション企画が起源。設立時の資金にはICO(国際コーヒー機関)も関わっていた。",
+    source: "docs/coffee-industry-bodies.md",
   },
   {
     title: "「緑のカエル」は合併で生まれたロゴ",
     text: "サステナビリティ認証でおなじみの「緑のカエル」ことRainforest Allianceは、2018年にUTZ(グアテマラ人生産者とオランダ人ロースターが創設)と合併して生まれた統合ブランド。",
+    source: "docs/coffee-industry-bodies.md",
   },
   {
     title: "SCAJ誕生のきっかけは「コーヒークライシス」だった",
     text: "日本スペシャルティコーヒー協会(SCAJ、2003年設立)が生まれた背景には、2001〜02年に国際相場が史上最低価格をつけ、生産国も消費国も疲弊した「コーヒークライシス」への危機感があった。",
+    source: "docs/coffee-industry-bodies.md",
   },
   {
     title: "サパティスタ運動が今のメキシココーヒーの姿を作った",
     text: "1994年のサパティスタ民族解放軍(EZLN)蜂起は、土地制度をめぐる反発から起きた。蜂起後の土地再分配により、チアパス州では大農園化が進まず、今日まで続く小規模農家中心の生産構造が形づくられた。",
+    source: "docs/coffee-origin-new5-countries.md",
   },
   {
     title: "内戦が皮肉にも伝統品種を守った",
     text: "1979〜1992年のエルサルバドル内戦下、多くの中米諸国が高収量品種への植え替えを進めていた1980年代、同国の農園は放置されたことで、結果的に伝統品種のティピカ・ブルボンやパカマラが高い比率で温存された。",
+    source: "docs/coffee-origin-new5-countries.md",
   },
   {
     title: "ルワンダのコーヒー復興を導いたのは女性たちだった",
     text: "1994年のジェノサイド後、夫を失った女性たちの自立支援を目的にマラバの協同組合が発足するなど、女性たちが協同組合の主要な運営者としてコーヒー産業の復興を牽引してきた。",
+    source: "docs/coffee-origin-new5-countries.md",
   },
   {
     title: "パナマゲイシャは1kgあたり3万ドルを超えた",
     text: "2004年、ハシエンダ・ラ・エスメラルダのゲイシャ種ロットが当時の記録価格で落札され「業界を一変させた」と評された。その後も記録は更新を重ね、2025年には1kgあたり30,204ドルという世界記録を樹立している。",
+    source: "docs/coffee-origin-new5-countries.md",
   },
   {
     title: "タンザニアには「自国だけの」等級規格がない",
     text: "タンザニアは独自のコーヒー等級規格を持たず、東アフリカコミュニティ(EAC)共通規格「EAS 130:1999」を採用している。事務局は実はタンザニアのアルーシャに置かれているが、ウガンダも同じ規格に準拠していることをICOへの提出資料で明らかにしており、東アフリカの複数国が規格を共有している実例になっている。",
+    source: "docs/coffee-tanzania-grades.md",
   },
 ];
+
+const MISSING_SOURCE_ALLOWLIST = new Set([
+  "ハワイには「ハワイ産と名乗れる最低ライン」がある",
+  "タンザニアは輸出まで一つの機関が管理",
+  "ブラジルは世界初の格付け国",
+  "インドネシアには輸出者団体が2つある",
+  "イエメンには公的な等級認証機関が事実上ない",
+  "ベトナムはロブスタが9割超",
+  "「ヘアルーム」は品種名ではない",
+  "ジャマイカは2025年のハリケーンで収穫の4割を失った",
+  "グアテマラには300を超える微気候がある",
+  "コロンビアは地域で収穫期が真逆になる",
+  "ケニアのSL28はカシス風味の立役者",
+  "ブラジルの生産地はある年の大霜害で移動した",
+]);
+
+function validateDiscoveryFacts() {
+  const missing = DISCOVERY_FACTS.filter((fact) => !fact.source);
+  const unexpected = missing.filter((fact) => !MISSING_SOURCE_ALLOWLIST.has(fact.title));
+  if (unexpected.length > 0) {
+    throw new Error(
+      "[discoveryFacts] source未設定の新規エントリが見つかりました。出典を明記するか、" +
+        "既存の調査不足として扱う場合はMISSING_SOURCE_ALLOWLISTに追記してください: " +
+        unexpected.map((fact) => fact.title).join(" / ")
+    );
+  }
+  if (missing.length > 0) {
+    console.warn(
+      `[discoveryFacts] source未確定のまま残っている棚卸し未了エントリが${missing.length}件あります: ` +
+        missing.map((fact) => fact.title).join(" / ")
+    );
+  }
+}
+
+validateDiscoveryFacts();
