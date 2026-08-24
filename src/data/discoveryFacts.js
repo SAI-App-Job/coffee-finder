@@ -66,7 +66,7 @@ export const DISCOVERY_FACTS = [
   {
     title: "タンザニアは輸出まで一つの機関が管理",
     text: "Tanzania Coffee Board(タンザニアコーヒー局)は、法律により豆の格付け・オークション運営・輸出許可までを一元的に管理する、珍しいタイプの政府機関。",
-    source: "Coffee Industry Act 2001(法律原文、ecolex.org/tanzlii.org)",
+    source: "docs/coffee-discovery-facts-sources-9countries.md",
   },
   {
     title: "ブラジルは世界初の格付け国",
@@ -98,12 +98,12 @@ export const DISCOVERY_FACTS = [
   {
     title: "イエメンには公的な等級認証機関が事実上ない",
     text: "内戦の影響で標準計量局(SMA)が機能しておらず、モカマタリのような有名銘柄でも公式な等級規格・分類が存在しない。品質検証は民間団体や輸入業者に頼っている。",
-    source: "YSMO(イエメン標準計量品質管理機構)公式情報",
+    source: "docs/coffee-discovery-facts-sources-9countries.md",
   },
   {
     title: "ベトナムはロブスタが9割超",
     text: "世界第2位のコーヒー生産国ベトナムは、生産の9割超をロブスタ種が占める数少ない主要生産国。缶コーヒーやインスタントコーヒーの原料として世界中で使われている。",
-    source: "USDA GAIN報告書(複数年、Daily Coffee News経由)",
+    source: "docs/coffee-discovery-facts-sources-9countries.md",
   },
   {
     title: "「フレーバー」には2つの意味がある",
@@ -128,7 +128,7 @@ export const DISCOVERY_FACTS = [
   {
     title: "「ヘアルーム」は品種名ではない",
     text: "エチオピア産の説明でよく見る「heirloom(ヘアルーム)」は、特定の品種名ではなく、数千種にのぼるとされるエチオピア在来種の総称。",
-    source: "Perfect Daily Grind、Sprudge、World Coffee Research関連記事群",
+    source: "docs/coffee-discovery-facts-sources-9countries.md",
   },
   {
     title: "コーヒーの木の寿命は20〜30年",
@@ -138,27 +138,27 @@ export const DISCOVERY_FACTS = [
   {
     title: "ジャマイカは2025年のハリケーンで収穫の4割を失った",
     text: "2025年10月のハリケーンMelissaにより、ジャマイカでは成熟した作物の約4割が失われたと報告されている。",
-    source: "JCEA会長談(Jamaica Observer、Gleaner紙、農業省公式発表)",
+    source: "docs/coffee-discovery-facts-sources-9countries.md",
   },
   {
     title: "グアテマラには300を超える微気候がある",
     text: "活火山・休火山と豊かな生物多様性により、グアテマラ国内には300を超える微気候が存在するとされる。",
-    source: "Anacafé公式データ(Perfect Daily Grind、Genuine Origin等複数商社経由)",
+    source: "docs/coffee-discovery-facts-sources-9countries.md",
   },
   {
     title: "コロンビアは地域で収穫期が真逆になる",
     text: "赤道に近いコロンビアでは、北部のウイラと南部のナリーニョ等で主収穫・副次収穫の時期が入れ替わり、国全体では実質通年で収穫がある。",
-    source: "Mercanta(中南部9月〜1月、ミタカ4〜6月)",
+    source: "docs/coffee-discovery-facts-sources-9countries.md",
   },
   {
     title: "ケニアのSL28はカシス風味の立役者",
     text: "1930〜40年代に選抜された品種SL28は、干ばつに強い深い根を持ち、リンゴ酸主体の構造がケニアコーヒー特有のカシス(黒スグリ)様の風味を生み出す。",
-    source: "World Coffee Research公式品種カタログ",
+    source: "docs/coffee-discovery-facts-sources-9countries.md",
   },
   {
     title: "ブラジルの生産地はある年の大霜害で移動した",
     text: "1975年の大霜害をきっかけに、被害の大きかった南部の生産者が霜の少ないミナスジェライス州へ移動し、今の主要産地の構図ができた。",
-    source: "査読付き学術論文(Informe Gepec)、Perfect Daily Grind、Mercanta",
+    source: "docs/coffee-discovery-facts-sources-9countries.md",
   },
   {
     title: "コロンビア・ケニア・タンザニアは「同じ仲間」",

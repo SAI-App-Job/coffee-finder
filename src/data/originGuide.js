@@ -32,6 +32,10 @@ export const ORIGIN_GUIDE = [
       "G1〜G5の欠点数(300gあたり)による格付け。G1は欠点0〜3個の最高等級で、数字が大きいほど欠点が多い。ECX(エチオピア商品取引所)が取引システム内で運用するが、学術研究では格付けの均質性にばらつきがあるとの指摘もある。",
     officialBody:
       "ECX(エチオピア商品取引所・2008年設立)が生豆取引・格付け認証を運用。",
+    // 詳細出典: docs/coffee-discovery-facts-sources-9countries.md
+    // varietiesDetailの「heirloomは品種名ではない」という1文のみの出典。terroir/history等
+    // このエントリの他の記述までを裏付ける包括的な出典ではない点に注意(下記の注記もUIに表示)。
+    sources: ["World Coffee Research・Perfect Daily Grind(※heirloomの用語についての1文のみの出典)"],
   },
   {
     country: "ジャマイカ",
@@ -57,6 +61,10 @@ export const ORIGIN_GUIDE = [
       "No.1が最上位(木樽出荷)で、No.2、No.3と続き、規格外はピーベリー・トリアージとして扱われる。ブルーマウンテン地区独自の等級で、国別グレードとは別体系。",
     officialBody:
       "JACRA(旧Coffee Industry Board)が「ブルーマウンテン」の商標権を独占保有し、認証を受けた業者のみが名乗れる。",
+    // 詳細出典: docs/coffee-discovery-facts-sources-9countries.md
+    // historyの「2025年ハリケーンMelissaで収穫の4割を失った」という1文のみの出典。
+    // terroir/varietiesDetail等このエントリの他の記述までを裏付ける包括的な出典ではない点に注意。
+    sources: ["Jamaica Coffee Exporters Association・Jamaica Observer(※2025年ハリケーン被害についての1文のみの出典)"],
   },
   {
     country: "グアテマラ",
@@ -82,6 +90,10 @@ export const ORIGIN_GUIDE = [
       "標高による等級区分。SHB(Strictly Hard Bean)は標高1,350m前後以上が目安の最上位、それ未満はHB(Hard Bean)となる。標高が高いほど豆が硬く締まり高品質とされる。Anacaféが標高等級を検証するが、最低輸出等級の指定はなく低品質でも輸出自体は可能。",
     officialBody:
       "Anacafé(全国コーヒー協会・1960年設立)が輸出許可の権限を持つ。",
+    // 詳細出典: docs/coffee-discovery-facts-sources-9countries.md
+    // terroirの「300を超える微気候」という1文のみの出典。history/varietiesDetail等
+    // このエントリの他の記述までを裏付ける包括的な出典ではない点に注意。
+    sources: ["Anacafé公式データ(※微気候の数についての1文のみの出典)"],
   },
   {
     country: "コロンビア",
@@ -108,6 +120,10 @@ export const ORIGIN_GUIDE = [
       "「エクセルソ(Excelso)」は7段階の等級群に共通する親カテゴリ名で、単独では意味をなさず常に「エクセルソ+サブ名」の複合語(プレミアム/スプレモ/エクストラ/ヨーロッパ/UGQ/マラゴジッペ/カラコル、スクリーン12〜18)で表記される。スクリーン16以上とピーベリー(カラコル)のみがスペシャルティコーヒーに分類される。",
     officialBody:
       "FNC(全国コーヒー生産者連盟・1927年設立)がエキセルソ以上のみ輸出可能という最低輸出基準を法的に運用(Comité Nacional de Cafeteros決議第5号・2002年)。",
+    // 詳細出典: docs/coffee-discovery-facts-sources-9countries.md
+    // harvestSeasonの「地域で主収穫・副次収穫が真逆になる」という1文のみの出典。
+    // terroir/history等このエントリの他の記述までを裏付ける包括的な出典ではない点に注意。
+    sources: ["Mercanta(※収穫期の地域差についての1文のみの出典)"],
   },
   {
     country: "ケニア",
@@ -133,6 +149,10 @@ export const ORIGIN_GUIDE = [
       "スクリーンサイズ・カップ品質・水分量の3点で格付けし、大粒から順にAA・AB・C等の記号で表記(E=エレファント、PB=ピーベリーは別枠)。AAは大粒の等級を示すが、粒の大きさは必ずしも風味の良さを保証しない。",
     officialBody:
       "AFA Coffee Directorate(農業食糧庁)が輸出前の等級認定・承認を義務付け。",
+    // 詳細出典: docs/coffee-discovery-facts-sources-9countries.md
+    // varietiesDetailの「SL28がカシス風味の立役者」という1文のみの出典。terroir/history等
+    // このエントリの他の記述までを裏付ける包括的な出典ではない点に注意。
+    sources: ["World Coffee Research品種カタログ(※SL28の風味特性についての1文のみの出典)"],
   },
   {
     country: "インドネシア",
@@ -186,6 +206,10 @@ export const ORIGIN_GUIDE = [
       "COB(ブラジル公式分類)に基づき欠点数(No.2〜8、数字が小さいほど高品質)・スクリーンサイズ・官能評価(Estritamente Mole〜Rioの4段階)の4軸で分類。商業取引にはこの分類が必須。",
     officialBody:
       "業界団体のCecafé(輸出者評議会・1999年設立)やCNC(全国コーヒー評議会・1981年設立)は輸出許可・格付けの権限を持たず、統計収集や業界代表が主な役割。実際の格付け権限はMAPA(農牧食料供給省)が持つ。",
+    // 詳細出典: docs/coffee-discovery-facts-sources-9countries.md
+    // historyの「1975年の大霜害で生産地がミナスジェライスへ移動した」という1文のみの出典。
+    // terroir/varietiesDetail等このエントリの他の記述までを裏付ける包括的な出典ではない点に注意。
+    sources: ["Informe Gepec(査読誌)・Perfect Daily Grind(※1975年大霜害についての1文のみの出典)"],
   },
   {
     country: "コスタリカ",
@@ -234,6 +258,11 @@ export const ORIGIN_GUIDE = [
       "独自規格ではなく東アフリカコミュニティ(EAC)共通のEAS 130:1999を採用(ウガンダ等と共通)。スクリーンサイズによりAA(最大)・AB・C・PB(ピーベリー)・E(象豆)・TT・T(最小)に区分し、各等級は最低95%が該当サイズであることが条件。カップ品質(Fine〜Poor)と欠点数を組み合わせた最終品質クラス1〜10(1〜6は洗浄豆、7〜10は未洗浄のムブニ等)も併用される。",
     officialBody:
       "Tanzania Coffee Board(タンザニアコーヒー局・2001年設立)が唯一、法律により輸出許可・格付け・オークションを一元管理する政府機関。全ての商業的な買付・加工・輸出にライセンスが必須。",
+    // 詳細出典: docs/coffee-discovery-facts-sources-9countries.md(gradeSystemの出典は別途
+    // docs/coffee-tanzania-grades.mdを参照)
+    // officialBodyの「輸出まで一つの機関が一元管理」という1文のみの出典。terroir/history等
+    // このエントリの他の記述までを裏付ける包括的な出典ではない点に注意。
+    sources: ["Coffee Industry Act 2001(※輸出管理体制についての1文のみの出典)"],
   },
   {
     country: "イエメン",
@@ -261,6 +290,10 @@ export const ORIGIN_GUIDE = [
     ],
     officialBody:
       "標準計量局(SMA)がコーヒー品質規格の設定責任を負うが、成文化された規格・分類を持たない。民間団体SCA YemenやQima Coffeeがスペシャルティコーヒーの品質検証を代替している。",
+    // 詳細出典: docs/coffee-discovery-facts-sources-9countries.md
+    // officialBodyの「公的な等級認証機関が事実上ない」という1文のみの出典。terroir/history等
+    // このエントリの他の記述までを裏付ける包括的な出典ではない点に注意。
+    sources: ["YSMO(イエメン標準計量品質管理機構)公式情報(※等級認証機関の状況についての1文のみの出典)"],
   },
   {
     country: "ベトナム",
@@ -285,6 +318,10 @@ export const ORIGIN_GUIDE = [
       "TCVN 4193(直近改訂は2014年)が欠点数・スクリーンサイズで格付け。特級(Special Grade)からGrade 1〜5までの序列で、300gサンプルあたりの欠点数上限はロブスタが147個、アラビカが86個とロブスタの方が緩め。スクリーンサイズはS18/S16/S13(1/64インチ単位)等で表記されることが多い。",
     officialBody:
       "VICOFA(ベトナムコーヒーカカオ協会・1990年設立)は業界団体で輸出許可・格付けの権限は持たない。等級規格(TCVN 4193)は科学技術省傘下のSTAMEQ傘下の技術委員会TCVN/TC/F16が所管。",
+    // 詳細出典: docs/coffee-discovery-facts-sources-9countries.md
+    // varietiesDetailの「生産の9割超をロブスタが占める」という1文のみの出典。
+    // terroir/history等このエントリの他の記述までを裏付ける包括的な出典ではない点に注意。
+    sources: ["USDA GAIN報告書(※ロブスタ比率についての1文のみの出典)"],
   },
   {
     country: "ハワイ",
