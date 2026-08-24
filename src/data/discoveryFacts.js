@@ -7,10 +7,8 @@
  * @typedef {Object} DiscoveryFact
  * @property {string} title
  * @property {string} text
- * @property {string} [source] - 出典(docs/配下の調査資料ファイル名など)。
- *   新規追加時は検証可能な出典を必ず添えること。2026-08時点で棚卸しの結果、
- *   出典未特定のまま残っている既存エントリが12件あり、それらは暫定的な例外として
- *   sourceを省略している(詳細はvalidateDiscoveryFacts()の警告を参照)。
+ * @property {string} source - 出典(docs/配下の調査資料ファイル名、または一次資料の
+ *   名称・URL)。validateDiscoveryFacts()が読み込み時に必須チェックする。
  */
 
 /** @type {DiscoveryFact[]} */
@@ -63,14 +61,18 @@ export const DISCOVERY_FACTS = [
   {
     title: "ハワイには「ハワイ産と名乗れる最低ライン」がある",
     text: "ハワイ州法で、州外に出荷する緑豆はHawaii No.3以上の等級を満たさなければ「Hawaii coffee」と表示できない。満たさない場合は大きく「OFFGRADE COFFEE」と明記する必要がある。",
+    source: "Hawaii Coffee Association「Grading Standards」https://hawaiicoffeeassoc.org/page-1771566",
   },
   {
     title: "タンザニアは輸出まで一つの機関が管理",
     text: "Tanzania Coffee Board(タンザニアコーヒー局)は、法律により豆の格付け・オークション運営・輸出許可までを一元的に管理する、珍しいタイプの政府機関。",
+    source: "Coffee Industry Act 2001(法律原文、ecolex.org/tanzlii.org)",
   },
   {
     title: "ブラジルは世界初の格付け国",
     text: "1836年、ブラジルは世界で初めて標準化されたコーヒーの格付け制度を導入した。今のCOB(ブラジル公式分類)の原型はここまでさかのぼる。",
+    source:
+      "Daily Coffee News「COB: The Complex History of the 'Brazilian Official Classification' System」(2019) https://dailycoffeenews.com/2019/02/21/cob-the-complex-history-of-the-brazilian-official-classification-system/",
   },
   {
     title: "ブラジルの「タイプ1」は実在しない",
@@ -90,14 +92,18 @@ export const DISCOVERY_FACTS = [
   {
     title: "インドネシアには輸出者団体が2つある",
     text: "「AEKI」と「GAEKI」という似た名前の輸出者団体が存在するのは、内部対立から一方が分裂して生まれたため。どちらが正式な代表団体かは今も係争中とされる。",
+    source:
+      "Neilson et al.「Hilirisasi: Resource-based industrialisation and Global Production Networks in the Indonesian coffee and cocoa sectors」(ResearchGate, 2018)、Telegraf.co.id「Perselisihan Organisasi Kopi Meruncing」(2016) https://telegraf.co.id/perselisihan-organisasi-kopi-meruncing/、GAEKI公式サイト https://gaeki.or.id/",
   },
   {
     title: "イエメンには公的な等級認証機関が事実上ない",
     text: "内戦の影響で標準計量局(SMA)が機能しておらず、モカマタリのような有名銘柄でも公式な等級規格・分類が存在しない。品質検証は民間団体や輸入業者に頼っている。",
+    source: "YSMO(イエメン標準計量品質管理機構)公式情報",
   },
   {
     title: "ベトナムはロブスタが9割超",
     text: "世界第2位のコーヒー生産国ベトナムは、生産の9割超をロブスタ種が占める数少ない主要生産国。缶コーヒーやインスタントコーヒーの原料として世界中で使われている。",
+    source: "USDA GAIN報告書(複数年、Daily Coffee News経由)",
   },
   {
     title: "「フレーバー」には2つの意味がある",
@@ -122,6 +128,7 @@ export const DISCOVERY_FACTS = [
   {
     title: "「ヘアルーム」は品種名ではない",
     text: "エチオピア産の説明でよく見る「heirloom(ヘアルーム)」は、特定の品種名ではなく、数千種にのぼるとされるエチオピア在来種の総称。",
+    source: "Perfect Daily Grind、Sprudge、World Coffee Research関連記事群",
   },
   {
     title: "コーヒーの木の寿命は20〜30年",
@@ -131,22 +138,27 @@ export const DISCOVERY_FACTS = [
   {
     title: "ジャマイカは2025年のハリケーンで収穫の4割を失った",
     text: "2025年10月のハリケーンMelissaにより、ジャマイカでは成熟した作物の約4割が失われたと報告されている。",
+    source: "JCEA会長談(Jamaica Observer、Gleaner紙、農業省公式発表)",
   },
   {
     title: "グアテマラには300を超える微気候がある",
     text: "活火山・休火山と豊かな生物多様性により、グアテマラ国内には300を超える微気候が存在するとされる。",
+    source: "Anacafé公式データ(Perfect Daily Grind、Genuine Origin等複数商社経由)",
   },
   {
     title: "コロンビアは地域で収穫期が真逆になる",
     text: "赤道に近いコロンビアでは、北部のウイラと南部のナリーニョ等で主収穫・副次収穫の時期が入れ替わり、国全体では実質通年で収穫がある。",
+    source: "Mercanta(中南部9月〜1月、ミタカ4〜6月)",
   },
   {
     title: "ケニアのSL28はカシス風味の立役者",
     text: "1930〜40年代に選抜された品種SL28は、干ばつに強い深い根を持ち、リンゴ酸主体の構造がケニアコーヒー特有のカシス(黒スグリ)様の風味を生み出す。",
+    source: "World Coffee Research公式品種カタログ",
   },
   {
     title: "ブラジルの生産地はある年の大霜害で移動した",
     text: "1975年の大霜害をきっかけに、被害の大きかった南部の生産者が霜の少ないミナスジェライス州へ移動し、今の主要産地の構図ができた。",
+    source: "査読付き学術論文(Informe Gepec)、Perfect Daily Grind、Mercanta",
   },
   {
     title: "コロンビア・ケニア・タンザニアは「同じ仲間」",
@@ -220,34 +232,11 @@ export const DISCOVERY_FACTS = [
   },
 ];
 
-const MISSING_SOURCE_ALLOWLIST = new Set([
-  "ハワイには「ハワイ産と名乗れる最低ライン」がある",
-  "タンザニアは輸出まで一つの機関が管理",
-  "ブラジルは世界初の格付け国",
-  "インドネシアには輸出者団体が2つある",
-  "イエメンには公的な等級認証機関が事実上ない",
-  "ベトナムはロブスタが9割超",
-  "「ヘアルーム」は品種名ではない",
-  "ジャマイカは2025年のハリケーンで収穫の4割を失った",
-  "グアテマラには300を超える微気候がある",
-  "コロンビアは地域で収穫期が真逆になる",
-  "ケニアのSL28はカシス風味の立役者",
-  "ブラジルの生産地はある年の大霜害で移動した",
-]);
-
 function validateDiscoveryFacts() {
   const missing = DISCOVERY_FACTS.filter((fact) => !fact.source);
-  const unexpected = missing.filter((fact) => !MISSING_SOURCE_ALLOWLIST.has(fact.title));
-  if (unexpected.length > 0) {
-    throw new Error(
-      "[discoveryFacts] source未設定の新規エントリが見つかりました。出典を明記するか、" +
-        "既存の調査不足として扱う場合はMISSING_SOURCE_ALLOWLISTに追記してください: " +
-        unexpected.map((fact) => fact.title).join(" / ")
-    );
-  }
   if (missing.length > 0) {
-    console.warn(
-      `[discoveryFacts] source未確定のまま残っている棚卸し未了エントリが${missing.length}件あります: ` +
+    throw new Error(
+      "[discoveryFacts] source未設定のエントリが見つかりました。出典を明記してください: " +
         missing.map((fact) => fact.title).join(" / ")
     );
   }
