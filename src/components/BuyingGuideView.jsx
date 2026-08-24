@@ -159,14 +159,6 @@ export function BuyingGuideView({ pendingOriginCountry, onViewProducts }) {
           )}
         </div>
       </div>
-
-      <SourceCredit
-        sources={[
-          "Anacafé(グアテマラ)", "FNC(コロンビア)", "ECX(エチオピア)",
-          "AFA Coffee Directorate(ケニア)", "JACRA(ジャマイカ)",
-          "全日本コーヒー公正取引協議会",
-        ]}
-      />
     </main>
   );
 }
