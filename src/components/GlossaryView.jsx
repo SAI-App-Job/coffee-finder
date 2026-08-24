@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
-import { SectionHeading, SourceCredit } from "./common";
+import { SectionHeading } from "./common";
 import { GLOSSARY_TERMS } from "../data/glossary";
 
 export function GlossaryItem({ item, open, onToggle }) {
@@ -59,14 +59,6 @@ export function GlossaryView({ hideHeading = false }) {
           onToggle={() => setOpenTerm(openTerm === item.term ? null : item.term)}
         />
       ))}
-      <SourceCredit
-        sources={[
-          "SCA(Specialty Coffee Association)",
-          "WCR(World Coffee Research)Sensory Lexicon",
-          "コーヒー学園",
-          "珈琲問屋",
-        ]}
-      />
     </main>
   );
 }
