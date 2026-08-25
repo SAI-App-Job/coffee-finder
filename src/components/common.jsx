@@ -88,6 +88,19 @@ export function DialInGauge({ value = 0, size = 120 }) {
   );
 }
 
+// 広告の表示有無(プレミアム会員かどうか)とは無関係に、常時表示する著作権表示。
+// 無断複製・再配布を禁じる旨をLICENSEで定めているため、アプリ内でも権利者を
+// 明示しておく。
+export function CopyrightFooter() {
+  return (
+    <div className="max-w-xl mx-auto w-full px-5 py-1.5 border-t border-[#4A3A2A]">
+      <p className="text-[10px] text-[#8B7361] text-center">
+        © 2026 SAI. All Rights Reserved.
+      </p>
+    </div>
+  );
+}
+
 export function SourceCredit({ sources }) {
   return (
     <div className="mt-2 pt-3 border-t border-[#4A3A2A]">

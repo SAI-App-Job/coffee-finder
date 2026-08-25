@@ -28,7 +28,7 @@ import { MyPageView } from "./components/MyPageView";
 import { MyMapView } from "./components/MyMapView";
 import { AdBannerPlaceholder } from "./components/AdBanner";
 import { CompareTray, ComparisonModal } from "./components/Compare";
-import { MapLinkModal, Toast } from "./components/common";
+import { CopyrightFooter, MapLinkModal, Toast } from "./components/common";
 
 export default function CoffeeProductList() {
   // 初期値はローカルのモックデータ(=フォールバック)。GitHub上のJSONの取得に
@@ -217,15 +217,16 @@ export default function CoffeeProductList() {
   const openMapForLocation = (location) =>
     setMapTarget({ shopName: location.label, shopAddress: location.address, mapQuery: location.mapQuery });
 
-  const bothBarsVisible = !isPremium && compareIds.length > 0;
-  const bottomBarVisible = !isPremium || compareIds.length > 0;
+  // 著作権表示は広告・比較トレイの有無に関わらず常時表示するため、下部固定バー
+  // 自体は常にレンダリングする。パディングは、著作権表示に加えて広告・比較
+  // トレイがいくつ重なるかで変える。
+  const compareTrayVisible = compareIds.length > 0;
+  const adVisible = !isPremium;
+  const bottomBarPadding =
+    compareTrayVisible && adVisible ? "pb-[152px]" : compareTrayVisible || adVisible ? "pb-[104px]" : "pb-[48px]";
 
   return (
-    <div
-      className={`min-h-full bg-[#231810] text-[#F2E9DD] ${
-        bothBarsVisible ? "pb-32" : bottomBarVisible ? "pb-16" : ""
-      }`}
-    >
+    <div className={`min-h-full bg-[#231810] text-[#F2E9DD] ${bottomBarPadding}`}>
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
         :root {
@@ -484,19 +485,18 @@ export default function CoffeeProductList() {
         }}
       />
 
-      {(compareIds.length > 0 || !isPremium) && (
-        <div className="fixed bottom-0 inset-x-0 z-20 bg-[#1C140D]/95 backdrop-blur-sm">
-          {compareIds.length > 0 && (
-            <CompareTray
-              count={compareIds.length}
-              limit={compareLimit}
-              isPremium={isPremium}
-              onOpen={() => setCompareModalOpen(true)}
-            />
-          )}
-          {!isPremium && <AdBannerPlaceholder />}
-        </div>
-      )}
+      <div className="fixed bottom-0 inset-x-0 z-20 bg-[#1C140D]/95 backdrop-blur-sm">
+        {compareTrayVisible && (
+          <CompareTray
+            count={compareIds.length}
+            limit={compareLimit}
+            isPremium={isPremium}
+            onOpen={() => setCompareModalOpen(true)}
+          />
+        )}
+        {adVisible && <AdBannerPlaceholder />}
+        <CopyrightFooter />
+      </div>
     </div>
   );
 }
