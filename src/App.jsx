@@ -21,11 +21,10 @@ import { TastingLogModal } from "./components/TastingLogModal";
 import { AlertsPanel } from "./components/AlertsPanel";
 import { FilterSheet } from "./components/FilterSheet";
 import { ShopListView, ShopDetailView } from "./components/ShopViews";
-import { FavoritesView } from "./components/FavoritesView";
+import { FavoritesTabView } from "./components/FavoritesTabView";
 import { BuyingGuideView } from "./components/BuyingGuideView";
 import { TriviaView } from "./components/TriviaView";
 import { MyPageView } from "./components/MyPageView";
-import { MyMapView } from "./components/MyMapView";
 import { AdBannerPlaceholder } from "./components/AdBanner";
 import { CompareTray, ComparisonModal } from "./components/Compare";
 import { CopyrightFooter, MapLinkModal, Toast } from "./components/common";
@@ -68,7 +67,7 @@ export default function CoffeeProductList() {
   const { getRating, setRating } = useRatings();
   const { getLogs, addLog, deleteLog } = useTastingLog();
 
-  const [tab, setTab] = useState("products"); // "products" | "favorites" | "shops" | "mymap" | "guide" | "trivia" | "mypage"
+  const [tab, setTab] = useState("products"); // "products" | "favorites" | "shops" | "guide" | "trivia" | "mypage"
   const [detailProduct, setDetailProduct] = useState(null);
   const [tastingLogProduct, setTastingLogProduct] = useState(null);
   const [compareModalOpen, setCompareModalOpen] = useState(false);
@@ -378,13 +377,14 @@ export default function CoffeeProductList() {
       )}
 
       {tab === "favorites" && (
-        <FavoritesView
+        <FavoritesTabView
           products={products}
           isFavorite={isFavorite}
           onToggleFavorite={toggleFavorite}
           onOpenMap={openMapForProduct}
           onLearnOrigin={learnAboutOrigin}
           onOpenDetail={openProductDetail}
+          favoriteShops={favoriteShops}
         />
       )}
 
@@ -404,8 +404,6 @@ export default function CoffeeProductList() {
           onOpenDetail={openProductDetail}
         />
       )}
-
-      {tab === "mymap" && <MyMapView favoriteShops={favoriteShops} />}
 
       {tab === "guide" && (
         <BuyingGuideView pendingOriginCountry={pendingOriginCountry} onViewProducts={viewProductsForCountry} />
