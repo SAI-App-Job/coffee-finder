@@ -306,7 +306,27 @@ def scrape_all_products() -> tuple[list[dict], list[dict]]:
     return records, flavored_records
 
 
+def debug_one_product():
+    resp = requests.get(f"{BASE_URL}/products/ethiopia-washed.json", headers=REQUEST_HEADERS, timeout=15)
+    body_html = resp.json()["product"]["body_html"]
+    soup = BeautifulSoup(body_html, "html.parser")
+    for h2 in soup.find_all("h2"):
+        label = h2.get_text(strip=True).lstrip("■").strip()
+        nodes = collect_section_nodes(h2)
+        print(f"[DEBUG] label={label!r} node_count={len(nodes)} node_names={[getattr(n, 'name', None) for n in nodes]}")
+        if label in ("ロースト", "プロセス"):
+            print(f"[DEBUG]   on_text={extract_on_text(nodes)!r}")
+        if label == "カッピングコメント":
+            first_p = next((n for n in nodes if n.name == "p"), None)
+            print(f"[DEBUG]   first_p={first_p!r}")
+    sections, content_list, flavor_notes = parse_body_sections(body_html)
+    print(f"[DEBUG] sections={sections!r}")
+    print(f"[DEBUG] content_list={content_list!r}")
+    print(f"[DEBUG] flavor_notes={flavor_notes!r}")
+
+
 def main():
+    debug_one_product()
     records, flavored_records = scrape_all_products()
 
     output = {
