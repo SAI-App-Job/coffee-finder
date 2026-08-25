@@ -791,8 +791,8 @@
     "robots_txt_status": "robots.txtなし(2026-08確認。mui-motosumi.co.jp・www.mui-motosumi.co.jpどちらも404で存在しない。実質全面許可とみなせる)",
     "address": "神奈川県川崎市中原区木月3-13-2",
     "prefecture": "神奈川県",
-    "hours": null,
-    "map_query": "Mui",
+    "hours": "10:00-19:00(火・水定休)",
+    "map_query": "Mui 元住吉",
     "last_scraped_at": "2026-08-25T01:22:34.133924+00:00"
   }
 ]
