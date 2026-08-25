@@ -77,6 +77,7 @@ SOURCE_FILES = {
     "自家焙煎星川珈琲": "data_hoshikawa.json",
     "LEAFLETTER": "data_leafletter.json",
     "SHIBACOFFEE": "data_shibacoffee.json",
+    "Mui": "data_mui.json",
 }
 
 

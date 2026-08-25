@@ -59,6 +59,19 @@ PLATFORM_FINGERPRINTS = [
         "note": "th/td形式の詳細表(BEANS DATA相当)が使われていることが多い。汎用キーバリュー抽出が有効。",
     },
     {
+        "platform": "ShopServe(ショップサーブ)",
+        "patterns": [r"shopserve\.jp", r'affiliation:\s*"shopserve"', r'class="sps-'],
+        "similar_scraper": "scrape_mui.py",
+        "note": "実データ確認済み(Mui、2026-08時点)。robots.txtが存在しない店舗もある"
+                "(404=実質全面許可)。商品詳細ページに`gtag('event', 'view_item', {...})`が"
+                "埋め込まれており、非クォートのJS object literalだが税込価格(price)と"
+                "カテゴリタグ(item_category、産地・焙煎度・ブレンド/シングルオリジン区分を含む)を"
+                "正規表現で直接抜き出せる。単一原産地の商品のみtable.info-table"
+                "(国名/地域/生産者/精製工場/オーナー/標高/品種/精製のth/td形式)を持ち、"
+                "ブレンド商品には存在しない。商品一覧のページ送りは"
+                "/SHOP/<カテゴリID>/t02/list<N>.html というURLでGETアクセス可能。",
+    },
+    {
         "platform": "Webflow",
         "patterns": [r"webflow\.js", r"data-wf-", r"w-webflow-badge"],
         "similar_scraper": "scrape_events_scaj.py",

@@ -36,6 +36,7 @@ on:
           - hoshikawa
           - leafletter
           - shibacoffee
+          - mui
 
 permissions:
   contents: write # data/*.json をコミット・pushするために必要
@@ -119,6 +120,9 @@ jobs:
           - id: shibacoffee
             script: scrape_shibacoffee.py
             output: data_shibacoffee.json
+          - id: mui
+            script: scrape_mui.py
+            output: data_mui.json
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4 # 差分ベーススクレイピングがdata/products.jsonを参照するため必須
