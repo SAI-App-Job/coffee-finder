@@ -1,0 +1,66 @@
+Coffee Finder(自家焙煎豆情報アプリ)
+
+Copyright (c) 2026 SAI
+All Rights Reserved.
+
+本リポジトリ内のすべてのソースコード・ドキュメント・データ(以下「本ソフトウェア」)
+の著作権は、上記著作権者(以下「著作権者」)に帰属します。
+
+【許諾される利用】
+本リポジトリが公開されている場(GitHub等)を通じて本ソフトウェアを閲覧・参照する
+ことは自由に行えます。
+
+【許諾されない利用】
+著作権者による事前の書面(電子メール等の記録が残る形式を含む)による許可がない限り、
+以下の行為を禁じます。
+
+  1. 本ソフトウェアの全部または一部を複製すること
+  2. 本ソフトウェアの全部または一部を、形態を問わず再配布・再公開すること
+     (フォークの公開、パッケージとしての配布、他リポジトリへの転載等を含む)
+  3. 本ソフトウェアを改変し、または本ソフトウェアに基づく二次的著作物を作成すること
+  4. 本ソフトウェアの全部または一部を商用目的で利用すること
+
+上記の許可を得たい場合は、著作権者(goodsaidog@gmail.com)まで連絡してください。
+
+【保証の否認】
+本ソフトウェアは現状有姿(AS IS)で提供され、著作権者は明示・黙示を問わず、
+商品性、特定目的への適合性、権利非侵害を含むいかなる保証も行いません。
+著作権者は、本ソフトウェアの利用により生じたいかなる損害についても
+責任を負いません。
+
+---
+
+Coffee Finder
+
+Copyright (c) 2026 SAI
+All Rights Reserved.
+
+All source code, documentation, and data contained in this repository
+(the "Software") are the copyrighted work of the copyright holder named
+above (the "Copyright Holder").
+
+Permission is granted to view and read the Software as made available
+through this repository's public hosting (e.g. GitHub).
+
+Except as expressly permitted above, no permission is granted to:
+
+  1. copy the Software, in whole or in part;
+  2. redistribute or republish the Software, in whole or in part, in any
+     form (including publishing forks, packaging for distribution, or
+     mirroring to another repository);
+  3. modify the Software or create derivative works based on it; or
+  4. use the Software, in whole or in part, for any commercial purpose,
+
+without the prior written permission of the Copyright Holder (an
+exchange in a recorded form such as email is sufficient).
+
+To request permission, contact the Copyright Holder at
+goodsaidog@gmail.com.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND
+NONINFRINGEMENT. IN NO EVENT SHALL THE COPYRIGHT HOLDER BE LIABLE FOR
+ANY CLAIM, DAMAGES, OR OTHER LIABILITY ARISING FROM, OUT OF, OR IN
+CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
