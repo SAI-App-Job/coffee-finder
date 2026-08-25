@@ -27,13 +27,17 @@ product_type=="Coffee Beans" のうち、タイトルに「セット」を含む
 を除外する。
 
 【body_htmlの構造について】
-FUGLENのようなth/td表ではなく、`<h2>見出し</h2>` の直後に `<ul><li>` または
-段落が続く構成(実データ確認済み)。見出しラベル(「■生産地」「■品種」
-「■精製方法」「■焙煎度」「■内容」等)を起点に、find_next_siblingで直後の
-リスト/段落を取得する方式にした。焙煎度・精製方法は選択式UIをそのまま書き出した
-ものらしく、有効な値には `class="...on"` (末尾onサフィックス)が付いている
-(実データ確認済み: 例えば精製方法の選択肢を並べたul内で、実際に採用されている
-方式のliだけ `class="dot on"` になっている)。
+FUGLENのようなth/td表ではなく、`<h2>■見出し</h2>` の直後に複数の要素(div/p/ul等)
+が次のh2まで続く構成(実データ確認済み)。実在する見出しラベルは「■カッピング
+コメント」「■ロースト」「■プロセス」「■バランス表」「■生産地」「■内容」
+「■ストーリー」で、品種は独立見出しではなく「■内容」直下の`<li><strong>品種
+</strong>...</li>`に埋め込まれている(初期実装では「■焙煎度」「■精製方法」
+「■品種」という見出しを誤って想定しており、実データで全滅していたため修正)。
+ロースト・プロセスは選択式UIをそのまま書き出したもので、実際に採用されている
+項目の要素だけclass名に"-on"を含む(例: `class="... roast-on"`
+`class="process-base process-washed process-on-washed"`)。次のh2が来るまでの
+全兄弟要素を対象に、class名に"-on"を含む要素のテキストを拾う方式にした。
+カッピングコメントは見出し直後の最初の`<p>`(内訳の色分けdiv群より前)を採用する。
 値表記は「日本語 / English」形式(FUGLENの「英語(日本語)」とは順序も区切りも
 違う)のため、スラッシュ区切りで前半(日本語)を取り出す専用ヘルパーを用意した。
 
@@ -82,15 +86,6 @@ EXCLUDE_TITLE_KEYWORDS = ["セット", "水出し"]
 
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
 
-# 見出しラベル→内部キーの対応。実データ確認済みの<h2>見出し文言に合わせている。
-SECTION_LABELS = {
-    "生産地": "origin_note",
-    "品種": "variety",
-    "精製方法": "processing_note",
-    "焙煎度": "roast_note",
-    "内容": "content_note",
-}
-
 
 def split_ja_en(text: str | None) -> str | None:
     """「日本語 / English」形式のテキストから日本語部分(スラッシュ前)を取り出す。"""
@@ -100,6 +95,47 @@ def split_ja_en(text: str | None) -> str | None:
     return parts[0].strip() or None
 
 
+def collect_section_nodes(h2) -> list:
+    """h2見出しから次のh2直前までの兄弟要素(タグのみ、NavigableStringは除く)を集める。"""
+    nodes = []
+    for sib in h2.find_next_siblings():
+        if getattr(sib, "name", None) == "h2":
+            break
+        if getattr(sib, "name", None):
+            nodes.append(sib)
+    return nodes
+
+
+def extract_on_text(nodes: list) -> str | None:
+    """選択式UIで実際に採用されている項目(class名に"-on"を含む要素)のテキストを
+    集める。ロースト・プロセスのように複数のdivグループに分かれていても、
+    次のh2までの全兄弟要素を対象にするため取りこぼさない。"""
+    texts = []
+    for node in nodes:
+        for el in node.select('[class*="-on"]'):
+            t = el.get_text(strip=True)
+            if t:
+                texts.append(t)
+    return " / ".join(texts) if texts else None
+
+
+def extract_content_list(nodes: list) -> dict:
+    """「■内容」セクションの<li><strong>ラベル</strong>値...</li>形式を
+    ラベル→値の辞書に変換する(品種・生産処理場・標高等はここにまとまっている)。"""
+    result = {}
+    for node in nodes:
+        for li in node.select("li"):
+            label_el = li.find(["strong", "b"])
+            if not label_el:
+                continue
+            label = label_el.get_text(strip=True)
+            label_el.extract()
+            value = re.sub(r"\s+", " ", li.get_text(separator=" ", strip=True))
+            if value:
+                result[label] = value
+    return result
+
+
 def fetch_products_page(page: int) -> list[dict]:
     url = f"{BASE_URL}/products.json"
     resp = requests.get(url, params={"limit": 250, "page": page}, headers=REQUEST_HEADERS, timeout=15)
@@ -107,35 +143,38 @@ def fetch_products_page(page: int) -> list[dict]:
     return resp.json().get("products", [])
 
 
-def parse_body_sections(body_html: str) -> dict:
-    """<h2>見出し直後のul/pから値を取り出す。選択式UI由来の項目
-    (精製方法・焙煎度)は class末尾"on"の要素のみ採用する。"""
+def parse_body_sections(body_html: str) -> tuple[dict, dict, str | None]:
+    """h2見出し(■カッピングコメント/■ロースト/■プロセス/■生産地/■内容)ごとに
+    次のh2直前までの兄弟要素から値を取り出す。
+    戻り値は (sections, content_list, flavor_notes) のタプル。"""
     soup = BeautifulSoup(body_html or "", "html.parser")
-    raw = {}
+    sections = {}
+    content_list = {}
+    flavor_notes = None
 
     for h2 in soup.find_all("h2"):
         label = h2.get_text(strip=True).lstrip("■").strip()
-        key = SECTION_LABELS.get(label)
-        if not key:
+        nodes = collect_section_nodes(h2)
+        if not nodes:
             continue
 
-        sibling = h2.find_next_sibling()
-        if not sibling:
-            continue
+        if label == "生産地":
+            text = re.sub(r"\s+", " ", " ".join(n.get_text(" ", strip=True) for n in nodes)).strip()
+            sections["origin_note"] = text or None
+        elif label == "カッピングコメント":
+            # 内訳の色分けdiv群より前にある最初の<p>だけをテイスティングノートとして採用する
+            first_p = next((n for n in nodes if n.name == "p"), None)
+            if first_p:
+                raw_text = re.sub(r"\s+", " ", first_p.get_text(strip=True))
+                flavor_notes = split_ja_en(raw_text)
+        elif label == "ロースト":
+            sections["roast_note"] = extract_on_text(nodes)
+        elif label == "プロセス":
+            sections["processing_note"] = extract_on_text(nodes)
+        elif label == "内容":
+            content_list = extract_content_list(nodes)
 
-        on_items = sibling.select('[class$="on"], [class*="on "]') if sibling.name == "ul" else []
-        if on_items:
-            value = " / ".join(li.get_text(strip=True) for li in on_items)
-        else:
-            value = re.sub(r"\s+", " ", sibling.get_text(separator=" ", strip=True))
-        raw[key] = value or None
-
-    flavor_el = soup.select_one(".cupping, .flavor-note, .flavor-description")
-    flavor_notes = None
-    if flavor_el:
-        flavor_notes = re.sub(r"\s+", " ", flavor_el.get_text(separator=" ", strip=True)) or None
-
-    return raw, flavor_notes
+    return sections, content_list, flavor_notes
 
 
 def parse_weight_from_variant_title(variant_title: str | None) -> int | None:
@@ -183,7 +222,7 @@ def build_record(product: dict) -> dict:
             "product_url": product_url,
         }
 
-    sections, flavor_notes = parse_body_sections(product.get("body_html", ""))
+    sections, content_list, flavor_notes = parse_body_sections(product.get("body_html", ""))
 
     origin_note = split_ja_en(sections.get("origin_note"))
     if origin_note:
@@ -197,7 +236,7 @@ def build_record(product: dict) -> dict:
         parsed["processing_method"] = normalize_processing_method(processing_note)
 
     roast_note = split_ja_en(sections.get("roast_note"))
-    variety = split_ja_en(sections.get("variety"))
+    variety = split_ja_en(content_list.get("品種"))
 
     variant = pick_canonical_variant(product.get("variants", []))
     structural_out_of_stock = not any(v.get("available") for v in product.get("variants", []))
