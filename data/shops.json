@@ -794,5 +794,17 @@
     "hours": "10:00-19:00(火・水定休)",
     "map_query": "Mui 元住吉",
     "last_scraped_at": "2026-08-25T01:22:34.133924+00:00"
+  },
+  {
+    "name": "27 COFFEE ROASTERS",
+    "url": "https://27coffee.jp/",
+    "platform": "Shopify(サイト全体のproducts.jsonエンドポイントを利用)",
+    "shop_type": "single_location",
+    "robots_txt_status": "許可(2026-08確認。標準Shopify robots.txt。/products/・/collections/は許可対象)",
+    "address": "神奈川県藤沢市辻堂元町6-5-3",
+    "prefecture": "神奈川県",
+    "hours": null,
+    "map_query": "27 COFFEE ROASTERS",
+    "last_scraped_at": "2026-08-25T13:44:14.478566+00:00"
   }
 ]
