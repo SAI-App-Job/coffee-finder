@@ -76,8 +76,47 @@ REQUEST_HEADERS = {
 # (実データ確認済み: 挽き方バリアントを持たない固定パック商品)。
 BEAN_CATEGORY_IDS = [2692103, 2692104, 2692105, 2699406]
 
-COLORME_JSON_PATTERN = re.compile(r"var\s+Colorme\s*=\s*(\{.*\});", re.DOTALL)
+COLORME_JSON_START_PATTERN = re.compile(r"var\s+Colorme\s*=\s*\{")
 JSONLD_DESCRIPTION_PATTERN = re.compile(r'"description":"([^"]*)"')
+
+
+def extract_colorme_json(html_text: str) -> dict | None:
+    """`var Colorme = {...};` を波括弧の対応を数えて厳密に取り出す。
+    実データ確認済み: このページには `var Colorme = ` より後にも(別の
+    インラインスクリプトの)"};" が複数回登場するため、素朴な貪欲マッチの
+    正規表現(`\{.*\};`)では対象を大きく超えて誤った範囲を拾ってしまい、
+    json.loadsが失敗して常にNoneが返る不具合になっていた。文字列リテラル内の
+    括弧・エスケープ済み引用符を無視しながら開き括弧の数を数え、対応する
+    閉じ括弧の位置で正確に切り出す。"""
+    m = COLORME_JSON_START_PATTERN.search(html_text)
+    if not m:
+        return None
+    start = m.end() - 1  # 開き括弧 "{" の位置
+    depth = 0
+    in_string = False
+    escape = False
+    for i in range(start, len(html_text)):
+        ch = html_text[i]
+        if in_string:
+            if escape:
+                escape = False
+            elif ch == "\\":
+                escape = True
+            elif ch == '"':
+                in_string = False
+            continue
+        if ch == '"':
+            in_string = True
+        elif ch == "{":
+            depth += 1
+        elif ch == "}":
+            depth -= 1
+            if depth == 0:
+                try:
+                    return json.loads(html_text[start:i + 1])
+                except json.JSONDecodeError:
+                    return None
+    return None
 
 # 説明文末尾の角カッコラベル行(例: [焙煎]中煎り、[内容量]200g)。
 BRACKET_ROAST_PATTERN = re.compile(r"\[焙煎\]\s*([^\s<]+)")
@@ -103,12 +142,8 @@ def fetch_page(url: str) -> tuple[BeautifulSoup, str]:
 
 
 def extract_price(html_text: str) -> int | None:
-    m = COLORME_JSON_PATTERN.search(html_text)
-    if not m:
-        return None
-    try:
-        data = json.loads(m.group(1))
-    except json.JSONDecodeError:
+    data = extract_colorme_json(html_text)
+    if not data:
         return None
     return data.get("product", {}).get("sales_price_including_tax")
 
@@ -125,12 +160,9 @@ def parse_product_detail(url: str) -> dict:
     raw_name = name_el.get_text(strip=True) if name_el else ""
     if not raw_name:
         # テーマ差異への保険。JSON側のproduct.nameを最終手段として使う
-        m = COLORME_JSON_PATTERN.search(html_text)
-        if m:
-            try:
-                raw_name = json.loads(m.group(1)).get("product", {}).get("name", "")
-            except json.JSONDecodeError:
-                pass
+        data = extract_colorme_json(html_text)
+        if data:
+            raw_name = data.get("product", {}).get("name", "")
 
     price = extract_price(html_text)
     stock_status = detect_stock_status(raw_name)
