@@ -806,5 +806,17 @@
     "hours": null,
     "map_query": "27 COFFEE ROASTERS",
     "last_scraped_at": "2026-08-25T13:44:14.478566+00:00"
+  },
+  {
+    "name": "Coulane",
+    "url": "https://www.coulane.jp/",
+    "platform": "カラーミーショップ(shop-pro.jp)",
+    "shop_type": "single_location",
+    "robots_txt_status": "許可(2026-08確認。PHILOCOFFEAと同一の記述。/secure/と/cart/以外は制限なし)",
+    "address": "神奈川県相模原市中央区横山3-17-4",
+    "prefecture": "神奈川県",
+    "hours": null,
+    "map_query": "Coulane",
+    "last_scraped_at": "2026-08-25T13:48:51.476150+00:00"
   }
 ]
