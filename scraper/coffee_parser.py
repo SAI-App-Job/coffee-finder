@@ -239,7 +239,11 @@ POST_PROCESSING_KEYWORDS = {
     # 「WHISKEY BARREL」という商品名表記のみで「barrel aged」を含まないため別途追加
 }
 
-GRADE_PATTERN = re.compile(r"(SHB|G[1-6]|No\.\d+|Aグレード|AA)")
+GRADE_PATTERN = re.compile(r"(SHB|SHG|G[1-6]|No\.\d+|Aグレード|AA)")
+# SHG(Strictly High Grown)は実データ確認済み(2026-08時点、Coulaneの「ニカラグア SHG
+# キータスウエノス農園」等)。コスタリカ・グアテマラ・ホンジュラス・エルサルバドル・
+# ニカラグア等、標高で格付けする複数国で使われる表記でSHBの兄弟格にあたるが、
+# これまでの実データにSHG表記の商品が無かったため未対応のままだった。
 
 # --- コロンビア産グレードマスタ(FNC公式: cafedecolombia.jp/colombia/specialty/grade/) --
 # 「エクセルソ(Excelso)」は7サブグレード共通の親カテゴリ名であり、単独では

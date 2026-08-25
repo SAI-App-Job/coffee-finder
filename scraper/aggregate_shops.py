@@ -78,6 +78,8 @@ SOURCE_FILES = {
     "LEAFLETTER": "data_leafletter.json",
     "SHIBACOFFEE": "data_shibacoffee.json",
     "Mui": "data_mui.json",
+    "Coulane": "data_coulane.json",
+    "27 COFFEE ROASTERS": "data_27coffee.json",
 }
 
 
