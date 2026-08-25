@@ -70,7 +70,7 @@ SHOP_INFO = {
     "name": "27 COFFEE ROASTERS",
     "url": "https://27coffee.jp/",
     "platform": "Shopify(サイト全体のproducts.jsonエンドポイントを利用)",
-    "address": "神奈川県藤沢市辻堂元町6-5-3",  # 辻堂本店。他4拠点はdata/shops.jsonへ手動追加
+    "address": "神奈川県藤沢市辻堂元町5-2-24",  # 辻堂本店。他4拠点はdata/shops.jsonへ手動追加
     "prefecture": "神奈川県",
     "robots_txt_status": "許可(2026-08確認。標準Shopify robots.txt。/products/・/collections/は許可対象)",
 }
