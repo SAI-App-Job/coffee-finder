@@ -1,6 +1,7 @@
-import { Calendar, MapPin, ExternalLink } from "lucide-react";
+import { Calendar, MapPin, ExternalLink, Trophy } from "lucide-react";
 import { SectionHeading, SourceCredit } from "./common";
 import { EVENT_TYPE_LABELS } from "../data/events";
+import { JAPAN_COMPETITIONS } from "../data/japanCompetitions";
 
 export function EventCard({ event, onLearnOrigin }) {
   const typeInfo = EVENT_TYPE_LABELS[event.eventType] || { ja: event.eventType, color: "#8B7361" };
@@ -57,6 +58,47 @@ export function EventCard({ event, onLearnOrigin }) {
   );
 }
 
+export function JapanCompetitionCard({ competition }) {
+  return (
+    <div className="rounded-2xl bg-[#2F241A] border border-[#4A3A2A] p-4 flex flex-col gap-2.5">
+      <div className="flex items-center gap-2">
+        <span className="shrink-0 text-[11px] px-2 py-0.5 rounded-full bg-[var(--accent)] text-[#231810] font-medium font-mono">
+          {competition.abbr}
+        </span>
+        <h3 className="font-serif text-[16px] text-[#F2E9DD]">{competition.name}</h3>
+      </div>
+      <p className="text-[13px] text-[var(--accent)]">{competition.tagline}</p>
+
+      <p className="text-[12px] text-[#B8A891] leading-relaxed border-t border-[#4A3A2A] pt-2.5">
+        {competition.history}
+      </p>
+      {competition.format && (
+        <p className="text-[12px] text-[#B8A891] leading-relaxed">{competition.format}</p>
+      )}
+      {competition.latestResult && (
+        <p className="text-[12px] text-[#8B7361] leading-relaxed bg-[#3B2211] rounded-lg p-2.5">
+          {competition.latestResult}
+        </p>
+      )}
+
+      <div className="flex flex-wrap items-center gap-x-3 gap-y-1 pt-1">
+        {competition.sources.map((source) => (
+          <a
+            key={source.url}
+            href={source.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-1 text-[11px] text-[#8B7361] hover:text-[#B8A891] transition-colors"
+          >
+            {source.label}
+            <ExternalLink size={11} />
+          </a>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 export function EventsView({ hideHeading = false, onLearnOrigin, events }) {
   return (
     <main className="px-5 py-5 flex flex-col gap-3 max-w-xl mx-auto">
@@ -76,6 +118,19 @@ export function EventsView({ hideHeading = false, onLearnOrigin, events }) {
           "ACE / Cup of Excellence(cupofexcellence.org)",
         ]}
       />
+
+      <div className="mt-3 pt-3 border-t border-[#4A3A2A] flex items-center gap-1.5">
+        <Trophy size={14} className="text-[var(--accent)]" strokeWidth={1.75} />
+        <h3 className="text-[14px] font-medium text-[#F2E9DD]">日本国内の主要競技会(SCAJ主催)</h3>
+      </div>
+      <p className="text-[13px] text-[#8B7361] -mt-1">
+        SCAJ(日本スペシャルティコーヒー協会)が主催する国内競技会のうち代表的な4大会。優勝者の多くは世界大会へ日本代表として出場する。
+      </p>
+      <div className="flex flex-col gap-2.5">
+        {JAPAN_COMPETITIONS.map((competition) => (
+          <JapanCompetitionCard key={competition.id} competition={competition} />
+        ))}
+      </div>
     </main>
   );
 }
