@@ -3,15 +3,17 @@
 aggregate_events.py
 
 scrape_events_wcc.py / scrape_events_scaj.py / scrape_events_ace.py /
-scrape_events_jcf.py が出力する data_events_wcc.json / data_events_scaj.json /
-data_events_ace.json / data_events_jcf.json を統合し、/data/events.json
-(EVENT_SOURCE + EVENT 相当)を更新する。
+scrape_events_jcf.py / scrape_events_tcf.py が出力する data_events_wcc.json /
+data_events_scaj.json / data_events_ace.json / data_events_jcf.json /
+data_events_tcf.json を統合し、/data/events.json(EVENT_SOURCE + EVENT 相当)を
+更新する。
 
-【4団体で出力フィールドが異なる理由】
+【5団体で出力フィールドが異なる理由】
 WCCはstart_date/end_date、ACEはCOEオークション日+NW審査週間、SCAJはstart_date/
-end_date+テーマ/主催者、JCFはstart_date/end_date+開催地(archiveLabel)と、
-サイトごとに取得できる情報の形が異なる。本スクリプトはこれらをdata/events.json
-の共通スキーマ(date_rangeという表示用の日本語文字列)へ変換する。
+end_date+テーマ/主催者、JCFはstart_date/end_date+開催地(archiveLabel)、TCFは
+start_date/end_date+入場料/主催/共催と、サイトごとに取得できる情報の形が異なる。
+本スクリプトはこれらをdata/events.jsonの共通スキーマ(date_rangeという表示用の
+日本語文字列)へ変換する。
 description(紹介文)は、調査済みの解説文のような創作は行わず、スクレイパーが
 実際に取得した情報(優勝者・テーマ等)からのみ組み立てる。
 
@@ -42,6 +44,7 @@ SOURCES = {
     "scaj": "data_events_scaj.json",
     "ace": "data_events_ace.json",
     "jcf": "data_events_jcf.json",
+    "tcf": "data_events_tcf.json",
 }
 
 
@@ -183,7 +186,30 @@ def normalize_jcf(record: dict, source_id: str) -> dict:
     }
 
 
-NORMALIZERS = {"wcc": normalize_wcc, "scaj": normalize_scaj, "ace": normalize_ace, "jcf": normalize_jcf}
+def normalize_tcf(record: dict, source_id: str) -> dict:
+    description = f"入場料: {record['admission']}" if record.get("admission") else None
+    return {
+        "id": build_event_id(source_id, record["name"]),
+        "source_id": source_id,
+        "name": record["name"],
+        "event_type": record.get("event_type", "festival"),
+        "host_country": "日本",
+        "venue": record.get("venue"),
+        "date_range": format_date_range(record.get("start_date"), record.get("end_date")),
+        "related_country": "日本",
+        "related_brand": None,
+        "description": description,
+        "source_url": record.get("source_url"),
+    }
+
+
+NORMALIZERS = {
+    "wcc": normalize_wcc,
+    "scaj": normalize_scaj,
+    "ace": normalize_ace,
+    "jcf": normalize_jcf,
+    "tcf": normalize_tcf,
+}
 
 
 def main():

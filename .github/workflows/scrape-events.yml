@@ -40,6 +40,10 @@ jobs:
         working-directory: scraper
         run: python scrape_events_jcf.py
 
+      - name: Scrape Tokyo Coffee Festival
+        working-directory: scraper
+        run: python scrape_events_tcf.py
+
       - name: Aggregate into data/events.json
         working-directory: scraper
         run: python aggregate_events.py

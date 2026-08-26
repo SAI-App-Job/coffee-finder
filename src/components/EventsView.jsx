@@ -165,6 +165,7 @@ export function EventsView({ hideHeading = false, onLearnOrigin, events }) {
           "SCAJ(scajconference.jp)",
           "ACE / Cup of Excellence(cupofexcellence.org)",
           "Japan Coffee Festival(japancoffeefestival.com)",
+          "TOKYO COFFEE FESTIVAL(tokyocoffeefestival.co)",
         ]}
       />
     </main>
