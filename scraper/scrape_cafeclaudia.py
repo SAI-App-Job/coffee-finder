@@ -31,9 +31,13 @@ Disallow)が適用され、商品ページ・カテゴリページの取得は�
 商品は「コーヒー豆」カテゴリのみで網羅できる(全25件・2ページ、実データ
 確認済み。`?page=N`のクエリパラメータでページ送りし、空になったら終端)。
 ただしこのカテゴリ内にも「【送料無料】店主のおまかせコーヒー豆400g
-(100g×4)」のような複数銘柄をランダムに詰め合わせる「おまかせ」商品や、
-ギフトセットが混在していたため、商品名に「セット」「おまかせ」を含む商品は
-除外する。
+(100g×4)」のような複数銘柄をランダムに詰め合わせる「おまかせ」商品、
+ギフトセット、「ドリップオンコーヒーバラエティパック15個入り」「ディップ
+スタイルコーヒーバラエティパック15個入り」のような豆売りではない詰め合わせ、
+さらには「カフェクラウディア10周年記念CD テーマソング「クラウディアへいこう」」
+というコーヒーとは無関係な記念CD商品まで混在していたため(実データ確認済み、
+初回実行後にdata/products.jsonを確認して発覚)、商品名に「セット」「おまかせ」
+「バラエティパック」「記念CD」のいずれかを含む商品は除外する。
 
 【商品ページの構造について】
 JSON-LD・構造化テーブルは無く、価格は`<div id="price"><p>¥3,800</p></div>`、
@@ -61,6 +65,14 @@ JSON-LD・構造化テーブルは無く、価格は`<div id="price"><p>¥3,800<
 在庫切れへの変化(価格・商品名が変わらないまま在庫だけ0になるケース)を
 検出できなくなってしまう。全25件と小規模で負荷も軽微なため、この店舗のみ
 差分スキップを行わず毎回全件の詳細ページを取得し、正確性を優先する。
+
+【中国産の検出について】
+実データ確認済み: 「中国 雲南 プーアル トリプルファーメンテーションナチュラル」
+という中国産商品があったが、coffee_parser.pyのORIGIN_COUNTRY_KEYWORDSには
+「中国」自体が未登録だった(「タイ」と同様、「中国地方」という日本国内の
+地方名との衝突リスクがあるマスタ側への追加は見送り、この店舗のスクレイパー
+内でのみ「雲南」という誤爆リスクの低い地域名をトリガーに中国産と判定する
+ローカルなフォールバックを実装している)。
 
 【グレード表記の追加対応について】
 実データ確認済み: 「エチオピア ベンチ・マジG-1」「エチオピア グジG-1」のように
@@ -104,7 +116,7 @@ REQUEST_HEADERS = {
     "User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"
 }
 
-EXCLUDE_TITLE_KEYWORDS = ["セット", "おまかせ"]
+EXCLUDE_TITLE_KEYWORDS = ["セット", "おまかせ", "バラエティパック", "記念CD"]
 
 PRICE_PATTERN = re.compile(r'id="price">\s*<p>[¥￥]([\d,]+)\s*</p>')
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
@@ -169,6 +181,13 @@ def parse_product_detail(url: str) -> dict:
             break
 
     parsed = apply_category_hint_fallback(parsed, None)
+
+    if not parsed["origin_country"] and "雲南" in raw_name:
+        # 「中国」自体はcoffee_parser.py共通のORIGIN_COUNTRY_KEYWORDSに未登録
+        # (モジュール冒頭docstring参照)。この店舗のローカルフォールバックとして、
+        # 誤爆リスクの低い「雲南」(中国産コーヒーの主要産地名)をトリガーにする。
+        parsed["origin_country"] = "中国"
+        parsed["origin_source"] = "region_name"
 
     return {
         "shop_name": SHOP_INFO["name"],
@@ -244,6 +263,10 @@ def scrape_all_products(max_pages: int = 20) -> tuple[list[dict], list[dict]]:
             detail = parse_product_detail(item["product_url"])
         except requests.RequestException as e:
             print(f"[warn] 詳細ページ取得失敗: {item['product_url']} ({e})")
+            continue
+        # 一覧カードのタイトル(card-title)と詳細ページのタイトル(h1.itemTitle)が
+        # 万一食い違う場合に備え、詳細取得後にも除外判定をかけ直す(二重チェック)
+        if not is_target_title(detail["raw_name"]):
             continue
         detail["out_of_stock"] = detail.get("stock_status", "販売中") != "販売中"
         if detail.get("is_flavored"):
