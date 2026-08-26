@@ -34,7 +34,7 @@ export function EventCard({ event, onLearnOrigin }) {
       <p className="text-[12px] text-[#8B7361] leading-relaxed border-t border-[#4A3A2A] pt-2">{event.note}</p>
 
       <div className="flex items-center justify-between pt-1">
-        {event.relatedCountry ? (
+        {event.relatedCountry && event.relatedCountry !== "日本" ? (
           <button
             onClick={() => onLearnOrigin(event.relatedCountry)}
             className="text-[11px] text-[var(--accent)] hover:text-[var(--accent-soft)] transition-colors"
