@@ -15,6 +15,15 @@ end_date+テーマ/主催者、JCFはstart_date/end_date+開催地(archiveLabel)
 description(紹介文)は、調査済みの解説文のような創作は行わず、スクレイパーが
 実際に取得した情報(優勝者・テーマ等)からのみ組み立てる。
 
+【WCCのみstart_date/end_dateも保持する理由】
+フロントエンドの「競技会」タブにあるWCC(世界大会)セクションは開催日順に
+並べる必要があるが、date_rangeは「2026年1月18日〜20日」のような表示用の
+日本語文字列で、フロントエンド側で年をまたぐ・年月表記を省略する等の
+バリエーションを安全にパースし直すのは不必要に複雑になる。WCCのみ、
+scrape_events_wcc.pyが既に持っているISO形式のstart_date/end_dateを
+そのまま素通しし、フロントエンドのソートに使えるようにしている
+(他3団体は現状ソート表示の要件が無いため据え置き)。
+
 【タイムスタンプの扱い】
 aggregate_shops.pyと同様、内容に変化がなければlast_scraped_atも前回の値を
 そのまま引き継ぎ、「変化がなければコミットしない」というワークフロー側の
@@ -93,6 +102,11 @@ def normalize_wcc(record: dict, source_id: str) -> dict:
         "host_country": None,
         "venue": record.get("venue"),
         "date_range": format_date_range(record.get("start_date"), record.get("end_date")),
+        # 「競技会」タブのWCCセクションを開催日順に並べるため、フロントエンドが
+        # date_range(表示用の日本語文字列)をパースし直さずに済むよう、
+        # ソート可能なISO日付もあわせて持たせる
+        "start_date": record.get("start_date"),
+        "end_date": record.get("end_date"),
         "related_country": None,
         "related_brand": None,
         "description": description,

@@ -5,26 +5,31 @@
 export const EVENTS = [
   {
     source: "WCC(World Coffee Championships)",
+    sourceId: "wcc",
     name: "World Brewers Cup 2026",
     eventType: "competition",
     venue: "World of Coffee Brussels",
     dateRange: "2026年6月25日〜27日",
+    startDate: "2026-06-25",
     relatedCountry: null,
     note: "手淹れ抽出の技術を競う世界大会。PHILOCOFFEA(粕谷哲氏)は2016年大会の優勝者。",
     sourceUrl: "https://wcc.coffee/world-brewers-cup",
   },
   {
     source: "WCC(World Coffee Championships)",
+    sourceId: "wcc",
     name: "World Barista Championship 2026",
     eventType: "competition",
     venue: "World of Coffee Panama",
     dateRange: "2026年10月22日〜25日",
+    startDate: "2026-10-22",
     relatedCountry: "パナマ",
     note: "エスプレッソ・ミルクドリンク・シグネチャードリンクを競う、最も歴史のある世界大会(2000年開始)。",
     sourceUrl: "https://wcc.coffee/world-barista-championship",
   },
   {
     source: "SCAJ(日本スペシャルティコーヒー協会)",
+    sourceId: "scaj",
     name: "SCAJ2026 ワールドスペシャルティコーヒーカンファレンス&エキシビション",
     eventType: "exhibition",
     venue: "東京ビッグサイト 南展示棟1-4ホール",
@@ -35,6 +40,7 @@ export const EVENTS = [
   },
   {
     source: "ACE(Alliance for Coffee Excellence)",
+    sourceId: "ace",
     name: "Guatemala Cup of Excellence 2026",
     eventType: "auction",
     venue: "グアテマラ",
@@ -45,6 +51,7 @@ export const EVENTS = [
   },
   {
     source: "ACE(Alliance for Coffee Excellence)",
+    sourceId: "ace",
     name: "Nicaragua Cup of Excellence 2026",
     eventType: "auction",
     venue: "ニカラグア",

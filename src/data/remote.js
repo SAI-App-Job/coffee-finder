@@ -90,10 +90,12 @@ function mapProduct(raw, shopsByName) {
 function mapEvent(raw, sourcesById) {
   return {
     source: sourcesById.get(raw.source_id)?.name ?? raw.source_id,
+    sourceId: raw.source_id,
     name: raw.name,
     eventType: raw.event_type,
     venue: raw.venue,
     dateRange: raw.date_range,
+    startDate: raw.start_date ?? null,
     relatedCountry: raw.related_country,
     note: raw.description,
     sourceUrl: raw.source_url,

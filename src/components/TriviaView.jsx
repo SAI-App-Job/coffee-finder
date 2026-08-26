@@ -37,7 +37,7 @@ export function TriviaView({ onLearnOrigin, events }) {
       {subTab === "variety" && <VarietyGuideView />}
       {subTab === "brew" && <BrewGuideView />}
       {subTab === "events" && <EventsView onLearnOrigin={onLearnOrigin} events={events} />}
-      {subTab === "competitions" && <CompetitionsView />}
+      {subTab === "competitions" && <CompetitionsView events={events} />}
     </div>
   );
 }
