@@ -2,16 +2,18 @@
 """
 aggregate_events.py
 
-scrape_events_wcc.py / scrape_events_scaj.py / scrape_events_ace.py が出力する
-data_events_wcc.json / data_events_scaj.json / data_events_ace.json を統合し、
-/data/events.json (EVENT_SOURCE + EVENT 相当)を更新する。
+scrape_events_wcc.py / scrape_events_scaj.py / scrape_events_ace.py /
+scrape_events_jcf.py が出力する data_events_wcc.json / data_events_scaj.json /
+data_events_ace.json / data_events_jcf.json を統合し、/data/events.json
+(EVENT_SOURCE + EVENT 相当)を更新する。
 
-【3団体で出力フィールドが異なる理由】
+【4団体で出力フィールドが異なる理由】
 WCCはstart_date/end_date、ACEはCOEオークション日+NW審査週間、SCAJはstart_date/
-end_date+テーマ/主催者と、サイトごとに取得できる情報の形が異なる。本スクリプトは
-これらをdata/events.jsonの共通スキーマ(date_rangeという表示用の日本語文字列)へ
-変換する。description(紹介文)は、調査済みの解説文のような創作は行わず、
-スクレイパーが実際に取得した情報(優勝者・テーマ等)からのみ組み立てる。
+end_date+テーマ/主催者、JCFはstart_date/end_date+開催地(archiveLabel)と、
+サイトごとに取得できる情報の形が異なる。本スクリプトはこれらをdata/events.json
+の共通スキーマ(date_rangeという表示用の日本語文字列)へ変換する。
+description(紹介文)は、調査済みの解説文のような創作は行わず、スクレイパーが
+実際に取得した情報(優勝者・テーマ等)からのみ組み立てる。
 
 【タイムスタンプの扱い】
 aggregate_shops.pyと同様、内容に変化がなければlast_scraped_atも前回の値を
@@ -30,6 +32,7 @@ SOURCES = {
     "wcc": "data_events_wcc.json",
     "scaj": "data_events_scaj.json",
     "ace": "data_events_ace.json",
+    "jcf": "data_events_jcf.json",
 }
 
 
@@ -150,7 +153,23 @@ def normalize_ace(record: dict, source_id: str) -> dict:
     }
 
 
-NORMALIZERS = {"wcc": normalize_wcc, "scaj": normalize_scaj, "ace": normalize_ace}
+def normalize_jcf(record: dict, source_id: str) -> dict:
+    return {
+        "id": build_event_id(source_id, record["name"]),
+        "source_id": source_id,
+        "name": record["name"],
+        "event_type": record.get("event_type", "festival"),
+        "host_country": "日本",
+        "venue": record.get("venue"),
+        "date_range": format_date_range(record.get("start_date"), record.get("end_date")),
+        "related_country": "日本",
+        "related_brand": None,
+        "description": None,
+        "source_url": record.get("source_url"),
+    }
+
+
+NORMALIZERS = {"wcc": normalize_wcc, "scaj": normalize_scaj, "ace": normalize_ace, "jcf": normalize_jcf}
 
 
 def main():
