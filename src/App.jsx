@@ -4,6 +4,7 @@ import { MOCK_PRODUCTS } from "./data/products";
 import { SHOPS } from "./data/shops";
 import { EVENTS } from "./data/events";
 import { TAB_ITEMS } from "./data/navigation";
+import { ORIGIN_GUIDE } from "./data/originGuide";
 import { categorizeFlavorNotes } from "./utils/flavor";
 import { loadRemoteData } from "./data/remote";
 import { useFavorites } from "./hooks/useFavorites";
@@ -86,6 +87,15 @@ export default function CoffeeProductList() {
   const [showOutOfStock, setShowOutOfStock] = useState(false);
 
   const learnAboutOrigin = (country) => {
+    // ORIGIN_GUIDEに実在しない国(産地タブに詳細ページが無い)の場合、
+    // 以前はuseStateの初期値フォールバック(ORIGIN_GUIDE[0]=エチオピア)により
+    // 誤ってエチオピアのページへ遷移してしまっていた。ここで事前に実在を
+    // 確認し、無い場合はタブ遷移自体を行わずトーストで案内する。
+    const matched = ORIGIN_GUIDE.some((o) => o.country === country);
+    if (!matched) {
+      showToast("この産地の情報は準備中です");
+      return;
+    }
     setPendingOriginCountry(country);
     setTab("guide");
     // タブ切り替えはページ遷移ではないため、直前のタブでのスクロール位置が

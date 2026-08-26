@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Sparkles, Coffee, MapPin, ExternalLink, Heart } from "lucide-react";
 import { DISCOVERY_FACTS } from "../data/discoveryFacts";
 import { PROCESSING_EXPLANATIONS, DESIGNATED_BRAND_EXPLANATIONS } from "../data/explanations";
+import { ORIGIN_GUIDE } from "../data/originGuide";
 import { getGradeExplanation } from "../utils/grade";
 import { categorizeFlavorNotes } from "../utils/flavor";
 import { roastColor, cityFromAddress, formatPrice } from "../utils/format";
@@ -128,6 +129,10 @@ export function ProductCard({ product, onOpenMap, onLearnOrigin, isFavorite, onT
     : null;
   const gradeDetail = getGradeExplanation(product.grade, product.originCountry, product.designatedBrand);
   const flavorCategories = categorizeFlavorNotes(product.flavorNotes);
+  // 産地タブに詳細ページが無い国は、ボタン自体は表示したままグレーアウトする
+  // (非表示にすると「情報が無いこと」自体が伝わらないため)。実際の遷移可否・
+  // 未収録時のトースト表示はApp.jsxのlearnAboutOrigin側で一元的に判定する。
+  const hasOriginGuide = ORIGIN_GUIDE.some((o) => o.country === product.originCountry);
 
   const staticTags = [product.farmNote].filter(Boolean);
   const favorited = isFavorite?.(product.id) ?? false;
@@ -302,7 +307,11 @@ export function ProductCard({ product, onOpenMap, onLearnOrigin, isFavorite, onT
               e.stopPropagation();
               onLearnOrigin(product.originCountry);
             }}
-            className="flex items-center justify-center gap-1.5 text-[12px] text-[var(--accent-label)] hover:text-[var(--accent)] transition-colors py-1"
+            className={`flex items-center justify-center gap-1.5 text-[12px] py-1 transition-colors ${
+              hasOriginGuide
+                ? "text-[var(--accent-label)] hover:text-[var(--accent)]"
+                : "text-[#8B7361] opacity-60"
+            }`}
           >
             <Sparkles size={12} strokeWidth={1.75} />
             <span>{product.originCountry}という産地をもっと知る</span>
