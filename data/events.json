@@ -31,6 +31,14 @@
       "robots_txt_status": "許可(2026-08確認。GPTBot/ClaudeBot等主要AI事業者クローラーは個別に禁止されているが、独自User-Agentは「User-agent: *」の許可規定の対象。Content-Signal: use=referenceにも合致)",
       "update_cadence": "月次",
       "last_scraped_at": "2026-08-26T10:15:54.079336+00:00"
+    },
+    {
+      "id": "tcf",
+      "name": "TOKYO COFFEE FESTIVAL(NPO法人Farmers Market Association)",
+      "url": "https://tokyocoffeefestival.co/",
+      "robots_txt_status": "許可(2026-08確認。/cms/wp-admin/のみ制限)",
+      "update_cadence": "月次",
+      "last_scraped_at": "2026-08-26T20:29:30.517377+00:00"
     }
   ],
   "events": [
@@ -459,6 +467,19 @@
       "related_brand": null,
       "description": null,
       "source_url": "https://japancoffeefestival.com/"
+    },
+    {
+      "id": "tcf:TOKYO COFFEE FESTIVAL 2026 Spring",
+      "source_id": "tcf",
+      "name": "TOKYO COFFEE FESTIVAL 2026 Spring",
+      "event_type": "festival",
+      "host_country": "日本",
+      "venue": "国際連合大学中庭 (〒150-0001 東京都渋谷区神宮前5-53-70)",
+      "date_range": "2026年5月2日〜4日",
+      "related_country": "日本",
+      "related_brand": null,
+      "description": "入場料: 無料",
+      "source_url": "https://tokyocoffeefestival.co/"
     }
   ]
 }
