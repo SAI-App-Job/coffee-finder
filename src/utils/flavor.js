@@ -32,9 +32,13 @@ export function computeFlavorPreferenceScores(ratedEntries) {
 
 // 傾向上位カテゴリに合致する商品を、一致カテゴリ数の多い順に返す。
 // 呼び出し側で「まだ評価していない商品」に絞り込んだ上で渡す想定。
+// 終売・売り切れの商品はおすすめとして提示しても購入できないため、
+// 在庫状態が「販売中」の商品のみを候補にする(「好みの傾向」グラフ自体の
+// 集計対象(評価済み商品全体)は在庫と無関係のためここでは絞り込まない)。
 export function recommendByFlavorCategories(candidateProducts, topCategoryEns, limit = 6) {
   if (topCategoryEns.length === 0) return [];
   return candidateProducts
+    .filter((product) => product.stockStatus === "販売中")
     .map((product) => {
       const categories = categorizeFlavorNotes(product.flavorNotes).map((c) => c.en);
       const matchCount = categories.filter((en) => topCategoryEns.includes(en)).length;
