@@ -39,6 +39,30 @@
       "robots_txt_status": "許可(2026-08確認。/cms/wp-admin/のみ制限)",
       "update_cadence": "月次",
       "last_scraped_at": "2026-08-26T20:29:30.517377+00:00"
+    },
+    {
+      "id": "ncf",
+      "name": "NAGOYA COFFEE FES.(NAGOYA COFFEE FESTIVAL / HOSHIGAOKA COFFEE MARKET / COFFEE JAM)",
+      "url": "https://nagoyacoffeefes.com/",
+      "robots_txt_status": "許可(2026-08確認。Shopify標準構成。admin/cart/checkout/account等のみ制限)",
+      "update_cadence": "月次",
+      "last_scraped_at": "2026-08-26T21:19:21.193673+00:00"
+    },
+    {
+      "id": "ocx",
+      "name": "珈琲博覧日(珈琲博覧日実行委員会 / FabCafe Nagoya)",
+      "url": "https://onedaycoffeeexpo.com/",
+      "robots_txt_status": "許可(2026-08確認。/wp-admin/のみ制限)",
+      "update_cadence": "月次",
+      "last_scraped_at": "2026-08-26T21:19:21.193673+00:00"
+    },
+    {
+      "id": "ccf",
+      "name": "COFFEE CITY FESTIVAL(COFFEE CITY FESTIVAL SAPPORO実行委員会)",
+      "url": "https://coffee-city-fes.com/",
+      "robots_txt_status": "制限なし(2026-08確認。robots.txt自体が存在しない/404)",
+      "update_cadence": "月次",
+      "last_scraped_at": "2026-08-26T21:19:21.193673+00:00"
     }
   ],
   "events": [
@@ -480,6 +504,58 @@
       "related_brand": null,
       "description": "入場料: 無料",
       "source_url": "https://tokyocoffeefestival.co/"
+    },
+    {
+      "id": "ncf:名古屋コーヒーフェスティバル2026 Fall",
+      "source_id": "ncf",
+      "name": "名古屋コーヒーフェスティバル2026 Fall",
+      "event_type": "festival",
+      "host_country": "日本",
+      "venue": "中日ビル",
+      "date_range": "2026年9月19日〜20日",
+      "related_country": "日本",
+      "related_brand": null,
+      "description": null,
+      "source_url": "https://nagoyacoffeefes.com/"
+    },
+    {
+      "id": "ncf:HOSHIGAOKA COFFEE MARKET 2026 Oct.-Nov",
+      "source_id": "ncf",
+      "name": "HOSHIGAOKA COFFEE MARKET 2026 Oct.-Nov",
+      "event_type": "festival",
+      "host_country": "日本",
+      "venue": "星が丘テラス",
+      "date_range": "2026年10月31日〜11月1日",
+      "related_country": "日本",
+      "related_brand": null,
+      "description": null,
+      "source_url": "https://nagoyacoffeefes.com/"
+    },
+    {
+      "id": "ocx:珈琲博覧日2026",
+      "source_id": "ocx",
+      "name": "珈琲博覧日2026",
+      "event_type": "festival",
+      "host_country": "日本",
+      "venue": "Hisaya-odori Park（久屋大通公園）ケヤキヒロバ・シバフヒロバ、FabCafe Nagoya",
+      "date_range": "2026年11月3日",
+      "related_country": "日本",
+      "related_brand": null,
+      "description": null,
+      "source_url": "https://onedaycoffeeexpo.com/"
+    },
+    {
+      "id": "ccf:ã³ã¼ãã¼ã·ãã£ãã§ã¹ãã£ãã«2025",
+      "source_id": "ccf",
+      "name": "ã³ã¼ãã¼ã·ãã£ãã§ã¹ãã£ãã«2025",
+      "event_type": "festival",
+      "host_country": "日本",
+      "venue": "æ­å¹PARCO7F ã¹ãã¼ã¹ï¼",
+      "date_range": null,
+      "related_country": "日本",
+      "related_brand": null,
+      "description": "vol.8",
+      "source_url": "https://coffee-city-fes.com/"
     }
   ]
 }
