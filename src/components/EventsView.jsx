@@ -102,9 +102,9 @@ export function JapanCompetitionCard({ competition }) {
 export function EventsView({ hideHeading = false, onLearnOrigin, events }) {
   return (
     <main className="px-5 py-5 flex flex-col gap-3 max-w-xl mx-auto">
-      {!hideHeading && <SectionHeading en="Competitions & Events" ja="大会・イベント" />}
+      {!hideHeading && <SectionHeading en="Events" ja="イベント" />}
       <p className="text-[13px] text-[#8B7361]">
-        世界大会・国内展示会・国際品評会の開催情報をまとめました。産地に関連するイベントはタップして産地タブへ移動できます。
+        世界大会・国内展示会・フェスティバル・国際品評会の開催スケジュールをまとめました。産地に関連するイベントはタップして産地タブへ移動できます。
       </p>
       <div className="flex flex-col gap-2.5">
         {events.map((event) => (
@@ -116,15 +116,23 @@ export function EventsView({ hideHeading = false, onLearnOrigin, events }) {
           "WCC(World Coffee Championships、wcc.coffee)",
           "SCAJ(scajconference.jp)",
           "ACE / Cup of Excellence(cupofexcellence.org)",
+          "Japan Coffee Festival(japancoffeefestival.com)",
         ]}
       />
+    </main>
+  );
+}
 
-      <div className="mt-3 pt-3 border-t border-[#4A3A2A] flex items-center gap-1.5">
+export function CompetitionsView({ hideHeading = false }) {
+  return (
+    <main className="px-5 py-5 flex flex-col gap-3 max-w-xl mx-auto">
+      {!hideHeading && <SectionHeading en="Competitions" ja="競技会" />}
+      <div className="flex items-center gap-1.5">
         <Trophy size={14} className="text-[var(--accent)]" strokeWidth={1.75} />
         <h3 className="text-[14px] font-medium text-[#F2E9DD]">日本国内の主要競技会(SCAJ主催)</h3>
       </div>
       <p className="text-[13px] text-[#8B7361] -mt-1">
-        SCAJ(日本スペシャルティコーヒー協会)が主催する国内競技会のうち代表的な4大会。優勝者の多くは世界大会へ日本代表として出場する。
+        SCAJ(日本スペシャルティコーヒー協会)が主催する国内競技会9大会。優勝者の多くは世界大会へ日本代表として出場する。
       </p>
       <div className="flex flex-col gap-2.5">
         {JAPAN_COMPETITIONS.map((competition) => (

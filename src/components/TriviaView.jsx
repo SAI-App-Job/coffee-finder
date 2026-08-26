@@ -5,7 +5,7 @@ import { GlossaryView } from "./GlossaryView";
 import { DesignatedBrandsView } from "./DesignatedBrandsView";
 import { VarietyGuideView } from "./VarietyGuideView";
 import { BrewGuideView } from "./BrewGuideView";
-import { EventsView } from "./EventsView";
+import { EventsView, CompetitionsView } from "./EventsView";
 import { TRIVIA_SUB_TABS } from "../data/navigation";
 
 export function TriviaView({ onLearnOrigin, events }) {
@@ -37,6 +37,7 @@ export function TriviaView({ onLearnOrigin, events }) {
       {subTab === "variety" && <VarietyGuideView />}
       {subTab === "brew" && <BrewGuideView />}
       {subTab === "events" && <EventsView onLearnOrigin={onLearnOrigin} events={events} />}
+      {subTab === "competitions" && <CompetitionsView />}
     </div>
   );
 }
