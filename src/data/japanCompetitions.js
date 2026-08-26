@@ -15,6 +15,14 @@
 // ルール詳細はSCAJ公式の概要ページには記載が見当たらなかったため、この記事
 // では触れていない。新田和雄選手(2023・2024年優勝)と娘の新田衣祥選手
 // (2025年優勝)による親子3連覇は、過去の競技結果ページで確認済み。
+//
+// JCTCについて: 当初「8セット×8分の制限時間」という情報を基に記事化しようと
+// したが、SCAJ公式の概要ページでは「各設問1分ずつ、計8分以内に正解した数が
+// 一番多かった選手が優勝」と説明されており、正しくは「1問1分×8問=計8分」
+// (8セットそれぞれに8分かけるのではない)。この点のみ修正して記載している。
+//
+// JCRC・JCIGSCについては、提供された情報がSCAJ公式の概要ページの記述と
+// 完全に一致することを確認済み。
 export const JAPAN_COMPETITIONS = [
   {
     id: "jbc",
@@ -63,5 +71,47 @@ export const JAPAN_COMPETITIONS = [
     format:
       "8分間の競技時間内に、カフェラテ/カプチーノ・カフェマキャート・デザイナーズビバレッジの3種類のドリンクをそれぞれ2杯提供する。デザインの芸術性・独創性・再現性・複雑さに加え、提供された2杯のデザインができる限りシンメトリー(左右対称)であることも高得点の要因になる。優勝者はワールド ラテアート チャンピオンシップへ日本代表として出場する。",
     sources: [{ label: "JLAC概要", url: "https://scaj.org/activity/competitions/jlac" }],
+  },
+  {
+    id: "jctc",
+    abbr: "JCTC",
+    name: "ジャパン カップテイスターズ チャンピオンシップ",
+    tagline: "3つのカップから違う味の1つを当てる「カッピング」の技術と速さを競う競技会",
+    history:
+      "スペシャルティコーヒーの基本であるカッピング技術を競技化した世界大会に触発され、2009年9月に第1回JCTCを日本で開催。同年の世界大会(ドイツ・ケルン)には日本から選手が参加し、後藤選手が世界第3位となった。",
+    format:
+      "1問につき3つのカップが並び、そのうち1つだけ違う味のコーヒーが入っている。この1つを「カッピング」の手法で当てる。1問1分・計8問(合計8分)以内で正解数を競い、正解数が同じ場合は解答にかかった時間の短さで優劣を決める。",
+    sources: [
+      { label: "JCTC概要", url: "https://scaj.org/activity/competitions/jctc" },
+      { label: "過去の競技結果", url: "https://scaj.org/activity/competitions/jctc/results" },
+    ],
+  },
+  {
+    id: "jcrc",
+    abbr: "JCRC",
+    name: "ジャパン コーヒー ロースティング チャンピオンシップ",
+    tagline: "焙煎前に目指す風味特性を宣言してから挑む、他大会にはないユニークな審査方式の競技会",
+    history:
+      "WCE(World Coffee Events)が2012年のウィーン大会から導入した新競技「Coffee Roasting Challenge(CRC)」(2013年に「World Coffee Roasting Championship」へ改称)の日本選考会として開始。優勝者を世界大会へ送り出すべく、SCAJが日本国内向けに開催している。",
+    format:
+      "従来の焙煎競技(SCAA Roaster's Guild RetreatやSCAJローストマスターズ・リトリート等)は、事前申告なしで結果のカップクオリティのみを審査していたが、JCRCでは競技前に「どのような風味特性に仕上げるか」を『焙煎ログ』として事前申告したうえで焙煎に挑む。競技最終日、実際の焙煎結果が申告内容に最も近づいた選手が優勝となる。",
+    sources: [
+      { label: "JCRC概要", url: "https://scaj.org/activity/competitions/jcrc" },
+      { label: "過去の競技結果", url: "https://scaj.org/activity/competitions/jcrc/past_results" },
+    ],
+  },
+  {
+    id: "jcigsc",
+    abbr: "JCIGSC",
+    name: "ジャパン コーヒー イン グッド スピリッツ チャンピオンシップ",
+    tagline: "コーヒーとお酒を組み合わせたオリジナルカクテルを競う競技会",
+    history:
+      "欧州発の世界大会「World Coffee In Good Spirits Championship(WCIGSC)」に日本代表を送るため、2012年2月のデモンストレーション競技を経て2013年に第1回JCIGSCが開催された。",
+    format:
+      "10分間の競技時間内に、アイリッシュコーヒー2杯と、コーヒーを使ったアルコールベースのデザイナードリンク(ホットまたはコールド)2杯、計4杯を作成する。ルールはWCIGSCに準じており、優勝者は日本代表として世界大会に出場する。",
+    sources: [
+      { label: "JCIGSC概要", url: "https://scaj.org/activity/competitions/jcigsc" },
+      { label: "過去の競技結果", url: "https://scaj.org/activity/competitions/jcigsc/past_results" },
+    ],
   },
 ];
