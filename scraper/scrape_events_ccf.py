@@ -24,6 +24,14 @@ alt="vol.8">`、ロゴ画像`alt="コーヒーシティフェスティバル2025
 robots.txt確認済み(2026-08時点): robots.txtファイル自体が存在しない(404)。
 一般クローラーへの制限記載が無いため、他スクレイパーと同じUser-Agent・
 Crawl-Delayで通常のクロール規範に従ってアクセスする。
+
+【文字化け対策について】実データ確認済み(2026-08時点): このサイトのHTTP
+レスポンスヘッダは`Content-Type: text/html`のみでcharset指定が無く、
+requestsのデフォルト推定(ISO-8859-1)で`resp.text`をデコードすると日本語が
+文字化けする(他スクレイパー対象サイトはヘッダにcharset=utf-8を明記しており
+この問題は起きない)。HTML内には`<meta charset="UTF-8">`があるため、
+BeautifulSoupに`resp.text`ではなく`resp.content`(生バイト列)を渡し、
+BeautifulSoup自身のエンコーディング検出に委ねることで回避する。
 """
 
 import re
@@ -54,7 +62,9 @@ def scrape_current_event() -> dict:
     """トップページのキービジュアルから、現在/次回開催分のイベント1件を作る。"""
     resp = requests.get(EVENT_SOURCE_INFO["url"], headers=REQUEST_HEADERS, timeout=15)
     resp.raise_for_status()
-    soup = BeautifulSoup(resp.text, "html.parser")
+    # resp.textだとcharset未指定のレスポンスヘッダのせいで文字化けするため、
+    # 生バイト列を渡してBeautifulSoup自身にエンコーディングを検出させる
+    soup = BeautifulSoup(resp.content, "html.parser")
 
     logo_img = soup.select_one(".kv__logo img")
     name = logo_img.get("alt") if logo_img and logo_img.get("alt") else None
