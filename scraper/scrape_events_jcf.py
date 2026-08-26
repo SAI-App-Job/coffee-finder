@@ -20,6 +20,15 @@ Coffee Festivalとは無関係な提携イベントが1件混在していた(同
 別イベントを同じ配列に載せていると見られる。newsセクションにも関連告知あり)。
 タイトルに「コーヒー」または"Coffee"を含まないイベントは除外する。
 
+【会場住所の取得について】実データ確認済み(2026-08時点): site-data.jsの
+archiveLabelは「京都府・宇治市植物公園」のような都道府県・市区町村レベルの
+表記だが、個別ページ(urlが判明しているイベントのみ)には`<dt>会場</dt>
+<dd>...</dd>`という構造で、より詳しい会場名が入っており、判明している場合は
+「宇治市植物公園（宇治市広野町八軒屋谷25-1）」のように住所も括弧内に含まれる。
+個別ページが無い(url未定)イベントはarchiveLabelのまま。個別ページ取得は
+site-data.js取得後の追加リクエストになるため、他スクレイパーと同じ
+CRAWL_DELAY_SECONDSを1件ごとに空ける。
+
 robots.txt確認済み(2026-08時点): 一般クローラーへは「User-agent: * / Allow: /」
 (Content-Signal: search=yes, ai-train=no, use=reference。本スクレイパーの用途
 =一次資料としての開催情報参照はuse=referenceに該当)。GPTBot・ClaudeBot・
@@ -34,6 +43,7 @@ import re
 import time
 
 import requests
+from bs4 import BeautifulSoup
 
 EVENT_SOURCE_INFO = {
     "name": "Japan Coffee Festival(実行委員会)",
@@ -73,6 +83,20 @@ def build_source_url(raw_url: str | None) -> str:
     return f"{BASE_URL}{path}"
 
 
+def fetch_venue_detail(url: str) -> str | None:
+    """個別イベントページの「会場」欄(dt/dd)から、archiveLabelより詳しい
+    会場名(判明していれば住所も括弧内に含む)を取得する。"""
+    resp = requests.get(url, headers=REQUEST_HEADERS, timeout=15)
+    resp.raise_for_status()
+    soup = BeautifulSoup(resp.text, "html.parser")
+    for dt in soup.find_all("dt"):
+        if dt.get_text(strip=True) == "会場":
+            dd = dt.find_next_sibling("dd")
+            if dd:
+                return dd.get_text(" ", strip=True)
+    return None
+
+
 def scrape_events() -> list[dict]:
     data = fetch_jcf_data()
     time.sleep(CRAWL_DELAY_SECONDS)
@@ -84,14 +108,24 @@ def scrape_events() -> list[dict]:
             # Japan Coffee Festivalとは無関係な提携イベント(実データ確認済み:
             # 「ウイスキー100年フェスティバル」)を除外する
             continue
+
+        raw_url = event.get("url")
+        source_url = build_source_url(raw_url)
+        venue = event.get("archiveLabel")
+        if raw_url:
+            detail_venue = fetch_venue_detail(source_url)
+            time.sleep(CRAWL_DELAY_SECONDS)
+            if detail_venue:
+                venue = detail_venue
+
         records.append({
             "event_source": EVENT_SOURCE_INFO["name"],
             "name": title,
             "event_type": "festival",
-            "venue": event.get("archiveLabel"),
+            "venue": venue,
             "start_date": event.get("start"),
             "end_date": event.get("end"),
-            "source_url": build_source_url(event.get("url")),
+            "source_url": source_url,
         })
     return records
 

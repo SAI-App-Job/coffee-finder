@@ -24,6 +24,12 @@ FabCafe Nagoya</strong></p>`という、`<br>`区切りで「開催日：」「�
 ID(`elementor-element-XXXXXXX`)で不安定なため、WCCスクレイパーと同様に
 「開催日」「開催場所」という項目名そのものをテキストから検索する方式を採る。
 
+【住所(ACCESS)の取得について】実データ確認済み(2026-08時点): 上記の開催概要
+ブロックとは別に、少し離れた箇所に`<p><strong>ACCESS </strong><br>愛知県
+名古屋市中区丸の内3丁目6<br>Hisaya-odori Park（久屋大通公園）ZONE1<br><br>
+名古屋市営地下鉄...</p>`という段落があり、「ACCESS」の直後の行に住所が
+入っている。開催場所の値に「（住所）」として付け足す。
+
 robots.txt確認済み(2026-08時点): 「User-agent: * / Disallow: /wp-admin/」のみで、
 トップページを含む一般コンテンツは対象外。
 """
@@ -51,20 +57,34 @@ REQUEST_HEADERS = {
 DATE_PATTERN = re.compile(r"(\d{4})年(\d{1,2})月(\d{1,2})日")
 
 
-def fetch_outline_text() -> str | None:
-    """トップページから「開催日」「開催場所」を含む<strong>ブロックのテキストを
-    取得する(<br>は改行として扱う)。"""
+def fetch_soup() -> BeautifulSoup:
     resp = requests.get(EVENT_SOURCE_INFO["url"], headers=REQUEST_HEADERS, timeout=15)
     resp.raise_for_status()
     soup = BeautifulSoup(resp.text, "html.parser")
-
     for br in soup.find_all("br"):
         br.replace_with("\n")
+    return soup
 
+
+def find_outline_text(soup: BeautifulSoup) -> str | None:
+    """「開催日」「開催場所」を含む<strong>ブロックのテキストを取得する。"""
     for strong in soup.find_all("strong"):
         text = strong.get_text()
         if "開催日" in text and "開催場所" in text:
             return text
+    return None
+
+
+def find_access_address(soup: BeautifulSoup) -> str | None:
+    """「ACCESS」を含む段落から、直後の行(住所)を取得する。"""
+    for p in soup.find_all("p"):
+        text = p.get_text()
+        if "ACCESS" not in text:
+            continue
+        lines = [ln.strip() for ln in text.split("\n") if ln.strip()]
+        for i, line in enumerate(lines):
+            if line.startswith("ACCESS") and i + 1 < len(lines):
+                return lines[i + 1]
     return None
 
 
@@ -80,7 +100,9 @@ def parse_outline(text: str) -> dict:
 
 def scrape_current_event() -> dict:
     """トップページの開催概要から、現在/次回開催分のイベント1件を作る。"""
-    text = fetch_outline_text()
+    soup = fetch_soup()
+
+    text = find_outline_text(soup)
     if not text:
         raise ValueError("「開催日」「開催場所」を含むブロックが見つかりませんでした(サイト構造が変わった可能性)")
 
@@ -98,11 +120,16 @@ def scrape_current_event() -> dict:
     # 「珈琲博覧日{開催年}」という名称で統一する
     name = f"珈琲博覧日{year}" if year else None
 
+    venue = data.get("開催場所")
+    address = find_access_address(soup)
+    if venue and address:
+        venue = f"{venue}（{address}）"
+
     return {
         "event_source": EVENT_SOURCE_INFO["name"],
         "name": name,
         "event_type": "festival",
-        "venue": data.get("開催場所"),
+        "venue": venue,
         "start_date": start_date,
         "end_date": end_date,
         "source_url": EVENT_SOURCE_INFO["url"],
