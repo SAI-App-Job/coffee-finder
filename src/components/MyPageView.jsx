@@ -1,5 +1,5 @@
 import { useRef, useState } from "react";
-import { Palette, Check, Sparkles, Heart, Download, Upload, Info, History, Store } from "lucide-react";
+import { Palette, Check, Sparkles, Heart, Download, Upload, Info, History } from "lucide-react";
 import { SectionHeading } from "./common";
 import { TasteProfile } from "./TasteProfile";
 import { FREE_FAVORITES_LIMIT } from "../hooks/useFavorites";
@@ -190,17 +190,6 @@ export function MyPageView({
       </section>
 
       <TasteProfile products={products} getRating={getRating} onOpenDetail={onOpenDetail} />
-
-      <section className="rounded-2xl bg-[#2F241A] border border-[#4A3A2A] p-4 flex flex-col gap-3">
-        <div className="flex items-center gap-1.5">
-          <Store size={14} className="text-[var(--accent)]" strokeWidth={1.75} />
-          <h3 className="text-[14px] font-medium text-[#F2E9DD]">掲載基準について</h3>
-        </div>
-        <p className="text-[12px] text-[#8B7361] leading-relaxed">
-          個人〜小規模の自家焙煎店を中心に掲載しています。11店舗以上を展開する大手チェーンは対象外です(日本チェーンストア協会の定義に基づく)。ただし11店舗未満の複数拠点展開(例:
-          FUGLEN、PHILOCOFFEA)は対象に含みます。
-        </p>
-      </section>
     </main>
   );
 }

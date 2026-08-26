@@ -1,5 +1,5 @@
 import { useState, useMemo, useEffect } from "react";
-import { Search, X, SlidersHorizontal, Coffee, Bell } from "lucide-react";
+import { Search, X, SlidersHorizontal, Coffee, Bell, Info } from "lucide-react";
 import { MOCK_PRODUCTS } from "./data/products";
 import { SHOPS } from "./data/shops";
 import { EVENTS } from "./data/events";
@@ -19,6 +19,7 @@ import { ProductCard, DiscoveryFactCard } from "./components/ProductCard";
 import { ProductDetailModal } from "./components/ProductDetailModal";
 import { TastingLogModal } from "./components/TastingLogModal";
 import { AlertsPanel } from "./components/AlertsPanel";
+import { AboutView } from "./components/AboutView";
 import { FilterSheet } from "./components/FilterSheet";
 import { ShopListView, ShopDetailView } from "./components/ShopViews";
 import { FavoritesTabView } from "./components/FavoritesTabView";
@@ -175,6 +176,7 @@ export default function CoffeeProductList() {
   );
   const { alerts, dismissAlerts } = useAlerts(products, favoriteIds, favoriteShopNameSet, remoteLoaded);
   const [alertsPanelOpen, setAlertsPanelOpen] = useState(false);
+  const [aboutOpen, setAboutOpen] = useState(false);
 
   const compareProducts = useMemo(
     () => compareIds.map((id) => productsById.get(id)).filter(Boolean),
@@ -251,18 +253,27 @@ export default function CoffeeProductList() {
             </h1>
             <p className="text-[12px] text-[#8B7361] mt-0.5">Find Local Roasters Near You</p>
           </div>
-          <button
-            onClick={() => setAlertsPanelOpen(true)}
-            className="relative shrink-0 mt-1 p-1.5 text-[#B8A891] hover:text-[#F2E9DD] transition-colors"
-            aria-label="お知らせ"
-          >
-            <Bell size={20} strokeWidth={1.75} />
-            {alerts.length > 0 && (
-              <span className="absolute top-0.5 right-0.5 min-w-[16px] h-4 px-1 rounded-full bg-[var(--accent)] text-[#231810] text-[10px] font-bold flex items-center justify-center">
-                {alerts.length > 9 ? "9+" : alerts.length}
-              </span>
-            )}
-          </button>
+          <div className="flex items-center shrink-0 mt-1">
+            <button
+              onClick={() => setAboutOpen(true)}
+              className="p-1.5 text-[#B8A891] hover:text-[#F2E9DD] transition-colors"
+              aria-label="このアプリについて"
+            >
+              <Info size={20} strokeWidth={1.75} />
+            </button>
+            <button
+              onClick={() => setAlertsPanelOpen(true)}
+              className="relative p-1.5 text-[#B8A891] hover:text-[#F2E9DD] transition-colors"
+              aria-label="お知らせ"
+            >
+              <Bell size={20} strokeWidth={1.75} />
+              {alerts.length > 0 && (
+                <span className="absolute top-0.5 right-0.5 min-w-[16px] h-4 px-1 rounded-full bg-[var(--accent)] text-[#231810] text-[10px] font-bold flex items-center justify-center">
+                  {alerts.length > 9 ? "9+" : alerts.length}
+                </span>
+              )}
+            </button>
+          </div>
         </div>
 
         <div className="flex gap-1 mt-4 p-1 rounded-full bg-[#3B2211] w-fit overflow-x-auto max-w-full">
@@ -482,6 +493,7 @@ export default function CoffeeProductList() {
           dismissAlerts();
         }}
       />
+      <AboutView open={aboutOpen} onClose={() => setAboutOpen(false)} />
 
       <div className="fixed bottom-0 inset-x-0 z-20 bg-[#1C140D]/95 backdrop-blur-sm">
         {compareTrayVisible && (
