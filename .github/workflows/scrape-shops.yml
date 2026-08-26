@@ -39,12 +39,13 @@ on:
           - mui
           - coulane
           - 27coffee
+          - cafeclaudia
 
 permissions:
   contents: write # data/*.json をコミット・pushするために必要
 
 jobs:
-  # 23店舗を並列に実行する。各店舗は独立したサイトへのスクレイピングなので、
+  # 24店舗を並列に実行する。各店舗は独立したサイトへのスクレイピングなので、
   # 直列にする理由がない(courtesy delayは店舗ごとの各リクエスト間隔の話であり、
   # 店舗同士を並列化しても対象サイトへの負荷は増えない)。
   #
@@ -131,6 +132,9 @@ jobs:
           - id: 27coffee
             script: scrape_27coffee.py
             output: data_27coffee.json
+          - id: cafeclaudia
+            script: scrape_cafeclaudia.py
+            output: data_cafeclaudia.json
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4 # 差分ベーススクレイピングがdata/products.jsonを参照するため必須
@@ -155,7 +159,7 @@ jobs:
           path: scraper/${{ matrix.shop.output }}
           retention-days: 1
 
-  # 23店舗すべてのスクレイピングが完了してから、まとめて集約・コミットする
+  # 24店舗すべてのスクレイピングが完了してから、まとめて集約・コミットする
   # (店舗ごとに個別コミットすると、data/shops.json・data/products.jsonの
   # 内容が実行順に依存して揺れるため)。
   aggregate:

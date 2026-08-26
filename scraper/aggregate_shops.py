@@ -101,6 +101,7 @@ SOURCE_FILES = {
     "Mui": "data_mui.json",
     "Coulane": "data_coulane.json",
     "27 COFFEE ROASTERS": "data_27coffee.json",
+    "カフェクラウディア": "data_cafeclaudia.json",
 }
 
 

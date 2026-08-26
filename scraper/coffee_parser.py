@@ -239,11 +239,15 @@ POST_PROCESSING_KEYWORDS = {
     # 「WHISKEY BARREL」という商品名表記のみで「barrel aged」を含まないため別途追加
 }
 
-GRADE_PATTERN = re.compile(r"(SHB|SHG|G[1-6]|No\.\d+|Aグレード|AA)")
+GRADE_PATTERN = re.compile(r"(SHB|SHG|G-?[1-6]|No\.\d+|Aグレード|AA)")
 # SHG(Strictly High Grown)は実データ確認済み(2026-08時点、Coulaneの「ニカラグア SHG
 # キータスウエノス農園」等)。コスタリカ・グアテマラ・ホンジュラス・エルサルバドル・
 # ニカラグア等、標高で格付けする複数国で使われる表記でSHBの兄弟格にあたるが、
 # これまでの実データにSHG表記の商品が無かったため未対応のままだった。
+# G-1のようなハイフン付き表記も実データ確認済み(2026-08時点、カフェクラウディアの
+# 「エチオピア ベンチ・マジG-1 ゲシャ・カルマチ農園」等)。マッチ後にparse_product()側で
+# ハイフンを除去し、ハイフン無し表記(G1)と同じ値に正規化する(表示上の見た目を揃え、
+# フィルタ等で同一グレードが別値として分裂しないようにするため)。
 
 # --- コロンビア産グレードマスタ(FNC公式: cafedecolombia.jp/colombia/specialty/grade/) --
 # 「エクセルソ(Excelso)」は7サブグレード共通の親カテゴリ名であり、単独では
@@ -499,7 +503,7 @@ def parse_product(raw_name: str) -> dict:
     else:
         m = GRADE_PATTERN.search(raw_name)
         if m:
-            result["grade"] = m.group(1)
+            result["grade"] = re.sub(r"^G-(\d)$", r"G\1", m.group(1))
 
     # 焙煎度
     for kw, roast in ROAST_KEYWORDS.items():

@@ -111,8 +111,9 @@ PLATFORM_FINGERPRINTS = [
     {
         "platform": "BASE",
         "patterns": [r"thebase\.in", r"base-ec2", r"cdn\.thebase\.in"],
-        "similar_scraper": None,
-        "note": "未対応。構造調査が必要。",
+        "similar_scraper": "scrape_cafeclaudia.py",
+        "note": "対応済み。カテゴリページ(?page=N)から商品URLを収集し、詳細ページの"
+        "h1.itemTitle/#price/挽き方セレクトのdata-stockを見る構成(カフェクラウディア調査時)。",
     },
     {
         "platform": "STORES",
