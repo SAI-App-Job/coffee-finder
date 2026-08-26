@@ -931,5 +931,17 @@
     "hours": "9:00-20:00(月曜・第3火曜定休、お問い合わせ対応時間)",
     "map_query": "カフェクラウディア 小田原市中町",
     "last_scraped_at": "2026-08-26T04:44:26.103880+00:00"
+  },
+  {
+    "name": "厚木珈琲",
+    "url": "https://atsugicoffee.com/",
+    "platform": "Shopify(collections/beans/products.jsonエンドポイントを利用)",
+    "shop_type": "single_location",
+    "robots_txt_status": "許可(2026-08確認。Shopify標準robots.txt。「products/collections等はクロール可能」と明記)",
+    "address": "神奈川県厚木市飯山837-20",
+    "prefecture": "神奈川県",
+    "hours": null,
+    "map_query": "厚木珈琲",
+    "last_scraped_at": "2026-08-26T07:24:38.505051+00:00"
   }
 ]
