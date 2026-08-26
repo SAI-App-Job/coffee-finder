@@ -3,17 +3,17 @@
 aggregate_events.py
 
 scrape_events_wcc.py / scrape_events_scaj.py / scrape_events_ace.py /
-scrape_events_jcf.py / scrape_events_tcf.py が出力する data_events_wcc.json /
-data_events_scaj.json / data_events_ace.json / data_events_jcf.json /
-data_events_tcf.json を統合し、/data/events.json(EVENT_SOURCE + EVENT 相当)を
-更新する。
+scrape_events_jcf.py / scrape_events_tcf.py / scrape_events_ncf.py /
+scrape_events_ocx.py / scrape_events_ccf.py が出力する data_events_*.json を
+統合し、/data/events.json(EVENT_SOURCE + EVENT 相当)を更新する。
 
-【5団体で出力フィールドが異なる理由】
+【団体ごとに出力フィールドが異なる理由】
 WCCはstart_date/end_date、ACEはCOEオークション日+NW審査週間、SCAJはstart_date/
 end_date+テーマ/主催者、JCFはstart_date/end_date+開催地(archiveLabel)、TCFは
-start_date/end_date+入場料/主催/共催と、サイトごとに取得できる情報の形が異なる。
-本スクリプトはこれらをdata/events.jsonの共通スキーマ(date_rangeという表示用の
-日本語文字列)へ変換する。
+start_date/end_date+入場料/主催/共催、NCFは1ソースから3ブランド分のイベントを
+個別レコードとして、OCXはTCFと同じ「現在/次回のみ」設計、CCFはvol(開催回数)と、
+サイトごとに取得できる情報の形が異なる。本スクリプトはこれらをdata/events.json
+の共通スキーマ(date_rangeという表示用の日本語文字列)へ変換する。
 description(紹介文)は、調査済みの解説文のような創作は行わず、スクレイパーが
 実際に取得した情報(優勝者・テーマ等)からのみ組み立てる。
 
@@ -45,6 +45,9 @@ SOURCES = {
     "ace": "data_events_ace.json",
     "jcf": "data_events_jcf.json",
     "tcf": "data_events_tcf.json",
+    "ncf": "data_events_ncf.json",
+    "ocx": "data_events_ocx.json",
+    "ccf": "data_events_ccf.json",
 }
 
 
@@ -203,12 +206,64 @@ def normalize_tcf(record: dict, source_id: str) -> dict:
     }
 
 
+def normalize_ncf(record: dict, source_id: str) -> dict:
+    return {
+        "id": build_event_id(source_id, record["name"]),
+        "source_id": source_id,
+        "name": record["name"],
+        "event_type": record.get("event_type", "festival"),
+        "host_country": "日本",
+        "venue": record.get("venue"),
+        "date_range": format_date_range(record.get("start_date"), record.get("end_date")),
+        "related_country": "日本",
+        "related_brand": None,
+        "description": None,
+        "source_url": record.get("source_url"),
+    }
+
+
+def normalize_ocx(record: dict, source_id: str) -> dict:
+    return {
+        "id": build_event_id(source_id, record["name"]),
+        "source_id": source_id,
+        "name": record["name"],
+        "event_type": record.get("event_type", "festival"),
+        "host_country": "日本",
+        "venue": record.get("venue"),
+        "date_range": format_date_range(record.get("start_date"), record.get("end_date")),
+        "related_country": "日本",
+        "related_brand": None,
+        "description": None,
+        "source_url": record.get("source_url"),
+    }
+
+
+def normalize_ccf(record: dict, source_id: str) -> dict:
+    description = record.get("vol")
+    return {
+        "id": build_event_id(source_id, record["name"]),
+        "source_id": source_id,
+        "name": record["name"],
+        "event_type": record.get("event_type", "festival"),
+        "host_country": "日本",
+        "venue": record.get("venue"),
+        "date_range": format_date_range(record.get("start_date"), record.get("end_date")),
+        "related_country": "日本",
+        "related_brand": None,
+        "description": description,
+        "source_url": record.get("source_url"),
+    }
+
+
 NORMALIZERS = {
     "wcc": normalize_wcc,
     "scaj": normalize_scaj,
     "ace": normalize_ace,
     "jcf": normalize_jcf,
     "tcf": normalize_tcf,
+    "ncf": normalize_ncf,
+    "ocx": normalize_ocx,
+    "ccf": normalize_ccf,
 }
 
 

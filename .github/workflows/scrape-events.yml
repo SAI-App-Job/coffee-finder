@@ -44,6 +44,18 @@ jobs:
         working-directory: scraper
         run: python scrape_events_tcf.py
 
+      - name: Scrape Nagoya Coffee Fes.
+        working-directory: scraper
+        run: python scrape_events_ncf.py
+
+      - name: Scrape 珈琲博覧日
+        working-directory: scraper
+        run: python scrape_events_ocx.py
+
+      - name: Scrape Coffee City Festival
+        working-directory: scraper
+        run: python scrape_events_ccf.py
+
       - name: Aggregate into data/events.json
         working-directory: scraper
         run: python aggregate_events.py

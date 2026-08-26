@@ -166,6 +166,9 @@ export function EventsView({ hideHeading = false, onLearnOrigin, events }) {
           "ACE / Cup of Excellence(cupofexcellence.org)",
           "Japan Coffee Festival(japancoffeefestival.com)",
           "TOKYO COFFEE FESTIVAL(tokyocoffeefestival.co)",
+          "NAGOYA COFFEE FES.(nagoyacoffeefes.com)",
+          "珈琲博覧日(onedaycoffeeexpo.com)",
+          "COFFEE CITY FESTIVAL(coffee-city-fes.com)",
         ]}
       />
     </main>
