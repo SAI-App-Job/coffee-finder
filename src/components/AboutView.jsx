@@ -1,4 +1,4 @@
-import { Info, X, Compass, Store } from "lucide-react";
+import { Info, X, Compass, Store, MessageCircle } from "lucide-react";
 
 // ヘッダーのⓘアイコンから開く、アプリ全体の説明パネル。
 // AlertsPanelと同じボトムシート/モーダルの型を踏襲している。
@@ -54,6 +54,24 @@ export function AboutView({ open, onClose }) {
               個人〜小規模の自家焙煎店を中心に掲載しています。11店舗以上を展開する大手チェーンは対象外です(日本チェーンストア協会の定義に基づく)。ただし11店舗未満の複数拠点展開(例:
               FUGLEN、PHILOCOFFEA)は対象に含みます。
             </p>
+          </section>
+
+          <section className="flex flex-col gap-3">
+            <div className="flex items-center gap-1.5">
+              <MessageCircle size={14} className="text-[var(--accent)]" strokeWidth={1.75} />
+              <h4 className="text-[14px] font-medium text-[#F2E9DD]">掲載店舗の方へ</h4>
+            </div>
+            <p className="text-[12px] text-[#8B7361] leading-relaxed">
+              内容の修正・削除等のご希望は、こちらのXアカウント(DM)までご連絡ください。
+            </p>
+            <a
+              href="https://x.com/SaiCoffea"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 self-start text-[12px] text-[var(--accent-label)] hover:text-[var(--accent)] transition-colors underline underline-offset-2"
+            >
+              @SaiCoffea (X)
+            </a>
           </section>
         </div>
       </div>

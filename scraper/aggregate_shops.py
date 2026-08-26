@@ -45,6 +45,26 @@ scrape-shops.ymlのworkflow_dispatchでshopを1店舗に絞って実行した場
 バグ修正の検証時など)や、いずれかの店舗のスクレイパーが失敗した場合、対応する
 data_*.jsonが存在しないことがある。その場合はエラーにせず、その店舗の既存の
 shops.json/products.jsonのレコードをそのまま変更せず残す(load_source()参照)。
+
+【店舗からの掲載削除依頼への対応(excluded_shops.json)】
+掲載店舗から内容修正・削除の申し出があった場合、scraper/excluded_shops.jsonに
+以下の形式でエントリを追加する:
+
+    [
+      {
+        "name": "店舗名(data/shops.jsonのnameと完全一致させること)",
+        "reason": "除外理由(例: 店舗からの掲載削除依頼)",
+        "excluded_at": "YYYY-MM-DD"
+      }
+    ]
+
+このファイルに載っている店舗名は、毎回のmain()実行時に以下すべてから除外される:
+自動スクレイピング対象(SOURCE_FILES)・手動入力店舗(scraper/manual/shops/)・
+今回のスクレイピング対象外だった店舗の既存レコード引き継ぎ・既存shops.jsonの
+並び順維持。これにより、一度削除した店舗が週次の自動スクレイピングやワークフロー
+再実行のたびに復活する事故を防ぐ。除外を解除したい場合は、このファイルから
+該当エントリを削除すればよい(スクレイパー自体やSOURCE_FILESへの登録は
+そのまま残しておいてよい――このファイルが唯一の除外判定源になる)。
 """
 
 import json
@@ -54,6 +74,7 @@ from pathlib import Path
 SCRAPER_DIR = Path(__file__).resolve().parent
 DATA_DIR = SCRAPER_DIR.parent / "data"
 MANUAL_SHOPS_DIR = SCRAPER_DIR / "manual" / "shops"
+EXCLUDED_SHOPS_PATH = SCRAPER_DIR / "excluded_shops.json"
 
 SOURCE_FILES = {
     "Denim bis": "data_denimbis.json",
@@ -100,6 +121,12 @@ def load_json_list(path: Path) -> list:
         return []
     with path.open(encoding="utf-8") as f:
         return json.load(f)
+
+
+def load_excluded_shop_names() -> set[str]:
+    """店舗からの掲載削除依頼リスト(excluded_shops.json)を読み込み、
+    店舗名の集合を返す。ファイル形式の詳細はモジュール冒頭のdocstring参照。"""
+    return {entry["name"] for entry in load_json_list(EXCLUDED_SHOPS_PATH)}
 
 
 def stabilize_timestamp(new_obj: dict, old_obj: dict | None, field: str) -> None:
@@ -336,12 +363,19 @@ def main():
     existing_shops_list = load_json_list(DATA_DIR / "shops.json")
     existing_shops = {s["name"]: s for s in existing_shops_list}
     existing_products = {p["id"]: p for p in load_json_list(DATA_DIR / "products.json")}
+    excluded_names = load_excluded_shop_names()
+    if excluded_names:
+        print(f"[info] excluded_shops.jsonにより除外: {', '.join(sorted(excluded_names))}")
 
     merged_shops_by_name = {}
     all_products = []
     covered_shop_names = set()
 
     for shop_name in SOURCE_FILES:
+        if shop_name in excluded_names:
+            # 店舗からの掲載削除依頼(excluded_shops.json)。スクレイパー自体は
+            # 動かし続けてよいが、その出力はここで取り込まない
+            continue
         source = load_source(shop_name)
         if source is None:
             # 今回スクレイピング対象外だった店舗(shopを絞った手動実行、または
@@ -371,6 +405,8 @@ def main():
         raw_shop = manual_data["shop"]
         shop_id = raw_shop.get("id") or manual_path.stem
         shop_name = raw_shop["name"]
+        if shop_name in excluded_names:
+            continue
 
         manual_shop = build_manual_shop(raw_shop)
         merged_shops_by_name[shop_name] = manual_shop
@@ -384,18 +420,25 @@ def main():
             )
 
     # このワークフローが対象としない店舗(自動スクレイパーも手動ファイルも無い)の
-    # 商品は、上書きせず既存のレコードをそのまま残す
+    # 商品は、上書きせず既存のレコードをそのまま残す。ただし除外リストに載った
+    # 店舗は「対象外だから残す」対象から明確に外し、既存の商品も落とす
     for product in existing_products.values():
-        if product.get("shop_name") not in covered_shop_names:
+        shop_name = product.get("shop_name")
+        if shop_name in excluded_names:
+            continue
+        if shop_name not in covered_shop_names:
             all_products.append(product)
 
     # 既存の店舗の並び順を維持しつつ、今回のスクレイパー対象外の店舗(将来増える想定)は
-    # 既存レコードのまま残す
+    # 既存レコードのまま残す。除外リストに載った店舗は、既存shops.jsonに残っていても
+    # ここで落とす(そうしないと除外後も一覧に残り続けてしまう)
     ordered_shops = []
     seen = set()
     for name, shop in existing_shops.items():
-        ordered_shops.append(merged_shops_by_name.get(name, shop))
         seen.add(name)
+        if name in excluded_names:
+            continue
+        ordered_shops.append(merged_shops_by_name.get(name, shop))
     for name, shop in merged_shops_by_name.items():
         if name not in seen:
             ordered_shops.append(shop)
