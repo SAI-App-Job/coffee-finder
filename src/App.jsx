@@ -88,6 +88,10 @@ export default function CoffeeProductList() {
   const learnAboutOrigin = (country) => {
     setPendingOriginCountry(country);
     setTab("guide");
+    // タブ切り替えはページ遷移ではないため、直前のタブでのスクロール位置が
+    // そのまま引き継がれてしまう。産地タブの先頭(国名見出し)が隠れて見えなく
+    // なる不具合になっていたため、ジャンプ時は明示的に先頭へ戻す。
+    window.scrollTo({ top: 0 });
   };
 
   const viewProductsForCountry = (country) => {
