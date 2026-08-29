@@ -9,7 +9,10 @@ export function EventCard({ event, onLearnOrigin }) {
     <div className="rounded-2xl bg-[#2F241A] border border-[#4A3A2A] p-4 flex flex-col gap-2">
       <div className="flex items-start justify-between gap-2">
         <div>
-          <p className="text-[11px] tracking-[0.1em] text-[var(--accent-label)] uppercase">{event.source}</p>
+          <p className="text-[11px] tracking-[0.1em] text-[var(--accent-label)] uppercase">
+            {event.source}
+            {event.shopLocationLabel ? ` ・ ${event.shopLocationLabel}` : ""}
+          </p>
           <h3 className="font-serif text-[16px] text-[#F2E9DD] mt-0.5">{event.name}</h3>
         </div>
         <span
@@ -157,7 +160,7 @@ export function EventsView({ hideHeading = false, onLearnOrigin, events }) {
       </p>
       <div className="flex flex-col gap-2.5">
         {scheduleEvents.map((event) => (
-          <EventCard key={event.name} event={event} onLearnOrigin={onLearnOrigin} />
+          <EventCard key={event.id ?? event.name} event={event} onLearnOrigin={onLearnOrigin} />
         ))}
       </div>
       <SourceCredit
@@ -169,6 +172,7 @@ export function EventsView({ hideHeading = false, onLearnOrigin, events }) {
           "NAGOYA COFFEE FES.(nagoyacoffeefes.com)",
           "珈琲博覧日(onedaycoffeeexpo.com)",
           "COFFEE CITY FESTIVAL(coffee-city-fes.com)",
+          "27 COFFEE ROASTERS(27coffee.jp)",
         ]}
       />
     </main>
@@ -195,7 +199,7 @@ export function CompetitionsView({ hideHeading = false, events = [] }) {
           </p>
           <div className="flex flex-col gap-2.5">
             {worldChampionships.map((event) => (
-              <WorldChampionshipCard key={event.name} event={event} />
+              <WorldChampionshipCard key={event.id ?? event.name} event={event} />
             ))}
           </div>
         </div>

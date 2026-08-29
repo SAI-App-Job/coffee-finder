@@ -89,6 +89,7 @@ function mapProduct(raw, shopsByName) {
 
 function mapEvent(raw, sourcesById) {
   return {
+    id: raw.id,
     source: sourcesById.get(raw.source_id)?.name ?? raw.source_id,
     sourceId: raw.source_id,
     name: raw.name,
@@ -99,6 +100,10 @@ function mapEvent(raw, sourcesById) {
     relatedCountry: raw.related_country,
     note: raw.description,
     sourceUrl: raw.source_url,
+    // 27 COFFEE ROASTERSのセミナーのように、特定の実店舗(SHOP_LOCATION)に
+    // 紐づくイベントのみ値を持つ。他の情報源(SCAJ/ACE等)ではnull
+    shopName: raw.shop_name ?? null,
+    shopLocationLabel: raw.shop_location_label ?? null,
   };
 }
 

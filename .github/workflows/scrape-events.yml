@@ -56,6 +56,10 @@ jobs:
         working-directory: scraper
         run: python scrape_events_ccf.py
 
+      - name: Scrape 27 COFFEE ROASTERS Seminars
+        working-directory: scraper
+        run: python scrape_27coffee_seminars.py
+
       - name: Aggregate into data/events.json
         working-directory: scraper
         run: python aggregate_events.py

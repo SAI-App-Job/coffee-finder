@@ -67,4 +67,5 @@ export const EVENT_TYPE_LABELS = {
   exhibition: { ja: "展示会", color: "#6DA7EC" },
   auction: { ja: "オークション", color: "#CDE2FB" },
   festival: { ja: "フェスティバル", color: "#E8956D" },
+  seminar: { ja: "セミナー", color: "#A8C97F" },
 };
