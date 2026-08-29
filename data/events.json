@@ -63,6 +63,14 @@
       "robots_txt_status": "制限なし(2026-08確認。robots.txt自体が存在しない/404)",
       "update_cadence": "月次",
       "last_scraped_at": "2026-08-26T21:19:21.193673+00:00"
+    },
+    {
+      "id": "27coffee",
+      "name": "27 COFFEE ROASTERS(27coffee.jp)",
+      "url": "https://27coffee.jp/blogs/school-event",
+      "robots_txt_status": "許可(2026-08確認。標準Shopify robots.txt。/blogs/配下も許可対象)",
+      "update_cadence": "月次",
+      "last_scraped_at": "2026-08-29T16:35:40.745841+00:00"
     }
   ],
   "events": [
@@ -556,6 +564,66 @@
       "related_brand": null,
       "description": "vol.8",
       "source_url": "https://coffee-city-fes.com/"
+    },
+    {
+      "id": "27coffee:DRIP COFFEE WORKSHOP:辻堂本店",
+      "source_id": "27coffee",
+      "name": "DRIP COFFEE WORKSHOP",
+      "event_type": "seminar",
+      "host_country": "日本",
+      "venue": "27 COFFEE ROASTERS TSUJIDO（辻堂本店） 27 COFFEE ROASTERS KAMAKURA（鎌倉店）",
+      "date_range": "随時受付中(日程はカレンダー予約・お問い合わせで確認)",
+      "related_country": null,
+      "related_brand": null,
+      "description": "所要時間: 45min／受講料: ¥2,500 （税込／最小催行人数：1名）",
+      "source_url": "https://27coffee.jp/blogs/school-event/27coffee-drip-workshop",
+      "shop_name": "27 COFFEE ROASTERS",
+      "shop_location_label": "辻堂本店"
+    },
+    {
+      "id": "27coffee:DRIP COFFEE WORKSHOP:鎌倉店",
+      "source_id": "27coffee",
+      "name": "DRIP COFFEE WORKSHOP",
+      "event_type": "seminar",
+      "host_country": "日本",
+      "venue": "27 COFFEE ROASTERS TSUJIDO（辻堂本店） 27 COFFEE ROASTERS KAMAKURA（鎌倉店）",
+      "date_range": "随時受付中(日程はカレンダー予約・お問い合わせで確認)",
+      "related_country": null,
+      "related_brand": null,
+      "description": "所要時間: 45min／受講料: ¥2,500 （税込／最小催行人数：1名）",
+      "source_url": "https://27coffee.jp/blogs/school-event/27coffee-drip-workshop",
+      "shop_name": "27 COFFEE ROASTERS",
+      "shop_location_label": "鎌倉店"
+    },
+    {
+      "id": "27coffee:LATTE ART WORKSHOP:鎌倉店",
+      "source_id": "27coffee",
+      "name": "LATTE ART WORKSHOP",
+      "event_type": "seminar",
+      "host_country": "日本",
+      "venue": "27 COFFEE ROASTERS KAMAKURA（鎌倉店）",
+      "date_range": "随時受付中(日程はカレンダー予約・お問い合わせで確認)",
+      "related_country": null,
+      "related_brand": null,
+      "description": "所要時間: 20min／受講料: ¥2,500 （税込／最小催行人数：1名）",
+      "source_url": "https://27coffee.jp/blogs/school-event/drip-workshop-tsujido",
+      "shop_name": "27 COFFEE ROASTERS",
+      "shop_location_label": "鎌倉店"
+    },
+    {
+      "id": "27coffee:Barista Step School:CORNER 27",
+      "source_id": "27coffee",
+      "name": "Barista Step School",
+      "event_type": "seminar",
+      "host_country": "日本",
+      "venue": "CORNER 27 -coffee works- 店内",
+      "date_range": "随時受付中(日程はカレンダー予約・お問い合わせで確認)",
+      "related_country": null,
+      "related_brand": null,
+      "description": "所要時間: 90min／受講料: BlackEagle クラス ¥30,000（税抜／マンツーマン、1ヶ月/2回）／定員: マンツーマン",
+      "source_url": "https://27coffee.jp/blogs/school-event/barista-step-school",
+      "shop_name": "27 COFFEE ROASTERS",
+      "shop_location_label": "CORNER 27"
     }
   ]
 }
