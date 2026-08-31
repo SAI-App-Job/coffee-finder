@@ -52,6 +52,15 @@ IDが衝突してしまう。disambiguate_raw_name()で、2回目の登場時に
 
 robots.txt確認済み(2026-08時点): www.cafecafa.com/robots.txtはHTTP 404
 (ファイル自体が存在しない)。Disallow指定が無いため全面許可とみなす。
+
+【文字化け対策について】
+実データ確認済み(実際のワークフロー実行で発覚): www.cafecafa.com/coffees.html
+のHTTPレスポンスヘッダーはContent-Type: text/html(charsetパラメータ無し)。
+ページ本文の<meta charset="utf-8">とは無関係に、requestsはcharset未指定時に
+ISO-8859-1へフォールバックして resp.text をデコードしてしまい、日本語が
+すべて文字化けする(scrape_events_ccf.pyで発見済みの問題と同種)。resp.text
+ではなく resp.content(生バイト列)をBeautifulSoupに渡し、ページ自身のmeta
+charsetタグから検出させることで回避する。
 """
 
 import json
@@ -99,7 +108,8 @@ def fetch_product_blocks() -> list[dict]:
     区分名)を抽出する。"""
     resp = requests.get(COFFEES_URL, headers=REQUEST_HEADERS, timeout=15)
     resp.raise_for_status()
-    soup = BeautifulSoup(resp.text, "html.parser")
+    # 理由はモジュールdocstring参照(charset未指定レスポンスのISO-8859-1誤判定対策)
+    soup = BeautifulSoup(resp.content, "html.parser")
 
     contents = soup.select_one("#contents")
     if not contents:
