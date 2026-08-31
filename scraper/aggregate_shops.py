@@ -103,6 +103,7 @@ SOURCE_FILES = {
     "27 COFFEE ROASTERS": "data_27coffee.json",
     "カフェクラウディア": "data_cafeclaudia.json",
     "厚木珈琲": "data_atsugicoffee.json",
+    "いつか珈琲屋": "data_itukacoffee.json",
 }
 
 
