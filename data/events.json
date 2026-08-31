@@ -71,6 +71,22 @@
       "robots_txt_status": "許可(2026-08確認。標準Shopify robots.txt。/blogs/配下も許可対象)",
       "update_cadence": "月次",
       "last_scraped_at": "2026-08-29T16:35:40.745841+00:00"
+    },
+    {
+      "id": "rdc",
+      "name": "Roast Design Coffee(roast-design-coffee.com)",
+      "url": "https://roast-design-coffee.com/info",
+      "robots_txt_status": "許可(2026-08確認。User-agent: * / Allow: / で全面的に許可)",
+      "update_cadence": "月次",
+      "last_scraped_at": "2026-08-31T02:27:23.512462+00:00"
+    },
+    {
+      "id": "meguro",
+      "name": "COFFEE ROASTERY MEGURO(roasterymeguro.com)",
+      "url": "https://roasterymeguro.com",
+      "robots_txt_status": "許可(2026-08確認。標準WordPress robots.txt。/wp-admin/のみ制限)",
+      "update_cadence": "月次",
+      "last_scraped_at": "2026-08-31T02:27:23.512462+00:00"
     }
   ],
   "events": [
@@ -572,7 +588,7 @@
       "event_type": "seminar",
       "host_country": "日本",
       "venue": "27 COFFEE ROASTERS TSUJIDO（辻堂本店） 27 COFFEE ROASTERS KAMAKURA（鎌倉店）",
-      "date_range": "随時受付中(日程はカレンダー予約・お問い合わせで確認)",
+      "date_range": "随時受付中(日程はお問い合わせで確認)",
       "related_country": null,
       "related_brand": null,
       "description": "所要時間: 45min／受講料: ¥2,500 （税込／最小催行人数：1名）",
@@ -587,7 +603,7 @@
       "event_type": "seminar",
       "host_country": "日本",
       "venue": "27 COFFEE ROASTERS TSUJIDO（辻堂本店） 27 COFFEE ROASTERS KAMAKURA（鎌倉店）",
-      "date_range": "随時受付中(日程はカレンダー予約・お問い合わせで確認)",
+      "date_range": "随時受付中(日程はお問い合わせで確認)",
       "related_country": null,
       "related_brand": null,
       "description": "所要時間: 45min／受講料: ¥2,500 （税込／最小催行人数：1名）",
@@ -602,7 +618,7 @@
       "event_type": "seminar",
       "host_country": "日本",
       "venue": "27 COFFEE ROASTERS KAMAKURA（鎌倉店）",
-      "date_range": "随時受付中(日程はカレンダー予約・お問い合わせで確認)",
+      "date_range": "随時受付中(日程はお問い合わせで確認)",
       "related_country": null,
       "related_brand": null,
       "description": "所要時間: 20min／受講料: ¥2,500 （税込／最小催行人数：1名）",
@@ -617,13 +633,43 @@
       "event_type": "seminar",
       "host_country": "日本",
       "venue": "CORNER 27 -coffee works- 店内",
-      "date_range": "随時受付中(日程はカレンダー予約・お問い合わせで確認)",
+      "date_range": "随時受付中(日程はお問い合わせで確認)",
       "related_country": null,
       "related_brand": null,
       "description": "所要時間: 90min／受講料: BlackEagle クラス ¥30,000（税抜／マンツーマン、1ヶ月/2回）／定員: マンツーマン",
       "source_url": "https://27coffee.jp/blogs/school-event/barista-step-school",
       "shop_name": "27 COFFEE ROASTERS",
       "shop_location_label": "CORNER 27"
+    },
+    {
+      "id": "rdc:9月のテイスティングイベントのお知らせ:B-side向ヶ丘遊園・登戸店",
+      "source_id": "rdc",
+      "name": "9月のテイスティングイベントのお知らせ",
+      "event_type": "seminar",
+      "host_country": "日本",
+      "venue": "Roast Design Coffee B-side 向ヶ丘遊園・登戸店",
+      "date_range": "2026年9月6日",
+      "related_country": null,
+      "related_brand": null,
+      "description": "受講料: 500円",
+      "source_url": "https://roast-design-coffee.com/info/6886838",
+      "shop_name": "Roast Design Coffee",
+      "shop_location_label": "B-side向ヶ丘遊園・登戸店"
+    },
+    {
+      "id": "meguro:焙煎体験セミナー　（焙煎からエスプレッソ抽出まで）:unknown",
+      "source_id": "meguro",
+      "name": "焙煎体験セミナー　（焙煎からエスプレッソ抽出まで）",
+      "event_type": "seminar",
+      "host_country": "日本",
+      "venue": "COFFEE ROASTERY MEGURO",
+      "date_range": "随時受付中(日程はお問い合わせで確認)",
+      "related_country": null,
+      "related_brand": null,
+      "description": "所要時間: 1.5時間（お二人の場合の目安）／受講料: 8800円　（別途豆代が必要です）／定員: 1回あたり最大2名まで",
+      "source_url": "https://roasterymeguro.com/411/",
+      "shop_name": "COFFEE ROASTERY MEGURO",
+      "shop_location_label": null
     }
   ]
 }
