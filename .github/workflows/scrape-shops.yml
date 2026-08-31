@@ -42,6 +42,7 @@ on:
           - cafeclaudia
           - atsugicoffee
           - itukacoffee
+          - cafecafa
 
 permissions:
   contents: write # data/*.json をコミット・pushするために必要
@@ -143,6 +144,9 @@ jobs:
           - id: itukacoffee
             script: scrape_itukacoffee.py
             output: data_itukacoffee.json
+          - id: cafecafa
+            script: scrape_cafecafa.py
+            output: data_cafecafa.json
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4 # 差分ベーススクレイピングがdata/products.jsonを参照するため必須

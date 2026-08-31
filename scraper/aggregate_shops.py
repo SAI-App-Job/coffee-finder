@@ -104,6 +104,7 @@ SOURCE_FILES = {
     "カフェクラウディア": "data_cafeclaudia.json",
     "厚木珈琲": "data_atsugicoffee.json",
     "いつか珈琲屋": "data_itukacoffee.json",
+    "CafeCafa": "data_cafecafa.json",
 }
 
 
