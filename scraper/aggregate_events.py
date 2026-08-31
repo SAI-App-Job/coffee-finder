@@ -4,28 +4,32 @@ aggregate_events.py
 
 scrape_events_wcc.py / scrape_events_scaj.py / scrape_events_ace.py /
 scrape_events_jcf.py / scrape_events_tcf.py / scrape_events_ncf.py /
-scrape_events_ocx.py / scrape_events_ccf.py / scrape_27coffee_seminars.py が
-出力する data_events_*.json を統合し、/data/events.json(EVENT_SOURCE + EVENT
-相当)を更新する。
+scrape_events_ocx.py / scrape_events_ccf.py / scrape_27coffee_seminars.py /
+scrape_events_rdc.py / scrape_events_meguro.py が出力する data_events_*.json
+を統合し、/data/events.json(EVENT_SOURCE + EVENT相当)を更新する。
 
 【団体ごとに出力フィールドが異なる理由】
 WCCはstart_date/end_date、ACEはCOEオークション日+NW審査週間、SCAJはstart_date/
 end_date+テーマ/主催者、JCFはstart_date/end_date+開催地(archiveLabel)、TCFは
 start_date/end_date+入場料/主催/共催、NCFは1ソースから3ブランド分のイベントを
 個別レコードとして、OCXはTCFと同じ「現在/次回のみ」設計、CCFはvol(開催回数)、
-27coffeeは1店舗の複数実店舗にまたがるセミナー情報(shop_name/
-shop_location_label)と、サイトごとに取得できる情報の形が異なる。本スクリプトは
-これらをdata/events.jsonの共通スキーマ(date_rangeという表示用の日本語文字列)へ
-変換する。description(紹介文)は、調査済みの解説文のような創作は行わず、
-スクレイパーが実際に取得した情報(優勝者・テーマ等)からのみ組み立てる。
+27coffee/rdc/meguroは店舗のセミナー情報(shop_name/shop_location_label)と、
+サイトごとに取得できる情報の形が異なる。本スクリプトはこれらをdata/events.json
+の共通スキーマ(date_rangeという表示用の日本語文字列)へ変換する。
+description(紹介文)は、調査済みの解説文のような創作は行わず、スクレイパーが
+実際に取得した情報(優勝者・テーマ等)からのみ組み立てる。
 
-【27coffeeのみshop_name/shop_location_labelを持つ理由】
-27 COFFEE ROASTERSのセミナーは、他の情報源(SCAJ/ACE等の団体主催イベント)とは
-異なり「特定の店舗(SHOP_LOCATION)で開催される」という性質を持つ。1つの講座が
-複数店舗で開催される場合はスクレイパー側で店舗ごとに別レコードへ分割済みのため、
-ここではEVENTレコードにdata/shops.jsonのSHOP_LOCATION.labelと一致する
-shop_location_label(と紐付け元のshop_name)をそのまま持たせるだけでよい。
-他の情報源のイベントはこの2フィールドを持たない(null)。
+【27coffee/rdc/meguroのみshop_name/shop_location_labelを持つ理由】
+これらは店舗自身が主催するセミナー・ワークショップで、他の情報源(SCAJ/ACE等の
+団体主催イベント)とは異なり「特定の店舗(SHOP_LOCATION)で開催される」という
+性質を持つ。1つの講座が複数店舗で開催される場合はスクレイパー側で店舗ごとに
+別レコードへ分割済みのため、ここではEVENTレコードにdata/shops.jsonの
+SHOP_LOCATION.labelと一致するshop_location_label(と紐付け元のshop_name)を
+そのまま持たせるだけでよい(単一店舗のみの店舗はshop_location_label=null)。
+3スクレイパーとも出力フィールドの形が同じ(shop_name/shop_location_label/
+venue/start_date/end_date/duration/price/capacity)なので、共通の
+normalize_shop_seminar()を使い回している。他の情報源のイベントはこの2
+フィールドを持たない(null)。
 
 【WCCのみstart_date/end_dateも保持する理由】
 フロントエンドの「競技会」タブにあるWCC(世界大会)セクションは開催日順に
@@ -59,6 +63,8 @@ SOURCES = {
     "ocx": "data_events_ocx.json",
     "ccf": "data_events_ccf.json",
     "27coffee": "data_events_27coffee.json",
+    "rdc": "data_events_rdc.json",
+    "meguro": "data_events_meguro.json",
 }
 
 
@@ -266,7 +272,9 @@ def normalize_ccf(record: dict, source_id: str) -> dict:
     }
 
 
-def normalize_27coffee(record: dict, source_id: str) -> dict:
+def normalize_shop_seminar(record: dict, source_id: str) -> dict:
+    """27coffee/rdc/meguro共通。店舗が主催するセミナー・ワークショップの
+    正規化(shop_name/shop_location_labelを持つのはこの系統のみ)。"""
     parts = []
     if record.get("duration"):
         parts.append(f"所要時間: {record['duration']}")
@@ -280,8 +288,8 @@ def normalize_27coffee(record: dict, source_id: str) -> dict:
     if start_date:
         date_range = format_date_range(start_date, record.get("end_date"))
     else:
-        # 日程未定の常設講座(カレンダー予約・随時問い合わせ制)
-        date_range = "随時受付中(日程はカレンダー予約・お問い合わせで確認)"
+        # 日程未定の常設講座(予約制・随時問い合わせ制)
+        date_range = "随時受付中(日程はお問い合わせで確認)"
 
     shop_location_label = record.get("shop_location_label")
     # 1つの講座が複数店舗で開催される場合、スクレイパー側で店舗ごとに
@@ -314,7 +322,9 @@ NORMALIZERS = {
     "ncf": normalize_ncf,
     "ocx": normalize_ocx,
     "ccf": normalize_ccf,
-    "27coffee": normalize_27coffee,
+    "27coffee": normalize_shop_seminar,
+    "rdc": normalize_shop_seminar,
+    "meguro": normalize_shop_seminar,
 }
 
 

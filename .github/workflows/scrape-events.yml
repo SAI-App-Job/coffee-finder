@@ -60,6 +60,14 @@ jobs:
         working-directory: scraper
         run: python scrape_27coffee_seminars.py
 
+      - name: Scrape Roast Design Coffee Seminars
+        working-directory: scraper
+        run: python scrape_events_rdc.py
+
+      - name: Scrape COFFEE ROASTERY MEGURO Seminars
+        working-directory: scraper
+        run: python scrape_events_meguro.py
+
       - name: Aggregate into data/events.json
         working-directory: scraper
         run: python aggregate_events.py

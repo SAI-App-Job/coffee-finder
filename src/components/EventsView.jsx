@@ -173,6 +173,8 @@ export function EventsView({ hideHeading = false, onLearnOrigin, events }) {
           "珈琲博覧日(onedaycoffeeexpo.com)",
           "COFFEE CITY FESTIVAL(coffee-city-fes.com)",
           "27 COFFEE ROASTERS(27coffee.jp)",
+          "Roast Design Coffee(roast-design-coffee.com)",
+          "COFFEE ROASTERY MEGURO(roasterymeguro.com)",
         ]}
       />
     </main>
