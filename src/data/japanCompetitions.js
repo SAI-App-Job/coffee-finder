@@ -114,6 +114,8 @@ export const JAPAN_COMPETITIONS = [
       "WCE(World Coffee Events)が2012年のウィーン大会から導入した新競技「Coffee Roasting Challenge(CRC)」(2013年に「World Coffee Roasting Championship」へ改称)の日本選考会として開始。優勝者を世界大会へ送り出すべく、SCAJが日本国内向けに開催している。",
     format:
       "従来の焙煎競技(SCAA Roaster's Guild RetreatやSCAJローストマスターズ・リトリート等)は、事前申告なしで結果のカップクオリティのみを審査していたが、JCRCでは競技前に「どのような風味特性に仕上げるか」を『焙煎ログ』として事前申告したうえで焙煎に挑む。競技最終日、実際の焙煎結果が申告内容に最も近づいた選手が優勝となる。",
+    latestResult:
+      "2016年はいつか珈琲屋(神奈川県平塚市)の近藤啓選手が初出場で優勝。翌2017年のWorld Coffee Roasting Championshipへ日本代表として出場し、7位入賞を果たした。",
     sources: [
       { label: "JCRC概要", url: "https://scaj.org/activity/competitions/jcrc" },
       { label: "過去の競技結果", url: "https://scaj.org/activity/competitions/jcrc/past_results" },
