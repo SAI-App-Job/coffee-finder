@@ -955,5 +955,17 @@
     "hours": null,
     "map_query": "いつか珈琲屋",
     "last_scraped_at": "2026-08-31T03:17:18.928787+00:00"
+  },
+  {
+    "name": "CafeCafa",
+    "url": "https://www.cafecafa.com/",
+    "platform": "独自HTML(静的サイト、注文はmart.cgiという独自CGIフォーム。標準的なECプラットフォームではない)",
+    "shop_type": "single_location",
+    "robots_txt_status": "許可(2026-08確認。robots.txt自体が存在しない[HTTP 404]。Disallow指定が無いため全面許可とみなす)",
+    "address": "神奈川県茅ヶ崎市東海岸北3-15-24",
+    "prefecture": "神奈川県",
+    "hours": null,
+    "map_query": "CafeCafa",
+    "last_scraped_at": "2026-08-31T15:49:29.242568+00:00"
   }
 ]
