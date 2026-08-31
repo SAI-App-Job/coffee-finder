@@ -943,5 +943,17 @@
     "hours": null,
     "map_query": "厚木珈琲 厚木市飯山",
     "last_scraped_at": "2026-08-26T07:24:38.505051+00:00"
+  },
+  {
+    "name": "いつか珈琲屋",
+    "url": "https://itukacoffee.official.ec/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "許可(2026-08確認。カフェクラウディアと同一のBASE標準robots.txt。curl/python-requests等の匿名UAは名指しで全面禁止だが、独自User-Agent(CoffeeFinderBot)は「User-agent: *」規定の対象となり、/cart/・/web_cart/・/shops/・/api/shops/等以外は許可)",
+    "address": "神奈川県平塚市河内1-7-1",
+    "prefecture": "神奈川県",
+    "hours": null,
+    "map_query": "いつか珈琲屋",
+    "last_scraped_at": "2026-08-31T03:17:18.928787+00:00"
   }
 ]
