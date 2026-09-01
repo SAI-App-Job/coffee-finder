@@ -121,6 +121,9 @@ NON_BEAN_KEYWORDS = ["生豆"]
 
 COLORME_JSON_PATTERN = re.compile(r"var\s+Colorme\s*=\s*(\{.*\});", re.DOTALL)
 WEIGHT_PATTERN = re.compile(r"([\d.]+)\s*(kg|g|ｇ)", re.IGNORECASE)
+# 理由はparse_weight_grams参照。実データ確認済みの最大サイズは1kg(=1000g)なので、
+# 十分な余裕を持たせつつ明らかな誤検出(型番等との連結)を弾ける値としている
+MAX_PLAUSIBLE_WEIGHT_G = 2000
 ALTITUDE_LIKE_PATTERN = re.compile(r"\d[\d,]*\s*m")
 ALTITUDE_RANGE_PATTERN = re.compile(r"([\d,]+)\s*m?\s*[-〜~]\s*([\d,]+)\s*m")
 ALTITUDE_SINGLE_PATTERN = re.compile(r"([\d,]+)\s*m")
@@ -185,7 +188,15 @@ def parse_altitude(altitude_text: str | None) -> tuple[int | None, int | None]:
 def parse_weight_grams(text: str | None) -> int | None:
     """「100g」「1kg」のいずれの表記からもグラム数を取り出す
     (405coffee.pyのWEIGHT_PATTERNは「g」表記のみ対応だが、本ショップは
-    「1kg」表記も実在するため、kg→g換算を追加している)。"""
+    「1kg」表記も実在するため、kg→g換算を追加している)。
+
+    実データ確認済みの不具合: 「【プレミアム】モカマタリ №９100g」のように、
+    型番の「№９」(全角9)と重量の「100g」の間にスペースが無い商品名が実在し、
+    NFKC正規化後は「9100g」という1つの連続した数字列になってしまうため、
+    素朴な正規表現では誤って9,100gという非現実的な値を重量として抽出して
+    しまう。実データ上の全商品が100g〜1kg程度であることを踏まえ、
+    MAX_PLAUSIBLE_WEIGHT_Gを超える値は誤検出とみなし採用しない
+    (無理に分割・推測はせず、単にweight_gをnullのままにする)。"""
     if not text:
         return None
     normalized = unicodedata.normalize("NFKC", text)
@@ -195,6 +206,8 @@ def parse_weight_grams(text: str | None) -> int | None:
     value = float(m.group(1))
     if m.group(2).lower() == "kg":
         value *= 1000
+    if value > MAX_PLAUSIBLE_WEIGHT_G:
+        return None
     return int(value)
 
 
