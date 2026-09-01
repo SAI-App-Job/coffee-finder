@@ -15,12 +15,20 @@ flavor_notes・producer_name等のPRODUCER_LOT相当の情報が取れる)。本
 これらを共通スキーマへ正規化し、スクレイパーが取得できない項目はnullのまま
 保持する(存在しない情報を推測・創作しない)。
 
-【営業時間・地図クエリ・実店舗一覧を上書きしない理由】
-hours(営業時間)・map_query(Googleマップ検索用クエリ)・locations(実店舗一覧)・
-shop_typeはいずれもスクレイパーが取得しない情報(店舗の基本ページに営業時間の
-構造化データがない等)。既存のdata/shops.jsonの値をそのまま引き継ぎ、
-スクレイパーが実際に取得する項目(name/url/platform/address/prefecture/
-robots_txt_status)のみを更新する。
+【営業時間・地図クエリを上書きしない理由】
+hours(営業時間)・map_query(Googleマップ検索用クエリ)はいずれもスクレイパーが
+取得しない情報(店舗の基本ページに営業時間の構造化データがない等)。既存の
+data/shops.jsonの値をそのまま引き継ぐ。
+
+【実店舗一覧(locations)・shop_typeについて】
+ほとんどの店舗はスクレイパーがlocationsを取得しないため、既存のdata/shops.json
+の値をそのまま引き継ぐ(shop_typeも既存値があればそれを優先)。一方、公式サイトに
+店舗一覧ページを持つ複数拠点の店舗(WOODBERRY COFFEE等)は、スクレイパーの
+SHOP_INFOに"locations"キーを持たせることで、毎回の実行で最新の拠点情報に
+更新できる(merge_locations参照。lat/lngはscripts/geocode-shops.jsが別途
+一括ジオコーディングして書き込む値のため、既存のものをlabelで突き合わせて
+引き継ぎ、再スクレイピングのたびに失われないようにする)。shop_typeは既存値が
+無い新規店舗の場合のみ、locationsの件数から自動推定する(infer_shop_type参照)。
 
 【タイムスタンプの扱い】
 last_scraped_at/scraped_atを毎回の実行時刻でナイーブに上書きすると、内容に
@@ -105,6 +113,8 @@ SOURCE_FILES = {
     "厚木珈琲": "data_atsugicoffee.json",
     "いつか珈琲屋": "data_itukacoffee.json",
     "CafeCafa": "data_cafecafa.json",
+    "WOODBERRY COFFEE": "data_woodberry.json",
+    "珈琲店トップ": "data_etop.json",
 }
 
 
@@ -150,12 +160,52 @@ def build_map_query(existing_shop: dict | None, fallback_name: str) -> str:
     return fallback_name
 
 
+def merge_locations(scraped_locations: list[dict], existing_locations: list[dict] | None) -> list[dict]:
+    """スクレイパーが取得した拠点一覧(label/address/hours/tel等)を、既存の
+    data/shops.jsonに保存済みの拠点とlabelで突き合わせ、lat/lng(scripts/
+    geocode-shops.jsが別途一括ジオコーディングして書き込む値)だけを既存の
+    値から引き継ぐ。scripts/geocode-shops.jsはlat/lngが既に入っている拠点を
+    スキップする設計のため、毎回の再スクレイピングで拠点情報をそのまま
+    上書きするとlat/lngが失われ、次回実行のたびに再ジオコーディングが
+    必要になってしまう。それを避けるための突き合わせ。"""
+    existing_by_label = {loc.get("label"): loc for loc in (existing_locations or [])}
+    merged = []
+    for loc in scraped_locations:
+        merged_loc = dict(loc)
+        existing_loc = existing_by_label.get(loc.get("label"))
+        if existing_loc and isinstance(existing_loc.get("lat"), (int, float)) and isinstance(
+            existing_loc.get("lng"), (int, float)
+        ):
+            merged_loc["lat"] = existing_loc["lat"]
+            merged_loc["lng"] = existing_loc["lng"]
+        merged.append(merged_loc)
+    return merged
+
+
+def infer_shop_type(existing_shop: dict | None, merged_locations: list[dict] | None) -> str:
+    if existing_shop and existing_shop.get("shop_type"):
+        return existing_shop["shop_type"]
+    if merged_locations and len(merged_locations) > 1:
+        return "multi_location"
+    return "single_location"
+
+
 def merge_shop(scraped_shop_info: dict, existing_shop: dict | None, now_iso: str) -> dict:
+    scraped_locations = scraped_shop_info.get("locations")
+    if scraped_locations:
+        # スクレイパーが拠点一覧を取得できる店舗(WOODBERRY COFFEE等)は、毎回の
+        # 実行で最新の拠点情報(店名変更・閉店・新規出店)に更新する
+        locations = merge_locations(scraped_locations, (existing_shop or {}).get("locations"))
+    else:
+        # 拠点一覧を取得しない(できない)店舗は、既存の値をそのまま引き継ぐ
+        # (このスクリプトが唯一の情報源ではなく、手動で調査・追記された値のため)
+        locations = (existing_shop or {}).get("locations")
+
     merged = {
         "name": scraped_shop_info["name"],
         "url": scraped_shop_info.get("url"),
         "platform": scraped_shop_info.get("platform"),
-        "shop_type": (existing_shop or {}).get("shop_type", "single_location"),
+        "shop_type": infer_shop_type(existing_shop, locations),
         "robots_txt_status": scraped_shop_info.get("robots_txt_status"),
         "address": scraped_shop_info.get("address") or (existing_shop or {}).get("address"),
         "prefecture": scraped_shop_info.get("prefecture") or (existing_shop or {}).get("prefecture"),
@@ -163,8 +213,8 @@ def merge_shop(scraped_shop_info: dict, existing_shop: dict | None, now_iso: str
         "map_query": build_map_query(existing_shop, scraped_shop_info["name"]),
         "last_scraped_at": now_iso,
     }
-    if existing_shop and existing_shop.get("locations"):
-        merged["locations"] = existing_shop["locations"]
+    if locations:
+        merged["locations"] = locations
     stabilize_timestamp(merged, existing_shop, "last_scraped_at")
     return merged
 

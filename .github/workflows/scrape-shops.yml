@@ -43,6 +43,8 @@ on:
           - atsugicoffee
           - itukacoffee
           - cafecafa
+          - woodberry
+          - etop
 
 permissions:
   contents: write # data/*.json をコミット・pushするために必要
@@ -147,6 +149,12 @@ jobs:
           - id: cafecafa
             script: scrape_cafecafa.py
             output: data_cafecafa.json
+          - id: woodberry
+            script: scrape_woodberry.py
+            output: data_woodberry.json
+          - id: etop
+            script: scrape_etop.py
+            output: data_etop.json
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4 # 差分ベーススクレイピングがdata/products.jsonを参照するため必須
