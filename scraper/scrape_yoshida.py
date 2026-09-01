@@ -77,8 +77,16 @@ SHOP_INFO = {
 
 BASE_URL = "https://yoshidabaisenjo.com"
 CRAWL_DELAY_SECONDS = 20  # robots.txtのCrawl-delay: 20に従う
+# 理由: GitHub Actionsのランナー上ではCloudflareのボット対策により
+# CoffeeFinderBot/0.1単体のUser-Agentだけでは403 Forbiddenが返ることを
+# 実際のワークフロー実行で確認した(ローカル環境からの同一UAでは200が返って
+# いたため、UA文字列単体ではなくIPレピュテーション+リクエストヘッダーの
+# 組み合わせで判定されていると考えられる)。一般的なブラウザが送る一式の
+# ヘッダーを追加することで通過を試みる。
 REQUEST_HEADERS = {
-    "User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"
+    "User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)",
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+    "Accept-Language": "ja,en-US;q=0.9,en;q=0.8",
 }
 
 # 理由はモジュールdocstring参照。実データ確認済み(2026-08時点)の非豆商品10件を網羅
