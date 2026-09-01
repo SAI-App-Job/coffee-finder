@@ -49,6 +49,7 @@ on:
           - kunikuni
           - nankundo
           - kagisippo
+          - chouette
 
 permissions:
   contents: write # data/*.json をコミット・pushするために必要
@@ -171,6 +172,9 @@ jobs:
           - id: kagisippo
             script: scrape_kagisippo.py
             output: data_kagisippo.json
+          - id: chouette
+            script: scrape_chouette.py
+            output: data_chouette.json
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4 # 差分ベーススクレイピングがdata/products.jsonを参照するため必須

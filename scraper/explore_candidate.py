@@ -110,10 +110,23 @@ PLATFORM_FINGERPRINTS = [
     },
     {
         "platform": "BASE",
-        "patterns": [r"thebase\.in", r"base-ec2", r"cdn\.thebase\.in"],
+        "patterns": [r"thebase\.in", r"base-ec2", r"cdn\.thebase\.in", r"theshop\.jp"],
         "similar_scraper": "scrape_cafeclaudia.py",
         "note": "対応済み。カテゴリページ(?page=N)から商品URLを収集し、詳細ページの"
-        "h1.itemTitle/#price/挽き方セレクトのdata-stockを見る構成(カフェクラウディア調査時)。",
+        "h1.itemTitle/#price/挽き方セレクトのdata-stockを見る構成(カフェクラウディア調査時)。"
+        "【重要】BASEの白ラベルサービスであるtheshop.jpサブドメインの店舗は、実データ調査の結果"
+        "テーマによって構造が大きく異なることが判明している(2026-08時点)。NAGI COFFEE/"
+        "FINETIME COFFEE ROASTERS/WOODBERRY COFFEEは商品詳細ページにschema.org JSON-LD"
+        "(<script type=\"application/ld+json\">)が埋め込まれるテーマで、name/description/"
+        "offers.price/offers.availabilityを構造化データとして取得できる(scrape_nagi.py/"
+        "scrape_finetime.py参照)。一方chouette torréfacteur laboratoireは「Relation」という"
+        "別テーマで、JSON-LDが一切無く、商品説明文(itemDescription)も全商品共通の定型文の"
+        "みで個別情報を含まない。この場合はh1.itemTitle(商品名)・div#price内のp(価格)・"
+        "div.stockStatus(hasStockクラスの有無で在庫判定)という素のHTML要素から取得し、"
+        "産地・精選方法・焙煎度等はすべて商品名のみをcoffee_parser.parse_product()で解析する"
+        "しかない(scrape_chouette.py参照)。新規のtheshop.jp店舗を調査する際は、まず商品詳細"
+        "ページにJSON-LDがあるかどうかを最初に確認し、無ければscrape_chouette.pyを、あれば"
+        "scrape_nagi.py/scrape_finetime.pyをテンプレートにする。",
     },
     {
         "platform": "STORES",
