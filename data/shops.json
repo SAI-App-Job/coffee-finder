@@ -1164,5 +1164,34 @@
     "hours": null,
     "map_query": "かぎしっぽ",
     "last_scraped_at": "2026-09-01T05:59:18.583258+00:00"
+  },
+  {
+    "name": "吉田珈琲焙煎所",
+    "url": "https://yoshidabaisenjo.com/",
+    "instagram_url": "https://www.instagram.com/yoshidacoffeebaisenjo",
+    "platform": "STORES、手動確認(自動スクレイピング非対応)",
+    "shop_type": "single_location",
+    "address": "神奈川県茅ヶ崎市東海岸北1-1-1",
+    "prefecture": "神奈川県",
+    "hours": "月火木金11:00-18:00、土日祝12:00-18:00(水曜定休)",
+    "map_query": "吉田珈琲焙煎所 茅ヶ崎市東海岸北1-1-1",
+    "data_source": "manual",
+    "source_note": "https://yoshidabaisenjo.com/ をブラウザで直接確認して入力(2026-08-31)。robots.txtはUser-agent: *に対し/cart・/checkout等の非公開/取引系のみDisallow(商品ページ/items/は対象外)で、識別可能なUser-Agentを使えばrequestsでも取得できスクレイパー(scraper/scrape_yoshida.py)自体は実装・ローカル検証済みだったが、GitHub Actionsランナーからのアクセスがヘッダーを整えてもCloudflareに一貫して403 Forbiddenでブロックされ(IPレピュテーションによるものと推定)、自動スクレイピングが不可と判断したため手動入力に切り替えた。前身「i don't know coffee roaster」(旧住所: 茅ヶ崎市東海岸南5-1-5)は2022年頃に本店名へ変更、旧店舗は2024年閉店・移転済み(ユーザー確認)。緯度経度はNominatimで住所丁目番地レベルの検索がヒットせず、町名(東海岸北)レベルでの近似値。全16件の商品のうち、特定の産地・焙煎度を持つ実商品はEC限定ブレンド4種とカフェインレスシングルオリジン1種のみで、残り(ドリップバッグ・水出しコーヒー・定期便・ギフトBOX・業務用卸販売)は特定の一豆を指すものではないため除外した",
+    "last_verified_at": "2026-08-31",
+    "locations": [
+      {
+        "label": null,
+        "address": "神奈川県茅ヶ崎市東海岸北1-1-1",
+        "prefecture": "神奈川県",
+        "hours": "月火木金11:00-18:00、土日祝12:00-18:00(水曜定休)",
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "吉田珈琲焙煎所 茅ヶ崎市東海岸北1-1-1",
+        "lat": 35.329724,
+        "lng": 139.414345
+      }
+    ],
+    "lat": 35.329724,
+    "lng": 139.414345
   }
 ]
