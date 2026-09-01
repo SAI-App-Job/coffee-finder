@@ -128,9 +128,18 @@ def parse_weight(title: str) -> int | None:
     return int(m.group(1)) if m else None
 
 
-def parse_category_hint(title: str) -> str | None:
+def split_title_category_hint(title: str) -> tuple[str, str | None]:
+    """商品名先頭の【Grand Reserve】等のブランド表記をcategory_hintとして切り出し、
+    残りの商品名本体を返す。ブランド表記を残したままcoffee_parser.parse_product()に
+    渡すと、実データで「【Premium experience】COLOMBIA Los Patios Funky Cherry」が
+    コロンビア産グレード「プレミアム」(colombia_grade_synonyms.jsonの"premium")に
+    誤ってマッチする不具合が判明したため(このショップ独自のライン名"Premium
+    experience"の"Premium"と、FNC公式グレード名"Premium"の英語表記が偶然一致した
+    ことによる誤検出)、必ず本体部分のみを解析対象にする。"""
     m = TITLE_TAG_PATTERN.match(title)
-    return m.group(1).strip() if m else None
+    if not m:
+        return title, None
+    return title[m.end():].strip(), m.group(1).strip()
 
 
 def parse_roast_hint(title: str) -> str | None:
@@ -139,7 +148,8 @@ def parse_roast_hint(title: str) -> str | None:
 
 
 def build_record(product_url: str, title: str, price: int | None, structural_out_of_stock: bool) -> dict:
-    parsed = parse_product(title)
+    main_title, category_hint = split_title_category_hint(title)
+    parsed = parse_product(main_title)
 
     if parsed["is_flavored"]:
         return {
@@ -152,25 +162,25 @@ def build_record(product_url: str, title: str, price: int | None, structural_out
             "product_url": product_url,
         }
 
-    parsed = apply_category_hint_fallback(parsed, parse_category_hint(title))
+    parsed = apply_category_hint_fallback(parsed, category_hint)
     stock_status = detect_stock_status(title, structural_out_of_stock)
 
     return {
         "shop_name": SHOP_INFO["name"],
         "raw_name": title,
         "category": parsed["category"],
-        "category_hint": parse_category_hint(title),
+        "category_hint": category_hint,
         "origin_country": parsed["origin_country"],
         "origin_source": parsed["origin_source"],
         "designated_brand": parsed["designated_brand"],
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
-        "roast_hint": parse_roast_hint(title),
+        "roast_hint": parse_roast_hint(main_title),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": price,
-        "weight_g": parse_weight(title),
+        "weight_g": parse_weight(main_title),
         "stock_status": stock_status,
         "out_of_stock": stock_status != "販売中",
         "product_url": product_url,
