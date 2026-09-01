@@ -61,6 +61,9 @@ ORIGIN_COUNTRY_KEYWORDS = {
     "ブルンジ": "ブルンジ",  # 実データ確認済み(CafeCafa、「ブルンジ・ンゴチ Musenga」)。
     # 英語表記("burundi")はORIGIN_COUNTRY_KEYWORDS_ENに既にあったが、
     # 日本語カタカナ表記がJP側の辞書に無く未検出だった(ニカラグアと同種の抜け)。
+    "ウガンダ": "ウガンダ",  # 実データ確認済み(南薫堂珈琲、「ゆっくりドンキー（ウガンダ）」)。
+    # 英語表記("uganda")もORIGIN_COUNTRY_KEYWORDS_ENに無く、日英とも未登録だった。
+    # 他の地名・単語と衝突するリスクが無いため直接追加できる。
 }
 
 # --- 産地マスタ: 国名キーワード(英語) ---------------------------------------
@@ -78,6 +81,7 @@ ORIGIN_COUNTRY_KEYWORDS_EN = {
     "honduras": "ホンジュラス", "yemen": "イエメン", "mexico": "メキシコ",
     "dominican republic": "ドミニカ共和国", "papua new guinea": "パプアニューギニア",
     "burundi": "ブルンジ", "el salvador": "エルサルバドル", "nicaragua": "ニカラグア",
+    "uganda": "ウガンダ",  # 実データ確認済み(南薫堂珈琲)
     "bolivia": "ボリビア", "peru": "ペルー", "ecuador": "エクアドル", "sudan": "スーダン",
     "thailand": "タイ", "dr congo": "コンゴ民主共和国", "congo": "コンゴ民主共和国",
     "dominica": "ドミニカ国",
