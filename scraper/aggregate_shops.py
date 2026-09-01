@@ -121,6 +121,7 @@ SOURCE_FILES = {
     "かぎしっぽ": "data_kagisippo.json",
     "chouette torréfacteur laboratoire": "data_chouette.json",
     "豆善": "data_mamezen.json",
+    "珈琲家あのころ": "data_anokoro.json",
 }
 
 
