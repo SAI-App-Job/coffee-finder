@@ -127,16 +127,58 @@ PLATFORM_FINGERPRINTS = [
         "similar_scraper": None,
         "note": "未対応。ただしWordPress系はプラグイン差異が大きく、店舗ごとの個別調査が必要になりやすい。",
     },
+    {
+        "platform": "Goope(グーペ)",
+        "patterns": [r"r\.goope\.jp", r"cdn\.goope\.jp", r"goope"],
+        "similar_scraper": "scrape_kagisippo.py",
+        "note": "対応済み(かぎしっぽ、2026-08時点)。ECカート機能を持たず、/menu配下の"
+                "「メニュー表」ページに商品名・価格・説明文をテキストで掲載する形式"
+                "(var Colorme・products.json・JSON-LD等の構造化データは一切無い)。"
+                "商品説明はdiv.textfield内の複数の<p>タグに分かれており、1段落に複数の"
+                "「ラベル：値」が詰め込まれていることがあるため、段落ごとに独立して"
+                "ラベルを抽出する必要がある(段落を跨いで抽出すると、末尾にラベルを"
+                "持たない自由記述段落が直前のラベルの値に混入する不具合が実データで"
+                "判明した)。ルートのrobots.txtはgoope.jpのマーケティングサイトへ"
+                "302リダイレクトされ実体が存在しない(404と同じく全面許可とみなせる)。",
+    },
 ]
 
 
 def check_robots_txt(base_url: str) -> dict:
+    """理由: requestsのデフォルト(allow_redirects=True)のままだと、robots.txt自体が
+    存在せずトップページ等の無関係なコンテンツへリダイレクトされるサイト(Goope等、
+    2026-08時点でkagisippo-coffeeで確認済み)で、そのリダイレクト先のHTMLを
+    robots.txtの本文として誤って解析してしまう。リダイレクトを自動追従せず、
+    リダイレクト先のパスが引き続き/robots.txtを指す場合(スキーム統一等)のみ
+    追従し、それ以外(トップページ等の無関係な場所への転送)は「robots.txtなし」
+    として扱う。"""
     robots_url = urllib.parse.urljoin(base_url, "/robots.txt")
-    try:
-        resp = requests.get(robots_url, headers=REQUEST_HEADERS, timeout=10)
-    except requests.RequestException as e:
-        return {"status": "取得失敗", "detail": str(e), "url": robots_url}
+    url_to_fetch = robots_url
+    resp = None
+    for _ in range(5):  # リダイレクトチェーンの上限(通常のscheme統一等を想定)
+        try:
+            resp = requests.get(url_to_fetch, headers=REQUEST_HEADERS, timeout=10, allow_redirects=False)
+        except requests.RequestException as e:
+            return {"status": "取得失敗", "detail": str(e), "url": robots_url}
 
+        if resp.status_code not in (301, 302, 303, 307, 308):
+            break
+        location = resp.headers.get("Location")
+        if not location:
+            break
+        next_url = urllib.parse.urljoin(url_to_fetch, location)
+        if urllib.parse.urlparse(next_url).path.rstrip("/") != "/robots.txt":
+            # robots.txt以外の場所(トップページ等)へ転送された = 実体が無いのと同義
+            return {
+                "status": "robots.txtなし(全面許可とみなせる。robots.txtへのリクエストが"
+                          f"{next_url} へリダイレクトされ、robots.txt自体が実在しない)",
+                "detail": None,
+                "url": robots_url,
+            }
+        url_to_fetch = next_url
+
+    if resp is None:
+        return {"status": "取得失敗", "detail": None, "url": robots_url}
     if resp.status_code == 404:
         return {"status": "robots.txtなし(全面許可とみなせる)", "detail": None, "url": robots_url}
     if resp.status_code != 200:

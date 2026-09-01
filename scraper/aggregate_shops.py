@@ -118,6 +118,7 @@ SOURCE_FILES = {
     "FINETIME COFFEE ROASTERS": "data_finetime.json",
     "カフェマルシェkunikuni": "data_kunikuni.json",
     "南薫堂珈琲": "data_nankundo.json",
+    "かぎしっぽ": "data_kagisippo.json",
 }
 
 

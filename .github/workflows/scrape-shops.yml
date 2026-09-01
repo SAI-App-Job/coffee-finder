@@ -48,6 +48,7 @@ on:
           - finetime
           - kunikuni
           - nankundo
+          - kagisippo
 
 permissions:
   contents: write # data/*.json をコミット・pushするために必要
@@ -167,6 +168,9 @@ jobs:
           - id: nankundo
             script: scrape_nankundo.py
             output: data_nankundo.json
+          - id: kagisippo
+            script: scrape_kagisippo.py
+            output: data_kagisippo.json
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4 # 差分ベーススクレイピングがdata/products.jsonを参照するため必須
