@@ -987,7 +987,9 @@
         "hours": "EVERYDAY 8:00-19:00",
         "tel": "03-6447-9218",
         "is_headquarters": false,
-        "map_query": "WOODBERRY 用賀本店"
+        "map_query": "WOODBERRY 用賀本店",
+        "lat": 35.624007,
+        "lng": 139.632334
       },
       {
         "label": "渋谷店",
@@ -996,7 +998,9 @@
         "hours": "EVERYDAY 8:30-19:00",
         "tel": "03-5962-7518",
         "is_headquarters": false,
-        "map_query": "WOODBERRY 渋谷店"
+        "map_query": "WOODBERRY 渋谷店",
+        "lat": 35.653138,
+        "lng": 139.711459
       },
       {
         "label": "荻窪店",
@@ -1005,7 +1009,9 @@
         "hours": "EVERYDAY 8:30-19:00",
         "tel": "03-6454-7785",
         "is_headquarters": true,
-        "map_query": "WOODBERRY 荻窪店"
+        "map_query": "WOODBERRY 荻窪店",
+        "lat": 35.713409,
+        "lng": 139.608665
       },
       {
         "label": "代官山店",
@@ -1014,7 +1020,9 @@
         "hours": "EVERYDAY 8:30-18:00",
         "tel": "03-6451-0446",
         "is_headquarters": false,
-        "map_query": "WOODBERRY 代官山店"
+        "map_query": "WOODBERRY 代官山店",
+        "lat": 35.644306,
+        "lng": 139.708307
       },
       {
         "label": "学芸大学店",
@@ -1023,7 +1031,9 @@
         "hours": "EVERYDAY 9:00-19:00",
         "tel": "03-6712-2164",
         "is_headquarters": false,
-        "map_query": "WOODBERRY 学芸大学店"
+        "map_query": "WOODBERRY 学芸大学店",
+        "lat": 35.627819,
+        "lng": 139.685582
       },
       {
         "label": "鎌倉店",
@@ -1032,7 +1042,9 @@
         "hours": "EVERYDAY 8:30-19:00",
         "tel": "0467-33-6108",
         "is_headquarters": false,
-        "map_query": "WOODBERRY 鎌倉店"
+        "map_query": "WOODBERRY 鎌倉店",
+        "lat": 35.313388,
+        "lng": 139.548303
       },
       {
         "label": "BAKERY",
@@ -1041,7 +1053,9 @@
         "hours": "9:00-18:00 定休日あり",
         "tel": "03-6451-1996",
         "is_headquarters": false,
-        "map_query": "WOODBERRY BAKERY"
+        "map_query": "WOODBERRY BAKERY",
+        "lat": 35.653138,
+        "lng": 139.711459
       },
       {
         "label": "たまプラーザ店",
@@ -1050,7 +1064,9 @@
         "hours": "EVERYDAY 10:00-18:00",
         "tel": "070-3359-2777",
         "is_headquarters": false,
-        "map_query": "WOODBERRY たまプラーザ店"
+        "map_query": "WOODBERRY たまプラーザ店",
+        "lat": 35.584329,
+        "lng": 139.556842
       },
       {
         "label": "玉川高島屋Ｓ.Ｃ.店",
@@ -1059,7 +1075,9 @@
         "hours": "9:00〜20:00",
         "tel": "03-6447-9633",
         "is_headquarters": false,
-        "map_query": "WOODBERRY 玉川高島屋Ｓ.Ｃ.店"
+        "map_query": "WOODBERRY 玉川高島屋Ｓ.Ｃ.店",
+        "lat": 35.612927,
+        "lng": 139.626281
       },
       {
         "label": "駒沢店",
@@ -1068,7 +1086,9 @@
         "hours": "8:30〜19:00",
         "tel": "03-6805-4850",
         "is_headquarters": false,
-        "map_query": "WOODBERRY 駒沢店"
+        "map_query": "WOODBERRY 駒沢店",
+        "lat": 35.633527,
+        "lng": 139.663464
       },
       {
         "label": "大井町店",
@@ -1077,9 +1097,13 @@
         "hours": "8:00〜21:00",
         "tel": "03-6303-8061",
         "is_headquarters": false,
-        "map_query": "WOODBERRY 大井町店"
+        "map_query": "WOODBERRY 大井町店",
+        "lat": 35.612363,
+        "lng": 139.733682
       }
-    ]
+    ],
+    "lat": 35.624007,
+    "lng": 139.632334
   },
   {
     "name": "珈琲店トップ",
