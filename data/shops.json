@@ -1193,5 +1193,17 @@
     ],
     "lat": 35.329724,
     "lng": 139.414345
+  },
+  {
+    "name": "chouette torréfacteur laboratoire",
+    "url": "https://chouettetl.theshop.jp/",
+    "platform": "THE SHOP(BASE系)",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-08確認。NAGI COFFEE・FINETIME COFFEE ROASTERSと同一の記述。/cart/・/web_cart/・/shops/・/api/shops/・違反報告ページ以外はUser-agent: *でAllow。curl/python-requests等は個別にDisallow: /指定あり、本スクレイパーは識別可能なUser-Agentを使用)",
+    "address": "東京都世田谷区宮坂1-39-11",
+    "prefecture": "東京都",
+    "hours": null,
+    "map_query": "chouette torréfacteur laboratoire",
+    "last_scraped_at": "2026-09-01T11:18:24.976107+00:00"
   }
 ]
