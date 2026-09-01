@@ -1116,5 +1116,17 @@
     "hours": null,
     "map_query": "珈琲店トップ",
     "last_scraped_at": "2026-09-01T00:04:20.672700+00:00"
+  },
+  {
+    "name": "FINETIME COFFEE ROASTERS",
+    "url": "https://finetime.theshop.jp/",
+    "platform": "THE SHOP(BASE系)",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-08確認。NAGI COFFEEと同一の記述。/cart/・/shops/・/api/shops/・違反報告ページ以外はUser-agent: *でAllow。curl/python-requests等は個別にDisallow: /指定あり、本スクレイパーは識別可能なUser-Agentを使用)",
+    "address": "東京都世田谷区経堂1-12-15",
+    "prefecture": "東京都",
+    "hours": null,
+    "map_query": "FINETIME COFFEE ROASTERS",
+    "last_scraped_at": "2026-09-01T00:34:58.920734+00:00"
   }
 ]
