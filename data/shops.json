@@ -1128,5 +1128,17 @@
     "hours": null,
     "map_query": "FINETIME COFFEE ROASTERS",
     "last_scraped_at": "2026-09-01T00:34:58.920734+00:00"
+  },
+  {
+    "name": "カフェマルシェkunikuni",
+    "url": "https://kunikunimame.com/",
+    "platform": "カラーミーショップ(shop-pro.jp)",
+    "shop_type": "single_location",
+    "robots_txt_status": "許可(2026-08確認。/secure/と/cart/以外は制限なし。PHILOCOFFEA・405 COFFEE ROASTERS等と同一の記述)",
+    "address": "東京都世田谷区経堂2-4-8　Antelop経堂A号室",
+    "prefecture": "東京都",
+    "hours": null,
+    "map_query": "カフェマルシェkunikuni",
+    "last_scraped_at": "2026-09-01T01:17:31.326639+00:00"
   }
 ]
