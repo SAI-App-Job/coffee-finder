@@ -119,7 +119,6 @@ SOURCE_FILES = {
     "カフェマルシェkunikuni": "data_kunikuni.json",
     "南薫堂珈琲": "data_nankundo.json",
     "かぎしっぽ": "data_kagisippo.json",
-    "吉田珈琲焙煎所": "data_yoshida.json",
 }
 
 

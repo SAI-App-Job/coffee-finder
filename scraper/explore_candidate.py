@@ -118,8 +118,21 @@ PLATFORM_FINGERPRINTS = [
     {
         "platform": "STORES",
         "patterns": [r"stores\.jp", r"stores-fs"],
-        "similar_scraper": None,
-        "note": "未対応。構造調査が必要。",
+        "similar_scraper": "scrape_yoshida.py",
+        "note": "参考実装あり(吉田珈琲焙煎所、2026-08時点)が、GitHub Actions上での"
+                "自動実行には現状未対応。ロジック自体はscrape_yoshida.pyとしてローカルで"
+                "動作検証済み(/itemsページのa.c-itemList__item-linkから一覧取得、"
+                "詳細ページはh1.item_name・ng-init内のdetailCtrl.salesPrice=N・"
+                "div.main_content_result_item_list_detail[ng-non-bindable、実テキストの"
+                "\\nで構造化ラベル(原産国：/焙煎度：等)を含む]で取得可能)。ただし"
+                "GitHub Actionsランナーからのリクエストは、識別可能なUser-Agentや"
+                "ブラウザ相当のAccept系ヘッダーを付けてもCloudflareに一貫してHTTP 403"
+                "Forbiddenでブロックされる(ローカル環境の同一UAでは200)。IPレピュテーション"
+                "によるものと推定され、Tsuku2(Akamai)と同種の問題。デフォルトのcurl"
+                "(UA無し)だとローカルからでもCaptcha Challenge(403)になる点にも注意"
+                "(識別可能なUser-Agent自体は必須)。robots.txtはUser-agent: *に対し"
+                "/cart・/checkout・/login・/mypage・/search・/tokushoho等の非公開/取引系"
+                "のみDisallowで、Crawl-delay: 20が明示されている。",
     },
     {
         "platform": "WordPress + WooCommerce",

@@ -15,6 +15,20 @@ Crawl-delay: 20 が明示されているため、他店舗より大幅に長い�
 Captcha Challenge(HTTP 403)が返るため、識別可能なUser-Agentを明示的に
 設定する(実データ確認済み)。
 
+【自動実行(GitHub Actions)には現在未対応。手動データに切り替え済み】
+このスクレイパー自体はローカル環境から正しく動作し、実データで5商品の抽出を
+検証済み(2026-08)。しかしGitHub Actionsランナーからのリクエストは、
+Accept/Accept-Language等のヘッダーを一般的なブラウザ相当に整えてもなお
+CloudflareにHTTP 403 Forbiddenで一貫してブロックされることを2回の実行で
+確認した(ローカルの同一User-Agentでは200が返るため、UA文字列単体ではなく
+GitHub Actions共有IPレンジのレピュテーションによるものと推定。
+explore_candidate.pyのTsuku2指紋に記載のAkamaiブロックと同種の問題)。
+ユーザー判断により、このスクレイパーはscrape-shops.ymlの自動実行対象からは
+外し、代わりにscraper/manual/shops/yoshida-baisenjo.jsonへ実データを手動で
+登録した(source_note参照)。本ファイルは将来Cloudflareのポリシーが変わった
+場合や、GitHub Actions以外の実行環境が使えるようになった場合の参考実装として
+残している。
+
 【商品カタログの構成について】
 実データ確認済み(2026-08時点、全16件): この店舗は他店舗と異なり「コーヒー豆」
 専用カテゴリが無く、/itemsページに全商品(EC限定ブレンド4種・カフェインレス
