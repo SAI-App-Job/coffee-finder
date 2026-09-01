@@ -46,6 +46,7 @@ on:
           - woodberry
           - etop
           - finetime
+          - kunikuni
 
 permissions:
   contents: write # data/*.json をコミット・pushするために必要
@@ -159,6 +160,9 @@ jobs:
           - id: finetime
             script: scrape_finetime.py
             output: data_finetime.json
+          - id: kunikuni
+            script: scrape_kunikuni.py
+            output: data_kunikuni.json
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4 # 差分ベーススクレイピングがdata/products.jsonを参照するため必須
