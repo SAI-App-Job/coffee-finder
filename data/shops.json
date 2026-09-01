@@ -967,5 +967,118 @@
     "hours": null,
     "map_query": "CafeCafa",
     "last_scraped_at": "2026-08-31T15:49:29.242568+00:00"
+  },
+  {
+    "name": "WOODBERRY COFFEE",
+    "url": "https://woodberrycoffee.com/",
+    "platform": "Shopify",
+    "shop_type": "multi_location",
+    "robots_txt_status": "許可(2026-08確認。標準的なShopify robots.txtで/products/・/collections/はUser-agent: *に対しAllow。/cart・/checkout・/account等の非公開/取引系のみDisallow)",
+    "address": "東京都",
+    "prefecture": "東京都",
+    "hours": null,
+    "map_query": "WOODBERRY COFFEE",
+    "last_scraped_at": "2026-09-01T00:00:55.156907+00:00",
+    "locations": [
+      {
+        "label": "用賀本店",
+        "address": "東京都世田谷区玉川台2-22-17",
+        "prefecture": "東京都",
+        "hours": "EVERYDAY 8:00-19:00",
+        "tel": "03-6447-9218",
+        "is_headquarters": false,
+        "map_query": "WOODBERRY 用賀本店"
+      },
+      {
+        "label": "渋谷店",
+        "address": "東京都渋谷区東2-20-18",
+        "prefecture": "東京都",
+        "hours": "EVERYDAY 8:30-19:00",
+        "tel": "03-5962-7518",
+        "is_headquarters": false,
+        "map_query": "WOODBERRY 渋谷店"
+      },
+      {
+        "label": "荻窪店",
+        "address": "東京都杉並区桃井1-2-2",
+        "prefecture": "東京都",
+        "hours": "EVERYDAY 8:30-19:00",
+        "tel": "03-6454-7785",
+        "is_headquarters": true,
+        "map_query": "WOODBERRY 荻窪店"
+      },
+      {
+        "label": "代官山店",
+        "address": "東京都渋谷区恵比寿南3-7-1",
+        "prefecture": "東京都",
+        "hours": "EVERYDAY 8:30-18:00",
+        "tel": "03-6451-0446",
+        "is_headquarters": false,
+        "map_query": "WOODBERRY 代官山店"
+      },
+      {
+        "label": "学芸大学店",
+        "address": "東京都目黒区鷹番3-1-5",
+        "prefecture": "東京都",
+        "hours": "EVERYDAY 9:00-19:00",
+        "tel": "03-6712-2164",
+        "is_headquarters": false,
+        "map_query": "WOODBERRY 学芸大学店"
+      },
+      {
+        "label": "鎌倉店",
+        "address": "神奈川県鎌倉市由比ガ浜２丁目-２２-９",
+        "prefecture": "神奈川県",
+        "hours": "EVERYDAY 8:30-19:00",
+        "tel": "0467-33-6108",
+        "is_headquarters": false,
+        "map_query": "WOODBERRY 鎌倉店"
+      },
+      {
+        "label": "BAKERY",
+        "address": "東京都渋谷区東2-18-7",
+        "prefecture": "東京都",
+        "hours": "9:00-18:00 定休日あり",
+        "tel": "03-6451-1996",
+        "is_headquarters": false,
+        "map_query": "WOODBERRY BAKERY"
+      },
+      {
+        "label": "たまプラーザ店",
+        "address": "神奈川県横浜市青葉区美しが丘1-7",
+        "prefecture": "神奈川県",
+        "hours": "EVERYDAY 10:00-18:00",
+        "tel": "070-3359-2777",
+        "is_headquarters": false,
+        "map_query": "WOODBERRY たまプラーザ店"
+      },
+      {
+        "label": "玉川高島屋Ｓ.Ｃ.店",
+        "address": "東京都世田谷区玉川3-17-1",
+        "prefecture": "東京都",
+        "hours": "9:00〜20:00",
+        "tel": "03-6447-9633",
+        "is_headquarters": false,
+        "map_query": "WOODBERRY 玉川高島屋Ｓ.Ｃ.店"
+      },
+      {
+        "label": "駒沢店",
+        "address": "東京都世田谷区上馬三丁目18-7",
+        "prefecture": "東京都",
+        "hours": "8:30〜19:00",
+        "tel": "03-6805-4850",
+        "is_headquarters": false,
+        "map_query": "WOODBERRY 駒沢店"
+      },
+      {
+        "label": "大井町店",
+        "address": "東京都品川区広町2-1-3",
+        "prefecture": "東京都",
+        "hours": "8:00〜21:00",
+        "tel": "03-6303-8061",
+        "is_headquarters": false,
+        "map_query": "WOODBERRY 大井町店"
+      }
+    ]
   }
 ]
