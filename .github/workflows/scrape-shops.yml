@@ -45,6 +45,7 @@ on:
           - cafecafa
           - woodberry
           - etop
+          - finetime
 
 permissions:
   contents: write # data/*.json をコミット・pushするために必要
@@ -155,6 +156,9 @@ jobs:
           - id: etop
             script: scrape_etop.py
             output: data_etop.json
+          - id: finetime
+            script: scrape_finetime.py
+            output: data_finetime.json
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4 # 差分ベーススクレイピングがdata/products.jsonを参照するため必須

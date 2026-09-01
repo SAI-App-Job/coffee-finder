@@ -115,6 +115,7 @@ SOURCE_FILES = {
     "CafeCafa": "data_cafecafa.json",
     "WOODBERRY COFFEE": "data_woodberry.json",
     "珈琲店トップ": "data_etop.json",
+    "FINETIME COFFEE ROASTERS": "data_finetime.json",
 }
 
 
