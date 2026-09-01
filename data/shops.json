@@ -1080,5 +1080,17 @@
         "map_query": "WOODBERRY 大井町店"
       }
     ]
+  },
+  {
+    "name": "珈琲店トップ",
+    "url": "https://etop.shop-pro.jp/",
+    "platform": "カラーミーショップ(shop-pro.jp)",
+    "shop_type": "single_location",
+    "robots_txt_status": "許可(2026-08確認。/secure/と/cart/以外は制限なし。PHILOCOFFEA・405 COFFEE ROASTERS等と同一の記述)",
+    "address": "東京都渋谷区代々木5-63-10",
+    "prefecture": "東京都",
+    "hours": null,
+    "map_query": "珈琲店トップ",
+    "last_scraped_at": "2026-09-01T00:04:20.672700+00:00"
   }
 ]
