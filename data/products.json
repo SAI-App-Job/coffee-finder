@@ -188,14 +188,14 @@
     "price_min": null,
     "price_max": null,
     "price_note": null,
-    "weight_g": 9100,
+    "weight_g": null,
     "unit_note": null,
     "stock_status": "一時的に品切れ",
     "out_of_stock": true,
     "decaf_process": null,
     "product_url": "https://etop.shop-pro.jp/?pid=5341171",
     "map_query": "珈琲店トップ",
-    "scraped_at": "2026-09-01T00:04:20.672700+00:00"
+    "scraped_at": "2026-09-01T00:08:00.514837+00:00"
   },
   {
     "id": "https://etop.shop-pro.jp/?pid=192991422",
