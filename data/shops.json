@@ -1152,5 +1152,17 @@
     "hours": null,
     "map_query": "南薫堂珈琲",
     "last_scraped_at": "2026-09-01T01:30:41.843377+00:00"
+  },
+  {
+    "name": "かぎしっぽ",
+    "url": "https://r.goope.jp/kagisippo-coffee/",
+    "platform": "Goope",
+    "shop_type": "single_location",
+    "robots_txt_status": "許可(2026-08確認。robots.txt自体が存在せず[HTTP 302でgoope.jpのマーケティングサイトへリダイレクト]、Disallow指定が無いため全面許可とみなす)",
+    "address": "神奈川県川崎市幸区古市場1-31-7",
+    "prefecture": "神奈川県",
+    "hours": null,
+    "map_query": "かぎしっぽ",
+    "last_scraped_at": "2026-09-01T05:59:18.583258+00:00"
   }
 ]
