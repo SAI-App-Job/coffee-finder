@@ -474,14 +474,18 @@ def parse_product(raw_name: str) -> dict:
                 break
         return result
 
-    # 特定銘柄
-    for kw, (brand, country, exclusion) in DESIGNATED_BRAND_KEYWORDS.items():
-        if kw in raw_name:
-            result["designated_brand"] = brand
-            result["designated_brand_note"] = exclusion
-            result["origin_country"] = country
-            result["origin_source"] = "brand"
-            break
+    # 特定銘柄(ブレンドは対象外。特定銘柄は単一産地であることが前提の呼称であり、
+    # ブレンドに他産地の豆が混ざっていても銘柄名を含むだけで単一原産地と誤認する
+    # 不具合が実データで判明したため(例:「豆善 ブルーマウンテン No.1 ブレンド」は
+    # コロンビア/ジャマイカ/インドネシアの配合で、ジャマイカ産のみではない)。
+    if result["category"] != "ブレンド":
+        for kw, (brand, country, exclusion) in DESIGNATED_BRAND_KEYWORDS.items():
+            if kw in raw_name:
+                result["designated_brand"] = brand
+                result["designated_brand_note"] = exclusion
+                result["origin_country"] = country
+                result["origin_source"] = "brand"
+                break
 
     # 国名直接表記(日本語→英語の順)
     if not result["origin_country"]:

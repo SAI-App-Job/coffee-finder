@@ -120,6 +120,7 @@ SOURCE_FILES = {
     "南薫堂珈琲": "data_nankundo.json",
     "かぎしっぽ": "data_kagisippo.json",
     "chouette torréfacteur laboratoire": "data_chouette.json",
+    "豆善": "data_mamezen.json",
 }
 
 
