@@ -52,6 +52,7 @@ on:
           - chouette
           - mamezen
           - anokoro
+          - facon
 
 permissions:
   contents: write # data/*.json をコミット・pushするために必要
@@ -183,6 +184,9 @@ jobs:
           - id: anokoro
             script: scrape_anokoro.py
             output: data_anokoro.json
+          - id: facon
+            script: scrape_facon.py
+            output: data_facon.json
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4 # 差分ベーススクレイピングがdata/products.jsonを参照するため必須

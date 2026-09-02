@@ -69,7 +69,19 @@ PLATFORM_FINGERPRINTS = [
                 "正規表現で直接抜き出せる。単一原産地の商品のみtable.info-table"
                 "(国名/地域/生産者/精製工場/オーナー/標高/品種/精製のth/td形式)を持ち、"
                 "ブレンド商品には存在しない。商品一覧のページ送りは"
-                "/SHOP/<カテゴリID>/t02/list<N>.html というURLでGETアクセス可能。",
+                "/SHOP/<カテゴリID>/t02/list<N>.html というURLでGETアクセス可能。"
+                "【重要】ShopServeは店舗ごとにテーマ・運用差が大きい(2026-09時点、"
+                "CAFE FACON(scrape_facon.py)で確認): gtag view_item・table.info-table・"
+                "商品説明文のいずれも存在せず、商品詳細ページは価格(table.price)と挽き方"
+                "選択オプションのみで、一覧ページの表示価格と完全に一致する。この場合は"
+                "詳細ページを個別取得する意味が無く、一覧ページ(section.column4、"
+                "h2 a=商品名、p.price span.selling_price=価格、"
+                "p.sps-itemList-stockDisp内の「在庫切れ」テキスト=品切れシグナル)だけで"
+                "完結させ、産地・精選方法・焙煎度・グレードはすべて商品名から"
+                "coffee_parser.parse_product()で判定する。ページ送りURLも店舗により"
+                "/t02/を含まない/SHOP/<カテゴリID>/list<N>.htmlの場合があるため、"
+                "新規店舗ではまず詳細ページにgtag/info-table等の構造化データが"
+                "存在するかを最初に確認すること。",
     },
     {
         "platform": "Webflow",
