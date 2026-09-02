@@ -53,6 +53,7 @@ on:
           - mamezen
           - anokoro
           - facon
+          - himonya
 
 permissions:
   contents: write # data/*.json をコミット・pushするために必要
@@ -187,6 +188,9 @@ jobs:
           - id: facon
             script: scrape_facon.py
             output: data_facon.json
+          - id: himonya
+            script: scrape_himonya.py
+            output: data_himonya.json
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4 # 差分ベーススクレイピングがdata/products.jsonを参照するため必須

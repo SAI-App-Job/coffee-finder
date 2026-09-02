@@ -123,6 +123,7 @@ SOURCE_FILES = {
     "豆善": "data_mamezen.json",
     "珈琲家あのころ": "data_anokoro.json",
     "CAFE FACON": "data_facon.json",
+    "HIMONYA FIVE COFFEE": "data_himonya.json",
 }
 
 
