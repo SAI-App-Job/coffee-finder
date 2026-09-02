@@ -1227,5 +1227,37 @@
     "hours": null,
     "map_query": "珈琲家あのころ",
     "last_scraped_at": "2026-09-01T11:51:35.623670+00:00"
+  },
+  {
+    "name": "CAFE FACON",
+    "url": "https://cafe-facon.jp/",
+    "platform": "ShopServe",
+    "shop_type": "multi_location",
+    "robots_txt_status": "robots.txtなし(2026-09確認。cafe-facon.jp・www.cafe-facon.jpどちらも404で存在しない。Muiと同じくShopServe標準の状態で、実質全面許可とみなせる)",
+    "address": "東京都目黒区上目黒3-8-3 千陽中目黒ビル・アネックス3F",
+    "prefecture": "東京都",
+    "hours": null,
+    "map_query": "CAFE FACON",
+    "last_scraped_at": "2026-09-02T15:25:23.960225+00:00",
+    "locations": [
+      {
+        "label": "中目黒本店",
+        "address": "東京都目黒区上目黒3-8-3 千陽中目黒ビル・アネックス3F",
+        "prefecture": "東京都",
+        "hours": "10:00〜22:00(定休日：不定休)",
+        "tel": "03-3716-8338",
+        "is_headquarters": true,
+        "map_query": "CAFE FACON 中目黒本店"
+      },
+      {
+        "label": "代官山ロースターアトリエ",
+        "address": "東京都渋谷区代官山町10-1",
+        "prefecture": "東京都",
+        "hours": "10:00〜19:00(定休日：不定休)",
+        "tel": "03-6416-5858",
+        "is_headquarters": false,
+        "map_query": "CAFE FACON 代官山ロースターアトリエ"
+      }
+    ]
   }
 ]
