@@ -150,12 +150,15 @@ def scrape_all_products() -> tuple[list[dict], list[dict]]:
     for product_url in product_urls:
         prev = previous.get(product_url)
         try:
-            fields = extract_datalayer_fields(fetch_html(product_url))
+            html = fetch_html(product_url)
+            fields = extract_datalayer_fields(html)
         except requests.RequestException as e:
             print(f"[warn] 詳細ページ取得失敗: {product_url} ({e})")
             continue
 
         if not fields:
+            print(f"[debug] fields抽出失敗: {product_url} len={len(html)} "
+                  f"has_dataLayer={'dataLayer' in html} has_item_name={'item_name' in html}")
             continue
         if is_unchanged(prev, raw_name=fields["title"]):
             records.append(prev)
