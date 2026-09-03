@@ -26,6 +26,18 @@ collection, page, blog, policy, cart, and localized HTML is crawlable"と明記
 同じ問題)。商品名自体に重量表記(「150g」「250g」「1kg」)が含まれるため、
 そちらから正規表現で取得する(kg表記は1000倍してg換算)。
 
+【ブレンドの産地(CURRENT ORIGINS)について】
+実データ確認済み: ブレンド商品のbody_htmlには「現在のオリジン／CURRENT
+ORIGINS:」という構造化欄があり、直後のdiv内に国名(英語表記)が子divとして
+複数列挙される(例:YEEHAH!ブレンドはINDONESIA・COSTA RICAの2ヶ国)。自由
+記述からdetect_country_name()で1ヶ国だけ拾う方式では、最初に文中で言及
+された国しか取れず、実際には2ヶ国以上の配合であるブレンドの産地情報が
+不正確になっていた(実ワークフロー実行後のデータ検証で発覚)。この構造化欄を
+優先的にパースし、複数国あればblend_componentsに格納、origin_countryは
+null(ブレンドは単一国のフィールドに収まらないため)とする。欄自体はあっても
+値が空の商品(例:AWOL DECAFブレンド)は収穫期により産地非開示のため、その
+まま何も設定しない。
+
 【バリエーションについて】
 実データ確認済み: 全商品ともバリエーションは「WHOLE BEAN／豆」「PAPER
 FILTER／粉」(挽き方)の2種のみで、重量は商品名ごとに固定・別商品(価格も
@@ -126,13 +138,37 @@ def build_record(product: dict, category_hint: str) -> dict:
             "product_url": product_url,
         }
 
-    body_text = BeautifulSoup(product.get("body_html", ""), "html.parser").get_text(" ")
+    body_soup = BeautifulSoup(product.get("body_html", ""), "html.parser")
+    body_text = body_soup.get_text(" ")
+    is_blend = parsed["category"] == "ブレンド"
 
-    if not parsed["origin_country"]:
-        country = detect_country_name(body_text)
-        if country:
-            parsed["origin_country"] = country
-            parsed["origin_source"] = "product_description"
+    blend_components: list[dict] = []
+    if is_blend:
+        # 理由はモジュールdocstring参照。ブレンド商品は「現在のオリジン／
+        # CURRENT ORIGINS:」という構造化欄(国名を子divで列挙、複数国あれば
+        # 複数div)を持つため、これを優先的に使う(自由記述の産地判定では
+        # 最初に見つかった1ヶ国しか拾えず、実際には2ヶ国以上の配合である
+        # 実例(YEEHAH!ブレンド:INDONESIA+COSTA RICA)を取りこぼしていた)。
+        # 欄自体はあっても値が空の商品もある(例:AWOLブレンド、収穫期により
+        # 産地非開示)。
+        for div in body_soup.find_all("div"):
+            if "ORIGINS" in div.get_text(strip=True).upper():
+                next_div = div.find_next_sibling("div")
+                if next_div:
+                    for child in next_div.find_all("div"):
+                        raw_value = child.get_text(strip=True)
+                        country = detect_country_name(raw_value)
+                        if country:
+                            blend_components.append({"origin_country": country, "percentage": None})
+                break
+        parsed["origin_country"] = None
+        parsed["origin_source"] = None
+    else:
+        if not parsed["origin_country"]:
+            country = detect_country_name(body_text)
+            if country:
+                parsed["origin_country"] = country
+                parsed["origin_source"] = "product_description"
     parsed = apply_category_hint_fallback(parsed, category_hint)
 
     detected_processing = detect_processing_method(body_text)
@@ -156,7 +192,7 @@ def build_record(product: dict, category_hint: str) -> dict:
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
         "post_processing_tags": parsed["post_processing_tags"],
-        "blend_components": [],
+        "blend_components": blend_components,
         "price": price,
         "weight_g": parse_weight_from_title(title),
         "stock_status": stock_status,
