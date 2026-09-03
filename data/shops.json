@@ -1843,5 +1843,17 @@
     "data_source": "manual",
     "source_note": "2007年2月開業、『珈琲工房 BEANS横浜』で修業した2人が営む自家焙煎専門店(東急多摩川線武蔵新田駅より徒歩7分)。公式サイト(worldbeans.net)にストレート・ブレンド全商品の商品名・産地・内容量(生豆200gの煎り上がり価格)・価格・おすすめロースト度が明記されているが、注文フォーム自体が無く(cart.html/order.html等は404)、電話・メールでの注文のみと見られる。「販売休止中」「取扱休止中」と明記された商品は除外し、価格が明記されている現行販売中の商品のみ収録した。サイト自体は2007年から更新されていない可能性があるため、価格・品揃えが変動している可能性がある。",
     "last_verified_at": "2026-09-04"
+  },
+  {
+    "name": "カメヤマ珈琲",
+    "url": "https://www.ginmame.com/",
+    "platform": "WordPress(独自テーマ)",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-09確認。標準的なWordPress設定。/wp-admin/のみDisallow。「www.」無しドメインはTLS接続不可のためwww.ginmame.comを使用)",
+    "address": "東京都荒川区東日暮里6-22-14",
+    "prefecture": "東京都",
+    "hours": null,
+    "map_query": "カメヤマ珈琲",
+    "last_scraped_at": "2026-09-03T22:14:16.316224+00:00"
   }
 ]
