@@ -2035,5 +2035,17 @@
     "hours": null,
     "map_query": "豆香房",
     "last_scraped_at": "2026-09-03T22:51:36.401271+00:00"
+  },
+  {
+    "name": "青海珈琲",
+    "url": "https://aomi-coffee.com/",
+    "platform": "MakeShop",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-09確認。robots.txt自体が存在せずMakeShopのシステム404ページへリダイレクトされる、実質制限なし)",
+    "address": "東京都江東区青海(本店)",
+    "prefecture": "東京都",
+    "hours": null,
+    "map_query": "青海珈琲",
+    "last_scraped_at": "2026-09-03T22:54:12.983258+00:00"
   }
 ]
