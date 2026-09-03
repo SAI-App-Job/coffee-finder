@@ -58,6 +58,7 @@ on:
           - aozora
           - beanstei
           - mameo
+          - tamaji
 
 permissions:
   contents: write # data/*.json をコミット・pushするために必要
@@ -207,6 +208,9 @@ jobs:
           - id: mameo
             script: scrape_mameo.py
             output: data_mameo.json
+          - id: tamaji
+            script: scrape_tamaji.py
+            output: data_tamaji.json
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4 # 差分ベーススクレイピングがdata/products.jsonを参照するため必須
