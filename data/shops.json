@@ -1399,5 +1399,17 @@
     "hours": null,
     "map_query": "GONZO CAFE&BEANS",
     "last_scraped_at": "2026-09-03T05:53:26.619676+00:00"
+  },
+  {
+    "name": "麻布珈房",
+    "url": "https://www.azabukobo.com/",
+    "platform": "カラーミーショップ(shop-pro.jp)",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-09確認。/secure/・/cart/のみ制限。nericafe・kunikuni等と同一の記述)",
+    "address": "東京都港区麻布十番",
+    "prefecture": "東京都",
+    "hours": null,
+    "map_query": "麻布珈房",
+    "last_scraped_at": "2026-09-03T11:14:52.713644+00:00"
   }
 ]
