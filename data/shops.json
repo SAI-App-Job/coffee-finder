@@ -1939,5 +1939,17 @@
     "hours": null,
     "map_query": "珈琲自家焙煎HiwaHiwa",
     "last_scraped_at": "2026-09-03T22:30:25.943035+00:00"
+  },
+  {
+    "name": "御豆屋",
+    "url": "https://shop.omameya.jp/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-09確認。他のBASE系店舗と同一の記述。curl/python-requests等は個別にDisallow: /指定あり、本スクレイパーは識別可能なUser-Agentを使用)",
+    "address": "東京都江戸川区(小岩駅北口)",
+    "prefecture": "東京都",
+    "hours": null,
+    "map_query": "御豆屋",
+    "last_scraped_at": "2026-09-03T22:33:47.351553+00:00"
   }
 ]
