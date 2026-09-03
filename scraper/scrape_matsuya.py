@@ -25,10 +25,14 @@ ORIGIN_COUNTRY_KEYWORDS_EN(英語国名)・BLEND_KEYWORDS(大文字小文字無�
 "blend"も検出)で概ねカバーできる。
 
 【在庫について】
-実データ確認済み: var Colormeのinventory_controlが"product"(商品単位で
-在庫数を管理)で、stock_numに実際の在庫数(例:1)が入っている構造化された
-在庫フラグ(nericafe・麻布珈房の"none"とは異なる)。stock_num<=0を
-構造的な品切れとして扱う。
+実データ確認済み: var Colormeのinventory_controlが商品ごとに"product"
+(在庫数を実際に管理、stock_numに実数)と"none"(stock_numは常にnull)の
+どちらもあり、店舗全体で統一されていない(nericafe・麻布珈房は全商品
+"none"だったため、この店舗固有の混在パターン)。実ワークフロー実行後の
+データ検証で発覚: "none"の商品にもstock_num<=0の品切れ判定を無条件適用
+すると、全26件中House Blend等25件が誤って「一時的に品切れ」になっていた。
+inventory_control=="product"の商品にのみ構造的な品切れ判定を適用し、
+"none"の商品は商品名のテキストのみで判定するよう修正した。
 """
 
 import json
@@ -107,7 +111,14 @@ def build_record(product_url: str, colorme_product: dict, category_hint: str) ->
 
     parsed = apply_category_hint_fallback(parsed, category_hint)
 
-    structural_out_of_stock = (colorme_product.get("stock_num") or 0) <= 0
+    # 理由はモジュールdocstring参照。inventory_controlは商品ごとに"product"
+    # (在庫数を実際に管理)/"none"(管理していない、stock_numは常にnull)が
+    # 混在しており、"none"の商品にstock_num<=0の判定をそのまま適用すると
+    # 全件が誤って品切れ扱いになる不具合を実データで確認済み。
+    structural_out_of_stock = (
+        colorme_product.get("inventory_control") == "product"
+        and (colorme_product.get("stock_num") or 0) <= 0
+    )
     stock_status = detect_stock_status(title, structural_out_of_stock)
 
     return {
