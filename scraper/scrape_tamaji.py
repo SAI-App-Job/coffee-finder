@@ -41,6 +41,13 @@ robots.txt確認済み(2026-09時点): User-agent: *に対し/wp-admin/のみDis
 という語を含まないブレンド商品(例:「GOEMONブラック」が実際はメキシコ/
 インドネシア/ブラジルの3産地配合)が存在することを確認済みのため、商品名
 ではなくこの構造(原産国の<p>の個数)でブレンド判定を行う(is_blend参照)。
+ただし複数産地が必ず別々の<p>に分かれるとは限らず、「たまじブレンドJOKER」
+は<p>が1個だけで中身が「ジャマイカ、ブラジル」とカンマ区切りでまとめられて
+いた(実データ検証で判明。当初<p>の個数だけで判定していたところ、この商品が
+category="ブレンド"なのにorigin_country="ブラジル"というproduction矛盾を
+起こしたため修正)。そのため各<p>の値をさらにカンマで分割してから件数を
+数える。なお「たまじ春ブレンド」のように原産国欄自体が存在しない(0件)商品も
+あり、その場合のみ商品名解析の「ブレンド」判定にフォールバックする。
 <h5>おすすめロースト</h5>の値は「3／中深焙煎（酸味と苦み）」のような
 1〜9段階の独自表記で、プロ向け8段階表記と粒度が異なるためroast_hintとして
 保持する(受注焙煎方式のためroast_selectable=True)。
@@ -201,14 +208,34 @@ def build_record(soup: BeautifulSoup, product_url: str, fallback_title: str, pri
         }
 
     fields = parse_item_content(soup)
-    origin_values = fields.get("原産国", [])
-    is_blend = len(origin_values) > 1
+    # 理由はモジュールdocstring参照(原産国の複数値は、別々の<p>で並ぶ商品と、
+    # 1つの<p>に「ジャマイカ、ブラジル」のようにカンマ区切りでまとめられる
+    # 商品の2パターンがあることを実データで確認済み。「たまじブレンドJOKER」は
+    # 後者のパターンで、<p>が1個しか無いためlen(origin_values)>1だけでは
+    # ブレンドと判定できなかった不具合が実データ検証で判明したため、各値を
+    # さらにカンマで分割してから個数を数える)
+    origin_values = [
+        part.strip()
+        for raw in fields.get("原産国", [])
+        for part in re.split(r"[、,]", raw)
+        if part.strip()
+    ]
+    # 原産国が2件以上ならブレンド、1件なら単一原産地と判定できるが、季節限定
+    # ブレンド等そもそも原産国欄が無い商品(0件)もあるため、その場合のみ商品名
+    # 解析(parse_product)の「ブレンド」判定にフォールバックする(理由は
+    # モジュールdocstring参照)
+    if len(origin_values) >= 2:
+        is_blend = True
+    elif len(origin_values) == 1:
+        is_blend = False
+    else:
+        is_blend = parsed["category"] == "ブレンド"
+    parsed["category"] = "ブレンド" if is_blend else "ストレート"
 
     blend_components = []
     origin_country, origin_source = None, None
     processing_method = None
     if is_blend:
-        parsed["category"] = "ブレンド"
         for value in origin_values:
             country = detect_country_name(value)
             blend_components.append({"origin_country": country or value, "percentage": None})
