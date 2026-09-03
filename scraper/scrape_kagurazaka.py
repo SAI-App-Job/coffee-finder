@@ -132,7 +132,11 @@ def build_record(product_url: str, product: dict, category_hint: str) -> dict:
 
     description = product.get("description") or ""
     roast_hint = None
-    m = re.search(r"おすすめロースト[：:]\s*([^\s。、]+)", description)
+    # 理由: 値の直後に「*生豆での販売は行っておりません」「※ご指定がない場合...」
+    # 「&nbsp;」等の注記が区切り文字無しに連結されている実例が複数あり(実データ
+    # 確認済み)、素朴な空白/句読点区切りだけでは注記まで拾ってしまうため、
+    # *・※・&も終端文字に含める。
+    m = re.search(r"おすすめロースト[：:]\s*([^\s。、*※&]+)", description)
     if m:
         roast_hint = m.group(1)
 
