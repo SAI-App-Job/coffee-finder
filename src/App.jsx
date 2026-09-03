@@ -1,4 +1,5 @@
-import { useState, useMemo, useEffect } from "react";
+import { useState, useMemo, useEffect, useCallback } from "react";
+import { Virtuoso } from "react-virtuoso";
 import { Search, X, SlidersHorizontal, Coffee, Bell, Info } from "lucide-react";
 import { MOCK_PRODUCTS } from "./data/products";
 import { SHOPS } from "./data/shops";
@@ -86,23 +87,26 @@ export default function CoffeeProductList() {
   const [searchQuery, setSearchQuery] = useState("");
   const [showOutOfStock, setShowOutOfStock] = useState(false);
 
-  const learnAboutOrigin = (country) => {
-    // ORIGIN_GUIDEに実在しない国(産地タブに詳細ページが無い)の場合、
-    // 以前はuseStateの初期値フォールバック(ORIGIN_GUIDE[0]=エチオピア)により
-    // 誤ってエチオピアのページへ遷移してしまっていた。ここで事前に実在を
-    // 確認し、無い場合はタブ遷移自体を行わずトーストで案内する。
-    const matched = ORIGIN_GUIDE.some((o) => o.country === country);
-    if (!matched) {
-      showToast("この産地の情報は準備中です");
-      return;
-    }
-    setPendingOriginCountry(country);
-    setTab("guide");
-    // タブ切り替えはページ遷移ではないため、直前のタブでのスクロール位置が
-    // そのまま引き継がれてしまう。産地タブの先頭(国名見出し)が隠れて見えなく
-    // なる不具合になっていたため、ジャンプ時は明示的に先頭へ戻す。
-    window.scrollTo({ top: 0 });
-  };
+  const learnAboutOrigin = useCallback(
+    (country) => {
+      // ORIGIN_GUIDEに実在しない国(産地タブに詳細ページが無い)の場合、
+      // 以前はuseStateの初期値フォールバック(ORIGIN_GUIDE[0]=エチオピア)により
+      // 誤ってエチオピアのページへ遷移してしまっていた。ここで事前に実在を
+      // 確認し、無い場合はタブ遷移自体を行わずトーストで案内する。
+      const matched = ORIGIN_GUIDE.some((o) => o.country === country);
+      if (!matched) {
+        showToast("この産地の情報は準備中です");
+        return;
+      }
+      setPendingOriginCountry(country);
+      setTab("guide");
+      // タブ切り替えはページ遷移ではないため、直前のタブでのスクロール位置が
+      // そのまま引き継がれてしまう。産地タブの先頭(国名見出し)が隠れて見えなく
+      // なる不具合になっていたため、ジャンプ時は明示的に先頭へ戻す。
+      window.scrollTo({ top: 0 });
+    },
+    [showToast]
+  );
 
   const viewProductsForCountry = (country) => {
     setSearchQuery("");
@@ -205,10 +209,13 @@ export default function CoffeeProductList() {
     [history, productsById]
   );
 
-  const openProductDetail = (product) => {
-    setDetailProduct(product);
-    recordView(product.id);
-  };
+  const openProductDetail = useCallback(
+    (product) => {
+      setDetailProduct(product);
+      recordView(product.id);
+    },
+    [recordView]
+  );
 
   const removeFilter = (dim, value) => {
     setFilters((prev) => {
@@ -225,8 +232,11 @@ export default function CoffeeProductList() {
     ...[...filters.roast].map((v) => ({ dim: "roast", v })),
   ];
 
-  const openMapForProduct = (product) =>
-    setMapTarget({ shopName: product.shopName, shopAddress: product.shopAddress, mapQuery: product.mapQuery });
+  const openMapForProduct = useCallback(
+    (product) =>
+      setMapTarget({ shopName: product.shopName, shopAddress: product.shopAddress, mapQuery: product.mapQuery }),
+    []
+  );
   const openMapForShop = (shop) =>
     setMapTarget({ shopName: shop.name, shopAddress: shop.address, mapQuery: shop.mapQuery });
   const openMapForLocation = (location) =>
@@ -378,25 +388,36 @@ export default function CoffeeProductList() {
       )}
 
       {tab === "products" && (
-        <main className="px-5 py-5 flex flex-col gap-3 max-w-xl mx-auto">
-          <DiscoveryFactCard />
+        <main className="px-5 py-5 max-w-xl mx-auto">
+          <div className="mb-3">
+            <DiscoveryFactCard />
+          </div>
           {filtered.length === 0 ? (
             <div className="text-center py-16 text-[#8B7361]">
               <Coffee size={28} className="mx-auto mb-3 opacity-40" />
               <p className="text-[14px]">該当する商品が見つかりませんでした</p>
             </div>
           ) : (
-            filtered.map((product) => (
-              <ProductCard
-                key={product.id}
-                product={product}
-                onOpenMap={openMapForProduct}
-                onLearnOrigin={learnAboutOrigin}
-                isFavorite={isFavorite}
-                onToggleFavorite={toggleFavorite}
-                onOpenDetail={openProductDetail}
-              />
-            ))
+            // 商品数が数千件規模になっても軽く保つため、画面内(+前後バッファ)分
+            // だけをDOMに描画する仮想スクロールを使う。ページ全体がスクロール
+            // する構成(専用のスクロールコンテナが無い)ため useWindowScroll を使う。
+            <Virtuoso
+              useWindowScroll
+              data={filtered}
+              computeItemKey={(_, product) => product.id}
+              itemContent={(_, product) => (
+                <div className="pb-3">
+                  <ProductCard
+                    product={product}
+                    onOpenMap={openMapForProduct}
+                    onLearnOrigin={learnAboutOrigin}
+                    isFavorite={isFavorite}
+                    onToggleFavorite={toggleFavorite}
+                    onOpenDetail={openProductDetail}
+                  />
+                </div>
+              )}
+            />
           )}
         </main>
       )}

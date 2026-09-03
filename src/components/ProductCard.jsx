@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { memo, useState } from "react";
 import { Sparkles, Coffee, MapPin, ExternalLink, Heart } from "lucide-react";
 import { DISCOVERY_FACTS } from "../data/discoveryFacts";
 import { PROCESSING_EXPLANATIONS, DESIGNATED_BRAND_EXPLANATIONS } from "../data/explanations";
@@ -123,7 +123,7 @@ export function HoverExplainTag({ label, category, detail }) {
   );
 }
 
-export function ProductCard({ product, onOpenMap, onLearnOrigin, isFavorite, onToggleFavorite, onOpenDetail }) {
+function ProductCardImpl({ product, onOpenMap, onLearnOrigin, isFavorite, onToggleFavorite, onOpenDetail }) {
   const processingDetail = product.processingMethod
     ? PROCESSING_EXPLANATIONS[product.processingMethod]
     : null;
@@ -321,3 +321,8 @@ export function ProductCard({ product, onOpenMap, onLearnOrigin, isFavorite, onT
     </div>
   );
 }
+
+// 仮想化リスト(Virtuoso)配下で使われるため、isFavorite/onToggleFavorite等の
+// 関数propsが呼び出し側で再生成されない限り、無関係な状態変化での再描画を
+// 避けるためmemo化している。
+export const ProductCard = memo(ProductCardImpl);
