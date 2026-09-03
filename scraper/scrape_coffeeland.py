@@ -61,13 +61,9 @@ def scrape_all_products() -> tuple[list[dict], list[dict]]:
     html = fetch_html()
     previous = load_previous_products(SHOP_INFO["name"])
 
-    matches = list(PRODUCT_ROW_PATTERN.finditer(html))
-    print(f"[debug] html_len={len(html)} matches={len(matches)} has_TABLE={'<TABLE>' in html} "
-          f"has_B_tag={'<B>' in html}")
-
     records = []
     flavored_records = []
-    for m in matches:
+    for m in PRODUCT_ROW_PATTERN.finditer(html):
         title, _desc, code, price_text = m.group(1).strip(), m.group(2), m.group(3).strip(), m.group(4)
         product_url = f"{BASE_URL}#{code}"
 

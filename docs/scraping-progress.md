@@ -19,6 +19,19 @@
 
 ---
 
+## コーヒーランド（独自HTML、2026-09-04）
+- 発見した不具合: 商品一覧を正規表現で直接パースする実装にしたところ、GitHub
+  Actionsから実行すると0件しか取得できなかった。サーバーがContent-Type
+  ヘッダーにcharsetを付けずUTF-8のHTMLを返しており(`file`コマンドで実体は
+  UTF-8と確認済み)、requestsライブラリがcharset未指定時にデフォルトの
+  ISO-8859-1で`resp.text`をデコードしてしまい、正規表現が(理論上はASCII
+  部分のタグ構造だけで完結するはずだが)実際にはマッチしなくなっていた。
+- 対処: `resp.encoding = "utf-8"`を明示的に指定してから`resp.text`を
+  読むように修正。デバッグ出力(`html_len`/`matches`件数)で修正後40件
+  正しく取得できることを確認済み。
+- 影響した既存データ: 初回実装時点でまだ収録前だったため既存データへの
+  影響は無し。charsetヘッダーが欠落した静的サイトを今後実装する際は要注意。
+
 ## Peppino Coffee Roaster・FIVE COFFEE STAND&ROASTERY（WooCommerce/BASE、2026-09-04）
 - 発見した不具合: `BeautifulSoup(text, "xml")`でsitemap.xmlを解析する実装にしたところ、
   GitHub ActionsのCI環境には`lxml`パッケージがインストールされておらず
