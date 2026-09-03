@@ -1291,5 +1291,17 @@
     "hours": null,
     "map_query": "幸音珈琲",
     "last_scraped_at": "2026-09-03T00:11:05.104789+00:00"
+  },
+  {
+    "name": "青空豆店",
+    "url": "https://aozoramame10.thebase.in/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-09確認。NAGI COFFEE・chouette等と同一の記述。/cart/・/web_cart/・/shops/・/api/shops/・違反報告ページ以外はUser-agent: *でAllow。curl/python-requests等は個別にDisallow: /指定あり、本スクレイパーは識別可能なUser-Agentを使用)",
+    "address": "東京都杉並区永福4-10-4",
+    "prefecture": "東京都",
+    "hours": null,
+    "map_query": "青空豆店",
+    "last_scraped_at": "2026-09-03T00:17:02.158833+00:00"
   }
 ]
