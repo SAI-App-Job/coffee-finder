@@ -104,6 +104,17 @@ on:
           - nijiiro
           - hiwahiwa
           - omameya
+          - blackhole
+          - bernini
+          - thewordcoffee
+          - irodori
+          - k2cafe
+          - getobashi
+          - sugiaya
+          - mamekobo
+          - aomicoffee
+          - otomeza
+          - coffeeland
 
 permissions:
   contents: write # data/*.json をコミット・pushするために必要
@@ -391,6 +402,39 @@ jobs:
           - id: omameya
             script: scrape_omameya.py
             output: data_omameya.json
+          - id: blackhole
+            script: scrape_blackhole.py
+            output: data_blackhole.json
+          - id: bernini
+            script: scrape_bernini.py
+            output: data_bernini.json
+          - id: thewordcoffee
+            script: scrape_thewordcoffee.py
+            output: data_thewordcoffee.json
+          - id: irodori
+            script: scrape_irodori.py
+            output: data_irodori.json
+          - id: k2cafe
+            script: scrape_k2cafe.py
+            output: data_k2cafe.json
+          - id: getobashi
+            script: scrape_getobashi.py
+            output: data_getobashi.json
+          - id: sugiaya
+            script: scrape_sugiaya.py
+            output: data_sugiaya.json
+          - id: mamekobo
+            script: scrape_mamekobo.py
+            output: data_mamekobo.json
+          - id: aomicoffee
+            script: scrape_aomicoffee.py
+            output: data_aomicoffee.json
+          - id: otomeza
+            script: scrape_otomeza.py
+            output: data_otomeza.json
+          - id: coffeeland
+            script: scrape_coffeeland.py
+            output: data_coffeeland.json
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4 # 差分ベーススクレイピングがdata/products.jsonを参照するため必須

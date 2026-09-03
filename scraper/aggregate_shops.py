@@ -174,6 +174,17 @@ SOURCE_FILES = {
     "にじいろコーヒー店": "data_nijiiro.json",
     "珈琲自家焙煎HiwaHiwa": "data_hiwahiwa.json",
     "御豆屋": "data_omameya.json",
+    "Blackhole Coffee Roaster": "data_blackhole.json",
+    "カフェ・ベルニーニ": "data_bernini.json",
+    "THE WORD COFFEE ROASTERS": "data_thewordcoffee.json",
+    "いろどりこーひー": "data_irodori.json",
+    "珈琲ハウスK2": "data_k2cafe.json",
+    "下頭橋焙煎所": "data_getobashi.json",
+    "杉綾珈琲豆店": "data_sugiaya.json",
+    "豆香房": "data_mamekobo.json",
+    "青海珈琲": "data_aomicoffee.json",
+    "オトメザ": "data_otomeza.json",
+    "コーヒーランド": "data_coffeeland.json",
 }
 
 
