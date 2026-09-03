@@ -127,6 +127,7 @@ SOURCE_FILES = {
     "幸音珈琲": "data_sachine.json",
     "青空豆店": "data_aozora.json",
     "びーんず亭": "data_beanstei.json",
+    "豆男珈琲": "data_mameo.json",
 }
 
 

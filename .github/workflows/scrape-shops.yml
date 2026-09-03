@@ -57,6 +57,7 @@ on:
           - sachine
           - aozora
           - beanstei
+          - mameo
 
 permissions:
   contents: write # data/*.json をコミット・pushするために必要
@@ -203,6 +204,9 @@ jobs:
           - id: beanstei
             script: scrape_beanstei.py
             output: data_beanstei.json
+          - id: mameo
+            script: scrape_mameo.py
+            output: data_mameo.json
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4 # 差分ベーススクレイピングがdata/products.jsonを参照するため必須
