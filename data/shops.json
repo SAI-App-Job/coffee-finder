@@ -1327,5 +1327,17 @@
     "hours": null,
     "map_query": "豆男珈琲",
     "last_scraped_at": "2026-09-03T00:28:47.059165+00:00"
+  },
+  {
+    "name": "たまじ珈琲",
+    "url": "https://tamajicoffee.com/",
+    "platform": "WordPress + USC-e-Shop",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-09確認。User-agent: *に対し/wp-admin/のみDisallow(admin-ajax.phpは例外的にAllow)。それ以外は制限なし)",
+    "address": "東京都杉並区成田東2-33-12",
+    "prefecture": "東京都",
+    "hours": null,
+    "map_query": "たまじ珈琲",
+    "last_scraped_at": "2026-09-03T00:34:49.056488+00:00"
   }
 ]
