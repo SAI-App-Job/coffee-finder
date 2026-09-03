@@ -2011,5 +2011,17 @@
     "hours": null,
     "map_query": "下頭橋焙煎所",
     "last_scraped_at": "2026-09-03T22:47:43.127047+00:00"
+  },
+  {
+    "name": "杉綾珈琲豆店",
+    "url": "https://sugiayacoffe.base.shop/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-09確認。他のBASE系店舗と同一の記述。curl/python-requests等は個別にDisallow: /指定あり、本スクレイパーは識別可能なUser-Agentを使用)",
+    "address": "東京都板橋区中板橋16-6",
+    "prefecture": "東京都",
+    "hours": null,
+    "map_query": "杉綾珈琲豆店",
+    "last_scraped_at": "2026-09-03T22:49:23.250111+00:00"
   }
 ]
