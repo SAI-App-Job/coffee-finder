@@ -7,6 +7,12 @@ nericafe(ネリカフェ、nericafe.com、東京都練馬区大泉学園)の商�
 同じプラットフォームだが、テーマは異なる(li.prd_lst_unit、商品説明は
 og:descriptionに【ラベル】値形式で埋め込み)。
 
+【住所について】
+nericafe.com自体は「実店舗のご案内」ページでも「練馬区大泉学園」までしか
+明記していない(番地無し)。Googleマップ(★4.6、30件の口コミ)・食べログ・
+Yahoo!マップ・Only Roaster等、複数の独立情報源で「東京都練馬区大泉学園町
+1-16-15」の一致を確認済みのため、この番地をSHOP_INFOに採用する。
+
 robots.txt確認済み(2026-09時点): User-agent: *は/secure/・/cart/のみ制限。
 AhrefsBot/DotBot等の特定クローラーのみ個別に全面Disallowだが、本スクレイパーは
 識別可能な独自User-Agentを使用するため該当しない。
@@ -82,7 +88,7 @@ SHOP_INFO = {
     "name": "nericafe",
     "url": "https://nericafe.com/",
     "platform": "カラーミーショップ(shop-pro.jp)",
-    "address": "東京都練馬区大泉学園",
+    "address": "東京都練馬区大泉学園町1-16-15",
     "prefecture": "東京都",
     "robots_txt_status": "実質許可(2026-09確認。User-agent: *は/secure/・/cart/のみ制限。"
                           "AhrefsBot等の特定クローラーは個別に全面Disallowだが、"

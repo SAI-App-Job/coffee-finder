@@ -14,6 +14,13 @@ robots.txt確認済み(2026-09時点): NAGI COFFEE・MARUTAKE COFFEE BEANS等と
 違反報告ページ以外はAllow: /)。本スクレイパーは識別可能な独自User-Agentを
 使用するため該当しない。
 
+【住所について】
+kakurenbou.jp/shop.htmlの所在地欄はHTMLコメント(<!-- -->)内に隠れているが、
+Googleマップの店舗情報(★4.4、63件の口コミ)・Yahoo!マップ・食べログ・ぐるなび
+等の複数の独立情報源で「東京都練馬区練馬4-20-3 ミヤマビル」との一致を確認済み
+(2026-09時点、豊島園駅から徒歩3分)。コメントアウトされているのは表示上の
+都合と考えられ、情報自体は現行と一致するため採用する。
+
 【対象カテゴリについて】
 sitemap.xmlで確認できる全8商品は4カテゴリに分かれる。
 「ブレンド単品（4種類）」(180154)の4件のみがコーヒー豆単品(重量固定・
@@ -59,7 +66,7 @@ SHOP_INFO = {
     "name": "隠房",
     "url": "https://kakurenbou.theshop.jp/",
     "platform": "BASE",
-    "address": "東京都練馬区練馬",
+    "address": "東京都練馬区練馬4-20-3 ミヤマビル101",
     "prefecture": "東京都",
     "robots_txt_status": "実質許可(2026-09確認。NAGI COFFEE・MARUTAKE COFFEE BEANS等と"
                           "同一の記述。/cart/・/web_cart/・/shops/・/api/shops/・違反報告"

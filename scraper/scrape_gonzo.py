@@ -93,6 +93,13 @@ ROAST_HINT_TERMS = ["中深煎り", "中浅煎り", "浅煎り", "中煎り", "�
 
 DECAF_KEYWORDS = ["カフェインレス", "デカフェ"]
 
+# 実データ確認済み: sitemap.xml全55件のうち1件(item 151166988)「権蔵水出しアイス
+# コーヒー（30g×10個）」のみ、豆をあらかじめ抽出済みの水出しパック(粉末を挽いて
+# 個包装した既製品)で、コーヒー豆単品を指さない(MARUTAKE COFFEE BEANSが
+# 「アイスコーヒー」カテゴリを対象外としたのと同じ理由)。他54件は全て
+# 生豆/焙煎豆の単品販売であることを確認済み。
+NON_BEAN_KEYWORDS = ["水出しアイスコーヒー"]
+
 
 def fetch_page(url: str) -> BeautifulSoup:
     resp = requests.get(url, headers=REQUEST_HEADERS, timeout=15)
@@ -129,6 +136,15 @@ def find_roast_hint(title: str) -> str | None:
 
 def build_record(product_url: str, product: dict) -> dict:
     title = (product.get("name") or "").strip()
+
+    if any(kw in title for kw in NON_BEAN_KEYWORDS):
+        return {
+            "shop_name": SHOP_INFO["name"],
+            "raw_name": title,
+            "non_bean": True,
+            "product_url": product_url,
+        }
+
     parsed = parse_product(title)
 
     if parsed["is_flavored"]:
