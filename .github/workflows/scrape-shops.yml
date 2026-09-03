@@ -79,6 +79,7 @@ on:
           - toriba
           - conami
           - singleo
+          - zaguri
 
 permissions:
   contents: write # data/*.json をコミット・pushするために必要
@@ -291,6 +292,9 @@ jobs:
           - id: singleo
             script: scrape_singleo.py
             output: data_singleo.json
+          - id: zaguri
+            script: scrape_zaguri.py
+            output: data_zaguri.json
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4 # 差分ベーススクレイピングがdata/products.jsonを参照するため必須

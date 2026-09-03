@@ -149,6 +149,7 @@ SOURCE_FILES = {
     "TORIBA COFFEE": "data_toriba.json",
     "こなみ珈琲": "data_conami.json",
     "Single O Japan": "data_singleo.json",
+    "ザグリ珈琲": "data_zaguri.json",
 }
 
 
