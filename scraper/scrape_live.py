@@ -8,9 +8,14 @@ scrape_live.py
 (live-coffee198.ocnk.net、さらに実体は www.livecoffee-onlineshop.com)で
 行われている「情報サイトと通販サイトが別ドメイン」パターン
 (たまじ珈琲・MARUTAKE COFFEE BEANSと同様)。米本珈琲と同じおちゃのこネットの
-クリーンURLテーマ(/product-list/N・/product/N)で、DOM構造(li.list_item_cell・
-a.item_data_link・span.goods_name・h1.detail_page_title・#pricech)も完全に
-共通のため、scrape_yonemoto.pyとほぼ同一のロジックを使う。
+クリーンURLテーマ(/product-list/N・/product/N)を使うが、テーマのバージョンが
+異なる(米本珈琲は"touch001"、ライブコーヒーは"touch035")。実データ確認済み:
+商品一覧ページのリンク要素クラスが米本珈琲の"item_data_link"ではなく
+"list_item_link"(実ワークフロー実行時、GitHub Actions環境で取得したHTMLを
+デバッグ出力して発見。ローカルでの事前curl確認時は一覧ページのクラス名を
+個別確認せず「同じOcnkクリーンURL」という見た目だけでscrape_yonemoto.pyの
+セレクタをそのまま流用してしまっていた)。詳細ページ側(h1.detail_page_title・
+#pricech・p.delivery_option)は米本珈琲と共通であることを確認済み。
 
 robots.txt確認済み(2026-09時点、www.livecoffee-onlineshop.com): 米本珈琲と
 同一の記述(GPTBot/Bytespider/TikTokSpider/meta-externalagentのみ
@@ -143,18 +148,10 @@ def parse_product_detail(url: str, fallback_title: str = "", category_hint: str 
 
 
 def scrape_category_list(cid: str) -> list[dict]:
-    url = f"{BASE_URL}/product-list/{cid}"
-    resp = requests.get(url, headers=REQUEST_HEADERS, timeout=15)
-    print(f"[debug] {url} status={resp.status_code} len={len(resp.text)} "
-          f"list_item_cell_count={resp.text.count('list_item_cell')} "
-          f"snippet={resp.text[:300]!r}")
-    soup = BeautifulSoup(resp.text, "html.parser")
-    cells = soup.select("li.list_item_cell")
-    if cells:
-        print(f"[debug] first_cell_html={str(cells[0])[:1500]!r}")
+    soup = fetch_page(f"{BASE_URL}/product-list/{cid}")
     results = []
-    for item in cells:
-        link_el = item.select_one("a.item_data_link")
+    for item in soup.select("li.list_item_cell"):
+        link_el = item.select_one("a.list_item_link")
         title_el = item.select_one("span.goods_name")
         if not link_el or not title_el:
             continue
