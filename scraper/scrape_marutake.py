@@ -94,6 +94,9 @@ REQUEST_HEADERS = {
     "User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"
 }
 
+# 理由はモジュールdocstring参照(店長おまかせのギフトセットで特定の一豆を指さない)
+NON_BEAN_KEYWORDS = ["ギフトセット"]
+
 # 理由はモジュールdocstring参照(コーヒー豆単品を指す5カテゴリの和集合)
 LIST_CATEGORIES = {
     "4335050": "スペシャルティ（シングルオリジン）",
@@ -161,8 +164,29 @@ def parse_weight(text: str | None) -> int | None:
     return int(m.group(1)) if m else None
 
 
+def parse_weight_from_title(title: str) -> int | None:
+    """商品名末尾の（100g）（200g）等の表記から重量を取得する。理由は
+    モジュールdocstring参照(説明文側の【内容量】欄は複数の重量バリエーション
+    ページ間でコピーミスがあり、200gの商品ページに「100g」のまま残っている
+    実例(「エチオピア　ゲイシャ...RED LABEL...（200g）」、価格は200g分の
+    ¥7,400なのに【内容量】は「100g」)を実データで確認済み。商品名は各
+    バリエーションごとに個別に設定されており、価格の桁とも整合するため
+    より信頼できる一次情報として優先する)。"""
+    m = WEIGHT_PATTERN.search(title or "")
+    return int(m.group(1)) if m else None
+
+
 def build_record(product_url: str, product: dict, category_hint: str) -> dict:
     title = (product.get("name") or "").strip()
+
+    if any(kw in title for kw in NON_BEAN_KEYWORDS):
+        return {
+            "shop_name": SHOP_INFO["name"],
+            "raw_name": title,
+            "non_bean": True,
+            "product_url": product_url,
+        }
+
     parsed = parse_product(title)
 
     if parsed["is_flavored"]:
@@ -258,7 +282,7 @@ def build_record(product_url: str, product: dict, category_hint: str) -> dict:
         "altitude_max_m": altitude_max,
         "blend_components": blend_components,
         "price": price,
-        "weight_g": parse_weight(fields.get("内容量")),
+        "weight_g": parse_weight_from_title(title) or parse_weight(fields.get("内容量")),
         "stock_status": stock_status,
         "out_of_stock": stock_status != "販売中",
         "product_url": product_url,
