@@ -59,6 +59,7 @@ on:
           - beanstei
           - mameo
           - tamaji
+          - itsuki
 
 permissions:
   contents: write # data/*.json をコミット・pushするために必要
@@ -211,6 +212,9 @@ jobs:
           - id: tamaji
             script: scrape_tamaji.py
             output: data_tamaji.json
+          - id: itsuki
+            script: scrape_itsuki.py
+            output: data_itsuki.json
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4 # 差分ベーススクレイピングがdata/products.jsonを参照するため必須
