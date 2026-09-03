@@ -143,7 +143,12 @@ def parse_product_detail(url: str, fallback_title: str = "", category_hint: str 
 
 
 def scrape_category_list(cid: str) -> list[dict]:
-    soup = fetch_page(f"{BASE_URL}/product-list/{cid}")
+    url = f"{BASE_URL}/product-list/{cid}"
+    resp = requests.get(url, headers=REQUEST_HEADERS, timeout=15)
+    print(f"[debug] {url} status={resp.status_code} len={len(resp.text)} "
+          f"list_item_cell_count={resp.text.count('list_item_cell')} "
+          f"snippet={resp.text[:300]!r}")
+    soup = BeautifulSoup(resp.text, "html.parser")
     results = []
     for item in soup.select("li.list_item_cell"):
         link_el = item.select_one("a.item_data_link")
