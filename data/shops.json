@@ -2023,5 +2023,17 @@
     "hours": null,
     "map_query": "杉綾珈琲豆店",
     "last_scraped_at": "2026-09-03T22:49:23.250111+00:00"
+  },
+  {
+    "name": "豆香房",
+    "url": "https://mamekobo-coffee.shop-pro.jp/",
+    "platform": "カラーミーショップ",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-09確認。/secure/・/cart/のみDisallow。AhrefsBot等一部ボットを個別にDisallow: /、それ以外は制限なし)",
+    "address": "東京都千代田区神田神保町",
+    "prefecture": "東京都",
+    "hours": null,
+    "map_query": "豆香房",
+    "last_scraped_at": "2026-09-03T22:51:36.401271+00:00"
   }
 ]
