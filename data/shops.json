@@ -1435,5 +1435,17 @@
     "hours": null,
     "map_query": "米本珈琲",
     "last_scraped_at": "2026-09-03T11:23:24.491537+00:00"
+  },
+  {
+    "name": "ライブコーヒー",
+    "url": "https://www.livecoffee-onlineshop.com/",
+    "platform": "おちゃのこネット(Ocnk)",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-09確認。米本珈琲と同一の記述。GPTBot/Bytespider/TikTokSpider/meta-externalagentのみDisallow: /。User-agent: *の明示的な制限は無く、本スクレイパーは対象外)",
+    "address": "東京都中央区築地3-5-13 北村ビル1F",
+    "prefecture": "東京都",
+    "hours": null,
+    "map_query": "ライブコーヒー",
+    "last_scraped_at": "2026-09-03T11:25:14.297312+00:00"
   }
 ]
