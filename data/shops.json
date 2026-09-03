@@ -1519,5 +1519,17 @@
     "hours": null,
     "map_query": "ビーズコーヒー",
     "last_scraped_at": "2026-09-03T14:57:23.712862+00:00"
+  },
+  {
+    "name": "HIDE COFFEE BEANS STORE",
+    "url": "https://shop.hidecoffee.com/",
+    "platform": "カラーミーショップ(shop-pro.jp)",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-09確認。/secure/・/cart/のみ制限。nericafe・麻布珈房等と同一の記述)",
+    "address": "東京都江東区東雲1-2-1",
+    "prefecture": "東京都",
+    "hours": null,
+    "map_query": "HIDE COFFEE BEANS STORE",
+    "last_scraped_at": "2026-09-03T14:59:27.518047+00:00"
   }
 ]
