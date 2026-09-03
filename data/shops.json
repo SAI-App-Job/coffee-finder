@@ -1891,5 +1891,17 @@
     "hours": null,
     "map_query": "自家焙煎メロディアスコーヒー",
     "last_scraped_at": "2026-09-03T22:22:00.976465+00:00"
+  },
+  {
+    "name": "BLACK SLOTH COFFEE",
+    "url": "https://bscnet.base.shop/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-09確認。他のBASE系店舗と同一の記述。curl/python-requests等は個別にDisallow: /指定あり、本スクレイパーは識別可能なUser-Agentを使用)",
+    "address": "東京都足立区西新井",
+    "prefecture": "東京都",
+    "hours": null,
+    "map_query": "BLACK SLOTH COFFEE",
+    "last_scraped_at": "2026-09-03T22:23:30.883981+00:00"
   }
 ]
