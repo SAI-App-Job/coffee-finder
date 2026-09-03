@@ -1975,5 +1975,17 @@
     "hours": null,
     "map_query": "THE WORD COFFEE ROASTERS",
     "last_scraped_at": "2026-09-03T22:41:30.936526+00:00"
+  },
+  {
+    "name": "いろどりこーひー",
+    "url": "https://irodori-coffee.jp/",
+    "platform": "Shopify",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-09確認。Shopify標準のrobots.txtでAllow: /、制限なし)",
+    "address": "東京都江戸川区中葛西1-38-8",
+    "prefecture": "東京都",
+    "hours": null,
+    "map_query": "いろどりこーひー",
+    "last_scraped_at": "2026-09-03T22:43:38.733339+00:00"
   }
 ]
