@@ -5,7 +5,7 @@
 `scraper/manual/shops/`配下、それ以外は`scraper/scrape_*.py`で自動取得。
 実装を見送った店舗は`docs/not-implementable-shops.md`を参照。
 
-合計90店舗・2495商品(生成日: 2026-09-03)。
+合計111店舗・3022商品(生成日: 2026-09-03)。
 
 再生成コマンド:
 ```
@@ -78,12 +78,24 @@ node scripts/gen-implemented-shops.js
 | 店舗名 | 所在地 | 方式 | 件数 |
 |---|---|---|---|
 | WOODBERRY COFFEE |  | Shopify | 33 |
+| THE WORD COFFEE ROASTERS | 葛飾区奥戸1-19-3 斉藤マンション1B | Shopify | 41 |
+| マウンテンコーヒー葛飾 | 葛飾区高砂2-4-3 | BASE | 16 |
+| にじいろコーヒー店 | 葛飾区水元 | BASE | 7 |
+| 御豆屋 | 江戸川区(小岩駅北口) | BASE | 65 |
+| コーヒーランド | 江戸川区松島2丁目 | 独自HTML | 40 |
+| いろどりこーひー | 江戸川区中葛西1-38-8 | Shopify | 32 |
+| 珈琲自家焙煎HiwaHiwa | 江戸川区中葛西2-7-2 | BASE | 6 |
+| オトメザ | 江戸川区東葛西 | Jimdo | 10 |
+| 珈琲ハウスK2 | 江戸川区平井3丁目 | Ocnk | 23 |
+| 青海珈琲 | 江東区青海(本店) | MakeShop | 48 |
 | HIDE COFFEE BEANS STORE | 江東区東雲1-2-1 | カラーミー | 15 |
 | カフェ・デザールピコ | 江東区門前仲町 | カラーミー | 27 |
 | 松屋珈琲店 | 港区虎ノ門3-8-16 | カラーミー | 26 |
 | Coffee Roast SAI | 港区高輪1-21-3 チバビル1F | Shopify | 36 |
 | Daphne | 港区芝5-10-11 | EC-CUBE | 12 |
 | 麻布珈房 | 港区麻布十番 | カラーミー | 156 |
+| Blackhole Coffee Roaster | 荒川区町屋4-31-11 | Shopify | 11 |
+| カメヤマ珈琲 | 荒川区東日暮里6-22-14 | WordPress | 34 |
 | 珈琲店トップ | 渋谷区代々木5-63-10 | カラーミー | 21 |
 | FUGLEN COFFEE ROASTERS | 渋谷区富ヶ谷1-16-11 | Shopify | 12 |
 | A FEW WORDS COFFEE | 新宿区新宿7-24-4 1F | 手動 | 8 |
@@ -96,6 +108,12 @@ node scripts/gen-implemented-shops.js
 | 珈琲家あのころ | 世田谷区若林4-20-9 岡村ビル1F | BASE(theshop) | 14 |
 | 南薫堂珈琲 | 世田谷区世田谷2-6-4　グリーンアネックス102 | BASE | 13 |
 | 豆善 | 世田谷区尾山台3-22-4マンヤスビル022号室 | Shopify | 24 |
+| 豆香房 | 千代田区神田神保町 | カラーミー | 53 |
+| ゆるり珈琲 | 足立区(五反野駅・小菅駅近く) | BASE | 22 |
+| BLACK SLOTH COFFEE | 足立区西新井 | BASE | 13 |
+| SLOW JET COFFEE | 足立区千住東1丁目 | BASE | 8 |
+| 自家焙煎メロディアスコーヒー | 足立区保木間1-1-13 足立水道会館2階 | BASE | 25 |
+| northnodecoffee | 足立区保木間3-15-14 | BASE | 18 |
 | nano-coffeeroaster | 台東区浅草橋1-17-4 | BASE | 8 |
 | Peppino Coffee Roaster | 台東区浅草橋2-24-8 | WooCommerce | 25 |
 | 焙煎処 縁の木 | 台東区蔵前 | カラーミー | 51 |
@@ -114,6 +132,9 @@ node scripts/gen-implemented-shops.js
 | TORIBA COFFEE | 中央区八重洲2-1-1 YANMAR TOKYO B1F | MakeShop | 18 |
 | ITSUKI Coffee Roastery | 中野区 | WooCommerce | 3 |
 | MARUTAKE COFFEE BEANS | 中野区野方6-18-14 | BASE | 60 |
+| カフェ・ベルニーニ | 板橋区志村3-7 | Shopify | 21 |
+| 杉綾珈琲豆店 | 板橋区中板橋16-6 | BASE | 13 |
+| 下頭橋焙煎所 | 板橋区弥生町52-1 | BASE | 21 |
 | 珈琲豆焙煎処Taguriano | 品川区荏原 | BASE | 13 |
 | コンパスコーヒー | 品川区旗の台 | Ocnk | 28 |
 | MITSUMATA COFFEE | 品川区大井4-1-2 | Shopify | 13 |
