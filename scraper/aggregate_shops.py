@@ -130,6 +130,7 @@ SOURCE_FILES = {
     "豆男珈琲": "data_mameo.json",
     "たまじ珈琲": "data_tamaji.json",
     "ITSUKI Coffee Roastery": "data_itsuki.json",
+    "MARUTAKE COFFEE BEANS": "data_marutake.json",
 }
 
 
