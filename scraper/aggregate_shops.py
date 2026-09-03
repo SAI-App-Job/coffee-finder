@@ -142,6 +142,13 @@ SOURCE_FILES = {
     "神楽坂珈琲焙煎所": "data_kagurazaka.json",
     "BEANS珈琲": "data_beanscoffee.json",
     "カフェ・デザールピコ": "data_pico.json",
+    "松屋珈琲店": "data_matsuya.json",
+    "ビーズコーヒー": "data_beescoffee.json",
+    "HIDE COFFEE BEANS STORE": "data_hidecoffee.json",
+    "Daphne": "data_daphne.json",
+    "TORIBA COFFEE": "data_toriba.json",
+    "こなみ珈琲": "data_conami.json",
+    "Single O Japan": "data_singleo.json",
 }
 
 

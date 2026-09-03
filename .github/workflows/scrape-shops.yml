@@ -72,6 +72,13 @@ on:
           - kagurazaka
           - beanscoffee
           - pico
+          - matsuya
+          - beescoffee
+          - hidecoffee
+          - daphne
+          - toriba
+          - conami
+          - singleo
 
 permissions:
   contents: write # data/*.json をコミット・pushするために必要
@@ -263,6 +270,27 @@ jobs:
           - id: pico
             script: scrape_pico.py
             output: data_pico.json
+          - id: matsuya
+            script: scrape_matsuya.py
+            output: data_matsuya.json
+          - id: beescoffee
+            script: scrape_beescoffee.py
+            output: data_beescoffee.json
+          - id: hidecoffee
+            script: scrape_hidecoffee.py
+            output: data_hidecoffee.json
+          - id: daphne
+            script: scrape_daphne.py
+            output: data_daphne.json
+          - id: toriba
+            script: scrape_toriba.py
+            output: data_toriba.json
+          - id: conami
+            script: scrape_conami.py
+            output: data_conami.json
+          - id: singleo
+            script: scrape_singleo.py
+            output: data_singleo.json
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4 # 差分ベーススクレイピングがdata/products.jsonを参照するため必須
