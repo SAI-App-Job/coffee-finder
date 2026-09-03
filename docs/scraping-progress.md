@@ -19,6 +19,33 @@
 
 ---
 
+## Peppino Coffee Roaster・FIVE COFFEE STAND&ROASTERY（WooCommerce/BASE、2026-09-04）
+- 発見した不具合: `BeautifulSoup(text, "xml")`でsitemap.xmlを解析する実装にしたところ、
+  GitHub ActionsのCI環境には`lxml`パッケージがインストールされておらず
+  `bs4.exceptions.FeatureNotFound`で例外終了した(ローカルの動作確認では発生しない、
+  CI環境固有の依存関係不足)。
+- 対処: プロジェクトの他の全スクレイパーと同じく`"html.parser"`(標準ライブラリのみで
+  動作)に統一した。XML文書をhtml.parserで解析すると警告が出るが動作に支障はない。
+- 影響した既存データ: 初回実装時点でまだ収録前だったため既存データへの影響は無し。
+
+## FIVE COFFEE STAND&ROASTERY・入谷珈琲豆店（BASE、2026-09-04）
+- 発見した不具合: 両店とも商品詳細ページの`window.dataLayer.push({...})`という
+  Googleタグマネージャー向けJSオブジェクトから`item_name`/`itemPrice`を正規表現で
+  抽出する実装で作ったところ、実際にGitHub Actionsから実行すると0件しか取得できな
+  かった。デバッグ出力で調査したところ、GitHub Actions環境からのリクエストに対して
+  返るHTMLには`dataLayer`のスクリプト自体が含まれていなかった(手元の開発環境からの
+  リクエストでは含まれていた)。ボット検知等によりGTM/アナリティクス関連スクリプトが
+  条件付きで除去されている可能性が高い。
+- 対処: 常に静的に出力されるSNSシェア用OGP(Open Graph)メタタグ
+  (`meta[property="og:title"]`・`meta[property="product:price:amount"]`)から
+  商品名・価格を取得する方式に変更した。OGPはFacebook/Twitter等の外部クローラーが
+  読める必要があるため、ボット向けに除去されにくいと考えられる。同じくBASEの
+  `application/ld+json`のProduct構造化データを使う他の実装(BEANS珈琲・ROOT COFFEE等)
+  は今回のCI実行で問題無く動作しており、影響はGTMのdataLayerに全面的に依存していた
+  この2店舗のテーマ限定と見られる。
+- 影響した既存データ: 初回実装時点でまだ収録前だったため既存データへの影響は無し。
+  同様のdataLayer依存のテーマを使うBASE店舗を今後実装する際は要注意。
+
 ## HIMONYA FIVE COFFEE（BASE、2026-09-03）
 - 発見した不具合: (1)商品名末尾に「(生豆Ng)」という生豆(焙煎前)重量の表記が
   付いているが、この店は注文後焙煎モデルで、実際の販売重量は焙煎後の目減りした
