@@ -1411,5 +1411,17 @@
     "hours": null,
     "map_query": "麻布珈房",
     "last_scraped_at": "2026-09-03T11:14:52.713644+00:00"
+  },
+  {
+    "name": "Coffee Roast SAI",
+    "url": "https://coffeeroastsai.com/",
+    "platform": "Shopify",
+    "shop_type": "single_location",
+    "robots_txt_status": "許可(2026-09確認。Shopify標準robots.txtで\"Public product, collection, page, blog, policy, cart, and localized HTML is crawlable\"と明記。checkout/paymentの自動化のみ禁止、本スクレイパーは対象外)",
+    "address": "東京都港区高輪1-21-3 チバビル1F",
+    "prefecture": "東京都",
+    "hours": null,
+    "map_query": "Coffee Roast SAI",
+    "last_scraped_at": "2026-09-03T11:21:02.418434+00:00"
   }
 ]
