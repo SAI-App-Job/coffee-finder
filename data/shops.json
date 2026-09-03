@@ -1619,5 +1619,17 @@
     "data_source": "manual",
     "source_note": "1978年創業の自家焙煎ネルドリップ珈琲店。公式サイト・オンラインショップは無く、Google検索のAI要約でも「公式のオンラインショップや通販を行っていません」「店舗に直接足を運んで店頭で購入する必要があります」と明記されている店頭販売専門店(2026-09確認)。商品情報はマスター運営のブログ(cafebechet.blog.fc2.com/blog-category-9.html「珈琲豆一覧」)に掲載された価格表(本文中に「2024年4月1日改訂版」と明記)をブラウザで直接確認して入力。ブログのサイドバー最新記事一覧(2025年4〜7月分の期間限定豆)が本文の「期間限定コーヒー」欄と一致していることを確認済みで、比較的最新の情報と判断した。焙煎度表記(フルシティロースト等)は同店独自の8段階表記そのままで、ROAST_LEVELSと一致する。",
     "last_verified_at": "2026-09-04"
+  },
+  {
+    "name": "焙煎処 縁の木",
+    "url": "https://ennoki.shop-pro.jp/",
+    "platform": "カラーミーショップ",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-09確認。/secure/・/cart/のみDisallow。AhrefsBot等一部ボットを個別にDisallow: /、それ以外は制限なし)",
+    "address": "東京都台東区蔵前",
+    "prefecture": "東京都",
+    "hours": null,
+    "map_query": "焙煎処 縁の木",
+    "last_scraped_at": "2026-09-03T17:03:18.002595+00:00"
   }
 ]
