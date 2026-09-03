@@ -51,6 +51,9 @@ PRODUCT_ROW_PATTERN = re.compile(
 def fetch_html() -> str:
     resp = requests.get(BASE_URL, headers=REQUEST_HEADERS, timeout=15)
     resp.raise_for_status()
+    # サーバーがContent-TypeヘッダーにcharsetをつけずUTF-8で返すため、
+    # requestsのデフォルト推定(ISO-8859-1)に任せず明示的に指定する。
+    resp.encoding = "utf-8"
     return resp.text
 
 
@@ -58,9 +61,13 @@ def scrape_all_products() -> tuple[list[dict], list[dict]]:
     html = fetch_html()
     previous = load_previous_products(SHOP_INFO["name"])
 
+    matches = list(PRODUCT_ROW_PATTERN.finditer(html))
+    print(f"[debug] html_len={len(html)} matches={len(matches)} has_TABLE={'<TABLE>' in html} "
+          f"has_B_tag={'<B>' in html}")
+
     records = []
     flavored_records = []
-    for m in PRODUCT_ROW_PATTERN.finditer(html):
+    for m in matches:
         title, _desc, code, price_text = m.group(1).strip(), m.group(2), m.group(3).strip(), m.group(4)
         product_url = f"{BASE_URL}#{code}"
 
