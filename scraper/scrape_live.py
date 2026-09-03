@@ -149,8 +149,11 @@ def scrape_category_list(cid: str) -> list[dict]:
           f"list_item_cell_count={resp.text.count('list_item_cell')} "
           f"snippet={resp.text[:300]!r}")
     soup = BeautifulSoup(resp.text, "html.parser")
+    cells = soup.select("li.list_item_cell")
+    if cells:
+        print(f"[debug] first_cell_html={str(cells[0])[:1500]!r}")
     results = []
-    for item in soup.select("li.list_item_cell"):
+    for item in cells:
         link_el = item.select_one("a.item_data_link")
         title_el = item.select_one("span.goods_name")
         if not link_el or not title_el:
