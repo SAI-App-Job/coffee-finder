@@ -134,6 +134,14 @@ SOURCE_FILES = {
     "nericafe": "data_nericafe.json",
     "隠房": "data_kakurenbou.json",
     "GONZO CAFE&BEANS": "data_gonzo.json",
+    "麻布珈房": "data_azabukobo.json",
+    "Coffee Roast SAI": "data_sai.json",
+    "米本珈琲": "data_yonemoto.json",
+    "ライブコーヒー": "data_live.json",
+    "自家焙煎珈琲みじんこ": "data_mijinco.json",
+    "神楽坂珈琲焙煎所": "data_kagurazaka.json",
+    "BEANS珈琲": "data_beanscoffee.json",
+    "カフェ・デザールピコ": "data_pico.json",
 }
 
 

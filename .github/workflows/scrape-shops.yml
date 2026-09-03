@@ -64,6 +64,14 @@ on:
           - nericafe
           - kakurenbou
           - gonzo
+          - azabukobo
+          - sai
+          - yonemoto
+          - live
+          - mijinco
+          - kagurazaka
+          - beanscoffee
+          - pico
 
 permissions:
   contents: write # data/*.json をコミット・pushするために必要
@@ -231,6 +239,30 @@ jobs:
           - id: gonzo
             script: scrape_gonzo.py
             output: data_gonzo.json
+          - id: azabukobo
+            script: scrape_azabukobo.py
+            output: data_azabukobo.json
+          - id: sai
+            script: scrape_sai.py
+            output: data_sai.json
+          - id: yonemoto
+            script: scrape_yonemoto.py
+            output: data_yonemoto.json
+          - id: live
+            script: scrape_live.py
+            output: data_live.json
+          - id: mijinco
+            script: scrape_mijinco.py
+            output: data_mijinco.json
+          - id: kagurazaka
+            script: scrape_kagurazaka.py
+            output: data_kagurazaka.json
+          - id: beanscoffee
+            script: scrape_beanscoffee.py
+            output: data_beanscoffee.json
+          - id: pico
+            script: scrape_pico.py
+            output: data_pico.json
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4 # 差分ベーススクレイピングがdata/products.jsonを参照するため必須
