@@ -54,6 +54,7 @@ on:
           - anokoro
           - facon
           - himonya
+          - sachine
 
 permissions:
   contents: write # data/*.json をコミット・pushするために必要
@@ -191,6 +192,9 @@ jobs:
           - id: himonya
             script: scrape_himonya.py
             output: data_himonya.json
+          - id: sachine
+            script: scrape_sachine.py
+            output: data_sachine.json
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4 # 差分ベーススクレイピングがdata/products.jsonを参照するため必須
