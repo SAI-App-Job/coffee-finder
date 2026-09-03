@@ -126,6 +126,12 @@ def build_record(product_url: str, title: str, description: str, html: str,
             "product_url": product_url,
         }
 
+    # 理由はモジュールdocstring参照。「アポロン（ビター）」等ブレンド
+    # コーヒーカテゴリの商品名に「ブレンド」の語が含まれず、parse_product()
+    # の商品名解析だけではブレンド判定できないことを実データ確認済み。
+    # カテゴリが判明している場合はそちらを優先する。
+    if category_hint == "ブレンドコーヒー":
+        parsed["category"] = "ブレンド"
     parsed = apply_category_hint_fallback(parsed, category_hint)
     stock_status = detect_stock_status(title, not in_stock)
 
