@@ -115,6 +115,7 @@ on:
           - aomicoffee
           - otomeza
           - coffeeland
+          - yururi
 
 permissions:
   contents: write # data/*.json をコミット・pushするために必要
@@ -435,6 +436,9 @@ jobs:
           - id: coffeeland
             script: scrape_coffeeland.py
             output: data_coffeeland.json
+          - id: yururi
+            script: scrape_yururi.py
+            output: data_yururi.json
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4 # 差分ベーススクレイピングがdata/products.jsonを参照するため必須
