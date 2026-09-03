@@ -164,6 +164,16 @@ SOURCE_FILES = {
     "MITSUMATA COFFEE": "data_mitsumata.json",
     "コンパスコーヒー": "data_compass.json",
     "下町コーヒー": "data_shitamachi.json",
+    "カメヤマ珈琲": "data_ginmame.json",
+    "豆虎": "data_mametora.json",
+    "northnodecoffee": "data_northnode.json",
+    "SLOW JET COFFEE": "data_slowjet.json",
+    "自家焙煎メロディアスコーヒー": "data_melodious.json",
+    "BLACK SLOTH COFFEE": "data_blacksloth.json",
+    "マウンテンコーヒー葛飾": "data_mountaincoffee.json",
+    "にじいろコーヒー店": "data_nijiiro.json",
+    "珈琲自家焙煎HiwaHiwa": "data_hiwahiwa.json",
+    "御豆屋": "data_omameya.json",
 }
 
 

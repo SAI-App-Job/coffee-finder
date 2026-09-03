@@ -94,6 +94,16 @@ on:
           - mitsumata
           - compass
           - shitamachi
+          - ginmame
+          - mametora
+          - northnode
+          - slowjet
+          - melodious
+          - blacksloth
+          - mountaincoffee
+          - nijiiro
+          - hiwahiwa
+          - omameya
 
 permissions:
   contents: write # data/*.json をコミット・pushするために必要
@@ -351,6 +361,36 @@ jobs:
           - id: shitamachi
             script: scrape_shitamachi.py
             output: data_shitamachi.json
+          - id: ginmame
+            script: scrape_ginmame.py
+            output: data_ginmame.json
+          - id: mametora
+            script: scrape_mametora.py
+            output: data_mametora.json
+          - id: northnode
+            script: scrape_northnode.py
+            output: data_northnode.json
+          - id: slowjet
+            script: scrape_slowjet.py
+            output: data_slowjet.json
+          - id: melodious
+            script: scrape_melodious.py
+            output: data_melodious.json
+          - id: blacksloth
+            script: scrape_blacksloth.py
+            output: data_blacksloth.json
+          - id: mountaincoffee
+            script: scrape_mountaincoffee.py
+            output: data_mountaincoffee.json
+          - id: nijiiro
+            script: scrape_nijiiro.py
+            output: data_nijiiro.json
+          - id: hiwahiwa
+            script: scrape_hiwahiwa.py
+            output: data_hiwahiwa.json
+          - id: omameya
+            script: scrape_omameya.py
+            output: data_omameya.json
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4 # 差分ベーススクレイピングがdata/products.jsonを参照するため必須
