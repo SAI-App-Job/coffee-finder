@@ -1459,5 +1459,17 @@
     "hours": null,
     "map_query": "自家焙煎珈琲みじんこ",
     "last_scraped_at": "2026-09-03T11:38:17.337460+00:00"
+  },
+  {
+    "name": "神楽坂珈琲焙煎所",
+    "url": "https://www.kagurazakacoffee.com/",
+    "platform": "MakeShop",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-09確認。robots.txt自体が存在せず404。CAFE FACON・Mui等のShopServeと同種の「robots.txtが無い=実質全面許可」状態)",
+    "address": "東京都文京区関口1-3-5 ロジビル1F",
+    "prefecture": "東京都",
+    "hours": null,
+    "map_query": "神楽坂珈琲焙煎所",
+    "last_scraped_at": "2026-09-03T11:40:51.988940+00:00"
   }
 ]
