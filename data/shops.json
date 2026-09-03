@@ -1751,5 +1751,17 @@
     "hours": null,
     "map_query": "NORTH STAR BEANS",
     "last_scraped_at": "2026-09-03T17:41:07.356352+00:00"
+  },
+  {
+    "name": "MITSUMATA COFFEE",
+    "url": "https://shop.mitsumatacoffee.com/",
+    "platform": "Shopify",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-09確認。Shopify標準のrobots.txtでAllow: /、制限なし)",
+    "address": "東京都品川区大井4-1-2",
+    "prefecture": "東京都",
+    "hours": null,
+    "map_query": "MITSUMATA COFFEE",
+    "last_scraped_at": "2026-09-03T17:42:37.112609+00:00"
   }
 ]
