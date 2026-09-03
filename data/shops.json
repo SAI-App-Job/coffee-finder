@@ -2071,5 +2071,17 @@
     "hours": null,
     "map_query": "コーヒーランド",
     "last_scraped_at": "2026-09-03T22:57:33.074723+00:00"
+  },
+  {
+    "name": "Blackhole Coffee Roaster",
+    "url": "https://blackholecoffee.jp/",
+    "platform": "Shopify",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-09確認。Shopify標準のrobots.txtでAllow: /、制限なし)",
+    "address": "東京都荒川区町屋4-31-11",
+    "prefecture": "東京都",
+    "hours": null,
+    "map_query": "Blackhole Coffee Roaster",
+    "last_scraped_at": "2026-09-03T23:00:06.269513+00:00"
   }
 ]
