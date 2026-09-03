@@ -1579,5 +1579,45 @@
     "hours": null,
     "map_query": "Single O Japan",
     "last_scraped_at": "2026-09-03T15:11:59.968342+00:00"
+  },
+  {
+    "name": "ザグリ珈琲",
+    "url": "https://zaguricoffee.com/",
+    "platform": "Shopify",
+    "shop_type": "single_location",
+    "robots_txt_status": "許可(2026-09確認。Shopify標準robots.txtで\"Public product, collection, page, blog, policy, cart, and localized HTML is crawlable\"と明記。checkout/paymentの自動化のみ禁止、本スクレイパーは対象外)",
+    "address": "東京都杉並区阿佐谷北1-43-6",
+    "prefecture": "東京都",
+    "hours": null,
+    "map_query": "ザグリ珈琲",
+    "last_scraped_at": "2026-09-03T15:42:39.870994+00:00"
+  },
+  {
+    "name": "A FEW WORDS COFFEE",
+    "url": "https://www.afewwordscoffee.com/",
+    "instagram_url": "https://www.instagram.com/afewwordscoffee/",
+    "platform": "公式サイトあり(afewwordscoffee.com、WordPress情報サイト)だが通販機能なし。オンラインショップ(afwc.base.shop)は定期便・複数豆アソートのみで単品豆のSKUが存在しない",
+    "shop_type": "single_location",
+    "address": "東京都新宿区新宿7-24-4 1F",
+    "prefecture": "東京都",
+    "hours": null,
+    "map_query": "A FEW WORDS COFFEE 東京都新宿区新宿7-24-4",
+    "data_source": "manual",
+    "source_note": "2019年10月開業の自家焙煎コーヒー専門店(東新宿)。公式オンラインショップ(BASE)は21商品全てが定期便または「セレクト2〜3種」等の複数豆アソートで、特定の一豆を指す単品SKUが存在しないことを確認済み(2026-09-03)。一方、店頭では「常時10種類程度の豆を取り揃え」ており(2022年ブログ記事)、Instagram(@afewwordscoffee)の投稿に【原産国】ラベル付きで単品豆の商品名・100g/200g価格が繰り返し掲載されているのを確認した(投稿本文はGoogle検索結果のスニペット経由で閲覧、Instagram本体は未ログインだと投稿一覧が見られないためこの方法で確認)。ただし完全な現行ラインナップ(店側は「メニュー詳細はストーリーズのハイライトで」と案内しており、それ自体はログインしないと閲覧できない)ではなく、検索で見つかった範囲の一部のみを収録している。価格は投稿時点のものであり、値上げ等で変動している可能性がある。",
+    "last_verified_at": "2026-09-04"
+  },
+  {
+    "name": "十一房珈琲店",
+    "url": null,
+    "instagram_url": "https://www.instagram.com/juichibo_coffee/",
+    "platform": "公式サイトなし。マスター運営のFC2ブログ(cafebechet.blog.fc2.com)のみ",
+    "shop_type": "single_location",
+    "address": "東京都中央区銀座2-2-19 藤間ビル1F",
+    "prefecture": "東京都",
+    "hours": "平日10:30〜22:30、土日祝12:00〜21:30(中央区観光協会掲載情報。Googleマップでは営業開始11:00と表示されており、時間帯の情報源により差異がある)",
+    "map_query": "十一房珈琲店 東京都中央区銀座2-2-19",
+    "data_source": "manual",
+    "source_note": "1978年創業の自家焙煎ネルドリップ珈琲店。公式サイト・オンラインショップは無く、Google検索のAI要約でも「公式のオンラインショップや通販を行っていません」「店舗に直接足を運んで店頭で購入する必要があります」と明記されている店頭販売専門店(2026-09確認)。商品情報はマスター運営のブログ(cafebechet.blog.fc2.com/blog-category-9.html「珈琲豆一覧」)に掲載された価格表(本文中に「2024年4月1日改訂版」と明記)をブラウザで直接確認して入力。ブログのサイドバー最新記事一覧(2025年4〜7月分の期間限定豆)が本文の「期間限定コーヒー」欄と一致していることを確認済みで、比較的最新の情報と判断した。焙煎度表記(フルシティロースト等)は同店独自の8段階表記そのままで、ROAST_LEVELSと一致する。",
+    "last_verified_at": "2026-09-04"
   }
 ]
