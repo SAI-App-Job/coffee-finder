@@ -1315,5 +1315,17 @@
     "hours": null,
     "map_query": "びーんず亭",
     "last_scraped_at": "2026-09-03T00:25:34.151237+00:00"
+  },
+  {
+    "name": "豆男珈琲",
+    "url": "https://mameocoffee.base.shop/",
+    "platform": "THE SHOP(BASE系)",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-09確認。NAGI COFFEE等と同一の記述。/cart/・/web_cart/・/shops/・/api/shops/・違反報告ページ以外はUser-agent: *でAllow。curl/python-requests等は個別にDisallow: /指定あり、本スクレイパーは識別可能なUser-Agentを使用)",
+    "address": null,
+    "prefecture": null,
+    "hours": null,
+    "map_query": "豆男珈琲",
+    "last_scraped_at": "2026-09-03T00:28:47.059165+00:00"
   }
 ]
