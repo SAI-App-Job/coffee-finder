@@ -119,7 +119,12 @@ def build_record(product_url: str, title: str, price: int | None) -> dict:
 
 def parse_product_detail(url: str, fallback_title: str = "") -> dict:
     soup = fetch_page(url)
-    title_el = soup.select_one("p.itemName, h1")
+    # 理由: p.itemNameは詳細ページでは「関連商品」ウィジェットのJSテンプレート
+    # 文字列内にしか存在せず(実データ確認済み、サーバー側HTMLには実要素として
+    # 存在しない)、素朴なh1セレクタはページ最初のh1(サイトロゴ、id="hdrLogo")
+    # に先にマッチしてしまう不具合があったため、商品名専用のid(detailItemName)
+    # で明示的に取得する。
+    title_el = soup.select_one("#detailItemName")
     title = title_el.get_text(strip=True) if title_el else fallback_title
 
     if any(kw in title for kw in NON_BEAN_KEYWORDS):
