@@ -32,6 +32,7 @@ weight_gは100固定とする。
 """
 
 import re
+import time
 
 import requests
 from bs4 import BeautifulSoup
@@ -56,11 +57,25 @@ REQUEST_HEADERS = {
 
 PRICE_PATTERN = re.compile(r"([\d,]+)")
 
+MAX_RETRIES = 3
+RETRY_BACKOFF_SECONDS = 5
+
 
 def fetch_page(url: str) -> BeautifulSoup:
-    resp = requests.get(url, headers=REQUEST_HEADERS, timeout=15)
-    resp.raise_for_status()
-    return BeautifulSoup(resp.text, "html.parser")
+    # GitHub Actions実行時に約1割の頻度でConnectTimeoutが発生する
+    # (2026-09確認、ローカルからは毎回200 OK)。恒久的なブロックではなく
+    # 一時的な接続不調と判断し、timeout延長+指数バックオフで吸収する。
+    last_error = None
+    for attempt in range(MAX_RETRIES):
+        try:
+            resp = requests.get(url, headers=REQUEST_HEADERS, timeout=30)
+            resp.raise_for_status()
+            return BeautifulSoup(resp.text, "html.parser")
+        except (requests.exceptions.ConnectionError, requests.exceptions.Timeout) as e:
+            last_error = e
+            if attempt < MAX_RETRIES - 1:
+                time.sleep(RETRY_BACKOFF_SECONDS * (2 ** attempt))
+    raise last_error
 
 
 def build_record(article, product_url: str) -> dict | None:
