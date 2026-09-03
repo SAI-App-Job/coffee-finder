@@ -2059,5 +2059,17 @@
     "hours": null,
     "map_query": "オトメザ",
     "last_scraped_at": "2026-09-03T22:55:59.101354+00:00"
+  },
+  {
+    "name": "コーヒーランド",
+    "url": "https://coffee-land.sakura.ne.jp/",
+    "platform": "独自HTML(さくらインターネット)",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-09確認。robots.txt自体が存在せず、実質制限なし)",
+    "address": "東京都江戸川区松島2丁目",
+    "prefecture": "東京都",
+    "hours": null,
+    "map_query": "コーヒーランド",
+    "last_scraped_at": "2026-09-03T22:57:33.074723+00:00"
   }
 ]
