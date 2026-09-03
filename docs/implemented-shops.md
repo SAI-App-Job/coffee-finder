@@ -5,7 +5,7 @@
 `scraper/manual/shops/`配下、それ以外は`scraper/scrape_*.py`で自動取得。
 実装を見送った店舗は`docs/not-implementable-shops.md`を参照。
 
-合計72店舗・2010商品(生成日: 2026-09-03)。
+合計90店舗・2495商品(生成日: 2026-09-03)。
 
 再生成コマンド:
 ```
@@ -96,6 +96,17 @@ node scripts/gen-implemented-shops.js
 | 珈琲家あのころ | 世田谷区若林4-20-9 岡村ビル1F | BASE(theshop) | 14 |
 | 南薫堂珈琲 | 世田谷区世田谷2-6-4　グリーンアネックス102 | BASE | 13 |
 | 豆善 | 世田谷区尾山台3-22-4マンヤスビル022号室 | Shopify | 24 |
+| nano-coffeeroaster | 台東区浅草橋1-17-4 | BASE | 8 |
+| Peppino Coffee Roaster | 台東区浅草橋2-24-8 | WooCommerce | 25 |
+| 焙煎処 縁の木 | 台東区蔵前 | カラーミー | 51 |
+| ベースキャンプ | 台東区台東3-2-11 | 手動 | 28 |
+| FIVE COFFEE STAND&ROASTERY | 台東区谷中1-3-6 | BASE | 14 |
+| 入谷珈琲豆店 | 台東区入谷1-19-6 | BASE | 27 |
+| きまめ屋 | 大田区西蒲田 | 手動 | 28 |
+| 加とう珈琲焙煎所 | 大田区大森北5-10-3 | BASE | 13 |
+| ROOT COFFEE | 大田区池上 | BASE | 24 |
+| 下町コーヒー | 大田区南六郷 | 独自EC(xaas3.jp) | 6 |
+| WORLD BEANS | 大田区矢口2-11-28 | 手動 | 17 |
 | 十一房珈琲店 | 中央区銀座2-2-19 藤間ビル1F | 手動 | 25 |
 | 米本珈琲 | 中央区築地 | Ocnk | 18 |
 | ライブコーヒー | 中央区築地3-5-13 北村ビル1F | Ocnk | 38 |
@@ -103,9 +114,16 @@ node scripts/gen-implemented-shops.js
 | TORIBA COFFEE | 中央区八重洲2-1-1 YANMAR TOKYO B1F | MakeShop | 18 |
 | ITSUKI Coffee Roastery | 中野区 | WooCommerce | 3 |
 | MARUTAKE COFFEE BEANS | 中野区野方6-18-14 | BASE | 60 |
+| 珈琲豆焙煎処Taguriano | 品川区荏原 | BASE | 13 |
+| コンパスコーヒー | 品川区旗の台 | Ocnk | 28 |
+| MITSUMATA COFFEE | 品川区大井4-1-2 | Shopify | 13 |
+| NORTH STAR BEANS | 品川区北品川1-3-18 | Shopify | 46 |
 | 神楽坂珈琲焙煎所 | 文京区関口1-3-5 ロジビル1F | MakeShop | 40 |
 | ビーズコーヒー | 文京区千石1-29-15 LAアパートメント文京千石1F | カラーミー | 14 |
 | 自家焙煎珈琲みじんこ | 文京区湯島2-9-10 湯島三組ビル1F | カラーミー | 3 |
+| Toden Coffee | 豊島区雑司が谷 | BASE | 128 |
+| 焙煎カフェ やきやき | 北区赤羽北2-31-16 | BASE | 10 |
+| 村上コーヒー | 北区中里1-5-11 | 手動(SNSのみ) | 6 |
 | BEANS珈琲 | 墨田区 | BASE | 21 |
 | Single O Japan | 墨田区亀沢3-21-5 | Shopify | 17 |
 | CAFE FACON | 目黒区上目黒3-8-3 千陽中目黒ビル・アネックス3F | ShopServe | 26 |
