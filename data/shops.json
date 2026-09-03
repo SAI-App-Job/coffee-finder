@@ -1567,5 +1567,17 @@
     "hours": null,
     "map_query": "こなみ珈琲",
     "last_scraped_at": "2026-09-03T15:10:26.092776+00:00"
+  },
+  {
+    "name": "Single O Japan",
+    "url": "https://singleo.jp/",
+    "platform": "Shopify",
+    "shop_type": "single_location",
+    "robots_txt_status": "許可(2026-09確認。Shopify標準robots.txtで\"Public product, collection, page, blog, policy, cart, and localized HTML is crawlable\"と明記。checkout/paymentの自動化のみ禁止、本スクレイパーは対象外)",
+    "address": "東京都墨田区亀沢3-21-5",
+    "prefecture": "東京都",
+    "hours": null,
+    "map_query": "Single O Japan",
+    "last_scraped_at": "2026-09-03T15:11:59.968342+00:00"
   }
 ]
