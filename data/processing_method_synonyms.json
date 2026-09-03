@@ -17,11 +17,11 @@
   },
   "ウォッシュド": {
     "en": "Washed",
-    "synonyms": ["ウォッシュド", "ウォッシュト", "ウオッシュド", "ウォッシュ", "washed", "fully washed"]
+    "synonyms": ["ウォッシュド", "ウォッシュト", "ウオッシュド", "ウォッシュ", "水洗式", "washed", "fully washed"]
   },
   "ナチュラル": {
     "en": "Natural",
-    "synonyms": ["ナチュラル", "natural", "dry process", "dry-process"]
+    "synonyms": ["ナチュラル", "natural", "dry process", "dry-process", "自然乾燥式"]
   },
   "マウンテンウォータープロセス(デカフェ用)": {
     "en": "Mountain Water Process",

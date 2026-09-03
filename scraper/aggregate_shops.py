@@ -131,6 +131,9 @@ SOURCE_FILES = {
     "たまじ珈琲": "data_tamaji.json",
     "ITSUKI Coffee Roastery": "data_itsuki.json",
     "MARUTAKE COFFEE BEANS": "data_marutake.json",
+    "nericafe": "data_nericafe.json",
+    "隠房": "data_kakurenbou.json",
+    "GONZO CAFE&BEANS": "data_gonzo.json",
 }
 
 

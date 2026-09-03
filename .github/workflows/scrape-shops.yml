@@ -61,6 +61,9 @@ on:
           - tamaji
           - itsuki
           - marutake
+          - nericafe
+          - kakurenbou
+          - gonzo
 
 permissions:
   contents: write # data/*.json をコミット・pushするために必要
@@ -219,6 +222,15 @@ jobs:
           - id: marutake
             script: scrape_marutake.py
             output: data_marutake.json
+          - id: nericafe
+            script: scrape_nericafe.py
+            output: data_nericafe.json
+          - id: kakurenbou
+            script: scrape_kakurenbou.py
+            output: data_kakurenbou.json
+          - id: gonzo
+            script: scrape_gonzo.py
+            output: data_gonzo.json
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4 # 差分ベーススクレイピングがdata/products.jsonを参照するため必須
