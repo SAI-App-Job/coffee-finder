@@ -1382,11 +1382,11 @@
     "platform": "BASE",
     "shop_type": "single_location",
     "robots_txt_status": "実質許可(2026-09確認。NAGI COFFEE・MARUTAKE COFFEE BEANS等と同一の記述。/cart/・/web_cart/・/shops/・/api/shops/・違反報告ページ以外はUser-agent: *でAllow。curl/python-requests等は個別にDisallow: /指定あり、本スクレイパーは識別可能なUser-Agentを使用)",
-    "address": "東京都練馬区練馬",
+    "address": "東京都練馬区練馬4-20-3 ミヤマビル101",
     "prefecture": "東京都",
     "hours": null,
     "map_query": "隠房",
-    "last_scraped_at": "2026-09-03T05:45:24.557691+00:00"
+    "last_scraped_at": "2026-09-03T06:06:10.576000+00:00"
   },
   {
     "name": "GONZO CAFE&BEANS",
