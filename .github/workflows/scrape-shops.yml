@@ -56,6 +56,7 @@ on:
           - himonya
           - sachine
           - aozora
+          - beanstei
 
 permissions:
   contents: write # data/*.json をコミット・pushするために必要
@@ -199,6 +200,9 @@ jobs:
           - id: aozora
             script: scrape_aozora.py
             output: data_aozora.json
+          - id: beanstei
+            script: scrape_beanstei.py
+            output: data_beanstei.json
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4 # 差分ベーススクレイピングがdata/products.jsonを参照するため必須

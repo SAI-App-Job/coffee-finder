@@ -126,6 +126,7 @@ SOURCE_FILES = {
     "HIMONYA FIVE COFFEE": "data_himonya.json",
     "幸音珈琲": "data_sachine.json",
     "青空豆店": "data_aozora.json",
+    "びーんず亭": "data_beanstei.json",
 }
 
 
