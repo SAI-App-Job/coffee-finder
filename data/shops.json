@@ -1951,5 +1951,17 @@
     "hours": null,
     "map_query": "御豆屋",
     "last_scraped_at": "2026-09-03T22:33:47.351553+00:00"
+  },
+  {
+    "name": "カフェ・ベルニーニ",
+    "url": "https://caffebernini.com/",
+    "platform": "Shopify",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-09確認。Shopify標準のrobots.txtでAllow: /、制限なし)",
+    "address": "東京都板橋区志村3-7",
+    "prefecture": "東京都",
+    "hours": null,
+    "map_query": "カフェ・ベルニーニ",
+    "last_scraped_at": "2026-09-03T22:39:28.663008+00:00"
   }
 ]
