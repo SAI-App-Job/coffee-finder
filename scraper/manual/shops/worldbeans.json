@@ -28,7 +28,7 @@
       "price": 1400,
       "weightG": 200,
       "stockStatus": "販売中",
-      "productUrl": "http://www.worldbeans.net/straightcoffee.html",
+      "productUrl": null,
       "data_source": "manual"
     },
     {
@@ -43,7 +43,7 @@
       "price": 1400,
       "weightG": 200,
       "stockStatus": "販売中",
-      "productUrl": "http://www.worldbeans.net/straightcoffee.html",
+      "productUrl": null,
       "data_source": "manual"
     },
     {
@@ -58,7 +58,7 @@
       "price": 1500,
       "weightG": 200,
       "stockStatus": "販売中",
-      "productUrl": "http://www.worldbeans.net/straightcoffee.html",
+      "productUrl": null,
       "data_source": "manual"
     },
     {
@@ -73,7 +73,7 @@
       "price": 1450,
       "weightG": 200,
       "stockStatus": "販売中",
-      "productUrl": "http://www.worldbeans.net/straightcoffee.html",
+      "productUrl": null,
       "data_source": "manual"
     },
     {
@@ -88,7 +88,7 @@
       "price": 1500,
       "weightG": 200,
       "stockStatus": "販売中",
-      "productUrl": "http://www.worldbeans.net/straightcoffee.html",
+      "productUrl": null,
       "data_source": "manual"
     },
     {
@@ -103,7 +103,7 @@
       "price": 1500,
       "weightG": 200,
       "stockStatus": "販売中",
-      "productUrl": "http://www.worldbeans.net/straightcoffee.html",
+      "productUrl": null,
       "data_source": "manual"
     },
     {
@@ -118,7 +118,7 @@
       "price": 1500,
       "weightG": 200,
       "stockStatus": "販売中",
-      "productUrl": "http://www.worldbeans.net/straightcoffee.html",
+      "productUrl": null,
       "data_source": "manual"
     },
     {
@@ -133,7 +133,7 @@
       "price": 1550,
       "weightG": 200,
       "stockStatus": "販売中",
-      "productUrl": "http://www.worldbeans.net/straightcoffee.html",
+      "productUrl": null,
       "data_source": "manual"
     },
     {
@@ -148,7 +148,7 @@
       "price": 1450,
       "weightG": 200,
       "stockStatus": "販売中",
-      "productUrl": "http://www.worldbeans.net/straightcoffee.html",
+      "productUrl": null,
       "data_source": "manual"
     },
     {
@@ -163,7 +163,7 @@
       "price": 1550,
       "weightG": 200,
       "stockStatus": "販売中",
-      "productUrl": "http://www.worldbeans.net/straightcoffee.html",
+      "productUrl": null,
       "data_source": "manual"
     },
     {
@@ -178,7 +178,7 @@
       "price": 1500,
       "weightG": 200,
       "stockStatus": "販売中",
-      "productUrl": "http://www.worldbeans.net/straightcoffee.html",
+      "productUrl": null,
       "data_source": "manual"
     },
     {
@@ -193,7 +193,7 @@
       "price": 1500,
       "weightG": 200,
       "stockStatus": "販売中",
-      "productUrl": "http://www.worldbeans.net/straightcoffee.html",
+      "productUrl": null,
       "data_source": "manual"
     },
     {
@@ -208,7 +208,7 @@
       "price": 1400,
       "weightG": 200,
       "stockStatus": "販売中",
-      "productUrl": "http://www.worldbeans.net/blendcoffee.html",
+      "productUrl": null,
       "data_source": "manual"
     },
     {
@@ -223,7 +223,7 @@
       "price": 1400,
       "weightG": 200,
       "stockStatus": "販売中",
-      "productUrl": "http://www.worldbeans.net/blendcoffee.html",
+      "productUrl": null,
       "data_source": "manual"
     },
     {
@@ -238,7 +238,7 @@
       "price": 1450,
       "weightG": 200,
       "stockStatus": "販売中",
-      "productUrl": "http://www.worldbeans.net/blendcoffee.html",
+      "productUrl": null,
       "data_source": "manual"
     },
     {
@@ -253,7 +253,7 @@
       "price": 1400,
       "weightG": 200,
       "stockStatus": "販売中",
-      "productUrl": "http://www.worldbeans.net/blendcoffee.html",
+      "productUrl": null,
       "data_source": "manual",
       "source_note": "おすすめロースト欄が文字化けしていたためroastはnullとした"
     },
@@ -269,7 +269,7 @@
       "price": 1400,
       "weightG": 200,
       "stockStatus": "販売中",
-      "productUrl": "http://www.worldbeans.net/blendcoffee.html",
+      "productUrl": null,
       "data_source": "manual"
     }
   ]
