@@ -148,8 +148,9 @@
       "price": 970,
       "weightG": 100,
       "stockStatus": "販売中",
-      "productUrl": "https://cafebechet.blog.fc2.com/blog-entry-71.html",
-      "data_source": "manual"
+      "productUrl": null,
+      "data_source": "manual",
+      "source_note": "フルシティロースト版と同一のブログ記事(blog-entry-71.html)内に2焙煎度が併記されているため、こちらはURLを持たせずID衝突を避ける"
     },
     {
       "raw_name": "グアテマラ・アンティグア・アゾテア",
@@ -284,8 +285,9 @@
       "price": 1070,
       "weightG": 100,
       "stockStatus": "販売中",
-      "productUrl": "https://cafebechet.blog.fc2.com/blog-entry-43.html",
-      "data_source": "manual"
+      "productUrl": null,
+      "data_source": "manual",
+      "source_note": "シティロースト版と同一のブログ記事(blog-entry-43.html)内に2焙煎度が併記されているため、こちらはURLを持たせずID衝突を避ける"
     },
     {
       "raw_name": "イエメン・モカハラズ・シャムス",
@@ -363,9 +365,9 @@
       "price": 1600,
       "weightG": 100,
       "stockStatus": "販売中",
-      "productUrl": "https://cafebechet.blog.fc2.com/blog-entry-124.html",
+      "productUrl": null,
       "data_source": "manual",
-      "source_note": "期間限定コーヒー"
+      "source_note": "期間限定コーヒー。シティロースト版と同一のブログ記事(blog-entry-124.html)内に2焙煎度が併記されているため、こちらはURLを持たせずID衝突を避ける"
     },
     {
       "raw_name": "ザンビア・マウントスンズ(シティロースト)",
@@ -395,9 +397,9 @@
       "price": 1300,
       "weightG": 100,
       "stockStatus": "販売中",
-      "productUrl": "https://cafebechet.blog.fc2.com/blog-entry-123.html",
+      "productUrl": null,
       "data_source": "manual",
-      "source_note": "期間限定コーヒー"
+      "source_note": "期間限定コーヒー。シティロースト版と同一のブログ記事(blog-entry-123.html)内に2焙煎度が併記されているため、こちらはURLを持たせずID衝突を避ける"
     }
   ]
 }
