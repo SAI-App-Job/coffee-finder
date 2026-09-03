@@ -39,6 +39,12 @@ robots.txt確認済み(2026-09時点): User-agent: *は/secure/・/cart/のみ�
 var Colormeのinventory_controlが"none"、stock_numは常にnull
 (kunikuni.pyと同じ運用)。構造化された在庫フラグが機能していないため、
 商品名のテキストのみで在庫状態を判定する。
+
+【非コーヒー豆の除外について】
+実データ確認済み(実ワークフロー実行後のデータ検証で発覚): 「コールドブリュー
+（水出し）珈琲パック（3個入り／5個入り）」の2件は、豆を抽出済みの水出し
+パック(既製品)であり豆単品ではないため、NON_BEAN_KEYWORDSで除外する
+(GONZO CAFE&BEANSの「水出しアイスコーヒー」除外と同じパターン)。
 """
 
 import json
@@ -76,6 +82,8 @@ CRAWL_DELAY_SECONDS = 1
 REQUEST_HEADERS = {
     "User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"
 }
+
+NON_BEAN_KEYWORDS = ["コールドブリュー"]
 
 COLORME_JSON_PATTERN = re.compile(r"var\s+Colorme\s*=\s*(\{.*\});", re.DOTALL)
 WEIGHT_ROASTED_PATTERN = re.compile(r"焙煎後\s*約\s*([\d.]+)\s*[gｇ]")
@@ -127,10 +135,19 @@ def detect_weight_from_breadcrumb(soup: BeautifulSoup) -> int | None:
 def build_record(product_url: str, colorme_product: dict, roast_level: str | None,
                   weight_g: int | None, category_hint: str) -> dict:
     title = (colorme_product.get("name") or "").strip()
-    parsed = parse_product(title)
 
     variant = colorme_product.get("variants") or [{}]
     price = colorme_product.get("sales_price_including_tax") or variant[0].get("option_price_including_tax")
+
+    if any(kw in title for kw in NON_BEAN_KEYWORDS):
+        return {
+            "shop_name": SHOP_INFO["name"],
+            "raw_name": title,
+            "non_bean": True,
+            "product_url": product_url,
+        }
+
+    parsed = parse_product(title)
 
     if parsed["is_flavored"]:
         return {
