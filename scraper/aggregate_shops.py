@@ -163,6 +163,7 @@ SOURCE_FILES = {
     "NORTH STAR BEANS": "data_northstar.json",
     "MITSUMATA COFFEE": "data_mitsumata.json",
     "コンパスコーヒー": "data_compass.json",
+    "下町コーヒー": "data_shitamachi.json",
 }
 
 

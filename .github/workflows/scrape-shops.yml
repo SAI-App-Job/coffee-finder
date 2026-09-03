@@ -93,6 +93,7 @@ on:
           - northstar
           - mitsumata
           - compass
+          - shitamachi
 
 permissions:
   contents: write # data/*.json をコミット・pushするために必要
@@ -347,6 +348,9 @@ jobs:
           - id: compass
             script: scrape_compass.py
             output: data_compass.json
+          - id: shitamachi
+            script: scrape_shitamachi.py
+            output: data_shitamachi.json
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4 # 差分ベーススクレイピングがdata/products.jsonを参照するため必須
