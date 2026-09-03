@@ -1507,5 +1507,17 @@
     "hours": null,
     "map_query": "松屋珈琲店",
     "last_scraped_at": "2026-09-03T14:52:03.989377+00:00"
+  },
+  {
+    "name": "ビーズコーヒー",
+    "url": "https://beescoffeeshop.shop-pro.jp/",
+    "platform": "カラーミーショップ(shop-pro.jp)",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-09確認。robots.txtが存在せず自ホームページへリダイレクトされる。CAFE FACON・神楽坂珈琲焙煎所と同種の「実質全面許可」状態)",
+    "address": "東京都文京区千石1-29-15 LAアパートメント文京千石1F",
+    "prefecture": "東京都",
+    "hours": null,
+    "map_query": "ビーズコーヒー",
+    "last_scraped_at": "2026-09-03T14:57:23.712862+00:00"
   }
 ]
