@@ -137,7 +137,7 @@ def parse_product_detail(url: str) -> dict | None:
 
 def fetch_sitemap_urls() -> list[str]:
     html = fetch_html(f"{BASE_URL}/sitemap.xml")
-    soup = BeautifulSoup(html, "xml")
+    soup = BeautifulSoup(html, "html.parser")
     return [loc.get_text(strip=True) for loc in soup.find_all("loc") if "/items/" in loc.get_text()]
 
 

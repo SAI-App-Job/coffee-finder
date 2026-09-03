@@ -74,7 +74,7 @@ def fetch_page(url: str) -> BeautifulSoup:
 def fetch_sitemap_urls() -> list[str]:
     resp = requests.get(f"{BASE_URL}/product-sitemap.xml", headers=REQUEST_HEADERS, timeout=15)
     resp.raise_for_status()
-    soup = BeautifulSoup(resp.text, "xml")
+    soup = BeautifulSoup(resp.text, "html.parser")
     return [loc.get_text(strip=True) for loc in soup.find_all("loc")]
 
 
