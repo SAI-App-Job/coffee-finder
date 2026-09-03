@@ -1775,5 +1775,73 @@
     "hours": null,
     "map_query": "コンパスコーヒー",
     "last_scraped_at": "2026-09-03T17:44:59.626580+00:00"
+  },
+  {
+    "name": "下町コーヒー",
+    "url": "https://www.shitamachicoffee.com/",
+    "platform": "独自EC(xaas3.jp)",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-09確認。/default/error/・/preview/のみDisallow、それ以外は制限なし)",
+    "address": "東京都大田区南六郷",
+    "prefecture": "東京都",
+    "hours": null,
+    "map_query": "下町コーヒー",
+    "last_scraped_at": "2026-09-03T17:47:09.937584+00:00"
+  },
+  {
+    "name": "ベースキャンプ",
+    "url": "https://basecampcoffee.web.fc2.com/",
+    "instagram_url": null,
+    "platform": "公式サイトあり(FC2ホームページビルダー製の静的サイト)、注文フォーム無し。「自家焙煎珈琲生豆専門店」を名乗るが実際は生豆をその場で直火焙煎して販売する店舗で、Retty等の口コミでは煎り上がり(焙煎済み)豆として購入されていることを確認済み",
+    "shop_type": "single_location",
+    "address": "東京都台東区台東3-2-11",
+    "prefecture": "東京都",
+    "hours": "10:00〜18:00(L.O.17:00、火曜・水曜定休)",
+    "map_query": "自家焙煎珈琲生豆専門店ベースキャンプ 東京都台東区台東3-2-11",
+    "data_source": "manual",
+    "source_note": "御徒町・佐竹商店街内の自家焙煎コーヒー豆専門店(Googleマップ★4.5、132件の口コミ)。公式サイト(basecampcoffee.web.fc2.com)の「各コーヒー豆特徴」ページに28銘柄(ストレート20+ブレンド8)の商品名・簡単な特徴説明が明記されており、「生豆200gの煎り上がり価格」である旨も明記されているが、肝心の価格自体は表に記載が無い(欠落)。個別の価格は食べログ・Yahoo!マップ・個人ブログの口コミで一部確認できた(ベースキャンプブレンド100g580円[食べログ2012年]、マンデリン200g950円[Yahoo!マップ]、大江戸ブレンド200g1050円[ブログ2017年])が、いずれも投稿時点の情報で現在の価格とは異なる可能性が高いため、価格はnullとし商品名・産地・特徴のみを収録した。",
+    "last_verified_at": "2026-09-04"
+  },
+  {
+    "name": "きまめ屋",
+    "url": "http://www.kimameya.com/",
+    "instagram_url": null,
+    "platform": "公式サイトあり(kimameya.com)、商品メニューページに全商品の価格が明記されているが、注文フォーム・カート機能は無く電話等での注文のみ",
+    "shop_type": "single_location",
+    "address": "東京都大田区西蒲田",
+    "prefecture": "東京都",
+    "hours": null,
+    "map_query": "きまめ屋 東京都大田区西蒲田 蓮沼駅",
+    "data_source": "manual",
+    "source_note": "東急池上線蓮沼駅すぐの自家焙煎コーヒー豆専門店。「ご注文を受けてから生豆から焙煎」しており、大田区内限定で即日配達も行っている。公式サイトの商品紹介ページ(kimameya.com/menu/)にストレート14種・ブレンド12種、全26商品の商品名・100gあたり価格・簡単な特徴説明が明記されている。カート機能は無く電話等での注文のみと見られる。",
+    "last_verified_at": "2026-09-04"
+  },
+  {
+    "name": "村上コーヒー",
+    "url": null,
+    "instagram_url": "https://www.instagram.com/murakami_coffee/",
+    "platform": "手動入力(Instagramのみ、公式サイトなし)",
+    "shop_type": "single_location",
+    "address": "東京都北区中里1-5-11",
+    "prefecture": "東京都",
+    "hours": null,
+    "map_query": "自家焙煎 村上コーヒー 東京都北区中里1-5-11",
+    "data_source": "manual",
+    "source_note": "2023年9月に田端銀座商店街(北区田端4-4-5)でオープンした自家焙煎コーヒー豆専門店。2025年3月に駒込駅東口アザレア通り(北区中里1-5-11)へ移転(Instagram投稿より確認)。公式オンラインショップは無く、Instagram(@murakami_coffee)の投稿(検索スニペット経由で閲覧、本体は未ログインだと投稿一覧が見られないためこの方法で確認)で産地・農園・標高・品種・精製方法まで詳細に告知しているが、価格は投稿からは確認できなかった。現在のラインナップは「7〜8種類」とのことだが、検索で見つかった範囲の一部のみを収録している(価格不明のためpriceはすべてnull)。",
+    "last_verified_at": "2026-09-04"
+  },
+  {
+    "name": "WORLD BEANS",
+    "url": "http://www.worldbeans.net/",
+    "instagram_url": null,
+    "platform": "公式サイトあり(worldbeans.net、2007年開設の静的HTMLサイト)だが注文・カート機能は無い(order.html/cart.html等いずれも404)",
+    "shop_type": "single_location",
+    "address": "東京都大田区矢口2-11-28",
+    "prefecture": "東京都",
+    "hours": "10:00〜19:30(日曜のみ18:00まで、木曜定休)",
+    "map_query": "WORLD BEANS 東京都大田区矢口2-11-28",
+    "data_source": "manual",
+    "source_note": "2007年2月開業、『珈琲工房 BEANS横浜』で修業した2人が営む自家焙煎専門店(東急多摩川線武蔵新田駅より徒歩7分)。公式サイト(worldbeans.net)にストレート・ブレンド全商品の商品名・産地・内容量(生豆200gの煎り上がり価格)・価格・おすすめロースト度が明記されているが、注文フォーム自体が無く(cart.html/order.html等は404)、電話・メールでの注文のみと見られる。「販売休止中」「取扱休止中」と明記された商品は除外し、価格が明記されている現行販売中の商品のみ収録した。サイト自体は2007年から更新されていない可能性があるため、価格・品揃えが変動している可能性がある。",
+    "last_verified_at": "2026-09-04"
   }
 ]
