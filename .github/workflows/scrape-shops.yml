@@ -80,6 +80,19 @@ on:
           - conami
           - singleo
           - zaguri
+          - peppino
+          - ennoki
+          - rootcoffee
+          - katocoffee
+          - todencoffee
+          - nanoroaster
+          - taguriano
+          - yakiyaki
+          - fivecoffee
+          - iriya
+          - northstar
+          - mitsumata
+          - compass
 
 permissions:
   contents: write # data/*.json をコミット・pushするために必要
@@ -295,6 +308,45 @@ jobs:
           - id: zaguri
             script: scrape_zaguri.py
             output: data_zaguri.json
+          - id: peppino
+            script: scrape_peppino.py
+            output: data_peppino.json
+          - id: ennoki
+            script: scrape_ennoki.py
+            output: data_ennoki.json
+          - id: rootcoffee
+            script: scrape_rootcoffee.py
+            output: data_rootcoffee.json
+          - id: katocoffee
+            script: scrape_katocoffee.py
+            output: data_katocoffee.json
+          - id: todencoffee
+            script: scrape_todencoffee.py
+            output: data_todencoffee.json
+          - id: nanoroaster
+            script: scrape_nanoroaster.py
+            output: data_nanoroaster.json
+          - id: taguriano
+            script: scrape_taguriano.py
+            output: data_taguriano.json
+          - id: yakiyaki
+            script: scrape_yakiyaki.py
+            output: data_yakiyaki.json
+          - id: fivecoffee
+            script: scrape_fivecoffee.py
+            output: data_fivecoffee.json
+          - id: iriya
+            script: scrape_iriya.py
+            output: data_iriya.json
+          - id: northstar
+            script: scrape_northstar.py
+            output: data_northstar.json
+          - id: mitsumata
+            script: scrape_mitsumata.py
+            output: data_mitsumata.json
+          - id: compass
+            script: scrape_compass.py
+            output: data_compass.json
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4 # 差分ベーススクレイピングがdata/products.jsonを参照するため必須

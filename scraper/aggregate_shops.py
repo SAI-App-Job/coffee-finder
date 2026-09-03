@@ -150,6 +150,19 @@ SOURCE_FILES = {
     "こなみ珈琲": "data_conami.json",
     "Single O Japan": "data_singleo.json",
     "ザグリ珈琲": "data_zaguri.json",
+    "Peppino Coffee Roaster": "data_peppino.json",
+    "焙煎処 縁の木": "data_ennoki.json",
+    "ROOT COFFEE": "data_rootcoffee.json",
+    "加とう珈琲焙煎所": "data_katocoffee.json",
+    "Toden Coffee": "data_todencoffee.json",
+    "nano-coffeeroaster": "data_nanoroaster.json",
+    "珈琲豆焙煎処Taguriano": "data_taguriano.json",
+    "焙煎カフェ やきやき": "data_yakiyaki.json",
+    "FIVE COFFEE STAND&ROASTERY": "data_fivecoffee.json",
+    "入谷珈琲豆店": "data_iriya.json",
+    "NORTH STAR BEANS": "data_northstar.json",
+    "MITSUMATA COFFEE": "data_mitsumata.json",
+    "コンパスコーヒー": "data_compass.json",
 }
 
 
