@@ -82,6 +82,12 @@ def scrape_coffee_section_list() -> list[dict]:
             title_el = sibling.select_one("li.item_name h4")
             if not title_el:
                 continue
+            # h4は<span>商品コード(N01等)</span>商品名という構造(実データ確認済み)。
+            # spanを除去しないとget_text()で「N01ペルー...」のように商品コードが
+            # 商品名に隙間なく連結されてしまうため、spanを取り除いてから抽出する。
+            code_span = title_el.select_one("span")
+            if code_span:
+                code_span.decompose()
             title = title_el.get_text(strip=True)
             product_url = sibling.get("href", "")
             results.append({"raw_name": title, "product_url": product_url})
