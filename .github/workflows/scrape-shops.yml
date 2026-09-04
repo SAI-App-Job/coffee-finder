@@ -131,6 +131,14 @@ on:
           - otsuka
           - baisencoco
           - mamenakano
+          - kiaora
+          - tozu
+          - atc
+          - mamewarabe
+          - sikaku
+          - mameco
+          - athlon
+          - asami
 
 permissions:
   contents: write # data/*.json をコミット・pushするために必要
@@ -499,6 +507,30 @@ jobs:
           - id: mamenakano
             script: scrape_mamenakano.py
             output: data_mamenakano.json
+          - id: kiaora
+            script: scrape_kiaora.py
+            output: data_kiaora.json
+          - id: tozu
+            script: scrape_tozu.py
+            output: data_tozu.json
+          - id: atc
+            script: scrape_atc.py
+            output: data_atc.json
+          - id: mamewarabe
+            script: scrape_mamewarabe.py
+            output: data_mamewarabe.json
+          - id: sikaku
+            script: scrape_sikaku.py
+            output: data_sikaku.json
+          - id: mameco
+            script: scrape_mameco.py
+            output: data_mameco.json
+          - id: athlon
+            script: scrape_athlon.py
+            output: data_athlon.json
+          - id: asami
+            script: scrape_asami.py
+            output: data_asami.json
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4 # 差分ベーススクレイピングがdata/products.jsonを参照するため必須

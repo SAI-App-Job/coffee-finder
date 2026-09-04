@@ -201,6 +201,14 @@ SOURCE_FILES = {
     "珈琲豆のおおつか": "data_otsuka.json",
     "自家焙煎 香珈 Beans＆Cafe": "data_baisencoco.json",
     "豆NAKANO": "data_mamenakano.json",
+    "KiaOra COFFEE": "data_kiaora.json",
+    "柊豆": "data_tozu.json",
+    "ALL THAT COFFEEWORKS": "data_atc.json",
+    "豆わらべ": "data_mamewarabe.json",
+    "しかくCOFFEE": "data_sikaku.json",
+    "coffee mameco": "data_mameco.json",
+    "アスロンコーヒー焙煎所": "data_athlon.json",
+    "あさみ珈琲豆店": "data_asami.json",
 }
 
 
