@@ -2647,5 +2647,17 @@
     "hours": null,
     "map_query": "自家焙煎珈琲コトリ",
     "last_scraped_at": "2026-09-04T22:19:45.154630+00:00"
+  },
+  {
+    "name": "ひつじ珈琲",
+    "url": "https://hitsuji-coffee.com/",
+    "platform": "WooCommerce",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-09確認。/wp-admin/等の管理系パスのみDisallow。本スクレイパーが使うStore API(/wp-json/wc/store/v1/products)は制限対象外)",
+    "address": "栃木県大田原市中野内735",
+    "prefecture": "栃木県",
+    "hours": null,
+    "map_query": "ひつじ珈琲",
+    "last_scraped_at": "2026-09-04T22:21:56.224153+00:00"
   }
 ]
