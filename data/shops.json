@@ -2323,5 +2323,17 @@
     "hours": null,
     "map_query": "ALL THAT COFFEEWORKS",
     "last_scraped_at": "2026-09-04T13:39:26.975307+00:00"
+  },
+  {
+    "name": "豆わらべ",
+    "url": "https://mamewarabe.theshop.jp/",
+    "platform": "THE SHOP(BASE系)",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-09確認。他のBASE系店舗と同一の記述。curl/python-requests等は個別にDisallow: /指定あり、本スクレイパーは識別可能なUser-Agentを使用)",
+    "address": "埼玉県深谷市上野台1949-3",
+    "prefecture": "埼玉県",
+    "hours": null,
+    "map_query": "豆わらべ",
+    "last_scraped_at": "2026-09-04T13:41:22.327067+00:00"
   }
 ]
