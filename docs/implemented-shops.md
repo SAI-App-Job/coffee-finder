@@ -5,7 +5,7 @@
 `scraper/manual/shops/`配下、それ以外は`scraper/scrape_*.py`で自動取得。
 実装を見送った店舗は`docs/not-implementable-shops.md`を参照。
 
-合計124店舗・3460商品(生成日: 2026-09-04)。
+合計125店舗・3508商品(生成日: 2026-09-04)。
 
 再生成コマンド:
 ```
@@ -83,6 +83,7 @@ node scripts/gen-implemented-shops.js
 | エトナコーヒー | 千葉市花見川区幕張 | MakeShop | 89 |
 | RUMOR'S COFFEE | 千葉市緑区おゆみ野南2-16-3 | BASE | 37 |
 | Coffee Roast 焙香 | 船橋市 | BASE | 38 |
+| 珈琲豆のおおつか | 船橋市 | らくうるカート | 48 |
 | 珈琲工房豆壱 | 柏市中央2-9-11-102 | BASE | 34 |
 | きたみcoffee | 八千代市 | EC-CUBE | 23 |
 
