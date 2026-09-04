@@ -2347,5 +2347,17 @@
     "hours": null,
     "map_query": "しかくCOFFEE",
     "last_scraped_at": "2026-09-04T13:43:28.042076+00:00"
+  },
+  {
+    "name": "coffee mameco",
+    "url": "https://coffeemameco.com/",
+    "platform": "Shopify",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-09確認。Shopify標準のrobots.txtでAllow: /、制限なし)",
+    "address": "埼玉県東松山市六反町3-32",
+    "prefecture": "埼玉県",
+    "hours": null,
+    "map_query": "coffee mameco",
+    "last_scraped_at": "2026-09-04T13:45:25.216468+00:00"
   }
 ]
