@@ -139,6 +139,9 @@ on:
           - mameco
           - athlon
           - asami
+          - cgconline
+          - tremolo
+          - kumagai
 
 permissions:
   contents: write # data/*.json をコミット・pushするために必要
@@ -531,6 +534,15 @@ jobs:
           - id: asami
             script: scrape_asami.py
             output: data_asami.json
+          - id: cgconline
+            script: scrape_cgconline.py
+            output: data_cgconline.json
+          - id: tremolo
+            script: scrape_tremolo.py
+            output: data_tremolo.json
+          - id: kumagai
+            script: scrape_kumagai.py
+            output: data_kumagai.json
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4 # 差分ベーススクレイピングがdata/products.jsonを参照するため必須

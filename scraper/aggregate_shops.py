@@ -209,6 +209,9 @@ SOURCE_FILES = {
     "coffee mameco": "data_mameco.json",
     "アスロンコーヒー焙煎所": "data_athlon.json",
     "あさみ珈琲豆店": "data_asami.json",
+    "COFFEE GALLERY": "data_cgconline.json",
+    "トレモロコーヒーロースター": "data_tremolo.json",
+    "熊谷珈琲": "data_kumagai.json",
 }
 
 
