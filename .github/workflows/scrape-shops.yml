@@ -130,6 +130,7 @@ on:
           - kitami
           - adachi
           - otsuka
+          - baisencoco
 
 permissions:
   contents: write # data/*.json をコミット・pushするために必要
@@ -495,6 +496,9 @@ jobs:
           - id: otsuka
             script: scrape_otsuka.py
             output: data_otsuka.json
+          - id: baisencoco
+            script: scrape_baisencoco.py
+            output: data_baisencoco.json
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4 # 差分ベーススクレイピングがdata/products.jsonを参照するため必須
