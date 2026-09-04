@@ -2371,5 +2371,17 @@
     "hours": null,
     "map_query": "アスロンコーヒー焙煎所",
     "last_scraped_at": "2026-09-04T13:47:56.997644+00:00"
+  },
+  {
+    "name": "あさみ珈琲豆店",
+    "url": "https://asami-coffee.ocnk.net/",
+    "platform": "おちゃのこネット(Ocnk)",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-09確認。GPTBot等AI系ボットのみ個別にDisallow: /、それ以外は制限なし)",
+    "address": "埼玉県本庄市児玉町児玉335-15",
+    "prefecture": "埼玉県",
+    "hours": null,
+    "map_query": "あさみ珈琲豆店",
+    "last_scraped_at": "2026-09-04T13:50:29.426020+00:00"
   }
 ]
