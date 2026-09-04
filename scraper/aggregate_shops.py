@@ -165,7 +165,6 @@ SOURCE_FILES = {
     "コンパスコーヒー": "data_compass.json",
     "下町コーヒー": "data_shitamachi.json",
     "カメヤマ珈琲": "data_ginmame.json",
-    "豆虎": "data_mametora.json",
     "northnodecoffee": "data_northnode.json",
     "SLOW JET COFFEE": "data_slowjet.json",
     "自家焙煎メロディアスコーヒー": "data_melodious.json",

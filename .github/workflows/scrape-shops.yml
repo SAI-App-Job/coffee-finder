@@ -95,7 +95,6 @@ on:
           - compass
           - shitamachi
           - ginmame
-          - mametora
           - northnode
           - slowjet
           - melodious
@@ -392,9 +391,6 @@ jobs:
           - id: ginmame
             script: scrape_ginmame.py
             output: data_ginmame.json
-          - id: mametora
-            script: scrape_mametora.py
-            output: data_mametora.json
           - id: northnode
             script: scrape_northnode.py
             output: data_northnode.json
