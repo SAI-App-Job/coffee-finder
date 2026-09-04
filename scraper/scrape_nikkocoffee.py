@@ -26,6 +26,15 @@ NON_BEAN_KEYWORDSで除外する。
 お得な1kg コーヒー豆【ロースト度】」の3形態(一部銘柄は200gのみ)で
 個別商品登録されている。商品名の"｜"より前を基準名としてグルーピングし、
 最小重量(200g)を代表として採用する。
+
+【全角/半角スペース表記ゆれによる重複排除漏れについて】
+実データ確認済み(初回実行で発覚): 「タンザニア キリマンジャロ」(200g版、
+銘柄間が半角スペース)と「タンザニア　キリマンジャロ」(500g版、銘柄間が
+全角スペース)のように、同一銘柄でも200g版と500g版で"｜"より前の
+基準名の空白文字が半角/全角で表記ゆれしており、素の文字列一致では
+別銘柄と誤判定され両方とも残ってしまう不具合があった(アスロン
+コーヒー焙煎所のグアテマラと同種のバグ)。WHITESPACE_PATTERNで空白を
+正規化してから基準名を比較するよう修正した。
 """
 
 import re
@@ -59,6 +68,7 @@ NON_BEAN_KEYWORDS = [
     "ガイドブック", "ステッカー", "コピー：",
 ]
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*(kg|g|ｋｇ|ｇ)", re.IGNORECASE)
+WHITESPACE_PATTERN = re.compile(r"[\s　]+")
 
 
 def fetch_page(url: str) -> BeautifulSoup:
@@ -96,7 +106,7 @@ def parse_weight_g(title: str) -> int | None:
 def pick_canonical_items(items: list[dict]) -> list[dict]:
     by_base_name: dict[str, dict] = {}
     for item in items:
-        base_name = item["title"].split("｜")[0].strip()
+        base_name = WHITESPACE_PATTERN.sub(" ", item["title"].split("｜")[0]).strip()
         weight_key = item["weight_g"] if item["weight_g"] is not None else float("inf")
         existing = by_base_name.get(base_name)
         existing_weight = existing["weight_g"] if existing and existing["weight_g"] is not None else float("inf")
