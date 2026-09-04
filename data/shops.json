@@ -2491,5 +2491,17 @@
     "hours": null,
     "map_query": "十人十豆",
     "last_scraped_at": "2026-09-04T15:44:27.918212+00:00"
+  },
+  {
+    "name": "TRIBE COFFEE",
+    "url": "https://www.coffee-tribe.com/",
+    "platform": "カラーミーショップ",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-09確認。他のカラーミー店舗と同一の記述。/secure/・/cart/のみDisallow。AhrefsBot等一部ボットを個別にDisallow: /、それ以外は制限なし)",
+    "address": "茨城県つくば市東新井20-7-101",
+    "prefecture": "茨城県",
+    "hours": null,
+    "map_query": "TRIBE COFFEE",
+    "last_scraped_at": "2026-09-04T15:47:01.141271+00:00"
   }
 ]
