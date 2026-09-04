@@ -2203,5 +2203,17 @@
     "hours": null,
     "map_query": "MAHAMERU COFFEE",
     "last_scraped_at": "2026-09-04T00:25:31.916097+00:00"
+  },
+  {
+    "name": "TABEI COFFEE",
+    "url": "https://tabei-coffee.com/",
+    "platform": "WordPress + Welcart",
+    "shop_type": "single_location",
+    "robots_txt_status": "許可(2026-09確認。/wp-admin/以外は制限なし、標準的なWordPress設定)",
+    "address": "千葉県四街道市",
+    "prefecture": "千葉県",
+    "hours": null,
+    "map_query": "TABEI COFFEE",
+    "last_scraped_at": "2026-09-04T02:43:35.138289+00:00"
   }
 ]
