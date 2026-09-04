@@ -27,14 +27,17 @@ NON_BEAN_KEYWORDSで除外する。
 個別商品登録されている。商品名の"｜"より前を基準名としてグルーピングし、
 最小重量(200g)を代表として採用する。
 
-【全角/半角スペース表記ゆれによる重複排除漏れについて】
+【空白表記ゆれによる重複排除漏れについて】
 実データ確認済み(初回実行で発覚): 「タンザニア キリマンジャロ」(200g版、
 銘柄間が半角スペース)と「タンザニア　キリマンジャロ」(500g版、銘柄間が
 全角スペース)のように、同一銘柄でも200g版と500g版で"｜"より前の
 基準名の空白文字が半角/全角で表記ゆれしており、素の文字列一致では
 別銘柄と誤判定され両方とも残ってしまう不具合があった(アスロン
-コーヒー焙煎所のグアテマラと同種のバグ)。WHITESPACE_PATTERNで空白を
-正規化してから基準名を比較するよう修正した。
+コーヒー焙煎所のグアテマラと同種のバグ)。連続空白を1つに正規化する
+修正を最初に行ったが、「アチェG1」(200g版、空白なし)と「アチェ G1」
+(500g版、空白あり)のように空白の有無自体が銘柄間で異なるケースは
+それでも解消しなかった(2回目の実行で発覚)。最終的にグルーピング
+キー作成時のみ空白を完全に除去する方式に変更して解消した。
 """
 
 import re
@@ -106,12 +109,16 @@ def parse_weight_g(title: str) -> int | None:
 def pick_canonical_items(items: list[dict]) -> list[dict]:
     by_base_name: dict[str, dict] = {}
     for item in items:
-        base_name = WHITESPACE_PATTERN.sub(" ", item["title"].split("｜")[0]).strip()
+        # 理由: 空白の有無・全角半角が銘柄によって不揃い(例:「アチェG1」
+        # と「アチェ G1」)なため、単純な空白正規化(連続空白の一括化)
+        # だけでは同一銘柄とみなせない。グルーピングキーは空白を完全に
+        # 除去して作る(表示用のraw_nameには影響しない、キー専用の処理)。
+        dedup_key = WHITESPACE_PATTERN.sub("", item["title"].split("｜")[0])
         weight_key = item["weight_g"] if item["weight_g"] is not None else float("inf")
-        existing = by_base_name.get(base_name)
+        existing = by_base_name.get(dedup_key)
         existing_weight = existing["weight_g"] if existing and existing["weight_g"] is not None else float("inf")
         if existing is None or weight_key < existing_weight:
-            by_base_name[base_name] = item
+            by_base_name[dedup_key] = item
     return list(by_base_name.values())
 
 
