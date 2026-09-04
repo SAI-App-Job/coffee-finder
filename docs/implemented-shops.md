@@ -5,7 +5,7 @@
 `scraper/manual/shops/`配下、それ以外は`scraper/scrape_*.py`で自動取得。
 実装を見送った店舗は`docs/not-implementable-shops.md`を参照。
 
-合計125店舗・3508商品(生成日: 2026-09-04)。
+合計126店舗・3523商品(生成日: 2026-09-04)。
 
 再生成コマンド:
 ```
@@ -75,6 +75,7 @@ node scripts/gen-implemented-shops.js
 | SLOW COFFEE |  | Shopify | 47 |
 | MAHAMERU COFFEE |  | Shopify | 2 |
 | アダチコーヒー |  | Ocnk | 28 |
+| 自家焙煎 香珈 Beans＆Cafe |  | Goope | 15 |
 | TABEI COFFEE | 四街道市 | Welcart | 12 |
 | CAMBLEM グリーン珈琲焙煎所 | 市川市市川南1丁目(市川店) | Shopify | 44 |
 | 萌季屋 | 市川市八幡 | カラーミー | 18 |
