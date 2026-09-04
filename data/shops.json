@@ -2263,5 +2263,17 @@
     "hours": null,
     "map_query": "珈琲豆のおおつか",
     "last_scraped_at": "2026-09-04T03:19:46.039030+00:00"
+  },
+  {
+    "name": "自家焙煎 香珈 Beans＆Cafe",
+    "url": "https://baisen-coco.com/",
+    "platform": "Goope",
+    "shop_type": "single_location",
+    "robots_txt_status": "許可(2026-09確認。User-agent: * / Allow: /、制限なし)",
+    "address": "千葉県",
+    "prefecture": "千葉県",
+    "hours": null,
+    "map_query": "自家焙煎 香珈 Beans＆Cafe",
+    "last_scraped_at": "2026-09-04T03:28:13.731940+00:00"
   }
 ]
