@@ -2251,5 +2251,17 @@
     "hours": null,
     "map_query": "アダチコーヒー",
     "last_scraped_at": "2026-09-04T03:07:38.247658+00:00"
+  },
+  {
+    "name": "珈琲豆のおおつか",
+    "url": "https://otsuka-coffee.raku-uru.jp/",
+    "platform": "らくうるカート",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-09確認。robots.txt自体が存在せず、/robots.txtアクセス時はトップページが返る)",
+    "address": "千葉県船橋市",
+    "prefecture": "千葉県",
+    "hours": null,
+    "map_query": "珈琲豆のおおつか",
+    "last_scraped_at": "2026-09-04T03:19:46.039030+00:00"
   }
 ]
