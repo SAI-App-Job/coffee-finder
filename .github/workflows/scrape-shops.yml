@@ -125,6 +125,8 @@ on:
           - camblem
           - slowcoffee
           - mahameru
+          - tabei
+          - etona
 
 permissions:
   contents: write # data/*.json をコミット・pushするために必要
@@ -475,6 +477,12 @@ jobs:
           - id: mahameru
             script: scrape_mahameru.py
             output: data_mahameru.json
+          - id: tabei
+            script: scrape_tabei.py
+            output: data_tabei.json
+          - id: etona
+            script: scrape_etona.py
+            output: data_etona.json
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4 # 差分ベーススクレイピングがdata/products.jsonを参照するため必須

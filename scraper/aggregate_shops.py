@@ -195,6 +195,8 @@ SOURCE_FILES = {
     "CAMBLEM グリーン珈琲焙煎所": "data_camblem.json",
     "SLOW COFFEE": "data_slowcoffee.json",
     "MAHAMERU COFFEE": "data_mahameru.json",
+    "TABEI COFFEE": "data_tabei.json",
+    "エトナコーヒー": "data_etona.json",
 }
 
 

@@ -5,7 +5,7 @@
 `scraper/manual/shops/`配下、それ以外は`scraper/scrape_*.py`で自動取得。
 実装を見送った店舗は`docs/not-implementable-shops.md`を参照。
 
-合計111店舗・3022商品(生成日: 2026-09-03)。
+合計120店舗・3308商品(生成日: 2026-09-04)。
 
 再生成コマンド:
 ```
@@ -72,6 +72,15 @@ node scripts/gen-implemented-shops.js
 | 店舗名 | 所在地 | 方式 | 件数 |
 |---|---|---|---|
 | PHILOCOFFEA |  | カラーミー | 410 |
+| SLOW COFFEE |  | Shopify | 47 |
+| MAHAMERU COFFEE |  | Shopify | 2 |
+| CAMBLEM グリーン珈琲焙煎所 | 市川市市川南1丁目(市川店) | Shopify | 44 |
+| 萌季屋 | 市川市八幡 | カラーミー | 18 |
+| Eureka Coffee Roasters | 千葉市稲毛区緑町1-8-16 | Shopify | 42 |
+| ROASTER's HOUSE | 千葉市花見川区花園1-20-7 | BASE | 24 |
+| RUMOR'S COFFEE | 千葉市緑区おゆみ野南2-16-3 | BASE | 37 |
+| Coffee Roast 焙香 | 船橋市 | BASE | 38 |
+| 珈琲工房豆壱 | 柏市中央2-9-11-102 | BASE | 34 |
 
 ### 東京都
 
