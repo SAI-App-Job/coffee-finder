@@ -332,7 +332,7 @@
   {
     "id": "https://kitamicoffee.com/shop/products/detail.php?product_id=6",
     "shop_name": "きたみcoffee",
-    "raw_name": "ダークチョコレートの余韻】グアテマラ　サンタクララ農園 深煎り 200g/500g",
+    "raw_name": "【2019年訪問農園 / ダークチョコレートの余韻】グアテマラ　サンタクララ農園 深煎り 200g/500g",
     "category": "ストレート",
     "is_flavored": false,
     "flavor_name": null,
@@ -360,7 +360,7 @@
     "decaf_process": null,
     "product_url": "https://kitamicoffee.com/shop/products/detail.php?product_id=6",
     "map_query": "きたみcoffee",
-    "scraped_at": "2026-09-04T02:58:30.094542+00:00"
+    "scraped_at": "2026-09-04T03:01:34.065634+00:00"
   },
   {
     "id": "https://kitamicoffee.com/shop/products/detail.php?product_id=51",
@@ -596,8 +596,8 @@
   {
     "id": "https://kitamicoffee.com/shop/products/detail.php?product_id=35",
     "shop_name": "きたみcoffee",
-    "raw_name": "500g(徳用袋)",
-    "category": "ストレート",
+    "raw_name": "【我が家の定番】デイリーブレンド 200g / 500g(徳用袋)",
+    "category": "ブレンド",
     "is_flavored": false,
     "flavor_name": null,
     "category_hint": "ブレンドコーヒー",
@@ -607,7 +607,7 @@
     "processing_method": null,
     "grade": null,
     "roast_level": null,
-    "roast_selectable": true,
+    "roast_selectable": false,
     "roast_hint": null,
     "farm_note": null,
     "flavor_notes": null,
@@ -624,7 +624,7 @@
     "decaf_process": null,
     "product_url": "https://kitamicoffee.com/shop/products/detail.php?product_id=35",
     "map_query": "きたみcoffee",
-    "scraped_at": "2026-09-04T02:58:30.094542+00:00"
+    "scraped_at": "2026-09-04T03:01:34.065634+00:00"
   },
   {
     "id": "https://kitamicoffee.com/shop/products/detail.php?product_id=46",
