@@ -85,18 +85,18 @@
     "flavor_notes": null,
     "blend_components": [],
     "post_processing_tags": [],
-    "price": 390,
+    "price": 1680,
     "price_min": null,
     "price_max": null,
     "price_note": null,
-    "weight_g": 20,
+    "weight_g": 100,
     "unit_note": null,
     "stock_status": "販売中",
     "out_of_stock": false,
     "decaf_process": null,
     "product_url": "https://shop.kumagaicoffee.com/?pid=150084715",
     "map_query": "熊谷珈琲",
-    "scraped_at": "2026-09-04T14:18:43.005257+00:00"
+    "scraped_at": "2026-09-04T14:23:24.747090+00:00"
   },
   {
     "id": "https://shop.kumagaicoffee.com/?pid=150084720",
@@ -316,18 +316,18 @@
     "flavor_notes": null,
     "blend_components": [],
     "post_processing_tags": [],
-    "price": 380,
+    "price": 1530,
     "price_min": null,
     "price_max": null,
     "price_note": null,
-    "weight_g": 20,
+    "weight_g": 100,
     "unit_note": null,
     "stock_status": "販売中",
     "out_of_stock": false,
     "decaf_process": null,
     "product_url": "https://shop.kumagaicoffee.com/?pid=179281511",
     "map_query": "熊谷珈琲",
-    "scraped_at": "2026-09-04T14:18:43.005257+00:00"
+    "scraped_at": "2026-09-04T14:23:24.747090+00:00"
   },
   {
     "id": "https://shop.kumagaicoffee.com/?pid=181104108",
