@@ -2143,5 +2143,17 @@
     "hours": null,
     "map_query": "Coffee Roast 焙香",
     "last_scraped_at": "2026-09-04T00:15:06.423569+00:00"
+  },
+  {
+    "name": "萌季屋",
+    "url": "https://moegiya-coffee-shop.com/",
+    "platform": "カラーミーショップ",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-09確認。/secure/・/cart/のみDisallow。AhrefsBot等一部ボットを個別にDisallow: /、それ以外は制限なし)",
+    "address": "千葉県市川市八幡",
+    "prefecture": "千葉県",
+    "hours": null,
+    "map_query": "萌季屋",
+    "last_scraped_at": "2026-09-04T00:17:12.034381+00:00"
   }
 ]
