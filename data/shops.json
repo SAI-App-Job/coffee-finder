@@ -2239,5 +2239,17 @@
     "hours": null,
     "map_query": "きたみcoffee",
     "last_scraped_at": "2026-09-04T02:58:30.094542+00:00"
+  },
+  {
+    "name": "アダチコーヒー",
+    "url": "https://www.adachicoffee.jp/",
+    "platform": "おちゃのこネット(Ocnk)",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-09確認。GPTBot等AI系ボットのみ個別にDisallow: /、それ以外は制限なし)",
+    "address": "千葉県",
+    "prefecture": "千葉県",
+    "hours": null,
+    "map_query": "アダチコーヒー",
+    "last_scraped_at": "2026-09-04T03:07:38.247658+00:00"
   }
 ]
