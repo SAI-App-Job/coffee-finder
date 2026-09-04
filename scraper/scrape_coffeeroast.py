@@ -28,6 +28,21 @@ COFFEE OTEDAMA(雑貨)・有機アガベシロップ・ベルメーレンカラ�
 (温度計)・かんたんドリップ(ペーパー)・プレミアムショコラ(チョコ
 レート菓子)がコーヒー豆単品ではないためNON_BEAN_KEYWORDSで除外する。
 商品名が空の削除済みプレースホルダーレコードも除外する。
+
+【空白表記ゆれによる除外漏れについて】
+実データ確認済み(初回実行で発覚): 除外対象の「プレミアムショコラ」が
+宅配便版では空白なし、店頭お渡し版では「プレミアム ショコラ【店頭お
+渡し】」と空白ありで登録されており、キーワード一致判定(空白なし
+"プレミアムショコラ"で判定)が店頭お渡し版だけすり抜けて残っていた。
+判定対象の文字列側の空白を完全に除去してから比較するよう修正した。
+
+【店頭お渡し版のみ産地名が重複表記される問題について】
+実データ確認済み(初回実行で発覚): 「ペルー 有機栽培」(宅配便版)に対し
+店頭お渡し版だけ「ペルー 有機栽培（ペルー）」と末尾に産地名が括弧書きで
+重複表記されており、【店頭お渡し】除去だけでは基準名が一致せず別銘柄
+として両方残ってしまっていた。末尾の括弧の中身がそれより前の部分文字列
+としてすでに登場している場合に限りその括弧を除去するよう修正した
+(グラポス農協（メキシコ）等、正当な産地注記の括弧は対象外)。
 """
 
 import json
@@ -64,7 +79,19 @@ NON_BEAN_KEYWORDS = [
 ]
 COLORME_PATTERN = re.compile(r"var Colorme\s*=\s*(\{.*?\});", re.DOTALL)
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
+WHITESPACE_PATTERN = re.compile(r"[\s　]+")
+TRAILING_PAREN_PATTERN = re.compile(r"[（(]([^（）()]+)[）)]\s*$")
 TENTOU_WATASHI = "【店頭お渡し】"
+
+
+def contains_keyword(title: str) -> bool:
+    # 理由: 「プレミアム ショコラ【店頭お渡し】」(空白あり)と「プレミアム
+    # ショコラ」(空白なし、宅配便版)のように、除外対象商品でも宅配便版と
+    # 店頭お渡し版で空白の有無が不揃いなことがある(実データ確認済み)。
+    # キーワード側に空白を含めなくても両方の表記を確実に検出できるよう、
+    # 判定対象の文字列は空白を完全に除去してから比較する。
+    normalized = WHITESPACE_PATTERN.sub("", title)
+    return any(kw in normalized for kw in NON_BEAN_KEYWORDS)
 
 
 def fetch_page(url: str) -> BeautifulSoup:
@@ -97,7 +124,7 @@ def extract_fields(soup: BeautifulSoup, product_url: str) -> dict | None:
     data = json.loads(m.group(1))
     product = data.get("product") or {}
     title = (product.get("name") or "").strip()
-    if not title or any(kw in title for kw in NON_BEAN_KEYWORDS):
+    if not title or contains_keyword(title):
         return None
 
     price = product.get("sales_price_including_tax") or product.get("sales_price")
@@ -110,10 +137,25 @@ def extract_fields(soup: BeautifulSoup, product_url: str) -> dict | None:
     }
 
 
+def dedup_key(title: str) -> str:
+    base_name = title.replace(TENTOU_WATASHI, "").strip()
+    # 理由: 「ペルー 有機栽培」(宅配便版)と「ペルー 有機栽培（ペルー）」
+    # (店頭お渡し版)のように、店頭お渡し版だけ末尾に産地名を括弧書きで
+    # 重複表記しているケースが実データで見つかった(【店頭お渡し】除去
+    # だけでは別銘柄と誤判定される)。末尾の括弧の中身が、それより前の
+    # 部分文字列としてすでに登場している場合に限り、その括弧を除去する
+    # (グラポス農協（メキシコ）やハワイコナ（アメリカ）のように、括弧内が
+    # 前方に出現しない正当な産地注記は除去しない)。
+    m = TRAILING_PAREN_PATTERN.search(base_name)
+    if m and m.group(1) in base_name[: m.start()]:
+        base_name = base_name[: m.start()].strip()
+    return base_name
+
+
 def pick_canonical_items(items: list[dict]) -> list[dict]:
     by_base_name: dict[str, dict] = {}
     for item in items:
-        base_name = item["title"].replace(TENTOU_WATASHI, "").strip()
+        base_name = dedup_key(item["title"])
         is_tentou = TENTOU_WATASHI in item["title"]
         existing = by_base_name.get(base_name)
         if existing is None:

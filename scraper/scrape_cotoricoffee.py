@@ -23,6 +23,16 @@ User-agent: *に対し/secure/・/cart/のみDisallow。AhrefsBot等一部
 HARIO用ペーパーフィルター・コーヒーゼリー・八菓市庭縁いせとうさんの
 クッキーがコーヒー豆単品ではないためNON_BEAN_KEYWORDSで除外する。
 商品名が空の削除済みプレースホルダーレコードも除外する。
+
+【</br>(閉じタグ形式の誤ったbrタグ)について】
+実データ確認済み(初回実行で発覚): この店のColorme JSONに埋め込まれた
+product.nameは、他店で一般的な"<br>"/"<br/>"/"<br />"ではなく、HTML的には
+誤りである閉じタグ形式"</br>"でセグメントを区切っている。当初
+`<br\s*/?>`という開きタグのみにマッチする正規表現でsplitしていたため
+1件も分割されず、"インドネシア</br>マンデリン　トバコ</br>深煎り"のように
+"</br>"がそのままraw_nameに残ってしまっていた(NON_BEAN_KEYWORDSに
+よる除外判定はキーワードが単純な部分文字列一致のため実害は無かった)。
+`</?br\s*/?>`に変更し、開き・閉じ両方の表記に対応した。
 """
 
 import json
@@ -82,7 +92,7 @@ def build_record(soup: BeautifulSoup, product_url: str) -> dict | None:
     data = json.loads(m.group(1))
     product = data.get("product") or {}
     raw = product.get("name") or ""
-    segments = [s.strip() for s in re.split(r"<br\s*/?>", raw) if s.strip()]
+    segments = [s.strip() for s in re.split(r"</?br\s*/?>", raw) if s.strip()]
     title = " ".join(segments)
     if not title or any(kw in title for kw in NON_BEAN_KEYWORDS):
         return None
