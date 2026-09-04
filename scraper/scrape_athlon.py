@@ -84,10 +84,19 @@ def extract_fields(soup: BeautifulSoup) -> dict | None:
     return {"title": title, "price": price}
 
 
+WHITESPACE_PATTERN = re.compile(r"[\s　]+")
+
+
 def pick_canonical_items(items: list[dict]) -> list[dict]:
     by_base_name: dict[str, dict] = {}
     for item in items:
         base_name = TRAILING_WEIGHT_PATTERN.sub("", item["title"]).strip()
+        # 理由: 同一銘柄の重量違い商品間で、全角/半角スペースの混在等
+        # 表記ゆれ(例:「グアテマラ　【中深煎り】」と「グアテマラ　 【中深煎り】」、
+        # 後者は全角+半角の連続スペース)があり、単純なtrailing weight除去だけでは
+        # 別の基準名として扱われ重複排除に失敗することを実データで確認済み。
+        # 内部の連続空白を単一の半角スペースに正規化してから基準名として使う。
+        base_name = WHITESPACE_PATTERN.sub(" ", base_name).strip()
         weight_m = WEIGHT_PATTERN.search(item["title"])
         weight_key = int(weight_m.group(1)) if weight_m else float("inf")
         existing = by_base_name.get(base_name)

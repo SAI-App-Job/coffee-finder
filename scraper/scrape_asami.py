@@ -61,13 +61,19 @@ REQUEST_HEADERS = {
 }
 
 NON_BEAN_KEYWORDS = [
-    "麻袋", "ショルダーバック", "トートバッグ", "水だし", "源流水",
+    "麻袋", "バック", "トートバッグ", "水だし", "源流水",
     "ドリップコーヒー", "セット", "焙煎機", "チョコ", "送料無料",
 ]
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
-TRAILING_WEIGHT_PATTERN = re.compile(
-    r"[\s　]*\d+\s*[gｇ]\s*(?:[（(]\s*\d+\s*[%％]\s*[Oo][Ff][Ff]\s*[）)])?\s*$"
-)
+# 理由はモジュールdocstring参照。重量表記の位置(焙煎度カッコの前/後)が
+# 商品によって一定しないため、末尾だけでなく文字列中のどこにあっても
+# 重量トークン・割引表記(離れた位置にあってもよい)をそれぞれ独立に
+# 取り除いてから基準名として使う(単純な末尾一致では
+# 「ブルーマウンテンNo.1ブレンド200ｇ【中煎り】」と「...500ｇ【中煎り】
+# 10%ｏｆｆ」のような重量前置・割引後置パターンを重複排除できなかった)。
+WEIGHT_TOKEN_PATTERN = re.compile(r"\d+\s*[gｇ]")
+DISCOUNT_PATTERN = re.compile(r"[（(]?\s*\d+\s*[%％]\s*[Oo][Ff][Ff]\s*[）)]?")
+WHITESPACE_PATTERN = re.compile(r"[\s　]+")
 
 
 def fetch_page(url: str) -> BeautifulSoup:
@@ -99,7 +105,9 @@ def extract_fields(soup: BeautifulSoup) -> dict | None:
 def pick_canonical_items(items: list[dict]) -> list[dict]:
     by_base_name: dict[str, dict] = {}
     for item in items:
-        base_name = TRAILING_WEIGHT_PATTERN.sub("", item["title"]).strip()
+        base_name = WEIGHT_TOKEN_PATTERN.sub("", item["title"])
+        base_name = DISCOUNT_PATTERN.sub("", base_name)
+        base_name = WHITESPACE_PATTERN.sub(" ", base_name).strip()
         weight_m = WEIGHT_PATTERN.search(item["title"])
         weight_key = int(weight_m.group(1)) if weight_m else float("inf")
         existing = by_base_name.get(base_name)
