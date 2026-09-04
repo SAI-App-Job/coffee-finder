@@ -32,10 +32,19 @@ User-agent: *に対し/secure/・/cart/のみDisallow。AhrefsBot等一部
 {...}`のproduct.variants配列に、各バリエーションの
 option1_value(重量+価格、例:「100ｇ（850円）」)・
 option2_value(挽き方、例:「豆のまま」)・option_price_including_taxが
-構造化データとして入っている。「豆のまま」のうち最小重量を代表
-バリアントとして採用する(焙煎処 縁の木・豆香房・萌季屋・豆NAKANOと
-同じColorme系JSON方式だが、重量・価格が別テーブルではなくvariants
-配列自体に含まれる点が異なる)。
+構造化データとして入っている。「豆のまま」のうち通常サイズ(お試し
+1杯分サイズを除く、後述)の最小重量を代表バリアントとして採用する
+(焙煎処 縁の木・豆香房・萌季屋・豆NAKANOと同じColorme系JSON方式だが、
+重量・価格が別テーブルではなくvariants配列自体に含まれる点が異なる)。
+
+【お試し1杯分サイズの除外について】
+実データ確認済み: 一部商品(超！スペシャルブレンド等)に「20g(お試し
+1杯分 390円)」という通常サイズ(100g/250g/500g)とは別枠の小容量
+オプションが存在し、これが最小重量のため代表バリアントに選ばれると
+実質的な単価が通常サイズの何倍にも見える不自然な表示になる
+(390円/20g ≒ 1950円/100g相当 vs 実際の100gは1680円)。
+option1_valueに「お試し」を含むオプションは候補から除外し、通常
+サイズの中から最小重量を選ぶ。
 """
 
 import json
@@ -89,6 +98,13 @@ def fetch_pid_urls() -> list[str]:
 def pick_canonical_variant(variants: list[dict]) -> dict | None:
     bean_variants = [v for v in variants if "豆のまま" in (v.get("option2_value") or "")]
     pool = bean_variants or variants
+    # 理由: 一部商品に「20g(お試し1杯分 390円)」のような1杯分お試し
+    # サイズが最小重量のオプションとして混在しており、これを代表と
+    # すると通常サイズ(100g等)よりはるかに割高な単価に見える不自然な
+    # 表示になることを実データで確認済み(超！スペシャルブレンド等)。
+    # お試しサイズは除外し、通常サイズの中から最小重量を選ぶ。
+    normal_pool = [v for v in pool if "お試し" not in (v.get("option1_value") or "")]
+    pool = normal_pool or pool
     candidates = []
     for v in pool:
         m = WEIGHT_PATTERN.search(v.get("option1_value") or "")
