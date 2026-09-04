@@ -199,6 +199,7 @@ SOURCE_FILES = {
     "エトナコーヒー": "data_etona.json",
     "きたみcoffee": "data_kitami.json",
     "アダチコーヒー": "data_adachi.json",
+    "珈琲豆のおおつか": "data_otsuka.json",
 }
 
 
