@@ -2155,5 +2155,17 @@
     "hours": null,
     "map_query": "萌季屋",
     "last_scraped_at": "2026-09-04T00:17:12.034381+00:00"
+  },
+  {
+    "name": "Eureka Coffee Roasters",
+    "url": "https://www.eureka-coffee.net/",
+    "platform": "Shopify",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-09確認。Shopify標準のrobots.txtでAllow: /、制限なし)",
+    "address": "千葉県千葉市稲毛区緑町1-8-16",
+    "prefecture": "千葉県",
+    "hours": null,
+    "map_query": "Eureka Coffee Roasters",
+    "last_scraped_at": "2026-09-04T00:19:18.137412+00:00"
   }
 ]
