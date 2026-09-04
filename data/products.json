@@ -289,12 +289,12 @@
     "price_note": null,
     "weight_g": null,
     "unit_note": null,
-    "stock_status": "販売中",
-    "out_of_stock": false,
+    "stock_status": "一時的に品切れ",
+    "out_of_stock": true,
     "decaf_process": null,
     "product_url": "https://www.adachicoffee.jp/product/9",
     "map_query": "アダチコーヒー",
-    "scraped_at": "2026-09-04T03:07:38.247658+00:00"
+    "scraped_at": "2026-09-04T03:13:32.456696+00:00"
   },
   {
     "id": "https://www.adachicoffee.jp/product/10",
