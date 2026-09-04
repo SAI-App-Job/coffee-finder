@@ -212,6 +212,14 @@ SOURCE_FILES = {
     "COFFEE GALLERY": "data_cgconline.json",
     "トレモロコーヒーロースター": "data_tremolo.json",
     "熊谷珈琲": "data_kumagai.json",
+    "298珈琲焙煎所": "data_298coffee.json",
+    "TONE UP COFFEE": "data_toneup.json",
+    "南部珈琲": "data_nanbu.json",
+    "奥久慈珈琲焙煎所ルージュノワール": "data_rougenoir.json",
+    "庭cafe焙煎所": "data_niwacafe.json",
+    "十人十豆": "data_juunintomame.json",
+    "TRIBE COFFEE": "data_tribe.json",
+    "まめぽっと": "data_mamepot.json",
 }
 
 
