@@ -123,17 +123,30 @@ def parse_price_weight(soup: BeautifulSoup, title: str) -> tuple[int | None, int
         if m:
             price = int(m.group(1).replace(",", ""))
 
-    weight_g = None
-    variation_select = soup.select_one('select[name="variationId"]')
-    if variation_select:
-        selected_option = variation_select.select_one("option[selected]") or variation_select.select_one("option")
-        if selected_option:
-            weight_g = extract_weight_g(normalize(selected_option.get_text()))
-
+    weight_g = extract_weight_g(normalize(selected_variation_text(soup)))
     if weight_g is None:
         weight_g = extract_weight_g(normalize(title))
 
     return price, weight_g
+
+
+def selected_variation_text(soup: BeautifulSoup) -> str:
+    """理由はモジュールdocstring参照。variationId(重量+挽き方)の選択UIは
+    商品によって<select><option selected>方式と、<input type="radio"
+    checked>+<label for=id>方式の2通りがあり、両方に対応する。"""
+    variation_select = soup.select_one('select[name="variationId"]')
+    if variation_select:
+        selected_option = variation_select.select_one("option[selected]") or variation_select.select_one("option")
+        if selected_option:
+            return selected_option.get_text()
+
+    checked_radio = soup.select_one('input[name="variationId"][checked]')
+    if checked_radio and checked_radio.get("id"):
+        label_el = soup.select_one(f'label[for="{checked_radio["id"]}"]')
+        if label_el:
+            return label_el.get_text()
+
+    return ""
 
 
 def build_record(url: str, soup: BeautifulSoup, raw_title: str) -> dict:
