@@ -197,6 +197,7 @@ SOURCE_FILES = {
     "MAHAMERU COFFEE": "data_mahameru.json",
     "TABEI COFFEE": "data_tabei.json",
     "エトナコーヒー": "data_etona.json",
+    "きたみcoffee": "data_kitami.json",
 }
 
 

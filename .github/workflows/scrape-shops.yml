@@ -127,6 +127,7 @@ on:
           - mahameru
           - tabei
           - etona
+          - kitami
 
 permissions:
   contents: write # data/*.json をコミット・pushするために必要
@@ -483,6 +484,9 @@ jobs:
           - id: etona
             script: scrape_etona.py
             output: data_etona.json
+          - id: kitami
+            script: scrape_kitami.py
+            output: data_kitami.json
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4 # 差分ベーススクレイピングがdata/products.jsonを参照するため必須
