@@ -120,7 +120,12 @@ def build_record(url: str, soup: BeautifulSoup) -> dict | None:
             "product_url": url,
         }
 
-    stock_status = detect_stock_status(title)
+    # 完全に在庫が無い商品はグラム数の<select>自体が非表示になり、代わりに
+    # div.detail_section.stock.soldoutに「在庫なし」と表示される(実データ
+    # 確認済み、夏ブレンドで発見。商品名自体には在庫状態を示す語が無いため、
+    # この構造化フラグが無いと販売中と誤判定してしまう)。
+    structural_out_of_stock = soup.select_one("div.detail_section.stock.soldout") is not None
+    stock_status = detect_stock_status(title, structural_out_of_stock)
 
     return {
         "shop_name": SHOP_INFO["name"],
