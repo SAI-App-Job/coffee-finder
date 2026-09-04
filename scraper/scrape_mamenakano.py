@@ -29,8 +29,12 @@ robots.txt確認済み(2026-09時点): 他のカラーミー店舗(萌季屋等)
 「COFFEE MEASURE HOUSE / beech」(コーヒーメジャーカップの色違い商品)
 のみこのパターンに偶然一致してしまうため、個別にNON_BEAN_KEYWORDSで
 除外する。商品名が空の2件(削除済み商品と推測、価格・在庫とも0)も除外。
-BEAN_PATTERNは全角スペースを含む場合があるtitleの先頭が英字である
-ことのみを見る(【】付き接頭辞は事前に取り除く)。
+BEAN_PATTERNは「英字(と半角スペース)のみが続いた後に"/"が来る」ことを
+要求する(【】付き接頭辞は事前に取り除く)。英字で始まるだけでは
+「donut coffee dripper」(スラッシュ無し)・「LIDO2 ...」(数字を含む)を
+誤って豆と判定してしまうため、スラッシュの存在を必須条件に含めることが
+重要(実データ確認済み: 初回実装時はスラッシュを要求しておらずこの
+2商品が豆として混入した)。
 
 【重量について】
 実データ確認済み: 商品詳細ページの説明表(`table.table`内、
@@ -66,7 +70,7 @@ REQUEST_HEADERS = {
 
 NON_BEAN_KEYWORDS = ["COFFEE MEASURE HOUSE"]
 BRACKET_PREFIX_PATTERN = re.compile(r"^[\s　]*(?:【[^】]*】|［[^］]*］)[\s　]*")
-BEAN_PATTERN = re.compile(r"^[A-Za-z]")
+BEAN_PATTERN = re.compile(r"^[A-Za-z][A-Za-z\s]*/")
 COLORME_PATTERN = re.compile(r"var Colorme\s*=\s*(\{.*?\});", re.DOTALL)
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
 
