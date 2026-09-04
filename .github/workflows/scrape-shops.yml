@@ -128,6 +128,7 @@ on:
           - tabei
           - etona
           - kitami
+          - adachi
 
 permissions:
   contents: write # data/*.json をコミット・pushするために必要
@@ -487,6 +488,9 @@ jobs:
           - id: kitami
             script: scrape_kitami.py
             output: data_kitami.json
+          - id: adachi
+            script: scrape_adachi.py
+            output: data_adachi.json
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4 # 差分ベーススクレイピングがdata/products.jsonを参照するため必須
