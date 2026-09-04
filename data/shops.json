@@ -2503,5 +2503,17 @@
     "hours": null,
     "map_query": "TRIBE COFFEE",
     "last_scraped_at": "2026-09-04T15:47:01.141271+00:00"
+  },
+  {
+    "name": "まめぽっと",
+    "url": "https://mamepot.com/",
+    "platform": "カラーミーショップ",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-09確認。他のカラーミー店舗と同一の記述。/secure/・/cart/のみDisallow。AhrefsBot等一部ボットを個別にDisallow: /、それ以外は制限なし)",
+    "address": "茨城県つくば市谷田部1-1",
+    "prefecture": "茨城県",
+    "hours": null,
+    "map_query": "まめぽっと",
+    "last_scraped_at": "2026-09-04T15:49:38.019584+00:00"
   }
 ]
