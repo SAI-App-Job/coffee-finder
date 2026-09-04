@@ -2515,5 +2515,17 @@
     "hours": null,
     "map_query": "まめぽっと",
     "last_scraped_at": "2026-09-04T15:49:38.019584+00:00"
+  },
+  {
+    "name": "チバコーヒー",
+    "url": "https://chibacoffee.jp/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-09確認。他のBASE系店舗と同一の記述。curl/python-requests等は個別にDisallow: /指定あり、本スクレイパーは識別可能なUser-Agentを使用)",
+    "address": "栃木県宇都宮市陽東3-8-4",
+    "prefecture": "栃木県",
+    "hours": null,
+    "map_query": "チバコーヒー",
+    "last_scraped_at": "2026-09-04T21:48:52.004929+00:00"
   }
 ]
