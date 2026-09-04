@@ -2167,5 +2167,17 @@
     "hours": null,
     "map_query": "Eureka Coffee Roasters",
     "last_scraped_at": "2026-09-04T00:19:18.137412+00:00"
+  },
+  {
+    "name": "CAMBLEM グリーン珈琲焙煎所",
+    "url": "https://camblem.co.jp/",
+    "platform": "Shopify",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-09確認。Shopify標準のrobots.txtでAllow: /、制限なし)",
+    "address": "千葉県市川市市川南1丁目(市川店)",
+    "prefecture": "千葉県",
+    "hours": null,
+    "map_query": "CAMBLEM グリーン珈琲焙煎所",
+    "last_scraped_at": "2026-09-04T00:21:11.501029+00:00"
   }
 ]
