@@ -2227,5 +2227,17 @@
     "hours": null,
     "map_query": "エトナコーヒー",
     "last_scraped_at": "2026-09-04T02:45:14.998968+00:00"
+  },
+  {
+    "name": "きたみcoffee",
+    "url": "https://kitamicoffee.com/",
+    "platform": "EC-CUBE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-09確認。robots.txt自体が存在せず404、ロリポップの汎用404ページが返るのみ)",
+    "address": "千葉県八千代市",
+    "prefecture": "千葉県",
+    "hours": null,
+    "map_query": "きたみcoffee",
+    "last_scraped_at": "2026-09-04T02:58:30.094542+00:00"
   }
 ]
