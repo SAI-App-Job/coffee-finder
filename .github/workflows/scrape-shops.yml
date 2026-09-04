@@ -150,6 +150,18 @@ on:
           - juunintomame
           - tribe
           - mamepot
+          - chibacoffee
+          - oribecoffee
+          - kametokame
+          - nakanishi
+          - mizutama
+          - nikkocoffee
+          - goridou
+          - coffeeroast
+          - ucoffee
+          - nasucoffee
+          - cotoricoffee
+          - hitsuji
 
 permissions:
   contents: write # data/*.json をコミット・pushするために必要
@@ -575,6 +587,42 @@ jobs:
           - id: mamepot
             script: scrape_mamepot.py
             output: data_mamepot.json
+          - id: chibacoffee
+            script: scrape_chibacoffee.py
+            output: data_chibacoffee.json
+          - id: oribecoffee
+            script: scrape_oribecoffee.py
+            output: data_oribecoffee.json
+          - id: kametokame
+            script: scrape_kametokame.py
+            output: data_kametokame.json
+          - id: nakanishi
+            script: scrape_nakanishi.py
+            output: data_nakanishi.json
+          - id: mizutama
+            script: scrape_mizutama.py
+            output: data_mizutama.json
+          - id: nikkocoffee
+            script: scrape_nikkocoffee.py
+            output: data_nikkocoffee.json
+          - id: goridou
+            script: scrape_goridou.py
+            output: data_goridou.json
+          - id: coffeeroast
+            script: scrape_coffeeroast.py
+            output: data_coffeeroast.json
+          - id: ucoffee
+            script: scrape_ucoffee.py
+            output: data_ucoffee.json
+          - id: nasucoffee
+            script: scrape_nasucoffee.py
+            output: data_nasucoffee.json
+          - id: cotoricoffee
+            script: scrape_cotoricoffee.py
+            output: data_cotoricoffee.json
+          - id: hitsuji
+            script: scrape_hitsuji.py
+            output: data_hitsuji.json
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4 # 差分ベーススクレイピングがdata/products.jsonを参照するため必須

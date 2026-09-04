@@ -220,6 +220,18 @@ SOURCE_FILES = {
     "十人十豆": "data_juunintomame.json",
     "TRIBE COFFEE": "data_tribe.json",
     "まめぽっと": "data_mamepot.json",
+    "チバコーヒー": "data_chibacoffee.json",
+    "織部珈琲": "data_oribecoffee.json",
+    "かめとかめ": "data_kametokame.json",
+    "中西珈琲": "data_nakanishi.json",
+    "瑞玉珈琲": "data_mizutama.json",
+    "日光珈琲": "data_nikkocoffee.json",
+    "悟理道珈琲工房": "data_goridou.json",
+    "豆工房コーヒーロースト宇都宮店": "data_coffeeroast.json",
+    "宇都宮珈琲": "data_ucoffee.json",
+    "那須珈琲 Cafe La Détente": "data_nasucoffee.json",
+    "自家焙煎珈琲コトリ": "data_cotoricoffee.json",
+    "ひつじ珈琲": "data_hitsuji.json",
 }
 
 
