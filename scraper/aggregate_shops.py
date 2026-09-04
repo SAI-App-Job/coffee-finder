@@ -186,6 +186,15 @@ SOURCE_FILES = {
     "オトメザ": "data_otomeza.json",
     "コーヒーランド": "data_coffeeland.json",
     "ゆるり珈琲": "data_yururi.json",
+    "RUMOR'S COFFEE": "data_rumors.json",
+    "ROASTER's HOUSE": "data_roastershouse.json",
+    "珈琲工房豆壱": "data_mameichi.json",
+    "Coffee Roast 焙香": "data_baika.json",
+    "萌季屋": "data_moegiya.json",
+    "Eureka Coffee Roasters": "data_eureka.json",
+    "CAMBLEM グリーン珈琲焙煎所": "data_camblem.json",
+    "SLOW COFFEE": "data_slowcoffee.json",
+    "MAHAMERU COFFEE": "data_mahameru.json",
 }
 
 

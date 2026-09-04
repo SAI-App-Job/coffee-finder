@@ -116,6 +116,15 @@ on:
           - otomeza
           - coffeeland
           - yururi
+          - rumors
+          - roastershouse
+          - mameichi
+          - baika
+          - moegiya
+          - eureka
+          - camblem
+          - slowcoffee
+          - mahameru
 
 permissions:
   contents: write # data/*.json をコミット・pushするために必要
@@ -439,6 +448,33 @@ jobs:
           - id: yururi
             script: scrape_yururi.py
             output: data_yururi.json
+          - id: rumors
+            script: scrape_rumors.py
+            output: data_rumors.json
+          - id: roastershouse
+            script: scrape_roastershouse.py
+            output: data_roastershouse.json
+          - id: mameichi
+            script: scrape_mameichi.py
+            output: data_mameichi.json
+          - id: baika
+            script: scrape_baika.py
+            output: data_baika.json
+          - id: moegiya
+            script: scrape_moegiya.py
+            output: data_moegiya.json
+          - id: eureka
+            script: scrape_eureka.py
+            output: data_eureka.json
+          - id: camblem
+            script: scrape_camblem.py
+            output: data_camblem.json
+          - id: slowcoffee
+            script: scrape_slowcoffee.py
+            output: data_slowcoffee.json
+          - id: mahameru
+            script: scrape_mahameru.py
+            output: data_mahameru.json
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4 # 差分ベーススクレイピングがdata/products.jsonを参照するため必須
