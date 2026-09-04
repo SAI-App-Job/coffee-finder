@@ -2335,5 +2335,17 @@
     "hours": null,
     "map_query": "豆わらべ",
     "last_scraped_at": "2026-09-04T13:41:22.327067+00:00"
+  },
+  {
+    "name": "しかくCOFFEE",
+    "url": "https://shikakucoffe.base.shop/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-09確認。他のBASE系店舗と同一の記述。curl/python-requests等は個別にDisallow: /指定あり、本スクレイパーは識別可能なUser-Agentを使用)",
+    "address": "埼玉県所沢市若狭1-2626-43",
+    "prefecture": "埼玉県",
+    "hours": null,
+    "map_query": "しかくCOFFEE",
+    "last_scraped_at": "2026-09-04T13:43:28.042076+00:00"
   }
 ]
