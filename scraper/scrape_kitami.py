@@ -190,7 +190,12 @@ def parse_product_detail(url: str, category_hint: str = "") -> dict:
 
     title_el = soup.select_one("title")
     raw_title = title_el.get_text(strip=True) if title_el else ""
-    title = raw_title.rsplit(" / ", 1)[-1].strip() if " / " in raw_title else raw_title
+    # 商品名自体に" / "を含む商品(例:「【2019年訪問農園 / ダークチョコレートの
+    # 余韻】...」「...200g / 500g(徳用袋)」)があり、rsplit(" / ", 1)で末尾から
+    # 分割すると商品名内の" / "で誤って切れてしまう(実データ確認済み)。
+    # 固定の目印文字列「きたみcoffee / 」以降を取ることで回避する。
+    anchor = "きたみcoffee / "
+    title = raw_title.split(anchor, 1)[-1].strip() if anchor in raw_title else raw_title
     if not title:
         return {
             "shop_name": SHOP_INFO["name"],
