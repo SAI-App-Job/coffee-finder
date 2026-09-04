@@ -18,6 +18,16 @@ robots.txt確認済み(2026-09時点): User-agent: *に対し/wp-admin/等の管
 焙煎度から括弧内の日本語表記を抽出する。価格はprices.price
 (税込・円単位の整数文字列)をそのまま使う。
 
+【焙煎度抽出のバグについて】
+実データ確認済み(初回実行で発覚): 「エチオピア　イルガチェフェG2」は
+「【焙煎度】6<br />【内容量】100g（ドリップパック：11g×5個）」のように
+焙煎度が日本語ラベル無しの数字のみで、直後に括弧が無い。HTMLタグを
+先に全て除去してから全文検索する実装だと、無関係な次の行(内容量欄)の
+括弧「（ドリップパック：11g×5個）」まで拾ってしまい、raw_nameに
+誤った文言が付与されていた。修正: <br>で区切った行単位に分割し、
+「焙煎度」を含む行の中だけで括弧を探すよう変更(見つからなければ
+焙煎度表記無しとして扱う)。
+
 【非コーヒー豆商品の除外について】
 実データ確認済み: 全80件中、答弁トートバッグ/巾着/Tシャツ/ステッカー/
 缶バッジ/マグカップ/クッキー缶/ラテボウル/グラス/キャニスター缶/
@@ -60,12 +70,28 @@ NON_BEAN_KEYWORDS = [
     "コーヒーマイスターセレクト", "アガベチタノタ", "ギフト", "ラバーバンド",
 ]
 WEIGHT_PATTERN = re.compile(r"内容量[】\]]\s*(\d+)\s*[gｇ㌘]|(\d+)\s*[kKｋＫ][gｇ]|(\d+)\s*㎏|(\d+)\s*[gｇ]")
-ROAST_PATTERN = re.compile(r"焙煎度[^（(]*[（(]([^）)]+)[）)]")
+# 理由: 「焙煎度】6<br />【内容量】100g（ドリップパック：11g×5個）」のように、
+# 焙煎度が日本語ラベル無しの数字のみで、直後に括弧が無い商品が存在する
+# (実データ確認済み、エチオピア　イルガチェフェG2)。フラットな全文検索
+# だと次の全く無関係な括弧(この例では内容量欄のもの)まで拾ってしまう
+# ため、必ず<br>で区切った「焙煎度」を含む行の中だけで括弧を探す。
+ROAST_LINE_PATTERN = re.compile(r"焙煎度[^（(]*[（(]([^）)]+)[）)]")
 HTML_TAG_PATTERN = re.compile(r"<[^>]+>")
+HTML_LINE_BREAK_PATTERN = re.compile(r"<br\s*/?>", re.IGNORECASE)
 
 
 def strip_html(text: str) -> str:
     return HTML_TAG_PATTERN.sub(" ", text or "")
+
+
+def extract_roast_text(raw_description_html: str) -> str:
+    for line in HTML_LINE_BREAK_PATTERN.split(raw_description_html or ""):
+        if "焙煎度" not in line:
+            continue
+        m = ROAST_LINE_PATTERN.search(strip_html(line))
+        if m:
+            return m.group(1).strip()
+    return ""
 
 
 def parse_weight_g(name: str, description: str) -> int | None:
@@ -88,9 +114,9 @@ def build_record(product: dict) -> dict | None:
     if not name or any(kw in name for kw in NON_BEAN_KEYWORDS):
         return None
 
-    description = strip_html(product.get("short_description") or "")
-    roast_m = ROAST_PATTERN.search(description)
-    roast_text = roast_m.group(1).strip() if roast_m else ""
+    raw_description_html = product.get("short_description") or ""
+    description = strip_html(raw_description_html)
+    roast_text = extract_roast_text(raw_description_html)
     raw_name = f"{name} {roast_text}".strip() if roast_text else name
 
     parsed = parse_product(raw_name)
