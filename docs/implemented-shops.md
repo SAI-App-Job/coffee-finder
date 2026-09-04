@@ -5,7 +5,7 @@
 `scraper/manual/shops/`配下、それ以外は`scraper/scrape_*.py`で自動取得。
 実装を見送った店舗は`docs/not-implementable-shops.md`を参照。
 
-合計135店舗・3643商品(生成日: 2026-09-04)。
+合計138店舗・3698商品(生成日: 2026-09-04)。
 
 再生成コマンド:
 ```
@@ -29,11 +29,14 @@ node scripts/gen-implemented-shops.js
 
 | 店舗名 | 所在地 | 方式 | 件数 |
 |---|---|---|---|
+| 熊谷珈琲 | さいたま市大宮区浅間町2-46 | カラーミー | 27 |
 | ALL THAT COFFEEWORKS | さいたま市大宮区土手町2-35 | BASE | 11 |
 | 柊豆 | 熊谷市船木 | BASE | 9 |
 | KiaOra COFFEE | 春日部市大沼3-123-1 | BASE | 12 |
 | しかくCOFFEE | 所沢市若狭1-2626-43 | BASE | 13 |
 | 豆わらべ | 深谷市上野台1949-3 | BASE(theshop) | 19 |
+| COFFEE GALLERY | 川越市松江町2-3-5 | BASE | 11 |
+| トレモロコーヒーロースター | 草加市草加3-8-15 | BASE | 17 |
 | 幸音珈琲 | 朝霞市本町1-10-30 | Ocnk | 9 |
 | coffee mameco | 東松山市六反町3-32 | Shopify | 10 |
 | アスロンコーヒー焙煎所 | 飯能市名栗 | Ocnk | 9 |
