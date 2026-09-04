@@ -41,7 +41,6 @@ import requests
 from bs4 import BeautifulSoup
 
 from coffee_parser import parse_product, detect_stock_status
-from previous_data import load_previous_products, is_unchanged
 
 SHOP_INFO = {
     "name": "アダチコーヒー",
@@ -152,8 +151,13 @@ def parse_product_detail(url: str) -> dict | None:
 
 
 def scrape_all_products() -> tuple[list[dict], list[dict]]:
+    """理由: 商品一覧がsitemap.xmlのURL列挙のみ(価格・在庫を含まない)で、
+    豆/非豆の判定自体が詳細ページの<title>を見ないとできないため、
+    is_unchanged()による「詳細ページ取得前のショートカット」が効かず、
+    結局全件を毎回fetchすることになる。そのため差分判定は行わず、
+    常に詳細ページから在庫状態を含めて再導出する(在庫状態が変化しても
+    確実に反映されるようにするため)。"""
     product_urls = fetch_product_urls()
-    previous = load_previous_products(SHOP_INFO["name"])
 
     records = []
     flavored_records = []
@@ -167,12 +171,6 @@ def scrape_all_products() -> tuple[list[dict], list[dict]]:
         title_el = soup.select_one("title")
         raw_title = title_el.get_text(strip=True) if title_el else ""
         if not raw_title.endswith(BEAN_LABEL):
-            continue
-
-        title = raw_title[: -len(BEAN_LABEL)].strip()
-        prev = previous.get(product_url)
-        if is_unchanged(prev, raw_name=title):
-            records.append(prev)
             continue
 
         detail = build_record(product_url, soup)
