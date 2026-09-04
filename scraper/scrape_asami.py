@@ -30,7 +30,9 @@ meta-externalagentのみ個別にDisallow: /、それ以外は制限なし。
 オリジナルブレンド等)は全く同じ商品名で複数回重複出品されている。
 商品名から末尾の重量表記(割引率の注記含む)を取り除いた基準名で
 グルーピングし、最小重量を代表として採用する(結果として完全重複も
-自然に1件へ統合される)。
+自然に1件へ統合される)。割引表記の英字が全角(「10%ｏｆｆ」等)で
+入力されている商品があるため、判定処理の前にNFKC正規化で全角英数字を
+半角に統一する。
 
 【価格・重量の取得方法について】
 実データ確認済み: 商品名に重量が明記され、価格はOGPメタタグ
@@ -38,6 +40,7 @@ meta-externalagentのみ個別にDisallow: /、それ以外は制限なし。
 """
 
 import re
+import unicodedata
 
 import requests
 from bs4 import BeautifulSoup
@@ -96,7 +99,13 @@ def extract_fields(soup: BeautifulSoup) -> dict | None:
     title_el = soup.select_one("title")
     if not title_el:
         return None
-    title = title_el.get_text(strip=True).split(" - ")[0].strip()
+    raw_title = title_el.get_text(strip=True).split(" - ")[0].strip()
+    # 理由: 「10%ｏｆｆ」のように割引表記の英字が全角(ｏｆｆ)で入力されて
+    # いる商品があり、半角のO/Fしか見ないDISCOUNT_PATTERNでは検出できず
+    # 重複排除に失敗することを実データで確認済み(ブルーマウンテンNo.1
+    # ブレンド)。NFKC正規化で全角英数字・％記号等を半角に統一してから
+    # 以降の処理に使う。
+    title = unicodedata.normalize("NFKC", raw_title)
     price_el = soup.select_one('meta[property="product:price:amount"]')
     price = int(float(price_el["content"])) if price_el and price_el.get("content") else None
     return {"title": title, "price": price}
