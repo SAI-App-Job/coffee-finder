@@ -2743,5 +2743,17 @@
     "hours": null,
     "map_query": "伊東屋珈琲",
     "last_scraped_at": "2026-09-05T14:29:32.360138+00:00"
+  },
+  {
+    "name": "ONCA COFFEE & ROASTERY 前橋店",
+    "url": "https://onca-coffee.shop/",
+    "platform": "Shopify",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-09確認。Shopify標準のrobots.txtでAllow: /、制限なし)",
+    "address": "群馬県前橋市",
+    "prefecture": "群馬県",
+    "hours": null,
+    "map_query": "ONCA COFFEE & ROASTERY 前橋店",
+    "last_scraped_at": "2026-09-05T14:31:44.560683+00:00"
   }
 ]
