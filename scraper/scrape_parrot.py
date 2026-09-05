@@ -13,7 +13,9 @@ User-agent: *に対し/secure/・/cart/のみDisallow。AhrefsBot等一部
 実データ確認済み: sitemap.xmlに個別商品(pid=)へのリンクが無く、
 カテゴリグループ(?mode=grp&gid=N)へのリンクのみが列挙されている。
 11個のカテゴリページをそれぞれ取得し、含まれるpid=を和集合で収集する
-(まめぽっとと同じ方式)。
+(まめぽっとと同じ方式)。実データ確認済み(初回実行で発覚): 11カテゴリ
+のうち1つ(gid=902924)は404を返す削除済みカテゴリだったため、個別に
+例外を捕捉してスキップし、残りのカテゴリの収集を継続するようにした。
 
 【非コーヒー豆商品の除外について】
 実データ確認済み: 全19件のうち「《送料無料》コーヒー豆 お試しセット」
@@ -67,7 +69,14 @@ def fetch_pid_urls() -> list[str]:
 
     pids: set[str] = set()
     for gid in gids:
-        cat_soup = fetch_page(f"{BASE_URL}/?mode=grp&gid={gid}")
+        try:
+            cat_soup = fetch_page(f"{BASE_URL}/?mode=grp&gid={gid}")
+        except requests.RequestException as e:
+            # 理由: sitemap.xmlに掲載されているカテゴリの中に、削除済み等で
+            # 404を返すものが実データで見つかった(gid=902924)。該当
+            # カテゴリはスキップし、残りのカテゴリの収集を継続する。
+            print(f"[warn] カテゴリページ取得失敗: gid={gid} ({e})")
+            continue
         for a in cat_soup.select('a[href*="pid="]'):
             m = re.search(r"pid=(\d+)", a.get("href", ""))
             if m:
