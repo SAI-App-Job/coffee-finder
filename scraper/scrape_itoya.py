@@ -20,6 +20,16 @@ User-agent: *に対し/secure/・/cart/のみDisallow。AhrefsBot等一部
 そのまま残す(店舗の表記をそのまま尊重、weight_gはvariants側の実測値を
 使う)。
 
+【option1/option2の順序が商品によって逆転する問題について】
+実データ確認済み(初回実行で発覚): 大半の商品はoption1_value=挽き方・
+option2_value=重量だが、「インドネシア スマトラ タケンゴン」等一部の
+商品ではoption1_value=重量・option2_value=挽き方と順序が逆になって
+いた。片方のフィールドのみを前提にすると、順序が逆の商品でweight_gが
+すべてNoneになってしまう(価格は基準価格sales_price_including_taxに
+フォールバックするため偶然100g価格と一致し、この不具合に気付き
+にくい)。修正: 「豆のまま」判定・重量抽出のいずれも両方のフィールド
+(option1_value・option2_value)を対象にするよう変更した。
+
 【非コーヒー豆商品の除外について】
 実データ確認済み: 全61件のうちリキッドコーヒー・コーヒーゼリー・
 ドリップバッグ/コーヒーバッグ(単品・アソート・ギフト箱各種)・水出し
@@ -75,14 +85,27 @@ def fetch_pid_urls() -> list[str]:
 
 
 def pick_canonical_variant(variants: list[dict]) -> dict | None:
-    bean_variants = [v for v in variants if "豆のまま" in (v.get("option1_value") or "")]
+    # 理由: option1_value/option2_valueのどちらに重量・挽き方が入るかが
+    # 商品によって逆転していることが実データで判明した(例:「インドネシア
+    # スマトラ タケンゴン」はoption1_value=重量/option2_value=挽き方だが、
+    # 「ハウスブレンド」はoption1_value=挽き方/option2_value=重量)。
+    # 固定フィールドを前提にすると一方の並びでweight_gがNoneになって
+    # しまうため、両方のフィールドを対象に「豆のまま」判定と重量抽出を
+    # 行う。
+    def is_whole_bean(v):
+        return "豆のまま" in (v.get("option1_value") or "") or "豆のまま" in (v.get("option2_value") or "")
+
+    def extract_weight(v):
+        for key in ("option1_value", "option2_value"):
+            m = WEIGHT_PATTERN.search(v.get(key) or "")
+            if m:
+                return int(m.group(1))
+        return None
+
+    bean_variants = [v for v in variants if is_whole_bean(v)]
     pool = bean_variants or variants
-    candidates = []
-    for v in pool:
-        m = WEIGHT_PATTERN.search(v.get("option2_value") or "")
-        if not m:
-            continue
-        candidates.append((int(m.group(1)), v))
+    candidates = [(extract_weight(v), v) for v in pool]
+    candidates = [(w, v) for w, v in candidates if w is not None]
     if not candidates:
         return None
     return min(candidates, key=lambda c: c[0])[1]
@@ -114,8 +137,11 @@ def build_record(soup: BeautifulSoup, product_url: str) -> dict | None:
     )
     weight_g = None
     if variant:
-        wm = WEIGHT_PATTERN.search(variant.get("option2_value") or "")
-        weight_g = int(wm.group(1)) if wm else None
+        for key in ("option1_value", "option2_value"):
+            wm = WEIGHT_PATTERN.search(variant.get(key) or "")
+            if wm:
+                weight_g = int(wm.group(1))
+                break
 
     if parsed["is_flavored"]:
         return {
