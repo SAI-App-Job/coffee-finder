@@ -232,6 +232,15 @@ SOURCE_FILES = {
     "那須珈琲 Cafe La Détente": "data_nasucoffee.json",
     "自家焙煎珈琲コトリ": "data_cotoricoffee.json",
     "ひつじ珈琲": "data_hitsuji.json",
+    "SAMURAI COFFEE": "data_samurai.json",
+    "珈琲豆屋 一豆": "data_coffee1zu.json",
+    "NORRY'S COFFEE": "data_norrys.json",
+    "語洲燈": "data_gosto.json",
+    "柏屋カフェ NAKAYOSHI COFFEE": "data_kashiwaya.json",
+    "パロットコーヒー": "data_parrot.json",
+    "伊東屋珈琲": "data_itoya.json",
+    "ONCA COFFEE & ROASTERY 前橋店": "data_onca.json",
+    "大和屋珈琲 高崎本店": "data_yamatoya.json",
 }
 
 

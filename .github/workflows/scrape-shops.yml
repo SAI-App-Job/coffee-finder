@@ -162,6 +162,15 @@ on:
           - nasucoffee
           - cotoricoffee
           - hitsuji
+          - samurai
+          - coffee1zu
+          - norrys
+          - gosto
+          - kashiwaya
+          - parrot
+          - itoya
+          - onca
+          - yamatoya
 
 permissions:
   contents: write # data/*.json をコミット・pushするために必要
@@ -623,6 +632,33 @@ jobs:
           - id: hitsuji
             script: scrape_hitsuji.py
             output: data_hitsuji.json
+          - id: samurai
+            script: scrape_samurai.py
+            output: data_samurai.json
+          - id: coffee1zu
+            script: scrape_coffee1zu.py
+            output: data_coffee1zu.json
+          - id: norrys
+            script: scrape_norrys.py
+            output: data_norrys.json
+          - id: gosto
+            script: scrape_gosto.py
+            output: data_gosto.json
+          - id: kashiwaya
+            script: scrape_kashiwaya.py
+            output: data_kashiwaya.json
+          - id: parrot
+            script: scrape_parrot.py
+            output: data_parrot.json
+          - id: itoya
+            script: scrape_itoya.py
+            output: data_itoya.json
+          - id: onca
+            script: scrape_onca.py
+            output: data_onca.json
+          - id: yamatoya
+            script: scrape_yamatoya.py
+            output: data_yamatoya.json
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4 # 差分ベーススクレイピングがdata/products.jsonを参照するため必須
