@@ -2923,5 +2923,17 @@
     "hours": null,
     "map_query": "LUXUOSO COFFEE ROASTER",
     "last_scraped_at": "2026-09-06T12:04:10.809113+00:00"
+  },
+  {
+    "name": "NIJIYA coffee",
+    "url": "https://nijiyacoffee.com/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-09確認。他のBASE系店舗と同一の記述。curl/python-requests等は個別にDisallow: /指定あり、本スクレイパーは識別可能なUser-Agentを使用)",
+    "address": "新潟県村上市小国町4-11",
+    "prefecture": "新潟県",
+    "hours": null,
+    "map_query": "NIJIYA coffee",
+    "last_scraped_at": "2026-09-06T12:06:42.769533+00:00"
   }
 ]
