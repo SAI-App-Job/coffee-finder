@@ -171,6 +171,36 @@ on:
           - itoya
           - onca
           - yamatoya
+          - iwataya
+          - lumberroom
+          - geography
+          - foretcoffee
+          - kamecoffee
+          - shigezcoffee
+          - tortoise
+          - gdn
+          - rowancoffee
+          - kazekumomame
+          - konasnow
+          - dabcoffee
+          - luxuoso
+          - nijiyain
+          - ncrs
+          - yamatokawa
+          - misawacoffee
+          - mamegen
+          - bean
+          - roastcafe
+          - santoscoffee
+          - terasakicoffee
+          - akitocoffee
+          - fuji100kka
+          - thekokubocoffee
+          - dotscoffee
+          - saikaboo
+          - mealcraft
+          - cafecoode
+          - irimameya
 
 permissions:
   contents: write # data/*.json をコミット・pushするために必要
@@ -659,6 +689,96 @@ jobs:
           - id: yamatoya
             script: scrape_yamatoya.py
             output: data_yamatoya.json
+          - id: iwataya
+            script: scrape_iwataya.py
+            output: data_iwataya.json
+          - id: lumberroom
+            script: scrape_lumberroom.py
+            output: data_lumberroom.json
+          - id: geography
+            script: scrape_geography.py
+            output: data_geography.json
+          - id: foretcoffee
+            script: scrape_foretcoffee.py
+            output: data_foretcoffee.json
+          - id: kamecoffee
+            script: scrape_kamecoffee.py
+            output: data_kamecoffee.json
+          - id: shigezcoffee
+            script: scrape_shigezcoffee.py
+            output: data_shigezcoffee.json
+          - id: tortoise
+            script: scrape_tortoise.py
+            output: data_tortoise.json
+          - id: gdn
+            script: scrape_gdn.py
+            output: data_gdn.json
+          - id: rowancoffee
+            script: scrape_rowancoffee.py
+            output: data_rowancoffee.json
+          - id: kazekumomame
+            script: scrape_kazekumomame.py
+            output: data_kazekumomame.json
+          - id: konasnow
+            script: scrape_konasnow.py
+            output: data_konasnow.json
+          - id: dabcoffee
+            script: scrape_dabcoffee.py
+            output: data_dabcoffee.json
+          - id: luxuoso
+            script: scrape_luxuoso.py
+            output: data_luxuoso.json
+          - id: nijiyain
+            script: scrape_nijiyain.py
+            output: data_nijiyain.json
+          - id: ncrs
+            script: scrape_ncrs.py
+            output: data_ncrs.json
+          - id: yamatokawa
+            script: scrape_yamatokawa.py
+            output: data_yamatokawa.json
+          - id: misawacoffee
+            script: scrape_misawacoffee.py
+            output: data_misawacoffee.json
+          - id: mamegen
+            script: scrape_mamegen.py
+            output: data_mamegen.json
+          - id: bean
+            script: scrape_bean.py
+            output: data_bean.json
+          - id: roastcafe
+            script: scrape_roastcafe.py
+            output: data_roastcafe.json
+          - id: santoscoffee
+            script: scrape_santoscoffee.py
+            output: data_santoscoffee.json
+          - id: terasakicoffee
+            script: scrape_terasakicoffee.py
+            output: data_terasakicoffee.json
+          - id: akitocoffee
+            script: scrape_akitocoffee.py
+            output: data_akitocoffee.json
+          - id: fuji100kka
+            script: scrape_fuji100kka.py
+            output: data_fuji100kka.json
+          - id: thekokubocoffee
+            script: scrape_thekokubocoffee.py
+            output: data_thekokubocoffee.json
+          - id: dotscoffee
+            script: scrape_dotscoffee.py
+            output: data_dotscoffee.json
+          - id: saikaboo
+            script: scrape_saikaboo.py
+            output: data_saikaboo.json
+          - id: mealcraft
+            script: scrape_mealcraft.py
+            output: data_mealcraft.json
+          - id: cafecoode
+            script: scrape_cafecoode.py
+            output: data_cafecoode.json
+          - id: irimameya
+            script: scrape_irimameya.py
+            output: data_irimameya.json
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4 # 差分ベーススクレイピングがdata/products.jsonを参照するため必須
