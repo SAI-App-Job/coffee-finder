@@ -60,7 +60,7 @@ REQUEST_HEADERS = {
 }
 
 NON_BEAN_KEYWORDS = ["ギフト"]
-LD_JSON_PATTERN = re.compile(r'<script type="application/ld\+json">(\[.*?\]|\{.*?\})</script>', re.DOTALL)
+LD_JSON_PATTERN = re.compile(r'<script type="application/ld\+json">(.*?)</script>', re.DOTALL)
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
 
 
