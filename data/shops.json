@@ -3079,5 +3079,17 @@
     "hours": null,
     "map_query": "dots Coffee Roasters",
     "last_scraped_at": "2026-09-06T12:42:20.819256+00:00"
+  },
+  {
+    "name": "彩香房",
+    "url": "http://saikaboo.com/",
+    "platform": "おちゃのこネット",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-09確認。User-agent: *には制限なし。GPTBot等AI系クローラーのみDisallow: /で本スクレイパーは該当しない)",
+    "address": "山梨県北杜市小淵沢町上笹尾3261-134",
+    "prefecture": "山梨県",
+    "hours": null,
+    "map_query": "彩香房",
+    "last_scraped_at": "2026-09-06T12:44:52.027738+00:00"
   }
 ]
