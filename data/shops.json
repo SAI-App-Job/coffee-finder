@@ -3031,5 +3031,17 @@
     "hours": null,
     "map_query": "TERASAKI COFFEE",
     "last_scraped_at": "2026-09-06T12:32:09.858267+00:00"
+  },
+  {
+    "name": "AKITO COFFEE",
+    "url": "https://akitocoffee.com/",
+    "platform": "Shopify",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-09確認。Shopify標準のrobots.txtでAllow: /、制限なし)",
+    "address": "山梨県甲府市武田1-1-13",
+    "prefecture": "山梨県",
+    "hours": null,
+    "map_query": "AKITO COFFEE",
+    "last_scraped_at": "2026-09-06T12:34:36.252083+00:00"
   }
 ]
