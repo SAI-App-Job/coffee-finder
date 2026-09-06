@@ -2791,5 +2791,17 @@
     "hours": null,
     "map_query": "LUMBER ROOM COFFEE",
     "last_scraped_at": "2026-09-06T11:31:40.382537+00:00"
+  },
+  {
+    "name": "ジオグラフィー",
+    "url": "https://geography.thebase.in/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-09確認。他のBASE系店舗と同一の記述。curl/python-requests等は個別にDisallow: /指定あり、本スクレイパーは識別可能なUser-Agentを使用)",
+    "address": "長野県長野市七瀬南部368-1 南部ビル1F",
+    "prefecture": "長野県",
+    "hours": null,
+    "map_query": "ジオグラフィー",
+    "last_scraped_at": "2026-09-06T11:34:46.401277+00:00"
   }
 ]
