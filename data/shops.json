@@ -3043,5 +3043,17 @@
     "hours": null,
     "map_query": "AKITO COFFEE",
     "last_scraped_at": "2026-09-06T12:34:36.252083+00:00"
+  },
+  {
+    "name": "富士山珈琲焙煎所",
+    "url": "https://fuji100kka.com/",
+    "platform": "Shopify",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-09確認。Shopify標準のrobots.txtでAllow: /、制限なし)",
+    "address": "山梨県南都留郡富士河口湖町船津3681-2",
+    "prefecture": "山梨県",
+    "hours": null,
+    "map_query": "富士山珈琲焙煎所",
+    "last_scraped_at": "2026-09-06T12:37:26.235469+00:00"
   }
 ]
