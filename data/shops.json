@@ -3019,5 +3019,17 @@
     "hours": null,
     "map_query": "SANTOS",
     "last_scraped_at": "2026-09-06T12:29:45.613722+00:00"
+  },
+  {
+    "name": "TERASAKI COFFEE",
+    "url": "https://terasakicoffee.com/",
+    "platform": "Shopify",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-09確認。Shopify標準のrobots.txtでAllow: /、制限なし)",
+    "address": "山梨県甲府市丸の内1-20-22",
+    "prefecture": "山梨県",
+    "hours": null,
+    "map_query": "TERASAKI COFFEE",
+    "last_scraped_at": "2026-09-06T12:32:09.858267+00:00"
   }
 ]
