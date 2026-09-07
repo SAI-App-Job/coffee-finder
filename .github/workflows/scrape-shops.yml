@@ -223,18 +223,13 @@ on:
           - enjoycoffee
           - fujicoffeemie
           - fukusukecoffee
-          - horicoffee
           - ichicoffee
           - igamameichi
-          - inokuchicoffee
           - ishigakicoffee
           - kariomon
           - kope
           - liaison
-          - luontocoffee
           - malkicoffee
-          - mameiri
-          - mamezocoffee
           - mantencoffee
           - meetscoffee
           - midorinoyakata
@@ -904,18 +899,12 @@ jobs:
           - id: fukusukecoffee
             script: scrape_fukusukecoffee.py
             output: data_fukusukecoffee.json
-          - id: horicoffee
-            script: scrape_horicoffee.py
-            output: data_horicoffee.json
           - id: ichicoffee
             script: scrape_ichicoffee.py
             output: data_ichicoffee.json
           - id: igamameichi
             script: scrape_igamameichi.py
             output: data_igamameichi.json
-          - id: inokuchicoffee
-            script: scrape_inokuchicoffee.py
-            output: data_inokuchicoffee.json
           - id: ishigakicoffee
             script: scrape_ishigakicoffee.py
             output: data_ishigakicoffee.json
@@ -928,18 +917,9 @@ jobs:
           - id: liaison
             script: scrape_liaison.py
             output: data_liaison.json
-          - id: luontocoffee
-            script: scrape_luontocoffee.py
-            output: data_luontocoffee.json
           - id: malkicoffee
             script: scrape_malkicoffee.py
             output: data_malkicoffee.json
-          - id: mameiri
-            script: scrape_mameiri.py
-            output: data_mameiri.json
-          - id: mamezocoffee
-            script: scrape_mamezocoffee.py
-            output: data_mamezocoffee.json
           - id: mantencoffee
             script: scrape_mantencoffee.py
             output: data_mantencoffee.json
@@ -1044,6 +1024,9 @@ jobs:
   # 内容が実行順に依存して揺れるため)。
   aggregate:
     needs: scrape
+    if: ${{ !cancelled() }} # 一部店舗のスクレイピングが失敗しても、成功した店舗の
+    # データは反映したい(aggregate_shops.py側は欠損店舗を許容する設計)。
+    # 既定のneeds依存だけだと1店舗でも失敗すると本ジョブごとskipされてしまう。
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
