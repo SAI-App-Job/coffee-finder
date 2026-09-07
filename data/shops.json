@@ -9,7 +9,7 @@
     "prefecture": "神奈川県",
     "hours": "11:00〜18:00(火・水定休)",
     "map_query": "Denim bis 川崎市",
-    "last_scraped_at": "2026-08-25T00:53:14.819662+00:00",
+    "last_scraped_at": "2026-09-07T04:10:36.816445+00:00",
     "locations": [
       {
         "label": null,
@@ -22,9 +22,7 @@
         "lat": 35.530664,
         "lng": 139.703767
       }
-    ],
-    "lat": 35.530664,
-    "lng": 139.703767
+    ]
   },
   {
     "name": "MiLL Coffee",
@@ -36,7 +34,7 @@
     "prefecture": "神奈川県",
     "hours": "10:00〜17:00(月曜定休)",
     "map_query": "MiLL Coffee 川崎市多摩区南生田",
-    "last_scraped_at": "2026-08-25T00:53:14.819662+00:00",
+    "last_scraped_at": "2026-09-07T04:10:36.816445+00:00",
     "locations": [
       {
         "label": null,
@@ -49,9 +47,7 @@
         "lat": 35.619533,
         "lng": 139.562098
       }
-    ],
-    "lat": 35.619533,
-    "lng": 139.562098
+    ]
   },
   {
     "name": "PHILOCOFFEA",
@@ -63,7 +59,7 @@
     "prefecture": "千葉県",
     "hours": "店舗により異なる",
     "map_query": "PHILOCOFFEA 千葉県",
-    "last_scraped_at": "2026-08-25T00:53:14.819662+00:00",
+    "last_scraped_at": "2026-09-07T04:10:36.816445+00:00",
     "locations": [
       {
         "label": "シャポー船橋店",
@@ -120,9 +116,7 @@
         "lat": 35.694033,
         "lng": 139.976026
       }
-    ],
-    "lat": 35.694033,
-    "lng": 139.976026
+    ]
   },
   {
     "name": "It's roasted coffee",
@@ -148,7 +142,7 @@
     "prefecture": "東京都",
     "hours": "店舗により異なる",
     "map_query": "FUGLEN COFFEE ROASTERS",
-    "last_scraped_at": "2026-08-25T00:53:14.819662+00:00",
+    "last_scraped_at": "2026-09-07T04:10:36.816445+00:00",
     "locations": [
       {
         "label": "代々木公園(本店)",
@@ -246,9 +240,7 @@
         "lat": 33.582506,
         "lng": 130.381949
       }
-    ],
-    "lat": 35.666644,
-    "lng": 139.692426
+    ]
   },
   {
     "name": "Roast Design Coffee",
@@ -260,7 +252,7 @@
     "prefecture": "神奈川県",
     "hours": "店舗により異なる",
     "map_query": "Roast Design Coffee 新百合ヶ丘",
-    "last_scraped_at": "2026-08-25T00:53:14.819662+00:00",
+    "last_scraped_at": "2026-09-07T04:10:36.816445+00:00",
     "locations": [
       {
         "label": "本店(マプレ新百合ヶ丘)",
@@ -284,9 +276,7 @@
         "lat": 35.620836,
         "lng": 139.570016
       }
-    ],
-    "lat": 35.592099,
-    "lng": 139.500189
+    ]
   },
   {
     "name": "珈琲丸",
@@ -298,7 +288,7 @@
     "prefecture": "神奈川県",
     "hours": "平日12:00-20:00、土日12:00-19:00(月曜定休)",
     "map_query": "珈琲丸 高津本店",
-    "last_scraped_at": "2026-08-25T00:53:14.819662+00:00",
+    "last_scraped_at": "2026-09-07T04:10:36.816445+00:00",
     "locations": [
       {
         "label": null,
@@ -311,9 +301,7 @@
         "lat": 35.613353,
         "lng": 139.618821
       }
-    ],
-    "lat": 35.613353,
-    "lng": 139.618821
+    ]
   },
   {
     "name": "豆コネクト",
@@ -325,7 +313,7 @@
     "prefecture": "神奈川県",
     "hours": "金・土・日 11:00-19:30",
     "map_query": "豆コネクト 武蔵小杉",
-    "last_scraped_at": "2026-08-25T00:53:14.819662+00:00",
+    "last_scraped_at": "2026-09-07T04:10:36.816445+00:00",
     "locations": [
       {
         "label": null,
@@ -338,9 +326,7 @@
         "lat": 35.577515,
         "lng": 139.657455
       }
-    ],
-    "lat": 35.577515,
-    "lng": 139.657455
+    ]
   },
   {
     "name": "楽園",
@@ -352,7 +338,7 @@
     "prefecture": "神奈川県",
     "hours": "10:00-20:00(定休日:水曜日、月末は午後から営業)",
     "map_query": "楽園 川崎市宮前区平",
-    "last_scraped_at": "2026-08-25T00:53:14.819662+00:00",
+    "last_scraped_at": "2026-09-07T04:10:36.816445+00:00",
     "locations": [
       {
         "label": null,
@@ -365,9 +351,7 @@
         "lat": 35.5989082088,
         "lng": 139.573221762
       }
-    ],
-    "lat": 35.5989082088,
-    "lng": 139.573221762
+    ]
   },
   {
     "name": "Rhizomag",
@@ -379,7 +363,7 @@
     "prefecture": "神奈川県",
     "hours": "10:00-18:00(定休日:火曜日/隔週水曜日)",
     "map_query": "Rhizomag 宿河原",
-    "last_scraped_at": "2026-08-20T14:32:26.608483+00:00",
+    "last_scraped_at": "2026-09-07T04:10:36.816445+00:00",
     "locations": [
       {
         "label": null,
@@ -392,9 +376,7 @@
         "lat": 35.615797272220284,
         "lng": 139.5862705197471
       }
-    ],
-    "lat": 35.615797272220284,
-    "lng": 139.5862705197471
+    ]
   },
   {
     "name": "THE MODERN COFFEE",
@@ -406,7 +388,7 @@
     "prefecture": "神奈川県",
     "hours": "12:00-18:00(L.O. 17:30、火曜・第2/4水曜定休)",
     "map_query": "THE MODERN COFFEE 鷺沼",
-    "last_scraped_at": "2026-08-25T00:53:14.819662+00:00",
+    "last_scraped_at": "2026-09-07T04:10:36.816445+00:00",
     "locations": [
       {
         "label": null,
@@ -419,9 +401,7 @@
         "lat": 35.57720934327819,
         "lng": 139.5714423147842
       }
-    ],
-    "lat": 35.57720934327819,
-    "lng": 139.5714423147842
+    ]
   },
   {
     "name": "シモト珈琲",
@@ -462,7 +442,7 @@
     "prefecture": "神奈川県",
     "hours": "店舗により異なる",
     "map_query": "TSUKIKOYA COFFEE ROASTER 追浜",
-    "last_scraped_at": "2026-08-25T00:53:14.819662+00:00",
+    "last_scraped_at": "2026-09-07T04:10:36.816445+00:00",
     "locations": [
       {
         "label": "追浜本店",
@@ -486,9 +466,7 @@
         "lat": 35.442906,
         "lng": 139.651451
       }
-    ],
-    "lat": 35.307766,
-    "lng": 139.636748
+    ]
   },
   {
     "name": "405 COFFEE ROASTERS",
@@ -500,7 +478,7 @@
     "prefecture": "神奈川県",
     "hours": "10:00-19:00(日曜・月曜定休、不定休あり)",
     "map_query": "405 COFFEE ROASTERS 西前市場",
-    "last_scraped_at": "2026-08-25T00:53:14.819662+00:00",
+    "last_scraped_at": "2026-09-07T04:10:36.816445+00:00",
     "locations": [
       {
         "label": null,
@@ -513,9 +491,7 @@
         "lat": 35.453579,
         "lng": 139.616871
       }
-    ],
-    "lat": 35.453579,
-    "lng": 139.616871
+    ]
   },
   {
     "name": "Mameya Roastery",
@@ -527,7 +503,7 @@
     "prefecture": "神奈川県",
     "hours": "10:00-19:00(変更有り、不定休)",
     "map_query": "Mameya Roastery 伊勢佐木町",
-    "last_scraped_at": "2026-08-20T14:30:11.375269+00:00",
+    "last_scraped_at": "2026-09-07T04:10:36.816445+00:00",
     "locations": [
       {
         "label": null,
@@ -540,9 +516,7 @@
         "lat": 35.443506,
         "lng": 139.629862
       }
-    ],
-    "lat": 35.443506,
-    "lng": 139.629862
+    ]
   },
   {
     "name": "フォレスト自家焙煎コーヒー豆店",
@@ -581,7 +555,7 @@
     "prefecture": "神奈川県",
     "hours": "7:30-19:00(店舗により異なる)",
     "map_query": "NAGI COFFEE 反町",
-    "last_scraped_at": "2026-08-20T14:29:22.810739+00:00",
+    "last_scraped_at": "2026-09-07T04:10:36.816445+00:00",
     "locations": [
       {
         "label": null,
@@ -594,9 +568,7 @@
         "lat": 35.47638,
         "lng": 139.61683
       }
-    ],
-    "lat": 35.47638,
-    "lng": 139.61683
+    ]
   },
   {
     "name": "COFFEE ROASTERY MEGURO",
@@ -608,7 +580,7 @@
     "prefecture": "神奈川県",
     "hours": "店舗にお問い合わせください",
     "map_query": "COFFEE ROASTERY MEGURO 元町",
-    "last_scraped_at": "2026-08-20T14:15:43.659273+00:00",
+    "last_scraped_at": "2026-09-07T04:10:36.816445+00:00",
     "locations": [
       {
         "label": null,
@@ -621,9 +593,7 @@
         "lat": 35.442117,
         "lng": 139.650913
       }
-    ],
-    "lat": 35.442117,
-    "lng": 139.650913
+    ]
   },
   {
     "name": "TERA COFFEE and ROASTER",
@@ -635,7 +605,7 @@
     "prefecture": "神奈川県",
     "hours": "店舗により異なる",
     "map_query": "TERA COFFEE and ROASTER 大倉山",
-    "last_scraped_at": "2026-08-25T00:53:14.819662+00:00",
+    "last_scraped_at": "2026-09-07T04:10:36.816445+00:00",
     "locations": [
       {
         "label": "大倉山店",
@@ -670,9 +640,7 @@
         "lat": 35.509686,
         "lng": 139.630273
       }
-    ],
-    "lat": 35.520156,
-    "lng": 139.63125
+    ]
   },
   {
     "name": "COFFEE TERMINAL",
@@ -684,7 +652,7 @@
     "prefecture": "神奈川県",
     "hours": "9:00-18:00(日曜・第2または第3月曜定休)",
     "map_query": "COFFEE TERMINAL 葛が谷",
-    "last_scraped_at": "2026-09-01T11:40:21.274198+00:00",
+    "last_scraped_at": "2026-09-07T04:10:36.816445+00:00",
     "locations": [
       {
         "label": null,
@@ -697,9 +665,7 @@
         "lat": 35.537015,
         "lng": 139.563079
       }
-    ],
-    "lat": 35.537015,
-    "lng": 139.563079
+    ]
   },
   {
     "name": "自家焙煎星川珈琲",
@@ -711,7 +677,7 @@
     "prefecture": "神奈川県",
     "hours": "店舗にお問い合わせください",
     "map_query": "自家焙煎星川珈琲 星川",
-    "last_scraped_at": "2026-08-25T00:53:14.819662+00:00",
+    "last_scraped_at": "2026-09-07T04:10:36.816445+00:00",
     "locations": [
       {
         "label": null,
@@ -724,9 +690,7 @@
         "lat": 35.45937,
         "lng": 139.591723
       }
-    ],
-    "lat": 35.45937,
-    "lng": 139.591723
+    ]
   },
   {
     "name": "coffee roast 福田珈琲焙煎所",
@@ -767,7 +731,7 @@
     "prefecture": "神奈川県",
     "hours": "不定休",
     "map_query": "LEAFLETTER 柳町",
-    "last_scraped_at": "2026-08-19T14:10:34.808960+00:00",
+    "last_scraped_at": "2026-09-07T04:10:36.816445+00:00",
     "locations": [
       {
         "label": null,
@@ -780,9 +744,7 @@
         "lat": 35.529191,
         "lng": 139.688988
       }
-    ],
-    "lat": 35.529191,
-    "lng": 139.688988
+    ]
   },
   {
     "name": "SHIBACOFFEE",
@@ -794,7 +756,7 @@
     "prefecture": "神奈川県",
     "hours": "店舗にお問い合わせください",
     "map_query": "SHIBACOFFEE 新丸子東",
-    "last_scraped_at": "2026-08-19T14:11:53.108110+00:00",
+    "last_scraped_at": "2026-09-07T04:10:36.816445+00:00",
     "locations": [
       {
         "label": null,
@@ -807,9 +769,7 @@
         "lat": 35.577187,
         "lng": 139.661986
       }
-    ],
-    "lat": 35.577187,
-    "lng": 139.661986
+    ]
   },
   {
     "name": "Green Beans(グリーンビーンズ)",
@@ -847,7 +807,7 @@
     "prefecture": "神奈川県",
     "hours": "店舗により異なる",
     "map_query": "27 COFFEE ROASTERS 神奈川県",
-    "last_scraped_at": "2026-08-25T13:44:14.478566+00:00",
+    "last_scraped_at": "2026-09-07T04:10:36.816445+00:00",
     "locations": [
       {
         "label": "辻堂本店",
@@ -904,9 +864,7 @@
         "lat": 35.333216,
         "lng": 139.418267
       }
-    ],
-    "lat": 35.367271,
-    "lng": 139.44974
+    ]
   },
   {
     "name": "Coulane",
@@ -978,7 +936,7 @@
     "prefecture": "東京都",
     "hours": null,
     "map_query": "WOODBERRY COFFEE",
-    "last_scraped_at": "2026-09-01T00:00:55.156907+00:00",
+    "last_scraped_at": "2026-09-07T04:10:36.816445+00:00",
     "locations": [
       {
         "label": "用賀本店",
@@ -1101,9 +1059,7 @@
         "lat": 35.612363,
         "lng": 139.733682
       }
-    ],
-    "lat": 35.624007,
-    "lng": 139.632334
+    ]
   },
   {
     "name": "珈琲店トップ",
@@ -1240,7 +1196,7 @@
     "prefecture": "東京都",
     "hours": null,
     "map_query": "CAFE FACON",
-    "last_scraped_at": "2026-09-02T15:25:23.960225+00:00",
+    "last_scraped_at": "2026-09-07T04:10:36.816445+00:00",
     "locations": [
       {
         "label": "中目黒本店",
@@ -1264,9 +1220,7 @@
         "lat": 35.650732,
         "lng": 139.704675
       }
-    ],
-    "lat": 35.642801,
-    "lng": 139.693085
+    ]
   },
   {
     "name": "HIMONYA FIVE COFFEE",
@@ -3127,5 +3081,741 @@
     "hours": null,
     "map_query": "煎豆屋",
     "last_scraped_at": "2026-09-06T12:57:07.430946+00:00"
+  },
+  {
+    "name": "赤富士珈琲",
+    "url": "https://akafuji-coffee.com/",
+    "platform": "カラーミーショップ",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-09確認。他のカラーミー店舗と同一の記述。/secure/・/cart/のみDisallow。AhrefsBot等一部ボットを個別にDisallow: /、それ以外は制限なし)",
+    "address": "静岡県富士宮市北町19-7",
+    "prefecture": "静岡県",
+    "hours": null,
+    "map_query": "赤富士珈琲",
+    "last_scraped_at": "2026-09-07T04:10:36.816445+00:00"
+  },
+  {
+    "name": "Albert Coffee Roasters",
+    "url": "https://albert-coffee.com/shop/",
+    "platform": "EC-CUBE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-09確認。WordPress標準のrobots.txtで/wp-admin/等の管理系パスのみDisallow。/shop/配下は制限対象外)",
+    "address": "愛知県名古屋市西区上小田井2丁目181",
+    "prefecture": "愛知県",
+    "hours": null,
+    "map_query": "Albert Coffee Roasters",
+    "last_scraped_at": "2026-09-07T04:10:36.816445+00:00"
+  },
+  {
+    "name": "自家焙煎珈琲 アル・カファ",
+    "url": "https://www.al-qahwa.jp/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-09確認。他のBASE系店舗と同一の記述。curl/python-requests等は個別にDisallow: /指定あり、本スクレイパーは識別可能なUser-Agentを使用)",
+    "address": "愛知県岡崎市山綱町天神29-77",
+    "prefecture": "愛知県",
+    "hours": null,
+    "map_query": "自家焙煎珈琲 アル・カファ",
+    "last_scraped_at": "2026-09-07T04:10:36.816445+00:00"
+  },
+  {
+    "name": "アラビカコーヒー",
+    "url": "https://www.arabicacoffee.co.jp/",
+    "platform": "WordPress + Welcart",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-09確認。/wp-admin/等の管理系パスのみDisallow、それ以外は制限なし)",
+    "address": "静岡県駿東郡長泉町南一色186-8(本社卸部/焙煎工場。直営店は沼津・富士・御殿場・三島の4店舗)",
+    "prefecture": "静岡県",
+    "hours": null,
+    "map_query": "アラビカコーヒー",
+    "last_scraped_at": "2026-09-07T04:10:36.816445+00:00"
+  },
+  {
+    "name": "ASH COFFEE",
+    "url": "https://www.ash-coffee.jp/",
+    "platform": "独自ASP(xaas3.jp基盤、schema.org JSON-LD公開)",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-09確認。/default/error/・/preview/のみDisallow、それ以外は制限なし)",
+    "address": "静岡県掛川市上西郷1035-7",
+    "prefecture": "静岡県",
+    "hours": null,
+    "map_query": "ASH COFFEE",
+    "last_scraped_at": "2026-09-07T04:10:36.816445+00:00"
+  },
+  {
+    "name": "BASE COFFEE",
+    "url": "https://basecoffeeclassic.com/",
+    "platform": "Shopify",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-09確認。Shopify標準のrobots.txtでAllow: /、制限なし)",
+    "address": "愛知県一宮市印田通4-24",
+    "prefecture": "愛知県",
+    "hours": null,
+    "map_query": "BASE COFFEE",
+    "last_scraped_at": "2026-09-07T04:10:36.816445+00:00"
+  },
+  {
+    "name": "Buttery Coffee 名駅桜通店",
+    "url": "https://buttery-coffee.jp/",
+    "platform": "Shopify",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-09確認。Shopify標準のrobots.txtでAllow: /、制限なし)",
+    "address": "愛知県名古屋市中村区名駅2-36-20アイムビル",
+    "prefecture": "愛知県",
+    "hours": null,
+    "map_query": "Buttery Coffee 名駅桜通店",
+    "last_scraped_at": "2026-09-07T04:10:36.816445+00:00"
+  },
+  {
+    "name": "三重東洋珈琲(ミンデン)",
+    "url": "https://cafedotoyo.base.shop/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-09確認。他のBASE系店舗と同一の記述。curl/python-requests等は個別にDisallow: /指定あり、本スクレイパーは識別可能なUser-Agentを使用)",
+    "address": "三重県松阪市郷津町163-5",
+    "prefecture": "三重県",
+    "hours": null,
+    "map_query": "三重東洋珈琲(ミンデン)",
+    "last_scraped_at": "2026-09-07T04:10:36.816445+00:00"
+  },
+  {
+    "name": "caffe maco",
+    "url": "https://caffemaco.com/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-09確認。他のBASE系店舗と同一の記述。curl/python-requests等は個別にDisallow: /指定あり、本スクレイパーは識別可能なUser-Agentを使用)",
+    "address": "静岡県焼津市中里556-1",
+    "prefecture": "静岡県",
+    "hours": null,
+    "map_query": "caffe maco",
+    "last_scraped_at": "2026-09-07T04:10:36.816445+00:00"
+  },
+  {
+    "name": "COFFEE&CO.",
+    "url": "https://coffeeandco.jp/",
+    "platform": "Shopify",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-09確認。Shopify標準のrobots.txtでAllow: /、制限なし。AIエージェント向けの案内コメントを含むがDisallow指定ではなく本スクレイパーの動作に影響しない)",
+    "address": "静岡県三島市南本町8-26 Airstream",
+    "prefecture": "静岡県",
+    "hours": null,
+    "map_query": "COFFEE&CO.",
+    "last_scraped_at": "2026-09-07T04:10:36.816445+00:00"
+  },
+  {
+    "name": "珈琲家族",
+    "url": "https://coffeekazoku.thebase.in/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-09確認。他のBASE系店舗と同一の記述。curl/python-requests等は個別にDisallow: /指定あり、本スクレイパーは識別可能なUser-Agentを使用)",
+    "address": "愛知県碧南市松本町97",
+    "prefecture": "愛知県",
+    "hours": null,
+    "map_query": "珈琲家族",
+    "last_scraped_at": "2026-09-07T04:10:36.816445+00:00"
+  },
+  {
+    "name": "coffee beans & tools note",
+    "url": "https://coffeenote.shopselect.net/",
+    "platform": "BASE(ShopSelectドメイン)",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-09確認。他のBASE系店舗と同一の記述。curl/python-requests等は個別にDisallow: /指定あり、本スクレイパーは識別可能なUser-Agentを使用)",
+    "address": "愛知県名古屋市千種区東山通1-30-9",
+    "prefecture": "愛知県",
+    "hours": null,
+    "map_query": "coffee beans & tools note",
+    "last_scraped_at": "2026-09-07T04:10:36.816445+00:00"
+  },
+  {
+    "name": "コーヒーサクラ",
+    "url": "https://shop.coffeesakura.co.jp/",
+    "platform": "Shopify",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-09確認。Shopify標準のrobots.txtでAllow: /、制限なし)",
+    "address": "愛知県瀬戸市内田町2-76",
+    "prefecture": "愛知県",
+    "hours": null,
+    "map_query": "コーヒーサクラ",
+    "last_scraped_at": "2026-09-07T04:10:36.816445+00:00"
+  },
+  {
+    "name": "珈琲幸房多香",
+    "url": "https://coffee-takou.com/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-09確認。他のBASE系店舗と同一の記述。curl/python-requests等は個別にDisallow: /指定あり、本スクレイパーは識別可能なUser-Agentを使用)",
+    "address": "岐阜県大垣市東外側町1-1-5",
+    "prefecture": "岐阜県",
+    "hours": null,
+    "map_query": "珈琲幸房多香",
+    "last_scraped_at": "2026-09-07T04:10:36.816445+00:00"
+  },
+  {
+    "name": "coffee uno",
+    "url": "https://coffeeuno.theshop.jp/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-09確認。他のBASE系店舗と同一の記述。curl/python-requests等は個別にDisallow: /指定あり、本スクレイパーは識別可能なUser-Agentを使用)",
+    "address": "三重県鈴鹿市白子駅前21-1",
+    "prefecture": "三重県",
+    "hours": null,
+    "map_query": "coffee uno",
+    "last_scraped_at": "2026-09-07T04:10:36.816445+00:00"
+  },
+  {
+    "name": "○珈琲 Yu-A",
+    "url": "https://www.coffeeyu-a.net/",
+    "platform": "MakeShop",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-09確認。robots.txt自体が存在しない(404)ためDisallow指定は無い)",
+    "address": "岐阜県岐阜市柳津町丸野2-97",
+    "prefecture": "岐阜県",
+    "hours": null,
+    "map_query": "○珈琲 Yu-A",
+    "last_scraped_at": "2026-09-07T04:10:36.816445+00:00"
+  },
+  {
+    "name": "DEAI COFFEE roasters",
+    "url": "https://deaicoffee.com/",
+    "platform": "Shopify",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-09確認。Shopify標準のrobots.txtでAllow: /、制限なし)",
+    "address": "愛知県豊田市司町1-12",
+    "prefecture": "愛知県",
+    "hours": null,
+    "map_query": "DEAI COFFEE roasters",
+    "last_scraped_at": "2026-09-07T04:10:36.816445+00:00"
+  },
+  {
+    "name": "イーグルコーヒー高山",
+    "url": "https://eagle-coffee.com/",
+    "platform": "カラーミーショップ",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-09確認。他のカラーミー店舗と同一の記述。/secure/・/cart/のみDisallow。AhrefsBot等一部ボットを個別にDisallow: /、それ以外は制限なし)",
+    "address": "岐阜県高山市石浦町2丁目398番地",
+    "prefecture": "岐阜県",
+    "hours": null,
+    "map_query": "イーグルコーヒー高山",
+    "last_scraped_at": "2026-09-07T04:10:36.816445+00:00"
+  },
+  {
+    "name": "共和コーヒー店(今日は珈琲)",
+    "url": "https://www.enjoy-coffee.com/",
+    "platform": "MakeShop",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-09確認。robots.txt自体が存在しない(404)ためDisallow指定は無い)",
+    "address": "愛知県名古屋市中川区舟戸町4-21",
+    "prefecture": "愛知県",
+    "hours": null,
+    "map_query": "共和コーヒー店(今日は珈琲)",
+    "last_scraped_at": "2026-09-07T04:10:36.816445+00:00"
+  },
+  {
+    "name": "富士珈琲",
+    "url": "https://shop.fuji-coffee.co.jp/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-09確認。他のBASE系店舗と同一の記述。curl/python-requests等は個別にDisallow: /指定あり、本スクレイパーは識別可能なUser-Agentを使用)",
+    "address": "三重県津市藤方1574-5",
+    "prefecture": "三重県",
+    "hours": null,
+    "map_query": "富士珈琲",
+    "last_scraped_at": "2026-09-07T04:10:36.816445+00:00"
+  },
+  {
+    "name": "FUKUSUKE COFFEE ROASTERY",
+    "url": "https://www.fukusukecoffee.jp/",
+    "platform": "MakeShop",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-09確認。robots.txt自体が存在しない(404)ため制限なし)",
+    "address": "愛知県安城市小川町的場101-7",
+    "prefecture": "愛知県",
+    "hours": null,
+    "map_query": "FUKUSUKE COFFEE ROASTERY",
+    "last_scraped_at": "2026-09-07T04:10:36.816445+00:00"
+  },
+  {
+    "name": "ICHI COFFEE ROASTERY",
+    "url": "https://www.ichicoffee.jp/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-09確認。他のBASE系店舗と同一の記述。curl/python-requests等は個別にDisallow: /指定あり、本スクレイパーは識別可能なUser-Agentを使用)",
+    "address": "静岡県掛川市掛川1068-4",
+    "prefecture": "静岡県",
+    "hours": null,
+    "map_query": "ICHI COFFEE ROASTERY",
+    "last_scraped_at": "2026-09-07T04:10:36.816445+00:00"
+  },
+  {
+    "name": "豆一珈琲",
+    "url": "https://www.mameichi.net/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-09確認。他のBASE系店舗と同一の記述。curl/python-requests等は個別にDisallow: /指定あり、本スクレイパーは識別可能なUser-Agentを使用)",
+    "address": "三重県伊賀市阿保718-3",
+    "prefecture": "三重県",
+    "hours": null,
+    "map_query": "豆一珈琲",
+    "last_scraped_at": "2026-09-07T04:10:36.816445+00:00"
+  },
+  {
+    "name": "石垣珈琲",
+    "url": "https://ishigaki-coffee.com/",
+    "platform": "カラーミーショップ",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-09確認。他のカラーミー店舗と同一の記述。/secure/・/cart/のみDisallow。AhrefsBot等一部ボットを個別にDisallow: /、それ以外は制限なし)",
+    "address": "静岡県駿東郡清水町新宿7-1",
+    "prefecture": "静岡県",
+    "hours": null,
+    "map_query": "石垣珈琲",
+    "last_scraped_at": "2026-09-07T04:10:36.816445+00:00"
+  },
+  {
+    "name": "かりおもん",
+    "url": "https://www.kariomon.com/",
+    "platform": "EC-CUBE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-09確認。robots.txt自体が設置されておらず404が返るため、User-agent制限は一切存在しない)",
+    "address": "静岡県藤枝市音羽町3-17-3",
+    "prefecture": "静岡県",
+    "hours": null,
+    "map_query": "かりおもん",
+    "last_scraped_at": "2026-09-07T04:10:36.816445+00:00"
+  },
+  {
+    "name": "焙煎工房コペ",
+    "url": "https://coffeeroastery-kope.com/",
+    "platform": "WordPress(独自テーマ、決済のみSTORES.jp埋め込み)",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-09確認。/wp-admin/のみDisallow、本スクレイパーが使う公開商品ページは制限対象外)",
+    "address": "三重県名張市松崎町1460-4",
+    "prefecture": "三重県",
+    "hours": null,
+    "map_query": "焙煎工房コペ",
+    "last_scraped_at": "2026-09-07T04:10:36.816445+00:00"
+  },
+  {
+    "name": "ブーランジェリー エ カフェ リエゾン",
+    "url": "https://www.liaison-iga.com/",
+    "platform": "不明(独自/中小事業者向けASPカート、xaas3.jp)",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-09確認。/default/error/と/preview/のみDisallow、本スクレイパーが使うcategory/itemページは制限対象外)",
+    "address": "三重県伊賀市小田町701-1",
+    "prefecture": "三重県",
+    "hours": null,
+    "map_query": "ブーランジェリー エ カフェ リエゾン",
+    "last_scraped_at": "2026-09-07T04:10:36.816445+00:00"
+  },
+  {
+    "name": "満天珈琲",
+    "url": "https://www.manten-coffee.jp/",
+    "platform": "不明(独自/中小事業者向けASPカート、xaas3.jp。リエゾンと同一プラットフォーム)",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-09確認。/default/error/と/preview/のみDisallow、本スクレイパーが使うcategory/itemページは制限対象外)",
+    "address": "三重県四日市市北浜町1-5",
+    "prefecture": "三重県",
+    "hours": null,
+    "map_query": "満天珈琲",
+    "last_scraped_at": "2026-09-07T04:10:36.816445+00:00"
+  },
+  {
+    "name": "ミーツコーヒーロースターズ",
+    "url": "https://meetscoffee.com/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-09確認。他のBASE系店舗と同一の記述。curl/python-requests等は個別にDisallow: /指定あり、本スクレイパーは識別可能なUser-Agentを使用)",
+    "address": "岐阜県岐阜市西河渡3-78-1",
+    "prefecture": "岐阜県",
+    "hours": null,
+    "map_query": "ミーツコーヒーロースターズ",
+    "last_scraped_at": "2026-09-07T04:10:36.816445+00:00"
+  },
+  {
+    "name": "緑の館",
+    "url": "https://www.midorinoyakata.com/",
+    "platform": "おちゃのこネット",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-09確認。User-agent: *には制限なし。GPTBot等AI系クローラーのみDisallow: /で本スクレイパーは該当しない)",
+    "address": "岐阜県下呂市萩原町花池123番地",
+    "prefecture": "岐阜県",
+    "hours": null,
+    "map_query": "緑の館",
+    "last_scraped_at": "2026-09-07T04:10:36.816445+00:00"
+  },
+  {
+    "name": "自家焙煎珈琲MochaMocha",
+    "url": "https://mochamocha-coffee.com/",
+    "platform": "WordPress独自投稿タイプ(商品ページに楽うるカート(cart.raku-uru.jp)の購入フォームを埋め込み。一覧・商品情報はwp-json REST APIから取得)",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-09確認。標準的なWordPressのrobots.txt。/wp-admin/のみDisallow、admin-ajax.phpは個別にAllow)",
+    "address": "愛知県豊田市大林町12-3-6",
+    "prefecture": "愛知県",
+    "hours": null,
+    "map_query": "自家焙煎珈琲MochaMocha",
+    "last_scraped_at": "2026-09-07T04:10:36.816445+00:00"
+  },
+  {
+    "name": "MORI COFFEE",
+    "url": "https://www.moricoffee.jp/",
+    "platform": "おちゃのこネット",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-09確認。User-agent: *には制限なし。GPTBot等AI系クローラーのみDisallow: /で本スクレイパーは該当しない)",
+    "address": "三重県松阪市矢津町1586",
+    "prefecture": "三重県",
+    "hours": null,
+    "map_query": "MORI COFFEE",
+    "last_scraped_at": "2026-09-07T04:10:36.816445+00:00"
+  },
+  {
+    "name": "なごやビーンズ",
+    "url": "https://nagoyabeans.com/",
+    "platform": "カラーミーショップ",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-09確認。他のカラーミー店舗と同一の記述。/secure/・/cart/のみDisallow。AhrefsBot等一部ボットを個別にDisallow: /、それ以外は制限なし)",
+    "address": "愛知県名古屋市昭和区長池町1-13",
+    "prefecture": "愛知県",
+    "hours": null,
+    "map_query": "なごやビーンズ",
+    "last_scraped_at": "2026-09-07T04:10:36.816445+00:00"
+  },
+  {
+    "name": "なないろ珈琲",
+    "url": "https://nanairostore.thebase.in/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-09確認。他のBASE系店舗と同一の記述。curl/python-requests等は個別にDisallow: /指定あり、本スクレイパーは識別可能なUser-Agentを使用)",
+    "address": "三重県桑名市桑栄町1-2サンファーレ北館2F",
+    "prefecture": "三重県",
+    "hours": null,
+    "map_query": "なないろ珈琲",
+    "last_scraped_at": "2026-09-07T04:10:36.816445+00:00"
+  },
+  {
+    "name": "大橋珈琲",
+    "url": "https://ohashicoffee.base.shop/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-09確認。他のBASE系店舗と同一の記述。curl/python-requests等は個別にDisallow: /指定あり、本スクレイパーは識別可能なUser-Agentを使用)",
+    "address": "静岡県磐田市中泉2908-3",
+    "prefecture": "静岡県",
+    "hours": null,
+    "map_query": "大橋珈琲",
+    "last_scraped_at": "2026-09-07T04:10:36.816445+00:00"
+  },
+  {
+    "name": "オニヴァ珈琲",
+    "url": "https://shop.onyva.shop/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-09確認。他のBASE系店舗と同一の記述。curl/python-requests等は個別にDisallow: /指定あり、本スクレイパーは識別可能なUser-Agentを使用)",
+    "address": "三重県松阪市五主町1234-25",
+    "prefecture": "三重県",
+    "hours": null,
+    "map_query": "オニヴァ珈琲",
+    "last_scraped_at": "2026-09-07T04:10:36.816445+00:00"
+  },
+  {
+    "name": "パンダコーヒーロースターズ",
+    "url": "https://pandacoffee.ocnk.net/",
+    "platform": "おちゃのこネット",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-09確認。User-agent: *には制限なし。GPTBot等AI系クローラーのみDisallow: /で本スクレイパーは該当しない)",
+    "address": "愛知県名古屋市北区若鶴町235 パークサイド小川1F",
+    "prefecture": "愛知県",
+    "hours": null,
+    "map_query": "パンダコーヒーロースターズ",
+    "last_scraped_at": "2026-09-07T04:10:36.816445+00:00"
+  },
+  {
+    "name": "Q.O.L.COFFEE",
+    "url": "https://qolcoffee.com/",
+    "platform": "WooCommerce",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-09確認。/wp-admin/等の管理系パスのみDisallow。本スクレイパーが使うエンドポイントは制限対象外)",
+    "address": "愛知県名古屋市中区丸の内3-5-1",
+    "prefecture": "愛知県",
+    "hours": null,
+    "map_query": "Q.O.L.COFFEE",
+    "last_scraped_at": "2026-09-07T04:10:36.816445+00:00"
+  },
+  {
+    "name": "さかい珈琲店",
+    "url": "https://sakaicoffee.shop-pro.jp/",
+    "platform": "カラーミーショップ",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-09確認。他のカラーミー店舗と同一の記述。/secure/・/cart/のみDisallow。AhrefsBot等一部ボットを個別にDisallow: /、それ以外は制限なし)",
+    "address": "愛知県刈谷市大正町7-103",
+    "prefecture": "愛知県",
+    "hours": null,
+    "map_query": "さかい珈琲店",
+    "last_scraped_at": "2026-09-07T04:10:36.816445+00:00"
+  },
+  {
+    "name": "さくら珈琲豆店",
+    "url": "https://sakura-mame.ocnk.net/",
+    "platform": "おちゃのこネット",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-09確認。User-agent: *には制限なし。GPTBot等AI系クローラーのみDisallow: /で本スクレイパーは該当しない)",
+    "address": "愛知県名古屋市北区金城町2丁目29-3",
+    "prefecture": "愛知県",
+    "hours": null,
+    "map_query": "さくら珈琲豆店",
+    "last_scraped_at": "2026-09-07T04:10:36.816445+00:00"
+  },
+  {
+    "name": "シロネコ",
+    "url": "https://shironekocoffee.com/",
+    "platform": "カラーミーショップ",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-09確認。他のカラーミー店舗と同一の記述。/secure/・/cart/のみDisallow。AhrefsBot等一部ボットを個別にDisallow: /、それ以外は制限なし)",
+    "address": "静岡県榛原郡吉田町住吉188-1",
+    "prefecture": "静岡県",
+    "hours": null,
+    "map_query": "シロネコ",
+    "last_scraped_at": "2026-09-07T04:10:36.816445+00:00"
+  },
+  {
+    "name": "喫茶スロース",
+    "url": "https://slothcoffee.jp/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-09確認。他のBASE系店舗と同一の記述。curl/python-requests等は個別にDisallow: /指定あり、本スクレイパーは識別可能なUser-Agentを使用)",
+    "address": "愛知県蒲郡市神明町９番１４号 市川ビル１F",
+    "prefecture": "愛知県",
+    "hours": null,
+    "map_query": "喫茶スロース",
+    "last_scraped_at": "2026-09-07T04:10:36.816445+00:00"
+  },
+  {
+    "name": "スペシャルティコーヒー蒼～soh～",
+    "url": "https://soh-coffee.com/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-09確認。他のBASE系店舗と同一の記述。curl/python-requests等は個別にDisallow: /指定あり、本スクレイパーは識別可能なUser-Agentを使用)",
+    "address": "愛知県豊川市本野ケ原1-35",
+    "prefecture": "愛知県",
+    "hours": null,
+    "map_query": "スペシャルティコーヒー蒼～soh～",
+    "last_scraped_at": "2026-09-07T04:10:36.816445+00:00"
+  },
+  {
+    "name": "スギコーヒーロースティング",
+    "url": "https://sugicoffee.com/",
+    "platform": "カラーミーショップ",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-09確認。他のカラーミー店舗と同一の記述。/secure/・/cart/のみDisallow。AhrefsBot等一部ボットを個別にDisallow: /、それ以外は制限なし)",
+    "address": "愛知県高浜市湯山町5-2-3",
+    "prefecture": "愛知県",
+    "hours": null,
+    "map_query": "スギコーヒーロースティング",
+    "last_scraped_at": "2026-09-07T04:10:36.816445+00:00"
+  },
+  {
+    "name": "珈琲焙煎すずむし",
+    "url": "https://coffee42.base.shop/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-09確認。他のBASE系店舗と同一の記述。curl/python-requests等は個別にDisallow: /指定あり、本スクレイパーは識別可能なUser-Agentを使用)",
+    "address": "三重県津市鳥居町263",
+    "prefecture": "三重県",
+    "hours": null,
+    "map_query": "珈琲焙煎すずむし",
+    "last_scraped_at": "2026-09-07T04:10:36.816445+00:00"
+  },
+  {
+    "name": "タタズミ珈琲焙煎場",
+    "url": "https://tatazumi.com/",
+    "platform": "Shopify",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-09確認。Shopify標準のrobots.txtでAllow: /、制限なし)",
+    "address": "静岡県浜松市中区助信町5-37",
+    "prefecture": "静岡県",
+    "hours": null,
+    "map_query": "タタズミ珈琲焙煎場",
+    "last_scraped_at": "2026-09-07T04:10:36.816445+00:00"
+  },
+  {
+    "name": "て〜る珈琲",
+    "url": "https://terucoffee.theshop.jp/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-09確認。他のBASE系店舗と同一の記述。curl/python-requests等は個別にDisallow: /指定あり、本スクレイパーは識別可能なUser-Agentを使用)",
+    "address": "岐阜県恵那市大井町836番地",
+    "prefecture": "岐阜県",
+    "hours": null,
+    "map_query": "て〜る珈琲",
+    "last_scraped_at": "2026-09-07T04:10:36.816445+00:00"
+  },
+  {
+    "name": "TRUNK COFFEE",
+    "url": "https://trunkcoffee.thebase.in/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-09確認。他のBASE系店舗と同一の記述。curl/python-requests等は個別にDisallow: /指定あり、本スクレイパーは識別可能なUser-Agentを使用)",
+    "address": "愛知県名古屋市東区泉2-28-24 東和高岳ビル1F",
+    "prefecture": "愛知県",
+    "hours": null,
+    "map_query": "TRUNK COFFEE",
+    "last_scraped_at": "2026-09-07T04:10:36.816445+00:00"
+  },
+  {
+    "name": "くれあーる",
+    "url": "https://uchidacoffee.com/",
+    "platform": "カラーミーショップ",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-09確認。他のカラーミー店舗と同一の記述。/secure/・/cart/のみDisallow。AhrefsBot等一部ボットを個別にDisallow: /、それ以外は制限なし)",
+    "address": "静岡県静岡市駿河区八幡3-5-4",
+    "prefecture": "静岡県",
+    "hours": null,
+    "map_query": "くれあーる",
+    "last_scraped_at": "2026-09-07T04:10:36.816445+00:00"
+  },
+  {
+    "name": "ヴァンキコーヒーロースター",
+    "url": "https://vankicoffee.com/",
+    "platform": "カラーミーショップ",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-09確認。他のカラーミー店舗と同一の記述。/secure/・/cart/のみDisallow。AhrefsBot等一部ボットを個別にDisallow: /、それ以外は制限なし)",
+    "address": "愛知県名古屋市天白区池場4-110",
+    "prefecture": "愛知県",
+    "hours": null,
+    "map_query": "ヴァンキコーヒーロースター",
+    "last_scraped_at": "2026-09-07T04:10:36.816445+00:00"
+  },
+  {
+    "name": "YAJIMA COFFEE",
+    "url": "http://yajimacoffee.jp/",
+    "platform": "カラーミーショップ",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-09確認。他のカラーミー店舗と同一の記述。/secure/・/cart/のみDisallow。AhrefsBot等一部ボットを個別にDisallow: /、それ以外は制限なし)",
+    "address": "岐阜県岐阜市大宮町1-8",
+    "prefecture": "岐阜県",
+    "hours": null,
+    "map_query": "YAJIMA COFFEE",
+    "last_scraped_at": "2026-09-07T04:10:36.816445+00:00"
+  },
+  {
+    "name": "山田珈琲",
+    "url": "https://www.yamadacoffee.com/",
+    "platform": "おちゃのこネット",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-09確認。User-agent: *には制限なし。GPTBot等AI系クローラーのみDisallow: /で本スクレイパーは該当しない)",
+    "address": "岐阜県岐阜市福光東1-25-3",
+    "prefecture": "岐阜県",
+    "hours": null,
+    "map_query": "山田珈琲",
+    "last_scraped_at": "2026-09-07T04:10:36.816445+00:00"
+  },
+  {
+    "name": "焙煎堂",
+    "url": "https://baisendou.com/",
+    "instagram_url": null,
+    "platform": "手動入力(公式サイトはあるが通販機能なし、現金払いのみの店頭販売のみ)",
+    "shop_type": "single_location",
+    "address": "静岡県静岡市駿河区稲川3-2-25",
+    "prefecture": "静岡県",
+    "hours": "火〜土 12:00-18:00(日・月・祝定休)",
+    "map_query": "焙煎堂 静岡市駿河区稲川3-2-25",
+    "data_source": "manual",
+    "source_note": "公式サイト(https://baisendou.com/、商品紹介ページhttps://baisendou.com/itemlist.html)を直接確認して入力(2026-09)。サイトには「クレジットカード・電子マネー非対応、現金払いのみ」との明記があり、ショッピングカート等の通販機能は存在しない店頭販売専業。商品紹介ページには産地・農園・精選方法・焙煎度の説明はあるが、価格は一切掲載されていないためpriceはすべてnull(重量も明記なしのためweightGもnull)。トップページの「今後、農園が変更になる予定の商品」というお知らせ(インドネシアマンデリンの農園変更予定、エチオピア・イルガチェフェがコチョレ農園からIdido農園に変更済み、タンザニア・キリマンジャロがエーデルワイス農園からスノートップ・ブルカ農園に変更済み)を踏まえ、商品紹介ページに実際に掲載されている現行の農園名を採用した。",
+    "last_verified_at": "2026-09-07"
+  },
+  {
+    "name": "珈琲家",
+    "url": "https://coffeeya.jimdofree.com/",
+    "instagram_url": "https://www.instagram.com/yakitatecoffeemame/",
+    "platform": "手動入力(Jimdo製サイトに商品メニューページはあるが通販カート機能なし)",
+    "shop_type": "multi_location",
+    "address": "三重県四日市市北山町1261(焙煎工房・本店)、西浦2-3-8(西浦店)",
+    "prefecture": "三重県",
+    "hours": "不明(公式サイトに記載なし)",
+    "map_query": "珈琲家 三重県四日市市北山町1261",
+    "data_source": "manual",
+    "source_note": "公式サイト(Jimdo)の商品のご案内ページ(ブレンドコーヒー豆・ストレートコーヒー豆)を目視確認して入力。100gあたりの価格表記のみでオンライン注文フォームは無いため店頭販売価格として扱う。パナマ・ゲイシャ(年末限定)とコピ ルアックの紹介ページには価格表記が無かったため未収録。",
+    "last_verified_at": "2026-09-06"
+  },
+  {
+    "name": "イヅツヤ",
+    "url": "https://izutsuya-mame.com/",
+    "instagram_url": null,
+    "platform": "手動入力(公式サイトに通販ページ「豆のご注文」はあるがオンライン決済カートは無く、電話/FAX/メールでの注文のみ)",
+    "shop_type": "single_location",
+    "address": "愛知県名古屋市瑞穂区日向町2-29-1",
+    "prefecture": "愛知県",
+    "hours": "AM10:00〜PM5:00(月・火定休)",
+    "map_query": "イヅツヤ 名古屋市瑞穂区日向町2-29-1",
+    "data_source": "manual",
+    "source_note": "公式サイト(https://izutsuya-mame.com/)の「豆のご注文」ページ(/shop/、季節のおすすめブレンド一覧)・各ブレンド詳細ページ(/shop/item.php?id=01〜06、Shift_JISエンコード)・「店舗案内」ページ(/about/)を直接確認して入力(2026-09)。「豆のご注文」ページ自体にオンライン決済のショッピングカート機能は無く、注文フォーム(お問い合わせフォーム)経由での電話/FAX/メール注文のみのため、価格・重量の掲載が無い(全商品price/weightGはnull)。候補リスト作成時の下調べで「公式サイトと第三者情報源との間で町名(chome)表記に食い違いがある」との指摘があったが、公式サイト「店舗案内」ページに明記されている住所(〒467-0047 名古屋市瑞穂区日向町2-29-1)を正とし採用した。「水出しアイスコーヒー（2ヶ入）」は瓶/パック入りの完成品または抽出パック形式のため、他店の抽出用パック商品と同様の理由で掲載を見送った(焙煎豆単品ではないため)。",
+    "last_verified_at": "2026-09-07"
+  },
+  {
+    "name": "珈琲豆自家焙煎店 開化珈琲",
+    "url": "https://kaikacoffee.com/",
+    "instagram_url": null,
+    "platform": "公式サイトあり(kaikacoffee.com)だが「※通信販売は行っておりません」と明記されており、通信販売非対応・店頭量り売り専門店",
+    "shop_type": "single_location",
+    "address": "岐阜県関市倉知3261-1",
+    "prefecture": "岐阜県",
+    "hours": "9:30〜18:30(定休日: 月曜日・火曜日)",
+    "map_query": "開化珈琲 岐阜県関市倉知3261-1",
+    "data_source": "manual",
+    "source_note": "岐阜県関市の自家焙煎コーヒー豆量り売り専門店(通信販売は行っていないと公式サイトに明記)。トップページのLINEUP(取扱商品)セクションに「20種類の豆と、今月のブレンドをご用意」とあり、代表12銘柄(産地国+品種・農園・精選方法等の識別名)が商品名として掲載されている。焙煎豆は200グラムから、生豆は500グラムからの量り売りのため固定の内容量・単価の記載はなく、price/weightGは不明としてnullにしている。",
+    "last_verified_at": "2026-09-07"
+  },
+  {
+    "name": "唐良里(からり)",
+    "url": "https://karari.crayonsite.net/",
+    "instagram_url": "https://www.instagram.com/kararinnmaru",
+    "platform": "手動入力(公式サイトはあるが通販機能なし、ご注文いただいてから焙煎する店頭/電話注文制)",
+    "shop_type": "single_location",
+    "address": "静岡県三島市加茂川町4115-6",
+    "prefecture": "静岡県",
+    "hours": "10:00-17:00(水曜のみ12:00開店、土日は出店等で不定休の場合あり、詳細はInstagram参照)",
+    "map_query": "唐良里 静岡県三島市加茂川町4115-6",
+    "data_source": "manual",
+    "source_note": "公式サイト(crayonsite.netの無料ホームページ作成サービスで構築、通販カート機能なし)の商品ページ(https://karari.crayonsite.net/p/2/)を直接確認して入力(2026-09)。「焙煎は200グラムからお願いします、ご注文いただいてから焙煎します」との案内があり、焙煎度(ミディアム/ハイ・シティー/フルシティ/フレンチ/イタリアン)は注文時に選べる方式のため商品ごとの固定roastは無い(roastは全件null)。価格・重量は商品ページに一切掲載されていないためprice/weightGはすべてnull。",
+    "last_verified_at": "2026-09-07"
+  },
+  {
+    "name": "自家焙煎珈琲工房Perigord",
+    "url": "https://perigord-coffee.com/shop/",
+    "instagram_url": null,
+    "platform": "公式サイトあり(perigord-coffee.com)、「こだわりのコーヒー」ページ(/coffee/)に全商品の重量別価格が明記されているが、注文フォーム・カート機能は無くテイクアウト専門店のため店頭でのみ購入可能",
+    "shop_type": "single_location",
+    "address": "岐阜県下呂市森1075-3",
+    "prefecture": "岐阜県",
+    "hours": "9:00〜19:00(定休日: 火曜日)",
+    "map_query": "自家焙煎珈琲工房Perigord 岐阜県下呂市森1075-3",
+    "data_source": "manual",
+    "source_note": "下呂温泉のテイクアウト専門自家焙煎コーヒー店。公式サイトの「こだわりのコーヒー」ページ(perigord-coffee.com/coffee/)にオリジナルブレンド5種・スペシャリティーコーヒー1種・プレミアムコーヒー2種・その他(カフェインレス)1種、計9銘柄の商品名・焙煎度・苦味/酸味/甘味/コクの評価・100g/200g/500gの重量別価格(税込)が明記されている。カート機能は無く店頭でのみ購入可能。ドリップパック(3Pac/5Pac/20Pac、器具的な加工品)は対象外とした。本プロジェクトの重量違い重複ルール(最小重量を代表として採用)に従い、各銘柄100gを代表として登録している。",
+    "last_verified_at": "2026-09-07"
+  },
+  {
+    "name": "珈琲工房ポエム",
+    "url": "https://www.poemcoffee.com/",
+    "instagram_url": "https://www.instagram.com/poemcoffee_nishio_anjou/",
+    "platform": "手動入力(公式サイト(poemcoffee.com、Jimdo製の姉妹サイトpoemcoffee.jimdofree.comあり)に商品メニュー画像はあるが通販カート機能なし、店頭販売のみ)",
+    "shop_type": "multi_location",
+    "address": "愛知県安城市弁天町1の12 弁天ビル1階(安城店)、愛知県西尾市西浅井町郷西田124の2(西尾店)",
+    "prefecture": "愛知県",
+    "hours": "11:00-19:00(両店とも)",
+    "map_query": "珈琲工房ポエム 安城市弁天町1の12",
+    "data_source": "manual",
+    "source_note": "公式サイトpoemcoffee.com掲載のメニュー画像(https://www.poemcoffee.com/jpeg/menu202508.22N.jpg、ファイル名から2025年8月更新分と推定)を目視確認して入力(2026-09)。事前情報では安城店「安城市栄町1-12」・西尾店「西尾市桜町南土佐124-2」と伝えられていたが、公式サイト(Jimdo版poemcoffee.jimdofree.com「安城店の紹介」「西尾店の紹介」ページ)の一次情報で確認したところ実際の住所は安城店「安城市弁天町1の12 弁天ビル1階」・西尾店「西尾市西浅井町郷西田124の2」であったため、一次情報を優先し本ファイルではこちらを採用した。メニュー画像は低解像度(512x728px)のため、ブラジル・ケニアの商品名脇に付く小さな産地グレード表記の一部が判読しきれておらず、raw_nameは判読できた範囲のみを採用している。グアテマラ(Victory SHB Fancy)は画像内で価格欄に「販売休止」の赤いスタンプが重なっており価格が読み取れないため、一時的に品切れ扱いとしpriceはnullとした。全商品200g・税込価格。",
+    "last_verified_at": "2026-09-07"
+  },
+  {
+    "name": "内田珈琲店",
+    "url": "https://uchida-coffee.x0.com/",
+    "instagram_url": null,
+    "platform": "手動入力(公式サイトはあるが通販カート機能なし、店頭販売のみ)",
+    "shop_type": "single_location",
+    "address": "愛知県蒲郡市旭町23-9(蒲郡市役所北)",
+    "prefecture": "愛知県",
+    "hours": "10:00-19:00(サンドウィッチは12:00〜)、定休日:火曜日・第1月曜日",
+    "map_query": "内田珈琲店 愛知県蒲郡市旭町23-9",
+    "data_source": "manual",
+    "source_note": "公式サイト(https://uchida-coffee.x0.com/menu、/coffee)を目視確認して入力(2026-09)。/menuページのTake Out欄に「炭火焙煎珈琲豆（100g）￥780」という単一の持ち帰り豆商品のみが掲載されており、産地・銘柄別の個別価格は明記されていない(店の看板である炭火焙煎の自家ブレンドと推定されるが、明示的に「ブレンド」表記があるわけではない)。/coffeeページには「期間限定・世界の珈琲」としてキニニ(ルワンダ)・エーデルワイスAAウォッシュド(タンザニア)・グレードマウンテン(エクアドル)等、月替わりの産地限定豆が紹介されているが、これらは店内でのドリップ提供が主眼のブログ的ページで、テイクアウト用の豆売り価格は一切記載されていないため、商品としては採用しなかった(将来、店頭で価格を確認できれば追加余地あり)。",
+    "last_verified_at": "2026-09-07"
   }
 ]
