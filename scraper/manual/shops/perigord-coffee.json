@@ -28,7 +28,7 @@
       "price": 820,
       "weightG": 100,
       "stockStatus": "販売中",
-      "productUrl": "https://perigord-coffee.com/coffee/",
+      "productUrl": null,
       "data_source": "manual"
     },
     {
@@ -43,7 +43,7 @@
       "price": 720,
       "weightG": 100,
       "stockStatus": "販売中",
-      "productUrl": "https://perigord-coffee.com/coffee/",
+      "productUrl": null,
       "data_source": "manual"
     },
     {
@@ -58,7 +58,7 @@
       "price": 720,
       "weightG": 100,
       "stockStatus": "販売中",
-      "productUrl": "https://perigord-coffee.com/coffee/",
+      "productUrl": null,
       "data_source": "manual",
       "source_note": "ブレンドのためoriginCountryは未設定(エチオピア豆がメインという記載はあるが単一産地とは特定できない)"
     },
@@ -74,7 +74,7 @@
       "price": 720,
       "weightG": 100,
       "stockStatus": "販売中",
-      "productUrl": "https://perigord-coffee.com/coffee/",
+      "productUrl": null,
       "data_source": "manual"
     },
     {
@@ -89,7 +89,7 @@
       "price": 720,
       "weightG": 100,
       "stockStatus": "販売中",
-      "productUrl": "https://perigord-coffee.com/coffee/",
+      "productUrl": null,
       "data_source": "manual",
       "source_note": "ブレンドのためoriginCountryは未設定(マンデリンがメインという記載はあるが単一産地とは特定できない)"
     },
@@ -105,7 +105,7 @@
       "price": 780,
       "weightG": 100,
       "stockStatus": "販売中",
-      "productUrl": "https://perigord-coffee.com/coffee/",
+      "productUrl": null,
       "data_source": "manual"
     },
     {
@@ -120,7 +120,7 @@
       "price": 730,
       "weightG": 100,
       "stockStatus": "販売中",
-      "productUrl": "https://perigord-coffee.com/coffee/",
+      "productUrl": null,
       "data_source": "manual"
     },
     {
@@ -135,7 +135,7 @@
       "price": 730,
       "weightG": 100,
       "stockStatus": "販売中",
-      "productUrl": "https://perigord-coffee.com/coffee/",
+      "productUrl": null,
       "data_source": "manual"
     },
     {
@@ -150,7 +150,7 @@
       "price": 770,
       "weightG": 100,
       "stockStatus": "販売中",
-      "productUrl": "https://perigord-coffee.com/coffee/",
+      "productUrl": null,
       "data_source": "manual",
       "source_note": "デカフェ除去方式(スイスウォーター式等)の明記は無いため decafProcess は null"
     }
