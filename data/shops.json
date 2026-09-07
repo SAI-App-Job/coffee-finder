@@ -3829,5 +3829,17 @@
     "hours": null,
     "map_query": "珈琲豆屋ぽらいと",
     "last_scraped_at": "2026-09-07T04:22:00.933446+00:00"
+  },
+  {
+    "name": "自家焙煎珈琲丸喜",
+    "url": "https://www.shop.malki-coffee.com/",
+    "platform": "EC-CUBE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-09確認。User-agent: *に対し*.csv$のみDisallow。本スクレイパーが使う商品ページは制限対象外)",
+    "address": "愛知県半田市春日町2-18",
+    "prefecture": "愛知県",
+    "hours": null,
+    "map_query": "自家焙煎珈琲丸喜",
+    "last_scraped_at": "2026-09-07T04:25:20.895513+00:00"
   }
 ]
