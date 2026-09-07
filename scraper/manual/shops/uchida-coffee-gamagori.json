@@ -1,0 +1,35 @@
+{
+  "shop": {
+    "id": "uchida-coffee-gamagori",
+    "name": "内田珈琲店",
+    "url": "https://uchida-coffee.x0.com/",
+    "instagram_url": null,
+    "google_maps_query": "内田珈琲店 愛知県蒲郡市旭町23-9",
+    "address": "愛知県蒲郡市旭町23-9(蒲郡市役所北)",
+    "prefecture": "愛知県",
+    "tel": "0533-69-4346",
+    "hours": "10:00-19:00(サンドウィッチは12:00〜)、定休日:火曜日・第1月曜日",
+    "platform": "手動入力(公式サイトはあるが通販カート機能なし、店頭販売のみ)",
+    "shop_type": "single_location",
+    "data_source": "manual",
+    "source_note": "公式サイト(https://uchida-coffee.x0.com/menu、/coffee)を目視確認して入力(2026-09)。/menuページのTake Out欄に「炭火焙煎珈琲豆（100g）￥780」という単一の持ち帰り豆商品のみが掲載されており、産地・銘柄別の個別価格は明記されていない(店の看板である炭火焙煎の自家ブレンドと推定されるが、明示的に「ブレンド」表記があるわけではない)。/coffeeページには「期間限定・世界の珈琲」としてキニニ(ルワンダ)・エーデルワイスAAウォッシュド(タンザニア)・グレードマウンテン(エクアドル)等、月替わりの産地限定豆が紹介されているが、これらは店内でのドリップ提供が主眼のブログ的ページで、テイクアウト用の豆売り価格は一切記載されていないため、商品としては採用しなかった(将来、店頭で価格を確認できれば追加余地あり)。",
+    "last_verified_at": "2026-09-07"
+  },
+  "products": [
+    {
+      "raw_name": "炭火焙煎珈琲豆",
+      "category": "ブレンド",
+      "originCountry": null,
+      "processingMethod": null,
+      "roast": null,
+      "flavorNotes": null,
+      "farmNote": "炭火焙煎が看板の内田珈琲店のテイクアウト用コーヒー豆。産地・銘柄別の明記はなく単一商品としてのみ販売されている",
+      "decafProcess": null,
+      "price": 780,
+      "weightG": 100,
+      "stockStatus": "販売中",
+      "productUrl": "https://uchida-coffee.x0.com/menu",
+      "data_source": "manual"
+    }
+  ]
+}

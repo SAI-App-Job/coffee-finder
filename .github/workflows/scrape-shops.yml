@@ -201,6 +201,65 @@ on:
           - mealcraft
           - cafecoode
           - irimameya
+          - akafujicoffee
+          - albertcoffee
+          - alqahwa
+          - arabicacoffee
+          - ashcoffee
+          - basecoffeeclassic
+          - butterycoffee
+          - cafedotoyo
+          - caffemaco
+          - coffeeandco
+          - coffeekazoku
+          - coffeenote
+          - coffeepolite
+          - coffeesakura
+          - coffeetakou
+          - coffeeuno
+          - coffeeyua
+          - deaicoffee
+          - eaglecoffee
+          - enjoycoffee
+          - fujicoffeemie
+          - fukusukecoffee
+          - horicoffee
+          - ichicoffee
+          - igamameichi
+          - inokuchicoffee
+          - ishigakicoffee
+          - kariomon
+          - kope
+          - liaison
+          - luontocoffee
+          - malkicoffee
+          - mameiri
+          - mamezocoffee
+          - mantencoffee
+          - meetscoffee
+          - midorinoyakata
+          - mochamocha
+          - moricoffee
+          - nagoyabeans
+          - nanairocoffee
+          - ohashicoffee
+          - onyva
+          - pandacoffee
+          - qolcoffee
+          - sakaicoffee
+          - sakuramame
+          - shironekocoffee
+          - slothcoffee
+          - sohcoffee
+          - sugicoffee
+          - suzumushi
+          - tatazumi
+          - terucoffee
+          - trunkcoffee
+          - uchidacoffee
+          - vankicoffee
+          - yajimacoffee
+          - yamadacoffee
 
 permissions:
   contents: write # data/*.json をコミット・pushするために必要
@@ -779,6 +838,183 @@ jobs:
           - id: irimameya
             script: scrape_irimameya.py
             output: data_irimameya.json
+          - id: akafujicoffee
+            script: scrape_akafujicoffee.py
+            output: data_akafujicoffee.json
+          - id: albertcoffee
+            script: scrape_albertcoffee.py
+            output: data_albertcoffee.json
+          - id: alqahwa
+            script: scrape_alqahwa.py
+            output: data_alqahwa.json
+          - id: arabicacoffee
+            script: scrape_arabicacoffee.py
+            output: data_arabicacoffee.json
+          - id: ashcoffee
+            script: scrape_ashcoffee.py
+            output: data_ashcoffee.json
+          - id: basecoffeeclassic
+            script: scrape_basecoffeeclassic.py
+            output: data_basecoffeeclassic.json
+          - id: butterycoffee
+            script: scrape_butterycoffee.py
+            output: data_butterycoffee.json
+          - id: cafedotoyo
+            script: scrape_cafedotoyo.py
+            output: data_cafedotoyo.json
+          - id: caffemaco
+            script: scrape_caffemaco.py
+            output: data_caffemaco.json
+          - id: coffeeandco
+            script: scrape_coffeeandco.py
+            output: data_coffeeandco.json
+          - id: coffeekazoku
+            script: scrape_coffeekazoku.py
+            output: data_coffeekazoku.json
+          - id: coffeenote
+            script: scrape_coffeenote.py
+            output: data_coffeenote.json
+          - id: coffeepolite
+            script: scrape_coffeepolite.py
+            output: data_coffeepolite.json
+          - id: coffeesakura
+            script: scrape_coffeesakura.py
+            output: data_coffeesakura.json
+          - id: coffeetakou
+            script: scrape_coffeetakou.py
+            output: data_coffeetakou.json
+          - id: coffeeuno
+            script: scrape_coffeeuno.py
+            output: data_coffeeuno.json
+          - id: coffeeyua
+            script: scrape_coffeeyua.py
+            output: data_coffeeyua.json
+          - id: deaicoffee
+            script: scrape_deaicoffee.py
+            output: data_deaicoffee.json
+          - id: eaglecoffee
+            script: scrape_eaglecoffee.py
+            output: data_eaglecoffee.json
+          - id: enjoycoffee
+            script: scrape_enjoycoffee.py
+            output: data_enjoycoffee.json
+          - id: fujicoffeemie
+            script: scrape_fujicoffeemie.py
+            output: data_fujicoffeemie.json
+          - id: fukusukecoffee
+            script: scrape_fukusukecoffee.py
+            output: data_fukusukecoffee.json
+          - id: horicoffee
+            script: scrape_horicoffee.py
+            output: data_horicoffee.json
+          - id: ichicoffee
+            script: scrape_ichicoffee.py
+            output: data_ichicoffee.json
+          - id: igamameichi
+            script: scrape_igamameichi.py
+            output: data_igamameichi.json
+          - id: inokuchicoffee
+            script: scrape_inokuchicoffee.py
+            output: data_inokuchicoffee.json
+          - id: ishigakicoffee
+            script: scrape_ishigakicoffee.py
+            output: data_ishigakicoffee.json
+          - id: kariomon
+            script: scrape_kariomon.py
+            output: data_kariomon.json
+          - id: kope
+            script: scrape_kope.py
+            output: data_kope.json
+          - id: liaison
+            script: scrape_liaison.py
+            output: data_liaison.json
+          - id: luontocoffee
+            script: scrape_luontocoffee.py
+            output: data_luontocoffee.json
+          - id: malkicoffee
+            script: scrape_malkicoffee.py
+            output: data_malkicoffee.json
+          - id: mameiri
+            script: scrape_mameiri.py
+            output: data_mameiri.json
+          - id: mamezocoffee
+            script: scrape_mamezocoffee.py
+            output: data_mamezocoffee.json
+          - id: mantencoffee
+            script: scrape_mantencoffee.py
+            output: data_mantencoffee.json
+          - id: meetscoffee
+            script: scrape_meetscoffee.py
+            output: data_meetscoffee.json
+          - id: midorinoyakata
+            script: scrape_midorinoyakata.py
+            output: data_midorinoyakata.json
+          - id: mochamocha
+            script: scrape_mochamocha.py
+            output: data_mochamocha.json
+          - id: moricoffee
+            script: scrape_moricoffee.py
+            output: data_moricoffee.json
+          - id: nagoyabeans
+            script: scrape_nagoyabeans.py
+            output: data_nagoyabeans.json
+          - id: nanairocoffee
+            script: scrape_nanairocoffee.py
+            output: data_nanairocoffee.json
+          - id: ohashicoffee
+            script: scrape_ohashicoffee.py
+            output: data_ohashicoffee.json
+          - id: onyva
+            script: scrape_onyva.py
+            output: data_onyva.json
+          - id: pandacoffee
+            script: scrape_pandacoffee.py
+            output: data_pandacoffee.json
+          - id: qolcoffee
+            script: scrape_qolcoffee.py
+            output: data_qolcoffee.json
+          - id: sakaicoffee
+            script: scrape_sakaicoffee.py
+            output: data_sakaicoffee.json
+          - id: sakuramame
+            script: scrape_sakuramame.py
+            output: data_sakuramame.json
+          - id: shironekocoffee
+            script: scrape_shironekocoffee.py
+            output: data_shironekocoffee.json
+          - id: slothcoffee
+            script: scrape_slothcoffee.py
+            output: data_slothcoffee.json
+          - id: sohcoffee
+            script: scrape_sohcoffee.py
+            output: data_sohcoffee.json
+          - id: sugicoffee
+            script: scrape_sugicoffee.py
+            output: data_sugicoffee.json
+          - id: suzumushi
+            script: scrape_suzumushi.py
+            output: data_suzumushi.json
+          - id: tatazumi
+            script: scrape_tatazumi.py
+            output: data_tatazumi.json
+          - id: terucoffee
+            script: scrape_terucoffee.py
+            output: data_terucoffee.json
+          - id: trunkcoffee
+            script: scrape_trunkcoffee.py
+            output: data_trunkcoffee.json
+          - id: uchidacoffee
+            script: scrape_uchidacoffee.py
+            output: data_uchidacoffee.json
+          - id: vankicoffee
+            script: scrape_vankicoffee.py
+            output: data_vankicoffee.json
+          - id: yajimacoffee
+            script: scrape_yajimacoffee.py
+            output: data_yajimacoffee.json
+          - id: yamadacoffee
+            script: scrape_yamadacoffee.py
+            output: data_yamadacoffee.json
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4 # 差分ベーススクレイピングがdata/products.jsonを参照するため必須
