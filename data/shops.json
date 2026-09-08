@@ -4605,5 +4605,17 @@
     "hours": null,
     "map_query": "ロッソビーンズカフェ",
     "last_scraped_at": "2026-09-08T16:51:49.500020+00:00"
+  },
+  {
+    "name": "ROKUMEI COFFEE CO.",
+    "url": "https://rokumei.coffee/",
+    "platform": "Future Shop(フューチャーショップ、house未確立パターン。schema.org JSON-LDを情報源として使用)",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-09確認。User-agent: * に対しDisallow指定なし、制限なし)",
+    "address": "奈良県奈良市西御門町31",
+    "prefecture": "奈良県",
+    "hours": null,
+    "map_query": "ROKUMEI COFFEE CO.",
+    "last_scraped_at": "2026-09-08T16:56:43.344718+00:00"
   }
 ]
