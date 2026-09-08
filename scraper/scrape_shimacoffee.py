@@ -94,7 +94,7 @@ def extract_title(html: str) -> str | None:
 
 def extract_sku_blocks(html: str) -> list[dict]:
     blocks = []
-    for weight_label, price_raw, stock_text in SKU_BLOCK_PATTERN.findall(html):
+    for weight_label, stock_text, price_raw in SKU_BLOCK_PATTERN.findall(html):
         wm = WEIGHT_PATTERN.search(weight_label)
         if not wm:
             continue

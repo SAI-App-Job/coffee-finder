@@ -271,7 +271,6 @@ on:
           - elmersgreen
           - greatcoffee
           - greenbeans
-          - hagihara
           - hareruyacoffee
           - higurashicoffee
           - hiraokacoffee
@@ -1132,9 +1131,6 @@ jobs:
           - id: greenbeans
             script: scrape_greenbeans.py
             output: data_greenbeans.json
-          - id: hagihara
-            script: scrape_hagihara.py
-            output: data_hagihara.json
           - id: hareruyacoffee
             script: scrape_hareruyacoffee.py
             output: data_hareruyacoffee.json

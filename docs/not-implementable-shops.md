@@ -1248,3 +1248,14 @@
 ## FAVORITE COFFEE -wakayama-（和歌山県和歌山市十二番丁55、2026-09-08）
 - 見送り理由: オンラインショップ(favoritecoffee.stores.jp)がSTORES
   製と判明。他のSTORES店舗と同じ理由により取得不可能。
+
+## 萩原珈琲（兵庫県神戸市灘区城内通1-6-18、2026-09-08）
+- 実在確認: 公式サイト(hagihara-coffee.com)の店舗一覧ページで確認済み。
+  創業1928年、炭焼き焙煎。7店舗展開(うち1店舗大阪)で11店舗未満。
+- 見送り理由: オンラインショップ(shop.hagihara-coffee.com)のSSL証明書
+  が中間証明書欠落により検証失敗(`openssl s_client`で
+  `Verify return code: 21 (unable to verify the first certificate)`
+  を確認、サーバーは`PHP/5.6.37`という2018年にEOLを迎えた非常に古い
+  バージョンで稼働)。証明書検証を無効化してアクセスするのはセキュリ
+  ティ上のベストプラクティスに反するため行わず、見送りとした。サーバー
+  側の証明書設定が是正されれば再検討。

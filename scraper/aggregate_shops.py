@@ -341,7 +341,6 @@ SOURCE_FILES = {
     "エルマーズグリーン / EMBANKMENT Coffee": "data_elmersgreen.json",
     "自家焙煎 キャビン珈琲": "data_greatcoffee.json",
     "GreenBeans": "data_greenbeans.json",
-    "萩原珈琲": "data_hagihara.json",
     "晴天屋珈琲焙煎所": "data_hareruyacoffee.json",
     "ヒグラシ珈琲": "data_higurashicoffee.json",
     "平岡珈琲店": "data_hiraokacoffee.json",
