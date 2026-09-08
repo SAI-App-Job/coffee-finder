@@ -1,0 +1,65 @@
+{
+  "shop": {
+    "id": "markeys-coffee",
+    "name": "マルキ珈琲株式会社 MARKEY'S COFFEE",
+    "url": "https://marukicoffee.co.jp/",
+    "instagram_url": "https://www.instagram.com/markeys_coffee1017/",
+    "google_maps_query": "マルキ珈琲株式会社 和歌山県和歌山市狐島598-1",
+    "address": "〒640-8412 和歌山県和歌山市狐島598-1",
+    "prefecture": "和歌山県",
+    "tel": "073-453-1118",
+    "hours": "事務所営業時間9:00〜17:00(土日祝除く)。MARKEY'S COFFEE店舗のランチタイムは11:00〜14:00",
+    "platform": "手動入力(公式サイト(marukicoffee.co.jp)は主に業務用卸売の会社紹介サイトで通販機能なし。小売店舗ブランド「MARKEY'S COFFEE」併設カフェで自家焙煎豆を店頭販売)",
+    "shop_type": "single_location",
+    "data_source": "manual",
+    "source_note": "公式サイト(https://marukicoffee.co.jp/)トップページに埋め込まれたFacebook投稿フィード(MARKEY'S COFFEE公式ページの投稿)を直接確認して入力(2026-09確認)。創業62年(昭和34年=1959年設立)のコーヒー卸売・製造会社で、主業務は喫茶店・カフェ・レストラン等向けの業務用珈琲豆卸売販売だが、自社ブランドのカフェ「MARKEY'S COFFEE」を運営し店頭で自家焙煎豆の小売販売も行っている。埋め込みFacebookフィードは直近の投稿のみを表示する性質上、価格・重量が明記された銘柄は限られる。「コロンビア コンドル オーガニック」(2026年8月投稿、100g780円)、「コロンビア ラム熟成バレルエイジド」(数量限定のSPECIAL LOT、100g1,550円)の2銘柄は価格・重量が明記されていたため収録した。「ビクトリーブレンド」は月末特典「3 SELECTION」に2日連続で登場したオリジナルブレンドの名称のため収録したが、価格・重量の記載はなし。なお同じ投稿に登場した「ネパール ヒマラヤ」「エチオピア クジ シャキッソ オーガニック」「ルワンダ スカイヒル ブルボン」「インドネシア スラウェシ アラビカ」は日替わりの一時的な特典メニューとしての言及のみで、常設商品として販売されているか価格情報も確認できなかったため収録を見送った。",
+    "last_verified_at": "2026-09-09"
+  },
+  "products": [
+    {
+      "raw_name": "コロンビア コンドル オーガニック",
+      "category": "ストレート",
+      "originCountry": "コロンビア",
+      "processingMethod": null,
+      "roast": null,
+      "flavorNotes": "トロピカルフルーツを思わせる華やかな香り、ブラウンシュガーのようなやさしい甘さ、すっきりと飲みやすく心地よい余韻",
+      "farmNote": "シエラ・ネバダ・デ・サンタ・マルタ山地、有機JAS認証のオーガニックコーヒー、手摘み",
+      "decafProcess": null,
+      "price": 780,
+      "weightG": 100,
+      "stockStatus": "販売中",
+      "productUrl": null,
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "コロンビア ラム熟成バレルエイジド",
+      "category": "ストレート",
+      "originCountry": "コロンビア",
+      "processingMethod": null,
+      "roast": null,
+      "flavorNotes": "ラム酒を思わせる芳醇な香り、キャラメルのようなまろやかな甘さ、バニラのやさしい余韻",
+      "farmNote": "ラムの香りが染み込んだオーク樽で熟成させたSPECIAL LOT、数量限定",
+      "decafProcess": null,
+      "price": 1550,
+      "weightG": 100,
+      "stockStatus": "販売中",
+      "productUrl": null,
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "ビクトリーブレンド",
+      "category": "ブレンド",
+      "originCountry": null,
+      "processingMethod": null,
+      "roast": null,
+      "flavorNotes": null,
+      "farmNote": "MARKEY'S COFFEEのオリジナルブレンドの一つ。月末特典「3 SELECTION」に複数回登場",
+      "decafProcess": null,
+      "price": null,
+      "weightG": null,
+      "stockStatus": "販売中",
+      "productUrl": null,
+      "data_source": "manual"
+    }
+  ]
+}

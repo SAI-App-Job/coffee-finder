@@ -255,6 +255,62 @@ on:
           - vankicoffee
           - yajimacoffee
           - yamadacoffee
+          - 80factory
+          - akekure
+          - bahnhof
+          - basecoffeeawaji
+          - beanstostino
+          - ciaoppe
+          - circuscoffee
+          - coffeeandtea
+          - coffeeroastkobe
+          - coffeeroastones
+          - cogito
+          - ekawa
+          - elevencoffee
+          - elmersgreen
+          - greatcoffee
+          - greenbeans
+          - hagihara
+          - hareruyacoffee
+          - higurashicoffee
+          - hiraokacoffee
+          - hirossy1971
+          - ijiricoffee
+          - javajivewest
+          - jinnosuke
+          - kcoffee
+          - kobecoffee
+          - kobitocoffee
+          - kogetsuan
+          - lighthousecf
+          - lima
+          - littleisland
+          - mametaku
+          - minohcoffee
+          - mokuren
+          - mondial328
+          - mountain1999
+          - nadacoffee
+          - nakanotei
+          - neyagawabaisenjo
+          - nishikazecoffee
+          - nishimura
+          - porito
+          - rokumeicoffee
+          - rossobeanscaffe
+          - scc_coffee
+          - shimacoffee
+          - sugiharacoffee
+          - sugitacoffee
+          - suilatte
+          - taisanji
+          - taiyocoffee
+          - takamuracoffee
+          - tomitaya
+          - towncoffee
+          - tsuruyacafe
+          - usaboku
 
 permissions:
   contents: write # data/*.json をコミット・pushするために必要
@@ -995,6 +1051,174 @@ jobs:
           - id: yamadacoffee
             script: scrape_yamadacoffee.py
             output: data_yamadacoffee.json
+          - id: 80factory
+            script: scrape_80factory.py
+            output: data_80factory.json
+          - id: akekure
+            script: scrape_akekure.py
+            output: data_akekure.json
+          - id: bahnhof
+            script: scrape_bahnhof.py
+            output: data_bahnhof.json
+          - id: basecoffeeawaji
+            script: scrape_basecoffeeawaji.py
+            output: data_basecoffeeawaji.json
+          - id: beanstostino
+            script: scrape_beanstostino.py
+            output: data_beanstostino.json
+          - id: ciaoppe
+            script: scrape_ciaoppe.py
+            output: data_ciaoppe.json
+          - id: circuscoffee
+            script: scrape_circuscoffee.py
+            output: data_circuscoffee.json
+          - id: coffeeandtea
+            script: scrape_coffeeandtea.py
+            output: data_coffeeandtea.json
+          - id: coffeeroastkobe
+            script: scrape_coffeeroastkobe.py
+            output: data_coffeeroastkobe.json
+          - id: coffeeroastones
+            script: scrape_coffeeroastones.py
+            output: data_coffeeroastones.json
+          - id: cogito
+            script: scrape_cogito.py
+            output: data_cogito.json
+          - id: ekawa
+            script: scrape_ekawa.py
+            output: data_ekawa.json
+          - id: elevencoffee
+            script: scrape_elevencoffee.py
+            output: data_elevencoffee.json
+          - id: elmersgreen
+            script: scrape_elmersgreen.py
+            output: data_elmersgreen.json
+          - id: greatcoffee
+            script: scrape_greatcoffee.py
+            output: data_greatcoffee.json
+          - id: greenbeans
+            script: scrape_greenbeans.py
+            output: data_greenbeans.json
+          - id: hagihara
+            script: scrape_hagihara.py
+            output: data_hagihara.json
+          - id: hareruyacoffee
+            script: scrape_hareruyacoffee.py
+            output: data_hareruyacoffee.json
+          - id: higurashicoffee
+            script: scrape_higurashicoffee.py
+            output: data_higurashicoffee.json
+          - id: hiraokacoffee
+            script: scrape_hiraokacoffee.py
+            output: data_hiraokacoffee.json
+          - id: hirossy1971
+            script: scrape_hirossy1971.py
+            output: data_hirossy1971.json
+          - id: ijiricoffee
+            script: scrape_ijiricoffee.py
+            output: data_ijiricoffee.json
+          - id: javajivewest
+            script: scrape_javajivewest.py
+            output: data_javajivewest.json
+          - id: jinnosuke
+            script: scrape_jinnosuke.py
+            output: data_jinnosuke.json
+          - id: kcoffee
+            script: scrape_kcoffee.py
+            output: data_kcoffee.json
+          - id: kobecoffee
+            script: scrape_kobecoffee.py
+            output: data_kobecoffee.json
+          - id: kobitocoffee
+            script: scrape_kobitocoffee.py
+            output: data_kobitocoffee.json
+          - id: kogetsuan
+            script: scrape_kogetsuan.py
+            output: data_kogetsuan.json
+          - id: lighthousecf
+            script: scrape_lighthousecf.py
+            output: data_lighthousecf.json
+          - id: lima
+            script: scrape_lima.py
+            output: data_lima.json
+          - id: littleisland
+            script: scrape_littleisland.py
+            output: data_littleisland.json
+          - id: mametaku
+            script: scrape_mametaku.py
+            output: data_mametaku.json
+          - id: minohcoffee
+            script: scrape_minohcoffee.py
+            output: data_minohcoffee.json
+          - id: mokuren
+            script: scrape_mokuren.py
+            output: data_mokuren.json
+          - id: mondial328
+            script: scrape_mondial328.py
+            output: data_mondial328.json
+          - id: mountain1999
+            script: scrape_mountain1999.py
+            output: data_mountain1999.json
+          - id: nadacoffee
+            script: scrape_nadacoffee.py
+            output: data_nadacoffee.json
+          - id: nakanotei
+            script: scrape_nakanotei.py
+            output: data_nakanotei.json
+          - id: neyagawabaisenjo
+            script: scrape_neyagawabaisenjo.py
+            output: data_neyagawabaisenjo.json
+          - id: nishikazecoffee
+            script: scrape_nishikazecoffee.py
+            output: data_nishikazecoffee.json
+          - id: nishimura
+            script: scrape_nishimura.py
+            output: data_nishimura.json
+          - id: porito
+            script: scrape_porito.py
+            output: data_porito.json
+          - id: rokumeicoffee
+            script: scrape_rokumeicoffee.py
+            output: data_rokumeicoffee.json
+          - id: rossobeanscaffe
+            script: scrape_rossobeanscaffe.py
+            output: data_rossobeanscaffe.json
+          - id: scc_coffee
+            script: scrape_scc_coffee.py
+            output: data_scc_coffee.json
+          - id: shimacoffee
+            script: scrape_shimacoffee.py
+            output: data_shimacoffee.json
+          - id: sugiharacoffee
+            script: scrape_sugiharacoffee.py
+            output: data_sugiharacoffee.json
+          - id: sugitacoffee
+            script: scrape_sugitacoffee.py
+            output: data_sugitacoffee.json
+          - id: suilatte
+            script: scrape_suilatte.py
+            output: data_suilatte.json
+          - id: taisanji
+            script: scrape_taisanji.py
+            output: data_taisanji.json
+          - id: taiyocoffee
+            script: scrape_taiyocoffee.py
+            output: data_taiyocoffee.json
+          - id: takamuracoffee
+            script: scrape_takamuracoffee.py
+            output: data_takamuracoffee.json
+          - id: tomitaya
+            script: scrape_tomitaya.py
+            output: data_tomitaya.json
+          - id: towncoffee
+            script: scrape_towncoffee.py
+            output: data_towncoffee.json
+          - id: tsuruyacafe
+            script: scrape_tsuruyacafe.py
+            output: data_tsuruyacafe.json
+          - id: usaboku
+            script: scrape_usaboku.py
+            output: data_usaboku.json
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4 # 差分ベーススクレイピングがdata/products.jsonを参照するため必須
