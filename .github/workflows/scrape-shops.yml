@@ -326,7 +326,11 @@ jobs:
   # 残す。aggregate_shops.py側で欠損店舗を許容する設計にしている)。matrixコンテキストは
   # ジョブレベルのifでは使えないため、対象を絞る条件はステップ単位で指定する。
   # 定期実行(schedule)では常に全店舗を実行する。
-  scrape:
+  #
+  # GitHub Actionsのmatrixは1ジョブあたり最大256通りの制約があるため、
+  # 店舗数が256を超えた時点でscrape1・scrape2の2ジョブに分割した
+  # (単純に前半/後半で分けているだけで、地域等の意味的なまとまりはない)。
+  scrape1:
     strategy:
       fail-fast: false # 1店舗が失敗しても他の店舗の結果は活かす
       matrix:
@@ -775,6 +779,35 @@ jobs:
           - id: samurai
             script: scrape_samurai.py
             output: data_samurai.json
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4 # 差分ベーススクレイピングがdata/products.jsonを参照するため必須
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install requests beautifulsoup4
+
+      - name: Scrape ${{ matrix.shop.id }}
+        if: github.event_name != 'workflow_dispatch' || github.event.inputs.shop == 'all' || github.event.inputs.shop == matrix.shop.id
+        working-directory: scraper
+        run: python ${{ matrix.shop.script }}
+
+      - name: Upload ${{ matrix.shop.id }} output
+        if: github.event_name != 'workflow_dispatch' || github.event.inputs.shop == 'all' || github.event.inputs.shop == matrix.shop.id
+        uses: actions/upload-artifact@v4
+        with:
+          name: scrape-${{ matrix.shop.id }}
+          path: scraper/${{ matrix.shop.output }}
+          retention-days: 1
+
+  scrape2:
+    strategy:
+      fail-fast: false
+      matrix:
+        shop:
           - id: coffee1zu
             script: scrape_coffee1zu.py
             output: data_coffee1zu.json
@@ -1247,7 +1280,7 @@ jobs:
   # (店舗ごとに個別コミットすると、data/shops.json・data/products.jsonの
   # 内容が実行順に依存して揺れるため)。
   aggregate:
-    needs: scrape
+    needs: [scrape1, scrape2]
     if: ${{ !cancelled() }} # 一部店舗のスクレイピングが失敗しても、成功した店舗の
     # データは反映したい(aggregate_shops.py側は欠損店舗を許容する設計)。
     # 既定のneeds依存だけだと1店舗でも失敗すると本ジョブごとskipされてしまう。
