@@ -28,7 +28,7 @@
       "price": 580,
       "weightG": 100,
       "stockStatus": "販売中",
-      "productUrl": "https://kimameya-kyoto.com/menu/",
+      "productUrl": null,
       "data_source": "manual",
       "source_note": "産地国の記載なし(きまめ屋オリジナルブレンド)。生豆時点の重量表記(焙煎後は約10〜15%軽くなる)"
     },
@@ -44,7 +44,7 @@
       "price": 700,
       "weightG": 100,
       "stockStatus": "販売中",
-      "productUrl": "https://kimameya-kyoto.com/menu/",
+      "productUrl": null,
       "data_source": "manual",
       "source_note": "産地国の記載なし。生豆時点の重量表記"
     },
@@ -60,7 +60,7 @@
       "price": 980,
       "weightG": 200,
       "stockStatus": "販売中",
-      "productUrl": "https://kimameya-kyoto.com/menu/",
+      "productUrl": null,
       "data_source": "manual",
       "source_note": "この商品のみ最小注文単位が200g〜(その場で調合)のため他商品と異なりweightG=200。生豆時点の重量表記"
     },
@@ -76,7 +76,7 @@
       "price": 500,
       "weightG": 100,
       "stockStatus": "販売中",
-      "productUrl": "https://kimameya-kyoto.com/menu/",
+      "productUrl": null,
       "data_source": "manual"
     },
     {
@@ -91,7 +91,7 @@
       "price": 660,
       "weightG": 100,
       "stockStatus": "販売中",
-      "productUrl": "https://kimameya-kyoto.com/menu/",
+      "productUrl": null,
       "data_source": "manual",
       "source_note": "産地表記は「バリ」(インドネシア・バリ島)"
     },
@@ -107,7 +107,7 @@
       "price": 630,
       "weightG": 100,
       "stockStatus": "販売中",
-      "productUrl": "https://kimameya-kyoto.com/menu/",
+      "productUrl": null,
       "data_source": "manual"
     },
     {
@@ -122,7 +122,7 @@
       "price": 470,
       "weightG": 100,
       "stockStatus": "販売中",
-      "productUrl": "https://kimameya-kyoto.com/menu/",
+      "productUrl": null,
       "data_source": "manual"
     },
     {
@@ -137,7 +137,7 @@
       "price": 460,
       "weightG": 100,
       "stockStatus": "販売中",
-      "productUrl": "https://kimameya-kyoto.com/menu/",
+      "productUrl": null,
       "data_source": "manual"
     },
     {
@@ -152,7 +152,7 @@
       "price": 470,
       "weightG": 100,
       "stockStatus": "販売中",
-      "productUrl": "https://kimameya-kyoto.com/menu/",
+      "productUrl": null,
       "data_source": "manual"
     },
     {
@@ -167,7 +167,7 @@
       "price": 650,
       "weightG": 100,
       "stockStatus": "販売中",
-      "productUrl": "https://kimameya-kyoto.com/menu/",
+      "productUrl": null,
       "data_source": "manual"
     },
     {
@@ -182,7 +182,7 @@
       "price": 680,
       "weightG": 100,
       "stockStatus": "販売中",
-      "productUrl": "https://kimameya-kyoto.com/menu/",
+      "productUrl": null,
       "data_source": "manual"
     },
     {
@@ -197,7 +197,7 @@
       "price": 460,
       "weightG": 100,
       "stockStatus": "販売中",
-      "productUrl": "https://kimameya-kyoto.com/menu/",
+      "productUrl": null,
       "data_source": "manual"
     },
     {
@@ -212,7 +212,7 @@
       "price": 460,
       "weightG": 100,
       "stockStatus": "販売中",
-      "productUrl": "https://kimameya-kyoto.com/menu/",
+      "productUrl": null,
       "data_source": "manual"
     },
     {
@@ -227,7 +227,7 @@
       "price": 500,
       "weightG": 100,
       "stockStatus": "販売中",
-      "productUrl": "https://kimameya-kyoto.com/menu/",
+      "productUrl": null,
       "data_source": "manual"
     },
     {
@@ -242,7 +242,7 @@
       "price": 460,
       "weightG": 100,
       "stockStatus": "販売中",
-      "productUrl": "https://kimameya-kyoto.com/menu/",
+      "productUrl": null,
       "data_source": "manual"
     },
     {
@@ -257,7 +257,7 @@
       "price": 580,
       "weightG": 100,
       "stockStatus": "販売中",
-      "productUrl": "https://kimameya-kyoto.com/menu/",
+      "productUrl": null,
       "data_source": "manual"
     },
     {
@@ -272,7 +272,7 @@
       "price": 550,
       "weightG": 100,
       "stockStatus": "販売中",
-      "productUrl": "https://kimameya-kyoto.com/menu/",
+      "productUrl": null,
       "data_source": "manual",
       "source_note": "デカフェ処理方法の具体名の記載なし(「日本の食品衛生法基準を満たす方法」とのみ記載)"
     },
@@ -288,7 +288,7 @@
       "price": 550,
       "weightG": 100,
       "stockStatus": "販売中",
-      "productUrl": "https://kimameya-kyoto.com/menu/",
+      "productUrl": null,
       "data_source": "manual",
       "source_note": "デカフェ処理方法の具体名の記載なし"
     },
@@ -304,7 +304,7 @@
       "price": 620,
       "weightG": 100,
       "stockStatus": "販売中",
-      "productUrl": "https://kimameya-kyoto.com/menu/",
+      "productUrl": null,
       "data_source": "manual"
     },
     {
@@ -319,7 +319,7 @@
       "price": 570,
       "weightG": 100,
       "stockStatus": "販売中",
-      "productUrl": "https://kimameya-kyoto.com/menu/",
+      "productUrl": null,
       "data_source": "manual",
       "source_note": "産地国の記載なし(オリジナルブレンド)。デカフェ処理方法の具体名の記載なし"
     }

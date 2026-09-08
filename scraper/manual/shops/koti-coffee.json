@@ -28,7 +28,7 @@
       "price": null,
       "weightG": null,
       "stockStatus": "販売中",
-      "productUrl": "https://cafe-koti.com/menu/",
+      "productUrl": null,
       "data_source": "manual",
       "source_note": "カップ価格500円(店内飲食)のみ掲載。豆の量り売り単価は未掲載"
     },
@@ -44,7 +44,7 @@
       "price": null,
       "weightG": null,
       "stockStatus": "販売中",
-      "productUrl": "https://cafe-koti.com/menu/",
+      "productUrl": null,
       "data_source": "manual",
       "source_note": "カップ価格500円(店内飲食)のみ掲載。豆の量り売り単価は未掲載"
     },
@@ -60,7 +60,7 @@
       "price": null,
       "weightG": null,
       "stockStatus": "販売中",
-      "productUrl": "https://cafe-koti.com/menu/",
+      "productUrl": null,
       "data_source": "manual",
       "source_note": "カップ価格500円(店内飲食)のみ掲載。豆の量り売り単価は未掲載"
     },
@@ -76,7 +76,7 @@
       "price": null,
       "weightG": null,
       "stockStatus": "販売中",
-      "productUrl": "https://cafe-koti.com/menu/",
+      "productUrl": null,
       "data_source": "manual",
       "source_note": "カップ価格500円(店内飲食)のみ掲載。豆の量り売り単価は未掲載"
     },
@@ -92,7 +92,7 @@
       "price": null,
       "weightG": null,
       "stockStatus": "販売中",
-      "productUrl": "https://cafe-koti.com/menu/",
+      "productUrl": null,
       "data_source": "manual",
       "source_note": "カップ価格500円(店内飲食)のみ掲載。豆の量り売り単価は未掲載"
     },
@@ -108,7 +108,7 @@
       "price": null,
       "weightG": null,
       "stockStatus": "販売中",
-      "productUrl": "https://cafe-koti.com/menu/",
+      "productUrl": null,
       "data_source": "manual",
       "source_note": "カップ価格500円(店内飲食)のみ掲載。豆の量り売り単価は未掲載"
     }

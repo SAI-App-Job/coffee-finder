@@ -27,7 +27,7 @@
       "price": 1680,
       "weightG": 200,
       "stockStatus": "販売中",
-      "productUrl": "https://coffee-myself.com/tentosale/",
+      "productUrl": null,
       "data_source": "manual",
       "source_note": "価格は生豆時200gの基準表記(焙煎後は水分蒸発により約20%目減り)"
     },
@@ -42,7 +42,7 @@
       "price": 1680,
       "weightG": 200,
       "stockStatus": "販売中",
-      "productUrl": "https://coffee-myself.com/tentosale/",
+      "productUrl": null,
       "data_source": "manual",
       "source_note": "価格は生豆時200gの基準表記(焙煎後は水分蒸発により約20%目減り)"
     },
@@ -57,7 +57,7 @@
       "price": 1740,
       "weightG": 200,
       "stockStatus": "販売中",
-      "productUrl": "https://coffee-myself.com/tentosale/",
+      "productUrl": null,
       "data_source": "manual",
       "source_note": "価格は生豆時200gの基準表記(焙煎後は水分蒸発により約20%目減り)"
     },
@@ -72,7 +72,7 @@
       "price": 1680,
       "weightG": 200,
       "stockStatus": "販売中",
-      "productUrl": "https://coffee-myself.com/tentosale/",
+      "productUrl": null,
       "data_source": "manual",
       "source_note": "アイスコーヒー向けブレンド。価格は生豆時200gの基準表記(焙煎後は水分蒸発により約20%目減り)"
     },
@@ -87,7 +87,7 @@
       "price": null,
       "weightG": null,
       "stockStatus": "販売中",
-      "productUrl": "https://coffee-myself.com/tentosale/",
+      "productUrl": null,
       "data_source": "manual",
       "source_note": "「只今のお勧めシングルオリジン」枠の入れ替わり銘柄(2026年9月時点)。価格は店頭ページに明記が無いため未確認(null)。ブログ記事(2026年9月5日付)にも同銘柄の入荷が案内されている"
     },
@@ -103,7 +103,7 @@
       "price": 2300,
       "weightG": 200,
       "stockStatus": "販売中",
-      "productUrl": "https://coffee-myself.com/tentosale/",
+      "productUrl": null,
       "data_source": "manual",
       "source_note": "価格は生豆時200gの基準表記(焙煎後は水分蒸発により約20%目減り)"
     }
