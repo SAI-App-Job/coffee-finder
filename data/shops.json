@@ -4593,5 +4593,17 @@
     "hours": null,
     "map_query": "鶴屋",
     "last_scraped_at": "2026-09-08T16:12:24.757273+00:00"
+  },
+  {
+    "name": "ロッソビーンズカフェ",
+    "url": "https://www.rossobeanscaffe.com/",
+    "platform": "MakeShop",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-09確認。robots.txt自体が存在しない(404)ためDisallow指定は無い)",
+    "address": "大阪府池田市栄町3-14",
+    "prefecture": "大阪府",
+    "hours": null,
+    "map_query": "ロッソビーンズカフェ",
+    "last_scraped_at": "2026-09-08T16:51:49.500020+00:00"
   }
 ]
