@@ -81,6 +81,12 @@ STOCK_INFO_PATTERN = re.compile(r"var\s+stockInfo\s*=\s*'([^']*)'")
 def fetch_page(url: str) -> BeautifulSoup:
     resp = requests.get(url, headers=REQUEST_HEADERS, timeout=15)
     resp.raise_for_status()
+    # HTTPヘッダーにcharset指定が無く、requestsがISO-8859-1にフォール
+    # バックしてしまう(実データはUTF-8、metaタグでcharset=UTF-8を明記)ため、
+    # 明示的にUTF-8を指定する。指定しないと日本語テキストが文字化けし、
+    # 価格抽出(「円」の文字マッチ)や在庫判定(「あり」の文字マッチ)が
+    # すべて失敗する。
+    resp.encoding = "utf-8"
     return BeautifulSoup(resp.text, "html.parser")
 
 
@@ -116,6 +122,7 @@ def fetch_stock_status(product_url: str) -> str | None:
         resp.raise_for_status()
     except requests.RequestException:
         return None
+    resp.encoding = "utf-8"
     m = STOCK_INFO_PATTERN.search(resp.text)
     return m.group(1) if m else None
 
