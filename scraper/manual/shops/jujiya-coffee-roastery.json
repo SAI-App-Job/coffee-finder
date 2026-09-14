@@ -1,0 +1,52 @@
+{
+  "shop": {
+    "id": "jujiya-coffee-roastery",
+    "name": "十字屋珈琲焙煎店",
+    "url": "https://jujiya-coffee.com/",
+    "instagram_url": "https://www.instagram.com/jujiyacoffee/",
+    "google_maps_query": "十字屋珈琲焙煎店 広島県東広島市西条栄町6-16-101",
+    "address": "広島県東広島市西条栄町6-16-101",
+    "prefecture": "広島県",
+    "tel": "082-423-6468",
+    "hours": "平日10:00〜18:30、土日祝10:00〜18:00(月・火定休)",
+    "platform": "公式サイトあり(jujiya-coffee.com)だが通販機能なし。常時40〜50種類の生豆を在庫し、注文を受けてから100g単位でオーダー焙煎する店頭/LINE/電話注文専門店",
+    "shop_type": "single_location",
+    "data_source": "manual",
+    "source_note": "公式サイト(jujiya-coffee.com)で住所・営業時間・電話番号を確認済み(2026-09-14)。この店は生豆を常時40〜50種類在庫し、注文ごとに100g単位で焙煎する完全オーダー制のため、固定の商品ページ・価格リストは公式サイト上に存在しない。唯一確認できた具体的な銘柄・価格情報は、生豆在庫ページ(https://jujiya-coffee.com/mame/、2026年9月時点の掲示)に記載されていた「特価豆250g/1,000円」の対象銘柄(特価ガテマラSHB・特価ペルーW)のみで、これは月替わりの特価キャンペーンの一例であり、通常時の全銘柄・全価格を網羅するものではない。250gという重量は同ページの記載どおり生豆の重量を基準としている(焙煎後はこれよりやや軽くなる)。",
+    "last_verified_at": "2026-09-14"
+  },
+  "products": [
+    {
+      "raw_name": "特価ガテマラSHB",
+      "category": "ストレート",
+      "originCountry": "グアテマラ",
+      "processingMethod": null,
+      "roast": null,
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1000,
+      "weightG": 250,
+      "stockStatus": "販売中",
+      "productUrl": null,
+      "data_source": "manual",
+      "source_note": "2026年9月時点の生豆在庫ページに掲載されていた月替わり特価豆の一例(生豆250gあたりの価格)。"
+    },
+    {
+      "raw_name": "特価ペルーW",
+      "category": "ストレート",
+      "originCountry": "ペルー",
+      "processingMethod": "ウォッシュド",
+      "roast": null,
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1000,
+      "weightG": 250,
+      "stockStatus": "販売中",
+      "productUrl": null,
+      "data_source": "manual",
+      "source_note": "2026年9月時点の生豆在庫ページに掲載されていた月替わり特価豆の一例(生豆250gあたりの価格)。「W」はウォッシュド精選を示すと推定。"
+    }
+  ]
+}

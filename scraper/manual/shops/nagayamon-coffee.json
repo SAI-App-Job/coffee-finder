@@ -1,0 +1,52 @@
+{
+  "shop": {
+    "id": "nagayamon-coffee",
+    "name": "長屋門珈琲 カフェ・ティカル",
+    "url": "https://nagayamon-coffee.com/",
+    "instagram_url": "https://www.instagram.com/nagayamoncoffee/",
+    "google_maps_query": "長屋門珈琲 カフェ・ティカル 山口県萩市土原298-1",
+    "address": "〒758-0025 山口県萩市土原298-1",
+    "prefecture": "山口県",
+    "tel": "0838-26-2933",
+    "hours": "火〜土 9:30〜19:00、日・祝 9:30〜18:00、月曜定休",
+    "platform": "手動入力(公式サイト(nagayamon-coffee.com)あり。トップページで「長屋門珈琲ひとしな」という小規模オンラインショップが「間もなく開店予定」と案内されているが、確認時点(2026-09)では未開店。コーヒー豆は100gからの量り売りで店頭販売)",
+    "shop_type": "single_location",
+    "data_source": "manual",
+    "source_note": "公式サイト(nagayamon-coffee.com)で萩市指定有形文化財「小川長屋門」敷地内の店舗であること、焙煎歴40年のマスターとクラシフィカドール(コーヒー鑑定士)が常時20〜30種類の自家焙煎コーヒーを提供していること、100gからの豆の量り売りを行っていることを確認(2026-09確認)。個別銘柄については、萩市の観光情報サイト「萩GoChi」(https://hagi-gochi.jp/eat/tikal)で「ブラジル・ジアマンチーナ」が、Web検索で得られた店舗紹介記事で「ジアマンチーナヨシマツ(ブラジル吉松農園)」「インドネシア　マンデリン　アチャ」の銘柄名が確認できたため、この2銘柄のみ収録した。常時20〜30種類とされる残りの銘柄は個別の産地・価格が確認できなかったため収録を見送った。価格・重量は店頭でのグラム指定販売のため公開情報が無く、いずれもnullとしている。",
+    "last_verified_at": "2026-09-14"
+  },
+  "products": [
+    {
+      "raw_name": "ブラジル ジアマンチーナ(吉松農園)",
+      "category": "ストレート",
+      "originCountry": "ブラジル",
+      "processingMethod": null,
+      "roast": null,
+      "flavorNotes": null,
+      "farmNote": "吉松農園(山口県周南市出身の生産者が営むブラジル・ジアマンチーナ地区の農園)",
+      "decafProcess": null,
+      "price": null,
+      "weightG": null,
+      "stockStatus": "販売中",
+      "productUrl": null,
+      "data_source": "manual",
+      "source_note": "萩GoChi(hagi-gochi.jp/eat/tikal)および店舗紹介記事で確認。価格・重量は店頭グラム指定販売のため記載なし"
+    },
+    {
+      "raw_name": "インドネシア マンデリン アチャ",
+      "category": "ストレート",
+      "originCountry": "インドネシア",
+      "processingMethod": null,
+      "roast": null,
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": null,
+      "weightG": null,
+      "stockStatus": "販売中",
+      "productUrl": null,
+      "data_source": "manual",
+      "source_note": "店舗紹介記事で確認。価格・重量は店頭グラム指定販売のため記載なし"
+    }
+  ]
+}
