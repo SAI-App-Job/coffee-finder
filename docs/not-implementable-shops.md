@@ -1377,6 +1377,9 @@ STORES基盤のカスタムドメイン店舗(`arsenalcoffeeroasters.shop`)の�
 - ARSENAL Coffee Roasters（香川県高松市兵庫町2-1、arsenalcoffeeroasters.shop）
 - sonoda coffee（山口県美祢市大嶺町奥分3118-1、sonodacoffee.shop。STORES基盤の
   カスタムドメインだが同様にブロックされることを確認)
+- ヨルソラ薫る珈琲店（広島県福山市明神町2-12-27、frosty-dawn-2244.stores.jp。
+  未実装のまま今回のブロック発覚に至ったため、他店舗と同様にスクレイパー
+  未作成のまま見送りとする)
 
 いずれも実店舗の実在・自家焙煎・住所は一次情報で確認済みであり、店舗自体に
 問題はない。STORES.jp側のブロックが解除された場合は`git log`でこのコミット
