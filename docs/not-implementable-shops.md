@@ -1350,3 +1350,34 @@
 - 実在確認: 公式サイト(taycoffee.theshop.jp)およびtokushoho情報で確認済み。
 - 見送り理由: オンラインショップのBEANS(コーヒー豆)カテゴリが現在商品0件
   (DRIP PACK・FOODのみ在庫あり)。将来豆商品が復活した場合は再調査の余地あり。
+
+## 【重要な技術的発見】STORES.jpはGitHub ActionsのIPレンジからのアクセスを拒否する
+
+2026-09-14、中国・四国地方バッチのデプロイ時に発覚。以下5店舗はローカル開発
+環境からのスクレイピングでは正常に200 OKで動作確認済み(実装エージェントが
+実際にテスト実行し、商品データも正しく取得できていた)だったが、実際に
+GitHub Actions上で実行したところ、STORES.jp本体(`*.stores.jp`)および
+STORES基盤のカスタムドメイン店舗(`arsenalcoffeeroasters.shop`)のいずれも
+一貫して`403 Forbidden`を返すことを確認した。ローカルの`curl`では同時刻に
+同じURLが200 OKで返ることを再確認しており、GitHub Actions Runnerの共有IP
+レンジに対するSTORES.jp側のWAF/ボット検知ブロックと判断した(東海バッチで
+発覚した個別サイトのcloud-IP WAFブロックと同種の問題だが、今回は
+プラットフォーム全体(STORES.jp)がブロック対象という点で影響範囲が広い)。
+
+**今後の方針**: STORES.jpを使用する店舗候補は、今後のエリア調査で見送り
+理由に自動的に該当するわけではない(手動入力データとしての登録は妨げられない)
+が、本プロジェクトのGitHub Actions定期スクレイピング方式では原則実装不可と
+みなし、実装前に軽く現状を再確認する(ブロック解除されている可能性もゼロでは
+ない)程度に留め、時間をかけて追求しない。
+
+- 三日月堂珈琲（山口県防府市栄町2-2-37、perolintyo.stores.jp）
+- ripple coffee（香川県高松市塩上町1-7-5、nowavecoffee.stores.jp）
+- 0からコーヒー研究所（鳥取県、zerocoffee.stores.jp）
+- 焙煎工房こやま（高知県高知市介良乙3026-1、fzc2hrbuokzn8acafvmy.stores.jp）
+- ARSENAL Coffee Roasters（香川県高松市兵庫町2-1、arsenalcoffeeroasters.shop）
+- sonoda coffee（山口県美祢市大嶺町奥分3118-1、sonodacoffee.shop。STORES基盤の
+  カスタムドメインだが同様にブロックされることを確認)
+
+いずれも実店舗の実在・自家焙煎・住所は一次情報で確認済みであり、店舗自体に
+問題はない。STORES.jp側のブロックが解除された場合は`git log`でこのコミット
+前後の該当`scrape_*.py`を復元して再検討できる。
