@@ -1,0 +1,65 @@
+{
+  "shop": {
+    "id": "grab-coffee",
+    "name": "Grab coffee",
+    "url": null,
+    "instagram_url": null,
+    "google_maps_query": "Grab coffee 佐賀県鳥栖市藤木町2288-4",
+    "address": "佐賀県鳥栖市藤木町2288-4",
+    "prefecture": "佐賀県",
+    "tel": "0942-80-1883",
+    "hours": "10:00〜18:00(定休日: 月曜日、ほか不定休)",
+    "platform": "手動入力(公式サイト・オンラインショップ未確認。築60年の古民家を改装した自家焙煎コーヒー豆店で、2026年4月開業)",
+    "shop_type": "single_location",
+    "data_source": "manual",
+    "source_note": "佐賀新聞の開業記事(saga-s.co.jp、2026年4月)を確認(2026-09)。「エチオピア、グアテマラ、コロンビアを扱い200グラム1600円から」との記載のみで、産地別の詳細な銘柄名・精選方法・個別価格は確認できなかったため、3か国とも200g1,600円均一として登録する(実際の価格は産地により変動する可能性がある)。公式サイト・SNSが見つからず住所・電話番号は新聞記事の情報による。",
+    "last_verified_at": "2026-09-15"
+  },
+  "products": [
+    {
+      "raw_name": "エチオピア 200g",
+      "category": "ストレート",
+      "originCountry": "エチオピア",
+      "processingMethod": null,
+      "roast": null,
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1600,
+      "weightG": 200,
+      "stockStatus": "販売中",
+      "productUrl": null,
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "グアテマラ 200g",
+      "category": "ストレート",
+      "originCountry": "グアテマラ",
+      "processingMethod": null,
+      "roast": null,
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1600,
+      "weightG": 200,
+      "stockStatus": "販売中",
+      "productUrl": null,
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "コロンビア 200g",
+      "category": "ストレート",
+      "originCountry": "コロンビア",
+      "processingMethod": null,
+      "roast": null,
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1600,
+      "weightG": 200,
+      "stockStatus": "販売中",
+      "productUrl": null,
+      "data_source": "manual"
+    }
+  ]
+}

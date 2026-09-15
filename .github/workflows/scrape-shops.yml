@@ -381,6 +381,46 @@ on:
           - wadacoffee
           - washicoffee
           - yanaicoffee
+          - asabacoffee
+          - atsumicoffee
+          - atticcoffee
+          - bonafors
+          - bysenmon
+          - cafeviola
+          - chaca
+          - coffeecounty
+          - coffeemaki
+          - hazebocoffee
+          - katarucoffee
+          - kiyacoffee
+          - kodouan
+          - koyamacoofi
+          - kuromoncoffee
+          - kusasenri
+          - mameyafukuoka
+          - mikoya134
+          - mukashimukashi
+          - nageiacoffee
+          - nestcoffee
+          - noahcoffee
+          - oyamacoffee
+          - reccoffee
+          - renshirocoffee
+          - roast227
+          - roastermamenoki
+          - roundcoffee
+          - safaricoffee
+          - sukocoffee
+          - suwanocoffee
+          - suzunaricoffee
+          - tautonacoffee
+          - terumani
+          - tokado
+          - vincoffee
+          - voilacoffee
+          - watarucoffee
+          - yamashitacoffee
+          - youmeca
 
 permissions:
   contents: write # data/*.json をコミット・pushするために必要
@@ -957,6 +997,66 @@ jobs:
           - id: mamebou
             script: scrape_mamebou.py
             output: data_mamebou.json
+          - id: asabacoffee
+            script: scrape_asabacoffee.py
+            output: data_asabacoffee.json
+          - id: atsumicoffee
+            script: scrape_atsumicoffee.py
+            output: data_atsumicoffee.json
+          - id: atticcoffee
+            script: scrape_atticcoffee.py
+            output: data_atticcoffee.json
+          - id: bonafors
+            script: scrape_bonafors.py
+            output: data_bonafors.json
+          - id: bysenmon
+            script: scrape_bysenmon.py
+            output: data_bysenmon.json
+          - id: cafeviola
+            script: scrape_cafeviola.py
+            output: data_cafeviola.json
+          - id: chaca
+            script: scrape_chaca.py
+            output: data_chaca.json
+          - id: coffeecounty
+            script: scrape_coffeecounty.py
+            output: data_coffeecounty.json
+          - id: coffeemaki
+            script: scrape_coffeemaki.py
+            output: data_coffeemaki.json
+          - id: hazebocoffee
+            script: scrape_hazebocoffee.py
+            output: data_hazebocoffee.json
+          - id: katarucoffee
+            script: scrape_katarucoffee.py
+            output: data_katarucoffee.json
+          - id: kiyacoffee
+            script: scrape_kiyacoffee.py
+            output: data_kiyacoffee.json
+          - id: kodouan
+            script: scrape_kodouan.py
+            output: data_kodouan.json
+          - id: koyamacoofi
+            script: scrape_koyamacoofi.py
+            output: data_koyamacoofi.json
+          - id: kuromoncoffee
+            script: scrape_kuromoncoffee.py
+            output: data_kuromoncoffee.json
+          - id: kusasenri
+            script: scrape_kusasenri.py
+            output: data_kusasenri.json
+          - id: mameyafukuoka
+            script: scrape_mameyafukuoka.py
+            output: data_mameyafukuoka.json
+          - id: mikoya134
+            script: scrape_mikoya134.py
+            output: data_mikoya134.json
+          - id: mukashimukashi
+            script: scrape_mukashimukashi.py
+            output: data_mukashimukashi.json
+          - id: nageiacoffee
+            script: scrape_nageiacoffee.py
+            output: data_nageiacoffee.json
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4 # 差分ベーススクレイピングがdata/products.jsonを参照するため必須
@@ -1532,6 +1632,66 @@ jobs:
           - id: yanaicoffee
             script: scrape_yanaicoffee.py
             output: data_yanaicoffee.json
+          - id: nestcoffee
+            script: scrape_nestcoffee.py
+            output: data_nestcoffee.json
+          - id: noahcoffee
+            script: scrape_noahcoffee.py
+            output: data_noahcoffee.json
+          - id: oyamacoffee
+            script: scrape_oyamacoffee.py
+            output: data_oyamacoffee.json
+          - id: reccoffee
+            script: scrape_reccoffee.py
+            output: data_reccoffee.json
+          - id: renshirocoffee
+            script: scrape_renshirocoffee.py
+            output: data_renshirocoffee.json
+          - id: roast227
+            script: scrape_roast227.py
+            output: data_roast227.json
+          - id: roastermamenoki
+            script: scrape_roastermamenoki.py
+            output: data_roastermamenoki.json
+          - id: roundcoffee
+            script: scrape_roundcoffee.py
+            output: data_roundcoffee.json
+          - id: safaricoffee
+            script: scrape_safaricoffee.py
+            output: data_safaricoffee.json
+          - id: sukocoffee
+            script: scrape_sukocoffee.py
+            output: data_sukocoffee.json
+          - id: suwanocoffee
+            script: scrape_suwanocoffee.py
+            output: data_suwanocoffee.json
+          - id: suzunaricoffee
+            script: scrape_suzunaricoffee.py
+            output: data_suzunaricoffee.json
+          - id: tautonacoffee
+            script: scrape_tautonacoffee.py
+            output: data_tautonacoffee.json
+          - id: terumani
+            script: scrape_terumani.py
+            output: data_terumani.json
+          - id: tokado
+            script: scrape_tokado.py
+            output: data_tokado.json
+          - id: vincoffee
+            script: scrape_vincoffee.py
+            output: data_vincoffee.json
+          - id: voilacoffee
+            script: scrape_voilacoffee.py
+            output: data_voilacoffee.json
+          - id: watarucoffee
+            script: scrape_watarucoffee.py
+            output: data_watarucoffee.json
+          - id: yamashitacoffee
+            script: scrape_yamashitacoffee.py
+            output: data_yamashitacoffee.json
+          - id: youmeca
+            script: scrape_youmeca.py
+            output: data_youmeca.json
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4 # 差分ベーススクレイピングがdata/products.jsonを参照するため必須

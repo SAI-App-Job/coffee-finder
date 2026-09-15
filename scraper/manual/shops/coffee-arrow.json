@@ -1,0 +1,35 @@
+{
+  "shop": {
+    "id": "coffee-arrow",
+    "name": "琥珀色の珈琲アロー",
+    "url": "https://www.coffee-arrow.jp/",
+    "instagram_url": null,
+    "google_maps_query": "琥珀色の珈琲アロー 熊本県熊本市中央区花畑町10-10",
+    "address": "熊本県熊本市中央区花畑町10-10",
+    "prefecture": "熊本県",
+    "tel": "096-352-8945",
+    "hours": "11:00〜22:00(日祝は14:00〜)、年中無休",
+    "platform": "手動入力(通販サイトcoffee-arrow.shopはSTORES.jpで構築されており、本プロジェクトの既存方針によりGitHub Actions実行環境からのアクセスがSTORES.jp側に403 Forbiddenでブロックされるため自動スクレイパーの対象外とし、手動入力とした)",
+    "shop_type": "single_location",
+    "data_source": "manual",
+    "source_note": "通販サイト(https://coffee-arrow.shop/)をブラウザで直接確認(2026-09)。「琥珀色の珈琲 (内容量:500g) ¥6,000」の1商品のみ販売中であることを確認。住所・電話番号は同店の公式サイト(https://www.coffee-arrow.jp/、1964年創業の喫茶店本体のサイト)で一次情報として確認し、候補リストの住所と一致した(通販サイト側の特定商取引法ページはSTORES.jp側のブロックにより直接確認できなかったが、公式サイトの記載で住所を検証済み)。",
+    "last_verified_at": "2026-09-15"
+  },
+  "products": [
+    {
+      "raw_name": "琥珀色の珈琲",
+      "category": "ブレンド",
+      "originCountry": null,
+      "processingMethod": null,
+      "roast": null,
+      "flavorNotes": null,
+      "farmNote": "厳選した豆を焦がさぬよう浅めに焙煎し、良い成分だけを抽出した当店看板の琥珀色のコーヒー",
+      "decafProcess": null,
+      "price": 6000,
+      "weightG": 500,
+      "stockStatus": "販売中",
+      "productUrl": null,
+      "data_source": "manual"
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "shop": {
+    "id": "rakugaki-coffee",
+    "name": "らくがき珈琲(RAKUGAKI COFFEE)",
+    "url": null,
+    "instagram_url": null,
+    "google_maps_query": "RAKUGAKI COFFEE 宮崎県宮崎市大塚町窪田3321番地日高ビル106号",
+    "address": "宮崎県宮崎市大塚町窪田3321番地日高ビル106号",
+    "prefecture": "宮崎県",
+    "tel": "090-1369-5310",
+    "hours": "月〜金10:00-19:00 土〜日祝10:00-18:00",
+    "platform": "手動入力(STORES.jpはGitHub Actionsの共有IPを403でブロックするため自動スクレイピング対象外。商品情報は目視確認)",
+    "shop_type": "single_location",
+    "data_source": "manual",
+    "source_note": "オンラインショップ(https://rakugakicoffee1980.stores.jp/、STORES.jp)を2026-09にブラウザで直接閲覧し確認。住所は同ページ下部の店舗情報欄(〒880-0951 宮崎県宮崎市大塚町窪田3321番地日高ビル106号)で確認。全18商品中、ドリップバッグ単品/セット・GIFT BOX・クッキーボトル・季節限定ギフト(夏の贈り物)を除く、単一銘柄の焙煎豆2種のみを収録(いずれも各商品詳細ページに生産国・焙煎度・内容量の記載あり)。",
+    "last_verified_at": "2026-09-15"
+  },
+  "products": [
+    {
+      "raw_name": "オリジナルブレンド 中煎り",
+      "category": "ブレンド",
+      "originCountry": null,
+      "processingMethod": null,
+      "roast": "中煎り",
+      "flavorNotes": null,
+      "farmNote": "ブラジル、コロンビア、マンデリン 他をブレンド。1980年創業時から変わらない配合",
+      "decafProcess": null,
+      "price": 1000,
+      "weightG": 100,
+      "stockStatus": "販売中",
+      "productUrl": "https://rakugakicoffee1980.stores.jp/items/684f87667dd1ee0049571cf1",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "コロンビアスプレモ 極深煎り",
+      "category": "ストレート",
+      "originCountry": "コロンビア",
+      "processingMethod": null,
+      "roast": "極深煎り",
+      "flavorNotes": "キレのある苦味とその奥にある甘味",
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1100,
+      "weightG": 100,
+      "stockStatus": "販売中",
+      "productUrl": "https://rakugakicoffee1980.stores.jp/items/684f895820d299200283c210",
+      "data_source": "manual"
+    }
+  ]
+}

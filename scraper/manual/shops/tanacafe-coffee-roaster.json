@@ -1,0 +1,50 @@
+{
+  "shop": {
+    "id": "tanacafe-coffee-roaster",
+    "name": "TanaCafe + Coffee Roaster（COFFEE UNIDOS）",
+    "url": "https://coconoki.com/shopbrand/tanacafe/",
+    "instagram_url": null,
+    "google_maps_query": "TanaCafe 福岡県糸島市前原中央3-9-1",
+    "address": "福岡県糸島市前原中央3-9-1",
+    "prefecture": "福岡県",
+    "tel": null,
+    "hours": null,
+    "platform": "手動入力(自社ECサイトは無く、糸島の地域物産ポータル「ここのき」(coconoki.com、EC-CUBE系)内の出店ページで販売。同一出店者ページ内で店名表記が「COFFEE UNIDOS」(サイトナビゲーション上の表記)と「TanaCafe + Coffee Roaster」(ページタイトル・運営者名表記、田中裕之・優子)の2通り混在しており同一店舗と判断)",
+    "shop_type": "single_location",
+    "data_source": "manual",
+    "source_note": "coconoki.com内の出店ページ(https://coconoki.com/shopbrand/tanacafe/、2026-09時点)を直接確認。「珈琲豆ご購入」候補地の糸島市前原中央3-9-1(TanaCafe)住所を採用(COFFEE UNIDOSの候補住所[糸島市浦志2-14-17]とは異なるが、coconoki.com上では同一出店者ページとして運用されているため統合)。ドリップバッグ・水出しアイスコーヒーパックは対象外とし、コーヒー豆(生豆)の2ブレンドのみを掲載。",
+    "last_verified_at": "2026-09-15"
+  },
+  "products": [
+    {
+      "raw_name": "コーヒー豆/中煎り/糸島ブレンド/150g",
+      "category": "ブレンド",
+      "originCountry": null,
+      "processingMethod": null,
+      "roast": "中煎り",
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1650,
+      "weightG": 150,
+      "stockStatus": "販売中",
+      "productUrl": null,
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "コーヒー豆/中深煎り/タナカフェブレンド/150g",
+      "category": "ブレンド",
+      "originCountry": null,
+      "processingMethod": null,
+      "roast": "中深煎り",
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1575,
+      "weightG": 150,
+      "stockStatus": "販売中",
+      "productUrl": null,
+      "data_source": "manual"
+    }
+  ]
+}
