@@ -10,8 +10,10 @@ CAFFE VITA(カフェヴィータ、caffe-vita.com、島根県松江市学園2-5-
 静的HTML+PHPの独自カート(online_shop.php、cart.php)。robots.txtが存在しない
 (404)ため制限なし。商品情報(商品名・重量選択肢・挽き方選択肢・価格)は
 online_shop.php1ページに全14件が静的HTMLとして直接記載されている(JS
-レンダリング不要)。個別の商品ページは存在しないため、product_urlは全商品で
-online_shop.phpを指す。
+レンダリング不要)。個別の商品ページは存在しないため、product_urlはnullにする
+(全商品で同一URLを共有すると、aggregate_shops.pyのid生成ロジック
+(product_url優先、無ければshop_name:raw_nameにフォールバック)で複数商品が
+同一IDに衝突してしまう)。
 
 【非コーヒー豆商品の除外について】
 実データ確認済み(全14件): 「ギフト箱包装」(コーヒー豆本体ではなく箱詰め
@@ -99,7 +101,7 @@ def build_record(item: dict) -> dict | None:
             "is_flavored": True,
             "flavor_name": parsed["flavor_name"],
             "price": item["price"],
-            "product_url": PRODUCT_PAGE_URL,
+            "product_url": None,
         }
 
     stock_status = detect_stock_status(title)
@@ -120,7 +122,7 @@ def build_record(item: dict) -> dict | None:
         "weight_g": REPRESENTATIVE_WEIGHT_G,
         "stock_status": stock_status,
         "out_of_stock": stock_status != "販売中",
-        "product_url": PRODUCT_PAGE_URL,
+        "product_url": None,
     }
 
 
