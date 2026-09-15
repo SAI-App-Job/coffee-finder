@@ -385,7 +385,6 @@ on:
           - atsumicoffee
           - atticcoffee
           - bonafors
-          - bysenmon
           - cafeviola
           - chaca
           - coffeecounty
@@ -1009,9 +1008,6 @@ jobs:
           - id: bonafors
             script: scrape_bonafors.py
             output: data_bonafors.json
-          - id: bysenmon
-            script: scrape_bysenmon.py
-            output: data_bysenmon.json
           - id: cafeviola
             script: scrape_cafeviola.py
             output: data_cafeviola.json

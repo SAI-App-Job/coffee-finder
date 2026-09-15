@@ -455,7 +455,6 @@ SOURCE_FILES = {
     "あつみ珈琲": "data_atsumicoffee.json",
     "出島珈琲焙煎所": "data_atticcoffee.json",
     "ボナフォルス": "data_bonafors.json",
-    "THE ROASTERY 焙煎門": "data_bysenmon.json",
     "Cafe Viola": "data_cafeviola.json",
     "茶果": "data_chaca.json",
     "COFFEE COUNTY Kurume": "data_coffeecounty.json",
