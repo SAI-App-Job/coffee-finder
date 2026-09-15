@@ -164,11 +164,14 @@ def scrape_all_products() -> tuple[list[dict], list[dict]]:
         if total_count:
             import math
             max_pages = max(max_pages, math.ceil(total_count / ITEMS_PER_PAGE))
-        new_items = [i for i in items if i["product_url"] not in seen_urls]
+        new_items = []
+        for i in items:
+            if i["product_url"] in seen_urls:
+                continue
+            seen_urls.add(i["product_url"])
+            new_items.append(i)
         if not new_items:
             break
-        for i in new_items:
-            seen_urls.add(i["product_url"])
         all_items.extend(new_items)
         page += 1
 
