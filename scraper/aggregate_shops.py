@@ -511,6 +511,15 @@ SOURCE_FILES = {
     "珈琲亭ちろる": "data_tirol.json",
     "徳光珈琲": "data_tokumitsucoffee.json",
     "VAIME COFFEE": "data_vaime.json",
+    "チャンプルーコーヒー": "data_chanpulucoffee.json",
+    "KLATCH COFFEE": "data_klatchcoffee.json",
+    "K's coffee": "data_kscoffee.json",
+    "coffee shop Majya": "data_majyacoffee.json",
+    "又吉コーヒー園": "data_matayoshicoffee.json",
+    "中山コーヒー園": "data_nakayamacoffee.json",
+    "沖縄セラードコーヒー": "data_okinawacerrado.json",
+    "Purecastle珈琲": "data_purecastle.json",
+    "自家焙煎珈琲 ヨシモトコーヒー": "data_yoshimotocoffee.json",
 }
 
 

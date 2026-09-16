@@ -1,0 +1,50 @@
+{
+  "shop": {
+    "id": "tamagusuku-coffee-roasters",
+    "name": "TAMAGUSUKU COFFEE ROASTERS",
+    "url": "https://tamacoroa.stores.jp/",
+    "instagram_url": "https://instagram.com/tamagusuku_coffee_roasters/",
+    "google_maps_query": "TAMAGUSUKU COFFEE ROASTERS 沖縄県那覇市松尾2-19-39 グリーンハイツ那覇202",
+    "address": "沖縄県那覇市松尾2-19-39 グリーンハイツ那覇202",
+    "prefecture": "沖縄県",
+    "tel": "098-988-4566",
+    "hours": "9:00〜18:00(火・金定休)",
+    "platform": "STORES.jp(GitHub Actionsの共有IPレンジで403ブロックされるため自動スクレイピング対象外。ブラウザレンダリングで目視確認の上、手動入力)",
+    "shop_type": "single_location",
+    "data_source": "manual",
+    "source_note": "公式ストア(tamacoroa.stores.jp)のmeta descriptionおよびブラウザレンダリングで一覧・詳細ページを直接確認(2026-09時点)。全4件のうち2件(産地混合の飲み比べセット)は産地別内訳の単品販売が無く、単品として重複するため除外。残り2件(単一産地)を収録。2026-09時点で全商品が一時的に品切れの状態だったため、stockStatusはすべて「一時的に品切れ」とした(開業間もない店舗で、説明文に「少しずつ上げて行きます」とあり今後の再入荷が見込まれる)。",
+    "last_verified_at": "2026-09-16"
+  },
+  "products": [
+    {
+      "raw_name": "[DARK] indonesia mandhering aceh gegarang. インドネシア マンデリン ビンタンリマ　150g",
+      "category": "ストレート",
+      "originCountry": "インドネシア",
+      "processingMethod": null,
+      "roast": "深煎り",
+      "flavorNotes": "マンデリンらしいスパイシーな苦味とたっぷりのコク。後味はスッキリ甘い。",
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1000,
+      "weightG": 150,
+      "stockStatus": "一時的に品切れ",
+      "productUrl": "https://tamacoroa.stores.jp/items/5eaae11e72b9114c7c576962",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "[LIGHT] ethiopia yirgacheffe aricha natural エチオピア イルガチェフェ アリシャ ナチュラル 150g",
+      "category": "ストレート",
+      "originCountry": "エチオピア",
+      "processingMethod": "ナチュラル",
+      "roast": "浅煎り",
+      "flavorNotes": "エチオピアらしいフルーツ感と甘さ。",
+      "farmNote": "イルガチェフェ アリシャ",
+      "decafProcess": null,
+      "price": 1580,
+      "weightG": 150,
+      "stockStatus": "一時的に品切れ",
+      "productUrl": "https://tamacoroa.stores.jp/items/5eaae06e34ef01053a2a8e60",
+      "data_source": "manual"
+    }
+  ]
+}

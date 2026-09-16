@@ -441,6 +441,15 @@ on:
           - tirol
           - tokumitsucoffee
           - vaime
+          - chanpulucoffee
+          - klatchcoffee
+          - kscoffee
+          - majyacoffee
+          - matayoshicoffee
+          - nakayamacoffee
+          - okinawacerrado
+          - purecastle
+          - yoshimotocoffee
 
 permissions:
   contents: write # data/*.json をコミット・pushするために必要
@@ -1104,6 +1113,21 @@ jobs:
           - id: marumicoffee
             script: scrape_marumicoffee.py
             output: data_marumicoffee.json
+          - id: chanpulucoffee
+            script: scrape_chanpulucoffee.py
+            output: data_chanpulucoffee.json
+          - id: klatchcoffee
+            script: scrape_klatchcoffee.py
+            output: data_klatchcoffee.json
+          - id: kscoffee
+            script: scrape_kscoffee.py
+            output: data_kscoffee.json
+          - id: majyacoffee
+            script: scrape_majyacoffee.py
+            output: data_majyacoffee.json
+          - id: matayoshicoffee
+            script: scrape_matayoshicoffee.py
+            output: data_matayoshicoffee.json
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4 # 差分ベーススクレイピングがdata/products.jsonを参照するため必須
@@ -1772,6 +1796,18 @@ jobs:
           - id: vaime
             script: scrape_vaime.py
             output: data_vaime.json
+          - id: nakayamacoffee
+            script: scrape_nakayamacoffee.py
+            output: data_nakayamacoffee.json
+          - id: okinawacerrado
+            script: scrape_okinawacerrado.py
+            output: data_okinawacerrado.json
+          - id: purecastle
+            script: scrape_purecastle.py
+            output: data_purecastle.json
+          - id: yoshimotocoffee
+            script: scrape_yoshimotocoffee.py
+            output: data_yoshimotocoffee.json
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4 # 差分ベーススクレイピングがdata/products.jsonを参照するため必須
