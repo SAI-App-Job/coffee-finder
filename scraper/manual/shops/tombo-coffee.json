@@ -13,7 +13,9 @@
     "shop_type": "single_location",
     "data_source": "manual",
     "source_note": "公式サイト(tombocoffee.com、About usページ)で住所・営業時間を確認。オンラインショップ(https://tombocoffee.stores.jp/、STORES.jp)を2026-09にブラウザで直接閲覧し、各商品詳細ページの構造化スペック欄(生産国・農園名・標高・生産者・品種・精製方法・焙煎度・内容量)から商品情報を収集。全18商品中、水出しコーヒー・ドリップバッグ単品/セット/ギフトBOX・カスカラティー・コーヒーサーバー/フィルター/ドリッパー等の器具・キーホルダー・トートバッグを除く、単一銘柄の焙煎豆(コーヒー豆150g)6種のみを収録。",
-    "last_verified_at": "2026-09-15"
+    "last_verified_at": "2026-09-15",
+    "lat": 31.741015,
+    "lng": 130.763241
   },
   "products": [
     {

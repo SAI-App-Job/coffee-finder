@@ -13,7 +13,9 @@
     "shop_type": "single_location",
     "data_source": "manual",
     "source_note": "オンラインショップ(https://rakugakicoffee1980.stores.jp/、STORES.jp)を2026-09にブラウザで直接閲覧し確認。住所は同ページ下部の店舗情報欄(〒880-0951 宮崎県宮崎市大塚町窪田3321番地日高ビル106号)で確認。全18商品中、ドリップバッグ単品/セット・GIFT BOX・クッキーボトル・季節限定ギフト(夏の贈り物)を除く、単一銘柄の焙煎豆2種のみを収録(いずれも各商品詳細ページに生産国・焙煎度・内容量の記載あり)。",
-    "last_verified_at": "2026-09-15"
+    "last_verified_at": "2026-09-15",
+    "lat": 31.907633,
+    "lng": 131.420402
   },
   "products": [
     {

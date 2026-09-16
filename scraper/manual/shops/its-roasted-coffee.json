@@ -4,15 +4,17 @@
     "name": "It's roasted coffee",
     "url": null,
     "instagram_url": "https://www.instagram.com/itsroastedcoffee/?locale=ja_JP",
-    "google_maps_query": "It's roasted coffee",
-    "address": null,
-    "prefecture": null,
+    "google_maps_query": "It's roasted coffee 神奈川県川崎市多摩区三田3-8-3",
+    "address": "神奈川県川崎市多摩区三田3-8-3 マインズ三田1F",
+    "prefecture": "神奈川県",
     "hours": null,
     "platform": "手動入力(Instagram/Googleマップのみ、公式サイトなし)",
     "shop_type": "single_location",
     "data_source": "manual",
-    "source_note": "Instagram(@itsroastedcoffee)とGoogleマップのメニュー機能を目視確認して入力。公式サイトは確認できず",
-    "last_verified_at": "2026-08-10"
+    "source_note": "Instagram(@itsroastedcoffee)とGoogleマップのメニュー機能を目視確認して入力。公式サイトは確認できず。住所は当初未確認だったが、2026-09-16に近い順ソート機能の座標整備に伴い、Instagram公式アカウント自身のプロフィール欄(一次情報)に記載された「多摩区三田3-8-3マインズ三田1F」を確認して追記した(第三者情報のTabelogとも一致)。",
+    "last_verified_at": "2026-09-16",
+    "lat": 35.530664,
+    "lng": 139.703767
   },
   "products": [
     {

@@ -52,6 +52,14 @@ function addressCandidates(address) {
     candidates.push(wardOnly[0].trim());
   }
 
+  // さらに粗く、市区町村レベルまで切り詰める(「字」を含む農村部の大字・
+  // 小字名はOSMに存在しないことが多く、上記のwardOnlyでも解決できない
+  // 場合がある。最終手段として市区町村の代表座標に丸める)
+  const cityOnly = address.match(/^.+?[市区町村]/);
+  if (cityOnly && cityOnly[0] !== address) {
+    candidates.push(cityOnly[0]);
+  }
+
   return [...new Set(candidates)];
 }
 
