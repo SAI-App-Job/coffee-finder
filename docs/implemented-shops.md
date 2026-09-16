@@ -5,7 +5,7 @@
 `scraper/manual/shops/`配下、それ以外は`scraper/scrape_*.py`で自動取得。
 実装を見送った店舗は`docs/not-implementable-shops.md`を参照。
 
-合計486店舗・9811商品(生成日: 2026-09-16)。
+合計499店舗・9965商品(生成日: 2026-09-16)。
 
 再生成コマンド:
 ```
@@ -43,7 +43,7 @@ node scripts/gen-implemented-shops.js
 | Albert Coffee Roasters | 名古屋市西区上小田井2丁目181 | EC-CUBE | 14 |
 | coffee beans & tools note | 名古屋市千種区東山通1-30-9 | BASE(ShopSelectドメイン) | 8 |
 | Q.O.L.COFFEE | 名古屋市中区丸の内3-5-1 | WooCommerce | 23 |
-| 共和コーヒー店(今日は珈琲) | 名古屋市中川区舟戸町4-21 | MakeShop | 56 |
+| 共和コーヒー店(今日は珈琲) | 名古屋市中川区舟戸町4-21 | MakeShop | 57 |
 | Buttery Coffee 名駅桜通店 | 名古屋市中村区名駅2-36-20アイムビル | Shopify | 5 |
 | ヴァンキコーヒーロースター | 名古屋市天白区池場4-110 | カラーミー | 23 |
 | TRUNK COFFEE | 名古屋市東区泉2-28-24 東和高岳ビル1F | BASE | 9 |
@@ -82,6 +82,24 @@ node scripts/gen-implemented-shops.js
 | コーヒーローストおかべ | 倉敷市水島西常盤町5-23 | 手動 | 34 |
 | 倉敷珈琲館 | 倉敷市本町4-1 | カラーミー | 12 |
 | ばんこく珈琲 津山 | 津山市沼10丁目5番 | BASE | 17 |
+
+### 沖縄県
+
+| 店舗名 | 所在地 | 方式 | 件数 |
+|---|---|---|---|
+| コーヒーまめや | 浦添市宮城2-38-2 | 手動 | 1 |
+| 沖縄セラードコーヒー | 浦添市港川2丁目15番5-27号 | カラーミー | 78 |
+| K's coffee | 浦添市城間4-34-2 | BASE(shopselect.net) | 6 |
+| 自家焙煎珈琲 ヨシモトコーヒー | 沖縄市知花5-35-6 | BASE | 18 |
+| coffee shop Majya | 宮古島市平良字西里448 | Jimdo | 5 |
+| サンスイ珈琲 | 国頭郡恩納村山田239番地 | STORES(手動) | 11 |
+| 又吉コーヒー園 | 国頭郡東村字慶佐次718-28 | 独自カート(xaas3.jp) | 7 |
+| チャンプルーコーヒー | 石垣市石垣13 玉城ビル1F | BASE | 1 |
+| KLATCH COFFEE | 石垣市大川200-1 | Shopify | 3 |
+| FUSHI COFFEE ROASTERS | 石垣市登野城9-2 1F | STORES(手動) | 11 |
+| TAMAGUSUKU COFFEE ROASTERS | 那覇市松尾2-19-39 グリーンハイツ那覇202 | STORES(手動) | 2 |
+| Purecastle珈琲 | 豊見城市豊崎1-40 プロースト102号室 | Welcart | 10 |
+| 中山コーヒー園 | 名護市中山378 | BASE | 2 |
 
 ### 岩手県
 
@@ -240,8 +258,8 @@ node scripts/gen-implemented-shops.js
 | 満天珈琲 | 四日市市北浜町1-5 | 不明(独自/中小事業者向けASPカート、xaas3.jp。リエゾンと同一プラットフォーム) | 11 |
 | 三重東洋珈琲(ミンデン) | 松阪市郷津町163-5 | BASE | 19 |
 | オニヴァ珈琲 | 松阪市五主町1234-25 | BASE | 0 |
-| MORI COFFEE | 松阪市矢津町1586 | Ocnk | 24 |
-| 珈琲焙煎すずむし | 津市鳥居町263 | BASE | 11 |
+| MORI COFFEE | 松阪市矢津町1586 | Ocnk | 25 |
+| 珈琲焙煎すずむし | 津市鳥居町263 | BASE | 10 |
 | 富士珈琲 | 津市藤方1574-5 | BASE | 25 |
 | 焙煎工房コペ | 名張市松崎町1460-4 | WordPress | 8 |
 | coffee uno | 鈴鹿市白子駅前21-1 | BASE | 16 |
@@ -387,7 +405,7 @@ node scripts/gen-implemented-shops.js
 | 唐良里(からり) | 三島市加茂川町4115-6 | 手動 | 15 |
 | COFFEE&CO. | 三島市南本町8-26 Airstream | Shopify | 177 |
 | 石垣珈琲 | 駿東郡清水町新宿7-1 | カラーミー | 39 |
-| アラビカコーヒー | 駿東郡長泉町南一色186-8(本社卸部/焙煎工場。直営店は沼津・富士・御殿場・三島の4店舗) | Welcart | 32 |
+| アラビカコーヒー | 駿東郡長泉町南一色186-8(本社卸部/焙煎工場。直営店は沼津・富士・御殿場・三島の4店舗) | Welcart | 31 |
 | caffe maco | 焼津市中里556-1 | BASE | 5 |
 | シロネコ | 榛原郡吉田町住吉188-1 | カラーミー | 10 |
 | 焙煎堂 | 静岡市駿河区稲川3-2-25 | 手動 | 12 |
@@ -534,7 +552,7 @@ node scripts/gen-implemented-shops.js
 | 青空豆店 | 杉並区永福4-10-4 | BASE | 13 |
 | たまじ珈琲 | 杉並区成田東2-33-12 | WP+USCe | 47 |
 | chouette torréfacteur laboratoire | 世田谷区宮坂1-39-11 | BASE(theshop) | 11 |
-| FINETIME COFFEE ROASTERS | 世田谷区経堂1-12-15 | BASE(theshop) | 12 |
+| FINETIME COFFEE ROASTERS | 世田谷区経堂1-12-15 | BASE(theshop) | 11 |
 | カフェマルシェkunikuni | 世田谷区経堂2-4-8　Antelop経堂A号室 | カラーミー | 20 |
 | 珈琲家あのころ | 世田谷区若林4-20-9 岡村ビル1F | BASE(theshop) | 15 |
 | 南薫堂珈琲 | 世田谷区世田谷2-6-4　グリーンアネックス102 | BASE | 14 |
@@ -559,7 +577,7 @@ node scripts/gen-implemented-shops.js
 | 十一房珈琲店 | 中央区銀座2-2-19 藤間ビル1F | 手動 | 25 |
 | 米本珈琲 | 中央区築地 | Ocnk | 17 |
 | ライブコーヒー | 中央区築地3-5-13 北村ビル1F | Ocnk | 38 |
-| こなみ珈琲 | 中央区日本橋蛎殻町1-39-2 | BASE | 41 |
+| こなみ珈琲 | 中央区日本橋蛎殻町1-39-2 | BASE | 40 |
 | TORIBA COFFEE | 中央区八重洲2-1-1 YANMAR TOKYO B1F | MakeShop | 18 |
 | ITSUKI Coffee Roastery | 中野区 | WooCommerce | 3 |
 | MARUTAKE COFFEE BEANS | 中野区野方6-18-14 | BASE | 62 |
@@ -691,7 +709,7 @@ node scripts/gen-implemented-shops.js
 | Coffee House MYWING(喫茶マイウイング) | 根室市光和町1-23 | theShop(BASE系) | 12 |
 | 珈琲工房ビーンズ（札幌市） | 札幌市厚別区大谷地東5-5-26 | カラーミー | 40 |
 | 宮田屋珈琲 | 札幌市清田区清田1条3丁目1-66 | カラーミー | 20 |
-| 宮の森アルケミストコーヒー | 札幌市中央区宮の森3条13丁目5-18 | Wix | 5 |
+| 宮の森アルケミストコーヒー | 札幌市中央区宮の森3条13丁目5-18 | Wix | 6 |
 | カフェボーネ | 札幌市中央区宮の森4条4丁目1-43 | 手動 | 13 |
 | 丸美珈琲店 | 札幌市中央区南15条西5丁目3-10 | MakeShop | 26 |
 | RITARU COFFEE | 札幌市中央区北3条西26丁目3-8 | カラーミー | 22 |
