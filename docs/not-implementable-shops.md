@@ -1813,3 +1813,10 @@ STORES基盤のカスタムドメイン店舗(`arsenalcoffeeroasters.shop`)の�
 - 見送り理由: いずれもオンライン販売用のカートが存在せず、産地・価格
   等の具体的な商品情報が(公式サイト・SNS・ディレクトリ情報のいずれ
   からも)確認できなかったため、手動データ登録の基準を満たせなかった。
+
+## らぶこーひー自家焙煎豆店（北海道札幌市、2026-09-16）
+- 実在確認: 公式サイト(lovecoffeejikabaisen.com、WooCommerce)で確認済み。
+- 見送り理由: WooCommerce Store APIエンドポイントがGitHub Actions実行時
+  のみ403 Forbiddenを返すことを確認(ローカルcurlでは同時刻に200 OK)。
+  東海バッチ以降繰り返し確認しているcloud-IP WAFブロックと同種の問題
+  と判断し、見送りとした。

@@ -428,7 +428,6 @@ on:
           - funaki
           - hazeya
           - ishidacoffee
-          - lovecoffee
           - mamenoki
           - marumicoffee
           - miyataya
@@ -1099,9 +1098,6 @@ jobs:
           - id: ishidacoffee
             script: scrape_ishidacoffee.py
             output: data_ishidacoffee.json
-          - id: lovecoffee
-            script: scrape_lovecoffee.py
-            output: data_lovecoffee.json
           - id: mamenoki
             script: scrape_mamenoki.py
             output: data_mamenoki.json

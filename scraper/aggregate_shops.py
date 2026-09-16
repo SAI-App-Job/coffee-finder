@@ -498,7 +498,6 @@ SOURCE_FILES = {
     "舟木コーヒー": "data_funaki.json",
     "はぜやの豆たち(はぜや珈琲)": "data_hazeya.json",
     "石田珈琲店": "data_ishidacoffee.json",
-    "らぶこーひー自家焙煎豆店": "data_lovecoffee.json",
     "フレッシュローストコーヒー豆の木": "data_mamenoki.json",
     "丸美珈琲店": "data_marumicoffee.json",
     "宮田屋珈琲": "data_miyataya.json",
