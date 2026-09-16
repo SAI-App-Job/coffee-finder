@@ -1,6 +1,6 @@
 import { useState, useMemo, useEffect, useCallback } from "react";
 import { Virtuoso } from "react-virtuoso";
-import { Search, X, SlidersHorizontal, Coffee, Bell, Info } from "lucide-react";
+import { Search, X, SlidersHorizontal, Coffee, Bell, Info, MapPin, Sparkles, Shuffle, LocateFixed } from "lucide-react";
 import { MOCK_PRODUCTS } from "./data/products";
 import { SHOPS } from "./data/shops";
 import { EVENTS } from "./data/events";
@@ -8,6 +8,7 @@ import { TAB_ITEMS } from "./data/navigation";
 import { ORIGIN_GUIDE } from "./data/originGuide";
 import { categorizeFlavorNotes } from "./utils/flavor";
 import { loadRemoteData } from "./data/remote";
+import { sortByDistance, sortNewArrivalsFirst, pickRandomDisplaySet, shuffle } from "./utils/productSort";
 import { useFavorites } from "./hooks/useFavorites";
 import { useAccentTheme } from "./hooks/useAccentTheme";
 import { usePremium } from "./hooks/usePremium";
@@ -17,6 +18,8 @@ import { useComparison } from "./hooks/useComparison";
 import { useRatings } from "./hooks/useRatings";
 import { useTastingLog } from "./hooks/useTastingLog";
 import { useAlerts } from "./hooks/useAlerts";
+import { useGeolocation } from "./hooks/useGeolocation";
+import { useDisplayRadius } from "./hooks/useDisplayRadius";
 import { ProductCard, DiscoveryFactCard } from "./components/ProductCard";
 import { ProductDetailModal } from "./components/ProductDetailModal";
 import { TastingLogModal } from "./components/TastingLogModal";
@@ -31,6 +34,12 @@ import { MyPageView } from "./components/MyPageView";
 import { AdBannerPlaceholder } from "./components/AdBanner";
 import { CompareTray, ComparisonModal } from "./components/Compare";
 import { CopyrightFooter, MapLinkModal, Toast } from "./components/common";
+
+const SORT_MODE_ITEMS = [
+  { id: "distance", label: "近い順", icon: MapPin },
+  { id: "new", label: "新規掲載", icon: Sparkles },
+  { id: "random", label: "ランダム", icon: Shuffle },
+];
 
 export default function CoffeeProductList() {
   // 初期値はローカルのモックデータ(=フォールバック)。GitHub上のJSONの取得に
@@ -86,6 +95,15 @@ export default function CoffeeProductList() {
   const [pendingOriginCountry, setPendingOriginCountry] = useState(null);
   const [searchQuery, setSearchQuery] = useState("");
   const [showOutOfStock, setShowOutOfStock] = useState(false);
+
+  // 商品タブの並べ替え軸。"distance"(近い順、初期表示)|"new"(新規掲載)|
+  // "random"(ランダム)。端末内のセッション状態としてのみ保持し(再読み込みで
+  // "distance"に戻る)、"random"の表示範囲設定のみマイページで永続化する。
+  const [sortMode, setSortMode] = useState("distance");
+  const geolocation = useGeolocation();
+  const { displayRadiusId, setDisplayRadiusId, options: displayRadiusOptions } = useDisplayRadius();
+  // ランダム表示のシャッフル順は、無関係な再描画(お気に入り操作等)では
+  // 変えたくないため、絞り込み結果や設定が実際に変わった時だけ再計算する。
 
   const learnAboutOrigin = useCallback(
     (country) => {
@@ -167,6 +185,26 @@ export default function CoffeeProductList() {
       return true;
     });
   }, [products, filters, searchQuery, showOutOfStock]);
+
+  // 並べ替え軸ごとの表示リスト。
+  // - "distance": 位置情報が取得できていれば距離順、そうでなければ(許可待ち・
+  //   タイムアウト・拒否・非対応のいずれも)新着順で暫定表示する(仕様書の
+  //   フォールバック要件。取得成功時に切り替わり、拒否時は切り替えを行わない)。
+  // - "new": 新規掲載(30日以内)のみを対象に新しい順。表示範囲は全国固定。
+  // - "random": マイページの表示範囲設定に応じた範囲内からランダムに表示。
+  const displayed = useMemo(() => {
+    if (sortMode === "new") return sortNewArrivalsFirst(filtered);
+    if (sortMode === "random") {
+      const withinRange = pickRandomDisplaySet(filtered, {
+        radiusId: displayRadiusId,
+        coords: geolocation.coords,
+      });
+      return shuffle(withinRange);
+    }
+    // sortMode === "distance"
+    if (geolocation.status === "success") return sortByDistance(filtered, geolocation.coords);
+    return sortNewArrivalsFirst(filtered);
+  }, [filtered, sortMode, geolocation.status, geolocation.coords, displayRadiusId]);
 
   const productsByShop = useMemo(() => {
     const map = {};
@@ -328,8 +366,48 @@ export default function CoffeeProductList() {
       {tab === "products" && !selectedShop && (
         <div className="px-5 pt-4 max-w-xl mx-auto">
           <p className="text-[13px] text-[#8B7361]">
-            {filtered.length}件の商品(産地・精選方法・グレードで正規化済み)
+            {displayed.length}件の商品(産地・精選方法・グレードで正規化済み)
           </p>
+          <div className="flex items-center gap-1.5 mt-3 overflow-x-auto scrollbar-hide">
+            {SORT_MODE_ITEMS.map(({ id, label, icon: Icon }) => (
+              <button
+                key={id}
+                onClick={() => setSortMode(id)}
+                aria-pressed={sortMode === id}
+                className={`flex items-center gap-1 shrink-0 text-[12px] px-3 py-1.5 rounded-full border transition-colors ${
+                  sortMode === id
+                    ? "bg-[var(--accent)] text-[#231810] border-[var(--accent)]"
+                    : "border-[#4A3A2A] text-[#B8A891]"
+                }`}
+              >
+                <Icon size={12} strokeWidth={2} />
+                {label}
+              </button>
+            ))}
+          </div>
+          {sortMode === "distance" && geolocation.status !== "success" && (
+            <p className="flex items-center gap-1 text-[11px] text-[#8B7361] mt-1.5">
+              <LocateFixed size={11} strokeWidth={1.75} className="shrink-0" />
+              {geolocation.status === "pending" && "位置情報を取得中です(取得できるまで新着順で表示しています)"}
+              {geolocation.status === "denied" && "位置情報が許可されていないため、新着順で表示しています"}
+              {(geolocation.status === "error" || geolocation.status === "unsupported") &&
+                "位置情報を取得できなかったため、新着順で表示しています"}
+              {(geolocation.status === "denied" || geolocation.status === "error") && (
+                <button
+                  onClick={geolocation.retry}
+                  className="text-[var(--accent)] underline underline-offset-2 shrink-0"
+                >
+                  再試行
+                </button>
+              )}
+            </p>
+          )}
+          {sortMode === "random" && (
+            <p className="text-[11px] text-[#8B7361] mt-1.5">
+              表示範囲: {displayRadiusOptions.find((o) => o.id === displayRadiusId)?.label}
+              (マイページで変更できます)
+            </p>
+          )}
           <div className="relative mt-3">
             <Search size={14} className="absolute left-3 top-1/2 -translate-y-1/2 text-[#8B7361]" strokeWidth={2} />
             <input
@@ -392,10 +470,16 @@ export default function CoffeeProductList() {
           <div className="mb-3">
             <DiscoveryFactCard />
           </div>
-          {filtered.length === 0 ? (
+          {displayed.length === 0 ? (
             <div className="text-center py-16 text-[#8B7361]">
               <Coffee size={28} className="mx-auto mb-3 opacity-40" />
-              <p className="text-[14px]">該当する商品が見つかりませんでした</p>
+              {filtered.length === 0 ? (
+                <p className="text-[14px]">該当する商品が見つかりませんでした</p>
+              ) : sortMode === "random" ? (
+                <p className="text-[14px]">この範囲には商品がありません。表示範囲を広げてみてください</p>
+              ) : (
+                <p className="text-[14px]">現在30日以内に新規掲載された商品はありません</p>
+              )}
             </div>
           ) : (
             // 商品数が数千件規模になっても軽く保つため、画面内(+前後バッファ)分
@@ -403,7 +487,7 @@ export default function CoffeeProductList() {
             // する構成(専用のスクロールコンテナが無い)ため useWindowScroll を使う。
             <Virtuoso
               useWindowScroll
-              data={filtered}
+              data={displayed}
               computeItemKey={(_, product) => product.id}
               itemContent={(_, product) => (
                 <div className="pb-3">
@@ -469,6 +553,9 @@ export default function CoffeeProductList() {
           products={products}
           getRating={getRating}
           onOpenDetail={openProductDetail}
+          displayRadiusId={displayRadiusId}
+          setDisplayRadiusId={setDisplayRadiusId}
+          displayRadiusOptions={displayRadiusOptions}
         />
       )}
 

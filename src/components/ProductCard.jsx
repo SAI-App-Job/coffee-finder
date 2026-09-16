@@ -6,6 +6,7 @@ import { ORIGIN_GUIDE } from "../data/originGuide";
 import { getGradeExplanation } from "../utils/grade";
 import { categorizeFlavorNotes } from "../utils/flavor";
 import { roastColor, cityFromAddress, formatPrice } from "../utils/format";
+import { isNewArrival } from "../utils/productSort";
 
 export function DiscoveryFactCard() {
   const [index, setIndex] = useState(() => Math.floor(Math.random() * DISCOVERY_FACTS.length));
@@ -192,6 +193,11 @@ function ProductCardImpl({ product, onOpenMap, onLearnOrigin, isFavorite, onTogg
                   }`}
                 >
                   {product.stockStatus === "終売" ? "終売" : "売り切れ"}
+                </span>
+              )}
+              {isNewArrival(product) && (
+                <span className="text-[10px] px-1.5 py-0.5 rounded-full font-medium leading-none bg-[var(--accent-glow)] text-[var(--accent)] border border-[var(--accent-label)]">
+                  新規掲載
                 </span>
               )}
             </div>

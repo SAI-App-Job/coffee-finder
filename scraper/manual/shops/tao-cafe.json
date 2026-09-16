@@ -13,7 +13,9 @@
     "shop_type": "single_location",
     "data_source": "manual",
     "source_note": "公式サイト(https://www.tao-cafe.com/)の「豆の挽き売り」ページ(https://www.tao-cafe.com/sell)を直接確認(2026-09)。価格は挽き売り100gあたりの単価(税込表記かは明記なし)。住所・電話番号・営業時間は同サイトのフッターに明記。ブレンド2種+中煎り4種+深煎り2種の全8銘柄を掲載。",
-    "last_verified_at": "2026-09-15"
+    "last_verified_at": "2026-09-15",
+    "lat": 33.279534,
+    "lng": 130.289726
   },
   "products": [
     {

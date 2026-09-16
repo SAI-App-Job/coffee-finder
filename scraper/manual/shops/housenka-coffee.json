@@ -13,7 +13,9 @@
     "shop_type": "single_location",
     "data_source": "manual",
     "source_note": "公式サイト(https://housenka-coffee.com/)のBEANS menuセクションを直接確認して入力(2026-09)。各銘柄ごとに商品名・生産地・農園・品種・精製方法・Qグレード評価・価格・焙煎度(バリエーション)が明記されている。焙煎度は「＜中・中深＞」のように1銘柄につき複数の焼き分けが選べる形式(こだわりセクションに「1種類のコーヒー豆に対して、複数の焼き分けを行っています」との明記あり)。重量(g)の記載はサイト上になくweightGはnull。",
-    "last_verified_at": "2026-09-08"
+    "last_verified_at": "2026-09-08",
+    "lat": 35.01995,
+    "lng": 135.961539
   },
   "products": [
     {

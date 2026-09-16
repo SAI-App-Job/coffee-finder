@@ -13,7 +13,9 @@
     "shop_type": "single_location",
     "data_source": "manual",
     "source_note": "公式サイト(https://www.miyazaki.coffee/)の商品リストページ(https://www.miyazaki.coffee/menu.html)を直接確認(2026-09)。全品200g・税込価格の掲載。住所・電話番号は同サイトのフッターに明記。「ハイローストブレンド」等の焙煎度違いバリエーション、「アイスコーヒー」「水出しコーヒー」「ワンドリップカフェ」「オフィスコーヒー」「季節のブレンド」は産地・銘柄構成が不明瞭なため対象外とした。",
-    "last_verified_at": "2026-09-15"
+    "last_verified_at": "2026-09-15",
+    "lat": 33.281332,
+    "lng": 130.300518
   },
   "products": [
     {

@@ -1,5 +1,5 @@
 import { useRef, useState } from "react";
-import { Palette, Check, Sparkles, Heart, Download, Upload, Info, History } from "lucide-react";
+import { Palette, Check, Sparkles, Heart, Download, Upload, Info, History, Shuffle } from "lucide-react";
 import { SectionHeading } from "./common";
 import { TasteProfile } from "./TasteProfile";
 import { FREE_FAVORITES_LIMIT } from "../hooks/useFavorites";
@@ -19,6 +19,9 @@ export function MyPageView({
   products,
   getRating,
   onOpenDetail,
+  displayRadiusId,
+  setDisplayRadiusId,
+  displayRadiusOptions,
 }) {
   const fileInputRef = useRef(null);
   const [importMessage, setImportMessage] = useState(null);
@@ -85,6 +88,32 @@ export function MyPageView({
                 {themeId === t.id && <Check size={16} strokeWidth={2.5} color="#231810" />}
               </span>
               <span className="text-[10px] text-[#8B7361]">{t.label}</span>
+            </button>
+          ))}
+        </div>
+      </section>
+
+      <section className="rounded-2xl bg-[#2F241A] border border-[#4A3A2A] p-4 flex flex-col gap-3">
+        <div className="flex items-center gap-1.5">
+          <Shuffle size={14} className="text-[var(--accent)]" strokeWidth={1.75} />
+          <h3 className="text-[14px] font-medium text-[#F2E9DD]">表示範囲(ランダム表示用)</h3>
+        </div>
+        <p className="text-[12px] text-[#8B7361] leading-relaxed">
+          商品タブの「ランダム」並べ替えで表示する商品の範囲です。「自動(おすすめ)」は、現在地から近い範囲で件数が少ない場合に自動で範囲を広げます。近い順・新規掲載の並べ替えには影響しません。
+        </p>
+        <div className="flex flex-wrap gap-2">
+          {displayRadiusOptions.map((o) => (
+            <button
+              key={o.id}
+              onClick={() => setDisplayRadiusId(o.id)}
+              aria-pressed={displayRadiusId === o.id}
+              className={`text-[12px] px-3.5 py-2 rounded-full border transition-colors ${
+                displayRadiusId === o.id
+                  ? "bg-[var(--accent)] text-[#231810] border-[var(--accent)] font-medium"
+                  : "border-[#4A3A2A] text-[#B8A891]"
+              }`}
+            >
+              {o.label}
             </button>
           ))}
         </div>

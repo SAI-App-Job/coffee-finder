@@ -13,7 +13,9 @@
     "shop_type": "single_location",
     "data_source": "manual",
     "source_note": "通販サイト(https://coffee-arrow.shop/)をブラウザで直接確認(2026-09)。「琥珀色の珈琲 (内容量:500g) ¥6,000」の1商品のみ販売中であることを確認。住所・電話番号は同店の公式サイト(https://www.coffee-arrow.jp/、1964年創業の喫茶店本体のサイト)で一次情報として確認し、候補リストの住所と一致した(通販サイト側の特定商取引法ページはSTORES.jp側のブロックにより直接確認できなかったが、公式サイトの記載で住所を検証済み)。",
-    "last_verified_at": "2026-09-15"
+    "last_verified_at": "2026-09-15",
+    "lat": 32.801209,
+    "lng": 130.705476
   },
   "products": [
     {

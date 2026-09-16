@@ -13,7 +13,9 @@
     "shop_type": "multi_location",
     "data_source": "manual",
     "source_note": "公式サイトの「コーヒー価格表」ページ(mamegen-sapporo.com/price/)にブレンド7種・定番ストレート12種・入れ替わりストレート6種、計25銘柄の商品名・100gあたり価格(税別・税込)・特徴説明が明記されていることをブラウザで実データ確認(2026-09-15)。店舗情報ページ(mamegen-sapporo.com/store/)で東苗穂本店・北17条店・北10条店の3店舗の住所を確認し、最初に掲載されている東苗穂本店を代表住所として採用した。価格は税込表示を採用。",
-    "last_verified_at": "2026-09-15"
+    "last_verified_at": "2026-09-15",
+    "lat": 43.077513,
+    "lng": 141.402049
   },
   "products": [
     {

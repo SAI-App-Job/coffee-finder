@@ -620,6 +620,25 @@ def merge_shop(scraped_shop_info: dict, existing_shop: dict | None, now_iso: str
     }
     if locations:
         merged["locations"] = locations
+
+    # トップレベルのlat/lngは、近い順ソート機能が全店舗共通で参照する代表座標。
+    # scripts/geocode-shops.jsが単一拠点店舗のトップレベルlat/lng、または複数
+    # 拠点店舗のlocations[].lat/lngに直接書き込む。このスクリプト自体はジオ
+    # コーディングを行わないため、既存値を引き継がないと毎回の再集約で失われて
+    # しまう(以前は複数拠点店舗もトップレベルには一切書き込んでおらず、
+    # geocode-shops.js実行直後の1回のコミットでしか有効にならなかった)。
+    # 複数拠点店舗は先頭拠点の座標を代表値として使う。
+    if locations and isinstance(locations[0].get("lat"), (int, float)) and isinstance(
+        locations[0].get("lng"), (int, float)
+    ):
+        merged["lat"] = locations[0]["lat"]
+        merged["lng"] = locations[0]["lng"]
+    else:
+        existing_lat = (existing_shop or {}).get("lat")
+        existing_lng = (existing_shop or {}).get("lng")
+        if isinstance(existing_lat, (int, float)) and isinstance(existing_lng, (int, float)):
+            merged["lat"] = existing_lat
+            merged["lng"] = existing_lng
     stabilize_timestamp(merged, existing_shop, "last_scraped_at")
     return merged
 
@@ -675,6 +694,30 @@ def build_product_id(record: dict) -> str:
     if record.get("product_url"):
         return record["product_url"]
     return f"{record['shop_name']}:{record['raw_name']}"
+
+
+# 【新規掲載(初出検知)フィールドについて】
+# first_detected_atは「このIDの商品をこのアプリが初めて検知した日時」を表す
+# (店舗側の新発売日ではない)。判定基準はIDが新規に追加された時点のみ――
+# 既存IDに対する価格変更・説明文修正等の差分更新では更新しない(下のresolve_
+# first_detected_atが、既存レコードにこのフィールドがあれば必ず引き継ぐため
+# 自然に満たされる)。
+#
+# このフィールド導入前から存在していた商品(初出日が不明)には、本プロジェクトの
+# 記録開始日(最初のコミット日)を遡及的に割り当てる。これにより導入直後は
+# 既存商品がすべて30日以内判定に引っかからなくなり、「新規掲載」対象外になる。
+MIGRATION_FALLBACK_FIRST_DETECTED_AT = "2026-08-10T00:00:00+00:00"
+
+
+def resolve_first_detected_at(product_id: str, existing_products: dict, now_iso: str) -> str:
+    existing = existing_products.get(product_id)
+    if existing and existing.get("first_detected_at"):
+        return existing["first_detected_at"]
+    if existing:
+        # このフィールド導入前のレコード(既存だがfirst_detected_atを持たない)
+        return MIGRATION_FALLBACK_FIRST_DETECTED_AT
+    # existing_productsに無い=このIDを初めて検知した
+    return now_iso
 
 
 def build_product(record: dict, shop_map_query: str, now_iso: str) -> dict:
@@ -852,6 +895,7 @@ def main():
             if record.get("is_flavored") or record.get("category") == "フレーバー":
                 continue
             product = build_product(record, merged_shop["map_query"], now_iso)
+            product["first_detected_at"] = resolve_first_detected_at(product["id"], existing_products, now_iso)
             stabilize_timestamp(product, existing_products.get(product["id"]), "scraped_at")
             all_products.append(product)
 
@@ -872,11 +916,13 @@ def main():
         covered_shop_names.add(shop_name)
 
         for raw_product in manual_data.get("products", []):
-            all_products.append(
-                build_manual_product(
-                    raw_product, shop_id, shop_name, manual_shop["map_query"], manual_shop.get("source_note")
-                )
+            manual_product = build_manual_product(
+                raw_product, shop_id, shop_name, manual_shop["map_query"], manual_shop.get("source_note")
             )
+            manual_product["first_detected_at"] = resolve_first_detected_at(
+                manual_product["id"], existing_products, now_iso
+            )
+            all_products.append(manual_product)
 
     # このワークフローが対象としない店舗(自動スクレイパーも手動ファイルも無い)の
     # 商品は、上書きせず既存のレコードをそのまま残す。ただし除外リストに載った

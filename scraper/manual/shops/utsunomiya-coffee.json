@@ -13,7 +13,9 @@
     "shop_type": "single_location",
     "data_source": "manual",
     "source_note": "公式サイト(http://utsunomiya60.server-shared.com/)のアクセスページで住所・電話番号を確認。商品・価格はYahoo!ショッピング出店ページ(2026-09時点、評価4.79/331件)の「魅惑的ブレンドコーヒー」「個性派ストレートコーヒー」「スペシャルティコーヒー」の各カテゴリー一覧を目視確認して入力。2kgまとめ売り・水出しアイスコーヒー・福袋・在庫切れ品は対象外とした。",
-    "last_verified_at": "2026-09-15"
+    "last_verified_at": "2026-09-15",
+    "lat": 32.812909,
+    "lng": 129.811538
   },
   "products": [
     {

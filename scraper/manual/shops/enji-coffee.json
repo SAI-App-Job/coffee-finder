@@ -13,7 +13,9 @@
     "shop_type": "single_location",
     "data_source": "manual",
     "source_note": "公式サイト(https://enji-coffee.com/menu.html)の「珈琲豆販売」セクションで実データ確認(2026-09)。「自家焙煎の珈琲豆を常時16種ご用意しております」との記載通り16銘柄が掲載されており、いずれも「下記価格はすべて100gの販売価格です」との注記がある100gあたりの価格。住所・電話番号はページ下部フッターに記載のものと一致(候補リストの住所とも一致)。かつてのOcnkオンラインショップ(enji-coffee.ocnk.net)は現在404 Not Foundで閉鎖済み。",
-    "last_verified_at": "2026-09-15"
+    "last_verified_at": "2026-09-15",
+    "lat": 32.801591,
+    "lng": 130.771049
   },
   "products": [
     {

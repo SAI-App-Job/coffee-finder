@@ -48,6 +48,10 @@ function mapProduct(raw, shopsByName) {
     shopName: raw.shop_name,
     shopAddress: shop?.address ?? null,
     prefecture: shop?.prefecture ?? null,
+    // 近い順ソート用。店舗のトップレベルlat/lngを商品側にも複製しておく
+    // (shopAddress/prefectureと同じ非正規化方針)。未ジオコーディングの店舗はnull。
+    shopLat: typeof shop?.lat === "number" ? shop.lat : null,
+    shopLng: typeof shop?.lng === "number" ? shop.lng : null,
     rawName: raw.raw_name,
     originCountry: raw.origin_country,
     designatedBrand: raw.designated_brand,
@@ -71,6 +75,9 @@ function mapProduct(raw, shopsByName) {
     // 「販売中」「一時的に品切れ」「終売」の3段階。データに無い場合(モックデータ等)は
     // 販売中扱いにする(在庫状態が分からないことを理由に一覧から隠さないため)。
     stockStatus: raw.stock_status || "販売中",
+    // 新規掲載バッジ・新着ソート用。このアプリが当該商品IDを初めて検知した日時
+    // (店舗側の新発売日ではない)。詳細はaggregate_shops.pyのresolve_first_detected_at参照
+    firstDetectedAt: raw.first_detected_at ?? null,
     // ブレンドの産地別内訳(現状PHILOCOFFEAのみ)。各要素は判明した項目のみ
     // 埋まっている前提で、無い項目はnullのまま(欠けている項目を推測で埋めない)。
     blendComponents: Array.isArray(raw.blend_components)

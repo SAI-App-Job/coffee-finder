@@ -13,7 +13,9 @@
     "shop_type": "single_location",
     "data_source": "manual",
     "source_note": "自社サイトの店頭販売ページ(https://coffee-myself.com/tentosale/ )および店舗概要ページ(https://coffee-myself.com/about/ )を目視確認して入力(2026-09-08確認)。ご注文を受けてから生豆を焙煎する完全受注生産方式。価格は生豆時200gの基準表記で、焙煎後は水分蒸発により約20%目減りする旨が商品ページに明記されている。ギフトセット(2銘柄セット3,860円/3銘柄セット5,600円)は単一銘柄でないため対象外とした。",
-    "last_verified_at": "2026-09-08"
+    "last_verified_at": "2026-09-08",
+    "lat": 34.518507,
+    "lng": 135.424614
   },
   "products": [
     {

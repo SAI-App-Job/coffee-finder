@@ -13,7 +13,9 @@
     "shop_type": "single_location",
     "data_source": "manual",
     "source_note": "公式サイトokada-coffee.jpのトップページ「Coffee / Original blended coffee / Specialty Coffee」セクションに、銘柄ごとの商品名・産地・カップ(店内)価格・豆100gあたりの価格が番号付きで掲載されている(2026-09-08時点で目視確認)。「お気に入りの豆をメールまたはLINEでご希望の豆と数量をお知らせください」という注文方式のため通販カートはないが、価格は公式サイトに明記されている。コーヒーバッグ(小分けパック)商品はホールビーンの重量単価と構造が異なるため対象外とした。",
-    "last_verified_at": "2026-09-08"
+    "last_verified_at": "2026-09-08",
+    "lat": 34.776342,
+    "lng": 134.995189
   },
   "products": [
     {

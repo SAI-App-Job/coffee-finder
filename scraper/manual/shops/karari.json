@@ -13,7 +13,9 @@
     "shop_type": "single_location",
     "data_source": "manual",
     "source_note": "公式サイト(crayonsite.netの無料ホームページ作成サービスで構築、通販カート機能なし)の商品ページ(https://karari.crayonsite.net/p/2/)を直接確認して入力(2026-09)。「焙煎は200グラムからお願いします、ご注文いただいてから焙煎します」との案内があり、焙煎度(ミディアム/ハイ・シティー/フルシティ/フレンチ/イタリアン)は注文時に選べる方式のため商品ごとの固定roastは無い(roastは全件null)。価格・重量は商品ページに一切掲載されていないためprice/weightGはすべてnull。",
-    "last_verified_at": "2026-09-07"
+    "last_verified_at": "2026-09-07",
+    "lat": 35.125116,
+    "lng": 138.92265
   },
   "products": [
     {

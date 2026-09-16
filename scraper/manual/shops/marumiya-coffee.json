@@ -13,7 +13,9 @@
     "shop_type": "single_location",
     "data_source": "manual",
     "source_note": "公式サイトが公開している価格表PDF「まる味屋珈琲リスト」(https://marumiya-coffee.com/_userdata/202604_baisenlist_marumiyacoffee.pdf、2026年4月版)で全52銘柄・100gあたりの税込価格を確認(2026-09)。オンラインストア(marumiya-coffee.com/onlinestore/)にも同一銘柄の個別商品ページが存在することを確認済みだが、価格がテキストとして取得できなかったため、上記の公式価格表PDFを一次情報として採用した。「＊数量限定豆」の注記がある6銘柄(ブルーマウンテンブレンド・ブルーマウンテンNO1・アベベ農園ライト/ダーク・くだもの市場ライト/ダークロースト・エスメラルダゲイシャ種)は季節限定で取扱いが無い場合がある。本店の住所・営業時間は店舗案内ページ(marumiya-coffee.com/shop.html)で確認(候補リストの住所と一致)。なお同社はSAKURA MACHI Kumamoto店・宮原サービスエリア上下線(いずれも九州産交リテール株式会社運営の別事業者委託店舗)も展開しているが、本エントリでは本店(合志)の情報のみを採用した。",
-    "last_verified_at": "2026-09-15"
+    "last_verified_at": "2026-09-15",
+    "lat": 32.756075,
+    "lng": 130.675039
   },
   "products": [
     {
