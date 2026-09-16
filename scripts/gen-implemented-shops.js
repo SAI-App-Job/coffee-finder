@@ -66,7 +66,24 @@ out +=
   "`scraper/manual/shops/`配下、それ以外は`scraper/scrape_*.py`で自動取得。\n" +
   "実装を見送った店舗は`docs/not-implementable-shops.md`を参照。\n\n";
 out += `合計${rows.length}店舗・${products.length}商品(生成日: ${today})。\n\n`;
-out += "再生成コマンド:\n```\nnode scripts/gen-implemented-shops.js\n```\n";
+out += "再生成コマンド:\n```\nnode scripts/gen-implemented-shops.js\n```\n\n";
+out +=
+  "## 週次スクレイピングの所要時間(実測)\n\n" +
+  "`.github/workflows/scrape-shops.yml`の`schedule`/`workflow_dispatch`(shop=all)による\n" +
+  "全店舗実行の実測値。`scrape1`・`scrape2`のmatrix並列実行(GitHub Actions既定の並列数、\n" +
+  "概ね20並列)により、店舗数が増えても実行時間は緩やかにしか伸びない。内容に変更が\n" +
+  "無い店舗があっても、変更の有無はサイトへの実際のリクエスト無しには判定できないため、\n" +
+  "スクレイピング自体の所要時間は短縮されない(短縮されるのは最後のコミット処理のみ、\n" +
+  "aggregate_shops.py実行後の`git diff --staged --quiet || git commit`が該当、\n" +
+  "全体に対してごく僅か)。\n\n" +
+  "| 実行日時 | 対象店舗数(概算) | 所要時間 |\n|---|---|---|\n" +
+  "| 2026-09-14 23:32(定期実行) | 366 | 18.9分 |\n" +
+  "| 2026-09-14 23:56 | 366 | 19.4分 |\n" +
+  "| 2026-09-15 12:07 | 406 | 19.5分 |\n" +
+  "| 2026-09-16 00:12 | 427 | 21.2分 |\n" +
+  "| 2026-09-16 03:02 | 435 | 21.3分 |\n\n" +
+  "499店舗規模(2026-09-16時点)ではフル実行(スクレイピング→集約→コミット)は\n" +
+  "概ね20〜22分程度が目安。\n";
 
 let currentPref = null;
 for (const r of rows) {
