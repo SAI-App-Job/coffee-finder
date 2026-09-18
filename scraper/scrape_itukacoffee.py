@@ -53,6 +53,14 @@ robots.txt確認済み(2026-08時点): カフェクラウディアと同一のBA
 robots.txt。curl/python-requests等の匿名UAは名指しで全面禁止されているが、
 独自User-Agent(CoffeeFinderBot)は「User-agent: *」規定の対象となり、
 /cart/・/web_cart/・/shops/・/api/shops/等以外は許可されている。
+
+【flavor_notes(テイスティングノート)の追加取得について(2026-09-19追記)】
+実データ確認済み: 説明文冒頭の「読み物調の紹介文」(モジュールdocstring
+既述)は、実際には「八朔やみかん、金柑などを思わせる甘みを伴った果実感。
+コクもあり飲みごたえもしっかりな味わいです。」のような具体的な風味描写
+だった。従来は「ラベル：値」形式の行のみをfieldsとして拾い、この冒頭部分は
+未使用だったため、最初のラベル行に達するまでをflavor_notesとして追加で
+採用する(parse_flavor_notes参照)。
 """
 
 import json
@@ -143,6 +151,20 @@ def parse_description_fields(description_text: str) -> dict:
     return fields
 
 
+def parse_flavor_notes(description_text: str) -> str | None:
+    """理由はモジュールdocstring参照(最初の「ラベル：値」行に達するまでの
+    冒頭の紹介文をflavor_notesとして採用する)。"""
+    lines: list[str] = []
+    for raw_line in description_text.split("\n"):
+        line = raw_line.strip()
+        if not line:
+            continue
+        if FIELD_LINE_PATTERN.match(line):
+            break
+        lines.append(line)
+    return "".join(lines).strip() or None
+
+
 def parse_altitude(altitude_text: str | None) -> tuple[int | None, int | None]:
     """実データ確認済み: 「1570-1770m」「1600ｍ」「１，７００～１８８０ｍ」の
     ように、半角/全角の数字・カンマ・波ダッシュ・m表記が店舗内でも商品ごとに
@@ -204,8 +226,9 @@ def parse_product_detail(url: str) -> dict:
     stock_status = detect_stock_status(raw_name, sold_out)
 
     desc_el = soup.select_one('[class*="item-detail_description"]')
-    description_text = desc_el.get_text() if desc_el else ""
+    description_text = desc_el.get_text(separator="\n") if desc_el else ""
     fields = parse_description_fields(description_text)
+    flavor_notes = parse_flavor_notes(description_text)
 
     parsed = parse_product(raw_name)
 
@@ -255,6 +278,7 @@ def parse_product_detail(url: str) -> dict:
         "altitude_min_m": altitude_min_m,
         "altitude_max_m": altitude_max_m,
         "variety": fields.get("品種"),
+        "flavor_notes": flavor_notes,
         "decaf_process": detect_decaf_process(raw_name, fields),
         "weight_g": weight_g,
         "price": price,

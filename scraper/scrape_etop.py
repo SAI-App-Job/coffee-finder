@@ -74,6 +74,15 @@ BEANS DATA表と同じ「汎用ラベル抽出」方式で対応、parse_additio
 robots.txt確認済み(2026-08時点): User-agent: * は /secure/ と /cart/ のみ制限
 (商品ページ・カテゴリページは対象外)。AhrefsBot等のSEO分析系ボットは
 個別に全面禁止されているが、本スクレイパーはそれらを名乗らない。
+
+【flavor_notes(テイスティングノート)の追加取得について(2026-09-19追記)】
+実データ確認済み: 商品説明(div.p-product-explain__body)は「DETAIL」の
+見出し(h2)に続けて産地の歴史等を語る段落(p)、具体的な風味描写の段落
+(例:「非水洗式（ナチュラル製法）ならではの甘く優雅な香りと、柔らかな
+酸味が特長です」)、店舗都合の注記(「※お知らせ」で始まる段落)、そして
+「詳細」の見出し(h2、2つ目)に続けて構造化ラベル表(dl.additional、
+従来から取得済み)が並ぶ。2つ目のh2に達するまでの、かつ「※」で始まらない
+h2・p要素をflavor_notesとして採用する(parse_flavor_notes参照)。
 """
 
 import json
@@ -170,6 +179,26 @@ def parse_additional_fields(soup: BeautifulSoup) -> dict:
     return fields
 
 
+def parse_flavor_notes(soup: BeautifulSoup) -> str | None:
+    """理由はモジュールdocstring参照(「詳細」見出し以降の構造化データより
+    前の、風味描写を含む段落をflavor_notesとして採用する)。"""
+    body_el = soup.select_one("div.p-product-explain__body")
+    if not body_el:
+        return None
+    lines = []
+    h2_count = 0
+    for child in body_el.find_all(["h2", "p"], recursive=False):
+        if child.name == "h2":
+            h2_count += 1
+            if h2_count >= 2:
+                break
+        text = child.get_text(strip=True)
+        if not text or text.startswith("※"):
+            continue
+        lines.append(text)
+    return "".join(lines).strip() or None
+
+
 def parse_altitude(altitude_text: str | None) -> tuple[int | None, int | None]:
     if not altitude_text:
         return None, None
@@ -237,7 +266,8 @@ def pick_canonical_variant(variants: list[dict]) -> dict | None:
     return pool[0]
 
 
-def build_record(product_url: str, colorme_product: dict, fields: dict, category_hint: str) -> dict:
+def build_record(product_url: str, colorme_product: dict, fields: dict, category_hint: str,
+                  flavor_notes: str | None) -> dict:
     title = (colorme_product.get("name") or "").strip()
     parsed = parse_product(title)
 
@@ -317,6 +347,7 @@ def build_record(product_url: str, colorme_product: dict, fields: dict, category
         "region_detail": None if is_blend else region_detail,
         "altitude_min_m": None if is_blend else altitude_min,
         "altitude_max_m": None if is_blend else altitude_max,
+        "flavor_notes": flavor_notes,
         "blend_components": [],  # ブレンド商品の産地別内訳は実データ(dl.additionalが存在しない)で未対応
         "price": variant.get("option_price_including_tax") if variant else None,
         "weight_g": weight_from_variant(variant, title),
@@ -337,7 +368,8 @@ def parse_product_detail(url: str, category_hint: str) -> dict:
             "product_url": url,
         }
     fields = parse_additional_fields(soup)
-    return build_record(url, colorme_product, fields, category_hint)
+    flavor_notes = parse_flavor_notes(soup)
+    return build_record(url, colorme_product, fields, category_hint, flavor_notes)
 
 
 def scrape_category_list_page(cbid: int, page: int) -> list[dict]:

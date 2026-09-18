@@ -32,6 +32,15 @@ robots.txt確認済み(2026-09時点): User-agent: *に対し、特定のクエ�
 コロンビア」はデカフェ加工方法の説明のみで原産国ラベル自体が無い)、
 ラベルが無い場合は商品名からの産地判定にフォールバックする。
 
+【flavor_notes(テイスティングノート)の追加取得について(2026-09-19追記)】
+実データ確認済み(id=311): ラベル行(原産国:/生産地域:等)の後、空行を挟まず
+そのまま「口当たりはなめらかで苦味はやさしく酸味もマイルドで、まろやかな
+コク、そして余韻にとても良い甘味があります。」のような具体的な風味描写が
+続き、末尾は「★ご購入100gにつき30円を...」のような店舗の注記(義援金・
+限定販売等の告知)で終わる。ヘッダー部分(header_lines)のうち、ラベル行
+(LABEL_PATTERNに一致する行)ではなく、かつ「★」で始まる注記より前の行を
+flavor_notesとして採用する(parse_description_fields参照)。
+
 【カテゴリを「ブレンド/ストレート」の判定に使う理由】
 実データ確認済み: 「プレミアムアイス」「びーんず亭フルロースト」のように
 商品名に「ブレンド」を含まないブレンド商品が複数あり(10件中2件)、商品名
@@ -91,6 +100,7 @@ LIST_CATEGORIES = {
 }
 
 LABEL_PATTERN = re.compile(r"^(.+?)[:：]\s*(.+)$")
+FLAVOR_STOP_MARKER = "★"  # 理由はモジュールdocstring参照(店舗独自の注記の開始マーカー)
 ALTITUDE_RANGE_PATTERN = re.compile(r"標高[^\d]*([\d,]+)\s*[-〜~～]\s*([\d,]+)\s*m")
 ALTITUDE_SINGLE_PATTERN = re.compile(r"標高[^\d]*([\d,]+)\s*m")
 DECAF_PROCESS_PATTERN = re.compile(r"(スイスウォータープロセス|マウンテンウォータープロセス|"
@@ -118,9 +128,10 @@ def parse_altitude(text: str) -> tuple[int | None, int | None]:
     return None, None
 
 
-def parse_description_fields(comment_text: str) -> tuple[dict, int | None, int | None]:
+def parse_description_fields(comment_text: str) -> tuple[dict, int | None, int | None, str | None]:
     """main_commentのヘッダー部分(空行まで)を「ラベル:値」形式で抽出する。
-    理由はモジュールdocstring参照。"""
+    理由はモジュールdocstring参照。ラベル行でも「★」注記以降でもない行は
+    flavor_notesの候補としてまとめて採用する。"""
     lines = comment_text.split("\n")
     header_lines: list[str] = []
     for line in lines:
@@ -131,13 +142,19 @@ def parse_description_fields(comment_text: str) -> tuple[dict, int | None, int |
     header_text = "\n".join(header_lines)
 
     fields: dict[str, str] = {}
+    flavor_lines: list[str] = []
     for line in header_lines:
+        if line.startswith(FLAVOR_STOP_MARKER):
+            break
         m = LABEL_PATTERN.match(line)
         if m:
             fields[m.group(1).strip()] = m.group(2).strip()
+            continue
+        flavor_lines.append(line)
 
     altitude_min, altitude_max = parse_altitude(header_text)
-    return fields, altitude_min, altitude_max
+    flavor_notes = "".join(flavor_lines).strip() or None
+    return fields, altitude_min, altitude_max, flavor_notes
 
 
 def build_record(item: dict, soup: BeautifulSoup) -> dict:
@@ -162,7 +179,7 @@ def build_record(item: dict, soup: BeautifulSoup) -> dict:
 
     comment_el = soup.select_one("div.main_comment")
     comment_text = comment_el.get_text(separator="\n", strip=True) if comment_el else ""
-    fields, altitude_min, altitude_max = parse_description_fields(comment_text)
+    fields, altitude_min, altitude_max, flavor_notes = parse_description_fields(comment_text)
 
     is_decaf = "カフェインレス" in title or "デカフェ" in title
     decaf_process = None
@@ -225,6 +242,7 @@ def build_record(item: dict, soup: BeautifulSoup) -> dict:
         "region_detail": None if is_blend else region_detail,
         "altitude_min_m": None if is_blend else altitude_min,
         "altitude_max_m": None if is_blend else altitude_max,
+        "flavor_notes": flavor_notes,
         "decaf_process": decaf_process,
         "blend_components": [],
         "price": item.get("price"),

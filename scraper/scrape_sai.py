@@ -39,6 +39,15 @@ detect_country_name()に通して国名を検出、判明した国の数でブ�
 実データ確認済み: 全商品ともバリアントは単一(Default Title)で、
 variants[0].gramsに正しい重量(g)が入っている(厚木珈琲のgrams=0固定問題は
 無い)。
+
+【flavor_notes(テイスティングノート)の追加取得について(2026-09-19追記)】
+実データ確認済み: 「味の傾向：マイルド系＋コク」という簡潔な傾向表記に加え、
+商品によっては「コメント：抹茶を思わせる涼やかな香りとやさしい甘み。
+自然保護区の森に囲まれた農園で育った旨味のある一杯です。」という具体的な
+テイスティングコメントの行もある(37件中サンプル3件中2件で確認)。
+parse_label_fields()はラベルを限定せず汎用抽出しているためどちらも
+labelsに含まれていたが、build_record側で読み出しておらず出力に反映
+されていなかった。両方をまとめてflavor_notesとして採用する。
 """
 
 import json
@@ -144,6 +153,8 @@ def build_record(product: dict) -> dict:
         }
 
     labels = parse_label_fields(product.get("body_html", ""))
+    flavor_parts = [labels[key] for key in ("味の傾向", "コメント") if labels.get(key)]
+    flavor_notes = "。".join(flavor_parts) if flavor_parts else None
 
     origin_raw = labels.get("国名")
     origin_countries: list[str] = []
@@ -203,6 +214,7 @@ def build_record(product: dict) -> dict:
         "region_detail": labels.get("エリア") or None,
         "variety": labels.get("豆の種類") or None,
         "farm_name": labels.get("農園") or None,
+        "flavor_notes": flavor_notes,
         "blend_components": blend_components,
         "price": price,
         "weight_g": variant.get("grams"),

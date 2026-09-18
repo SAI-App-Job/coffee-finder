@@ -65,6 +65,16 @@ python-requests/aiohttp等の一般的なHTTPクライアントは個別にDisal
 案内されているだけの数量倍数であり、別バリエーション価格は存在しない
 (挽き方セレクターのみで、サイズセレクターは無い)。price/weight_gは
 基本の100g単価をそのまま採用する。
+
+【flavor_notes(テイスティングノート)の追加取得について(2026-09-19追記)】
+実データ確認済み: p.p-item__summary冒頭の焙煎度見出し(例:「【Medium Light
+/ 中浅煎り】」)の直後に「ローズティーを思わせる華やかな香りに、熟した
+アプリコットのような優しい甘さ。」のようなテイスティングコメントが1段落
+入る(次の【...】見出し=星評価の行に達するまで)。さらに、1つ目の区切り線
+(「ー・ー・ー...」)と2つ目の区切り線の間には「【(ロット名)について】」という
+見出しに続けて、精製方法や産地の背景を交えた風味描写の段落が複数続く。
+両方をまとめてflavor_notesとして採用する(parse_flavor_notes参照。区切り線が
+1つしか無い商品ではBが空になるだけで、Aだけは取得できる)。
 """
 
 import json
@@ -100,6 +110,7 @@ REQUEST_HEADERS = {
 NON_BEAN_KEYWORDS = ["お試しセット"]
 
 DETAIL_LABEL_PATTERN = re.compile(r"^【([^/】]+?)\s*/\s*[^】]*】\s*(.*)$")
+DIVIDER_PATTERN = re.compile(r"^ー(?:・ー)+$")  # 理由はモジュールdocstring参照
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
 ALTITUDE_RANGE_PATTERN = re.compile(r"([\d,]+)\s*[-〜~]\s*([\d,]+)\s*m")
 ALTITUDE_SINGLE_PATTERN = re.compile(r"([\d,]+)\s*m")
@@ -139,6 +150,35 @@ def parse_detail_fields(soup: BeautifulSoup) -> dict:
             value = m.group(2).split("/")[0].strip()
             fields[label] = value
     return fields
+
+
+def parse_flavor_notes(soup: BeautifulSoup) -> str | None:
+    """理由はモジュールdocstring参照(焙煎度見出し直後のテイスティングコメントと、
+    区切り線に挟まれた「〜について」セクションの風味描写をまとめて採用する)。"""
+    summary_el = soup.select_one("p.p-item__summary")
+    if not summary_el:
+        return None
+    for br in summary_el.find_all("br"):
+        br.replace_with("\n")
+    lines = [line.strip() for line in summary_el.get_text().split("\n")]
+    lines = [line for line in lines if line]
+
+    flavor_parts: list[str] = []
+    idx = 0
+    if idx < len(lines) and DETAIL_LABEL_PATTERN.match(lines[idx]):
+        idx += 1
+        while idx < len(lines) and not lines[idx].startswith("【") and not DIVIDER_PATTERN.match(lines[idx]):
+            flavor_parts.append(lines[idx])
+            idx += 1
+
+    divider_indices = [i for i, line in enumerate(lines) if DIVIDER_PATTERN.match(line)]
+    if len(divider_indices) >= 2:
+        for line in lines[divider_indices[0] + 1 : divider_indices[1]]:
+            if line.startswith("【"):
+                continue
+            flavor_parts.append(line)
+
+    return "".join(flavor_parts).strip() or None
 
 
 def parse_altitude(text: str | None) -> tuple[int | None, int | None]:
@@ -196,6 +236,7 @@ def build_record(soup: BeautifulSoup, product_url: str, fallback_title: str, pri
         }
 
     fields = parse_detail_fields(soup)
+    flavor_notes = parse_flavor_notes(soup)
 
     if fields.get("原産国"):
         country = detect_country_name(fields["原産国"])
@@ -237,6 +278,7 @@ def build_record(soup: BeautifulSoup, product_url: str, fallback_title: str, pri
         "variety": fields.get("品種"),
         "altitude_min_m": altitude_min,
         "altitude_max_m": altitude_max,
+        "flavor_notes": flavor_notes,
         "blend_components": [],
         "price": price,
         "weight_g": parse_weight(title),

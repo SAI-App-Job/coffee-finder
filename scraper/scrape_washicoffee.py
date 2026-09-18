@@ -47,6 +47,15 @@ k-gihuto.htmという商品固有の静的ページへのリンクが並ぶ。�
 coffee_parser.parse_product()で商品名から判定できるが、含まれない商品もあるため
 保険としてページからも抽出しroast_hintとして保持する(roast_levelは商品名からの
 判定を優先する)。
+
+【flavor_notes(テイスティングノート)の追加取得について(2026-09-19追記)】
+実データ確認済み(k-guren-2026.htm): 「焙煎度：」の近くに「風味：」という
+ラベルがあり、続けて<br>区切りで「しっかりとした飲みごたえのあるコク」
+「キレのある心地よい苦味香ばしさを余韻で感じる」という具体的な風味描写が
+入る。この行群は「風味：」の直後、空行(<br><br>)に達するまでで区切られており、
+その先には無関係な販促文言(「50周年記念商品のため...」)が続く。DETAIL_LABELSは
+既知9ラベルの固定リストのため「風味」は元々対象外だったが、別途
+parse_flavor_notes()で「風味：」〜最初の空行までを抽出してflavor_notesとする。
 """
 
 import json
@@ -83,6 +92,7 @@ OPTION_PATTERN = re.compile(r'VALUE="\d+=([^=]+?)[（(](\d+)g(?:パック)?[）)
 ROAST_PATTERN = re.compile(r"焙煎度[：:]\s*　?\s*([^\s<（]+)")
 DETAIL_LABELS = ["生産地", "農園名", "標高", "等級", "収穫時期", "品種", "スクリーンサイズ", "精選方法", "認証"]
 DETAIL_LINE_PATTERN = re.compile(r"^(" + "|".join(DETAIL_LABELS) + r")\s+(.+)$")
+FLAVOR_LABEL_PATTERN = re.compile(r"^風味[：:]\s*(.*)$")
 
 
 def fetch_text(url: str) -> str:
@@ -120,6 +130,30 @@ def parse_detail_labels(html: str) -> dict:
     return labels
 
 
+def parse_flavor_notes(html: str) -> str | None:
+    """理由はモジュールdocstring参照(「風味：」〜最初の空行までを抽出する)。"""
+    soup = BeautifulSoup(html, "html.parser")
+    for br in soup.find_all("br"):
+        br.replace_with("\n")
+    lines = soup.get_text().split("\n")
+
+    flavor_lines: list[str] = []
+    collecting = False
+    for raw_line in lines:
+        line = raw_line.strip()
+        if not collecting:
+            m = FLAVOR_LABEL_PATTERN.match(line)
+            if m:
+                collecting = True
+                if m.group(1):
+                    flavor_lines.append(m.group(1))
+            continue
+        if not line:
+            break
+        flavor_lines.append(line)
+    return "".join(flavor_lines).strip() or None
+
+
 def build_record(page: str) -> dict | None:
     url = f"{BASE_URL}/{page}"
     html = fetch_text(url)
@@ -139,6 +173,7 @@ def build_record(page: str) -> dict | None:
 
     roast_m = ROAST_PATTERN.search(html)
     roast_hint = roast_m.group(1).strip() if roast_m else None
+    flavor_notes = parse_flavor_notes(html)
 
     labels = {} if is_blend else parse_detail_labels(html)
     if labels.get("生産地") and not parsed["origin_country"]:
@@ -177,6 +212,7 @@ def build_record(page: str) -> dict | None:
         "roast_hint": roast_hint,
         "post_processing_tags": parsed["post_processing_tags"],
         "farm_note": farm_note,
+        "flavor_notes": flavor_notes,
         "blend_components": [],
         "price": price,
         "weight_g": weight_g,

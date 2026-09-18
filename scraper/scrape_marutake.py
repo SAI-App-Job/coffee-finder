@@ -58,6 +58,15 @@ N=4で51件から頭打ちを確認)。そのためscrape_category_list()は件�
 【焙煎度について】
 【焙煎度】の値は「浅煎り」「中煎り」等の粗い3〜4段階表記でプロ向け8段階
 表記と粒度が異なるため、roast_hintとして保持しroast_levelには反映しない。
+
+【flavor_notes(テイスティングノート)の追加取得について(2026-09-19追記)】
+実データ確認済み: 説明文の最初の行に「【味わい】飲み口はまろやかで程よい
+コク。後味はすっと飲み切れるやわらかな酸味が特徴。」という、他のラベルと
+同じ「【ラベル】値」形式のテイスティングノート専用行がある。
+parse_description_fields()は元々ラベルを限定せず汎用抽出しているため
+fields["味わい"]としてはすでに取得できていたが、build_record側で読み出して
+おらず出力に反映されていなかった。fields.get("味わい")をflavor_notesとして
+採用する。
 """
 
 import json
@@ -280,6 +289,7 @@ def build_record(product_url: str, product: dict, category_hint: str) -> dict:
         "producer_name": producer_name,
         "altitude_min_m": altitude_min,
         "altitude_max_m": altitude_max,
+        "flavor_notes": fields.get("味わい"),
         "blend_components": blend_components,
         "price": price,
         "weight_g": parse_weight_from_title(title) or parse_weight(fields.get("内容量")),

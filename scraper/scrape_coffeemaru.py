@@ -34,6 +34,14 @@ body_html内に「生産国　○○」のようにラベルと全角スペー�
 その場合でも商品名(例:「ケニア マサイAA」「ルワンダ 走れ！ライオン」)に
 産地国名が直接含まれているため、coffee_parser.pyの商品名パースで十分
 対応できることを確認済み。
+
+【flavor_notes(テイスティングノート)の追加取得について(2026-09-19追記)】
+実データ確認済み(3商品全件): body_htmlの冒頭は必ず「柑橘系の甘い香り。
+強めの酸味がさわやか。」のような具体的な風味描写の段落から始まり、末尾に
+「生産国　○○」(全角スペース区切り)や「［規格］」(角括弧見出し)形式の
+構造化情報が続く。両ラベル形式の行、および画像・LINE問い合わせ等の
+非テキスト要素を除いた残りの段落をflavor_notesとして採用する
+(parse_flavor_notes参照)。
 """
 
 import json
@@ -79,6 +87,11 @@ DESC_LABEL_PATTERN = re.compile(
 # variants[].gramsは実データ確認済みで信用できない値が混在していたため
 # 優先的には使わない(下のpick_canonical_variant参照)。
 VARIANT_WEIGHT_PATTERN = re.compile(r"(\d+)\s*g")
+# 理由はモジュールdocstring参照(角括弧見出し行と、コピペ由来のエスケープ済み
+# <br>タグの残骸を除去する)
+FLAVOR_EXCLUDE_LINE_PREFIXES = ("[", "［", "【")
+NON_FLAVOR_LINES = {"LINE問い合わせ"}
+STRAY_TAG_PATTERN = re.compile(r"<[^>]+>")
 
 
 def fetch_products_page(page: int) -> list[dict]:
@@ -109,6 +122,28 @@ def parse_body_fields(body_html: str) -> dict:
         if value:
             raw[label] = value
     return raw
+
+
+def parse_flavor_notes(body_html: str) -> str | None:
+    """理由はモジュールdocstring参照(構造化ラベル行を除いた風味描写の段落を
+    flavor_notesとして採用する)。"""
+    if not body_html:
+        return None
+    soup = BeautifulSoup(body_html, "html.parser")
+    for br in soup.find_all("br"):
+        br.replace_with("\n")
+    lines: list[str] = []
+    for p in soup.find_all("p"):
+        for raw_line in p.get_text().split("\n"):
+            line = STRAY_TAG_PATTERN.sub("", raw_line).strip()
+            if not line or line in NON_FLAVOR_LINES:
+                continue
+            if DESC_LABEL_PATTERN.match(line):
+                continue
+            if line.startswith(FLAVOR_EXCLUDE_LINE_PREFIXES):
+                continue
+            lines.append(line)
+    return "".join(lines).strip() or None
 
 
 def weight_from_variant(variant: dict | None) -> int | None:
@@ -172,6 +207,7 @@ def build_record(product: dict) -> dict:
     if fields.get("精製方法"):
         parsed["processing_method"] = normalize_processing_method(fields["精製方法"])
 
+    flavor_notes = parse_flavor_notes(product.get("body_html", ""))
     variant = pick_canonical_variant(product.get("variants", []))
     structural_out_of_stock = not any(v.get("available") for v in product.get("variants", []))
     stock_status = detect_stock_status(title, structural_out_of_stock)
@@ -192,6 +228,7 @@ def build_record(product: dict) -> dict:
         "region_detail": fields.get("生産エリア"),
         "variety": fields.get("品種"),
         "grade_note": fields.get("規格"),
+        "flavor_notes": flavor_notes,
         "blend_components": [],  # 実データではブレンド商品の例が見つからず未対応
         "price": int(float(variant["price"])) if variant else None,
         "weight_g": weight_from_variant(variant),

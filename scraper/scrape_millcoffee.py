@@ -17,6 +17,15 @@ Wixサイトの特徴: data-hook属性が要素の目印として一貫して使
 【差分ベーススクレイピング】一覧ページ(軽量)の時点で商品名・価格・在庫状況が
 前回(data/products.json)と変わっていない商品は、詳細ページの再取得をスキップ
 して前回のレコードをそのまま使い回す(previous_data.py参照)。
+
+【flavor_notes(テイスティングノート)の追加取得について(2026-09-19追記)】
+実データ確認済み: pre[data-hook="description"]の冒頭に「オレンジ、
+グレープフルーツ、カシス、青草、アーモンド、柑橘系の香りと爽やかな青草を
+連想させる香りを感じられる。コクと、黒糖やカラメルのような甘味があります。」
+のような具体的な風味描写が続き、その直後に「原産国＝」「推奨焙煎度＝」
+「単位＝」という既存の抽出対象キーが続く(区切り文字や改行は無く、
+そのまま連結されている)。これら3つのキーのうち最初に現れるものの手前
+までをflavor_notesとして採用する(parse_flavor_notes参照)。
 """
 
 import re
@@ -61,6 +70,16 @@ VARIETY_PATTERN = re.compile(r"品種【([^】]+)】")
 PRODUCER_PATTERN = re.compile(r"生産者[：:]\s*([^\n]+)")
 REGION_DETAIL_PATTERN = re.compile(r"生産地[：:]\s*([^\n]+)")
 ALTITUDE_PATTERN = re.compile(r"標高[：:]\s*([^\n]+)")
+FLAVOR_STOP_PATTERN = re.compile(r"原産国＝|推奨焙煎度＝|単位＝")  # 理由はモジュールdocstring参照
+
+
+def parse_flavor_notes(desc_text: str) -> str | None:
+    """理由はモジュールdocstring参照(説明文冒頭の風味描写を、既存の抽出対象
+    キーが現れる手前までflavor_notesとして採用する)。"""
+    m = FLAVOR_STOP_PATTERN.search(desc_text)
+    candidate = desc_text[: m.start()] if m else desc_text
+    lines = [line.strip() for line in candidate.split("\n")]
+    return "".join(line for line in lines if line).strip() or None
 
 
 def parse_blend_components_from_region_info(region_info_text: str) -> list[dict]:
@@ -151,6 +170,7 @@ def parse_product_detail(url: str) -> dict:
     desc_origin = DESC_ORIGIN_PATTERN.search(desc_text)
     roast_hint = DESC_ROAST_HINT_PATTERN.search(desc_text)
     unit = DESC_UNIT_PATTERN.search(desc_text)
+    flavor_notes = parse_flavor_notes(desc_text)
 
     # 折りたたみセクション(商品情報/生産地情報など、セクション名は店舗依存)
     info_sections = {}
@@ -195,6 +215,7 @@ def parse_product_detail(url: str) -> dict:
         "producer_note": producer.group(1).strip() if producer else None,
         "region_detail": region_detail.group(1).strip() if region_detail else None,
         "altitude_note": altitude.group(1).strip() if altitude else None,
+        "flavor_notes": flavor_notes,
         "blend_components": blend_components,  # ブレンドの産地内訳(現状産地国のみ、判明する場合のみ)
         "price": price,
         "product_url": url,

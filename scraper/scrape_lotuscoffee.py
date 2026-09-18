@@ -40,6 +40,16 @@ metaキーワードに「福島市コーヒー豆」と明記されている。�
 
 robots.txt確認済み(2026-09時点): PHILOCOFFEA等と同一の記述(User-agent: *は
 /secure/と/cart/のみ制限)。
+
+【flavor_notes(テイスティングノート)の追加取得について(2026-09-19追記)】
+実データ確認済み: div.detail_textの冒頭(商品名の再掲の後)に「エチオピア・
+イルガチェフェは、世界中のコーヒー愛好家を魅了してきた名産地。...ジャスミンや
+フローラルの香り、明るいシトラスの酸味、オレンジを思わせる甘い余韻が特徴。」
+のような具体的な風味描写の段落が続き、その後に抽出方法の案内(▼始まり)、
+■ラベルの構造化情報、精製方法の一般解説、購入時の注意書き(★始まり)が続く。
+句点(。)を含む行のみを対象に、▼・■・★のいずれかで始まる行に達するまでを
+flavor_notesとして採用する(句点の無い行=商品名の再掲や見出しを除外する
+ため。parse_flavor_notes参照)。
 """
 
 import json
@@ -81,6 +91,7 @@ LIST_ITEM_PATTERN = re.compile(
 )
 COLORME_JSON_PATTERN = re.compile(r"var\s+Colorme\s*=\s*(\{.*\});", re.DOTALL)
 DETAIL_LABEL_PATTERN = re.compile(r"■\s*([^\s　]+)[\s　]+(.+)")
+FLAVOR_STOP_PREFIXES = ("▼", "■", "★")  # 理由はモジュールdocstring参照
 
 
 def fetch_page(url: str) -> BeautifulSoup:
@@ -119,6 +130,24 @@ def extract_colorme_product(soup: BeautifulSoup) -> dict | None:
     return None
 
 
+def parse_flavor_notes(soup: BeautifulSoup) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    detail_el = soup.select_one("div.detail_text")
+    if not detail_el:
+        return None
+    lines: list[str] = []
+    for raw_line in detail_el.get_text().split("\n"):
+        line = raw_line.strip()
+        if not line:
+            continue
+        if line.startswith(FLAVOR_STOP_PREFIXES):
+            break
+        if "。" not in line:
+            continue
+        lines.append(line)
+    return "".join(lines).strip() or None
+
+
 def parse_detail_labels(soup: BeautifulSoup) -> dict:
     detail_el = soup.select_one("div.detail_text")
     if not detail_el:
@@ -151,6 +180,7 @@ def build_record(item: dict) -> dict:
     soup = fetch_page(detail_url)
     product = extract_colorme_product(soup)
     labels = parse_detail_labels(soup)
+    flavor_notes = parse_flavor_notes(soup)
 
     if labels.get("生産国"):
         country = detect_country_name(labels["生産国"])
@@ -201,6 +231,7 @@ def build_record(item: dict) -> dict:
         "roast_level": parsed["roast_level"],
         "post_processing_tags": parsed["post_processing_tags"],
         "farm_note": farm_note,
+        "flavor_notes": flavor_notes,
         "blend_components": [],
         "price": item["price"],
         "weight_g": None,  # 理由はモジュールdocstring参照(商品名・説明文に重量表記が無い)

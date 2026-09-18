@@ -66,6 +66,15 @@ weight_gとして採用する。
 実データ確認済み: 商品詳細ページのdiv.item_stockに「在庫状態 : 在庫有り」
 という構造化されたテキストがある。「在庫有り」以外(在庫なし/品切れ等)を
 一時的な品切れとして扱う。
+
+【flavor_notes(テイスティングノート)の追加取得について(2026-09-19追記)】
+実データ確認済み(A-1): <h5>味わい</h5>に続く<p>に「エチオピアモカ。苺の
+ように甘くてフルーティーな香り。」という具体的な風味描写がある。
+parse_item_content()はラベルを限定せず汎用抽出しているため
+fields["味わい"]としてはすでに取得できていたが、build_record側で読み出して
+おらず出力に反映されていなかった。同じ<h5>味わい</h5>配下に「※3個
+（100g×3）までは...」という配送に関する注記の<p>が紛れ込むケースも
+確認したため、「※」で始まる値は除外してからflavor_notesとして採用する。
 """
 
 import json
@@ -266,6 +275,9 @@ def build_record(soup: BeautifulSoup, product_url: str, fallback_title: str, pri
     roast_values = fields.get("おすすめロースト")
     roast_hint = roast_values[0] if roast_values else None
 
+    flavor_values = [v for v in fields.get("味わい", []) if not v.startswith("※")]
+    flavor_notes = "".join(flavor_values).strip() or None
+
     stock_el = soup.select_one("div.item_stock")
     structural_out_of_stock = bool(stock_el) and "在庫有り" not in stock_el.get_text()
     stock_status = detect_stock_status(raw_name, structural_out_of_stock)
@@ -287,6 +299,7 @@ def build_record(soup: BeautifulSoup, product_url: str, fallback_title: str, pri
         "variety": variety,
         "altitude_min_m": altitude_min,
         "altitude_max_m": altitude_max,
+        "flavor_notes": flavor_notes,
         "blend_components": blend_components,
         "price": price,
         "weight_g": 100,  # 理由はモジュールdocstring参照(顧客向け表示単位を採用)

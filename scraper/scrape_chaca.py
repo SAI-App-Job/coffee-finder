@@ -39,6 +39,15 @@ coffee_parser.parse_product()でも産地判定できるが、より正確な
 実データ確認済み: 全銘柄が「焙煎前200g（生豆）」を基準単位として
 販売しており(焙煎後は数割減、farmNote相当の記述として保持)、
 一覧上の重量違いバリエーションは無い。weight_g=200固定とする。
+
+【flavor_notes(テイスティングノート)の追加取得について(2026-09-19追記)】
+実データ確認済み: 「生産地」等の構造化ラベル欄の後に「標準ローストの
+テイスト評価」という見出しがあり、「フレッシュなフルーツやヨーグルトの
+ような香り、甘酸っぱいレモンジュースの風味を持っています。ソフトな
+柑橘系の酸味　優しい酸味がお好きな方におすすめ」のような具体的な
+テイスティングノートが続く。この見出しの直後から、埋め込みJS変数宣言
+(es_item_id=...、テイスト評価セクションの直後に必ず続く)の直前までを
+flavor_notesとして抽出する(extract_flavor_notes参照)。
 """
 
 import re
@@ -89,6 +98,7 @@ ITEM_ID_PATTERN = re.compile(r"es_item_id\s*=\s*(\d+)")
 LABEL_PATTERN = re.compile(r"(生産地|農園名|農園主|品種|精製)\s*\n\s*([^\n]+)")
 PRICE_PATTERN = re.compile(r"cost_\w+\s*=\s*(\d+)")
 SOLDOUT_PATTERN = re.compile(r"在庫切れです")
+FLAVOR_SECTION_PATTERN = re.compile(r"テイスト評価(.*?)es_item_id", re.DOTALL)
 
 
 def fetch_entry(path: str) -> str:
@@ -111,6 +121,18 @@ def extract_fields(html: str) -> dict:
     for label, value in LABEL_PATTERN.findall(text):
         fields[label] = value.strip()
     return fields
+
+
+def extract_flavor_notes(html: str) -> str | None:
+    """理由はモジュールdocstring参照(「テイスト評価」見出し〜es_item_id
+    のJS変数宣言の直前までをテイスティングノートとして抽出する)。"""
+    text = re.sub(r"<br\s*/?>", "\n", html)
+    text = re.sub(r"<[^>]+>", "\n", text)
+    m = FLAVOR_SECTION_PATTERN.search(text)
+    if not m:
+        return None
+    lines = [re.sub(r"&nbsp;", "", line).strip() for line in m.group(1).split("\n")]
+    return "".join(line for line in lines if line).strip() or None
 
 
 def fetch_price_and_stock(item_id: str) -> tuple[int | None, bool]:
@@ -168,6 +190,7 @@ def build_record(path: str, html: str) -> dict | None:
     if fields.get("品種"):
         farm_note_parts.append(f"品種: {fields['品種']}")
     farm_note = "、".join(farm_note_parts) if farm_note_parts else None
+    flavor_notes = extract_flavor_notes(html)
 
     price, structural_out_of_stock = fetch_price_and_stock(item_id_m.group(1))
     stock_status = detect_stock_status(title, structural_out_of_stock)
@@ -184,6 +207,7 @@ def build_record(path: str, html: str) -> dict | None:
         "roast_level": parsed["roast_level"],
         "post_processing_tags": parsed["post_processing_tags"],
         "farm_note": farm_note,
+        "flavor_notes": flavor_notes,
         "blend_components": [],
         "price": price,
         "weight_g": UNIT_WEIGHT_G,

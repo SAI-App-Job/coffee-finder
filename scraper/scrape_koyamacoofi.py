@@ -31,6 +31,15 @@ REGION_TO_COUNTRY(ハイマウンテン→ジャマイカ、キリマンジャ�
 【重量について】
 実データ確認済み: 全商品が「（100g）」の単一重量のみ(全24件で確認済み、
 重量違いバリアントは無い)。
+
+【flavor_notes(テイスティングノート)の追加取得について(2026-09-19追記)】
+実データ確認済み(ハイマウンテン): JSON-LDのdescriptionが「産地判定に使える
+構造化ラベルが無い」ことは事実だが、風味情報が無いわけではない。「味は
+ブルーマウンテン同様酸味、軽い苦味のバランスが良く優しい香りが特徴です。
+コクと甘みとサッパリ感がお好みの方には是非オススメいたします。」のような
+具体的な風味描写を含む、ラベルの付かない自由記述の紹介文そのものであり、
+余計な定型文(配送案内等)も混在していなかった。そのためdescriptionを
+そのままflavor_notesとして採用する。
 """
 
 import json
@@ -106,6 +115,9 @@ def build_record(product_url: str, product: dict) -> dict:
     weight_m = WEIGHT_PATTERN.search(title)
     weight_g = int(weight_m.group(1)) if weight_m else None
 
+    description = (product.get("description") or "").strip()
+    flavor_notes = "".join(line.strip() for line in description.split("\n") if line.strip()) or None
+
     return {
         "shop_name": SHOP_INFO["name"],
         "raw_name": title,
@@ -117,6 +129,7 @@ def build_record(product_url: str, product: dict) -> dict:
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
         "post_processing_tags": parsed["post_processing_tags"],
+        "flavor_notes": flavor_notes,
         "blend_components": [],
         "price": price,
         "weight_g": weight_g,
