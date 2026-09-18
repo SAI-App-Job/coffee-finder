@@ -26,6 +26,31 @@ Floral, Berry」「note: Peach, Citrus, Pear, Caramel, Long Sweet」のように
 地の文の中にのみ風味の言及が混在する形式のため、誤抽出を避けるため今回は
 対象外とする)。この行をFLAVOR_NOTE_LINE_PATTERNで抽出しflavor_notesとする。
 
+【農園・地域・品種・標高・精製方法(2026-09-19追記)】
+実データ確認済み: 同じ説明文ブロック内に「Country: Colombia / Region: Huila /
+Farm: Los Patios / Process: Funky Cherry / Variety: Castillo, Caturra,
+Colombia / Elevation: 1800 - 2000 m」のような英語ラベル、または
+「農園／精製所:Kianjogu / 生産者名:Kianjogu / 生産地区:Nyeri / 標高:1800 /
+品種:SL 28, SL 34, Batian, Ruiru 11 / グレード:AA / 精製方法:Washed」
+「生産地 : Guji Benti Nenka / 生産者 : Smallholders / 品　種 : Heirloom /
+標　高 : 2250m / 生産処理 : Natural / Grade : 1」のような日本語ラベル(商品によって
+表記が3パターンに割れる。「品　種」「標　高」のように全角スペースがラベル内に
+挟まる商品もある)が存在するが、以前はflavor_notes同様に見落としており、
+商品名(main_title)のみをparse_product()に通していたため一切取得していなかった
+(farm_note・processing_methodともに空)。今回LABEL_TO_FIELDで表記揺れを吸収し、
+農園・地域・生産者・標高・品種・グレード・精製方法を取得する(parse_farm_details
+参照)。「Country:」「生産地」は原産国と紛らわしいがorigin_countryは従来通り
+商品名からの判定を優先し上書きしない(タイトルに国名が無いClassic/Grand
+Reserveラインの原産国補完は本改修のスコープ外)。Grand Reserveライン3件のみ
+flavor_notesと同じ理由でこれらのラベル自体が存在せず、対象外(実データ確認済み)。
+
+【デカフェのカフェイン除去方法について(2026-09-19追記)】
+実データ確認済み: 対象商品はデカフェ・カフェインレス1件のみで、商品名に
+「Décaf Ethiopia Mountain Water Process」と除去方法が明記されている
+(processing_methodは既存のcoffee_parser側シノニム辞書がタイトルから
+「マウンテンウォータープロセス(デカフェ用)」を検出済みだったが、decaf_process
+フィールド自体は未設定だったため今回追加する)。
+
 robots.txt確認済み(2026-08時点): NAGI COFFEE・FINETIME COFFEE ROASTERSと同一の
 記述(curl/python-requests/aiohttp等の一般的なHTTPクライアントは個別に
 Disallow: /指定があるが、User-agent: *ルールでは/cart/・/web_cart/・/shops/・
@@ -98,7 +123,12 @@ import unicodedata
 import requests
 from bs4 import BeautifulSoup
 
-from coffee_parser import parse_product, apply_category_hint_fallback, detect_stock_status
+from coffee_parser import (
+    parse_product,
+    apply_category_hint_fallback,
+    detect_stock_status,
+    normalize_processing_method,
+)
 from previous_data import load_previous_products, is_unchanged
 
 SHOP_INFO = {
@@ -131,6 +161,31 @@ ENGLISH_ROAST_HINT_PATTERN = re.compile(r"(?:Light|Medium[- ]?Dark|Medium|Dark|C
 # 表記は揺れるが末尾が"note"のラベルに続くカンマ区切りの英語フレーバー用語)
 FLAVOR_NOTE_LINE_PATTERN = re.compile(r"[A-Za-z ]{0,20}note\s*[:：]\s*([^\n]{1,150})", re.IGNORECASE)
 
+# 理由はモジュールdocstring参照(農園・地域・品種・標高・精製方法。表記が英語/
+# 日本語2パターンに割れる上、「品　種」「標　高」のように全角スペースがラベル
+# 内に挟まる商品があるため、ラベル文字列側の空白は正規化前に除去して照合する)
+FARM_DETAIL_LINE_PATTERN = re.compile(r"^([^:：\n]{1,12})[:：]\s*(.+)$")
+LABEL_TO_FIELD = {
+    "Region": "region_detail",
+    "Farm": "farm_name",
+    "Process": "processing_method",
+    "Variety": "variety_note",
+    "Elevation": "altitude_note",
+    "農園／精製所": "farm_name",
+    "生産者名": "producer_name",
+    "生産地区": "region_detail",
+    "標高": "altitude_note",
+    "品種": "variety_note",
+    "グレード": "grade",
+    "精製方法": "processing_method",
+    "生産地": "region_detail",
+    "生産者": "producer_name",
+    "生産処理": "processing_method",
+    "Grade": "grade",
+}
+# 理由はモジュールdocstring参照(タイトルに除去方法が明記されるデカフェ1件のみ対象)
+DECAF_PROCESS_NAME_PATTERN = re.compile(r"(Mountain Water Process)", re.IGNORECASE)
+
 
 def fetch_page(url: str) -> BeautifulSoup:
     resp = requests.get(url, headers=REQUEST_HEADERS, timeout=15)
@@ -155,6 +210,35 @@ def parse_flavor_notes(soup: BeautifulSoup) -> str | None:
     return m.group(1).strip() if m else None
 
 
+def parse_farm_details(soup: BeautifulSoup) -> dict:
+    """理由はモジュールdocstring参照(農園・地域・品種・標高・精製方法・生産者・
+    グレードのラベル行を表記揺れを吸収しつつ抽出する。ラベルが存在しない商品
+    (Grand Reserveライン等)は空のdictを返す)。"""
+    desc_el = soup.select_one("p.appsItemDetailCustomTag_description")
+    if not desc_el:
+        return {}
+    fields = {}
+    for line in desc_el.get_text(separator="\n").split("\n"):
+        m = FARM_DETAIL_LINE_PATTERN.match(line.strip())
+        if not m:
+            continue
+        label = "".join(m.group(1).split())  # 全角スペース等を除去して正規化
+        field = LABEL_TO_FIELD.get(label)
+        if field and field not in fields:
+            fields[field] = m.group(2).strip()
+    return fields
+
+
+def detect_decaf_process(title: str) -> str | None:
+    """理由はモジュールdocstring参照(DECAF_PROCESS_NAME_PATTERN)。"""
+    if "デカフェ" not in title and "カフェインレス" not in title:
+        return None
+    m = DECAF_PROCESS_NAME_PATTERN.search(title)
+    if m:
+        return f"{m.group(1)}によりカフェインを除去"
+    return "デカフェ(除去方法の詳細記載なし)"
+
+
 def split_title_category_hint(title: str) -> tuple[str, str | None]:
     """商品名先頭の【Grand Reserve】等のブランド表記をcategory_hintとして切り出し、
     残りの商品名本体を返す。ブランド表記を残したままcoffee_parser.parse_product()に
@@ -175,7 +259,7 @@ def parse_roast_hint(title: str) -> str | None:
 
 
 def build_record(product_url: str, title: str, price: int | None, structural_out_of_stock: bool,
-                  flavor_notes: str | None) -> dict:
+                  flavor_notes: str | None, farm_details: dict) -> dict:
     main_title, category_hint = split_title_category_hint(title)
     parsed = parse_product(main_title)
 
@@ -192,6 +276,15 @@ def build_record(product_url: str, title: str, price: int | None, structural_out
 
     parsed = apply_category_hint_fallback(parsed, category_hint)
     stock_status = detect_stock_status(title, structural_out_of_stock)
+    processing_method = farm_details.get("processing_method")
+    processing_method = normalize_processing_method(processing_method) if processing_method else parsed["processing_method"]
+    grade = farm_details.get("grade")
+    # 実データ確認済み(N°0、「Grade : 1」): エチオピア産商品でGrade欄が素の数字
+    # 1桁のみの場合があり、他店舗のタイトル由来のG1表記(GRADE_PATTERNで正規化済み)
+    # と揃えないとgetGradeExplanation()側の"^G[1-6]$"判定にマッチせず解説が
+    # 出せなくなるため、ここでG-prefixを補う。
+    if grade and re.fullmatch(r"[1-6]", grade):
+        grade = f"G{grade}"
 
     return {
         "shop_name": SHOP_INFO["name"],
@@ -201,13 +294,19 @@ def build_record(product_url: str, title: str, price: int | None, structural_out
         "origin_country": parsed["origin_country"],
         "origin_source": parsed["origin_source"],
         "designated_brand": parsed["designated_brand"],
-        "processing_method": parsed["processing_method"],
-        "grade": parsed["grade"],
+        "processing_method": processing_method,
+        "grade": grade or parsed["grade"],
         "roast_level": parsed["roast_level"],
         "roast_hint": parse_roast_hint(main_title),
         "post_processing_tags": parsed["post_processing_tags"],
+        "farm_name": farm_details.get("farm_name"),
+        "producer_name": farm_details.get("producer_name"),
+        "region_detail": farm_details.get("region_detail"),
+        "altitude_note": farm_details.get("altitude_note"),
+        "variety_note": farm_details.get("variety_note"),
         "blend_components": [],
         "flavor_notes": flavor_notes,
+        "decaf_process": detect_decaf_process(title),
         "price": price,
         "weight_g": parse_weight(main_title),
         "stock_status": stock_status,
@@ -230,8 +329,11 @@ def parse_product_detail(url: str, title: str, price: int | None) -> dict:
     stock_el = soup.select_one("div.stockStatus")
     structural_out_of_stock = bool(stock_el) and "hasStock" not in (stock_el.get("class") or [])
     flavor_notes = parse_flavor_notes(soup)
+    farm_details = parse_farm_details(soup)
 
-    return build_record(url, title_el.get_text(strip=True), price, structural_out_of_stock, flavor_notes)
+    return build_record(
+        url, title_el.get_text(strip=True), price, structural_out_of_stock, flavor_notes, farm_details
+    )
 
 
 def scrape_category_list() -> list[dict]:

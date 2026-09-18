@@ -626,3 +626,59 @@
 - 影響した既存データ: 13店舗・合計305商品(データセット全体の対象386商品中)。
   既存データの誤りではなく、各店舗のスクレイパー実装当時にスコープ外
   だった情報の未取得状態。
+
+## flavor_notes以外の産地詳細(farm_note構成要素)・decaf_processの横展開(世田谷区、2026-09-19)
+
+- 経緯: flavor_notesの横展開後、chouetteの商品ページに「Country: Colombia /
+  Region: Huila / Farm: Los Patios / Process: Funky Cherry / Variety:
+  Castillo, Caturra, Colombia / Elevation: 1800 - 2000 m」のような、
+  farm_note(農園・地域・品種・標高)やprocessing_methodに対応する構造化情報が
+  別途存在することに気づいた。既存のaggregate_shops.py側にはこれらを
+  受け取るfarm_name/producer_name/region_detail/altitude_note/variety_note
+  等の合成フィールド(compose_farm_note参照)が既に用意されていたが、
+  chouetteのスクレイパーは商品名のみをcoffee_parser.parse_product()に
+  渡しており、説明文を一切読んでいなかったため空のままだった。
+- 調査範囲: いきなり全店舗(約380店舗)に広げず、まず世田谷区6店舗
+  (FINETIME COFFEE ROASTERS・カフェマルシェkunikuni・南薫堂珈琲・chouette・
+  豆善・珈琲家あのころ)に限定して実データを確認した。結果、farm_note構成要素は
+  15/17件(直近のflavor_notes対象17店舗のうち)で既に取得済みだったが、
+  chouetteのみ全く未対応と判明(3種類のラベル書式が混在: 英語ラベル、
+  日本語ラベルA「農園／精製所:/生産者名:/生産地区:/標高:/品種:/グレード:/
+  精製方法:」、日本語ラベルB「生産地 :/生産者 :/品種　:/標　高 :/生産処理 :/
+  Grade :」。後者2つは全角スペースがラベル内に混入する)。Grand Reserveライン
+  3商品のみこれらのラベル自体が存在せず対象外(実データ確認済み)。
+  decaf_processは別途、chouette(タイトルに「Mountain Water Process」と
+  明記)とkunikuni(説明文に「「ウォータープロセスディカフェネーション」で
+  カフェレス処理をしてます」と明記)の2件で未対応と判明。南薫堂珈琲・豆善・
+  あのころ・FINETIMEはこの2項目について追加の取得余地が無いことを確認済み
+  (南薫堂珈琲は構造化データ自体が存在しない、豆善のブレンド・あのころの
+  ブレンドは配合比率非公開のため元々対象外、FINETIMEは重量選択と誤認したが
+  実際は「豆のまま/粉に挽く」という挽き方選択のみでグラム選択肢は無く、
+  重量非公開という既存の判断が正しいことを確認)。
+- 対処: scrape_chouette.pyにLABEL_TO_FIELD辞書とparse_farm_details()を追加し、
+  ラベル文字列側の空白を正規化してから照合することで3書式を1つの関数で
+  吸収した。processing_methodはnormalize_processing_method()で正規化、
+  グレードは「Grade : 1」のような素の数字のみの場合にG-prefixを補い
+  (getGradeExplanation()の"^G[1-6]$"判定に合わせるため)、他店舗のタイトル
+  由来のG1表記と揃えた。decaf_processはchouette(タイトル正規表現)・
+  kunikuni(flavor_notes段落からの正規表現)にそれぞれ追加。
+- 影響した既存データ: chouette 7商品(farm_note・processing_method)、
+  kunikuni 1商品・chouette 1商品(decaf_process)。
+- 副次的な発見(未対応、別件): 「インフューズド」(精選時に果物・スパイスを
+  加えて発酵させる技法。焙煎後に香料を添加するフレーバーコーヒーとは異なり、
+  スペシャルティコーヒーの技法として本アプリの対象に含める方針)を扱う商品が
+  TSUKIKOYA COFFEE ROASTER・豆善・NORTH STAR BEANS・Roast Design Coffee・
+  奥久慈珈琲焙煎所ルージュノワール・コーヒーロースト ワンズ・豆丸珈琲
+  鍛冶屋町焙煎所・コーヒー焙煎研究所わたるの8店舗に存在。processing_method
+  シノニム辞書(data/processing_method_synonyms.json)に最低優先度で
+  「インフューズド」を追加し、次回スクレイピング時に一部の未取得商品
+  (9商品)が拾われるようにした。ただしTSUKIKOYA自身の商品でも、店舗の
+  構造化ラベルが「ハニー」「ウォッシュド」とだけ記載され「インフューズド」の
+  情報が失われているケースが2件あり、これは個別スクレイパーの見直しが必要
+  (未対応)。src/data/explanations.jsのPROCESSING_EXPLANATIONSに
+  「インフューズド」「インフューズドハニー」の解説を追加済み。
+- 教訓: flavor_notes以外にも、店舗が構造化して公開している産地詳細情報
+  (farm_note構成要素)が商品名のみのパースで見落とされているパターンが
+  存在する。ただし世田谷区での確認では対象は1店舗のみで、flavor_notesほど
+  広範囲ではなかった(先に世田谷区で試したことで、全店舗横展開前に
+  ヒット率の見積もりができた)。

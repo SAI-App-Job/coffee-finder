@@ -26,5 +26,9 @@
   "マウンテンウォータープロセス(デカフェ用)": {
     "en": "Mountain Water Process",
     "synonyms": ["マウンテンウォーター", "mountain water process", "mountain water"]
+  },
+  "インフューズド": {
+    "en": "Infused",
+    "synonyms": ["インフューズド", "インフュージョン", "infused", "infusion"]
   }
 }

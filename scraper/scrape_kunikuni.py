@@ -120,6 +120,13 @@ KNOWN_DESC_LABELS = {"原産国", "品種"}
 # 重量別価格案内の行(例:「50g 650円」)。flavor_notes段落の終端シグナルとして使う
 WEIGHT_PRICE_LINE_PATTERN = re.compile(r"^\d+\s*[gｇ]\s+[\d,]+\s*円")
 
+# デカフェ加工方法について(2026-09-19追記): 実データ確認済み(カフェインレス
+# コーヒー・メキシコ、pid=191591881)。「原産国：/品種：」ラベルの後に続く
+# 自由記述(flavor_notes段落)内に「「ウォータープロセスディカフェネーション」で
+# カフェレス処理をしてますので、化学物質を使いません」という一文があり、
+# 除去方法が明確に特定できる(mamezenのような曖昧な言及ではない)。
+DECAF_PROCESS_NAME_PATTERN = re.compile(r"「?(ウォータープロセスディカフェネーション|マウンテンウォータープロセス|スイスウォータープロセス)」?")
+
 # 理由はモジュールdocstring参照。「フルシティロースト」が「シティロースト」を
 # 部分文字列として含むため、長い方を先に判定する
 ROAST_GROUP_LABELS = ["フルシティロースト", "フレンチロースト", "ミディアムロースト", "ハイロースト", "シティロースト"]
@@ -189,6 +196,16 @@ def parse_description_sections(text: str) -> tuple[dict, str | None]:
 
     flavor_notes = "".join(flavor_lines).strip() or None
     return fields, flavor_notes
+
+
+def detect_decaf_process(title: str, flavor_notes: str | None) -> str | None:
+    """理由はモジュールdocstring参照(DECAF_PROCESS_NAME_PATTERN)。"""
+    if "カフェインレス" not in title and "デカフェ" not in title:
+        return None
+    m = DECAF_PROCESS_NAME_PATTERN.search(flavor_notes or "")
+    if m:
+        return f"{m.group(1)}によりカフェインを除去"
+    return "デカフェ(除去方法の詳細記載なし)"
 
 
 def detect_roast_level_from_breadcrumb(soup: BeautifulSoup) -> str | None:
@@ -267,6 +284,7 @@ def build_record(product_url: str, colorme_product: dict, description_text: str,
         "variety": None if is_blend else fields.get("品種"),
         "blend_components": [],  # 配合比率の記載が無いため未対応(理由はモジュールdocstring参照)
         "flavor_notes": flavor_notes,
+        "decaf_process": detect_decaf_process(title, flavor_notes),
         "price": price,
         "weight_g": weight_from_variant(variant),
         "stock_status": stock_status,
