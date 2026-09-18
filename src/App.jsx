@@ -406,21 +406,37 @@ export default function CoffeeProductList() {
             })}
           </div>
           {sortMode === "distance" && geolocation.status !== "success" && (
-            <p className="flex items-center gap-1 text-[11px] text-[#8B7361] mt-1.5">
-              <LocateFixed size={11} strokeWidth={1.75} className="shrink-0" />
-              {geolocation.status === "pending" && "位置情報を取得中です(取得できるまで全件表示しています)"}
-              {geolocation.status === "denied" && "位置情報が許可されていないため、全件表示しています"}
-              {(geolocation.status === "error" || geolocation.status === "unsupported") &&
-                "位置情報を取得できなかったため、全件表示しています"}
-              {(geolocation.status === "denied" || geolocation.status === "error") && (
-                <button
-                  onClick={geolocation.retry}
-                  className="text-[var(--accent)] underline underline-offset-2 shrink-0"
-                >
-                  再試行
-                </button>
-              )}
-            </p>
+            <div className="flex items-start gap-1 text-[11px] text-[#8B7361] mt-1.5">
+              <LocateFixed size={11} strokeWidth={1.75} className="shrink-0 mt-0.5" />
+              <p>
+                {geolocation.status === "pending" && "位置情報を取得中です(取得できるまで全件表示しています)"}
+                {geolocation.status === "denied" && (
+                  <>
+                    位置情報が許可されていないため、全件表示しています。ブラウザの拒否設定はアプリからは解除できないため、ブラウザのアドレスバー付近のアイコンから位置情報の許可を変更したうえで、
+                    <button
+                      onClick={geolocation.retry}
+                      className="text-[var(--accent)] underline underline-offset-2"
+                    >
+                      再試行
+                    </button>
+                    してください
+                  </>
+                )}
+                {geolocation.status === "error" && (
+                  <>
+                    位置情報を取得できなかったため、全件表示しています。
+                    <button
+                      onClick={geolocation.retry}
+                      className="text-[var(--accent)] underline underline-offset-2"
+                    >
+                      位置情報を取得
+                    </button>
+                  </>
+                )}
+                {geolocation.status === "unsupported" &&
+                  "この端末・ブラウザは位置情報に対応していないため、全件表示しています"}
+              </p>
+            </div>
           )}
           {sortMode === "favoriteArea" && (
             <p className="text-[11px] text-[#8B7361] mt-1.5">
