@@ -1,11 +1,13 @@
-import { useRef, useState } from "react";
-import { Palette, Check, Sparkles, Heart, Download, Upload, Info, History, Shuffle } from "lucide-react";
+import { useMemo, useRef, useState } from "react";
+import { Palette, Check, Sparkles, Heart, Download, Upload, Info, History, Shuffle, MapPinned } from "lucide-react";
 import { SectionHeading } from "./common";
 import { TasteProfile } from "./TasteProfile";
 import { FREE_FAVORITES_LIMIT } from "../hooks/useFavorites";
 import { FREE_COMPARE_LIMIT } from "../hooks/useComparison";
 import { FREE_HISTORY_RETENTION_DAYS } from "../hooks/useViewHistory";
 import { formatRelativeTime } from "../utils/format";
+import { ALL_PREFECTURES } from "../data/prefectures";
+import { filterByFavoriteArea } from "../utils/productSort";
 
 export function MyPageView({
   themeId,
@@ -22,9 +24,19 @@ export function MyPageView({
   displayRadiusId,
   setDisplayRadiusId,
   displayRadiusOptions,
+  favoriteArea,
+  setFavoriteAreaPrefecture,
+  setFavoriteAreaCity,
 }) {
   const fileInputRef = useRef(null);
   const [importMessage, setImportMessage] = useState(null);
+
+  // 入力(都道府県・市区町村)のたびに該当件数をその場で数える。ジオコーディング
+  // 不要な住所文字列の部分一致のみなので、全商品数(数千件)規模でも軽い。
+  const favoriteAreaMatchCount = useMemo(
+    () => filterByFavoriteArea(products, favoriteArea).length,
+    [products, favoriteArea]
+  );
 
   const handleExport = () => {
     const payload = {
@@ -91,6 +103,59 @@ export function MyPageView({
             </button>
           ))}
         </div>
+      </section>
+
+      <section className="rounded-2xl bg-[#2F241A] border border-[#4A3A2A] p-4 flex flex-col gap-3">
+        <div className="flex items-center gap-1.5">
+          <MapPinned size={14} className="text-[var(--accent)]" strokeWidth={1.75} />
+          <h3 className="text-[14px] font-medium text-[#F2E9DD]">お気に入りエリア</h3>
+        </div>
+        <p className="text-[12px] text-[#8B7361] leading-relaxed">
+          商品タブの「お気に入りエリア」並べ替えで表示する地域です。都道府県は必須、市区町村は任意(未入力なら都道府県全体が対象)。郵便番号ではなく手入力で登録します。
+        </p>
+        <div className="flex flex-col gap-2.5">
+          <label className="flex flex-col gap-1">
+            <span className="text-[11px] text-[#8B7361]">都道府県</span>
+            <select
+              value={favoriteArea.prefecture}
+              onChange={(e) => {
+                const next = e.target.value;
+                setFavoriteAreaPrefecture(next);
+                if (!next) setFavoriteAreaCity(""); // 都道府県を未登録に戻す際は市区町村も一緒にクリアする
+              }}
+              className="w-full py-2.5 px-3 rounded-xl bg-[#3B2211] border border-[#4A3A2A] text-[13px] text-[#F2E9DD] focus:outline-none focus:border-[var(--accent-label)]"
+            >
+              <option value="">未登録</option>
+              {ALL_PREFECTURES.map((pref) => (
+                <option key={pref} value={pref}>
+                  {pref}
+                </option>
+              ))}
+            </select>
+          </label>
+          <label className="flex flex-col gap-1">
+            <span className="text-[11px] text-[#8B7361]">市区町村(任意)</span>
+            <input
+              type="text"
+              value={favoriteArea.city}
+              onChange={(e) => setFavoriteAreaCity(e.target.value)}
+              placeholder="例: 渋谷区、横浜市"
+              disabled={!favoriteArea.prefecture}
+              className="w-full py-2.5 px-3 rounded-xl bg-[#3B2211] border border-[#4A3A2A] text-[13px] text-[#F2E9DD] placeholder:text-[#8B7361] focus:outline-none focus:border-[var(--accent-label)] disabled:opacity-40"
+            />
+          </label>
+        </div>
+        <p className="text-[12px] text-[var(--accent)]">
+          {favoriteArea.prefecture
+            ? `現在の該当件数: ${favoriteAreaMatchCount}件`
+            : "都道府県を選択すると該当件数が表示されます"}
+        </p>
+        {favoriteArea.prefecture && favoriteAreaMatchCount === 0 && (
+          <p className="flex items-start gap-1.5 text-[11px] text-[#8B7361] leading-relaxed">
+            <Info size={12} className="shrink-0 mt-0.5" strokeWidth={1.75} />
+            <span>この条件では店舗がまだ見つかりません。市区町村を空にする、または隣接する地域を試してみてください。</span>
+          </p>
+        )}
       </section>
 
       <section className="rounded-2xl bg-[#2F241A] border border-[#4A3A2A] p-4 flex flex-col gap-3">

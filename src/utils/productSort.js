@@ -29,6 +29,17 @@ export function sortNewArrivalsFirst(products, now = new Date()) {
     .sort((a, b) => new Date(b.firstDetectedAt) - new Date(a.firstDetectedAt));
 }
 
+// 新規掲載かどうかで絞り込まず、収録が新しい順に並べ替えるだけ(お気に入り
+// エリア表示用)。first_detected_at不明な商品は末尾にまとめる。
+export function sortByRecency(products) {
+  return [...products].sort((a, b) => {
+    if (!a.firstDetectedAt && !b.firstDetectedAt) return 0;
+    if (!a.firstDetectedAt) return 1;
+    if (!b.firstDetectedAt) return -1;
+    return new Date(b.firstDetectedAt) - new Date(a.firstDetectedAt);
+  });
+}
+
 export function distanceKmFor(product, coords) {
   if (!coords) return null;
   return haversineDistanceKm(coords.lat, coords.lng, product.shopLat, product.shopLng);
@@ -76,6 +87,20 @@ export function pickRandomDisplaySet(
   }
 
   return withinRadius(Number(radiusId));
+}
+
+// お気に入りエリア(マイページで手動登録した都道府県・市区町村)に該当する
+// 商品だけを残す。都道府県は完全一致、市区町村は住所文字列への部分一致
+// (「区」「市」等の行政区画名まで含めて入力される想定)。どちらも未入力なら
+// 絞り込まない。ジオコーディング済みかどうかは問わない(住所文字列のみで
+// 判定するため、店舗の緯度経度が無くても機能する)。
+export function filterByFavoriteArea(products, { prefecture, city } = {}) {
+  const trimmedCity = city?.trim();
+  return products.filter((p) => {
+    if (prefecture && p.prefecture !== prefecture) return false;
+    if (trimmedCity && !p.shopAddress?.includes(trimmedCity)) return false;
+    return true;
+  });
 }
 
 // Fisher-Yatesシャッフル(引数の配列は変更しない)

@@ -1,6 +1,6 @@
 import { useState, useMemo, useEffect, useCallback } from "react";
 import { Virtuoso } from "react-virtuoso";
-import { Search, X, SlidersHorizontal, Coffee, Bell, Info, MapPin, Sparkles, Shuffle, LocateFixed } from "lucide-react";
+import { Search, X, SlidersHorizontal, Coffee, Bell, Info, MapPin, Sparkles, Shuffle, LocateFixed, Heart } from "lucide-react";
 import { MOCK_PRODUCTS } from "./data/products";
 import { SHOPS } from "./data/shops";
 import { EVENTS } from "./data/events";
@@ -8,7 +8,7 @@ import { TAB_ITEMS } from "./data/navigation";
 import { ORIGIN_GUIDE } from "./data/originGuide";
 import { categorizeFlavorNotes } from "./utils/flavor";
 import { loadRemoteData } from "./data/remote";
-import { sortByDistance, sortNewArrivalsFirst, pickRandomDisplaySet, shuffle } from "./utils/productSort";
+import { sortByDistance, sortNewArrivalsFirst, sortByRecency, pickRandomDisplaySet, filterByFavoriteArea, shuffle } from "./utils/productSort";
 import { useFavorites } from "./hooks/useFavorites";
 import { useAccentTheme } from "./hooks/useAccentTheme";
 import { usePremium } from "./hooks/usePremium";
@@ -20,6 +20,7 @@ import { useTastingLog } from "./hooks/useTastingLog";
 import { useAlerts } from "./hooks/useAlerts";
 import { useGeolocation } from "./hooks/useGeolocation";
 import { useDisplayRadius } from "./hooks/useDisplayRadius";
+import { useFavoriteArea } from "./hooks/useFavoriteArea";
 import { ProductCard, DiscoveryFactCard } from "./components/ProductCard";
 import { ProductDetailModal } from "./components/ProductDetailModal";
 import { TastingLogModal } from "./components/TastingLogModal";
@@ -37,6 +38,7 @@ import { CopyrightFooter, MapLinkModal, Toast } from "./components/common";
 
 const SORT_MODE_ITEMS = [
   { id: "distance", label: "近い順", icon: MapPin },
+  { id: "favoriteArea", label: "お気に入りエリア", icon: Heart },
   { id: "new", label: "新規掲載", icon: Sparkles },
   { id: "random", label: "ランダム", icon: Shuffle },
 ];
@@ -102,6 +104,7 @@ export default function CoffeeProductList() {
   const [sortMode, setSortMode] = useState("distance");
   const geolocation = useGeolocation();
   const { displayRadiusId, setDisplayRadiusId, options: displayRadiusOptions } = useDisplayRadius();
+  const { favoriteArea, setPrefecture: setFavoriteAreaPrefecture, setCity: setFavoriteAreaCity } = useFavoriteArea();
   // ランダム表示のシャッフル順は、無関係な再描画(お気に入り操作等)では
   // 変えたくないため、絞り込み結果や設定が実際に変わった時だけ再計算する。
 
@@ -190,9 +193,19 @@ export default function CoffeeProductList() {
   // - "distance": 位置情報が取得できていれば距離順、そうでなければ(許可待ち・
   //   タイムアウト・拒否・非対応のいずれも)新着順で暫定表示する(仕様書の
   //   フォールバック要件。取得成功時に切り替わり、拒否時は切り替えを行わない)。
+  // - "favoriteArea": マイページで手動登録した都道府県・市区町村(住所文字列の
+  //   部分一致)に該当する商品のみ、新しい順に表示。郵便番号やジオコーディング
+  //   は使わない(店舗網羅率が市区町村単位でも疎らなため、登録は手入力とし、
+  //   0件になる場合はマイページでの再登録を促す)。
   // - "new": 新規掲載(30日以内)のみを対象に新しい順。表示範囲は全国固定。
   // - "random": マイページの表示範囲設定に応じた範囲内からランダムに表示。
   const displayed = useMemo(() => {
+    if (sortMode === "favoriteArea") {
+      // 都道府県が未登録の間は絞り込みようがないため、全国表示にフォール
+      // バックせず空にする(マイページでの登録を促す)。
+      if (!favoriteArea.prefecture) return [];
+      return sortByRecency(filterByFavoriteArea(filtered, favoriteArea));
+    }
     if (sortMode === "new") return sortNewArrivalsFirst(filtered);
     if (sortMode === "random") {
       const withinRange = pickRandomDisplaySet(filtered, {
@@ -204,7 +217,7 @@ export default function CoffeeProductList() {
     // sortMode === "distance"
     if (geolocation.status === "success") return sortByDistance(filtered, geolocation.coords);
     return sortNewArrivalsFirst(filtered);
-  }, [filtered, sortMode, geolocation.status, geolocation.coords, displayRadiusId]);
+  }, [filtered, sortMode, geolocation.status, geolocation.coords, displayRadiusId, favoriteArea]);
 
   const productsByShop = useMemo(() => {
     const map = {};
@@ -402,6 +415,13 @@ export default function CoffeeProductList() {
               )}
             </p>
           )}
+          {sortMode === "favoriteArea" && (
+            <p className="text-[11px] text-[#8B7361] mt-1.5">
+              {favoriteArea.prefecture
+                ? `登録エリア: ${favoriteArea.prefecture}${favoriteArea.city ? ` ${favoriteArea.city}` : ""}(マイページで変更できます)`
+                : "お気に入りエリアが未登録です(マイページで登録できます)"}
+            </p>
+          )}
           {sortMode === "random" && (
             <p className="text-[11px] text-[#8B7361] mt-1.5">
               表示範囲: {displayRadiusOptions.find((o) => o.id === displayRadiusId)?.label}
@@ -477,6 +497,12 @@ export default function CoffeeProductList() {
                 <p className="text-[14px]">該当する商品が見つかりませんでした</p>
               ) : sortMode === "random" ? (
                 <p className="text-[14px]">この範囲には商品がありません。表示範囲を広げてみてください</p>
+              ) : sortMode === "favoriteArea" ? (
+                <p className="text-[14px]">
+                  {favoriteArea.prefecture
+                    ? "登録したエリアには該当する商品がありません。マイページでエリアを変更してみてください"
+                    : "マイページでお気に入りエリア(都道府県・市区町村)を登録してください"}
+                </p>
               ) : (
                 <p className="text-[14px]">現在30日以内に新規掲載された商品はありません</p>
               )}
@@ -556,6 +582,9 @@ export default function CoffeeProductList() {
           displayRadiusId={displayRadiusId}
           setDisplayRadiusId={setDisplayRadiusId}
           displayRadiusOptions={displayRadiusOptions}
+          favoriteArea={favoriteArea}
+          setFavoriteAreaPrefecture={setFavoriteAreaPrefecture}
+          setFavoriteAreaCity={setFavoriteAreaCity}
         />
       )}
 
