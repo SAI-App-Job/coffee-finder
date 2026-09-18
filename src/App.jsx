@@ -9,6 +9,7 @@ import { ORIGIN_GUIDE } from "./data/originGuide";
 import { categorizeFlavorNotes } from "./utils/flavor";
 import { loadRemoteData } from "./data/remote";
 import { sortByDistance, sortNewArrivalsFirst, sortByRecency, pickRandomDisplaySet, filterByFavoriteArea, shuffle } from "./utils/productSort";
+import { buildPrefectureRank, sortByPrefecturePopularity } from "./utils/prefectureOrder";
 import { useFavorites } from "./hooks/useFavorites";
 import { useAccentTheme } from "./hooks/useAccentTheme";
 import { usePremium } from "./hooks/usePremium";
@@ -108,6 +109,10 @@ export default function CoffeeProductList() {
   // ランダム表示のシャッフル順は、無関係な再描画(お気に入り操作等)では
   // 変えたくないため、絞り込み結果や設定が実際に変わった時だけ再計算する。
 
+  // 都道府県ごとの登録店舗数のランク(多い順、東京都が最多のため自然と先頭に
+  // 来る)。全件表示(位置情報未取得時の商品タブ)と店舗一覧の並び順に使う。
+  const prefectureRank = useMemo(() => buildPrefectureRank(shops), [shops]);
+
   const learnAboutOrigin = useCallback(
     (country) => {
       // ORIGIN_GUIDEに実在しない国(産地タブに詳細ページが無い)の場合、
@@ -191,9 +196,9 @@ export default function CoffeeProductList() {
 
   // 並べ替え軸ごとの表示リスト。
   // - "distance": 位置情報の取得に成功していれば距離順。許可待ち・タイムアウト・
-  //   拒否・非対応の間は「近い順」を騙らず、特定の並び順を適用しない全件表示に
-  //   する(このボタンもその間は非選択状態にする。取得成功時に自動で距離順へ
-  //   切り替わり、拒否時に自動再試行はしない)。
+  //   拒否・非対応の間は「近い順」を騙らず、登録店舗数が多い都道府県順(東京都
+  //   から)の全件表示にする(このボタンもその間は非選択状態にする。取得成功時
+  //   に自動で距離順へ切り替わり、拒否時に自動再試行はしない)。
   // - "favoriteArea": マイページで手動登録した都道府県・市区町村(住所文字列の
   //   部分一致)に該当する商品のみ、新しい順に表示。郵便番号やジオコーディング
   //   は使わない(店舗網羅率が市区町村単位でも疎らなため、登録は手入力とし、
@@ -217,8 +222,8 @@ export default function CoffeeProductList() {
     }
     // sortMode === "distance"
     if (geolocation.status === "success") return sortByDistance(filtered, geolocation.coords);
-    return filtered;
-  }, [filtered, sortMode, geolocation.status, geolocation.coords, displayRadiusId, favoriteArea]);
+    return sortByPrefecturePopularity(filtered, prefectureRank, (p) => p.prefecture);
+  }, [filtered, sortMode, geolocation.status, geolocation.coords, displayRadiusId, favoriteArea, prefectureRank]);
 
   const productsByShop = useMemo(() => {
     const map = {};
@@ -228,6 +233,13 @@ export default function CoffeeProductList() {
     });
     return map;
   }, [products]);
+
+  // 店舗一覧も、全件表示の商品タブと同じ都道府県順(登録店舗数が多い順、
+  // 東京都から)にする。
+  const sortedShops = useMemo(
+    () => sortByPrefecturePopularity(shops, prefectureRank, (s) => s.prefecture),
+    [shops, prefectureRank]
+  );
 
   const productsById = useMemo(() => new Map(products.map((p) => [String(p.id), p])), [products]);
 
@@ -568,7 +580,7 @@ export default function CoffeeProductList() {
       )}
 
       {tab === "shops" && !selectedShop && (
-        <ShopListView shops={shops} productsByShop={productsByShop} onSelectShop={setSelectedShop} />
+        <ShopListView shops={sortedShops} productsByShop={productsByShop} onSelectShop={setSelectedShop} />
       )}
 
       {tab === "shops" && selectedShop && (
