@@ -40,6 +40,17 @@ robots.txt確認済み(2026-08時点): FINETIME COFFEE ROASTERSと同一の記�
 実データで確認済みなので、CafeCafaのような偶然の一致対策は不要)。「｜」区切り
 より後ろの粗い表記(深煎り/中深煎り等)はroast_hintとして保持する。
 
+【flavor_notes(テイスティングノート)の追加取得について(2026-09-19追記)】
+実データ確認済み: 上記の「マーケティング文のみ」という商品説明は、産地判定には
+使えないだけで、内容自体は空ではない。全商品で「■シゲ店長のひとこと」
+「■商品説明」「■おすすめ」という3つの■見出しが一貫した順序で並び、最初の
+2セクションに「熟れた果実のような甘みがあります」「フルーティーな香りと、
+複雑で奥行きのある風味が特徴です」のような具体的な風味描写が含まれている
+(実データ2商品で確認済み、書式は完全に一致)。「■おすすめ」以降は対象読者への
+訴求文(「〜がお好きな方」)や送料等の定型注記のため対象外とし、「■シゲ店長の
+ひとこと」から「■おすすめ」の直前まで(「■商品説明」の見出し自体は除く)を
+flavor_notesとして抽出する。
+
 【価格・重量について】
 実データ確認済み: 商品ページ上部に表示される単一の価格(div.c-item__price--
 single)と、g数選択セレクターの選択肢(例:「100g」(価格表示なし)「200g
@@ -91,12 +102,28 @@ LIST_CATEGORIES = ["5911145", "5911147"]  # ブレンドコーヒー、ストレ
 NON_BEAN_KEYWORDS = ["水出しコーヒーパック", "ドリップバッグコーヒー"]
 
 WEIGHT_OPTION_PATTERN = re.compile(r"^(\d+)\s*[gｇ]\s*(?:¥\s*([\d,]+))?")
+FLAVOR_SECTION_PATTERN = re.compile(r"■シゲ店長のひとこと\s*(.+?)(?=■おすすめ|――)", re.DOTALL)
 
 
 def fetch_page(url: str) -> BeautifulSoup:
     resp = requests.get(url, headers=REQUEST_HEADERS, timeout=15)
     resp.raise_for_status()
     return BeautifulSoup(resp.text, "html.parser")
+
+
+def parse_flavor_notes(soup: BeautifulSoup) -> str | None:
+    """理由はモジュールdocstring参照(■シゲ店長のひとこと〜■商品説明の2
+    セクションをテイスティングノートとして採用する)。"""
+    body_el = soup.select_one("div.p-item__body")
+    if not body_el:
+        return None
+    text = body_el.get_text(separator="\n")
+    m = FLAVOR_SECTION_PATTERN.search(text)
+    if not m:
+        return None
+    lines = [line.strip(" ・") for line in m.group(1).split("\n")]
+    lines = [line for line in lines if line and line != "■商品説明"]
+    return "".join(lines).strip() or None
 
 
 def split_title_roast_hint(raw_title: str) -> tuple[str, str | None]:
@@ -128,7 +155,7 @@ def extract_price_and_weight(soup: BeautifulSoup) -> tuple[int | None, int | Non
 
 
 def build_record(product_url: str, raw_title: str, price: int | None, weight_g: int | None,
-                  structural_out_of_stock: bool) -> dict:
+                  structural_out_of_stock: bool, flavor_notes: str | None) -> dict:
     main_title, roast_hint = split_title_roast_hint(raw_title)
     parsed = parse_product(main_title)
 
@@ -159,6 +186,7 @@ def build_record(product_url: str, raw_title: str, price: int | None, weight_g: 
         "roast_hint": roast_hint,
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
+        "flavor_notes": flavor_notes,
         "price": price,
         "weight_g": weight_g,
         "stock_status": stock_status,
@@ -181,8 +209,9 @@ def parse_product_detail(url: str) -> dict:
     price, weight_g = extract_price_and_weight(soup)
     status_el = soup.select_one("p.c-item__priceStatus")
     structural_out_of_stock = bool(status_el and "SOLD OUT" in status_el.get_text())
+    flavor_notes = parse_flavor_notes(soup)
 
-    return build_record(url, title_el.get_text(strip=True), price, weight_g, structural_out_of_stock)
+    return build_record(url, title_el.get_text(strip=True), price, weight_g, structural_out_of_stock, flavor_notes)
 
 
 def scrape_category_list_page(cid: str) -> list[dict]:

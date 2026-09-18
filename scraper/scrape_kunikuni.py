@@ -51,7 +51,18 @@ div.product-order-expに「原産国：ブラジル・東ティモール」「�
 しまう不具合が実データで見つかった。そのため空行は常に読み飛ばし(継続)、
 既知のラベル集合(KNOWN_DESC_LABELS)を両方取得できた時点、または未知の
 ラベル・ラベル形式でない行に達した時点で終了する方式にしている
-(parse_description_fields参照)。
+(parse_description_sections参照)。
+
+【flavor_notes(テイスティングノート)の追加取得について(2026-09-19追記)】
+実データ確認済み: 「原産国：.../品種：...」のラベル行の後、空行を挟んで
+1段落の自由記述(農園の説明とテイスティングノートが地の文で混在。例:
+「...熱風と冷風を使って約48時間かけてゆっくり乾燥させます。その後、通常の
+機械式ドライヤーで仕上げます。香味は、ストロベリーの様な香り、フルーティーな
+酸味と甘い余韻を楽しめます。」)が続き、さらに空行を挟んで重量別価格
+(「50g 650円」等)の案内に移る。以前はラベル行のみ取得しこの段落を
+読み捨てていたが、風味カテゴリの絞り込み機能で使えるflavor_notesとして
+そのまま採用する(段落中の農園説明とテイスティングノートを機械的に分離する
+精度の良い方法が無いため、段落全体をflavor_notesとする)。
 
 【重量・価格: バリアントについて】
 実データ確認済み: variantsのoption1_value(例:「200g  1250円」)に重量と
@@ -106,6 +117,8 @@ COLORME_JSON_PATTERN = re.compile(r"var\s+Colorme\s*=\s*(\{.*\});", re.DOTALL)
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
 DESC_LABEL_PATTERN = re.compile(r"^(.+?)\s*：\s*(.+)$")
 KNOWN_DESC_LABELS = {"原産国", "品種"}
+# 重量別価格案内の行(例:「50g 650円」)。flavor_notes段落の終端シグナルとして使う
+WEIGHT_PRICE_LINE_PATTERN = re.compile(r"^\d+\s*[gｇ]\s+[\d,]+\s*円")
 
 # 理由はモジュールdocstring参照。「フルシティロースト」が「シティロースト」を
 # 部分文字列として含むため、長い方を先に判定する
@@ -136,24 +149,46 @@ def extract_colorme_product(soup: BeautifulSoup) -> dict | None:
     return None
 
 
-def parse_description_fields(text: str) -> dict:
-    """「原産国：.../品種：...」の行を抽出する。理由はモジュールdocstring参照
-    (\r由来の空行が実質的な行の間に挟まるため、空行は常に読み飛ばし、
-    既知のラベルを両方取得できた時点か、未知のラベル・ラベル形式でない行に
-    達した時点で終了する)。"""
+def parse_description_sections(text: str) -> tuple[dict, str | None]:
+    """「原産国：.../品種：...」のラベル行と、それに続く自由記述(flavor_notes)を
+    1回の走査でまとめて抽出する。理由はモジュールdocstring参照(\r由来の空行が
+    ラベル行の間に挟まることがあるため、ラベル読み取り中は空行を読み飛ばし、
+    既知のラベルを両方取得できたか、ラベル形式でない行に達した時点で自由記述の
+    読み取りに移る。自由記述側は、空行の後に内容が無ければ継続、重量・価格の
+    案内行(WEIGHT_PRICE_LINE_PATTERN)に達するか、内容を読み取った後の空行で
+    終了する)。"""
+    lines = [(line or "").strip() for line in (text or "").split("\n")]
+    n = len(lines)
     fields = {}
-    for line in (text or "").split("\n"):
-        line = line.strip()
+    i = 0
+    while i < n:
+        line = lines[i]
         if not line:
+            i += 1
             continue
         m = DESC_LABEL_PATTERN.match(line)
         label = m.group(1).strip() if m else None
         if not m or label not in KNOWN_DESC_LABELS:
             break
         fields[label] = m.group(2).strip()
+        i += 1
         if KNOWN_DESC_LABELS <= fields.keys():
             break
-    return fields
+
+    flavor_lines = []
+    while i < n:
+        line = lines[i]
+        i += 1
+        if not line:
+            if flavor_lines:
+                break
+            continue
+        if WEIGHT_PRICE_LINE_PATTERN.match(line):
+            break
+        flavor_lines.append(line)
+
+    flavor_notes = "".join(flavor_lines).strip() or None
+    return fields, flavor_notes
 
 
 def detect_roast_level_from_breadcrumb(soup: BeautifulSoup) -> str | None:
@@ -206,7 +241,7 @@ def build_record(product_url: str, colorme_product: dict, description_text: str,
         }
 
     is_blend = parsed["category"] == "ブレンド"
-    fields = parse_description_fields(description_text)
+    fields, flavor_notes = parse_description_sections(description_text)
 
     origin_raw = fields.get("原産国")
     if origin_raw and not is_blend:
@@ -231,6 +266,7 @@ def build_record(product_url: str, colorme_product: dict, description_text: str,
         "post_processing_tags": parsed["post_processing_tags"],
         "variety": None if is_blend else fields.get("品種"),
         "blend_components": [],  # 配合比率の記載が無いため未対応(理由はモジュールdocstring参照)
+        "flavor_notes": flavor_notes,
         "price": price,
         "weight_g": weight_from_variant(variant),
         "stock_status": stock_status,

@@ -46,6 +46,14 @@ Castillo</p><p>標高： 1,400-1,450m</p>という「ラベル： 日本語値/ 
 fields参照。ラベルごとに「/」の意味が異なるため、呼び出し側で使い分ける)。
 配合比率(%)の記載は無いため、blend_componentsのpercentageはnullのままにする。
 
+【flavor_notes(テイスティングノート)の追加取得について(2026-09-19追記)】
+実データ確認済み: body_html冒頭(「豆 詳細」ブロックより前)に、見出し(例:
+「【オレンジのような明るい酸味と、ミルクチョコレートのような甘さ】」)と
+それに続く紹介文の段落があり、「カカオを思わせる優しいアロマ」のような
+具体的な風味描写を含む(ストレート・ブレンドとも共通の構成であることを確認
+済み)。従来は「豆 詳細」ブロックの構造化ラベルのみを取得し、この冒頭部分は
+未使用だったため、flavor_notesとして追加で取得する(parse_flavor_notes参照)。
+
 【特定銘柄(designated_brand)の誤検出を修正】
 実データ調査中に、coffee_parser.pyの特定銘柄判定がブレンドを考慮しておらず、
 「豆善 ブルーマウンテン No.1 ブレンド」(実際はコロンビア/ジャマイカ/
@@ -185,6 +193,25 @@ def parse_detail_fields(body_html: str) -> dict:
     return fields
 
 
+def parse_flavor_notes(body_html: str) -> str | None:
+    """body_html冒頭の紹介文(「豆 詳細」の構造化ブロックより前の部分)を
+    flavor_notesとして抽出する。理由はモジュールdocstring参照(見出しの
+    要約文に続けて、風味を含む紹介文の段落が並ぶ)。Shopifyのリッチテキスト
+    エディタ由来でdivが何重にも入れ子になっているため、要素ごとにテキストを
+    集めると親子関係で重複してしまう。「豆 詳細」以降をDOMから切り離してから
+    残り(紹介文部分)をまとめてテキスト化することで重複を避ける。"""
+    soup = BeautifulSoup(body_html or "", "html.parser")
+    heading = find_detail_heading(soup)
+    if heading:
+        for el in list(heading.find_all_next()):
+            el.decompose()
+        heading.decompose()
+    for br in soup.find_all("br"):
+        br.replace_with("\n")
+    lines = [line.strip() for line in soup.get_text(separator="\n").split("\n")]
+    return "".join(line for line in lines if line).strip() or None
+
+
 def parse_blend_components(blend_raw: str | None) -> list[dict]:
     if not blend_raw:
         return []
@@ -254,6 +281,7 @@ def build_record(product: dict) -> dict:
         "altitude_min_m": None if is_blend else altitude_min,
         "altitude_max_m": None if is_blend else altitude_max,
         "blend_components": blend_components,
+        "flavor_notes": parse_flavor_notes(product.get("body_html") or ""),
         "price": price,
         "weight_g": parse_weight(raw_name),
         "stock_status": stock_status,

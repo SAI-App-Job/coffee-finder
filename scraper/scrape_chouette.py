@@ -7,11 +7,24 @@ chouette torréfacteur laboratoire(chouettetl.theshop.jp、東京都世田谷区
 (scrape_finetime.py)と同じTHE SHOP(BASE系)プラットフォームだが、実データ
 確認の結果それらとは異なる「Relation」テーマが使われており、商品詳細ページに
 schema.org JSON-LD構造化データが一切埋め込まれていないことが判明した(2026-08
-確認)。itemDescription(商品説明文)も全商品共通の寄付プログラム
-(【chouette blanche】)の定型文のみで、産地・精選方法等の個別情報を一切含まない。
-そのため本スクレイパーは、他のTHE SHOP系スクレイパーと異なりJSON-LD/説明文の
-パースを行わず、商品名(一覧ページのcard-title、詳細ページのh1.itemTitleと同一)
-のみをcoffee_parser.parse_product()で解析する、より単純な構成になっている。
+確認)。商品名(一覧ページのcard-title、詳細ページのh1.itemTitleと同一)のみを
+coffee_parser.parse_product()で解析し、産地・焙煎度・グレード等はJSON-LD/説明文の
+パースを行わない、より単純な構成になっている。
+
+【flavor_notes(テイスティングノート)の追加取得について(2026-09-19追記)】
+以前の調査(2026-08)では、itemDescription(商品説明文)は全商品共通の寄付プログラム
+(【chouette blanche】)の定型文のみで個別情報を一切含まないと判断していたが、
+2026-09-19に実データを再確認したところ誤りだった(調査当時と現在でサイト側の
+商品説明が変わったか、見ていた範囲が不十分だった可能性がある)。実際には
+p.appsItemDetailCustomTag_description内に、寄付プログラムの定型文に続けて
+店舗独自の商品説明があり、19件中Grand Reserveライン3件を除く大半に
+「Cupping note: American Cherry, Coke, Candy」「Flavor note : Dark cherry,
+Floral, Berry」「note: Peach, Citrus, Pear, Caramel, Long Sweet」のように
+書式は微妙に揺れるものの「(何らかの前置き)note」というラベルに続けて
+カンマ区切りの英語フレーバー用語が入っている(実データ確認済み: 対象11件中8件で
+この行を確認。残るGrand Reserveライン3件はこの構造化された行を持たず、
+地の文の中にのみ風味の言及が混在する形式のため、誤抽出を避けるため今回は
+対象外とする)。この行をFLAVOR_NOTE_LINE_PATTERNで抽出しflavor_notesとする。
 
 robots.txt確認済み(2026-08時点): NAGI COFFEE・FINETIME COFFEE ROASTERSと同一の
 記述(curl/python-requests/aiohttp等の一般的なHTTPクライアントは個別に
@@ -114,6 +127,9 @@ NON_BEAN_KEYWORDS = ["テイスティングセット", "定期便", "コーヒ�
 TITLE_TAG_PATTERN = re.compile(r"^【(.+?)】")
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
 ENGLISH_ROAST_HINT_PATTERN = re.compile(r"(?:Light|Medium[- ]?Dark|Medium|Dark|City|Full City)\s*[Rr]oast")
+# 理由はモジュールdocstring参照(「Cupping note:」「Flavor note :」「note:」等、
+# 表記は揺れるが末尾が"note"のラベルに続くカンマ区切りの英語フレーバー用語)
+FLAVOR_NOTE_LINE_PATTERN = re.compile(r"[A-Za-z ]{0,20}note\s*[:：]\s*([^\n]{1,150})", re.IGNORECASE)
 
 
 def fetch_page(url: str) -> BeautifulSoup:
@@ -126,6 +142,17 @@ def parse_weight(title: str) -> int | None:
     text = unicodedata.normalize("NFKC", title or "")
     m = WEIGHT_PATTERN.search(text)
     return int(m.group(1)) if m else None
+
+
+def parse_flavor_notes(soup: BeautifulSoup) -> str | None:
+    """理由はモジュールdocstring参照(「note」で終わるラベル行のカンマ区切り
+    フレーバー用語をflavor_notesとして採用する。地の文のみでこの行が無い
+    商品(Grand Reserveライン等)はNoneを返す)。"""
+    desc_el = soup.select_one("p.appsItemDetailCustomTag_description")
+    if not desc_el:
+        return None
+    m = FLAVOR_NOTE_LINE_PATTERN.search(desc_el.get_text())
+    return m.group(1).strip() if m else None
 
 
 def split_title_category_hint(title: str) -> tuple[str, str | None]:
@@ -147,7 +174,8 @@ def parse_roast_hint(title: str) -> str | None:
     return m.group(0).strip() if m else None
 
 
-def build_record(product_url: str, title: str, price: int | None, structural_out_of_stock: bool) -> dict:
+def build_record(product_url: str, title: str, price: int | None, structural_out_of_stock: bool,
+                  flavor_notes: str | None) -> dict:
     main_title, category_hint = split_title_category_hint(title)
     parsed = parse_product(main_title)
 
@@ -179,6 +207,7 @@ def build_record(product_url: str, title: str, price: int | None, structural_out
         "roast_hint": parse_roast_hint(main_title),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
+        "flavor_notes": flavor_notes,
         "price": price,
         "weight_g": parse_weight(main_title),
         "stock_status": stock_status,
@@ -200,8 +229,9 @@ def parse_product_detail(url: str, title: str, price: int | None) -> dict:
 
     stock_el = soup.select_one("div.stockStatus")
     structural_out_of_stock = bool(stock_el) and "hasStock" not in (stock_el.get("class") or [])
+    flavor_notes = parse_flavor_notes(soup)
 
-    return build_record(url, title_el.get_text(strip=True), price, structural_out_of_stock)
+    return build_record(url, title_el.get_text(strip=True), price, structural_out_of_stock, flavor_notes)
 
 
 def scrape_category_list() -> list[dict]:
