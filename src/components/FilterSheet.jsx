@@ -1,7 +1,5 @@
 import { useState, useRef, useEffect } from "react";
 import { Search, Check, X } from "lucide-react";
-import { ROAST_LEVELS } from "../data/roastLevels";
-import { PREFECTURES } from "../data/products";
 import { ORIGIN_GUIDE, ORIGIN_ZONE_ORDER, ORIGIN_ZONE_LABELS } from "../data/originGuide";
 import { FLAVOR_WHEEL_DATA, FLAVOR_CATEGORY_OPTIONS } from "../data/flavorWheel";
 import { FILTER_SEARCH_THRESHOLD } from "../data/navigation";
@@ -14,6 +12,9 @@ const COUNTRIES_BY_ZONE = ORIGIN_ZONE_ORDER.map((zone) => ({
   label: ORIGIN_ZONE_LABELS[zone],
   countries: ORIGIN_GUIDE.filter((o) => o.zone === zone).map((o) => o.country),
 }));
+
+const SELECT_CLASS =
+  "w-full py-2.5 px-3 rounded-xl bg-[#3B2211] border border-[#4A3A2A] text-[13px] text-[#F2E9DD] focus:outline-none focus:border-[var(--accent-label)]";
 
 function FilterChip({ opt, active, onToggle, dotColor }) {
   return (
@@ -87,63 +88,15 @@ export function FilterSection({ title, options, selected, onToggle, getColor }) 
   );
 }
 
-// 産地(国)専用の絞り込みセクション。アフリカ/中南米/アジアの見出しごとに
-// 国を分けて表示することで、17ヶ国が並んでも見渡しやすくする(産地タブの
-// マップと同じグルーピング)。検索時は各グループ内で絞り込み、該当なしの
-// グループは見出しごと非表示にする。
-function CountryFilterSection({ title, selected, onToggle }) {
-  const [query, setQuery] = useState("");
-  const totalCount = COUNTRIES_BY_ZONE.reduce((sum, g) => sum + g.countries.length, 0);
-  const isSearchable = totalCount > FILTER_SEARCH_THRESHOLD;
-  const q = query.trim().toLowerCase();
-
-  const visibleGroups = COUNTRIES_BY_ZONE.map((g) => ({
-    ...g,
-    countries: q ? g.countries.filter((c) => c.toLowerCase().includes(q)) : g.countries,
-  })).filter((g) => g.countries.length > 0);
-
-  return (
-    <div>
-      <div className="flex items-center justify-between mb-2">
-        <p className="text-[12px] text-[#8B7361]">{title}</p>
-        {selected.size > 0 && (
-          <span className="text-[11px] text-[var(--accent)] font-medium">{selected.size}件選択中</span>
-        )}
-      </div>
-
-      {isSearchable && (
-        <div className="relative mb-2">
-          <Search size={12} className="absolute left-2.5 top-1/2 -translate-y-1/2 text-[#8B7361]" strokeWidth={2} />
-          <input
-            type="text"
-            value={query}
-            onChange={(e) => setQuery(e.target.value)}
-            placeholder={`${title}で検索(${totalCount}件)`}
-            className="w-full pl-7 pr-2.5 py-1.5 rounded-lg bg-[#3B2211] border border-[#4A3A2A] text-[12px] text-[#F2E9DD] placeholder:text-[#8B7361] focus:outline-none focus:border-[var(--accent-label)]"
-          />
-        </div>
-      )}
-
-      <div className="flex flex-col gap-3 max-h-[280px] overflow-y-auto overscroll-contain">
-        {visibleGroups.length === 0 && (
-          <p className="text-[12px] text-[#8B7361] py-1">「{query}」に一致する項目がありません</p>
-        )}
-        {visibleGroups.map((g) => (
-          <div key={g.zone}>
-            <p className="text-[10px] tracking-wide text-[#8B7361] uppercase mb-1.5">{g.label}</p>
-            <div className="flex flex-wrap gap-2">
-              {g.countries.map((opt) => (
-                <FilterChip key={opt} opt={opt} active={selected.has(opt)} onToggle={onToggle} />
-              ))}
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-}
-
-export function FilterSheet({ open, onClose, filters, setFilters, resultCount }) {
+export function FilterSheet({
+  open,
+  onClose,
+  filters,
+  setFilters,
+  resultCount,
+  prefectureOptions,
+  favoriteAreaPrefecture,
+}) {
   // Claude Cowork/アプリ内WebViewのような組み込み表示環境では、CSSの
   // ビューポート単位(vh/dvh)が正しく解決されないことがあり、シートの
   // 表示位置がずれる不具合が実際に発生した。そのため、window.innerHeight
@@ -221,8 +174,9 @@ export function FilterSheet({ open, onClose, filters, setFilters, resultCount })
     });
   };
 
-  const clearAll = () =>
-    setFilters({ country: new Set(), prefecture: new Set(), flavorCategory: new Set(), roast: new Set() });
+  const selectSingle = (dim, value) => setFilters((prev) => ({ ...prev, [dim]: value }));
+
+  const clearAll = () => setFilters({ country: "", prefecture: "", flavorCategory: new Set() });
 
   return (
     <div
@@ -246,14 +200,30 @@ export function FilterSheet({ open, onClose, filters, setFilters, resultCount })
           </button>
         </div>
 
-        {/* 発見につながりやすい軸(産地・風味・焙煎度)を上に、地理的な絞り込み
-            (都道府県)を下に配置している */}
+        {/* 発見につながりやすい軸(産地・風味)を上に、地理的な絞り込み
+            (都道府県)を下に配置している。産地・都道府県は単一選択のプル
+            ダウン、風味カテゴリのみ複数選択のチップのままにしている。 */}
         <div className="flex flex-col gap-5">
-          <CountryFilterSection
-            title="産地(国)"
-            selected={filters.country}
-            onToggle={(v) => toggle("country", v)}
-          />
+          <div>
+            <p className="text-[12px] text-[#8B7361] mb-2">産地(国)</p>
+            <select
+              value={filters.country}
+              onChange={(e) => selectSingle("country", e.target.value)}
+              className={SELECT_CLASS}
+            >
+              <option value="">すべて</option>
+              {COUNTRIES_BY_ZONE.map((g) => (
+                <optgroup key={g.zone} label={g.label}>
+                  {g.countries.map((c) => (
+                    <option key={c} value={c}>
+                      {c}
+                    </option>
+                  ))}
+                </optgroup>
+              ))}
+            </select>
+          </div>
+
           <FilterSection
             title="風味カテゴリ(フレーバーホイール)"
             options={FLAVOR_CATEGORY_OPTIONS}
@@ -261,19 +231,30 @@ export function FilterSheet({ open, onClose, filters, setFilters, resultCount })
             onToggle={(v) => toggle("flavorCategory", v)}
             getColor={(opt) => FLAVOR_WHEEL_DATA.find((c) => c.ja === opt)?.color}
           />
-          <FilterSection
-            title="焙煎度(浅→深)"
-            options={ROAST_LEVELS.map((r) => r.key)}
-            selected={filters.roast}
-            onToggle={(v) => toggle("roast", v)}
-            getColor={(opt) => ROAST_LEVELS.find((r) => r.key === opt)?.color}
-          />
-          <FilterSection
-            title="都道府県"
-            options={PREFECTURES}
-            selected={filters.prefecture}
-            onToggle={(v) => toggle("prefecture", v)}
-          />
+
+          <div>
+            <p className="text-[12px] text-[#8B7361] mb-2">都道府県</p>
+            <select
+              value={filters.prefecture}
+              onChange={(e) => selectSingle("prefecture", e.target.value)}
+              className={SELECT_CLASS}
+            >
+              <option value="">すべて</option>
+              {prefectureOptions.map(({ value, count }) => (
+                <option key={value} value={value}>
+                  {value}({count})
+                </option>
+              ))}
+            </select>
+            {favoriteAreaPrefecture && filters.prefecture !== favoriteAreaPrefecture && (
+              <button
+                onClick={() => selectSingle("prefecture", favoriteAreaPrefecture)}
+                className="mt-2 text-[12px] text-[var(--accent)] underline underline-offset-2"
+              >
+                登録エリア({favoriteAreaPrefecture})で絞り込む
+              </button>
+            )}
+          </div>
         </div>
 
         <div className="flex flex-col gap-2.5 mt-6 pt-4 border-t border-[#4A3A2A]">

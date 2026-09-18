@@ -156,5 +156,3 @@ export const MOCK_PRODUCTS = [
     mapQuery: "PHILOCOFFEA 千葉県",
   },
 ];
-
-export const PREFECTURES = Array.from(new Set(MOCK_PRODUCTS.map((p) => p.prefecture)));

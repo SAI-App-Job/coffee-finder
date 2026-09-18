@@ -86,11 +86,14 @@ export default function CoffeeProductList() {
   const [detailProduct, setDetailProduct] = useState(null);
   const [tastingLogProduct, setTastingLogProduct] = useState(null);
   const [compareModalOpen, setCompareModalOpen] = useState(false);
+  // country/prefectureは単一選択のプルダウンのため空文字列("")が未選択を表す。
+  // flavorCategoryのみ複数選択(チップ)のままなのでSetで持つ。焙煎度フィルタは
+  // 実データではほぼ機能しない(roastSelectable商品が62.5%を占め、どの焙煎度を
+  // 選んでも同じ結果になっていた)ため廃止した。
   const [filters, setFilters] = useState({
-    country: new Set(),
-    prefecture: new Set(),
+    country: "",
+    prefecture: "",
     flavorCategory: new Set(),
-    roast: new Set(),
   });
   const [sheetOpen, setSheetOpen] = useState(false);
   const [mapTarget, setMapTarget] = useState(null);
@@ -112,6 +115,20 @@ export default function CoffeeProductList() {
   // 都道府県ごとの登録店舗数のランク(多い順、東京都が最多のため自然と先頭に
   // 来る)。全件表示(位置情報未取得時の商品タブ)と店舗一覧の並び順に使う。
   const prefectureRank = useMemo(() => buildPrefectureRank(shops), [shops]);
+
+  // 絞り込みシートの都道府県プルダウン用の選択肢。実データ(products)に
+  // 実在する都道府県のみを対象に、件数付きで同じ並び順(店舗数が多い順)で出す。
+  // 以前はモックデータ由来の2県しか選べないバグがあったため、実データ基準に
+  // 作り直した。
+  const prefectureOptions = useMemo(() => {
+    const counts = new Map();
+    for (const p of products) {
+      if (!p.prefecture) continue;
+      counts.set(p.prefecture, (counts.get(p.prefecture) || 0) + 1);
+    }
+    const ordered = sortByPrefecturePopularity([...counts.keys()], prefectureRank, (pref) => pref);
+    return ordered.map((prefecture) => ({ value: prefecture, count: counts.get(prefecture) }));
+  }, [products, prefectureRank]);
 
   const learnAboutOrigin = useCallback(
     (country) => {
@@ -147,7 +164,7 @@ export default function CoffeeProductList() {
   };
 
   const activeCount =
-    filters.country.size + filters.prefecture.size + filters.flavorCategory.size + filters.roast.size;
+    (filters.country ? 1 : 0) + (filters.prefecture ? 1 : 0) + filters.flavorCategory.size;
 
   const filtered = useMemo(() => {
     const q = searchQuery.trim().toLowerCase();
@@ -155,26 +172,19 @@ export default function CoffeeProductList() {
       // 在庫状態が不明な商品(モックデータ等)は隠さない。チェックボックスが
       // オフの間は「一時的に品切れ」「終売」のどちらも一覧から除外する。
       if (!showOutOfStock && p.stockStatus && p.stockStatus !== "販売中") return false;
-      if (filters.country.size) {
+      if (filters.country) {
         // ブレンド商品はorigin_countryを持たないため、blendComponentsの
         // いずれかの産地国が絞り込み条件に一致すればヒットさせる。
         const countries = p.blendComponents?.length
           ? p.blendComponents.map((c) => c.originCountry).filter(Boolean)
           : [p.originCountry];
-        if (!countries.some((c) => filters.country.has(c))) return false;
+        if (!countries.includes(filters.country)) return false;
       }
-      if (filters.prefecture.size && !filters.prefecture.has(p.prefecture)) return false;
+      if (filters.prefecture && p.prefecture !== filters.prefecture) return false;
       if (filters.flavorCategory.size) {
         const productCats = categorizeFlavorNotes(p.flavorNotes).map((c) => c.ja);
         const hasMatch = productCats.some((ja) => filters.flavorCategory.has(ja));
         if (!hasMatch) return false;
-      }
-      if (filters.roast.size) {
-        // 焙煎度が固定の商品はその値で判定。注文時に焙煎度を選べる商品
-        // (roastSelectable)は、どの焙煎度で選んでも実現できるため、
-        // 焙煎度での絞り込みでは除外しない(選択肢として常に該当させる)。
-        const matchesFixedRoast = p.roast && filters.roast.has(p.roast);
-        if (!matchesFixedRoast && !p.roastSelectable) return false;
       }
       if (q) {
         const blendCountries = p.blendComponents?.length
@@ -283,6 +293,7 @@ export default function CoffeeProductList() {
 
   const removeFilter = (dim, value) => {
     setFilters((prev) => {
+      if (dim === "country" || dim === "prefecture") return { ...prev, [dim]: "" };
       const next = new Set(prev[dim]);
       next.delete(value);
       return { ...prev, [dim]: next };
@@ -290,10 +301,9 @@ export default function CoffeeProductList() {
   };
 
   const activeChips = [
-    ...[...filters.country].map((v) => ({ dim: "country", v })),
-    ...[...filters.prefecture].map((v) => ({ dim: "prefecture", v })),
+    ...(filters.country ? [{ dim: "country", v: filters.country }] : []),
+    ...(filters.prefecture ? [{ dim: "prefecture", v: filters.prefecture }] : []),
     ...[...filters.flavorCategory].map((v) => ({ dim: "flavorCategory", v })),
-    ...[...filters.roast].map((v) => ({ dim: "roast", v })),
   ];
 
   const openMapForProduct = useCallback(
@@ -629,6 +639,8 @@ export default function CoffeeProductList() {
         filters={filters}
         setFilters={setFilters}
         resultCount={filtered.length}
+        prefectureOptions={prefectureOptions}
+        favoriteAreaPrefecture={favoriteArea.prefecture}
       />
       <MapLinkModal target={mapTarget} onClose={() => setMapTarget(null)} />
       <ProductDetailModal

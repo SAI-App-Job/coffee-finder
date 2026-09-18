@@ -1,6 +1,7 @@
 // 登録エリア(マイページ)の都道府県プルダウン用。店舗データの
 // prefectureフィールドと同じ表記(都/道/府/県つき)で固定した全47都道府県。
-// FilterSheetのPREFECTURES(モックデータ由来、産地絞り込み用)とは別物。
+// FilterSheetの都道府県絞り込みは実データ由来の一覧(App.jsxのprefectureOptions、
+// 実在する都道府県のみ)を使うため、これとは別物。
 export const ALL_PREFECTURES = [
   "北海道",
   "青森県", "岩手県", "宮城県", "秋田県", "山形県", "福島県",
