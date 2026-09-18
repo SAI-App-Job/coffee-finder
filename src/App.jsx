@@ -190,9 +190,10 @@ export default function CoffeeProductList() {
   }, [products, filters, searchQuery, showOutOfStock]);
 
   // 並べ替え軸ごとの表示リスト。
-  // - "distance": 位置情報が取得できていれば距離順、そうでなければ(許可待ち・
-  //   タイムアウト・拒否・非対応のいずれも)新着順で暫定表示する(仕様書の
-  //   フォールバック要件。取得成功時に切り替わり、拒否時は切り替えを行わない)。
+  // - "distance": 位置情報の取得に成功していれば距離順。許可待ち・タイムアウト・
+  //   拒否・非対応の間は「近い順」を騙らず、特定の並び順を適用しない全件表示に
+  //   する(このボタンもその間は非選択状態にする。取得成功時に自動で距離順へ
+  //   切り替わり、拒否時に自動再試行はしない)。
   // - "favoriteArea": マイページで手動登録した都道府県・市区町村(住所文字列の
   //   部分一致)に該当する商品のみ、新しい順に表示。郵便番号やジオコーディング
   //   は使わない(店舗網羅率が市区町村単位でも疎らなため、登録は手入力とし、
@@ -216,7 +217,7 @@ export default function CoffeeProductList() {
     }
     // sortMode === "distance"
     if (geolocation.status === "success") return sortByDistance(filtered, geolocation.coords);
-    return sortNewArrivalsFirst(filtered);
+    return filtered;
   }, [filtered, sortMode, geolocation.status, geolocation.coords, displayRadiusId, favoriteArea]);
 
   const productsByShop = useMemo(() => {
@@ -382,29 +383,35 @@ export default function CoffeeProductList() {
             {displayed.length}件の商品(産地・精選方法・グレードで正規化済み)
           </p>
           <div className="flex items-center gap-1.5 mt-3 overflow-x-auto scrollbar-hide">
-            {SORT_MODE_ITEMS.map(({ id, label, icon: Icon }) => (
-              <button
-                key={id}
-                onClick={() => setSortMode(id)}
-                aria-pressed={sortMode === id}
-                className={`flex items-center gap-1 shrink-0 text-[12px] px-3 py-1.5 rounded-full border transition-colors ${
-                  sortMode === id
-                    ? "bg-[var(--accent)] text-[#231810] border-[var(--accent)]"
-                    : "border-[#4A3A2A] text-[#B8A891]"
-                }`}
-              >
-                <Icon size={12} strokeWidth={2} />
-                {label}
-              </button>
-            ))}
+            {SORT_MODE_ITEMS.map(({ id, label, icon: Icon }) => {
+              // 「近い順」は、実際に距離順ソートが有効な(位置情報取得に成功した)
+              // 場合のみ選択状態にする。許可待ち・拒否・エラー中は、実際には
+              // 距離順になっていないため、どのボタンも選択していない状態にする。
+              const isActive = id === "distance" ? sortMode === id && geolocation.status === "success" : sortMode === id;
+              return (
+                <button
+                  key={id}
+                  onClick={() => setSortMode(id)}
+                  aria-pressed={isActive}
+                  className={`flex items-center gap-1 shrink-0 text-[12px] px-3 py-1.5 rounded-full border transition-colors ${
+                    isActive
+                      ? "bg-[var(--accent)] text-[#231810] border-[var(--accent)]"
+                      : "border-[#4A3A2A] text-[#B8A891]"
+                  }`}
+                >
+                  <Icon size={12} strokeWidth={2} />
+                  {label}
+                </button>
+              );
+            })}
           </div>
           {sortMode === "distance" && geolocation.status !== "success" && (
             <p className="flex items-center gap-1 text-[11px] text-[#8B7361] mt-1.5">
               <LocateFixed size={11} strokeWidth={1.75} className="shrink-0" />
-              {geolocation.status === "pending" && "位置情報を取得中です(取得できるまで新着順で表示しています)"}
-              {geolocation.status === "denied" && "位置情報が許可されていないため、新着順で表示しています"}
+              {geolocation.status === "pending" && "位置情報を取得中です(取得できるまで全件表示しています)"}
+              {geolocation.status === "denied" && "位置情報が許可されていないため、全件表示しています"}
               {(geolocation.status === "error" || geolocation.status === "unsupported") &&
-                "位置情報を取得できなかったため、新着順で表示しています"}
+                "位置情報を取得できなかったため、全件表示しています"}
               {(geolocation.status === "denied" || geolocation.status === "error") && (
                 <button
                   onClick={geolocation.retry}
@@ -502,10 +509,6 @@ export default function CoffeeProductList() {
                   {favoriteArea.prefecture
                     ? "登録したエリアには該当する商品がありません。マイページでエリアを変更してみてください"
                     : "マイページでお気に入りエリア(都道府県・市区町村)を登録してください"}
-                </p>
-              ) : sortMode === "distance" ? (
-                <p className="text-[14px]">
-                  位置情報が使えないため「近い順」の代わりに新着順(直近30日以内)で表示していますが、該当する商品がありません
                 </p>
               ) : (
                 <p className="text-[14px]">現在30日以内に新規掲載された商品はありません</p>
