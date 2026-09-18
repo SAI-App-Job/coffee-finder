@@ -38,7 +38,7 @@ import { CopyrightFooter, MapLinkModal, Toast } from "./components/common";
 
 const SORT_MODE_ITEMS = [
   { id: "distance", label: "近い順", icon: MapPin },
-  { id: "favoriteArea", label: "お気に入りエリア", icon: Heart },
+  { id: "favoriteArea", label: "登録エリア", icon: Heart },
   { id: "new", label: "新規掲載", icon: Sparkles },
   { id: "random", label: "ランダム", icon: Shuffle },
 ];
@@ -442,7 +442,7 @@ export default function CoffeeProductList() {
             <p className="text-[11px] text-[#8B7361] mt-1.5">
               {favoriteArea.prefecture
                 ? `登録エリア: ${favoriteArea.prefecture}${favoriteArea.city ? ` ${favoriteArea.city}` : ""}(マイページで変更できます)`
-                : "お気に入りエリアが未登録です(マイページで登録できます)"}
+                : "登録エリアが未登録です(マイページで登録できます)"}
             </p>
           )}
           {sortMode === "random" && (
@@ -524,7 +524,7 @@ export default function CoffeeProductList() {
                 <p className="text-[14px]">
                   {favoriteArea.prefecture
                     ? "登録したエリアには該当する商品がありません。マイページでエリアを変更してみてください"
-                    : "マイページでお気に入りエリア(都道府県・市区町村)を登録してください"}
+                    : "マイページで登録エリア(都道府県・市区町村)を登録してください"}
                 </p>
               ) : (
                 <p className="text-[14px]">現在30日以内に新規掲載された商品はありません</p>

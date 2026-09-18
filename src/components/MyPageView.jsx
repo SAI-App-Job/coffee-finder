@@ -108,10 +108,10 @@ export function MyPageView({
       <section className="rounded-2xl bg-[#2F241A] border border-[#4A3A2A] p-4 flex flex-col gap-3">
         <div className="flex items-center gap-1.5">
           <MapPinned size={14} className="text-[var(--accent)]" strokeWidth={1.75} />
-          <h3 className="text-[14px] font-medium text-[#F2E9DD]">お気に入りエリア</h3>
+          <h3 className="text-[14px] font-medium text-[#F2E9DD]">登録エリア</h3>
         </div>
         <p className="text-[12px] text-[#8B7361] leading-relaxed">
-          商品タブの「お気に入りエリア」並べ替えで表示する地域です。都道府県は必須、市区町村は任意(未入力なら都道府県全体が対象)。郵便番号ではなく手入力で登録します。
+          商品タブの「登録エリア」並べ替えで表示する地域です。都道府県は必須、市区町村は任意(未入力なら都道府県全体が対象)。郵便番号ではなく手入力で登録します。
         </p>
         <div className="flex flex-col gap-2.5">
           <label className="flex flex-col gap-1">
