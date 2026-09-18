@@ -74,6 +74,15 @@ export const FLAVOR_WHEEL_DATA = [
 // テイスティングノート(flavor_notes)のフリーテキストから9大カテゴリを自動判定する
 // ための索引。FLAVOR_WHEEL_DATAの日本語用語に加え、実店舗の説明文は英語表記も
 // 多い(PHILOCOFFEA等)ため、代表的な英語用語も別途マッピングしている。
+//
+// 分類カバー率の実データ調査(2026-09-19)で、flavor_notesがある商品の53%が
+// このFLAVOR_WHEEL_DATA由来の索引だけでは1カテゴリにも一致しないことが判明。
+// 未分類テキストを見ると「酸味」「フローラル」「フルーティー」のような、
+// SCA/WCRの正式な語彙リストには載っていないが実店舗の説明文で頻出する一般語
+// (カテゴリ名自体のカタカナ表記や基本語)が原因だった。これらはSCA/WCR公式の
+// 用語データではないため、豆知識タブにも表示されるFLAVOR_WHEEL_DATA本体には
+// 加えず、englishTermsと同じ「分類専用の同義語」として別途ここに追加する
+// (出典を偽らないため)。
 export const FLAVOR_TERM_INDEX = (() => {
   const index = [];
   FLAVOR_WHEEL_DATA.forEach((cat) => {
@@ -95,6 +104,20 @@ export const FLAVOR_TERM_INDEX = (() => {
   Object.entries(englishTerms).forEach(([en, terms]) => {
     const cat = FLAVOR_WHEEL_DATA.find((c) => c.en === en);
     if (cat) terms.forEach((t) => index.push({ term: t, cat }));
+  });
+  // 実店舗の説明文で頻出するが、SCA/WCRの正式な用語リストには含まれない
+  // 日本語の一般語・カタカナ表記(カテゴリ名自体の言い換えなど)。
+  const japaneseSynonyms = {
+    Fruity: ["フルーティー", "フルーツ", "ベリー"],
+    Floral: ["フローラル"],
+    Sweet: ["甘み", "甘さ", "キャラメル"],
+    "Nutty/Cocoa": ["ナッツ", "チョコ"],
+    Spices: ["スパイシー"],
+    "Sour/Fermented": ["酸味"],
+  };
+  Object.entries(japaneseSynonyms).forEach(([en, terms]) => {
+    const cat = FLAVOR_WHEEL_DATA.find((c) => c.en === en);
+    if (cat) terms.forEach((t) => index.push({ term: t.toLowerCase(), cat }));
   });
   return index;
 })();
