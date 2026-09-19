@@ -37,15 +37,94 @@ JIBUNBLEND(141件)・ORDERMADEBLEND(15件)は「じぶんブレンド」とい�
 バリアントに絞り、その中でgramsまたはタイトル中のg表記から求めた
 重量が最小のものを代表として採用する(AKITO COFFEEと同じ
 pick_canonical_variant()パターン)。
+
+【flavor_notes/farm_note(テイスティングノート・農園情報)について
+(2026-09-20追記)】
+実データ確認済み: body_html(products.json内、追加リクエスト不要)に
+「カッピングプロファイル：」「カッピングプレミアム：」(タイプミス
+と思われる表記違い)「フレーバー：」のいずれかのラベルで、カンマ点
+区切りの短いフレーバー記述子(例:「グリーン、サワー、フルーティ」)が
+ほぼ全商品(178/181、対象外カテゴリを除く)に付与されている。これを
+flavor_notesとして採用する。単一原産地(SINGLE)商品には加えて
+「国・標高・エリア・品種・農園名・生産処理・生産者」のラベル付き
+詳細も付与されており、farm_note用フィールド(region_detail/
+altitude_note/variety_note/farm_name/producer_name)と
+processing_methodに反映する。HTML構造がテーマ変更で複数世代
+混在しており(素の<p>タグ/dl.coffee-rank-list/dl.detail-table-list等)、
+抽出方式の詳細はparse_flavor_and_farm()のdocstring参照(p/dt/dd/
+h2/h3/h4/li単位でテキストを取り出し、ラベル行を正規表現で判定)。
+値が「N/A」の場合は未設定として扱う。じぶんブレンド系(JIBUNBLEND/ORDERMADEBLEND/
+BLEND)にも「エリア」ラベルがあるが、これは複数原産地を「/」で
+連結した記述(例:「タリメ ゴールドマイン / イルガチェフG1
+ベレカ ウォッシュド」)であり、単一農園情報ではないがfarm_noteの
+自由記述としてそのまま採用して問題ない。
 """
 
 import re
 import time
 
 import requests
+from bs4 import BeautifulSoup
 
-from coffee_parser import parse_product, detect_stock_status
+from coffee_parser import parse_product, detect_stock_status, normalize_processing_method
 from previous_data import load_previous_products, is_unchanged
+
+FARM_LABEL_TO_FIELD = {
+    "農園名": "farm_name",
+    "生産者": "producer_name",
+    "エリア": "region_detail",
+    "標高": "altitude_note",
+    "品種": "variety_note",
+}
+FLAVOR_LABEL_NAMES = ("カッピングプロファイル", "カッピングプレミアム", "フレーバー")
+DESC_LABEL_PATTERN = re.compile(
+    r"^(ランク|グレード|国|標高|エリア|品種|農園名|生産処理|生産者|ブレンド|ブレンダー|"
+    r"カッピングプロファイル|カッピングプレミアム|フレーバー)[：:]\s*(.*)$"
+)
+
+
+BLOCK_TAGS = ["p", "dt", "dd", "h2", "h3", "h4", "li"]
+WHITESPACE_PATTERN = re.compile(r"\s+")
+
+
+def parse_flavor_and_farm(body_html: str | None) -> tuple[str | None, dict, str | None]:
+    """理由はモジュールdocstring参照。
+
+    【block単位でのテキスト抽出について】ラベルと値が<span>/<meta>で
+    分割されるケースが多いため、body全体をget_text(separator="\\n")で
+    平坦化する方式だと(1)ラベルと値が別行に分かれて値を取り逃す、
+    (2)get_text(strip=True)で各テキスト断片ごとに前後の空白が失われ、
+    本来スペースで区切られていた単語同士が連結してしまう、という2つの
+    不具合が実データで確認された(【SINGLE】エチオピア イルガチェフG1
+    セラム ナチュラルでflavor_notesを取り逃す、標高が「〜1,9 00m」に
+    分断される等)。この2つを避けるため、p/dt/dd/h2/h3/h4/li単位で
+    get_text()(strip無し)を呼び、\\s+をまとめて単一スペースに置換して
+    から前後をstripする(断片間の意味のある空白は保持しつつ、改行・
+    タブ等の余分な空白だけを正規化する)。"""
+    if not body_html:
+        return None, {}, None
+    soup = BeautifulSoup(body_html, "html.parser")
+
+    farm: dict = {}
+    flavor_notes = None
+    processing_raw = None
+    for el in soup.find_all(BLOCK_TAGS):
+        line = WHITESPACE_PATTERN.sub(" ", el.get_text()).strip()
+        m = DESC_LABEL_PATTERN.match(line)
+        if not m:
+            continue
+        label, value = m.group(1), m.group(2).strip()
+        if not value or value == "N/A":
+            continue
+
+        if label in FLAVOR_LABEL_NAMES:
+            flavor_notes = value
+        elif label == "生産処理":
+            processing_raw = value
+        elif label in FARM_LABEL_TO_FIELD:
+            farm[FARM_LABEL_TO_FIELD[label]] = value
+
+    return flavor_notes, farm, processing_raw
 
 SHOP_INFO = {
     "name": "COFFEE&CO.",
@@ -139,6 +218,8 @@ def build_record(product: dict) -> dict | None:
     all_out_of_stock = bool(variants) and not any(v.get("available") for v in variants)
     stock_status = detect_stock_status(title, all_out_of_stock)
 
+    flavor_notes, farm, processing_raw = parse_flavor_and_farm(product.get("body_html"))
+
     return {
         "shop_name": SHOP_INFO["name"],
         "raw_name": title,
@@ -146,9 +227,15 @@ def build_record(product: dict) -> dict | None:
         "origin_country": parsed["origin_country"],
         "origin_source": parsed["origin_source"],
         "designated_brand": parsed["designated_brand"],
-        "processing_method": parsed["processing_method"],
+        "processing_method": parsed["processing_method"] or normalize_processing_method(processing_raw),
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "farm_name": farm.get("farm_name"),
+        "producer_name": farm.get("producer_name"),
+        "region_detail": farm.get("region_detail"),
+        "altitude_note": farm.get("altitude_note"),
+        "variety_note": farm.get("variety_note"),
+        "flavor_notes": flavor_notes,
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": price,
