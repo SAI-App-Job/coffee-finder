@@ -34,6 +34,14 @@ order300g.html、3種類を自由に組み合わせる注文フォームで単�
 バリアントのnameが末尾に"/100g"のように重量を含むため、そこから正規
 表現で重量を抽出し、在庫があるバリアントの中から最小重量を代表として
 採用する(全滅時は在庫の有無を問わず全体から最小重量を採用)。
+
+【flavor_notes(テイスティングノート)について(2026-09-19追記)】
+実データ確認済み(2商品): div.description要素に「独特な香りと柑橘系の
+酸味で人気のモカをベースに、コクと香ばしさも味わえる午後の一杯」のような
+具体的な風味描写があり、この要素には他の情報(ブレンド内容・味わい星評価・
+価格表等)は混入していない(2商品で確認済み、要素自体がこの紹介文専用)。
+以前はJSON-LD(ProductGroup)から商品名・価格・バリアントのみ取得し、
+この要素自体を一切読んでいなかった。
 """
 
 import json
@@ -122,7 +130,15 @@ def pick_canonical_variant(variants: list[dict]) -> tuple[dict | None, int | Non
     return variant, weight
 
 
-def build_record(group: dict, product_url: str) -> dict | None:
+def parse_flavor_notes(soup: BeautifulSoup) -> str | None:
+    """理由はモジュールdocstring参照(div.descriptionはこの紹介文専用)。"""
+    el = soup.select_one("div.description")
+    if not el:
+        return None
+    return "".join(line.strip() for line in el.get_text().split("\n") if line.strip()) or None
+
+
+def build_record(group: dict, product_url: str, flavor_notes: str | None = None) -> dict | None:
     title = re.sub(r"\s+", " ", (group.get("name") or "")).strip()
     if not title or any(kw in title for kw in NON_BEAN_KEYWORDS):
         return None
@@ -163,6 +179,7 @@ def build_record(group: dict, product_url: str) -> dict | None:
         "roast_level": parsed["roast_level"],
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
+        "flavor_notes": flavor_notes,
         "price": price,
         "weight_g": weight_g,
         "stock_status": stock_status,
@@ -188,7 +205,8 @@ def scrape_all_products() -> tuple[list[dict], list[dict]]:
         group = extract_product_group(html)
         if not group:
             continue
-        detail = build_record(group, product_url)
+        flavor_notes = parse_flavor_notes(BeautifulSoup(html, "html.parser"))
+        detail = build_record(group, product_url, flavor_notes)
         if detail is None:
             continue
         if detail.get("is_flavored"):

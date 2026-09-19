@@ -34,6 +34,14 @@ NON_BEAN_KEYWORDSで除外する。
 バリアントとして「おまかせ」×「豆のまま」を優先的に採用する。
 
 robots.txt確認済み(2026-09時点): 他のshop-pro.jp系店舗と同一の記述。
+
+【flavor_notes(テイスティングノート)について(2026-09-19追記)】
+実データ確認済み(2商品): div.catch要素(商品名直下のキャッチコピー専用
+要素)に「太平洋に浮かぶスラウェッシュ島で生まれた、香りのトラジャと
+称される気品溢れるまろやかな苦みのスペシャリティコーヒー」のような
+一文の風味描写があり、この後に続く長い産地紹介文(「商品詳細」欄、地理・
+歴史中心)とは別要素として構造化されている。以前はvar Colorme JSONから
+商品名・価格・在庫のみ取得し、この要素自体を一切読んでいなかった。
 """
 
 import json
@@ -120,6 +128,14 @@ def pick_canonical_variant(variants: list[dict]) -> dict | None:
     return (whole_bean or variants)[0]
 
 
+def parse_flavor_notes(soup: BeautifulSoup) -> str | None:
+    """理由はモジュールdocstring参照(div.catch)。"""
+    el = soup.select_one("div.catch")
+    if not el:
+        return None
+    return "".join(line.strip() for line in el.get_text().split("\n") if line.strip()) or None
+
+
 def build_record(product_url: str, fallback_title: str) -> dict | None:
     soup = fetch_page(product_url)
     colorme_product = extract_colorme_product(soup)
@@ -164,6 +180,7 @@ def build_record(product_url: str, fallback_title: str) -> dict | None:
         "roast_selectable": True,
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
+        "flavor_notes": parse_flavor_notes(soup),
         "price": variant.get("option_price_including_tax") if variant else None,
         "weight_g": weight_g,  # 生豆時の重量(焙煎後重量は開示なし。理由はdocstring参照)
         "stock_status": stock_status,

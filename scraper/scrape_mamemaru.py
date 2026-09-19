@@ -29,6 +29,15 @@ GRP")。curl/python-requests等は個別にDisallow: /指定があるが、User-
 【非コーヒー豆商品の除外について】
 実データ確認済み(サンプル調査): 生豆(グリーンビーンズ)販売・器具・
 ドリップバッグ単品・ギフトセット等はNON_BEAN_KEYWORDSで除外する。
+
+【flavor_notes(テイスティングノート)について(2026-09-19追記)】
+実データ確認済み(2商品): p[class*="item-detail_description"]
+(GONZO CAFE&BEANS等と同じBASE共通テーマ)に「バニラのような甘い香りと
+チョコレートの風味。クリアで安定感があり、完成度の高いバランス。」の
+ような具体的な風味描写があり、他の情報(価格表・注意書き等)は混入して
+いない(2商品で確認済み、要素自体が紹介文専用)。重複排除後の代表商品
+(canonical_items)のみ詳細ページを再取得してこの要素を読む。以前はOGPの
+商品名・価格のみ取得し、この要素自体を一切読んでいなかった。
 """
 
 import re
@@ -109,6 +118,15 @@ def pick_canonical_items(items: list[dict]) -> list[dict]:
     return list(by_base_name.values())
 
 
+def parse_flavor_notes(product_url: str) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    soup = fetch_page(product_url)
+    el = soup.select_one('p[class*="item-detail_description"]')
+    if not el:
+        return None
+    return "".join(line.strip() for line in el.get_text().split("\n") if line.strip()) or None
+
+
 def build_record(item: dict) -> dict | None:
     title = item["title"].strip()
     parsed = parse_product(title)
@@ -140,6 +158,7 @@ def build_record(item: dict) -> dict | None:
         "roast_level": parsed["roast_level"],
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
+        "flavor_notes": parse_flavor_notes(item["url"]),
         "price": item["price"],
         "weight_g": weight_g,
         "stock_status": stock_status,
