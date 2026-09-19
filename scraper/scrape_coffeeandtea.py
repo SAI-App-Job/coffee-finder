@@ -59,6 +59,17 @@ pagenavi_topの表示件数がなくなるまで(空ページが返るまで)巡
 実データ確認済み: 対象とした5カテゴリ内には非コーヒー豆商品(ドリップ
 バッグ・ギフトセット等)は存在しなかった。紅茶関連4カテゴリは巡回対象に
 含めていないため、除外用のNON_BEAN_KEYWORDSは不要。
+
+【flavor_notes(テイスティングノート)について(2026-09-19追記)】
+上記の理由で詳細ページへの個別アクセスは避けていたが、重複排除後は
+76銘柄まで絞られている。実データ確認済み(2商品): 詳細ページの
+dd.explain要素の1行目に「優しくしっとり華やかな、繊細なコーヒーです。」
+のような具体的な風味描写があり、2行目以降は「おすすめローストは
+ハイロースト」「焙煎後の量目は焙煎時間により15%〜20%目減りします」
+という全銘柄共通の定型文が続く。「おすすめロースト」の行に達するまでを
+flavor_notesとして採用する。76銘柄分の詳細ページ個別取得という
+コスト増を伴うが(差分検知の仕組みが無いため毎回)、この規模は本
+プロジェクトの他店舗でも許容している範囲。
 """
 
 import re
@@ -176,6 +187,27 @@ def pick_canonical_items(items: list[dict]) -> list[dict]:
     return list(by_base_name.values())
 
 
+FLAVOR_STOP_PATTERN = re.compile(r"おすすめロースト")
+
+
+def parse_flavor_notes(product_url: str) -> str | None:
+    """理由はモジュールdocstring参照(dd.explainの1行目〜「おすすめロースト」の
+    行の手前までを風味描写として採用する)。"""
+    soup = fetch_page(product_url)
+    el = soup.select_one("dd.explain")
+    if not el:
+        return None
+    lines = []
+    for raw_line in el.get_text(separator="\n").split("\n"):
+        line = raw_line.strip()
+        if not line:
+            continue
+        if FLAVOR_STOP_PATTERN.search(line):
+            break
+        lines.append(line)
+    return "".join(lines) or None
+
+
 def build_record(item: dict) -> dict | None:
     title = item["title"].replace("生豆時", "").strip()
     title = re.sub(r"\s+", " ", title)
@@ -208,6 +240,7 @@ def build_record(item: dict) -> dict | None:
         "roast_level": parsed["roast_level"],
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
+        "flavor_notes": parse_flavor_notes(item["url"]),
         "price": item["price"],
         "weight_g": weight_g,
         "stock_status": stock_status,
@@ -224,6 +257,7 @@ def scrape_all_products() -> tuple[list[dict], list[dict]]:
     flavored_records = []
     for item in canonical_items:
         detail = build_record(item)
+        time.sleep(CRAWL_DELAY_SECONDS)
         if detail is None:
             continue
         if detail.get("is_flavored"):

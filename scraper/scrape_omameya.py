@@ -20,6 +20,17 @@ python-requests等は個別にDisallow: /指定があるが、User-agent: *ル�
 単品ではないためNON_BEAN_KEYWORDSで除外する。「【30g 2-3杯分】」という
 少量お試しサイズの単一銘柄商品は、通常サイズとは別の実在SKU(重量違い)
 として扱いそのまま収録する。
+
+【flavor_notes(テイスティングノート)について(2026-09-19追記)】
+実データ確認済み(3商品): og:descriptionに「爽やかな果実味を感じるブレンド。
+最高級品質のエチオピアがベースとなっており、力強いモカフレーバーが口の中
+いっぱいに広がる。」のような具体的な風味描写があるが、末尾に全銘柄共通の
+増量キャンペーン文言(「200g以上お買い上げで50g増量サービス中！(400g
+お買い上げで100g増量サービス、トータル500gとなります。)」)が続く。
+この定型文の手前までをflavor_notesとして採用する。一方、【30g 2-3杯分】
+お試しサイズ商品はog:descriptionが風味描写を含まずドリップレシピの
+説明のみのため(「◾️1杯あたり15gのドリップレシピ...」)、「ドリップ
+レシピ」という語を含む場合はflavor_notesを取得しない(誤って抽出しない)。
 """
 
 import re
@@ -56,6 +67,17 @@ def fetch_page(url: str) -> BeautifulSoup:
     return BeautifulSoup(resp.text, "html.parser")
 
 
+FLAVOR_STOP_PATTERN = re.compile(r"200g以上お買い上げで")
+
+
+def parse_flavor_notes(description: str | None) -> str | None:
+    """理由はモジュールdocstring参照(末尾の増量キャンペーン定型文の手前までを
+    採用し、ドリップレシピ説明のみの商品は対象外とする)。"""
+    if not description or "ドリップレシピ" in description:
+        return None
+    return FLAVOR_STOP_PATTERN.split(description)[0].strip() or None
+
+
 def extract_og_fields(soup: BeautifulSoup) -> dict | None:
     title_el = soup.select_one('meta[property="og:title"]')
     if not title_el or not title_el.get("content"):
@@ -63,7 +85,9 @@ def extract_og_fields(soup: BeautifulSoup) -> dict | None:
     title = title_el["content"].split(" | ")[0].strip()
     price_el = soup.select_one('meta[property="product:price:amount"]')
     price = int(float(price_el["content"])) if price_el and price_el.get("content") else None
-    return {"title": title, "price": price}
+    desc_el = soup.select_one('meta[property="og:description"]')
+    description = desc_el.get("content") if desc_el else None
+    return {"title": title, "price": price, "description": description}
 
 
 def build_record(product_url: str, fields: dict) -> dict | None:
@@ -100,6 +124,7 @@ def build_record(product_url: str, fields: dict) -> dict | None:
         "roast_level": parsed["roast_level"],
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
+        "flavor_notes": parse_flavor_notes(fields.get("description")),
         "price": fields["price"],
         "weight_g": weight_g,
         "stock_status": stock_status,

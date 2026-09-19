@@ -26,14 +26,24 @@ robots.txt確認済み(2026-09時点): Shopify標準のrobots.txtで`Allow: /`
 【重量・価格について】
 実データ確認済み: option1が重量("100g"等)。最小重量のバリエーションを
 代表として採用する。
+
+【flavor_notes・farm_note構成要素について(2026-09-19追記)】
+実データ確認済み(3商品): body_htmlに<br>区切りで「【産地】 コロンビア/
+【農園】 キンディオ/【精製】 インフューズドハニー/【品種】 カスティージョ/
+【標高】 1,400m～1,450m/【特徴】芳醇なピーチの香りが立ち上がり...」という
+【ラベル】値の行が並び、続く別段落に星評価(「酸味 ★ ★ ★」等)がある。
+「特徴」ラベルはテイスティングノートそのもの。以前はShopifyの
+products.jsonから商品名・価格・在庫のみ取得し、body_html自体を一切
+読んでいなかった。
 """
 
 import re
 import time
 
 import requests
+from bs4 import BeautifulSoup
 
-from coffee_parser import parse_product, detect_stock_status
+from coffee_parser import parse_product, detect_stock_status, normalize_processing_method
 from previous_data import load_previous_products, is_unchanged
 
 SHOP_INFO = {
@@ -53,6 +63,35 @@ REQUEST_HEADERS = {
 
 TARGET_PRODUCT_TYPE = "焙煎豆"
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
+
+# 理由はモジュールdocstring参照
+FIELD_LABEL_PATTERN = re.compile(r"【([^】]{1,6})】\s*(.*)$")
+FIELD_LABEL_TO_KEY = {
+    "農園": "farm_name",
+    "精製": "processing_method",
+    "品種": "variety_note",
+    "標高": "altitude_note",
+    "特徴": "flavor_notes",
+}
+
+
+def parse_body_details(body_html: str | None) -> dict:
+    """理由はモジュールdocstring参照。"""
+    if not body_html:
+        return {}
+    soup = BeautifulSoup(body_html, "html.parser")
+    for br in soup.find_all("br"):
+        br.replace_with("\n")
+    fields: dict[str, str] = {}
+    for raw_line in soup.get_text().split("\n"):
+        line = raw_line.strip()
+        m = FIELD_LABEL_PATTERN.match(line)
+        if not m:
+            continue
+        key = FIELD_LABEL_TO_KEY.get(m.group(1))
+        if key and m.group(2).strip():
+            fields.setdefault(key, m.group(2).strip())
+    return fields
 
 
 def fetch_products() -> list[dict]:
@@ -105,6 +144,10 @@ def build_record(product: dict) -> dict | None:
     all_out_of_stock = bool(variants) and not any(v.get("available") for v in variants)
     stock_status = detect_stock_status(title, all_out_of_stock)
 
+    desc_fields = parse_body_details(product.get("body_html"))
+    processing_method = desc_fields.get("processing_method")
+    processing_method = normalize_processing_method(processing_method) if processing_method else parsed["processing_method"]
+
     return {
         "shop_name": SHOP_INFO["name"],
         "raw_name": title,
@@ -112,12 +155,16 @@ def build_record(product: dict) -> dict | None:
         "origin_country": parsed["origin_country"],
         "origin_source": parsed["origin_source"],
         "designated_brand": parsed["designated_brand"],
-        "processing_method": parsed["processing_method"],
+        "processing_method": processing_method,
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
         "roast_selectable": True,
         "post_processing_tags": parsed["post_processing_tags"],
+        "farm_name": desc_fields.get("farm_name"),
+        "altitude_note": desc_fields.get("altitude_note"),
+        "variety_note": desc_fields.get("variety_note"),
         "blend_components": [],
+        "flavor_notes": desc_fields.get("flavor_notes"),
         "price": price,
         "weight_g": weight_g,
         "stock_status": stock_status,

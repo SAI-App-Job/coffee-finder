@@ -24,6 +24,16 @@ User-agent: *に対し/secure/・/cart/のみDisallow。AhrefsBot等一部
 セット(200g×2)」(詰め合わせ)・「今月の珈琲豆」(具体的な産地不明の
 月替わり品)が非対象。NON_BEAN_KEYWORDSで除外する。残り76件を対象と
 する。
+
+【flavor_notes(テイスティングノート)について(2026-09-19追記)】
+実データ確認済み(3商品): 商品詳細ページにp#simple-detailという専用の
+短い紹介文(見出し+1〜2文、例:「芳香・コク・甘みのバランスのよいコーヒー
+高品質の珈琲豆を作るために研究を重ねる農園で栽培された珈琲豆。素晴らしい
+芳香、ボディー、甘みを持った珈琲豆です。」)があり、具体的な風味描写を
+含む。この後に続く産地(国)についての長大な一般解説文(歴史・地理等)とは
+別要素として構造化されている(id="simple-detail"の名前通り)ため、
+この要素のみを対象にすることで一般解説文を自然に除外できる。以前は
+JSON-LDから商品名・価格のみ取得し、この要素自体を一切読んでいなかった。
 """
 
 import json
@@ -67,6 +77,14 @@ def fetch_page(url: str) -> BeautifulSoup:
 def fetch_pid_urls() -> list[str]:
     soup = fetch_page(f"{BASE_URL}/sitemap.xml")
     return [loc.get_text(strip=True) for loc in soup.find_all("loc") if "pid=" in loc.get_text()]
+
+
+def parse_flavor_notes(soup: BeautifulSoup) -> str | None:
+    """理由はモジュールdocstring参照(p#simple-detail)。"""
+    el = soup.select_one("p#simple-detail")
+    if not el:
+        return None
+    return "".join(line.strip() for line in el.get_text().split("\n") if line.strip()) or None
 
 
 def build_record(soup: BeautifulSoup, product_url: str) -> dict | None:
@@ -116,6 +134,7 @@ def build_record(soup: BeautifulSoup, product_url: str) -> dict | None:
         "roast_level": parsed["roast_level"],
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
+        "flavor_notes": parse_flavor_notes(soup),
         "price": int(price) if price is not None else None,
         "weight_g": FIXED_WEIGHT_G,
         "stock_status": stock_status,
