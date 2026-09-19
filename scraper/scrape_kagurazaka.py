@@ -39,6 +39,19 @@ ShopServeと同種の「robots.txtが無い=実質全面許可」状態)。
 商品詳細ページにJSON-LD(schema.org Product)が埋め込まれており、
 offers.price・offers.availability(https://schema.org/InStock 等)から
 構造化データを取得できる(GONZO CAFE&BEANS等のBASE系列と同様の構造)。
+
+【flavor_notes(テイスティングノート)について(2026-09-20追記)】
+実データ確認済み: descriptionフィールドは「おすすめロースト：」ラベルの
+抽出にのみ使われており、それ以前の紹介文本体は一切読んでいなかった。
+実際には全商品でdescriptionの先頭に風味を説明する自由記述文があり、
+その後に「酸味：★★★★☆(4)苦味：...」のような★段階評価ブロック
+(付いている商品のみ)、続いて「◆おすすめロースト：」または単独の
+「おすすめロースト：」ラベル、「*生豆での販売は行っておりません。」
+「※ご指定がない場合、...」等の注記が続く。先頭の自由記述文だけを
+flavor_notesとして採用するため、★評価ブロック・おすすめロースト・
+上記注記のいずれかが最初に現れた位置で本文を打ち切る。descriptionは
+生のJSON文字列で「&nbsp;」がテキストとして連結されていることがある
+(HTMLエンティティとしてレンダリングされない)ため、事前に空白へ変換する。
 """
 
 import json
@@ -77,6 +90,18 @@ REQUEST_HEADERS = {
 
 NON_BEAN_KEYWORDS = ["焙煎豆ギフト", "ドリップコーヒーバッグ"]
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
+FLAVOR_STOP_PATTERN = re.compile(r"(酸味[：:]\s*★|◆?\s*おすすめロースト[：:]|\*生豆|※ご指定)")
+
+
+def extract_flavor_notes(description: str) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    if not description:
+        return None
+    cleaned = description.replace("&nbsp;", " ")
+    m = FLAVOR_STOP_PATTERN.search(cleaned)
+    head = cleaned[:m.start()] if m else cleaned
+    text = re.sub(r"\s+", "", head).strip()
+    return text or None
 
 
 def fetch_page(url: str) -> BeautifulSoup:
@@ -158,6 +183,7 @@ def build_record(product_url: str, product: dict, category_hint: str) -> dict:
         "grade": parsed["grade"],
         "roast_level": None,  # 理由はモジュールdocstring参照(店独自の紹介文中の表記のためroast_hintに保持)
         "roast_hint": roast_hint,
+        "flavor_notes": extract_flavor_notes(description),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": price,
