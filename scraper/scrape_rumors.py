@@ -19,6 +19,13 @@ python-requests等は個別にDisallow: /指定があるが、User-agent: *ル�
 詰め合わせ、ドリップバッグ、マンデリンコーヒーゼリー、リキッド
 アイスコーヒーがコーヒー豆単品ではないためNON_BEAN_KEYWORDSで除外する。
 残りは同一銘柄の200g/300g/500g重量違いを含むストレート豆。
+
+【flavor_notes(テイスティングノート)について(2026-09-20追記)】
+実データ確認済み(37商品サンプル調査): 他のBASE系店舗と同じ共通テーマの
+p[class*="item-detail_description"]要素に、産地・栽培地域の説明と
+風味描写を含む具体的な紹介文がある。以前はog:title/価格のみ取得し、
+この要素自体を一切読んでいなかった。GONZO CAFE&BEANS等と同様、末尾に
+「※」で始まる注記が付く可能性があるためその手前までを採用する。
 """
 
 import re
@@ -47,6 +54,7 @@ REQUEST_HEADERS = {
 
 NON_BEAN_KEYWORDS = ["ドリップバッグ", "ドリップバック", "ギフト", "ゼリー", "詰め合わせ", "セット", "リキッド"]
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
+FLAVOR_STOP_PATTERN = re.compile(r"^※")
 
 
 def fetch_page(url: str) -> BeautifulSoup:
@@ -65,7 +73,23 @@ def extract_og_fields(soup: BeautifulSoup) -> dict | None:
     return {"title": title, "price": price}
 
 
-def build_record(product_url: str, fields: dict) -> dict | None:
+def parse_flavor_notes(soup: BeautifulSoup) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    el = soup.select_one('p[class*="item-detail_description"]')
+    if not el:
+        return None
+    lines = []
+    for raw_line in el.get_text(separator="\n").split("\n"):
+        line = raw_line.strip()
+        if not line:
+            continue
+        if FLAVOR_STOP_PATTERN.match(line):
+            break
+        lines.append(line)
+    return "".join(lines) or None
+
+
+def build_record(product_url: str, fields: dict, flavor_notes: str | None = None) -> dict | None:
     title = fields["title"]
     if any(kw in title for kw in NON_BEAN_KEYWORDS):
         return None
@@ -99,6 +123,7 @@ def build_record(product_url: str, fields: dict) -> dict | None:
         "roast_level": parsed["roast_level"],
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
+        "flavor_notes": flavor_notes,
         "price": fields["price"],
         "weight_g": weight_g,
         "stock_status": stock_status,
@@ -108,10 +133,11 @@ def build_record(product_url: str, fields: dict) -> dict | None:
 
 
 def parse_product_detail(url: str) -> dict | None:
-    fields = extract_og_fields(fetch_page(url))
+    soup = fetch_page(url)
+    fields = extract_og_fields(soup)
     if not fields:
         return None
-    return build_record(url, fields)
+    return build_record(url, fields, parse_flavor_notes(soup))
 
 
 def fetch_sitemap_urls() -> list[str]:
@@ -128,7 +154,8 @@ def scrape_all_products() -> tuple[list[dict], list[dict]]:
     for product_url in product_urls:
         prev = previous.get(product_url)
         try:
-            fields = extract_og_fields(fetch_page(product_url))
+            soup = fetch_page(product_url)
+            fields = extract_og_fields(soup)
         except requests.RequestException as e:
             print(f"[warn] 詳細ページ取得失敗: {product_url} ({e})")
             continue
@@ -140,7 +167,7 @@ def scrape_all_products() -> tuple[list[dict], list[dict]]:
             records.append(prev)
             continue
 
-        detail = build_record(product_url, fields)
+        detail = build_record(product_url, fields, parse_flavor_notes(soup))
         if detail is None:
             continue
         if detail.get("is_flavored"):
