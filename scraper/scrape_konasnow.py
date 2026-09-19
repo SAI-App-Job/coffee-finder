@@ -28,6 +28,19 @@ GRP")。curl/python-requests等は個別にDisallow: /指定があるが、User-
 (液体、100gの焙煎豆版とは別に除外)・「Base限定商品」の1kg各種粉豆
 バンドル(浅中深3種の詰め合わせで単一銘柄と特定できない)が非対象。
 NON_BEAN_KEYWORDSで除外する。
+
+【flavor_notes/farm_note(テイスティングノート・農園情報)について
+(2026-09-20追記)】
+実データ確認済み(サンプル調査): 他のBASE系店舗と共通のテーマの
+p[class*="item-detail_description"]要素に「原産国」「農園」「生産地」
+「精製方法」「標高」「焙煎」ラベル(コロン・スペース区切りが混在)、
+「苦み/コク/酸味/香り/甘み」の★段階評価、店主による風味紹介文が入って
+いるが、この要素自体を一切読んでいなかった。風味紹介文の位置が評価の
+前後どちらに来るか商品によって異なるため、ラベル行・評価行(★を含む
+行)・Instagramクレジット等の定型フッター(「イラスト」「アカウント」を
+含む行、「@」を含む行)を除いた残りの自由文を全てflavor_notesとして
+採用する。ラベル値は「農園」「生産地」「標高」「精製方法」を
+farm_note用フィールドに反映する。
 """
 
 import re
@@ -35,7 +48,7 @@ import re
 import requests
 from bs4 import BeautifulSoup
 
-from coffee_parser import parse_product, detect_stock_status
+from coffee_parser import parse_product, detect_stock_status, normalize_processing_method
 
 SHOP_INFO = {
     "name": "珈琲豆 山倉",
@@ -58,6 +71,45 @@ NON_BEAN_KEYWORDS = [
 ]
 DISCOUNT_TOKEN_PATTERN = re.compile(r"お得用|お徳用|まとめ買いで\d+円お得！")
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
+FARM_LABEL_PATTERN = re.compile(r"^(原産国|農園|生産地|精製方法|標高|焙煎)[：:]?[\s　]*(.*)$")
+FARM_LABEL_TO_FIELD = {
+    "農園": "farm_name",
+    "生産地": "region_detail",
+    "標高": "altitude_note",
+}
+FLAVOR_STOP_KEYWORDS = ("イラスト", "アカウント")
+
+
+def parse_flavor_and_farm(soup: BeautifulSoup) -> tuple[str | None, dict, str | None]:
+    """理由はモジュールdocstring参照。"""
+    el = soup.select_one('p[class*="item-detail_description"]')
+    if not el:
+        return None, {}, None
+    farm: dict = {}
+    processing_raw = None
+    flavor_lines = []
+    collecting = True
+    for raw_line in el.get_text(separator="\n").split("\n"):
+        line = raw_line.strip()
+        if not line:
+            continue
+        if "★" in line or "☆" in line:
+            continue
+        if any(kw in line for kw in FLAVOR_STOP_KEYWORDS) or "@" in line or line.lower().startswith("http"):
+            collecting = False
+            continue
+        m = FARM_LABEL_PATTERN.match(line)
+        if m:
+            label, value = m.group(1), m.group(2).strip()
+            if label in FARM_LABEL_TO_FIELD and value:
+                farm[FARM_LABEL_TO_FIELD[label]] = value
+            elif label == "精製方法" and value:
+                processing_raw = value
+            continue
+        if collecting:
+            flavor_lines.append(line)
+    flavor_notes = "".join(flavor_lines) or None
+    return flavor_notes, farm, processing_raw
 
 
 def fetch_page(url: str) -> BeautifulSoup:
@@ -124,9 +176,13 @@ def build_record(item: dict) -> dict | None:
         "origin_country": parsed["origin_country"],
         "origin_source": parsed["origin_source"],
         "designated_brand": parsed["designated_brand"],
-        "processing_method": parsed["processing_method"],
+        "processing_method": parsed["processing_method"] or normalize_processing_method(item.get("processing_method_raw")),
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "farm_name": item.get("farm", {}).get("farm_name"),
+        "region_detail": item.get("farm", {}).get("region_detail"),
+        "altitude_note": item.get("farm", {}).get("altitude_note"),
+        "flavor_notes": item.get("flavor_notes"),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": item["price"],
@@ -143,13 +199,22 @@ def scrape_all_products() -> tuple[list[dict], list[dict]]:
     all_items = []
     for product_url in product_urls:
         try:
-            fields = extract_og_fields(fetch_page(product_url))
+            soup = fetch_page(product_url)
+            fields = extract_og_fields(soup)
         except requests.RequestException as e:
             print(f"[warn] 詳細ページ取得失敗: {product_url} ({e})")
             continue
         if not fields:
             continue
-        all_items.append({"title": fields["title"], "price": fields["price"], "url": product_url})
+        flavor_notes, farm, processing_raw = parse_flavor_and_farm(soup)
+        all_items.append({
+            "title": fields["title"],
+            "price": fields["price"],
+            "url": product_url,
+            "flavor_notes": flavor_notes,
+            "farm": farm,
+            "processing_method_raw": processing_raw,
+        })
 
     canonical_items = pick_canonical_items(all_items)
 
