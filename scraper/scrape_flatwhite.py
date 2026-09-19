@@ -53,6 +53,13 @@ singleorigin/blendcoffeeの部分集合)。
 実データ確認済み: テイスティングコメントの自由文のみで、産地・農園等を構造化
 したラベル付き説明は無い。産地判定は商品名からのcoffee_parser.parse_product()
 のみに依る(商品名に国名・地域名が明記されているため十分機能する)。
+
+【flavor_notes(テイスティングノート)について(2026-09-20追記)】
+上記の通りbody_htmlにテイスティングコメントの自由文があると確認済みで
+あったにもかかわらず、実際にはflavor_notesフィールド自体を実装しておらず
+一切読んでいなかった。ドリップバッグ系商品では自由文の後に「●賞味期限は」
+という定型注記や無関係なブログバナー(dl.item-banner)が続くため、
+「●」で始まる段落より前の`<p>`要素を採用する。
 """
 
 import re
@@ -124,6 +131,22 @@ def pick_canonical_variant(variants: list[dict]) -> dict | None:
     return min(final_pool, key=weight_key)
 
 
+def parse_flavor_notes(body_html: str) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    if not body_html:
+        return None
+    soup = BeautifulSoup(body_html, "html.parser")
+    lines = []
+    for p in soup.find_all("p"):
+        text = p.get_text(separator="").strip()
+        if not text:
+            continue
+        if text.startswith("●"):
+            break
+        lines.append(text)
+    return "".join(lines) or None
+
+
 def build_record(product: dict) -> dict | None:
     raw_name = product["title"]
     if any(kw in raw_name for kw in NON_BEAN_KEYWORDS):
@@ -149,6 +172,7 @@ def build_record(product: dict) -> dict | None:
         "roast_level": parsed["roast_level"],
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
+        "flavor_notes": parse_flavor_notes(product.get("body_html")),
         "price": price,
         "weight_g": weight_g,
         "stock_status": stock_status,
