@@ -32,6 +32,18 @@ charset=EUC-JP)。他のカラーミー店舗と同じくresp.encodingを明示�
 sales_price_including_taxは最小重量バリアントの価格と一致するため、
 wadacoffee.pyと同じ方式(最小価格帯の中から最小重量のバリアントを採用)で
 重量を取得する。
+
+【flavor_notes(テイスティングノート)について(2026-09-20追記)】
+実データ確認済み(対象47商品): カラーミーショップのJS変数(var Colorme)には
+商品説明が含まれず、HTML側のdiv.product_description02にのみ店主の
+フリーテキストがある。以前はこの要素自体を一切読んでいなかった。
+構造は「roast：焙煎度」「酸味/コク/苦味　★の段階評価」に続けて店主による
+風味紹介文、その後に「マスターの《独断裏テイスティング》」(キャッチコピー・
+オススメのコーヒータイム・飲んでそうな有名人を選ぶ遊び企画)や「★いっぱい
+買ったらお得！」(数量割引の案内)が続く場合がある。roast/評価行は除外し、
+「●」または「★」で始まる行(遊び企画・割引案内の開始)以降は採用しない。
+産地・品種等はラベル形式ではなく地の文への言及のみのため、farm_noteの
+構造的抽出は行わない。
 """
 
 import json
@@ -119,7 +131,27 @@ def pick_min_price_weight(product: dict, price: int | None) -> int | None:
     return _weight_from_title(variant.get("title") or "")
 
 
-def build_record(product_url: str, product: dict) -> dict | None:
+DESC_SKIP_PATTERN = re.compile(r"^(roast[：:]|酸味|コク|苦味)")
+DESC_STOP_PATTERN = re.compile(r"^(●|★|マスターの)")
+
+
+def parse_flavor_notes(soup: BeautifulSoup) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    el = soup.select_one("div.product_description02")
+    if not el:
+        return None
+    lines = []
+    for raw_line in el.get_text(separator="\n").split("\n"):
+        line = raw_line.strip()
+        if not line or DESC_SKIP_PATTERN.match(line):
+            continue
+        if DESC_STOP_PATTERN.match(line):
+            break
+        lines.append(line)
+    return "".join(lines) or None
+
+
+def build_record(product_url: str, product: dict, flavor_notes: str | None = None) -> dict | None:
     title = (product.get("name") or "").strip()
     if not title or any(kw in title for kw in NON_BEAN_KEYWORDS):
         return None
@@ -154,6 +186,7 @@ def build_record(product_url: str, product: dict) -> dict | None:
         "roast_level": parsed["roast_level"],
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
+        "flavor_notes": flavor_notes,
         "price": price,
         "weight_g": weight_g,
         "stock_status": stock_status,
@@ -167,7 +200,7 @@ def parse_product_detail(url: str) -> dict | None:
     colorme_product = extract_colorme_product(soup)
     if not colorme_product:
         return None
-    return build_record(url, colorme_product)
+    return build_record(url, colorme_product, parse_flavor_notes(soup))
 
 
 def scrape_all_products() -> tuple[list[dict], list[dict]]:
