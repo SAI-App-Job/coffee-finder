@@ -27,6 +27,17 @@ robots.txt確認済み(2026-09時点): taiyocoffee.base.shopは他のBASE系店�
 注文枠のため識別不能)・500g10個お徳用(業務用一括まとめ買い、通常の
 100g/200g/500gラインナップと別枠の卸売的商品)が非対象。
 NON_BEAN_KEYWORDSで除外する。
+
+【flavor_notes(テイスティングノート)について(2026-09-20追記)】
+実データ確認済み: og:descriptionには「原産国：.../焙煎度：.../特徴：...」
+のようなラベル形式の説明が入っており、「特徴：」ラベルの値に風味を
+説明する自由記述文が書かれ、末尾に「香り◎　コク〇　苦味◎　酸味－」の
+ような記号評価(◎/〇/△/－)が付くパターンが大半(実データ確認済み)。
+以前はog:descriptionを一切読んでいなかった。「特徴：」ラベル以降を
+取り出し、「香り」の直後に評価記号が続く位置(=末尾の記号評価ブロック)
+で打ち切ることでflavor_notesを取得する。記号評価ブロックが無い商品は
+そのまま末尾まで採用する。「特徴：」ラベル自体が無い商品(モカクイーン
+等一部)は安全に切り出す基準が無いため見送り。
 """
 
 import re
@@ -58,6 +69,22 @@ NON_BEAN_KEYWORDS = [
     "ドリップパック", "オーダー焙煎", "お徳用",
 ]
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
+FEATURE_LABEL_PATTERN = re.compile(r"特徴[：:]\s*(.*)", re.DOTALL)
+RATING_STOP_PATTERN = re.compile(r"香り[◎〇△－\-]")
+
+
+def extract_flavor_notes(description: str | None) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    if not description:
+        return None
+    m = FEATURE_LABEL_PATTERN.search(description)
+    if not m:
+        return None
+    value = m.group(1)
+    stop_m = RATING_STOP_PATTERN.search(value)
+    if stop_m:
+        value = value[:stop_m.start()]
+    return value.strip() or None
 
 
 def fetch_page(url: str) -> BeautifulSoup:
@@ -75,7 +102,9 @@ def extract_og_fields(soup: BeautifulSoup) -> dict | None:
         return None
     price_el = soup.select_one('meta[property="product:price:amount"]')
     price = int(float(price_el["content"])) if price_el and price_el.get("content") else None
-    return {"title": title, "price": price}
+    desc_el = soup.select_one('meta[property="og:description"]')
+    flavor_notes = extract_flavor_notes(desc_el["content"] if desc_el else None)
+    return {"title": title, "price": price, "flavor_notes": flavor_notes}
 
 
 def fetch_sitemap_urls() -> list[str]:
@@ -126,6 +155,7 @@ def build_record(item: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": item.get("flavor_notes"),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": item["price"],
@@ -149,7 +179,12 @@ def scrape_all_products() -> tuple[list[dict], list[dict]]:
             continue
         if not fields:
             continue
-        all_items.append({"title": fields["title"], "price": fields["price"], "url": product_url})
+        all_items.append({
+            "title": fields["title"],
+            "price": fields["price"],
+            "url": product_url,
+            "flavor_notes": fields["flavor_notes"],
+        })
 
     canonical_items = pick_canonical_items(all_items)
 
