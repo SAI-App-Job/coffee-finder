@@ -63,6 +63,16 @@ inputのvalue属性を採用する。
 titleタグに全角ラテン文字"ｙ"を含む誤記"レブドｙ"があり、250g版の正しい
 "レブドウ"と一致しない)の2銘柄は、店側の入力ゆれにより基準名が完全一致
 せず、150g/250gの両方が別商品として出力される(軽微な既知の残存重複)。
+
+【flavor_notes・farm_note構成要素について(2026-09-19追記)】
+実データ確認済み(2商品): 単一農園商品はdiv.detailTxt要素に「品種・
+イエメニア」(この1ラベルのみ「・」区切り、他は「：」区切り)「生産者：/
+所在：/標高：/精製：」というラベル：値の行に続けて、品種の由来解説等の
+長い自由記述があり、末尾(空行区切りの最後の段落)に「シナモンを思わせる
+香り、フルーティな味が特徴」という具体的な風味描写がある。一方ブレンド
+商品はラベルが無く、「まろやかなコクと甘味があります。」のような単一
+段落の風味描写のみ(空行区切りの最後の段落もこれと同じ)。このため
+「空行区切りの最後の段落」を採用することで両パターンに対応できる。
 """
 
 import re
@@ -71,7 +81,7 @@ import unicodedata
 import requests
 from bs4 import BeautifulSoup
 
-from coffee_parser import parse_product, detect_stock_status
+from coffee_parser import parse_product, detect_stock_status, normalize_processing_method
 
 SHOP_INFO = {
     "name": "1518珈琲",
@@ -142,6 +152,57 @@ def extract_fields(soup: BeautifulSoup) -> dict | None:
     return {"title": title, "price": price}
 
 
+DESC_LABEL_PATTERN = re.compile(r"^([^:：・\n]{1,6})[：:・]\s*(.+)$")
+DESC_LABEL_TO_FIELD = {
+    "品種": "variety_note",
+    "生産者": "producer_name",
+    "所在": "region_detail",
+    "標高": "altitude_note",
+    "精製": "processing_method",
+}
+
+
+def parse_description_details(product_url: str) -> tuple[dict, str | None]:
+    """理由はモジュールdocstring参照(div.detailTxt。ラベル行は位置を問わず
+    抽出し、flavor_notesは空行区切りの最後の段落を採用する。単一農園商品は
+    ラベル→品種の歴史解説→末尾の風味描写という構成、ブレンド商品は単一の
+    風味描写段落のみという構成で、いずれも最後の段落を取ることで対応
+    できる)。"""
+    soup = fetch_page(product_url)
+    el = soup.select_one("div.detailTxt")
+    if not el:
+        return {}, None
+    text = el.get_text(separator="\n")
+
+    fields: dict[str, str] = {}
+    for raw_line in text.split("\n"):
+        line = raw_line.strip()
+        if not line:
+            continue
+        m = DESC_LABEL_PATTERN.match(line)
+        if not m:
+            continue
+        label = "".join(m.group(1).split())
+        field = DESC_LABEL_TO_FIELD.get(label)
+        if field:
+            fields.setdefault(field, m.group(2).strip())
+
+    paragraphs: list[list[str]] = []
+    current: list[str] = []
+    for raw_line in text.split("\n"):
+        line = raw_line.strip()
+        if not line:
+            if current:
+                paragraphs.append(current)
+                current = []
+            continue
+        current.append(line)
+    if current:
+        paragraphs.append(current)
+    flavor_notes = "".join(paragraphs[-1]) if paragraphs else None
+    return fields, flavor_notes
+
+
 def pick_canonical_items(items: list[dict]) -> list[dict]:
     by_base_name: dict[str, dict] = {}
     for item in items:
@@ -175,6 +236,9 @@ def build_record(item: dict) -> dict | None:
         }
 
     stock_status = detect_stock_status(title)
+    desc_fields, flavor_notes = parse_description_details(item["url"])
+    processing_method = desc_fields.get("processing_method")
+    processing_method = normalize_processing_method(processing_method) if processing_method else parsed["processing_method"]
 
     return {
         "shop_name": SHOP_INFO["name"],
@@ -183,11 +247,16 @@ def build_record(item: dict) -> dict | None:
         "origin_country": parsed["origin_country"],
         "origin_source": parsed["origin_source"],
         "designated_brand": parsed["designated_brand"],
-        "processing_method": parsed["processing_method"],
+        "processing_method": processing_method,
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
         "post_processing_tags": parsed["post_processing_tags"],
+        "producer_name": desc_fields.get("producer_name"),
+        "region_detail": desc_fields.get("region_detail"),
+        "altitude_note": desc_fields.get("altitude_note"),
+        "variety_note": desc_fields.get("variety_note"),
         "blend_components": [],
+        "flavor_notes": flavor_notes,
         "price": item["price"],
         "weight_g": item["weight_g"],
         "stock_status": stock_status,
