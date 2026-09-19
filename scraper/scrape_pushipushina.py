@@ -24,6 +24,14 @@ GRP")。curl/python-requests等は個別にDisallow: /指定があるが、User-
 
 【重量表記について】
 実データ確認済み: 銘柄ごとに単一重量のみの登録(重量違いの重複は無し)。
+
+【flavor_notes(テイスティングノート)について(2026-09-19追記)】
+実データ確認済み(2商品): p[class*="item-detail_description"]
+(GONZO CAFE&BEANS等と同じBASE共通テーマ)に「軽やかで豊かな酸味が特徴的な
+モカの中でも、ベリーやプルーンのような濃厚な味わいを感じるグジ産の
+モカです。」のような具体的な風味描写がある。末尾に「※」で始まる商品仕様
+の注記(パッケージ形態等)が付くことがあるため、その手前までを採用する。
+以前はog:title/価格のみ取得し、この要素自体を一切読んでいなかった。
 """
 
 import re
@@ -79,6 +87,26 @@ def fetch_sitemap_urls() -> list[str]:
     return [loc.get_text(strip=True) for loc in soup.find_all("loc") if "/items/" in loc.get_text()]
 
 
+FLAVOR_STOP_PATTERN = re.compile(r"^※")
+
+
+def parse_flavor_notes(product_url: str) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    soup = fetch_page(product_url)
+    el = soup.select_one('p[class*="item-detail_description"]')
+    if not el:
+        return None
+    lines = []
+    for raw_line in el.get_text(separator="\n").split("\n"):
+        line = raw_line.strip()
+        if not line:
+            continue
+        if FLAVOR_STOP_PATTERN.match(line):
+            break
+        lines.append(line)
+    return "".join(lines) or None
+
+
 def build_record(item: dict) -> dict | None:
     title = item["title"].strip()
     parsed = parse_product(title)
@@ -110,6 +138,7 @@ def build_record(item: dict) -> dict | None:
         "roast_level": parsed["roast_level"],
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
+        "flavor_notes": parse_flavor_notes(item["url"]),
         "price": item["price"],
         "weight_g": weight_g,
         "stock_status": stock_status,
