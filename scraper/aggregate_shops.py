@@ -76,6 +76,7 @@ shops.json/products.jsonのレコードをそのまま変更せず残す(load_so
 """
 
 import json
+import re
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -681,6 +682,46 @@ def compose_farm_note(record: dict) -> str | None:
     return "、".join(parts) if parts else None
 
 
+# 【デカフェのカフェイン除去方法の一括推定について(2026-09-19追記)】
+# 個別スクレイパー(scrape_anokoro.py・scrape_atsugicoffee.py・
+# scrape_cafeclaudia.py・scrape_itukacoffee.py・scrape_leafletter.py・
+# scrape_mameya.py・scrape_meguro.py・scrape_mui.py・scrape_philocoffea.py・
+# scrape_roundcoffee.py・scrape_shibacoffee.py・scrape_tera.py・
+# scrape_terminal.py・scrape_tsukikoya.py・scrape_woodberry.py等)が、
+# 「商品名に既知の除去方法名があればそれを、無ければ『デカフェ(除去方法の
+# 詳細記載なし)』を設定する」というほぼ同一のロジックをそれぞれ重複実装
+# している。この集約層に一本化することで、個別対応が無い店舗にも同じ基準を
+# 機械的に適用できる(実データ確認済み: 226店舗・386商品がデカフェ/
+# カフェインレスを商品名に含むにもかかわらずdecaf_process未設定だった。
+# うち商品名に除去方法名の言及があったのは36商品のみで、大半はマウンテン
+# ウォーター系)。商品名に無い情報を推測しない方針は個別実装と同じ――
+# 判明した場合のみ具体名、それ以外は「詳細記載なし」という正直な既知の
+# 不明値にする。個別スクレイパーが既にdecaf_processを設定している場合は
+# その値を優先し、上書きしない。
+DECAF_KEYWORDS = ("デカフェ", "カフェインレス", "decaf")
+DECAF_PROCESS_NAME_PATTERNS = [
+    (re.compile(r"マウンテンウォーター|mountain\s*water", re.IGNORECASE), "マウンテンウォータープロセス"),
+    (re.compile(r"スイスウォーター|swiss\s*water", re.IGNORECASE), "スイスウォータープロセス"),
+    (re.compile(r"液体(?:CO2|二酸化炭素)|CO2\s*処理", re.IGNORECASE), "液体CO2抽出"),
+    (re.compile(r"エチルアセテート|ethyl\s*acetate|\bEA\s*製法", re.IGNORECASE), "エチルアセテート製法"),
+    (re.compile(r"ウォータープロセス|水プロセス", re.IGNORECASE), "ウォータープロセス"),
+]
+
+
+def infer_decaf_process(record: dict) -> str | None:
+    """理由は上記コメント参照。"""
+    if record.get("decaf_process"):
+        return record["decaf_process"]
+    raw_name = record.get("raw_name") or ""
+    lowered = raw_name.lower()
+    if not any(kw.lower() in lowered for kw in DECAF_KEYWORDS):
+        return None
+    for pattern, canonical in DECAF_PROCESS_NAME_PATTERNS:
+        if pattern.search(raw_name):
+            return f"{canonical}によりカフェインを除去"
+    return "デカフェ(除去方法の詳細記載なし)"
+
+
 def infer_roast_selectable(record: dict) -> bool:
     if "roast_selectable" in record:
         return bool(record["roast_selectable"])
@@ -762,7 +803,7 @@ def build_product(record: dict, shop_map_query: str, now_iso: str) -> dict:
         "unit_note": record.get("unit_note"),
         "stock_status": stock_status,
         "out_of_stock": stock_status != "販売中",
-        "decaf_process": record.get("decaf_process"),
+        "decaf_process": infer_decaf_process(record),
         "product_url": record.get("product_url"),
         "map_query": shop_map_query,
         "scraped_at": now_iso,
