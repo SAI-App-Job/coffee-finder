@@ -15,12 +15,25 @@ robots.txt確認済み(2026-09時点): Shopify標準のrobots.txtでAllow: /
 【product_typeによるフィルタについて】
 実データ確認済み: 全60商品中、product_type="コーヒー豆"の44件が対象。
 「ギフトセット」(7件)・「ドリップバッグ」(8件)・空文字列(1件)は対象外。
+
+【flavor_notes(テイスティングノート)について(2026-09-20追記)】
+実データ確認済み(44商品サンプル調査): body_html(商品説明)を一切読んで
+いなかった。構造は「酸味/苦味/コク/風味の★段階評価」「おすすめロースト」
+に続けて店主による風味紹介文、その後に産地情報のラベル行(「生産地：」等、
+店舗によって「農 園 名 ：」のように1文字ごとに全角スペースを挿入する
+表記ゆれもある)、さらに送料等の定型注記が続く。商品ごとにラベルの種類・
+書式が大きく異なりfarm_note用に構造化するのは非現実的なため見送り、
+flavor_notesのみ対応する。★評価行は風味紹介文の前では読み飛ばし、風味
+紹介文の後に再度「★」で始まる見出し(例:「★東ティモールコーヒーの歴史と
+品種」)が現れた場合はそこで採用を打ち切る。ラベル行(1〜8文字の語+空白*+
+「：」)や「▮」「■」「※」「・送料について」で始まる行より前を採用する。
 """
 
 import re
 import time
 
 import requests
+from bs4 import BeautifulSoup
 
 from coffee_parser import parse_product, detect_stock_status
 from previous_data import load_previous_products, is_unchanged
@@ -42,6 +55,34 @@ REQUEST_HEADERS = {
 
 TARGET_PRODUCT_TYPE = "コーヒー豆"
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
+FARM_LABEL_LINE_PATTERN = re.compile(r"^([^\s：:]\s*){1,8}[：:]")
+FLAVOR_NOTICE_STOP_PATTERN = re.compile(r"^(▮|■|※|・)")
+
+
+def parse_flavor_notes(body_html: str) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    if not body_html:
+        return None
+    soup = BeautifulSoup(body_html, "html.parser")
+    all_lines = []
+    for el in soup.find_all(["p", "li"]):
+        all_lines.extend(el.get_text(separator="\n").split("\n"))
+
+    lines = []
+    for raw_line in all_lines:
+        line = raw_line.strip()
+        if not line:
+            continue
+        if "おすすめロースト" in line:
+            continue
+        if "★" in line:
+            if not lines:
+                continue
+            break
+        if FLAVOR_NOTICE_STOP_PATTERN.match(line) or FARM_LABEL_LINE_PATTERN.match(line):
+            break
+        lines.append(line)
+    return "".join(lines) or None
 
 
 def fetch_products() -> list[dict]:
@@ -111,6 +152,7 @@ def build_record(product: dict) -> dict | None:
         "roast_level": parsed["roast_level"],
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
+        "flavor_notes": parse_flavor_notes(product.get("body_html")),
         "price": price,
         "weight_g": weight_g,
         "stock_status": stock_status,
