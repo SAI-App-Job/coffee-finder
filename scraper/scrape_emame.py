@@ -24,6 +24,14 @@ GRP")。curl/python-requests等は個別にDisallow: /指定があるが、User-
 実データ確認済み(サンプル調査): 器具(紙フィルターを使わないコーヒーポット
 等)・ドリップバッグ・ギフトセットが非対象と想定されるため
 NON_BEAN_KEYWORDSで除外する。
+
+【flavor_notes(テイスティングノート)について(2026-09-20追記)】
+実データ確認済み(サンプル調査): 他のBASE系店舗と同じ共通テーマの
+p[class*="item-detail_description"]要素に、簡潔で具体的な風味描写がある
+(例:「ビター、ココアの風味があります。スムーズで厚みのある味わいです。」)。
+以前はog:title/価格のみ取得し、この要素自体を一切読んでいなかった。
+GONZO CAFE&BEANS等と同様、末尾に「※」で始まる注記が付く可能性がある
+ためその手前までを採用する。
 """
 
 import re
@@ -54,6 +62,7 @@ NON_BEAN_KEYWORDS = [
 ]
 NUMBER_PREFIX_PATTERN = re.compile(r"^\[\d+\]\s*")
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
+FLAVOR_STOP_PATTERN = re.compile(r"^※")
 
 
 def fetch_page(url: str) -> BeautifulSoup:
@@ -77,6 +86,22 @@ def extract_og_fields(soup: BeautifulSoup) -> dict | None:
 def fetch_sitemap_urls() -> list[str]:
     soup = fetch_page(f"{BASE_URL}/sitemap.xml")
     return [loc.get_text(strip=True) for loc in soup.find_all("loc") if "/items/" in loc.get_text()]
+
+
+def parse_flavor_notes(soup: BeautifulSoup) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    el = soup.select_one('p[class*="item-detail_description"]')
+    if not el:
+        return None
+    lines = []
+    for raw_line in el.get_text(separator="\n").split("\n"):
+        line = raw_line.strip()
+        if not line:
+            continue
+        if FLAVOR_STOP_PATTERN.match(line):
+            break
+        lines.append(line)
+    return "".join(lines) or None
 
 
 def base_name_key(title: str) -> str:
@@ -130,6 +155,7 @@ def build_record(item: dict) -> dict | None:
         "roast_level": parsed["roast_level"],
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
+        "flavor_notes": item.get("flavor_notes"),
         "price": item["price"],
         "weight_g": weight_g,
         "stock_status": stock_status,
@@ -144,13 +170,19 @@ def scrape_all_products() -> tuple[list[dict], list[dict]]:
     all_items = []
     for product_url in product_urls:
         try:
-            fields = extract_og_fields(fetch_page(product_url))
+            soup = fetch_page(product_url)
+            fields = extract_og_fields(soup)
         except requests.RequestException as e:
             print(f"[warn] 詳細ページ取得失敗: {product_url} ({e})")
             continue
         if not fields:
             continue
-        all_items.append({"title": fields["title"], "price": fields["price"], "url": product_url})
+        all_items.append({
+            "title": fields["title"],
+            "price": fields["price"],
+            "url": product_url,
+            "flavor_notes": parse_flavor_notes(soup),
+        })
 
     canonical_items = pick_canonical_items(all_items)
 
