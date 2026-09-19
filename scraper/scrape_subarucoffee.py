@@ -44,6 +44,13 @@ ProductGroupのhasVariantに「100gパック」「200gパック」の2バリア�
 実データ確認済み: 「レギュラーコーヒー <銘柄>」はProductGroupの
 hasVariantに「100gパック」「200gパック」の2バリアントを持つ。最小重量
 (100g)を代表として採用する。
+
+【flavor_notes(テイスティングノート)について(2026-09-20追記)】
+実データ確認済み(33商品サンプル調査): JSON-LDのProductGroupに
+"description"フィールドとして店主による風味紹介文がそのまま含まれて
+おり、HTML解析なしで取得できる。以前はprice/在庫状況のみ取得し、この
+フィールド自体を一切読んでいなかった。サンプル全件で定型注記等の混入は
+無く、そのまま採用してよい。
 """
 
 import json
@@ -112,7 +119,7 @@ def pick_canonical_variant(variants: list[dict]) -> dict | None:
     return sorted(variants, key=weight_key)[0]
 
 
-def build_record(base_title: str, variant: dict, product_url: str) -> dict | None:
+def build_record(base_title: str, variant: dict, product_url: str, flavor_notes: str | None = None) -> dict | None:
     parsed = parse_product(base_title)
     offer = variant.get("offers") or {}
     price = offer.get("price")
@@ -147,6 +154,7 @@ def build_record(base_title: str, variant: dict, product_url: str) -> dict | Non
         "roast_level": parsed["roast_level"],
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
+        "flavor_notes": flavor_notes,
         "price": price,
         "weight_g": weight_g,
         "stock_status": stock_status,
@@ -181,7 +189,7 @@ def scrape_all_products() -> tuple[list[dict], list[dict]]:
         if variant is None:
             continue
 
-        detail = build_record(base_title, variant, url)
+        detail = build_record(base_title, variant, url, (data.get("description") or "").strip() or None)
         if detail is None:
             continue
         if detail.get("is_flavored"):
