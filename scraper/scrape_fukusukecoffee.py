@@ -62,6 +62,16 @@ structural_out_of_stockとしてdetect_stock_status()に渡す。
 extract_min_option_weight_g()がNoneを返す。在庫あり全商品(コーヒー豆
 カテゴリ全体)の最小重量が例外なく150gだったため、品切れでNoneになった
 場合はSOLD_OUT_FALLBACK_WEIGHT_G(150)にフォールバックする。
+
+【flavor_notes(テイスティングノート)について(2026-09-20追記)】
+実データ確認済み(48商品サンプル調査): div.description-textに店主による
+長文のブログ記事調の商品説明があるが、構成(見出し・段落数)が商品ごとに
+大きく異なり構造化抽出が難しい。一方、meta name="description"タグには
+その長文から要約された簡潔な風味紹介文(1〜3文)が入っており、商品ごとの
+表記ゆれが無く安定して取得できる。以前はこのメタタグ自体を一切読んで
+いなかった。og:descriptionと同一内容のため、meta name="description"を
+単一の情報源として採用する。2商品はこのメタタグ自体が空でNoneのまま
+となる。
 """
 
 import re
@@ -137,6 +147,15 @@ def extract_roast_hint(title: str) -> str | None:
     return None
 
 
+def extract_flavor_notes(soup: BeautifulSoup) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    meta = soup.select_one('meta[name="description"]')
+    if not meta:
+        return None
+    content = (meta.get("content") or "").strip()
+    return content or None
+
+
 def build_record(item_id: str, html: str) -> dict | None:
     soup = BeautifulSoup(html, "html.parser")
     name_el = soup.select_one("h2.product-name")
@@ -180,6 +199,7 @@ def build_record(item_id: str, html: str) -> dict | None:
         "grade": parsed["grade"],
         "roast_level": None,  # 理由はモジュールdocstring参照(粗い焙煎度表記のためroast_hintに保持)
         "roast_hint": extract_roast_hint(name),
+        "flavor_notes": extract_flavor_notes(soup),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": price,
