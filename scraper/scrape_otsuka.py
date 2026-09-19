@@ -48,6 +48,27 @@ robots.txt確認済み(2026-09時点): /robots.txtへのアクセスがトップ
 状況)。価格は`b.raku-item-vari-price-num`(常にデフォルト選択に対応する
 1つのみが静的HTMLに含まれる、他の挽き方/重量の価格はJS/Ajaxでの
 再計算のため取得できない)。
+
+【flavor_notes・farm_note構成要素について(2026-09-19追記)】
+実データ確認済み: div.item-detail-txt1.wysiwyg-data要素に「特徴：
+ブルーベリー、モルト、イチゴジャム」のように「特徴」ラベルがそのまま
+テイスティングノートとして使え、続けて「焙煎度合：/生豆原産国：/
+生産地域：/標高：/品種：/精製方法：」というラベル：値の行が並ぶ(全角
+コロンの前後に全角スペースが入る)。その後の「酸味：★★☆☆☆」等の星評価は
+対象としない。以前はvariationセレクタから重量・価格のみ取得し、この
+要素自体を一切読んでいなかった。
+
+実データ再確認の結果(pid=1251649): 「特徴：」「焙煎度合：」「生産地域：」
+「品種：」の4ラベルは、ラベル行自体には値が無く(末尾が全角スペースのみ)、
+値は次の行に分かれて出現する(HTML側のbrタグの入り方が不揃いなため)一方、
+「生豆原産国：」「標高：」「精製方法：」は同じ行に値が続く。両方の
+パターンに対応するため、ラベル行に値が無い場合は次の非空行を値として
+採用する処理を追加した。
+
+さらに、「特徴：」ラベル自体が存在しない商品(ブルーマウンテン等の高級
+銘柄で確認済み)もあり、その場合はラベル行が始まる前の冒頭自由記述
+(「ブルーマウンテンは他に類を見ないほど調和が取れ、芳醇なコクと甘い
+香りを醸し出す...」)をflavor_notesの代替として採用する。
 """
 
 import re
@@ -56,7 +77,7 @@ import unicodedata
 import requests
 from bs4 import BeautifulSoup
 
-from coffee_parser import parse_product, detect_stock_status
+from coffee_parser import parse_product, detect_stock_status, normalize_processing_method
 from previous_data import load_previous_products, is_unchanged
 
 SHOP_INFO = {
@@ -149,6 +170,59 @@ def selected_variation_text(soup: BeautifulSoup) -> str:
     return ""
 
 
+# 理由はモジュールdocstring参照(値がラベルと同じ行に無い場合があるため、
+# 値部分は0文字も許容し、次の非空行を値として採用するフォールバックを行う)
+DESC_LABEL_PATTERN = re.compile(r"^([^:：\n]{1,6})[：:]\s*(.*)$")
+DESC_LABEL_TO_FIELD = {
+    "特徴": "flavor_notes",
+    "生産地域": "region_detail",
+    "標高": "altitude_note",
+    "品種": "variety_note",
+    "精製方法": "processing_method",
+}
+
+
+def parse_description_details(soup: BeautifulSoup) -> dict:
+    """理由はモジュールdocstring参照。"""
+    el = soup.select_one("div.item-detail-txt1.wysiwyg-data")
+    if not el:
+        return {}
+    lines = [line.strip() for line in el.get_text(separator="\n").split("\n")]
+    fields: dict[str, str] = {}
+    intro_lines: list[str] = []
+    seen_label = False
+    i = 0
+    n = len(lines)
+    while i < n:
+        line = lines[i]
+        if not line:
+            i += 1
+            continue
+        m = DESC_LABEL_PATTERN.match(line)
+        if not m:
+            if not seen_label:
+                intro_lines.append(line)
+            i += 1
+            continue
+        seen_label = True
+        label = "".join(m.group(1).split())
+        value = m.group(2).strip()
+        if not value:
+            j = i + 1
+            while j < n and not lines[j]:
+                j += 1
+            if j < n and not DESC_LABEL_PATTERN.match(lines[j]):
+                value = lines[j]
+                i = j
+        field = DESC_LABEL_TO_FIELD.get(label)
+        if field and value:
+            fields.setdefault(field, value)
+        i += 1
+    if not fields.get("flavor_notes") and intro_lines:
+        fields["flavor_notes"] = "".join(intro_lines)
+    return fields
+
+
 def build_record(url: str, soup: BeautifulSoup, raw_title: str) -> dict:
     title = normalize(raw_title)
     parsed = parse_product(title)
@@ -166,6 +240,9 @@ def build_record(url: str, soup: BeautifulSoup, raw_title: str) -> dict:
         }
 
     stock_status = detect_stock_status(title)
+    desc_fields = parse_description_details(soup)
+    processing_method = desc_fields.get("processing_method")
+    processing_method = normalize_processing_method(processing_method) if processing_method else parsed["processing_method"]
 
     return {
         "shop_name": SHOP_INFO["name"],
@@ -174,11 +251,15 @@ def build_record(url: str, soup: BeautifulSoup, raw_title: str) -> dict:
         "origin_country": parsed["origin_country"],
         "origin_source": parsed["origin_source"],
         "designated_brand": parsed["designated_brand"],
-        "processing_method": parsed["processing_method"],
+        "processing_method": processing_method,
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
         "post_processing_tags": parsed["post_processing_tags"],
+        "region_detail": desc_fields.get("region_detail"),
+        "altitude_note": desc_fields.get("altitude_note"),
+        "variety_note": desc_fields.get("variety_note"),
         "blend_components": [],
+        "flavor_notes": desc_fields.get("flavor_notes"),
         "price": price,
         "weight_g": weight_g,
         "stock_status": stock_status,

@@ -28,6 +28,15 @@ MakeShopのシステム404ページへリダイレクト)、実質制限なし�
 どの商品も先頭(プレースホルダー除く)が常に200gであることを実データで
 複数商品確認済みのため、表示されているデフォルト価格を200gの価格として
 扱う。
+
+【flavor_notes(テイスティングノート)について(2026-09-19追記)】
+実データ確認済み(2商品): p.item-description要素の冒頭に「◆」始まりの
+箇条書き(例:「◆独特の風味が強く、マンデリンの味わいを堪能するならこの
+一品です。」)、またはブレンド商品では「《商品内容》」見出しに続く自由
+記述で具体的な風味描写があり、その後「【生産地】/【主な生産地】/
+【味覚チャート】/【焙煎度】/【粉の粒度について】」という全銘柄共通の
+「【】」見出しセクションが続く。最初の「【」見出し行の手前までを
+flavor_notesとして採用する(「◆」の記号は除去)。
 """
 
 import re
@@ -76,7 +85,28 @@ def parse_weight_from_select(soup: BeautifulSoup) -> int | None:
     return None
 
 
-def build_record(product_url: str, title: str, price: int | None, weight_g: int | None) -> dict | None:
+HEADING_PATTERN = re.compile(r"^【.+】$")
+BULLET_PREFIX_PATTERN = re.compile(r"^◆\s*")
+
+
+def parse_flavor_notes(soup: BeautifulSoup) -> str | None:
+    """理由はモジュールdocstring参照(「【」見出し行の手前までを採用)。"""
+    el = soup.select_one("p.item-description")
+    if not el:
+        return None
+    lines = []
+    for raw_line in el.get_text(separator="\n").split("\n"):
+        line = raw_line.strip()
+        if not line:
+            continue
+        if HEADING_PATTERN.match(line):
+            break
+        lines.append(BULLET_PREFIX_PATTERN.sub("", line))
+    return "".join(lines) or None
+
+
+def build_record(product_url: str, title: str, price: int | None, weight_g: int | None,
+                  flavor_notes: str | None = None) -> dict | None:
     if any(kw in title for kw in NON_BEAN_KEYWORDS):
         return None
 
@@ -107,6 +137,7 @@ def build_record(product_url: str, title: str, price: int | None, weight_g: int 
         "roast_level": parsed["roast_level"],
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
+        "flavor_notes": flavor_notes,
         "price": price,
         "weight_g": weight_g,
         "stock_status": stock_status,
@@ -128,8 +159,9 @@ def parse_product_detail(url: str, fallback_title: str = "") -> dict | None:
             price = int(m.group().replace(",", ""))
 
     weight_g = parse_weight_from_select(soup)
+    flavor_notes = parse_flavor_notes(soup)
 
-    return build_record(url, title, price, weight_g)
+    return build_record(url, title, price, weight_g, flavor_notes)
 
 
 def scrape_category_list(url: str) -> list[dict]:
