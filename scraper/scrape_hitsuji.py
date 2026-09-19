@@ -37,14 +37,27 @@ robots.txt確認済み(2026-09時点): User-agent: *に対し/wp-admin/等の管
 マイスターセレクト20g×12種」(試飲用アソート)、「個人決済用」(店頭
 決済用の非公開個別請求)がコーヒー豆単品ではないためNON_BEAN_KEYWORDS
 で除外する。
+
+【flavor_notes/farm_note(テイスティングノート・農園情報)について
+(2026-09-20追記)】
+実データ確認済み(35商品サンプル調査): short_descriptionの先頭に店主に
+よる風味紹介文があり、続けて「【原産国】」「【産地】」「【農園】」
+「【精製法】」「【製法】」「【品種】」「【標高】」「【焙煎度】」
+「【内容量】」ラベルの構造化情報が続く一貫した構造だったが、焙煎度/
+内容量の抽出以外はこのフィールドを読んでいなかった。ラベル(「【...】」
+形式)が最初に現れる行より前の`<p>`要素を採用し、「産地」「農園」
+「精製法」「製法」「品種」「標高」ラベルはfarm_note用フィールドに反映
+する(「原産国」「生産国」はtitleから既に取得済みのため専用フィールド
+には格納しない)。
 """
 
 import json
 import re
 
 import requests
+from bs4 import BeautifulSoup
 
-from coffee_parser import parse_product, detect_stock_status
+from coffee_parser import parse_product, detect_stock_status, normalize_processing_method
 
 SHOP_INFO = {
     "name": "ひつじ珈琲",
@@ -78,6 +91,49 @@ WEIGHT_PATTERN = re.compile(r"内容量[】\]]\s*(\d+)\s*[gｇ㌘]|(\d+)\s*[kK�
 ROAST_LINE_PATTERN = re.compile(r"焙煎度[^（(]*[（(]([^）)]+)[）)]")
 HTML_TAG_PATTERN = re.compile(r"<[^>]+>")
 HTML_LINE_BREAK_PATTERN = re.compile(r"<br\s*/?>", re.IGNORECASE)
+BRACKET_LABEL_PATTERN = re.compile(r"^【([^】]+)】\s*(.*)$")
+FARM_LABEL_TO_FIELD = {
+    "産地": "region_detail",
+    "農園": "farm_name",
+    "農園名": "farm_name",
+    "品種": "variety_note",
+    "標高": "altitude_note",
+}
+
+
+def parse_flavor_and_farm(short_description_html: str) -> tuple[str | None, dict, str | None]:
+    """理由はモジュールdocstring参照。flavor_notes・farm情報・精製方法(生値)を返す。"""
+    if not short_description_html:
+        return None, {}, None
+    soup = BeautifulSoup(short_description_html, "html.parser")
+    flavor_lines = []
+    farm: dict = {}
+    processing_raw = None
+    collecting_flavor = True
+    for p in soup.find_all("p"):
+        for raw_line in p.get_text(separator="\n").split("\n"):
+            line = raw_line.strip()
+            if not line:
+                continue
+            m = BRACKET_LABEL_PATTERN.match(line)
+            if m:
+                label = "".join(m.group(1).split())
+                value = m.group(2).strip()
+                if label == "コーヒーマイスターの評価":
+                    # 理由はモジュールdocstring参照: ラベルブロックの後に本文の
+                    # 風味紹介文が続くパターンがあるため、収集を再開する
+                    collecting_flavor = True
+                    continue
+                collecting_flavor = False
+                if label in FARM_LABEL_TO_FIELD and value:
+                    farm[FARM_LABEL_TO_FIELD[label]] = value
+                elif label in ("精製法", "製法") and value:
+                    processing_raw = value
+                continue
+            if collecting_flavor:
+                flavor_lines.append(line)
+    flavor_notes = "".join(flavor_lines) or None
+    return flavor_notes, farm, processing_raw
 
 
 def strip_html(text: str) -> str:
@@ -138,6 +194,7 @@ def build_record(product: dict) -> dict | None:
     structural_out_of_stock = not product.get("is_in_stock", True)
     stock_status = detect_stock_status(raw_name, structural_out_of_stock)
     weight_g = parse_weight_g(name, description)
+    flavor_notes, farm, processing_raw = parse_flavor_and_farm(raw_description_html)
 
     return {
         "shop_name": SHOP_INFO["name"],
@@ -146,9 +203,14 @@ def build_record(product: dict) -> dict | None:
         "origin_country": parsed["origin_country"],
         "origin_source": parsed["origin_source"],
         "designated_brand": parsed["designated_brand"],
-        "processing_method": parsed["processing_method"],
+        "processing_method": parsed["processing_method"] or normalize_processing_method(processing_raw),
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "farm_name": farm.get("farm_name"),
+        "region_detail": farm.get("region_detail"),
+        "altitude_note": farm.get("altitude_note"),
+        "variety_note": farm.get("variety_note"),
+        "flavor_notes": flavor_notes,
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": price,
