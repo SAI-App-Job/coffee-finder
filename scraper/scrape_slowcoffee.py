@@ -17,12 +17,22 @@ robots.txt確認済み(2026-09時点): Shopify標準のrobots.txtでAllow: /
 順序と逆転している。またgramsフィールドは店舗によって信頼できないため、
 variant.titleの全文からWEIGHT_PATTERNで重量を抽出する方式
 (scrape_eureka.pyと同じ)を用いる。
+
+【flavor_notes(テイスティングノート)について(2026-09-19追記)】
+実データ確認済み: body_htmlは`<h3>見出し</h3><p>本文</p>`の繰り返し構造で、
+一部商品(65件中27件)に「<h3>味わいの特徴</h3>」という見出しがあり、
+直後の<p>要素に具体的な風味描写がある(例:「ナチュラル特有の爽やかな
+ベリー系の風味を残しながら...」、5商品で確認済み、例外なく直後のpタグに
+風味描写)。見出しが無い商品(ブレンドの一部、アウトレット品の一部)は
+flavor_notesを取得しない。以前はproducts.jsonから商品名・価格・在庫のみ
+取得し、body_html自体を一切読んでいなかった。
 """
 
 import re
 import time
 
 import requests
+from bs4 import BeautifulSoup
 
 from coffee_parser import parse_product, detect_stock_status
 from previous_data import load_previous_products, is_unchanged
@@ -66,6 +76,23 @@ def pick_canonical_variant(variants: list[dict]) -> dict | None:
         return int(m.group(1)) if m else float("inf")
 
     return min(final_pool, key=weight_key)
+
+
+FLAVOR_HEADING_TEXT = "味わいの特徴"
+
+
+def parse_flavor_notes(body_html: str | None) -> str | None:
+    """理由はモジュールdocstring参照(見出しの直後のp要素を採用)。"""
+    if not body_html:
+        return None
+    soup = BeautifulSoup(body_html, "html.parser")
+    heading = next((h for h in soup.find_all("h3") if h.get_text(strip=True) == FLAVOR_HEADING_TEXT), None)
+    if not heading:
+        return None
+    sibling = heading.find_next_sibling()
+    if sibling is None:
+        return None
+    return sibling.get_text(strip=True) or None
 
 
 def build_record(product: dict) -> dict | None:
@@ -113,6 +140,7 @@ def build_record(product: dict) -> dict | None:
         "roast_level": parsed["roast_level"],
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
+        "flavor_notes": parse_flavor_notes(product.get("body_html")),
         "price": price,
         "weight_g": weight_g,
         "stock_status": stock_status,

@@ -35,15 +35,26 @@ sitemap.xmlの全itemsを対象にする。全42件を確認した限りギフ�
 JSON-LD(schema.org Product)のoffersにprice・availability
 (http://schema.org/InStock 等)が構造化されている(GONZO CAFE&BEANS・
 MARUTAKE COFFEE BEANSと同じBASE標準テンプレート)。
+
+【flavor_notes・farm_note構成要素について(2026-09-19追記)】
+実データ確認済み(2商品): 上記【商品説明について】で「カッピングコメント
+中心の自由記述」と記録していた通り、descriptionの冒頭に「・良質なナッツ感と
+重厚な甘さを誇るコーヒー。」のような「・」始まりの箇条書きで具体的な
+風味描写があるが、以前はflavor_notesとして一切採用していなかった。
+「※」で始まる注記行(生豆重量・配送・返品等の全銘柄共通の定型文)に
+達するまでの「・」行を採用する。また、一部商品には「-----」区切り線に
+挟まれた「地域：/品種：/標高：/精選：/農園：」のラベル：値ブロックが
+あり、farm_note構成要素として取得する。
 """
 
 import json
+import re
 import time
 
 import requests
 from bs4 import BeautifulSoup
 
-from coffee_parser import parse_product, detect_stock_status
+from coffee_parser import parse_product, detect_stock_status, normalize_processing_method
 
 SHOP_INFO = {
     "name": "こなみ珈琲",
@@ -83,6 +94,52 @@ def extract_jsonld_product(soup: BeautifulSoup) -> dict | None:
     return None
 
 
+FLAVOR_BULLET_PATTERN = re.compile(r"^・(.+)$")
+DASH_DELIM_PATTERN = re.compile(r"^-{5,}$")
+DESC_LABEL_PATTERN = re.compile(r"^([^:：\n]{1,6})[：:]\s*(.+)$")
+DESC_LABEL_TO_FIELD = {
+    "地域": "region_detail",
+    "品種": "variety_note",
+    "標高": "altitude_note",
+    "精選": "processing_method",
+    "農園": "farm_name",
+}
+
+
+def parse_description_details(description: str | None) -> tuple[dict, str | None]:
+    """理由はモジュールdocstring参照。"""
+    if not description:
+        return {}, None
+    lines = [line.strip() for line in description.split("\n")]
+
+    flavor_lines = []
+    for line in lines:
+        if not line:
+            continue
+        if line.startswith("※") or DASH_DELIM_PATTERN.match(line):
+            break
+        m = FLAVOR_BULLET_PATTERN.match(line)
+        if m:
+            flavor_lines.append(m.group(1).strip())
+    flavor_notes = "".join(flavor_lines) if flavor_lines else None
+
+    fields: dict[str, str] = {}
+    in_block = False
+    for line in lines:
+        if DASH_DELIM_PATTERN.match(line):
+            in_block = not in_block
+            continue
+        if not in_block:
+            continue
+        m = DESC_LABEL_PATTERN.match(line)
+        if m:
+            label = "".join(m.group(1).split())
+            field = DESC_LABEL_TO_FIELD.get(label)
+            if field:
+                fields.setdefault(field, m.group(2).strip())
+    return fields, flavor_notes
+
+
 def build_record(product_url: str, product: dict) -> dict:
     title = (product.get("name") or "").strip()
     parsed = parse_product(title)
@@ -106,6 +163,10 @@ def build_record(product_url: str, product: dict) -> dict:
     structural_out_of_stock = "InStock" not in availability
     stock_status = detect_stock_status(title, structural_out_of_stock)
 
+    desc_fields, flavor_notes = parse_description_details(product.get("description"))
+    processing_method = desc_fields.get("processing_method")
+    processing_method = normalize_processing_method(processing_method) if processing_method else parsed["processing_method"]
+
     return {
         "shop_name": SHOP_INFO["name"],
         "raw_name": title,
@@ -113,11 +174,16 @@ def build_record(product_url: str, product: dict) -> dict:
         "origin_country": parsed["origin_country"],
         "origin_source": parsed["origin_source"],
         "designated_brand": parsed["designated_brand"],
-        "processing_method": parsed["processing_method"],
+        "processing_method": processing_method,
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
         "post_processing_tags": parsed["post_processing_tags"],
+        "farm_name": desc_fields.get("farm_name"),
+        "region_detail": desc_fields.get("region_detail"),
+        "altitude_note": desc_fields.get("altitude_note"),
+        "variety_note": desc_fields.get("variety_note"),
         "blend_components": [],
+        "flavor_notes": flavor_notes,
         "price": price,
         "weight_g": 200,  # 理由はモジュールdocstring参照(実データ確認済み、全商品200g固定)
         "stock_status": stock_status,
