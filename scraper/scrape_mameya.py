@@ -37,6 +37,14 @@ variantsのoption1_valueが焙煎度(おまかせ/ライト(極浅煎り)〜イ�
 商品名に「ブレンド」を含みカテゴリがブレンドと判定されるため上記の除外条件には
 かからず、情報が乏しいまま通常商品として扱われる(業者専用の卸売ページと思われるが、
 実在するコーヒー豆商品であることは確からしいため、あえて特別扱いの除外はしない)。
+
+【flavor_notes(テイスティングノート)について(2026-09-20追記)】
+実データ確認済み(全商品): 商品説明文(div.p-product-explain__body)は、
+「おすすめのロースト：」等のラベル行より前に、店主による1〜2段落の
+風味紹介文(産地の特徴や味わいの描写)が置かれている。以前はflavor_notesを
+常にNoneとしており、この冒頭の自由文を一切読んでいなかった。ラベル行
+(「規格：」等、LABEL_PATTERNの4種以外も含む全ての「短い語＋：」形式の行)
+や「※」「＜」「【」「■」で始まる注記行より前をflavor_notesとして採用する。
 """
 
 import json
@@ -80,6 +88,7 @@ COLORME_JSON_PATTERN = re.compile(r"var\s+Colorme\s*=\s*(\{.*\});", re.DOTALL)
 IMG_TAG_PATTERN = re.compile(r"<img[^>]*/?>", re.IGNORECASE)
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*g")
 LABEL_PATTERN = re.compile(r"(おすすめのロースト|プロセシング|栽培品種|内容量)：\s*([^\n]+)")
+FLAVOR_STOP_PATTERN = re.compile(r"^([^\s：:]{1,12}[：:]|※|＜|【|■|◆)")
 
 
 def fetch_page(url: str) -> BeautifulSoup:
@@ -115,6 +124,19 @@ def clean_title(raw_title: str) -> str:
 def parse_description(description_text: str) -> dict:
     labels = {label: value.strip() for label, value in LABEL_PATTERN.findall(description_text or "")}
     return labels
+
+
+def parse_flavor_notes(description_text: str) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    lines = []
+    for raw_line in (description_text or "").split("\n"):
+        line = raw_line.strip()
+        if not line:
+            continue
+        if FLAVOR_STOP_PATTERN.match(line):
+            break
+        lines.append(line)
+    return "".join(lines) or None
 
 
 def build_record(product_url: str, colorme_product: dict, description_text: str) -> dict:
@@ -191,7 +213,7 @@ def build_record(product_url: str, colorme_product: dict, description_text: str)
         "roast_selectable": roast_selectable,
         "post_processing_tags": parsed["post_processing_tags"],
         "farm_note": farm_note,
-        "flavor_notes": None,
+        "flavor_notes": parse_flavor_notes(description_text),
         "blend_components": [],
         "decaf_process": decaf_process,
         "price": colorme_product.get("sales_price_including_tax"),
