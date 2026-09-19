@@ -20,6 +20,11 @@ robots.txt確認済み(2026-09時点): robots.txt自体が存在しない(404)�
 【重量について】
 実データ確認済み: ページ冒頭に「表示金額は100g単位の値段です」との
 注記があり、全商品が100g単位の価格表示で統一されている。
+
+【flavor_notes(テイスティングノート)について(2026-09-20追記)】
+実データ確認済み(全40商品): PRODUCT_ROW_PATTERNの2番目のキャプチャ
+グループ(`<TD width=400>`)に既に店主による簡潔な風味紹介文が含まれて
+いたが、`_desc`として取得しながら使わずに捨てていた。
 """
 
 import re
@@ -64,7 +69,8 @@ def scrape_all_products() -> tuple[list[dict], list[dict]]:
     records = []
     flavored_records = []
     for m in PRODUCT_ROW_PATTERN.finditer(html):
-        title, _desc, code, price_text = m.group(1).strip(), m.group(2), m.group(3).strip(), m.group(4)
+        title, desc, code, price_text = m.group(1).strip(), m.group(2), m.group(3).strip(), m.group(4)
+        flavor_notes = desc.strip() or None
         product_url = f"{BASE_URL}#{code}"
 
         prev = previous.get(product_url)
@@ -100,6 +106,7 @@ def scrape_all_products() -> tuple[list[dict], list[dict]]:
             "roast_level": parsed["roast_level"],
             "post_processing_tags": parsed["post_processing_tags"],
             "blend_components": [],
+            "flavor_notes": flavor_notes,
             "price": price,
             "weight_g": 100,
             "stock_status": stock_status,
