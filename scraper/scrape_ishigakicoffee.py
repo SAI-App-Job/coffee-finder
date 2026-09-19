@@ -25,6 +25,17 @@ User-agent: *に対し/secure/・/cart/のみDisallow。AhrefsBot等一部
 商品名末尾の「｜自家焙煎工房　石垣珈琲」等の店名部分と重量表記(【や(の
 全角/半角ゆれを含む)を除いた基準名でグルーピングし、最小重量(180g)を
 代表として採用する。
+
+【flavor_notes(テイスティングノート)について(2026-09-20追記)】
+実データ確認済み(47商品サンプル調査): カラーミーショップのJS変数
+(var Colorme)には商品説明が含まれず、HTML側のdiv.product_explainにのみ
+店主による産地紹介・風味紹介文がある。以前はこの要素自体を一切読んで
+いなかった。構造は自由文の後に「酸味/甘味/苦味/コクの★段階評価」
+「風味：」「特徴：」(任意)、「生産国：」(任意)、「精製方法：」(任意)が
+続き、最後に必ず「品名：レギュラーコーヒー」が来てそれ以降は内容量・
+保存方法等の定型文になる。★評価行と「生産国：」は読み飛ばし、
+「精製方法：」はprocessing_methodへ、「風味：」「特徴：」は値のみ
+flavor_notesに追記し、「品名：」以降は採用しない。
 """
 
 import json
@@ -33,7 +44,7 @@ import re
 import requests
 from bs4 import BeautifulSoup
 
-from coffee_parser import parse_product, detect_stock_status
+from coffee_parser import parse_product, detect_stock_status, normalize_processing_method
 
 SHOP_INFO = {
     "name": "石垣珈琲",
@@ -57,6 +68,36 @@ NON_BEAN_KEYWORDS = [
 COLORME_PATTERN = re.compile(r"var Colorme\s*=\s*(\{.*?\});", re.DOTALL)
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
 WEIGHT_PAREN_STRIP_PATTERN = re.compile(r"[（(]\s*\d+\s*[gｇ]\s*[）)]")
+STOP_LABEL_PATTERN = re.compile(r"^品名[：:]")
+VALUE_LABEL_PATTERN = re.compile(r"^(生産国|精製方法|風味|特徴)[：:]\s*(.*)$")
+RATING_PATTERN = re.compile(r"★")
+
+
+def parse_flavor_and_processing(soup: BeautifulSoup) -> tuple[str | None, str | None]:
+    """理由はモジュールdocstring参照。flavor_notesと精製方法(生値)を返す。"""
+    div = soup.select_one("div.product_explain")
+    if not div:
+        return None, None
+    lines = []
+    processing_raw = None
+    for raw_line in div.get_text(separator="\n").split("\n"):
+        line = raw_line.strip()
+        if not line:
+            continue
+        if STOP_LABEL_PATTERN.match(line):
+            break
+        if RATING_PATTERN.search(line):
+            continue
+        m = VALUE_LABEL_PATTERN.match(line)
+        if m:
+            label, value = m.group(1), m.group(2).strip()
+            if label == "精製方法" and value:
+                processing_raw = value
+            elif label in ("風味", "特徴") and value:
+                lines.append(value)
+            continue
+        lines.append(line)
+    return "".join(lines) or None, processing_raw
 
 
 def fetch_page(url: str) -> BeautifulSoup:
@@ -133,9 +174,10 @@ def build_record(item: dict) -> dict | None:
         "origin_country": parsed["origin_country"],
         "origin_source": parsed["origin_source"],
         "designated_brand": parsed["designated_brand"],
-        "processing_method": parsed["processing_method"],
+        "processing_method": parsed["processing_method"] or normalize_processing_method(item.get("processing_method_raw")),
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": item.get("flavor_notes"),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": item["price"],
@@ -152,7 +194,8 @@ def scrape_all_products() -> tuple[list[dict], list[dict]]:
     all_items = []
     for product_url in product_urls:
         try:
-            product = fetch_raw_product(fetch_page(product_url))
+            soup = fetch_page(product_url)
+            product = fetch_raw_product(soup)
         except requests.RequestException as e:
             print(f"[warn] 詳細ページ取得失敗: {product_url} ({e})")
             continue
@@ -163,11 +206,14 @@ def scrape_all_products() -> tuple[list[dict], list[dict]]:
         if not title or any(kw in title for kw in NON_BEAN_KEYWORDS):
             continue
         price = product.get("sales_price_including_tax") or product.get("sales_price")
+        flavor_notes, processing_raw = parse_flavor_and_processing(soup)
         all_items.append({
             "title": title,
             "price": int(price) if price is not None else None,
             "url": product_url,
             "stock_num": product.get("stock_num"),
+            "flavor_notes": flavor_notes,
+            "processing_method_raw": processing_raw,
         })
 
     canonical_items = pick_canonical_items(all_items)
