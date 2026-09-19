@@ -19,11 +19,23 @@ NON_BEAN_KEYWORDSで除外する。
 実データ確認済み: 各商品のバリエーションは挽き方(豆のまま/粉挽き)のみで
 価格は同額。豆のまま(option1="豆のまま")のバリエーションを代表として
 採用する。
+
+【flavor_notes(テイスティングノート)について(2026-09-20追記)】
+実データ確認済み(対象34商品全件): body_html(商品説明)は店主による
+フリーテキストの風味紹介文で始まり、末尾に「■無料でメッセージカード、
+熨斗等承ります」等の定型注記(配送案内)が続く。全34商品で「■」が
+区切りマーカーとして機能しており、その手前までの<p>要素テキストを
+flavor_notesとして採用する。品種・標高・精製方法等はラベル形式ではなく
+地の文に埋め込まれているため、farm_noteの構造的な抽出は行わない
+(焙煎処 縁の木と同様の理由で見送り)。
+以前はbody_html自体を一切読んでいなかった。
 """
 
+import re
 import time
 
 import requests
+from bs4 import BeautifulSoup
 
 from coffee_parser import parse_product, detect_stock_status
 from previous_data import load_previous_products, is_unchanged
@@ -61,6 +73,25 @@ def pick_canonical_variant(variants: list[dict]) -> dict | None:
     available = [v for v in pool if v.get("available")]
     final_pool = available or pool
     return min(final_pool, key=lambda v: v.get("grams") or float("inf"))
+
+
+FLAVOR_STOP_PATTERN = re.compile(r"^■")
+
+
+def parse_flavor_notes(body_html: str) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    if not body_html:
+        return None
+    soup = BeautifulSoup(body_html, "html.parser")
+    lines = []
+    for p in soup.find_all("p"):
+        text = p.get_text(separator="").strip()
+        if not text:
+            continue
+        if FLAVOR_STOP_PATTERN.match(text):
+            break
+        lines.append(text)
+    return "".join(lines) or None
 
 
 def build_record(product: dict) -> dict | None:
@@ -102,6 +133,7 @@ def build_record(product: dict) -> dict | None:
         "roast_level": parsed["roast_level"],
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
+        "flavor_notes": parse_flavor_notes(product.get("body_html")),
         "price": price,
         "weight_g": weight_g,
         "stock_status": stock_status,
