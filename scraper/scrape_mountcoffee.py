@@ -64,13 +64,100 @@ NON_BEAN_KEYWORDSで除外する。
 各商品のバリアントは基本的に「豆／粉／(Drip Bag 25p)」の組み合わせで、豆・粉は
 同一価格(実データ確認済み)。挽かない「豆」を代表バリアントとして採用し、
 Drip Bag系バリアントは価格取得対象から除外する。
+
+【flavor_notes/farm_note(テイスティングノート・農園情報)について
+(2026-09-20追記)】
+実データ確認済み: この店はブログ的な長文の商品説明が中心で、店舗ごとの
+テーマ性が強い(自転車コラボ、登山、映画コラボ等の企画ブレンドが多数)ため、
+構造化されたラベル形式のテイスティングノートは単一原産地(ストレート)
+商品の一部にしかない(「国名/産地/生産地/農園/生産者/標高/精選/精製」
+ラベル、<br>で区切られた1つの<p>内にまとまっている)。これはfarm_note用
+フィールド(region_detail/farm_name/producer_name/altitude_note)と
+processing_methodに反映する。
+flavor_notesは、ラベル形式が無いブレンド商品(IN THE MOUNTAIN・No.3〜No.9等)
+にも本文中に自由記述で味の説明が書かれていることが多いため、
+「酸味/苦味/甘み/コク/風味/味わい/まろやか/フルーティ/チョコ/ナッツ/
+キャラメル/ベリー/シトラス/フローラル/スパイシー/ボディ」等のテイスティング
+記述子キーワードを含む最初の1行を採用する方式にした(店主のブログ的な
+文章の中から味の説明部分だけを拾う)。当初「香り」「スッキリ」「さっぱり」も
+キーワードに含めていたが、これらは自転車コラボ企画(【数量限定】「Road」
+「MTB」Blend内の「山中の空気や土の香りをイメージ」)や登山記録
+(IN THE MOUNTAINシリーズ内の「シャワーを借りてスッキリして」)のような
+コーヒーと無関係な文脈でも頻出し、誤って抽出してしまうことが実データで
+判明したため除外した(除外後も、他のキーワードと共に使われている行は
+それらのキーワードで正しく抽出されるため、真陽性の取り逃しは無いことを
+確認済み)。ラベルが無いブレンド商品の半数程度(Takasu Blend・逆光Blend・
+Hiroshima Blend・IN THE MOUNTAINの一部等)は味の説明が本文に一切無く
+(店の企画背景や個人的なストーリーのみ)、この場合は取得できないのが
+正しい挙動(見送り)。
 """
 
 import re
 
 import requests
+from bs4 import BeautifulSoup
 
-from coffee_parser import parse_product, detect_stock_status
+from coffee_parser import parse_product, detect_stock_status, normalize_processing_method
+
+WHITESPACE_PATTERN = re.compile(r"[ \t]+")
+DESC_LABEL_PATTERN = re.compile(r"^(国名|産地|生産地|農園|生産者|標高|精選|精製)[：:]\s*(.*)$")
+FARM_LABEL_TO_FIELD = {
+    "国名": "region_detail",
+    "産地": "region_detail",
+    "生産地": "region_detail",
+    "農園": "farm_name",
+    "生産者": "producer_name",
+    "標高": "altitude_note",
+}
+FLAVOR_KEYWORDS = (
+    "酸味", "苦味", "苦み", "甘み", "甘さ", "コク", "風味", "味わい", "まろやか",
+    "フルーティ", "チョコ", "ナッツ", "キャラメル", "カラメル", "ベリー",
+    "シトラス", "フローラル", "スパイシー", "ボディ",
+)
+
+
+def _normalize_for_compare(text: str) -> str:
+    return re.sub(r"\s+", "", text or "")
+
+
+def parse_flavor_and_farm(body_html: str | None, title: str) -> tuple[str | None, dict, str | None]:
+    """理由はモジュールdocstring参照。"""
+    if not body_html:
+        return None, {}, None
+    soup = BeautifulSoup(body_html, "html.parser")
+    for tag in soup.find_all(["blockquote", "iframe", "script", "style"]):
+        tag.decompose()
+    for br in soup.find_all("br"):
+        br.replace_with("\n")
+
+    lines = []
+    for el in soup.find_all(["p", "li", "h2", "h3", "h4"]):
+        for chunk in el.get_text().split("\n"):
+            line = WHITESPACE_PATTERN.sub(" ", chunk).strip()
+            if line:
+                lines.append(line)
+
+    if lines and _normalize_for_compare(lines[0]) == _normalize_for_compare(title):
+        lines = lines[1:]
+
+    farm: dict = {}
+    processing_raw = None
+    flavor_notes = None
+    for line in lines:
+        m = DESC_LABEL_PATTERN.match(line)
+        if m:
+            label, value = m.group(1), m.group(2).strip()
+            if not value:
+                continue
+            if label in ("精選", "精製"):
+                processing_raw = value
+            elif label in FARM_LABEL_TO_FIELD:
+                farm[FARM_LABEL_TO_FIELD[label]] = value
+            continue
+        if flavor_notes is None and any(kw in line for kw in FLAVOR_KEYWORDS):
+            flavor_notes = line
+
+    return flavor_notes, farm, processing_raw
 
 SHOP_INFO = {
     "name": "MOUNT COFFEE",
@@ -168,6 +255,8 @@ def build_record(product: dict) -> dict | None:
     all_out_of_stock = bool(check_variants) and not any(v.get("available") for v in check_variants)
     stock_status = detect_stock_status(title, all_out_of_stock)
 
+    flavor_notes, farm, processing_raw = parse_flavor_and_farm(product.get("body_html"), title)
+
     return {
         "shop_name": SHOP_INFO["name"],
         "raw_name": title,
@@ -175,9 +264,14 @@ def build_record(product: dict) -> dict | None:
         "origin_country": parsed["origin_country"],
         "origin_source": parsed["origin_source"],
         "designated_brand": parsed["designated_brand"],
-        "processing_method": parsed["processing_method"],
+        "processing_method": parsed["processing_method"] or normalize_processing_method(processing_raw),
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "farm_name": farm.get("farm_name"),
+        "producer_name": farm.get("producer_name"),
+        "region_detail": farm.get("region_detail"),
+        "altitude_note": farm.get("altitude_note"),
+        "flavor_notes": flavor_notes,
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": price,
