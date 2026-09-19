@@ -47,11 +47,20 @@ price=680)。「豆のまま」バリアントを優先して代表として採�
 不備で全バリアント一律1000固定になっている(信頼できない)ため、grams
 フィールドは使わずバリアントのタイトル文字列から重量を都度正規表現で
 抽出し、最小重量のバリアントを代表として採用する。
+
+【flavor_notes(テイスティングノート)について(2026-09-20追記)】
+実データ確認済み(45商品サンプル調査): body_htmlに
+`<h1>フレーバー</h1><p>...</p><h1>味わい</h1><p>...</p>`という一貫した
+構造があり、店主によるフレーバータグと味わい説明が入っているが、この
+要素自体を一切読んでいなかった。両方の値を連結してflavor_notesとする。
+一部の限定ロット商品(例:台湾産 古峰珈琲荘園)はこの構造を持たず長文の
+ストーリーのみのため、その場合は取得できずNoneのままとなる。
 """
 
 import re
 
 import requests
+from bs4 import BeautifulSoup
 
 from coffee_parser import parse_product, detect_stock_status
 
@@ -117,6 +126,25 @@ def pick_variable_weight_variant(variants: list[dict]) -> tuple[dict | None, int
     return variant, (weight if weight != float("inf") else None)
 
 
+def parse_flavor_notes(body_html: str) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    if not body_html:
+        return None
+    soup = BeautifulSoup(body_html, "html.parser")
+    parts = []
+    for h1 in soup.find_all("h1"):
+        heading = h1.get_text(strip=True)
+        if heading not in ("フレーバー", "味わい"):
+            continue
+        p = h1.find_next_sibling("p")
+        if not p:
+            continue
+        text = p.get_text(separator="").strip()
+        if text:
+            parts.append(text)
+    return "".join(parts) or None
+
+
 def build_group_key(title: str) -> str:
     key = WEIGHT_PATTERN.sub("", title)
     key = re.sub(r"[^\w一-龠ぁ-んァ-ヶー]+", "", key)
@@ -166,6 +194,7 @@ def build_record(product: dict) -> dict | None:
         "roast_level": parsed["roast_level"],
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
+        "flavor_notes": parse_flavor_notes(product.get("body_html")),
         "price": price,
         "weight_g": weight_g,
         "stock_status": stock_status,
