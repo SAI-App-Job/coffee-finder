@@ -21,6 +21,16 @@ python-requests等は個別にDisallow: /指定があるが、User-agent: *ル�
 カフェオレベースがコーヒー豆単品ではないためNON_BEAN_KEYWORDSで除外する。
 「ブレンド涼」「ブレンド焙」「ブレンド香」「カフェインレス ブレンド陽」
 のような単一ブレンド名の商品(セットではない)は対象として残す。
+
+【flavor_notes/farm_note(テイスティングノート・品種等)について
+(2026-09-20追記)】
+実データ確認済み(38商品サンプル調査): 他のBASE系店舗と同じ共通テーマの
+p[class*="item-detail_description"]要素に、「品種:」「精製:」ラベルに
+続けて産地紹介文・焙煎度別の風味紹介文がある(全サンプルで一貫した構造)。
+以前はog:title/価格のみ取得しこの要素自体を一切読んでいなかった。末尾に
+必ず「※粉でご注文の方へ」等の発送案内が続くため、その手前までを採用する。
+「品種:」「精製:」ラベル行はflavor_notesの自由文からは除外しfarm_note用
+フィールド(variety_note・processing_method)に反映する。
 """
 
 import re
@@ -28,7 +38,7 @@ import re
 import requests
 from bs4 import BeautifulSoup
 
-from coffee_parser import parse_product, detect_stock_status
+from coffee_parser import parse_product, detect_stock_status, normalize_processing_method
 from previous_data import load_previous_products, is_unchanged
 
 SHOP_INFO = {
@@ -49,6 +59,35 @@ REQUEST_HEADERS = {
 
 NON_BEAN_KEYWORDS = ["セット", "飲み比べ", "水出し", "ドリップバッグ", "ドリップバック", "カフェオレベース"]
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
+FARM_LABEL_PATTERN = re.compile(r"^(品種|精製)[:：]\s*(.*)$")
+FLAVOR_STOP_PATTERN = re.compile(r"^※")
+
+
+def parse_flavor_and_farm(soup: BeautifulSoup) -> tuple[str | None, dict]:
+    """理由はモジュールdocstring参照。"""
+    el = soup.select_one('p[class*="item-detail_description"]')
+    if not el:
+        return None, {}
+    lines = []
+    farm: dict = {}
+    for raw_line in el.get_text(separator="\n").split("\n"):
+        line = raw_line.strip()
+        if not line:
+            continue
+        if FLAVOR_STOP_PATTERN.match(line):
+            break
+        m = FARM_LABEL_PATTERN.match(line)
+        if m:
+            label, value = m.group(1), m.group(2).strip()
+            if value:
+                if label == "品種":
+                    farm["variety_note"] = value
+                else:
+                    farm["processing_method_raw"] = value
+            continue
+        lines.append(line)
+    flavor_notes = "".join(lines) or None
+    return flavor_notes, farm
 
 
 def fetch_page(url: str) -> BeautifulSoup:
@@ -67,7 +106,7 @@ def extract_og_fields(soup: BeautifulSoup) -> dict | None:
     return {"title": title, "price": price}
 
 
-def build_record(product_url: str, fields: dict) -> dict | None:
+def build_record(product_url: str, fields: dict, flavor_notes: str | None = None, farm: dict | None = None) -> dict | None:
     title = fields["title"]
     if any(kw in title for kw in NON_BEAN_KEYWORDS):
         return None
@@ -85,6 +124,7 @@ def build_record(product_url: str, fields: dict) -> dict | None:
             "product_url": product_url,
         }
 
+    farm = farm or {}
     stock_status = detect_stock_status(title)
     weight_m = WEIGHT_PATTERN.search(title)
     weight_g = int(weight_m.group(1)) if weight_m else None
@@ -96,9 +136,11 @@ def build_record(product_url: str, fields: dict) -> dict | None:
         "origin_country": parsed["origin_country"],
         "origin_source": parsed["origin_source"],
         "designated_brand": parsed["designated_brand"],
-        "processing_method": parsed["processing_method"],
+        "processing_method": parsed["processing_method"] or normalize_processing_method(farm.get("processing_method_raw")),
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "variety_note": farm.get("variety_note"),
+        "flavor_notes": flavor_notes,
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": fields["price"],
@@ -110,10 +152,12 @@ def build_record(product_url: str, fields: dict) -> dict | None:
 
 
 def parse_product_detail(url: str) -> dict | None:
-    fields = extract_og_fields(fetch_page(url))
+    soup = fetch_page(url)
+    fields = extract_og_fields(soup)
     if not fields:
         return None
-    return build_record(url, fields)
+    flavor_notes, farm = parse_flavor_and_farm(soup)
+    return build_record(url, fields, flavor_notes, farm)
 
 
 def fetch_sitemap_urls() -> list[str]:
@@ -130,7 +174,8 @@ def scrape_all_products() -> tuple[list[dict], list[dict]]:
     for product_url in product_urls:
         prev = previous.get(product_url)
         try:
-            fields = extract_og_fields(fetch_page(product_url))
+            soup = fetch_page(product_url)
+            fields = extract_og_fields(soup)
         except requests.RequestException as e:
             print(f"[warn] 詳細ページ取得失敗: {product_url} ({e})")
             continue
@@ -142,7 +187,8 @@ def scrape_all_products() -> tuple[list[dict], list[dict]]:
             records.append(prev)
             continue
 
-        detail = build_record(product_url, fields)
+        flavor_notes, farm = parse_flavor_and_farm(soup)
+        detail = build_record(product_url, fields, flavor_notes, farm)
         if detail is None:
             continue
         if detail.get("is_flavored"):
