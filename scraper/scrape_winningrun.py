@@ -31,6 +31,18 @@ Disallow: /で本スクレイパーは該当しない)。
 220g/110gの2種類の重量で別商品ページとして登録されている。商品名から
 「生豆◯ｇでの焙煎(税込)価格」の部分を除いた基準名でグルーピングし、
 最小重量(110g)を代表として採用する。
+
+【flavor_notes/farm_note(テイスティングノート・農園情報)について
+(2026-09-20追記)】
+実データ確認済み(37商品全件): おちゃのこネットのdiv.item_desc_textに
+店主による1〜2文の風味紹介文があり、単一銘柄の一部商品では続けて
+「生産者：」「農園：」「地域：」「エリア：」「生産国：」「標高：」
+「品種：」「精製：」「精製方法：」ラベルの農園情報、さらにその後に
+農園の歴史等の長い説明文が続く場合がある。以前はog:title/価格のみ
+取得しこの要素自体を一切読んでいなかった。ラベル行より前の自由文を
+flavor_notesとして採用し、ラベル値はfarm_note用フィールドに反映する
+(ラベル以降の追加説明文はEureka Coffee Roasters等と同様、構造化できない
+ためflavor_notesには含めない)。
 """
 
 import re
@@ -38,7 +50,7 @@ import re
 import requests
 from bs4 import BeautifulSoup
 
-from coffee_parser import parse_product, detect_stock_status
+from coffee_parser import parse_product, detect_stock_status, normalize_processing_method
 
 SHOP_INFO = {
     "name": "豆工房ウイニングラン",
@@ -57,6 +69,49 @@ REQUEST_HEADERS = {
 }
 
 WEIGHT_TAIL_PATTERN = re.compile(r"[\s　]*生豆\s*(\d+)\s*[gｇ]\s*での焙煎\s*(?:税込)?\s*価格\s*$")
+DESC_LABEL_PATTERN = re.compile(r"^([^:：\n]{1,10})[：:]\s*(.*)$")
+FARM_LABEL_TO_FIELD = {
+    "生産者": "producer_name",
+    "農園": "farm_name",
+    "地域": "region_detail",
+    "エリア": "region_detail",
+    "生産国": "region_detail",
+    "標高": "altitude_note",
+    "品種": "variety_note",
+}
+
+
+def parse_description_details(soup: BeautifulSoup) -> tuple[str | None, dict, str | None]:
+    """理由はモジュールdocstring参照。flavor_notes・farm情報・精製方法(生値)を返す。"""
+    el = soup.select_one("div.item_desc_text")
+    if not el:
+        return None, {}, None
+    flavor_lines = []
+    farm: dict = {}
+    processing_raw = None
+    collecting_flavor = True
+    for raw_line in el.get_text(separator="\n").split("\n"):
+        line = raw_line.strip()
+        if not line:
+            continue
+        m = DESC_LABEL_PATTERN.match(line)
+        if m:
+            label = "".join(m.group(1).split())
+            value = m.group(2).strip()
+            if label in FARM_LABEL_TO_FIELD:
+                collecting_flavor = False
+                if value:
+                    farm[FARM_LABEL_TO_FIELD[label]] = value
+                continue
+            if label in ("精製", "精製方法"):
+                collecting_flavor = False
+                if value:
+                    processing_raw = value
+                continue
+        if collecting_flavor:
+            flavor_lines.append(line)
+    flavor_notes = "".join(flavor_lines) or None
+    return flavor_notes, farm, processing_raw
 
 
 def fetch_page(url: str) -> BeautifulSoup:
@@ -133,11 +188,17 @@ def build_record(item: dict) -> dict | None:
         "origin_country": parsed["origin_country"],
         "origin_source": parsed["origin_source"],
         "designated_brand": parsed["designated_brand"],
-        "processing_method": parsed["processing_method"],
+        "processing_method": parsed["processing_method"] or normalize_processing_method(item.get("processing_method_raw")),
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
+        "farm_name": item.get("farm", {}).get("farm_name"),
+        "producer_name": item.get("farm", {}).get("producer_name"),
+        "region_detail": item.get("farm", {}).get("region_detail"),
+        "altitude_note": item.get("farm", {}).get("altitude_note"),
+        "variety_note": item.get("farm", {}).get("variety_note"),
+        "flavor_notes": item.get("flavor_notes"),
         "price": item["price"],
         "weight_g": item["weight_g"],
         "stock_status": stock_status,
@@ -152,13 +213,22 @@ def scrape_all_products() -> tuple[list[dict], list[dict]]:
     all_items = []
     for product_url in product_urls:
         try:
-            fields = extract_fields(fetch_page(product_url))
+            soup = fetch_page(product_url)
+            fields = extract_fields(soup)
         except requests.RequestException as e:
             print(f"[warn] 詳細ページ取得失敗: {product_url} ({e})")
             continue
         if not fields:
             continue
-        all_items.append({"title": fields["title"], "price": fields["price"], "url": product_url})
+        flavor_notes, farm, processing_raw = parse_description_details(soup)
+        all_items.append({
+            "title": fields["title"],
+            "price": fields["price"],
+            "url": product_url,
+            "flavor_notes": flavor_notes,
+            "farm": farm,
+            "processing_method_raw": processing_raw,
+        })
 
     canonical_items = pick_canonical_items(all_items)
 
