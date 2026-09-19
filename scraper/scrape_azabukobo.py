@@ -45,6 +45,16 @@ var Colormeのinventory_controlが"none"、stock_numは常にnull
 （水出し）珈琲パック（3個入り／5個入り）」の2件は、豆を抽出済みの水出し
 パック(既製品)であり豆単品ではないため、NON_BEAN_KEYWORDSで除外する
 (GONZO CAFE&BEANSの「水出しアイスコーヒー」除外と同じパターン)。
+
+【flavor_notes(テイスティングノート)について(2026-09-19追記)】
+実データ再確認の結果、上記【商品説明について】で「構造化ラベルが無い」と
+判断したのは産地情報の抽出可否についてであり、風味情報の有無自体は
+未確認だった。実際にはog:descriptionメタタグに「弾ける甘み、最後に香る
+柑橘系の余韻」「ナッツの香ばしさとまろやかな甘み、シックな余韻とすっきり
+とした後味」のような具体的な風味描写が末尾の店舗名定型文
+(「｜東京のスペシャルティ珈琲豆店「麻布珈房」の通販」)を除いて丸ごと
+含まれている(4商品で確認済み、例外なく存在)。この定型文をOG_SUFFIX_PATTERNで
+除去した残りをflavor_notesとして採用する。
 """
 
 import json
@@ -91,6 +101,8 @@ WEIGHT_ROASTED_PATTERN = re.compile(r"焙煎後\s*約\s*([\d.]+)\s*[gｇ]")
 # 理由はkunikuni.py参照。「フルシティロースト」が「シティロースト」を
 # 部分文字列として含むため、長い方を先に判定する
 ROAST_GROUP_LABELS = ["フルシティロースト", "フレンチロースト", "ミディアムロースト", "ハイロースト", "シティロースト"]
+# 理由はモジュールdocstring参照(og:description末尾の店舗名定型文を除去する)
+OG_SUFFIX_PATTERN = re.compile(r"｜東京のスペシャルティ珈琲豆店「麻布珈房」の通販\s*$")
 
 
 def fetch_page(url: str) -> BeautifulSoup:
@@ -123,6 +135,15 @@ def detect_roast_level_from_breadcrumb(soup: BeautifulSoup) -> str | None:
     return None
 
 
+def parse_flavor_notes(soup: BeautifulSoup) -> str | None:
+    """理由はモジュールdocstring参照(og:descriptionから店舗名定型文を除去)。"""
+    og = soup.find("meta", attrs={"property": "og:description"})
+    content = (og.get("content") or "").strip() if og else ""
+    if not content:
+        return None
+    return OG_SUFFIX_PATTERN.sub("", content).strip() or None
+
+
 def detect_weight_from_breadcrumb(soup: BeautifulSoup) -> int | None:
     for a in soup.select('ul.pankuzu_lists a[href*="mode=grp"]'):
         text = a.get_text(strip=True)
@@ -133,7 +154,7 @@ def detect_weight_from_breadcrumb(soup: BeautifulSoup) -> int | None:
 
 
 def build_record(product_url: str, colorme_product: dict, roast_level: str | None,
-                  weight_g: int | None, category_hint: str) -> dict:
+                  weight_g: int | None, category_hint: str, flavor_notes: str | None) -> dict:
     title = (colorme_product.get("name") or "").strip()
 
     variant = colorme_product.get("variants") or [{}]
@@ -176,6 +197,7 @@ def build_record(product_url: str, colorme_product: dict, roast_level: str | Non
         "roast_level": roast_level,
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
+        "flavor_notes": flavor_notes,
         "price": price,
         "weight_g": weight_g,
         "stock_status": stock_status,
@@ -196,7 +218,8 @@ def parse_product_detail(url: str, category_hint: str = "") -> dict:
         }
     roast_level = detect_roast_level_from_breadcrumb(soup)
     weight_g = detect_weight_from_breadcrumb(soup)
-    return build_record(url, colorme_product, roast_level, weight_g, category_hint)
+    flavor_notes = parse_flavor_notes(soup)
+    return build_record(url, colorme_product, roast_level, weight_g, category_hint, flavor_notes)
 
 
 def scrape_category_list_page(cid: str, page: int) -> list[dict]:

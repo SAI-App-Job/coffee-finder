@@ -31,6 +31,22 @@ User-agent: *に対し/secure/・/cart/のみDisallow。AhrefsBot等一部
 に従いこれらも欠品フラグ付きで結果に含める(削除しない)。stock_numが
 未設定(None)の商品は在庫管理対象外の定番商品と判断し在庫ありとして
 扱う。
+
+【商品説明(div.product_exp)について(2026-09-19追記)】
+実データ確認済み: 単一農園ものの商品ページには「生産地域：/産地　　：/
+地　域：」「生産者　：/農園　　：/農園名：」「標高　　：/標高：」
+「規格　　：/等級　　：」「精製　　：/製法　　：」「品種　　：」
+「カップ　　：/カップ：」「カフェイン除去方法：」というラベル：値の行が
+並ぶ(全角スペースの挿入位置が店舗内でも表記ゆれあり、ラベル側の空白を
+除去して照合する)。「カップ」ラベルはカッピングノート(例:「チョコレート、
+黒糖、バランスの良いカップ」)そのものでflavor_notesの最有力候補。
+一方、ブレンド等シンプルな商品(「ブラジルショコラ」等)にはラベルが無く、
+ラベル行の手前の自由記述(例:「マイルドな苦みの中にチョコレートフレーバー。」)
+に風味描写が入っている(4商品で確認済み)。「通常価格でのご購入を...」
+「好評につき...」「価格改定...」等の定型文・キャンペーン文言は
+BOILERPLATE_LINE_PATTERNSで除外する。末尾の「（生豆240gを受注後焙煎し、
+焼き上がり約200gを1袋としての販売です。）」は全商品共通の定型文で、
+weight_g未取得時のみ焼き上がり重量の補完に使う。
 """
 
 import json
@@ -39,7 +55,7 @@ import re
 import requests
 from bs4 import BeautifulSoup
 
-from coffee_parser import parse_product, detect_stock_status
+from coffee_parser import parse_product, detect_stock_status, normalize_processing_method
 
 SHOP_INFO = {
     "name": "コーヒーロースト ワンズ",
@@ -61,6 +77,29 @@ NON_BEAN_KEYWORDS = ["ギフト用ボックス"]
 COLORME_PATTERN = re.compile(r"var Colorme\s*=\s*(\{.*?\});", re.DOTALL)
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ㎏]")
 
+# 理由はモジュールdocstring参照(div.product_expのラベル：値行。ラベル語と
+# コロンの間に全角スペースでの桁揃えが入る商品があるため([例]「生産者　：」)、
+# コロン手前までは空白を含め緩く受け止め、ラベル側の空白は正規化してから照合する)
+DESC_LABEL_PATTERN = re.compile(r"^([^:：\n]{1,14})[：:]\s*(.+)$")
+DESC_LABEL_TO_FIELD = {
+    "生産地域": "region_detail", "産地": "region_detail", "地域": "region_detail",
+    "生産者": "producer_name", "農園": "farm_name", "農園名": "farm_name",
+    "標高": "altitude_note",
+    "規格": "grade", "等級": "grade",
+    "精製": "processing_method", "製法": "processing_method",
+    "品種": "variety_note",
+    "カップ": "flavor_notes",
+    "カフェイン除去方法": "decaf_process_raw",
+}
+BOILERPLATE_LINE_PATTERNS = [
+    re.compile(r"通常価格でのご購入"),
+    re.compile(r"価格改定"),
+    re.compile(r"好評につき"),
+    re.compile(r"数量限定"),
+    re.compile(r"無くなり次第終了"),
+]
+WEIGHT_FOOTER_PATTERN = re.compile(r"焼き上がり約\s*(\d+)\s*[gｇ]")
+
 
 def fetch_page(url: str) -> BeautifulSoup:
     resp = requests.get(url, headers=REQUEST_HEADERS, timeout=15)
@@ -71,6 +110,43 @@ def fetch_page(url: str) -> BeautifulSoup:
 def fetch_pid_urls() -> list[str]:
     soup = fetch_page(f"{BASE_URL}/sitemap.xml")
     return [loc.get_text(strip=True) for loc in soup.find_all("loc") if "pid=" in loc.get_text()]
+
+
+def parse_description_details(soup: BeautifulSoup) -> tuple[dict, int | None]:
+    """理由はモジュールdocstring参照。ラベル行(fields)と、ラベルの手前に
+    ある自由記述(flavor_notesが未取得の場合のみ採用)、末尾の焼き上がり
+    重量をまとめて抽出する。"""
+    el = soup.select_one("div.product_exp")
+    if not el:
+        return {}, None
+
+    full_text = el.get_text(separator="\n")
+    weight_m = WEIGHT_FOOTER_PATTERN.search(full_text)
+    weight_g = int(weight_m.group(1)) if weight_m else None
+
+    fields: dict[str, str] = {}
+    intro_lines: list[str] = []
+    seen_label = False
+    for raw_line in full_text.split("\n"):
+        line = raw_line.strip()
+        if not line or WEIGHT_FOOTER_PATTERN.search(line):
+            continue
+        if any(p.search(line) for p in BOILERPLATE_LINE_PATTERNS):
+            continue
+        m = DESC_LABEL_PATTERN.match(line)
+        if m:
+            label = "".join(m.group(1).split())
+            field = DESC_LABEL_TO_FIELD.get(label)
+            if field:
+                fields.setdefault(field, m.group(2).strip())
+                seen_label = True
+                continue
+        if not seen_label:
+            intro_lines.append(line)
+
+    if "flavor_notes" not in fields and intro_lines:
+        fields["flavor_notes"] = "".join(intro_lines)
+    return fields, weight_g
 
 
 def build_record(soup: BeautifulSoup, product_url: str) -> dict | None:
@@ -112,6 +188,11 @@ def build_record(soup: BeautifulSoup, product_url: str) -> dict | None:
     if weight_m:
         weight_g = int(weight_m.group(1)) * 1000 if "㎏" in weight_m.group(0) else int(weight_m.group(1))
 
+    desc_fields, desc_weight_g = parse_description_details(soup)
+    processing_method = desc_fields.get("processing_method")
+    processing_method = normalize_processing_method(processing_method) if processing_method else parsed["processing_method"]
+    decaf_raw = desc_fields.get("decaf_process_raw")
+
     return {
         "shop_name": SHOP_INFO["name"],
         "raw_name": title,
@@ -119,13 +200,20 @@ def build_record(soup: BeautifulSoup, product_url: str) -> dict | None:
         "origin_country": parsed["origin_country"],
         "origin_source": parsed["origin_source"],
         "designated_brand": parsed["designated_brand"],
-        "processing_method": parsed["processing_method"],
-        "grade": parsed["grade"],
+        "processing_method": processing_method,
+        "grade": desc_fields.get("grade") or parsed["grade"],
         "roast_level": parsed["roast_level"],
         "post_processing_tags": parsed["post_processing_tags"],
+        "farm_name": desc_fields.get("farm_name"),
+        "producer_name": desc_fields.get("producer_name"),
+        "region_detail": desc_fields.get("region_detail"),
+        "altitude_note": desc_fields.get("altitude_note"),
+        "variety_note": desc_fields.get("variety_note"),
         "blend_components": [],
+        "flavor_notes": desc_fields.get("flavor_notes"),
+        "decaf_process": f"{decaf_raw}によりカフェインを除去" if decaf_raw else None,
         "price": int(price) if price is not None else None,
-        "weight_g": weight_g,
+        "weight_g": weight_g or desc_weight_g,
         "stock_status": stock_status,
         "out_of_stock": stock_status != "販売中",
         "product_url": product_url,

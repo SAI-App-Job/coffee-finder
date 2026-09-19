@@ -46,6 +46,15 @@ JSONから商品名・価格(sales_price_including_tax)・在庫数(stock_num)�
 実データ確認済み: 大半の商品はstock_numがnull(在庫数管理なし=都度焙煎)
 だが、コンペ産地の少量ロット等一部商品にはstock_num(残数)が設定されて
 おり、0の場合は完売と判定できる(三澤珈琲と同じ方式)。
+
+【flavor_notes(テイスティングノート)について(2026-09-19追記)】
+実データ確認済み: 商品ページのdiv.goods-detail直下に、他の要素と競合しない
+単独のp要素(class属性無し)として1〜2文程度の短い商品説明があり、
+「グレープフルーツのようなフレッシュ感のある芳醇な香りと酸味、軽い苦味を
+もつ、アフリカのタンザニア産のコーヒー。香りを楽しむなら中煎りがおすすめ。」
+のように具体的な風味描写を含む(ストレート・ブレンド・デカフェの計5商品で
+確認済み、例外なく存在)。以前はvar Colorme のJSONから商品名・価格のみを
+取得し、この説明文自体を一切読んでいなかった。
 """
 
 import json
@@ -99,6 +108,14 @@ def fetch_pids() -> list[str]:
     return sorted(pids, key=int)
 
 
+def parse_flavor_notes(soup: BeautifulSoup) -> str | None:
+    """理由はモジュールdocstring参照(div.goods-detail直下の単独p要素)。"""
+    el = soup.select_one("div.goods-detail p")
+    if not el:
+        return None
+    return "".join(line.strip() for line in el.get_text().split("\n") if line.strip()) or None
+
+
 def build_record(soup: BeautifulSoup, product_url: str) -> dict | None:
     script_text = ""
     for script in soup.find_all("script"):
@@ -146,6 +163,7 @@ def build_record(soup: BeautifulSoup, product_url: str) -> dict | None:
         "roast_level": parsed["roast_level"],
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
+        "flavor_notes": parse_flavor_notes(soup),
         "price": int(price) if price is not None else None,
         "weight_g": None,
         "stock_status": stock_status,
