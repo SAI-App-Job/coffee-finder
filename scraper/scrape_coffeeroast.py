@@ -43,6 +43,20 @@ COFFEE OTEDAMA(雑貨)・有機アガベシロップ・ベルメーレンカラ�
 として両方残ってしまっていた。末尾の括弧の中身がそれより前の部分文字列
 としてすでに登場している場合に限りその括弧を除去するよう修正した
 (グラポス農協（メキシコ）等、正当な産地注記の括弧は対象外)。
+
+【flavor_notes/farm_note(テイスティングノート・農園情報)について
+(2026-09-20追記)】
+実データ確認済み(サンプル調査): カラーミーショップのJS変数(var Colorme)
+には商品説明が含まれず、HTML側のdiv.product-order-expにのみ店主による
+産地紹介・風味紹介文がある。商品によって「収穫地域：」「産地名：」
+「農園名：」「標高：」「風土：」「品種：」「精選方法：」/「精製方法：」
+「乾燥方法：」「収穫期：」/「収穫時期：」「グレード：」「香味特徴：」/
+「香味表現：」「スクリーン：」ラベルの農園情報が続く商品と、続かない
+商品が混在する。以前はこの要素自体を一切読んでいなかった。ラベル行より
+前の自由文をflavor_notesとして採用し、「産地名」「収穫地域」「農園名」
+「標高」「品種」「精選方法」「精製方法」ラベルはfarm_note用フィールドに
+反映する。「品名：」「原材料名：」等の定型情報欄(beans_basic_info)より
+後は対象としない。
 """
 
 import json
@@ -51,7 +65,7 @@ import re
 import requests
 from bs4 import BeautifulSoup
 
-from coffee_parser import parse_product, detect_stock_status
+from coffee_parser import parse_product, detect_stock_status, normalize_processing_method
 
 SHOP_INFO = {
     "name": "豆工房コーヒーロースト宇都宮店",
@@ -82,6 +96,50 @@ WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
 WHITESPACE_PATTERN = re.compile(r"[\s　]+")
 TRAILING_PAREN_PATTERN = re.compile(r"[（(]([^（）()]+)[）)]\s*$")
 TENTOU_WATASHI = "【店頭お渡し】"
+FARM_LABEL_PATTERN = re.compile(
+    r"^(収穫地域|産地名|農園名|標高|風土|品種|精選方法|精製方法|乾燥方法|"
+    r"収穫期|収穫時期|生産量|グレード|香味特徴|香味表現|スクリーン)[：:]\s*(.*)$"
+)
+FARM_LABEL_TO_FIELD = {
+    "収穫地域": "region_detail",
+    "産地名": "region_detail",
+    "農園名": "farm_name",
+    "標高": "altitude_note",
+    "品種": "variety_note",
+}
+TERMINAL_LABEL_PATTERN = re.compile(
+    r"^(品名|原材料名|内容量|焙煎日|賞味期限|保存方法|使用上の注意|挽き方)[：:]"
+)
+
+
+def parse_flavor_and_farm(soup: BeautifulSoup) -> tuple[str | None, dict, str | None]:
+    """理由はモジュールdocstring参照。"""
+    el = soup.select_one("div.product-order-exp")
+    if not el:
+        return None, {}, None
+    flavor_lines = []
+    farm: dict = {}
+    processing_raw = None
+    collecting_flavor = True
+    for raw_line in el.get_text(separator="\n").split("\n"):
+        line = raw_line.strip()
+        if not line:
+            continue
+        if TERMINAL_LABEL_PATTERN.match(line):
+            break
+        m = FARM_LABEL_PATTERN.match(line)
+        if m:
+            collecting_flavor = False
+            label, value = m.group(1), m.group(2).strip()
+            if label in FARM_LABEL_TO_FIELD and value:
+                farm[FARM_LABEL_TO_FIELD[label]] = value
+            elif label in ("精選方法", "精製方法") and value:
+                processing_raw = value
+            continue
+        if collecting_flavor:
+            flavor_lines.append(line)
+    flavor_notes = "".join(flavor_lines) or None
+    return flavor_notes, farm, processing_raw
 
 
 def contains_keyword(title: str) -> bool:
@@ -129,11 +187,15 @@ def extract_fields(soup: BeautifulSoup, product_url: str) -> dict | None:
 
     price = product.get("sales_price_including_tax") or product.get("sales_price")
     structural_out_of_stock = product.get("stock_num") == 0
+    flavor_notes, farm, processing_raw = parse_flavor_and_farm(soup)
     return {
         "title": title,
         "price": int(price) if price is not None else None,
         "url": product_url,
         "structural_out_of_stock": structural_out_of_stock,
+        "flavor_notes": flavor_notes,
+        "farm": farm,
+        "processing_method_raw": processing_raw,
     }
 
 
@@ -192,9 +254,14 @@ def build_record(item: dict) -> dict | None:
         "origin_country": parsed["origin_country"],
         "origin_source": parsed["origin_source"],
         "designated_brand": parsed["designated_brand"],
-        "processing_method": parsed["processing_method"],
+        "processing_method": parsed["processing_method"] or normalize_processing_method(item.get("processing_method_raw")),
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "farm_name": item.get("farm", {}).get("farm_name"),
+        "region_detail": item.get("farm", {}).get("region_detail"),
+        "altitude_note": item.get("farm", {}).get("altitude_note"),
+        "variety_note": item.get("farm", {}).get("variety_note"),
+        "flavor_notes": item.get("flavor_notes"),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": item["price"],
