@@ -22,6 +22,17 @@ GRP")。curl/python-requests等は個別にDisallow: /指定があるが、User-
 コットンバッグ/メッセージカード(雑貨)が非対象。NON_BEAN_KEYWORDSで
 除外する。残り33件(定番ブレンド4種+デカフェ4種を含む単一農園等29種)を
 対象とする。
+
+【flavor_notes/farm_note(テイスティングノート・農園情報)について
+(2026-09-20追記)】
+実データ確認済み(30商品サンプル調査): 他のBASE系店舗と共通のテーマの
+p[class*="item-detail_description"]要素に、「【焙煎度合い】」「【農園】」
+「【地域】」「【品種】」「【精製】」「【標高】」ラベルの構造化情報に続けて
+「味わいについて」見出し以降に店主による風味紹介文、その後「農園・精製
+について」見出し以降に農園の背景説明が続く一貫した構造だったが、この
+要素自体を一切読んでいなかった。「味わいについて」〜「農園・精製に
+ついて」間の自由文をflavor_notesとして採用し、「農園」「地域」「品種」
+「精製」「標高」ラベルはfarm_note用フィールドに反映する。
 """
 
 import re
@@ -29,7 +40,7 @@ import re
 import requests
 from bs4 import BeautifulSoup
 
-from coffee_parser import parse_product, detect_stock_status
+from coffee_parser import parse_product, detect_stock_status, normalize_processing_method
 
 SHOP_INFO = {
     "name": "自家焙煎珈琲すいらて",
@@ -52,6 +63,67 @@ NON_BEAN_KEYWORDS = [
     "リネンフィルター", "コーヒースターターキット", "コットンバッグ", "メッセージカード",
 ]
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
+# 実データ確認済み: ラベル行は「【農園】値」(括弧・コロン無し)と
+# 「農園：値」(コロン区切り・括弧無し)の2形式が混在する
+FARM_LABEL_NAMES = "焙煎度合い|農園|地域|品種|精製|製法|標高|認証"
+BRACKET_LABEL_PATTERN = re.compile(rf"^【({FARM_LABEL_NAMES})】\s*(.*)$")
+BARE_LABEL_PATTERN = re.compile(rf"^({FARM_LABEL_NAMES})[：:]\s*(.*)$")
+ANY_BRACKET_PATTERN = re.compile(r"^【[^】]+】")
+FARM_LABEL_TO_FIELD = {
+    "農園": "farm_name",
+    "地域": "region_detail",
+    "品種": "variety_note",
+    "標高": "altitude_note",
+}
+# 理由はモジュールdocstring参照: ラベルブロックの直後に「味わいについて」
+# という見出しが挟まる商品と、見出し無しで直接本文が始まる商品が混在する
+FLAVOR_HEADING = "味わいについて"
+FLAVOR_STOP_HEADINGS = {
+    "農園について", "農園・精製について", "飲み方のおすすめ",
+    "ホットで楽しむ場合", "アイスコーヒーで楽しむ場合", "フードペアリング",
+}
+
+
+def parse_flavor_and_farm(soup: BeautifulSoup) -> tuple[str | None, dict, str | None]:
+    """理由はモジュールdocstring参照。"""
+    el = soup.select_one('p[class*="item-detail_description"]')
+    if not el:
+        return None, {}, None
+    farm: dict = {}
+    processing_raw = None
+    flavor_lines = []
+    mode = "label"
+    for raw_line in el.get_text(separator="\n").split("\n"):
+        line = raw_line.strip()
+        if not line:
+            continue
+        if line == FLAVOR_HEADING:
+            # 見出し自体はどのタイミングで出現しても本文に含めない
+            if mode == "label":
+                mode = "flavor"
+            continue
+        if mode == "label":
+            m = BRACKET_LABEL_PATTERN.match(line) or BARE_LABEL_PATTERN.match(line)
+            if m:
+                label, value = m.group(1).strip(), m.group(2).strip()
+                if label in FARM_LABEL_TO_FIELD and value:
+                    farm[FARM_LABEL_TO_FIELD[label]] = value
+                elif label in ("精製", "製法") and value:
+                    processing_raw = value
+                continue
+            if line.startswith("※"):
+                # ラベルブロック内の補足注記(例:デカフェ処理の説明)は無視して
+                # ラベルブロックの継続として扱う(本文開始とはみなさない)
+                continue
+            # ラベル形式に一致しない行に到達したらラベルブロック終了
+            mode = "flavor"
+        if mode == "flavor":
+            if line in FLAVOR_STOP_HEADINGS or line.startswith("※") or ANY_BRACKET_PATTERN.match(line):
+                mode = "done"
+                continue
+            flavor_lines.append(line)
+    flavor_notes = "".join(flavor_lines) or None
+    return flavor_notes, farm, processing_raw
 
 
 def fetch_page(url: str) -> BeautifulSoup:
@@ -117,9 +189,14 @@ def build_record(item: dict) -> dict | None:
         "origin_country": parsed["origin_country"],
         "origin_source": parsed["origin_source"],
         "designated_brand": parsed["designated_brand"],
-        "processing_method": parsed["processing_method"],
+        "processing_method": parsed["processing_method"] or normalize_processing_method(item.get("processing_method_raw")),
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "farm_name": item.get("farm", {}).get("farm_name"),
+        "region_detail": item.get("farm", {}).get("region_detail"),
+        "altitude_note": item.get("farm", {}).get("altitude_note"),
+        "variety_note": item.get("farm", {}).get("variety_note"),
+        "flavor_notes": item.get("flavor_notes"),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": item["price"],
@@ -136,13 +213,22 @@ def scrape_all_products() -> tuple[list[dict], list[dict]]:
     all_items = []
     for product_url in product_urls:
         try:
-            fields = extract_og_fields(fetch_page(product_url))
+            soup = fetch_page(product_url)
+            fields = extract_og_fields(soup)
         except requests.RequestException as e:
             print(f"[warn] 詳細ページ取得失敗: {product_url} ({e})")
             continue
         if not fields:
             continue
-        all_items.append({"title": fields["title"], "price": fields["price"], "url": product_url})
+        flavor_notes, farm, processing_raw = parse_flavor_and_farm(soup)
+        all_items.append({
+            "title": fields["title"],
+            "price": fields["price"],
+            "url": product_url,
+            "flavor_notes": flavor_notes,
+            "farm": farm,
+            "processing_method_raw": processing_raw,
+        })
 
     canonical_items = pick_canonical_items(all_items)
 
