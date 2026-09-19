@@ -31,6 +31,19 @@ JavaScriptテンプレート文字列のまま出力されていることがあ�
 HARIO製ミル・フィルター・サーバー・ドリッパー・ケトル等の器具、オリジナル
 手ぬぐい、ドリップパック・コールドブリュー等の別形態、ギフトセット/ギフトBOX
 商品が実データで確認できたため、一覧段階でキーワード除外する。
+
+【flavor_notes(テイスティングノート)について(2026-09-20追記)】
+実データ確認済み: div.product_descriptionの末尾付近に「【店長コメント】」
+という見出しがあり、その直後に店長による短いテイスティングコメントが
+書かれている商品が大半(40件中37件、さらに見出しの表記ゆれ「【店長 コメント】」
+(店長とコメントの間に全角/半角スペースが入る)を含めると38件)にわたって
+存在することを確認した。以前は一切読んでおらずflavor_notesが常にNoneに
+固定されていた。この見出し以降のテキストをそのままflavor_notesとして
+採用する。残り2件(Chorongi Factory・コスタリカ タラス LA CANDELILLA)は
+農園の来歴や精製工程を延々と紹介する長文のみで「店長コメント」見出しも
+テイスティングを表す一文も無く(Chorongi Factoryには「ジューシーで明るい
+酸を持ったコーヒー」という一文はあるが、これを安全に切り出す基準が
+無いため)見送り。
 """
 
 import json
@@ -77,6 +90,18 @@ IMG_TAG_PATTERN = re.compile(r"<img[^>]*/?>", re.IGNORECASE)
 WEIGHT_PRICE_PATTERN = re.compile(r"(\d+)\s*[gｇ]\s*[:：]\s*([\d,]+)\s*円")
 LABEL_PATTERN = re.compile(r"(生産地|標高|品種|精選方法)：\s*([^\n]+)")
 ROAST_HINT_TERMS = ["ビター", "ソフト", "ライト"]
+STORE_COMMENT_PATTERN = re.compile(r"【?\s*店長[\s　]*コメント\s*】?\s*(.*)", re.DOTALL)
+
+
+def extract_flavor_notes(description_text: str | None) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    if not description_text:
+        return None
+    m = STORE_COMMENT_PATTERN.search(description_text)
+    if not m:
+        return None
+    lines = [line.strip() for line in m.group(1).split("\n") if line.strip()]
+    return "".join(lines) or None
 
 
 def fetch_page(url: str) -> BeautifulSoup:
@@ -185,7 +210,7 @@ def build_record(product_url: str, colorme_product: dict, description_text: str)
         "roast_selectable": False,  # 焙煎は商品ごとに固定、注文時に選べるのは挽き方のみ(実データ確認済み)
         "post_processing_tags": parsed["post_processing_tags"],
         "farm_note": farm_note,
-        "flavor_notes": None,
+        "flavor_notes": extract_flavor_notes(description_text),
         "blend_components": [],
         "decaf_process": decaf_process,
         "price": price,
