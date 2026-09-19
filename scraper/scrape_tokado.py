@@ -33,14 +33,30 @@ weight_gとして採用する。
 
 robots.txt確認済み(2026-09時点): shop-pro.jp標準の記述で、本スクレイパーが
 使う一覧・詳細ページ(?mode=srh, ?pid=)は制限対象外。
+
+【flavor_notes・farm_note構成要素について(2026-09-19追記)】
+上記の理由で詳細ページへの個別アクセスを行っていなかったが、実データ確認
+(3商品)の結果、div.product__explain内に商品によって異なる2種類の
+構造化コンテンツが存在することが判明した: (a)「【焙煎人のテイスティング
+ノート】」という明示的な見出しに続くカッピングコメント、(b)「*味わいの
+特徴：」という見出しに続く風味描写、さらにその後に「【DATA】」見出しで
+「農園：/品種：/エリア：/標高：/精製：」のラベル：値が続く商品もある(COE
+ロット等の上位商品)。星評価の行(「香り　★★★★★★☆☆」等)はいずれの
+見出しの後にも続くことがあるため、風味描写の終端シグナルとして使う。
+3商品目のように在庫サービスパック等、どちらの見出しも無い商品は
+flavor_notesを取得しない(誤って保管方法の説明等を風味描写として扱わない
+ため)。詳細ページの個別取得(97商品、キャッシュ機構が無いため毎回)という
+コスト増を伴うが、本プロジェクトの他の同規模店舗でも同様の毎回詳細取得を
+行っており許容範囲と判断した。
 """
 
 import re
+import time
 
 import requests
 from bs4 import BeautifulSoup
 
-from coffee_parser import parse_product, detect_stock_status
+from coffee_parser import parse_product, detect_stock_status, normalize_processing_method
 
 SHOP_INFO = {
     "name": "豆香洞コーヒー",
@@ -66,6 +82,66 @@ PRICE_PATTERN = re.compile(r"([\d,]+)\s*円")
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
 TOTAL_COUNT_PATTERN = re.compile(r"全\s*(\d+)\s*商品")
 ITEMS_PER_PAGE = 12  # 実データ確認済み(2026-09時点。「全117商品 1-12表示」)
+CRAWL_DELAY_SECONDS = 1
+
+# 理由はモジュールdocstring参照
+TASTING_NOTE_HEADING_PATTERN = re.compile(r"【焙煎人のテイスティングノート】")
+FLAVOR_CHARACTERISTIC_PATTERN = re.compile(r"^\*?\s*味わいの特徴[：:]\s*(.*)$")
+STAR_RATING_LINE_PATTERN = re.compile(r"^(香り|酸味|苦味|甘味|ボディ)\s*★")
+DATA_HEADING_PATTERN = re.compile(r"【DATA】")
+DISCLAIMER_LINE_PATTERN = re.compile(r"^※")
+DATA_LABEL_PATTERN = re.compile(r"^([^:：\n]{1,6})[：:]\s*(.+)$")
+DATA_LABEL_TO_FIELD = {
+    "農園": "farm_name",
+    "品種": "variety_note",
+    "エリア": "region_detail",
+    "標高": "altitude_note",
+    "精製": "processing_method",
+}
+
+
+def parse_flavor_and_farm(soup: BeautifulSoup) -> tuple[str | None, dict]:
+    """理由はモジュールdocstring参照。"""
+    el = soup.select_one("div.product__explain")
+    if not el:
+        return None, {}
+    lines = [line.strip() for line in el.get_text(separator="\n").split("\n") if line.strip()]
+
+    flavor_notes = None
+    heading_idx = next((i for i, l in enumerate(lines) if TASTING_NOTE_HEADING_PATTERN.search(l)), None)
+    if heading_idx is None:
+        heading_idx = next((i for i, l in enumerate(lines) if FLAVOR_CHARACTERISTIC_PATTERN.match(l)), None)
+        lead_match = FLAVOR_CHARACTERISTIC_PATTERN.match(lines[heading_idx]) if heading_idx is not None else None
+        content = [lead_match.group(1)] if lead_match and lead_match.group(1) else []
+        start = heading_idx + 1 if heading_idx is not None else None
+    else:
+        content = []
+        start = heading_idx + 1
+
+    if start is not None:
+        for line in lines[start:]:
+            if DATA_HEADING_PATTERN.search(line) or STAR_RATING_LINE_PATTERN.match(line):
+                break
+            if DISCLAIMER_LINE_PATTERN.match(line):
+                continue
+            content.append(line)
+        flavor_notes = "".join(content) or None
+
+    fields: dict[str, str] = {}
+    data_idx = next((i for i, l in enumerate(lines) if DATA_HEADING_PATTERN.search(l)), None)
+    if data_idx is not None:
+        for line in lines[data_idx + 1:]:
+            if line.startswith("【"):
+                break
+            m = DATA_LABEL_PATTERN.match(line)
+            if not m:
+                continue
+            label = "".join(m.group(1).split())
+            field = DATA_LABEL_TO_FIELD.get(label)
+            if field:
+                fields.setdefault(field, m.group(2).strip())
+
+    return flavor_notes, fields
 
 
 def fetch_page(url: str) -> BeautifulSoup:
@@ -134,6 +210,10 @@ def build_record(item: dict) -> dict | None:
     weight_m = WEIGHT_PATTERN.search(title)
     weight_g = int(weight_m.group(1)) if weight_m else None
 
+    flavor_notes, desc_fields = parse_flavor_and_farm(fetch_page(item["product_url"]))
+    processing_method = desc_fields.get("processing_method")
+    processing_method = normalize_processing_method(processing_method) if processing_method else parsed["processing_method"]
+
     return {
         "shop_name": SHOP_INFO["name"],
         "raw_name": title,
@@ -141,11 +221,16 @@ def build_record(item: dict) -> dict | None:
         "origin_country": parsed["origin_country"],
         "origin_source": parsed["origin_source"],
         "designated_brand": parsed["designated_brand"],
-        "processing_method": parsed["processing_method"],
+        "processing_method": processing_method,
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
         "post_processing_tags": parsed["post_processing_tags"],
+        "farm_name": desc_fields.get("farm_name"),
+        "region_detail": desc_fields.get("region_detail"),
+        "altitude_note": desc_fields.get("altitude_note"),
+        "variety_note": desc_fields.get("variety_note"),
         "blend_components": [],
+        "flavor_notes": flavor_notes,
         "price": item["price"],
         "weight_g": weight_g,
         "stock_status": stock_status,
@@ -180,6 +265,7 @@ def scrape_all_products() -> tuple[list[dict], list[dict]]:
     non_bean_records = []
     for item in all_items:
         detail = build_record(item)
+        time.sleep(CRAWL_DELAY_SECONDS)
         if detail is None:
             continue
         if detail.get("non_bean"):

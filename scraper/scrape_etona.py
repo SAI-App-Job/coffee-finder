@@ -41,14 +41,29 @@ shopdetail ID)として登録されている(Shopifyのバリアント方式と�
 4,500円→4,860円、1,120円→1,210円)。231件全件の詳細ページを個別取得する
 コストを避けるため、一覧ページの税抜価格に対しこの換算式を適用して
 税込価格を算出する。
+
+【flavor_notes・farm_note構成要素について(2026-09-19追記)】
+上記の理由により詳細ページの個別取得(価格算出のため)は避けているが、
+重量違いの重複排除後は89銘柄まで絞られており(231件の生の一覧行ではなく)、
+かつdiff検知(is_unchanged)により2回目以降の実行では変更の無い銘柄の
+詳細ページ再取得が自然にスキップされるため、継続的なコスト増は初回のみで
+以降は無視できる(denimbisのように全件で説明取得が必須になるケースとは
+コスト構造が異なる)。実データ確認済み(2商品): div.detailTxt内に
+「★華やかな香りとしっかりとしたコク★」のような自由記述の風味描写に続けて
+「地域：/標高：/品種：/製法：」というラベル：値の行があり、さらにその後に
+無関係な品種一般解説(「モカ種とは・・・」等、対象商品と関係の無い定型解説文の
+可能性が高い)が続く商品がある。ラベル行の手前の自由記述のみをflavor_notesとして
+採用し、ラベル行以降は農園情報のみ取得することで、この無関係な解説文を
+自然に除外できる。
 """
 
 import re
+import time
 
 import requests
 from bs4 import BeautifulSoup
 
-from coffee_parser import parse_product, detect_stock_status
+from coffee_parser import parse_product, detect_stock_status, normalize_processing_method
 from previous_data import load_previous_products, is_unchanged
 
 SHOP_INFO = {
@@ -79,6 +94,18 @@ TRAILING_WEIGHT_PATTERN = re.compile(r"[\s　]*\d+\s*(?:kg|ｋｇ|g|ｇ)\s*$", r
 PRICE_PATTERN = re.compile(r"([\d,]+)\s*円")
 ITEM_ID_PATTERN = re.compile(r"/shopdetail/(\d+)/")
 TAX_RATE = 1.08
+# 理由はモジュールdocstring参照(flavor_notes追加取得により新たに詳細ページを
+# 個別取得するようになったため、他店舗と同様のクロール間隔を設ける)
+CRAWL_DELAY_SECONDS = 1
+
+# 理由はモジュールdocstring参照
+DESC_LABEL_PATTERN = re.compile(r"^([^:：\n]{1,10})[:：]\s*(.+)$")
+DESC_LABEL_TO_FIELD = {
+    "地域": "region_detail",
+    "標高": "altitude_note",
+    "品種": "variety_note",
+    "製法": "processing_method",
+}
 
 
 def fetch_page(url: str) -> BeautifulSoup:
@@ -135,6 +162,36 @@ def pick_canonical_items(all_items: list[dict]) -> list[dict]:
     return list(by_base_name.values())
 
 
+def parse_description_details(product_url: str) -> tuple[dict, str | None]:
+    """理由はモジュールdocstring参照(div.detailTxt内、ラベル行が始まる前の
+    自由記述をflavor_notesとして採用し、ラベル行からfarm_note構成要素を
+    取得する。ラベル行以降の無関係な解説文は対象としない)。"""
+    soup = fetch_page(product_url)
+    el = soup.select_one("div.detailTxt")
+    if not el:
+        return {}, None
+
+    fields: dict[str, str] = {}
+    intro_lines: list[str] = []
+    seen_label = False
+    for raw_line in el.get_text(separator="\n").split("\n"):
+        line = raw_line.strip()
+        if not line:
+            continue
+        m = DESC_LABEL_PATTERN.match(line)
+        if m:
+            label = "".join(m.group(1).split())
+            field = DESC_LABEL_TO_FIELD.get(label)
+            if field:
+                fields.setdefault(field, m.group(2).strip())
+                seen_label = True
+                continue
+        if not seen_label:
+            intro_lines.append(line)
+    flavor_notes = "".join(intro_lines) if intro_lines else None
+    return fields, flavor_notes
+
+
 def build_record(item: dict) -> dict:
     title = item["raw_name"]
     parsed = parse_product(title)
@@ -155,6 +212,9 @@ def build_record(item: dict) -> dict:
         }
 
     stock_status = detect_stock_status(title)
+    desc_fields, flavor_notes = parse_description_details(item["product_url"])
+    processing_method = desc_fields.get("processing_method")
+    processing_method = normalize_processing_method(processing_method) if processing_method else parsed["processing_method"]
 
     return {
         "shop_name": SHOP_INFO["name"],
@@ -163,11 +223,15 @@ def build_record(item: dict) -> dict:
         "origin_country": parsed["origin_country"],
         "origin_source": parsed["origin_source"],
         "designated_brand": parsed["designated_brand"],
-        "processing_method": parsed["processing_method"],
+        "processing_method": processing_method,
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
         "post_processing_tags": parsed["post_processing_tags"],
+        "region_detail": desc_fields.get("region_detail"),
+        "altitude_note": desc_fields.get("altitude_note"),
+        "variety_note": desc_fields.get("variety_note"),
         "blend_components": [],
+        "flavor_notes": flavor_notes,
         "price": price,
         "weight_g": item["weight_g"],
         "stock_status": stock_status,
@@ -197,6 +261,7 @@ def scrape_all_products() -> tuple[list[dict], list[dict]]:
             flavored_records.append(detail)
         else:
             records.append(detail)
+        time.sleep(CRAWL_DELAY_SECONDS)
 
     return records, flavored_records
 

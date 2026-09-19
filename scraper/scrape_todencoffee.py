@@ -19,6 +19,18 @@ python-requests等は個別にDisallow: /指定があるが、User-agent: *ル�
 複数回(在庫入れ替え時期違い等)登録されているように見えるが、
 それぞれ別商品ID(別URL)のため重複除去はせずそのまま個別商品として扱う
 (GONZO CAFE&BEANSと同じ、店舗側の運用に委ねる方針)。
+
+【商品説明(JSON-LDのdescription)について(2026-09-19追記)】
+実データ確認済み(4商品): descriptionには「透明感のある柑橘系の明るい酸が
+ここちよく」「ジャスミンを思わせる繊細な花や紅茶の香り」のような具体的な
+風味描写が冒頭の自由記述として入っており、その後に「品種：/精製：or
+製法：/地域：or産地：/標高：/推奨焙煎度：」というラベル：値の行が続く
+(ラベルとコロンの間にタブ文字が入る商品もある)。以前はJSON-LDから
+商品名・価格のみ取得し、この説明文自体を一切読んでいなかった。ラベル行が
+始まる前の自由記述をflavor_notesとして採用し、ラベル行からは
+farm_note構成要素(品種・精製方法・地域・標高)を取得する。ラベル行の後に
+さらに続く農園・産地の長い紹介文(サンプル4商品中2件で確認)は対象としない
+(flavor_notesとしては冒頭の風味描写で十分なため)。
 """
 
 import json
@@ -28,7 +40,7 @@ import time
 import requests
 from bs4 import BeautifulSoup
 
-from coffee_parser import parse_product, detect_stock_status
+from coffee_parser import parse_product, detect_stock_status, normalize_processing_method
 from previous_data import load_previous_products, is_unchanged
 
 SHOP_INFO = {
@@ -50,6 +62,43 @@ REQUEST_HEADERS = {
 
 NON_BEAN_KEYWORDS = ["ナイスカットG", "水出し珈琲ポット", "アーモンド"]
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
+
+# 理由はモジュールdocstring参照
+DESC_LABEL_PATTERN = re.compile(r"^([^:：\n]{1,10})[:：]\s*(.+)$")
+DESC_LABEL_TO_FIELD = {
+    "品種": "variety_note",
+    "精製": "processing_method",
+    "製法": "processing_method",
+    "地域": "region_detail",
+    "産地": "region_detail",
+    "標高": "altitude_note",
+}
+
+
+def parse_description_details(description: str | None) -> tuple[dict, str | None]:
+    """理由はモジュールdocstring参照(ラベル行が始まる前の自由記述を
+    flavor_notesとして採用し、ラベル行からfarm_note構成要素を取得する)。"""
+    if not description:
+        return {}, None
+    fields: dict[str, str] = {}
+    intro_lines: list[str] = []
+    seen_label = False
+    for raw_line in description.replace("\t", "").split("\n"):
+        line = raw_line.strip()
+        if not line:
+            continue
+        m = DESC_LABEL_PATTERN.match(line)
+        if m:
+            label = "".join(m.group(1).split())
+            field = DESC_LABEL_TO_FIELD.get(label)
+            if field:
+                fields.setdefault(field, m.group(2).strip())
+                seen_label = True
+                continue
+        if not seen_label:
+            intro_lines.append(line)
+    flavor_notes = "".join(intro_lines) if intro_lines else None
+    return fields, flavor_notes
 
 
 def fetch_page(url: str) -> BeautifulSoup:
@@ -101,6 +150,10 @@ def build_record(product_url: str, product: dict) -> dict | None:
     weight_m = WEIGHT_PATTERN.search(title)
     weight_g = int(weight_m.group(1)) if weight_m else None
 
+    desc_fields, flavor_notes = parse_description_details(product.get("description"))
+    processing_method = desc_fields.get("processing_method")
+    processing_method = normalize_processing_method(processing_method) if processing_method else parsed["processing_method"]
+
     return {
         "shop_name": SHOP_INFO["name"],
         "raw_name": title,
@@ -108,11 +161,15 @@ def build_record(product_url: str, product: dict) -> dict | None:
         "origin_country": parsed["origin_country"],
         "origin_source": parsed["origin_source"],
         "designated_brand": parsed["designated_brand"],
-        "processing_method": parsed["processing_method"],
+        "processing_method": processing_method,
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
         "post_processing_tags": parsed["post_processing_tags"],
+        "region_detail": desc_fields.get("region_detail"),
+        "altitude_note": desc_fields.get("altitude_note"),
+        "variety_note": desc_fields.get("variety_note"),
         "blend_components": [],
+        "flavor_notes": flavor_notes,
         "price": price,
         "weight_g": weight_g,
         "stock_status": stock_status,
