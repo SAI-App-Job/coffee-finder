@@ -36,6 +36,12 @@ Disallow: /、User-agent: *の明示的な制限は無し)。
 (例:「ロートレックブレンド 深煎り(イタリアンロースト) 100g」)。ただし
 念のため詳細ページの「重み」ラベル(delivery_option)があればそちらを優先する
 (scrape_yonemoto.pyと同じ優先順位)。
+
+【flavor_notes(テイスティングノート)について(2026-09-20追記)】
+実データ確認済み(38商品サンプル調査): おちゃのこネットのdiv.item_desc_text
+に店主による簡潔な風味紹介文があったが、この要素自体を一切読んでいなかった。
+豆工房ウイニングランと異なり産地ラベル(生産者：等)の混入はサンプル全件で
+確認されなかったため、そのまま採用する。
 """
 
 import re
@@ -88,8 +94,17 @@ def parse_weight_from_delivery_option(soup: BeautifulSoup) -> int | None:
     return None
 
 
+def parse_flavor_notes(soup: BeautifulSoup) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    el = soup.select_one("div.item_desc_text")
+    if not el:
+        return None
+    lines = [line.strip() for line in el.get_text(separator="\n").split("\n") if line.strip()]
+    return "".join(lines) or None
+
+
 def build_record(product_url: str, title: str, price: int | None, weight_g: int | None,
-                  category_hint: str) -> dict:
+                  category_hint: str, flavor_notes: str | None = None) -> dict:
     parsed = parse_product(title)
 
     if parsed["is_flavored"]:
@@ -119,6 +134,7 @@ def build_record(product_url: str, title: str, price: int | None, weight_g: int 
         "roast_level": parsed["roast_level"],
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
+        "flavor_notes": flavor_notes,
         "price": price,
         "weight_g": weight_g,
         "stock_status": stock_status,
@@ -144,7 +160,7 @@ def parse_product_detail(url: str, fallback_title: str = "", category_hint: str 
         m = WEIGHT_PATTERN.search(title)
         weight_g = int(m.group(1)) if m else None
 
-    return build_record(url, title, price, weight_g, category_hint)
+    return build_record(url, title, price, weight_g, category_hint, parse_flavor_notes(soup))
 
 
 def scrape_category_list(cid: str) -> list[dict]:
