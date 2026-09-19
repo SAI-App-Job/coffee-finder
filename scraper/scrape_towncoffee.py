@@ -30,6 +30,13 @@ variantsを持ち、価格は重量に比例(例: ブラジルサントスは100
 実データ確認済み: 一部商品名に「【売れ筋商品ランキング第N位】」の接頭辞
 が付いている。産地・銘柄の判定を妨げるため、RANKING_PREFIX_PATTERNで
 除去する。
+
+【flavor_notes(テイスティングノート)について(2026-09-19追記)】
+実データ確認済み(2商品): div.expl_block要素に「中性の豆で香りも良く
+風味がソフトである」「大粒の美しい豆、他では味わえない独特の甘い香りと
+風味」のような短い風味描写がある。一部商品ではその後に全銘柄共通の
+「※コーヒーの月消費量のペースに合わせて...」という購入量の案内文が
+続くため、「※」で始まる行の手前までをflavor_notesとして採用する。
 """
 
 import json
@@ -87,6 +94,25 @@ def pick_min_weight_variant(variants: list[dict]) -> dict | None:
         return None
     weighted.sort(key=lambda x: x[0])
     return weighted[0][1]
+
+
+FLAVOR_STOP_PATTERN = re.compile(r"^※")
+
+
+def parse_flavor_notes(soup: BeautifulSoup) -> str | None:
+    """理由はモジュールdocstring参照(div.expl_block、「※」行の手前まで)。"""
+    el = soup.select_one("div.expl_block")
+    if not el:
+        return None
+    lines = []
+    for raw_line in el.get_text(separator="\n").split("\n"):
+        line = raw_line.strip()
+        if not line:
+            continue
+        if FLAVOR_STOP_PATTERN.match(line):
+            break
+        lines.append(line)
+    return "".join(lines) or None
 
 
 def build_record(soup: BeautifulSoup, product_url: str) -> dict | None:
@@ -148,6 +174,7 @@ def build_record(soup: BeautifulSoup, product_url: str) -> dict | None:
         "roast_level": parsed["roast_level"],
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
+        "flavor_notes": parse_flavor_notes(soup),
         "price": int(price) if price is not None else None,
         "weight_g": weight_g,
         "stock_status": stock_status,
