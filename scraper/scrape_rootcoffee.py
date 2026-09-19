@@ -22,6 +22,16 @@ robots.txt確認済み(2026-09時点): 他のBASE系店舗と同一の記述(cur
 実データ確認済み: 同一銘柄が100g/200g/300gの3商品(別URL)として個別に
 掲載されている(重量選択式ではなく商品自体が別)。全商品を個別商品として
 そのまま収録し、weight_gは商品名からWEIGHT_PATTERNで抽出する。
+
+【flavor_notes/farm_note(テイスティングノート・農園情報)について
+(2026-09-20追記)】
+実データ確認済み: JSON-LD Productのdescriptionフィールドに、店主による
+1文の風味紹介文、空行、「生産国 : 」「地域 : 」「生産者 : 」「標高 : 」
+「加工 : 」「品種 : 」「収穫年 : 」「焙煎度 : 」ラベル(プレーンテキスト、
+HTMLタグ無し)が続く一貫した構造があったが、価格・在庫状況のみ取得し
+このフィールド自体を一切読んでいなかった。先頭の空行より前の1行を
+flavor_notesとして採用し、「地域」「生産者」「標高」「品種」「加工」
+ラベルはfarm_note用フィールドに反映する。
 """
 
 import json
@@ -30,7 +40,7 @@ import re
 import requests
 from bs4 import BeautifulSoup
 
-from coffee_parser import parse_product, detect_stock_status
+from coffee_parser import parse_product, detect_stock_status, normalize_processing_method
 from previous_data import load_previous_products, is_unchanged
 
 SHOP_INFO = {
@@ -52,6 +62,35 @@ REQUEST_HEADERS = {
 
 NON_BEAN_KEYWORDS = ["生豆"]
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
+FARM_LABEL_PATTERN = re.compile(r"^(生産国|地域|生産者|標高|加工|品種|収穫年|焙煎度)\s*[：:]\s*(.*)$")
+FARM_LABEL_TO_FIELD = {
+    "地域": "region_detail",
+    "生産者": "producer_name",
+    "標高": "altitude_note",
+    "品種": "variety_note",
+}
+
+
+def parse_flavor_and_farm(description: str) -> tuple[str | None, dict, str | None]:
+    """理由はモジュールdocstring参照。"""
+    if not description:
+        return None, {}, None
+    lines = [line.strip() for line in description.split("\n")]
+    flavor_notes = lines[0].strip() if lines and lines[0].strip() else None
+    farm: dict = {}
+    processing_raw = None
+    for line in lines[1:]:
+        if not line:
+            continue
+        m = FARM_LABEL_PATTERN.match(line)
+        if not m:
+            continue
+        label, value = m.group(1), m.group(2).strip()
+        if label in FARM_LABEL_TO_FIELD and value:
+            farm[FARM_LABEL_TO_FIELD[label]] = value
+        elif label == "加工" and value:
+            processing_raw = value
+    return flavor_notes, farm, processing_raw
 
 
 def fetch_page(url: str) -> BeautifulSoup:
@@ -102,6 +141,7 @@ def build_record(product_url: str, product: dict) -> dict | None:
 
     weight_m = WEIGHT_PATTERN.search(title)
     weight_g = int(weight_m.group(1)) if weight_m else None
+    flavor_notes, farm, processing_raw = parse_flavor_and_farm(product.get("description"))
 
     return {
         "shop_name": SHOP_INFO["name"],
@@ -110,9 +150,15 @@ def build_record(product_url: str, product: dict) -> dict | None:
         "origin_country": parsed["origin_country"],
         "origin_source": parsed["origin_source"],
         "designated_brand": parsed["designated_brand"],
-        "processing_method": parsed["processing_method"],
+        "processing_method": parsed["processing_method"] or normalize_processing_method(processing_raw),
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "farm_name": farm.get("farm_name"),
+        "producer_name": farm.get("producer_name"),
+        "region_detail": farm.get("region_detail"),
+        "altitude_note": farm.get("altitude_note"),
+        "variety_note": farm.get("variety_note"),
+        "flavor_notes": flavor_notes,
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": price,
