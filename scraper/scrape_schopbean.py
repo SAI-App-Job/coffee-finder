@@ -18,6 +18,17 @@ GRP")。curl/python-requests等は個別にDisallow: /指定があるが、User-
 実データ確認済み(全38件): 「＃０１」〜のように番号付きで産地・農園名・
 焙煎度・重量(100g)が明記されたストレート銘柄が中心。重量違いの重複は
 サンプル調査の範囲では見つからず、全て100g単品。
+
+【flavor_notes(テイスティングノート)について(2026-09-19追記)】
+実データ確認済み(2商品): p[class*="item-detail_description_"]
+(GONZO CAFE&BEANSと同じBASE共通テーマ、ハッシュ付きクラス名のため部分
+一致で選択)の冒頭に「「素朴で優しい甘み」と「大地の温もり」を感じさせる
+銘柄です。」のような紹介文があり、その後「1. 産地・栽培環境」のように
+番号付き見出しのセクションが続く(番号・見出し名・セクション数は商品ごとに
+異なり、AIによる個別生成と見られる。「3. 風味の特徴」「4. 浅煎りの新境地」
+等、風味に特化したセクションが含まれる商品もあるが、見出し名・出現位置が
+一定しないため機械的な抽出は行わず、番号付き見出しが始まる前の冒頭紹介文
+のみをflavor_notesとして採用する(確実性を優先))。
 """
 
 import re
@@ -54,6 +65,25 @@ def fetch_page(url: str) -> BeautifulSoup:
     return BeautifulSoup(resp.text, "html.parser")
 
 
+NUMBERED_HEADING_PATTERN = re.compile(r"^\d+\.\s")
+
+
+def parse_flavor_notes(soup: BeautifulSoup) -> str | None:
+    """理由はモジュールdocstring参照(番号付き見出しの手前までを採用)。"""
+    el = soup.select_one('p[class*="item-detail_description_"]')
+    if not el:
+        return None
+    lines = []
+    for raw_line in el.get_text(separator="\n").split("\n"):
+        line = raw_line.strip()
+        if not line:
+            continue
+        if NUMBERED_HEADING_PATTERN.match(line):
+            break
+        lines.append(line)
+    return "".join(lines) or None
+
+
 def extract_og_fields(soup: BeautifulSoup) -> dict | None:
     title_el = soup.select_one('meta[property="og:title"]')
     if not title_el or not title_el.get("content"):
@@ -63,7 +93,7 @@ def extract_og_fields(soup: BeautifulSoup) -> dict | None:
         return None
     price_el = soup.select_one('meta[property="product:price:amount"]')
     price = int(float(price_el["content"])) if price_el and price_el.get("content") else None
-    return {"title": title, "price": price}
+    return {"title": title, "price": price, "flavor_notes": parse_flavor_notes(soup)}
 
 
 def fetch_sitemap_urls() -> list[str]:
@@ -105,6 +135,7 @@ def build_record(item: dict) -> dict | None:
         "roast_level": parsed["roast_level"],
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
+        "flavor_notes": item.get("flavor_notes"),
         "price": item["price"],
         "weight_g": weight_g,
         "stock_status": stock_status,
@@ -126,7 +157,10 @@ def scrape_all_products() -> tuple[list[dict], list[dict]]:
             continue
         if not fields:
             continue
-        detail = build_record({"title": fields["title"], "price": fields["price"], "url": product_url})
+        detail = build_record({
+            "title": fields["title"], "price": fields["price"], "url": product_url,
+            "flavor_notes": fields["flavor_notes"],
+        })
         if detail is None:
             continue
         if detail.get("is_flavored"):

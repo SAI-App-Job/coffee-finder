@@ -24,6 +24,16 @@ python-requests等は個別にDisallow: /指定があるが、User-agent: *ル�
 セット」等の詰め合わせがコーヒー豆単品ではないためNON_BEAN_KEYWORDSで
 除外する。残りは同一銘柄の100g/150g/200g重量違いを含むストレート豆・
 ブレンド。
+
+【flavor_notes・farm_note構成要素について(2026-09-19追記)】
+実データ確認済み(2商品): p[class*="item-detail_description"]
+(GONZO CAFE&BEANS等と同じBASE共通テーマ)の冒頭に「華やかな果実感、
+イチゴジャムやフルーツジュースのような甘い香りと強めの酸味」のような
+具体的な風味描写があり、続けて「【生産地情報】」「【生産情報】」のように
+「【生産」で始まる見出し(商品によって表記が微妙に異なる)の後に「地域：/
+産地：/所在：/標高：/生産者：/所有：/農園：/農地：/品種：/精製：/精選：」
+というラベル：値の行が並ぶ。「【」で始まる見出し行全般を境界として、
+それより前の自由記述をflavor_notesとして採用する。
 """
 
 import re
@@ -31,7 +41,7 @@ import re
 import requests
 from bs4 import BeautifulSoup
 
-from coffee_parser import parse_product, detect_stock_status
+from coffee_parser import parse_product, detect_stock_status, normalize_processing_method
 from previous_data import load_previous_products, is_unchanged
 
 SHOP_INFO = {
@@ -63,6 +73,49 @@ def fetch_page(url: str) -> BeautifulSoup:
     return BeautifulSoup(resp.text, "html.parser")
 
 
+HEADING_PATTERN = re.compile(r"^【.+】$")
+DESC_LABEL_PATTERN = re.compile(r"^([^:：\n]{1,6})[：:]\s*(.+)$")
+DESC_LABEL_TO_FIELD = {
+    "地域": "region_detail", "産地": "region_detail", "所在": "region_detail",
+    "標高": "altitude_note",
+    "生産者": "producer_name", "所有": "producer_name",
+    "農園": "farm_name", "農地": "farm_name",
+    "品種": "variety_note",
+    "精製": "processing_method", "精選": "processing_method",
+    "規格": "grade",
+}
+
+
+def parse_description_details(soup: BeautifulSoup) -> tuple[dict, str | None]:
+    """理由はモジュールdocstring参照(「【」見出し行の手前までを
+    flavor_notesとして採用し、見出し以降のラベル行からfarm_note構成要素を
+    取得する)。"""
+    el = soup.select_one('p[class*="item-detail_description"]')
+    if not el:
+        return {}, None
+    fields: dict[str, str] = {}
+    intro_lines: list[str] = []
+    seen_heading = False
+    for raw_line in el.get_text(separator="\n").split("\n"):
+        line = raw_line.strip()
+        if not line:
+            continue
+        if HEADING_PATTERN.match(line):
+            seen_heading = True
+            continue
+        m = DESC_LABEL_PATTERN.match(line)
+        if seen_heading and m:
+            label = "".join(m.group(1).split())
+            field = DESC_LABEL_TO_FIELD.get(label)
+            if field:
+                fields.setdefault(field, m.group(2).strip())
+            continue
+        if not seen_heading:
+            intro_lines.append(line)
+    flavor_notes = "".join(intro_lines) if intro_lines else None
+    return fields, flavor_notes
+
+
 def extract_og_fields(soup: BeautifulSoup) -> dict | None:
     title_el = soup.select_one('meta[property="og:title"]')
     if not title_el or not title_el.get("content"):
@@ -70,7 +123,8 @@ def extract_og_fields(soup: BeautifulSoup) -> dict | None:
     title = title_el["content"].split(" | ")[0].strip()
     price_el = soup.select_one('meta[property="product:price:amount"]')
     price = int(float(price_el["content"])) if price_el and price_el.get("content") else None
-    return {"title": title, "price": price}
+    desc_fields, flavor_notes = parse_description_details(soup)
+    return {"title": title, "price": price, "desc_fields": desc_fields, "flavor_notes": flavor_notes}
 
 
 def build_record(product_url: str, fields: dict) -> dict | None:
@@ -95,6 +149,10 @@ def build_record(product_url: str, fields: dict) -> dict | None:
     weight_m = WEIGHT_PATTERN.search(title)
     weight_g = int(weight_m.group(1)) if weight_m else None
 
+    desc_fields = fields.get("desc_fields") or {}
+    processing_method = desc_fields.get("processing_method")
+    processing_method = normalize_processing_method(processing_method) if processing_method else parsed["processing_method"]
+
     return {
         "shop_name": SHOP_INFO["name"],
         "raw_name": title,
@@ -102,11 +160,17 @@ def build_record(product_url: str, fields: dict) -> dict | None:
         "origin_country": parsed["origin_country"],
         "origin_source": parsed["origin_source"],
         "designated_brand": parsed["designated_brand"],
-        "processing_method": parsed["processing_method"],
-        "grade": parsed["grade"],
+        "processing_method": processing_method,
+        "grade": desc_fields.get("grade") or parsed["grade"],
         "roast_level": parsed["roast_level"],
         "post_processing_tags": parsed["post_processing_tags"],
+        "farm_name": desc_fields.get("farm_name"),
+        "producer_name": desc_fields.get("producer_name"),
+        "region_detail": desc_fields.get("region_detail"),
+        "altitude_note": desc_fields.get("altitude_note"),
+        "variety_note": desc_fields.get("variety_note"),
         "blend_components": [],
+        "flavor_notes": fields.get("flavor_notes"),
         "price": fields["price"],
         "weight_g": weight_g,
         "stock_status": stock_status,
