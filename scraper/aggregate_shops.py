@@ -891,7 +891,13 @@ def build_manual_product(
         "unit_note": None,
         "stock_status": stock_status,
         "out_of_stock": stock_status != "販売中",
-        "decaf_process": raw_product.get("decafProcess"),
+        # 理由はinfer_decaf_process()のコメント参照。手動入力店舗もbuild_manual_product()が
+        # 毎回decafProcess欄から作り直すため、自動スクレイピング店舗と同じ推定ロジックを
+        # 適用しないと商品名にデカフェ表記があっても反映されない(実データで発覚: KISSA
+        # ZEROICHI等)
+        "decaf_process": infer_decaf_process(
+            {"raw_name": raw_product["raw_name"], "decaf_process": raw_product.get("decafProcess")}
+        ),
         "product_url": raw_product.get("productUrl"),
         "map_query": shop_map_query,
         "scraped_at": None,

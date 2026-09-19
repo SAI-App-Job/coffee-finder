@@ -37,6 +37,22 @@ robots.txt確認済み(2026-09時点): Shopify標準のrobots.txtでAllow: /
 組み合わせバリアントを持つが、variants.gramsは全て0固定(信頼できない、
 バタリーコーヒーと同じ現象)。バリアントのtitle文字列(例:「250g / 豆」)
 から正規表現で重量を抽出し、「豆」を含むバリアントを優先して代表を選ぶ。
+
+【業務用コーヒー機器の混入について(2026-09-19追記)】
+実データ再確認の結果、上記【非コーヒー豆商品の除外について】は本スクレイパー
+実装当時(全72件)のスナップショットに基づく記述で、その後this店舗が
+BONMAC・BUNN・Franke・Egro・Dr.Coffee・カフィテス等の業務用コーヒー機器
+(グラインダー・エスプレッソマシン・サイフォン・ペーパーフィルター等)を
+大量に取り扱うようになっており、現在は/products.json(250件)の大半(212件)が
+これらの機器であることが判明した。機器のタイトルは銘柄名がブランド名の
+数だけ存在し、キーワードの列挙では網羅できないため、Shopifyのproduct_type
+フィールドで判定する(実データ確認済み: 機器は例外なくグラインダー/
+セミオートエスプレッソマシン/ペーパーフィルター/全自動エスプレッソマシン/
+コーヒー関連器具/その他周辺機器/洗浄剤/ブルーワー/デカンタ・サーバー/
+オートタンパー/アンダーカウンター/焙煎機/カフィテス/全自動ドリップ式
+コーヒーマシン/サイフォン/オートスチーマーのいずれかに分類されており、
+豆商品は全件product_type未設定(空文字列)。EQUIPMENT_PRODUCT_TYPESに
+一致する場合は非コーヒー豆として除外する)。
 """
 
 import re
@@ -64,6 +80,14 @@ NON_BEAN_KEYWORDS = [
     "カフェオレベース", "キャニスター", "ハリオ", "メリタ", "プラナチャイ",
     "セット", "アメリカンプレス", "リキッドアイスコーヒー",
 ]
+# 理由はモジュールdocstring参照(業務用コーヒー機器の混入)
+EQUIPMENT_PRODUCT_TYPES = {
+    "グラインダー", "セミオートエスプレッソマシン", "ペーパーフィルター",
+    "全自動エスプレッソマシン", "コーヒー関連器具", "その他周辺機器", "洗浄剤",
+    "ブルーワー", "デカンタ・サーバー", "オートタンパー", "アンダーカウンター",
+    "焙煎機", "カフィテス", "全自動ドリップ式コーヒーマシン", "サイフォン",
+    "オートスチーマー",
+}
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
 
 
@@ -94,6 +118,8 @@ def pick_canonical_variant(variants: list[dict]) -> dict | None:
 def build_record(product: dict) -> dict | None:
     title = (product.get("title") or "").strip()
     if not title or any(kw in title for kw in NON_BEAN_KEYWORDS):
+        return None
+    if (product.get("product_type") or "") in EQUIPMENT_PRODUCT_TYPES:
         return None
 
     parsed = parse_product(title)
