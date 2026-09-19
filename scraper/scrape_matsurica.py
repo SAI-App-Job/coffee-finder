@@ -25,8 +25,23 @@ shopdetailリンクが揃っており(id="000000000001"〜"000000000070"、一�
 
 【商品名・重量について】
 実データ確認済み: 商品名に重量(100g等)が末尾に含まれる(例:「マスターブレンド
-中深煎り 100g」)。産地情報の構造化された説明欄は無く、商品名のみから
-coffee_parser.parse_product()で産地・焙煎度等を判定する。
+中深煎り 100g」)。産地・焙煎度等は商品名のみからcoffee_parser.parse_product()
+で判定する。
+
+【flavor_notes(テイスティングノート)について(2026-09-20追記)】
+実データ確認済み: 上記の「産地情報の構造化された説明欄は無く」という記述は
+不正確だった。商品詳細ページの<meta property="og:description">に、
+商品ごとの個別の説明文(産地・農園・品種等の紹介と、苦味・酸味・コク・香り
+等のテイスティング表現を含む自由記述、全サンプルで確認)が入っている
+(例:「世界的高級ブランド「ブラジル・セラード産」のコーヒーは、ブラジル
+中東部に広がるセラード高原（標高1,250M)で栽培されています。100年の歴史を
+持つ名門カフェ・ランジャ農園で手摘み収獲されたアラビカ種ムンドノーボ
+（新世界の意）品種の完熟豆は豊かなフレーバーと苦味・酸味のバランスが良く
+雑味のないクリアーな味の逸品です。」)。ラベル形式ではなく自由記述の
+プロース文のため、farm_note用フィールドへの構造的な分解は行わず、全文を
+flavor_notesとして採用する(scrape_subarucoffee.pyと同じ方式)。content内の
+改行はHTML側の任意の折り返し位置(単語の途中で改行されることもある)であり、
+日本語文は単語間にスペースを要さないため、単純に除去して連結する。
 """
 
 import re
@@ -82,6 +97,15 @@ def fetch_product_ids() -> list[str]:
     return ids
 
 
+def extract_flavor_notes(soup: BeautifulSoup) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    meta = soup.select_one('meta[property="og:description"]')
+    if not meta or not meta.get("content"):
+        return None
+    content = "".join(line.strip() for line in meta["content"].split("\n"))
+    return content.strip() or None
+
+
 def extract_fields(soup: BeautifulSoup) -> dict | None:
     text = soup.get_text("\n")
     name_m = NAME_PATTERN.search(text)
@@ -92,7 +116,7 @@ def extract_fields(soup: BeautifulSoup) -> dict | None:
     price_m = PRICE_PATTERN.search(str(soup))
     price = int(price_m.group(1).replace(",", "")) if price_m else None
 
-    return {"title": title, "price": price}
+    return {"title": title, "price": price, "flavor_notes": extract_flavor_notes(soup)}
 
 
 def build_record(item: dict) -> dict | None:
@@ -126,6 +150,7 @@ def build_record(item: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": item.get("flavor_notes"),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": item["price"],
