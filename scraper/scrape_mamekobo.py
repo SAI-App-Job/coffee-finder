@@ -27,6 +27,19 @@ serpstatbotを個別にDisallow: /。それ以外は制限なし。
 「ステッカーシール」・複数の「ドリップバッグ」商品がコーヒー豆単品では
 ないためNON_BEAN_KEYWORDSで除外する。残り約53件は同一銘柄の200g/1kg
 (まとめ買い30%OFF)等の重量違いを含むストレート・ブレンド。
+
+【flavor_notes・farm_note構成要素について(2026-09-19追記)】
+実データ確認済み(pid=126178152): div.product-order-exp.clearfix要素の
+冒頭に「花の様な香りとスパイシーでエキゾチックな酸味、まろやかな甘味の
+後味。クリアーな口当たり。」という具体的な風味描写があり、続けて農園の
+歴史的背景の自由記述、その後「◆内容量/◆産地/◆品種/◆精選方法/◆焙煎度/
+◆味の傾向/◆チャート」という「◆見出し」区切りのセクションが並ぶ。
+「◆産地」セクションには「コロンビア・ウイラ県サン アグスティン村」の
+次の行に「標高：1800m」が来る(◆見出しを持たず産地セクション内に埋め込み)。
+以前はJSON-LDのColorme変数から商品名・価格のみ取得し、この要素自体を
+一切読んでいなかった。最初の◆見出しに達するまでの自由記述をflavor_notes
+として採用し、◆産地/◆品種/◆精選方法セクションと埋め込みの「標高：」行
+からfarm_note構成要素を取得する。
 """
 
 import json
@@ -35,7 +48,7 @@ import re
 import requests
 from bs4 import BeautifulSoup
 
-from coffee_parser import parse_product, detect_stock_status
+from coffee_parser import parse_product, detect_stock_status, normalize_processing_method
 from previous_data import load_previous_products, is_unchanged
 
 SHOP_INFO = {
@@ -84,6 +97,45 @@ def parse_weight(title: str) -> int | None:
     return int(g_m.group(1)) if g_m else None
 
 
+# 理由はモジュールdocstring参照
+SECTION_HEADING_PATTERN = re.compile(r"^◆(.+)$")
+SECTION_TO_FIELD = {"産地": "region_detail", "品種": "variety_note", "精選方法": "processing_method"}
+ALTITUDE_LINE_PATTERN = re.compile(r"標高[：:]\s*(.+)")
+
+
+def parse_description_details(soup: BeautifulSoup) -> tuple[dict, str | None]:
+    """理由はモジュールdocstring参照。"""
+    el = soup.select_one("div.product-order-exp.clearfix")
+    if not el:
+        return {}, None
+
+    fields: dict[str, str] = {}
+    intro_lines: list[str] = []
+    current_field = None
+    section_started = False
+    for raw_line in el.get_text(separator="\n").split("\n"):
+        line = raw_line.strip()
+        if not line:
+            continue
+        heading_m = SECTION_HEADING_PATTERN.match(line)
+        if heading_m:
+            section_started = True
+            current_field = SECTION_TO_FIELD.get(heading_m.group(1).strip())
+            continue
+        altitude_m = ALTITUDE_LINE_PATTERN.match(line)
+        if altitude_m:
+            fields.setdefault("altitude_note", altitude_m.group(1).strip())
+            continue
+        if current_field:
+            fields[current_field] = (fields.get(current_field, "") + line).strip()
+            continue
+        if not section_started:
+            intro_lines.append(line)
+
+    flavor_notes = "".join(intro_lines) if intro_lines else None
+    return fields, flavor_notes
+
+
 def build_record(soup: BeautifulSoup, product_url: str) -> dict | None:
     script_text = ""
     for script in soup.find_all("script"):
@@ -123,6 +175,10 @@ def build_record(soup: BeautifulSoup, product_url: str) -> dict | None:
     structural_out_of_stock = product.get("stock_num") == 0
     stock_status = detect_stock_status(title, structural_out_of_stock)
 
+    desc_fields, flavor_notes = parse_description_details(soup)
+    processing_method = desc_fields.get("processing_method")
+    processing_method = normalize_processing_method(processing_method) if processing_method else parsed["processing_method"]
+
     return {
         "shop_name": SHOP_INFO["name"],
         "raw_name": title,
@@ -130,11 +186,15 @@ def build_record(soup: BeautifulSoup, product_url: str) -> dict | None:
         "origin_country": parsed["origin_country"],
         "origin_source": parsed["origin_source"],
         "designated_brand": parsed["designated_brand"],
-        "processing_method": parsed["processing_method"],
+        "processing_method": processing_method,
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
         "post_processing_tags": parsed["post_processing_tags"],
+        "region_detail": desc_fields.get("region_detail"),
+        "altitude_note": desc_fields.get("altitude_note"),
+        "variety_note": desc_fields.get("variety_note"),
         "blend_components": [],
+        "flavor_notes": flavor_notes,
         "price": int(price) if price is not None else None,
         "weight_g": weight_g,
         "stock_status": stock_status,

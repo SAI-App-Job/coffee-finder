@@ -53,6 +53,18 @@ roast_hintとして保持しroast_levelには反映しない
 JSON-LD(schema.org Product)のoffersにprice・availability
 (http://schema.org/InStock 等)が構造化されている(MARUTAKE COFFEE BEANS・
 隠房と同じBASE標準テンプレート)。
+
+【flavor_notes(テイスティングノート)について(2026-09-19追記)】
+実データ再確認の結果、上記【商品説明文について】は産地判定の可否
+(構造化ラベルの有無)についての記述であり、風味情報の有無は未確認だった。
+実際にはp[class*="item-detail_description_"]要素(BASE共通テーマの説明文
+要素、ハッシュ付きクラス名のため部分一致で選択)の冒頭に「ハニープロセスと
+呼ばれるコーヒー豆の精製方法で精製されたコーヒー豆です。名前の通り優れた
+甘味と心地よい酸味が特長のコーヒーで、フルーティーで明るい風味を
+お楽しみいただけます。」のような具体的な風味描写があり(2商品で確認済み、
+例外なく存在)、その後に「■ サイズ/バリエーション」から始まる全銘柄共通の
+定型セクション(内容量・原材料・保管方法・送料等)が続く。最初の「■」の
+手前までをflavor_notesとして採用する。
 """
 
 import json
@@ -127,6 +139,22 @@ def parse_weight_from_title(title: str) -> int | None:
     return int(m.group(1)) if m else None
 
 
+def parse_flavor_notes(soup: BeautifulSoup) -> str | None:
+    """理由はモジュールdocstring参照(最初の「■」見出しの手前までを採用)。"""
+    el = soup.select_one('p[class*="item-detail_description_"]')
+    if not el:
+        return None
+    lines = []
+    for raw_line in el.get_text(separator="\n").split("\n"):
+        line = raw_line.strip()
+        if not line:
+            continue
+        if line.startswith("■"):
+            break
+        lines.append(line)
+    return "".join(lines) or None
+
+
 def find_roast_hint(title: str) -> str | None:
     for term in ROAST_HINT_TERMS:
         if term in (title or ""):
@@ -134,7 +162,7 @@ def find_roast_hint(title: str) -> str | None:
     return None
 
 
-def build_record(product_url: str, product: dict) -> dict:
+def build_record(product_url: str, product: dict, soup: BeautifulSoup) -> dict:
     title = (product.get("name") or "").strip()
 
     if any(kw in title for kw in NON_BEAN_KEYWORDS):
@@ -186,6 +214,7 @@ def build_record(product_url: str, product: dict) -> dict:
         "roast_hint": roast_hint,
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
+        "flavor_notes": parse_flavor_notes(soup),
         "price": price,
         "weight_g": parse_weight_from_title(title),
         "stock_status": stock_status,
@@ -204,7 +233,7 @@ def parse_product_detail(url: str) -> dict:
             "non_bean": True,
             "product_url": url,
         }
-    return build_record(url, product)
+    return build_record(url, product, soup)
 
 
 def fetch_sitemap_urls() -> list[str]:

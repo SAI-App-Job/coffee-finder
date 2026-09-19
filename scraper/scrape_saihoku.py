@@ -41,6 +41,18 @@ meta-externalagentのみ個別にDisallow: /、それ以外は制限なし。
 【価格・重量の取得方法について】
 実データ確認済み: 商品名の先頭〈焙煎豆XXXg〉に重量が明記され、価格は
 OGPメタタグ(product:price:amount、税込)から取得できる。
+
+【flavor_notes・farm_note構成要素について(2026-09-19追記)】
+実データ確認済み(product/1): div.item_desc_text.custom_desc要素に
+「ブラジルらしいナッツフレーバーと甘味、チョコレートのようなフレーバーが
+魅力です。」という風味描写(冒頭の自由記述)に続けて「生産国 ：/生産地 ：/
+品　種 ：/精選方法：/規　格 ：」というラベル：値の行が並ぶ(ラベルと
+コロンの間に全角スペースでの桁揃えが入る)。その後の「【味わい】」見出しは
+焙煎度ごとの風味描写(浅煎り/中煎り/中深煎り/深煎り別)のため、単一の
+flavor_notesとしては採用せず、ラベル行が始まる前の冒頭自由記述のみを
+flavor_notesとして採用する。以前は商品一覧取得時にタイトル・価格のみ
+取得しており、この要素自体を一切読んでいなかった(canonical商品選定後に
+改めて詳細ページを取得する)。
 """
 
 import re
@@ -49,7 +61,7 @@ import unicodedata
 import requests
 from bs4 import BeautifulSoup
 
-from coffee_parser import parse_product, detect_stock_status
+from coffee_parser import parse_product, detect_stock_status, normalize_processing_method
 from previous_data import load_previous_products, is_unchanged
 
 SHOP_INFO = {
@@ -73,6 +85,43 @@ ROASTED_BEAN_PREFIX_PATTERN = re.compile(r"^〈焙煎豆(\d+)g")
 NON_BEAN_KEYWORDS = ["個セット"]
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
 WEIGHT_TOKEN_PATTERN = re.compile(r"^〈焙煎豆\d+g〉")
+
+# 理由はモジュールdocstring参照
+DESC_LABEL_PATTERN = re.compile(r"^([^:：\n]{1,10})[：:]\s*(.+)$")
+DESC_LABEL_TO_FIELD = {
+    "生産地": "region_detail",
+    "品種": "variety_note",
+    "精選方法": "processing_method",
+    "規格": "grade",
+}
+
+
+def parse_description_details(product_url: str) -> tuple[dict, str | None]:
+    """理由はモジュールdocstring参照(ラベル行が始まる前の自由記述を
+    flavor_notesとして採用し、【味わい】以降の焙煎度別描写は対象としない)。"""
+    soup = fetch_page(product_url)
+    el = soup.select_one("div.item_desc_text.custom_desc")
+    if not el:
+        return {}, None
+    fields: dict[str, str] = {}
+    intro_lines: list[str] = []
+    seen_label = False
+    for raw_line in el.get_text(separator="\n").split("\n"):
+        line = raw_line.strip()
+        if not line:
+            continue
+        m = DESC_LABEL_PATTERN.match(line)
+        if m:
+            label = "".join(m.group(1).split())
+            field = DESC_LABEL_TO_FIELD.get(label)
+            if field:
+                fields.setdefault(field, m.group(2).strip())
+            seen_label = True
+            continue
+        if not seen_label:
+            intro_lines.append(line)
+    flavor_notes = "".join(intro_lines) if intro_lines else None
+    return fields, flavor_notes
 
 
 def fetch_page(url: str) -> BeautifulSoup:
@@ -138,6 +187,10 @@ def build_record(item: dict) -> dict | None:
     weight_m = ROASTED_BEAN_PREFIX_PATTERN.search(title)
     weight_g = int(weight_m.group(1)) if weight_m else None
 
+    desc_fields, flavor_notes = parse_description_details(item["url"])
+    processing_method = desc_fields.get("processing_method")
+    processing_method = normalize_processing_method(processing_method) if processing_method else parsed["processing_method"]
+
     return {
         "shop_name": SHOP_INFO["name"],
         "raw_name": title,
@@ -145,11 +198,14 @@ def build_record(item: dict) -> dict | None:
         "origin_country": parsed["origin_country"],
         "origin_source": parsed["origin_source"],
         "designated_brand": parsed["designated_brand"],
-        "processing_method": parsed["processing_method"],
-        "grade": parsed["grade"],
+        "processing_method": processing_method,
+        "grade": desc_fields.get("grade") or parsed["grade"],
         "roast_level": parsed["roast_level"],
         "post_processing_tags": parsed["post_processing_tags"],
+        "region_detail": desc_fields.get("region_detail"),
+        "variety_note": desc_fields.get("variety_note"),
         "blend_components": [],
+        "flavor_notes": flavor_notes,
         "price": item["price"],
         "weight_g": weight_g,
         "stock_status": stock_status,
