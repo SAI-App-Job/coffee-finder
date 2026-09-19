@@ -34,6 +34,14 @@ User-agent: *に対し/secure/・/cart/のみDisallow。AhrefsBot等一部
 個別商品登録されている。商品名から末尾の重量表記(1kgの「kg」2文字も
 正しく除去)を除き、空白を全て詰めた基準名でグルーピングし、最小重量
 (100g)を代表として採用する。
+
+【flavor_notes(テイスティングノート)について(2026-09-20追記)】
+実データ確認済み(サンプル調査): カラーミーショップのJS変数(var Colorme)
+には商品説明が含まれず、HTML側のdiv.product-order-expにのみ店主による
+産地紹介・風味紹介文がある。以前はこの要素自体を一切読んでいなかった。
+基本的に全文が風味紹介の自由記述だが、詰め合わせ商品では末尾に
+「1. 銘柄名200g x 2」のような数字付きの内容一覧が続くことがあるため、
+数字+ピリオドで始まる行や「※」「▼」「■」で始まる行より前を採用する。
 """
 
 import json
@@ -69,6 +77,23 @@ NON_BEAN_KEYWORDS = [
 ]
 COLORME_PATTERN = re.compile(r"var Colorme\s*=\s*(\{.*?\});", re.DOTALL)
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*(kg|ｋｇ|[gｇ])", re.IGNORECASE)
+FLAVOR_STOP_PATTERN = re.compile(r"^(\d+[.．]|※|▼|■)")
+
+
+def parse_flavor_notes(soup: BeautifulSoup) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    el = soup.select_one("div.product-order-exp")
+    if not el:
+        return None
+    lines = []
+    for raw_line in el.get_text(separator="\n").split("\n"):
+        line = raw_line.strip()
+        if not line:
+            continue
+        if FLAVOR_STOP_PATTERN.match(line):
+            break
+        lines.append(line)
+    return "".join(lines) or None
 
 
 def fetch_page(url: str) -> BeautifulSoup:
@@ -109,7 +134,12 @@ def extract_fields(soup: BeautifulSoup) -> dict | None:
         return None
 
     structural_out_of_stock = product.get("stock_num") == 0
-    return {"title": title, "price": price, "structural_out_of_stock": structural_out_of_stock}
+    return {
+        "title": title,
+        "price": price,
+        "structural_out_of_stock": structural_out_of_stock,
+        "flavor_notes": parse_flavor_notes(soup),
+    }
 
 
 def weight_key(title: str) -> float:
@@ -171,6 +201,7 @@ def build_record(item: dict, product_url: str) -> dict | None:
         "roast_level": parsed["roast_level"],
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
+        "flavor_notes": item.get("flavor_notes"),
         "price": item["price"],
         "weight_g": weight_g,
         "stock_status": stock_status,
