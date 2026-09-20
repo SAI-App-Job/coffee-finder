@@ -33,12 +33,20 @@ Noneのままとなるが、raw_nameに数値表記自体は保持されるた�
   - 「江東堂 生地缶 長型 300g」「江東堂 生地缶 平型 200g」2件: 豆保存用の
     キャニスター(缶)で、コーヒー豆そのものではない
   - 「デーツ」「ブラックレーズン」「グリーンレーズン」「ピスタチオ」
-    (いずれも天日干しドライフルーツ・ナッツ)、「金時いもチップス」
-    「紫いもチップス」「黄金いも（笹切り）」「金時いもチップス・うす塩味」
-    「紅はるかチップス」「じゃがチップス」(国産手揚げ芋チップス各種)、
-    「パスタスナック・るんるんしお味」「麩市 地がらし」の計12件: コーヒーと
-    無関係な食品・菓子類
+    「ドライいちじく」(いずれも天日干しドライフルーツ・ナッツ)、「金時
+    いもチップス」「紫いもチップス」「黄金いも（笹切り）」「金時いも
+    チップス・うす塩味」「紅はるかチップス」「じゃがチップス」(国産
+    手揚げ芋チップス各種)、「パスタスナック・るんるんしお味」「麩市
+    地がらし」の計13件: コーヒーと無関係な食品・菓子類
 残り13件(いずれも焙煎豆の単品・ブレンド、100g or 80g)を対象とする。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: 詳細ページのdiv.p-product-explain__bodyに商品名
+(title要素と同一)・「品種:」「栽培地:」「標高:」「精製:」「農園:」等の
+構造化スペック行に続けて産地の背景ストーリーとテイスティング表現が
+地続きで入っている(対象13件全てで確認)。末尾に「色指数とは？」という
+色指数(アグトロン値)の仕組みを説明する店舗共通の定型文が続くため、
+そこで切り落とす。商品名行・スペック行を除いた残りを採用する。
 """
 
 import json
@@ -67,18 +75,45 @@ REQUEST_HEADERS = {
 
 NON_BEAN_KEYWORDS = [
     "水出しコーヒー", "ドリップバッグ", "生地缶",
-    "デーツ", "レーズン", "ピスタチオ",
+    "デーツ", "レーズン", "ピスタチオ", "いちじく",
     "金時いも", "紫いも", "黄金いも", "紅はるか", "じゃがチップス",
     "パスタスナック", "麩市",
 ]
 COLORME_PATTERN = re.compile(r"var Colorme\s*=\s*(\{.*?\});", re.DOTALL)
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ㎏]")
+FLAVOR_SPEC_LABEL_PATTERN = re.compile(r"^(品種|栽培地|標高|精製|農園|生産地|原産国|生産者)[：:]")
+FLAVOR_STOP_PATTERN = re.compile(r"色指数とは")
 
 
 def fetch_page(url: str) -> BeautifulSoup:
     resp = requests.get(url, headers=REQUEST_HEADERS, timeout=15)
     resp.raise_for_status()
     return BeautifulSoup(resp.text, "html.parser")
+
+
+def extract_flavor_notes(soup: BeautifulSoup, title: str) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    container = soup.select_one("div.p-product-explain__body")
+    if not container:
+        return None
+    for br in container.find_all("br"):
+        br.replace_with("\n")
+    lines = [l.strip() for l in container.get_text("\n", strip=True).split("\n") if l.strip()]
+
+    stop_idx = next((i for i, l in enumerate(lines) if FLAVOR_STOP_PATTERN.search(l)), len(lines))
+    lines = lines[:stop_idx]
+
+    norm_title = re.sub(r"[　\s]+", "", title or "")
+    filtered = []
+    for line in lines:
+        if re.sub(r"[　\s]+", "", line) == norm_title:
+            continue
+        if FLAVOR_SPEC_LABEL_PATTERN.match(line):
+            continue
+        filtered.append(line)
+
+    text = "\n".join(filtered).strip()
+    return text or None
 
 
 def fetch_pid_urls() -> list[str]:
@@ -135,6 +170,7 @@ def build_record(soup: BeautifulSoup, product_url: str) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": extract_flavor_notes(soup, title),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": int(price) if price is not None else None,
