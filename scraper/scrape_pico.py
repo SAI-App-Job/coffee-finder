@@ -36,6 +36,24 @@ robots.txt確認済み(2026-09時点): User-agent: *は/secure/・/cart/のみ�
 【在庫について】
 inventory_controlが"none"、stock_numは常にnull(kunikuni.py・麻布珈房と
 同じ運用)。商品名のテキストのみで在庫状態を判定する。
+
+【flavor_notes/farm_note(テイスティングノート・農園情報)について
+(2026-09-20追記)】
+実データ確認済み: 商品詳細ページのdiv.product__explainを一切読んで
+いなかった。ブレンド商品は「イントロ文【XXXについて】長めのブレンド
+誕生秘話」の後に「【商品のパッケージ】」という全商品共通の定型見出し
+(パック写真の説明)が続く。単一原産地商品は2つのテーマが混在しており、
+(A)旧テーマ: イントロ文の後に「【焙煎度合】【地域】【農協】【水洗
+工場】【品種】【標高】【生産処理】」等のラベル付き詳細、続けて
+「【XXXについて】」の産地紹介、(B)新テーマ「COFFEE DATE」: 「【XXX
+COFFEE DATE】」見出しの後に「甘味★★★☆☆」等の★段階評価、続けて短い
+テイスティングコメント、「【XXXについて】」の産地紹介。
+「【商品のパッケージ】」が現れる位置で本文を打ち切り、その中で
+★/☆を含む行(評価行)と「焙煎度合/地域/農協/水洗工場/品種/標高/
+生産処理/農園/年平均気温/相対湿度/土壌」のラベル行を除いた残りを
+flavor_notesとして採用する。ラベル行のうち「地域」「農協」「農園」
+「品種」「標高」「生産処理」はfarm_note用フィールドと
+processing_methodに反映する。
 """
 
 import json
@@ -45,7 +63,7 @@ import time
 import requests
 from bs4 import BeautifulSoup
 
-from coffee_parser import parse_product, apply_category_hint_fallback, detect_stock_status
+from coffee_parser import parse_product, apply_category_hint_fallback, detect_stock_status, normalize_processing_method
 from previous_data import load_previous_products, is_unchanged
 
 SHOP_INFO = {
@@ -72,6 +90,51 @@ REQUEST_HEADERS = {
 
 NON_BEAN_KEYWORDS = ["ジェラート", "ギフトセット", "おすすめコーヒーセット", "ディップスタイル",
                      "カフェオレのもと", "お試しセット"]
+EXPLAIN_STOP_PATTERN = re.compile(r"【商品のパッケージ】")
+FARM_LABEL_PATTERN = re.compile(r"^【?(地域|農協|水洗工場|品種|標高|生産処理|農園|焙煎度合|年平均気温|相対湿度|土壌)】?[：:]?\s*(.*)$")
+FARM_LABEL_TO_FIELD = {
+    "地域": "region_detail",
+    "農協": "producer_name",
+    "水洗工場": "producer_name",
+    "農園": "farm_name",
+    "品種": "variety_note",
+    "標高": "altitude_note",
+}
+
+
+def extract_flavor_and_farm(soup: BeautifulSoup) -> tuple[str | None, dict, str | None]:
+    """理由はモジュールdocstring参照。"""
+    el = soup.select_one("div.product__explain")
+    if not el:
+        return None, {}, None
+    for br in el.find_all(["br", "BR"]):
+        br.replace_with("\n")
+    text = el.get_text()
+    stop_m = EXPLAIN_STOP_PATTERN.search(text)
+    content = text[:stop_m.start()] if stop_m else text
+    lines = [line.strip() for line in content.split("\n") if line.strip()]
+
+    farm: dict = {}
+    processing_raw = None
+    flavor_lines = []
+    for line in lines:
+        if "★" in line or "☆" in line:
+            continue
+        m = FARM_LABEL_PATTERN.match(line)
+        if m:
+            label, value = m.group(1), m.group(2).strip()
+            if not value:
+                continue
+            if label == "生産処理":
+                processing_raw = value
+            elif label in FARM_LABEL_TO_FIELD:
+                field = FARM_LABEL_TO_FIELD[label]
+                farm[field] = f"{farm[field]} {value}" if farm.get(field) else value
+            continue
+        flavor_lines.append(line)
+
+    flavor_notes = "".join(flavor_lines).strip() or None
+    return flavor_notes, farm, processing_raw
 
 
 def fetch_page(url: str) -> BeautifulSoup:
@@ -98,7 +161,7 @@ def extract_colorme_product(soup: BeautifulSoup) -> dict | None:
     return None
 
 
-def build_record(product_url: str, colorme_product: dict, category_hint: str) -> dict:
+def build_record(product_url: str, colorme_product: dict, category_hint: str, soup: BeautifulSoup = None) -> dict:
     title = (colorme_product.get("name") or "").strip()
 
     if any(kw in title for kw in NON_BEAN_KEYWORDS):
@@ -126,6 +189,8 @@ def build_record(product_url: str, colorme_product: dict, category_hint: str) ->
     parsed = apply_category_hint_fallback(parsed, category_hint)
     stock_status = detect_stock_status(title)
 
+    flavor_notes, farm, processing_raw = extract_flavor_and_farm(soup) if soup else (None, {}, None)
+
     return {
         "shop_name": SHOP_INFO["name"],
         "raw_name": title,
@@ -134,9 +199,15 @@ def build_record(product_url: str, colorme_product: dict, category_hint: str) ->
         "origin_country": parsed["origin_country"],
         "origin_source": parsed["origin_source"],
         "designated_brand": parsed["designated_brand"],
-        "processing_method": parsed["processing_method"],
+        "processing_method": parsed["processing_method"] or normalize_processing_method(processing_raw),
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "farm_name": farm.get("farm_name"),
+        "producer_name": farm.get("producer_name"),
+        "region_detail": farm.get("region_detail"),
+        "altitude_note": farm.get("altitude_note"),
+        "variety_note": farm.get("variety_note"),
+        "flavor_notes": flavor_notes,
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": price,
@@ -157,7 +228,7 @@ def parse_product_detail(url: str, category_hint: str = "") -> dict:
             "non_bean": True,
             "product_url": url,
         }
-    return build_record(url, colorme_product, category_hint)
+    return build_record(url, colorme_product, category_hint, soup)
 
 
 def scrape_category_list(cid: str) -> list[dict]:
