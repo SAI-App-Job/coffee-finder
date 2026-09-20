@@ -56,6 +56,15 @@ nada-coffee.com/information/)で確認したところ、焙煎工房・事務所
 実データ確認済み: 商品詳細ページには「豆(ビーンズ)/極細挽/細挽/中細挽/
 中挽/粗挽き」の挽き方セレクトボックスがあるが、価格は挽き方に依らず同一
 (選択式オプションであり別商品ではない)。
+
+【flavor_notes(2026-09-20追記)】
+実データ確認済み: 商品詳細ページのdiv.item-block-contents内は、
+h3(商品名)・div.exp(価格/在庫、非テキスト)に続き、直下の<p>要素
+(数個)に実際のテイスティング/ストーリー文が入っており、その後に
+figure.skuform(挽き方選択フォーム)が続く。div.item-block-contents直下の
+<p>要素(recursive=Falseで取得、div.expやfigure内の要素は含まない)を
+結合してflavor_notesとして採用する。既存の在庫状況取得と同じHTML取得を
+再利用するため追加のHTTPアクセスは不要。
 """
 
 import re
@@ -145,13 +154,22 @@ def pick_canonical_items(items: list[dict]) -> list[dict]:
     return [item for _weight, item in by_base_name.values()]
 
 
-def fetch_stock_status_text(product_url: str) -> str | None:
+def fetch_detail_fields(product_url: str) -> tuple[str | None, str | None]:
     try:
         resp = fetch(product_url)
     except requests.RequestException:
-        return None
+        return None, None
     m = re.search(r'class="field_stock">([^<]*)</span>', resp.text)
-    return m.group(1) if m else None
+    stock_text = m.group(1) if m else None
+
+    soup = BeautifulSoup(resp.text, "html.parser")
+    contents = soup.select_one("div.item-block-contents")
+    flavor_notes = None
+    if contents:
+        parts = [p.get_text(" ", strip=True) for p in contents.find_all("p", recursive=False)]
+        parts = [p for p in parts if p]
+        flavor_notes = " ".join(parts) or None
+    return stock_text, flavor_notes
 
 
 def build_record(item: dict) -> dict | None:
@@ -169,7 +187,7 @@ def build_record(item: dict) -> dict | None:
             "product_url": item["url"],
         }
 
-    stock_text = fetch_stock_status_text(item["url"])
+    stock_text, flavor_notes = fetch_detail_fields(item["url"])
     structural_out_of_stock = bool(stock_text) and "在庫有り" not in stock_text
     stock_status = detect_stock_status(title, structural_out_of_stock)
     weight_matches = WEIGHT_PATTERN.findall(title)
@@ -185,6 +203,7 @@ def build_record(item: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": flavor_notes,
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": item["price"],
