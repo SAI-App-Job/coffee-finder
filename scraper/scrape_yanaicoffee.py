@@ -34,6 +34,15 @@ Not Foundが返る(実質存在しない)。クロール制限の記述が無い
 埋め込まれており、name/offers.priceSpecification.price/offers.availabilityを
 安定して取得できる。商品名には<br>タグが含まれることがある(例:「　ガテマラ<br>
 　（100g）」)ため、タグを空白に置換してから整形する。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: 商品詳細ページ自体にはテイスティング文が無く(説明タブは
+配送方法の案内のみ)、「豆の種類と購入」ページ(?page_id=59)の各商品ブロック
+(Elementorのdiv.e-con-inner、商品購入ボタンの祖先要素として1商品1ブロックで
+対応)にテイスティング文が入っている(対象15件全てで確認)。同ブロック内の
+テキストから、商品名行・「生産国:」等のスペックラベル行(ラベルのみで値が
+別行の場合は値行も含めて除去)・「【...】」形式の見出しタグ・末尾の
+「香り/コク/甘み/酸味」5段階評価グラフ以降を除去した残りを採用する。
 """
 
 import json
@@ -67,6 +76,11 @@ NON_BEAN_KEYWORDS = ["ドリップバッグ", "水出しコーヒーバッグ"]
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
 JSONLD_PATTERN = re.compile(r'<script type="application/ld\+json">(\{.*?"@type":"Product".*?\})</script>', re.DOTALL)
 
+FLAVOR_SPEC_LABEL_PATTERN = re.compile(
+    r"^(生産国|生産地域|生産地|生産者|品種|精製方法|精製処理|標高|農園名|品名)[:：]"
+)
+FLAVOR_BRACKET_TAG_PATTERN = re.compile(r"^【[^】]*】$")
+
 
 def fetch_page(url: str) -> BeautifulSoup:
     resp = requests.get(url, headers=REQUEST_HEADERS, timeout=20)
@@ -74,9 +88,42 @@ def fetch_page(url: str) -> BeautifulSoup:
     return BeautifulSoup(resp.text, "html.parser")
 
 
-def fetch_product_urls() -> list[str]:
+def _normalize_for_match(text: str) -> str:
+    return re.sub(r"[　\s]+", "", text or "")
+
+
+def extract_flavor_notes_from_container(container, title: str) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    lines = [l.strip() for l in container.get_text("\n", strip=True).split("\n") if l.strip()]
+    graph_start = next((i for i, l in enumerate(lines) if l == "香り"), len(lines))
+    pre_graph = lines[:graph_start]
+    norm_title = _normalize_for_match(title)
+
+    filtered = []
+    skip_next = False
+    for line in pre_graph:
+        if skip_next:
+            skip_next = False
+            continue
+        if _normalize_for_match(line) == norm_title:
+            continue
+        if FLAVOR_BRACKET_TAG_PATTERN.match(line):
+            continue
+        spec_m = FLAVOR_SPEC_LABEL_PATTERN.match(line)
+        if spec_m:
+            if spec_m.end() == len(line):
+                skip_next = True
+            continue
+        filtered.append(line)
+
+    text = "\n".join(filtered).strip()
+    return text or None
+
+
+def fetch_product_urls_and_flavor_notes() -> tuple[list[str], dict[str, str]]:
     soup = fetch_page(PRODUCT_LIST_URL)
     urls = []
+    flavor_map: dict[str, str] = {}
     seen = set()
     for a in soup.select('a[href*="?product="]'):
         href = a.get("href", "")
@@ -84,7 +131,15 @@ def fetch_product_urls() -> list[str]:
             continue
         seen.add(href)
         urls.append(href)
-    return urls
+
+        container = a.find_parent("div", class_="e-con-inner")
+        if container:
+            lines = [l.strip() for l in container.get_text("\n", strip=True).split("\n") if l.strip()]
+            title_line = lines[0] if lines else ""
+            flavor_notes = extract_flavor_notes_from_container(container, title_line)
+            if flavor_notes:
+                flavor_map[href] = flavor_notes
+    return urls, flavor_map
 
 
 def extract_jsonld_product(html: str) -> dict | None:
@@ -103,7 +158,7 @@ def clean_title(raw: str) -> str:
     return re.sub(r"\s+", " ", text).strip()
 
 
-def build_record(product_url: str) -> dict | None:
+def build_record(product_url: str, flavor_notes: str | None = None) -> dict | None:
     resp = requests.get(product_url, headers=REQUEST_HEADERS, timeout=20)
     resp.raise_for_status()
     data = extract_jsonld_product(resp.text)
@@ -162,6 +217,7 @@ def build_record(product_url: str) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": flavor_notes,
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": price,
@@ -173,14 +229,14 @@ def build_record(product_url: str) -> dict | None:
 
 
 def scrape_all_products() -> tuple[list[dict], list[dict], list[dict]]:
-    product_urls = fetch_product_urls()
+    product_urls, flavor_notes_map = fetch_product_urls_and_flavor_notes()
 
     records = []
     flavored_records = []
     non_bean_records = []
     for product_url in product_urls:
         try:
-            detail = build_record(product_url)
+            detail = build_record(product_url, flavor_notes_map.get(product_url))
         except requests.RequestException as e:
             print(f"[warn] 詳細ページ取得失敗: {product_url} ({e})")
             continue
