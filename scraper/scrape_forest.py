@@ -83,6 +83,27 @@ WEIGHT_PATTERN = re.compile(r"(\d+)\s*g")
 ORIGIN_SECTION_PATTERN = re.compile(r"■産地\n(.*?)(?=\n賞味期限：|\n保存方法：|\Z)", re.DOTALL)
 GRADE_LABEL_PATTERN = re.compile(r"規格：([^\n]+)")
 
+# 理由: 説明文は「更新：<日付>」に続けて自由記述のテイスティング文が入り、
+# その後に「酸味●」等のドット/×による5段階評価行、または「■産地」の
+# 構造化ラベル欄が続く(実データ確認済み)。テイスティング文はこれらの
+# セクションより手前に位置するため、最も手前に出現するもので切り落とす。
+FLAVOR_UPDATE_LINE_PATTERN = re.compile(r"更新：[^\n]*\n?")
+FLAVOR_STOP_PATTERNS = [
+    re.compile(r"酸味[●×]"),
+    re.compile(r"■産地"),
+]
+
+
+def extract_flavor_notes(description_text: str) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    text = (description_text or "").strip()
+    text = FLAVOR_UPDATE_LINE_PATTERN.sub("", text, count=1)
+    positions = [m.start() for p in FLAVOR_STOP_PATTERNS if (m := p.search(text))]
+    if positions:
+        text = text[: min(positions)]
+    text = text.strip()
+    return text or None
+
 
 def fetch_page(url: str) -> BeautifulSoup:
     resp = requests.get(url, headers=REQUEST_HEADERS, timeout=15)
@@ -155,7 +176,7 @@ def build_record(product_url: str, title: str, description_text: str, price: int
         "roast_selectable": False,  # 焙煎度は商品ごとに固定、注文時に選べるのは挽き方のみ(実データ確認済み)
         "post_processing_tags": parsed["post_processing_tags"],
         "farm_note": desc["farm_note"],
-        "flavor_notes": None,
+        "flavor_notes": extract_flavor_notes(description_text),
         "blend_components": [],
         "price": price,
         "weight_g": weight_g,
