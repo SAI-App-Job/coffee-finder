@@ -33,6 +33,15 @@ ORIGIN_COUNTRY_KEYWORDS_EN(英語国名)・BLEND_KEYWORDS(大文字小文字無�
 すると、全26件中House Blend等25件が誤って「一時的に品切れ」になっていた。
 inventory_control=="product"の商品にのみ構造的な品切れ判定を適用し、
 "none"の商品は商品名のテキストのみで判定するよう修正した。
+
+【flavor_notes(テイスティングノート)について(2026-09-20追記)】
+実データ確認済み: 商品詳細ページのdiv.p-product-body__descriptionに、
+風味を説明する自由記述文(店の歴史・エピソードを含むこともある)が書かれ、
+その後「-挽き目について-」(挽き方の選択肢説明)、「-包装について-」
+(パッケージ説明)という全商品共通の定型見出しが続く(サンプル8件で確認、
+一部商品は挽き方説明を持たず短い1文のみで終わる)。これらいずれかが
+現れる位置で本文を打ち切ってflavor_notesとして採用する。以前はこの
+divを一切読んでいなかった。
 """
 
 import json
@@ -69,6 +78,21 @@ REQUEST_HEADERS = {
 
 COLORME_JSON_PATTERN = re.compile(r"var\s+Colorme\s*=\s*(\{.*\});", re.DOTALL)
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
+DESC_STOP_PATTERN = re.compile(r"-挽き目について-|-包装について-")
+
+
+def extract_flavor_notes(soup: BeautifulSoup) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    el = soup.select_one("div.p-product-body__description")
+    if not el:
+        return None
+    for br in el.find_all("br"):
+        br.replace_with("\n")
+    text = el.get_text()
+    stop_m = DESC_STOP_PATTERN.search(text)
+    content = text[:stop_m.start()] if stop_m else text
+    lines = [line.strip() for line in content.split("\n") if line.strip()]
+    return "".join(lines).strip() or None
 
 
 def fetch_page(url: str) -> BeautifulSoup:
@@ -92,7 +116,7 @@ def extract_colorme_product(soup: BeautifulSoup) -> dict | None:
     return None
 
 
-def build_record(product_url: str, colorme_product: dict, category_hint: str) -> dict:
+def build_record(product_url: str, colorme_product: dict, category_hint: str, soup: BeautifulSoup = None) -> dict:
     title = (colorme_product.get("name") or "").strip()
     parsed = parse_product(title)
 
@@ -132,6 +156,7 @@ def build_record(product_url: str, colorme_product: dict, category_hint: str) ->
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": extract_flavor_notes(soup) if soup else None,
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": price,
@@ -152,7 +177,7 @@ def parse_product_detail(url: str, category_hint: str = "") -> dict:
             "non_bean": True,
             "product_url": url,
         }
-    return build_record(url, colorme_product, category_hint)
+    return build_record(url, colorme_product, category_hint, soup)
 
 
 def scrape_category_list(cid: str) -> list[dict]:
