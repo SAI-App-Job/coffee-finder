@@ -37,8 +37,18 @@ GRP")。curl/python-requests等は個別にDisallow: /指定があるが、User-
 - アバカ(プラス)コーヒーフィルター各種(器具)
 NON_BEAN_KEYWORDSで除外する。残り22銘柄(ブレンド8種+ストレート/産地
 指定14種)を対象とする。
+
+【flavor_notes(2026-09-20追記)】
+実データ確認済み: og:descriptionはHTMLエンティティ・タグ(<a>/<h3>等)を
+含んだままの生の文字列で、対象20件全てで実際のテイスティング文を含む。
+末尾に「##c_hukairi ##c_baransu」等のハッシュタグ風メタ情報が付く場合が
+あるため除去し、「【豆プロフィール】」という構造化スペック見出しが続く
+場合はその直前までを採用する(見出しが無い商品は全文を採用)。HTMLタグは
+文字列として除去するがリンクのアンカーテキスト自体(「200g以上の方は
+こちら」等)は地の文と区切りが無いため残る場合がある。
 """
 
+import html as ihtml
 import re
 
 import requests
@@ -69,12 +79,27 @@ NON_BEAN_KEYWORDS = [
     "トートバック", "コーヒーフィルター",
 ]
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
+FLAVOR_HASHTAG_PATTERN = re.compile(r"(##c_\w+\s*)+$")
+FLAVOR_PROFILE_PATTERN = re.compile(r"【豆プロフィール】")
 
 
 def fetch_page(url: str) -> BeautifulSoup:
     resp = requests.get(url, headers=REQUEST_HEADERS, timeout=15)
     resp.raise_for_status()
     return BeautifulSoup(resp.text, "html.parser")
+
+
+def extract_flavor_notes(description: str | None) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    if not description:
+        return None
+    text = ihtml.unescape(description)
+    text = re.sub(r"<[^>]+>", "", text)
+    text = FLAVOR_HASHTAG_PATTERN.sub("", text).strip()
+    m = FLAVOR_PROFILE_PATTERN.search(text)
+    if m:
+        text = text[:m.start()].strip()
+    return text or None
 
 
 def extract_og_fields(soup: BeautifulSoup) -> dict | None:
@@ -86,7 +111,9 @@ def extract_og_fields(soup: BeautifulSoup) -> dict | None:
         return None
     price_el = soup.select_one('meta[property="product:price:amount"]')
     price = int(float(price_el["content"])) if price_el and price_el.get("content") else None
-    return {"title": title, "price": price}
+    desc_el = soup.select_one('meta[property="og:description"]')
+    description = desc_el["content"] if desc_el and desc_el.get("content") else None
+    return {"title": title, "price": price, "flavor_notes": extract_flavor_notes(description)}
 
 
 def fetch_sitemap_urls() -> list[str]:
@@ -137,6 +164,7 @@ def build_record(item: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": item.get("flavor_notes"),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": item["price"],
@@ -159,7 +187,10 @@ def scrape_all_products() -> tuple[list[dict], list[dict]]:
             continue
         if not fields:
             continue
-        all_items.append({"title": fields["title"], "price": fields["price"], "url": product_url})
+        all_items.append({
+            "title": fields["title"], "price": fields["price"],
+            "flavor_notes": fields.get("flavor_notes"), "url": product_url,
+        })
 
     canonical_items = pick_canonical_items(all_items)
 
