@@ -35,12 +35,26 @@ NON_BEAN_KEYWORDSで除外する。
 gramsから最小重量を代表として採用する。一部商品(タイCOE、グァテマラ
 COE等)はgramsが0のまま未設定のため、バリアントtitle文字列内の
 重量表記(例: 「100g / 豆のまま」)から正規表現でフォールバック取得する。
+
+【flavor_notes(2026-09-20追記)】
+実データ確認済み: body_htmlは商品ごとにテンプレートが異なり、(1)冒頭
+から直接テイスティング文が始まり<hr>で「□産地／...」等のスペック行と
+区切られる形式、(2)<h3>見出し(商品タイトル的なキャッチコピー)の後に
+テイスティング文が続く形式、(3)まれに本文の前に店舗からのお知らせ
+(「■ご購入の前に必ずお読みください■」等)が挿入され、その後に<h3>見出し
++本文が続く形式、の3パターンが混在する。抽出は「最後の非空<h3>要素が
+あればそこから開始(お知らせを読み飛ばす)、無ければ先頭から開始」
+「<hr>要素、または『【名称】』『□産』(スペック行の開始マーカー)を
+含むテキストノードに到達した時点で終了」というルールに統一した
+(HTMLコメントノードは除外)。既存のproducts.json取得を再利用するため
+追加のHTTPアクセスは不要。
 """
 
 import re
 import time
 
 import requests
+from bs4 import BeautifulSoup, Comment, NavigableString
 
 from coffee_parser import parse_product, detect_stock_status
 from previous_data import load_previous_products, is_unchanged
@@ -63,6 +77,35 @@ REQUEST_HEADERS = {
 TARGET_PRODUCT_TYPE = "コーヒー豆"
 NON_BEAN_KEYWORDS = ["お試し", "アソートコーヒーセット"]
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
+SPEC_MARKER_PATTERN = re.compile(r"【名称】|□産")
+
+
+def extract_flavor_notes(body_html: str | None) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    soup = BeautifulSoup(body_html or "", "html.parser")
+    h3s = [h for h in soup.find_all("h3") if h.get_text(strip=True)]
+    start_h3 = h3s[-1] if h3s else None
+    hr = soup.find("hr")
+
+    started = start_h3 is None
+    parts = []
+    for node in soup.descendants:
+        if node is start_h3:
+            started = True
+        if node is hr:
+            break
+        if not started:
+            continue
+        if isinstance(node, Comment):
+            continue
+        if isinstance(node, NavigableString):
+            text = str(node).strip()
+            if not text:
+                continue
+            if SPEC_MARKER_PATTERN.search(text):
+                return " ".join(parts) or None
+            parts.append(text)
+    return " ".join(parts) or None
 
 
 def fetch_products() -> list[dict]:
@@ -130,6 +173,7 @@ def build_record(product: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": extract_flavor_notes(product.get("body_html")),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": price,
