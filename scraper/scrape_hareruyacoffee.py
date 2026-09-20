@@ -32,12 +32,19 @@ including_taxは常に「豆のまま×100g」バリアントの価格と一致�
 バレルエイジド ドリップバッグ１０個入」(ドリップバッグ各種)が非対象。
 NON_BEAN_KEYWORDSで除外する。残り18件(デカフェ・ロカフェインブレンド・
 コールドブリューブレンドを含む)を対象とする。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: 商品詳細ページのdiv.p-product-explain__body内に
+テイスティング文・おすすめの飲用シーン等が入っている(対象18件全てで
+確認、価格・スペック等の混入なし、他のカラーミー店舗と同じ構造)。
+全文をそのまま採用する。
 """
 
 import json
 import re
 
 import requests
+from bs4 import BeautifulSoup
 
 from coffee_parser import parse_product, detect_stock_status
 
@@ -60,6 +67,17 @@ REQUEST_HEADERS = {
 NON_BEAN_KEYWORDS = ["定期購入", "ドリップバッグ"]
 COLORME_PATTERN = re.compile(r"var Colorme\s*=\s*(\{.*?\});", re.DOTALL)
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
+
+
+def extract_flavor_notes(soup: BeautifulSoup) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    el = soup.select_one("div.p-product-explain__body")
+    if not el:
+        return None
+    for br in el.find_all("br"):
+        br.replace_with("\n")
+    lines = [line.strip() for line in el.get_text().split("\n") if line.strip()]
+    return "\n".join(lines).strip() or None
 
 
 def fetch_page(url: str) -> requests.Response:
@@ -93,6 +111,7 @@ def build_record(resp: requests.Response, product_url: str) -> dict | None:
     m = COLORME_PATTERN.search(resp.text)
     if not m:
         return None
+    soup = BeautifulSoup(resp.text, "html.parser")
     data = json.loads(m.group(1))
     product = data.get("product") or {}
     title = re.sub(r"<br\s*/?>", " ", product.get("name") or "").strip()
@@ -136,6 +155,7 @@ def build_record(resp: requests.Response, product_url: str) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": extract_flavor_notes(soup),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": int(price) if price is not None else None,
