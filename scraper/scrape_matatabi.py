@@ -39,6 +39,12 @@ GRP")。curl/python-requests等は個別にDisallow: /指定があるが、User-
 ６種セット(アソート)・器具/雑貨(キーリング・キッチンタイマー・タンブラー・
 フードクリップ・ランチトート・キャンバストート・カップ&ソーサー・
 コーヒーカップ)が非対象。NON_BEAN_KEYWORDSで除外する。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: og:descriptionに商品ごとのテイスティング文が直接
+入っている(対象14件全て確認、価格・スペック等の混入なし)。末尾に
+焙煎度(「中深煎り」等)が地続きで付くが無関係なノイズではないため、
+全文をそのまま採用する。
 """
 
 import re
@@ -87,7 +93,9 @@ def extract_og_fields(soup: BeautifulSoup) -> dict | None:
         return None
     price_el = soup.select_one('meta[property="product:price:amount"]')
     price = int(float(price_el["content"])) if price_el and price_el.get("content") else None
-    return {"title": title, "price": price}
+    desc_el = soup.select_one('meta[property="og:description"]')
+    flavor_notes = desc_el["content"].strip() if desc_el and desc_el.get("content") else None
+    return {"title": title, "price": price, "flavor_notes": flavor_notes or None}
 
 
 def fetch_sitemap_urls() -> list[str]:
@@ -138,6 +146,7 @@ def build_record(item: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": item.get("flavor_notes"),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": item["price"],
@@ -160,7 +169,10 @@ def scrape_all_products() -> tuple[list[dict], list[dict]]:
             continue
         if not fields:
             continue
-        all_items.append({"title": fields["title"], "price": fields["price"], "url": product_url})
+        all_items.append({
+            "title": fields["title"], "price": fields["price"], "url": product_url,
+            "flavor_notes": fields.get("flavor_notes"),
+        })
 
     canonical_items = pick_canonical_items(all_items)
 
