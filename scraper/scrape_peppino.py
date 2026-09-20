@@ -31,9 +31,26 @@ ITSUKI Coffee Roasteryと異なり、この店舗はバリエーションJSONの
 "weight"フィールドに直接グラム数(文字列)が入っているため、
 attribute_pa_gram等の属性名から正規表現で抽出する必要がない。
 在庫のあるバリエーションの中から最小重量のものを代表として採用する。
+
+【flavor_notes(2026-09-20追記)】
+実データ確認済み: 詳細ページのdiv.woocommerce-Tabs-panel--description内に、
+商品説明文に続いて「●おすすめ焙煎度」という見出しの下に焙煎度別の推奨と
+テイスティングコメントが構造化されずに連続して入っている。見出し行
+(「●おすすめ焙煎度」及び「●」のみの行)を除外し、残りをそのまま結合して
+flavor_notesとする。PeppinoCoffeeのハウスブレンド2商品は「●ブレンド内容」
+という産地別配合内容のみで実際のテイスティング文が存在しないため、この
+見出しを含む場合はflavor_notesを取得しない。
+
+【非コーヒー豆商品の除外漏れについて(2026-09-20修正)】
+実データ確認済み: 「おうちで簡単COLDBREWボトルセット」が、NON_BEAN_KEYWORDS
+の「COLD BREW」(スペースあり)に一致せず(商品名は「COLDBREW」でスペース
+無し)除外漏れしていた。今回のflavor_notes実装でボトルセットの説明文
+(銘柄名の列挙)を誤ってテイスティング文として取得してしまうため、
+「COLDBREW」(スペース無し)をNON_BEAN_KEYWORDSに追加して除外した。
 """
 
 import json
+import re
 
 import requests
 from bs4 import BeautifulSoup
@@ -58,11 +75,27 @@ REQUEST_HEADERS = {
 }
 
 NON_BEAN_KEYWORDS = [
-    "Almond", "アーモンド", "COLD BREW", "コールドブリュー",
+    "Almond", "アーモンド", "COLD BREW", "COLDBREW", "コールドブリュー",
     "ドリップバック", "ドリップバッグ", "はじめてセット",
     "ダージリン", "アールグレイ", "TEA", "GIFT", "ギフト",
     "チョコレート", "CHOCOLATE", "フィルター", "PISTACHIO", "ピスタチオ",
 ]
+
+BLEND_CONTENT_HEADING = "●ブレンド内容"
+STRUCTURAL_LINE_PATTERN = re.compile(r"^●?\s*おすすめ焙煎度\s*$|^●\s*$")
+
+
+def extract_flavor_notes(soup: BeautifulSoup) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    el = soup.select_one("div.woocommerce-Tabs-panel--description")
+    if not el:
+        return None
+    text = el.get_text("\n", strip=True)
+    if not text or BLEND_CONTENT_HEADING in text:
+        return None
+    lines = [line.strip() for line in text.split("\n") if line.strip()]
+    lines = [line for line in lines if not STRUCTURAL_LINE_PATTERN.match(line)]
+    return " ".join(lines).strip() or None
 
 
 def fetch_page(url: str) -> BeautifulSoup:
@@ -148,6 +181,7 @@ def build_record(soup: BeautifulSoup, product_url: str) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": extract_flavor_notes(soup),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": price,
