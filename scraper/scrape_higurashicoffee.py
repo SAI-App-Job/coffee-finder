@@ -66,6 +66,14 @@ API側の構造化フィールド(sale_text)から取得するのが確実なた
 表記であり、タイトルからの重量パースでは区別できないことを実データで
 確認済み)、1つの商品詳細ページ内で複数の商品IDを重量(sale_text)の昇順で
 比較し、最小重量の商品IDを代表として採用する。
+
+【flavor_notes(2026-09-20追記)】
+実データ確認済み: BiND Cart APIのProductDetailレスポンスには
+detail_commentという構造化フィールドがあり、対象21件全てで実際の
+テイスティング文が入っている(例:「中米産を中心にブレンドしたマイルドな
+風味。苦味と酸味を抑えてブラックで飲む方にもおすすめ。」)。既存の
+重量代表バリアント選定と同じAPI呼び出しを再利用するため追加のHTTP
+アクセスは不要。
 """
 
 import re
@@ -161,12 +169,15 @@ def fetch_variant_detail(product_id: str) -> dict | None:
         unit = wm.group(2).lower()
         weight_g = value * 1000 if unit in ("kg", "ｋｇ") else value
 
+    flavor_notes = (data.get("detail_comment") or "").replace("\r\n", " ").replace("\n", " ").strip()
+
     return {
         "product_id": data.get("product_id"),
         "title": (data.get("product_name") or "").strip(),
         "price": int(data["price"]) if data.get("price") not in (None, "") else None,
         "weight_g": weight_g,
         "display_flg": data.get("display_flg"),
+        "flavor_notes": flavor_notes or None,
     }
 
 
@@ -208,6 +219,7 @@ def build_record(variant: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": variant.get("flavor_notes"),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": variant["price"],
