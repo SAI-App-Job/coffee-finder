@@ -37,13 +37,79 @@ NON_BEAN_KEYWORDSで除外し、残り32件が対象(BLEND #1〜#9の主力ブ�
 
 robots.txt確認済み(2026-09時点): Shopify標準のUCPエージェント向け記述。
 商品・カテゴリ・ページ等の公開HTMLはクロール可能。
+
+【flavor_notes/farm_note(テイスティングノート・農園情報)について
+(2026-09-20追記)】
+実データ確認済み: body_htmlに、商品名から始まる短い風味の要約文(強調
+タグ内の1文)に続けて数文の風味説明があり、単一原産地商品にはさらに
+「生産国：.../地域：.../農園：.../農園主：.../品種：.../精製：.../
+焙煎：...」の構造化ラベルが続く(<p>/<h3>/<h4>要素内、<br>で区切られる)。
+末尾に「ご注文時のお願い」(豆/粉選択の注意書き)や「販売期間：」
+(季節限定商品の販売期間)という定型の注意書きが必ず続くため、この
+マーカーが現れた時点で本文を打ち切る。ブレンド商品はラベルが無く
+風味説明のみ。p/h3/h4要素ごとにテキストを取り出し、ラベル行は
+farm_note用フィールドとprocessing_methodに振り分け、それ以外の行を
+flavor_notesとして採用する。
 """
 
 import re
 
 import requests
+from bs4 import BeautifulSoup
 
-from coffee_parser import parse_product, detect_stock_status
+from coffee_parser import parse_product, detect_stock_status, normalize_processing_method
+
+WHITESPACE_PATTERN = re.compile(r"[ \t]+")
+DESC_LABEL_PATTERN = re.compile(r"^(生産国|地域|農園主|生産者|農園|品種|精製|焙煎)[：:]\s*(.*)$")
+FARM_LABEL_TO_FIELD = {
+    "生産国": "region_detail",
+    "地域": "region_detail",
+    "農園": "farm_name",
+    "農園主": "producer_name",
+    "生産者": "producer_name",
+    "品種": "variety_note",
+}
+STOP_MARKERS = ("ご注文時のお願い", "販売期間")
+
+
+def extract_flavor_and_farm(body_html: str | None) -> tuple[str | None, dict, str | None]:
+    """理由はモジュールdocstring参照。"""
+    if not body_html:
+        return None, {}, None
+    soup = BeautifulSoup(body_html, "html.parser")
+    for br in soup.find_all("br"):
+        br.replace_with("\n")
+
+    lines = []
+    for el in soup.find_all(["p", "h3", "h4"]):
+        for chunk in el.get_text().split("\n"):
+            line = WHITESPACE_PATTERN.sub(" ", chunk).strip()
+            if line:
+                lines.append(line)
+
+    farm: dict = {}
+    processing_raw = None
+    flavor_lines = []
+    for line in lines:
+        if any(line.startswith(marker) for marker in STOP_MARKERS):
+            break
+        m = DESC_LABEL_PATTERN.match(line)
+        if m:
+            label, value = m.group(1), m.group(2).strip()
+            if not value:
+                continue
+            if label == "精製":
+                processing_raw = value
+            elif label == "焙煎":
+                pass
+            elif label in FARM_LABEL_TO_FIELD:
+                field = FARM_LABEL_TO_FIELD[label]
+                farm[field] = f"{farm[field]} {value}" if farm.get(field) else value
+            continue
+        flavor_lines.append(line)
+
+    flavor_notes = "".join(flavor_lines).strip() or None
+    return flavor_notes, farm, processing_raw
 
 SHOP_INFO = {
     "name": "徳光珈琲",
@@ -109,6 +175,8 @@ def build_record(product: dict) -> dict | None:
     all_out_of_stock = bool(variants) and not any(v.get("available") for v in variants)
     stock_status = detect_stock_status(title, all_out_of_stock)
 
+    flavor_notes, farm, processing_raw = extract_flavor_and_farm(product.get("body_html"))
+
     return {
         "shop_name": SHOP_INFO["name"],
         "raw_name": title,
@@ -116,9 +184,14 @@ def build_record(product: dict) -> dict | None:
         "origin_country": parsed["origin_country"],
         "origin_source": parsed["origin_source"],
         "designated_brand": parsed["designated_brand"],
-        "processing_method": parsed["processing_method"],
+        "processing_method": parsed["processing_method"] or normalize_processing_method(processing_raw),
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "farm_name": farm.get("farm_name"),
+        "producer_name": farm.get("producer_name"),
+        "region_detail": farm.get("region_detail"),
+        "variety_note": farm.get("variety_note"),
+        "flavor_notes": flavor_notes,
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": price,
