@@ -43,6 +43,12 @@ requests等は個別にDisallow: /指定があるが、User-agent: *ルールで
 【「豆or粉」表記について】
 実データ確認済み: 商品名に付く「豆or粉」「豆or粉選択」は挽き方選択のオプション
 案内であり産地判定を妨げないため除去しない。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: og:descriptionは「【味】テイスティング文→【焙煎度／ロースト】
+→【バランス】酸味/苦味の★表示→【仕様】等スペック情報→【購入方法】」という
+共通構成だった(対象19件全てで確認)。「【味】」の直後から次の「【」見出しの
+直前までをflavor_notesとして採用する。
 """
 
 import re
@@ -75,10 +81,19 @@ NON_BEAN_KEYWORDS = [
 ]
 RAW_BEAN_NOTE_PATTERN = re.compile(r"[※＊*]\s*生豆\s*\d+\s*[gｇ]\s*有")
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
+FLAVOR_PATTERN = re.compile(r"【味】(.*?)(?=【)", re.DOTALL)
 
 
 def strip_raw_bean_note(title: str) -> str:
     return RAW_BEAN_NOTE_PATTERN.sub("", title)
+
+
+def extract_flavor_notes(description: str | None) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    if not description:
+        return None
+    m = FLAVOR_PATTERN.search(description)
+    return m.group(1).strip() or None if m else None
 
 
 def fetch_page(url: str) -> BeautifulSoup:
@@ -110,7 +125,9 @@ def fetch_item_fields(url: str) -> dict | None:
         return None
     price_el = soup.select_one('meta[property="product:price:amount"]')
     price = int(float(price_el["content"])) if price_el and price_el.get("content") else None
-    return {"title": title, "price": price, "url": url}
+    desc_el = soup.select_one('meta[property="og:description"]')
+    description = desc_el["content"] if desc_el and desc_el.get("content") else None
+    return {"title": title, "price": price, "url": url, "flavor_notes": extract_flavor_notes(description)}
 
 
 def pick_canonical_items(items: list[dict]) -> list[dict]:
@@ -157,6 +174,7 @@ def build_record(item: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": item.get("flavor_notes"),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": item["price"],
