@@ -28,6 +28,21 @@ sitemap.xml(https://roasterym.base.shop/sitemap.xml)を商品URL一覧の情報�
 のように焙煎度+挽き方を1つの文字列に連結した形で提供されており、TSUKIKOYA/Mameya
 のようなoption1/option2の分離が無い。含まれる浅煎り/中深煎り/深煎りの語を
 拾って焙煎度の選択肢として扱う。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: 説明文(既存のfarm_noteに格納しているテキスト)は
+「■」区切りの複数段落で構成され、産地・農協の背景ストーリーの段落群の
+中に、テイスティング表現(酸味/コク/香り/風味/ボディ/後味等)を含む段落が
+1つ混在している(対象17件全てで確認、末尾の段落とは限らない)。単純に
+最後の段落を採用すると価格動向等の無関係な内容を拾ってしまう商品が
+あったため、各段落のテイスティング関連キーワード出現数を数え、最も
+多く含む段落(同数の場合は後方の段落を優先)をflavor_notesとして採用する。
+なお本店舗は日本語版8件＋海外向け英語版([Global]表記、同一銘柄の500g版)
+8件で構成されており、英語版にも同じ判定が有効なよう英語キーワードも
+含めている。1件(ペルー マチュピチュ)は該当段落が「■風味の特」で
+途切れており、店舗の説明文自体がこの文で終わっている(実データ確認済み、
+og:description・実際の説明欄both共に同一箇所で終端しており、本
+スクレイパー側の不具合ではなく店舗側の入力ミスと判断)。
 """
 
 import json
@@ -63,6 +78,28 @@ SITEMAP_URL = "https://roasterym.base.shop/sitemap.xml"
 
 ROAST_TERMS = ["浅煎り", "中深煎り", "深煎り"]
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
+FLAVOR_KEYWORDS = [
+    "酸味", "コク", "香り", "風味", "ボディ", "後味", "甘み", "甘い", "苦味",
+    "フレーバー", "余韻", "口当たり", "マイルド", "バランス",
+    "acidity", "body", "aroma", "flavor", "sweetness", "balance", "aftertaste",
+]
+
+
+def extract_flavor_notes(description_text: str | None) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    if not description_text:
+        return None
+    paragraphs = [p.strip() for p in description_text.split("■") if p.strip()]
+    if not paragraphs:
+        return None
+    scored = [
+        (sum(p.lower().count(kw.lower()) for kw in FLAVOR_KEYWORDS), i, p)
+        for i, p in enumerate(paragraphs)
+    ]
+    best_score, _, best_text = max(scored, key=lambda item: (item[0], item[1]))
+    if best_score == 0:
+        return None
+    return best_text.strip() or None
 
 
 def fetch_page(url: str) -> BeautifulSoup:
@@ -127,7 +164,7 @@ def build_record(product_url: str, title: str, description_text: str, price: int
         "roast_selectable": False,
         "post_processing_tags": parsed["post_processing_tags"],
         "farm_note": description_text.strip() if description_text else None,
-        "flavor_notes": None,
+        "flavor_notes": extract_flavor_notes(description_text),
         "blend_components": [],
         "decaf_process": decaf_process,
         "price": price,
