@@ -43,6 +43,18 @@ null(ブレンドは単一国のフィールドに収まらないため)とす�
 FILTER／粉」(挽き方)の2種のみで、重量は商品名ごとに固定・別商品(価格も
 共通)。挽き方によって価格が変わらないため、最初のバリアントの価格を
 そのまま採用する。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: body_htmlに「テイスト／TASTE:」または英語のみ
+「Taste:」というラベル(日本語→英語の順で短いフレーバー記述語が続く)と、
+その後に日本語のストーリー文(産地・生産者・精製方法等の背景+テイスティ
+ング表現が地続き)が複数の<p>/<div>要素に分かれて入っている(対象16件
+全てで確認)。ラベル直後の日本語側記述語＋日本語ストーリー文(複数要素を
+連結)を採用する。除外対象: 「精製方法:」等のスペックラベル行、
+「現在のオリジン／CURRENT ORIGINS:」構造化欄、「収穫時期に合わせて」
+「150gのみの販売となりますので」等の注意書き、「＜...＞」見出し+
+「ART BAG」関連のアートワーク企画紹介文(1kg商品の一部に付随、
+テイスティングと無関係)。
 """
 
 import json
@@ -87,6 +99,60 @@ TARGET_PRODUCT_TYPES = {
 }
 
 WEIGHT_PATTERN = re.compile(r"(\d+(?:\.\d+)?)\s*(kg|g)", re.IGNORECASE)
+
+JP_PATTERN = re.compile(r"[぀-ヿ一-鿿]")
+TASTE_LABEL_PATTERN = re.compile(r"(?:テイスト|TASTE)[／/]?\s*(?:TASTE)?\s*[:：]\s*", re.IGNORECASE)
+SPEC_LABEL_PATTERN = re.compile(r"^(精製方法|品種|標高|生産処理|プロセス|焙煎度)[:：]")
+FLAVOR_SKIP_PATTERNS = [
+    re.compile(r"のみの販売となりますので"),
+    re.compile(r"収穫時期に合わせて"),
+    re.compile(r"^-{3,}$"),
+    re.compile(r"^現在のオリジン"),
+    re.compile(r"^＜.*＞"),
+    re.compile(r"ART BAG"),
+    re.compile(r"アーティスト"),
+    re.compile(r"^※"),
+]
+
+
+def get_leaf_blocks(soup: BeautifulSoup) -> list[str]:
+    blocks = []
+    for el in soup.find_all(["p", "div"]):
+        if el.find(["p", "div"]):
+            continue
+        for br in el.find_all("br"):
+            br.replace_with("\n")
+        text = el.get_text().strip()
+        if text:
+            blocks.append(text)
+    return blocks
+
+
+def extract_flavor_notes(body_html: str) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    soup = BeautifulSoup(body_html or "", "html.parser")
+    blocks = get_leaf_blocks(soup)
+
+    taste_descriptor = None
+    narrative_parts = []
+    for block in blocks:
+        if any(p.search(block) for p in FLAVOR_SKIP_PATTERNS):
+            continue
+        m = TASTE_LABEL_PATTERN.search(block)
+        if m and taste_descriptor is None:
+            after = block[m.end():]
+            lines = [line for line in after.split("\n") if line.strip()]
+            taste_descriptor = lines[0].strip() if lines else None
+            continue
+        if SPEC_LABEL_PATTERN.match(block):
+            continue
+        if "ORIGINS" in block.upper():
+            continue
+        if JP_PATTERN.search(block) and len(block) > 10:
+            narrative_parts.append(block)
+
+    parts = [p for p in [taste_descriptor] + narrative_parts if p]
+    return "\n".join(parts) if parts else None
 
 
 def fetch_products() -> list[dict]:
@@ -191,6 +257,7 @@ def build_record(product: dict, category_hint: str) -> dict:
         "processing_method": processing_method,
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": extract_flavor_notes(product.get("body_html")),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": blend_components,
         "price": price,
