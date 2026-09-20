@@ -29,6 +29,14 @@ NON_BEAN_KEYWORDSで除外する方式を採用した。カリタ/ハリオ等�
 parse_product()で判定できることが多いが、本文に「●原産国⇒インドネシア」
 という明示ラベルもあるため、商品名から判定できなかった場合のフォールバックに
 使う。
+
+【flavor_notes(テイスティングノート)について(2026-09-20追記)】
+実データ確認済み: 本文に「●テイスト⇒深緑がかった生豆の色から「珈琲の
+オパール」と呼ばれる。気品溢れる透き通った苦味なら深焙煎。酸味を味わう
+なら中深焙煎。」のように「テイスト⇒」ラベルで店独自の風味説明が入って
+いることを確認した(サンプル8件全件で存在)。以前はこの情報を一切読んで
+いなかった。値は次のHTMLタグ(</strong>等)の直前で終わるため、
+「テイスト⇒」から次の「<」までを正規表現で抜き出す。
 """
 
 import re
@@ -60,6 +68,7 @@ REQUEST_HEADERS = {
 NON_BEAN_KEYWORDS = ["カリタ", "ハリオ", "ビスケット", "ギフトボックス", "セット", "ギフト"]
 WEIGHT_PRICE_PATTERN = re.compile(r"●\s*(\d+)\s*[ｇg]\s*[：:]\s*([\d,]+)\s*円")
 ORIGIN_LABEL_PATTERN = re.compile(r"原産国⇒([^\s<\n]+)")
+TASTE_LABEL_PATTERN = re.compile(r"テイスト⇒([^<]+)")
 
 
 def fetch_page(url: str) -> BeautifulSoup:
@@ -108,6 +117,9 @@ def build_record(product_url: str, title: str, body_text: str) -> dict | None:
     structural_out_of_stock = "itemsoldout" in body_text
     stock_status = detect_stock_status(title, structural_out_of_stock)
 
+    taste_m = TASTE_LABEL_PATTERN.search(body_text)
+    flavor_notes = taste_m.group(1).strip() if taste_m else None
+
     return {
         "shop_name": SHOP_INFO["name"],
         "raw_name": title,
@@ -118,6 +130,7 @@ def build_record(product_url: str, title: str, body_text: str) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": flavor_notes,
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": price,
