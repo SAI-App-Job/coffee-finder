@@ -26,7 +26,19 @@ NON_BEAN_KEYWORDSで非対象とする。
 レトロサイダー・KINTO製ブリューワー/カラフェ/フィルター等の器具・
 ぼくのミルクコーヒーの素(液体)・コインチョコ・活動支援(投げ銭)枠が
 非対象。NON_BEAN_KEYWORDSで除外する。
-"""
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: 対象19件のうち商品ページの構成が2パターンに分かれる。
+(a)新形式(4件): div#appsItemDetailCustomTag内の最初の
+p.appsItemDetailCustomTag_heading+p.appsItemDetailCustomTag_description
+の組にテイスティング文と「おすすめの楽しみ方」が入っており、そのまま
+採用する(2組目以降は商品詳細のスペック情報のため対象外)。
+(b)旧形式(15件): div.itemDescription内のpタグに、商品名・品種等の
+短いスペック行とテイスティング文が続けて書かれ、その後に
+「---------------------------------------------」という区切り線を
+挟んで配送方法等の定型文が続く構成。区切り線の直前までを採用する。
+og:descriptionは店舗が別途用意した短い要約文で、上記本文より情報量が
+少ないため使用しない。"""
 
 import re
 
@@ -61,12 +73,40 @@ NON_BEAN_KEYWORDS = [
 ]
 PREFIX_PATTERN = re.compile(r"^コーヒー豆[：:]\s*")
 FIXED_WEIGHT_G = 200
+FLAVOR_SEPARATOR_PATTERN = re.compile(r"^-{3,}$")
 
 
 def fetch_page(url: str) -> BeautifulSoup:
     resp = requests.get(url, headers=REQUEST_HEADERS, timeout=15)
     resp.raise_for_status()
     return BeautifulSoup(resp.text, "html.parser")
+
+
+def extract_flavor_notes(soup: BeautifulSoup) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    custom_container = soup.select_one("div#appsItemDetailCustomTag")
+    if custom_container:
+        desc = custom_container.select_one("p.appsItemDetailCustomTag_description")
+        if desc and desc.get_text(strip=True):
+            for br in desc.find_all("br"):
+                br.replace_with("\n")
+            lines = [line.strip() for line in desc.get_text().split("\n") if line.strip()]
+            return "\n".join(lines).strip() or None
+        return None
+
+    el = soup.select_one("div.itemDescription p")
+    if not el:
+        return None
+    for br in el.find_all("br"):
+        br.replace_with("\n")
+    lines = [line.strip() for line in el.get_text().split("\n") if line.strip()]
+    flavor_lines = []
+    for line in lines:
+        if FLAVOR_SEPARATOR_PATTERN.match(line):
+            break
+        flavor_lines.append(line)
+    text = "\n".join(flavor_lines).strip()
+    return text or None
 
 
 def extract_og_fields(soup: BeautifulSoup) -> dict | None:
@@ -79,7 +119,7 @@ def extract_og_fields(soup: BeautifulSoup) -> dict | None:
     title = PREFIX_PATTERN.sub("", raw_title).strip()
     price_el = soup.select_one('meta[property="product:price:amount"]')
     price = int(float(price_el["content"])) if price_el and price_el.get("content") else None
-    return {"title": title, "price": price}
+    return {"title": title, "price": price, "flavor_notes": extract_flavor_notes(soup)}
 
 
 def fetch_sitemap_urls() -> list[str]:
@@ -114,6 +154,7 @@ def build_record(item: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": item.get("flavor_notes"),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": item["price"],
@@ -143,7 +184,10 @@ def scrape_all_products() -> tuple[list[dict], list[dict]]:
             records.append(prev)
             continue
 
-        detail = build_record({"title": fields["title"], "price": fields["price"], "url": product_url})
+        detail = build_record({
+            "title": fields["title"], "price": fields["price"],
+            "flavor_notes": fields.get("flavor_notes"), "url": product_url,
+        })
         if detail is None:
             continue
         if detail.get("is_flavored"):
