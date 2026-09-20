@@ -39,6 +39,16 @@ id1=豆・粉タイプ・id2=重量という違いがある)。「豆のまま�
 最小重量を代表バリアントとして採用する。単一サイズ商品(重量名が空文字)は
 重量情報をタイトル中の表記(例:「15g」)から補完する。価格(price02)は
 一覧ページの表示(税込)と一致することを実データ確認済み。
+
+【flavor_notes(2026-09-20追記)】
+実データ確認済み: 対象23件中22件は商品名の先頭に「【オレンジのフルー
+ティ感、甘さの余韻】」のような簡潔なテイスティング要約が【】で括られて
+入っており、これをそのままflavor_notesとして採用する(tier1)。詳細ページ
+本文(div.main_comment)は単一原産地商品では産地・農園の背景説明や構造化
+スペック(品種/栽培地/標高等)が中心でテイスティング文としては使いづらい
+ため採用しない。商品名に【】が無い1件(アイスコーヒーブレンド Sea side)
+はdiv.main_commentに実際のテイスティング文があったため、「ブレンド内容:」
+以降を除いてflavor_notesとして採用する(tier2)。
 """
 
 import json
@@ -85,12 +95,27 @@ NON_BEAN_KEYWORDS = [
 CLASS_CATEGORIES_PATTERN = re.compile(r"eccube\.classCategories\s*=\s*(\{.*?\});", re.DOTALL)
 CLASSCAT1_OPTION_PATTERN = re.compile(r'<option label="([^"]*)" value="(\d+)">')
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
+FLAVOR_BRACKET_PATTERN = re.compile(r"^【([^】]+)】")
 
 
 def fetch_page(url: str) -> BeautifulSoup:
     resp = requests.get(url, headers=REQUEST_HEADERS, timeout=15)
     resp.raise_for_status()
     return BeautifulSoup(resp.text, "html.parser")
+
+
+def extract_flavor_notes(title: str, soup: BeautifulSoup) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    m = FLAVOR_BRACKET_PATTERN.match(title)
+    if m:
+        return m.group(1).strip() or None
+
+    el = soup.select_one("div.main_comment")
+    if not el:
+        return None
+    text = el.get_text(" ", strip=True)
+    text = text.split("ブレンド内容:", 1)[0].strip()
+    return text or None
 
 
 def pick_canonical_variant(html: str, title: str) -> tuple[int | None, int | None, bool]:
@@ -143,7 +168,7 @@ def pick_canonical_variant(html: str, title: str) -> tuple[int | None, int | Non
     return (title_weight or weight_g), price, in_stock
 
 
-def build_record(product_url: str, title: str, html: str, category_hint: str) -> dict:
+def build_record(product_url: str, title: str, html: str, category_hint: str, soup: BeautifulSoup) -> dict:
     parsed = parse_product(title)
     weight_g, price, in_stock = pick_canonical_variant(html, title)
 
@@ -172,6 +197,7 @@ def build_record(product_url: str, title: str, html: str, category_hint: str) ->
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": extract_flavor_notes(title, soup),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": price,
@@ -212,7 +238,7 @@ def parse_product_detail(url: str, category_hint: str = "") -> dict:
             "product_url": url,
         }
 
-    return build_record(url, title, html, category_hint)
+    return build_record(url, title, html, category_hint, soup)
 
 
 def scrape_category_list(cid: str) -> list[dict]:
