@@ -35,9 +35,19 @@ div.product-list-item内に商品名(p.product-list-name)・価格
 
 robots.txt確認済み(2026-09時点): /robots.txt自体が存在しない(404)。
 明示的なDisallow指定が無いため実質制限なしと判断した。
+
+【flavor_notes(テイスティングノート)について(2026-09-20追記)】
+実データ確認済み: 一覧ページには無いが、詳細ページのdiv.item-detail-txt1
+(見出し「商品詳細」+本文)に、短い一文(「程よい酸味と甘味のエチオピア産
+コーヒー豆」等)から長い産地ストーリー(フェアトレード団体の紹介等)まで
+様々な粒度で風味・産地の説明が書かれている(サンプル8件全件で確認)。
+この情報を取得するため、これまで一覧ページのみで完結していた設計を
+変更し、各商品の詳細ページも取得するようにした(その分の負荷を考慮し
+CRAWL_DELAY_SECONDSを設定)。
 """
 
 import re
+import time
 
 import requests
 from bs4 import BeautifulSoup
@@ -63,6 +73,7 @@ REQUEST_HEADERS = {
 NON_BEAN_KEYWORDS = ["ドリップバッグ"]
 WEIGHT_MULTIPLY_PATTERN = re.compile(r"(\d+)\s*[gｇ]\s*[×xX]\s*(\d+)")
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
+CRAWL_DELAY_SECONDS = 1
 
 
 def fetch_page(url: str) -> BeautifulSoup:
@@ -70,6 +81,22 @@ def fetch_page(url: str) -> BeautifulSoup:
     resp.raise_for_status()
     resp.encoding = "utf-8"
     return BeautifulSoup(resp.text, "html.parser")
+
+
+def extract_flavor_notes(product_url: str) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    try:
+        soup = fetch_page(product_url)
+    except requests.RequestException as e:
+        print(f"[warn] 詳細ページ取得失敗: {product_url} ({e})")
+        return None
+    el = soup.select_one("div.item-detail-txt1")
+    if not el:
+        return None
+    h4 = el.select_one("h4")
+    if h4:
+        h4.decompose()
+    return el.get_text(strip=True) or None
 
 
 def parse_weight_g(title: str) -> int | None:
@@ -123,6 +150,7 @@ def build_record(item) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": extract_flavor_notes(product_url),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": price,
@@ -151,6 +179,8 @@ def scrape_all_products() -> tuple[list[dict], list[dict]]:
             if detail.get("is_flavored"):
                 flavored_by_url.setdefault(detail["product_url"], detail)
             else:
+                if detail["product_url"] not in records_by_url:
+                    time.sleep(CRAWL_DELAY_SECONDS)
                 records_by_url.setdefault(detail["product_url"], detail)
 
     return list(records_by_url.values()), list(flavored_by_url.values())
