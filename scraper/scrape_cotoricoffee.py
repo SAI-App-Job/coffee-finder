@@ -33,6 +33,15 @@ product.nameは、他店で一般的な"<br>"/"<br/>"/"<br />"ではなく、HTM
 "</br>"がそのままraw_nameに残ってしまっていた(NON_BEAN_KEYWORDSに
 よる除外判定はキーワードが単純な部分文字列一致のため実害は無かった)。
 `</?br\s*/?>`に変更し、開き・閉じ両方の表記に対応した。
+
+【flavor_notes(2026-09-20追記)】
+実データ確認済み: 詳細ページのdiv.product__explain内(span要素の<br>区切り
+テキスト)に実際のテイスティング文が複数段落にわたって入っている(対象
+21件中20件、1件「ブルンジ」のみ説明文自体が存在せず対象外)。末尾は必ず
+「商品一覧ページへ戻る」という一覧への戻りリンクのテキストで終わり、
+その直前に「※2025年9月1日より980円となります。」のような価格改定の
+定型文が入る場合がある。戻りリンクのテキストと「円となります」を含む
+段落を除外し、残りを結合してflavor_notesとして採用する。
 """
 
 import json
@@ -65,12 +74,50 @@ NON_BEAN_KEYWORDS = [
 ]
 COLORME_PATTERN = re.compile(r"var Colorme\s*=\s*(\{.*?\});", re.DOTALL)
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
+BACK_LINK_TEXT = "商品一覧ページへ戻る"
+PRICE_NOTICE_PATTERN = re.compile(r"円となります")
 
 
 def fetch_page(url: str) -> BeautifulSoup:
     resp = requests.get(url, headers=REQUEST_HEADERS, timeout=15)
     resp.raise_for_status()
     return BeautifulSoup(resp.text, "html.parser")
+
+
+def split_into_paragraphs(el) -> list[str]:
+    paragraphs = []
+    current_parts: list[str] = []
+    for child in el.contents:
+        name = getattr(child, "name", None)
+        if name == "br":
+            continue
+        text = child.get_text() if name else str(child)
+        text = text.strip()
+        if not text:
+            if current_parts:
+                paragraphs.append(" ".join(current_parts))
+                current_parts = []
+        else:
+            current_parts.append(text)
+    if current_parts:
+        paragraphs.append(" ".join(current_parts))
+    return paragraphs
+
+
+def extract_flavor_notes(soup: BeautifulSoup) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    el = soup.select_one("div.product__explain span") or soup.select_one("div.product__explain")
+    if not el:
+        return None
+    kept = []
+    for para in split_into_paragraphs(el):
+        if para == BACK_LINK_TEXT:
+            continue
+        if PRICE_NOTICE_PATTERN.search(para):
+            continue
+        kept.append(para)
+    text = " ".join(kept).strip()
+    return text or None
 
 
 def fetch_pid_urls() -> list[str]:
@@ -126,6 +173,7 @@ def build_record(soup: BeautifulSoup, product_url: str) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": extract_flavor_notes(soup),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": int(price) if price is not None else None,
