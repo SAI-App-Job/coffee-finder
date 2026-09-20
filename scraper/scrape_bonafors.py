@@ -36,6 +36,14 @@ Roasters等と異なるEC-CUBEカスタマイズ)。本スクレイパーはこ�
 (中煎/中深煎/深煎)由来だが商品名自体には含まれないため、roast_hintとして
 保持しroast_levelはparse_product()の商品名解析(多くはNoneになる)に
 任せる。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: 商品詳細ページのdiv.ec-productRole__description内に
+短いテイスティング文があり、その後に店舗共通の「【ご注意】」定型文
+(生豆200g表記・焙煎後の目減り説明)が続く構成(対象19件中18件で確認)。
+「【ご注意】」の直前までを採用する。1件(ガテマラ)はdiv自体が空で
+テイスティング文が存在しなかった(商品ページの実データ確認済みの
+genuine欠落)。
 """
 
 import json
@@ -65,12 +73,27 @@ REQUEST_HEADERS = {
 
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
 CLASS_CATEGORIES_MARKER = "eccube.classCategories = "
+FLAVOR_STOP_PATTERN = re.compile(r"【ご注意】")
 
 
 def fetch_page(url: str) -> BeautifulSoup:
     resp = requests.get(url, headers=REQUEST_HEADERS, timeout=15)
     resp.raise_for_status()
     return BeautifulSoup(resp.text, "html.parser")
+
+
+def extract_flavor_notes(soup: BeautifulSoup) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    el = soup.select_one("div.ec-productRole__description")
+    if not el:
+        return None
+    for br in el.find_all("br"):
+        br.replace_with("\n")
+    lines = [line.strip() for line in el.get_text().split("\n") if line.strip()]
+    joined = "\n".join(lines)
+    m = FLAVOR_STOP_PATTERN.search(joined)
+    text = joined[:m.start()] if m else joined
+    return text.strip() or None
 
 
 def fetch_product_urls_with_roast() -> list[dict]:
@@ -200,6 +223,7 @@ def build_record(item: dict) -> dict | None:
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
         "roast_hint": item["roast_hint"],
+        "flavor_notes": extract_flavor_notes(soup),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": price,
