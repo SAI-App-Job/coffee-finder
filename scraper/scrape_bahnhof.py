@@ -24,7 +24,19 @@ GRP")。curl/python-requests等は個別にDisallow: /指定があるが、User-
 サーバー・有田焼ドリッパー・ペーパーフィルター・バースプーン・
 棒状温度計セット・メジャースプーン)が非対象。NON_BEAN_KEYWORDSで
 除外する。
+
+【flavor_notes(2026-09-20追記)】
+実データ確認済み: og:descriptionはほぼ全商品でテイスティング関連の
+記述を含む。一部商品(ウガンダ・ブラジル・コロンビア等)は「カップ
+コメント：ピーチ・フラワリー・スイートネス」のような明確なラベル付き
+テイスティングノートを持つが、他の商品はラベル無しで農園の背景説明
+文の末尾に直接テイスティング文が続く構成であり、両者を切り分ける
+共通の区切りが無い。既存の他店舗と同様、背景説明とテイスティング文が
+地続きの場合は全文を採用する方針とし、og:descriptionをそのまま
+flavor_notesとして採用する(末尾にURLが付く商品のみURL以降を除く)。
 """
+
+import re
 
 import requests
 from bs4 import BeautifulSoup
@@ -56,10 +68,21 @@ NON_BEAN_KEYWORDS = [
 ]
 
 
+URL_SUFFIX_PATTERN = re.compile(r"https?://\S+.*$", re.DOTALL)
+
+
 def fetch_page(url: str) -> BeautifulSoup:
     resp = requests.get(url, headers=REQUEST_HEADERS, timeout=15)
     resp.raise_for_status()
     return BeautifulSoup(resp.text, "html.parser")
+
+
+def extract_flavor_notes(description: str | None) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    if not description:
+        return None
+    text = URL_SUFFIX_PATTERN.sub("", description).strip()
+    return text or None
 
 
 def extract_og_fields(soup: BeautifulSoup) -> dict | None:
@@ -71,7 +94,9 @@ def extract_og_fields(soup: BeautifulSoup) -> dict | None:
         return None
     price_el = soup.select_one('meta[property="product:price:amount"]')
     price = int(float(price_el["content"])) if price_el and price_el.get("content") else None
-    return {"title": title, "price": price}
+    desc_el = soup.select_one('meta[property="og:description"]')
+    description = desc_el["content"] if desc_el and desc_el.get("content") else None
+    return {"title": title, "price": price, "description": description}
 
 
 def fetch_sitemap_urls() -> list[str]:
@@ -106,6 +131,7 @@ def build_record(item: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": extract_flavor_notes(item.get("description")),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": item["price"],
@@ -135,7 +161,10 @@ def scrape_all_products() -> tuple[list[dict], list[dict]]:
             records.append(prev)
             continue
 
-        detail = build_record({"title": fields["title"], "price": fields["price"], "url": product_url})
+        detail = build_record({
+            "title": fields["title"], "price": fields["price"],
+            "description": fields.get("description"), "url": product_url,
+        })
         if detail is None:
             continue
         if detail.get("is_flavored"):
