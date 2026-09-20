@@ -22,6 +22,15 @@ python-requests等は個別にDisallow: /指定があるが、User-agent: *ル�
 バック】」1件のみがドリップバッグでコーヒー豆単品ではないため
 NON_BEAN_KEYWORDSで除外する。残り22件は単一銘柄・ブレンド(すべて100g、
 デカフェ含む)。
+
+【flavor_notes(2026-09-20追記)】
+実データ確認済み: og:descriptionは対象23件全てで「テイスティング文の
+自由記述段落→生産国：(精選方法：が続く場合あり)→【焙煎度 ご参考コメント】
+▶ミディアム...▶ハイ...▶シティ...▶フルシティ...という焙煎度別コメント」
+という共通の3段構成だった。「生産国：」ラベルの直前までの自由記述段落
+のみをflavor_notesとして採用する(焙煎度別コメントは特定の焙煎度に紐づく
+補足情報であり、単一のflavor_notesフィールドには冒頭の汎用的な
+テイスティング文の方が適する)。
 """
 
 import re
@@ -50,12 +59,22 @@ REQUEST_HEADERS = {
 
 NON_BEAN_KEYWORDS = ["ドリップバック", "ドリップバッグ"]
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
+FLAVOR_STOP_PATTERN = re.compile(r"生産国[：:]")
 
 
 def fetch_page(url: str) -> BeautifulSoup:
     resp = requests.get(url, headers=REQUEST_HEADERS, timeout=15)
     resp.raise_for_status()
     return BeautifulSoup(resp.text, "html.parser")
+
+
+def extract_flavor_notes(description: str | None) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    if not description:
+        return None
+    m = FLAVOR_STOP_PATTERN.search(description)
+    text = description[:m.start()] if m else description
+    return text.strip() or None
 
 
 def extract_og_fields(soup: BeautifulSoup) -> dict | None:
@@ -65,7 +84,9 @@ def extract_og_fields(soup: BeautifulSoup) -> dict | None:
     title = title_el["content"].split(" | ")[0].strip()
     price_el = soup.select_one('meta[property="product:price:amount"]')
     price = int(float(price_el["content"])) if price_el and price_el.get("content") else None
-    return {"title": title, "price": price}
+    desc_el = soup.select_one('meta[property="og:description"]')
+    description = desc_el["content"] if desc_el and desc_el.get("content") else None
+    return {"title": title, "price": price, "description": description}
 
 
 def build_record(product_url: str, fields: dict) -> dict | None:
@@ -100,6 +121,7 @@ def build_record(product_url: str, fields: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": extract_flavor_notes(fields.get("description")),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": fields["price"],
