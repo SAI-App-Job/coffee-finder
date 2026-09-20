@@ -20,6 +20,24 @@ python-requests等は個別にDisallow: /指定があるが、User-agent: *ル�
 実データ確認済み(sitemap.xml上26件): 「水出しアイスコーヒー デルパック」
 (液体)がコーヒー豆単品ではないためNON_BEAN_KEYWORDSで除外する。残りは
 ブレンド2種+ストレート数種(100g/200g)で、デカフェも含む。
+
+【flavor_notes・farm_note(2026-09-20追記)】
+実データ確認済み: og:descriptionの内容が商品タイプによって2系統に分かれる。
+(1)ブレンド・ドリップバッグ商品は「■商品説明<テイスティング文>■商品詳細
+<品名/原材料/内容量等の事務的スペック>」の構成で、「■商品説明」の直後
+から次の「■」見出しの直前までが実際のテイスティング文になっている
+(採用しflavor_notesとする)。(2)ストレート単一原産地商品(デカフェ含む)は
+「■商品説明」見出しが無く、代わりに「生産地：」「生産地域：」「標高：」
+「品種：」等のラベル付きスペック情報のみが連結されている(テイスティング
+文は無い)。これをflavor_notesとして採用すると事務的スペックを「テイス
+ティングノート」と誤表示することになるため採用せず、代わりにfarm_note用の
+断片フィールド(farm_name/region_detail/altitude_note/variety_note)として
+取得する(「生産地」の値が「農園」を含む場合はfarm_name、それ以外は
+region_detailとして扱う。「生産地域」が別途あれば優先してregion_detailに
+採用)。上記いずれの構造にも当たらない場合(例: デカフェのドリップバッグ
+商品は見出し無しの自由記述のみ)は、説明文全体をそのままflavor_notesとして
+採用する(フォールバック)。og:descriptionが空の商品(1件、マンデリンG1
+深煎り無印)はflavor_notes・farm_noteともに取得できない。
 """
 
 import re
@@ -49,6 +67,52 @@ REQUEST_HEADERS = {
 NON_BEAN_KEYWORDS = ["水出し"]
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
 
+FLAVOR_DESC_PATTERN = re.compile(r"■\s*商品説明\s*(.*?)(?=■|$)", re.DOTALL)
+FARM_LABEL_PATTERN = re.compile(r"(生産地域|生産地|輸出業者|標高|精選|品種|焙煎度|SCA評価)[：:]+\s*")
+
+
+def extract_flavor_notes_and_farm(description: str | None) -> dict:
+    """理由はモジュールdocstring参照。"""
+    empty = {"flavor_notes": None, "farm_name": None, "region_detail": None,
+              "altitude_note": None, "variety_note": None}
+    if not description:
+        return empty
+
+    m = FLAVOR_DESC_PATTERN.search(description)
+    if m:
+        text = m.group(1).strip()
+        return {**empty, "flavor_notes": text or None}
+
+    matches = list(FARM_LABEL_PATTERN.finditer(description))
+    if matches:
+        values = {}
+        for i, lm in enumerate(matches):
+            start = lm.end()
+            end = matches[i + 1].start() if i + 1 < len(matches) else len(description)
+            value = description[start:end].strip()
+            if value:
+                values[lm.group(1)] = value
+
+        farm_name = None
+        region_detail = None
+        place = values.get("生産地")
+        if place and "農園" in place:
+            farm_name = place
+        elif place:
+            region_detail = place
+        if values.get("生産地域"):
+            region_detail = values["生産地域"]
+
+        return {
+            "flavor_notes": None,
+            "farm_name": farm_name,
+            "region_detail": region_detail,
+            "altitude_note": values.get("標高"),
+            "variety_note": values.get("品種"),
+        }
+
+    return {**empty, "flavor_notes": description.strip() or None}
+
 
 def fetch_page(url: str) -> BeautifulSoup:
     resp = requests.get(url, headers=REQUEST_HEADERS, timeout=15)
@@ -63,7 +127,9 @@ def extract_og_fields(soup: BeautifulSoup) -> dict | None:
     title = title_el["content"].split(" | ")[0].strip()
     price_el = soup.select_one('meta[property="product:price:amount"]')
     price = int(float(price_el["content"])) if price_el and price_el.get("content") else None
-    return {"title": title, "price": price}
+    desc_el = soup.select_one('meta[property="og:description"]')
+    description = desc_el["content"] if desc_el and desc_el.get("content") else None
+    return {"title": title, "price": price, "description": description}
 
 
 def build_record(product_url: str, fields: dict) -> dict | None:
@@ -87,6 +153,7 @@ def build_record(product_url: str, fields: dict) -> dict | None:
     stock_status = detect_stock_status(title)
     weight_m = WEIGHT_PATTERN.search(title)
     weight_g = int(weight_m.group(1)) if weight_m else None
+    flavor_and_farm = extract_flavor_notes_and_farm(fields.get("description"))
 
     return {
         "shop_name": SHOP_INFO["name"],
@@ -98,6 +165,11 @@ def build_record(product_url: str, fields: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": flavor_and_farm["flavor_notes"],
+        "farm_name": flavor_and_farm["farm_name"],
+        "region_detail": flavor_and_farm["region_detail"],
+        "altitude_note": flavor_and_farm["altitude_note"],
+        "variety_note": flavor_and_farm["variety_note"],
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": fields["price"],
