@@ -25,6 +25,11 @@ robots.txt確認済み(2026-09時点): User-agent: *には制限なし
 実データ確認済み: 全18銘柄が150g/250g/500gの3サイズで個別商品登録
 されている。商品名から「(重量袋入)」の部分を除いた基準名で
 グルーピングし、最小重量(150g)を代表として採用する。
+
+【flavor_notes(2026-09-20追記)】
+実データ確認済み: 詳細ページのdiv.detail_item_text.detail_desc_box内に
+実際のテイスティング文が入っている(対象19件全てで確認、価格・重量等の
+スペック情報は別のdivに分離されており混入しない)。
 """
 
 import re
@@ -75,6 +80,13 @@ def fetch_product_urls() -> list[str]:
     return [f"{BASE_URL}/product/{pid}" for pid in pids]
 
 
+def extract_flavor_notes(soup: BeautifulSoup) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    el = soup.select_one("div.detail_item_text.detail_desc_box")
+    text = el.get_text(" ", strip=True) if el else None
+    return text or None
+
+
 def extract_fields(soup: BeautifulSoup) -> dict | None:
     title_el = soup.find("title")
     if not title_el:
@@ -84,7 +96,7 @@ def extract_fields(soup: BeautifulSoup) -> dict | None:
         return None
     price_el = soup.select_one('meta[property="product:price:amount"]')
     price = int(float(price_el["content"])) if price_el and price_el.get("content") else None
-    return {"title": title, "price": price}
+    return {"title": title, "price": price, "flavor_notes": extract_flavor_notes(soup)}
 
 
 def pick_canonical_items(items: list[dict]) -> list[dict]:
@@ -130,6 +142,7 @@ def build_record(item: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": item.get("flavor_notes"),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": item["price"],
@@ -152,7 +165,10 @@ def scrape_all_products() -> tuple[list[dict], list[dict]]:
             continue
         if not fields:
             continue
-        all_items.append({"title": fields["title"], "price": fields["price"], "url": product_url})
+        all_items.append({
+            "title": fields["title"], "price": fields["price"],
+            "flavor_notes": fields.get("flavor_notes"), "url": product_url,
+        })
 
     canonical_items = pick_canonical_items(all_items)
 
