@@ -22,12 +22,24 @@ robots.txt確認済み(2026-09時点): Shopify標準のrobots.txtでAllow: /
 (「スペシャリティブレンド」のみ200gの豆のまま/中挽きの2択)。
 variants配列のgramsから最小重量(100g)の「豆のまま」を優先して代表
 バリアントとして採用する。
+
+【flavor_notes(2026-09-20追記)】
+実データ確認済み: body_htmlは対象20件中19件が「【産地】/【農園】/
+【精製】/【品種】/【標高】/【特徴】」というラベル付きスペック形式で、
+【特徴】ラベルの値に実際のテイスティング文が入っている(直後に続く
+「酸味★★★★」等の5段階評価の直前までを値として取得)。「酸味」という
+語がテイスティング文自身に含まれる場合があるため、単純な「酸味」検索
+ではなく「酸味」の直後に★が続く評価行のパターンで区切りを判定する。
+残り1件(スペシャリティブレンド)は【特徴】ラベル自体が無いシンプルな
+構成のため、送料/同梱に関する定型文を除く全<p>を結合するフォール
+バックで対応する。
 """
 
 import re
 import time
 
 import requests
+from bs4 import BeautifulSoup
 
 from coffee_parser import parse_product, detect_stock_status
 from previous_data import load_previous_products, is_unchanged
@@ -49,6 +61,23 @@ REQUEST_HEADERS = {
 
 TARGET_PRODUCT_TYPE = "コーヒー豆"
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
+FLAVOR_FEATURE_PATTERN = re.compile(r"【特徴】\s*(.*?)(?=酸味\s*★|\Z)", re.DOTALL)
+
+
+def extract_flavor_notes(body_html: str | None) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    soup = BeautifulSoup(body_html or "", "html.parser")
+    text = soup.get_text(" ", strip=True)
+    m = FLAVOR_FEATURE_PATTERN.search(text)
+    if m:
+        return m.group(1).strip() or None
+    parts = []
+    for p in soup.find_all("p"):
+        t = p.get_text(" ", strip=True)
+        if not t or "送料" in t or "同梱" in t:
+            continue
+        parts.append(t)
+    return " ".join(parts) or None
 
 
 def fetch_products() -> list[dict]:
@@ -118,6 +147,7 @@ def build_record(product: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": extract_flavor_notes(product.get("body_html")),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": price,
