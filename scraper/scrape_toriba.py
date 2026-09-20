@@ -38,6 +38,15 @@ COFFEE」(スパイスミックス)、「ミルクコーヒーベース」「リ
 在庫切れを示す構造化要素も見当たらないため、商品名のテキストのみで在庫状態を
 判定する。価格はinput#M_price2のvalue属性(税込)から取得する(JSで生成される
 JSON-LDはブラウザでのみ生成され静的HTMLには含まれないため使わない)。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: 上記の通り説明文自体はHTMLコメント内(`<!--<div
+class="detailTxt">...-->`)に格納されているが、内容自体は安定して
+存在し正規表現で取り出せる(対象18件全てで確認、産地判定に使えないと
+いう既存の判断はコーヒー豆商品全てがブレンドで単一原産国が無いことを
+指しており、テイスティング文が無いという意味ではなかった)。取り出した
+本文はテイスティング文の後に銘柄名・「内容量：」以降のスペック情報が
+続く構成のため、「内容量：」の直前までをflavor_notesとして採用する。
 """
 
 import json
@@ -73,6 +82,8 @@ NON_BEAN_KEYWORDS = [
     "ミルクコーヒーベース", "リキッド", "コーヒー定期便",
 ]
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
+DETAIL_TXT_PATTERN = re.compile(r'<!--<div class="detailTxt">(.*?)-->', re.DOTALL)
+FLAVOR_STOP_PATTERN = re.compile(r"内容量[：:]")
 
 
 def fetch_page(url: str) -> BeautifulSoup:
@@ -81,7 +92,19 @@ def fetch_page(url: str) -> BeautifulSoup:
     return BeautifulSoup(resp.text, "html.parser")
 
 
-def build_record(product_url: str, title: str, price: int | None) -> dict:
+def extract_flavor_notes(html_text: str) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    m = DETAIL_TXT_PATTERN.search(html_text)
+    if not m:
+        return None
+    soup = BeautifulSoup(m.group(1), "html.parser")
+    text = soup.get_text("\n", strip=True)
+    sm = FLAVOR_STOP_PATTERN.search(text)
+    text = text[:sm.start()] if sm else text
+    return text.strip() or None
+
+
+def build_record(product_url: str, title: str, price: int | None, flavor_notes: str | None) -> dict:
     parsed = parse_product(title)
 
     if parsed["is_flavored"]:
@@ -107,6 +130,7 @@ def build_record(product_url: str, title: str, price: int | None) -> dict:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": flavor_notes,
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": price,
@@ -118,7 +142,10 @@ def build_record(product_url: str, title: str, price: int | None) -> dict:
 
 
 def parse_product_detail(url: str, fallback_title: str = "") -> dict:
-    soup = fetch_page(url)
+    resp = requests.get(url, headers=REQUEST_HEADERS, timeout=15)
+    resp.raise_for_status()
+    html_text = resp.text
+    soup = BeautifulSoup(html_text, "html.parser")
     # 理由: p.itemNameは詳細ページでは「関連商品」ウィジェットのJSテンプレート
     # 文字列内にしか存在せず(実データ確認済み、サーバー側HTMLには実要素として
     # 存在しない)、素朴なh1セレクタはページ最初のh1(サイトロゴ、id="hdrLogo")
@@ -140,7 +167,7 @@ def parse_product_detail(url: str, fallback_title: str = "") -> dict:
     if price_el and price_el.get("value"):
         price = int(price_el["value"].replace(",", ""))
 
-    return build_record(url, title, price)
+    return build_record(url, title, price, extract_flavor_notes(html_text))
 
 
 def scrape_category_list() -> list[dict]:
