@@ -32,6 +32,14 @@ product:price:amount のOGPメタタグにそのまま入っている(重量バ�
 ションなし、挽き方バリアントのみで価格は同一)。一部商品(コスタリカ
 サンタテレサ2000等)は商品名に重量が無いが、価格帯が200g商品と同水準
 であることを確認済みのためweight_gはNoneのまま許容する。
+
+【flavor_notes(2026-09-20追記)】
+実データ確認済み: og:descriptionはサイト側で末尾が省略される(「…」で
+切れる)ため、詳細ページのdiv.item_desc_text(構造化されたページ本文)を
+別途取得する必要がある。対象20件全てで実際のテイスティング文が入って
+おり、「＜生産者情報＞」「＜商品情報＞」「＜生産地情報＞」のいずれかの
+見出しが続く場合はその直前までを採用する(見出しが無い商品は全文を
+採用)。
 """
 
 import re
@@ -59,12 +67,26 @@ REQUEST_HEADERS = {
 }
 
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
+FLAVOR_STOP_PATTERN = re.compile(r"[<＜](生産者情報|商品情報|生産地情報)[＞>]")
 
 
 def fetch_page(url: str) -> BeautifulSoup:
     resp = requests.get(url, headers=REQUEST_HEADERS, timeout=15)
     resp.raise_for_status()
     return BeautifulSoup(resp.text, "html.parser")
+
+
+def extract_flavor_notes(soup: BeautifulSoup) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    el = soup.select_one("div.item_desc_text")
+    if not el:
+        return None
+    text = el.get_text("\n", strip=True)
+    m = FLAVOR_STOP_PATTERN.search(text)
+    if m:
+        text = text[:m.start()]
+    text = " ".join(line.strip() for line in text.split("\n") if line.strip())
+    return text or None
 
 
 def fetch_product_urls() -> list[str]:
@@ -85,7 +107,7 @@ def extract_fields(soup: BeautifulSoup) -> dict | None:
     title = title_el["content"].strip()
     price_el = soup.select_one('meta[property="product:price:amount"]')
     price = int(float(price_el["content"])) if price_el and price_el.get("content") else None
-    return {"title": title, "price": price}
+    return {"title": title, "price": price, "flavor_notes": extract_flavor_notes(soup)}
 
 
 def build_record(item: dict) -> dict | None:
@@ -117,6 +139,7 @@ def build_record(item: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": item.get("flavor_notes"),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": item["price"],
