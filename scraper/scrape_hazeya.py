@@ -39,6 +39,13 @@ robots.txt確認済み(2026-09時点): User-agent: *は/secure/と/cart/のみ
 coffee_parserのROAST_KEYWORDS(カタカナ表記)とは粒度が異なるため
 roast_levelには入れずroast_hintとして保持し、roast_selectable=Falseと
 する(405coffee.pyと同じ考え方)。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: 詳細ページのdiv.descriptionに【農園名】【生産者】
+【地域】【品種】【標高】【精製】【乾燥】【ロースト】等のスペック
+ラベルが続き、末尾に必ず「【特徴】」というテイスティング文の見出しが
+入っている(対象16件全てで確認、ブレンド・ストレート・デカフェいずれ
+の形式でも共通)。「【特徴】」以降のテキストをそのまま採用する。
 """
 
 import re
@@ -69,6 +76,7 @@ ROAST_PREFIX_PATTERN = re.compile(r"^【(浅煎り|中煎り|深煎り)】")
 ROAST_HINT_KEYWORDS = ["浅煎り", "中煎り", "深煎り"]
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
 COLORME_JSON_PATTERN = re.compile(r"var\s+Colorme\s*=\s*(\{.*\});", re.DOTALL)
+FLAVOR_PATTERN = re.compile(r"【特徴】\s*(.*)", re.DOTALL)
 
 
 def fetch_page(url: str) -> BeautifulSoup:
@@ -76,6 +84,19 @@ def fetch_page(url: str) -> BeautifulSoup:
     resp.raise_for_status()
     resp.encoding = "euc-jp"  # 実データ確認済み(Content-Type: text/html; charset=EUC-JP)
     return BeautifulSoup(resp.text, "html.parser")
+
+
+def extract_flavor_notes(soup: BeautifulSoup) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    desc_el = soup.select_one("div.description")
+    if not desc_el:
+        return None
+    for br in desc_el.find_all("br"):
+        br.replace_with("\n")
+    text = desc_el.get_text("\n", strip=True)
+    m = FLAVOR_PATTERN.search(text)
+    result = m.group(1).strip() if m else None
+    return result or None
 
 
 def fetch_list_items() -> list[dict]:
@@ -139,7 +160,7 @@ def detect_roast_hint(text: str) -> str | None:
     return None
 
 
-def build_record(item: dict, colorme_product: dict) -> dict:
+def build_record(item: dict, colorme_product: dict, flavor_notes: str | None = None) -> dict:
     # 詳細ページのvar Colorme.product.nameには<br>タグや全角スペースの残骸が
     # 残ることがある(実データ確認済み)ため、一覧側のクリーンなタイトルを採用し、
     # 詳細ページのJSONは価格・在庫情報の取得のみに使う。
@@ -177,6 +198,7 @@ def build_record(item: dict, colorme_product: dict) -> dict:
         "roast_level": None,
         "roast_hint": detect_roast_hint(title),
         "roast_selectable": False,
+        "flavor_notes": flavor_notes,
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": variant.get("option_price_including_tax") if variant else None,
@@ -201,7 +223,8 @@ def scrape_all_products() -> tuple[list[dict], list[dict]]:
         colorme_product = extract_colorme_product(soup)
         if not colorme_product:
             continue
-        detail = build_record(item, colorme_product)
+        flavor_notes = extract_flavor_notes(soup)
+        detail = build_record(item, colorme_product, flavor_notes)
         if detail.get("is_flavored"):
             flavored_records.append(detail)
         else:
