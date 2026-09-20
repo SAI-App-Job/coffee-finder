@@ -45,6 +45,13 @@ option2_value(挽き方、例:「豆のまま」)・option_price_including_tax�
 (390円/20g ≒ 1950円/100g相当 vs 実際の100gは1680円)。
 option1_valueに「お試し」を含むオプションは候補から除外し、通常
 サイズの中から最小重量を選ぶ。
+
+【flavor_notes(テイスティングノート)について(2026-09-20追記)】
+実データ確認済み: 商品詳細ページのdiv.p-product-explain__body(見出し
+「DETAIL」)に、風味を説明する短い自由記述文が書かれている(サンプル9件
+全件で確認)。ラベルや定型の注意書きが混在しないシンプルな構成のため、
+全文をそのままflavor_notesとして採用する。以前はこのdivを一切読んで
+いなかった。
 """
 
 import json
@@ -77,6 +84,17 @@ NON_BEAN_KEYWORDS = [
 ]
 COLORME_PATTERN = re.compile(r"var Colorme\s*=\s*(\{.*?\});", re.DOTALL)
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
+
+
+def extract_flavor_notes(soup: BeautifulSoup) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    el = soup.select_one("div.p-product-explain__body")
+    if not el:
+        return None
+    for br in el.find_all("br"):
+        br.replace_with("\n")
+    lines = [line.strip() for line in el.get_text().split("\n") if line.strip()]
+    return "".join(lines).strip() or None
 
 
 def fetch_page(url: str) -> BeautifulSoup:
@@ -173,6 +191,7 @@ def build_record(soup: BeautifulSoup, product_url: str) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": extract_flavor_notes(soup),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": int(price) if price is not None else None,
