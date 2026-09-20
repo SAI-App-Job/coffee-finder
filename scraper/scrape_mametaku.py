@@ -37,6 +37,13 @@ NON_BEAN_KEYWORDSで除外する。残り20件(定番ブレンド9種+ストレ�
 Colorme JSON内にも重量フィールドは存在せず(variantsは挽き方違いの
 みで価格は全て同額)、商品名に明示的な重量表記がある「ネット限定」
 3種(200g)以外はweight_gをNoneとする。
+
+【flavor_notes(2026-09-20追記)】
+実データ確認済み: 詳細ページのdiv.setsumei内は、商品名・焙煎度合いの
+説明表・使用量ガイド等とは完全に分離されたブロックで、実際の店主の
+コメントによるテイスティング/ストーリー文のみを含む(対象20件全てで
+確認、他の定型セクションのテキストが混入することは無い)。追加のHTTP
+アクセス無しでそのままflavor_notesとして採用する。
 """
 
 import re
@@ -74,6 +81,13 @@ def fetch_page(url: str) -> BeautifulSoup:
     resp = requests.get(url, headers=REQUEST_HEADERS, timeout=15)
     resp.raise_for_status()
     return BeautifulSoup(resp.text, "html.parser")
+
+
+def extract_flavor_notes(soup: BeautifulSoup) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    el = soup.select_one("div.setsumei")
+    text = el.get_text(" ", strip=True) if el else None
+    return text or None
 
 
 def fetch_pid_urls() -> list[str]:
@@ -131,6 +145,7 @@ def build_record(soup: BeautifulSoup, product_url: str) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": extract_flavor_notes(soup),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": int(price) if price is not None else None,
