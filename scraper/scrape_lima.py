@@ -23,6 +23,20 @@ CAP)・雑貨(マグ/カップ・キャニスター/CAN・スプーン・ラグ�
 実データ確認済み: 「2026 VALENTINE BLEND 200g」の1件のみ商品名に明示的な
 重量表記があり、他22件は重量表記なし(標準サイズは非公開)。WEIGHT_PATTERNで
 商品名から抽出できた場合のみweight_gを設定する。
+
+【flavor_notes(2026-09-20追記)】
+実データ確認済み: og:descriptionの充実度が商品によって大きく異なる。
+半数程度は商品名の単純な繰り返しのみ(「BITTER BLEND」「PERU / San Pedro
+Fredy Bourbon　有機JAS」等、産地スペックもテイスティング文も無い)。
+残りは「•精製方法：」「農園名：」等のラベル付きスペックに続けて実際の
+テイスティング文が(見出し無しで直接、あるいはラベル値と地続きで)入って
+おり、末尾に「※同一豆は一つの袋に入れて配送いたします。」という発送
+定型文が続く。ラベルとテイスティング文が地続きで交ぜられており商品ごとに
+出現順も一定でないため、テイスティング関連キーワードを含む場合のみ発送
+定型文の直前までを丸ごとflavor_notesとして採用し(スペックのみで
+テイスティング関連の言及が無い商品は事務的スペックを誤ってテイスティング
+ノートと表示しないよう採用しない)、含まない場合はflavor_notesを取得
+しない。
 """
 
 import re
@@ -56,12 +70,31 @@ NON_BEAN_KEYWORDS = [
     "COLD BREW",
 ]
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
+FLAVOR_STOP_PATTERN = re.compile(r"※同一")
+FLAVOR_KEYWORDS = (
+    "酸味", "苦味", "苦み", "甘味", "甘み", "コク", "香り", "風味", "余韻", "芳醇", "まろやか",
+    "テイスト", "フレーバー", "ナッティ", "フルーティ", "口当たり", "舌触り", "チョコレート",
+    "キャラメル", "ベリー", "シトラス", "柑橘", "はちみつ", "蜂蜜", "ワイン", "ジューシー",
+    "スパイシー", "フローラル", "華やか", "上品", "なめらか", "トロッと", "飲み口", "味わい",
+)
 
 
 def fetch_page(url: str) -> BeautifulSoup:
     resp = requests.get(url, headers=REQUEST_HEADERS, timeout=15)
     resp.raise_for_status()
     return BeautifulSoup(resp.text, "html.parser")
+
+
+def extract_flavor_notes(description: str | None) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    if not description:
+        return None
+    m = FLAVOR_STOP_PATTERN.search(description)
+    text = description[:m.start()] if m else description
+    text = text.strip()
+    if text and any(kw in text for kw in FLAVOR_KEYWORDS):
+        return text
+    return None
 
 
 def extract_og_fields(soup: BeautifulSoup) -> dict | None:
@@ -73,7 +106,9 @@ def extract_og_fields(soup: BeautifulSoup) -> dict | None:
         return None
     price_el = soup.select_one('meta[property="product:price:amount"]')
     price = int(float(price_el["content"])) if price_el and price_el.get("content") else None
-    return {"title": title, "price": price}
+    desc_el = soup.select_one('meta[property="og:description"]')
+    description = desc_el["content"] if desc_el and desc_el.get("content") else None
+    return {"title": title, "price": price, "description": description}
 
 
 def fetch_sitemap_urls() -> list[str]:
@@ -124,6 +159,7 @@ def build_record(item: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": extract_flavor_notes(item.get("description")),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": item["price"],
@@ -146,7 +182,10 @@ def scrape_all_products() -> tuple[list[dict], list[dict]]:
             continue
         if not fields:
             continue
-        all_items.append({"title": fields["title"], "price": fields["price"], "url": product_url})
+        all_items.append({
+            "title": fields["title"], "price": fields["price"],
+            "description": fields.get("description"), "url": product_url,
+        })
 
     canonical_items = pick_canonical_items(all_items)
 
