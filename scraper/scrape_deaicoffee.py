@@ -28,12 +28,20 @@ roast_levelには反映しない(marutake珈琲等と同じ方針)。
 実データ確認済み(全27件): 自宅で簡単 コールドブリューコーヒーバッグ・
 シングルオリジンドリップバッグ詰め合わせセットの2件が非対象。
 NON_BEAN_KEYWORDSで除外する。残り25件(デカフェ2件含む)を対象とする。
+
+【flavor_notes(2026-09-20追記)】
+実データ確認済み: products.jsonのbody_htmlは、1つ目の<p>要素が必ず
+テイスティングコメント専用の短文になっており(2つ目以降の<p>には
+「------」区切り線に続き「■内容量」「■商品詳細」等の構造化スペックが
+入る)、全25件で1つ目の<p>要素がそのままテイスティングコメントとして
+使える(構造化ラベルは一切含まない)。
 """
 
 import re
 import time
 
 import requests
+from bs4 import BeautifulSoup
 
 from coffee_parser import parse_product, detect_stock_status
 from previous_data import load_previous_products, is_unchanged
@@ -65,6 +73,18 @@ def extract_roast_hint(title: str) -> str | None:
         if term in title:
             return term
     return None
+
+
+def extract_flavor_notes(body_html: str | None) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    if not body_html:
+        return None
+    soup = BeautifulSoup(body_html, "html.parser")
+    first_p = soup.find("p")
+    if not first_p:
+        return None
+    text = first_p.get_text(" ", strip=True)
+    return text or None
 
 
 def fetch_products() -> list[dict]:
@@ -133,6 +153,7 @@ def build_record(product: dict) -> dict | None:
         "grade": parsed["grade"],
         "roast_level": None,  # 理由はモジュールdocstring参照(粗い焙煎度表記のためroast_hintに保持)
         "roast_hint": extract_roast_hint(title),
+        "flavor_notes": extract_flavor_notes(product.get("body_html")),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": price,
