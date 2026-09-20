@@ -46,6 +46,17 @@ attribute_pa_g(重量)・attribute_pa_jyoutai(豆/粉)から在庫があるバ�
 NON_BEAN_KEYWORDSで除外する。「ICED COFFEE BLEND」はアイス抽出用の
 ブレンド豆(粉ではなく豆/粉選択式の通常商品)であることを商品ページで
 確認済みのため対象に含める。
+
+【flavor_notes(2026-09-20追記)】
+実データ確認済み: 詳細ページのdd.c-detail-data__desc内は<p>要素単位で
+段落が分かれており、多くの商品は最初の1〜2段落に実際のテイスティング文が
+入っている。その後に「農園」「地域」「品種」「精製」「標高」「カップ」や
+英語版「Producer」「Origin」「Area」「Variety」等の構造化ラベルで始まる
+段落が続く(日本語/英語ラベルが混在し、コロン付き・スペース区切りいずれも
+ある)。これらのラベルパターンに最初に一致した段落の直前までを結合して
+flavor_notesとして採用する。詳細ページは重量バリエーション取得(data-
+product_variations属性)と同じHTML取得を再利用するため追加のHTTPアクセス
+は不要。
 """
 
 import html
@@ -53,6 +64,7 @@ import json
 import re
 
 import requests
+from bs4 import BeautifulSoup
 
 from coffee_parser import parse_product, detect_stock_status
 
@@ -75,8 +87,17 @@ NON_BEAN_KEYWORDS = [
     "業務用", "セミナー", "HARIO", "KINTO", "CAFEC", "ORIGAMI", "AERO PRESS", "Abaca",
     "MUG", "タンブラー", "T-shirt", "Tシャツ", "ロゴT", "缶バッジ", "ステッカー", "手ぬぐい",
     "シロップ", "PRANA CHAI", "BARISTA OAT", "アーモンド効果", "Bonsoy", "カフェオレベース",
-    "COLD BREW", "ドリップバッグ", "GIFT BOX", "お試しセット",
+    "COLD BREW", "ドリップバッグ", "GIFT BOX", "お試しセット", "招待状",
 ]
+FLAVOR_LABEL_PARAGRAPH_PATTERN = re.compile(
+    r"^(?:[\-—]?\s*(?:ORIGIN|TASTE\s*NOTE)\s*[\-—]?"
+    r"|国|地\s*域|農\s*園(?:主)?|生産者|生産地|品\s*種|精\s*製方?法?|標\s*高|カップ|発\s*酵"
+    r"|プロデューサー|輸入元|輸入業者|輸出|栽培面積"
+    r"|Producer|Origin|Area|Farm|Variety|Processing|Drying|Crop\s*year|Harvest\s*Period"
+    r"|Altitude|Score|Cup|Exporter|Inporter|Dry\s*mill|Sensory\s*profile|Moisture|Density"
+    r"|Date\s*of\s*arrival|Elevation|Process)\s*[:：\s]",
+    re.IGNORECASE,
+)
 WEIGHT_ATTR_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
 VARIATIONS_PATTERN = re.compile(r'data-product_variations="([^"]*)"')
 
@@ -99,16 +120,33 @@ def fetch_all_products() -> list[dict]:
     return products
 
 
-def fetch_variations(permalink: str) -> list[dict]:
+def fetch_detail_page(permalink: str) -> tuple[list[dict], BeautifulSoup]:
     resp = requests.get(permalink, headers=REQUEST_HEADERS, timeout=15)
     resp.raise_for_status()
+    variations = []
     m = VARIATIONS_PATTERN.search(resp.text)
-    if not m:
-        return []
-    try:
-        return json.loads(html.unescape(m.group(1)))
-    except json.JSONDecodeError:
-        return []
+    if m:
+        try:
+            variations = json.loads(html.unescape(m.group(1)))
+        except json.JSONDecodeError:
+            variations = []
+    return variations, BeautifulSoup(resp.text, "html.parser")
+
+
+def extract_flavor_notes(soup: BeautifulSoup) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    el = soup.select_one("dd.c-detail-data__desc")
+    if not el:
+        return None
+    kept = []
+    for p in el.find_all("p"):
+        text = p.get_text(" ", strip=True)
+        if not text:
+            continue
+        if FLAVOR_LABEL_PARAGRAPH_PATTERN.match(text):
+            break
+        kept.append(text)
+    return " ".join(kept) if kept else None
 
 
 def pick_canonical_variation(variations: list[dict]) -> tuple[dict | None, int | None]:
@@ -152,13 +190,14 @@ def build_record(product: dict) -> dict | None:
         }
 
     weight_g = None
+    flavor_notes = None
     structural_out_of_stock = not product.get("is_in_stock", True)
     if product.get("has_options") and product_url:
         try:
-            variations = fetch_variations(product_url)
+            variations, soup = fetch_detail_page(product_url)
         except requests.RequestException as e:
-            print(f"[warn] バリアント取得失敗: {product_url} ({e})")
-            variations = []
+            print(f"[warn] 詳細ページ取得失敗: {product_url} ({e})")
+            variations, soup = [], None
         variation, weight_g = pick_canonical_variation(variations)
         if variation is not None:
             structural_out_of_stock = not bool(variations) or not any(
@@ -166,6 +205,8 @@ def build_record(product: dict) -> dict | None:
             )
             if variation.get("display_price") is not None:
                 price = int(variation["display_price"])
+        if soup is not None:
+            flavor_notes = extract_flavor_notes(soup)
 
     stock_status = detect_stock_status(title, structural_out_of_stock)
 
@@ -179,6 +220,7 @@ def build_record(product: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": flavor_notes,
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": price,
