@@ -38,11 +38,21 @@ CAFEC製のドリッパー・フィルター・ケトル・ミル・サーバー
 実データ確認済み: 対象13件は全て「(200g)」を商品名に含む単一サイズ。
 挽き方違い(そのまま/中挽き/中細挽き/細挽き/極細挽き)のバリアントが同一
 価格で並ぶため、先頭バリアントの価格を代表として採用する。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: products.jsonのbody_htmlにテイスティング文・産地
+スペック情報・「▼フレーバー」欄・農園の背景ストーリーが一体となった
+説明が入っている(対象17件中16件で確認、価格・配送等の混入なし)。
+HTMLタグを除去した全文を採用する。1件(匠takumi-中塚社長ブレンド)は
+「ドリップコーヒーはこちらから」という外部リンク案内文のみで、
+テイスティング文が存在しなかった(genuineな欠落、句点「。」を含む
+文が無いことを簡易的な判定基準として除外する)。
 """
 
 import re
 
 import requests
+from bs4 import BeautifulSoup
 
 from coffee_parser import parse_product, detect_stock_status
 
@@ -72,6 +82,18 @@ def fetch_products() -> list[dict]:
     resp.raise_for_status()
     resp.encoding = "utf-8"
     return resp.json().get("products", [])
+
+
+def extract_flavor_notes(body_html: str | None) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    if not body_html:
+        return None
+    soup = BeautifulSoup(body_html, "html.parser")
+    lines = [line.strip() for line in soup.get_text("\n").split("\n") if line.strip()]
+    text = "\n".join(lines).strip()
+    if "。" not in text:
+        return None
+    return text or None
 
 
 def base_name_and_weight(title: str) -> tuple[str, int | None]:
@@ -127,6 +149,7 @@ def build_record(product: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": extract_flavor_notes(product.get("body_html")),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": price,
