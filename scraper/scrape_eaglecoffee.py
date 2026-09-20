@@ -18,6 +18,13 @@ User-agent: *に対し/secure/・/cart/のみDisallow。AhrefsBot等一部
 三種セット(アソート、単一銘柄と特定できない)が非対象。NON_BEAN_KEYWORDSで
 除外する。残り20件(いずれも100g、ブレンド10種+ストレート/デカフェ等
 10種)を対象とする。
+
+【flavor_notes(2026-09-20追記)】
+実データ確認済み: 詳細ページのdiv.product_description内は、対象20件
+全てで冒頭に短いテイスティング文が入っており、その後に「【会員価格での
+ご購入につきまして】」という店舗共通の定型文が続く(定型文が無い商品は
+全文を採用)。既存のColorme JSON取得と同じHTML取得を再利用するため
+追加のHTTPアクセスは不要。
 """
 
 import json
@@ -47,12 +54,25 @@ REQUEST_HEADERS = {
 NON_BEAN_KEYWORDS = ["ドリップパック", "三種セット"]
 COLORME_PATTERN = re.compile(r"var Colorme\s*=\s*(\{.*?\});", re.DOTALL)
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
+FLAVOR_STOP_PATTERN = re.compile(r"【会員価格でのご購入につきまして】")
 
 
 def fetch_page(url: str) -> BeautifulSoup:
     resp = requests.get(url, headers=REQUEST_HEADERS, timeout=15)
     resp.raise_for_status()
     return BeautifulSoup(resp.text, "html.parser")
+
+
+def extract_flavor_notes(soup: BeautifulSoup) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    el = soup.select_one("div.product_description")
+    if not el:
+        return None
+    text = el.get_text(" ", strip=True)
+    m = FLAVOR_STOP_PATTERN.search(text)
+    if m:
+        text = text[:m.start()].strip()
+    return text or None
 
 
 def fetch_pid_urls() -> list[str]:
@@ -110,6 +130,7 @@ def build_record(soup: BeautifulSoup, product_url: str) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": extract_flavor_notes(soup),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": int(price) if price is not None else None,
