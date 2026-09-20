@@ -26,6 +26,17 @@ meta-externalagentのみDisallow: /(AI学習クローラー対策)。User-agent:
 【在庫について】
 実データ確認済み: 一覧ページの`<li>`要素に売り切れ商品は
 "list_item_soldout"というclassが付与される。
+
+【flavor_notes(2026-09-20追記)】
+実データ確認済み: 詳細ページのdiv.item_desc_text内は、商品名の繰り返しに
+続けて実際のテイスティング文が入っており、その後に「＜生産地＞」
+「＜ちょっと一言＞」「＜保存方法＞」(全角/半角のブラケットが混在)、
+「当店スタッフの評価」見出しまたは見出し無しで直接始まる「スタッフ名」
+(苦み/酸味/コク/香り/甘味/ボディの評価表)が続く。これらのうち最初に
+出現した位置の直前までをflavor_notesとして採用する(1商品のみ、産地の
+背景説明が先に置かれテイスティング文がスタッフ評価表の後に続く逆転した
+構成だったが、他の大半の商品とは異なる例外的な記述順のため個別対応は
+行わない)。
 """
 
 import re
@@ -56,6 +67,9 @@ REQUEST_HEADERS = {
 }
 
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
+FLAVOR_STOP_PATTERN = re.compile(
+    r"[<＜]生産地[＞>]|[<＜]ちょっと一言[＞>]|[<＜]保存方法[＞>]|当店スタッフの評価|スタッフ名"
+)
 
 
 def fetch_page(url: str) -> BeautifulSoup:
@@ -64,7 +78,21 @@ def fetch_page(url: str) -> BeautifulSoup:
     return BeautifulSoup(resp.text, "html.parser")
 
 
-def build_record(product_url: str, title: str, price: int | None, structural_out_of_stock: bool) -> dict:
+def extract_flavor_notes(soup: BeautifulSoup) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    el = soup.select_one("div.item_desc_text")
+    if not el:
+        return None
+    text = el.get_text(" ", strip=True)
+    m = FLAVOR_STOP_PATTERN.search(text)
+    text = text[:m.start()] if m else text
+    return text.strip() or None
+
+
+def build_record(
+    product_url: str, title: str, price: int | None, structural_out_of_stock: bool,
+    flavor_notes: str | None = None,
+) -> dict:
     parsed = parse_product(title)
 
     if parsed["is_flavored"]:
@@ -92,6 +120,7 @@ def build_record(product_url: str, title: str, price: int | None, structural_out
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": flavor_notes,
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": price,
@@ -114,7 +143,8 @@ def parse_product_detail(url: str, fallback_title: str = "", structural_out_of_s
         if m:
             price = int(m.group().replace(",", ""))
 
-    return build_record(url, title, price, structural_out_of_stock)
+    flavor_notes = extract_flavor_notes(soup)
+    return build_record(url, title, price, structural_out_of_stock, flavor_notes)
 
 
 def scrape_category_list() -> list[dict]:
