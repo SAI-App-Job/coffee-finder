@@ -14,6 +14,19 @@ python-requests等は個別にDisallow: /指定があるが、User-agent: *ル�
 【商品情報の取得方法について】
 実データ確認済み: 他のBASE系店舗と同様、SNSシェア用OGPメタタグ
 (`og:title`・`product:price:amount`)から商品名・価格を取得する。
+
+【非コーヒー豆商品の除外漏れについて(2026-09-20修正)】
+実データ確認済み: 「ROASTER's HOUSEロゴマグカップ」(陶器製マグカップ、
+豆単品ではない)が既存のNON_BEAN_KEYWORDSに引っかからず除外漏れしていた。
+今回のflavor_notes実装でマグカップの商品説明(重量・容量等)を誤って
+テイスティング文として取得してしまうため、「マグカップ」をNON_BEAN_
+KEYWORDSに追加して除外した。
+
+【flavor_notes(2026-09-20追記)】
+実データ確認済み: og:descriptionの先頭に実際のテイスティング・商品紹介文
+があり、その後に「■地域：」「■標高：」「■おすすめの焙煎度合い：」等の
+構造化スペックラベルが続く。最初の「■」の直前までをflavor_notesとして
+採用する。
 """
 
 import re
@@ -41,14 +54,24 @@ REQUEST_HEADERS = {
     "User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"
 }
 
-NON_BEAN_KEYWORDS = ["ドリップバッグ", "ドリップバック", "ギフト", "セット", "詰め合わせ"]
+NON_BEAN_KEYWORDS = ["ドリップバッグ", "ドリップバック", "ギフト", "セット", "詰め合わせ", "マグカップ"]
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
+FLAVOR_STOP_PATTERN = re.compile(r"■")
 
 
 def fetch_page(url: str) -> BeautifulSoup:
     resp = requests.get(url, headers=REQUEST_HEADERS, timeout=15)
     resp.raise_for_status()
     return BeautifulSoup(resp.text, "html.parser")
+
+
+def extract_flavor_notes(description: str | None) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    if not description:
+        return None
+    m = FLAVOR_STOP_PATTERN.search(description)
+    text = description[:m.start()] if m else description
+    return text.strip() or None
 
 
 def extract_og_fields(soup: BeautifulSoup) -> dict | None:
@@ -58,7 +81,9 @@ def extract_og_fields(soup: BeautifulSoup) -> dict | None:
     title = title_el["content"].split(" | ")[0].strip()
     price_el = soup.select_one('meta[property="product:price:amount"]')
     price = int(float(price_el["content"])) if price_el and price_el.get("content") else None
-    return {"title": title, "price": price}
+    desc_el = soup.select_one('meta[property="og:description"]')
+    description = desc_el["content"] if desc_el and desc_el.get("content") else None
+    return {"title": title, "price": price, "description": description}
 
 
 def build_record(product_url: str, fields: dict) -> dict | None:
@@ -93,6 +118,7 @@ def build_record(product_url: str, fields: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": extract_flavor_notes(fields.get("description")),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": fields["price"],
