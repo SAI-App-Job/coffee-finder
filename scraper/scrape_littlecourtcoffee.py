@@ -33,9 +33,20 @@ NON_BEAN_KEYWORDSで除外する。残り15件(いずれも産地or ブレンド
 配送方法の組み合わせで構成され、価格は挽き方・配送方法に依らずgrams共通。
 option1が「豆」(挽かない全粒)のバリアントを代表として採用し、
 そのgramsフィールドを重量として使う。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: body_htmlの最初の<p>に産地の背景ストーリーとテイス
+ティング表現が地続きで入っており(対象15件全てで確認)、末尾に
+「----」区切りの構造化欄(国/銘柄/焙煎度)、続けて別の<p>に「風味…」
+という短いフレーバー記述語+苦味/酸味/甘味の■□ドット評価+標高/品種/
+精製のスペック欄が入る。最初の<p>全文と、「風味…」ラベル以降の記述語
+のみを結合して採用し、構造化欄・ドット評価・スペック行は除外する。
 """
 
+import re
+
 import requests
+from bs4 import BeautifulSoup
 
 from coffee_parser import parse_product, detect_stock_status
 
@@ -57,6 +68,28 @@ REQUEST_HEADERS = {
 
 BEAN_PRODUCT_TYPE = "コーヒー"
 NON_BEAN_KEYWORDS = ["GIFT", "ギフト", "セット", "リキッド"]
+FLAVOR_LINE_PATTERN = re.compile(r"風味[…\.]+([^\n]+)")
+
+
+def extract_flavor_notes(body_html: str | None) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    soup = BeautifulSoup(body_html or "", "html.parser")
+    for br in soup.find_all("br"):
+        br.replace_with("\n")
+    paragraphs = [p.get_text() for p in soup.find_all("p")]
+    if not paragraphs:
+        return None
+    main = paragraphs[0].strip()
+
+    descriptor = None
+    for p in paragraphs[1:]:
+        m = FLAVOR_LINE_PATTERN.search(p)
+        if m:
+            descriptor = m.group(1).strip()
+            break
+
+    parts = [p for p in [main, descriptor] if p]
+    return "\n".join(parts) if parts else None
 
 
 def fetch_products() -> list[dict]:
@@ -116,6 +149,7 @@ def build_record(product: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": extract_flavor_notes(product.get("body_html")),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": price,
