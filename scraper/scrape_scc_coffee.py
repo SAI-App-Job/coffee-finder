@@ -25,6 +25,22 @@ User-agent: *に対し/secure/・/cart/のみDisallow。AhrefsBot等一部
     できるため対象外とする(Beans Tostinoの「生豆」表記がオーダーメイド
     焙煎を意味していたのとは異なるケース)
 残り33件(いずれも自家焙煎済みの単品・ブレンド豆)を対象とする。
+
+【flavor_notes(テイスティングノート)について(2026-09-20追記)】
+実データ確認済み: 商品詳細ページのdiv.exprに、銘柄名の短いラベル行の後に
+風味を説明する自由記述の文が2〜4行続き、その後「甘味☆☆☆☆☆　酸味☆☆☆☆☆
+苦味★☆☆☆☆　コク★☆☆☆☆」のような★/☆の5段階評価行が続く構成が大半
+(サンプル9件で確認)。以前はこのdivを一切読んでいなかった。★/☆評価行が
+現れる位置で本文を打ち切ってflavor_notesとして採用する。
+一部商品(「近江の珈琲」「グァテマラ アンティグア ピーベリー」等)には
+★/☆評価行が無いが、風味を表す語(酸味/苦味/コク等)を含む自由記述は
+存在するため、評価行が見つからない場合のフォールバックとして「酸味/
+苦味/苦み/甘み/甘さ/コク/風味/まろやか/フルーティ/ボディ/華やか/後味/
+香り/キレ/口当たり」のいずれかの語を含むかどうかで「構造化された本文
+かどうか」を判定する(この判定に使うだけで、実際の切り出し境界は
+★/☆評価行・末尾の「※」注記・「こちら」「ご紹介」等の外部リンク
+紹介文言で行う)。ギフト向け商品「ほっこり珈琲」はこの判定語も無く、
+パッケージ紹介のみで風味の記述が実質無いため見送り。
 """
 
 import json
@@ -54,6 +70,39 @@ REQUEST_HEADERS = {
 NON_BEAN_KEYWORDS = ["箱（", "ラッピング", "生豆"]
 COLORME_PATTERN = re.compile(r"var Colorme\s*=\s*(\{.*?\});", re.DOTALL)
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ㎏]")
+SENTENCE_END_PATTERN = re.compile(r"[。！？]")
+FLAVOR_KEYWORDS = (
+    "酸味", "苦味", "苦み", "甘み", "甘さ", "コク", "風味", "まろやか",
+    "フルーティ", "ボディ", "華やか", "後味", "香り", "キレ", "口当たり",
+)
+STOP_MARKERS = ("こちら", "ご紹介", "承認No")
+
+
+def extract_flavor_notes(expl_el) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    if not expl_el:
+        return None
+    for tag in expl_el.find_all(["center", "img"]):
+        tag.decompose()
+    for a in expl_el.find_all("a"):
+        a.unwrap()
+    for br in expl_el.find_all("br"):
+        br.replace_with("\n")
+    lines = [line.strip() for line in expl_el.get_text().split("\n") if line.strip()]
+
+    has_rating = any("★" in line or "☆" in line for line in lines)
+    has_keyword = any(kw in line for line in lines for kw in FLAVOR_KEYWORDS)
+    if not has_rating and not has_keyword:
+        return None
+    if lines and not SENTENCE_END_PATTERN.search(lines[0]):
+        lines = lines[1:]  # 銘柄名の短いラベル行をスキップ
+
+    collected = []
+    for line in lines:
+        if "★" in line or "☆" in line or line.startswith("※") or any(m in line for m in STOP_MARKERS):
+            break
+        collected.append(line)
+    return "".join(collected).strip() or None
 
 
 def fetch_page(url: str) -> BeautifulSoup:
@@ -106,6 +155,8 @@ def build_record(soup: BeautifulSoup, product_url: str) -> dict | None:
     if weight_m:
         weight_g = int(weight_m.group(1)) * 1000 if "㎏" in weight_m.group(0) else int(weight_m.group(1))
 
+    flavor_notes = extract_flavor_notes(soup.select_one("div.expl"))
+
     return {
         "shop_name": SHOP_INFO["name"],
         "raw_name": title,
@@ -116,6 +167,7 @@ def build_record(soup: BeautifulSoup, product_url: str) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": flavor_notes,
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": int(price) if price is not None else None,
