@@ -38,11 +38,23 @@ variants配列のgramsフィールドは0または実際の重量と異なる固
 信頼できないため、まずバリアントtitle文字列内の重量表記(例:「豆 200g」)
 を正規表現で優先的に読み取り、無ければgramsフィールドにフォールバック
 する。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: body_htmlに「◆フレーバー：」等のラベルで短い記述語
+(産地によって「フレーバー：」ラベル自体が無い商品もある)、続けて
+「◆生産国」「地域」「標高」「品種」「精製方法」「内容量」「焙煎」等の
+構造化スペック行、そして別の段落に産地の背景ストーリーとテイスティング
+表現が地続きで入っている(対象15件中14件で確認、1件はスペック行のみで
+テイスティング情報を含まないgenuineな欠落)。フレーバー行の記述語＋
+スペック行を除いた段落本文を結合して採用する。「Notes」「Light Roast」
+等の見出しのみの段落、苦味/酸味/香り等の★☆評価のみの短い段落は除外
+する。
 """
 
 import re
 
 import requests
+from bs4 import BeautifulSoup
 
 from coffee_parser import parse_product, detect_stock_status
 
@@ -65,6 +77,51 @@ NON_BEAN_KEYWORDS = [
     "サブスクリプション", "ペーパーフィルター", "お試しセット",
 ]
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
+
+FLAVOR_LABEL_PATTERN = re.compile(r"フレーバー[：:]\s*([^\n◆]*)")
+FLAVOR_SPEC_LABEL_PATTERN = re.compile(
+    r"^(農家名|地域|標高|栽培品種|品種|精製方法|産地|内容量|生産国|農園|生産者|焙煎)[：:　]"
+)
+FLAVOR_HEADING_ONLY_PATTERNS = [
+    re.compile(r"^Notes?$", re.IGNORECASE),
+    re.compile(r"^(Light|Medium|Dark|City|French|Italian)\s*Roast", re.IGNORECASE),
+    re.compile(r"^[（(].*[)）]$"),
+]
+
+
+def _is_flavor_heading_only(text: str) -> bool:
+    t = text.strip()
+    if not t:
+        return True
+    return any(p.match(t) for p in FLAVOR_HEADING_ONLY_PATTERNS)
+
+
+def extract_flavor_notes(body_html: str | None) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    soup = BeautifulSoup(body_html or "", "html.parser")
+    for br in soup.find_all("br"):
+        br.replace_with("\n")
+    paragraphs = [p.get_text() for p in soup.find_all("p")]
+
+    descriptor = None
+    narrative_parts = []
+    for p in paragraphs:
+        m = FLAVOR_LABEL_PATTERN.search(p)
+        if m:
+            val = m.group(1).strip()
+            if val:
+                descriptor = val
+            continue
+        if "◆" in p or FLAVOR_SPEC_LABEL_PATTERN.search(p):
+            continue
+        if _is_flavor_heading_only(p):
+            continue
+        cleaned = p.strip()
+        if cleaned and len(cleaned) > 8:
+            narrative_parts.append(cleaned)
+
+    parts = [p for p in [descriptor] + narrative_parts if p]
+    return "\n".join(parts) if parts else None
 
 
 def fetch_products() -> list[dict]:
@@ -136,6 +193,7 @@ def build_record(product: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": extract_flavor_notes(product.get("body_html")),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": price,
