@@ -24,6 +24,15 @@ User-agent: *に対し/secure/・/cart/のみDisallow。AhrefsBot等一部
 <br>「たね」のブレンド（中煎り）」)、<br>を空白に正規化した後で
 NON_BEAN_KEYWORDSと照合することで確実に除外できる。残り21件を対象と
 する。
+
+【flavor_notes(2026-09-20追記)】
+実データ確認済み: 詳細ページのdiv.p-product-explain__body内は<br>区切りの
+フラットなテキストで、対象21件全てで冒頭から複数段落(<br><br>の二重改行で
+区切られる)にわたって実際のテイスティング文が続き、末尾に「販売単位：」
+「【ご購入について】」「【送料について】」のいずれかで始まる店舗共通の
+定型文が続く(出現順は商品によって異なる)。これらいずれかで始まる最初の
+段落の直前までを全て結合してflavor_notesとして採用する(SHIBACOFFEE等で
+導入したcontents単位の段落分割ヘルパーを再利用)。
 """
 
 import json
@@ -56,12 +65,47 @@ NON_BEAN_KEYWORDS = [
 ]
 COLORME_PATTERN = re.compile(r"var Colorme\s*=\s*(\{.*?\});", re.DOTALL)
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ㎏]")
+FLAVOR_STOP_PATTERN = re.compile(r"^(販売単位|【ご購入について】|【送料について】)")
 
 
 def fetch_page(url: str) -> BeautifulSoup:
     resp = requests.get(url, headers=REQUEST_HEADERS, timeout=15)
     resp.raise_for_status()
     return BeautifulSoup(resp.text, "html.parser")
+
+
+def split_into_paragraphs(el) -> list[str]:
+    paragraphs = []
+    current_parts: list[str] = []
+    for child in el.contents:
+        name = getattr(child, "name", None)
+        if name == "br":
+            continue
+        text = child.get_text() if name else str(child)
+        text = text.strip()
+        if not text:
+            if current_parts:
+                paragraphs.append(" ".join(current_parts))
+                current_parts = []
+        else:
+            current_parts.append(text)
+    if current_parts:
+        paragraphs.append(" ".join(current_parts))
+    return paragraphs
+
+
+def extract_flavor_notes(soup: BeautifulSoup) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    el = soup.select_one("div.p-product-explain__body")
+    if not el:
+        return None
+    kept = []
+    for para in split_into_paragraphs(el):
+        if FLAVOR_STOP_PATTERN.match(para):
+            break
+        kept.append(para)
+    text = " ".join(kept).strip()
+    return text or None
 
 
 def fetch_pid_urls() -> list[str]:
@@ -118,6 +162,7 @@ def build_record(soup: BeautifulSoup, product_url: str) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": extract_flavor_notes(soup),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": int(price) if price is not None else None,
