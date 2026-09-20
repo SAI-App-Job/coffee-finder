@@ -50,6 +50,13 @@ class="variation_label"内に「250g 1,900円」のような文字列で埋め�
 【重量違いについて】
 実データ確認済み: 全15件が「250g」を基本重量として持つ(1件のみ250gの
 みでバリエーションが無い)。価格は250g(最小重量)のものを採用する。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: 商品ページのdiv.item_descに「【風味の特徴と印象】」
+という見出しがあり、直後に短いテイスティング文が続く(対象15件中14件で
+確認)。見出し以降、「この豆の味わい」(焙煎度・酸味・コクのスライダー
+UIラベル)が始まる直前までを採用する。1件は同見出し自体が存在せず、
+店舗側でテイスティング文が用意されていないgenuineな欠落と判断した。
 """
 
 import re
@@ -77,6 +84,21 @@ REQUEST_HEADERS = {
 ORIGIN_LABEL_PATTERN = re.compile(r"【生産国】\s*([^/／\n]+)")
 PROCESSING_LABEL_PATTERN = re.compile(r"【生産処理方法】\s*([^/／\s<]+)")
 VARIATION_WEIGHT_PATTERN = re.compile(r"(\d+)\s*(kg|g)[\s　]*([\d,]+)円")
+FLAVOR_PATTERN = re.compile(r"【風味の特徴と印象】\s*(.*?)(?=この豆の味わい|\Z)", re.DOTALL)
+
+
+def extract_flavor_notes(html: str) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    soup = BeautifulSoup(html, "html.parser")
+    desc_el = soup.select_one("div.item_desc")
+    if not desc_el:
+        return None
+    for br in desc_el.find_all("br"):
+        br.replace_with("\n")
+    text = desc_el.get_text("\n", strip=True)
+    m = FLAVOR_PATTERN.search(text)
+    result = m.group(1).strip() if m else None
+    return result or None
 
 
 def fetch_html(url: str) -> str:
@@ -166,6 +188,7 @@ def build_record(title: str, html: str, product_url: str) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": extract_flavor_notes(html),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": price,
