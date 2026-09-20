@@ -22,11 +22,23 @@ robots.txt確認済み(2026-09時点): Shopify標準のrobots.txtで`Allow: /`
 実データ確認済み: 各商品のバリエーションは挽き方(豆のまま/極細挽き/
 細挽き/粗挽き/中挽き)のみで価格は同額。豆のまま(option1="豆のまま")の
 バリエーションを代表として採用する。
+
+【flavor_notes(2026-09-20追記)】
+実データ確認済み: body_htmlは商品ごとにテンプレートが異なる(見出し
+<h3>「味わいの紹介」の有無、末尾に「味わい評価」「味わいバロメーター」
+「おすすめ抽出」「商品情報」等の見出しまたは★評価行が続く)が、対象21件
+全てで共通して、これらの評価/スペックセクションより前に実際のテイス
+ティング文の段落が続いていた。<h3>見出しが「味わいバロメーター」
+「おすすめ抽出」「商品情報」「味わい評価」のいずれかに一致した時点、
+または<p>段落に★/☆(評価記号)が含まれた時点で読み取りを打ち切り、
+それ以前の<p>段落を結合してflavor_notesとして採用する。既存のproducts.
+json取得を再利用するため追加のHTTPアクセスは不要。
 """
 
 import time
 
 import requests
+from bs4 import BeautifulSoup
 
 from coffee_parser import parse_product, detect_stock_status
 from previous_data import load_previous_products, is_unchanged
@@ -47,6 +59,25 @@ REQUEST_HEADERS = {
 }
 
 TARGET_PRODUCT_TYPES = {"深煎り", "中深煎り", "中煎り", "中浅煎り"}
+FLAVOR_STOP_HEADINGS = {"味わいバロメーター", "おすすめ抽出", "商品情報", "味わい評価"}
+
+
+def extract_flavor_notes(body_html: str | None) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    soup = BeautifulSoup(body_html or "", "html.parser")
+    parts = []
+    for el in soup.find_all(["p", "h3"]):
+        if el.name == "h3":
+            if el.get_text(strip=True) in FLAVOR_STOP_HEADINGS:
+                break
+            continue
+        text = el.get_text(" ", strip=True)
+        if not text:
+            continue
+        if "★" in text or "☆" in text:
+            break
+        parts.append(text)
+    return " ".join(parts) if parts else None
 
 
 def fetch_products() -> list[dict]:
@@ -105,6 +136,7 @@ def build_record(product: dict) -> dict | None:
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
         "roast_hint": roast_hint,
+        "flavor_notes": extract_flavor_notes(product.get("body_html")),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": price,
