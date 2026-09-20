@@ -43,6 +43,14 @@ item=6,7,8,9,10,12,15,16,18,19,20,21,22,23,25,26,27)。カテゴリ一覧
 【対象商品について】
 実データ確認済み(全17件): 全件が単一銘柄のコーヒー豆(100g)で、非対象商品
 (ギフトセット・詰め合わせ等)は無かった。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: 商品詳細ページのdiv.detailText内に「～味わいの特徴～」
+見出しに続くテイスティング文があり、その後に「焙煎：」以降のスペック
+情報(生豆生産国・容量・配送に関する注記)が続く共通構成だった(対象17件
+全てで確認)。「焙煎：」の直前までを採用する(見出し自体と本文が同一
+段落内に&nbsp;区切りで連続する商品があったため、`<p>`要素単位で
+個別に取得してから連結する)。
 """
 
 import re
@@ -72,6 +80,8 @@ REQUEST_HEADERS = {
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
 PRICE_PATTERN = re.compile(r"(\d+)\s*円")
 STOCK_MARK_PATTERN = re.compile(r"◎|○")
+FLAVOR_HEADING_PATTERN = re.compile(r"～味わいの特徴～")
+FLAVOR_STOP_PATTERN = re.compile(r"焙煎[：:]")
 
 
 def fetch_page(item_id: int) -> BeautifulSoup:
@@ -79,6 +89,25 @@ def fetch_page(item_id: int) -> BeautifulSoup:
     resp.raise_for_status()
     resp.encoding = "utf-8"
     return BeautifulSoup(resp.text, "html.parser")
+
+
+def extract_flavor_notes(soup: BeautifulSoup) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    el = soup.select_one("div.detailText")
+    if not el:
+        return None
+    paragraphs = []
+    for p in el.select("p"):
+        for br in p.find_all("br"):
+            br.replace_with("\n")
+        text = p.get_text().strip()
+        if text:
+            paragraphs.append(text)
+    full_text = "\n".join(paragraphs).replace(" ", "").strip()
+    full_text = FLAVOR_HEADING_PATTERN.sub("", full_text).strip()
+    m = FLAVOR_STOP_PATTERN.search(full_text)
+    text = full_text[:m.start()] if m else full_text
+    return text.strip() or None
 
 
 def extract_fields(soup: BeautifulSoup) -> dict | None:
@@ -97,7 +126,10 @@ def extract_fields(soup: BeautifulSoup) -> dict | None:
     price = int(price_m.group(1)) if price_m else None
     has_stock_mark = bool(STOCK_MARK_PATTERN.search(table_text))
 
-    return {"title": title, "price": price, "has_stock_mark": has_stock_mark}
+    return {
+        "title": title, "price": price, "has_stock_mark": has_stock_mark,
+        "flavor_notes": extract_flavor_notes(soup),
+    }
 
 
 def build_record(item: dict, product_url: str) -> dict | None:
@@ -130,6 +162,7 @@ def build_record(item: dict, product_url: str) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": item.get("flavor_notes"),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": item["price"],
