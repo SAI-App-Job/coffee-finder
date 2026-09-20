@@ -21,6 +21,18 @@ python-requests等は個別にDisallow: /指定があるが、User-agent: *ル�
 「【宅急便】」という配送方法違いの2商品として重複掲載されている
 (実質18銘柄)。同じ豆を二重に収録しないよう、「【宅急便】」を含む
 商品はNON_BEAN_KEYWORDS的に除外し「【ネコポス】」側のみを採用する。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: og:descriptionは「＜焙煎度＞ブレンド原産国/産地の
+紹介文＋テイスティング文200g〜500gまでは全国一律250円でネコポスが…」
+という共通構成で、先頭の＜焙煎度＞タグを除去した上で配送に関する定型文
+(「N g〜」で始まる)の直前までを採用する(対象18件全てで確認)。
+実装中、既存NON_BEAN_KEYWORDSが配送方法違いの重複(「宅急便」)しか
+想定しておらず、「ドリップパック（ノースノードブレンド）」「水出し用
+アイスコーヒー」という非コーヒー豆単品の2商品がすり抜けていたことが
+判明したため、「ドリップパック」「水出し」をキーワードに追加して
+対象から除外した(候補調査時点の18件からこの2件を除いた16件が実際の
+焙煎豆単品)。
 """
 
 import re
@@ -47,14 +59,26 @@ REQUEST_HEADERS = {
     "User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"
 }
 
-NON_BEAN_KEYWORDS = ["宅急便"]
+NON_BEAN_KEYWORDS = ["宅急便", "ドリップパック", "水出し"]
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
+ROAST_PREFIX_PATTERN = re.compile(r"^＜[^＞]*＞")
+FLAVOR_STOP_PATTERN = re.compile(r"\d+g[〜~]")
 
 
 def fetch_page(url: str) -> BeautifulSoup:
     resp = requests.get(url, headers=REQUEST_HEADERS, timeout=15)
     resp.raise_for_status()
     return BeautifulSoup(resp.text, "html.parser")
+
+
+def extract_flavor_notes(description: str | None) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    if not description:
+        return None
+    text = ROAST_PREFIX_PATTERN.sub("", description)
+    m = FLAVOR_STOP_PATTERN.search(text)
+    text = text[:m.start()] if m else text
+    return text.strip() or None
 
 
 def extract_og_fields(soup: BeautifulSoup) -> dict | None:
@@ -64,7 +88,9 @@ def extract_og_fields(soup: BeautifulSoup) -> dict | None:
     title = title_el["content"].split(" | ")[0].strip()
     price_el = soup.select_one('meta[property="product:price:amount"]')
     price = int(float(price_el["content"])) if price_el and price_el.get("content") else None
-    return {"title": title, "price": price}
+    desc_el = soup.select_one('meta[property="og:description"]')
+    description = desc_el["content"] if desc_el and desc_el.get("content") else None
+    return {"title": title, "price": price, "flavor_notes": extract_flavor_notes(description)}
 
 
 def build_record(product_url: str, fields: dict) -> dict | None:
@@ -99,6 +125,7 @@ def build_record(product_url: str, fields: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": fields.get("flavor_notes"),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": fields["price"],
