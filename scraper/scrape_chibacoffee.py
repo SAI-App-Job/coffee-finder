@@ -19,6 +19,15 @@ GRP")。curl/python-requests等は個別にDisallow: /指定があるが、User-
 スマートドリップフィルター・ギフトボックス各種・クラフト手提げ袋が非対象。
 NON_BEAN_KEYWORDSで除外する。重量表記(g)は商品名に無く、単一サイズ販売
 (1袋)のため重量重複の処理は不要。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: og:descriptionは「100gテイスティング文産地：…／規格：
+…／品種：…／精選：…／焙煎：…」のように、先頭の重量表記の直後にテイス
+ティング文、その後にスペック情報が区切り文字無しで連続する構成だった
+(対象18件全てで確認)。先頭の重量表記を除去した上で、スペックラベル
+(産地/規格/品種/精選/焙煎/脱カフェイン方法/「ベース（」)のうち最初に
+出現するものの直前までを採用する。デカフェ豆1件は配合比率とスペックの
+みでテイスティング文が存在せず、genuineな欠落と確認した。
 """
 
 import re
@@ -48,12 +57,28 @@ REQUEST_HEADERS = {
 NON_BEAN_KEYWORDS = [
     "ドリップバッグ", "フィルター", "ギフトボックス", "手提げ袋",
 ]
+WEIGHT_PREFIX_PATTERN = re.compile(r"^\s*\d+\s*[gｇ]")
+FLAVOR_STOP_PATTERN = re.compile(
+    r"産地[：:]|品種[：:]|規格[：:]|精選[：:]|焙煎[：:]|脱カフェイン方法[：:]|ベース（"
+)
+CONTROL_CHAR_PATTERN = re.compile(r"[\x00-\x1f]")
 
 
 def fetch_page(url: str) -> BeautifulSoup:
     resp = requests.get(url, headers=REQUEST_HEADERS, timeout=15)
     resp.raise_for_status()
     return BeautifulSoup(resp.text, "html.parser")
+
+
+def extract_flavor_notes(description: str | None) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    if not description:
+        return None
+    text = WEIGHT_PREFIX_PATTERN.sub("", description)
+    m = FLAVOR_STOP_PATTERN.search(text)
+    text = text[:m.start()] if m else text
+    text = CONTROL_CHAR_PATTERN.sub("", text).strip()
+    return text or None
 
 
 def extract_og_fields(soup: BeautifulSoup) -> dict | None:
@@ -65,7 +90,9 @@ def extract_og_fields(soup: BeautifulSoup) -> dict | None:
         return None
     price_el = soup.select_one('meta[property="product:price:amount"]')
     price = int(float(price_el["content"])) if price_el and price_el.get("content") else None
-    return {"title": title, "price": price}
+    desc_el = soup.select_one('meta[property="og:description"]')
+    description = desc_el["content"] if desc_el and desc_el.get("content") else None
+    return {"title": title, "price": price, "flavor_notes": extract_flavor_notes(description)}
 
 
 def fetch_sitemap_urls() -> list[str]:
@@ -100,6 +127,7 @@ def build_record(item: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": item.get("flavor_notes"),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": item["price"],
@@ -129,7 +157,10 @@ def scrape_all_products() -> tuple[list[dict], list[dict]]:
             records.append(prev)
             continue
 
-        detail = build_record({"title": fields["title"], "price": fields["price"], "url": product_url})
+        detail = build_record({
+            "title": fields["title"], "price": fields["price"],
+            "flavor_notes": fields.get("flavor_notes"), "url": product_url,
+        })
         if detail is None:
             continue
         if detail.get("is_flavored"):
