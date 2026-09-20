@@ -48,13 +48,24 @@ XXXXXXXX.html")の他に、「あわせて買われている商品」等のレ�
 等)やメルマガ登録リンク(/SHOP/mailmag.html)が混在する。相対パス
 (href先頭が"/SHOP/"かつ数字/英数字+.htmlで終わる)のみに限定することで
 正確に21件(ページ内表示の「21件中」と一致)を抽出する。
+
+【flavor_notes(2026-09-20追記)】
+実データ確認済み: 詳細ページのdiv.description(複数存在)内のテンプレート
+構成が商品ごとに大きく異なる(ブレンド系は「■味わいの特徴」見出し+本文の
+構成、シングルオリジン系は見出し無しで冒頭の短いタグライン+★評価+産地
+ラベル+補足文という構成、一部は「■味わいの特徴とこだわり」のように
+見出し文言が微妙に異なる)。優先順位: (1)「■味わいの特徴」見出しが
+あれば次の見出しまでの本文を採用、(2)無ければdiv.description内最初の
+<p>から、画像/コメント/HTMLタグ残骸・カフェインレス製造工程説明・
+「チャート画像」定型注記等のノイズを含まない最初の段落(200字以内)を
+タグラインとして採用する。対象21件全てで実データ確認済み。
 """
 
 import json
 import re
 
 import requests
-from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup, Comment
 
 from coffee_parser import parse_product, detect_stock_status
 
@@ -83,12 +94,58 @@ NON_BEAN_KEYWORDS = [
 ]
 BLUE_PACK_PREFIX_PATTERN = re.compile(r"^【ブルーパック】")
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
+FLAVOR_HEADING_PATTERN = re.compile(r"■\s*味わいの特徴[^\n]*\s*\n?(.*?)(?=\n■|\Z)", re.DOTALL)
+FLAVOR_JUNK_PATTERN = re.compile(
+    r"<|＜|STEP\s*\d|SWISS WATER|PROCESS|Benefit|Evidence|チャート画像", re.IGNORECASE
+)
 
 
 def fetch_page(url: str) -> BeautifulSoup:
     resp = requests.get(url, headers=REQUEST_HEADERS, timeout=15)
     resp.raise_for_status()
     return BeautifulSoup(resp.text, "html.parser")
+
+
+def split_into_paragraphs(el) -> list[str]:
+    paragraphs = []
+    current_parts: list[str] = []
+    for child in el.contents:
+        if isinstance(child, Comment):
+            continue
+        name = getattr(child, "name", None)
+        if name == "br":
+            continue
+        if name is not None:
+            continue
+        text = str(child).strip()
+        if not text:
+            if current_parts:
+                paragraphs.append(" ".join(current_parts))
+                current_parts = []
+        else:
+            current_parts.append(text)
+    if current_parts:
+        paragraphs.append(" ".join(current_parts))
+    return paragraphs
+
+
+def extract_flavor_notes(soup: BeautifulSoup) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    divs = soup.select("div.description")
+    for d in divs:
+        text = d.get_text("\n", strip=True)
+        m = FLAVOR_HEADING_PATTERN.search(text)
+        if m:
+            result = m.group(1).strip().replace("\n", " ")
+            if result and not FLAVOR_JUNK_PATTERN.search(result):
+                return result
+    if not divs:
+        return None
+    for p in divs[0].find_all("p"):
+        for para in split_into_paragraphs(p):
+            if para and len(para) <= 200 and not FLAVOR_JUNK_PATTERN.search(para):
+                return para
+    return None
 
 
 def fetch_product_urls() -> list[str]:
@@ -137,6 +194,7 @@ def extract_fields(soup: BeautifulSoup, product_url: str) -> dict | None:
         "price": price,
         "url": product_url,
         "structural_out_of_stock": structural_out_of_stock,
+        "flavor_notes": extract_flavor_notes(soup),
     }
 
 
@@ -169,6 +227,7 @@ def build_record(item: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": item.get("flavor_notes"),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": item["price"],
