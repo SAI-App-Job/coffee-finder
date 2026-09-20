@@ -31,6 +31,14 @@ scrape_oyamacoffee.py
 
 robots.txt確認済み(2026-09時点): shop-pro.jp標準の記述で、本スクレイパーが
 使う一覧ページ(?mode=srh)は制限対象外。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: 商品詳細ページのdiv.item_bun内に、産地・生産者の
+ストーリーとテイスティング表現が地の文で混在するテキストがあり、
+その後にdiv.item_spec(＜商品名＞＜焙煎度＞＜バランス＞等のスペック
+情報)が別divとして続く構成だった(対象17件全てで確認)。div.item_bunの
+全文を採用する。既存実装は一覧ページのみで完結させていたが、
+flavor_notes取得のため新たに詳細ページへの個別アクセスを追加した。
 """
 
 import re
@@ -66,6 +74,22 @@ def fetch_page(url: str) -> BeautifulSoup:
     resp.raise_for_status()
     resp.encoding = "euc-jp"
     return BeautifulSoup(resp.text, "html.parser")
+
+
+def extract_flavor_notes(product_url: str) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    try:
+        soup = fetch_page(product_url)
+    except requests.RequestException as e:
+        print(f"[warn] 詳細ページ取得失敗: {product_url} ({e})")
+        return None
+    el = soup.select_one("div.item_bun")
+    if not el:
+        return None
+    for br in el.find_all("br"):
+        br.replace_with("\n")
+    lines = [line.strip() for line in el.get_text().split("\n") if line.strip()]
+    return "\n".join(lines).strip() or None
 
 
 def scrape_list_page(page: int) -> list[dict]:
@@ -127,6 +151,7 @@ def build_record(item: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": extract_flavor_notes(item["product_url"]),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": item["price"],
