@@ -39,6 +39,13 @@ nowrapに商品名(末尾に重量表記)、div.c-item__price > pに価格(税�
 重量表記を除いた基準名でグルーピングし、最小重量を代表として採用する。
 デカフェのメキシコ銘柄は「中央アメリカ」「ノンカフェイン」の2カテゴリに
 重複掲載されているため、商品URLで重複排除してから集計する。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: 商品詳細ページのdiv.p-item__bodyに「フレーバー：」
+という短い記述語ラベル、またはラベル無しでテイスティング文が直接
+入っている(対象13件全てで確認)。「【珈琲豆のこと】」(焙煎度/生産地/
+農園/生産者/品種/グレード/精製方法/標高の構造化スペック欄の見出し)・
+「【メール便での発送について】」以降を除いた残りを採用する。
 """
 
 import re
@@ -69,12 +76,31 @@ NON_BEAN_KEYWORDS = ["家庭用お買い得", "COFFEE BAG", "ドリップパッ�
 TRAILING_WEIGHT_PATTERN = re.compile(r"\s*\d+\s*[gｇ](?:（[^）]*）)?\s*$")
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
 PRICE_PATTERN = re.compile(r"([\d,]+)")
+FLAVOR_STOP_PATTERN = re.compile(r"【珈琲豆のこと】|【メール便")
 
 
 def fetch_page(url: str) -> BeautifulSoup:
     resp = requests.get(url, headers=REQUEST_HEADERS, timeout=15)
     resp.raise_for_status()
     return BeautifulSoup(resp.text, "html.parser")
+
+
+def extract_flavor_notes(product_url: str) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    try:
+        soup = fetch_page(product_url)
+    except requests.RequestException as e:
+        print(f"[warn] 詳細ページ取得失敗(flavor_notes): {product_url} ({e})")
+        return None
+    for br in soup.find_all("br"):
+        br.replace_with("\n")
+    container = soup.select_one("div.p-item__body")
+    if not container:
+        return None
+    lines = [l.strip() for l in container.get_text("\n", strip=True).split("\n") if l.strip()]
+    stop_idx = next((i for i, l in enumerate(lines) if FLAVOR_STOP_PATTERN.search(l)), len(lines))
+    text = "\n".join(lines[:stop_idx]).strip()
+    return text or None
 
 
 def scrape_category(category_id: int) -> list[dict]:
@@ -151,6 +177,7 @@ def build_record(item: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": extract_flavor_notes(item["url"]),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": item["price"],
