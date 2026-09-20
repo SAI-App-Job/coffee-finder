@@ -33,9 +33,21 @@ origin_countryの補完に使い、ブレンド商品には適用しない
 
 robots.txt確認済み(2026-09時点): robots.txt自体が存在しない(404、独自404
 ページが返る)。制限の明示的な記述が無いため実質許可とみなす。
+
+【flavor_notes(テイスティングノート)について(2026-09-20追記)】
+実データ確認済み: 一覧ページのdiv.contentには構造化された産地ラベルのみで
+風味の記述は無いが、詳細ページには<p class="addTxt">要素が複数あり、
+1つ目は「＜このコーヒーについて＞」という見出しに続く農園の来歴・
+買い付けエピソード、2つ目は「ローズヒップティや紅茶のような華やかな
+印象」「アプリコットやオレンジを思わせる果実感ある味わい」のような
+2行程度の短いテイスティングノート専用の記述になっている(サンプル6件
+全件で確認、3つ目・4つ目は常に空)。この2つ目の要素をflavor_notesとして
+採用するため、一覧のみで完結していた設計を変更し、各商品の詳細ページも
+取得するようにした(その分の負荷を考慮しCRAWL_DELAY_SECONDSを設定)。
 """
 
 import re
+import time
 
 import requests
 from bs4 import BeautifulSoup
@@ -65,6 +77,21 @@ NON_BEAN_KEYWORDS = [
 ]
 WEIGHT_PATTERN = re.compile(r"内容量[：:]\s*(\d+)\s*[gｇ]")
 PRICE_PATTERN = re.compile(r"([\d,]+)\s*円")
+CRAWL_DELAY_SECONDS = 1
+
+
+def extract_flavor_notes(product_url: str) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    try:
+        soup = fetch_page(product_url)
+    except requests.RequestException as e:
+        print(f"[warn] 詳細ページ取得失敗: {product_url} ({e})")
+        return None
+    blocks = [b.get_text(" ", strip=True) for b in soup.select("p.addTxt")]
+    non_empty = [b for b in blocks if b]
+    if not non_empty:
+        return None
+    return non_empty[1] if len(non_empty) > 1 else non_empty[0]
 
 
 def fetch_page(url: str) -> BeautifulSoup:
@@ -139,6 +166,7 @@ def build_record(box) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": extract_flavor_notes(product_url),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": price,
@@ -166,6 +194,7 @@ def scrape_all_products() -> tuple[list[dict], list[dict]]:
                 flavored_records.append(detail)
             else:
                 records.append(detail)
+            time.sleep(CRAWL_DELAY_SECONDS)
 
     return records, flavored_records
 
