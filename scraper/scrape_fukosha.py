@@ -34,6 +34,20 @@ sales_price_including_taxは最小重量(100g)バリアントの価格と一致�
 実データ確認済み(全24件): 「ギフトボックス（中）」(220円、包装資材)と
 「旅の三部作」(1890円、複数銘柄の詰め合わせセットと推定、単一銘柄の
 特定ができない)の2件が非対象。NON_BEAN_KEYWORDSで除外する。
+
+【非コーヒー豆商品の除外漏れについて(2026-09-20修正)】
+実データ確認済み: 「ドリップパック」(風光舎のブレンド3種を2パックずつ
+詰め合わせたギフト用ドリップバッグ、豆単品ではない)が既存のNON_BEAN_
+KEYWORDSに引っかからず除外漏れしていた。今回のflavor_notes実装で
+ドリップパックの商品説明を誤ってテイスティング文として取得してしまう
+ため、「ドリップパック」をNON_BEAN_KEYWORDSに追加して除外した。
+
+【flavor_notes(2026-09-20追記)】
+実データ確認済み: 詳細ページのdiv.product-order-exp内は、実際の
+テイスティング文(「酸味☆☆☆　苦味★★★」のような星評価を含む場合も
+ある)の後に「数量は100ｇ、200g単位です。コーヒーは生鮮食品です。...」
+という店舗共通の注意書き定型文が続く商品が多い。この定型文の直前までを
+flavor_notesとして採用する(定型文が無い商品は全文を採用)。
 """
 
 import json
@@ -60,9 +74,10 @@ REQUEST_HEADERS = {
     "User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"
 }
 
-NON_BEAN_KEYWORDS = ["ギフトボックス", "三部作"]
+NON_BEAN_KEYWORDS = ["ギフトボックス", "三部作", "ドリップパック"]
 COLORME_PATTERN = re.compile(r"var Colorme\s*=\s*(\{.*?\});", re.DOTALL)
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
+FLAVOR_STOP_PATTERN = re.compile(r"数量は")
 
 
 def fetch_page(url: str) -> BeautifulSoup:
@@ -70,6 +85,17 @@ def fetch_page(url: str) -> BeautifulSoup:
     resp.raise_for_status()
     resp.encoding = "euc-jp"  # 実データ確認済み(Content-Type: text/html; charset=EUC-JP)
     return BeautifulSoup(resp.text, "html.parser")
+
+
+def extract_flavor_notes(soup: BeautifulSoup) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    el = soup.select_one("div.product-order-exp")
+    if not el:
+        return None
+    text = el.get_text(" ", strip=True)
+    m = FLAVOR_STOP_PATTERN.search(text)
+    text = text[:m.start()] if m else text
+    return text.strip() or None
 
 
 def fetch_pid_urls() -> list[str]:
@@ -108,7 +134,7 @@ def pick_min_price_weight(product: dict, price: int | None) -> int | None:
     return int(m.group(1)) if m else None
 
 
-def build_record(product_url: str, product: dict) -> dict | None:
+def build_record(product_url: str, product: dict, soup: BeautifulSoup | None = None) -> dict | None:
     title = (product.get("name") or "").strip()
     if not title or any(kw in title for kw in NON_BEAN_KEYWORDS):
         return None
@@ -141,6 +167,7 @@ def build_record(product_url: str, product: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": extract_flavor_notes(soup) if soup else None,
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": price,
@@ -156,7 +183,7 @@ def parse_product_detail(url: str) -> dict | None:
     colorme_product = extract_colorme_product(soup)
     if not colorme_product:
         return None
-    return build_record(url, colorme_product)
+    return build_record(url, colorme_product, soup)
 
 
 def scrape_all_products() -> tuple[list[dict], list[dict]]:
