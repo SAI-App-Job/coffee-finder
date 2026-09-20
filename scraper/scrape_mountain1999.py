@@ -32,14 +32,46 @@ product_typeが"single origin"(15件)・"blended"(12件、ブレンド)・
 200g=1814円/300g=2721円/400g=3628円/500g=4535円、エチオピア・
 イルガチェフェの例)。variants配列の中でgramsが最小のもの(200g、かつ
 挽き方は先頭の「豆のまま」)を代表バリアントとして採用する。
+
+【flavor_notes(テイスティングノート)について(2026-09-20追記)】
+実データ確認済み: body_htmlは全商品共通で「創業以来一貫して焙煎技術の
+向上に...」という定型の会社紹介文で始まり、その後「【焙煎度合】」
+「【味の系統】」「【評　価】」(または「【特　徴】」)「【味のバランス】
+甘み★★☆☆...」「【おすすめの飲み方】」「焙煎責任者：...」の順序は
+商品によって前後するが、必ず「【評　価】」または「【特　徴】」いずれか
+のラベルの値に、産地の背景説明や実際の風味表現(「柔らかい酸のなかに
+糖蜜やカラメルを感じることができます」等)を含む自由記述文が入っている
+(サンプル6件全件で確認)。以前はbody_htmlを一切読んでいなかった。
+これらいずれかのラベルの値(次の「【」ラベルが現れる位置まで)を
+flavor_notesとして採用する。
 """
 
 import re
 import time
 
 import requests
+from bs4 import BeautifulSoup
 
 from coffee_parser import parse_product, detect_stock_status
+
+EVALUATION_LABEL_PATTERN = re.compile(r"【(?:評\s*価|特\s*徴)】(.*?)(?=【|$)", re.DOTALL)
+
+
+def extract_flavor_notes(body_html: str | None) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    if not body_html:
+        return None
+    soup = BeautifulSoup(body_html, "html.parser")
+    for tag in soup.find_all(["a", "img"]):
+        tag.decompose()
+    for br in soup.find_all("br"):
+        br.replace_with("\n")
+    text = soup.get_text()
+    m = EVALUATION_LABEL_PATTERN.search(text)
+    if not m:
+        return None
+    lines = [line.strip() for line in m.group(1).split("\n") if line.strip()]
+    return "".join(lines) or None
 
 SHOP_INFO = {
     "name": "MOUNTAIN 1999 自家焙煎コーヒーマウンテン",
@@ -126,6 +158,7 @@ def build_record(product: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": extract_flavor_notes(product.get("body_html")),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": price,
