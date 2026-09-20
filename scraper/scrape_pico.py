@@ -232,17 +232,54 @@ def parse_product_detail(url: str, category_hint: str = "") -> dict:
 
 
 def scrape_category_list(cid: str) -> list[dict]:
-    soup = fetch_page(f"{BASE_URL}/?mode=cate&cbid={cid}&csid=0")
+    """1カテゴリ分の商品一覧をページネーション込みで取得する。
+
+    実データ確認済みの構造(2026-09時点):
+    - 商品一覧本体は `ul.product-list.productlist-list.row` 内の
+      `a.product-list__name[href*="pid="]`
+    - 次ページの有無は `li.pagenation-list__navi-end`(先頭=前へ、末尾=次へ)の
+      うち最後の要素が `<a>` を持つかで判定(最終ページでは `<span>` のみ)
+
+    【重要】ページ全体には同じ `a.product-list__name` を使う「PICK UP ITEM」
+    (`ul.product-list.recommend-list`)・「よく見られている商品」等のサイドバー
+    ウィジェット(`ul.product-list.seller-list-left`)も存在し、カテゴリ本体と
+    無関係な商品が混入する(scrape_denimbis.pyのおすすめ商品ウィジェットと
+    同種の問題)。そのため商品一覧コンテナに範囲を絞ってから商品リンクを探す。
+    """
     results = []
     seen = set()
-    for link_el in soup.select('a.product-list__name[href*="pid="]'):
-        href = link_el.get("href", "")
-        if href in seen:
-            continue
-        seen.add(href)
-        product_url = f"{BASE_URL}/{href}" if href.startswith("?") else href
-        title = link_el.get_text(strip=True)
-        results.append({"raw_name": title, "product_url": product_url})
+    page = 1
+
+    while True:
+        url = f"{BASE_URL}/?mode=cate&cbid={cid}&csid=0"
+        if page > 1:
+            url += f"&page={page}"
+
+        soup = fetch_page(url)
+        container = soup.select_one("ul.product-list.productlist-list.row")
+        link_els = container.select('a.product-list__name[href*="pid="]') if container else []
+        if not link_els:
+            break
+
+        new_on_page = False
+        for link_el in link_els:
+            href = link_el.get("href", "")
+            if href in seen:
+                continue
+            seen.add(href)
+            new_on_page = True
+            product_url = f"{BASE_URL}/{href}" if href.startswith("?") else href
+            title = link_el.get_text(strip=True)
+            results.append({"raw_name": title, "product_url": product_url})
+        if not new_on_page:
+            break
+
+        nav_ends = soup.select("li.pagenation-list__navi-end")
+        if not nav_ends or not nav_ends[-1].select_one("a"):
+            break
+        page += 1
+        time.sleep(CRAWL_DELAY_SECONDS)
+
     return results
 
 
