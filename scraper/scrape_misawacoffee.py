@@ -15,6 +15,16 @@ User-agent: *に対し/secure/・/cart/のみDisallow。AhrefsBot等一部
 NON_BEAN_KEYWORDSで除外する。商品名が空の削除済みプレースホルダー
 レコードも除外する。残り27件(ブレンド9種+ストレート等18種)を対象と
 する。
+
+【flavor_notes(テイスティングノート)について(2026-09-20追記)】
+実データ確認済み: 商品詳細ページのdiv.product_explainに、風味を説明
+する自由記述文の後に「苦み：★★★★★酸味：★コク：★★★★★」のような
+★段階評価が続く構成(サンプル10件全件で確認、石垣珈琲と同じテーマ)。
+以前はこのdivを一切読んでいなかった。「苦み/酸味/コク/甘み」のいずれか
+の直後に★/☆が続く位置(=評価行の開始)で本文を打ち切ってflavor_notesと
+して採用する。なお<meta name="Description">にも同じ内容が入っているが
+長い商品説明は途中で切れて評価行に到達しないことがあるため、切り詰め
+の無いdiv.product_explainを優先して使う。
 """
 
 import json
@@ -44,6 +54,21 @@ REQUEST_HEADERS = {
 NON_BEAN_KEYWORDS = ["カフェオレベース", "ドリップバッグ", "コーヒーギフト"]
 COLORME_PATTERN = re.compile(r"var Colorme\s*=\s*(\{.*?\});", re.DOTALL)
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ㎏]")
+RATING_STOP_PATTERN = re.compile(r"(苦み|酸味|コク|甘み)[：:]\s*[★☆]")
+
+
+def extract_flavor_notes(soup: BeautifulSoup) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    el = soup.select_one("div.product_explain")
+    if not el:
+        return None
+    for br in el.find_all("br"):
+        br.replace_with("\n")
+    text = el.get_text()
+    stop_m = RATING_STOP_PATTERN.search(text)
+    content = text[:stop_m.start()] if stop_m else text
+    lines = [line.strip() for line in content.split("\n") if line.strip()]
+    return "".join(lines).strip() or None
 
 
 def fetch_page(url: str) -> BeautifulSoup:
@@ -106,6 +131,7 @@ def build_record(soup: BeautifulSoup, product_url: str) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": extract_flavor_notes(soup),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": int(price) if price is not None else None,
