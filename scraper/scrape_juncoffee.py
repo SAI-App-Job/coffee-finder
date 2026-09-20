@@ -44,11 +44,21 @@ robots.txt確認済み(2026-09時点): store.shopping.yahoo.co.jpのrobots.txt
 実データ確認済み(全18件): ストレート銘柄は「産地／農園名［焙煎度］
 (重量)」形式、ブレンドは「銘柄名ブレンド(重量)」形式。全てコーヒー豆
 単品で、非コーヒー豆商品は無かった。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: 一覧ページのJSON(__NEXT_DATA__)にはdescriptionが
+含まれないため、商品詳細ページ(例: /2brala2s.html)への個別アクセスを
+新設した。詳細ページのmeta[property="og:description"]は「内容量100g
+<br>・ブラジル100%<br><br>樹上で完熟・乾燥させて…」のように、内容量・
+産地比率の行(<br>区切り)の後にテイスティング文が続く共通構成だった
+(対象18件全てで確認)。「内容量」で始まる行、「・」で始まる産地比率行、
+空行を除いた残りの行を採用する。
 """
 
 import re
 
 import requests
+from bs4 import BeautifulSoup
 
 from coffee_parser import parse_product, detect_stock_status
 
@@ -92,6 +102,23 @@ def fetch_category_items() -> list[dict]:
     return search_results
 
 
+def extract_flavor_notes(product_url: str) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    try:
+        resp = requests.get(product_url, headers=REQUEST_HEADERS, timeout=15)
+        resp.raise_for_status()
+    except requests.RequestException as e:
+        print(f"[warn] 詳細ページ取得失敗: {product_url} ({e})")
+        return None
+    soup = BeautifulSoup(resp.content.decode("utf-8"), "html.parser")
+    desc_el = soup.select_one('meta[property="og:description"]')
+    if not desc_el or not desc_el.get("content"):
+        return None
+    parts = [p.strip() for p in desc_el["content"].split("<br>")]
+    kept = [p for p in parts if p and not p.startswith("内容量") and not p.startswith("・")]
+    return "\n".join(kept).strip() or None
+
+
 def build_record(item: dict) -> dict | None:
     title = (item.get("name") or "").strip()
     if not title:
@@ -128,6 +155,7 @@ def build_record(item: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": extract_flavor_notes(product_url),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": price,
