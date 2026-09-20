@@ -17,11 +17,15 @@ curl/python-requests等は個別にDisallow: /指定があるが、User-agent: *
 sitemap.xmlから/items/を含むURLを列挙する方式(瑞玉珈琲と同じ)。実データ確認済み
 (2026-09時点): 40件。
 
-【商品詳細ページのog:descriptionについて】
-実データ確認済み: 「生産地：」「栽培品種：」「収穫後の処理方法：」等のラベル付き
-自由文が含まれる商品もあるが、改行や区切り文字が無く連結された1つの文字列のため
-安定した構造化抽出が難しい(瑞玉珈琲と同じ最小限の抽出方針を踏襲し、商品名からの
-coffee_parser.parse_product()判定のみとする)。
+【flavor_notes(テイスティングノート)について(2026-09-20追記)】
+実データ確認済み: og:descriptionの先頭には必ず風味を説明する自由記述文
+(店主のコーヒーへの思い入れや味わいの説明)があり、その後に「生産地：」
+「生産者：」「栽培品種：」「収穫後の処理方法：」「収穫地点の標高：」
+「焙煎機 :」等のラベル付き情報が改行や区切り文字無く連結される
+(上記の過去の調査記録が指摘していた通り、ラベル値自体の構造化抽出は
+難しい)。ただしflavor_notesとして必要なのは先頭の自由記述文だけであり、
+これらラベルのいずれかが最初に現れる位置を境界として本文を打ち切れば
+安全に切り出せる。
 """
 
 import re
@@ -33,6 +37,16 @@ from coffee_parser import parse_product, detect_stock_status
 from previous_data import load_previous_products, is_unchanged
 
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
+FLAVOR_STOP_PATTERN = re.compile(r"(生産地|生産者|栽培品種|収穫後の処理方法|収穫地点の標高|焙煎機)\s*[：:]")
+
+
+def extract_flavor_notes(description: str | None) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    if not description:
+        return None
+    m = FLAVOR_STOP_PATTERN.search(description)
+    text = description[:m.start()] if m else description
+    return text.strip() or None
 
 SHOP_INFO = {
     "name": "仙台 SPARK COFFEE",
@@ -68,7 +82,9 @@ def extract_og_fields(soup: BeautifulSoup) -> dict | None:
     title = title_el["content"].split(" | ")[0].strip()
     price_el = soup.select_one('meta[property="product:price:amount"]')
     price = int(float(price_el["content"])) if price_el and price_el.get("content") else None
-    return {"title": title, "price": price}
+    desc_el = soup.select_one('meta[property="og:description"]')
+    flavor_notes = extract_flavor_notes(desc_el["content"] if desc_el else None)
+    return {"title": title, "price": price, "flavor_notes": flavor_notes}
 
 
 def fetch_sitemap_urls() -> list[str]:
@@ -112,6 +128,7 @@ def build_record(item: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": item.get("flavor_notes"),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": item["price"],
@@ -142,7 +159,12 @@ def scrape_all_products() -> tuple[list[dict], list[dict], list[dict]]:
             records.append(prev)
             continue
 
-        detail = build_record({"title": fields["title"], "price": fields["price"], "url": product_url})
+        detail = build_record({
+            "title": fields["title"],
+            "price": fields["price"],
+            "url": product_url,
+            "flavor_notes": fields.get("flavor_notes"),
+        })
         if detail is None:
             continue
         if detail.get("non_bean"):
