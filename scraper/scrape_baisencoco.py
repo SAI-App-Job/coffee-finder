@@ -35,6 +35,11 @@ menu_bodyの説明文)にも重量の記載が見つからなかった。未確�
 実データ確認済み: カフェメニューシステムのため在庫フラグの概念が
 無く、構造化された品切れ表示は見つからなかった。商品名テキストのみで
 判定する(detect_stock_status())。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: 商品詳細ページのdiv.menu_bodyに短いテイスティング文が
+直接入っている(対象15件全て確認、価格・スペック等の混入なし)。全文を
+そのまま採用する。
 """
 
 import re
@@ -70,6 +75,16 @@ def fetch_page(url: str) -> BeautifulSoup:
     resp = requests.get(url, headers=REQUEST_HEADERS, timeout=15)
     resp.raise_for_status()
     return BeautifulSoup(resp.text, "html.parser")
+
+
+def fetch_flavor_notes(product_url: str) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    if not product_url:
+        return None
+    soup = fetch_page(product_url)
+    body_el = soup.select_one("div.menu_body")
+    text = body_el.get_text("\n", strip=True) if body_el else None
+    return text or None
 
 
 def scrape_bean_items() -> list[dict]:
@@ -135,6 +150,7 @@ def build_record(item: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": item.get("flavor_notes"),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": item["price"],
@@ -159,6 +175,7 @@ def scrape_all_products() -> tuple[list[dict], list[dict]]:
             records.append(prev)
             continue
 
+        item["flavor_notes"] = fetch_flavor_notes(item["product_url"])
         detail = build_record(item)
         if detail is None:
             continue
