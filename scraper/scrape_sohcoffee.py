@@ -34,6 +34,17 @@ product:price:amountのmetaタグは常に最初のバリエーション(=100g)�
 YUTAKA COFFEE(全形態がドリップバッグ)・コールドブリューコーヒーバッグが
 非対象。NON_BEAN_KEYWORDSで除外する。[オーダー焙煎]のパナマ ゲイシャ等は
 単一銘柄のカスタム焙煎注文のため対象に含める。
+
+【flavor_notes(テイスティングノート)について(2026-09-20追記)】
+実データ確認済み: og:descriptionの先頭には必ず風味を説明する自由記述文
+があり、その後「■FLAVORコメント」または「FLAVOR」に続けて
+「STRAWBERRY,PLUM,GRAPE」のようなカンマ区切りの英語フレーバータグと
+「ROASTLEVEL（焙煎度）★★FALAVOR（個性）★★★★...」の★段階評価が
+区切り文字無く連結される。さらにその後には「■使用豆」(ブレンド豆の
+配合比)、「■国名」「■地名」等の産地情報、末尾には配送・キャンペーン
+案内が続く。これらのいずれかが最初に現れる位置で本文を打ち切ることで
+先頭の自由記述文だけを安全に切り出せる。該当マーカーが一つも無い商品
+(アイスコーヒーブレンド等、短い説明のみ)は全文をそのまま採用する。
 """
 
 import re
@@ -67,6 +78,19 @@ NON_BEAN_KEYWORDS = [
 WEIGHT_G_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
 WEIGHT_KG_PATTERN = re.compile(r"(\d+)\s*[kKｋＫ][gｇ]")
 OPTION_TEXT_PATTERN = re.compile(r"<option[^>]*>([^<]*)</option>")
+FLAVOR_STOP_PATTERN = re.compile(
+    r"(■?\s*FLAVOR|■\s*使用豆|■\s*国名|■\s*地名|宅配送料別|商品発送の準備|"
+    r"【[^】]*キャンペーン】|メール便はこちら|https?://)"
+)
+
+
+def extract_flavor_notes(description: str | None) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    if not description:
+        return None
+    m = FLAVOR_STOP_PATTERN.search(description)
+    text = description[:m.start()] if m else description
+    return text.strip() or None
 
 
 def fetch_page(url: str) -> tuple[BeautifulSoup, str]:
@@ -106,6 +130,8 @@ def build_record(item_url: str, soup: BeautifulSoup, html: str) -> dict | None:
 
     price_el = soup.select_one('meta[property="product:price:amount"]')
     price = int(float(price_el["content"])) if price_el and price_el.get("content") else None
+    desc_el = soup.select_one('meta[property="og:description"]')
+    flavor_notes = extract_flavor_notes(desc_el["content"] if desc_el else None)
     weight_g = extract_min_variant_weight_g(html)
     if weight_g is None:
         # 理由はモジュールdocstring参照([オーダー焙煎]商品は重量帯の
@@ -145,6 +171,7 @@ def build_record(item_url: str, soup: BeautifulSoup, html: str) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": flavor_notes,
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": price,
