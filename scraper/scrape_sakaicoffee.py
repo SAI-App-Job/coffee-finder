@@ -27,6 +27,16 @@ User-agent: *に対し/secure/・/cart/のみDisallow。AhrefsBot等一部
 ドリップ形態)・「「黄色い自転車」珈琲豆屋のひさこのエッセイ」(店主の
 エッセイ本、コーヒー豆ではない)が非対象。NON_BEAN_KEYWORDSで除外する。
 残り約116件(重複除去後24銘柄)を対象とする。
+
+【flavor_notes(2026-09-20追記)】
+実データ確認済み: 詳細ページのdiv.detail_text_area内、構造化スペック
+テーブル(<table>、品名/原材料/原産国/内容量/保存方法)より前にある<p>
+要素(通常2つ、「このコーヒーは、<苦味レベル>【<タイプ名>】です。」という
+苦味レベル分類文＋実際のテイスティング文)がそのままflavor_notesとして
+使える。<table>または見出し用の<p class="ttl">(「●豆の挽き方について」等)
+が現れた時点で以降は対象外とする。詳細ページはColorme JSON取得と同じ
+extract_item内で既に取得済みのsoupを再利用するため、追加のHTTPアクセスは
+不要。
 """
 
 import json
@@ -59,6 +69,23 @@ WEIGHT_PATTERN = re.compile(r"([\d０-９]+)\s*[gｇ]")
 WEIGHT_KG_PATTERN = re.compile(r"([\d０-９]+)\s*[kKｋＫ][gｇ]")
 PAREN_PATTERN = re.compile(r"[（(][^）)]*[）)]")
 WHITESPACE_PATTERN = re.compile(r"\s+")
+
+
+def extract_flavor_notes(soup: BeautifulSoup) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    el = soup.select_one("div.detail_text_area")
+    if not el:
+        return None
+    parts = []
+    for child in el.find_all(["p", "table"], recursive=False):
+        if child.name == "table":
+            break
+        if "ttl" in (child.get("class") or []):
+            break
+        text = child.get_text(" ", strip=True)
+        if text:
+            parts.append(text)
+    return " ".join(parts) or None
 
 
 def fetch_page(url: str) -> BeautifulSoup:
@@ -113,6 +140,7 @@ def extract_item(soup: BeautifulSoup, product_url: str) -> dict | None:
         "price": int(price) if price is not None else None,
         "url": product_url,
         "stock_num": product.get("stock_num"),
+        "flavor_notes": extract_flavor_notes(soup),
     }
 
 
@@ -158,6 +186,7 @@ def build_record(item: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": item.get("flavor_notes"),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": item["price"],
