@@ -31,6 +31,15 @@ User-agent: *に対し/secure/・/cart/のみDisallow。AhrefsBot等一部
 (950円)のように同一豆と思われる価格違いの商品が存在するが、商品名から
 サイズ差を判別できないため、あえて統合せず両方とも別商品としてそのまま
 残す(重量が商品名にない場合の重複統合は行わない方針)。
+
+【flavor_notes(2026-09-20追記)】
+実データ確認済み: var Colorme JSONのcaptionは常にnullだが、詳細ページの
+商品名直下にp.sumtxt要素があり、対象22件中21件(重複調査時にnameが空文字列
+だったpid=161284595は既存ロジックで既に除外済みのため対象外)に短い
+テイスティング文が入っている(例:「甘さと香りが素晴らしい!! 澄んだ味と、
+豊な香りがあります。」)。末尾に《中煎り》等の焙煎度注記が付く場合も
+あるが切り分ける区切りが無いため全文を採用する。既存のColorme JSON取得と
+同じHTML取得を再利用するため追加のHTTPアクセスは不要。
 """
 
 import json
@@ -71,6 +80,13 @@ def fetch_page(url: str) -> BeautifulSoup:
 def fetch_pid_urls() -> list[str]:
     soup = fetch_page(f"{BASE_URL}/sitemap.xml")
     return [loc.get_text(strip=True) for loc in soup.find_all("loc") if "pid=" in loc.get_text()]
+
+
+def extract_flavor_notes(soup: BeautifulSoup) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    el = soup.select_one("p.sumtxt")
+    text = el.get_text(strip=True) if el else None
+    return text or None
 
 
 def build_record(soup: BeautifulSoup, product_url: str) -> dict | None:
@@ -122,6 +138,7 @@ def build_record(soup: BeautifulSoup, product_url: str) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": extract_flavor_notes(soup),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": int(price) if price is not None else None,
