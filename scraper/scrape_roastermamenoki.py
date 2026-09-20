@@ -34,6 +34,17 @@ scrape_roastermamenoki.py
 
 robots.txt確認済み(2026-09時点): shop-pro.jp標準の記述で、本スクレイパーが
 使う一覧ページ(?mode=srh)は制限対象外。
+
+【flavor_notes(2026-09-20追記)】
+実データ確認済み: 詳細ページのdiv.p-product-explain__body内は<br>区切りの
+フラットなテキストで、「香り／苦味／酸味／甘味／コクの★評価」「生産地／
+標高／品種／製法等のスペック行」「実際のテイスティング文の段落」
+「※金額は、生豆時200gの価格になります...という店舗共通の定型文」の
+4種類の内容が混在する(対象21件全てで同じ構成、段落順は一部商品で
+入れ替わる)。★評価行を含む段落・スペックラベルで始まる段落・「※」で
+始まる定型文段落を除外し、残った段落を結合してflavor_notesとして採用する。
+本スクレイパーはこれまで一覧ページのみを取得していたが、flavor_notes
+取得のため詳細ページへの個別アクセスを新設した(対象21件のみ、負荷は軽微)。
 """
 
 import re
@@ -63,6 +74,8 @@ MAX_PAGES = 20
 NON_BEAN_KEYWORDS = ["アーモンド", "ピスタチオ"]
 PRICE_PATTERN = re.compile(r"([\d,]+)\s*円")
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
+SPEC_LINE_PATTERN = re.compile(r"^(生産地|標高|品種|製法|生産者|農園名|代表者|特徴|生産処理)[：:]")
+BOILERPLATE_PATTERN = re.compile(r"^※")
 
 
 def fetch_page(url: str) -> BeautifulSoup:
@@ -70,6 +83,45 @@ def fetch_page(url: str) -> BeautifulSoup:
     resp.raise_for_status()
     resp.encoding = "euc-jp"
     return BeautifulSoup(resp.text, "html.parser")
+
+
+def split_into_paragraphs(el) -> list[str]:
+    paragraphs = []
+    current_parts: list[str] = []
+    for child in el.contents:
+        name = getattr(child, "name", None)
+        if name == "br":
+            continue
+        text = child.get_text() if name else str(child)
+        text = text.strip()
+        if not text:
+            if current_parts:
+                paragraphs.append(" ".join(current_parts))
+                current_parts = []
+        else:
+            current_parts.append(text)
+    if current_parts:
+        paragraphs.append(" ".join(current_parts))
+    return paragraphs
+
+
+def extract_flavor_notes(product_url: str) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    soup = fetch_page(product_url)
+    el = soup.select_one("div.p-product-explain__body")
+    if not el:
+        return None
+    kept = []
+    for para in split_into_paragraphs(el):
+        if BOILERPLATE_PATTERN.match(para):
+            continue
+        if "★" in para or "☆" in para:
+            continue
+        if SPEC_LINE_PATTERN.match(para):
+            continue
+        kept.append(para)
+    text = " ".join(kept).strip()
+    return text or None
 
 
 def scrape_list_page(page: int) -> list[dict]:
@@ -125,6 +177,12 @@ def build_record(item: dict) -> dict | None:
     weight_m = WEIGHT_PATTERN.search(title)
     weight_g = int(weight_m.group(1)) if weight_m else None
 
+    try:
+        flavor_notes = extract_flavor_notes(item["product_url"])
+    except requests.RequestException as e:
+        print(f"[warn] 詳細ページ取得失敗: {item['product_url']} ({e})")
+        flavor_notes = None
+
     return {
         "shop_name": SHOP_INFO["name"],
         "raw_name": title,
@@ -135,6 +193,7 @@ def build_record(item: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": flavor_notes,
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": item["price"],
