@@ -40,11 +40,19 @@ sitemap.xml内のURLのみを対象とする方式を採る(店舗が新銘柄�
 
 【重量について】
 実データ確認済み: 商品名に「100ｇ」のように重量が明記されている。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: JSON-LDのdescriptionは常に空文字列だが、商品詳細
+ページのdiv#sysDescription内のp.slide-bottomに短いテイスティング文が
+入っている(対象17件全てで確認、価格・スペック等の混入なし)。この
+テイスティング取得のため、JSON-LD取得と同じ詳細ページのHTMLを
+BeautifulSoupで再解析する処理を追加した。
 """
 
 import re
 
 import requests
+from bs4 import BeautifulSoup
 
 from coffee_parser import parse_product, detect_stock_status
 
@@ -85,10 +93,15 @@ def fetch_bean_urls() -> list[str]:
     return urls
 
 
-def fetch_product_jsonld(url: str) -> dict | None:
+def fetch_product_page(url: str) -> tuple[dict | None, str | None]:
+    """商品のJSON-LD Productデータとflavornotesをまとめて取得する
+    (理由はモジュールdocstring参照: 両方とも同じ詳細ページのHTMLから
+    抽出できるため、1回のリクエストで済ませる)。"""
     resp = requests.get(url, headers=REQUEST_HEADERS, timeout=15)
     resp.raise_for_status()
     html = resp.text
+
+    product = None
     # 商品ページには複数のJSON-LDブロック(BreadcrumbList, Product)が並ぶため、
     # "@type": "Product"を含むスクリプトブロックのみを対象に正規表現で抽出する
     for m in re.finditer(r'<script type="application/ld\+json">\s*(\[.*?\]|\{.*?\})\s*</script>', html, re.DOTALL):
@@ -103,11 +116,19 @@ def fetch_product_jsonld(url: str) -> dict | None:
         items = data if isinstance(data, list) else [data]
         for item in items:
             if isinstance(item, dict) and item.get("@type") == "Product":
-                return item
-    return None
+                product = item
+                break
+        if product:
+            break
+
+    soup = BeautifulSoup(html, "html.parser")
+    desc_el = soup.select_one("div#sysDescription p.slide-bottom")
+    flavor_notes = desc_el.get_text(strip=True) if desc_el else None
+
+    return product, (flavor_notes or None)
 
 
-def build_record(url: str, product: dict) -> dict | None:
+def build_record(url: str, product: dict, flavor_notes: str | None) -> dict | None:
     title = (product.get("name") or "").strip()
     if not title:
         return None
@@ -144,6 +165,7 @@ def build_record(url: str, product: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": flavor_notes,
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": price,
@@ -161,7 +183,7 @@ def scrape_all_products() -> tuple[list[dict], list[dict]]:
     flavored_records = []
     for url in urls:
         try:
-            product = fetch_product_jsonld(url)
+            product, flavor_notes = fetch_product_page(url)
         except requests.RequestException as e:
             print(f"[warn] 詳細ページ取得失敗: {url} ({e})")
             continue
@@ -169,7 +191,7 @@ def scrape_all_products() -> tuple[list[dict], list[dict]]:
             print(f"[warn] JSON-LD Productが見つかりません: {url}")
             continue
 
-        detail = build_record(url, product)
+        detail = build_record(url, product, flavor_notes)
         if detail is None:
             continue
         if detail.get("is_flavored"):
