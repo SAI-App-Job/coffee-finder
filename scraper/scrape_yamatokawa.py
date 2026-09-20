@@ -23,6 +23,17 @@ NON_BEAN_KEYWORDSで除外する(「セット」を包括的なキーワード�
 実データで対象の焙煎豆銘柄に「セット」を含むものが無いことを確認済み)。
 残り15件(焙煎豆)を対象とする。重量表記が商品名に無く単一サイズ販売の
 ため重量重複処理は不要。
+
+【flavor_notes(2026-09-20追記)】
+実データ確認済み: 詳細ページのdiv.product_expにテイスティング文が
+入る構造だが、対象21件中20件はこの要素自体が空/存在せず(商品説明文が
+そもそも書かれていない)、季節限定の1件「アイスコーヒーブレンド」のみ
+実際に星評価付きのテイスティング文が入っていた。取得できる情報源が
+そもそも乏しいためカバレッジは低い(1/21)が、抽出ロジック自体は正しく
+機能しており、店舗側が今後説明文を追加した場合に備えて実装する。この
+1件はブログ記事調で複数の「■見出し」区切りの長文だったため、最初の
+「■見出し」の本文(2番目の見出しの直前まで)のみを採用する(それ以降は
+在庫過多の経緯等、テイスティングと無関係な内容のため)。
 """
 
 import json
@@ -64,6 +75,43 @@ def fetch_page(url: str) -> BeautifulSoup:
     resp = requests.get(url, headers=REQUEST_HEADERS, timeout=15)
     resp.raise_for_status()
     return BeautifulSoup(resp.text, "html.parser")
+
+
+def split_into_paragraphs(el) -> list[str]:
+    paragraphs = []
+    current_parts: list[str] = []
+    for child in el.contents:
+        name = getattr(child, "name", None)
+        if name == "br":
+            continue
+        text = child.get_text() if name else str(child)
+        text = text.strip()
+        if not text:
+            if current_parts:
+                paragraphs.append(" ".join(current_parts))
+                current_parts = []
+        else:
+            current_parts.append(text)
+    if current_parts:
+        paragraphs.append(" ".join(current_parts))
+    return paragraphs
+
+
+def extract_flavor_notes(soup: BeautifulSoup) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    el = soup.select_one("div.product_exp")
+    if not el:
+        return None
+    paras = split_into_paragraphs(el)
+    heading_idx = [i for i, p in enumerate(paras) if p.startswith("■")]
+    if len(heading_idx) >= 2:
+        body = paras[heading_idx[0] + 1:heading_idx[1]]
+    elif len(heading_idx) == 1:
+        body = paras[heading_idx[0] + 1:]
+    else:
+        body = [p for p in paras if "★" not in p and "☆" not in p and "：" not in p]
+    text = " ".join(body).strip()
+    return text or None
 
 
 def fetch_pid_urls() -> list[str]:
@@ -118,6 +166,7 @@ def build_record(soup: BeautifulSoup, product_url: str) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": extract_flavor_notes(soup),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": int(price) if price is not None else None,
