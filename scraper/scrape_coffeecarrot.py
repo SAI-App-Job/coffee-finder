@@ -23,6 +23,18 @@ Dark Cafest」(365ml、瓶入りリキッドコーヒー)、「水出しアイ�
 
 robots.txt確認済み(2026-09時点): User-agent: *で/cart/等の管理・購入系
 パスのみDisallow、商品一覧ページ(/products/)は制限対象外。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: 一覧ページのみの取得だったが、詳細ページ
+(products/detail.php?product_id=N)のdiv.product_copy > h2に短い
+キャッチコピー(テイスティングの要約)、div.main_commentに焙煎人の
+コメント全文(産地・生産者のストーリーとテイスティング表現が地の文で
+混在)が入っている。対象19件全てで確認、綺麗な見出し区切りは無いため
+「背景説明とテイスティング文が混在する場合は全文採用」の既存方針
+(バッチ85-120等)に倣い、両方を連結して採用する。og:descriptionは
+店舗共通の固定文(商品に依存しない)のため使用不可。flavor_notes取得の
+ため新たに詳細ページへの個別アクセスを追加した(一覧ページのみだった
+既存実装を拡張)。
 """
 
 import re
@@ -60,6 +72,23 @@ def fetch_page(url: str) -> BeautifulSoup:
     resp.raise_for_status()
     resp.encoding = "utf-8"
     return BeautifulSoup(resp.text, "html.parser")
+
+
+def extract_flavor_notes(product_url: str) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    try:
+        soup = fetch_page(product_url)
+    except requests.RequestException as e:
+        print(f"[warn] 詳細ページ取得失敗: {product_url} ({e})")
+        return None
+    copy_el = soup.select_one("div.product_copy h2")
+    comment_el = soup.select_one("div.main_comment")
+    parts = [
+        el.get_text(" ", strip=True)
+        for el in (copy_el, comment_el)
+        if el and el.get_text(strip=True)
+    ]
+    return " ".join(parts) or None
 
 
 def build_record(box) -> dict | None:
@@ -109,6 +138,7 @@ def build_record(box) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": extract_flavor_notes(product_url),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": price,
