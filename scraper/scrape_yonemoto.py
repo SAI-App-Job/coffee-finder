@@ -26,6 +26,13 @@ meta-externalagentのみDisallow: /(AI学習クローラー対策)。User-agent:
 【在庫について】
 実データ確認済み: 一覧・詳細ページのどちらにも構造化された品切れ表示要素が
 見当たらないため、商品名のテキストのみで在庫状態を判定する。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: 商品詳細ページの「商品詳細」見出し配下のdiv.item_desc_
+text内に、焙煎度タグ【〜ロースト】に続くテイスティング文が入っている
+(対象17件全てで確認、価格・スペック等の混入なし)。og:descriptionにも
+同内容が入っているが約100文字で切り捨てられるため、切り捨てのない
+div.item_desc_textを採用する。全文をそのまま採用する。
 """
 
 import re
@@ -77,8 +84,19 @@ def parse_weight_from_delivery_option(soup: BeautifulSoup) -> int | None:
     return None
 
 
+def extract_flavor_notes(soup: BeautifulSoup) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    el = soup.select_one("div.item_desc_text")
+    if not el:
+        return None
+    for br in el.find_all("br"):
+        br.replace_with("\n")
+    lines = [line.strip() for line in el.get_text().split("\n") if line.strip()]
+    return "\n".join(lines).strip() or None
+
+
 def build_record(product_url: str, title: str, price: int | None, weight_g: int | None,
-                  category_hint: str) -> dict:
+                  category_hint: str, flavor_notes: str | None = None) -> dict:
     parsed = parse_product(title)
 
     if parsed["is_flavored"]:
@@ -106,6 +124,7 @@ def build_record(product_url: str, title: str, price: int | None, weight_g: int 
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": flavor_notes,
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": price,
@@ -133,7 +152,7 @@ def parse_product_detail(url: str, fallback_title: str = "", category_hint: str 
         m = WEIGHT_PATTERN.search(title)
         weight_g = int(m.group(1)) if m else None
 
-    return build_record(url, title, price, weight_g, category_hint)
+    return build_record(url, title, price, weight_g, category_hint, extract_flavor_notes(soup))
 
 
 def scrape_category_list(cid: str) -> list[dict]:
