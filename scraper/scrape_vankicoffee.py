@@ -33,6 +33,17 @@ User-agent: *に対し/secure/・/cart/のみDisallow。AhrefsBot等一部
 最小重量(100g)の価格と一致することを実データで確認済みのため、
 misawacoffee/santoscoffeeと同様にproduct.sales_priceをそのまま採用し、
 weight_gは100固定とする。
+
+【flavor_notes(2026-09-20追記)】
+実データ確認済み: 詳細ページの「煎り具合：」を含む<p>要素内に、多くの
+ストレート商品は「産地：」ラベルより前に実際のテイスティング文が入って
+いる(ブレンド商品は「産地：」自体を持たず「煎り具合：」から始まる)。
+「産地：」または「煎り具合：」のうち先に出現するラベルの直前までを
+flavor_notesとして採用する(tier1)。テイスティング文を持たない商品
+(一部のブレンド・コロンビア・フレンチ等)は代わりに「フレーバー：AROMA
+★★★／ACIDITY non／SWEET ★★／SMOKY ★★★」という★評価のフレーバー行を
+flavor_notesとして採用する(tier2)。両方とも無い商品(松岡正剛オリジナル
+【プレミアム缶入】、焙煎方法のみ記載)はflavor_notesを取得しない。
 """
 
 import json
@@ -61,6 +72,8 @@ REQUEST_HEADERS = {
 
 NON_BEAN_KEYWORDS = ["カリタ", "ハリオ", "ギフト"]
 COLORME_PATTERN = re.compile(r"var Colorme\s*=\s*(\{.*?\});", re.DOTALL)
+FLAVOR_PROSE_STOP_PATTERN = re.compile(r"産地[：:]|煎り具合[：:]")
+FLAVOR_RATING_PATTERN = re.compile(r"フレーバー[：:]\s*(.+?)(?:\s*挽き具合は下記|$)", re.DOTALL)
 
 
 def fetch_page(url: str) -> BeautifulSoup:
@@ -68,6 +81,32 @@ def fetch_page(url: str) -> BeautifulSoup:
     resp.raise_for_status()
     resp.encoding = "EUC-JP"
     return BeautifulSoup(resp.text, "html.parser")
+
+
+def extract_flavor_notes(soup: BeautifulSoup) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    target = None
+    for p in soup.find_all("p"):
+        if "煎り具合" in p.get_text():
+            target = p
+            break
+    if not target:
+        return None
+    for br in target.find_all("br"):
+        br.replace_with("\n")
+    text = target.get_text().replace("\r", "")
+
+    m = FLAVOR_PROSE_STOP_PATTERN.search(text)
+    prose = text[:m.start()].strip() if m else text.strip()
+    prose = re.sub(r"\s+", " ", prose).strip()
+    if prose:
+        return prose
+
+    m2 = FLAVOR_RATING_PATTERN.search(text)
+    if m2:
+        rating = re.sub(r"\s+", " ", m2.group(1)).strip()
+        return rating or None
+    return None
 
 
 def fetch_pid_urls() -> list[str]:
@@ -120,6 +159,7 @@ def build_record(soup: BeautifulSoup, product_url: str) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": extract_flavor_notes(soup),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": int(price) if price is not None else None,
