@@ -60,6 +60,22 @@ BeautifulSoupでcontent.renderedを再パースし、`<h2>`群と
 実データ確認済み: 商品名先頭に「【売り切れ】」「【入荷待ち】」という
 prefixが付く商品があり、いずれもcoffee_parserのSTOCK_STATUS_SYNONYMS
 (「一時的に品切れ」に分類済み)でそのまま検出できる。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み(対象18件全て): content.rendered内の`<p class=
+"wp-block-paragraph">`群を出現順に見ると、「※【100g×10個を、200g
+ずつ5袋で！】等のご要望は…」という配送に関する定型文の段落が必ず
+存在し(全件で共通)、コーヒー豆単品(14件)ではその直後の段落に
+「【マスターのコメント】」(テイスティング文)→「【コーヒープロフィール】」
+(産地・農園のストーリー)の順で2段落が続く。「【マスターのコメント】」
+が無い商品では、直後の段落がそのまま産地ストーリーとテイスティング文が
+地の文で混在した1段落になっている(実データ確認済み、この場合は全文を
+採用)。一部商品は末尾に「【カッピングコメント】」(カッピング用語の
+単語列)が付き、その場合は【マスターのコメント】と同様にその内容を
+優先して採用する。ブレンド2件(ビターブレンド・午後のブレンド)では
+定型文の直後の段落が「①…②…」という抽出手順の説明(テイスティング
+文ではない)になっており、代わりに定型文より前の最初の段落(ブレンドの
+特徴を説明する文でテイスティング文を含む)を採用する。
 """
 
 import re
@@ -89,10 +105,42 @@ NON_BEAN_KEYWORDS = ["ドリップバッグ", "水出しコーヒーパック"]
 WEIGHT_HEADING_PATTERN = re.compile(r"【(\d+)\s*[gｇ]")
 PRICE_PATTERN = re.compile(r"販売価格[：:]\s*([\d,]+)円")
 HTML_TAG_PATTERN = re.compile(r"<[^>]+>")
+FLAVOR_LABELS = ("【マスターのコメント】", "【カッピングコメント】")
 
 
 def strip_html(text: str) -> str:
     return HTML_TAG_PATTERN.sub(" ", text or "")
+
+
+def extract_flavor_notes(content_html: str) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    soup = BeautifulSoup(content_html, "html.parser")
+    for tag in soup.find_all(["script", "style", "form"]):
+        tag.decompose()
+    paragraphs = [p.get_text(" ", strip=True) for p in soup.select("p.wp-block-paragraph")]
+    paragraphs = [p for p in paragraphs if p]
+    if not paragraphs:
+        return None
+
+    notice_idx = next((i for i, t in enumerate(paragraphs) if "100g×10個" in t), None)
+    candidate = None
+    if notice_idx is not None and notice_idx + 1 < len(paragraphs):
+        nxt = paragraphs[notice_idx + 1]
+        if not nxt.startswith("①"):
+            candidate = nxt
+
+    if candidate is None:
+        return paragraphs[0].strip() or None
+
+    for label in FLAVOR_LABELS:
+        if label in candidate:
+            text = candidate.split(label, 1)[1]
+            end = text.find("【")
+            return (text[:end] if end != -1 else text).strip() or None
+
+    end = candidate.find("【")
+    text = candidate[:end] if end != -1 else candidate
+    return text.strip() or None
 
 
 def fetch_all_products() -> list[dict]:
@@ -171,6 +219,7 @@ def build_record(product: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": extract_flavor_notes(content_html),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": price,
