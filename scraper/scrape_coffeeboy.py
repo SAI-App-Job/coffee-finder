@@ -31,6 +31,17 @@ User-agent: *に対し/secure/・/cart/のみDisallow。それ以外は制限な
 実データ確認済み: 同一銘柄が複数重量(100g/200g/500g等)の個別商品として
 登録されている場合があるため、商品名から重量表記を除いた基準名でグルーピング
 し、最小重量を代表として採用する(タウンコーヒーと同じ方式)。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: meta[name="Description"]タグに商品ごとの短い
+テイスティング文が直接入っている(対象18件全てで確認)。本文自体は
+巨大なブログ形式の説明(HTMLコメント無し、通常のdiv内)で読み取れるが、
+メタタグの方が簡潔で価格・配送等の混入が無いため採用する。
+なお既存のfetch_page()がresp.encodingを"utf-8"に固定していたが、
+実際のサイトはEUC-JP(Content-Type確認済み)であり、Colorme JSON内の
+商品名は\\uエスケープのため実害が無かったものの、メタタグ等の生HTML
+テキストを読む際には文字化けの原因になるため、正しいエンコーディング
+検出(自動検出に委ねる)に修正した。
 """
 
 import json
@@ -67,8 +78,15 @@ WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
 def fetch_page(url: str) -> BeautifulSoup:
     resp = requests.get(url, headers=REQUEST_HEADERS, timeout=15)
     resp.raise_for_status()
-    resp.encoding = "utf-8"
     return BeautifulSoup(resp.text, "html.parser")
+
+
+def extract_flavor_notes(soup: BeautifulSoup) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    desc_el = soup.select_one('meta[name="Description"]')
+    if not desc_el or not desc_el.get("content"):
+        return None
+    return desc_el["content"].strip() or None
 
 
 def fetch_pid_urls() -> list[str]:
@@ -142,6 +160,7 @@ def build_record(soup: BeautifulSoup, product_url: str) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": extract_flavor_notes(soup),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": int(price) if price is not None else None,
