@@ -14,6 +14,14 @@ robots.txt確認済み(2026年8月時点): 主要AIクローラー(GPTBot等)は
 【差分ベーススクレイピング】一覧ページ(軽量)の時点で商品名・価格帯・
 カテゴリが前回(data/products.json)と変わっていない商品は、詳細ページの
 再取得をスキップして前回のレコードをそのまま使い回す(previous_data.py参照)。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: div.item_desc_text内はテイスティング文の後に
+「品種：」「精製方法／精選方法：」のスペック行が続く共通構成だった
+(対象18件中17件で確認、ブレンド商品の先頭に付く《産地構成》表記も
+除去する)。これらのスペック行の直前までを採用する。従来は処理方法
+未確定またはブレンドの場合のみ説明文を取得していたが、flavor_notes
+取得のため全商品で説明文を取得するように変更した。
 """
 
 import json
@@ -192,6 +200,26 @@ def parse_blend_components_from_description(description_text: str) -> list[dict]
     return components
 
 
+FLAVOR_SPEC_LINE_PATTERN = re.compile(r"^(品種|精製方法|精選方法)")
+
+
+def extract_flavor_notes(description: str) -> str | None:
+    """理由はモジュールdocstring参照(《産地構成》表記・「品種：」「精製方法：」
+    等のスペック行を除いたテイスティング文のみを採用する)。"""
+    if not description:
+        return None
+    lines = [line.strip() for line in description.split("\n") if line.strip()]
+    flavor_lines = []
+    for line in lines:
+        if BLEND_COMPOSITION_PATTERN.match(line):
+            continue
+        if FLAVOR_SPEC_LINE_PATTERN.match(line):
+            break
+        flavor_lines.append(line)
+    text = "\n".join(flavor_lines).strip()
+    return text or None
+
+
 def fetch_product_description(product_url: str) -> str:
     """商品詳細ページの説明文を取得する(精選方法・栽培品種の補強用)。
 
@@ -267,12 +295,11 @@ def build_product_records(
 
         variety_note = None
         blend_components = []
-        # ブレンドは処理方法の有無によらず必ず説明文を確認する(《産地構成》
-        # 記法の有無を確認するため)。それ以外は従来通り、商品名だけで
-        # 精選方法が特定できなかった場合のみ確認する。
-        needs_description = fetch_details and item.get("product_url") and (
-            not parsed["processing_method"] or parsed["category"] == "ブレンド"
-        )
+        flavor_notes = None
+        # flavor_notes抽出のため、以前は処理方法未確定またはブレンドのみ
+        # だった説明文取得を全商品で行うように変更した(理由はモジュール
+        # docstring内のflavor_notes追記参照)。
+        needs_description = fetch_details and item.get("product_url")
         if needs_description:
             try:
                 description = fetch_product_description(item["product_url"])
@@ -282,6 +309,7 @@ def build_product_records(
                 variety_note = extra["variety_note"]
                 if parsed["category"] == "ブレンド":
                     blend_components = parse_blend_components_from_description(description)
+                flavor_notes = extract_flavor_notes(description)
                 time.sleep(CRAWL_DELAY_SECONDS)
             except requests.RequestException as e:
                 print(f"[warn] 詳細ページ取得失敗: {item.get('product_url')} ({e})")
@@ -300,6 +328,7 @@ def build_product_records(
             "grade": parsed["grade"],
             "roast_level": parsed["roast_level"],  # Denim bisは注文時選択のため基本null
             "roast_selectable": parsed["roast_level"] is None and parsed["category"] == "ストレート",
+            "flavor_notes": flavor_notes,
             "post_processing_tags": parsed["post_processing_tags"],
             "blend_components": blend_components,  # ブレンドの産地内訳(現状産地国のみ、判明する場合のみ)
             "price_min": item.get("price_min"),
