@@ -43,12 +43,23 @@ coffeebeans)はギフトセット3件のみで、実際のストレート/ブレ
 深煎の3種は確認)で、本アプリのroast_levelが要求する8段階表記とは粒度が異なる
 ため、roast_hintとして保持しroast_levelは構造化しない(WOODBERRY COFFEE・
 405coffee等で確立した方針と同じ)。
+
+【flavor_notes(2026-09-20追記)】
+実データ確認済み: body_htmlは「配送可否の注記→商品番号/商品内容→テイス
+ティング文の段落(1〜数個)→(多くの場合)店主の農園訪問記や現地写真を含む
+長い読み物→ラベル付きスペック表」という共通構成。テイスティング文と
+訪問記の間に明確な区切りマーカーは無いが、訪問記セクションの先頭には
+ほぼ必ず現地写真の<img>が最初に出現するため、「商品番号/商品内容/配送
+注記の段落を除いた最初の<img>を含む段落の直前まで」をflavor_notesとして
+採用する(<img>が無い場合は情報スペック表の直前までを採用)。対象21件全て
+で実データ確認済み。
 """
 
 import re
 import time
 
 import requests
+from bs4 import BeautifulSoup
 
 from coffee_parser import parse_product, detect_country_name
 
@@ -100,6 +111,29 @@ def fetch_collection_products(handle: str) -> list[dict]:
     return products
 
 
+SPEC_LINE_MARKERS = ("商品番号", "商品内容", "配送が可能")
+
+
+def extract_flavor_notes(body_html: str) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    soup = BeautifulSoup(body_html or "", "html.parser")
+    started = False
+    parts = []
+    for el in soup.find_all(["p", "table"], recursive=False):
+        if el.name == "table":
+            break
+        text = el.get_text(" ", strip=True)
+        if not started:
+            if any(marker in text for marker in SPEC_LINE_MARKERS):
+                continue
+            started = True
+        if el.find("img"):
+            break
+        if text:
+            parts.append(text)
+    return " ".join(parts) if parts else None
+
+
 def parse_body_labels(body_html: str) -> dict:
     text = re.sub(r"<[^>]+>", "\n", body_html or "")
     text = re.sub(r"\n{2,}", "\n", text).strip()
@@ -123,7 +157,8 @@ def build_record(product: dict) -> dict:
     is_blend = parsed["category"] == "ブレンド"
 
     detail = fetch_json(f"{BASE_URL}/products/{product['handle']}.json")["product"]
-    fields = parse_body_labels(detail.get("body_html") or "")
+    body_html = detail.get("body_html") or ""
+    fields = parse_body_labels(body_html)
 
     origin_country = None
     if not is_blend and fields.get("生産国名"):
@@ -151,6 +186,7 @@ def build_record(product: dict) -> dict:
         "grade": parsed["grade"],
         "roast_level": None,  # 理由はモジュールdocstring参照(粗い表記のためroast_hintに保持)
         "roast_hint": fields.get("焙煎度合"),
+        "flavor_notes": extract_flavor_notes(body_html),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": price,
