@@ -24,6 +24,13 @@ JSON-LD等の構造化データが無いためEC-CUBE標準テンプレートの
 実データ確認済み: 全銘柄が200g/500gの2サイズで個別商品登録されている。
 商品名から末尾の重量を除いた基準名でグルーピングし、最小重量(200g)を
 代表として採用する。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: 商品詳細ページのp#detail_not_stock_box__description_
+detail内に「(ブレンド比率→)当店から商品のご案内→テイスティング文→
+容量→味のバランス(苦味/酸味/甘味/コク/香りの★画像評価)」という共通
+構成があり(対象18件全てで確認)、「当店から商品のご案内」の直後から
+「容量」見出しの直前までがテイスティング文。
 """
 
 import re
@@ -51,12 +58,34 @@ REQUEST_HEADERS = {
 
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
 PRICE_PATTERN = re.compile(r"[\d,]+")
+FLAVOR_START_LABEL = "当店から商品のご案内"
+FLAVOR_STOP_LABEL = "容量"
 
 
 def fetch_page(url: str) -> BeautifulSoup:
     resp = requests.get(url, headers=REQUEST_HEADERS, timeout=15)
     resp.raise_for_status()
     return BeautifulSoup(resp.text, "html.parser")
+
+
+def extract_flavor_notes(soup: BeautifulSoup) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    el = soup.select_one("p#detail_not_stock_box__description_detail")
+    if not el:
+        return None
+    for br in el.find_all("br"):
+        br.replace_with("\n")
+    lines = [line.strip() for line in el.get_text().split("\n") if line.strip()]
+    if FLAVOR_START_LABEL not in lines:
+        return None
+    start = lines.index(FLAVOR_START_LABEL) + 1
+    end = len(lines)
+    for i in range(start, len(lines)):
+        if lines[i] == FLAVOR_STOP_LABEL:
+            end = i
+            break
+    text = "\n".join(lines[start:end]).strip()
+    return text or None
 
 
 def fetch_product_urls() -> list[str]:
@@ -84,7 +113,7 @@ def extract_fields(soup: BeautifulSoup) -> dict | None:
         m = PRICE_PATTERN.search(price_el.get_text())
         if m:
             price = int(m.group(0).replace(",", ""))
-    return {"title": title, "price": price}
+    return {"title": title, "price": price, "flavor_notes": extract_flavor_notes(soup)}
 
 
 def pick_canonical_items(items: list[dict]) -> list[dict]:
@@ -130,6 +159,7 @@ def build_record(item: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": item.get("flavor_notes"),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": item["price"],
@@ -152,7 +182,10 @@ def scrape_all_products() -> tuple[list[dict], list[dict]]:
             continue
         if not fields:
             continue
-        all_items.append({"title": fields["title"], "price": fields["price"], "url": product_url})
+        all_items.append({
+            "title": fields["title"], "price": fields["price"],
+            "flavor_notes": fields.get("flavor_notes"), "url": product_url,
+        })
 
     canonical_items = pick_canonical_items(all_items)
 
