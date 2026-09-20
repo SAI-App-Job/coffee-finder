@@ -26,6 +26,23 @@ python-requests等は個別にDisallow: /指定があるが、User-agent: *ル�
 カリタ クリーニングブラシ・bonmac コーヒーミル(器具)・安曇野の天然水
 (ボトル水)・詰め合わせギフト専用箱(箱のみ)・初回限定お試しセットが
 コーヒー豆単品ではないためNON_BEAN_KEYWORDSで除外する。
+
+【flavor_notes/farm_note(テイスティングノート・農園情報)について
+(2026-09-20追記)】
+実データ確認済み: og:descriptionを一切読んでいなかった。全商品共通で
+「(今月のお買い得豆の場合のみ)今月のお買い得豆通常200g 1960円→
+1660円」のような月替わり特売の価格差分表記に続けて風味を説明する自由
+記述文があり、その後「分量：生豆 240g → 焼き上がり 200g販売単位：...」
+という注意書きが必ず続く(全商品共通、句読点無しで連結されていることが
+多い)。単一原産地商品にはこの間に「生産地：」「産地：」「生産者：」
+「地域：」「標高：」「品種：」「規格：」等のラベルが入るが、店舗・
+商品によって表記(「生産地」/「産地」)や順序(「生産者」が最初に来る
+場合もある)が揺れる。ブレンド商品にはラベルが一切無い。
+「分量：」を本文全体の終端とし、その中で上記ラベルのいずれかが最初に
+現れた位置をflavor_notesの終端とする(ラベルが無ければ「分量：」までの
+全文をflavor_notesとする)。「生産地：」「産地：」「地域：」の値
+(次のラベルまたは「分量：」の直前まで)はfarm_note用のregion_detailに
+反映する。
 """
 
 import re
@@ -58,12 +75,33 @@ NON_BEAN_KEYWORDS = [
     "箱のみ", "お試しセット", "アクリルスタンド", "ピッチャー", "ボトル",
 ]
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
+PROMO_PREFIX_PATTERN = re.compile(r"^今月のお買い得豆[^→]*→\s*[\d,]+円")
+QUANTITY_MARKER_PATTERN = re.compile(r"分量[：:]")
+LABEL_NAMES = "生産地|産地|生産者|地域|標高|品種|規格|精選方法"
+FLAVOR_BOUNDARY_PATTERN = re.compile(r"(生産地|産地|生産者|地域|標高|品種)[：:]")
+REGION_VALUE_PATTERN = re.compile(rf"(生産地|産地|地域)[：:]\s*(.+?)(?={LABEL_NAMES}|分量|$)")
 
 
 def fetch_page(url: str) -> BeautifulSoup:
     resp = requests.get(url, headers=REQUEST_HEADERS, timeout=15)
     resp.raise_for_status()
     return BeautifulSoup(resp.text, "html.parser")
+
+
+def extract_flavor_and_region(description: str | None) -> tuple[str | None, str | None]:
+    """理由はモジュールdocstring参照。"""
+    if not description:
+        return None, None
+    text = PROMO_PREFIX_PATTERN.sub("", description)
+    qty_m = QUANTITY_MARKER_PATTERN.search(text)
+    content = text[:qty_m.start()] if qty_m else text
+
+    boundary_m = FLAVOR_BOUNDARY_PATTERN.search(content)
+    flavor_notes = (content[:boundary_m.start()] if boundary_m else content).strip() or None
+
+    region_m = REGION_VALUE_PATTERN.search(content)
+    region_detail = region_m.group(2).strip() if region_m else None
+    return flavor_notes, region_detail
 
 
 def extract_og_fields(soup: BeautifulSoup) -> dict | None:
@@ -73,7 +111,9 @@ def extract_og_fields(soup: BeautifulSoup) -> dict | None:
     title = title_el["content"].split(" | ")[0].strip()
     price_el = soup.select_one('meta[property="product:price:amount"]')
     price = int(float(price_el["content"])) if price_el and price_el.get("content") else None
-    return {"title": title, "price": price}
+    desc_el = soup.select_one('meta[property="og:description"]')
+    flavor_notes, region_detail = extract_flavor_and_region(desc_el["content"] if desc_el else None)
+    return {"title": title, "price": price, "flavor_notes": flavor_notes, "region_detail": region_detail}
 
 
 def build_record(product_url: str, fields: dict) -> dict | None:
@@ -108,6 +148,8 @@ def build_record(product_url: str, fields: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "region_detail": fields.get("region_detail"),
+        "flavor_notes": fields.get("flavor_notes"),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": fields["price"],
