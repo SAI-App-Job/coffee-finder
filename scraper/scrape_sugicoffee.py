@@ -49,6 +49,21 @@ parse_productに渡す。ドリップバッグ等の非対象商品は「oo-」(
 になっている(在庫切れ・販売終了扱いだが商品ページ自体は残存)。他店
 (misawacoffee等)と同じロジックで扱い、価格はそのまま0を保持しつつ
 stock_num==0をstructural_out_of_stockとしてdetect_stock_status()に渡す。
+
+【flavor_notes(2026-09-20追記)】
+実データ確認済み: 詳細ページの商品説明欄は3種類のテンプレートが混在する
+((1)div.item-spec配下にdt.item-label「スタッフのコメント」+dd.item-data
+という構造、(2)div.item-spec配下に<dl><dt>「スタッフのコメント」</dt>
+<dd>...</dd></dl>という構造、(3)div.item-spec内が全て<br>区切りの
+フラットテキストで「スタッフのコメント」という行の直後に本文が続く
+構造)。3パターンとも共通してdiv.product_explain(またはdiv.item-spec)
+のテキストを改行区切りの行リストに変換し、「スタッフのコメント」または
+「【コメント】」という行を見つけたら、それ以降の行を「イメージは
+ありません」等の定型文の行まで結合する方式で統一的に抽出する。この
+コメント欄自体が無い商品(デカフェ加工品等の一部)は、代わりに
+「風味特性：」ラベルの値(短いテイスティングキーワード)を採用する。
+20/20商品で新規取得。既存のColorme JSON取得と同じHTML取得を再利用する
+ため追加のHTTPアクセスは不要。
 """
 
 import json
@@ -84,12 +99,36 @@ NUMBER_PREFIX_PATTERN = re.compile(r"^[0-9oO]{2}-\s*")
 # 理由はモジュールdocstring参照(重量表記が無く全商品共通で100g単位)
 FIXED_WEIGHT_G = 100
 ROAST_HINT_TERMS = ["中深煎り", "中浅煎り", "極深煎り", "浅煎り", "中煎り", "深煎り"]
+FLAVOR_COMMENT_HEADINGS = ("スタッフのコメント", "【コメント】")
+FLAVOR_STOP_LINE_PATTERN = re.compile(
+    r"^(イメージはありません|この商品を購入する|カテゴリーから探す|一緒に購入されている商品)"
+)
+FLAVOR_TRAIT_PATTERN = re.compile(r"風味特性\s*[：:]?\s*\n?\s*([^\n]+)")
 
 
 def fetch_page(url: str) -> BeautifulSoup:
     resp = requests.get(url, headers=REQUEST_HEADERS, timeout=15)
     resp.raise_for_status()
     return BeautifulSoup(resp.text, "html.parser")
+
+
+def extract_flavor_notes(soup: BeautifulSoup) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    container = soup.select_one("div.product_explain") or soup.select_one("div.item-spec")
+    if container:
+        lines = [line.strip() for line in container.get_text("\n", strip=True).split("\n") if line.strip()]
+        for i, line in enumerate(lines):
+            if line in FLAVOR_COMMENT_HEADINGS:
+                rest = []
+                for line2 in lines[i + 1:]:
+                    if FLAVOR_STOP_LINE_PATTERN.match(line2):
+                        break
+                    rest.append(line2)
+                joined = " ".join(rest).strip()
+                if joined:
+                    return joined
+    m = FLAVOR_TRAIT_PATTERN.search(soup.get_text("\n", strip=True))
+    return m.group(1).strip() if m else None
 
 
 def fetch_pid_urls() -> list[str]:
@@ -153,6 +192,7 @@ def build_record(soup: BeautifulSoup, product_url: str) -> dict | None:
         "grade": parsed["grade"],
         "roast_level": None,  # 理由はモジュールdocstring参照(粗い焙煎度表記のためroast_hintに保持)
         "roast_hint": extract_roast_hint(title),
+        "flavor_notes": extract_flavor_notes(soup),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": int(price) if price is not None else None,
