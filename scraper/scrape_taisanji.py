@@ -26,12 +26,23 @@ robots.txt確認済み(2026-09時点): Shopify標準のrobots.txtでAllow: /
 【重量バリエーションについて】
 実データ確認済み: 対象16件は全て200gの単一バリアントのみ(重量違いの
 複数バリアントを持つ商品は無い)。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: body_html冒頭の`<hr>`直後にある最初の`<h4>`要素に、
+色付きテキストの短いテイスティングキャッチコピー(例:「柑橘や青リンゴ
+など鮮やかな果実味と、クリーミーな質感。」)が入っている(対象18件中
+17件で確認)。この`<h4>`はページ内に複数存在する見出し(「コーヒーの
+味わい」「産地について」等の詳細説明見出し)より前に必ず出現し、
+産地ストーリー等の混入がない。h4が存在しない商品(月替わりブレンド1件)
+は、代わりに最初の`<p>`要素(冒頭の`<hr>`直後、テイスティング文が
+地の文で書かれている)を採用する。
 """
 
 import re
 import time
 
 import requests
+from bs4 import BeautifulSoup
 
 from coffee_parser import parse_product, detect_stock_status
 from previous_data import load_previous_products, is_unchanged
@@ -54,6 +65,23 @@ REQUEST_HEADERS = {
 TARGET_PRODUCT_TYPE = "beans"
 NON_BEAN_KEYWORDS = ["飲み比べセット"]
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
+
+
+def extract_flavor_notes(body_html: str | None) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    if not body_html:
+        return None
+    soup = BeautifulSoup(body_html, "html.parser")
+    h4 = soup.find("h4")
+    if h4 and h4.get_text(strip=True):
+        return h4.get_text(" ", strip=True)
+    p = soup.find("p")
+    if p and p.get_text(strip=True):
+        for br in p.find_all("br"):
+            br.replace_with("\n")
+        lines = [line.strip() for line in p.get_text().split("\n") if line.strip()]
+        return "\n".join(lines).strip() or None
+    return None
 
 
 def fetch_products() -> list[dict]:
@@ -121,6 +149,7 @@ def build_record(product: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": extract_flavor_notes(product.get("body_html")),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": price,
