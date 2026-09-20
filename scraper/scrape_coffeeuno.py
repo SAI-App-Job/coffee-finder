@@ -33,6 +33,17 @@ DISCOUNT_PREFIX_PATTERNの除去は不要)。
 NON_BEAN_KEYWORDSで除外する。残り25件、重量違いの重複統合後は
 14銘柄(浅煎・中煎・深煎の看板ブレンド3種＋シングルオリジン11種)を
 対象とする。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: og:descriptionの先頭にテイスティング文、続いて
+農園・生産者の背景ストーリーが地続きで入っており、末尾に「農園：」
+「生産者：」「エリア：」「標高：」「品種：」「精製法：」等のスペック
+ラベルが続く(対象14件全てで確認)。これらのうち最も手前に出現する
+ものでテキストを切り落とす。実装検証中に、「【定期便】coffee uno
+定期便【毎月一日発送】」という毎月配送のサブスクリプション商品(og:
+descriptionに定期便の仕組みの説明のみでテイスティング情報を含まない)
+が非コーヒー豆商品として未除外だったことを確認したため、
+NON_BEAN_KEYWORDSに「定期便」を追加した。
 """
 
 import re
@@ -59,8 +70,34 @@ REQUEST_HEADERS = {
     "User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"
 }
 
-NON_BEAN_KEYWORDS = ["ドリップバッグ", "コーヒーバッグ", "ギフトボックス"]
+NON_BEAN_KEYWORDS = ["ドリップバッグ", "コーヒーバッグ", "ギフトボックス", "定期便"]
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
+FLAVOR_STOP_PATTERNS = [
+    re.compile(r"農園[：:]"),
+    re.compile(r"生産者[：:]"),
+    re.compile(r"プロデューサー[：:]"),
+    re.compile(r"エリア[：:]"),
+    re.compile(r"地域[：:]"),
+    re.compile(r"精製所[：:]"),
+    re.compile(r"標高[：:]"),
+    re.compile(r"栽培品種[：:]"),
+    re.compile(r"品種[：:]"),
+    re.compile(r"精製法[：:]"),
+    re.compile(r"精製[：:]"),
+    re.compile(r"生産地方[：:]"),
+    re.compile(r"カフェイン除去プロセス[：:]"),
+    re.compile(r"Process\s*[：:]"),
+]
+
+
+def extract_flavor_notes(description: str | None) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    if not description:
+        return None
+    positions = [m.start() for p in FLAVOR_STOP_PATTERNS if (m := p.search(description))]
+    text = description[: min(positions)] if positions else description
+    text = text.strip()
+    return text or None
 
 
 def fetch_page(url: str) -> BeautifulSoup:
@@ -78,7 +115,9 @@ def extract_og_fields(soup: BeautifulSoup) -> dict | None:
         return None
     price_el = soup.select_one('meta[property="product:price:amount"]')
     price = int(float(price_el["content"])) if price_el and price_el.get("content") else None
-    return {"title": title, "price": price}
+    desc_el = soup.select_one('meta[property="og:description"]')
+    description = desc_el["content"] if desc_el and desc_el.get("content") else None
+    return {"title": title, "price": price, "flavor_notes": extract_flavor_notes(description)}
 
 
 def fetch_sitemap_urls() -> list[str]:
@@ -129,6 +168,7 @@ def build_record(item: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": item.get("flavor_notes"),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": item["price"],
@@ -152,7 +192,10 @@ def scrape_all_products() -> tuple[list[dict], list[dict]]:
             continue
         if not fields:
             continue
-        all_items.append({"title": fields["title"], "price": fields["price"], "url": product_url})
+        all_items.append({
+            "title": fields["title"], "price": fields["price"], "url": product_url,
+            "flavor_notes": fields.get("flavor_notes"),
+        })
 
     canonical_items = pick_canonical_items(all_items)
 
