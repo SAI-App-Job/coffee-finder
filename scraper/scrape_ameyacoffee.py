@@ -33,6 +33,17 @@ resp.encodingを明示する。
 実データ確認済み: 「カフェオレベース（加糖）1本」(濃縮リキッド)・
 「「ブレンド５種」ドリップパック(8g×5袋)」(ドリップバッグ)の2件が
 非対象。NON_BEAN_KEYWORDSで除外する。
+
+【flavor_notes(2026-09-20追記)】
+実データ確認済み: 詳細ページのdiv.product_description内に「《中深煎り》」
+のような焙煎度ブラケットに続けてテイスティング文が入っている。段落は
+<br><br>(二重改行)で区切られているが、SHIBACOFFEEと同様に単一<br>の
+前後に\r\n等の空白のみのテキストノードが挟まる実装上の癖があるため、
+get_text()でのテキストフラット化ではなくcontents単位で空白のみの
+ノードを区切りとして段落分割する(scrape_shibacoffee.pyと同じ方式)。
+全段落からテイスティング文を採用し(2段落目以降が創業エピソード等の
+場合もあるが、既存の他店舗と同様に含めて採用する)、焙煎度ブラケット
+「《...》」「≪...》」(表記ゆれあり)を除去してflavor_notesとする。
 """
 
 import json
@@ -62,6 +73,42 @@ REQUEST_HEADERS = {
 NON_BEAN_KEYWORDS = ["カフェオレベース", "ドリップパック", "ドリップバッグ"]
 COLORME_PATTERN = re.compile(r"var Colorme\s*=\s*(\{.*?\});", re.DOTALL)
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
+FLAVOR_BRACKET_PATTERN = re.compile(r"[《≪][^》]*》")
+
+
+def split_into_paragraphs(el) -> list[str]:
+    """<br><br>(二重改行)を段落区切りとして分割する。理由はモジュール
+    docstring参照(単一<br>の前後に\\r\\n等の空白のみのテキストノードが
+    挟まる実装上の癖があるため、contents単位で空白のみのノードを区切り
+    として扱う。scrape_shibacoffee.pyと同じ方式)。"""
+    paragraphs = []
+    current_parts: list[str] = []
+    for child in el.contents:
+        if getattr(child, "name", None) == "br":
+            continue
+        text = str(child).strip()
+        if not text:
+            if current_parts:
+                paragraphs.append(" ".join(current_parts))
+                current_parts = []
+        else:
+            current_parts.append(text)
+    if current_parts:
+        paragraphs.append(" ".join(current_parts))
+    return paragraphs
+
+
+def extract_flavor_notes(soup: BeautifulSoup) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    el = soup.select_one("div.product_description")
+    if not el:
+        return None
+    paragraphs = split_into_paragraphs(el)
+    if not paragraphs:
+        return None
+    text = " ".join(paragraphs)
+    text = FLAVOR_BRACKET_PATTERN.sub("", text).strip()
+    return text or None
 
 
 def fetch_page(url: str) -> BeautifulSoup:
@@ -98,7 +145,7 @@ def extract_colorme_product(soup: BeautifulSoup) -> dict | None:
     return None
 
 
-def build_record(product_url: str, product: dict) -> dict | None:
+def build_record(product_url: str, product: dict, soup: BeautifulSoup | None = None) -> dict | None:
     title = (product.get("name") or "").strip()
     if not title or any(kw in title for kw in NON_BEAN_KEYWORDS):
         return None
@@ -132,6 +179,7 @@ def build_record(product_url: str, product: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": extract_flavor_notes(soup) if soup else None,
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": price,
@@ -147,7 +195,7 @@ def parse_product_detail(url: str) -> dict | None:
     colorme_product = extract_colorme_product(soup)
     if not colorme_product:
         return None
-    return build_record(url, colorme_product)
+    return build_record(url, colorme_product, soup)
 
 
 def scrape_all_products() -> tuple[list[dict], list[dict]]:
