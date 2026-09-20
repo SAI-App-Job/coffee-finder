@@ -60,6 +60,16 @@ h2タグに「商品名　重量パック [商品コード]」の形式で商品
 登録されている。商品名末尾の重量・パック表記を除いた基準名でグルーピング
 し、最小重量(250g、一部200g)を代表として採用することで、これらの重複を
 自然に解消する。
+
+【flavor_notes(テイスティングノート)について(2026-09-20追記)】
+実データ確認済み: 一覧ページの各商品カード(div.goods_customize)内、
+div.goodsRight > p > font要素に「当店自慢のブレンド、香り高くやわらかい味。
+まずはこのブレンドから。<br>500ｇﾊﾟｯｸ」のように<br>区切りでテイスティング
+コメント+重量表記(+一部産地表記)が入っている(全71件でp要素は必ず1個)。
+<br>で分割した各行から、重量のみの行(例:「500g」「250gﾊﾟｯｸ」)と産地のみの
+行(例:「ジャマイカ産」「インド共和国 産」)を除外し、残りをテイスティング
+コメントとしてflavor_notesに採用する。詳細ページへの追加アクセスは不要
+(一覧ページの情報のみで完結)。
 """
 
 import re
@@ -90,6 +100,8 @@ CODE_PATTERN = re.compile(r"\s*\[([^\]]*)\]\s*$")
 PRICE_PATTERN = re.compile(r"([\d,]+)")
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
 TRAILING_WEIGHT_PATTERN = re.compile(r"[\s　]*\d+\s*[gｇ]\s*(?:ﾊﾟｯｸ|パック)?\s*$")
+WEIGHT_ONLY_LINE_PATTERN = re.compile(r"^[\d,]+\s*[gｇ]\s*(?:ﾊﾟｯｸ|パック)?$")
+ORIGIN_ONLY_LINE_PATTERN = re.compile(r"^\S+[\s　]*産$")
 
 
 def fetch_page(ff: int) -> BeautifulSoup:
@@ -108,6 +120,19 @@ def parse_name_and_code(h2_text: str) -> tuple[str, str]:
     name = CODE_PATTERN.sub("", h2_text).strip()
     name = name.lstrip("■").strip()
     return name, code
+
+
+def extract_flavor_notes(block) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    font_el = block.select_one("div.goodsRight p font")
+    if not font_el:
+        return None
+    lines = [line.strip() for line in font_el.get_text("\n").split("\n")]
+    kept = [
+        line for line in lines
+        if line and not WEIGHT_ONLY_LINE_PATTERN.match(line) and not ORIGIN_ONLY_LINE_PATTERN.match(line)
+    ]
+    return " ".join(kept) if kept else None
 
 
 def fetch_items() -> list[dict]:
@@ -136,6 +161,7 @@ def fetch_items() -> list[dict]:
                     break
 
             items.append({"title": name, "code": code, "price": price,
+                          "flavor_notes": extract_flavor_notes(block),
                           "url": f"{BASE_URL}/shop/shop.cgi?mode=p_wide&class=all&id={code}"})
         if len(blocks) < 10:
             break
@@ -195,6 +221,7 @@ def build_record(item: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": item["flavor_notes"],
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": item["price"],
