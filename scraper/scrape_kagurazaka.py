@@ -27,7 +27,9 @@ ShopServeと同種の「robots.txtが無い=実質全面許可」状態)。
 実データ確認済み: ct9内に「神楽坂ブレンド×朝日坂ブレンド200g　焙煎豆
 ギフト」(2種のブレンドを詰め合わせたギフト商品、特定の一豆を指さない)・
 「手軽でおいしい！ドリップコーヒーバッグ 5個セット」(ドリップバッグ、豆売り
-ではない)の2件が混在するため、NON_BEAN_KEYWORDSで除外する。
+ではない)・「ドリップバックで簡単！コーヒーゼリー」(ドリップバッグを
+使ったコーヒーゼリーのレシピキット、豆売りではない)の3件が混在するため、
+NON_BEAN_KEYWORDSで除外する。
 
 【重量について】
 実データ確認済み: 注文後焙煎モデルで、商品名に「(生豆計り100g)」のように
@@ -88,7 +90,7 @@ REQUEST_HEADERS = {
     "User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"
 }
 
-NON_BEAN_KEYWORDS = ["焙煎豆ギフト", "ドリップコーヒーバッグ"]
+NON_BEAN_KEYWORDS = ["焙煎豆ギフト", "ドリップコーヒーバッグ", "ゼリー"]
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
 FLAVOR_STOP_PATTERN = re.compile(r"(酸味[：:]\s*★|◆?\s*おすすめロースト[：:]|\*生豆|※ご指定)")
 
