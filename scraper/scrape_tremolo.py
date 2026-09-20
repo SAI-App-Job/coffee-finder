@@ -29,6 +29,12 @@ NON_BEAN_KEYWORDSを用意せずに豆単品とグッズを機械的に判別で
 チャンネルの中から最小重量(80g)を代表として採用する(店頭受取専用
 在庫等の理由で通信販売側が存在しない銘柄は無いことを実データで確認
 済み)。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: og:descriptionに産地情報・テイスティング文・
+焙煎度別の風味比較・スコア(★表示)が長文で入っており(対象17件全てで
+確認)、末尾に店舗共通の「【焙煎度について】」以降の注文案内・
+内容量の定型文が続く。「【焙煎度について】」の直前までを採用する。
 """
 
 import re
@@ -57,12 +63,22 @@ REQUEST_HEADERS = {
 
 PREFIX_PATTERN = re.compile(r"^【(通信販売|店頭受取):(\d+)g】\s*")
 WHITESPACE_PATTERN = re.compile(r"[\s　]+")
+FLAVOR_STOP_PATTERN = re.compile(r"【焙煎度について】")
 
 
 def fetch_page(url: str) -> BeautifulSoup:
     resp = requests.get(url, headers=REQUEST_HEADERS, timeout=15)
     resp.raise_for_status()
     return BeautifulSoup(resp.text, "html.parser")
+
+
+def extract_flavor_notes(description: str | None) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    if not description:
+        return None
+    m = FLAVOR_STOP_PATTERN.search(description)
+    text = description[:m.start()] if m else description
+    return text.strip() or None
 
 
 def extract_og_fields(soup: BeautifulSoup) -> dict | None:
@@ -72,7 +88,9 @@ def extract_og_fields(soup: BeautifulSoup) -> dict | None:
     title = title_el["content"].split(" | ")[0].strip()
     price_el = soup.select_one('meta[property="product:price:amount"]')
     price = int(float(price_el["content"])) if price_el and price_el.get("content") else None
-    return {"title": title, "price": price}
+    desc_el = soup.select_one('meta[property="og:description"]')
+    description = desc_el["content"] if desc_el and desc_el.get("content") else None
+    return {"title": title, "price": price, "flavor_notes": extract_flavor_notes(description)}
 
 
 def fetch_sitemap_urls() -> list[str]:
@@ -128,6 +146,7 @@ def build_record(item: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": item.get("flavor_notes"),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": item["price"],
@@ -151,7 +170,10 @@ def scrape_all_products() -> tuple[list[dict], list[dict]]:
         if not fields:
             print(f"[warn] OGPメタタグが見つかりません: {product_url}")
             continue
-        all_items.append({"title": fields["title"], "price": fields["price"], "url": product_url})
+        all_items.append({
+            "title": fields["title"], "price": fields["price"],
+            "flavor_notes": fields.get("flavor_notes"), "url": product_url,
+        })
 
     canonical_items = pick_canonical_items(all_items)
     previous = load_previous_products(SHOP_INFO["name"])
