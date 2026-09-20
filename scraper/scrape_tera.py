@@ -36,6 +36,13 @@ roast_levelとして正規化して保持する(TSUKIKOYAの浅煎り/中煎り/
 ラベル名も異なる(実データ確認済み)。単一originCountryフィールドに複数国を
 無理に押し込めないため、ブレンド商品ではこのラベル値をorigin_countryには
 使わずfarm_noteに含めるに留める。
+
+【flavor_notes(2026-09-20追記)】
+実データ確認済み: div.p-product-explain__body内、最初の「■」ラベルより
+前にある自由記述文が、コーヒー豆商品では必ずテイスティング文になっている
+(非コーヒー豆商品では同じ位置に器具の説明文が入るが、非コーヒー豆商品は
+既存のnon_bean_check_failedロジックで別途除外されるため対象外)。最初の
+「■」の直前までをflavor_notesとして採用する。
 """
 
 import json
@@ -86,8 +93,18 @@ IMG_TAG_PATTERN = re.compile(r"<img[^>]*/?>", re.IGNORECASE)
 BR_TAG_PATTERN = re.compile(r"<br\s*/?>", re.IGNORECASE)
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*g")
 LABEL_PATTERN = re.compile(r"■(ローストタイプ|生産国|生豆生産国|地域|農地|標高|品種|精製)：\s*([^\n]+)")
+FLAVOR_WHITESPACE_PATTERN = re.compile(r"[\s　]+")
 
 ROAST_TERMS_BY_LENGTH = sorted(ROAST_KEYWORDS.keys(), key=len, reverse=True)
+
+
+def extract_flavor_notes(description_text: str) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    if not description_text:
+        return None
+    text = description_text.split("■", 1)[0]
+    text = FLAVOR_WHITESPACE_PATTERN.sub(" ", text).strip()
+    return text or None
 
 
 def normalize_roast_label(value: str | None) -> str | None:
@@ -220,7 +237,7 @@ def build_record(product_url: str, colorme_product: dict, description_text: str)
         "roast_selectable": False,  # 焙煎度は商品ごとに固定、注文時に選べるのは挽き方のみ(実データ確認済み)
         "post_processing_tags": parsed["post_processing_tags"],
         "farm_note": farm_note,
-        "flavor_notes": None,
+        "flavor_notes": extract_flavor_notes(description_text),
         "blend_components": [],
         "decaf_process": decaf_process,
         "price": colorme_product.get("sales_price_including_tax"),
