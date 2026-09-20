@@ -42,6 +42,15 @@ stock_find(在庫有無)が入っている。容量コード→実際のグラ�
 (コード自体はグローバル共有だが、念のため商品ごとに都度取得する)。
 挽き方は名前が「豆」のものを全粒(豆のまま)として優先し、在庫がある
 組み合わせの中から最小重量を代表として採用する。
+
+【flavor_notes(2026-09-20追記)】
+実データ確認済み: div.ec-productRole__description内は<br>区切りのフラット
+なテキストで、「【　100g/950円...】という価格帯表記の段落」「実際の
+テイスティング/産地紹介文の段落」「地　域／品　種／標　高／加工方法／
+乾燥方法等のラベル付きスペック段落」「評価(5段階)の<table>」という構成
+(商品によって一部欠けることもある)。価格帯段落(先頭が「【」かつ「円」を
+含む)・スペックラベル段落・<table>要素を除外し、残りを結合して
+flavor_notesとして採用する。対象20件全てで実データ確認済み。
 """
 
 import json
@@ -71,12 +80,53 @@ REQUEST_HEADERS = {
 NON_BEAN_KEYWORDS = ["COLD BREW", "アイスリキッド", "ドリップパック"]
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
 CLASS_CATEGORIES_MARKER = "eccube.classCategories = "
+FLAVOR_PRICE_PATTERN = re.compile(r"^【.*円")
+FLAVOR_SPEC_LABEL_PATTERN = re.compile(
+    r"^(地\s*域|品\s*種|標\s*高|加工方法|乾燥方法|精選方法|生産者|農園名|グレード)\s*[:：]"
+)
 
 
 def fetch_page(url: str) -> BeautifulSoup:
     resp = requests.get(url, headers=REQUEST_HEADERS, timeout=15)
     resp.raise_for_status()
     return BeautifulSoup(resp.text, "html.parser")
+
+
+def split_into_paragraphs(el) -> list[str]:
+    paragraphs = []
+    current_parts: list[str] = []
+    for child in el.contents:
+        name = getattr(child, "name", None)
+        if name == "br":
+            continue
+        if name == "table":
+            break
+        text = child.get_text() if name else str(child)
+        text = text.strip()
+        if not text:
+            if current_parts:
+                paragraphs.append(" ".join(current_parts))
+                current_parts = []
+        else:
+            current_parts.append(text)
+    if current_parts:
+        paragraphs.append(" ".join(current_parts))
+    return paragraphs
+
+
+def extract_flavor_notes(soup: BeautifulSoup) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    el = soup.select_one("div.ec-productRole__description")
+    if not el:
+        return None
+    kept = []
+    for para in split_into_paragraphs(el):
+        if FLAVOR_PRICE_PATTERN.match(para):
+            continue
+        if FLAVOR_SPEC_LABEL_PATTERN.match(para):
+            continue
+        kept.append(para)
+    return " ".join(kept) or None
 
 
 def fetch_product_urls() -> list[str]:
@@ -192,6 +242,7 @@ def build_record(soup: BeautifulSoup, html_text: str, product_url: str) -> dict 
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": extract_flavor_notes(soup),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": price,
