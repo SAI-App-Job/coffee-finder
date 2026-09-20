@@ -44,6 +44,17 @@ STRAIGHTセクションの両方に別のpid(192090525/184032016)で掲載され
 焙煎度+重量の組み合わせ)×option2_value(挽き方)の掛け合わせ。挽き方は価格に
 影響しないため、最小重量(100g)×「豆のまま」を代表バリアントとして採用する
 (405coffee.py等のpick_canonical_variant()と同じ考え方)。
+
+【flavor_notes(2026-09-20追記)】
+実データ確認済み: 詳細ページ側(shop-pro.jp、var Colorme JSON)には説明文
+フィールド自体が無い(captionは常にnull)。一方、独自ドメイン側の一覧
+デザインページ(scrape_shop_page_items()が既に取得しているHTML)の各
+li.beans内に、商品名(p.name)と併記される形でp.ex要素があり、対象22件
+全てに短いながら実際のテイスティング文(「柑橘系のさわやかな酸味と
+スパイシーな後味。」等)が入っている。追加のHTTPアクセス不要でそのまま
+flavor_notesとして採用する(ごく一部に「※以前の銘柄とは違いますが
+よいコーヒーが入荷しました。」等の店舗側の一言が混在するが、切り分ける
+共通の区切りが無いため他店舗と同様に全文を採用する)。
 """
 
 import re
@@ -116,9 +127,12 @@ def scrape_shop_page_items() -> list[dict]:
             if not name_el:
                 continue
             seen_pids.add(pid)
+            ex_el = li.select_one("p.ex")
+            flavor_notes = ex_el.get_text(" ", strip=True) if ex_el else None
             items.append({
                 "pid": pid,
                 "raw_name": name_el.get_text(strip=True),
+                "flavor_notes": flavor_notes or None,
             })
     return items
 
@@ -193,6 +207,7 @@ def build_record(item: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": item.get("flavor_notes"),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": price,
