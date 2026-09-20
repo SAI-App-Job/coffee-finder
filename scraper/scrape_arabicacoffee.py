@@ -38,6 +38,14 @@ category-driponクラスで判別して除外する。
 おすすめ焙煎度が記載されている(商品ごとに固定、または複数併記の場合も
 ある)。商品名に無い場合が多いため、raw_nameに追記してcoffee_parserの
 焙煎度キーワード判定に使えるようにする。
+
+【flavor_notes(テイスティングノート)について(2026-09-20追記)】
+実データ確認済み: 商品詳細ページのdiv.detail-descriptionに、風味を
+説明する自由記述文(コク/甘味/苦味/酸味/香りの5角形レーダーチャート画像
+の直後)が書かれている(サンプル8件全件で確認)。以前はこのdivを一切
+読んでいなかった。単一原産地商品には農園や受賞歴等の産地情報も含まれる
+ことがあるが、ラベル形式ではない自由記述文のため全文をそのまま
+flavor_notesとして採用する。
 """
 
 import re
@@ -120,7 +128,7 @@ def collect_list_items() -> list[dict]:
 
 
 def build_record(product_url: str, title: str, roast_text: str | None, price: int | None,
-                  weight_g: int | None, stock_text: str | None) -> dict:
+                  weight_g: int | None, stock_text: str | None, flavor_notes: str | None = None) -> dict:
     raw_name = f"{title} {roast_text}".strip() if roast_text else title
     parsed = parse_product(raw_name)
 
@@ -148,6 +156,7 @@ def build_record(product_url: str, title: str, roast_text: str | None, price: in
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": flavor_notes,
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": price,
@@ -187,7 +196,11 @@ def parse_product_detail(url: str) -> dict:
     stock_el = soup.select_one("div.zaiko_status span.ss_stockstatus")
     stock_text = stock_el.get_text(strip=True) if stock_el else None
 
-    return build_record(url, title, roast_text, price, weight_g, stock_text)
+    desc_el = soup.select_one("div.detail-description")
+    flavor_notes = desc_el.get_text(" ", strip=True) if desc_el else None
+    flavor_notes = re.sub(r"\s+", " ", flavor_notes).strip() if flavor_notes else None
+
+    return build_record(url, title, roast_text, price, weight_g, stock_text, flavor_notes)
 
 
 def scrape_all_products() -> tuple[list[dict], list[dict]]:
