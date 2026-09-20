@@ -26,6 +26,15 @@ sales_price_including_taxから商品名・価格を取得する。
 「ギフトBOX」を含む複数銘柄詰め合わせ(4件)、「水出しコーヒーバッグ」が
 コーヒー豆単品ではないためNON_BEAN_KEYWORDSで除外する。残り18件は
 ストレート豆・季節ブレンド・デカフェ。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: 商品詳細ページのdiv.product-order-exp内に、産地
+ストーリーとテイスティング文が地の文で混在する長文があり(対象17件
+全てで確認)、一部商品では末尾に「生産国」「地域」「生産者」「標高」
+「品種」「農園名」「農園主」「位置」等のラベル付きスペック行、または
+「●」で始まる補足見出しセクション(用語解説・ブレンド全般の説明等)が
+続く。これらの行が最初に出現する箇所より前を採用する(出現しない商品は
+全文を採用)。
 """
 
 import json
@@ -55,12 +64,32 @@ REQUEST_HEADERS = {
 NON_BEAN_KEYWORDS = ["コーヒーバッグ", "ギフトBOX", "水出し"]
 COLORME_PATTERN = re.compile(r"var Colorme\s*=\s*(\{.*?\});", re.DOTALL)
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
+FLAVOR_STOP_PATTERN = re.compile(
+    r"^(生産国|地域|生産者|標高|品種|生産処理プロセス|生産処理|栽培種|農園名|農園主|位置)[\s　]|^●"
+)
 
 
 def fetch_page(url: str) -> BeautifulSoup:
     resp = requests.get(url, headers=REQUEST_HEADERS, timeout=15)
     resp.raise_for_status()
     return BeautifulSoup(resp.text, "html.parser")
+
+
+def extract_flavor_notes(soup: BeautifulSoup) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    el = soup.select_one("div.product-order-exp")
+    if not el:
+        return None
+    for br in el.find_all("br"):
+        br.replace_with("\n")
+    lines = [line.strip() for line in el.get_text().split("\n") if line.strip()]
+    flavor_lines = []
+    for line in lines:
+        if FLAVOR_STOP_PATTERN.match(line):
+            break
+        flavor_lines.append(line)
+    text = "\n".join(flavor_lines).strip()
+    return text or None
 
 
 def fetch_pid_urls() -> list[str]:
@@ -123,6 +152,7 @@ def build_record(soup: BeautifulSoup, product_url: str) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": extract_flavor_notes(soup),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": int(price) if price is not None else None,
