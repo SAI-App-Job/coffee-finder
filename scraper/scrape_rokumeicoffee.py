@@ -54,8 +54,21 @@ NON_BEAN_KEYWORDS(「定期便」「セット」「飲み比べ」)で除外す�
 各バリアント名末尾の重量表記(「150g」「500g_10%OFF」「1kg_15%OFF」)から
 重量を読み取り、在庫があるバリアントの中で最小重量を代表として採用する
 (全バリアント品切れの場合は全バリアントの中から最小重量を採用)。
+
+【flavor_notes(2026-09-20追記)】
+実データ確認済み: JSON-LDのdescriptionフィールドはHTMLエンティティで
+二重エスケープされたHTML文字列で、複数の<h4>見出し+<div class="text">の
+セクション構成になっている(農園紹介・焙煎士コメント・スペック等と並んで
+実際のテイスティング文のセクションが必ず存在する)。見出し文言は「〜の
+味わいについて」「〜ブレンドの味わい」「焙煎度の仕上がりとこだわり」
+「〜ブレンドについて」等、商品によって微妙に異なるため、「味わい」→
+「こだわり」→「ブレンドについて」の優先順で見出しテキストを検索し、
+最初に見つかったセクションの本文を採用する。ごく一部(メキシコ デカフェ
+等)はHTMLタグを含まない短いプレーンテキストのみのdescriptionのため、
+その場合は全文をそのまま採用する。
 """
 
+import html as ihtml
 import json
 import re
 import time
@@ -90,6 +103,26 @@ LD_JSON_PATTERN = re.compile(
 )
 WEIGHT_G_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
 WEIGHT_KG_PATTERN = re.compile(r"(\d+(?:\.\d+)?)\s*kg", re.IGNORECASE)
+FLAVOR_HEADING_KEYWORDS = ("味わい", "こだわり", "ブレンドについて")
+
+
+def extract_flavor_notes(description: str | None) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    if not description:
+        return None
+    text = ihtml.unescape(description)
+    soup = BeautifulSoup(text, "html.parser")
+    if not soup.find():
+        return text.strip() or None
+    for keyword in FLAVOR_HEADING_KEYWORDS:
+        for h in soup.find_all("h4"):
+            if keyword in h.get_text():
+                sib = h.find_next_sibling("div")
+                if sib:
+                    t = sib.get_text(" ", strip=True)
+                    if t:
+                        return t
+    return None
 
 
 def fetch_html(url: str) -> str:
@@ -184,6 +217,7 @@ def fetch_product_fields(product_url: str) -> dict | None:
             "price": int(price) if price is not None else None,
             "weight_g": weight_g,
             "structural_out_of_stock": all_out_of_stock,
+            "flavor_notes": extract_flavor_notes(product_group.get("description")),
         }
 
     if product_single:
@@ -197,6 +231,7 @@ def fetch_product_fields(product_url: str) -> dict | None:
             "price": int(price) if price is not None else None,
             "weight_g": weight_g,
             "structural_out_of_stock": structural_out_of_stock,
+            "flavor_notes": extract_flavor_notes(product_single.get("description")),
         }
 
     return None
@@ -232,6 +267,7 @@ def build_record(fields: dict, product_url: str) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": fields.get("flavor_notes"),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": fields["price"],
