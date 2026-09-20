@@ -22,6 +22,15 @@ python-requests等は個別にDisallow: /指定があるが、User-agent: *ル�
 ないためNON_BEAN_KEYWORDSで除外する。残り16件は通常ラインナップの
 シングルオリジン12銘柄(80g/100g)+「【特売コーヒー400g】」の
 セール価格ラインナップ4銘柄(通常ラインナップとは別の銘柄、重複無し)。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: og:descriptionの先頭に「【フレーバー】」ラベル+
+テイスティング文が入っており、その後に「産地：」以降のスペック情報
+(生産者・標高・品種・精選方法・焙煎度)が続く(対象16件中15件で確認)。
+「【フレーバー】」ラベルを除去し、「産地：」より前の部分を採用する。
+1件(【特売コーヒー400g】銘柄)は「【フレーバー】」ラベル自体が無いが、
+同様に先頭からテイスティング文がそのまま入っているため同じロジックで
+問題なく取得できる。
 """
 
 import re
@@ -50,6 +59,19 @@ REQUEST_HEADERS = {
 
 NON_BEAN_KEYWORDS = ["ドリップバッグ", "水出し", "HARIO", "三洋産業"]
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
+FLAVOR_LABEL_PATTERN = re.compile(r"^【フレーバー】")
+FLAVOR_STOP_PATTERN = re.compile(r"産地[：:]")
+
+
+def extract_flavor_notes(description: str | None) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    if not description:
+        return None
+    text = FLAVOR_LABEL_PATTERN.sub("", description)
+    stop_m = FLAVOR_STOP_PATTERN.search(text)
+    text = text[: stop_m.start()] if stop_m else text
+    text = text.strip()
+    return text or None
 
 
 def fetch_page(url: str) -> BeautifulSoup:
@@ -65,7 +87,9 @@ def extract_og_fields(soup: BeautifulSoup) -> dict | None:
     title = title_el["content"].split(" | ")[0].strip()
     price_el = soup.select_one('meta[property="product:price:amount"]')
     price = int(float(price_el["content"])) if price_el and price_el.get("content") else None
-    return {"title": title, "price": price}
+    desc_el = soup.select_one('meta[property="og:description"]')
+    description = desc_el["content"] if desc_el and desc_el.get("content") else None
+    return {"title": title, "price": price, "flavor_notes": extract_flavor_notes(description)}
 
 
 def build_record(product_url: str, fields: dict) -> dict | None:
@@ -100,6 +124,7 @@ def build_record(product_url: str, fields: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": fields.get("flavor_notes"),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": fields["price"],
