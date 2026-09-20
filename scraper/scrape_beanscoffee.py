@@ -30,9 +30,19 @@ sitemap.xmlに列挙された21件のitems/<ID>が全商品(フラットな一�
 JSON-LD(schema.org Product)のoffersにprice・availability
 (http://schema.org/InStock 等)が構造化されている(GONZO CAFE&BEANS・
 MARUTAKE COFFEE BEANSと同じBASE標準テンプレート)。
+
+【flavor_notes(2026-09-20追記)】
+実データ確認済み: 上記(商品説明について)の「マーケティング文言のみで
+構造化欄は無い」という判断は産地情報抽出に関しては正しいが、風味に
+関する言及自体は豊富に含まれていた(2巡目横展開の教訓と同種、産地情報の
+欠如と風味情報の欠如は別の主張)。対象21件全てで実際の風味描写(香り/
+酸味/コク/甘み/フルーティー等)を確認済み。一部商品(石原ブレンド)のみ
+「☆★焙煎（ロースト）について☆★」という店舗共通の焙煎度ガイド定型文が
+続くため、この見出しの直前までを採用する(無い商品は全文を採用)。
 """
 
 import json
+import re
 import time
 
 import requests
@@ -64,6 +74,18 @@ def fetch_page(url: str) -> BeautifulSoup:
     resp = requests.get(url, headers=REQUEST_HEADERS, timeout=15)
     resp.raise_for_status()
     return BeautifulSoup(resp.text, "html.parser")
+
+
+FLAVOR_STOP_PATTERN = re.compile(r"☆★焙煎")
+
+
+def extract_flavor_notes(description: str | None) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    if not description:
+        return None
+    m = FLAVOR_STOP_PATTERN.search(description)
+    text = description[:m.start()] if m else description
+    return text.strip() or None
 
 
 def extract_jsonld_product(soup: BeautifulSoup) -> dict | None:
@@ -111,6 +133,7 @@ def build_record(product_url: str, product: dict) -> dict:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": extract_flavor_notes(product.get("description")),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": price,
