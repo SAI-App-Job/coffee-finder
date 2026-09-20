@@ -55,6 +55,17 @@ stock_status_synonyms.jsonの既存シノニム("sold out"、半角スペース�
 無い本店舗固有の表記としてスクレイパー側で個別に検出し、接頭辞を
 商品名から除去した上でdetect_stock_status()にstructural_out_of_stock=True
 として渡す。
+
+【flavor_notes(2026-09-20追記)】
+実データ確認済み: 詳細ページのdiv.item_desc_text内は、英語ブランド名・
+日本語銘柄名の繰り返しに続けて実際のテイスティング・商品紹介文が入って
+いる。ストレート商品はその後に「****BEANSDATA******************」
+「----BEANS DATA-----------------------」等、装飾文字(*/-)の種類や
+BEANSとDATAの間の空白の有無が商品ごとに異なる区切り線付きの産地スペック
+ブロックが続く(空白の有無を無視した正規化で検出)。デカフェ商品は同じ位置に
+代わりに「*」を80個以上連続させた区切り線とカフェイン除去についての
+注意書きが続く。これらの区切りが最初に出現した位置の直前までをflavor_
+notesとして採用する(該当箇所が無い商品は全文を採用)。
 """
 
 import re
@@ -89,6 +100,18 @@ VARIATION_LABEL_SELECT_PATTERN = re.compile(
     r'<span class="variation_label">([^<]*)</span>.*?<select[^>]*>(.*?)</select>', re.DOTALL
 )
 OPTION_PATTERN = re.compile(r'<option value="(\d+)">([^<]*)</option>')
+FLAVOR_STOP_PATTERN = re.compile(r"[*\-/]*\s*BEANS\s*DATA|\*{10,}", re.IGNORECASE)
+
+
+def extract_flavor_notes(soup: BeautifulSoup) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    el = soup.select_one("div.item_desc_text")
+    if not el:
+        return None
+    text = el.get_text(" ", strip=True)
+    m = FLAVOR_STOP_PATTERN.search(text)
+    text = text[:m.start()] if m else text
+    return text.strip() or None
 
 
 def fetch_page(url: str) -> tuple[BeautifulSoup, str]:
@@ -162,6 +185,7 @@ def build_record(soup: BeautifulSoup, html: str, product_url: str) -> dict | Non
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": extract_flavor_notes(soup),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": price,
