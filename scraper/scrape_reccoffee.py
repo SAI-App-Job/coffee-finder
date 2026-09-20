@@ -25,12 +25,20 @@ coffee_parser.detect_stock_status()がこれをテキストから検出する。
 実データ確認済み: 多くの商品がgrams=120(定価バリアントの内容量、
 実際の販売単位は別途「量り売り」想定)。100g未満の変則的な値(101g等)も
 実データで確認済みのためそのまま採用する。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: body_htmlに「フレーバーテイスト」という見出しがあり、
+直後にテイスティング文が続く(対象16件中12件で確認、4件は候補リスト
+作成時点から既に週次の焙煎ラインナップ入れ替えで廃番済みだった)。
+見出し以降のテキストを採用し、「酸味：」「焙煎：」「生産国：」等の
+5段階評価・スペックラベルが続く箇所で切り落とす。
 """
 
 import re
 import time
 
 import requests
+from bs4 import BeautifulSoup
 
 from coffee_parser import parse_product, detect_stock_status
 
@@ -51,6 +59,32 @@ REQUEST_HEADERS = {
 
 NON_BEAN_KEYWORDS = ["セット"]
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
+FLAVOR_HEADING_PATTERN = re.compile(r"フレーバーテイスト")
+FLAVOR_STOP_PATTERNS = [
+    re.compile(r"酸味[：:]"),
+    re.compile(r"焙煎[：:]"),
+    re.compile(r"生産国[：:]"),
+    re.compile(r"甘さ[：:]"),
+    re.compile(r"ボディ[：:]"),
+    re.compile(r"苦味[：:]"),
+]
+
+
+def extract_flavor_notes(body_html: str | None) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    soup = BeautifulSoup(body_html or "", "html.parser")
+    for br in soup.find_all("br"):
+        br.replace_with("\n")
+    text = soup.get_text()
+    m = FLAVOR_HEADING_PATTERN.search(text)
+    if not m:
+        return None
+    after = text[m.end():]
+    positions = [sm.start() for p in FLAVOR_STOP_PATTERNS if (sm := p.search(after))]
+    if positions:
+        after = after[: min(positions)]
+    after = after.strip()
+    return after or None
 
 
 def fetch_products() -> list[dict]:
@@ -118,6 +152,7 @@ def build_record(product: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": extract_flavor_notes(product.get("body_html")),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": price,
