@@ -31,9 +31,22 @@ coffee_parser.pyのORIGIN_COUNTRY_KEYWORDS_ENで産地判定できる。
 
 robots.txt確認済み(2026-09時点): shop-pro.jp標準の記述で、本スクレイパーが
 使う一覧ページ(?mode=srh)は制限対象外。
+
+【flavor_notes追加に伴う詳細ページ取得への変更について(2026-09-20追記)】
+実データ確認済み: 詳細ページのdiv.setumeibox-in内に、買い付けエピソード・
+農園背景の自由記述段落が2〜5個続き、その直後にテイスティング文の段落が
+あり、最後に「生産者：」「農園名：」「生産国：」等のラベルで始まる構造化
+スペック段落が続く(段落は<br><br>の二重改行で区切られており、単一<br>の
+前後に\r\n等の空白のみのテキストノードが挟まる実装上の癖があるため、
+SHIBACOFFEE/アメヤ珈琲と同じcontents単位の段落分割方式を再利用する)。
+ラベルで始まる段落が最初に現れた位置より前の段落をすべて結合し
+flavor_notesとして採用する(買い付けエピソード等の背景説明も含めて採用、
+既存の他店舗と同様の方針)。この抽出のため一覧ページのみで完結していた
+設計を変更し、各商品の詳細ページも取得するようにした。
 """
 
 import re
+import time
 
 import requests
 from bs4 import BeautifulSoup
@@ -61,6 +74,10 @@ NON_BEAN_KEYWORDS = ["Gift", "GIFT", "Tシャツ", "Tote", "トート", "Sticker
 PRICE_PATTERN = re.compile(r"([\d,]+)\s*円")
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*g", re.IGNORECASE)
 BADGE_PATTERN = re.compile(r"^(New Item|SALE|SOLD OUT)\s*", re.IGNORECASE)
+CRAWL_DELAY_SECONDS = 1
+COFFEE_LABEL_START_PATTERN = re.compile(
+    r"^(生産者|農園名|生産国|ロット名|生産処理場|生産地域|地域|マイクロミル|農園主|精製所|農園・マイクロミル)[：:\s]"
+)
 
 
 def fetch_page(url: str) -> BeautifulSoup:
@@ -68,6 +85,50 @@ def fetch_page(url: str) -> BeautifulSoup:
     resp.raise_for_status()
     resp.encoding = "euc-jp"
     return BeautifulSoup(resp.text, "html.parser")
+
+
+def split_into_paragraphs(el) -> list[str]:
+    """<br><br>(二重改行)を段落区切りとして分割する。理由はモジュール
+    docstring参照(単一<br>の前後に\\r\\n等の空白のみのテキストノードが
+    挟まる実装上の癖があるため、contents単位で空白のみのノードを区切り
+    として扱う。SHIBACOFFEE/アメヤ珈琲と同じ方式)。"""
+    paragraphs = []
+    current_parts: list[str] = []
+    for child in el.contents:
+        name = getattr(child, "name", None)
+        if name == "br":
+            continue
+        text = child.get_text() if name else str(child)
+        text = text.strip()
+        if not text:
+            if current_parts:
+                paragraphs.append(" ".join(current_parts))
+                current_parts = []
+        else:
+            current_parts.append(text)
+    if current_parts:
+        paragraphs.append(" ".join(current_parts))
+    return paragraphs
+
+
+def extract_flavor_notes(product_url: str) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    try:
+        soup = fetch_page(product_url)
+    except requests.RequestException as e:
+        print(f"[warn] 詳細ページ取得失敗: {product_url} ({e})")
+        return None
+    el = soup.select_one("div.setumeibox-in")
+    if not el:
+        return None
+    kept = []
+    for para in split_into_paragraphs(el):
+        if COFFEE_LABEL_START_PATTERN.match(para):
+            break
+        kept.append(para)
+    text = " ".join(kept)
+    text = re.sub(r"\s+", " ", text).strip()
+    return text or None
 
 
 def scrape_list_page(page: int) -> list[dict]:
@@ -143,6 +204,7 @@ def build_record(item: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": extract_flavor_notes(item["product_url"]),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": item["price"],
@@ -180,6 +242,7 @@ def scrape_all_products() -> tuple[list[dict], list[dict], list[dict]]:
             flavored_records.append(detail)
         else:
             records.append(detail)
+            time.sleep(CRAWL_DELAY_SECONDS)
 
     return records, flavored_records, non_bean_records
 
