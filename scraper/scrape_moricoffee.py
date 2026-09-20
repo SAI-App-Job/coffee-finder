@@ -39,6 +39,16 @@ detect_stock_status()で判定する。
 版とハイロースト版)は商品名が異なる別商品として扱い、重量違いの重複
 除去(weight-variant dedup)の対象にはしない(産地は同じでも焙煎度という
 別の軸で意図的に作り分けられた別SKUのため)。
+
+【flavor_notes(2026-09-20追記)】
+実データ確認済み: div.detail_item_text.detail_desc_box内は、実際の
+テイスティング・商品紹介文の後に必ず「※粉に挽くをお選びの場合は、
+密閉容器に入れる等して、必ず冷凍庫で保存して下さい。」という店舗共通の
+保存方法定型文が続く(全商品共通、彩香房のネコポス便定型文と同様の
+役割)。この定型文の直前までをflavor_notesとして採用する(定型文が
+見つからない場合は説明文全体を採用する)。「＜生産者情報＞」「＜農園
+情報＞」等の農園背景説明がテイスティング文の後に続く商品もあるが、
+既存の他店舗と同様に背景説明も含めてflavor_notesとして採用する。
 """
 
 import re
@@ -76,12 +86,24 @@ REQUEST_HEADERS = {
 
 NON_BEAN_KEYWORDS = ["コーヒーバッグ", "ドリップ", "飲み比べセット", "ギフトBOX"]
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
+FLAVOR_STOP_PATTERN = re.compile(r"※粉に挽くをお選びの場合は")
 
 
 def fetch_page(url: str) -> BeautifulSoup:
     resp = requests.get(url, headers=REQUEST_HEADERS, timeout=15)
     resp.raise_for_status()
     return BeautifulSoup(resp.text, "html.parser")
+
+
+def extract_flavor_notes(soup: BeautifulSoup) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    el = soup.select_one("div.detail_item_text.detail_desc_box")
+    if not el:
+        return None
+    text = el.get_text(" ", strip=True)
+    m = FLAVOR_STOP_PATTERN.search(text)
+    text = text[:m.start()] if m else text
+    return text.strip() or None
 
 
 def fetch_product_urls() -> list[str]:
@@ -104,7 +126,7 @@ def extract_fields(soup: BeautifulSoup) -> dict | None:
         return None
     price_el = soup.select_one('meta[property="product:price:amount"]')
     price = int(float(price_el["content"])) if price_el and price_el.get("content") else None
-    return {"title": title, "price": price}
+    return {"title": title, "price": price, "flavor_notes": extract_flavor_notes(soup)}
 
 
 def build_record(item: dict) -> dict | None:
@@ -136,6 +158,7 @@ def build_record(item: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": item.get("flavor_notes"),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": item["price"],
@@ -165,7 +188,10 @@ def scrape_all_products() -> tuple[list[dict], list[dict]]:
             records.append(prev)
             continue
 
-        detail = build_record({"title": fields["title"], "price": fields["price"], "url": product_url})
+        detail = build_record({
+            "title": fields["title"], "price": fields["price"],
+            "flavor_notes": fields.get("flavor_notes"), "url": product_url,
+        })
         if detail is None:
             continue
         if detail.get("is_flavored"):
