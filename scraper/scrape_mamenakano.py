@@ -41,6 +41,12 @@ BEAN_PATTERNは「英字(と半角スペース)のみが続いた後に"/"が来
 `td.cell_1`="容量"ラベル・`td.cell_2`=値)に「100g」が明記されている
 (確認した全商品で100g固定)。焙煎処 縁の木・豆香房・萌季屋と同じ
 `var Colorme = {...}`JS変数から商品名・価格・在庫を取得する。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: div.product-order-exp内にテイスティング文があり、
+その直後に上記の容量テーブル(table.table)が同じdiv内にネストされている
+(対象17件全てで確認、テイスティング文自体に価格・スペック等の混入は
+無い)。テキスト行のうち「容量」で始まる行より前の部分のみを採用する。
 """
 
 import json
@@ -98,6 +104,23 @@ def is_bean_product(title: str) -> bool:
         return False
     stripped = BRACKET_PREFIX_PATTERN.sub("", title).strip()
     return bool(BEAN_PATTERN.match(stripped))
+
+
+def extract_flavor_notes(soup: BeautifulSoup) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    el = soup.select_one("div.product-order-exp")
+    if not el:
+        return None
+    for br in el.find_all("br"):
+        br.replace_with("\n")
+    lines = [line.strip() for line in el.get_text().split("\n") if line.strip()]
+    flavor_lines = []
+    for line in lines:
+        if line == "容量":
+            break
+        flavor_lines.append(line)
+    text = "\n".join(flavor_lines).strip()
+    return text or None
 
 
 def extract_weight_g(soup: BeautifulSoup) -> int | None:
@@ -159,6 +182,7 @@ def build_record(soup: BeautifulSoup, product_url: str) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": extract_flavor_notes(soup),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": int(price) if price is not None else None,
