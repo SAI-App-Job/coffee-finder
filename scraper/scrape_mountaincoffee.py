@@ -24,6 +24,16 @@ Tシャツ・パーカー・ブランケット・タンブラー・エプロン�
 銘柄が別途単品で存在するため除外)、「DRIP BAG」、「LATTE BASE」
 (ボトル入りラテ)がコーヒー豆単品ではないためNON_BEAN_KEYWORDSで
 除外する。残りはブレンド4種+ストレート9種程度(200g/250g)。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: og:descriptionにテイスティング文が入っており、その後に
+「焙煎度：」ラベル、「酸味 ：★☆☆☆☆」等の5段階評価ブロック、「※250g
+からの販売になります。」等の販売単位注記、「◆賞味期限」以降の賞味期限・
+保存方法・お届けについての定型説明が続く(対象16件中15件で確認)。これら
+のうち最も手前に出現するものでテキストを切り落とす。1件(インドネシア
+マンデリン ビンタンリマ)のみ上記ラベルが無く、「＜味・香りについ＞＞」
+という見出し以降に焙煎度別の全文テイスティング文が続く独自形式のため、
+そのまま全文を採用する。
 """
 
 import re
@@ -57,6 +67,24 @@ NON_BEAN_KEYWORDS = [
 ]
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
 
+FLAVOR_STOP_PATTERNS = [
+    re.compile(r"焙煎度[：:]"),
+    re.compile(r"酸味\s*[：:]"),
+    re.compile(r"★"),
+    re.compile(r"◆"),
+    re.compile(r"※\d+[gｇ]から"),
+]
+
+
+def extract_flavor_notes(description: str | None) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    if not description:
+        return None
+    positions = [m.start() for p in FLAVOR_STOP_PATTERNS if (m := p.search(description))]
+    text = description[: min(positions)] if positions else description
+    text = text.strip()
+    return text or None
+
 
 def fetch_page(url: str) -> BeautifulSoup:
     resp = requests.get(url, headers=REQUEST_HEADERS, timeout=15)
@@ -71,7 +99,9 @@ def extract_og_fields(soup: BeautifulSoup) -> dict | None:
     title = title_el["content"].split(" | ")[0].strip()
     price_el = soup.select_one('meta[property="product:price:amount"]')
     price = int(float(price_el["content"])) if price_el and price_el.get("content") else None
-    return {"title": title, "price": price}
+    desc_el = soup.select_one('meta[property="og:description"]')
+    description = desc_el["content"] if desc_el and desc_el.get("content") else None
+    return {"title": title, "price": price, "flavor_notes": extract_flavor_notes(description)}
 
 
 def build_record(product_url: str, fields: dict) -> dict | None:
@@ -106,6 +136,7 @@ def build_record(product_url: str, fields: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": fields.get("flavor_notes"),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": fields["price"],
