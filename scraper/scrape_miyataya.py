@@ -28,6 +28,12 @@ RITARU COFFEE/石田珈琲店と同じくprd_lst_*クラスを使わない別テ
 正規表現で抽出する。
 
 robots.txt確認済み(2026-09時点): 他のshop-pro.jp系店舗と同一の記述。
+
+【flavor_notes(2026-09-20追記)】
+実データ確認済み: 詳細ページのdiv.p-product-explain__body内(「DETAIL」
+セクション)に短いテイスティング文が入っている(対象20件全てで確認)。
+既存のColorme JSON取得と同じHTML取得を再利用するため追加のHTTP
+アクセスは不要。
 """
 
 import json
@@ -102,6 +108,13 @@ def extract_colorme_product(soup: BeautifulSoup) -> dict | None:
     return None
 
 
+def extract_flavor_notes(soup: BeautifulSoup) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    el = soup.select_one("div.p-product-explain__body")
+    text = el.get_text(" ", strip=True) if el else None
+    return text or None
+
+
 def weight_from_variant(variant: dict | None, fallback_text: str = "") -> int | None:
     if variant:
         for key in ("option1_value", "option2_value"):
@@ -163,6 +176,7 @@ def build_record(product_url: str, fallback_title: str) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": extract_flavor_notes(soup),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": variant.get("option_price_including_tax") if variant else None,
