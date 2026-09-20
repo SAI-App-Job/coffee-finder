@@ -27,6 +27,20 @@ meta-externalagentのみDisallow: /(AI学習クローラー対策)。User-agent:
 「1,800円～5,400円」のような価格帯表示のため、最初の数値(最小重量の
 価格)を採用する。重量は最初の`<select>`(重量選択)の先頭の実オプション
 (プレースホルダー「選択してください」を除く)から抽出する。
+
+【flavor_notes/farm_note(テイスティングノート・農園情報)について
+(2026-09-20追記)】
+実データ確認済み: 商品詳細ページのdiv.item_desc_textに、ブレンド商品は
+店の想いや風味を語る自由記述文、単一原産地商品は「■生産国　タンザニア
+■収穫時期　７月〜９月■品　種　ブルボン、ティピカ■精製方法　フル
+ウォッシュド」に続けて産地の説明と実際の風味表現を含む自由記述文が
+書かれている(サンプル7件全件で確認)。末尾には「※数量は見落とし防止の
+ため...」という注文時の注意書きや「-------在　庫　情　報---------」
+という店舗別在庫情報が必ず続くため、これらいずれかが現れる位置で本文
+を打ち切る。「■生産国」「■品種」「■精製方法」ラベルの値はfarm_note用
+フィールド(region_detail/variety_note)とprocessing_methodに反映し、
+それ以外の行(「■収穫時期」等の未対応ラベルを除く)をflavor_notesとして
+採用する。以前はこのdivを一切読んでいなかった。
 """
 
 import re
@@ -35,7 +49,7 @@ import time
 import requests
 from bs4 import BeautifulSoup
 
-from coffee_parser import parse_product, detect_stock_status
+from coffee_parser import parse_product, detect_stock_status, normalize_processing_method
 from previous_data import load_previous_products, is_unchanged
 
 SHOP_INFO = {
@@ -65,6 +79,42 @@ REQUEST_HEADERS = {
 }
 
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
+DESC_STOP_PATTERN = re.compile(r"(※数量は見落とし防止|在\s*庫\s*情\s*報|《店頭受取》)")
+FARM_LABEL_PATTERN = re.compile(r"^■\s*(生産国|品\s*種|精製方法|収穫時期)\s*(.*)$")
+FARM_LABEL_TO_FIELD = {"生産国": "region_detail", "品種": "variety_note"}
+
+
+def extract_flavor_and_farm(soup: BeautifulSoup) -> tuple[str | None, dict, str | None]:
+    """理由はモジュールdocstring参照。"""
+    el = soup.select_one("div.item_desc_text")
+    if not el:
+        return None, {}, None
+    for br in el.find_all("br"):
+        br.replace_with("\n")
+    text = el.get_text()
+    stop_m = DESC_STOP_PATTERN.search(text)
+    content = text[:stop_m.start()] if stop_m else text
+    lines = [line.strip() for line in content.split("\n") if line.strip()]
+
+    farm: dict = {}
+    processing_raw = None
+    flavor_lines = []
+    for line in lines:
+        m = FARM_LABEL_PATTERN.match(line)
+        if m:
+            label = re.sub(r"\s+", "", m.group(1))
+            value = m.group(2).strip()
+            if label == "精製方法" and value:
+                processing_raw = value
+            elif label in FARM_LABEL_TO_FIELD and value:
+                farm[FARM_LABEL_TO_FIELD[label]] = value
+            continue
+        if line.startswith("■"):
+            continue
+        flavor_lines.append(line)
+
+    flavor_notes = "".join(flavor_lines).strip() or None
+    return flavor_notes, farm, processing_raw
 
 
 def fetch_page(url: str) -> BeautifulSoup:
@@ -88,7 +138,9 @@ def parse_weight_from_select(soup: BeautifulSoup) -> int | None:
 
 
 def build_record(product_url: str, title: str, price: int | None, weight_g: int | None,
-                  roast_selectable: bool) -> dict:
+                  roast_selectable: bool, flavor_notes: str | None = None,
+                  farm: dict | None = None, processing_raw: str | None = None) -> dict:
+    farm = farm or {}
     parsed = parse_product(title)
 
     if parsed["is_flavored"]:
@@ -111,10 +163,13 @@ def build_record(product_url: str, title: str, price: int | None, weight_g: int 
         "origin_country": parsed["origin_country"],
         "origin_source": parsed["origin_source"],
         "designated_brand": parsed["designated_brand"],
-        "processing_method": parsed["processing_method"],
+        "processing_method": parsed["processing_method"] or normalize_processing_method(processing_raw),
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
         "roast_selectable": roast_selectable,
+        "region_detail": farm.get("region_detail"),
+        "variety_note": farm.get("variety_note"),
+        "flavor_notes": flavor_notes,
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": price,
@@ -143,8 +198,9 @@ def parse_product_detail(url: str, fallback_title: str = "") -> dict:
         weight_g = int(m.group(1)) if m else None
 
     roast_selectable = len(soup.select("select")) >= 2
+    flavor_notes, farm, processing_raw = extract_flavor_and_farm(soup)
 
-    return build_record(url, title, price, weight_g, roast_selectable)
+    return build_record(url, title, price, weight_g, roast_selectable, flavor_notes, farm, processing_raw)
 
 
 def scrape_category_list(cid: str) -> list[dict]:
