@@ -30,11 +30,23 @@ Disallow、admin-ajax.phpはAllow)で実質許可。
 実データ確認済み(Store API上全25件): 「オリジナルドリップパック」
 (単一価格の固定商品、has_options: false)が非対象。NON_BEAN_KEYWORDSで
 除外する。残り24件が豆単品(いずれも100g/250gの2サイズ展開)。
+
+【flavor_notes(2026-09-20追記)】
+実データ確認済み: Store APIのdescriptionフィールドは全商品で空文字列
+(構造化商品情報はテーマ独自のdl.c-detail-dataというアコーディオンUIで
+商品詳細ページ側にのみレンダリングされる)。そのため商品詳細ページ
+(permalink)を個別取得し、dl.c-detail-data内の見出し「商品説明」に
+対応するdd要素をflavor_notesとして採用する(続く「商品規格」「備考」の
+dd要素は産地スペック・☆評価のみでテイスティング文を含まないため対象
+外)。「商品説明」のdd要素はテイスティング文に続けて農園の背景説明も
+含むが、既存の他店舗と同様に背景説明も含めて採用する。
 """
 
 import re
+import time
 
 import requests
+from bs4 import BeautifulSoup
 
 from coffee_parser import parse_product, detect_stock_status
 
@@ -54,6 +66,32 @@ REQUEST_HEADERS = {
 }
 
 NON_BEAN_KEYWORDS = ["ドリップパック"]
+CRAWL_DELAY_SECONDS = 1
+
+
+def fetch_page(url: str) -> BeautifulSoup:
+    resp = requests.get(url, headers=REQUEST_HEADERS, timeout=15)
+    resp.raise_for_status()
+    return BeautifulSoup(resp.text, "html.parser")
+
+
+def extract_flavor_notes(product_url: str | None) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    if not product_url:
+        return None
+    try:
+        soup = fetch_page(product_url)
+    except requests.RequestException as e:
+        print(f"[warn] 詳細ページ取得失敗: {product_url} ({e})")
+        return None
+    dl = soup.select_one("dl.c-detail-data")
+    if not dl:
+        return None
+    for dt, dd in zip(dl.find_all("dt"), dl.find_all("dd")):
+        if "商品説明" in dt.get_text():
+            text = dd.get_text(" ", strip=True)
+            return text or None
+    return None
 
 
 def fetch_all_products() -> list[dict]:
@@ -112,6 +150,7 @@ def build_record(product: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": extract_flavor_notes(product_url),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": price,
@@ -136,6 +175,7 @@ def scrape_all_products() -> tuple[list[dict], list[dict]]:
             flavored_records.append(detail)
         else:
             records.append(detail)
+        time.sleep(CRAWL_DELAY_SECONDS)
 
     return records, flavored_records
 
