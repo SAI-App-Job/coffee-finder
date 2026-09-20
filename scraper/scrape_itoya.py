@@ -38,6 +38,12 @@ option2_value=重量だが、「インドネシア スマトラ タケンゴン�
 ドリンク2種/3種セット各種・コーヒー牛乳のもとがコーヒー豆単品では
 ないためNON_BEAN_KEYWORDSで除外する。商品名が空の削除済み
 プレースホルダーレコードも除外する。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: 商品詳細ページのdiv.p-product-explain__body内に、
+産地情報・品種・生産処理等とテイスティング文が地の文で続けて書かれ、
+その後に店舗共通の「送料について」定型文(配送料金表)が続く構成(対象19件
+全てで確認)。「送料について」の直前までをflavor_notesとして採用する。
 """
 
 import json
@@ -71,12 +77,27 @@ NON_BEAN_KEYWORDS = [
 ]
 COLORME_PATTERN = re.compile(r"var Colorme\s*=\s*(\{.*?\});", re.DOTALL)
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
+FLAVOR_STOP_PATTERN = re.compile(r"送料について")
 
 
 def fetch_page(url: str) -> BeautifulSoup:
     resp = requests.get(url, headers=REQUEST_HEADERS, timeout=15)
     resp.raise_for_status()
     return BeautifulSoup(resp.text, "html.parser")
+
+
+def extract_flavor_notes(soup: BeautifulSoup) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    el = soup.select_one("div.p-product-explain__body")
+    if not el:
+        return None
+    for br in el.find_all("br"):
+        br.replace_with("\n")
+    lines = [line.strip() for line in el.get_text().split("\n") if line.strip()]
+    joined = "\n".join(lines)
+    m = FLAVOR_STOP_PATTERN.search(joined)
+    text = joined[:m.start()] if m else joined
+    return text.strip() or None
 
 
 def fetch_pid_urls() -> list[str]:
@@ -167,6 +188,7 @@ def build_record(soup: BeautifulSoup, product_url: str) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": extract_flavor_notes(soup),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": int(price) if price is not None else None,
