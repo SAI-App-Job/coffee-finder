@@ -51,6 +51,14 @@ Allow: /。本スクレイパーは識別可能な独自User-Agentを使用す�
 "https://schema.org/SoldOut"で構造化されている(「沖縄県産ブレンドドリップバック
 10ｇ×10個」がSoldOutの実例で確認済み)。商品名のテキスト+この構造化フラグの
 組み合わせで在庫状態を判定する。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み(対象18件全て): ld+jsonのdescriptionは既に取得済みだが、
+これまで産地国のフォールバック検出にしか使っていなかった。実際には冒頭に
+短いテイスティング文があり、その後に店舗共通の定型文(「★こちらの商品は
+豆、粉選べます★」「【発送について】/【発送方法】」「・名称：」等の
+スペック/配送案内)が続く構成だった。これらの定型文マーカーのうち最初に
+出現するものの直前までをflavor_notesとして採用する。
 """
 
 import json
@@ -96,6 +104,16 @@ LD_JSON_PATTERN = re.compile(
 BAG_WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]\s*[×xX]\s*(\d+)\s*[袋個]")
 SIMPLE_WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
 GRIND_SUFFIX_PATTERN = re.compile(r"[（(](豆|粉)[）)]\s*\Z")
+FLAVOR_STOP_PATTERN = re.compile(r"[★※]|【発送|・名称")
+
+
+def extract_flavor_notes(description: str | None) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    if not description:
+        return None
+    m = FLAVOR_STOP_PATTERN.search(description)
+    text = description[:m.start()] if m else description
+    return text.strip() or None
 
 
 def fetch_sitemap_urls() -> list[str]:
@@ -191,6 +209,7 @@ def build_record(item: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": extract_flavor_notes(description),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": item.get("price"),
