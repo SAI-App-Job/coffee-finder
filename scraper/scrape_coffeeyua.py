@@ -43,6 +43,14 @@ Disallow指定は無く実質許可。
 汎用「珈琲豆500g」商品(タイトルに価格の記載が無く、備考欄で銘柄を
 選ぶ形式と推測される)で、単一銘柄と特定できないため除外する。
 <title>から価格(/NNN円)を抽出できない商品は同様に除外する。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: 商品詳細ページは古いテーブルレイアウトで、「甘味/
+苦味/焙煎/香り/コク/酸味」の5段階ドット評価表の右側セル(td[rowspan="5"]
+[valign="top"])に短いテイスティング文が入っている(対象15件全てで確認)。
+同じ行数のrowspanを持つ空白用スペーサーセルや、隣接する農園背景ストーリー
+セルにはvalign="top"属性が付かないため、この属性の組み合わせで一意に
+対象セルを特定できる。
 """
 
 import re
@@ -85,6 +93,17 @@ def fetch_page(url: str) -> BeautifulSoup:
     return BeautifulSoup(resp.text, "html.parser")
 
 
+def extract_flavor_notes(soup: BeautifulSoup) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    td = soup.select_one('td[rowspan="5"][valign="top"]')
+    if not td:
+        return None
+    for br in td.find_all("br"):
+        br.replace_with("\n")
+    text = td.get_text("\n", strip=True)
+    return text or None
+
+
 def fetch_product_urls() -> list[str]:
     codes: set[str] = set()
     for path in CATEGORY_PATHS:
@@ -119,7 +138,10 @@ def extract_fields(soup: BeautifulSoup, product_url: str) -> dict | None:
     if not base_name:
         return None
 
-    return {"title": base_name, "price": price, "weight_g": weight_g, "url": product_url}
+    return {
+        "title": base_name, "price": price, "weight_g": weight_g, "url": product_url,
+        "flavor_notes": extract_flavor_notes(soup),
+    }
 
 
 def pick_canonical_items(items: list[dict]) -> list[dict]:
@@ -158,6 +180,7 @@ def build_record(item: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": item.get("flavor_notes"),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": item["price"],
