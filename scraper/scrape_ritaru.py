@@ -33,6 +33,14 @@ NON_BEAN_KEYWORDS(セット・GIFT)で除外する。
 
 robots.txt確認済み(2026-09時点): 405coffee/Rhizomag等の系列shop-pro.jpと
 同一の記述(User-agent: *は/secure/と/cart/のみ制限)。
+
+【flavor_notes(2026-09-20追記)】
+実データ確認済み: 詳細ページには商品説明の先頭に見出し付きセクション
+(h3「銘柄の説明」「コメント」「風味の特徴」のいずれか、商品ごとに表記が
+異なる)があり、続く<p>要素(次のh3が出るまで)に実際のテイスティング文が
+入っている。この見出しの直後には必ず「生産地情報」「商品情報」等の
+別セクションのh3が続くため、次のh3までの<p>を結合して採用する。
+対象22件全てで見出しの存在を確認済み。
 """
 
 import json
@@ -66,6 +74,27 @@ NON_BEAN_KEYWORDS = ["セット", "GIFT", "ギフト", "pack", "PACK"]
 
 COLORME_JSON_PATTERN = re.compile(r"var\s+Colorme\s*=\s*(\{.*\});", re.DOTALL)
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
+FLAVOR_HEADING_LABELS = ("銘柄の説明", "コメント", "風味の特徴")
+
+
+def extract_flavor_notes(soup: BeautifulSoup) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    heading = None
+    for h3 in soup.find_all("h3"):
+        if h3.get_text(strip=True) in FLAVOR_HEADING_LABELS:
+            heading = h3
+            break
+    if not heading:
+        return None
+    parts = []
+    for sib in heading.find_next_siblings():
+        if sib.name == "h3":
+            break
+        if sib.name == "p":
+            text = sib.get_text(" ", strip=True)
+            if text:
+                parts.append(text)
+    return " ".join(parts) or None
 
 
 def fetch_page(url: str) -> BeautifulSoup:
@@ -170,6 +199,7 @@ def build_record(product_url: str, title: str) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": extract_flavor_notes(soup),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": variant.get("option_price_including_tax") if variant else None,
