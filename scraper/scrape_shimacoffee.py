@@ -41,11 +41,20 @@ medium-roast,quick-coffee,gift}/を巡回して実データ確認済み)。
 exma-0001のみ「250gパック × 2」という単一バリアント(合計500g)。
 最小重量のSKUブロックを代表として採用する(exma-0001は250g×2で合計500g
 のみのため、その合計値を採用)。
+
+【flavor_notes(2026-09-20追記)】
+実データ確認済み: div.product_description内の<p>要素は、冒頭の短い
+タグライン+テイスティング文の段落(1〜数個)に続き、必ず「定価」という
+語を含む価格表記の段落(「100g：定価690円...」「1セット 250gパック×2
+パック 定価4,400円...」等)が現れる。この「定価」を含む段落の直前までの
+非空の<p>を結合してflavor_notesとして採用する。対象21件全てで実データ
+確認済み。既存のHTML取得を再利用するため追加のHTTPアクセスは不要。
 """
 
 import re
 
 import requests
+from bs4 import BeautifulSoup
 
 from coffee_parser import parse_product, detect_stock_status
 
@@ -83,6 +92,23 @@ def fetch_html(url: str) -> str:
     resp = requests.get(url, headers=REQUEST_HEADERS, timeout=15)
     resp.raise_for_status()
     return resp.text
+
+
+def extract_flavor_notes(html: str) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    soup = BeautifulSoup(html, "html.parser")
+    el = soup.select_one("div.product_description")
+    if not el:
+        return None
+    parts = []
+    for p in el.find_all("p"):
+        text = p.get_text(" ", strip=True)
+        if not text:
+            continue
+        if "定価" in text:
+            break
+        parts.append(text)
+    return " ".join(parts) if parts else None
 
 
 def extract_title(html: str) -> str | None:
@@ -151,6 +177,7 @@ def build_record(slug: str) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": extract_flavor_notes(html),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": price,
