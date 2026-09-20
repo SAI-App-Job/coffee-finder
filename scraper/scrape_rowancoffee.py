@@ -18,6 +18,16 @@ GRP")。curl/python-requests等は個別にDisallow: /指定があるが、User-
 【非コーヒー豆商品の除外について】
 実データ確認済み: 全21件のうちおまかせ定期便(×2)・ギフトラッピング箱・
 ドリップパック2種飲み比べセットが非対象。NON_BEAN_KEYWORDSで除外する。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: og:descriptionにテイスティング文・産地の背景ストーリーが
+地続きで入っており、末尾に「※単品又は他の豆と併せて400gからご注文を承り
+ます」等の注文単位に関する注意書きが付く(対象16件中15件で確認)。最初の
+「※」以降を切り落として採用する。1件(パナマ•ドンパチ•ゲイシャN)は
+weight重複グルーピングで代表として採用される50g商品のog:descriptionが
+「詳細は100gの商品ページをご覧下さい」という誘導文のみでテイスティング
+情報を含まないため(実データ確認済み)、同一銘柄の100g商品(重量重複の
+非代表側)のog:descriptionから取得したテイスティング文を採用する。
 """
 
 import re
@@ -45,6 +55,18 @@ REQUEST_HEADERS = {
 
 NON_BEAN_KEYWORDS = ["定期便", "ギフトラッピング", "ドリップパック"]
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
+FLAVOR_STOP_PATTERN = re.compile(r"※")
+FLAVOR_STUB_PATTERN = re.compile(r"商品ページ")
+
+
+def extract_flavor_notes(description: str | None) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    if not description:
+        return None
+    stop_m = FLAVOR_STOP_PATTERN.search(description)
+    text = description[: stop_m.start()] if stop_m else description
+    text = text.strip()
+    return text or None
 
 
 def fetch_page(url: str) -> BeautifulSoup:
@@ -62,7 +84,9 @@ def extract_og_fields(soup: BeautifulSoup) -> dict | None:
         return None
     price_el = soup.select_one('meta[property="product:price:amount"]')
     price = int(float(price_el["content"])) if price_el and price_el.get("content") else None
-    return {"title": title, "price": price}
+    desc_el = soup.select_one('meta[property="og:description"]')
+    description = desc_el["content"] if desc_el and desc_el.get("content") else None
+    return {"title": title, "price": price, "flavor_notes": extract_flavor_notes(description)}
 
 
 def fetch_sitemap_urls() -> list[str]:
@@ -72,8 +96,10 @@ def fetch_sitemap_urls() -> list[str]:
 
 def pick_canonical_items(items: list[dict]) -> list[dict]:
     by_base_name: dict[str, dict] = {}
+    groups: dict[str, list[dict]] = {}
     for item in items:
         base_name = WEIGHT_PATTERN.sub("", item["title"]).strip()
+        groups.setdefault(base_name, []).append(item)
         weight_m = WEIGHT_PATTERN.search(item["title"])
         weight_key = int(weight_m.group(1)) if weight_m else float("inf")
         existing = by_base_name.get(base_name)
@@ -81,7 +107,18 @@ def pick_canonical_items(items: list[dict]) -> list[dict]:
         existing_weight = int(existing_weight_m.group(1)) if existing_weight_m else float("inf")
         if existing is None or weight_key < existing_weight:
             by_base_name[base_name] = item
-    return list(by_base_name.values())
+
+    canonical_items = list(by_base_name.values())
+    for item in canonical_items:
+        flavor_notes = item.get("flavor_notes")
+        if not flavor_notes or FLAVOR_STUB_PATTERN.search(flavor_notes):
+            base_name = WEIGHT_PATTERN.sub("", item["title"]).strip()
+            for sibling in groups[base_name]:
+                sibling_flavor = sibling.get("flavor_notes")
+                if sibling is not item and sibling_flavor and not FLAVOR_STUB_PATTERN.search(sibling_flavor):
+                    item["flavor_notes"] = sibling_flavor
+                    break
+    return canonical_items
 
 
 def build_record(item: dict) -> dict | None:
@@ -113,6 +150,7 @@ def build_record(item: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": item.get("flavor_notes"),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": item["price"],
@@ -135,7 +173,10 @@ def scrape_all_products() -> tuple[list[dict], list[dict]]:
             continue
         if not fields:
             continue
-        all_items.append({"title": fields["title"], "price": fields["price"], "url": product_url})
+        all_items.append({
+            "title": fields["title"], "price": fields["price"], "url": product_url,
+            "flavor_notes": fields.get("flavor_notes"),
+        })
 
     canonical_items = pick_canonical_items(all_items)
 
