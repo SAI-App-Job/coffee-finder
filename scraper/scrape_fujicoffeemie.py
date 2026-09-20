@@ -31,6 +31,23 @@ NON_BEAN_KEYWORDSで除外する。
     →「本セット」
   - 「ウェーブスタイル185」(ドリッパー器具の型番)→「ウェーブスタイル」
 残り23件(150g瓶詰めではない焙煎豆・挽き豆)を対象とする。
+
+【非コーヒー豆商品の除外漏れについて(2026-09-20修正)】
+実データ確認済み: 「アイスコーヒーとカフェオレベース セット」「カフェオレ
+ベース2本ギフト」「カフェオレベース3種ギフト」の3件が、商品名に「ml」
+「本セット」等の既存除外キーワードを含まないため除外漏れしていた
+(カフェオレベースは瓶入り濃縮リキッドで焙煎豆単品ではない)。今回の
+flavor_notes実装でこれらにも誤ってテイスティング文が付与されてしまう
+ため、「カフェオレベース」をNON_BEAN_KEYWORDSに追加して除外した。
+
+【flavor_notes(2026-09-20追記)】
+実データ確認済み: og:descriptionの先頭に実際のテイスティング・商品紹介文
+があり、その後に発送方法等の店舗共通の定型文が続く。定型文の開始位置は
+2パターンある。(1)大半の商品は「コーヒー豆はネコポス便にてお届けします。」
+から定型文が始まる。(2)「珈琲専門店○○ブレンド」系の3商品はネコポス便の
+文言が無く、代わりに「プレゼントにも最適な1袋150g...の商品となって
+おります。」から定型文が始まる。いずれか最初に出現した位置の直前までを
+flavor_notesとして採用する。
 """
 
 import re
@@ -59,14 +76,25 @@ REQUEST_HEADERS = {
 
 NON_BEAN_KEYWORDS = [
     "につきまして", "キャニスター", "ドリップバッグ", "ml", "本セット", "ウェーブスタイル",
+    "カフェオレベース",
 ]
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
+FLAVOR_STOP_PATTERN = re.compile(r"コーヒー豆はネコポス便にてお届けします。|プレゼントにも最適な")
 
 
 def fetch_page(url: str) -> BeautifulSoup:
     resp = requests.get(url, headers=REQUEST_HEADERS, timeout=15)
     resp.raise_for_status()
     return BeautifulSoup(resp.text, "html.parser")
+
+
+def extract_flavor_notes(description: str | None) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    if not description:
+        return None
+    m = FLAVOR_STOP_PATTERN.search(description)
+    text = description[:m.start()] if m else description
+    return text.strip() or None
 
 
 def extract_og_fields(soup: BeautifulSoup) -> dict | None:
@@ -78,7 +106,9 @@ def extract_og_fields(soup: BeautifulSoup) -> dict | None:
         return None
     price_el = soup.select_one('meta[property="product:price:amount"]')
     price = int(float(price_el["content"])) if price_el and price_el.get("content") else None
-    return {"title": title, "price": price}
+    desc_el = soup.select_one('meta[property="og:description"]')
+    description = desc_el["content"] if desc_el and desc_el.get("content") else None
+    return {"title": title, "price": price, "description": description}
 
 
 def fetch_sitemap_urls() -> list[str]:
@@ -115,6 +145,7 @@ def build_record(product_url: str, fields: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": extract_flavor_notes(fields.get("description")),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": fields["price"],
