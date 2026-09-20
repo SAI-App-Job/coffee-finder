@@ -36,6 +36,11 @@ NON_BEAN_KEYWORDSで除外する。
 重量が明示されないため、同一商品名の中で最安価格の商品ページのみ詳細
 取得し、詳細ページの「内容量：」欄から実際の重量を確認する(実データ
 確認済み: 最安価格の商品ページは実際に100gだった)。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: 詳細ページのdiv.product-detail-titletxtに短い
+テイスティング文が直接入っている(対象14件全て確認、配送・支払方法等の
+混入なし)。全文をそのまま採用する。
 """
 
 import re
@@ -106,15 +111,22 @@ def pick_cheapest_per_title(items: list[dict]) -> list[dict]:
     return list(by_title.values())
 
 
-def fetch_weight_g(product_url: str) -> int | None:
+def fetch_detail_fields(product_url: str) -> tuple[int | None, str | None]:
     try:
         resp = requests.get(product_url, headers=REQUEST_HEADERS, timeout=15)
         resp.raise_for_status()
     except requests.RequestException:
-        return None
+        return None, None
     resp.encoding = "euc-jp"
-    m = WEIGHT_LABEL_PATTERN.search(resp.text)
-    return int(m.group(1)) if m else None
+    weight_m = WEIGHT_LABEL_PATTERN.search(resp.text)
+    weight_g = int(weight_m.group(1)) if weight_m else None
+
+    soup = BeautifulSoup(resp.text, "html.parser")
+    for br in soup.find_all("br"):
+        br.replace_with("\n")
+    desc_el = soup.select_one("div.product-detail-titletxt")
+    flavor_notes = desc_el.get_text("\n", strip=True) if desc_el else None
+    return weight_g, (flavor_notes or None)
 
 
 def build_record(item: dict) -> dict | None:
@@ -133,7 +145,7 @@ def build_record(item: dict) -> dict | None:
         }
 
     stock_status = detect_stock_status(title)
-    weight_g = fetch_weight_g(item["url"])
+    weight_g, flavor_notes = fetch_detail_fields(item["url"])
 
     return {
         "shop_name": SHOP_INFO["name"],
@@ -145,6 +157,7 @@ def build_record(item: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": flavor_notes,
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": item["price"],
