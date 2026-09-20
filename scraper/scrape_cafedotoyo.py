@@ -47,6 +47,18 @@ NON_BEAN_KEYWORDSで除外する。
 コーヒー用に深煎りした豆、後者は「チョコレートの味がするわけではない」と
 明記されたカカオ香を思わせる深煎り豆)と確認できたため対象に含める。
 残り17件を対象とする。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: og:descriptionに商品ごとのテイスティング文が直接
+入っている(対象19件全てで確認、価格・スペック等の混入なし、末尾に
+「#自家焙煎珈琲」等の短いハッシュタグが付く商品が一部あるが軽微な
+ものとしてそのまま残す)。
+実装中、既存NON_BEAN_KEYWORDSが片仮名「ギフト」のみを想定しており、
+ローマ字表記の新商品「バター焙煎ブレンドGIFT」「ミンデン白黒GIFT」
+(いずれもドリップ/ディップコーヒーのギフトセットで豆売り単品では
+ない)がすり抜けることが判明したため、"GIFT"をキーワードに追加して
+対象から除外した(候補調査時点から店舗側のカタログが増えていたことで
+発覚)。
 """
 
 import re
@@ -75,7 +87,7 @@ REQUEST_HEADERS = {
 
 NON_BEAN_KEYWORDS = [
     "袋", "個)", "ブレンドコーヒー", "ドリップ", "カフェオレベース", "ギフト",
-    "定期購入", "水だし",
+    "定期購入", "水だし", "GIFT",
 ]
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
 
@@ -95,7 +107,9 @@ def extract_og_fields(soup: BeautifulSoup) -> dict | None:
         return None
     price_el = soup.select_one('meta[property="product:price:amount"]')
     price = int(float(price_el["content"])) if price_el and price_el.get("content") else None
-    return {"title": title, "price": price}
+    desc_el = soup.select_one('meta[property="og:description"]')
+    flavor_notes = desc_el["content"].strip() if desc_el and desc_el.get("content") else None
+    return {"title": title, "price": price, "flavor_notes": flavor_notes or None}
 
 
 def fetch_sitemap_urls() -> list[str]:
@@ -132,6 +146,7 @@ def build_record(product_url: str, fields: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": fields.get("flavor_notes"),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": fields["price"],
