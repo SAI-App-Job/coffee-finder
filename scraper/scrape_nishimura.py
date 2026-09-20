@@ -66,6 +66,19 @@ User-agent: *に対し/secure/・/cart/のみDisallow。AhrefsBot等一部
 一部商品(エチオピア サムライ・ナチュラル100g/200g等)でstock_num=0
 (在庫切れ)を確認。ルールに従い欠品商品も削除せずout_of_stockフラグ付きで
 結果に含める。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: 商品詳細ページのdiv.detailExplainBlock内に「■特徴」
+見出しに続くテイスティング文があり、その後に「ご家庭で使用されている
+コーヒー器具に合わせてお挽きいたします。」という店舗共通の定型文、
+さらに「■賞味期限」等の次見出しが続く共通構成だった(対象17件中16件で
+確認)。「■特徴」の直後から次の「■」見出しの直前までを取得し、末尾の
+定型文行を除去して採用する。
+実装中、既存NON_BEAN_KEYWORDSに「クッキー」が無く、非コーヒー豆商品
+「ベーカリーのクッキー缶」(全粒粉・ライ麦のクッキー詰め合わせ)が
+すり抜けていたことが判明したため、「クッキー」をキーワードに追加して
+対象から除外した(候補調査時点の17件からこの1件を除いた16件が実際の
+焙煎豆単品)。
 """
 
 import re
@@ -97,11 +110,13 @@ NON_BEAN_KEYWORDS = [
     "ゴールドティー", "ひざ掛け", "真空缶", "キャニスター", "詰め合わせ", "セット",
     "ジャム", "紅茶", "ペーパーフィルター", "グラスポット", "ギフト", "バウムクーヘン",
     "ケーゼゲベック", "ティータイム", "レープクーヘン", "シュトレンエッケ",
-    "お試し", "エリーゼン",
+    "お試し", "エリーゼン", "クッキー",
 ]
 FIRST_TIME_PREFIX_PATTERN = re.compile(r"^【初めての方へ】")
 COLORME_PATTERN = re.compile(r"var Colorme\s*=\s*(\{.*?\});", re.DOTALL)
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ㎏]")
+FLAVOR_PATTERN = re.compile(r"■特徴(.*?)(?=■)", re.DOTALL)
+FLAVOR_BOILERPLATE_LINE = "ご家庭で使用されているコーヒー器具に合わせてお挽きいたします。"
 
 
 def fetch_page(url: str) -> BeautifulSoup:
@@ -113,6 +128,24 @@ def fetch_page(url: str) -> BeautifulSoup:
 def fetch_pid_urls() -> list[str]:
     soup = fetch_page(f"{BASE_URL}/sitemap.xml")
     return [loc.get_text(strip=True) for loc in soup.find_all("loc") if "pid=" in loc.get_text()]
+
+
+def extract_flavor_notes(soup: BeautifulSoup) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    el = soup.select_one("div.detailExplainBlock")
+    if not el:
+        return None
+    for img in el.find_all("img"):
+        img.decompose()
+    for br in el.find_all("br"):
+        br.replace_with("\n")
+    m = FLAVOR_PATTERN.search(el.get_text())
+    if not m:
+        return None
+    lines = [line.strip() for line in m.group(1).split("\n") if line.strip()]
+    lines = [line for line in lines if line != FLAVOR_BOILERPLATE_LINE]
+    text = "\n".join(lines).strip()
+    return text or None
 
 
 def extract_fields(soup: BeautifulSoup, product_url: str) -> dict | None:
@@ -142,6 +175,7 @@ def extract_fields(soup: BeautifulSoup, product_url: str) -> dict | None:
         "price": int(price) if price is not None else None,
         "url": product_url,
         "structural_out_of_stock": structural_out_of_stock,
+        "flavor_notes": extract_flavor_notes(soup),
     }
 
 
@@ -190,6 +224,7 @@ def build_record(item: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": item.get("flavor_notes"),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": item["price"],
