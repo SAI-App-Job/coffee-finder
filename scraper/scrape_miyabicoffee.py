@@ -31,13 +31,32 @@ SKILLを使い、購入代行すべき」という趣旨の記述があったが
 実データ確認済み: 産地・農園等を構造化したラベル付き説明は無く、テイスティング
 コメントのみの自由文のため、産地判定は商品名からのcoffee_parser.parse_product()
 のみに依る。
+
+【flavor_notes(テイスティングノート)について(2026-09-20追記)】
+実データ確認済み: 上記の通りbody_htmlはラベルの無いテイスティング
+コメントのみの自由文(2〜4個の短い<p class="p1">段落、産地変更の経緯や
+風味の説明)だが、この情報自体は一切読んでおらずflavor_notesが常に
+未設定だった。ラベルが無く定型の注意書きも混在しないため、body_html内
+の全<p>段落のテキストをそのままflavor_notesとして採用する。
 """
 
 import time
 
 import requests
+from bs4 import BeautifulSoup
 
 from coffee_parser import parse_product
+
+
+def extract_flavor_notes(body_html: str | None) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    if not body_html:
+        return None
+    soup = BeautifulSoup(body_html, "html.parser")
+    for br in soup.find_all("br"):
+        br.replace_with("\n")
+    lines = [line.strip() for line in soup.get_text().split("\n") if line.strip()]
+    return "".join(lines) or None
 
 SHOP_INFO = {
     "name": "珈琲舎 雅",
@@ -111,6 +130,7 @@ def build_record(product: dict) -> dict:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": extract_flavor_notes(product.get("body_html")),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": price,
