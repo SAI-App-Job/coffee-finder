@@ -33,6 +33,15 @@ meta-externalagentのみ個別にDisallow: /、それ以外は制限なし。
 販売しておりません】」という接頭辞付きで表示される。この「販売して
 おりません」という表現はdata/stock_status_synonyms.jsonの「一時的に
 品切れ」に新規追加した(店舗を横断する一般的な表現のため)。
+
+【flavor_notes(テイスティングノート)について(2026-09-20追記)】
+実データ確認済み: <meta name="description">に、原産国・ラベル・
+★段階評価等のノイズを含まない、風味とおすすめ焙煎度だけの短い要約文
+(例:「甘み・酸味・苦味のバランスがとれた味。飽きずに飲んで頂ける
+オリジナルブレンドです。焙煎のおススメは中深焙煎。」)が入っている
+ことを確認した(サンプル10件全件で確認、切り詰めも無い)。og:description
+にも同様の内容が入っているが原産国・ラベル等が続けて連結され末尾が
+「…」で切り詰められるため、meta name="description"の方を採用する。
 """
 
 import re
@@ -136,6 +145,7 @@ def build_record(url: str, soup: BeautifulSoup) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": (soup.select_one('meta[name="description"]') or {}).get("content"),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": price,
