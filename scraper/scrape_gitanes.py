@@ -43,6 +43,13 @@ resp.encodingを明示する。
 実データ確認済み: 「カフェラテベース」(濃縮リキッド)・「水出しコーヒー
 カップパック」「水出しコーヒーパック」(水出し専用パック)が非対象。
 NON_BEAN_KEYWORDSで除外する。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: 商品詳細ページのdiv.p-product-explain__body内に
+テイスティング文・産地ストーリー・スペック情報が地の文で混在して
+書かれている(対象18件全てで確認)。綺麗な見出し区切りが無いため、
+「背景説明とテイスティング文が混在する場合は全文採用」の既存方針
+(バッチ85-134等)に倣い全文を採用する。
 """
 
 import json
@@ -107,6 +114,17 @@ def scrape_bean_category_pids() -> list[str]:
     return urls
 
 
+def extract_flavor_notes(soup: BeautifulSoup) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    el = soup.select_one("div.p-product-explain__body")
+    if not el:
+        return None
+    for br in el.find_all("br"):
+        br.replace_with("\n")
+    lines = [line.strip() for line in el.get_text().split("\n") if line.strip()]
+    return "\n".join(lines).strip() or None
+
+
 def extract_colorme_product(soup: BeautifulSoup) -> dict | None:
     for script in soup.find_all("script"):
         text = script.string or script.get_text() or ""
@@ -134,7 +152,7 @@ def detect_weight(product: dict, title: str, price: int | None) -> int | None:
     return int(m.group(1)) if m else None
 
 
-def build_item(product_url: str, product: dict) -> dict | None:
+def build_item(product_url: str, product: dict, flavor_notes: str | None) -> dict | None:
     title = (product.get("name") or "").strip()
     if not title or any(kw in title for kw in NON_BEAN_KEYWORDS):
         return None
@@ -149,6 +167,7 @@ def build_item(product_url: str, product: dict) -> dict | None:
         "weight_g": weight_g,
         "url": product_url,
         "structural_out_of_stock": structural_out_of_stock,
+        "flavor_notes": flavor_notes,
     }
 
 
@@ -195,6 +214,7 @@ def build_record(item: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": item.get("flavor_notes"),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": item["price"],
@@ -218,7 +238,7 @@ def scrape_all_products() -> tuple[list[dict], list[dict]]:
         product = extract_colorme_product(soup)
         if not product:
             continue
-        item = build_item(product_url, product)
+        item = build_item(product_url, product, extract_flavor_notes(soup))
         if item is not None:
             all_items.append(item)
 
