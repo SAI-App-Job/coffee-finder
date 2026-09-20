@@ -17,6 +17,16 @@ User-agent: *に対し/secure/・/cart/のみDisallow。AhrefsBot等一部
 [初回限定]ブレンド3種とお好きな豆1種セットが非対象。
 NON_BEAN_KEYWORDSで除外する。商品名が空の削除済みプレースホルダー
 レコードも除外する。残り20件(ブレンド+ストレート)を対象とする。
+
+【flavor_notes(2026-09-20追記)】
+実データ確認済み: 詳細ページのdiv.product-exp内は、対象20件中18件が
+「●テイスティング文。●テイスティング文2...」に続けて「栽培エリア●.../
+標高●.../精製方法●...」等のラベル付きスペック情報が区切り無く連結される
+構成だった(既存の他店舗と同様、テイスティング文とスペック情報の間に
+明確な区切りが無い場合は全文を採用する)。残り2件(ケニア関連の2商品)は
+テイスティング文自体が存在せず、いきなり「サプライヤー●...」等のスペック
+情報から始まっており誤って採用しないよう除外する。div.product-exp内の
+<small>(300g以上の包装についての定型注記)は除外する。
 """
 
 import json
@@ -46,12 +56,28 @@ REQUEST_HEADERS = {
 NON_BEAN_KEYWORDS = ["カフェ・オレ・ベース", "コーヒーバッグ", "アイスコーヒー", "セット"]
 COLORME_PATTERN = re.compile(r"var Colorme\s*=\s*(\{.*?\});", re.DOTALL)
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
+FLAVOR_SPEC_ONLY_PATTERN = re.compile(
+    r"^(サプライヤー|栽培エリア|農園主|標高|精製方法|品種|栽培品種|農園面積|発酵時間|ソーキング|乾燥)●"
+)
 
 
 def fetch_page(url: str) -> BeautifulSoup:
     resp = requests.get(url, headers=REQUEST_HEADERS, timeout=15)
     resp.raise_for_status()
     return BeautifulSoup(resp.text, "html.parser")
+
+
+def extract_flavor_notes(soup: BeautifulSoup) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    el = soup.select_one("div.product-exp")
+    if not el:
+        return None
+    for small in el.find_all("small"):
+        small.decompose()
+    text = el.get_text(" ", strip=True)
+    if not text or FLAVOR_SPEC_ONLY_PATTERN.match(text):
+        return None
+    return text
 
 
 def fetch_pid_urls() -> list[str]:
@@ -106,6 +132,7 @@ def build_record(soup: BeautifulSoup, product_url: str) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": extract_flavor_notes(soup),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": int(price) if price is not None else None,
