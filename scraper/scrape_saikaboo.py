@@ -21,6 +21,20 @@ robots.txt確認済み(2026-09時点): User-agent: *には制限なし
 価格情報なし)・「贈答（プレゼント）おまかせパッケージ」(詰め合わせ、
 価格情報なし)が非対象。NON_BEAN_KEYWORDSで除外する。残り25件を対象と
 する。
+
+【flavor_notes(2026-09-20追記)】
+実データ確認済み: div.detail_item_text.detail_desc_box内の記述形式が
+商品ごとに大きくばらついている(古いおちゃのこネット店舗特有)。多くの
+商品では「【彩香房のテイスティング】」「「彩香房」コメント：」
+「「彩香房」テイスティング：」「【「彩香房」カッピング】」「テイスト・
+コメント」「味覚特徴：」「香味 ：」「〈あじわい〉：」等、店名や
+「テイスティング/コメント/カッピング/味覚特徴/あじわい」を含む見出しの
+直後に実際のテイスティング文が続く(見出しが複数あれば実データ確認済みの
+とおり最後の見出しの直後を採用)。見出しが存在しない商品は、産地の
+基本情報(＜農園主＞等の＜…＞見出しや【地域】【品種】等のラベル区切り)が
+始まる直前までをフォールバックとして採用し、テイスティング関連キーワード
+(酸味・苦味・香り等)を含む場合のみ採用する(含まない場合は農園史・スペック
+のみの商品と判断しflavor_notesは取得しない)。
 """
 
 import re
@@ -55,6 +69,47 @@ REQUEST_HEADERS = {
 NON_BEAN_KEYWORDS = ["商品移行中", "おまかせパッケージ"]
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
 
+FLAVOR_HEADING_PATTERN = re.compile(
+    r"【[^【】]*?(?:テイスティング|コメント|カッピング|味覚特徴|味覚特性)[^【】]*?】"
+    r"|「彩香房」\s*(?:カッピングコメント|テイスティング|コメント|カッピング)\s*[：:]?"
+    r"|テイスト[・\s]*コメント\s*[：:]?"
+    r"|味覚特徴\s*[：:]?"
+    r"|香味\s*[：:]"
+    r"|あじわい\s*[：:]?"
+)
+FALLBACK_STOP_PATTERN = re.compile(
+    r"＜[^＜＞]*＞"
+    r"|【(?:地域|品種|精製|グレード|収穫|プロフィル|キリマンジャロコーヒー|ＤＡＴＡ|スぺック|基本情報)】"
+    r"|栽培地\s*[：:]"
+    r"|乾燥方法\s*[：:]"
+)
+LEADING_PUNCT_PATTERN = re.compile(r"^[「」【】（）〈〉：:、,\s]+")
+FLAVOR_WHITESPACE_PATTERN = re.compile(r"[\s　]+")
+FLAVOR_KEYWORDS = (
+    "酸味", "苦味", "甘み", "甘さ", "コク", "香り", "香ばし", "フレーバー", "フレグランス",
+    "テイスト", "ボディ", "フルーティ", "味わい", "風味", "口当たり", "キャラクター", "アロマ",
+)
+
+
+def extract_flavor_notes(description: str | None) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    if not description:
+        return None
+
+    matches = list(FLAVOR_HEADING_PATTERN.finditer(description))
+    if matches:
+        text = description[matches[-1].end():]
+        text = LEADING_PUNCT_PATTERN.sub("", text)
+        text = FLAVOR_WHITESPACE_PATTERN.sub(" ", text).strip()
+        return text or None
+
+    stop_m = FALLBACK_STOP_PATTERN.search(description)
+    text = description[:stop_m.start()] if stop_m else description
+    text = FLAVOR_WHITESPACE_PATTERN.sub(" ", text).strip()
+    if text and any(kw in text for kw in FLAVOR_KEYWORDS):
+        return text
+    return None
+
 
 def fetch_page(url: str) -> BeautifulSoup:
     resp = requests.get(url, headers=REQUEST_HEADERS, timeout=15)
@@ -82,7 +137,9 @@ def extract_fields(soup: BeautifulSoup) -> dict | None:
         return None
     price_el = soup.select_one('meta[property="product:price:amount"]')
     price = int(float(price_el["content"])) if price_el and price_el.get("content") else None
-    return {"title": title, "price": price}
+    desc_el = soup.select_one("div.detail_item_text.detail_desc_box")
+    description = desc_el.get_text(" ", strip=True) if desc_el else None
+    return {"title": title, "price": price, "description": description}
 
 
 def build_record(item: dict) -> dict | None:
@@ -114,6 +171,7 @@ def build_record(item: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": extract_flavor_notes(item.get("description")),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": item["price"],
@@ -143,7 +201,10 @@ def scrape_all_products() -> tuple[list[dict], list[dict]]:
             records.append(prev)
             continue
 
-        detail = build_record({"title": fields["title"], "price": fields["price"], "url": product_url})
+        detail = build_record({
+            "title": fields["title"], "price": fields["price"],
+            "description": fields.get("description"), "url": product_url,
+        })
         if detail is None:
             continue
         if detail.get("is_flavored"):
