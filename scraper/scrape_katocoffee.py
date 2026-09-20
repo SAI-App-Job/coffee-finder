@@ -17,6 +17,13 @@ python-requests等は個別にDisallow: /指定があるが、User-agent: *ル�
 ＜５個セット＞」の3件がドリップバッグ/加工品でコーヒー豆そのものでは
 ないためNON_BEAN_KEYWORDSで除外する。残り13件はすべて単一銘柄・
 ブレンドの焙煎豆(100g)。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: JSON-LD Product.descriptionにテイスティング文が
+直接入っている(対象14件全て確認)。続けて「焙煎度：」「生産地域：」
+「規格：」「農園：」「精製方法：」「生産：」等の構造化スペック行や
+「＜確認のお願い＞」「※」「【送料」で始まる注意書きが入るため、
+これらのうち最も手前に出現するものでテキストを切り落とす。
 """
 
 import json
@@ -48,6 +55,27 @@ REQUEST_HEADERS = {
 
 NON_BEAN_KEYWORDS = ["ドリップバッグ", "アイスコーヒーバッグ"]
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
+FLAVOR_STOP_PATTERNS = [
+    re.compile(r"＜確認のお願い＞"),
+    re.compile(r"※"),
+    re.compile(r"【送料"),
+    re.compile(r"焙煎度[：:]"),
+    re.compile(r"生産地域[：:]"),
+    re.compile(r"規格[：:]"),
+    re.compile(r"農園[：:]"),
+    re.compile(r"精製方法[：:]"),
+    re.compile(r"生産[：:]"),
+]
+
+
+def extract_flavor_notes(description: str | None) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    if not description:
+        return None
+    positions = [m.start() for p in FLAVOR_STOP_PATTERNS if (m := p.search(description))]
+    text = description[: min(positions)] if positions else description
+    text = text.strip()
+    return text or None
 
 
 def fetch_page(url: str) -> BeautifulSoup:
@@ -109,6 +137,7 @@ def build_record(product_url: str, product: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": extract_flavor_notes(product.get("description")),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": price,
