@@ -17,10 +17,24 @@ NON_BEAN_KEYWORDSで除外し、残り20件が単一銘柄の200gコーヒー豆
 
 【一覧ページのみで完結する点について】
 実データ確認済み: 一覧ページのli要素にp.item-name(商品名+リンク)・
-p.price(価格)が揃っているため、詳細ページへの追加アクセスは行わない。
+p.price(価格)が揃っているため、商品名・価格の取得自体には詳細ページへの
+追加アクセスは不要(flavor_notes取得のためのみ後述の通り追加アクセスする)。
 
 robots.txt確認済み(2026-09時点): robots.txt自体が存在しない(404、独自404
 ページが返る)。制限の明示的な記述が無いため実質許可とみなす。
+
+【flavor_notes(2026-09-20追記)】
+実データ確認済み: 詳細ページのdl.item-description内は商品によって
+「1つの<p>内に<br><br>区切りで本文とスペック情報(BLEND：/焙煎度合：/
+味わいの分類：/味のバランス+★評価/ホームに戻るリンク)が全て収まる」
+テンプレートと、「本文・スペック情報がそれぞれ個別の<div>に分かれる」
+テンプレートの2種類が混在する。両テンプレートに対応するため、
+dd.get_text("\\n", strip=True)で行単位に分解し、スペックラベル行
+(BLEND：/焙煎度合：/味わいの分類：等で始まる行)・「味のバランス」の
+行・「ホームに戻る」を含む行のいずれかに到達した時点で読み取りを
+打ち切り、それ以前の行を結合してflavor_notesとして採用する。20/20商品で
+新規取得。詳細ページへの追加アクセスが必要になったため、一覧ページ
+巡回後に各商品ページを個別に取得する処理を新設した。
 """
 
 import re
@@ -48,6 +62,8 @@ REQUEST_HEADERS = {
 
 NON_BEAN_KEYWORDS = ["水出し", "ドリップコーヒー"]
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
+FLAVOR_LABEL_START_PATTERN = re.compile(r"^(BLEND|ＢＬＥＮＤ|焙煎度合|味わいの分類|straight)[：:]?")
+FLAVOR_HOME_LINK_PATTERN = re.compile(r"ホ.?ムに戻る")
 
 
 def fetch_page(url: str) -> BeautifulSoup:
@@ -55,6 +71,25 @@ def fetch_page(url: str) -> BeautifulSoup:
     resp.raise_for_status()
     resp.encoding = "utf-8"
     return BeautifulSoup(resp.text, "html.parser")
+
+
+def extract_flavor_notes(product_url: str) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    soup = fetch_page(product_url)
+    dl = soup.select_one("dl.item-description")
+    if not dl:
+        return None
+    dd = dl.select_one("dd")
+    if not dd:
+        return None
+    text = dd.get_text("\n", strip=True)
+    lines = [line.strip() for line in text.split("\n") if line.strip()]
+    kept = []
+    for line in lines:
+        if line == "味のバランス" or FLAVOR_LABEL_START_PATTERN.match(line) or FLAVOR_HOME_LINK_PATTERN.search(line):
+            break
+        kept.append(line)
+    return " ".join(kept) or None
 
 
 def build_record(a_el) -> dict | None:
@@ -91,6 +126,12 @@ def build_record(a_el) -> dict | None:
     weight_g = int(weight_m.group(1)) if weight_m else None
     stock_status = detect_stock_status(title)
 
+    try:
+        flavor_notes = extract_flavor_notes(product_url)
+    except requests.RequestException as e:
+        print(f"[warn] 詳細ページ取得失敗: {product_url} ({e})")
+        flavor_notes = None
+
     return {
         "shop_name": SHOP_INFO["name"],
         "raw_name": title,
@@ -101,6 +142,7 @@ def build_record(a_el) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": flavor_notes,
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": price,
