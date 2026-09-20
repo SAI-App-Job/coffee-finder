@@ -35,6 +35,19 @@ python-requests等は個別にDisallow: /指定があるが、User-agent: *ル�
 (器具)、「かんたんドリップ　30枚入」(フィルター器具)がコーヒー豆単品
 ではないためNON_BEAN_KEYWORDSで除外する。残りは単一銘柄・ブレンドの
 焙煎豆(100g/200g)。
+
+【flavor_notes(テイスティングノート)について(2026-09-20追記)】
+実データ確認済み: og:descriptionに「焙煎度合／生産国／生産地域／農園／
+農園主／品種／精選方法／生産高度」(単一原産地)または上記の一部
+(ブレンド)のラベル付き詳細(区切り文字無く連結)に続けて、任意で
+「カップ評価：Milk Chocolate、Walnut、Red Cherry」のような英語の
+フレーバータグ、そして風味を説明する自由記述文が書かれ、末尾に
+「◆入谷珈琲豆店のシングルオリジン◆」または「◆入谷珈琲豆店の
+ブレンド◆」という全商品共通の店舗紹介文が続く。「生産高度」または
+「カップ評価」ラベルのうち最後に現れるものの値の終端(数値+m、または
+英数字が続く区間)を本文の開始位置、「◆入谷珈琲豆店の」を終了位置とし、
+その間をflavor_notesとして採用する。カフェオレベース(希釈用の非
+コーヒー豆商品)にはこれらのラベルが無いため、抽出結果はNoneとなる。
 """
 
 import re
@@ -61,8 +74,43 @@ REQUEST_HEADERS = {
     "User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"
 }
 
-NON_BEAN_KEYWORDS = ["初心者セット", "保存缶", "かんたんドリップ"]
+NON_BEAN_KEYWORDS = ["初心者セット", "保存缶", "かんたんドリップ", "カフェオレベース"]
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
+LAST_LABEL_PATTERN = re.compile(
+    r"(?:生産高度\s*[：:]\s*[\d,]+(?:\s*[~〜～\-]\s*[\d,]+)?m"
+    r"|カップ評価\s*[：:]\s*[A-Za-z0-9,、/\s]+?)(?=[一-龠ぁ-んァ-ヶ「」『』（）]|$)"
+)
+ORIGIN_LABEL_PATTERN = re.compile(r"生産国\s*[：:]")
+DESC_STOP_PATTERN = re.compile(r"◆入谷珈琲豆店の")
+
+
+def extract_flavor_notes(description: str | None) -> str | None:
+    """理由はモジュールdocstring参照。
+
+    「生産高度」「カップ評価」ラベルが無い商品(ブレンド等)には
+    フォールバックとして「生産国：」ラベル以降の最初の句点までを
+    ラベル値(国名の連結)とみなしてスキップし、次の文から採用する。
+    いずれのラベルも無い商品(短い自由記述のみ)は全文をそのまま
+    採用する(いずれも末尾の店舗紹介文は「◆入谷珈琲豆店の」で
+    打ち切る)。"""
+    if not description:
+        return None
+
+    stop_m = DESC_STOP_PATTERN.search(description)
+    end = stop_m.start() if stop_m else len(description)
+
+    matches = list(LAST_LABEL_PATTERN.finditer(description, 0, end))
+    if matches:
+        start = matches[-1].end()
+    else:
+        origin_matches = list(ORIGIN_LABEL_PATTERN.finditer(description, 0, end))
+        if origin_matches:
+            period_idx = description.find("。", origin_matches[-1].end(), end)
+            start = period_idx + 1 if period_idx != -1 else origin_matches[-1].end()
+        else:
+            start = 0
+
+    return description[start:end].strip() or None
 
 
 def fetch_page(url: str) -> BeautifulSoup:
@@ -80,7 +128,10 @@ def extract_og_fields(soup: BeautifulSoup) -> dict | None:
     price_el = soup.select_one('meta[property="product:price:amount"]')
     price = int(float(price_el["content"])) if price_el and price_el.get("content") else None
 
-    return {"title": title, "price": price}
+    desc_el = soup.select_one('meta[property="og:description"]')
+    flavor_notes = extract_flavor_notes(desc_el["content"] if desc_el else None)
+
+    return {"title": title, "price": price, "flavor_notes": flavor_notes}
 
 
 def build_record(product_url: str, fields: dict) -> dict | None:
@@ -116,6 +167,7 @@ def build_record(product_url: str, fields: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": fields.get("flavor_notes"),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": fields["price"],
