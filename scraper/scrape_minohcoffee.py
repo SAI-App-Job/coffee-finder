@@ -28,6 +28,13 @@ robots.txt(/wp/wp-admin/のみDisallow、admin-ajax.phpはAllow)で実質許可�
 実データ確認済み: /itemcat/single/ページは全16件が単一産地のストレート豆
 (一部「アイスライト」「アイスダーク」等の焙煎違い表記を含む)のみで構成
 されており、器具・ギフト等の非対象商品は無い。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: /itemcat/single/ページの各商品ブロック(div.item_info)
+内、`.txt .text`に短い産地紹介+テイスティング表現が3行程度で書かれて
+おり、既に一覧ページ取得時点で全16件分取得できる(個別詳細ページへの
+追加アクセスは不要)。産地紹介とテイスティング表現が地続きのため全文を
+採用する。
 """
 
 import re
@@ -61,7 +68,10 @@ PRICE_PATTERN = re.compile(r"([\d,]+)\s*円")
 def fetch_page(url: str) -> BeautifulSoup:
     resp = requests.get(url, headers=REQUEST_HEADERS, timeout=15)
     resp.raise_for_status()
-    return BeautifulSoup(resp.text, "html.parser")
+    soup = BeautifulSoup(resp.text, "html.parser")
+    for br in soup.find_all("br"):
+        br.replace_with("\n")
+    return soup
 
 
 def fetch_items() -> list[dict]:
@@ -85,7 +95,13 @@ def fetch_items() -> list[dict]:
             if m:
                 price = int(m.group(1).replace(",", ""))
 
-        items.append({"title": title, "price": price, "url": product_url})
+        desc_el = block.select_one(".txt .text")
+        flavor_notes = desc_el.get_text("\n", strip=True) if desc_el else None
+
+        items.append({
+            "title": title, "price": price, "url": product_url,
+            "flavor_notes": flavor_notes or None,
+        })
     return items
 
 
@@ -116,6 +132,7 @@ def build_record(item: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": item.get("flavor_notes"),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": item["price"],
