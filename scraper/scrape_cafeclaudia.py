@@ -79,6 +79,17 @@ JSON-LD・構造化テーブルは無く、価格は`<div id="price"><p>¥3,800<
 ハイフン付きの「G-1」表記が見つかった。coffee_parser.pyのGRADE_PATTERNは
 従来ハイフン無し(G1)のみに対応していたため、ハイフン有無どちらにもマッチし
 G1表記へ正規化するよう修正済み(coffee_parser.py側の変更、本タスクで実施)。
+
+【flavor_notes(2026-09-20追記)】
+実データ確認済み: 上記(商品ページの構造について)で「flavor_notesは確実な
+情報源が無いためnullのままとする」としていたのは産地・農園・品種等の
+構造化キー抽出の話であり、風味情報自体が無いわけではなかった。
+meta[property="og:description"]は全商品(除外対象を除く)で農園の背景
+説明とテイスティング文が地続きの読み物調本文をそのまま含み、カート欄・
+数量セレクト等のUI要素は含まれない。他店舗と同様、背景説明とテイス
+ティング文を切り分ける共通の区切りが無いため全文をflavor_notesとして
+採用する。og:descriptionには発送定型文等の末尾ノイズは確認されず、
+ストリップ処理は不要。
 """
 
 import json
@@ -130,6 +141,13 @@ def fetch_page(url: str) -> tuple[BeautifulSoup, str]:
     resp.raise_for_status()
     soup = BeautifulSoup(resp.text, "html.parser")
     return soup, resp.text
+
+
+def extract_flavor_notes(soup: BeautifulSoup) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    og = soup.select_one('meta[property="og:description"]')
+    text = og["content"].strip() if og and og.get("content") else None
+    return text or None
 
 
 def detect_decaf_process(title: str) -> str | None:
@@ -200,6 +218,7 @@ def parse_product_detail(url: str) -> dict:
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
         "roast_selectable": False,  # 実データ確認済み: セレクトは挽き方のみで焙煎度選択は無い
+        "flavor_notes": extract_flavor_notes(soup),
         "post_processing_tags": parsed["post_processing_tags"],
         "farm_name": farm_name,
         "variety": variety,
