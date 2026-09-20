@@ -37,8 +37,18 @@ NON_BEAN_KEYWORDSで除外し、残った銘柄×重量の中から商品名先�
 セイニチ ラミジップ(保存袋)・【定期便】(具体的な銘柄指定のない
 サブスクリプション)が非対象。NON_BEAN_KEYWORDSで除外する。残り17件を
 対象とする。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: og:descriptionは対象17件中4件で「風太」「高血圧」
+「ジャニーズ」等、商品と無関係な単語1つだけの店舗側の設定ミスと
+みられる内容だった。一方、詳細ページに埋め込まれたJSON-LD
+(schema.org Product)のdescriptionは全17件で共通して長文のテイス
+ティング文が入っており、内容もog:descriptionより豊富だったため、
+og:descriptionではなくJSON-LDのdescriptionを採用する。「賞味期限」
+以降は保存方法等の定型文のため、その直前までを採用する。
 """
 
+import json
 import re
 
 import requests
@@ -68,6 +78,10 @@ NON_BEAN_KEYWORDS = [
     "替布", "ポップンもっくん", "クリックポスト",
 ]
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
+JSONLD_PRODUCT_PATTERN = re.compile(
+    r'"@type":"Product".*?"description":"(.*?)","offers"', re.DOTALL
+)
+FLAVOR_STOP_PATTERN = re.compile(r"賞味期限")
 
 
 def fetch_page(url: str) -> BeautifulSoup:
@@ -76,7 +90,21 @@ def fetch_page(url: str) -> BeautifulSoup:
     return BeautifulSoup(resp.text, "html.parser")
 
 
-def extract_og_fields(soup: BeautifulSoup) -> dict | None:
+def extract_flavor_notes(html_text: str) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    m = JSONLD_PRODUCT_PATTERN.search(html_text)
+    if not m:
+        return None
+    try:
+        description = json.loads(f'"{m.group(1)}"')
+    except json.JSONDecodeError:
+        return None
+    sm = FLAVOR_STOP_PATTERN.search(description)
+    text = description[:sm.start()] if sm else description
+    return text.strip() or None
+
+
+def extract_og_fields(soup: BeautifulSoup, html_text: str) -> dict | None:
     title_el = soup.select_one('meta[property="og:title"]')
     if not title_el or not title_el.get("content"):
         return None
@@ -85,7 +113,7 @@ def extract_og_fields(soup: BeautifulSoup) -> dict | None:
         return None
     price_el = soup.select_one('meta[property="product:price:amount"]')
     price = int(float(price_el["content"])) if price_el and price_el.get("content") else None
-    return {"title": title, "price": price}
+    return {"title": title, "price": price, "flavor_notes": extract_flavor_notes(html_text)}
 
 
 def fetch_sitemap_urls() -> list[str]:
@@ -136,6 +164,7 @@ def build_record(item: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": item.get("flavor_notes"),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": item["price"],
@@ -152,13 +181,19 @@ def scrape_all_products() -> tuple[list[dict], list[dict]]:
     all_items = []
     for product_url in product_urls:
         try:
-            fields = extract_og_fields(fetch_page(product_url))
+            resp = requests.get(product_url, headers=REQUEST_HEADERS, timeout=15)
+            resp.raise_for_status()
+            soup = BeautifulSoup(resp.text, "html.parser")
+            fields = extract_og_fields(soup, resp.text)
         except requests.RequestException as e:
             print(f"[warn] 詳細ページ取得失敗: {product_url} ({e})")
             continue
         if not fields:
             continue
-        all_items.append({"title": fields["title"], "price": fields["price"], "url": product_url})
+        all_items.append({
+            "title": fields["title"], "price": fields["price"],
+            "flavor_notes": fields.get("flavor_notes"), "url": product_url,
+        })
 
     canonical_items = pick_canonical_items(all_items)
 
