@@ -22,14 +22,25 @@ list<N>.html(N=1,2,...、Muiと異なり/t02/を含まない)。
 【商品詳細ページを個別に取得しない理由】
 実データ確認済み(facon001・facon0004等、ブレンド/シングルオリジン双方で確認):
 詳細ページにはMui(gtag view_item・table.info-table)のような構造化データが
-一切無く、価格(table.price)は一覧ページの表示と完全に一致し、産地・精選方法・
-品種・標高等の説明文自体が存在しない(挽き方選択オプションのみ)。そのため
-詳細ページを個別に取得する意味が無く、一覧ページの情報(商品名・価格・在庫)
-だけで完結させる。産地・精選方法・焙煎度・グレード・特定銘柄はすべて商品名
-から判定する(coffee_parser.parse_product()。例:「エチオピア　グジ　ゴロ・
-ベデッサ　ナチュラル　シティロースト　200g」のように精選方法・焙煎度が
-商品名にそのまま書かれているため、追加のパースロジックが無くても十分な
-精度で取得できる)。
+一切無く、価格(table.price)は一覧ページの表示と完全に一致するため、価格・
+在庫の取得目的では詳細ページを個別に取得する意味が無く、一覧ページの情報
+(商品名・価格・在庫)だけで完結させる。産地・精選方法・焙煎度・グレード・
+特定銘柄はすべて商品名から判定する(coffee_parser.parse_product()。例:
+「エチオピア　グジ　ゴロ・ベデッサ　ナチュラル　シティロースト　200g」の
+ように精選方法・焙煎度が商品名にそのまま書かれているため、追加のパース
+ロジックが無くても十分な精度で取得できる)。
+なお旧版の本docstringでは「産地・精選方法・品種・標高等の説明文自体が
+存在しない」としていたが、これは誤りだったことが2026-09のflavor_notes
+調査で判明した(下記追記参照、「2巡目の教訓」に合致するケース)。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: 詳細ページには`<section id="itemDetail-wrap"><div
+class="description">`が常に2箇所存在し(対象18件全てで確認)、いずれにも
+テイスティング文(1つ目は短いキャッチコピー、2つ目は詳細な香味・
+ペアリング紹介)が入っている。産地判定に使えるほどの構造化データは無い
+という旧メモの判断自体は正しいが、テイスティング文が無いという意味では
+なかった。flavor_notes取得のため両方のdiv.descriptionを取得する新たな
+詳細ページアクセスを追加し、両方の本文を連結して採用する。
 
 【在庫状態について】
 実データ確認済み: 一覧ページのp.sps-itemList-stockDisp要素が「在庫切れ」の
@@ -113,6 +124,24 @@ def parse_weight(title: str) -> int | None:
     return int(m.group(1)) if m else None
 
 
+def extract_flavor_notes(product_url: str) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    try:
+        soup = fetch_page(product_url)
+    except requests.RequestException as e:
+        print(f"[warn] 詳細ページ取得失敗: {product_url} ({e})")
+        return None
+    parts = []
+    for el in soup.select("section#itemDetail-wrap div.description"):
+        for br in el.find_all("br"):
+            br.replace_with("\n")
+        lines = [line.strip() for line in el.get_text().split("\n") if line.strip()]
+        text = "\n".join(lines).strip()
+        if text:
+            parts.append(text)
+    return "\n\n".join(parts).strip() or None
+
+
 def scrape_category_list_page(cid: str, page: int) -> list[dict]:
     soup = fetch_page(f"{BASE_URL}/SHOP/{cid}/list{page}.html")
 
@@ -185,6 +214,7 @@ def build_record(item: dict, category_hint: str) -> dict:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": extract_flavor_notes(item["product_url"]),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": item["price"],
@@ -216,6 +246,7 @@ def scrape_all_products() -> tuple[list[dict], list[dict]]:
             flavored_records.append(detail)
         else:
             records.append(detail)
+        time.sleep(CRAWL_DELAY_SECONDS)
 
     return records, flavored_records
 
