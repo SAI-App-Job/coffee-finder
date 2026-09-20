@@ -23,6 +23,20 @@ User-agent: *に対し/secure/・/cart/のみDisallow。AhrefsBot等一部
 base(液体ラテベース、ギフト含む)・ギフト箱・ギフト用メッセージカード
 が非対象。NON_BEAN_KEYWORDSで除外する。商品名が空の削除済み
 プレースホルダーレコードも除外する。
+
+【flavor_notes(テイスティングノート)について(2026-09-20追記)】
+実データ確認済み: 詳細ページのdiv#detail div.explに<br>区切りで商品名/
+産地背景/テイスティングコメント/重量表記等が連結して入っている。うち
+一部の限定入荷商品(スポット入荷)は「＜カップコメント＞」という見出しの
+次の行に「ブルーベリー、ライチ、プラム、フローラル、アーモンド」のような
+簡潔なテイスティングノートが構造化されており、これを最優先で採用する
+(tier1)。それ以外の商品はdiv.explの各行から重量のみの行(「［200g入り］」
+等)・品種のみの行(「【ブルボン種】」等)・焙煎度のみの行(「【中煎り】」等)・
+スポット入荷見出しのみの行を除外し、残りを結合してflavor_notesとする
+(tier2、産地背景文とテイスティングコメントが混在するが、既存の他店舗でも
+同様の背景+テイスティング混在文をflavor_notesとして採用している前例に
+合わせた)。div.explはColorme JSON取得と同じ詳細ページ内にあるため、
+追加のHTTPアクセスは不要(fetch_raw_items内で取得済みのsoupを再利用)。
 """
 
 import json
@@ -53,6 +67,39 @@ NON_BEAN_KEYWORDS = ["ギフト", "ボトルコーヒー", "カップ オン ド
 COLORME_PATTERN = re.compile(r"var Colorme\s*=\s*(\{.*?\});", re.DOTALL)
 WEIGHT_BRACKET_PATTERN = re.compile(r"[［\[]\s*\d+\s*(?:kg|[gｇ])\s*[］\]]", re.IGNORECASE)
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*(kg|[gｇ])", re.IGNORECASE)
+
+CUP_COMMENT_PATTERN = re.compile(r"^[<＜]\s*カップコメント\s*[>＞]$")
+JUNK_LINE_PATTERN = re.compile(
+    r"^[(\[［【]\s*(?:[\d,]+\s*(?:kg|[gｇ])(?:[xX×]\d+袋)?\s*入り"
+    r"|[^(\[［【)\]］】]*?種"
+    r"|(?:中深|中浅|中|浅|深)煎り"
+    r"|スポット入荷[^)\]］】]*)"
+    r"\s*[)\]］】]$"
+)
+FIELD_LABEL_LINE_PATTERN = re.compile(r"^(?:生産地域|品種|精製方法|焙煎度)[\s　]*\S")
+
+
+def extract_flavor_notes(detail_soup: BeautifulSoup) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    el = detail_soup.select_one("div#detail div.expl")
+    if not el:
+        return None
+    for br in el.find_all("br"):
+        br.replace_with("\n")
+    lines = [line.strip() for line in el.get_text().split("\n")]
+    lines = [line for line in lines if line]
+
+    for i, line in enumerate(lines):
+        if CUP_COMMENT_PATTERN.match(line) and i + 1 < len(lines):
+            return lines[i + 1]
+
+    kept = [
+        line for line in lines
+        if not JUNK_LINE_PATTERN.match(line)
+        and not FIELD_LABEL_LINE_PATTERN.match(line)
+        and not line.startswith("『")
+    ]
+    return " ".join(kept) if kept else None
 
 
 def fetch_page(url: str) -> BeautifulSoup:
@@ -103,6 +150,7 @@ def fetch_raw_items() -> list[dict]:
             "price": int(price) if price is not None else None,
             "url": product_url,
             "structural_out_of_stock": structural_out_of_stock,
+            "flavor_notes": extract_flavor_notes(soup),
         })
     return items
 
@@ -148,6 +196,7 @@ def build_record(item: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": item["flavor_notes"],
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": item["price"],
