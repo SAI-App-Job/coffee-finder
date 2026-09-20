@@ -31,6 +31,16 @@ NON_BEAN_KEYWORDSで除外する。
 実データ確認済み: 同一銘柄が100g/200gの2形態で個別商品登録されている
 ことが多いが、それぞれ独立した実在SKUのため重複排除は行わず個別の
 レコードとして出力する。
+
+【flavor_notes(2026-09-20追記)】
+実データ確認済み: og:descriptionのほぼ全文がテイスティング・商品紹介文
+になっている(構造化ラベルを持たない商品が大半)。一部商品は末尾に
+「※開封後は、風味が失われることがあります。」等の保存方法定型文、
+「＊送料無料で発送します。」等の発送定型文、または「生産地\t...」
+「ゲイシャ地域：...」「《精製方法》...」「［コーヒー豆］...」(ブレンド
+配合内訳)のようなタブ/コロン/記号区切りの構造化スペック・配合内訳が
+続く。これらの開始位置のうち最初に出現したものの直前までをflavor_notes
+として採用する(該当箇所が無い商品は全文を採用)。
 """
 
 import re
@@ -58,6 +68,18 @@ REQUEST_HEADERS = {
 
 NON_BEAN_KEYWORDS = ["飲み比べ", "セット"]
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
+FLAVOR_STOP_PATTERN = re.compile(
+    r"※開封後は|＊送料無料で発送します|生産地\t|ゲイシャ地域[：:]|《精製方法》|［コーヒー豆］"
+)
+
+
+def extract_flavor_notes(description: str | None) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    if not description:
+        return None
+    m = FLAVOR_STOP_PATTERN.search(description)
+    text = description[:m.start()] if m else description
+    return text.strip() or None
 
 
 def fetch_page(url: str) -> BeautifulSoup:
@@ -73,7 +95,9 @@ def extract_og_fields(soup: BeautifulSoup) -> dict | None:
     title = title_el["content"].split(" | ")[0].strip()
     price_el = soup.select_one('meta[property="product:price:amount"]')
     price = int(float(price_el["content"])) if price_el and price_el.get("content") else None
-    return {"title": title, "price": price}
+    desc_el = soup.select_one('meta[property="og:description"]')
+    description = desc_el["content"] if desc_el and desc_el.get("content") else None
+    return {"title": title, "price": price, "description": description}
 
 
 def fetch_sitemap_urls() -> list[str]:
@@ -112,6 +136,7 @@ def build_record(item: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": extract_flavor_notes(item.get("description")),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": item["price"],
@@ -137,7 +162,10 @@ def scrape_all_products() -> tuple[list[dict], list[dict]]:
             print(f"[warn] OGPメタタグが見つかりません: {product_url}")
             continue
 
-        detail = build_record({"title": fields["title"], "price": fields["price"], "url": product_url})
+        detail = build_record({
+            "title": fields["title"], "price": fields["price"],
+            "description": fields.get("description"), "url": product_url,
+        })
         if detail is None:
             continue
         if detail.get("is_flavored"):
