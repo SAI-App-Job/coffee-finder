@@ -33,6 +33,13 @@ ProductGroup.nameに重量を含む商品名、hasVariant配列に挽き方違�
 実データ確認済み: 「ギフトケース入り」と明記されたブレンド/シングル
 オリジンの詰め合わせセットが両カテゴリに混在している。
 NON_BEAN_KEYWORDSで除外する。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: ProductGroup.descriptionに商品ごとのテイスティング文が
+直接入っている(対象16件全て確認、価格・スペック等の混入なし)。1件のみ
+CMS側の入力時のエスケープ処理不具合により「&lt;br&lt;br&gt;&gt;」
+「&lt;br&gt;」というダブルエスケープされた改行タグ文字列が生の文字列
+として混入していたため、改行に変換して除去する。
 """
 
 import json
@@ -62,6 +69,17 @@ REQUEST_HEADERS = {
 NON_BEAN_KEYWORDS = ["ギフト"]
 LD_JSON_PATTERN = re.compile(r'<script type="application/ld\+json">(.*?)</script>', re.DOTALL)
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
+BR_ENTITY_PATTERN = re.compile(r"&lt;br&lt;br&gt;&gt;|&lt;br&gt;")
+
+
+def extract_flavor_notes(description: str | None) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    if not description:
+        return None
+    text = description.replace("\r\n", "\n")
+    text = BR_ENTITY_PATTERN.sub("\n", text)
+    text = text.strip()
+    return text or None
 
 
 def fetch_page(url: str) -> BeautifulSoup:
@@ -146,6 +164,7 @@ def build_record(item: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": item.get("flavor_notes"),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": item["price"],
@@ -176,7 +195,11 @@ def scrape_all_products() -> tuple[list[dict], list[dict]]:
         if not title or any(kw in title for kw in NON_BEAN_KEYWORDS):
             continue
         price = pick_canonical_variant_price(group)
-        all_items.append({"title": title, "price": price, "url": product_url})
+        flavor_notes = extract_flavor_notes(group.get("description"))
+        all_items.append({
+            "title": title, "price": price, "url": product_url,
+            "flavor_notes": flavor_notes,
+        })
 
     canonical_items = pick_canonical_items(all_items)
 
