@@ -12,9 +12,19 @@ scrape_philocoffea.py系(詳細ページを個別取得して商品説明から�
 商品名自体に「《マーケティング文》国名 地域 農園【品種等】 200g〈ロースト表記/
 簡易表記〉」という形で産地・地域・農園・品種・重量・焙煎度がすべて詰め込まれて
 おり、詳細ページの説明文(div.product_exp)は構造化ラベルを一切持たない自由な
-マーケティング文のみ(実データ確認済み)だった。そのため詳細ページを個別取得する
-価値が薄く、一覧ページ(2ページ、実データ確認済み: 全34商品)だけで商品情報が
-完結する設計にしている(店舗サーバーへのリクエスト数も抑えられる)。
+マーケティング文のみ(実データ確認済み)だった。そのため一覧ページ(2ページ、
+実データ確認済み: 全34商品)だけで商品情報がほぼ完結する設計にしていた。
+
+【flavor_notes追加に伴う詳細ページ取得への変更について(2026-09-20追記)】
+実データ再確認したところ、div.product_exp内は確かに構造化ラベルは無いが、
+テイスティングコメント部分は必ず「★」で始まる1段落として他の農園紹介文
+段落と明確に分離されていることを発見した(HTML上、各段落は<br><br>の
+二重改行で区切られている)。そのため、各商品の詳細ページを個別に取得し、
+<br>を改行に変換した上で二重改行で段落分割し、「★」で始まる最初の段落
+(2つ目以降の★段落はブレンド商品共通の「絵具を複数掛け合わせて…」という
+比喩の定型文でテイスティングとは無関係なため対象外)をflavor_notesとして
+採用する設計に変更した(CRAWL_DELAY_SECONDSは既存の一覧ページ間隔と
+同じ値を商品ごとにも適用)。
 
 【焙煎度について】
 商品名末尾の〈...〉に「シティロースト/中深煎り」のようにROAST_LEVELS
@@ -77,6 +87,45 @@ FEATURE_BRACKET_PATTERN = re.compile(r"【([^】]+)】")
 ROAST_TERMS_BY_LENGTH = sorted(ROAST_KEYWORDS.keys(), key=len, reverse=True)
 
 
+def split_into_paragraphs(el) -> list[str]:
+    """<br><br>(二重改行)を段落区切りとしてdiv.product_expを分割する。
+    理由はモジュールdocstring参照(単一<br>の前後には\\r\\n等の空白のみの
+    テキストノードが挟まる実装上の癖があるため、get_text()によるテキスト
+    フラット化ではなくcontents単位で空白のみのノードを区切りとして扱う)。"""
+    paragraphs = []
+    current_parts: list[str] = []
+    for child in el.contents:
+        if getattr(child, "name", None) == "br":
+            continue
+        text = str(child).strip()
+        if not text:
+            if current_parts:
+                paragraphs.append(" ".join(current_parts))
+                current_parts = []
+        else:
+            current_parts.append(text)
+    if current_parts:
+        paragraphs.append(" ".join(current_parts))
+    return paragraphs
+
+
+def extract_flavor_notes(product_url: str) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    try:
+        soup = fetch_page(product_url)
+    except requests.RequestException as e:
+        print(f"[warn] 詳細ページ取得失敗: {product_url} ({e})")
+        return None
+    el = soup.select_one("div.product_exp")
+    if not el:
+        return None
+    for para in split_into_paragraphs(el):
+        star_pos = para.find("★")
+        if star_pos != -1:
+            return para[star_pos:].lstrip("★").strip() or None
+    return None
+
+
 def normalize_roast_bracket(value: str | None) -> str | None:
     if not value:
         return None
@@ -136,7 +185,7 @@ def build_record(product_url: str, title: str, price: int | None) -> dict:
         "roast_selectable": False,  # 焙煎度は商品ごとに固定、注文時に選べるのは挽き方のみ(実データ確認済み)
         "post_processing_tags": parsed["post_processing_tags"],
         "farm_note": farm_note,
-        "flavor_notes": None,
+        "flavor_notes": extract_flavor_notes(product_url),
         "blend_components": [],
         "decaf_process": decaf_process,
         "price": price,
@@ -180,6 +229,7 @@ def scrape_product_list_page(page: int) -> list[dict]:
                 price = int(price_match.group(1).replace(",", ""))
 
         results.append(build_record(product_url, title, price))
+        time.sleep(CRAWL_DELAY_SECONDS)
     return results
 
 
