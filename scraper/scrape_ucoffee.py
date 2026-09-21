@@ -16,6 +16,12 @@ User-agent: *に対し/secure/・/cart/のみDisallow。AhrefsBot等一部
 ハッピーバック・アソートで、コーヒー豆単品ではないため
 NON_BEAN_KEYWORDSで除外する。焙煎方式は公式サイトの「備長炭を使用し、
 遠赤外線の効果で豆の芯までじっくり焙煎する」との記載で確認済み。
+
+【flavor_notes(2026-09-22追記)】
+実データ確認済み: 商品ページのdiv.product_panel_explain(見出し「商品
+説明」)に対象1件で紹介文と使用豆(ブラジル/コロンビア/ホンジュラス)ごとの
+テイスティング文が入っている。末尾に「ギフトラッピングについて」という
+のし・包装案内の定型文が続くため、この直前で打ち切る。
 """
 
 import json
@@ -48,6 +54,16 @@ NON_BEAN_KEYWORDS = [
 ]
 COLORME_PATTERN = re.compile(r"var Colorme\s*=\s*(\{.*?\});", re.DOTALL)
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
+FLAVOR_STOP_PATTERN = re.compile(r"ギフトラッピングについて")
+
+
+def extract_flavor_notes(soup: BeautifulSoup) -> str | None:
+    el = soup.select_one("div.product_panel_explain")
+    text = el.get_text("\n", strip=True) if el else ""
+    m = FLAVOR_STOP_PATTERN.search(text)
+    if m:
+        text = text[:m.start()].strip()
+    return text or None
 
 
 def fetch_page(url: str) -> BeautifulSoup:
@@ -108,6 +124,7 @@ def build_record(soup: BeautifulSoup, product_url: str) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": extract_flavor_notes(soup),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": int(price) if price is not None else None,
