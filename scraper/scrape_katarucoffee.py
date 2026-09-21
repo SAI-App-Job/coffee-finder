@@ -34,8 +34,16 @@ BOX(オリジナルドリップバッグ×10袋/×5袋)・ドリップバッグ�
 【ポスト便】10袋セット・WEB限定KATARUコーヒーセット【ポスト便】(100g×3種/
 200g×2種のおまかせセレクト、単一銘柄を特定できない詰め合わせ)のため非対象。
 NON_BEAN_KEYWORDSで除外する。
+
+【flavor_notes(2026-09-22追記)】
+実データ確認済み: JSON-LDのdescriptionに対象1件でテイスト紹介文・
+ロースト/内容量/賞味期限の仕様情報が入っている(改行はHTMLエンティティ
+&#010;で埋め込まれているためhtml.unescapeでデコードする)。末尾に
+「●豆のままか、粉に挽くことも可能です。備考欄に希望をお伝えください。
+...」という挽き方選択案内の定型文が続くため、この直前で打ち切る。
 """
 
+import html
 import json
 import re
 
@@ -62,6 +70,15 @@ REQUEST_HEADERS = {
 NON_BEAN_KEYWORDS = ["GIFT BOX", "ドリップバッグ", "コーヒーセット", "ポスト便"]
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
 JSONLD_PATTERN = re.compile(r'<script type="application/ld\+json">(.*?)</script>', re.DOTALL)
+FLAVOR_STOP_PATTERN = re.compile(r"●豆のままか")
+
+
+def extract_flavor_notes(description: str) -> str | None:
+    text = html.unescape(description or "").strip()
+    m = FLAVOR_STOP_PATTERN.search(text)
+    if m:
+        text = text[:m.start()].strip()
+    return text or None
 
 
 def fetch_page(url: str) -> str:
@@ -132,6 +149,7 @@ def build_record(product_url: str, data: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": extract_flavor_notes(data.get("description")),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": price,
