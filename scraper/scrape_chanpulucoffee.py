@@ -31,6 +31,14 @@ variantsデータがこの店舗ではld+json/OGP/静的HTMLのいずれにも�
 【非コーヒー豆商品の除外について】
 実データ確認済み(全5件): ドリップパック(12g単品・10個入セット)・
 オリジナルマグカップ・オリジナルステッカーがNON_BEAN_KEYWORDSで除外される。
+
+【flavor_notes(2026-09-22追記)】
+実データ確認済み: ld+jsonのdescriptionに紹介文と2種の焙煎違い
+(さわやかチャンプルー/深煎りチャンプルー)それぞれのテイスティング文、
+「【100gのこだわり】」の鮮度についての説明が入っている。末尾に「豆を
+挽いてお送りすることも出来ます。種類のところで選択してください。」と
+いう挽き方選択案内〜「※送料のご案内」の発送方法案内が続くため、この
+直前で打ち切る。
 """
 
 import json
@@ -66,6 +74,7 @@ LD_JSON_PATTERN = re.compile(
     r'<script[^>]+type="application/ld\+json"[^>]*>(.*?)</script>', re.DOTALL
 )
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
+FLAVOR_STOP_PATTERN = re.compile(r"豆を挽いてお送りすることも出来ます")
 
 
 def fetch_sitemap_urls() -> list[str]:
@@ -120,6 +129,7 @@ def build_record(item: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": item.get("flavor_notes"),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": item.get("price"),
@@ -162,8 +172,14 @@ def scrape_all_products() -> tuple[list[dict], list[dict]]:
             "http://schema.org/InStock", "https://schema.org/InStock",
         )
 
+        flavor_notes = (data.get("description") or "").strip()
+        fm = FLAVOR_STOP_PATTERN.search(flavor_notes)
+        if fm:
+            flavor_notes = flavor_notes[:fm.start()].strip()
+
         detail = build_record({
             "raw_name": title, "price": price, "out_of_stock": out_of_stock, "product_url": url,
+            "flavor_notes": flavor_notes or None,
         })
         if detail is None:
             continue
