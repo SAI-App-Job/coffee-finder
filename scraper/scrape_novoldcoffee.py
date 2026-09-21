@@ -27,11 +27,17 @@ handle末尾"-sub")・飲み比べセット お好きな3種(各200g、産地不
 粗挽き/中細挽き/細挽き、価格は挽き方に依らず重量ごとに同一)のバリアント
 構成。商品名自体には重量表記が無いため、Shopifyのvariants側から最小重量
 (200g)の代表バリアントを選んで価格を採用する。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: body_htmlに対象7件全てで詩的なテイスティング文・
+農園紹介・産地スペックが入っている。注文/配送案内等の無関係な定型文の
+混入は無いため全文をそのまま採用する。
 """
 
 import re
 
 import requests
+from bs4 import BeautifulSoup
 
 from coffee_parser import parse_product, detect_stock_status
 
@@ -129,6 +135,7 @@ def build_record(product: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": BeautifulSoup(product.get("body_html") or "", "html.parser").get_text("\n", strip=True) or None,
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": price,
