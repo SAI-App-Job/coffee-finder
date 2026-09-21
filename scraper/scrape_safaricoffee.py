@@ -27,6 +27,19 @@ Kayave・Ethiopia Bench Maji・【Decaf】Ethiopia Sidamo・Assemblage Blend)。
 Subscription定期購入・Latte Base(カフェラテ用リキッド)・Drip Bag Gift・
 Whole Sale(卸売問い合わせ用のダミー商品)のため非対象。NON_BEAN_KEYWORDSで
 除外する。
+
+【flavor_notes実装時(2026-09-21)の再確認について】
+実データ確認済み: 「Mexico Santuario Project」は単品としては取り扱い
+終了となっており、「【大分店10周年記念】Anniversary Selection Mexico
+Santuario Project×Honduras Kukurucho Geisha 80g×2種」(既存の
+NON_BEAN_KEYWORDSで除外済み)としてのみ現存することを確認した。残る
+対象は6件(Honduras Kukurucho Geisha・Kenya Nyeri Tegu・Burundi Kayave・
+Ethiopia Bench Maji・【Decaf】Ethiopia Sidamo・Assemblage Blend)。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: og:descriptionに対象6件全てでテイスティング文・産地
+情報が入っている。うち3件は末尾に「内容量：<重量>g」という内容量表記
+(場合によっては続けて配送案内)が付くため、この表記の直前で打ち切る。
 """
 
 import re
@@ -58,6 +71,7 @@ NON_BEAN_KEYWORDS = [
 ]
 WEIGHT_PATTERN = re.compile(r"\((\d+)\s*g\)", re.IGNORECASE)
 TRAILING_WEIGHT_PATTERN = re.compile(r"\s*\(\d+\s*g\)\s*$", re.IGNORECASE)
+FLAVOR_STOP_PATTERN = re.compile(r"内容量：\d+g")
 
 
 def fetch_page(url: str) -> BeautifulSoup:
@@ -74,7 +88,12 @@ def extract_og_fields(soup: BeautifulSoup) -> dict | None:
     title = title_el["content"].split(" | ")[0].strip()
     price_el = soup.select_one('meta[property="product:price:amount"]')
     price = int(float(price_el["content"])) if price_el and price_el.get("content") else None
-    return {"title": title, "price": price}
+    desc_el = soup.select_one('meta[property="og:description"]')
+    flavor_notes = desc_el["content"].strip() if desc_el and desc_el.get("content") else ""
+    m = FLAVOR_STOP_PATTERN.search(flavor_notes)
+    if m:
+        flavor_notes = flavor_notes[:m.start()].strip()
+    return {"title": title, "price": price, "flavor_notes": flavor_notes or None}
 
 
 def fetch_item_urls() -> list[str]:
@@ -89,7 +108,7 @@ def base_name_and_weight(title: str) -> tuple[str, int | None]:
     return base, weight_g
 
 
-def build_record(title: str, price: int | None, product_url: str) -> dict | None:
+def build_record(title: str, price: int | None, product_url: str, flavor_notes: str | None = None) -> dict | None:
     if not WEIGHT_PATTERN.search(title):
         # 重量表記の無い商品(定期購入・Latte Base等)は対象外
         return None
@@ -121,6 +140,7 @@ def build_record(title: str, price: int | None, product_url: str) -> dict | None
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": flavor_notes,
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": price,
@@ -147,7 +167,7 @@ def scrape_all_products() -> tuple[list[dict], list[dict]]:
         title = fields["title"]
         if any(kw.lower() in title.lower() for kw in NON_BEAN_KEYWORDS):
             continue
-        detail = build_record(title, fields["price"], product_url)
+        detail = build_record(title, fields["price"], product_url, fields.get("flavor_notes"))
         if detail is None:
             continue
         if detail.get("is_flavored"):

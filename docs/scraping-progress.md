@@ -5286,3 +5286,20 @@
   増減なし。
 - 影響した既存データ: 7商品全件でflavor_notesを新規取得(9738商品、
   増減なし)。データセット全体でflavor_notesは8223→8230件に増加。
+
+## 総点検バッチ296: SAFARI COFFEE ROASTER(2026-09-21)
+
+- SAFARI COFFEE ROASTER(大分県大分市、theShop): 実装前調査で、既存
+  データにあった「Mexico Santuario Project」が単品としては取り扱い
+  終了となっており、「【大分店10周年記念】Anniversary Selection Mexico
+  Santuario Project×Honduras Kukurucho Geisha 80g×2種」(既存の
+  NON_BEAN_KEYWORDSで除外済み)としてのみ現存することを確認した。残る
+  6件(Honduras Kukurucho Geisha・Kenya Nyeri Tegu・Burundi Kayave・
+  Ethiopia Bench Maji・【Decaf】Ethiopia Sidamo・Assemblage Blend)に
+  ついてog:descriptionからテイスティング文・産地情報を抽出した。うち
+  3件は末尾に「内容量：<重量>g」という内容量表記(場合によっては続けて
+  配送案内)が付くため、この表記の直前で打ち切るflavor_notes抽出処理を
+  新規実装した。6/6商品で新規取得。
+- 影響した既存データ: Mexico Santuario Project単品の取り扱い終了により
+  9738商品→9737商品に減少。残る6商品全件でflavor_notesを新規取得。
+  データセット全体でflavor_notesは8230→8236件に増加。
