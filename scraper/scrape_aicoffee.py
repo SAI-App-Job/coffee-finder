@@ -16,13 +16,25 @@ curl/python-requests等は個別にDisallow: /指定があるが、User-agent: *
 ルールでは実質許可。本スクレイパーは識別可能な独自User-Agentを使用する。
 
 【商品構成について】
-実データ確認済み(sitemap.xml全23件): コーヒー豆単品6銘柄(【ゲイシャ】
-フアン ホセPeru・【ほろ苦】季節のブレンド・【すっきり】キイロのトッポ
-Blend・【すっきり】ロジャー ウレニャCosta Rica・【ほろ苦】プーノPeru・
-【ほろ苦】リオブリジャンテ農園Brazil)と、非対象の「選べるコスパコーヒー」
-(複数銘柄から選ぶ福袋的商品)、「季節のおすすめ/ほろ苦/すっきり・
-フルーティーなコーヒー ◯種セット」各種(複数銘柄詰め合わせ)、扇形・円錐・
-ウェーブ各種コーヒーフィルター(器具)。NON_BEAN_KEYWORDSで除外する。
+実データ確認済み(sitemap.xml全23件、2026-09-21再確認時点25件): コーヒー
+豆単品8銘柄(【ゲイシャ】フアン ホセPeru・【ほろ苦】季節のブレンド・
+【すっきり】キイロのトッポBlend・【すっきり】ロジャー ウレニャCosta
+Rica・【ほろ苦】プーノPeru・【ほろ苦】リオブリジャンテ農園Brazil、
+2026-09-21再確認時点で新たに追加された【ほろ苦】モカEthiopia・
+【フルーティー】Addisu Kidane Ethiopiaを含む)と、非対象の「選べる
+コスパコーヒー」(複数銘柄から選ぶ福袋的商品)、「季節のおすすめ/ほろ苦/
+すっきり・フルーティーなコーヒー ◯種セット」各種(複数銘柄詰め合わせ)、
+扇形・円錐・ウェーブ各種コーヒーフィルター(器具)。NON_BEAN_KEYWORDSで
+除外する。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: og:descriptionに対象8件全てで香り/フルーティー/甘み/
+ボディ/苦味の記号評価+「どんな人どんな時におすすめ？」+「ペーパー
+ドリップでのおすすめ抽出」+産地紹介・テイスティング文+産地スペック
+(生産地/標高/品種/精製方法/入港時期/焙煎度)が入っている。末尾に
+「焙煎度：<値>」の直後から重量ごとの価格一覧(例:「100g￥1500200g
+￥3000」)が区切り無く続くため、最初の「<数字>g￥<数字>」パターンの
+直前で打ち切る。
 
 【価格・重量の取得方法について】
 実データ確認済み: 各商品は「豆のまま/中挽き/粗挽き」の挽き方セレクトとは
@@ -57,6 +69,7 @@ REQUEST_HEADERS = {
 
 NON_BEAN_KEYWORDS = ["セット", "フィルター", "選べる"]
 WEIGHT_OPTION_PATTERN = re.compile(r">\s*(\d+)\s*[gｇ]")
+FLAVOR_STOP_PATTERN = re.compile(r"\d+g￥[\d,]+")
 
 
 def fetch_page(url: str) -> BeautifulSoup:
@@ -83,7 +96,13 @@ def extract_fields(soup: BeautifulSoup, html: str) -> dict | None:
     weight_matches = [int(m.group(1)) for m in WEIGHT_OPTION_PATTERN.finditer(html)]
     weight_g = min(weight_matches) if weight_matches else None
 
-    return {"title": title, "price": price, "weight_g": weight_g}
+    desc_el = soup.select_one('meta[property="og:description"]')
+    flavor_notes = desc_el["content"].strip() if desc_el and desc_el.get("content") else ""
+    m = FLAVOR_STOP_PATTERN.search(flavor_notes)
+    if m:
+        flavor_notes = flavor_notes[:m.start()].strip()
+
+    return {"title": title, "price": price, "weight_g": weight_g, "flavor_notes": flavor_notes or None}
 
 
 def build_record(item: dict) -> dict | None:
@@ -113,6 +132,7 @@ def build_record(item: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": item.get("flavor_notes"),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": item["price"],
