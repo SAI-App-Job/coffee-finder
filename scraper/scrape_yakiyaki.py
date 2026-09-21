@@ -16,7 +16,16 @@ python-requests等は個別にDisallow: /指定があるが、User-agent: *ル�
 ("ドリップ・10g×20バッグ"等)と、初回限定のブレンド2種食べ比べセット
 ("初回お試し「スペシャル・ブレンド2種類」150g×2袋")がコーヒー豆単品
 ではないためNON_BEAN_KEYWORDSで除外する。残りは単一銘柄・ブレンドの
-焙煎豆(200g)。
+焙煎豆(200g、対象10件。「スペシャル・ブレンド/200g」は定期購入版と
+単発購入版で別URL・同名で2件存在するが、いずれも正規の商品ページ)。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: JSON-LD Productのdescriptionフィールドに対象10件
+全てでテイスティング文・産地背景が入っており、末尾に「豆か粉希望欄にて
+必ず指定した下さい」で始まる発送方法の定型文が続くため打ち切る。定期
+購入版の「スペシャル・ブレンド/200g」のみ冒頭に定期購入の説明文
+(「(旨味期限は焙煎後30日)。」まで)と、末尾に「定期便は豆、粉の希望
+選択はありません」で始まる別の定型文があるため、それぞれ除去・打ち切る。
 """
 
 import json
@@ -48,6 +57,18 @@ REQUEST_HEADERS = {
 
 NON_BEAN_KEYWORDS = ["お試し", "ドリップ"]
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
+FLAVOR_LEADING_PATTERN = re.compile(r"^.*?旨味期限は焙煎後30日[）\)]。\s*", re.DOTALL)
+FLAVOR_STOP_PATTERN = re.compile(r"豆か粉希望欄にて必ず指定した下さい|定期便は豆、粉の希望選択はありません")
+
+
+def extract_flavor_notes(description: str | None) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    if not description:
+        return None
+    text = FLAVOR_LEADING_PATTERN.sub("", description)
+    m = FLAVOR_STOP_PATTERN.search(text)
+    text = text[:m.start()] if m else text
+    return text.strip() or None
 
 
 def fetch_page(url: str) -> BeautifulSoup:
@@ -109,6 +130,7 @@ def build_record(product_url: str, product: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": extract_flavor_notes(product.get("description")),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": price,
