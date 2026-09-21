@@ -46,6 +46,13 @@ product:price:amountのOGPメタタグから商品名・価格を取得する
 であり、店舗側の二重出品(旧ページの削除し忘れ)と判断できる。そのため
 raw_nameが完全一致する場合は商品URL番号が小さい方(古い方)を正規品として
 残し、後から見つかった重複を除外する処理を入れている。
+
+【flavor_notes(2026-09-22追記)】
+実データ確認済み: og:descriptionは全商品共通の店舗紹介文(サイト全体の
+固定文言)のため使えない。商品詳細ページ本文のdiv.itemDescription内に
+産地・プロセス・品種・焙煎度・テイスティング文が入っている。末尾に
+全件共通で「ご注文から４日以内にネコポスで発送致します。」という発送
+案内の定型文が続くため、この直前で打ち切る。
 """
 
 import re
@@ -74,6 +81,7 @@ REQUEST_HEADERS = {
 
 NON_BEAN_KEYWORDS = ["おすすめ", "ディップ"]
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
+FLAVOR_STOP_PATTERN = re.compile(r"ご注文から")
 
 
 def fetch_page(url: str) -> BeautifulSoup:
@@ -93,7 +101,12 @@ def extract_og_fields(soup: BeautifulSoup) -> dict | None:
         return None
     price_el = soup.select_one('meta[property="product:price:amount"]')
     price = int(float(price_el["content"])) if price_el and price_el.get("content") else None
-    return {"title": title, "price": price}
+    desc_el = soup.select_one("div.itemDescription")
+    flavor_notes = desc_el.get_text("\n", strip=True) if desc_el else ""
+    m = FLAVOR_STOP_PATTERN.search(flavor_notes)
+    if m:
+        flavor_notes = flavor_notes[:m.start()].strip()
+    return {"title": title, "price": price, "flavor_notes": flavor_notes or None}
 
 
 def fetch_sitemap_urls() -> list[str]:
@@ -130,6 +143,7 @@ def build_record(product_url: str, fields: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": fields.get("flavor_notes"),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": fields["price"],
