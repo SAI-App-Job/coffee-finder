@@ -10,11 +10,21 @@ GRP")。curl/python-requests等は個別にDisallow: /指定があるが、User-
 ルールでは実質許可。本スクレイパーは識別可能な独自User-Agentを使用する。
 
 【非コーヒー豆商品の除外について】
-実データ確認済み: 全8件のうちコットンペーパー(1〜2人用、ドリップ用
-フィルター)が器具のため非対象。NON_BEAN_KEYWORDSで除外する。残り7件
-(豆)を対象とする。重量表記が商品名に無く単一サイズ販売のため重量
-重複処理は不要。
+実データ確認済み(2026-09-21再確認時点、全9件): コットンペーパー(1〜2人用、
+ドリップ用フィルター、器具)に加え、「定期便2026 300gコース」「定期便2026
+200gコース」(半年契約のサブスクリプション、単一銘柄の特定不可)も非対象
+と判明したため、NON_BEAN_KEYWORDSに「定期便」を追加した。残り6件(豆)を
+対象とする。重量表記が商品名に無く単一サイズ販売のため重量重複処理は
+不要。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: og:descriptionに対象6件全てで産地紹介+浅煎り/中深煎り
+それぞれのテイスティング文+産地スペックが入っている。末尾に「【送料に
+ついて】ご購入の金額合計...円以上で送料無料とさせていただきます」という
+見出しから配送案内の定型文が続くため、この見出しの直前で打ち切る。
 """
+
+import re
 
 import requests
 from bs4 import BeautifulSoup
@@ -38,7 +48,8 @@ REQUEST_HEADERS = {
     "User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"
 }
 
-NON_BEAN_KEYWORDS = ["コットンペーパー"]
+NON_BEAN_KEYWORDS = ["コットンペーパー", "定期便"]
+FLAVOR_STOP_PATTERN = re.compile(r"【送料について】")
 
 
 def fetch_page(url: str) -> BeautifulSoup:
@@ -56,7 +67,12 @@ def extract_og_fields(soup: BeautifulSoup) -> dict | None:
         return None
     price_el = soup.select_one('meta[property="product:price:amount"]')
     price = int(float(price_el["content"])) if price_el and price_el.get("content") else None
-    return {"title": title, "price": price}
+    desc_el = soup.select_one('meta[property="og:description"]')
+    flavor_notes = desc_el["content"].strip() if desc_el and desc_el.get("content") else ""
+    m = FLAVOR_STOP_PATTERN.search(flavor_notes)
+    if m:
+        flavor_notes = flavor_notes[:m.start()].strip()
+    return {"title": title, "price": price, "flavor_notes": flavor_notes or None}
 
 
 def fetch_sitemap_urls() -> list[str]:
@@ -91,6 +107,7 @@ def build_record(item: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": item.get("flavor_notes"),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": item["price"],
@@ -120,7 +137,12 @@ def scrape_all_products() -> tuple[list[dict], list[dict]]:
             records.append(prev)
             continue
 
-        detail = build_record({"title": fields["title"], "price": fields["price"], "url": product_url})
+        detail = build_record({
+            "title": fields["title"],
+            "price": fields["price"],
+            "flavor_notes": fields.get("flavor_notes"),
+            "url": product_url,
+        })
         if detail is None:
             continue
         if detail.get("is_flavored"):
