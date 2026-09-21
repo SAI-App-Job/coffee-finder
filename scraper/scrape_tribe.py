@@ -28,6 +28,15 @@ User-agent: *に対し/secure/・/cart/のみDisallow。AhrefsBot等一部
 単品ではないためNON_BEAN_KEYWORDSで除外する。また商品名が空・価格0の
 レコード(削除済み商品と推測)も除外する。残り12件がブレンド・
 シングルオリジンの豆単品。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: div.product-order-expにテイスティング文が直接入って
+おり(対象12件全て確認)、その後に必ず「《ラベル》値」(一部商品は
+「【ラベル】値」)形式のスペック欄(農園/標高/品種/精製処理/ロースト等)、
+続けてダッシュ罫線区切りの農園背景説明・ギフト/賞味期限等の定型注意
+書きが続く。1件のみ先頭に「【今月のおすすめ】<販促文>」というダッシュ
+罫線区切りの店舗共通の月替わりおすすめ告知が入るため、これも除去する。
+最初の「《」または「【」の手前までを採用する。
 """
 
 import json
@@ -63,6 +72,21 @@ NON_BEAN_KEYWORDS = [
 COLORME_PATTERN = re.compile(r"var Colorme\s*=\s*(\{.*?\});", re.DOTALL)
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
 WHITESPACE_PATTERN = re.compile(r"\s+")
+FLAVOR_LEADING_PROMO_PATTERN = re.compile(r"^【今月のおすすめ】.*?-{5,}")
+FLAVOR_STOP_PATTERN = re.compile(r"《|【")
+
+
+def extract_flavor_notes(soup: BeautifulSoup) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    div = soup.select_one("div.product-order-exp")
+    if not div:
+        return None
+    text = div.get_text(strip=True)
+    text = FLAVOR_LEADING_PROMO_PATTERN.sub("", text)
+    m = FLAVOR_STOP_PATTERN.search(text)
+    if m:
+        text = text[: m.start()]
+    return text.strip() or None
 
 
 def fetch_page(url: str) -> BeautifulSoup:
@@ -131,6 +155,7 @@ def build_record(soup: BeautifulSoup, product_url: str) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": extract_flavor_notes(soup),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": int(price) if price is not None else None,
