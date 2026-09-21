@@ -28,6 +28,11 @@ BASEの特定商取引法ページ(https://cafetocoche.theshop.jp/law)で実デ�
 robots.txt確認済み(2026-09時点): 他のBASE/theshop.jp系店舗と同一の記述
 (curl/python-requests等は個別にDisallow: /指定があるが、User-agent: *
 ルールでは実質許可)。本スクレイパーは識別可能な独自User-Agentを使用する。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: og:descriptionに対象7件全てでテイスティング文・産地
+情報が入っている。末尾に「※ 写真のパッケージ袋は、店舗での販売の
+ものです。」という注記の定型文が続くため、この見出しの直前で打ち切る。
 """
 
 import re
@@ -55,6 +60,7 @@ REQUEST_HEADERS = {
 
 NON_BEAN_KEYWORDS = ["DRIP BAG", "DRIP BAGS", "GIFT"]
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
+FLAVOR_STOP_PATTERN = re.compile(r"※\s*写真のパッケージ袋は")
 
 
 def fetch_item_urls() -> list[str]:
@@ -73,7 +79,12 @@ def extract_fields(soup: BeautifulSoup) -> dict | None:
         return None
     price_el = soup.select_one('meta[property="product:price:amount"]')
     price = int(float(price_el["content"])) if price_el and price_el.get("content") else None
-    return {"title": title, "price": price}
+    desc_el = soup.select_one('meta[property="og:description"]')
+    flavor_notes = desc_el["content"].strip() if desc_el and desc_el.get("content") else ""
+    m = FLAVOR_STOP_PATTERN.search(flavor_notes)
+    if m:
+        flavor_notes = flavor_notes[:m.start()].strip()
+    return {"title": title, "price": price, "flavor_notes": flavor_notes or None}
 
 
 def build_record(item: dict) -> dict | None:
@@ -105,6 +116,7 @@ def build_record(item: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": item.get("flavor_notes"),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": item["price"],
