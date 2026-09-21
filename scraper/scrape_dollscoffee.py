@@ -31,6 +31,11 @@ python-requests等は個別にDisallow: /指定があるが、User-agent: *ル�
 各種本数セット)・スペシャルティアイスコーヒー(瓶入り・セット)・
 「ニコジーコーヒー」(定期コース・お試し1回分・ドリップバッグセットの
 サブスクリプション型商品)は非対象のためNON_BEAN_KEYWORDSで除外する。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: og:descriptionに対象7件全てで簡潔なテイスティング文が
+入っており、注文/配送案内等の無関係な定型文の混入は無いため全文を
+そのまま採用する。
 """
 
 import re
@@ -78,7 +83,10 @@ def extract_fields(soup: BeautifulSoup, html: str) -> dict | None:
     weight_matches = [int(m.group(1)) for m in WEIGHT_OPTION_PATTERN.finditer(html)]
     weight_g = min(weight_matches) if weight_matches else None
 
-    return {"title": title, "price": price, "weight_g": weight_g}
+    desc_el = soup.select_one('meta[property="og:description"]')
+    flavor_notes = desc_el["content"].strip() if desc_el and desc_el.get("content") else None
+
+    return {"title": title, "price": price, "weight_g": weight_g, "flavor_notes": flavor_notes or None}
 
 
 def fetch_item_urls() -> list[str]:
@@ -113,6 +121,7 @@ def build_record(item: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": item.get("flavor_notes"),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": item["price"],
