@@ -31,6 +31,13 @@ robots.txt確認済み(2026-09時点): User-agent: *には制限なし
 `<option value="ID">100g￥980</option>`のように重量と価格を結合した
 テキストが埋め込まれている(半角g/全角ｇの表記ゆれあり)。正規表現で
 全ての(重量, 価格)ペアを抽出し、最小重量を代表として採用する。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: div.item_desc_data(商品詳細見出し直下の説明文)に
+テイスティング文・産地背景が入っており(対象11件全て確認)、注文/配送
+案内等の定型文は一切混入していない。価格・スペック情報が地続きで
+混在する場合もあるが、注文案内のような無関係な定型文が無いため全文を
+そのまま採用する。
 """
 
 import re
@@ -92,7 +99,12 @@ def extract_fields(html_text: str) -> dict | None:
         weight_g, price = min(weight_prices, key=lambda wp: wp[0])
     else:
         weight_g, price = None, None
-    return {"title": title, "price": price, "weight_g": weight_g}
+
+    desc_el = soup.select_one("div.item_desc_data")
+    flavor_notes = desc_el.get_text(strip=True) if desc_el else None
+    flavor_notes = flavor_notes or None
+
+    return {"title": title, "price": price, "weight_g": weight_g, "flavor_notes": flavor_notes}
 
 
 def build_record(item: dict) -> dict | None:
@@ -122,6 +134,7 @@ def build_record(item: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": item.get("flavor_notes"),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": item["price"],
