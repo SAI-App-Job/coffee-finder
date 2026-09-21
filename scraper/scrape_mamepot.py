@@ -35,6 +35,15 @@ NON_BEAN_KEYWORDSで除外する。
 {...}`のproduct.name/sales_price_including_tax/stock_numから商品名・
 価格・在庫を取得する(焙煎処 縁の木・豆香房・萌季屋・豆NAKANO・TRIBE
 COFFEEと同じ方式)。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: og:description/Descriptionメタタグは全商品共通の
+店舗紹介文(生成年・所在地等)で商品固有の情報を含まないため使用しない。
+代わりにdiv.expl_block(商品名見出し直下の説明ブロック)を使うと対象10件
+全てでテイスティング文が入っていることを確認した。「内容量：」「原産国：」
+等のスペックラベルや「酸味←○○●○○○○○→苦味」という酸味/苦味スケールが
+地続きで続くが、明確な区切りが無い短い構成のためfull-text-tolerance方針
+により全文をそのまま採用する。
 """
 
 import json
@@ -67,6 +76,15 @@ TRAILING_WEIGHT_PATTERN = re.compile(r"[\s　]*\d+\s*[gｇ]\s*$")
 REQUEST_HEADERS = {
     "User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"
 }
+
+
+def extract_flavor_notes(soup: BeautifulSoup) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    el = soup.select_one("div.expl_block")
+    if not el:
+        return None
+    text = el.get_text("\n", strip=True)
+    return text.strip() or None
 
 
 def fetch_page(url: str) -> BeautifulSoup:
@@ -132,6 +150,7 @@ def build_record(soup: BeautifulSoup, product_url: str) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": extract_flavor_notes(soup),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": int(price) if price is not None else None,
