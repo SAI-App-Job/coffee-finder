@@ -37,6 +37,21 @@ User-agent: *に対し/secure/・/cart/のみDisallow。それ以外は制限な
 実データ確認済み: 全12件が単一バリアント(200g、グラム数はoption1_valueの
 「200ｇ（2808円）」のような表記に含まれる)。挽き方違いのみでバリアントが
 分かれるため、最初のバリアントを代表として使う。
+
+【文字エンコーディングについて】
+実データ確認済み: レスポンスは実際にはEUC-JPで返される(Content-Type
+ヘッダーで確認済み)。既存実装ではfetch_page()内でresp.encoding="utf-8"
+を強制指定しているが、これはvar Colorme内のJSON(商品名等)が\\uXXXX形式の
+エスケープシーケンスでエンコードされておりASCII文字のみで構成される
+ため実害が無かった。しかしdiv.p-product-explain__body内のテイスティング
+文は生のHTML文字列のため、utf-8強制のままだと文字化けする。そのため
+flavor_notes取得専用にresp.encoding="euc-jp"で別途取得する。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: div.p-product-explain__bodyにテイスティング文・
+商品名の由来となったエピソード文が入っており(対象12件全て確認)、
+必ず「焙煎度合：」または「焙煎度合い：」で始まるスペック欄(品名/
+商品名/原産国名/賞味期限/保存方法等)が続く。その手前までを採用する。
 """
 
 import json
@@ -66,6 +81,7 @@ REQUEST_HEADERS = {
 
 COLORME_PATTERN = re.compile(r"var Colorme\s*=\s*(\{.*?\});", re.DOTALL)
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
+FLAVOR_STOP_PATTERN = re.compile(r"焙煎度合い?：")
 
 
 def fetch_page(url: str) -> BeautifulSoup:
@@ -73,6 +89,26 @@ def fetch_page(url: str) -> BeautifulSoup:
     resp.raise_for_status()
     resp.encoding = "utf-8"
     return BeautifulSoup(resp.text, "html.parser")
+
+
+def fetch_page_euc(url: str) -> BeautifulSoup:
+    resp = requests.get(url, headers=REQUEST_HEADERS, timeout=15)
+    resp.raise_for_status()
+    resp.encoding = "euc-jp"
+    return BeautifulSoup(resp.text, "html.parser")
+
+
+def extract_flavor_notes(product_url: str) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    soup = fetch_page_euc(product_url)
+    div = soup.select_one("div.p-product-explain__body")
+    if not div:
+        return None
+    text = div.get_text(strip=True)
+    m = FLAVOR_STOP_PATTERN.search(text)
+    if m:
+        text = text[: m.start()]
+    return text.strip() or None
 
 
 def fetch_pid_urls() -> list[str]:
@@ -141,6 +177,7 @@ def build_record(soup: BeautifulSoup, product_url: str) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": extract_flavor_notes(product_url),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": int(price) if price is not None else None,
