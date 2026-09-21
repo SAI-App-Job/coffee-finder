@@ -26,6 +26,11 @@ Unicode書法用小文字G(U+210A SCRIPT SMALL G)であり、半角/全角の「
 実データ確認済み(全11件): 全件が単一銘柄のブレンド/ストレートのコーヒー豆
 (200g)で、非対象商品(器具・グッズ等)は無かった。
 
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: div.description[itemprop="description"]にテイスティング
+文が直接入っている(対象11件全て確認)。価格・スペック等の混入は無い
+ため全文をそのまま採用する。
+
 robots.txt確認済み(2026-09時点): User-agent: *は/app/と/j/を制限するが、
 本スクレイパーが使う/ネットショップ/ページ自体・および商品情報が構造化
 されているHTMLは制限対象外(/app/module/webproduct/goto/のみ個別にAllow
@@ -73,6 +78,10 @@ def build_record(product_el) -> dict | None:
         return None
     title = name_el.get_text(strip=True)
 
+    desc_el = product_el.select_one('div.description[itemprop="description"]')
+    flavor_notes = desc_el.get_text(" ", strip=True) if desc_el else None
+    flavor_notes = flavor_notes or None
+
     price_el = product_el.select_one('[itemprop="offers"] [itemprop="price"]')
     price = None
     if price_el and price_el.get("content"):
@@ -115,6 +124,7 @@ def build_record(product_el) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": flavor_notes,
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": price,
