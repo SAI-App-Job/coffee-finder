@@ -16,6 +16,14 @@ User-agent: *に対し/secure/・/cart/のみDisallow。AhrefsBot等一部
 ■ドリップバッグ(単品ギフト)・◆ドリップパック２種(10g)が非対象。
 NON_BEAN_KEYWORDSで除外する。商品名が空の削除済みプレースホルダー
 レコードも除外する。残り8件(いずれも200g)を対象とする。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: og:descriptionは全商品共通の店舗紹介文で商品固有の
+情報を含まないため使用しない。代わりに商品詳細ページのdiv#detail内、
+div.shouhin_copy(キャッチコピー)から始まるテイスティング文+香り/コク/
+甘味/苦味/酸味の★評価を使うと対象8件全てで入っていることを確認した。
+末尾に「高鮮度保持袋」という見出しから始まる包装/保存に関する定型文が
+続くため、この見出しの直前で打ち切る。
 """
 
 import json
@@ -45,6 +53,24 @@ REQUEST_HEADERS = {
 NON_BEAN_KEYWORDS = ["袋", "ドリップパック", "ドリップバッグ"]
 COLORME_PATTERN = re.compile(r"var Colorme\s*=\s*(\{.*?\});", re.DOTALL)
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
+FLAVOR_STOP_PATTERN = re.compile(r"高鮮度保持袋")
+
+
+def extract_flavor_notes(soup: BeautifulSoup) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    detail = soup.select_one("div#detail")
+    if not detail:
+        return None
+    copy_el = detail.select_one("div.shouhin_copy")
+    catchphrase = copy_el.get_text(strip=True) if copy_el else ""
+    text = detail.get_text("\n", strip=True)
+    idx = text.find(catchphrase) if catchphrase else -1
+    if idx != -1:
+        text = text[idx:]
+    m = FLAVOR_STOP_PATTERN.search(text)
+    if m:
+        text = text[:m.start()]
+    return text.strip() or None
 
 
 def fetch_page(url: str) -> BeautifulSoup:
@@ -105,6 +131,7 @@ def build_record(soup: BeautifulSoup, product_url: str) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": extract_flavor_notes(soup),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": int(price) if price is not None else None,
