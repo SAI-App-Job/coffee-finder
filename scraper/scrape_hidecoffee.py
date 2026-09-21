@@ -24,6 +24,13 @@ robots.txt確認済み(2026-09時点): www.hidecoffee.com側はWordPress標準
 【在庫について】
 inventory_controlが"none"、stock_numは常にnull(kunikuni.py・麻布珈房と
 同じ運用)。商品名のテキストのみで在庫状態を判定する。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: div.item-txt-bodyに「【ロースト】<焙煎度>【特徴】
+<テイスティング文>酸味★★☆苦味★★☆コク★★☆【生産者】...」という
+定型構造が入っている(対象14件全て確認)。「【特徴】」の直後から
+「酸味★」直前までを採用する(その後に続く★評価・生産者/所在/標高/
+品種/精製等のスペック情報は除外)。
 """
 
 import json
@@ -60,6 +67,19 @@ REQUEST_HEADERS = {
 
 COLORME_JSON_PATTERN = re.compile(r"var\s+Colorme\s*=\s*(\{.*\});", re.DOTALL)
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
+FLAVOR_PATTERN = re.compile(r"【特徴】(.*?)(?=酸味★|\Z)", re.DOTALL)
+
+
+def extract_flavor_notes(soup: BeautifulSoup) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    body = soup.select_one("div.item-txt-body")
+    if not body:
+        return None
+    text = body.get_text(strip=True)
+    m = FLAVOR_PATTERN.search(text)
+    if not m:
+        return None
+    return m.group(1).strip() or None
 
 
 def fetch_page(url: str) -> BeautifulSoup:
@@ -83,7 +103,7 @@ def extract_colorme_product(soup: BeautifulSoup) -> dict | None:
     return None
 
 
-def build_record(product_url: str, colorme_product: dict, category_hint: str) -> dict:
+def build_record(product_url: str, colorme_product: dict, category_hint: str, soup: BeautifulSoup) -> dict:
     title = (colorme_product.get("name") or "").strip()
     parsed = parse_product(title)
     price = colorme_product.get("sales_price_including_tax")
@@ -113,6 +133,7 @@ def build_record(product_url: str, colorme_product: dict, category_hint: str) ->
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": extract_flavor_notes(soup),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": price,
@@ -133,7 +154,7 @@ def parse_product_detail(url: str, category_hint: str = "") -> dict:
             "non_bean": True,
             "product_url": url,
         }
-    return build_record(url, colorme_product, category_hint)
+    return build_record(url, colorme_product, category_hint, soup)
 
 
 def scrape_category_list(cid: str) -> list[dict]:
