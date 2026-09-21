@@ -13,7 +13,19 @@ GRP")。curl/python-requests等は個別にDisallow: /指定があるが、User-
 実データ確認済み: 全12件すべてが単一農園/産地のストレートコーヒー
 (デカフェ3種を含む)で、非対象商品は無い。重量表記も商品名に無く
 単一サイズ販売のため重量重複処理は不要。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: og:descriptionにテイスティング文が直接入っている
+(対象12件全て確認、うち1件は産地スペック情報のみでテイスティング語を
+含まないがそのまま採用する)。一部商品には「おすすめ焙煎度　ハイ
+浅煎り←□□■□□→深煎り」という店舗共通の焙煎度合い図(前後どちらの
+位置に挿入されるかは商品によって不定)、「味覚レベル」に続く★評価欄、
+「珈琲豆　コーヒー豆…」のような繰り返しキーワード/ハッシュタグの
+スパム的文言、「豆のままの販売になります。」「コメントいただければ
+粉にもできます。」という定型注意書きが混入するため、これらを除去する。
 """
+
+import re
 
 import requests
 from bs4 import BeautifulSoup
@@ -37,6 +49,26 @@ REQUEST_HEADERS = {
     "User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"
 }
 
+DIAGRAM_PATTERN = re.compile(r"おすすめ焙煎度[\s　]*\S*[\s　]*浅煎り←[□■\s　]*→深煎り")
+RATING_STOP_PATTERN = re.compile(r"味覚レベル")
+KEYWORD_SPAM_PATTERN = re.compile(r"#?(?:珈琲豆|コーヒー豆|コーヒー)(?:[\s　]*#?(?:珈琲豆|コーヒー豆|コーヒー)){2,}")
+NO_GRIND_NOTICE_PATTERN = re.compile(r"豆のままの販売になります。|コメントいただければ粉にもできます。")
+
+
+def extract_flavor_notes(description: str | None) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    if not description:
+        return None
+    text = DIAGRAM_PATTERN.sub("", description)
+    m = RATING_STOP_PATTERN.search(text)
+    if m:
+        text = text[: m.start()]
+    m = KEYWORD_SPAM_PATTERN.search(text)
+    if m:
+        text = text[: m.start()]
+    text = NO_GRIND_NOTICE_PATTERN.sub("", text)
+    return text.strip() or None
+
 
 def fetch_page(url: str) -> BeautifulSoup:
     resp = requests.get(url, headers=REQUEST_HEADERS, timeout=15)
@@ -51,7 +83,9 @@ def extract_og_fields(soup: BeautifulSoup) -> dict | None:
     title = title_el["content"].split(" | ")[0].strip()
     price_el = soup.select_one('meta[property="product:price:amount"]')
     price = int(float(price_el["content"])) if price_el and price_el.get("content") else None
-    return {"title": title, "price": price}
+    desc_el = soup.select_one('meta[property="og:description"]')
+    flavor_notes = extract_flavor_notes(desc_el["content"]) if desc_el and desc_el.get("content") else None
+    return {"title": title, "price": price, "flavor_notes": flavor_notes}
 
 
 def fetch_sitemap_urls() -> list[str]:
@@ -86,6 +120,7 @@ def build_record(item: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": item.get("flavor_notes"),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": item["price"],
@@ -115,7 +150,12 @@ def scrape_all_products() -> tuple[list[dict], list[dict]]:
             records.append(prev)
             continue
 
-        detail = build_record({"title": fields["title"], "price": fields["price"], "url": product_url})
+        detail = build_record({
+            "title": fields["title"],
+            "price": fields["price"],
+            "url": product_url,
+            "flavor_notes": fields.get("flavor_notes"),
+        })
         if detail is None:
             continue
         if detail.get("is_flavored"):
