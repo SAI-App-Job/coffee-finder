@@ -26,6 +26,12 @@ python-requests等は個別にDisallow: /指定があるが、User-agent: *ル�
 焙煎度違い3種、重量はいずれも150g×2袋=300g)。残り3件(デカフェラテベース・
 ナッツとチョコレート・カカオニブのキャラメリゼ)と配送方法選択用ダミー商品
 (クロネコヤマト発送)は非対象のためNON_BEAN_KEYWORDSで除外する。
+
+【flavor_notes(2026-09-22追記)】
+実データ確認済み: og:descriptionに対象3件全てで簡潔な紹介文が入っている。
+末尾に全件共通で「・シングルオリジン（品種おまかせ）もございます。・粉に
+挽いた状態での発送も承ります。...」という注文/配送案内の定型文が続くため、
+この直前で打ち切る。
 """
 
 import re
@@ -54,6 +60,7 @@ REQUEST_HEADERS = {
 NON_BEAN_KEYWORDS = ["ラテベース", "ナッツ", "キャラメリゼ", "発送"]
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]\s*[×xX]\s*(\d+)")
 WEIGHT_SINGLE_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
+FLAVOR_STOP_PATTERN = re.compile(r"・シングルオリジン")
 
 
 def fetch_page(url: str) -> BeautifulSoup:
@@ -70,7 +77,12 @@ def extract_og_fields(soup: BeautifulSoup) -> dict | None:
     title = title_el["content"].split(" | ")[0].strip()
     price_el = soup.select_one('meta[property="product:price:amount"]')
     price = int(float(price_el["content"])) if price_el and price_el.get("content") else None
-    return {"title": title, "price": price}
+    desc_el = soup.select_one('meta[property="og:description"]')
+    flavor_notes = desc_el["content"].strip() if desc_el and desc_el.get("content") else ""
+    m = FLAVOR_STOP_PATTERN.search(flavor_notes)
+    if m:
+        flavor_notes = flavor_notes[:m.start()].strip()
+    return {"title": title, "price": price, "flavor_notes": flavor_notes or None}
 
 
 def fetch_item_urls() -> list[str]:
@@ -114,6 +126,7 @@ def build_record(item: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": item.get("flavor_notes"),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": item["price"],
@@ -139,7 +152,12 @@ def scrape_all_products() -> tuple[list[dict], list[dict]]:
         title = fields["title"]
         if any(kw in title for kw in NON_BEAN_KEYWORDS):
             continue
-        all_items.append({"title": title, "price": fields["price"], "url": product_url})
+        all_items.append({
+            "title": title,
+            "price": fields["price"],
+            "url": product_url,
+            "flavor_notes": fields.get("flavor_notes"),
+        })
 
     records = []
     flavored_records = []
