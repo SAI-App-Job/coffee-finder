@@ -27,6 +27,13 @@ BeautifulSoupのbrタグ変換は効かない)。半角スペースに置換し�
 【在庫について】
 inventory_controlが"none"、stock_numは常にnull(kunikuni.py・麻布珈房と
 同じ運用)。商品名のテキストのみで在庫状態を判定する。
+
+【flavor_notes(2026-09-22追記)】
+実データ確認済み: 商品詳細ページのsection.product_descriptionに対象3件
+全てでキャッチコピー・紹介文・Roast Level・Flavor(コク/甘み/酸味/苦味/
+香りの星評価)が入っている。見出し「商品説明」(h2)は除去し、末尾に全件
+共通で「【保存方法・賞味期限】」以降(保存方法〜発送方法の定型文)が続く
+ため、この直前で打ち切る。
 """
 
 import json
@@ -56,6 +63,21 @@ REQUEST_HEADERS = {
 
 COLORME_JSON_PATTERN = re.compile(r"var\s+Colorme\s*=\s*(\{.*\});", re.DOTALL)
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
+FLAVOR_STOP_PATTERN = re.compile(r"【保存方法・賞味期限】")
+
+
+def extract_flavor_notes(soup: BeautifulSoup) -> str | None:
+    el = soup.select_one("section.product_description")
+    if not el:
+        return None
+    heading = el.select_one("h2")
+    if heading:
+        heading.decompose()
+    text = el.get_text("\n", strip=True)
+    m = FLAVOR_STOP_PATTERN.search(text)
+    if m:
+        text = text[:m.start()].strip()
+    return text or None
 
 
 def fetch_page(url: str) -> BeautifulSoup:
@@ -79,7 +101,7 @@ def extract_colorme_product(soup: BeautifulSoup) -> dict | None:
     return None
 
 
-def build_record(product_url: str, colorme_product: dict) -> dict:
+def build_record(product_url: str, colorme_product: dict, soup: BeautifulSoup) -> dict:
     raw_title = (colorme_product.get("name") or "").strip()
     title = re.sub(r"<br\s*/?>", " ", raw_title).strip()  # 理由はモジュールdocstring参照
     parsed = parse_product(title)
@@ -97,6 +119,7 @@ def build_record(product_url: str, colorme_product: dict) -> dict:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": extract_flavor_notes(soup),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": price,
@@ -135,7 +158,7 @@ def scrape_all_products() -> list[dict]:
             soup = fetch_page(item["product_url"])
             colorme_product = extract_colorme_product(soup)
             if colorme_product:
-                records.append(build_record(item["product_url"], colorme_product))
+                records.append(build_record(item["product_url"], colorme_product, soup))
         except requests.RequestException as e:
             print(f"[warn] 詳細ページ取得失敗: {item['product_url']} ({e})")
 
