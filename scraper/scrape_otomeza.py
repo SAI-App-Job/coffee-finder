@@ -33,6 +33,11 @@ parse_product()では産地を検出できない。そのため商品名の先�
 詳細ページへの個別アクセスは不要(WOODBERRY COFFEE・豆虎と同じ、
 一覧完結パターン)。バリエーションは「豆のまま(coffee beans)」と
 「粉(ground coffee)」の2種で価格は同額のため、豆のまま側を採用する。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: 各商品カードのdiv.description[itemprop="description"]
+に対象10件全てで英語のテイスティング文(短文)が入っており、注文/配送
+案内等の無関係な定型文の混入は無いため全文をそのまま採用する。
 """
 
 import json
@@ -85,6 +90,15 @@ def fetch_page(url: str) -> BeautifulSoup:
     resp = requests.get(url, headers=REQUEST_HEADERS, timeout=15)
     resp.raise_for_status()
     return BeautifulSoup(resp.text, "html.parser")
+
+
+def extract_flavor_notes(card) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    desc_el = card.select_one('div.description[itemprop="description"]')
+    if not desc_el:
+        return None
+    text = desc_el.get_text(" ", strip=True)
+    return text or None
 
 
 def detect_english_country(title: str) -> str | None:
@@ -158,6 +172,7 @@ def build_record(card) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": extract_flavor_notes(card),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": price,
