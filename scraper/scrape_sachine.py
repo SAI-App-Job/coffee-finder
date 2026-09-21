@@ -20,14 +20,22 @@ div.page_box.itemlist.without_pagerで終端を確認済み)。「ドリップ�
 コーヒー」(3)・「アイスコーヒー」(5)・「業務用コーヒー」(9)・「ギフト
 セット」(6)は対象外。
 
-【商品詳細ページを個別に取得しない理由】
+【商品詳細ページを個別に取得しない理由(産地・グレード判定について)】
 実データ確認済み: 商品詳細ページの説明文(div.item_desc_text)には産地・精選
 方法・品種等のラベル付き構造化データが一切無く、マーケティング文のみ
 (Denim bisの《産地構成》記法のようなブレンド内訳表記も無い)。一覧ページの
 情報(商品名・価格帯)だけで完結させ、産地・精選方法・グレード等はすべて
 商品名からcoffee_parser.parse_product()で判定する(例:「モカ　イルガチェフ」
 →地域名逆引きでエチオピア、「マンデリン ジェームス オンド リントン」→
-特定銘柄判定でインドネシア)。
+特定銘柄判定でインドネシア)。ただしflavor_notes取得のためには下記の通り
+詳細ページを個別に取得する。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: div.item_desc_textには構造化スペックこそ無いものの、
+対象9件全てで産地背景・テイスティング文・「【店主の焙煎メモ】」という
+焙煎担当者のコメントが入っていることを確認した。末尾に「コーヒーの保存
+について」という見出しから始まる保存方法・賞味期限の定型文が続くため、
+この見出しの直前で打ち切る。
 
 【在庫状態について】
 実データ確認済み: 一覧・詳細ページのいずれにも品切れ・終売を示す構造化要素が
@@ -75,6 +83,18 @@ LIST_CATEGORIES = {
 }
 
 PRICE_PATTERN = re.compile(r"([\d,]+)")
+FLAVOR_STOP_PATTERN = re.compile(r"コーヒーの保存について")
+
+
+def extract_flavor_notes(soup: BeautifulSoup) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    el = soup.select_one("div.item_desc_text")
+    if not el:
+        return None
+    text = el.get_text("\n", strip=True)
+    m = FLAVOR_STOP_PATTERN.search(text)
+    text = text[:m.start()] if m else text
+    return text.strip() or None
 
 
 def fetch_page(url: str) -> BeautifulSoup:
@@ -146,6 +166,7 @@ def build_record(item: dict) -> dict:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": item.get("flavor_notes"),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price_min": item.get("price_min"),
@@ -177,6 +198,12 @@ def scrape_all_products() -> tuple[list[dict], list[dict]]:
         ):
             records.append(prev)
             continue
+
+        try:
+            item["flavor_notes"] = extract_flavor_notes(fetch_page(product_url))
+        except requests.RequestException as e:
+            print(f"[warn] 詳細ページ取得失敗: {product_url} ({e})")
+        time.sleep(CRAWL_DELAY_SECONDS)
 
         detail = build_record(item)
         if detail.get("is_flavored"):
