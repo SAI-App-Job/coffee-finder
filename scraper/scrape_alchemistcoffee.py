@@ -19,6 +19,13 @@ scrape_alchemistcoffee.py
 
 robots.txt確認済み(2026-09時点): User-agent: *にAllow: /(lightboxクエリの
 み除外)、PetalBotのみ全面Disallow。一般クローラーへの制限なし。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: JSON-LD Productのdescriptionフィールドに対象6件全てで
+テイスティング文が入っている。先頭に「【今すぐご注文で、送料無料】」と
+いう販促文が付く場合、末尾に「*.....お豆の生産地、カッピングコメント
+など情報詳細が記載がされた特別カード付き」という同梱カードの案内が
+付く場合があるため、それぞれ除去する。
 """
 
 import json
@@ -47,6 +54,8 @@ NON_BEAN_KEYWORDS = ["ボトル", "ハリオ"]
 WEIGHT_PATTERN_KG = re.compile(r"(\d+(?:\.\d+)?)\s*kg", re.IGNORECASE)
 WEIGHT_PATTERN_G = re.compile(r"(\d+)\s*[gｇ]")
 JSONLD_PATTERN = re.compile(r'<script type="application/ld\+json">(.*?)</script>', re.DOTALL)
+FLAVOR_LEADING_PATTERN = re.compile(r"^【今すぐご注文で、送料無料】\s*")
+FLAVOR_STOP_PATTERN = re.compile(r"\*\.+お豆の生産地")
 
 
 def fetch_product_urls() -> list[str]:
@@ -106,6 +115,13 @@ def build_record(product_url: str, data: dict) -> dict | None:
     weight_g = parse_weight_g(title)
     stock_status = detect_stock_status(title, structural_out_of_stock)
 
+    flavor_notes = (data.get("description") or "").strip()
+    flavor_notes = FLAVOR_LEADING_PATTERN.sub("", flavor_notes)
+    m = FLAVOR_STOP_PATTERN.search(flavor_notes)
+    if m:
+        flavor_notes = flavor_notes[:m.start()]
+    flavor_notes = flavor_notes.strip() or None
+
     return {
         "shop_name": SHOP_INFO["name"],
         "raw_name": title,
@@ -116,6 +132,7 @@ def build_record(product_url: str, data: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": flavor_notes,
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": price,
