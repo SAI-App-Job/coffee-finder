@@ -53,11 +53,21 @@ BONMAC・BUNN・Franke・Egro・Dr.Coffee・カフィテス等の業務用コー
 コーヒーマシン/サイフォン/オートスチーマーのいずれかに分類されており、
 豆商品は全件product_type未設定(空文字列)。EQUIPMENT_PRODUCT_TYPESに
 一致する場合は非コーヒー豆として除外する)。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: body_htmlの先頭に商品固有のテイスティング文・産地/
+ブレンドコンセプトの説明が入っており(対象12件全て確認)、その後に
+必ず「<焙煎度名>ロースト（<roast> roast）<焙煎度カテゴリ>コーヒー」
+という見出し(例:「ライトロースト（light roast）中煎りコーヒー」)で
+始まる、焙煎度合いごとの店舗共通の一般論・焙煎行程・品質管理に関する
+定型文(複数の商品で同一焙煎度なら一字一句同じ文面)が続く。その手前
+までを採用する。
 """
 
 import re
 
 import requests
+from bs4 import BeautifulSoup
 
 from coffee_parser import parse_product, detect_stock_status
 
@@ -89,6 +99,17 @@ EQUIPMENT_PRODUCT_TYPES = {
     "オートスチーマー",
 }
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
+FLAVOR_STOP_PATTERN = re.compile(r"[\w一-龠ぁ-んァ-ヶー]*ロースト（[a-z]+\s*roast）")
+
+
+def extract_flavor_notes(body_html: str | None) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    soup = BeautifulSoup(body_html or "", "html.parser")
+    text = soup.get_text(" ", strip=True)
+    m = FLAVOR_STOP_PATTERN.search(text)
+    if m:
+        text = text[: m.start()]
+    return text.strip() or None
 
 
 def fetch_products() -> list[dict]:
@@ -157,6 +178,7 @@ def build_record(product: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": extract_flavor_notes(product.get("body_html")),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": price,
