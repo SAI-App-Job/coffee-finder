@@ -15,6 +15,11 @@ GRP")。curl/python-requests等は個別にDisallow: /指定があるが、User-
 少量詰め合わせ)・ドリップバッグ スマートギフト・ドリップバッグ25個/20個
 セット・今月のコーヒーセット(店主セレクト、毎月内容が変わるおまかせ品)が
 非対象。NON_BEAN_KEYWORDSで除外する。残り8件を対象とする。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: og:descriptionに対象8件全てで非常に充実したテイス
+ティング文(紹介文・★評価・風味のイメージ・店主コメント等)が入っており、
+末尾に「■発送について」で始まる配送案内の定型文が続くため打ち切る。
 """
 
 import re
@@ -42,6 +47,16 @@ REQUEST_HEADERS = {
 
 NON_BEAN_KEYWORDS = ["定期便", "お試しセット", "ドリップバッグ", "今月のコーヒーセット"]
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
+FLAVOR_STOP_PATTERN = re.compile(r"■発送について")
+
+
+def extract_flavor_notes(desc: str | None) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    if not desc:
+        return None
+    m = FLAVOR_STOP_PATTERN.search(desc)
+    text = desc[:m.start()] if m else desc
+    return text.strip() or None
 
 
 def fetch_page(url: str) -> BeautifulSoup:
@@ -59,7 +74,9 @@ def extract_og_fields(soup: BeautifulSoup) -> dict | None:
         return None
     price_el = soup.select_one('meta[property="product:price:amount"]')
     price = int(float(price_el["content"])) if price_el and price_el.get("content") else None
-    return {"title": title, "price": price}
+    desc_el = soup.select_one('meta[property="og:description"]')
+    flavor_notes = extract_flavor_notes(desc_el["content"]) if desc_el and desc_el.get("content") else None
+    return {"title": title, "price": price, "flavor_notes": flavor_notes}
 
 
 def fetch_sitemap_urls() -> list[str]:
@@ -110,6 +127,7 @@ def build_record(item: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": item.get("flavor_notes"),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": item["price"],
@@ -132,7 +150,12 @@ def scrape_all_products() -> tuple[list[dict], list[dict]]:
             continue
         if not fields:
             continue
-        all_items.append({"title": fields["title"], "price": fields["price"], "url": product_url})
+        all_items.append({
+            "title": fields["title"],
+            "price": fields["price"],
+            "flavor_notes": fields.get("flavor_notes"),
+            "url": product_url,
+        })
 
     canonical_items = pick_canonical_items(all_items)
 
