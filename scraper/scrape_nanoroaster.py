@@ -17,6 +17,11 @@ python-requests等は個別にDisallow: /指定があるが、User-agent: *ル�
 リキッドコーヒー")、生豆3kg小分け(卸売向け、6種、"Tracon"/"EltoCoffee"
 等の生豆ロット名)、福袋的なセット商品(2種)がコーヒー豆単品ではないため
 NON_BEAN_KEYWORDSで除外する。残りは単一銘柄・ブレンドの焙煎豆(100g)。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: JSON-LD Productのdescriptionフィールドに対象8件全てで
+日本語テイスティング文+産地スペック(+英語訳が付く場合あり)が入っており、
+注文/配送案内等の無関係な定型文の混入は無いため全文をそのまま採用する。
 """
 
 import json
@@ -109,6 +114,7 @@ def build_record(product_url: str, product: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": (product.get("description") or "").strip() or None,
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": price,
