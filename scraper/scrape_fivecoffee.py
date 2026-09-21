@@ -40,6 +40,13 @@ robots.txt確認済み(2026-09時点、https://www.fivecoffee.jp/robots.txt):
 【在庫について】
 実データ確認済み: 構造化された品切れフラグが見当たらないため、
 商品名のテキストのみで在庫状態を判定する。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: og:descriptionにテイスティング文が直接入っており
+(対象14件全て確認)、その後に必ず「国：<生産国>」で始まるスペック欄
+(エリア/農園/標高/品種/精製方法/焙煎度等)、続けて「■配送について」
+という発送方法に関する店舗共通の定型注意書きが地続きで入っている。
+「国：」の手前までを採用する。
 """
 
 import re
@@ -68,6 +75,16 @@ REQUEST_HEADERS = {
 
 NON_BEAN_KEYWORDS = ["ドリップバック", "水出しアイスコーヒー用バッグ", "CAFEC", "保存缶"]
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
+FLAVOR_STOP_PATTERN = re.compile(r"国：")
+
+
+def extract_flavor_notes(description: str | None) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    if not description:
+        return None
+    m = FLAVOR_STOP_PATTERN.search(description)
+    text = description[: m.start()] if m else description
+    return text.strip() or None
 
 
 def fetch_page(url: str) -> BeautifulSoup:
@@ -85,7 +102,10 @@ def extract_og_fields(soup: BeautifulSoup) -> dict | None:
     price_el = soup.select_one('meta[property="product:price:amount"]')
     price = int(float(price_el["content"])) if price_el and price_el.get("content") else None
 
-    return {"title": title, "price": price}
+    desc_el = soup.select_one('meta[property="og:description"]')
+    flavor_notes = extract_flavor_notes(desc_el["content"]) if desc_el and desc_el.get("content") else None
+
+    return {"title": title, "price": price, "flavor_notes": flavor_notes}
 
 
 def build_record(product_url: str, fields: dict) -> dict | None:
@@ -121,6 +141,7 @@ def build_record(product_url: str, fields: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": fields.get("flavor_notes"),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": fields["price"],
