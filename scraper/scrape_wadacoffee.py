@@ -34,6 +34,12 @@ sales_price_including_taxは最小重量(200g)バリアントの価格と一致�
 詰め合わせ)・「簡単なのに本格派　水出しアイスコーヒーパック」(水出し
 専用パック)・「ドリップパックコーヒー」(ドリップバッグ)・「店主おまかせ
 コーヒーセット」(福袋的セット)の4件が非対象。NON_BEAN_KEYWORDSで除外する。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: div.p-product-explain(先頭に「DETAIL」ラベルが付く
+場合あり)に対象9件全てでテイスティング文・産地背景が入っていることを
+確認した。一部商品は末尾に「**ご注意**」または「※赤いカラーのチャック
+袋」で始まる保存方法/配送方法の定型文が続くため打ち切る。
 """
 
 import json
@@ -63,6 +69,20 @@ REQUEST_HEADERS = {
 NON_BEAN_KEYWORDS = ["セット", "水出し", "ドリップパック", "ドリップバッグ", "おまかせ"]
 COLORME_PATTERN = re.compile(r"var Colorme\s*=\s*(\{.*?\});", re.DOTALL)
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
+FLAVOR_LEADING_PATTERN = re.compile(r"^DETAIL\s*")
+FLAVOR_STOP_PATTERN = re.compile(r"※赤いカラーのチャック袋|\*\*ご注意\*\*")
+
+
+def extract_flavor_notes(soup: BeautifulSoup) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    el = soup.select_one("div.p-product-explain")
+    if not el:
+        return None
+    text = el.get_text("\n", strip=True)
+    text = FLAVOR_LEADING_PATTERN.sub("", text)
+    m = FLAVOR_STOP_PATTERN.search(text)
+    text = text[:m.start()] if m else text
+    return text.strip() or None
 
 
 def fetch_page(url: str) -> BeautifulSoup:
@@ -115,7 +135,7 @@ def pick_min_price_weight(product: dict, price: int | None) -> int | None:
     return int(m.group(1)) if m else None
 
 
-def build_record(product_url: str, product: dict) -> dict | None:
+def build_record(product_url: str, product: dict, soup: BeautifulSoup) -> dict | None:
     title = (product.get("name") or "").strip()
     if not title or any(kw in title for kw in NON_BEAN_KEYWORDS):
         return None
@@ -148,6 +168,7 @@ def build_record(product_url: str, product: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": extract_flavor_notes(soup),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": price,
@@ -163,7 +184,7 @@ def parse_product_detail(url: str) -> dict | None:
     colorme_product = extract_colorme_product(soup)
     if not colorme_product:
         return None
-    return build_record(url, colorme_product)
+    return build_record(url, colorme_product, soup)
 
 
 def scrape_all_products() -> tuple[list[dict], list[dict]]:
