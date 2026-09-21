@@ -20,6 +20,13 @@ curl/python-requests等は個別にDisallow: /指定があるが、User-agent: *
 ドリップパック(10個/20個セット、ギフト箱有無問わず)・珈琲ギフト
 (100g×2/180g×2パックセット等の詰め合わせ)がNON_BEAN_KEYWORDSで除外される。
 残り6件(ストレート4種＋ブレンド2種、いずれも200g)を対象とする。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: og:descriptionに対象6件全てでテイスティング文が入って
+いる。末尾に「※ご購入の際には、豆の状態を選択してください。挽き豆を
+ご希望の場合は…」または「(ご注文の際は)豆のままか挽き豆（細挽き・中挽
+き・粗挽き）かお選びください。」という挽き方選択案内の定型文が続くため、
+この見出しの直前で打ち切る。
 """
 
 import re
@@ -47,6 +54,7 @@ REQUEST_HEADERS = {
 
 NON_BEAN_KEYWORDS = ["水出し", "ドリップパック", "ギフト"]
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
+FLAVOR_STOP_PATTERN = re.compile(r"※?ご購入の際には、豆の状態を|(?:ご注文の際は)?豆のままか挽き豆")
 
 
 def fetch_page(url: str) -> BeautifulSoup:
@@ -75,6 +83,13 @@ def build_record(soup: BeautifulSoup, product_url: str) -> dict | None:
     price_el = soup.select_one('meta[property="product:price:amount"]')
     price = int(float(price_el["content"])) if price_el and price_el.get("content") else None
 
+    desc_el = soup.select_one('meta[property="og:description"]')
+    flavor_notes = desc_el["content"].strip() if desc_el and desc_el.get("content") else ""
+    m = FLAVOR_STOP_PATTERN.search(flavor_notes)
+    if m:
+        flavor_notes = flavor_notes[:m.start()].strip()
+    flavor_notes = flavor_notes or None
+
     if parsed["is_flavored"]:
         return {
             "shop_name": SHOP_INFO["name"],
@@ -101,6 +116,7 @@ def build_record(soup: BeautifulSoup, product_url: str) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": flavor_notes,
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": price,
