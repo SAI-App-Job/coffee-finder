@@ -5900,3 +5900,13 @@
   3/3商品で新規取得、商品の増減なし。
 - 影響した既存データ: 3商品全件でflavor_notesを新規取得(9738商品、
   増減なし)。データセット全体でflavor_notesは8480→8483件に増加。
+
+## 総点検バッチ344: NORRY'S COFFEE(2026-09-22)
+
+- NORRY'S COFFEE(群馬県桐生市、BASE): og:descriptionに対象3件全てで
+  Country/Area/Farm/Variety/Process/Roast level/Flavorの構造化情報と
+  テイスティング文が入っている。注文/配送案内等の無関係な定型文の混入は
+  無いため全文をそのまま採用するflavor_notes抽出処理を新規実装した。
+  3/3商品で新規取得、商品の増減なし。
+- 影響した既存データ: 3商品全件でflavor_notesを新規取得(9738商品、
+  増減なし)。データセット全体でflavor_notesは8483→8486件に増加。
