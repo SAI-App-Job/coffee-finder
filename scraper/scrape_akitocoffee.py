@@ -24,12 +24,19 @@ AKITO COFFEE HOME【定期便】・3WAY BREW COFFEE BAG(ドリップバッグ)�
 価格)を持つ(「Leon Christianakis Geisha」のみDefault Titleの単一
 バリアント)。variants配列のgramsから最小重量(150g)を代表として採用
 する。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: body_htmlに対象7件全てでFlavor行+テイスティング文+
+産地/生産者/品種/精製方法等の詳細な農園紹介が入っている。うち3件は
+末尾に「※500gのご注文は下記の発送スケジュールとなっております。…」
+という配送案内の定型文が続くため、この見出しの直前で打ち切る。
 """
 
 import re
 import time
 
 import requests
+from bs4 import BeautifulSoup
 
 from coffee_parser import parse_product, detect_stock_status
 from previous_data import load_previous_products, is_unchanged
@@ -54,12 +61,23 @@ NON_BEAN_KEYWORDS = [
     "シロップ", "ディップスタイルコーヒー",
 ]
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
+FLAVOR_STOP_PATTERN = re.compile(r"※500gのご注文は")
 
 
 def fetch_products() -> list[dict]:
     resp = requests.get(PRODUCTS_JSON_URL, headers=REQUEST_HEADERS, timeout=20)
     resp.raise_for_status()
     return resp.json().get("products", [])
+
+
+def extract_flavor_notes(body_html: str) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    soup = BeautifulSoup(body_html or "", "html.parser")
+    text = soup.get_text("\n", strip=True)
+    m = FLAVOR_STOP_PATTERN.search(text)
+    if m:
+        text = text[:m.start()]
+    return text.strip() or None
 
 
 def pick_canonical_variant(variants: list[dict]) -> dict | None:
@@ -121,6 +139,7 @@ def build_record(product: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": extract_flavor_notes(product.get("body_html")),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": price,
