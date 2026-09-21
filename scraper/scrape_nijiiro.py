@@ -21,6 +21,11 @@ python-requests等は個別にDisallow: /指定があるが、User-agent: *ル�
 バッグは豆のまま除外)。「お試しセット」(3種詰め合わせ、豆・粉それぞれ)も
 単一銘柄ではないため除外する。残りは「（豆）」表記の単一銘柄・ブレンド
 (100g)のみ。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: og:descriptionに対象7件全てでテイスティング文・産地
+情報が入っており、注文/配送案内等の無関係な定型文の混入は無いため全文を
+そのまま採用する。
 """
 
 import re
@@ -64,7 +69,9 @@ def extract_og_fields(soup: BeautifulSoup) -> dict | None:
     title = title_el["content"].split(" | ")[0].strip()
     price_el = soup.select_one('meta[property="product:price:amount"]')
     price = int(float(price_el["content"])) if price_el and price_el.get("content") else None
-    return {"title": title, "price": price}
+    desc_el = soup.select_one('meta[property="og:description"]')
+    flavor_notes = desc_el["content"].strip() if desc_el and desc_el.get("content") else None
+    return {"title": title, "price": price, "flavor_notes": flavor_notes or None}
 
 
 def build_record(product_url: str, fields: dict) -> dict | None:
@@ -99,6 +106,7 @@ def build_record(product_url: str, fields: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": fields.get("flavor_notes"),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": fields["price"],
