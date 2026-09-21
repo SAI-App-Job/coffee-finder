@@ -19,12 +19,20 @@ robots.txt確認済み(2026-09時点): Shopify標準のrobots.txtで`Allow: /`
 実データ確認済み: 各商品のバリエーションは「重量(90g/180g)」×
 「形態(Beans（豆）/Powder（粉）)」の組み合わせ。挽いた粉ではなく
 豆のまま・最小重量(90g)のバリエーションを代表として採用する。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: body_htmlの先頭<p>にテイスティング文(ブレンドは
+産地背景込みの地続き文、ストレートは文中にスペック見出しが混在する
+場合もあるがそのまま採用)が入っている(対象14件全て確認)。続く
+<table>内に「カップ評価」行があり、Bitter Chocolate等の英語カップ
+評価語が入っているため、先頭<p>の文と重複しない場合のみ追記する。
 """
 
 import re
 import time
 
 import requests
+from bs4 import BeautifulSoup
 
 from coffee_parser import parse_product, detect_stock_status
 from previous_data import load_previous_products, is_unchanged
@@ -46,6 +54,38 @@ REQUEST_HEADERS = {
 
 TARGET_PRODUCT_TYPE = "焙煎豆"
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
+CUP_LABEL_PATTERN = re.compile(r"^カップ(評価)?[：:]?$")
+
+
+def extract_flavor_notes(body_html: str | None) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    soup = BeautifulSoup(body_html or "", "html.parser")
+    for br in soup.find_all("br"):
+        br.replace_with("\n")
+
+    first_p = soup.find("p")
+    narrative = first_p.get_text("\n", strip=True) if first_p else None
+
+    cup_text = None
+    table = soup.find("table")
+    if table:
+        for tr in table.find_all("tr"):
+            tds = tr.find_all("td")
+            if len(tds) >= 2:
+                label = tds[0].get_text(strip=True)
+                if CUP_LABEL_PATTERN.match(label):
+                    val = tds[1].get_text(" ", strip=True)
+                    if val:
+                        cup_text = val
+                    break
+
+    parts = []
+    if narrative:
+        parts.append(narrative)
+    if cup_text and (not narrative or cup_text not in narrative):
+        parts.append(cup_text)
+
+    return "\n".join(parts).strip() or None
 
 
 def fetch_products() -> list[dict]:
@@ -110,6 +150,7 @@ def build_record(product: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": extract_flavor_notes(product.get("body_html")),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": price,
