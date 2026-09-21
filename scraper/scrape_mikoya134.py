@@ -18,6 +18,12 @@ robots.txt確認済み(2026-09時点): 他のカラーミー店舗と同一の�
 【文字コード】EUC-JP(実データ確認済み、Content-Type: text/html;
 charset=EUC-JP)。他のカラーミー店舗と同じくresp.encodingを明示する。
 
+【文字コードの追加確認(2026-09-21、flavor_notes追加時)】実データ確認済み:
+一部商品の説明文に「㎞」等のJIS X 0213:2004拡張文字が含まれており、
+標準的な"euc-jp"コーデックではデコードできず文字化けすることを確認した。
+requestsのapparent_encodingが"euc_jis_2004"と判定していたことから、
+標準EUC-JPの完全な上位互換であるこのコーデックに変更し文字化けを解消した。
+
 【対象カテゴリについて】
 実データ確認済み(2026-09時点): 「スペシャリティ珈琲豆」(cbid=2632936)が
 唯一の単一銘柄コーヒー豆カテゴリで全9件。他のカテゴリ(LINEクーポン対象・
@@ -35,6 +41,11 @@ JSON変数`Colorme.product.variants`のoption1_value)。挽いていない「豆
 実際に課金される価格は構造化フィールド(option_price_including_tax)であり
 100gと同額になっている(店舗側のラベル更新漏れと見られるが、実売価格を
 正としてそのまま採用する)。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: div.p-product-explain__bodyに対象9件全てで「味覚特徴」
+見出し+テイスティング文・産地背景が入っており、注文/配送案内等の無関係
+な定型文の混入は無いため全文をそのまま採用する。
 """
 
 import json
@@ -69,8 +80,17 @@ WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
 def fetch_page(url: str) -> BeautifulSoup:
     resp = requests.get(url, headers=REQUEST_HEADERS, timeout=15)
     resp.raise_for_status()
-    resp.encoding = "euc-jp"  # 実データ確認済み(Content-Type: text/html; charset=EUC-JP)
+    resp.encoding = "euc_jis_2004"  # 理由はモジュールdocstring参照(EUC-JPの上位互換)
     return BeautifulSoup(resp.text, "html.parser")
+
+
+def extract_flavor_notes(soup: BeautifulSoup) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    el = soup.select_one("div.p-product-explain__body")
+    if not el:
+        return None
+    text = el.get_text("\n", strip=True)
+    return text.strip() or None
 
 
 def fetch_product_urls() -> list[str]:
@@ -117,7 +137,7 @@ def pick_canonical_variant(variants: list[dict]) -> dict | None:
     return pool[0] if pool else None
 
 
-def build_record(product_url: str, product: dict) -> dict | None:
+def build_record(product_url: str, product: dict, soup: BeautifulSoup) -> dict | None:
     title = (product.get("name") or "").strip()
     if not title:
         return None
@@ -160,6 +180,7 @@ def build_record(product_url: str, product: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": extract_flavor_notes(soup),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": price,
@@ -175,7 +196,7 @@ def parse_product_detail(url: str) -> dict | None:
     colorme_product = extract_colorme_product(soup)
     if not colorme_product:
         return None
-    return build_record(url, colorme_product)
+    return build_record(url, colorme_product, soup)
 
 
 def scrape_all_products() -> tuple[list[dict], list[dict]]:
