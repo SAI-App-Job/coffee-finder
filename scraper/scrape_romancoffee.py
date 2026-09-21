@@ -36,6 +36,15 @@ robots.txt確認済み(2026-09時点): shop-pro.jp標準のrobots.txtで、本
 実データ確認済み: 一覧ページに売り切れを示す構造化されたバッジ・
 クラスは見つからなかった(2026-09時点で確認した9件は全件购入可能)ため、
 商品名のテキストのみから判定する。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: og:description/Descriptionメタタグは100文字程度で
+切り詰められているため使用しない。代わりに商品詳細ページのdiv.product-
+explainを使うと、対象9件全てでスペック情報+テイスティング文(単一銘柄
+商品は「香味の特徴」という見出し付き)が入っていることを確認した。末尾に
+「＜取り扱い注意事項＞」(ブレンド商品)または「※コーヒー豆の画像は」
+(単一銘柄商品)で始まる保存方法/画像注記の定型文が続く場合があるため
+打ち切る。
 """
 
 import re
@@ -63,6 +72,18 @@ REQUEST_HEADERS = {
 
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
 PRICE_PATTERN = re.compile(r"([\d,]+)\s*円")
+FLAVOR_STOP_PATTERN = re.compile(r"※コーヒー豆の画像は|＜取り扱い注意事項＞")
+
+
+def extract_flavor_notes(soup: BeautifulSoup) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    el = soup.select_one("div.product-explain")
+    if not el:
+        return None
+    text = el.get_text("\n", strip=True)
+    m = FLAVOR_STOP_PATTERN.search(text)
+    text = text[:m.start()] if m else text
+    return text.strip() or None
 
 
 def fetch_page(url: str) -> BeautifulSoup:
@@ -125,6 +146,7 @@ def build_record(item: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": item.get("flavor_notes"),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": item["price"],
@@ -149,6 +171,11 @@ def scrape_all_products() -> tuple[list[dict], list[dict]]:
     records = []
     flavored_records = []
     for item in all_items.values():
+        try:
+            item["flavor_notes"] = extract_flavor_notes(fetch_page(item["url"]))
+        except requests.RequestException as e:
+            print(f"[warn] 詳細ページ取得失敗: {item['url']} ({e})")
+
         detail = build_record(item)
         if detail is None:
             continue
