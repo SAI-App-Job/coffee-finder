@@ -41,6 +41,11 @@ Disallow: /で本スクレイパーは該当しない)。
 辞書の挿入順により「トラジャ」が先にマッチし、designated_brand="トラジャ"
 として判定される(産地国自体はいずれもインドネシアで変わらないため実害は
 無い)。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: 商品詳細ページのdiv.item_descに短いテイスティング文が
+直接入っている(対象14件全て確認、価格・スペック等の混入なし)。全文を
+そのまま採用する。
 """
 
 import re
@@ -92,7 +97,11 @@ def extract_fields(soup: BeautifulSoup) -> dict | None:
     title = re.sub(r"\s+", " ", title_el["content"].strip())
     price_el = soup.select_one('meta[property="product:price:amount"]')
     price = int(float(price_el["content"])) if price_el and price_el.get("content") else None
-    return {"title": title, "price": price}
+    for br in soup.find_all("br"):
+        br.replace_with("\n")
+    desc_el = soup.select_one("div.item_desc")
+    flavor_notes = desc_el.get_text("\n", strip=True) if desc_el else None
+    return {"title": title, "price": price, "flavor_notes": flavor_notes or None}
 
 
 def base_name_and_weight(title: str) -> tuple[str, int | None]:
@@ -147,6 +156,7 @@ def build_record(item: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": item.get("flavor_notes"),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": item["price"],
@@ -169,7 +179,10 @@ def scrape_all_products() -> tuple[list[dict], list[dict]]:
             continue
         if not fields:
             continue
-        all_items.append({"title": fields["title"], "price": fields["price"], "url": product_url})
+        all_items.append({
+            "title": fields["title"], "price": fields["price"], "url": product_url,
+            "flavor_notes": fields.get("flavor_notes"),
+        })
 
     canonical_items = pick_canonical_items(all_items)
 
