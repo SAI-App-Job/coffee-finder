@@ -32,6 +32,14 @@ AA・モカ イルガチェフG1ナチュラル・マンデリン スペシャ�
 実データ確認済み: 商品名が「100g×2=200ｇ」のように内訳と合計の2つの
 重量を含む場合があるため、タイトル中の最後に出現する重量(=合計重量)を
 採用する。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: og:descriptionは3件で店舗名のみ(空同然)のため使用
+できないが、商品詳細ページのdiv(クラス名に"item-detail_description"を
+含む、BASEのハッシュ付与テーマ)内には対象7件全てでテイスティング文・
+産地紹介が入っていることを確認した。末尾に「☆焙煎後24時間以内に発送
+いたします。」という発送案内の定型文が続く場合があるため、この文言を
+除去する。
 """
 
 import re
@@ -62,12 +70,24 @@ NON_BEAN_KEYWORDS = [
     "きゃにすたー", "専用", "セット", "➕", "ギフト",
 ]
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
+DESCRIPTION_CLASS_PATTERN = re.compile(r"item-detail_description")
+FLAVOR_STOP_PATTERN = re.compile(r"☆焙煎後24時間以内に発送いたします。")
 
 
 def fetch_page(url: str) -> BeautifulSoup:
     resp = requests.get(url, headers=REQUEST_HEADERS, timeout=15)
     resp.raise_for_status()
     return BeautifulSoup(resp.text, "html.parser")
+
+
+def extract_flavor_notes(soup: BeautifulSoup) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    el = soup.find(["div", "p"], class_=DESCRIPTION_CLASS_PATTERN)
+    if not el:
+        return None
+    text = el.get_text(strip=True)
+    text = FLAVOR_STOP_PATTERN.sub("", text)
+    return text.strip() or None
 
 
 def extract_og_fields(soup: BeautifulSoup) -> dict | None:
@@ -79,7 +99,7 @@ def extract_og_fields(soup: BeautifulSoup) -> dict | None:
         return None
     price_el = soup.select_one('meta[property="product:price:amount"]')
     price = int(float(price_el["content"])) if price_el and price_el.get("content") else None
-    return {"title": title, "price": price}
+    return {"title": title, "price": price, "flavor_notes": extract_flavor_notes(soup)}
 
 
 def fetch_sitemap_urls() -> list[str]:
@@ -116,6 +136,7 @@ def build_record(item: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": item.get("flavor_notes"),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": item["price"],
@@ -138,7 +159,12 @@ def scrape_all_products() -> tuple[list[dict], list[dict]]:
             continue
         if not fields:
             continue
-        all_items.append({"title": fields["title"], "price": fields["price"], "url": product_url})
+        all_items.append({
+            "title": fields["title"],
+            "price": fields["price"],
+            "flavor_notes": fields.get("flavor_notes"),
+            "url": product_url,
+        })
 
     records = []
     flavored_records = []
