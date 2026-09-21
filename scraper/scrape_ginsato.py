@@ -29,6 +29,16 @@ ShopServe標準設定で、本スクレイパーが使う商品ページ・カ�
 商品のバリエーションであることを商品説明で確認済み(実質的に同一の
 オリジナルブレンド200gを指す)。重複を避けるため、送料込み価格ではない
 通常版(/SHOP/coffee.html)のみを対象とする。
+
+【flavor_notes(2026-09-22追記)】
+実データ確認済み: 商品ページの2つ目のdiv.description(見出し「徳島焙煎
+工房　各種ブレンドの特徴」)に、対象商品(レギュラー珈琲/オリジナル
+ブレンド)を含む店舗の複数ブレンドの説明が並記されている。先頭の
+「深煎りで徳島焙煎工房の基本ブランドです」と明記された1件目
+(コロンビア＋ブラジルベース)が対象商品(基本ブランド=レギュラー珈琲)に
+対応すると判断し、見出し2行を除去した上で、2件目の「焙煎度★」見出し(他の銘柄の説明。
+続く春夏秋冬の季節限定ブレンドの説明もこの後に続く)が現れる直前で
+打ち切り、1件目の説明のみを残す。
 """
 
 import re
@@ -57,6 +67,20 @@ REQUEST_HEADERS = {
 PRODUCT_URL = "https://gin-sato.jp/SHOP/coffee.html"
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
 PRICE_PATTERN = re.compile(r"([\d,]+)")
+FLAVOR_LEADING_PATTERN = re.compile(r"^徳島焙煎工房-COFFEE＆BEANS-\n徳島焙煎工房\s*各種ブレンドの特徴\n")
+FLAVOR_HEADING_PATTERN = re.compile(r"焙煎度★+☆*")
+
+
+def extract_flavor_notes(soup: BeautifulSoup) -> str | None:
+    divs = soup.select("div.description")
+    if len(divs) < 2:
+        return None
+    text = divs[1].get_text("\n", strip=True)
+    text = FLAVOR_LEADING_PATTERN.sub("", text)
+    matches = list(FLAVOR_HEADING_PATTERN.finditer(text))
+    if len(matches) >= 2:
+        text = text[:matches[1].start()].strip()
+    return text or None
 
 
 def fetch_page(url: str) -> BeautifulSoup:
@@ -112,6 +136,7 @@ def build_record(soup: BeautifulSoup, product_url: str) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": extract_flavor_notes(soup),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": price,
