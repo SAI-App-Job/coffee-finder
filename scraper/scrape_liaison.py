@@ -35,6 +35,12 @@ NON_BEAN_KEYWORDSの「ドリップ」で除外する。残り2件
 (「リエゾンブレンド　150g ×2袋」「ブラジルサントスNo.2　150g×2袋」)
 を対象とする。いずれも150g×2袋(合計300g)の梱包だが、単一銘柄の
 豆売り商品であるため対象に含める。
+
+【flavor_notes(2026-09-22追記)】
+実データ確認済み: div.mainTxt(又吉コーヒー園と同じxaas3.jp独自ASP
+テンプレート)に対象2件全てで紹介文・原産地・テイスティング文が入って
+いる。注文/配送案内等の無関係な定型文の混入は無いため全文をそのまま
+採用する。
 """
 
 import re
@@ -91,6 +97,12 @@ def extract_title(soup: BeautifulSoup) -> str:
     return title_el.get_text(strip=True) if title_el else ""
 
 
+def extract_flavor_notes(soup: BeautifulSoup) -> str | None:
+    el = soup.select_one("div.mainTxt")
+    text = el.get_text("\n", strip=True) if el else ""
+    return text or None
+
+
 def build_record(soup: BeautifulSoup, product_url: str) -> dict | None:
     title = extract_title(soup)
     if not title or any(kw in title for kw in NON_BEAN_KEYWORDS):
@@ -133,6 +145,7 @@ def build_record(soup: BeautifulSoup, product_url: str) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": extract_flavor_notes(soup),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": price,
