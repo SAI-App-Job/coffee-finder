@@ -23,6 +23,13 @@ NON_BEAN_KEYWORDSで除外する。
 【原産国について】
 実データ確認済み: 商品名が「Luzia -BRAZIL-」のように農園名+英語国名の構成で、
 coffee_parser.ORIGIN_COUNTRY_KEYWORDS_ENが英語国名を検出する。
+
+【flavor_notes(2026-09-22追記)】
+実データ確認済み: og:descriptionに対象4件全てで極めて詳細なテイスティング
+文・農園情報・抽出レシピ等が入っている。1件(KARUMANDI-KENYA)のみ末尾に
+「※クリックポストで送れる豆量は300gまでです。...」という配送方法の
+定型文が続くため、この直前で打ち切る(他3件には該当箇所なし)。それ以外の
+無関係な定型文の混入は無いため全文をそのまま採用する。
 """
 
 import re
@@ -51,6 +58,7 @@ REQUEST_HEADERS = {
 NON_BEAN_KEYWORDS = ["ドリップバッグ", "ドリップバック"]
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
 FIXED_WEIGHT_G = 150  # 理由はモジュールdocstring参照
+FLAVOR_STOP_PATTERN = re.compile(r"※クリックポストで送れる")
 
 
 def fetch_page(url: str) -> BeautifulSoup:
@@ -78,6 +86,12 @@ def build_record(soup: BeautifulSoup, product_url: str) -> dict | None:
 
     price_el = soup.select_one('meta[property="product:price:amount"]')
     price = int(float(price_el["content"])) if price_el and price_el.get("content") else None
+    desc_el = soup.select_one('meta[property="og:description"]')
+    flavor_notes = desc_el["content"].strip() if desc_el and desc_el.get("content") else ""
+    m = FLAVOR_STOP_PATTERN.search(flavor_notes)
+    if m:
+        flavor_notes = flavor_notes[:m.start()].strip()
+    flavor_notes = flavor_notes or None
 
     if parsed["is_flavored"]:
         return {
@@ -105,6 +119,7 @@ def build_record(soup: BeautifulSoup, product_url: str) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": flavor_notes,
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": price,
