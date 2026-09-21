@@ -27,6 +27,11 @@ COFFEE」はドリップバッグ、「OTHERS」はCOE入賞豆(完売)・水出
 (例:「¥1,296」)から重量・価格を取得できる。最小重量のSKUを代表価格として
 採用する(他のWelcart店舗フォレスト自家焙煎コーヒー豆店と同じ「デフォルト
 =最小重量」方針)。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: div.item_content > pにテイスティング文が直接入って
+おり(対象12件全て確認)、価格・スペック等の混入は無いため全文をそのまま
+採用する。
 """
 
 import re
@@ -55,6 +60,15 @@ REQUEST_HEADERS = {
 NON_BEAN_KEYWORDS = ["セット"]
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
 PRICE_PATTERN = re.compile(r"([\d,]+)")
+
+
+def extract_flavor_notes(soup: BeautifulSoup) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    p_el = soup.select_one("div.item_content p")
+    if not p_el:
+        return None
+    text = p_el.get_text(strip=True)
+    return text or None
 
 
 def fetch_page(url: str) -> BeautifulSoup:
@@ -150,6 +164,7 @@ def parse_product_detail(url: str, list_title: str) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": extract_flavor_notes(soup),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": canonical["price"] if canonical else None,
