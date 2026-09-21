@@ -27,11 +27,17 @@ DB OTOKU packも含む)のため非対象。残り4件(サイアムブルーム�
 【重量について】
 実データ確認済み: variants[].gramsは全商品で0(未設定)のため使用できず、
 商品名末尾の「200g」等の表記から重量を取得する。
+
+【flavor_notes(2026-09-22追記)】
+実データ確認済み: body_htmlに対象4件全てで産地・精製方法・テイスティング
+文が入っている。注文/配送案内等の無関係な定型文の混入は無いため全文を
+そのまま採用する。
 """
 
 import re
 
 import requests
+from bs4 import BeautifulSoup
 
 from coffee_parser import parse_product, detect_stock_status
 
@@ -67,6 +73,11 @@ def base_name_and_weight(title: str) -> tuple[str, int | None]:
     weight_g = int(weight_m.group(1)) if weight_m else None
     base = TRAILING_WEIGHT_PATTERN.sub("", title).strip()
     return base, weight_g
+
+
+def extract_flavor_notes(body_html: str) -> str | None:
+    text = BeautifulSoup(body_html or "", "html.parser").get_text("\n", strip=True)
+    return text or None
 
 
 def build_record(product: dict) -> dict | None:
@@ -115,6 +126,7 @@ def build_record(product: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": extract_flavor_notes(product.get("body_html")),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": price,
