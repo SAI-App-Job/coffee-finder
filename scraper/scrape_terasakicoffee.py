@@ -19,12 +19,18 @@ robots.txt確認済み(2026-09時点): Shopify標準のrobots.txtでAllow: /
 【重量バリエーションについて】
 実データ確認済み: 各銘柄が100g/250g/1kgの3バリアントを持つ。
 variants配列のgramsから最小重量(100g)を代表として採用する。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: body_htmlに対象7件全てで農園紹介・精製方法の詳細な
+解説文が入っている。注文/配送案内等の無関係な定型文の混入は無いため
+全文をそのまま採用する。
 """
 
 import re
 import time
 
 import requests
+from bs4 import BeautifulSoup
 
 from coffee_parser import parse_product, detect_stock_status
 from previous_data import load_previous_products, is_unchanged
@@ -114,6 +120,7 @@ def build_record(product: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": BeautifulSoup(product.get("body_html") or "", "html.parser").get_text("\n", strip=True) or None,
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": price,
