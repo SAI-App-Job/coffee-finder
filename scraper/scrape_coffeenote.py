@@ -46,6 +46,13 @@ scrape_trunkcoffee.pyと同じロジック)。この方式は「定期便｜300g
 Decafe")と語順が異なり、単純な基準名グルーピングでは別商品として扱われて
 しまう。TITLE_ALIASESで100g版のタイトルを200g/500g版と同じ基準名に
 正規化してから重複排除する。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: og:descriptionに対象8件全てでテイスティング文が入って
+おり(単一銘柄は【プロフィール】【tastingnote】等のラベル付きスペック+
+<コーヒーの特徴>の物語文、ブレンドは<プロフィール>+<ブレンドのイメージ>
+の物語文)、注文/配送案内等の無関係な定型文の混入は無いため全文をそのまま
+採用する。
 """
 
 import re
@@ -109,7 +116,9 @@ def extract_og_fields(soup: BeautifulSoup) -> dict | None:
 
     price_el = soup.select_one('meta[property="product:price:amount"]')
     price = int(float(price_el["content"])) if price_el and price_el.get("content") else None
-    return {"title": title, "price": price}
+    desc_el = soup.select_one('meta[property="og:description"]')
+    flavor_notes = desc_el["content"].strip() if desc_el and desc_el.get("content") else None
+    return {"title": title, "price": price, "flavor_notes": flavor_notes or None}
 
 
 def build_group_key(title: str) -> str:
@@ -160,6 +169,7 @@ def build_record(item: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": item.get("flavor_notes"),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": item["price"],
@@ -182,7 +192,12 @@ def scrape_all_products() -> tuple[list[dict], list[dict]]:
             continue
         if not fields:
             continue
-        all_items.append({"title": fields["title"], "price": fields["price"], "url": product_url})
+        all_items.append({
+            "title": fields["title"],
+            "price": fields["price"],
+            "flavor_notes": fields.get("flavor_notes"),
+            "url": product_url,
+        })
 
     canonical_items = pick_canonical_items(all_items)
 
