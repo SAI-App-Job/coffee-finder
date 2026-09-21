@@ -50,6 +50,11 @@ robots.txt確認済み(2026-09時点): 標準的なWordPressのrobots.txtで/wp-
 該当なし。この店舗の商品ページは1商品1URLで、100gあたり単価のみが掲載
 される構成のため、他店舗のような同一銘柄の複数重量商品(200g/500g等の
 別URL)への重複排除処理は不要。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: og:descriptionにテイスティング文またはネーミングの
+由来となったエピソード文が直接入っており(対象12件全て確認)、価格・
+スペック等の混入は無いため全文をそのまま採用する。
 """
 
 import re
@@ -81,6 +86,7 @@ NON_BEAN_KEYWORDS = ["ドリップバッグ", "水出しコーヒーバッグ"]
 ITEM_URL_PATTERN = re.compile(r"https://tomitaya\.cc/item/\d{5}/")
 PRICE_PATTERN = re.compile(r'class="red_t">￥(\d+)</span>\s*/100g')
 SOLDOUT_PATTERN = re.compile(r'class="soldout_text">\s*完売しました\s*</p>')
+DESCRIPTION_PATTERN = re.compile(r'<meta property="og:description" content="([^"]*)"')
 UNIT_WEIGHT_G = 100  # 理由はモジュールdocstring参照(100gあたり単価表示)
 
 
@@ -120,6 +126,9 @@ def build_record(product_url: str) -> dict | None:
     price = int(price_matches[0]) if price_matches else None
     structural_out_of_stock = bool(SOLDOUT_PATTERN.search(html)) or price is None
 
+    desc_m = DESCRIPTION_PATTERN.search(html)
+    flavor_notes = desc_m.group(1).strip() if desc_m and desc_m.group(1).strip() else None
+
     if parsed["is_flavored"]:
         return {
             "shop_name": SHOP_INFO["name"],
@@ -143,6 +152,7 @@ def build_record(product_url: str) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": flavor_notes,
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": price,
