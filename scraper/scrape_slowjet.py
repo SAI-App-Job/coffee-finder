@@ -18,8 +18,15 @@ python-requests等は個別にDisallow: /指定があるが、User-agent: *ル�
 
 【非コーヒー豆商品の除外について】
 実データ確認済み(sitemap.xml上15件): トートバッグ・エプロン・キャップ・
-Tシャツ・タンブラー等のグッズ、ドリップバッグがコーヒー豆単品ではないため
-NON_BEAN_KEYWORDSで除外する。残りはブレンド3種+ストレート3種程度。
+Tシャツ・タンブラー・キャニスター(密閉缶)等のグッズ、ドリップバッグが
+コーヒー豆単品ではないためNON_BEAN_KEYWORDSで除外する。残りはブレンド
+3種+ストレート4種の計7件(2026-09-21再確認時点)。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: og:descriptionに対象7件全てでテイスティング文が入って
+おり(ブレンドは物語文、ストレート豆は【国・地域】【フレーバー】等の
+ラベル付きスペック)、注文/配送案内等の無関係な定型文の混入は無いため
+全文をそのまま採用する。
 """
 
 import re
@@ -46,7 +53,10 @@ REQUEST_HEADERS = {
     "User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"
 }
 
-NON_BEAN_KEYWORDS = ["TOTE", "エプロン", "cap", "CAP", "T-SHIRTS", "タンブラー", "ドリップバッグ", "パネル"]
+NON_BEAN_KEYWORDS = [
+    "TOTE", "エプロン", "cap", "CAP", "T-SHIRTS", "タンブラー", "ドリップバッグ", "パネル",
+    "キャニスター",
+]
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
 
 
@@ -63,7 +73,9 @@ def extract_og_fields(soup: BeautifulSoup) -> dict | None:
     title = title_el["content"].split(" | ")[0].strip()
     price_el = soup.select_one('meta[property="product:price:amount"]')
     price = int(float(price_el["content"])) if price_el and price_el.get("content") else None
-    return {"title": title, "price": price}
+    desc_el = soup.select_one('meta[property="og:description"]')
+    flavor_notes = desc_el["content"].strip() if desc_el and desc_el.get("content") else None
+    return {"title": title, "price": price, "flavor_notes": flavor_notes or None}
 
 
 def build_record(product_url: str, fields: dict) -> dict | None:
@@ -98,6 +110,7 @@ def build_record(product_url: str, fields: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": fields.get("flavor_notes"),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": fields["price"],
