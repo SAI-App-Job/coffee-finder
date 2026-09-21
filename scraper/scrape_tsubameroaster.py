@@ -36,6 +36,18 @@ p.name>a(商品名・URL)、p.price(「販売価格:X円（税込）」形式、
 場合は最初が通常価格)、number欄の在庫切れ画像(alt="在庫切れボタン")が
 構造化されている。ページネーションはCategory 1の場合1ページ(全13件)で
 収まるため追加対応は行わない。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: 商品詳細ページは自由記述のページビルダー構成で、
+共通のCSSクラスを持つ説明要素が無い。代わりに、テキスト全体から(1)商品名
+が2回目に出現した直後～「販売価格」出現前までのブロックA(div.mainTxt相当
+の冒頭紹介文)、(2)「ツイート」出現後～「関連商品」出現前までのブロックB
+(価格・購入UI・SNS共有等の定型UIの後に続く産地スペック・追加の紹介文)、
+の2ブロックを抽出して結合する方式とした。対象9件全てでテイスティング
+文・産地背景・スペック情報が入っていることを確認済み。ランキングバッジ
+(「第1位」等)や型番等の軽微なノイズが残る場合があるが、ページ構成が
+商品ごとに大きく異なりこれ以上のクリーンな分離が困難なため、
+full-text-tolerance方針により許容する。
 """
 
 import re
@@ -66,6 +78,30 @@ NON_BEAN_KEYWORDS = [
 ]
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
 PRICE_PATTERN = re.compile(r"販売価格[：:]\s*([\d,]+)\s*円")
+DETAIL_PRICE_PATTERN = re.compile(r"販売価格")
+TWEET_PATTERN = re.compile(r"ツイート")
+RELATED_PATTERN = re.compile(r"関連商品")
+
+
+def extract_flavor_notes(soup: BeautifulSoup, raw_name: str) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    text = soup.get_text("\n", strip=True)
+    occurrences = [m.start() for m in re.finditer(re.escape(raw_name), text)]
+    block_a = ""
+    if len(occurrences) >= 2:
+        start_a = occurrences[1] + len(raw_name)
+        price_m = DETAIL_PRICE_PATTERN.search(text, start_a)
+        if price_m:
+            block_a = text[start_a:price_m.start()].strip()
+
+    block_b = ""
+    tweet_m = TWEET_PATTERN.search(text)
+    related_m = RELATED_PATTERN.search(text)
+    if tweet_m and related_m and related_m.start() > tweet_m.end():
+        block_b = text[tweet_m.end():related_m.start()].strip()
+
+    parts = [p for p in (block_a, block_b) if p]
+    return "\n".join(parts) if parts else None
 
 
 def fetch_page(url: str) -> BeautifulSoup:
@@ -137,6 +173,7 @@ def build_record(item: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": item.get("flavor_notes"),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": item["price"],
@@ -153,6 +190,13 @@ def scrape_all_products() -> tuple[list[dict], list[dict]]:
     records = []
     flavored_records = []
     for item in items:
+        title = item["raw_name"]
+        if title and not any(kw in title for kw in NON_BEAN_KEYWORDS):
+            try:
+                item["flavor_notes"] = extract_flavor_notes(fetch_page(item["product_url"]), title)
+            except requests.RequestException as e:
+                print(f"[warn] 詳細ページ取得失敗: {item['product_url']} ({e})")
+
         detail = build_record(item)
         if detail is None:
             continue
