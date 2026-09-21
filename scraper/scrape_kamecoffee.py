@@ -21,6 +21,18 @@ GRP")。curl/python-requests等は個別にDisallow: /指定があるが、User-
 ボックス・ハリオ/オリガミ/カリタ製のドリッパー・ペーパーフィルター
 (器具)・おまかせ4種セット・カフェオレベース各種・進物ギフト各種・
 水出しアイスコーヒーパックが非対象。NON_BEAN_KEYWORDSで除外する。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: og:descriptionに商品名・焙煎度・「【産地】」等の
+【】ラベル付きスペック情報とテイスティング文が明確な区切り記号無しで
+地続きに入っている(対象11件全て確認、スペック値とテイスティング文の
+境界を汎用正規表現で切り分けるのは困難なため、他店の「地続きの背景
+説明とテイスティング文が混在する場合は全文を採用する」方針に準じ、
+スペック情報が混在したまま採用する)。末尾には店舗の新旧テンプレートに
+より「【ご購入商品に関して】」または「「粉」を選択のお客様は備考欄に
+使用する器具をご記入いただければ挽き具合を調整いたします。」のいずれか
+(1商品につきどちらか一方のみ出現)で始まる発送・梱包に関する店舗共通の
+定型注意書きが続くため、これらの手前までを採用する。
 """
 
 import re
@@ -52,6 +64,16 @@ NON_BEAN_KEYWORDS = [
 ]
 DISCOUNT_PREFIX_PATTERN = re.compile(r"^【[\d０-９]+[%％]OFF】", re.IGNORECASE)
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
+FLAVOR_STOP_PATTERN = re.compile(r"【ご購入商品に関して】|「粉」を選択のお客様は備考欄に使用する器具")
+
+
+def extract_flavor_notes(description: str | None) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    if not description:
+        return None
+    m = FLAVOR_STOP_PATTERN.search(description)
+    text = description[: m.start()] if m else description
+    return text.strip() or None
 
 
 def fetch_page(url: str) -> BeautifulSoup:
@@ -69,7 +91,9 @@ def extract_og_fields(soup: BeautifulSoup) -> dict | None:
         return None
     price_el = soup.select_one('meta[property="product:price:amount"]')
     price = int(float(price_el["content"])) if price_el and price_el.get("content") else None
-    return {"title": title, "price": price}
+    desc_el = soup.select_one('meta[property="og:description"]')
+    flavor_notes = extract_flavor_notes(desc_el["content"]) if desc_el and desc_el.get("content") else None
+    return {"title": title, "price": price, "flavor_notes": flavor_notes}
 
 
 def fetch_sitemap_urls() -> list[str]:
@@ -121,6 +145,7 @@ def build_record(item: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": item.get("flavor_notes"),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": item["price"],
@@ -143,7 +168,12 @@ def scrape_all_products() -> tuple[list[dict], list[dict]]:
             continue
         if not fields:
             continue
-        all_items.append({"title": fields["title"], "price": fields["price"], "url": product_url})
+        all_items.append({
+            "title": fields["title"],
+            "price": fields["price"],
+            "url": product_url,
+            "flavor_notes": fields.get("flavor_notes"),
+        })
 
     canonical_items = pick_canonical_items(all_items)
 
