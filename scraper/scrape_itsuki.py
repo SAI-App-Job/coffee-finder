@@ -16,12 +16,19 @@ robots.txt確認済み(2026-09時点): User-agent: *に対し/wp-admin/のみDis
 ものの中身が空(WordPress側の仕様上ページリンク自体は生成されるが商品0件)
 であることを確認済みで、3件が実際の全商品数。
 
-【商品説明文が存在しない点について】
-実データ確認済み(3件全件): JSON-LDのdescriptionフィールドが空文字列で、
-商品詳細ページ本体にも商品説明・産地情報等のテキストコンテンツが一切無い
-(価格・重量バリエーションの選択肢と「カートに入れる」ボタンのみ)。そのため
-産地・精選方法・グレード等はすべて商品名からcoffee_parser.parse_product()
-で判定する(例:「スマトラ　マンデリン」→特定銘柄判定でインドネシア)。
+【商品説明文について】
+実データ再確認済み(2026-09-22時点、3件全件): 本スクレイパー新規作成時は
+JSON-LDのdescriptionフィールドが空文字列であることのみ確認していたが、
+商品詳細ページ本体にはdl.c-detail-data内のdd.c-detail-data__desc(見出し
+「商品説明」)に産地・焙煎度・テイスティング文を含む説明文が存在すること
+を確認した(店舗側が後日追加したと見られる)。産地・精選方法・グレード等は
+従来通り商品名からcoffee_parser.parse_product()で判定する(例:「スマトラ
+　マンデリン」→特定銘柄判定でインドネシア)。
+
+【flavor_notes(2026-09-22追記)】
+実データ確認済み: dd.c-detail-data__descに対象3件全てで産地・焙煎度・
+テイスティング文が入っている。注文/配送案内等の無関係な定型文の混入は
+無いため全文をそのまま採用する。
 
 【重量・価格バリエーションについて】
 実データ確認済み: WooCommerceの標準的な変動商品(variable product)で、
@@ -64,6 +71,12 @@ REQUEST_HEADERS = {
 }
 
 GRAM_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
+
+
+def extract_flavor_notes(soup: BeautifulSoup) -> str | None:
+    el = soup.select_one("dd.c-detail-data__desc")
+    text = el.get_text("\n", strip=True) if el else ""
+    return text or None
 
 
 def fetch_page(url: str) -> BeautifulSoup:
@@ -151,6 +164,7 @@ def build_record(soup: BeautifulSoup, product_url: str, fallback_title: str) -> 
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": extract_flavor_notes(soup),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": price,
