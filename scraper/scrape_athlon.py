@@ -28,6 +28,11 @@ NON_BEAN_KEYWORDSで除外し、残る100g/200gの2形態から最小重量(100g
 【価格・重量の取得方法について】
 実データ確認済み: 商品名に重量が明記され(例:「西川ブレンド（100ｇ）」)、
 価格はOGPメタタグ(`product:price:amount`、税込)から取得できる。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: div.item_desc_textに対象9件全てでテイスティング文・
+産地背景が入っており、末尾に「※100ｇパッケージとなります。」という
+パッケージ注記が続く場合があるため打ち切る。
 """
 
 import re
@@ -74,6 +79,20 @@ def fetch_product_urls() -> list[str]:
     return urls
 
 
+FLAVOR_STOP_PATTERN = re.compile(r"※100ｇパッケージとなります")
+
+
+def extract_flavor_notes(soup: BeautifulSoup) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    el = soup.select_one("div.item_desc_text")
+    if not el:
+        return None
+    text = el.get_text("\n", strip=True)
+    m = FLAVOR_STOP_PATTERN.search(text)
+    text = text[:m.start()] if m else text
+    return text.strip() or None
+
+
 def extract_fields(soup: BeautifulSoup) -> dict | None:
     title_el = soup.select_one("title")
     if not title_el:
@@ -81,7 +100,8 @@ def extract_fields(soup: BeautifulSoup) -> dict | None:
     title = title_el.get_text(strip=True).split(" - ")[0].strip()
     price_el = soup.select_one('meta[property="product:price:amount"]')
     price = int(float(price_el["content"])) if price_el and price_el.get("content") else None
-    return {"title": title, "price": price}
+    flavor_notes = extract_flavor_notes(soup)
+    return {"title": title, "price": price, "flavor_notes": flavor_notes}
 
 
 WHITESPACE_PATTERN = re.compile(r"[\s　]+")
@@ -136,6 +156,7 @@ def build_record(item: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": item.get("flavor_notes"),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": item["price"],
@@ -158,7 +179,12 @@ def scrape_all_products() -> tuple[list[dict], list[dict]]:
             continue
         if not fields or any(kw in fields["title"] for kw in NON_BEAN_KEYWORDS):
             continue
-        all_items.append({"title": fields["title"], "price": fields["price"], "url": product_url})
+        all_items.append({
+            "title": fields["title"],
+            "price": fields["price"],
+            "flavor_notes": fields.get("flavor_notes"),
+            "url": product_url,
+        })
 
     canonical_items = pick_canonical_items(all_items)
     previous = load_previous_products(SHOP_INFO["name"])
