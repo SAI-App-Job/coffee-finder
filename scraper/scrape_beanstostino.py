@@ -40,6 +40,15 @@ User-agent: *に対し/secure/・/cart/のみDisallow。AhrefsBot等一部
 weight_g=100とする。「ビンタンリマ」「完全有機栽培 レテフォホ松中くん」
 「ホンジュラス」の3件は商品名・商品詳細ページのいずれにも重量表記が
 無いため、他店のパターンと同様にweight_gはNoneのままとする(推測しない)。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: div.product-order-expにテイスティング文・産地背景が
+地続きで入っている(対象13件全て確認、産地情報の背景のみで具体的な
+テイスティング語が無いケースも一部あるが、全て何らかの商品固有の説明
+文になっている)。一部商品(定期便対応商品)では末尾に「定期便はこちらから」
+という店舗の定期便サービスへのリンクボタン(<a>タグ)とそのための
+<script>タグが同じdiv内に混入しているため、これらのタグを除去した
+うえでテキストを取得する。
 """
 
 import json
@@ -71,6 +80,17 @@ NON_BEAN_KEYWORDS = [
 ]
 COLORME_PATTERN = re.compile(r"var Colorme\s*=\s*(\{.*?\});", re.DOTALL)
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ㎏]")
+
+
+def extract_flavor_notes(soup: BeautifulSoup) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    div = soup.select_one("div.product-order-exp")
+    if not div:
+        return None
+    for tag in div.find_all(["script", "a"]):
+        tag.decompose()
+    text = div.get_text(strip=True)
+    return text or None
 
 
 def fetch_page(url: str) -> BeautifulSoup:
@@ -133,6 +153,7 @@ def build_record(soup: BeautifulSoup, product_url: str) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": extract_flavor_notes(soup),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": int(price) if price is not None else None,
