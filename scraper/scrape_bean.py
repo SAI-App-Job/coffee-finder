@@ -14,6 +14,11 @@ User-agent: *に対し/secure/・/cart/のみDisallow。AhrefsBot等一部
 いる。商品名は「(銘柄名)400g<br><font color="red">（豆のまま／挽豆）
 送料込み</font></br>」の形式で、挽き方部分を除いた基準名でグルーピング
 し、「豆のまま」を優先して代表として採用する。
+
+【flavor_notes(2026-09-22追記)】
+実データ確認済み: 商品ページのdiv.product_descriptionに対象4銘柄全てで
+簡潔なテイスティング文が入っている。注文/配送案内等の無関係な定型文の
+混入は無いため全文をそのまま採用する。
 """
 
 import json
@@ -80,11 +85,16 @@ def fetch_raw_records() -> list[dict]:
             continue
         price = product.get("sales_price_including_tax") or product.get("sales_price")
         structural_out_of_stock = product.get("stock_num") == 0
+        desc_el = soup.select_one("div.product_description")
+        flavor_notes = None
+        if desc_el:
+            flavor_notes = re.sub(r"\r\n?", "\n", desc_el.get_text("\n", strip=True))
         records.append({
             "raw_name": raw_name,
             "price": int(price) if price is not None else None,
             "url": product_url,
             "structural_out_of_stock": structural_out_of_stock,
+            "flavor_notes": flavor_notes,
         })
     return records
 
@@ -132,6 +142,7 @@ def build_record(rec: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": rec.get("flavor_notes"),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": rec["price"],
