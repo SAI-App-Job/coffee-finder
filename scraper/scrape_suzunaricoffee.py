@@ -36,7 +36,14 @@ Maracaturra Natural・刻刻[こくこく]・Guatemala Buena Vista・
 ギフトセット各種・詰め合わせ(スタンダード100g×3種/お試しアソート60g×5種)・
 手ぬぐい/T-shirt/water bottle/moon calendar等の雑貨・Rib食器シリーズ・
 Clever Coffee Dripper/ペーパーフィルター等の器具・ドリップバッグ
-オリジナルラベル制作(印刷サービス)のため非対象。NON_BEAN_KEYWORDSで除外する。
+オリジナルラベル制作(印刷サービス)・「【K様】ご注文商品」(特定顧客向け
+専用注文)のため非対象。NON_BEAN_KEYWORDSで除外する。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: og:descriptionに対象7件全てで産地スペック+カップ
+コメント(テイスティング要素)が入っている。末尾に「内容量：200g(1袋)」
+または(この内容量表記が省略されている場合は)「※1袋、2袋の場合は…」
+という配送方法案内の定型文が続くため、この見出しの直前で打ち切る。
 """
 
 import re
@@ -67,8 +74,9 @@ NON_BEAN_KEYWORDS = [
     "定期便", "琲蜜", "手ぬぐい", "T-shirt", "Drip Bag", "ドリップバッグ",
     "ORIGINAL GIFT", "GIFT SET", "RUSK", "ラスク", "スタンダード", "アソート",
     "【1kg】", "【2kg】", "ARIGATOU", "gift box", "WATER BOTTLE", "calendar",
-    "STARTER SET", "【Rib】", "Dripper", "paper filter", "ラベル制作",
+    "STARTER SET", "【Rib】", "Dripper", "paper filter", "ラベル制作", "様】ご注文商品",
 ]
+FLAVOR_STOP_PATTERN = re.compile(r"内容量：200g|※1袋、2袋の場合は")
 
 
 def fetch_page(url: str) -> BeautifulSoup:
@@ -85,7 +93,12 @@ def extract_og_fields(soup: BeautifulSoup) -> dict | None:
     title = title_el["content"].split(" | ")[0].strip()
     price_el = soup.select_one('meta[property="product:price:amount"]')
     price = int(float(price_el["content"])) if price_el and price_el.get("content") else None
-    return {"title": title, "price": price}
+    desc_el = soup.select_one('meta[property="og:description"]')
+    flavor_notes = desc_el["content"].strip() if desc_el and desc_el.get("content") else ""
+    m = FLAVOR_STOP_PATTERN.search(flavor_notes)
+    if m:
+        flavor_notes = flavor_notes[:m.start()].strip()
+    return {"title": title, "price": price, "flavor_notes": flavor_notes or None}
 
 
 def fetch_item_urls() -> list[str]:
@@ -93,7 +106,7 @@ def fetch_item_urls() -> list[str]:
     return [loc.get_text(strip=True) for loc in soup.find_all("loc") if "/items/" in loc.get_text()]
 
 
-def build_record(title: str, price: int | None, product_url: str) -> dict | None:
+def build_record(title: str, price: int | None, product_url: str, flavor_notes: str | None = None) -> dict | None:
     if any(kw.lower() in title.lower() for kw in NON_BEAN_KEYWORDS):
         return None
     parsed = parse_product(title)
@@ -121,6 +134,7 @@ def build_record(title: str, price: int | None, product_url: str) -> dict | None
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": flavor_notes,
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": price,
@@ -144,7 +158,7 @@ def scrape_all_products() -> tuple[list[dict], list[dict]]:
             continue
         if not fields:
             continue
-        detail = build_record(fields["title"], fields["price"], product_url)
+        detail = build_record(fields["title"], fields["price"], product_url, fields.get("flavor_notes"))
         if detail is None:
             continue
         if detail.get("is_flavored"):
