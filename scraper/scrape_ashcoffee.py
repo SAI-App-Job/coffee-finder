@@ -43,6 +43,13 @@ category/1〜17の17カテゴリが固定的に案内されている(category/18
 (ギフト/器具/ドリップバッグ等の商品カテゴリは存在しない)ため、
 NON_BEAN_KEYWORDSは設けていない。将来的に新カテゴリが追加された場合は
 要再確認。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: JSON-LDのdescriptionフィールドは空、og:descriptionは
+全商品共通の店舗紹介文で商品固有の情報を含まないため使用しない。代わりに
+div.mainTxt(商品名直下の紹介文ブロック)を使うと対象10件全てでテイスティ
+ング文が入っていることを確認した。末尾に「※焙煎後の重さでの販売と
+なります」で始まる重量換算の注記が続く場合があるため打ち切る。
 """
 
 import json
@@ -75,6 +82,18 @@ WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
 JSONLD_PATTERN = re.compile(
     r'<script[^>]*type="application/ld\+json"[^>]*>(.*?)</script>', re.DOTALL
 )
+FLAVOR_STOP_PATTERN = re.compile(r"※焙煎後の重さでの販売となります")
+
+
+def extract_flavor_notes(soup: BeautifulSoup) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    el = soup.select_one("div.mainTxt")
+    if not el:
+        return None
+    text = el.get_text("\n", strip=True)
+    m = FLAVOR_STOP_PATTERN.search(text)
+    text = text[:m.start()] if m else text
+    return text.strip() or None
 
 
 def fetch_html(url: str) -> str:
@@ -122,11 +141,15 @@ def parse_item(url: str) -> dict | None:
     availability = offers.get("availability") or ""
     structural_out_of_stock = "InStock" not in availability
 
+    soup = BeautifulSoup(html, "html.parser")
+    flavor_notes = extract_flavor_notes(soup)
+
     return {
         "title": name,
         "price": price,
         "url": url,
         "structural_out_of_stock": structural_out_of_stock,
+        "flavor_notes": flavor_notes,
     }
 
 
@@ -174,6 +197,7 @@ def build_record(item: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": item.get("flavor_notes"),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": item["price"],
