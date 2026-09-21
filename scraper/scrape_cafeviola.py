@@ -26,6 +26,12 @@ sitemap.xmlの/items/配下に全5件。
 4件が単一銘柄のコーヒー豆(マンデリン・エチオピアゲイシャ・エチオピア
 イルガチェフェ・「TEZUMI KANJUKU」手摘み完熟)で、重量違いの重複は無い
 (各銘柄1種類の重量のみ)。NON_BEAN_KEYWORDSで除外する。
+
+【flavor_notes(2026-09-22追記)】
+実データ確認済み: og:descriptionに対象4件全てで産地・テイスティング文が
+入っている。末尾に全件共通で「ホームへもどるhttp://cafe-viola.jp/」
+(表記ゆれで「ホームへ戻る」)というホームページへの誘導リンクが続くため、
+この直前で打ち切る。
 """
 
 import re
@@ -54,6 +60,7 @@ REQUEST_HEADERS = {
 NON_BEAN_KEYWORDS = ["DRIP BAG"]
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
 TRAILING_WEIGHT_PATTERN = re.compile(r"[（(]\s*\d+\s*[gｇ]\s*[）)]\s*$")
+FLAVOR_STOP_PATTERN = re.compile(r"ホームへ(もどる|戻る)")
 
 
 def fetch_page(url: str) -> BeautifulSoup:
@@ -70,7 +77,12 @@ def extract_og_fields(soup: BeautifulSoup) -> dict | None:
     title = title_el["content"].split(" | ")[0].strip()
     price_el = soup.select_one('meta[property="product:price:amount"]')
     price = int(float(price_el["content"])) if price_el and price_el.get("content") else None
-    return {"title": title, "price": price}
+    desc_el = soup.select_one('meta[property="og:description"]')
+    flavor_notes = desc_el["content"].strip() if desc_el and desc_el.get("content") else ""
+    m = FLAVOR_STOP_PATTERN.search(flavor_notes)
+    if m:
+        flavor_notes = flavor_notes[:m.start()].strip()
+    return {"title": title, "price": price, "flavor_notes": flavor_notes or None}
 
 
 def fetch_item_urls() -> list[str]:
@@ -85,7 +97,7 @@ def base_name_and_weight(title: str) -> tuple[str, int | None]:
     return base, weight_g
 
 
-def build_record(title: str, price: int | None, product_url: str) -> dict | None:
+def build_record(title: str, price: int | None, product_url: str, flavor_notes: str | None = None) -> dict | None:
     base_name, weight_g = base_name_and_weight(title)
     if not base_name:
         return None
@@ -114,6 +126,7 @@ def build_record(title: str, price: int | None, product_url: str) -> dict | None
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": flavor_notes,
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": price,
@@ -140,7 +153,7 @@ def scrape_all_products() -> tuple[list[dict], list[dict]]:
         title = fields["title"]
         if any(kw in title for kw in NON_BEAN_KEYWORDS):
             continue
-        detail = build_record(title, fields["price"], product_url)
+        detail = build_record(title, fields["price"], product_url, fields.get("flavor_notes"))
         if detail is None:
             continue
         if detail.get("is_flavored"):
