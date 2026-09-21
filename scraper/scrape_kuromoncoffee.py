@@ -18,12 +18,24 @@ robots.txt確認済み(2026-09時点): Shopify標準のrobots.txtでAllow: /、�
 実データ確認済み: 各銘柄が複数重量(100g/200g等)のバリアントを持つ
 (gramsフィールドが0の商品もあり、その場合は商品名やvariant.titleから
 重量を拾えないため未設定のままとする)。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: body_htmlに対象7件全てで農園紹介・テイスティング文・
+産地スペックが入っている。ただし一部商品(PDF/Wordからの変換由来と
+思われる)は本文が1文字ずつ個別の<span>タグで囲まれており、単純に
+get_text("\n")すると文字ごとに改行されてしまい可読性が失われることを
+確認した。そのため、p/li/div/h1〜h6のうち子要素に同種のブロック要素を
+持たない「末端ブロック」単位でget_text("")(区切り文字無し、同一ブロック
+内の<span>分割による意図しない改行を防ぐ)を行い、ブロック間のみ改行で
+連結する方式に変更した。注文/配送案内等の無関係な定型文の混入は無いため
+全文をそのまま採用する。
 """
 
 import re
 import time
 
 import requests
+from bs4 import BeautifulSoup
 
 from coffee_parser import parse_product, detect_stock_status
 
@@ -44,12 +56,26 @@ REQUEST_HEADERS = {
 
 NON_BEAN_KEYWORDS = ["焙煎セミナー", "ドリップコーヒー体験", "ステンレスボトル", "お試しセット"]
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
+BLOCK_TAGS = ["p", "li", "div", "h1", "h2", "h3", "h4", "h5", "h6"]
 
 
 def fetch_products() -> list[dict]:
     resp = requests.get(PRODUCTS_JSON_URL, headers=REQUEST_HEADERS, timeout=20)
     resp.raise_for_status()
     return resp.json().get("products", [])
+
+
+def extract_flavor_notes(body_html: str) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    soup = BeautifulSoup(body_html or "", "html.parser")
+    parts = []
+    for el in soup.find_all(BLOCK_TAGS):
+        if el.find(BLOCK_TAGS):
+            continue
+        text = el.get_text("", strip=True)
+        if text:
+            parts.append(text)
+    return "\n".join(parts).strip() or None
 
 
 def pick_canonical_variant(variants: list[dict]) -> dict | None:
@@ -111,6 +137,7 @@ def build_record(product: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": extract_flavor_notes(product.get("body_html")),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": price,
