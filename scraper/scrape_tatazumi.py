@@ -17,12 +17,18 @@ robots.txt確認済み(2026-09時点): Shopify標準のrobots.txtでAllow: /
 形態)が非対象。NON_BEAN_KEYWORDSで除外する。残り1件(「浜松城ブレンド」
 150g)のみを対象とする。商品数が少ないが、他県のTERASAKI COFFEE・AKITO
 COFFEEと同じ確立済みのShopifyテンプレートで実装可能なため対象に含める。
+
+【flavor_notes(2026-09-22追記)】
+実データ確認済み: body_htmlに対象1件でテイスティング文・産地(エチオピア/
+ブラジル)の農園・品種情報が入っている。注文/配送案内等の無関係な定型文の
+混入は無いため全文をそのまま採用する。
 """
 
 import re
 import time
 
 import requests
+from bs4 import BeautifulSoup
 
 from coffee_parser import parse_product, detect_stock_status
 from previous_data import load_previous_products, is_unchanged
@@ -44,6 +50,11 @@ REQUEST_HEADERS = {
 
 NON_BEAN_KEYWORDS = ["ラテベース", "ドリップパック"]
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
+
+
+def extract_flavor_notes(body_html: str) -> str | None:
+    text = BeautifulSoup(body_html or "", "html.parser").get_text("\n", strip=True)
+    return text or None
 
 
 def fetch_products() -> list[dict]:
@@ -111,6 +122,7 @@ def build_record(product: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": extract_flavor_notes(product.get("body_html")),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": price,
