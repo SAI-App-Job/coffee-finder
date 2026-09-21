@@ -36,6 +36,16 @@ robots.txt確認済み(2026-09時点): shop-pro.jp標準のrobots.txtで、本
 【在庫状況について】
 実データ確認済み: 売り切れ商品は価格の代わりにspan.product-list__soldout
 (テキスト"SOLD OUT")が表示される(全12件中「マンデリン」の1件のみ該当)。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: 商品詳細ページのdiv.product__order.rowに「購入数
+カートに入れる倉敷珈琲館の自家焙煎珈琲。100g単位での販売となります。」
+という店舗共通の定型文(一部商品は続けて「手提げ袋は、こちらから
+ご購入いただけます。」)に続けてテイスティング文が入っており(対象12件
+全て確認)、その後に「焙煎度合：」「使用豆：」「保存方法」のいずれか
+(商品によって最初に出現するものが異なる)で始まるスペック/定型注意書き
+セクションが続く。先頭の定型文を除去し、スペックセクションの手前まで
+を採用する。
 """
 
 import re
@@ -62,6 +72,24 @@ REQUEST_HEADERS = {
 }
 
 PRICE_PATTERN = re.compile(r"([\d,]+)\s*円")
+LEADING_NOTICE_PATTERN = re.compile(
+    r"^購入数(?:カートに入れる)?倉敷珈琲館の自家焙煎珈琲。100g単位での販売となります。"
+    r"(?:手提げ袋は、こちらからご購入いただけます。)?"
+)
+FLAVOR_STOP_PATTERN = re.compile(r"焙煎度合：|使用豆：|保存方法")
+
+
+def extract_flavor_notes(soup: BeautifulSoup) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    order_div = soup.select_one("div.product__order.row")
+    if not order_div:
+        return None
+    text = order_div.get_text(strip=True)
+    text = LEADING_NOTICE_PATTERN.sub("", text)
+    m = FLAVOR_STOP_PATTERN.search(text)
+    if m:
+        text = text[: m.start()]
+    return text.strip() or None
 
 
 def fetch_page(url: str) -> BeautifulSoup:
@@ -117,6 +145,13 @@ def build_record(item: dict) -> dict | None:
 
     stock_status = detect_stock_status(title, item["out_of_stock"])
 
+    try:
+        detail_soup = fetch_page(item["url"])
+        flavor_notes = extract_flavor_notes(detail_soup)
+    except requests.RequestException as e:
+        print(f"[warn] 詳細ページ取得失敗: {item['url']} ({e})")
+        flavor_notes = None
+
     return {
         "shop_name": SHOP_INFO["name"],
         "raw_name": title,
@@ -127,6 +162,7 @@ def build_record(item: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": flavor_notes,
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": item["price"],
