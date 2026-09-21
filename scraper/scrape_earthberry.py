@@ -34,6 +34,13 @@ cbid=1858783)」「アースベリーブレンド(1864343)」「ビターベリ�
 除外し、基準となる200gの商品のみを対象とする。「【期間限定】オータム
 ブレンド」は複数カテゴリに重複掲載されているため、pid(商品ID)で重複
 排除する。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: og:description/Descriptionメタタグは100文字程度で
+切り詰められているため使用しない。代わりに商品詳細ページのdiv.product__
+explainを使うと、対象9件全てでテイスティング文・産地背景・使用豆配合
+(ブレンドの場合)が入っていることを確認した。注文/配送案内等の無関係な
+定型文の混入は無いため全文をそのまま採用する。
 """
 
 import re
@@ -71,6 +78,15 @@ def fetch_page(url: str) -> BeautifulSoup:
     return BeautifulSoup(resp.text, "html.parser")
 
 
+def extract_flavor_notes(soup: BeautifulSoup) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    el = soup.select_one("div.product__explain")
+    if not el:
+        return None
+    text = el.get_text("\n", strip=True)
+    return text.strip() or None
+
+
 def scrape_category(cbid: int) -> list[dict]:
     url = f"{BASE_URL}/?mode=cate&cbid={cbid}&csid=0&sort=n"
     soup = fetch_page(url)
@@ -93,12 +109,19 @@ def scrape_category(cbid: int) -> list[dict]:
                 if m:
                     price = int(m.group(1).replace(",", ""))
         pid_m = re.search(r"pid=(\d+)", link_el["href"])
+        product_url = BASE_URL + "/" + link_el["href"]
+        try:
+            flavor_notes = extract_flavor_notes(fetch_page(product_url))
+        except requests.RequestException as e:
+            print(f"[warn] 詳細ページ取得失敗: {product_url} ({e})")
+            flavor_notes = None
         items.append({
             "pid": pid_m.group(1) if pid_m else link_el["href"],
             "title": title,
             "price": price,
             "out_of_stock": bool(soldout_el),
-            "url": BASE_URL + "/" + link_el["href"],
+            "flavor_notes": flavor_notes,
+            "url": product_url,
         })
     return items
 
@@ -132,6 +155,7 @@ def build_record(item: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": item.get("flavor_notes"),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": item["price"],
