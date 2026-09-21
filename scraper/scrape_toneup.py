@@ -25,6 +25,22 @@ python-requests等は個別にDisallow: /指定があるが、User-agent: *ル�
 (サブスクリプション)がコーヒー豆単品ではないためNON_BEAN_KEYWORDSで
 除外する。残り12件がストレート豆7種+季節ブレンド含むブレンド5種
 (いずれも100g固定)。
+
+【flavor_notes実装時(2026-09-21)の再確認について】
+実データ確認済み: sitemap.xml全152件を再確認したところ、ストレート豆
+7種は現在のカタログから全て削除されており(検索してもヒットせず)、
+季節限定含むブレンド5種+グァテマラカフェインレス1種の計6件のみが
+コーヒー豆単品として残っていた。また既存のNON_BEAN_KEYWORDSでは
+「TONE UP COFFEE オリジナル ミニトートバッグ」(1周年記念グッズ、
+コーヒーと無関係)を除外できていなかったため、「トートバッグ」を
+NON_BEAN_KEYWORDSに追加した。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: og:descriptionに対象6件全てで「♦<商品名>」から
+始まるテイスティング文+【味わいの特徴】+香り/酸味/苦み/コクの記号
+評価+【こんな方にオススメ】+【使用している豆】が入っている。末尾の
+【賞味期限】以降は保存方法・簡易包装に関する定型文のため、この見出しの
+直前で打ち切る。
 """
 
 import re
@@ -53,9 +69,10 @@ REQUEST_HEADERS = {
 
 NON_BEAN_KEYWORDS = [
     "紅茶", "ドリップバッグ", "ラッピング", "Cold Brew", "カフェオレベース",
-    "セット", "定期便",
+    "セット", "定期便", "トートバッグ",
 ]
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
+FLAVOR_STOP_PATTERN = re.compile(r"【賞味期限】")
 
 
 def fetch_page(url: str) -> BeautifulSoup:
@@ -71,7 +88,12 @@ def extract_og_fields(soup: BeautifulSoup) -> dict | None:
     title = title_el["content"].split(" | ")[0].strip()
     price_el = soup.select_one('meta[property="product:price:amount"]')
     price = int(float(price_el["content"])) if price_el and price_el.get("content") else None
-    return {"title": title, "price": price}
+    desc_el = soup.select_one('meta[property="og:description"]')
+    flavor_notes = desc_el["content"].strip() if desc_el and desc_el.get("content") else ""
+    m = FLAVOR_STOP_PATTERN.search(flavor_notes)
+    if m:
+        flavor_notes = flavor_notes[:m.start()].strip()
+    return {"title": title, "price": price, "flavor_notes": flavor_notes or None}
 
 
 def build_record(product_url: str, fields: dict) -> dict | None:
@@ -106,6 +128,7 @@ def build_record(product_url: str, fields: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": fields.get("flavor_notes"),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": fields["price"],
