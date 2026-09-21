@@ -40,6 +40,16 @@ product:price:amountメタタグからそのまま取得できる。在庫状況
 3種類の重量で別々の商品ページとして登録されている。og:titleから
 「（数字g）」を除いた基準名でグルーピングし、最小重量(200g)を代表として
 採用する。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: og:descriptionは「…」で約100文字に切り詰められて
+おり使用できない。代わりに商品詳細ページのdiv.detail_desc_box内に、
+「ロースト：」「印象：」から始まる全文のテイスティング文+産地スペック
+(産地/農園/標高/品種/精製)が入っていることを確認した。末尾に
+「焙煎方式：」という見出しから焙煎機の特性説明・保存方法・挽き方の
+説明・支払方法等の定型文が続くため、この見出しの直前で打ち切る
+(コスタリカのみ「印象：近日掲載」でテイスティング文が未掲載だが、
+産地スペックは掲載されているためそのまま採用する)。
 """
 
 import re
@@ -66,6 +76,7 @@ REQUEST_HEADERS = {
 }
 
 WEIGHT_PATTERN = re.compile(r"（(\d+)\s*[gｇ]）")
+FLAVOR_STOP_PATTERN = re.compile(r"焙煎方式：")
 
 
 def fetch_page(url: str) -> BeautifulSoup:
@@ -90,7 +101,17 @@ def extract_fields(soup: BeautifulSoup) -> dict | None:
     price_el = soup.select_one('meta[property="product:price:amount"]')
     price = int(float(price_el["content"])) if price_el and price_el.get("content") else None
     out_of_stock = "在庫あり" not in soup.get_text()
-    return {"title": title, "price": price, "out_of_stock": out_of_stock}
+
+    flavor_notes = None
+    desc_el = soup.select_one("div.detail_desc_box")
+    if desc_el:
+        text = desc_el.get_text("\n", strip=True)
+        m = FLAVOR_STOP_PATTERN.search(text)
+        if m:
+            text = text[:m.start()]
+        flavor_notes = text.strip() or None
+
+    return {"title": title, "price": price, "out_of_stock": out_of_stock, "flavor_notes": flavor_notes}
 
 
 def base_name_and_weight(title: str) -> tuple[str, int | None]:
@@ -144,6 +165,7 @@ def build_record(item: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": item.get("flavor_notes"),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": item["price"],
@@ -166,8 +188,13 @@ def scrape_all_products() -> tuple[list[dict], list[dict]]:
             continue
         if not fields:
             continue
-        all_items.append({"title": fields["title"], "price": fields["price"],
-                           "out_of_stock": fields["out_of_stock"], "url": product_url})
+        all_items.append({
+            "title": fields["title"],
+            "price": fields["price"],
+            "out_of_stock": fields["out_of_stock"],
+            "flavor_notes": fields.get("flavor_notes"),
+            "url": product_url,
+        })
 
     canonical_items = pick_canonical_items(all_items)
 
