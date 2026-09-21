@@ -40,11 +40,19 @@ robots.txt確認済み(2026-09時点): Shopify標準のrobots.txtでAllow: /
 は挽き方(豆のまま/粉・ペーパーフィルター用/粉・その他)のみで、価格は
 挽き方に依らず同一。商品名から末尾の重量を除いた基準名でグルーピングし、
 最小重量(100g)を代表として採用する(亀山珈琲焙煎所と同じ方式)。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: body_htmlは対象11件全てでテイスティング文+甘味/苦味/
+コク等の官能評価値(「ロースターの一言」を含む場合あり)で構成され、その後
+に「内容量」「生産国」等のスペック表(<table>)、さらにその後に
+「□保存方法：」で始まる保存方法/注意事項の定型文が続く。<table>要素を
+除去し、「□保存方法」以降を打ち切ることでテイスティング文のみを抽出する。
 """
 
 import re
 
 import requests
+from bs4 import BeautifulSoup
 
 from coffee_parser import parse_product, detect_stock_status
 
@@ -67,6 +75,21 @@ NON_BEAN_KEYWORDS = [
     "リキッドコーヒー", "カップオン珈琲", "定期便", "雑貨", "おすすめ",
 ]
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
+FLAVOR_STOP_PATTERN = re.compile(r"□保存方法")
+
+
+def extract_flavor_notes(body_html: str | None) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    if not body_html:
+        return None
+    soup = BeautifulSoup(body_html, "html.parser")
+    table = soup.find("table")
+    if table:
+        table.decompose()
+    text = soup.get_text("\n", strip=True)
+    m = FLAVOR_STOP_PATTERN.search(text)
+    text = text[:m.start()] if m else text
+    return text.strip() or None
 
 
 def fetch_products() -> list[dict]:
@@ -130,6 +153,7 @@ def build_record(product: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": extract_flavor_notes(product.get("body_html")),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": price,
