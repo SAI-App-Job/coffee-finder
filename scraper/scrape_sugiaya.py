@@ -21,6 +21,14 @@ python-requests等は個別にDisallow: /指定があるが、User-agent: *ル�
 「【店頭受取】」版の2商品として重複掲載されている(価格・内容は同一、
 受け取り方法違いのみ)。同じ豆を二重に収録しないよう、「店頭受取」を
 含む商品を除外し宅配版のみを採用する。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: og:descriptionの先頭にテイスティング文が直接入って
+おり(対象13件全て確認)、その後に必ず「(ご注文の際は【配送方法・
+送料について】の項目を必ずご確認下さい)」という店舗共通の配送案内が
+続く。1件のみブログ記事へのリンクを含む「※ブログにて補足解説も
+ございます」という一文が配送案内の直前に入っている。いずれか手前
+までを採用する。
 """
 
 import re
@@ -49,6 +57,16 @@ REQUEST_HEADERS = {
 
 NON_BEAN_KEYWORDS = ["店頭受取"]
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
+FLAVOR_STOP_PATTERN = re.compile(r"※ブログにて補足解説|\(ご注文の際は")
+
+
+def extract_flavor_notes(description: str | None) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    if not description:
+        return None
+    m = FLAVOR_STOP_PATTERN.search(description)
+    text = description[: m.start()] if m else description
+    return text.strip() or None
 
 
 def fetch_page(url: str) -> BeautifulSoup:
@@ -64,7 +82,9 @@ def extract_og_fields(soup: BeautifulSoup) -> dict | None:
     title = title_el["content"].split(" | ")[0].strip()
     price_el = soup.select_one('meta[property="product:price:amount"]')
     price = int(float(price_el["content"])) if price_el and price_el.get("content") else None
-    return {"title": title, "price": price}
+    desc_el = soup.select_one('meta[property="og:description"]')
+    flavor_notes = extract_flavor_notes(desc_el["content"]) if desc_el and desc_el.get("content") else None
+    return {"title": title, "price": price, "flavor_notes": flavor_notes}
 
 
 def build_record(product_url: str, fields: dict) -> dict | None:
@@ -99,6 +119,7 @@ def build_record(product_url: str, fields: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": fields.get("flavor_notes"),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": fields["price"],
