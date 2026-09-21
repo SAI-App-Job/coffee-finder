@@ -38,6 +38,17 @@ Category 4/5(焙煎度合いから選ぶ)はCategory 1の商品を別軸で再�
 100g＋オススメのシングルオリジン100g」1件がNON_BEAN_KEYWORDSで除外される。
 残り7件(ストレート800gの単一銘柄6種＋顔の見えるスペシャルティーコーヒー
 200gエチオピア1種)を対象とする。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: 商品詳細ページのdiv.mainTxt内にテキストがあるが、
+ストレート800gの6件(ホンジュラス/エチオピア/グアテマラ/タイ/
+インドネシア/ブラジル)は産地が異なるにもかかわらず「【あなたの毎日に、
+焙煎したての感動を。】…」から始まる文言が一字一句同一で、産地固有の
+テイスティング情報を含まない汎用的な焙煎方針の宣伝文であることを
+確認した。これらはGENERIC_PLACEHOLDER_TEXTとして判定しflavor_notes=
+nullとする。唯一「顔の見えるスペシャルティーコーヒー200ｇ エチオピア
+イルガチェフェ ナチュラル」のみ産地・精製方法・香味等の商品固有の
+テイスティング文を含むため、こちらのみ全文を採用する。
 """
 
 import re
@@ -66,6 +77,19 @@ REQUEST_HEADERS = {
 NON_BEAN_KEYWORDS = ["飲み比べセット", "定期便"]
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
 PRICE_PATTERN = re.compile(r"販売価格[：:]\s*([\d,]+)\s*円")
+# 実データ確認済み(理由はdocstring参照): 産地の異なる6商品で一字一句同一の汎用文
+GENERIC_PLACEHOLDER_TEXT = (
+    "【あなたの毎日に、焙煎したての感動を。】\n"
+    "焙煎当日出荷のスペシャリティコーヒーをお届けします。\n"
+    "焙煎したての新鮮なコーヒーを楽しめます。\n"
+    "焙煎したコーヒーは、出荷当日に新鮮な状態でお届けするため、毎日異なる香りと味わいをご家庭で体験いただけます。\n"
+    "一週間程度の熟成期間を経て、コーヒーの風味が一層引き立ち、あなたの朝のコーヒータイムを特別なものに変えます。\n"
+    "お気に入りの焙煎スタイルをお選びいただき、コーヒーの魅力を存分にお楽しみください！\n"
+    "出荷当日に深く煎ることで、香ばしさを出しつつ酸味を残した風味となっております。\n"
+    "口にしたときの一口目で、苦味と酸味がちゃんと立ち、香り強さも楽しんでいただけます。\n"
+    "届いた直後は、焙煎の過程で発生したガスが含まれるため荒々しさがありますが、次第に味と香りに変化が現れます。\n"
+    "コーヒー豆の熟成の過程、ソムリエが大事にしている「香り」を存分にご堪能ください。"
+)
 
 
 def fetch_page(url: str) -> BeautifulSoup:
@@ -105,6 +129,18 @@ def scrape_item_list() -> list[dict]:
     return results
 
 
+def extract_flavor_notes(product_url: str) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    soup = fetch_page(product_url)
+    el = soup.select_one("div.mainTxt")
+    if not el:
+        return None
+    text = el.get_text("\n", strip=True)
+    if text == GENERIC_PLACEHOLDER_TEXT:
+        return None
+    return text.strip() or None
+
+
 def build_record(item: dict) -> dict | None:
     title = item["raw_name"]
     if not title or any(kw in title for kw in NON_BEAN_KEYWORDS):
@@ -137,6 +173,7 @@ def build_record(item: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": extract_flavor_notes(item["product_url"]),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": item["price"],
