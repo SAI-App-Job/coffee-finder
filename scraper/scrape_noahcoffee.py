@@ -48,6 +48,14 @@ scrape_cafeclaudia.pyの「雲南」→中国のローカル判定と同じ方�
 実データ確認済み: 対象2件とも「豆」「粉（中挽き）」の2バリアントを持つが、
 価格は挽き方に関わらず同一(商品ページ本体の価格を採用すればよく、
 バリアント別の価格取得は不要)。重量はいずれも商品名記載の100gで固定。
+
+【flavor_notes(2026-09-22追記)】
+実データ確認済み: div.item-detail-txt1に対象2件全てで見出し「商品詳細」・
+紹介文・産地エピソード・賞味期限/原材料/原産地の仕様情報が入っている。
+見出し「商品詳細」は除去し、末尾には「抽出方法」以降(湯量・やけど注意等
+の一般的な抽出手順、保存方法の重複、店舗リンク)、または区切りのドット
+記号列(「・・・・・」)が続く場合があるため、いずれか先に現れた方の直前で
+打ち切る。
 """
 
 import re
@@ -78,6 +86,18 @@ REQUEST_HEADERS = {
 
 NON_BEAN_KEYWORDS = ["ドリップパック", "ドリップバッグ", "セット", "ティー", "果実", "木樽", "三種"]
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
+FLAVOR_LEADING_PATTERN = re.compile(r"^商品詳細\n")
+FLAVOR_STOP_PATTERN = re.compile(r"・{5,}|抽出方法")
+
+
+def extract_flavor_notes(soup: BeautifulSoup) -> str | None:
+    el = soup.select_one("div.item-detail-txt1")
+    text = el.get_text("\n", strip=True) if el else ""
+    text = FLAVOR_LEADING_PATTERN.sub("", text)
+    m = FLAVOR_STOP_PATTERN.search(text)
+    if m:
+        text = text[:m.start()].strip()
+    return text or None
 
 
 def fetch_page(url: str) -> BeautifulSoup:
@@ -150,6 +170,7 @@ def build_record(soup: BeautifulSoup, product_url: str) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": extract_flavor_notes(soup),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": price,
