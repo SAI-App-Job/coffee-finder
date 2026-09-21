@@ -27,6 +27,11 @@ GRP")。curl/python-requests等は個別にDisallow: /指定があるが、User-
 実データ確認済み(全14件): ［特選紅茶］ダージリン/アールグレイ/アッサム/
 セイロン(有機BIO)の4件は紅茶でコーヒー豆ではないため非対象。
 NON_BEAN_KEYWORDSで除外する。残り10件(コーヒー豆)を対象とする。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: og:descriptionに対象10件全てでテイスティング文+
+酸味/甘味/苦味/コク/香りの■記号レーティングが入っており、注文/配送
+案内等の無関係な定型文の混入は無いため全文をそのまま採用する。
 """
 
 import requests
@@ -70,7 +75,9 @@ def extract_og_fields(soup: BeautifulSoup) -> dict | None:
         return None
     price_el = soup.select_one('meta[property="product:price:amount"]')
     price = int(float(price_el["content"])) if price_el and price_el.get("content") else None
-    return {"title": title, "price": price}
+    desc_el = soup.select_one('meta[property="og:description"]')
+    flavor_notes = desc_el["content"].strip() if desc_el and desc_el.get("content") else None
+    return {"title": title, "price": price, "flavor_notes": flavor_notes or None}
 
 
 def fetch_sitemap_urls() -> list[str]:
@@ -105,6 +112,7 @@ def build_record(item: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": item.get("flavor_notes"),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": item["price"],
@@ -128,7 +136,12 @@ def scrape_all_products() -> tuple[list[dict], list[dict]]:
             continue
         if not fields:
             continue
-        detail = build_record({"title": fields["title"], "price": fields["price"], "url": item_url})
+        detail = build_record({
+            "title": fields["title"],
+            "price": fields["price"],
+            "flavor_notes": fields.get("flavor_notes"),
+            "url": item_url,
+        })
         if detail is None:
             continue
         if detail.get("is_flavored"):
