@@ -19,6 +19,13 @@ python-requests等は個別にDisallow: /指定があるが、User-agent: *ル�
 パック、2種)・「ギフトラッピング」(ラッピングサービスそのもの、
 豆ではない)がコーヒー豆単品ではないためNON_BEAN_KEYWORDSで除外する。
 残り11件はいずれも200g固定(重量バリエーション無し)。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: og:descriptionの先頭に「【<商品名>】」という商品名
+繰り返しタグが付き、続けてテイスティング文が入っている(対象11件全て
+確認)。末尾には必ず「▪焙煎度▪」で始まる焙煎度合い/味の特徴(酸味・
+苦味・ボディ)の★評価欄が続く。先頭の【】タグを除去し、「▪焙煎度▪」の
+手前までを採用する。
 """
 
 import re
@@ -47,6 +54,19 @@ REQUEST_HEADERS = {
 
 NON_BEAN_KEYWORDS = ["MIZUDASHI", "ギフトラッピング"]
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
+FLAVOR_LEADING_PATTERN = re.compile(r"^【[^】]*】")
+FLAVOR_STOP_PATTERN = re.compile(r"▪焙煎度▪")
+
+
+def extract_flavor_notes(description: str | None) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    if not description:
+        return None
+    text = FLAVOR_LEADING_PATTERN.sub("", description)
+    m = FLAVOR_STOP_PATTERN.search(text)
+    if m:
+        text = text[: m.start()]
+    return text.strip() or None
 
 
 def fetch_page(url: str) -> BeautifulSoup:
@@ -62,7 +82,9 @@ def extract_og_fields(soup: BeautifulSoup) -> dict | None:
     title = title_el["content"].split(" | ")[0].strip()
     price_el = soup.select_one('meta[property="product:price:amount"]')
     price = int(float(price_el["content"])) if price_el and price_el.get("content") else None
-    return {"title": title, "price": price}
+    desc_el = soup.select_one('meta[property="og:description"]')
+    flavor_notes = extract_flavor_notes(desc_el["content"]) if desc_el and desc_el.get("content") else None
+    return {"title": title, "price": price, "flavor_notes": flavor_notes}
 
 
 def build_record(product_url: str, fields: dict) -> dict | None:
@@ -97,6 +119,7 @@ def build_record(product_url: str, fields: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": fields.get("flavor_notes"),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": fields["price"],
