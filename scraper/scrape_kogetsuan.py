@@ -35,6 +35,12 @@ Disallow指定が無いため、実質的に制限なしと判断した。
 【非コーヒー豆商品の除外について】
 実データ確認済み: 全11件すべてがストレート/ブレンドのコーヒー豆(内
 「カフェインレス」1件はデカフェ)で、非対象商品は無かった。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: div.item-detail-txt2.wysiwyg-data(商品名見出しの
+直後にある最初のwysiwyg-dataブロック)に産地背景・テイスティング文が
+入っている(対象11件全て確認)。価格・スペック等の混入は無いため全文を
+そのまま採用する。
 """
 
 import re
@@ -62,6 +68,15 @@ REQUEST_HEADERS = {
 
 NON_BEAN_KEYWORDS: list[str] = []
 WEIGHT_PATTERN = re.compile(r"内容量\s*[:：]\s*(\d+)\s*[gｇ]")
+
+
+def extract_flavor_notes(soup: BeautifulSoup) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    div = soup.select_one("div.item-detail-txt2.wysiwyg-data")
+    if not div:
+        return None
+    text = div.get_text(" ", strip=True)
+    return text or None
 
 
 def fetch_page(url: str) -> BeautifulSoup:
@@ -131,6 +146,7 @@ def build_record(soup: BeautifulSoup, product_url: str) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": extract_flavor_notes(soup),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": price,
