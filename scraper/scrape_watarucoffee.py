@@ -35,6 +35,16 @@ charset=euc-jp)。他のカラーミー店舗と同じくresp.encodingを明示�
 のtitle(例:「そのまま　×　100g」)に挽き方と重量が両方含まれる。product自体の
 sales_price_including_taxは最小重量バリアントの価格と一致するため、同じ方式
 (最小価格帯の中から最小重量のバリアントを採用)で重量を取得する。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: 商品詳細ページに「焙煎豆のプロファイル」(ストレート豆)
+または「<商品名>のコンセプト」(ブレンド豆)という見出しの下にdiv.m-table
+のtableが入っており、th要素「フレーバー」に続くtd値、および任意で
+th要素「カッピングコメント」に続くtd値を持つ(対象12件全て確認)。
+これら2つの値を抽出して結合する(カッピングコメントが無い商品はフレーバー
+欄のみ)。ページ全体のdiv.m-table > tableを走査してth/tdペアから
+「フレーバー」「カッピングコメント」ラベルを探す汎用実装とすることで、
+見出し文言がストレート/ブレンドで異なる問題を回避している。
 """
 
 import json
@@ -64,6 +74,29 @@ REQUEST_HEADERS = {
 
 NON_BEAN_KEYWORDS = ["セット", "ドリップバッグ", "ドリップバック", "ギフト", "アソート", "詰め合わせ", "定期"]
 COLORME_PATTERN = re.compile(r"var Colorme\s*=\s*(\{.*?\});", re.DOTALL)
+
+
+def extract_flavor_notes(soup: BeautifulSoup) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    flavor_val = None
+    comment_val = None
+    for table in soup.select("div.m-table table"):
+        for tr in table.find_all("tr"):
+            cells = tr.find_all(["th", "td"])
+            i = 0
+            while i < len(cells) - 1:
+                if cells[i].name == "th":
+                    label = cells[i].get_text(strip=True)
+                    value = cells[i + 1].get_text(" ", strip=True) if cells[i + 1].name == "td" else None
+                    if label == "フレーバー":
+                        flavor_val = value
+                    elif label == "カッピングコメント":
+                        comment_val = value
+                    i += 2
+                else:
+                    i += 1
+    parts = [v for v in (flavor_val, comment_val) if v]
+    return "\n".join(parts) if parts else None
 
 
 def fetch_page(url: str) -> BeautifulSoup:
@@ -121,7 +154,7 @@ def pick_min_price_weight(product: dict, price: int | None) -> int | None:
     return _weight_from_title(variant.get("title") or "")
 
 
-def build_record(product_url: str, product: dict) -> dict | None:
+def build_record(product_url: str, product: dict, soup: BeautifulSoup) -> dict | None:
     title = (product.get("name") or "").strip()
     if not title or any(kw in title for kw in NON_BEAN_KEYWORDS):
         return None
@@ -154,6 +187,7 @@ def build_record(product_url: str, product: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": extract_flavor_notes(soup),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": price,
@@ -169,7 +203,7 @@ def parse_product_detail(url: str) -> dict | None:
     colorme_product = extract_colorme_product(soup)
     if not colorme_product:
         return None
-    return build_record(url, colorme_product)
+    return build_record(url, colorme_product, soup)
 
 
 def scrape_all_products() -> tuple[list[dict], list[dict]]:
