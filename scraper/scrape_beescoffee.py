@@ -28,6 +28,15 @@ robots.txt確認済み(2026-09時点): www.beescoffee.com自体はrobots.txt
 【在庫について】
 inventory_controlが"none"、stock_numは常にnull(kunikuni.py・麻布珈房と
 同じ運用)。商品名のテキストのみで在庫状態を判定する。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: 詳細ページのdiv.product_expにテイスティング文が
+直接入っている(対象14件中13件で確認、1件は候補リスト作成時点から
+既に廃番済みの404だった)。商品名の重複行・「香り◎甘味◎...」のような
+記号評価行・「【焙煎：」ラベル行・価格行(￥/円を含む行)・「農園名/
+生産者/生産地/標高/品種/精製処理/スクリーン/輸入規格」等の構造化
+スペック行(ラベル：値が同一行の形式)・「※」以降の注意書きを除いた
+残りを採用する。
 """
 
 import json
@@ -63,12 +72,55 @@ NON_BEAN_KEYWORDS = ["生豆", "詰め合わせ", "ドリップコーヒー単�
 COLORME_JSON_PATTERN = re.compile(r"var\s+Colorme\s*=\s*(\{.*\});", re.DOTALL)
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
 
+FLAVOR_RATING_LINE_PATTERN = re.compile(r"^(香り|甘味|酸味|コク|苦味|バランス|ミルク)[◎○☆△×]")
+FLAVOR_ROAST_LABEL_PATTERN = re.compile(r"^【焙煎[：:]")
+FLAVOR_PRICE_LINE_PATTERN = re.compile(r"￥|円")
+FLAVOR_STOP_PATTERN = re.compile(r"^※")
+FLAVOR_SPEC_LABEL_PATTERN = re.compile(
+    r"^(農園名|農園|生産者|生産地|栽培品種|品種|標高|収穫時期|精製処理|精製|"
+    r"スクリーン|輸入規格|地域|位置|平均気温|開花時期|規格|乾燥|産地)\s*[：:]"
+)
+
 
 def fetch_page(url: str) -> BeautifulSoup:
     resp = requests.get(url, headers=REQUEST_HEADERS, timeout=15)
     resp.raise_for_status()
     resp.encoding = "euc-jp"
     return BeautifulSoup(resp.text, "html.parser")
+
+
+def extract_flavor_notes(soup: BeautifulSoup, title: str) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    container = soup.select_one("div.product_exp")
+    if not container:
+        return None
+    for br in container.find_all("br"):
+        br.replace_with("\n")
+    lines = [l.strip() for l in container.get_text("\n", strip=True).split("\n") if l.strip()]
+
+    def norm(s):
+        return re.sub(r"[　\s（）()0-9gｇ]+", "", s or "")
+
+    norm_title = norm(title)
+    filtered = []
+    for line in lines:
+        norm_line = norm(line)
+        if norm_line and norm_title and (norm_line == norm_title or norm_line in norm_title or norm_title in norm_line):
+            continue
+        if FLAVOR_RATING_LINE_PATTERN.match(line):
+            continue
+        if FLAVOR_ROAST_LABEL_PATTERN.match(line):
+            continue
+        if FLAVOR_PRICE_LINE_PATTERN.search(line):
+            continue
+        if FLAVOR_SPEC_LABEL_PATTERN.match(line):
+            continue
+        if FLAVOR_STOP_PATTERN.match(line):
+            break
+        filtered.append(line)
+
+    text = "\n".join(filtered).strip()
+    return text or None
 
 
 def extract_colorme_product(soup: BeautifulSoup) -> dict | None:
@@ -85,7 +137,7 @@ def extract_colorme_product(soup: BeautifulSoup) -> dict | None:
     return None
 
 
-def build_record(product_url: str, colorme_product: dict) -> dict:
+def build_record(product_url: str, colorme_product: dict, soup: BeautifulSoup | None = None) -> dict:
     title = (colorme_product.get("name") or "").strip()
 
     if any(kw in title for kw in NON_BEAN_KEYWORDS):
@@ -122,6 +174,7 @@ def build_record(product_url: str, colorme_product: dict) -> dict:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": extract_flavor_notes(soup, title) if soup is not None else None,
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": price,
@@ -142,7 +195,7 @@ def parse_product_detail(url: str) -> dict:
             "non_bean": True,
             "product_url": url,
         }
-    return build_record(url, colorme_product)
+    return build_record(url, colorme_product, soup)
 
 
 def scrape_category_list() -> list[dict]:
