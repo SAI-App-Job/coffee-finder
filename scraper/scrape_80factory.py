@@ -32,6 +32,15 @@ User-agent: *に対し/secure/・/cart/のみDisallow。AhrefsBot等一部
 プレフィックス(例:「47｜」)・重量×個数の注記(例:「（200g×2）」)・
 「N%OFF」・「・」「農園」「～」「〜」・空白を全て除去したうえで
 グルーピングし、最小重量(100gがあれば100g)を代表として採用する。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: 詳細ページのsection.product_descriptionにテイスティング
+文が直接入っている(対象14件全て確認)。新旧2種類のページ形式が混在して
+おり、旧形式は「■原産地」「■内容量」等の見出しで、新形式は「■ 豆の
+詳細データ」見出しまたは「▶ この豆について詳しく見る」リンク文言で
+スペック・発送案内のブロックが始まる。これらのうち最も手前に出現する
+ものでテキストを切り落とし、「焙煎度★★★☆☆」等の評価行を除いた残りを
+採用する。
 """
 
 import json
@@ -70,12 +79,33 @@ ITEM_NO_PATTERN = re.compile(r"^\d+[｜|]")
 MULTIPLIER_PATTERN = re.compile(r"[（(]\s*\d+\s*[gｇ]\s*[×xX]\s*\d+\s*[）)]")
 PERCENT_OFF_PATTERN = re.compile(r"\d+[%％]OFF", re.IGNORECASE)
 TOTAL_WEIGHT_BEFORE_PAREN_PATTERN = re.compile(r"(\d+)\s*[gｇ]\s*[（(]")
+FLAVOR_STOP_PATTERN = re.compile(
+    r"■原産地|■内容量|■原材料名|■賞味期限|■保存方法|■\s*豆の詳細データ|■\s*商品詳細|▶|ーーー"
+)
+FLAVOR_ROAST_RATING_PATTERN = re.compile(r"^焙煎度")
 
 
 def fetch_page(url: str) -> BeautifulSoup:
     resp = requests.get(url, headers=REQUEST_HEADERS, timeout=15)
     resp.raise_for_status()
     return BeautifulSoup(resp.text, "html.parser")
+
+
+def extract_flavor_notes(soup: BeautifulSoup) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    container = soup.select_one("section.product_description")
+    if not container:
+        return None
+    for br in container.find_all("br"):
+        br.replace_with("\n")
+    lines = [l.strip() for l in container.get_text("\n", strip=True).split("\n") if l.strip()]
+    if lines and lines[0] == "商品説明":
+        lines = lines[1:]
+    stop_idx = next((i for i, l in enumerate(lines) if FLAVOR_STOP_PATTERN.search(l)), len(lines))
+    lines = lines[:stop_idx]
+    lines = [l for l in lines if not FLAVOR_ROAST_RATING_PATTERN.match(l)]
+    text = "\n".join(lines).strip()
+    return text or None
 
 
 def fetch_pid_urls() -> list[str]:
@@ -104,7 +134,11 @@ def extract_fields(soup: BeautifulSoup) -> dict | None:
     price = product.get("sales_price_including_tax") or product.get("sales_price")
     price = int(price) if price is not None else None
     structural_out_of_stock = product.get("stock_num") == 0
-    return {"title": title, "price": price, "structural_out_of_stock": structural_out_of_stock}
+    flavor_notes = extract_flavor_notes(soup)
+    return {
+        "title": title, "price": price, "structural_out_of_stock": structural_out_of_stock,
+        "flavor_notes": flavor_notes,
+    }
 
 
 def weight_key(title: str) -> float:
@@ -171,6 +205,7 @@ def build_record(item: dict, product_url: str) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": item.get("flavor_notes"),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": item["price"],
