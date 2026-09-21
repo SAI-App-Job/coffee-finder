@@ -41,6 +41,12 @@ weight_gが商品名から取得できない場合は説明文の「内容量」
 で検出する(単一国ならストレート、複数国ならブレンド扱いでorigin_countryは
 Noneのまま産地情報はflavor_notesに残す方針は取らず、ラベルどおりの表記を
 origin_country検出に用いる)。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: og:descriptionは対象11件全てでテイスティング文+
+「＜コンセプト＞」という銘柄コンセプト文(いずれも官能的な内容を含む)で
+始まり、末尾に「品　名　レギュラーコーヒー」という定型スペックラベルが
+続くため、この直前で打ち切る。
 """
 
 import re
@@ -75,6 +81,18 @@ WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
 ORIGIN_LABEL_PATTERN = re.compile(r"原産国[：:]\s*([^\n)）]+)")
 CONTENT_LABEL_PATTERN = re.compile(r"内容量\s*\n?\s*(\d+)\s*[gｇ]")
 FIXED_WEIGHT_G = 100  # 理由はモジュールdocstring参照
+FLAVOR_STOP_PATTERN = re.compile(r"品\s*名\s*レギュラーコーヒー")
+
+
+def extract_flavor_notes(soup: BeautifulSoup) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    desc_el = soup.select_one('meta[property="og:description"]')
+    if not desc_el or not desc_el.get("content"):
+        return None
+    desc = desc_el["content"]
+    m = FLAVOR_STOP_PATTERN.search(desc)
+    text = desc[:m.start()] if m else desc
+    return text.strip() or None
 
 
 def fetch_page(url: str) -> BeautifulSoup:
@@ -143,6 +161,7 @@ def build_record(soup: BeautifulSoup, product_url: str) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": extract_flavor_notes(soup),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": price,
