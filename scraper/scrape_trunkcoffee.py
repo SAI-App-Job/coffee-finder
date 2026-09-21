@@ -38,6 +38,14 @@ Tシャツ・ポロシャツ等のアパレル、ドリップバッグ詰め合�
 在庫の有無に関わらず全ページのJSバンドル内テンプレート文字列として
 常に1回出現するため使用不可)。亀山珈琲焙煎所・珈琲豆山倉と同様、
 商品名のテキストパターンのみでdetect_stock_statusに判定させる。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: og:descriptionに対象10件全てで「Taste Note」欄+
+テイスティング文・産地背景が入っている。一部商品にはパッケージ画像に
+関する注記(「※ご案内画像のパッケージは...(予め|あらかじめ)ご了承下さい
+ませ。」、両表記が実データで確認済み)が本文中に挟まる場合があるため
+除去し、末尾の「◆配送日時など」または「◆送料一律」で始まる配送案内の
+定型文を打ち切る。
 """
 
 import re
@@ -73,6 +81,19 @@ BEAN_START_PATTERN = re.compile(r"^\d+\s*[gｇ]")
 # 空白・カンマ・スラッシュ・引用符等)をすべて除去し、重量違い/表記ゆれの
 # 影響を受けない基準名を作る。
 KEY_NOISE_PATTERN = re.compile(r"[^\w一-龠ぁ-んァ-ヶー]+")
+PACKAGE_NOTE_PATTERN = re.compile(r"※ご案内画像のパッケージは.*?(?:予め|あらかじめ)ご了承下さいませ。", re.DOTALL)
+FLAVOR_STOP_PATTERN = re.compile(r"◆配送日時など|◆送料一律")
+
+
+def extract_flavor_notes(desc: str | None) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    if not desc:
+        return None
+    text = PACKAGE_NOTE_PATTERN.sub("", desc)
+    m = FLAVOR_STOP_PATTERN.search(text)
+    if m:
+        text = text[:m.start()]
+    return text.strip() or None
 
 
 def fetch_page(url: str) -> BeautifulSoup:
@@ -98,7 +119,9 @@ def extract_og_fields(soup: BeautifulSoup) -> dict | None:
 
     price_el = soup.select_one('meta[property="product:price:amount"]')
     price = int(float(price_el["content"])) if price_el and price_el.get("content") else None
-    return {"title": title, "price": price}
+    desc_el = soup.select_one('meta[property="og:description"]')
+    flavor_notes = extract_flavor_notes(desc_el["content"]) if desc_el and desc_el.get("content") else None
+    return {"title": title, "price": price, "flavor_notes": flavor_notes}
 
 
 def build_group_key(title: str) -> str:
@@ -152,6 +175,7 @@ def build_record(item: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": item.get("flavor_notes"),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": item["price"],
@@ -174,7 +198,12 @@ def scrape_all_products() -> tuple[list[dict], list[dict]]:
             continue
         if not fields:
             continue
-        all_items.append({"title": fields["title"], "price": fields["price"], "url": product_url})
+        all_items.append({
+            "title": fields["title"],
+            "price": fields["price"],
+            "flavor_notes": fields.get("flavor_notes"),
+            "url": product_url,
+        })
 
     canonical_items = pick_canonical_items(all_items)
 
