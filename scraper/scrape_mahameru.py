@@ -13,12 +13,19 @@ robots.txt確認済み(2026-09時点): Shopify標準のrobots.txtでAllow: /
 実データ確認済み: product_type="コーヒー豆"の3件が対象。
 「マハメルセット｜コーヒー豆詰め合わせ」(複数銘柄の詰め合わせセット)は
 NON_BEAN_KEYWORDSで除外する。
+
+【flavor_notes(2026-09-22追記)】
+実データ確認済み: body_htmlに対象2件全てで産地・テイスティング文が
+入っている。先頭の「『豆のまま』or『粉』お選びいただけます。」という
+挽き方選択案内は除去し、末尾の「※発送料全国一律1300円...」以降の発送料
+案内〜店舗リンクも除去する。
 """
 
 import re
 import time
 
 import requests
+from bs4 import BeautifulSoup
 
 from coffee_parser import parse_product, detect_stock_status
 from previous_data import load_previous_products, is_unchanged
@@ -41,6 +48,17 @@ REQUEST_HEADERS = {
 TARGET_PRODUCT_TYPE = "コーヒー豆"
 NON_BEAN_KEYWORDS = ["詰め合わせ", "セット"]
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
+FLAVOR_LEADING_PATTERN = re.compile(r"^『豆のまま』or『粉』お選びいただけます。\n?")
+FLAVOR_STOP_PATTERN = re.compile(r"※発送料")
+
+
+def extract_flavor_notes(body_html: str) -> str | None:
+    text = BeautifulSoup(body_html or "", "html.parser").get_text("\n", strip=True)
+    text = FLAVOR_LEADING_PATTERN.sub("", text)
+    m = FLAVOR_STOP_PATTERN.search(text)
+    if m:
+        text = text[:m.start()].strip()
+    return text or None
 
 
 def fetch_products() -> list[dict]:
@@ -112,6 +130,7 @@ def build_record(product: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": extract_flavor_notes(product.get("body_html")),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": price,
