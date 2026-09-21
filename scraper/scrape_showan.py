@@ -32,11 +32,17 @@ collection, page, blog, policy, cart, and localized HTML is crawlable"と明記�
 文字列になっており(grams フィールドは0で未設定)、option2が挽き方(豆のまま/
 細挽き等)。option2に「豆のまま」を含むバリアントを代表とし、option1から
 正規表現で重量を取得する。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: body_htmlにテイスティング文が直接入っており(対象12件
+全て確認)、うち2件は末尾に「生産国／<国名>」というスペック行が続く
+ため、その手前までを採用する。
 """
 
 import re
 
 import requests
+from bs4 import BeautifulSoup
 
 from coffee_parser import parse_product, detect_stock_status
 
@@ -61,6 +67,17 @@ NON_BEAN_KEYWORDS = [
 ]
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
 FIXED_WEIGHT_G = 100
+FLAVOR_STOP_PATTERN = re.compile(r"生産国／")
+
+
+def extract_flavor_notes(body_html: str | None) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    soup = BeautifulSoup(body_html or "", "html.parser")
+    text = soup.get_text(" ", strip=True)
+    m = FLAVOR_STOP_PATTERN.search(text)
+    if m:
+        text = text[: m.start()]
+    return text.strip() or None
 
 
 def fetch_products() -> list[dict]:
@@ -116,6 +133,7 @@ def build_record(product: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": extract_flavor_notes(product.get("body_html")),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": price,
