@@ -35,6 +35,15 @@ category_hintの両方で除外する。
 判定する。商品名に重量表記(200g等)が含まれる。バリアントは挽き方
 (豆のまま/挽き豆)のみで価格は同一のため、sales_price_including_taxを
 そのまま使う。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: og:description/Description metaタグは104文字程度で
+切り詰められているため使用しない。代わりにdiv.product-expを使うと、
+対象10件全てで「コーヒーの特徴」という見出し以降にテイスティング文が
+入っていることを確認した(農園スペックの見出しが手前に、生産者の
+ストーリー(例:「ナンシー物語」)の見出しが後ろに続く構成)。「コーヒーの
+特徴」見出し以降、次の見出し(「〜物語」)またはセクション終端までを
+抽出する。
 """
 
 import json
@@ -70,6 +79,24 @@ NON_BEAN_KEYWORDS = [
 CONTROL_CHAR_PATTERN = re.compile(r"[\x00-\x08\x0b\x0c\x0e-\x1f]")
 COLORME_PATTERN = re.compile(r"var Colorme\s*=\s*(\{.*?\});", re.DOTALL)
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
+FLAVOR_HEADING = "コーヒーの特徴"
+FLAVOR_NEXT_HEADING_PATTERN = re.compile(r"\n[^\n]*物語")
+
+
+def extract_flavor_notes(soup: BeautifulSoup) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    el = soup.select_one("div.product-exp")
+    if not el:
+        return None
+    full_text = el.get_text("\n", strip=True)
+    idx = full_text.find(FLAVOR_HEADING)
+    if idx == -1:
+        return None
+    rest = full_text[idx + len(FLAVOR_HEADING):]
+    m = FLAVOR_NEXT_HEADING_PATTERN.search(rest)
+    if m:
+        rest = rest[:m.start()]
+    return rest.strip() or None
 
 
 def fetch_page(url: str) -> BeautifulSoup:
@@ -104,7 +131,7 @@ def scrape_category_list(cid: str) -> list[str]:
     return urls
 
 
-def build_record(product_url: str, colorme_product: dict) -> dict | None:
+def build_record(product_url: str, colorme_product: dict, soup: BeautifulSoup) -> dict | None:
     # 理由: 一部商品名にバックスペース等の制御文字が混入していることを実データ
     # 確認済み(例: 「ナンシーさんのコーヒー\x08【ナチュラル】【中煎】200g」)。
     # parse_product()や表示に影響するため除去する。
@@ -140,6 +167,7 @@ def build_record(product_url: str, colorme_product: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": extract_flavor_notes(soup),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": price,
@@ -155,7 +183,7 @@ def parse_product_detail(url: str) -> dict | None:
     colorme_product = extract_colorme_product(soup)
     if not colorme_product:
         return None
-    return build_record(url, colorme_product)
+    return build_record(url, colorme_product, soup)
 
 
 def scrape_all_products() -> tuple[list[dict], list[dict]]:
