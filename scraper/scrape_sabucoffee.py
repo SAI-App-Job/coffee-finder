@@ -31,6 +31,13 @@ div.item-dtail-orderinvalid の有無)で在庫判定できる。
 実データ確認済み: 全5件とも商品名末尾に「200ｇ」を含む固定重量。
 香月庵と異なり商品詳細ページのフッター欄に「内容量」表記が無いため、
 商品名からのみ重量を取得する。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: 商品詳細ページのdiv.item-detail-txt1内に対象5件全てで
+簡潔なテイスティング文が入っていることを確認した(「プレミアムビター」
+「オリジナルブレンド」の2件は店舗側の記述が一字一句同一だが、実データ
+確認済みの本物の説明文であるためそのまま採用する)。注文/配送案内等の
+無関係な定型文の混入は無いため全文をそのまま採用する。
 """
 
 import re
@@ -106,6 +113,9 @@ def build_record(soup: BeautifulSoup, product_url: str) -> dict | None:
             "product_url": product_url,
         }
 
+    flavor_el = soup.select_one("div.item-detail-txt1")
+    flavor_notes = flavor_el.get_text("\n", strip=True) if flavor_el else None
+
     weight_m = WEIGHT_PATTERN.search(title)
     weight_g = int(weight_m.group(1)) if weight_m else None
 
@@ -124,6 +134,7 @@ def build_record(soup: BeautifulSoup, product_url: str) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": flavor_notes or None,
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": price,
