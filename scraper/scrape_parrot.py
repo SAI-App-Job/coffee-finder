@@ -22,6 +22,11 @@ User-agent: *に対し/secure/・/cart/のみDisallow。AhrefsBot等一部
 (2銘柄詰め合わせ)と、豆売り10銘柄それぞれに対応する「ドリップコーヒー
 ｜(銘柄名)(個包装ドリップバッグ15杯分セット)」8件がコーヒー豆単品
 ではないためNON_BEAN_KEYWORDSで除外する。残り10件(豆)を対象とする。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: og:descriptionに対象10件全てでテイスティング文が
+入っており、末尾に「メール便で配送可です」で始まる配送案内の定型文が
+続く場合があるため打ち切る。
 """
 
 import json
@@ -51,6 +56,18 @@ REQUEST_HEADERS = {
 NON_BEAN_KEYWORDS = ["お試しセット", "ドリップコーヒー"]
 COLORME_PATTERN = re.compile(r"var Colorme\s*=\s*(\{.*?\});", re.DOTALL)
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
+FLAVOR_STOP_PATTERN = re.compile(r"メール便で配送可です")
+
+
+def extract_flavor_notes(soup: BeautifulSoup) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    desc_el = soup.select_one('meta[property="og:description"]')
+    if not desc_el or not desc_el.get("content"):
+        return None
+    desc = desc_el["content"]
+    m = FLAVOR_STOP_PATTERN.search(desc)
+    text = desc[:m.start()] if m else desc
+    return text.strip() or None
 
 
 def fetch_page(url: str) -> BeautifulSoup:
@@ -131,6 +148,7 @@ def build_record(soup: BeautifulSoup, product_url: str) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": extract_flavor_notes(soup),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": int(price) if price is not None else None,
