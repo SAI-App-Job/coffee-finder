@@ -35,6 +35,15 @@ NON_BEAN_KEYWORDSで除外する(「セット」「ギフト」「アイスコ�
 ブレンド「秋」」のもっとお得な1kg商品のように重量トークンが商品名より
 前に来る書式に対応するため)、という専用の正規化ロジックを実装した。
 実データで9銘柄24商品が正しく統合されることを確認済み。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: og:descriptionは対象10件中3件がSEOキーワード羅列のみ
+(例:「自家焙煎珈琲豆シロネコ,コーヒー,珈琲,自家焙煎,モカ,エチオピア」)
+でテイスティング内容を含まないため使用しない。代わりにdiv.product_
+description(商品詳細ページ本文)を使うと対象10件全てでテイスティング文・
+焙煎度・★評価・産地スペック・おすすめの楽しみ方等の豊富な内容が入って
+いることを確認したため、これを全文そのまま採用する(レビュー欄や送料
+案内等の無関係なページ要素の混入は無いことを確認済み)。
 """
 
 import json
@@ -71,6 +80,15 @@ WEIGHT_NUM_PATTERN = re.compile(r"(\d+)\s*(kg|ｋｇ|㎏|[gｇ])", re.IGNORECASE
 NOISE_PREFIX_PATTERN = re.compile(r"^(送料無料[!！]?|★)")
 BRACKET_PATTERN = re.compile(r"[【\[][^】\]]*[】\]]")
 WEIGHT_TOKEN_PATTERN = re.compile(r"(もっとお得な|お得な|お試し)?\s*\d+\s*(kg|ｋｇ|㎏|[gｇ])", re.IGNORECASE)
+
+
+def extract_flavor_notes(soup: BeautifulSoup) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    el = soup.select_one("div.product_description")
+    if not el:
+        return None
+    text = el.get_text("\n", strip=True)
+    return text.strip() or None
 
 
 def fetch_page(url: str) -> BeautifulSoup:
@@ -149,6 +167,7 @@ def build_record(item: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": item.get("flavor_notes"),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": item["price"],
@@ -191,6 +210,7 @@ def scrape_all_products() -> tuple[list[dict], list[dict]]:
             "price": int(price) if price is not None else None,
             "url": product_url,
             "stock_num": product.get("stock_num"),
+            "flavor_notes": extract_flavor_notes(soup),
         })
 
     canonical_items = pick_canonical_items(all_items)
