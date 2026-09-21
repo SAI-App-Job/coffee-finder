@@ -29,6 +29,13 @@ Store API(`/wp-json/wc/store/products`)は制限対象外。
 店舗ごとに異なるため、値の内容で判定する)を走査し、値に「g/ｇ」を含む
 ものを重量、「豆」の一致(「粉」を含まない)を全粒(豆のまま)と判定して、
 在庫があるバリアントの中から最小重量かつ全粒優先で代表を選ぶ。
+
+【flavor_notes(2026-09-22追記)】
+実データ確認済み: Store APIのshort_descriptionに対象4件全てで
+「【その時にある、単一農園の珈琲豆】/【いつもある、定番の珈琲豆】」の
+カテゴリ紹介文と焙煎度・テイスティング文が入っている(descriptionは
+全件空)。注文/配送案内等の無関係な定型文の混入は無いため全文をそのまま
+採用する。
 """
 
 import html
@@ -36,6 +43,7 @@ import json
 import re
 
 import requests
+from bs4 import BeautifulSoup
 
 from coffee_parser import parse_product, detect_stock_status
 
@@ -57,6 +65,11 @@ REQUEST_HEADERS = {
 NON_BEAN_KEYWORDS = ["ドリップパック", "水出し"]
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
 VARIATIONS_PATTERN = re.compile(r'data-product_variations="([^"]*)"')
+
+
+def extract_flavor_notes(short_description: str) -> str | None:
+    text = BeautifulSoup(short_description or "", "html.parser").get_text("\n", strip=True)
+    return text or None
 
 
 def fetch_all_products() -> list[dict]:
@@ -169,6 +182,7 @@ def build_record(product: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": extract_flavor_notes(product.get("short_description")),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": price,
