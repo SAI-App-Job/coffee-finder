@@ -27,6 +27,12 @@ Disallow)。本スクレイパーが対象とする商品ページ・products.js
 ドリップバッグのため除外する。
 残り7件(ストレート6種+シーズナルブレンド「カーム」1種)が対象。
 
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: body_htmlに対象7件全てでテイスティング文・産地紹介
+(インポーター資料からの引用を含む)が入っている。末尾に3個以上のハイフン
+から成る区切り線があり、その後に発送/保存方法の定型文が続くため、この
+区切り線の直前で打ち切る。
+
 【重量・在庫について】
 実データ確認済み: 対象7件は全て200g/400g(200g×2袋・5%OFF)の2種類の重量が
 バリアントとして存在し、さらに挽き方(豆のまま/ペーパーフィルター用/
@@ -40,6 +46,7 @@ detect_stock_statusの構造的判定に渡す。
 import re
 
 import requests
+from bs4 import BeautifulSoup
 
 from coffee_parser import parse_product, detect_stock_status
 
@@ -64,6 +71,7 @@ EXCLUDED_HANDLES = {
 }
 NON_BEAN_KEYWORDS = ["music", "ドリップバッグ", "水出し", "定期便", "subscription", "コーヒーの"]
 TAG_PATTERN = re.compile(r"[【\[](?:sold out|Sold out|New!?|売り切れ次第終了)[】\]]", re.IGNORECASE)
+FLAVOR_STOP_PATTERN = re.compile(r"-{3,}")
 
 
 def fetch_products() -> list[dict]:
@@ -71,6 +79,16 @@ def fetch_products() -> list[dict]:
     resp.raise_for_status()
     resp.encoding = "utf-8"
     return resp.json().get("products", [])
+
+
+def extract_flavor_notes(body_html: str) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    soup = BeautifulSoup(body_html or "", "html.parser")
+    text = soup.get_text("\n", strip=True)
+    m = FLAVOR_STOP_PATTERN.search(text)
+    if m:
+        text = text[:m.start()]
+    return text.strip() or None
 
 
 def pick_min_weight_variant(variants: list[dict]) -> dict | None:
@@ -129,6 +147,7 @@ def build_record(product: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": extract_flavor_notes(product.get("body_html")),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": price,
