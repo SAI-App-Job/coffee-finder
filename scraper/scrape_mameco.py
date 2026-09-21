@@ -19,11 +19,21 @@ robots.txt確認済み(2026-09時点): Shopify標準のrobots.txtでAllow: /
 「エスプレッソ用(極細挽き)」「フレンチプレス用(粗挽き)」「水出し用
 (細挽き)」の5種の挽き方バリエーション(価格・重量は同額の100g固定)。
 「豆のまま」を代表バリアントとして採用する。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: body_htmlに対象11件全てでSNS投稿調の長文テイスティング
+文・産地背景が入っている。一部商品(2/11)は末尾にInstagram風ハッシュタグ
+列(例:「#コーヒー #スペシャルティコーヒー」)が付くため、最初の「#」
+以降を打ち切る。見出し構成が商品ごとにばらつき「【風味の特徴】」等の
+共通ラベルが無いため、full-text-tolerance方針によりそれ以外は全文を
+そのまま採用する。
 """
 
+import re
 import time
 
 import requests
+from bs4 import BeautifulSoup
 
 from coffee_parser import parse_product, detect_stock_status
 from previous_data import load_previous_products, is_unchanged
@@ -42,6 +52,20 @@ CRAWL_DELAY_SECONDS = 1.0
 REQUEST_HEADERS = {
     "User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"
 }
+
+
+FLAVOR_STOP_PATTERN = re.compile(r"#\S+")
+
+
+def extract_flavor_notes(body_html: str | None) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    if not body_html:
+        return None
+    soup = BeautifulSoup(body_html, "html.parser")
+    text = soup.get_text("\n", strip=True)
+    m = FLAVOR_STOP_PATTERN.search(text)
+    text = text[:m.start()] if m else text
+    return text.strip() or None
 
 
 def fetch_products() -> list[dict]:
@@ -96,6 +120,7 @@ def build_record(product: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": extract_flavor_notes(product.get("body_html")),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": price,
