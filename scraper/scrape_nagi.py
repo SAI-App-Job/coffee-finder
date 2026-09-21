@@ -20,8 +20,14 @@ Allow: /となっている。本スクレイパーは商品情報の取得に/it
 「コーヒー豆（ICE用）」(cid=1064783)という2カテゴリにコーヒー豆商品を
 分離しており、これ以外(コーヒーはちみつ／その他／ボックス／フィルター／
 アイスコーヒーリキッド／ディップコーヒーバッグ)は非コーヒー豆・別形態の
-商品であることを実データ調査で確認済み。そのためこの2カテゴリのみを
-対象とし、キーワードベースの非コーヒー豆除外ロジックは持たない。
+商品であることを実データ調査で確認済み。
+
+【NON_BEAN_KEYWORDSの追加について(2026-09-21追記)】
+実データ確認済み: 上記2カテゴリの中に「はじめての水出しアイスコーヒー
+セット」(HARIO水出しポット+コーヒー豆2回分のギフトセット、コーヒー豆
+単品ではない)が1件混入していることが判明した。「セット」を
+NON_BEAN_KEYWORDSに追加して除外する(対象の焙煎豆11件のいずれにも
+「セット」を含む商品名は無いことを確認済み)。
 
 【商品説明の構造】
 p.explanation[itemprop="description"]は自由記述の段落で、店舗ごとの構造化
@@ -29,6 +35,13 @@ p.explanation[itemprop="description"]は自由記述の段落で、店舗ごと�
 産地・精選方法・グレードは主に商品名(例:「スマトラ マンデリンG1(200g)」)
 からcoffee_parser.parse_product()で判定する。重量は商品名末尾の
 "(数字g)"パターンを優先し、無ければ説明文の「内容量：」表記にフォールバックする。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: p.explanation[itemprop="description"]にテイスティング
+文が直接入っており(対象11件全て確認)、店舗によって「【ラベル】」形式の
+見出しタグ・「《ラベル》」形式の見出しタグ・「苦味★+☆*酸味★+☆*コク
+★+☆*」形式の3段階★評価行が地の文に混在する。これらを除去したうえで、
+末尾の「内容量：」の手前までを採用する。
 """
 
 import json
@@ -69,6 +82,22 @@ LIST_CATEGORY_URLS = [
 
 WEIGHT_PATTERN = re.compile(r"\((\d+)\s*g\)")
 WEIGHT_LABEL_PATTERN = re.compile(r"内容量：\s*(\d+)\s*g")
+NON_BEAN_KEYWORDS = ["セット"]
+
+FLAVOR_BRACKET_HEADING_PATTERN = re.compile(r"【[^】]*】|《[^》]*》")
+FLAVOR_RATING_BLOCK_PATTERN = re.compile(r"苦味\s*[★☆]+\s*酸味\s*[★☆]+\s*コク\s*[★☆]+")
+FLAVOR_STOP_PATTERN = re.compile(r"内容量：")
+
+
+def extract_flavor_notes(description_text: str) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    text = FLAVOR_BRACKET_HEADING_PATTERN.sub("", description_text or "")
+    text = FLAVOR_RATING_BLOCK_PATTERN.sub("", text)
+    m = FLAVOR_STOP_PATTERN.search(text)
+    if m:
+        text = text[: m.start()]
+    lines = [line.strip() for line in text.split("\n") if line.strip()]
+    return "\n".join(lines).strip() or None
 
 
 def fetch_page(url: str) -> BeautifulSoup:
@@ -80,7 +109,10 @@ def fetch_page(url: str) -> BeautifulSoup:
     return soup
 
 
-def build_record(product_url: str, title: str, description_text: str, price: int | None) -> dict:
+def build_record(product_url: str, title: str, description_text: str, price: int | None) -> dict | None:
+    if any(kw in title for kw in NON_BEAN_KEYWORDS):
+        return None
+
     parsed = parse_product(title)
 
     if parsed["is_flavored"]:
@@ -126,7 +158,7 @@ def build_record(product_url: str, title: str, description_text: str, price: int
         "roast_selectable": False,
         "post_processing_tags": parsed["post_processing_tags"],
         "farm_note": farm_note,
-        "flavor_notes": None,
+        "flavor_notes": extract_flavor_notes(description_text),
         "blend_components": [],
         "price": price,
         "weight_g": weight_g,
@@ -136,7 +168,7 @@ def build_record(product_url: str, title: str, description_text: str, price: int
     }
 
 
-def parse_product_detail(url: str) -> dict:
+def parse_product_detail(url: str) -> dict | None:
     soup = fetch_page(url)
 
     title_el = soup.select_one('h2[itemprop="name"]')
@@ -200,6 +232,8 @@ def scrape_all_products() -> tuple[list[dict], list[dict], list[dict]]:
 
         try:
             detail = parse_product_detail(item["product_url"])
+            if detail is None:
+                continue
             detail["out_of_stock"] = detail.get("stock_status", "販売中") != "販売中"
             if detail.get("non_bean"):
                 non_bean_records.append(detail)
