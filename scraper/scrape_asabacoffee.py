@@ -40,6 +40,14 @@ PACK(水出し用)・ギフトセットのため非対象。NON_BEAN_KEYWORDSで
 これがそのまま(生豆換算の)重量として使われている(実際の焼き上がり重量は
 160-170g程度になる旨が商品説明に記載されているが、他店舗と同様に商品名の
 表記をそのままweight_gとして採用する)。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: og:descriptionの先頭に商品名(重量を除いたbase_name)が
+そのまま繰り返されている場合が多く、続けてテイスティング文が地続きで
+入っている(対象13件全て確認)。その後に必ず「焙煎度　<焙煎度合い>」
+(一部商品は代わりに「〈中深煎り〉」のような括弧書きの焙煎度合い表記)で
+始まる甘味/苦味/酸味の●評価欄が続く。先頭のbase_name部分を取り除いた
+うえで、「焙煎度」または括弧書きの焙煎度表記の手前までを採用する。
 """
 
 import re
@@ -68,6 +76,20 @@ REQUEST_HEADERS = {
 NON_BEAN_KEYWORDS = ["ドリップバッグ", "ドリップバック", "COLD BREW", "ギフト", "キャニスター"]
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
 TRAILING_WEIGHT_PATTERN = re.compile(r"[\s　]*\d+\s*[gｇ]\s*$")
+FLAVOR_STOP_PATTERN = re.compile(r"焙煎度|〈[^〉]+〉")
+
+
+def extract_flavor_notes(description: str | None, base_name: str) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    if not description:
+        return None
+    text = description
+    if base_name and text.startswith(base_name):
+        text = text[len(base_name):]
+    m = FLAVOR_STOP_PATTERN.search(text)
+    if m:
+        text = text[: m.start()]
+    return text.strip() or None
 
 
 def fetch_page(url: str) -> BeautifulSoup:
@@ -84,7 +106,9 @@ def extract_og_fields(soup: BeautifulSoup) -> dict | None:
     title = title_el["content"].split(" | ")[0].strip()
     price_el = soup.select_one('meta[property="product:price:amount"]')
     price = int(float(price_el["content"])) if price_el and price_el.get("content") else None
-    return {"title": title, "price": price}
+    desc_el = soup.select_one('meta[property="og:description"]')
+    description = desc_el["content"] if desc_el and desc_el.get("content") else None
+    return {"title": title, "price": price, "description": description}
 
 
 def fetch_item_urls() -> list[str]:
@@ -99,7 +123,7 @@ def base_name_and_weight(title: str) -> tuple[str, int | None]:
     return base, weight_g
 
 
-def build_record(title: str, price: int | None, product_url: str) -> dict | None:
+def build_record(title: str, price: int | None, product_url: str, description: str | None = None) -> dict | None:
     if any(kw in title for kw in NON_BEAN_KEYWORDS):
         return None
     if not WEIGHT_PATTERN.search(title):
@@ -132,6 +156,7 @@ def build_record(title: str, price: int | None, product_url: str) -> dict | None
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": extract_flavor_notes(description, base_name),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": price,
@@ -155,7 +180,7 @@ def scrape_all_products() -> tuple[list[dict], list[dict]]:
             continue
         if not fields:
             continue
-        detail = build_record(fields["title"], fields["price"], product_url)
+        detail = build_record(fields["title"], fields["price"], product_url, fields.get("description"))
         if detail is None:
             continue
         if detail.get("is_flavored"):
