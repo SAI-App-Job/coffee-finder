@@ -23,6 +23,15 @@ python-requests等は個別にDisallow: /指定があるが、User-agent: *ル�
 「HiwaHiwaブレンド」「ブラジル」「コロンビア」「グァテマラ」「モカ」
 「マンデリン」の6件のみがコーヒー豆単品(実データ確認済み、重量表記は
 商品名に含まれず詳細ページのバリエーション欄を要確認)。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: og:descriptionは6件中5件で「自家焙煎の珈琲専門店
+HiwaHiwa。お好みの焙煎でお届けします。2点以上で送料無料！」という
+店舗共通の宣伝文で商品固有の情報を含まず使用できない。代わりに商品
+詳細ページのdiv#item_detail内には対象6件全てで【内容量】【種類】
+【特徴】(テイスティング文+酸味/コク/苦味/深み/香りの★評価)が入って
+いることを確認した。末尾に「【備考】リボンラッピング可能です…」という
+無関係な定型文が続くため、この見出しの直前で打ち切る。
 """
 
 import re
@@ -51,12 +60,25 @@ REQUEST_HEADERS = {
 
 NON_BEAN_KEYWORDS = ["セット", "ギフトボックス", "プチギフト", "ドリップパック", "水出し"]
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
+FLAVOR_STOP_PATTERN = re.compile(r"【備考】")
 
 
 def fetch_page(url: str) -> BeautifulSoup:
     resp = requests.get(url, headers=REQUEST_HEADERS, timeout=15)
     resp.raise_for_status()
     return BeautifulSoup(resp.text, "html.parser")
+
+
+def extract_flavor_notes(soup: BeautifulSoup) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    el = soup.select_one("div#item_detail")
+    if not el:
+        return None
+    text = el.get_text("\n", strip=True)
+    m = FLAVOR_STOP_PATTERN.search(text)
+    if m:
+        text = text[:m.start()]
+    return text.strip() or None
 
 
 def extract_og_fields(soup: BeautifulSoup) -> dict | None:
@@ -66,7 +88,7 @@ def extract_og_fields(soup: BeautifulSoup) -> dict | None:
     title = title_el["content"].split(" | ")[0].strip()
     price_el = soup.select_one('meta[property="product:price:amount"]')
     price = int(float(price_el["content"])) if price_el and price_el.get("content") else None
-    return {"title": title, "price": price}
+    return {"title": title, "price": price, "flavor_notes": extract_flavor_notes(soup)}
 
 
 def build_record(product_url: str, fields: dict) -> dict | None:
@@ -101,6 +123,7 @@ def build_record(product_url: str, fields: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": fields.get("flavor_notes"),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": fields["price"],
