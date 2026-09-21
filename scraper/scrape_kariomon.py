@@ -19,6 +19,13 @@ User-agent制限が一切存在しないため実質全面許可として扱う�
 重量違いによる重複は存在しない。カテゴリ一覧ページ1ページに全6商品が
 収まっており(ページネーションなし、実データ確認済み)、商品名・価格が
 一覧ページ上に直接表示されるため詳細ページへの遷移は不要。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: 商品詳細ページのp.item_comment(「★商品説明★」の
+直後に配置される簡潔なテイスティング文)に対象6件全てで商品固有の説明
+文が入っていることを確認した。注文/配送案内等の無関係な定型文の混入は
+無いため全文をそのまま採用する。この抽出には詳細ページへの遷移が
+新たに必要になる。
 """
 
 import re
@@ -52,6 +59,15 @@ def fetch_page(url: str) -> BeautifulSoup:
     return BeautifulSoup(resp.text, "html.parser")
 
 
+def extract_flavor_notes(product_url: str) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    soup = fetch_page(product_url)
+    el = soup.select_one("p.item_comment")
+    if not el:
+        return None
+    return el.get_text("\n", strip=True) or None
+
+
 def build_record(title: str, price: int | None, product_url: str) -> dict:
     parsed = parse_product(title)
 
@@ -80,6 +96,7 @@ def build_record(title: str, price: int | None, product_url: str) -> dict:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": extract_flavor_notes(product_url),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": price,
