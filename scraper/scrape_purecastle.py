@@ -41,6 +41,14 @@ Cookieセッションの有無に関わらずitem-list-block(商品一覧を差�
 実データ確認済み: 静的HTMLから信頼できる構造化された品切れフラグを
 特定できなかった(JSアラート文言のみで、実際の商品ごとの在庫有無を示す
 ものではない)。商品名のテキストのみで在庫状態を判定する。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: dl.item-introduction内のdt(短いキャッチコピー)+
+dd.e-content(【苦み】【酸味】等のスコア表記を含むテイスティング文、
+一部商品はさらに国/エリア/農園名/標高/品種/生産処理等のスペック情報も
+含む)に対象10件全てでテイスティング内容が入っている。同じdd要素内に
+「配送と送料について」という見出し以降、送料・LINE問い合わせ等の無関係
+な定型文が地続きで続くため、この見出しの直前で打ち切る。
 """
 
 import json
@@ -48,6 +56,7 @@ import re
 import time
 
 import requests
+from bs4 import BeautifulSoup
 
 from coffee_parser import parse_product, detect_stock_status
 
@@ -73,6 +82,27 @@ ITEM_ID_PATTERN = re.compile(r"/item/(\d+)/")
 TITLE_PATTERN = re.compile(r'<div class="heading-04">\s*<h2>([^<]+)</h2>', re.DOTALL)
 WEIGHT_BLOCK_PATTERN = re.compile(r'item-name">「(\d+)グラム」')
 SKU_PRICE_PATTERN = re.compile(r'skuPrice\[\d+\]\[[^\]]+\]"\s*value="(\d+)"')
+INTRO_PATTERN = re.compile(
+    r'<dl class="item-introduction post-block">\s*<dt>\s*(.*?)\s*</dt>\s*'
+    r'<dd class="e-content">\s*(.*?)\s*</dd>',
+    re.DOTALL,
+)
+SHIPPING_STOP_PATTERN = re.compile(r"配送と送料について")
+
+
+def extract_flavor_notes(text: str) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    m = INTRO_PATTERN.search(text)
+    if not m:
+        return None
+    dt_html, dd_html = m.group(1), m.group(2)
+    stop_m = SHIPPING_STOP_PATTERN.search(dd_html)
+    if stop_m:
+        dd_html = dd_html[:stop_m.start()]
+    dt_text = BeautifulSoup(dt_html, "html.parser").get_text(" ", strip=True)
+    dd_text = BeautifulSoup(dd_html, "html.parser").get_text("\n", strip=True)
+    parts = [p for p in (dt_text, dd_text) if p]
+    return "\n".join(parts) if parts else None
 
 
 def fetch_text(url: str) -> str:
@@ -114,7 +144,15 @@ def parse_item_page(url: str) -> dict | None:
         weight_g = weights[idx]
         price = prices[idx]
 
-    return {"raw_name": title, "price": price, "weight_g": weight_g, "product_url": url}
+    flavor_notes = extract_flavor_notes(text)
+
+    return {
+        "raw_name": title,
+        "price": price,
+        "weight_g": weight_g,
+        "product_url": url,
+        "flavor_notes": flavor_notes,
+    }
 
 
 def build_record(item: dict) -> dict | None:
@@ -144,6 +182,7 @@ def build_record(item: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": item.get("flavor_notes"),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": item["price"],
