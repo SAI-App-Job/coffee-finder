@@ -47,6 +47,13 @@ sitemap.xmlの全26件との突き合わせで検証済み): シングルコー�
 hasStock">構造(在庫があるとhasStockクラスが付与される)。売り切れの実例は
 確認できなかったため、hasStockクラスが無い場合を構造的な品切れシグナルと
 して扱う設計としている(chouetteと同じ方針)。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: 【生産国】【精製方法】【焙煎度合】の3行の後、自由記述の
+テイスティング文・産地説明が続き、末尾に必ず「【ギフトについて】」という
+店舗共通のギフトボックス案内が入っている(対象13件全て確認)。【ラベル】
+値形式の行(先頭3行に限らず、一部商品では本文中盤にも再度出現する)を
+除去しつつ、「【ギフトについて】」の手前までを採用する。
 """
 
 import json
@@ -87,6 +94,25 @@ LIST_CATEGORIES = {
 
 DETAIL_LABEL_PATTERN = re.compile(r"^【(.+?)】\s*(.*)$")
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
+GIFT_STOP_PATTERN = re.compile(r"^【ギフトについて】")
+
+
+def extract_flavor_notes(p_el) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    if not p_el:
+        return None
+    for br in p_el.find_all("br"):
+        br.replace_with("\n")
+    collected = []
+    for line in p_el.get_text().split("\n"):
+        line = line.strip()
+        if GIFT_STOP_PATTERN.match(line):
+            break
+        if DETAIL_LABEL_PATTERN.match(line):
+            continue
+        if line:
+            collected.append(line)
+    return "\n".join(collected).strip() or None
 
 
 def fetch_page(url: str) -> BeautifulSoup:
@@ -169,6 +195,7 @@ def build_record(soup: BeautifulSoup, product_url: str, fallback_title: str, pri
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": extract_flavor_notes(soup.select_one("div#item_detail p")),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": price,
