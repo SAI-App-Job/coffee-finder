@@ -24,6 +24,13 @@ pidリンクのみ取得し、価格・重量は商品詳細ページのvar Colo
 取得する。
 
 robots.txt確認済み(2026-09時点): 他のshop-pro.jp系店舗と同一の記述。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: og:description/meta descriptionは約100文字に切り
+詰められており使用できない。代わりに商品詳細ページのdiv.product-order-exp
+内に、対象7件全てで焙煎士自身によるテイスティング文+ブレンド構成が
+入っていることを確認した。末尾に「□おすすめの抽出レシピ」という見出し
+から抽出レシピの手順が続くため、この見出しの直前で打ち切る。
 """
 
 import json
@@ -55,6 +62,19 @@ CRAWL_DELAY_SECONDS = 1
 NON_BEAN_KEYWORDS = ["セット"]
 COLORME_JSON_PATTERN = re.compile(r"var\s+Colorme\s*=\s*(\{.*\});", re.DOTALL)
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
+FLAVOR_STOP_PATTERN = re.compile(r"□?\s*おすすめの抽出レシピ")
+
+
+def extract_flavor_notes(soup: BeautifulSoup) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    el = soup.select_one("div.product-order-exp")
+    if not el:
+        return None
+    text = el.get_text("\n", strip=True)
+    m = FLAVOR_STOP_PATTERN.search(text)
+    if m:
+        text = text[:m.start()]
+    return text.strip() or None
 
 
 def fetch_page(url: str) -> BeautifulSoup:
@@ -170,6 +190,7 @@ def build_record(product_url: str, fallback_title: str) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": extract_flavor_notes(soup),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": price,
