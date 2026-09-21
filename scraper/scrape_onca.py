@@ -22,12 +22,19 @@ robots.txt確認済み(2026-09時点): Shopify標準のrobots.txtでAllow: /
 【重量バリエーションについて】
 実データ確認済み: 焙煎豆は100g/200gの2バリアントを持つ(KENYA AAのみ
 100g単一)。variants配列のgramsから最小重量(100g)を代表として採用する。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: body_htmlに対象11件全てでテイスティング文・産地背景が
+入っている。一部の商品では冒頭に「■商品概要」という見出しラベルが付く
+場合があるため除去し、末尾に「■焙煎度合い」という見出し+焙煎度の値が
+付く場合があるため打ち切る。
 """
 
 import re
 import time
 
 import requests
+from bs4 import BeautifulSoup
 
 from coffee_parser import parse_product, detect_stock_status
 from previous_data import load_previous_products, is_unchanged
@@ -52,6 +59,20 @@ NON_BEAN_KEYWORDS = [
     "コーヒーサーバー", "ドリップスケール", "マグカップ", "キャップ",
 ]
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
+FLAVOR_STOP_PATTERN = re.compile(r"■焙煎度合い")
+FLAVOR_LEADING_PATTERN = re.compile(r"^■商品概要\s*")
+
+
+def extract_flavor_notes(body_html: str | None) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    if not body_html:
+        return None
+    soup = BeautifulSoup(body_html, "html.parser")
+    text = soup.get_text(separator="\n", strip=True)
+    m = FLAVOR_STOP_PATTERN.search(text)
+    text = text[:m.start()] if m else text
+    text = FLAVOR_LEADING_PATTERN.sub("", text)
+    return text.strip() or None
 
 
 def fetch_products() -> list[dict]:
@@ -119,6 +140,7 @@ def build_record(product: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": extract_flavor_notes(product.get("body_html")),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": price,
