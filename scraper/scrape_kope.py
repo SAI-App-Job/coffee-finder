@@ -49,6 +49,14 @@ coffee_parser.ORIGIN_COUNTRY_KEYWORDS_ENで検出を試みるが、
 ベネズエラ(Venezuela)は同辞書に未登録のため該当商品はorigin_country
 がNoneのまま出力される(既存の辞書マスタの更新はスクレイパー実装の
 範囲外のため、本ファイルでは対応しない)。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: div.SingItem-Deta.post-contentに対象8件全てでテイス
+ティング文・産地背景・■スペック情報(生産国/農園名/品種/精製方法/フレー
+バーノート/カップ評価)が入っている。冒頭に全商品共通の焙煎度指定案内
+(「「お店の味」を提供するのではなく...」+リンク)が付くため除去し、
+末尾に「ーーー」(長音符の罫線)区切りで保存方法の定型文が続くため、
+この罫線の直前で打ち切る。
 """
 
 import re
@@ -78,6 +86,25 @@ NON_BEAN_KEYWORDS = ["LIQUID"]
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
 PRICE_PATTERN = re.compile(r"(\d[\d,]*)")
 TITLE_SUFFIX_PATTERN = re.compile(r"\s*-\s*名張のコーヒーショップ\s*\|\s*焙煎工房コペ\s*$")
+FLAVOR_INTRO_PATTERN = re.compile(
+    r"「お店の味」を提供するのではなく、自分のこだわりの味を見つけて欲しい！との想いから、"
+    r"当店では、お客様に焙煎度を指定していただいています♪\n焙煎度について[↓]+\n"
+    r"https://coffeeroastery-kope\.com/roasting/\n?"
+)
+FLAVOR_STOP_PATTERN = re.compile(r"ー{5,}")
+
+
+def extract_flavor_notes(soup: BeautifulSoup) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    el = soup.select_one("div.SingItem-Deta.post-content")
+    if not el:
+        return None
+    text = el.get_text("\n", strip=True)
+    text = FLAVOR_INTRO_PATTERN.sub("", text)
+    m = FLAVOR_STOP_PATTERN.search(text)
+    if m:
+        text = text[:m.start()]
+    return text.strip() or None
 
 
 def fetch_page(url: str) -> BeautifulSoup:
@@ -143,6 +170,7 @@ def build_record(soup: BeautifulSoup, product_url: str) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": extract_flavor_notes(soup),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": price,
