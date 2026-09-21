@@ -27,11 +27,18 @@ G1)が対象。product_type="ドリップバッグ"(バタリーブレンド深�
 数量を選ぶ方式。「豆」バリアントを優先して代表として採用し(house
 ルールの豆優先方針)、重量は変数名の"100g単位"表記から100gを固定値
 として抽出する。
+
+【flavor_notes(2026-09-22追記)】
+実データ確認済み: body_htmlに対象5件全てで焙煎度・FLAVOR(該当時)・
+香り/苦味/酸味等の評価スケール・テイスティング文が入っている。末尾に
+全件共通で「※粉の場合、備考欄に希望の挽き具合を記入ください...」という
+挽き方案内の定型文が続くため、この直前で打ち切る。
 """
 
 import re
 
 import requests
+from bs4 import BeautifulSoup
 
 from coffee_parser import parse_product, detect_stock_status
 
@@ -51,6 +58,15 @@ REQUEST_HEADERS = {
 
 TARGET_PRODUCT_TYPE = "コーヒー豆"
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
+FLAVOR_STOP_PATTERN = re.compile(r"※粉の場合")
+
+
+def extract_flavor_notes(body_html: str) -> str | None:
+    text = BeautifulSoup(body_html or "", "html.parser").get_text("\n", strip=True)
+    m = FLAVOR_STOP_PATTERN.search(text)
+    if m:
+        text = text[:m.start()].strip()
+    return text or None
 
 
 def fetch_products() -> list[dict]:
@@ -114,6 +130,7 @@ def build_record(product: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": extract_flavor_notes(product.get("body_html")),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": price,
