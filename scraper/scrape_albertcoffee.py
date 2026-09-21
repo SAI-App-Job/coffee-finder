@@ -47,6 +47,18 @@ EC-CUBE管理画面設定次第で順序が異なることを実データで確�
 ため、まず商品名から重量を抽出し、無ければclassCategories内の全リーフを
 走査して(挽き方/重量どちらが外側キーでも対応できるよう)名前が
 「NNNg」形式に一致するリーフを重量情報として使う汎用ロジックを採用する。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: div.ec-productRole__description内のdiv.acr-coffeeInfo__row
+(各アイコン付きの行、p.acr-coffeeInfo__title+p.acr-coffeeInfo__text)が
+「このコーヒーについて」見出しの下に6〜7行並んでいる(対象14件全て確認)。
+先頭行は必ずコロン無しのテイスティング的な見出し(例:「レモンのような
+華やかな香り」)+説明文で、末尾行は必ず「味わい：<フレーバー語句>」+
+説明文。その間の行は「原産国：」「標高：」「品種：」「精製方法：」
+「焙煎度：」等、商品によって異なるラベル付きスペック行(コロン区切りの
+見出し)。「ラベル：」形式の見出しを持つ行はflavor_notesから除外するが、
+「味わい：」見出しの行だけは例外的に含める(コロン付きだが内容自体が
+フレーバー情報)。結果として先頭行+末尾「味わい」行の2行を採用する。
 """
 
 import json
@@ -76,6 +88,24 @@ REQUEST_HEADERS = {
 
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
 CLASS_CATEGORIES_MARKER = "eccube.classCategories = "
+FLAVOR_ROW_LABEL_PATTERN = re.compile(r"^([^：:]+)[：:]")
+
+
+def extract_flavor_notes(soup: BeautifulSoup) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    parts = []
+    for row in soup.select("div.acr-coffeeInfo__row"):
+        title_el = row.select_one("p.acr-coffeeInfo__title")
+        text_el = row.select_one("p.acr-coffeeInfo__text")
+        title = title_el.get_text(strip=True) if title_el else ""
+        text = text_el.get_text(strip=True) if text_el else ""
+        m = FLAVOR_ROW_LABEL_PATTERN.match(title)
+        if m and m.group(1) != "味わい":
+            continue
+        combined = " ".join(x for x in (title, text) if x)
+        if combined:
+            parts.append(combined)
+    return "\n".join(parts).strip() or None
 
 
 def fetch_page(url: str) -> BeautifulSoup:
@@ -196,6 +226,7 @@ def build_record(soup: BeautifulSoup, html_text: str, product_url: str) -> dict 
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": extract_flavor_notes(soup),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": price,
