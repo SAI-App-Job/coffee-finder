@@ -25,6 +25,13 @@ requests等は個別にDisallow: /指定があるが、User-agent: *ルールで
 【重量の「1kg」表記について】
 実データ確認済み: 「Brazil 1kg」のようにキログラム単位の商品があるため、
 WEIGHT_PATTERNは[kK]?[gｇ]に対応し、kg単位はグラムに変換する。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: og:descriptionに対象8件中7件で農園ストーリー・
+テイスティング文が入っており、末尾に「配送について」で始まる配送案内の
+定型文が続くため打ち切る。残り1件(Brazil 1kg)は「BrazilROASTDark
+roast」という産地・焙煎度のみの簡潔な表記でテイスティング文を含まない
+が、すぎた珈琲等の先例に倣いサイト上の実データをそのまま採用する。
 """
 
 import re
@@ -57,6 +64,18 @@ NON_BEAN_KEYWORDS = [
 ]
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*(kg|[gｇ])", re.IGNORECASE)
 FIXED_WEIGHT_G = 100
+FLAVOR_STOP_PATTERN = re.compile(r"配送について")
+
+
+def extract_flavor_notes(soup: BeautifulSoup) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    desc_el = soup.select_one('meta[property="og:description"]')
+    if not desc_el or not desc_el.get("content"):
+        return None
+    desc = desc_el["content"]
+    m = FLAVOR_STOP_PATTERN.search(desc)
+    text = desc[:m.start()] if m else desc
+    return text.strip() or None
 
 
 def fetch_page(url: str) -> BeautifulSoup:
@@ -116,6 +135,7 @@ def build_record(soup: BeautifulSoup, product_url: str) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": extract_flavor_notes(soup),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": price,
