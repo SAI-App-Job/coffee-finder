@@ -16,11 +16,18 @@ robots.txt確認済み(2026-09時点): Shopify標準のrobots.txtで`Allow: /`
 実データ確認済み: 各商品のバリエーションは挽き方(豆のまま/中挽き/粗挽き)
 のみで価格は同額。豆のまま(option1="豆のまま")のバリエーションを代表として
 採用し、weight_gはそのバリエーションのgramsフィールドを使う。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: body_htmlに対象11件全てでテイスティング文が入っており
+(対象商品によっては「ソムリエからのメッセージ」「SDGsの取り組み」等の
+背景説明も含む)、注文/配送案内等の無関係な定型文の混入は無いため全文を
+そのまま採用する。
 """
 
 import time
 
 import requests
+from bs4 import BeautifulSoup
 
 from coffee_parser import parse_product, detect_stock_status
 from previous_data import load_previous_products, is_unchanged
@@ -41,6 +48,15 @@ REQUEST_HEADERS = {
 }
 
 TARGET_PRODUCT_TYPE = "コーヒー"
+
+
+def extract_flavor_notes(body_html: str | None) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    if not body_html:
+        return None
+    soup = BeautifulSoup(body_html, "html.parser")
+    text = soup.get_text(separator="\n", strip=True)
+    return text.strip() or None
 
 
 def fetch_products() -> list[dict]:
@@ -96,6 +112,7 @@ def build_record(product: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": extract_flavor_notes(product.get("body_html")),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": price,
