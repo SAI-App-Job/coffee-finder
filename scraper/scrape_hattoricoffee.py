@@ -36,6 +36,17 @@ NFKC正規化してから商品名の重量表記を検出し、それを除い�
 【非コーヒー豆商品の除外について】
 実データ確認済み: 「【定期購入毎月1日12ヶ月】香りのためのぶれんど５００ｇ」
 1件のみ定期購入契約のため除外する。
+
+【flavor_notes(2026-09-22追記)】
+実データ確認済み: 商品ページのdiv.p-product-explain__body(見出し
+「DETAIL」)に対象4件全てで簡潔なテイスティング文が入っている。注文/
+配送案内等の無関係な定型文の混入は無いため全文をそのまま採用する。
+この店舗の実ページはEUC-JPでエンコードされており(Content-Type:
+text/html; charset=EUC-JP)、build_record()が使うfetch_page()は
+Colorme JSON(JSエスケープ済みでASCII安全)の解析用にresp.encodingを
+強制的にutf-8としているため、このdiv直下の生テキストをそのまま読むと
+文字化けする。そのためflavor_notes抽出だけはresp.apparent_encodingで
+再取得する専用関数を用いる。
 """
 
 import json
@@ -74,6 +85,19 @@ def fetch_page(url: str) -> BeautifulSoup:
     resp.raise_for_status()
     resp.encoding = "utf-8"
     return BeautifulSoup(resp.text, "html.parser")
+
+
+def extract_flavor_notes(product_url: str) -> str | None:
+    # 理由はモジュールdocstring参照(実ページはEUC-JPだがfetch_page()は
+    # Colorme JSON解析用にutf-8を強制するため、ここだけapparent_encodingで
+    # 再取得する)
+    resp = requests.get(product_url, headers=REQUEST_HEADERS, timeout=15)
+    resp.raise_for_status()
+    resp.encoding = resp.apparent_encoding
+    soup = BeautifulSoup(resp.text, "html.parser")
+    el = soup.select_one("div.p-product-explain__body")
+    text = el.get_text(strip=True) if el else ""
+    return text or None
 
 
 def fetch_pid_urls() -> list[str]:
@@ -141,6 +165,7 @@ def build_record(soup: BeautifulSoup, product_url: str) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": extract_flavor_notes(product_url),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": int(price) if price is not None else None,
