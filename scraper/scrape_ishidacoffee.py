@@ -28,6 +28,13 @@ scrape_ishidacoffee.py
 吸収する。
 
 robots.txt確認済み(2026-09時点): 他のshop-pro.jp系店舗と同一の記述。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: div.detail__box-txtにテイスティング文が直接入って
+おり(対象12件全て確認)、末尾に「（200ｇから50円引き）」という店舗
+共通の値引き案内が続く商品が大半(除去する)。1件のみ末尾に「農　園
+　名　：」のようなラベル付きスペック情報(全角スペース区切り)が続く
+形式のため、その手前までを採用する。
 """
 
 import json
@@ -61,6 +68,21 @@ CRAWL_DELAY_SECONDS = 1
 
 COLORME_JSON_PATTERN = re.compile(r"var\s+Colorme\s*=\s*(\{.*\});", re.DOTALL)
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
+TRAILING_DISCOUNT_PATTERN = re.compile(r"[（(]200[ｇg]から50円引き[）)]\s*$")
+SPEC_LABEL_STOP_PATTERN = re.compile(r"農\s*園\s*名\s*[：:]")
+
+
+def extract_flavor_notes(soup: BeautifulSoup) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    txt_el = soup.select_one("div.detail__box-txt")
+    if not txt_el:
+        return None
+    text = txt_el.get_text(strip=True)
+    text = TRAILING_DISCOUNT_PATTERN.sub("", text)
+    m = SPEC_LABEL_STOP_PATTERN.search(text)
+    if m:
+        text = text[: m.start()]
+    return text.strip() or None
 
 
 def fetch_page(url: str) -> BeautifulSoup:
@@ -167,6 +189,7 @@ def build_record(product_url: str, fallback_title: str) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": extract_flavor_notes(soup),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": variant.get("option_price_including_tax") if variant else None,
