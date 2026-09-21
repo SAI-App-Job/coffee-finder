@@ -47,6 +47,15 @@ robots.txt確認済み(2026-09時点): `Disallow: /default/error/`
 NON_BEAN_KEYWORDSの「選べる」で除外する。残り21件、重量違いの重複統合後は
 10銘柄(ブレンド8種+ブラジルトミオフクダ+カロシトラジャ)
 +エメラルドマウンテン(500gのみ)=11銘柄を対象とする。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: div.itemDetail_d01に商品名の繰り返し・「<コーヒーの
+特徴>」(または全角山括弧「＜コーヒーの特徴＞」)という見出しラベルに
+続けてテイスティング文が入っている(対象11件全て確認)。その後に
+「国：」(産地スペック開始)・「■」(★/☆評価記号)・「香り★」(■無しの
+評価表記)・「品名：」のいずれか最初に出現するものまでがスペック/定型
+注意書きとなるため、これらの手前までを採用する。先頭の商品名繰り返し
++見出しラベル部分は除去する。
 """
 
 import re
@@ -78,6 +87,21 @@ NON_BEAN_KEYWORDS = ["選べる"]
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
 MAIL_BIN_PATTERN = re.compile(r"[　\s]*【メール便対応】")
 PRICE_PATTERN = re.compile(r"(\d[\d,]*)\s*円")
+FLAVOR_LEADING_PATTERN = re.compile(r"^.*?[<＜]コーヒーの特徴[>＞]", re.DOTALL)
+FLAVOR_STOP_PATTERN = re.compile(r"国：|■|香り\s*[★☆]|品名：")
+
+
+def extract_flavor_notes(soup: BeautifulSoup) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    div = soup.select_one("div.itemDetail_d01")
+    if not div:
+        return None
+    text = div.get_text(" ", strip=True)
+    text = FLAVOR_LEADING_PATTERN.sub("", text)
+    m = FLAVOR_STOP_PATTERN.search(text)
+    if m:
+        text = text[: m.start()]
+    return text.strip() or None
 
 
 def fetch_page(url: str) -> BeautifulSoup:
@@ -121,7 +145,13 @@ def fetch_all_items() -> list[dict]:
         title = extract_title(soup)
         if not title or any(kw in title for kw in NON_BEAN_KEYWORDS):
             continue
-        items.append({"title": title, "price": extract_price(soup), "url": product_url, "soup": soup})
+        items.append({
+            "title": title,
+            "price": extract_price(soup),
+            "url": product_url,
+            "soup": soup,
+            "flavor_notes": extract_flavor_notes(soup),
+        })
     return items
 
 
@@ -172,6 +202,7 @@ def build_record(item: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": item.get("flavor_notes"),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": item["price"],
