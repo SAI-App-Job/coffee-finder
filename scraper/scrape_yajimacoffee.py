@@ -30,6 +30,12 @@ requestsのデフォルト自動判定に任せず、明示的にEUC-JPでデコ
 NON_BEAN_KEYWORDSで除外する。また3件、h2.product_name自体が存在しない
 (削除済みプレースホルダー、sales_price=0/stock_num=0)ため別途除外する。
 残り14件(ストレート11種+ブレンド3種)を対象とする。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: div.product_descriptionの先頭にテイスティング文が
+直接入っており(対象14件全て確認)、その後に「【焙煎度合】」「【内容量】」
+等の【】見出し付きスペック行が続く。最初の【】見出しの手前までを採用
+する。
 """
 
 import json
@@ -60,6 +66,17 @@ RESPONSE_ENCODING = "euc_jp"
 NON_BEAN_KEYWORDS = ["定期便", "ギフト", "MUG CUP", "DINEX"]
 COLORME_PATTERN = re.compile(r"var Colorme\s*=\s*(\{.*?\});", re.DOTALL)
 WEIGHT_DESC_PATTERN = re.compile(r"内容量[】\]]\s*(\d+)\s*[gｇ]")
+FLAVOR_SPEC_HEADING_PATTERN = re.compile(r"【[^】]*】")
+
+
+def extract_flavor_notes(description_text: str | None) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    if not description_text:
+        return None
+    m = FLAVOR_SPEC_HEADING_PATTERN.search(description_text)
+    text = description_text[: m.start()] if m else description_text
+    text = text.strip()
+    return text or None
 
 
 def fetch_page(url: str) -> BeautifulSoup:
@@ -130,6 +147,7 @@ def build_record(soup: BeautifulSoup, product_url: str) -> dict | None:
         "processing_method": processing_method,
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": extract_flavor_notes(description_text),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": int(price) if price is not None else None,
