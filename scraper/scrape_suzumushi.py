@@ -26,6 +26,15 @@ NON_BEAN_KEYWORDSで除外する。
     見られるため「おまかせ」系セットと同じ理由で除外→「サブスク」
 残り9件(単一銘柄のストレート・ブレンド・デカフェ豆、いずれも200g)を
 対象とする。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: og:descriptionは対象9件中8件でテイスティング文+農園名/
+標高/品種/プロセス/焙煎度等のスペック情報+苦味/酸味/甘味/コク/香りの
+★レーティングが地続きで混在しており(ラベル区切りなし)、full-text-
+tolerance方針により全文をそのまま採用する。残り1件(タンザニア
+モンデュールAA)はライブページ確認済みでog:descriptionが空
+(content="")であり、商品ページ自体に説明文が入力されていないため
+flavor_notes=nullのまま単独の例外として許容する。
 """
 
 import re
@@ -71,7 +80,9 @@ def extract_og_fields(soup: BeautifulSoup) -> dict | None:
         return None
     price_el = soup.select_one('meta[property="product:price:amount"]')
     price = int(float(price_el["content"])) if price_el and price_el.get("content") else None
-    return {"title": title, "price": price}
+    desc_el = soup.select_one('meta[property="og:description"]')
+    flavor_notes = desc_el["content"].strip() if desc_el and desc_el.get("content") else None
+    return {"title": title, "price": price, "flavor_notes": flavor_notes or None}
 
 
 def fetch_sitemap_urls() -> list[str]:
@@ -108,6 +119,7 @@ def build_record(product_url: str, fields: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": fields.get("flavor_notes"),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": fields["price"],
