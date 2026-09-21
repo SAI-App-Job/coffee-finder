@@ -31,11 +31,17 @@ robots.txt確認済み(2026-09時点): Shopify標準のrobots.txtでAllow: /、
 実データ確認済み: 対象8銘柄はいずれもバリアントのoption1に「200g」
 「400g(-¥216)」「1kg(-¥864)」の3種類の重量・値引き表記があり、最小重量
 (200g)を代表として採用する。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: body_htmlに対象8件全てでキャッチコピー+焙煎度+苦味/
+酸味/甘味の評価値+ロースターコメント(産地・農園ストーリー)が入っており、
+注文/配送案内等の無関係な定型文の混入は無いため全文をそのまま採用する。
 """
 
 import re
 
 import requests
+from bs4 import BeautifulSoup
 
 from coffee_parser import parse_product, detect_stock_status
 
@@ -67,6 +73,15 @@ def fetch_products() -> list[dict]:
 
 def is_excluded(title: str) -> bool:
     return any(kw in title for kw in NON_BEAN_KEYWORDS)
+
+
+def extract_flavor_notes(body_html: str | None) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    if not body_html:
+        return None
+    soup = BeautifulSoup(body_html, "html.parser")
+    text = soup.get_text("\n", strip=True)
+    return text.strip() or None
 
 
 def parse_weight_g(option_text: str) -> int | None:
@@ -125,6 +140,7 @@ def build_record(product: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": extract_flavor_notes(product.get("body_html")),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": price,
