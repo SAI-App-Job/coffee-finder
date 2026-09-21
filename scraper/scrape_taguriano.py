@@ -16,6 +16,14 @@ python-requests等は個別にDisallow: /指定があるが、User-agent: *ル�
 【カタログについて】
 実データ確認済み(sitemap.xml上13件): 全件が「【銘柄名】煎りたてコーヒー豆
 （200g入り）」という統一フォーマットで、非コーヒー豆商品は無い。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: JSON-LDのdescriptionに「<銘柄名(繰り返し)>産地：...
+（焙煎後の重量・200g）」という先頭スペック行の後にテイスティング文が
+続き、末尾に必ず「ご注文いただいてから焙煎を開始して新鮮なコーヒー
+だけをお届けしています。」という店舗共通の注意書き、続けて焙煎度/
+配送方法等の情報が入っている(対象12件全て確認)。先頭スペック行と
+末尾の注意書きの間を採用する。
 """
 
 import json
@@ -46,6 +54,22 @@ REQUEST_HEADERS = {
 }
 
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
+FLAVOR_START_PATTERN = re.compile(r"焙煎後の重量・\d+[gｇ]）")
+FLAVOR_STOP_PATTERN = re.compile(r"ご注文いただいてから焙煎を開始して新鮮なコーヒーだけをお届けしています。")
+TRAILING_PHOTO_NOTICE_PATTERN = re.compile(r"[（(]写真は焙煎後の状態です。[）)]\s*$")
+
+
+def extract_flavor_notes(description: str | None) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    if not description:
+        return None
+    m1 = FLAVOR_START_PATTERN.search(description)
+    text = description[m1.end():] if m1 else description
+    m2 = FLAVOR_STOP_PATTERN.search(text)
+    if m2:
+        text = text[: m2.start()]
+    text = TRAILING_PHOTO_NOTICE_PATTERN.sub("", text)
+    return text.strip() or None
 
 
 def fetch_page(url: str) -> BeautifulSoup:
@@ -105,6 +129,7 @@ def build_record(product_url: str, product: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": extract_flavor_notes(product.get("description")),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": price,
