@@ -11,10 +11,18 @@ User-agent: *に対し/secure/・/cart/のみDisallow。AhrefsBot等一部
 ボットを個別にDisallow: /、それ以外は制限なし。
 
 【非コーヒー豆商品の除外について】
-実データ確認済み: 全11件のうちドリップバッグギフト・ドリップバッグ3P
-がコーヒー豆単品ではないためNON_BEAN_KEYWORDSで除外する。商品名が
-空の削除済みプレースホルダーレコードも除外する。残り8件(豆・ブレンド)
-を対象とする。
+実データ確認済み(2026-09-21再確認、全12件): ドリップバッグギフト・
+ドリップバッグ3PがコーヒートXコーヒー豆単品ではないためNON_BEAN_KEYWORDS
+で除外する。残り10件(豆・ブレンド、スペシャルブレンド/マイルドブレンドを
+含む)を対象とする。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: 商品詳細ページのdiv#product-explain内にh5見出し
+(キャッチコピー)+p.textのテイスティング文・産地背景が入っており(対象
+10件全て確認)、その後にtable.t-data(生産国・精製方法等のスペック表)が
+続く。同スペック表内の「フレーバー」行(例: 「チョコレート・ナッツ」)は
+テイスティング用語のため追加で採用するが、値が「─」等のプレースホルダー
+の場合は採用しない。
 """
 
 import json
@@ -44,6 +52,30 @@ REQUEST_HEADERS = {
 NON_BEAN_KEYWORDS = ["ドリップバッグ"]
 COLORME_PATTERN = re.compile(r"var Colorme\s*=\s*(\{.*?\});", re.DOTALL)
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
+FLAVOR_PLACEHOLDER_VALUES = {"─", "-", "ー", "―"}
+
+
+def extract_flavor_notes(soup: BeautifulSoup) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    container = soup.select_one("#product-explain")
+    if not container:
+        return None
+    parts = []
+    h5 = container.find("h5")
+    if h5 and h5.get_text(strip=True):
+        parts.append(h5.get_text(strip=True))
+    p = container.find("p", class_="text")
+    if p and p.get_text(strip=True):
+        parts.append(p.get_text(strip=True))
+    for table in container.select("table.t-data"):
+        for tr in table.select("tr"):
+            th = tr.find("th")
+            td = tr.find("td")
+            if th and td and "フレーバー" in th.get_text(strip=True):
+                val = td.get_text(strip=True)
+                if val and val not in FLAVOR_PLACEHOLDER_VALUES:
+                    parts.append("フレーバー：" + val)
+    return "\n".join(parts) if parts else None
 
 
 def fetch_page(url: str) -> BeautifulSoup:
@@ -104,6 +136,7 @@ def build_record(soup: BeautifulSoup, product_url: str) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": extract_flavor_notes(soup),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": int(price) if price is not None else None,
