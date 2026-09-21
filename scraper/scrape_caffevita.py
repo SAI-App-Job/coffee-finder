@@ -30,6 +30,11 @@ online_shop.php1ページに全14件が静的HTMLとして直接記載されて�
 実データ確認済み: 「コスタリカ　ハニープロセス」「ブラジル　CAFFE VITA農園
 ナチュラル」のように産地国名が商品名先頭に付くストレート商品と、
 「エスプレッソブレンド」「ヴィータブレンド」等のブレンド商品が混在する。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: 各div.shop_cts内の「豆の特徴」見出しに続くp.materialに
+テイスティング文が直接入っており(対象13件全て確認)、価格・スペック等の
+混入は無いため全文をそのまま採用する。
 """
 
 import re
@@ -82,7 +87,10 @@ def scrape_item_list() -> list[dict]:
             if m:
                 price = int(m.group(1).replace(",", ""))
 
-        results.append({"raw_name": raw_name, "price": price})
+        material_el = block.select_one("p.material")
+        flavor_notes = material_el.get_text(strip=True) if material_el else None
+
+        results.append({"raw_name": raw_name, "price": price, "flavor_notes": flavor_notes or None})
     return results
 
 
@@ -116,6 +124,7 @@ def build_record(item: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": item.get("flavor_notes"),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": item["price"],
