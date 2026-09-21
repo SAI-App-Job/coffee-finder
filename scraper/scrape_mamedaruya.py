@@ -28,11 +28,19 @@ robots.txt確認済み(2026-09時点): Shopify標準のrobots.txtでAllow: /、
 等)、option2=重量(100g/150g)の組み合わせ。挽き方によらず同一重量なら同一
 価格のため、option1="豆のまま"(未挽きの豆)かつ最小重量(100g)のバリアントを
 代表として採用する。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: body_htmlは冒頭が支払い/配送案内・お試しセット案内の
+リンクで始まるが、対象9件全てにその後「＜味わい＞」(ストレート豆)または
+「＜ブレンドコンセプト＞」(ブレンド)という見出しから始まるテイスティング
+文・商品説明・農園情報が続くことを確認した。この開始見出しから
+「＜カテゴリー＞」見出し直前までを抽出する。
 """
 
 import re
 
 import requests
+from bs4 import BeautifulSoup
 
 from coffee_parser import parse_product, detect_stock_status
 
@@ -53,6 +61,24 @@ REQUEST_HEADERS = {
 # 理由はモジュールdocstring参照
 NON_BEAN_KEYWORDS = ["コーヒーバッグ", "ドリップバッグ", "お試しセット"]
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
+FLAVOR_START_PATTERN = re.compile(r"＜(?:ブレンドコンセプト|味わい)")
+FLAVOR_STOP_PATTERN = re.compile(r"＜カテゴリー＞")
+
+
+def extract_flavor_notes(body_html: str | None) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    if not body_html:
+        return None
+    soup = BeautifulSoup(body_html, "html.parser")
+    text = soup.get_text("\n", strip=True)
+    start_m = FLAVOR_START_PATTERN.search(text)
+    if not start_m:
+        return None
+    text = text[start_m.start():]
+    stop_m = FLAVOR_STOP_PATTERN.search(text)
+    if stop_m:
+        text = text[:stop_m.start()]
+    return text.strip() or None
 
 
 def fetch_products() -> list[dict]:
@@ -122,6 +148,7 @@ def build_record(product: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": extract_flavor_notes(product.get("body_html")),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": price,
