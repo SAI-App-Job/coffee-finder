@@ -26,6 +26,14 @@ BASE株式会社(東京都港区)の代理表記があり、店舗自身の住�
 実データ確認済み: 百年珈琲(ドリップパック)(個包装フォーマット)・
 焼きドーナツ/シナモンティードーナツ(100周年記念の菓子、コーヒー豆
 ではない)が非対象。NON_BEAN_KEYWORDSで除外する。
+
+【flavor_notes(2026-09-22追記)】
+実データ確認済み: og:descriptionは空で使えないが、商品ページのdiv#
+appsItemDetailCustomTag(BASEの「商品説明カスタムレイアウト」機能)に
+紹介文・味わい(苦味/酸味/コクの棒グラフ)・使用豆・焙煎度が入っている。
+中間に挟まる「ご注文について」の送料案内(商品に依らない定型文)のみを
+除去し、その前後の紹介文/味わいと、末尾の「商品情報」(使用豆・焙煎度)は
+残す。
 """
 
 import re
@@ -54,6 +62,14 @@ REQUEST_HEADERS = {
 NON_BEAN_KEYWORDS = ["ドリップパック", "ドーナツ"]
 WEIGHT_MULT_PATTERN = re.compile(r"(\d+)g\s*[×xX]\s*(\d+)")
 WEIGHT_PATTERN = re.compile(r"(\d+)g")
+FLAVOR_ORDER_INFO_PATTERN = re.compile(r"ご注文について\n.*?(?=商品情報|\Z)", re.DOTALL)
+
+
+def extract_flavor_notes(soup: BeautifulSoup) -> str | None:
+    el = soup.select_one("div#appsItemDetailCustomTag")
+    text = el.get_text("\n", strip=True) if el else ""
+    text = FLAVOR_ORDER_INFO_PATTERN.sub("", text)
+    return text or None
 
 
 def fetch_page(url: str) -> BeautifulSoup:
@@ -134,6 +150,7 @@ def build_record(item: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": item.get("flavor_notes"),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": item["price"],
@@ -150,13 +167,19 @@ def scrape_all_products() -> tuple[list[dict], list[dict]]:
     all_items = []
     for product_url in product_urls:
         try:
-            fields = extract_og_fields(fetch_page(product_url))
+            soup = fetch_page(product_url)
+            fields = extract_og_fields(soup)
         except requests.RequestException as e:
             print(f"[warn] 詳細ページ取得失敗: {product_url} ({e})")
             continue
         if not fields:
             continue
-        all_items.append({"title": fields["title"], "price": fields["price"], "url": product_url})
+        all_items.append({
+            "title": fields["title"],
+            "price": fields["price"],
+            "url": product_url,
+            "flavor_notes": extract_flavor_notes(soup),
+        })
 
     canonical_items = pick_canonical_items(all_items)
 
