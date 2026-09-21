@@ -18,6 +18,13 @@ User-agent: *に対し/secure/・/cart/のみDisallow。AhrefsBot等一部
 ないためNON_BEAN_KEYWORDSで除外する。商品名が空の削除済み
 プレースホルダーレコードも除外する。5銘柄(4ブレンド+那須ロイヤル
 ブレンド)を対象とする。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: og:descriptionは店舗共通の「自家焙煎珈琲」のみで
+使用できない。代わりに商品詳細ページのdiv.product-order-exp内には
+対象5件全てで店主のストーリー性のあるテイスティング文が入っている
+ことを確認した。末尾に「・販売価格とは別に配送料、代引き手数料…」と
+いう配送料案内の定型文が続く場合があるため、この見出しの直前で打ち切る。
 """
 
 import json
@@ -49,6 +56,19 @@ NON_BEAN_KEYWORDS = [
 ]
 COLORME_PATTERN = re.compile(r"var Colorme\s*=\s*(\{.*?\});", re.DOTALL)
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
+FLAVOR_STOP_PATTERN = re.compile(r"・販売価格とは別に")
+
+
+def extract_flavor_notes(soup: BeautifulSoup) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    el = soup.select_one("div.product-order-exp")
+    if not el:
+        return None
+    text = el.get_text("\n", strip=True)
+    m = FLAVOR_STOP_PATTERN.search(text)
+    if m:
+        text = text[:m.start()]
+    return text.strip() or None
 
 
 def fetch_page(url: str) -> BeautifulSoup:
@@ -109,6 +129,7 @@ def build_record(soup: BeautifulSoup, product_url: str) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": extract_flavor_notes(soup),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": int(price) if price is not None else None,
