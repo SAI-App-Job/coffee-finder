@@ -39,6 +39,14 @@ category="ブレンド"と自動判定される(産地は単一に確定でき�
 
 robots.txt確認済み(2026-09時点): User-Agent: * で/default/error/と/preview/
 のみDisallow、他は制限なし。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: og:description/meta descriptionは全商品共通の店舗紹介文、
+JSON-LDのdescriptionは空のため使用できない。代わりに詳細ページの
+div.mainTxt内には対象7件全てで農園コメント・テイスティング文が入って
+いることを確認した。6件は末尾に「＊賞味期間について」または「【発送方法」
+という見出しから保存方法/発送案内の定型文が続くため、この見出しの直前で
+打ち切る(残り1件はこの定型文が無いため全文をそのまま採用)。
 """
 
 import json
@@ -46,6 +54,7 @@ import re
 import time
 
 import requests
+from bs4 import BeautifulSoup
 
 from coffee_parser import parse_product, apply_category_hint_fallback, detect_stock_status
 
@@ -78,6 +87,7 @@ NAME_DETAIL_PATTERN = re.compile(
 )
 PRICE_DETAIL_PATTERN = re.compile(r'<li class="sales_price">.*?<span>([\d,]+)円', re.DOTALL)
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
+FLAVOR_STOP_PATTERN = re.compile(r"＊賞味期間について|【発送方法")
 
 
 def fetch_text(url: str) -> str:
@@ -98,6 +108,19 @@ def fetch_list_items() -> list[dict]:
     return items
 
 
+def extract_flavor_notes(text: str) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    soup = BeautifulSoup(text, "html.parser")
+    el = soup.select_one("div.mainTxt")
+    if not el:
+        return None
+    full = el.get_text("\n", strip=True)
+    m = FLAVOR_STOP_PATTERN.search(full)
+    if m:
+        full = full[:m.start()]
+    return full.strip() or None
+
+
 def fetch_detail(url: str) -> dict:
     text = fetch_text(url)
     name_m = NAME_DETAIL_PATTERN.search(text)
@@ -107,6 +130,7 @@ def fetch_detail(url: str) -> dict:
         "raw_name": name_m.group(1).strip() if name_m else None,
         "price": int(price_m.group(1).replace(",", "")) if price_m else None,
         "out_of_stock": out_of_stock,
+        "flavor_notes": extract_flavor_notes(text),
     }
 
 
@@ -160,6 +184,7 @@ def build_record(item: dict, detail: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": detail.get("flavor_notes"),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": detail["price"],
