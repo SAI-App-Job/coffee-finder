@@ -26,6 +26,15 @@ Blend Set」(複数銘柄セット)、「POCKET羊蹄山」「Original sticker�
 robots.txt確認済み(2026-09時点): 他のBASE系店舗と同一の記述(curl/python-
 requests等は個別にDisallow: /指定があるが、User-agent: *ルールでは実質
 許可)。本スクレイパーは識別可能な独自User-Agentを使用する。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: 対象全11件のog:descriptionはテイスティング文(または
+ブレンドの背景ストーリー)で始まり、【産地】等の構造化ラベルなしで
+生産国：等のスペック行が地続きで続く場合がある(full-text-tolerance方針
+により許容)。末尾は「100g以上のお買い上げで」「こちらの商品は」「オーナー
+が視察・仕入れに行き」のいずれかのパッケージ/配送/ブログ案内の定型文で
+始まり、共通して「配送について」という文言を含むため、これらのいずれか
+最初に出現した時点で打ち切る。
 """
 
 import re
@@ -57,6 +66,16 @@ NON_BEAN_KEYWORDS = [
     "Single Origin & Blend Set", "POCKET", "sticker", "CHICO BAG",
 ]
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
+FLAVOR_STOP_PATTERN = re.compile(r"こちらの商品は|オーナーが視察・仕入れに行き|100[gｇ]以上のお買い上げで|配送について")
+
+
+def extract_flavor_notes(description: str | None) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    if not description:
+        return None
+    m = FLAVOR_STOP_PATTERN.search(description)
+    text = description[:m.start()] if m else description
+    return text.strip() or None
 
 
 def fetch_item_urls() -> list[str]:
@@ -75,7 +94,9 @@ def extract_fields(soup: BeautifulSoup) -> dict | None:
         return None
     price_el = soup.select_one('meta[property="product:price:amount"]')
     price = int(float(price_el["content"])) if price_el and price_el.get("content") else None
-    return {"title": title, "price": price}
+    desc_el = soup.select_one('meta[property="og:description"]')
+    flavor_notes = extract_flavor_notes(desc_el["content"]) if desc_el and desc_el.get("content") else None
+    return {"title": title, "price": price, "flavor_notes": flavor_notes}
 
 
 def build_record(item: dict) -> dict | None:
@@ -107,6 +128,7 @@ def build_record(item: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": item.get("flavor_notes"),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": item["price"],
