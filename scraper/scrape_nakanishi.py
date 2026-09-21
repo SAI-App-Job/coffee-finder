@@ -10,10 +10,19 @@ GRP")。curl/python-requests等は個別にDisallow: /指定があるが、User-
 ルールでは実質許可。本スクレイパーは識別可能な独自User-Agentを使用する。
 
 【非コーヒー豆商品の除外について】
-実データ確認済み: 全7件のうち「ノギマチブレンド　ドリップバッグ 5杯分」の
-1件のみがドリップバッグ形態(既存の「ノギマチブレンド 100g」と重複)で
-非対象。NON_BEAN_KEYWORDSで除外し、残り6件(いずれも100g、重量表記が
-商品名末尾に付く)を対象とする。
+実データ確認済み(2026-09-21再確認時点、sitemap.xml全6件): 「ノギマチ
+ブレンド　ドリップバッグ 5杯分」の1件のみがドリップバッグ形態(既存の
+「ノギマチブレンド 100g」と重複)で非対象。NON_BEAN_KEYWORDSで除外し、
+残り5件(いずれも100g、重量表記が商品名末尾に付く)を対象とする(旧
+docstring記載の6件から、単品銘柄が1件サイト側で終売済みと判明したため
+5件に減少)。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: og:descriptionに対象5件全てでテイスティング文・産地
+情報が入っている(うち1件は「フルーティーで華やかなコーヒー」という
+簡潔な一文のみだが、実データ確認済みの本物の説明文であるためそのまま
+採用する)。注文/配送案内等の無関係な定型文の混入は無いため全文をそのまま
+採用する。
 """
 
 import re
@@ -59,7 +68,9 @@ def extract_og_fields(soup: BeautifulSoup) -> dict | None:
         return None
     price_el = soup.select_one('meta[property="product:price:amount"]')
     price = int(float(price_el["content"])) if price_el and price_el.get("content") else None
-    return {"title": title, "price": price}
+    desc_el = soup.select_one('meta[property="og:description"]')
+    flavor_notes = desc_el["content"].strip() if desc_el and desc_el.get("content") else None
+    return {"title": title, "price": price, "flavor_notes": flavor_notes or None}
 
 
 def fetch_sitemap_urls() -> list[str]:
@@ -96,6 +107,7 @@ def build_record(item: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": item.get("flavor_notes"),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": item["price"],
@@ -125,7 +137,12 @@ def scrape_all_products() -> tuple[list[dict], list[dict]]:
             records.append(prev)
             continue
 
-        detail = build_record({"title": fields["title"], "price": fields["price"], "url": product_url})
+        detail = build_record({
+            "title": fields["title"],
+            "price": fields["price"],
+            "flavor_notes": fields.get("flavor_notes"),
+            "url": product_url,
+        })
         if detail is None:
             continue
         if detail.get("is_flavored"):
