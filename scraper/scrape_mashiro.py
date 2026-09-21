@@ -42,6 +42,13 @@ div.c-product_item__inner__titleに商品名(先頭に「［珈琲豆200g～］�
 実データ確認済み: 一覧ページ・詳細ページのいずれにも構造化された
 売り切れバッジは確認できなかった(2026-09時点で全件在庫あり)ため、
 商品名のテキストのみから判定する。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: og:descriptionは全商品共通の店舗紹介文で商品固有の
+情報を含まないため使用しない。代わりに商品詳細ページのdiv#product-
+description(div.c-product_info__description)を使うと対象8件全てで
+テイスティング文が入っていることを確認した。注文/配送案内等の無関係な
+定型文の混入は無いため全文をそのまま採用する。
 """
 
 import re
@@ -78,6 +85,15 @@ def fetch_page(url: str) -> BeautifulSoup:
     return BeautifulSoup(resp.text, "html.parser")
 
 
+def extract_flavor_notes(soup: BeautifulSoup) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    el = soup.select_one("div#product-description")
+    if not el:
+        return None
+    text = el.get_text("\n", strip=True)
+    return text.strip() or None
+
+
 def fetch_items() -> list[dict]:
     soup = fetch_page(CATEGORY_URL)
     items = []
@@ -96,11 +112,18 @@ def fetch_items() -> list[dict]:
             price_m = PRICE_PATTERN.search(price_el.get_text())
             if price_m:
                 price = int(price_m.group(1).replace(",", ""))
+        product_url = BASE_URL + link_el["href"]
+        try:
+            flavor_notes = extract_flavor_notes(fetch_page(product_url))
+        except requests.RequestException as e:
+            print(f"[warn] 詳細ページ取得失敗: {product_url} ({e})")
+            flavor_notes = None
         items.append({
             "title": title,
             "weight_g": weight_g,
             "price": price,
-            "url": BASE_URL + link_el["href"],
+            "flavor_notes": flavor_notes,
+            "url": product_url,
         })
     return items
 
@@ -134,6 +157,7 @@ def build_record(item: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": item.get("flavor_notes"),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": item["price"],
