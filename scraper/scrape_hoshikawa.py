@@ -24,6 +24,15 @@ HTMLをスクレイピングする代わりに、Shopifyが標準で公開して
 ラベルが商品によって含まれる(実データ確認済み、全商品にあるわけではない)。
 焙煎度は「中浅煎り」のような簡易表記でROAST_LEVELSの8段階と粒度が異なるため
 roast_hintとして保持し、SCAスコアはfarm_noteに含める。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: body_html冒頭に対象5件全てでテイスティング文(一部は
+＜詳細＞以下に産地スペック+カッピングノートまで続く)が入っている。
+末尾に「"豆" or "挽き" をお選びください」または「「豆」または「挽き」
+をお選びください」という挽き方選択案内の定型文から発送方法の長文が
+続くため、この見出しの直前で打ち切る。また一部商品で「※一部離島地域
+につきましては、別途ご連絡させていただく場合がございます。」という
+配送関連の定型文が本文中に紛れ込むため、これも除去する。
 """
 
 import json
@@ -60,6 +69,18 @@ PRODUCTS_JSON_URL = "https://roastery-hoshikawa225.myshopify.com/products.json"
 NON_BEAN_KEYWORDS = ["ドリップバッグ"]
 
 LABEL_PATTERN = re.compile(r"(焙煎度合い|SCAスコア|生産地|標高|品種|精選方法)：\s*([^\n<]+)")
+FLAVOR_STOP_PATTERN = re.compile(r"[\"「]豆[\"」]\s*(?:or|または)\s*[\"「]挽き[\"」]")
+FLAVOR_NOISE_PATTERN = re.compile(r"※一部離島地域につきましては、別途ご連絡させていただく場合がございます。")
+
+
+def extract_flavor_notes(description_text: str) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    text = description_text
+    m = FLAVOR_STOP_PATTERN.search(text)
+    if m:
+        text = text[:m.start()]
+    text = FLAVOR_NOISE_PATTERN.sub("", text)
+    return text.strip() or None
 
 
 def fetch_all_products() -> list[dict]:
@@ -144,7 +165,7 @@ def build_record(product: dict) -> dict:
         "roast_selectable": False,
         "post_processing_tags": parsed["post_processing_tags"],
         "farm_note": farm_note,
-        "flavor_notes": None,
+        "flavor_notes": extract_flavor_notes(description_text),
         "blend_components": [],
         "price": price,
         "weight_g": weight_g,
