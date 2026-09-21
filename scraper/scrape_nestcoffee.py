@@ -31,6 +31,14 @@ JS変数割り当てに実際の価格が埋め込まれている。挽き方オ
 `<option value="ID">重量g</option>`から重量IDを取得し、
 `priceArray[1][重量ID][...]`から対応する価格を取得、最小重量(100g)を
 代表として採用する。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: og:descriptionは末尾が「…」で切り詰められているため
+使用しない。代わりにdiv.item_desc_textを使うと対象8件全てでテイスティ
+ング文・産地背景(単一銘柄は農園紹介付き)が入っていることを確認した。
+末尾に区切り線(「＿＿＿…」)または「※ご注文の際はお好みの豆の状態」で
+始まる注文/配送案内の定型文が続くため、いずれか先に出現した方の直前で
+打ち切る。
 """
 
 import re
@@ -59,6 +67,19 @@ REQUEST_HEADERS = {
 SHOP_PREFIX_PATTERN = re.compile(r"^【nest coffee】\s*")
 WEIGHT_OPTION_PATTERN = re.compile(r'<option value="(\d+)">\s*(\d+)\s*[gｇ]\s*</option>')
 PRICE_ARRAY_PATTERN = re.compile(r"priceArray\[1\]\[(\d+)\]\[(\d+)\]\s*=\s*([\d.]+);")
+FLAVOR_STOP_PATTERN = re.compile(r"＿{5,}|※ご注文の際はお好みの豆の状態")
+
+
+def extract_flavor_notes(soup: BeautifulSoup) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    el = soup.select_one("div.item_desc_text")
+    if not el:
+        return None
+    text = el.get_text("\n", strip=True)
+    m = FLAVOR_STOP_PATTERN.search(text)
+    if m:
+        text = text[:m.start()]
+    return text.strip() or None
 
 
 def fetch_html(url: str) -> str:
@@ -98,6 +119,7 @@ def build_record(title: str, html: str, product_url: str) -> dict | None:
     weight_price = pick_min_weight_price(html)
     price = weight_price[1] if weight_price else None
     weight_g = weight_price[0] if weight_price else None
+    flavor_notes = extract_flavor_notes(BeautifulSoup(html, "html.parser"))
 
     if parsed["is_flavored"]:
         return {
@@ -122,6 +144,7 @@ def build_record(title: str, html: str, product_url: str) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": flavor_notes,
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": price,
