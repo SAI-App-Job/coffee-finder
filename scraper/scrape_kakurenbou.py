@@ -50,6 +50,12 @@ parse_product()のroast_level判定にそのまま乗せられる。
 無し)。JSON-LD(schema.org Product)のoffersにprice・availability
 (http://schema.org/InStock 等)が構造化されている(MARUTAKE COFFEE BEANSと
 同じBASE標準テンプレート)。
+
+【flavor_notes(2026-09-22追記)】
+実データ確認済み: JSON-LDのdescriptionに対象4件全てでブレンドの紹介文・
+豆の種類・ロースト・香味のバランス(酸味/苦味)の記述が入っている。末尾に
+全件共通で「※「備考欄」にて<コーヒー豆の[豆][粉]の選択>が可能です。」
+という注文方法案内〜発送方法の定型文が続くため、この直前で打ち切る。
 """
 
 import json
@@ -86,6 +92,15 @@ REQUEST_HEADERS = {
 }
 
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
+FLAVOR_STOP_PATTERN = re.compile(r"※「備考欄」にて")
+
+
+def extract_flavor_notes(description: str) -> str | None:
+    text = (description or "").strip()
+    m = FLAVOR_STOP_PATTERN.search(text)
+    if m:
+        text = text[:m.start()].strip()
+    return text or None
 
 
 def fetch_page(url: str) -> BeautifulSoup:
@@ -136,6 +151,7 @@ def build_record(product_url: str, product: dict, category_hint: str) -> dict:
         "processing_method": None,
         "grade": None,
         "roast_level": parsed["roast_level"],
+        "flavor_notes": extract_flavor_notes(product.get("description")),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": price,
