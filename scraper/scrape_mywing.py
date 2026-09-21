@@ -23,6 +23,12 @@ Disallow: /指定があるが、User-agent: *ルールでは実質許可。本�
 バッグ(1袋)・Coffee Gatorハンドドリッパー/直火式エスプレッソメーカー
 (器具)が非対象。NON_BEAN_KEYWORDSで除外する。残り12件は全て単一銘柄
 200gの焙煎豆(重量違いの重複なし)。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: og:descriptionにテイスティング文が直接入っており
+(対象12件全て確認)、1件のみ末尾に「※開封後は密閉容器に保存し、
+なるべく早めにお召し上がりください。」という店舗共通の保存方法注意書き
+が続くため、これを除去する。
 """
 
 import re
@@ -50,6 +56,15 @@ REQUEST_HEADERS = {
 
 NON_BEAN_KEYWORDS = ["ビスコッティ", "ドリップバッグ", "ハンドドリッパー", "エスプレッソメーカー", "Coffee Gator"]
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
+FLAVOR_STORAGE_NOTICE_PATTERN = re.compile(r"※開封後は密閉容器に保存し、なるべく早めにお召し上がりください。")
+
+
+def extract_flavor_notes(description: str | None) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    if not description:
+        return None
+    text = FLAVOR_STORAGE_NOTICE_PATTERN.sub("", description)
+    return text.strip() or None
 
 
 def fetch_page(url: str) -> BeautifulSoup:
@@ -73,7 +88,9 @@ def extract_og_fields(soup: BeautifulSoup) -> dict | None:
         return None
     price_el = soup.select_one('meta[property="product:price:amount"]')
     price = int(float(price_el["content"])) if price_el and price_el.get("content") else None
-    return {"title": title, "price": price}
+    desc_el = soup.select_one('meta[property="og:description"]')
+    flavor_notes = extract_flavor_notes(desc_el["content"]) if desc_el and desc_el.get("content") else None
+    return {"title": title, "price": price, "flavor_notes": flavor_notes}
 
 
 def build_record(item: dict) -> dict | None:
@@ -105,6 +122,7 @@ def build_record(item: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": item.get("flavor_notes"),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": item["price"],
@@ -129,7 +147,12 @@ def scrape_all_products() -> tuple[list[dict], list[dict]]:
         if not fields:
             continue
 
-        detail = build_record({"title": fields["title"], "price": fields["price"], "url": product_url})
+        detail = build_record({
+            "title": fields["title"],
+            "price": fields["price"],
+            "url": product_url,
+            "flavor_notes": fields.get("flavor_notes"),
+        })
         if detail is None:
             continue
         if detail.get("is_flavored"):
