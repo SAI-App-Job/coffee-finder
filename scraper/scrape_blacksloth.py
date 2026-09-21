@@ -20,6 +20,22 @@ python-requests等は個別にDisallow: /指定があるが、User-agent: *ル�
 「コーヒー染めガーゼハンカチ」・「バンド風Tシャツ」・「水出しアイス
 コーヒー」(液体)・「オリジナルエコボトル」がコーヒー豆単品ではないため
 NON_BEAN_KEYWORDSで除外する。残りはブレンド3種+ストレート数種(100g/200g)。
+
+【flavor_notes実装時に発覚したNON_BEAN_KEYWORDS漏れ(2026-09-21追記)】
+実データ確認済み: 「ユアドリップ（5P入り）」「ユアドリップ (20P入り）」
+「かんたんドリップ30p　（フィルター）」「毎日ドリップバック（コーヒー
+20杯分）」(いずれもドリップバッグ/簡易ドリッパー器具)・「オリジナル
+キーホルダー」(什器)・「オリジナルちゃいすこう　ユアドリップ　5p
+ギフトボックス」(菓子とのギフトセット)の計6件が、既存のキーワード
+リストに引っかからずコーヒー豆単品として誤収録されていたことが判明した。
+「ドリップ」「キーホルダー」をNON_BEAN_KEYWORDSに追加して除外する
+(対象の焙煎豆7件のいずれにも「ドリップ」「キーホルダー」を含む商品名は
+無いことを確認済み)。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: og:descriptionにテイスティング文が直接入っており
+(対象7件全て確認)、価格・スペック等の混入は無いため全文をそのまま
+採用する。
 """
 
 import re
@@ -46,7 +62,7 @@ REQUEST_HEADERS = {
     "User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"
 }
 
-NON_BEAN_KEYWORDS = ["初めてセット", "ハンカチ", "Tシャツ", "水出し", "ボトル"]
+NON_BEAN_KEYWORDS = ["初めてセット", "ハンカチ", "Tシャツ", "水出し", "ボトル", "ドリップ", "キーホルダー"]
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
 
 
@@ -63,7 +79,9 @@ def extract_og_fields(soup: BeautifulSoup) -> dict | None:
     title = title_el["content"].split(" | ")[0].strip()
     price_el = soup.select_one('meta[property="product:price:amount"]')
     price = int(float(price_el["content"])) if price_el and price_el.get("content") else None
-    return {"title": title, "price": price}
+    desc_el = soup.select_one('meta[property="og:description"]')
+    flavor_notes = desc_el["content"].strip() if desc_el and desc_el.get("content") else None
+    return {"title": title, "price": price, "flavor_notes": flavor_notes or None}
 
 
 def build_record(product_url: str, fields: dict) -> dict | None:
@@ -98,6 +116,7 @@ def build_record(product_url: str, fields: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": fields.get("flavor_notes"),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": fields["price"],
