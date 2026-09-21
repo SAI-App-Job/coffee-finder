@@ -36,6 +36,12 @@ Unicode十進数字として一致し、int()もそのまま変換できるた�
 税込価格(例: 3,700円(税別)の商品はcontent="3996")。一覧ページの表示
 価格(税込)と一致するため、この税込価格を採用する(pConf.priceは税別の
 ため使わない)。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: og:descriptionは末尾が「…」で切り詰められているため、
+代わりにdiv.item_desc_text(【生産国】【農園】【生産処理】【品種】
+【詳細】のラベル付きスペック文)を使う。対象10件全てで【詳細】ラベル
+以降にテイスティング文が入っており、この部分のみ抽出する。
 """
 
 import re
@@ -72,6 +78,20 @@ REQUEST_HEADERS = {
 
 NON_BEAN_KEYWORDS: list[str] = []
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
+FLAVOR_DETAIL_PATTERN = re.compile(r"【詳細】(.*)", re.DOTALL)
+
+
+def extract_flavor_notes(soup: BeautifulSoup) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    el = soup.select_one("div.item_desc_text")
+    if not el:
+        return None
+    text = el.get_text("\n", strip=True)
+    m = FLAVOR_DETAIL_PATTERN.search(text)
+    if not m:
+        return None
+    detail = m.group(1).strip()
+    return detail or None
 
 
 def fetch_page(url: str) -> BeautifulSoup:
@@ -106,7 +126,14 @@ def extract_fields(soup: BeautifulSoup, product_url: str, category_is_blend: boo
         return None
     price_el = soup.select_one('meta[property="product:price:amount"]')
     price = int(float(price_el["content"])) if price_el and price_el.get("content") else None
-    return {"title": title, "price": price, "url": product_url, "category_is_blend": category_is_blend}
+    flavor_notes = extract_flavor_notes(soup)
+    return {
+        "title": title,
+        "price": price,
+        "url": product_url,
+        "category_is_blend": category_is_blend,
+        "flavor_notes": flavor_notes,
+    }
 
 
 def pick_canonical_items(items: list[dict]) -> list[dict]:
@@ -154,6 +181,7 @@ def build_record(item: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": item.get("flavor_notes"),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": item["price"],
