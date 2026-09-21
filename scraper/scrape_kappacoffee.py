@@ -30,6 +30,12 @@ BASEの決済機能を使いつつ受け取りは店舗のみという運用だ�
 【非コーヒー豆商品について】
 実データ確認済み: 全20件がいずれも産地名を持つ焙煎豆単品で、非コーヒー豆商品は
 無かった。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: og:descriptionに対象10件全てでテイスティング文・産地
+背景・香り/甘味/苦味/酸味/コクの★評価が入っており(生産地域/標高/品種等の
+スペック情報が地続きで混在するがfull-text-tolerance方針により許容)、
+注文/配送案内等の無関係な定型文の混入は無いため全文をそのまま採用する。
 """
 
 import re
@@ -81,7 +87,9 @@ def fetch_item_fields(url: str) -> dict | None:
     title = PICKUP_PREFIX_PATTERN.sub("", title)
     price_el = soup.select_one('meta[property="product:price:amount"]')
     price = int(float(price_el["content"])) if price_el and price_el.get("content") else None
-    return {"title": title, "price": price, "url": url}
+    desc_el = soup.select_one('meta[property="og:description"]')
+    flavor_notes = desc_el["content"].strip() if desc_el and desc_el.get("content") else None
+    return {"title": title, "price": price, "url": url, "flavor_notes": flavor_notes or None}
 
 
 def pick_canonical_items(items: list[dict]) -> list[dict]:
@@ -128,6 +136,7 @@ def build_record(item: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": item.get("flavor_notes"),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": item["price"],
