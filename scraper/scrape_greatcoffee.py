@@ -35,6 +35,12 @@ NON_BEAN_KEYWORDSで除外する。残り6件(キリマンブレンド「望」�
 マイルドブレンド「心」・トラジャーブレンド「道」・Colombia(Bourbon)・
 トラジャ ママサ プレミアム・Guatemala(Bourbon 100%)、いずれも200g)を
 対象とする。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: meta[name="description"]タグに対象6件全てでテイス
+ティング文・産地紹介が切り詰められずそのまま入っている(商品詳細ページの
+「■ 商品説明」セクションと同一内容)ことを確認した。注文/配送案内等の
+無関係な定型文の混入は無いため全文をそのまま採用する。
 """
 
 import re
@@ -116,15 +122,20 @@ def fetch_item_list() -> list[dict]:
     return list(items.values())
 
 
-def fetch_stock_status(product_url: str) -> str | None:
+def fetch_detail_fields(product_url: str) -> dict:
     try:
         resp = requests.get(product_url, headers=REQUEST_HEADERS, timeout=15)
         resp.raise_for_status()
     except requests.RequestException:
-        return None
+        return {"stock_info": None, "flavor_notes": None}
     resp.encoding = "utf-8"
     m = STOCK_INFO_PATTERN.search(resp.text)
-    return m.group(1) if m else None
+    stock_info = m.group(1) if m else None
+
+    desc_el = BeautifulSoup(resp.text, "html.parser").select_one('meta[name="description"]')
+    flavor_notes = desc_el["content"].strip() if desc_el and desc_el.get("content") else None
+
+    return {"stock_info": stock_info, "flavor_notes": flavor_notes or None}
 
 
 def build_record(item: dict) -> dict | None:
@@ -145,8 +156,8 @@ def build_record(item: dict) -> dict | None:
             "product_url": item["url"],
         }
 
-    stock_info = fetch_stock_status(item["url"])
-    structural_out_of_stock = bool(stock_info) and "あり" not in stock_info
+    detail = fetch_detail_fields(item["url"])
+    structural_out_of_stock = bool(detail["stock_info"]) and "あり" not in detail["stock_info"]
     stock_status = detect_stock_status(title, structural_out_of_stock)
     weight_m = WEIGHT_PATTERN.search(title)
     weight_g = int(weight_m.group(1)) if weight_m else None
@@ -161,6 +172,7 @@ def build_record(item: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": detail["flavor_notes"],
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": item["price"],
