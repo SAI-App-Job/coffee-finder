@@ -36,6 +36,12 @@ div.field_priceの次のp.tax_inc_block内に税込価格、div.zaikostatusに
 200gと「お得な400g」の2バリアント、ゲイシャブレンドが100g/200gの2
 バリアントを持つ(いずれも同一ページ内の複数skuform、別商品ではない)。
 最初に現れる最小重量のバリアントを代表として採用する。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: div.item-infoに対象9件全てでテイスティング文・産地
+背景が入っていることを確認した(ストレート豆は「生産国：」ラベル、
+ブレンドは商品名見出しで始まる)。直後に重量選択UI(「200g」「挽き目」
+「在庫状態」等)が地続きで続くため、最初の重量表記の直前で打ち切る。
 """
 
 import re
@@ -71,6 +77,19 @@ NON_PRODUCT_PATH_KEYWORDS = [
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
 PRICE_PATTERN = re.compile(r"tax_inc_block\">[^¥￥]*[¥￥]([\d,]+)")
 STOCK_LABEL_PATTERN = re.compile(r"在庫状態\s*[:：]\s*([^\s<]+)")
+FLAVOR_STOP_PATTERN = re.compile(r"\d+\s*[gｇ]")
+
+
+def extract_flavor_notes(soup: BeautifulSoup) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    el = soup.select_one("div.item-info")
+    if not el:
+        return None
+    text = el.get_text("\n", strip=True)
+    m = FLAVOR_STOP_PATTERN.search(text)
+    if m:
+        text = text[:m.start()]
+    return text.strip() or None
 
 
 def fetch_page(url: str) -> BeautifulSoup:
@@ -144,6 +163,7 @@ def build_record(html: str, product_url: str) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": extract_flavor_notes(soup),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": price,
