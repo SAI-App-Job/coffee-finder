@@ -23,6 +23,12 @@ python-requests等は個別にDisallow: /指定があるが、User-agent: *ル�
 グラインダー(TIMEMORE)・CAFEC/アバカ/THREE FOR等のペーパーフィルター・
 Kalita/bonmac等のドリッパーやドリップポットといった器具のため非対象。
 NON_BEAN_KEYWORDSで除外する。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: og:descriptionに対象6件全てで産地スペック(Country/
+Fame/Altitude/Variety/Processing System/Aroma・Flavor等)+テイスティング
+文(Other/Comment)が入っている。注文/配送案内等の無関係な定型文の混入は
+無いため全文をそのまま採用する。
 """
 
 import re
@@ -70,7 +76,9 @@ def extract_og_fields(soup: BeautifulSoup) -> dict | None:
     title = title_el["content"].split(" | ")[0].strip()
     price_el = soup.select_one('meta[property="product:price:amount"]')
     price = int(float(price_el["content"])) if price_el and price_el.get("content") else None
-    return {"title": title, "price": price}
+    desc_el = soup.select_one('meta[property="og:description"]')
+    flavor_notes = desc_el["content"].strip() if desc_el and desc_el.get("content") else None
+    return {"title": title, "price": price, "flavor_notes": flavor_notes or None}
 
 
 def fetch_item_urls() -> list[str]:
@@ -85,7 +93,7 @@ def base_name_and_weight(title: str) -> tuple[str, int | None]:
     return base, weight_g
 
 
-def build_record(title: str, price: int | None, product_url: str) -> dict | None:
+def build_record(title: str, price: int | None, product_url: str, flavor_notes: str | None = None) -> dict | None:
     if not WEIGHT_PATTERN.search(title):
         # 重量表記の無い商品(器具・ドリップパック等)は対象外
         return None
@@ -117,6 +125,7 @@ def build_record(title: str, price: int | None, product_url: str) -> dict | None
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": flavor_notes,
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": price,
@@ -143,7 +152,7 @@ def scrape_all_products() -> tuple[list[dict], list[dict]]:
         title = fields["title"]
         if any(kw in title for kw in NON_BEAN_KEYWORDS):
             continue
-        detail = build_record(title, fields["price"], product_url)
+        detail = build_record(title, fields["price"], product_url, fields.get("flavor_notes"))
         if detail is None:
             continue
         if detail.get("is_flavored"):
