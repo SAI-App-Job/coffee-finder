@@ -19298,7 +19298,7 @@
     "roast_selectable": false,
     "roast_hint": null,
     "farm_note": null,
-    "flavor_notes": null,
+    "flavor_notes": "KISSA ZEROICHIの自家焙煎コーヒー豆『BITTER ビター』。ブラックで飲みやすいやさしい苦味が特徴のコーヒー豆です。ホットだけでなくアイスコーヒーでいただくのもおすすめ。[種別]シングル（深煎り）",
     "blend_components": [],
     "post_processing_tags": [],
     "price": 1000,
@@ -19314,7 +19314,7 @@
     "map_query": "KISSA ZEROICHI 大阪府八尾市堤町2-10-20",
     "scraped_at": null,
     "data_source": "manual",
-    "source_note": "自社サイト内の公式オンラインストア(https://kissazeroichi.square.site/shop/beans/ )をブラウザで直接閲覧して確認。Square Online(Weebly統合)上に構築されており、商品一覧はJavaScriptでの動的レンダリング後にのみ表示されるため(初期HTMLには商品データが含まれない)、通常のrequests+BeautifulSoup方式の自動スクレイパーでは取得不可と判断し手動入力とした。店内でaillio bullet R1による自家焙煎を実施(自社サイトの表記で確認済み)。全8銘柄とも100g/200gの2サイズ展開で、100g価格を採用。産地国はサイト上に明記が無く「シングル(深煎り/中煎り等)」という焙煎度・風味プロファイルでの銘柄名のみのためoriginCountryはnullとした。",
+    "source_note": "自社サイト内の公式オンラインストア(https://kissazeroichi.square.site/shop/beans/ )をブラウザで直接閲覧して確認。Square Online(Weebly統合)上に構築されており、商品一覧はJavaScriptでの動的レンダリング後にのみ表示されるため(初期HTMLには商品データが含まれない)、通常のrequests+BeautifulSoup方式の自動スクレイパーでは取得不可と判断し手動入力とした。店内でaillio bullet R1による自家焙煎を実施(自社サイトの表記で確認済み)。全8銘柄とも100g/200gの2サイズ展開で、100g価格を採用。産地国はサイト上に明記が無く「シングル(深煎り/中煎り等)」という焙煎度・風味プロファイルでの銘柄名のみのためoriginCountryはnullとした。2026-09-22追記: 各商品ページの「説明」欄に銘柄ごとの簡潔なテイスティング文と[種別](シングル/ブレンドの別・焙煎度)が掲載されていることを確認し、raw_nameで完全一致させて全8商品にflavorNotesとして転記した([内容量]/[豆の状態]/[賞味期限]/[保存方法]は全商品共通の定型文のため除外)。DEEP/ROUND/SMOOTH/CLEARの4商品は[種別]が「ブレンド（アフターミックス）」であり、既存のcategory=\"ストレート\"表記と食い違うが、本追記の対象外としflavorNotesの追加のみに留めた。",
     "first_detected_at": "2026-08-10T00:00:00+00:00"
   },
   {
@@ -19334,7 +19334,7 @@
     "roast_selectable": false,
     "roast_hint": null,
     "farm_note": null,
-    "flavor_notes": null,
+    "flavor_notes": "KISSA ZEROICHIの自家焙煎コーヒー豆『MILD マイルド』。ゆったりと味わえる、おだやかな風味が特徴のコーヒー豆です。どのようなシチュエーションでも合うスタンダードな一杯。[種別]シングル（中煎り）",
     "blend_components": [],
     "post_processing_tags": [],
     "price": 1000,
@@ -19350,7 +19350,7 @@
     "map_query": "KISSA ZEROICHI 大阪府八尾市堤町2-10-20",
     "scraped_at": null,
     "data_source": "manual",
-    "source_note": "自社サイト内の公式オンラインストア(https://kissazeroichi.square.site/shop/beans/ )をブラウザで直接閲覧して確認。Square Online(Weebly統合)上に構築されており、商品一覧はJavaScriptでの動的レンダリング後にのみ表示されるため(初期HTMLには商品データが含まれない)、通常のrequests+BeautifulSoup方式の自動スクレイパーでは取得不可と判断し手動入力とした。店内でaillio bullet R1による自家焙煎を実施(自社サイトの表記で確認済み)。全8銘柄とも100g/200gの2サイズ展開で、100g価格を採用。産地国はサイト上に明記が無く「シングル(深煎り/中煎り等)」という焙煎度・風味プロファイルでの銘柄名のみのためoriginCountryはnullとした。",
+    "source_note": "自社サイト内の公式オンラインストア(https://kissazeroichi.square.site/shop/beans/ )をブラウザで直接閲覧して確認。Square Online(Weebly統合)上に構築されており、商品一覧はJavaScriptでの動的レンダリング後にのみ表示されるため(初期HTMLには商品データが含まれない)、通常のrequests+BeautifulSoup方式の自動スクレイパーでは取得不可と判断し手動入力とした。店内でaillio bullet R1による自家焙煎を実施(自社サイトの表記で確認済み)。全8銘柄とも100g/200gの2サイズ展開で、100g価格を採用。産地国はサイト上に明記が無く「シングル(深煎り/中煎り等)」という焙煎度・風味プロファイルでの銘柄名のみのためoriginCountryはnullとした。2026-09-22追記: 各商品ページの「説明」欄に銘柄ごとの簡潔なテイスティング文と[種別](シングル/ブレンドの別・焙煎度)が掲載されていることを確認し、raw_nameで完全一致させて全8商品にflavorNotesとして転記した([内容量]/[豆の状態]/[賞味期限]/[保存方法]は全商品共通の定型文のため除外)。DEEP/ROUND/SMOOTH/CLEARの4商品は[種別]が「ブレンド（アフターミックス）」であり、既存のcategory=\"ストレート\"表記と食い違うが、本追記の対象外としflavorNotesの追加のみに留めた。",
     "first_detected_at": "2026-08-10T00:00:00+00:00"
   },
   {
@@ -19370,7 +19370,7 @@
     "roast_selectable": false,
     "roast_hint": null,
     "farm_note": null,
-    "flavor_notes": null,
+    "flavor_notes": "KISSA ZEROICHIの自家焙煎コーヒー豆『LIGHT ライト』。口の中をリフレッシュする、かろやかな酸味が特徴のコーヒー豆です。気持ちを切り替えに、一息つきたい時におすすめ。[種別]シングル（浅煎り）",
     "blend_components": [],
     "post_processing_tags": [],
     "price": 1000,
@@ -19386,7 +19386,7 @@
     "map_query": "KISSA ZEROICHI 大阪府八尾市堤町2-10-20",
     "scraped_at": null,
     "data_source": "manual",
-    "source_note": "自社サイト内の公式オンラインストア(https://kissazeroichi.square.site/shop/beans/ )をブラウザで直接閲覧して確認。Square Online(Weebly統合)上に構築されており、商品一覧はJavaScriptでの動的レンダリング後にのみ表示されるため(初期HTMLには商品データが含まれない)、通常のrequests+BeautifulSoup方式の自動スクレイパーでは取得不可と判断し手動入力とした。店内でaillio bullet R1による自家焙煎を実施(自社サイトの表記で確認済み)。全8銘柄とも100g/200gの2サイズ展開で、100g価格を採用。産地国はサイト上に明記が無く「シングル(深煎り/中煎り等)」という焙煎度・風味プロファイルでの銘柄名のみのためoriginCountryはnullとした。",
+    "source_note": "自社サイト内の公式オンラインストア(https://kissazeroichi.square.site/shop/beans/ )をブラウザで直接閲覧して確認。Square Online(Weebly統合)上に構築されており、商品一覧はJavaScriptでの動的レンダリング後にのみ表示されるため(初期HTMLには商品データが含まれない)、通常のrequests+BeautifulSoup方式の自動スクレイパーでは取得不可と判断し手動入力とした。店内でaillio bullet R1による自家焙煎を実施(自社サイトの表記で確認済み)。全8銘柄とも100g/200gの2サイズ展開で、100g価格を採用。産地国はサイト上に明記が無く「シングル(深煎り/中煎り等)」という焙煎度・風味プロファイルでの銘柄名のみのためoriginCountryはnullとした。2026-09-22追記: 各商品ページの「説明」欄に銘柄ごとの簡潔なテイスティング文と[種別](シングル/ブレンドの別・焙煎度)が掲載されていることを確認し、raw_nameで完全一致させて全8商品にflavorNotesとして転記した([内容量]/[豆の状態]/[賞味期限]/[保存方法]は全商品共通の定型文のため除外)。DEEP/ROUND/SMOOTH/CLEARの4商品は[種別]が「ブレンド（アフターミックス）」であり、既存のcategory=\"ストレート\"表記と食い違うが、本追記の対象外としflavorNotesの追加のみに留めた。",
     "first_detected_at": "2026-08-10T00:00:00+00:00"
   },
   {
@@ -19406,7 +19406,7 @@
     "roast_selectable": false,
     "roast_hint": null,
     "farm_note": null,
-    "flavor_notes": null,
+    "flavor_notes": "KISSA ZEROICHIの自家焙煎コーヒー豆『DEEP ディープ』。コーヒーらしい豊かなコクと深みが特徴のコーヒー豆です。ブラックで飲むだけでなく、濃いめに抽出し、牛乳と合わせてカフェオレでいただくのもおすすめ。[種別]ブレンド（アフターミックス）",
     "blend_components": [],
     "post_processing_tags": [],
     "price": 1000,
@@ -19422,7 +19422,7 @@
     "map_query": "KISSA ZEROICHI 大阪府八尾市堤町2-10-20",
     "scraped_at": null,
     "data_source": "manual",
-    "source_note": "自社サイト内の公式オンラインストア(https://kissazeroichi.square.site/shop/beans/ )をブラウザで直接閲覧して確認。Square Online(Weebly統合)上に構築されており、商品一覧はJavaScriptでの動的レンダリング後にのみ表示されるため(初期HTMLには商品データが含まれない)、通常のrequests+BeautifulSoup方式の自動スクレイパーでは取得不可と判断し手動入力とした。店内でaillio bullet R1による自家焙煎を実施(自社サイトの表記で確認済み)。全8銘柄とも100g/200gの2サイズ展開で、100g価格を採用。産地国はサイト上に明記が無く「シングル(深煎り/中煎り等)」という焙煎度・風味プロファイルでの銘柄名のみのためoriginCountryはnullとした。",
+    "source_note": "自社サイト内の公式オンラインストア(https://kissazeroichi.square.site/shop/beans/ )をブラウザで直接閲覧して確認。Square Online(Weebly統合)上に構築されており、商品一覧はJavaScriptでの動的レンダリング後にのみ表示されるため(初期HTMLには商品データが含まれない)、通常のrequests+BeautifulSoup方式の自動スクレイパーでは取得不可と判断し手動入力とした。店内でaillio bullet R1による自家焙煎を実施(自社サイトの表記で確認済み)。全8銘柄とも100g/200gの2サイズ展開で、100g価格を採用。産地国はサイト上に明記が無く「シングル(深煎り/中煎り等)」という焙煎度・風味プロファイルでの銘柄名のみのためoriginCountryはnullとした。2026-09-22追記: 各商品ページの「説明」欄に銘柄ごとの簡潔なテイスティング文と[種別](シングル/ブレンドの別・焙煎度)が掲載されていることを確認し、raw_nameで完全一致させて全8商品にflavorNotesとして転記した([内容量]/[豆の状態]/[賞味期限]/[保存方法]は全商品共通の定型文のため除外)。DEEP/ROUND/SMOOTH/CLEARの4商品は[種別]が「ブレンド（アフターミックス）」であり、既存のcategory=\"ストレート\"表記と食い違うが、本追記の対象外としflavorNotesの追加のみに留めた。",
     "first_detected_at": "2026-08-10T00:00:00+00:00"
   },
   {
@@ -19442,7 +19442,7 @@
     "roast_selectable": false,
     "roast_hint": null,
     "farm_note": null,
-    "flavor_notes": null,
+    "flavor_notes": "KISSA ZEROICHIの自家焙煎コーヒー豆『ROUND ラウンド』。胃が疲れていても飲みやすい、丸みのある口当たりが特徴のコーヒー豆です。3時の休憩時間、ちょっと一息つきたいときにおすすめ。[種別]ブレンド（アフターミックス）",
     "blend_components": [],
     "post_processing_tags": [],
     "price": 1000,
@@ -19458,7 +19458,7 @@
     "map_query": "KISSA ZEROICHI 大阪府八尾市堤町2-10-20",
     "scraped_at": null,
     "data_source": "manual",
-    "source_note": "自社サイト内の公式オンラインストア(https://kissazeroichi.square.site/shop/beans/ )をブラウザで直接閲覧して確認。Square Online(Weebly統合)上に構築されており、商品一覧はJavaScriptでの動的レンダリング後にのみ表示されるため(初期HTMLには商品データが含まれない)、通常のrequests+BeautifulSoup方式の自動スクレイパーでは取得不可と判断し手動入力とした。店内でaillio bullet R1による自家焙煎を実施(自社サイトの表記で確認済み)。全8銘柄とも100g/200gの2サイズ展開で、100g価格を採用。産地国はサイト上に明記が無く「シングル(深煎り/中煎り等)」という焙煎度・風味プロファイルでの銘柄名のみのためoriginCountryはnullとした。",
+    "source_note": "自社サイト内の公式オンラインストア(https://kissazeroichi.square.site/shop/beans/ )をブラウザで直接閲覧して確認。Square Online(Weebly統合)上に構築されており、商品一覧はJavaScriptでの動的レンダリング後にのみ表示されるため(初期HTMLには商品データが含まれない)、通常のrequests+BeautifulSoup方式の自動スクレイパーでは取得不可と判断し手動入力とした。店内でaillio bullet R1による自家焙煎を実施(自社サイトの表記で確認済み)。全8銘柄とも100g/200gの2サイズ展開で、100g価格を採用。産地国はサイト上に明記が無く「シングル(深煎り/中煎り等)」という焙煎度・風味プロファイルでの銘柄名のみのためoriginCountryはnullとした。2026-09-22追記: 各商品ページの「説明」欄に銘柄ごとの簡潔なテイスティング文と[種別](シングル/ブレンドの別・焙煎度)が掲載されていることを確認し、raw_nameで完全一致させて全8商品にflavorNotesとして転記した([内容量]/[豆の状態]/[賞味期限]/[保存方法]は全商品共通の定型文のため除外)。DEEP/ROUND/SMOOTH/CLEARの4商品は[種別]が「ブレンド（アフターミックス）」であり、既存のcategory=\"ストレート\"表記と食い違うが、本追記の対象外としflavorNotesの追加のみに留めた。",
     "first_detected_at": "2026-08-10T00:00:00+00:00"
   },
   {
@@ -19478,7 +19478,7 @@
     "roast_selectable": false,
     "roast_hint": null,
     "farm_note": null,
-    "flavor_notes": null,
+    "flavor_notes": "KISSA ZEROICHIの自家焙煎コーヒー豆『SMOOTH スムース』。喉越しのよいなめらかな飲み口が特徴のコーヒー豆です。苦味控えめなので、2杯目以降のコーヒーにおすすめ。[種別]ブレンド（アフターミックス）",
     "blend_components": [],
     "post_processing_tags": [],
     "price": 1000,
@@ -19494,7 +19494,7 @@
     "map_query": "KISSA ZEROICHI 大阪府八尾市堤町2-10-20",
     "scraped_at": null,
     "data_source": "manual",
-    "source_note": "自社サイト内の公式オンラインストア(https://kissazeroichi.square.site/shop/beans/ )をブラウザで直接閲覧して確認。Square Online(Weebly統合)上に構築されており、商品一覧はJavaScriptでの動的レンダリング後にのみ表示されるため(初期HTMLには商品データが含まれない)、通常のrequests+BeautifulSoup方式の自動スクレイパーでは取得不可と判断し手動入力とした。店内でaillio bullet R1による自家焙煎を実施(自社サイトの表記で確認済み)。全8銘柄とも100g/200gの2サイズ展開で、100g価格を採用。産地国はサイト上に明記が無く「シングル(深煎り/中煎り等)」という焙煎度・風味プロファイルでの銘柄名のみのためoriginCountryはnullとした。",
+    "source_note": "自社サイト内の公式オンラインストア(https://kissazeroichi.square.site/shop/beans/ )をブラウザで直接閲覧して確認。Square Online(Weebly統合)上に構築されており、商品一覧はJavaScriptでの動的レンダリング後にのみ表示されるため(初期HTMLには商品データが含まれない)、通常のrequests+BeautifulSoup方式の自動スクレイパーでは取得不可と判断し手動入力とした。店内でaillio bullet R1による自家焙煎を実施(自社サイトの表記で確認済み)。全8銘柄とも100g/200gの2サイズ展開で、100g価格を採用。産地国はサイト上に明記が無く「シングル(深煎り/中煎り等)」という焙煎度・風味プロファイルでの銘柄名のみのためoriginCountryはnullとした。2026-09-22追記: 各商品ページの「説明」欄に銘柄ごとの簡潔なテイスティング文と[種別](シングル/ブレンドの別・焙煎度)が掲載されていることを確認し、raw_nameで完全一致させて全8商品にflavorNotesとして転記した([内容量]/[豆の状態]/[賞味期限]/[保存方法]は全商品共通の定型文のため除外)。DEEP/ROUND/SMOOTH/CLEARの4商品は[種別]が「ブレンド（アフターミックス）」であり、既存のcategory=\"ストレート\"表記と食い違うが、本追記の対象外としflavorNotesの追加のみに留めた。",
     "first_detected_at": "2026-08-10T00:00:00+00:00"
   },
   {
@@ -19514,7 +19514,7 @@
     "roast_selectable": false,
     "roast_hint": null,
     "farm_note": null,
-    "flavor_notes": null,
+    "flavor_notes": "KISSA ZEROICHIの自家焙煎コーヒー豆『CLEAR クリア』。何度でも飲みたくなる、すっきりとした後味が特徴のコーヒー豆です。仕事や勉強に長時間立ち向かうときのお供におすすめ。[種別]ブレンド（アフターミックス）",
     "blend_components": [],
     "post_processing_tags": [],
     "price": 1000,
@@ -19530,7 +19530,7 @@
     "map_query": "KISSA ZEROICHI 大阪府八尾市堤町2-10-20",
     "scraped_at": null,
     "data_source": "manual",
-    "source_note": "自社サイト内の公式オンラインストア(https://kissazeroichi.square.site/shop/beans/ )をブラウザで直接閲覧して確認。Square Online(Weebly統合)上に構築されており、商品一覧はJavaScriptでの動的レンダリング後にのみ表示されるため(初期HTMLには商品データが含まれない)、通常のrequests+BeautifulSoup方式の自動スクレイパーでは取得不可と判断し手動入力とした。店内でaillio bullet R1による自家焙煎を実施(自社サイトの表記で確認済み)。全8銘柄とも100g/200gの2サイズ展開で、100g価格を採用。産地国はサイト上に明記が無く「シングル(深煎り/中煎り等)」という焙煎度・風味プロファイルでの銘柄名のみのためoriginCountryはnullとした。",
+    "source_note": "自社サイト内の公式オンラインストア(https://kissazeroichi.square.site/shop/beans/ )をブラウザで直接閲覧して確認。Square Online(Weebly統合)上に構築されており、商品一覧はJavaScriptでの動的レンダリング後にのみ表示されるため(初期HTMLには商品データが含まれない)、通常のrequests+BeautifulSoup方式の自動スクレイパーでは取得不可と判断し手動入力とした。店内でaillio bullet R1による自家焙煎を実施(自社サイトの表記で確認済み)。全8銘柄とも100g/200gの2サイズ展開で、100g価格を採用。産地国はサイト上に明記が無く「シングル(深煎り/中煎り等)」という焙煎度・風味プロファイルでの銘柄名のみのためoriginCountryはnullとした。2026-09-22追記: 各商品ページの「説明」欄に銘柄ごとの簡潔なテイスティング文と[種別](シングル/ブレンドの別・焙煎度)が掲載されていることを確認し、raw_nameで完全一致させて全8商品にflavorNotesとして転記した([内容量]/[豆の状態]/[賞味期限]/[保存方法]は全商品共通の定型文のため除外)。DEEP/ROUND/SMOOTH/CLEARの4商品は[種別]が「ブレンド（アフターミックス）」であり、既存のcategory=\"ストレート\"表記と食い違うが、本追記の対象外としflavorNotesの追加のみに留めた。",
     "first_detected_at": "2026-08-10T00:00:00+00:00"
   },
   {
@@ -19550,7 +19550,7 @@
     "roast_selectable": false,
     "roast_hint": null,
     "farm_note": null,
-    "flavor_notes": null,
+    "flavor_notes": "KISSA ZEROICHIの自家焙煎コーヒー豆『DECAF デカフェ』シリーズ。マイルドな口当たり、チョコレートを思わせる香りが特徴です。デカフェなので就寝前に飲んでも安心。[種別]シングル（中煎り）",
     "blend_components": [],
     "post_processing_tags": [],
     "price": 1050,
@@ -19566,7 +19566,7 @@
     "map_query": "KISSA ZEROICHI 大阪府八尾市堤町2-10-20",
     "scraped_at": null,
     "data_source": "manual",
-    "source_note": "自社サイト内の公式オンラインストア(https://kissazeroichi.square.site/shop/beans/ )をブラウザで直接閲覧して確認。Square Online(Weebly統合)上に構築されており、商品一覧はJavaScriptでの動的レンダリング後にのみ表示されるため(初期HTMLには商品データが含まれない)、通常のrequests+BeautifulSoup方式の自動スクレイパーでは取得不可と判断し手動入力とした。店内でaillio bullet R1による自家焙煎を実施(自社サイトの表記で確認済み)。全8銘柄とも100g/200gの2サイズ展開で、100g価格を採用。産地国はサイト上に明記が無く「シングル(深煎り/中煎り等)」という焙煎度・風味プロファイルでの銘柄名のみのためoriginCountryはnullとした。",
+    "source_note": "自社サイト内の公式オンラインストア(https://kissazeroichi.square.site/shop/beans/ )をブラウザで直接閲覧して確認。Square Online(Weebly統合)上に構築されており、商品一覧はJavaScriptでの動的レンダリング後にのみ表示されるため(初期HTMLには商品データが含まれない)、通常のrequests+BeautifulSoup方式の自動スクレイパーでは取得不可と判断し手動入力とした。店内でaillio bullet R1による自家焙煎を実施(自社サイトの表記で確認済み)。全8銘柄とも100g/200gの2サイズ展開で、100g価格を採用。産地国はサイト上に明記が無く「シングル(深煎り/中煎り等)」という焙煎度・風味プロファイルでの銘柄名のみのためoriginCountryはnullとした。2026-09-22追記: 各商品ページの「説明」欄に銘柄ごとの簡潔なテイスティング文と[種別](シングル/ブレンドの別・焙煎度)が掲載されていることを確認し、raw_nameで完全一致させて全8商品にflavorNotesとして転記した([内容量]/[豆の状態]/[賞味期限]/[保存方法]は全商品共通の定型文のため除外)。DEEP/ROUND/SMOOTH/CLEARの4商品は[種別]が「ブレンド（アフターミックス）」であり、既存のcategory=\"ストレート\"表記と食い違うが、本追記の対象外としflavorNotesの追加のみに留めた。",
     "first_detected_at": "2026-08-10T00:00:00+00:00"
   },
   {
