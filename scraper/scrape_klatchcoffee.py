@@ -34,12 +34,26 @@ agents.md/UCPエンドポイントの案内を含む)。制限なし。
 フェイスタオル/バスタオル/サウナハット/Tシャツ/サンダル(グッズ)・カフェオレ
 ベース(リキッド)・マグカップ各種・サコッシュが該当し、すべて非対象。
 コーヒー豆(c001)のみを対象として個別に処理する。
+
+【flavor_notes(2026-09-22追記)】
+実データ確認済み: products.json側のbody_htmlは全銘柄共通の店舗紹介文
+(海のそばで焙煎している旨等)のみで銘柄別のテイスティング情報を含まない。
+一方、商品ページ(https://klatch-coffee.com/products/c001)本体には
+産地情報とは別のdiv.description(2つ目、【コーヒーの種類】見出し配下)に
+「ISLAND BLEND（ブレンド）」「ISLAND COFFEE（タンザニア）」「ISLAND
+COFFEE PREMIUM（コスタリカ）」「DECAF COFFEE（メキシコ）」の見出し
+(h5)ごとに産地・Farm・Flavor・酸味/苦味/コクの星評価とテイスティング文
+が構造化されている。見出しのテキストに銘柄名(ブレンド/タンザニア/
+コスタリカ)が括弧書きで含まれるため、見出し文字列に銘柄名が含まれるかで
+突合する。デカフェは既存の除外ルール(産地不明・ブレンド表記なし)により
+本スクレイパーの対象外のままのため、flavor_notesの突合対象にも含めない。
 """
 
 import json
 import re
 
 import requests
+from bs4 import BeautifulSoup
 
 from coffee_parser import parse_product, apply_category_hint_fallback, detect_stock_status
 
@@ -71,6 +85,41 @@ def fetch_coffee_product() -> dict | None:
     return None
 
 
+def fetch_variety_flavor_notes() -> dict[str, str]:
+    """商品ページ本体の銘柄別description(理由はモジュールdocstring参照)を
+    見出し(h5)ごとに分割し、見出し文字列をキーとした辞書で返す。"""
+    resp = requests.get(f"https://klatch-coffee.com/products/{PRODUCT_HANDLE}",
+                         headers=REQUEST_HEADERS, timeout=20)
+    resp.raise_for_status()
+    soup = BeautifulSoup(resp.text, "html.parser")
+    desc_divs = soup.select("div.description")
+    if len(desc_divs) < 2:
+        return {}
+    notes: dict[str, str] = {}
+    heading = None
+    parts: list[str] = []
+    for el in desc_divs[1].find_all(["h5", "p"], recursive=False):
+        if el.name == "h5":
+            if heading:
+                notes[heading] = "\n".join(p for p in parts if p)
+            heading = el.get_text(strip=True)
+            parts = []
+        else:
+            text = el.get_text("\n", strip=True)
+            if text:
+                parts.append(text)
+    if heading:
+        notes[heading] = "\n".join(p for p in parts if p)
+    return notes
+
+
+def match_flavor_notes(variety: str, notes_by_heading: dict[str, str]) -> str | None:
+    for heading, text in notes_by_heading.items():
+        if variety and variety in heading:
+            return text
+    return None
+
+
 def pick_canonical_variants(product: dict) -> list[dict]:
     """option1(銘柄)ごとにグルーピングし、「豆」×最小重量を代表として選ぶ
     (理由はモジュールdocstring参照)。"""
@@ -91,7 +140,7 @@ def pick_canonical_variants(product: dict) -> list[dict]:
     return [v for _key, v in by_variety.values()]
 
 
-def build_record(product: dict, variant: dict) -> dict | None:
+def build_record(product: dict, variant: dict, notes_by_heading: dict[str, str]) -> dict | None:
     variety = (variant.get("option1") or "").strip()
     option2 = variant.get("option2") or ""
     raw_name = f"{product['title']} {variety} {option2}".strip()
@@ -142,6 +191,7 @@ def build_record(product: dict, variant: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": match_flavor_notes(variety, notes_by_heading),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": price,
@@ -158,11 +208,13 @@ def scrape_all_products() -> tuple[list[dict], list[dict], list[dict]]:
         print("[warn] コーヒー豆商品(c001)が見つかりません")
         return [], [], []
 
+    notes_by_heading = fetch_variety_flavor_notes()
+
     records = []
     flavored_records = []
     non_bean_records = []
     for variant in pick_canonical_variants(product):
-        detail = build_record(product, variant)
+        detail = build_record(product, variant, notes_by_heading)
         if detail is None:
             continue
         if detail.get("non_bean"):
