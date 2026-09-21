@@ -31,12 +31,19 @@ robots.txt確認済み(2026-09時点、https://www.shitamachicoffee.com/robots.t
 【在庫について】
 実データ確認済み: 一覧・詳細ページのどちらにも構造化された品切れ表示
 要素が見当たらないため、商品名のテキストのみで在庫状態を判定する。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: 商品詳細ページのdiv.mainTxt内には対象6件全てでテイス
+ティング文が入っていることを確認した。末尾に「※重量について」という
+見出しから生豆/仕上がり重量の計量方法に関する定型文が続くため、この
+見出しの直前で打ち切る。
 """
 
 import re
 import time
 
 import requests
+from bs4 import BeautifulSoup
 
 from coffee_parser import parse_product, detect_stock_status
 from previous_data import load_previous_products, is_unchanged
@@ -67,6 +74,7 @@ TITLE_PATTERN = re.compile(r'<div id="itemDetail01"[^>]*>\s*<h2>([^<]*)</h2>')
 PRICE_PATTERN = re.compile(r'sales_price">[\s\S]{0,300}?<span>([\d,]+)円')
 ROASTED_WEIGHT_PATTERN = re.compile(r"仕上がり約(\d+)\s*[gｇ]")
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
+FLAVOR_STOP_PATTERN = re.compile(r"※重量について")
 
 
 def fetch_html(url: str) -> str:
@@ -75,7 +83,20 @@ def fetch_html(url: str) -> str:
     return resp.text
 
 
-def build_record(product_url: str, title: str, price: int | None) -> dict:
+def extract_flavor_notes(html: str) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    soup = BeautifulSoup(html, "html.parser")
+    el = soup.select_one("div.mainTxt")
+    if not el:
+        return None
+    text = el.get_text("\n", strip=True)
+    m = FLAVOR_STOP_PATTERN.search(text)
+    if m:
+        text = text[:m.start()]
+    return text.strip() or None
+
+
+def build_record(product_url: str, title: str, price: int | None, flavor_notes: str | None = None) -> dict:
     parsed = parse_product(title)
 
     if parsed["is_flavored"]:
@@ -104,6 +125,7 @@ def build_record(product_url: str, title: str, price: int | None) -> dict:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": flavor_notes,
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": price,
@@ -122,7 +144,7 @@ def parse_product_detail(url: str) -> dict | None:
     title = title_m.group(1).strip()
     price_m = PRICE_PATTERN.search(html)
     price = int(price_m.group(1).replace(",", "")) if price_m else None
-    return build_record(url, title, price)
+    return build_record(url, title, price, extract_flavor_notes(html))
 
 
 def scrape_all_products() -> tuple[list[dict], list[dict]]:
@@ -150,7 +172,7 @@ def scrape_all_products() -> tuple[list[dict], list[dict]]:
 
         price_m = PRICE_PATTERN.search(html)
         price = int(price_m.group(1).replace(",", "")) if price_m else None
-        detail = build_record(product_url, title, price)
+        detail = build_record(product_url, title, price, extract_flavor_notes(html))
         if detail.get("is_flavored"):
             flavored_records.append(detail)
         else:
