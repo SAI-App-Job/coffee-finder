@@ -39,11 +39,17 @@ robots.txt確認済み(2026-09時点): Shopify標準のrobots.txtでAllow: /
 福袋的セットと見られ、単一銘柄の特定ができないためNON_BEAN_KEYWORDSで
 除外する。残る7件(ルワンダ・タンザニア・ケニア・エチオピア・インドネシア・
 グアテマラ・ブラジル)が対象。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: body_htmlに対象7件全てで詩的なテイスティング文+
+産地/精製/焙煎度/フレーバーのスペックリストが入っている。注文/配送
+案内等の無関係な定型文の混入は無いため全文をそのまま採用する。
 """
 
 import re
 
 import requests
+from bs4 import BeautifulSoup
 
 from coffee_parser import parse_product, detect_stock_status
 from previous_data import load_previous_products, is_unchanged
@@ -114,6 +120,7 @@ def build_record(product: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": BeautifulSoup(product.get("body_html") or "", "html.parser").get_text("\n", strip=True) or None,
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": price,
