@@ -30,6 +30,13 @@ requests等は個別にDisallow: /指定があるが、User-agent: *ルールで
 詰め合わせたもの)、SUZUGAMA陶器ネルドリッパー(器具、雑貨)がNON_BEAN_KEYWORDS
 で除外される。残り13件(ストレート12種＋カフェインレスグアテマラ1種、いずれも
 150g)を対象とする。
+
+【flavor_notes(2026-09-21追記)】
+実データ確認済み: og:descriptionにテイスティング文・産地背景が直接
+入っており(対象12件全て確認)、その後に必ず「生産国：」(一部商品は
+銘柄名を『』で囲んだ「『銘柄名』生産国：」の形式)で始まるスペック欄
+(品種/プロセス/標高/焙煎)、続けて甘味/酸味/苦味/風味の★評価欄が続く。
+「生産国：」(銘柄名付きの場合はその手前)までを採用する。
 """
 
 import re
@@ -60,6 +67,16 @@ NON_BEAN_KEYWORDS = [
 ]
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
 FIXED_WEIGHT_G = 150
+FLAVOR_STOP_PATTERN = re.compile(r"(『[^』]*』)?生産国[：:]")
+
+
+def extract_flavor_notes(description: str | None) -> str | None:
+    """理由はモジュールdocstring参照。"""
+    if not description:
+        return None
+    m = FLAVOR_STOP_PATTERN.search(description)
+    text = description[: m.start()] if m else description
+    return text.strip() or None
 
 
 def fetch_page(url: str) -> BeautifulSoup:
@@ -88,6 +105,9 @@ def build_record(soup: BeautifulSoup, product_url: str) -> dict | None:
     price_el = soup.select_one('meta[property="product:price:amount"]')
     price = int(float(price_el["content"])) if price_el and price_el.get("content") else None
 
+    desc_el = soup.select_one('meta[property="og:description"]')
+    flavor_notes = extract_flavor_notes(desc_el["content"]) if desc_el and desc_el.get("content") else None
+
     if parsed["is_flavored"]:
         return {
             "shop_name": SHOP_INFO["name"],
@@ -114,6 +134,7 @@ def build_record(soup: BeautifulSoup, product_url: str) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": flavor_notes,
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": price,
