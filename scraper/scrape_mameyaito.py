@@ -24,6 +24,13 @@ curl/python-requests等は個別にDisallow: /指定があるが、User-agent: *
 【重量について】
 実データ確認済み: og:description中に「内容量：250g」という表記があるため、
 そこから重量を抽出する(商品名自体には重量表記が無い)。
+
+【flavor_notes(2026-09-22追記)】
+実データ確認済み: og:descriptionに対象2件全てで簡潔なテイスティング文が
+入っている。末尾に全件共通で「内容量：250gご注文日より3営業日以内に発送
+いたします。●品質・鮮度を保つために...●送料について...」という重量/
+発送/保存方法案内の定型文が続くため、この直前(既存の重量抽出に使う
+「内容量：」マーカーの直前)で打ち切る。
 """
 
 import re
@@ -90,7 +97,10 @@ def build_record(item: dict) -> dict | None:
         }
 
     parsed = parse_product(title)
-    weight_m = WEIGHT_PATTERN.search(item.get("description") or "")
+    description = item.get("description") or ""
+    weight_m = WEIGHT_PATTERN.search(description)
+    flavor_notes = description[:weight_m.start()].strip() if weight_m else description.strip()
+    flavor_notes = flavor_notes or None
 
     if parsed["is_flavored"]:
         return {
@@ -115,6 +125,7 @@ def build_record(item: dict) -> dict | None:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": flavor_notes,
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": item["price"],
