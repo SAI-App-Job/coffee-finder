@@ -28,6 +28,13 @@ robots.txt確認済み(2026-09時点): こやまこおふぃ・NAGI COFFEE・珈
 【重量について】
 実データ確認済み: 商品名に重量表記が無い。詳細ページのdescriptionにも
 構造化された内容量欄が見つからなかったため、weight_gはnullとする。
+
+【flavor_notes(2026-09-22追記)】
+実データ確認済み: JSON-LDのdescriptionは全件空文字列で使えない。
+商品ページのdiv#appsItemDetailCustomTag(BASEの「商品説明カスタム
+レイアウト」機能)に対象3件全てで【焙煎度】【酸味】【コク】の星評価と
+【特徴】のテイスティング文が入っている。注文/配送案内等の無関係な
+定型文の混入は無いため全文をそのまま採用する。
 """
 
 import json
@@ -78,7 +85,13 @@ def extract_jsonld_product(soup: BeautifulSoup) -> dict | None:
     return None
 
 
-def build_record(product_url: str, product: dict) -> dict:
+def extract_flavor_notes(soup: BeautifulSoup) -> str | None:
+    el = soup.select_one("div#appsItemDetailCustomTag")
+    text = el.get_text("\n", strip=True) if el else ""
+    return text or None
+
+
+def build_record(product_url: str, product: dict, soup: BeautifulSoup) -> dict:
     title = (product.get("name") or "").strip()
     parsed = parse_product(title)
 
@@ -109,6 +122,7 @@ def build_record(product_url: str, product: dict) -> dict:
         "processing_method": parsed["processing_method"],
         "grade": parsed["grade"],
         "roast_level": parsed["roast_level"],
+        "flavor_notes": extract_flavor_notes(soup),
         "post_processing_tags": parsed["post_processing_tags"],
         "blend_components": [],
         "price": price,
@@ -129,7 +143,7 @@ def parse_product_detail(url: str) -> dict:
             "non_bean": True,
             "product_url": url,
         }
-    return build_record(url, product)
+    return build_record(url, product, soup)
 
 
 def scrape_category_list() -> list[dict]:
