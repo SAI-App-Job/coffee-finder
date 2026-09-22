@@ -524,6 +524,11 @@ SOURCE_FILES = {
     "早苗": "data_wasedasanae.json",
     "焙煎工場さかいち": "data_sakaichi.json",
     "Alternative Coffee Works": "data_alternativecoffeeworks.json",
+    "NOZY COFFEE": "data_nozycoffee.json",
+    "OBSCURA COFFEE ROASTERS": "data_obscuracoffee.json",
+    "THE COFFEESHOP": "data_thecoffeeshop.json",
+    "Coffee Supreme Tokyo": "data_coffeesupreme.json",
+    "ONIBUS COFFEE": "data_onibuscoffee.json",
 }
 
 

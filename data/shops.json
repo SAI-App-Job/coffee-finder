@@ -8762,6 +8762,19 @@
     "data_source": "manual",
     "source_note": "高田馬場・早稲田エリアの自家焙煎コーヒー豆店が本アプリに1件も収録されていないという利用者からの指摘を受けた総点検で発見(tailoredcafe.jpの「高田馬場・早稲田のコーヒー豆おすすめ専門店10選」記事経由)。公式サイト(cohaze-coffee.com)で下北沢本店・早稲田店の2拠点を確認、共通オンラインストア(cohazecoffee.stores.jp、STORES.jp製)をブラウザで直接確認(2026-09)。早稲田店は本アプリの調査エリアに合致するため代表店舗として住所・電話番号・営業時間を採用した(下北沢本店: 東京都世田谷区北沢2-35-5サウザンド下北沢1A、0120-935-466/03-5738-9207)。オンラインストアの「ITEM」一覧(全3ページ)を確認し、焙煎豆単品(豆/粉の挽き方違いは豆のみ採用、重複除外)37銘柄(ストレート18・ブレンド19)を収録。各商品ページのJSON-LD構造化データ(name/description/offers)からテイスティング文・価格を取得。価格は「200g/300g」の2段階(一部「100g/200g」または単一サイズ)の重量帯から採用しており、weightGは最小重量(通常200g、ピーチハニーゲイシャとブルーマウンテンNo.1のみプレミアム品につき100g)を採用した。デカフェ3商品はdescription中に明示された除去方法(マウンテンウォータープロセス/ウォータープロセス)をdecafProcessとして採用し、方法の記載が無い2商品(デカフェハニーチアパス・リントンラトゥデカフェ)は汎用値にフォールバックさせた。「結局珈琲ブレンド」は下北沢旧店舗(2025年5月13日移転により閉店)を記念したブレンドで、現在も販売中であることを確認済み。",
     "last_verified_at": "2026-09-22",
+    "locations": [
+      {
+        "label": null,
+        "address": "東京都新宿区西早稲田1-9-13",
+        "prefecture": "東京都",
+        "hours": "[月〜土]10:30〜21:00、[日]11:00〜19:00(不定休)",
+        "tel": "03-6233-9030",
+        "is_headquarters": false,
+        "map_query": "こはぜ珈琲 早稲田店 東京都新宿区西早稲田1-9-13",
+        "lat": 35.710158,
+        "lng": 139.715388
+      }
+    ],
     "lat": 35.710158,
     "lng": 139.715388
   },
@@ -8778,6 +8791,19 @@
     "data_source": "manual",
     "source_note": "高田馬場・早稲田エリアの自家焙煎コーヒー豆店が本アプリに1件も収録されていないという利用者からの指摘を受けた総点検で発見(tailoredcafe.jpの「高田馬場・早稲田のコーヒー豆おすすめ専門店10選」記事経由。同記事の公式サイト欄はTwitter/Xのみを案内していたが、実際には別途STORES.jp製のオンラインストア(purantan-waseda.stores.jp)で通販を行っていることを確認)。創業1950年、早稲田大学南門前の老舗喫茶店。オンラインストアの商品一覧をブラウザで直接確認(2026-09)し、焙煎豆単品4銘柄(いずれも200g、豆/粉選択可)を収録。複数銘柄を組み合わせた「コーヒー豆セット」(+1,000円で2種類目を追加する構成)は単一銘柄ではないため対象外とした。各商品ページのJSON-LD構造化データ(description)からテイスティング文・価格を取得(末尾の挽き方選択案内・セット商品への内部リンク列挙は定型文のため除外)。",
     "last_verified_at": "2026-09-22",
+    "locations": [
+      {
+        "label": null,
+        "address": "東京都新宿区戸塚1-101-13",
+        "prefecture": "東京都",
+        "hours": "12:00〜17:30(日曜・祝日定休)",
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "喫茶ぷらんたん 東京都新宿区戸塚1-101-13",
+        "lat": 35.707475,
+        "lng": 139.720366
+      }
+    ],
     "lat": 35.707475,
     "lng": 139.720366
   },
@@ -8794,7 +8820,122 @@
     "data_source": "manual",
     "source_note": "高田馬場・早稲田エリアの自家焙煎コーヒー豆店が本アプリに1件も収録されていないという利用者からの指摘を受けた総点検で発見(tailoredcafe.jpの「高田馬場・早稲田のコーヒー豆おすすめ専門店10選」記事経由。かつて自家焙煎珈琲豆専門店「南方郵便機」の支店だったが独立して現在の店名に変更したと同記事に記載)。公式サイト(seitoushisyu.jp/products.html)をブラウザで直接確認(2026-09)。同ページの「豆」セクションにはマンデリンフレンチロースト・西東詩集ブレンドの2銘柄のみが写真・テイスティング文・価格付きで掲載されており(紹介記事では「18種類ほど取り揃えている」とあるが、公式サイトに掲載されているのはこの2銘柄のみ)、通販機能(カート・注文フォーム等)は存在しないため店頭販売のみと判断した。",
     "last_verified_at": "2026-09-22",
+    "locations": [
+      {
+        "label": null,
+        "address": "東京都新宿区西早稲田3-15-5 K2ビル1F",
+        "prefecture": "東京都",
+        "hours": "15:00〜21:00(定休日なし)",
+        "tel": "03-5272-9197",
+        "is_headquarters": false,
+        "map_query": "西東詩集 東京都新宿区西早稲田3-15-5 K2ビル1F",
+        "lat": 35.710158,
+        "lng": 139.715388
+      }
+    ],
     "lat": 35.710158,
     "lng": 139.715388
+  },
+  {
+    "name": "NOZY COFFEE",
+    "url": "https://nozy-coffee.jp/",
+    "platform": "カラーミーショップ(shop-pro.jp、独自ドメインnozycoffee-onlinestore.comで運用)",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認(scrape_etop.pyと同じカラーミーショップ標準構成を想定)",
+    "address": "東京都渋谷区神宮前5-17-13",
+    "prefecture": "東京都",
+    "hours": "平日・平日祝10:00〜20:00",
+    "map_query": "NOZY COFFEE THE ROASTERY 東京都渋谷区神宮前5-17-13",
+    "last_scraped_at": "2026-09-22T03:03:13.299856+00:00",
+    "lat": 35.665494,
+    "lng": 139.70489
+  },
+  {
+    "name": "OBSCURA COFFEE ROASTERS",
+    "url": "https://obscura-coffee.com/",
+    "platform": "独自EC(shop.obscura-coffee.com)",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認",
+    "address": "東京都世田谷区三軒茶屋1-36-10",
+    "prefecture": "東京都",
+    "hours": "9:00〜19:00",
+    "map_query": "OBSCURA COFFEE ROASTERS 東京都世田谷区三軒茶屋1-36-10",
+    "last_scraped_at": "2026-09-22T03:03:13.299856+00:00",
+    "lat": 35.642117,
+    "lng": 139.668789
+  },
+  {
+    "name": "THE COFFEESHOP",
+    "url": "https://www.thecoffeeshop.jp/",
+    "platform": "フューチャーショップ",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認",
+    "address": "東京都渋谷区猿楽町2-3",
+    "prefecture": "東京都",
+    "hours": "12:00〜19:00",
+    "map_query": "THE COFFEESHOP 東京都渋谷区猿楽町2-3",
+    "last_scraped_at": "2026-09-22T03:03:13.299856+00:00",
+    "lat": 35.650102,
+    "lng": 139.701132
+  },
+  {
+    "name": "Coffee Supreme Tokyo",
+    "url": "https://shopjp.coffeesupreme.com/",
+    "platform": "BASE(独自ドメイン運用)",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認(他のBASE系店舗と同様の構成を想定)",
+    "address": "東京都渋谷区神山町42-3",
+    "prefecture": "東京都",
+    "hours": "8:00〜18:00(無休)",
+    "map_query": "Coffee Supreme Tokyo 東京都渋谷区神山町42-3",
+    "last_scraped_at": "2026-09-22T03:03:13.299856+00:00",
+    "lat": 35.663849,
+    "lng": 139.691406
+  },
+  {
+    "name": "ONIBUS COFFEE",
+    "url": "https://onibuscoffee.com/",
+    "platform": "Shopify(サイト全体のproducts.jsonエンドポイントを利用。ABOUT LIFE COFFEE BREWERSを含む国内7拠点で共通運用)",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認(Shopify標準テンプレートを想定)",
+    "address": "東京都目黒区上目黒2-14-1",
+    "prefecture": "東京都",
+    "hours": "9:00〜18:00(不定休)",
+    "map_query": "ONIBUS COFFEE 中目黒駅前店 東京都目黒区上目黒2-14-1",
+    "last_scraped_at": "2026-09-22T03:03:13.299856+00:00",
+    "lat": 35.642801,
+    "lng": 139.693085
+  },
+  {
+    "name": "acid coffee",
+    "url": "https://acidcoffee.stores.jp/",
+    "instagram_url": null,
+    "platform": "STORES.jp(手動入力。GitHub Actionsの共有IPレンジが403で遮断されるためスクレイパー無し)",
+    "shop_type": "single_location",
+    "address": "東京都渋谷区上原1-29-5",
+    "prefecture": "東京都",
+    "hours": null,
+    "map_query": "acid coffee 東京都渋谷区上原1-29-5 Bit代々木上原101",
+    "data_source": "manual",
+    "source_note": "高田馬場エリアの調査を機に開始した全国の未調査エリア洗い出しの一環で、渋谷エリアを調査した際にtailoredcafe.jp/coffee-labo.co.jpの紹介記事経由で発見(当時の代々木上原1丁目から現住所に移転済み)。実験的な発酵プロセスを多数扱うマイクロロット専門店で、STORES.jp製オンラインストアの在庫は極めて頻繁に入れ替わる(2026-09時点で全180件中、現在購入可能なのは47件のみで残りはSOLD OUT/COMING SOON)。ブラウザで全ページを確認(2026-09)し、購入可能な商品のうち器具・グッズ・ドリップバッグ・カプセルコーヒーを除いた焙煎豆単品40件(ストレート39・ブレンド1)を収録した。各商品ページのJSON-LD構造化データ(description)からテイスティング文・産地情報を取得。在庫が極めて流動的な店舗のため、次回以降の点検では再度全件の在庫状況を確認する必要がある。",
+    "last_verified_at": "2026-09-22",
+    "lat": 35.666978,
+    "lng": 139.680682
+  },
+  {
+    "name": "HEART'S LIGHT COFFEE",
+    "url": "https://heartslightcoffee.stores.jp/",
+    "instagram_url": null,
+    "platform": "STORES.jp(手動入力。GitHub Actionsの共有IPレンジが403で遮断されるためスクレイパー無し)",
+    "shop_type": "single_location",
+    "address": "東京都渋谷区神泉町13-13 ヒルズ渋谷1F",
+    "prefecture": "東京都",
+    "hours": "[月・火・木・金]9:00〜18:00、[土・日]11:00〜18:00(水曜定休)",
+    "map_query": "HEART'S LIGHT COFFEE 東京都渋谷区神泉町13-13 ヒルズ渋谷1F",
+    "data_source": "manual",
+    "source_note": "高田馬場エリアの調査を機に開始した全国の未調査エリア洗い出しの一環で、渋谷エリアを調査した際にtailoredcafe.jp/coffee-labo.co.jpの紹介記事経由で発見。神泉駅近くの自家焙煎コーヒースタンド兼ロースタリー。STORES.jp製オンラインストアをブラウザで直接確認(2026-09)。全5商品を収録(ストレート1・ブレンド4)。各商品ページのJSON-LD構造化データ(description)から店主自身によるテイスティング文・産地エピソードを取得。「Pan-no-mimi(パンの耳)」はハンドピック時に取り除いた規格外豆を集めたブレンドだが、実際に販売されている自家焙煎豆の正規商品であるため収録対象とした。",
+    "last_verified_at": "2026-09-22",
+    "lat": 35.656374,
+    "lng": 139.692513
   }
 ]

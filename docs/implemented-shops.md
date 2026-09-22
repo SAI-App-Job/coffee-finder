@@ -5,7 +5,7 @@
 `scraper/manual/shops/`配下、それ以外は`scraper/scrape_*.py`で自動取得。
 実装を見送った店舗は`docs/not-implementable-shops.md`を参照。
 
-合計505店舗・9817商品(生成日: 2026-09-22)。
+合計512店舗・9924商品(生成日: 2026-09-22)。
 
 再生成コマンド:
 ```
@@ -566,6 +566,11 @@ aggregate_shops.py実行後の`git diff --staged --quiet || git commit`が該当
 | 麻布珈房 | 港区麻布十番 | カラーミー | 156 |
 | Blackhole Coffee Roaster | 荒川区町屋4-31-11 | Shopify | 11 |
 | カメヤマ珈琲 | 荒川区東日暮里6-22-14 | WordPress | 34 |
+| THE COFFEESHOP | 渋谷区猿楽町2-3 | フューチャーショップ | 13 |
+| acid coffee | 渋谷区上原1-29-5 | STORES(手動) | 40 |
+| NOZY COFFEE | 渋谷区神宮前5-17-13 | カラーミー | 5 |
+| Coffee Supreme Tokyo | 渋谷区神山町42-3 | BASE(独自ドメイン運用) | 11 |
+| HEART'S LIGHT COFFEE | 渋谷区神泉町13-13 ヒルズ渋谷1F | STORES(手動) | 5 |
 | 珈琲店トップ | 渋谷区代々木5-63-10 | カラーミー | 21 |
 | FUGLEN COFFEE ROASTERS | 渋谷区富ヶ谷1-16-11 | Shopify | 7 |
 | 喫茶ぷらんたん | 新宿区戸塚1-101-13 | STORES(手動) | 4 |
@@ -581,6 +586,7 @@ aggregate_shops.py実行後の`git diff --staged --quiet || git commit`が該当
 | chouette torréfacteur laboratoire | 世田谷区宮坂1-39-11 | BASE(theshop) | 11 |
 | FINETIME COFFEE ROASTERS | 世田谷区経堂1-12-15 | BASE(theshop) | 11 |
 | カフェマルシェkunikuni | 世田谷区経堂2-4-8　Antelop経堂A号室 | カラーミー | 20 |
+| OBSCURA COFFEE ROASTERS | 世田谷区三軒茶屋1-36-10 | 独自EC(shop.obscura-coffee.com) | 18 |
 | 珈琲家あのころ | 世田谷区若林4-20-9 岡村ビル1F | BASE(theshop) | 15 |
 | 南薫堂珈琲 | 世田谷区世田谷2-6-4　グリーンアネックス102 | BASE | 15 |
 | 豆善 | 世田谷区尾山台3-22-4マンヤスビル022号室 | Shopify | 27 |
@@ -623,6 +629,7 @@ aggregate_shops.py実行後の`git diff --staged --quiet || git commit`が該当
 | 村上コーヒー | 北区中里1-5-11 | 手動(SNSのみ) | 6 |
 | BEANS珈琲 | 墨田区 | BASE | 21 |
 | Single O Japan | 墨田区亀沢3-21-5 | Shopify | 16 |
+| ONIBUS COFFEE | 目黒区上目黒2-14-1 | Shopify | 15 |
 | CAFE FACON | 目黒区上目黒3-8-3 千陽中目黒ビル・アネックス3F | ShopServe | 18 |
 | HIMONYA FIVE COFFEE | 目黒区碑文谷5-11-6 | BASE(theshop) | 34 |
 | nericafe | 練馬区大泉学園町1-16-15 | カラーミー | 0 |
