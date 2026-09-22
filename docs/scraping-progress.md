@@ -6329,3 +6329,14 @@
   含んでいない。3件中3件でflavor_notesの情報源そのものが存在しないため、
   flavor_notes抽出の実装を見送った。manual JSONは変更せず、既存の
   flavorNotes=nullのままとする。
+
+## 総点検バッチ371: TanaCafe + Coffee Roaster（COFFEE UNIDOS）(2026-09-22、manual店舗)
+
+- TanaCafe + Coffee Roaster（COFFEE UNIDOS）(福岡県糸島市、地域物産
+  ポータル「ここのき」(coconoki.com、EC-CUBE系)内の出店ページ): 各商品
+  ページに銘柄名(ITOSHIMA BLEND/TanaCafe BLEND)・テイスティング文・
+  焙煎度・味わい・舌触り・甘味・後味の構造化情報が掲載されていることを
+  確認し、raw_nameで完全一致させて全2商品にflavorNotesとして転記した。
+  2/2商品で新規取得、商品の増減なし。
+- 影響した既存データ: 2商品全件でflavor_notesを新規取得(9738商品、
+  増減なし)。データセット全体でflavor_notesは8620→8622件に増加。

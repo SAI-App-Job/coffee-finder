@@ -30782,7 +30782,7 @@
     "roast_selectable": false,
     "roast_hint": null,
     "farm_note": null,
-    "flavor_notes": null,
+    "flavor_notes": "お店のある糸島をイメージして作ったブレンド。明るい酸味の後に優しい甘さが広がります。焙煎　MEDIUM　味わい　フルーツ系　舌触り　クリーミー　甘味　柔らかい　後味　しっかり",
     "blend_components": [],
     "post_processing_tags": [],
     "price": 1650,
@@ -30798,7 +30798,7 @@
     "map_query": "TanaCafe 福岡県糸島市前原中央3-9-1",
     "scraped_at": null,
     "data_source": "manual",
-    "source_note": "coconoki.com内の出店ページ(https://coconoki.com/shopbrand/tanacafe/、2026-09時点)を直接確認。「珈琲豆ご購入」候補地の糸島市前原中央3-9-1(TanaCafe)住所を採用(COFFEE UNIDOSの候補住所[糸島市浦志2-14-17]とは異なるが、coconoki.com上では同一出店者ページとして運用されているため統合)。ドリップバッグ・水出しアイスコーヒーパックは対象外とし、コーヒー豆(生豆)の2ブレンドのみを掲載。",
+    "source_note": "coconoki.com内の出店ページ(https://coconoki.com/shopbrand/tanacafe/、2026-09時点)を直接確認。「珈琲豆ご購入」候補地の糸島市前原中央3-9-1(TanaCafe)住所を採用(COFFEE UNIDOSの候補住所[糸島市浦志2-14-17]とは異なるが、coconoki.com上では同一出店者ページとして運用されているため統合)。ドリップバッグ・水出しアイスコーヒーパックは対象外とし、コーヒー豆(生豆)の2ブレンドのみを掲載。2026-09-22追記: 各商品ページに銘柄名(ITOSHIMA BLEND/TanaCafe BLEND)・テイスティング文・焙煎度・味わい・舌触り・甘味・後味の構造化情報が掲載されていることを確認し、raw_nameで完全一致させて全2商品にflavorNotesとして転記した。",
     "first_detected_at": "2026-08-10T00:00:00+00:00"
   },
   {
@@ -30818,7 +30818,7 @@
     "roast_selectable": false,
     "roast_hint": null,
     "farm_note": null,
-    "flavor_notes": null,
+    "flavor_notes": "チョコやナッツの様な味わい、酸味を抑え軽やかな苦味と甘味があり、後味スッキリのブレンドです。焙煎　MEDIUM DARK　味わい　チョコレート系　ナッツ系　舌触り　スムース　甘味　柔らかい　後味　スッキリ",
     "blend_components": [],
     "post_processing_tags": [],
     "price": 1575,
@@ -30834,7 +30834,7 @@
     "map_query": "TanaCafe 福岡県糸島市前原中央3-9-1",
     "scraped_at": null,
     "data_source": "manual",
-    "source_note": "coconoki.com内の出店ページ(https://coconoki.com/shopbrand/tanacafe/、2026-09時点)を直接確認。「珈琲豆ご購入」候補地の糸島市前原中央3-9-1(TanaCafe)住所を採用(COFFEE UNIDOSの候補住所[糸島市浦志2-14-17]とは異なるが、coconoki.com上では同一出店者ページとして運用されているため統合)。ドリップバッグ・水出しアイスコーヒーパックは対象外とし、コーヒー豆(生豆)の2ブレンドのみを掲載。",
+    "source_note": "coconoki.com内の出店ページ(https://coconoki.com/shopbrand/tanacafe/、2026-09時点)を直接確認。「珈琲豆ご購入」候補地の糸島市前原中央3-9-1(TanaCafe)住所を採用(COFFEE UNIDOSの候補住所[糸島市浦志2-14-17]とは異なるが、coconoki.com上では同一出店者ページとして運用されているため統合)。ドリップバッグ・水出しアイスコーヒーパックは対象外とし、コーヒー豆(生豆)の2ブレンドのみを掲載。2026-09-22追記: 各商品ページに銘柄名(ITOSHIMA BLEND/TanaCafe BLEND)・テイスティング文・焙煎度・味わい・舌触り・甘味・後味の構造化情報が掲載されていることを確認し、raw_nameで完全一致させて全2商品にflavorNotesとして転記した。",
     "first_detected_at": "2026-08-10T00:00:00+00:00"
   },
   {
