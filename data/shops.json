@@ -8719,7 +8719,16 @@
     "map_query": "早苗 東京都新宿区戸塚町1-102",
     "last_scraped_at": "2026-09-22T01:14:48.994766+00:00",
     "lat": 35.707475,
-    "lng": 139.720366
+    "lng": 139.720366,
+    "nearest_station": {
+      "name": "早稲田",
+      "lines": [
+        "東京メトロ東西線",
+        "都電荒川線"
+      ],
+      "distance_m": 210,
+      "walk_min": 3
+    }
   },
   {
     "name": "焙煎工場さかいち",
@@ -8733,7 +8742,16 @@
     "map_query": "焙煎工場さかいち 東京都新宿区戸塚町1-104",
     "last_scraped_at": "2026-09-22T01:14:48.994766+00:00",
     "lat": 35.707475,
-    "lng": 139.720366
+    "lng": 139.720366,
+    "nearest_station": {
+      "name": "早稲田",
+      "lines": [
+        "東京メトロ東西線",
+        "都電荒川線"
+      ],
+      "distance_m": 210,
+      "walk_min": 3
+    }
   },
   {
     "name": "Alternative Coffee Works",
@@ -8747,7 +8765,16 @@
     "map_query": "Alternative Coffee Works 東京都新宿区北新宿4-3-1",
     "last_scraped_at": "2026-09-22T01:14:48.994766+00:00",
     "lat": 35.701952,
-    "lng": 139.691699
+    "lng": 139.691699,
+    "nearest_station": {
+      "name": "大久保",
+      "lines": [
+        "JR中央線",
+        "JR総武線"
+      ],
+      "distance_m": 520,
+      "walk_min": 7
+    }
   },
   {
     "name": "こはぜ珈琲",
@@ -8776,7 +8803,15 @@
       }
     ],
     "lat": 35.710158,
-    "lng": 139.715388
+    "lng": 139.715388,
+    "nearest_station": {
+      "name": "面影橋",
+      "lines": [
+        "都電荒川線"
+      ],
+      "distance_m": 330,
+      "walk_min": 4
+    }
   },
   {
     "name": "喫茶ぷらんたん",
@@ -8805,7 +8840,16 @@
       }
     ],
     "lat": 35.707475,
-    "lng": 139.720366
+    "lng": 139.720366,
+    "nearest_station": {
+      "name": "早稲田",
+      "lines": [
+        "東京メトロ東西線",
+        "都電荒川線"
+      ],
+      "distance_m": 210,
+      "walk_min": 3
+    }
   },
   {
     "name": "自家焙煎珈琲工房 西東詩集",
@@ -8834,7 +8878,15 @@
       }
     ],
     "lat": 35.710158,
-    "lng": 139.715388
+    "lng": 139.715388,
+    "nearest_station": {
+      "name": "面影橋",
+      "lines": [
+        "都電荒川線"
+      ],
+      "distance_m": 330,
+      "walk_min": 4
+    }
   },
   {
     "name": "NOZY COFFEE",
@@ -8848,7 +8900,15 @@
     "map_query": "NOZY COFFEE THE ROASTERY 東京都渋谷区神宮前5-17-13",
     "last_scraped_at": "2026-09-22T03:03:13.299856+00:00",
     "lat": 35.665494,
-    "lng": 139.70489
+    "lng": 139.70489,
+    "nearest_station": {
+      "name": "明治神宮前〈原宿〉",
+      "lines": [
+        "東京メトロ副都心線"
+      ],
+      "distance_m": 340,
+      "walk_min": 4
+    }
   },
   {
     "name": "OBSCURA COFFEE ROASTERS",
@@ -8862,7 +8922,16 @@
     "map_query": "OBSCURA COFFEE ROASTERS 東京都世田谷区三軒茶屋1-36-10",
     "last_scraped_at": "2026-09-22T03:03:13.299856+00:00",
     "lat": 35.642117,
-    "lng": 139.668789
+    "lng": 139.668789,
+    "nearest_station": {
+      "name": "三軒茶屋",
+      "lines": [
+        "東急世田谷線",
+        "東急田園都市線"
+      ],
+      "distance_m": 220,
+      "walk_min": 3
+    }
   },
   {
     "name": "THE COFFEESHOP",
@@ -8876,7 +8945,15 @@
     "map_query": "THE COFFEESHOP 東京都渋谷区猿楽町2-3",
     "last_scraped_at": "2026-09-22T03:03:13.299856+00:00",
     "lat": 35.650102,
-    "lng": 139.701132
+    "lng": 139.701132,
+    "nearest_station": {
+      "name": "代官山",
+      "lines": [
+        "東急東横線"
+      ],
+      "distance_m": 290,
+      "walk_min": 4
+    }
   },
   {
     "name": "Coffee Supreme Tokyo",
@@ -8890,7 +8967,15 @@
     "map_query": "Coffee Supreme Tokyo 東京都渋谷区神山町42-3",
     "last_scraped_at": "2026-09-22T03:03:13.299856+00:00",
     "lat": 35.663849,
-    "lng": 139.691406
+    "lng": 139.691406,
+    "nearest_station": {
+      "name": "代々木公園",
+      "lines": [
+        "東京メトロ千代田線"
+      ],
+      "distance_m": 630,
+      "walk_min": 8
+    }
   },
   {
     "name": "ONIBUS COFFEE",
@@ -8904,7 +8989,16 @@
     "map_query": "ONIBUS COFFEE 中目黒駅前店 東京都目黒区上目黒2-14-1",
     "last_scraped_at": "2026-09-22T03:03:13.299856+00:00",
     "lat": 35.642801,
-    "lng": 139.693085
+    "lng": 139.693085,
+    "nearest_station": {
+      "name": "中目黒",
+      "lines": [
+        "東京メトロ日比谷線",
+        "東急東横線"
+      ],
+      "distance_m": 510,
+      "walk_min": 6
+    }
   },
   {
     "name": "acid coffee",
@@ -8920,7 +9014,16 @@
     "source_note": "高田馬場エリアの調査を機に開始した全国の未調査エリア洗い出しの一環で、渋谷エリアを調査した際にtailoredcafe.jp/coffee-labo.co.jpの紹介記事経由で発見(当時の代々木上原1丁目から現住所に移転済み)。実験的な発酵プロセスを多数扱うマイクロロット専門店で、STORES.jp製オンラインストアの在庫は極めて頻繁に入れ替わる(2026-09時点で全180件中、現在購入可能なのは47件のみで残りはSOLD OUT/COMING SOON)。ブラウザで全ページを確認(2026-09)し、購入可能な商品のうち器具・グッズ・ドリップバッグ・カプセルコーヒーを除いた焙煎豆単品40件(ストレート39・ブレンド1)を収録した。各商品ページのJSON-LD構造化データ(description)からテイスティング文・産地情報を取得。在庫が極めて流動的な店舗のため、次回以降の点検では再度全件の在庫状況を確認する必要がある。",
     "last_verified_at": "2026-09-22",
     "lat": 35.666978,
-    "lng": 139.680682
+    "lng": 139.680682,
+    "nearest_station": {
+      "name": "代々木上原",
+      "lines": [
+        "小田急小田原線",
+        "東京メトロ千代田線"
+      ],
+      "distance_m": 250,
+      "walk_min": 3
+    }
   },
   {
     "name": "HEART'S LIGHT COFFEE",
@@ -8936,6 +9039,14 @@
     "source_note": "高田馬場エリアの調査を機に開始した全国の未調査エリア洗い出しの一環で、渋谷エリアを調査した際にtailoredcafe.jp/coffee-labo.co.jpの紹介記事経由で発見。神泉駅近くの自家焙煎コーヒースタンド兼ロースタリー。STORES.jp製オンラインストアをブラウザで直接確認(2026-09)。全5商品を収録(ストレート1・ブレンド4)。各商品ページのJSON-LD構造化データ(description)から店主自身によるテイスティング文・産地エピソードを取得。「Pan-no-mimi(パンの耳)」はハンドピック時に取り除いた規格外豆を集めたブレンドだが、実際に販売されている自家焙煎豆の正規商品であるため収録対象とした。",
     "last_verified_at": "2026-09-22",
     "lat": 35.656374,
-    "lng": 139.692513
+    "lng": 139.692513,
+    "nearest_station": {
+      "name": "神泉",
+      "lines": [
+        "京王井の頭線"
+      ],
+      "distance_m": 140,
+      "walk_min": 2
+    }
   }
 ]

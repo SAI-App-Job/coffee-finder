@@ -1,6 +1,12 @@
-import { Package, Clock, ArrowLeft, MapPin, ExternalLink } from "lucide-react";
+import { useMemo, useState } from "react";
+import { Package, Clock, ArrowLeft, MapPin, ExternalLink, Search, X, Heart, LocateFixed } from "lucide-react";
 import { SectionHeading } from "./common";
 import { ProductCard } from "./ProductCard";
+
+const SHOP_SORT_MODE_ITEMS = [
+  { id: "distance", label: "近い順", icon: MapPin },
+  { id: "favoriteArea", label: "登録エリア", icon: Heart },
+];
 
 export function ShopCard({ shop, productCount, onSelect }) {
   return (
@@ -22,7 +28,15 @@ export function ShopCard({ shop, productCount, onSelect }) {
           {productCount}件
         </span>
       </div>
-      <p className="text-[13px] text-[#8B7361]">{shop.address}</p>
+      <p className="text-[13px] text-[#8B7361]">
+        {shop.address}
+        {shop.nearestStation?.name && (
+          <span className="text-[#8B7361]/70">
+            ・{shop.nearestStation.name}駅
+            {typeof shop.nearestStation.walkMin === "number" && ` 徒歩${shop.nearestStation.walkMin}分`}
+          </span>
+        )}
+      </p>
       <div className="flex items-center gap-1.5 text-[12px] text-[#8B7361] pt-1 mt-1 border-t border-[#4A3A2A]">
         <Clock size={12} strokeWidth={1.75} />
         <span>{shop.hours}</span>
@@ -31,18 +45,134 @@ export function ShopCard({ shop, productCount, onSelect }) {
   );
 }
 
-export function ShopListView({ shops, productsByShop, onSelectShop }) {
+export function ShopListView({
+  shops,
+  productsByShop,
+  onSelectShop,
+  sortMode,
+  onSortModeChange,
+  geolocation,
+  favoriteArea,
+}) {
+  const [searchQuery, setSearchQuery] = useState("");
+
+  const filteredShops = useMemo(() => {
+    const q = searchQuery.trim().toLowerCase();
+    if (!q) return shops;
+    return shops.filter((shop) =>
+      [shop.name, shop.prefecture, shop.address, shop.nearestStation?.name]
+        .filter(Boolean)
+        .some((v) => v.toLowerCase().includes(q))
+    );
+  }, [shops, searchQuery]);
+
   return (
     <main className="px-5 py-5 flex flex-col gap-3 max-w-xl mx-auto">
       <SectionHeading en="Shops" ja="店舗一覧" className="mb-1" />
-      {shops.map((shop) => (
-        <ShopCard
-          key={shop.name}
-          shop={shop}
-          productCount={(productsByShop[shop.name] || []).length}
-          onSelect={() => onSelectShop(shop)}
+      <div className="flex items-center gap-1.5 overflow-x-auto scrollbar-hide">
+        {SHOP_SORT_MODE_ITEMS.map(({ id, label, icon: Icon }) => {
+          // 「近い順」は、実際に距離順ソートが有効な(位置情報取得に成功した)
+          // 場合のみ選択状態にする。商品タブと同じ方針。
+          const isActive =
+            id === "distance" ? sortMode === id && geolocation.status === "success" : sortMode === id;
+          return (
+            <button
+              key={id}
+              onClick={() => onSortModeChange(id)}
+              aria-pressed={isActive}
+              className={`flex items-center gap-1 shrink-0 text-[12px] px-3 py-1.5 rounded-full border transition-colors ${
+                isActive
+                  ? "bg-[var(--accent)] text-[#231810] border-[var(--accent)]"
+                  : "border-[#4A3A2A] text-[#B8A891]"
+              }`}
+            >
+              <Icon size={12} strokeWidth={2} />
+              {label}
+            </button>
+          );
+        })}
+      </div>
+      {sortMode === "distance" && geolocation.status !== "success" && (
+        <div className="flex items-start gap-1 text-[11px] text-[#8B7361]">
+          <LocateFixed size={11} strokeWidth={1.75} className="shrink-0 mt-0.5" />
+          <p>
+            {geolocation.status === "pending" && "位置情報を取得中です(取得できるまで全件表示しています)"}
+            {geolocation.status === "denied" && (
+              <>
+                位置情報が許可されていないため、全件表示しています。ブラウザの拒否設定はアプリからは解除できないため、ブラウザのアドレスバー付近のアイコンから位置情報の許可を変更したうえで、
+                <button
+                  onClick={geolocation.retry}
+                  className="text-[var(--accent)] underline underline-offset-2"
+                >
+                  再試行
+                </button>
+                してください
+              </>
+            )}
+            {geolocation.status === "error" && (
+              <>
+                位置情報を取得できなかったため、全件表示しています。
+                <button
+                  onClick={geolocation.retry}
+                  className="text-[var(--accent)] underline underline-offset-2"
+                >
+                  位置情報を取得
+                </button>
+              </>
+            )}
+            {geolocation.status === "unsupported" &&
+              "この端末・ブラウザは位置情報に対応していないため、全件表示しています"}
+          </p>
+        </div>
+      )}
+      {sortMode === "favoriteArea" && (
+        <p className="text-[11px] text-[#8B7361]">
+          {favoriteArea.prefecture
+            ? `登録エリア: ${favoriteArea.prefecture}${favoriteArea.city ? ` ${favoriteArea.city}` : ""}(マイページで変更できます)`
+            : "登録エリアが未登録です(マイページで登録できます)"}
+        </p>
+      )}
+      <div className="relative mb-1">
+        <Search size={14} className="absolute left-3 top-1/2 -translate-y-1/2 text-[#8B7361]" strokeWidth={2} />
+        <input
+          type="text"
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
+          placeholder="店舗名・都道府県・住所・駅名で検索"
+          className="w-full pl-9 pr-9 py-2.5 rounded-xl bg-[#2F241A] border border-[#4A3A2A] text-[13px] text-[#F2E9DD] placeholder:text-[#8B7361] focus:outline-none focus:border-[var(--accent-label)]"
         />
-      ))}
+        {searchQuery && (
+          <button
+            onClick={() => setSearchQuery("")}
+            className="absolute right-3 top-1/2 -translate-y-1/2 text-[#8B7361] hover:text-[#F2E9DD]"
+            aria-label="検索をクリア"
+          >
+            <X size={14} />
+          </button>
+        )}
+      </div>
+      {shops.length === 0 ? (
+        <p className="text-center py-12 text-[13px] text-[#8B7361]">
+          {sortMode === "favoriteArea"
+            ? favoriteArea.prefecture
+              ? "登録したエリアには該当する店舗がありません。マイページでエリアを変更してみてください"
+              : "マイページで登録エリア(都道府県・市区町村)を登録してください"
+            : "該当する店舗が見つかりませんでした"}
+        </p>
+      ) : filteredShops.length === 0 ? (
+        <p className="text-center py-12 text-[13px] text-[#8B7361]">
+          該当する店舗が見つかりませんでした
+        </p>
+      ) : (
+        filteredShops.map((shop) => (
+          <ShopCard
+            key={shop.name}
+            shop={shop}
+            productCount={(productsByShop[shop.name] || []).length}
+            onSelect={() => onSelectShop(shop)}
+          />
+        ))
+      )}
     </main>
   );
 }

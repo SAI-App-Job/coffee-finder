@@ -8,7 +8,7 @@ import { TAB_ITEMS } from "./data/navigation";
 import { ORIGIN_GUIDE } from "./data/originGuide";
 import { categorizeFlavorNotes } from "./utils/flavor";
 import { loadRemoteData } from "./data/remote";
-import { sortByDistance, sortNewArrivalsFirst, sortByRecency, pickRandomDisplaySet, filterByFavoriteArea, shuffle } from "./utils/productSort";
+import { sortByDistance, sortNewArrivalsFirst, sortByRecency, pickRandomDisplaySet, filterByFavoriteArea, shuffle, sortShopsByDistance, filterShopsByFavoriteArea } from "./utils/productSort";
 import { buildPrefectureRank, sortByPrefecturePopularity } from "./utils/prefectureOrder";
 import { useFavorites } from "./hooks/useFavorites";
 import { useAccentTheme } from "./hooks/useAccentTheme";
@@ -106,11 +106,44 @@ export default function CoffeeProductList() {
   // "random"(ランダム)。端末内のセッション状態としてのみ保持し(再読み込みで
   // "distance"に戻る)、"random"の表示範囲設定のみマイページで永続化する。
   const [sortMode, setSortMode] = useState("distance");
+  // 店舗タブの並べ替え軸。商品タブと違い「新規掲載」「ランダム」は対象外
+  // (店舗自体に新着・ランダム表示の概念が無いため)、"distance"|"favoriteArea"|
+  // "default"(登録店舗数が多い都道府県順)の3種のみ。
+  const [shopSortMode, setShopSortMode] = useState("distance");
   const geolocation = useGeolocation();
   const { displayRadiusId, setDisplayRadiusId, options: displayRadiusOptions } = useDisplayRadius();
   const { favoriteArea, setPrefecture: setFavoriteAreaPrefecture, setCity: setFavoriteAreaCity } = useFavoriteArea();
   // ランダム表示のシャッフル順は、無関係な再描画(お気に入り操作等)では
   // 変えたくないため、絞り込み結果や設定が実際に変わった時だけ再計算する。
+  // 「ランダム」ボタンを選択中に再タップした時だけ増分し、displayedのuseMemoの
+  // 依存配列に含めることで、絞り込み条件を変えずに明示的な再シャッフルを可能にする。
+  const [randomNonce, setRandomNonce] = useState(0);
+
+  // 「登録エリア」「新規掲載」は、選択中に同じボタンを再タップすると全件表示
+  // ("distance"、位置情報未取得時は都道府県順の全件)に戻す(=トグル式)。
+  // 「ランダム」は再タップのたびに再シャッフルする。「近い順」はトグル対象外。
+  const handleSortModeClick = (id) => {
+    if (id === "random") {
+      setSortMode("random");
+      setRandomNonce((n) => n + 1);
+      return;
+    }
+    if (id === "favoriteArea" || id === "new") {
+      setSortMode((prev) => (prev === id ? "distance" : id));
+      return;
+    }
+    setSortMode(id);
+  };
+
+  // 店舗タブの「登録エリア」も同様に、再タップで全件表示("distance")に戻す
+  // トグル式にする。
+  const handleShopSortModeClick = (id) => {
+    if (id === "favoriteArea") {
+      setShopSortMode((prev) => (prev === id ? "distance" : id));
+      return;
+    }
+    setShopSortMode(id);
+  };
 
   // 都道府県ごとの登録店舗数のランク(多い順、東京都が最多のため自然と先頭に
   // 来る)。全件表示(位置情報未取得時の商品タブ)と店舗一覧の並び順に使う。
@@ -193,6 +226,7 @@ export default function CoffeeProductList() {
         const haystack = [
           p.rawName, p.originCountry, p.designatedBrand, p.processingMethod,
           p.grade, p.farmNote, p.shopName, p.shopAddress, p.prefecture,
+          p.nearestStation,
           ...blendCountries,
         ]
           .filter(Boolean)
@@ -233,7 +267,9 @@ export default function CoffeeProductList() {
     // sortMode === "distance"
     if (geolocation.status === "success") return sortByDistance(filtered, geolocation.coords);
     return sortByPrefecturePopularity(filtered, prefectureRank, (p) => p.prefecture);
-  }, [filtered, sortMode, geolocation.status, geolocation.coords, displayRadiusId, favoriteArea, prefectureRank]);
+    // randomNonceは値自体を使わないが、「ランダム」再タップ時に明示的に
+    // 再シャッフルさせるためだけに依存配列に含めている。
+  }, [filtered, sortMode, geolocation.status, geolocation.coords, displayRadiusId, favoriteArea, prefectureRank, randomNonce]);
 
   const productsByShop = useMemo(() => {
     const map = {};
@@ -244,12 +280,29 @@ export default function CoffeeProductList() {
     return map;
   }, [products]);
 
-  // 店舗一覧も、全件表示の商品タブと同じ都道府県順(登録店舗数が多い順、
-  // 東京都から)にする。
+  // 店舗一覧のデフォルト表示順(登録店舗数が多い都道府県順、東京都から)。
+  // 位置情報未取得時の「近い順」フォールバック、および「登録エリア」選択時の
+  // 並び順にも流用する。
   const sortedShops = useMemo(
     () => sortByPrefecturePopularity(shops, prefectureRank, (s) => s.prefecture),
     [shops, prefectureRank]
   );
+
+  // 店舗タブの表示リスト。商品タブのdisplayedと同じ考え方で、
+  // - "distance": 位置情報取得に成功していれば店舗自身のlat/lngで距離順。
+  //   失敗・未取得の間はデフォルト順にフォールバックする。
+  // - "favoriteArea": マイページ登録エリアに該当する店舗のみ(デフォルト順)。
+  //   都道府県が未登録の間は0件にする(商品タブと同じ方針)。
+  const displayedShops = useMemo(() => {
+    if (shopSortMode === "favoriteArea") {
+      if (!favoriteArea.prefecture) return [];
+      return filterShopsByFavoriteArea(sortedShops, favoriteArea);
+    }
+    if (shopSortMode === "distance" && geolocation.status === "success") {
+      return sortShopsByDistance(shops, geolocation.coords);
+    }
+    return sortedShops;
+  }, [shops, sortedShops, shopSortMode, geolocation.status, geolocation.coords, favoriteArea]);
 
   const productsById = useMemo(() => new Map(products.map((p) => [String(p.id), p])), [products]);
 
@@ -413,7 +466,7 @@ export default function CoffeeProductList() {
               return (
                 <button
                   key={id}
-                  onClick={() => setSortMode(id)}
+                  onClick={() => handleSortModeClick(id)}
                   aria-pressed={isActive}
                   className={`flex items-center gap-1 shrink-0 text-[12px] px-3 py-1.5 rounded-full border transition-colors ${
                     isActive
@@ -479,7 +532,7 @@ export default function CoffeeProductList() {
               type="text"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              placeholder="商品名・産地・銘柄・店舗名・住所で検索"
+              placeholder="商品名・産地・銘柄・店舗名・住所・駅名で検索"
               className="w-full pl-9 pr-9 py-2.5 rounded-xl bg-[#2F241A] border border-[#4A3A2A] text-[13px] text-[#F2E9DD] placeholder:text-[#8B7361] focus:outline-none focus:border-[var(--accent-label)]"
             />
             {searchQuery && (
@@ -590,7 +643,15 @@ export default function CoffeeProductList() {
       )}
 
       {tab === "shops" && !selectedShop && (
-        <ShopListView shops={sortedShops} productsByShop={productsByShop} onSelectShop={setSelectedShop} />
+        <ShopListView
+          shops={displayedShops}
+          productsByShop={productsByShop}
+          onSelectShop={setSelectedShop}
+          sortMode={shopSortMode}
+          onSortModeChange={handleShopSortModeClick}
+          geolocation={geolocation}
+          favoriteArea={favoriteArea}
+        />
       )}
 
       {tab === "shops" && selectedShop && (

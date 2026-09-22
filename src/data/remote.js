@@ -21,6 +21,16 @@ function mapLocation(loc) {
   };
 }
 
+function mapNearestStation(raw) {
+  if (!raw || typeof raw.name !== "string") return null;
+  return {
+    name: raw.name,
+    lines: Array.isArray(raw.lines) ? raw.lines : [],
+    distanceM: typeof raw.distance_m === "number" ? raw.distance_m : null,
+    walkMin: typeof raw.walk_min === "number" ? raw.walk_min : null,
+  };
+}
+
 function mapShop(raw) {
   const shop = {
     name: raw.name,
@@ -32,6 +42,7 @@ function mapShop(raw) {
     mapQuery: raw.map_query,
     lat: typeof raw.lat === "number" ? raw.lat : null,
     lng: typeof raw.lng === "number" ? raw.lng : null,
+    nearestStation: mapNearestStation(raw.nearest_station),
   };
   // 実店舗が複数ある場合のみlocationsを持たせる(単一店舗はSHOPの直接フィールドのみを
   // 見るShopDetailViewの`hasMultipleLocations`判定に合わせるため)
@@ -52,6 +63,9 @@ function mapProduct(raw, shopsByName) {
     // (shopAddress/prefectureと同じ非正規化方針)。未ジオコーディングの店舗はnull。
     shopLat: typeof shop?.lat === "number" ? shop.lat : null,
     shopLng: typeof shop?.lng === "number" ? shop.lng : null,
+    // 検索窓での駅名検索用。shopAddress/prefectureと同じ非正規化方針
+    // (店舗のnearestStationを商品側にも複製)。未算出の店舗はnull。
+    nearestStation: shop?.nearestStation?.name ?? null,
     rawName: raw.raw_name,
     originCountry: raw.origin_country,
     designatedBrand: raw.designated_brand,

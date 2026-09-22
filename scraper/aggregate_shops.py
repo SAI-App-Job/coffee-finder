@@ -20,6 +20,11 @@ hours(営業時間)・map_query(Googleマップ検索用クエリ)はいずれ�
 取得しない情報(店舗の基本ページに営業時間の構造化データがない等)。既存の
 data/shops.jsonの値をそのまま引き継ぐ。
 
+nearest_station(最寄り駅: name/lines/distance_m/walk_min)も同様にスクレイパー
+非取得の情報で、scripts/add-nearest-station.jsが別途HeartRails Express APIで
+一括算出して書き込む値のため、既存のdata/shops.jsonの値(自動スクレイピング店舗)
+またはscraper/manual/shops/*.jsonの値(manual店舗)をそのまま引き継ぐ。
+
 【実店舗一覧(locations)・shop_typeについて】
 ほとんどの店舗はスクレイパーがlocationsを取得しないため、既存のdata/shops.json
 の値をそのまま引き継ぐ(shop_typeも既存値があればそれを優先)。一方、公式サイトに
@@ -625,6 +630,7 @@ def merge_shop(scraped_shop_info: dict, existing_shop: dict | None, now_iso: str
         "prefecture": scraped_shop_info.get("prefecture") or (existing_shop or {}).get("prefecture"),
         "hours": (existing_shop or {}).get("hours"),
         "map_query": build_map_query(existing_shop, scraped_shop_info["name"]),
+        "nearest_station": (existing_shop or {}).get("nearest_station"),
         "last_scraped_at": now_iso,
     }
     if locations:
@@ -838,6 +844,7 @@ def build_manual_shop(raw_shop: dict) -> dict:
         "prefecture": raw_shop.get("prefecture"),
         "hours": raw_shop.get("hours"),
         "map_query": map_query,
+        "nearest_station": raw_shop.get("nearest_station"),
         "data_source": "manual",
         "source_note": raw_shop.get("source_note"),
         "last_verified_at": raw_shop.get("last_verified_at"),

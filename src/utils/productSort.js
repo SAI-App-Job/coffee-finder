@@ -103,6 +103,28 @@ export function filterByFavoriteArea(products, { prefecture, city } = {}) {
   });
 }
 
+// 店舗一覧の「近い順」用。商品版(shopLat/shopLng)と違い、店舗自身のlat/lngを使う。
+export function sortShopsByDistance(shops, coords) {
+  return [...shops].sort((a, b) => {
+    const da = coords ? haversineDistanceKm(coords.lat, coords.lng, a.lat, a.lng) : null;
+    const db = coords ? haversineDistanceKm(coords.lat, coords.lng, b.lat, b.lng) : null;
+    if (da === null && db === null) return 0;
+    if (da === null) return 1;
+    if (db === null) return -1;
+    return da - db;
+  });
+}
+
+// 店舗一覧の「登録エリア」用。商品版(shopAddress)と違い、店舗自身のaddressを使う。
+export function filterShopsByFavoriteArea(shops, { prefecture, city } = {}) {
+  const trimmedCity = city?.trim();
+  return shops.filter((s) => {
+    if (prefecture && s.prefecture !== prefecture) return false;
+    if (trimmedCity && !s.address?.includes(trimmedCity)) return false;
+    return true;
+  });
+}
+
 // Fisher-Yatesシャッフル(引数の配列は変更しない)
 export function shuffle(array) {
   const result = [...array];
