@@ -521,6 +521,9 @@ SOURCE_FILES = {
     "沖縄セラードコーヒー": "data_okinawacerrado.json",
     "Purecastle珈琲": "data_purecastle.json",
     "自家焙煎珈琲 ヨシモトコーヒー": "data_yoshimotocoffee.json",
+    "早苗": "data_wasedasanae.json",
+    "焙煎工場さかいち": "data_sakaichi.json",
+    "Alternative Coffee Works": "data_alternativecoffeeworks.json",
 }
 
 

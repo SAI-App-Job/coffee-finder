@@ -1,0 +1,82 @@
+{
+  "shop": {
+    "id": "purantan-waseda",
+    "name": "喫茶ぷらんたん",
+    "url": "https://purantan-waseda.com/1-0",
+    "instagram_url": null,
+    "google_maps_query": "喫茶ぷらんたん 東京都新宿区戸塚1-101-13",
+    "address": "東京都新宿区戸塚1-101-13",
+    "prefecture": "東京都",
+    "tel": null,
+    "hours": "12:00〜17:30(日曜・祝日定休)",
+    "platform": "STORES.jp(手動入力。GitHub Actionsの共有IPレンジが403で遮断されるためスクレイパー無し)",
+    "shop_type": "single_location",
+    "data_source": "manual",
+    "source_note": "高田馬場・早稲田エリアの自家焙煎コーヒー豆店が本アプリに1件も収録されていないという利用者からの指摘を受けた総点検で発見(tailoredcafe.jpの「高田馬場・早稲田のコーヒー豆おすすめ専門店10選」記事経由。同記事の公式サイト欄はTwitter/Xのみを案内していたが、実際には別途STORES.jp製のオンラインストア(purantan-waseda.stores.jp)で通販を行っていることを確認)。創業1950年、早稲田大学南門前の老舗喫茶店。オンラインストアの商品一覧をブラウザで直接確認(2026-09)し、焙煎豆単品4銘柄(いずれも200g、豆/粉選択可)を収録。複数銘柄を組み合わせた「コーヒー豆セット」(+1,000円で2種類目を追加する構成)は単一銘柄ではないため対象外とした。各商品ページのJSON-LD構造化データ(description)からテイスティング文・価格を取得(末尾の挽き方選択案内・セット商品への内部リンク列挙は定型文のため除外)。",
+    "last_verified_at": "2026-09-22",
+    "lat": 35.707475,
+    "lng": 139.720366
+  },
+  "products": [
+    {
+      "raw_name": "自家焙煎コーヒー豆（マイルドブレンド200g）",
+      "category": "ブレンド",
+      "originCountry": null,
+      "processingMethod": null,
+      "roast": null,
+      "flavorNotes": "こだわりを持って自家焙煎したコーヒーです。マイルドブレンドは、苦味と酸味のバランスが良い、当店スタンダードのコーヒーです。",
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 2100,
+      "weightG": 200,
+      "stockStatus": "販売中",
+      "productUrl": "https://purantan-waseda.stores.jp/items/6045c5cf6e84d556075095d4",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "自家焙煎コーヒー豆（マンハッタンブレイク200g）",
+      "category": "ブレンド",
+      "originCountry": null,
+      "processingMethod": null,
+      "roast": null,
+      "flavorNotes": "こだわりを持って自家焙煎したコーヒーです。マンハッタンブレンドは当店のランチ後にお出しするアフターコーヒーで、濃いめのコーヒーです。",
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 2205,
+      "weightG": 200,
+      "stockStatus": "販売中",
+      "productUrl": "https://purantan-waseda.stores.jp/items/6375d4dfabc35c4849f3d75f",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "自家焙煎コーヒー豆（キリマンジャロ200g）",
+      "category": "ストレート",
+      "originCountry": "タンザニア",
+      "processingMethod": null,
+      "roast": null,
+      "flavorNotes": "こだわりを持って自家焙煎したコーヒーです。やや酸味の効いた、すっきりしたキリマンジャロのストレートコーヒーです。",
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 2520,
+      "weightG": 200,
+      "stockStatus": "販売中",
+      "productUrl": "https://purantan-waseda.stores.jp/items/6375da604292bf15701af907",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "自家焙煎コーヒー豆（炭火焼珈琲200g）",
+      "category": "ブレンド",
+      "originCountry": null,
+      "processingMethod": null,
+      "roast": "深煎り",
+      "flavorNotes": "こだわりを持って自家焙煎したコーヒーです。炭火焼珈琲はかなり濃く焙煎したコーヒー豆で、カフェオレやカフェラテなどでおいしくお召し上がりいただけます。",
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 2625,
+      "weightG": 200,
+      "stockStatus": "販売中",
+      "productUrl": "https://purantan-waseda.stores.jp/items/6375db84211ac32ba4dbb9ad",
+      "data_source": "manual"
+    }
+  ]
+}
