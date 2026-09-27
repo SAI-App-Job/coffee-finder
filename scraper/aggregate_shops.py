@@ -561,6 +561,7 @@ SOURCE_FILES = {
     "小川珈琲本店": "data_ogawa.json",
     "ニシナ屋珈琲": "data_nishinaya.json",
     "AMATISTA Coffee": "data_amatista.json",
+    "珈琲工房てらまち": "data_teramachi2.json",
 }
 
 

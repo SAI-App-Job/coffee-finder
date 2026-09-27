@@ -5,7 +5,7 @@
 `scraper/manual/shops/`配下、それ以外は`scraper/scrape_*.py`で自動取得。
 実装を見送った店舗は`docs/not-implementable-shops.md`を参照。
 
-合計550店舗・10424商品(生成日: 2026-09-27)。
+合計551店舗・10443商品(生成日: 2026-09-27)。
 
 再生成コマンド:
 ```
@@ -198,6 +198,7 @@ aggregate_shops.py実行後の`git diff --staged --quiet || git commit`が該当
 | びーんず亭 | 京都市中京区高倉通錦小路下ル中魚屋町511 | EC-CUBE | 23 |
 | イノダコーヒ本店 | 京都市中京区堺町通三条下る道祐町140 | フューチャーショップ | 6 |
 | 葦島珈琲 | 京都市中京区三条通河原町東入大黒町37 文明堂京都ビル5階 | Shopify | 10 |
+| 珈琲工房てらまち | 京都市中京区三条通大宮西入上瓦町64-26 | Ocnk | 19 |
 | alt. coffee roasters | 京都市中京区神泉苑町28-4 | BASE | 8 |
 | CLAMP COFFEE SARASA | 京都市中京区西ノ京職司町67-38 | BASE | 4 |
 | IOLITE COFFEE ROASTERS | 京都市中京区西堀川通六角下ル池須町422 | STORES(手動) | 9 |

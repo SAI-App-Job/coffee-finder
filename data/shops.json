@@ -9978,5 +9978,27 @@
     "last_scraped_at": "2026-09-27T20:49:04.151728+00:00",
     "lat": 34.891054,
     "lng": 135.803104
+  },
+  {
+    "name": "珈琲工房てらまち",
+    "url": "https://coffee-teramachi.ocnk.net/",
+    "platform": "おちゃのこネット(Ocnk)",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認(他のOcnk系店舗と同様の構成を想定)",
+    "address": "京都府京都市中京区三条通大宮西入上瓦町64-26",
+    "prefecture": "京都府",
+    "hours": null,
+    "map_query": "珈琲工房てらまち",
+    "nearest_station": {
+      "name": "京都市役所前",
+      "lines": [
+        "京都市東西線"
+      ],
+      "distance_m": 90,
+      "walk_min": 1
+    },
+    "last_scraped_at": "2026-09-27T21:05:34.158452+00:00",
+    "lat": 35.011575,
+    "lng": 135.768144
   }
 ]
