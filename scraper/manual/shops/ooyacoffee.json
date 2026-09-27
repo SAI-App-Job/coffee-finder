@@ -1,0 +1,60 @@
+{
+  "shop": {
+    "id": "ooyacoffee",
+    "name": "オオヤコーヒ焙煎所",
+    "url": "https://ooyacoffeeassociees.com/",
+    "instagram_url": null,
+    "google_maps_query": "FACTORY KAFE 工船 京都府京都市上京区河原町通今出川下ル梶井町448",
+    "address": "京都府京都市上京区河原町通今出川下ル梶井町448 清和テナントハウス2F G号室",
+    "prefecture": "京都府",
+    "tel": "075-211-5398",
+    "hours": "12:00〜21:00(火曜定休、祝日は営業)",
+    "platform": "STORES.jp(手動入力。GitHub Actionsの共有IPレンジが403で遮断されるためスクレイパー無し)",
+    "shop_type": "multi_location",
+    "data_source": "manual",
+    "source_note": "京都エリアの空白地調査で、コーヒー・お茶マガジン等の他記事(coffee-labo.co.jp掲載外)経由で発見。「FACTORY KAFE 工船」(京都・出町柳/河原町今出川)は「オオヤコーヒ焙煎所」ブランドの店舗の一つ(他にカフェゲバ[岡山県倉敷市]・白浜STAND![和歌山県]がある)で、共通オンラインストア(ooyacoffee.stores.jp)を運営。STORES.jp製オンラインストアをブラウザで直接確認(2026-09)。お茶・抽出器具・書籍(「珈琲の建設」「喫茶店のディスクール」)・複数焙煎度のアソートセットは対象外とし、コーヒー豆単品2件(ブレンド2)を収録。",
+    "last_verified_at": "2026-09-27",
+    "lat": 35.011575,
+    "lng": 135.768144,
+    "nearest_station": {
+      "name": "京都市役所前",
+      "lines": [
+        "京都市東西線"
+      ],
+      "distance_m": 90,
+      "walk_min": 1
+    }
+  },
+  "products": [
+    {
+      "raw_name": "コーヒー豆　エスプレッソからドリップまでブレンド　中ヤキ【300g】",
+      "category": "ブレンド",
+      "originCountry": null,
+      "processingMethod": null,
+      "roast": "中煎り",
+      "flavorNotes": "オオヤコーヒーの代表的ブレンド。エスプレッソマシーンの気圧での過抽出を防ぐための焙煎とブレンドを試みた結果、ハンドドリップでも雑味の少ないコーヒーに。エスプレッソではチョコレート、ドリップでは酸味の少ないあっさりした中焼き。好みのストライクゾーンの広いブレンド。",
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 2592,
+      "weightG": 300,
+      "stockStatus": "販売中",
+      "productUrl": "https://ooyacoffee.stores.jp/items/6a6ef6cb674682b6a3d055d7",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "デカフェ　ダウナーズブレンド【300g】",
+      "category": "ブレンド",
+      "originCountry": null,
+      "processingMethod": null,
+      "roast": "中深煎り",
+      "flavorNotes": "ノンカフェインのブレンドコーヒー。長時間焙煎と生豆のセレクトによってノンカフェインの豆特有の臭みを無くした、スタンダードなブレンドと比べても遜色無い軽いテイスト。焙煎度は少し苦みのある中ヤキ(深め)。",
+      "farmNote": null,
+      "decafProcess": "長時間焙煎と生豆セレクトによる脱カフェイン(具体的な処理方式は非公開)",
+      "price": 3078,
+      "weightG": 300,
+      "stockStatus": "販売中",
+      "productUrl": "https://ooyacoffee.stores.jp/items/6a6ef77bb4efa2d7058969dd",
+      "data_source": "manual"
+    }
+  ]
+}

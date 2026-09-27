@@ -1,0 +1,90 @@
+{
+  "shop": {
+    "id": "tabinone",
+    "name": "京都珈琲焙煎所 旅の音",
+    "url": "https://coffee.tabinone.net/",
+    "instagram_url": null,
+    "google_maps_query": "京都珈琲焙煎所 旅の音 京都府京都市左京区田中東春菜町30-3",
+    "address": "京都府京都市左京区田中東春菜町30-3",
+    "prefecture": "京都府",
+    "tel": null,
+    "hours": null,
+    "platform": "カラーミーショップ(shop-pro.jp旧ドメイン。EUC-JPエンコーディングのためrequests取得時にencoding指定が必要)",
+    "shop_type": "single_location",
+    "data_source": "manual",
+    "source_note": "京都エリアの空白地調査で発見(元美術学校の教室をリノベーションした焙煎所、2017年開業)。オンラインショップ(webshop.tabinone.net)の「コーヒー豆」カテゴリ全8件のうち、試飲用ミニサイズのお試しセット・ギフトセット・ケーキとのセット商品(4件、いずれも複数銘柄セットのため対象外)を除いた4件(ストレート2・ブレンド2)を収録。各商品ページのdiv.product-explainから焙煎士自身によるテイスティング文・産地情報を取得。EUC-JPページのためrequests取得時にr.encoding=\"euc-jp\"の明示が必要だった。",
+    "last_verified_at": "2026-09-27",
+    "lat": 35.035577,
+    "lng": 135.785108,
+    "nearest_station": {
+      "name": "茶山・京都芸術大学",
+      "lines": [
+        "叡山電鉄本線"
+      ],
+      "distance_m": 300,
+      "walk_min": 4
+    }
+  },
+  "products": [
+    {
+      "raw_name": "完熟デカフェコーヒー",
+      "category": "ストレート",
+      "originCountry": "コロンビア",
+      "processingMethod": "ウォッシュド",
+      "roast": "中深煎り",
+      "flavorNotes": "コロンビア ラ・プラデーラ農園産、標高約1800mのオーガニックコーヒー(JAS認証)を100%使用。糖度23度のコーヒーチェリーをデカフェ処理することで華やかで芳醇な味わいに。香味：ドライイチジク、ミルクチョコレート、オレンジピール",
+      "farmNote": "農家：ラ・プラデーラ、地域：サンタンデール、標高：1800m、品種：カツーラ、カスティージョ",
+      "decafProcess": "化学薬品不使用、標高5636mの山からの湧き水でカフェインを除去した後、カフェインとともに流出した旨味成分のみを抽出して生豆に戻す独自製法(99%以上カフェインカット)",
+      "price": 1560,
+      "weightG": 100,
+      "stockStatus": "販売中",
+      "productUrl": "https://webshop.tabinone.net/?pid=152388261",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "豆箱エチオピアイルガチェフェ（中深煎り）",
+      "category": "ストレート",
+      "originCountry": "エチオピア",
+      "processingMethod": "ナチュラル",
+      "roast": "中深煎り",
+      "flavorNotes": "標高1800m以上の寒暖差の激しい土地で生まれる官能的なフレーバー。あえて深く焙煎し複雑な奥深い果実の香りを引き出した、濃厚でとろりとした口当たり。冷めると貴腐ワインのような味わいに変化する、完熟チェリーのみを使った贅沢な一杯。",
+      "farmNote": "農協：コンガ農協、品種：アビシニカ",
+      "decafProcess": null,
+      "price": 1700,
+      "weightG": 100,
+      "stockStatus": "販売中",
+      "productUrl": "https://webshop.tabinone.net/?pid=156760569",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "タビノネの旅ブレンド",
+      "category": "ブレンド",
+      "originCountry": null,
+      "processingMethod": null,
+      "roast": null,
+      "flavorNotes": "お客様の声と旅の音スタッフが生み出した最高のブレンド。クルミのようなナッツ感とチョコレートを彷彿させる苦味に、ブラッドオレンジのような柔らかい甘みを加えたバランスの良い味わい。こってりめのコーヒーが好きな方や、酸味の強いコーヒーが苦手な方にもおすすめ。",
+      "farmNote": "配合：グアテマラ、マンデリン(インドネシア)、コロンビア、エチオピア",
+      "decafProcess": null,
+      "price": 1900,
+      "weightG": 100,
+      "stockStatus": "販売中",
+      "productUrl": "https://webshop.tabinone.net/?pid=175724747",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "タビノネの音ブレンド",
+      "category": "ブレンド",
+      "originCountry": null,
+      "processingMethod": null,
+      "roast": "浅煎り",
+      "flavorNotes": "お客様の声と旅の音スタッフが生み出した最高のブレンド。花の蜜のような優しい甘みとスキップしたくなるほど軽やかな口当たり、ベリーや花のような甘い香りが口いっぱいに広がるフルーティな一杯。浅煎りが好きな方や、普段と違う華やかな香りを試したい方におすすめ。",
+      "farmNote": "配合：グアテマラ、エチオピア、マンデリン(インドネシア)、ホンジュラス",
+      "decafProcess": null,
+      "price": 1820,
+      "weightG": 100,
+      "stockStatus": "販売中",
+      "productUrl": "https://webshop.tabinone.net/?pid=175724886",
+      "data_source": "manual"
+    }
+  ]
+}

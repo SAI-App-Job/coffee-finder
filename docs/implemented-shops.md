@@ -5,7 +5,7 @@
 `scraper/manual/shops/`配下、それ以外は`scraper/scrape_*.py`で自動取得。
 実装を見送った店舗は`docs/not-implementable-shops.md`を参照。
 
-合計512店舗・9924商品(生成日: 2026-09-22)。
+合計550店舗・10424商品(生成日: 2026-09-27)。
 
 再生成コマンド:
 ```
@@ -172,10 +172,48 @@ aggregate_shops.py実行後の`git diff --staged --quiet || git commit`が該当
 
 | 店舗名 | 所在地 | 方式 | 件数 |
 |---|---|---|---|
+| AMATISTA Coffee | 宇治市宇治妙楽171-13 | カラーミー | 21 |
+| OUTSTANDING COFFEE ROASTER | 宇治市宇治妙楽89-1 | Shopify | 17 |
+| よこやま珈琲 | 宇治市小倉町西浦5-9 | 独自EC | 18 |
+| Ari Cafe 嵯峨焙煎所 | 京都市右京区嵯峨二尊院門前北中院町5-5 | 手動 | 22 |
+| サルーコーヒー | 京都市右京区嵯峨蜻蛉尻町1-11 | BASE | 6 |
+| 小川珈琲本店 | 京都市右京区西京極北庄境町75 | Shopify | 25 |
+| Okaffe kyoto | 京都市下京区亀屋町51 | STORES(手動) | 6 |
+| シガコーヒー | 京都市下京区西七条御領町25-2 | BASE | 10 |
+| COYOTE | 京都市下京区東塩小路町939 キャンパスプラザ京都1階 | STORES(手動) | 9 |
+| Kurasu Kyoto | 京都市下京区東油小路町552 | Shopify | 13 |
+| DUNSTAN COFFEE ROASTERS | 京都市下京区燈籠町559-2 ラグーサ東洞院高辻1F | STORES(手動) | 8 |
+| Goodman Roaster Kyoto | 京都市下京区矢田町115-2 ベアフルートイイノ1F | Shopify | 5 |
+| カフェ・ヴェルディ | 京都市左京区下鴨芝本町49-25 アディー下鴨1F | 手動 | 29 |
 | 焙煎珈琲きまめ屋 | 京都市左京区修学院犬塚町12-1 | 手動 | 20 |
+| 河太郎珈琲店 | 京都市左京区大原古知平町28 | MakeShop | 8 |
+| WEEKENDERS COFFEE | 京都市左京区田中下柳町6-3 | ShopServe | 18 |
+| 京都珈琲焙煎所 旅の音 | 京都市左京区田中東春菜町30-3 | 手動 | 4 |
+| オオヤコーヒ焙煎所 | 京都市上京区河原町通今出川下ル梶井町448 清和テナントハウス2F G号室 | STORES(手動) | 2 |
+| NuCUPCOFFEE | 京都市上京区三芳町163-1 | STORES(手動) | 9 |
+| カフェ デ コラソン | 京都市上京区小川通一条上る革堂町593-15 | BASE | 17 |
+| ニシナ屋珈琲 | 京都市上京区青龍町218 | MakeShop | 20 |
+| STYLE COFFEE | 京都市上京区桝屋町360-1 ペアリーフ御所東1階 | BASE | 8 |
+| Coffee Base KANONDO | 京都市中京区観音堂町466 | BASE(theshop.jp) | 12 |
 | びーんず亭 | 京都市中京区高倉通錦小路下ル中魚屋町511 | EC-CUBE | 23 |
+| イノダコーヒ本店 | 京都市中京区堺町通三条下る道祐町140 | フューチャーショップ | 6 |
+| 葦島珈琲 | 京都市中京区三条通河原町東入大黒町37 文明堂京都ビル5階 | Shopify | 10 |
+| alt. coffee roasters | 京都市中京区神泉苑町28-4 | BASE | 8 |
+| CLAMP COFFEE SARASA | 京都市中京区西ノ京職司町67-38 | BASE | 4 |
+| IOLITE COFFEE ROASTERS | 京都市中京区西堀川通六角下ル池須町422 | STORES(手動) | 9 |
+| 六曜社珈琲店 | 京都市中京区大黒町40-1 | STORES(手動) | 15 |
+| SOT COFFEE ROASTER | 京都市東山区 | Shopify | 15 |
+| fuku coffee roastery | 京都市東山区山城町284-3 | Shopify | 21 |
+| 市川屋珈琲 | 京都市東山区渋谷通東大路西入鐘鋳町396-2 | BASE | 4 |
+| ABOUT US COFFEE | 京都市伏見区 | STORES(手動) | 17 |
+| 3s...COFFEE ROASTER | 京都市伏見区横大路下三栖梶原町35-1-36 | BASE | 20 |
+| こぴのおと珈琲焙煎所 | 京都市伏見区横大路千両松町61-3 | STORES(手動) | 14 |
 | サーカスコーヒー | 京都市北区紫竹下緑町32 | BASE | 20 |
+| AMANO COFFEE ROASTERS | 京都市北区紫竹東高縄町23-2 ルピナス1F | Shopify | 11 |
+| 自家焙煎珈琲ガロ | 京都市北区紫野南舟岡町71-27 | MakeShop | 41 |
+| WIFE&HUSBAND | 京都市北区小山下内河原町106-6 | BASE(buyshop.jp) | 10 |
 | 香月庵 | 向日市寺戸町梅ノ木1-2 香月栖1階 | 楽々シリーズ(Raku-Uru) | 11 |
+| Unir | 長岡京市 | カラーミー | 8 |
 | NAKANOTEI COFFEE | 長岡京市調子1丁目6-35 中野家住宅 | BASE | 6 |
 
 ### 熊本県

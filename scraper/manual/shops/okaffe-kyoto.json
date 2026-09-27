@@ -1,0 +1,120 @@
+{
+  "shop": {
+    "id": "okaffe-kyoto",
+    "name": "Okaffe kyoto",
+    "url": "https://okaffe.kyoto/",
+    "instagram_url": "https://www.instagram.com/okaffe.kyoto/",
+    "google_maps_query": "Okaffe★ROASTING PARK 京都府京都市下京区亀屋町51",
+    "address": "京都府京都市下京区亀屋町51",
+    "prefecture": "京都府",
+    "tel": "075-744-0102",
+    "hours": "9:00-17:00、年中無休(Okaffe★ROASTING PARK)",
+    "platform": "STORES.jp(手動入力。requestsでの直接アクセスが403で遮断されるためブラウザで直接確認)",
+    "shop_type": "multi_location",
+    "data_source": "manual",
+    "source_note": "京都エリアの空白地調査で発見。バリスタ界のエンターテイナーと呼ばれる岡田章宏が展開する自家焙煎コーヒー店(LORINGスマートロースター7kg釜を使用)。喫茶店(本店、下京区綾小路)・珈琲豆販売所(Okaffe★ROASTING PARK、下京区亀屋町)・イタリアンバール(bar & dolce、豆販売なし)の3拠点、「11店舗以上」の基準には該当しない。オンラインストア(okaffekyoto.shop、STORES.jp)をブラウザで直接確認(2026-09、requestsでは403で遮断)。水出しコーヒーリキッド・カフェオレベース・ドリップバッグ各種・福袋/セット・グッズ(マグ、ドリッパー、クリアファイル等)を除いた、コーヒー豆全6件(ストレート3・ブレンド3、いずれも220g)を収録。各商品ページに産地情報とテイスティングノートが明記されている。",
+    "last_verified_at": "2026-09-28",
+    "lat": 35.010899,
+    "lng": 135.76887,
+    "nearest_station": {
+      "name": "京都市役所前",
+      "lines": [
+        "京都市東西線"
+      ],
+      "distance_m": 10,
+      "walk_min": 1
+    }
+  },
+  "products": [
+    {
+      "raw_name": "エチオピア イルガチェフェ ゲルシ　浅煎り",
+      "category": "ストレート",
+      "originCountry": "エチオピア",
+      "processingMethod": "ウォッシュド",
+      "roast": "浅煎り",
+      "flavorNotes": "GERSI(ゲルシ)には協力という意味があります。ゲルシの人々にとって、コーヒーは単なる輸出品ではなく、彼らのアイデンティティの象徴であり、日常生活に欠かせないものです。フレーバー：レモンティー、洋梨、シロップ。",
+      "farmNote": "地域：イルガチャフェ/南部諸民族州、地区：ゲルシ、標高：1900-2300m、品種：74112、74110、収穫期：10-12月",
+      "decafProcess": null,
+      "price": 2800,
+      "weightG": 220,
+      "stockStatus": "販売中",
+      "productUrl": "https://okaffekyoto.shop/items/66d6fb89cd92fe086e5e81fd",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "ニカラグア　エンバシー農園　ナチュラル　浅煎り",
+      "category": "ストレート",
+      "originCountry": "ニカラグア",
+      "processingMethod": "ナチュラル",
+      "roast": "浅煎り",
+      "flavorNotes": "フレーバー：プルーン、赤ワイン、ダークチェリー。『大使館』という意味をもつエンバシー農園は、ニカラグア北部のMozonte(モソンテ)地区の崖と谷が入り組んだ山岳地帯にあり、COE受賞農園も多く集まるエリアにあります。",
+      "farmNote": "生産者：Sergio Ortes、農園：Embassy、地域：Nueva Segovia、標高：1500-1800m、品種：Catuai",
+      "decafProcess": null,
+      "price": 2800,
+      "weightG": 220,
+      "stockStatus": "販売中",
+      "productUrl": "https://okaffekyoto.shop/items/66c314329a7b21044eb509f4",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "ケニア　GIKIRIMA COFFEE FACTORY　浅煎り",
+      "category": "ストレート",
+      "originCountry": "ケニア",
+      "processingMethod": "ウォッシュド",
+      "roast": "浅煎り",
+      "flavorNotes": "ライムのようにキレのある爽やかな酸。シャルドネを思わせるフレッシュさ。すっきりとした飲み心地の中に、しっかりと感じるケニアらしい魅力。フレーバー：シャルドネ、ライム、シルキー。",
+      "farmNote": "生産者：KIBUGU FARMERS COOPERATIVE、精製所：GIKIRIMA COFFEE FACTORY、エリア：Embu(エンブ)、品種：SL28、Ruiru11、Batian、標高：1800m",
+      "decafProcess": null,
+      "price": 2800,
+      "weightG": 220,
+      "stockStatus": "販売中",
+      "productUrl": "https://okaffekyoto.shop/items/64560591f00a1f003eeb36ef",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "スター★ブレンド　220g　中深煎り",
+      "category": "ブレンド",
+      "originCountry": null,
+      "processingMethod": null,
+      "roast": "中深煎り",
+      "flavorNotes": "キラキラと明るいフレーバーと誰にでも愛想のよいほろ甘苦さ。どんなシーンでも彩りを与えてくれるスター★ブレンドです。テイスティングノート：ハニートースト、アメリカンチェリー、ローストアーモンド。",
+      "farmNote": "配合：ブラジル、エチオピア、グアテマラ",
+      "decafProcess": null,
+      "price": 1900,
+      "weightG": 220,
+      "stockStatus": "販売中",
+      "productUrl": "https://okaffekyoto.shop/items/620f1204fd2e737540975c6d",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "ダンディブレンド　220g　深煎り",
+      "category": "ブレンド",
+      "originCountry": null,
+      "processingMethod": null,
+      "roast": "深煎り",
+      "flavorNotes": "京都・四条烏丸の実店舗にて「とりあえずダンディブレンドで」という常連も多く、スモーキーな香り、深みのある苦味とコクがあり心地よい余韻が味わえる定番ブレンドです。昭和のハードな男の色気を感じるダンディブレンド。",
+      "farmNote": "配合：ブラジル、インドネシア、エチオピア、コロンビア",
+      "decafProcess": null,
+      "price": 1600,
+      "weightG": 220,
+      "stockStatus": "販売中",
+      "productUrl": "https://okaffekyoto.shop/items/5f4a8400d3f1672d7c52b6d8",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "パーティブレンド　220g　中煎り",
+      "category": "ブレンド",
+      "originCountry": null,
+      "processingMethod": null,
+      "roast": "中煎り",
+      "flavorNotes": "シャンパンを片手に楽しそうにお喋りする素敵女子たち、エキゾチックな香りとエレガントな酸味。テイスティングノート：フローラル、リースリング、爽やかな後味に明るい酸味。",
+      "farmNote": "配合：エチオピア、グアテマラ、ブラジル",
+      "decafProcess": null,
+      "price": 1800,
+      "weightG": 220,
+      "stockStatus": "販売中",
+      "productUrl": "https://okaffekyoto.shop/items/5f4a86187df28165c214e4c8",
+      "data_source": "manual"
+    }
+  ]
+}
