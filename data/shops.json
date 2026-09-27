@@ -10000,5 +10000,100 @@
     "last_scraped_at": "2026-09-27T21:05:34.158452+00:00",
     "lat": 35.011575,
     "lng": 135.768144
+  },
+  {
+    "name": "らぶこーひー自家焙煎豆店",
+    "url": "https://lovecoffeejikabaisen.com/",
+    "platform": "WooCommerce",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認(WooCommerce標準構成を想定)",
+    "address": "北海道札幌市",
+    "prefecture": "北海道",
+    "hours": null,
+    "map_query": "らぶこーひー自家焙煎豆店",
+    "nearest_station": {
+      "name": "大通",
+      "lines": [
+        "札幌市東西線",
+        "札幌市南北線",
+        "札幌市東豊線"
+      ],
+      "distance_m": 160,
+      "walk_min": 2
+    },
+    "last_scraped_at": "2026-09-27T22:32:20.123900+00:00",
+    "lat": 43.061936,
+    "lng": 141.354292
+  },
+  {
+    "name": "十八珈琲焙煎所",
+    "url": "https://towa-coffee.com/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認(BASE標準構成を想定)",
+    "address": "北海道札幌市",
+    "prefecture": "北海道",
+    "hours": null,
+    "map_query": "十八珈琲焙煎所",
+    "nearest_station": {
+      "name": "大通",
+      "lines": [
+        "札幌市東西線",
+        "札幌市南北線",
+        "札幌市東豊線"
+      ],
+      "distance_m": 160,
+      "walk_min": 2
+    },
+    "last_scraped_at": "2026-09-27T22:32:20.123900+00:00",
+    "lat": 43.061936,
+    "lng": 141.354292
+  },
+  {
+    "name": "珈房ベンデドール",
+    "url": "https://www.946jp.com/vendedor/",
+    "platform": "独自EC(CGI注文フォーム)",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認(独自CGI構成)",
+    "address": "北海道釧路郡釧路町曙2丁目9-13",
+    "prefecture": "北海道",
+    "hours": null,
+    "map_query": "珈房ベンデドール",
+    "nearest_station": {
+      "name": "東釧路",
+      "lines": [
+        "JR根室本線",
+        "JR釧網本線"
+      ],
+      "distance_m": 2060,
+      "walk_min": 26
+    },
+    "last_scraped_at": "2026-09-27T22:32:20.123900+00:00",
+    "lat": 43.013642,
+    "lng": 144.409313
+  },
+  {
+    "name": "HOKKAIDO STARBREW",
+    "url": "https://starbrew.jp/",
+    "instagram_url": null,
+    "platform": "BASE(手動入力。対象商品が2件のみのため専用スクレイパーは作成せず手動登録)",
+    "shop_type": "multi_location",
+    "address": "北海道札幌市中央区南2条西7丁目10-1 アパホテル《札幌大通駅前南》1階",
+    "prefecture": "北海道",
+    "hours": "8:00〜18:30、年中無休",
+    "map_query": "HOKKAIDO STARBREW 北海道札幌市中央区南2条西7丁目10-1",
+    "nearest_station": {
+      "name": "西8丁目",
+      "lines": [
+        "札幌市電"
+      ],
+      "distance_m": 190,
+      "walk_min": 2
+    },
+    "data_source": "manual",
+    "source_note": "全国再調査(北海道)で発見(coffee-labo.co.jp「札幌のおすすめ人気コーヒー豆専門店10選」)。旭川市と富良野市の中間にある「旭川西神楽焙煎所」で自家焙煎し、札幌市中央区の直営店(店内焙煎サービスも提供)や道内の宿泊施設・道の駅等に卸している。オンラインストア(shop.starbrew.jp、BASE)をブラウザで直接確認(2026-09)。ドリップバッグ単品・コーヒーのサブスク各種(内容が発送ごとに変わる)を除いた、100g計量済みブレンド2件(マイルドブレンド・フルーティーブレンド)を収録。店内焙煎サービス(生豆から選んでその場で焙煎、1,900円/250g〜)で取り扱う14種類の産地別生豆は個別の価格・銘柄ページが存在しないため対象外。",
+    "last_verified_at": "2026-09-28",
+    "lat": 43.057115,
+    "lng": 141.347322
   }
 ]

@@ -1,0 +1,60 @@
+{
+  "shop": {
+    "id": "starbrew",
+    "name": "HOKKAIDO STARBREW",
+    "url": "https://starbrew.jp/",
+    "instagram_url": null,
+    "google_maps_query": "HOKKAIDO STARBREW 北海道札幌市中央区南2条西7丁目10-1",
+    "address": "北海道札幌市中央区南2条西7丁目10-1 アパホテル《札幌大通駅前南》1階",
+    "prefecture": "北海道",
+    "tel": "080-4948-7749",
+    "hours": "8:00〜18:30、年中無休",
+    "platform": "BASE(手動入力。対象商品が2件のみのため専用スクレイパーは作成せず手動登録)",
+    "shop_type": "multi_location",
+    "data_source": "manual",
+    "source_note": "全国再調査(北海道)で発見(coffee-labo.co.jp「札幌のおすすめ人気コーヒー豆専門店10選」)。旭川市と富良野市の中間にある「旭川西神楽焙煎所」で自家焙煎し、札幌市中央区の直営店(店内焙煎サービスも提供)や道内の宿泊施設・道の駅等に卸している。オンラインストア(shop.starbrew.jp、BASE)をブラウザで直接確認(2026-09)。ドリップバッグ単品・コーヒーのサブスク各種(内容が発送ごとに変わる)を除いた、100g計量済みブレンド2件(マイルドブレンド・フルーティーブレンド)を収録。店内焙煎サービス(生豆から選んでその場で焙煎、1,900円/250g〜)で取り扱う14種類の産地別生豆は個別の価格・銘柄ページが存在しないため対象外。",
+    "last_verified_at": "2026-09-28",
+    "lat": 43.057115,
+    "lng": 141.347322,
+    "nearest_station": {
+      "name": "西8丁目",
+      "lines": [
+        "札幌市電"
+      ],
+      "distance_m": 190,
+      "walk_min": 2
+    }
+  },
+  "products": [
+    {
+      "raw_name": "STARBREW マイルドブレンド 100g",
+      "category": "ブレンド",
+      "originCountry": null,
+      "processingMethod": null,
+      "roast": "中煎り",
+      "flavorNotes": "ケニアのしっかりとしたコクとエチオピアの爽やかな酸味で、バランスの取れた中煎りコーヒー",
+      "farmNote": "配合: ケニア、エチオピア",
+      "decafProcess": null,
+      "price": 1600,
+      "weightG": 100,
+      "stockStatus": "販売中",
+      "productUrl": "https://shop.starbrew.jp/items/124936261",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "STARBREW フルーティーブレンド 100g",
+      "category": "ブレンド",
+      "originCountry": null,
+      "processingMethod": null,
+      "roast": "浅煎り",
+      "flavorNotes": "エチオピアのフルーティーな酸味とペルーのナッツのような風味がある香り高くみずみずしい浅煎りコーヒー",
+      "farmNote": "配合: エチオピア、ペルー",
+      "decafProcess": null,
+      "price": 1600,
+      "weightG": 100,
+      "stockStatus": "販売中",
+      "productUrl": "https://shop.starbrew.jp/items/124936544",
+      "data_source": "manual"
+    }
+  ]
+}

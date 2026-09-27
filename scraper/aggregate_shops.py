@@ -562,6 +562,10 @@ SOURCE_FILES = {
     "ニシナ屋珈琲": "data_nishinaya.json",
     "AMATISTA Coffee": "data_amatista.json",
     "珈琲工房てらまち": "data_teramachi2.json",
+    # 全国再調査(北海道)で実装した店舗
+    "らぶこーひー自家焙煎豆店": "data_lovecoffee.json",
+    "十八珈琲焙煎所": "data_towacoffee.json",
+    "珈房ベンデドール": "data_vendedor.json",
 }
 
 
