@@ -575,6 +575,13 @@ SOURCE_FILES = {
     "in vitro coffee roasters": "data_invitrocoffee.json",
     "デ・スティル コーフィー": "data_destijlkoffie.json",
     "スリーズコーヒー": "data_threescoffee.json",
+    # 全国再調査(山形県)で実装した店舗
+    "焙煎珈琲 自然芳": "data_jinenho.json",
+    "イズコーヒー": "data_iskoffee.json",
+    "じゃらんじゃらん": "data_jalanjalan.json",
+    "CoffeeRoaster&Cafe culmino": "data_culmino.json",
+    "パラディーゾ コーヒーロースターズ": "data_paradiso.json",
+    "Day & Coffee": "data_dayandcoffee.json",
 }
 
 

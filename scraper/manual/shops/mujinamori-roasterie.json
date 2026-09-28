@@ -1,0 +1,45 @@
+{
+  "shop": {
+    "id": "mujinamori-roasterie",
+    "name": "狸森焙煎所",
+    "url": "http://www.mujinamori-roasterie.com/",
+    "instagram_url": "https://www.facebook.com/mujinamori.roasterie/",
+    "google_maps_query": "狸森焙煎所 山形県上山市狸森1198-8",
+    "address": "山形県上山市狸森1198-8",
+    "prefecture": "山形県",
+    "hours": "11:00〜18:00、定休日：月曜日・第1火曜日",
+    "platform": "手動入力(公式サイトは1990〜2000年代風の独自静的サイトでオンライン決済カートは無く、メール予約による店頭受取または通信販売(銀行振込・後払い)のみ)",
+    "shop_type": "single_location",
+    "data_source": "manual",
+    "source_note": "全国再調査(山形県)でmamenavi.info「山形の自家焙煎珈琲店ガイド」から発見。2009年開業、かみのやま温泉から離れた狸森地区の珈琲焙煎所。公式サイト(http://www.mujinamori-roasterie.com/、coffee.html・order.html・pickup.htmlの各ページ)を直接確認(2026-09)。販売する珈琲豆は「定めのないブレンド」(商品名RomiCoffee)の1種類のみで、日々の空気感に合わせて生豆から配合を変えるシティーローストのブレンドであり、銘柄・配合の指定は不可(産地情報は非公開のためorigin_countryはnull)。価格はpickup.html(店頭販売・メール予約)に明記された「むじな缶への量り売り 100g 750円(税込)」を100gあたりの代表価格として採用した(他に250gパック2,300円/500gパック4,000円の通信販売用パックもあるが、単価が異なるため100g量り売り価格を基準とした)。",
+    "last_verified_at": "2026-09-28",
+    "lat": 38.187465,
+    "lng": 140.231495,
+    "nearest_station": {
+      "name": "かみのやま温泉",
+      "lines": [
+        "JR奥羽本線",
+        "山形新幹線"
+      ],
+      "distance_m": 5690,
+      "walk_min": 71
+    }
+  },
+  "products": [
+    {
+      "raw_name": "RomiCoffee 定めのないブレンド",
+      "category": "ブレンド",
+      "originCountry": null,
+      "processingMethod": null,
+      "roast": "シティーロースト",
+      "flavorNotes": "日々の空気感に合わせて生豆からブレンドする、狸森焙煎所だけの「定めのないブレンド」。釜の中で香味が混ざり合い生み出される独自の味わいで、その日その日で出会える味を楽しむスタイル。銘柄・配合は日替わりのため指定不可。",
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 750,
+      "weightG": 100,
+      "stockStatus": "販売中",
+      "productUrl": "http://www.mujinamori-roasterie.com/pickup.html",
+      "data_source": "manual"
+    }
+  ]
+}

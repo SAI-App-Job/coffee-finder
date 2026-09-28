@@ -1,0 +1,46 @@
+{
+  "shop": {
+    "id": "botacoffee",
+    "name": "BOTA coffee",
+    "url": "https://www.botacoffee.jp/",
+    "instagram_url": "https://www.instagram.com/botacoffee_7/",
+    "google_maps_query": "BOTA coffee 山形県山形市七日町2-7-18",
+    "address": "山形県山形市七日町2-7-18",
+    "prefecture": "山形県",
+    "tel": null,
+    "hours": "11:30〜17:30(L.O.17:15)、定休日：火曜日(祝日は営業)",
+    "platform": "STORES.jp(手動入力。ブラウザで直接確認可能)",
+    "shop_type": "single_location",
+    "data_source": "manual",
+    "source_note": "全国再調査(山形県)でcoffee-labo.co.jp記事から発見。100年続いた老舗洋傘屋跡地で営業する自家焙煎スペシャルティコーヒー専門店(「深煎りのみ・大量販売不可・鮮度重視」を掲げる)。公式サイト(botacoffee.jp)経由のオンラインストア(STORES.jp、botacoffee.stores.jp)を直接確認(2026-09)。オンラインストアでは単品販売が無く、「ボタコーヒーセット(100g×3袋)送料無料 ¥3,300」として◆ボタブレンド100g・◆気まぐれロースト100g・◆わがままロースト100gの3種異なる100g袋をセットでのみ販売している。このうち「気まぐれロースト」(その日の気分で変わる)・「わがままロースト」(産地を問わず実験的に焙煎)は商品説明上も銘柄が固定されておらず一貫した商品として記録できないため対象外とし、唯一固定銘柄である「ボタブレンド」のみを収録した。価格はセット価格(¥3,300/300g)を3等分した金額(¥1,100/100g)を代表価格として採用し、単品販売が存在しないことをunit_note相当としてこのsource_noteに明記する。Tシャツ等コーヒー豆以外の商品、200g×3袋セット・ギフトボックス・定期便は全て同じ3銘柄セットの重量/パッケージ違いのため対象外。",
+    "last_verified_at": "2026-09-28",
+    "lat": 38.253257,
+    "lng": 140.339477,
+    "nearest_station": {
+      "name": "山形",
+      "lines": [
+        "山形新幹線",
+        "JR奥羽本線"
+      ],
+      "distance_m": 1210,
+      "walk_min": 15
+    }
+  },
+  "products": [
+    {
+      "raw_name": "ボタブレンド",
+      "category": "ブレンド",
+      "originCountry": null,
+      "processingMethod": null,
+      "roast": "深煎り",
+      "flavorNotes": "ビターでまろやかなオリジナルブレンドです。",
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1100,
+      "weightG": 100,
+      "stockStatus": "販売中",
+      "productUrl": "https://botacoffee.stores.jp/items/630cc28bef8085623634f2d4",
+      "data_source": "manual"
+    }
+  ]
+}

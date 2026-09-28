@@ -10326,5 +10326,254 @@
     "last_scraped_at": "2026-09-28T05:43:45.073971+00:00",
     "lat": 38.267755,
     "lng": 140.86915
+  },
+  {
+    "name": "焙煎珈琲 自然芳",
+    "url": "https://jinenho.com/",
+    "platform": "独自静的サイト(オンライン決済カート無し、電話注文制)",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認(独自サイト構成)",
+    "address": "山形県山形市成沢西1丁目5-34",
+    "prefecture": "山形県",
+    "hours": null,
+    "map_query": "焙煎珈琲 自然芳",
+    "nearest_station": {
+      "name": "蔵王",
+      "lines": [
+        "JR奥羽本線"
+      ],
+      "distance_m": 1270,
+      "walk_min": 16
+    },
+    "last_scraped_at": "2026-09-28T10:04:07.737533+00:00",
+    "lat": 38.21111,
+    "lng": 140.316262
+  },
+  {
+    "name": "イズコーヒー",
+    "url": "https://iskoffee.com/",
+    "platform": "BASE(buyshop.jp)",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-09確認。User-Agent: *では商品ページ・カテゴリページを含めAllow: /。\"python-requests\"\"curl\"等の既定UA文字列のみ個別にDisallowしているが、本スクレイパーは連絡先入りのカスタムUAを使うため該当しない)",
+    "address": "山形県山形市南館3丁目5-19",
+    "prefecture": "山形県",
+    "hours": null,
+    "map_query": "イズコーヒー",
+    "nearest_station": {
+      "name": "山形",
+      "lines": [
+        "山形新幹線",
+        "JR奥羽本線"
+      ],
+      "distance_m": 2010,
+      "walk_min": 25
+    },
+    "last_scraped_at": "2026-09-28T10:04:07.737533+00:00",
+    "lat": 38.234008,
+    "lng": 140.312966
+  },
+  {
+    "name": "じゃらんじゃらん",
+    "url": "https://jalanjalan.jp/",
+    "platform": "カラーミーショップ(shop-pro.jp、独自ドメイン)",
+    "shop_type": "single_location",
+    "robots_txt_status": "許可(2026-09確認。/secure/と/cart/以外は制限なし)",
+    "address": "山形県山形市七日町2丁目7-10 ナナビーンズ1F",
+    "prefecture": "山形県",
+    "hours": null,
+    "map_query": "じゃらんじゃらん",
+    "nearest_station": {
+      "name": "山形",
+      "lines": [
+        "山形新幹線",
+        "JR奥羽本線"
+      ],
+      "distance_m": 1270,
+      "walk_min": 16
+    },
+    "last_scraped_at": "2026-09-28T10:04:07.737533+00:00",
+    "lat": 38.25241,
+    "lng": 140.340705
+  },
+  {
+    "name": "CoffeeRoaster&Cafe culmino",
+    "url": "https://cafeculmino.thebase.in/",
+    "platform": "BASE(thebase.in)",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認(BASE標準構成、iskoffee.comと同系列プラットフォーム)",
+    "address": "山形県寒河江市寒河江字内ノ袋32",
+    "prefecture": "山形県",
+    "hours": null,
+    "map_query": "CoffeeRoaster&Cafe culmino",
+    "nearest_station": {
+      "name": "寒河江",
+      "lines": [
+        "JR左沢線"
+      ],
+      "distance_m": 1140,
+      "walk_min": 14
+    },
+    "last_scraped_at": "2026-09-28T10:04:07.737533+00:00",
+    "lat": 38.369436,
+    "lng": 140.262077
+  },
+  {
+    "name": "パラディーゾ コーヒーロースターズ",
+    "url": "https://paradiso.shop-pro.jp/",
+    "platform": "カラーミーショップ(shop-pro.jp)",
+    "shop_type": "single_location",
+    "robots_txt_status": "許可(2026-09確認。/secure/と/cart/以外は制限なし)",
+    "address": "山形県鶴岡市本町一丁目6-11",
+    "prefecture": "山形県",
+    "hours": null,
+    "map_query": "パラディーゾ コーヒーロースターズ",
+    "nearest_station": {
+      "name": "鶴岡",
+      "lines": [
+        "JR羽越本線"
+      ],
+      "distance_m": 1450,
+      "walk_min": 18
+    },
+    "last_scraped_at": "2026-09-28T10:04:07.737533+00:00",
+    "lat": 38.727411,
+    "lng": 139.831507
+  },
+  {
+    "name": "Day & Coffee",
+    "url": "https://dayandcoffee.official.ec/",
+    "platform": "BASE(official.ec)",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認(BASE標準構成、iskoffee.com/culminoと同系列プラットフォーム)",
+    "address": "山形県山形市香澄町1丁目11-18 とみひろビル01",
+    "prefecture": "山形県",
+    "hours": null,
+    "map_query": "Day & Coffee",
+    "nearest_station": {
+      "name": "山形",
+      "lines": [
+        "山形新幹線",
+        "JR奥羽本線"
+      ],
+      "distance_m": 290,
+      "walk_min": 4
+    },
+    "last_scraped_at": "2026-09-28T10:04:07.737533+00:00",
+    "lat": 38.249484,
+    "lng": 140.330094
+  },
+  {
+    "name": "千一珈琲",
+    "url": "http://1000-1coffee.jp/",
+    "instagram_url": "https://instagram.com/1000_1coffee/",
+    "platform": "STORES.jp(手動入力。requestsでは403だが、ブラウザのfetch経由では取得可能)",
+    "shop_type": "single_location",
+    "address": "山形県鶴岡市山王町10-37",
+    "prefecture": "山形県",
+    "hours": "9:30〜18:00、定休日：月曜日",
+    "map_query": "千一珈琲 山形県鶴岡市山王町10-37",
+    "nearest_station": {
+      "name": "鶴岡",
+      "lines": [
+        "JR羽越本線"
+      ],
+      "distance_m": 1040,
+      "walk_min": 13
+    },
+    "data_source": "manual",
+    "source_note": "全国再調査(山形県)で発見。店主はSCAJコーヒーマイスターで、ブラジル産豆は現地買付・ハンドピックを行う自家焙煎専門店。オンラインストア(STORES.jp、1000-1coffee.stores.jp)をブラウザのfetch()で直接確認(2026-09。python requestsでは403だが、ブラウザの実セッションからのfetchでは200で取得可能。ただし短時間に連続アクセスするとCAPTCHA challengeが表示されるため、リクエスト間隔を2.5秒以上空けて取得した)。トップページの全18商品のうち、大口コーヒー豆サブスク(豆/挽き各1件)・定額定期便(豆/挽き各1件)・ドリップパック キリマンジャロブレンド・オリジナルカッピングスプーンの計6件を除いた、コーヒー豆単品12銘柄(うちジャバニカは同一農園で焙煎度違いの2商品、計13商品)を収録。各商品の構造化データ(schema.org Product、application/ld+json)のavailability(InStock)を在庫状態の判定基準としたが、グァテマラのみ公式ブログ(1000-1coffee.jp、2026-09-23付「グァテマラの販売を一時お休みします」)で明示的な販売休止が告知されており、構造化データ側の更新漏れと判断して「一時的に品切れ」を採用した(他11銘柄はInStockかつニュース欄にも休止告知が無いことを確認済み)。「【浅煎り】ブレンド ニュー薫」「【深煎り】イタリアンブレンド」の2種はブレンド商品で、産地・精選方法が複数混在するためoriginCountry/processingMethodはnullとし、配合内容をflavorNotesに明記した。",
+    "last_verified_at": "2026-09-28",
+    "locations": [
+      {
+        "label": null,
+        "address": "山形県鶴岡市山王町10-37",
+        "prefecture": "山形県",
+        "hours": "9:30〜18:00、定休日：月曜日",
+        "tel": "050-7112-4687",
+        "is_headquarters": false,
+        "map_query": "千一珈琲 山形県鶴岡市山王町10-37",
+        "lat": 38.7308327,
+        "lng": 139.8345612
+      }
+    ],
+    "lat": 38.7308327,
+    "lng": 139.8345612
+  },
+  {
+    "name": "BOTA coffee",
+    "url": "https://www.botacoffee.jp/",
+    "instagram_url": "https://www.instagram.com/botacoffee_7/",
+    "platform": "STORES.jp(手動入力。ブラウザで直接確認可能)",
+    "shop_type": "single_location",
+    "address": "山形県山形市七日町2-7-18",
+    "prefecture": "山形県",
+    "hours": "11:30〜17:30(L.O.17:15)、定休日：火曜日(祝日は営業)",
+    "map_query": "BOTA coffee 山形県山形市七日町2-7-18",
+    "nearest_station": {
+      "name": "山形",
+      "lines": [
+        "山形新幹線",
+        "JR奥羽本線"
+      ],
+      "distance_m": 1210,
+      "walk_min": 15
+    },
+    "data_source": "manual",
+    "source_note": "全国再調査(山形県)でcoffee-labo.co.jp記事から発見。100年続いた老舗洋傘屋跡地で営業する自家焙煎スペシャルティコーヒー専門店(「深煎りのみ・大量販売不可・鮮度重視」を掲げる)。公式サイト(botacoffee.jp)経由のオンラインストア(STORES.jp、botacoffee.stores.jp)を直接確認(2026-09)。オンラインストアでは単品販売が無く、「ボタコーヒーセット(100g×3袋)送料無料 ¥3,300」として◆ボタブレンド100g・◆気まぐれロースト100g・◆わがままロースト100gの3種異なる100g袋をセットでのみ販売している。このうち「気まぐれロースト」(その日の気分で変わる)・「わがままロースト」(産地を問わず実験的に焙煎)は商品説明上も銘柄が固定されておらず一貫した商品として記録できないため対象外とし、唯一固定銘柄である「ボタブレンド」のみを収録した。価格はセット価格(¥3,300/300g)を3等分した金額(¥1,100/100g)を代表価格として採用し、単品販売が存在しないことをunit_note相当としてこのsource_noteに明記する。Tシャツ等コーヒー豆以外の商品、200g×3袋セット・ギフトボックス・定期便は全て同じ3銘柄セットの重量/パッケージ違いのため対象外。",
+    "last_verified_at": "2026-09-28",
+    "lat": 38.253257,
+    "lng": 140.339477
+  },
+  {
+    "name": "自家焙煎珈琲の店 bino",
+    "url": "https://coffeeya-bino.com/",
+    "instagram_url": "https://www.facebook.com/coffeeya.bino/",
+    "platform": "手動入力(公式サイトはWordPress製の静的な紹介サイトでオンライン決済カート無し、電話・FAX・お問い合わせフォームでの注文制)",
+    "shop_type": "single_location",
+    "address": "山形県新庄市上金沢町4-7",
+    "prefecture": "山形県",
+    "hours": "9:00〜18:00、定休日：不定休",
+    "map_query": "自家焙煎珈琲の店 bino 山形県新庄市上金沢町4-7",
+    "nearest_station": {
+      "name": "新庄",
+      "lines": [
+        "JR陸羽西線",
+        "山形新幹線",
+        "JR奥羽本線",
+        "JR陸羽東線"
+      ],
+      "distance_m": 1160,
+      "walk_min": 15
+    },
+    "data_source": "manual",
+    "source_note": "全国再調査(山形県)で発見(新庄市の「珈琲苑一路」を調査中、自家焙煎・豆販売の裏付けが取れなかったため代替候補として発見)。2017年1月開業、東京の老舗「カフェバッハ」田口護氏に師事した店主夫婦が営む自家焙煎専門店。公式サイト(coffeeya-bino.com)のCoffeeメニューページを直接確認(2026-09)。焙煎度(浅煎り/中煎り/中深煎り/深煎り/その他)ごとに商品と100gあたり価格が明記されている。「水出しアイスコーヒー【期間限定5〜9月】25g×6袋入り」は通常の100g焙煎豆と形態が異なる季節限定品のため対象外とし、その他の14銘柄(ストレート11・ブレンド3)全てを収録した。産地情報は商品名の括弧内表記(例:「エチオピア（イルガチェフ・Ｗ）」)のみで、精選方法・農園等の詳細な記載は無いため、括弧内の情報をfarmNoteに転記するに留め、憶測でのflavorNotes補完は行っていない。",
+    "last_verified_at": "2026-09-28",
+    "lat": 38.752182,
+    "lng": 140.305737
+  },
+  {
+    "name": "狸森焙煎所",
+    "url": "http://www.mujinamori-roasterie.com/",
+    "instagram_url": "https://www.facebook.com/mujinamori.roasterie/",
+    "platform": "手動入力(公式サイトは1990〜2000年代風の独自静的サイトでオンライン決済カートは無く、メール予約による店頭受取または通信販売(銀行振込・後払い)のみ)",
+    "shop_type": "single_location",
+    "address": "山形県上山市狸森1198-8",
+    "prefecture": "山形県",
+    "hours": "11:00〜18:00、定休日：月曜日・第1火曜日",
+    "map_query": "狸森焙煎所 山形県上山市狸森1198-8",
+    "nearest_station": {
+      "name": "かみのやま温泉",
+      "lines": [
+        "JR奥羽本線",
+        "山形新幹線"
+      ],
+      "distance_m": 5690,
+      "walk_min": 71
+    },
+    "data_source": "manual",
+    "source_note": "全国再調査(山形県)でmamenavi.info「山形の自家焙煎珈琲店ガイド」から発見。2009年開業、かみのやま温泉から離れた狸森地区の珈琲焙煎所。公式サイト(http://www.mujinamori-roasterie.com/、coffee.html・order.html・pickup.htmlの各ページ)を直接確認(2026-09)。販売する珈琲豆は「定めのないブレンド」(商品名RomiCoffee)の1種類のみで、日々の空気感に合わせて生豆から配合を変えるシティーローストのブレンドであり、銘柄・配合の指定は不可(産地情報は非公開のためorigin_countryはnull)。価格はpickup.html(店頭販売・メール予約)に明記された「むじな缶への量り売り 100g 750円(税込)」を100gあたりの代表価格として採用した(他に250gパック2,300円/500gパック4,000円の通信販売用パックもあるが、単価が異なるため100g量り売り価格を基準とした)。",
+    "last_verified_at": "2026-09-28",
+    "lat": 38.187465,
+    "lng": 140.231495
   }
 ]
