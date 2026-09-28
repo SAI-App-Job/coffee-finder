@@ -6900,3 +6900,37 @@ Walden Woods Kyoto・コーヒーショップヤマモト・IKARIYA COFFEE KYOTO
 - 影響: 新規4店舗・45商品を追加(10443→10488商品、551→555店舗)。
   既存店舗・商品への変更は無いことをdiffで確認済み。全店舗をgeocode-
   shops.js・add-nearest-station.jsで座標・最寄り駅データも整備済み。
+
+## 青森県再調査の新規実装(2026-09-28)
+
+全国再調査の第2弾。2026-09-15の青森・岩手・秋田バッチで既にかなり
+網羅的に調査済みだったため新規候補は少なかったが、note.com・
+aomori-and-you.com等の記事から2店舗を新規実装。COFFEEMAN good
+(STORES.jp、ローカルからも403で真正のブロックと確認)・antique&café
+ROTTO(メルカリShopsのみで自社ECなし)・八戸珈琲館(オンライン販売情報
+なし)は見送り、PINO CoffeeRoaster(BASE店舗は開設済みだが商品0件)は
+保留として`docs/not-implementable-shops.md`に記録。
+
+### バッチ431: iro coffee(青森県弘前市野田1丁目3-16、BASE)
+- `scraper/scrape_irocoffee.py`を新規作成。sitemap.xml全7件全てが
+  ストレートコーヒー豆で非対象商品は無し。一覧ページに表示される
+  「SOLD OUT」バッジが商品名・og:descriptionのどちらにも反映されない
+  UI要素だったため、詳細ページ本文の`<p class="item-detail_soldOut_...">
+  SOLD OUT</p>`構造化マークアップを検出しdetect_stock_status()の
+  structural_out_of_stock引数に渡す対応が必要だった(2商品が実際には
+  完売中と判明)。
+
+### バッチ432: 自遊木民族珈琲(青森県上北郡野辺地町字家ノ上90、Wix、manual店舗)
+- オーガニックコーヒーとveganスイーツの店。手動入力
+  (`scraper/manual/shops/jiyubokuminzoku-coffee.json`)。焼き菓子セット・
+  ドリップバッグ単品・複数銘柄セット・定期便・チャイミックス等を除いた
+  150gブレンド5件(Standard Blend・Sweet・Bitter・Morning・Decaf)を
+  収録。各商品ページのURLスラッグ(例:「コンゴ-ムンガロ-ウォッシュ-
+  100g」)が実際の表示内容(Standard Blend)と一致しない不具合が確認され、
+  過去に単一原産国表記で販売していた商品がブレンドへ変更された際に
+  URLだけ据え置かれたものと見られる。URLスラッグではなく実際にレンダ
+  リングされた商品名・本文を採用して対処。
+
+- 影響: 新規2店舗・12商品を追加(10488→10500商品、555→557店舗)。
+  既存店舗・商品への変更は無いことをdiffで確認済み。全店舗をgeocode-
+  shops.js・add-nearest-station.jsで座標・最寄り駅データも整備済み。

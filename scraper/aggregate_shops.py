@@ -566,6 +566,8 @@ SOURCE_FILES = {
     "らぶこーひー自家焙煎豆店": "data_lovecoffee.json",
     "十八珈琲焙煎所": "data_towacoffee.json",
     "珈房ベンデドール": "data_vendedor.json",
+    # 全国再調査(青森県)で実装した店舗
+    "iro coffee": "data_irocoffee.json",
 }
 
 

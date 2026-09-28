@@ -10095,5 +10095,53 @@
     "last_verified_at": "2026-09-28",
     "lat": 43.057115,
     "lng": 141.347322
+  },
+  {
+    "name": "iro coffee",
+    "url": "https://irocoffee2f.thebase.in/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認(BASE標準構成を想定)",
+    "address": "青森県弘前市野田1丁目3-16 アンジェリック弘前店2F",
+    "prefecture": "青森県",
+    "hours": null,
+    "map_query": "iro coffee",
+    "nearest_station": {
+      "name": "弘前",
+      "lines": [
+        "JR奥羽本線",
+        "弘南鉄道弘南線"
+      ],
+      "distance_m": 1010,
+      "walk_min": 13
+    },
+    "last_scraped_at": "2026-09-28T00:53:45.674748+00:00",
+    "lat": 40.608347,
+    "lng": 140.48135
+  },
+  {
+    "name": "自遊木民族珈琲",
+    "url": "https://www.jiyubokuminzoku-coffee.com/",
+    "instagram_url": null,
+    "platform": "Wix(手動入力。JavaScriptによるクライアント側レンダリングのためrequests等での自動取得ができず、ブラウザで直接確認)",
+    "shop_type": "single_location",
+    "address": "青森県上北郡野辺地町字家ノ上90",
+    "prefecture": "青森県",
+    "hours": null,
+    "map_query": "自遊木民族珈琲 青森県上北郡野辺地町字家ノ上90",
+    "nearest_station": {
+      "name": "野辺地",
+      "lines": [
+        "青い森鉄道線",
+        "JR大湊線"
+      ],
+      "distance_m": 2860,
+      "walk_min": 36
+    },
+    "data_source": "manual",
+    "source_note": "全国再調査(青森県)で発見(note.com「わざわざ行きたい青森のコーヒーショップ10選」)。オーガニックコーヒーとveganスイーツの店。公式オンラインストア(jiyubokuminzoku-coffee.com/online-shop、Wix)をブラウザで直接確認(2026-09)。焼き菓子セット・コーヒーバッグ(ドリップバッグ)単品・複数銘柄セット・定期便・チャイミックス・ガラムマサラを除いた、150g計量済みブレンド5件(Standard Blend・Sweet・Bitter・Morning・Decaf[Midnight Moonlight Blend])を収録。各商品ページのURLスラッグ(例:「コンゴ-ムンガロ-ウォッシュ-100g」)が実際の表示内容(Standard Blend)と一致しない実装上の不具合が確認されたため、URLスラッグではなく実際にレンダリングされた商品名・本文を採用した(過去に単一原産国の商品として販売していたものが、現在はブレンド名に変更されている可能性がある)。",
+    "last_verified_at": "2026-09-28",
+    "lat": 40.874059,
+    "lng": 141.096578
   }
 ]

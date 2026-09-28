@@ -1,0 +1,106 @@
+{
+  "shop": {
+    "id": "jiyubokuminzoku-coffee",
+    "name": "自遊木民族珈琲",
+    "url": "https://www.jiyubokuminzoku-coffee.com/",
+    "instagram_url": null,
+    "google_maps_query": "自遊木民族珈琲 青森県上北郡野辺地町字家ノ上90",
+    "address": "青森県上北郡野辺地町字家ノ上90",
+    "prefecture": "青森県",
+    "tel": null,
+    "hours": null,
+    "platform": "Wix(手動入力。JavaScriptによるクライアント側レンダリングのためrequests等での自動取得ができず、ブラウザで直接確認)",
+    "shop_type": "single_location",
+    "data_source": "manual",
+    "source_note": "全国再調査(青森県)で発見(note.com「わざわざ行きたい青森のコーヒーショップ10選」)。オーガニックコーヒーとveganスイーツの店。公式オンラインストア(jiyubokuminzoku-coffee.com/online-shop、Wix)をブラウザで直接確認(2026-09)。焼き菓子セット・コーヒーバッグ(ドリップバッグ)単品・複数銘柄セット・定期便・チャイミックス・ガラムマサラを除いた、150g計量済みブレンド5件(Standard Blend・Sweet・Bitter・Morning・Decaf[Midnight Moonlight Blend])を収録。各商品ページのURLスラッグ(例:「コンゴ-ムンガロ-ウォッシュ-100g」)が実際の表示内容(Standard Blend)と一致しない実装上の不具合が確認されたため、URLスラッグではなく実際にレンダリングされた商品名・本文を採用した(過去に単一原産国の商品として販売していたものが、現在はブレンド名に変更されている可能性がある)。",
+    "last_verified_at": "2026-09-28",
+    "lat": 40.874059,
+    "lng": 141.096578,
+    "nearest_station": {
+      "name": "野辺地",
+      "lines": [
+        "青い森鉄道線",
+        "JR大湊線"
+      ],
+      "distance_m": 2860,
+      "walk_min": 36
+    }
+  },
+  "products": [
+    {
+      "raw_name": "Standard Blend 150g スタンダードブレンド",
+      "category": "ブレンド",
+      "originCountry": null,
+      "processingMethod": "水洗式",
+      "roast": "中深煎り",
+      "flavorNotes": "サスティナブルなコーヒー栽培を続けている農家さんのコーヒー豆を独自にブレンドした自遊木民族珈琲のハウスブレンドです。朝、昼、夕方、どのシーンにも合うようにブレンドしました。柑橘系のスッキリさ、チョコレートのような甘さ、香りの余韻も長く続きます。定番のコーヒーとしてお楽しみください。",
+      "farmNote": "品種: アラビカ種、認証: 有機JAS RFA認証(レインフォレスト・アライアンス)",
+      "decafProcess": null,
+      "price": 1420,
+      "weightG": 150,
+      "stockStatus": "販売中",
+      "productUrl": "https://www.jiyubokuminzoku-coffee.com/product-page/%E3%82%B3%E3%83%B3%E3%82%B4-%E3%83%A0%E3%83%B3%E3%82%AC%E3%83%AD-%E3%82%A6%E3%82%A9%E3%83%83%E3%82%B7%E3%83%A5-100g",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "Sweet スイート 150g",
+      "category": "ブレンド",
+      "originCountry": null,
+      "processingMethod": "ナチュラル",
+      "roast": "中深煎り",
+      "flavorNotes": "フルーツのようなユニークな甘さが特徴のコーヒーです。サスティナブルな栽培方法を行う農園をセレクトしています。フルーツタルトなど、甘い熟した果物とのペアリングにおすすめのコーヒーです。温度によっても味わいが変化します。",
+      "farmNote": "品種: アラビカ種、栽培: 農薬化学肥料不使用コーヒー豆",
+      "decafProcess": null,
+      "price": 1560,
+      "weightG": 150,
+      "stockStatus": "販売中",
+      "productUrl": "https://www.jiyubokuminzoku-coffee.com/product-page/sweet-%E3%82%B9%E3%82%A4%E3%83%BC%E3%83%88-150g",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "Bitter ビター 150g",
+      "category": "ブレンド",
+      "originCountry": null,
+      "processingMethod": "ナチュラル",
+      "roast": "深煎り",
+      "flavorNotes": "コーヒーはとにかく苦味が好き、という方におすすめ。眠気覚ましとして、ガツンと朝の１杯に。アイスコーヒーやカフェオレ、マキネッタやエスプレッソにも合います。バターを使用したコクのある食べ物や、ミルクチョコレート等との相性抜群です。",
+      "farmNote": "品種: アラビカ種、栽培: 農薬化学肥料不使用コーヒー豆",
+      "decafProcess": null,
+      "price": 1610,
+      "weightG": 150,
+      "stockStatus": "販売中",
+      "productUrl": "https://www.jiyubokuminzoku-coffee.com/product-page/bitter-%E3%83%93%E3%82%BF%E3%83%BC-150g",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "Morning モーニング 150g",
+      "category": "ブレンド",
+      "originCountry": null,
+      "processingMethod": "水洗式",
+      "roast": "浅煎り",
+      "flavorNotes": "明るくさっぱりとした後味のコーヒーです。アイスコーヒーにするとキレがさらに増します。朝食にサンドイッチなどとの相性が良く、レモン等の柑橘類、ベリー類を使ったスイーツとの相性もGood。コーヒーの苦味が苦手な方にオススメです。",
+      "farmNote": "品種: アラビカ種、認証: 農薬化学肥料不使用",
+      "decafProcess": null,
+      "price": 1560,
+      "weightG": 150,
+      "stockStatus": "販売中",
+      "productUrl": "https://www.jiyubokuminzoku-coffee.com/product-page/light-%E3%83%A9%E3%82%A4%E3%83%88-150g",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "Decaf カフェインレス Midnight Moonlight Blend 150g",
+      "category": "ブレンド",
+      "originCountry": null,
+      "processingMethod": null,
+      "roast": "中深煎り",
+      "flavorNotes": "当店オリジナルのカフェインレスブレンドです。カフェインを控えている方や、午後に飲むと夜寝れない方などにオススメです。ローストナッツのような香ばしさ、マイルドな黒糖のような甘み。ブラックでも、ミルクで割っても美味しい味に仕上げています。",
+      "farmNote": null,
+      "decafProcess": "マウンテンウォータープロセスによりカフェインを除去",
+      "price": 1610,
+      "weightG": 150,
+      "stockStatus": "販売中",
+      "productUrl": "https://www.jiyubokuminzoku-coffee.com/product-page/%E3%83%A1%E3%82%AD%E3%82%B7%E3%82%B3-%E3%82%AA%E3%82%A2%E3%83%8F%E3%82%AB",
+      "data_source": "manual"
+    }
+  ]
+}
