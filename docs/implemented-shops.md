@@ -5,7 +5,7 @@
 `scraper/manual/shops/`配下、それ以外は`scraper/scrape_*.py`で自動取得。
 実装を見送った店舗は`docs/not-implementable-shops.md`を参照。
 
-合計582店舗・10861商品(生成日: 2026-09-28)。
+合計587店舗・10976商品(生成日: 2026-09-28)。
 
 再生成コマンド:
 ```
@@ -83,6 +83,7 @@ aggregate_shops.py実行後の`git diff --staged --quiet || git commit`が該当
 | 店舗名 | 所在地 | 方式 | 件数 |
 |---|---|---|---|
 | 298珈琲焙煎所 | つくば市高野466-5 | BASE | 8 |
+| COFFEE FACTORY | つくば市千現2-13-1 | カラーミー | 20 |
 | まめぽっと | つくば市谷田部1-1 | カラーミー | 10 |
 | TRIBE COFFEE | つくば市東新井20-7-101 | カラーミー | 12 |
 | 庭cafe焙煎所 | 下妻市下妻乙908-1 | BASE | 6 |
@@ -90,6 +91,10 @@ aggregate_shops.py実行後の`git diff --staged --quiet || git commit`が該当
 | 奥久慈珈琲焙煎所ルージュノワール | 久慈郡大子町袋田一條2978-1 | BASE | 16 |
 | 南部珈琲 | 牛久市栄町1-21 | BASE | 31 |
 | TONE UP COFFEE | 取手市東6-37-7只石ビル102 | BASE | 6 |
+| BLEND MARKET (BM's COFFEE) | 水戸市河和田町477-3 MTビル2F | STORES(手動) | 12 |
+| コーヒー専科ビーンズ | 水戸市赤塚2-2019-13 | 手動 | 43 |
+| おひさま珈琲(おひさま堂 珈琲焙煎部) | 水戸市大工町2-7-7 | 手動 | 26 |
+| MOOD COFFEE&ESPRESSO | 水戸市南町2丁目4-58 | WordPress | 14 |
 
 ### 岡山県
 

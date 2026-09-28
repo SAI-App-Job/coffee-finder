@@ -10736,5 +10736,123 @@
     "last_verified_at": "2026-09-28",
     "lat": 37.388726,
     "lng": 140.337047
+  },
+  {
+    "name": "COFFEE FACTORY",
+    "url": "https://coffeefactory.jp/",
+    "platform": "カラーミーショップ(shop-pro.jp)",
+    "shop_type": "single_location",
+    "robots_txt_status": "許可(2026-09確認。/secure/と/cart/以外は制限なし)",
+    "address": "茨城県つくば市千現2-13-1",
+    "prefecture": "茨城県",
+    "hours": null,
+    "map_query": "COFFEE FACTORY",
+    "nearest_station": {
+      "name": "研究学園",
+      "lines": [
+        "つくばエクスプレス線"
+      ],
+      "distance_m": 6270,
+      "walk_min": 78
+    },
+    "last_scraped_at": "2026-09-28T20:21:57.999876+00:00",
+    "lat": 36.136291,
+    "lng": 140.063452
+  },
+  {
+    "name": "MOOD COFFEE&ESPRESSO",
+    "url": "https://moodcoffee-espresso.com/",
+    "platform": "WordPress + Shopify Buy Button",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認(Shopify Storefront APIの公開storefrontAccessTokenを利用。購入ウィジェット用に意図的にクライアントサイド公開されているトークン)",
+    "address": "茨城県水戸市南町2丁目4-58",
+    "prefecture": "茨城県",
+    "hours": null,
+    "map_query": "MOOD COFFEE&ESPRESSO",
+    "nearest_station": {
+      "name": "水戸",
+      "lines": [
+        "JR常磐線",
+        "JR水郡線",
+        "鹿島臨海鉄道線"
+      ],
+      "distance_m": 770,
+      "walk_min": 10
+    },
+    "last_scraped_at": "2026-09-28T20:21:57.999876+00:00",
+    "lat": 36.37568,
+    "lng": 140.470598
+  },
+  {
+    "name": "おひさま珈琲(おひさま堂 珈琲焙煎部)",
+    "url": "https://www.coffee-ohisamadou.com/",
+    "instagram_url": null,
+    "platform": "独自EC(MakeShop系、中世ファンタジー世界観の独自装飾サイト)",
+    "shop_type": "single_location",
+    "address": "茨城県水戸市大工町2-7-7",
+    "prefecture": "茨城県",
+    "hours": null,
+    "map_query": "おひさま珈琲 茨城県水戸市大工町2-7-7",
+    "nearest_station": {
+      "name": "偕楽園",
+      "lines": [
+        "JR常磐線"
+      ],
+      "distance_m": 830,
+      "walk_min": 10
+    },
+    "data_source": "manual",
+    "source_note": "全国再調査(茨城県)で発見。店内に大型焙煎機を設置する自家焙煎コーヒー専門店。オンラインストア(coffee-ohisamadou.com)は「中世ファンタジー」の世界観で全ページが装飾された非常に個性的なECサイトで、商品ページの本文はほぼ全て物語調の文章のため、生産地・標高・品種等の定型ラベルによる構造化情報は無い。産地は各商品ページの型番(例:coffee-TZA-2のTZA=タンザニア)から機械的に判定し、本文の産地記述と照合して確認した(1件のみ、「コーラルマウンテン」の商品タイトル末尾に「【ホンジュラス産】」とあるが本文・型番ともコスタリカ産と明記されており、タイトル側の誤記と判断してコスタリカを採用)。焙煎豆の基準重量は「1袋は200g(生豆のみ250g)」との記載を確認。「自家焙煎珈琲豆」カテゴリの全6地域区分(アフリカ・中近東産/アジア産/太平洋沿岸諸島産/中米産/南米産/ブレンド＆デカフェ)から26銘柄(ストレート21・ブレンド4・デカフェ1)を収録。",
+    "last_verified_at": "2026-09-29",
+    "lat": 36.380184,
+    "lng": 140.45905
+  },
+  {
+    "name": "BLEND MARKET (BM's COFFEE)",
+    "url": "https://www.ysin-bm.com/",
+    "instagram_url": null,
+    "platform": "STORES.jp(手動入力。ブラウザのfetch()経由で取得可能、requestsでは403)",
+    "shop_type": "single_location",
+    "address": "茨城県水戸市河和田町477-3 MTビル2F",
+    "prefecture": "茨城県",
+    "hours": "11:00〜18:00、定休日：月曜日",
+    "map_query": "BLEND MARKET 茨城県水戸市河和田町477-3 MTビル2F",
+    "nearest_station": {
+      "name": "赤塚",
+      "lines": [
+        "JR常磐線"
+      ],
+      "distance_m": 2560,
+      "walk_min": 32
+    },
+    "data_source": "manual",
+    "source_note": "全国再調査(茨城県)でmamenavi.info「茨城の自家焙煎珈琲店ガイド」から発見。JSCA認定コーヒーマイスターの店主が注文後に7段階の焙煎度から選んで焙煎する自家焙煎専門店。オンラインストア(STORES.jp、ys215.stores.jp)をブラウザのfetch()で直接確認(2026-09。python requestsでは403だが、ブラウザの実セッションからのfetchでは200で取得可能。2秒間隔でのアクセスによりCAPTCHA表示は回避できた)。全24商品のうち、ドリップバッグ(粉入り個包装)・アンティーク食器(ウェッジウッド デミタスカップ)を除いた、コーヒー豆12銘柄(ブレンド3・ストレート9)を収録(200g/300gの2サイズ展開がある銘柄は200gを代表として採用。パナマゲイシャ・ブルーマウンテンNo.1のみ100g展開)。全商品の商品説明に「グラム数：生豆時の数量となります」との注記があり、表記重量は焙煎前の生豆重量を指すため、weightGはnullとしunitNoteに原文の基準表記を記録した。",
+    "last_verified_at": "2026-09-29",
+    "lat": 36.360248,
+    "lng": 140.405095
+  },
+  {
+    "name": "コーヒー専科ビーンズ",
+    "url": "http://www.coffee-senka.com/",
+    "instagram_url": null,
+    "platform": "手動入力(公式サイトはフレームページのみで価格表は別ドメイン secsvr.net にホスティング。python requestsではSSLハンドシケーク失敗、ブラウザのget_page_textでは正常に取得可能)",
+    "shop_type": "multi_location_under_threshold",
+    "address": "茨城県水戸市赤塚2-2019-13",
+    "prefecture": "茨城県",
+    "hours": null,
+    "map_query": "コーヒー専科ビーンズ 茨城県水戸市赤塚2-2019-13",
+    "nearest_station": {
+      "name": "赤塚",
+      "lines": [
+        "JR常磐線"
+      ],
+      "distance_m": 20,
+      "walk_min": 1
+    },
+    "data_source": "manual",
+    "source_note": "全国再調査(茨城県)でmamenavi.info「茨城の自家焙煎珈琲店ガイド」から発見。水戸市赤塚(本店)とひたちなか市東石川(2号店)の2店舗のみでチェーン閾値(11店舗)未満。公式サイト(coffee-senka.com)は昔ながらのフレームページ構成で、実際の商品価格表は別ドメイン(secsvr.net、SSLホスティング代行と思われる)の shouhin.html に掲載されている。python requestsでSSLハンドシェイクエラーとなり直接フェッチ不可だったため、ブラウザのget_page_text経由で全文を取得(2026-09)。中南米19銘柄・アジア6銘柄・アフリカ中東8銘柄・オセアニア1銘柄・ブレンド8銘柄・アイスコーヒー用ブレンド1銘柄、計43銘柄を収録。価格表は200g/500gの2サイズを掲示しているため200gを代表として採用。ページ内に「今月の特売」(6銘柄、500g単位の一時的な割引価格)と「得々セット」(2種のセット販売、複数銘柄の組み合わせのため対象外)が別枠で掲載されていたが、特売は通常価格の一時的な割引であり複数銘柄セットではないため、通常価格表に記載の定価(セール適用前)を採用した。原産国は全銘柄が地域見出し(中南米/アジア/アフリカ(中東)/オセアニア)と銘柄名から判定可能。「ザンビア　テラノーバ」はparse_product()の既存辞書に「ザンビア」が無く未検出だったため、ORIGIN_COUNTRY_KEYWORDSに新規追加した(他の地名・単語と衝突するリスクなし、既存データでの衝突ゼロ件を確認済み)。個別商品ページは無く単一の価格表ページのみのため、productUrlは全銘柄で同一の価格表ページURLとした(珈琲ギャラリーと同じ手法)。産地・農園等の詳細な栽培情報は価格表に記載が無いためfarmNoteはnullとした。",
+    "last_verified_at": "2026-09-29",
+    "lat": 36.381937,
+    "lng": 140.415249
   }
 ]

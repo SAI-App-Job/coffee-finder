@@ -588,6 +588,9 @@ SOURCE_FILES = {
     "養田珈琲": "data_yodacoffee.json",
     "椏久里珈琲": "data_agricoffee.json",
     "今出川珈琲": "data_imadegawa.json",
+    # 全国再調査(茨城県)で実装した店舗
+    "MOOD COFFEE&ESPRESSO": "data_moodcoffee.json",
+    "COFFEE FACTORY": "data_coffeefactory.json",
 }
 
 
