@@ -582,6 +582,12 @@ SOURCE_FILES = {
     "CoffeeRoaster&Cafe culmino": "data_culmino.json",
     "パラディーゾ コーヒーロースターズ": "data_paradiso.json",
     "Day & Coffee": "data_dayandcoffee.json",
+    # 全国再調査(福島県)で実装した店舗
+    "珈琲焙煎香楽": "data_karaku.json",
+    "富久栄珈琲": "data_fukueicoffee.json",
+    "養田珈琲": "data_yodacoffee.json",
+    "椏久里珈琲": "data_agricoffee.json",
+    "今出川珈琲": "data_imadegawa.json",
 }
 
 

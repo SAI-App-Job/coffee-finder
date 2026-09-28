@@ -10575,5 +10575,166 @@
     "last_verified_at": "2026-09-28",
     "lat": 38.187465,
     "lng": 140.231495
+  },
+  {
+    "name": "珈琲焙煎香楽",
+    "url": "https://karaku.shop-pro.jp/",
+    "platform": "カラーミーショップ(shop-pro.jp)",
+    "shop_type": "single_location",
+    "robots_txt_status": "許可(2026-09確認。/secure/と/cart/以外は制限なし)",
+    "address": "福島県いわき市平字五町目6-1 SALON de 蔵1F",
+    "prefecture": "福島県",
+    "hours": null,
+    "map_query": "珈琲焙煎香楽",
+    "nearest_station": {
+      "name": "いわき",
+      "lines": [
+        "JR常磐線",
+        "JR磐越東線"
+      ],
+      "distance_m": 960,
+      "walk_min": 12
+    },
+    "last_scraped_at": "2026-09-28T13:35:14.015594+00:00",
+    "lat": 37.050423,
+    "lng": 140.887634
+  },
+  {
+    "name": "富久栄珈琲",
+    "url": "https://www.rakuten.co.jp/fukueicoffee/",
+    "platform": "楽天市場(Rakuten Ichiba)",
+    "shop_type": "single_location",
+    "robots_txt_status": "許可(2026-09確認。item.rakuten.co.jpのrobots.txtは?i=等クエリパラメータ付きURLのみDisallow。本スクレイパーが使う素のitem URLは制限対象外)",
+    "address": "福島県郡山市亀田1丁目51-19",
+    "prefecture": "福島県",
+    "hours": null,
+    "map_query": "富久栄珈琲",
+    "nearest_station": {
+      "name": "郡山富田",
+      "lines": [
+        "JR磐越西線"
+      ],
+      "distance_m": 2820,
+      "walk_min": 35
+    },
+    "last_scraped_at": "2026-09-28T13:35:14.015594+00:00",
+    "lat": 37.402451,
+    "lng": 140.347008
+  },
+  {
+    "name": "養田珈琲",
+    "url": "http://www.yodacoffee.com/",
+    "platform": "カラーミーショップ(shop-pro.jp)",
+    "shop_type": "single_location",
+    "robots_txt_status": "許可(2026-09確認。/secure/と/cart/以外は制限なし)",
+    "address": "福島県いわき市小名浜南君ヶ塚町10-30",
+    "prefecture": "福島県",
+    "hours": null,
+    "map_query": "養田珈琲",
+    "nearest_station": {
+      "name": "泉",
+      "lines": [
+        "JR常磐線"
+      ],
+      "distance_m": 4150,
+      "walk_min": 52
+    },
+    "last_scraped_at": "2026-09-28T13:35:14.015594+00:00",
+    "lat": 36.95653,
+    "lng": 140.900779
+  },
+  {
+    "name": "椏久里珈琲",
+    "url": "https://www.agricoffee.com/",
+    "platform": "カラーミーショップ(shop-pro.jp、独自ドメイン)",
+    "shop_type": "single_location",
+    "robots_txt_status": "許可(2026-09確認。/secure/と/cart/以外は制限なし)",
+    "address": "福島県福島市東中央3-20-2",
+    "prefecture": "福島県",
+    "hours": null,
+    "map_query": "椏久里珈琲",
+    "nearest_station": {
+      "name": "平野",
+      "lines": [
+        "福島交通飯坂線"
+      ],
+      "distance_m": 3150,
+      "walk_min": 39
+    },
+    "last_scraped_at": "2026-09-28T13:35:14.015594+00:00",
+    "lat": 37.807769,
+    "lng": 140.407117
+  },
+  {
+    "name": "今出川珈琲",
+    "url": "https://imadegawa.theshop.jp/",
+    "platform": "BASE(theshop.jp)",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認(BASE標準構成、iskoffee.com等と同系列プラットフォーム)",
+    "address": "福島県須賀川市八幡町22-8",
+    "prefecture": "福島県",
+    "hours": null,
+    "map_query": "今出川珈琲",
+    "nearest_station": {
+      "name": "須賀川",
+      "lines": [
+        "JR東北本線"
+      ],
+      "distance_m": 1370,
+      "walk_min": 17
+    },
+    "last_scraped_at": "2026-09-28T13:35:14.015594+00:00",
+    "lat": 37.288072,
+    "lng": 140.371094
+  },
+  {
+    "name": "ローストハウス ブラウンチップ",
+    "url": "https://brownchip.amebaownd.com/",
+    "instagram_url": null,
+    "platform": "手動入力(公式サイトに価格一覧の画像はあるがオンライン決済カート無し、電話・通信での注文制)",
+    "shop_type": "single_location",
+    "address": "福島県いわき市平上荒川字長尾41-11",
+    "prefecture": "福島県",
+    "hours": "10:00〜18:00、定休日：毎週水曜日(焙煎には20分程度時間を要するため電話予約推奨)",
+    "map_query": "ブラウンチップ 福島県いわき市平上荒川字長尾41-11",
+    "nearest_station": {
+      "name": "いわき",
+      "lines": [
+        "JR磐越東線",
+        "JR常磐線"
+      ],
+      "distance_m": 3480,
+      "walk_min": 44
+    },
+    "data_source": "manual",
+    "source_note": "全国再調査(福島県)でiwakikai.jp記事から発見。ブラジル下坂農場・吉松農場から直輸入するオーダーロースト珈琲豆専門店。平店(いわき市平上荒川字長尾41-11)・錦店(いわき市錦町江栗馬場61)の2店舗のみでチェーンには該当しない(本レコードは平店の情報を採用)。公式サイト(brownchip.amebaownd.com)の「取扱商品一覧/PRODUCTS」ページに掲載された価格改定案内の画像(令和8年8月1日改定、2026-09時点で最新)を直接確認。100gあたりの価格であることをWeb検索で確認済み(「100gの価格については、100g770円での販売例」との言及あり、現行の最安値ベトナムロブスタG-1¥850と整合)。ブラジルコーヒー2種・ストレートコーヒー28種・ブレンドコーヒー10種、計40銘柄を収録。原産国は商品名およびカテゴリ見出し(中南米/アフリカ/アジア・オセアニア/カリブ海/アメリカ/モカ系)から判定し、明記の無いものはnullとした。「ハワイコナ」「ハワイカウアイ島」はいずれもアメリカ(ハワイ)産として統一表記。ブレンド商品は複数産地の配合のためoriginCountryはnullとした(「ブルーマウンテンブレンド」も産地銘柄を含むがブレンドとして産地単一化はしていない)。",
+    "last_verified_at": "2026-09-28",
+    "lat": 37.027249,
+    "lng": 140.897768
+  },
+  {
+    "name": "珈琲ギャラリー",
+    "url": "https://www.coffee-g.jp/",
+    "instagram_url": null,
+    "platform": "手動入力(公式サイトに価格ページはあるがオンライン決済カート無し、電話・メールでの注文制)",
+    "shop_type": "single_location",
+    "address": "福島県郡山市静町1-28 根本ビル101",
+    "prefecture": "福島県",
+    "hours": "10:00〜18:00、定休日：日曜日",
+    "map_query": "珈琲ギャラリー 福島県郡山市静町1-28 根本ビル101",
+    "nearest_station": {
+      "name": "安積永盛",
+      "lines": [
+        "JR東北本線",
+        "JR水郡線"
+      ],
+      "distance_m": 4520,
+      "walk_min": 57
+    },
+    "data_source": "manual",
+    "source_note": "全国再調査(福島県)で発見。1989年創業、生産者の見える信頼できる生豆を仕入れ直火焙煎する老舗自家焙煎専門店。公式サイト(coffee-g.jp)の「コーヒー豆の価格」ページ(pg370.html、2025年2月改定の価格表)を直接確認(2026-09)。オリジナルブレンド6種・ストレート16種、計22銘柄を収録。原産国が商品名やparse_product()のブランド辞書(ブルーマウンテン→ジャマイカ、マンデリン→インドネシア、キリマンジャロ→タンザニア、モカ・マタリ→イエメン、トラジャ→インドネシア等)で判定できたものはorigin_countryを設定し、判定できなかった銘柄(トミオフクダ樹上完熟豆・アカイヤ・ブルボンピーベリー・バリ神山ハニー・フレンチ・深煎りコーヒー)は産地情報が原文に無いためnullのままとした(「バリ」は地名としての部分一致誤検出を避けるため意図的に自動判定対象外としている既存仕様のため)。",
+    "last_verified_at": "2026-09-28",
+    "lat": 37.388726,
+    "lng": 140.337047
   }
 ]
