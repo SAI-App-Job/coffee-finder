@@ -1,0 +1,105 @@
+{
+  "shop": {
+    "id": "nirinsha",
+    "name": "二輪社",
+    "url": "https://nirinsha.com/",
+    "instagram_url": null,
+    "google_maps_query": "二輪社 岩手県盛岡市",
+    "address": "岩手県盛岡市",
+    "prefecture": "岩手県",
+    "tel": null,
+    "hours": null,
+    "platform": "STORES.jp(手動入力。ブラウザで直接確認可能)",
+    "shop_type": "single_location",
+    "data_source": "manual",
+    "source_note": "全国再調査(岩手県)で発見(検索結果より)。固定店舗を持たず、盛岡市を中心にイベントやマルシェに出店する屋台形式の自家焙煎コーヒースタンド(滝沢市・花巻市・八幡平市・奥州市・紫波町・葛巻町等にも出店実績あり)。IH式焙煎機「Aillio BULLET ROASTER」でコンピューター制御の焙煎を行い、ハンドピックにもこだわる。オンラインストア(nirinsha.stores.jp、STORES.jp)をブラウザで直接確認(2026-09)。2セット・500g業務用パック・ドリップバッグ・水出しパック・アクセサリー類を除いた、100g単位のコーヒー豆5銘柄(ストレート4・ブレンド1)を収録。各銘柄とも「豆のまま」(パンフレット・月替わりカレンダー付き)の価格を代表として採用(「カレンダーなし」の割引価格は対象外)。",
+    "last_verified_at": "2026-09-28",
+    "lat": 39.702133,
+    "lng": 141.15454,
+    "nearest_station": {
+      "name": "上盛岡",
+      "lines": [
+        "JR山田線"
+      ],
+      "distance_m": 1180,
+      "walk_min": 15
+    }
+  },
+  "products": [
+    {
+      "raw_name": "[深煎り] コロンビア エクセルソ",
+      "category": "ストレート",
+      "originCountry": "コロンビア",
+      "processingMethod": null,
+      "roast": "深煎り",
+      "flavorNotes": "深煎りによって引き出された豊かな香ばしさが特徴。チョコレートやキャラメルのような甘くて濃厚な香りが広がる。深煎り特有のしっかりとした苦味とコクを楽しめ、控えめながらも心地よい酸味と甘味がバランスよく感じられる。",
+      "farmNote": "規格: エクセルソ",
+      "decafProcess": null,
+      "price": 1500,
+      "weightG": 100,
+      "stockStatus": "販売中",
+      "productUrl": "https://nirinsha.stores.jp/items/66ffc710a3990706af612217",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "[中深煎り] エチオピア（モカ）シダモG2",
+      "category": "ストレート",
+      "originCountry": "エチオピア",
+      "processingMethod": null,
+      "roast": "中深煎り",
+      "flavorNotes": "フルーティーで華やかな香り。焙煎によって引き出された豊かなチョコレートやナッツのような甘い香り。適度な苦味と豊かなコクを持ちながら、フルーティーな酸味がアクセントとなり、独特の甘味が全体の味を引き締める。",
+      "farmNote": "地域: シダモ地区、グレード: G2",
+      "decafProcess": null,
+      "price": 1600,
+      "weightG": 100,
+      "stockStatus": "販売中",
+      "productUrl": "https://nirinsha.stores.jp/items/663b54c4c5d1bb035128cfd0",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "[中深煎り] ブラジル",
+      "category": "ストレート",
+      "originCountry": "ブラジル",
+      "processingMethod": null,
+      "roast": "中深煎り",
+      "flavorNotes": "ナッツやチョコレートのような豊かで甘い香り。しっかりとしたコクと適度な苦味があり、ほんのりとした甘味が全体の味を引き締める。マイルドな酸味がバランスを保ち、深みのある風味。",
+      "farmNote": "地域: ミナスジェライス州、サンパウロ州",
+      "decafProcess": null,
+      "price": 1500,
+      "weightG": 100,
+      "stockStatus": "販売中",
+      "productUrl": "https://nirinsha.stores.jp/items/663b554fc5d1bb03fe28cf4c",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "[深煎り] デカフェ コロンビア \"マウンテンウォータープロセス\"",
+      "category": "ストレート",
+      "originCountry": "コロンビア",
+      "processingMethod": null,
+      "roast": "深煎り",
+      "flavorNotes": "マウンテンウォータープロセスによりカフェイン成分だけを99.9%除去し、コーヒー成分はそのまま。ダークチョコレートやキャラメルのような濃厚で甘く香ばしい香り。しっかりとした苦味と深みのあるコクが感じられ、デカフェとは思えないほどの満足感。",
+      "farmNote": null,
+      "decafProcess": "マウンテンウォータープロセスによりカフェインを99.9%除去",
+      "price": 1700,
+      "weightG": 100,
+      "stockStatus": "販売中",
+      "productUrl": "https://nirinsha.stores.jp/items/66ffbfc58119e5057ff58fae",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "[中深煎り] 二輪社ブレンド",
+      "category": "ブレンド",
+      "originCountry": null,
+      "processingMethod": null,
+      "roast": "中深煎り",
+      "flavorNotes": "「毎日飲める味わい」をイメージしたオリジナルブレンド。",
+      "farmNote": "配合: ブラジル(中深煎、コクと甘み)、深煎コロンビア(深煎、重厚な味わい)、モカ(中深煎、ほんのりフルーティーな酸味)",
+      "decafProcess": null,
+      "price": 1600,
+      "weightG": 100,
+      "stockStatus": "販売中",
+      "productUrl": "https://nirinsha.stores.jp/items/6a4721a8a7f9cb668c1d878e",
+      "data_source": "manual"
+    }
+  ]
+}

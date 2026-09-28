@@ -568,6 +568,8 @@ SOURCE_FILES = {
     "珈房ベンデドール": "data_vendedor.json",
     # 全国再調査(青森県)で実装した店舗
     "iro coffee": "data_irocoffee.json",
+    # 全国再調査(岩手県)で実装した店舗
+    "NAGASAWA COFFEE": "data_nagasawacoffee.json",
 }
 
 

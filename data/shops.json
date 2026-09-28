@@ -10143,5 +10143,100 @@
     "last_verified_at": "2026-09-28",
     "lat": 40.874059,
     "lng": 141.096578
+  },
+  {
+    "name": "NAGASAWA COFFEE",
+    "url": "https://www.nagasawa-coffee.net/",
+    "platform": "独自EC",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認(独自EC構成)",
+    "address": "岩手県盛岡市上田1丁目11-23",
+    "prefecture": "岩手県",
+    "hours": null,
+    "map_query": "NAGASAWA COFFEE",
+    "nearest_station": {
+      "name": "上盛岡",
+      "lines": [
+        "JR山田線"
+      ],
+      "distance_m": 280,
+      "walk_min": 4
+    },
+    "last_scraped_at": "2026-09-28T02:32:15.667024+00:00",
+    "lat": 39.712485,
+    "lng": 141.144908
+  },
+  {
+    "name": "FishmanCoffee",
+    "url": "https://fishmancoffeehatakey.stores.jp/",
+    "instagram_url": "https://instagram.com/fishmancoffee_hatakeyama/",
+    "platform": "STORES.jp(手動入力。GitHub Actionsの共有IPレンジ・ローカルのrequestsいずれも403で遮断されるが、ブラウザでは直接確認可能なため手動入力)",
+    "shop_type": "single_location",
+    "address": "岩手県花巻市上町1-3",
+    "prefecture": "岩手県",
+    "hours": null,
+    "map_query": "FishmanCoffee 岩手県花巻市上町1-3",
+    "nearest_station": {
+      "name": "花巻",
+      "lines": [
+        "JR釜石線",
+        "JR東北本線"
+      ],
+      "distance_m": 1060,
+      "walk_min": 13
+    },
+    "data_source": "manual",
+    "source_note": "2026-09-15の青森・岩手・秋田バッチでSTORES.jpブロックを理由に見送っていたが、全国再調査でブラウザから直接アクセスできることを確認し実装対象に追加。グローバルダイレクトトレードプラットフォームTYPICAの1starロースターで、農園情報・カップオブエクセレンス受賞歴等の詳細な産地情報を掲載する本格派の店舗。オンラインストアをブラウザで直接確認(2026-09)。全カテゴリ(浅煎り豆9・中煎り豆8・中深煎り豆8・深煎り豆6・スペシャル期間限定6・デカフェ1、カテゴリ間の重複を除く実質31アイテム)を精査し、複数銘柄セット(ドリップバッグ飲み比べセット)・ドリップバッグ単品・定期便(内容が発送ごとに変わる)を除いた17件(ストレート11・ブレンド6)を収録。公式サイトの説明に「100g単位の包装」が基本単位と明記されており、価格は各商品の「100gパック」バリエーションの価格を採用(500g/1kg/2kg/5kgのまとめ買い価格帯は対象外)。同一農園(グアテマラ モンテス・デ・マリア農園)が浅煎り・中煎り2つの焙煎度で別商品として販売されているため、両方を別レコードとして収録した。",
+    "last_verified_at": "2026-09-28",
+    "lat": 39.386128,
+    "lng": 141.118681
+  },
+  {
+    "name": "二輪社",
+    "url": "https://nirinsha.com/",
+    "instagram_url": null,
+    "platform": "STORES.jp(手動入力。ブラウザで直接確認可能)",
+    "shop_type": "single_location",
+    "address": "岩手県盛岡市",
+    "prefecture": "岩手県",
+    "hours": null,
+    "map_query": "二輪社 岩手県盛岡市",
+    "nearest_station": {
+      "name": "上盛岡",
+      "lines": [
+        "JR山田線"
+      ],
+      "distance_m": 1180,
+      "walk_min": 15
+    },
+    "data_source": "manual",
+    "source_note": "全国再調査(岩手県)で発見(検索結果より)。固定店舗を持たず、盛岡市を中心にイベントやマルシェに出店する屋台形式の自家焙煎コーヒースタンド(滝沢市・花巻市・八幡平市・奥州市・紫波町・葛巻町等にも出店実績あり)。IH式焙煎機「Aillio BULLET ROASTER」でコンピューター制御の焙煎を行い、ハンドピックにもこだわる。オンラインストア(nirinsha.stores.jp、STORES.jp)をブラウザで直接確認(2026-09)。2セット・500g業務用パック・ドリップバッグ・水出しパック・アクセサリー類を除いた、100g単位のコーヒー豆5銘柄(ストレート4・ブレンド1)を収録。各銘柄とも「豆のまま」(パンフレット・月替わりカレンダー付き)の価格を代表として採用(「カレンダーなし」の割引価格は対象外)。",
+    "last_verified_at": "2026-09-28",
+    "lat": 39.702133,
+    "lng": 141.15454
+  },
+  {
+    "name": "六月の鹿",
+    "url": "https://rokugatsunoshika.stores.jp/",
+    "instagram_url": "https://instagram.com/coffee_musica/",
+    "platform": "STORES.jp(手動入力。ブラウザで直接確認可能)",
+    "shop_type": "single_location",
+    "address": "岩手県盛岡市内丸5-5",
+    "prefecture": "岩手県",
+    "hours": "7:30〜14:00(13:30 L.O.)、定休日：毎週日曜日と月曜日",
+    "map_query": "六月の鹿 岩手県盛岡市内丸5-5",
+    "nearest_station": {
+      "name": "上盛岡",
+      "lines": [
+        "JR山田線"
+      ],
+      "distance_m": 1130,
+      "walk_min": 14
+    },
+    "data_source": "manual",
+    "source_note": "全国再調査(岩手県)で発見(mamenavi.info「岩手の自家焙煎珈琲店ガイド」)。盛岡城跡のお堀に面した、自家焙煎・ネルドリップの珈琲専門店。オンラインストア(STORES.jp)をブラウザで直接確認(2026-09、requestsでの直接アクセスは未検証だがブラウザでは403等の遮断は無し)。全カテゴリ(コーヒー豆・書籍・器具・CD・ポストカード・グッズ)から書籍・グッズ・CD・ポストカード・器具単品を除いた、コーヒー豆全10銘柄(ストレート8・ブレンド2、いずれも100g/200gの2サイズ展開)を収録。各銘柄の100g価格を代表として採用。「DECAF BLEND」「DECAF BRAZIL」の2銘柄は商品ページに「これまで使用しておりました原材料の入手ができなくなってしまい残念ですが販売終了といたします」と明記されており、再入荷の見込みが無い終売として扱う(他のSOLD OUT表記の銘柄は一時的な品切れとして区別)。",
+    "last_verified_at": "2026-09-28",
+    "lat": 39.701902,
+    "lng": 141.152504
   }
 ]
