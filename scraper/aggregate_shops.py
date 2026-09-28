@@ -570,6 +570,11 @@ SOURCE_FILES = {
     "iro coffee": "data_irocoffee.json",
     # 全国再調査(岩手県)で実装した店舗
     "NAGASAWA COFFEE": "data_nagasawacoffee.json",
+    # 全国再調査(宮城県)で実装した店舗
+    "DAMO Kaffee Haus": "data_damokaffee.json",
+    "in vitro coffee roasters": "data_invitrocoffee.json",
+    "デ・スティル コーフィー": "data_destijlkoffie.json",
+    "スリーズコーヒー": "data_threescoffee.json",
 }
 
 

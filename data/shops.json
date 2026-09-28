@@ -10238,5 +10238,93 @@
     "last_verified_at": "2026-09-28",
     "lat": 39.701902,
     "lng": 141.152504
+  },
+  {
+    "name": "DAMO Kaffee Haus",
+    "url": "https://damo.lomo.jp/index.html",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認(BASE標準構成を想定)",
+    "address": "宮城県仙台市青葉区本町2-10-5",
+    "prefecture": "宮城県",
+    "hours": null,
+    "map_query": "DAMO Kaffee Haus",
+    "nearest_station": {
+      "name": "広瀬通",
+      "lines": [
+        "仙台市南北線"
+      ],
+      "distance_m": 310,
+      "walk_min": 4
+    },
+    "last_scraped_at": "2026-09-28T05:43:45.073971+00:00",
+    "lat": 38.265667,
+    "lng": 140.874987
+  },
+  {
+    "name": "in vitro coffee roasters",
+    "url": "https://www.invitrocoffee.com/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認(BASE標準構成を想定)",
+    "address": "宮城県仙台市泉区西田中字松下3-13",
+    "prefecture": "宮城県",
+    "hours": null,
+    "map_query": "in vitro coffee roasters",
+    "nearest_station": {
+      "name": "勾当台公園",
+      "lines": [
+        "仙台市南北線"
+      ],
+      "distance_m": 250,
+      "walk_min": 3
+    },
+    "last_scraped_at": "2026-09-28T05:43:45.073971+00:00",
+    "lat": 38.267755,
+    "lng": 140.86915
+  },
+  {
+    "name": "デ・スティル コーフィー",
+    "url": "https://destijlkoffie.com/",
+    "platform": "独自EC(らく～る)",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認(独自EC構成)",
+    "address": "宮城県仙台市青葉区一番町2丁目5-5",
+    "prefecture": "宮城県",
+    "hours": null,
+    "map_query": "デ・スティル コーフィー",
+    "nearest_station": {
+      "name": "勾当台公園",
+      "lines": [
+        "仙台市南北線"
+      ],
+      "distance_m": 250,
+      "walk_min": 3
+    },
+    "last_scraped_at": "2026-09-28T05:43:45.073971+00:00",
+    "lat": 38.267755,
+    "lng": 140.86915
+  },
+  {
+    "name": "スリーズコーヒー",
+    "url": "https://www.threes-coffee.com/",
+    "platform": "独自EC(Estore)",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認(独自EC構成)",
+    "address": "宮城県仙台市若林区五橋三丁目5-44 米沢ビル1F",
+    "prefecture": "宮城県",
+    "hours": null,
+    "map_query": "スリーズコーヒー",
+    "nearest_station": {
+      "name": "勾当台公園",
+      "lines": [
+        "仙台市南北線"
+      ],
+      "distance_m": 250,
+      "walk_min": 3
+    },
+    "last_scraped_at": "2026-09-28T05:43:45.073971+00:00",
+    "lat": 38.267755,
+    "lng": 140.86915
   }
 ]

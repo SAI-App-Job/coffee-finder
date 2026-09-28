@@ -5,7 +5,7 @@
 `scraper/manual/shops/`配下、それ以外は`scraper/scrape_*.py`で自動取得。
 実装を見送った店舗は`docs/not-implementable-shops.md`を参照。
 
-合計561店舗・10558商品(生成日: 2026-09-28)。
+合計565店舗・10626商品(生成日: 2026-09-28)。
 
 再生成コマンド:
 ```
@@ -166,10 +166,14 @@ aggregate_shops.py実行後の`git diff --staged --quiet || git commit`が該当
 | FLAT WHITE COFFEE FACTORY |  | Shopify | 34 |
 | 上野コーヒー | 石巻市蛇田字新谷地前100-3 | STORES(手動) | 5 |
 | Kochia 自家焙煎珈琲豆や | 石巻市松並1丁目2-9 松文漁業株式会社敷地内 裏倉庫 | 手動 | 12 |
+| スリーズコーヒー | 仙台市若林区五橋三丁目5-44 米沢ビル1F | 独自EC(Estore) | 27 |
 | 仙台 SPARK COFFEE | 仙台市若林区連坊小路138番地 | BASE | 30 |
+| デ・スティル コーフィー | 仙台市青葉区一番町2丁目5-5 | 独自EC(らく～る) | 24 |
 | 珈琲まめ坊 | 仙台市青葉区米ヶ袋1-1-12 | Shopify | 21 |
+| DAMO Kaffee Haus | 仙台市青葉区本町2-10-5 | BASE | 9 |
 | 松本珈琲店 まつりか | 仙台市青葉区立町22-14 西公園マンション1F | MakeShop | 38 |
 | 自家焙煎まめ舎 伊藤珈琲 | 仙台市泉区寺岡1-18-13 | BASE(theshop) | 2 |
+| in vitro coffee roasters | 仙台市泉区西田中字松下3-13 | BASE | 8 |
 | 自家焙煎珈琲店Coffee iPPO | 登米市東和町米谷字南沢156-1 | STORES(手動) | 21 |
 
 ### 京都府
