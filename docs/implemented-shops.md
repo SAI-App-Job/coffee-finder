@@ -5,7 +5,7 @@
 `scraper/manual/shops/`配下、それ以外は`scraper/scrape_*.py`で自動取得。
 実装を見送った店舗は`docs/not-implementable-shops.md`を参照。
 
-合計587店舗・10976商品(生成日: 2026-09-28)。
+合計590店舗・11014商品(生成日: 2026-09-28)。
 
 再生成コマンド:
 ```
@@ -92,9 +92,12 @@ aggregate_shops.py実行後の`git diff --staged --quiet || git commit`が該当
 | 南部珈琲 | 牛久市栄町1-21 | BASE | 31 |
 | TONE UP COFFEE | 取手市東6-37-7只石ビル102 | BASE | 6 |
 | BLEND MARKET (BM's COFFEE) | 水戸市河和田町477-3 MTビル2F | STORES(手動) | 12 |
+| コーヒー・ア・ゴー！ゴー！ | 水戸市元吉田町1633-7 | 手動 | 19 |
 | コーヒー専科ビーンズ | 水戸市赤塚2-2019-13 | 手動 | 43 |
 | おひさま珈琲(おひさま堂 珈琲焙煎部) | 水戸市大工町2-7-7 | 手動 | 26 |
 | MOOD COFFEE&ESPRESSO | 水戸市南町2丁目4-58 | WordPress | 14 |
+| Tadaima Coffee | 日立市若葉町1-13-5 | STORES(手動) | 12 |
+| 梶山珈琲 | 鉾田市梶山306-59 | 手動 | 7 |
 
 ### 岡山県
 
