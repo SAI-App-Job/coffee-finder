@@ -1,0 +1,85 @@
+{
+  "shop": {
+    "name": "ハーバー珈琲吉岡店",
+    "url": "https://www.satofull.jp/products/detail.php?product_id=1408926",
+    "platform": "実店舗のみ(ふるさと納税返礼品ページに商品情報掲載、オンライン直販なし)",
+    "address": "群馬県北群馬郡吉岡町大字北下1206",
+    "prefecture": "群馬県",
+    "robots_txt_status": "該当なし(オンラインショップなし)",
+    "lat": 36.445647,
+    "lng": 138.999374,
+    "nearest_station": {
+      "name": "八木原",
+      "lines": [
+        "JR上越線"
+      ],
+      "distance_m": 2690,
+      "walk_min": 34
+    }
+  },
+  "products": [
+    {
+      "shop_name": "ハーバー珈琲吉岡店",
+      "raw_name": "ハーバーブレンド",
+      "category": "ブレンド",
+      "origin_country": null,
+      "origin_source": null,
+      "designated_brand": null,
+      "processing_method": null,
+      "grade": null,
+      "roast_level": "中煎り",
+      "roast_hint": null,
+      "flavor_notes": "モヤモヤと疲れた気分を癒やしたいときにおすすめな後味さっぱりのキリマンブレンド。主要コーヒー豆の原産地:キリマンジャロ。",
+      "farm_note": null,
+      "post_processing_tags": [],
+      "blend_components": [],
+      "price": null,
+      "weight_g": 200,
+      "stock_status": "販売中",
+      "out_of_stock": false,
+      "product_url": "https://www.satofull.jp/products/detail.php?product_id=1408926"
+    },
+    {
+      "shop_name": "ハーバー珈琲吉岡店",
+      "raw_name": "ブレンド吉岡",
+      "category": "ブレンド",
+      "origin_country": null,
+      "origin_source": null,
+      "designated_brand": null,
+      "processing_method": null,
+      "grade": null,
+      "roast_level": "中煎り",
+      "roast_hint": null,
+      "flavor_notes": "仕事の合間にちょっと一息、風味まろやかなブレンド。主要コーヒー豆の原産地:ホンジュラス。",
+      "farm_note": null,
+      "post_processing_tags": [],
+      "blend_components": [],
+      "price": null,
+      "weight_g": 200,
+      "stock_status": "販売中",
+      "out_of_stock": false,
+      "product_url": "https://www.satofull.jp/products/detail.php?product_id=1408926"
+    },
+    {
+      "shop_name": "ハーバー珈琲吉岡店",
+      "raw_name": "ストロングブレンド",
+      "category": "ブレンド",
+      "origin_country": null,
+      "origin_source": null,
+      "designated_brand": null,
+      "processing_method": null,
+      "grade": null,
+      "roast_level": "やや深煎り",
+      "roast_hint": null,
+      "flavor_notes": "ビターな味わいでシャキッと眠気を覚ましたいときにぴったり。濃いめに抽出してカフェオレなどにアレンジしても美味しい。コーヒー豆の原産地:ブラジル,コロンビア,キリマンジャロ,マンデリン。",
+      "farm_note": null,
+      "post_processing_tags": [],
+      "blend_components": [],
+      "price": null,
+      "weight_g": 200,
+      "stock_status": "販売中",
+      "out_of_stock": false,
+      "product_url": "https://www.satofull.jp/products/detail.php?product_id=1408926"
+    }
+  ]
+}

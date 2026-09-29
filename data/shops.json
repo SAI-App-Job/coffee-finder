@@ -12433,6 +12433,19 @@
     "data_source": "manual",
     "source_note": null,
     "last_verified_at": null,
+    "locations": [
+      {
+        "label": null,
+        "address": "群馬県伊勢崎市波志江町4138-17",
+        "prefecture": "群馬県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "珈琲香房 Furfural",
+        "lat": 36.351928,
+        "lng": 139.188544
+      }
+    ],
     "lat": 36.351928,
     "lng": 139.188544
   },
@@ -12457,6 +12470,19 @@
     "data_source": "manual",
     "source_note": null,
     "last_verified_at": null,
+    "locations": [
+      {
+        "label": null,
+        "address": "群馬県前橋市敷島町244-1",
+        "prefecture": "群馬県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "SHIKISHIMA COFFEE",
+        "lat": 36.415102,
+        "lng": 139.050713
+      }
+    ],
     "lat": 36.415102,
     "lng": 139.050713
   },
@@ -12481,6 +12507,19 @@
     "data_source": "manual",
     "source_note": null,
     "last_verified_at": null,
+    "locations": [
+      {
+        "label": null,
+        "address": "群馬県邑楽郡邑楽町赤岩213-5",
+        "prefecture": "群馬県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "HIRAKU COFFEE",
+        "lat": 36.230557,
+        "lng": 139.442061
+      }
+    ],
     "lat": 36.230557,
     "lng": 139.442061
   },
@@ -12505,7 +12544,136 @@
     "data_source": "manual",
     "source_note": null,
     "last_verified_at": null,
+    "locations": [
+      {
+        "label": null,
+        "address": "群馬県高崎市請地町19-11",
+        "prefecture": "群馬県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "貿易屋珈琲店",
+        "lat": 36.334314,
+        "lng": 139.003456
+      }
+    ],
     "lat": 36.334314,
     "lng": 139.003456
+  },
+  {
+    "name": "ハーバー珈琲吉岡店",
+    "url": "https://www.satofull.jp/products/detail.php?product_id=1408926",
+    "instagram_url": null,
+    "platform": "実店舗のみ(ふるさと納税返礼品ページに商品情報掲載、オンライン直販なし)",
+    "shop_type": "single_location",
+    "address": "群馬県北群馬郡吉岡町大字北下1206",
+    "prefecture": "群馬県",
+    "hours": null,
+    "map_query": "ハーバー珈琲吉岡店",
+    "nearest_station": {
+      "name": "八木原",
+      "lines": [
+        "JR上越線"
+      ],
+      "distance_m": 2690,
+      "walk_min": 34
+    },
+    "data_source": "manual",
+    "source_note": null,
+    "last_verified_at": null,
+    "lat": 36.445647,
+    "lng": 138.999374
+  },
+  {
+    "name": "NIWA COFFEE",
+    "url": "http://www.niwacoffee.jp/",
+    "platform": "自社ECサイト(EC-CUBE系)",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認",
+    "address": "群馬県館林市当郷町1933-2",
+    "prefecture": "群馬県",
+    "hours": null,
+    "map_query": "NIWA COFFEE",
+    "nearest_station": {
+      "name": "渡瀬",
+      "lines": [
+        "東武佐野線"
+      ],
+      "distance_m": 2510,
+      "walk_min": 31
+    },
+    "last_scraped_at": "2026-09-29T13:24:42.042395+00:00",
+    "lat": 36.249875,
+    "lng": 139.561231
+  },
+  {
+    "name": "tonbi coffee",
+    "url": "https://tonbi-coffee.com/",
+    "platform": "カラーミーショップ(shop-pro.jp)",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認",
+    "address": "群馬県高崎市菅谷町531-10",
+    "prefecture": "群馬県",
+    "hours": null,
+    "map_query": "tonbi coffee",
+    "nearest_station": {
+      "name": "井野",
+      "lines": [
+        "JR上越線"
+      ],
+      "distance_m": 2400,
+      "walk_min": 30
+    },
+    "last_scraped_at": "2026-09-29T13:24:42.042395+00:00",
+    "lat": 36.378055,
+    "lng": 139.015475
+  },
+  {
+    "name": "ミキコーヒー",
+    "url": "https://app.bopisul.com/store/78",
+    "instagram_url": null,
+    "platform": "BOPISUL(オンライン注文システム)",
+    "shop_type": "single_location",
+    "address": "群馬県前橋市南町1-14-21",
+    "prefecture": "群馬県",
+    "hours": null,
+    "map_query": "ミキコーヒー",
+    "nearest_station": {
+      "name": "群馬総社",
+      "lines": [
+        "JR上越線"
+      ],
+      "distance_m": 2230,
+      "walk_min": 28
+    },
+    "data_source": "manual",
+    "source_note": null,
+    "last_verified_at": null,
+    "lat": 36.419407,
+    "lng": 139.007813
+  },
+  {
+    "name": "マリドンコーヒー",
+    "url": "https://malidoncoffee.mystrikingly.com/",
+    "instagram_url": null,
+    "platform": "実店舗のみ(公式サイトに現行商品価格表を掲載、注文フォームはあるが決済機能は未確認)",
+    "shop_type": "single_location",
+    "address": "群馬県前橋市上新田町977-2",
+    "prefecture": "群馬県",
+    "hours": null,
+    "map_query": "マリドンコーヒー",
+    "nearest_station": {
+      "name": "前橋",
+      "lines": [
+        "JR両毛線"
+      ],
+      "distance_m": 2160,
+      "walk_min": 27
+    },
+    "data_source": "manual",
+    "source_note": null,
+    "last_verified_at": null,
+    "lat": 36.364992,
+    "lng": 139.065355
   }
 ]

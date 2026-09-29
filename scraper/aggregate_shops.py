@@ -602,6 +602,9 @@ SOURCE_FILES = {
     "自家焙煎珈琲 copicopi": "data_copicopi.json",
     # 全国再調査(群馬県)第2弾で新規発掘・実装した店舗
     "きゃらばん": "data_caravan.json",
+    # 全国再調査(群馬県)第3弾(28候補中の残り分)で実装した店舗
+    "tonbi coffee": "data_tonbi.json",
+    "NIWA COFFEE": "data_niwacoffee.json",
 }
 
 
