@@ -10928,5 +10928,143 @@
     "last_verified_at": "2026-09-29",
     "lat": 36.599607,
     "lng": 140.660647
+  },
+  {
+    "name": "Rock'n'Wall Coffee Roast",
+    "url": "https://rwcoffee.thebase.in/",
+    "instagram_url": null,
+    "platform": "BASE(thebase.in、手動入力)",
+    "shop_type": "single_location",
+    "address": "栃木県鹿沼市麻苧町1631",
+    "prefecture": "栃木県",
+    "hours": null,
+    "map_query": "Rock'n'Wall Coffee Roast 栃木県鹿沼市麻苧町1631",
+    "nearest_station": {
+      "name": "新鹿沼",
+      "lines": [
+        "東武日光線"
+      ],
+      "distance_m": 670,
+      "walk_min": 8
+    },
+    "data_source": "manual",
+    "source_note": "全国再調査(栃木県)でサブエージェント調査から発見。公式サイトのABOUTページに「自家焙煎コーヒー豆の販売を行うRock'n'Wall Coffee Roastです」と明記(2026-09確認)。元は「あぜみち鹿沼店」(千渡)にあったが2025年2月に移転、2025年3月に現在地(まちの駅 新・鹿沼宿付近、麻苧町1631)で正式オープンしたことをWeb検索(1000yen.blog.jp記事等)で確認。BASE特定商取引法ページにはBASE株式会社(個人事業主のため運営代行会社)の住所のみ記載されており店舗自体の住所記載が無いため、上記のWeb検索結果から住所を補完した。オンラインショップはpython requestsで直接フェッチ可能。全7商品のうち「鳥ップバッグコーヒー」(ドリップバッグ)を除いた、コーヒー豆6銘柄(全てストレート)を収録。商品説明に生産国・地域・生産者・標高・品種・精選処理の構造化ラベルがあるが、重量(グラム数)の記載がどの商品にも一切無いためweightGは全銘柄nullとした。",
+    "last_verified_at": "2026-09-29",
+    "lat": 36.563001,
+    "lng": 139.743792
+  },
+  {
+    "name": "kumagoro coffee beans（クマゴロウコーヒービーンズ）",
+    "url": "https://kcbcoffee.base.shop/",
+    "instagram_url": null,
+    "platform": "BASE(base.shop)",
+    "shop_type": "single_location",
+    "address": "栃木県矢板市扇町1-1202-7",
+    "prefecture": "栃木県",
+    "hours": null,
+    "map_query": "kumagoro coffee beans 栃木県矢板市扇町1-1202-7",
+    "nearest_station": {
+      "name": "矢板",
+      "lines": [
+        "JR宇都宮線"
+      ],
+      "distance_m": 440,
+      "walk_min": 6
+    },
+    "data_source": "manual",
+    "source_note": "全国再調査(栃木県)でサブエージェント調査から発見。公式サイトのABOUTページに「自家焙煎コーヒー豆販売」と明記(2026-09確認)。栃木県ふるさと納税のブランド「Crefarm」(crefarm.net/brand/kumagorocoffee)としても展開されている。オンラインショップ(BASE、kcbcoffee.base.shop)はpython requestsで直接フェッチ可能。全6商品のうち、ドリップパック(15個入り・5個入り、複数銘柄の組み合わせのため対象外)を除いた、コーヒー豆4銘柄(全てストレート)を収録。3銘柄は焙煎ロット切れ(unpurchasable)で調査時点では売り切れ表示だった。重量は200gが基本だが「コロンビア キンディオ インフューズド ライチ ハニー」のみ商品説明に「※こちらのお豆は150gの金額です」との明記があり150gとした。",
+    "last_verified_at": "2026-09-29",
+    "lat": 36.809983,
+    "lng": 139.930557
+  },
+  {
+    "name": "Rubina珈琲（Rubina Coffee）",
+    "url": "https://rubina.base.shop/",
+    "platform": "BASE(base.shop)",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認(BASE標準構成)",
+    "address": "栃木県佐野市赤坂町963-1",
+    "prefecture": "栃木県",
+    "hours": null,
+    "map_query": "Rubina珈琲（Rubina Coffee）",
+    "nearest_station": {
+      "name": "佐野市",
+      "lines": [
+        "東武佐野線"
+      ],
+      "distance_m": 800,
+      "walk_min": 10
+    },
+    "last_scraped_at": "2026-09-29T02:09:43.156592+00:00",
+    "lat": 36.305306,
+    "lng": 139.566923
+  },
+  {
+    "name": "珈茶話 -kashiwa- Cafe & Coffee Roastery",
+    "url": "https://kashiwa.cc/",
+    "platform": "BASE(base.ec)",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認(BASE標準構成)",
+    "address": "栃木県日光市今市1147",
+    "prefecture": "栃木県",
+    "hours": null,
+    "map_query": "珈茶話 -kashiwa- Cafe & Coffee Roastery",
+    "nearest_station": {
+      "name": "今市",
+      "lines": [
+        "JR日光線"
+      ],
+      "distance_m": 10,
+      "walk_min": 1
+    },
+    "last_scraped_at": "2026-09-29T02:09:43.156592+00:00",
+    "lat": 36.720468,
+    "lng": 139.687272
+  },
+  {
+    "name": "秋元珈琲焙煎所",
+    "url": "https://akimoto.base.shop/",
+    "platform": "BASE(base.shop)",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認(BASE標準構成)",
+    "address": "栃木県大田原市親園2301",
+    "prefecture": "栃木県",
+    "hours": null,
+    "map_query": "秋元珈琲焙煎所",
+    "nearest_station": {
+      "name": "野崎",
+      "lines": [
+        "JR宇都宮線"
+      ],
+      "distance_m": 5200,
+      "walk_min": 65
+    },
+    "last_scraped_at": "2026-09-29T02:09:43.156592+00:00",
+    "lat": 36.825827,
+    "lng": 140.011632
+  },
+  {
+    "name": "あおぞら珈琲",
+    "url": "https://aozoracoffee.stores.jp/",
+    "instagram_url": null,
+    "platform": "STORES.jp",
+    "shop_type": "single_location",
+    "address": "栃木県宇都宮市吉野1-4-3",
+    "prefecture": "栃木県",
+    "hours": "定休日：水曜日",
+    "map_query": "あおぞら珈琲 栃木県宇都宮市吉野1-4-3",
+    "nearest_station": {
+      "name": "東武宇都宮",
+      "lines": [
+        "東武宇都宮線"
+      ],
+      "distance_m": 5240,
+      "walk_min": 66
+    },
+    "data_source": "manual",
+    "source_note": "全国再調査(栃木県)でサブエージェント調査から発見(南宇都宮駅徒歩5分)。アフリカ産の豆のみを扱う自家焙煎専門店。開業7周年の記念ブレンドがある等、長年営業する自家焙煎店。オンラインショップ(STORES.jp)はpython requestsで403だったが、ブラウザのfetch()経由(2秒間隔)で全18商品を取得できた(2026-09確認)。3種ブレンドギフトセット(100g/150g/200gの3サイズ、いずれも複数銘柄の組み合わせのため対象外)・ドリップバッグセット2種・食べる♪コーヒーペッパー(コーヒー豆を使った調味料、飲用コーヒーではないため対象外)を除いた、単品販売の豆11銘柄(ブレンド4・ストレート7)を収録。各商品説明に「焙煎日は1週間以内」「冷凍保存で味が劣化しない」等の記述があり自家焙煎であることを確認。「タンザニア」(無印)・「タンザニア キボーミドル」・「タンザニア キボーライト」は焙煎度の異なる別商品として個別に販売されている。",
+    "last_verified_at": "2026-09-29",
+    "lat": 36.6032,
+    "lng": 139.859137
   }
 ]

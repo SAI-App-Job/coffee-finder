@@ -591,6 +591,12 @@ SOURCE_FILES = {
     # 全国再調査(茨城県)で実装した店舗
     "MOOD COFFEE&ESPRESSO": "data_moodcoffee.json",
     "COFFEE FACTORY": "data_coffeefactory.json",
+    # 全国再調査(栃木県)で実装した店舗(かめとかめ・チバコーヒー・悟理道珈琲工房・
+    # 日光珈琲・ひつじ珈琲・自家焙煎珈琲コトリ・宇都宮珈琲は2026-09-04の別セッションで
+    # 既に実装済みだったため重複と判明し、実装候補から除外した)
+    "Rubina珈琲（Rubina Coffee）": "data_rubinacoffee.json",
+    "珈茶話 -kashiwa- Cafe & Coffee Roastery": "data_kashiwacoffee.json",
+    "秋元珈琲焙煎所": "data_akimotocoffee.json",
 }
 
 

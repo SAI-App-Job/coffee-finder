@@ -1,0 +1,90 @@
+{
+  "shop": {
+    "id": "kumagoro-coffee",
+    "name": "kumagoro coffee beans（クマゴロウコーヒービーンズ）",
+    "url": "https://kcbcoffee.base.shop/",
+    "instagram_url": null,
+    "google_maps_query": "kumagoro coffee beans 栃木県矢板市扇町1-1202-7",
+    "address": "栃木県矢板市扇町1-1202-7",
+    "tel": null,
+    "prefecture": "栃木県",
+    "hours": null,
+    "platform": "BASE(base.shop)",
+    "shop_type": "single_location",
+    "data_source": "manual",
+    "source_note": "全国再調査(栃木県)でサブエージェント調査から発見。公式サイトのABOUTページに「自家焙煎コーヒー豆販売」と明記(2026-09確認)。栃木県ふるさと納税のブランド「Crefarm」(crefarm.net/brand/kumagorocoffee)としても展開されている。オンラインショップ(BASE、kcbcoffee.base.shop)はpython requestsで直接フェッチ可能。全6商品のうち、ドリップパック(15個入り・5個入り、複数銘柄の組み合わせのため対象外)を除いた、コーヒー豆4銘柄(全てストレート)を収録。3銘柄は焙煎ロット切れ(unpurchasable)で調査時点では売り切れ表示だった。重量は200gが基本だが「コロンビア キンディオ インフューズド ライチ ハニー」のみ商品説明に「※こちらのお豆は150gの金額です」との明記があり150gとした。",
+    "last_verified_at": "2026-09-29",
+    "lat": 36.809983,
+    "lng": 139.930557,
+    "nearest_station": {
+      "name": "矢板",
+      "lines": [
+        "JR宇都宮線"
+      ],
+      "distance_m": 440,
+      "walk_min": 6
+    }
+  },
+  "products": [
+    {
+      "raw_name": "【焙煎したて】コロンビア スウィートベリー",
+      "category": "ストレート",
+      "originCountry": "コロンビア",
+      "processingMethod": null,
+      "roast": "深煎り",
+      "flavorNotes": "苦味の中にも口当たりまろやかな甘さが感じられる。深めに焼いたスウィートベリーはアイスコーヒーやラテにもぴったり。",
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 2090,
+      "weightG": 200,
+      "stockStatus": "完売",
+      "productUrl": "https://kcbcoffee.base.shop/items/102535578",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "【焙煎したて】ブラジル プレミアムショコラ",
+      "category": "ストレート",
+      "originCountry": "ブラジル",
+      "processingMethod": null,
+      "roast": "中深煎り",
+      "flavorNotes": "ブラジルらしいチョコナッツ感としっかりした苦味の中に甘さがあり、酸味はほとんどない。ミルクと合わせても美味しい。",
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1990,
+      "weightG": 200,
+      "stockStatus": "完売",
+      "productUrl": "https://kcbcoffee.base.shop/items/103913563",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "【焙煎したて】グァテマラ オリエンテナチュラル",
+      "category": "ストレート",
+      "originCountry": "グアテマラ",
+      "processingMethod": "ナチュラル",
+      "roast": "中深煎り〜深煎り",
+      "flavorNotes": "ドライフルーツのような華やかな香りのナチュラルらしい雰囲気。酸味も少し感じられるが甘味もあり、すっきりとして飲みやすい。",
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 2190,
+      "weightG": 200,
+      "stockStatus": "完売",
+      "productUrl": "https://kcbcoffee.base.shop/items/94396314",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "【焙煎したて】コロンビア キンディオ インフューズド ライチ ハニー",
+      "category": "ストレート",
+      "originCountry": "コロンビア",
+      "processingMethod": "インフューズドハニー",
+      "roast": null,
+      "flavorNotes": "名前の通りライチの香りが絶え間なく続く華やかな香り。酸味が強めで甘酸っぱい果物の皮の近くを食べているような味わい。",
+      "farmNote": "地域: キンディオ",
+      "decafProcess": null,
+      "price": 3990,
+      "weightG": 150,
+      "stockStatus": "販売中",
+      "productUrl": "https://kcbcoffee.base.shop/items/98959366",
+      "data_source": "manual"
+    }
+  ]
+}
