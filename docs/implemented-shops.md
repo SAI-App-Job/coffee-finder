@@ -5,7 +5,7 @@
 `scraper/manual/shops/`配下、それ以外は`scraper/scrape_*.py`で自動取得。
 実装を見送った店舗は`docs/not-implementable-shops.md`を参照。
 
-合計596店舗・11073商品(生成日: 2026-09-29)。
+合計601店舗・11177商品(生成日: 2026-09-29)。
 
 再生成コマンド:
 ```
@@ -252,14 +252,19 @@ aggregate_shops.py実行後の`git diff --staged --quiet || git commit`が該当
 | 店舗名 | 所在地 | 方式 | 件数 |
 |---|---|---|---|
 | 語洲燈 | 伊勢崎市三室町4105 | カラーミー | 10 |
+| 大月珈琲下仁田焙煎所 | 甘楽郡下仁田町川井119-1 | STORES(手動) | 22 |
+| 自家焙煎珈琲 copicopi | 館林市新宿1丁目3-7 | FC2ショッピングカート(cart.fc2.com) | 25 |
 | NORRY'S COFFEE | 桐生市宮前町2丁目8-6 | BASE | 3 |
 | 伊東屋珈琲 | 桐生市相生町2-588-75 | カラーミー | 19 |
 | 柏屋カフェ NAKAYOSHI COFFEE | 吾妻郡中之条町四万4237-1 | カラーミー | 10 |
 | 大和屋珈琲 高崎本店 | 高崎市筑縄町382番地2 | Welcart | 27 |
+| Kissa Coffee 生豆と焙煎 | 高崎市南大類町1030-2 | STORES(手動) | 18 |
 | パロットコーヒー | 前橋市 | カラーミー | 10 |
 | ONCA COFFEE & ROASTERY 前橋店 | 前橋市 | Shopify | 11 |
+| CHOOSE YOUR COFFEE | 前橋市城東町1-10-14 mizuma 2F | STORES(手動) | 22 |
 | SAMURAI COFFEE | 前橋市総社町植野441 | BASE | 10 |
 | 珈琲豆屋 一豆 | 太田市天良町72-5 | BASE | 16 |
+| 薔薇繪亭 | 藤岡市藤岡821-14 | STORES(手動) | 17 |
 
 ### 広島県
 

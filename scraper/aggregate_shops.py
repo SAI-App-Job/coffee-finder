@@ -597,6 +597,9 @@ SOURCE_FILES = {
     "Rubina珈琲（Rubina Coffee）": "data_rubinacoffee.json",
     "珈茶話 -kashiwa- Cafe & Coffee Roastery": "data_kashiwacoffee.json",
     "秋元珈琲焙煎所": "data_akimotocoffee.json",
+    # 全国再調査(群馬県)で実装した店舗(2026-09-05の別セッションで技術的理由により
+    # 見送られていたFC2カートの店舗を、個別商品ページ取得手法の確立により実装)
+    "自家焙煎珈琲 copicopi": "data_copicopi.json",
 }
 
 
