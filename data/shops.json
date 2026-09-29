@@ -12016,6 +12016,19 @@
     "data_source": "manual",
     "source_note": "全国再調査(群馬県)で2026-09-05の別セッションで技術的理由(実体はkissacoffee.stores.jpというSTORES.jp店舗であることがページ内JS変数に埋め込まれているのみでJS描画のため)により見送られていたが、本セッションでカスタムドメイン(kissa.shop)へのブラウザfetch()が直接200 OKで取得可能なことを確認し実装候補に復帰(STORES.jpサブドメインへの遷移すら不要と判明)。運営会社: シャローリバー株式会社(代表: 吉井章人)。受注焙煎で選べるローストレベルに対応する自家焙煎専門店。全25商品のうち、季節のドリップバッグ5ピース・FLANNEL DRIP ICE COFFEE(完成リキッド飲料)とそのギフト3本セット・季節/浅煎り/深煎りの月替わり「コーヒープラン」3種(定期購読サービス)・個人ブレンドコーヒー(720パターンから好みを診断してブレンドするカスタムオーダーサービス)を除いた、固定商品として販売されている豆18銘柄(ストレート15・ブレンド3)を収録。全銘柄の商品説明に「200gは生豆時における重量になります。焙煎後は10〜20%内容量が減ります」との明記があり、表記重量が焙煎前の生豆重量を指すため、weightGはnullとしunitNoteに原文の基準表記を記録した。「エチオピア イルガチェフェ コンガ ナチュラル」と「エチオピア イルガチェフェ コンガ」(精製方法の記載なし)は同一産地の別ロット・別商品として独立した販売ページを持つため両方を収録した。",
     "last_verified_at": "2026-09-29",
+    "locations": [
+      {
+        "label": null,
+        "address": "群馬県高崎市南大類町1030-2",
+        "prefecture": "群馬県",
+        "hours": null,
+        "tel": "027-377-3277",
+        "is_headquarters": false,
+        "map_query": "Kissa Coffee 群馬県高崎市南大類町1030-2",
+        "lat": 36.326372,
+        "lng": 139.042359
+      }
+    ],
     "lat": 36.326372,
     "lng": 139.042359
   },
@@ -12040,6 +12053,19 @@
     "data_source": "manual",
     "source_note": "全国再調査(群馬県)で2026-09-05の別セッションで技術的理由(STORES.jpのJS描画)により見送られていたが、本セッションでブラウザのfetch()経由なら200 OKで取得可能なことを再確認し実装候補に復帰。1979年創業。ABOUTページに「一番おいしい一杯のために。自家焙煎へのこだわり」「厳格に管理し、丁寧に自家焙煎したこだわりの珈琲豆」と明記された自家焙煎専門店。全24商品のうち、ドリップバッグ形式7種(心呼吸ブレンド・至福naブレンドの通常/PREMIUM各ドリップバッグ+ギフトBOX、ダッチ水出しコーヒードリップバッグ)を除いた、100g単位の豆売り商品17銘柄(ブレンド9・ストレート8)を収録(数量2を選ぶと200gとなる仕組みのため100gを代表として採用)。「アメリカン珈琲」「アイスコーヒー」「ダッチ(水出し)コーヒー」「カフェインレス」は商品名に地名が無くparse_product()ではストレート判定されたが、産地の明記が無く実質的にブレンド(自家調合)であるためブレンドへ手動で分類した。",
     "last_verified_at": "2026-09-29",
+    "locations": [
+      {
+        "label": null,
+        "address": "群馬県藤岡市藤岡821-14",
+        "prefecture": "群馬県",
+        "hours": null,
+        "tel": "0274-24-0616",
+        "is_headquarters": false,
+        "map_query": "薔薇繪亭 群馬県藤岡市藤岡821-14",
+        "lat": 36.239435,
+        "lng": 139.070946
+      }
+    ],
     "lat": 36.239435,
     "lng": 139.070946
   },
@@ -12064,6 +12090,19 @@
     "data_source": "manual",
     "source_note": "全国再調査(群馬県)で2026-09-05の別セッションで技術的理由(STORES.jpのJS描画)により見送られていたが、本セッションでブラウザのfetch()経由なら200 OKで取得可能なことを再確認し実装候補に復帰。「ブレンド」「シングルオリジン」の2カテゴリから、複数銘柄の組み合わせ商品(メール便で発送！ブレンド＆シングル250g等の生豆選択式ページ)・定期便・水出しアイスコーヒーパック・リキッドアイスコーヒー(完成飲料)・ドリップバッグ・Goods・ギフトセットを除いた、単品の豆22銘柄(ブレンド8・ストレート14)を収録。多くの商品が「豆のまま：100g/250g」または「豆のまま：250g」のみのバリエーション選択式(STORES.jpのAggregateOffer)で、100gオプションがある銘柄は100gの価格(lowPrice)を、100gオプションが無い銘柄は250gの価格をそのまま採用した。「タイ イエロームーン」はparse_product()の国名辞書で「タイ」が地名との衝突リスクにより意図的に未登録のため、商品説明の「アジア・大洋州」産地表記と商品名から手動でoriginCountryをタイに設定した。",
     "last_verified_at": "2026-09-29",
+    "locations": [
+      {
+        "label": null,
+        "address": "群馬県甘楽郡下仁田町川井119-1",
+        "prefecture": "群馬県",
+        "hours": "11:00〜17:00、定休日：月曜日",
+        "tel": "0274-64-9633",
+        "is_headquarters": false,
+        "map_query": "大月珈琲下仁田焙煎所 群馬県甘楽郡下仁田町川井119-1",
+        "lat": 36.210365,
+        "lng": 138.775817
+      }
+    ],
     "lat": 36.210365,
     "lng": 138.775817
   },
@@ -12112,7 +12151,186 @@
     "data_source": "manual",
     "source_note": "全国再調査(群馬県)で2026-09-05の別セッションで技術的理由(STORES.jpのJS描画で通常のrequestsでは403/空取得)により見送られていたが、本セッションでブラウザのfetch()経由(同一オリジン、実ブラウザセッション、1.2〜2秒間隔)なら200 OKで取得可能なことを再確認し実装候補に復帰。スペシャルティコーヒーの自家焙煎ロースタリー兼カフェ(Web検索で「roastery」の記載を確認)。全160商品(重量バリアント「100g/200g/25g/BAG」×銘柄)のうち、「シングルオリジン」カテゴリ(72件≒18銘柄)と「オリジナルブレンド」カテゴリ(96件≒24銘柄、大半がアーティスト・スポーツ選手・地域イベントとのコラボによる期間限定/売り切れ品)の2カテゴリに絞り、さらに在庫あり(InStock)の単純な豆売り商品のみ厳選して16のシングルオリジン+6のブレンドの計22銘柄を収録した(生豆・ドリップバッグ・ギフトセット・Tシャツ等グッズ・複数銘柄セット「YAMABITO BLEND SET」・多数のアーティストコラボ限定ブレンド「NOT ALONE by ○○」シリーズ等は対象外。ブレンドは季節限定ながら調査時点で販売中だった定番的な4種(AUTUMN/ZANSHO/SHUUU/AKISAME)とアーティスト監修の2種(ORTEGA/UNSTOPPABLE)に絞った)。商品説明の「使用豆」欄が「● ニカラグア ● メキシコ ● ブラジル ● mo」のように末尾が原文側で欠落している商品が複数あり、この欠落は書き起こしをそのまま反映し「他」として記録した。「COLOMBIA Kyoto EX」のみ100g単品ページを確認できず200gページの価格(¥2,200)を代表として採用した。",
     "last_verified_at": "2026-09-29",
+    "locations": [
+      {
+        "label": null,
+        "address": "群馬県前橋市城東町1-10-14 mizuma 2F",
+        "prefecture": "群馬県",
+        "hours": null,
+        "tel": "027-257-9779",
+        "is_headquarters": false,
+        "map_query": "CHOOSE YOUR COFFEE 群馬県前橋市城東町1-10-14",
+        "lat": 36.397831,
+        "lng": 139.074101
+      }
+    ],
     "lat": 36.397831,
     "lng": 139.074101
+  },
+  {
+    "name": "珈琲美流",
+    "url": "https://www.gunlabo.net/shop/shop.shtml?s=1368",
+    "instagram_url": null,
+    "platform": "実店舗のみ(ポータルサイトに一部商品情報掲載、オンライン販売なし)",
+    "shop_type": "single_location",
+    "address": "群馬県桐生市新里町鶴ヶ谷133-12",
+    "prefecture": "群馬県",
+    "hours": null,
+    "map_query": "珈琲美流",
+    "nearest_station": {
+      "name": "新川",
+      "lines": [
+        "上毛電鉄上毛線"
+      ],
+      "distance_m": 2370,
+      "walk_min": 30
+    },
+    "data_source": "manual",
+    "source_note": null,
+    "last_verified_at": null,
+    "lat": 36.43846,
+    "lng": 139.248908
+  },
+  {
+    "name": "コーヒー工房かねだ",
+    "url": "https://coffeekaneda.com/",
+    "instagram_url": null,
+    "platform": "実店舗のみ(公式サイトに商品情報掲載、オンライン販売なし)",
+    "shop_type": "single_location",
+    "address": "群馬県太田市高林東町1681",
+    "prefecture": "群馬県",
+    "hours": null,
+    "map_query": "コーヒー工房かねだ",
+    "nearest_station": {
+      "name": "西小泉",
+      "lines": [
+        "東武小泉線"
+      ],
+      "distance_m": 3000,
+      "walk_min": 38
+    },
+    "data_source": "manual",
+    "source_note": null,
+    "last_verified_at": null,
+    "lat": 36.257521,
+    "lng": 139.375154
+  },
+  {
+    "name": "Hamaya.カフェ",
+    "url": "https://note.com/hamaya_cafe",
+    "instagram_url": null,
+    "platform": "実店舗のみ(公式noteに一部商品情報掲載、オンライン販売なし)",
+    "shop_type": "single_location",
+    "address": "群馬県吾妻郡中之条町中之条町1756-2",
+    "prefecture": "群馬県",
+    "hours": null,
+    "map_query": "Hamaya.カフェ",
+    "nearest_station": {
+      "name": "中之条",
+      "lines": [
+        "JR吾妻線"
+      ],
+      "distance_m": 990,
+      "walk_min": 12
+    },
+    "data_source": "manual",
+    "source_note": null,
+    "last_verified_at": null,
+    "lat": 36.585647,
+    "lng": 138.839836
+  },
+  {
+    "name": "FUIGO/BLACKSMITH",
+    "url": "https://www.fuigo.info/",
+    "instagram_url": null,
+    "platform": "実店舗のみ(公式サイトに商品情報掲載、オンライン販売なし)",
+    "shop_type": "single_location",
+    "address": "群馬県太田市高林北町1920-4",
+    "prefecture": "群馬県",
+    "hours": null,
+    "map_query": "FUIGO/BLACKSMITH",
+    "nearest_station": {
+      "name": "細谷",
+      "lines": [
+        "東武伊勢崎線"
+      ],
+      "distance_m": 2520,
+      "walk_min": 32
+    },
+    "data_source": "manual",
+    "source_note": null,
+    "last_verified_at": null,
+    "lat": 36.26566,
+    "lng": 139.367254
+  },
+  {
+    "name": "きゃらばん",
+    "url": "http://www.caravan1976.com/",
+    "platform": "自社ECサイト(レガシーCGIカート)",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認",
+    "address": "群馬県高崎市昭和町209",
+    "prefecture": "群馬県",
+    "hours": null,
+    "map_query": "きゃらばん",
+    "nearest_station": {
+      "name": "北高崎",
+      "lines": [
+        "JR信越本線"
+      ],
+      "distance_m": 420,
+      "walk_min": 5
+    },
+    "last_scraped_at": "2026-09-29T09:06:50.021759+00:00",
+    "lat": 36.336302,
+    "lng": 139.004656
+  },
+  {
+    "name": "自家焙煎柿沼珈琲",
+    "url": "https://www.facebook.com/kakinumacoffee/",
+    "instagram_url": null,
+    "platform": "実店舗のみ(SNS・ポータルサイトに一部商品情報掲載、オンライン販売なし)",
+    "shop_type": "single_location",
+    "address": "群馬県伊勢崎市赤堀今井町2丁目286-1",
+    "prefecture": "群馬県",
+    "hours": null,
+    "map_query": "自家焙煎柿沼珈琲",
+    "nearest_station": {
+      "name": "粕川",
+      "lines": [
+        "上毛電鉄上毛線"
+      ],
+      "distance_m": 3220,
+      "walk_min": 40
+    },
+    "data_source": "manual",
+    "source_note": null,
+    "last_verified_at": null,
+    "lat": 36.388078,
+    "lng": 139.215084
+  },
+  {
+    "name": "珈琲豆焙煎工房Bliss",
+    "url": "https://bliss-roastery.com/",
+    "instagram_url": null,
+    "platform": "実店舗のみ(公式サイトに商品情報掲載、オンライン販売なし)",
+    "shop_type": "single_location",
+    "address": "群馬県伊勢崎市宮子町3410-3-A",
+    "prefecture": "群馬県",
+    "hours": null,
+    "map_query": "珈琲豆焙煎工房Bliss",
+    "nearest_station": {
+      "name": "駒形",
+      "lines": [
+        "JR両毛線"
+      ],
+      "distance_m": 2910,
+      "walk_min": 36
+    },
+    "data_source": "manual",
+    "source_note": null,
+    "last_verified_at": null,
+    "lat": 36.332768,
+    "lng": 139.158089
   }
 ]

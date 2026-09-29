@@ -1,0 +1,85 @@
+{
+  "shop": {
+    "name": "珈琲美流",
+    "url": "https://www.gunlabo.net/shop/shop.shtml?s=1368",
+    "platform": "実店舗のみ(ポータルサイトに一部商品情報掲載、オンライン販売なし)",
+    "address": "群馬県桐生市新里町鶴ヶ谷133-12",
+    "prefecture": "群馬県",
+    "robots_txt_status": "該当なし(オンラインショップなし)",
+    "lat": 36.43846,
+    "lng": 139.248908,
+    "nearest_station": {
+      "name": "新川",
+      "lines": [
+        "上毛電鉄上毛線"
+      ],
+      "distance_m": 2370,
+      "walk_min": 30
+    }
+  },
+  "products": [
+    {
+      "shop_name": "珈琲美流",
+      "raw_name": "エメラルドマウンテン",
+      "category": "ストレート",
+      "origin_country": null,
+      "origin_source": null,
+      "designated_brand": null,
+      "processing_method": null,
+      "grade": null,
+      "roast_level": null,
+      "roast_hint": null,
+      "flavor_notes": null,
+      "farm_note": null,
+      "post_processing_tags": [],
+      "blend_components": [],
+      "price": 740,
+      "weight_g": 100,
+      "stock_status": "販売中",
+      "out_of_stock": false,
+      "product_url": "https://www.gunlabo.net/shop/shop.shtml?s=1368"
+    },
+    {
+      "shop_name": "珈琲美流",
+      "raw_name": "パプアニューギニア（有機豆）",
+      "category": "ストレート",
+      "origin_country": "パプアニューギニア",
+      "origin_source": "country_name",
+      "designated_brand": null,
+      "processing_method": null,
+      "grade": null,
+      "roast_level": null,
+      "roast_hint": null,
+      "flavor_notes": null,
+      "farm_note": null,
+      "post_processing_tags": [],
+      "blend_components": [],
+      "price": 500,
+      "weight_g": 100,
+      "stock_status": "販売中",
+      "out_of_stock": false,
+      "product_url": "https://www.gunlabo.net/shop/shop.shtml?s=1368"
+    },
+    {
+      "shop_name": "珈琲美流",
+      "raw_name": "アンデスマウンテン",
+      "category": "ストレート",
+      "origin_country": null,
+      "origin_source": null,
+      "designated_brand": null,
+      "processing_method": null,
+      "grade": null,
+      "roast_level": null,
+      "roast_hint": null,
+      "flavor_notes": null,
+      "farm_note": null,
+      "post_processing_tags": [],
+      "blend_components": [],
+      "price": 530,
+      "weight_g": 100,
+      "stock_status": "販売中",
+      "out_of_stock": false,
+      "product_url": "https://www.gunlabo.net/shop/shop.shtml?s=1368"
+    }
+  ]
+}

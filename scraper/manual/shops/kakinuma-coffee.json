@@ -1,0 +1,64 @@
+{
+  "shop": {
+    "name": "自家焙煎柿沼珈琲",
+    "url": "https://www.facebook.com/kakinumacoffee/",
+    "platform": "実店舗のみ(SNS・ポータルサイトに一部商品情報掲載、オンライン販売なし)",
+    "address": "群馬県伊勢崎市赤堀今井町2丁目286-1",
+    "prefecture": "群馬県",
+    "robots_txt_status": "該当なし(オンラインショップなし)",
+    "lat": 36.388078,
+    "lng": 139.215084,
+    "nearest_station": {
+      "name": "粕川",
+      "lines": [
+        "上毛電鉄上毛線"
+      ],
+      "distance_m": 3220,
+      "walk_min": 40
+    }
+  },
+  "products": [
+    {
+      "shop_name": "自家焙煎柿沼珈琲",
+      "raw_name": "パプアニューギニアAA　ジジリ農園",
+      "category": "ストレート",
+      "origin_country": "パプアニューギニア",
+      "origin_source": "country_name",
+      "designated_brand": null,
+      "processing_method": null,
+      "grade": "AA",
+      "roast_level": null,
+      "roast_hint": null,
+      "flavor_notes": null,
+      "farm_note": null,
+      "post_processing_tags": [],
+      "blend_components": [],
+      "price": null,
+      "weight_g": 100,
+      "stock_status": "販売中",
+      "out_of_stock": false,
+      "product_url": "https://tabelog.com/en/gunma/A1002/A100202/10017983/"
+    },
+    {
+      "shop_name": "自家焙煎柿沼珈琲",
+      "raw_name": "マンデリンG-1　シンハル",
+      "category": "ストレート",
+      "origin_country": "インドネシア",
+      "origin_source": "brand",
+      "designated_brand": "マンデリン",
+      "processing_method": null,
+      "grade": "G1",
+      "roast_level": null,
+      "roast_hint": null,
+      "flavor_notes": null,
+      "farm_note": null,
+      "post_processing_tags": [],
+      "blend_components": [],
+      "price": null,
+      "weight_g": 100,
+      "stock_status": "販売中",
+      "out_of_stock": false,
+      "product_url": "https://tabelog.com/en/gunma/A1002/A100202/10017983/"
+    }
+  ]
+}

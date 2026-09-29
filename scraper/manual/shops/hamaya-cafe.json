@@ -1,0 +1,43 @@
+{
+  "shop": {
+    "name": "Hamaya.カフェ",
+    "url": "https://note.com/hamaya_cafe",
+    "platform": "実店舗のみ(公式noteに一部商品情報掲載、オンライン販売なし)",
+    "address": "群馬県吾妻郡中之条町中之条町1756-2",
+    "prefecture": "群馬県",
+    "robots_txt_status": "該当なし(オンラインショップなし)",
+    "lat": 36.585647,
+    "lng": 138.839836,
+    "nearest_station": {
+      "name": "中之条",
+      "lines": [
+        "JR吾妻線"
+      ],
+      "distance_m": 990,
+      "walk_min": 12
+    }
+  },
+  "products": [
+    {
+      "shop_name": "Hamaya.カフェ",
+      "raw_name": "ジャクーバード",
+      "category": "ストレート",
+      "origin_country": "ブラジル",
+      "origin_source": "category_hint",
+      "designated_brand": null,
+      "processing_method": null,
+      "grade": null,
+      "roast_level": "浅煎り",
+      "roast_hint": null,
+      "flavor_notes": "ホウカンチョウ科のジャクーという鳥が食べたチェリーから作られる希少なコーヒー。ブラジルのカモシム農園産。2017年カップオブエクセレンス(COE)優勝ロット(93.60点)。フルーティーな味わいとフローラルな香り。",
+      "farm_note": "カモシム農園",
+      "post_processing_tags": [],
+      "blend_components": [],
+      "price": null,
+      "weight_g": null,
+      "stock_status": "販売中",
+      "out_of_stock": false,
+      "product_url": "https://note.com/hamaya_cafe/n/n4ab68ee49abe"
+    }
+  ]
+}
