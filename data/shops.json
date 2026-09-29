@@ -12188,6 +12188,19 @@
     "data_source": "manual",
     "source_note": null,
     "last_verified_at": null,
+    "locations": [
+      {
+        "label": null,
+        "address": "群馬県桐生市新里町鶴ヶ谷133-12",
+        "prefecture": "群馬県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "珈琲美流",
+        "lat": 36.43846,
+        "lng": 139.248908
+      }
+    ],
     "lat": 36.43846,
     "lng": 139.248908
   },
@@ -12212,6 +12225,19 @@
     "data_source": "manual",
     "source_note": null,
     "last_verified_at": null,
+    "locations": [
+      {
+        "label": null,
+        "address": "群馬県太田市高林東町1681",
+        "prefecture": "群馬県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "コーヒー工房かねだ",
+        "lat": 36.257521,
+        "lng": 139.375154
+      }
+    ],
     "lat": 36.257521,
     "lng": 139.375154
   },
@@ -12236,6 +12262,19 @@
     "data_source": "manual",
     "source_note": null,
     "last_verified_at": null,
+    "locations": [
+      {
+        "label": null,
+        "address": "群馬県吾妻郡中之条町中之条町1756-2",
+        "prefecture": "群馬県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "Hamaya.カフェ",
+        "lat": 36.585647,
+        "lng": 138.839836
+      }
+    ],
     "lat": 36.585647,
     "lng": 138.839836
   },
@@ -12260,6 +12299,19 @@
     "data_source": "manual",
     "source_note": null,
     "last_verified_at": null,
+    "locations": [
+      {
+        "label": null,
+        "address": "群馬県太田市高林北町1920-4",
+        "prefecture": "群馬県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "FUIGO/BLACKSMITH",
+        "lat": 36.26566,
+        "lng": 139.367254
+      }
+    ],
     "lat": 36.26566,
     "lng": 139.367254
   },
@@ -12306,6 +12358,19 @@
     "data_source": "manual",
     "source_note": null,
     "last_verified_at": null,
+    "locations": [
+      {
+        "label": null,
+        "address": "群馬県伊勢崎市赤堀今井町2丁目286-1",
+        "prefecture": "群馬県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "自家焙煎柿沼珈琲",
+        "lat": 36.388078,
+        "lng": 139.215084
+      }
+    ],
     "lat": 36.388078,
     "lng": 139.215084
   },
@@ -12330,7 +12395,117 @@
     "data_source": "manual",
     "source_note": null,
     "last_verified_at": null,
+    "locations": [
+      {
+        "label": null,
+        "address": "群馬県伊勢崎市宮子町3410-3-A",
+        "prefecture": "群馬県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "珈琲豆焙煎工房Bliss",
+        "lat": 36.332768,
+        "lng": 139.158089
+      }
+    ],
     "lat": 36.332768,
     "lng": 139.158089
+  },
+  {
+    "name": "珈琲香房 Furfural",
+    "url": "https://www.coffeekoubou.net/",
+    "instagram_url": null,
+    "platform": "実店舗のみ(公式サイトに現行商品価格表を掲載。旧BASEショップ(coffeekoubou.base.shop)は閉鎖済み)",
+    "shop_type": "single_location",
+    "address": "群馬県伊勢崎市波志江町4138-17",
+    "prefecture": "群馬県",
+    "hours": null,
+    "map_query": "珈琲香房 Furfural",
+    "nearest_station": {
+      "name": "伊勢崎",
+      "lines": [
+        "JR両毛線",
+        "東武伊勢崎線"
+      ],
+      "distance_m": 2830,
+      "walk_min": 35
+    },
+    "data_source": "manual",
+    "source_note": null,
+    "last_verified_at": null,
+    "lat": 36.351928,
+    "lng": 139.188544
+  },
+  {
+    "name": "SHIKISHIMA COFFEE",
+    "url": "https://shikishima.coffee/",
+    "instagram_url": null,
+    "platform": "Shopify(自社ECサイト)",
+    "shop_type": "single_location",
+    "address": "群馬県前橋市敷島町244-1",
+    "prefecture": "群馬県",
+    "hours": null,
+    "map_query": "SHIKISHIMA COFFEE",
+    "nearest_station": {
+      "name": "群馬総社",
+      "lines": [
+        "JR上越線"
+      ],
+      "distance_m": 1660,
+      "walk_min": 21
+    },
+    "data_source": "manual",
+    "source_note": null,
+    "last_verified_at": null,
+    "lat": 36.415102,
+    "lng": 139.050713
+  },
+  {
+    "name": "HIRAKU COFFEE",
+    "url": "https://hiraku-coffee.stores.jp/",
+    "instagram_url": null,
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "群馬県邑楽郡邑楽町赤岩213-5",
+    "prefecture": "群馬県",
+    "hours": null,
+    "map_query": "HIRAKU COFFEE",
+    "nearest_station": {
+      "name": "篠塚",
+      "lines": [
+        "東武小泉線"
+      ],
+      "distance_m": 2940,
+      "walk_min": 37
+    },
+    "data_source": "manual",
+    "source_note": null,
+    "last_verified_at": null,
+    "lat": 36.230557,
+    "lng": 139.442061
+  },
+  {
+    "name": "貿易屋珈琲店",
+    "url": "https://bowekiya.theshop.jp/",
+    "instagram_url": null,
+    "platform": "BASE(theshop.jp)",
+    "shop_type": "single_location",
+    "address": "群馬県高崎市請地町19-11",
+    "prefecture": "群馬県",
+    "hours": null,
+    "map_query": "貿易屋珈琲店",
+    "nearest_station": {
+      "name": "北高崎",
+      "lines": [
+        "JR信越本線"
+      ],
+      "distance_m": 540,
+      "walk_min": 7
+    },
+    "data_source": "manual",
+    "source_note": null,
+    "last_verified_at": null,
+    "lat": 36.334314,
+    "lng": 139.003456
   }
 ]
