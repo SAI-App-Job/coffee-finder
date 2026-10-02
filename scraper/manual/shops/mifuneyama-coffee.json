@@ -1,0 +1,75 @@
+{
+  "shop": {
+    "name": "MIFUNEYAMA COFFEE",
+    "url": "https://mifuneyamacoffee.stores.jp/",
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "address": "千葉県木更津市畑沢南5-8-9",
+    "prefecture": "千葉県",
+    "tel": "080-9992-0689",
+    "source_note": "STORES.jpの公式ショップ(https://mifuneyamacoffee.stores.jp/)の商品ページをブラウザfetch()で2026-10-03に確認。自家焙煎(店舗説明)。木更津に2店舗。100g/200gが別ページのため100gを代表。「おまかせ」商品は除外",
+    "id": "mifuneyama-coffee",
+    "instagram_url": null,
+    "google_maps_query": "MIFUNEYAMA COFFEE 千葉県木更津市畑沢南5-8-9",
+    "hours": null,
+    "shop_type": "single_location",
+    "data_source": "manual",
+    "last_verified_at": "2026-10-03",
+    "lat": 35.340904,
+    "lng": 139.90366,
+    "nearest_station": {
+      "name": "君津",
+      "lines": [
+        "JR内房線"
+      ],
+      "distance_m": 1090,
+      "walk_min": 14
+    }
+  },
+  "products": [
+    {
+      "raw_name": "(中煎り)ブラジル モンテアレグレ",
+      "category": "ストレート",
+      "originCountry": "ブラジル",
+      "processingMethod": null,
+      "roast": "中煎り",
+      "flavorNotes": "モンテアレグレ農園、標高1000-1100m、パルプドナチュラル。",
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 960,
+      "weightG": 100,
+      "stockStatus": "販売中",
+      "productUrl": "https://mifuneyamacoffee.stores.jp/items/60cd3f4484ec6e233d810bd8",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "(深煎り)インドネシア マンデリン ビンタンリマ",
+      "category": "ストレート",
+      "originCountry": "インドネシア",
+      "processingMethod": null,
+      "roast": "深煎り",
+      "flavorNotes": "標高1,400m、スマトラ式。",
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1050,
+      "weightG": 100,
+      "stockStatus": "販売中",
+      "productUrl": "https://mifuneyamacoffee.stores.jp/items/60cd3bd491260a424c96929a",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "(深煎り)グアテマラ オリエンテ",
+      "category": "ストレート",
+      "originCountry": "グアテマラ",
+      "processingMethod": null,
+      "roast": "深煎り",
+      "flavorNotes": "標高1,500m-1,650m、オリエンテ(マタケスクイントラ、アヤルサ等)。",
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1030,
+      "weightG": 100,
+      "stockStatus": "一時的に品切れ",
+      "productUrl": "https://mifuneyamacoffee.stores.jp/items/5f536d1000f4d04416707748",
+      "data_source": "manual"
+    }
+  ]
+}

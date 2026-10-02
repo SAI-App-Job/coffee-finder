@@ -13830,5 +13830,1019 @@
     ],
     "lat": 35.991127,
     "lng": 139.088232
+  },
+  {
+    "name": "雨の日の珈琲",
+    "url": "https://amenohi-coffee.jp/",
+    "platform": "ショップサーブ",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認",
+    "address": "千葉県柏市あけぼの4-4-2 ライネスハイム柏107",
+    "prefecture": "千葉県",
+    "hours": null,
+    "map_query": "雨の日の珈琲",
+    "nearest_station": {
+      "name": "我孫子",
+      "lines": [
+        "JR常磐線各駅停車",
+        "JR常磐線快速",
+        "JR成田線我孫子支線"
+      ],
+      "distance_m": 2800,
+      "walk_min": 35
+    },
+    "last_scraped_at": "2026-10-02T22:25:15.910048+00:00",
+    "lat": 35.897833,
+    "lng": 140.007614
+  },
+  {
+    "name": "麻生珈琲店",
+    "url": "https://asocoffee.base.shop/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "千葉県市川市新田4-17-9",
+    "prefecture": "千葉県",
+    "hours": null,
+    "map_query": "麻生珈琲店",
+    "nearest_station": {
+      "name": "空港第2ビル",
+      "lines": [
+        "京成本線",
+        "京成成田空港線",
+        "JR成田線"
+      ],
+      "distance_m": 1290,
+      "walk_min": 16
+    },
+    "last_scraped_at": "2026-10-02T22:25:15.910048+00:00",
+    "lat": 35.783793,
+    "lng": 140.394209
+  },
+  {
+    "name": "珈琲 抱/HUG",
+    "url": "https://baisenhug.theshop.jp/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "千葉県夷隅郡大多喜町堀之内407",
+    "prefecture": "千葉県",
+    "hours": null,
+    "map_query": "珈琲 抱/HUG",
+    "nearest_station": {
+      "name": "東総元",
+      "lines": [
+        "いすみ鉄道"
+      ],
+      "distance_m": 1210,
+      "walk_min": 15
+    },
+    "last_scraped_at": "2026-10-02T22:25:15.910048+00:00",
+    "lat": 35.259911,
+    "lng": 140.260693
+  },
+  {
+    "name": "BLOWER COFFEE ROASTERY",
+    "url": "https://blowercoffee.com/",
+    "platform": "独自CMS(Digital Stage系)+ショッピングカート",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認",
+    "address": "千葉県館山市宮城78-3",
+    "prefecture": "千葉県",
+    "hours": null,
+    "map_query": "BLOWER COFFEE ROASTERY",
+    "nearest_station": {
+      "name": "館山",
+      "lines": [
+        "JR内房線"
+      ],
+      "distance_m": 3130,
+      "walk_min": 39
+    },
+    "last_scraped_at": "2026-10-02T22:25:15.910048+00:00",
+    "lat": 34.974236,
+    "lng": 139.840086
+  },
+  {
+    "name": "BONUS COFFEE Roastery",
+    "url": "https://bonuscoffee.base.shop/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "千葉県習志野市津田沼7-5-16",
+    "prefecture": "千葉県",
+    "hours": null,
+    "map_query": "BONUS COFFEE Roastery",
+    "nearest_station": {
+      "name": "津田沼",
+      "lines": [
+        "JR総武線",
+        "JR総武線快速"
+      ],
+      "distance_m": 30,
+      "walk_min": 1
+    },
+    "last_scraped_at": "2026-10-02T22:25:15.910048+00:00",
+    "lat": 35.691534,
+    "lng": 140.020367
+  },
+  {
+    "name": "Cafe Lutra",
+    "url": "https://cafe-lutra.com/",
+    "platform": "独自サイト(WordPress・店頭価格表)",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認",
+    "address": "千葉県市川市大野町4丁目3154-22",
+    "prefecture": "千葉県",
+    "hours": null,
+    "map_query": "Cafe Lutra",
+    "nearest_station": {
+      "name": "市川大野",
+      "lines": [
+        "JR武蔵野線"
+      ],
+      "distance_m": 1080,
+      "walk_min": 14
+    },
+    "last_scraped_at": "2026-10-02T22:25:15.910048+00:00",
+    "lat": 35.757954,
+    "lng": 139.962828
+  },
+  {
+    "name": "珈琲玉澤",
+    "url": "https://coffee-tamazawa.shop/",
+    "platform": "カラーミーショップ",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認",
+    "address": "千葉県香取市佐原イ3401",
+    "prefecture": "千葉県",
+    "hours": null,
+    "map_query": "珈琲玉澤",
+    "nearest_station": {
+      "name": "佐原",
+      "lines": [
+        "JR成田線"
+      ],
+      "distance_m": 460,
+      "walk_min": 6
+    },
+    "last_scraped_at": "2026-10-02T22:25:15.910048+00:00",
+    "lat": 35.892797,
+    "lng": 140.498674
+  },
+  {
+    "name": "DECO Specialty Coffee Roaster",
+    "url": "https://decocoffee.com/",
+    "platform": "Goope(店頭販売・メニュー掲載のみ)",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認",
+    "address": "千葉県東金市東金588",
+    "prefecture": "千葉県",
+    "hours": null,
+    "map_query": "DECO Specialty Coffee Roaster",
+    "nearest_station": {
+      "name": "東金",
+      "lines": [
+        "JR東金線"
+      ],
+      "distance_m": 20,
+      "walk_min": 1
+    },
+    "last_scraped_at": "2026-10-02T22:25:15.910048+00:00",
+    "lat": 35.560277,
+    "lng": 140.363614
+  },
+  {
+    "name": "ease coffee",
+    "url": "https://easecoffee.jp/",
+    "platform": "Shopify",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認(Shopify標準構成)",
+    "address": "千葉県柏市旭町1-7-17 1F",
+    "prefecture": "千葉県",
+    "hours": null,
+    "map_query": "ease coffee",
+    "nearest_station": {
+      "name": "豊四季",
+      "lines": [
+        "東武野田線"
+      ],
+      "distance_m": 1390,
+      "walk_min": 17
+    },
+    "last_scraped_at": "2026-10-02T22:25:15.910048+00:00",
+    "lat": 35.861437,
+    "lng": 139.953275
+  },
+  {
+    "name": "平野珈琲",
+    "url": "https://hirano-coffee.com/",
+    "platform": "独自サイト(静的HTML)",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認",
+    "address": "千葉県市川市市川2-30-25",
+    "prefecture": "千葉県",
+    "hours": null,
+    "map_query": "平野珈琲",
+    "nearest_station": {
+      "name": "市川",
+      "lines": [
+        "JR総武線",
+        "JR総武線快速"
+      ],
+      "distance_m": 20,
+      "walk_min": 1
+    },
+    "last_scraped_at": "2026-10-02T22:25:15.910048+00:00",
+    "lat": 35.728723,
+    "lng": 139.908064
+  },
+  {
+    "name": "ku.(コーヒー豆と器のお店)",
+    "url": "https://ku-plus-f.com/",
+    "platform": "EC-CUBE",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認",
+    "address": "千葉県千葉市稲毛区小仲台2-13-13",
+    "prefecture": "千葉県",
+    "hours": null,
+    "map_query": "ku.(コーヒー豆と器のお店)",
+    "nearest_station": {
+      "name": "稲毛",
+      "lines": [
+        "JR総武線",
+        "JR総武線快速"
+      ],
+      "distance_m": 1180,
+      "walk_min": 15
+    },
+    "last_scraped_at": "2026-10-02T22:25:15.910048+00:00",
+    "lat": 35.646043,
+    "lng": 140.099952
+  },
+  {
+    "name": "KUSA.喫茶 自家焙煎COFFEE+PAN.",
+    "url": "https://kusacafe.shop-pro.jp/",
+    "platform": "カラーミーショップ",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認",
+    "address": "千葉県長生郡長生村一松乙1987-14",
+    "prefecture": "千葉県",
+    "hours": null,
+    "map_query": "KUSA.喫茶 自家焙煎COFFEE+PAN.",
+    "nearest_station": {
+      "name": "上総一ノ宮",
+      "lines": [
+        "JR外房線"
+      ],
+      "distance_m": 2340,
+      "walk_min": 29
+    },
+    "last_scraped_at": "2026-10-02T22:25:15.910048+00:00",
+    "lat": 35.391225,
+    "lng": 140.37887
+  },
+  {
+    "name": "豆猫舎",
+    "url": "https://mamenekoya.shop-pro.jp/",
+    "platform": "カラーミーショップ",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認",
+    "address": "千葉県佐倉市宮前2-11-7",
+    "prefecture": "千葉県",
+    "hours": null,
+    "map_query": "豆猫舎",
+    "nearest_station": {
+      "name": "京成佐倉",
+      "lines": [
+        "京成本線"
+      ],
+      "distance_m": 1070,
+      "walk_min": 13
+    },
+    "last_scraped_at": "2026-10-02T22:25:15.910048+00:00",
+    "lat": 35.718748,
+    "lng": 140.220793
+  },
+  {
+    "name": "珈琲豆の館",
+    "url": "https://coffeemamenoyakata.com/",
+    "platform": "WordPress(電話・来店注文)",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認",
+    "address": "千葉県山武市成東668-6 富楽モール1A号室",
+    "prefecture": "千葉県",
+    "hours": null,
+    "map_query": "珈琲豆の館",
+    "nearest_station": {
+      "name": "成東",
+      "lines": [
+        "JR東金線",
+        "JR総武本線"
+      ],
+      "distance_m": 60,
+      "walk_min": 1
+    },
+    "last_scraped_at": "2026-10-02T22:25:15.910048+00:00",
+    "lat": 35.608453,
+    "lng": 140.410814
+  },
+  {
+    "name": "自家焙煎 珈琲豆屋",
+    "url": "https://store.shopping.yahoo.co.jp/mameya-netshoop/",
+    "platform": "Yahoo!ショッピング",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-10確認。User-agent: *は/cgi-bin/・/search.htmlの絞り込みクエリ等のみDisallow。本スクレイパーが使う/search.html・?page=1は制限対象外)",
+    "address": "千葉県柏市柏1-1-11",
+    "prefecture": "千葉県",
+    "hours": null,
+    "map_query": "自家焙煎 珈琲豆屋",
+    "nearest_station": {
+      "name": "柏",
+      "lines": [
+        "JR常磐線快速",
+        "JR常磐線各駅停車",
+        "東武野田線"
+      ],
+      "distance_m": 170,
+      "walk_min": 2
+    },
+    "last_scraped_at": "2026-10-02T22:25:15.910048+00:00",
+    "lat": 35.860821,
+    "lng": 139.970756
+  },
+  {
+    "name": "MOKICHI珈琲",
+    "url": "https://mokichi-coffee.com/",
+    "platform": "ショップサーブ",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認",
+    "address": "千葉県松戸市日暮1-2-8 雅裕ビル1F",
+    "prefecture": "千葉県",
+    "hours": null,
+    "map_query": "MOKICHI珈琲",
+    "nearest_station": {
+      "name": "くぬぎ山",
+      "lines": [
+        "京成松戸線"
+      ],
+      "distance_m": 1210,
+      "walk_min": 15
+    },
+    "last_scraped_at": "2026-10-02T22:25:15.910048+00:00",
+    "lat": 35.786294,
+    "lng": 139.963233
+  },
+  {
+    "name": "PEACE COFFEE ROASTERS",
+    "url": "https://peace-coffee.jp/",
+    "platform": "WordPress + WooCommerce",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認",
+    "address": "千葉県茂原市茂原15-5 山田ビル1F",
+    "prefecture": "千葉県",
+    "hours": null,
+    "map_query": "PEACE COFFEE ROASTERS",
+    "nearest_station": {
+      "name": "茂原",
+      "lines": [
+        "JR外房線"
+      ],
+      "distance_m": 30,
+      "walk_min": 1
+    },
+    "last_scraped_at": "2026-10-02T22:25:15.910048+00:00",
+    "lat": 35.426922,
+    "lng": 140.303875
+  },
+  {
+    "name": "CAFE&ROASTER SABUROHE",
+    "url": "https://saburohe.thebase.in/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "千葉県船橋市飯山満町3-1367",
+    "prefecture": "千葉県",
+    "hours": null,
+    "map_query": "CAFE&ROASTER SABUROHE",
+    "nearest_station": {
+      "name": "飯山満",
+      "lines": [
+        "東葉高速鉄道"
+      ],
+      "distance_m": 1240,
+      "walk_min": 16
+    },
+    "last_scraped_at": "2026-10-02T22:25:15.910048+00:00",
+    "lat": 35.71393,
+    "lng": 140.008594
+  },
+  {
+    "name": "サルビアコーヒー",
+    "url": "https://salvia-coffee.com/",
+    "platform": "WordPress + Welcart",
+    "shop_type": "single_location",
+    "robots_txt_status": "許可(2026-10確認。/wp-admin/以外は制限なし)",
+    "address": "千葉県館山市北条2576",
+    "prefecture": "千葉県",
+    "hours": null,
+    "map_query": "サルビアコーヒー",
+    "nearest_station": {
+      "name": "館山",
+      "lines": [
+        "JR内房線"
+      ],
+      "distance_m": 910,
+      "walk_min": 11
+    },
+    "last_scraped_at": "2026-10-02T22:25:15.910048+00:00",
+    "lat": 34.99723,
+    "lng": 139.871722
+  },
+  {
+    "name": "Scrop COFFEE ROASTERS",
+    "url": "https://scrop-coffee-roasters.com/",
+    "platform": "Shopify",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認(Shopify標準構成)",
+    "address": "千葉県流山市おおたかの森南1-5-1 流山おおたかの森S・C 3F",
+    "prefecture": "千葉県",
+    "hours": null,
+    "map_query": "Scrop COFFEE ROASTERS",
+    "nearest_station": {
+      "name": "流山おおたかの森",
+      "lines": [
+        "東武野田線",
+        "つくばエクスプレス線"
+      ],
+      "distance_m": 30,
+      "walk_min": 1
+    },
+    "last_scraped_at": "2026-10-02T22:25:15.910048+00:00",
+    "lat": 35.871973,
+    "lng": 139.925532
+  },
+  {
+    "name": "SEVEN STEPS COFFEE CLUB",
+    "url": "https://sevenstepscoffeeclub.com/",
+    "platform": "Shopify",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認(Shopify標準構成)",
+    "address": "千葉県千葉市稲毛区黒砂台1-11-21 高橋ビル1G",
+    "prefecture": "千葉県",
+    "hours": null,
+    "map_query": "SEVEN STEPS COFFEE CLUB",
+    "nearest_station": {
+      "name": "みどり台",
+      "lines": [
+        "京成千葉線"
+      ],
+      "distance_m": 600,
+      "walk_min": 8
+    },
+    "last_scraped_at": "2026-10-02T22:25:15.910048+00:00",
+    "lat": 35.629826,
+    "lng": 140.094476
+  },
+  {
+    "name": "SOLITO MAGO COFFEE LABO",
+    "url": "https://solitomago.thebase.in/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "千葉県柏市若柴226番地42 中央144街区2 C棟",
+    "prefecture": "千葉県",
+    "hours": null,
+    "map_query": "SOLITO MAGO COFFEE LABO",
+    "nearest_station": {
+      "name": "柏の葉キャンパス",
+      "lines": [
+        "つくばエクスプレス線"
+      ],
+      "distance_m": 200,
+      "walk_min": 3
+    },
+    "last_scraped_at": "2026-10-02T22:25:15.910048+00:00",
+    "lat": 35.894412,
+    "lng": 139.953979
+  },
+  {
+    "name": "SPAiCE COFFEE",
+    "url": "https://spaicecoffee.base.shop/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "千葉県勝浦市勝浦111",
+    "prefecture": "千葉県",
+    "hours": null,
+    "map_query": "SPAiCE COFFEE",
+    "nearest_station": {
+      "name": "勝浦",
+      "lines": [
+        "JR外房線"
+      ],
+      "distance_m": 80,
+      "walk_min": 1
+    },
+    "last_scraped_at": "2026-10-02T22:25:15.910048+00:00",
+    "lat": 35.153098,
+    "lng": 140.31288
+  },
+  {
+    "name": "The Rising Sun Coffee",
+    "url": "https://therisingsuncoffee.com/",
+    "platform": "Shopify",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認(Shopify標準構成)",
+    "address": "千葉県大網白里市大網1481-3",
+    "prefecture": "千葉県",
+    "hours": null,
+    "map_query": "The Rising Sun Coffee",
+    "nearest_station": {
+      "name": "大網",
+      "lines": [
+        "JR外房線",
+        "JR東金線"
+      ],
+      "distance_m": 50,
+      "walk_min": 1
+    },
+    "last_scraped_at": "2026-10-02T22:25:15.910048+00:00",
+    "lat": 35.52283,
+    "lng": 140.311
+  },
+  {
+    "name": "TONEGAWA COFFEE",
+    "url": "https://www.beans-shop.com/esp/",
+    "platform": "独自カート(eshop-do)",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認",
+    "address": "千葉県長生郡一宮町新地甲1921-10",
+    "prefecture": "千葉県",
+    "hours": null,
+    "map_query": "TONEGAWA COFFEE",
+    "nearest_station": {
+      "name": "上総一ノ宮",
+      "lines": [
+        "JR外房線"
+      ],
+      "distance_m": 570,
+      "walk_min": 7
+    },
+    "last_scraped_at": "2026-10-02T22:25:15.910048+00:00",
+    "lat": 35.3705,
+    "lng": 140.3703
+  },
+  {
+    "name": "TONES COFFEE ROASTERS",
+    "url": "https://tonescoffee.base.shop/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "千葉県柏市旭町1-3-6 1F",
+    "prefecture": "千葉県",
+    "hours": null,
+    "map_query": "TONES COFFEE ROASTERS",
+    "nearest_station": {
+      "name": "豊四季",
+      "lines": [
+        "東武野田線"
+      ],
+      "distance_m": 1390,
+      "walk_min": 17
+    },
+    "last_scraped_at": "2026-10-02T22:25:15.910048+00:00",
+    "lat": 35.861437,
+    "lng": 139.953275
+  },
+  {
+    "name": "珈琲工房わげん",
+    "url": "http://coffee-wagen.com/",
+    "platform": "静的HTML(メール・FAX・電話注文)",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認",
+    "address": "千葉県佐倉市栄町19-5",
+    "prefecture": "千葉県",
+    "hours": null,
+    "map_query": "珈琲工房わげん",
+    "nearest_station": {
+      "name": "京成佐倉",
+      "lines": [
+        "京成本線"
+      ],
+      "distance_m": 160,
+      "walk_min": 2
+    },
+    "last_scraped_at": "2026-10-02T22:25:15.910048+00:00",
+    "lat": 35.723936,
+    "lng": 140.230443
+  },
+  {
+    "name": "Asahi Sunrise Coffee",
+    "url": "https://asahisunrisecoffee.stores.jp/",
+    "instagram_url": null,
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "千葉県旭市イ1402",
+    "prefecture": "千葉県",
+    "hours": null,
+    "map_query": "Asahi Sunrise Coffee 千葉県旭市イ1402",
+    "nearest_station": {
+      "name": "旭",
+      "lines": [
+        "JR総武本線"
+      ],
+      "distance_m": 1240,
+      "walk_min": 16
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://asahisunrisecoffee.stores.jp/)の商品ページをブラウザfetch()で2026-10-03に確認。ダイレクトトレードのスペシャルティを扱うクラフトロースター(店舗説明)。豆は100g/200gの選択制で100gを代表。番地表記は公式サイト掲載の「イ1402」",
+    "last_verified_at": "2026-10-03",
+    "locations": [
+      {
+        "label": null,
+        "address": "千葉県旭市イ1402",
+        "prefecture": "千葉県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "Asahi Sunrise Coffee 千葉県旭市イ1402",
+        "lat": 35.723258,
+        "lng": 140.668643
+      }
+    ],
+    "lat": 35.723258,
+    "lng": 140.668643
+  },
+  {
+    "name": "CaffeNil",
+    "url": "https://caffe-nil.stores.jp/",
+    "instagram_url": null,
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "千葉県市川市行徳駅前1-7-9",
+    "prefecture": "千葉県",
+    "hours": null,
+    "map_query": "CaffeNil 千葉県市川市行徳駅前1-7-9",
+    "nearest_station": {
+      "name": "市川塩浜",
+      "lines": [
+        "JR京葉線"
+      ],
+      "distance_m": 1010,
+      "walk_min": 13
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://caffe-nil.stores.jp/)の商品ページをブラウザfetch()で2026-10-03に確認。2017年に市川市行徳で創業した自家焙煎店。特商法表記の所在地は市川市湊新田2-1-25。豆は100g/200gの選択制で100gを代表",
+    "last_verified_at": "2026-10-03",
+    "locations": [
+      {
+        "label": null,
+        "address": "千葉県市川市行徳駅前1-7-9",
+        "prefecture": "千葉県",
+        "hours": null,
+        "tel": "047-705-0888",
+        "is_headquarters": false,
+        "map_query": "CaffeNil 千葉県市川市行徳駅前1-7-9",
+        "lat": 35.665208,
+        "lng": 139.912634
+      }
+    ],
+    "lat": 35.665208,
+    "lng": 139.912634
+  },
+  {
+    "name": "自家焙煎珈琲豆屋 じゃくう鳥",
+    "url": "https://jacudori.stores.jp/",
+    "instagram_url": null,
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "千葉県千葉市中央区大巌寺町",
+    "prefecture": "千葉県",
+    "hours": null,
+    "map_query": "自家焙煎珈琲豆屋 じゃくう鳥 千葉県千葉市中央区大巌寺町",
+    "nearest_station": {
+      "name": "大森台",
+      "lines": [
+        "京成千原線"
+      ],
+      "distance_m": 1270,
+      "walk_min": 16
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://jacudori.stores.jp/)の商品ページをブラウザfetch()で2026-10-03に確認。店舗の焙煎機で自家焙煎(ABOUTページ)。番地は公開情報で確認できず町名まで",
+    "last_verified_at": "2026-10-03",
+    "locations": [
+      {
+        "label": null,
+        "address": "千葉県千葉市中央区大巌寺町",
+        "prefecture": "千葉県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "自家焙煎珈琲豆屋 じゃくう鳥 千葉県千葉市中央区大巌寺町",
+        "lat": 35.572928,
+        "lng": 140.146783
+      }
+    ],
+    "lat": 35.572928,
+    "lng": 140.146783
+  },
+  {
+    "name": "maruto.coffee",
+    "url": "https://maruto-coffee.stores.jp/",
+    "instagram_url": null,
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "千葉県山武市姫島584",
+    "prefecture": "千葉県",
+    "hours": null,
+    "map_query": "maruto.coffee 千葉県山武市姫島584",
+    "nearest_station": {
+      "name": "求名",
+      "lines": [
+        "JR東金線"
+      ],
+      "distance_m": 1330,
+      "walk_min": 17
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://maruto-coffee.stores.jp/)の商品ページをブラウザfetch()で2026-10-03に確認。2012年独立の直火焙煎の自家焙煎店(実店舗なし、道の駅等の直売所でも販売)。豆は100g/200gの選択制で100gを代表",
+    "last_verified_at": "2026-10-03",
+    "locations": [
+      {
+        "label": null,
+        "address": "千葉県山武市姫島584",
+        "prefecture": "千葉県",
+        "hours": null,
+        "tel": "0475-82-4006",
+        "is_headquarters": false,
+        "map_query": "maruto.coffee 千葉県山武市姫島584",
+        "lat": 35.591253,
+        "lng": 140.391444
+      }
+    ],
+    "lat": 35.591253,
+    "lng": 140.391444
+  },
+  {
+    "name": "MIFUNEYAMA COFFEE",
+    "url": "https://mifuneyamacoffee.stores.jp/",
+    "instagram_url": null,
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "千葉県木更津市畑沢南5-8-9",
+    "prefecture": "千葉県",
+    "hours": null,
+    "map_query": "MIFUNEYAMA COFFEE 千葉県木更津市畑沢南5-8-9",
+    "nearest_station": {
+      "name": "君津",
+      "lines": [
+        "JR内房線"
+      ],
+      "distance_m": 1090,
+      "walk_min": 14
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://mifuneyamacoffee.stores.jp/)の商品ページをブラウザfetch()で2026-10-03に確認。自家焙煎(店舗説明)。木更津に2店舗。100g/200gが別ページのため100gを代表。「おまかせ」商品は除外",
+    "last_verified_at": "2026-10-03",
+    "locations": [
+      {
+        "label": null,
+        "address": "千葉県木更津市畑沢南5-8-9",
+        "prefecture": "千葉県",
+        "hours": null,
+        "tel": "080-9992-0689",
+        "is_headquarters": false,
+        "map_query": "MIFUNEYAMA COFFEE 千葉県木更津市畑沢南5-8-9",
+        "lat": 35.340904,
+        "lng": 139.90366
+      }
+    ],
+    "lat": 35.340904,
+    "lng": 139.90366
+  },
+  {
+    "name": "南流山こーひー焙煎",
+    "url": "https://minaminagareyama.stores.jp/",
+    "instagram_url": null,
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "千葉県流山市鰭ケ崎8-3 シナプス流山1B",
+    "prefecture": "千葉県",
+    "hours": null,
+    "map_query": "南流山こーひー焙煎 千葉県流山市鰭ケ崎8-3 シナプス流山1B",
+    "nearest_station": {
+      "name": "鰭ヶ崎",
+      "lines": [
+        "流鉄流山線"
+      ],
+      "distance_m": 180,
+      "walk_min": 2
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://minaminagareyama.stores.jp/)の商品ページをブラウザfetch()で2026-10-03に確認。2025年4月開店の家族経営の自家焙煎店。豆は200g/300gの選択制で200gを代表",
+    "last_verified_at": "2026-10-03",
+    "locations": [
+      {
+        "label": null,
+        "address": "千葉県流山市鰭ケ崎8-3 シナプス流山1B",
+        "prefecture": "千葉県",
+        "hours": null,
+        "tel": "080-5644-2595",
+        "is_headquarters": false,
+        "map_query": "南流山こーひー焙煎 千葉県流山市鰭ケ崎8-3 シナプス流山1B",
+        "lat": 35.839345,
+        "lng": 139.911176
+      }
+    ],
+    "lat": 35.839345,
+    "lng": 139.911176
+  },
+  {
+    "name": "港乃珈琲店",
+    "url": "https://minatonocoffee.stores.jp/",
+    "instagram_url": null,
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "千葉県銚子市",
+    "prefecture": "千葉県",
+    "hours": null,
+    "map_query": "港乃珈琲店 千葉県銚子市",
+    "nearest_station": {
+      "name": "銚子",
+      "lines": [
+        "銚子電鉄線",
+        "JR総武本線"
+      ],
+      "distance_m": 570,
+      "walk_min": 7
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://minatonocoffee.stores.jp/)の商品ページをブラウザfetch()で2026-10-03に確認。銚子市の港町で毎日少量ずつ焙煎する自家焙煎の豆屋(店舗説明)。町名・番地は公開情報で確認できず市まで。100g/200gの選択制で100gを代表",
+    "last_verified_at": "2026-10-03",
+    "locations": [
+      {
+        "label": null,
+        "address": "千葉県銚子市",
+        "prefecture": "千葉県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "港乃珈琲店 千葉県銚子市",
+        "lat": 35.734534,
+        "lng": 140.827267
+      }
+    ],
+    "lat": 35.734534,
+    "lng": 140.827267
+  },
+  {
+    "name": "おたべの森の珈琲",
+    "url": "https://otabenomorinocoffee.stores.jp/",
+    "instagram_url": null,
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "千葉県市原市小田部116-9",
+    "prefecture": "千葉県",
+    "hours": null,
+    "map_query": "おたべの森の珈琲 千葉県市原市小田部116-9",
+    "nearest_station": {
+      "name": "海士有木",
+      "lines": [
+        "小湊鉄道"
+      ],
+      "distance_m": 2610,
+      "walk_min": 33
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://otabenomorinocoffee.stores.jp/)の商品ページをブラウザfetch()で2026-10-03に確認。2.5kg直火式焙煎機で自家焙煎(店舗説明)",
+    "last_verified_at": "2026-10-03",
+    "locations": [
+      {
+        "label": null,
+        "address": "千葉県市原市小田部116-9",
+        "prefecture": "千葉県",
+        "hours": null,
+        "tel": "080-2659-4646",
+        "is_headquarters": false,
+        "map_query": "おたべの森の珈琲 千葉県市原市小田部116-9",
+        "lat": 35.487506,
+        "lng": 140.152145
+      }
+    ],
+    "lat": 35.487506,
+    "lng": 140.152145
+  },
+  {
+    "name": "虹の珈琲焙煎所",
+    "url": "https://rainbow-coffee.stores.jp/",
+    "instagram_url": null,
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "千葉県千葉市中央区登戸3-17-6",
+    "prefecture": "千葉県",
+    "hours": null,
+    "map_query": "虹の珈琲焙煎所 千葉県千葉市中央区登戸3-17-6",
+    "nearest_station": {
+      "name": "新千葉",
+      "lines": [
+        "京成千葉線"
+      ],
+      "distance_m": 320,
+      "walk_min": 4
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://rainbow-coffee.stores.jp/)の商品ページをブラウザfetch()で2026-10-03に確認。注文を受けてから焙煎する100gからの受注焙煎(店舗説明)。配合を指定するカスタマイズ商品は除外",
+    "last_verified_at": "2026-10-03",
+    "locations": [
+      {
+        "label": null,
+        "address": "千葉県千葉市中央区登戸3-17-6",
+        "prefecture": "千葉県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "虹の珈琲焙煎所 千葉県千葉市中央区登戸3-17-6",
+        "lat": 35.611171,
+        "lng": 140.105351
+      }
+    ],
+    "lat": 35.611171,
+    "lng": 140.105351
+  },
+  {
+    "name": "Tokoa coffee",
+    "url": "https://tokoacoffee.shop/",
+    "instagram_url": null,
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "千葉県松戸市河原塚394-3-101",
+    "prefecture": "千葉県",
+    "hours": null,
+    "map_query": "Tokoa coffee 千葉県松戸市河原塚394-3-101",
+    "nearest_station": {
+      "name": "八柱",
+      "lines": [
+        "京成松戸線"
+      ],
+      "distance_m": 1130,
+      "walk_min": 14
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://tokoacoffee.shop/)の商品ページをブラウザfetch()で2026-10-03に確認。手回し焙煎の自家焙煎(公式サイトtokoacoffee.com)",
+    "last_verified_at": "2026-10-03",
+    "locations": [
+      {
+        "label": null,
+        "address": "千葉県松戸市河原塚394-3-101",
+        "prefecture": "千葉県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "Tokoa coffee 千葉県松戸市河原塚394-3-101",
+        "lat": 35.781403,
+        "lng": 139.939845
+      }
+    ],
+    "lat": 35.781403,
+    "lng": 139.939845
+  },
+  {
+    "name": "ヤマドリ珈琲",
+    "url": "https://yamadori-coffee.stores.jp/",
+    "instagram_url": null,
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "千葉県市原市月出1045 月出工舎1F",
+    "prefecture": "千葉県",
+    "hours": null,
+    "map_query": "ヤマドリ珈琲 千葉県市原市月出1045 月出工舎1F",
+    "nearest_station": {
+      "name": "上総大久保",
+      "lines": [
+        "小湊鉄道"
+      ],
+      "distance_m": 3870,
+      "walk_min": 48
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://yamadori-coffee.stores.jp/)の商品ページをブラウザfetch()で2026-10-03に確認。廃校を再生した月出工舎内の焙煎所(公式ショップ説明)",
+    "last_verified_at": "2026-10-03",
+    "locations": [
+      {
+        "label": null,
+        "address": "千葉県市原市月出1045 月出工舎1F",
+        "prefecture": "千葉県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "ヤマドリ珈琲 千葉県市原市月出1045 月出工舎1F",
+        "lat": 35.298079,
+        "lng": 140.184462
+      }
+    ],
+    "lat": 35.298079,
+    "lng": 140.184462
   }
 ]

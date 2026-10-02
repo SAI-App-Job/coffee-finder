@@ -1,0 +1,120 @@
+{
+  "shop": {
+    "name": "虹の珈琲焙煎所",
+    "url": "https://rainbow-coffee.stores.jp/",
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "address": "千葉県千葉市中央区登戸3-17-6",
+    "prefecture": "千葉県",
+    "source_note": "STORES.jpの公式ショップ(https://rainbow-coffee.stores.jp/)の商品ページをブラウザfetch()で2026-10-03に確認。注文を受けてから焙煎する100gからの受注焙煎(店舗説明)。配合を指定するカスタマイズ商品は除外",
+    "id": "rainbow-coffee",
+    "instagram_url": null,
+    "google_maps_query": "虹の珈琲焙煎所 千葉県千葉市中央区登戸3-17-6",
+    "tel": null,
+    "hours": null,
+    "shop_type": "single_location",
+    "data_source": "manual",
+    "last_verified_at": "2026-10-03",
+    "lat": 35.611171,
+    "lng": 140.105351,
+    "nearest_station": {
+      "name": "新千葉",
+      "lines": [
+        "京成千葉線"
+      ],
+      "distance_m": 320,
+      "walk_min": 4
+    }
+  },
+  "products": [
+    {
+      "raw_name": "ノンカフェイン コロンビア",
+      "category": "ストレート",
+      "originCountry": "コロンビア",
+      "processingMethod": null,
+      "roast": null,
+      "flavorNotes": "完熟豆だけを摘み取り、甘みも芳醇で柔らかなコク。程よい酸味の中にトロピカルフルーツのような風味。",
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 600,
+      "weightG": 100,
+      "stockStatus": "販売中",
+      "productUrl": "https://rainbow-coffee.stores.jp/items/57387f4fa458c0a8b200cc7b",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "マンデリンG1",
+      "category": "ストレート",
+      "originCountry": "インドネシア",
+      "processingMethod": null,
+      "roast": null,
+      "flavorNotes": "力強いコクとコーヒーらしい苦味のバランス。カフェオレ向き。",
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 700,
+      "weightG": 100,
+      "stockStatus": "販売中",
+      "productUrl": "https://rainbow-coffee.stores.jp/items/5e3ebd8194cf7b0f5274f2e2",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "モカ・シダモ",
+      "category": "ストレート",
+      "originCountry": "エチオピア",
+      "processingMethod": null,
+      "roast": null,
+      "flavorNotes": "独特の甘い香りと気品ある酸味。",
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 600,
+      "weightG": 100,
+      "stockStatus": "販売中",
+      "productUrl": "https://rainbow-coffee.stores.jp/items/57387eb500d331c7a60112a0",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "グアテマラSHB",
+      "category": "ストレート",
+      "originCountry": "グアテマラ",
+      "processingMethod": null,
+      "roast": null,
+      "flavorNotes": "ブレンドの香り付けにも使われる豊かな香り。酸味とコクのバランス。",
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 700,
+      "weightG": 100,
+      "stockStatus": "販売中",
+      "productUrl": "https://rainbow-coffee.stores.jp/items/5e3ebae7c78a534d71d675ee",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "ブラジル",
+      "category": "ストレート",
+      "originCountry": "ブラジル",
+      "processingMethod": null,
+      "roast": null,
+      "flavorNotes": "バランスの取れたマイルドコーヒー。柔らかな酸味と苦味。",
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 600,
+      "weightG": 100,
+      "stockStatus": "販売中",
+      "productUrl": "https://rainbow-coffee.stores.jp/items/5e3ebbf994cf7b2d6d74f1a2",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "水出し専用ブレンド",
+      "category": "ブレンド",
+      "originCountry": null,
+      "processingMethod": null,
+      "roast": null,
+      "flavorNotes": "水出し専用のオリジナルブレンド。まろやかでスッキリとした苦味。",
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 600,
+      "weightG": 100,
+      "stockStatus": "販売中",
+      "productUrl": "https://rainbow-coffee.stores.jp/items/57387e5aa458c089d601404a",
+      "data_source": "manual"
+    }
+  ]
+}

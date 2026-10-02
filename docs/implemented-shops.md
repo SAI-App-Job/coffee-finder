@@ -5,7 +5,7 @@
 `scraper/manual/shops/`配下、それ以外は`scraper/scrape_*.py`で自動取得。
 実装を見送った店舗は`docs/not-implementable-shops.md`を参照。
 
-合計657店舗・12022商品(生成日: 2026-10-02)。
+合計695店舗・12481商品(生成日: 2026-10-02)。
 
 再生成コマンド:
 ```
@@ -574,17 +574,55 @@ aggregate_shops.py実行後の`git diff --staged --quiet || git commit`が該当
 | アダチコーヒー |  | Ocnk | 28 |
 | 自家焙煎 香珈 Beans＆Cafe |  | Goope | 15 |
 | 豆NAKANO |  | カラーミー | 17 |
+| Asahi Sunrise Coffee | 旭市イ1402 | STORES(手動) | 10 |
+| 珈琲 抱/HUG | 夷隅郡大多喜町堀之内407 | BASE | 7 |
+| BLOWER COFFEE ROASTERY | 館山市宮城78-3 | 独自CMS(Digital Stage系)+ショッピングカート | 5 |
+| サルビアコーヒー | 館山市北条2576 | Welcart | 18 |
+| 珈琲玉澤 | 香取市佐原イ3401 | カラーミー | 12 |
+| 珈琲工房わげん | 佐倉市栄町19-5 | 静的HTML(メール・FAX・電話注文) | 12 |
+| 豆猫舎 | 佐倉市宮前2-11-7 | カラーミー | 6 |
+| 珈琲豆の館 | 山武市成東668-6 富楽モール1A号室 | WordPress | 21 |
+| maruto.coffee | 山武市姫島584 | STORES(手動) | 17 |
 | TABEI COFFEE | 四街道市 | Welcart | 12 |
+| ヤマドリ珈琲 | 市原市月出1045 月出工舎1F | STORES(手動) | 8 |
+| おたべの森の珈琲 | 市原市小田部116-9 | STORES(手動) | 7 |
+| CaffeNil | 市川市行徳駅前1-7-9 | STORES(手動) | 9 |
+| 平野珈琲 | 市川市市川2-30-25 | 独自サイト(静的HTML) | 14 |
 | CAMBLEM グリーン珈琲焙煎所 | 市川市市川南1丁目(市川店) | Shopify | 44 |
+| 麻生珈琲店 | 市川市新田4-17-9 | BASE | 10 |
+| Cafe Lutra | 市川市大野町4丁目3154-22 | 独自サイト(WordPress・店頭価格表) | 43 |
 | 萌季屋 | 市川市八幡 | カラーミー | 18 |
+| BONUS COFFEE Roastery | 習志野市津田沼7-5-16 | BASE | 4 |
+| SPAiCE COFFEE | 勝浦市勝浦111 | BASE | 8 |
+| Tokoa coffee | 松戸市河原塚394-3-101 | STORES(手動) | 7 |
+| MOKICHI珈琲 | 松戸市日暮1-2-8 雅裕ビル1F | ショップサーブ | 12 |
+| SEVEN STEPS COFFEE CLUB | 千葉市稲毛区黒砂台1-11-21 高橋ビル1G | Shopify | 7 |
+| ku.(コーヒー豆と器のお店) | 千葉市稲毛区小仲台2-13-13 | EC-CUBE | 4 |
 | Eureka Coffee Roasters | 千葉市稲毛区緑町1-8-16 | Shopify | 37 |
 | ROASTER's HOUSE | 千葉市花見川区花園1-20-7 | BASE | 21 |
 | エトナコーヒー | 千葉市花見川区幕張 | MakeShop | 89 |
+| 自家焙煎珈琲豆屋 じゃくう鳥 | 千葉市中央区大巌寺町 | STORES(手動) | 12 |
+| 虹の珈琲焙煎所 | 千葉市中央区登戸3-17-6 | STORES(手動) | 6 |
 | RUMOR'S COFFEE | 千葉市緑区おゆみ野南2-16-3 | BASE | 37 |
 | Coffee Roast 焙香 | 船橋市 | BASE | 40 |
 | 珈琲豆のおおつか | 船橋市 | らくうるカート | 49 |
+| CAFE&ROASTER SABUROHE | 船橋市飯山満町3-1367 | BASE | 6 |
+| The Rising Sun Coffee | 大網白里市大網1481-3 | Shopify | 8 |
+| 港乃珈琲店 | 銚子市 | STORES(手動) | 10 |
+| TONEGAWA COFFEE | 長生郡一宮町新地甲1921-10 | 独自カート(eshop-do) | 19 |
+| KUSA.喫茶 自家焙煎COFFEE+PAN. | 長生郡長生村一松乙1987-14 | カラーミー | 27 |
+| DECO Specialty Coffee Roaster | 東金市東金588 | Goope(店頭販売・メニュー掲載のみ) | 9 |
+| 雨の日の珈琲 | 柏市あけぼの4-4-2 ライネスハイム柏107 | ショップサーブ | 32 |
+| TONES COFFEE ROASTERS | 柏市旭町1-3-6 1F | BASE | 4 |
+| ease coffee | 柏市旭町1-7-17 1F | Shopify | 8 |
+| SOLITO MAGO COFFEE LABO | 柏市若柴226番地42 中央144街区2 C棟 | BASE | 11 |
 | 珈琲工房豆壱 | 柏市中央2-9-11-102 | BASE | 43 |
+| 自家焙煎 珈琲豆屋 | 柏市柏1-1-11 | Yahoo!ショッピング | 16 |
 | きたみcoffee | 八千代市 | EC-CUBE | 23 |
+| PEACE COFFEE ROASTERS | 茂原市茂原15-5 山田ビル1F | WooCommerce | 10 |
+| MIFUNEYAMA COFFEE | 木更津市畑沢南5-8-9 | STORES(手動) | 3 |
+| Scrop COFFEE ROASTERS | 流山市おおたかの森南1-5-1 流山おおたかの森S・C 3F | Shopify | 20 |
+| 南流山こーひー焙煎 | 流山市鰭ケ崎8-3 シナプス流山1B | STORES(手動) | 17 |
 
 ### 大阪府
 
