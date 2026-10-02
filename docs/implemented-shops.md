@@ -5,7 +5,7 @@
 `scraper/manual/shops/`配下、それ以外は`scraper/scrape_*.py`で自動取得。
 実装を見送った店舗は`docs/not-implementable-shops.md`を参照。
 
-合計655店舗・12004商品(生成日: 2026-10-02)。
+合計657店舗・12022商品(生成日: 2026-10-02)。
 
 再生成コマンド:
 ```
@@ -330,6 +330,7 @@ aggregate_shops.py実行後の`git diff --staged --quiet || git commit`が該当
 
 | 店舗名 | 所在地 | 方式 | 件数 |
 |---|---|---|---|
+| MICHELLE coffee & cakes | さいたま市浦和区仲町2-9-5 | 手動 | 8 |
 | コンコード | さいたま市浦和区北浦和3-8-6 | 手動 | 22 |
 | 森谷珈琲工房 | さいたま市岩槻区慈恩寺546-28 | Ocnk | 10 |
 | KURIHARA COFFEE ROASTERS | さいたま市桜区下大久保 | BASE | 6 |
@@ -370,6 +371,7 @@ aggregate_shops.py実行後の`git diff --staged --quiet || git commit`が該当
 | トレモロコーヒーロースター | 草加市草加3-8-15 | BASE | 16 |
 | 珈琲豆専門店 Kopi Luak | 草加市中央2-2-7 | Wix(Wix Stores) | 26 |
 | こりす珈琲豆 | 草加市北谷2-29-1 | STORES(手動) | 22 |
+| ちちぶコーヒー Roast & Research | 秩父市熊木町15-2 KMGビル1F 101 | 手動 | 10 |
 | 幸音珈琲 | 朝霞市本町1-10-30 | Ocnk | 9 |
 | コヤナギコーヒーニッポン | 東松山市下唐子1967-2 | Wix(Wix Stores) | 9 |
 | coffee mameco | 東松山市六反町3-32 | Shopify | 13 |

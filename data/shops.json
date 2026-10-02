@@ -13752,5 +13752,83 @@
     ],
     "lat": 35.82508,
     "lng": 139.805807
+  },
+  {
+    "name": "MICHELLE coffee & cakes",
+    "url": "https://michelle-urawa.square.site/",
+    "instagram_url": null,
+    "platform": "Square Online(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "埼玉県さいたま市浦和区仲町2-9-5",
+    "prefecture": "埼玉県",
+    "hours": null,
+    "map_query": "MICHELLE coffee & cakes 埼玉県さいたま市浦和区仲町2-9-5",
+    "nearest_station": {
+      "name": "浦和",
+      "lines": [
+        "JR高崎線",
+        "JR宇都宮線",
+        "JR湘南新宿ライン",
+        "JR京浜東北線",
+        "JR上野東京ライン"
+      ],
+      "distance_m": 690,
+      "walk_min": 9
+    },
+    "data_source": "manual",
+    "source_note": "Square Onlineの公式ショップ(https://michelle-urawa.square.site/s/shop)の商品ページをブラウザfetch()で2026-10-03に確認。ドイツ製プロバット焙煎機で自家焙煎(ABOUTページ)。焙煎度はショップ独自の5段階スケール(Light Roast〜Dark Roast)の位置から換算",
+    "last_verified_at": "2026-10-03",
+    "locations": [
+      {
+        "label": null,
+        "address": "埼玉県さいたま市浦和区仲町2-9-5",
+        "prefecture": "埼玉県",
+        "hours": null,
+        "tel": "048-711-6011",
+        "is_headquarters": false,
+        "map_query": "MICHELLE coffee & cakes 埼玉県さいたま市浦和区仲町2-9-5",
+        "lat": 35.860157,
+        "lng": 139.649758
+      }
+    ],
+    "lat": 35.860157,
+    "lng": 139.649758
+  },
+  {
+    "name": "ちちぶコーヒー Roast & Research",
+    "url": "https://www.chichibucoffee.com/",
+    "instagram_url": null,
+    "platform": "Square Online(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "埼玉県秩父市熊木町15-2 KMGビル1F 101",
+    "prefecture": "埼玉県",
+    "hours": null,
+    "map_query": "ちちぶコーヒー Roast & Research 埼玉県秩父市熊木町15-2 KMGビル1F 101",
+    "nearest_station": {
+      "name": "西武秩父",
+      "lines": [
+        "西武秩父線"
+      ],
+      "distance_m": 440,
+      "walk_min": 6
+    },
+    "data_source": "manual",
+    "source_note": "Square Onlineの公式ショップ(https://www.chichibucoffee.com/s/shop)の商品ページをブラウザfetch()で2026-10-03に確認。2024年8月開設の焙煎所(焙煎豆販売店舗)。店舗は秩父の1店のみ",
+    "last_verified_at": "2026-10-03",
+    "locations": [
+      {
+        "label": null,
+        "address": "埼玉県秩父市熊木町15-2 KMGビル1F 101",
+        "prefecture": "埼玉県",
+        "hours": null,
+        "tel": "0494-53-8998",
+        "is_headquarters": false,
+        "map_query": "ちちぶコーヒー Roast & Research 埼玉県秩父市熊木町15-2 KMGビル1F 101",
+        "lat": 35.991127,
+        "lng": 139.088232
+      }
+    ],
+    "lat": 35.991127,
+    "lng": 139.088232
   }
 ]
