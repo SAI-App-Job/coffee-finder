@@ -8035,3 +8035,54 @@ COFFEEWORKS・豆わらべ・しかくCOFFEE・coffee mameco・アスロンコ�
   マリドンコーヒー・ハーバー珈琲吉岡店のlocations同期漏れの補完)。全10店舗を
   geocode-shops.js・add-nearest-station.jsで座標・最寄り駅データも整備済み。
   埼玉県は既存12店舗+新規10店舗の計22店舗が実装済みとなった。
+
+## 埼玉県再調査: 新規発掘34候補の実装 第1弾(2026-10-03)
+
+埼玉県の新規発掘で見つかった34候補を3段階で実装する方針で、第1弾は通常の
+スクレイプ(BASE・Shopify・カラーミー・ocnk・ラクウル・EC-CUBE・静的HTML)で
+取得できる15店舗を実装した。
+
+### バッチ503: 50 COFFEE & ROASTERY（深谷市深谷町9-12、カラーミーショップ）
+- `scraper/scrape_50coffee.py`。EUC-JPのためencodingを指定。カテゴリ2つから8商品。
+  説明は本文の「テイスト/農園情報」、重量は「100g 1220円」形式の行から取得。
+
+### バッチ504: 森谷珈琲工房（さいたま市岩槻区慈恩寺546-28、おちゃのこネット）
+- `scraper/scrape_moriyacoffee.py`。100g商品のみ10商品。在庫なしは完売扱い。
+
+### バッチ505: glin coffee（川越市脇田本町8-1、Shopify）
+- `scraper/scrape_glincoffee.py`。川越市内4店舗で11店舗未満。product_typeが
+  コーヒー豆の8銘柄(飲み比べセット除外)。商品名先頭の【焙煎度】をroast_levelに移した。
+
+### バッチ506〜514: BASE系9店舗(テンプレートから生成)
+- TAKA COFFEE STAND(さいたま市南区、11商品・200g)・Coffee&Beans takechiyo
+  (上尾市、14商品・100g)・AMBER DROP COFFEE ROASTERS(川口市、23商品・100g)・
+  COFFEE POST(川越市、9商品)・HILL PINE'S ESPRESSO(川越市、5商品)・
+  アキモトコーヒーロースターズ(熊谷市、6商品。栃木県の秋元珈琲焙煎所とは別店舗)・
+  やまびより珈琲(飯能市、20商品・200g)・Cafe Sorte(日高市、4商品。
+  `www.cafesorte.com`を使うこと、`cafe-sorte.com`は乗っ取りドメイン)・
+  HASABA COFFEE ROASTERS(所沢市、焙煎済み豆7商品・135g)。
+- 同一銘柄が100g/200gで別ページの店舗は100gを代表として収録。BASEは商品名に
+  含まれない産地(中国・タイ・ケニヤ・パプアニューギニア・東ティモール)を
+  ORIGIN_OVERRIDESで補完した。
+
+### バッチ515: マルワコーヒー（上尾市上1135-1、ラクウル）
+- `scraper/scrape_maruwacoffee.py`。ストレート16・ブレンド13のうち水出しパックと
+  会員様専用カートを除く27商品(100g)。在庫0の「バリアラビカ神山」は完売。
+
+### バッチ516: タカノ珈琲（川口市中青木2-3-40、EC-CUBE）
+- `scraper/scrape_takanocoffee.py`。1950年創業の工場直販店(川口の1店のみ)。
+  焙煎豆5カテゴリから46商品(200g、プレミアム限定品は100g〜)。生豆生産国が
+  複数のアイスコーヒー等はブレンド扱い。
+
+### バッチ517: ビーンズ(越谷)（越谷市蒲生寿町18-30、CGIカート・Shift_JIS）
+- `scraper/scrape_beansdirect.py`。注文後焙煎の自家焙煎店。200g価格表の20商品。
+  「欠品中」表示のブルーマウンテンセレクトは完売。
+
+### 対象外・他県への振り替え
+- **Scrop COFFEE ROASTERS**: 常設店舗は千葉県流山市で熊谷は工場のため
+  埼玉県からは除外し、千葉県の調査時に扱う。
+
+- 影響: 新規15店舗・218商品を追加(627→642店舗、11537→11755商品)。既存店舗・
+  商品への意図しない変更は無いことをisolation-merge検証で確認済み
+  (stale状態ファイル混入の除去、Braikan coffeeのlocations同期補完のみ)。
+  全15店舗をgeocode-shops.js・add-nearest-station.jsで座標・最寄り駅も整備済み。

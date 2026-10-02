@@ -12758,6 +12758,19 @@
     "data_source": "manual",
     "source_note": null,
     "last_verified_at": null,
+    "locations": [
+      {
+        "label": null,
+        "address": "埼玉県八潮市大曽根1250-3",
+        "prefecture": "埼玉県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "Braikan coffee",
+        "lat": 35.804554,
+        "lng": 139.82774
+      }
+    ],
     "lat": 35.804554,
     "lng": 139.82774
   },
@@ -12936,5 +12949,337 @@
     "last_scraped_at": "2026-10-02T16:17:46.986038+00:00",
     "lat": 35.819804,
     "lng": 139.673522
+  },
+  {
+    "name": "50 COFFEE & ROASTERY",
+    "url": "https://50coffeeandroastery.com/",
+    "platform": "カラーミーショップ",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認",
+    "address": "埼玉県深谷市深谷町9-12",
+    "prefecture": "埼玉県",
+    "hours": null,
+    "map_query": "50 COFFEE & ROASTERY",
+    "nearest_station": {
+      "name": "深谷",
+      "lines": [
+        "JR高崎線"
+      ],
+      "distance_m": 550,
+      "walk_min": 7
+    },
+    "last_scraped_at": "2026-10-02T17:10:55.436673+00:00",
+    "lat": 36.195718,
+    "lng": 139.278406
+  },
+  {
+    "name": "森谷珈琲工房",
+    "url": "https://moriyacoffee.ocnk.net/",
+    "platform": "おちゃのこネット",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認",
+    "address": "埼玉県さいたま市岩槻区慈恩寺546-28",
+    "prefecture": "埼玉県",
+    "hours": null,
+    "map_query": "森谷珈琲工房",
+    "nearest_station": {
+      "name": "東岩槻",
+      "lines": [
+        "東武野田線"
+      ],
+      "distance_m": 1810,
+      "walk_min": 23
+    },
+    "last_scraped_at": "2026-10-02T17:10:55.436673+00:00",
+    "lat": 35.979494,
+    "lng": 139.710798
+  },
+  {
+    "name": "glin coffee",
+    "url": "https://glincoffee.jp/",
+    "platform": "Shopify",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認(Shopify標準構成)",
+    "address": "埼玉県川越市脇田本町8-1 U_PLACE 1F",
+    "prefecture": "埼玉県",
+    "hours": null,
+    "map_query": "glin coffee",
+    "nearest_station": {
+      "name": "川越",
+      "lines": [
+        "東武東上本線",
+        "JR川越線"
+      ],
+      "distance_m": 190,
+      "walk_min": 2
+    },
+    "last_scraped_at": "2026-10-02T17:10:55.436673+00:00",
+    "lat": 35.905899,
+    "lng": 139.481239
+  },
+  {
+    "name": "TAKA COFFEE STAND",
+    "url": "https://taka.coffee/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "埼玉県さいたま市南区沼影1-25-12",
+    "prefecture": "埼玉県",
+    "hours": null,
+    "map_query": "TAKA COFFEE STAND",
+    "nearest_station": {
+      "name": "武蔵浦和",
+      "lines": [
+        "JR埼京線",
+        "JR武蔵野線"
+      ],
+      "distance_m": 810,
+      "walk_min": 10
+    },
+    "last_scraped_at": "2026-10-02T17:10:55.436673+00:00",
+    "lat": 35.839385,
+    "lng": 139.641841
+  },
+  {
+    "name": "Coffee&Beans takechiyo",
+    "url": "https://takechiyo.theshop.jp/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "埼玉県上尾市原市261-30",
+    "prefecture": "埼玉県",
+    "hours": null,
+    "map_query": "Coffee&Beans takechiyo",
+    "nearest_station": {
+      "name": "原市",
+      "lines": [
+        "埼玉新都市交通伊奈線"
+      ],
+      "distance_m": 30,
+      "walk_min": 1
+    },
+    "last_scraped_at": "2026-10-02T17:10:55.436673+00:00",
+    "lat": 35.963937,
+    "lng": 139.622258
+  },
+  {
+    "name": "AMBER DROP COFFEE ROASTERS",
+    "url": "https://amber-drop.com/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "埼玉県川口市幸町2-15-4 ノザキヤビル1F",
+    "prefecture": "埼玉県",
+    "hours": null,
+    "map_query": "AMBER DROP COFFEE ROASTERS",
+    "nearest_station": {
+      "name": "鳩ヶ谷",
+      "lines": [
+        "埼玉高速鉄道"
+      ],
+      "distance_m": 1360,
+      "walk_min": 17
+    },
+    "last_scraped_at": "2026-10-02T17:10:55.436673+00:00",
+    "lat": 35.833545,
+    "lng": 139.750613
+  },
+  {
+    "name": "COFFEE POST",
+    "url": "https://coffeepost.jp/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "埼玉県川越市新富町1-1-5",
+    "prefecture": "埼玉県",
+    "hours": null,
+    "map_query": "COFFEE POST",
+    "nearest_station": {
+      "name": "本川越",
+      "lines": [
+        "西武新宿線"
+      ],
+      "distance_m": 350,
+      "walk_min": 4
+    },
+    "last_scraped_at": "2026-10-02T17:10:55.436673+00:00",
+    "lat": 35.915388,
+    "lng": 139.484187
+  },
+  {
+    "name": "HILL PINE'S ESPRESSO",
+    "url": "https://hill-pines.com/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "埼玉県川越市連雀町13-1",
+    "prefecture": "埼玉県",
+    "hours": null,
+    "map_query": "HILL PINE'S ESPRESSO",
+    "nearest_station": {
+      "name": "本川越",
+      "lines": [
+        "西武新宿線"
+      ],
+      "distance_m": 620,
+      "walk_min": 8
+    },
+    "last_scraped_at": "2026-10-02T17:10:55.436673+00:00",
+    "lat": 35.918918,
+    "lng": 139.482637
+  },
+  {
+    "name": "アキモトコーヒーロースターズ",
+    "url": "https://www.akimotocoffeeroasters.com/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "埼玉県熊谷市本石2-341-4",
+    "prefecture": "埼玉県",
+    "hours": null,
+    "map_query": "アキモトコーヒーロースターズ",
+    "nearest_station": {
+      "name": "上熊谷",
+      "lines": [
+        "秩父本線"
+      ],
+      "distance_m": 420,
+      "walk_min": 5
+    },
+    "last_scraped_at": "2026-10-02T17:10:55.436673+00:00",
+    "lat": 36.146294,
+    "lng": 139.380246
+  },
+  {
+    "name": "やまびより珈琲",
+    "url": "https://yamabiyori.base.shop/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "埼玉県飯能市仲町19-12",
+    "prefecture": "埼玉県",
+    "hours": null,
+    "map_query": "やまびより珈琲",
+    "nearest_station": {
+      "name": "飯能",
+      "lines": [
+        "西武池袋線"
+      ],
+      "distance_m": 260,
+      "walk_min": 3
+    },
+    "last_scraped_at": "2026-10-02T17:10:55.436673+00:00",
+    "lat": 35.853272,
+    "lng": 139.317416
+  },
+  {
+    "name": "Cafe Sorte",
+    "url": "https://www.cafesorte.com/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "埼玉県日高市梅原64-8",
+    "prefecture": "埼玉県",
+    "hours": null,
+    "map_query": "Cafe Sorte",
+    "nearest_station": {
+      "name": "高麗",
+      "lines": [
+        "西武池袋線"
+      ],
+      "distance_m": 1130,
+      "walk_min": 14
+    },
+    "last_scraped_at": "2026-10-02T17:10:55.436673+00:00",
+    "lat": 35.884322,
+    "lng": 139.316618
+  },
+  {
+    "name": "HASABA COFFEE ROASTERS",
+    "url": "https://hasabacoffee.com/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "埼玉県所沢市松葉町16-14",
+    "prefecture": "埼玉県",
+    "hours": null,
+    "map_query": "HASABA COFFEE ROASTERS",
+    "nearest_station": {
+      "name": "新所沢",
+      "lines": [
+        "西武新宿線"
+      ],
+      "distance_m": 200,
+      "walk_min": 3
+    },
+    "last_scraped_at": "2026-10-02T17:10:55.436673+00:00",
+    "lat": 35.807545,
+    "lng": 139.457719
+  },
+  {
+    "name": "マルワコーヒー",
+    "url": "https://maruwa.raku-uru.jp/",
+    "platform": "ラクウル(raku-uru.jp)",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認",
+    "address": "埼玉県上尾市上1135-1",
+    "prefecture": "埼玉県",
+    "hours": null,
+    "map_query": "マルワコーヒー",
+    "nearest_station": {
+      "name": "桶川",
+      "lines": [
+        "JR高崎線"
+      ],
+      "distance_m": 1280,
+      "walk_min": 16
+    },
+    "last_scraped_at": "2026-10-02T17:10:55.436673+00:00",
+    "lat": 35.999171,
+    "lng": 139.578488
+  },
+  {
+    "name": "タカノ珈琲",
+    "url": "https://www.takano-coffee.co.jp/",
+    "platform": "EC-CUBE",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認",
+    "address": "埼玉県川口市中青木2-3-40",
+    "prefecture": "埼玉県",
+    "hours": null,
+    "map_query": "タカノ珈琲",
+    "nearest_station": {
+      "name": "西川口",
+      "lines": [
+        "JR京浜東北線"
+      ],
+      "distance_m": 840,
+      "walk_min": 11
+    },
+    "last_scraped_at": "2026-10-02T17:10:55.436673+00:00",
+    "lat": 35.815778,
+    "lng": 139.713614
+  },
+  {
+    "name": "ビーンズ(越谷)",
+    "url": "http://www.beans-direct.com/",
+    "platform": "独自サイト(CGIカート)",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認",
+    "address": "埼玉県越谷市蒲生寿町18-30",
+    "prefecture": "埼玉県",
+    "hours": null,
+    "map_query": "ビーンズ(越谷)",
+    "nearest_station": {
+      "name": "蒲生",
+      "lines": [
+        "東武伊勢崎線"
+      ],
+      "distance_m": 180,
+      "walk_min": 2
+    },
+    "last_scraped_at": "2026-10-02T17:10:55.436673+00:00",
+    "lat": 35.867308,
+    "lng": 139.79358
   }
 ]

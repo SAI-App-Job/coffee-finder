@@ -616,6 +616,22 @@ SOURCE_FILES = {
     "86 COFFEE ROASTERS": "data_86coffee.json",
     "珈琲豆専門店 Kopi Luak": "data_kopiluak.json",
     "コヤナギコーヒーニッポン": "data_koyanagicoffee.json",
+    # 全国再調査(埼玉県)新規発掘 第1弾(通常スクレイプ可能な店舗)
+    "50 COFFEE & ROASTERY": "data_50coffee.json",
+    "森谷珈琲工房": "data_moriyacoffee.json",
+    "glin coffee": "data_glincoffee.json",
+    "TAKA COFFEE STAND": "data_takacoffee.json",
+    "Coffee&Beans takechiyo": "data_takechiyocoffee.json",
+    "AMBER DROP COFFEE ROASTERS": "data_amberdropcoffee.json",
+    "COFFEE POST": "data_coffeepost.json",
+    "HILL PINE'S ESPRESSO": "data_hillpinescoffee.json",
+    "アキモトコーヒーロースターズ": "data_akimotocoffeeroasters.json",
+    "やまびより珈琲": "data_yamabiyoricoffee.json",
+    "Cafe Sorte": "data_cafesortecoffee.json",
+    "HASABA COFFEE ROASTERS": "data_hasabacoffee.json",
+    "マルワコーヒー": "data_maruwacoffee.json",
+    "タカノ珈琲": "data_takanocoffee.json",
+    "ビーンズ(越谷)": "data_beansdirect.json",
 }
 
 
