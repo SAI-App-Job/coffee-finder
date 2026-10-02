@@ -605,6 +605,17 @@ SOURCE_FILES = {
     # 全国再調査(群馬県)第3弾(28候補中の残り分)で実装した店舗
     "tonbi coffee": "data_tonbi.json",
     "NIWA COFFEE": "data_niwacoffee.json",
+    # 全国再調査(埼玉県)で実装した店舗(2026-09-04の別セッションで技術的理由により
+    # 見送られていた店舗の再検証分を含む)
+    "KURIHARA COFFEE ROASTERS": "data_kuriharacoffee.json",
+    "三郷珈琲焙煎所": "data_misatocoffee.json",
+    "自家焙煎珈琲工房 まめぞう": "data_mamezou.json",
+    "加藤珈琲(北本)": "data_katokoffee_kitamoto.json",
+    "珈水亭": "data_kosuitei.json",
+    "コーヒーロースト オリティエ": "data_oritie.json",
+    "86 COFFEE ROASTERS": "data_86coffee.json",
+    "珈琲豆専門店 Kopi Luak": "data_kopiluak.json",
+    "コヤナギコーヒーニッポン": "data_koyanagicoffee.json",
 }
 
 

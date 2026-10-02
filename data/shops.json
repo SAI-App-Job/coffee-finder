@@ -12581,6 +12581,19 @@
     "data_source": "manual",
     "source_note": null,
     "last_verified_at": null,
+    "locations": [
+      {
+        "label": null,
+        "address": "群馬県北群馬郡吉岡町大字北下1206",
+        "prefecture": "群馬県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "ハーバー珈琲吉岡店",
+        "lat": 36.445647,
+        "lng": 138.999374
+      }
+    ],
     "lat": 36.445647,
     "lng": 138.999374
   },
@@ -12649,6 +12662,19 @@
     "data_source": "manual",
     "source_note": null,
     "last_verified_at": null,
+    "locations": [
+      {
+        "label": null,
+        "address": "群馬県前橋市南町1-14-21",
+        "prefecture": "群馬県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "ミキコーヒー",
+        "lat": 36.419407,
+        "lng": 139.007813
+      }
+    ],
     "lat": 36.419407,
     "lng": 139.007813
   },
@@ -12673,7 +12699,242 @@
     "data_source": "manual",
     "source_note": null,
     "last_verified_at": null,
+    "locations": [
+      {
+        "label": null,
+        "address": "群馬県前橋市上新田町977-2",
+        "prefecture": "群馬県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "マリドンコーヒー",
+        "lat": 36.364992,
+        "lng": 139.065355
+      }
+    ],
     "lat": 36.364992,
     "lng": 139.065355
+  },
+  {
+    "name": "86 COFFEE ROASTERS",
+    "url": "https://86coffeeroasters.com/",
+    "platform": "Jimdo Shop",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認",
+    "address": "埼玉県川口市川口4-2-4 アイビービル101",
+    "prefecture": "埼玉県",
+    "hours": null,
+    "map_query": "86 COFFEE ROASTERS",
+    "nearest_station": {
+      "name": "川口",
+      "lines": [
+        "JR京浜東北線"
+      ],
+      "distance_m": 10,
+      "walk_min": 1
+    },
+    "last_scraped_at": "2026-10-02T16:17:46.986038+00:00",
+    "lat": 35.80192,
+    "lng": 139.717527
+  },
+  {
+    "name": "Braikan coffee",
+    "url": "https://braikancoffee.stores.jp/",
+    "instagram_url": null,
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "埼玉県八潮市大曽根1250-3",
+    "prefecture": "埼玉県",
+    "hours": null,
+    "map_query": "Braikan coffee",
+    "nearest_station": {
+      "name": "八潮",
+      "lines": [
+        "つくばエクスプレス線"
+      ],
+      "distance_m": 1600,
+      "walk_min": 20
+    },
+    "data_source": "manual",
+    "source_note": null,
+    "last_verified_at": null,
+    "lat": 35.804554,
+    "lng": 139.82774
+  },
+  {
+    "name": "KURIHARA COFFEE ROASTERS",
+    "url": "https://store.kurihara-coffee.jp/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "埼玉県さいたま市桜区下大久保",
+    "prefecture": "埼玉県",
+    "hours": null,
+    "map_query": "KURIHARA COFFEE ROASTERS",
+    "nearest_station": {
+      "name": "南与野",
+      "lines": [
+        "JR埼京線"
+      ],
+      "distance_m": 2820,
+      "walk_min": 35
+    },
+    "last_scraped_at": "2026-10-02T16:17:46.986038+00:00",
+    "lat": 35.86206,
+    "lng": 139.600536
+  },
+  {
+    "name": "コヤナギコーヒーニッポン",
+    "url": "https://www.koyanagicoffeenippon.com/",
+    "platform": "Wix(Wix Stores)",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認",
+    "address": "埼玉県東松山市下唐子1967-2",
+    "prefecture": "埼玉県",
+    "hours": null,
+    "map_query": "コヤナギコーヒーニッポン",
+    "nearest_station": {
+      "name": "つきのわ",
+      "lines": [
+        "東武東上本線"
+      ],
+      "distance_m": 1680,
+      "walk_min": 21
+    },
+    "last_scraped_at": "2026-10-02T16:17:46.986038+00:00",
+    "lat": 36.031306,
+    "lng": 139.356521
+  },
+  {
+    "name": "コーヒーロースト オリティエ",
+    "url": "https://oritie.jp/",
+    "platform": "WooCommerce(Store API)",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認",
+    "address": "埼玉県越谷市宮本町3-172-1",
+    "prefecture": "埼玉県",
+    "hours": null,
+    "map_query": "コーヒーロースト オリティエ",
+    "nearest_station": {
+      "name": "越谷",
+      "lines": [
+        "東武伊勢崎線"
+      ],
+      "distance_m": 1370,
+      "walk_min": 17
+    },
+    "last_scraped_at": "2026-10-02T16:17:46.986038+00:00",
+    "lat": 35.889838,
+    "lng": 139.771261
+  },
+  {
+    "name": "三郷珈琲焙煎所",
+    "url": "https://shop.misato.or.jp/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "埼玉県三郷市彦成5-149-2",
+    "prefecture": "埼玉県",
+    "hours": null,
+    "map_query": "三郷珈琲焙煎所",
+    "nearest_station": {
+      "name": "新三郷",
+      "lines": [
+        "JR武蔵野線"
+      ],
+      "distance_m": 960,
+      "walk_min": 12
+    },
+    "last_scraped_at": "2026-10-02T16:17:46.986038+00:00",
+    "lat": 35.859483,
+    "lng": 139.879952
+  },
+  {
+    "name": "加藤珈琲(北本)",
+    "url": "https://www.kato-coffee.com/",
+    "platform": "自社サイト(静的HTML+注文フォーム)",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認",
+    "address": "埼玉県北本市本宿5-129",
+    "prefecture": "埼玉県",
+    "hours": null,
+    "map_query": "加藤珈琲(北本)",
+    "nearest_station": {
+      "name": "北本",
+      "lines": [
+        "JR高崎線"
+      ],
+      "distance_m": 870,
+      "walk_min": 11
+    },
+    "last_scraped_at": "2026-10-02T16:17:46.986038+00:00",
+    "lat": 36.026331,
+    "lng": 139.540014
+  },
+  {
+    "name": "珈水亭",
+    "url": "https://kosuitei.com/",
+    "platform": "自社サイト(WordPress、静的な通販ページ)",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認",
+    "address": "埼玉県熊谷市末広3-12-4",
+    "prefecture": "埼玉県",
+    "hours": null,
+    "map_query": "珈水亭",
+    "nearest_station": {
+      "name": "上熊谷",
+      "lines": [
+        "秩父本線"
+      ],
+      "distance_m": 830,
+      "walk_min": 10
+    },
+    "last_scraped_at": "2026-10-02T16:17:46.986038+00:00",
+    "lat": 36.147247,
+    "lng": 139.388614
+  },
+  {
+    "name": "珈琲豆専門店 Kopi Luak",
+    "url": "https://www.kopiluak2012.com/",
+    "platform": "Wix(Wix Stores)",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認",
+    "address": "埼玉県草加市中央2-2-7",
+    "prefecture": "埼玉県",
+    "hours": null,
+    "map_query": "珈琲豆専門店 Kopi Luak",
+    "nearest_station": {
+      "name": "谷塚",
+      "lines": [
+        "東武伊勢崎線"
+      ],
+      "distance_m": 1230,
+      "walk_min": 15
+    },
+    "last_scraped_at": "2026-10-02T16:17:46.986038+00:00",
+    "lat": 35.805806,
+    "lng": 139.793725
+  },
+  {
+    "name": "自家焙煎珈琲工房 まめぞう",
+    "url": "https://www.mamezou.co.jp/",
+    "platform": "独自CMSショップ",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認",
+    "address": "埼玉県戸田市上戸田5-11-1",
+    "prefecture": "埼玉県",
+    "hours": null,
+    "map_query": "自家焙煎珈琲工房 まめぞう",
+    "nearest_station": {
+      "name": "戸田",
+      "lines": [
+        "JR埼京線"
+      ],
+      "distance_m": 430,
+      "walk_min": 5
+    },
+    "last_scraped_at": "2026-10-02T16:17:46.986038+00:00",
+    "lat": 35.819804,
+    "lng": 139.673522
   }
 ]
