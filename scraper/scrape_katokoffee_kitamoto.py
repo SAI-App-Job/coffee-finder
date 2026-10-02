@@ -27,6 +27,7 @@ roast_hintに選択可能な焙煎度を記録する。重量は200g(フレン�
 
 import json
 import re
+from urllib.parse import quote
 
 import requests
 from bs4 import BeautifulSoup
@@ -141,7 +142,7 @@ def build_record(item: dict) -> dict:
         "weight_g": 200,
         "stock_status": "販売中",
         "out_of_stock": False,
-        "product_url": f"{BASE_URL}/{item['page']}",
+        "product_url": f"{BASE_URL}/{item['page']}#{quote(name)}",  # 同一ページに複数商品があるため、商品IDを一意にするフラグメントを付ける
     }
 
 

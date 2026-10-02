@@ -12746,7 +12746,7 @@
     "address": "埼玉県八潮市大曽根1250-3",
     "prefecture": "埼玉県",
     "hours": null,
-    "map_query": "Braikan coffee",
+    "map_query": "Braikan coffee 埼玉県八潮市大曽根1250-3",
     "nearest_station": {
       "name": "八潮",
       "lines": [
@@ -12756,8 +12756,8 @@
       "walk_min": 20
     },
     "data_source": "manual",
-    "source_note": null,
-    "last_verified_at": null,
+    "source_note": "STORES.jpの公式ショップ(https://braikancoffee.stores.jp/)の商品ページをブラウザfetch()で2026-10-03に確認",
+    "last_verified_at": "2026-10-03",
     "locations": [
       {
         "label": null,
@@ -12766,7 +12766,7 @@
         "hours": null,
         "tel": null,
         "is_headquarters": false,
-        "map_query": "Braikan coffee",
+        "map_query": "Braikan coffee 埼玉県八潮市大曽根1250-3",
         "lat": 35.804554,
         "lng": 139.82774
       }
@@ -13281,5 +13281,476 @@
     "last_scraped_at": "2026-10-02T17:10:55.436673+00:00",
     "lat": 35.867308,
     "lng": 139.79358
+  },
+  {
+    "name": "トレビアン珈琲",
+    "url": "http://trb-cofe.com/",
+    "platform": "WordPress(電話・FAX・メール注文)",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認",
+    "address": "埼玉県川越市鯨井新田16-47",
+    "prefecture": "埼玉県",
+    "hours": null,
+    "map_query": "トレビアン珈琲",
+    "nearest_station": {
+      "name": "鶴ヶ島",
+      "lines": [
+        "東武東上本線"
+      ],
+      "distance_m": 280,
+      "walk_min": 4
+    },
+    "last_scraped_at": "2026-10-02T17:25:17.962079+00:00",
+    "lat": 35.934222,
+    "lng": 139.423615
+  },
+  {
+    "name": "自家焙煎珈琲 beans shop Kieido",
+    "url": "https://beansshopkieido.com/",
+    "instagram_url": null,
+    "platform": "WordPress(店頭販売・手動入力)",
+    "shop_type": "single_location",
+    "address": "埼玉県所沢市日吉町7-6",
+    "prefecture": "埼玉県",
+    "hours": null,
+    "map_query": "自家焙煎珈琲 beans shop Kieido 埼玉県所沢市日吉町7-6",
+    "nearest_station": {
+      "name": "所沢",
+      "lines": [
+        "西武池袋線",
+        "西武新宿線"
+      ],
+      "distance_m": 250,
+      "walk_min": 3
+    },
+    "data_source": "manual",
+    "source_note": "公式サイト(https://beansshopkieido.com/)の商品・価格ページを2026-10-03に確認",
+    "last_verified_at": "2026-10-03",
+    "locations": [
+      {
+        "label": null,
+        "address": "埼玉県所沢市日吉町7-6",
+        "prefecture": "埼玉県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "自家焙煎珈琲 beans shop Kieido 埼玉県所沢市日吉町7-6",
+        "lat": 35.787755,
+        "lng": 139.470883
+      }
+    ],
+    "lat": 35.787755,
+    "lng": 139.470883
+  },
+  {
+    "name": "豆定",
+    "url": "http://mamesada.com/",
+    "instagram_url": null,
+    "platform": "WordPress(店頭販売・手動入力)",
+    "shop_type": "single_location",
+    "address": "埼玉県所沢市東狭山ケ丘1-69-5",
+    "prefecture": "埼玉県",
+    "hours": null,
+    "map_query": "豆定 埼玉県所沢市東狭山ケ丘1-69-5",
+    "nearest_station": {
+      "name": "狭山ヶ丘",
+      "lines": [
+        "西武池袋線"
+      ],
+      "distance_m": 830,
+      "walk_min": 10
+    },
+    "data_source": "manual",
+    "source_note": "公式サイト(http://mamesada.com/)の商品・価格ページを2026-10-03に確認",
+    "last_verified_at": "2026-10-03",
+    "locations": [
+      {
+        "label": null,
+        "address": "埼玉県所沢市東狭山ケ丘1-69-5",
+        "prefecture": "埼玉県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "豆定 埼玉県所沢市東狭山ケ丘1-69-5",
+        "lat": 35.814619,
+        "lng": 139.424568
+      }
+    ],
+    "lat": 35.814619,
+    "lng": 139.424568
+  },
+  {
+    "name": "自家焙煎珈琲豆店 南回帰線",
+    "url": "https://www5d.biglobe.ne.jp/~kaikisen/",
+    "instagram_url": null,
+    "platform": "静的HTML(店頭・郵送販売・手動入力)",
+    "shop_type": "single_location",
+    "address": "埼玉県さいたま市大宮区吉敷町2-108-8",
+    "prefecture": "埼玉県",
+    "hours": null,
+    "map_query": "自家焙煎珈琲豆店 南回帰線 埼玉県さいたま市大宮区吉敷町2-108-8",
+    "nearest_station": {
+      "name": "さいたま新都心",
+      "lines": [
+        "JR上野東京ライン",
+        "JR京浜東北線",
+        "JR高崎線",
+        "JR宇都宮線"
+      ],
+      "distance_m": 810,
+      "walk_min": 10
+    },
+    "data_source": "manual",
+    "source_note": "公式サイト(https://www5d.biglobe.ne.jp/~kaikisen/)の商品・価格ページを2026-10-03に確認",
+    "last_verified_at": "2026-10-03",
+    "locations": [
+      {
+        "label": null,
+        "address": "埼玉県さいたま市大宮区吉敷町2-108-8",
+        "prefecture": "埼玉県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "自家焙煎珈琲豆店 南回帰線 埼玉県さいたま市大宮区吉敷町2-108-8",
+        "lat": 35.900881,
+        "lng": 139.635845
+      }
+    ],
+    "lat": 35.900881,
+    "lng": 139.635845
+  },
+  {
+    "name": "コンコード",
+    "url": "http://concord1970s.stars.ne.jp/",
+    "instagram_url": null,
+    "platform": "静的HTML(店頭・電話/FAX/メール注文・手動入力)",
+    "shop_type": "single_location",
+    "address": "埼玉県さいたま市浦和区北浦和3-8-6",
+    "prefecture": "埼玉県",
+    "hours": null,
+    "map_query": "コンコード 埼玉県さいたま市浦和区北浦和3-8-6",
+    "nearest_station": {
+      "name": "北浦和",
+      "lines": [
+        "JR京浜東北線"
+      ],
+      "distance_m": 20,
+      "walk_min": 1
+    },
+    "data_source": "manual",
+    "source_note": "公式サイト(http://concord1970s.stars.ne.jp/)の商品・価格ページを2026-10-03に確認",
+    "last_verified_at": "2026-10-03",
+    "locations": [
+      {
+        "label": null,
+        "address": "埼玉県さいたま市浦和区北浦和3-8-6",
+        "prefecture": "埼玉県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "コンコード 埼玉県さいたま市浦和区北浦和3-8-6",
+        "lat": 35.872159,
+        "lng": 139.646105
+      }
+    ],
+    "lat": 35.872159,
+    "lng": 139.646105
+  },
+  {
+    "name": "coffee REforme",
+    "url": "https://coffee-reforme.com/",
+    "instagram_url": null,
+    "platform": "静的サイト(店頭・電話/FAX/メール注文・手動入力)",
+    "shop_type": "single_location",
+    "address": "埼玉県さいたま市南区大谷口989-16",
+    "prefecture": "埼玉県",
+    "hours": null,
+    "map_query": "coffee REforme 埼玉県さいたま市南区大谷口989-16",
+    "nearest_station": {
+      "name": "東浦和",
+      "lines": [
+        "JR武蔵野線"
+      ],
+      "distance_m": 1750,
+      "walk_min": 22
+    },
+    "data_source": "manual",
+    "source_note": "公式サイト(https://coffee-reforme.com/)の商品・価格ページを2026-10-03に確認",
+    "last_verified_at": "2026-10-03",
+    "locations": [
+      {
+        "label": null,
+        "address": "埼玉県さいたま市南区大谷口989-16",
+        "prefecture": "埼玉県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "coffee REforme 埼玉県さいたま市南区大谷口989-16",
+        "lat": 35.858814,
+        "lng": 139.686399
+      }
+    ],
+    "lat": 35.858814,
+    "lng": 139.686399
+  },
+  {
+    "name": "村上珈琲",
+    "url": "https://www.murakami-coffee.co.jp/",
+    "instagram_url": null,
+    "platform": "静的サイト(店頭販売・手動入力)",
+    "shop_type": "single_location",
+    "address": "埼玉県上尾市小泉35-35",
+    "prefecture": "埼玉県",
+    "hours": null,
+    "map_query": "村上珈琲 埼玉県上尾市小泉35-35",
+    "nearest_station": {
+      "name": "北上尾",
+      "lines": [
+        "JR高崎線"
+      ],
+      "distance_m": 1670,
+      "walk_min": 21
+    },
+    "data_source": "manual",
+    "source_note": "公式サイト(https://www.murakami-coffee.co.jp/)の商品・価格ページを2026-10-03に確認",
+    "last_verified_at": "2026-10-03",
+    "locations": [
+      {
+        "label": null,
+        "address": "埼玉県上尾市小泉35-35",
+        "prefecture": "埼玉県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "村上珈琲 埼玉県上尾市小泉35-35",
+        "lat": 35.981805,
+        "lng": 139.559323
+      }
+    ],
+    "lat": 35.981805,
+    "lng": 139.559323
+  },
+  {
+    "name": "どんぐりの木",
+    "url": "https://dongurino-ki.com/",
+    "instagram_url": null,
+    "platform": "静的サイト(店頭・電話/FAX/メール注文・手動入力)",
+    "shop_type": "single_location",
+    "address": "埼玉県川口市安行原2161-11",
+    "prefecture": "埼玉県",
+    "hours": null,
+    "map_query": "どんぐりの木 埼玉県川口市安行原2161-11",
+    "nearest_station": {
+      "name": "戸塚安行",
+      "lines": [
+        "埼玉高速鉄道"
+      ],
+      "distance_m": 2510,
+      "walk_min": 31
+    },
+    "data_source": "manual",
+    "source_note": "公式サイト(https://dongurino-ki.com/)の商品・価格ページを2026-10-03に確認",
+    "last_verified_at": "2026-10-03",
+    "locations": [
+      {
+        "label": null,
+        "address": "埼玉県川口市安行原2161-11",
+        "prefecture": "埼玉県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "どんぐりの木 埼玉県川口市安行原2161-11",
+        "lat": 35.840482,
+        "lng": 139.769783
+      }
+    ],
+    "lat": 35.840482,
+    "lng": 139.769783
+  },
+  {
+    "name": "LIMENAS COFFEE",
+    "url": "https://limenasinfo.stores.jp/",
+    "instagram_url": null,
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "埼玉県所沢市日吉町6-7",
+    "prefecture": "埼玉県",
+    "hours": null,
+    "map_query": "LIMENAS COFFEE 埼玉県所沢市日吉町6-7",
+    "nearest_station": {
+      "name": "所沢",
+      "lines": [
+        "西武池袋線",
+        "西武新宿線"
+      ],
+      "distance_m": 250,
+      "walk_min": 3
+    },
+    "data_source": "manual",
+    "source_note": "公式サイト(https://limenasinfo.stores.jp/)の商品・価格ページを2026-10-03に確認",
+    "last_verified_at": "2026-10-03",
+    "locations": [
+      {
+        "label": null,
+        "address": "埼玉県所沢市日吉町6-7",
+        "prefecture": "埼玉県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "LIMENAS COFFEE 埼玉県所沢市日吉町6-7",
+        "lat": 35.787755,
+        "lng": 139.470883
+      }
+    ],
+    "lat": 35.787755,
+    "lng": 139.470883
+  },
+  {
+    "name": "lit coffee service",
+    "url": "https://litjapancoffee.stores.jp/",
+    "instagram_url": null,
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "埼玉県所沢市小手指町2-11-10",
+    "prefecture": "埼玉県",
+    "hours": null,
+    "map_query": "lit coffee service 埼玉県所沢市小手指町2-11-10",
+    "nearest_station": {
+      "name": "小手指",
+      "lines": [
+        "西武池袋線"
+      ],
+      "distance_m": 900,
+      "walk_min": 11
+    },
+    "data_source": "manual",
+    "source_note": "公式サイト(https://litjapancoffee.stores.jp/)の商品・価格ページを2026-10-03に確認",
+    "last_verified_at": "2026-10-03",
+    "locations": [
+      {
+        "label": null,
+        "address": "埼玉県所沢市小手指町2-11-10",
+        "prefecture": "埼玉県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "lit coffee service 埼玉県所沢市小手指町2-11-10",
+        "lat": 35.793172,
+        "lng": 139.43403
+      }
+    ],
+    "lat": 35.793172,
+    "lng": 139.43403
+  },
+  {
+    "name": "こりす珈琲豆",
+    "url": "https://korisucoffee.stores.jp/",
+    "instagram_url": null,
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "埼玉県草加市北谷2-29-1",
+    "prefecture": "埼玉県",
+    "hours": null,
+    "map_query": "こりす珈琲豆 埼玉県草加市北谷2-29-1",
+    "nearest_station": {
+      "name": "獨協大学前",
+      "lines": [
+        "東武伊勢崎線"
+      ],
+      "distance_m": 1120,
+      "walk_min": 14
+    },
+    "data_source": "manual",
+    "source_note": "公式サイト(https://korisucoffee.stores.jp/)の商品・価格ページを2026-10-03に確認",
+    "last_verified_at": "2026-10-03",
+    "locations": [
+      {
+        "label": null,
+        "address": "埼玉県草加市北谷2-29-1",
+        "prefecture": "埼玉県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "こりす珈琲豆 埼玉県草加市北谷2-29-1",
+        "lat": 35.84555,
+        "lng": 139.788537
+      }
+    ],
+    "lat": 35.84555,
+    "lng": 139.788537
+  },
+  {
+    "name": "COFFEE ROASTERY Nakajima",
+    "url": "https://coffee-nakajima.stores.jp/",
+    "instagram_url": null,
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "埼玉県飯能市下畑213-9",
+    "prefecture": "埼玉県",
+    "hours": null,
+    "map_query": "COFFEE ROASTERY Nakajima 埼玉県飯能市下畑213-9",
+    "nearest_station": {
+      "name": "飯能",
+      "lines": [
+        "西武池袋線"
+      ],
+      "distance_m": 2590,
+      "walk_min": 32
+    },
+    "data_source": "manual",
+    "source_note": "公式サイト(https://coffee-nakajima.stores.jp/)の商品・価格ページを2026-10-03に確認",
+    "last_verified_at": "2026-10-03",
+    "locations": [
+      {
+        "label": null,
+        "address": "埼玉県飯能市下畑213-9",
+        "prefecture": "埼玉県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "COFFEE ROASTERY Nakajima 埼玉県飯能市下畑213-9",
+        "lat": 35.837384,
+        "lng": 139.295674
+      }
+    ],
+    "lat": 35.837384,
+    "lng": 139.295674
+  },
+  {
+    "name": "ecoma coffee",
+    "url": "https://ecomacoffee.shop/",
+    "instagram_url": null,
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "埼玉県草加市住吉1-13-2",
+    "prefecture": "埼玉県",
+    "hours": null,
+    "map_query": "ecoma coffee 埼玉県草加市住吉1-13-2",
+    "nearest_station": {
+      "name": "草加",
+      "lines": [
+        "東武伊勢崎線"
+      ],
+      "distance_m": 440,
+      "walk_min": 6
+    },
+    "data_source": "manual",
+    "source_note": "公式サイト(https://ecomacoffee.shop/)の商品・価格ページを2026-10-03に確認",
+    "last_verified_at": "2026-10-03",
+    "locations": [
+      {
+        "label": null,
+        "address": "埼玉県草加市住吉1-13-2",
+        "prefecture": "埼玉県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "ecoma coffee 埼玉県草加市住吉1-13-2",
+        "lat": 35.82508,
+        "lng": 139.805807
+      }
+    ],
+    "lat": 35.82508,
+    "lng": 139.805807
   }
 ]

@@ -632,6 +632,8 @@ SOURCE_FILES = {
     "マルワコーヒー": "data_maruwacoffee.json",
     "タカノ珈琲": "data_takanocoffee.json",
     "ビーンズ(越谷)": "data_beansdirect.json",
+    # 全国再調査(埼玉県)新規発掘 第2弾(通常スクレイプ可能なHTML1ページ構成)
+    "トレビアン珈琲": "data_trbcofe.json",
 }
 
 

@@ -5,7 +5,7 @@
 `scraper/manual/shops/`配下、それ以外は`scraper/scrape_*.py`で自動取得。
 実装を見送った店舗は`docs/not-implementable-shops.md`を参照。
 
-合計642店舗・11755商品(生成日: 2026-10-02)。
+合計655店舗・12004商品(生成日: 2026-10-02)。
 
 再生成コマンド:
 ```
@@ -330,11 +330,14 @@ aggregate_shops.py実行後の`git diff --staged --quiet || git commit`が該当
 
 | 店舗名 | 所在地 | 方式 | 件数 |
 |---|---|---|---|
+| コンコード | さいたま市浦和区北浦和3-8-6 | 手動 | 22 |
 | 森谷珈琲工房 | さいたま市岩槻区慈恩寺546-28 | Ocnk | 10 |
 | KURIHARA COFFEE ROASTERS | さいたま市桜区下大久保 | BASE | 6 |
+| 自家焙煎珈琲豆店 南回帰線 | さいたま市大宮区吉敷町2-108-8 | 手動 | 19 |
 | 熊谷珈琲 | さいたま市大宮区浅間町2-46 | カラーミー | 23 |
 | ALL THAT COFFEEWORKS | さいたま市大宮区土手町2-35 | BASE | 11 |
 | TAKA COFFEE STAND | さいたま市南区沼影1-25-12 | BASE | 11 |
+| coffee REforme | さいたま市南区大谷口989-16 | 手動 | 14 |
 | ビーンズ(越谷) | 越谷市蒲生寿町18-30 | 独自サイト(CGIカート) | 20 |
 | コーヒーロースト オリティエ | 越谷市宮本町3-172-1 | WooCommerce(Store API) | 24 |
 | 柊豆 | 熊谷市船木 | BASE | 9 |
@@ -344,25 +347,35 @@ aggregate_shops.py実行後の`git diff --staged --quiet || git commit`が該当
 | 三郷珈琲焙煎所 | 三郷市彦成5-149-2 | BASE | 6 |
 | KiaOra COFFEE | 春日部市大沼3-123-1 | BASE | 12 |
 | しかくCOFFEE | 所沢市若狭1-2626-43 | BASE | 13 |
+| lit coffee service | 所沢市小手指町2-11-10 | STORES(手動) | 4 |
 | HASABA COFFEE ROASTERS | 所沢市松葉町16-14 | BASE | 7 |
+| 豆定 | 所沢市東狭山ケ丘1-69-5 | 手動 | 23 |
+| LIMENAS COFFEE | 所沢市日吉町6-7 | STORES(手動) | 20 |
+| 自家焙煎珈琲 beans shop Kieido | 所沢市日吉町7-6 | 手動 | 14 |
 | Coffee&Beans takechiyo | 上尾市原市261-30 | BASE | 14 |
+| 村上珈琲 | 上尾市小泉35-35 | 手動 | 20 |
 | マルワコーヒー | 上尾市上1135-1 | ラクウル(raku-uru.jp) | 27 |
 | 豆わらべ | 深谷市上野台1949-3 | BASE(theshop) | 19 |
 | 50 COFFEE & ROASTERY | 深谷市深谷町9-12 | カラーミー | 8 |
+| トレビアン珈琲 | 川越市鯨井新田16-47 | WordPress | 39 |
 | COFFEE GALLERY | 川越市松江町2-3-5 | BASE | 16 |
 | COFFEE POST | 川越市新富町1-1-5 | BASE | 9 |
 | HILL PINE'S ESPRESSO | 川越市連雀町13-1 | BASE | 5 |
 | glin coffee | 川越市脇田本町8-1 U_PLACE 1F | Shopify | 8 |
+| どんぐりの木 | 川口市安行原2161-11 | 手動 | 26 |
 | AMBER DROP COFFEE ROASTERS | 川口市幸町2-15-4 ノザキヤビル1F | BASE | 23 |
 | 86 COFFEE ROASTERS | 川口市川口4-2-4 アイビービル101 | Jimdo Shop | 9 |
 | タカノ珈琲 | 川口市中青木2-3-40 | EC-CUBE | 46 |
+| ecoma coffee | 草加市住吉1-13-2 | STORES(手動) | 12 |
 | トレモロコーヒーロースター | 草加市草加3-8-15 | BASE | 16 |
 | 珈琲豆専門店 Kopi Luak | 草加市中央2-2-7 | Wix(Wix Stores) | 26 |
+| こりす珈琲豆 | 草加市北谷2-29-1 | STORES(手動) | 22 |
 | 幸音珈琲 | 朝霞市本町1-10-30 | Ocnk | 9 |
 | コヤナギコーヒーニッポン | 東松山市下唐子1967-2 | Wix(Wix Stores) | 9 |
 | coffee mameco | 東松山市六反町3-32 | Shopify | 13 |
 | Cafe Sorte | 日高市梅原64-8 | BASE | 4 |
 | Braikan coffee | 八潮市大曽根1250-3 | STORES(手動) | 10 |
+| COFFEE ROASTERY Nakajima | 飯能市下畑213-9 | STORES(手動) | 14 |
 | やまびより珈琲 | 飯能市仲町19-12 | BASE | 20 |
 | アスロンコーヒー焙煎所 | 飯能市名栗 | Ocnk | 9 |
 | 加藤珈琲(北本) | 北本市本宿5-129 | 自社サイト(静的HTML+注文フォーム) | 16 |

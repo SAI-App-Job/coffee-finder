@@ -23,6 +23,7 @@ scrape_kosuitei.py
 
 import json
 import re
+from urllib.parse import quote
 
 import requests
 from bs4 import BeautifulSoup
@@ -108,7 +109,7 @@ def scrape_all_products() -> list[dict]:
                 "weight_g": 200,
                 "stock_status": "販売中",
                 "out_of_stock": False,
-                "product_url": PAGE_URL,
+                "product_url": f"{PAGE_URL}#{quote(name)}",  # 同一ページに複数商品があるため、商品IDを一意にするフラグメントを付ける
             })
     return records
 

@@ -18,6 +18,7 @@ CGIカート形式の静的HTMLサイト(Shift_JIS)。
 
 import json
 import re
+from urllib.parse import quote
 
 import requests
 from bs4 import BeautifulSoup
@@ -96,7 +97,7 @@ def scrape_all_products() -> list[dict]:
             "weight_g": 200,
             "stock_status": "完売" if out_of_stock else "販売中",
             "out_of_stock": out_of_stock,
-            "product_url": PRODUCTS_URL,
+            "product_url": f"{PRODUCTS_URL}#{quote(name)}",  # 全商品が同一ページのため、商品IDを一意にするフラグメントを付ける
         })
     return records
 

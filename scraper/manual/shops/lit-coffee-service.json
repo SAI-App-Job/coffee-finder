@@ -1,0 +1,90 @@
+{
+  "shop": {
+    "name": "lit coffee service",
+    "url": "https://litjapancoffee.stores.jp/",
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "address": "埼玉県所沢市小手指町2-11-10",
+    "prefecture": "埼玉県",
+    "id": "lit-coffee-service",
+    "instagram_url": null,
+    "google_maps_query": "lit coffee service 埼玉県所沢市小手指町2-11-10",
+    "tel": null,
+    "hours": null,
+    "shop_type": "single_location",
+    "data_source": "manual",
+    "source_note": "公式サイト(https://litjapancoffee.stores.jp/)の商品・価格ページを2026-10-03に確認",
+    "last_verified_at": "2026-10-03",
+    "lat": 35.793172,
+    "lng": 139.43403,
+    "nearest_station": {
+      "name": "小手指",
+      "lines": [
+        "西武池袋線"
+      ],
+      "distance_m": 900,
+      "walk_min": 11
+    }
+  },
+  "products": [
+    {
+      "raw_name": "【カフェインレス】デカフェ メキシコ ハニーチアパス",
+      "category": "ストレート",
+      "originCountry": "メキシコ",
+      "processingMethod": "ハニー",
+      "roast": null,
+      "flavorNotes": "カフェインレスのコーヒー。黒糖や蜂蜜のような甘さがあり、デカフェ特有の嫌な味は感じにくい。(複数サイズの最安価格)",
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 4800,
+      "weightG": null,
+      "stockStatus": "販売中",
+      "productUrl": "https://litjapancoffee.stores.jp/items/6a2e38eabe2d12d3bf50ab45",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "エルサルバドル COE2024#11 LAS DUANAS",
+      "category": "ストレート",
+      "originCountry": "エルサルバドル",
+      "processingMethod": null,
+      "roast": "浅煎り",
+      "flavorNotes": "2024年COE 11位ロット。アナエロビックウォッシュド、パカマラ種。パパイヤやオレンジのようなフレーバー。",
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1800,
+      "weightG": 100,
+      "stockStatus": "一時的に品切れ",
+      "productUrl": "https://litjapancoffee.stores.jp/items/68a1a27156e39c4ae384386f",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "インドネシア マンデリンG1 Komanja",
+      "category": "ストレート",
+      "originCountry": "インドネシア",
+      "processingMethod": null,
+      "roast": "中深煎り",
+      "flavorNotes": "マンデリン特有のアーシーでハーブのような味わい。力強いコクもあり、しっとりとした質感。",
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1500,
+      "weightG": 150,
+      "stockStatus": "販売中",
+      "productUrl": "https://litjapancoffee.stores.jp/items/6816199c47015e0cb37d1e58",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "ブレンド ハウス BLEND",
+      "category": "ブレンド",
+      "originCountry": null,
+      "processingMethod": null,
+      "roast": "中深煎り",
+      "flavorNotes": "当店の唯一のブレンド。深めの焙煎でミルクと相性が良い。苦すぎず、後味はすっきり。",
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1400,
+      "weightG": 150,
+      "stockStatus": "販売中",
+      "productUrl": "https://litjapancoffee.stores.jp/items/6816169b7ab88045fa3bc1c3",
+      "data_source": "manual"
+    }
+  ]
+}
