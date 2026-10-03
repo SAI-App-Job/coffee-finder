@@ -5,7 +5,7 @@
 `scraper/manual/shops/`配下、それ以外は`scraper/scrape_*.py`で自動取得。
 実装を見送った店舗は`docs/not-implementable-shops.md`を参照。
 
-合計729店舗・12989商品(生成日: 2026-10-03)。
+合計784店舗・14041商品(生成日: 2026-10-03)。
 
 再生成コマンド:
 ```
@@ -261,7 +261,6 @@ aggregate_shops.py実行後の`git diff --staged --quiet || git commit`が該当
 | NORRY'S COFFEE | 桐生市宮前町2丁目8-6 | BASE | 3 |
 | 珈琲美流 | 桐生市新里町鶴ヶ谷133-12 | 手動 | 3 |
 | 伊東屋珈琲 | 桐生市相生町2-588-75 | カラーミー | 19 |
-| 柏屋カフェ NAKAYOSHI COFFEE | 吾妻郡中之条町四万4237-1 | カラーミー | 10 |
 | Hamaya.カフェ | 吾妻郡中之条町中之条町1756-2 | 手動 | 1 |
 | きゃらばん | 高崎市昭和町209 | 自社ECサイト(レガシーCGIカート) | 24 |
 | tonbi coffee | 高崎市菅谷町531-10 | カラーミー | 22 |
@@ -749,9 +748,12 @@ aggregate_shops.py実行後の`git diff --staged --quiet || git commit`が該当
 |---|---|---|---|
 | WOODBERRY COFFEE |  | Shopify | 36 |
 | THE WORD COFFEE ROASTERS | 葛飾区奥戸1-19-3 斉藤マンション1B | Shopify | 42 |
+| カモメロースタリ東京 | 葛飾区亀有3-36-2 1F | Wix(Wix Stores) | 15 |
 | マウンテンコーヒー葛飾 | 葛飾区高砂2-4-3 | BASE | 16 |
+| SCRATCH COFFEE | 葛飾区四つ木1-33-7 | Wix(Wix Stores) | 5 |
 | にじいろコーヒー店 | 葛飾区水元 | BASE | 7 |
 | 御豆屋 | 江戸川区(小岩駅北口) | BASE | 67 |
+| kobby's coffee | 江戸川区一之江7-87-4 | BASE | 17 |
 | コーヒーランド | 江戸川区松島2丁目 | 独自HTML | 40 |
 | いろどりこーひー | 江戸川区中葛西1-38-8 | Shopify | 32 |
 | 珈琲自家焙煎HiwaHiwa | 江戸川区中葛西2-7-2 | BASE | 6 |
@@ -760,79 +762,132 @@ aggregate_shops.py実行後の`git diff --staged --quiet || git commit`が該当
 | 青海珈琲 | 江東区青海(本店) | MakeShop | 46 |
 | HIDE COFFEE BEANS STORE | 江東区東雲1-2-1 | カラーミー | 13 |
 | カフェ・デザールピコ | 江東区門前仲町 | カラーミー | 29 |
+| 元麻布焙煎所 | 港区元麻布 | BASE | 12 |
 | 松屋珈琲店 | 港区虎ノ門3-8-16 | カラーミー | 26 |
 | Coffee Roast SAI | 港区高輪1-21-3 チバビル1F | Shopify | 35 |
+| 白金珈琲 | 港区高輪1-4-20 | Welcart | 31 |
 | Daphne | 港区芝5-10-11 | EC-CUBE | 12 |
 | 麻布珈房 | 港区麻布十番 | カラーミー | 159 |
 | Blackhole Coffee Roaster | 荒川区町屋4-31-11 | Shopify | 8 |
 | カメヤマ珈琲 | 荒川区東日暮里6-22-14 | WordPress | 34 |
+| PASSAGE COFFEE | 三鷹市井の頭1丁目30-20 三鷹台ストリート 1階 2号室(ROASTERY) | Shopify | 10 |
+| LIGHT UP COFFEE | 三鷹市新川6丁目36-27(三鷹店・焙煎所) | Shopify | 6 |
 | THE COFFEESHOP | 渋谷区猿楽町2-3 | フューチャーショップ | 13 |
 | acid coffee | 渋谷区上原1-29-5 | STORES(手動) | 40 |
 | NOZY COFFEE | 渋谷区神宮前5-17-13 | カラーミー | 5 |
 | Coffee Supreme Tokyo | 渋谷区神山町42-3 | BASE(独自ドメイン運用) | 11 |
 | HEART'S LIGHT COFFEE | 渋谷区神泉町13-13 ヒルズ渋谷1F | STORES(手動) | 5 |
 | 珈琲店トップ | 渋谷区代々木5-63-10 | カラーミー | 21 |
+| ROSTRO | 渋谷区富ヶ谷1-14-20 サウスピア1F | Shopify | 8 |
 | FUGLEN COFFEE ROASTERS | 渋谷区富ヶ谷1-16-11 | Shopify | 10 |
+| G☆P COFFEE ROASTER | 渋谷区本町2-28-4 | BASE | 12 |
 | 喫茶ぷらんたん | 新宿区戸塚1-101-13 | STORES(手動) | 4 |
 | 早苗 | 新宿区戸塚町1-102 | Shopify | 16 |
 | 焙煎工場さかいち | 新宿区戸塚町1-104神戸ビル101 | Wix | 18 |
 | A FEW WORDS COFFEE | 新宿区新宿7-24-4 1F | 手動 | 8 |
+| 但馬屋珈琲店 | 新宿区西新宿1-2-6 | カラーミー | 23 |
 | こはぜ珈琲 | 新宿区西早稲田1-9-13 | STORES(手動) | 37 |
 | 自家焙煎珈琲工房 西東詩集 | 新宿区西早稲田3-15-5 K2ビル1F | 手動 | 2 |
 | Alternative Coffee Works | 新宿区北新宿4-3-1 | BASE | 2 |
 | ザグリ珈琲 | 杉並区阿佐谷北1-43-6 | Shopify | 8 |
 | 青空豆店 | 杉並区永福4-10-4 | BASE | 13 |
+| COFFEE AMP THE ROASTER | 杉並区高円寺南2-20-13 コアビル102 | BASE | 9 |
 | たまじ珈琲 | 杉並区成田東2-33-12 | WP+USCe | 50 |
+| 善福寺珈琲江ノ屋 | 杉並区善福寺2-18-1 | Welcart | 26 |
+| Tokyo Coffee Lab. | 世田谷区下馬2-29-7 | BASE | 6 |
+| ローキートーン珈琲店 | 世田谷区砧6-37-6-BC | カラーミー | 28 |
 | chouette torréfacteur laboratoire | 世田谷区宮坂1-39-11 | BASE(theshop) | 11 |
 | FINETIME COFFEE ROASTERS | 世田谷区経堂1-12-15 | BASE(theshop) | 11 |
 | カフェマルシェkunikuni | 世田谷区経堂2-4-8　Antelop経堂A号室 | カラーミー | 18 |
 | OBSCURA COFFEE ROASTERS | 世田谷区三軒茶屋1-36-10 | 独自EC(shop.obscura-coffee.com) | 18 |
 | 珈琲家あのころ | 世田谷区若林4-20-9 岡村ビル1F | BASE(theshop) | 15 |
 | 南薫堂珈琲 | 世田谷区世田谷2-6-4　グリーンアネックス102 | BASE | 14 |
+| 代澤伍珈琲豆店 | 世田谷区代沢5-32-13 2F | BASE | 3 |
+| モカジャバ | 世田谷区南烏山6-27-9 グレースYK101 | ショップサーブ | 19 |
 | 豆善 | 世田谷区尾山台3-22-4マンヤスビル022号室 | Shopify | 26 |
+| 筋金珈琲焙煎所 | 世田谷区北沢3-31-3 | MakeShop | 18 |
+| カフェ・プレット | 青梅市今井3-27-19 | STORES(手動) | 7 |
+| ソーシャルグッドロースターズ | 千代田区神田錦町1-14-13 LANDPOOL KANDA TERRACE 2F | STORES(手動) | 10 |
+| GLITCH COFFEE & ROASTERS | 千代田区神田錦町3-16 香村ビル 1F | Shopify | 18 |
 | 豆香房 | 千代田区神田神保町 | カラーミー | 58 |
 | ゆるり珈琲 | 足立区(五反野駅・小菅駅近く) | BASE | 22 |
 | BLACK SLOTH COFFEE | 足立区西新井 | BASE | 7 |
 | SLOW JET COFFEE | 足立区千住東1丁目 | BASE | 7 |
 | 自家焙煎メロディアスコーヒー | 足立区保木間1-1-13 足立水道会館2階 | BASE | 25 |
 | northnodecoffee | 足立区保木間3-15-14 | BASE | 16 |
+| MOCCA COFFEE | 台東区駒形1-7-11 1F | STORES(手動) | 8 |
 | nano-coffeeroaster | 台東区浅草橋1-17-4 | BASE | 8 |
 | Peppino Coffee Roaster | 台東区浅草橋2-24-8 | WooCommerce | 24 |
 | 焙煎処 縁の木 | 台東区蔵前 | カラーミー | 53 |
+| コフィノワ COFFEE NOVA | 台東区蔵前3-20-5 ハッピーメゾン蔵前 1F | BASE | 15 |
+| Coffee Wrights | 台東区蔵前4-20-2 | BASE | 13 |
 | ベースキャンプ | 台東区台東3-2-11 | 手動 | 28 |
 | FIVE COFFEE STAND&ROASTERY | 台東区谷中1-3-6 | BASE | 16 |
+| 珈琲工場 谷中 | 台東区谷中3-13-7 | Shopify | 4 |
+| カフェ・バッハ | 台東区日本堤1-23-9 | WooCommerce | 24 |
 | 入谷珈琲豆店 | 台東区入谷1-19-6 | BASE | 23 |
+| マメーズ焙煎工房 | 大田区蒲田1-18-5 | MakeShop | 27 |
 | きまめ屋 | 大田区西蒲田 | 手動 | 28 |
+| サンパウロコーヒー | 大田区西蒲田7-52-5 | MakeShop | 22 |
+| Coffee Roast Natural | 大田区大森西3-12-28 | WordPress | 19 |
 | 加とう珈琲焙煎所 | 大田区大森北5-10-3 | BASE | 14 |
 | ROOT COFFEE | 大田区池上 | BASE | 24 |
+| CROSS珈琲豆店 | 大田区仲六郷2-18-11 | 独自EC(secure-cms.net基盤) | 10 |
 | 下町コーヒー | 大田区南六郷 | 独自EC(xaas3.jp) | 6 |
 | WORLD BEANS | 大田区矢口2-11-28 | 手動 | 17 |
+| BONGEN COFFEE | 中央区銀座2-16-3 | Shopify | 24 |
 | 十一房珈琲店 | 中央区銀座2-2-19 藤間ビル1F | 手動 | 25 |
+| カフェ・ド・ランブル | 中央区銀座8-10-15 | Shopify | 17 |
 | 米本珈琲 | 中央区築地 | Ocnk | 17 |
 | ライブコーヒー | 中央区築地3-5-13 北村ビル1F | Ocnk | 38 |
 | こなみ珈琲 | 中央区日本橋蛎殻町1-39-2 | BASE | 40 |
 | TORIBA COFFEE | 中央区八重洲2-1-1 YANMAR TOKYO B1F | MakeShop | 20 |
 | ITSUKI Coffee Roastery | 中野区 | WooCommerce | 3 |
+| AMBER & JADE ROASTERS | 中野区沼袋1-37-6 ブラックラムズ | Shopify | 17 |
+| MUTO coffee roastery | 中野区中野3-34-18 | EC-CUBE | 17 |
 | MARUTAKE COFFEE BEANS | 中野区野方6-18-14 | BASE | 59 |
+| ヒルズ珈房 | 町田市本町田3450-12 | カラーミー | 13 |
+| カフェカホン | 調布市若葉町2-1-3 ハイム川原1A | Shopify | 23 |
+| コタ珈琲 | 東村山市 | STORES(手動) | 9 |
+| 珈琲倶楽部 | 東大和市中央4-1043-24 | ショップメーカー(独自サイト) | 71 |
+| にじいろコーヒー | 日野市神明2-16-7 | STORES(手動) | 17 |
+| Bee Coffee(ビー コーヒー) | 八王子市散田町3-19-23 | BASE(公式サイトは独自CGIカート) | 28 |
+| かしわや珈琲 | 八王子市千人町3-3-3 | カラーミー | 13 |
+| アチャオコーヒー | 八王子市大楽寺町262-15 | STORES(手動) | 14 |
+| グリーンビーンズ(八王子) | 八王子市大塚621-1-102 神尾ビル | Jimdo(静的価格表) | 24 |
+| Noroc ノロークコーヒー | 八王子市楢原町 | BASE | 13 |
+| カザーナコーヒー | 八王子市本町2-5 1F | Wix(Wix Stores) | 29 |
+| Pappelburg | 八王子市鑓水530-1 | カラーミー | 38 |
+| 珈琲鳴館 | 八王子市椚田町572-1 | 独自カート(teiban.php) | 28 |
 | カフェ・ベルニーニ | 板橋区志村3-7 | Shopify | 20 |
 | 杉綾珈琲豆店 | 板橋区中板橋16-6 | BASE | 13 |
 | 下頭橋焙煎所 | 板橋区弥生町52-1 | BASE | 21 |
 | 珈琲豆焙煎処Taguriano | 品川区荏原 | BASE | 12 |
 | コンパスコーヒー | 品川区旗の台 | Ocnk | 26 |
+| COFFEE ROAST EL BLANCO | 品川区旗の台5-8-7 | Wix(Wix Stores) | 44 |
+| GLOBE COFFEE | 品川区小山5-25-10 平岡マンション1B | カラーミー | 13 |
 | MITSUMATA COFFEE | 品川区大井4-1-2 | Shopify | 14 |
 | NORTH STAR BEANS | 品川区北品川1-3-18 | Shopify | 46 |
+| 日伸珈琲beans | 府中市住吉町4-48-19 | BASE | 17 |
+| 手網焙煎 珈琲焙煎舎 | 府中市美好町2-17-10 | STORES(手動) | 9 |
+| DOPPO どっぽ | 武蔵野市中町1-10-7 武蔵野Kビル1階 | Jimdo Shop | 26 |
 | 神楽坂珈琲焙煎所 | 文京区関口1-3-5 ロジビル1F | MakeShop | 40 |
 | ビーズコーヒー | 文京区千石1-29-15 LAアパートメント文京千石1F | カラーミー | 14 |
 | 自家焙煎珈琲みじんこ | 文京区湯島2-9-10 湯島三組ビル1F | カラーミー | 3 |
 | Toden Coffee | 豊島区雑司が谷 | BASE | 130 |
+| 珈琲豆 優 | 豊島区要町1-13-9 メゾン・デュ・シェーヌ1F | 静的HTML+外部カート(ec-sites) | 76 |
 | 焙煎カフェ やきやき | 北区赤羽北2-31-16 | BASE | 10 |
 | 村上コーヒー | 北区中里1-5-11 | 手動(SNSのみ) | 6 |
 | BEANS珈琲 | 墨田区 | BASE | 21 |
 | Single O Japan | 墨田区亀沢3-21-5 | Shopify | 16 |
+| LEAVES COFFEE ROASTERS | 墨田区本所1-8-8 | Shopify | 9 |
 | ONIBUS COFFEE | 目黒区上目黒2-14-1 | Shopify | 15 |
 | CAFE FACON | 目黒区上目黒3-8-3 千陽中目黒ビル・アネックス3F | ShopServe | 18 |
 | HIMONYA FIVE COFFEE | 目黒区碑文谷5-11-6 | BASE(theshop) | 34 |
+| 珈琲ぶん ROAST FACTORY | 立川市 | BASE | 10 |
+| 自家焙煎珈琲豆店 一福 | 立川市若葉町4-18-4 | BASE | 25 |
 | nericafe | 練馬区大泉学園町1-16-15 | カラーミー | 0 |
+| フェルドコーヒー | 練馬区谷原5-26-12 | STORES(手動) | 13 |
 | GONZO CAFE&BEANS | 練馬区東大泉7-38-29 加昌マンション108 | BASE | 54 |
 | 隠房 | 練馬区練馬4-20-3 ミヤマビル101 | BASE | 4 |
 

@@ -166,7 +166,6 @@ on:
           - coffee1zu
           - norrys
           - gosto
-          - kashiwaya
           - parrot
           - itoya
           - onca
@@ -1166,9 +1165,6 @@ jobs:
           - id: gosto
             script: scrape_gosto.py
             output: data_gosto.json
-          - id: kashiwaya
-            script: scrape_kashiwaya.py
-            output: data_kashiwaya.json
           - id: parrot
             script: scrape_parrot.py
             output: data_parrot.json

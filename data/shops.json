@@ -3252,21 +3252,6 @@
     "lng": 139.239008
   },
   {
-    "name": "柏屋カフェ NAKAYOSHI COFFEE",
-    "url": "https://www.kashiwaya.com/",
-    "platform": "カラーミーショップ",
-    "shop_type": "single_location",
-    "robots_txt_status": "実質許可(2026-09確認。他のカラーミー店舗と同一の記述。/secure/・/cart/のみDisallow。AhrefsBot等一部ボットを個別にDisallow: /、それ以外は制限なし)",
-    "address": "群馬県吾妻郡中之条町四万4237-1",
-    "prefecture": "群馬県",
-    "hours": null,
-    "map_query": "柏屋カフェ NAKAYOSHI COFFEE",
-    "nearest_station": null,
-    "last_scraped_at": "2026-09-29T00:59:09.994425+00:00",
-    "lat": 36.686774,
-    "lng": 138.780756
-  },
-  {
     "name": "パロットコーヒー",
     "url": "https://www.parrot-coffee.com/",
     "platform": "カラーミーショップ",
@@ -15713,5 +15698,1385 @@
     ],
     "lat": 35.2478,
     "lng": 139.158419
+  },
+  {
+    "name": "AMBER & JADE ROASTERS",
+    "url": "https://aj-roasters.com/",
+    "platform": "Shopify",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認(Shopify標準構成)",
+    "address": "東京都中野区沼袋1-37-6 ブラックラムズ",
+    "prefecture": "東京都",
+    "hours": null,
+    "map_query": "AMBER & JADE ROASTERS",
+    "nearest_station": {
+      "name": "沼袋",
+      "lines": [
+        "西武新宿線"
+      ],
+      "distance_m": 70,
+      "walk_min": 1
+    },
+    "last_scraped_at": "2026-10-03T22:18:03.093431+00:00",
+    "lat": 35.719269,
+    "lng": 139.664606
+  },
+  {
+    "name": "Bee Coffee(ビー コーヒー)",
+    "url": "https://bee-coffee.com/",
+    "platform": "BASE(公式サイトは独自CGIカート)",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(BASE系店舗共通の記述。識別可能なUser-Agentを使用)",
+    "address": "東京都八王子市散田町3-19-23",
+    "prefecture": "東京都",
+    "hours": null,
+    "map_query": "Bee Coffee(ビー コーヒー)",
+    "nearest_station": {
+      "name": "山田",
+      "lines": [
+        "京王高尾線"
+      ],
+      "distance_m": 690,
+      "walk_min": 9
+    },
+    "last_scraped_at": "2026-10-03T22:18:03.093431+00:00",
+    "lat": 35.648837,
+    "lng": 139.31573
+  },
+  {
+    "name": "BONGEN COFFEE",
+    "url": "https://bongen-shirafushi-coffee.com/",
+    "platform": "Shopify",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認(Shopify標準構成)",
+    "address": "東京都中央区銀座2-16-3",
+    "prefecture": "東京都",
+    "hours": null,
+    "map_query": "BONGEN COFFEE",
+    "nearest_station": {
+      "name": "銀座",
+      "lines": [
+        "東京メトロ日比谷線",
+        "東京メトロ丸ノ内線",
+        "東京メトロ銀座線"
+      ],
+      "distance_m": 70,
+      "walk_min": 1
+    },
+    "last_scraped_at": "2026-10-03T22:18:03.093431+00:00",
+    "lat": 35.672014,
+    "lng": 139.76472
+  },
+  {
+    "name": "カフェ・バッハ",
+    "url": "https://www.bach-kaffee.co.jp/",
+    "platform": "WordPress + WooCommerce",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認",
+    "address": "東京都台東区日本堤1-23-9",
+    "prefecture": "東京都",
+    "hours": null,
+    "map_query": "カフェ・バッハ",
+    "nearest_station": {
+      "name": "南千住",
+      "lines": [
+        "つくばエクスプレス線",
+        "東京メトロ日比谷線",
+        "JR常磐線快速"
+      ],
+      "distance_m": 620,
+      "walk_min": 8
+    },
+    "last_scraped_at": "2026-10-03T22:18:03.093431+00:00",
+    "lat": 35.726921,
+    "lng": 139.798006
+  },
+  {
+    "name": "カフェカホン",
+    "url": "https://cafecajon.info/",
+    "platform": "Shopify",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認",
+    "address": "東京都調布市若葉町2-1-3 ハイム川原1A",
+    "prefecture": "東京都",
+    "hours": null,
+    "map_query": "カフェカホン",
+    "nearest_station": {
+      "name": "仙川",
+      "lines": [
+        "京王線"
+      ],
+      "distance_m": 620,
+      "walk_min": 8
+    },
+    "last_scraped_at": "2026-10-03T22:18:03.093431+00:00",
+    "lat": 35.658111,
+    "lng": 139.589455
+  },
+  {
+    "name": "カフェ・ド・ランブル",
+    "url": "https://cafedelambre.com/",
+    "platform": "Shopify",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認",
+    "address": "東京都中央区銀座8-10-15",
+    "prefecture": "東京都",
+    "hours": null,
+    "map_query": "カフェ・ド・ランブル",
+    "nearest_station": {
+      "name": "銀座",
+      "lines": [
+        "東京メトロ日比谷線",
+        "東京メトロ丸ノ内線",
+        "東京メトロ銀座線"
+      ],
+      "distance_m": 70,
+      "walk_min": 1
+    },
+    "last_scraped_at": "2026-10-03T22:18:03.093431+00:00",
+    "lat": 35.672014,
+    "lng": 139.76472
+  },
+  {
+    "name": "筋金珈琲焙煎所",
+    "url": "https://cafeuse.com/",
+    "platform": "MakeShop",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認",
+    "address": "東京都世田谷区北沢3-31-3",
+    "prefecture": "東京都",
+    "hours": null,
+    "map_query": "筋金珈琲焙煎所",
+    "nearest_station": {
+      "name": "下北沢",
+      "lines": [
+        "小田急小田原線",
+        "京王井の頭線"
+      ],
+      "distance_m": 210,
+      "walk_min": 3
+    },
+    "last_scraped_at": "2026-10-03T22:18:03.093431+00:00",
+    "lat": 35.663468,
+    "lng": 139.668154
+  },
+  {
+    "name": "COFFEE AMP THE ROASTER",
+    "url": "https://coffeeamp.thebase.in/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "東京都杉並区高円寺南2-20-13 コアビル102",
+    "prefecture": "東京都",
+    "hours": null,
+    "map_query": "COFFEE AMP THE ROASTER",
+    "nearest_station": {
+      "name": "東高円寺",
+      "lines": [
+        "東京メトロ丸ノ内線"
+      ],
+      "distance_m": 360,
+      "walk_min": 5
+    },
+    "last_scraped_at": "2026-10-03T22:18:03.093431+00:00",
+    "lat": 35.700023,
+    "lng": 139.654909
+  },
+  {
+    "name": "珈琲ぶん ROAST FACTORY",
+    "url": "https://coffeebun.thebase.in/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "東京都立川市",
+    "prefecture": "東京都",
+    "hours": null,
+    "map_query": "珈琲ぶん ROAST FACTORY",
+    "nearest_station": {
+      "name": "高松",
+      "lines": [
+        "多摩モノレール"
+      ],
+      "distance_m": 650,
+      "walk_min": 8
+    },
+    "last_scraped_at": "2026-10-03T22:18:03.093431+00:00",
+    "lat": 35.713906,
+    "lng": 139.40777
+  },
+  {
+    "name": "珈琲倶楽部",
+    "url": "https://www.coffeeclub.co.jp/",
+    "platform": "ショップメーカー(独自サイト)",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認",
+    "address": "東京都東大和市中央4-1043-24",
+    "prefecture": "東京都",
+    "hours": null,
+    "map_query": "珈琲倶楽部",
+    "nearest_station": {
+      "name": "上北台",
+      "lines": [
+        "多摩モノレール"
+      ],
+      "distance_m": 1160,
+      "walk_min": 15
+    },
+    "last_scraped_at": "2026-10-03T22:18:03.093431+00:00",
+    "lat": 35.745163,
+    "lng": 139.428673
+  },
+  {
+    "name": "珈琲鳴館",
+    "url": "https://coffeemeikan.com/",
+    "platform": "独自カート(teiban.php)",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認",
+    "address": "東京都八王子市椚田町572-1",
+    "prefecture": "東京都",
+    "hours": null,
+    "map_query": "珈琲鳴館",
+    "nearest_station": {
+      "name": "めじろ台",
+      "lines": [
+        "京王高尾線"
+      ],
+      "distance_m": 820,
+      "walk_min": 10
+    },
+    "last_scraped_at": "2026-10-03T22:18:03.093431+00:00",
+    "lat": 35.636289,
+    "lng": 139.308945
+  },
+  {
+    "name": "コフィノワ COFFEE NOVA",
+    "url": "https://www.coffee-nova.com/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "東京都台東区蔵前3-20-5 ハッピーメゾン蔵前 1F",
+    "prefecture": "東京都",
+    "hours": null,
+    "map_query": "コフィノワ COFFEE NOVA",
+    "nearest_station": {
+      "name": "蔵前",
+      "lines": [
+        "都営大江戸線",
+        "都営浅草線"
+      ],
+      "distance_m": 0,
+      "walk_min": 1
+    },
+    "last_scraped_at": "2026-10-03T22:18:03.093431+00:00",
+    "lat": 35.703212,
+    "lng": 139.790939
+  },
+  {
+    "name": "Coffee Roast Natural",
+    "url": "https://coffee-r-n.com/",
+    "platform": "WordPress(価格表のみ・電話/DM注文)",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認",
+    "address": "東京都大田区大森西3-12-28",
+    "prefecture": "東京都",
+    "hours": null,
+    "map_query": "Coffee Roast Natural",
+    "nearest_station": {
+      "name": "大森町",
+      "lines": [
+        "京浜急行本線"
+      ],
+      "distance_m": 490,
+      "walk_min": 6
+    },
+    "last_scraped_at": "2026-10-03T22:18:03.093431+00:00",
+    "lat": 35.574048,
+    "lng": 139.726975
+  },
+  {
+    "name": "Coffee Wrights",
+    "url": "https://store.coffee-wrights.jp/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "東京都台東区蔵前4-20-2",
+    "prefecture": "東京都",
+    "hours": null,
+    "map_query": "Coffee Wrights",
+    "nearest_station": {
+      "name": "蔵前",
+      "lines": [
+        "都営大江戸線",
+        "都営浅草線"
+      ],
+      "distance_m": 0,
+      "walk_min": 1
+    },
+    "last_scraped_at": "2026-10-03T22:18:03.093431+00:00",
+    "lat": 35.703212,
+    "lng": 139.790939
+  },
+  {
+    "name": "CROSS珈琲豆店",
+    "url": "https://cross-coffee-beans.jp/",
+    "platform": "独自EC(secure-cms.net基盤)",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認(2026-09時点で制限の記述なしと確認済み)",
+    "address": "東京都大田区仲六郷2-18-11",
+    "prefecture": "東京都",
+    "hours": null,
+    "map_query": "CROSS珈琲豆店",
+    "nearest_station": {
+      "name": "雑色",
+      "lines": [
+        "京浜急行本線"
+      ],
+      "distance_m": 560,
+      "walk_min": 7
+    },
+    "last_scraped_at": "2026-10-03T22:18:03.093431+00:00",
+    "lat": 35.546052,
+    "lng": 139.710757
+  },
+  {
+    "name": "代澤伍珈琲豆店",
+    "url": "https://daizawa5.base.shop/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "東京都世田谷区代沢5-32-13 2F",
+    "prefecture": "東京都",
+    "hours": null,
+    "map_query": "代澤伍珈琲豆店",
+    "nearest_station": {
+      "name": "池ノ上",
+      "lines": [
+        "京王井の頭線"
+      ],
+      "distance_m": 490,
+      "walk_min": 6
+    },
+    "last_scraped_at": "2026-10-03T22:18:03.093431+00:00",
+    "lat": 35.656672,
+    "lng": 139.670598
+  },
+  {
+    "name": "DOPPO どっぽ",
+    "url": "https://www.doppo-coffee.com/",
+    "platform": "Jimdo Shop",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認",
+    "address": "東京都武蔵野市中町1-10-7 武蔵野Kビル1階",
+    "prefecture": "東京都",
+    "hours": null,
+    "map_query": "DOPPO どっぽ",
+    "nearest_station": {
+      "name": "三鷹",
+      "lines": [
+        "JR中央線",
+        "JR総武線"
+      ],
+      "distance_m": 730,
+      "walk_min": 9
+    },
+    "last_scraped_at": "2026-10-03T22:18:03.093431+00:00",
+    "lat": 35.70781,
+    "lng": 139.565287
+  },
+  {
+    "name": "COFFEE ROAST EL BLANCO",
+    "url": "https://en.el-blanco.com/",
+    "platform": "Wix(Wix Stores)",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認",
+    "address": "東京都品川区旗の台5-8-7",
+    "prefecture": "東京都",
+    "hours": null,
+    "map_query": "COFFEE ROAST EL BLANCO",
+    "nearest_station": {
+      "name": "旗の台",
+      "lines": [
+        "東急大井町線",
+        "東急池上線"
+      ],
+      "distance_m": 40,
+      "walk_min": 1
+    },
+    "last_scraped_at": "2026-10-03T22:18:03.093431+00:00",
+    "lat": 35.604875,
+    "lng": 139.702722
+  },
+  {
+    "name": "善福寺珈琲江ノ屋",
+    "url": "https://www.enoyacoffee.tokyo/shop/",
+    "platform": "WordPress + Welcart",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認",
+    "address": "東京都杉並区善福寺2-18-1",
+    "prefecture": "東京都",
+    "hours": null,
+    "map_query": "善福寺珈琲江ノ屋",
+    "nearest_station": {
+      "name": "上石神井",
+      "lines": [
+        "西武新宿線"
+      ],
+      "distance_m": 1320,
+      "walk_min": 17
+    },
+    "last_scraped_at": "2026-10-03T22:18:03.093431+00:00",
+    "lat": 35.714395,
+    "lng": 139.590818
+  },
+  {
+    "name": "GLITCH COFFEE & ROASTERS",
+    "url": "https://shop.glitchcoffee.com/",
+    "platform": "Shopify",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認(Shopify標準構成)",
+    "address": "東京都千代田区神田錦町3-16 香村ビル 1F",
+    "prefecture": "東京都",
+    "hours": null,
+    "map_query": "GLITCH COFFEE & ROASTERS",
+    "nearest_station": {
+      "name": "竹橋",
+      "lines": [
+        "東京メトロ東西線"
+      ],
+      "distance_m": 470,
+      "walk_min": 6
+    },
+    "last_scraped_at": "2026-10-03T22:18:03.093431+00:00",
+    "lat": 35.691694,
+    "lng": 139.761848
+  },
+  {
+    "name": "GLOBE COFFEE",
+    "url": "https://globecoffee.tokyo/",
+    "platform": "カラーミーショップ",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認",
+    "address": "東京都品川区小山5-25-10 平岡マンション1B",
+    "prefecture": "東京都",
+    "hours": null,
+    "map_query": "GLOBE COFFEE",
+    "nearest_station": {
+      "name": "西小山",
+      "lines": [
+        "東急目黒線"
+      ],
+      "distance_m": 280,
+      "walk_min": 4
+    },
+    "last_scraped_at": "2026-10-03T22:18:03.093431+00:00",
+    "lat": 35.616243,
+    "lng": 139.701584
+  },
+  {
+    "name": "G☆P COFFEE ROASTER",
+    "url": "https://gpcoffee.base.shop/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "東京都渋谷区本町2-28-4",
+    "prefecture": "東京都",
+    "hours": null,
+    "map_query": "G☆P COFFEE ROASTER",
+    "nearest_station": {
+      "name": "初台",
+      "lines": [
+        "京王新線"
+      ],
+      "distance_m": 610,
+      "walk_min": 8
+    },
+    "last_scraped_at": "2026-10-03T22:18:03.093431+00:00",
+    "lat": 35.684145,
+    "lng": 139.680656
+  },
+  {
+    "name": "グリーンビーンズ(八王子)",
+    "url": "https://www.greenbeans-shop.com/",
+    "platform": "Jimdo(静的価格表)",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認",
+    "address": "東京都八王子市大塚621-1-102 神尾ビル",
+    "prefecture": "東京都",
+    "hours": null,
+    "map_query": "グリーンビーンズ(八王子)",
+    "nearest_station": {
+      "name": "大塚・帝京大学",
+      "lines": [
+        "多摩モノレール"
+      ],
+      "distance_m": 350,
+      "walk_min": 4
+    },
+    "last_scraped_at": "2026-10-03T22:18:03.093431+00:00",
+    "lat": 35.639484,
+    "lng": 139.418706
+  },
+  {
+    "name": "ヒルズ珈房",
+    "url": "https://shop.hillscabo.com/",
+    "platform": "カラーミーショップ",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認",
+    "address": "東京都町田市本町田3450-12",
+    "prefecture": "東京都",
+    "hours": null,
+    "map_query": "ヒルズ珈房",
+    "nearest_station": {
+      "name": "茶山・京都芸術大学",
+      "lines": [
+        "叡山電鉄本線"
+      ],
+      "distance_m": 220,
+      "walk_min": 3
+    },
+    "last_scraped_at": "2026-10-03T22:18:03.093431+00:00",
+    "lat": 35.038916,
+    "lng": 135.782191
+  },
+  {
+    "name": "自家焙煎珈琲豆店 一福",
+    "url": "https://ichifukumame.theshop.jp/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "東京都立川市若葉町4-18-4",
+    "prefecture": "東京都",
+    "hours": null,
+    "map_query": "自家焙煎珈琲豆店 一福",
+    "nearest_station": {
+      "name": "東大和市",
+      "lines": [
+        "西武拝島線"
+      ],
+      "distance_m": 1540,
+      "walk_min": 19
+    },
+    "last_scraped_at": "2026-10-03T22:18:03.093431+00:00",
+    "lat": 35.719452,
+    "lng": 139.438504
+  },
+  {
+    "name": "カモメロースタリ東京",
+    "url": "https://www.kamome-tokyo.com/",
+    "platform": "Wix(Wix Stores)",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認",
+    "address": "東京都葛飾区亀有3-36-2 1F",
+    "prefecture": "東京都",
+    "hours": null,
+    "map_query": "カモメロースタリ東京",
+    "nearest_station": {
+      "name": "亀有",
+      "lines": [
+        "JR常磐線各駅停車"
+      ],
+      "distance_m": 30,
+      "walk_min": 1
+    },
+    "last_scraped_at": "2026-10-03T22:18:03.093431+00:00",
+    "lat": 35.766665,
+    "lng": 139.847801
+  },
+  {
+    "name": "かしわや珈琲",
+    "url": "https://kashiwaya.shop-pro.jp/",
+    "platform": "カラーミーショップ",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認",
+    "address": "東京都八王子市千人町3-3-3",
+    "prefecture": "東京都",
+    "hours": null,
+    "map_query": "かしわや珈琲",
+    "nearest_station": {
+      "name": "西八王子",
+      "lines": [
+        "JR中央線"
+      ],
+      "distance_m": 260,
+      "walk_min": 3
+    },
+    "last_scraped_at": "2026-10-03T22:18:03.093431+00:00",
+    "lat": 35.658696,
+    "lng": 139.313963
+  },
+  {
+    "name": "カザーナコーヒー",
+    "url": "https://www.khazana-coffee.com/",
+    "platform": "Wix(Wix Stores)",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認",
+    "address": "東京都八王子市本町2-5 1F",
+    "prefecture": "東京都",
+    "hours": null,
+    "map_query": "カザーナコーヒー",
+    "nearest_station": {
+      "name": "八王子",
+      "lines": [
+        "JR八高線",
+        "JR中央線",
+        "JR横浜線"
+      ],
+      "distance_m": 1030,
+      "walk_min": 13
+    },
+    "last_scraped_at": "2026-10-03T22:18:03.093431+00:00",
+    "lat": 35.662726,
+    "lng": 139.33181
+  },
+  {
+    "name": "kobby's coffee",
+    "url": "https://kobbyscoffee.thebase.in/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "東京都江戸川区一之江7-87-4",
+    "prefecture": "東京都",
+    "hours": null,
+    "map_query": "kobby's coffee",
+    "nearest_station": {
+      "name": "一之江",
+      "lines": [
+        "都営新宿線"
+      ],
+      "distance_m": 20,
+      "walk_min": 1
+    },
+    "last_scraped_at": "2026-10-03T22:18:03.093431+00:00",
+    "lat": 35.686091,
+    "lng": 139.883113
+  },
+  {
+    "name": "珈琲工場 谷中",
+    "url": "https://ko-hi-ko-jo.myshopify.com/",
+    "platform": "Shopify",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認(Shopify標準構成)",
+    "address": "東京都台東区谷中3-13-7",
+    "prefecture": "東京都",
+    "hours": null,
+    "map_query": "珈琲工場 谷中",
+    "nearest_station": {
+      "name": "日暮里",
+      "lines": [
+        "JR京浜東北線",
+        "京成本線",
+        "JR常磐線快速",
+        "JR上野東京ライン",
+        "JR山手線",
+        "日暮里・舎人ライナー"
+      ],
+      "distance_m": 430,
+      "walk_min": 5
+    },
+    "last_scraped_at": "2026-10-03T22:18:03.093431+00:00",
+    "lat": 35.724789,
+    "lng": 139.768558
+  },
+  {
+    "name": "LEAVES COFFEE ROASTERS",
+    "url": "https://leavescoffee.jp/",
+    "platform": "Shopify",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認(Shopify標準構成)",
+    "address": "東京都墨田区本所1-8-8",
+    "prefecture": "東京都",
+    "hours": null,
+    "map_query": "LEAVES COFFEE ROASTERS",
+    "nearest_station": {
+      "name": "本所吾妻橋",
+      "lines": [
+        "都営浅草線"
+      ],
+      "distance_m": 620,
+      "walk_min": 8
+    },
+    "last_scraped_at": "2026-10-03T22:18:03.093431+00:00",
+    "lat": 35.703578,
+    "lng": 139.801515
+  },
+  {
+    "name": "LIGHT UP COFFEE",
+    "url": "https://lightupcoffee.com/",
+    "platform": "Shopify",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認(Shopify標準構成)",
+    "address": "東京都三鷹市新川6丁目36-27(三鷹店・焙煎所)",
+    "prefecture": "東京都",
+    "hours": null,
+    "map_query": "LIGHT UP COFFEE",
+    "nearest_station": {
+      "name": "つつじヶ丘",
+      "lines": [
+        "京王線"
+      ],
+      "distance_m": 2510,
+      "walk_min": 31
+    },
+    "last_scraped_at": "2026-10-03T22:18:03.093431+00:00",
+    "lat": 35.67917,
+    "lng": 139.565688
+  },
+  {
+    "name": "ローキートーン珈琲店",
+    "url": "https://lowkeytonecoffee.com/",
+    "platform": "カラーミーショップ",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認",
+    "address": "東京都世田谷区砧6-37-6-BC",
+    "prefecture": "東京都",
+    "hours": null,
+    "map_query": "ローキートーン珈琲店",
+    "nearest_station": {
+      "name": "祖師ヶ谷大蔵",
+      "lines": [
+        "小田急小田原線"
+      ],
+      "distance_m": 430,
+      "walk_min": 5
+    },
+    "last_scraped_at": "2026-10-03T22:18:03.093431+00:00",
+    "lat": 35.639706,
+    "lng": 139.611551
+  },
+  {
+    "name": "珈琲豆 優",
+    "url": "https://www.coffeemame-you.jp/",
+    "platform": "静的HTML+外部カート(ec-sites)",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認",
+    "address": "東京都豊島区要町1-13-9 メゾン・デュ・シェーヌ1F",
+    "prefecture": "東京都",
+    "hours": null,
+    "map_query": "珈琲豆 優",
+    "nearest_station": {
+      "name": "要町",
+      "lines": [
+        "東京メトロ副都心線",
+        "東京メトロ有楽町線"
+      ],
+      "distance_m": 0,
+      "walk_min": 1
+    },
+    "last_scraped_at": "2026-10-03T22:18:03.093431+00:00",
+    "lat": 35.733241,
+    "lng": 139.698684
+  },
+  {
+    "name": "マメーズ焙煎工房",
+    "url": "https://www.mames.jp/",
+    "platform": "MakeShop",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認",
+    "address": "東京都大田区蒲田1-18-5",
+    "prefecture": "東京都",
+    "hours": null,
+    "map_query": "マメーズ焙煎工房",
+    "nearest_station": {
+      "name": "京急蒲田",
+      "lines": [
+        "京浜急行本線",
+        "京浜急行空港線"
+      ],
+      "distance_m": 370,
+      "walk_min": 5
+    },
+    "last_scraped_at": "2026-10-03T22:18:03.093431+00:00",
+    "lat": 35.563724,
+    "lng": 139.721696
+  },
+  {
+    "name": "モカジャバ",
+    "url": "https://www.mokajava.co.jp/",
+    "platform": "ショップサーブ",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認",
+    "address": "東京都世田谷区南烏山6-27-9 グレースYK101",
+    "prefecture": "東京都",
+    "hours": null,
+    "map_query": "モカジャバ",
+    "nearest_station": {
+      "name": "千歳烏山",
+      "lines": [
+        "京王線"
+      ],
+      "distance_m": 120,
+      "walk_min": 2
+    },
+    "last_scraped_at": "2026-10-03T22:18:03.093431+00:00",
+    "lat": 35.668979,
+    "lng": 139.600747
+  },
+  {
+    "name": "元麻布焙煎所",
+    "url": "https://www.motoazabu-roastery.com/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "東京都港区元麻布",
+    "prefecture": "東京都",
+    "hours": null,
+    "map_query": "元麻布焙煎所",
+    "nearest_station": {
+      "name": "麻布十番",
+      "lines": [
+        "都営大江戸線",
+        "東京メトロ南北線"
+      ],
+      "distance_m": 600,
+      "walk_min": 8
+    },
+    "last_scraped_at": "2026-10-03T22:18:03.093431+00:00",
+    "lat": 35.655551,
+    "lng": 139.729634
+  },
+  {
+    "name": "MUTO coffee roastery",
+    "url": "https://www.muto-coffee.com/shop/",
+    "platform": "EC-CUBE",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認(EC-CUBE標準構成)",
+    "address": "東京都中野区中野3-34-18",
+    "prefecture": "東京都",
+    "hours": null,
+    "map_query": "MUTO coffee roastery",
+    "nearest_station": {
+      "name": "中野",
+      "lines": [
+        "東京メトロ東西線",
+        "JR総武線",
+        "JR中央線"
+      ],
+      "distance_m": 200,
+      "walk_min": 3
+    },
+    "last_scraped_at": "2026-10-03T22:18:03.093431+00:00",
+    "lat": 35.704302,
+    "lng": 139.664635
+  },
+  {
+    "name": "日伸珈琲beans",
+    "url": "https://nishincoffee.theshop.jp/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "東京都府中市住吉町4-48-19",
+    "prefecture": "東京都",
+    "hours": null,
+    "map_query": "日伸珈琲beans",
+    "nearest_station": {
+      "name": "中河原",
+      "lines": [
+        "京王線"
+      ],
+      "distance_m": 510,
+      "walk_min": 6
+    },
+    "last_scraped_at": "2026-10-03T22:18:03.093431+00:00",
+    "lat": 35.664084,
+    "lng": 139.458608
+  },
+  {
+    "name": "Noroc ノロークコーヒー",
+    "url": "https://noroccoffee.thebase.in/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "東京都八王子市楢原町",
+    "prefecture": "東京都",
+    "hours": null,
+    "map_query": "Noroc ノロークコーヒー",
+    "nearest_station": {
+      "name": "西八王子",
+      "lines": [
+        "JR中央線"
+      ],
+      "distance_m": 3150,
+      "walk_min": 39
+    },
+    "last_scraped_at": "2026-10-03T22:18:03.093431+00:00",
+    "lat": 35.683834,
+    "lng": 139.303121
+  },
+  {
+    "name": "Pappelburg",
+    "url": "https://burg-kaffee.com/",
+    "platform": "カラーミーショップ",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認",
+    "address": "東京都八王子市鑓水530-1",
+    "prefecture": "東京都",
+    "hours": null,
+    "map_query": "Pappelburg",
+    "nearest_station": {
+      "name": "相原",
+      "lines": [
+        "JR横浜線"
+      ],
+      "distance_m": 2120,
+      "walk_min": 27
+    },
+    "last_scraped_at": "2026-10-03T22:18:03.093431+00:00",
+    "lat": 35.61891,
+    "lng": 139.349939
+  },
+  {
+    "name": "PASSAGE COFFEE",
+    "url": "https://passagecoffee.com/",
+    "platform": "Shopify",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認(Shopify標準構成)",
+    "address": "東京都三鷹市井の頭1丁目30-20 三鷹台ストリート 1階 2号室(ROASTERY)",
+    "prefecture": "東京都",
+    "hours": null,
+    "map_query": "PASSAGE COFFEE",
+    "nearest_station": {
+      "name": "三鷹台",
+      "lines": [
+        "京王井の頭線"
+      ],
+      "distance_m": 310,
+      "walk_min": 4
+    },
+    "last_scraped_at": "2026-10-03T22:18:03.093431+00:00",
+    "lat": 35.689281,
+    "lng": 139.589381
+  },
+  {
+    "name": "ROSTRO",
+    "url": "https://shop.rostro-jp.com/",
+    "platform": "Shopify",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認(Shopify標準構成)",
+    "address": "東京都渋谷区富ヶ谷1-14-20 サウスピア1F",
+    "prefecture": "東京都",
+    "hours": null,
+    "map_query": "ROSTRO",
+    "nearest_station": {
+      "name": "代々木公園",
+      "lines": [
+        "東京メトロ千代田線"
+      ],
+      "distance_m": 400,
+      "walk_min": 5
+    },
+    "last_scraped_at": "2026-10-03T22:18:03.093431+00:00",
+    "lat": 35.665808,
+    "lng": 139.6876
+  },
+  {
+    "name": "サンパウロコーヒー",
+    "url": "https://saopaulocoffee.com/",
+    "platform": "MakeShop",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認",
+    "address": "東京都大田区西蒲田7-52-5",
+    "prefecture": "東京都",
+    "hours": null,
+    "map_query": "サンパウロコーヒー",
+    "nearest_station": {
+      "name": "蓮沼",
+      "lines": [
+        "東急池上線"
+      ],
+      "distance_m": 460,
+      "walk_min": 6
+    },
+    "last_scraped_at": "2026-10-03T22:18:03.093431+00:00",
+    "lat": 35.566564,
+    "lng": 139.712636
+  },
+  {
+    "name": "SCRATCH COFFEE",
+    "url": "https://www.scratch-coffee.net/",
+    "platform": "Wix(Wix Stores)",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認",
+    "address": "東京都葛飾区四つ木1-33-7",
+    "prefecture": "東京都",
+    "hours": null,
+    "map_query": "SCRATCH COFFEE",
+    "nearest_station": {
+      "name": "四ツ木",
+      "lines": [
+        "京成押上線"
+      ],
+      "distance_m": 420,
+      "walk_min": 5
+    },
+    "last_scraped_at": "2026-10-03T22:18:03.093431+00:00",
+    "lat": 35.735722,
+    "lng": 139.834211
+  },
+  {
+    "name": "白金珈琲",
+    "url": "https://shirokane-coffee.jp/",
+    "platform": "WordPress + Welcart",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認",
+    "address": "東京都港区高輪1-4-20",
+    "prefecture": "東京都",
+    "hours": null,
+    "map_query": "白金珈琲",
+    "nearest_station": {
+      "name": "高輪ゲートウェイ",
+      "lines": [
+        "JR山手線",
+        "JR京浜東北線"
+      ],
+      "distance_m": 450,
+      "walk_min": 6
+    },
+    "last_scraped_at": "2026-10-03T22:18:03.093431+00:00",
+    "lat": 35.634974,
+    "lng": 139.735716
+  },
+  {
+    "name": "但馬屋珈琲店",
+    "url": "https://shop.tajimaya-coffeeten.com/",
+    "platform": "カラーミーショップ",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認",
+    "address": "東京都新宿区西新宿1-2-6",
+    "prefecture": "東京都",
+    "hours": null,
+    "map_query": "但馬屋珈琲店",
+    "nearest_station": {
+      "name": "都庁前",
+      "lines": [
+        "都営大江戸線"
+      ],
+      "distance_m": 140,
+      "walk_min": 2
+    },
+    "last_scraped_at": "2026-10-03T22:18:03.093431+00:00",
+    "lat": 35.690719,
+    "lng": 139.694153
+  },
+  {
+    "name": "Tokyo Coffee Lab.",
+    "url": "https://tokyocoffeelab.com/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "東京都世田谷区下馬2-29-7",
+    "prefecture": "東京都",
+    "hours": null,
+    "map_query": "Tokyo Coffee Lab.",
+    "nearest_station": {
+      "name": "学芸大学",
+      "lines": [
+        "東急東横線"
+      ],
+      "distance_m": 760,
+      "walk_min": 10
+    },
+    "last_scraped_at": "2026-10-03T22:18:03.093431+00:00",
+    "lat": 35.634217,
+    "lng": 139.680082
+  },
+  {
+    "name": "アチャオコーヒー",
+    "url": "https://achao001.stores.jp/",
+    "instagram_url": null,
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "東京都八王子市大楽寺町262-15",
+    "prefecture": "東京都",
+    "hours": null,
+    "map_query": "アチャオコーヒー 東京都八王子市大楽寺町262-15",
+    "nearest_station": {
+      "name": "西八王子",
+      "lines": [
+        "JR中央線"
+      ],
+      "distance_m": 3150,
+      "walk_min": 39
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://achao001.stores.jp/)の商品ページをブラウザfetch()で2026-10-04に確認。八王子の自宅で富士ローヤル(直火式)により自家焙煎(ショップ説明)。100g〜400gの選択制で100gを代表(通常価格、期間限定割引は不採用)。お楽しみセット・生豆は除外",
+    "last_verified_at": "2026-10-03",
+    "locations": [
+      {
+        "label": null,
+        "address": "東京都八王子市大楽寺町262-15",
+        "prefecture": "東京都",
+        "hours": null,
+        "tel": "042-651-6346",
+        "is_headquarters": false,
+        "map_query": "アチャオコーヒー 東京都八王子市大楽寺町262-15",
+        "lat": 35.675643,
+        "lng": 139.286864
+      }
+    ],
+    "lat": 35.675643,
+    "lng": 139.286864
+  },
+  {
+    "name": "カフェ・プレット",
+    "url": "https://cafe-preto.stores.jp/",
+    "instagram_url": null,
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "東京都青梅市今井3-27-19",
+    "prefecture": "東京都",
+    "hours": null,
+    "map_query": "カフェ・プレット 東京都青梅市今井3-27-19",
+    "nearest_station": {
+      "name": "金子",
+      "lines": [
+        "JR八高線"
+      ],
+      "distance_m": 1550,
+      "walk_min": 19
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://cafe-preto.stores.jp/)の商品ページをブラウザfetch()で2026-10-04に確認。約15年前に青梅で創業し、自ら生豆を選んで焙煎する自家焙煎店(ショップ説明)。豆は200g。ドリップバッグは除外",
+    "last_verified_at": "2026-10-03",
+    "locations": [
+      {
+        "label": null,
+        "address": "東京都青梅市今井3-27-19",
+        "prefecture": "東京都",
+        "hours": null,
+        "tel": "0428-32-8116",
+        "is_headquarters": false,
+        "map_query": "カフェ・プレット 東京都青梅市今井3-27-19",
+        "lat": 35.80424,
+        "lng": 139.313428
+      }
+    ],
+    "lat": 35.80424,
+    "lng": 139.313428
+  },
+  {
+    "name": "手網焙煎 珈琲焙煎舎",
+    "url": "https://coffeebaisensya.stores.jp/",
+    "instagram_url": null,
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "東京都府中市美好町2-17-10",
+    "prefecture": "東京都",
+    "hours": null,
+    "map_query": "手網焙煎 珈琲焙煎舎 東京都府中市美好町2-17-10",
+    "nearest_station": {
+      "name": "分倍河原",
+      "lines": [
+        "JR南武線",
+        "京王線"
+      ],
+      "distance_m": 510,
+      "walk_min": 6
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://coffeebaisensya.stores.jp/)の商品ページをブラウザfetch()で2026-10-04に確認。2011年開店、希少なMicro Lotを手網で焙煎する自家焙煎店(店主説明)。100g価格。受注生産(生豆約125gを焙煎して約100g)の3銘柄を含む。ブレンドCOFFEE2050(容量不明)・セット・ドリップバッグ・イベント予約は除外",
+    "last_verified_at": "2026-10-03",
+    "locations": [
+      {
+        "label": null,
+        "address": "東京都府中市美好町2-17-10",
+        "prefecture": "東京都",
+        "hours": null,
+        "tel": "042-319-8684",
+        "is_headquarters": false,
+        "map_query": "手網焙煎 珈琲焙煎舎 東京都府中市美好町2-17-10",
+        "lat": 35.672961,
+        "lng": 139.469966
+      }
+    ],
+    "lat": 35.672961,
+    "lng": 139.469966
+  },
+  {
+    "name": "コタ珈琲",
+    "url": "https://kotacoffee.stores.jp/",
+    "instagram_url": null,
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "東京都東村山市",
+    "prefecture": "東京都",
+    "hours": null,
+    "map_query": "コタ珈琲 東京都東村山市",
+    "nearest_station": {
+      "name": "新秋津",
+      "lines": [
+        "JR武蔵野線"
+      ],
+      "distance_m": 1330,
+      "walk_min": 17
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://kotacoffee.stores.jp/)の商品ページをブラウザfetch()で2026-10-04に確認。東村山市の手廻し焙煎の自家焙煎店(焙煎日表記あり)。番地は公開情報で確認できず市まで。100g〜の選択制で100gを代表(豆のまま)。ドリップバッグ・ギフト・水出しは除外",
+    "last_verified_at": "2026-10-03",
+    "locations": [
+      {
+        "label": null,
+        "address": "東京都東村山市",
+        "prefecture": "東京都",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "コタ珈琲 東京都東村山市",
+        "lat": 35.768929,
+        "lng": 139.484539
+      }
+    ],
+    "lat": 35.768929,
+    "lng": 139.484539
+  },
+  {
+    "name": "MOCCA COFFEE",
+    "url": "https://mocca-coffee.stores.jp/",
+    "instagram_url": null,
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "東京都台東区駒形1-7-11 1F",
+    "prefecture": "東京都",
+    "hours": null,
+    "map_query": "MOCCA COFFEE 東京都台東区駒形1-7-11 1F",
+    "nearest_station": {
+      "name": "浅草",
+      "lines": [
+        "都営浅草線",
+        "東京メトロ銀座線",
+        "東武伊勢崎線",
+        "つくばエクスプレス線"
+      ],
+      "distance_m": 440,
+      "walk_min": 6
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://mocca-coffee.stores.jp/)の商品ページをブラウザfetch()で2026-10-04に確認。「自家焙煎のスペシャルティコーヒー専門店」(ショップ説明)。住所はショップ説明のMOCCA COFFEE CAFE。ドリップバッグ・コラボ・雑貨は除外",
+    "last_verified_at": "2026-10-03",
+    "locations": [
+      {
+        "label": null,
+        "address": "東京都台東区駒形1-7-11 1F",
+        "prefecture": "東京都",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "MOCCA COFFEE 東京都台東区駒形1-7-11 1F",
+        "lat": 35.706039,
+        "lng": 139.794559
+      }
+    ],
+    "lat": 35.706039,
+    "lng": 139.794559
+  },
+  {
+    "name": "にじいろコーヒー",
+    "url": "https://nijiiro-coffee.com/",
+    "instagram_url": null,
+    "platform": "STORES.jp(独自ドメイン、ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "東京都日野市神明2-16-7",
+    "prefecture": "東京都",
+    "hours": null,
+    "map_query": "にじいろコーヒー 東京都日野市神明2-16-7",
+    "nearest_station": {
+      "name": "日野",
+      "lines": [
+        "JR中央線"
+      ],
+      "distance_m": 740,
+      "walk_min": 9
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jp(https://nijiiro-coffee.com/)の商品ページをブラウザfetch()で2026-10-04に確認。日野市でフジローヤル直火式焙煎機により焙煎(Pre-Washed焙煎、ショップ説明)。100g/200gの選択制で100gを代表(豆のまま)。セット・ドリップバッグ・定期便・ギフトは除外",
+    "last_verified_at": "2026-10-03",
+    "locations": [
+      {
+        "label": null,
+        "address": "東京都日野市神明2-16-7",
+        "prefecture": "東京都",
+        "hours": null,
+        "tel": "0428-43-3914",
+        "is_headquarters": false,
+        "map_query": "にじいろコーヒー 東京都日野市神明2-16-7",
+        "lat": 35.672787,
+        "lng": 139.395718
+      }
+    ],
+    "lat": 35.672787,
+    "lng": 139.395718
+  },
+  {
+    "name": "フェルドコーヒー",
+    "url": "https://pferd-kaffee.stores.jp/",
+    "instagram_url": null,
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "東京都練馬区谷原5-26-12",
+    "prefecture": "東京都",
+    "hours": null,
+    "map_query": "フェルドコーヒー 東京都練馬区谷原5-26-12",
+    "nearest_station": {
+      "name": "石神井公園",
+      "lines": [
+        "西武池袋線"
+      ],
+      "distance_m": 1310,
+      "walk_min": 16
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://pferd-kaffee.stores.jp/)の商品ページをブラウザfetch()で2026-10-04に確認。「自家焙煎コーヒーという時間」(ショップ説明)の練馬の自家焙煎店。商品名の末尾「/100g」が内容量。セット・定期便・ドリップバッグ・濾紙は除外",
+    "last_verified_at": "2026-10-03",
+    "locations": [
+      {
+        "label": null,
+        "address": "東京都練馬区谷原5-26-12",
+        "prefecture": "東京都",
+        "hours": null,
+        "tel": "03-5935-7551",
+        "is_headquarters": false,
+        "map_query": "フェルドコーヒー 東京都練馬区谷原5-26-12",
+        "lat": 35.753302,
+        "lng": 139.615087
+      }
+    ],
+    "lat": 35.753302,
+    "lng": 139.615087
+  },
+  {
+    "name": "ソーシャルグッドロースターズ",
+    "url": "https://sgroasters.stores.jp/",
+    "instagram_url": null,
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "東京都千代田区神田錦町1-14-13 LANDPOOL KANDA TERRACE 2F",
+    "prefecture": "東京都",
+    "hours": null,
+    "map_query": "ソーシャルグッドロースターズ 東京都千代田区神田錦町1-14-13 LANDPOOL KANDA TERRACE 2F",
+    "nearest_station": {
+      "name": "竹橋",
+      "lines": [
+        "東京メトロ東西線"
+      ],
+      "distance_m": 470,
+      "walk_min": 6
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://sgroasters.stores.jp/)の商品ページをブラウザfetch()で2026-10-04に確認。ハンデキャップのあるバリスタ・焙煎士が働く千代田の焙煎所(ショップ説明)。100g価格。コーヒーバッグ・定期便・卸1kg・グッズは除外。以前は技術的理由(STORES SPA)で見送っていた店舗",
+    "last_verified_at": "2026-10-03",
+    "locations": [
+      {
+        "label": null,
+        "address": "東京都千代田区神田錦町1-14-13 LANDPOOL KANDA TERRACE 2F",
+        "prefecture": "東京都",
+        "hours": null,
+        "tel": "03-6811-0895",
+        "is_headquarters": false,
+        "map_query": "ソーシャルグッドロースターズ 東京都千代田区神田錦町1-14-13 LANDPOOL KANDA TERRACE 2F",
+        "lat": 35.691694,
+        "lng": 139.761848
+      }
+    ],
+    "lat": 35.691694,
+    "lng": 139.761848
   }
 ]
