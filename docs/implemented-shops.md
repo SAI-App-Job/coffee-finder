@@ -5,7 +5,7 @@
 `scraper/manual/shops/`配下、それ以外は`scraper/scrape_*.py`で自動取得。
 実装を見送った店舗は`docs/not-implementable-shops.md`を参照。
 
-合計695店舗・12481商品(生成日: 2026-10-02)。
+合計729店舗・12989商品(生成日: 2026-10-03)。
 
 再生成コマンド:
 ```
@@ -500,21 +500,46 @@ aggregate_shops.py実行後の`git diff --staged --quiet || git commit`が該当
 
 | 店舗名 | 所在地 | 方式 | 件数 |
 |---|---|---|---|
+| THE BEANS | 綾瀬市綾西4-19-6 A棟 | 楽天市場 | 20 |
 | TSUKIKOYA COFFEE ROASTER | 横須賀市浦郷町3-51 | カラーミー | 26 |
+| 自家焙煎珈琲豆サニム | 横須賀市久里浜4-14-1 | EC-CUBE | 32 |
+| 波の音珈琲 | 横須賀市秋谷1-13-1 | Jimdo(メール注文) | 3 |
+| Esp & Co. | 横浜市 | BASE | 5 |
+| RiFF COFFEE ROASTERY | 横浜市港北区高田東4-21-6 | BASE | 6 |
 | TERA COFFEE and ROASTER | 横浜市港北区大倉山1丁目3-20 | カラーミー | 21 |
 | NAGI COFFEE | 横浜市神奈川区松本町3-22-8 | BASE(theshop) | 11 |
 | coffee roast 福田珈琲焙煎所 | 横浜市神奈川区神大寺4-1-7 フローラ神大寺1F | 手動(SNSのみ) | 6 |
 | 405 COFFEE ROASTERS | 横浜市西区中央2-24-6 西前市場1階 | カラーミー | 24 |
+| Blendia | 横浜市青葉区あざみ野2-28-1 パールビルA102 | Ocnk | 28 |
+| 荒田珈琲 | 横浜市青葉区桜台25-1 桜台ビレジショッピングコリドール | STORES(手動) | 12 |
+| 横浜たまプラーザビーンズ | 横浜市青葉区美しが丘4-19-19 | ショップサーブ(独自カート) | 36 |
 | フォレスト自家焙煎コーヒー豆店 | 横浜市泉区緑園6-1-27 | Welcart | 15 |
 | Mameya Roastery | 横浜市中区伊勢佐木町5-126 | カラーミー | 38 |
 | COFFEE ROASTERY MEGURO | 横浜市中区元町・中華街 | BASE | 17 |
+| GOD Valley Coffee Roastery | 横浜市中区豆口台4 | STORES(手動) | 11 |
 | COFFEE TERMINAL | 横浜市都筑区葛が谷14-7 | カラーミー | 40 |
+| COLORS COFFEE | 横浜市南区六ツ川1-855-2 グレイスヒルズ横浜3F | BASE | 6 |
 | 自家焙煎星川珈琲 | 横浜市保土ケ谷区星川 | Shopify | 5 |
+| ローストカフェ uno roastcoffee | 横浜市保土ケ谷区西谷4-6-17 | BASE | 21 |
+| CALENDER Coffee | 鎌倉市材木座1-10-16 | STORES(手動) | 6 |
+| ISHIKAWA COFFEE(石かわ珈琲) | 鎌倉市山ノ内197-52 | カラーミー | 14 |
+| 北鎌倉ベルタイム珈琲 | 鎌倉市山ノ内748 | ショップサーブ(独自カート) | 30 |
+| カフェ・ヴィヴモン・ディモンシュ | 鎌倉市小町2-1-5 櫻井ビル1F | カラーミー | 19 |
+| アジア商会 鎌倉店 | 鎌倉市由比ガ浜2-5-18 | Ocnk | 22 |
 | 吉田珈琲焙煎所 | 茅ヶ崎市東海岸北1-1-1 | STORES(手動) | 5 |
 | CafeCafa | 茅ヶ崎市東海岸北3-15-24 | 独自HTML | 10 |
+| Coffee Jade | 厚木市 | BASE | 10 |
 | 厚木珈琲 | 厚木市飯山837-20 | Shopify | 9 |
+| REDPOISON | 座間市さがみ野2-2-20 | WordPress | 18 |
+| コーヒーノート | 座間市入谷東4丁目53-20 | Shopify | 15 |
+| 葉山 inuit coffee roaster | 三浦郡葉山町堀内387 | 楽天市場 | 20 |
+| アメイズコーヒーハウス | 小田原市新屋143-12 | STORES(手動) | 8 |
 | カフェクラウディア | 小田原市中町1-15-1 ホワイトシャトル102号 | BASE | 22 |
+| スズアコーヒー店 | 小田原市本町2-9-22 | STORES(手動) | 13 |
+| 珈琲屋雫月 | 秦野市曲松2-7-32 サンシャインビル101 | BASE | 6 |
+| 海の焙煎所 | 逗子市 | BASE | 4 |
 | Denim bis | 川崎市 | Ocnk | 18 |
+| 近陽コーヒー | 川崎市 | BASE | 7 |
 | THE MODERN COFFEE | 川崎市宮前区鷺沼1-12-2 鷺沼ビラスズキ1F | Shopify | 5 |
 | 楽園 | 川崎市宮前区平2-1-5 | crayon | 10 |
 | かぎしっぽ | 川崎市幸区古市場1-31-7 | Goope | 7 |
@@ -529,8 +554,17 @@ aggregate_shops.py実行後の`git diff --staged --quiet || git commit`が該当
 | SHIBACOFFEE | 川崎市中原区新丸子東1-826 シャトレKOYO 1階 | カラーミー | 27 |
 | Mui | 川崎市中原区木月3-13-2 | ShopServe | 31 |
 | Roast Design Coffee | 川崎市麻生区上麻生1-6-3 マプレGF階 | カラーミー | 41 |
+| ペンギン珈琲 | 川崎市麻生区千代ケ丘7-4-15 | 静的HTML(Bindsite・メール注文) | 11 |
 | Coulane | 相模原市中央区横山3-17-4 | カラーミー | 48 |
+| 陀々 DADA | 相模原市中央区矢部3-18-1 | 静的HTML(電話・メール注文) | 18 |
+| 珈琲豆専門店ぜにさわ | 大和市中央林間6-1-17 | Ocnk | 21 |
+| BeansMart Oikos | 中郡大磯町大磯959 | Shopify | 14 |
+| Red Beans SHONAN | 藤沢市亀井野1-22-10 | STORES(手動) | 23 |
+| nico caffee roaster | 藤沢市鵠沼石上2-10-15 1F | Wix(価格表・店頭/注文フォーム) | 14 |
+| 7325COFFEE(ナミニココーヒー) | 藤沢市菖蒲沢1129 | Wix(価格表・メール注文) | 8 |
 | 27 COFFEE ROASTERS | 藤沢市辻堂元町5-2-24 | Shopify | 32 |
+| なみのりコーヒーロースタリー | 藤沢市片瀬目白山1-4 | STORES(手動) | 7 |
+| 珈琲豆専門店イースト | 藤沢市本鵠沼3-12-29 | BASE | 20 |
 | いつか珈琲屋 | 平塚市河内1-7-1 | BASE | 19 |
 
 ### 青森県

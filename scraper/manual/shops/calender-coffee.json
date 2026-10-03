@@ -1,0 +1,120 @@
+{
+  "shop": {
+    "name": "CALENDER Coffee",
+    "url": "https://calendercoffee.stores.jp/",
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "address": "神奈川県鎌倉市材木座1-10-16",
+    "prefecture": "神奈川県",
+    "tel": "090-4397-4330",
+    "source_note": "STORES.jpの公式ショップ(https://calendercoffee.stores.jp/)の商品ページをブラウザfetch()で2026-10-03に確認。自家焙煎(商品ページのロースターコメント)。サイズは30g/100g/200g/500gの選択制で、最小の30g(お試しサイズ)の価格を代表とした。定期便・ドリップバッグ・器具セットは除外",
+    "id": "calender-coffee",
+    "instagram_url": null,
+    "google_maps_query": "CALENDER Coffee 神奈川県鎌倉市材木座1-10-16",
+    "hours": null,
+    "shop_type": "single_location",
+    "data_source": "manual",
+    "last_verified_at": "2026-10-03",
+    "lat": 35.305726,
+    "lng": 139.55145,
+    "nearest_station": {
+      "name": "和田塚",
+      "lines": [
+        "江ノ島電鉄線"
+      ],
+      "distance_m": 1050,
+      "walk_min": 13
+    }
+  },
+  "products": [
+    {
+      "raw_name": "Pepe Jose Jijon / SYDRA - NATURAL LOT.54 [エクアドル]",
+      "category": "ストレート",
+      "originCountry": "エクアドル",
+      "processingMethod": "ナチュラル",
+      "roast": null,
+      "flavorNotes": "Violet, Fresh blueberry, Hibiscus, Plum。(残り僅か)",
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 3860,
+      "weightG": 30,
+      "stockStatus": "販売中",
+      "productUrl": "https://calendercoffee.stores.jp/items/6938e728f1aad500adc27df3",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "Dwight Aguilar Masias / TYPICA - WASHED [Peru]",
+      "category": "ストレート",
+      "originCountry": "ペルー",
+      "processingMethod": "ウォッシュド",
+      "roast": "浅煎り",
+      "flavorNotes": "Darjeeling, Stone fruit, Orange peel, Dried mango。Finca Nueva Alianza、標高1,820m。",
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 990,
+      "weightG": 30,
+      "stockStatus": "販売中",
+      "productUrl": "https://calendercoffee.stores.jp/items/6a8ec4469300a98a934f9bbb",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "Gilma Rosa Gutierrez / V.COLOMBIA - FULLY WASHED [Colombia]",
+      "category": "ストレート",
+      "originCountry": "コロンビア",
+      "processingMethod": "ウォッシュド",
+      "roast": null,
+      "flavorNotes": "Pineapple, Mandarin orange, Apricot, Black tea。(残り僅か)",
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 770,
+      "weightG": 30,
+      "stockStatus": "販売中",
+      "productUrl": "https://calendercoffee.stores.jp/items/6a6865eef90f20e99e898493",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "Bensa Bombe / 74158, 74110, ETHIOPIAN LANDRACE - NATURAL [Ethiopia]",
+      "category": "ストレート",
+      "originCountry": "エチオピア",
+      "processingMethod": "ナチュラル",
+      "roast": null,
+      "flavorNotes": "Mixed berries, Red grape, Pear, Floral。(残り僅か)",
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 770,
+      "weightG": 30,
+      "stockStatus": "販売中",
+      "productUrl": "https://calendercoffee.stores.jp/items/6a7af36b6d097b61c8cadc49",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "Kiandu / SL28, SL34, BATIAN, RUIRU11 - WASHED [Kenya]",
+      "category": "ストレート",
+      "originCountry": "ケニア",
+      "processingMethod": "ウォッシュド",
+      "roast": null,
+      "flavorNotes": "Guava, Tangerine, Cranberry, Brown sugar。",
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 770,
+      "weightG": 30,
+      "stockStatus": "販売中",
+      "productUrl": "https://calendercoffee.stores.jp/items/6aa22d63d8e56a6dd6f0e1fe",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "THANKFUL - ESPRESSO ROAST / 季節の深煎り珈琲 [Ethiopia]",
+      "category": "ストレート",
+      "originCountry": "エチオピア",
+      "processingMethod": null,
+      "roast": "深煎り",
+      "flavorNotes": "クリーンでスイート、それでいてフローラルな深煎り。シグネチャーロースト。",
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 720,
+      "weightG": 30,
+      "stockStatus": "販売中",
+      "productUrl": "https://calendercoffee.stores.jp/items/64defd96a06e09007f0edb88",
+      "data_source": "manual"
+    }
+  ]
+}

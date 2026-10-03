@@ -14844,5 +14844,874 @@
     ],
     "lat": 35.298079,
     "lng": 140.184462
+  },
+  {
+    "name": "アジア商会 鎌倉店",
+    "url": "https://kamakura.ocnk.net/",
+    "platform": "おちゃのこネット",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可とみなす(2026-10確認。User-Agent: *の制限無し。GPTBot等のAIクローラーのみDisallow)",
+    "address": "神奈川県鎌倉市由比ガ浜2-5-18",
+    "prefecture": "神奈川県",
+    "hours": null,
+    "map_query": "アジア商会 鎌倉店",
+    "nearest_station": {
+      "name": "和田塚",
+      "lines": [
+        "江ノ島電鉄線"
+      ],
+      "distance_m": 200,
+      "walk_min": 3
+    },
+    "last_scraped_at": "2026-10-03T11:43:02.711053+00:00",
+    "lat": 35.312608,
+    "lng": 139.547149
+  },
+  {
+    "name": "BeansMart Oikos",
+    "url": "https://www.beansoikos.co.jp/",
+    "platform": "Shopify",
+    "shop_type": "single_location",
+    "robots_txt_status": "許可(Shopify標準構成。User-agent: * は Allow: /)",
+    "address": "神奈川県中郡大磯町大磯959",
+    "prefecture": "神奈川県",
+    "hours": null,
+    "map_query": "BeansMart Oikos",
+    "nearest_station": {
+      "name": "大磯",
+      "lines": [
+        "JR東海道本線"
+      ],
+      "distance_m": 0,
+      "walk_min": 1
+    },
+    "last_scraped_at": "2026-10-03T11:43:02.711053+00:00",
+    "lat": 35.311303,
+    "lng": 139.313382
+  },
+  {
+    "name": "北鎌倉ベルタイム珈琲",
+    "url": "https://www.belltime-coffee.com/",
+    "platform": "ショップサーブ(独自カート)",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認",
+    "address": "神奈川県鎌倉市山ノ内748",
+    "prefecture": "神奈川県",
+    "hours": null,
+    "map_query": "北鎌倉ベルタイム珈琲",
+    "nearest_station": {
+      "name": "北鎌倉",
+      "lines": [
+        "JR横須賀線"
+      ],
+      "distance_m": 360,
+      "walk_min": 5
+    },
+    "last_scraped_at": "2026-10-03T11:43:02.711053+00:00",
+    "lat": 35.335552,
+    "lng": 139.548512
+  },
+  {
+    "name": "Blendia",
+    "url": "https://tigers0031.ocnk.net/",
+    "platform": "おちゃのこネット",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認",
+    "address": "神奈川県横浜市青葉区あざみ野2-28-1 パールビルA102",
+    "prefecture": "神奈川県",
+    "hours": null,
+    "map_query": "Blendia",
+    "nearest_station": {
+      "name": "あざみ野",
+      "lines": [
+        "東急田園都市線",
+        "横浜市ブルーライン"
+      ],
+      "distance_m": 1780,
+      "walk_min": 22
+    },
+    "last_scraped_at": "2026-10-03T11:43:02.711053+00:00",
+    "lat": 35.578342,
+    "lng": 139.537785
+  },
+  {
+    "name": "珈琲屋雫月",
+    "url": "https://cafeshizuki.base.shop/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "神奈川県秦野市曲松2-7-32 サンシャインビル101",
+    "prefecture": "神奈川県",
+    "hours": null,
+    "map_query": "珈琲屋雫月",
+    "nearest_station": {
+      "name": "渋沢",
+      "lines": [
+        "小田急小田原線"
+      ],
+      "distance_m": 290,
+      "walk_min": 4
+    },
+    "last_scraped_at": "2026-10-03T11:43:02.711053+00:00",
+    "lat": 35.375041,
+    "lng": 139.187383
+  },
+  {
+    "name": "近陽コーヒー",
+    "url": "https://chicahicoffe.base.shop/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "神奈川県川崎市",
+    "prefecture": "神奈川県",
+    "hours": null,
+    "map_query": "近陽コーヒー",
+    "nearest_station": {
+      "name": "京急川崎",
+      "lines": [
+        "京浜急行大師線",
+        "京浜急行本線"
+      ],
+      "distance_m": 360,
+      "walk_min": 5
+    },
+    "last_scraped_at": "2026-10-03T11:43:02.711053+00:00",
+    "lat": 35.530664,
+    "lng": 139.703767
+  },
+  {
+    "name": "珈琲豆専門店イースト",
+    "url": "https://coffeeeast.official.ec/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "神奈川県藤沢市本鵠沼3-12-29",
+    "prefecture": "神奈川県",
+    "hours": null,
+    "map_query": "珈琲豆専門店イースト",
+    "nearest_station": {
+      "name": "本鵠沼",
+      "lines": [
+        "小田急江ノ島線"
+      ],
+      "distance_m": 60,
+      "walk_min": 1
+    },
+    "last_scraped_at": "2026-10-03T11:43:02.711053+00:00",
+    "lat": 35.330777,
+    "lng": 139.474874
+  },
+  {
+    "name": "Coffee Jade",
+    "url": "https://coffeejade.thebase.in/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "神奈川県厚木市",
+    "prefecture": "神奈川県",
+    "hours": null,
+    "map_query": "Coffee Jade",
+    "nearest_station": {
+      "name": "本厚木",
+      "lines": [
+        "小田急小田原線"
+      ],
+      "distance_m": 430,
+      "walk_min": 5
+    },
+    "last_scraped_at": "2026-10-03T11:43:02.711053+00:00",
+    "lat": 35.442965,
+    "lng": 139.362513
+  },
+  {
+    "name": "コーヒーノート",
+    "url": "https://coffeenote.net/",
+    "platform": "Shopify",
+    "shop_type": "single_location",
+    "robots_txt_status": "許可(Shopify標準構成。User-agent: * は Allow: /)",
+    "address": "神奈川県座間市入谷東4丁目53-20",
+    "prefecture": "神奈川県",
+    "hours": null,
+    "map_query": "コーヒーノート",
+    "nearest_station": {
+      "name": "座間",
+      "lines": [
+        "小田急小田原線"
+      ],
+      "distance_m": 780,
+      "walk_min": 10
+    },
+    "last_scraped_at": "2026-10-03T11:43:02.711053+00:00",
+    "lat": 35.47511,
+    "lng": 139.404743
+  },
+  {
+    "name": "COLORS COFFEE",
+    "url": "https://colorscoffee.official.ec/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "神奈川県横浜市南区六ツ川1-855-2 グレイスヒルズ横浜3F",
+    "prefecture": "神奈川県",
+    "hours": null,
+    "map_query": "COLORS COFFEE",
+    "nearest_station": {
+      "name": "馬車道",
+      "lines": [
+        "横浜みなとみらい線"
+      ],
+      "distance_m": 160,
+      "walk_min": 2
+    },
+    "last_scraped_at": "2026-10-03T11:43:02.711053+00:00",
+    "lat": 35.450338,
+    "lng": 139.63438
+  },
+  {
+    "name": "陀々 DADA",
+    "url": "https://dadacoffee.com/",
+    "platform": "静的HTML(電話・メール注文)",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認",
+    "address": "神奈川県相模原市中央区矢部3-18-1",
+    "prefecture": "神奈川県",
+    "hours": null,
+    "map_query": "陀々 DADA",
+    "nearest_station": {
+      "name": "矢部",
+      "lines": [
+        "JR横浜線"
+      ],
+      "distance_m": 40,
+      "walk_min": 1
+    },
+    "last_scraped_at": "2026-10-03T11:43:02.711053+00:00",
+    "lat": 35.573099,
+    "lng": 139.386759
+  },
+  {
+    "name": "カフェ・ヴィヴモン・ディモンシュ",
+    "url": "https://dimanche.shop-pro.jp/",
+    "platform": "カラーミーショップ",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可とみなす(2026-10確認。User-agent: *は/secure/と/cart/のみ制限)",
+    "address": "神奈川県鎌倉市小町2-1-5 櫻井ビル1F",
+    "prefecture": "神奈川県",
+    "hours": null,
+    "map_query": "カフェ・ヴィヴモン・ディモンシュ",
+    "nearest_station": {
+      "name": "鎌倉",
+      "lines": [
+        "JR横須賀線",
+        "江ノ島電鉄線"
+      ],
+      "distance_m": 190,
+      "walk_min": 2
+    },
+    "last_scraped_at": "2026-10-03T11:43:02.711053+00:00",
+    "lat": 35.320366,
+    "lng": 139.551236
+  },
+  {
+    "name": "Esp & Co.",
+    "url": "https://espco.official.ec/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "神奈川県横浜市",
+    "prefecture": "神奈川県",
+    "hours": null,
+    "map_query": "Esp & Co.",
+    "nearest_station": {
+      "name": "馬車道",
+      "lines": [
+        "横浜みなとみらい線"
+      ],
+      "distance_m": 160,
+      "walk_min": 2
+    },
+    "last_scraped_at": "2026-10-03T11:43:02.711053+00:00",
+    "lat": 35.450338,
+    "lng": 139.63438
+  },
+  {
+    "name": "7325COFFEE(ナミニココーヒー)",
+    "url": "https://www.goemon-7325coffee.com/",
+    "platform": "Wix(価格表・メール注文)",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認",
+    "address": "神奈川県藤沢市菖蒲沢1129",
+    "prefecture": "神奈川県",
+    "hours": null,
+    "map_query": "7325COFFEE(ナミニココーヒー)",
+    "nearest_station": {
+      "name": "湘南台",
+      "lines": [
+        "小田急江ノ島線",
+        "相模鉄道いずみ野線",
+        "横浜市ブルーライン"
+      ],
+      "distance_m": 2310,
+      "walk_min": 29
+    },
+    "last_scraped_at": "2026-10-03T11:43:02.711053+00:00",
+    "lat": 35.398711,
+    "lng": 139.441176
+  },
+  {
+    "name": "葉山 inuit coffee roaster",
+    "url": "https://www.rakuten.co.jp/inuitcoffee/",
+    "platform": "楽天市場",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可とみなす(2026-10確認。rakuten.co.jp/item.rakuten.co.jpのrobots.txtは検索系パラメータ(?i= ?s=)等のみ禁止)",
+    "address": "神奈川県三浦郡葉山町堀内387",
+    "prefecture": "神奈川県",
+    "hours": null,
+    "map_query": "葉山 inuit coffee roaster",
+    "nearest_station": {
+      "name": "逗子・葉山",
+      "lines": [
+        "京浜急行逗子線"
+      ],
+      "distance_m": 2300,
+      "walk_min": 29
+    },
+    "last_scraped_at": "2026-10-03T11:43:02.711053+00:00",
+    "lat": 35.276578,
+    "lng": 139.593549
+  },
+  {
+    "name": "ISHIKAWA COFFEE(石かわ珈琲)",
+    "url": "https://ishikawa-coffee.com/",
+    "platform": "カラーミーショップ",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可とみなす(2026-10確認。User-agent: *は/secure/と/cart/のみ制限)",
+    "address": "神奈川県鎌倉市山ノ内197-52",
+    "prefecture": "神奈川県",
+    "hours": null,
+    "map_query": "ISHIKAWA COFFEE(石かわ珈琲)",
+    "nearest_station": {
+      "name": "北鎌倉",
+      "lines": [
+        "JR横須賀線"
+      ],
+      "distance_m": 360,
+      "walk_min": 5
+    },
+    "last_scraped_at": "2026-10-03T11:43:02.711053+00:00",
+    "lat": 35.335552,
+    "lng": 139.548512
+  },
+  {
+    "name": "波の音珈琲",
+    "url": "https://naminonecoffee.jimdofree.com/",
+    "platform": "Jimdo(メール注文)",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認",
+    "address": "神奈川県横須賀市秋谷1-13-1",
+    "prefecture": "神奈川県",
+    "hours": null,
+    "map_query": "波の音珈琲",
+    "nearest_station": {
+      "name": "逗子・葉山",
+      "lines": [
+        "京浜急行逗子線"
+      ],
+      "distance_m": 5110,
+      "walk_min": 64
+    },
+    "last_scraped_at": "2026-10-03T11:43:02.711053+00:00",
+    "lat": 35.25005,
+    "lng": 139.595947
+  },
+  {
+    "name": "nico caffee roaster",
+    "url": "https://nicocoffeeroaster.wixsite.com/nico-shop",
+    "platform": "Wix(価格表・店頭/注文フォーム)",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認",
+    "address": "神奈川県藤沢市鵠沼石上2-10-15 1F",
+    "prefecture": "神奈川県",
+    "hours": null,
+    "map_query": "nico caffee roaster",
+    "nearest_station": {
+      "name": "石上",
+      "lines": [
+        "江ノ島電鉄線"
+      ],
+      "distance_m": 170,
+      "walk_min": 2
+    },
+    "last_scraped_at": "2026-10-03T11:43:02.711053+00:00",
+    "lat": 35.332587,
+    "lng": 139.487391
+  },
+  {
+    "name": "ペンギン珈琲",
+    "url": "https://www.p-mame.com/",
+    "platform": "静的HTML(Bindsite・メール注文)",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認",
+    "address": "神奈川県川崎市麻生区千代ケ丘7-4-15",
+    "prefecture": "神奈川県",
+    "hours": null,
+    "map_query": "ペンギン珈琲",
+    "nearest_station": {
+      "name": "百合ヶ丘",
+      "lines": [
+        "小田急小田原線"
+      ],
+      "distance_m": 1170,
+      "walk_min": 15
+    },
+    "last_scraped_at": "2026-10-03T11:43:02.711053+00:00",
+    "lat": 35.617141,
+    "lng": 139.507962
+  },
+  {
+    "name": "REDPOISON",
+    "url": "https://red-poison.com/",
+    "platform": "WordPress(Welcart)",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認",
+    "address": "神奈川県座間市さがみ野2-2-20",
+    "prefecture": "神奈川県",
+    "hours": null,
+    "map_query": "REDPOISON",
+    "nearest_station": {
+      "name": "さがみ野",
+      "lines": [
+        "相模鉄道本線",
+        "相鉄・JR直通線"
+      ],
+      "distance_m": 400,
+      "walk_min": 5
+    },
+    "last_scraped_at": "2026-10-03T11:43:02.711053+00:00",
+    "lat": 35.472333,
+    "lng": 139.424759
+  },
+  {
+    "name": "RiFF COFFEE ROASTERY",
+    "url": "https://riffcoffee.base.shop/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "神奈川県横浜市港北区高田東4-21-6",
+    "prefecture": "神奈川県",
+    "hours": null,
+    "map_query": "RiFF COFFEE ROASTERY",
+    "nearest_station": {
+      "name": "高田",
+      "lines": [
+        "グリーンライン"
+      ],
+      "distance_m": 540,
+      "walk_min": 7
+    },
+    "last_scraped_at": "2026-10-03T11:43:02.711053+00:00",
+    "lat": 35.552241,
+    "lng": 139.62499
+  },
+  {
+    "name": "ローストカフェ uno roastcoffee",
+    "url": "https://roastcafe.base.shop/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "神奈川県横浜市保土ケ谷区西谷4-6-17",
+    "prefecture": "神奈川県",
+    "hours": null,
+    "map_query": "ローストカフェ uno roastcoffee",
+    "nearest_station": {
+      "name": "西谷",
+      "lines": [
+        "相模鉄道本線",
+        "相鉄・JR直通線",
+        "相模鉄道・東京急行電鉄"
+      ],
+      "distance_m": 10,
+      "walk_min": 1
+    },
+    "last_scraped_at": "2026-10-03T11:43:02.711053+00:00",
+    "lat": 35.47813,
+    "lng": 139.565656
+  },
+  {
+    "name": "自家焙煎珈琲豆サニム",
+    "url": "https://sanimu.chashinan.com/",
+    "platform": "EC-CUBE",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認",
+    "address": "神奈川県横須賀市久里浜4-14-1",
+    "prefecture": "神奈川県",
+    "hours": null,
+    "map_query": "自家焙煎珈琲豆サニム",
+    "nearest_station": {
+      "name": "久里浜",
+      "lines": [
+        "JR横須賀線"
+      ],
+      "distance_m": 60,
+      "walk_min": 1
+    },
+    "last_scraped_at": "2026-10-03T11:43:02.711053+00:00",
+    "lat": 35.232657,
+    "lng": 139.70114
+  },
+  {
+    "name": "横浜たまプラーザビーンズ",
+    "url": "https://tamaplaza-beans.com/",
+    "platform": "ショップサーブ(独自カート)",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認",
+    "address": "神奈川県横浜市青葉区美しが丘4-19-19",
+    "prefecture": "神奈川県",
+    "hours": null,
+    "map_query": "横浜たまプラーザビーンズ",
+    "nearest_station": {
+      "name": "たまプラーザ",
+      "lines": [
+        "東急田園都市線"
+      ],
+      "distance_m": 780,
+      "walk_min": 10
+    },
+    "last_scraped_at": "2026-10-03T11:43:02.711053+00:00",
+    "lat": 35.584329,
+    "lng": 139.556842
+  },
+  {
+    "name": "THE BEANS",
+    "url": "https://www.rakuten.co.jp/thebeans/",
+    "platform": "楽天市場",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可とみなす(2026-10確認。rakuten.co.jp/item.rakuten.co.jpのrobots.txtは検索系パラメータ(?i= ?s=)等のみ禁止)",
+    "address": "神奈川県綾瀬市綾西4-19-6 A棟",
+    "prefecture": "神奈川県",
+    "hours": null,
+    "map_query": "THE BEANS",
+    "nearest_station": {
+      "name": "海老名",
+      "lines": [
+        "相模鉄道本線",
+        "相鉄・JR直通線",
+        "小田急小田原線",
+        "JR相模線"
+      ],
+      "distance_m": 2870,
+      "walk_min": 36
+    },
+    "last_scraped_at": "2026-10-03T11:43:02.711053+00:00",
+    "lat": 35.432246,
+    "lng": 139.410253
+  },
+  {
+    "name": "海の焙煎所",
+    "url": "https://uminoroast.base.shop/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "神奈川県逗子市",
+    "prefecture": "神奈川県",
+    "hours": null,
+    "map_query": "海の焙煎所",
+    "nearest_station": {
+      "name": "逗子・葉山",
+      "lines": [
+        "京浜急行逗子線"
+      ],
+      "distance_m": 150,
+      "walk_min": 2
+    },
+    "last_scraped_at": "2026-10-03T11:43:02.711053+00:00",
+    "lat": 35.295552,
+    "lng": 139.580401
+  },
+  {
+    "name": "珈琲豆専門店ぜにさわ",
+    "url": "https://zenisawa.ocnk.net/",
+    "platform": "おちゃのこネット",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認",
+    "address": "神奈川県大和市中央林間6-1-17",
+    "prefecture": "神奈川県",
+    "hours": null,
+    "map_query": "珈琲豆専門店ぜにさわ",
+    "nearest_station": {
+      "name": "中央林間",
+      "lines": [
+        "小田急江ノ島線",
+        "東急田園都市線"
+      ],
+      "distance_m": 60,
+      "walk_min": 1
+    },
+    "last_scraped_at": "2026-10-03T11:43:02.711053+00:00",
+    "lat": 35.507521,
+    "lng": 139.444121
+  },
+  {
+    "name": "アメイズコーヒーハウス",
+    "url": "https://amazecoffeehouse.stores.jp/",
+    "instagram_url": null,
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "神奈川県小田原市新屋143-12",
+    "prefecture": "神奈川県",
+    "hours": null,
+    "map_query": "アメイズコーヒーハウス 神奈川県小田原市新屋143-12",
+    "nearest_station": {
+      "name": "相模沼田",
+      "lines": [
+        "伊豆箱根鉄道大雄山線"
+      ],
+      "distance_m": 410,
+      "walk_min": 5
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://amazecoffeehouse.stores.jp/)の商品ページをブラウザfetch()で2026-10-03に確認。「生豆に精通した焙煎屋」「生豆ごとにベストの味の演出ができる焙煎」と店舗説明にある。100g/200gが別ページのため100gを代表。お試しセット・案内ページは除外",
+    "last_verified_at": "2026-10-03",
+    "locations": [
+      {
+        "label": null,
+        "address": "神奈川県小田原市新屋143-12",
+        "prefecture": "神奈川県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "アメイズコーヒーハウス 神奈川県小田原市新屋143-12",
+        "lat": 35.294988,
+        "lng": 139.137133
+      }
+    ],
+    "lat": 35.294988,
+    "lng": 139.137133
+  },
+  {
+    "name": "荒田珈琲",
+    "url": "https://aratacoffee.stores.jp/",
+    "instagram_url": null,
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "神奈川県横浜市青葉区桜台25-1 桜台ビレジショッピングコリドール",
+    "prefecture": "神奈川県",
+    "hours": null,
+    "map_query": "荒田珈琲 神奈川県横浜市青葉区桜台25-1 桜台ビレジショッピングコリドール",
+    "nearest_station": {
+      "name": "青葉台",
+      "lines": [
+        "東急田園都市線"
+      ],
+      "distance_m": 950,
+      "walk_min": 12
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://aratacoffee.stores.jp/)の商品ページをブラウザfetch()で2026-10-03に確認。店主が毎朝店で焙煎する自家焙煎専門店で、オンラインは注文後焙煎(店舗説明)。100g価格(400gの選択肢あり)",
+    "last_verified_at": "2026-10-03",
+    "locations": [
+      {
+        "label": null,
+        "address": "神奈川県横浜市青葉区桜台25-1 桜台ビレジショッピングコリドール",
+        "prefecture": "神奈川県",
+        "hours": null,
+        "tel": "045-532-9157",
+        "is_headquarters": false,
+        "map_query": "荒田珈琲 神奈川県横浜市青葉区桜台25-1 桜台ビレジショッピングコリドール",
+        "lat": 35.551135,
+        "lng": 139.51464
+      }
+    ],
+    "lat": 35.551135,
+    "lng": 139.51464
+  },
+  {
+    "name": "CALENDER Coffee",
+    "url": "https://calendercoffee.stores.jp/",
+    "instagram_url": null,
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "神奈川県鎌倉市材木座1-10-16",
+    "prefecture": "神奈川県",
+    "hours": null,
+    "map_query": "CALENDER Coffee 神奈川県鎌倉市材木座1-10-16",
+    "nearest_station": {
+      "name": "和田塚",
+      "lines": [
+        "江ノ島電鉄線"
+      ],
+      "distance_m": 1050,
+      "walk_min": 13
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://calendercoffee.stores.jp/)の商品ページをブラウザfetch()で2026-10-03に確認。自家焙煎(商品ページのロースターコメント)。サイズは30g/100g/200g/500gの選択制で、最小の30g(お試しサイズ)の価格を代表とした。定期便・ドリップバッグ・器具セットは除外",
+    "last_verified_at": "2026-10-03",
+    "locations": [
+      {
+        "label": null,
+        "address": "神奈川県鎌倉市材木座1-10-16",
+        "prefecture": "神奈川県",
+        "hours": null,
+        "tel": "090-4397-4330",
+        "is_headquarters": false,
+        "map_query": "CALENDER Coffee 神奈川県鎌倉市材木座1-10-16",
+        "lat": 35.305726,
+        "lng": 139.55145
+      }
+    ],
+    "lat": 35.305726,
+    "lng": 139.55145
+  },
+  {
+    "name": "GOD Valley Coffee Roastery",
+    "url": "https://godvalley.stores.jp/",
+    "instagram_url": null,
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "神奈川県横浜市中区豆口台4",
+    "prefecture": "神奈川県",
+    "hours": null,
+    "map_query": "GOD Valley Coffee Roastery 神奈川県横浜市中区豆口台4",
+    "nearest_station": {
+      "name": "山手",
+      "lines": [
+        "JR根岸線"
+      ],
+      "distance_m": 440,
+      "walk_min": 6
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://godvalley.stores.jp/)の商品ページをブラウザfetch()で2026-10-03に確認。2017年元日に横浜山手に開いた焙煎所(店舗説明)。価格は通常価格(期間限定セール価格は採用しない)。オーダー焙煎商品・ドリップバッグ・コーヒーバッグ・カカオは除外",
+    "last_verified_at": "2026-10-03",
+    "locations": [
+      {
+        "label": null,
+        "address": "神奈川県横浜市中区豆口台4",
+        "prefecture": "神奈川県",
+        "hours": null,
+        "tel": "045-225-8321",
+        "is_headquarters": false,
+        "map_query": "GOD Valley Coffee Roastery 神奈川県横浜市中区豆口台4",
+        "lat": 35.423019,
+        "lng": 139.645539
+      }
+    ],
+    "lat": 35.423019,
+    "lng": 139.645539
+  },
+  {
+    "name": "なみのりコーヒーロースタリー",
+    "url": "https://naminoricoffee.stores.jp/",
+    "instagram_url": null,
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "神奈川県藤沢市片瀬目白山1-4",
+    "prefecture": "神奈川県",
+    "hours": null,
+    "map_query": "なみのりコーヒーロースタリー 神奈川県藤沢市片瀬目白山1-4",
+    "nearest_station": {
+      "name": "目白山下",
+      "lines": [
+        "湘南モノレール"
+      ],
+      "distance_m": 190,
+      "walk_min": 2
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://naminoricoffee.stores.jp/)の商品ページをブラウザfetch()で2026-10-03に確認。深煎りを中心に焙煎するロースタリー(江ノ島店を含め2店舗)。ロット名末尾の入荷日(10/2等)は名称から除去。ドリップパック・水出し・定期便・おまかせ・終売のデカフェは除外",
+    "last_verified_at": "2026-10-03",
+    "locations": [
+      {
+        "label": null,
+        "address": "神奈川県藤沢市片瀬目白山1-4",
+        "prefecture": "神奈川県",
+        "hours": null,
+        "tel": "0466-50-7377",
+        "is_headquarters": false,
+        "map_query": "なみのりコーヒーロースタリー 神奈川県藤沢市片瀬目白山1-4",
+        "lat": 35.315744,
+        "lng": 139.491909
+      }
+    ],
+    "lat": 35.315744,
+    "lng": 139.491909
+  },
+  {
+    "name": "Red Beans SHONAN",
+    "url": "https://redbeans.stores.jp/",
+    "instagram_url": null,
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "神奈川県藤沢市亀井野1-22-10",
+    "prefecture": "神奈川県",
+    "hours": null,
+    "map_query": "Red Beans SHONAN 神奈川県藤沢市亀井野1-22-10",
+    "nearest_station": {
+      "name": "六会日大前",
+      "lines": [
+        "小田急江ノ島線"
+      ],
+      "distance_m": 720,
+      "walk_min": 9
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://redbeans.stores.jp/)の商品ページをブラウザfetch()で2026-10-03に確認。2018年開始のマイクロロースターで、2019年に実店舗「六会珈琲」を開業。豆100g(粉は+40円)を代表とし、ブルーマウンテン・ハワイコナ・ゲイシャは50gパックが最小のため50g。どこでもドリップ・セット・器具は除外",
+    "last_verified_at": "2026-10-03",
+    "locations": [
+      {
+        "label": null,
+        "address": "神奈川県藤沢市亀井野1-22-10",
+        "prefecture": "神奈川県",
+        "hours": null,
+        "tel": "0466-76-4011",
+        "is_headquarters": false,
+        "map_query": "Red Beans SHONAN 神奈川県藤沢市亀井野1-22-10",
+        "lat": 35.378374,
+        "lng": 139.475149
+      }
+    ],
+    "lat": 35.378374,
+    "lng": 139.475149
+  },
+  {
+    "name": "スズアコーヒー店",
+    "url": "https://suzuacoffee.stores.jp/",
+    "instagram_url": null,
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "神奈川県小田原市本町2-9-22",
+    "prefecture": "神奈川県",
+    "hours": null,
+    "map_query": "スズアコーヒー店 神奈川県小田原市本町2-9-22",
+    "nearest_station": {
+      "name": "小田原",
+      "lines": [
+        "JR東海道本線",
+        "東海道新幹線",
+        "箱根登山鉄道線",
+        "小田急小田原線",
+        "伊豆箱根鉄道大雄山線"
+      ],
+      "distance_m": 970,
+      "walk_min": 12
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://suzuacoffee.stores.jp/)の商品ページをブラウザfetch()で2026-10-03に確認。1956年創業の小田原の自家焙煎珈琲店で毎週焙煎(店舗説明)。豆は200g単位。ギフトセット・ドリップバッグ・飲み比べセットは除外",
+    "last_verified_at": "2026-10-03",
+    "locations": [
+      {
+        "label": null,
+        "address": "神奈川県小田原市本町2-9-22",
+        "prefecture": "神奈川県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "スズアコーヒー店 神奈川県小田原市本町2-9-22",
+        "lat": 35.2478,
+        "lng": 139.158419
+      }
+    ],
+    "lat": 35.2478,
+    "lng": 139.158419
   }
 ]
