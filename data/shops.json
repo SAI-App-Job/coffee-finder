@@ -18438,5 +18438,1466 @@
     ],
     "lat": 34.693757,
     "lng": 135.501454
+  },
+  {
+    "name": "8COFFEEROAST",
+    "url": "https://www.8coffee.net/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "兵庫県宝塚市安倉南1-17-14",
+    "prefecture": "兵庫県",
+    "hours": null,
+    "map_query": "8COFFEEROAST",
+    "nearest_station": {
+      "name": "中山寺",
+      "lines": [
+        "JR福知山線"
+      ],
+      "distance_m": 1160,
+      "walk_min": 15
+    },
+    "last_scraped_at": "2026-10-04T21:18:40.380361+00:00",
+    "lat": 34.80636,
+    "lng": 135.372142
+  },
+  {
+    "name": "ALIGN COFFEE ROASTER",
+    "url": "https://aligncoffeeroaster.com/",
+    "platform": "Shopify",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認(Shopify標準構成)",
+    "address": "兵庫県姫路市坂田町40",
+    "prefecture": "兵庫県",
+    "hours": null,
+    "map_query": "ALIGN COFFEE ROASTER",
+    "nearest_station": {
+      "name": "京口",
+      "lines": [
+        "JR播但線"
+      ],
+      "distance_m": 590,
+      "walk_min": 7
+    },
+    "last_scraped_at": "2026-10-04T21:18:40.380361+00:00",
+    "lat": 34.832747,
+    "lng": 134.699338
+  },
+  {
+    "name": "芦屋エビアンコーヒーショップ",
+    "url": "https://ashiya-evian-coffee-shop.com/",
+    "platform": "Shopify",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認(Shopify標準構成)",
+    "address": "兵庫県芦屋市茶屋之町11-8",
+    "prefecture": "兵庫県",
+    "hours": null,
+    "map_query": "芦屋エビアンコーヒーショップ",
+    "nearest_station": {
+      "name": "芦屋",
+      "lines": [
+        "JR神戸線",
+        "阪神本線"
+      ],
+      "distance_m": 340,
+      "walk_min": 4
+    },
+    "last_scraped_at": "2026-10-04T21:18:40.380361+00:00",
+    "lat": 34.731141,
+    "lng": 135.307347
+  },
+  {
+    "name": "カフェ・ド・トーヨー",
+    "url": "https://toyo-coffee.com/",
+    "platform": "emono1カート(独自ドメイン)",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認",
+    "address": "兵庫県伊丹市下河原1-3-16",
+    "prefecture": "兵庫県",
+    "hours": null,
+    "map_query": "カフェ・ド・トーヨー",
+    "nearest_station": {
+      "name": "北伊丹",
+      "lines": [
+        "JR福知山線"
+      ],
+      "distance_m": 580,
+      "walk_min": 7
+    },
+    "last_scraped_at": "2026-10-04T21:18:40.380361+00:00",
+    "lat": 34.798768,
+    "lng": 135.424814
+  },
+  {
+    "name": "COFFEE HOUSE FIELD",
+    "url": "https://www.espressostore.net/coffeehousefield",
+    "platform": "MakeShop(ESPRESSO STORE内)",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認(MakeShop標準構成)",
+    "address": "兵庫県西宮市本町5-10",
+    "prefecture": "兵庫県",
+    "hours": null,
+    "map_query": "COFFEE HOUSE FIELD",
+    "nearest_station": {
+      "name": "西宮",
+      "lines": [
+        "阪神本線",
+        "JR神戸線"
+      ],
+      "distance_m": 380,
+      "walk_min": 5
+    },
+    "last_scraped_at": "2026-10-04T21:18:40.380361+00:00",
+    "lat": 34.733892,
+    "lng": 135.339812
+  },
+  {
+    "name": "COFFEE PORT 芦屋浜ロースタリー",
+    "url": "https://coffeeport.net/",
+    "platform": "Shopify",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認(Shopify標準構成)",
+    "address": "兵庫県芦屋市涼風町14-3",
+    "prefecture": "兵庫県",
+    "hours": null,
+    "map_query": "COFFEE PORT 芦屋浜ロースタリー",
+    "nearest_station": {
+      "name": "芦屋",
+      "lines": [
+        "阪神本線",
+        "JR神戸線"
+      ],
+      "distance_m": 2580,
+      "walk_min": 32
+    },
+    "last_scraped_at": "2026-10-04T21:18:40.380361+00:00",
+    "lat": 34.70741,
+    "lng": 135.316844
+  },
+  {
+    "name": "エビスコーヒーロースターズ",
+    "url": "https://www.ebisucoffeeroasters.com/",
+    "platform": "Wix(Wix Stores)",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認",
+    "address": "兵庫県明石市小久保5-8-13",
+    "prefecture": "兵庫県",
+    "hours": null,
+    "map_query": "エビスコーヒーロースターズ",
+    "nearest_station": {
+      "name": "西明石",
+      "lines": [
+        "JR神戸線",
+        "山陽新幹線"
+      ],
+      "distance_m": 370,
+      "walk_min": 5
+    },
+    "last_scraped_at": "2026-10-04T21:18:40.380361+00:00",
+    "lat": 34.668646,
+    "lng": 134.957899
+  },
+  {
+    "name": "GANDALF COFFEE",
+    "url": "https://gandalf.thebase.in/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "兵庫県西宮市門戸荘15-3",
+    "prefecture": "兵庫県",
+    "hours": null,
+    "map_query": "GANDALF COFFEE",
+    "nearest_station": {
+      "name": "門戸厄神",
+      "lines": [
+        "阪急今津線"
+      ],
+      "distance_m": 220,
+      "walk_min": 3
+    },
+    "last_scraped_at": "2026-10-04T21:18:40.380361+00:00",
+    "lat": 34.755798,
+    "lng": 135.356461
+  },
+  {
+    "name": "GASSE",
+    "url": "https://gasse.thebase.in/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "兵庫県明石市魚住町清水2205-2 1F",
+    "prefecture": "兵庫県",
+    "hours": null,
+    "map_query": "GASSE",
+    "nearest_station": {
+      "name": "土山",
+      "lines": [
+        "JR神戸線"
+      ],
+      "distance_m": 1530,
+      "walk_min": 19
+    },
+    "last_scraped_at": "2026-10-04T21:18:40.380361+00:00",
+    "lat": 34.714386,
+    "lng": 134.903956
+  },
+  {
+    "name": "Gentle Coffee Roasters",
+    "url": "https://www.gentlecoffeeroasters.com/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "兵庫県揖保郡太子町立岡153-3",
+    "prefecture": "兵庫県",
+    "hours": null,
+    "map_query": "Gentle Coffee Roasters",
+    "nearest_station": {
+      "name": "網干",
+      "lines": [
+        "JR山陽本線"
+      ],
+      "distance_m": 1370,
+      "walk_min": 17
+    },
+    "last_scraped_at": "2026-10-04T21:18:40.380361+00:00",
+    "lat": 34.825869,
+    "lng": 134.57949
+  },
+  {
+    "name": "Giro d' Awaji",
+    "url": "https://awajicoffee.saleshop.jp/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "兵庫県南あわじ市福良甲1529-3 野口ビル1F",
+    "prefecture": "兵庫県",
+    "hours": null,
+    "map_query": "Giro d' Awaji",
+    "nearest_station": null,
+    "last_scraped_at": "2026-10-04T21:18:40.380361+00:00",
+    "lat": 34.255174,
+    "lng": 134.724942
+  },
+  {
+    "name": "GREEN and Coffee Roasters",
+    "url": "https://greenand.shopselect.net/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "兵庫県尼崎市武庫之荘東2-32-27 コンフォート1F",
+    "prefecture": "兵庫県",
+    "hours": null,
+    "map_query": "GREEN and Coffee Roasters",
+    "nearest_station": {
+      "name": "武庫之荘",
+      "lines": [
+        "阪急神戸本線"
+      ],
+      "distance_m": 720,
+      "walk_min": 9
+    },
+    "last_scraped_at": "2026-10-04T21:18:40.380361+00:00",
+    "lat": 34.75718,
+    "lng": 135.397673
+  },
+  {
+    "name": "萩原珈琲",
+    "url": "https://shop.hagihara-coffee.com/",
+    "platform": "独自カート(Vue.js + JSON API)",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認",
+    "address": "兵庫県神戸市灘区城内通1-6-18",
+    "prefecture": "兵庫県",
+    "hours": null,
+    "map_query": "萩原珈琲",
+    "nearest_station": {
+      "name": "神戸三宮",
+      "lines": [
+        "阪神本線",
+        "神戸高速鉄道東西線",
+        "阪急神戸本線"
+      ],
+      "distance_m": 70,
+      "walk_min": 1
+    },
+    "last_scraped_at": "2026-10-04T21:18:40.380361+00:00",
+    "lat": 34.693238,
+    "lng": 135.194376
+  },
+  {
+    "name": "はた珈琲店",
+    "url": "https://hata-coffee.com/onlineshop/",
+    "platform": "Welcart(WordPress)",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認",
+    "address": "兵庫県神戸市中央区元町通5-7-12",
+    "prefecture": "兵庫県",
+    "hours": null,
+    "map_query": "はた珈琲店",
+    "nearest_station": {
+      "name": "花隈",
+      "lines": [
+        "神戸高速鉄道東西線"
+      ],
+      "distance_m": 10,
+      "walk_min": 1
+    },
+    "last_scraped_at": "2026-10-04T21:18:40.380361+00:00",
+    "lat": 34.686075,
+    "lng": 135.181451
+  },
+  {
+    "name": "平成珈琲",
+    "url": "https://www.heisei-coffee.co.jp/",
+    "platform": "WordPress + WooCommerce",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認",
+    "address": "兵庫県神戸市中央区中町通2-2-18 平戸ビル",
+    "prefecture": "兵庫県",
+    "hours": null,
+    "map_query": "平成珈琲",
+    "nearest_station": {
+      "name": "旧居留地・大丸前",
+      "lines": [
+        "神戸市海岸線"
+      ],
+      "distance_m": 260,
+      "walk_min": 3
+    },
+    "last_scraped_at": "2026-10-04T21:18:40.380361+00:00",
+    "lat": 34.688112,
+    "lng": 135.192238
+  },
+  {
+    "name": "HiTo Coffee Beans",
+    "url": "https://hitocoffeebe.thebase.in/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "兵庫県神戸市兵庫区梅元町7-3",
+    "prefecture": "兵庫県",
+    "hours": null,
+    "map_query": "HiTo Coffee Beans",
+    "nearest_station": {
+      "name": "大倉山",
+      "lines": [
+        "神戸市西神・山手線"
+      ],
+      "distance_m": 920,
+      "walk_min": 12
+    },
+    "last_scraped_at": "2026-10-04T21:18:40.380361+00:00",
+    "lat": 34.69277,
+    "lng": 135.172702
+  },
+  {
+    "name": "自家焙煎 ほんまる珈琲",
+    "url": "https://honmaruke.thebase.in/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "兵庫県姫路市御立中5-7-5",
+    "prefecture": "兵庫県",
+    "hours": null,
+    "map_query": "自家焙煎 ほんまる珈琲",
+    "nearest_station": {
+      "name": "手柄",
+      "lines": [
+        "山陽電鉄本線"
+      ],
+      "distance_m": 620,
+      "walk_min": 8
+    },
+    "last_scraped_at": "2026-10-04T21:18:40.380361+00:00",
+    "lat": 34.815353,
+    "lng": 134.685479
+  },
+  {
+    "name": "コムヒー",
+    "url": "https://komuffee.buyshop.jp/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "兵庫県姫路市八代本町1-8-15",
+    "prefecture": "兵庫県",
+    "hours": null,
+    "map_query": "コムヒー",
+    "nearest_station": {
+      "name": "京口",
+      "lines": [
+        "JR播但線"
+      ],
+      "distance_m": 1770,
+      "walk_min": 22
+    },
+    "last_scraped_at": "2026-10-04T21:18:40.380361+00:00",
+    "lat": 34.846285,
+    "lng": 134.692171
+  },
+  {
+    "name": "Café Lavenir",
+    "url": "https://lavenir.ocnk.net/",
+    "platform": "おちゃのこネット",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認(おちゃのこネット標準構成)",
+    "address": "兵庫県神戸市中央区元町高架通3-184",
+    "prefecture": "兵庫県",
+    "hours": null,
+    "map_query": "Café Lavenir",
+    "nearest_station": {
+      "name": "花隈",
+      "lines": [
+        "神戸高速鉄道東西線"
+      ],
+      "distance_m": 10,
+      "walk_min": 1
+    },
+    "last_scraped_at": "2026-10-04T21:18:40.380361+00:00",
+    "lat": 34.686075,
+    "lng": 135.181451
+  },
+  {
+    "name": "珈琲煎舗 豆きち",
+    "url": "https://coffee-mamekichi.net/",
+    "platform": "独自PHPカート",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認",
+    "address": "兵庫県姫路市飾磨区矢倉町1-71",
+    "prefecture": "兵庫県",
+    "hours": null,
+    "map_query": "珈琲煎舗 豆きち",
+    "nearest_station": {
+      "name": "手柄",
+      "lines": [
+        "山陽電鉄本線"
+      ],
+      "distance_m": 620,
+      "walk_min": 8
+    },
+    "last_scraped_at": "2026-10-04T21:18:40.380361+00:00",
+    "lat": 34.815353,
+    "lng": 134.685479
+  },
+  {
+    "name": "NAKAMURA coffee",
+    "url": "https://nakamuracoffee.shop-pro.jp/",
+    "platform": "カラーミーショップ(shop-pro)",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認(カラーミー標準構成)",
+    "address": "兵庫県神戸市兵庫区中道通3-2-11",
+    "prefecture": "兵庫県",
+    "hours": null,
+    "map_query": "NAKAMURA coffee",
+    "nearest_station": {
+      "name": "大開",
+      "lines": [
+        "神戸高速鉄道東西線"
+      ],
+      "distance_m": 170,
+      "walk_min": 2
+    },
+    "last_scraped_at": "2026-10-04T21:18:40.380361+00:00",
+    "lat": 34.671288,
+    "lng": 135.159828
+  },
+  {
+    "name": "NAKAZAKI COFFEE ROASTER",
+    "url": "https://nakazaki.thebase.in/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "兵庫県姫路市野里東同心町5-10",
+    "prefecture": "兵庫県",
+    "hours": null,
+    "map_query": "NAKAZAKI COFFEE ROASTER",
+    "nearest_station": {
+      "name": "京口",
+      "lines": [
+        "JR播但線"
+      ],
+      "distance_m": 740,
+      "walk_min": 9
+    },
+    "last_scraped_at": "2026-10-04T21:18:40.380361+00:00",
+    "lat": 34.841196,
+    "lng": 134.703557
+  },
+  {
+    "name": "N COFFEE FACTORY",
+    "url": "https://ncoffeefacto.thebase.in/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "兵庫県尼崎市南武庫之荘3-3-12-101",
+    "prefecture": "兵庫県",
+    "hours": null,
+    "map_query": "N COFFEE FACTORY",
+    "nearest_station": {
+      "name": "武庫之荘",
+      "lines": [
+        "阪急神戸本線"
+      ],
+      "distance_m": 740,
+      "walk_min": 9
+    },
+    "last_scraped_at": "2026-10-04T21:18:40.380361+00:00",
+    "lat": 34.746235,
+    "lng": 135.389044
+  },
+  {
+    "name": "西山珈琲",
+    "url": "https://www.nishiyama-coffee.com/",
+    "platform": "MakeShop",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認",
+    "address": "兵庫県姫路市坂元町126",
+    "prefecture": "兵庫県",
+    "hours": null,
+    "map_query": "西山珈琲",
+    "nearest_station": {
+      "name": "山陽姫路",
+      "lines": [
+        "山陽電鉄本線"
+      ],
+      "distance_m": 580,
+      "walk_min": 7
+    },
+    "last_scraped_at": "2026-10-04T21:18:40.380361+00:00",
+    "lat": 34.833643,
+    "lng": 134.686834
+  },
+  {
+    "name": "RIO COFFEE 芦屋本店",
+    "url": "https://ashiya-rio.jp/",
+    "platform": "Shopify",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認(Shopify標準構成)",
+    "address": "兵庫県芦屋市茶屋之町4-12-104",
+    "prefecture": "兵庫県",
+    "hours": null,
+    "map_query": "RIO COFFEE 芦屋本店",
+    "nearest_station": {
+      "name": "芦屋",
+      "lines": [
+        "JR神戸線",
+        "阪神本線"
+      ],
+      "distance_m": 340,
+      "walk_min": 4
+    },
+    "last_scraped_at": "2026-10-04T21:18:40.380361+00:00",
+    "lat": 34.731141,
+    "lng": 135.307347
+  },
+  {
+    "name": "珈専舎たんぽぽ",
+    "url": "https://tanpopo.ocnk.net/",
+    "platform": "おちゃのこネット",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認(おちゃのこネット標準構成)",
+    "address": "兵庫県神戸市西区神出町広谷608-4",
+    "prefecture": "兵庫県",
+    "hours": null,
+    "map_query": "珈専舎たんぽぽ",
+    "nearest_station": {
+      "name": "志染",
+      "lines": [
+        "神戸電鉄粟生線"
+      ],
+      "distance_m": 3920,
+      "walk_min": 49
+    },
+    "last_scraped_at": "2026-10-04T21:18:40.380361+00:00",
+    "lat": 34.759717,
+    "lng": 134.974848
+  },
+  {
+    "name": "VOICE of COFFEE",
+    "url": "https://shop.voiceofcoffee.com/",
+    "platform": "カラーミーショップ(shop-pro)",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認(カラーミー標準構成)",
+    "address": "兵庫県神戸市中央区栄町通3-1-17 ブレッシュ1F",
+    "prefecture": "兵庫県",
+    "hours": null,
+    "map_query": "VOICE of COFFEE",
+    "nearest_station": {
+      "name": "西元町",
+      "lines": [
+        "神戸高速鉄道東西線"
+      ],
+      "distance_m": 180,
+      "walk_min": 2
+    },
+    "last_scraped_at": "2026-10-04T21:18:40.380361+00:00",
+    "lat": 34.683672,
+    "lng": 135.181585
+  },
+  {
+    "name": "YOSHIMURA COFFEE ROASTERS",
+    "url": "https://ysmrcoffee.buyshop.jp/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "兵庫県神戸市東灘区魚崎北町1-8-29",
+    "prefecture": "兵庫県",
+    "hours": null,
+    "map_query": "YOSHIMURA COFFEE ROASTERS",
+    "nearest_station": {
+      "name": "青木",
+      "lines": [
+        "阪神本線"
+      ],
+      "distance_m": 470,
+      "walk_min": 6
+    },
+    "last_scraped_at": "2026-10-04T21:18:40.380361+00:00",
+    "lat": 34.719197,
+    "lng": 135.27622
+  },
+  {
+    "name": "Y's coffee roaster & baked shop",
+    "url": "https://ysc263848.owndshop.com/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "兵庫県神戸市中央区花隈町3-3 1F",
+    "prefecture": "兵庫県",
+    "hours": null,
+    "map_query": "Y's coffee roaster & baked shop",
+    "nearest_station": {
+      "name": "花隈",
+      "lines": [
+        "神戸高速鉄道東西線"
+      ],
+      "distance_m": 210,
+      "walk_min": 3
+    },
+    "last_scraped_at": "2026-10-04T21:18:40.380361+00:00",
+    "lat": 34.688039,
+    "lng": 135.181343
+  },
+  {
+    "name": "BUNDY BEANS",
+    "url": "https://omame.stores.jp/",
+    "instagram_url": null,
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "兵庫県西宮市石刎町16-20",
+    "prefecture": "兵庫県",
+    "hours": null,
+    "map_query": "BUNDY BEANS 兵庫県西宮市石刎町16-20",
+    "nearest_station": {
+      "name": "苦楽園口",
+      "lines": [
+        "阪急甲陽線"
+      ],
+      "distance_m": 240,
+      "walk_min": 3
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://omame.stores.jp/)の商品ページをブラウザfetch()で2026-10-05に確認。100g商品の価格を採用(同一銘柄の200g・500g・1000gは別商品のため除外)。2店舗(石刎町・甲子園三番町)。焼き菓子・コーヒー缶・つけるだけ珈琲(バッグ)は除外。",
+    "last_verified_at": "2026-10-03",
+    "locations": [
+      {
+        "label": null,
+        "address": "兵庫県西宮市石刎町16-20",
+        "prefecture": "兵庫県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "BUNDY BEANS 兵庫県西宮市石刎町16-20",
+        "lat": 34.752067,
+        "lng": 135.327813
+      }
+    ],
+    "lat": 34.752067,
+    "lng": 135.327813
+  },
+  {
+    "name": "自家焙煎CafeKikitano(キキタノ)",
+    "url": "https://cafekikitano.stores.jp/",
+    "instagram_url": null,
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "兵庫県宝塚市武庫川町3-11 リバーサイドペンション宝塚102",
+    "prefecture": "兵庫県",
+    "hours": null,
+    "map_query": "自家焙煎CafeKikitano(キキタノ) 兵庫県宝塚市武庫川町3-11 リバーサイドペンション宝塚102",
+    "nearest_station": {
+      "name": "清荒神",
+      "lines": [
+        "阪急宝塚本線"
+      ],
+      "distance_m": 530,
+      "walk_min": 7
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://cafekikitano.stores.jp/)の商品ページをブラウザfetch()で2026-10-05に確認。100gの価格を採用。焼きドーナッツ・ドリップバッグ等は除外。",
+    "last_verified_at": "2026-10-03",
+    "locations": [
+      {
+        "label": null,
+        "address": "兵庫県宝塚市武庫川町3-11 リバーサイドペンション宝塚102",
+        "prefecture": "兵庫県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "自家焙煎CafeKikitano(キキタノ) 兵庫県宝塚市武庫川町3-11 リバーサイドペンション宝塚102",
+        "lat": 34.806955,
+        "lng": 135.351025
+      }
+    ],
+    "lat": 34.806955,
+    "lng": 135.351025
+  },
+  {
+    "name": "CINEMA COFFEE ROASTERS",
+    "url": "https://cinemacoffee.net/",
+    "instagram_url": null,
+    "platform": "STORES.jp(独自ドメイン、ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "兵庫県西脇市上野428-2",
+    "prefecture": "兵庫県",
+    "hours": null,
+    "map_query": "CINEMA COFFEE ROASTERS 兵庫県西脇市上野428-2",
+    "nearest_station": {
+      "name": "新西脇",
+      "lines": [
+        "JR加古川線"
+      ],
+      "distance_m": 1200,
+      "walk_min": 15
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://cinemacoffee.net/)の商品ページをブラウザfetch()で2026-10-05に確認。100g商品の価格を採用(同一銘柄の250g・500gは別商品のため除外)。3店舗(西脇市ほか)。",
+    "last_verified_at": "2026-10-03",
+    "locations": [
+      {
+        "label": null,
+        "address": "兵庫県西脇市上野428-2",
+        "prefecture": "兵庫県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "CINEMA COFFEE ROASTERS 兵庫県西脇市上野428-2",
+        "lat": 34.988341,
+        "lng": 134.981026
+      }
+    ],
+    "lat": 34.988341,
+    "lng": 134.981026
+  },
+  {
+    "name": "珈琲豆 誠",
+    "url": "https://coffeemamemakoto.stores.jp/",
+    "instagram_url": null,
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "兵庫県丹波篠山市西町1番地",
+    "prefecture": "兵庫県",
+    "hours": null,
+    "map_query": "珈琲豆 誠 兵庫県丹波篠山市西町1番地",
+    "nearest_station": {
+      "name": "篠山口",
+      "lines": [
+        "JR福知山線"
+      ],
+      "distance_m": 3790,
+      "walk_min": 47
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://coffeemamemakoto.stores.jp/)の商品ページをブラウザfetch()で2026-10-05に確認。100gの価格を採用(同一銘柄の200g・300gは別商品のため除外)。キャニスターは除外。商品数が少ない店舗。",
+    "last_verified_at": "2026-10-03",
+    "locations": [
+      {
+        "label": null,
+        "address": "兵庫県丹波篠山市西町1番地",
+        "prefecture": "兵庫県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "珈琲豆 誠 兵庫県丹波篠山市西町1番地",
+        "lat": 35.075615,
+        "lng": 135.211637
+      }
+    ],
+    "lat": 35.075615,
+    "lng": 135.211637
+  },
+  {
+    "name": "FIST BUMP COFFEE ROASTERY",
+    "url": "https://fistbumpcoffee.stores.jp/",
+    "instagram_url": null,
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "兵庫県神戸市西区宮下1-4-8",
+    "prefecture": "兵庫県",
+    "hours": null,
+    "map_query": "FIST BUMP COFFEE ROASTERY 兵庫県神戸市西区宮下1-4-8",
+    "nearest_station": {
+      "name": "西明石",
+      "lines": [
+        "山陽新幹線",
+        "JR神戸線"
+      ],
+      "distance_m": 3170,
+      "walk_min": 40
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://fistbumpcoffee.stores.jp/)の商品ページをブラウザfetch()で2026-10-05に確認。在庫あり商品のみ収録(売切れ約60件は除外)。重量が商品名に無い商品(多くは100g前後と思われる)は重量不明としてnull、価格は表示価格。ドリップバッグ・福袋・粉・お酒のインフュージョン豆は除外。",
+    "last_verified_at": "2026-10-03",
+    "locations": [
+      {
+        "label": null,
+        "address": "兵庫県神戸市西区宮下1-4-8",
+        "prefecture": "兵庫県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "FIST BUMP COFFEE ROASTERY 兵庫県神戸市西区宮下1-4-8",
+        "lat": 34.690495,
+        "lng": 134.977537
+      }
+    ],
+    "lat": 34.690495,
+    "lng": 134.977537
+  },
+  {
+    "name": "播磨珈琲焙煎所",
+    "url": "https://harimacoffeeroastery.stores.jp/",
+    "instagram_url": null,
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "兵庫県加古川市加古川町溝之口764",
+    "prefecture": "兵庫県",
+    "hours": null,
+    "map_query": "播磨珈琲焙煎所 兵庫県加古川市加古川町溝之口764",
+    "nearest_station": {
+      "name": "加古川",
+      "lines": [
+        "JR神戸線",
+        "JR加古川線"
+      ],
+      "distance_m": 500,
+      "walk_min": 6
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://harimacoffeeroastery.stores.jp/)の商品ページをブラウザfetch()で2026-10-05に確認。単品は100g、ブレンドは200g(100gの設定なし)の価格を採用。ケニアは品切れ。",
+    "last_verified_at": "2026-10-03",
+    "locations": [
+      {
+        "label": null,
+        "address": "兵庫県加古川市加古川町溝之口764",
+        "prefecture": "兵庫県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "播磨珈琲焙煎所 兵庫県加古川市加古川町溝之口764",
+        "lat": 34.765985,
+        "lng": 134.844492
+      }
+    ],
+    "lat": 34.765985,
+    "lng": 134.844492
+  },
+  {
+    "name": "ヒメジコーヒーファクトリー",
+    "url": "https://himejicf.com/",
+    "instagram_url": null,
+    "platform": "静的HTML(店頭・手動入力)",
+    "shop_type": "single_location",
+    "address": "兵庫県姫路市辻井6丁目11-16",
+    "prefecture": "兵庫県",
+    "hours": "10:00〜17:00 火・水曜定休",
+    "map_query": "ヒメジコーヒーファクトリー 兵庫県姫路市辻井6丁目11-16",
+    "nearest_station": {
+      "name": "播磨高岡",
+      "lines": [
+        "JR姫新線"
+      ],
+      "distance_m": 1670,
+      "walk_min": 21
+    },
+    "data_source": "manual",
+    "source_note": "公式サイトの販売中のコーヒー豆の一覧(https://himejicf.com/coffee.html)と焙煎機ページ(https://himejicf.com/machine.html)を2026-10-05に確認。最新式の高速焙煎機で自家焙煎と記載。店頭のみで通販カートなし。ページに「店頭で売り切れの場合あり」の注記があり在庫表示はない。各100g価格を採用。更新日の記載なし。電話番号は取得したページに記載なし",
+    "last_verified_at": "2026-10-03",
+    "locations": [
+      {
+        "label": null,
+        "address": "兵庫県姫路市辻井6丁目11-16",
+        "prefecture": "兵庫県",
+        "hours": "10:00〜17:00 火・水曜定休",
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "ヒメジコーヒーファクトリー 兵庫県姫路市辻井6丁目11-16",
+        "lat": 34.849105,
+        "lng": 134.674712
+      }
+    ],
+    "lat": 34.849105,
+    "lng": 134.674712
+  },
+  {
+    "name": "いけだ珈琲焙煎室",
+    "url": "https://www.ikedacoffeeroastery.com/",
+    "instagram_url": null,
+    "platform": "WordPress静的ページ+注文フォーム(振込・自動計算)",
+    "shop_type": "single_location",
+    "address": "兵庫県姫路市書写1178-5",
+    "prefecture": "兵庫県",
+    "hours": "11:00-18:00 火・水曜定休",
+    "map_query": "いけだ珈琲焙煎室 兵庫県姫路市書写1178-5",
+    "nearest_station": {
+      "name": "余部",
+      "lines": [
+        "JR姫新線"
+      ],
+      "distance_m": 2370,
+      "walk_min": 30
+    },
+    "data_source": "manual",
+    "source_note": "公式サイトのメニュー(https://www.ikedacoffeeroastery.com/menu)、店舗のご案内(https://www.ikedacoffeeroastery.com/profile)、通信販売(https://www.ikedacoffeeroastery.com/orderform)を2026-10-05に確認。2017年開業、NOVO MARKⅡで自家焙煎(販売分は発送日に焙煎)。通販は自動計算の注文フォーム→銀行振込→レターパック等で発送(100g/200gの袋)。表の100g価格を採用。「不定期で商品の入れ替え」の注記あり。生豆・デカフェ・ドリップバッグは取扱なし/除外。電話番号は取得したページに記載なし",
+    "last_verified_at": "2026-10-03",
+    "locations": [
+      {
+        "label": null,
+        "address": "兵庫県姫路市書写1178-5",
+        "prefecture": "兵庫県",
+        "hours": "11:00-18:00 火・水曜定休",
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "いけだ珈琲焙煎室 兵庫県姫路市書写1178-5",
+        "lat": 34.873578,
+        "lng": 134.658282
+      }
+    ],
+    "lat": 34.873578,
+    "lng": 134.658282
+  },
+  {
+    "name": "豆や珈楽",
+    "url": "http://www.mameyakoraku.com/",
+    "instagram_url": null,
+    "platform": "静的HTML(店頭・手動入力)",
+    "shop_type": "single_location",
+    "address": "兵庫県姫路市土山2丁目199-1",
+    "prefecture": "兵庫県",
+    "hours": "9:00～18:00(オーダーストップ17:15) 日曜・第2月曜定休(祝祭日は営業)",
+    "map_query": "豆や珈楽 兵庫県姫路市土山2丁目199-1",
+    "nearest_station": {
+      "name": "手柄山平和",
+      "lines": [
+        "JR山陽本線"
+      ],
+      "distance_m": 830,
+      "walk_min": 10
+    },
+    "data_source": "manual",
+    "source_note": "公式サイトの珈琲豆販売価格ページ(http://www.mameyakoraku.com/takeout.html)を2026-10-05に確認。ページ内に「姫路の自家焙煎珈琲 豆や珈楽」と明記。店頭販売のみで通販カートなし。静的HTMLの価格表で更新日の記載なし。各100g価格を採用",
+    "last_verified_at": "2026-10-03",
+    "locations": [
+      {
+        "label": null,
+        "address": "兵庫県姫路市土山2丁目199-1",
+        "prefecture": "兵庫県",
+        "hours": "9:00～18:00(オーダーストップ17:15) 日曜・第2月曜定休(祝祭日は営業)",
+        "tel": "079-299-2814",
+        "is_headquarters": false,
+        "map_query": "豆や珈楽 兵庫県姫路市土山2丁目199-1",
+        "lat": 34.830649,
+        "lng": 134.673451
+      }
+    ],
+    "lat": 34.830649,
+    "lng": 134.673451
+  },
+  {
+    "name": "モンデンコーヒー",
+    "url": "https://monden-coffee.stores.jp/",
+    "instagram_url": null,
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "兵庫県明石市野々上2-2-10",
+    "prefecture": "兵庫県",
+    "hours": null,
+    "map_query": "モンデンコーヒー 兵庫県明石市野々上2-2-10",
+    "nearest_station": {
+      "name": "逆瀬川",
+      "lines": [
+        "阪急今津線"
+      ],
+      "distance_m": 610,
+      "walk_min": 8
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://monden-coffee.stores.jp/)の商品ページをブラウザfetch()で2026-10-05に確認。門田珈琲系の焙煎問屋(受注焙煎・直火/遠赤外線)。同一銘柄が300g/1kgなど複数サイズの別商品で並ぶため最小の小売サイズ(100〜400g)の価格を採用。在庫あり商品のみ収録。生豆・ドリップバッグ・リキッド・珈琲牛乳・紅茶・器具・業務用パックは除外。業務用卸が中心の店舗。",
+    "last_verified_at": "2026-10-03",
+    "locations": [
+      {
+        "label": null,
+        "address": "兵庫県明石市野々上2-2-10",
+        "prefecture": "兵庫県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "モンデンコーヒー 兵庫県明石市野々上2-2-10",
+        "lat": 34.793999,
+        "lng": 135.345286
+      }
+    ],
+    "lat": 34.793999,
+    "lng": 135.345286
+  },
+  {
+    "name": "Navy coffee roaster",
+    "url": "https://coffee031.stores.jp/",
+    "instagram_url": null,
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "兵庫県明石市大蔵中町4-8",
+    "prefecture": "兵庫県",
+    "hours": null,
+    "map_query": "Navy coffee roaster 兵庫県明石市大蔵中町4-8",
+    "nearest_station": {
+      "name": "大蔵谷",
+      "lines": [
+        "山陽電鉄本線"
+      ],
+      "distance_m": 300,
+      "walk_min": 4
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://coffee031.stores.jp/)の商品ページをブラウザfetch()で2026-10-05に確認。100g(豆のまま)の価格を採用。通販はSTORES版が主体(公式サイトはWix)。ディップスタイルコーヒー・ドリップバッグは除外。",
+    "last_verified_at": "2026-10-03",
+    "locations": [
+      {
+        "label": null,
+        "address": "兵庫県明石市大蔵中町4-8",
+        "prefecture": "兵庫県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "Navy coffee roaster 兵庫県明石市大蔵中町4-8",
+        "lat": 34.645603,
+        "lng": 135.005287
+      }
+    ],
+    "lat": 34.645603,
+    "lng": 135.005287
+  },
+  {
+    "name": "REGREEN COFFEE",
+    "url": "https://regrencoffee.stores.jp/",
+    "instagram_url": null,
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "兵庫県姫路市勝原区宮田64-1",
+    "prefecture": "兵庫県",
+    "hours": null,
+    "map_query": "REGREEN COFFEE 兵庫県姫路市勝原区宮田64-1",
+    "nearest_station": {
+      "name": "網干",
+      "lines": [
+        "JR山陽本線"
+      ],
+      "distance_m": 1230,
+      "walk_min": 15
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://regrencoffee.stores.jp/)の商品ページをブラウザfetch()で2026-10-05に確認。100gの価格を採用。",
+    "last_verified_at": "2026-10-03",
+    "locations": [
+      {
+        "label": null,
+        "address": "兵庫県姫路市勝原区宮田64-1",
+        "prefecture": "兵庫県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "REGREEN COFFEE 兵庫県姫路市勝原区宮田64-1",
+        "lat": 34.809502,
+        "lng": 134.596299
+      }
+    ],
+    "lat": 34.809502,
+    "lng": 134.596299
+  },
+  {
+    "name": "ridge by coffee up!",
+    "url": "https://ridgebycoffeeup.stores.jp/",
+    "instagram_url": null,
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "兵庫県神戸市北区若葉台3-18-22",
+    "prefecture": "兵庫県",
+    "hours": null,
+    "map_query": "ridge by coffee up! 兵庫県神戸市北区若葉台3-18-22",
+    "nearest_station": {
+      "name": "神戸三宮",
+      "lines": [
+        "阪神本線",
+        "神戸高速鉄道東西線",
+        "阪急神戸本線"
+      ],
+      "distance_m": 70,
+      "walk_min": 1
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://ridgebycoffeeup.stores.jp/)の商品ページをブラウザfetch()で2026-10-05に確認。100gの価格を採用(300gは別商品のため除外)。Coffee Up! KOBE系列で2店舗。グラノーラ・バナナブレッド・雑誌・グッズは除外。",
+    "last_verified_at": "2026-10-03",
+    "locations": [
+      {
+        "label": null,
+        "address": "兵庫県神戸市北区若葉台3-18-22",
+        "prefecture": "兵庫県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "ridge by coffee up! 兵庫県神戸市北区若葉台3-18-22",
+        "lat": 34.693238,
+        "lng": 135.194376
+      }
+    ],
+    "lat": 34.693238,
+    "lng": 135.194376
+  },
+  {
+    "name": "しくもコーヒー",
+    "url": "https://shikumo-coffee.stores.jp/",
+    "instagram_url": null,
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "兵庫県西宮市染殿町3-14",
+    "prefecture": "兵庫県",
+    "hours": null,
+    "map_query": "しくもコーヒー 兵庫県西宮市染殿町3-14",
+    "nearest_station": {
+      "name": "今津",
+      "lines": [
+        "阪急今津線",
+        "阪神本線"
+      ],
+      "distance_m": 590,
+      "walk_min": 7
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://shikumo-coffee.stores.jp/)の商品ページをブラウザfetch()で2026-10-05に確認。100g(最小サイズ)の価格を採用。売切れ商品も在庫状況を反映して収録。",
+    "last_verified_at": "2026-10-03",
+    "locations": [
+      {
+        "label": null,
+        "address": "兵庫県西宮市染殿町3-14",
+        "prefecture": "兵庫県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "しくもコーヒー 兵庫県西宮市染殿町3-14",
+        "lat": 34.733751,
+        "lng": 135.345452
+      }
+    ],
+    "lat": 34.733751,
+    "lng": 135.345452
+  },
+  {
+    "name": "SHIZUKU COFFEE ROASTER",
+    "url": "https://shizuku-roaster.stores.jp/",
+    "instagram_url": null,
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "兵庫県宝塚市宮の町7-6",
+    "prefecture": "兵庫県",
+    "hours": null,
+    "map_query": "SHIZUKU COFFEE ROASTER 兵庫県宝塚市宮の町7-6",
+    "nearest_station": {
+      "name": "清荒神",
+      "lines": [
+        "阪急宝塚本線"
+      ],
+      "distance_m": 420,
+      "walk_min": 5
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://shizuku-roaster.stores.jp/)の商品ページをブラウザfetch()で2026-10-05に確認。200gの価格を採用(最小サイズ)。コーヒーグラノーラ・キャニスターは除外。",
+    "last_verified_at": "2026-10-03",
+    "locations": [
+      {
+        "label": null,
+        "address": "兵庫県宝塚市宮の町7-6",
+        "prefecture": "兵庫県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "SHIZUKU COFFEE ROASTER 兵庫県宝塚市宮の町7-6",
+        "lat": 34.808963,
+        "lng": 135.349866
+      }
+    ],
+    "lat": 34.808963,
+    "lng": 135.349866
+  },
+  {
+    "name": "サン珈琲",
+    "url": "https://www.suncoffee.co.jp/",
+    "instagram_url": null,
+    "platform": "独自HTMLフォーム(通販)",
+    "shop_type": "single_location",
+    "address": "兵庫県神戸市垂水区本多聞1-20-43",
+    "prefecture": "兵庫県",
+    "hours": null,
+    "map_query": "サン珈琲 兵庫県神戸市垂水区本多聞1-20-43",
+    "nearest_station": {
+      "name": "西舞子",
+      "lines": [
+        "山陽電鉄本線"
+      ],
+      "distance_m": 2610,
+      "walk_min": 33
+    },
+    "data_source": "manual",
+    "source_note": "公式オンラインショップ(https://www.suncoffee.co.jp/suncoffee_shop.html)を2026-10-05に確認。「焙煎工場と直営店舗を神戸市垂水区で運営」と記載。100g単位注文の独自HTMLフォーム(税込)。フッターは2015-2026表記。依頼で言及のあった3月ご奉仕日のお知らせは、取得したページ本文には見当たらず(画像・カレンダー内の可能性)、更新はやや古い可能性。ブルーマウンテンNo.1は月に一度(毎月4週目)の限定販売で、在庫表示はなく掲載どおり販売中扱い",
+    "last_verified_at": "2026-10-03",
+    "locations": [
+      {
+        "label": null,
+        "address": "兵庫県神戸市垂水区本多聞1-20-43",
+        "prefecture": "兵庫県",
+        "hours": null,
+        "tel": "078-782-7768",
+        "is_headquarters": false,
+        "map_query": "サン珈琲 兵庫県神戸市垂水区本多聞1-20-43",
+        "lat": 34.656844,
+        "lng": 135.04611
+      }
+    ],
+    "lat": 34.656844,
+    "lng": 135.04611
+  },
+  {
+    "name": "TAOCA COFFEE",
+    "url": "https://taocacoffee.net/",
+    "instagram_url": null,
+    "platform": "STORES.jp(独自ドメイン、ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "兵庫県西宮市樋之池町22-24 1F",
+    "prefecture": "兵庫県",
+    "hours": null,
+    "map_query": "TAOCA COFFEE 兵庫県西宮市樋之池町22-24 1F",
+    "nearest_station": {
+      "name": "苦楽園口",
+      "lines": [
+        "阪急甲陽線"
+      ],
+      "distance_m": 810,
+      "walk_min": 10
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://taocacoffee.net/)の商品ページをブラウザfetch()で2026-10-05に確認。100g商品の価格を採用(同一銘柄の250g・500g・1kgは別商品のため除外)。全7店舗(東京含む)で11店舗未満。器具・グッズ・菓子・ドリップバッグは除外。",
+    "last_verified_at": "2026-10-03",
+    "locations": [
+      {
+        "label": null,
+        "address": "兵庫県西宮市樋之池町22-24 1F",
+        "prefecture": "兵庫県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "TAOCA COFFEE 兵庫県西宮市樋之池町22-24 1F",
+        "lat": 34.75163,
+        "lng": 135.320255
+      }
+    ],
+    "lat": 34.75163,
+    "lng": 135.320255
+  },
+  {
+    "name": "としはる珈琲",
+    "url": "https://coffee.stores.jp/",
+    "instagram_url": null,
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "兵庫県西宮市常磐町1-32 サンアロー1F",
+    "prefecture": "兵庫県",
+    "hours": null,
+    "map_query": "としはる珈琲 兵庫県西宮市常磐町1-32 サンアロー1F",
+    "nearest_station": {
+      "name": "西宮",
+      "lines": [
+        "阪神本線"
+      ],
+      "distance_m": 440,
+      "walk_min": 6
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://coffee.stores.jp/)の商品ページをブラウザfetch()で2026-10-05に確認。100g商品の価格を採用(同一銘柄の250g・500gは別商品のため除外)。ドリップパック等は除外。公式サイトはtoshiharu.coffee。",
+    "last_verified_at": "2026-10-03",
+    "locations": [
+      {
+        "label": null,
+        "address": "兵庫県西宮市常磐町1-32 サンアロー1F",
+        "prefecture": "兵庫県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "としはる珈琲 兵庫県西宮市常磐町1-32 サンアロー1F",
+        "lat": 34.740744,
+        "lng": 135.336989
+      }
+    ],
+    "lat": 34.740744,
+    "lng": 135.336989
+  },
+  {
+    "name": "珈琲工房トゥリパーノ",
+    "url": "https://tulipano.jp/",
+    "instagram_url": null,
+    "platform": "静的HTML(電話注文・銀行振込・手動入力)",
+    "shop_type": "single_location",
+    "address": "兵庫県西宮市田代町7-1",
+    "prefecture": "兵庫県",
+    "hours": "9:00～18:00 日・月・祝定休",
+    "map_query": "珈琲工房トゥリパーノ 兵庫県西宮市田代町7-1",
+    "nearest_station": {
+      "name": "西宮北口",
+      "lines": [
+        "阪急今津線",
+        "阪急神戸本線"
+      ],
+      "distance_m": 570,
+      "walk_min": 7
+    },
+    "data_source": "manual",
+    "source_note": "公式サイトの商品ラインナップ(https://tulipano.jp/lineup.html)と限定商品(https://tulipano.jp/limited.html)、注文の流れ(https://tulipano.jp/flow.html)、店舗紹介(https://tulipano.jp/shop.html、住所〒663-8201)を2026-10-05に確認。「自家焙煎珈琲豆・紅茶専門店」と明記。通販は電話注文→銀行振込→佐川急便発送で、カートなし(6,000円以上送料無料)。価格は「400gまで」の100g価格を採用(500g以上は割引)。フッターは2020表記だが、トップのお知らせは2026/09/25付で更新あり。紅茶・器具は除外",
+    "last_verified_at": "2026-10-03",
+    "locations": [
+      {
+        "label": null,
+        "address": "兵庫県西宮市田代町7-1",
+        "prefecture": "兵庫県",
+        "hours": "9:00～18:00 日・月・祝定休",
+        "tel": "0798-66-6060",
+        "is_headquarters": false,
+        "map_query": "珈琲工房トゥリパーノ 兵庫県西宮市田代町7-1",
+        "lat": 34.745013,
+        "lng": 135.362849
+      }
+    ],
+    "lat": 34.745013,
+    "lng": 135.362849
+  },
+  {
+    "name": "Ucafe",
+    "url": "https://ucafe.stores.jp/",
+    "instagram_url": null,
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "兵庫県小野市黍田町761-5",
+    "prefecture": "兵庫県",
+    "hours": null,
+    "map_query": "Ucafe 兵庫県小野市黍田町761-5",
+    "nearest_station": {
+      "name": "市場",
+      "lines": [
+        "JR加古川線",
+        "神戸電鉄粟生線"
+      ],
+      "distance_m": 360,
+      "walk_min": 5
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://ucafe.stores.jp/)の商品ページをブラウザfetch()で2026-10-05に確認。100gの価格を採用。バレル熟成豆(ウイスキー・ブランデー)は焙煎豆として収録。",
+    "last_verified_at": "2026-10-03",
+    "locations": [
+      {
+        "label": null,
+        "address": "兵庫県小野市黍田町761-5",
+        "prefecture": "兵庫県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "Ucafe 兵庫県小野市黍田町761-5",
+        "lat": 34.817134,
+        "lng": 134.929661
+      }
+    ],
+    "lat": 34.817134,
+    "lng": 134.929661
+  },
+  {
+    "name": "Youth Coffee",
+    "url": "https://youthcoffee.stores.jp/",
+    "instagram_url": null,
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "兵庫県明石市大明石町2-2-3",
+    "prefecture": "兵庫県",
+    "hours": null,
+    "map_query": "Youth Coffee 兵庫県明石市大明石町2-2-3",
+    "nearest_station": {
+      "name": "西明石",
+      "lines": [
+        "JR神戸線",
+        "山陽新幹線"
+      ],
+      "distance_m": 670,
+      "walk_min": 8
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://youthcoffee.stores.jp/)の商品ページをブラウザfetch()で2026-10-05に確認。100gの価格を採用。飲み比べセット(Youthセレクト)・コールドブリューバッグは除外。",
+    "last_verified_at": "2026-10-03",
+    "locations": [
+      {
+        "label": null,
+        "address": "兵庫県明石市大明石町2-2-3",
+        "prefecture": "兵庫県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "Youth Coffee 兵庫県明石市大明石町2-2-3",
+        "lat": 34.671033,
+        "lng": 134.964024
+      }
+    ],
+    "lat": 34.671033,
+    "lng": 134.964024
+  },
+  {
+    "name": "ゆげ焙煎所",
+    "url": "https://yuge-roaster.stores.jp/",
+    "instagram_url": null,
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "兵庫県西宮市櫨塚町3-10",
+    "prefecture": "兵庫県",
+    "hours": null,
+    "map_query": "ゆげ焙煎所 兵庫県西宮市櫨塚町3-10",
+    "nearest_station": {
+      "name": "西宮",
+      "lines": [
+        "JR神戸線",
+        "阪神本線"
+      ],
+      "distance_m": 500,
+      "walk_min": 6
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://yuge-roaster.stores.jp/)の商品ページをブラウザfetch()で2026-10-05に確認。100g(最小サイズ)の価格を採用。夙川店あり(2店舗)。キャニスター・ケトル等の器具は除外。",
+    "last_verified_at": "2026-10-03",
+    "locations": [
+      {
+        "label": null,
+        "address": "兵庫県西宮市櫨塚町3-10",
+        "prefecture": "兵庫県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "ゆげ焙煎所 兵庫県西宮市櫨塚町3-10",
+        "lat": 34.740328,
+        "lng": 135.343528
+      }
+    ],
+    "lat": 34.740328,
+    "lng": 135.343528
   }
 ]

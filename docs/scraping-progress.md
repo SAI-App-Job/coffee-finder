@@ -8395,3 +8395,57 @@ A群・B群の一部を、スクレイパー27店舗・STORES手動入力7店舗
 
 - 影響: 新規51店舗・687商品を追加(784→835店舗、14041→14728商品)。既存店舗・商品への意図しない変更が無いことを
   isolation-merge検証で確認済み。全店舗をgeocode-shops.js・add-nearest-station.jsで処理。
+
+## 兵庫県再調査(2026-10-05)
+
+兵庫県は既に18店舗が実装済み。新規発掘(サブエージェントによる公式サイト突き合わせ)と、技術的理由のみで見送り済みだった店舗の
+再検証で、スクレイパー29店舗・STORES.jp手動入力17店舗・静的価格表の手動入力5店舗の計51店舗を実装した。
+
+### 通常スクレイプ(29店舗)
+- **Shopify/WooCommerce/MakeShop/独自API**: RIO COFFEE 芦屋本店(芦屋市、12。税込。1kg大容量・ギフト・サブスク除外)・
+  ALIGN COFFEE ROASTER(姫路市、16。旧BASE版でなくShopify版。最小重量は50g)・COFFEE PORT 芦屋浜ロースタリー(芦屋市、13)・
+  芦屋エビアンコーヒーショップ(芦屋市、13。神戸のEVIANとは別店)・平成珈琲(神戸市中央区、15。WooCommerce Store API、
+  重量違いが別商品)・西山珈琲(姫路市、50。MakeShop、通販は.comで、.netはWixの別ドメイン。以前の見送りは誤りだった)・
+  萩原珈琲(神戸市灘区、39。独自カートの/api/goods.json、SSLは問題なし。以前の見送り分)。
+- **カラーミー/Ocnk/独自カート/Wix/Welcart**: VOICE of COFFEE(神戸市中央区、16。100g)・NAKAMURA coffee(神戸市兵庫区、24。
+  ブレンドは複数袋パックのみで270g/300g表記)・Café Lavenir(神戸市中央区、7。受注焙煎)・珈専舎たんぽぽ(神戸市西区、9)・
+  COFFEE HOUSE FIELD(西宮市、3。販売は関連会社のESPRESSO STORE掲載)・カフェ・ド・トーヨー(伊丹市、29。emono1カート)・
+  珈琲煎舗 豆きち(姫路市、46。独自PHPカート。以前の見送り分)・エビスコーヒーロースターズ(明石市、27。Wix Stores、
+  価格は120g単価。以前の見送り分)・はた珈琲店(神戸市中央区、16。Welcart)。
+- **BASE系**: N COFFEE FACTORY(尼崎市、12。150g)・NAKAZAKI COFFEE ROASTER(姫路市、15)・コムヒー(姫路市、8)・
+  GREEN and Coffee Roasters(尼崎市、12。ブログは2021年止まりだがショップは2026年も更新)・GASSE(明石市、2)・
+  Y's coffee roaster & baked shop(神戸市中央区、9。200g)・HiTo Coffee Beans(神戸市兵庫区、18)・
+  8COFFEEROAST(宝塚市、15。独自ドメイン)・自家焙煎 ほんまる珈琲(姫路市、3)・Giro d' Awaji(南あわじ市、7。
+  最寄り駅なし)・YOSHIMURA COFFEE ROASTERS(神戸市東灘区、23)・GANDALF COFFEE(西宮市、15。住所は第三者サイトの
+  記載のみで公式未確認)・Gentle Coffee Roasters(揖保郡太子町、9。住所は第三者サイトTANOSUの記載、100g/袋は
+  セット表記からの推定)。
+- 注意: GANDALF・Gentleは/lawが東京(BASE社・運営会社)の住所のため上記のとおり。
+
+### STORES.jp手動入力(17店舗、ブラウザfetch())
+- ゆげ焙煎所(西宮市、9)・TAOCA COFFEE(西宮市、17。独自ドメイン)・しくもコーヒー(西宮市、39。売切れ14件を含む)・
+  としはる珈琲(西宮市、8)・BUNDY BEANS(西宮市、15)・REGREEN COFFEE(姫路市、8)・Youth Coffee(明石市、8)・
+  SHIZUKU COFFEE ROASTER(宝塚市、10。200g)・播磨珈琲焙煎所(加古川市、9。以前の見送り分)・
+  自家焙煎CafeKikitano(宝塚市、9。以前の見送り分)・珈琲豆 誠(丹波篠山市、3。以前の見送り分)・
+  ridge by coffee up!(神戸市北区、6)・FIST BUMP COFFEE ROASTERY(神戸市西区、23。在庫あり商品のみ、重量が商品名に
+  無い13件は重量null)・モンデンコーヒー(明石市、37。業務用卸中心の焙煎問屋、最小の小売サイズ)・Ucafe(小野市、17)・
+  CINEMA COFFEE ROASTERS(西脇市、12。独自ドメイン)・Navy coffee roaster(明石市、12。STORES版を採用)。
+- 同一銘柄が100g/250g/500g/1kgの別商品で並ぶ店舗は、最小の小売サイズ(多くは100g)の商品を代表とした。
+
+### 静的価格表の手動入力(5店舗、WebFetch/curlで確認)
+- 豆や珈楽(姫路市、24。店頭販売のみ)・ヒメジコーヒーファクトリー(姫路市、14。店頭のみ)・サン珈琲(神戸市垂水区、11。
+  更新がやや古い可能性)・珈琲工房トゥリパーノ(西宮市、35。電話・振込注文、限定商品5点を含む)・
+  いけだ珈琲焙煎室(姫路市、6。振込注文フォーム)。
+
+### 見送り・保留
+- **ハマタク(はまもとコーヒー、姫路市)**: カラーミーで構造は取得可能だが、公式サイト内に「自家焙煎」の記載(根拠)が
+  確認できず見送り(外部記事では「1975年創業の自家焙煎」)。店主確認が取れれば実装可能(最終判断待ち)。
+- **GREEN and Coffee Roasters**: ブログ更新は2021年だが販売は継続していると判断して実装。
+- B群(要確認・未実装): Beyond Coffee Roasters(年齢確認ゲートで商品未確認)・MAPPEE COFFEE WORKS(豆は1品のみ)・
+  びいとる(商品表示なし)・Misago Coffee(ドリップバッグ・グッズ中心)・但馬東洋珈琲(価格・カートなし)・
+  Noble Tree Coffee Roasters(豆の価格は店頭中心)・長井珈琲(商品API取得できず)・KAFFEE FIKA・Renca・カフェ オコナ・
+  KINGLY COFFEE(楽天・Yahoo!ショップ)・松浜珈琲焙煎所(店頭のみの可能性)・御影ダンケ(CGI)・珈琲工房ORIGINAL BLEND芦屋川・
+  CoCo・タワーコーヒー・上田珈琲焙煎所・かえるcafe・森ノ本珈琲・珈琲店EQUATOR・けやき焙煎所・cafeier・たぐち珈琲焙煎所・
+  Coffee Roasters HUB・まめつる・茜屋珈琲店。
+
+- 影響: 新規51店舗・815商品を追加(835→886店舗、14728→15543商品)。既存店舗・商品への意図しない変更が無いことを
+  isolation-merge検証で確認済み。全店舗をgeocode-shops.js・add-nearest-station.jsで処理。

@@ -1,0 +1,122 @@
+{
+  "shop": {
+    "name": "ridge by coffee up!",
+    "url": "https://ridgebycoffeeup.stores.jp/",
+    "address": "兵庫県神戸市北区若葉台3-18-22",
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "prefecture": "兵庫県",
+    "source_note": "STORES.jpの公式ショップ(https://ridgebycoffeeup.stores.jp/)の商品ページをブラウザfetch()で2026-10-05に確認。100gの価格を採用(300gは別商品のため除外)。Coffee Up! KOBE系列で2店舗。グラノーラ・バナナブレッド・雑誌・グッズは除外。",
+    "id": "ridge-by-coffee-up",
+    "instagram_url": null,
+    "google_maps_query": "ridge by coffee up! 兵庫県神戸市北区若葉台3-18-22",
+    "tel": null,
+    "hours": null,
+    "shop_type": "single_location",
+    "data_source": "manual",
+    "last_verified_at": "2026-10-03",
+    "lat": 34.693238,
+    "lng": 135.194376,
+    "nearest_station": {
+      "name": "神戸三宮",
+      "lines": [
+        "阪神本線",
+        "神戸高速鉄道東西線",
+        "阪急神戸本線"
+      ],
+      "distance_m": 70,
+      "walk_min": 1
+    }
+  },
+  "products": [
+    {
+      "raw_name": "エチオピア Worka Sakaro (浅煎り)",
+      "category": "ストレート",
+      "originCountry": "エチオピア",
+      "processingMethod": null,
+      "roast": "浅煎り",
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1330,
+      "weightG": 100,
+      "stockStatus": "販売中",
+      "productUrl": "https://ridgebycoffeeup.stores.jp/items/6501286f2ebc220029cf2f38",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "秋限定ブレンド『Color hunt』(中煎り)",
+      "category": "ブレンド",
+      "originCountry": null,
+      "processingMethod": null,
+      "roast": "中煎り",
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1270,
+      "weightG": 100,
+      "stockStatus": "販売中",
+      "productUrl": "https://ridgebycoffeeup.stores.jp/items/68c0e30220bc0f9b34ba68d1",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "デカフェ エチオピア",
+      "category": "ストレート",
+      "originCountry": "エチオピア",
+      "processingMethod": null,
+      "roast": null,
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1110,
+      "weightG": 100,
+      "stockStatus": "販売中",
+      "productUrl": "https://ridgebycoffeeup.stores.jp/items/624a8bc8688c445d466c1bb9",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "インドネシア Mandheling (中深煎り)",
+      "category": "ストレート",
+      "originCountry": "インドネシア",
+      "processingMethod": null,
+      "roast": "中深煎り",
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1320,
+      "weightG": 100,
+      "stockStatus": "販売中",
+      "productUrl": "https://ridgebycoffeeup.stores.jp/items/624a87777d116132e479433c",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "ブレンド ridgeway (中深煎り)",
+      "category": "ブレンド",
+      "originCountry": null,
+      "processingMethod": null,
+      "roast": "中深煎り",
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1000,
+      "weightG": 100,
+      "stockStatus": "販売中",
+      "productUrl": "https://ridgebycoffeeup.stores.jp/items/6406cec789a8cd03a5c35217",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "コロンビア El Vergel Washed (浅煎り)",
+      "category": "ストレート",
+      "originCountry": "コロンビア",
+      "processingMethod": "ウォッシュド",
+      "roast": "浅煎り",
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1220,
+      "weightG": 100,
+      "stockStatus": "販売中",
+      "productUrl": "https://ridgebycoffeeup.stores.jp/items/6a656c0b577d50b0c8d9d259",
+      "data_source": "manual"
+    }
+  ]
+}

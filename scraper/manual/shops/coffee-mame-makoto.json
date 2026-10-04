@@ -1,0 +1,75 @@
+{
+  "shop": {
+    "name": "珈琲豆 誠",
+    "url": "https://coffeemamemakoto.stores.jp/",
+    "address": "兵庫県丹波篠山市西町1番地",
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "prefecture": "兵庫県",
+    "source_note": "STORES.jpの公式ショップ(https://coffeemamemakoto.stores.jp/)の商品ページをブラウザfetch()で2026-10-05に確認。100gの価格を採用(同一銘柄の200g・300gは別商品のため除外)。キャニスターは除外。商品数が少ない店舗。",
+    "id": "coffee-mame-makoto",
+    "instagram_url": null,
+    "google_maps_query": "珈琲豆 誠 兵庫県丹波篠山市西町1番地",
+    "tel": null,
+    "hours": null,
+    "shop_type": "single_location",
+    "data_source": "manual",
+    "last_verified_at": "2026-10-03",
+    "lat": 35.075615,
+    "lng": 135.211637,
+    "nearest_station": {
+      "name": "篠山口",
+      "lines": [
+        "JR福知山線"
+      ],
+      "distance_m": 3790,
+      "walk_min": 47
+    }
+  },
+  "products": [
+    {
+      "raw_name": "エチオピア イルガチェッフェ ドビ G1 ナチュラル",
+      "category": "ストレート",
+      "originCountry": "エチオピア",
+      "processingMethod": "ナチュラル",
+      "roast": null,
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 900,
+      "weightG": 100,
+      "stockStatus": "販売中",
+      "productUrl": "https://coffeemamemakoto.stores.jp/items/6a2fad593b83cf31597aa666",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "『誠』のブレンド",
+      "category": "ブレンド",
+      "originCountry": null,
+      "processingMethod": null,
+      "roast": null,
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 750,
+      "weightG": 100,
+      "stockStatus": "販売中",
+      "productUrl": "https://coffeemamemakoto.stores.jp/items/5f4d47d7791d020c16d18a75",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "『西町』ブレンド",
+      "category": "ブレンド",
+      "originCountry": null,
+      "processingMethod": null,
+      "roast": null,
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 850,
+      "weightG": 100,
+      "stockStatus": "販売中",
+      "productUrl": "https://coffeemamemakoto.stores.jp/items/5f4d4991223ead2050a09c66",
+      "data_source": "manual"
+    }
+  ]
+}
