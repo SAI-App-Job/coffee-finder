@@ -5,7 +5,7 @@
 `scraper/manual/shops/`配下、それ以外は`scraper/scrape_*.py`で自動取得。
 実装を見送った店舗は`docs/not-implementable-shops.md`を参照。
 
-合計784店舗・14041商品(生成日: 2026-10-03)。
+合計835店舗・14728商品(生成日: 2026-10-04)。
 
 再生成コマンド:
 ```
@@ -661,29 +661,80 @@ aggregate_shops.py実行後の`git diff --staged --quiet || git commit`が該当
 
 | 店舗名 | 所在地 | 方式 | 件数 |
 |---|---|---|---|
+| 焙煎工房てんぷす | 茨木市 | Shopify | 51 |
+| たたらば珈琲 | 茨木市(忍頂寺焙煎所) | STORES(手動) | 20 |
 | Java Jive West | 茨木市舟木町11-36 | BASE | 8 |
+| 自家焙煎珈琲 Old Lanterns Cafe | 羽曳野市島泉6-4-15 | BASE | 14 |
+| SIMPLY COFFEE | 貝塚市 | STORES(手動) | 8 |
+| 喫茶トランク | 貝塚市西町10-10 | Wix | 1 |
+| COFFEE ROASTER OGAWA-YA | 貝塚市津田南町17-7 | STORES(手動) | 9 |
+| CréerCafé | 岸和田市上野町西15-16 | BASE(buyshop.jp) | 9 |
 | Coffee myself | 高石市千代田1-13-20 | 手動 | 6 |
 | MOUNTAIN 1999 自家焙煎コーヒーマウンテン | 高槻市芥川町2丁目8番21号 | Shopify | 28 |
+| aete coffee roaster | 堺市(百舌鳥八幡駅近く。番地は非公開) | BASE | 6 |
+| ネコグラ珈琲焙煎所 | 堺市(浜寺。番地は非公開) | BASE | 6 |
+| Specialty coffee DEARCUP | 堺市堺区栄橋町1-8-3 | BASE(theshop) | 15 |
+| アカリ珈琲 | 堺市堺区南島町2-59 | BASE | 7 |
+| 4trees coffee 焙煎LABO堺 | 堺市西区平岡町89-3 KLビル1F | Shopify | 12 |
+| ふかい珈琲 | 堺市中区深井沢町3400 | STORES(手動) | 13 |
 | 寝屋川焙煎所 | 寝屋川市大利元町12-8 | BASE | 8 |
+| さつき珈琲 | 吹田市五月が丘北25-40 ユタカビル1F | BASE | 11 |
+| mametomo1(珈琲オーダー焙煎まめとも) | 吹田市山田西1-2-14 千里エキスポハイツ102 | BASE | 16 |
 | LIGHT HOUSE | 泉佐野市羽倉崎1丁目1番5号 | BASE | 4 |
+| MAHOT COFFEE | 泉大津市田中町11-9 | BASE | 14 |
 | 自家焙煎工房カフェ littleisland | 大阪狭山市狭山2-944-1 | WooCommerce | 24 |
 | うさぎとぼく | 大阪市阿倍野区阪南町3-9-10 | BASE | 19 |
 | チャオッペ | 大阪市旭区清水5-12-12 | BASE | 14 |
+| コーヒーロースタリーむすぶ | 大阪市住吉区長居東4-11-19 ファミール長居1F | BASE(theshop) | 9 |
+| ArcaFabaFactory. | 大阪市住之江区浜口西1-6-10 | BASE | 30 |
+| コモレビコーヒー焙煎所 | 大阪市城東区関目1-12-13 | STORES(手動) | 8 |
+| 煎りたてハマ珈琲 | 大阪市城東区今福西2-16-12 | Ocnk | 23 |
 | TAKAMURA COFFEE ROASTERS | 大阪市西区江戸堀2-2-18 | Shopify | 20 |
+| Mel Coffee Roasters | 大阪市西区新町1-20-4 | STORES(手動) | 33 |
 | MONDIAL KAFFEE 328 | 大阪市西区南堀江1-1-20 | BASE | 9 |
+| 旭珈琲 | 大阪市西区南堀江3-12-21 | MakeShop | 43 |
+| TOMACAFE | 大阪市西区立売堀5-7-12-601 | STORES(手動) | 3 |
 | 井尻珈琲焙煎所 | 大阪市大正区三軒家東1-4-11 | BASE | 4 |
 | 平岡珈琲店 | 大阪市中央区瓦町3丁目6-11 | BASE | 1 |
+| aoma coffee | 大阪市中央区久太郎町3-4-2 | Shopify | 8 |
+| 自家焙煎コーヒーくまきち | 大阪市中央区上町1-26-14 | Square Online | 3 |
+| Enon coffee roasters | 大阪市中央区上町1-6-4 | STORES(手動) | 9 |
+| LiLo Coffee Roasters | 大阪市中央区西心斎橋1-10-28 | Shopify | 44 |
 | 大洋珈琲 | 大阪市中央区内久宝寺町3-3-15 | BASE | 35 |
 | エルマーズグリーン / EMBANKMENT Coffee | 大阪市中央区北浜1丁目1-23 1F | Shopify | 6 |
+| 喫茶ルプラ | 大阪市天王寺区 | カラーミー | 13 |
+| AUN COFFEE ROASTERS | 大阪市天王寺区勝山1-11-27 | Shopify | 8 |
+| Antonio Coffee Beans | 大阪市天王寺区上汐3-4-24 東宏ビル1F | BASE | 12 |
 | 有本珈琲問屋 | 大阪市天王寺区大道1-5-7 | Wix(手動) | 12 |
+| YARD | 大阪市天王寺区茶臼山町1-3 | Shopify | 5 |
+| SPECIALTY COFFEE OASIS | 大阪市東住吉区駒川3-27-38 | BASE | 8 |
+| AMAZING COFFEE ROASTER | 大阪市福島区海老江8-14-23-510 | BASE | 2 |
 | バーンホーフ | 大阪市福島区吉野1-14-8 | BASE | 22 |
+| 川崎珈琲商会 | 大阪市北区 | Ocnk | 17 |
+| 北浜ポート焙煎所 | 大阪市北区菅原町11-14 | STORES(手動) | 9 |
+| 42195 COFFEE | 大阪市北区中津3-12-15 | Wix | 5 |
+| 喫茶サンシャイン | 大阪市北区梅田1丁目1-3 大阪駅前第3ビルB2-89 | BASE | 1 |
+| HAIKU COFFEE ROASTERS | 大阪市北区浮田2-4-4 | BASE | 4 |
+| つばめ通り珈琲店 | 大阪市淀川区十三東3-12-16 | STORES(手動) | 12 |
+| 阪奈珈琲豆店(HANNA COFFEE R*) | 大東市野崎4-7-31 | Ocnk | 13 |
 | ロッソビーンズカフェ | 池田市栄町3-14 | MakeShop | 25 |
 | 大阪箕面珈琲珈琲焙煎所 | 池田市神田1-22-8 | 独自(WordPress、単品ラインナップページ。購入はBASE〈minohcoffee.base.shop〉の選べるセット経由) | 16 |
+| Puente Coffee | 東大阪市(石切参道) | STORES(手動) | 38 |
+| NIRVANA Coffee | 東大阪市西岩田1-8-19 | BASE | 9 |
 | 鶴屋 | 東大阪市足代2-7-27 | BASE | 5 |
+| THE COFFEE COFFEE COFFEE | 東大阪市菱屋東2-1-28 TRACT the local 2F | BASE | 8 |
+| 可緋処 雪人 / YUKIHITO | 八尾市渋川町6-3-29 | BASE | 9 |
 | ハチマル珈琲焙煎所 | 八尾市植松町4丁目8-23 | カラーミー | 14 |
 | KISSA ZEROICHI | 八尾市堤町2-10-20 | 手動 | 8 |
+| MASAKI COFFEE ROASTERY | 豊中市(緑地公園駅前) | STORES(手動) | 12 |
 | 島珈琲 | 豊中市岡町南1丁目5番47号 | WordPress | 21 |
+| かみかわ珈琲焙煎所 | 豊中市曽根東町5-10-1 | STORES(手動) | 20 |
 | 亀田珈琲焙煎所 | 豊中市利倉1-8-18 | BASE | 6 |
+| Indigo Coffee Roasters | 枚方市岡東町19-20 エル枚方1F | BASE(theshop) | 5 |
+| ワタスキ珈琲焙煎所 | 枚方市茄子作4-26-37 | BASE | 28 |
+| 後珈琲焙煎所 | 枚方市片鉾本町25-1 | BASE | 5 |
+| 仲井の珈琲 | 箕面市 | STORES(手動) | 7 |
+| 朋珈琲焙煎所 | 門真市宮前町3丁目 | STORES(手動) | 12 |
 | すぎはらコーヒーロースター | 門真市浜町5-24 | カラーミー | 37 |
 
 ### 大分県

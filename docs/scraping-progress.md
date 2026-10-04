@@ -8339,3 +8339,59 @@ A群・B群の一部を、スクレイパー27店舗・STORES手動入力7店舗
 - 影響: 新規56店舗・1062商品を追加し、群馬の誤登録1店舗(10商品)を削除(729→784店舗、12989→14041商品)。
   既存店舗・商品への意図しない変更が無いことをisolation-merge検証で確認済み。全店舗をgeocode-shops.js・
   add-nearest-station.jsで座標・最寄り駅も整備済み。
+
+## 大阪府再調査(2026-10-04)
+
+大阪府は既に24店舗が実装済み。サブエージェントによる新規発掘(Yahoo!検索のsite:指定・WebSearch・公式サイト突き合わせ)で
+確認済み候補52店舗を得て、このうちスクレイパー36店舗・STORES.jp手動入力15店舗の計51店舗を実装した
+(残る1店舗のSÖT COFFEE ROASTERは下記のとおり既存の京都店と同一ショップのため追加せず)。
+
+### 通常スクレイプ(36店舗)
+- **Shopify**: YARD(天王寺区、5。商品タイプ「コーヒー」のみ)・AUN COFFEE ROASTERS(天王寺区、8)・
+  4trees coffee 焙煎LABO堺(堺市西区、12)・焙煎工房てんぷす(茨木市、51。注文後焙煎で焙煎度は購入時に選択、
+  重量は焙煎前の生豆基準の可能性、住所は市まで)・aoma coffee(中央区、8)・LiLo Coffee Roasters(中央区、44。
+  現行ラインナップのみ、最小重量は50gが中心)。
+- **BASE系(thebase.in/base.shop/theshop.jp/buyshop.jp)**: HAIKU COFFEE ROASTERS(北区、4)・
+  AMAZING COFFEE ROASTER(福島区、2。通販のみ)・可緋処 雪人(八尾市、9。400g単位)・SPECIALTY COFFEE OASIS(東住吉区、8)・
+  ArcaFabaFactory.(住之江区、30)・NIRVANA Coffee(東大阪市、9)・MAHOT COFFEE(泉大津市、14。最小の60g)・
+  THE COFFEE COFFEE COFFEE(東大阪市、8)・アカリ珈琲(堺市堺区、7)・後珈琲焙煎所(枚方市、5)・
+  ワタスキ珈琲焙煎所(枚方市、28)・さつき珈琲(吹田市、11)・自家焙煎珈琲 Old Lanterns Cafe(羽曳野市、14)・
+  喫茶サンシャイン(北区、1。400gブレンド)・mametomo1(吹田市、16。「200g×2」の2銘柄セットは除外)・
+  Antonio Coffee Beans(天王寺区、12)・aete coffee roaster(堺市、6。住所は市まで)・ネコグラ珈琲焙煎所(堺市、6。
+  住所は市まで)・コーヒーロースタリーむすぶ(住吉区、9)・Specialty coffee DEARCUP(堺市堺区、15)・
+  Indigo Coffee Roasters(枚方市、5)・CréerCafé(岸和田市、9)。
+- **MakeShop/おちゃのこネット(Ocnk)/カラーミー**: 旭珈琲(西区、43。MakeShop)・煎りたてハマ珈琲(城東区、23。注文焙煎)・
+  阪奈珈琲豆店(大東市、13。100g商品を代表とし、36g小分けパックは採用しない)・川崎珈琲商会(北区、17。住所は区まで)・
+  喫茶ルプラ(天王寺区、13。カラーミー、EUC-JP。住所は区まで)。
+- **Wix/Square/静的**: 自家焙煎コーヒーくまきち(中央区、3。Squareの内部JSON API、robots Crawl-delay 5秒遵守)・
+  42195 COFFEE(北区、5。公式サイトの静的価格、電話・メール注文)・喫茶トランク(貝塚市、1。商品詳細ページが無く
+  一覧ページから取得)。
+- 注意: BASEの特商法ページがBASE社の住所(東京)になる店舗(後珈琲焙煎所・ワタスキ・aete・ネコグラ)は、
+  公式サイトの記載・以前の調査結果を住所とした。
+
+### STORES.jp手動入力(15店舗、ブラウザfetch())
+- MASAKI COFFEE ROASTERY(豊中市、12。100g豆のまま)・つばめ通り珈琲店(淀川区、12。売切れ10件を含む)・
+  たたらば珈琲(茨木市、20)・朋珈琲焙煎所(門真市、12。注文後焙煎で「生豆100g」表記、後述)・
+  Enon coffee roasters(中央区、9。100g商品)・SIMPLY COFFEE(貝塚市、8)・ふかい珈琲(堺市中区、13。250g単位)・
+  TOMACAFE(西区、3。ケニア専門)・かみかわ珈琲焙煎所(豊中市、20)・仲井の珈琲(箕面市、7。100g商品)・
+  Mel Coffee Roasters(西区、33。独自ドメイン。在庫あり商品のみ、最小重量の商品を代表)・
+  北浜ポート焙煎所(北区、9。独自ドメイン。200g)・コモレビコーヒー焙煎所(城東区、8)・
+  COFFEE ROASTER OGAWA-YA(貝塚市、9。200g)・Puente Coffee(東大阪市、38。独自ドメイン。100g商品と
+  200gのコラボコーヒー、在庫あり商品のみ)。
+- 取得方法: STORESはplain requestsが403のため、ブラウザの同一オリジンfetch()で`/items?page=N`から商品一覧を集め、
+  各商品ページの`ld+json`と、ページ内の`addItemBrowsingHistory([...])`のバリエーション情報(名称・価格・在庫数)を使用。
+
+### 見送り・保留
+- **SÖT COFFEE ROASTER(大阪3店舗+京都1店舗)**: 通販サイト(sotcoffee.com)が京都の既存エントリ「SOT COFFEE ROASTER」と
+  同一で商品URLが完全に重複するため大阪側は登録せず(`scrape_sotosaka.py`・`data_sotosaka.json`は未登録のまま保管)。
+- **朋珈琲焙煎所**: 商品名の「生豆100g」は焙煎前重量の表記で注文後に焙煎する方式。焙煎豆の販売として収録したが、
+  生豆販売との線引きは最終判断待ち。
+- B群(要確認・未実装): nbcoffeeroasters・T2T COFFEE ROASTERS・coffeeKikiki・Coffee store Geo・Babyrussa Coffee・
+  焙煎と織の花。・12 Coffee Roasters(移転作業中)・WORKBENCH COFFEE ROASTERS・とある珈琲(全品売切れ)・YOUMECA・
+  SANWA COFFEE WORKS・ヒロコーヒー・南米珈琲本店・FIFTEEN COFFEE ROASTERS・Colina Coffee・辻本珈琲・三喜屋珈琲・
+  珈琲豆屋カサブランカ・こめさん珈琲研究所・古川珈琲、ほか公式URLを特定できなかった約18店(Sloth Coffee Roasters・
+  Coffee Taiga・豆増・大山珈琲 など)。吹田・高槻・枚方・堺・豊中・東大阪は検索が連続アクセスの429で最後まで回せず、
+  実在店がまだ残っている可能性がある。
+
+- 影響: 新規51店舗・687商品を追加(784→835店舗、14041→14728商品)。既存店舗・商品への意図しない変更が無いことを
+  isolation-merge検証で確認済み。全店舗をgeocode-shops.js・add-nearest-station.jsで処理。

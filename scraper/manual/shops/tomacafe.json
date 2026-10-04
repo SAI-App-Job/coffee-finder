@@ -1,0 +1,75 @@
+{
+  "shop": {
+    "name": "TOMACAFE",
+    "url": "https://tomacafe.stores.jp/",
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "address": "大阪府大阪市西区立売堀5-7-12-601",
+    "prefecture": "大阪府",
+    "source_note": "STORES.jpの公式ショップ(https://tomacafe.stores.jp/)の商品ページをブラウザfetch()で2026-10-04に確認。ケニア専門の自家焙煎店(公式サイトに焙煎機・火加減の記述)。100gの価格を採用。コーヒーバッグ・ギフトは除外",
+    "id": "tomacafe",
+    "instagram_url": null,
+    "google_maps_query": "TOMACAFE 大阪府大阪市西区立売堀5-7-12-601",
+    "tel": null,
+    "hours": null,
+    "shop_type": "single_location",
+    "data_source": "manual",
+    "last_verified_at": "2026-10-03",
+    "lat": 34.679133,
+    "lng": 135.491046,
+    "nearest_station": {
+      "name": "西大橋",
+      "lines": [
+        "大阪長堀鶴見緑地線"
+      ],
+      "distance_m": 470,
+      "walk_min": 6
+    }
+  },
+  "products": [
+    {
+      "raw_name": "“Esprit du Kenya” KE.2805 【chocolate & apricot】",
+      "category": "ストレート",
+      "originCountry": "ケニア",
+      "processingMethod": null,
+      "roast": "シティロースト",
+      "flavorNotes": "ケニア KE.2805 シティロースト。chocolate, apricot, plum。ダークチョコレートの香ばしさ(ローストナッツの風味)",
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 900,
+      "weightG": 100,
+      "stockStatus": "販売中",
+      "productUrl": "https://tomacafe.stores.jp/items/5dd4cda5b2f6fd34974fdc88",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "“Esprit du Kenya” KE.2716 【青リンゴ & 糖蜜】",
+      "category": "ストレート",
+      "originCountry": "ケニア",
+      "processingMethod": null,
+      "roast": "ジャーマンロースト",
+      "flavorNotes": "ケニア KE.2716 ジャーマンロースト。green grass, herbal, citrus, chocolate",
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 900,
+      "weightG": 100,
+      "stockStatus": "販売中",
+      "productUrl": "https://tomacafe.stores.jp/items/5f75a35b07e16359ec31280b",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "“Esprit du Kenya” KE.2424 【orange & berry】",
+      "category": "ストレート",
+      "originCountry": "ケニア",
+      "processingMethod": null,
+      "roast": "ハイロースト",
+      "flavorNotes": "ケニア KE.2424 ハイロースト。cacao, dark cherry, citrus, orange peel",
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 900,
+      "weightG": 100,
+      "stockStatus": "販売中",
+      "productUrl": "https://tomacafe.stores.jp/items/5dd4b1e4a3423d6e48996359",
+      "data_source": "manual"
+    }
+  ]
+}
