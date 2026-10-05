@@ -2679,3 +2679,17 @@ docs/scraping-progress.md「栃木県再調査」冒頭の教訓セクション�
 
 ### 珈琲工房森山／タケヤ(久留米市)
 - 見送り理由: 前者はHTTPSで接続できない、後者は証明書がドメインと不一致で接続できない(証明書検証の無効化は行わない)。
+
+## 京都府再調査(2026-10-06)
+
+### 8Black birds Cafe(京都市下京区)
+- 見送り理由: STORES(8blackbirdscafe.stores.jp)の商品が全て売切れで、サンプル商品のみ。
+
+### 前田珈琲／キョーワズ珈琲／% ARABICA／猿田彦珈琲／ブルーボトル／MORIHICO.
+- 見送り理由: 11店舗以上のチェーン、または京都の店ではない。
+
+### GREEN TERRACE／2050 coffee by Kurasu／京茶珈琲／musubi-cafe／iroiro kyoto／マサイの風
+- 見送り理由: GREEN TERRACEは豆の焙煎を既登録の自家焙煎珈琲ガロへ委託、2050 coffeeは既登録のKurasu Kyotoと同系統、京茶珈琲は焙煎の根拠がなく更新も古い、musubi-cafeはドリップバッグ・菓子中心、iroiro kyotoは学生運営の通販で更新停止、マサイの風は全商品SOLD OUTで更新停止。
+
+### COFFEE HOLIC／YOSANO ROASTER／薫豆堂／時悠
+- 見送り理由: COFFEE HOLICは14店の共同イベント用ショップ、YOSANO ROASTERは焙煎機メーカーの直販(機器中心)、薫豆堂はフレーバー珈琲のクラフトブレンドで通常の自家焙煎販売が確認できない、時悠は岐阜県と推測される。

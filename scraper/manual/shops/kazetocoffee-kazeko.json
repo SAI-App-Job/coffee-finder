@@ -1,0 +1,105 @@
+{
+  "shop": {
+    "name": "風とCOFFEE 喫茶カゼコ",
+    "url": "https://kazewithcoffee.stores.jp/",
+    "address": "京都府京都市",
+    "prefecture": "京都府",
+    "source_note": "STORES.jpの公式ショップ(https://kazewithcoffee.stores.jp/)の商品ページをブラウザfetch()で2026-10-05に確認。表示価格を採用(重量が商品名に無いペルー・コロンビアは重量null)。自家焙煎は店の紹介(京都の小さなロースター)による。住所は特商法を取得できず「京都市」までで未確認。タニガワユメ・カップは除外。",
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "id": "kazetocoffee-kazeko",
+    "instagram_url": null,
+    "google_maps_query": "風とCOFFEE 喫茶カゼコ 京都府京都市",
+    "tel": null,
+    "hours": null,
+    "shop_type": "single_location",
+    "data_source": "manual",
+    "last_verified_at": "2026-10-03",
+    "lat": 35.011575,
+    "lng": 135.768144,
+    "nearest_station": {
+      "name": "京都市役所前",
+      "lines": [
+        "京都市東西線"
+      ],
+      "distance_m": 90,
+      "walk_min": 1
+    }
+  },
+  "products": [
+    {
+      "raw_name": "ペルー ドゥワイト・アギラール・マシアス ティピカ ウォッシュト",
+      "category": "ストレート",
+      "originCountry": "ペルー",
+      "processingMethod": "ウォッシュド",
+      "roast": null,
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1900,
+      "weightG": null,
+      "stockStatus": "販売中",
+      "productUrl": "https://kazewithcoffee.stores.jp/items/68c6c6a7af9b6b9c3eafdea4",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "コロンビア ネイデル・クリオジョ ウォッシュト",
+      "category": "ストレート",
+      "originCountry": "コロンビア",
+      "processingMethod": "ウォッシュド",
+      "roast": null,
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1700,
+      "weightG": null,
+      "stockStatus": "販売中",
+      "productUrl": "https://kazewithcoffee.stores.jp/items/68b90684a1219183410873cb",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "ブラジル シティオ・ダ・トーレ ナチュラル 深煎り",
+      "category": "ストレート",
+      "originCountry": "ブラジル",
+      "processingMethod": "ナチュラル",
+      "roast": "深煎り",
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1500,
+      "weightG": 150,
+      "stockStatus": "販売中",
+      "productUrl": "https://kazewithcoffee.stores.jp/items/60e26835c3289c26bedcaf11",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "ブレンドカゼコ",
+      "category": "ブレンド",
+      "originCountry": null,
+      "processingMethod": null,
+      "roast": null,
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1500,
+      "weightG": 150,
+      "stockStatus": "販売中",
+      "productUrl": "https://kazewithcoffee.stores.jp/items/62be41ef2cf73d63e273486c",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "グアテマラ ベアトリス農園 カトゥーラ ウォッシュト",
+      "category": "ストレート",
+      "originCountry": "グアテマラ",
+      "processingMethod": "ウォッシュド",
+      "roast": null,
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1900,
+      "weightG": 200,
+      "stockStatus": "一時的に品切れ",
+      "productUrl": "https://kazewithcoffee.stores.jp/items/61c2bdf34adba070bf9ea2ac",
+      "data_source": "manual"
+    }
+  ]
+}

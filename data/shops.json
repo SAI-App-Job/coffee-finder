@@ -21625,5 +21625,1009 @@
     ],
     "lat": 33.880184,
     "lng": 130.880374
+  },
+  {
+    "name": "アンダッシュコーヒー",
+    "url": "https://www.rakuten.co.jp/andushcoffee/",
+    "platform": "楽天市場",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可とみなす(2026-10確認。rakuten.co.jp/item.rakuten.co.jpのrobots.txtは検索系パラメータ(?i= ?s=)等のみ禁止)",
+    "address": "京都府京都市西京区桂下豆田町41-23",
+    "prefecture": "京都府",
+    "hours": null,
+    "map_query": "アンダッシュコーヒー",
+    "nearest_station": {
+      "name": "桂",
+      "lines": [
+        "阪急嵐山線",
+        "阪急京都本線"
+      ],
+      "distance_m": 350,
+      "walk_min": 4
+    },
+    "last_scraped_at": "2026-10-05T23:54:52.524561+00:00",
+    "lat": 34.98258,
+    "lng": 135.703938
+  },
+  {
+    "name": "Angel coffee",
+    "url": "https://angelcoffee.theshop.jp/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "京都府八幡市",
+    "prefecture": "京都府",
+    "hours": null,
+    "map_query": "Angel coffee",
+    "nearest_station": {
+      "name": "ケーブル八幡宮山上",
+      "lines": [
+        "京阪鋼索線"
+      ],
+      "distance_m": 940,
+      "walk_min": 12
+    },
+    "last_scraped_at": "2026-10-05T23:54:52.524561+00:00",
+    "lat": 34.875485,
+    "lng": 135.707549
+  },
+  {
+    "name": "ashiato coffee",
+    "url": "https://a4ato.theshop.jp/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "京都府京都市上京区新町通寺之内下る安楽小路町426-2",
+    "prefecture": "京都府",
+    "hours": null,
+    "map_query": "ashiato coffee",
+    "nearest_station": {
+      "name": "京都市役所前",
+      "lines": [
+        "京都市東西線"
+      ],
+      "distance_m": 90,
+      "walk_min": 1
+    },
+    "last_scraped_at": "2026-10-05T23:54:52.524561+00:00",
+    "lat": 35.011575,
+    "lng": 135.768144
+  },
+  {
+    "name": "baisado",
+    "url": "https://baisado.theshop.jp/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "京都府京都市左京区下鴨西半木町28-4",
+    "prefecture": "京都府",
+    "hours": null,
+    "map_query": "baisado",
+    "nearest_station": {
+      "name": "北大路",
+      "lines": [
+        "京都市烏丸線"
+      ],
+      "distance_m": 650,
+      "walk_min": 8
+    },
+    "last_scraped_at": "2026-10-05T23:54:52.524561+00:00",
+    "lat": 35.044673,
+    "lng": 135.765823
+  },
+  {
+    "name": "京都焙煎珈琲106",
+    "url": "https://www.baisen106.com/",
+    "platform": "Jimdo",
+    "shop_type": "single_location",
+    "robots_txt_status": "許可(2026-10確認。/app/・/j/はDisallow、Crawl-Delay: 5)",
+    "address": "京都府向日市物集女町クヅ子5 グレースメイト1F",
+    "prefecture": "京都府",
+    "hours": null,
+    "map_query": "京都焙煎珈琲106",
+    "nearest_station": {
+      "name": "東向日",
+      "lines": [
+        "阪急京都本線"
+      ],
+      "distance_m": 830,
+      "walk_min": 10
+    },
+    "last_scraped_at": "2026-10-05T23:54:52.524561+00:00",
+    "lat": 34.948717,
+    "lng": 135.698091
+  },
+  {
+    "name": "BEAR'S BREW COFFEE",
+    "url": "https://bbckyoto.base.shop/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "京都府京都市南区西九条池ノ内町34",
+    "prefecture": "京都府",
+    "hours": null,
+    "map_query": "BEAR'S BREW COFFEE",
+    "nearest_station": {
+      "name": "東寺",
+      "lines": [
+        "近鉄京都線"
+      ],
+      "distance_m": 360,
+      "walk_min": 5
+    },
+    "last_scraped_at": "2026-10-05T23:54:52.524561+00:00",
+    "lat": 34.983143,
+    "lng": 135.753043
+  },
+  {
+    "name": "caffè micio",
+    "url": "https://caffemicio.theshop.jp/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "京都府京都市左京区浄土寺下南田町27 錦林ハウス3",
+    "prefecture": "京都府",
+    "hours": null,
+    "map_query": "caffè micio",
+    "nearest_station": {
+      "name": "元田中",
+      "lines": [
+        "叡山電鉄本線"
+      ],
+      "distance_m": 1710,
+      "walk_min": 21
+    },
+    "last_scraped_at": "2026-10-05T23:54:52.524561+00:00",
+    "lat": 35.024073,
+    "lng": 135.794613
+  },
+  {
+    "name": "cité 京都自家焙煎コーヒースタンド",
+    "url": "https://cite-kyoto.myshopify.com/",
+    "platform": "Shopify",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認(Shopify標準構成)",
+    "address": "京都府京都市下京区紺屋町375-4",
+    "prefecture": "京都府",
+    "hours": null,
+    "map_query": "cité 京都自家焙煎コーヒースタンド",
+    "nearest_station": {
+      "name": "七条",
+      "lines": [
+        "京阪本線"
+      ],
+      "distance_m": 340,
+      "walk_min": 4
+    },
+    "last_scraped_at": "2026-10-05T23:54:52.524561+00:00",
+    "lat": 34.991015,
+    "lng": 135.764746
+  },
+  {
+    "name": "京都珈道",
+    "url": "https://codou.thebase.in/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "京都府京都市上京区西上善寺町206",
+    "prefecture": "京都府",
+    "hours": null,
+    "map_query": "京都珈道",
+    "nearest_station": {
+      "name": "北野白梅町",
+      "lines": [
+        "京福北野線"
+      ],
+      "distance_m": 920,
+      "walk_min": 12
+    },
+    "last_scraped_at": "2026-10-05T23:54:52.524561+00:00",
+    "lat": 35.029608,
+    "lng": 135.740569
+  },
+  {
+    "name": "珈琲工房4331",
+    "url": "https://4331.thebase.in/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "京都府京都市北区紫竹上竹殿町1-2",
+    "prefecture": "京都府",
+    "hours": null,
+    "map_query": "珈琲工房4331",
+    "nearest_station": {
+      "name": "北大路",
+      "lines": [
+        "京都市烏丸線"
+      ],
+      "distance_m": 1330,
+      "walk_min": 17
+    },
+    "last_scraped_at": "2026-10-05T23:54:52.524561+00:00",
+    "lat": 35.053937,
+    "lng": 135.748956
+  },
+  {
+    "name": "ever coffee",
+    "url": "https://evercoffee.base.shop/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "京都府京都市右京区宇多野福王子町45-2",
+    "prefecture": "京都府",
+    "hours": null,
+    "map_query": "ever coffee",
+    "nearest_station": {
+      "name": "宇多野",
+      "lines": [
+        "京福北野線"
+      ],
+      "distance_m": 190,
+      "walk_min": 2
+    },
+    "last_scraped_at": "2026-10-05T23:54:52.524561+00:00",
+    "lat": 35.028881,
+    "lng": 135.709573
+  },
+  {
+    "name": "GARUDA COFFEE",
+    "url": "https://garudacoffee.base.shop/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "京都府京都市山科区御陵別所町11-11",
+    "prefecture": "京都府",
+    "hours": null,
+    "map_query": "GARUDA COFFEE",
+    "nearest_station": {
+      "name": "御陵",
+      "lines": [
+        "京阪京津線",
+        "京都市東西線"
+      ],
+      "distance_m": 670,
+      "walk_min": 8
+    },
+    "last_scraped_at": "2026-10-05T23:54:52.524561+00:00",
+    "lat": 34.993448,
+    "lng": 135.80815
+  },
+  {
+    "name": "HAYASHI COFFEE ROASTERY",
+    "url": "https://coffeeh.base.shop/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "京都府京都市山科区東野舞台町12-1",
+    "prefecture": "京都府",
+    "hours": null,
+    "map_query": "HAYASHI COFFEE ROASTERY",
+    "nearest_station": {
+      "name": "椥辻",
+      "lines": [
+        "京都市東西線"
+      ],
+      "distance_m": 600,
+      "walk_min": 8
+    },
+    "last_scraped_at": "2026-10-05T23:54:52.524561+00:00",
+    "lat": 34.975109,
+    "lng": 135.808809
+  },
+  {
+    "name": "焙煎珈琲と洋菓子 聖",
+    "url": "https://coffeehijiri.theshop.jp/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "京都府京都市左京区高野西開町48-4 エクセルシアー1F-3",
+    "prefecture": "京都府",
+    "hours": null,
+    "map_query": "焙煎珈琲と洋菓子 聖",
+    "nearest_station": {
+      "name": "元田中",
+      "lines": [
+        "叡山電鉄本線"
+      ],
+      "distance_m": 460,
+      "walk_min": 6
+    },
+    "last_scraped_at": "2026-10-05T23:54:52.524561+00:00",
+    "lat": 35.038033,
+    "lng": 135.778101
+  },
+  {
+    "name": "HIVE COFFEE",
+    "url": "https://hivecoffee.official.ec/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "京都府京都市上京区築山北半町228",
+    "prefecture": "京都府",
+    "hours": null,
+    "map_query": "HIVE COFFEE",
+    "nearest_station": {
+      "name": "今出川",
+      "lines": [
+        "京都市烏丸線"
+      ],
+      "distance_m": 90,
+      "walk_min": 1
+    },
+    "last_scraped_at": "2026-10-05T23:54:52.524561+00:00",
+    "lat": 35.030179,
+    "lng": 135.758352
+  },
+  {
+    "name": "生きている珈琲",
+    "url": "https://ikiteiru.com/",
+    "platform": "ショップサーブ",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認",
+    "address": "京都府京都市下京区立売東町24 みのや四条ビルB1F",
+    "prefecture": "京都府",
+    "hours": null,
+    "map_query": "生きている珈琲",
+    "nearest_station": {
+      "name": "丸太町",
+      "lines": [
+        "京都市烏丸線"
+      ],
+      "distance_m": 520,
+      "walk_min": 7
+    },
+    "last_scraped_at": "2026-10-05T23:54:52.524561+00:00",
+    "lat": 35.020051,
+    "lng": 135.755737
+  },
+  {
+    "name": "京都伊藤コーヒー",
+    "url": "https://www.ito-cafe.com/",
+    "platform": "Jimdo",
+    "shop_type": "single_location",
+    "robots_txt_status": "許可(2026-10確認。/app/・/j/はDisallow、Crawl-Delay: 5)",
+    "address": "京都府京都市北区小山北上総町43-3 中道ビル1F",
+    "prefecture": "京都府",
+    "hours": null,
+    "map_query": "京都伊藤コーヒー",
+    "nearest_station": {
+      "name": "北大路",
+      "lines": [
+        "京都市烏丸線"
+      ],
+      "distance_m": 40,
+      "walk_min": 1
+    },
+    "last_scraped_at": "2026-10-05T23:54:52.524561+00:00",
+    "lat": 35.045005,
+    "lng": 135.75913
+  },
+  {
+    "name": "Kaikado Roastery",
+    "url": "https://shop.kaikado-roastery.jp/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "京都府京都市下京区住吉町352 Kaikado Cafe",
+    "prefecture": "京都府",
+    "hours": null,
+    "map_query": "Kaikado Roastery",
+    "nearest_station": {
+      "name": "御室仁和寺",
+      "lines": [
+        "京福北野線"
+      ],
+      "distance_m": 530,
+      "walk_min": 7
+    },
+    "last_scraped_at": "2026-10-05T23:54:52.524561+00:00",
+    "lat": 35.031082,
+    "lng": 135.715234
+  },
+  {
+    "name": "香灯路珈琲",
+    "url": "https://kotorocoffee.base.shop/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "京都府京都市上京区今出川通寺町東入下ル米屋町301",
+    "prefecture": "京都府",
+    "hours": null,
+    "map_query": "香灯路珈琲",
+    "nearest_station": {
+      "name": "京都市役所前",
+      "lines": [
+        "京都市東西線"
+      ],
+      "distance_m": 90,
+      "walk_min": 1
+    },
+    "last_scraped_at": "2026-10-05T23:54:52.524561+00:00",
+    "lat": 35.011575,
+    "lng": 135.768144
+  },
+  {
+    "name": "京都珈琲中毒製作所",
+    "url": "https://coffeecyuudoku.shop-pro.jp/",
+    "platform": "カラーミーショップ(shop-pro.jp)",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認(カラーミーショップ標準構成)",
+    "address": "京都府京都市右京区西院下花田町15-2",
+    "prefecture": "京都府",
+    "hours": null,
+    "map_query": "京都珈琲中毒製作所",
+    "nearest_station": {
+      "name": "西大路三条",
+      "lines": [
+        "京福嵐山線"
+      ],
+      "distance_m": 360,
+      "walk_min": 5
+    },
+    "last_scraped_at": "2026-10-05T23:54:52.524561+00:00",
+    "lat": 35.006431,
+    "lng": 135.728934
+  },
+  {
+    "name": "京都珈琲学部",
+    "url": "https://kyocoffeegkb.thebase.in/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "京都府京都市上京区青龍町218 グランコスモ鴨川508",
+    "prefecture": "京都府",
+    "hours": null,
+    "map_query": "京都珈琲学部",
+    "nearest_station": {
+      "name": "出町柳",
+      "lines": [
+        "京阪本線",
+        "叡山電鉄本線"
+      ],
+      "distance_m": 380,
+      "walk_min": 5
+    },
+    "last_scraped_at": "2026-10-05T23:54:52.524561+00:00",
+    "lat": 35.031278,
+    "lng": 135.768773
+  },
+  {
+    "name": "Laughter Coffee",
+    "url": "https://laughter-coffee.myshopify.com/",
+    "platform": "Shopify",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認(Shopify標準構成)",
+    "address": "京都府京都市伏見区深草塚本町67 紫光館1F",
+    "prefecture": "京都府",
+    "hours": null,
+    "map_query": "Laughter Coffee",
+    "nearest_station": {
+      "name": "龍谷大前深草",
+      "lines": [
+        "京阪本線"
+      ],
+      "distance_m": 320,
+      "walk_min": 4
+    },
+    "last_scraped_at": "2026-10-05T23:54:52.524561+00:00",
+    "lat": 34.963897,
+    "lng": 135.766662
+  },
+  {
+    "name": "中山珈琲焙煎所",
+    "url": "https://www.nakayamacoffee.com/",
+    "platform": "カラーミーショップ(shop-pro.jp)",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認(カラーミーショップ標準構成)",
+    "address": "京都府木津川市南加茂台9丁目15-2",
+    "prefecture": "京都府",
+    "hours": null,
+    "map_query": "中山珈琲焙煎所",
+    "nearest_station": {
+      "name": "加茂",
+      "lines": [
+        "JR大和路線",
+        "JR関西本線"
+      ],
+      "distance_m": 1760,
+      "walk_min": 22
+    },
+    "last_scraped_at": "2026-10-05T23:54:52.524561+00:00",
+    "lat": 34.736971,
+    "lng": 135.866804
+  },
+  {
+    "name": "ネクタイコーヒー",
+    "url": "https://necktie.base.shop/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "京都府京都市下京区裏片町177-5",
+    "prefecture": "京都府",
+    "hours": null,
+    "map_query": "ネクタイコーヒー",
+    "nearest_station": {
+      "name": "丹波口",
+      "lines": [
+        "JR山陰本線"
+      ],
+      "distance_m": 570,
+      "walk_min": 7
+    },
+    "last_scraped_at": "2026-10-05T23:54:52.524561+00:00",
+    "lat": 34.992502,
+    "lng": 135.747785
+  },
+  {
+    "name": "京都西陣珈琲",
+    "url": "https://www.rakuten.co.jp/kn-coffee/",
+    "platform": "楽天市場",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可とみなす(2026-10確認。rakuten.co.jp/item.rakuten.co.jpのrobots.txtは検索系パラメータ(?i= ?s=)等のみ禁止)",
+    "address": "京都府京都市上京区泰童片原町663-4",
+    "prefecture": "京都府",
+    "hours": null,
+    "map_query": "京都西陣珈琲",
+    "nearest_station": {
+      "name": "北野白梅町",
+      "lines": [
+        "京福北野線"
+      ],
+      "distance_m": 1090,
+      "walk_min": 14
+    },
+    "last_scraped_at": "2026-10-05T23:54:52.524561+00:00",
+    "lat": 35.027343,
+    "lng": 135.742849
+  },
+  {
+    "name": "大山崎 COFFEE ROASTERS",
+    "url": "https://oyamazakicr.thebase.in/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "京都府乙訓郡大山崎町大山崎尻江56-1",
+    "prefecture": "京都府",
+    "hours": null,
+    "map_query": "大山崎 COFFEE ROASTERS",
+    "nearest_station": {
+      "name": "山崎",
+      "lines": [
+        "JR京都線"
+      ],
+      "distance_m": 120,
+      "walk_min": 2
+    },
+    "last_scraped_at": "2026-10-05T23:54:52.524561+00:00",
+    "lat": 34.89157,
+    "lng": 135.680081
+  },
+  {
+    "name": "Coffee shop POCCHI 京都洛北 珈琲豆焙煎所",
+    "url": "https://pocchicoffee.base.shop/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "京都府京都市左京区",
+    "prefecture": "京都府",
+    "hours": null,
+    "map_query": "Coffee shop POCCHI 京都洛北 珈琲豆焙煎所",
+    "nearest_station": {
+      "name": "松ヶ崎",
+      "lines": [
+        "京都市烏丸線"
+      ],
+      "distance_m": 370,
+      "walk_min": 5
+    },
+    "last_scraped_at": "2026-10-05T23:54:52.524561+00:00",
+    "lat": 35.048535,
+    "lng": 135.77837
+  },
+  {
+    "name": "おうちでコーヒーるるる",
+    "url": "https://ru3coffee.base.shop/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "京都府京都市左京区高野竹屋町27-3",
+    "prefecture": "京都府",
+    "hours": null,
+    "map_query": "おうちでコーヒーるるる",
+    "nearest_station": {
+      "name": "茶山・京都芸術大学",
+      "lines": [
+        "叡山電鉄本線"
+      ],
+      "distance_m": 590,
+      "walk_min": 7
+    },
+    "last_scraped_at": "2026-10-05T23:54:52.524561+00:00",
+    "lat": 35.042732,
+    "lng": 135.781
+  },
+  {
+    "name": "Sentido",
+    "url": "https://sentidocoffe.theshop.jp/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "京都府京都市中京区笹屋町445 日宝烏丸ビル101",
+    "prefecture": "京都府",
+    "hours": null,
+    "map_query": "Sentido",
+    "nearest_station": {
+      "name": "京都市役所前",
+      "lines": [
+        "京都市東西線"
+      ],
+      "distance_m": 50,
+      "walk_min": 1
+    },
+    "last_scraped_at": "2026-10-05T23:54:52.524561+00:00",
+    "lat": 35.010813,
+    "lng": 135.768343
+  },
+  {
+    "name": "西院 ROASTING FACTORY",
+    "url": "https://srfcoffee.base.shop/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "京都府京都市右京区西院日照町60-1",
+    "prefecture": "京都府",
+    "hours": null,
+    "map_query": "西院 ROASTING FACTORY",
+    "nearest_station": {
+      "name": "山ノ内",
+      "lines": [
+        "京福嵐山線"
+      ],
+      "distance_m": 750,
+      "walk_min": 9
+    },
+    "last_scraped_at": "2026-10-05T23:54:52.524561+00:00",
+    "lat": 35.001681,
+    "lng": 135.724524
+  },
+  {
+    "name": "高木珈琲店",
+    "url": "https://takagicoffee.base.shop/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "京都府京都市下京区骨屋町175",
+    "prefecture": "京都府",
+    "hours": null,
+    "map_query": "高木珈琲店",
+    "nearest_station": {
+      "name": "五条",
+      "lines": [
+        "京都市烏丸線"
+      ],
+      "distance_m": 330,
+      "walk_min": 4
+    },
+    "last_scraped_at": "2026-10-05T23:54:52.524561+00:00",
+    "lat": 34.994034,
+    "lng": 135.762939
+  },
+  {
+    "name": "TRIBUTE COFFEE",
+    "url": "https://tributec.thebase.in/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "京都府京都市中京区恵比須町435-2 土方ビル3階",
+    "prefecture": "京都府",
+    "hours": null,
+    "map_query": "TRIBUTE COFFEE",
+    "nearest_station": {
+      "name": "京都市役所前",
+      "lines": [
+        "京都市東西線"
+      ],
+      "distance_m": 190,
+      "walk_min": 2
+    },
+    "last_scraped_at": "2026-10-05T23:54:52.524561+00:00",
+    "lat": 35.009369,
+    "lng": 135.769417
+  },
+  {
+    "name": "4ADJ1 Coffee Roaster",
+    "url": "https://4adj1.shop/",
+    "instagram_url": null,
+    "platform": "STORES.jp(独自ドメイン、ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "京都府京都市上京区室町通上立売上ル室町頭町289-3 1F",
+    "prefecture": "京都府",
+    "hours": null,
+    "map_query": "4ADJ1 Coffee Roaster 京都府京都市上京区室町通上立売上ル室町頭町289-3 1F",
+    "nearest_station": {
+      "name": "今出川",
+      "lines": [
+        "京都市烏丸線"
+      ],
+      "distance_m": 270,
+      "walk_min": 3
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://4adj1.shop/)の商品ページをブラウザfetch()で2026-10-05に確認。300gの価格を採用。注文ごとに計量・焙煎。生豆(お家で焙煎用)・アーモンド・カウンセリング式の専用豆は除外。日曜12-16時のみ営業の1人運営店。",
+    "last_verified_at": "2026-10-03",
+    "locations": [
+      {
+        "label": null,
+        "address": "京都府京都市上京区室町通上立売上ル室町頭町289-3 1F",
+        "prefecture": "京都府",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "4ADJ1 Coffee Roaster 京都府京都市上京区室町通上立売上ル室町頭町289-3 1F",
+        "lat": 35.032355,
+        "lng": 135.757994
+      }
+    ],
+    "lat": 35.032355,
+    "lng": 135.757994
+  },
+  {
+    "name": "HEROES COFFEE",
+    "url": "https://heroescoffee.stores.jp/",
+    "instagram_url": null,
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "京都府京都市伏見区醍醐江奈志町10-111",
+    "prefecture": "京都府",
+    "hours": null,
+    "map_query": "HEROES COFFEE 京都府京都市伏見区醍醐江奈志町10-111",
+    "nearest_station": {
+      "name": "石田",
+      "lines": [
+        "京都市東西線"
+      ],
+      "distance_m": 660,
+      "walk_min": 8
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://heroescoffee.stores.jp/)の商品ページをブラウザfetch()で2026-10-05に確認。同一銘柄がSS(80g)/S(170g)/M(260g)/L(400g)の別商品で並ぶため最小サイズの価格を採用(ブレンドのSは170gと推定)。通販限定お試しパック(80g)・取扱い豆の案内・粉は除外。公式サイトに焙煎機の紹介と注文後焙煎の記載。",
+    "last_verified_at": "2026-10-03",
+    "locations": [
+      {
+        "label": null,
+        "address": "京都府京都市伏見区醍醐江奈志町10-111",
+        "prefecture": "京都府",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "HEROES COFFEE 京都府京都市伏見区醍醐江奈志町10-111",
+        "lat": 34.944567,
+        "lng": 135.809349
+      }
+    ],
+    "lat": 34.944567,
+    "lng": 135.809349
+  },
+  {
+    "name": "京都焙煎 佰荳屋",
+    "url": "https://100mameya.stores.jp/",
+    "instagram_url": null,
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "京都府京都市左京区",
+    "prefecture": "京都府",
+    "hours": null,
+    "map_query": "京都焙煎 佰荳屋 京都府京都市左京区",
+    "nearest_station": {
+      "name": "松ヶ崎",
+      "lines": [
+        "京都市烏丸線"
+      ],
+      "distance_m": 370,
+      "walk_min": 5
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://100mameya.stores.jp/)の商品ページをブラウザfetch()で2026-10-05に確認。各銘柄の150g(豆のまま)の価格を採用(個包装1杯分15g・50gの小サイズは除外)。約100種の焙煎豆を扱う2023年開店の焙煎店(店名・商品構成から自家焙煎と判断)。インフューズドコーヒー(ストロベリー)・コピ・ルアク(13gのみ)・缶・福袋は除外。住所は区までで番地は未確認。",
+    "last_verified_at": "2026-10-03",
+    "locations": [
+      {
+        "label": null,
+        "address": "京都府京都市左京区",
+        "prefecture": "京都府",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "京都焙煎 佰荳屋 京都府京都市左京区",
+        "lat": 35.048535,
+        "lng": 135.77837
+      }
+    ],
+    "lat": 35.048535,
+    "lng": 135.77837
+  },
+  {
+    "name": "風とCOFFEE 喫茶カゼコ",
+    "url": "https://kazewithcoffee.stores.jp/",
+    "instagram_url": null,
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "京都府京都市",
+    "prefecture": "京都府",
+    "hours": null,
+    "map_query": "風とCOFFEE 喫茶カゼコ 京都府京都市",
+    "nearest_station": {
+      "name": "京都市役所前",
+      "lines": [
+        "京都市東西線"
+      ],
+      "distance_m": 90,
+      "walk_min": 1
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://kazewithcoffee.stores.jp/)の商品ページをブラウザfetch()で2026-10-05に確認。表示価格を採用(重量が商品名に無いペルー・コロンビアは重量null)。自家焙煎は店の紹介(京都の小さなロースター)による。住所は特商法を取得できず「京都市」までで未確認。タニガワユメ・カップは除外。",
+    "last_verified_at": "2026-10-03",
+    "locations": [
+      {
+        "label": null,
+        "address": "京都府京都市",
+        "prefecture": "京都府",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "風とCOFFEE 喫茶カゼコ 京都府京都市",
+        "lat": 35.011575,
+        "lng": 135.768144
+      }
+    ],
+    "lat": 35.011575,
+    "lng": 135.768144
+  },
+  {
+    "name": "京都・北山焙煎所 by大垣書店",
+    "url": "https://booksogaki-roastery.stores.jp/",
+    "instagram_url": null,
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "京都府京都市(北山)",
+    "prefecture": "京都府",
+    "hours": null,
+    "map_query": "京都・北山焙煎所 by大垣書店 京都府京都市(北山)",
+    "nearest_station": {
+      "name": "北山",
+      "lines": [
+        "京都市烏丸線"
+      ],
+      "distance_m": 110,
+      "walk_min": 1
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://booksogaki-roastery.stores.jp/)の商品ページをブラウザfetch()で2026-10-05に確認。200g(豆/粉の選択)の価格を採用。大垣書店運営のカフェ向け焙煎所で、焙煎所は1か所。珈琲豆の麻袋(グッズ)は除外。住所はSTORESの特商法を取得できず「京都市(北山)」までで未確認。",
+    "last_verified_at": "2026-10-03",
+    "locations": [
+      {
+        "label": null,
+        "address": "京都府京都市(北山)",
+        "prefecture": "京都府",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "京都・北山焙煎所 by大垣書店 京都府京都市(北山)",
+        "lat": 35.051278,
+        "lng": 135.765173
+      }
+    ],
+    "lat": 35.051278,
+    "lng": 135.765173
+  },
+  {
+    "name": "弘陽珈煎",
+    "url": "https://coyo-kosen.stores.jp/",
+    "instagram_url": null,
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "京都府京都市山科区椥辻草海道町38-20",
+    "prefecture": "京都府",
+    "hours": null,
+    "map_query": "弘陽珈煎 京都府京都市山科区椥辻草海道町38-20",
+    "nearest_station": {
+      "name": "椥辻",
+      "lines": [
+        "京都市東西線"
+      ],
+      "distance_m": 180,
+      "walk_min": 2
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://coyo-kosen.stores.jp/)の商品ページをブラウザfetch()で2026-10-05に確認。各商品の最小サイズ(300g)の価格を採用(商品名の100g単価の3倍)。在庫あり商品のみ収録(完売した過去の限定豆・紅茶・サイフォン器具・砂糖は除外)。オールドブラックブレンドは最小サイズの重量が確認できず除外。最新のお知らせは2024-09頃で鮮度は要確認。",
+    "last_verified_at": "2026-10-03",
+    "locations": [
+      {
+        "label": null,
+        "address": "京都府京都市山科区椥辻草海道町38-20",
+        "prefecture": "京都府",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "弘陽珈煎 京都府京都市山科区椥辻草海道町38-20",
+        "lat": 34.972122,
+        "lng": 135.816468
+      }
+    ],
+    "lat": 34.972122,
+    "lng": 135.816468
+  },
+  {
+    "name": "リンコーヒー",
+    "url": "https://lincoffee.stores.jp/",
+    "instagram_url": null,
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "京都府京都市上京区烏丸通上御霊前下ル",
+    "prefecture": "京都府",
+    "hours": null,
+    "map_query": "リンコーヒー 京都府京都市上京区烏丸通上御霊前下ル",
+    "nearest_station": {
+      "name": "京都市役所前",
+      "lines": [
+        "京都市東西線"
+      ],
+      "distance_m": 90,
+      "walk_min": 1
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://lincoffee.stores.jp/)の商品ページをブラウザfetch()で2026-10-05に確認。100gの価格を採用(同一銘柄の400gは別商品のため除外)。ドリップバッグ等のセットは除外。自家焙煎は京都の店舗紹介による。住所は上京区の通り名までで番地は未確認。",
+    "last_verified_at": "2026-10-03",
+    "locations": [
+      {
+        "label": null,
+        "address": "京都府京都市上京区烏丸通上御霊前下ル",
+        "prefecture": "京都府",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "リンコーヒー 京都府京都市上京区烏丸通上御霊前下ル",
+        "lat": 35.011575,
+        "lng": 135.768144
+      }
+    ],
+    "lat": 35.011575,
+    "lng": 135.768144
+  },
+  {
+    "name": "玉屋珈琲店",
+    "url": "https://tamaya-coffee.stores.jp/",
+    "instagram_url": null,
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "京都府京都市中京区堺町通蛸薬師下ル菊屋町520",
+    "prefecture": "京都府",
+    "hours": null,
+    "map_query": "玉屋珈琲店 京都府京都市中京区堺町通蛸薬師下ル菊屋町520",
+    "nearest_station": {
+      "name": "京都市役所前",
+      "lines": [
+        "京都市東西線"
+      ],
+      "distance_m": 90,
+      "walk_min": 1
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://tamaya-coffee.stores.jp/)の商品ページをブラウザfetch()で2026-10-05に確認。単品は100g、ブレンドは200gの価格を採用(同一銘柄の200gは別商品のため除外)。紅茶・砂糖・器具・焼菓子は除外。公式http://www.tamaya-coffee.co.jp/に昭和26年創業・注文分だけ焙煎と記載。",
+    "last_verified_at": "2026-10-03",
+    "locations": [
+      {
+        "label": null,
+        "address": "京都府京都市中京区堺町通蛸薬師下ル菊屋町520",
+        "prefecture": "京都府",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "玉屋珈琲店 京都府京都市中京区堺町通蛸薬師下ル菊屋町520",
+        "lat": 35.011575,
+        "lng": 135.768144
+      }
+    ],
+    "lat": 35.011575,
+    "lng": 135.768144
   }
 ]
