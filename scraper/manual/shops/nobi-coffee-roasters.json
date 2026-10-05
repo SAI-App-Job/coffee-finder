@@ -1,0 +1,105 @@
+{
+  "shop": {
+    "name": "NOBI COFFEE ROASTERS",
+    "url": "https://nobicoffee.stores.jp/",
+    "address": "愛知県刈谷市大正町3-121",
+    "prefecture": "愛知県",
+    "source_note": "STORES.jpの公式ショップ(https://nobicoffee.stores.jp/)の商品ページをブラウザfetch()で2026-10-05に確認。100gの価格を採用(同一銘柄の200gは別商品のため除外)。自家焙煎は紹介記事(2022年4月開業、扱う豆はすべて自家焙煎)で確認。コーヒーバッグ・フリーズドライ・トートは除外。",
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "id": "nobi-coffee-roasters",
+    "instagram_url": null,
+    "google_maps_query": "NOBI COFFEE ROASTERS 愛知県刈谷市大正町3-121",
+    "tel": null,
+    "hours": null,
+    "shop_type": "single_location",
+    "data_source": "manual",
+    "last_verified_at": "2026-10-03",
+    "lat": 34.984504,
+    "lng": 136.99592,
+    "nearest_station": {
+      "name": "刈谷市",
+      "lines": [
+        "名鉄三河線"
+      ],
+      "distance_m": 190,
+      "walk_min": 2
+    }
+  },
+  "products": [
+    {
+      "raw_name": "KENYA kagumoini",
+      "category": "ストレート",
+      "originCountry": "ケニア",
+      "processingMethod": null,
+      "roast": null,
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1350,
+      "weightG": 100,
+      "stockStatus": "販売中",
+      "productUrl": "https://nobicoffee.stores.jp/items/694a30153ee3fd47e03d6eb0",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "ETHIOPIA GUJI G-1",
+      "category": "ストレート",
+      "originCountry": "エチオピア",
+      "processingMethod": null,
+      "roast": null,
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1300,
+      "weightG": 100,
+      "stockStatus": "販売中",
+      "productUrl": "https://nobicoffee.stores.jp/items/694a2479fc56600e89f0443f",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "HONDURAS Classic Marcala",
+      "category": "ストレート",
+      "originCountry": "ホンジュラス",
+      "processingMethod": null,
+      "roast": null,
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1100,
+      "weightG": 100,
+      "stockStatus": "販売中",
+      "productUrl": "https://nobicoffee.stores.jp/items/67e7436ce5f041ee97a0f28b",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "MEXICO DECAF",
+      "category": "ストレート",
+      "originCountry": "メキシコ",
+      "processingMethod": null,
+      "roast": null,
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1100,
+      "weightG": 100,
+      "stockStatus": "販売中",
+      "productUrl": "https://nobicoffee.stores.jp/items/67e73f0fd8e56a3b99d45953",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "PERU Ines Quispe",
+      "category": "ストレート",
+      "originCountry": "ペルー",
+      "processingMethod": null,
+      "roast": null,
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 2300,
+      "weightG": 100,
+      "stockStatus": "販売中",
+      "productUrl": "https://nobicoffee.stores.jp/items/649557fb2d3496002d41528d",
+      "data_source": "manual"
+    }
+  ]
+}

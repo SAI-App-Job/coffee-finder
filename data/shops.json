@@ -19899,5 +19899,1000 @@
     ],
     "lat": 34.740328,
     "lng": 135.343528
+  },
+  {
+    "name": "0566珈琲製作所",
+    "url": "https://0566cafe.com/",
+    "platform": "Shopify",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認(Shopify標準構成)",
+    "address": "愛知県知立市昭和1丁目12-4",
+    "prefecture": "愛知県",
+    "hours": null,
+    "map_query": "0566珈琲製作所",
+    "nearest_station": {
+      "name": "牛田",
+      "lines": [
+        "名鉄名古屋本線"
+      ],
+      "distance_m": 370,
+      "walk_min": 5
+    },
+    "last_scraped_at": "2026-10-05T01:58:43.396459+00:00",
+    "lat": 34.996812,
+    "lng": 137.063578
+  },
+  {
+    "name": "BUNT COFFEE",
+    "url": "https://buntcoffee.thebase.in/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "愛知県安城市福釜町釜ヶ渕2-1",
+    "prefecture": "愛知県",
+    "hours": null,
+    "map_query": "BUNT COFFEE",
+    "nearest_station": {
+      "name": "南安城",
+      "lines": [
+        "名鉄西尾線"
+      ],
+      "distance_m": 1610,
+      "walk_min": 20
+    },
+    "last_scraped_at": "2026-10-05T01:58:43.396459+00:00",
+    "lat": 34.947764,
+    "lng": 137.075563
+  },
+  {
+    "name": "CAFE LILLIAN",
+    "url": "https://cafelillian.theshop.jp/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "愛知県名古屋市緑区鶴が沢1-2409-1",
+    "prefecture": "愛知県",
+    "hours": null,
+    "map_query": "CAFE LILLIAN",
+    "nearest_station": {
+      "name": "徳重",
+      "lines": [
+        "名古屋市桜通線"
+      ],
+      "distance_m": 770,
+      "walk_min": 10
+    },
+    "last_scraped_at": "2026-10-05T01:58:43.396459+00:00",
+    "lat": 35.093598,
+    "lng": 137.006549
+  },
+  {
+    "name": "Coffee Roasters BROWNIE",
+    "url": "https://crbrownie.base.shop/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "愛知県名古屋市守山区吉根1丁目1315",
+    "prefecture": "愛知県",
+    "hours": null,
+    "map_query": "Coffee Roasters BROWNIE",
+    "nearest_station": {
+      "name": "春日井",
+      "lines": [
+        "JR中央本線"
+      ],
+      "distance_m": 1550,
+      "walk_min": 19
+    },
+    "last_scraped_at": "2026-10-05T01:58:43.396459+00:00",
+    "lat": 35.234095,
+    "lng": 136.998244
+  },
+  {
+    "name": "ダイワ珈琲",
+    "url": "https://www.daiwacoffee.jp/",
+    "platform": "おちゃのこネット",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認(Ocnk標準構成)",
+    "address": "愛知県名古屋市北区天道町5-4-1",
+    "prefecture": "愛知県",
+    "hours": null,
+    "map_query": "ダイワ珈琲",
+    "nearest_station": {
+      "name": "上飯田",
+      "lines": [
+        "名鉄小牧線",
+        "名古屋市上飯田線"
+      ],
+      "distance_m": 1210,
+      "walk_min": 15
+    },
+    "last_scraped_at": "2026-10-05T01:58:43.396459+00:00",
+    "lat": 35.207753,
+    "lng": 136.9172
+  },
+  {
+    "name": "ダフネコーヒー",
+    "url": "https://daphne.shop-pro.jp/",
+    "platform": "カラーミーショップ",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認(カラーミー標準構成)",
+    "address": "愛知県名古屋市中村区烏森7丁目260-1",
+    "prefecture": "愛知県",
+    "hours": null,
+    "map_query": "ダフネコーヒー",
+    "nearest_station": {
+      "name": "烏森",
+      "lines": [
+        "近鉄名古屋線"
+      ],
+      "distance_m": 10,
+      "walk_min": 1
+    },
+    "last_scraped_at": "2026-10-05T01:58:43.396459+00:00",
+    "lat": 35.152985,
+    "lng": 136.863883
+  },
+  {
+    "name": "GOLPIE COFFEE",
+    "url": "https://store.golpiecoffee.jp/",
+    "platform": "Shopify",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認(Shopify標準構成)",
+    "address": "愛知県名古屋市昭和区駒方町2-4-2",
+    "prefecture": "愛知県",
+    "hours": null,
+    "map_query": "GOLPIE COFFEE",
+    "nearest_station": {
+      "name": "いりなか",
+      "lines": [
+        "名古屋市鶴舞線"
+      ],
+      "distance_m": 340,
+      "walk_min": 4
+    },
+    "last_scraped_at": "2026-10-05T01:58:43.396459+00:00",
+    "lat": 35.140249,
+    "lng": 136.954853
+  },
+  {
+    "name": "ほしの珈琲",
+    "url": "https://hoshino-coffee.shop-pro.jp/",
+    "platform": "カラーミーショップ",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認(カラーミー標準構成)",
+    "address": "愛知県豊橋市柱六番町116",
+    "prefecture": "愛知県",
+    "hours": null,
+    "map_query": "ほしの珈琲",
+    "nearest_station": {
+      "name": "愛知大学前",
+      "lines": [
+        "豊橋鉄道渥美線"
+      ],
+      "distance_m": 1090,
+      "walk_min": 14
+    },
+    "last_scraped_at": "2026-10-05T01:58:43.396459+00:00",
+    "lat": 34.746497,
+    "lng": 137.375327
+  },
+  {
+    "name": "伊藤珈琲豆販売所",
+    "url": "https://itoucoffee.shopselect.net/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "愛知県丹羽郡大口町余野5-48",
+    "prefecture": "愛知県",
+    "hours": null,
+    "map_query": "伊藤珈琲豆販売所",
+    "nearest_station": {
+      "name": "柏森",
+      "lines": [
+        "名鉄犬山線"
+      ],
+      "distance_m": 700,
+      "walk_min": 9
+    },
+    "last_scraped_at": "2026-10-05T01:58:43.396459+00:00",
+    "lat": 35.340119,
+    "lng": 136.905305
+  },
+  {
+    "name": "自家焙煎コバレレコーヒー",
+    "url": "https://kobalele.thebase.in/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "愛知県知多郡美浜町奥田石畑204-1",
+    "prefecture": "愛知県",
+    "hours": null,
+    "map_query": "自家焙煎コバレレコーヒー",
+    "nearest_station": {
+      "name": "河和",
+      "lines": [
+        "名鉄河和線"
+      ],
+      "distance_m": 410,
+      "walk_min": 5
+    },
+    "last_scraped_at": "2026-10-05T01:58:43.396459+00:00",
+    "lat": 34.778769,
+    "lng": 136.908246
+  },
+  {
+    "name": "茶房・伽羅",
+    "url": "https://www.coffee-kyara.com/",
+    "platform": "ショップサーブ",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認(ショップサーブ標準構成)",
+    "address": "愛知県名古屋市西区大野木4丁目20",
+    "prefecture": "愛知県",
+    "hours": null,
+    "map_query": "茶房・伽羅",
+    "nearest_station": {
+      "name": "比良",
+      "lines": [
+        "JR東海交通事業城北線"
+      ],
+      "distance_m": 830,
+      "walk_min": 10
+    },
+    "last_scraped_at": "2026-10-05T01:58:43.396459+00:00",
+    "lat": 35.221442,
+    "lng": 136.89905
+  },
+  {
+    "name": "LUONTOCOFFEE",
+    "url": "https://luontocoffee.com/",
+    "platform": "WordPress + WooCommerce",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認",
+    "address": "愛知県岡崎市大和町字塗御堂40-1",
+    "prefecture": "愛知県",
+    "hours": null,
+    "map_query": "LUONTOCOFFEE",
+    "nearest_station": {
+      "name": "東岡崎",
+      "lines": [
+        "名鉄名古屋本線"
+      ],
+      "distance_m": 600,
+      "walk_min": 8
+    },
+    "last_scraped_at": "2026-10-05T01:58:43.396459+00:00",
+    "lat": 34.954878,
+    "lng": 137.172823
+  },
+  {
+    "name": "自家焙煎珈琲 豆楽",
+    "url": "https://mameraku.jp/",
+    "platform": "Shopify",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認(Shopify標準構成)",
+    "address": "愛知県日進市浅田平子2丁目187",
+    "prefecture": "愛知県",
+    "hours": null,
+    "map_query": "自家焙煎珈琲 豆楽",
+    "nearest_station": {
+      "name": "赤池",
+      "lines": [
+        "名鉄豊田線",
+        "名古屋市鶴舞線"
+      ],
+      "distance_m": 1230,
+      "walk_min": 15
+    },
+    "last_scraped_at": "2026-10-05T01:58:43.396459+00:00",
+    "lat": 35.11831,
+    "lng": 137.031047
+  },
+  {
+    "name": "MAQUETTE COFFEE SHOP",
+    "url": "http://store-maquettecoffee.com/",
+    "platform": "カラーミーショップ",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認(カラーミー標準構成)",
+    "address": "愛知県豊田市上野町3-26-1",
+    "prefecture": "愛知県",
+    "hours": null,
+    "map_query": "MAQUETTE COFFEE SHOP",
+    "nearest_station": {
+      "name": "駅前",
+      "lines": [
+        "豊橋鉄道東田本線"
+      ],
+      "distance_m": 640,
+      "walk_min": 8
+    },
+    "last_scraped_at": "2026-10-05T01:58:43.396459+00:00",
+    "lat": 34.769667,
+    "lng": 137.383179
+  },
+  {
+    "name": "松本珈琲工房",
+    "url": "https://matsumoto-coffee.com/",
+    "platform": "WordPress(注文フォームのみ・カートなし)",
+    "shop_type": "single_location",
+    "robots_txt_status": "確認済み(Disallow: /wp-admin/ のみ。商品ページは対象外)",
+    "address": "愛知県長久手市西浦901番地",
+    "prefecture": "愛知県",
+    "hours": null,
+    "map_query": "松本珈琲工房",
+    "nearest_station": {
+      "name": "はなみずき通",
+      "lines": [
+        "リニモ"
+      ],
+      "distance_m": 300,
+      "walk_min": 4
+    },
+    "last_scraped_at": "2026-10-05T01:58:43.396459+00:00",
+    "lat": 35.178017,
+    "lng": 137.038649
+  },
+  {
+    "name": "note coffee roasters",
+    "url": "https://www.kakuou-note.com/",
+    "platform": "Shopify",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認(Shopify標準構成)",
+    "address": "愛知県名古屋市千種区楠元町2丁目32-1",
+    "prefecture": "愛知県",
+    "hours": null,
+    "map_query": "note coffee roasters",
+    "nearest_station": {
+      "name": "本山",
+      "lines": [
+        "名古屋市名城線",
+        "名古屋市東山線"
+      ],
+      "distance_m": 310,
+      "walk_min": 4
+    },
+    "last_scraped_at": "2026-10-05T01:58:43.396459+00:00",
+    "lat": 35.165838,
+    "lng": 136.960989
+  },
+  {
+    "name": "OISEAU COFFEE",
+    "url": "https://oiseaucoffee.theshop.jp/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "愛知県知多市新舞子字大口204-9",
+    "prefecture": "愛知県",
+    "hours": null,
+    "map_query": "OISEAU COFFEE",
+    "nearest_station": {
+      "name": "新舞子",
+      "lines": [
+        "名鉄常滑線"
+      ],
+      "distance_m": 380,
+      "walk_min": 5
+    },
+    "last_scraped_at": "2026-10-05T01:58:43.396459+00:00",
+    "lat": 34.949044,
+    "lng": 136.832733
+  },
+  {
+    "name": "ペギー珈琲店",
+    "url": "https://peggycoffee.cart.fc2.com/",
+    "platform": "FC2ショッピングカート(cart.fc2.com)",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認",
+    "address": "愛知県名古屋市千種区丘上町1丁目3",
+    "prefecture": "愛知県",
+    "hours": null,
+    "map_query": "ペギー珈琲店",
+    "nearest_station": {
+      "name": "覚王山",
+      "lines": [
+        "名古屋市東山線"
+      ],
+      "distance_m": 210,
+      "walk_min": 3
+    },
+    "last_scraped_at": "2026-10-05T01:58:43.396459+00:00",
+    "lat": 35.165361,
+    "lng": 136.95195
+  },
+  {
+    "name": "R ART OF COFFEE",
+    "url": "https://rartofcoffee.theshop.jp/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "愛知県名古屋市千種区鏡池通2-13-1",
+    "prefecture": "愛知県",
+    "hours": null,
+    "map_query": "R ART OF COFFEE",
+    "nearest_station": {
+      "name": "本山",
+      "lines": [
+        "名古屋市東山線",
+        "名古屋市名城線"
+      ],
+      "distance_m": 630,
+      "walk_min": 8
+    },
+    "last_scraped_at": "2026-10-05T01:58:43.396459+00:00",
+    "lat": 35.159791,
+    "lng": 136.958702
+  },
+  {
+    "name": "COFFEE ROASTERY 101",
+    "url": "https://shop.roastery101.com/",
+    "platform": "Shopify",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認(Shopify標準構成)",
+    "address": "愛知県一宮市玉野字大崎10-1",
+    "prefecture": "愛知県",
+    "hours": null,
+    "map_query": "COFFEE ROASTERY 101",
+    "nearest_station": {
+      "name": "尾張一宮",
+      "lines": [
+        "JR東海道本線"
+      ],
+      "distance_m": 920,
+      "walk_min": 12
+    },
+    "last_scraped_at": "2026-10-05T01:58:43.396459+00:00",
+    "lat": 35.304878,
+    "lng": 136.806915
+  },
+  {
+    "name": "自家焙煎珈琲ロンドベル",
+    "url": "https://rondovel.cart.fc2.com/",
+    "platform": "FC2ショッピングカート(cart.fc2.com)",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認",
+    "address": "愛知県名古屋市西区万代町2-55-2 ハートイン万代1A",
+    "prefecture": "愛知県",
+    "hours": null,
+    "map_query": "自家焙煎珈琲ロンドベル",
+    "nearest_station": {
+      "name": "名古屋城",
+      "lines": [
+        "名古屋市名城線"
+      ],
+      "distance_m": 640,
+      "walk_min": 8
+    },
+    "last_scraped_at": "2026-10-05T01:58:43.396459+00:00",
+    "lat": 35.185105,
+    "lng": 136.899844
+  },
+  {
+    "name": "setocoffee(瀬戸珈琲)",
+    "url": "https://setocoffee.thebase.in/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "愛知県瀬戸市東松山町155-79",
+    "prefecture": "愛知県",
+    "hours": null,
+    "map_query": "setocoffee(瀬戸珈琲)",
+    "nearest_station": {
+      "name": "瀬戸市役所前",
+      "lines": [
+        "名鉄瀬戸線"
+      ],
+      "distance_m": 570,
+      "walk_min": 7
+    },
+    "last_scraped_at": "2026-10-05T01:58:43.396459+00:00",
+    "lat": 35.229969,
+    "lng": 137.082963
+  },
+  {
+    "name": "清水珈琲",
+    "url": "https://shimizucoffee.ocnk.net/",
+    "platform": "おちゃのこネット",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認(Ocnk標準構成)",
+    "address": "愛知県名古屋市北区大曽根2-3-5 サン大曽根1F",
+    "prefecture": "愛知県",
+    "hours": null,
+    "map_query": "清水珈琲",
+    "nearest_station": {
+      "name": "大曽根",
+      "lines": [
+        "名古屋ガイドウェイバス",
+        "名古屋市名城線",
+        "名鉄瀬戸線",
+        "JR中央本線"
+      ],
+      "distance_m": 130,
+      "walk_min": 2
+    },
+    "last_scraped_at": "2026-10-05T01:58:43.396459+00:00",
+    "lat": 35.192857,
+    "lng": 136.935924
+  },
+  {
+    "name": "喫茶スーズ焙煎所",
+    "url": "https://suus.theshop.jp/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "愛知県名古屋市南区桜台1-22-5",
+    "prefecture": "愛知県",
+    "hours": null,
+    "map_query": "喫茶スーズ焙煎所",
+    "nearest_station": {
+      "name": "鶴里",
+      "lines": [
+        "名古屋市桜通線"
+      ],
+      "distance_m": 430,
+      "walk_min": 5
+    },
+    "last_scraped_at": "2026-10-05T01:58:43.396459+00:00",
+    "lat": 35.103311,
+    "lng": 136.939742
+  },
+  {
+    "name": "Tao Coffee",
+    "url": "https://shop.tao-coffee.jp/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "愛知県名古屋市天白区弥生が岡209",
+    "prefecture": "愛知県",
+    "hours": null,
+    "map_query": "Tao Coffee",
+    "nearest_station": {
+      "name": "八事",
+      "lines": [
+        "名古屋市名城線",
+        "名古屋市鶴舞線"
+      ],
+      "distance_m": 390,
+      "walk_min": 5
+    },
+    "last_scraped_at": "2026-10-05T01:58:43.396459+00:00",
+    "lat": 35.13353,
+    "lng": 136.962989
+  },
+  {
+    "name": "旨かコーヒーカンパネラ",
+    "url": "https://www.umapanera.com/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "愛知県安城市里町高根134",
+    "prefecture": "愛知県",
+    "hours": null,
+    "map_query": "旨かコーヒーカンパネラ",
+    "nearest_station": {
+      "name": "新安城",
+      "lines": [
+        "名鉄名古屋本線",
+        "名鉄西尾線"
+      ],
+      "distance_m": 1420,
+      "walk_min": 18
+    },
+    "last_scraped_at": "2026-10-05T01:58:43.396459+00:00",
+    "lat": 34.988841,
+    "lng": 137.100783
+  },
+  {
+    "name": "Voyage coffee & sundries",
+    "url": "https://www.voyage-coffee.net/",
+    "platform": "カラーミーショップ",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認(カラーミー標準構成)",
+    "address": "愛知県半田市栄町4-79",
+    "prefecture": "愛知県",
+    "hours": null,
+    "map_query": "Voyage coffee & sundries",
+    "nearest_station": {
+      "name": "半田",
+      "lines": [
+        "JR武豊線"
+      ],
+      "distance_m": 580,
+      "walk_min": 7
+    },
+    "last_scraped_at": "2026-10-05T01:58:43.396459+00:00",
+    "lat": 34.891756,
+    "lng": 136.936109
+  },
+  {
+    "name": "ヤヒトコーヒー",
+    "url": "https://yahitocoffee.com/",
+    "platform": "Jimdo Shop",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認",
+    "address": "愛知県豊橋市西小鷹野4-6-2",
+    "prefecture": "愛知県",
+    "hours": null,
+    "map_query": "ヤヒトコーヒー",
+    "nearest_station": {
+      "name": "井原",
+      "lines": [
+        "豊橋鉄道東田本線"
+      ],
+      "distance_m": 870,
+      "walk_min": 11
+    },
+    "last_scraped_at": "2026-10-05T01:58:43.396459+00:00",
+    "lat": 34.771776,
+    "lng": 137.424309
+  },
+  {
+    "name": "尾州暁珈琲焙煎所",
+    "url": "https://bishu-akatsukicoffee.stores.jp/",
+    "instagram_url": null,
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "愛知県稲沢市小池1丁目6-13",
+    "prefecture": "愛知県",
+    "hours": null,
+    "map_query": "尾州暁珈琲焙煎所 愛知県稲沢市小池1丁目6-13",
+    "nearest_station": {
+      "name": "稲沢",
+      "lines": [
+        "JR東海道本線"
+      ],
+      "distance_m": 670,
+      "walk_min": 8
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://bishu-akatsukicoffee.stores.jp/)の商品ページをブラウザfetch()で2026-10-05に確認。100gの価格を採用。店名は「珈琲焙煎所」で焙煎度を4段階表記して販売(自家焙煎の一次情報は店名と商品表記)。カフェ開業スクールは除外。",
+    "last_verified_at": "2026-10-03",
+    "locations": [
+      {
+        "label": null,
+        "address": "愛知県稲沢市小池1丁目6-13",
+        "prefecture": "愛知県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "尾州暁珈琲焙煎所 愛知県稲沢市小池1丁目6-13",
+        "lat": 35.25346,
+        "lng": 136.813614
+      }
+    ],
+    "lat": 35.25346,
+    "lng": 136.813614
+  },
+  {
+    "name": "自家焙煎コーヒー豆店 チャレンジ",
+    "url": "https://cafechallenge.blog.fc2.com/",
+    "instagram_url": null,
+    "platform": "FC2ブログ(静的HTML・手動入力)",
+    "shop_type": "single_location",
+    "address": "愛知県名古屋市北区瑠璃光町3-4-3 大鹿ビル1F",
+    "prefecture": "愛知県",
+    "hours": null,
+    "map_query": "自家焙煎コーヒー豆店 チャレンジ 愛知県名古屋市北区瑠璃光町3-4-3 大鹿ビル1F",
+    "nearest_station": {
+      "name": "志賀本通",
+      "lines": [
+        "名古屋市名城線"
+      ],
+      "distance_m": 360,
+      "walk_min": 5
+    },
+    "data_source": "manual",
+    "source_note": "FC2ブログ(https://cafechallenge.blog.fc2.com/)の「珈琲豆リスト」記事(blog-entry-4.html)を2026-10-05に確認。価格表ページの更新日は2025/01/01で、約21か月前の情報。各100g価格(ブラジルブレンドのみ200g 1,260円の併記あり)を採用。ハワイコナ系・ブルーマウンテン系・ホンジュラス・バリは価格欄が空白のため price=null(時価・入荷時対応と思われるが不明)。ボトルコーヒー(リキッド)は除外。トップに「店舗ではスペシャリティグレードを中深煎りを基本に提供」との記載あり。。価格欄が空白の6品(ハワイコナ系・ブルーマウンテン系・ホンジュラス・バリ)は価格不明のため除外",
+    "last_verified_at": "2026-10-05",
+    "locations": [
+      {
+        "label": null,
+        "address": "愛知県名古屋市北区瑠璃光町3-4-3 大鹿ビル1F",
+        "prefecture": "愛知県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "自家焙煎コーヒー豆店 チャレンジ 愛知県名古屋市北区瑠璃光町3-4-3 大鹿ビル1F",
+        "lat": 35.198276,
+        "lng": 136.92427
+      }
+    ],
+    "lat": 35.198276,
+    "lng": 136.92427
+  },
+  {
+    "name": "樹の香(自家焙煎珈琲豆専門店)",
+    "url": "https://konokacoffee.com/",
+    "instagram_url": null,
+    "platform": "Yahoo!ショッピング(手動入力)",
+    "shop_type": "single_location",
+    "address": "愛知県岡崎市東大友町郷東19-1",
+    "prefecture": "愛知県",
+    "hours": null,
+    "map_query": "樹の香(自家焙煎珈琲豆専門店) 愛知県岡崎市東大友町郷東19-1",
+    "nearest_station": {
+      "name": "東岡崎",
+      "lines": [
+        "名鉄名古屋本線"
+      ],
+      "distance_m": 600,
+      "walk_min": 8
+    },
+    "data_source": "manual",
+    "source_note": "公式サイト(https://konokacoffee.com/)のリンクから特定したYahoo!ショッピング店(https://store.shopping.yahoo.co.jp/konokacafe/)の商品ページを2026-10-05に確認(価格・在庫は商品ページの表示値、税込)。100gの価格を採用。住所は公式サイトの店舗情報ページで確認。在庫あり商品11点と、定番の在庫切れ4点(ネパール・ケニア2種・カロシ)を収録。数量限定・完売済みの単発ストレート豆(約20点)、ギフトセット・カップオン・水出しパック・リキッド・器具・はちみつは除外。モカは産地表記がなくoriginCountryはnull。",
+    "last_verified_at": "2026-10-05",
+    "locations": [
+      {
+        "label": null,
+        "address": "愛知県岡崎市東大友町郷東19-1",
+        "prefecture": "愛知県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "樹の香(自家焙煎珈琲豆専門店) 愛知県岡崎市東大友町郷東19-1",
+        "lat": 34.954878,
+        "lng": 137.172823
+      }
+    ],
+    "lat": 34.954878,
+    "lng": 137.172823
+  },
+  {
+    "name": "リンク珈琲",
+    "url": "https://linkcoffee.shop/",
+    "instagram_url": null,
+    "platform": "Yahoo!ショッピング(手動入力)",
+    "shop_type": "single_location",
+    "address": "愛知県豊川市八幡町鐘鋳場110",
+    "prefecture": "愛知県",
+    "hours": null,
+    "map_query": "リンク珈琲 愛知県豊川市八幡町鐘鋳場110",
+    "nearest_station": {
+      "name": "八幡",
+      "lines": [
+        "名鉄豊川線"
+      ],
+      "distance_m": 250,
+      "walk_min": 3
+    },
+    "data_source": "manual",
+    "source_note": "公式サイト(https://linkcoffee.shop/)のリンクから特定したYahoo!ショッピング店(https://store.shopping.yahoo.co.jp/link-coffee/)の商品ページを2026-10-05に確認(価格・在庫は商品ページの表示値、税込)。全商品が200g単位の販売(100gの設定なし)のため200gの価格を採用。ゴールデンブレンドは期間限定(9・10月)で200g 1,710円(お試しセットの1,300円ではない)。「ストレートplus」「PLB-001」等はベース豆に他産地を配合するためブレンド扱い。在庫なしは定番ストレート(パナマ・ネパール)・plus2種・季節ブレンド7種のみ収録。1kg商品・お試し/飲み比べセット・ドリップバッグ・リキッド・過去のストブレ限定企画(在庫なし12点)は除外。",
+    "last_verified_at": "2026-10-05",
+    "locations": [
+      {
+        "label": null,
+        "address": "愛知県豊川市八幡町鐘鋳場110",
+        "prefecture": "愛知県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "リンク珈琲 愛知県豊川市八幡町鐘鋳場110",
+        "lat": 34.830932,
+        "lng": 137.350384
+      }
+    ],
+    "lat": 34.830932,
+    "lng": 137.350384
+  },
+  {
+    "name": "珈琲豆専門店 豆蔵(名東)",
+    "url": "http://ikazo.main.jp/mamezo/",
+    "instagram_url": null,
+    "platform": "静的HTML(店頭・手動入力)",
+    "shop_type": "single_location",
+    "address": "愛知県名古屋市名東区八前2-1609",
+    "prefecture": "愛知県",
+    "hours": null,
+    "map_query": "珈琲豆専門店 豆蔵(名東) 愛知県名古屋市名東区八前2-1609",
+    "nearest_station": {
+      "name": "名古屋城",
+      "lines": [
+        "名古屋市名城線"
+      ],
+      "distance_m": 640,
+      "walk_min": 8
+    },
+    "data_source": "manual",
+    "source_note": "公式サイト(http://ikazo.main.jp/mamezo/)の商品紹介ページ(menu.html)を2026-10-05に確認。表示は100g税込価格。通販は電話・FAX・メール受付で、ページ内の外部ショップリンク(mamezou.buyshop.jp)は429で確認不可。ページに更新日の表記なし(フッターは©2015)。「バターフレーバー(冬季限定)」はタンザニア深煎りの季節商品だが、在庫表示がないため販売中として収録。岡崎市の「自家焙煎 豆蔵」とは別店。リキッドコーヒー・カップオンコーヒー・水出しパックは除外。",
+    "last_verified_at": "2026-10-05",
+    "locations": [
+      {
+        "label": null,
+        "address": "愛知県名古屋市名東区八前2-1609",
+        "prefecture": "愛知県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "珈琲豆専門店 豆蔵(名東) 愛知県名古屋市名東区八前2-1609",
+        "lat": 35.185105,
+        "lng": 136.899844
+      }
+    ],
+    "lat": 35.185105,
+    "lng": 136.899844
+  },
+  {
+    "name": "自家焙煎 豆蔵(岡崎)",
+    "url": "https://mamezocoffee.com/",
+    "instagram_url": null,
+    "platform": "静的HTML(店頭・手動入力)",
+    "shop_type": "single_location",
+    "address": "愛知県岡崎市細川町字長根38-4",
+    "prefecture": "愛知県",
+    "hours": null,
+    "map_query": "自家焙煎 豆蔵(岡崎) 愛知県岡崎市細川町字長根38-4",
+    "nearest_station": {
+      "name": "東岡崎",
+      "lines": [
+        "名鉄名古屋本線"
+      ],
+      "distance_m": 600,
+      "walk_min": 8
+    },
+    "data_source": "manual",
+    "source_note": "公式サイト(https://mamezocoffee.com/)の「商品購入」ページ(item.html)の商品表を2026-10-05に確認。100g/200g/500gの3段階価格のうち100gを採用。価格表PDF(price.pdf)は銘柄名が画像化されテキスト抽出できなかったが、PDF内の価格(100g 800/800/850/750/800/800、1,400、800/900/1,000/900/1,000/2,100)はitem.htmlの表と一致することを確認。トップページに「2026/9/12 珈琲豆価格表」の更新表示あり。名古屋市名東区の「豆蔵」とは別店。",
+    "last_verified_at": "2026-10-05",
+    "locations": [
+      {
+        "label": null,
+        "address": "愛知県岡崎市細川町字長根38-4",
+        "prefecture": "愛知県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "自家焙煎 豆蔵(岡崎) 愛知県岡崎市細川町字長根38-4",
+        "lat": 34.954878,
+        "lng": 137.172823
+      }
+    ],
+    "lat": 34.954878,
+    "lng": 137.172823
+  },
+  {
+    "name": "松屋コーヒー本店",
+    "url": "https://matsuya-coffee.stores.jp/",
+    "instagram_url": null,
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "愛知県名古屋市中区大須3-30-59 OSU301ビル1階",
+    "prefecture": "愛知県",
+    "hours": null,
+    "map_query": "松屋コーヒー本店 愛知県名古屋市中区大須3-30-59 OSU301ビル1階",
+    "nearest_station": {
+      "name": "大須観音",
+      "lines": [
+        "名古屋市鶴舞線"
+      ],
+      "distance_m": 310,
+      "walk_min": 4
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://matsuya-coffee.stores.jp/)の商品ページをブラウザfetch()で2026-10-05に確認。各銘柄の最小の小売サイズ(200g、一部300g・500g)の価格を採用。自家焙煎は検索情報(公式ホームページ matsuya-coffee.com、大須のCAFE LE PIN併設)による。ドリップ器具(松屋式)・ジェントルタイム・業務用1kg・化粧箱・10gは除外。",
+    "last_verified_at": "2026-10-03",
+    "locations": [
+      {
+        "label": null,
+        "address": "愛知県名古屋市中区大須3-30-59 OSU301ビル1階",
+        "prefecture": "愛知県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "松屋コーヒー本店 愛知県名古屋市中区大須3-30-59 OSU301ビル1階",
+        "lat": 35.159359,
+        "lng": 136.901099
+      }
+    ],
+    "lat": 35.159359,
+    "lng": 136.901099
+  },
+  {
+    "name": "ミスズコーヒー商会",
+    "url": "https://www.misuzu-coffee.com/",
+    "instagram_url": null,
+    "platform": "静的HTML(店頭・手動入力)",
+    "shop_type": "single_location",
+    "address": "愛知県名古屋市中村区日ノ宮町2-115-2",
+    "prefecture": "愛知県",
+    "hours": null,
+    "map_query": "ミスズコーヒー商会 愛知県名古屋市中村区日ノ宮町2-115-2",
+    "nearest_station": {
+      "name": "岩塚",
+      "lines": [
+        "名古屋市東山線"
+      ],
+      "distance_m": 690,
+      "walk_min": 9
+    },
+    "data_source": "manual",
+    "source_note": "公式サイト(Wix, https://www.misuzu-coffee.com/)の「コーヒー豆」「ブレンド」メニューページを2026-10-05に確認。1947年創業の自家焙煎・卸中心の店で、店頭は100g単位の量り売り。掲載価格は店舗(名古屋市中村区)での100g税込価格を採用(ネット通販は別価格の200g袋のため不採用)。ページに更新日の表記なし。グレートマウンテンは産地表記がなくoriginCountryはnull。ギフト商品ページは受注対応の案内のみで商品なし。",
+    "last_verified_at": "2026-10-05",
+    "locations": [
+      {
+        "label": null,
+        "address": "愛知県名古屋市中村区日ノ宮町2-115-2",
+        "prefecture": "愛知県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "ミスズコーヒー商会 愛知県名古屋市中村区日ノ宮町2-115-2",
+        "lat": 35.160815,
+        "lng": 136.861436
+      }
+    ],
+    "lat": 35.160815,
+    "lng": 136.861436
+  },
+  {
+    "name": "NOBI COFFEE ROASTERS",
+    "url": "https://nobicoffee.stores.jp/",
+    "instagram_url": null,
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "愛知県刈谷市大正町3-121",
+    "prefecture": "愛知県",
+    "hours": null,
+    "map_query": "NOBI COFFEE ROASTERS 愛知県刈谷市大正町3-121",
+    "nearest_station": {
+      "name": "刈谷市",
+      "lines": [
+        "名鉄三河線"
+      ],
+      "distance_m": 190,
+      "walk_min": 2
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://nobicoffee.stores.jp/)の商品ページをブラウザfetch()で2026-10-05に確認。100gの価格を採用(同一銘柄の200gは別商品のため除外)。自家焙煎は紹介記事(2022年4月開業、扱う豆はすべて自家焙煎)で確認。コーヒーバッグ・フリーズドライ・トートは除外。",
+    "last_verified_at": "2026-10-03",
+    "locations": [
+      {
+        "label": null,
+        "address": "愛知県刈谷市大正町3-121",
+        "prefecture": "愛知県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "NOBI COFFEE ROASTERS 愛知県刈谷市大正町3-121",
+        "lat": 34.984504,
+        "lng": 136.99592
+      }
+    ],
+    "lat": 34.984504,
+    "lng": 136.99592
+  },
+  {
+    "name": "takenaka coffee",
+    "url": "https://takenakacoffee.stores.jp/",
+    "instagram_url": null,
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "愛知県海部郡蟹江町学戸3-121 SSマンション101",
+    "prefecture": "愛知県",
+    "hours": null,
+    "map_query": "takenaka coffee 愛知県海部郡蟹江町学戸3-121 SSマンション101",
+    "nearest_station": {
+      "name": "蟹江",
+      "lines": [
+        "JR関西本線"
+      ],
+      "distance_m": 1360,
+      "walk_min": 17
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://takenakacoffee.stores.jp/)の商品ページをブラウザfetch()で2026-10-05に確認。250gの価格を採用(ハワイコナのみ200g・受注焙煎)。珈琲焙煎塾(講座)・コーヒーバッグ・ギフトは除外。",
+    "last_verified_at": "2026-10-03",
+    "locations": [
+      {
+        "label": null,
+        "address": "愛知県海部郡蟹江町学戸3-121 SSマンション101",
+        "prefecture": "愛知県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "takenaka coffee 愛知県海部郡蟹江町学戸3-121 SSマンション101",
+        "lat": 35.136841,
+        "lng": 136.780425
+      }
+    ],
+    "lat": 35.136841,
+    "lng": 136.780425
   }
 ]
