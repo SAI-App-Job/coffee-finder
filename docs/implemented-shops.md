@@ -5,7 +5,7 @@
 `scraper/manual/shops/`配下、それ以外は`scraper/scrape_*.py`で自動取得。
 実装を見送った店舗は`docs/not-implementable-shops.md`を参照。
 
-合計924店舗・16215商品(生成日: 2026-10-05)。
+合計953店舗・16630商品(生成日: 2026-10-05)。
 
 再生成コマンド:
 ```
@@ -1028,20 +1028,49 @@ aggregate_shops.py実行後の`git diff --staged --quiet || git commit`が該当
 
 | 店舗名 | 所在地 | 方式 | 件数 |
 |---|---|---|---|
+| KIRITO COFFEE ROASTERS | うきは市浮羽町山北226-9 | BASE | 4 |
+| いえカフェ | 遠賀郡水巻町吉田南1-10-3 | WordPress | 21 |
 | 焙煎工房まめや福岡総本店 | 嘉麻市上臼井328-1 | Welcart | 16 |
 | ボナフォルス | 久留米市諏訪野町2162 錦芳ビル102号 | EC-CUBE | 19 |
+| TOUKA COFFEE | 久留米市荘島町481-2 2F | BASE | 12 |
 | COFFEE COUNTY Kurume | 久留米市通町102-8 | カラーミー | 26 |
 | SUWANO COFFEE | 久留米市東櫛原町1012-1 ユニバーシティ櫛原1F | BASE | 24 |
+| Petani coffee | 糸島市志摩初2-3-11 | WordPress | 11 |
 | TanaCafe + Coffee Roaster（COFFEE UNIDOS） | 糸島市前原中央3-9-1 | 手動 | 2 |
 | round coffee ITOSHIMA | 糸島市二丈深江2129-12 | Shopify | 7 |
+| 森とコーヒー。 | 糸島市本1357-10 | BASE | 9 |
+| あだち珈琲 | 大川市榎津325-28 | Ocnk | 26 |
 | Vin COFFEE | 大牟田市本町1-1-1 | カラーミー | 49 |
 | 豆香洞コーヒー | 大野城市白木原3-3-1 | カラーミー | 98 |
+| リベルタコーヒー | 中間市中尾1-17-13 | WooCommerce | 6 |
+| 珈琲山口 | 朝倉市秋月673 | BASE(theshop) | 10 |
+| 焚間珈琲 | 朝倉市比良松485-7 | BASE | 13 |
+| かほり | 那珂川市五郎丸2-42-1 | WooCommerce | 20 |
+| トモノウコーヒー | 福岡市城南区鳥飼5-13-11 | BASE | 21 |
 | 珈琲maki | 福岡市城南区別府5-22-1 | BASE | 9 |
+| COZY COFFEE | 福岡市西区橋本1-11-16 | BASE | 16 |
+| 手紙-ふみ coffee | 福岡市西区石丸3丁目13-18 | BASE | 4 |
+| abirucoffee | 福岡市早良区原6-29-26 | BASE | 8 |
 | 茶果 | 福岡市早良区西新5丁目14-44 | Jimdo + 外部カート連携(cart.ec-sites.jp) | 31 |
+| NIYOL COFFEE | 福岡市早良区祖原14-21 | STORES(手動) | 10 |
+| ペガサス珈琲 | 福岡市中央区警固1-3-6 警固フラット205号 | 手動 | 30 |
+| FILTER SUPPLY | 福岡市中央区高砂2-12-33 石井ビル1F | Shopify | 16 |
 | KUROMON COFFEE | 福岡市中央区黒門4-24 | Shopify | 7 |
+| 珈琲美美 | 福岡市中央区赤坂2-6-27 | 手動 | 14 |
+| 黒猫屋珈琲店 | 福岡市中央区大名1-5-5 月光ビル1F | BASE | 13 |
+| フスクコーヒー | 福岡市中央区谷1-14-2 裏六本松ビルヂング2F | カラーミー | 23 |
+| Connect Coffee | 福岡市中央区天神5-6-13 | BASE | 11 |
 | REC COFFEE | 福岡市中央区白金1-1-26 | Shopify | 17 |
+| Cafe MARUGO | 福岡市中央区薬院2-10-23 SUEHIRO BLDG 1F | BASE | 18 |
+| Apartment coffee door | 福岡市中央区六本松4-6-23 | BASE | 5 |
+| 珈琲豆屋 Nanの木 | 福岡市東区若宮4-9-28 | STORES(手動) | 29 |
 | 小山珈琲 | 福岡市南区横手2-16-1 岡村ビル1階 | カラーミー | 17 |
+| FAKE IT COFFEE | 福岡市博多区東比恵4-6-33 | STORES(手動) | 5 |
+| ハニー珈琲 | 福岡市博多区那珂6-1-37 | MakeShop | 15 |
 | 豆の樹 | 福岡市博多区美野島3-12-11 | カラーミー | 21 |
+| sou. | 北九州市戸畑区新川町6-8 | BASE | 8 |
+| ASLAN Coffee Factory | 北九州市小倉南区上葛原1-9-41 キヘイビル102 | Shopify | 24 |
+| 自家焙煎珈琲工房 ロッシュ | 北九州市小倉北区船場町5-7 北村ビル1F | 手動 | 13 |
 | あつみ珈琲 | 北九州市小倉北区片野1-1-10 | BASE | 12 |
 | こやまこおふぃ | 北九州市門司区柳町1-5-25 | BASE(theshop) | 15 |
 

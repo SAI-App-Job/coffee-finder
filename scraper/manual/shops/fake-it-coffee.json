@@ -1,0 +1,105 @@
+{
+  "shop": {
+    "name": "FAKE IT COFFEE",
+    "url": "https://fakeitcoffee.stores.jp/",
+    "address": "福岡県福岡市博多区東比恵4-6-33",
+    "prefecture": "福岡県",
+    "source_note": "STORES.jpの公式ショップ(https://fakeitcoffee.stores.jp/)の商品ページをブラウザfetch()で2026-10-05に確認。150gの価格を採用。公式に「東比恵にある自家焙煎のコーヒー豆屋」。セット・ドリップバッグは除外。",
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "id": "fake-it-coffee",
+    "instagram_url": null,
+    "google_maps_query": "FAKE IT COFFEE 福岡県福岡市博多区東比恵4-6-33",
+    "tel": null,
+    "hours": null,
+    "shop_type": "single_location",
+    "data_source": "manual",
+    "last_verified_at": "2026-10-03",
+    "lat": 33.58983,
+    "lng": 130.431291,
+    "nearest_station": {
+      "name": "東比恵",
+      "lines": [
+        "福岡市空港線"
+      ],
+      "distance_m": 10,
+      "walk_min": 1
+    }
+  },
+  "products": [
+    {
+      "raw_name": "House Blend(深煎り)",
+      "category": "ブレンド",
+      "originCountry": null,
+      "processingMethod": null,
+      "roast": "深煎り",
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1700,
+      "weightG": 150,
+      "stockStatus": "販売中",
+      "productUrl": "https://fakeitcoffee.stores.jp/items/5ffd7eedf0b1082f0e79a18b",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "Haru Suke(ETHIOPIA)",
+      "category": "ストレート",
+      "originCountry": "エチオピア",
+      "processingMethod": null,
+      "roast": null,
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 2200,
+      "weightG": 150,
+      "stockStatus": "販売中",
+      "productUrl": "https://fakeitcoffee.stores.jp/items/6204de98fd2e73054bee25e9",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "Los Juanes(HONDURAS)",
+      "category": "ストレート",
+      "originCountry": "ホンジュラス",
+      "processingMethod": null,
+      "roast": null,
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 2200,
+      "weightG": 150,
+      "stockStatus": "販売中",
+      "productUrl": "https://fakeitcoffee.stores.jp/items/62a4a30641e8c04ed2c4bead",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "Sidamo Decaf(ETHIOPIA)",
+      "category": "ストレート",
+      "originCountry": "エチオピア",
+      "processingMethod": null,
+      "roast": null,
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 2200,
+      "weightG": 150,
+      "stockStatus": "販売中",
+      "productUrl": "https://fakeitcoffee.stores.jp/items/62a4a56bd085ee5dfcc24337",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "Gichathaini AB(KENYA)",
+      "category": "ストレート",
+      "originCountry": "ケニア",
+      "processingMethod": null,
+      "roast": null,
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 2100,
+      "weightG": 150,
+      "stockStatus": "販売中",
+      "productUrl": "https://fakeitcoffee.stores.jp/items/6204df39423f6a0ac9958621",
+      "data_source": "manual"
+    }
+  ]
+}
