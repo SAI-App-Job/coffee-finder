@@ -1,0 +1,106 @@
+{
+  "shop": {
+    "name": "函館十字屋珈琲店",
+    "url": "https://hjyujiya.stores.jp/",
+    "address": "北海道函館市末広町5-18",
+    "prefecture": "北海道",
+    "source_note": "STORES.jpの公式ショップ(https://hjyujiya.stores.jp/)の商品ページをブラウザfetch()で2026-10-05に確認。400g袋のみの販売でその価格を採用。十字屋食料品店の直営で昭和初期から自家焙煎(週2〜3回焙煎、公式の紹介による)。ドリップバッグは除外。",
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "id": "hakodate-jujiya-coffee",
+    "instagram_url": null,
+    "google_maps_query": "函館十字屋珈琲店 北海道函館市末広町5-18",
+    "tel": null,
+    "hours": null,
+    "shop_type": "single_location",
+    "data_source": "manual",
+    "last_verified_at": "2026-10-03",
+    "lat": 41.76496,
+    "lng": 140.716316,
+    "nearest_station": {
+      "name": "十字街",
+      "lines": [
+        "函館市電宝来・谷地頭線",
+        "函館市電本線"
+      ],
+      "distance_m": 210,
+      "walk_min": 3
+    }
+  },
+  "products": [
+    {
+      "raw_name": "JUJIYA MILD BLEND(十字屋マイルドブレンド)",
+      "category": "ブレンド",
+      "originCountry": null,
+      "processingMethod": null,
+      "roast": null,
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 2600,
+      "weightG": 400,
+      "stockStatus": "販売中",
+      "productUrl": "https://hjyujiya.stores.jp/items/588867939821cc1d7f00407c",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "JUJIYA BLEND(十字屋ブレンド)",
+      "category": "ブレンド",
+      "originCountry": null,
+      "processingMethod": null,
+      "roast": null,
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 2600,
+      "weightG": 400,
+      "stockStatus": "販売中",
+      "productUrl": "https://hjyujiya.stores.jp/items/5888669ec3b8df3c4d002144",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "French Roast(フレンチロースト)",
+      "category": "ブレンド",
+      "originCountry": null,
+      "processingMethod": null,
+      "roast": "フレンチロースト",
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 2600,
+      "weightG": 400,
+      "stockStatus": "販売中",
+      "productUrl": "https://hjyujiya.stores.jp/items/5888620900d3312ba100293b",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "Kenya GATHAITHI AA(ケニヤ・ガタイティAA)",
+      "category": "ストレート",
+      "originCountry": "ケニア",
+      "processingMethod": null,
+      "roast": null,
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 3000,
+      "weightG": 400,
+      "stockStatus": "販売中",
+      "productUrl": "https://hjyujiya.stores.jp/items/588860ac100315e21300217f",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "Ethiopia SIDAMO G1 Bona Sedaka Natural(モカ・シダモ・ボナ・セダカ・ナチュラル)",
+      "category": "ストレート",
+      "originCountry": "エチオピア",
+      "processingMethod": "ナチュラル",
+      "roast": null,
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 3400,
+      "weightG": 400,
+      "stockStatus": "販売中",
+      "productUrl": "https://hjyujiya.stores.jp/items/588858f841f8e81c57001d13",
+      "data_source": "manual"
+    }
+  ]
+}

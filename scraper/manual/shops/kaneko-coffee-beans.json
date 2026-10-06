@@ -1,0 +1,120 @@
+{
+  "shop": {
+    "name": "KANEKO COFFEE BEANS",
+    "url": "https://kcbfarm.shop/",
+    "address": "北海道空知郡上富良野町東2線北21号",
+    "platform": "STORES.jp(独自ドメイン、ブラウザfetch()経由で取得)",
+    "prefecture": "北海道",
+    "source_note": "STORES.jpの公式ショップ(https://kcbfarm.shop/)の商品ページをブラウザfetch()で2026-10-05に確認。各商品の最小の焙煎豆サイズの価格を採用。公式に「北海道のほぼ中央にあるロースター」(2店舗)。生豆・焙煎機(コーヒーロースター)・業務用卸・BOXは除外。",
+    "id": "kaneko-coffee-beans",
+    "instagram_url": null,
+    "google_maps_query": "KANEKO COFFEE BEANS 北海道空知郡上富良野町東2線北21号",
+    "tel": null,
+    "hours": null,
+    "shop_type": "single_location",
+    "data_source": "manual",
+    "last_verified_at": "2026-10-03",
+    "lat": 43.437377,
+    "lng": 142.461804,
+    "nearest_station": {
+      "name": "西中",
+      "lines": [
+        "JR富良野線"
+      ],
+      "distance_m": 1830,
+      "walk_min": 23
+    }
+  },
+  "products": [
+    {
+      "raw_name": "Plateeria 草原(秋限定ブレンド)",
+      "category": "ブレンド",
+      "originCountry": null,
+      "processingMethod": null,
+      "roast": "深煎り",
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 780,
+      "weightG": 100,
+      "stockStatus": "販売中",
+      "productUrl": "https://kcbfarm.shop/items/66eb41e885c3371c9c2ce898",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "Old farm blend",
+      "category": "ブレンド",
+      "originCountry": null,
+      "processingMethod": null,
+      "roast": null,
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 780,
+      "weightG": 100,
+      "stockStatus": "販売中",
+      "productUrl": "https://kcbfarm.shop/items/65d52fe8e080d925dc391b7b",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "【焼豆】大雪山ブレンド",
+      "category": "ブレンド",
+      "originCountry": null,
+      "processingMethod": null,
+      "roast": null,
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1480,
+      "weightG": 200,
+      "stockStatus": "販売中",
+      "productUrl": "https://kcbfarm.shop/items/5c3a97252a28621f977fdfd6",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "【焼豆】ファーマーズブレンド",
+      "category": "ブレンド",
+      "originCountry": null,
+      "processingMethod": null,
+      "roast": "シティロースト",
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1480,
+      "weightG": 200,
+      "stockStatus": "一時的に品切れ",
+      "productUrl": "https://kcbfarm.shop/items/5c3e9fee7cd3616041bf5209",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "【焼豆】旭岳ブレンド",
+      "category": "ブレンド",
+      "originCountry": null,
+      "processingMethod": null,
+      "roast": "ミディアムロースト",
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1480,
+      "weightG": 200,
+      "stockStatus": "販売中",
+      "productUrl": "https://kcbfarm.shop/items/5c3ea2fc7cd3616063bf53e9",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "焼き豆 上富良野ブレンド",
+      "category": "ブレンド",
+      "originCountry": null,
+      "processingMethod": null,
+      "roast": null,
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 2960,
+      "weightG": 400,
+      "stockStatus": "販売中",
+      "productUrl": "https://kcbfarm.shop/items/636f9144f519734f35dba4e2",
+      "data_source": "manual"
+    }
+  ]
+}

@@ -8547,3 +8547,26 @@ A群・B群の一部を、スクレイパー27店舗・STORES手動入力7店舗
   京都焙煎屋/Kyoto Roastery(いろは)・鳥の木珈琲・御多福珈琲・コーヒーハウス マキ・あいのうえ珈琲・大洋堂珈琲(店頭のみで価格表なし)・珈琲ヒュッテ・GOOD COFFEE・Walden Woods Kyoto(通販がパスワード保護)ほか。
 
 - 影響: 新規40店舗・661商品を追加(953→993店舗、16630→17291商品)。既存店舗・商品への意図しない変更が無いことをisolation-merge検証で確認済み。全店舗をgeocode-shops.js・add-nearest-station.jsで処理。
+
+## 北海道再調査(2026-10-06)
+
+北海道は既に27店舗が実装済み。新規発掘(サブエージェントによる公式サイト・まとめ記事突き合わせ)と、技術的理由のみで見送り済みだった店舗の
+再検証で、スクレイパー13店舗・手動入力4店舗の計17店舗を実装した。
+
+### 通常スクレイプ(13店舗)
+- **Shopify**: yoshinori coffee(東川町、12。3店舗)・coffee pocket TIME(小樽市、14。デカフェは「デカフェ」を付記)。
+- **BASE系**: COFFEE SANATIC(当別町、17。品切れ7件)・COFFEE STAND 28(札幌市白石区、10。100g)・時計のない喫茶店(札幌市北区、3。100gは3銘柄のみで14g/42g/56gの少量パック7件は除外)・
+  豆工房 小林珈琲店(江別市、11。400g袋)・8A GARAGE COFFEE(小樽市、10。重量不明2件)・COSSETTE COFFEE(登別市、2。住所は/p/00003の店舗ページで確認)。
+- **Ocnk/EC-CUBE/FC2/楽天/Wix**: いわい珈琲(札幌市豊平区、23。Ocnk。税込価格)・ONIYANMA COFFEE(札幌市中央区、8。EC-CUBE 4。特商法の運営会社住所は東区ONIYANMA BASEで、
+  本店住所を採用)・珈屋Lamp(旭川市、13。FC2カート、完全注文焙煎。以前の見送り分)・自家焙煎珈琲 旭川北珈館(旭川市、39。楽天。EUC-JPで取得、品切れ10件。以前の文字化けによる見送り分)・
+  コーヒー豆の店 サンサン(釧路市、23。Wixの価格表を解析。以前の見送り分)。
+
+### 手動入力(4店舗、STORES.jp・ブラウザfetch())
+- みちみち種や(石狩市、15。独自ドメイン。以前見送った「やかん by みちみち種や」と同じ事業者)・宮の森珈琲(札幌市西区、8。以前の見送り分。最小の小売サイズ200〜720g)・
+  函館十字屋珈琲店(函館市、5。400g)・KANEKO COFFEE BEANS(上富良野町、6。独自ドメイン)。
+
+### 見送り・保留
+- B群(要確認・未実装): 音威子府珈琲・YUUKI COFFEE・煎り豆に花(全商品SOLD OUT)・COFFEE ELM・SONIA COFFEE・Cafukuya・BARISTART COFFEE・SKY BLUE COFFEE ROASTERS・
+  CLAXON COFFEE ROASTERS(Jimdoの価格確認)・EZO COFFEE・TAILORED COFFEE・Hoccino Coffee・bokko coffee、ほか公式URL未特定の約15店(蔵人・嘉多山珈琲・小樽珈琲香房など)。
+
+- 影響: 新規17店舗・219商品を追加(993→1010店舗、17291→17510商品)。既存店舗・商品への意図しない変更が無いことをisolation-merge検証で確認済み。全店舗をgeocode-shops.js・add-nearest-station.jsで処理。

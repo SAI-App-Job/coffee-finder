@@ -22629,5 +22629,442 @@
     ],
     "lat": 35.011575,
     "lng": 135.768144
+  },
+  {
+    "name": "8A GARAGE COFFEE",
+    "url": "https://onlineshop.8agaragecoffee.com/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "北海道小樽市銭函3丁目183-35",
+    "prefecture": "北海道",
+    "hours": null,
+    "map_query": "8A GARAGE COFFEE",
+    "nearest_station": {
+      "name": "ほしみ",
+      "lines": [
+        "JR函館本線"
+      ],
+      "distance_m": 920,
+      "walk_min": 12
+    },
+    "last_scraped_at": "2026-10-05T23:58:54.475944+00:00",
+    "lat": 43.138416,
+    "lng": 141.182127
+  },
+  {
+    "name": "coffee pocket TIME",
+    "url": "https://coffeepocket-time.com/",
+    "platform": "Shopify",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認(Shopify標準構成)",
+    "address": "北海道小樽市張碓町455",
+    "prefecture": "北海道",
+    "hours": null,
+    "map_query": "coffee pocket TIME",
+    "nearest_station": {
+      "name": "銭函",
+      "lines": [
+        "JR函館本線"
+      ],
+      "distance_m": 3230,
+      "walk_min": 40
+    },
+    "last_scraped_at": "2026-10-05T23:58:54.475944+00:00",
+    "lat": 43.155007,
+    "lng": 141.123371
+  },
+  {
+    "name": "COSSETTE COFFEE",
+    "url": "https://cossette.theshop.jp/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "北海道登別市富士町4丁目15-2",
+    "prefecture": "北海道",
+    "hours": null,
+    "map_query": "COSSETTE COFFEE",
+    "nearest_station": {
+      "name": "幌別",
+      "lines": [
+        "JR室蘭本線"
+      ],
+      "distance_m": 650,
+      "walk_min": 8
+    },
+    "last_scraped_at": "2026-10-05T23:58:54.475944+00:00",
+    "lat": 42.411072,
+    "lng": 141.099629
+  },
+  {
+    "name": "自家焙煎珈琲 旭川北珈館",
+    "url": "https://www.rakuten.co.jp/hokkoukan/",
+    "platform": "楽天市場",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可とみなす(2026-10確認。rakuten.co.jp/item.rakuten.co.jpのrobots.txtは検索系パラメータ(?i= ?s=)等のみ禁止)",
+    "address": "北海道旭川市北門町17丁目2159-155",
+    "prefecture": "北海道",
+    "hours": null,
+    "map_query": "自家焙煎珈琲 旭川北珈館",
+    "nearest_station": {
+      "name": "近文",
+      "lines": [
+        "JR函館本線"
+      ],
+      "distance_m": 1870,
+      "walk_min": 23
+    },
+    "last_scraped_at": "2026-10-05T23:58:54.475944+00:00",
+    "lat": 43.785383,
+    "lng": 142.347928
+  },
+  {
+    "name": "いわい珈琲",
+    "url": "https://www.iwaicoffee.com/",
+    "platform": "おちゃのこネット",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認(Ocnk標準構成)",
+    "address": "北海道札幌市豊平区月寒東1条6丁目1-20",
+    "prefecture": "北海道",
+    "hours": null,
+    "map_query": "いわい珈琲",
+    "nearest_station": {
+      "name": "月寒中央",
+      "lines": [
+        "札幌市東豊線"
+      ],
+      "distance_m": 280,
+      "walk_min": 4
+    },
+    "last_scraped_at": "2026-10-05T23:58:54.475944+00:00",
+    "lat": 43.03284,
+    "lng": 141.397627
+  },
+  {
+    "name": "珈屋Lamp",
+    "url": "http://kaoricoffee.web.fc2.com/",
+    "platform": "FC2ショッピングカート(cart.fc2.com)",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-10確認。カート側robots.txtは/cancel/・/setup/・/tools/のみDisallow)",
+    "address": "北海道旭川市末広東1条1丁目7-6",
+    "prefecture": "北海道",
+    "hours": null,
+    "map_query": "珈屋Lamp",
+    "nearest_station": {
+      "name": "新旭川",
+      "lines": [
+        "JR宗谷本線",
+        "JR石北本線"
+      ],
+      "distance_m": 2260,
+      "walk_min": 28
+    },
+    "last_scraped_at": "2026-10-05T23:58:54.475944+00:00",
+    "lat": 43.800432,
+    "lng": 142.384713
+  },
+  {
+    "name": "豆工房 小林珈琲店",
+    "url": "https://mamekoubou.thebase.in/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "北海道江別市野幌町17-5",
+    "prefecture": "北海道",
+    "hours": null,
+    "map_query": "豆工房 小林珈琲店",
+    "nearest_station": {
+      "name": "野幌",
+      "lines": [
+        "JR函館本線"
+      ],
+      "distance_m": 420,
+      "walk_min": 5
+    },
+    "last_scraped_at": "2026-10-05T23:58:54.475944+00:00",
+    "lat": 43.095996,
+    "lng": 141.527676
+  },
+  {
+    "name": "ONIYANMA COFFEE",
+    "url": "https://oniyanmacoffee.jp/store/",
+    "platform": "EC-CUBE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-10確認。User-agent: *にDisallow: /*.csv$のみ)",
+    "address": "北海道札幌市中央区南1条西6丁目21-1 センチュリーヒルズ1F",
+    "prefecture": "北海道",
+    "hours": null,
+    "map_query": "ONIYANMA COFFEE",
+    "nearest_station": {
+      "name": "西8丁目",
+      "lines": [
+        "札幌市電"
+      ],
+      "distance_m": 260,
+      "walk_min": 3
+    },
+    "last_scraped_at": "2026-10-05T23:58:54.475944+00:00",
+    "lat": 43.05849,
+    "lng": 141.34855
+  },
+  {
+    "name": "COFFEE SANATIC",
+    "url": "https://sanatic.thebase.in/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "北海道石狩郡当別町太美町1695-95",
+    "prefecture": "北海道",
+    "hours": null,
+    "map_query": "COFFEE SANATIC",
+    "nearest_station": {
+      "name": "太美",
+      "lines": [
+        "JR札沼線"
+      ],
+      "distance_m": 650,
+      "walk_min": 8
+    },
+    "last_scraped_at": "2026-10-05T23:58:54.475944+00:00",
+    "lat": 43.192776,
+    "lng": 141.442157
+  },
+  {
+    "name": "コーヒー豆の店 サンサン",
+    "url": "https://kushirocoffee.wixsite.com/sansan",
+    "platform": "Wix",
+    "shop_type": "single_location",
+    "robots_txt_status": "許可(2026-10確認。User-agent: *はAllow: /。Disallow: *?lightbox=のみ)",
+    "address": "北海道釧路市芦野3丁目1番13号",
+    "prefecture": "北海道",
+    "hours": null,
+    "map_query": "コーヒー豆の店 サンサン",
+    "nearest_station": {
+      "name": "東釧路",
+      "lines": [
+        "JR釧網本線",
+        "JR根室本線"
+      ],
+      "distance_m": 2490,
+      "walk_min": 31
+    },
+    "last_scraped_at": "2026-10-05T23:58:54.475944+00:00",
+    "lat": 43.016091,
+    "lng": 144.400231
+  },
+  {
+    "name": "COFFEE STAND 28",
+    "url": "https://28bean.buyshop.jp/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "北海道札幌市白石区栄通18丁目6-5 ASANUMAビル1F",
+    "prefecture": "北海道",
+    "hours": null,
+    "map_query": "COFFEE STAND 28",
+    "nearest_station": {
+      "name": "南郷18丁目",
+      "lines": [
+        "札幌市東西線"
+      ],
+      "distance_m": 340,
+      "walk_min": 4
+    },
+    "last_scraped_at": "2026-10-05T23:58:54.475944+00:00",
+    "lat": 43.028018,
+    "lng": 141.432256
+  },
+  {
+    "name": "時計のない喫茶店",
+    "url": "https://tokeinonai.thebase.in/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "北海道札幌市北区北17条西4丁目1-11 マンションニューエルム106",
+    "prefecture": "北海道",
+    "hours": null,
+    "map_query": "時計のない喫茶店",
+    "nearest_station": {
+      "name": "北18条",
+      "lines": [
+        "札幌市南北線"
+      ],
+      "distance_m": 80,
+      "walk_min": 1
+    },
+    "last_scraped_at": "2026-10-05T23:58:54.475944+00:00",
+    "lat": 43.08093,
+    "lng": 141.346128
+  },
+  {
+    "name": "yoshinori coffee",
+    "url": "https://yoshinoricoffee-online.com/",
+    "platform": "Shopify",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認(Shopify標準構成)",
+    "address": "北海道上川郡東川町北町12丁目11番1号",
+    "prefecture": "北海道",
+    "hours": null,
+    "map_query": "yoshinori coffee",
+    "nearest_station": {
+      "name": "千代ヶ岡",
+      "lines": [
+        "JR富良野線"
+      ],
+      "distance_m": 7980,
+      "walk_min": 100
+    },
+    "last_scraped_at": "2026-10-05T23:58:54.475944+00:00",
+    "lat": 43.704269,
+    "lng": 142.504121
+  },
+  {
+    "name": "函館十字屋珈琲店",
+    "url": "https://hjyujiya.stores.jp/",
+    "instagram_url": null,
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "北海道函館市末広町5-18",
+    "prefecture": "北海道",
+    "hours": null,
+    "map_query": "函館十字屋珈琲店 北海道函館市末広町5-18",
+    "nearest_station": {
+      "name": "十字街",
+      "lines": [
+        "函館市電宝来・谷地頭線",
+        "函館市電本線"
+      ],
+      "distance_m": 210,
+      "walk_min": 3
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://hjyujiya.stores.jp/)の商品ページをブラウザfetch()で2026-10-05に確認。400g袋のみの販売でその価格を採用。十字屋食料品店の直営で昭和初期から自家焙煎(週2〜3回焙煎、公式の紹介による)。ドリップバッグは除外。",
+    "last_verified_at": "2026-10-03",
+    "locations": [
+      {
+        "label": null,
+        "address": "北海道函館市末広町5-18",
+        "prefecture": "北海道",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "函館十字屋珈琲店 北海道函館市末広町5-18",
+        "lat": 41.76496,
+        "lng": 140.716316
+      }
+    ],
+    "lat": 41.76496,
+    "lng": 140.716316
+  },
+  {
+    "name": "KANEKO COFFEE BEANS",
+    "url": "https://kcbfarm.shop/",
+    "instagram_url": null,
+    "platform": "STORES.jp(独自ドメイン、ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "北海道空知郡上富良野町東2線北21号",
+    "prefecture": "北海道",
+    "hours": null,
+    "map_query": "KANEKO COFFEE BEANS 北海道空知郡上富良野町東2線北21号",
+    "nearest_station": {
+      "name": "西中",
+      "lines": [
+        "JR富良野線"
+      ],
+      "distance_m": 1830,
+      "walk_min": 23
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://kcbfarm.shop/)の商品ページをブラウザfetch()で2026-10-05に確認。各商品の最小の焙煎豆サイズの価格を採用。公式に「北海道のほぼ中央にあるロースター」(2店舗)。生豆・焙煎機(コーヒーロースター)・業務用卸・BOXは除外。",
+    "last_verified_at": "2026-10-03",
+    "locations": [
+      {
+        "label": null,
+        "address": "北海道空知郡上富良野町東2線北21号",
+        "prefecture": "北海道",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "KANEKO COFFEE BEANS 北海道空知郡上富良野町東2線北21号",
+        "lat": 43.437377,
+        "lng": 142.461804
+      }
+    ],
+    "lat": 43.437377,
+    "lng": 142.461804
+  },
+  {
+    "name": "みちみち種や",
+    "url": "https://taneyaka.shop/",
+    "instagram_url": null,
+    "platform": "STORES.jp(独自ドメイン、ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "北海道石狩市緑ヶ原2-22",
+    "prefecture": "北海道",
+    "hours": null,
+    "map_query": "みちみち種や 北海道石狩市緑ヶ原2-22",
+    "nearest_station": {
+      "name": "真駒内",
+      "lines": [
+        "札幌市南北線"
+      ],
+      "distance_m": 780,
+      "walk_min": 10
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://taneyaka.shop/)の商品ページをブラウザfetch()で2026-10-05に確認。100g(豆のまま)の価格を採用。炭火・直火の注文後焙煎(公式に小さな焙煎小屋で2台の焙煎機)。ドリップパック・雑誌・おまかせパックは除外。以前見送った「やかん by みちみち種や」と同じ事業者。",
+    "last_verified_at": "2026-10-03",
+    "locations": [
+      {
+        "label": null,
+        "address": "北海道石狩市緑ヶ原2-22",
+        "prefecture": "北海道",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "みちみち種や 北海道石狩市緑ヶ原2-22",
+        "lat": 42.994311,
+        "lng": 141.366983
+      }
+    ],
+    "lat": 42.994311,
+    "lng": 141.366983
+  },
+  {
+    "name": "宮の森珈琲",
+    "url": "https://miyanomoricoffee.stores.jp/",
+    "instagram_url": null,
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "北海道札幌市西区山の手1条12丁目6-1",
+    "prefecture": "北海道",
+    "hours": null,
+    "map_query": "宮の森珈琲 北海道札幌市西区山の手1条12丁目6-1",
+    "nearest_station": {
+      "name": "西28丁目",
+      "lines": [
+        "札幌市東西線"
+      ],
+      "distance_m": 1660,
+      "walk_min": 21
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://miyanomoricoffee.stores.jp/)の商品ページをブラウザfetch()で2026-10-05に確認。豆の商品のうち各ブレンドの最小の小売サイズ(200〜720g)の価格を採用(粉・業務用カフェ・レストラン向け800g・ドリップバッグ・アウトレットは除外)。公式に自社焙煎工場・受注生産方式。札幌5店+豆専門3店で11店舗未満。",
+    "last_verified_at": "2026-10-03",
+    "locations": [
+      {
+        "label": null,
+        "address": "北海道札幌市西区山の手1条12丁目6-1",
+        "prefecture": "北海道",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "宮の森珈琲 北海道札幌市西区山の手1条12丁目6-1",
+        "lat": 43.060667,
+        "lng": 141.29407
+      }
+    ],
+    "lat": 43.060667,
+    "lng": 141.29407
   }
 ]

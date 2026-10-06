@@ -891,6 +891,20 @@ SOURCE_FILES = {
     "西院 ROASTING FACTORY": "data_srfcoffee.json",
     "高木珈琲店": "data_takagicoffeeten.json",
     "TRIBUTE COFFEE": "data_tributecoffee.json",
+    # 北海道の再調査(新規発掘)
+    "8A GARAGE COFFEE": "data_8agaragecoffee.json",
+    "coffee pocket TIME": "data_coffeepockettime.json",
+    "COSSETTE COFFEE": "data_cossettecoffee.json",
+    "自家焙煎珈琲 旭川北珈館": "data_hokkoukan.json",
+    "いわい珈琲": "data_iwaicoffee.json",
+    "珈屋Lamp": "data_kayalamp.json",
+    "豆工房 小林珈琲店": "data_kobayashicoffee.json",
+    "ONIYANMA COFFEE": "data_oniyanma.json",
+    "COFFEE SANATIC": "data_sanatic.json",
+    "コーヒー豆の店 サンサン": "data_sansankushiro.json",
+    "COFFEE STAND 28": "data_stand28.json",
+    "時計のない喫茶店": "data_tokeinonai.json",
+    "yoshinori coffee": "data_yoshinoricoffee.json",
 }
 
 
