@@ -1424,9 +1424,6 @@
     "prefecture": "京都府",
     "hours": null,
     "map_query": "びーんず亭",
-    "last_scraped_at": "2026-09-03T00:25:34.151237+00:00",
-    "lat": 35.514423,
-    "lng": 139.539624,
     "nearest_station": {
       "name": "中山",
       "lines": [
@@ -1435,7 +1432,10 @@
       ],
       "distance_m": 40,
       "walk_min": 1
-    }
+    },
+    "last_scraped_at": "2026-09-03T00:25:34.151237+00:00",
+    "lat": 35.514423,
+    "lng": 139.539624
   },
   {
     "name": "豆男珈琲",
@@ -1477,7 +1477,8 @@
     "prefecture": "東京都",
     "hours": null,
     "map_query": "ITSUKI Coffee Roastery",
-    "last_scraped_at": "2026-09-03T01:13:55.050129+00:00",
+    "nearest_station": null,
+    "last_scraped_at": "2026-10-06T02:32:25.466034+00:00",
     "lat": 35.708618,
     "lng": 139.66294
   },
