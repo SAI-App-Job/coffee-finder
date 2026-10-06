@@ -1,0 +1,120 @@
+{
+  "shop": {
+    "name": "Progress COFFEE Roastery & Sweets Factory",
+    "url": "https://progress-coffee.com/",
+    "address": "広島県広島市中区十日市町2-6-18",
+    "prefecture": "広島県",
+    "source_note": "STORES.jpの公式ショップ(https://progress-coffee.com/)の商品ページをブラウザfetch()で2026-10-05に確認。100gの価格を採用。公式にロースタリー兼スイーツファクトリーで自家焙煎(公式は約10銘柄掲載)。グラノーラ・ショップバッグ・包装は除外。本店(Progress LIFE STYLE COFFEE)と2店舗。",
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "id": "progress-coffee-roastery",
+    "instagram_url": null,
+    "google_maps_query": "Progress COFFEE Roastery & Sweets Factory 広島県広島市中区十日市町2-6-18",
+    "tel": null,
+    "hours": null,
+    "shop_type": "single_location",
+    "data_source": "manual",
+    "last_verified_at": "2026-10-03",
+    "lat": 34.391724,
+    "lng": 132.451759,
+    "nearest_station": {
+      "name": "袋町",
+      "lines": [
+        "広島電鉄宇品線"
+      ],
+      "distance_m": 410,
+      "walk_min": 5
+    }
+  },
+  "products": [
+    {
+      "raw_name": "コロンビア エルパライソ農園 ライチ / カスティージョ / ダブル アナエロビック ウォッシュド / 浅煎り",
+      "category": "ストレート",
+      "originCountry": "コロンビア",
+      "processingMethod": "アナエロビック",
+      "roast": "浅煎り",
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 2900,
+      "weightG": 100,
+      "stockStatus": "販売中",
+      "productUrl": "https://progress-roastery.stores.jp/items/65499a00e1ab3700346750fd",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "【直接買付】ニカラグア エル・カンバラチェ農園 / マラカツーラ / ウォッシュド / 中煎り",
+      "category": "ストレート",
+      "originCountry": "ニカラグア",
+      "processingMethod": "ウォッシュド",
+      "roast": "中煎り",
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 2100,
+      "weightG": 100,
+      "stockStatus": "販売中",
+      "productUrl": "https://progress-roastery.stores.jp/items/6868bfb377bc66574fa1f849",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "【直接買付】ニカラグア エル・ハルディン農園 / パカマラ / カーボニックマセレーション / 中浅煎り",
+      "category": "ストレート",
+      "originCountry": "ニカラグア",
+      "processingMethod": null,
+      "roast": "中浅煎り",
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 2300,
+      "weightG": 100,
+      "stockStatus": "販売中",
+      "productUrl": "https://progress-roastery.stores.jp/items/6911890c9b5b823baf11e979",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "【直接買付】ニカラグア ベヤ オーロラ農園 / カトゥーラ / ウォッシュド / 中煎り",
+      "category": "ストレート",
+      "originCountry": "ニカラグア",
+      "processingMethod": "ウォッシュド",
+      "roast": "中煎り",
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1900,
+      "weightG": 100,
+      "stockStatus": "販売中",
+      "productUrl": "https://progress-roastery.stores.jp/items/695088b012e4fd72ad998dd4",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "【直接買付】ニカラグア ロス ボルカンシートス農園 / カツアイ / ウォッシュド / 中煎り",
+      "category": "ストレート",
+      "originCountry": "ニカラグア",
+      "processingMethod": "ウォッシュド",
+      "roast": "中煎り",
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1900,
+      "weightG": 100,
+      "stockStatus": "販売中",
+      "productUrl": "https://progress-roastery.stores.jp/items/67ea52c8dbcf2535a374ecf4",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "【直接買付】ニカラグア ラ ベンディシオン農園 / パカマラ / ウォッシュド / 深煎り",
+      "category": "ストレート",
+      "originCountry": "ニカラグア",
+      "processingMethod": "ウォッシュド",
+      "roast": "深煎り",
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 2200,
+      "weightG": 100,
+      "stockStatus": "販売中",
+      "productUrl": "https://progress-roastery.stores.jp/items/690c1f9ec774ebdd5e044ed2",
+      "data_source": "manual"
+    }
+  ]
+}

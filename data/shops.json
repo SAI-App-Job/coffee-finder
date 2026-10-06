@@ -23902,5 +23902,631 @@
     ],
     "lat": 34.775659,
     "lng": 137.7037
+  },
+  {
+    "name": "AKAM COFFEE WORKS",
+    "url": "https://akamcoffee.theshop.jp/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "広島県広島市中区国泰寺町1-9-7 1F",
+    "prefecture": "広島県",
+    "hours": null,
+    "map_query": "AKAM COFFEE WORKS",
+    "nearest_station": {
+      "name": "中電前",
+      "lines": [
+        "広島電鉄宇品線"
+      ],
+      "distance_m": 290,
+      "walk_min": 4
+    },
+    "last_scraped_at": "2026-10-06T05:35:35.354919+00:00",
+    "lat": 34.386852,
+    "lng": 132.457463
+  },
+  {
+    "name": "BAGTOWN COFFEE",
+    "url": "https://bagtowncoffee.com/",
+    "platform": "Shopify",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認(Shopify標準構成)",
+    "address": "広島県広島市中区袋町2-1",
+    "prefecture": "広島県",
+    "hours": null,
+    "map_query": "BAGTOWN COFFEE",
+    "nearest_station": {
+      "name": "本通",
+      "lines": [
+        "アストラムライン",
+        "広島電鉄宇品線"
+      ],
+      "distance_m": 100,
+      "walk_min": 1
+    },
+    "last_scraped_at": "2026-10-06T05:35:35.354919+00:00",
+    "lat": 34.392654,
+    "lng": 132.457574
+  },
+  {
+    "name": "ビーンズコーヒーカンパニー",
+    "url": "https://beanscoffee.official.ec/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "広島県福山市新市町大字戸手780-1",
+    "prefecture": "広島県",
+    "hours": null,
+    "map_query": "ビーンズコーヒーカンパニー",
+    "nearest_station": {
+      "name": "上戸手",
+      "lines": [
+        "JR福塩線"
+      ],
+      "distance_m": 1170,
+      "walk_min": 15
+    },
+    "last_scraped_at": "2026-10-06T05:35:35.354919+00:00",
+    "lat": 34.556489,
+    "lng": 133.293417
+  },
+  {
+    "name": "Coffee Roast Sereno",
+    "url": "https://sereno-etajima.com/",
+    "platform": "Shopify",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認(Shopify標準構成)",
+    "address": "広島県江田島市能美町鹿川2151-1",
+    "prefecture": "広島県",
+    "hours": null,
+    "map_query": "Coffee Roast Sereno",
+    "nearest_station": null,
+    "last_scraped_at": "2026-10-06T05:35:35.354919+00:00",
+    "lat": 34.197334,
+    "lng": 132.444149
+  },
+  {
+    "name": "CUE.COFFEE",
+    "url": "https://cuecoffee.official.ec/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "広島県広島市中区上八丁堀5-1 新上八丁堀ビル1F",
+    "prefecture": "広島県",
+    "hours": null,
+    "map_query": "CUE.COFFEE",
+    "nearest_station": {
+      "name": "縮景園前",
+      "lines": [
+        "広島電鉄白島線"
+      ],
+      "distance_m": 70,
+      "walk_min": 1
+    },
+    "last_scraped_at": "2026-10-06T05:35:35.354919+00:00",
+    "lat": 34.399968,
+    "lng": 132.466122
+  },
+  {
+    "name": "flannel&IRON coffee roaster",
+    "url": "https://shop.coffee-flannel.com/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "広島県福山市本庄町中3-25-21",
+    "prefecture": "広島県",
+    "hours": null,
+    "map_query": "flannel&IRON coffee roaster",
+    "nearest_station": {
+      "name": "福山",
+      "lines": [
+        "山陽新幹線",
+        "JR山陽本線",
+        "JR福塩線"
+      ],
+      "distance_m": 410,
+      "walk_min": 5
+    },
+    "last_scraped_at": "2026-10-06T05:35:35.354919+00:00",
+    "lat": 34.485704,
+    "lng": 133.36231
+  },
+  {
+    "name": "green coffee",
+    "url": "https://www.green-web.jp/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "広島県広島市南区段原一丁目5-7 KSビルド1F",
+    "prefecture": "広島県",
+    "hours": null,
+    "map_query": "green coffee",
+    "nearest_station": {
+      "name": "段原一丁目",
+      "lines": [
+        "広島電鉄皆実線",
+        "広島電鉄循環線"
+      ],
+      "distance_m": 100,
+      "walk_min": 1
+    },
+    "last_scraped_at": "2026-10-06T05:35:35.354919+00:00",
+    "lat": 34.390358,
+    "lng": 132.474055
+  },
+  {
+    "name": "広島珈琲",
+    "url": "https://store.shopping.yahoo.co.jp/hiroshimacoffee/",
+    "platform": "Yahoo!ショッピング",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認(Yahoo!ショッピングストアのrobots.txtは404。カテゴリ一覧と商品ページのみ使用)",
+    "address": "広島県広島市安芸区矢野東5丁目2-24",
+    "prefecture": "広島県",
+    "hours": null,
+    "map_query": "広島珈琲",
+    "nearest_station": {
+      "name": "矢野",
+      "lines": [
+        "JR呉線"
+      ],
+      "distance_m": 560,
+      "walk_min": 7
+    },
+    "last_scraped_at": "2026-10-06T05:35:35.354919+00:00",
+    "lat": 34.351843,
+    "lng": 132.537988
+  },
+  {
+    "name": "くぐり門珈琲店",
+    "url": "https://kugurimon.com/",
+    "platform": "カラーミーショップ(shop-pro、独自ドメイン)",
+    "shop_type": "single_location",
+    "robots_txt_status": "許可(2026-10確認。User-agent: *は/secure/・/cart/のみDisallow)",
+    "address": "広島県東広島市西条本町17-1",
+    "prefecture": "広島県",
+    "hours": null,
+    "map_query": "くぐり門珈琲店",
+    "nearest_station": {
+      "name": "西条",
+      "lines": [
+        "JR山陽本線"
+      ],
+      "distance_m": 190,
+      "walk_min": 2
+    },
+    "last_scraped_at": "2026-10-06T05:35:35.354919+00:00",
+    "lat": 34.430494,
+    "lng": 132.745706
+  },
+  {
+    "name": "クロパグコーヒー",
+    "url": "https://9689coffee.base.shop/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "広島県広島市西区草津新町2-16-10",
+    "prefecture": "広島県",
+    "hours": null,
+    "map_query": "クロパグコーヒー",
+    "nearest_station": {
+      "name": "草津南",
+      "lines": [
+        "広島電鉄宮島線"
+      ],
+      "distance_m": 440,
+      "walk_min": 6
+    },
+    "last_scraped_at": "2026-10-06T05:35:35.354919+00:00",
+    "lat": 34.374385,
+    "lng": 132.400051
+  },
+  {
+    "name": "リトルウイング珈琲",
+    "url": "https://littlewing-coffee.raku-uru.jp/",
+    "platform": "楽々シリーズ(Raku-Uru)",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認(標準的なRaku-Uru設定。一覧・詳細ページのみ使用)",
+    "address": "広島県福山市今津町3-2-28",
+    "prefecture": "広島県",
+    "hours": null,
+    "map_query": "リトルウイング珈琲",
+    "nearest_station": {
+      "name": "松永",
+      "lines": [
+        "JR山陽本線"
+      ],
+      "distance_m": 880,
+      "walk_min": 11
+    },
+    "last_scraped_at": "2026-10-06T05:35:35.354919+00:00",
+    "lat": 34.456197,
+    "lng": 133.251303
+  },
+  {
+    "name": "珈琲豆屋 大和",
+    "url": "https://mameyamato.shop-pro.jp/",
+    "platform": "カラーミーショップ(shop-pro)",
+    "shop_type": "single_location",
+    "robots_txt_status": "許可(2026-10確認。User-agent: *は/secure/・/cart/のみDisallow)",
+    "address": "広島県広島市安佐南区安東2-2-5",
+    "prefecture": "広島県",
+    "hours": null,
+    "map_query": "珈琲豆屋 大和",
+    "nearest_station": {
+      "name": "安東",
+      "lines": [
+        "アストラムライン"
+      ],
+      "distance_m": 30,
+      "walk_min": 1
+    },
+    "last_scraped_at": "2026-10-06T05:35:35.354919+00:00",
+    "lat": 34.474994,
+    "lng": 132.453347
+  },
+  {
+    "name": "ototoca",
+    "url": "https://ototoca.com/",
+    "platform": "EC-CUBE",
+    "shop_type": "single_location",
+    "robots_txt_status": "許可(2026-10確認。User-agent: *は/*.csv$のみDisallow)",
+    "address": "広島県広島市西区楠木町2丁目11-10",
+    "prefecture": "広島県",
+    "hours": null,
+    "map_query": "ototoca",
+    "nearest_station": {
+      "name": "横川",
+      "lines": [
+        "広島電鉄横川線",
+        "JR可部線",
+        "JR山陽本線"
+      ],
+      "distance_m": 240,
+      "walk_min": 3
+    },
+    "last_scraped_at": "2026-10-06T05:35:35.354919+00:00",
+    "lat": 34.409445,
+    "lng": 132.453136
+  },
+  {
+    "name": "炭火珈房ピトン",
+    "url": "https://piton.shop-pro.jp/",
+    "platform": "カラーミーショップ(shop-pro)",
+    "shop_type": "single_location",
+    "robots_txt_status": "許可(2026-10確認。User-agent: *は/secure/・/cart/のみDisallow)",
+    "address": "広島県福山市南蔵王町5丁目16-19",
+    "prefecture": "広島県",
+    "hours": null,
+    "map_query": "炭火珈房ピトン",
+    "nearest_station": {
+      "name": "東福山",
+      "lines": [
+        "JR山陽本線"
+      ],
+      "distance_m": 1050,
+      "walk_min": 13
+    },
+    "last_scraped_at": "2026-10-06T05:35:35.354919+00:00",
+    "lat": 34.503795,
+    "lng": 133.401283
+  },
+  {
+    "name": "Ringall Coffee",
+    "url": "https://ringall.base.shop/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "広島県三原市久井町坂井原280-4",
+    "prefecture": "広島県",
+    "hours": null,
+    "map_query": "Ringall Coffee",
+    "nearest_station": {
+      "name": "本郷",
+      "lines": [
+        "JR山陽本線"
+      ],
+      "distance_m": 9430,
+      "walk_min": 118
+    },
+    "last_scraped_at": "2026-10-06T05:35:35.354919+00:00",
+    "lat": 34.483367,
+    "lng": 133.037865
+  },
+  {
+    "name": "深やき珈琲 そにろき",
+    "url": "http://www.sonirokicoffee.com/",
+    "platform": "FC2ショッピングカート(cart.fc2.com)",
+    "shop_type": "single_location",
+    "robots_txt_status": "許可(2026-10確認。カート側robots.txtは/cancel/・/setup/・/tools/のみDisallow)",
+    "address": "広島県呉市宮原13丁目23-3",
+    "prefecture": "広島県",
+    "hours": null,
+    "map_query": "深やき珈琲 そにろき",
+    "nearest_station": {
+      "name": "呉",
+      "lines": [
+        "JR呉線"
+      ],
+      "distance_m": 2650,
+      "walk_min": 33
+    },
+    "last_scraped_at": "2026-10-06T05:35:35.354919+00:00",
+    "lat": 34.221174,
+    "lng": 132.55258
+  },
+  {
+    "name": "ShiRuShi COFFEE",
+    "url": "https://srscoffee.base.shop/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "広島県東広島市八本松町飯田744-7",
+    "prefecture": "広島県",
+    "hours": null,
+    "map_query": "ShiRuShi COFFEE",
+    "nearest_station": {
+      "name": "八本松",
+      "lines": [
+        "JR山陽本線"
+      ],
+      "distance_m": 1020,
+      "walk_min": 13
+    },
+    "last_scraped_at": "2026-10-06T05:35:35.354919+00:00",
+    "lat": 34.439552,
+    "lng": 132.679593
+  },
+  {
+    "name": "珈琲屋スプレモ",
+    "url": "https://www.supremocoffee.jp/",
+    "platform": "独自CMS(Movable Type)+決済カート(ec-sites.jp)",
+    "shop_type": "single_location",
+    "robots_txt_status": "許可(2026-10確認。User-agent: *は/mt/のみDisallow)",
+    "address": "広島県三次市十日市東3丁目3-22 マスダランドビル1F",
+    "prefecture": "広島県",
+    "hours": null,
+    "map_query": "珈琲屋スプレモ",
+    "nearest_station": {
+      "name": "三次",
+      "lines": [
+        "JR芸備線"
+      ],
+      "distance_m": 850,
+      "walk_min": 11
+    },
+    "last_scraped_at": "2026-10-06T05:35:35.354919+00:00",
+    "lat": 34.808545,
+    "lng": 132.86184
+  },
+  {
+    "name": "高谷山珈琲焙煎所",
+    "url": "https://takataniyama.base.shop/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "広島県三次市十日市西4-7-1",
+    "prefecture": "広島県",
+    "hours": null,
+    "map_query": "高谷山珈琲焙煎所",
+    "nearest_station": {
+      "name": "八次",
+      "lines": [
+        "JR芸備線"
+      ],
+      "distance_m": 1050,
+      "walk_min": 13
+    },
+    "last_scraped_at": "2026-10-06T05:35:35.354919+00:00",
+    "lat": 34.810983,
+    "lng": 132.87462
+  },
+  {
+    "name": "WELCOME COFFEE ROASTER",
+    "url": "https://hanatoyume.base.shop/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "広島県尾道市土堂1-17-15",
+    "prefecture": "広島県",
+    "hours": null,
+    "map_query": "WELCOME COFFEE ROASTER",
+    "nearest_station": {
+      "name": "尾道",
+      "lines": [
+        "JR山陽本線"
+      ],
+      "distance_m": 320,
+      "walk_min": 4
+    },
+    "last_scraped_at": "2026-10-06T05:35:35.354919+00:00",
+    "lat": 34.406903,
+    "lng": 133.195244
+  },
+  {
+    "name": "おます珈琲",
+    "url": "http://omasu-coffee.com/",
+    "instagram_url": null,
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "広島県広島市安佐南区大塚西3-23-5",
+    "prefecture": "広島県",
+    "hours": null,
+    "map_query": "おます珈琲 広島県広島市安佐南区大塚西3-23-5",
+    "nearest_station": {
+      "name": "広域公園前",
+      "lines": [
+        "アストラムライン"
+      ],
+      "distance_m": 150,
+      "walk_min": 2
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(http://omasu-coffee.com/)の商品ページをブラウザfetch()で2026-10-05に確認。100gの価格を採用(同一銘柄の200gは別商品のため除外)。公式に珈琲豆焙煎処・焙煎後10日以内の豆のみ販売。1kg・定期便・ギフトは除外。",
+    "last_verified_at": "2026-10-03",
+    "locations": [
+      {
+        "label": null,
+        "address": "広島県広島市安佐南区大塚西3-23-5",
+        "prefecture": "広島県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "おます珈琲 広島県広島市安佐南区大塚西3-23-5",
+        "lat": 34.434431,
+        "lng": 132.398963
+      }
+    ],
+    "lat": 34.434431,
+    "lng": 132.398963
+  },
+  {
+    "name": "Progress COFFEE Roastery & Sweets Factory",
+    "url": "https://progress-coffee.com/",
+    "instagram_url": null,
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "広島県広島市中区十日市町2-6-18",
+    "prefecture": "広島県",
+    "hours": null,
+    "map_query": "Progress COFFEE Roastery & Sweets Factory 広島県広島市中区十日市町2-6-18",
+    "nearest_station": {
+      "name": "袋町",
+      "lines": [
+        "広島電鉄宇品線"
+      ],
+      "distance_m": 410,
+      "walk_min": 5
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://progress-coffee.com/)の商品ページをブラウザfetch()で2026-10-05に確認。100gの価格を採用。公式にロースタリー兼スイーツファクトリーで自家焙煎(公式は約10銘柄掲載)。グラノーラ・ショップバッグ・包装は除外。本店(Progress LIFE STYLE COFFEE)と2店舗。",
+    "last_verified_at": "2026-10-03",
+    "locations": [
+      {
+        "label": null,
+        "address": "広島県広島市中区十日市町2-6-18",
+        "prefecture": "広島県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "Progress COFFEE Roastery & Sweets Factory 広島県広島市中区十日市町2-6-18",
+        "lat": 34.391724,
+        "lng": 132.451759
+      }
+    ],
+    "lat": 34.391724,
+    "lng": 132.451759
+  },
+  {
+    "name": "shimaji coffee roasters",
+    "url": "https://shimajicoffee.stores.jp/",
+    "instagram_url": null,
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "広島県広島市南区的場町1-6-8 1F",
+    "prefecture": "広島県",
+    "hours": null,
+    "map_query": "shimaji coffee roasters 広島県広島市南区的場町1-6-8 1F",
+    "nearest_station": {
+      "name": "的場町",
+      "lines": [
+        "広島電鉄循環線",
+        "広島電鉄皆実線",
+        "広島電鉄本線"
+      ],
+      "distance_m": 90,
+      "walk_min": 1
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://shimajicoffee.stores.jp/)の商品ページをブラウザfetch()で2026-10-05に確認。100gの価格を採用。自家焙煎の浅煎り専門店(typica紹介)。リキッドコーヒー・ドリッパー・フィルターは除外。同系列4店ほどで11店舗未満。",
+    "last_verified_at": "2026-10-03",
+    "locations": [
+      {
+        "label": null,
+        "address": "広島県広島市南区的場町1-6-8 1F",
+        "prefecture": "広島県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "shimaji coffee roasters 広島県広島市南区的場町1-6-8 1F",
+        "lat": 34.392623,
+        "lng": 132.475593
+      }
+    ],
+    "lat": 34.392623,
+    "lng": 132.475593
+  },
+  {
+    "name": "スペシャルティコーヒー専門店 スマイル",
+    "url": "https://www.smilecoffee.net/",
+    "instagram_url": null,
+    "platform": "独自サイト+ec-sites.jpカート",
+    "shop_type": "single_location",
+    "address": "広島県広島市東区二葉の里2-8-9",
+    "prefecture": "広島県",
+    "hours": "10:00〜19:00(火曜・水曜定休)",
+    "map_query": "スペシャルティコーヒー専門店 スマイル 広島県広島市東区二葉の里2-8-9",
+    "nearest_station": {
+      "name": "袋町",
+      "lines": [
+        "広島電鉄宇品線"
+      ],
+      "distance_m": 410,
+      "walk_min": 5
+    },
+    "data_source": "manual",
+    "source_note": "豆一覧ページ(https://www.smilecoffee.net/beanslist.html)と特定商取引法ページを2026-10-06に確認。各商品は100gと250g(100g単価の1割引)の2重量で、100gの価格を代表として採用。商品ごとのページは無くカートはPOSTフォームのため、商品URLは一覧ページ+銘柄名のフラグメント。ページ内に更新日の記載は無い。ブラジル モンテ・アレグレは「完売しました」表記。",
+    "last_verified_at": "2026-10-06",
+    "locations": [
+      {
+        "label": null,
+        "address": "広島県広島市東区二葉の里2-8-9",
+        "prefecture": "広島県",
+        "hours": "10:00〜19:00(火曜・水曜定休)",
+        "tel": "082-264-8155",
+        "is_headquarters": false,
+        "map_query": "スペシャルティコーヒー専門店 スマイル 広島県広島市東区二葉の里2-8-9",
+        "lat": 34.391724,
+        "lng": 132.451759
+      }
+    ],
+    "lat": 34.391724,
+    "lng": 132.451759
+  },
+  {
+    "name": "ヨルソラ薫る珈琲店",
+    "url": "https://yoru-sora.com/",
+    "instagram_url": null,
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "広島県福山市明神町2-12-27",
+    "prefecture": "広島県",
+    "hours": null,
+    "map_query": "ヨルソラ薫る珈琲店 広島県福山市明神町2-12-27",
+    "nearest_station": {
+      "name": "東福山",
+      "lines": [
+        "JR山陽本線"
+      ],
+      "distance_m": 720,
+      "walk_min": 9
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://yoru-sora.com/)の商品ページをブラウザfetch()で2026-10-05に確認。100g(焙煎後・豆のまま)の価格を採用。公式に自家焙煎(水洗い・乾燥室乾燥後に焙煎)。以前の見送り分。",
+    "last_verified_at": "2026-10-03",
+    "locations": [
+      {
+        "label": null,
+        "address": "広島県福山市明神町2-12-27",
+        "prefecture": "広島県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "ヨルソラ薫る珈琲店 広島県福山市明神町2-12-27",
+        "lat": 34.48991,
+        "lng": 133.400426
+      }
+    ],
+    "lat": 34.48991,
+    "lng": 133.400426
   }
 ]

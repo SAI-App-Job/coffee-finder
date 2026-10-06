@@ -927,6 +927,27 @@ SOURCE_FILES = {
     "トクナガコーヒー": "data_tokunagacoffee.json",
     "富屋珈琲店": "data_tomiyacoffee.json",
     "TRANSIT COFFEE ROASTERS": "data_transitcoffee.json",
+    # 広島県の再調査(新規発掘)
+    "AKAM COFFEE WORKS": "data_akamcoffee.json",
+    "BAGTOWN COFFEE": "data_bagtowncoffee.json",
+    "ビーンズコーヒーカンパニー": "data_beanscoffeecompany.json",
+    "Coffee Roast Sereno": "data_coffeeroastsereno.json",
+    "CUE.COFFEE": "data_cuecoffee.json",
+    "flannel&IRON coffee roaster": "data_flannelandiron.json",
+    "green coffee": "data_greencoffee.json",
+    "広島珈琲": "data_hiroshimacoffee.json",
+    "くぐり門珈琲店": "data_kugurimon.json",
+    "クロパグコーヒー": "data_kuropagcoffee.json",
+    "リトルウイング珈琲": "data_littlewingcoffee.json",
+    "珈琲豆屋 大和": "data_mameyamato.json",
+    "ototoca": "data_ototoca.json",
+    "炭火珈房ピトン": "data_piton.json",
+    "Ringall Coffee": "data_ringallcoffee.json",
+    "深やき珈琲 そにろき": "data_sonirokicoffee.json",
+    "ShiRuShi COFFEE": "data_srscoffee.json",
+    "珈琲屋スプレモ": "data_supremocoffee.json",
+    "高谷山珈琲焙煎所": "data_takataniyamacoffee.json",
+    "WELCOME COFFEE ROASTER": "data_welcomecoffeeroaster.json",
 }
 
 
