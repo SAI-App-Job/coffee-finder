@@ -24528,5 +24528,397 @@
     ],
     "lat": 34.48991,
     "lng": 133.400426
+  },
+  {
+    "name": "45COFFEE ROASTERY",
+    "url": "https://45coffee.theshop.jp/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "宮城県仙台市青葉区一番町",
+    "prefecture": "宮城県",
+    "hours": null,
+    "map_query": "45COFFEE ROASTERY",
+    "nearest_station": {
+      "name": "勾当台公園",
+      "lines": [
+        "仙台市南北線"
+      ],
+      "distance_m": 250,
+      "walk_min": 3
+    },
+    "last_scraped_at": "2026-10-06T05:39:02.491888+00:00",
+    "lat": 38.267755,
+    "lng": 140.86915
+  },
+  {
+    "name": "ANCHOR COFFEE",
+    "url": "http://anchor2fullsail.shop-pro.jp/",
+    "platform": "カラーミーショップ(shop-pro.jp)",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認(shop-pro.jp標準構成)",
+    "address": "宮城県気仙沼市館山1丁目6番31号",
+    "prefecture": "宮城県",
+    "hours": null,
+    "map_query": "ANCHOR COFFEE",
+    "nearest_station": {
+      "name": "不動の沢",
+      "lines": [
+        "JR気仙沼BRT線"
+      ],
+      "distance_m": 680,
+      "walk_min": 9
+    },
+    "last_scraped_at": "2026-10-06T05:39:02.491888+00:00",
+    "lat": 38.903957,
+    "lng": 141.558893
+  },
+  {
+    "name": "アニーコーヒーロースター",
+    "url": "https://shop.anniecoffee.jp/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "宮城県仙台市太白区八木山香澄町3-35",
+    "prefecture": "宮城県",
+    "hours": null,
+    "map_query": "アニーコーヒーロースター",
+    "nearest_station": {
+      "name": "勾当台公園",
+      "lines": [
+        "仙台市南北線"
+      ],
+      "distance_m": 250,
+      "walk_min": 3
+    },
+    "last_scraped_at": "2026-10-06T05:39:02.491888+00:00",
+    "lat": 38.267755,
+    "lng": 140.86915
+  },
+  {
+    "name": "assez COFFEE",
+    "url": "https://www.assez-coffee.com/",
+    "platform": "Wix",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認(Wix標準構成)",
+    "address": "宮城県仙台市青葉区中山6-5-21",
+    "prefecture": "宮城県",
+    "hours": null,
+    "map_query": "assez COFFEE",
+    "nearest_station": {
+      "name": "北仙台",
+      "lines": [
+        "JR仙山線",
+        "仙台市南北線"
+      ],
+      "distance_m": 470,
+      "walk_min": 6
+    },
+    "last_scraped_at": "2026-10-06T05:39:02.491888+00:00",
+    "lat": 38.278691,
+    "lng": 140.873816
+  },
+  {
+    "name": "Cafe de Ryuban",
+    "url": "https://www.cafederyuban.com/",
+    "platform": "独自カート",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認",
+    "address": "宮城県仙台市青葉区広瀬町4-27",
+    "prefecture": "宮城県",
+    "hours": null,
+    "map_query": "Cafe de Ryuban",
+    "nearest_station": {
+      "name": "国際センター",
+      "lines": [
+        "仙台市東西線"
+      ],
+      "distance_m": 930,
+      "walk_min": 12
+    },
+    "last_scraped_at": "2026-10-06T05:39:02.491888+00:00",
+    "lat": 38.268426,
+    "lng": 140.858175
+  },
+  {
+    "name": "珈巣多夢 柏木店",
+    "url": "https://custom-kashiwagi.com/",
+    "platform": "WordPress + WooCommerce",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認(WooCommerce Store APIは認証不要の公開エンドポイント)",
+    "address": "宮城県仙台市青葉区柏木1-9-6",
+    "prefecture": "宮城県",
+    "hours": null,
+    "map_query": "珈巣多夢 柏木店",
+    "nearest_station": {
+      "name": "北四番丁",
+      "lines": [
+        "仙台市南北線"
+      ],
+      "distance_m": 1000,
+      "walk_min": 13
+    },
+    "last_scraped_at": "2026-10-06T05:39:02.491888+00:00",
+    "lat": 38.275993,
+    "lng": 140.858756
+  },
+  {
+    "name": "FCR",
+    "url": "https://fcr.base.ec/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "宮城県仙台市青葉区中江1-9-15",
+    "prefecture": "宮城県",
+    "hours": null,
+    "map_query": "FCR",
+    "nearest_station": {
+      "name": "東照宮",
+      "lines": [
+        "JR仙山線"
+      ],
+      "distance_m": 680,
+      "walk_min": 9
+    },
+    "last_scraped_at": "2026-10-06T05:39:02.491888+00:00",
+    "lat": 38.273329,
+    "lng": 140.892843
+  },
+  {
+    "name": "フリゴレス",
+    "url": "https://store.shopping.yahoo.co.jp/frigoles/",
+    "platform": "Yahoo!ショッピング",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認(Yahoo!ショッピングストアのrobots.txtは404。/search.htmlのクエリなし・page指定のみ使用)",
+    "address": "宮城県柴田郡柴田町船岡新栄2-3-3",
+    "prefecture": "宮城県",
+    "hours": null,
+    "map_query": "フリゴレス",
+    "nearest_station": {
+      "name": "東船岡",
+      "lines": [
+        "阿武隈急行"
+      ],
+      "distance_m": 770,
+      "walk_min": 10
+    },
+    "last_scraped_at": "2026-10-06T05:39:02.491888+00:00",
+    "lat": 38.051138,
+    "lng": 140.781089
+  },
+  {
+    "name": "岳山珈琲",
+    "url": "https://shop.gakuzancoffee.com/",
+    "platform": "Shopify",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認(Shopify標準構成)",
+    "address": "宮城県仙台市泉区福岡字岳山7-101",
+    "prefecture": "宮城県",
+    "hours": null,
+    "map_query": "岳山珈琲",
+    "nearest_station": {
+      "name": "勾当台公園",
+      "lines": [
+        "仙台市南北線"
+      ],
+      "distance_m": 250,
+      "walk_min": 3
+    },
+    "last_scraped_at": "2026-10-06T05:39:02.491888+00:00",
+    "lat": 38.267755,
+    "lng": 140.86915
+  },
+  {
+    "name": "自家焙煎珈琲工房 飛行島",
+    "url": "https://www.hikozima.com/",
+    "platform": "Wix",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認(Wix標準構成)",
+    "address": "宮城県白石市福岡蔵本字西町25",
+    "prefecture": "宮城県",
+    "hours": null,
+    "map_query": "自家焙煎珈琲工房 飛行島",
+    "nearest_station": {
+      "name": "白石",
+      "lines": [
+        "JR東北本線"
+      ],
+      "distance_m": 560,
+      "walk_min": 7
+    },
+    "last_scraped_at": "2026-10-06T05:39:02.491888+00:00",
+    "lat": 38.002367,
+    "lng": 140.620021
+  },
+  {
+    "name": "HONOKA COFFEE",
+    "url": "https://ec.honokacoffee.com/",
+    "platform": "Shopify",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認(Shopify標準構成)",
+    "address": "宮城県仙台市太白区富沢南1-4-10",
+    "prefecture": "宮城県",
+    "hours": null,
+    "map_query": "HONOKA COFFEE",
+    "nearest_station": {
+      "name": "富沢",
+      "lines": [
+        "仙台市南北線"
+      ],
+      "distance_m": 520,
+      "walk_min": 7
+    },
+    "last_scraped_at": "2026-10-06T05:39:02.491888+00:00",
+    "lat": 38.212767,
+    "lng": 140.864798
+  },
+  {
+    "name": "いずみや珈琲豆店",
+    "url": "https://izumiya2021.thebase.in/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "宮城県仙台市太白区八木山緑町17-21",
+    "prefecture": "宮城県",
+    "hours": null,
+    "map_query": "いずみや珈琲豆店",
+    "nearest_station": {
+      "name": "勾当台公園",
+      "lines": [
+        "仙台市南北線"
+      ],
+      "distance_m": 250,
+      "walk_min": 3
+    },
+    "last_scraped_at": "2026-10-06T05:39:02.491888+00:00",
+    "lat": 38.267755,
+    "lng": 140.86915
+  },
+  {
+    "name": "KEYAKI COFFEE",
+    "url": "https://keyakicoffee.base.shop/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "宮城県仙台市若林区卸町1-3-1 2F",
+    "prefecture": "宮城県",
+    "hours": null,
+    "map_query": "KEYAKI COFFEE",
+    "nearest_station": {
+      "name": "荒井",
+      "lines": [
+        "仙台市東西線"
+      ],
+      "distance_m": 1220,
+      "walk_min": 15
+    },
+    "last_scraped_at": "2026-10-06T05:39:02.491888+00:00",
+    "lat": 38.255214,
+    "lng": 140.953101
+  },
+  {
+    "name": "Nelson Coffee Roaster",
+    "url": "https://ncr.official.ec/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "宮城県仙台市青葉区小松島3-4-1",
+    "prefecture": "宮城県",
+    "hours": null,
+    "map_query": "Nelson Coffee Roaster",
+    "nearest_station": {
+      "name": "東照宮",
+      "lines": [
+        "JR仙山線"
+      ],
+      "distance_m": 400,
+      "walk_min": 5
+    },
+    "last_scraped_at": "2026-10-06T05:39:02.491888+00:00",
+    "lat": 38.280352,
+    "lng": 140.889122
+  },
+  {
+    "name": "P-craft 珈琲豆店",
+    "url": "https://www.pcraftcoffee.com/",
+    "platform": "Wix",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認(Wix標準構成)",
+    "address": "宮城県仙台市宮城野区岩切分台3-5-12",
+    "prefecture": "宮城県",
+    "hours": null,
+    "map_query": "P-craft 珈琲豆店",
+    "nearest_station": {
+      "name": "岩切",
+      "lines": [
+        "JR利府線",
+        "JR東北本線"
+      ],
+      "distance_m": 1030,
+      "walk_min": 13
+    },
+    "last_scraped_at": "2026-10-06T05:39:02.491888+00:00",
+    "lat": 38.308577,
+    "lng": 140.960943
+  },
+  {
+    "name": "värm coffee&bakery",
+    "url": "https://caribcoffee.theshop.jp/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "宮城県仙台市青葉区木町17-15 UZENビル1F",
+    "prefecture": "宮城県",
+    "hours": null,
+    "map_query": "värm coffee&bakery",
+    "nearest_station": {
+      "name": "北仙台",
+      "lines": [
+        "仙台市南北線",
+        "JR仙山線"
+      ],
+      "distance_m": 790,
+      "walk_min": 10
+    },
+    "last_scraped_at": "2026-10-06T05:39:02.491888+00:00",
+    "lat": 38.278321,
+    "lng": 140.861515
+  },
+  {
+    "name": "コーヒービーンズストア ろじーな",
+    "url": "https://www.c-beans-store.net/",
+    "instagram_url": null,
+    "platform": "静的HTML(メール注文・数量選択フォーム、EUC-JP)",
+    "shop_type": "single_location",
+    "address": "宮城県仙台市青葉区国分町1-3-25 大橋ビル2F",
+    "prefecture": "宮城県",
+    "hours": null,
+    "map_query": "コーヒービーンズストア ろじーな 宮城県仙台市青葉区国分町1-3-25 大橋ビル2F",
+    "nearest_station": {
+      "name": "勾当台公園",
+      "lines": [
+        "仙台市南北線"
+      ],
+      "distance_m": 330,
+      "walk_min": 4
+    },
+    "data_source": "manual",
+    "source_note": "公式サイト(https://www.c-beans-store.net/)の価格表ページ(店主のお勧め page1.htm)を2026-10-06に確認。ページ内に「2026年10月サービス山岳コーヒー」の記載があり、更新は直近。全商品100g単位の価格(数量選択で複数購入時は@単価が下がる)で、100gの価格を採用。ブレンド101-104は100g 590円、他のブレンドは650円、産地別・山岳コーヒーは600-700円。「休売」表示の105 ドミニカブレンド・108 バリブレンドは価格表示が無いため除外。キシル(コーヒードライチェリー)は焙煎豆ではないため除外。ジャワロブ(準備中)とブラジルCOE(次回銘柄が見つかるまで休み)は品切れ扱い。産地別 209 リントン マンデリンの表記「2017/2018」は古い収穫年表記のままの可能性がある。エチオピア イルガチャフェ等の山岳コーヒーは焙煎度(ハイ/シティ/フルシティ/フレンチ)を選択できる(同価格)。",
+    "last_verified_at": "2026-10-06",
+    "locations": [
+      {
+        "label": null,
+        "address": "宮城県仙台市青葉区国分町1-3-25 大橋ビル2F",
+        "prefecture": "宮城県",
+        "hours": null,
+        "tel": "022-262-7498",
+        "is_headquarters": false,
+        "map_query": "コーヒービーンズストア ろじーな 宮城県仙台市青葉区国分町1-3-25 大橋ビル2F",
+        "lat": 38.264147,
+        "lng": 140.868651
+      }
+    ],
+    "lat": 38.264147,
+    "lng": 140.868651
   }
 ]

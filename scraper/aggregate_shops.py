@@ -948,6 +948,23 @@ SOURCE_FILES = {
     "珈琲屋スプレモ": "data_supremocoffee.json",
     "高谷山珈琲焙煎所": "data_takataniyamacoffee.json",
     "WELCOME COFFEE ROASTER": "data_welcomecoffeeroaster.json",
+    # 宮城県の再調査(新規発掘)
+    "45COFFEE ROASTERY": "data_45coffeeroastery.json",
+    "ANCHOR COFFEE": "data_anchorcoffee.json",
+    "アニーコーヒーロースター": "data_anniecoffee.json",
+    "assez COFFEE": "data_assezcoffee.json",
+    "Cafe de Ryuban": "data_cafederyuban.json",
+    "珈巣多夢 柏木店": "data_customkashiwagi.json",
+    "FCR": "data_fcrcoffee.json",
+    "フリゴレス": "data_frigoles.json",
+    "岳山珈琲": "data_gakuzancoffee.json",
+    "自家焙煎珈琲工房 飛行島": "data_hikozima.json",
+    "HONOKA COFFEE": "data_honokacoffee.json",
+    "いずみや珈琲豆店": "data_izumiyacoffee.json",
+    "KEYAKI COFFEE": "data_keyakicoffee.json",
+    "Nelson Coffee Roaster": "data_nelsoncoffeeroaster.json",
+    "P-craft 珈琲豆店": "data_pcraftcoffee.json",
+    "värm coffee&bakery": "data_varmcoffee.json",
 }
 
 

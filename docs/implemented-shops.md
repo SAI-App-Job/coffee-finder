@@ -5,7 +5,7 @@
 `scraper/manual/shops/`配下、それ以外は`scraper/scrape_*.py`で自動取得。
 実装を見送った店舗は`docs/not-implementable-shops.md`を参照。
 
-合計1066店舗・18424商品(生成日: 2026-10-06)。
+合計1083店舗・18674商品(生成日: 2026-10-06)。
 
 再生成コマンド:
 ```
@@ -210,17 +210,34 @@ aggregate_shops.py実行後の`git diff --staged --quiet || git commit`が該当
 | 店舗名 | 所在地 | 方式 | 件数 |
 |---|---|---|---|
 | FLAT WHITE COFFEE FACTORY |  | Shopify | 34 |
+| ANCHOR COFFEE | 気仙沼市館山1丁目6番31号 | カラーミー | 8 |
+| フリゴレス | 柴田郡柴田町船岡新栄2-3-3 | Yahoo!ショッピング | 33 |
 | 上野コーヒー | 石巻市蛇田字新谷地前100-3 | STORES(手動) | 5 |
 | Kochia 自家焙煎珈琲豆や | 石巻市松並1丁目2-9 松文漁業株式会社敷地内 裏倉庫 | 手動 | 12 |
+| P-craft 珈琲豆店 | 仙台市宮城野区岩切分台3-5-12 | Wix | 12 |
+| KEYAKI COFFEE | 仙台市若林区卸町1-3-1 2F | BASE | 11 |
 | スリーズコーヒー | 仙台市若林区五橋三丁目5-44 米沢ビル1F | 独自EC(Estore) | 27 |
 | 仙台 SPARK COFFEE | 仙台市若林区連坊小路138番地 | BASE | 27 |
+| 45COFFEE ROASTERY | 仙台市青葉区一番町 | BASE | 22 |
 | デ・スティル コーフィー | 仙台市青葉区一番町2丁目5-5 | 独自EC(らく～る) | 24 |
+| Cafe de Ryuban | 仙台市青葉区広瀬町4-27 | 独自カート | 28 |
+| コーヒービーンズストア ろじーな | 仙台市青葉区国分町1-3-25 大橋ビル2F | 手動 | 16 |
+| Nelson Coffee Roaster | 仙台市青葉区小松島3-4-1 | BASE | 20 |
+| FCR | 仙台市青葉区中江1-9-15 | BASE | 4 |
+| assez COFFEE | 仙台市青葉区中山6-5-21 | Wix | 8 |
+| 珈巣多夢 柏木店 | 仙台市青葉区柏木1-9-6 | WooCommerce | 15 |
 | 珈琲まめ坊 | 仙台市青葉区米ヶ袋1-1-12 | Shopify | 20 |
 | DAMO Kaffee Haus | 仙台市青葉区本町2-10-5 | BASE | 9 |
+| värm coffee&bakery | 仙台市青葉区木町17-15 UZENビル1F | BASE | 13 |
 | 松本珈琲店 まつりか | 仙台市青葉区立町22-14 西公園マンション1F | MakeShop | 42 |
 | 自家焙煎まめ舎 伊藤珈琲 | 仙台市泉区寺岡1-18-13 | BASE(theshop) | 2 |
 | in vitro coffee roasters | 仙台市泉区西田中字松下3-13 | BASE | 8 |
+| 岳山珈琲 | 仙台市泉区福岡字岳山7-101 | Shopify | 23 |
+| アニーコーヒーロースター | 仙台市太白区八木山香澄町3-35 | BASE | 9 |
+| いずみや珈琲豆店 | 仙台市太白区八木山緑町17-21 | BASE | 9 |
+| HONOKA COFFEE | 仙台市太白区富沢南1-4-10 | Shopify | 6 |
 | 自家焙煎珈琲店Coffee iPPO | 登米市東和町米谷字南沢156-1 | STORES(手動) | 21 |
+| 自家焙煎珈琲工房 飛行島 | 白石市福岡蔵本字西町25 | Wix | 13 |
 
 ### 京都府
 
