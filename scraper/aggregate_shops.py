@@ -905,6 +905,28 @@ SOURCE_FILES = {
     "COFFEE STAND 28": "data_stand28.json",
     "時計のない喫茶店": "data_tokeinonai.json",
     "yoshinori coffee": "data_yoshinoricoffee.json",
+    # 静岡県の再調査(新規発掘)
+    "Anny coffee": "data_annycoffee.json",
+    "ARCHIPELAGO ROASTERY": "data_archipelagoroastery.json",
+    "熱海 coffee house 茶々": "data_atamichacha.json",
+    "自家焙煎 Bulldogbeans": "data_bulldogbeans.json",
+    "chord coffee": "data_chordcoffee.json",
+    "珈琲焙煎処 earthdrop": "data_earthdrop.json",
+    "ゴードンこーひー": "data_godoncoffee.json",
+    "東伊豆珈琲焙煎所": "data_higashiizucoffee.json",
+    "hugcoffee": "data_hugcoffee.json",
+    "市野珈琲焙煎所": "data_ichinocoffee.json",
+    "ITOKU COFFEE": "data_itokucoffee.json",
+    "JUNKISSA COFFEE ROASTERY": "data_junkissacoffee.json",
+    "自家焙煎珈琲屋 花野子": "data_kanokocoffee.json",
+    "香茶屋": "data_kaorichaya.json",
+    "NEWS by 河西新聞店": "data_kawa24news.json",
+    "豆吉庵": "data_mamekichian.json",
+    "renag coffee": "data_renagcoffee.json",
+    "ties coffee roaster": "data_tiescoffee.json",
+    "トクナガコーヒー": "data_tokunagacoffee.json",
+    "富屋珈琲店": "data_tomiyacoffee.json",
+    "TRANSIT COFFEE ROASTERS": "data_transitcoffee.json",
 }
 
 

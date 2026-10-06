@@ -23066,5 +23066,840 @@
     ],
     "lat": 43.060667,
     "lng": 141.29407
+  },
+  {
+    "name": "Anny coffee",
+    "url": "https://annycoffee.shop-pro.jp/",
+    "platform": "カラーミーショップ(shop-pro.jp)",
+    "shop_type": "single_location",
+    "robots_txt_status": "許可(shop-pro.jp共通。/secure/等以外は制限なし。識別可能なUser-Agentを使用)",
+    "address": "静岡県浜松市中央区中野町17-1",
+    "prefecture": "静岡県",
+    "hours": null,
+    "map_query": "Anny coffee",
+    "nearest_station": {
+      "name": "曳馬",
+      "lines": [
+        "遠州鉄道"
+      ],
+      "distance_m": 1340,
+      "walk_min": 17
+    },
+    "last_scraped_at": "2026-10-06T05:17:29.944584+00:00",
+    "lat": 34.736467,
+    "lng": 137.727508
+  },
+  {
+    "name": "ARCHIPELAGO ROASTERY",
+    "url": "https://archipelagor.theshop.jp/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "静岡県沼津市戸田1588-3",
+    "prefecture": "静岡県",
+    "hours": null,
+    "map_query": "ARCHIPELAGO ROASTERY",
+    "nearest_station": null,
+    "last_scraped_at": "2026-10-06T05:17:29.944584+00:00",
+    "lat": 34.963041,
+    "lng": 138.788015
+  },
+  {
+    "name": "熱海 coffee house 茶々",
+    "url": "https://atamichacha.base.shop/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "静岡県熱海市清水町11-11",
+    "prefecture": "静岡県",
+    "hours": null,
+    "map_query": "熱海 coffee house 茶々",
+    "nearest_station": {
+      "name": "来宮",
+      "lines": [
+        "JR伊東線"
+      ],
+      "distance_m": 710,
+      "walk_min": 9
+    },
+    "last_scraped_at": "2026-10-06T05:17:29.944584+00:00",
+    "lat": 35.09403,
+    "lng": 139.070845
+  },
+  {
+    "name": "自家焙煎 Bulldogbeans",
+    "url": "https://bulldogbeans.base.shop/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "静岡県裾野市",
+    "prefecture": "静岡県",
+    "hours": null,
+    "map_query": "自家焙煎 Bulldogbeans",
+    "nearest_station": {
+      "name": "裾野",
+      "lines": [
+        "JR御殿場線"
+      ],
+      "distance_m": 360,
+      "walk_min": 5
+    },
+    "last_scraped_at": "2026-10-06T05:17:29.944584+00:00",
+    "lat": 35.173874,
+    "lng": 138.906801
+  },
+  {
+    "name": "chord coffee",
+    "url": "https://chordcoffee.base.ec/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "静岡県浜松市中央区高林1-1-36 古民家ヤマヤ内",
+    "prefecture": "静岡県",
+    "hours": null,
+    "map_query": "chord coffee",
+    "nearest_station": {
+      "name": "助信",
+      "lines": [
+        "遠州鉄道"
+      ],
+      "distance_m": 750,
+      "walk_min": 9
+    },
+    "last_scraped_at": "2026-10-06T05:17:29.944584+00:00",
+    "lat": 34.729332,
+    "lng": 137.733262
+  },
+  {
+    "name": "珈琲焙煎処 earthdrop",
+    "url": "https://shop.earthdrop.coffee/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "静岡県富士宮市黒田287-15",
+    "prefecture": "静岡県",
+    "hours": null,
+    "map_query": "珈琲焙煎処 earthdrop",
+    "nearest_station": {
+      "name": "源道寺",
+      "lines": [
+        "JR身延線"
+      ],
+      "distance_m": 980,
+      "walk_min": 12
+    },
+    "last_scraped_at": "2026-10-06T05:17:29.944584+00:00",
+    "lat": 35.210202,
+    "lng": 138.617652
+  },
+  {
+    "name": "ゴードンこーひー",
+    "url": "https://godoncoffee.com/",
+    "platform": "カラーミーショップ(shop-pro.jp)",
+    "shop_type": "single_location",
+    "robots_txt_status": "許可(shop-pro.jp共通。/secure/等以外は制限なし。識別可能なUser-Agentを使用)",
+    "address": "静岡県静岡市駿河区小黒1-10-37",
+    "prefecture": "静岡県",
+    "hours": null,
+    "map_query": "ゴードンこーひー",
+    "nearest_station": {
+      "name": "春日町",
+      "lines": [
+        "静岡鉄道静岡清水線"
+      ],
+      "distance_m": 1060,
+      "walk_min": 13
+    },
+    "last_scraped_at": "2026-10-06T05:17:29.944584+00:00",
+    "lat": 34.971001,
+    "lng": 138.407894
+  },
+  {
+    "name": "東伊豆珈琲焙煎所",
+    "url": "https://store.higashiizucoffee.jp/",
+    "platform": "Shopify",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認(Shopify標準構成)",
+    "address": "静岡県賀茂郡東伊豆町白田185-3",
+    "prefecture": "静岡県",
+    "hours": null,
+    "map_query": "東伊豆珈琲焙煎所",
+    "nearest_station": {
+      "name": "片瀬白田",
+      "lines": [
+        "伊豆急行線"
+      ],
+      "distance_m": 590,
+      "walk_min": 7
+    },
+    "last_scraped_at": "2026-10-06T05:17:29.944584+00:00",
+    "lat": 34.803195,
+    "lng": 139.054974
+  },
+  {
+    "name": "hugcoffee",
+    "url": "https://shop.hugcoffee.co/",
+    "platform": "Shopify",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認(Shopify標準構成)",
+    "address": "静岡県静岡市葵区西門町5-3",
+    "prefecture": "静岡県",
+    "hours": null,
+    "map_query": "hugcoffee",
+    "nearest_station": {
+      "name": "静岡",
+      "lines": [
+        "JR東海道本線",
+        "東海道新幹線"
+      ],
+      "distance_m": 630,
+      "walk_min": 8
+    },
+    "last_scraped_at": "2026-10-06T05:17:29.944584+00:00",
+    "lat": 34.96893,
+    "lng": 138.382502
+  },
+  {
+    "name": "市野珈琲焙煎所",
+    "url": "https://ichino18.base.shop/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "静岡県浜松市",
+    "prefecture": "静岡県",
+    "hours": null,
+    "map_query": "市野珈琲焙煎所",
+    "nearest_station": {
+      "name": "遠州病院",
+      "lines": [
+        "遠州鉄道"
+      ],
+      "distance_m": 670,
+      "walk_min": 8
+    },
+    "last_scraped_at": "2026-10-06T05:17:29.944584+00:00",
+    "lat": 34.710979,
+    "lng": 137.725943
+  },
+  {
+    "name": "ITOKU COFFEE",
+    "url": "https://www.store-itokucoffee.com/",
+    "platform": "ショップサーブ",
+    "shop_type": "single_location",
+    "robots_txt_status": "制限なし(/robots.txtは404。識別可能なUser-Agentを使用)",
+    "address": "静岡県伊東市玖須美元和田716-396",
+    "prefecture": "静岡県",
+    "hours": null,
+    "map_query": "ITOKU COFFEE",
+    "nearest_station": {
+      "name": "川奈",
+      "lines": [
+        "伊豆急行線"
+      ],
+      "distance_m": 1830,
+      "walk_min": 23
+    },
+    "last_scraped_at": "2026-10-06T05:17:29.944584+00:00",
+    "lat": 34.961284,
+    "lng": 139.109324
+  },
+  {
+    "name": "JUNKISSA COFFEE ROASTERY",
+    "url": "https://junkissaweb.base.shop/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "静岡県島田市稲荷2-2-3",
+    "prefecture": "静岡県",
+    "hours": null,
+    "map_query": "JUNKISSA COFFEE ROASTERY",
+    "nearest_station": {
+      "name": "京都",
+      "lines": [
+        "京都市烏丸線",
+        "東海道新幹線",
+        "JR山陰本線",
+        "JR奈良線",
+        "JR湖西線",
+        "JR京都線",
+        "JR琵琶湖線",
+        "近鉄京都線"
+      ],
+      "distance_m": 80,
+      "walk_min": 1
+    },
+    "last_scraped_at": "2026-10-06T05:17:29.944584+00:00",
+    "lat": 34.987199,
+    "lng": 135.760461
+  },
+  {
+    "name": "自家焙煎珈琲屋 花野子",
+    "url": "https://cafe-kanoko.shop-pro.jp/",
+    "platform": "カラーミーショップ(shop-pro.jp)",
+    "shop_type": "single_location",
+    "robots_txt_status": "許可(shop-pro.jp共通。/secure/等以外は制限なし。識別可能なUser-Agentを使用)",
+    "address": "静岡県沼津市今沢383-1",
+    "prefecture": "静岡県",
+    "hours": null,
+    "map_query": "自家焙煎珈琲屋 花野子",
+    "nearest_station": {
+      "name": "片浜",
+      "lines": [
+        "JR東海道本線"
+      ],
+      "distance_m": 300,
+      "walk_min": 4
+    },
+    "last_scraped_at": "2026-10-06T05:17:29.944584+00:00",
+    "lat": 35.117987,
+    "lng": 138.81567
+  },
+  {
+    "name": "香茶屋",
+    "url": "https://kaori-chaya.shop-pro.jp/",
+    "platform": "カラーミーショップ(shop-pro.jp)",
+    "shop_type": "single_location",
+    "robots_txt_status": "許可(shop-pro.jp共通。/secure/等以外は制限なし。識別可能なUser-Agentを使用)",
+    "address": "静岡県浜松市中央区舘山寺町2543-2",
+    "prefecture": "静岡県",
+    "hours": null,
+    "map_query": "香茶屋",
+    "nearest_station": {
+      "name": "気賀",
+      "lines": [
+        "天竜浜名湖鉄道"
+      ],
+      "distance_m": 5060,
+      "walk_min": 63
+    },
+    "last_scraped_at": "2026-10-06T05:17:29.944584+00:00",
+    "lat": 34.762285,
+    "lng": 137.660043
+  },
+  {
+    "name": "NEWS by 河西新聞店",
+    "url": "https://kawa24news.thebase.in/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "静岡県静岡市清水区由比寺尾63",
+    "prefecture": "静岡県",
+    "hours": null,
+    "map_query": "NEWS by 河西新聞店",
+    "nearest_station": {
+      "name": "由比",
+      "lines": [
+        "JR東海道本線"
+      ],
+      "distance_m": 860,
+      "walk_min": 11
+    },
+    "last_scraped_at": "2026-10-06T05:17:29.944584+00:00",
+    "lat": 35.093553,
+    "lng": 138.5444
+  },
+  {
+    "name": "豆吉庵",
+    "url": "https://www.mamekichi-an.com/",
+    "platform": "WordPress + WooCommerce",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認",
+    "address": "静岡県磐田市国府台86-1-105",
+    "prefecture": "静岡県",
+    "hours": null,
+    "map_query": "豆吉庵",
+    "nearest_station": {
+      "name": "磐田",
+      "lines": [
+        "JR東海道本線"
+      ],
+      "distance_m": 1290,
+      "walk_min": 16
+    },
+    "last_scraped_at": "2026-10-06T05:17:29.944584+00:00",
+    "lat": 34.720659,
+    "lng": 137.84646
+  },
+  {
+    "name": "renag coffee",
+    "url": "https://renagcoffee.jp/",
+    "platform": "Shopify",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認(Shopify標準構成)",
+    "address": "静岡県浜松市中央区尾張町127-13",
+    "prefecture": "静岡県",
+    "hours": null,
+    "map_query": "renag coffee",
+    "nearest_station": {
+      "name": "遠州病院",
+      "lines": [
+        "遠州鉄道"
+      ],
+      "distance_m": 270,
+      "walk_min": 3
+    },
+    "last_scraped_at": "2026-10-06T05:17:29.944584+00:00",
+    "lat": 34.711055,
+    "lng": 137.730333
+  },
+  {
+    "name": "ties coffee roaster",
+    "url": "https://tiescoffee.base.shop/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "静岡県浜松市中央区三方原町195-2",
+    "prefecture": "静岡県",
+    "hours": null,
+    "map_query": "ties coffee roaster",
+    "nearest_station": {
+      "name": "遠州病院",
+      "lines": [
+        "遠州鉄道"
+      ],
+      "distance_m": 670,
+      "walk_min": 8
+    },
+    "last_scraped_at": "2026-10-06T05:17:29.944584+00:00",
+    "lat": 34.710979,
+    "lng": 137.725943
+  },
+  {
+    "name": "トクナガコーヒー",
+    "url": "https://tokunagacafe.base.shop/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "静岡県静岡市清水区辻4-8-20",
+    "prefecture": "静岡県",
+    "hours": null,
+    "map_query": "トクナガコーヒー",
+    "nearest_station": {
+      "name": "県立美術館前",
+      "lines": [
+        "静岡鉄道静岡清水線"
+      ],
+      "distance_m": 650,
+      "walk_min": 8
+    },
+    "last_scraped_at": "2026-10-06T05:17:29.944584+00:00",
+    "lat": 34.995704,
+    "lng": 138.444818
+  },
+  {
+    "name": "富屋珈琲店",
+    "url": "https://tomiyacoffee.base.ec/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "静岡県静岡市葵区竜南3-16-8",
+    "prefecture": "静岡県",
+    "hours": null,
+    "map_query": "富屋珈琲店",
+    "nearest_station": {
+      "name": "長沼",
+      "lines": [
+        "静岡鉄道静岡清水線"
+      ],
+      "distance_m": 1640,
+      "walk_min": 21
+    },
+    "last_scraped_at": "2026-10-06T05:17:29.944584+00:00",
+    "lat": 35.000448,
+    "lng": 138.401419
+  },
+  {
+    "name": "TRANSIT COFFEE ROASTERS",
+    "url": "https://transitlife.thebase.in/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "静岡県浜松市中央区卸本町28",
+    "prefecture": "静岡県",
+    "hours": null,
+    "map_query": "TRANSIT COFFEE ROASTERS",
+    "nearest_station": {
+      "name": "新浜松",
+      "lines": [
+        "遠州鉄道"
+      ],
+      "distance_m": 3450,
+      "walk_min": 43
+    },
+    "last_scraped_at": "2026-10-06T05:17:29.944584+00:00",
+    "lat": 34.673065,
+    "lng": 137.724662
+  },
+  {
+    "name": "ブラウニー",
+    "url": "http://www.cafebrownie.com/",
+    "instagram_url": null,
+    "platform": "Jimdo(手動入力)",
+    "shop_type": "single_location",
+    "address": "静岡県静岡市清水区御門台1-8",
+    "prefecture": "静岡県",
+    "hours": "10:00-18:00(日曜17:00まで、月・火曜定休)",
+    "map_query": "ブラウニー 静岡県静岡市清水区御門台1-8",
+    "nearest_station": {
+      "name": "県立美術館前",
+      "lines": [
+        "静岡鉄道静岡清水線"
+      ],
+      "distance_m": 970,
+      "walk_min": 12
+    },
+    "data_source": "manual",
+    "source_note": "公式サイトのオンラインショップ(http://www.cafebrownie.com/shopping/)のストレート・ブレンド各カテゴリページを2026-10-06に確認。表示価格は200g(税込、豆のまま価格。挽く場合も同額)で、ネット注文は200gから。店頭では100gから購入可。水出しコーヒーパック・ドリップバッグは除外。全商品「在庫あり」表記。公式サイトは2026年8月まで更新あり。",
+    "last_verified_at": "2026-10-06",
+    "locations": [
+      {
+        "label": null,
+        "address": "静岡県静岡市清水区御門台1-8",
+        "prefecture": "静岡県",
+        "hours": "10:00-18:00(日曜17:00まで、月・火曜定休)",
+        "tel": "054-347-6588",
+        "is_headquarters": false,
+        "map_query": "ブラウニー 静岡県静岡市清水区御門台1-8",
+        "lat": 34.991922,
+        "lng": 138.446311
+      }
+    ],
+    "lat": 34.991922,
+    "lng": 138.446311
+  },
+  {
+    "name": "自家焙煎珈琲きのわ",
+    "url": "https://www.coffeekinowa.com/",
+    "instagram_url": null,
+    "platform": "Jimdo(手動入力)",
+    "shop_type": "single_location",
+    "address": "静岡県富士宮市",
+    "prefecture": "静岡県",
+    "hours": null,
+    "map_query": "自家焙煎珈琲きのわ 静岡県富士宮市",
+    "nearest_station": {
+      "name": "富士宮",
+      "lines": [
+        "JR身延線"
+      ],
+      "distance_m": 600,
+      "walk_min": 8
+    },
+    "data_source": "manual",
+    "source_note": "公式ショップ(https://www.coffeekinowa.com/shop)を2026-10-06に確認。価格は100g(税込。200gは別価格あり)。実店舗はなくマルシェ・イベント出店とオンライン販売。所在地は特定商取引法表記で「静岡県富士宮市」までの公開(番地は問い合わせ開示)。注文後に焙煎、発送まで約1週間。ドリップバッグは除外。焙煎度は公式ページの区分(浅煎り・中煎り・中深煎り)による。",
+    "last_verified_at": "2026-10-06",
+    "locations": [
+      {
+        "label": null,
+        "address": "静岡県富士宮市",
+        "prefecture": "静岡県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "自家焙煎珈琲きのわ 静岡県富士宮市",
+        "lat": 35.222137,
+        "lng": 138.621468
+      }
+    ],
+    "lat": 35.222137,
+    "lng": 138.621468
+  },
+  {
+    "name": "Green Coffee",
+    "url": "https://greencoffee8803.jimdofree.com/",
+    "instagram_url": null,
+    "platform": "Jimdo(手動入力)",
+    "shop_type": "single_location",
+    "address": "静岡県浜松市浜名区新都田2-19-3",
+    "prefecture": "静岡県",
+    "hours": "11:00-18:00(日曜17:00まで、金・土曜定休)",
+    "map_query": "Green Coffee 静岡県浜松市浜名区新都田2-19-3",
+    "nearest_station": {
+      "name": "フルーツパーク",
+      "lines": [
+        "天竜浜名湖鉄道"
+      ],
+      "distance_m": 1560,
+      "walk_min": 20
+    },
+    "data_source": "manual",
+    "source_note": "公式サイト(https://greencoffee8803.jimdofree.com/%E3%82%B3%E3%83%BC%E3%83%92%E3%83%BC%E8%B1%86/)の取扱いコーヒー豆ページを2026-10-06に確認。価格は重量割引方式(200g 1,350円、300g 1,900円、400g 2,400円、500g 2,750円、600g 3,300円。2026年9月〜、税込)で、最小の200g・1,350円を採用(1銘柄200gから注文可)。2025年6月に旧浜北区から移転。個別の価格・在庫表示はなく全銘柄同額。器具・ギフトは除外。",
+    "last_verified_at": "2026-10-06",
+    "locations": [
+      {
+        "label": null,
+        "address": "静岡県浜松市浜名区新都田2-19-3",
+        "prefecture": "静岡県",
+        "hours": "11:00-18:00(日曜17:00まで、金・土曜定休)",
+        "tel": "090-8731-3826",
+        "is_headquarters": false,
+        "map_query": "Green Coffee 静岡県浜松市浜名区新都田2-19-3",
+        "lat": 34.820443,
+        "lng": 137.733385
+      }
+    ],
+    "lat": 34.820443,
+    "lng": 137.733385
+  },
+  {
+    "name": "珈ノ鳥",
+    "url": "https://konotori.at/",
+    "instagram_url": null,
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "静岡県伊東市松川町1-20 えんビル1階",
+    "prefecture": "静岡県",
+    "hours": null,
+    "map_query": "珈ノ鳥 静岡県伊東市松川町1-20 えんビル1階",
+    "nearest_station": {
+      "name": "伊東",
+      "lines": [
+        "伊豆急行線",
+        "JR伊東線"
+      ],
+      "distance_m": 500,
+      "walk_min": 6
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://konotori.at/)の商品ページをブラウザfetch()で2026-10-05に確認。100gの価格を採用。在庫あり商品のみ収録(売切れの過去ロット約13件・インフューズド・SCAJセット・テスト商品は除外)。公式に自家焙煎(営業日は不定)。以前の見送り分。",
+    "last_verified_at": "2026-10-03",
+    "locations": [
+      {
+        "label": null,
+        "address": "静岡県伊東市松川町1-20 えんビル1階",
+        "prefecture": "静岡県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "珈ノ鳥 静岡県伊東市松川町1-20 えんビル1階",
+        "lat": 34.9712,
+        "lng": 139.095632
+      }
+    ],
+    "lat": 34.9712,
+    "lng": 139.095632
+  },
+  {
+    "name": "まめやかふぇ",
+    "url": "https://mameyacafe.com/",
+    "instagram_url": null,
+    "platform": "静的HTML(店頭・手動入力)",
+    "shop_type": "single_location",
+    "address": "静岡県袋井市村松2607",
+    "prefecture": "静岡県",
+    "hours": "10:00-19:00(火曜定休)",
+    "map_query": "まめやかふぇ 静岡県袋井市村松2607",
+    "nearest_station": {
+      "name": "いこいの広場",
+      "lines": [
+        "天竜浜名湖鉄道"
+      ],
+      "distance_m": 2990,
+      "walk_min": 37
+    },
+    "data_source": "manual",
+    "source_note": "公式サイト(https://mameyacafe.com/mameyacafe.html)の価格表を2026-10-06に確認。表示価格は焙煎豆200g(税込)で、2026年3月に価格改定済みの表記。通販はメール申込のみ。ドリップバッグ・カフェオレベースは除外。店頭(火曜定休)でも販売。",
+    "last_verified_at": "2026-10-06",
+    "locations": [
+      {
+        "label": null,
+        "address": "静岡県袋井市村松2607",
+        "prefecture": "静岡県",
+        "hours": "10:00-19:00(火曜定休)",
+        "tel": "0538-42-7222",
+        "is_headquarters": false,
+        "map_query": "まめやかふぇ 静岡県袋井市村松2607",
+        "lat": 34.775244,
+        "lng": 137.935003
+      }
+    ],
+    "lat": 34.775244,
+    "lng": 137.935003
+  },
+  {
+    "name": "焙煎工房 豆や",
+    "url": "http://mameya.boo.jp/",
+    "instagram_url": null,
+    "platform": "静的HTML(店頭・手動入力)",
+    "shop_type": "single_location",
+    "address": "静岡県駿東郡長泉町下土狩1321 ケニーズビル1F",
+    "prefecture": "静岡県",
+    "hours": null,
+    "map_query": "焙煎工房 豆や 静岡県駿東郡長泉町下土狩1321 ケニーズビル1F",
+    "nearest_station": {
+      "name": "下土狩",
+      "lines": [
+        "JR御殿場線"
+      ],
+      "distance_m": 80,
+      "walk_min": 1
+    },
+    "data_source": "manual",
+    "source_note": "公式サイト(http://mameya.boo.jp/menu.html)のメニューリストを2026-10-06に確認。価格は焙煎豆200g(税込)。注文後にその場で焙煎。ゴールデンマンデリンは「欠品中(9/30)」表記のためout=True。ドリップバッグ・アイスパックは除外。産地は商品名・説明文から判断(チャンチャマイヨのペルー、トラジャのインドネシアは一般的な産地知識による)。",
+    "last_verified_at": "2026-10-06",
+    "locations": [
+      {
+        "label": null,
+        "address": "静岡県駿東郡長泉町下土狩1321 ケニーズビル1F",
+        "prefecture": "静岡県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "焙煎工房 豆や 静岡県駿東郡長泉町下土狩1321 ケニーズビル1F",
+        "lat": 35.129057,
+        "lng": 138.895085
+      }
+    ],
+    "lat": 35.129057,
+    "lng": 138.895085
+  },
+  {
+    "name": "まるたけ堂珈琲",
+    "url": "https://mc-ka.com/",
+    "instagram_url": null,
+    "platform": "STORES.jp(独自ドメイン、ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "静岡県浜松市中央区佐鳴台",
+    "prefecture": "静岡県",
+    "hours": null,
+    "map_query": "まるたけ堂珈琲 静岡県浜松市中央区佐鳴台",
+    "nearest_station": {
+      "name": "高塚",
+      "lines": [
+        "JR東海道本線"
+      ],
+      "distance_m": 1930,
+      "walk_min": 24
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://mc-ka.com/)の商品ページをブラウザfetch()で2026-10-05に確認。150gの価格を採用(豆/粉の選択)。毎朝自家焙煎・焙煎後7日以内の豆のみ販売(公式 mc-ka.com)。はちみつ・調味料・雑貨・キャニスター等は除外。住所は佐鳴台までで番地は未確認。以前の見送り分。",
+    "last_verified_at": "2026-10-03",
+    "locations": [
+      {
+        "label": null,
+        "address": "静岡県浜松市中央区佐鳴台",
+        "prefecture": "静岡県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "まるたけ堂珈琲 静岡県浜松市中央区佐鳴台",
+        "lat": 34.704189,
+        "lng": 137.694053
+      }
+    ],
+    "lat": 34.704189,
+    "lng": 137.694053
+  },
+  {
+    "name": "STERNE COFFEE LABORATORY",
+    "url": "https://sternecoffee.stores.jp/",
+    "instagram_url": null,
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "静岡県富士市本市場町786",
+    "prefecture": "静岡県",
+    "hours": null,
+    "map_query": "STERNE COFFEE LABORATORY 静岡県富士市本市場町786",
+    "nearest_station": {
+      "name": "富士",
+      "lines": [
+        "JR身延線",
+        "JR東海道本線"
+      ],
+      "distance_m": 1170,
+      "walk_min": 15
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://sternecoffee.stores.jp/)の商品ページをブラウザfetch()で2026-10-05に確認。100gの価格を採用。ラッキーコーヒーマシン製直火式焙煎機で自家焙煎(公式)。タンブラー・トート等のグッズは除外。",
+    "last_verified_at": "2026-10-03",
+    "locations": [
+      {
+        "label": null,
+        "address": "静岡県富士市本市場町786",
+        "prefecture": "静岡県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "STERNE COFFEE LABORATORY 静岡県富士市本市場町786",
+        "lat": 35.158592,
+        "lng": 138.660732
+      }
+    ],
+    "lat": 35.158592,
+    "lng": 138.660732
+  },
+  {
+    "name": "鳥仙珈琲",
+    "url": "http://torisencoffee.com/",
+    "instagram_url": null,
+    "platform": "静的HTML(店頭・手動入力)",
+    "shop_type": "single_location",
+    "address": "静岡県静岡市葵区瀬名中央4-1-11",
+    "prefecture": "静岡県",
+    "hours": null,
+    "map_query": "鳥仙珈琲 静岡県静岡市葵区瀬名中央4-1-11",
+    "nearest_station": {
+      "name": "新静岡",
+      "lines": [
+        "静岡鉄道静岡清水線"
+      ],
+      "distance_m": 390,
+      "walk_min": 5
+    },
+    "data_source": "manual",
+    "source_note": "公式サイト(http://torisencoffee.com/menu.html)のメニューページを2026-10-06に確認。価格は焙煎豆100g(税込、生豆相場により変動あり)。注文はTEL・FAX・メールのみ(代引)。夜ふかしブレンドは説明・焙煎度の記載なし。メニューページはHTTPステータス404で返るが本文は正常表示される(公式ブログは2026年10月も更新あり)。フレンチモカ シダモナチュラルの産地は名称のシダモからエチオピアと判断。",
+    "last_verified_at": "2026-10-06",
+    "locations": [
+      {
+        "label": null,
+        "address": "静岡県静岡市葵区瀬名中央4-1-11",
+        "prefecture": "静岡県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "鳥仙珈琲 静岡県静岡市葵区瀬名中央4-1-11",
+        "lat": 34.975197,
+        "lng": 138.38317
+      }
+    ],
+    "lat": 34.975197,
+    "lng": 138.38317
+  },
+  {
+    "name": "Type2",
+    "url": "https://type2-coffee.com/",
+    "instagram_url": null,
+    "platform": "静的HTML(店頭・手動入力)",
+    "shop_type": "single_location",
+    "address": "静岡県浜松市中央区湖東町306",
+    "prefecture": "静岡県",
+    "hours": null,
+    "map_query": "Type2 静岡県浜松市中央区湖東町306",
+    "nearest_station": {
+      "name": "常葉大学前",
+      "lines": [
+        "天竜浜名湖鉄道"
+      ],
+      "distance_m": 4950,
+      "walk_min": 62
+    },
+    "data_source": "manual",
+    "source_note": "公式サイト(https://type2-coffee.com/lineup/)の商品ラインナップ(レギュラー28点・プレミアム103点、計131点)と各詳細ページを2026-10-06に確認。価格は100g(税込)。全豆ご注文後に焙煎(注文フォーム予約制)。産地は各詳細ページの(国名)表記から取得。ドリップバッグ(コーヒーバッグ)・フィルター等のアイテムは除外。「在庫なし」表記はout=True。",
+    "last_verified_at": "2026-10-06",
+    "locations": [
+      {
+        "label": null,
+        "address": "静岡県浜松市中央区湖東町306",
+        "prefecture": "静岡県",
+        "hours": null,
+        "tel": "053-486-3862",
+        "is_headquarters": false,
+        "map_query": "Type2 静岡県浜松市中央区湖東町306",
+        "lat": 34.775659,
+        "lng": 137.7037
+      }
+    ],
+    "lat": 34.775659,
+    "lng": 137.7037
   }
 ]

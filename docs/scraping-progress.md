@@ -8570,3 +8570,28 @@ A群・B群の一部を、スクレイパー27店舗・STORES手動入力7店舗
   CLAXON COFFEE ROASTERS(Jimdoの価格確認)・EZO COFFEE・TAILORED COFFEE・Hoccino Coffee・bokko coffee、ほか公式URL未特定の約15店(蔵人・嘉多山珈琲・小樽珈琲香房など)。
 
 - 影響: 新規17店舗・219商品を追加(993→1010店舗、17291→17510商品)。既存店舗・商品への意図しない変更が無いことをisolation-merge検証で確認済み。全店舗をgeocode-shops.js・add-nearest-station.jsで処理。
+
+## 静岡県再調査(2026-10-06)
+
+静岡県は既に14店舗が実装済み。新規発掘(サブエージェントによる公式サイト・地域メディア突き合わせ)と、技術的理由のみで見送り済みだった店舗の
+再検証で、スクレイパー21店舗・手動入力10店舗の計31店舗を実装した。
+
+### 通常スクレイプ(21店舗)
+- **Shopify**: hugcoffee(静岡市葵区、10。100g/200g/1kgの最小サイズ)・renag coffee(浜松市、3。予約焙煎、住所は特商法の法人所在地)・東伊豆珈琲焙煎所(東伊豆町、14。容量は説明文の100g)。
+- **BASE系**: トクナガコーヒー(静岡市清水区、6。以前の見送り分、本店住所は公式に合わせた)・TRANSIT COFFEE ROASTERS(浜松市、6。150g)・ties coffee roaster(浜松市、3)・市野珈琲焙煎所(浜松市、6。予約焙煎は重量null、住所は市まで)・
+  chord coffee(浜松市、4)・富屋珈琲店(静岡市葵区、26。ブレンド中心)・NEWS by 河西新聞店(静岡市清水区、9)・熱海 coffee house 茶々(熱海市、7)・珈琲焙煎処 earthdrop(富士宮市、9)・
+  ARCHIPELAGO ROASTERY(沼津市、4。住所は第三者ページによる。最寄り駅なし)・JUNKISSA COFFEE ROASTERY(島田市、11。105g、単一産地9件は完売)・自家焙煎 Bulldogbeans(裾野市、7。住所は市まで)。
+- **カラーミー/ショップサーブ/WooCommerce**: 香茶屋(浜松市、11。135g)・Anny coffee(浜松市、6)・ゴードンこーひー(静岡市駿河区、27。200g、一部250g)・自家焙煎珈琲屋 花野子(沼津市、19)・
+  ITOKU COFFEE(伊東市、42。ショップサーブ、完売17件)・豆吉庵(磐田市、8。WooCommerce)。
+
+### 手動入力(10店舗)
+- **STORES.jp(ブラウザfetch())**: STERNE COFFEE LABORATORY(富士市、8)・まるたけ堂珈琲(浜松市、12。独自ドメイン。以前の見送り分。住所は佐鳴台まで)・珈ノ鳥(伊東市、10。在庫あり商品のみ。以前の見送り分)。
+- **価格表・Jimdo**: Type2(浜松市、131。注文後焙煎の100g価格表、在庫なし79件。以前の見送り分)・焙煎工房 豆や(長泉町、42。200g)・まめやかふぇ(袋井市、18)・
+  鳥仙珈琲(静岡市葵区、12。価格表ページがHTTP 404だが本文は表示される)・ブラウニー(静岡市清水区、9。Jimdo。以前の見送り分)・Green Coffee(浜松市、6。Jimdo)・自家焙煎珈琲きのわ(富士宮市、9。実店舗なしのオンライン・マルシェ販売、住所は市まで)。
+
+### 見送り・保留
+- B群(要確認・未実装): West Goat Coffee・TONES・焙煎屋・鴨江珈琲・豆煎人・OORT CLOUD COFFEE・くらや珈琲店・イタチヤマ焙煎所・コーヒーショップ ミハル(Square)・Mary Coffee Roasters・SUZUKI COFFEE ROASTERY・
+  フレッシュビーンズ・LENY・Tsukimi-coffee・ESORA COFFEE・備屋珈琲自家焙煎工房・See The Forest・AKARI COFFEE 富士宮焙煎所・トロニカ珈琲焙煎所・ガリオン・Swing Coffee Stand・大地の珈琲豆・
+  珈琲屋スズラン・ごてんば焙煎館・Hatobacoffee・Locco ROASTERY ほか店頭のみで価格表のない約10店。
+
+- 影響: 新規31店舗・495商品を追加(1010→1041店舗、17510→18005商品)。既存店舗・商品への意図しない変更が無いことをisolation-merge検証で確認済み。全店舗をgeocode-shops.js・add-nearest-station.jsで処理。

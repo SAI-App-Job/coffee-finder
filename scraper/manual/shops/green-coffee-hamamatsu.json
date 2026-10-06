@@ -1,0 +1,120 @@
+{
+  "shop": {
+    "name": "Green Coffee",
+    "url": "https://greencoffee8803.jimdofree.com/",
+    "platform": "Jimdo(手動入力)",
+    "address": "静岡県浜松市浜名区新都田2-19-3",
+    "prefecture": "静岡県",
+    "source_note": "公式サイト(https://greencoffee8803.jimdofree.com/%E3%82%B3%E3%83%BC%E3%83%92%E3%83%BC%E8%B1%86/)の取扱いコーヒー豆ページを2026-10-06に確認。価格は重量割引方式(200g 1,350円、300g 1,900円、400g 2,400円、500g 2,750円、600g 3,300円。2026年9月〜、税込)で、最小の200g・1,350円を採用(1銘柄200gから注文可)。2025年6月に旧浜北区から移転。個別の価格・在庫表示はなく全銘柄同額。器具・ギフトは除外。",
+    "last_verified_at": "2026-10-06",
+    "tel": "090-8731-3826",
+    "hours": "11:00-18:00(日曜17:00まで、金・土曜定休)",
+    "id": "green-coffee-hamamatsu",
+    "instagram_url": null,
+    "google_maps_query": "Green Coffee 静岡県浜松市浜名区新都田2-19-3",
+    "shop_type": "single_location",
+    "data_source": "manual",
+    "lat": 34.820443,
+    "lng": 137.733385,
+    "nearest_station": {
+      "name": "フルーツパーク",
+      "lines": [
+        "天竜浜名湖鉄道"
+      ],
+      "distance_m": 1560,
+      "walk_min": 20
+    }
+  },
+  "products": [
+    {
+      "raw_name": "ブラジル ミナスジェライス州",
+      "category": "ストレート",
+      "originCountry": "ブラジル",
+      "processingMethod": null,
+      "roast": "中煎り〜深煎り",
+      "flavorNotes": "甘さとほろ苦さのバランスが心地よいコーヒー。キャラメルのようなやさしい甘さとチョコレートを思わせる味わい。精製:ナチュラル",
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1350,
+      "weightG": 200,
+      "stockStatus": "販売中",
+      "productUrl": "https://greencoffee8803.jimdofree.com/%E3%82%B3%E3%83%BC%E3%83%92%E3%83%BC%E8%B1%86/#%E3%83%96%E3%83%A9%E3%82%B8%E3%83%AB%20%E3%83%9F%E3%83%8A%E3%82%B9%E3%82%B8%E3%82%A7%E3%83%A9%E3%82%A4%E3%82%B9%E5%B7%9E",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "パプアニューギニア ウィルトン農園",
+      "category": "ストレート",
+      "originCountry": "パプアニューギニア",
+      "processingMethod": null,
+      "roast": "中深煎り",
+      "flavorNotes": "まず甘味が広がり、カカオのような心地よいビター感。とろみのある口当たり。精製:ウォッシュド",
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1350,
+      "weightG": 200,
+      "stockStatus": "販売中",
+      "productUrl": "https://greencoffee8803.jimdofree.com/%E3%82%B3%E3%83%BC%E3%83%92%E3%83%BC%E8%B1%86/#%E3%83%91%E3%83%97%E3%82%A2%E3%83%8B%E3%83%A5%E3%83%BC%E3%82%AE%E3%83%8B%E3%82%A2%20%E3%82%A6%E3%82%A3%E3%83%AB%E3%83%88%E3%83%B3%E8%BE%B2%E5%9C%92",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "グァテマラ フライハーネス地区",
+      "category": "ストレート",
+      "originCountry": "グアテマラ",
+      "processingMethod": null,
+      "roast": "中深煎り",
+      "flavorNotes": "チョコレートやナッツのような風味。ブラウンシュガーのようなやさしい甘さ。精製:ウォッシュド",
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1350,
+      "weightG": 200,
+      "stockStatus": "販売中",
+      "productUrl": "https://greencoffee8803.jimdofree.com/%E3%82%B3%E3%83%BC%E3%83%92%E3%83%BC%E8%B1%86/#%E3%82%B0%E3%82%A1%E3%83%86%E3%83%9E%E3%83%A9%20%E3%83%95%E3%83%A9%E3%82%A4%E3%83%8F%E3%83%BC%E3%83%8D%E3%82%B9%E5%9C%B0%E5%8C%BA",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "コロンビア ポパヤン地区",
+      "category": "ストレート",
+      "originCountry": "コロンビア",
+      "processingMethod": null,
+      "roast": "浅めの中煎り",
+      "flavorNotes": "オレンジやバナナを思わせるフレーバー。フルーティーな香りと滑らかなボディ。精製:ウォッシュド",
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1350,
+      "weightG": 200,
+      "stockStatus": "販売中",
+      "productUrl": "https://greencoffee8803.jimdofree.com/%E3%82%B3%E3%83%BC%E3%83%92%E3%83%BC%E8%B1%86/#%E3%82%B3%E3%83%AD%E3%83%B3%E3%83%93%E3%82%A2%20%E3%83%9D%E3%83%91%E3%83%A4%E3%83%B3%E5%9C%B0%E5%8C%BA",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "ミックスオリジン",
+      "category": "ブレンド",
+      "originCountry": null,
+      "processingMethod": null,
+      "roast": null,
+      "flavorNotes": "シングルオリジンのコーヒー豆を100%使用したオリジナルブレンド。しっかりとしたコクと心地よい甘さ",
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1350,
+      "weightG": 200,
+      "stockStatus": "販売中",
+      "productUrl": "https://greencoffee8803.jimdofree.com/%E3%82%B3%E3%83%BC%E3%83%92%E3%83%BC%E8%B1%86/#%E3%83%9F%E3%83%83%E3%82%AF%E3%82%B9%E3%82%AA%E3%83%AA%E3%82%B8%E3%83%B3",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "深煎りミックス",
+      "category": "ブレンド",
+      "originCountry": null,
+      "processingMethod": null,
+      "roast": "深煎り",
+      "flavorNotes": "ブラジルの深煎り豆をベースにしたブレンド。ほんのりとした苦味とコクのバランス",
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1350,
+      "weightG": 200,
+      "stockStatus": "販売中",
+      "productUrl": "https://greencoffee8803.jimdofree.com/%E3%82%B3%E3%83%BC%E3%83%92%E3%83%BC%E8%B1%86/#%E6%B7%B1%E7%85%8E%E3%82%8A%E3%83%9F%E3%83%83%E3%82%AF%E3%82%B9",
+      "data_source": "manual"
+    }
+  ]
+}
