@@ -987,6 +987,27 @@ SOURCE_FILES = {
     "カフェ レコンフォール": "data_reconfortcafe.json",
     "凛黎珈琲": "data_rinraycoffee.json",
     "点珈琲店": "data_tencoffee.json",
+    # 長野県の再調査(新規発掘)
+    "abbot roastery": "data_abbotroastery.json",
+    "AFTERS COFFEE": "data_afterscoffee.json",
+    "Alps coffee lAb.": "data_alpscoffeelab.json",
+    "Casa do Coffee": "data_casadocoffee.json",
+    "COFFEE ROASTERY NAKAJI": "data_coffeeroasterynakaji.json",
+    "Cotorrifaction": "data_cotorrifaction.json",
+    "Funnel Coffee Roasters": "data_funnelcoffeeroasters.json",
+    "白馬焙煎工房": "data_hakubabaisen.json",
+    "HAKUBA COFFEE STAND": "data_hakubacoffeestand.json",
+    "hanacoffee": "data_hanacoffee.json",
+    "High-Five COFFEE STAND": "data_highfivecoffeestand.json",
+    "hiranocoffee": "data_hiranocoffeenagano.json",
+    "珈琲豆焙煎 こかげ": "data_kokage.json",
+    "KOSELIG COFFEE": "data_koseligcoffee.json",
+    "マルテ珈琲焙煎所": "data_marutecoffee.json",
+    "PORT OF COFFEE": "data_portofcoffee.json",
+    "SUNMOONCOFFEE": "data_sunmooncoffee.json",
+    "Voyage Coffee": "data_voyagecoffeenagano.json",
+    "山路珈琲": "data_yamajicoffee.json",
+    "山笑う珈琲": "data_yamawaraucoffee.json",
 }
 
 

@@ -1,0 +1,105 @@
+{
+  "shop": {
+    "name": "rear coffee",
+    "url": "https://rearcoffee.stores.jp/",
+    "address": "長野県伊那市西町4865-3",
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "prefecture": "長野県",
+    "source_note": "STORES.jpの公式ショップ(https://rearcoffee.stores.jp/)の商品ページをブラウザfetch()で2026-10-11に確認。豆のまま100gを採用(挽き方違いは同一商品の選択肢)。2024年5月開店。自家焙煎は地域メディア(Web-Komachi)の記事による。",
+    "id": "rear-coffee-ina",
+    "instagram_url": null,
+    "google_maps_query": "rear coffee 長野県伊那市西町4865-3",
+    "tel": null,
+    "hours": null,
+    "shop_type": "single_location",
+    "data_source": "manual",
+    "last_verified_at": "2026-10-03",
+    "lat": 35.832248,
+    "lng": 137.951142,
+    "nearest_station": {
+      "name": "伊那市",
+      "lines": [
+        "JR飯田線"
+      ],
+      "distance_m": 1000,
+      "walk_min": 13
+    }
+  },
+  "products": [
+    {
+      "raw_name": "新緑ブレンド – Fresh Green Blend –",
+      "category": "ブレンド",
+      "originCountry": null,
+      "processingMethod": null,
+      "roast": null,
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1400,
+      "weightG": 100,
+      "stockStatus": "販売中",
+      "productUrl": "https://rearcoffee.stores.jp/items/69ff2f98717fd9d26da140da",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "パナマ ウォッシュド",
+      "category": "ストレート",
+      "originCountry": "パナマ",
+      "processingMethod": "ウォッシュド",
+      "roast": "浅煎り",
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1900,
+      "weightG": 100,
+      "stockStatus": "販売中",
+      "productUrl": "https://rearcoffee.stores.jp/items/695ede1a99e93c6641e1d46b",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "コロンビア エルパライソ ライチロット〈ダブルアナエロビック〉",
+      "category": "ストレート",
+      "originCountry": "コロンビア",
+      "processingMethod": "アナエロビック",
+      "roast": "浅煎り",
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 2100,
+      "weightG": 100,
+      "stockStatus": "販売中",
+      "productUrl": "https://rearcoffee.stores.jp/items/685cd7682d6e83690a4a6388",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "ブラジル ナチュラル",
+      "category": "ストレート",
+      "originCountry": "ブラジル",
+      "processingMethod": "ナチュラル",
+      "roast": "中深煎り",
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 990,
+      "weightG": 100,
+      "stockStatus": "販売中",
+      "productUrl": "https://rearcoffee.stores.jp/items/6728000c4c3d4e2e24fcbd3e",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "インドネシア マンデリン",
+      "category": "ストレート",
+      "originCountry": "インドネシア",
+      "processingMethod": null,
+      "roast": "深煎り",
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 980,
+      "weightG": 100,
+      "stockStatus": "販売中",
+      "productUrl": "https://rearcoffee.stores.jp/items/6727fee94c3d4e2db3fcbd5e",
+      "data_source": "manual"
+    }
+  ]
+}

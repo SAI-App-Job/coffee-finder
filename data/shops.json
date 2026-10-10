@@ -25671,5 +25671,964 @@
     ],
     "lat": 34.880341,
     "lng": 136.566628
+  },
+  {
+    "name": "abbot roastery",
+    "url": "https://abbotroast.theshop.jp/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "長野県塩尻市",
+    "prefecture": "長野県",
+    "hours": null,
+    "map_query": "abbot roastery",
+    "nearest_station": {
+      "name": "塩尻",
+      "lines": [
+        "JR中央本線",
+        "JR中央本線支線",
+        "JR篠ノ井線"
+      ],
+      "distance_m": 1260,
+      "walk_min": 16
+    },
+    "last_scraped_at": "2026-10-10T21:03:39.421022+00:00",
+    "lat": 36.124957,
+    "lng": 137.952801
+  },
+  {
+    "name": "AFTERS COFFEE",
+    "url": "https://afters.official.ec/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "長野県長野市青木島町大塚908-2",
+    "prefecture": "長野県",
+    "hours": null,
+    "map_query": "AFTERS COFFEE",
+    "nearest_station": {
+      "name": "安茂里",
+      "lines": [
+        "JR信越本線"
+      ],
+      "distance_m": 3460,
+      "walk_min": 43
+    },
+    "last_scraped_at": "2026-10-10T21:03:39.421022+00:00",
+    "lat": 36.60922,
+    "lng": 138.190223
+  },
+  {
+    "name": "Alps coffee lAb.",
+    "url": "https://alps-coffee-lab.com/",
+    "platform": "Shopify",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認(Shopify標準構成)",
+    "address": "長野県松本市中央2-4-9",
+    "prefecture": "長野県",
+    "hours": null,
+    "map_query": "Alps coffee lAb.",
+    "nearest_station": {
+      "name": "平田",
+      "lines": [
+        "JR篠ノ井線"
+      ],
+      "distance_m": 3010,
+      "walk_min": 38
+    },
+    "last_scraped_at": "2026-10-10T21:03:39.421022+00:00",
+    "lat": 36.176323,
+    "lng": 137.990054
+  },
+  {
+    "name": "Casa do Coffee",
+    "url": "https://www.casadocoffee.com/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "長野県北佐久郡御代田町草越1173-1871",
+    "prefecture": "長野県",
+    "hours": null,
+    "map_query": "Casa do Coffee",
+    "nearest_station": {
+      "name": "御代田",
+      "lines": [
+        "しなの鉄道線"
+      ],
+      "distance_m": 2200,
+      "walk_min": 28
+    },
+    "last_scraped_at": "2026-10-10T21:03:39.421022+00:00",
+    "lat": 36.311984,
+    "lng": 138.529116
+  },
+  {
+    "name": "COFFEE ROASTERY NAKAJI",
+    "url": "https://shop.coffee-nakaji.com/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "長野県東御市下之城645",
+    "prefecture": "長野県",
+    "hours": null,
+    "map_query": "COFFEE ROASTERY NAKAJI",
+    "nearest_station": {
+      "name": "滋野",
+      "lines": [
+        "しなの鉄道線"
+      ],
+      "distance_m": 3900,
+      "walk_min": 49
+    },
+    "last_scraped_at": "2026-10-10T21:03:39.421022+00:00",
+    "lat": 36.311275,
+    "lng": 138.344143
+  },
+  {
+    "name": "Cotorrifaction",
+    "url": "https://cotorri.base.shop/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "長野県塩尻市大門79-14",
+    "prefecture": "長野県",
+    "hours": null,
+    "map_query": "Cotorrifaction",
+    "nearest_station": {
+      "name": "塩尻",
+      "lines": [
+        "JR中央本線支線",
+        "JR中央本線",
+        "JR篠ノ井線"
+      ],
+      "distance_m": 330,
+      "walk_min": 4
+    },
+    "last_scraped_at": "2026-10-10T21:03:39.421022+00:00",
+    "lat": 36.116649,
+    "lng": 137.945621
+  },
+  {
+    "name": "Funnel Coffee Roasters",
+    "url": "https://www.funnelcoffee.jp/",
+    "platform": "Shopify",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認(Shopify標準構成)",
+    "address": "長野県北佐久郡御代田町塩野400-158",
+    "prefecture": "長野県",
+    "hours": null,
+    "map_query": "Funnel Coffee Roasters",
+    "nearest_station": {
+      "name": "御代田",
+      "lines": [
+        "しなの鉄道線"
+      ],
+      "distance_m": 5510,
+      "walk_min": 69
+    },
+    "last_scraped_at": "2026-10-10T21:03:39.421022+00:00",
+    "lat": 36.36715,
+    "lng": 138.492002
+  },
+  {
+    "name": "白馬焙煎工房",
+    "url": "https://www.hakubabaisen.com/",
+    "platform": "独自カート(ショップ構築システム。商品URL /item/ID/)",
+    "shop_type": "single_location",
+    "robots_txt_status": "許可(2026-10確認。/default/error/と/preview/のみDisallow)",
+    "address": "長野県北安曇郡白馬村北城3335-1",
+    "prefecture": "長野県",
+    "hours": null,
+    "map_query": "白馬焙煎工房",
+    "nearest_station": {
+      "name": "信濃森上",
+      "lines": [
+        "JR大糸線"
+      ],
+      "distance_m": 640,
+      "walk_min": 8
+    },
+    "last_scraped_at": "2026-10-10T21:03:39.421022+00:00",
+    "lat": 36.711688,
+    "lng": 137.879128
+  },
+  {
+    "name": "HAKUBA COFFEE STAND",
+    "url": "https://hakubacoffeestand.com/",
+    "platform": "カラーミーショップ(独自ドメイン)",
+    "shop_type": "single_location",
+    "robots_txt_status": "許可(2026-10確認。/secure/と/cart/以外は制限なし)",
+    "address": "長野県北安曇郡白馬村北城6360-2",
+    "prefecture": "長野県",
+    "hours": null,
+    "map_query": "HAKUBA COFFEE STAND",
+    "nearest_station": {
+      "name": "信濃森上",
+      "lines": [
+        "JR大糸線"
+      ],
+      "distance_m": 640,
+      "walk_min": 8
+    },
+    "last_scraped_at": "2026-10-10T21:03:39.421022+00:00",
+    "lat": 36.711688,
+    "lng": 137.879128
+  },
+  {
+    "name": "hanacoffee",
+    "url": "https://hanacoffee06.base.shop/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "長野県上田市",
+    "prefecture": "長野県",
+    "hours": null,
+    "map_query": "hanacoffee",
+    "nearest_station": {
+      "name": "上田",
+      "lines": [
+        "上田電鉄別所線",
+        "北陸新幹線",
+        "しなの鉄道線"
+      ],
+      "distance_m": 600,
+      "walk_min": 8
+    },
+    "last_scraped_at": "2026-10-10T21:03:39.421022+00:00",
+    "lat": 36.402119,
+    "lng": 138.249051
+  },
+  {
+    "name": "High-Five COFFEE STAND",
+    "url": "https://highfive0801.thebase.in/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "長野県松本市深志3-1-3 1階",
+    "prefecture": "長野県",
+    "hours": null,
+    "map_query": "High-Five COFFEE STAND",
+    "nearest_station": {
+      "name": "北松本",
+      "lines": [
+        "JR大糸線"
+      ],
+      "distance_m": 730,
+      "walk_min": 9
+    },
+    "last_scraped_at": "2026-10-10T21:03:39.421022+00:00",
+    "lat": 36.238635,
+    "lng": 137.968871
+  },
+  {
+    "name": "hiranocoffee",
+    "url": "https://hiranocoffee.official.ec/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "長野県長野市立町981",
+    "prefecture": "長野県",
+    "hours": null,
+    "map_query": "hiranocoffee",
+    "nearest_station": {
+      "name": "須坂",
+      "lines": [
+        "長野電鉄長野線"
+      ],
+      "distance_m": 730,
+      "walk_min": 9
+    },
+    "last_scraped_at": "2026-10-10T21:03:39.421022+00:00",
+    "lat": 36.651572,
+    "lng": 138.309124
+  },
+  {
+    "name": "珈琲豆焙煎 こかげ",
+    "url": "https://cafe-kokage.com/products/",
+    "platform": "WordPress + WooCommerce",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認",
+    "address": "長野県中野市新保935-2",
+    "prefecture": "長野県",
+    "hours": null,
+    "map_query": "珈琲豆焙煎 こかげ",
+    "nearest_station": {
+      "name": "延徳",
+      "lines": [
+        "長野電鉄長野線"
+      ],
+      "distance_m": 1180,
+      "walk_min": 15
+    },
+    "last_scraped_at": "2026-10-10T21:03:39.421022+00:00",
+    "lat": 36.726446,
+    "lng": 138.349523
+  },
+  {
+    "name": "KOSELIG COFFEE",
+    "url": "https://shop.koseligcoffee.net/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "長野県長野市篠ノ井杵淵1634-1",
+    "prefecture": "長野県",
+    "hours": null,
+    "map_query": "KOSELIG COFFEE",
+    "nearest_station": {
+      "name": "今井",
+      "lines": [
+        "JR信越本線"
+      ],
+      "distance_m": 4080,
+      "walk_min": 51
+    },
+    "last_scraped_at": "2026-10-10T21:03:39.421022+00:00",
+    "lat": 36.576662,
+    "lng": 138.184273
+  },
+  {
+    "name": "マルテ珈琲焙煎所",
+    "url": "https://shop.marutecoffee.com/",
+    "platform": "Shopify",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認(Shopify標準構成)",
+    "address": "長野県上高井郡小布施町小布施788",
+    "prefecture": "長野県",
+    "hours": null,
+    "map_query": "マルテ珈琲焙煎所",
+    "nearest_station": {
+      "name": "大嵐",
+      "lines": [
+        "JR飯田線"
+      ],
+      "distance_m": 8080,
+      "walk_min": 101
+    },
+    "last_scraped_at": "2026-10-10T21:03:39.421022+00:00",
+    "lat": 35.200156,
+    "lng": 137.730526
+  },
+  {
+    "name": "PORT OF COFFEE",
+    "url": "https://portofcoffee.thebase.in/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "長野県佐久市",
+    "prefecture": "長野県",
+    "hours": null,
+    "map_query": "PORT OF COFFEE",
+    "nearest_station": {
+      "name": "北中込",
+      "lines": [
+        "JR小海線"
+      ],
+      "distance_m": 680,
+      "walk_min": 9
+    },
+    "last_scraped_at": "2026-10-10T21:03:39.421022+00:00",
+    "lat": 36.248801,
+    "lng": 138.47677
+  },
+  {
+    "name": "SUNMOONCOFFEE",
+    "url": "https://www.sunmooncoffee.com/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "長野県中野市中野2203-1",
+    "prefecture": "長野県",
+    "hours": null,
+    "map_query": "SUNMOONCOFFEE",
+    "nearest_station": {
+      "name": "中野",
+      "lines": [
+        "上田電鉄別所線"
+      ],
+      "distance_m": 10,
+      "walk_min": 1
+    },
+    "last_scraped_at": "2026-10-10T21:03:39.421022+00:00",
+    "lat": 36.36066,
+    "lng": 138.193347
+  },
+  {
+    "name": "Voyage Coffee",
+    "url": "https://voyagecoffee.base.shop/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "長野県塩尻市",
+    "prefecture": "長野県",
+    "hours": null,
+    "map_query": "Voyage Coffee",
+    "nearest_station": {
+      "name": "塩尻",
+      "lines": [
+        "JR中央本線",
+        "JR中央本線支線",
+        "JR篠ノ井線"
+      ],
+      "distance_m": 1260,
+      "walk_min": 16
+    },
+    "last_scraped_at": "2026-10-10T21:03:39.421022+00:00",
+    "lat": 36.124957,
+    "lng": 137.952801
+  },
+  {
+    "name": "山路珈琲",
+    "url": "https://yamajicoffee.jimdofree.com/",
+    "platform": "Jimdo(独自ショップ機能)",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-10確認。/app/と/j/がDisallow・Crawl-Delay:5だが、商品が埋め込まれたトップページ'/'のみ取得)",
+    "address": "長野県飯田市錦町1-7-2",
+    "prefecture": "長野県",
+    "hours": null,
+    "map_query": "山路珈琲",
+    "nearest_station": {
+      "name": "桜町",
+      "lines": [
+        "JR飯田線"
+      ],
+      "distance_m": 170,
+      "walk_min": 2
+    },
+    "last_scraped_at": "2026-10-10T21:03:39.421022+00:00",
+    "lat": 35.523414,
+    "lng": 137.830716
+  },
+  {
+    "name": "山笑う珈琲",
+    "url": "https://www.yamawaraucoffee.com/",
+    "platform": "カラーミーショップ(独自ドメイン)",
+    "shop_type": "single_location",
+    "robots_txt_status": "許可(2026-10確認。/secure/と/cart/以外は制限なし)",
+    "address": "長野県伊那市富県1777-988",
+    "prefecture": "長野県",
+    "hours": null,
+    "map_query": "山笑う珈琲",
+    "nearest_station": {
+      "name": "伊那市",
+      "lines": [
+        "JR飯田線"
+      ],
+      "distance_m": 5470,
+      "walk_min": 68
+    },
+    "last_scraped_at": "2026-10-10T21:03:39.421022+00:00",
+    "lat": 35.806764,
+    "lng": 138.005554
+  },
+  {
+    "name": "会染焙煎工房",
+    "url": "https://aisomebaisen.stores.jp/",
+    "instagram_url": null,
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "長野県北安曇郡池田町",
+    "prefecture": "長野県",
+    "hours": null,
+    "map_query": "会染焙煎工房 長野県北安曇郡池田町",
+    "nearest_station": {
+      "name": "信濃松川",
+      "lines": [
+        "JR大糸線"
+      ],
+      "distance_m": 1470,
+      "walk_min": 18
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://aisomebaisen.stores.jp/)の商品ページをブラウザfetch()で2026-10-11に確認。100g/200g/300gのうち100gを採用。商品説明に自家焙煎豆と記載。住所は池田町まで(番地は未確認)。",
+    "last_verified_at": "2026-10-03",
+    "locations": [
+      {
+        "label": null,
+        "address": "長野県北安曇郡池田町",
+        "prefecture": "長野県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "会染焙煎工房 長野県北安曇郡池田町",
+        "lat": 36.421327,
+        "lng": 137.87459
+      }
+    ],
+    "lat": 36.421327,
+    "lng": 137.87459
+  },
+  {
+    "name": "AMBIRD Coffee&Tea",
+    "url": "https://ambird.jp/",
+    "instagram_url": null,
+    "platform": "WordPress(公式サイトの通信販売ページ)",
+    "shop_type": "single_location",
+    "address": "長野県諏訪市諏訪2-2-2",
+    "prefecture": "長野県",
+    "hours": null,
+    "map_query": "AMBIRD Coffee&Tea 長野県諏訪市諏訪2-2-2",
+    "nearest_station": {
+      "name": "茅野",
+      "lines": [
+        "JR中央本線"
+      ],
+      "distance_m": 2970,
+      "walk_min": 37
+    },
+    "data_source": "manual",
+    "source_note": "公式サイトの通信販売ページ(https://ambird.jp/onlinestore 全2ページ)と各商品ページを2026-10-11に確認。豆は200g(税込)のみの掲載で、最小重量の200gを採用。Cold Brewパック(50g×5/10パック)は除外。商品ページのURLスラッグは旧商品名のまま(例: ethiopia-gotiti がEthiopia Moplaco)で、ページ内の商品名・価格を採用した。STORES.jp側(ambird-coffee-tea.stores.jp)は使用していない。購入の在庫表示は公式ページになく、掲載中として販売中扱い。",
+    "last_verified_at": "2026-10-11",
+    "locations": [
+      {
+        "label": null,
+        "address": "長野県諏訪市諏訪2-2-2",
+        "prefecture": "長野県",
+        "hours": null,
+        "tel": "0266-75-5634",
+        "is_headquarters": false,
+        "map_query": "AMBIRD Coffee&Tea 長野県諏訪市諏訪2-2-2",
+        "lat": 35.99849,
+        "lng": 138.119024
+      }
+    ],
+    "lat": 35.99849,
+    "lng": 138.119024
+  },
+  {
+    "name": "珈琲アウラ",
+    "url": "https://auracoffee.stores.jp/",
+    "instagram_url": null,
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "長野県長野市東鶴賀町",
+    "prefecture": "長野県",
+    "hours": null,
+    "map_query": "珈琲アウラ 長野県長野市東鶴賀町",
+    "nearest_station": {
+      "name": "権堂",
+      "lines": [
+        "長野電鉄長野線"
+      ],
+      "distance_m": 690,
+      "walk_min": 9
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://auracoffee.stores.jp/)の商品ページをブラウザfetch()で2026-10-11に確認。20gサンプル・粉・業務用は除外し100gを採用。2025年5月開店の焙煎所兼喫茶(公式サイトの「アウラについて」)。住所は町名まで(特商法ページは番地非掲載)。",
+    "last_verified_at": "2026-10-03",
+    "locations": [
+      {
+        "label": null,
+        "address": "長野県長野市東鶴賀町",
+        "prefecture": "長野県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "珈琲アウラ 長野県長野市東鶴賀町",
+        "lat": 36.652394,
+        "lng": 138.199566
+      }
+    ],
+    "lat": 36.652394,
+    "lng": 138.199566
+  },
+  {
+    "name": "BORDERS COFFEE",
+    "url": "https://bordescoffee.stores.jp/",
+    "instagram_url": null,
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "長野県長野市吉田2-36-19-3",
+    "prefecture": "長野県",
+    "hours": null,
+    "map_query": "BORDERS COFFEE 長野県長野市吉田2-36-19-3",
+    "nearest_station": {
+      "name": "北長野",
+      "lines": [
+        "北しなの線"
+      ],
+      "distance_m": 60,
+      "walk_min": 1
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://bordescoffee.stores.jp/)の商品ページをブラウザfetch()で2026-10-11に確認。豆のまま100gを採用(粉は同一商品の選択肢)。公式サイト(borders-coffee.com)で自家焙煎珈琲豆屋と記載。住所は公式の店舗情報どおり。",
+    "last_verified_at": "2026-10-03",
+    "locations": [
+      {
+        "label": null,
+        "address": "長野県長野市吉田2-36-19-3",
+        "prefecture": "長野県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "BORDERS COFFEE 長野県長野市吉田2-36-19-3",
+        "lat": 36.665478,
+        "lng": 138.223014
+      }
+    ],
+    "lat": 36.665478,
+    "lng": 138.223014
+  },
+  {
+    "name": "珈琲豆工房 珈",
+    "url": "https://www.coffeekoo.com/",
+    "instagram_url": null,
+    "platform": "Webnode(自社サイト・工房販売)",
+    "shop_type": "single_location",
+    "address": "長野県諏訪郡原村17217-464",
+    "prefecture": "長野県",
+    "hours": null,
+    "map_query": "珈琲豆工房 珈 長野県諏訪郡原村17217-464",
+    "nearest_station": {
+      "name": "青柳",
+      "lines": [
+        "JR中央本線"
+      ],
+      "distance_m": 5170,
+      "walk_min": 65
+    },
+    "data_source": "manual",
+    "source_note": "公式サイトのメニューページ(https://www.coffeekoo.com/メニュー/)の価格表を2026-10-11に確認(100g/200g、税込。100gを採用)。オンラインショップはなく、「工房で販売、発送も承る(レターパックライト・ゆうパック等、送料実費)」とあり、問い合わせまたは来店で購入。営業日は金・土・月。焙煎度は店のメニューに記載なし(ペルー・コロンビアはシティロースト表記)。トップの告知は2026-09時点で更新は新しい。",
+    "last_verified_at": "2026-10-11",
+    "locations": [
+      {
+        "label": null,
+        "address": "長野県諏訪郡原村17217-464",
+        "prefecture": "長野県",
+        "hours": null,
+        "tel": "0266-55-3707",
+        "is_headquarters": false,
+        "map_query": "珈琲豆工房 珈 長野県諏訪郡原村17217-464",
+        "lat": 35.970023,
+        "lng": 138.243864
+      }
+    ],
+    "lat": 35.970023,
+    "lng": 138.243864
+  },
+  {
+    "name": "Dazy",
+    "url": "https://dazy.stores.jp/",
+    "instagram_url": null,
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "長野県安曇野市",
+    "prefecture": "長野県",
+    "hours": null,
+    "map_query": "Dazy 長野県安曇野市",
+    "nearest_station": {
+      "name": "豊科",
+      "lines": [
+        "JR大糸線"
+      ],
+      "distance_m": 640,
+      "walk_min": 8
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://dazy.stores.jp/)の商品ページをブラウザfetch()で2026-10-11に確認。全商品が200g(100gの設定なし)。商品ページに「ご注文ごとに焙煎」と記載(ショップ名にも安曇野の自家焙煎コーヒー豆店)。住所は市まで(番地は未確認)。",
+    "last_verified_at": "2026-10-03",
+    "locations": [
+      {
+        "label": null,
+        "address": "長野県安曇野市",
+        "prefecture": "長野県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "Dazy 長野県安曇野市",
+        "lat": 36.304408,
+        "lng": 137.905497
+      }
+    ],
+    "lat": 36.304408,
+    "lng": 137.905497
+  },
+  {
+    "name": "FIFTY-ONE COFFEE",
+    "url": "http://51coffee.biz/",
+    "instagram_url": null,
+    "platform": "静的HTML(自社サイト)。通販はメール・FAX・電話注文",
+    "shop_type": "single_location",
+    "address": "長野県松本市深志3-8-19",
+    "prefecture": "長野県",
+    "hours": null,
+    "map_query": "FIFTY-ONE COFFEE 長野県松本市深志3-8-19",
+    "nearest_station": {
+      "name": "北松本",
+      "lines": [
+        "JR大糸線"
+      ],
+      "distance_m": 730,
+      "walk_min": 9
+    },
+    "data_source": "manual",
+    "source_note": "公式サイトの焙煎豆一覧(http://51coffee.biz/bean.html)・一般通販のご案内(shopping.html)・営業時間アクセス(information.html)を2026-10-11に確認。販売は100g単位・税込で、2026-05-01価格改定後の価格。通販はメールまたはFAXでの注文(オンラインカートなし)。「欠品中」「終了しました」と表記された商品のうち、欠品中の2点は価格非掲載のため price=null・品切れとして収録し、期間限定で終了表記のタンザニア(ウテングレ農園)は収録していない。季節限定のハロウィンブレンドは10月上旬〜下旬の販売。ページ更新(臨時休業告知)は2026-10時点で新しい。",
+    "last_verified_at": "2026-10-11",
+    "locations": [
+      {
+        "label": null,
+        "address": "長野県松本市深志3-8-19",
+        "prefecture": "長野県",
+        "hours": null,
+        "tel": "0263-87-2537",
+        "is_headquarters": false,
+        "map_query": "FIFTY-ONE COFFEE 長野県松本市深志3-8-19",
+        "lat": 36.238635,
+        "lng": 137.968871
+      }
+    ],
+    "lat": 36.238635,
+    "lng": 137.968871
+  },
+  {
+    "name": "標高800コーヒー",
+    "url": "https://800coffee.net/",
+    "instagram_url": null,
+    "platform": "WordPress(公式サイト、注文は外部のSTORES.jpショップへ)",
+    "shop_type": "single_location",
+    "address": "長野県佐久市東立科1762 B-262",
+    "prefecture": "長野県",
+    "hours": null,
+    "map_query": "標高800コーヒー 長野県佐久市東立科1762 B-262",
+    "nearest_station": {
+      "name": "中込",
+      "lines": [
+        "JR小海線"
+      ],
+      "distance_m": 7190,
+      "walk_min": 90
+    },
+    "data_source": "manual",
+    "source_note": "公式サイトの商品一覧(https://800coffee.net/商品一覧/)を2026-10-11に確認。豆は「エチオピア・モカ(豆)」と「Premiumエチオピア・モカ(豆)」の2銘柄。各100g(税込・送料込)の価格を採用(通常 1,500円/100g・2,000円/200g、Premium 3,000円/100g・4,000円/200g)。焙煎度は購入時に浅煎り・中煎り・深煎りから選ぶ方式のため焙煎度は null。粉・ドリップパック・お試しセットは除外。オンラインショップは2025-12にSTORES.jp(800coffee.stores.jp)へ移転と告知されている(STORES側は未取得)。サイトの最新ニュースは2025-12。",
+    "last_verified_at": "2026-10-11",
+    "locations": [
+      {
+        "label": null,
+        "address": "長野県佐久市東立科1762 B-262",
+        "prefecture": "長野県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "標高800コーヒー 長野県佐久市東立科1762 B-262",
+        "lat": 36.207698,
+        "lng": 138.40456
+      }
+    ],
+    "lat": 36.207698,
+    "lng": 138.40456
+  },
+  {
+    "name": "観音崎珈琲",
+    "url": "https://kannonzakicoffeesuwa.stores.jp/",
+    "instagram_url": null,
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "長野県諏訪郡下諏訪町",
+    "prefecture": "長野県",
+    "hours": null,
+    "map_query": "観音崎珈琲 長野県諏訪郡下諏訪町",
+    "nearest_station": {
+      "name": "下諏訪",
+      "lines": [
+        "JR中央本線"
+      ],
+      "distance_m": 1650,
+      "walk_min": 21
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://kannonzakicoffeesuwa.stores.jp/)の商品ページをブラウザfetch()で2026-10-11に確認。商品ページのうち焙煎豆のみ(Tシャツ・器具・ドリップバッグ・ギフト・定期便・水出しを除外)。重量違いは最小(100g、ブレンドは200g)。公式サイトは店内の焙煎機で焙煎と記載。住所は下諏訪町まで(番地は未確認)。",
+    "last_verified_at": "2026-10-03",
+    "locations": [
+      {
+        "label": null,
+        "address": "長野県諏訪郡下諏訪町",
+        "prefecture": "長野県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "観音崎珈琲 長野県諏訪郡下諏訪町",
+        "lat": 36.077212,
+        "lng": 138.102129
+      }
+    ],
+    "lat": 36.077212,
+    "lng": 138.102129
+  },
+  {
+    "name": "rear coffee",
+    "url": "https://rearcoffee.stores.jp/",
+    "instagram_url": null,
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "長野県伊那市西町4865-3",
+    "prefecture": "長野県",
+    "hours": null,
+    "map_query": "rear coffee 長野県伊那市西町4865-3",
+    "nearest_station": {
+      "name": "伊那市",
+      "lines": [
+        "JR飯田線"
+      ],
+      "distance_m": 1000,
+      "walk_min": 13
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://rearcoffee.stores.jp/)の商品ページをブラウザfetch()で2026-10-11に確認。豆のまま100gを採用(挽き方違いは同一商品の選択肢)。2024年5月開店。自家焙煎は地域メディア(Web-Komachi)の記事による。",
+    "last_verified_at": "2026-10-03",
+    "locations": [
+      {
+        "label": null,
+        "address": "長野県伊那市西町4865-3",
+        "prefecture": "長野県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "rear coffee 長野県伊那市西町4865-3",
+        "lat": 35.832248,
+        "lng": 137.951142
+      }
+    ],
+    "lat": 35.832248,
+    "lng": 137.951142
+  },
+  {
+    "name": "自家焙煎 澤村珈琲",
+    "url": "https://sawamuracoffee.com/",
+    "instagram_url": null,
+    "platform": "WordPress(自社サイト・店頭販売)",
+    "shop_type": "single_location",
+    "address": "長野県茅野市豊平10222-26(三井の森 名店街)",
+    "prefecture": "長野県",
+    "hours": null,
+    "map_query": "自家焙煎 澤村珈琲 長野県茅野市豊平10222-26(三井の森 名店街)",
+    "nearest_station": null,
+    "data_source": "manual",
+    "source_note": "公式サイトのメニュー(https://sawamuracoffee.com/?p=19、2026-08-17更新)を2026-10-11に確認。「珈琲豆(各種100g) 500円～」「ブラジル・コロンビア・マンデリン・モカゲイシャ・モカイルガチャフェ・ホンジュラス・マチュピチュ等、ブルーマウンテンは100g 1500円」とあり、個別の価格が明記されているのはブルーマウンテンのみのため、他の豆は価格 null(500円〜は下限であり個別価格ではない)。店頭販売のみ。公式サイト(アクセス・メニュー)には、八ヶ岳の麓・標高1200mの森の山小屋の喫茶店とあり、住所・電話(0266-78-8702)も固有で、ベーカリーの「沢村」(チェーン)に関する記載はなく別店舗と判断した。営業は不定期(次回営業日がサイトに記載)。",
+    "last_verified_at": "2026-10-11",
+    "locations": [
+      {
+        "label": null,
+        "address": "長野県茅野市豊平10222-26(三井の森 名店街)",
+        "prefecture": "長野県",
+        "hours": null,
+        "tel": "0266-78-8702",
+        "is_headquarters": false,
+        "map_query": "自家焙煎 澤村珈琲 長野県茅野市豊平10222-26(三井の森 名店街)",
+        "lat": 36.008593,
+        "lng": 138.295905
+      }
+    ],
+    "lat": 36.008593,
+    "lng": 138.295905
+  },
+  {
+    "name": "月詠珈琲",
+    "url": "https://www.matsumoto-tsukuyomicoffee.com/",
+    "instagram_url": null,
+    "platform": "WordPress(自社サイト・店頭販売)",
+    "shop_type": "single_location",
+    "address": "長野県松本市島内7717",
+    "prefecture": "長野県",
+    "hours": null,
+    "map_query": "月詠珈琲 長野県松本市島内7717",
+    "nearest_station": {
+      "name": "島内",
+      "lines": [
+        "JR大糸線"
+      ],
+      "distance_m": 20,
+      "walk_min": 1
+    },
+    "data_source": "manual",
+    "source_note": "公式サイトのメニューページ(https://www.matsumoto-tsukuyomicoffee.com/menu/)の「Shop【コーヒー豆販売】」の価格表を2026-10-11に確認(100g、税込)。通販は非公開で店頭販売のみ(トップのオンラインショップ欄に商品掲載なし)。サイトのNEWS最新は2025.11.05で更新がやや古い。ヨハネス・フェルメールは秋季限定ブレンド。",
+    "last_verified_at": "2026-10-11",
+    "locations": [
+      {
+        "label": null,
+        "address": "長野県松本市島内7717",
+        "prefecture": "長野県",
+        "hours": null,
+        "tel": "0263-74-1487",
+        "is_headquarters": false,
+        "map_query": "月詠珈琲 長野県松本市島内7717",
+        "lat": 36.246964,
+        "lng": 137.945087
+      }
+    ],
+    "lat": 36.246964,
+    "lng": 137.945087
+  },
+  {
+    "name": "UNITE COFFEE",
+    "url": "https://unitecoffee.stores.jp/",
+    "instagram_url": null,
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "長野県大町市大町堀六日町4098-4",
+    "prefecture": "長野県",
+    "hours": null,
+    "map_query": "UNITE COFFEE 長野県大町市大町堀六日町4098-4",
+    "nearest_station": {
+      "name": "為栗",
+      "lines": [
+        "JR飯田線"
+      ],
+      "distance_m": 4390,
+      "walk_min": 55
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://unitecoffee.stores.jp/)の商品ページをブラウザfetch()で2026-10-11に確認。100gと200gが別商品で並ぶため100gを代表に採用(粉は同一商品の選択肢)。公式ABOUTに自家焙煎珈琲豆屋、カフェバッハ出身で2009年創業と記載。住所はNAVITIMEの店舗情報による。登録済みの上田市のTORTOISE COFFEE BEANS BY UNITEとは別事業と思われる。",
+    "last_verified_at": "2026-10-03",
+    "locations": [
+      {
+        "label": null,
+        "address": "長野県大町市大町堀六日町4098-4",
+        "prefecture": "長野県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "UNITE COFFEE 長野県大町市大町堀六日町4098-4",
+        "lat": 35.302355,
+        "lng": 137.89548
+      }
+    ],
+    "lat": 35.302355,
+    "lng": 137.89548
+  },
+  {
+    "name": "VACILANDO COFFEE",
+    "url": "https://vacilando-coffee.com/",
+    "instagram_url": null,
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "長野県上田市中央2-6-5",
+    "prefecture": "長野県",
+    "hours": null,
+    "map_query": "VACILANDO COFFEE 長野県上田市中央2-6-5",
+    "nearest_station": {
+      "name": "伊那上郷",
+      "lines": [
+        "JR飯田線"
+      ],
+      "distance_m": 530,
+      "walk_min": 7
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://vacilando-coffee.com/)の商品ページをブラウザfetch()で2026-10-11に確認。100g/200g/500g/1kgが別商品または選択肢で並ぶため100gを採用。地域メディア(Web-Komachi)の記事に自家焙煎コーヒー店と記載。住所は記事による。",
+    "last_verified_at": "2026-10-03",
+    "locations": [
+      {
+        "label": null,
+        "address": "長野県上田市中央2-6-5",
+        "prefecture": "長野県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "VACILANDO COFFEE 長野県上田市中央2-6-5",
+        "lat": 35.516061,
+        "lng": 137.842021
+      }
+    ],
+    "lat": 35.516061,
+    "lng": 137.842021
   }
 ]

@@ -1,0 +1,60 @@
+{
+  "shop": {
+    "name": "標高800コーヒー",
+    "url": "https://800coffee.net/",
+    "platform": "WordPress(公式サイト、注文は外部のSTORES.jpショップへ)",
+    "address": "長野県佐久市東立科1762 B-262",
+    "source_note": "公式サイトの商品一覧(https://800coffee.net/商品一覧/)を2026-10-11に確認。豆は「エチオピア・モカ(豆)」と「Premiumエチオピア・モカ(豆)」の2銘柄。各100g(税込・送料込)の価格を採用(通常 1,500円/100g・2,000円/200g、Premium 3,000円/100g・4,000円/200g)。焙煎度は購入時に浅煎り・中煎り・深煎りから選ぶ方式のため焙煎度は null。粉・ドリップパック・お試しセットは除外。オンラインショップは2025-12にSTORES.jp(800coffee.stores.jp)へ移転と告知されている(STORES側は未取得)。サイトの最新ニュースは2025-12。",
+    "prefecture": "長野県",
+    "last_verified_at": "2026-10-11",
+    "id": "hyoukou800-coffee",
+    "instagram_url": null,
+    "google_maps_query": "標高800コーヒー 長野県佐久市東立科1762 B-262",
+    "tel": null,
+    "hours": null,
+    "shop_type": "single_location",
+    "data_source": "manual",
+    "lat": 36.207698,
+    "lng": 138.40456,
+    "nearest_station": {
+      "name": "中込",
+      "lines": [
+        "JR小海線"
+      ],
+      "distance_m": 7190,
+      "walk_min": 90
+    }
+  },
+  "products": [
+    {
+      "raw_name": "エチオピア・モカ",
+      "category": "ストレート",
+      "originCountry": "エチオピア",
+      "processingMethod": null,
+      "roast": null,
+      "flavorNotes": "浅煎り:さわやかな酸味/中煎り:マイルドな甘み/深煎り:コクのある苦味(焙煎度は購入時に選択)",
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1500,
+      "weightG": 100,
+      "stockStatus": "販売中",
+      "productUrl": "https://800coffee.net/%e5%95%86%e5%93%81%e4%b8%80%e8%a6%a7/#%E3%82%A8%E3%83%81%E3%82%AA%E3%83%94%E3%82%A2%E3%83%BB%E3%83%A2%E3%82%AB",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "Premiumエチオピア・モカ",
+      "category": "ストレート",
+      "originCountry": "エチオピア",
+      "processingMethod": null,
+      "roast": null,
+      "flavorNotes": "Premiumシリーズ:陶器のツボを回しながら直火で焙煎(渋み・えぐみが無い)。焙煎度は購入時に選択",
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 3000,
+      "weightG": 100,
+      "stockStatus": "販売中",
+      "productUrl": "https://800coffee.net/%e5%95%86%e5%93%81%e4%b8%80%e8%a6%a7/#Premium%E3%82%A8%E3%83%81%E3%82%AA%E3%83%94%E3%82%A2%E3%83%BB%E3%83%A2%E3%82%AB",
+      "data_source": "manual"
+    }
+  ]
+}

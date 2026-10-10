@@ -2747,3 +2747,14 @@ docs/scraping-progress.md「栃木県再調査」冒頭の教訓セクション�
 
 ### colorful coffee(津市)／三重珈琲Direct(津市)／LIAISON Coffee Roasters(伊勢市)
 - 見送り理由: colorful coffeeはオンラインショップがComing Soonのまま、三重珈琲Directは自家焙煎の明記が確認できない(注文焙煎と推定のみ)、LIAISON Coffee RoastersはSquare Onlineが動的描画で価格を取得できなかった。
+
+## 長野県再調査(2026-10-11)
+
+### ai coffee(大町市)／Roaster hygge(茅野市)
+- 見送り理由: ai coffeeはSTORESの全21商品が売り切れで現行の販売状況を確認できない。Roaster hyggeはSTORESの商品が銘柄別でなくアソート(2種・3種)のみ。
+
+### 丸山珈琲
+- 見送り理由: 12店舗(11店舗以上のチェーン)。
+
+### Un Cafe Sucre(軽井沢焙煎所)
+- 見送り理由: 本社・主店舗は東京都墨田区で、Shopifyに別ブランドが混在(213商品)。長野県の店として扱えるか判断待ち。

@@ -1,0 +1,37 @@
+{
+  "shop": {
+    "name": "自家焙煎 澤村珈琲",
+    "url": "https://sawamuracoffee.com/",
+    "platform": "WordPress(自社サイト・店頭販売)",
+    "address": "長野県茅野市豊平10222-26(三井の森 名店街)",
+    "tel": "0266-78-8702",
+    "source_note": "公式サイトのメニュー(https://sawamuracoffee.com/?p=19、2026-08-17更新)を2026-10-11に確認。「珈琲豆(各種100g) 500円～」「ブラジル・コロンビア・マンデリン・モカゲイシャ・モカイルガチャフェ・ホンジュラス・マチュピチュ等、ブルーマウンテンは100g 1500円」とあり、個別の価格が明記されているのはブルーマウンテンのみのため、他の豆は価格 null(500円〜は下限であり個別価格ではない)。店頭販売のみ。公式サイト(アクセス・メニュー)には、八ヶ岳の麓・標高1200mの森の山小屋の喫茶店とあり、住所・電話(0266-78-8702)も固有で、ベーカリーの「沢村」(チェーン)に関する記載はなく別店舗と判断した。営業は不定期(次回営業日がサイトに記載)。",
+    "prefecture": "長野県",
+    "last_verified_at": "2026-10-11",
+    "id": "sawamura-coffee-chino",
+    "instagram_url": null,
+    "google_maps_query": "自家焙煎 澤村珈琲 長野県茅野市豊平10222-26(三井の森 名店街)",
+    "hours": null,
+    "shop_type": "single_location",
+    "data_source": "manual",
+    "lat": 36.008593,
+    "lng": 138.295905
+  },
+  "products": [
+    {
+      "raw_name": "ブルーマウンテン",
+      "category": "ストレート",
+      "originCountry": "ジャマイカ",
+      "processingMethod": null,
+      "roast": null,
+      "flavorNotes": "メニュー記載: ブルーマウンテンは100g 1500円",
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1500,
+      "weightG": 100,
+      "stockStatus": "販売中",
+      "productUrl": "https://sawamuracoffee.com/?p=19#%E3%83%96%E3%83%AB%E3%83%BC%E3%83%9E%E3%82%A6%E3%83%B3%E3%83%86%E3%83%B3",
+      "data_source": "manual"
+    }
+  ]
+}

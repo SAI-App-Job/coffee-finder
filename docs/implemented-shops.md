@@ -5,7 +5,7 @@
 `scraper/manual/shops/`配下、それ以外は`scraper/scrape_*.py`で自動取得。
 実装を見送った店舗は`docs/not-implementable-shops.md`を参照。
 
-合計1111店舗・19022商品(生成日: 2026-10-10)。
+合計1145店舗・19376商品(生成日: 2026-10-10)。
 
 再生成コマンド:
 ```
@@ -940,16 +940,50 @@ aggregate_shops.py実行後の`git diff --staged --quiet || git commit`が該当
 
 | 店舗名 | 所在地 | 方式 | 件数 |
 |---|---|---|---|
+| Dazy | 安曇野市 | STORES(手動) | 12 |
 | カフェコーデ | 伊那市境451-1 | MakeShop | 16 |
 | 風雲Coffeeroastery | 伊那市高遠町 | BASE | 4 |
+| rear coffee | 伊那市西町4865-3 | STORES(手動) | 5 |
+| 山笑う珈琲 | 伊那市富県1777-988 | カラーミー | 16 |
+| abbot roastery | 塩尻市 | BASE | 16 |
+| Voyage Coffee | 塩尻市 | BASE | 7 |
 | 三澤珈琲 | 塩尻市金井263-1 | カラーミー | 31 |
+| Cotorrifaction | 塩尻市大門79-14 | BASE | 17 |
+| 自家焙煎 澤村珈琲 | 茅野市豊平10222-26(三井の森 名店街) | 手動 | 1 |
+| PORT OF COFFEE | 佐久市 | BASE | 6 |
+| 標高800コーヒー | 佐久市東立科1762 B-262 | STORES(手動) | 2 |
+| High-Five COFFEE STAND | 松本市深志3-1-3 1階 | BASE | 13 |
+| FIFTY-ONE COFFEE | 松本市深志3-8-19 | 手動 | 20 |
+| Alps coffee lAb. | 松本市中央2-4-9 | Shopify | 5 |
+| 月詠珈琲 | 松本市島内7717 | 手動 | 7 |
+| マルテ珈琲焙煎所 | 上高井郡小布施町小布施788 | Shopify | 23 |
 | Foret coffee | 上水内郡信濃町大字穂波1495 | BASE | 7 |
+| hanacoffee | 上田市 | BASE | 8 |
 | 重澤珈琲 | 上田市中央2-24-4 | BASE | 6 |
 | TORTOISE COFFEE | 上田市中央2-5-4 斎藤ビル1階 | BASE | 20 |
+| VACILANDO COFFEE | 上田市中央2-6-5 | STORES(手動) | 8 |
 | 亀山珈琲焙煎所 | 上田市中央5-6-26 | BASE | 11 |
+| 観音崎珈琲 | 諏訪郡下諏訪町 | STORES(手動) | 12 |
+| 珈琲豆工房 珈 | 諏訪郡原村17217-464 | 手動 | 10 |
 | ローワンコーヒーロースターズ | 諏訪郡原村払沢4662番 | BASE | 16 |
 | Gardenia coffee | 諏訪郡富士見町富士見3292 | BASE | 2 |
+| AMBIRD Coffee&Tea | 諏訪市諏訪2-2-2 | 手動 | 8 |
+| UNITE COFFEE | 大町市大町堀六日町4098-4 | STORES(手動) | 22 |
+| 珈琲豆焙煎 こかげ | 中野市新保935-2 | WooCommerce | 10 |
+| SUNMOONCOFFEE | 中野市中野2203-1 | BASE | 3 |
+| BORDERS COFFEE | 長野市吉田2-36-19-3 | STORES(手動) | 14 |
 | ジオグラフィー | 長野市七瀬南部368-1 南部ビル1F | BASE | 15 |
+| KOSELIG COFFEE | 長野市篠ノ井杵淵1634-1 | BASE | 6 |
+| AFTERS COFFEE | 長野市青木島町大塚908-2 | BASE | 7 |
+| 珈琲アウラ | 長野市東鶴賀町 | STORES(手動) | 7 |
+| hiranocoffee | 長野市立町981 | BASE | 6 |
+| COFFEE ROASTERY NAKAJI | 東御市下之城645 | BASE | 7 |
+| 山路珈琲 | 飯田市錦町1-7-2 | Jimdo(独自ショップ機能) | 10 |
+| 会染焙煎工房 | 北安曇郡池田町 | STORES(手動) | 9 |
+| 白馬焙煎工房 | 北安曇郡白馬村北城3335-1 | 独自カート(ショップ構築システム。商品URL /item/ID/) | 14 |
+| HAKUBA COFFEE STAND | 北安曇郡白馬村北城6360-2 | カラーミー | 23 |
+| Funnel Coffee Roasters | 北佐久郡御代田町塩野400-158 | Shopify | 7 |
+| Casa do Coffee | 北佐久郡御代田町草越1173-1871 | BASE | 13 |
 | 珈琲焙煎工房 豆玄 | 北佐久郡御代田町馬瀬口460-7 | カラーミー | 20 |
 | ヤマとカワ珈琲店 | 木曽郡木曽町開田高原末川2799-1 | カラーミー | 21 |
 
