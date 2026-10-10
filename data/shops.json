@@ -25213,5 +25213,463 @@
     ],
     "lat": 37.820728,
     "lng": 138.938229
+  },
+  {
+    "name": "手焙煎珈琲あさぎ",
+    "url": "https://asagi-roast.com/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "三重県四日市市富田栄町29-1",
+    "prefecture": "三重県",
+    "hours": null,
+    "map_query": "手焙煎珈琲あさぎ",
+    "nearest_station": {
+      "name": "近鉄富田",
+      "lines": [
+        "三岐鉄道三岐線",
+        "近鉄名古屋線"
+      ],
+      "distance_m": 460,
+      "walk_min": 6
+    },
+    "last_scraped_at": "2026-10-10T21:00:18.780387+00:00",
+    "lat": 35.010022,
+    "lng": 136.646737
+  },
+  {
+    "name": "HOME COFFEE ROASTER",
+    "url": "https://homecoffeeroaster.jp/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "三重県津市白山町白山台1001-800",
+    "prefecture": "三重県",
+    "hours": null,
+    "map_query": "HOME COFFEE ROASTER",
+    "nearest_station": {
+      "name": "榊原温泉口",
+      "lines": [
+        "近鉄大阪線"
+      ],
+      "distance_m": 870,
+      "walk_min": 11
+    },
+    "last_scraped_at": "2026-10-10T21:00:18.780387+00:00",
+    "lat": 34.669557,
+    "lng": 136.34134
+  },
+  {
+    "name": "ホリ珈琲",
+    "url": "https://hori-coffee.co.jp/",
+    "platform": "WordPress + Welcart",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認(WordPress標準構成)",
+    "address": "三重県桑名市中央町2-11",
+    "prefecture": "三重県",
+    "hours": null,
+    "map_query": "ホリ珈琲",
+    "nearest_station": {
+      "name": "西桑名",
+      "lines": [
+        "三岐鉄道北勢線"
+      ],
+      "distance_m": 450,
+      "walk_min": 6
+    },
+    "last_scraped_at": "2026-10-10T21:00:18.780387+00:00",
+    "lat": 35.062406,
+    "lng": 136.68692
+  },
+  {
+    "name": "金川珈琲",
+    "url": "https://shop.kanecafe.com/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "三重県多気郡多気町丹生1618",
+    "prefecture": "三重県",
+    "hours": null,
+    "map_query": "金川珈琲",
+    "nearest_station": {
+      "name": "栃原",
+      "lines": [
+        "JR紀勢本線"
+      ],
+      "distance_m": 3430,
+      "walk_min": 43
+    },
+    "last_scraped_at": "2026-10-10T21:00:18.780387+00:00",
+    "lat": 34.473504,
+    "lng": 136.49629
+  },
+  {
+    "name": "Mirai Seeds (Roastery & Laboratory)",
+    "url": "https://www.miraiseeds.net/",
+    "platform": "Shopify",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認(Shopify標準構成)",
+    "address": "三重県津市芸濃町椋本5478",
+    "prefecture": "三重県",
+    "hours": null,
+    "map_query": "Mirai Seeds (Roastery & Laboratory)",
+    "nearest_station": {
+      "name": "下庄",
+      "lines": [
+        "JR紀勢本線"
+      ],
+      "distance_m": 4320,
+      "walk_min": 54
+    },
+    "last_scraped_at": "2026-10-10T21:00:18.780387+00:00",
+    "lat": 34.811753,
+    "lng": 136.432484
+  },
+  {
+    "name": "なかむら珈琲",
+    "url": "https://store.shopping.yahoo.co.jp/coffee-nakamura/",
+    "platform": "Yahoo!ショッピング",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(Yahoo!ショッピング標準。/cgi-bin/等のみDisallow、search.htmlは取得可)",
+    "address": "三重県伊勢市船江2丁目20-22",
+    "prefecture": "三重県",
+    "hours": null,
+    "map_query": "なかむら珈琲",
+    "nearest_station": {
+      "name": "伊勢市",
+      "lines": [
+        "近鉄山田線",
+        "JR参宮線"
+      ],
+      "distance_m": 1380,
+      "walk_min": 17
+    },
+    "last_scraped_at": "2026-10-10T21:00:18.780387+00:00",
+    "lat": 34.499824,
+    "lng": 136.721973
+  },
+  {
+    "name": "自家焙煎珈琲 合歓の木",
+    "url": "https://www.nemunokicafe.jp/",
+    "platform": "独自の静的HTML+買物カゴCGI",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認(独自サイト、/shop/ は取得可)",
+    "address": "三重県津市羽所町356 エイトビル1階",
+    "prefecture": "三重県",
+    "hours": null,
+    "map_query": "自家焙煎珈琲 合歓の木",
+    "nearest_station": {
+      "name": "津",
+      "lines": [
+        "JR紀勢本線",
+        "伊勢鉄伊勢線",
+        "近鉄名古屋線"
+      ],
+      "distance_m": 120,
+      "walk_min": 2
+    },
+    "last_scraped_at": "2026-10-10T21:00:18.780387+00:00",
+    "lat": 34.733407,
+    "lng": 136.511374
+  },
+  {
+    "name": "OTOMONI COFFEE Roast and Labo 明和店",
+    "url": "https://otomoni.theshop.jp/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "三重県多気郡明和町有爾中1320",
+    "prefecture": "三重県",
+    "hours": null,
+    "map_query": "OTOMONI COFFEE Roast and Labo 明和店",
+    "nearest_station": {
+      "name": "斎宮",
+      "lines": [
+        "近鉄山田線"
+      ],
+      "distance_m": 1720,
+      "walk_min": 22
+    },
+    "last_scraped_at": "2026-10-10T21:00:18.780387+00:00",
+    "lat": 34.522694,
+    "lng": 136.61915
+  },
+  {
+    "name": "PROUD COFFEE ROASTERY",
+    "url": "https://proudcoffee.official.ec/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "三重県伊勢市一之木5-13-1",
+    "prefecture": "三重県",
+    "hours": null,
+    "map_query": "PROUD COFFEE ROASTERY",
+    "nearest_station": {
+      "name": "伊勢市",
+      "lines": [
+        "近鉄山田線",
+        "JR参宮線"
+      ],
+      "distance_m": 800,
+      "walk_min": 10
+    },
+    "last_scraped_at": "2026-10-10T21:00:18.780387+00:00",
+    "lat": 34.499172,
+    "lng": 136.708516
+  },
+  {
+    "name": "カフェ レコンフォール",
+    "url": "https://reconfort.theshop.jp/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "三重県四日市市堀木2-13-2-2",
+    "prefecture": "三重県",
+    "hours": null,
+    "map_query": "カフェ レコンフォール",
+    "nearest_station": {
+      "name": "近鉄四日市",
+      "lines": [
+        "近鉄湯の山線",
+        "近鉄名古屋線"
+      ],
+      "distance_m": 660,
+      "walk_min": 8
+    },
+    "last_scraped_at": "2026-10-10T21:00:18.780387+00:00",
+    "lat": 34.971399,
+    "lng": 136.614296
+  },
+  {
+    "name": "凛黎珈琲",
+    "url": "https://rinraycoffee.thebase.in/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "三重県四日市市富州原町7-10",
+    "prefecture": "三重県",
+    "hours": null,
+    "map_query": "凛黎珈琲",
+    "nearest_station": {
+      "name": "富田",
+      "lines": [
+        "JR関西本線"
+      ],
+      "distance_m": 530,
+      "walk_min": 7
+    },
+    "last_scraped_at": "2026-10-10T21:00:18.780387+00:00",
+    "lat": 35.009382,
+    "lng": 136.658793
+  },
+  {
+    "name": "点珈琲店",
+    "url": "https://tencoffee.shopinfo.jp/",
+    "platform": "Ameba Ownd(BASE決済)",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認(Ameba Ownd標準構成)",
+    "address": "三重県名張市赤目町丈六532-1",
+    "prefecture": "三重県",
+    "hours": null,
+    "map_query": "点珈琲店",
+    "nearest_station": {
+      "name": "赤目口",
+      "lines": [
+        "近鉄大阪線"
+      ],
+      "distance_m": 120,
+      "walk_min": 2
+    },
+    "last_scraped_at": "2026-10-10T21:00:18.780387+00:00",
+    "lat": 34.599813,
+    "lng": 136.07261
+  },
+  {
+    "name": "BIKOU COFFEE",
+    "url": "https://bikoucoffee-42824.stores.jp/",
+    "instagram_url": null,
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "三重県亀山市井尻町997-4",
+    "prefecture": "三重県",
+    "hours": null,
+    "map_query": "BIKOU COFFEE 三重県亀山市井尻町997-4",
+    "nearest_station": {
+      "name": "井田川",
+      "lines": [
+        "JR関西本線"
+      ],
+      "distance_m": 1850,
+      "walk_min": 23
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://bikoucoffee-42824.stores.jp/)の商品ページをブラウザfetch()で2026-10-11に確認。豆のまま(挽き方違いは同一商品の選択肢)、ブレンドと生豆区分は商品名どおり。ドリップバッグ・ギフト・セットを除外。重量は商品名の表記(ブラジル カルモデミナスブルボンは記載なしでnull)。公式サイトはご来店時に焙煎と記載(フジローヤル半熱風など)。",
+    "last_verified_at": "2026-10-03",
+    "locations": [
+      {
+        "label": null,
+        "address": "三重県亀山市井尻町997-4",
+        "prefecture": "三重県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "BIKOU COFFEE 三重県亀山市井尻町997-4",
+        "lat": 34.853888,
+        "lng": 136.48261
+      }
+    ],
+    "lat": 34.853888,
+    "lng": 136.48261
+  },
+  {
+    "name": "Cafe de UN Daniel's",
+    "url": "https://cafedeun-daniels.stores.jp/",
+    "instagram_url": null,
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "三重県桑名市大央町49-6",
+    "prefecture": "三重県",
+    "hours": null,
+    "map_query": "Cafe de UN Daniel's 三重県桑名市大央町49-6",
+    "nearest_station": {
+      "name": "西桑名",
+      "lines": [
+        "三岐鉄道北勢線"
+      ],
+      "distance_m": 720,
+      "walk_min": 9
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://cafedeun-daniels.stores.jp/)の商品ページをブラウザfetch()で2026-10-11に確認。200g(最小の小売サイズ)と500gが別商品で並ぶため200gを採用。インフューズドコーヒー(バーボン・ラム・コロンビアのトロピカルウォッシュド等の別商品)・ドリップバッグ・ギフト・器具は除外。公式サイトに自家焙煎珈琲豆の販売ページ。姉妹店「吉良屋珈琲」の通販もこのSTORESに統合。",
+    "last_verified_at": "2026-10-03",
+    "locations": [
+      {
+        "label": null,
+        "address": "三重県桑名市大央町49-6",
+        "prefecture": "三重県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "Cafe de UN Daniel's 三重県桑名市大央町49-6",
+        "lat": 35.061493,
+        "lng": 136.690111
+      }
+    ],
+    "lat": 35.061493,
+    "lng": 136.690111
+  },
+  {
+    "name": "camino coffee",
+    "url": "https://caminocoffee.stores.jp/",
+    "instagram_url": null,
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "三重県伊勢市吹上1丁目4-13",
+    "prefecture": "三重県",
+    "hours": null,
+    "map_query": "camino coffee 三重県伊勢市吹上1丁目4-13",
+    "nearest_station": {
+      "name": "伊勢市",
+      "lines": [
+        "JR参宮線",
+        "近鉄山田線"
+      ],
+      "distance_m": 130,
+      "walk_min": 2
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://caminocoffee.stores.jp/)の商品ページをブラウザfetch()で2026-10-11に確認。豆のまま200gを採用(商品名の表記)。ドリップバッグ・セット・業務用800gを除外。店主ブログに自家焙煎コーヒー専門店と記載。公式サイトなし(STORESのみ)。住所は店主ブログの自己紹介による。",
+    "last_verified_at": "2026-10-03",
+    "locations": [
+      {
+        "label": null,
+        "address": "三重県伊勢市吹上1丁目4-13",
+        "prefecture": "三重県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "camino coffee 三重県伊勢市吹上1丁目4-13",
+        "lat": 34.490813,
+        "lng": 136.710987
+      }
+    ],
+    "lat": 34.490813,
+    "lng": 136.710987
+  },
+  {
+    "name": "MUSEA(ミュゼア)本店",
+    "url": "https://www.mu-sea.com/",
+    "instagram_url": null,
+    "platform": "Jimdo(ショップ機能)",
+    "shop_type": "single_location",
+    "address": "三重県鳥羽市鳥羽3-5-24",
+    "prefecture": "三重県",
+    "hours": null,
+    "map_query": "MUSEA(ミュゼア)本店 三重県鳥羽市鳥羽3-5-24",
+    "nearest_station": {
+      "name": "鳥羽",
+      "lines": [
+        "近鉄鳥羽線",
+        "近鉄志摩線",
+        "JR参宮線"
+      ],
+      "distance_m": 10,
+      "walk_min": 1
+    },
+    "data_source": "manual",
+    "source_note": "公式サイトのSHOP通販ページ(https://www.mu-sea.com/shop%E9%80%9A%E8%B2%A9/)を2026-10-11に確認。Jimdoのショップ機能で商品ごとの個別ページは無く、1ページに4商品(全て200g、豆のまま/粉ペーパー用が同価格)が掲載されているため価格は200g(豆のまま)の税込価格を採用。在庫切れ表示は無く全て販売中。焙煎度は商品ページの焙煎度メーターの表記による。店舗は本店・鳥羽水族館・近鉄鳥羽駅の3店舗。",
+    "last_verified_at": "2026-10-11",
+    "locations": [
+      {
+        "label": null,
+        "address": "三重県鳥羽市鳥羽3-5-24",
+        "prefecture": "三重県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "MUSEA(ミュゼア)本店 三重県鳥羽市鳥羽3-5-24",
+        "lat": 34.486781,
+        "lng": 136.843064
+      }
+    ],
+    "lat": 34.486781,
+    "lng": 136.843064
+  },
+  {
+    "name": "SEROW coffee",
+    "url": "https://serowcoffee.stores.jp/",
+    "instagram_url": null,
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "三重県鈴鹿市西条三丁目2-8",
+    "prefecture": "三重県",
+    "hours": null,
+    "map_query": "SEROW coffee 三重県鈴鹿市西条三丁目2-8",
+    "nearest_station": {
+      "name": "三日市",
+      "lines": [
+        "近鉄鈴鹿線"
+      ],
+      "distance_m": 390,
+      "walk_min": 5
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://serowcoffee.stores.jp/)の商品ページをブラウザfetch()で2026-10-11に確認。豆のまま100g(説明文の表記)を採用。リキッド・水出し・ドリップバッグ・ギフトを除外。デカフェは内容量の記載がなくnull。公式サイトに自家焙煎のスペシャルティ豆専門店と記載。",
+    "last_verified_at": "2026-10-03",
+    "locations": [
+      {
+        "label": null,
+        "address": "三重県鈴鹿市西条三丁目2-8",
+        "prefecture": "三重県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "SEROW coffee 三重県鈴鹿市西条三丁目2-8",
+        "lat": 34.880341,
+        "lng": 136.566628
+      }
+    ],
+    "lat": 34.880341,
+    "lng": 136.566628
   }
 ]

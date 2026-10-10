@@ -1,0 +1,92 @@
+{
+  "shop": {
+    "name": "MUSEA(ミュゼア)本店",
+    "url": "https://www.mu-sea.com/",
+    "platform": "Jimdo(ショップ機能)",
+    "address": "三重県鳥羽市鳥羽3-5-24",
+    "prefecture": "三重県",
+    "last_verified_at": "2026-10-11",
+    "source_note": "公式サイトのSHOP通販ページ(https://www.mu-sea.com/shop%E9%80%9A%E8%B2%A9/)を2026-10-11に確認。Jimdoのショップ機能で商品ごとの個別ページは無く、1ページに4商品(全て200g、豆のまま/粉ペーパー用が同価格)が掲載されているため価格は200g(豆のまま)の税込価格を採用。在庫切れ表示は無く全て販売中。焙煎度は商品ページの焙煎度メーターの表記による。店舗は本店・鳥羽水族館・近鉄鳥羽駅の3店舗。",
+    "id": "musea-toba",
+    "instagram_url": null,
+    "google_maps_query": "MUSEA(ミュゼア)本店 三重県鳥羽市鳥羽3-5-24",
+    "tel": null,
+    "hours": null,
+    "shop_type": "single_location",
+    "data_source": "manual",
+    "lat": 34.486781,
+    "lng": 136.843064,
+    "nearest_station": {
+      "name": "鳥羽",
+      "lines": [
+        "近鉄鳥羽線",
+        "近鉄志摩線",
+        "JR参宮線"
+      ],
+      "distance_m": 10,
+      "walk_min": 1
+    }
+  },
+  "products": [
+    {
+      "raw_name": "MUSEA シグネチャーブレンド",
+      "category": "ブレンド",
+      "originCountry": null,
+      "processingMethod": null,
+      "roast": "中煎り",
+      "flavorNotes": "コーヒーが持つ自然な甘さとすっきりとした酸味に、しっかりとしたコクを組み合わせた、エチオピアベースのオリジナルブレンド。",
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1200,
+      "weightG": 200,
+      "stockStatus": "販売中",
+      "productUrl": "https://www.mu-sea.com/shop%E9%80%9A%E8%B2%A9/#MUSEA%20%E3%82%B7%E3%82%B0%E3%83%8D%E3%83%81%E3%83%A3%E3%83%BC%E3%83%96%E3%83%AC%E3%83%B3%E3%83%89",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "中国雲南 プーアル ドライファーメンテーション ウォッシュド",
+      "category": "ストレート",
+      "originCountry": "中国",
+      "processingMethod": "ウォッシュド",
+      "roast": "浅煎り",
+      "flavorNotes": "コーヒーチェリーの状態で嫌気性発酵しドライファーメンテーションを実施。アフリカンベッドで乾燥し1ヶ月以上寝かせます。日向夏のようなまろやかな酸味がありつつ、高温時にキャラメルのような香ばしさを感じることができます。",
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1510,
+      "weightG": 200,
+      "stockStatus": "販売中",
+      "productUrl": "https://www.mu-sea.com/shop%E9%80%9A%E8%B2%A9/#%E4%B8%AD%E5%9B%BD%E9%9B%B2%E5%8D%97%20%E3%83%97%E3%83%BC%E3%82%A2%E3%83%AB%20%E3%83%89%E3%83%A9%E3%82%A4%E3%83%95%E3%82%A1%E3%83%BC%E3%83%A1%E3%83%B3%E3%83%86%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%20%E3%82%A6%E3%82%A9%E3%83%83%E3%82%B7%E3%83%A5%E3%83%89",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "インドネシア マンデリン ビンタンリマ",
+      "category": "ストレート",
+      "originCountry": "インドネシア",
+      "processingMethod": null,
+      "roast": "深煎り",
+      "flavorNotes": "すっきりとしたコクとしっかりとした苦味。酸味が苦手で強いコーヒーがお好きなお客様にお勧めです。",
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1510,
+      "weightG": 200,
+      "stockStatus": "販売中",
+      "productUrl": "https://www.mu-sea.com/shop%E9%80%9A%E8%B2%A9/#%E3%82%A4%E3%83%B3%E3%83%89%E3%83%8D%E3%82%B7%E3%82%A2%20%E3%83%9E%E3%83%B3%E3%83%87%E3%83%AA%E3%83%B3%20%E3%83%93%E3%83%B3%E3%82%BF%E3%83%B3%E3%83%AA%E3%83%9E",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "エチオピア イルガチャフィー G1 ナチュラル",
+      "category": "ストレート",
+      "originCountry": "エチオピア",
+      "processingMethod": "ナチュラル",
+      "roast": "浅煎り",
+      "flavorNotes": "ナチュラルモカの甘みと香り、適度な酸味。アフターフレーバーは甘みが残りつつすっきり。",
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1510,
+      "weightG": 200,
+      "stockStatus": "販売中",
+      "productUrl": "https://www.mu-sea.com/shop%E9%80%9A%E8%B2%A9/#%E3%82%A8%E3%83%81%E3%82%AA%E3%83%94%E3%82%A2%20%E3%82%A4%E3%83%AB%E3%82%AC%E3%83%81%E3%83%A3%E3%83%95%E3%82%A3%E3%83%BC%20G1%20%E3%83%8A%E3%83%81%E3%83%A5%E3%83%A9%E3%83%AB",
+      "data_source": "manual"
+    }
+  ]
+}

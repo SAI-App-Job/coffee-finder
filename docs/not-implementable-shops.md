@@ -2739,3 +2739,11 @@ docs/scraping-progress.md「栃木県再調査」冒頭の教訓セクション�
 
 ### 豆煎坊(新潟県)
 - 見送り理由: 自家焙煎の根拠(焙煎機・店内焙煎の明記)が弱く、確認できなかった。
+
+## 三重県再調査(2026-10-11)
+
+### Crema amato・Coffee(桑名市)／伊賀の国くらもち焙煎所(名張市)／SHRUB COFFEE(桑名市)
+- 見送り理由: Crema amatoはオンラインショップが準備中で商品が非公開、くらもち焙煎所は店舗・法人向けのみで個人販売なし、SHRUB COFFEEは通販ページ・価格の掲載なし(3拠点)。
+
+### colorful coffee(津市)／三重珈琲Direct(津市)／LIAISON Coffee Roasters(伊勢市)
+- 見送り理由: colorful coffeeはオンラインショップがComing Soonのまま、三重珈琲Directは自家焙煎の明記が確認できない(注文焙煎と推定のみ)、LIAISON Coffee RoastersはSquare Onlineが動的描画で価格を取得できなかった。

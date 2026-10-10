@@ -974,6 +974,19 @@ SOURCE_FILES = {
     "猫町珈琲店": "data_nekomachi.json",
     "ロースタリーカフェ RORO": "data_roroniigata.json",
     "ツバメコーヒー": "data_tsubamecoffee.json",
+    # 三重県の再調査(新規発掘)
+    "手焙煎珈琲あさぎ": "data_asagiroast.json",
+    "HOME COFFEE ROASTER": "data_homecoffeeroaster.json",
+    "ホリ珈琲": "data_horicoffee.json",
+    "金川珈琲": "data_kanekawacoffee.json",
+    "Mirai Seeds (Roastery & Laboratory)": "data_miraiseeds.json",
+    "なかむら珈琲": "data_nakamuracoffeeise.json",
+    "自家焙煎珈琲 合歓の木": "data_nemunoki.json",
+    "OTOMONI COFFEE Roast and Labo 明和店": "data_otomonicoffee.json",
+    "PROUD COFFEE ROASTERY": "data_proudcoffeeroastery.json",
+    "カフェ レコンフォール": "data_reconfortcafe.json",
+    "凛黎珈琲": "data_rinraycoffee.json",
+    "点珈琲店": "data_tencoffee.json",
 }
 
 
