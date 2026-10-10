@@ -24920,5 +24920,298 @@
     ],
     "lat": 38.264147,
     "lng": 140.868651
+  },
+  {
+    "name": "カフェ・ド・アミアン",
+    "url": "https://store.shopping.yahoo.co.jp/amian-coffee/",
+    "platform": "Yahoo!ショッピング",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(Yahoo!ショッピング標準。/cgi-bin/等のみDisallow、search.htmlは取得可)",
+    "address": "新潟県長岡市寺島町713",
+    "prefecture": "新潟県",
+    "hours": null,
+    "map_query": "カフェ・ド・アミアン",
+    "nearest_station": {
+      "name": "長岡",
+      "lines": [
+        "上越新幹線",
+        "JR信越本線"
+      ],
+      "distance_m": 1980,
+      "walk_min": 25
+    },
+    "last_scraped_at": "2026-10-10T20:42:12.376779+00:00",
+    "lat": 37.459534,
+    "lng": 138.837082
+  },
+  {
+    "name": "BERON COFFEE ROASTER",
+    "url": "https://beron-coffee.com/",
+    "platform": "Shopify",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認(Shopify標準構成)",
+    "address": "新潟県新潟市秋葉区荻島1丁目10-56",
+    "prefecture": "新潟県",
+    "hours": null,
+    "map_query": "BERON COFFEE ROASTER",
+    "nearest_station": {
+      "name": "荻川",
+      "lines": [
+        "JR信越本線"
+      ],
+      "distance_m": 2550,
+      "walk_min": 32
+    },
+    "last_scraped_at": "2026-10-10T20:42:12.376779+00:00",
+    "lat": 37.829664,
+    "lng": 139.140097
+  },
+  {
+    "name": "Days Coffee Roaster",
+    "url": "https://dayscoffeeroaster.jp/",
+    "platform": "Shopify",
+    "shop_type": "single_location",
+    "robots_txt_status": "確認済み(Shopify標準構成、products.jsonは公開)",
+    "address": "新潟県新潟市中央区女池神明3-14-4 NEST MEIKE SHINMEI(女池店)",
+    "prefecture": "新潟県",
+    "hours": null,
+    "map_query": "Days Coffee Roaster",
+    "nearest_station": {
+      "name": "上所",
+      "lines": [
+        "JR越後線"
+      ],
+      "distance_m": 2240,
+      "walk_min": 28
+    },
+    "last_scraped_at": "2026-10-10T20:42:12.376779+00:00",
+    "lat": 37.888732,
+    "lng": 139.034565
+  },
+  {
+    "name": "市場珈琲焙煎所",
+    "url": "https://www.ichiba-coffee.com/",
+    "platform": "Wix Stores",
+    "shop_type": "single_location",
+    "robots_txt_status": "許可(2026-10確認。User-agent: *にAllow: /[lightboxクエリのみ除外]。PetalBotのみ全面Disallow)",
+    "address": "新潟県新潟市江南区茗荷谷711番地 新潟市中央卸売市場 中央棟1F",
+    "prefecture": "新潟県",
+    "hours": null,
+    "map_query": "市場珈琲焙煎所",
+    "nearest_station": {
+      "name": "亀田",
+      "lines": [
+        "JR信越本線"
+      ],
+      "distance_m": 1750,
+      "walk_min": 22
+    },
+    "last_scraped_at": "2026-10-10T20:42:12.376779+00:00",
+    "lat": 37.880918,
+    "lng": 139.127356
+  },
+  {
+    "name": "LINDBERGH COFFEE ROASTERY",
+    "url": "https://shop.lindberghcoffee.com/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "新潟県村上市岩船駅前29-8",
+    "prefecture": "新潟県",
+    "hours": null,
+    "map_query": "LINDBERGH COFFEE ROASTERY",
+    "nearest_station": {
+      "name": "村上",
+      "lines": [
+        "JR羽越本線"
+      ],
+      "distance_m": 390,
+      "walk_min": 5
+    },
+    "last_scraped_at": "2026-10-10T20:42:12.376779+00:00",
+    "lat": 38.218727,
+    "lng": 139.467494
+  },
+  {
+    "name": "猫町珈琲店",
+    "url": "https://furonekomarket.ocnk.net/product-list/55",
+    "platform": "おちゃのこネット(Ocnk、風呂猫マーケット内)",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-10確認。GPTBot等AI系ボットのみ個別にDisallow: /、それ以外は制限なし)",
+    "address": "新潟県村上市小町3-9",
+    "prefecture": "新潟県",
+    "hours": null,
+    "map_query": "猫町珈琲店",
+    "nearest_station": {
+      "name": "村上",
+      "lines": [
+        "JR羽越本線"
+      ],
+      "distance_m": 1530,
+      "walk_min": 19
+    },
+    "last_scraped_at": "2026-10-10T20:42:12.376779+00:00",
+    "lat": 38.226202,
+    "lng": 139.478815
+  },
+  {
+    "name": "ロースタリーカフェ RORO",
+    "url": "https://roroniigata.thebase.in/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "新潟県長岡市幸町3-5-1",
+    "prefecture": "新潟県",
+    "hours": null,
+    "map_query": "ロースタリーカフェ RORO",
+    "nearest_station": {
+      "name": "宮内",
+      "lines": [
+        "JR信越本線",
+        "JR上越線"
+      ],
+      "distance_m": 1430,
+      "walk_min": 18
+    },
+    "last_scraped_at": "2026-10-10T20:42:12.376779+00:00",
+    "lat": 37.435076,
+    "lng": 138.839467
+  },
+  {
+    "name": "ツバメコーヒー",
+    "url": "https://www.tsubamecoffee.net/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "新潟県燕市吉田2760-1",
+    "prefecture": "新潟県",
+    "hours": null,
+    "map_query": "ツバメコーヒー",
+    "nearest_station": {
+      "name": "吉田",
+      "lines": [
+        "JR弥彦線",
+        "JR越後線"
+      ],
+      "distance_m": 30,
+      "walk_min": 1
+    },
+    "last_scraped_at": "2026-10-10T20:42:12.376779+00:00",
+    "lat": 37.68706,
+    "lng": 138.878695
+  },
+  {
+    "name": "山浦珈琲店",
+    "url": "https://www.coffee-nuts.com/",
+    "instagram_url": null,
+    "platform": "公式サイト(静的HTML、注文はTEL/FAX/メール)",
+    "shop_type": "single_location",
+    "address": "新潟県新潟市中央区上大川前通6番町1220",
+    "prefecture": "新潟県",
+    "hours": "平日10:00～18:00 / 休日11:00～17:00(定休日 正月1～3日)",
+    "map_query": "山浦珈琲店 新潟県新潟市中央区上大川前通6番町1220",
+    "nearest_station": {
+      "name": "新潟",
+      "lines": [
+        "JR越後線",
+        "JR信越本線",
+        "上越新幹線",
+        "JR白新線"
+      ],
+      "distance_m": 1770,
+      "walk_min": 22
+    },
+    "data_source": "manual",
+    "source_note": "公式サイト注文ページ(https://www.coffee-nuts.com/order.html)の価格表(100g/200g、税込)を2026-10-11に確認。注文方法はカート/フォームではなくTEL・FAX・メール(ページ印刷してFAX可)で、ヤマト運輸コレクト便(代引)発送。住所は本店(各店舗の紹介ページ記載は『新潟市中央区上大川前通6-1220』)。ロイヤルブレンド(50周年記念)は200gのみ1,960円で100gの設定なし。ブルーマウンテンNo.1・ブルマンブレンドは『12月に予約販売』で価格未掲載のため除外。コーヒーパック(1袋170円)は除外。ターコイズブルー(アイス)はアイスコーヒー向け商品で配合の記載はないがブレンド扱い。ページに更新日の記載なし。",
+    "last_verified_at": "2026-10-11",
+    "locations": [
+      {
+        "label": null,
+        "address": "新潟県新潟市中央区上大川前通6番町1220",
+        "prefecture": "新潟県",
+        "hours": "平日10:00～18:00 / 休日11:00～17:00(定休日 正月1～3日)",
+        "tel": "025-228-3648",
+        "is_headquarters": false,
+        "map_query": "山浦珈琲店 新潟県新潟市中央区上大川前通6番町1220",
+        "lat": 37.925063,
+        "lng": 139.048915
+      }
+    ],
+    "lat": 37.925063,
+    "lng": 139.048915
+  },
+  {
+    "name": "DOORS COFFEE WORKS",
+    "url": "https://doors-coffeeworks.com/",
+    "instagram_url": null,
+    "platform": "STORES.jp(独自ドメイン、ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "新潟県新潟市中央区京王3-5-33 京王ビル101",
+    "prefecture": "新潟県",
+    "hours": null,
+    "map_query": "DOORS COFFEE WORKS 新潟県新潟市中央区京王3-5-33 京王ビル101",
+    "nearest_station": {
+      "name": "越後石山",
+      "lines": [
+        "JR信越本線"
+      ],
+      "distance_m": 1560,
+      "walk_min": 20
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://doors-coffeeworks.com/)の商品ページをブラウザfetch()で2026-10-05に確認。100g/150gの小売サイズの価格を採用。業務用500g・生豆は除外。自家焙煎はハマ珈琲の半熱風式6kg釜(Only Roaster取材記事)による。",
+    "last_verified_at": "2026-10-03",
+    "locations": [
+      {
+        "label": null,
+        "address": "新潟県新潟市中央区京王3-5-33 京王ビル101",
+        "prefecture": "新潟県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "DOORS COFFEE WORKS 新潟県新潟市中央区京王3-5-33 京王ビル101",
+        "lat": 37.893851,
+        "lng": 139.077996
+      }
+    ],
+    "lat": 37.893851,
+    "lng": 139.077996
+  },
+  {
+    "name": "自家焙煎珈琲店 たぶの木",
+    "url": "https://www.tabunoki.net/",
+    "instagram_url": null,
+    "platform": "公式サイト(静的HTML、価格表のみ。通販なし・店頭販売)",
+    "shop_type": "single_location",
+    "address": "新潟県新潟市西区中野小屋356",
+    "prefecture": "新潟県",
+    "hours": "10:00～18:00(定休日 水・木・金)",
+    "map_query": "自家焙煎珈琲店 たぶの木 新潟県新潟市西区中野小屋356",
+    "nearest_station": {
+      "name": "越後赤塚",
+      "lines": [
+        "JR越後線"
+      ],
+      "distance_m": 2690,
+      "walk_min": 34
+    },
+    "data_source": "manual",
+    "source_note": "公式サイト(https://www.tabunoki.net/)のメニュー欄『焙煎コーヒー豆(100g)』の価格表を2026-10-11に確認。通販・カート無しの店頭販売のみ(メール欄も空欄)。ページ内の最新のお知らせは2026-07-22付の臨時休業案内(©2026)で、価格表自体の更新日は不明。ページに『上記以外にもメニューはございます』とあり、掲載7種以外の取扱いがある可能性。産地・焙煎度の個別記載は『ブラジル手摘み完熟深煎』の深煎りのみのため、他の焙煎度はnull。",
+    "last_verified_at": "2026-10-11",
+    "locations": [
+      {
+        "label": null,
+        "address": "新潟県新潟市西区中野小屋356",
+        "prefecture": "新潟県",
+        "hours": "10:00～18:00(定休日 水・木・金)",
+        "tel": "025-263-1693",
+        "is_headquarters": false,
+        "map_query": "自家焙煎珈琲店 たぶの木 新潟県新潟市西区中野小屋356",
+        "lat": 37.820728,
+        "lng": 138.938229
+      }
+    ],
+    "lat": 37.820728,
+    "lng": 138.938229
   }
 ]

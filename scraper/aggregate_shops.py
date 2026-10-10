@@ -965,6 +965,15 @@ SOURCE_FILES = {
     "Nelson Coffee Roaster": "data_nelsoncoffeeroaster.json",
     "P-craft 珈琲豆店": "data_pcraftcoffee.json",
     "värm coffee&bakery": "data_varmcoffee.json",
+    # 新潟県の再調査(新規発掘)
+    "カフェ・ド・アミアン": "data_amian.json",
+    "BERON COFFEE ROASTER": "data_beron.json",
+    "Days Coffee Roaster": "data_dayscoffeeroaster.json",
+    "市場珈琲焙煎所": "data_ichibacoffee.json",
+    "LINDBERGH COFFEE ROASTERY": "data_lindberghcoffee.json",
+    "猫町珈琲店": "data_nekomachi.json",
+    "ロースタリーカフェ RORO": "data_roroniigata.json",
+    "ツバメコーヒー": "data_tsubamecoffee.json",
 }
 
 
