@@ -28403,5 +28403,702 @@
     ],
     "lat": 32.79085,
     "lng": 130.694687
+  },
+  {
+    "name": "カフェくーり",
+    "url": "https://cafedecoulis.shopselect.net/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "茨城県つくば市大1988",
+    "prefecture": "茨城県",
+    "hours": null,
+    "map_query": "カフェくーり",
+    "nearest_station": {
+      "name": "つくば",
+      "lines": [
+        "つくばエクスプレス線"
+      ],
+      "distance_m": 4080,
+      "walk_min": 51
+    },
+    "last_scraped_at": "2026-10-11T21:08:50.850063+00:00",
+    "lat": 36.10157,
+    "lng": 140.149294
+  },
+  {
+    "name": "Cameo Coffee Company",
+    "url": "https://cameo-coffee.com/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "茨城県日立市大みか町2-24-5",
+    "prefecture": "茨城県",
+    "hours": null,
+    "map_query": "Cameo Coffee Company",
+    "nearest_station": {
+      "name": "大甕",
+      "lines": [
+        "JR常磐線"
+      ],
+      "distance_m": 1110,
+      "walk_min": 14
+    },
+    "last_scraped_at": "2026-10-11T21:08:50.850063+00:00",
+    "lat": 36.512449,
+    "lng": 140.606976
+  },
+  {
+    "name": "capian coffee",
+    "url": "https://capian.co.jp/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "茨城県ひたちなか市津田1949-11",
+    "prefecture": "茨城県",
+    "hours": null,
+    "map_query": "capian coffee",
+    "nearest_station": {
+      "name": "常陸津田",
+      "lines": [
+        "JR水郡線"
+      ],
+      "distance_m": 980,
+      "walk_min": 12
+    },
+    "last_scraped_at": "2026-10-11T21:08:50.850063+00:00",
+    "lat": 36.405021,
+    "lng": 140.493834
+  },
+  {
+    "name": "charlie coffee",
+    "url": "https://charliecoffee.jp/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "茨城県鹿嶋市宮中2382-16",
+    "prefecture": "茨城県",
+    "hours": null,
+    "map_query": "charlie coffee",
+    "nearest_station": {
+      "name": "鹿島神宮",
+      "lines": [
+        "JR鹿島線"
+      ],
+      "distance_m": 880,
+      "walk_min": 11
+    },
+    "last_scraped_at": "2026-10-11T21:08:50.850063+00:00",
+    "lat": 35.967325,
+    "lng": 140.634538
+  },
+  {
+    "name": "自家焙煎 千葉酒店",
+    "url": "https://saketocoffee.base.shop/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "茨城県那珂市瓜連560",
+    "prefecture": "茨城県",
+    "hours": null,
+    "map_query": "自家焙煎 千葉酒店",
+    "nearest_station": {
+      "name": "瓜連",
+      "lines": [
+        "JR水郡線"
+      ],
+      "distance_m": 70,
+      "walk_min": 1
+    },
+    "last_scraped_at": "2026-10-11T21:08:50.850063+00:00",
+    "lat": 36.498127,
+    "lng": 140.449723
+  },
+  {
+    "name": "フレスタプラス@あらの珈琲",
+    "url": "https://frestaplus.com/",
+    "platform": "Yahoo!ショッピング(自社サイトのカートはYahoo!店 frestaplus)",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-10確認。User-agent: *は/cgi-bin/・/search.htmlの絞り込みクエリ等のみDisallow。本スクレイパーが使う/search.html・?page=N は制限対象外)",
+    "address": "茨城県つくば市並木4-4-2 並木ショッピングセンター1F 105",
+    "prefecture": "茨城県",
+    "hours": null,
+    "map_query": "フレスタプラス@あらの珈琲",
+    "nearest_station": {
+      "name": "荒川沖",
+      "lines": [
+        "JR常磐線"
+      ],
+      "distance_m": 3860,
+      "walk_min": 48
+    },
+    "last_scraped_at": "2026-10-11T21:08:50.850063+00:00",
+    "lat": 36.06035,
+    "lng": 140.143947
+  },
+  {
+    "name": "Knot COFFEE",
+    "url": "https://knot-coffee.shop-pro.jp/",
+    "platform": "カラーミーショップ",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-10確認。User-agent: * は /secure/ と /cart/ のみ制限)",
+    "address": "茨城県守谷市百合ケ丘2-2767-1 ポルン101",
+    "prefecture": "茨城県",
+    "hours": null,
+    "map_query": "Knot COFFEE",
+    "nearest_station": {
+      "name": "守谷",
+      "lines": [
+        "つくばエクスプレス線",
+        "関東鉄道常総線"
+      ],
+      "distance_m": 850,
+      "walk_min": 11
+    },
+    "last_scraped_at": "2026-10-11T21:08:50.850063+00:00",
+    "lat": 35.954669,
+    "lng": 139.98424
+  },
+  {
+    "name": "珈琲豆工房もちまる",
+    "url": "https://motimaru2025.jp/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "茨城県水戸市西原1-6-30 ブリリアンス101",
+    "prefecture": "茨城県",
+    "hours": null,
+    "map_query": "珈琲豆工房もちまる",
+    "nearest_station": {
+      "name": "水戸",
+      "lines": [
+        "JR常磐線",
+        "JR水郡線",
+        "鹿島臨海鉄道線"
+      ],
+      "distance_m": 290,
+      "walk_min": 4
+    },
+    "last_scraped_at": "2026-10-11T21:08:50.850063+00:00",
+    "lat": 36.368514,
+    "lng": 140.475385
+  },
+  {
+    "name": "ニコニコ珈琲",
+    "url": "https://nico-coffee.net/",
+    "platform": "EC-CUBE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-10確認。Disallow: /*.csv$ のみ。商品ページは制限対象外)",
+    "address": "茨城県土浦市下高津1-21-50",
+    "prefecture": "茨城県",
+    "hours": null,
+    "map_query": "ニコニコ珈琲",
+    "nearest_station": {
+      "name": "土浦",
+      "lines": [
+        "JR常磐線"
+      ],
+      "distance_m": 3130,
+      "walk_min": 39
+    },
+    "last_scraped_at": "2026-10-11T21:08:50.850063+00:00",
+    "lat": 36.075515,
+    "lng": 140.171627
+  },
+  {
+    "name": "自家焙煎珈琲サイタニヤ",
+    "url": "https://saitaniya.com/",
+    "platform": "Yahoo!ショッピング(自社サイトのカートはYahoo!店 cafe-saitaniya)",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-10確認。User-agent: *は/cgi-bin/・/search.htmlの絞り込みクエリ等のみDisallow。本スクレイパーが使う/search.html・?page=N は制限対象外)",
+    "address": "茨城県那珂郡東海村船場193-1",
+    "prefecture": "茨城県",
+    "hours": null,
+    "map_query": "自家焙煎珈琲サイタニヤ",
+    "nearest_station": {
+      "name": "東海",
+      "lines": [
+        "JR常磐線"
+      ],
+      "distance_m": 920,
+      "walk_min": 12
+    },
+    "last_scraped_at": "2026-10-11T21:08:50.850063+00:00",
+    "lat": 36.457573,
+    "lng": 140.562445
+  },
+  {
+    "name": "サイトウコーヒー",
+    "url": "https://saitohcoffee.base.shop/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "茨城県牛久市南1-3-13",
+    "prefecture": "茨城県",
+    "hours": null,
+    "map_query": "サイトウコーヒー",
+    "nearest_station": {
+      "name": "殿山",
+      "lines": [
+        "ひたちなか海浜鉄道湊線"
+      ],
+      "distance_m": 630,
+      "walk_min": 8
+    },
+    "last_scraped_at": "2026-10-11T21:08:50.850063+00:00",
+    "lat": 36.353731,
+    "lng": 140.59637
+  },
+  {
+    "name": "SugayaCoffee",
+    "url": "https://sugayacoffee.ocnk.net/",
+    "platform": "おちゃのこネット(Ocnk)",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-10確認。GPTBot等AI系ボットのみ個別にDisallow: /、それ以外は制限なし)",
+    "address": "茨城県つくば市春日4-24-19",
+    "prefecture": "茨城県",
+    "hours": null,
+    "map_query": "SugayaCoffee",
+    "nearest_station": {
+      "name": "つくば",
+      "lines": [
+        "つくばエクスプレス線"
+      ],
+      "distance_m": 1120,
+      "walk_min": 14
+    },
+    "last_scraped_at": "2026-10-11T21:08:50.850063+00:00",
+    "lat": 36.089734,
+    "lng": 140.102017
+  },
+  {
+    "name": "自家焙煎珈琲ゆらふる",
+    "url": "https://www.yuraful-coffee.com/",
+    "platform": "Wix",
+    "shop_type": "single_location",
+    "robots_txt_status": "許可(2026-10確認。User-agent: * は Allow: /。商品ページは制限対象外)",
+    "address": "茨城県那珂市竹ノ内2-2-6",
+    "prefecture": "茨城県",
+    "hours": null,
+    "map_query": "自家焙煎珈琲ゆらふる",
+    "nearest_station": {
+      "name": "上菅谷",
+      "lines": [
+        "JR水郡線"
+      ],
+      "distance_m": 850,
+      "walk_min": 11
+    },
+    "last_scraped_at": "2026-10-11T21:08:50.850063+00:00",
+    "lat": 36.452115,
+    "lng": 140.501257
+  },
+  {
+    "name": "Cafe Banraiken",
+    "url": "https://cafe-banraiken.com/",
+    "instagram_url": null,
+    "platform": "静的HTML(価格表+注文フォーム・銀行振込)",
+    "shop_type": "single_location",
+    "address": "茨城県土浦市中村南4-12-5 小林ビル201",
+    "prefecture": "茨城県",
+    "hours": null,
+    "map_query": "Cafe Banraiken 茨城県土浦市中村南4-12-5 小林ビル201",
+    "nearest_station": {
+      "name": "土浦",
+      "lines": [
+        "JR常磐線"
+      ],
+      "distance_m": 150,
+      "walk_min": 2
+    },
+    "data_source": "manual",
+    "source_note": "公式サイトの注文ページ(https://cafe-banraiken.com/order.html)の価格表を2026-10-12に確認。店舗住所はトップページ記載。200g/500gの2サイズ表記で、最小重量200gの価格を採用(500gは割引価格)。ページ上に更新日の記載なし。",
+    "last_verified_at": "2026-10-12",
+    "locations": [
+      {
+        "label": null,
+        "address": "茨城県土浦市中村南4-12-5 小林ビル201",
+        "prefecture": "茨城県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "Cafe Banraiken 茨城県土浦市中村南4-12-5 小林ビル201",
+        "lat": 36.07863,
+        "lng": 140.204593
+      }
+    ],
+    "lat": 36.07863,
+    "lng": 140.204593
+  },
+  {
+    "name": "COFFEEHOUSE BLUE",
+    "url": "https://coffeehouse-blue.square.site/",
+    "instagram_url": null,
+    "platform": "Square Online(公式オンラインショップ)",
+    "shop_type": "single_location",
+    "address": "茨城県土浦市藤沢3560-2",
+    "prefecture": "茨城県",
+    "hours": null,
+    "map_query": "COFFEEHOUSE BLUE 茨城県土浦市藤沢3560-2",
+    "nearest_station": {
+      "name": "つくば",
+      "lines": [
+        "つくばエクスプレス線"
+      ],
+      "distance_m": 6290,
+      "walk_min": 79
+    },
+    "data_source": "manual",
+    "source_note": "公式オンラインショップ(https://coffeehouse-blue.square.site/)の商品情報をSquare Onlineの公開商品API経由で2026-10-12に確認(価格・在庫・説明文)。100g/250g/500gの3サイズ展開で、最小重量100gの商品(16銘柄)を代表に採用。",
+    "last_verified_at": "2026-10-12",
+    "locations": [
+      {
+        "label": null,
+        "address": "茨城県土浦市藤沢3560-2",
+        "prefecture": "茨城県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "COFFEEHOUSE BLUE 茨城県土浦市藤沢3560-2",
+        "lat": 36.124582,
+        "lng": 140.157277
+      }
+    ],
+    "lat": 36.124582,
+    "lng": 140.157277
+  },
+  {
+    "name": "green tree coffee roaster",
+    "url": "https://www.greentreecoffeeroaster.com/",
+    "instagram_url": null,
+    "platform": "Square Online(公式サイトのネットショップ)",
+    "shop_type": "single_location",
+    "address": "茨城県常陸大宮市野中町750-12",
+    "prefecture": "茨城県",
+    "hours": null,
+    "map_query": "green tree coffee roaster 茨城県常陸大宮市野中町750-12",
+    "nearest_station": {
+      "name": "常陸大宮",
+      "lines": [
+        "JR水郡線"
+      ],
+      "distance_m": 1260,
+      "walk_min": 16
+    },
+    "data_source": "manual",
+    "source_note": "公式サイト(https://www.greentreecoffeeroaster.com/)のネットショップ(https://green-tree-coffee-roaster.square.site/)の商品情報をSquare Onlineの公開商品API経由で2026-10-12に確認(価格・在庫・説明文)。商品名に100gの記載がある銘柄のみ収録。重量の記載が無い商品(タンザニアスノートップ、コロンビア、メキシコ、タンザニア サウステラ等、説明文も無い)は重量が確認できないため除外。",
+    "last_verified_at": "2026-10-12",
+    "locations": [
+      {
+        "label": null,
+        "address": "茨城県常陸大宮市野中町750-12",
+        "prefecture": "茨城県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "green tree coffee roaster 茨城県常陸大宮市野中町750-12",
+        "lat": 36.555386,
+        "lng": 140.402231
+      }
+    ],
+    "lat": 36.555386,
+    "lng": 140.402231
+  },
+  {
+    "name": "橋本焙煎所",
+    "url": "https://hashimotoroastery.square.site/",
+    "instagram_url": null,
+    "platform": "Square Online(公式オンラインショップ)",
+    "shop_type": "single_location",
+    "address": "茨城県笠間市下郷4439-9",
+    "prefecture": "茨城県",
+    "hours": null,
+    "map_query": "橋本焙煎所 茨城県笠間市下郷4439-9",
+    "nearest_station": {
+      "name": "岩間",
+      "lines": [
+        "JR常磐線"
+      ],
+      "distance_m": 1350,
+      "walk_min": 17
+    },
+    "data_source": "manual",
+    "source_note": "公式オンラインショップ(https://hashimotoroastery.square.site/)の商品情報をSquare Onlineの公開商品API経由で2026-10-12に確認(価格・在庫・説明文)。100gの豆商品のみ収録。ドリップバッグ(DB)・ギフトセット・ショップバッグ・コーヒーカードは除外。",
+    "last_verified_at": "2026-10-12",
+    "locations": [
+      {
+        "label": null,
+        "address": "茨城県笠間市下郷4439-9",
+        "prefecture": "茨城県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "橋本焙煎所 茨城県笠間市下郷4439-9",
+        "lat": 36.306373,
+        "lng": 140.283105
+      }
+    ],
+    "lat": 36.306373,
+    "lng": 140.283105
+  },
+  {
+    "name": "HRCoffee",
+    "url": "https://hr-coffee.com/",
+    "instagram_url": null,
+    "platform": "WordPress(注文フォーム・銀行振込)",
+    "shop_type": "single_location",
+    "address": "茨城県取手市高須2148",
+    "prefecture": "茨城県",
+    "hours": null,
+    "map_query": "HRCoffee 茨城県取手市高須2148",
+    "nearest_station": {
+      "name": "入地",
+      "lines": [
+        "関東鉄道竜ヶ崎線"
+      ],
+      "distance_m": 2400,
+      "walk_min": 30
+    },
+    "data_source": "manual",
+    "source_note": "公式サイト(https://hr-coffee.com/)のトップページ『4種類のコーヒー豆』の価格(税込・100g袋のみ)を2026-10-12に確認。2026-09-01にHP開設の新しい店舗で、ご注文後に焙煎・発送。",
+    "last_verified_at": "2026-10-12",
+    "locations": [
+      {
+        "label": null,
+        "address": "茨城県取手市高須2148",
+        "prefecture": "茨城県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "HRCoffee 茨城県取手市高須2148",
+        "lat": 35.902225,
+        "lng": 140.140447
+      }
+    ],
+    "lat": 35.902225,
+    "lng": 140.140447
+  },
+  {
+    "name": "自家焙煎からきや珈琲",
+    "url": "https://karakiya-coffee.stores.jp/",
+    "instagram_url": null,
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "茨城県古河市下大野2163-9",
+    "prefecture": "茨城県",
+    "hours": null,
+    "map_query": "自家焙煎からきや珈琲 茨城県古河市下大野2163-9",
+    "nearest_station": {
+      "name": "古河",
+      "lines": [
+        "JR宇都宮線"
+      ],
+      "distance_m": 5120,
+      "walk_min": 64
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://karakiya-coffee.stores.jp/)の商品ページをブラウザfetch()で2026-10-12に確認。STORESに掲載の2商品のみ(豆100g)。公式サイトの価格表にあるシングルオリジンは通販商品ページがSTORESに無いため対象外。直火自家焙煎・1981年創業(公式)。本店とカフェの2店。",
+    "last_verified_at": "2026-10-03",
+    "locations": [
+      {
+        "label": null,
+        "address": "茨城県古河市下大野2163-9",
+        "prefecture": "茨城県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "自家焙煎からきや珈琲 茨城県古河市下大野2163-9",
+        "lat": 36.17811,
+        "lng": 139.76298
+      }
+    ],
+    "lat": 36.17811,
+    "lng": 139.76298
+  },
+  {
+    "name": "もっくん珈琲",
+    "url": "https://mokkuncoffee.stores.jp/",
+    "instagram_url": null,
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "茨城県つくば市大曾根3439-1",
+    "prefecture": "茨城県",
+    "hours": null,
+    "map_query": "もっくん珈琲 茨城県つくば市大曾根3439-1",
+    "nearest_station": {
+      "name": "研究学園",
+      "lines": [
+        "つくばエクスプレス線"
+      ],
+      "distance_m": 6690,
+      "walk_min": 84
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://mokkuncoffee.stores.jp/)の商品ページをブラウザfetch()で2026-10-12に確認。豆のまま200gを採用(挽き方違いは同一商品の選択肢)。ドリップバッグ・水出し・ギフト・おまかせセット・コラム・カウンセリングを除外。自家焙煎珈琲店(公式サイト)。",
+    "last_verified_at": "2026-10-03",
+    "locations": [
+      {
+        "label": null,
+        "address": "茨城県つくば市大曾根3439-1",
+        "prefecture": "茨城県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "もっくん珈琲 茨城県つくば市大曾根3439-1",
+        "lat": 36.141497,
+        "lng": 140.093451
+      }
+    ],
+    "lat": 36.141497,
+    "lng": 140.093451
+  },
+  {
+    "name": "自家焙煎珈琲プレフィーノ",
+    "url": "https://prefino.hp.peraichi.com/coffee-online-shop./",
+    "instagram_url": null,
+    "platform": "ペライチ(ペライチ決済のカート)",
+    "shop_type": "single_location",
+    "address": "茨城県小美玉市江戸1-95",
+    "prefecture": "茨城県",
+    "hours": null,
+    "map_query": "自家焙煎珈琲プレフィーノ 茨城県小美玉市江戸1-95",
+    "nearest_station": {
+      "name": "羽鳥",
+      "lines": [
+        "JR常磐線"
+      ],
+      "distance_m": 2360,
+      "walk_min": 30
+    },
+    "data_source": "manual",
+    "source_note": "公式ネットショップ(https://prefino.hp.peraichi.com/coffee-online-shop./)の珈琲豆欄(100g/200gの税込価格)を2026-10-12に確認。トップページ(https://prefino.hp.peraichi.com/)は404で、ショップは上記ページのみ。住所は同ページ末尾の事業者表記(〒319-0122 茨城県小美玉市江戸1-95)による。ページ内に更新日の記載はなく、代表メッセージによれば喫茶店は閉店しオンラインショップのみ継続。100gの価格を採用(200gは倍額)。ドリップパック・セット・ギフト・ハーブ・アイスコーヒーボトルは除外。",
+    "last_verified_at": "2026-10-12",
+    "locations": [
+      {
+        "label": null,
+        "address": "茨城県小美玉市江戸1-95",
+        "prefecture": "茨城県",
+        "hours": null,
+        "tel": "080-1363-1180",
+        "is_headquarters": false,
+        "map_query": "自家焙煎珈琲プレフィーノ 茨城県小美玉市江戸1-95",
+        "lat": 36.253964,
+        "lng": 140.311847
+      }
+    ],
+    "lat": 36.253964,
+    "lng": 140.311847
+  },
+  {
+    "name": "SumiKa Coffee",
+    "url": "https://sumikacoffee.stores.jp/",
+    "instagram_url": null,
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "茨城県ひたちなか市市毛1243-4",
+    "prefecture": "茨城県",
+    "hours": null,
+    "map_query": "SumiKa Coffee 茨城県ひたちなか市市毛1243-4",
+    "nearest_station": {
+      "name": "勝田",
+      "lines": [
+        "ひたちなか海浜鉄道湊線",
+        "JR常磐線"
+      ],
+      "distance_m": 1670,
+      "walk_min": 21
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://sumikacoffee.stores.jp/)の商品ページをブラウザfetch()で2026-10-12に確認。豆100g(粉は同一商品の選択肢)を採用、100gの設定がないお買い得品のみ200g。飲み比べセット・ドリップバッグ・定期便(Coffee Journey)・200gまとめ商品(同銘柄の100gがあるもの)を除外。店内で焙煎(読売タウンニュース2025-10-20)。",
+    "last_verified_at": "2026-10-03",
+    "locations": [
+      {
+        "label": null,
+        "address": "茨城県ひたちなか市市毛1243-4",
+        "prefecture": "茨城県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "SumiKa Coffee 茨城県ひたちなか市市毛1243-4",
+        "lat": 36.398764,
+        "lng": 140.506742
+      }
+    ],
+    "lat": 36.398764,
+    "lng": 140.506742
+  },
+  {
+    "name": "テックコーヒー自家焙煎",
+    "url": "https://tec-coffee.crayonsite.com/",
+    "instagram_url": null,
+    "platform": "Crayon(静的HTML価格表)",
+    "shop_type": "single_location",
+    "address": "茨城県鹿嶋市平井1128-216",
+    "prefecture": "茨城県",
+    "hours": null,
+    "map_query": "テックコーヒー自家焙煎 茨城県鹿嶋市平井1128-216",
+    "nearest_station": {
+      "name": "鹿島神宮",
+      "lines": [
+        "JR鹿島線"
+      ],
+      "distance_m": 4030,
+      "walk_min": 50
+    },
+    "data_source": "manual",
+    "source_note": "公式サイトのメニューページ(https://tec-coffee.crayonsite.com/p/2/)の「コーヒー豆メニュー(押合店)」(100g〜、ストレート950円・ブレンド900円)を2026-10-12に確認。公式の基本情報は「〒314-0012 茨城県鹿嶋市平井1128-216、営業時間:押合店」で、「押合店」は同住所の喫茶併設店舗(地図上の名称はテックコーヒー平井押合店)。同ページには「押合店」表記のない2つ目の豆メニュー(ストレート5種+フレンチロースト、ブレンド7種。うち一部は1つ目と重複名)も載るが、押合店表記の1つ目のみ採用。「本日の限定品」(日替わり)は除外。公式ブログは2026-10-12まで更新されており情報は新しい。",
+    "last_verified_at": "2026-10-12",
+    "locations": [
+      {
+        "label": null,
+        "address": "茨城県鹿嶋市平井1128-216",
+        "prefecture": "茨城県",
+        "hours": null,
+        "tel": "080-3596-5858",
+        "is_headquarters": false,
+        "map_query": "テックコーヒー自家焙煎 茨城県鹿嶋市平井1128-216",
+        "lat": 35.946457,
+        "lng": 140.659053
+      }
+    ],
+    "lat": 35.946457,
+    "lng": 140.659053
+  },
+  {
+    "name": "TW CoFFEE ROASTERS",
+    "url": "https://twcr.stores.jp/",
+    "instagram_url": null,
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "茨城県石岡市石岡2181-2",
+    "prefecture": "茨城県",
+    "hours": null,
+    "map_query": "TW CoFFEE ROASTERS 茨城県石岡市石岡2181-2",
+    "nearest_station": {
+      "name": "石岡",
+      "lines": [
+        "JR常磐線"
+      ],
+      "distance_m": 60,
+      "walk_min": 1
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://twcr.stores.jp/)の商品ページをブラウザfetch()で2026-10-12に確認。商品名の150gを採用。浅煎り3種セット・ドリップバッグ・業務用1,500gを除外。CR600焙煎機で焙煎(公式)。",
+    "last_verified_at": "2026-10-03",
+    "locations": [
+      {
+        "label": null,
+        "address": "茨城県石岡市石岡2181-2",
+        "prefecture": "茨城県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "TW CoFFEE ROASTERS 茨城県石岡市石岡2181-2",
+        "lat": 36.191084,
+        "lng": 140.28005
+      }
+    ],
+    "lat": 36.191084,
+    "lng": 140.28005
   }
 ]

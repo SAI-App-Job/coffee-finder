@@ -1,0 +1,120 @@
+{
+  "shop": {
+    "name": "TW CoFFEE ROASTERS",
+    "url": "https://twcr.stores.jp/",
+    "address": "茨城県石岡市石岡2181-2",
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "prefecture": "茨城県",
+    "source_note": "STORES.jpの公式ショップ(https://twcr.stores.jp/)の商品ページをブラウザfetch()で2026-10-12に確認。商品名の150gを採用。浅煎り3種セット・ドリップバッグ・業務用1,500gを除外。CR600焙煎機で焙煎(公式)。",
+    "id": "tw-coffee-roasters",
+    "instagram_url": null,
+    "google_maps_query": "TW CoFFEE ROASTERS 茨城県石岡市石岡2181-2",
+    "tel": null,
+    "hours": null,
+    "shop_type": "single_location",
+    "data_source": "manual",
+    "last_verified_at": "2026-10-03",
+    "lat": 36.191084,
+    "lng": 140.28005,
+    "nearest_station": {
+      "name": "石岡",
+      "lines": [
+        "JR常磐線"
+      ],
+      "distance_m": 60,
+      "walk_min": 1
+    }
+  },
+  "products": [
+    {
+      "raw_name": "Laos Typica",
+      "category": "ストレート",
+      "originCountry": "ラオス",
+      "processingMethod": null,
+      "roast": "浅煎り",
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1400,
+      "weightG": 150,
+      "stockStatus": "販売中",
+      "productUrl": "https://twcr.stores.jp/items/6aca5121e1d6a90ff5a2b79d",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "Nicaragua Quitasuenos",
+      "category": "ストレート",
+      "originCountry": "ニカラグア",
+      "processingMethod": null,
+      "roast": "浅煎り",
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1350,
+      "weightG": 150,
+      "stockStatus": "販売中",
+      "productUrl": "https://twcr.stores.jp/items/69da428ce126f8b1d6964834",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "Peru BLEND",
+      "category": "ブレンド",
+      "originCountry": null,
+      "processingMethod": null,
+      "roast": "中深煎り",
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1250,
+      "weightG": 150,
+      "stockStatus": "販売中",
+      "productUrl": "https://twcr.stores.jp/items/681b2826e0c48f21660c75e8",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "Brazil sul de minas Ilicínea",
+      "category": "ストレート",
+      "originCountry": "ブラジル",
+      "processingMethod": null,
+      "roast": "中煎り",
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1350,
+      "weightG": 150,
+      "stockStatus": "販売中",
+      "productUrl": "https://twcr.stores.jp/items/6a17c2adfe92604c275292c2",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "Colombia Popayan",
+      "category": "ストレート",
+      "originCountry": "コロンビア",
+      "processingMethod": null,
+      "roast": null,
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1380,
+      "weightG": 150,
+      "stockStatus": "販売中",
+      "productUrl": "https://twcr.stores.jp/items/6a17c221b776cf48bbbd366c",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "Burundi FW Redbourbon",
+      "category": "ストレート",
+      "originCountry": "ブルンジ",
+      "processingMethod": null,
+      "roast": null,
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1250,
+      "weightG": 150,
+      "stockStatus": "販売中",
+      "productUrl": "https://twcr.stores.jp/items/676909e52d6e830237e2e9a0",
+      "data_source": "manual"
+    }
+  ]
+}

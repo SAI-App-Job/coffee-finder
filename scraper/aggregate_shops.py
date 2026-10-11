@@ -1065,6 +1065,20 @@ SOURCE_FILES = {
     "コーヒーのモトヤマ": "data_motoyamacoffee.json",
     "Natural Coffee": "data_naturalcoffee.json",
     "岡田珈琲": "data_okadacoffeekumamoto.json",
+    # 茨城県の再調査(新規発掘)
+    "カフェくーり": "data_cafekuri.json",
+    "Cameo Coffee Company": "data_cameocoffee.json",
+    "capian coffee": "data_capiancoffee.json",
+    "charlie coffee": "data_charliecoffee.json",
+    "自家焙煎 千葉酒店": "data_chibasaketen.json",
+    "フレスタプラス@あらの珈琲": "data_frestaplus.json",
+    "Knot COFFEE": "data_knotcoffee.json",
+    "珈琲豆工房もちまる": "data_motimaru.json",
+    "ニコニコ珈琲": "data_nikonikocoffee.json",
+    "自家焙煎珈琲サイタニヤ": "data_saitaniya.json",
+    "サイトウコーヒー": "data_saitohcoffee.json",
+    "SugayaCoffee": "data_sugayacoffee.json",
+    "自家焙煎珈琲ゆらふる": "data_yurafulcoffee.json",
 }
 
 

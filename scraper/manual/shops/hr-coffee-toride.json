@@ -1,0 +1,90 @@
+{
+  "shop": {
+    "name": "HRCoffee",
+    "url": "https://hr-coffee.com/",
+    "platform": "WordPress(注文フォーム・銀行振込)",
+    "address": "茨城県取手市高須2148",
+    "prefecture": "茨城県",
+    "source_note": "公式サイト(https://hr-coffee.com/)のトップページ『4種類のコーヒー豆』の価格(税込・100g袋のみ)を2026-10-12に確認。2026-09-01にHP開設の新しい店舗で、ご注文後に焙煎・発送。",
+    "last_verified_at": "2026-10-12",
+    "id": "hr-coffee-toride",
+    "instagram_url": null,
+    "google_maps_query": "HRCoffee 茨城県取手市高須2148",
+    "tel": null,
+    "hours": null,
+    "shop_type": "single_location",
+    "data_source": "manual",
+    "lat": 35.902225,
+    "lng": 140.140447,
+    "nearest_station": {
+      "name": "入地",
+      "lines": [
+        "関東鉄道竜ヶ崎線"
+      ],
+      "distance_m": 2400,
+      "walk_min": 30
+    }
+  },
+  "products": [
+    {
+      "raw_name": "HRブレンド〈憩い〉",
+      "category": "ブレンド",
+      "originCountry": null,
+      "processingMethod": null,
+      "roast": "中深煎り",
+      "flavorNotes": "まろやかなコクとやさしい甘み、ほどよい深み。毎日のコーヒーにちょうどいい一杯。",
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 550,
+      "weightG": 100,
+      "stockStatus": "販売中",
+      "productUrl": "https://hr-coffee.com/#HR%E3%83%96%E3%83%AC%E3%83%B3%E3%83%89%E3%80%88%E6%86%A9%E3%81%84%E3%80%89",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "エチオピア シダモG2",
+      "category": "ストレート",
+      "originCountry": "エチオピア",
+      "processingMethod": null,
+      "roast": "中深煎り",
+      "flavorNotes": "すっきりとした口当たりで、ほんのり甘みのある余韻を楽しめる、軽やかで飲みやすいコーヒー。",
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 650,
+      "weightG": 100,
+      "stockStatus": "販売中",
+      "productUrl": "https://hr-coffee.com/#%E3%82%A8%E3%83%81%E3%82%AA%E3%83%94%E3%82%A2%20%E3%82%B7%E3%83%80%E3%83%A2G2",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "マンデリン G1",
+      "category": "ストレート",
+      "originCountry": "インドネシア",
+      "processingMethod": null,
+      "roast": "深煎り",
+      "flavorNotes": "深いコクとほろ苦さ。ハーブやスパイスを思わせる独特の風味。",
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 650,
+      "weightG": 100,
+      "stockStatus": "販売中",
+      "productUrl": "https://hr-coffee.com/#%E3%83%9E%E3%83%B3%E3%83%87%E3%83%AA%E3%83%B3%20G1",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "メキシコ チアパス カフェインレス",
+      "category": "ストレート",
+      "originCountry": "メキシコ",
+      "processingMethod": null,
+      "roast": "中煎り",
+      "flavorNotes": "化学薬品を使わず水と時間でカフェインを除去。チアパス産の爽やかな風味とやさしい余韻。",
+      "farmNote": null,
+      "decafProcess": "化学薬品を使わず、水と時間でカフェインを除去",
+      "price": 850,
+      "weightG": 100,
+      "stockStatus": "販売中",
+      "productUrl": "https://hr-coffee.com/#%E3%83%A1%E3%82%AD%E3%82%B7%E3%82%B3%20%E3%83%81%E3%82%A2%E3%83%91%E3%82%B9%20%E3%82%AB%E3%83%95%E3%82%A7%E3%82%A4%E3%83%B3%E3%83%AC%E3%82%B9",
+      "data_source": "manual"
+    }
+  ]
+}

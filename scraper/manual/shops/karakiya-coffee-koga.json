@@ -1,0 +1,60 @@
+{
+  "shop": {
+    "name": "自家焙煎からきや珈琲",
+    "url": "https://karakiya-coffee.stores.jp/",
+    "address": "茨城県古河市下大野2163-9",
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "prefecture": "茨城県",
+    "source_note": "STORES.jpの公式ショップ(https://karakiya-coffee.stores.jp/)の商品ページをブラウザfetch()で2026-10-12に確認。STORESに掲載の2商品のみ(豆100g)。公式サイトの価格表にあるシングルオリジンは通販商品ページがSTORESに無いため対象外。直火自家焙煎・1981年創業(公式)。本店とカフェの2店。",
+    "id": "karakiya-coffee-koga",
+    "instagram_url": null,
+    "google_maps_query": "自家焙煎からきや珈琲 茨城県古河市下大野2163-9",
+    "tel": null,
+    "hours": null,
+    "shop_type": "single_location",
+    "data_source": "manual",
+    "last_verified_at": "2026-10-03",
+    "lat": 36.17811,
+    "lng": 139.76298,
+    "nearest_station": {
+      "name": "古河",
+      "lines": [
+        "JR宇都宮線"
+      ],
+      "distance_m": 5120,
+      "walk_min": 64
+    }
+  },
+  "products": [
+    {
+      "raw_name": "からきや贅沢ブレンド",
+      "category": "ブレンド",
+      "originCountry": null,
+      "processingMethod": null,
+      "roast": "中煎り",
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1003,
+      "weightG": 100,
+      "stockStatus": "販売中",
+      "productUrl": "https://karakiya-coffee.stores.jp/items/655ef95f60053722e2792409",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "からきやロイヤルブレンド",
+      "category": "ブレンド",
+      "originCountry": null,
+      "processingMethod": null,
+      "roast": "中煎り",
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 711,
+      "weightG": 100,
+      "stockStatus": "販売中",
+      "productUrl": "https://karakiya-coffee.stores.jp/items/655eec4dddb42203cb9d9285",
+      "data_source": "manual"
+    }
+  ]
+}
