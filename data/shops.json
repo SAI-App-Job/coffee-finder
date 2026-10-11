@@ -27294,5 +27294,409 @@
     ],
     "lat": 34.642553,
     "lng": 133.914073
+  },
+  {
+    "name": "焙煎幸房“そら”",
+    "url": "https://coffee-sora.shop/",
+    "platform": "Shopify",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認(Shopify標準構成)",
+    "address": "岐阜県大垣市墨俣町二ツ木80-1",
+    "prefecture": "岐阜県",
+    "hours": null,
+    "map_query": "焙煎幸房“そら”",
+    "nearest_station": {
+      "name": "東大垣",
+      "lines": [
+        "樽見鉄道樽見"
+      ],
+      "distance_m": 3170,
+      "walk_min": 40
+    },
+    "last_scraped_at": "2026-10-11T12:58:28.910659+00:00",
+    "lat": 35.361437,
+    "lng": 136.677183
+  },
+  {
+    "name": "cafe 旅人の木",
+    "url": "https://cafetabibito.thebase.in/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "岐阜県岐阜市金町5-3-4 金神社会館地下1階",
+    "prefecture": "岐阜県",
+    "hours": null,
+    "map_query": "cafe 旅人の木",
+    "nearest_station": {
+      "name": "大垣",
+      "lines": [
+        "JR東海道本線",
+        "樽見鉄道樽見",
+        "養老鉄道"
+      ],
+      "distance_m": 270,
+      "walk_min": 3
+    },
+    "last_scraped_at": "2026-10-11T12:58:28.910659+00:00",
+    "lat": 35.366413,
+    "lng": 136.621091
+  },
+  {
+    "name": "珈琲物語",
+    "url": "https://coffeestory.base.shop/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "岐阜県本巣市三橋4丁目17",
+    "prefecture": "岐阜県",
+    "hours": null,
+    "map_query": "珈琲物語",
+    "nearest_station": {
+      "name": "北方真桑",
+      "lines": [
+        "樽見鉄道樽見"
+      ],
+      "distance_m": 760,
+      "walk_min": 10
+    },
+    "last_scraped_at": "2026-10-11T12:58:28.910659+00:00",
+    "lat": 35.445819,
+    "lng": 136.677686
+  },
+  {
+    "name": "GOOD DAYS COFFEE",
+    "url": "https://gdayscoffee.thebase.in/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "岐阜県多治見市太平町4-50 グリュックリヒ・ファミーリエ1F D",
+    "prefecture": "岐阜県",
+    "hours": null,
+    "map_query": "GOOD DAYS COFFEE",
+    "nearest_station": {
+      "name": "多治見",
+      "lines": [
+        "JR太多線",
+        "JR中央本線"
+      ],
+      "distance_m": 990,
+      "walk_min": 12
+    },
+    "last_scraped_at": "2026-10-11T12:58:28.910659+00:00",
+    "lat": 35.338243,
+    "lng": 137.11027
+  },
+  {
+    "name": "華きりんコーヒーロースター",
+    "url": "https://hanakirin.base.shop/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "岐阜県大垣市昼飯町411",
+    "prefecture": "岐阜県",
+    "hours": null,
+    "map_query": "華きりんコーヒーロースター",
+    "nearest_station": {
+      "name": "美濃赤坂",
+      "lines": [
+        "JR東海道本線"
+      ],
+      "distance_m": 1230,
+      "walk_min": 15
+    },
+    "last_scraped_at": "2026-10-11T12:58:28.910659+00:00",
+    "lat": 35.388585,
+    "lng": 136.568812
+  },
+  {
+    "name": "井ノ口珈琲",
+    "url": "https://inokuchi-coffee.jp/",
+    "platform": "WordPress(WooCommerce)",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-10確認。管理系パスとadd-to-cartのみDisallow。Store APIは制限対象外)",
+    "address": "岐阜県岐阜市六条片田1丁目15-1",
+    "prefecture": "岐阜県",
+    "hours": null,
+    "map_query": "井ノ口珈琲",
+    "nearest_station": {
+      "name": "岐阜",
+      "lines": [
+        "JR東海道本線",
+        "JR高山本線"
+      ],
+      "distance_m": 1720,
+      "walk_min": 22
+    },
+    "last_scraped_at": "2026-10-11T12:58:28.910659+00:00",
+    "lat": 35.39651,
+    "lng": 136.746411
+  },
+  {
+    "name": "自家焙煎珈琲 津田屋",
+    "url": "https://tsutayacafe.thebase.in/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "岐阜県高山市下二之町77",
+    "prefecture": "岐阜県",
+    "hours": null,
+    "map_query": "自家焙煎珈琲 津田屋",
+    "nearest_station": {
+      "name": "高山",
+      "lines": [
+        "JR高山本線"
+      ],
+      "distance_m": 850,
+      "walk_min": 11
+    },
+    "last_scraped_at": "2026-10-11T12:58:28.910659+00:00",
+    "lat": 36.144788,
+    "lng": 137.259128
+  },
+  {
+    "name": "Jikan ryoko",
+    "url": "https://jikanryoko.thebase.in/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "岐阜県多治見市池田町5-142",
+    "prefecture": "岐阜県",
+    "hours": null,
+    "map_query": "Jikan ryoko",
+    "nearest_station": {
+      "name": "古虎渓",
+      "lines": [
+        "JR中央本線"
+      ],
+      "distance_m": 1500,
+      "walk_min": 19
+    },
+    "last_scraped_at": "2026-10-11T12:58:28.910659+00:00",
+    "lat": 35.316402,
+    "lng": 137.102676
+  },
+  {
+    "name": "コクウ珈琲",
+    "url": "https://cocucoffee.thebase.in/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "岐阜県美濃加茂市太田本町1-7-1",
+    "prefecture": "岐阜県",
+    "hours": null,
+    "map_query": "コクウ珈琲",
+    "nearest_station": {
+      "name": "美濃太田",
+      "lines": [
+        "JR太多線",
+        "JR高山本線",
+        "長良川鉄道越美南線"
+      ],
+      "distance_m": 750,
+      "walk_min": 9
+    },
+    "last_scraped_at": "2026-10-11T12:58:28.910659+00:00",
+    "lat": 35.439415,
+    "lng": 137.016154
+  },
+  {
+    "name": "RELIEVE COFFEE ROASTERY Lab.",
+    "url": "https://relieve0729.base.shop/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "岐阜県本巣市木知原1025-33",
+    "prefecture": "岐阜県",
+    "hours": null,
+    "map_query": "RELIEVE COFFEE ROASTERY Lab.",
+    "nearest_station": {
+      "name": "木知原",
+      "lines": [
+        "樽見鉄道樽見"
+      ],
+      "distance_m": 10,
+      "walk_min": 1
+    },
+    "last_scraped_at": "2026-10-11T12:58:28.910659+00:00",
+    "lat": 35.517764,
+    "lng": 136.650076
+  },
+  {
+    "name": "RIVERBED COFFEE BREWER&ROASTERY",
+    "url": "https://riverbedcoffee-brewer-roastery.com/",
+    "platform": "Shopify",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認(Shopify標準構成)",
+    "address": "岐阜県中津川市手賀野74",
+    "prefecture": "岐阜県",
+    "hours": null,
+    "map_query": "RIVERBED COFFEE BREWER&ROASTERY",
+    "nearest_station": {
+      "name": "中津川",
+      "lines": [
+        "JR中央本線"
+      ],
+      "distance_m": 4080,
+      "walk_min": 51
+    },
+    "last_scraped_at": "2026-10-11T12:58:28.910659+00:00",
+    "lat": 35.463705,
+    "lng": 137.501971
+  },
+  {
+    "name": "Supple Coffee Roasters",
+    "url": "https://supplecoffee.thebase.in/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "岐阜県郡上市八幡町本町865-1",
+    "prefecture": "岐阜県",
+    "hours": null,
+    "map_query": "Supple Coffee Roasters",
+    "nearest_station": {
+      "name": "郡上八幡",
+      "lines": [
+        "長良川鉄道越美南線"
+      ],
+      "distance_m": 1250,
+      "walk_min": 16
+    },
+    "last_scraped_at": "2026-10-11T12:58:28.910659+00:00",
+    "lat": 35.750308,
+    "lng": 136.956568
+  },
+  {
+    "name": "待夢珈琲店",
+    "url": "https://timecoffee.cafe/",
+    "platform": "WordPress(Welcart)",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-10確認。/wp-admin/のみDisallow。商品ページは制限対象外)",
+    "address": "岐阜県瑞浪市一色町4丁目48-3",
+    "prefecture": "岐阜県",
+    "hours": null,
+    "map_query": "待夢珈琲店",
+    "nearest_station": {
+      "name": "瑞浪",
+      "lines": [
+        "JR中央本線"
+      ],
+      "distance_m": 1250,
+      "walk_min": 16
+    },
+    "last_scraped_at": "2026-10-11T12:58:28.910659+00:00",
+    "lat": 35.357828,
+    "lng": 137.251579
+  },
+  {
+    "name": "CHERRY COFFEE",
+    "url": "https://mtec-hp.com/cherry-coffee/",
+    "instagram_url": null,
+    "platform": "静的HTML(自社サイト)。注文は電話・FAX・メールフォームで銀行振込",
+    "shop_type": "single_location",
+    "address": "岐阜県岐阜市中鶉3-101",
+    "prefecture": "岐阜県",
+    "hours": null,
+    "map_query": "CHERRY COFFEE 岐阜県岐阜市中鶉3-101",
+    "nearest_station": {
+      "name": "柳津",
+      "lines": [
+        "名鉄竹鼻線"
+      ],
+      "distance_m": 1710,
+      "walk_min": 21
+    },
+    "data_source": "manual",
+    "source_note": "公式サイト(https://mtec-hp.com/cherry-coffee/product.html ほか bean.html・decafe.html・online.html)の取り扱いコーヒー一覧を2026-10-11に確認。トップのお知らせは2026-10-01付で更新は新しい。ブレンド2種は200gのみ、焙煎度は注文時に選択のため焙煎度は未設定。一杯出しドリップコーヒー(ひだまり・しののめ)とギフトは除外",
+    "last_verified_at": "2026-10-11",
+    "locations": [
+      {
+        "label": null,
+        "address": "岐阜県岐阜市中鶉3-101",
+        "prefecture": "岐阜県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "CHERRY COFFEE 岐阜県岐阜市中鶉3-101",
+        "lat": 35.378797,
+        "lng": 136.729133
+      }
+    ],
+    "lat": 35.378797,
+    "lng": 136.729133
+  },
+  {
+    "name": "SHERPA COFFEE ROASTERS",
+    "url": "https://sherpacoffeeroasters.shop/",
+    "instagram_url": null,
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "岐阜県岐阜市早田1901-6",
+    "prefecture": "岐阜県",
+    "hours": null,
+    "map_query": "SHERPA COFFEE ROASTERS 岐阜県岐阜市早田1901-6",
+    "nearest_station": {
+      "name": "名鉄岐阜",
+      "lines": [
+        "名鉄各務原線",
+        "名鉄名古屋本線"
+      ],
+      "distance_m": 3170,
+      "walk_min": 40
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://sherpacoffeeroasters.shop/)の商品ページをブラウザfetch()で2026-10-11に確認。100gを代表に採用(200g・500gは同銘柄の別商品)。トライアルセット・ボトルコーヒー・コーヒーバッグ・ワークショップ・ふるさと納税・卸を除外。ロースタリー(公式サイト・複数媒体)で自家焙煎を確認。",
+    "last_verified_at": "2026-10-03",
+    "locations": [
+      {
+        "label": null,
+        "address": "岐阜県岐阜市早田1901-6",
+        "prefecture": "岐阜県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "SHERPA COFFEE ROASTERS 岐阜県岐阜市早田1901-6",
+        "lat": 35.440031,
+        "lng": 136.762439
+      }
+    ],
+    "lat": 35.440031,
+    "lng": 136.762439
+  },
+  {
+    "name": "TASTORY COFFEE AND ROASTER",
+    "url": "https://tastorycoffee.stores.jp/",
+    "instagram_url": null,
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "岐阜県大垣市鶴見町288 栄光ビル1F",
+    "prefecture": "岐阜県",
+    "hours": null,
+    "map_query": "TASTORY COFFEE AND ROASTER 岐阜県大垣市鶴見町288 栄光ビル1F",
+    "nearest_station": {
+      "name": "東大垣",
+      "lines": [
+        "樽見鉄道樽見"
+      ],
+      "distance_m": 1760,
+      "walk_min": 22
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://tastorycoffee.stores.jp/)の商品ページをブラウザfetch()で2026-10-11に確認。豆のまま200g(最小の小売サイズ)を採用。セット・コーヒーバッグ・カフェオレベース・ギフトボックスを除外。2015年開業の焙煎士の店(取材記事・Instagram)。住所は商品ページでなくCafeSnapの掲載による。",
+    "last_verified_at": "2026-10-03",
+    "locations": [
+      {
+        "label": null,
+        "address": "岐阜県大垣市鶴見町288 栄光ビル1F",
+        "prefecture": "岐阜県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "TASTORY COFFEE AND ROASTER 岐阜県大垣市鶴見町288 栄光ビル1F",
+        "lat": 35.360946,
+        "lng": 136.638651
+      }
+    ],
+    "lat": 35.360946,
+    "lng": 136.638651
   }
 ]

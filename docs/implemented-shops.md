@@ -5,7 +5,7 @@
 `scraper/manual/shops/`配下、それ以外は`scraper/scrape_*.py`で自動取得。
 実装を見送った店舗は`docs/not-implementable-shops.md`を参照。
 
-合計1171店舗・19768商品(生成日: 2026-10-11)。
+合計1187店舗・19978商品(生成日: 2026-10-11)。
 
 再生成コマンド:
 ```
@@ -201,13 +201,29 @@ aggregate_shops.py実行後の`git diff --staged --quiet || git commit`が該当
 | 自家焙煎珈琲工房Perigord | 下呂市森1075-3 | 手動 | 9 |
 | 緑の館 | 下呂市萩原町花池123番地 | Ocnk | 24 |
 | 珈琲豆自家焙煎店 開化珈琲 | 関市倉知3261-1 | 手動 | 12 |
+| cafe 旅人の木 | 岐阜市金町5-3-4 金神社会館地下1階 | BASE | 12 |
 | ミーツコーヒーロースターズ | 岐阜市西河渡3-78-1 | BASE | 10 |
+| SHERPA COFFEE ROASTERS | 岐阜市早田1901-6 | STORES(手動) | 14 |
 | YAJIMA COFFEE | 岐阜市大宮町1-8 | カラーミー | 12 |
+| CHERRY COFFEE | 岐阜市中鶉3-101 | 手動 | 10 |
 | 山田珈琲 | 岐阜市福光東1-25-3 | Ocnk | 10 |
 | ○珈琲 Yu-A | 岐阜市柳津町丸野2-97 | MakeShop | 16 |
+| 井ノ口珈琲 | 岐阜市六条片田1丁目15-1 | WordPress | 6 |
+| Supple Coffee Roasters | 郡上市八幡町本町865-1 | BASE | 6 |
 | て〜る珈琲 | 恵那市大井町836番地 | BASE | 14 |
+| 自家焙煎珈琲 津田屋 | 高山市下二之町77 | BASE | 7 |
 | イーグルコーヒー高山 | 高山市石浦町2丁目398番地 | カラーミー | 20 |
+| 待夢珈琲店 | 瑞浪市一色町4丁目48-3 | WordPress | 41 |
+| GOOD DAYS COFFEE | 多治見市太平町4-50 グリュックリヒ・ファミーリエ1F D | BASE | 8 |
+| Jikan ryoko | 多治見市池田町5-142 | BASE | 12 |
+| 華きりんコーヒーロースター | 大垣市昼飯町411 | BASE | 9 |
+| TASTORY COFFEE AND ROASTER | 大垣市鶴見町288 栄光ビル1F | STORES(手動) | 14 |
 | 珈琲幸房多香 | 大垣市東外側町1-1-5 | BASE | 12 |
+| 焙煎幸房“そら” | 大垣市墨俣町二ツ木80-1 | Shopify | 25 |
+| RIVERBED COFFEE BREWER&ROASTERY | 中津川市手賀野74 | Shopify | 10 |
+| コクウ珈琲 | 美濃加茂市太田本町1-7-1 | BASE | 10 |
+| 珈琲物語 | 本巣市三橋4丁目17 | BASE | 15 |
+| RELIEVE COFFEE ROASTERY Lab. | 本巣市木知原1025-33 | BASE | 11 |
 
 ### 宮崎県
 

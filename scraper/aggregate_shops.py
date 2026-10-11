@@ -1030,6 +1030,20 @@ SOURCE_FILES = {
     "珈琲工房サントス": "data_santoscoffeeokayama.json",
     "THE COFFEE HOUSE": "data_thecoffeehouse.json",
     "YIRGA COFFEE ROASTERS": "data_yirgacoffeeroasters.json",
+    # 岐阜県の再調査(新規発掘)
+    "焙煎幸房“そら”": "data_baisenkoubousora.json",
+    "cafe 旅人の木": "data_cafetabibitonoki.json",
+    "珈琲物語": "data_coffeestory.json",
+    "GOOD DAYS COFFEE": "data_gooddayscoffee.json",
+    "華きりんコーヒーロースター": "data_hanakirin.json",
+    "井ノ口珈琲": "data_inokuchicoffee.json",
+    "自家焙煎珈琲 津田屋": "data_jikabaisencoffeetsutaya.json",
+    "Jikan ryoko": "data_jikanryoko.json",
+    "コクウ珈琲": "data_kokuucoffee.json",
+    "RELIEVE COFFEE ROASTERY Lab.": "data_relievecoffeelab.json",
+    "RIVERBED COFFEE BREWER&ROASTERY": "data_riverbedcoffeebrewerroastery.json",
+    "Supple Coffee Roasters": "data_supplecoffee.json",
+    "待夢珈琲店": "data_timecoffee.json",
 }
 
 
