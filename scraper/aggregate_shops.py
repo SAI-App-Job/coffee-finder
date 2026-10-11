@@ -1049,6 +1049,22 @@ SOURCE_FILES = {
     "Heartfelt Coffee": "data_heartfeltcoffee.json",
     "松焙煎店": "data_matsubaisen.json",
     "奈良藤枝珈琲焙煎所": "data_narafujiedacoffee.json",
+    # 熊本県の再調査(新規発掘)
+    "A BLUE COFFEE": "data_abluecoffee.json",
+    "赤い月珈琲": "data_akaitsukicoffee.json",
+    "CAFE BANANA FRUITS & COFFEE ROASTERS": "data_cafebanana.json",
+    "珈琲回廊": "data_coffeegallery.json",
+    "ENDELEA COFFEE": "data_endeleacoffee.json",
+    "Gluck Coffee Spot": "data_gluckcoffeespot.json",
+    "岩下珈琲": "data_iwashitacoffee.json",
+    "JUNCTION Coffee Roaster": "data_junctioncoffee.json",
+    "ケイズコーヒー": "data_keiscoffee.json",
+    "黒柴コーヒー": "data_kuroshibacoffee.json",
+    "御堂珈琲店": "data_midoucoffee.json",
+    "モッコス珈琲館": "data_moccoscoffee.json",
+    "コーヒーのモトヤマ": "data_motoyamacoffee.json",
+    "Natural Coffee": "data_naturalcoffee.json",
+    "岡田珈琲": "data_okadacoffeekumamoto.json",
 }
 
 

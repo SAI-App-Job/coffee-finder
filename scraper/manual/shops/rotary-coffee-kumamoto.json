@@ -1,0 +1,105 @@
+{
+  "shop": {
+    "name": "ROTARY COFFEE",
+    "url": "https://rotarycoffee.jp/",
+    "address": "熊本県熊本市中央区本山町315",
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "prefecture": "熊本県",
+    "source_note": "STORES.jpの公式ショップ(https://rotarycoffee.jp/)の商品ページをブラウザfetch()で2026-10-11に確認。豆のまま200gを採用(粉は同一商品の選択肢)。商品名の「同時購入で800円OFF」等のキャンペーン文言は除外した表示価格。飲み比べセット・ドリップバッグ・水出し・カフェラテベースを除外。公式サイトに自家焙煎のスペシャルティコーヒーと記載。2店舗(ROTARY、LOBBY)。STORES店の公式サイトは rotarycoffee.jp。",
+    "id": "rotary-coffee-kumamoto",
+    "instagram_url": null,
+    "google_maps_query": "ROTARY COFFEE 熊本県熊本市中央区本山町315",
+    "tel": null,
+    "hours": null,
+    "shop_type": "single_location",
+    "data_source": "manual",
+    "last_verified_at": "2026-10-03",
+    "lat": 32.79085,
+    "lng": 130.694687,
+    "nearest_station": {
+      "name": "祇園橋",
+      "lines": [
+        "熊本市電幹線"
+      ],
+      "distance_m": 220,
+      "walk_min": 3
+    }
+  },
+  "products": [
+    {
+      "raw_name": "Ethiopia G1 Batu Kobo Dry Station",
+      "category": "ストレート",
+      "originCountry": "エチオピア",
+      "processingMethod": null,
+      "roast": null,
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 2100,
+      "weightG": 200,
+      "stockStatus": "販売中",
+      "productUrl": "https://takafumihigashi.stores.jp/items/67371709bfb5fa0545b1bb53",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "Nicaragua Finca El Suyatal",
+      "category": "ストレート",
+      "originCountry": "ニカラグア",
+      "processingMethod": null,
+      "roast": null,
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 2000,
+      "weightG": 200,
+      "stockStatus": "販売中",
+      "productUrl": "https://takafumihigashi.stores.jp/items/6826c4b03e0c06200b4438a0",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "Brazil Taste of Harvest 2025 #3 Sitio da Torre",
+      "category": "ストレート",
+      "originCountry": "ブラジル",
+      "processingMethod": null,
+      "roast": null,
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 2100,
+      "weightG": 200,
+      "stockStatus": "販売中",
+      "productUrl": "https://takafumihigashi.stores.jp/items/67039cee02b7ef002fdec90e",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "Rotary Blend",
+      "category": "ブレンド",
+      "originCountry": null,
+      "processingMethod": null,
+      "roast": null,
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1900,
+      "weightG": 200,
+      "stockStatus": "販売中",
+      "productUrl": "https://takafumihigashi.stores.jp/items/67039a481d175c0991ed6b85",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "Colombia Finca La Orquidea",
+      "category": "ストレート",
+      "originCountry": "コロンビア",
+      "processingMethod": null,
+      "roast": null,
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 2400,
+      "weightG": 200,
+      "stockStatus": "販売中",
+      "productUrl": "https://takafumihigashi.stores.jp/items/677b8dc7e8c4f803b5dbdab8",
+      "data_source": "manual"
+    }
+  ]
+}
