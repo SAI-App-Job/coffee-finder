@@ -5,7 +5,7 @@
 `scraper/manual/shops/`配下、それ以外は`scraper/scrape_*.py`で自動取得。
 実装を見送った店舗は`docs/not-implementable-shops.md`を参照。
 
-合計1187店舗・19978商品(生成日: 2026-10-11)。
+合計1197店舗・20117商品(生成日: 2026-10-11)。
 
 再生成コマンド:
 ```
@@ -1233,13 +1233,23 @@ aggregate_shops.py実行後の`git diff --staged --quiet || git commit`が該当
 
 | 店舗名 | 所在地 | 方式 | 件数 |
 |---|---|---|---|
+| Heartfelt Coffee | 磯城郡田原本町宮森10-1 | BASE | 3 |
 | 珈琲の富田屋 | 橿原市今井町1丁目10-17 | WordPress | 16 |
+| KOTO COFFEE ROASTERS | 五條市上之町481 | STORES(手動) | 10 |
 | にしかぜ珈琲豆店 | 香芝市下田西2-2-51 宮の北ハイツＣ | BASE | 13 |
+| Slack Tisa | 生駒郡三郷町立野南2-11-9 | STORES(手動) | 16 |
 | すぎた珈琲 | 生駒郡平群町菊美台１－８００－１ | BASE | 11 |
+| 原珈琲 | 生駒市西白庭台1丁目13-8 | 手動 | 18 |
 | 喫茶イレブン | 生駒市東松ヶ丘2-14-101 | BASE | 7 |
+| 奈良藤枝珈琲焙煎所 | 大和郡山市大江町112-1 | Shopify | 4 |
 | K COFFEE | 大和郡山市柳4-46 | Shopify | 15 |
+| 珈琲屋 凡豆 | 奈良市紀寺町1023 | 手動 | 14 |
 | ROKUMEI COFFEE CO. | 奈良市西御門町31 | Future Shop(フューチャーショップ、house未確立パターン。schema.org JSON-LDを情報源として使用) | 22 |
 | 珈琲＆紅茶館 | 奈良市西木辻町126 | カラーミー | 76 |
+| 天迦久珈琲 -ROASTERY & BREAD- | 奈良市中新屋町18 | Shopify | 7 |
+| 松焙煎店 | 奈良市北風呂町20-2 | BASE | 24 |
+| 大和自家焙煎 桜座珈琲 | 奈良市恋の窪2丁目1-8 徳丸ビル103 | STORES(手動) | 11 |
+| Coffee Gallery Nob | 北葛城郡河合町高塚台1-9-1 | 手動 | 32 |
 
 ### 福岡県
 

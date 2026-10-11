@@ -27698,5 +27698,317 @@
     ],
     "lat": 35.360946,
     "lng": 136.638651
+  },
+  {
+    "name": "天迦久珈琲 -ROASTERY & BREAD-",
+    "url": "https://amenokakucoffee.com/",
+    "platform": "Shopify",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認(Shopify標準構成)",
+    "address": "奈良県奈良市中新屋町18",
+    "prefecture": "奈良県",
+    "hours": null,
+    "map_query": "天迦久珈琲 -ROASTERY & BREAD-",
+    "nearest_station": {
+      "name": "近鉄奈良",
+      "lines": [
+        "近鉄奈良線"
+      ],
+      "distance_m": 780,
+      "walk_min": 10
+    },
+    "last_scraped_at": "2026-10-11T20:45:12.456252+00:00",
+    "lat": 34.677713,
+    "lng": 135.830314
+  },
+  {
+    "name": "Heartfelt Coffee",
+    "url": "https://heartfeltcof.base.ec/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "奈良県磯城郡田原本町宮森10-1",
+    "prefecture": "奈良県",
+    "hours": null,
+    "map_query": "Heartfelt Coffee",
+    "nearest_station": {
+      "name": "笠縫",
+      "lines": [
+        "近鉄橿原線"
+      ],
+      "distance_m": 580,
+      "walk_min": 7
+    },
+    "last_scraped_at": "2026-10-11T20:45:12.456252+00:00",
+    "lat": 34.538803,
+    "lng": 135.788623
+  },
+  {
+    "name": "松焙煎店",
+    "url": "https://matsubaisen.official.ec/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "奈良県奈良市北風呂町20-2",
+    "prefecture": "奈良県",
+    "hours": null,
+    "map_query": "松焙煎店",
+    "nearest_station": {
+      "name": "近鉄奈良",
+      "lines": [
+        "近鉄奈良線"
+      ],
+      "distance_m": 670,
+      "walk_min": 8
+    },
+    "last_scraped_at": "2026-10-11T20:45:12.456252+00:00",
+    "lat": 34.678419,
+    "lng": 135.826156
+  },
+  {
+    "name": "奈良藤枝珈琲焙煎所",
+    "url": "https://narafujiedacoffee.jp/",
+    "platform": "Shopify",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認(Shopify標準構成)",
+    "address": "奈良県大和郡山市大江町112-1",
+    "prefecture": "奈良県",
+    "hours": null,
+    "map_query": "奈良藤枝珈琲焙煎所",
+    "nearest_station": {
+      "name": "郡山",
+      "lines": [
+        "JR大和路線"
+      ],
+      "distance_m": 2010,
+      "walk_min": 25
+    },
+    "last_scraped_at": "2026-10-11T20:45:12.456252+00:00",
+    "lat": 34.634552,
+    "lng": 135.804647
+  },
+  {
+    "name": "珈琲屋 凡豆",
+    "url": "https://bons-nara.shopinfo.jp/",
+    "instagram_url": null,
+    "platform": "Ameba Ownd(shopinfo.jp)",
+    "shop_type": "single_location",
+    "address": "奈良県奈良市紀寺町1023",
+    "prefecture": "奈良県",
+    "hours": null,
+    "map_query": "珈琲屋 凡豆 奈良県奈良市紀寺町1023",
+    "nearest_station": {
+      "name": "京終",
+      "lines": [
+        "JR桜井線"
+      ],
+      "distance_m": 560,
+      "walk_min": 7
+    },
+    "data_source": "manual",
+    "source_note": "公式サイトの価格ページ(https://bons-nara.shopinfo.jp/pages/2527237/page_201901181522)を2026-10-11に確認(サイトマップ上の最終更新2026-10-02)。2026-10-01付の価格改定(マンデリン)後の掲載価格を採用。ストレート豆の価格欄は『2026年8月1日からの価格』表記。通販は電話・FAX・メールで300g以上から。公式表記の住所は奈良市紀寺町1023(食べログ等の1020表記は不採用)。",
+    "last_verified_at": "2026-10-11",
+    "locations": [
+      {
+        "label": null,
+        "address": "奈良県奈良市紀寺町1023",
+        "prefecture": "奈良県",
+        "hours": null,
+        "tel": "0742-23-7043",
+        "is_headquarters": false,
+        "map_query": "珈琲屋 凡豆 奈良県奈良市紀寺町1023",
+        "lat": 34.672733,
+        "lng": 135.833562
+      }
+    ],
+    "lat": 34.672733,
+    "lng": 135.833562
+  },
+  {
+    "name": "Coffee Gallery Nob",
+    "url": "https://nob-coffee.com/",
+    "instagram_url": null,
+    "platform": "独自CGIカート(cart.cgi)",
+    "shop_type": "single_location",
+    "address": "奈良県北葛城郡河合町高塚台1-9-1",
+    "prefecture": "奈良県",
+    "hours": null,
+    "map_query": "Coffee Gallery Nob 奈良県北葛城郡河合町高塚台1-9-1",
+    "nearest_station": {
+      "name": "大輪田",
+      "lines": [
+        "近鉄田原本線"
+      ],
+      "distance_m": 950,
+      "walk_min": 12
+    },
+    "data_source": "manual",
+    "source_note": "公式オンラインショップ(https://nob-coffee.com/cgi-bin/cart.cgi)のストレート・ブレンド・裏メニュー(カフェインレス)の各一覧を2026-10-11に確認。全品100g包装・税込。ギフト(4点)は除外。産地は各商品PDF(農園情報)で確認できたものを採用。ブレンドの[軽め/中間/少し強め/強め]は焙煎度ではなく味の強さ表示のためroastはnullとし説明文に残した。ニュースの更新は2026/10/11まで確認(公式)。",
+    "last_verified_at": "2026-10-11",
+    "locations": [
+      {
+        "label": null,
+        "address": "奈良県北葛城郡河合町高塚台1-9-1",
+        "prefecture": "奈良県",
+        "hours": null,
+        "tel": "0745-32-3096",
+        "is_headquarters": false,
+        "map_query": "Coffee Gallery Nob 奈良県北葛城郡河合町高塚台1-9-1",
+        "lat": 34.581229,
+        "lng": 135.716579
+      }
+    ],
+    "lat": 34.581229,
+    "lng": 135.716579
+  },
+  {
+    "name": "原珈琲",
+    "url": "http://hara-coffee.com/",
+    "instagram_url": null,
+    "platform": "ホームページ・ビルダー製の静的HTML(Shift_JIS・httpのみ)",
+    "shop_type": "single_location",
+    "address": "奈良県生駒市西白庭台1丁目13-8",
+    "prefecture": "奈良県",
+    "hours": null,
+    "map_query": "原珈琲 奈良県生駒市西白庭台1丁目13-8",
+    "nearest_station": {
+      "name": "白庭台",
+      "lines": [
+        "近鉄けいはんな線"
+      ],
+      "distance_m": 1030,
+      "walk_min": 13
+    },
+    "data_source": "manual",
+    "source_note": "公式サイトのメニューページ(http://hara-coffee.com/menu.html)を2026-10-11に確認(HTTP Last-Modified: 2026-08-11、トップは2022-08-22)。100g当たり税込。商品名は画像のalt属性から取得。電話・メール注文、店舗営業は金土日。焙煎度が2種類ある商品は『中煎り/中深煎り』等と併記。",
+    "last_verified_at": "2026-10-11",
+    "locations": [
+      {
+        "label": null,
+        "address": "奈良県生駒市西白庭台1丁目13-8",
+        "prefecture": "奈良県",
+        "hours": null,
+        "tel": "0743-72-6517",
+        "is_headquarters": false,
+        "map_query": "原珈琲 奈良県生駒市西白庭台1丁目13-8",
+        "lat": 34.72542,
+        "lng": 135.707306
+      }
+    ],
+    "lat": 34.72542,
+    "lng": 135.707306
+  },
+  {
+    "name": "KOTO COFFEE ROASTERS",
+    "url": "https://koto-coffee.shop/",
+    "instagram_url": null,
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "奈良県五條市上之町481",
+    "prefecture": "奈良県",
+    "hours": null,
+    "map_query": "KOTO COFFEE ROASTERS 奈良県五條市上之町481",
+    "nearest_station": {
+      "name": "五条",
+      "lines": [
+        "JR和歌山線"
+      ],
+      "distance_m": 3560,
+      "walk_min": 45
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://koto-coffee.shop/)の商品ページをブラウザfetch()で2026-10-11に確認。ゆうパック発送の商品ページの最小サイズ(150g、カラモのみ120g)を採用。メール便発送の同内容ページ(別ID)・定期配送・ギフト・コーヒーバッグを除外。店主はJCRC2019優勝(typica.coffeeの紹介記事)。",
+    "last_verified_at": "2026-10-03",
+    "locations": [
+      {
+        "label": null,
+        "address": "奈良県五條市上之町481",
+        "prefecture": "奈良県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "KOTO COFFEE ROASTERS 奈良県五條市上之町481",
+        "lat": 34.379692,
+        "lng": 135.672989
+      }
+    ],
+    "lat": 34.379692,
+    "lng": 135.672989
+  },
+  {
+    "name": "大和自家焙煎 桜座珈琲",
+    "url": "https://ouzacoffee.stores.jp/",
+    "instagram_url": null,
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "奈良県奈良市恋の窪2丁目1-8 徳丸ビル103",
+    "prefecture": "奈良県",
+    "hours": null,
+    "map_query": "大和自家焙煎 桜座珈琲 奈良県奈良市恋の窪2丁目1-8 徳丸ビル103",
+    "nearest_station": {
+      "name": "奈良",
+      "lines": [
+        "JR奈良線",
+        "JR大和路線",
+        "JR桜井線"
+      ],
+      "distance_m": 1140,
+      "walk_min": 14
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://ouzacoffee.stores.jp/)の商品ページをブラウザfetch()で2026-10-11に確認。豆のまま200g(最小)を採用。送料込み価格。400g・粉は同一商品の選択肢。ドリップバッグ・ギフト・水出し・リキッドを除外。公式に自家焙煎コーヒー豆専門店と記載。メキシコ・デカフェはバリエーションに重量表記がなく商品名の200g/400gから200gと推定。",
+    "last_verified_at": "2026-10-03",
+    "locations": [
+      {
+        "label": null,
+        "address": "奈良県奈良市恋の窪2丁目1-8 徳丸ビル103",
+        "prefecture": "奈良県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "大和自家焙煎 桜座珈琲 奈良県奈良市恋の窪2丁目1-8 徳丸ビル103",
+        "lat": 34.674318,
+        "lng": 135.808955
+      }
+    ],
+    "lat": 34.674318,
+    "lng": 135.808955
+  },
+  {
+    "name": "Slack Tisa",
+    "url": "https://slacktisa.stores.jp/",
+    "instagram_url": null,
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "奈良県生駒郡三郷町立野南2-11-9",
+    "prefecture": "奈良県",
+    "hours": null,
+    "map_query": "Slack Tisa 奈良県生駒郡三郷町立野南2-11-9",
+    "nearest_station": {
+      "name": "三郷",
+      "lines": [
+        "JR大和路線"
+      ],
+      "distance_m": 200,
+      "walk_min": 3
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://slacktisa.stores.jp/)の商品ページをブラウザfetch()で2026-10-11に確認。豆100gを採用(粉は別商品として同価格で並ぶため除外)。ドリップバッグ・ギフトを除外。大善関ブレンド・土俵のブレンドは奇数月のみ販売。公式に少量ずつ焙煎・自家焙煎cafeと記載。 座標は国土地理院の住所検索による(Nominatimで該当なし)。",
+    "last_verified_at": "2026-10-03",
+    "locations": [
+      {
+        "label": null,
+        "address": "奈良県生駒郡三郷町立野南2-11-9",
+        "prefecture": "奈良県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "Slack Tisa 奈良県生駒郡三郷町立野南2-11-9",
+        "lat": 34.589741,
+        "lng": 135.685577
+      }
+    ],
+    "lat": 34.589741,
+    "lng": 135.685577
   }
 ]

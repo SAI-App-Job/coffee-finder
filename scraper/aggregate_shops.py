@@ -1044,6 +1044,11 @@ SOURCE_FILES = {
     "RIVERBED COFFEE BREWER&ROASTERY": "data_riverbedcoffeebrewerroastery.json",
     "Supple Coffee Roasters": "data_supplecoffee.json",
     "待夢珈琲店": "data_timecoffee.json",
+    # 奈良県の再調査(新規発掘)
+    "天迦久珈琲 -ROASTERY & BREAD-": "data_amenokakucoffee.json",
+    "Heartfelt Coffee": "data_heartfeltcoffee.json",
+    "松焙煎店": "data_matsubaisen.json",
+    "奈良藤枝珈琲焙煎所": "data_narafujiedacoffee.json",
 }
 
 
