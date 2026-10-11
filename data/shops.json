@@ -26977,5 +26977,322 @@
     ],
     "lat": 34.96821,
     "lng": 135.941455
+  },
+  {
+    "name": "アロマコーヒーロースタリー",
+    "url": "https://aroma-coffee.jp/",
+    "platform": "ショップサーブ",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認(robots.txtは404)",
+    "address": "岡山県岡山市北区下中野351-115",
+    "prefecture": "岡山県",
+    "hours": null,
+    "map_query": "アロマコーヒーロースタリー",
+    "nearest_station": {
+      "name": "備前西市",
+      "lines": [
+        "JR宇野線"
+      ],
+      "distance_m": 810,
+      "walk_min": 10
+    },
+    "last_scraped_at": "2026-10-11T12:51:38.229022+00:00",
+    "lat": 34.638601,
+    "lng": 133.901222
+  },
+  {
+    "name": "coffee market banca",
+    "url": "http://www.coffee-banca.jp/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "岡山県岡山市北区野田3丁目22番3号",
+    "prefecture": "岡山県",
+    "hours": null,
+    "map_query": "coffee market banca",
+    "nearest_station": {
+      "name": "大元",
+      "lines": [
+        "JR宇野線"
+      ],
+      "distance_m": 1200,
+      "walk_min": 15
+    },
+    "last_scraped_at": "2026-10-11T12:51:38.229022+00:00",
+    "lat": 34.652555,
+    "lng": 133.899153
+  },
+  {
+    "name": "en. 珈琲焙煎所",
+    "url": "https://en-coffee.jp/",
+    "platform": "Shopify",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(Shopify標準のrobots.txt。商品・コレクションのHTMLはクロール可と明記)",
+    "address": "岡山県岡山市北区表町1丁目10-28",
+    "prefecture": "岡山県",
+    "hours": null,
+    "map_query": "en. 珈琲焙煎所",
+    "nearest_station": {
+      "name": "城下",
+      "lines": [
+        "岡山電軌東山線"
+      ],
+      "distance_m": 170,
+      "walk_min": 2
+    },
+    "last_scraped_at": "2026-10-11T12:51:38.229022+00:00",
+    "lat": 34.664124,
+    "lng": 133.929417
+  },
+  {
+    "name": "kobacoffee",
+    "url": "https://kobacoffee.thebase.in/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "岡山県倉敷市本町5-27",
+    "prefecture": "岡山県",
+    "hours": null,
+    "map_query": "kobacoffee",
+    "nearest_station": {
+      "name": "倉敷市",
+      "lines": [
+        "水島臨海鉄道"
+      ],
+      "distance_m": 990,
+      "walk_min": 12
+    },
+    "last_scraped_at": "2026-10-11T12:51:38.229022+00:00",
+    "lat": 34.596032,
+    "lng": 133.773898
+  },
+  {
+    "name": "LeN Coffee Lab.",
+    "url": "https://shop.len-coffee.jp/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "岡山県倉敷市笹沖",
+    "prefecture": "岡山県",
+    "hours": null,
+    "map_query": "LeN Coffee Lab.",
+    "nearest_station": {
+      "name": "西富井",
+      "lines": [
+        "水島臨海鉄道"
+      ],
+      "distance_m": 2120,
+      "walk_min": 27
+    },
+    "last_scraped_at": "2026-10-11T12:51:38.229022+00:00",
+    "lat": 34.57597,
+    "lng": 133.766431
+  },
+  {
+    "name": "武蔵野珈琲",
+    "url": "https://6340coffee.shop-pro.jp/",
+    "platform": "カラーミーショップ(shop-pro.jp)",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認(カラーミー標準構成)",
+    "address": "岡山県岡山市北区中仙道57-101",
+    "prefecture": "岡山県",
+    "hours": null,
+    "map_query": "武蔵野珈琲",
+    "nearest_station": {
+      "name": "北長瀬",
+      "lines": [
+        "JR山陽本線"
+      ],
+      "distance_m": 970,
+      "walk_min": 12
+    },
+    "last_scraped_at": "2026-10-11T12:51:38.229022+00:00",
+    "lat": 34.644284,
+    "lng": 133.884714
+  },
+  {
+    "name": "ONSAYA COFFEE",
+    "url": "https://onsaya.com/",
+    "platform": "Shopify",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(Shopify標準のrobots.txt。商品・コレクションのHTMLはクロール可と明記)",
+    "address": "岡山県岡山市北区奉還町2-9-1",
+    "prefecture": "岡山県",
+    "hours": null,
+    "map_query": "ONSAYA COFFEE",
+    "nearest_station": {
+      "name": "備前三門",
+      "lines": [
+        "JR吉備線"
+      ],
+      "distance_m": 980,
+      "walk_min": 12
+    },
+    "last_scraped_at": "2026-10-11T12:51:38.229022+00:00",
+    "lat": 34.672461,
+    "lng": 133.909661
+  },
+  {
+    "name": "パワープラントコーヒー",
+    "url": "https://powerplant.theshop.jp/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "岡山県倉敷市藤戸町天城1760-1",
+    "prefecture": "岡山県",
+    "hours": null,
+    "map_query": "パワープラントコーヒー",
+    "nearest_station": {
+      "name": "茶屋町",
+      "lines": [
+        "JR宇野線",
+        "JR本四備讃線"
+      ],
+      "distance_m": 1630,
+      "walk_min": 20
+    },
+    "last_scraped_at": "2026-10-11T12:51:38.229022+00:00",
+    "lat": 34.567875,
+    "lng": 133.81201
+  },
+  {
+    "name": "珈琲工房サントス",
+    "url": "https://santos-coffee.net/",
+    "platform": "WordPress+Welcart",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認",
+    "address": "岡山県岡山市北区富田531-2",
+    "prefecture": "岡山県",
+    "hours": null,
+    "map_query": "珈琲工房サントス",
+    "nearest_station": {
+      "name": "大元",
+      "lines": [
+        "JR宇野線"
+      ],
+      "distance_m": 980,
+      "walk_min": 12
+    },
+    "last_scraped_at": "2026-10-11T12:51:38.229022+00:00",
+    "lat": 34.639506,
+    "lng": 133.915198
+  },
+  {
+    "name": "THE COFFEE HOUSE",
+    "url": "http://shop.thecoffeebar.jp/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "岡山県岡山市北区大供本町708-8",
+    "prefecture": "岡山県",
+    "hours": null,
+    "map_query": "THE COFFEE HOUSE",
+    "nearest_station": {
+      "name": "大元",
+      "lines": [
+        "JR宇野線"
+      ],
+      "distance_m": 620,
+      "walk_min": 8
+    },
+    "last_scraped_at": "2026-10-11T12:51:38.229022+00:00",
+    "lat": 34.653034,
+    "lng": 133.911909
+  },
+  {
+    "name": "YIRGA COFFEE ROASTERS",
+    "url": "https://plough.theshop.jp/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "岡山県岡山市北区弓之町",
+    "prefecture": "岡山県",
+    "hours": null,
+    "map_query": "YIRGA COFFEE ROASTERS",
+    "nearest_station": {
+      "name": "城下",
+      "lines": [
+        "岡山電軌東山線"
+      ],
+      "distance_m": 450,
+      "walk_min": 6
+    },
+    "last_scraped_at": "2026-10-11T12:51:38.229022+00:00",
+    "lat": 34.669574,
+    "lng": 133.928913
+  },
+  {
+    "name": "ホンキートンク",
+    "url": "http://www.honkytonk.jp/",
+    "instagram_url": null,
+    "platform": "独自カート(Shift_JIS静的HTML+PHPカート)",
+    "shop_type": "single_location",
+    "address": "岡山県岡山市北区西古松西町9-25",
+    "prefecture": "岡山県",
+    "hours": "9:00〜19:00",
+    "map_query": "ホンキートンク 岡山県岡山市北区西古松西町9-25",
+    "nearest_station": {
+      "name": "大元",
+      "lines": [
+        "JR宇野線"
+      ],
+      "distance_m": 690,
+      "walk_min": 9
+    },
+    "data_source": "manual",
+    "source_note": "公式サイトの珈琲豆販売ページ(http://www.honkytonk.jp/coffee.php、現行のカート)を2026-10-11に確認。トップページに令和8年11月1日からの豆・メニュー価格改正の告知があり、掲載価格は改正前の現行価格(200g 1,700円)。旧版の静的ページ coffee.html(最終更新2015-10-25、200g 1,000円・ブルーマウンテン2,300円)は旧カートの陳腐化したページのため不採用。ブルーマウンテンは現行ページでHTMLコメントアウトされており販売終了と判断し除外。200gパッケージのみの販売。",
+    "last_verified_at": "2026-10-11",
+    "locations": [
+      {
+        "label": null,
+        "address": "岡山県岡山市北区西古松西町9-25",
+        "prefecture": "岡山県",
+        "hours": "9:00〜19:00",
+        "tel": "086-243-6868",
+        "is_headquarters": false,
+        "map_query": "ホンキートンク 岡山県岡山市北区西古松西町9-25",
+        "lat": 34.649016,
+        "lng": 133.903444
+      }
+    ],
+    "lat": 34.649016,
+    "lng": 133.903444
+  },
+  {
+    "name": "渡辺珈琲",
+    "url": "http://watanabe-coffee.com/",
+    "instagram_url": null,
+    "platform": "独自CGIカート(Shift_JIS静的HTML)",
+    "shop_type": "single_location",
+    "address": "岡山県岡山市北区東古松1-5-16",
+    "prefecture": "岡山県",
+    "hours": null,
+    "map_query": "渡辺珈琲 岡山県岡山市北区東古松1-5-16",
+    "nearest_station": {
+      "name": "大元",
+      "lines": [
+        "JR宇野線"
+      ],
+      "distance_m": 630,
+      "walk_min": 8
+    },
+    "data_source": "manual",
+    "source_note": "公式サイトのご家庭用ブレンドコーヒー(http://watanabe-coffee.com/mart/blend.html)・ストレートコーヒー(http://watanabe-coffee.com/mart/straight.html)を2026-10-11に確認。いずれも200g/袋(税込)の小売価格で、業務用・ギフト・お試しセット・水出し(60g×2袋)は除外。ブルマンブレンド・ブルーマウンテン・モカマタリは『在庫が無い/少ないため販売中止』表示のため品切れとして収録。お知らせの最新は2023-09-20で更新が古い(価格・在庫は現在と異なる可能性)。",
+    "last_verified_at": "2026-10-11",
+    "locations": [
+      {
+        "label": null,
+        "address": "岡山県岡山市北区東古松1-5-16",
+        "prefecture": "岡山県",
+        "hours": null,
+        "tel": "086-801-3380",
+        "is_headquarters": false,
+        "map_query": "渡辺珈琲 岡山県岡山市北区東古松1-5-16",
+        "lat": 34.642553,
+        "lng": 133.914073
+      }
+    ],
+    "lat": 34.642553,
+    "lng": 133.914073
   }
 ]

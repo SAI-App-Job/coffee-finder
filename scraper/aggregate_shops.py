@@ -1018,6 +1018,18 @@ SOURCE_FILES = {
     "MORINO COFFEE": "data_morinocoffee.json",
     "珈琲院ロマン亭": "data_romanteicafe.json",
     "シツジ珈琲": "data_shitsuji.json",
+    # 岡山県の再調査(新規発掘)
+    "アロマコーヒーロースタリー": "data_aromacoffeeroastery.json",
+    "coffee market banca": "data_coffeemarketbanca.json",
+    "en. 珈琲焙煎所": "data_enkohibaisensho.json",
+    "kobacoffee": "data_kobacoffee.json",
+    "LeN Coffee Lab.": "data_lencoffeelab.json",
+    "武蔵野珈琲": "data_musashinocoffee.json",
+    "ONSAYA COFFEE": "data_onsaya.json",
+    "パワープラントコーヒー": "data_powerplantcoffee.json",
+    "珈琲工房サントス": "data_santoscoffeeokayama.json",
+    "THE COFFEE HOUSE": "data_thecoffeehouse.json",
+    "YIRGA COFFEE ROASTERS": "data_yirgacoffeeroasters.json",
 }
 
 
