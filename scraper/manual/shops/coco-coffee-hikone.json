@@ -1,0 +1,60 @@
+{
+  "shop": {
+    "name": "此処珈琲焙煎所",
+    "url": "https://cococoffee.stores.jp/",
+    "address": "滋賀県彦根市戸賀町240",
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "prefecture": "滋賀県",
+    "source_note": "STORES.jpの公式ショップ(https://cococoffee.stores.jp/)の商品ページをブラウザfetch()で2026-10-11に確認。豆のまま150g(最小)を採用。確認時点で2商品とも品切れ。月替わりの「今月の珈琲」(予約販売)・定期便・ドリップバッグ・グッズは除外。店舗は彦根店と大津ナカマチ店の2店。住所は食べログ・地域記事による。",
+    "id": "coco-coffee-hikone",
+    "instagram_url": null,
+    "google_maps_query": "此処珈琲焙煎所 滋賀県彦根市戸賀町240",
+    "tel": null,
+    "hours": null,
+    "shop_type": "single_location",
+    "data_source": "manual",
+    "last_verified_at": "2026-10-03",
+    "lat": 35.25383,
+    "lng": 136.240522,
+    "nearest_station": {
+      "name": "南彦根",
+      "lines": [
+        "JR琵琶湖線"
+      ],
+      "distance_m": 1100,
+      "walk_min": 14
+    }
+  },
+  "products": [
+    {
+      "raw_name": "【中煎り】いつものブレンド",
+      "category": "ブレンド",
+      "originCountry": null,
+      "processingMethod": null,
+      "roast": "中煎り",
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1500,
+      "weightG": 150,
+      "stockStatus": "一時的に品切れ",
+      "productUrl": "https://cococoffee.stores.jp/items/667d445845c7bd0402316c97",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "【深煎り】ビターブレンド",
+      "category": "ブレンド",
+      "originCountry": null,
+      "processingMethod": null,
+      "roast": "深煎り",
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1800,
+      "weightG": 150,
+      "stockStatus": "一時的に品切れ",
+      "productUrl": "https://cococoffee.stores.jp/items/653e87e260a81b03db3ab1cd",
+      "data_source": "manual"
+    }
+  ]
+}

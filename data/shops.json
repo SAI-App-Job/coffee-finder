@@ -26630,5 +26630,352 @@
     ],
     "lat": 35.516061,
     "lng": 137.842021
+  },
+  {
+    "name": "米安珈琲",
+    "url": "https://comeyasu-store.com/",
+    "platform": "Shopify",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認(Shopify標準構成)",
+    "address": "滋賀県守山市守山1-11-12",
+    "prefecture": "滋賀県",
+    "hours": null,
+    "map_query": "米安珈琲",
+    "nearest_station": {
+      "name": "守山",
+      "lines": [
+        "JR琵琶湖線"
+      ],
+      "distance_m": 30,
+      "walk_min": 1
+    },
+    "last_scraped_at": "2026-10-11T12:45:15.011787+00:00",
+    "lat": 35.050384,
+    "lng": 135.995733
+  },
+  {
+    "name": "DONGREE COFFEE ROASTERS",
+    "url": "https://dongree.handcrafted.jp/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "滋賀県湖南市石部西1-5-7",
+    "prefecture": "滋賀県",
+    "hours": null,
+    "map_query": "DONGREE COFFEE ROASTERS",
+    "nearest_station": {
+      "name": "石部",
+      "lines": [
+        "JR草津線"
+      ],
+      "distance_m": 1380,
+      "walk_min": 17
+    },
+    "last_scraped_at": "2026-10-11T12:45:15.011787+00:00",
+    "lat": 35.026061,
+    "lng": 136.064057
+  },
+  {
+    "name": "アイ・ビーンズ・コーヒー",
+    "url": "https://www.i-beans.jp/",
+    "platform": "EC-CUBE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-10確認。User-agent: *に対し*.csv$のみDisallow)",
+    "address": "滋賀県犬上郡多賀町多賀1409-3",
+    "prefecture": "滋賀県",
+    "hours": null,
+    "map_query": "アイ・ビーンズ・コーヒー",
+    "nearest_station": {
+      "name": "多賀大社前",
+      "lines": [
+        "近江鉄道多賀線"
+      ],
+      "distance_m": 490,
+      "walk_min": 6
+    },
+    "last_scraped_at": "2026-10-11T12:45:15.011787+00:00",
+    "lat": 35.223484,
+    "lng": 136.288093
+  },
+  {
+    "name": "きみと珈琲",
+    "url": "https://kimitocoffee.theshop.jp/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "滋賀県彦根市柳川町218-1 VOID A PART内",
+    "prefecture": "滋賀県",
+    "hours": null,
+    "map_query": "きみと珈琲",
+    "nearest_station": {
+      "name": "稲枝",
+      "lines": [
+        "JR琵琶湖線"
+      ],
+      "distance_m": 4500,
+      "walk_min": 56
+    },
+    "last_scraped_at": "2026-10-11T12:45:15.011787+00:00",
+    "lat": 35.229782,
+    "lng": 136.157074
+  },
+  {
+    "name": "kohaku coffee",
+    "url": "https://kohakumames.theshop.jp/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "滋賀県長浜市湖北東尾上町197",
+    "prefecture": "滋賀県",
+    "hours": null,
+    "map_query": "kohaku coffee",
+    "nearest_station": {
+      "name": "高月",
+      "lines": [
+        "JR北陸本線"
+      ],
+      "distance_m": 4520,
+      "walk_min": 57
+    },
+    "last_scraped_at": "2026-10-11T12:45:15.011787+00:00",
+    "lat": 35.448556,
+    "lng": 136.195694
+  },
+  {
+    "name": "MICRO-LADY COFFEE STAND",
+    "url": "https://microlady.shop-pro.jp/",
+    "platform": "カラーミーショップ(shop-pro.jp)",
+    "shop_type": "single_location",
+    "robots_txt_status": "許可(2026-10確認。/secure/と/cart/以外は制限なし)",
+    "address": "滋賀県彦根市古沢町40-2 JR彦根駅構内",
+    "prefecture": "滋賀県",
+    "hours": null,
+    "map_query": "MICRO-LADY COFFEE STAND",
+    "nearest_station": {
+      "name": "彦根",
+      "lines": [
+        "JR琵琶湖線",
+        "近江鉄道本線"
+      ],
+      "distance_m": 640,
+      "walk_min": 8
+    },
+    "last_scraped_at": "2026-10-11T12:45:15.011787+00:00",
+    "lat": 35.277533,
+    "lng": 136.266164
+  },
+  {
+    "name": "MORINO COFFEE",
+    "url": "https://morino-coffee.net/",
+    "platform": "Welcart(WordPress)",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-10確認。/wp-admin/のみDisallow)",
+    "address": "滋賀県蒲生郡日野町松尾5丁目13-2",
+    "prefecture": "滋賀県",
+    "hours": null,
+    "map_query": "MORINO COFFEE",
+    "nearest_station": {
+      "name": "日野",
+      "lines": [
+        "近江鉄道本線"
+      ],
+      "distance_m": 1980,
+      "walk_min": 25
+    },
+    "last_scraped_at": "2026-10-11T12:45:15.011787+00:00",
+    "lat": 35.01839,
+    "lng": 136.239777
+  },
+  {
+    "name": "珈琲院ロマン亭",
+    "url": "https://romanteicafe.theshop.jp/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "滋賀県長浜市元浜町18-13",
+    "prefecture": "滋賀県",
+    "hours": null,
+    "map_query": "珈琲院ロマン亭",
+    "nearest_station": {
+      "name": "長浜",
+      "lines": [
+        "JR北陸本線"
+      ],
+      "distance_m": 480,
+      "walk_min": 6
+    },
+    "last_scraped_at": "2026-10-11T12:45:15.011787+00:00",
+    "lat": 35.382119,
+    "lng": 136.2683
+  },
+  {
+    "name": "シツジ珈琲",
+    "url": "https://shitsuji.coffee/",
+    "platform": "WooCommerce",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-10確認。管理系パスとadd-to-cartのみDisallow。Store APIは制限対象外)",
+    "address": "滋賀県彦根市本町1-9-24",
+    "prefecture": "滋賀県",
+    "hours": null,
+    "map_query": "シツジ珈琲",
+    "nearest_station": {
+      "name": "鳥居本",
+      "lines": [
+        "近江鉄道本線"
+      ],
+      "distance_m": 590,
+      "walk_min": 7
+    },
+    "last_scraped_at": "2026-10-11T12:45:15.011787+00:00",
+    "lat": 35.280972,
+    "lng": 136.287521
+  },
+  {
+    "name": "自家焙煎珈琲ビーンズ",
+    "url": "http://www.beans-coffee.net/",
+    "instagram_url": null,
+    "platform": "静的HTML(価格表ページ+メール/FAX/電話注文)",
+    "shop_type": "single_location",
+    "address": "滋賀県大津市国分2丁目5-53",
+    "prefecture": "滋賀県",
+    "hours": null,
+    "map_query": "自家焙煎珈琲ビーンズ 滋賀県大津市国分2丁目5-53",
+    "nearest_station": {
+      "name": "石山寺",
+      "lines": [
+        "京阪石山坂本線"
+      ],
+      "distance_m": 2320,
+      "walk_min": 29
+    },
+    "data_source": "manual",
+    "source_note": "公式サイトの商品価格表(http://www.beans-coffee.net/newpage3.html)・商品リスト(newpage2.html)・ご注文について(newpage6.html)・オーダーフォーム(newpage9.html)を2026-10-11に確認。ページの最終更新(Last-Modified)は2026-07-02。トップページに2026-07-01付の「100gあたり50円(税抜)値上げ」のお知らせがあるが、価格表には200g 1,188円〜1,404円(税込)と記載されており、この表の価格を採用。商品ごとのカート付きページは無く、注文はオーダーフォーム(CGIメール送信)・メール・電話・FAXで受付、支払いは郵便振替または代金引換(e-コレクト)、2袋以上(400g)での注文を案内。単価は1袋200gの税込価格。水出しアイスコーヒーパックは除外。",
+    "last_verified_at": "2026-10-11",
+    "locations": [
+      {
+        "label": null,
+        "address": "滋賀県大津市国分2丁目5-53",
+        "prefecture": "滋賀県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "自家焙煎珈琲ビーンズ 滋賀県大津市国分2丁目5-53",
+        "lat": 34.960933,
+        "lng": 135.879192
+      }
+    ],
+    "lat": 34.960933,
+    "lng": 135.879192
+  },
+  {
+    "name": "此処珈琲焙煎所",
+    "url": "https://cococoffee.stores.jp/",
+    "instagram_url": null,
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "滋賀県彦根市戸賀町240",
+    "prefecture": "滋賀県",
+    "hours": null,
+    "map_query": "此処珈琲焙煎所 滋賀県彦根市戸賀町240",
+    "nearest_station": {
+      "name": "南彦根",
+      "lines": [
+        "JR琵琶湖線"
+      ],
+      "distance_m": 1100,
+      "walk_min": 14
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://cococoffee.stores.jp/)の商品ページをブラウザfetch()で2026-10-11に確認。豆のまま150g(最小)を採用。確認時点で2商品とも品切れ。月替わりの「今月の珈琲」(予約販売)・定期便・ドリップバッグ・グッズは除外。店舗は彦根店と大津ナカマチ店の2店。住所は食べログ・地域記事による。",
+    "last_verified_at": "2026-10-03",
+    "locations": [
+      {
+        "label": null,
+        "address": "滋賀県彦根市戸賀町240",
+        "prefecture": "滋賀県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "此処珈琲焙煎所 滋賀県彦根市戸賀町240",
+        "lat": 35.25383,
+        "lng": 136.240522
+      }
+    ],
+    "lat": 35.25383,
+    "lng": 136.240522
+  },
+  {
+    "name": "伊吹珈琲豆店",
+    "url": "https://ibukicoffee.stores.jp/",
+    "instagram_url": null,
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "滋賀県守山市守山1丁目6-5",
+    "prefecture": "滋賀県",
+    "hours": null,
+    "map_query": "伊吹珈琲豆店 滋賀県守山市守山1丁目6-5",
+    "nearest_station": {
+      "name": "守山",
+      "lines": [
+        "JR琵琶湖線"
+      ],
+      "distance_m": 530,
+      "walk_min": 7
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://ibukicoffee.stores.jp/)の商品ページをブラウザfetch()で2026-10-11に確認。豆のまま100gを採用(粉は同一商品の選択肢)。ギフト・ドリップバッグを除外。公式サイト(ibukicoffee-mameten.com)に自家焙煎コーヒーのお店・小さなコーヒー焙煎所と記載。",
+    "last_verified_at": "2026-10-03",
+    "locations": [
+      {
+        "label": null,
+        "address": "滋賀県守山市守山1丁目6-5",
+        "prefecture": "滋賀県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "伊吹珈琲豆店 滋賀県守山市守山1丁目6-5",
+        "lat": 35.054306,
+        "lng": 135.992484
+      }
+    ],
+    "lat": 35.054306,
+    "lng": 135.992484
+  },
+  {
+    "name": "マウンテン瀬田",
+    "url": "https://mountain-seta.com/",
+    "instagram_url": null,
+    "platform": "WordPress(価格表ページ+店頭・発送対応)",
+    "shop_type": "single_location",
+    "address": "滋賀県大津市大萱1-14-15",
+    "prefecture": "滋賀県",
+    "hours": null,
+    "map_query": "マウンテン瀬田 滋賀県大津市大萱1-14-15",
+    "nearest_station": {
+      "name": "瀬田",
+      "lines": [
+        "JR琵琶湖線"
+      ],
+      "distance_m": 2560,
+      "walk_min": 32
+    },
+    "data_source": "manual",
+    "source_note": "公式サイトのコーヒー豆メニュー(https://mountain-seta.com/?page_id=13)とお店について(?page_id=31)を2026-10-11に確認。お知らせ記事は2026-10-08付まで更新されており新しい。コーヒー豆は100g単位の税込価格表で、商品ごとのカートは無く、店頭販売と全国発送(電話等で注文)に対応。1kg(500g×2袋)購入時の100g単価は採用せず、100g価格を採用。各商品の味の評価(コク・甘味・酸味・苦味)の数値は説明欄に転記。「特選ブレンド 500g」は500g単位のみの価格表記。紅茶・器具・食材は除外。",
+    "last_verified_at": "2026-10-11",
+    "locations": [
+      {
+        "label": null,
+        "address": "滋賀県大津市大萱1-14-15",
+        "prefecture": "滋賀県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "マウンテン瀬田 滋賀県大津市大萱1-14-15",
+        "lat": 34.96821,
+        "lng": 135.941455
+      }
+    ],
+    "lat": 34.96821,
+    "lng": 135.941455
   }
 ]

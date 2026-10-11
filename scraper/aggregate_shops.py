@@ -1008,6 +1008,16 @@ SOURCE_FILES = {
     "Voyage Coffee": "data_voyagecoffeenagano.json",
     "山路珈琲": "data_yamajicoffee.json",
     "山笑う珈琲": "data_yamawaraucoffee.json",
+    # 滋賀県の再調査(新規発掘)
+    "米安珈琲": "data_comeyasucoffee.json",
+    "DONGREE COFFEE ROASTERS": "data_dongreecoffee.json",
+    "アイ・ビーンズ・コーヒー": "data_ibeanscoffee.json",
+    "きみと珈琲": "data_kimitocoffee.json",
+    "kohaku coffee": "data_kohakucoffee.json",
+    "MICRO-LADY COFFEE STAND": "data_microlady.json",
+    "MORINO COFFEE": "data_morinocoffee.json",
+    "珈琲院ロマン亭": "data_romanteicafe.json",
+    "シツジ珈琲": "data_shitsuji.json",
 }
 
 
