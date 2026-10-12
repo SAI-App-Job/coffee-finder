@@ -1,0 +1,105 @@
+{
+  "shop": {
+    "name": "自家焙煎・水出し珈琲 水の時計",
+    "url": "https://mizunotokei.stores.jp/",
+    "address": "富山県黒部市荻生2671-3",
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "prefecture": "富山県",
+    "source_note": "STORES.jpの公式ショップ(https://mizunotokei.stores.jp/)の商品ページをブラウザfetch()で2026-10-12に確認。豆のまま(挽き方違いは同一商品の選択肢)を採用。ギフト・カップオンコーヒー・水出し・羊羹・ゼリー・ミニ樽・BOXを除外。公式に直火式の焙煎機で豆を煎りあげると記載。2店舗(黒部店、富山店)。",
+    "id": "mizunotokei-kurobe",
+    "instagram_url": null,
+    "google_maps_query": "自家焙煎・水出し珈琲 水の時計 富山県黒部市荻生2671-3",
+    "tel": null,
+    "hours": null,
+    "shop_type": "single_location",
+    "data_source": "manual",
+    "last_verified_at": "2026-10-03",
+    "lat": 36.875063,
+    "lng": 137.459436,
+    "nearest_station": {
+      "name": "荻生",
+      "lines": [
+        "富山地方鉄道本線"
+      ],
+      "distance_m": 20,
+      "walk_min": 1
+    }
+  },
+  "products": [
+    {
+      "raw_name": "バレルエイジドコーヒー 浅煎り",
+      "category": "ストレート",
+      "originCountry": null,
+      "processingMethod": null,
+      "roast": "浅煎り",
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1480,
+      "weightG": 100,
+      "stockStatus": "販売中",
+      "productUrl": "https://mizunotokei.stores.jp/items/65d97d2881cb29096ba1e613",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "バレルエイジドコーヒー 深煎り",
+      "category": "ストレート",
+      "originCountry": null,
+      "processingMethod": null,
+      "roast": "深煎り",
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1530,
+      "weightG": 100,
+      "stockStatus": "販売中",
+      "productUrl": "https://mizunotokei.stores.jp/items/65f29a3883d26a002c4517c6",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "極みブレンド",
+      "category": "ブレンド",
+      "originCountry": null,
+      "processingMethod": null,
+      "roast": "深煎り",
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1900,
+      "weightG": 200,
+      "stockStatus": "販売中",
+      "productUrl": "https://mizunotokei.stores.jp/items/61860f75f1f39a2fe37d1fbe",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "深みブレンド",
+      "category": "ブレンド",
+      "originCountry": null,
+      "processingMethod": null,
+      "roast": "中深煎り",
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1800,
+      "weightG": 200,
+      "stockStatus": "販売中",
+      "productUrl": "https://mizunotokei.stores.jp/items/61860e80c15c5a7e1890ff30",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "和みブレンド",
+      "category": "ブレンド",
+      "originCountry": null,
+      "processingMethod": null,
+      "roast": "中煎り",
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1700,
+      "weightG": 200,
+      "stockStatus": "販売中",
+      "productUrl": "https://mizunotokei.stores.jp/items/61860b102b3ca145610fd77d",
+      "data_source": "manual"
+    }
+  ]
+}

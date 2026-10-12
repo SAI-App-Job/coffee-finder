@@ -2838,3 +2838,11 @@ docs/scraping-progress.md「栃木県再調査」冒頭の教訓セクション�
 
 ### COWRITE COFFEE／muu coffee／KITO／珈琲屋ジャマイカ／COFFEE GALLERY ひがし茶屋街
 - 見送り理由: COWRITE COFFEEは他店ロースターの豆、muu coffeeは生豆専門、KITOは粉コーヒーのみで自家焙煎の記載なし、珈琲屋ジャマイカは喫茶店でドリップバッグのみ、COFFEE GALLERY ひがし茶屋街は熊本の珈琲回廊監修(FCの可能性)で未精査。
+
+## 富山県再調査(2026-10-13)
+
+### aruna coffee(富山市)／Coffee&Slowfood エコーレ(富山市)
+- 見送り理由: arunaはSTORESの商品が0件で現行の販売を確認できない。エコーレは公式に自家焙煎の直接的な記述が確認できない(販売専門店)。
+
+### Kurort(滑川市)／sol&mar(氷見市)／セルコーヒーフーズ(富山市)
+- 見送り理由: Kurortは石川県のtownsfolk coffeeの豆を使用、sol&marは他店の卸が中心で自家焙煎の根拠不足、セルコーヒーフーズは業務用の卸で小売なし。

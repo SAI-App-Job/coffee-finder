@@ -30286,5 +30286,417 @@
     ],
     "lat": 36.570062,
     "lng": 136.656642
+  },
+  {
+    "name": "アルパカコーヒー",
+    "url": "https://shop.alpaca-coffee.com/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "富山県富山市太郎丸178-12",
+    "prefecture": "富山県",
+    "hours": null,
+    "map_query": "アルパカコーヒー",
+    "nearest_station": {
+      "name": "大町",
+      "lines": [
+        "富山地鉄市内線"
+      ],
+      "distance_m": 240,
+      "walk_min": 3
+    },
+    "last_scraped_at": "2026-10-12T22:36:01.462554+00:00",
+    "lat": 36.67275,
+    "lng": 137.217844
+  },
+  {
+    "name": "自家焙煎珈琲豆&喫茶店 BEANS",
+    "url": "https://beans8coffee.base.shop/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "富山県富山市婦中町西ヶ丘1-11",
+    "prefecture": "富山県",
+    "hours": null,
+    "map_query": "自家焙煎珈琲豆&喫茶店 BEANS",
+    "nearest_station": {
+      "name": "速星",
+      "lines": [
+        "JR高山本線"
+      ],
+      "distance_m": 1130,
+      "walk_min": 14
+    },
+    "last_scraped_at": "2026-10-12T22:36:01.462554+00:00",
+    "lat": 36.658264,
+    "lng": 137.170766
+  },
+  {
+    "name": "CAFE BRIO",
+    "url": "https://www.cafebrio.jp/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "富山県射水市赤井24-2",
+    "prefecture": "富山県",
+    "hours": null,
+    "map_query": "CAFE BRIO",
+    "nearest_station": {
+      "name": "越中大門",
+      "lines": [
+        "あいの風とやま鉄道線"
+      ],
+      "distance_m": 1300,
+      "walk_min": 16
+    },
+    "last_scraped_at": "2026-10-12T22:36:01.462554+00:00",
+    "lat": 36.727352,
+    "lng": 137.068045
+  },
+  {
+    "name": "カフェくらうん",
+    "url": "https://kuraun1958.base.shop/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "富山県高岡市古定塚9-33",
+    "prefecture": "富山県",
+    "hours": null,
+    "map_query": "カフェくらうん",
+    "nearest_station": {
+      "name": "越中中川",
+      "lines": [
+        "JR氷見線"
+      ],
+      "distance_m": 530,
+      "walk_min": 7
+    },
+    "last_scraped_at": "2026-10-12T22:36:01.462554+00:00",
+    "lat": 36.752429,
+    "lng": 137.032732
+  },
+  {
+    "name": "Good Enough Coffee Toyama",
+    "url": "https://gect.official.ec/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "富山県富山市藤木2710",
+    "prefecture": "富山県",
+    "hours": null,
+    "map_query": "Good Enough Coffee Toyama",
+    "nearest_station": {
+      "name": "越中荏原",
+      "lines": [
+        "富山地方鉄道本線"
+      ],
+      "distance_m": 1360,
+      "walk_min": 17
+    },
+    "last_scraped_at": "2026-10-12T22:36:01.462554+00:00",
+    "lat": 36.687107,
+    "lng": 137.269811
+  },
+  {
+    "name": "haiz coffee roastery",
+    "url": "https://haizcoffee.com/",
+    "platform": "Shopify",
+    "shop_type": "single_location",
+    "robots_txt_status": "許可(Shopify標準構成、商品JSONは公開)",
+    "address": "富山県南砺市本町3丁目35",
+    "prefecture": "富山県",
+    "hours": null,
+    "map_query": "haiz coffee roastery",
+    "nearest_station": {
+      "name": "福野",
+      "lines": [
+        "JR城端線"
+      ],
+      "distance_m": 4970,
+      "walk_min": 62
+    },
+    "last_scraped_at": "2026-10-12T22:36:01.462554+00:00",
+    "lat": 36.564297,
+    "lng": 136.969828
+  },
+  {
+    "name": "hazeru coffee",
+    "url": "https://hazerucoffee.thebase.in/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "富山県富山市古沢111-2",
+    "prefecture": "富山県",
+    "hours": null,
+    "map_query": "hazeru coffee",
+    "nearest_station": {
+      "name": "婦中鵜坂",
+      "lines": [
+        "JR高山本線"
+      ],
+      "distance_m": 2630,
+      "walk_min": 33
+    },
+    "last_scraped_at": "2026-10-12T22:36:01.462554+00:00",
+    "lat": 36.690271,
+    "lng": 137.144125
+  },
+  {
+    "name": "まめやコーヒー",
+    "url": "https://mameya-coffee.shop-pro.jp/",
+    "platform": "カラーミーショップ(shop-pro.jp)",
+    "shop_type": "single_location",
+    "robots_txt_status": "許可(2026-10確認。/secure/と/cart/以外は制限なし)",
+    "address": "富山県富山市総曲輪3-2-21",
+    "prefecture": "富山県",
+    "hours": null,
+    "map_query": "まめやコーヒー",
+    "nearest_station": {
+      "name": "大手モール",
+      "lines": [
+        "富山地鉄市内線"
+      ],
+      "distance_m": 150,
+      "walk_min": 2
+    },
+    "last_scraped_at": "2026-10-12T22:36:01.462554+00:00",
+    "lat": 36.69033,
+    "lng": 137.212596
+  },
+  {
+    "name": "MicT",
+    "url": "https://mict-coffee.com/",
+    "platform": "カラーミーショップ(shop-pro.jp)",
+    "shop_type": "single_location",
+    "robots_txt_status": "許可(2026-10確認。User-agent: *は/secure/と/cart/のみ制限)",
+    "address": "富山県富山市荒川2丁目24-15",
+    "prefecture": "富山県",
+    "hours": null,
+    "map_query": "MicT",
+    "nearest_station": {
+      "name": "東新庄",
+      "lines": [
+        "富山地方鉄道本線"
+      ],
+      "distance_m": 390,
+      "walk_min": 5
+    },
+    "last_scraped_at": "2026-10-12T22:36:01.462554+00:00",
+    "lat": 36.697654,
+    "lng": 137.248799
+  },
+  {
+    "name": "空の森 珈琲焙煎所",
+    "url": "https://coffee.sora-nomori.com/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "富山県富山市呉羽町160",
+    "prefecture": "富山県",
+    "hours": null,
+    "map_query": "空の森 珈琲焙煎所",
+    "nearest_station": {
+      "name": "呉羽",
+      "lines": [
+        "あいの風とやま鉄道線"
+      ],
+      "distance_m": 650,
+      "walk_min": 8
+    },
+    "last_scraped_at": "2026-10-12T22:36:01.462554+00:00",
+    "lat": 36.714755,
+    "lng": 137.170134
+  },
+  {
+    "name": "セントベリーコーヒー",
+    "url": "https://stberry.net/",
+    "platform": "おちゃのこネット(Ocnk)",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-10確認。GPTBot等AI系ボットのみ個別にDisallow: /、それ以外は制限なし)",
+    "address": "富山県魚津市本江1330-1",
+    "prefecture": "富山県",
+    "hours": null,
+    "map_query": "セントベリーコーヒー",
+    "nearest_station": {
+      "name": "電鉄魚津",
+      "lines": [
+        "富山地方鉄道本線"
+      ],
+      "distance_m": 1220,
+      "walk_min": 15
+    },
+    "last_scraped_at": "2026-10-12T22:36:01.462554+00:00",
+    "lat": 36.817157,
+    "lng": 137.413763
+  },
+  {
+    "name": "コーヒーのとみかわ",
+    "url": "https://tomikawa.theshop.jp/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "富山県魚津市仏又556-2",
+    "prefecture": "富山県",
+    "hours": null,
+    "map_query": "コーヒーのとみかわ",
+    "nearest_station": {
+      "name": "新魚津",
+      "lines": [
+        "富山地方鉄道本線"
+      ],
+      "distance_m": 1320,
+      "walk_min": 17
+    },
+    "last_scraped_at": "2026-10-12T22:36:01.462554+00:00",
+    "lat": 36.837256,
+    "lng": 137.411926
+  },
+  {
+    "name": "GUMP COFFEE ROASTERS.",
+    "url": "https://thecoffeeroasters.stores.jp/",
+    "instagram_url": null,
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "富山県中新川郡立山町五郎丸1-1",
+    "prefecture": "富山県",
+    "hours": null,
+    "map_query": "GUMP COFFEE ROASTERS. 富山県中新川郡立山町五郎丸1-1",
+    "nearest_station": {
+      "name": "稚子塚",
+      "lines": [
+        "富山地方鉄道立山線"
+      ],
+      "distance_m": 1610,
+      "walk_min": 20
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://thecoffeeroasters.stores.jp/)の商品ページをブラウザfetch()で2026-10-12に確認。豆のまま100g(粉・200g(10%OFF)は同一商品の選択肢)を採用。ドリップバッグ・インスタント・カステラ・カフェオレのもとを除外。公式に焙煎士と記載のスペシャルティ専門店。2店舗(本店:立山町、セピア店:富山市)。",
+    "last_verified_at": "2026-10-03",
+    "locations": [
+      {
+        "label": null,
+        "address": "富山県中新川郡立山町五郎丸1-1",
+        "prefecture": "富山県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "GUMP COFFEE ROASTERS. 富山県中新川郡立山町五郎丸1-1",
+        "lat": 36.685007,
+        "lng": 137.299546
+      }
+    ],
+    "lat": 36.685007,
+    "lng": 137.299546
+  },
+  {
+    "name": "koffe",
+    "url": "https://koffe-coffee.com/",
+    "instagram_url": null,
+    "platform": "WordPress(自社サイト)。メニューページと注文フォームで通販(店頭販売あり)",
+    "shop_type": "single_location",
+    "address": "富山県富山市舟橋南町10-3",
+    "prefecture": "富山県",
+    "hours": null,
+    "map_query": "koffe 富山県富山市舟橋南町10-3",
+    "nearest_station": {
+      "name": "諏訪川原",
+      "lines": [
+        "富山地鉄市内線"
+      ],
+      "distance_m": 280,
+      "walk_min": 4
+    },
+    "data_source": "manual",
+    "source_note": "公式サイトの注文メニュー(https://koffe-coffee.com/order/menu/)を2026-10-12に確認。珈琲豆は200g単位の税込価格(ページ内に「金額は税別表示」の注記も併記)。ページに更新日の表示なし。",
+    "last_verified_at": "2026-10-12",
+    "locations": [
+      {
+        "label": null,
+        "address": "富山県富山市舟橋南町10-3",
+        "prefecture": "富山県",
+        "hours": null,
+        "tel": "076-482-3131",
+        "is_headquarters": false,
+        "map_query": "koffe 富山県富山市舟橋南町10-3",
+        "lat": 36.694829,
+        "lng": 137.206624
+      }
+    ],
+    "lat": 36.694829,
+    "lng": 137.206624
+  },
+  {
+    "name": "くれは珈琲焙煎堂 桝カフィ",
+    "url": "https://masucaffe.com/",
+    "instagram_url": null,
+    "platform": "WordPress(自社サイト)。価格表中心で電話・店頭販売が中心(通販の商品ページ無し)",
+    "shop_type": "single_location",
+    "address": "富山県富山市呉羽町3918-102",
+    "prefecture": "富山県",
+    "hours": null,
+    "map_query": "くれは珈琲焙煎堂 桝カフィ 富山県富山市呉羽町3918-102",
+    "nearest_station": {
+      "name": "呉羽",
+      "lines": [
+        "あいの風とやま鉄道線"
+      ],
+      "distance_m": 650,
+      "walk_min": 8
+    },
+    "data_source": "manual",
+    "source_note": "公式サイトの珈琲ラインナップ(https://masucaffe.com/menu/ 「2026.10.11現在」表示)を2026-10-12に確認。価格は100gあたり税込。焙煎した豆は日替わりで、銘柄と焙煎度のラインナップは20〜30種類(価格表は約37銘柄)。店頭・電話注文中心。",
+    "last_verified_at": "2026-10-12",
+    "locations": [
+      {
+        "label": null,
+        "address": "富山県富山市呉羽町3918-102",
+        "prefecture": "富山県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "くれは珈琲焙煎堂 桝カフィ 富山県富山市呉羽町3918-102",
+        "lat": 36.714755,
+        "lng": 137.170134
+      }
+    ],
+    "lat": 36.714755,
+    "lng": 137.170134
+  },
+  {
+    "name": "自家焙煎・水出し珈琲 水の時計",
+    "url": "https://mizunotokei.stores.jp/",
+    "instagram_url": null,
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "富山県黒部市荻生2671-3",
+    "prefecture": "富山県",
+    "hours": null,
+    "map_query": "自家焙煎・水出し珈琲 水の時計 富山県黒部市荻生2671-3",
+    "nearest_station": {
+      "name": "荻生",
+      "lines": [
+        "富山地方鉄道本線"
+      ],
+      "distance_m": 20,
+      "walk_min": 1
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://mizunotokei.stores.jp/)の商品ページをブラウザfetch()で2026-10-12に確認。豆のまま(挽き方違いは同一商品の選択肢)を採用。ギフト・カップオンコーヒー・水出し・羊羹・ゼリー・ミニ樽・BOXを除外。公式に直火式の焙煎機で豆を煎りあげると記載。2店舗(黒部店、富山店)。",
+    "last_verified_at": "2026-10-03",
+    "locations": [
+      {
+        "label": null,
+        "address": "富山県黒部市荻生2671-3",
+        "prefecture": "富山県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "自家焙煎・水出し珈琲 水の時計 富山県黒部市荻生2671-3",
+        "lat": 36.875063,
+        "lng": 137.459436
+      }
+    ],
+    "lat": 36.875063,
+    "lng": 137.459436
   }
 ]

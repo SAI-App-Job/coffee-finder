@@ -1120,6 +1120,19 @@ SOURCE_FILES = {
     "橘珈琲店": "data_tachibanacoffee.json",
     "townsfolk coffee": "data_townsfolkcoffee.json",
     "Sea Side Cafe うみぼうず": "data_umibouzu.json",
+    # 富山県の再調査(新規発掘)
+    "アルパカコーヒー": "data_alpacacoffee.json",
+    "自家焙煎珈琲豆&喫茶店 BEANS": "data_beanscoffeetoyama.json",
+    "CAFE BRIO": "data_cafebrio.json",
+    "カフェくらうん": "data_cafekuraun.json",
+    "Good Enough Coffee Toyama": "data_gectoyama.json",
+    "haiz coffee roastery": "data_haizcoffee.json",
+    "hazeru coffee": "data_hazerucoffee.json",
+    "まめやコーヒー": "data_mameyacoffeetoyama.json",
+    "MicT": "data_mictcoffee.json",
+    "空の森 珈琲焙煎所": "data_soranomori.json",
+    "セントベリーコーヒー": "data_stberry.json",
+    "コーヒーのとみかわ": "data_tomikawacoffee.json",
 }
 
 
