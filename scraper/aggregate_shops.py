@@ -1105,6 +1105,21 @@ SOURCE_FILES = {
     "One Note Coffee Roaster": "data_onenotecoffee.json",
     "寺ノ下珈琲焙煎所": "data_teranoshitacoffee.json",
     "山の焙煎所": "data_yamanobaisen.json",
+    # 石川県の再調査(新規発掘)
+    "アリーカフェ": "data_allycaffe.json",
+    "芭蕉珈琲": "data_bashowcoffee.json",
+    "blanket cafe": "data_blanketcafe.json",
+    "キャラバンサライ": "data_caravanserai.json",
+    "金澤ちとせ珈琲": "data_chitosecoffee.json",
+    "コーヒーマート63": "data_coffeemart63.json",
+    "金澤屋珈琲店": "data_kanazawayacoffee.json",
+    "手作りコーヒー 豆の樹(金沢)": "data_mamenokiishikawa.json",
+    "謎屋珈琲店": "data_nazoya.json",
+    "Pessoa Coffee Roasters": "data_pessoacoffeeroasters.json",
+    "サニーベルコーヒー": "data_sunnybellcoffee.json",
+    "橘珈琲店": "data_tachibanacoffee.json",
+    "townsfolk coffee": "data_townsfolkcoffee.json",
+    "Sea Side Cafe うみぼうず": "data_umibouzu.json",
 }
 
 

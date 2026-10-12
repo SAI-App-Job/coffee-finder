@@ -29938,5 +29938,353 @@
     ],
     "lat": 35.557585,
     "lng": 138.469411
+  },
+  {
+    "name": "アリーカフェ",
+    "url": "https://ally-caffe.ocnk.net/",
+    "platform": "おちゃのこネット",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-10-12確認。GPTBot等の特定クローラのみDisallow、User-agent: *への制限なし)",
+    "address": "石川県金沢市畝田西3-583",
+    "prefecture": "石川県",
+    "hours": null,
+    "map_query": "アリーカフェ",
+    "nearest_station": {
+      "name": "西金沢",
+      "lines": [
+        "IRいしかわ鉄道線"
+      ],
+      "distance_m": 2890,
+      "walk_min": 36
+    },
+    "last_scraped_at": "2026-10-12T22:33:29.936079+00:00",
+    "lat": 36.575825,
+    "lng": 136.605276
+  },
+  {
+    "name": "芭蕉珈琲",
+    "url": "https://bashowk.official.ec/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "石川県加賀市山中温泉本町1丁目ヤ6",
+    "prefecture": "石川県",
+    "hours": null,
+    "map_query": "芭蕉珈琲",
+    "nearest_station": {
+      "name": "大聖寺",
+      "lines": [
+        "ハピラインふくい線",
+        "IRいしかわ鉄道線"
+      ],
+      "distance_m": 7800,
+      "walk_min": 98
+    },
+    "last_scraped_at": "2026-10-12T22:33:29.936079+00:00",
+    "lat": 36.249895,
+    "lng": 136.374592
+  },
+  {
+    "name": "blanket cafe",
+    "url": "https://blanketcafe.base.shop/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "石川県金沢市尾山町12-2 チェントロ尾山1F",
+    "prefecture": "石川県",
+    "hours": null,
+    "map_query": "blanket cafe",
+    "nearest_station": {
+      "name": "北鉄金沢",
+      "lines": [
+        "北陸鉄道浅野川線"
+      ],
+      "distance_m": 1370,
+      "walk_min": 17
+    },
+    "last_scraped_at": "2026-10-12T22:33:29.936079+00:00",
+    "lat": 36.567359,
+    "lng": 136.655661
+  },
+  {
+    "name": "キャラバンサライ",
+    "url": "https://www.caravanserai.co.jp/",
+    "platform": "ショップサーブ",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-10-12確認。robots.txt自体が存在しない(404)ためDisallow指定は無い)",
+    "address": "石川県金沢市保古3-47(本店)",
+    "prefecture": "石川県",
+    "hours": null,
+    "map_query": "キャラバンサライ",
+    "nearest_station": {
+      "name": "西金沢",
+      "lines": [
+        "IRいしかわ鉄道線"
+      ],
+      "distance_m": 540,
+      "walk_min": 7
+    },
+    "last_scraped_at": "2026-10-12T22:33:29.936079+00:00",
+    "lat": 36.556608,
+    "lng": 136.616846
+  },
+  {
+    "name": "金澤ちとせ珈琲",
+    "url": "https://www.chitose-shop.com/",
+    "platform": "おちゃのこネット",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-10-12確認。GPTBot等の特定クローラのみDisallow、User-agent: *への制限なし)",
+    "address": "石川県金沢市長坂台1-41(長坂台店)",
+    "prefecture": "石川県",
+    "hours": null,
+    "map_query": "金澤ちとせ珈琲",
+    "nearest_station": {
+      "name": "野町",
+      "lines": [
+        "北陸鉄道石川線"
+      ],
+      "distance_m": 2330,
+      "walk_min": 29
+    },
+    "last_scraped_at": "2026-10-12T22:33:29.936079+00:00",
+    "lat": 36.534149,
+    "lng": 136.653338
+  },
+  {
+    "name": "コーヒーマート63",
+    "url": "https://coffee-mart.jp/store/",
+    "platform": "WordPress(独自テーマ)+easy-myshop",
+    "shop_type": "single_location",
+    "robots_txt_status": "許可(2026-10-12確認。/wp/wp-admin/のみDisallow)",
+    "address": "石川県金沢市玉鉾2-27",
+    "prefecture": "石川県",
+    "hours": null,
+    "map_query": "コーヒーマート63",
+    "nearest_station": {
+      "name": "西金沢",
+      "lines": [
+        "IRいしかわ鉄道線"
+      ],
+      "distance_m": 1770,
+      "walk_min": 22
+    },
+    "last_scraped_at": "2026-10-12T22:33:29.936079+00:00",
+    "lat": 36.56914,
+    "lng": 136.621685
+  },
+  {
+    "name": "金澤屋珈琲店",
+    "url": "https://www.krf.co.jp/",
+    "platform": "ショップサーブ",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-10-12確認。robots.txt自体が存在しない(404)ためDisallow指定は無い)",
+    "address": "石川県金沢市丸の内5-26",
+    "prefecture": "石川県",
+    "hours": null,
+    "map_query": "金澤屋珈琲店",
+    "nearest_station": {
+      "name": "北鉄金沢",
+      "lines": [
+        "北陸鉄道浅野川線"
+      ],
+      "distance_m": 1740,
+      "walk_min": 22
+    },
+    "last_scraped_at": "2026-10-12T22:33:29.936079+00:00",
+    "lat": 36.564871,
+    "lng": 136.658839
+  },
+  {
+    "name": "手作りコーヒー 豆の樹(金沢)",
+    "url": "https://coffee-mamenoki.myshopify.com/",
+    "platform": "Shopify",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認(Shopify標準構成)",
+    "address": "石川県金沢市三馬3丁目195",
+    "prefecture": "石川県",
+    "hours": null,
+    "map_query": "手作りコーヒー 豆の樹(金沢)",
+    "nearest_station": {
+      "name": "野々市工大前",
+      "lines": [
+        "北陸鉄道石川線"
+      ],
+      "distance_m": 970,
+      "walk_min": 12
+    },
+    "last_scraped_at": "2026-10-12T22:33:29.936079+00:00",
+    "lat": 36.52908,
+    "lng": 136.631793
+  },
+  {
+    "name": "謎屋珈琲店",
+    "url": "https://nazoyacafe.thebase.in/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "石川県金沢市安江町19-6(金沢本店)",
+    "prefecture": "石川県",
+    "hours": null,
+    "map_query": "謎屋珈琲店",
+    "nearest_station": {
+      "name": "北鉄金沢",
+      "lines": [
+        "北陸鉄道浅野川線"
+      ],
+      "distance_m": 690,
+      "walk_min": 9
+    },
+    "last_scraped_at": "2026-10-12T22:33:29.936079+00:00",
+    "lat": 36.574302,
+    "lng": 136.655113
+  },
+  {
+    "name": "Pessoa Coffee Roasters",
+    "url": "https://pessoacoffee.thebase.in/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "石川県金沢市新竪町3丁目120-1",
+    "prefecture": "石川県",
+    "hours": null,
+    "map_query": "Pessoa Coffee Roasters",
+    "nearest_station": {
+      "name": "野町",
+      "lines": [
+        "北陸鉄道石川線"
+      ],
+      "distance_m": 1110,
+      "walk_min": 14
+    },
+    "last_scraped_at": "2026-10-12T22:33:29.936079+00:00",
+    "lat": 36.555989,
+    "lng": 136.656395
+  },
+  {
+    "name": "サニーベルコーヒー",
+    "url": "https://sunnybell.thebase.in/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "石川県金沢市笠市町5-8",
+    "prefecture": "石川県",
+    "hours": null,
+    "map_query": "サニーベルコーヒー",
+    "nearest_station": {
+      "name": "北鉄金沢",
+      "lines": [
+        "北陸鉄道浅野川線"
+      ],
+      "distance_m": 510,
+      "walk_min": 6
+    },
+    "last_scraped_at": "2026-10-12T22:33:29.936079+00:00",
+    "lat": 36.578067,
+    "lng": 136.655208
+  },
+  {
+    "name": "橘珈琲店",
+    "url": "https://tachicoffee.thebase.in/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "石川県金沢市石引4丁目5-1 Allier1階",
+    "prefecture": "石川県",
+    "hours": null,
+    "map_query": "橘珈琲店",
+    "nearest_station": {
+      "name": "野町",
+      "lines": [
+        "北陸鉄道石川線"
+      ],
+      "distance_m": 1980,
+      "walk_min": 25
+    },
+    "last_scraped_at": "2026-10-12T22:33:29.936079+00:00",
+    "lat": 36.557901,
+    "lng": 136.665894
+  },
+  {
+    "name": "townsfolk coffee",
+    "url": "https://townsfolkcoffee.com/",
+    "platform": "Shopify",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認(Shopify標準構成)",
+    "address": "石川県金沢市高岡町22-18",
+    "prefecture": "石川県",
+    "hours": null,
+    "map_query": "townsfolk coffee",
+    "nearest_station": {
+      "name": "金沢",
+      "lines": [
+        "北陸新幹線",
+        "IRいしかわ鉄道線"
+      ],
+      "distance_m": 1160,
+      "walk_min": 15
+    },
+    "last_scraped_at": "2026-10-12T22:33:29.936079+00:00",
+    "lat": 36.568391,
+    "lng": 136.652954
+  },
+  {
+    "name": "Sea Side Cafe うみぼうず",
+    "url": "https://umibouzu-cafe.com/",
+    "platform": "WordPress + Welcart",
+    "shop_type": "single_location",
+    "robots_txt_status": "不明(2026-10-12確認。robots.txt自体が403 Forbidden)",
+    "address": "石川県加賀市片野町3-6",
+    "prefecture": "石川県",
+    "hours": null,
+    "map_query": "Sea Side Cafe うみぼうず",
+    "nearest_station": {
+      "name": "大聖寺",
+      "lines": [
+        "ハピラインふくい線",
+        "IRいしかわ鉄道線"
+      ],
+      "distance_m": 3830,
+      "walk_min": 48
+    },
+    "last_scraped_at": "2026-10-12T22:33:29.936079+00:00",
+    "lat": 36.324064,
+    "lng": 136.28336
+  },
+  {
+    "name": "エスコーラ焙煎考房",
+    "url": "http://escola.jp/",
+    "instagram_url": null,
+    "platform": "静的HTML(メール/FAX注文)",
+    "shop_type": "single_location",
+    "address": "石川県金沢市西町薮の内21-4",
+    "prefecture": "石川県",
+    "hours": "10:00-18:00(日曜定休)",
+    "map_query": "エスコーラ焙煎考房 石川県金沢市西町薮の内21-4",
+    "nearest_station": {
+      "name": "北鉄金沢",
+      "lines": [
+        "北陸鉄道浅野川線"
+      ],
+      "distance_m": 1150,
+      "walk_min": 14
+    },
+    "data_source": "manual",
+    "source_note": "公式サイト(http://escola.jp/ および通販ページ http://escola.jp/page/shop.htm)を2026-10-12に確認。旧式の静的サイトでメール/FAX注文(注文日に焙煎して発送、代金は郵便振替の後払い)。価格は『100gあたり料金(税込)』で、注文は200gから(200g/400g/600g/800g/1000g)。ここでは100gあたり料金を100gの価格として採用。HTML内でコメントアウトされた商品(コスタリカ・ペルー・トラジャ)は除外。エスプレッソコーヒー・コールドコーヒーは配合/産地の記載がなく分類できないため除外。サイトのトピックス更新日の記載はなく、更新の古さは不明(レイアウトは旧式)。",
+    "last_verified_at": "2026-10-12",
+    "locations": [
+      {
+        "label": null,
+        "address": "石川県金沢市西町薮の内21-4",
+        "prefecture": "石川県",
+        "hours": "10:00-18:00(日曜定休)",
+        "tel": "076-264-8121",
+        "is_headquarters": false,
+        "map_query": "エスコーラ焙煎考房 石川県金沢市西町薮の内21-4",
+        "lat": 36.570062,
+        "lng": 136.656642
+      }
+    ],
+    "lat": 36.570062,
+    "lng": 136.656642
   }
 ]
