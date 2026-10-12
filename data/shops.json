@@ -29100,5 +29100,266 @@
     ],
     "lat": 36.191084,
     "lng": 140.28005
+  },
+  {
+    "name": "Cafe FUJINUMA",
+    "url": "https://cafefujinuma.thebase.in/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "栃木県小山市中央町2-8-16",
+    "prefecture": "栃木県",
+    "hours": null,
+    "map_query": "Cafe FUJINUMA",
+    "nearest_station": {
+      "name": "小山",
+      "lines": [
+        "JR水戸線",
+        "JR宇都宮線",
+        "JR両毛線",
+        "東北新幹線"
+      ],
+      "distance_m": 260,
+      "walk_min": 3
+    },
+    "last_scraped_at": "2026-10-12T11:45:45.662956+00:00",
+    "lat": 36.312709,
+    "lng": 139.80331
+  },
+  {
+    "name": "珈琲工房 ほろにが",
+    "url": "http://www.horoniga.com/",
+    "platform": "独自カート(静的HTML、cart.cgi)",
+    "shop_type": "single_location",
+    "robots_txt_status": "robots.txtなし(404、2026-10-12確認)",
+    "address": "栃木県小山市卒島824",
+    "prefecture": "栃木県",
+    "hours": null,
+    "map_query": "珈琲工房 ほろにが",
+    "nearest_station": {
+      "name": "思川",
+      "lines": [
+        "JR両毛線"
+      ],
+      "distance_m": 1740,
+      "walk_min": 22
+    },
+    "last_scraped_at": "2026-10-12T11:45:45.662956+00:00",
+    "lat": 36.352635,
+    "lng": 139.7618
+  },
+  {
+    "name": "PAVEMENT COFFEE ROASTERY",
+    "url": "https://pavementroastery.jp/",
+    "platform": "Shopify",
+    "shop_type": "single_location",
+    "robots_txt_status": "許可(Shopify標準構成。商品・コレクションのクロールを明示許可)",
+    "address": "栃木県宇都宮市西3-1-2",
+    "prefecture": "栃木県",
+    "hours": null,
+    "map_query": "PAVEMENT COFFEE ROASTERY",
+    "nearest_station": {
+      "name": "東武宇都宮",
+      "lines": [
+        "東武宇都宮線"
+      ],
+      "distance_m": 840,
+      "walk_min": 11
+    },
+    "last_scraped_at": "2026-10-12T11:45:45.662956+00:00",
+    "lat": 36.566665,
+    "lng": 139.883029
+  },
+  {
+    "name": "ぽれ珈琲",
+    "url": "https://pole-cafe.com/",
+    "platform": "WordPress + Welcart",
+    "shop_type": "single_location",
+    "robots_txt_status": "許可(2026-10-12確認。/renewal/wp-admin/以外は制限なし)",
+    "address": "栃木県足利市葉鹿町1239-3",
+    "prefecture": "栃木県",
+    "hours": null,
+    "map_query": "ぽれ珈琲",
+    "nearest_station": {
+      "name": "小俣",
+      "lines": [
+        "JR両毛線"
+      ],
+      "distance_m": 1310,
+      "walk_min": 16
+    },
+    "last_scraped_at": "2026-10-12T11:45:45.662956+00:00",
+    "lat": 36.373971,
+    "lng": 139.38895
+  },
+  {
+    "name": "SAKURA黒猫堂",
+    "url": "https://sakura96neko.base.shop/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "栃木県矢板市中150-122",
+    "prefecture": "栃木県",
+    "hours": null,
+    "map_query": "SAKURA黒猫堂",
+    "nearest_station": {
+      "name": "矢板",
+      "lines": [
+        "JR宇都宮線"
+      ],
+      "distance_m": 1500,
+      "walk_min": 19
+    },
+    "last_scraped_at": "2026-10-12T11:45:45.662956+00:00",
+    "lat": 36.799861,
+    "lng": 139.947551
+  },
+  {
+    "name": "自家焙煎 真岡珈琲ソワカフェ",
+    "url": "https://sowacafe.thebase.in/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "栃木県真岡市八木岡472-5",
+    "prefecture": "栃木県",
+    "hours": null,
+    "map_query": "自家焙煎 真岡珈琲ソワカフェ",
+    "nearest_station": {
+      "name": "寺内",
+      "lines": [
+        "真岡鐵道"
+      ],
+      "distance_m": 1650,
+      "walk_min": 21
+    },
+    "last_scraped_at": "2026-10-12T11:45:45.662956+00:00",
+    "lat": 36.421896,
+    "lng": 139.992344
+  },
+  {
+    "name": "wabisuke",
+    "url": "https://coffee-tukasa-yudaya.com/",
+    "platform": "WordPress + Welcart",
+    "shop_type": "single_location",
+    "robots_txt_status": "許可(User-agent: * は /wp-admin/ のみDisallow)",
+    "address": "栃木県大田原市本町1-2691",
+    "prefecture": "栃木県",
+    "hours": null,
+    "map_query": "wabisuke",
+    "nearest_station": {
+      "name": "西那須野",
+      "lines": [
+        "JR宇都宮線"
+      ],
+      "distance_m": 2320,
+      "walk_min": 29
+    },
+    "last_scraped_at": "2026-10-12T11:45:45.662956+00:00",
+    "lat": 36.875557,
+    "lng": 140.01035
+  },
+  {
+    "name": "クレストコーヒー",
+    "url": "https://crest-coffee.com/",
+    "instagram_url": null,
+    "platform": "静的HTML(自社サイト)。注文はFAX・電話・メール、決済は代引・振込",
+    "shop_type": "single_location",
+    "address": "栃木県那須塩原市関谷2039-8",
+    "prefecture": "栃木県",
+    "hours": null,
+    "map_query": "クレストコーヒー 栃木県那須塩原市関谷2039-8",
+    "nearest_station": null,
+    "data_source": "manual",
+    "source_note": "公式サイトの注文ページ(https://crest-coffee.com/order.html)の通常商品10銘柄(100g)を2026-10-12に確認。特定商取引法表示(https://crest-coffee.com/tokutei.html)で所在地を確認。送料表は令和6年(2024)1月1日改定の表記で、価格ページ自体の更新日は不明。店頭販売も行うため注文時に在庫切れの場合あり。",
+    "last_verified_at": "2026-10-12",
+    "locations": [
+      {
+        "label": null,
+        "address": "栃木県那須塩原市関谷2039-8",
+        "prefecture": "栃木県",
+        "hours": null,
+        "tel": "0287-34-0080",
+        "is_headquarters": false,
+        "map_query": "クレストコーヒー 栃木県那須塩原市関谷2039-8",
+        "lat": 36.962606,
+        "lng": 139.900922
+      }
+    ],
+    "lat": 36.962606,
+    "lng": 139.900922
+  },
+  {
+    "name": "珈琲処 晴れ晴れ",
+    "url": "https://harebarecoffee.com/",
+    "instagram_url": null,
+    "platform": "STORES.jp(独自ドメイン、ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "栃木県足利市大町2-3",
+    "prefecture": "栃木県",
+    "hours": null,
+    "map_query": "珈琲処 晴れ晴れ 栃木県足利市大町2-3",
+    "nearest_station": {
+      "name": "足利",
+      "lines": [
+        "JR両毛線"
+      ],
+      "distance_m": 510,
+      "walk_min": 6
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://harebarecoffee.com/)の商品ページをブラウザfetch()で2026-10-12に確認。豆のまま最小重量を採用(100gは生豆重量で焙煎後約17%目減りと明記、ブレンドは200g)。ドリップバッグ・定期便・セット・ギフトを除外。自家焙煎・注文焙煎(公式)。重量が商品名に無いコロンビア エメラルドマウンテン・ブルンジ・コンゴはnull。",
+    "last_verified_at": "2026-10-03",
+    "locations": [
+      {
+        "label": null,
+        "address": "栃木県足利市大町2-3",
+        "prefecture": "栃木県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "珈琲処 晴れ晴れ 栃木県足利市大町2-3",
+        "lat": 36.336336,
+        "lng": 139.457487
+      }
+    ],
+    "lat": 36.336336,
+    "lng": 139.457487
+  },
+  {
+    "name": "自家焙煎 珈琲音",
+    "url": "https://kahian.com/",
+    "instagram_url": null,
+    "platform": "WordPress(静的HTMLの価格表。注文は店頭・電話・FAXのみ)",
+    "shop_type": "single_location",
+    "address": "栃木県佐野市新吉水町345",
+    "prefecture": "栃木県",
+    "hours": "水曜日~日曜日 10:00~18:00",
+    "map_query": "自家焙煎 珈琲音 栃木県佐野市新吉水町345",
+    "nearest_station": {
+      "name": "吉水",
+      "lines": [
+        "東武佐野線"
+      ],
+      "distance_m": 410,
+      "walk_min": 5
+    },
+    "data_source": "manual",
+    "source_note": "公式サイトのカフェメニュー(https://kahian.com/cafemenu)の豆(100g)価格を2026-10-12に確認。注文方法ページ(https://kahian.com/order/)で電話/FAX注文のみを確認。2026-06-18付で価格改定のお知らせあり。数量限定品(パナマ ドンパチ ゲイシャ、コロンビア マタレドンダ)の在庫は店頭確認が必要。",
+    "last_verified_at": "2026-10-12",
+    "locations": [
+      {
+        "label": null,
+        "address": "栃木県佐野市新吉水町345",
+        "prefecture": "栃木県",
+        "hours": "水曜日~日曜日 10:00~18:00",
+        "tel": "0283-62-6074",
+        "is_headquarters": false,
+        "map_query": "自家焙煎 珈琲音 栃木県佐野市新吉水町345",
+        "lat": 36.347828,
+        "lng": 139.575676
+      }
+    ],
+    "lat": 36.347828,
+    "lng": 139.575676
   }
 ]

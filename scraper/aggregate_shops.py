@@ -1079,6 +1079,14 @@ SOURCE_FILES = {
     "サイトウコーヒー": "data_saitohcoffee.json",
     "SugayaCoffee": "data_sugayacoffee.json",
     "自家焙煎珈琲ゆらふる": "data_yurafulcoffee.json",
+    # 栃木県の再調査(新規発掘)
+    "Cafe FUJINUMA": "data_cafefujinuma.json",
+    "珈琲工房 ほろにが": "data_horoniga.json",
+    "PAVEMENT COFFEE ROASTERY": "data_pavementcoffee.json",
+    "ぽれ珈琲": "data_polecafe.json",
+    "SAKURA黒猫堂": "data_sakurakuronekodo.json",
+    "自家焙煎 真岡珈琲ソワカフェ": "data_sowacafe.json",
+    "wabisuke": "data_wabisuke.json",
 }
 
 
