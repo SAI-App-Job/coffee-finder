@@ -29361,5 +29361,167 @@
     ],
     "lat": 36.347828,
     "lng": 139.575676
+  },
+  {
+    "name": "玄豆屋",
+    "url": "http://genzya.shop-pro.jp/",
+    "platform": "カラーミーショップ(shop-pro.jp)",
+    "shop_type": "single_location",
+    "robots_txt_status": "許可(2026-10確認。/secure/と/cart/以外は制限なし)",
+    "address": "福島県白河市道場町29",
+    "prefecture": "福島県",
+    "hours": null,
+    "map_query": "玄豆屋",
+    "nearest_station": {
+      "name": "白河",
+      "lines": [
+        "JR東北本線"
+      ],
+      "distance_m": 830,
+      "walk_min": 10
+    },
+    "last_scraped_at": "2026-10-12T11:54:00.877650+00:00",
+    "lat": 37.128639,
+    "lng": 140.20444
+  },
+  {
+    "name": "イチノイチコーヒー",
+    "url": "https://ichinoichi.thebase.in/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "福島県郡山市熱海町熱海1-237",
+    "prefecture": "福島県",
+    "hours": null,
+    "map_query": "イチノイチコーヒー",
+    "nearest_station": {
+      "name": "中山宿",
+      "lines": [
+        "JR磐越西線"
+      ],
+      "distance_m": 2550,
+      "walk_min": 32
+    },
+    "last_scraped_at": "2026-10-12T11:54:00.877650+00:00",
+    "lat": 37.514724,
+    "lng": 140.203338
+  },
+  {
+    "name": "珈琲香坊",
+    "url": "https://www.ko-hi-koubou.com/",
+    "platform": "ショップサーブ",
+    "shop_type": "single_location",
+    "robots_txt_status": "robots.txtなし(404、2026-10確認)",
+    "address": "福島県東白川郡矢祭町小田川字中山17-1",
+    "prefecture": "福島県",
+    "hours": null,
+    "map_query": "珈琲香坊",
+    "nearest_station": {
+      "name": "東館",
+      "lines": [
+        "JR水郡線"
+      ],
+      "distance_m": 2940,
+      "walk_min": 37
+    },
+    "last_scraped_at": "2026-10-12T11:54:00.877650+00:00",
+    "lat": 36.845459,
+    "lng": 140.434593
+  },
+  {
+    "name": "プラウコーヒーロースター",
+    "url": "https://shop.pulaucoffeeroaster.com/",
+    "platform": "BASE(独自ドメイン)",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "福島県須賀川市和田道5-11",
+    "prefecture": "福島県",
+    "hours": null,
+    "map_query": "プラウコーヒーロースター",
+    "nearest_station": {
+      "name": "川東",
+      "lines": [
+        "JR水郡線"
+      ],
+      "distance_m": 2010,
+      "walk_min": 25
+    },
+    "last_scraped_at": "2026-10-12T11:54:00.877650+00:00",
+    "lat": 37.282996,
+    "lng": 140.390316
+  },
+  {
+    "name": "nichi nichi coffee",
+    "url": "https://nichi-nichi-coffee.stores.jp/",
+    "instagram_url": null,
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "福島県喜多方市一丁目4647",
+    "prefecture": "福島県",
+    "hours": null,
+    "map_query": "nichi nichi coffee 福島県喜多方市一丁目4647",
+    "nearest_station": {
+      "name": "航空公園",
+      "lines": [
+        "西武新宿線"
+      ],
+      "distance_m": 410,
+      "walk_min": 5
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://nichi-nichi-coffee.stores.jp/)の商品ページをブラウザfetch()で2026-10-12に確認。豆100g(粉は同一商品の選択肢)を採用。ドリップバッグ・リキッド・カフェラテベース・定期便・セットを除外。仲町店の住所。桜ガ丘の焙煎所は現在休業中。公式に自家焙煎珈琲専門店(2018年開業)と記載。",
+    "last_verified_at": "2026-10-03",
+    "locations": [
+      {
+        "label": null,
+        "address": "福島県喜多方市一丁目4647",
+        "prefecture": "福島県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "nichi nichi coffee 福島県喜多方市一丁目4647",
+        "lat": 35.797033,
+        "lng": 139.461325
+      }
+    ],
+    "lat": 35.797033,
+    "lng": 139.461325
+  },
+  {
+    "name": "Rotten Row Coffee Roasters",
+    "url": "https://rottenrowcoffee.stores.jp/",
+    "instagram_url": null,
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "福島県耶麻郡北塩原村大字桧原字甚九郎沢山1097-125",
+    "prefecture": "福島県",
+    "hours": null,
+    "map_query": "Rotten Row Coffee Roasters 福島県耶麻郡北塩原村大字桧原字甚九郎沢山1097-125",
+    "nearest_station": {
+      "name": "会津豊川",
+      "lines": [
+        "JR磐越西線"
+      ],
+      "distance_m": 5920,
+      "walk_min": 74
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://rottenrowcoffee.stores.jp/)の商品ページをブラウザfetch()で2026-10-12に確認。豆のまま150gを採用(挽き方違いは同一商品の選択肢)。ドリップバッグ・リキッド・ギフト箱を除外。公式に自家焙煎珈琲豆の販売と記載、Diedrich焙煎機(2013年開業、2022年にMOTO COFFEEから改称)。",
+    "last_verified_at": "2026-10-03",
+    "locations": [
+      {
+        "label": null,
+        "address": "福島県耶麻郡北塩原村大字桧原字甚九郎沢山1097-125",
+        "prefecture": "福島県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "Rotten Row Coffee Roasters 福島県耶麻郡北塩原村大字桧原字甚九郎沢山1097-125",
+        "lat": 37.655816,
+        "lng": 139.937694
+      }
+    ],
+    "lat": 37.655816,
+    "lng": 139.937694
   }
 ]

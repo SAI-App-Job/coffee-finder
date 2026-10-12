@@ -1087,6 +1087,11 @@ SOURCE_FILES = {
     "SAKURA黒猫堂": "data_sakurakuronekodo.json",
     "自家焙煎 真岡珈琲ソワカフェ": "data_sowacafe.json",
     "wabisuke": "data_wabisuke.json",
+    # 福島県の再調査(新規発掘)
+    "玄豆屋": "data_genzya.json",
+    "イチノイチコーヒー": "data_ichinoichicoffee.json",
+    "珈琲香坊": "data_kohikoubou.json",
+    "プラウコーヒーロースター": "data_pulaucoffeeroaster.json",
 }
 
 
