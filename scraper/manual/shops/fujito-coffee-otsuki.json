@@ -1,0 +1,121 @@
+{
+  "shop": {
+    "name": "FUJITO COFFEE",
+    "url": "https://fujitocoffee.stores.jp/",
+    "address": "山梨県大月市",
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "prefecture": "山梨県",
+    "source_note": "STORES.jpの公式ショップ(https://fujitocoffee.stores.jp/)の商品ページをブラウザfetch()で2026-10-12に確認。豆200g(粉190gは同一商品の選択肢)を採用。ディップバッグ・コールドブリュー・セットを除外。半熱風式1kg焙煎機HCR1000で自家焙煎、店舗なし(公式)。住所は市まで(番地未確認)。",
+    "id": "fujito-coffee-otsuki",
+    "instagram_url": null,
+    "google_maps_query": "FUJITO COFFEE 山梨県大月市",
+    "tel": null,
+    "hours": null,
+    "shop_type": "single_location",
+    "data_source": "manual",
+    "last_verified_at": "2026-10-03",
+    "lat": 35.612883,
+    "lng": 138.942909,
+    "nearest_station": {
+      "name": "大月",
+      "lines": [
+        "JR中央本線",
+        "富士急行線"
+      ],
+      "distance_m": 40,
+      "walk_min": 1
+    }
+  },
+  "products": [
+    {
+      "raw_name": "サルハシブレンド",
+      "category": "ブレンド",
+      "originCountry": null,
+      "processingMethod": null,
+      "roast": "深煎り",
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1600,
+      "weightG": 200,
+      "stockStatus": "販売中",
+      "productUrl": "https://fujitocoffee.stores.jp/items/66da4f3ff5e14004ebc33bb3",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "オオツキブレンド",
+      "category": "ブレンド",
+      "originCountry": null,
+      "processingMethod": null,
+      "roast": "中煎り",
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1600,
+      "weightG": 200,
+      "stockStatus": "販売中",
+      "productUrl": "https://fujitocoffee.stores.jp/items/64f980587619fe002c7461e3",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "浅煎り フルーティな味わい「#01 雁ケ腹摺山」",
+      "category": "ストレート",
+      "originCountry": null,
+      "processingMethod": null,
+      "roast": "浅煎り",
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1880,
+      "weightG": 200,
+      "stockStatus": "販売中",
+      "productUrl": "https://fujitocoffee.stores.jp/items/61e62589dd8d3903a1eb3c7a",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "中深煎 苦味少ない「#07 百蔵山」",
+      "category": "ストレート",
+      "originCountry": "パプアニューギニア",
+      "processingMethod": null,
+      "roast": "中深煎り",
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1740,
+      "weightG": 200,
+      "stockStatus": "販売中",
+      "productUrl": "https://fujitocoffee.stores.jp/items/63a3109e3589b9303c747400",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "深煎り キレのある深煎り「#08 岩殿山」",
+      "category": "ストレート",
+      "originCountry": "ブラジル",
+      "processingMethod": null,
+      "roast": "深煎り",
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1800,
+      "weightG": 200,
+      "stockStatus": "販売中",
+      "productUrl": "https://fujitocoffee.stores.jp/items/63a2c7e7d325cc2e2f66dbb0",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "カフェインレスな深煎り「#09 倉岳山」DECAF",
+      "category": "ストレート",
+      "originCountry": null,
+      "processingMethod": null,
+      "roast": "深煎り",
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1820,
+      "weightG": 200,
+      "stockStatus": "販売中",
+      "productUrl": "https://fujitocoffee.stores.jp/items/61e628d30020fc23e2690c94",
+      "data_source": "manual"
+    }
+  ]
+}

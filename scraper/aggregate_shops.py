@@ -1092,6 +1092,19 @@ SOURCE_FILES = {
     "イチノイチコーヒー": "data_ichinoichicoffee.json",
     "珈琲香坊": "data_kohikoubou.json",
     "プラウコーヒーロースター": "data_pulaucoffeeroaster.json",
+    # 山梨県の再調査(新規発掘)
+    "4335 Coffee Roastery": "data_4335coffee.json",
+    "Bijoux Coffee CHUO": "data_bijouxcoffeechuo.json",
+    "カフェアニス(自家焙煎珈琲工房)": "data_cafeanis.json",
+    "EIGHTS COFFEE": "data_eightscoffee.json",
+    "春木屋「月滴庵」": "data_harukiya.json",
+    "JIN COFFEE Katsunuma": "data_jincoffeekatsunuma.json",
+    "小林コーヒー店": "data_kobayashicoffeeyamanashi.json",
+    "珈琲倶ら部": "data_kurabu.json",
+    "マイヨ工房": "data_maillot.json",
+    "One Note Coffee Roaster": "data_onenotecoffee.json",
+    "寺ノ下珈琲焙煎所": "data_teranoshitacoffee.json",
+    "山の焙煎所": "data_yamanobaisen.json",
 }
 
 

@@ -5,7 +5,7 @@
 `scraper/manual/shops/`配下、それ以外は`scraper/scrape_*.py`で自動取得。
 実装を見送った店舗は`docs/not-implementable-shops.md`を参照。
 
-合計1254店舗・20881商品(生成日: 2026-10-12)。
+合計1270店舗・21179商品(生成日: 2026-10-12)。
 
 再生成コマンド:
 ```
@@ -644,14 +644,30 @@ aggregate_shops.py実行後の`git diff --staged --quiet || git commit`が該当
 
 | 店舗名 | 所在地 | 方式 | 件数 |
 |---|---|---|---|
+| JIN COFFEE Katsunuma | 甲州市勝沼 | BASE | 13 |
+| 小林コーヒー店 | 甲斐市玉川179 | Yahoo!ショッピング(店舗 kobayashi-coffee) | 29 |
 | TERASAKI COFFEE | 甲府市丸の内1-20-22 | Shopify | 6 |
+| 自家焙煎珈琲 徽典館 | 甲府市丸の内1-8-10 | 手動 | 11 |
 | 岩田屋珈琲 | 甲府市丸の内2-26-15 | BASE | 10 |
 | the;kokubo | 甲府市国母4-21-10 | Shopify | 9 |
+| マイヨ工房 | 甲府市大里町1891-3 | Jimdo | 56 |
 | 煎豆屋 | 甲府市南口町6-5 | EC-CUBE | 18 |
 | AKITO COFFEE | 甲府市武田1-1-13 | Shopify | 8 |
+| 4335 Coffee Roastery | 大月市 | BASE | 5 |
+| FUJITO COFFEE | 大月市 | STORES(手動) | 6 |
+| Bijoux Coffee CHUO | 中央市若宮44-7 ピュアリーフガーデン5号 | BASE | 17 |
+| 山の焙煎所 | 笛吹市一宮町 | BASE | 41 |
+| ケルンコーヒー いちのみや店 | 笛吹市一宮町塩田443-1 | 手動 | 25 |
+| One Note Coffee Roaster | 都留市夏狩253 | BASE | 9 |
 | LUMBER ROOM COFFEE | 都留市上谷6-10-9 | BASE | 3 |
+| カフェアニス(自家焙煎珈琲工房) | 南アルプス市荊沢1309 | カラーミー | 5 |
+| 寺ノ下珈琲焙煎所 | 南巨摩郡身延町身延3592 | BASE | 7 |
+| 真庵 MAKOTO COFFEE CREATE | 南巨摩郡富士川町青柳町680-3 | STORES(手動) | 7 |
 | 富士山珈琲焙煎所 | 南都留郡富士河口湖町船津3681-2 | Shopify | 20 |
+| 春木屋「月滴庵」 | 富士吉田市下吉田4-1-11 | Shopify | 21 |
+| 珈琲倶ら部 | 富士吉田市松山1-4-56 | FC2ショッピングカート(cart.fc2.com) | 32 |
 | 彩香房 | 北杜市小淵沢町上笹尾3261-134 | Ocnk | 25 |
+| EIGHTS COFFEE | 北杜市大泉町西井出8240-8037 | BASE | 14 |
 | dots Coffee Roasters | 北杜市長坂町小荒間50-17 | WooCommerce | 12 |
 
 ### 滋賀県

@@ -29523,5 +29523,420 @@
     ],
     "lat": 37.655816,
     "lng": 139.937694
+  },
+  {
+    "name": "4335 Coffee Roastery",
+    "url": "https://4335coffee.base.shop/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "山梨県大月市",
+    "prefecture": "山梨県",
+    "hours": null,
+    "map_query": "4335 Coffee Roastery",
+    "nearest_station": {
+      "name": "大月",
+      "lines": [
+        "JR中央本線",
+        "富士急行線"
+      ],
+      "distance_m": 40,
+      "walk_min": 1
+    },
+    "last_scraped_at": "2026-10-12T12:09:38.639788+00:00",
+    "lat": 35.612883,
+    "lng": 138.942909
+  },
+  {
+    "name": "Bijoux Coffee CHUO",
+    "url": "https://bijouxcoffee.base.shop/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "山梨県中央市若宮44-7 ピュアリーフガーデン5号",
+    "prefecture": "山梨県",
+    "hours": null,
+    "map_query": "Bijoux Coffee CHUO",
+    "nearest_station": {
+      "name": "常永",
+      "lines": [
+        "JR身延線"
+      ],
+      "distance_m": 730,
+      "walk_min": 9
+    },
+    "last_scraped_at": "2026-10-12T12:09:38.639788+00:00",
+    "lat": 35.612094,
+    "lng": 138.538436
+  },
+  {
+    "name": "カフェアニス(自家焙煎珈琲工房)",
+    "url": "https://cafeanis.shop-pro.jp/",
+    "platform": "カラーミーショップ(shop-pro.jp)",
+    "shop_type": "single_location",
+    "robots_txt_status": "許可(2026-10-12確認。User-agent: *は/secure/と/cart/のみ制限)",
+    "address": "山梨県南アルプス市荊沢1309",
+    "prefecture": "山梨県",
+    "hours": null,
+    "map_query": "カフェアニス(自家焙煎珈琲工房)",
+    "nearest_station": {
+      "name": "市川大門",
+      "lines": [
+        "JR身延線"
+      ],
+      "distance_m": 3520,
+      "walk_min": 44
+    },
+    "last_scraped_at": "2026-10-12T12:09:38.639788+00:00",
+    "lat": 35.583689,
+    "lng": 138.466847
+  },
+  {
+    "name": "EIGHTS COFFEE",
+    "url": "https://8scoffee.official.ec/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "山梨県北杜市大泉町西井出8240-8037",
+    "prefecture": "山梨県",
+    "hours": null,
+    "map_query": "EIGHTS COFFEE",
+    "nearest_station": {
+      "name": "甲斐大泉",
+      "lines": [
+        "JR小海線"
+      ],
+      "distance_m": 3100,
+      "walk_min": 39
+    },
+    "last_scraped_at": "2026-10-12T12:09:38.639788+00:00",
+    "lat": 35.868986,
+    "lng": 138.402436
+  },
+  {
+    "name": "春木屋「月滴庵」",
+    "url": "https://harukiya.com/",
+    "platform": "Shopify",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認(Shopify標準構成)",
+    "address": "山梨県富士吉田市下吉田4-1-11",
+    "prefecture": "山梨県",
+    "hours": null,
+    "map_query": "春木屋「月滴庵」",
+    "nearest_station": {
+      "name": "下吉田",
+      "lines": [
+        "富士急行線"
+      ],
+      "distance_m": 10,
+      "walk_min": 1
+    },
+    "last_scraped_at": "2026-10-12T12:09:38.639788+00:00",
+    "lat": 35.498013,
+    "lng": 138.803605
+  },
+  {
+    "name": "JIN COFFEE Katsunuma",
+    "url": "https://jincoffee.base.shop/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "山梨県甲州市勝沼",
+    "prefecture": "山梨県",
+    "hours": null,
+    "map_query": "JIN COFFEE Katsunuma",
+    "nearest_station": {
+      "name": "勝沼ぶどう郷",
+      "lines": [
+        "JR中央本線"
+      ],
+      "distance_m": 2640,
+      "walk_min": 33
+    },
+    "last_scraped_at": "2026-10-12T12:09:38.639788+00:00",
+    "lat": 35.651602,
+    "lng": 138.730098
+  },
+  {
+    "name": "小林コーヒー店",
+    "url": "https://kobayashi-coffee-kofu.com/",
+    "platform": "Yahoo!ショッピング(店舗 kobayashi-coffee)",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(Yahoo!ショッピング他店と同様、/search.html の page 指定は制限対象外)",
+    "address": "山梨県甲斐市玉川179",
+    "prefecture": "山梨県",
+    "hours": null,
+    "map_query": "小林コーヒー店",
+    "nearest_station": {
+      "name": "常永",
+      "lines": [
+        "JR身延線"
+      ],
+      "distance_m": 2120,
+      "walk_min": 27
+    },
+    "last_scraped_at": "2026-10-12T12:09:38.639788+00:00",
+    "lat": 35.634824,
+    "lng": 138.525098
+  },
+  {
+    "name": "珈琲倶ら部",
+    "url": "https://coffeemame.cart.fc2.com/",
+    "platform": "FC2ショッピングカート(cart.fc2.com)",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認",
+    "address": "山梨県富士吉田市松山1-4-56",
+    "prefecture": "山梨県",
+    "hours": null,
+    "map_query": "珈琲倶ら部",
+    "nearest_station": {
+      "name": "富士山",
+      "lines": [
+        "富士急行線"
+      ],
+      "distance_m": 420,
+      "walk_min": 5
+    },
+    "last_scraped_at": "2026-10-12T12:09:38.639788+00:00",
+    "lat": 35.486626,
+    "lng": 138.792999
+  },
+  {
+    "name": "マイヨ工房",
+    "url": "https://www.ateliermaillot.com/オンラインショップ-1/",
+    "platform": "Jimdo",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-10確認。/app/・/j/はDisallow、商品ページは対象外。Crawl-Delay: 5を遵守)",
+    "address": "山梨県甲府市大里町1891-3",
+    "prefecture": "山梨県",
+    "hours": null,
+    "map_query": "マイヨ工房",
+    "nearest_station": {
+      "name": "国母",
+      "lines": [
+        "JR身延線"
+      ],
+      "distance_m": 1530,
+      "walk_min": 19
+    },
+    "last_scraped_at": "2026-10-12T12:09:38.639788+00:00",
+    "lat": 35.621053,
+    "lng": 138.564268
+  },
+  {
+    "name": "One Note Coffee Roaster",
+    "url": "https://oncroaster.base.shop/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "山梨県都留市夏狩253",
+    "prefecture": "山梨県",
+    "hours": null,
+    "map_query": "One Note Coffee Roaster",
+    "nearest_station": {
+      "name": "東桂",
+      "lines": [
+        "富士急行線"
+      ],
+      "distance_m": 670,
+      "walk_min": 8
+    },
+    "last_scraped_at": "2026-10-12T12:09:38.639788+00:00",
+    "lat": 35.542194,
+    "lng": 138.872324
+  },
+  {
+    "name": "寺ノ下珈琲焙煎所",
+    "url": "https://teranoshita.theshop.jp/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "山梨県南巨摩郡身延町身延3592",
+    "prefecture": "山梨県",
+    "hours": null,
+    "map_query": "寺ノ下珈琲焙煎所",
+    "nearest_station": {
+      "name": "身延",
+      "lines": [
+        "JR身延線"
+      ],
+      "distance_m": 10,
+      "walk_min": 1
+    },
+    "last_scraped_at": "2026-10-12T12:09:38.639788+00:00",
+    "lat": 35.361407,
+    "lng": 138.453109
+  },
+  {
+    "name": "山の焙煎所",
+    "url": "https://yamanobaisen.official.ec/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "山梨県笛吹市一宮町",
+    "prefecture": "山梨県",
+    "hours": null,
+    "map_query": "山の焙煎所",
+    "nearest_station": {
+      "name": "勝沼ぶどう郷",
+      "lines": [
+        "JR中央本線"
+      ],
+      "distance_m": 3280,
+      "walk_min": 41
+    },
+    "last_scraped_at": "2026-10-12T12:09:38.639788+00:00",
+    "lat": 35.660843,
+    "lng": 138.71009
+  },
+  {
+    "name": "ケルンコーヒー いちのみや店",
+    "url": "https://cairnitinomiya.client.jp/",
+    "instagram_url": null,
+    "platform": "静的HTML(自社サイト、店頭販売。価格表は画像)",
+    "shop_type": "single_location",
+    "address": "山梨県笛吹市一宮町塩田443-1",
+    "prefecture": "山梨県",
+    "hours": "9:00〜18:00、定休日：月曜・火曜(祝日営業)",
+    "map_query": "ケルンコーヒー いちのみや店 山梨県笛吹市一宮町塩田443-1",
+    "nearest_station": {
+      "name": "春日居町",
+      "lines": [
+        "JR中央本線"
+      ],
+      "distance_m": 5290,
+      "walk_min": 66
+    },
+    "data_source": "manual",
+    "source_note": "公式サイト(https://cairnitinomiya.client.jp/、住所は〒405-0064 笛吹市一宮町塩田443-1と記載)のトップページ「自家焙煎コーヒー豆の販売」セクションに貼られた価格表画像(img/sutoreto.png=ストレート8種、img/burendo.png=ブレンド15種。100g/200gの価格併記、サイト上の最終更新は画像のLast-Modified 2026-08-31)を2026-10-12に画像を目視して確認し、100g価格を採用。別途ゲイシャ(エチオピア・ゲイシャ 100g 1,900円)とカフェインレス(エチオピア・モカのデカフェ 100g 800円)をテキスト・リーフレット画像で確認。指示にあった sutoreto.html / burendo.html は存在せず(HTTP 404)、実際はトップページ内の画像だった。ストレート・ブレンド各20種ではなく計8種+15種。店頭販売の店で、オンラインショップは無い。さくら珈琲(春限定100g870円)・もも珈琲(100g1,050円)は季節限定のフレーバー系と判断し、ドリップバッグ・洋菓子とともに対象外とした。焙煎度・産地詳細の記載は無い(味の特徴の5段階評価は画像のみで収録せず)。",
+    "last_verified_at": "2026-10-03",
+    "locations": [
+      {
+        "label": null,
+        "address": "山梨県笛吹市一宮町塩田443-1",
+        "prefecture": "山梨県",
+        "hours": "9:00〜18:00、定休日：月曜・火曜(祝日営業)",
+        "tel": "0553-47-0316",
+        "is_headquarters": false,
+        "map_query": "ケルンコーヒー いちのみや店 山梨県笛吹市一宮町塩田443-1",
+        "lat": 35.633963,
+        "lng": 138.69152
+      }
+    ],
+    "lat": 35.633963,
+    "lng": 138.69152
+  },
+  {
+    "name": "FUJITO COFFEE",
+    "url": "https://fujitocoffee.stores.jp/",
+    "instagram_url": null,
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "山梨県大月市",
+    "prefecture": "山梨県",
+    "hours": null,
+    "map_query": "FUJITO COFFEE 山梨県大月市",
+    "nearest_station": {
+      "name": "大月",
+      "lines": [
+        "JR中央本線",
+        "富士急行線"
+      ],
+      "distance_m": 40,
+      "walk_min": 1
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://fujitocoffee.stores.jp/)の商品ページをブラウザfetch()で2026-10-12に確認。豆200g(粉190gは同一商品の選択肢)を採用。ディップバッグ・コールドブリュー・セットを除外。半熱風式1kg焙煎機HCR1000で自家焙煎、店舗なし(公式)。住所は市まで(番地未確認)。",
+    "last_verified_at": "2026-10-03",
+    "locations": [
+      {
+        "label": null,
+        "address": "山梨県大月市",
+        "prefecture": "山梨県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "FUJITO COFFEE 山梨県大月市",
+        "lat": 35.612883,
+        "lng": 138.942909
+      }
+    ],
+    "lat": 35.612883,
+    "lng": 138.942909
+  },
+  {
+    "name": "自家焙煎珈琲 徽典館",
+    "url": "http://kitenkan.okoshi-yasu.com/",
+    "instagram_url": null,
+    "platform": "静的HTML(自社サイト、店頭販売のみ)",
+    "shop_type": "single_location",
+    "address": "山梨県甲府市丸の内1-8-10",
+    "prefecture": "山梨県",
+    "hours": null,
+    "map_query": "自家焙煎珈琲 徽典館 山梨県甲府市丸の内1-8-10",
+    "nearest_station": {
+      "name": "甲府",
+      "lines": [
+        "JR身延線",
+        "JR中央本線"
+      ],
+      "distance_m": 660,
+      "walk_min": 8
+    },
+    "data_source": "manual",
+    "source_note": "公式サイト(http://kitenkan.okoshi-yasu.com/)の「自家焙煎珈琲の紹介」ページ(sub2.html、Shift_JIS)で200g当たりの価格表11種を2026-10-12に確認。店舗は丸の内店(甲府市丸の内1-8-10、山梨県庁南側、アクセスページ sub3.html で確認)と上石田店(甲府市上石田3丁目6-30)の2店舗で、本レコードは丸の内店の住所を採用。商品ページ・オンラインショップは無く店頭販売のみ(「マスターが焙煎したオリジナルコーヒー豆の販売」)。ページに更新日の記載は無く、画像ファイル名に2007年の表記があるなど長期間更新されていない可能性がある(価格の現行性は未確認)。メニューページ(sub1.html)の記載により横浜ブレンド=深煎り、神戸ブレンド=中煎り、アメリカン=浅煎りと確認。「アメリカン」「フレンチ」は豆の産地・配合の記載が無いためブレンド扱いとし、「モカ」はエチオピア産かイエメン産か記載が無いため産地はnullとした。",
+    "last_verified_at": "2026-10-03",
+    "locations": [
+      {
+        "label": null,
+        "address": "山梨県甲府市丸の内1-8-10",
+        "prefecture": "山梨県",
+        "hours": null,
+        "tel": "055-237-9480",
+        "is_headquarters": false,
+        "map_query": "自家焙煎珈琲 徽典館 山梨県甲府市丸の内1-8-10",
+        "lat": 35.661365,
+        "lng": 138.567119
+      }
+    ],
+    "lat": 35.661365,
+    "lng": 138.567119
+  },
+  {
+    "name": "真庵 MAKOTO COFFEE CREATE",
+    "url": "https://makotocoffeecreate.stores.jp/",
+    "instagram_url": null,
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "山梨県南巨摩郡富士川町青柳町680-3",
+    "prefecture": "山梨県",
+    "hours": null,
+    "map_query": "真庵 MAKOTO COFFEE CREATE 山梨県南巨摩郡富士川町青柳町680-3",
+    "nearest_station": {
+      "name": "鰍沢口",
+      "lines": [
+        "JR身延線"
+      ],
+      "distance_m": 1810,
+      "walk_min": 23
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://makotocoffeecreate.stores.jp/)の商品ページをブラウザfetch()で2026-10-12に確認。100gの価格を採用(極深煎りクラシックのみ250gが唯一のサイズ)。ディップバッグ・ドリッパー・焙煎クラスを除外。焙煎所併設カフェ(山梨中銀の取材記事、Only Roaster掲載)。",
+    "last_verified_at": "2026-10-03",
+    "locations": [
+      {
+        "label": null,
+        "address": "山梨県南巨摩郡富士川町青柳町680-3",
+        "prefecture": "山梨県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "真庵 MAKOTO COFFEE CREATE 山梨県南巨摩郡富士川町青柳町680-3",
+        "lat": 35.557585,
+        "lng": 138.469411
+      }
+    ],
+    "lat": 35.557585,
+    "lng": 138.469411
   }
 ]
