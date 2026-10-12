@@ -2846,3 +2846,11 @@ docs/scraping-progress.md「栃木県再調査」冒頭の教訓セクション�
 
 ### Kurort(滑川市)／sol&mar(氷見市)／セルコーヒーフーズ(富山市)
 - 見送り理由: Kurortは石川県のtownsfolk coffeeの豆を使用、sol&marは他店の卸が中心で自家焙煎の根拠不足、セルコーヒーフーズは業務用の卸で小売なし。
+
+## 福井県再調査(2026-10-13)
+
+### Grio Coffee Roastery(坂井市)
+- 見送り理由: STORESの豆が全て売り切れで、NEWSも2025-06止まり。現行の販売状況を確認できない。
+
+### びいん(美韻)／珈琲家族／cafe CTS／市蔵珈琲／Jurassic Roastery Lab
+- 見送り理由: びいんは自店焙煎かの根拠が弱い。珈琲家族のBASEは愛知県の別店、cafe CTSはONIBUS COFFEE(東京)の豆、市蔵珈琲は外部焙煎の豆で自家焙煎でない。Jurassic Roastery Labは焙煎体験のサービスで豆の小売ではない。

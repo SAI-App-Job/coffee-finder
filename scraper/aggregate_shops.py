@@ -1133,6 +1133,23 @@ SOURCE_FILES = {
     "空の森 珈琲焙煎所": "data_soranomori.json",
     "セントベリーコーヒー": "data_stberry.json",
     "コーヒーのとみかわ": "data_tomikawacoffee.json",
+    # 福井県の再調査(新規発掘)
+    "焙煎所 髙木": "data_baisenjotakagi.json",
+    "BON COFFEE -BEANS STORE-": "data_boncoffee.json",
+    "Enzo Coffee": "data_enzocoffee.json",
+    "平凡珈琲": "data_heiboncoffee.json",
+    "coffee shop HONANO": "data_honanocoffee.json",
+    "Kohaku珈琲": "data_kohakucoffeefukui.json",
+    "くじら珈琲": "data_kujiracoffee.json",
+    "マイスターズ・コーヒー TANAKA": "data_meisterstanaka.json",
+    "モモンガコーヒー": "data_momongacoffee.json",
+    "新田珈琲": "data_nittacoffee.json",
+    "おくら珈琲": "data_okuracoffee.json",
+    "sou's coffee roastery": "data_souscoffeeroastery.json",
+    "ザ・グランドコーヒー": "data_thegrandcoffee.json",
+    "VENGA!COFFEE": "data_vengacoffee.json",
+    "和珈屋": "data_wakoya.json",
+    "WoodWood Coffee Roast Service": "data_woodwoodcoffee.json",
 }
 
 

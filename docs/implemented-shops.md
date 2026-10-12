@@ -5,7 +5,7 @@
 `scraper/manual/shops/`配下、それ以外は`scraper/scrape_*.py`で自動取得。
 実装を見送った店舗は`docs/not-implementable-shops.md`を参照。
 
-合計1301店舗・21704商品(生成日: 2026-10-12)。
+合計1319店舗・21985商品(生成日: 2026-10-12)。
 
 再生成コマンド:
 ```
@@ -1358,6 +1358,29 @@ aggregate_shops.py実行後の`git diff --staged --quiet || git commit`が該当
 | アルパカコーヒー | 富山市太郎丸178-12 | BASE | 2 |
 | Good Enough Coffee Toyama | 富山市藤木2710 | BASE | 19 |
 | 自家焙煎珈琲豆&喫茶店 BEANS | 富山市婦中町西ヶ丘1-11 | BASE | 7 |
+
+### 福井県
+
+| 店舗名 | 所在地 | 方式 | 件数 |
+|---|---|---|---|
+| MAMI CAFÉ たちばな屋 | 越前市稲寄町7-22-1 | STORES(手動) | 24 |
+| Kohaku珈琲 | 今立郡池田町菅生25 | BASE | 12 |
+| coffee shop HONANO | 鯖江市舟津町1-1-12 | BASE | 3 |
+| くじら珈琲 | 鯖江市神明町1-8-12 | BASE | 3 |
+| 自家焙煎珈琲屋 Farbe | 鯖江市鳥羽1-5-12 | 手動 | 19 |
+| おくら珈琲 | 小浜市小浜酒井62 | BASE | 5 |
+| モモンガコーヒー | 大野市元町8-17 中央共同ビル1F | BASE | 16 |
+| 平凡珈琲 | 敦賀市櫛川95-7-8 | BASE | 5 |
+| 新田珈琲 | 敦賀市本町1-11-3 | BASE | 22 |
+| sou's coffee roastery | 南条郡南越前町今庄81-11 | BASE | 10 |
+| マイスターズ・コーヒー TANAKA | 福井市城東4丁目11-23 玉冠ビル1F-4 | BASE | 23 |
+| WoodWood Coffee Roast Service | 福井市成和1-2231 WWビル1F | Shopify | 24 |
+| ザ・グランドコーヒー | 福井市成和1-3106 Kenjiビル | BASE | 33 |
+| Enzo Coffee | 福井市西谷1丁目1520 | BASE | 18 |
+| 焙煎所 髙木 | 福井市田原2丁目25-25 田原コーポラス102 | BASE | 7 |
+| BON COFFEE -BEANS STORE- | 福井市板垣5-1212 | カラーミー | 15 |
+| 和珈屋 | 福井市福2丁目1914 | Shopify | 23 |
+| VENGA!COFFEE | 福井市宝永3丁目15-10 | BASE | 19 |
 
 ### 福岡県
 

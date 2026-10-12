@@ -30698,5 +30698,432 @@
     ],
     "lat": 36.875063,
     "lng": 137.459436
+  },
+  {
+    "name": "焙煎所 髙木",
+    "url": "https://baisentkg.base.shop/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "福井県福井市田原2丁目25-25 田原コーポラス102",
+    "prefecture": "福井県",
+    "hours": null,
+    "map_query": "焙煎所 髙木",
+    "nearest_station": {
+      "name": "田原町",
+      "lines": [
+        "えちぜん鉄道三国芦原線",
+        "福井鉄道福武線"
+      ],
+      "distance_m": 340,
+      "walk_min": 4
+    },
+    "last_scraped_at": "2026-10-12T22:38:34.139921+00:00",
+    "lat": 36.072855,
+    "lng": 136.214587
+  },
+  {
+    "name": "BON COFFEE -BEANS STORE-",
+    "url": "https://onlinestore.boncoffee.net/",
+    "platform": "カラーミーショップ(shop-pro.jp)",
+    "shop_type": "single_location",
+    "robots_txt_status": "許可(2026-10確認。User-agent: *は/secure/と/cart/のみ制限)",
+    "address": "福井県福井市板垣5-1212",
+    "prefecture": "福井県",
+    "hours": null,
+    "map_query": "BON COFFEE -BEANS STORE-",
+    "nearest_station": {
+      "name": "越前花堂",
+      "lines": [
+        "JR越美北線",
+        "ハピラインふくい線"
+      ],
+      "distance_m": 1490,
+      "walk_min": 19
+    },
+    "last_scraped_at": "2026-10-12T22:38:34.139921+00:00",
+    "lat": 36.042869,
+    "lng": 136.233784
+  },
+  {
+    "name": "Enzo Coffee",
+    "url": "https://enzocoffee.thebase.in/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "福井県福井市西谷1丁目1520",
+    "prefecture": "福井県",
+    "hours": null,
+    "map_query": "Enzo Coffee",
+    "nearest_station": {
+      "name": "花堂",
+      "lines": [
+        "福井鉄道福武線"
+      ],
+      "distance_m": 710,
+      "walk_min": 9
+    },
+    "last_scraped_at": "2026-10-12T22:38:34.139921+00:00",
+    "lat": 36.038355,
+    "lng": 136.207965
+  },
+  {
+    "name": "平凡珈琲",
+    "url": "https://heibon.base.ec/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "福井県敦賀市櫛川95-7-8",
+    "prefecture": "福井県",
+    "hours": null,
+    "map_query": "平凡珈琲",
+    "nearest_station": {
+      "name": "敦賀",
+      "lines": [
+        "JR小浜線",
+        "ハピラインふくい線",
+        "JR北陸本線",
+        "北陸新幹線"
+      ],
+      "distance_m": 3200,
+      "walk_min": 40
+    },
+    "last_scraped_at": "2026-10-12T22:38:34.139921+00:00",
+    "lat": 35.653064,
+    "lng": 136.042602
+  },
+  {
+    "name": "coffee shop HONANO",
+    "url": "https://honano.thebase.in/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "福井県鯖江市舟津町1-1-12",
+    "prefecture": "福井県",
+    "hours": null,
+    "map_query": "coffee shop HONANO",
+    "nearest_station": {
+      "name": "サンドーム西",
+      "lines": [
+        "福井鉄道福武線"
+      ],
+      "distance_m": 530,
+      "walk_min": 7
+    },
+    "last_scraped_at": "2026-10-12T22:38:34.139921+00:00",
+    "lat": 35.932334,
+    "lng": 136.177664
+  },
+  {
+    "name": "Kohaku珈琲",
+    "url": "https://sunnycoffee.theshop.jp/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "福井県今立郡池田町菅生25",
+    "prefecture": "福井県",
+    "hours": null,
+    "map_query": "Kohaku珈琲",
+    "nearest_station": null,
+    "last_scraped_at": "2026-10-12T22:38:34.139921+00:00",
+    "lat": 35.858924,
+    "lng": 136.306227
+  },
+  {
+    "name": "くじら珈琲",
+    "url": "https://kujira-coffee.net/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "福井県鯖江市神明町1-8-12",
+    "prefecture": "福井県",
+    "hours": null,
+    "map_query": "くじら珈琲",
+    "nearest_station": {
+      "name": "神明",
+      "lines": [
+        "福井鉄道福武線"
+      ],
+      "distance_m": 50,
+      "walk_min": 1
+    },
+    "last_scraped_at": "2026-10-12T22:38:34.139921+00:00",
+    "lat": 35.972863,
+    "lng": 136.181362
+  },
+  {
+    "name": "マイスターズ・コーヒー TANAKA",
+    "url": "https://www.coffee-world.jp/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "福井県福井市城東4丁目11-23 玉冠ビル1F-4",
+    "prefecture": "福井県",
+    "hours": null,
+    "map_query": "マイスターズ・コーヒー TANAKA",
+    "nearest_station": {
+      "name": "新福井",
+      "lines": [
+        "えちぜん鉄道勝山永平寺線"
+      ],
+      "distance_m": 1240,
+      "walk_min": 16
+    },
+    "last_scraped_at": "2026-10-12T22:38:34.139921+00:00",
+    "lat": 36.058519,
+    "lng": 136.238143
+  },
+  {
+    "name": "モモンガコーヒー",
+    "url": "https://momocoffee.thebase.in/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "福井県大野市元町8-17 中央共同ビル1F",
+    "prefecture": "福井県",
+    "hours": null,
+    "map_query": "モモンガコーヒー",
+    "nearest_station": {
+      "name": "越前大野",
+      "lines": [
+        "JR越美北線"
+      ],
+      "distance_m": 690,
+      "walk_min": 9
+    },
+    "last_scraped_at": "2026-10-12T22:38:34.139921+00:00",
+    "lat": 35.98513,
+    "lng": 136.489543
+  },
+  {
+    "name": "新田珈琲",
+    "url": "https://base.nittacoffee.com/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "福井県敦賀市本町1-11-3",
+    "prefecture": "福井県",
+    "hours": null,
+    "map_query": "新田珈琲",
+    "nearest_station": {
+      "name": "敦賀",
+      "lines": [
+        "JR小浜線",
+        "ハピラインふくい線",
+        "JR北陸本線",
+        "北陸新幹線"
+      ],
+      "distance_m": 780,
+      "walk_min": 10
+    },
+    "last_scraped_at": "2026-10-12T22:38:34.139921+00:00",
+    "lat": 35.651117,
+    "lng": 136.072728
+  },
+  {
+    "name": "おくら珈琲",
+    "url": "https://okuracoffee.base.shop/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "福井県小浜市小浜酒井62",
+    "prefecture": "福井県",
+    "hours": null,
+    "map_query": "おくら珈琲",
+    "nearest_station": {
+      "name": "小浜",
+      "lines": [
+        "JR小浜線"
+      ],
+      "distance_m": 310,
+      "walk_min": 4
+    },
+    "last_scraped_at": "2026-10-12T22:38:34.139921+00:00",
+    "lat": 35.494107,
+    "lng": 135.744104
+  },
+  {
+    "name": "sou's coffee roastery",
+    "url": "https://souscoffee.theshop.jp/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "福井県南条郡南越前町今庄81-11",
+    "prefecture": "福井県",
+    "hours": null,
+    "map_query": "sou's coffee roastery",
+    "nearest_station": {
+      "name": "今庄",
+      "lines": [
+        "ハピラインふくい線"
+      ],
+      "distance_m": 100,
+      "walk_min": 1
+    },
+    "last_scraped_at": "2026-10-12T22:38:34.139921+00:00",
+    "lat": 35.773575,
+    "lng": 136.19854
+  },
+  {
+    "name": "ザ・グランドコーヒー",
+    "url": "https://grandcoffee.theshop.jp/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "福井県福井市成和1-3106 Kenjiビル",
+    "prefecture": "福井県",
+    "hours": null,
+    "map_query": "ザ・グランドコーヒー",
+    "nearest_station": {
+      "name": "越前開発",
+      "lines": [
+        "えちぜん鉄道勝山永平寺線"
+      ],
+      "distance_m": 1450,
+      "walk_min": 18
+    },
+    "last_scraped_at": "2026-10-12T22:38:34.139921+00:00",
+    "lat": 36.063358,
+    "lng": 136.247481
+  },
+  {
+    "name": "VENGA!COFFEE",
+    "url": "https://vengacoffee.thebase.in/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "福井県福井市宝永3丁目15-10",
+    "prefecture": "福井県",
+    "hours": null,
+    "map_query": "VENGA!COFFEE",
+    "nearest_station": {
+      "name": "仁愛女子高校",
+      "lines": [
+        "福井鉄道福武線"
+      ],
+      "distance_m": 500,
+      "walk_min": 6
+    },
+    "last_scraped_at": "2026-10-12T22:38:34.139921+00:00",
+    "lat": 36.068834,
+    "lng": 136.223609
+  },
+  {
+    "name": "和珈屋",
+    "url": "https://shop.wakoya.com/",
+    "platform": "Shopify",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認(Shopify標準構成)",
+    "address": "福井県福井市福2丁目1914",
+    "prefecture": "福井県",
+    "hours": null,
+    "map_query": "和珈屋",
+    "nearest_station": {
+      "name": "商工会議所前",
+      "lines": [
+        "福井鉄道福武線"
+      ],
+      "distance_m": 2270,
+      "walk_min": 28
+    },
+    "last_scraped_at": "2026-10-12T22:38:34.139921+00:00",
+    "lat": 36.049923,
+    "lng": 136.190177
+  },
+  {
+    "name": "WoodWood Coffee Roast Service",
+    "url": "https://woodwood.coffee/",
+    "platform": "Shopify",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認(Shopify標準構成)",
+    "address": "福井県福井市成和1-2231 WWビル1F",
+    "prefecture": "福井県",
+    "hours": null,
+    "map_query": "WoodWood Coffee Roast Service",
+    "nearest_station": {
+      "name": "越前開発",
+      "lines": [
+        "えちぜん鉄道勝山永平寺線"
+      ],
+      "distance_m": 1450,
+      "walk_min": 18
+    },
+    "last_scraped_at": "2026-10-12T22:38:34.139921+00:00",
+    "lat": 36.063358,
+    "lng": 136.247481
+  },
+  {
+    "name": "自家焙煎珈琲屋 Farbe",
+    "url": "https://www.kaffee-farbe.com/",
+    "instagram_url": null,
+    "platform": "公式サイト(WordPress、価格表のみ。注文は電話・メール)",
+    "shop_type": "single_location",
+    "address": "福井県鯖江市鳥羽1-5-12",
+    "prefecture": "福井県",
+    "hours": "定休日 木曜日・日曜日",
+    "map_query": "自家焙煎珈琲屋 Farbe 福井県鯖江市鳥羽1-5-12",
+    "nearest_station": {
+      "name": "鳥羽中",
+      "lines": [
+        "福井鉄道福武線"
+      ],
+      "distance_m": 20,
+      "walk_min": 1
+    },
+    "data_source": "manual",
+    "source_note": "公式サイトの珈琲豆価格表(https://www.kaffee-farbe.com/lineup/beans、いずれも100gあたり税込)を2026-10-12に確認。住所・販売業者名(自家焙煎珈琲屋 ファルヴェ、三上さおり)は特商法表示(https://www.kaffee-farbe.com/order/)による。トップページのお知らせ最新は2026.10.1付、価格改定のお知らせは2026.4.20付。価格表自体に日付はない。注文は電話・メールのみでカート無し。同名のブラジル ウォッシュトが中深煎りと中煎りで2種ある。アイスコーヒーブレンドは『夏季のみ』の表記のため品切れ扱いにしている。",
+    "last_verified_at": "2026-10-12",
+    "locations": [
+      {
+        "label": null,
+        "address": "福井県鯖江市鳥羽1-5-12",
+        "prefecture": "福井県",
+        "hours": "定休日 木曜日・日曜日",
+        "tel": "0778-52-0126",
+        "is_headquarters": false,
+        "map_query": "自家焙煎珈琲屋 Farbe 福井県鯖江市鳥羽1-5-12",
+        "lat": 35.981566,
+        "lng": 136.187343
+      }
+    ],
+    "lat": 35.981566,
+    "lng": 136.187343
+  },
+  {
+    "name": "MAMI CAFÉ たちばな屋",
+    "url": "https://oideya.stores.jp/",
+    "instagram_url": null,
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "福井県越前市稲寄町7-22-1",
+    "prefecture": "福井県",
+    "hours": null,
+    "map_query": "MAMI CAFÉ たちばな屋 福井県越前市稲寄町7-22-1",
+    "nearest_station": {
+      "name": "家久",
+      "lines": [
+        "福井鉄道福武線"
+      ],
+      "distance_m": 1420,
+      "walk_min": 18
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://oideya.stores.jp/)の商品ページをブラウザfetch()で2026-10-13に確認。豆200g(ブルーマウンテンと一部ブレンドは100g)を採用(粉は同一商品の選択肢)。ディップパック・セット・ギフト・チョコ・雑貨を除外。公式に1975年から毎日焙煎と記載(老舗)。",
+    "last_verified_at": "2026-10-03",
+    "locations": [
+      {
+        "label": null,
+        "address": "福井県越前市稲寄町7-22-1",
+        "prefecture": "福井県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "MAMI CAFÉ たちばな屋 福井県越前市稲寄町7-22-1",
+        "lat": 35.920796,
+        "lng": 136.184969
+      }
+    ],
+    "lat": 35.920796,
+    "lng": 136.184969
   }
 ]
