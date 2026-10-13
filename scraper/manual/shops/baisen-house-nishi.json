@@ -1,0 +1,106 @@
+{
+  "shop": {
+    "name": "ばいせんはうすNISHI",
+    "url": "http://baisen-house24.sun.bindcloud.jp/",
+    "platform": "BiNDup(BiND Cart)",
+    "address": "山形県村山市楯岡笛田4-1-61",
+    "prefecture": "山形県",
+    "last_verified_at": "2026-10-13",
+    "source_note": "公式サイトのオンラインショップ(http://baisen-house24.sun.bindcloud.jp/onlineshop.html)を2026-10-13に確認。商品はBiND Cartで描画され、オンラインでは8品目中5品目(ブラジル・コロンビア・コスタリカ・ケニア・インドネシア)を200g単位で販売(掲載価格は200g)。トップ(index.html)に2026-11-03からの価格改定告知あり(コロンビア630→650円/100g、コスタリカ660→680円、ケニア680→700円、インドネシア680→710円)。本データは2026-10-13時点の現行掲載価格を採用(ブラジルは2026-10-01改定後の650円/100g=200gで1,300円)。自家焙煎はabout.htmlの「自家焙煎」記述で確認、住所は特定商取引法ページ・about.htmlで確認。焙煎度はサイトに記載なし。",
+    "id": "baisen-house-nishi",
+    "instagram_url": null,
+    "google_maps_query": "ばいせんはうすNISHI 山形県村山市楯岡笛田4-1-61",
+    "tel": null,
+    "hours": null,
+    "shop_type": "single_location",
+    "data_source": "manual",
+    "lat": 38.500484,
+    "lng": 140.393725,
+    "nearest_station": {
+      "name": "村山",
+      "lines": [
+        "JR奥羽本線",
+        "山形新幹線"
+      ],
+      "distance_m": 2680,
+      "walk_min": 34
+    }
+  },
+  "products": [
+    {
+      "raw_name": "BRAZIL プレミアムショコラ",
+      "category": "ストレート",
+      "originCountry": "ブラジル",
+      "processingMethod": null,
+      "roast": null,
+      "flavorNotes": "ブラジルらしいナッツフレーバーと甘味、チョコレートのようなフレーバーが魅力。ほんの少し深煎りにしていますのでビター感が増しています。酸味2/5・苦み4/5。",
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1300,
+      "weightG": 200,
+      "stockStatus": "販売中",
+      "productUrl": "http://baisen-house24.sun.bindcloud.jp/onlineshop.html#BRAZIL%20%E3%83%97%E3%83%AC%E3%83%9F%E3%82%A2%E3%83%A0%E3%82%B7%E3%83%A7%E3%82%B3%E3%83%A9",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "Colombia マグダレナ SUP",
+      "category": "ストレート",
+      "originCountry": "コロンビア",
+      "processingMethod": null,
+      "roast": null,
+      "flavorNotes": "ブドウの皮のような甘酸っぱいジューシーさがあります。酸味3/5・苦み3/5。",
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1260,
+      "weightG": 200,
+      "stockStatus": "販売中",
+      "productUrl": "http://baisen-house24.sun.bindcloud.jp/onlineshop.html#Colombia%20%E3%83%9E%E3%82%B0%E3%83%80%E3%83%AC%E3%83%8A%20SUP",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "Costa Rica セント タラス",
+      "category": "ストレート",
+      "originCountry": "コスタリカ",
+      "processingMethod": null,
+      "roast": null,
+      "flavorNotes": "飲みやすさと甘味を重視したい方に。しっかりとした甘みと柑橘系の香りが楽しめます。バランスが良く酸味の苦手な方にもおすすめです。酸味3/5・苦み2/5。",
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1320,
+      "weightG": 200,
+      "stockStatus": "販売中",
+      "productUrl": "http://baisen-house24.sun.bindcloud.jp/onlineshop.html#Costa%20Rica%20%E3%82%BB%E3%83%B3%E3%83%88%20%E3%82%BF%E3%83%A9%E3%82%B9",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "Kenya マサイ AA",
+      "category": "ストレート",
+      "originCountry": "ケニア",
+      "processingMethod": null,
+      "roast": null,
+      "flavorNotes": "「強い」コーヒーが好きな方に。アフターフレーバーに長く、甘酸っぱさと、優しい酸味があります。酸味5/5・苦み5/5。",
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1360,
+      "weightG": 200,
+      "stockStatus": "販売中",
+      "productUrl": "http://baisen-house24.sun.bindcloud.jp/onlineshop.html#Kenya%20%E3%83%9E%E3%82%B5%E3%82%A4%20AA",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "Indonesia マンデリン ビンタンリマ",
+      "category": "ストレート",
+      "originCountry": "インドネシア",
+      "processingMethod": null,
+      "roast": null,
+      "flavorNotes": "マンデリンの風味を堪能するならビンタンリマがオススメ。「ビンタン」とはインドネシア語で<星>、「リマ」とは<5>の意味。酸味1/5・苦み5/5。",
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1360,
+      "weightG": 200,
+      "stockStatus": "販売中",
+      "productUrl": "http://baisen-house24.sun.bindcloud.jp/onlineshop.html#Indonesia%20%E3%83%9E%E3%83%B3%E3%83%87%E3%83%AA%E3%83%B3%20%E3%83%93%E3%83%B3%E3%82%BF%E3%83%B3%E3%83%AA%E3%83%9E",
+      "data_source": "manual"
+    }
+  ]
+}

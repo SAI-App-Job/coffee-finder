@@ -1176,6 +1176,9 @@ SOURCE_FILES = {
     "焙煎珈房NONAKA": "data_nonakacoffee.json",
     "THREE FISH COFFEE ROASTERS": "data_threefishcoffee.json",
     "八幡焙煎所": "data_yawatabaisen.json",
+    # 山形県の再調査(新規発掘)
+    "珈琲島": "data_coffeeisland.json",
+    "YUKIHIRA COFFEE": "data_yukihiracoffee.json",
 }
 
 
