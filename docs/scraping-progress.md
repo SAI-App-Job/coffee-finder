@@ -8983,3 +8983,22 @@ A群・B群の一部を、スクレイパー27店舗・STORES手動入力7店舗
 - B群(要確認・未実装): カメイ珈琲店・SHAKESPEARE & SOCRATES COFFEE COMPANY・長尾と珈琲(BASEの商品0件)・森雨珈琲・ROLLIE's COFFEE・自家焙煎 豆蔵・ゆけむり珈琲店・水間珈琲・自家焙煎 たや珈琲・marQ coffee・毛矢珈琲ほか、通販未確認の店。勝山市・永平寺町・大野市周辺は網羅できていない。
 
 - 影響: 新規18店舗・281商品を追加(1301→1319店舗、21704→21985商品)。既存店舗・商品への意図しない変更が無いことをisolation-merge検証で確認済み。全店舗をgeocode-shops.js・add-nearest-station.jsで処理。
+
+## 沖縄県再調査(2026-10-13)
+
+沖縄県は既に13店舗が実装済み。新規発掘(サブエージェントによるSprudge沖縄ガイド・琉球新報・公式サイト・Wayback突き合わせ)で、スクレイパー5店舗・手動入力2店舗の計7店舗を実装した。
+
+### 通常スクレイプ(5店舗)
+- **Shopify**: ZHYVAGO COFFEE ROASTERY(北谷町、2。100g。ラベンダー共発酵のベトナムはインフューズド系として除外)。
+- **BASE系**: rokkan COFFEE CREATORS(那覇市、7。100g。パッションフルーツ・ココピーチの果肉共発酵2種はインフューズド系として除外)。
+- **MakeShop/Wix**: COFFEE potohoto(那覇市、12。MakeShop旧形式EUC-JP、100g、ゲイシャ・COEは50g、税込)・豆ポレポレ(沖縄市、20。MakeShop新形式、150g、完売5件。住所は指示の高原6-2-8でフッターは旧住所のまま)・豊崎珈琲工場(豊見城市、9。Wix Stores、150g、全てブレンド)。
+
+### 手動入力(2店舗)
+- **STORES.jp(ブラウザfetch())**: FLAP COFFEE and BAKE SHOP(名護市、20。100g中心、ストロベリーのインフューズドを除外)・bloom coffee okinawa(読谷村、6。150g)。
+
+### 見送り・保留
+- HASABA COFFEE ROASTERS(宮古島市): 既存のスクレイパー・データが同じBASEショップで登録済み(prefectureが埼玉県の所沢の店舗として登録、直営3店は宮古島・福島・新所沢)のため新規追加なし。宮古島の住所を別に扱うかは判断待ち。
+- 美ら豆珈琲(商品0件で一時販売中止)・TRIP COFFEE(焙煎拠点の記載なし)・コーヒーのあるくらし(特商法の所在地が東京のバーチャルオフィス)・ゆうばんた珈琲(焙煎豆は現在販売していない)・農園系(ヒロ コーヒーファーム・安田珈琲・しらせコーヒー園)。
+- B群(要確認・未実装): NUTSTOWN COFFEEROASTERS・宮里屋(移転予定)・T&M COFFEE・Coffee And Bake Hashimoto・Coffee Senti Motobu・ビリオン珈琲・新垣珈琲・ママチチ珈琲焙煎所・Tettoh Coffee・sinmay coffee・Humming Coffee・あぐろ焙煎珈琲店ほか、Instagramのみで価格が公開されていない店。
+
+- 影響: 新規7店舗・76商品を追加(1319→1326店舗、21985→22061商品)。既存店舗・商品への意図しない変更が無いことをisolation-merge検証で確認済み。全店舗をgeocode-shops.js・add-nearest-station.jsで処理(那覇以外はモノレール駅がなく3店は最寄り駅なし)。

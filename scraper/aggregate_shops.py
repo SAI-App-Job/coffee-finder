@@ -1150,6 +1150,12 @@ SOURCE_FILES = {
     "VENGA!COFFEE": "data_vengacoffee.json",
     "和珈屋": "data_wakoya.json",
     "WoodWood Coffee Roast Service": "data_woodwoodcoffee.json",
+    # 沖縄県の再調査(新規発掘)
+    "豆ポレポレ": "data_mamepolepole.json",
+    "COFFEE potohoto": "data_potohoto.json",
+    "rokkan COFFEE CREATORS": "data_rokkancoffee.json",
+    "豊崎珈琲工場": "data_toyosakicoffee.json",
+    "ZHYVAGO COFFEE ROASTERY": "data_zhyvagocoffee.json",
 }
 
 

@@ -31125,5 +31125,168 @@
     ],
     "lat": 35.920796,
     "lng": 136.184969
+  },
+  {
+    "name": "豆ポレポレ",
+    "url": "https://www.mamepolepole.okinawa/",
+    "platform": "MakeShop",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認",
+    "address": "沖縄県沖縄市高原6-2-8",
+    "prefecture": "沖縄県",
+    "hours": null,
+    "map_query": "豆ポレポレ",
+    "nearest_station": null,
+    "last_scraped_at": "2026-10-12T23:09:40.080520+00:00",
+    "lat": 26.324875,
+    "lng": 127.82283
+  },
+  {
+    "name": "COFFEE potohoto",
+    "url": "https://www.potohoto.jp/",
+    "platform": "MakeShop",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認",
+    "address": "沖縄県那覇市安里388-1(栄町市場内)",
+    "prefecture": "沖縄県",
+    "hours": null,
+    "map_query": "COFFEE potohoto",
+    "nearest_station": {
+      "name": "安里",
+      "lines": [
+        "沖縄ゆいレール"
+      ],
+      "distance_m": 10,
+      "walk_min": 1
+    },
+    "last_scraped_at": "2026-10-12T23:09:40.080520+00:00",
+    "lat": 26.216804,
+    "lng": 127.69576
+  },
+  {
+    "name": "rokkan COFFEE CREATORS",
+    "url": "https://rokkancoffee.com/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "沖縄県那覇市樋川1-29-9",
+    "prefecture": "沖縄県",
+    "hours": null,
+    "map_query": "rokkan COFFEE CREATORS",
+    "nearest_station": {
+      "name": "安里",
+      "lines": [
+        "沖縄ゆいレール"
+      ],
+      "distance_m": 2390,
+      "walk_min": 30
+    },
+    "last_scraped_at": "2026-10-12T23:09:40.080520+00:00",
+    "lat": 26.195737,
+    "lng": 127.700855
+  },
+  {
+    "name": "豊崎珈琲工場",
+    "url": "https://www.toyosakicoffeefactory.com/",
+    "platform": "Wix",
+    "shop_type": "single_location",
+    "robots_txt_status": "許可(2026-10確認。User-agent: *はAllow: /。Disallow: *?lightbox=のみ)",
+    "address": "沖縄県豊見城市豊崎3-61",
+    "prefecture": "沖縄県",
+    "hours": null,
+    "map_query": "豊崎珈琲工場",
+    "nearest_station": {
+      "name": "赤嶺",
+      "lines": [
+        "沖縄ゆいレール"
+      ],
+      "distance_m": 4040,
+      "walk_min": 51
+    },
+    "last_scraped_at": "2026-10-12T23:09:40.080520+00:00",
+    "lat": 26.157061,
+    "lng": 127.661932
+  },
+  {
+    "name": "ZHYVAGO COFFEE ROASTERY",
+    "url": "https://shop.zhyvagocoffeeroastery.coffee/",
+    "platform": "Shopify",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認(Shopify標準構成)",
+    "address": "沖縄県中頭郡北谷町美浜34-1 LeQu沖縄北谷スパ&リゾート プレミア棟1F",
+    "prefecture": "沖縄県",
+    "hours": null,
+    "map_query": "ZHYVAGO COFFEE ROASTERY",
+    "nearest_station": {
+      "name": "浦添前田",
+      "lines": [
+        "沖縄ゆいレール"
+      ],
+      "distance_m": 9560,
+      "walk_min": 120
+    },
+    "last_scraped_at": "2026-10-12T23:09:40.080520+00:00",
+    "lat": 26.327033,
+    "lng": 127.756103
+  },
+  {
+    "name": "bloom coffee okinawa",
+    "url": "https://bloomcoffeeokinawa.stores.jp/",
+    "instagram_url": null,
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "沖縄県中頭郡読谷村座喜味577",
+    "prefecture": "沖縄県",
+    "hours": null,
+    "map_query": "bloom coffee okinawa 沖縄県中頭郡読谷村座喜味577",
+    "nearest_station": null,
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://bloomcoffeeokinawa.stores.jp/)の商品ページをブラウザfetch()で2026-10-13に確認。商品名の150gを採用(ラオスは重量表記なしでnull)。店内の焙煎機で焙煎(食べログ口コミ・ふるなび返礼品の説明)。公式の特商法は番地まで確認。系列に大湾の bloom coffee okinawa owan がある。",
+    "last_verified_at": "2026-10-03",
+    "locations": [
+      {
+        "label": null,
+        "address": "沖縄県中頭郡読谷村座喜味577",
+        "prefecture": "沖縄県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "bloom coffee okinawa 沖縄県中頭郡読谷村座喜味577",
+        "lat": 26.405285,
+        "lng": 127.751427
+      }
+    ],
+    "lat": 26.405285,
+    "lng": 127.751427
+  },
+  {
+    "name": "FLAP COFFEE and BAKE SHOP",
+    "url": "https://flapcoffee.stores.jp/",
+    "instagram_url": null,
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "沖縄県名護市宇茂佐の森4-19-3 沖名パレス102",
+    "prefecture": "沖縄県",
+    "hours": null,
+    "map_query": "FLAP COFFEE and BAKE SHOP 沖縄県名護市宇茂佐の森4-19-3 沖名パレス102",
+    "nearest_station": null,
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://flapcoffee.stores.jp/)の商品ページをブラウザfetch()で2026-10-13に確認。豆のまま、商品名の重量(100g、一部40g・50g)を採用。ストロベリーのインフューズドコーヒー・ドリップバッグ・コーヒーサブスクを除外。ローストレベルは商品名の表記(Cinnamon=浅煎り、Medium・High=中煎り、City=中深煎り、Full City・French=深煎り)を日本語に変換。公式に焙煎士・焙煎コンセプトの記載(琉球新報も自家焙煎と紹介)。複数店舗(11店舗未満)。",
+    "last_verified_at": "2026-10-03",
+    "locations": [
+      {
+        "label": null,
+        "address": "沖縄県名護市宇茂佐の森4-19-3 沖名パレス102",
+        "prefecture": "沖縄県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "FLAP COFFEE and BAKE SHOP 沖縄県名護市宇茂佐の森4-19-3 沖名パレス102",
+        "lat": 26.602672,
+        "lng": 127.957763
+      }
+    ],
+    "lat": 26.602672,
+    "lng": 127.957763
   }
 ]

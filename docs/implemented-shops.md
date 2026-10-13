@@ -5,7 +5,7 @@
 `scraper/manual/shops/`配下、それ以外は`scraper/scrape_*.py`で自動取得。
 実装を見送った店舗は`docs/not-implementable-shops.md`を参照。
 
-合計1319店舗・21985商品(生成日: 2026-10-12)。
+合計1326店舗・22061商品(生成日: 2026-10-13)。
 
 再生成コマンド:
 ```
@@ -193,6 +193,7 @@ aggregate_shops.py実行後の`git diff --staged --quiet || git commit`が該当
 | コーヒーまめや | 浦添市宮城2-38-2 | 手動 | 1 |
 | 沖縄セラードコーヒー | 浦添市港川2丁目15番5-27号 | カラーミー | 78 |
 | K's coffee | 浦添市城間4-34-2 | BASE(shopselect.net) | 6 |
+| 豆ポレポレ | 沖縄市高原6-2-8 | MakeShop | 20 |
 | 自家焙煎珈琲 ヨシモトコーヒー | 沖縄市知花5-35-6 | BASE | 18 |
 | coffee shop Majya | 宮古島市平良字西里448 | Jimdo | 5 |
 | サンスイ珈琲 | 国頭郡恩納村山田239番地 | STORES(手動) | 11 |
@@ -200,8 +201,14 @@ aggregate_shops.py実行後の`git diff --staged --quiet || git commit`が該当
 | チャンプルーコーヒー | 石垣市石垣13 玉城ビル1F | BASE | 1 |
 | KLATCH COFFEE | 石垣市大川200-1 | Shopify | 3 |
 | FUSHI COFFEE ROASTERS | 石垣市登野城9-2 1F | STORES(手動) | 11 |
+| bloom coffee okinawa | 中頭郡読谷村座喜味577 | STORES(手動) | 6 |
+| ZHYVAGO COFFEE ROASTERY | 中頭郡北谷町美浜34-1 LeQu沖縄北谷スパ&リゾート プレミア棟1F | Shopify | 2 |
+| COFFEE potohoto | 那覇市安里388-1(栄町市場内) | MakeShop | 12 |
 | TAMAGUSUKU COFFEE ROASTERS | 那覇市松尾2-19-39 グリーンハイツ那覇202 | STORES(手動) | 2 |
+| rokkan COFFEE CREATORS | 那覇市樋川1-29-9 | BASE | 7 |
 | Purecastle珈琲 | 豊見城市豊崎1-40 プロースト102号室 | Welcart | 10 |
+| 豊崎珈琲工場 | 豊見城市豊崎3-61 | Wix | 9 |
+| FLAP COFFEE and BAKE SHOP | 名護市宇茂佐の森4-19-3 沖名パレス102 | STORES(手動) | 20 |
 | 中山コーヒー園 | 名護市中山378 | BASE | 2 |
 
 ### 岩手県
