@@ -31905,5 +31905,129 @@
     ],
     "lat": 38.76434,
     "lng": 140.294013
+  },
+  {
+    "name": "Aurora Coffee Roasters",
+    "url": "https://www.auroracoffeeroasters.jp/",
+    "platform": "独自EC(xaas3.jp)",
+    "shop_type": "single_location",
+    "robots_txt_status": "許可(2026-10-13確認。/default/error/・/preview/のみDisallow)",
+    "address": "岩手県岩手郡雫石町上野二ツ森2-2",
+    "prefecture": "岩手県",
+    "hours": null,
+    "map_query": "Aurora Coffee Roasters",
+    "nearest_station": {
+      "name": "雫石",
+      "lines": [
+        "秋田新幹線",
+        "JR田沢湖線"
+      ],
+      "distance_m": 790,
+      "walk_min": 10
+    },
+    "last_scraped_at": "2026-10-13T03:58:15.610612+00:00",
+    "lat": 39.696247,
+    "lng": 140.975998
+  },
+  {
+    "name": "日本珈琲社",
+    "url": "https://www.cafejpn.co.jp/",
+    "platform": "静的HTML+ショップメーカーカート",
+    "shop_type": "single_location",
+    "robots_txt_status": "制限なし(2026-10-13確認。robots.txtなし)",
+    "address": "岩手県奥州市水沢区宮下町25",
+    "prefecture": "岩手県",
+    "hours": null,
+    "map_query": "日本珈琲社",
+    "nearest_station": {
+      "name": "水沢",
+      "lines": [
+        "JR東北本線"
+      ],
+      "distance_m": 850,
+      "walk_min": 11
+    },
+    "last_scraped_at": "2026-10-13T03:58:15.610612+00:00",
+    "lat": 39.144275,
+    "lng": 141.139238
+  },
+  {
+    "name": "オールドコーヒーの店 機屋",
+    "url": "https://hatayacoffee.stores.jp/",
+    "instagram_url": null,
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "岩手県盛岡市本町通3丁目2-11",
+    "prefecture": "岩手県",
+    "hours": null,
+    "map_query": "オールドコーヒーの店 機屋 岩手県盛岡市本町通3丁目2-11",
+    "nearest_station": {
+      "name": "上盛岡",
+      "lines": [
+        "JR山田線"
+      ],
+      "distance_m": 350,
+      "walk_min": 4
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://hatayacoffee.stores.jp/)の商品ページをブラウザfetch()で2026-10-13に確認。定番商品は内容量100g(商品説明の表記)。エイジング豆・限定豆は内容量の記載がなくweightはnull。会員専用ページ(ねるどりっぷ倶楽部)・木札・ハンドピック豆・会員権を除外。公式に1994年に自家焙煎珈琲の店としてリニューアルと記載。店舗は本店・HATAYA demiなど計4店。",
+    "last_verified_at": "2026-10-03",
+    "locations": [
+      {
+        "label": null,
+        "address": "岩手県盛岡市本町通3丁目2-11",
+        "prefecture": "岩手県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "オールドコーヒーの店 機屋 岩手県盛岡市本町通3丁目2-11",
+        "lat": 39.709033,
+        "lng": 141.145371
+      }
+    ],
+    "lat": 39.709033,
+    "lng": 141.145371
+  },
+  {
+    "name": "珈琲・うつわ わたなべ",
+    "url": "https://watanabecoffeemoriok.stores.jp/",
+    "instagram_url": null,
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "岩手県盛岡市中央通3丁目18-14",
+    "prefecture": "岩手県",
+    "hours": null,
+    "map_query": "珈琲・うつわ わたなべ 岩手県盛岡市中央通3丁目18-14",
+    "nearest_station": {
+      "name": "盛岡",
+      "lines": [
+        "東北新幹線",
+        "秋田新幹線",
+        "いわて銀河鉄道線",
+        "JR東北本線",
+        "JR田沢湖線",
+        "JR山田線"
+      ],
+      "distance_m": 690,
+      "walk_min": 9
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://watanabecoffeemoriok.stores.jp/)の商品ページをブラウザfetch()で2026-10-13に確認。豆100g(粉は同一商品の選択肢)を採用。ストア掲載は2商品のみ。住所はコーヒー豆研究所の記事による(公式で未確認)。自家焙煎は口コミ・記事で確認(手廻し焙煎機を加工して使用)。",
+    "last_verified_at": "2026-10-03",
+    "locations": [
+      {
+        "label": null,
+        "address": "岩手県盛岡市中央通3丁目18-14",
+        "prefecture": "岩手県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "珈琲・うつわ わたなべ 岩手県盛岡市中央通3丁目18-14",
+        "lat": 39.705872,
+        "lng": 141.142371
+      }
+    ],
+    "lat": 39.705872,
+    "lng": 141.142371
   }
 ]

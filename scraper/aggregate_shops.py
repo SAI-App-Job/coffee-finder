@@ -1179,6 +1179,9 @@ SOURCE_FILES = {
     # 山形県の再調査(新規発掘)
     "珈琲島": "data_coffeeisland.json",
     "YUKIHIRA COFFEE": "data_yukihiracoffee.json",
+    # 岩手県の再調査(新規発掘)
+    "Aurora Coffee Roasters": "data_auroracoffeeroasters.json",
+    "日本珈琲社": "data_cafejpn.json",
 }
 
 

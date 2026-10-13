@@ -1,0 +1,65 @@
+{
+  "shop": {
+    "name": "珈琲・うつわ わたなべ",
+    "url": "https://watanabecoffeemoriok.stores.jp/",
+    "address": "岩手県盛岡市中央通3丁目18-14",
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "prefecture": "岩手県",
+    "source_note": "STORES.jpの公式ショップ(https://watanabecoffeemoriok.stores.jp/)の商品ページをブラウザfetch()で2026-10-13に確認。豆100g(粉は同一商品の選択肢)を採用。ストア掲載は2商品のみ。住所はコーヒー豆研究所の記事による(公式で未確認)。自家焙煎は口コミ・記事で確認(手廻し焙煎機を加工して使用)。",
+    "id": "watanabe-coffee-morioka",
+    "instagram_url": null,
+    "google_maps_query": "珈琲・うつわ わたなべ 岩手県盛岡市中央通3丁目18-14",
+    "tel": null,
+    "hours": null,
+    "shop_type": "single_location",
+    "data_source": "manual",
+    "last_verified_at": "2026-10-03",
+    "lat": 39.705872,
+    "lng": 141.142371,
+    "nearest_station": {
+      "name": "盛岡",
+      "lines": [
+        "東北新幹線",
+        "秋田新幹線",
+        "いわて銀河鉄道線",
+        "JR東北本線",
+        "JR田沢湖線",
+        "JR山田線"
+      ],
+      "distance_m": 690,
+      "walk_min": 9
+    }
+  },
+  "products": [
+    {
+      "raw_name": "オリジナルブレンド えんじゅ",
+      "category": "ブレンド",
+      "originCountry": null,
+      "processingMethod": null,
+      "roast": "深煎り",
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 750,
+      "weightG": 100,
+      "stockStatus": "販売中",
+      "productUrl": "https://watanabecoffeemoriok.stores.jp/items/6060125ad263f04d46f0768c",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "オリジナルブレンド てとて",
+      "category": "ブレンド",
+      "originCountry": null,
+      "processingMethod": null,
+      "roast": "中煎り",
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 600,
+      "weightG": 100,
+      "stockStatus": "販売中",
+      "productUrl": "https://watanabecoffeemoriok.stores.jp/items/6076b393d263f01e501361de",
+      "data_source": "manual"
+    }
+  ]
+}
