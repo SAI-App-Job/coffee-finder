@@ -5,7 +5,7 @@
 `scraper/manual/shops/`配下、それ以外は`scraper/scrape_*.py`で自動取得。
 実装を見送った店舗は`docs/not-implementable-shops.md`を参照。
 
-合計1334店舗・22089商品(生成日: 2026-10-13)。
+合計1347店舗・22290商品(生成日: 2026-10-13)。
 
 再生成コマンド:
 ```
@@ -112,9 +112,22 @@ aggregate_shops.py実行後の`git diff --staged --quiet || git commit`が該当
 
 | 店舗名 | 所在地 | 方式 | 件数 |
 |---|---|---|---|
+| 八幡焙煎所 | 伊予郡砥部町北川毛589-4 | BASE | 1 |
 | カトラッチャ珈琲焙煎所 | 伊予市双海町串3561-2 | カラーミー | 10 |
+| Coffee Reverb | 伊予市中山町佐礼谷丙1233 | STORES(手動) | 6 |
+| 神楽珈琲 | 喜多郡内子町川中181 | BASE | 63 |
 | 越智商店 | 今治市国分6-4-22 | BASE | 3 |
 | Pieceful Coffee Roaster | 松山市萱町1丁目4-1 第一グリーンビル101 | BASE | 32 |
+| しゃん珈琲 | 松山市束本2丁目11-23-1 | 手動 | 9 |
+| cafe bc | 松山市大街道2丁目2-20 | BASE | 3 |
+| ICOI COFFEE | 松山市辰巳町1-6-2 | BASE | 3 |
+| 焙煎珈房NONAKA | 松山市東野2丁目6-10 | BASE | 25 |
+| THREE FISH COFFEE ROASTERS | 松山市福音寺町260-3 | カラーミー | 17 |
+| cotton john coffee | 松山市由良町1166 | BASE | 10 |
+| カフェー工房松山 | 松山市余戸中3丁目10-33 | カラーミー | 36 |
+| ニッカコーヒー | 松山市六軒家町4-3 | BASE | 9 |
+| BRANCH COFFEE | 西条市周布426-2 | カラーミー | 11 |
+| HARSHA COFFEE | 北宇和郡鬼北町下大野14-5 | BASE | 8 |
 
 ### 茨城県
 

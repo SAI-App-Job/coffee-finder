@@ -1164,6 +1164,18 @@ SOURCE_FILES = {
     "PLAIN COFFEE SHOP": "data_plaincoffeeshop.json",
     "POT A CUP OF COFFEE": "data_potacupofcoffee.json",
     "山田珈琲 Amami Island": "data_yamadacoffeeamami.json",
+    # 愛媛県の再調査(新規発掘)
+    "カフェー工房松山": "data_botchancoffee.json",
+    "BRANCH COFFEE": "data_branchcoffee.json",
+    "cafe bc": "data_cafebc.json",
+    "cotton john coffee": "data_cottonjohncoffee.json",
+    "HARSHA COFFEE": "data_harshacoffee.json",
+    "ICOI COFFEE": "data_icoicoffee.json",
+    "神楽珈琲": "data_kagurakoffee.json",
+    "ニッカコーヒー": "data_nikkacoffee.json",
+    "焙煎珈房NONAKA": "data_nonakacoffee.json",
+    "THREE FISH COFFEE ROASTERS": "data_threefishcoffee.json",
+    "八幡焙煎所": "data_yawatabaisen.json",
 }
 
 

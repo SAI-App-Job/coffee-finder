@@ -1,0 +1,120 @@
+{
+  "shop": {
+    "name": "Coffee Reverb",
+    "url": "https://coffee-reverb.shop/",
+    "address": "愛媛県伊予市中山町佐礼谷丙1233",
+    "platform": "STORES.jp(独自ドメイン、ブラウザfetch()経由で取得)",
+    "prefecture": "愛媛県",
+    "source_note": "STORES.jpの公式ショップ(https://coffee-reverb.shop/)の商品ページをブラウザfetch()で2026-10-13に確認。最小重量(200g、イブラヒム・モカのみ100g)を採用。定期便・セット・器具・雑貨・保存缶を除外。公式に古民家焙煎所の一角の珈琲豆屋と記載。ほかに双海町上灘2058にコーヒースタンド。",
+    "id": "coffee-reverb-iyo",
+    "instagram_url": null,
+    "google_maps_query": "Coffee Reverb 愛媛県伊予市中山町佐礼谷丙1233",
+    "tel": null,
+    "hours": null,
+    "shop_type": "single_location",
+    "data_source": "manual",
+    "last_verified_at": "2026-10-03",
+    "lat": 33.757896,
+    "lng": 132.703946,
+    "nearest_station": {
+      "name": "郡中港",
+      "lines": [
+        "伊予鉄郡中線"
+      ],
+      "distance_m": 230,
+      "walk_min": 3
+    }
+  },
+  "products": [
+    {
+      "raw_name": "さわやか / Aroma",
+      "category": "ブレンド",
+      "originCountry": null,
+      "processingMethod": null,
+      "roast": "中煎り",
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 2100,
+      "weightG": 200,
+      "stockStatus": "販売中",
+      "productUrl": "https://coffee-reverb.shop/items/697143ce4cf9ac586505a46b",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "まろやか / Mellow",
+      "category": "ブレンド",
+      "originCountry": null,
+      "processingMethod": null,
+      "roast": "中深煎り",
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 2100,
+      "weightG": 200,
+      "stockStatus": "販売中",
+      "productUrl": "https://coffee-reverb.shop/items/69714370be9f7e5e3458b0ad",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "こくぶか / Rich",
+      "category": "ブレンド",
+      "originCountry": null,
+      "processingMethod": null,
+      "roast": "深煎り",
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 2100,
+      "weightG": 200,
+      "stockStatus": "販売中",
+      "productUrl": "https://coffee-reverb.shop/items/697143b3be9f7e662658b0ab",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "むこうがわ / Smoky",
+      "category": "ブレンド",
+      "originCountry": null,
+      "processingMethod": null,
+      "roast": "深煎り",
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 2200,
+      "weightG": 200,
+      "stockStatus": "販売中",
+      "productUrl": "https://coffee-reverb.shop/items/6971444a589ed6790d84626e",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "やすらか / Decaf",
+      "category": "ストレート",
+      "originCountry": null,
+      "processingMethod": null,
+      "roast": "深煎り",
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 2480,
+      "weightG": 200,
+      "stockStatus": "一時的に品切れ",
+      "productUrl": "https://coffee-reverb.shop/items/650c518afafd8b08bc3f599f",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "【ごほうび】たおやか / イブラヒム・モカ【数量限定】",
+      "category": "ストレート",
+      "originCountry": "イエメン",
+      "processingMethod": null,
+      "roast": "中深煎り",
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1800,
+      "weightG": 100,
+      "stockStatus": "一時的に品切れ",
+      "productUrl": "https://coffee-reverb.shop/items/6abaab562e9e557ecd3a9c0e",
+      "data_source": "manual"
+    }
+  ]
+}

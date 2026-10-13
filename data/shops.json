@@ -31467,5 +31467,321 @@
     ],
     "lat": 31.610457,
     "lng": 130.555562
+  },
+  {
+    "name": "カフェー工房松山",
+    "url": "https://shop.botchancoffee.jp/",
+    "platform": "カラーミーショップ",
+    "shop_type": "single_location",
+    "robots_txt_status": "許可(2026-10確認。/secure/と/cart/以外は制限なし)",
+    "address": "愛媛県松山市余戸中3丁目10-33",
+    "prefecture": "愛媛県",
+    "hours": null,
+    "map_query": "カフェー工房松山",
+    "nearest_station": {
+      "name": "鎌田",
+      "lines": [
+        "伊予鉄郡中線"
+      ],
+      "distance_m": 440,
+      "walk_min": 6
+    },
+    "last_scraped_at": "2026-10-13T03:31:31.456097+00:00",
+    "lat": 33.813582,
+    "lng": 132.727561
+  },
+  {
+    "name": "BRANCH COFFEE",
+    "url": "https://shop.branchcoffee.jp/",
+    "platform": "カラーミーショップ",
+    "shop_type": "single_location",
+    "robots_txt_status": "許可(2026-10確認。/secure/と/cart/以外は制限なし)",
+    "address": "愛媛県西条市周布426-2",
+    "prefecture": "愛媛県",
+    "hours": null,
+    "map_query": "BRANCH COFFEE",
+    "nearest_station": {
+      "name": "壬生川",
+      "lines": [
+        "JR予讃線"
+      ],
+      "distance_m": 1660,
+      "walk_min": 21
+    },
+    "last_scraped_at": "2026-10-13T03:31:31.456097+00:00",
+    "lat": 33.915576,
+    "lng": 133.079875
+  },
+  {
+    "name": "cafe bc",
+    "url": "https://cafebc.base.ec/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "愛媛県松山市大街道2丁目2-20",
+    "prefecture": "愛媛県",
+    "hours": null,
+    "map_query": "cafe bc",
+    "nearest_station": {
+      "name": "大街道",
+      "lines": [
+        "伊予鉄城南線"
+      ],
+      "distance_m": 160,
+      "walk_min": 2
+    },
+    "last_scraped_at": "2026-10-13T03:31:31.456097+00:00",
+    "lat": 33.839723,
+    "lng": 132.770173
+  },
+  {
+    "name": "cotton john coffee",
+    "url": "https://cottonjohn.official.ec/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "愛媛県松山市由良町1166",
+    "prefecture": "愛媛県",
+    "hours": null,
+    "map_query": "cotton john coffee",
+    "nearest_station": {
+      "name": "高浜",
+      "lines": [
+        "伊予鉄高浜線"
+      ],
+      "distance_m": 3720,
+      "walk_min": 47
+    },
+    "last_scraped_at": "2026-10-13T03:31:31.456097+00:00",
+    "lat": 33.905504,
+    "lng": 132.671934
+  },
+  {
+    "name": "HARSHA COFFEE",
+    "url": "https://harshacoffee.base.ec/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "愛媛県北宇和郡鬼北町下大野14-5",
+    "prefecture": "愛媛県",
+    "hours": null,
+    "map_query": "HARSHA COFFEE",
+    "nearest_station": {
+      "name": "大内",
+      "lines": [
+        "JR予土線"
+      ],
+      "distance_m": 8740,
+      "walk_min": 109
+    },
+    "last_scraped_at": "2026-10-13T03:31:31.456097+00:00",
+    "lat": 33.334524,
+    "lng": 132.717109
+  },
+  {
+    "name": "ICOI COFFEE",
+    "url": "https://icoifactory.thebase.in/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "愛媛県松山市辰巳町1-6-2",
+    "prefecture": "愛媛県",
+    "hours": null,
+    "map_query": "ICOI COFFEE",
+    "nearest_station": {
+      "name": "三津",
+      "lines": [
+        "伊予鉄高浜線"
+      ],
+      "distance_m": 370,
+      "walk_min": 5
+    },
+    "last_scraped_at": "2026-10-13T03:31:31.456097+00:00",
+    "lat": 33.866684,
+    "lng": 132.717967
+  },
+  {
+    "name": "神楽珈琲",
+    "url": "https://morinouendry.thebase.in/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "愛媛県喜多郡内子町川中181",
+    "prefecture": "愛媛県",
+    "hours": null,
+    "map_query": "神楽珈琲",
+    "nearest_station": {
+      "name": "伊予立川",
+      "lines": [
+        "JR予讃支線"
+      ],
+      "distance_m": 1740,
+      "walk_min": 22
+    },
+    "last_scraped_at": "2026-10-13T03:31:31.456097+00:00",
+    "lat": 33.607863,
+    "lng": 132.693532
+  },
+  {
+    "name": "ニッカコーヒー",
+    "url": "https://nccherrybom.thebase.in/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "愛媛県松山市六軒家町4-3",
+    "prefecture": "愛媛県",
+    "hours": null,
+    "map_query": "ニッカコーヒー",
+    "nearest_station": {
+      "name": "萱町六丁目",
+      "lines": [
+        "伊予鉄城北線"
+      ],
+      "distance_m": 370,
+      "walk_min": 5
+    },
+    "last_scraped_at": "2026-10-13T03:31:31.456097+00:00",
+    "lat": 33.851253,
+    "lng": 132.752283
+  },
+  {
+    "name": "焙煎珈房NONAKA",
+    "url": "https://nonakacoffee.thebase.in/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "愛媛県松山市東野2丁目6-10",
+    "prefecture": "愛媛県",
+    "hours": null,
+    "map_query": "焙煎珈房NONAKA",
+    "nearest_station": {
+      "name": "道後公園",
+      "lines": [
+        "伊予鉄城南線"
+      ],
+      "distance_m": 1500,
+      "walk_min": 19
+    },
+    "last_scraped_at": "2026-10-13T03:31:31.456097+00:00",
+    "lat": 33.842184,
+    "lng": 132.799244
+  },
+  {
+    "name": "THREE FISH COFFEE ROASTERS",
+    "url": "https://threefishcoffee.shop-pro.jp/",
+    "platform": "カラーミーショップ",
+    "shop_type": "single_location",
+    "robots_txt_status": "許可(2026-10確認。/secure/と/cart/以外は制限なし)",
+    "address": "愛媛県松山市福音寺町260-3",
+    "prefecture": "愛媛県",
+    "hours": null,
+    "map_query": "THREE FISH COFFEE ROASTERS",
+    "nearest_station": {
+      "name": "福音寺",
+      "lines": [
+        "伊予鉄横河原線"
+      ],
+      "distance_m": 200,
+      "walk_min": 3
+    },
+    "last_scraped_at": "2026-10-13T03:31:31.456097+00:00",
+    "lat": 33.821822,
+    "lng": 132.790842
+  },
+  {
+    "name": "八幡焙煎所",
+    "url": "https://yawatabaisen.theshop.jp/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "愛媛県伊予郡砥部町北川毛589-4",
+    "prefecture": "愛媛県",
+    "hours": null,
+    "map_query": "八幡焙煎所",
+    "nearest_station": {
+      "name": "南伊予",
+      "lines": [
+        "JR予讃線"
+      ],
+      "distance_m": 5990,
+      "walk_min": 75
+    },
+    "last_scraped_at": "2026-10-13T03:31:31.456097+00:00",
+    "lat": 33.739711,
+    "lng": 132.784622
+  },
+  {
+    "name": "Coffee Reverb",
+    "url": "https://coffee-reverb.shop/",
+    "instagram_url": null,
+    "platform": "STORES.jp(独自ドメイン、ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "愛媛県伊予市中山町佐礼谷丙1233",
+    "prefecture": "愛媛県",
+    "hours": null,
+    "map_query": "Coffee Reverb 愛媛県伊予市中山町佐礼谷丙1233",
+    "nearest_station": {
+      "name": "郡中港",
+      "lines": [
+        "伊予鉄郡中線"
+      ],
+      "distance_m": 230,
+      "walk_min": 3
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://coffee-reverb.shop/)の商品ページをブラウザfetch()で2026-10-13に確認。最小重量(200g、イブラヒム・モカのみ100g)を採用。定期便・セット・器具・雑貨・保存缶を除外。公式に古民家焙煎所の一角の珈琲豆屋と記載。ほかに双海町上灘2058にコーヒースタンド。",
+    "last_verified_at": "2026-10-03",
+    "locations": [
+      {
+        "label": null,
+        "address": "愛媛県伊予市中山町佐礼谷丙1233",
+        "prefecture": "愛媛県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "Coffee Reverb 愛媛県伊予市中山町佐礼谷丙1233",
+        "lat": 33.757896,
+        "lng": 132.703946
+      }
+    ],
+    "lat": 33.757896,
+    "lng": 132.703946
+  },
+  {
+    "name": "しゃん珈琲",
+    "url": "http://shancoffee.cafe.coocan.jp/",
+    "instagram_url": null,
+    "platform": "手動入力(公式サイトは商品別ページ+外部カート(toku-talk)の旧式静的HTML。商品ごとの価格はコーヒー豆商品一覧・詳細ページに記載)",
+    "shop_type": "single_location",
+    "address": "愛媛県松山市束本2丁目11-23-1",
+    "prefecture": "愛媛県",
+    "hours": "10:00-18:00(水・日定休)",
+    "map_query": "しゃん珈琲 愛媛県松山市束本2丁目11-23-1",
+    "nearest_station": {
+      "name": "福音寺",
+      "lines": [
+        "伊予鉄横河原線"
+      ],
+      "distance_m": 600,
+      "walk_min": 8
+    },
+    "data_source": "manual",
+    "source_note": "公式サイトのコーヒー豆商品一覧(http://shancoffee.cafe.coocan.jp/item-coffee-beans.html)と各詳細ページ、特商法ページ(law.html)・店舗情報ページ(shopinfo-map.html)を2026-10-13に確認。What's New最新は2026.9.28(グァテマラ アゾテア農園販売開始)で更新は新しい。全商品100g単位の価格表示(100g〜500gを選択可)のため100gを代表として採用。一覧ページ上のアゾテア農園のカードは旧ウィッツ・マティグ農園の詳細ページへリンクしているが、現行商品のアゾテア農園詳細ページを採用した。ドリップパック・ギフト・アイスコーヒー・1キロパック・定期便は対象外。住所は特商法ページ・店舗情報ページの「束本2丁目11-23-1」表記。",
+    "last_verified_at": "2026-10-13",
+    "locations": [
+      {
+        "label": null,
+        "address": "愛媛県松山市束本2丁目11-23-1",
+        "prefecture": "愛媛県",
+        "hours": "10:00-18:00(水・日定休)",
+        "tel": "089-993-8660",
+        "is_headquarters": false,
+        "map_query": "しゃん珈琲 愛媛県松山市束本2丁目11-23-1",
+        "lat": 33.827807,
+        "lng": 132.787221
+      }
+    ],
+    "lat": 33.827807,
+    "lng": 132.787221
   }
 ]
