@@ -9001,4 +9001,4 @@ A群・B群の一部を、スクレイパー27店舗・STORES手動入力7店舗
 - 美ら豆珈琲(商品0件で一時販売中止)・TRIP COFFEE(焙煎拠点の記載なし)・コーヒーのあるくらし(特商法の所在地が東京のバーチャルオフィス)・ゆうばんた珈琲(焙煎豆は現在販売していない)・農園系(ヒロ コーヒーファーム・安田珈琲・しらせコーヒー園)。
 - B群(要確認・未実装): NUTSTOWN COFFEEROASTERS・宮里屋(移転予定)・T&M COFFEE・Coffee And Bake Hashimoto・Coffee Senti Motobu・ビリオン珈琲・新垣珈琲・ママチチ珈琲焙煎所・Tettoh Coffee・sinmay coffee・Humming Coffee・あぐろ焙煎珈琲店ほか、Instagramのみで価格が公開されていない店。
 
-- 影響: 新規7店舗・76商品を追加(1319→1326店舗、21985→22061商品)。既存店舗・商品への意図しない変更が無いことをisolation-merge検証で確認済み。全店舗をgeocode-shops.js・add-nearest-station.jsで処理(那覇以外はモノレール駅がなく3店は最寄り駅なし)。
+- 影響: 新規7店舗・76商品を追加(1319→1326店舗、21959→22035商品)。既存店舗・商品への意図しない変更が無いことをisolation-merge検証で確認済み。全店舗をgeocode-shops.js・add-nearest-station.jsで処理(那覇以外はモノレール駅がなく3店は最寄り駅なし)。
