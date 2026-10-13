@@ -1182,6 +1182,13 @@ SOURCE_FILES = {
     # 岩手県の再調査(新規発掘)
     "Aurora Coffee Roasters": "data_auroracoffeeroasters.json",
     "日本珈琲社": "data_cafejpn.json",
+    # 青森県の再調査(新規発掘)
+    "自家焙煎 有枝珈琲": "data_ariedacoffee.json",
+    "COFFEE COLORS": "data_coffeecolors.json",
+    "自家焙煎 むつの珈琲店": "data_mutsunocoffee.json",
+    "one up coffee": "data_oneupcoffee.json",
+    "猿賀山珈琲焙煎所": "data_sarugasancoffee.json",
+    "白神焙煎舎": "data_shirakamiroasting.json",
 }
 
 

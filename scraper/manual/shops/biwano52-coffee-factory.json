@@ -1,0 +1,106 @@
+{
+  "shop": {
+    "name": "BIWANO52 Coffee Factory",
+    "url": "https://biwano52.com/",
+    "platform": "グーペ(静的ページの価格表。メール注文・銀行振込)",
+    "address": "青森県上北郡野辺地町枇杷野33-95",
+    "prefecture": "青森県",
+    "source_note": "公式サイトのコーヒー豆ページ(https://biwano52.com/free/coffee)の価格表(100g単価表示)と店舗情報ページ(https://biwano52.com/about)・通信販売ページ(https://biwano52.com/free/tuusinn。ホームページの注文フォームからメール注文、銀行振込)を2026-10-13に確認。お知らせの最新は2026-09-29。コモディティー・プレミアム&スペシャリティー・季節限定ブレンドは「時価」で価格表示が無いため収録していない。",
+    "last_verified_at": "2026-10-13",
+    "id": "biwano52-coffee-factory",
+    "instagram_url": null,
+    "google_maps_query": "BIWANO52 Coffee Factory 青森県上北郡野辺地町枇杷野33-95",
+    "tel": null,
+    "hours": null,
+    "shop_type": "single_location",
+    "data_source": "manual",
+    "lat": 40.850069,
+    "lng": 141.10715,
+    "nearest_station": {
+      "name": "野辺地",
+      "lines": [
+        "JR大湊線",
+        "青い森鉄道線"
+      ],
+      "distance_m": 1190,
+      "walk_min": 15
+    }
+  },
+  "products": [
+    {
+      "raw_name": "スペシャルブレンド",
+      "category": "ブレンド",
+      "originCountry": null,
+      "processingMethod": null,
+      "roast": "シティロースト",
+      "flavorNotes": "酸味とコクのバランスが最高!香りのブレンド!(シティーロースト・中煎り)",
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 750,
+      "weightG": 100,
+      "stockStatus": "販売中",
+      "productUrl": "https://biwano52.com/free/coffee#%E3%82%B9%E3%83%9A%E3%82%B7%E3%83%A3%E3%83%AB%E3%83%96%E3%83%AC%E3%83%B3%E3%83%89",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "コクブレンド",
+      "category": "ブレンド",
+      "originCountry": null,
+      "processingMethod": null,
+      "roast": "シティロースト",
+      "flavorNotes": "酸味を抑え、コーヒー本来のコクを重視!(シティーロースト・中煎り)",
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 750,
+      "weightG": 100,
+      "stockStatus": "販売中",
+      "productUrl": "https://biwano52.com/free/coffee#%E3%82%B3%E3%82%AF%E3%83%96%E3%83%AC%E3%83%B3%E3%83%89",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "エスプレッソブレンド",
+      "category": "ブレンド",
+      "originCountry": null,
+      "processingMethod": null,
+      "roast": "フレンチロースト",
+      "flavorNotes": "苦味の中にも甘みを感じるブレンド!(フレンチロースト・深煎り)",
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 800,
+      "weightG": 100,
+      "stockStatus": "販売中",
+      "productUrl": "https://biwano52.com/free/coffee#%E3%82%A8%E3%82%B9%E3%83%97%E3%83%AC%E3%83%83%E3%82%BD%E3%83%96%E3%83%AC%E3%83%B3%E3%83%89",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "モカブレンド",
+      "category": "ブレンド",
+      "originCountry": null,
+      "processingMethod": null,
+      "roast": "シティロースト",
+      "flavorNotes": "柔らかい「モカ風味」!(シティーロースト・中煎り)",
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 750,
+      "weightG": 100,
+      "stockStatus": "販売中",
+      "productUrl": "https://biwano52.com/free/coffee#%E3%83%A2%E3%82%AB%E3%83%96%E3%83%AC%E3%83%B3%E3%83%89",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "かわらけつめいコーヒー",
+      "category": "ストレート",
+      "originCountry": null,
+      "processingMethod": null,
+      "roast": null,
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 700,
+      "weightG": 100,
+      "stockStatus": "販売中",
+      "productUrl": "https://biwano52.com/free/coffee#%E3%81%8B%E3%82%8F%E3%82%89%E3%81%91%E3%81%A4%E3%82%81%E3%81%84%E3%82%B3%E3%83%BC%E3%83%92%E3%83%BC",
+      "data_source": "manual"
+    }
+  ]
+}
