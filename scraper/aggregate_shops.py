@@ -1156,6 +1156,14 @@ SOURCE_FILES = {
     "rokkan COFFEE CREATORS": "data_rokkancoffee.json",
     "豊崎珈琲工場": "data_toyosakicoffee.json",
     "ZHYVAGO COFFEE ROASTERY": "data_zhyvagocoffee.json",
+    # 鹿児島県の再調査(新規発掘)
+    "アカヤコーヒー": "data_akayacoffee.json",
+    "Bird be There": "data_birdbethere.json",
+    "ジニス コーヒー&スイーツ": "data_dinizcoffee.json",
+    "珈琲倶楽部 船倉": "data_funakura.json",
+    "PLAIN COFFEE SHOP": "data_plaincoffeeshop.json",
+    "POT A CUP OF COFFEE": "data_potacupofcoffee.json",
+    "山田珈琲 Amami Island": "data_yamadacoffeeamami.json",
 }
 
 

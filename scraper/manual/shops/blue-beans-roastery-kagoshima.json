@@ -1,0 +1,120 @@
+{
+  "shop": {
+    "name": "Blue Beans Roastery",
+    "url": "https://bluebeansroastery.stores.jp/",
+    "address": "鹿児島県鹿児島市上竜尾町4-21 エスクテンド上竜尾1F",
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "prefecture": "鹿児島県",
+    "source_note": "STORES.jpの公式ショップ(https://bluebeansroastery.stores.jp/)の商品ページをブラウザfetch()で2026-10-13に確認。豆のまま100g(250g・300g・中挽きは同一商品の選択肢)を採用。チャイ・コーヒーバッグを除外。公式にDIEDRICH焙煎機を導入した自家焙煎コーヒーと記載。",
+    "id": "blue-beans-roastery-kagoshima",
+    "instagram_url": null,
+    "google_maps_query": "Blue Beans Roastery 鹿児島県鹿児島市上竜尾町4-21 エスクテンド上竜尾1F",
+    "tel": null,
+    "hours": null,
+    "shop_type": "single_location",
+    "data_source": "manual",
+    "last_verified_at": "2026-10-03",
+    "lat": 31.610457,
+    "lng": 130.555562,
+    "nearest_station": {
+      "name": "鹿児島駅前",
+      "lines": [
+        "鹿児島市電第一期線"
+      ],
+      "distance_m": 1210,
+      "walk_min": 15
+    }
+  },
+  "products": [
+    {
+      "raw_name": "Colombia Finca Lusitania Geisha Honey",
+      "category": "ストレート",
+      "originCountry": "コロンビア",
+      "processingMethod": "ハニー",
+      "roast": null,
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 2950,
+      "weightG": 100,
+      "stockStatus": "販売中",
+      "productUrl": "https://bluebeansroastery.stores.jp/items/6abf49aace35ddfff63cee57",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "Kenya Gatura PB Washed",
+      "category": "ストレート",
+      "originCountry": "ケニア",
+      "processingMethod": "ウォッシュド",
+      "roast": null,
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1500,
+      "weightG": 100,
+      "stockStatus": "販売中",
+      "productUrl": "https://bluebeansroastery.stores.jp/items/6a97be173ffe3e0065905796",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "Burundi Karambo Natural",
+      "category": "ストレート",
+      "originCountry": "ブルンジ",
+      "processingMethod": "ナチュラル",
+      "roast": null,
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1400,
+      "weightG": 100,
+      "stockStatus": "販売中",
+      "productUrl": "https://bluebeansroastery.stores.jp/items/6a3b27de464e551ecfdb5621",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "Ethiopia Chire Washed",
+      "category": "ストレート",
+      "originCountry": "エチオピア",
+      "processingMethod": "ウォッシュド",
+      "roast": null,
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1300,
+      "weightG": 100,
+      "stockStatus": "販売中",
+      "productUrl": "https://bluebeansroastery.stores.jp/items/6a164e81dbaefdfa7a2e05ff",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "China BAOSHAN / Wine Yeast Fermentation Natural",
+      "category": "ストレート",
+      "originCountry": "中国",
+      "processingMethod": "ナチュラル",
+      "roast": null,
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1900,
+      "weightG": 100,
+      "stockStatus": "販売中",
+      "productUrl": "https://bluebeansroastery.stores.jp/items/69817b92c3d7cd21c097214f",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "ダークロースト コスタリカ ジャガー",
+      "category": "ストレート",
+      "originCountry": "コスタリカ",
+      "processingMethod": null,
+      "roast": "深煎り",
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1350,
+      "weightG": 100,
+      "stockStatus": "販売中",
+      "productUrl": "https://bluebeansroastery.stores.jp/items/65f913a25c88a2050bedec21",
+      "data_source": "manual"
+    }
+  ]
+}

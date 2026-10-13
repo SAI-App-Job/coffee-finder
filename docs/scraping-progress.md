@@ -9002,3 +9002,20 @@ A群・B群の一部を、スクレイパー27店舗・STORES手動入力7店舗
 - B群(要確認・未実装): NUTSTOWN COFFEEROASTERS・宮里屋(移転予定)・T&M COFFEE・Coffee And Bake Hashimoto・Coffee Senti Motobu・ビリオン珈琲・新垣珈琲・ママチチ珈琲焙煎所・Tettoh Coffee・sinmay coffee・Humming Coffee・あぐろ焙煎珈琲店ほか、Instagramのみで価格が公開されていない店。
 
 - 影響: 新規7店舗・76商品を追加(1319→1326店舗、21959→22035商品)。既存店舗・商品への意図しない変更が無いことをisolation-merge検証で確認済み。全店舗をgeocode-shops.js・add-nearest-station.jsで処理(那覇以外はモノレール駅がなく3店は最寄り駅なし)。
+
+## 鹿児島県再調査(2026-10-13)
+
+鹿児島県は既に7店舗が実装済み。新規発掘(サブエージェントによる食べログ・AFRO・achi-kochi・公式サイト突き合わせ)で、スクレイパー7店舗・手動入力1店舗の計8店舗を実装した。
+
+### 通常スクレイプ(7店舗)
+- **カラーミー(EUC-JP)**: 珈琲倶楽部 船倉(薩摩川内市、13。100g、セール価格を採用)・アカヤコーヒー(鹿児島市、11。100g選択時の価格)・ジニス コーヒー&スイーツ(鹿児島市、6。200g、通常価格)・POT A CUP OF COFFEE(鹿屋市、3。200g。雑貨店Araheamと共通のストアから該当カテゴリのみ。最寄り駅なし)。
+- **BASE系**: 山田珈琲 Amami Island(奄美市、7。200g。岐阜県の「山田珈琲」とは別店。最寄り駅なし)・Bird be There(霧島市、4。150g。住所は第三者情報)・PLAIN COFFEE SHOP(鹿児島市、4。150g)。
+
+### 手動入力(1店舗)
+- **STORES.jp(ブラウザfetch())**: Blue Beans Roastery(鹿児島市、6。100g)。
+
+### 見送り・保留
+- 長島珈琲焙煎店(2026-04閉店)・HOUSE organic coffee roasters & terrace(閉店)・ふるさと納税のみで販売する店(工房ゆう・HARU工房・薩摩珈琲工房ほか)・今和泉珈琲焙煎(ドメイン消失)。
+- B群(要確認・未実装): やくしまロースター(Wixで重量別価格が未確認)・SEPPEくつろぎ舎・ペンタトニックコーヒー・珈琲いづみ(Studio.Designで価格が取得できない)・IBU CAFE・一湊珈琲焙煎所・珈琲屋 アラジン・自家焙煎Gaya珈琲・MATENO COFFEEほか、Instagramのみの店。
+
+- 影響: 新規8店舗・54商品を追加(1326→1334店舗、22035→22089商品)。既存店舗・商品への意図しない変更が無いことをisolation-merge検証で確認済み。全店舗をgeocode-shops.js・add-nearest-station.jsで処理。
