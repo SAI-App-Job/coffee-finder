@@ -9097,3 +9097,21 @@ A群・B群の一部を、スクレイパー27店舗・STORES手動入力7店舗
 - B群(要確認・未実装): カフェ・デ・ソカロ・5m COFFEE(STORES)・COFFEEMAN good(クローズ中)・YADORIGI COFFEE ROASTERS・珈琲詩人・S.ローステリア・珈琲舎・PIZZERIA MIA・白金珈琲・eisa COFFEE ROASTER・abCoffee(BASEが全て完売で休眠の疑い)ほか。
 
 - 影響: 新規10店舗・112商品を追加(1355→1365店舗、22421→22533商品)。既存店舗・商品への意図しない変更が無いことをisolation-merge検証で確認済み。全店舗をgeocode-shops.js・add-nearest-station.jsで処理。
+
+## 和歌山県再調査(2026-10-13)
+
+和歌山県は既に6店舗が実装済み。新規発掘(サブエージェントによる地元記事・公式サイト・Wayback突き合わせ)で、スクレイパー4店舗・手動入力2店舗の計6店舗を実装した。
+
+### 通常スクレイプ(4店舗)
+- **独自カート(静的HTML)**: モリカワ(田辺市、49。株式会社モリカワ／MORIKAWA-COFFEE。ストレート24・ブレンド25、100g。同一商品がカテゴリごとに別IDで載るため商品名で重複を除外、在庫表示がないため全件販売中。重量表記のない3商品は重量null)。
+- **BASE系(theshop.jp)**: THE ROASTERS(和歌山市、4。200g、焙煎度は商品ページに明記なくnull)。
+- **Yahoo!ショッピング**: 珈琲専門店 ファイブ(和歌山市、58。300g、東京・谷中の別店と区別するためslugはfivecoffeewakayama、焙煎度は公式に区分の記載なくnull)・とびだす焙煎所(和歌山市、17。同一銘柄は最小重量を代表、キリマンジャロの説明文は他商品の文面の疑いがありflavor_notesをnull)。
+
+### 手動入力(2店舗)
+- **STORES.jp(ブラウザfetch())**: KAMIN COFFEE ROASTERS(岩出市、19。独自ドメイン、100g、フジローヤル直火式5kg)・Coro Coro 珈琲(印南町、13。100g、焙煎士夫婦の自家焙煎)。
+
+### 見送り・保留
+- Blooming Coffee(かつらぎ町、BASE): 豆9点すべてが完売で、再入荷待ちの状態。スクレイパー(scrape_bloomingcoffee.py)は作成済みだが未登録。FAVORITE COFFEE: 自家焙煎の根拠に食い違い。
+- B群(価格情報なし・未実装): Your Coffee・ヒコタロウ・ラック珈琲店・豆日和・珈琲館 熊野路・ポットベリー・カフェ アルマほか。
+
+- 影響: 新規6店舗・160商品を追加(1365→1371店舗、22533→22693商品)。既存店舗・商品への意図しない変更が無いことをisolation-merge検証で確認済み。全店舗をgeocode-shops.js・add-nearest-station.jsで処理。

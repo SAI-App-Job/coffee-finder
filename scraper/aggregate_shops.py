@@ -1189,6 +1189,11 @@ SOURCE_FILES = {
     "one up coffee": "data_oneupcoffee.json",
     "猿賀山珈琲焙煎所": "data_sarugasancoffee.json",
     "白神焙煎舎": "data_shirakamiroasting.json",
+    # 和歌山県の再調査(新規発掘)
+    "珈琲専門店 ファイブ": "data_fivecoffeewakayama.json",
+    "モリカワ": "data_morikawacoffee.json",
+    "THE ROASTERS": "data_theroasters.json",
+    "とびだす焙煎所": "data_tobidasubaisenjo.json",
 }
 
 

@@ -32311,5 +32311,173 @@
     ],
     "lat": 41.292844,
     "lng": 141.183125
+  },
+  {
+    "name": "珈琲専門店 ファイブ",
+    "url": "https://store.shopping.yahoo.co.jp/5coffee/",
+    "platform": "Yahoo!ショッピング",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(Yahoo!ショッピング標準。/cgi-bin/等のみDisallow、search.htmlは取得可)",
+    "address": "和歌山県和歌山市四番丁55",
+    "prefecture": "和歌山県",
+    "hours": null,
+    "map_query": "珈琲専門店 ファイブ",
+    "nearest_station": {
+      "name": "和歌山",
+      "lines": [
+        "JR紀勢本線",
+        "JR阪和線",
+        "JR和歌山線",
+        "わかやま電鉄貴志川線"
+      ],
+      "distance_m": 1340,
+      "walk_min": 17
+    },
+    "last_scraped_at": "2026-10-14T16:16:45.435937+00:00",
+    "lat": 34.228025,
+    "lng": 135.177862
+  },
+  {
+    "name": "モリカワ",
+    "url": "https://morikawa-coffee.jp/",
+    "platform": "独自カート",
+    "shop_type": "single_location",
+    "robots_txt_status": "許可(User-agent: * / Disallow: 空)",
+    "address": "和歌山県田辺市城山台2-10",
+    "prefecture": "和歌山県",
+    "hours": null,
+    "map_query": "モリカワ",
+    "nearest_station": {
+      "name": "紀伊新庄",
+      "lines": [
+        "JR紀勢本線"
+      ],
+      "distance_m": 2380,
+      "walk_min": 30
+    },
+    "last_scraped_at": "2026-10-14T16:16:45.435937+00:00",
+    "lat": 33.726947,
+    "lng": 135.427089
+  },
+  {
+    "name": "THE ROASTERS",
+    "url": "https://theroasters.theshop.jp/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "和歌山県和歌山市大河内547-6",
+    "prefecture": "和歌山県",
+    "hours": null,
+    "map_query": "THE ROASTERS",
+    "nearest_station": {
+      "name": "山東",
+      "lines": [
+        "わかやま電鉄貴志川線"
+      ],
+      "distance_m": 1310,
+      "walk_min": 16
+    },
+    "last_scraped_at": "2026-10-14T16:16:45.435937+00:00",
+    "lat": 34.19406,
+    "lng": 135.261869
+  },
+  {
+    "name": "とびだす焙煎所",
+    "url": "https://store.shopping.yahoo.co.jp/tobidasu-baisenjo/",
+    "platform": "Yahoo!ショッピング",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(Yahoo!ショッピング標準。/cgi-bin/等のみDisallow、search.htmlは取得可)",
+    "address": "和歌山県和歌山市野崎43",
+    "prefecture": "和歌山県",
+    "hours": null,
+    "map_query": "とびだす焙煎所",
+    "nearest_station": {
+      "name": "和歌山市",
+      "lines": [
+        "南海和歌山港線",
+        "南海加太線",
+        "南海本線",
+        "JR紀勢本線"
+      ],
+      "distance_m": 1290,
+      "walk_min": 16
+    },
+    "last_scraped_at": "2026-10-14T16:16:45.435937+00:00",
+    "lat": 34.243523,
+    "lng": 135.155061
+  },
+  {
+    "name": "Coro Coro 珈琲",
+    "url": "https://corocoro-coffee.stores.jp/",
+    "instagram_url": null,
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "和歌山県日高郡印南町島田2292-30",
+    "prefecture": "和歌山県",
+    "hours": null,
+    "map_query": "Coro Coro 珈琲 和歌山県日高郡印南町島田2292-30",
+    "nearest_station": {
+      "name": "切目",
+      "lines": [
+        "JR紀勢本線"
+      ],
+      "distance_m": 640,
+      "walk_min": 8
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://corocoro-coffee.stores.jp/)の商品ページをブラウザfetch()で2026-10-13に確認。ABOUTに「焙煎士夫婦が営む自家焙煎・珈琲専門店」「珈琲豆焙煎工房」、トップに「当店で焙煎しております」と記載。住所は特定商取引法に基づく表示。全商品100g単位の価格(豆のまま)を採用。ギフトセットは除外。",
+    "last_verified_at": "2026-10-13",
+    "locations": [
+      {
+        "label": null,
+        "address": "和歌山県日高郡印南町島田2292-30",
+        "prefecture": "和歌山県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "Coro Coro 珈琲 和歌山県日高郡印南町島田2292-30",
+        "lat": 33.797463,
+        "lng": 135.247956
+      }
+    ],
+    "lat": 33.797463,
+    "lng": 135.247956
+  },
+  {
+    "name": "KAMIN COFFEE ROASTERS",
+    "url": "https://kamin-coffee.shop/",
+    "instagram_url": null,
+    "platform": "STORES.jp(独自ドメイン、ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "和歌山県岩出市宮60-1",
+    "prefecture": "和歌山県",
+    "hours": null,
+    "map_query": "KAMIN COFFEE ROASTERS 和歌山県岩出市宮60-1",
+    "nearest_station": {
+      "name": "船戸",
+      "lines": [
+        "JR和歌山線"
+      ],
+      "distance_m": 700,
+      "walk_min": 9
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://kamin-coffee.shop/)の商品ページをブラウザfetch()で2026-10-13に確認。ABOUTに「和歌山県岩出市にある焙煎所」「フジローヤル直火式5kgの焙煎機」と記載。住所は特定商取引法に基づく表示。各銘柄の100gの豆のまま価格を採用。500g・ドリップバッグ・セット・定期便・オーダーメイド・雑貨・Tシャツ・フリーズドライ・カフェオレベース・アイスコーヒーリキッドは除外。",
+    "last_verified_at": "2026-10-13",
+    "locations": [
+      {
+        "label": null,
+        "address": "和歌山県岩出市宮60-1",
+        "prefecture": "和歌山県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "KAMIN COFFEE ROASTERS 和歌山県岩出市宮60-1",
+        "lat": 34.254248,
+        "lng": 135.313615
+      }
+    ],
+    "lat": 34.254248,
+    "lng": 135.313615
   }
 ]
