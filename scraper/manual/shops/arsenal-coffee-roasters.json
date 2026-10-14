@@ -1,0 +1,61 @@
+{
+  "shop": {
+    "name": "ARSENAL Coffee Roasters",
+    "url": "https://arsenalcoffeeroasters.shop/",
+    "address": "香川県高松市兵庫町2-1",
+    "prefecture": "香川県",
+    "platform": "STORES.jp(独自ドメイン、ブラウザfetch()経由で取得)",
+    "last_verified_at": "2026-10-15",
+    "source_note": "STORES.jpの公式ショップ(https://arsenalcoffeeroasters.shop/)の商品ページをブラウザfetch()で2026-10-15に確認。ABOUTに「香川県高松市に拠点を置くスペシャルティコーヒーロースター。一杯一杯を丁寧に焙煎」と記載。住所は特定商取引法に基づく表示(株式会社八蔵)。100g(豆)の価格を採用(200gも併売)。トートバッグ・エコバッグ・ステッカーは除外。",
+    "id": "arsenal-coffee-roasters",
+    "instagram_url": null,
+    "google_maps_query": "ARSENAL Coffee Roasters 香川県高松市兵庫町2-1",
+    "tel": null,
+    "hours": null,
+    "shop_type": "single_location",
+    "data_source": "manual",
+    "lat": 34.34639,
+    "lng": 134.04816,
+    "nearest_station": {
+      "name": "高松",
+      "lines": [
+        "JR予讃線",
+        "JR高徳線"
+      ],
+      "distance_m": 500,
+      "walk_min": 6
+    }
+  },
+  "products": [
+    {
+      "raw_name": "ARSENAL DARK BLEND - ダークブレンド 100g",
+      "category": "ブレンド",
+      "originCountry": null,
+      "processingMethod": null,
+      "roast": null,
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1700,
+      "weightG": 100,
+      "stockStatus": "販売中",
+      "productUrl": "https://arsenalcoffeeroasters.shop/items/6985fc35712e6e71f0b09513",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "ARSENAL LIGHT BLEND - ライトブレンド 100g",
+      "category": "ブレンド",
+      "originCountry": null,
+      "processingMethod": null,
+      "roast": "ライトロースト",
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1700,
+      "weightG": 100,
+      "stockStatus": "販売中",
+      "productUrl": "https://arsenalcoffeeroasters.shop/items/698985e74b9bca2ab92da5d1",
+      "data_source": "manual"
+    }
+  ]
+}

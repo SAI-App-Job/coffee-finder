@@ -33254,5 +33254,333 @@
     ],
     "lat": 35.27838,
     "lng": 132.932466
+  },
+  {
+    "name": "コーヒービーンズショップ アロバー",
+    "url": "https://arovor.com/",
+    "platform": "ショップサーブ",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認(robots.txtは404)",
+    "address": "香川県高松市国分寺町新名1225-5",
+    "prefecture": "香川県",
+    "hours": null,
+    "map_query": "コーヒービーンズショップ アロバー",
+    "nearest_station": {
+      "name": "国分",
+      "lines": [
+        "JR予讃線"
+      ],
+      "distance_m": 2690,
+      "walk_min": 34
+    },
+    "last_scraped_at": "2026-10-14T17:04:12.711401+00:00",
+    "lat": 34.277015,
+    "lng": 133.948448
+  },
+  {
+    "name": "珈琲倶楽部 丸亀",
+    "url": "https://www.0024coffee.com/",
+    "platform": "EC-CUBE(独自サイト)",
+    "shop_type": "single_location",
+    "robots_txt_status": "許可(2026-10確認。Disallow: /*.csv$ のみ)",
+    "address": "香川県丸亀市今津町259-10",
+    "prefecture": "香川県",
+    "hours": null,
+    "map_query": "珈琲倶楽部 丸亀",
+    "nearest_station": {
+      "name": "讃岐塩屋",
+      "lines": [
+        "JR予讃線"
+      ],
+      "distance_m": 880,
+      "walk_min": 11
+    },
+    "last_scraped_at": "2026-10-14T17:04:12.711401+00:00",
+    "lat": 34.279229,
+    "lng": 133.783947
+  },
+  {
+    "name": "コルシカ珈琲",
+    "url": "https://shop.corsicacoffee.com/",
+    "platform": "BASE(独自ドメイン)",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認(BASE標準構成。識別可能なUser-Agent・長めの間隔でアクセス)",
+    "address": "香川県高松市中央町18-9",
+    "prefecture": "香川県",
+    "hours": null,
+    "map_query": "コルシカ珈琲",
+    "nearest_station": {
+      "name": "栗林公園北口",
+      "lines": [
+        "JR高徳線"
+      ],
+      "distance_m": 420,
+      "walk_min": 5
+    },
+    "last_scraped_at": "2026-10-14T17:04:12.711401+00:00",
+    "lat": 34.336453,
+    "lng": 134.045202
+  },
+  {
+    "name": "RANACOFFEE",
+    "url": "https://www.ranacoffee.com/",
+    "platform": "FC2ショッピングカート(独自ドメイン beans-store.ranacoffee.com)",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-10確認。/cancel/・/setup/・/tools/のみDisallow)",
+    "address": "香川県高松市牟礼町牟礼2421-13",
+    "prefecture": "香川県",
+    "hours": null,
+    "map_query": "RANACOFFEE",
+    "nearest_station": {
+      "name": "八栗登山口",
+      "lines": [
+        "四国ケーブル線"
+      ],
+      "distance_m": 660,
+      "walk_min": 8
+    },
+    "last_scraped_at": "2026-10-14T17:04:12.711401+00:00",
+    "lat": 34.349333,
+    "lng": 134.133009
+  },
+  {
+    "name": "珈琲工房セピア",
+    "url": "https://sepia.shop-pro.jp/",
+    "platform": "カラーミーショップ(shop-pro.jp)",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認(カラーミーショップ標準構成)",
+    "address": "香川県坂出市京町3丁目1-3",
+    "prefecture": "香川県",
+    "hours": null,
+    "map_query": "珈琲工房セピア",
+    "nearest_station": {
+      "name": "坂出",
+      "lines": [
+        "JR予讃線"
+      ],
+      "distance_m": 500,
+      "walk_min": 6
+    },
+    "last_scraped_at": "2026-10-14T17:04:12.711401+00:00",
+    "lat": 34.317579,
+    "lng": 133.85813
+  },
+  {
+    "name": "逸珈琲",
+    "url": "https://www.suguru-coffee.jp/",
+    "platform": "独自カート(xaas3.jp)",
+    "shop_type": "single_location",
+    "robots_txt_status": "許可(2026-10確認。User-Agent: * で/default/error/と/preview/のみDisallow)",
+    "address": "香川県高松市林町1545-1",
+    "prefecture": "香川県",
+    "hours": null,
+    "map_query": "逸珈琲",
+    "nearest_station": {
+      "name": "元山",
+      "lines": [
+        "高松琴平電鉄長尾線"
+      ],
+      "distance_m": 1680,
+      "walk_min": 21
+    },
+    "last_scraped_at": "2026-10-14T17:04:12.711401+00:00",
+    "lat": 34.300544,
+    "lng": 134.069878
+  },
+  {
+    "name": "トートコーヒー",
+    "url": "https://thothcoffee.com/",
+    "platform": "Shopify",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認(Shopify標準構成)",
+    "address": "香川県綾歌郡宇多津町浜一番丁3-8",
+    "prefecture": "香川県",
+    "hours": null,
+    "map_query": "トートコーヒー",
+    "nearest_station": {
+      "name": "宇多津",
+      "lines": [
+        "JR予讃線",
+        "JR本四備讃線"
+      ],
+      "distance_m": 800,
+      "walk_min": 10
+    },
+    "last_scraped_at": "2026-10-14T17:04:12.711401+00:00",
+    "lat": 34.312527,
+    "lng": 133.809319
+  },
+  {
+    "name": "焙煎元 和樂",
+    "url": "https://www.baisenmoto-waraku.com/",
+    "platform": "独自カート(xaas3.jp)",
+    "shop_type": "single_location",
+    "robots_txt_status": "許可(2026-10確認。User-Agent: * で/default/error/と/preview/のみDisallow)",
+    "address": "香川県さぬき市志度365-9",
+    "prefecture": "香川県",
+    "hours": null,
+    "map_query": "焙煎元 和樂",
+    "nearest_station": {
+      "name": "志度",
+      "lines": [
+        "JR高徳線"
+      ],
+      "distance_m": 0,
+      "walk_min": 1
+    },
+    "last_scraped_at": "2026-10-14T17:04:12.711401+00:00",
+    "lat": 34.321528,
+    "lng": 134.173113
+  },
+  {
+    "name": "ARSENAL Coffee Roasters",
+    "url": "https://arsenalcoffeeroasters.shop/",
+    "instagram_url": null,
+    "platform": "STORES.jp(独自ドメイン、ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "香川県高松市兵庫町2-1",
+    "prefecture": "香川県",
+    "hours": null,
+    "map_query": "ARSENAL Coffee Roasters 香川県高松市兵庫町2-1",
+    "nearest_station": {
+      "name": "高松",
+      "lines": [
+        "JR予讃線",
+        "JR高徳線"
+      ],
+      "distance_m": 500,
+      "walk_min": 6
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://arsenalcoffeeroasters.shop/)の商品ページをブラウザfetch()で2026-10-15に確認。ABOUTに「香川県高松市に拠点を置くスペシャルティコーヒーロースター。一杯一杯を丁寧に焙煎」と記載。住所は特定商取引法に基づく表示(株式会社八蔵)。100g(豆)の価格を採用(200gも併売)。トートバッグ・エコバッグ・ステッカーは除外。",
+    "last_verified_at": "2026-10-15",
+    "locations": [
+      {
+        "label": null,
+        "address": "香川県高松市兵庫町2-1",
+        "prefecture": "香川県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "ARSENAL Coffee Roasters 香川県高松市兵庫町2-1",
+        "lat": 34.34639,
+        "lng": 134.04816
+      }
+    ],
+    "lat": 34.34639,
+    "lng": 134.04816
+  },
+  {
+    "name": "coffeebeans&sweets Antique",
+    "url": "https://c-s-antique.stores.jp/",
+    "instagram_url": null,
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "香川県善通寺市善通寺町2031-7",
+    "prefecture": "香川県",
+    "hours": null,
+    "map_query": "coffeebeans&sweets Antique 香川県善通寺市善通寺町2031-7",
+    "nearest_station": {
+      "name": "善通寺",
+      "lines": [
+        "JR土讃線"
+      ],
+      "distance_m": 1370,
+      "walk_min": 17
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://c-s-antique.stores.jp/)の商品ページをブラウザfetch()で2026-10-15に確認。ABOUTに「自家焙煎コーヒー豆と手作りケーキ」「焙煎機はフジローヤル直火焙煎機」「焙煎豆は注文後に焙煎して発送」と記載。住所は特定商取引法に基づく表示。全商品200g(焙煎度6段階から購入時に選択、価格は共通)。ネット販売のみで、生豆の取扱いは除外。",
+    "last_verified_at": "2026-10-15",
+    "locations": [
+      {
+        "label": null,
+        "address": "香川県善通寺市善通寺町2031-7",
+        "prefecture": "香川県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "coffeebeans&sweets Antique 香川県善通寺市善通寺町2031-7",
+        "lat": 34.219364,
+        "lng": 133.781841
+      }
+    ],
+    "lat": 34.219364,
+    "lng": 133.781841
+  },
+  {
+    "name": "地域に出会う商店 ふじたしょうてん",
+    "url": "https://fujitasyouten.stores.jp/",
+    "instagram_url": null,
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "香川県丸亀市田村町1708-58",
+    "prefecture": "香川県",
+    "hours": null,
+    "map_query": "地域に出会う商店 ふじたしょうてん 香川県丸亀市田村町1708-58",
+    "nearest_station": {
+      "name": "讃岐塩屋",
+      "lines": [
+        "JR予讃線"
+      ],
+      "distance_m": 2600,
+      "walk_min": 33
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://fujitasyouten.stores.jp/)の商品ページをブラウザfetch()で2026-10-15に確認。ABOUTに「スペシャルティコーヒーの自家焙煎」と記載。住所は特定商取引法・ABOUT記載(実店舗は来店予約制)。100g(豆)の価格を採用。ゲイシャは15g・50gが試飲用のため100g、パプアニューギニアは100gが在庫0のため在庫のある200gを採用。雲南バニラインフュージョン(インフューズド)・定期便・ZINE・器具・雑貨は除外。",
+    "last_verified_at": "2026-10-15",
+    "locations": [
+      {
+        "label": null,
+        "address": "香川県丸亀市田村町1708-58",
+        "prefecture": "香川県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "地域に出会う商店 ふじたしょうてん 香川県丸亀市田村町1708-58",
+        "lat": 34.267069,
+        "lng": 133.795382
+      }
+    ],
+    "lat": 34.267069,
+    "lng": 133.795382
+  },
+  {
+    "name": "ripple coffee",
+    "url": "https://nowavecoffee.stores.jp/",
+    "instagram_url": null,
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "香川県高松市塩上町1-7-5",
+    "prefecture": "香川県",
+    "hours": null,
+    "map_query": "ripple coffee 香川県高松市塩上町1-7-5",
+    "nearest_station": {
+      "name": "瓦町",
+      "lines": [
+        "高松琴平電鉄琴平線",
+        "高松琴平電鉄長尾線",
+        "高松琴平電鉄志度線"
+      ],
+      "distance_m": 360,
+      "walk_min": 5
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://nowavecoffee.stores.jp/)の商品ページをブラウザfetch()で2026-10-15に確認。ABOUTに「自家焙煎珈琲豆販売店」「ゆっくりと手廻し焙煎」と記載。住所はABOUT記載(特定商取引法の所在地はSTORES社の表示)。全商品200g(豆)の価格を採用。ネルドリッパー・卸売りは除外。",
+    "last_verified_at": "2026-10-15",
+    "locations": [
+      {
+        "label": null,
+        "address": "香川県高松市塩上町1-7-5",
+        "prefecture": "香川県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "ripple coffee 香川県高松市塩上町1-7-5",
+        "lat": 34.335915,
+        "lng": 134.05088
+      }
+    ],
+    "lat": 34.335915,
+    "lng": 134.05088
   }
 ]

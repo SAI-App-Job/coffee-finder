@@ -1210,6 +1210,15 @@ SOURCE_FILES = {
     "栗栗珈琲": "data_kurikuricoffee.json",
     "Laube Coffee": "data_laubecoffee.json",
     "松浦珈琲": "data_matsuuracoffee.json",
+    # 香川県の再調査(新規発掘)
+    "コーヒービーンズショップ アロバー": "data_arovor.json",
+    "珈琲倶楽部 丸亀": "data_coffeeclubmarugame.json",
+    "コルシカ珈琲": "data_corsicacoffee.json",
+    "RANACOFFEE": "data_ranacoffee.json",
+    "珈琲工房セピア": "data_sepiacf.json",
+    "逸珈琲": "data_suguru.json",
+    "トートコーヒー": "data_thothcoffee.json",
+    "焙煎元 和樂": "data_waraku.json",
 }
 
 
