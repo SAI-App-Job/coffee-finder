@@ -1199,6 +1199,10 @@ SOURCE_FILES = {
     "根子マタギコーヒー": "data_nekkomatagicoffee.json",
     "さとやまコーヒー": "data_satoyamacoffee.json",
     "杉本珈琲店": "data_sugicafe.json",
+    # 鳥取県の再調査(新規発掘)
+    "BLUE OCEAN NEXT": "data_blueoceannext.json",
+    "ブラザーズ・コーヒー": "data_brotherscoffee.json",
+    "ホームベース焙煎所": "data_homebaseroasters.json",
 }
 
 

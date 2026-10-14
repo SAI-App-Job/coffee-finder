@@ -32756,5 +32756,258 @@
     ],
     "lat": 39.370228,
     "lng": 140.014816
+  },
+  {
+    "name": "BLUE OCEAN NEXT",
+    "url": "https://www.blueoceancoffee.store/",
+    "platform": "Wix",
+    "shop_type": "single_location",
+    "robots_txt_status": "許可(2026-10確認。User-agent: * は Allow: /。商品ページは制限対象外)",
+    "address": "鳥取県境港市岬町1-43",
+    "prefecture": "鳥取県",
+    "hours": null,
+    "map_query": "BLUE OCEAN NEXT",
+    "nearest_station": {
+      "name": "馬場崎町",
+      "lines": [
+        "JR境線"
+      ],
+      "distance_m": 1890,
+      "walk_min": 24
+    },
+    "last_scraped_at": "2026-10-14T16:22:32.986546+00:00",
+    "lat": 35.546384,
+    "lng": 133.244994
+  },
+  {
+    "name": "ブラザーズ・コーヒー",
+    "url": "https://puroteajapan.jp/",
+    "platform": "ショップサーブ",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認",
+    "address": "鳥取県米子市東福原7-4-18",
+    "prefecture": "鳥取県",
+    "hours": null,
+    "map_query": "ブラザーズ・コーヒー",
+    "nearest_station": {
+      "name": "河崎口",
+      "lines": [
+        "JR境線"
+      ],
+      "distance_m": 1090,
+      "walk_min": 14
+    },
+    "last_scraped_at": "2026-10-14T16:22:32.986546+00:00",
+    "lat": 35.455564,
+    "lng": 133.31739
+  },
+  {
+    "name": "ホームベース焙煎所",
+    "url": "https://www.homebaseroasters.com/",
+    "platform": "Wix",
+    "shop_type": "single_location",
+    "robots_txt_status": "許可(2026-10確認。User-agent: * は Allow: /。商品ページは制限対象外)",
+    "address": "鳥取県東伯郡北栄町由良宿479-1",
+    "prefecture": "鳥取県",
+    "hours": null,
+    "map_query": "ホームベース焙煎所",
+    "nearest_station": {
+      "name": "由良",
+      "lines": [
+        "JR山陰本線"
+      ],
+      "distance_m": 370,
+      "walk_min": 5
+    },
+    "last_scraped_at": "2026-10-14T16:22:32.986546+00:00",
+    "lat": 35.48849,
+    "lng": 133.757783
+  },
+  {
+    "name": "ピエツコーヒー",
+    "url": "http://www.pietu-coffee.com/",
+    "instagram_url": null,
+    "platform": "静的HTML(価格表のみ、来店・FAX注文)",
+    "shop_type": "single_location",
+    "address": "鳥取県西伯郡日吉津村富吉87",
+    "prefecture": "鳥取県",
+    "hours": "9:00〜17:00(定休日 水曜・木曜)",
+    "map_query": "ピエツコーヒー 鳥取県西伯郡日吉津村富吉87",
+    "nearest_station": {
+      "name": "伯耆大山",
+      "lines": [
+        "JR山陰本線",
+        "JR伯備線"
+      ],
+      "distance_m": 1370,
+      "walk_min": 17
+    },
+    "data_source": "manual",
+    "source_note": "公式サイト(http://www.pietu-coffee.com/、httpsは証明書不一致のためhttp)の「取扱商品」価格表を2026-10-13に確認。サイトの最終更新は2025-08(Last-Modified)。表示価格は100gあたり税込。ネット通販はなく、来店またはFAX注文書(0859-27-5305)での購入のみ。産地・焙煎度・説明の記載なしのため、国名が銘柄名から明確なもののみ産地を設定。",
+    "last_verified_at": "2026-10-13",
+    "locations": [
+      {
+        "label": null,
+        "address": "鳥取県西伯郡日吉津村富吉87",
+        "prefecture": "鳥取県",
+        "hours": "9:00〜17:00(定休日 水曜・木曜)",
+        "tel": "0859-27-5305",
+        "is_headquarters": false,
+        "map_query": "ピエツコーヒー 鳥取県西伯郡日吉津村富吉87",
+        "lat": 35.440172,
+        "lng": 133.375542
+      }
+    ],
+    "lat": 35.440172,
+    "lng": 133.375542
+  },
+  {
+    "name": "Re'ee Coffee Roasters",
+    "url": "https://rcr123.stores.jp/",
+    "instagram_url": null,
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "鳥取県倉吉市伊木240-4",
+    "prefecture": "鳥取県",
+    "hours": null,
+    "map_query": "Re'ee Coffee Roasters 鳥取県倉吉市伊木240-4",
+    "nearest_station": {
+      "name": "倉吉",
+      "lines": [
+        "JR山陰本線"
+      ],
+      "distance_m": 1010,
+      "walk_min": 13
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://rcr123.stores.jp/)の商品ページをブラウザfetch()で2026-10-13に確認。ABOUTに「2024年1月23日にオープンした倉吉市唯一のコーヒー焙煎所」「完全焙煎という焙煎方法で焙煎」と記載。住所は特定商取引法・ABOUT記載。100g・豆のままの価格を採用。ドリップバッグ・カフェラテベースは除外。",
+    "last_verified_at": "2026-10-13",
+    "locations": [
+      {
+        "label": null,
+        "address": "鳥取県倉吉市伊木240-4",
+        "prefecture": "鳥取県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "Re'ee Coffee Roasters 鳥取県倉吉市伊木240-4",
+        "lat": 35.445705,
+        "lng": 133.850585
+      }
+    ],
+    "lat": 35.445705,
+    "lng": 133.850585
+  },
+  {
+    "name": "ワク珈琲",
+    "url": "https://wakucoffee.stores.jp/",
+    "instagram_url": null,
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "鳥取県東伯郡琴浦町赤碕1574",
+    "prefecture": "鳥取県",
+    "hours": null,
+    "map_query": "ワク珈琲 鳥取県東伯郡琴浦町赤碕1574",
+    "nearest_station": {
+      "name": "赤碕",
+      "lines": [
+        "JR山陰本線"
+      ],
+      "distance_m": 310,
+      "walk_min": 4
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://wakucoffee.stores.jp/)の商品ページをブラウザfetch()で2026-10-13に確認。「私たちのこと」に「琴浦町で珈琲豆の自家焙煎をしております」と記載。所在地は同ページの赤碕1574(特定商取引法の代表者住所は赤碕2530-51)。100g・豆のままの価格を採用。お試し4種セット・ドリップバッグ・水出し・カフェオレの素は除外。",
+    "last_verified_at": "2026-10-13",
+    "locations": [
+      {
+        "label": null,
+        "address": "鳥取県東伯郡琴浦町赤碕1574",
+        "prefecture": "鳥取県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "ワク珈琲 鳥取県東伯郡琴浦町赤碕1574",
+        "lat": 35.512947,
+        "lng": 133.631159
+      }
+    ],
+    "lat": 35.512947,
+    "lng": 133.631159
+  },
+  {
+    "name": "WEEKDAY COFFEE ROASTERS",
+    "url": "https://wcr2018.stores.jp/",
+    "instagram_url": null,
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "鳥取県鳥取市天神町67-2 ふそうマンション天神",
+    "prefecture": "鳥取県",
+    "hours": null,
+    "map_query": "WEEKDAY COFFEE ROASTERS 鳥取県鳥取市天神町67-2 ふそうマンション天神",
+    "nearest_station": {
+      "name": "鳥取",
+      "lines": [
+        "JR山陰本線",
+        "JR因美線"
+      ],
+      "distance_m": 440,
+      "walk_min": 6
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://wcr2018.stores.jp/)の商品ページをブラウザfetch()で2026-10-13に確認。Aboutに「2018年にオープンした自家焙煎珈琲店」「すべてのコーヒー生豆を焙煎前に水洗い」と記載。住所は特定商取引法・About記載。100g・豆のままの価格を採用(200gも併売)。ドリップバッグ・ギフト箱・器具・カフェラテベースは除外。品切れは「一時的に品切れ」。",
+    "last_verified_at": "2026-10-13",
+    "locations": [
+      {
+        "label": null,
+        "address": "鳥取県鳥取市天神町67-2 ふそうマンション天神",
+        "prefecture": "鳥取県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "WEEKDAY COFFEE ROASTERS 鳥取県鳥取市天神町67-2 ふそうマンション天神",
+        "lat": 35.492045,
+        "lng": 134.221646
+      }
+    ],
+    "lat": 35.492045,
+    "lng": 134.221646
+  },
+  {
+    "name": "0からコーヒー研究所",
+    "url": "https://zerocoffee.jp/",
+    "instagram_url": null,
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "鳥取県西伯郡南部町鴨部82",
+    "prefecture": "鳥取県",
+    "hours": null,
+    "map_query": "0からコーヒー研究所 鳥取県西伯郡南部町鴨部82",
+    "nearest_station": {
+      "name": "岸本",
+      "lines": [
+        "JR伯備線"
+      ],
+      "distance_m": 9700,
+      "walk_min": 121
+    },
+    "data_source": "manual",
+    "source_note": "オンラインストア(https://zerocoffee.stores.jp/)の商品ページをブラウザfetch()で2026-10-13に確認。ABOUTに「0からコーヒー研究所がお届けする自家焙煎珈琲」、公式サイトに南部焙煎所の記載。住所は特定商取引法に基づく表示。全商品200g(豆)の価格のみ販売のため200gを採用。",
+    "last_verified_at": "2026-10-13",
+    "locations": [
+      {
+        "label": null,
+        "address": "鳥取県西伯郡南部町鴨部82",
+        "prefecture": "鳥取県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "0からコーヒー研究所 鳥取県西伯郡南部町鴨部82",
+        "lat": 35.332151,
+        "lng": 133.326783
+      }
+    ],
+    "lat": 35.332151,
+    "lng": 133.326783
   }
 ]
