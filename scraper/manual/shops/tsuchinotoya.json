@@ -1,0 +1,75 @@
+{
+  "shop": {
+    "name": "つちのと舎",
+    "url": "https://tsuchinotoya.space/",
+    "address": "島根県雲南市木次町寺領1019-22",
+    "prefecture": "島根県",
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "last_verified_at": "2026-10-15",
+    "source_note": "STORES.jpの公式ショップ(https://tsuchinotoya.stores.jp/)の商品ページをブラウザfetch()で2026-10-15に確認。ABOUTに「山の中の珈琲焙煎所」「フジローヤルの手廻しロースターで1kgずつ焙煎」と記載。住所は特定商取引法に基づく表示。100gパック(豆)の価格を採用。",
+    "id": "tsuchinotoya",
+    "instagram_url": null,
+    "google_maps_query": "つちのと舎 島根県雲南市木次町寺領1019-22",
+    "tel": null,
+    "hours": null,
+    "shop_type": "single_location",
+    "data_source": "manual",
+    "lat": 35.27838,
+    "lng": 132.932466,
+    "nearest_station": {
+      "name": "日登",
+      "lines": [
+        "JR木次線"
+      ],
+      "distance_m": 240,
+      "walk_min": 3
+    }
+  },
+  "products": [
+    {
+      "raw_name": "ペルー産有機JAS生豆を使った無農薬コーヒー「珈ノ時」 100g",
+      "category": "ストレート",
+      "originCountry": "ペルー",
+      "processingMethod": null,
+      "roast": null,
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1100,
+      "weightG": 100,
+      "stockStatus": "販売中",
+      "productUrl": "https://tsuchinotoya.stores.jp/items/67738cf4a121916c1ffd25b8",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "つちのと舎オリジナルブレンド 100g",
+      "category": "ブレンド",
+      "originCountry": null,
+      "processingMethod": null,
+      "roast": "深煎り",
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 850,
+      "weightG": 100,
+      "stockStatus": "販売中",
+      "productUrl": "https://tsuchinotoya.stores.jp/items/656342cffe9350002d5bd0bc",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "木次ブレンド 100g",
+      "category": "ブレンド",
+      "originCountry": null,
+      "processingMethod": null,
+      "roast": "中煎り",
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 850,
+      "weightG": 100,
+      "stockStatus": "販売中",
+      "productUrl": "https://tsuchinotoya.stores.jp/items/659e60c09d258204e988abad",
+      "data_source": "manual"
+    }
+  ]
+}

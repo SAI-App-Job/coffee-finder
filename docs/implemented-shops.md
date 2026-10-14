@@ -5,7 +5,7 @@
 `scraper/manual/shops/`配下、それ以外は`scraper/scrape_*.py`で自動取得。
 実装を見送った店舗は`docs/not-implementable-shops.md`を参照。
 
-合計1388店舗・22855商品(生成日: 2026-10-14)。
+合計1397店舗・22966商品(生成日: 2026-10-14)。
 
 再生成コマンド:
 ```
@@ -1183,10 +1183,19 @@ aggregate_shops.py実行後の`git diff --staged --quiet || git commit`が該当
 
 | 店舗名 | 所在地 | 方式 | 件数 |
 |---|---|---|---|
+| CAFE ROSSO Beans Store | 安来市門生町4-3 | Ocnk | 19 |
+| つちのと舎 | 雲南市木次町寺領1019-22 | STORES(手動) | 3 |
+| 栗栗珈琲 | 益田市あけぼの西町8-6 | Ocnk | 11 |
+| ふじひろ珈琲 | 出雲市多伎町口田儀834-1 | カラーミー | 14 |
+| Azu.coffee roastery | 出雲市多伎町多岐157-1 キララ多伎西側テナント | BASE | 19 |
 | CAFFE VITA | 松江市学園2-5-3 | 独自カート(静的HTML+PHP) | 13 |
 | 焙煎珈琲工房 梢庵 | 松江市玉湯町林223-3 | Shopify | 12 |
 | 服部珈琲工房 | 松江市西川津町4003番地BSマンション1F | カラーミー | 4 |
+| あらびかコーヒー | 松江市袖師町7-30 | 手動 | 11 |
+| Libre coffee roaster | 松江市殿町404 | STORES(手動) | 7 |
+| 松浦珈琲 | 松江市東出雲町揖屋2686 | BASE | 24 |
 | Little Court Coffee | 松江市片原町104 | Shopify | 14 |
+| Laube Coffee | 大田市久利町行恒405-5 | BASE | 3 |
 
 ### 東京都
 

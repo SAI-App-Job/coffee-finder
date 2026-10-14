@@ -1203,6 +1203,13 @@ SOURCE_FILES = {
     "BLUE OCEAN NEXT": "data_blueoceannext.json",
     "ブラザーズ・コーヒー": "data_brotherscoffee.json",
     "ホームベース焙煎所": "data_homebaseroasters.json",
+    # 島根県の再調査(新規発掘)
+    "Azu.coffee roastery": "data_azucoffeeroastery.json",
+    "CAFE ROSSO Beans Store": "data_caferosso.json",
+    "ふじひろ珈琲": "data_fujihirocoffee.json",
+    "栗栗珈琲": "data_kurikuricoffee.json",
+    "Laube Coffee": "data_laubecoffee.json",
+    "松浦珈琲": "data_matsuuracoffee.json",
 }
 
 

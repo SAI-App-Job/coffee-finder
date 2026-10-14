@@ -33009,5 +33009,250 @@
     ],
     "lat": 35.332151,
     "lng": 133.326783
+  },
+  {
+    "name": "Azu.coffee roastery",
+    "url": "https://azucoffee.base.shop/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "島根県出雲市多伎町多岐157-1 キララ多伎西側テナント",
+    "prefecture": "島根県",
+    "hours": null,
+    "map_query": "Azu.coffee roastery",
+    "nearest_station": {
+      "name": "小田",
+      "lines": [
+        "JR山陰本線"
+      ],
+      "distance_m": 570,
+      "walk_min": 7
+    },
+    "last_scraped_at": "2026-10-14T17:02:19.939047+00:00",
+    "lat": 35.282079,
+    "lng": 132.635597
+  },
+  {
+    "name": "CAFE ROSSO Beans Store",
+    "url": "https://caferosso.ocnk.net/",
+    "platform": "おちゃのこネット(Ocnk)",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-10-15確認。GPTBot等AI系ボットのみ個別にDisallow: /、それ以外は制限なし)",
+    "address": "島根県安来市門生町4-3",
+    "prefecture": "島根県",
+    "hours": null,
+    "map_query": "CAFE ROSSO Beans Store",
+    "nearest_station": {
+      "name": "米子",
+      "lines": [
+        "JR山陰本線",
+        "JR境線"
+      ],
+      "distance_m": 3920,
+      "walk_min": 49
+    },
+    "last_scraped_at": "2026-10-14T17:02:19.939047+00:00",
+    "lat": 35.40711,
+    "lng": 133.298159
+  },
+  {
+    "name": "ふじひろ珈琲",
+    "url": "https://www.fujihiro-coffee.co.jp/",
+    "platform": "カラーミーショップ(shop-pro.jp)",
+    "shop_type": "single_location",
+    "robots_txt_status": "許可(2026-10-15確認。/secure/と/cart/以外は制限なし)",
+    "address": "島根県出雲市多伎町口田儀834-1",
+    "prefecture": "島根県",
+    "hours": null,
+    "map_query": "ふじひろ珈琲",
+    "nearest_station": {
+      "name": "田儀",
+      "lines": [
+        "JR山陰本線"
+      ],
+      "distance_m": 950,
+      "walk_min": 12
+    },
+    "last_scraped_at": "2026-10-14T17:02:19.939047+00:00",
+    "lat": 35.266736,
+    "lng": 132.59094
+  },
+  {
+    "name": "栗栗珈琲",
+    "url": "https://www.kurikuricoffee.jp/",
+    "platform": "おちゃのこネット(Ocnk)",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-10-15確認。GPTBot等AI系ボットのみ個別にDisallow: /、それ以外は制限なし)",
+    "address": "島根県益田市あけぼの西町8-6",
+    "prefecture": "島根県",
+    "hours": null,
+    "map_query": "栗栗珈琲",
+    "nearest_station": {
+      "name": "益田",
+      "lines": [
+        "JR山口線",
+        "JR山陰本線"
+      ],
+      "distance_m": 380,
+      "walk_min": 5
+    },
+    "last_scraped_at": "2026-10-14T17:02:19.939047+00:00",
+    "lat": 34.681707,
+    "lng": 131.838266
+  },
+  {
+    "name": "Laube Coffee",
+    "url": "https://laubecoffee.base.shop/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "島根県大田市久利町行恒405-5",
+    "prefecture": "島根県",
+    "hours": null,
+    "map_query": "Laube Coffee",
+    "nearest_station": {
+      "name": "大田市",
+      "lines": [
+        "JR山陰本線"
+      ],
+      "distance_m": 2810,
+      "walk_min": 35
+    },
+    "last_scraped_at": "2026-10-14T17:02:19.939047+00:00",
+    "lat": 35.175834,
+    "lng": 132.495354
+  },
+  {
+    "name": "松浦珈琲",
+    "url": "https://matsuuracf.thebase.in/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "島根県松江市東出雲町揖屋2686",
+    "prefecture": "島根県",
+    "hours": null,
+    "map_query": "松浦珈琲",
+    "nearest_station": {
+      "name": "揖屋",
+      "lines": [
+        "JR山陰本線"
+      ],
+      "distance_m": 410,
+      "walk_min": 5
+    },
+    "last_scraped_at": "2026-10-14T17:02:19.939047+00:00",
+    "lat": 35.429309,
+    "lng": 133.153582
+  },
+  {
+    "name": "あらびかコーヒー",
+    "url": "https://www.arabika-coffee.com/",
+    "instagram_url": null,
+    "platform": "WordPress(通販なし・店頭販売のみ)",
+    "shop_type": "single_location",
+    "address": "島根県松江市袖師町7-30",
+    "prefecture": "島根県",
+    "hours": "9:00〜17:00、定休日：日曜・月曜・祝日(月曜は前日までに予約があれば営業)",
+    "map_query": "あらびかコーヒー 島根県松江市袖師町7-30",
+    "nearest_station": {
+      "name": "乃木",
+      "lines": [
+        "JR山陰本線"
+      ],
+      "distance_m": 1050,
+      "walk_min": 13
+    },
+    "data_source": "manual",
+    "source_note": "公式サイト(https://www.arabika-coffee.com/)トップページの店舗情報(住所・電話・営業時間)と、お知らせ「自家焙煎コーヒー豆の小売価格変更のお知らせ」(https://www.arabika-coffee.com/news/20251-news/、2025-01-22付)の自家焙煎コーヒー豆価格表(100g・税込)を2026-10-15に確認。通販はなく店頭販売のみ。価格表の更新は2025-01-22付で約1年9か月経過のため、現在の価格は店頭で要確認。",
+    "last_verified_at": "2026-10-15",
+    "locations": [
+      {
+        "label": null,
+        "address": "島根県松江市袖師町7-30",
+        "prefecture": "島根県",
+        "hours": "9:00〜17:00、定休日：日曜・月曜・祝日(月曜は前日までに予約があれば営業)",
+        "tel": "0852-26-6365",
+        "is_headquarters": false,
+        "map_query": "あらびかコーヒー 島根県松江市袖師町7-30",
+        "lat": 35.455333,
+        "lng": 133.050561
+      }
+    ],
+    "lat": 35.455333,
+    "lng": 133.050561
+  },
+  {
+    "name": "Libre coffee roaster",
+    "url": "https://cafe-libre.net/",
+    "instagram_url": null,
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "島根県松江市殿町404",
+    "prefecture": "島根県",
+    "hours": null,
+    "map_query": "Libre coffee roaster 島根県松江市殿町404",
+    "nearest_station": {
+      "name": "松江しんじ湖温泉",
+      "lines": [
+        "一畑電車北松江線"
+      ],
+      "distance_m": 830,
+      "walk_min": 10
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://libre004.stores.jp/)の商品ページをブラウザfetch()で2026-10-15に確認。ABOUTに「緻密な焙煎を行っています」、公式サイト(cafe-libre.net)に焙煎後の豆を冷凍保存して通販と記載。住所は特定商取引法に基づく表示。100g・豆のままの価格を採用(200gも併売)。おまかせ・ドリップパックは除外。",
+    "last_verified_at": "2026-10-15",
+    "locations": [
+      {
+        "label": null,
+        "address": "島根県松江市殿町404",
+        "prefecture": "島根県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "Libre coffee roaster 島根県松江市殿町404",
+        "lat": 35.471418,
+        "lng": 133.053695
+      }
+    ],
+    "lat": 35.471418,
+    "lng": 133.053695
+  },
+  {
+    "name": "つちのと舎",
+    "url": "https://tsuchinotoya.space/",
+    "instagram_url": null,
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "島根県雲南市木次町寺領1019-22",
+    "prefecture": "島根県",
+    "hours": null,
+    "map_query": "つちのと舎 島根県雲南市木次町寺領1019-22",
+    "nearest_station": {
+      "name": "日登",
+      "lines": [
+        "JR木次線"
+      ],
+      "distance_m": 240,
+      "walk_min": 3
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://tsuchinotoya.stores.jp/)の商品ページをブラウザfetch()で2026-10-15に確認。ABOUTに「山の中の珈琲焙煎所」「フジローヤルの手廻しロースターで1kgずつ焙煎」と記載。住所は特定商取引法に基づく表示。100gパック(豆)の価格を採用。",
+    "last_verified_at": "2026-10-15",
+    "locations": [
+      {
+        "label": null,
+        "address": "島根県雲南市木次町寺領1019-22",
+        "prefecture": "島根県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "つちのと舎 島根県雲南市木次町寺領1019-22",
+        "lat": 35.27838,
+        "lng": 132.932466
+      }
+    ],
+    "lat": 35.27838,
+    "lng": 132.932466
   }
 ]
