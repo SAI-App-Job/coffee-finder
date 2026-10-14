@@ -32479,5 +32479,282 @@
     ],
     "lat": 34.254248,
     "lng": 135.313615
+  },
+  {
+    "name": "08COFFEE",
+    "url": "https://08coffee.thebase.in/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "秋田県秋田市山王新町13-21 三栄ビル2F",
+    "prefecture": "秋田県",
+    "hours": null,
+    "map_query": "08COFFEE",
+    "nearest_station": {
+      "name": "泉外旭川",
+      "lines": [
+        "JR奥羽本線"
+      ],
+      "distance_m": 2800,
+      "walk_min": 35
+    },
+    "last_scraped_at": "2026-10-14T16:18:44.528525+00:00",
+    "lat": 39.717045,
+    "lng": 140.094575
+  },
+  {
+    "name": "根子マタギコーヒー",
+    "url": "https://nekkomatagicoffee.com/",
+    "platform": "Shopify",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認(Shopify標準構成)",
+    "address": "秋田県北秋田市阿仁根子字根子又78",
+    "prefecture": "秋田県",
+    "hours": null,
+    "map_query": "根子マタギコーヒー",
+    "nearest_station": {
+      "name": "鷹ノ巣",
+      "lines": [
+        "JR奥羽本線"
+      ],
+      "distance_m": 690,
+      "walk_min": 9
+    },
+    "last_scraped_at": "2026-10-14T16:18:44.528525+00:00",
+    "lat": 40.225943,
+    "lng": 140.370915
+  },
+  {
+    "name": "さとやまコーヒー",
+    "url": "https://satoyamacoffee.com/",
+    "platform": "Shopify",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認(Shopify標準構成)",
+    "address": "秋田県男鹿市船川港船川字栄町89-3",
+    "prefecture": "秋田県",
+    "hours": null,
+    "map_query": "さとやまコーヒー",
+    "nearest_station": {
+      "name": "男鹿",
+      "lines": [
+        "JR男鹿線"
+      ],
+      "distance_m": 250,
+      "walk_min": 3
+    },
+    "last_scraped_at": "2026-10-14T16:18:44.528525+00:00",
+    "lat": 39.88662,
+    "lng": 139.847395
+  },
+  {
+    "name": "杉本珈琲店",
+    "url": "http://sugicafe.net/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "秋田県秋田市保戸野通町5-34",
+    "prefecture": "秋田県",
+    "hours": null,
+    "map_query": "杉本珈琲店",
+    "nearest_station": {
+      "name": "秋田",
+      "lines": [
+        "秋田新幹線",
+        "JR羽越本線",
+        "JR奥羽本線"
+      ],
+      "distance_m": 1310,
+      "walk_min": 16
+    },
+    "last_scraped_at": "2026-10-14T16:18:44.528525+00:00",
+    "lat": 39.721474,
+    "lng": 140.11592
+  },
+  {
+    "name": "BOX COFFEE",
+    "url": "https://boxcoffeeakita.stores.jp/",
+    "instagram_url": null,
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "秋田県秋田市土崎港西港西入丁目184地内",
+    "prefecture": "秋田県",
+    "hours": null,
+    "map_query": "BOX COFFEE 秋田県秋田市土崎港西港西入丁目184地内",
+    "nearest_station": {
+      "name": "土崎",
+      "lines": [
+        "JR奥羽本線"
+      ],
+      "distance_m": 1270,
+      "walk_min": 16
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://boxcoffeeakita.stores.jp/)の商品ページをブラウザfetch()で2026-10-13に確認。ABOUTに「自家焙煎珈琲専門店 BOX COFFEE 土崎店・泉店の2店舗」と記載。住所は特定商取引法に基づく表示(土崎店)。各商品「数量1=100g」(豆のまま)として100gの価格を採用。ドリップパック・ギフト・リキッド・カフェオレベース・チケット・紙袋は除外。登録済みのアメヤ珈琲のグループ店だが別ECのため別店舗として登録。",
+    "last_verified_at": "2026-10-13",
+    "locations": [
+      {
+        "label": null,
+        "address": "秋田県秋田市土崎港西港西入丁目184地内",
+        "prefecture": "秋田県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "BOX COFFEE 秋田県秋田市土崎港西港西入丁目184地内",
+        "lat": 39.752254,
+        "lng": 140.061172
+      }
+    ],
+    "lat": 39.752254,
+    "lng": 140.061172
+  },
+  {
+    "name": "コーヒースタンドHaLo",
+    "url": "https://coffee-stand-halo.stores.jp/",
+    "instagram_url": null,
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "秋田県秋田市保戸野すわ町8-12 千秋モール1F",
+    "prefecture": "秋田県",
+    "hours": null,
+    "map_query": "コーヒースタンドHaLo 秋田県秋田市保戸野すわ町8-12 千秋モール1F",
+    "nearest_station": {
+      "name": "秋田",
+      "lines": [
+        "秋田新幹線",
+        "JR羽越本線",
+        "JR奥羽本線"
+      ],
+      "distance_m": 1520,
+      "walk_min": 19
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://coffee-stand-halo.stores.jp/)の商品ページをブラウザfetch()で2026-10-13に確認。店主の伊藤咲織さんが焙煎も手掛けることはa.woman(2024-09-27)・あきたタウン情報(2024)で確認。各商品に焙煎度の記載あり。住所は特定商取引法・ABOUT記載。100g・豆のままの価格を採用。水出しアイスコーヒーパックは除外。",
+    "last_verified_at": "2026-10-13",
+    "locations": [
+      {
+        "label": null,
+        "address": "秋田県秋田市保戸野すわ町8-12 千秋モール1F",
+        "prefecture": "秋田県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "コーヒースタンドHaLo 秋田県秋田市保戸野すわ町8-12 千秋モール1F",
+        "lat": 39.723837,
+        "lng": 140.114727
+      }
+    ],
+    "lat": 39.723837,
+    "lng": 140.114727
+  },
+  {
+    "name": "栗谷珈琲焙煎所",
+    "url": "https://kuriyacoffee9851.stores.jp/",
+    "instagram_url": null,
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "秋田県横手市増田町増田字土肥館230-5",
+    "prefecture": "秋田県",
+    "hours": null,
+    "map_query": "栗谷珈琲焙煎所 秋田県横手市増田町増田字土肥館230-5",
+    "nearest_station": {
+      "name": "十文字",
+      "lines": [
+        "JR奥羽本線"
+      ],
+      "distance_m": 2810,
+      "walk_min": 35
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://kuriyacoffee9851.stores.jp/)の商品ページをブラウザfetch()で2026-10-13に確認。店名・ABOUT(常時12種類の焙煎豆を準備)、横手経済新聞(2020-10-06)等の報道で自家焙煎を確認。住所は特定商取引法に基づく表示。100g(豆)の価格を採用(150gも併売)。ドリップパックは除外。",
+    "last_verified_at": "2026-10-13",
+    "locations": [
+      {
+        "label": null,
+        "address": "秋田県横手市増田町増田字土肥館230-5",
+        "prefecture": "秋田県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "栗谷珈琲焙煎所 秋田県横手市増田町増田字土肥館230-5",
+        "lat": 39.199669,
+        "lng": 140.54332
+      }
+    ],
+    "lat": 39.199669,
+    "lng": 140.54332
+  },
+  {
+    "name": "珈琲焙煎工房バルーガ",
+    "url": "https://valluga.jp/",
+    "instagram_url": null,
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "秋田県湯沢市小野字東古戸143-3",
+    "prefecture": "秋田県",
+    "hours": null,
+    "map_query": "珈琲焙煎工房バルーガ 秋田県湯沢市小野字東古戸143-3",
+    "nearest_station": {
+      "name": "横堀",
+      "lines": [
+        "JR奥羽本線"
+      ],
+      "distance_m": 810,
+      "walk_min": 10
+    },
+    "data_source": "manual",
+    "source_note": "オンラインショップ(https://valluga.stores.jp/)の商品ページをブラウザfetch()で2026-10-13に確認。ABOUTに「2014年に自家焙煎珈琲豆販売業をスタート」「毎日お店に出向き珈琲焙煎に精を出しています」と記載。住所は特定商取引法に基づく表示。全商品で100gの選択肢は在庫0のため、在庫のある最小重量の200g(豆のまま)の価格を採用。",
+    "last_verified_at": "2026-10-13",
+    "locations": [
+      {
+        "label": null,
+        "address": "秋田県湯沢市小野字東古戸143-3",
+        "prefecture": "秋田県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "珈琲焙煎工房バルーガ 秋田県湯沢市小野字東古戸143-3",
+        "lat": 39.061474,
+        "lng": 140.459824
+      }
+    ],
+    "lat": 39.061474,
+    "lng": 140.459824
+  },
+  {
+    "name": "珈琲焙煎工房 結",
+    "url": "https://yuicoffee.stores.jp/",
+    "instagram_url": null,
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "秋田県由利本荘市西目町海士剥字海士剥下50",
+    "prefecture": "秋田県",
+    "hours": null,
+    "map_query": "珈琲焙煎工房 結 秋田県由利本荘市西目町海士剥字海士剥下50",
+    "nearest_station": {
+      "name": "西目",
+      "lines": [
+        "JR羽越本線"
+      ],
+      "distance_m": 2550,
+      "walk_min": 32
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://yuicoffee.stores.jp/)の商品ページをブラウザfetch()で2026-10-13に確認。ABOUTに「珈琲焙煎工房 結。一つ一つの豆を手作業で選別し心を込めて焙煎」と記載、魁新報(2024-05-02)でも確認。住所は特定商取引法に基づく表示。100g・豆の価格を採用。セット・水出しパック・ドリップパック・りんごジュースは除外。",
+    "last_verified_at": "2026-10-13",
+    "locations": [
+      {
+        "label": null,
+        "address": "秋田県由利本荘市西目町海士剥字海士剥下50",
+        "prefecture": "秋田県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "珈琲焙煎工房 結 秋田県由利本荘市西目町海士剥字海士剥下50",
+        "lat": 39.370228,
+        "lng": 140.014816
+      }
+    ],
+    "lat": 39.370228,
+    "lng": 140.014816
   }
 ]

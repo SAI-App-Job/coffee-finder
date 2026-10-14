@@ -1194,6 +1194,11 @@ SOURCE_FILES = {
     "モリカワ": "data_morikawacoffee.json",
     "THE ROASTERS": "data_theroasters.json",
     "とびだす焙煎所": "data_tobidasubaisenjo.json",
+    # 秋田県の再調査(新規発掘)
+    "08COFFEE": "data_08coffee.json",
+    "根子マタギコーヒー": "data_nekkomatagicoffee.json",
+    "さとやまコーヒー": "data_satoyamacoffee.json",
+    "杉本珈琲店": "data_sugicafe.json",
 }
 
 
