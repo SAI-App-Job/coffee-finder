@@ -1219,6 +1219,13 @@ SOURCE_FILES = {
     "逸珈琲": "data_suguru.json",
     "トートコーヒー": "data_thothcoffee.json",
     "焙煎元 和樂": "data_waraku.json",
+    # 徳島県の再調査(新規発掘)
+    "可否庵": "data_coffeean.json",
+    "ハレとケ珈琲": "data_haretokecoffee.json",
+    "カフェ・ケストナー": "data_kastnercoffee.json",
+    "クエイル珈琲": "data_quailcoffee.json",
+    "徳島ブラジルコーヒ": "data_tokushimabrazilcoffee.json",
+    "TOKUSHIMA COFFEE WORKS": "data_tokushimacoffeeworks.json",
 }
 
 

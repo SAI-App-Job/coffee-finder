@@ -33582,5 +33582,278 @@
     ],
     "lat": 34.335915,
     "lng": 134.05088
+  },
+  {
+    "name": "可否庵",
+    "url": "https://coffeean.thebase.in/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "徳島県徳島市幸町2-30",
+    "prefecture": "徳島県",
+    "hours": null,
+    "map_query": "可否庵",
+    "nearest_station": {
+      "name": "呉",
+      "lines": [
+        "JR呉線"
+      ],
+      "distance_m": 700,
+      "walk_min": 9
+    },
+    "last_scraped_at": "2026-10-14T22:25:10.221977+00:00",
+    "lat": 34.239254,
+    "lng": 132.561416
+  },
+  {
+    "name": "ハレとケ珈琲",
+    "url": "https://www.haretoke-d.jp/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "徳島県三好市池田町大利大西15",
+    "prefecture": "徳島県",
+    "hours": null,
+    "map_query": "ハレとケ珈琲",
+    "nearest_station": {
+      "name": "小歩危",
+      "lines": [
+        "JR土讃線"
+      ],
+      "distance_m": 5520,
+      "walk_min": 69
+    },
+    "last_scraped_at": "2026-10-14T22:25:10.221977+00:00",
+    "lat": 33.923598,
+    "lng": 133.818534
+  },
+  {
+    "name": "カフェ・ケストナー",
+    "url": "https://www.rakuten.co.jp/cafe-kastner/",
+    "platform": "楽天市場",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可とみなす(2026-10確認。rakuten.co.jp/item.rakuten.co.jpのrobots.txtは検索系パラメータ(?i= ?s=)等のみ禁止)",
+    "address": "徳島県徳島市川内町大松255-3",
+    "prefecture": "徳島県",
+    "hours": null,
+    "map_query": "カフェ・ケストナー",
+    "nearest_station": {
+      "name": "松江",
+      "lines": [
+        "JR山陰本線"
+      ],
+      "distance_m": 3330,
+      "walk_min": 42
+    },
+    "last_scraped_at": "2026-10-14T22:25:10.221977+00:00",
+    "lat": 35.491953,
+    "lng": 133.076815
+  },
+  {
+    "name": "クエイル珈琲",
+    "url": "https://quailcoffee.base.shop/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "徳島県名西郡石井町高川原字天神709-1",
+    "prefecture": "徳島県",
+    "hours": null,
+    "map_query": "クエイル珈琲",
+    "nearest_station": {
+      "name": "石井",
+      "lines": [
+        "JR徳島線"
+      ],
+      "distance_m": 480,
+      "walk_min": 6
+    },
+    "last_scraped_at": "2026-10-14T22:25:10.221977+00:00",
+    "lat": 34.072931,
+    "lng": 134.440191
+  },
+  {
+    "name": "徳島ブラジルコーヒ",
+    "url": "https://www.brazil-coffee.jp/",
+    "platform": "ShopServe",
+    "shop_type": "single_location",
+    "robots_txt_status": "制限なし(2026-10-15確認。robots.txtは404)",
+    "address": "徳島県徳島市東沖洲2-26-12",
+    "prefecture": "徳島県",
+    "hours": null,
+    "map_query": "徳島ブラジルコーヒ",
+    "nearest_station": {
+      "name": "阿波富田",
+      "lines": [
+        "JR牟岐線"
+      ],
+      "distance_m": 3200,
+      "walk_min": 40
+    },
+    "last_scraped_at": "2026-10-14T22:25:10.221977+00:00",
+    "lat": 34.057529,
+    "lng": 134.589452
+  },
+  {
+    "name": "TOKUSHIMA COFFEE WORKS",
+    "url": "https://coffee-w.jp/",
+    "platform": "Shopify",
+    "shop_type": "single_location",
+    "robots_txt_status": "許可(2026-10-15確認。Shopify標準で User-agent: * は Allow: /)",
+    "address": "徳島県徳島市山城西1-7",
+    "prefecture": "徳島県",
+    "hours": null,
+    "map_query": "TOKUSHIMA COFFEE WORKS",
+    "nearest_station": {
+      "name": "文化の森",
+      "lines": [
+        "JR牟岐線"
+      ],
+      "distance_m": 1830,
+      "walk_min": 23
+    },
+    "last_scraped_at": "2026-10-14T22:25:10.221977+00:00",
+    "lat": 34.043386,
+    "lng": 134.563164
+  },
+  {
+    "name": "COFFEE TO",
+    "url": "https://coffeeto.stores.jp/",
+    "instagram_url": null,
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "徳島県徳島市城東町1丁目1-12 金子ビル102",
+    "prefecture": "徳島県",
+    "hours": null,
+    "map_query": "COFFEE TO 徳島県徳島市城東町1丁目1-12 金子ビル102",
+    "nearest_station": {
+      "name": "阿波富田",
+      "lines": [
+        "JR牟岐線"
+      ],
+      "distance_m": 2030,
+      "walk_min": 25
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://coffeeto.stores.jp/)の商品ページをブラウザfetch()で2026-10-15に確認。ABOUTに「2021年に徳島市にオープンしたコーヒースタンド」「焙煎機はDIEDRICH」と記載。住所は特定商取引法に基づく表示。各商品は100gまたは150gの1サイズのみで、豆の価格を採用。7商品中5商品は完売(新豆入荷のたびに入れ替わる)。",
+    "last_verified_at": "2026-10-15",
+    "locations": [
+      {
+        "label": null,
+        "address": "徳島県徳島市城東町1丁目1-12 金子ビル102",
+        "prefecture": "徳島県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "COFFEE TO 徳島県徳島市城東町1丁目1-12 金子ビル102",
+        "lat": 34.074556,
+        "lng": 134.573644
+      }
+    ],
+    "lat": 34.074556,
+    "lng": 134.573644
+  },
+  {
+    "name": "カモ谷製作舎 ノ KOFFEE SHOP",
+    "url": "https://kamodanicoffee.stores.jp/",
+    "instagram_url": null,
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "徳島県小松島市大林町立光地147",
+    "prefecture": "徳島県",
+    "hours": null,
+    "map_query": "カモ谷製作舎 ノ KOFFEE SHOP 徳島県小松島市大林町立光地147",
+    "nearest_station": {
+      "name": "立江",
+      "lines": [
+        "JR牟岐線"
+      ],
+      "distance_m": 610,
+      "walk_min": 8
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://kamodanicoffee.stores.jp/)の商品ページをブラウザfetch()で2026-10-15に確認。ABOUTに「自家焙煎のスペシャルティーコーヒー専門店」と記載。住所は特定商取引法に基づく表示。同一銘柄は100g/250g/500g/1kgが別商品のため100g(豆)を代表に採用。ギフトセット・定期便・コーヒーバッグ・カフェオレベース・アイスコーヒー・アウトドア用品は除外。",
+    "last_verified_at": "2026-10-15",
+    "locations": [
+      {
+        "label": null,
+        "address": "徳島県小松島市大林町立光地147",
+        "prefecture": "徳島県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "カモ谷製作舎 ノ KOFFEE SHOP 徳島県小松島市大林町立光地147",
+        "lat": 33.971619,
+        "lng": 134.615173
+      }
+    ],
+    "lat": 33.971619,
+    "lng": 134.615173
+  },
+  {
+    "name": "豆ちよ焙煎所",
+    "url": "https://mamechiyo.shop/",
+    "instagram_url": null,
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "徳島県名西郡神山町神領北85-3",
+    "prefecture": "徳島県",
+    "hours": null,
+    "map_query": "豆ちよ焙煎所 徳島県名西郡神山町神領北85-3",
+    "nearest_station": null,
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://mamechiyo.shop/)の商品ページをブラウザfetch()で2026-10-15に確認。ABOUTに「フジローヤル3kg直火式を使用。一粒ずつ丁寧に焙煎」と記載。住所は特定商取引法に基づく表示。100g(豆)の価格を採用(デカフェのみ200g)。ドリップバッグ・水出しパック・各種セット・ギフト・定期便・和三盆菓子は除外。",
+    "last_verified_at": "2026-10-15",
+    "locations": [
+      {
+        "label": null,
+        "address": "徳島県名西郡神山町神領北85-3",
+        "prefecture": "徳島県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "豆ちよ焙煎所 徳島県名西郡神山町神領北85-3",
+        "lat": 33.960896,
+        "lng": 134.357147
+      }
+    ],
+    "lat": 33.960896,
+    "lng": 134.357147
+  },
+  {
+    "name": "ロゼッタカフェカンパニー",
+    "url": "https://www.rosetta-caffe.jp/",
+    "instagram_url": null,
+    "platform": "STORES.jp(独自ドメイン、ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "徳島県小松島市堀川町2-4",
+    "prefecture": "徳島県",
+    "hours": null,
+    "map_query": "ロゼッタカフェカンパニー 徳島県小松島市堀川町2-4",
+    "nearest_station": {
+      "name": "南小松島",
+      "lines": [
+        "JR牟岐線"
+      ],
+      "distance_m": 360,
+      "walk_min": 5
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://rosettacoffee.shop/)の商品ページをブラウザfetch()で2026-10-15に確認。ABOUTに「徳島県南部小松島市の自家焙煎スペシャリティーコーヒー専門店」「バリスタ兼ロースター竹村浩史」と記載。住所は特定商取引法に基づく表示(本店。ほかに徳島アミコ店等)。同一銘柄は200g/300g/500gが別商品のため最小重量の200gを代表に採用(ヴィンテージブレンドは500gのみ)。ドリップバッグ・ギフト・お試しセット・複数個セットは除外。",
+    "last_verified_at": "2026-10-15",
+    "locations": [
+      {
+        "label": null,
+        "address": "徳島県小松島市堀川町2-4",
+        "prefecture": "徳島県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "ロゼッタカフェカンパニー 徳島県小松島市堀川町2-4",
+        "lat": 34.006664,
+        "lng": 134.583344
+      }
+    ],
+    "lat": 34.006664,
+    "lng": 134.583344
   }
 ]
