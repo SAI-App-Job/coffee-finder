@@ -5,7 +5,7 @@
 `scraper/manual/shops/`配下、それ以外は`scraper/scrape_*.py`で自動取得。
 実装を見送った店舗は`docs/not-implementable-shops.md`を参照。
 
-合計1476店舗・23969商品(生成日: 2026-10-18)。
+合計1477店舗・23972商品(生成日: 2026-10-18)。
 
 再生成コマンド:
 ```
@@ -1165,6 +1165,7 @@ aggregate_shops.py実行後の`git diff --staged --quiet || git commit`が該当
 |---|---|---|---|
 | おうちカフェ マロン | 雲仙市小浜町北野1247-1 | 楽売(Raku-Uru) | 4 |
 | GOOD COFFEE LABO | 佐世保市元町1-33 | カラーミー | 15 |
+| Talk about coffee | 佐世保市万徳町1-5 | BASE | 3 |
 | 寿古珈琲 | 大村市寿古町813-1 | Ocnk | 3 |
 | 出島珈琲焙煎所 | 長崎市出島町1-1 長崎出島ワーフ1F | BASE(theshop) | 3 |
 | coffee 中山洋行 | 長崎市新地町13-9 | STORES(手動) | 29 |

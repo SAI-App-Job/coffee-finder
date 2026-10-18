@@ -1273,6 +1273,8 @@ SOURCE_FILES = {
     # 現行性が不明で保留していた店の登録(高知県)
     # 価格の出所を現行の公式サイトに改めて登録(山口県)
     # 住所を公式サイトで確認して登録(佐賀県)
+    # 住所をInstagramで確認して登録(長崎県)
+    "Talk about coffee": "data_talkaboutcoffee.json",
 }
 
 
