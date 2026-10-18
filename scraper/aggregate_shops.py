@@ -1277,6 +1277,7 @@ SOURCE_FILES = {
     "Talk about coffee": "data_talkaboutcoffee.json",
     # 住所を確認して登録(宮崎県)
     "恋ヶ浦コーヒーロースト": "data_koigauracoffee.json",
+    # FC店を除き本店のみ登録(香川県)
 }
 
 

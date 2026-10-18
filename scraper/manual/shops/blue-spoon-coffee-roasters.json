@@ -1,0 +1,90 @@
+{
+  "shop": {
+    "name": "BLUE SPOON COFFEE ROASTERS 本店",
+    "url": "https://www.blue-spoon.jp/",
+    "address": "香川県高松市木太町5077-3",
+    "prefecture": "香川県",
+    "tel": "087-814-5104",
+    "platform": "xaas3.jp系ショッピングカート(商品ページから取得)",
+    "last_verified_at": "2026-10-19",
+    "source_note": "公式サイト(https://www.blue-spoon.jp/)の商品ページ(item/01〜04)を2026-10-19に確認。コンセプトのページに「特大・特注の遠赤外線式ロースターで常時自家焙煎」と記載。公式のShopページにFC店として香川県6店舗・徳島県4店舗を展開とあるが、FC店は含めず、本店(高松市木太町5077-3)のみを登録。各商品は内容量150g(50g×3)で、販売価格は税込。",
+    "id": "blue-spoon-coffee-roasters",
+    "instagram_url": null,
+    "google_maps_query": "BLUE SPOON COFFEE ROASTERS 本店 香川県高松市木太町5077-3",
+    "hours": null,
+    "shop_type": "single_location",
+    "data_source": "manual",
+    "lat": 34.312607,
+    "lng": 134.064651,
+    "nearest_station": {
+      "name": "林道",
+      "lines": [
+        "高松琴平電鉄長尾線"
+      ],
+      "distance_m": 1430,
+      "walk_min": 18
+    }
+  },
+  "products": [
+    {
+      "raw_name": "エチオピア モカ イルガチャフェ G1 ゲルセイ ウォッシュド 150g",
+      "category": "ストレート",
+      "originCountry": "エチオピア",
+      "processingMethod": "ウォッシュド",
+      "roast": "浅煎り",
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1620,
+      "weightG": 150,
+      "stockStatus": "販売中",
+      "productUrl": "https://www.blue-spoon.jp/item/01/#%E3%82%A8%E3%83%81%E3%82%AA%E3%83%94%E3%82%A2%20%E3%83%A2%E3%82%AB%20%E3%82%A4%E3%83%AB%E3%82%AC%E3%83%81%E3%83%A3%E3%83%95%E3%82%A7%20G1%20%E3%82%B2%E3%83%AB%E3%82%BB%E3%82%A4%20%E3%82%A6%E3%82%A9%E3%83%83%E3%82%B7%E3%83%A5%E3%83%89%20150g",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "タンザニア AA エーデルワイス 150g",
+      "category": "ストレート",
+      "originCountry": "タンザニア",
+      "processingMethod": null,
+      "roast": "浅煎り",
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1409,
+      "weightG": 150,
+      "stockStatus": "販売中",
+      "productUrl": "https://www.blue-spoon.jp/item/02/#%E3%82%BF%E3%83%B3%E3%82%B6%E3%83%8B%E3%82%A2%20AA%20%E3%82%A8%E3%83%BC%E3%83%87%E3%83%AB%E3%83%AF%E3%82%A4%E3%82%B9%20150g",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "ブラジル サントス No.2 クイーンショコラ 150g",
+      "category": "ストレート",
+      "originCountry": "ブラジル",
+      "processingMethod": null,
+      "roast": "中煎り",
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1409,
+      "weightG": 150,
+      "stockStatus": "販売中",
+      "productUrl": "https://www.blue-spoon.jp/item/03/#%E3%83%96%E3%83%A9%E3%82%B8%E3%83%AB%20%E3%82%B5%E3%83%B3%E3%83%88%E3%82%B9%20No.2%20%E3%82%AF%E3%82%A4%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%82%B3%E3%83%A9%20150g",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "グアテマラ ウエウエテナンゴ SHB 150g",
+      "category": "ストレート",
+      "originCountry": "グアテマラ",
+      "processingMethod": null,
+      "roast": "深煎り",
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1863,
+      "weightG": 150,
+      "stockStatus": "販売中",
+      "productUrl": "https://www.blue-spoon.jp/item/04/#%E3%82%B0%E3%82%A2%E3%83%86%E3%83%9E%E3%83%A9%20%E3%82%A6%E3%82%A8%E3%82%A6%E3%82%A8%E3%83%86%E3%83%8A%E3%83%B3%E3%82%B4%20SHB%20150g",
+      "data_source": "manual"
+    }
+  ]
+}

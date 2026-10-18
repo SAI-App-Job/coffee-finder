@@ -5,7 +5,7 @@
 `scraper/manual/shops/`配下、それ以外は`scraper/scrape_*.py`で自動取得。
 実装を見送った店舗は`docs/not-implementable-shops.md`を参照。
 
-合計1478店舗・23986商品(生成日: 2026-10-18)。
+合計1479店舗・23990商品(生成日: 2026-10-18)。
 
 再生成コマンド:
 ```
@@ -543,6 +543,7 @@ aggregate_shops.py実行後の`git diff --staged --quiet || git commit`が該当
 | SchopBean(スコップビーン) | 高松市田町3-10 | BASE | 21 |
 | ARSENAL Coffee Roasters | 高松市兵庫町2-1 | STORES(手動) | 2 |
 | RANACOFFEE | 高松市牟礼町牟礼2421-13 | FC2ショッピングカート(独自ドメイン beans-store.ranacoffee.com) | 10 |
+| BLUE SPOON COFFEE ROASTERS 本店 | 高松市木太町5077-3 | 手動 | 4 |
 | 逸珈琲 | 高松市林町1545-1 | 独自カート(xaas3.jp) | 12 |
 | 珈琲工房セピア | 坂出市京町3丁目1-3 | カラーミー | 13 |
 | coffeebeans&sweets Antique | 善通寺市善通寺町2031-7 | STORES(手動) | 17 |

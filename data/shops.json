@@ -35476,5 +35476,42 @@
     "last_scraped_at": "2026-10-18T17:59:23.215333+00:00",
     "lat": 31.403559,
     "lng": 131.330246
+  },
+  {
+    "name": "BLUE SPOON COFFEE ROASTERS 本店",
+    "url": "https://www.blue-spoon.jp/",
+    "instagram_url": null,
+    "platform": "xaas3.jp系ショッピングカート(商品ページから取得)",
+    "shop_type": "single_location",
+    "address": "香川県高松市木太町5077-3",
+    "prefecture": "香川県",
+    "hours": null,
+    "map_query": "BLUE SPOON COFFEE ROASTERS 本店 香川県高松市木太町5077-3",
+    "nearest_station": {
+      "name": "林道",
+      "lines": [
+        "高松琴平電鉄長尾線"
+      ],
+      "distance_m": 1430,
+      "walk_min": 18
+    },
+    "data_source": "manual",
+    "source_note": "公式サイト(https://www.blue-spoon.jp/)の商品ページ(item/01〜04)を2026-10-19に確認。コンセプトのページに「特大・特注の遠赤外線式ロースターで常時自家焙煎」と記載。公式のShopページにFC店として香川県6店舗・徳島県4店舗を展開とあるが、FC店は含めず、本店(高松市木太町5077-3)のみを登録。各商品は内容量150g(50g×3)で、販売価格は税込。",
+    "last_verified_at": "2026-10-19",
+    "locations": [
+      {
+        "label": null,
+        "address": "香川県高松市木太町5077-3",
+        "prefecture": "香川県",
+        "hours": null,
+        "tel": "087-814-5104",
+        "is_headquarters": false,
+        "map_query": "BLUE SPOON COFFEE ROASTERS 本店 香川県高松市木太町5077-3",
+        "lat": 34.312607,
+        "lng": 134.064651
+      }
+    ],
+    "lat": 34.312607,
+    "lng": 134.064651
   }
 ]
