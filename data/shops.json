@@ -35513,5 +35513,27 @@
     ],
     "lat": 34.312607,
     "lng": 134.064651
+  },
+  {
+    "name": "OK COFFEE Saga Roastery",
+    "url": "https://www.rakuten.co.jp/okcoffee/",
+    "platform": "楽天市場",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可とみなす(2026-10確認。rakuten.co.jp/item.rakuten.co.jpのrobots.txtは検索系パラメータ・一部パス等のみ禁止)",
+    "address": "佐賀県神埼郡吉野ヶ里町吉田243-11",
+    "prefecture": "佐賀県",
+    "hours": null,
+    "map_query": "OK COFFEE Saga Roastery",
+    "nearest_station": {
+      "name": "吉野ヶ里公園",
+      "lines": [
+        "JR長崎本線"
+      ],
+      "distance_m": 1020,
+      "walk_min": 13
+    },
+    "last_scraped_at": "2026-10-18T18:29:14.527742+00:00",
+    "lat": 33.332336,
+    "lng": 130.406006
   }
 ]

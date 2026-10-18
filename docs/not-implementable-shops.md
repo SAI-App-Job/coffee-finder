@@ -3020,6 +3020,7 @@ docs/scraping-progress.md「栃木県再調査」冒頭の教訓セクション�
 
 ### OK COFFEE Saga Roastery(吉野ヶ里町)／清香園茶舗(唐津市)
 - 見送り理由: OK COFFEEは商品の大半がIPコラボのブレンド(粉)でシングルオリジンがなく、清香園茶舗は茶舗が本業でコーヒーは一部の商品のため判断待ち。
+- 2026-10-19 追記: OK COFFEE Saga Roasteryは楽天市場店(www.rakuten.co.jp/okcoffee)が主な販売先であるとの指摘を受け、楽天市場店の豆23商品で登録した(Shopifyストアは大阪の株式会社筒井商店の運営で別事業者)。清香園茶舗は判断待ちのまま。
 
 ### トナカイコーヒー／hello. coffee stand／03coffee／AND MORE COFFEE／江崎珈琲店／LAJAcoffee／珈茗爾 ほか
 - 見送り理由: トナカイ・hello. coffee stand・03coffeeは他店の豆を使用、AND MORE COFFEE・江崎珈琲店は豆の販売なし、LAJAcoffeeはふるさと納税返礼品のみ、珈茗爾は豆の産地・価格情報なし。

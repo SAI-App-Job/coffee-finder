@@ -1278,6 +1278,8 @@ SOURCE_FILES = {
     # 住所を確認して登録(宮崎県)
     "恋ヶ浦コーヒーロースト": "data_koigauracoffee.json",
     # FC店を除き本店のみ登録(香川県)
+    # 楽天市場店を主な販売先として登録(佐賀県)
+    "OK COFFEE Saga Roastery": "data_okcoffee.json",
 }
 
 
