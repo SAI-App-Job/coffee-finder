@@ -1275,6 +1275,8 @@ SOURCE_FILES = {
     # 住所を公式サイトで確認して登録(佐賀県)
     # 住所をInstagramで確認して登録(長崎県)
     "Talk about coffee": "data_talkaboutcoffee.json",
+    # 住所を確認して登録(宮崎県)
+    "恋ヶ浦コーヒーロースト": "data_koigauracoffee.json",
 }
 
 

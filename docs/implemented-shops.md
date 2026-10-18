@@ -5,7 +5,7 @@
 `scraper/manual/shops/`配下、それ以外は`scraper/scrape_*.py`で自動取得。
 実装を見送った店舗は`docs/not-implementable-shops.md`を参照。
 
-合計1477店舗・23972商品(生成日: 2026-10-18)。
+合計1478店舗・23986商品(生成日: 2026-10-18)。
 
 再生成コマンド:
 ```
@@ -288,6 +288,7 @@ aggregate_shops.py実行後の`git diff --staged --quiet || git commit`が該当
 | CHICCHI COFFEE | 宮崎市西池町2-8 久田アパート1F | BASE | 17 |
 | レイドバック珈琲 | 宮崎市曽師町54-2 | BASE | 6 |
 | らくがき珈琲(RAKUGAKI COFFEE) | 宮崎市大塚町窪田3321番地日高ビル106号 | STORES(手動) | 2 |
+| 恋ヶ浦コーヒーロースト | 串間市大納2608-1 | BASE | 14 |
 | BEAR BEANS COFFEE | 小林市細野2287-2 | BASE | 5 |
 | Wonderful World 珈琲 | 都城市郡元町3332-8 | STORES(手動) | 7 |
 | THE ROASTERY 焙煎門 | 都城市山田町中霧島3292-4 | 手動 | 13 |
