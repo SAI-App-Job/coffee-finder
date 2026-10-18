@@ -1,0 +1,90 @@
+{
+  "shop": {
+    "name": "STRINGS COFFEE ROASTERS",
+    "url": "http://stringscoffee.com/",
+    "address": "島根県出雲市武志町764-1",
+    "prefecture": "島根県",
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "last_verified_at": "2026-10-19",
+    "source_note": "STORES.jpの公式ショップ(https://stringscoffee.stores.jp/)の商品ページをブラウザfetch()で2026-10-19に確認。ABOUTに「その豆の特徴に合わせ、丁寧にじっくりと焙煎したコーヒー」と記載、公式サイトにオランダ産ギーセン焙煎機の記載。住所は特定商取引法に基づく表示。豆の4商品(各200g)はすべて完売。ご要望に応じて100g単位の注文も可能と記載。",
+    "id": "strings-coffee-roasters",
+    "instagram_url": null,
+    "google_maps_query": "STRINGS COFFEE ROASTERS 島根県出雲市武志町764-1",
+    "tel": null,
+    "hours": null,
+    "shop_type": "single_location",
+    "data_source": "manual",
+    "lat": 35.387716,
+    "lng": 132.777553,
+    "nearest_station": {
+      "name": "武志",
+      "lines": [
+        "一畑電車北松江線"
+      ],
+      "distance_m": 390,
+      "walk_min": 5
+    }
+  },
+  "products": [
+    {
+      "raw_name": "ORIGINAL BLEND 200g",
+      "category": "ブレンド",
+      "originCountry": null,
+      "processingMethod": null,
+      "roast": null,
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1100,
+      "weightG": 200,
+      "stockStatus": "一時的に品切れ",
+      "productUrl": "https://stringscoffee.stores.jp/items/548d435a3cd482b0ce0038e5",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "SPECIAL BLEND 200g",
+      "category": "ブレンド",
+      "originCountry": null,
+      "processingMethod": null,
+      "roast": null,
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1200,
+      "weightG": 200,
+      "stockStatus": "一時的に品切れ",
+      "productUrl": "https://stringscoffee.stores.jp/items/548d43b5391bb3266d000f96",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "MOCA BLEND 200g",
+      "category": "ブレンド",
+      "originCountry": null,
+      "processingMethod": null,
+      "roast": null,
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1150,
+      "weightG": 200,
+      "stockStatus": "一時的に品切れ",
+      "productUrl": "https://stringscoffee.stores.jp/items/548d43e9391bb37aed000df2",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "MILD BLEND 200g",
+      "category": "ブレンド",
+      "originCountry": null,
+      "processingMethod": null,
+      "roast": null,
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1100,
+      "weightG": 200,
+      "stockStatus": "一時的に品切れ",
+      "productUrl": "https://stringscoffee.stores.jp/items/548d43cf2b3492c200001e27",
+      "data_source": "manual"
+    }
+  ]
+}

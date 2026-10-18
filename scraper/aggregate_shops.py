@@ -1266,6 +1266,8 @@ SOURCE_FILES = {
     "おうちカフェ マロン": "data_maroncoffee.json",
     "松尾コーヒー": "data_matsuocoffee.json",
     "nai": "data_nai.json",
+    # 全商品完売で見送っていた店の登録(和歌山県)
+    "Blooming Coffee": "data_bloomingcoffee.json",
 }
 
 

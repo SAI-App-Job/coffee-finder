@@ -5,7 +5,7 @@
 `scraper/manual/shops/`配下、それ以外は`scraper/scrape_*.py`で自動取得。
 実装を見送った店舗は`docs/not-implementable-shops.md`を参照。
 
-合計1470店舗・23914商品(生成日: 2026-10-18)。
+合計1472店舗・23927商品(生成日: 2026-10-18)。
 
 再生成コマンド:
 ```
@@ -1251,6 +1251,7 @@ aggregate_shops.py実行後の`git diff --staged --quiet || git commit`が該当
 | 栗栗珈琲 | 益田市あけぼの西町8-6 | Ocnk | 11 |
 | ふじひろ珈琲 | 出雲市多伎町口田儀834-1 | カラーミー | 14 |
 | Azu.coffee roastery | 出雲市多伎町多岐157-1 キララ多伎西側テナント | BASE | 19 |
+| STRINGS COFFEE ROASTERS | 出雲市武志町764-1 | STORES(手動) | 4 |
 | CAFFE VITA | 松江市学園2-5-3 | 独自カート(静的HTML+PHP) | 13 |
 | 焙煎珈琲工房 梢庵 | 松江市玉湯町林223-3 | Shopify | 12 |
 | 服部珈琲工房 | 松江市西川津町4003番地BSマンション1F | カラーミー | 4 |
@@ -1733,6 +1734,7 @@ aggregate_shops.py実行後の`git diff --staged --quiet || git commit`が該当
 | 珈琲もくれん | 〒640-8125 和歌山市島崎町3-27 | BASE | 17 |
 | マルキ珈琲株式会社 MARKEY'S COFFEE | 〒640-8412 和歌山市狐島598-1 | 手動 | 3 |
 | 手網焙煎 歩里人珈琲 Po-rito Coffee | 〒649-7167 伊都郡かつらぎ町大字移218 | Shopify | 1 |
+| Blooming Coffee | 伊都郡かつらぎ町丁ノ町2247-11 | BASE | 9 |
 | KAMIN COFFEE ROASTERS | 岩出市宮60-1 | STORES(手動) | 19 |
 | タウンコーヒー | 岩出市荊本235 | カラーミー | 55 |
 | モリカワ | 田辺市城山台2-10 | 独自カート | 49 |
