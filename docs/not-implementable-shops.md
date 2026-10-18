@@ -3019,3 +3019,14 @@ docs/scraping-progress.md「栃木県再調査」冒頭の教訓セクション�
 
 ### LIB COFFEE IMARI／KABESHIMA COFFEE STAND／Moc Coffee／Fellow Coffee／自家焙煎珈琲 goen／とのみの HOKAO COFFEE／kuyuru coffee ootakara
 - 見送り理由: 自家焙煎は確認できるが、豆の販売・価格・焙煎場所の確認が取れない。
+
+## 宮崎県再調査(2026-10-18)
+
+### mine coffee(宮崎市)／恋ヶ浦コーヒーロースト(串間市)
+- 見送り理由: 自家焙煎は確認できるが、店舗の住所が市までしか確認できない(BASE・ふるさと納税の事業者住所は実店舗でない)。
+
+### COFFEE ROASTER HAMASAKI／塒珈琲／ヒノマルコーヒー／3106 COFFEE & ROASTERY／Dear COFFEE ROASTERS／THANKS COFFEE／延岡焙煎所／珈琲専科 批呂／CAPTAIN COOK 都城店／ZK coffee lab. ほか
+- 見送り理由: 自家焙煎は確認できる(または可能性が高い)が、豆の価格・通販の情報が確認できない。HAMASAKIは公式サイトが取得できない。延岡焙煎所は「自家焙煎」の明記が弱い。CAPTAIN COOKは3店舗のチェーン。
+
+### 自家焙煎珈琲エルザ／Cuma Coffee Roaster／Answer Coffee／ぽけっと都城
+- 見送り理由: エルザは公式のカートが404のまま価格情報なし、Cumaは店舗営業を2025-03で終了、Answer CoffeeはRegolith Coffeeの豆を使用、ぽけっと都城はふるさと納税(ドリップバッグ)のみ。

@@ -34395,5 +34395,278 @@
     ],
     "lat": 33.25919,
     "lng": 130.298963
+  },
+  {
+    "name": "喫茶バンビ",
+    "url": "https://bambicoffee.base.shop/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "宮崎県延岡市本小路64",
+    "prefecture": "宮崎県",
+    "hours": null,
+    "map_query": "喫茶バンビ",
+    "nearest_station": {
+      "name": "延岡",
+      "lines": [
+        "JR日豊本線"
+      ],
+      "distance_m": 1340,
+      "walk_min": 17
+    },
+    "last_scraped_at": "2026-10-18T12:29:42.286952+00:00",
+    "lat": 32.582145,
+    "lng": 131.661605
+  },
+  {
+    "name": "BEAR BEANS COFFEE",
+    "url": "https://bearbeans.base.shop/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "宮崎県小林市細野2287-2",
+    "prefecture": "宮崎県",
+    "hours": null,
+    "map_query": "BEAR BEANS COFFEE",
+    "nearest_station": {
+      "name": "広原",
+      "lines": [
+        "JR吉都線"
+      ],
+      "distance_m": 3440,
+      "walk_min": 43
+    },
+    "last_scraped_at": "2026-10-18T12:29:42.286952+00:00",
+    "lat": 31.961666,
+    "lng": 130.948774
+  },
+  {
+    "name": "Calmness of Beauty",
+    "url": "https://cob.base.shop/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "宮崎県宮崎市江平東町9-12 Lビル102号",
+    "prefecture": "宮崎県",
+    "hours": null,
+    "map_query": "Calmness of Beauty",
+    "nearest_station": {
+      "name": "宮崎",
+      "lines": [
+        "JR日豊本線"
+      ],
+      "distance_m": 1110,
+      "walk_min": 14
+    },
+    "last_scraped_at": "2026-10-18T12:29:42.286952+00:00",
+    "lat": 31.925392,
+    "lng": 131.429084
+  },
+  {
+    "name": "CHICCHI COFFEE",
+    "url": "https://chicoffee.thebase.in/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "宮崎県宮崎市西池町2-8 久田アパート1F",
+    "prefecture": "宮崎県",
+    "hours": null,
+    "map_query": "CHICCHI COFFEE",
+    "nearest_station": {
+      "name": "宮崎",
+      "lines": [
+        "JR日豊本線"
+      ],
+      "distance_m": 1360,
+      "walk_min": 17
+    },
+    "last_scraped_at": "2026-10-18T12:29:42.286952+00:00",
+    "lat": 31.921443,
+    "lng": 131.419227
+  },
+  {
+    "name": "GARAGE COFFEE",
+    "url": "https://garagecoffee.official.ec/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "宮崎県宮崎市広島2-6-14 中川ビル",
+    "prefecture": "宮崎県",
+    "hours": null,
+    "map_query": "GARAGE COFFEE",
+    "nearest_station": {
+      "name": "宮崎",
+      "lines": [
+        "JR日豊本線"
+      ],
+      "distance_m": 380,
+      "walk_min": 5
+    },
+    "last_scraped_at": "2026-10-18T12:29:42.286952+00:00",
+    "lat": 31.914732,
+    "lng": 131.428098
+  },
+  {
+    "name": "日向珈琲",
+    "url": "https://store.hyuga.coffee/",
+    "platform": "Shopify",
+    "shop_type": "single_location",
+    "robots_txt_status": "許可(Shopify標準。/products.jsonはDisallowされていない)",
+    "address": "宮崎県日向市鶴町1-7-1",
+    "prefecture": "宮崎県",
+    "hours": null,
+    "map_query": "日向珈琲",
+    "nearest_station": {
+      "name": "日向市",
+      "lines": [
+        "JR日豊本線"
+      ],
+      "distance_m": 80,
+      "walk_min": 1
+    },
+    "last_scraped_at": "2026-10-18T12:29:42.286952+00:00",
+    "lat": 32.426306,
+    "lng": 131.628496
+  },
+  {
+    "name": "KAWASEMI COFFEE",
+    "url": "https://kawasemi8.base.shop/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "宮崎県延岡市大貫町3丁目754-1",
+    "prefecture": "宮崎県",
+    "hours": null,
+    "map_query": "KAWASEMI COFFEE",
+    "nearest_station": {
+      "name": "延岡",
+      "lines": [
+        "JR日豊本線"
+      ],
+      "distance_m": 2460,
+      "walk_min": 31
+    },
+    "last_scraped_at": "2026-10-18T12:29:42.286952+00:00",
+    "lat": 32.573469,
+    "lng": 131.654983
+  },
+  {
+    "name": "レイドバック珈琲",
+    "url": "https://lbcoffee.official.ec/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "宮崎県宮崎市曽師町54-2",
+    "prefecture": "宮崎県",
+    "hours": null,
+    "map_query": "レイドバック珈琲",
+    "nearest_station": {
+      "name": "宮崎",
+      "lines": [
+        "JR日豊本線"
+      ],
+      "distance_m": 990,
+      "walk_min": 12
+    },
+    "last_scraped_at": "2026-10-18T12:29:42.286952+00:00",
+    "lat": 31.910972,
+    "lng": 131.440816
+  },
+  {
+    "name": "THE ROSA COFFEE",
+    "url": "https://www.rosacoffee.jp/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "宮崎県宮崎市旭1-3-11",
+    "prefecture": "宮崎県",
+    "hours": null,
+    "map_query": "THE ROSA COFFEE",
+    "nearest_station": {
+      "name": "宮崎",
+      "lines": [
+        "JR日豊本線"
+      ],
+      "distance_m": 1860,
+      "walk_min": 23
+    },
+    "last_scraped_at": "2026-10-18T12:29:42.286952+00:00",
+    "lat": 31.916501,
+    "lng": 131.412348
+  },
+  {
+    "name": "THE ROASTERY 焙煎門",
+    "url": "https://coffee.trb-lab.com/",
+    "instagram_url": null,
+    "platform": "独自サイト(公開API /api/products から取得)",
+    "shop_type": "single_location",
+    "address": "宮崎県都城市山田町中霧島3292-4",
+    "prefecture": "宮崎県",
+    "hours": null,
+    "map_query": "THE ROASTERY 焙煎門 宮崎県都城市山田町中霧島3292-4",
+    "nearest_station": {
+      "name": "谷頭",
+      "lines": [
+        "JR吉都線"
+      ],
+      "distance_m": 2130,
+      "walk_min": 27
+    },
+    "data_source": "manual",
+    "source_note": "公式サイト(https://coffee.trb-lab.com/)の公開商品API(/api/products)を識別可能なUAで取得し2026-10-18に確認。サイトに「自家焙煎コーヒー専門店」「少量ずつ焙煎」と記載、住所は公式サイトの店舗案内(テイクアウト専門)。豆(roasted_beans)のうち100gの豆のまま価格を採用。飲みくらべセット・ギフト・ドリップバッグは除外。以前はGitHub Actionsからの403で見送り。",
+    "last_verified_at": "2026-10-18",
+    "locations": [
+      {
+        "label": null,
+        "address": "宮崎県都城市山田町中霧島3292-4",
+        "prefecture": "宮崎県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "THE ROASTERY 焙煎門 宮崎県都城市山田町中霧島3292-4",
+        "lat": 31.795783,
+        "lng": 131.032756
+      }
+    ],
+    "lat": 31.795783,
+    "lng": 131.032756
+  },
+  {
+    "name": "Wonderful World 珈琲",
+    "url": "https://wonderfulworldcoffee.com/",
+    "instagram_url": null,
+    "platform": "STORES.jp(独自ドメイン、ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "宮崎県都城市郡元町3332-8",
+    "prefecture": "宮崎県",
+    "hours": null,
+    "map_query": "Wonderful World 珈琲 宮崎県都城市郡元町3332-8",
+    "nearest_station": {
+      "name": "都城",
+      "lines": [
+        "JR吉都線",
+        "JR日豊本線"
+      ],
+      "distance_m": 2400,
+      "walk_min": 30
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://wonderfulworldcoffee.shop/)の商品ページをブラウザfetch()で2026-10-18に確認。ABOUTにロースター竹下の記載、公式サイトのSHOP MENUにスペシャルティコーヒー豆をローストと記載、店主ブログに焙煎機導入の記事。住所は特定商取引法に基づく表示。同一銘柄は100g/250g/500g/1kg/卸5kgが別商品のため100g(豆のまま)を代表に採用。デカフェは通販発送予約(11月5日以降発送予定)で現在は在庫なし。ギフト・定期・セット・卸・器具・カフェラテベース・アイスコーヒー・セミナー等は除外。",
+    "last_verified_at": "2026-10-18",
+    "locations": [
+      {
+        "label": null,
+        "address": "宮崎県都城市郡元町3332-8",
+        "prefecture": "宮崎県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "Wonderful World 珈琲 宮崎県都城市郡元町3332-8",
+        "lat": 31.744803,
+        "lng": 131.097372
+      }
+    ],
+    "lat": 31.744803,
+    "lng": 131.097372
   }
 ]

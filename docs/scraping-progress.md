@@ -9279,3 +9279,22 @@ A群・B群の一部を、スクレイパー27店舗・STORES手動入力7店舗
 - LIB COFFEE IMARI・KABESHIMA COFFEE STAND・Moc Coffee・Fellow Coffee・自家焙煎珈琲 goen・とのみの HOKAO COFFEE・kuyuru coffee ootakara: 豆の販売・価格・焙煎の確認が取れない(B群)。
 
 - 影響: 新規6店舗・57商品を追加(1432→1438店舗、23474→23531商品)。既存店舗・商品への意図しない変更が無いことをisolation-merge検証で確認済み。全店舗をgeocode-shops.js・add-nearest-station.jsで処理。
+
+## 宮崎県再調査(2026-10-18)
+
+宮崎県は既に4店舗が実装済み。新規発掘(サブエージェントによる食べログ・Retty・WalkerPlus・のべおかん・MONE・TownMiyazaki・Wayback突き合わせ)と、技術的な理由だけで見送っていた店の再検証で、スクレイパー9店舗・手動入力2店舗の計11店舗を実装した。
+
+### 通常スクレイプ(9店舗)
+- **Shopify**: 日向珈琲(日向市、44。販売中10件＋直近1年以内に公開した完売34件に絞った。1年より古い完売品は約100件を収録していない。セット・福箱・定期便・業務用・インフューズドの雲南3種を除外。最小重量を代表、Sudan Rumeは50g・Janson 925は90g)。
+- **BASE**: THE ROSA COFFEE(宮崎市、8。100g、焙煎所の旭1-3-11を採用、完売2件。以前のSSL証明書不一致での見送りは解消)・Calmness of Beauty(宮崎市、5。フィルターロースト3銘柄は100g、ダークロースト2銘柄は200gのみ)・GARAGE COFFEE(宮崎市、11。100g、住所は特商法の1号店)・レイドバック珈琲(宮崎市、6。100g、住所は特商法の曽師町54-2)・CHICCHI COFFEE(宮崎市、17。100g、BASE特商法がBASE社の住所のため食べログ等の西池町2-8を採用、バニラインフューズドのブレンド2026 "Tiramisu"を除外。以前の見送りは解消)・BEAR BEANS COFFEE(小林市、5。100g)・喫茶バンビ(延岡市、1。180g・送料込み¥1,500のバンビブレンドのみ)・KAWASEMI COFFEE(延岡市、3。150g、住所は特商法の野地町ではなく店舗所在地の大貫町3丁目754-1を採用)。
+
+### 手動入力・独自API(2店舗)
+- **STORES.jp(ブラウザfetch())**: Wonderful World 珈琲(都城市、7。100g、デカフェは11月発送予定の予約で品切れ扱い)。
+- **独自サイトの公開API(/api/products)**: THE ROASTERY 焙煎門(都城市、13。100g、住所は公式サイト。GitHub Actionsからの403で見送っていたが、ローカルでは200で取得可能)。
+
+### 見送り・保留
+- mine coffee(宮崎市、STORES)・恋ヶ浦コーヒーロースト(串間市、BASE): 住所が市までしか確認できない。
+- COFFEE ROASTER HAMASAKI: 公式サイトが取得できず現況未確認。塒珈琲・ヒノマルコーヒー・3106 COFFEE & ROASTERY・Dear COFFEE ROASTERS・THANKS COFFEE・延岡焙煎所ほか: 店頭のみで価格が確認できない。
+- 自家焙煎珈琲エルザ・Cuma Coffee Roaster: 状況変化なし・営業終了。Answer Coffee: Regolith(大分)の豆を使用。
+
+- 影響: 新規11店舗・120商品を追加(1438→1449店舗、23531→23651商品)。既存店舗・商品への意図しない変更が無いことをisolation-merge検証で確認済み。全店舗をgeocode-shops.js・add-nearest-station.jsで処理。

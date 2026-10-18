@@ -5,7 +5,7 @@
 `scraper/manual/shops/`配下、それ以外は`scraper/scrape_*.py`で自動取得。
 実装を見送った店舗は`docs/not-implementable-shops.md`を参照。
 
-合計1438店舗・23531商品(生成日: 2026-10-18)。
+合計1449店舗・23651商品(生成日: 2026-10-18)。
 
 再生成コマンド:
 ```
@@ -277,10 +277,21 @@ aggregate_shops.py実行後の`git diff --staged --quiet || git commit`が該当
 
 | 店舗名 | 所在地 | 方式 | 件数 |
 |---|---|---|---|
+| KAWASEMI COFFEE | 延岡市大貫町3丁目754-1 | BASE | 3 |
 | Cafe Viola | 延岡市富美山町83-421 | BASE | 4 |
+| 喫茶バンビ | 延岡市本小路64 | BASE | 1 |
 | なかはら珈琲工場 | 宮崎市阿波岐原町坊ノ下2852-1 | 手動 | 22 |
+| THE ROSA COFFEE | 宮崎市旭1-3-11 | BASE | 8 |
 | 恋史郎コーヒー | 宮崎市橘通東3-3-8カブトビル102 | BASE | 0 |
+| GARAGE COFFEE | 宮崎市広島2-6-14 中川ビル | BASE | 11 |
+| Calmness of Beauty | 宮崎市江平東町9-12 Lビル102号 | BASE | 5 |
+| CHICCHI COFFEE | 宮崎市西池町2-8 久田アパート1F | BASE | 17 |
+| レイドバック珈琲 | 宮崎市曽師町54-2 | BASE | 6 |
 | らくがき珈琲(RAKUGAKI COFFEE) | 宮崎市大塚町窪田3321番地日高ビル106号 | STORES(手動) | 2 |
+| BEAR BEANS COFFEE | 小林市細野2287-2 | BASE | 5 |
+| Wonderful World 珈琲 | 都城市郡元町3332-8 | STORES(手動) | 7 |
+| THE ROASTERY 焙煎門 | 都城市山田町中霧島3292-4 | 手動 | 13 |
+| 日向珈琲 | 日向市鶴町1-7-1 | Shopify | 44 |
 
 ### 宮城県
 

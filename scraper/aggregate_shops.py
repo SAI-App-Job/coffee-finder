@@ -1241,6 +1241,16 @@ SOURCE_FILES = {
     "468 SiMBA Coffee": "data_468simbacoffee.json",
     "いづみや珈琲": "data_izumiyasaga.json",
     "みちくさ COFFEE ROASTER & DAREKA COFFEE STAND": "data_mitikusacoffee.json",
+    # 宮崎県の再調査(新規発掘)
+    "喫茶バンビ": "data_bambicoffee.json",
+    "BEAR BEANS COFFEE": "data_bearbeanscoffee.json",
+    "Calmness of Beauty": "data_calmnessofbeauty.json",
+    "CHICCHI COFFEE": "data_chicchicoffee.json",
+    "GARAGE COFFEE": "data_garagecoffee.json",
+    "日向珈琲": "data_hyugacoffee.json",
+    "KAWASEMI COFFEE": "data_kawasemicoffee.json",
+    "レイドバック珈琲": "data_laidbackcoffee.json",
+    "THE ROSA COFFEE": "data_therosacoffee.json",
 }
 
 
