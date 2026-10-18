@@ -1258,6 +1258,14 @@ SOURCE_FILES = {
     "中島九条珈琲": "data_nakashimakyujocoffee.json",
     "Rainyday's Coffee": "data_rainydayscoffee.json",
     "Regolith Coffee": "data_regolithcoffee.json",
+    # 長崎県の再調査(新規発掘)
+    "珈琲人町": "data_coffeehitomachi.json",
+    "COFFEE MUSUME": "data_coffeemusume.json",
+    "GOOD COFFEE LABO": "data_goodcoffeelabo.json",
+    "KARIOMONS COFFEE": "data_kariomonscoffee.json",
+    "おうちカフェ マロン": "data_maroncoffee.json",
+    "松尾コーヒー": "data_matsuocoffee.json",
+    "nai": "data_nai.json",
 }
 
 

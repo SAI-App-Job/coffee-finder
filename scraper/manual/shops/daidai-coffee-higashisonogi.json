@@ -1,0 +1,75 @@
+{
+  "shop": {
+    "name": "橙 daidai coffee",
+    "url": "https://daidai-coffee.square.site/",
+    "address": "長崎県東彼杵郡東彼杵町千綿宿郷1003-2",
+    "prefecture": "長崎県",
+    "platform": "Square Online(ブラウザで取得)",
+    "last_verified_at": "2026-10-18",
+    "source_note": "ネットショップ(https://daidai-coffee.square.site/)の商品一覧をブラウザで2026-10-18に確認。お店紹介に「珈琲豆の焙煎・販売が主の専門店」「ご注文を受けてからの焙煎豆のみをお届け」と記載。住所は特定商取引法に基づく表記。100gの税込価格を採用。ZUBORA(個包装)・5種お試しセットは除外。",
+    "id": "daidai-coffee-higashisonogi",
+    "instagram_url": null,
+    "google_maps_query": "橙 daidai coffee 長崎県東彼杵郡東彼杵町千綿宿郷1003-2",
+    "tel": null,
+    "hours": null,
+    "shop_type": "single_location",
+    "data_source": "manual",
+    "lat": 33.031453,
+    "lng": 129.939656,
+    "nearest_station": {
+      "name": "千綿",
+      "lines": [
+        "JR大村線"
+      ],
+      "distance_m": 2120,
+      "walk_min": 27
+    }
+  },
+  "products": [
+    {
+      "raw_name": "ケニア カリアイニ AA 100g",
+      "category": "ストレート",
+      "originCountry": "ケニア",
+      "processingMethod": null,
+      "roast": null,
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 900,
+      "weightG": 100,
+      "stockStatus": "販売中",
+      "productUrl": "https://daidai-coffee.square.site/product/-aa-100g-/ZNDZSCEL465IPN562SFCSOA7#%E3%82%B1%E3%83%8B%E3%82%A2%20%E3%82%AB%E3%83%AA%E3%82%A2%E3%82%A4%E3%83%8B%20AA%20100g",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "エチオピア イルガチェフェ G1 100g",
+      "category": "ストレート",
+      "originCountry": "エチオピア",
+      "processingMethod": null,
+      "roast": null,
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 900,
+      "weightG": 100,
+      "stockStatus": "販売中",
+      "productUrl": "https://daidai-coffee.square.site/product/-g-1-100g-/IB632XHQ2UH7KCVYHM5OCEGN#%E3%82%A8%E3%83%81%E3%82%AA%E3%83%94%E3%82%A2%20%E3%82%A4%E3%83%AB%E3%82%AC%E3%83%81%E3%82%A7%E3%83%95%E3%82%A7%20G1%20100g",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "モカ マタリ 100g",
+      "category": "ストレート",
+      "originCountry": "イエメン",
+      "processingMethod": null,
+      "roast": null,
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 800,
+      "weightG": 100,
+      "stockStatus": "販売中",
+      "productUrl": "https://daidai-coffee.square.site/product/-100g-/3#%E3%83%A2%E3%82%AB%20%E3%83%9E%E3%82%BF%E3%83%AA%20100g",
+      "data_source": "manual"
+    }
+  ]
+}
