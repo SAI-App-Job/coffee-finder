@@ -1226,6 +1226,10 @@ SOURCE_FILES = {
     "クエイル珈琲": "data_quailcoffee.json",
     "徳島ブラジルコーヒ": "data_tokushimabrazilcoffee.json",
     "TOKUSHIMA COFFEE WORKS": "data_tokushimacoffeeworks.json",
+    # 高知県の再調査(新規発掘)
+    "ハルノ珈琲": "data_harunocoffee.json",
+    "JOKI COFFEE": "data_jokicoffee.json",
+    "くろしお珈琲": "data_kuroshiocoffee.json",
 }
 
 

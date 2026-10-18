@@ -33855,5 +33855,145 @@
     ],
     "lat": 34.006664,
     "lng": 134.583344
+  },
+  {
+    "name": "ハルノ珈琲",
+    "url": "https://www.haruno-coffee.shop/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "高知県高知市十津3-1-19",
+    "prefecture": "高知県",
+    "hours": null,
+    "map_query": "ハルノ珈琲",
+    "nearest_station": {
+      "name": "桟橋通五丁目",
+      "lines": [
+        "土佐電桟橋線"
+      ],
+      "distance_m": 2580,
+      "walk_min": 32
+    },
+    "last_scraped_at": "2026-10-18T11:42:05.952261+00:00",
+    "lat": 33.523726,
+    "lng": 133.572346
+  },
+  {
+    "name": "JOKI COFFEE",
+    "url": "https://jokicoffee.shop-pro.jp/",
+    "platform": "カラーミーショップ(shop-pro.jp)",
+    "shop_type": "single_location",
+    "robots_txt_status": "許可(他のshop-pro.jp系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "高知県長岡郡本山町本山521-1",
+    "prefecture": "高知県",
+    "hours": null,
+    "map_query": "JOKI COFFEE",
+    "nearest_station": {
+      "name": "大杉",
+      "lines": [
+        "JR土讃線"
+      ],
+      "distance_m": 7460,
+      "walk_min": 93
+    },
+    "last_scraped_at": "2026-10-18T11:42:05.952261+00:00",
+    "lat": 33.755215,
+    "lng": 133.584104
+  },
+  {
+    "name": "くろしお珈琲",
+    "url": "https://kuroshiocoffee.com/",
+    "platform": "WordPress + Welcart",
+    "shop_type": "single_location",
+    "robots_txt_status": "許可(WordPress標準。/wp-admin/ のみDisallow。識別可能なUser-Agentを使用)",
+    "address": "高知県高知市長浜567-4",
+    "prefecture": "高知県",
+    "hours": null,
+    "map_query": "くろしお珈琲",
+    "nearest_station": {
+      "name": "桟橋通五丁目",
+      "lines": [
+        "土佐電桟橋線"
+      ],
+      "distance_m": 4190,
+      "walk_min": 52
+    },
+    "last_scraped_at": "2026-10-18T11:42:05.952261+00:00",
+    "lat": 33.502789,
+    "lng": 133.549249
+  },
+  {
+    "name": "COFFEE plus+",
+    "url": "https://www.coffeeplus.jp/",
+    "instagram_url": null,
+    "platform": "Jimdo(価格表のみ・カートなし。店頭販売/公式LINE案内)",
+    "shop_type": "single_location",
+    "address": "高知県高知市東久万193-1",
+    "prefecture": "高知県",
+    "hours": "10:00-18:00、定休日：月曜(日曜不定休)",
+    "map_query": "COFFEE plus+ 高知県高知市東久万193-1",
+    "nearest_station": {
+      "name": "入明",
+      "lines": [
+        "JR土讃線"
+      ],
+      "distance_m": 950,
+      "walk_min": 12
+    },
+    "data_source": "manual",
+    "source_note": "全国再調査(高知県)で発見。公式サイト(https://www.coffeeplus.jp/coffeebeans/ 、トップページ、ブログ)を2026-10-15に確認。「自家焙煎」の語は見つからないが、店主(林竜哉、SCAJ認定コーヒーマイスター)が焙煎を行う旨はブログ(https://www.coffeeplus.jp/2026/10/04/エチオピアの試作スタート/ および https://www.coffeeplus.jp/2026/10/11/エチオピア-の試作報告/ )の試作焙煎の記載、豆ページの「焙煎日から2週間以内の豆だけを販売」の記載による。コーヒー豆ページは「2026年5月現在」の表記だが、トップページのお知らせは2026.9.12(ブラジル発売)まで更新されている。ネット通販のカートは無く、在庫表示も無いため全品「販売中」として扱った。コーヒーバッグ・コーヒーギフト・珈と茶(組み合わせギフト)は除外。robots.txtのCrawl-Delay 5秒を守って取得。",
+    "last_verified_at": "2026-10-15",
+    "locations": [
+      {
+        "label": null,
+        "address": "高知県高知市東久万193-1",
+        "prefecture": "高知県",
+        "hours": "10:00-18:00、定休日：月曜(日曜不定休)",
+        "tel": "088-856-8288",
+        "is_headquarters": false,
+        "map_query": "COFFEE plus+ 高知県高知市東久万193-1",
+        "lat": 33.575774,
+        "lng": 133.529063
+      }
+    ],
+    "lat": 33.575774,
+    "lng": 133.529063
+  },
+  {
+    "name": "焙煎工房こやま",
+    "url": "https://fzc2hrbuokzn8acafvmy.stores.jp/",
+    "instagram_url": null,
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "高知県高知市介良乙3026-1",
+    "prefecture": "高知県",
+    "hours": null,
+    "map_query": "焙煎工房こやま 高知県高知市介良乙3026-1",
+    "nearest_station": {
+      "name": "鹿児",
+      "lines": [
+        "土佐電後免線"
+      ],
+      "distance_m": 1170,
+      "walk_min": 15
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://fzc2hrbuokzn8acafvmy.stores.jp/)の商品ページをブラウザfetch()で2026-10-15に確認。ストア名「焙煎工房こやま」、商品説明に「焙煎歴50年」「冷めても味が悪くなりにくい焙煎」と記載。住所は特定商取引法に基づく表示。全商品200g(豆のまま)の価格を採用。コーヒーバッグは除外。",
+    "last_verified_at": "2026-10-15",
+    "locations": [
+      {
+        "label": null,
+        "address": "高知県高知市介良乙3026-1",
+        "prefecture": "高知県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "焙煎工房こやま 高知県高知市介良乙3026-1",
+        "lat": 33.55923,
+        "lng": 133.60516
+      }
+    ],
+    "lat": 33.55923,
+    "lng": 133.60516
   }
 ]

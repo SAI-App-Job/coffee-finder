@@ -1,0 +1,75 @@
+{
+  "shop": {
+    "name": "焙煎工房こやま",
+    "url": "https://fzc2hrbuokzn8acafvmy.stores.jp/",
+    "address": "高知県高知市介良乙3026-1",
+    "prefecture": "高知県",
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "last_verified_at": "2026-10-15",
+    "source_note": "STORES.jpの公式ショップ(https://fzc2hrbuokzn8acafvmy.stores.jp/)の商品ページをブラウザfetch()で2026-10-15に確認。ストア名「焙煎工房こやま」、商品説明に「焙煎歴50年」「冷めても味が悪くなりにくい焙煎」と記載。住所は特定商取引法に基づく表示。全商品200g(豆のまま)の価格を採用。コーヒーバッグは除外。",
+    "id": "roasting-koubou-koyama",
+    "instagram_url": null,
+    "google_maps_query": "焙煎工房こやま 高知県高知市介良乙3026-1",
+    "tel": null,
+    "hours": null,
+    "shop_type": "single_location",
+    "data_source": "manual",
+    "lat": 33.55923,
+    "lng": 133.60516,
+    "nearest_station": {
+      "name": "鹿児",
+      "lines": [
+        "土佐電後免線"
+      ],
+      "distance_m": 1170,
+      "walk_min": 15
+    }
+  },
+  "products": [
+    {
+      "raw_name": "こやまスペシャルブレンド 中深煎り 200g",
+      "category": "ブレンド",
+      "originCountry": null,
+      "processingMethod": null,
+      "roast": "中深煎り",
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1900,
+      "weightG": 200,
+      "stockStatus": "販売中",
+      "productUrl": "https://fzc2hrbuokzn8acafvmy.stores.jp/items/69984d19ea2af09989f25001",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "エチオピア イルガチェフェ イディド ナチュラル 中煎り 200g",
+      "category": "ストレート",
+      "originCountry": "エチオピア",
+      "processingMethod": "ナチュラル",
+      "roast": "中煎り",
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 2000,
+      "weightG": 200,
+      "stockStatus": "販売中",
+      "productUrl": "https://fzc2hrbuokzn8acafvmy.stores.jp/items/69984a0d1f0e5a83f2ae22a7",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "ブラジル キャラメラード(トレスPB) 中煎り 200g",
+      "category": "ストレート",
+      "originCountry": "ブラジル",
+      "processingMethod": null,
+      "roast": "中煎り",
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1800,
+      "weightG": 200,
+      "stockStatus": "販売中",
+      "productUrl": "https://fzc2hrbuokzn8acafvmy.stores.jp/items/69952745a7ffd464b2257a0f",
+      "data_source": "manual"
+    }
+  ]
+}
