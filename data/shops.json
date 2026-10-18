@@ -35402,5 +35402,42 @@
     ],
     "lat": 33.95731,
     "lng": 130.944061
+  },
+  {
+    "name": "GIFT COFFEE",
+    "url": "https://giftcoffee-1173.stores.jp/",
+    "instagram_url": null,
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "佐賀県佐賀市嘉瀬町扇町2315-12",
+    "prefecture": "佐賀県",
+    "hours": null,
+    "map_query": "GIFT COFFEE 佐賀県佐賀市嘉瀬町扇町2315-12",
+    "nearest_station": {
+      "name": "鍋島",
+      "lines": [
+        "JR長崎本線"
+      ],
+      "distance_m": 1380,
+      "walk_min": 17
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://giftcoffee-1173.stores.jp/)の商品ページをブラウザfetch()で2026-10-19に確認。ABOUTに「小さな焙煎小屋の小型焙煎機(直火式300g)で焙煎」、商品説明に「受注してから焙煎」と記載。住所はSTORESの特商法がSTORES社の住所のため、公式サイトのアクセス(Googleマップへのリンク)の〒840-0862 佐賀県佐賀市嘉瀬町扇町2315-12を採用。豆は100g(ブラジル・ペルー)のみ。ドリップバッグ(5個入)は除外。",
+    "last_verified_at": "2026-10-19",
+    "locations": [
+      {
+        "label": null,
+        "address": "佐賀県佐賀市嘉瀬町扇町2315-12",
+        "prefecture": "佐賀県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "GIFT COFFEE 佐賀県佐賀市嘉瀬町扇町2315-12",
+        "lat": 33.246666,
+        "lng": 130.26503
+      }
+    ],
+    "lat": 33.246666,
+    "lng": 130.26503
   }
 ]

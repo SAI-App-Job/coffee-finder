@@ -1,0 +1,60 @@
+{
+  "shop": {
+    "name": "GIFT COFFEE",
+    "url": "https://giftcoffee-1173.stores.jp/",
+    "address": "佐賀県佐賀市嘉瀬町扇町2315-12",
+    "prefecture": "佐賀県",
+    "lat": 33.246666,
+    "lng": 130.26503,
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "last_verified_at": "2026-10-19",
+    "source_note": "STORES.jpの公式ショップ(https://giftcoffee-1173.stores.jp/)の商品ページをブラウザfetch()で2026-10-19に確認。ABOUTに「小さな焙煎小屋の小型焙煎機(直火式300g)で焙煎」、商品説明に「受注してから焙煎」と記載。住所はSTORESの特商法がSTORES社の住所のため、公式サイトのアクセス(Googleマップへのリンク)の〒840-0862 佐賀県佐賀市嘉瀬町扇町2315-12を採用。豆は100g(ブラジル・ペルー)のみ。ドリップバッグ(5個入)は除外。",
+    "id": "gift-coffee-saga",
+    "instagram_url": null,
+    "google_maps_query": "GIFT COFFEE 佐賀県佐賀市嘉瀬町扇町2315-12",
+    "tel": null,
+    "hours": null,
+    "shop_type": "single_location",
+    "data_source": "manual",
+    "nearest_station": {
+      "name": "鍋島",
+      "lines": [
+        "JR長崎本線"
+      ],
+      "distance_m": 1380,
+      "walk_min": 17
+    }
+  },
+  "products": [
+    {
+      "raw_name": "【珈琲豆】ブラジル 100g",
+      "category": "ストレート",
+      "originCountry": "ブラジル",
+      "processingMethod": null,
+      "roast": "中深煎り",
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1700,
+      "weightG": 100,
+      "stockStatus": "販売中",
+      "productUrl": "https://giftcoffee-1173.stores.jp/items/6625be68c7a872021f6b8442",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "【珈琲豆】ペルー 100g",
+      "category": "ストレート",
+      "originCountry": "ペルー",
+      "processingMethod": null,
+      "roast": "中深煎り",
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1600,
+      "weightG": 100,
+      "stockStatus": "販売中",
+      "productUrl": "https://giftcoffee-1173.stores.jp/items/6625bbe4ba8c3d00681591eb",
+      "data_source": "manual"
+    }
+  ]
+}
