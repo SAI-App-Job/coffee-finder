@@ -35335,5 +35335,42 @@
     "last_scraped_at": "2026-10-18T17:19:05.087344+00:00",
     "lat": 33.263969,
     "lng": 130.320618
+  },
+  {
+    "name": "カフェ・ド・梵",
+    "url": "http://cafe-de-bon.jp/",
+    "instagram_url": null,
+    "platform": "静的HTML+独自カートCGI(通販ページから価格を取得)",
+    "shop_type": "single_location",
+    "address": "高知県高知市帯屋町1-14-33 1F",
+    "prefecture": "高知県",
+    "hours": null,
+    "map_query": "カフェ・ド・梵 高知県高知市帯屋町1-14-33 1F",
+    "nearest_station": {
+      "name": "堀詰",
+      "lines": [
+        "土佐電伊野線"
+      ],
+      "distance_m": 150,
+      "walk_min": 2
+    },
+    "data_source": "manual",
+    "source_note": "公式サイト(http://cafe-de-bon.jp/)の通販ページ(商品ページ shop000006〜15)を2026-10-19に確認。コーヒーのページに「梵では、直火焙煎でその原料の持つコクや風味を最も引き出せる美味しいポイントを常に探求し、カップテストを繰り返し」と記載。住所は公式サイトのフッター。商品ページの更新は2018年(©2011)、お知らせの最新は2020-09と古いが、通販カートはHTTP 200で応答しており、取扱商品一覧の価格は税込。単品は100g、ブレンドは200gの1サイズのみの販売。モカ・ハニー・プロセスは取扱商品一覧に載るが商品ページがなく除外。",
+    "last_verified_at": "2026-10-19",
+    "locations": [
+      {
+        "label": null,
+        "address": "高知県高知市帯屋町1-14-33 1F",
+        "prefecture": "高知県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "カフェ・ド・梵 高知県高知市帯屋町1-14-33 1F",
+        "lat": 33.560848,
+        "lng": 133.5392
+      }
+    ],
+    "lat": 33.560848,
+    "lng": 133.5392
   }
 ]

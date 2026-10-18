@@ -1270,6 +1270,7 @@ SOURCE_FILES = {
     "Blooming Coffee": "data_bloomingcoffee.json",
     # 取得できず保留していた店の登録(佐賀県)
     "ORIGIN COFFEE": "data_origincoffee.json",
+    # 現行性が不明で保留していた店の登録(高知県)
 }
 
 
