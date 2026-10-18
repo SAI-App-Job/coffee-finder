@@ -575,7 +575,7 @@ aggregate_shops.py実行後の`git diff --staged --quiet || git commit`が該当
 | いづみや珈琲 | 佐賀市兵庫南1丁目8-13 | カラーミー | 16 |
 | ORIGIN COFFEE | 佐賀市兵庫南4-12-10 エレガントビレッジ103 | BASE | 15 |
 | みちくさ COFFEE ROASTER & DAREKA COFFEE STAND | 佐賀市本庄町本庄167-11 | Shopify | 6 |
-| OK COFFEE Saga Roastery | 神埼郡吉野ヶ里町吉田243-11 | 楽天市場 | 23 |
+| OK COFFEE Saga Roastery | 神埼郡吉野ヶ里町吉田273-11 | 楽天市場 | 23 |
 | ARS OF COFFEE ROASTERS | 鳥栖市真木町2050-2 | STORES(手動) | 8 |
 | Grab coffee | 鳥栖市藤木町2288-4 | 手動 | 3 |
 

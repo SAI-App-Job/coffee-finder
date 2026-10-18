@@ -35520,7 +35520,7 @@
     "platform": "楽天市場",
     "shop_type": "single_location",
     "robots_txt_status": "実質許可とみなす(2026-10確認。rakuten.co.jp/item.rakuten.co.jpのrobots.txtは検索系パラメータ・一部パス等のみ禁止)",
-    "address": "佐賀県神埼郡吉野ヶ里町吉田243-11",
+    "address": "佐賀県神埼郡吉野ヶ里町吉田273-11",
     "prefecture": "佐賀県",
     "hours": null,
     "map_query": "OK COFFEE Saga Roastery",
@@ -35529,11 +35529,11 @@
       "lines": [
         "JR長崎本線"
       ],
-      "distance_m": 1020,
-      "walk_min": 13
+      "distance_m": 230,
+      "walk_min": 3
     },
     "last_scraped_at": "2026-10-18T18:29:14.527742+00:00",
-    "lat": 33.332336,
-    "lng": 130.406006
+    "lat": 33.32309,
+    "lng": 130.400681
   }
 ]

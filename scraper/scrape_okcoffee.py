@@ -20,7 +20,7 @@ IPコラボのブレンド(粉)が中心。佐賀の「OK COFFEE Saga Roastery�
  - 季節限定ブレンド AUTUMN は200g(seasonalblend001)。
  - シングルオリジンは各200g(ブラジル/コロンビアの「選べる」150gは1銘柄ずつに展開)。
 単品商品は SKU が無い(商品ページの価格 itemprop="price")。1kgの別ページ(*002)は代表重量でないため対象外。
-販売業者: 株式会社アイテク 佐賀県神埼郡吉野ヶ里町豆田1750-1。店舗の住所はショップ情報の「返送先」を採用。
+販売業者: 株式会社アイテク 佐賀県神埼郡吉野ヶ里町豆田1750-1。実店舗(OK COFFEE Saga Roastery、イートイン・テイクアウト)の住所はGoogleマップの店舗情報の〒842-0031 吉田273-11を採用(楽天ショップ情報の返送先は吉田243-11)。
 """
 
 import json
@@ -36,10 +36,10 @@ SHOP_INFO = {
     "name": "OK COFFEE Saga Roastery",
     "url": "https://www.rakuten.co.jp/okcoffee/",
     "platform": "楽天市場",
-    "address": "佐賀県神埼郡吉野ヶ里町吉田243-11",
+    "address": "佐賀県神埼郡吉野ヶ里町吉田273-11",
     "prefecture": "佐賀県",
     "robots_txt_status": "実質許可とみなす(2026-10確認。rakuten.co.jp/item.rakuten.co.jpのrobots.txtは検索系パラメータ・一部パス等のみ禁止)",
-    "source_note": "楽天市場店(https://www.rakuten.co.jp/okcoffee/)のショップカテゴリ「コーヒー豆」と各商品ページ(SKU情報)を2026-10-19に確認。住所はショップ情報の返送先",
+    "source_note": "楽天市場店(https://www.rakuten.co.jp/okcoffee/)のショップカテゴリ「コーヒー豆」と各商品ページ(SKU情報)を2026-10-19に確認。住所はGoogleマップの店舗情報(実店舗あり)",
     "last_verified_at": "2026-10-19",
 }
 
