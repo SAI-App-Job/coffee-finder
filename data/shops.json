@@ -35372,5 +35372,35 @@
     ],
     "lat": 33.560848,
     "lng": 133.5392
+  },
+  {
+    "name": "ふじ珈琲",
+    "url": "https://roast-fuji.com/",
+    "instagram_url": null,
+    "platform": "公式サイトの商品一覧(店頭販売、静的HTML)",
+    "shop_type": "single_location",
+    "address": "山口県下関市中之町1-14",
+    "prefecture": "山口県",
+    "hours": null,
+    "map_query": "ふじ珈琲 山口県下関市中之町1-14",
+    "nearest_station": null,
+    "data_source": "manual",
+    "source_note": "公式サイト(https://roast-fuji.com/)の商品一覧(内容量・価格つき15商品)を2026-10-19に確認。自家焙煎(ハンドピック→焙煎機の予熱→ロースト→窯出し→冷却→選別の工程を公開)、1985年創業の有限会社ふじ珈琲。住所は会社概要。オンライン販売(fujicoffee.net)は2026-07-31に終了し、店頭販売のみ。価格は100gの表示価格(税込表記かはサイトに明記なし。店頭で要確認)。サイトの更新は2023-05で古い。ふじMIXはSOLD OUT表示。以前Wayback(旧ネットショップ)の価格を参考にしていたが、現行の公式サイトの価格を採用。",
+    "last_verified_at": "2026-10-19",
+    "locations": [
+      {
+        "label": null,
+        "address": "山口県下関市中之町1-14",
+        "prefecture": "山口県",
+        "hours": null,
+        "tel": "083-249-6512",
+        "is_headquarters": false,
+        "map_query": "ふじ珈琲 山口県下関市中之町1-14",
+        "lat": 33.95731,
+        "lng": 130.944061
+      }
+    ],
+    "lat": 33.95731,
+    "lng": 130.944061
   }
 ]

@@ -5,7 +5,7 @@
 `scraper/manual/shops/`配下、それ以外は`scraper/scrape_*.py`で自動取得。
 実装を見送った店舗は`docs/not-implementable-shops.md`を参照。
 
-合計1474店舗・23952商品(生成日: 2026-10-18)。
+合計1475店舗・23967商品(生成日: 2026-10-18)。
 
 再生成コマンド:
 ```
@@ -696,6 +696,7 @@ aggregate_shops.py実行後の`git diff --staged --quiet || git commit`が該当
 |---|---|---|---|
 | 長屋門珈琲 カフェ・ティカル | 〒758-0025 萩市土原298-1 | 手動 | 2 |
 | 大島珈琲店 | 宇部市新天町2丁目7-1 | FC2ショッピングカート(oshimacoffee.cart.fc2.com) | 51 |
+| ふじ珈琲 | 下関市中之町1-14 | 手動 | 15 |
 | SOU/ZAEMON by TAKADA COFFEE | 下関市長府侍町1丁目2番39号 | WordPress | 8 |
 | SIMONS COFFEE（シモンズコーヒー） | 下関市武久町1丁目18-23 | 手動 | 1 |
 | UMINONE Coffee Wine cellar | 下関市椋野町1丁目30番25号 | ホームページマイスター for ネットショップ(株式会社アイフラッグ、独自ASP) | 7 |
