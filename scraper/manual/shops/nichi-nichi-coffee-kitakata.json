@@ -14,15 +14,15 @@
     "shop_type": "single_location",
     "data_source": "manual",
     "last_verified_at": "2026-10-03",
-    "lat": 35.797033,
-    "lng": 139.461325,
+    "lat": 37.653934,
+    "lng": 139.87207,
     "nearest_station": {
-      "name": "航空公園",
+      "name": "喜多方",
       "lines": [
-        "西武新宿線"
+        "JR磐越西線"
       ],
-      "distance_m": 410,
-      "walk_min": 5
+      "distance_m": 1170,
+      "walk_min": 15
     }
   },
   "products": [

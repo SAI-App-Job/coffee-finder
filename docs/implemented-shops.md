@@ -5,7 +5,7 @@
 `scraper/manual/shops/`配下、それ以外は`scraper/scrape_*.py`で自動取得。
 実装を見送った店舗は`docs/not-implementable-shops.md`を参照。
 
-合計1424店舗・23344商品(生成日: 2026-10-18)。
+合計1432店舗・23474商品(生成日: 2026-10-18)。
 
 再生成コマンド:
 ```
@@ -676,13 +676,21 @@ aggregate_shops.py実行後の`git diff --staged --quiet || git commit`が該当
 | 店舗名 | 所在地 | 方式 | 件数 |
 |---|---|---|---|
 | 長屋門珈琲 カフェ・ティカル | 〒758-0025 萩市土原298-1 | 手動 | 2 |
+| 大島珈琲店 | 宇部市新天町2丁目7-1 | FC2ショッピングカート(oshimacoffee.cart.fc2.com) | 51 |
 | SOU/ZAEMON by TAKADA COFFEE | 下関市長府侍町1丁目2番39号 | WordPress | 8 |
 | SIMONS COFFEE（シモンズコーヒー） | 下関市武久町1丁目18-23 | 手動 | 1 |
 | UMINONE Coffee Wine cellar | 下関市椋野町1丁目30番25号 | ホームページマイスター for ネットショップ(株式会社アイフラッグ、独自ASP) | 7 |
 | Sai Coffee Roastery | 下松市中央町21-3 下松タウンセンター星プラザ1階 | Shopify | 12 |
 | COFFEEBOY（徳山コーヒーボーイ） | 下松市平田550番地の2 | カラーミー | 18 |
 | imm coffee&roastery | 岩国市岩国1丁目20-46 | BASE | 8 |
+| カフェカンパニー | 岩国市南岩国町1丁目17-45 | 楽天市場 | 9 |
+| 岩田珈琲店 | 熊毛郡上関町祝島3675 | カラーミー | 8 |
+| CAPIME coffee | 山口市大内問田3丁目2-41 | BASE | 18 |
 | Nishida Coffee | 山口市湯田温泉五丁目7-6 | BASE | 11 |
+| ミルトンコーヒーロースタリー | 周南市児玉町3-7-1 | Shopify | 20 |
+| sonoda coffee | 美祢市大嶺町奥分3118-1 | STORES(手動) | 10 |
+| 三日月堂珈琲 | 防府市栄町2-2-37 | STORES(手動) | 12 |
+| MIGLIORE COFFEE | 防府市華園町13-41 まるき華城店敷地内 | Shopify | 2 |
 | フジヤマコーヒーロースターズ | 柳井市柳井4827-2 | カラーミー | 12 |
 
 ### 山梨県

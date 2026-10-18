@@ -1425,17 +1425,17 @@
     "hours": null,
     "map_query": "びーんず亭",
     "nearest_station": {
-      "name": "中山",
+      "name": "烏丸御池",
       "lines": [
-        "JR横浜線",
-        "グリーンライン"
+        "京都市東西線",
+        "京都市烏丸線"
       ],
-      "distance_m": 40,
-      "walk_min": 1
+      "distance_m": 210,
+      "walk_min": 3
     },
     "last_scraped_at": "2026-09-03T00:25:34.151237+00:00",
-    "lat": 35.514423,
-    "lng": 139.539624
+    "lat": 35.01099,
+    "lng": 135.761856
   },
   {
     "name": "豆男珈琲",
@@ -3472,10 +3472,17 @@
     "prefecture": "新潟県",
     "hours": null,
     "map_query": "珈琲豆 山倉",
-    "nearest_station": null,
+    "nearest_station": {
+      "name": "亀田",
+      "lines": [
+        "JR信越本線"
+      ],
+      "distance_m": 2570,
+      "walk_min": 32
+    },
     "last_scraped_at": "2026-09-29T00:59:09.994425+00:00",
-    "lat": 35.022748,
-    "lng": 135.674625
+    "lat": 37.885464,
+    "lng": 139.135315
   },
   {
     "name": "dAb COFFEE STORE",
@@ -4492,10 +4499,18 @@
     "prefecture": "静岡県",
     "hours": null,
     "map_query": "くれあーる",
-    "nearest_station": null,
+    "nearest_station": {
+      "name": "静岡",
+      "lines": [
+        "東海道新幹線",
+        "JR東海道本線"
+      ],
+      "distance_m": 690,
+      "walk_min": 9
+    },
     "last_scraped_at": "2026-09-29T00:59:09.994425+00:00",
-    "lat": 35.738041,
-    "lng": 139.74151
+    "lat": 34.969563,
+    "lng": 138.39566
   },
   {
     "name": "ヴァンキコーヒーロースター",
@@ -7062,10 +7077,17 @@
     "prefecture": "岩手県",
     "hours": null,
     "map_query": "風光舎",
-    "nearest_station": null,
+    "nearest_station": {
+      "name": "小岩井",
+      "lines": [
+        "JR田沢湖線"
+      ],
+      "distance_m": 7400,
+      "walk_min": 93
+    },
     "last_scraped_at": "2026-09-29T00:59:09.994425+00:00",
-    "lat": 34.873914,
-    "lng": 134.700345
+    "lat": 39.758968,
+    "lng": 140.966644
   },
   {
     "name": "カフェ・デ・ジターヌ",
@@ -7272,10 +7294,17 @@
     "prefecture": "秋田県",
     "hours": null,
     "map_query": "つなぐ珈琲",
-    "nearest_station": null,
+    "nearest_station": {
+      "name": "神宮寺",
+      "lines": [
+        "JR奥羽本線"
+      ],
+      "distance_m": 8500,
+      "walk_min": 106
+    },
     "last_scraped_at": "2026-09-29T00:59:09.994425+00:00",
-    "lat": 34.622922,
-    "lng": 135.47735
+    "lat": 39.446205,
+    "lng": 140.350235
   },
   {
     "name": "和田珈琲",
@@ -16228,16 +16257,16 @@
     "hours": null,
     "map_query": "ヒルズ珈房",
     "nearest_station": {
-      "name": "茶山・京都芸術大学",
+      "name": "玉川学園前",
       "lines": [
-        "叡山電鉄本線"
+        "小田急小田原線"
       ],
-      "distance_m": 220,
-      "walk_min": 3
+      "distance_m": 1220,
+      "walk_min": 15
     },
     "last_scraped_at": "2026-10-03T22:18:03.093431+00:00",
-    "lat": 35.038916,
-    "lng": 135.782191
+    "lat": 35.56403,
+    "lng": 139.449966
   },
   {
     "name": "自家焙煎珈琲豆店 一福",
@@ -23315,23 +23344,16 @@
     "hours": null,
     "map_query": "JUNKISSA COFFEE ROASTERY",
     "nearest_station": {
-      "name": "京都",
+      "name": "新金谷",
       "lines": [
-        "京都市烏丸線",
-        "東海道新幹線",
-        "JR山陰本線",
-        "JR奈良線",
-        "JR湖西線",
-        "JR京都線",
-        "JR琵琶湖線",
-        "近鉄京都線"
+        "大井川鉄道本線"
       ],
-      "distance_m": 80,
-      "walk_min": 1
+      "distance_m": 1790,
+      "walk_min": 22
     },
     "last_scraped_at": "2026-10-06T05:17:29.944584+00:00",
-    "lat": 34.987199,
-    "lng": 135.760461
+    "lat": 34.836224,
+    "lng": 138.152557
   },
   {
     "name": "自家焙煎珈琲屋 花野子",
@@ -29461,12 +29483,12 @@
     "hours": null,
     "map_query": "nichi nichi coffee 福島県喜多方市一丁目4647",
     "nearest_station": {
-      "name": "航空公園",
+      "name": "喜多方",
       "lines": [
-        "西武新宿線"
+        "JR磐越西線"
       ],
-      "distance_m": 410,
-      "walk_min": 5
+      "distance_m": 1170,
+      "walk_min": 15
     },
     "data_source": "manual",
     "source_note": "STORES.jpの公式ショップ(https://nichi-nichi-coffee.stores.jp/)の商品ページをブラウザfetch()で2026-10-12に確認。豆100g(粉は同一商品の選択肢)を採用。ドリップバッグ・リキッド・カフェラテベース・定期便・セットを除外。仲町店の住所。桜ガ丘の焙煎所は現在休業中。公式に自家焙煎珈琲専門店(2018年開業)と記載。",
@@ -29484,8 +29506,8 @@
         "lng": 139.461325
       }
     ],
-    "lat": 35.797033,
-    "lng": 139.461325
+    "lat": 37.653934,
+    "lng": 139.87207
   },
   {
     "name": "Rotten Row Coffee Roasters",
@@ -33594,16 +33616,17 @@
     "hours": null,
     "map_query": "可否庵",
     "nearest_station": {
-      "name": "呉",
+      "name": "徳島",
       "lines": [
-        "JR呉線"
+        "JR高徳線",
+        "JR牟岐線"
       ],
-      "distance_m": 700,
-      "walk_min": 9
+      "distance_m": 500,
+      "walk_min": 6
     },
     "last_scraped_at": "2026-10-14T22:25:10.221977+00:00",
-    "lat": 34.239254,
-    "lng": 132.561416
+    "lat": 34.070503,
+    "lng": 134.553787
   },
   {
     "name": "ハレとケ珈琲",
@@ -33638,16 +33661,16 @@
     "hours": null,
     "map_query": "カフェ・ケストナー",
     "nearest_station": {
-      "name": "松江",
+      "name": "吉成",
       "lines": [
-        "JR山陰本線"
+        "JR高徳線"
       ],
-      "distance_m": 3330,
-      "walk_min": 42
+      "distance_m": 4500,
+      "walk_min": 56
     },
     "last_scraped_at": "2026-10-14T22:25:10.221977+00:00",
-    "lat": 35.491953,
-    "lng": 133.076815
+    "lat": 34.115471,
+    "lng": 134.579468
   },
   {
     "name": "クエイル珈琲",
@@ -33995,5 +34018,205 @@
     ],
     "lat": 33.55923,
     "lng": 133.60516
+  },
+  {
+    "name": "カフェカンパニー",
+    "url": "https://www.rakuten.co.jp/cafecom6100/",
+    "platform": "楽天市場",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可とみなす(2026-10確認。rakuten.co.jp/item.rakuten.co.jpのrobots.txtは検索系パラメータ(?i= ?s=)等のみ禁止)",
+    "address": "山口県岩国市南岩国町1丁目17-45",
+    "prefecture": "山口県",
+    "hours": null,
+    "map_query": "カフェカンパニー",
+    "nearest_station": {
+      "name": "南岩国",
+      "lines": [
+        "JR山陽本線"
+      ],
+      "distance_m": 350,
+      "walk_min": 4
+    },
+    "last_scraped_at": "2026-10-18T11:51:09.149769+00:00",
+    "lat": 34.136323,
+    "lng": 132.202397
+  },
+  {
+    "name": "CAPIME coffee",
+    "url": "https://capimecoffee.base.shop/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(python-requests/curl等は個別にDisallow、User-agent: *は許可。識別可能なUser-Agentを使用)",
+    "address": "山口県山口市大内問田3丁目2-41",
+    "prefecture": "山口県",
+    "hours": null,
+    "map_query": "CAPIME coffee",
+    "nearest_station": {
+      "name": "山口",
+      "lines": [
+        "JR山口線"
+      ],
+      "distance_m": 2280,
+      "walk_min": 29
+    },
+    "last_scraped_at": "2026-10-18T11:51:09.149769+00:00",
+    "lat": 34.152409,
+    "lng": 131.484081
+  },
+  {
+    "name": "岩田珈琲店",
+    "url": "https://iwatacoffee.shop-pro.jp/",
+    "platform": "カラーミーショップ(shop-pro.jp)",
+    "shop_type": "single_location",
+    "robots_txt_status": "許可(2026-10-15確認。/secure/と/cart/以外は制限なし)",
+    "address": "山口県熊毛郡上関町祝島3675",
+    "prefecture": "山口県",
+    "hours": null,
+    "map_query": "岩田珈琲店",
+    "nearest_station": null,
+    "last_scraped_at": "2026-10-18T11:51:09.149769+00:00",
+    "lat": 33.783385,
+    "lng": 131.976863
+  },
+  {
+    "name": "MIGLIORE COFFEE",
+    "url": "https://migliorecoffee.com/",
+    "platform": "Shopify",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認(Shopify標準構成。公開の/products.jsonを使用)",
+    "address": "山口県防府市華園町13-41 まるき華城店敷地内",
+    "prefecture": "山口県",
+    "hours": null,
+    "map_query": "MIGLIORE COFFEE",
+    "nearest_station": {
+      "name": "防府",
+      "lines": [
+        "JR山陽本線"
+      ],
+      "distance_m": 1600,
+      "walk_min": 20
+    },
+    "last_scraped_at": "2026-10-18T11:51:09.149769+00:00",
+    "lat": 34.043961,
+    "lng": 131.555896
+  },
+  {
+    "name": "ミルトンコーヒーロースタリー",
+    "url": "https://miltoncoffee.com/",
+    "platform": "Shopify",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認(Shopify標準構成。公開の/products.jsonを使用)",
+    "address": "山口県周南市児玉町3-7-1",
+    "prefecture": "山口県",
+    "hours": null,
+    "map_query": "ミルトンコーヒーロースタリー",
+    "nearest_station": {
+      "name": "徳山",
+      "lines": [
+        "JR山陽本線",
+        "山陽新幹線"
+      ],
+      "distance_m": 510,
+      "walk_min": 6
+    },
+    "last_scraped_at": "2026-10-18T11:51:09.149769+00:00",
+    "lat": 34.05506,
+    "lng": 131.806409
+  },
+  {
+    "name": "大島珈琲店",
+    "url": "http://www.oc-ten.com/",
+    "platform": "FC2ショッピングカート(oshimacoffee.cart.fc2.com)",
+    "shop_type": "single_location",
+    "robots_txt_status": "許可(2026-10-15確認。/cancel/・/setup/・/tools/のみDisallow)",
+    "address": "山口県宇部市新天町2丁目7-1",
+    "prefecture": "山口県",
+    "hours": null,
+    "map_query": "大島珈琲店",
+    "nearest_station": {
+      "name": "琴芝",
+      "lines": [
+        "JR宇部線"
+      ],
+      "distance_m": 550,
+      "walk_min": 7
+    },
+    "last_scraped_at": "2026-10-18T11:51:09.149769+00:00",
+    "lat": 33.948218,
+    "lng": 131.249808
+  },
+  {
+    "name": "三日月堂珈琲",
+    "url": "https://mikazukido-coffee.com/",
+    "instagram_url": null,
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "山口県防府市栄町2-2-37",
+    "prefecture": "山口県",
+    "hours": null,
+    "map_query": "三日月堂珈琲 山口県防府市栄町2-2-37",
+    "nearest_station": {
+      "name": "防府",
+      "lines": [
+        "JR山陽本線"
+      ],
+      "distance_m": 510,
+      "walk_min": 6
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://perolintyo.stores.jp/)の商品ページをブラウザfetch()で2026-10-15に確認。ABOUTに「祖父、母から引き継いだ焙煎機を使って姉妹2人で営む自家焙煎珈琲店」と記載。住所は特定商取引法・ABOUT記載。全商品200g(豆)の価格を採用(公式サイトの100g価格表とは別のネットショップ価格)。",
+    "last_verified_at": "2026-10-15",
+    "locations": [
+      {
+        "label": null,
+        "address": "山口県防府市栄町2-2-37",
+        "prefecture": "山口県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "三日月堂珈琲 山口県防府市栄町2-2-37",
+        "lat": 34.057442,
+        "lng": 131.571671
+      }
+    ],
+    "lat": 34.057442,
+    "lng": 131.571671
+  },
+  {
+    "name": "sonoda coffee",
+    "url": "https://sonodacoffee.jp/",
+    "instagram_url": null,
+    "platform": "STORES.jp(独自ドメイン、ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "山口県美祢市大嶺町奥分3118-1",
+    "prefecture": "山口県",
+    "hours": null,
+    "map_query": "sonoda coffee 山口県美祢市大嶺町奥分3118-1",
+    "nearest_station": {
+      "name": "南大嶺",
+      "lines": [
+        "JR美祢線"
+      ],
+      "distance_m": 3760,
+      "walk_min": 47
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://sonodacoffee.shop/)の商品ページをブラウザfetch()で2026-10-18に確認。公式サイト(sonodacoffee.jp)のRoasting Aboutに焙煎の記事(冷却機の設置など)。住所は特定商取引法に基づく表示。100g(豆のまま)の価格を採用。ブランデー風味付けの豆(風味付きのアリーシャ・3種のアリーシャブレンド)・ドリップバッグ・水出しパック・ネルドリップ・カフェオレベース・グッズは除外。",
+    "last_verified_at": "2026-10-18",
+    "locations": [
+      {
+        "label": null,
+        "address": "山口県美祢市大嶺町奥分3118-1",
+        "prefecture": "山口県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "sonoda coffee 山口県美祢市大嶺町奥分3118-1",
+        "lat": 34.190506,
+        "lng": 131.164419
+      }
+    ],
+    "lat": 34.190506,
+    "lng": 131.164419
   }
 ]

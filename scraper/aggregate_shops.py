@@ -1230,6 +1230,13 @@ SOURCE_FILES = {
     "ハルノ珈琲": "data_harunocoffee.json",
     "JOKI COFFEE": "data_jokicoffee.json",
     "くろしお珈琲": "data_kuroshiocoffee.json",
+    # 山口県の再調査(新規発掘)
+    "カフェカンパニー": "data_cafecompany.json",
+    "CAPIME coffee": "data_capimecoffee.json",
+    "岩田珈琲店": "data_iwatacoffeeyamaguchi.json",
+    "MIGLIORE COFFEE": "data_migliorecoffee.json",
+    "ミルトンコーヒーロースタリー": "data_miltoncoffee.json",
+    "大島珈琲店": "data_oshimacoffee.json",
 }
 
 
