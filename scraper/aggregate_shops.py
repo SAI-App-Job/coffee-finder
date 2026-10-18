@@ -1268,6 +1268,8 @@ SOURCE_FILES = {
     "nai": "data_nai.json",
     # 全商品完売で見送っていた店の登録(和歌山県)
     "Blooming Coffee": "data_bloomingcoffee.json",
+    # 取得できず保留していた店の登録(佐賀県)
+    "ORIGIN COFFEE": "data_origincoffee.json",
 }
 
 
