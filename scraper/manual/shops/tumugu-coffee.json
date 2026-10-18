@@ -1,0 +1,90 @@
+{
+  "shop": {
+    "name": "TUMUGU COFFEE",
+    "url": "https://tumugucoffee.com/",
+    "address": "大分県別府市弓ケ浜町1-28 別府コージェマンション1F",
+    "prefecture": "大分県",
+    "tel": "070-2029-0585",
+    "hours": "ROASTERY 基本 水・土・日 8:00-20:30(土曜は 8:00-12:00 / 14:00-23:00)。STAND(別府市駅前本町9-20 オフィスHOOD、基本 水・土・日 7:00-16:00)でも豆を購入可",
+    "instagram_url": "https://www.instagram.com/tumugu_coffee_roastery/",
+    "platform": "独自サイト(静的HTML・店頭販売のみ・カートなし)",
+    "source_note": "全国再調査(大分県)で発見。公式サイト(https://tumugucoffee.com/ トップページの店舗案内、https://tumugucoffee.com/menu/ のビーンズリスト)を2026-10-18に確認。トップページに「ROASTERY…豆はすべてここで自家焙煎」「自家焙煎のスペシャルティコーヒー豆は両店でお買い求めいただけます(焙煎はROASTERY)」とあるため、焙煎所のROASTERY(別府市弓ケ浜町1-28 別府コージェマンション1F)の住所を採用。STAND(別府市駅前本町9-20 オフィスHOOD)でも購入可。ビーンズリストは日替わりで入れ替わる(「最新の銘柄・価格は店頭またはInstagramで」)ため、2026-10-18時点の4銘柄。100g(¥1,000〜2,000)を代表とし、200g(¥1,800〜3,800)は除外。カートが無いため全品「販売中」として扱った。ドリンク・フード・ギフト・卸は除外。",
+    "last_verified_at": "2026-10-18",
+    "id": "tumugu-coffee",
+    "google_maps_query": "TUMUGU COFFEE 大分県別府市弓ケ浜町1-28 別府コージェマンション1F",
+    "shop_type": "single_location",
+    "data_source": "manual",
+    "lat": 33.285685,
+    "lng": 131.503146,
+    "nearest_station": {
+      "name": "別府",
+      "lines": [
+        "JR日豊本線"
+      ],
+      "distance_m": 720,
+      "walk_min": 9
+    }
+  },
+  "products": [
+    {
+      "raw_name": "インドネシア",
+      "category": "ストレート",
+      "originCountry": "インドネシア",
+      "processingMethod": null,
+      "roast": null,
+      "flavorNotes": "Strawberry / Chocolate(ストロベリー、チョコレート)",
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 2000,
+      "weightG": 100,
+      "stockStatus": "販売中",
+      "productUrl": "https://tumugucoffee.com/menu/#%E3%82%A4%E3%83%B3%E3%83%89%E3%83%8D%E3%82%B7%E3%82%A2",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "中国 Triple Fermentation",
+      "category": "ストレート",
+      "originCountry": "中国",
+      "processingMethod": null,
+      "roast": null,
+      "flavorNotes": "Dried Plum / Whiskey(ドライプラム、ウィスキー)",
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1800,
+      "weightG": 100,
+      "stockStatus": "販売中",
+      "productUrl": "https://tumugucoffee.com/menu/#%E4%B8%AD%E5%9B%BD%20Triple%20Fermentation",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "パプアニューギニア Washed",
+      "category": "ストレート",
+      "originCountry": "パプアニューギニア",
+      "processingMethod": "ウォッシュド",
+      "roast": null,
+      "flavorNotes": "Caramel / Nuts / Spice(キャラメル、ナッツ、スパイス)",
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1000,
+      "weightG": 100,
+      "stockStatus": "販売中",
+      "productUrl": "https://tumugucoffee.com/menu/#%E3%83%91%E3%83%97%E3%82%A2%E3%83%8B%E3%83%A5%E3%83%BC%E3%82%AE%E3%83%8B%E3%82%A2%20Washed",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "エチオピア Natural",
+      "category": "ストレート",
+      "originCountry": "エチオピア",
+      "processingMethod": "ナチュラル",
+      "roast": null,
+      "flavorNotes": "Caramel / Nuts / Spice(キャラメル、ナッツ、スパイス)",
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1500,
+      "weightG": 100,
+      "stockStatus": "販売中",
+      "productUrl": "https://tumugucoffee.com/menu/#%E3%82%A8%E3%83%81%E3%82%AA%E3%83%94%E3%82%A2%20Natural",
+      "data_source": "manual"
+    }
+  ]
+}

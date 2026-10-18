@@ -5,7 +5,7 @@
 `scraper/manual/shops/`配下、それ以外は`scraper/scrape_*.py`で自動取得。
 実装を見送った店舗は`docs/not-implementable-shops.md`を参照。
 
-合計1449店舗・23651商品(生成日: 2026-10-18)。
+合計1460店舗・23772商品(生成日: 2026-10-18)。
 
 再生成コマンド:
 ```
@@ -1137,12 +1137,23 @@ aggregate_shops.py実行後の`git diff --staged --quiet || git commit`が該当
 | 店舗名 | 所在地 | 方式 | 件数 |
 |---|---|---|---|
 | suzunari coffee | 臼杵市野田持田120 | BASE | 8 |
+| Create Coffee Lab | 大分市花高松1-1-32 | STORES(手動) | 13 |
 | 焙煎香房227 | 大分市上宗方南1丁目1-6 | BASE | 6 |
+| 3 CEDARS COFFEE | 大分市生石2丁目3-9 | Shopify | 10 |
+| Rainyday's Coffee | 大分市大道町2丁目5-17 | BASE | 8 |
+| 珈琲店みまつ | 大分市中央町2-2-24 | 手動 | 17 |
+| うちで珈琲 | 大分市中央町2-5-20 いづみやビル2階 | STORES(手動) | 4 |
+| 中島九条珈琲 | 大分市中島東3-4-1 | Shopify | 4 |
+| 或る焙煎所 | 大分市長浜町1-7-6 塩九升ビル1F | Shopify | 7 |
+| Regolith Coffee | 大分市田原904-1 | Shopify | 21 |
 | SAFARI COFFEE ROASTER | 大分市畑中3丁目2番7号コーポ森101 | theShop | 8 |
 | タウトナコーヒー | 大分市六坊北町4-5-2 | BASE | 6 |
 | nageia coffee | 竹田市竹田町563-1 | Shopify | 9 |
 | Hazebo Coffee | 日田市田島本町5-33 平和ビル2F | Shopify | 4 |
+| TUMUGU COFFEE | 別府市弓ケ浜町1-28 別府コージェマンション1F | 手動 | 4 |
+| 珈琲屋豆工房 | 別府市石垣東1-9-26 | Ocnk | 6 |
 | YOUMECA | 別府市富士見町6番30号 | Shopify | 17 |
+| 焙煎ログへつぎ | 豊後大野市三重町小坂3969-96 | 手動 | 27 |
 
 ### 長崎県
 

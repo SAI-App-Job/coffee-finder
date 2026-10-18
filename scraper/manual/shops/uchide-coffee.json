@@ -1,0 +1,92 @@
+{
+  "shop": {
+    "name": "うちで珈琲",
+    "url": "https://uchidecoffee.net/",
+    "address": "大分県大分市中央町2-5-20 いづみやビル2階",
+    "prefecture": "大分県",
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "last_verified_at": "2026-10-18",
+    "source_note": "STORES.jpの公式ショップ(https://uchidecoffee2019.stores.jp/)の商品ページをブラウザfetch()で2026-10-18に確認。公式サイトに「毎日焙煎」、AFRO BLOGに店内のフジローヤル焙煎機の紹介。住所は特定商取引法に基づく表示。各商品は焙煎度を購入時に選択(ミディアム〜フルシティ)するため焙煎度は未設定。100gの価格を採用(400g・500g・800gは除外)。",
+    "id": "uchide-coffee",
+    "instagram_url": null,
+    "google_maps_query": "うちで珈琲 大分県大分市中央町2-5-20 いづみやビル2階",
+    "tel": null,
+    "hours": null,
+    "shop_type": "single_location",
+    "data_source": "manual",
+    "lat": 33.237558,
+    "lng": 131.606517,
+    "nearest_station": {
+      "name": "大分",
+      "lines": [
+        "JR豊肥本線",
+        "JR日豊本線",
+        "JR久大本線"
+      ],
+      "distance_m": 530,
+      "walk_min": 7
+    }
+  },
+  "products": [
+    {
+      "raw_name": "マラウイ マパンガ農園AB 100g",
+      "category": "ストレート",
+      "originCountry": "マラウイ",
+      "processingMethod": null,
+      "roast": null,
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 830,
+      "weightG": 100,
+      "stockStatus": "販売中",
+      "productUrl": "https://uchidecoffee2019.stores.jp/items/6ad382ef48d07ef9d3d35a7c",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "タンザニア ウテングレ農園 ナチュラル 100g",
+      "category": "ストレート",
+      "originCountry": "タンザニア",
+      "processingMethod": "ナチュラル",
+      "roast": null,
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 930,
+      "weightG": 100,
+      "stockStatus": "販売中",
+      "productUrl": "https://uchidecoffee2019.stores.jp/items/6a97dada3626e41105ee9e11",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "デカフェブレンド 100g",
+      "category": "ブレンド",
+      "originCountry": null,
+      "processingMethod": null,
+      "roast": null,
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 890,
+      "weightG": 100,
+      "stockStatus": "販売中",
+      "productUrl": "https://uchidecoffee2019.stores.jp/items/68ba0377be2d1256189408e7",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "ブレンドコーヒー 100g",
+      "category": "ブレンド",
+      "originCountry": null,
+      "processingMethod": null,
+      "roast": null,
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 620,
+      "weightG": 100,
+      "stockStatus": "販売中",
+      "productUrl": "https://uchidecoffee2019.stores.jp/items/6001ce51da019c6d45dd401a",
+      "data_source": "manual"
+    }
+  ]
+}

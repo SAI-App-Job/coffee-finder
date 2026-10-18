@@ -3030,3 +3030,14 @@ docs/scraping-progress.md「栃木県再調査」冒頭の教訓セクション�
 
 ### 自家焙煎珈琲エルザ／Cuma Coffee Roaster／Answer Coffee／ぽけっと都城
 - 見送り理由: エルザは公式のカートが404のまま価格情報なし、Cumaは店舗営業を2025-03で終了、Answer CoffeeはRegolith Coffeeの豆を使用、ぽけっと都城はふるさと納税(ドリップバッグ)のみ。
+
+## 大分県再調査(2026-10-19)
+
+### CAFE 森の交茶店／自家焙煎 CAFE BON VOYAGE!(由布市)
+- 見送り理由: 再検証でも全6カテゴリが「該当データがありません」で販売中の商品がない。
+
+### Coffee Shop haze／KAME COFFEE ROASTERS／ディグ コーヒー／ヨアケ コーヒー／キャラバン珈琲 由布院館／サンヨーコーヒー／Mocha Origins ほか
+- 見送り理由: hazeは自社カートがダミー商品のみで未稼働、KAMEは2020-09閉店、ディグは公式ドメイン失効で閉店の可能性、ヨアケは他社(博多)の豆、キャラバンはチェーン、サンヨーコーヒーは業務用卸、Mocha Originsは輸入会社。
+
+### 豆岳珈琲／Roppin Coffee 羽屋焙煎所／秋元／Othello Specialty Coffee Roaster／STELLIUM COFFEE／樹豆珈琲／イシカワ珈琲／nagomi coffee／灰原珈琲店 ほか
+- 見送り理由: 自家焙煎は確認できるが、豆の価格表・通販・商品の確認ができない。豆岳珈琲は価格が「〜」表記で確定できず、Roppin CoffeeはECが完売の1品のみ、秋元は閉店の可能性。

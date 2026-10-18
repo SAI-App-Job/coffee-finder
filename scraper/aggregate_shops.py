@@ -1251,6 +1251,13 @@ SOURCE_FILES = {
     "KAWASEMI COFFEE": "data_kawasemicoffee.json",
     "レイドバック珈琲": "data_laidbackcoffee.json",
     "THE ROSA COFFEE": "data_therosacoffee.json",
+    # 大分県の再調査(新規発掘)
+    "3 CEDARS COFFEE": "data_3cedarscoffee.json",
+    "或る焙煎所": "data_arucoffee.json",
+    "珈琲屋豆工房": "data_mamekoubouoita.json",
+    "中島九条珈琲": "data_nakashimakyujocoffee.json",
+    "Rainyday's Coffee": "data_rainydayscoffee.json",
+    "Regolith Coffee": "data_regolithcoffee.json",
 }
 
 
