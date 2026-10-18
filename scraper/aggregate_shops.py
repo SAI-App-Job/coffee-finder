@@ -1237,6 +1237,10 @@ SOURCE_FILES = {
     "MIGLIORE COFFEE": "data_migliorecoffee.json",
     "ミルトンコーヒーロースタリー": "data_miltoncoffee.json",
     "大島珈琲店": "data_oshimacoffee.json",
+    # 佐賀県の再調査(新規発掘)
+    "468 SiMBA Coffee": "data_468simbacoffee.json",
+    "いづみや珈琲": "data_izumiyasaga.json",
+    "みちくさ COFFEE ROASTER & DAREKA COFFEE STAND": "data_mitikusacoffee.json",
 }
 
 

@@ -1,0 +1,120 @@
+{
+  "shop": {
+    "name": "\"Have a nice coffee.\" 佐賀焙煎所",
+    "url": "https://havanice.com/",
+    "address": "佐賀県佐賀市鍋島町八戸溝373-8",
+    "prefecture": "佐賀県",
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "last_verified_at": "2026-10-15",
+    "source_note": "STORES.jpの公式ショップ(https://havanice.stores.jp/)の商品ページをブラウザfetch()で2026-10-15に確認。ABOUTに「佐賀市鍋島町の焙煎所から新鮮なコーヒー豆をお届けします」と記載。住所は特定商取引法に基づく表示。100g(豆のまま)の価格を採用。定期便・ドリップパック・訳あり豆・初回限定プレゼントは除外。3商品は完売。",
+    "id": "have-a-nice-coffee-saga",
+    "instagram_url": null,
+    "google_maps_query": "\"Have a nice coffee.\" 佐賀焙煎所 佐賀県佐賀市鍋島町八戸溝373-8",
+    "tel": null,
+    "hours": null,
+    "shop_type": "single_location",
+    "data_source": "manual",
+    "lat": 33.262704,
+    "lng": 130.265838,
+    "nearest_station": {
+      "name": "鍋島",
+      "lines": [
+        "JR長崎本線"
+      ],
+      "distance_m": 410,
+      "walk_min": 5
+    }
+  },
+  "products": [
+    {
+      "raw_name": "モカ グジケルチャ ナチュラル 100g",
+      "category": "ストレート",
+      "originCountry": "エチオピア",
+      "processingMethod": "ナチュラル",
+      "roast": "浅煎り",
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1250,
+      "weightG": 100,
+      "stockStatus": "販売中",
+      "productUrl": "https://havanice.stores.jp/items/61c56064d5ffeb7accce4e96",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "ブラジルイエローブルボン 100g",
+      "category": "ストレート",
+      "originCountry": "ブラジル",
+      "processingMethod": null,
+      "roast": "中深煎り",
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1200,
+      "weightG": 100,
+      "stockStatus": "販売中",
+      "productUrl": "https://havanice.stores.jp/items/58c95a3a1f4375931700607f",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "No.731 100g",
+      "category": "ブレンド",
+      "originCountry": null,
+      "processingMethod": null,
+      "roast": "極深煎り",
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1150,
+      "weightG": 100,
+      "stockStatus": "販売中",
+      "productUrl": "https://havanice.stores.jp/items/61c562b6c7258664e0f8af3b",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "ブラジル ネクタリン 100g",
+      "category": "ストレート",
+      "originCountry": "ブラジル",
+      "processingMethod": null,
+      "roast": "中煎り",
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1150,
+      "weightG": 100,
+      "stockStatus": "一時的に品切れ",
+      "productUrl": "https://havanice.stores.jp/items/61c56506d5ffeb117bce5436",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "ガテマラ ティピカ 100g",
+      "category": "ストレート",
+      "originCountry": "グアテマラ",
+      "processingMethod": null,
+      "roast": "中深煎り",
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 930,
+      "weightG": 100,
+      "stockStatus": "一時的に品切れ",
+      "productUrl": "https://havanice.stores.jp/items/61c55f45d26fa550d0acfad1",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "エルサルバドル 100g",
+      "category": "ストレート",
+      "originCountry": "エルサルバドル",
+      "processingMethod": null,
+      "roast": "中浅煎り",
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 850,
+      "weightG": 100,
+      "stockStatus": "一時的に品切れ",
+      "productUrl": "https://havanice.stores.jp/items/61c561ebecd057190093da64",
+      "data_source": "manual"
+    }
+  ]
+}

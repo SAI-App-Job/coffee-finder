@@ -3002,3 +3002,20 @@ docs/scraping-progress.md「栃木県再調査」冒頭の教訓セクション�
 
 ### コーヒーシティ／oriental coffee／神田珈琲園／珈琲舎 珈紋／かぴたん／珈琲焦点／三瓶珈琲／原口珈琲 ほか
 - 見送り理由: 自家焙煎の明記がない、商品・価格が取得できない、住所が資料により不一致、または実在・営業を確認できない。
+
+## 佐賀県再調査(2026-10-18)
+
+### ORIGIN COFFEE(佐賀市)
+- 見送り理由: BASE系(official.ec)が429のまま解消せず、商品の容量・価格を取得できなかった(回避せず保留。再取得すれば実装可能)。
+
+### GIFT COFFEE(佐賀平野)
+- 見送り理由: 自家焙煎(小型直火式)は確認できるが、店舗の住所がSTORESの特商法(STORES社の住所)・公式サイトから確認できない。
+
+### OK COFFEE Saga Roastery(吉野ヶ里町)／清香園茶舗(唐津市)
+- 見送り理由: OK COFFEEは商品の大半がIPコラボのブレンド(粉)でシングルオリジンがなく、清香園茶舗は茶舗が本業でコーヒーは一部の商品のため判断待ち。
+
+### トナカイコーヒー／hello. coffee stand／03coffee／AND MORE COFFEE／江崎珈琲店／LAJAcoffee／珈茗爾 ほか
+- 見送り理由: トナカイ・hello. coffee stand・03coffeeは他店の豆を使用、AND MORE COFFEE・江崎珈琲店は豆の販売なし、LAJAcoffeeはふるさと納税返礼品のみ、珈茗爾は豆の産地・価格情報なし。
+
+### LIB COFFEE IMARI／KABESHIMA COFFEE STAND／Moc Coffee／Fellow Coffee／自家焙煎珈琲 goen／とのみの HOKAO COFFEE／kuyuru coffee ootakara
+- 見送り理由: 自家焙煎は確認できるが、豆の販売・価格・焙煎場所の確認が取れない。

@@ -29502,8 +29502,8 @@
         "tel": null,
         "is_headquarters": false,
         "map_query": "nichi nichi coffee 福島県喜多方市一丁目4647",
-        "lat": 35.797033,
-        "lng": 139.461325
+        "lat": 37.653934,
+        "lng": 139.87207
       }
     ],
     "lat": 37.653934,
@@ -34218,5 +34218,182 @@
     ],
     "lat": 34.190506,
     "lng": 131.164419
+  },
+  {
+    "name": "468 SiMBA Coffee",
+    "url": "https://468simbacoffee.shop-pro.jp/",
+    "platform": "カラーミーショップ(shop-pro.jp)",
+    "shop_type": "single_location",
+    "robots_txt_status": "許可(2026-10確認。User-agent: *は/secure/と/cart/のみ制限)",
+    "address": "佐賀県佐賀市多布施1丁目2-13",
+    "prefecture": "佐賀県",
+    "hours": null,
+    "map_query": "468 SiMBA Coffee",
+    "nearest_station": {
+      "name": "佐賀",
+      "lines": [
+        "JR長崎本線"
+      ],
+      "distance_m": 1140,
+      "walk_min": 14
+    },
+    "last_scraped_at": "2026-10-18T11:59:10.303465+00:00",
+    "lat": 33.255304,
+    "lng": 130.29149
+  },
+  {
+    "name": "いづみや珈琲",
+    "url": "https://www.izumiyacoffee.com/",
+    "platform": "カラーミーショップ(shop-pro.jp)",
+    "shop_type": "single_location",
+    "robots_txt_status": "許可(2026-10確認。User-agent: *は/secure/と/cart/のみ制限)",
+    "address": "佐賀県佐賀市兵庫南1丁目8-13",
+    "prefecture": "佐賀県",
+    "hours": null,
+    "map_query": "いづみや珈琲",
+    "nearest_station": {
+      "name": "佐賀",
+      "lines": [
+        "JR長崎本線"
+      ],
+      "distance_m": 1720,
+      "walk_min": 22
+    },
+    "last_scraped_at": "2026-10-18T11:59:10.303465+00:00",
+    "lat": 33.26185,
+    "lng": 130.315879
+  },
+  {
+    "name": "みちくさ COFFEE ROASTER & DAREKA COFFEE STAND",
+    "url": "https://cafemitikusa.com/",
+    "platform": "Shopify",
+    "shop_type": "single_location",
+    "robots_txt_status": "許可(Shopify標準。商品・コレクションはクロール可)",
+    "address": "佐賀県佐賀市本庄町本庄167-11",
+    "prefecture": "佐賀県",
+    "hours": null,
+    "map_query": "みちくさ COFFEE ROASTER & DAREKA COFFEE STAND",
+    "nearest_station": {
+      "name": "佐賀",
+      "lines": [
+        "JR長崎本線"
+      ],
+      "distance_m": 2780,
+      "walk_min": 35
+    },
+    "last_scraped_at": "2026-10-18T11:59:10.303465+00:00",
+    "lat": 33.240173,
+    "lng": 130.289339
+  },
+  {
+    "name": "ARS OF COFFEE ROASTERS",
+    "url": "https://arsofcoffee.stores.jp/",
+    "instagram_url": null,
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "佐賀県鳥栖市真木町2050-2",
+    "prefecture": "佐賀県",
+    "hours": null,
+    "map_query": "ARS OF COFFEE ROASTERS 佐賀県鳥栖市真木町2050-2",
+    "nearest_station": {
+      "name": "肥前旭",
+      "lines": [
+        "JR鹿児島本線"
+      ],
+      "distance_m": 1680,
+      "walk_min": 21
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://arsofcoffee.stores.jp/)の商品ページをブラウザfetch()で2026-10-15に確認。ABOUTに「鳥栖市初となる自家焙煎スペシャルティコーヒー専門店」「ドイツ製の焙煎機プロバットで焙煎」と記載。住所は特定商取引法に基づく表示。100g(豆のまま)の価格を採用(200gも併売)。ドリップバッグ・ディップパック・水出しパック・リキッド・カフェオレベース・器具は除外。",
+    "last_verified_at": "2026-10-15",
+    "locations": [
+      {
+        "label": null,
+        "address": "佐賀県鳥栖市真木町2050-2",
+        "prefecture": "佐賀県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "ARS OF COFFEE ROASTERS 佐賀県鳥栖市真木町2050-2",
+        "lat": 33.354182,
+        "lng": 130.513424
+      }
+    ],
+    "lat": 33.354182,
+    "lng": 130.513424
+  },
+  {
+    "name": "\"Have a nice coffee.\" 佐賀焙煎所",
+    "url": "https://havanice.com/",
+    "instagram_url": null,
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "佐賀県佐賀市鍋島町八戸溝373-8",
+    "prefecture": "佐賀県",
+    "hours": null,
+    "map_query": "\"Have a nice coffee.\" 佐賀焙煎所 佐賀県佐賀市鍋島町八戸溝373-8",
+    "nearest_station": {
+      "name": "鍋島",
+      "lines": [
+        "JR長崎本線"
+      ],
+      "distance_m": 410,
+      "walk_min": 5
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://havanice.stores.jp/)の商品ページをブラウザfetch()で2026-10-15に確認。ABOUTに「佐賀市鍋島町の焙煎所から新鮮なコーヒー豆をお届けします」と記載。住所は特定商取引法に基づく表示。100g(豆のまま)の価格を採用。定期便・ドリップパック・訳あり豆・初回限定プレゼントは除外。3商品は完売。",
+    "last_verified_at": "2026-10-15",
+    "locations": [
+      {
+        "label": null,
+        "address": "佐賀県佐賀市鍋島町八戸溝373-8",
+        "prefecture": "佐賀県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "\"Have a nice coffee.\" 佐賀焙煎所 佐賀県佐賀市鍋島町八戸溝373-8",
+        "lat": 33.262704,
+        "lng": 130.265838
+      }
+    ],
+    "lat": 33.262704,
+    "lng": 130.265838
+  },
+  {
+    "name": "珈暮 KOGURE COFFEE & ROASTERY",
+    "url": "https://kogure-coffee.com/",
+    "instagram_url": null,
+    "platform": "手動入力(公式サイトの静的HTML価格表。通販なし・店頭と公式LINEのみ、オンラインショップは準備中。2026-07-28開店)",
+    "shop_type": "single_location",
+    "address": "佐賀県佐賀市唐人1-1-12",
+    "prefecture": "佐賀県",
+    "hours": "平日11:00〜18:00、土日祝10:00〜18:00(定休日: 月・木曜)",
+    "map_query": "珈暮 KOGURE COFFEE & ROASTERY 佐賀県佐賀市唐人1-1-12",
+    "nearest_station": {
+      "name": "佐賀",
+      "lines": [
+        "JR長崎本線"
+      ],
+      "distance_m": 570,
+      "walk_min": 7
+    },
+    "data_source": "manual",
+    "source_note": "公式サイト(https://kogure-coffee.com/beans.php)のコーヒー豆12種の価格表(100g税込)を2026-10-15に確認。サイト内の最新ブログは2026-10-13付で更新は新しい。50g・200gの価格もあるが100gを代表として採用。生豆4種・コーヒーバッグ(1個330円)は除外。同じ産地でも焙煎度違いは別商品(店の価格表で別行)として収録。通販なし。",
+    "last_verified_at": "2026-10-15",
+    "locations": [
+      {
+        "label": null,
+        "address": "佐賀県佐賀市唐人1-1-12",
+        "prefecture": "佐賀県",
+        "hours": "平日11:00〜18:00、土日祝10:00〜18:00(定休日: 月・木曜)",
+        "tel": "090-4440-2584",
+        "is_headquarters": false,
+        "map_query": "珈暮 KOGURE COFFEE & ROASTERY 佐賀県佐賀市唐人1-1-12",
+        "lat": 33.25919,
+        "lng": 130.298963
+      }
+    ],
+    "lat": 33.25919,
+    "lng": 130.298963
   }
 ]

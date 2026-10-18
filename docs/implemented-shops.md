@@ -5,7 +5,7 @@
 `scraper/manual/shops/`配下、それ以外は`scraper/scrape_*.py`で自動取得。
 実装を見送った店舗は`docs/not-implementable-shops.md`を参照。
 
-合計1432店舗・23474商品(生成日: 2026-10-18)。
+合計1438店舗・23531商品(生成日: 2026-10-18)。
 
 再生成コマンド:
 ```
@@ -554,6 +554,12 @@ aggregate_shops.py実行後の`git diff --staged --quiet || git commit`が該当
 | みやざき珈琲 | 佐賀市高木瀬東1丁目12-20 | 手動 | 20 |
 | 珈道庵 | 佐賀市三瀬村藤原540-2 | 独自CMS(house未確立パターン。個別商品ページのJSON-LDを情報源として使用) | 17 |
 | 自家焙煎珈琲 TaO(タオ) | 佐賀市若楠一丁目8-18 | 手動 | 11 |
+| 468 SiMBA Coffee | 佐賀市多布施1丁目2-13 | カラーミー | 9 |
+| 珈暮 KOGURE COFFEE & ROASTERY | 佐賀市唐人1-1-12 | 手動 | 12 |
+| "Have a nice coffee." 佐賀焙煎所 | 佐賀市鍋島町八戸溝373-8 | STORES(手動) | 6 |
+| いづみや珈琲 | 佐賀市兵庫南1丁目8-13 | カラーミー | 16 |
+| みちくさ COFFEE ROASTER & DAREKA COFFEE STAND | 佐賀市本庄町本庄167-11 | Shopify | 6 |
+| ARS OF COFFEE ROASTERS | 鳥栖市真木町2050-2 | STORES(手動) | 8 |
 | Grab coffee | 鳥栖市藤木町2288-4 | 手動 | 3 |
 
 ### 埼玉県
