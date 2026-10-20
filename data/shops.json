@@ -35535,5 +35535,377 @@
     "last_scraped_at": "2026-10-18T18:29:14.527742+00:00",
     "lat": 33.32309,
     "lng": 130.400681
+  },
+  {
+    "name": "ばいせん工房珈琲倶楽部",
+    "url": "https://www.rakuten.co.jp/baisen-coffee/",
+    "platform": "楽天市場",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可とみなす(2026-10確認。rakuten.co.jp/item.rakuten.co.jpのrobots.txtは検索系パラメータ(?i= ?s=)等のみ禁止)",
+    "address": "大阪府羽曳野市栄町6-3",
+    "prefecture": "大阪府",
+    "hours": null,
+    "map_query": "ばいせん工房珈琲倶楽部",
+    "nearest_station": {
+      "name": "古市",
+      "lines": [
+        "近鉄南大阪線",
+        "近鉄長野線"
+      ],
+      "distance_m": 250,
+      "walk_min": 3
+    },
+    "last_scraped_at": "2026-10-20T00:16:38.837980+00:00",
+    "lat": 34.552277,
+    "lng": 135.607666
+  },
+  {
+    "name": "Beans. Coffee&Roasters",
+    "url": "https://beanscoffee.jp/",
+    "platform": "Shopify",
+    "shop_type": "single_location",
+    "robots_txt_status": "確認済み(2026-10-20): User-agent: * で Allow: /。/cart/・/checkout等のみDisallow。商品ページ・/products.jsonは対象外",
+    "address": "兵庫県神戸市灘区高徳町3丁目1-7-103",
+    "prefecture": "兵庫県",
+    "hours": null,
+    "map_query": "Beans. Coffee&Roasters",
+    "nearest_station": {
+      "name": "六甲道",
+      "lines": [
+        "JR神戸線"
+      ],
+      "distance_m": 600,
+      "walk_min": 8
+    },
+    "last_scraped_at": "2026-10-20T00:16:38.837980+00:00",
+    "lat": 34.718864,
+    "lng": 135.243011
+  },
+  {
+    "name": "珈々豆屋",
+    "url": "https://store.shopping.yahoo.co.jp/cocomameyashop/",
+    "platform": "Yahoo!ショッピング",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可とみなす(2026-10確認。store.shopping.yahoo.co.jpのrobots.txtは検索系パラメータ・レビュー等のみ禁止。商品ページと /xxxx.html のカテゴリページのみ使用)",
+    "address": "北海道旭川市末広東1条4丁目8番30号",
+    "prefecture": "北海道",
+    "hours": null,
+    "map_query": "珈々豆屋",
+    "nearest_station": {
+      "name": "新旭川",
+      "lines": [
+        "JR宗谷本線",
+        "JR石北本線"
+      ],
+      "distance_m": 2600,
+      "walk_min": 33
+    },
+    "last_scraped_at": "2026-10-20T00:16:38.837980+00:00",
+    "lat": 43.803352,
+    "lng": 142.389053
+  },
+  {
+    "name": "コーヒーシティ",
+    "url": "https://store.shopping.yahoo.co.jp/coffee-city/",
+    "platform": "Yahoo!ショッピング",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認(Yahoo!ショッピングストアのrobots.txtは404。/search.htmlと各商品ページのみ使用)",
+    "address": "山口県周南市楠木1丁目8-1",
+    "prefecture": "山口県",
+    "hours": null,
+    "map_query": "コーヒーシティ",
+    "nearest_station": {
+      "name": "徳山",
+      "lines": [
+        "JR山陽本線",
+        "山陽新幹線"
+      ],
+      "distance_m": 1710,
+      "walk_min": 21
+    },
+    "last_scraped_at": "2026-10-20T00:16:38.837980+00:00",
+    "lat": 34.055622,
+    "lng": 131.820755
+  },
+  {
+    "name": "土居珈琲",
+    "url": "https://www.doicoffee.com/",
+    "platform": "独自サイト(自社カートCGI)",
+    "shop_type": "single_location",
+    "robots_txt_status": "許可(2026-10-20確認。Disallowは/dev/と/test/のみ)",
+    "address": "大阪府堺市西区浜寺元町4-496-1",
+    "prefecture": "大阪府",
+    "hours": null,
+    "map_query": "土居珈琲",
+    "nearest_station": {
+      "name": "浜寺公園",
+      "lines": [
+        "南海本線"
+      ],
+      "distance_m": 1020,
+      "walk_min": 13
+    },
+    "last_scraped_at": "2026-10-20T00:16:38.837980+00:00",
+    "lat": 34.5415,
+    "lng": 135.455704
+  },
+  {
+    "name": "イマジンコーヒー",
+    "url": "https://imaginecafe.base.shop/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(User-agent: * は Allow: /、/cart/ 等のみDisallow。python-requests/curl は名指しで禁止のため識別可能なUser-Agentを使用)",
+    "address": "北海道旭川市忠和5条4丁目11-15",
+    "prefecture": "北海道",
+    "hours": null,
+    "map_query": "イマジンコーヒー",
+    "nearest_station": {
+      "name": "近文",
+      "lines": [
+        "JR函館本線"
+      ],
+      "distance_m": 1540,
+      "walk_min": 19
+    },
+    "last_scraped_at": "2026-10-20T00:16:38.837980+00:00",
+    "lat": 43.777744,
+    "lng": 142.314606
+  },
+  {
+    "name": "自家焙煎珈琲 珈嗜園",
+    "url": "https://www.rakuten.co.jp/koshien/",
+    "platform": "楽天市場",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可とみなす(2026-10確認。rakuten.co.jp/item.rakuten.co.jpのrobots.txtは検索系パラメータ(?i= ?s=)等のみ禁止)",
+    "address": "兵庫県西宮市甲子園網引町2-17",
+    "prefecture": "兵庫県",
+    "hours": null,
+    "map_query": "自家焙煎珈琲 珈嗜園",
+    "nearest_station": {
+      "name": "久寿川",
+      "lines": [
+        "阪神本線"
+      ],
+      "distance_m": 580,
+      "walk_min": 7
+    },
+    "last_scraped_at": "2026-10-20T00:16:38.837980+00:00",
+    "lat": 34.721737,
+    "lng": 135.357162
+  },
+  {
+    "name": "南青山珈琲",
+    "url": "https://www.rakuten.co.jp/minamiaoyamacoffee/",
+    "platform": "楽天市場",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可とみなす(2026-10確認。rakuten.co.jp/item.rakuten.co.jpのrobots.txtは検索系パラメータ(?i= ?s=)のみ禁止)",
+    "address": "北海道札幌市清田区平岡2条3丁目4-11",
+    "prefecture": "北海道",
+    "hours": null,
+    "map_query": "南青山珈琲",
+    "nearest_station": {
+      "name": "大谷地",
+      "lines": [
+        "札幌市東西線"
+      ],
+      "distance_m": 3330,
+      "walk_min": 42
+    },
+    "last_scraped_at": "2026-10-20T00:16:38.837980+00:00",
+    "lat": 42.998203,
+    "lng": 141.449738
+  },
+  {
+    "name": "Morrow珈琲",
+    "url": "https://morrow-coffee.com/",
+    "platform": "Shopify",
+    "shop_type": "single_location",
+    "robots_txt_status": "許可(2026-10-20確認。User-agent: * で Allow: /。/products.json を使用)",
+    "address": "福岡県小郡市横隈1664-10",
+    "prefecture": "福岡県",
+    "hours": null,
+    "map_query": "Morrow珈琲",
+    "nearest_station": {
+      "name": "三沢",
+      "lines": [
+        "西鉄天神大牟田線"
+      ],
+      "distance_m": 900,
+      "walk_min": 11
+    },
+    "last_scraped_at": "2026-10-20T00:16:38.837980+00:00",
+    "lat": 33.429249,
+    "lng": 130.566772
+  },
+  {
+    "name": "モルカフェ ~FARMERS PASSION~",
+    "url": "https://nepalcoffee.base.shop/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "愛知県豊川市東豊町5-22",
+    "prefecture": "愛知県",
+    "hours": null,
+    "map_query": "モルカフェ ~FARMERS PASSION~",
+    "nearest_station": {
+      "name": "豊川",
+      "lines": [
+        "JR飯田線"
+      ],
+      "distance_m": 1200,
+      "walk_min": 15
+    },
+    "last_scraped_at": "2026-10-20T00:16:38.837980+00:00",
+    "lat": 34.829411,
+    "lng": 137.407227
+  },
+  {
+    "name": "丘の上珈琲",
+    "url": "https://www.rakuten.co.jp/ko-hi-koubou/",
+    "platform": "楽天市場",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可とみなす(2026-10確認。rakuten.co.jp/item.rakuten.co.jpのrobots.txtは検索系パラメータ(?i= ?s=)のみ禁止)",
+    "address": "北海道夕張郡長沼町加賀団体",
+    "prefecture": "北海道",
+    "hours": null,
+    "map_query": "丘の上珈琲",
+    "nearest_station": {
+      "name": "由仁",
+      "lines": [
+        "JR室蘭本線"
+      ],
+      "distance_m": 7380,
+      "walk_min": 92
+    },
+    "last_scraped_at": "2026-10-20T00:16:38.837980+00:00",
+    "lat": 43.01041,
+    "lng": 141.695282
+  },
+  {
+    "name": "POPCOFFEES",
+    "url": "https://popcoffees.com/",
+    "platform": "Welcart(WordPress)",
+    "shop_type": "single_location",
+    "robots_txt_status": "許可(2026-10-20確認。/press/wp-admin/ のみDisallow)",
+    "address": "福岡県福岡市東区美和台4-6-2",
+    "prefecture": "福岡県",
+    "hours": null,
+    "map_query": "POPCOFFEES",
+    "nearest_station": {
+      "name": "三苫",
+      "lines": [
+        "西鉄貝塚線"
+      ],
+      "distance_m": 130,
+      "walk_min": 2
+    },
+    "last_scraped_at": "2026-10-20T00:16:38.837980+00:00",
+    "lat": 33.702339,
+    "lng": 130.423935
+  },
+  {
+    "name": "R and R coffee labo",
+    "url": "https://store.shopping.yahoo.co.jp/randrcoffeelabo/",
+    "platform": "Yahoo!ショッピング",
+    "shop_type": "single_location",
+    "robots_txt_status": "未確認(Yahoo!ショッピングストアのrobots.txtは404。/search.htmlと各商品ページのみ使用)",
+    "address": "長崎県諫早市多良見町化屋757-7",
+    "prefecture": "長崎県",
+    "hours": null,
+    "map_query": "R and R coffee labo",
+    "nearest_station": {
+      "name": "喜々津",
+      "lines": [
+        "JR長崎旧線",
+        "JR長崎本線"
+      ],
+      "distance_m": 60,
+      "walk_min": 1
+    },
+    "last_scraped_at": "2026-10-20T00:16:38.837980+00:00",
+    "lat": 32.833141,
+    "lng": 129.98674
+  },
+  {
+    "name": "辻本珈琲",
+    "url": "https://tsujimoto-coffee.com/",
+    "platform": "フューチャーショップ(独自ドメイン)",
+    "shop_type": "single_location",
+    "robots_txt_status": "制限なし(2026-10-20確認。/robots.txt は404)",
+    "address": "大阪府和泉市春木町1156-1",
+    "prefecture": "大阪府",
+    "hours": null,
+    "map_query": "辻本珈琲",
+    "nearest_station": {
+      "name": "和泉中央",
+      "lines": [
+        "南海泉北線"
+      ],
+      "distance_m": 3120,
+      "walk_min": 39
+    },
+    "last_scraped_at": "2026-10-20T00:16:38.837980+00:00",
+    "lat": 34.433346,
+    "lng": 135.452499
+  },
+  {
+    "name": "上町珈琲",
+    "url": "https://uemachicoffee.shop-pro.jp/",
+    "platform": "カラーミーショップ(shop-pro.jp)",
+    "shop_type": "single_location",
+    "robots_txt_status": "許可(2026-10-20確認。User-agent: *は/secure/と/cart/のみ制限)",
+    "address": "大阪府大阪市天王寺区上本町8-2-3",
+    "prefecture": "大阪府",
+    "hours": null,
+    "map_query": "上町珈琲",
+    "nearest_station": {
+      "name": "大阪上本町",
+      "lines": [
+        "近鉄奈良線",
+        "近鉄大阪線"
+      ],
+      "distance_m": 520,
+      "walk_min": 7
+    },
+    "last_scraped_at": "2026-10-20T00:16:38.837980+00:00",
+    "lat": 34.662025,
+    "lng": 135.518463
+  },
+  {
+    "name": "やぶ珈琲",
+    "url": "https://onlineshop.yabucoffee.com/",
+    "platform": "Shopify",
+    "shop_type": "single_location",
+    "robots_txt_status": "許可(2026-10-20確認。Disallowは/admin・/cart・/checkout等のみ。/products.jsonは禁止されていない)",
+    "address": "大阪府大阪市平野区喜連東3-13-4",
+    "prefecture": "大阪府",
+    "hours": null,
+    "map_query": "やぶ珈琲",
+    "nearest_station": {
+      "name": "喜連瓜破",
+      "lines": [
+        "大阪谷町線"
+      ],
+      "distance_m": 580,
+      "walk_min": 7
+    },
+    "last_scraped_at": "2026-10-20T00:16:38.837980+00:00",
+    "lat": 34.609737,
+    "lng": 135.557953
+  },
+  {
+    "name": "ヤマフクコーヒー",
+    "url": "https://shop.yamafukucoffee.com/",
+    "platform": "独自EC(自社構築)",
+    "shop_type": "single_location",
+    "robots_txt_status": "許可(2026-10確認。Allow: /、Disallow は /admin /api/ /business/ /checkout /orders /view/member/ /view/cart /search 等。トップページと /view/item/ のみ使用)",
+    "address": "北海道枝幸郡中頓別町字中頓別141",
+    "prefecture": "北海道",
+    "hours": null,
+    "map_query": "ヤマフクコーヒー",
+    "nearest_station": null,
+    "last_scraped_at": "2026-10-20T00:16:38.837980+00:00",
+    "lat": 44.972904,
+    "lng": 142.293915
   }
 ]

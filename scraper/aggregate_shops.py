@@ -1280,6 +1280,24 @@ SOURCE_FILES = {
     # FC店を除き本店のみ登録(香川県)
     # 楽天市場店を主な販売先として登録(佐賀県)
     "OK COFFEE Saga Roastery": "data_okcoffee.json",
+    # モール出店・独自ECの未登録店(楽天/Yahoo!発掘の試験調査から。2026-10-20)
+    "ばいせん工房珈琲倶楽部": "data_baisenkobocoffeeclub.json",
+    "Beans. Coffee&Roasters": "data_beanscoffeeroasters.json",
+    "珈々豆屋": "data_cocomameya.json",
+    "コーヒーシティ": "data_coffeecity.json",
+    "土居珈琲": "data_doicoffee.json",
+    "イマジンコーヒー": "data_imaginecoffee.json",
+    "自家焙煎珈琲 珈嗜園": "data_koshiencoffee.json",
+    "南青山珈琲": "data_minamiaoyamacoffee.json",
+    "Morrow珈琲": "data_morrowcoffee.json",
+    "モルカフェ ~FARMERS PASSION~": "data_morucafe.json",
+    "丘の上珈琲": "data_okanouecoffee.json",
+    "POPCOFFEES": "data_popcoffees.json",
+    "R and R coffee labo": "data_randrcoffeelabo.json",
+    "辻本珈琲": "data_tsujimotocoffee.json",
+    "上町珈琲": "data_uemachicoffee.json",
+    "やぶ珈琲": "data_yabucoffee.json",
+    "ヤマフクコーヒー": "data_yamafukucoffee.json",
 }
 
 
