@@ -35907,5 +35907,861 @@
     "last_scraped_at": "2026-10-20T00:16:38.837980+00:00",
     "lat": 44.972904,
     "lng": 142.293915
+  },
+  {
+    "name": "AND COFFEE ROASTERS",
+    "url": "https://www.andcoffeeroasters.com/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(User-agent: *でAllow: /。python-requests/curl等は個別禁止のため識別可能なUser-Agentで5秒間隔)",
+    "address": "熊本県熊本市中央区上通町11-22 BRビル",
+    "prefecture": "熊本県",
+    "hours": null,
+    "map_query": "AND COFFEE ROASTERS",
+    "nearest_station": {
+      "name": "藤崎宮前",
+      "lines": [
+        "熊本電鉄藤崎線"
+      ],
+      "distance_m": 310,
+      "walk_min": 4
+    },
+    "last_scraped_at": "2026-10-20T09:24:53.826518+00:00",
+    "lat": 32.806168,
+    "lng": 130.712677
+  },
+  {
+    "name": "ブラジレイロ",
+    "url": "https://brasileiro.base.shop/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "福岡県福岡市博多区店屋町1-20",
+    "prefecture": "福岡県",
+    "hours": null,
+    "map_query": "ブラジレイロ",
+    "nearest_station": {
+      "name": "呉服町",
+      "lines": [
+        "福岡市箱崎線"
+      ],
+      "distance_m": 190,
+      "walk_min": 2
+    },
+    "last_scraped_at": "2026-10-20T09:24:53.826518+00:00",
+    "lat": 33.596596,
+    "lng": 130.410126
+  },
+  {
+    "name": "Cafe Gluck",
+    "url": "https://www.cafe-gluck.com/",
+    "platform": "ショップサーブ",
+    "shop_type": "single_location",
+    "robots_txt_status": "robots.txtなし(404、2026-10-20確認。制限の記載なし)",
+    "address": "福岡県久留米市日吉町18-48",
+    "prefecture": "福岡県",
+    "hours": null,
+    "map_query": "Cafe Gluck",
+    "nearest_station": {
+      "name": "西鉄久留米",
+      "lines": [
+        "西鉄天神大牟田線"
+      ],
+      "distance_m": 790,
+      "walk_min": 10
+    },
+    "last_scraped_at": "2026-10-20T09:24:53.826518+00:00",
+    "lat": 33.3162,
+    "lng": 130.513992
+  },
+  {
+    "name": "Cafe Kissako",
+    "url": "https://cafekissako.com/",
+    "platform": "WordPress + WooCommerce",
+    "shop_type": "single_location",
+    "robots_txt_status": "許可(2026-10-20確認。cafekissako.com/robots.txt は wc-logs・wp-admin 等のみ禁止。Store API /wp-json は禁止対象外)",
+    "address": "福岡県行橋市高瀬302",
+    "prefecture": "福岡県",
+    "hours": null,
+    "map_query": "Cafe Kissako",
+    "nearest_station": {
+      "name": "新田原",
+      "lines": [
+        "JR日豊本線"
+      ],
+      "distance_m": 790,
+      "walk_min": 10
+    },
+    "last_scraped_at": "2026-10-20T09:24:53.826518+00:00",
+    "lat": 33.701725,
+    "lng": 131.005035
+  },
+  {
+    "name": "COFFEE BLUE",
+    "url": "https://coffeeblue.base.shop/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(User-agent: *でAllow: /。python-requests/curl等は個別禁止のため識別可能なUser-Agentで5秒間隔)",
+    "address": "熊本県熊本市中央区出水1-4-27",
+    "prefecture": "熊本県",
+    "hours": null,
+    "map_query": "COFFEE BLUE",
+    "nearest_station": {
+      "name": "市立体育館前",
+      "lines": [
+        "熊本市電健軍線"
+      ],
+      "distance_m": 220,
+      "walk_min": 3
+    },
+    "last_scraped_at": "2026-10-20T09:24:53.826518+00:00",
+    "lat": 32.787498,
+    "lng": 130.732574
+  },
+  {
+    "name": "珈琲舎のだ",
+    "url": "https://noda.shop-pro.jp/",
+    "platform": "カラーミーショップ(shop-pro.jp)",
+    "shop_type": "single_location",
+    "robots_txt_status": "許可(2026-10-20確認。/secure/と/cart/以外は制限なし)",
+    "address": "福岡県福岡市中央区大名2-10-1 シャンボール大名1階",
+    "prefecture": "福岡県",
+    "hours": null,
+    "map_query": "珈琲舎のだ",
+    "nearest_station": {
+      "name": "赤坂",
+      "lines": [
+        "福岡市空港線"
+      ],
+      "distance_m": 210,
+      "walk_min": 3
+    },
+    "last_scraped_at": "2026-10-20T09:24:53.826518+00:00",
+    "lat": 33.589756,
+    "lng": 130.393112
+  },
+  {
+    "name": "GENIC COFFEE",
+    "url": "https://www.cafe-genic.com/",
+    "platform": "独自カート(xaas3.jp)",
+    "shop_type": "single_location",
+    "robots_txt_status": "許可(2026-10-20確認。User-Agent: * で /default/error/ と /preview/ のみDisallow)",
+    "address": "福岡県北九州市小倉北区竪町2-5-12",
+    "prefecture": "福岡県",
+    "hours": null,
+    "map_query": "GENIC COFFEE",
+    "nearest_station": {
+      "name": "西小倉",
+      "lines": [
+        "JR鹿児島本線",
+        "JR日豊本線"
+      ],
+      "distance_m": 950,
+      "walk_min": 12
+    },
+    "last_scraped_at": "2026-10-20T09:24:53.826518+00:00",
+    "lat": 33.882271,
+    "lng": 130.867081
+  },
+  {
+    "name": "日々ノ珈琲",
+    "url": "https://hibinocoffee.jp/",
+    "platform": "MakeShop",
+    "shop_type": "single_location",
+    "robots_txt_status": "制限記述なし(2026-10-20確認。/robots.txtは404)",
+    "address": "福岡県福岡市中央区平尾2-17-6 山荘第2アパート1F",
+    "prefecture": "福岡県",
+    "hours": null,
+    "map_query": "日々ノ珈琲",
+    "nearest_station": {
+      "name": "西鉄平尾",
+      "lines": [
+        "西鉄天神大牟田線"
+      ],
+      "distance_m": 310,
+      "walk_min": 4
+    },
+    "last_scraped_at": "2026-10-20T09:24:53.826518+00:00",
+    "lat": 33.574448,
+    "lng": 130.403061
+  },
+  {
+    "name": "久山珈琲",
+    "url": "https://hisayamacoff.buyshop.jp/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "福岡県糟屋郡久山町大字山田1332-1",
+    "prefecture": "福岡県",
+    "hours": null,
+    "map_query": "久山珈琲",
+    "nearest_station": {
+      "name": "土井",
+      "lines": [
+        "JR香椎線"
+      ],
+      "distance_m": 2090,
+      "walk_min": 26
+    },
+    "last_scraped_at": "2026-10-20T09:24:53.826518+00:00",
+    "lat": 33.649372,
+    "lng": 130.480515
+  },
+  {
+    "name": "いわくま",
+    "url": "https://iwakuma.base.shop/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "福岡県福岡市南区玉川町15-4 1-A(屋号 珈琲いわくま)",
+    "prefecture": "福岡県",
+    "hours": null,
+    "map_query": "いわくま",
+    "nearest_station": {
+      "name": "高宮",
+      "lines": [
+        "西鉄天神大牟田線"
+      ],
+      "distance_m": 300,
+      "walk_min": 4
+    },
+    "last_scraped_at": "2026-10-20T09:24:53.826518+00:00",
+    "lat": 33.567253,
+    "lng": 130.417969
+  },
+  {
+    "name": "かとう珈琲",
+    "url": "https://katohcoffee.base.shop/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "福岡県北九州市小倉北区中井1-27-19",
+    "prefecture": "福岡県",
+    "hours": null,
+    "map_query": "かとう珈琲",
+    "nearest_station": {
+      "name": "九州工大前",
+      "lines": [
+        "JR鹿児島本線"
+      ],
+      "distance_m": 1190,
+      "walk_min": 15
+    },
+    "last_scraped_at": "2026-10-20T09:24:53.826518+00:00",
+    "lat": 33.893551,
+    "lng": 130.849976
+  },
+  {
+    "name": "このみ珈琲",
+    "url": "https://shop.konomi-coffee.biz/",
+    "platform": "カラーミーショップ",
+    "shop_type": "single_location",
+    "robots_txt_status": "許可(2026-10-20確認。shop.konomi-coffee.biz は /secure/ と /cart/ のみDisallow、AhrefsBot等のSEO系ボットのみ全面禁止。konomi-coffee.biz は /wp-admin/ のみ)",
+    "address": "福岡県直方市殿町2-9",
+    "prefecture": "福岡県",
+    "hours": null,
+    "map_query": "このみ珈琲",
+    "nearest_station": {
+      "name": "直方",
+      "lines": [
+        "平成筑豊鉄道伊田線",
+        "JR筑豊本線"
+      ],
+      "distance_m": 350,
+      "walk_min": 4
+    },
+    "last_scraped_at": "2026-10-20T09:24:53.826518+00:00",
+    "lat": 33.745705,
+    "lng": 130.728149
+  },
+  {
+    "name": "こうひいや",
+    "url": "https://ec.kouhiiya.jp/",
+    "platform": "WordPress + WooCommerce",
+    "shop_type": "single_location",
+    "robots_txt_status": "許可(2026-10-20確認。ec.kouhiiya.jp/robots.txt は wc-logs・wp-admin・add-to-cart のみ禁止。Store API /wp-json は禁止対象外)",
+    "address": "福岡県大牟田市下白川町2-176",
+    "prefecture": "福岡県",
+    "hours": null,
+    "map_query": "こうひいや",
+    "nearest_station": {
+      "name": "西鉄銀水",
+      "lines": [
+        "西鉄天神大牟田線"
+      ],
+      "distance_m": 770,
+      "walk_min": 10
+    },
+    "last_scraped_at": "2026-10-20T09:24:53.826518+00:00",
+    "lat": 33.044075,
+    "lng": 130.456909
+  },
+  {
+    "name": "熊本珈琲Roaster",
+    "url": "https://www.kumamoto-coffee-roaster.store/",
+    "platform": "Shopify",
+    "shop_type": "single_location",
+    "robots_txt_status": "許可(User-agent: *でAllow: /。識別可能なUser-Agentで/products.jsonのみ取得)",
+    "address": "熊本県玉名郡長洲町清源寺2768-2",
+    "prefecture": "熊本県",
+    "hours": null,
+    "map_query": "熊本珈琲Roaster",
+    "nearest_station": {
+      "name": "長洲",
+      "lines": [
+        "JR鹿児島本線"
+      ],
+      "distance_m": 2410,
+      "walk_min": 30
+    },
+    "last_scraped_at": "2026-10-20T09:24:53.826518+00:00",
+    "lat": 32.918896,
+    "lng": 130.47261
+  },
+  {
+    "name": "kuyuru coffee",
+    "url": "https://kuyurucoffe.thebase.in/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "福岡県柳川市三橋町今古賀182-2",
+    "prefecture": "福岡県",
+    "hours": null,
+    "map_query": "kuyuru coffee",
+    "nearest_station": {
+      "name": "西鉄柳川",
+      "lines": [
+        "西鉄天神大牟田線"
+      ],
+      "distance_m": 540,
+      "walk_min": 7
+    },
+    "last_scraped_at": "2026-10-20T09:24:53.826518+00:00",
+    "lat": 33.160248,
+    "lng": 130.4198
+  },
+  {
+    "name": "MANLY COFFEE",
+    "url": "https://manly-coffee.com/",
+    "platform": "Shopify",
+    "shop_type": "single_location",
+    "robots_txt_status": "許可(Shopify標準。/products.jsonは禁止対象外。2026-10-20確認)",
+    "address": "福岡県福岡市中央区平尾2丁目14-21",
+    "prefecture": "福岡県",
+    "hours": null,
+    "map_query": "MANLY COFFEE",
+    "nearest_station": {
+      "name": "西鉄平尾",
+      "lines": [
+        "西鉄天神大牟田線"
+      ],
+      "distance_m": 160,
+      "walk_min": 2
+    },
+    "last_scraped_at": "2026-10-20T09:24:53.826518+00:00",
+    "lat": 33.573551,
+    "lng": 130.404526
+  },
+  {
+    "name": "manucoffee",
+    "url": "https://online.manucoffee.com/",
+    "platform": "Shopify",
+    "shop_type": "single_location",
+    "robots_txt_status": "許可(Shopify標準。/products.jsonは禁止対象外。2026-10-20確認)",
+    "address": "福岡県福岡市中央区白金1-18-28 manucoffee roasters KUJIRA",
+    "prefecture": "福岡県",
+    "hours": null,
+    "map_query": "manucoffee",
+    "nearest_station": {
+      "name": "薬院",
+      "lines": [
+        "福岡市七隈線",
+        "西鉄天神大牟田線"
+      ],
+      "distance_m": 150,
+      "walk_min": 2
+    },
+    "last_scraped_at": "2026-10-20T09:24:53.826518+00:00",
+    "lat": 33.580662,
+    "lng": 130.402817
+  },
+  {
+    "name": "自家焙煎珈琲 萌香",
+    "url": "https://mocha.base.ec/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "福岡県筑紫野市古賀906-1",
+    "prefecture": "福岡県",
+    "hours": null,
+    "map_query": "自家焙煎珈琲 萌香",
+    "nearest_station": {
+      "name": "天拝山",
+      "lines": [
+        "JR鹿児島本線"
+      ],
+      "distance_m": 1470,
+      "walk_min": 18
+    },
+    "last_scraped_at": "2026-10-20T09:24:53.826518+00:00",
+    "lat": 33.477211,
+    "lng": 130.515366
+  },
+  {
+    "name": "オアシス珈琲",
+    "url": "https://oasiscoffee.co.jp/",
+    "platform": "ショップサーブ",
+    "shop_type": "single_location",
+    "robots_txt_status": "robots.txtなし(404、2026-10-20確認。制限の記載なし)",
+    "address": "福岡県飯塚市堀池133-9",
+    "prefecture": "福岡県",
+    "hours": null,
+    "map_query": "オアシス珈琲",
+    "nearest_station": {
+      "name": "飯塚",
+      "lines": [
+        "JR筑豊本線"
+      ],
+      "distance_m": 630,
+      "walk_min": 8
+    },
+    "last_scraped_at": "2026-10-20T09:24:53.826518+00:00",
+    "lat": 33.627995,
+    "lng": 130.68277
+  },
+  {
+    "name": "自家焙煎 おだ珈琲",
+    "url": "https://www.odacoffee.com/",
+    "platform": "カラーミーショップ(shop-pro.jp)",
+    "shop_type": "single_location",
+    "robots_txt_status": "許可(2026-10-20確認。/secure/と/cart/以外は制限なし)",
+    "address": "福岡県嘉麻市鴨生240",
+    "prefecture": "福岡県",
+    "hours": null,
+    "map_query": "自家焙煎 おだ珈琲",
+    "nearest_station": {
+      "name": "下鴨生",
+      "lines": [
+        "JR後藤寺線"
+      ],
+      "distance_m": 1080,
+      "walk_min": 14
+    },
+    "last_scraped_at": "2026-10-20T09:24:53.826518+00:00",
+    "lat": 33.605244,
+    "lng": 130.729797
+  },
+  {
+    "name": "オリオン珈琲焙煎所",
+    "url": "https://orioncoffee.shop-pro.jp/",
+    "platform": "カラーミーショップ",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-10-20確認。Disallowは/secure/・/cart/のみ。識別可能なUser-Agentを使用)",
+    "address": "福岡県福岡市東区箱崎3丁目2-23",
+    "prefecture": "福岡県",
+    "hours": null,
+    "map_query": "オリオン珈琲焙煎所",
+    "nearest_station": {
+      "name": "箱崎",
+      "lines": [
+        "JR鹿児島本線"
+      ],
+      "distance_m": 180,
+      "walk_min": 2
+    },
+    "last_scraped_at": "2026-10-20T09:24:53.826518+00:00",
+    "lat": 33.619595,
+    "lng": 130.427124
+  },
+  {
+    "name": "自家焙煎珈琲 passo a passo",
+    "url": "http://coffeepasso.cart.fc2.com/",
+    "platform": "FC2ショッピングカート(cart.fc2.com)",
+    "shop_type": "single_location",
+    "robots_txt_status": "許可(2026-10-20確認。/cancel/・/setup/・/tools/のみDisallow)",
+    "address": "福岡県春日市小倉7丁目1 藤ビル103",
+    "prefecture": "福岡県",
+    "hours": null,
+    "map_query": "自家焙煎珈琲 passo a passo",
+    "nearest_station": {
+      "name": "南福岡",
+      "lines": [
+        "JR鹿児島本線"
+      ],
+      "distance_m": 830,
+      "walk_min": 10
+    },
+    "last_scraped_at": "2026-10-20T09:24:53.826518+00:00",
+    "lat": 33.535408,
+    "lng": 130.456375
+  },
+  {
+    "name": "煎谷本舗",
+    "url": "http://www.aromascoffeemarket.com/",
+    "platform": "ショップサーブ",
+    "shop_type": "single_location",
+    "robots_txt_status": "robots.txt なし(2026-10-20確認、/robots.txt は通常のHTMLページを返す。禁止指定なし)",
+    "address": "福岡県久留米市国分町1600-2",
+    "prefecture": "福岡県",
+    "hours": null,
+    "map_query": "煎谷本舗",
+    "nearest_station": {
+      "name": "南久留米",
+      "lines": [
+        "JR久大本線"
+      ],
+      "distance_m": 1000,
+      "walk_min": 13
+    },
+    "last_scraped_at": "2026-10-20T09:24:53.826518+00:00",
+    "lat": 33.294483,
+    "lng": 130.528214
+  },
+  {
+    "name": "TAISHO COFFEE ROASTER",
+    "url": "https://taishocoffee.theshop.jp/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "福岡県糸島市二丈深江3丁目1-5",
+    "prefecture": "福岡県",
+    "hours": null,
+    "map_query": "TAISHO COFFEE ROASTER",
+    "nearest_station": {
+      "name": "筑前深江",
+      "lines": [
+        "JR筑肥東線"
+      ],
+      "distance_m": 290,
+      "walk_min": 4
+    },
+    "last_scraped_at": "2026-10-20T09:24:53.826518+00:00",
+    "lat": 33.517708,
+    "lng": 130.139053
+  },
+  {
+    "name": "ウインドファーム",
+    "url": "https://www.organic-coffee.jp/",
+    "platform": "MakeShop",
+    "shop_type": "single_location",
+    "robots_txt_status": "robots.txt なし(2026-10-20確認、404。禁止指定なし)",
+    "address": "福岡県遠賀郡水巻町下二西3-7-16",
+    "prefecture": "福岡県",
+    "hours": null,
+    "map_query": "ウインドファーム",
+    "nearest_station": {
+      "name": "水巻",
+      "lines": [
+        "JR鹿児島本線"
+      ],
+      "distance_m": 850,
+      "walk_min": 11
+    },
+    "last_scraped_at": "2026-10-20T09:24:53.826518+00:00",
+    "lat": 33.844631,
+    "lng": 130.694611
+  },
+  {
+    "name": "夜宮珈琲倶楽部",
+    "url": "https://shop.yomiyacoffee.club/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
+    "address": "福岡県北九州市戸畑区一枝1-7-1",
+    "prefecture": "福岡県",
+    "hours": null,
+    "map_query": "夜宮珈琲倶楽部",
+    "nearest_station": {
+      "name": "九州工大前",
+      "lines": [
+        "JR鹿児島本線"
+      ],
+      "distance_m": 1630,
+      "walk_min": 20
+    },
+    "last_scraped_at": "2026-10-20T09:24:53.826518+00:00",
+    "lat": 33.885815,
+    "lng": 130.838318
+  },
+  {
+    "name": "café unsan",
+    "url": "https://cafeunsan.com/",
+    "instagram_url": null,
+    "platform": "WordPress(公式サイトのコーヒー豆販売ページ。通販なし、店頭で焙煎して渡し)",
+    "shop_type": "single_location",
+    "address": "福岡県久留米市江戸屋敷2-11-13",
+    "prefecture": "福岡県",
+    "hours": "10:00〜18:00、定休日：火・水・木",
+    "map_query": "café unsan 福岡県久留米市江戸屋敷2-11-13",
+    "nearest_station": {
+      "name": "久留米高校前",
+      "lines": [
+        "JR久大本線"
+      ],
+      "distance_m": 1090,
+      "walk_min": 14
+    },
+    "data_source": "manual",
+    "source_note": "公式サイトのコーヒー豆販売ページ(https://cafeunsan.com/beans/)を2026-10-20に確認(営業カレンダーは2026-07〜2027-10まで掲載)。アクセスページ(https://cafeunsan.com/access/)に住所(〒830-0059 久留米市江戸屋敷2丁目11-13)・営業時間(10〜18時)・定休日(火水木)、ページ冒頭に「どこよりも新鮮な焙煎したての豆をお渡し」「ご注文からお持ち帰りまで20分〜」と記載。注意: 表示価格は「生豆の価格」で、焙煎により約10〜20%グラム数が目減りする旨の注記あり(重量は100gとして登録)。在庫は「仕入れの状況により在庫がない商品がございます」とあるが個別表示はなく販売中として扱った。コロンビア・インフュージョン(果実等の香りを移した豆)は除外。",
+    "last_verified_at": "2026-10-20",
+    "lat": 33.288685,
+    "lng": 130.51796
+  },
+  {
+    "name": "珈琲カド",
+    "url": "https://coffeekado.stores.jp/",
+    "instagram_url": null,
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "熊本県熊本市南区城南町永934-4",
+    "prefecture": "熊本県",
+    "hours": null,
+    "map_query": "珈琲カド 熊本県熊本市南区城南町永934-4",
+    "nearest_station": {
+      "name": "川尻",
+      "lines": [
+        "JR鹿児島本線"
+      ],
+      "distance_m": 4830,
+      "walk_min": 60
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://coffeekado.stores.jp/)の商品ページをブラウザfetch()で2026-10-20に確認。公式(https://coffee-kado.com/)に「Japan hand drip champion2017の久保田洋平が自家焙煎、販売を行う珈琲店」、九州ウォーカー(https://www.walkerplus.com/article/1117553/)にフジローヤル半熱風式1kg窯の記載。豆の販売拠点は焙煎所(熊本市南区城南町永934-4、不定期営業)。ほかに健軍店(東区若葉1丁目4-20)と熊本県立伝統工芸館の喫茶で計3拠点。最小重量の200g(豆のまま)の価格を採用。ラムインフューズドコーヒー(インフューズド)・ドリップバッグ・ミルクブリューパック・大口注文フォームは除外。",
+    "last_verified_at": "2026-10-20",
+    "lat": 32.728107,
+    "lng": 130.727982
+  },
+  {
+    "name": "COFFEEMAN",
+    "url": "https://coffeemanonline.stores.jp/",
+    "instagram_url": "https://instagram.com/coffeeman.jp/",
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "福岡県福岡市中央区六本松4-5-23",
+    "prefecture": "福岡県",
+    "hours": null,
+    "map_query": "COFFEEMAN 福岡県福岡市中央区六本松4-5-23",
+    "nearest_station": {
+      "name": "六本松",
+      "lines": [
+        "福岡市七隈線"
+      ],
+      "distance_m": 400,
+      "walk_min": 5
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://coffeemanonline.stores.jp/)の商品ページをブラウザfetch()で2026-10-20に確認。ABOUTに「豆香洞コーヒーで焙煎を一から学び直し、2014年に焙煎競技大会で優勝(日本一)、2015年に世界大会第9位」と店主(江口崇臣、コーヒープランナー株式会社)の経歴を記載。住所は特定商取引法に基づく表示(六本松4-5-23)。各銘柄の最小重量(100g/200g、豆のまま)の価格を採用。1kg・ドリップバッグ・水出し・フィルター・器具・グッズは除外。",
+    "last_verified_at": "2026-10-20",
+    "lat": 33.574158,
+    "lng": 130.378113
+  },
+  {
+    "name": "CREW Coffee",
+    "url": "https://crewcoffee.stores.jp/",
+    "instagram_url": null,
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "福岡県北九州市小倉北区吉野町12-9",
+    "prefecture": "福岡県",
+    "hours": null,
+    "map_query": "CREW Coffee 福岡県北九州市小倉北区吉野町12-9",
+    "nearest_station": {
+      "name": "香春口三萩野",
+      "lines": [
+        "北九州高速鉄道"
+      ],
+      "distance_m": 490,
+      "walk_min": 6
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://crewcoffee.stores.jp/)の商品ページをブラウザfetch()で2026-10-20に確認。ショップに「【自家焙煎】農薬/化学肥料不使用の珈琲豆専門店です」と記載。公式(https://crewroasters.com/)の特定商取引法表示(https://crewroasters.com/tokusyo/)の住所を採用、カフェ併設の古民家で営業中。各銘柄の100g(豆のまま)の価格を採用。ドリップバッグ・セット(100g×2 ロースターズチョイス)・定期便は除外。【デカフェ】エチオピアorメキシコは産地が購入時の選択式で産地を特定できないため除外。",
+    "last_verified_at": "2026-10-20",
+    "lat": 33.873108,
+    "lng": 130.875305
+  },
+  {
+    "name": "ヒナタ珈琲",
+    "url": "https://hinatacoffee.stores.jp/",
+    "instagram_url": "https://www.instagram.com/hinata_coffee22/",
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "熊本県熊本市中央区出水7丁目6-15",
+    "prefecture": "熊本県",
+    "hours": null,
+    "map_query": "ヒナタ珈琲 熊本県熊本市中央区出水7丁目6-15",
+    "nearest_station": {
+      "name": "南熊本",
+      "lines": [
+        "JR豊肥本線"
+      ],
+      "distance_m": 1160,
+      "walk_min": 15
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://hinatacoffee.stores.jp/)の商品ページをブラウザfetch()で2026-10-20に確認。トップに「ご注文いただいてから焙煎する自家焙煎珈琲豆屋です」と記載。実店舗(自宅庭のテントで営業する「おうちヒナタ」、豆も店頭販売)は肥後ジャーナル(https://higojournal.com/archives/hinata-coffee.html)で番地まで確認し、楽天の会社概要も同住所。各銘柄の100g(豆のまま)の価格を採用。200g以上・ドリップバッグ・水出し・セット・グッズは除外。ケニア ギキリマAAは完売で価格が取得できないため除外。楽天市場店(www.rakuten.co.jp/hinatacoffee/)にも出店しているがSTORESを採用。",
+    "last_verified_at": "2026-10-20",
+    "lat": 32.779015,
+    "lng": 130.721527
+  },
+  {
+    "name": "花待ち雨珈琲",
+    "url": "https://homachiamecoffee.stores.jp/",
+    "instagram_url": "https://instagram.com/homachiame.coffee/",
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "福岡県福岡市中央区六本松1-4-11-103",
+    "prefecture": "福岡県",
+    "hours": null,
+    "map_query": "花待ち雨珈琲 福岡県福岡市中央区六本松1-4-11-103",
+    "nearest_station": {
+      "name": "六本松",
+      "lines": [
+        "福岡市七隈線"
+      ],
+      "distance_m": 290,
+      "walk_min": 4
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://homachiamecoffee.stores.jp/)の商品ページをブラウザfetch()で2026-10-20に確認。ABOUTに「2017年に無店舗で焙煎を始め、2020年1月に六本松に実店舗をオープン。焙煎、豆売り、カフェ…」「基本、木曜日焙煎/土曜日発送」と記載。住所は特定商取引法に基づく表示(六本松1-4-11-103)。店舗は六本松店と片江店(城南区片江1-4-7、金曜のみ)の2店。豆6銘柄(商品名の産地)を採用。コスタリカ・メキシコ(デカフェ)は内容量の記載が商品ページになく重量はnull。ドリップバッグ・水出し・教室/体験・グッズは除外。",
+    "last_verified_at": "2026-10-20",
+    "lat": 33.580128,
+    "lng": 130.378448
+  },
+  {
+    "name": "自家焙煎珈琲の店 ひびきの",
+    "url": "http://cafehibikino.web.fc2.com/coffee.html",
+    "instagram_url": null,
+    "platform": "FC2ホームページ(静的HTML価格表。通販なし、店頭販売)",
+    "shop_type": "single_location",
+    "address": "福岡県北九州市若松区ひびきの南2-16-16",
+    "prefecture": "福岡県",
+    "hours": "平日11:00〜18:00、土日祝11:00〜17:00、定休日：月曜・火曜",
+    "map_query": "自家焙煎珈琲の店 ひびきの 福岡県北九州市若松区ひびきの南2-16-16",
+    "nearest_station": {
+      "name": "本城",
+      "lines": [
+        "JR筑豊本線"
+      ],
+      "distance_m": 2070,
+      "walk_min": 26
+    },
+    "data_source": "manual",
+    "source_note": "公式サイトの価格表(http://cafehibikino.web.fc2.com/coffee.html、HTTPヘッダのLast-Modifiedは2023-07-13)を2026-10-20に確認。店舗情報(https://cafehibikino.web.fc2.com/shop.html)に住所(〒808-0137 北九州市若松区ひびきの南2-16-16)・TEL・営業時間・定休日(月・火)と、店内の1kg釜の焙煎機の記載あり。通販は無く店頭販売。表は『ブレンド3種類・ストレート14種類』とあるが、銘柄名が固定で載っているのは4種のみで、残りは『《2〜3週間替わり》珈琲(700円〜)』のため除外。価格は100g税込。更新が古い(2023-07)ため現在の取扱・価格は変わっている可能性がある。",
+    "last_verified_at": "2026-10-20",
+    "lat": 33.887951,
+    "lng": 130.706726
+  },
+  {
+    "name": "琥珀の刻",
+    "url": "https://www.kohaku-toki.com/",
+    "instagram_url": null,
+    "platform": "BiND Cart(商品価格はJS描画のためブラウザで描画後の表示から取得)",
+    "shop_type": "single_location",
+    "address": "熊本県山鹿市鹿北町四丁1638-1",
+    "prefecture": "熊本県",
+    "hours": null,
+    "map_query": "琥珀の刻 熊本県山鹿市鹿北町四丁1638-1",
+    "nearest_station": null,
+    "data_source": "manual",
+    "source_note": "公式オンラインストア(https://www.kohaku-toki.com/products/corner26/index.html)の商品ページを2026-10-20にブラウザで確認。店舗紹介(https://www.kohaku-toki.com/about.html)に「自家焙煎コーヒー豆売り＆カフェとして営業」「ロースターズカフェ」、住所は特定商取引法表記(〒861-0601 熊本県山鹿市鹿北町四丁1638-1)。最小重量の250g(豆のまま)の価格を採用(500gもあり)。完売表示のウガンダ ニャビロンゴ・ケニア カリンドゥンドゥはリンクがなく価格が取得できないため除外。ドリップバッグ・カフェモコ・リキッド・グッズ・ギフトは除外。",
+    "last_verified_at": "2026-10-20",
+    "lat": 33.097527,
+    "lng": 130.708557
+  },
+  {
+    "name": "KRANZ&CO",
+    "url": "https://kranz-and-co.stores.jp/",
+    "instagram_url": null,
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "福岡県北九州市小倉北区木町1-1-16",
+    "prefecture": "福岡県",
+    "hours": null,
+    "map_query": "KRANZ&CO 福岡県北九州市小倉北区木町1-1-16",
+    "nearest_station": {
+      "name": "南小倉",
+      "lines": [
+        "JR日豊本線"
+      ],
+      "distance_m": 590,
+      "walk_min": 7
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://kranz-and-co.stores.jp/)の商品ページをブラウザfetch()で2026-10-20に確認。ショップトップに「自家焙煎コーヒー豆屋です」と記載、日曜に焙煎所を開放。店舗は2024年5月に木町1-1-16へ移転(STORESの特定商取引法表示は旧住所の足原2-2-30のまま)。各銘柄の100g(豆のまま、数量2で200g)の価格を採用。定期便・卸先様専用・ドリップバッグ・水出し・リキッド・ギフト・グッズ・2023年ロットのブラジル さくらブルボンは除外。",
+    "last_verified_at": "2026-10-20",
+    "lat": 33.875046,
+    "lng": 130.866806
+  },
+  {
+    "name": "RAIL COFFEE ROASTERS",
+    "url": "https://railcoffeeroasters.stores.jp/",
+    "instagram_url": "https://instagram.com/railcoffeeroasters/",
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "福岡県八女市納楚597-1",
+    "prefecture": "福岡県",
+    "hours": null,
+    "map_query": "RAIL COFFEE ROASTERS 福岡県八女市納楚597-1",
+    "nearest_station": {
+      "name": "羽犬塚",
+      "lines": [
+        "JR鹿児島本線"
+      ],
+      "distance_m": 6650,
+      "walk_min": 83
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://railcoffeeroasters.stores.jp/)の商品ページをブラウザfetch()で2026-10-20に確認。「自家焙煎」「ドイツの半熱風式の焙煎機PROBATで焙煎」と記載(店舗紹介・カフェ併設)。住所は特定商取引法に基づく表示(八女市納楚597-1)。各銘柄の100g(豆のまま)の価格を採用(200g・500gもあり)。定期便・ドリップバッグ・セット・グッズは除外。オリジナルブレンドは2か月に1回ブレンド内容が変わる。",
+    "last_verified_at": "2026-10-20",
+    "lat": 33.218639,
+    "lng": 130.568253
+  },
+  {
+    "name": "SAZANAMi",
+    "url": "https://coffee-sazanami.com/",
+    "instagram_url": "https://instagram.com/coffee.sazanami/",
+    "platform": "STORES.jp(独自ドメイン、ブラウザの一覧表示から取得)",
+    "shop_type": "single_location",
+    "address": "福岡県糸島市前原中央3-9-29",
+    "prefecture": "福岡県",
+    "hours": null,
+    "map_query": "SAZANAMi 福岡県糸島市前原中央3-9-29",
+    "nearest_station": {
+      "name": "筑前前原",
+      "lines": [
+        "JR筑肥東線"
+      ],
+      "distance_m": 420,
+      "walk_min": 5
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://coffee-sazanami.com/)の商品一覧を2026-10-20にブラウザで確認(商品ページの途中でボット確認が出たため一覧の表示名・価格・在庫表示のみを使用)。ABOUTに「コーヒー焙煎所兼ショップ。糸島市、前原商店街の築200年の物件を改装し2022年7月OPEN」「糸島で丁寧に焙煎したコーヒー豆」と記載、店舗住所は前原中央3-9-29(特定商取引法の所在地は前原西1-7-31-201)。豆6銘柄は商品名のとおり全て200g。ギフトセット・ドリップバッグ・水出し・Tシャツ・シールは除外。",
+    "last_verified_at": "2026-10-20",
+    "lat": 33.56039,
+    "lng": 130.201462
+  },
+  {
+    "name": "手音",
+    "url": "https://tenon-coffee.com/",
+    "instagram_url": null,
+    "platform": "公式サイトの価格表(注文はSTORESまたは郵便振込。STORESのページは参照せず)",
+    "shop_type": "single_location",
+    "address": "福岡県福岡市南区塩原4-12-10",
+    "prefecture": "福岡県",
+    "hours": null,
+    "map_query": "手音 福岡県福岡市南区塩原4-12-10",
+    "nearest_station": {
+      "name": "大橋",
+      "lines": [
+        "西鉄天神大牟田線"
+      ],
+      "distance_m": 250,
+      "walk_min": 3
+    },
+    "data_source": "manual",
+    "source_note": "公式サイト「珈琲豆の発送」(https://tenon-coffee.com/order/、2026-08-22更新)の価格表を2026-10-20に確認。「手音について」に「西鉄大橋駅より徒歩3分のところにある、自家焙煎、ネルドリップの珈琲店です」と記載。所在地は同サイトのフッター(〒815-0032 福岡県福岡市南区塩原4-12-10)。100gあたりの価格、基本は豆のまま。",
+    "last_verified_at": "2026-10-20",
+    "lat": 33.560219,
+    "lng": 130.428864
   }
 ]

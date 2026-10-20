@@ -1,0 +1,120 @@
+{
+  "shop": {
+    "name": "SAZANAMi",
+    "url": "https://coffee-sazanami.com/",
+    "address": "福岡県糸島市前原中央3-9-29",
+    "prefecture": "福岡県",
+    "platform": "STORES.jp(独自ドメイン、ブラウザの一覧表示から取得)",
+    "instagram_url": "https://instagram.com/coffee.sazanami/",
+    "last_verified_at": "2026-10-20",
+    "source_note": "STORES.jpの公式ショップ(https://coffee-sazanami.com/)の商品一覧を2026-10-20にブラウザで確認(商品ページの途中でボット確認が出たため一覧の表示名・価格・在庫表示のみを使用)。ABOUTに「コーヒー焙煎所兼ショップ。糸島市、前原商店街の築200年の物件を改装し2022年7月OPEN」「糸島で丁寧に焙煎したコーヒー豆」と記載、店舗住所は前原中央3-9-29(特定商取引法の所在地は前原西1-7-31-201)。豆6銘柄は商品名のとおり全て200g。ギフトセット・ドリップバッグ・水出し・Tシャツ・シールは除外。",
+    "id": "sazanami-itoshima",
+    "google_maps_query": "SAZANAMi 福岡県糸島市前原中央3-9-29",
+    "tel": null,
+    "hours": null,
+    "shop_type": "single_location",
+    "data_source": "manual",
+    "lat": 33.56039,
+    "lng": 130.201462,
+    "nearest_station": {
+      "name": "筑前前原",
+      "lines": [
+        "JR筑肥東線"
+      ],
+      "distance_m": 420,
+      "walk_min": 5
+    }
+  },
+  "products": [
+    {
+      "raw_name": "チェルチェレ-エチオピア/Chelchele ETHIOPIA",
+      "category": "ストレート",
+      "originCountry": "エチオピア",
+      "processingMethod": null,
+      "roast": "中浅煎り",
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 2880,
+      "weightG": 200,
+      "stockStatus": "販売中",
+      "productUrl": "https://coffee-sazanami.com/items/6aa21112ad5acee5e89abe1f",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "ブルンジ カヤンザ/BURUNDI kayanza ウォッシュトプロセス",
+      "category": "ストレート",
+      "originCountry": "ブルンジ",
+      "processingMethod": "ウォッシュド",
+      "roast": "浅煎り",
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 2370,
+      "weightG": 200,
+      "stockStatus": "販売中",
+      "productUrl": "https://coffee-sazanami.com/items/69be0225c362b3395f300ce1",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "コスタリカ JAGUAR catura,catuai種 ハニープロセス",
+      "category": "ストレート",
+      "originCountry": "コスタリカ",
+      "processingMethod": "ハニー",
+      "roast": "中煎り",
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 2100,
+      "weightG": 200,
+      "stockStatus": "販売中",
+      "productUrl": "https://coffee-sazanami.com/items/686dfe644fbfd1c0c4d17028",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "エチオピア/TEFERI KELA エアルーム種 ウォッシュトプロセス",
+      "category": "ストレート",
+      "originCountry": "エチオピア",
+      "processingMethod": "ウォッシュド",
+      "roast": "深煎り",
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 2250,
+      "weightG": 200,
+      "stockStatus": "販売中",
+      "productUrl": "https://coffee-sazanami.com/items/67237de1191a4b0dbd4abfc2",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "グアテマラ(デカフェ・カフェインレス)",
+      "category": "ストレート",
+      "originCountry": "グアテマラ",
+      "processingMethod": null,
+      "roast": null,
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 2200,
+      "weightG": 200,
+      "stockStatus": "販売中",
+      "productUrl": "https://coffee-sazanami.com/items/673efcfca2eab203dd3e711b",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "山休珈琲ブレンド-thank you blend-",
+      "category": "ブレンド",
+      "originCountry": null,
+      "processingMethod": null,
+      "roast": "中深煎り",
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 2250,
+      "weightG": 200,
+      "stockStatus": "販売中",
+      "productUrl": "https://coffee-sazanami.com/items/664ca846b37ea40f0ea6866b",
+      "data_source": "manual"
+    }
+  ]
+}

@@ -1,0 +1,120 @@
+{
+  "shop": {
+    "name": "CREW Coffee",
+    "url": "https://crewcoffee.stores.jp/",
+    "address": "福岡県北九州市小倉北区吉野町12-9",
+    "prefecture": "福岡県",
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "last_verified_at": "2026-10-20",
+    "source_note": "STORES.jpの公式ショップ(https://crewcoffee.stores.jp/)の商品ページをブラウザfetch()で2026-10-20に確認。ショップに「【自家焙煎】農薬/化学肥料不使用の珈琲豆専門店です」と記載。公式(https://crewroasters.com/)の特定商取引法表示(https://crewroasters.com/tokusyo/)の住所を採用、カフェ併設の古民家で営業中。各銘柄の100g(豆のまま)の価格を採用。ドリップバッグ・セット(100g×2 ロースターズチョイス)・定期便は除外。【デカフェ】エチオピアorメキシコは産地が購入時の選択式で産地を特定できないため除外。",
+    "id": "crew-coffee-kitakyushu",
+    "instagram_url": null,
+    "google_maps_query": "CREW Coffee 福岡県北九州市小倉北区吉野町12-9",
+    "tel": null,
+    "hours": null,
+    "shop_type": "single_location",
+    "data_source": "manual",
+    "lat": 33.873108,
+    "lng": 130.875305,
+    "nearest_station": {
+      "name": "香春口三萩野",
+      "lines": [
+        "北九州高速鉄道"
+      ],
+      "distance_m": 490,
+      "walk_min": 6
+    }
+  },
+  "products": [
+    {
+      "raw_name": "メキシコ チアパス",
+      "category": "ストレート",
+      "originCountry": "メキシコ",
+      "processingMethod": null,
+      "roast": "中煎り",
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1150,
+      "weightG": 100,
+      "stockStatus": "販売中",
+      "productUrl": "https://crewcoffee.stores.jp/items/6a2415ec468379adc0115cb6",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "タンザニア キリマンジャロ",
+      "category": "ストレート",
+      "originCountry": "タンザニア",
+      "processingMethod": null,
+      "roast": "中煎り",
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1150,
+      "weightG": 100,
+      "stockStatus": "販売中",
+      "productUrl": "https://crewcoffee.stores.jp/items/6a0d65f940fe5929cb93330f",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "エチオピア ナチュラル",
+      "category": "ストレート",
+      "originCountry": "エチオピア",
+      "processingMethod": "ナチュラル",
+      "roast": "中煎り",
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1150,
+      "weightG": 100,
+      "stockStatus": "販売中",
+      "productUrl": "https://crewcoffee.stores.jp/items/681af00a471cb35a86a50a4d",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "インドネシア",
+      "category": "ストレート",
+      "originCountry": "インドネシア",
+      "processingMethod": null,
+      "roast": "中深煎り",
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1200,
+      "weightG": 100,
+      "stockStatus": "販売中",
+      "productUrl": "https://crewcoffee.stores.jp/items/67e63cf8212a408523c49e61",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "エチオピア ウォッシュド",
+      "category": "ストレート",
+      "originCountry": "エチオピア",
+      "processingMethod": "ウォッシュド",
+      "roast": "中浅煎り",
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1250,
+      "weightG": 100,
+      "stockStatus": "販売中",
+      "productUrl": "https://crewcoffee.stores.jp/items/65a8abb9e2a98801a0d23a65",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "ペルー ウォッシュト",
+      "category": "ストレート",
+      "originCountry": "ペルー",
+      "processingMethod": "ウォッシュド",
+      "roast": "中深煎り",
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1100,
+      "weightG": 100,
+      "stockStatus": "販売中",
+      "productUrl": "https://crewcoffee.stores.jp/items/67e628d35d38e936ac98f471",
+      "data_source": "manual"
+    }
+  ]
+}

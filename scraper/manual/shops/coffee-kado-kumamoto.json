@@ -1,0 +1,105 @@
+{
+  "shop": {
+    "name": "珈琲カド",
+    "url": "https://coffeekado.stores.jp/",
+    "address": "熊本県熊本市南区城南町永934-4",
+    "prefecture": "熊本県",
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "last_verified_at": "2026-10-20",
+    "source_note": "STORES.jpの公式ショップ(https://coffeekado.stores.jp/)の商品ページをブラウザfetch()で2026-10-20に確認。公式(https://coffee-kado.com/)に「Japan hand drip champion2017の久保田洋平が自家焙煎、販売を行う珈琲店」、九州ウォーカー(https://www.walkerplus.com/article/1117553/)にフジローヤル半熱風式1kg窯の記載。豆の販売拠点は焙煎所(熊本市南区城南町永934-4、不定期営業)。ほかに健軍店(東区若葉1丁目4-20)と熊本県立伝統工芸館の喫茶で計3拠点。最小重量の200g(豆のまま)の価格を採用。ラムインフューズドコーヒー(インフューズド)・ドリップバッグ・ミルクブリューパック・大口注文フォームは除外。",
+    "id": "coffee-kado-kumamoto",
+    "instagram_url": null,
+    "google_maps_query": "珈琲カド 熊本県熊本市南区城南町永934-4",
+    "tel": null,
+    "hours": null,
+    "shop_type": "single_location",
+    "data_source": "manual",
+    "lat": 32.728107,
+    "lng": 130.727982,
+    "nearest_station": {
+      "name": "川尻",
+      "lines": [
+        "JR鹿児島本線"
+      ],
+      "distance_m": 4830,
+      "walk_min": 60
+    }
+  },
+  "products": [
+    {
+      "raw_name": "Kado Blend 200g",
+      "category": "ブレンド",
+      "originCountry": null,
+      "processingMethod": null,
+      "roast": "中煎り",
+      "flavorNotes": "エチオピア、グアテマラ、ブラジルのハウスブレンド",
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 2380,
+      "weightG": 200,
+      "stockStatus": "販売中",
+      "productUrl": "https://coffeekado.stores.jp/items/6605309b584099003dc697ea",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "Rich Blend 200g",
+      "category": "ブレンド",
+      "originCountry": null,
+      "processingMethod": null,
+      "roast": "深煎り",
+      "flavorNotes": "様々な地域の豆4種類を使用した深煎りブレンド",
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 2500,
+      "weightG": 200,
+      "stockStatus": "販売中",
+      "productUrl": "https://coffeekado.stores.jp/items/660fbeace37f740064a90cc8",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "オータムブレンド 中煎り 200g",
+      "category": "ブレンド",
+      "originCountry": null,
+      "processingMethod": null,
+      "roast": "中煎り",
+      "flavorNotes": "ホンジュラス マルカラ ウオッシュド、コロンビア カトゥーラチロソ ウオッシュド、コスタリカ ハニー",
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 2500,
+      "weightG": 200,
+      "stockStatus": "販売中",
+      "productUrl": "https://coffeekado.stores.jp/items/6ab24df064d05f17a9e269e8",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "エチオピア アナソラ ナチュラル 浅煎り 200g",
+      "category": "ストレート",
+      "originCountry": "エチオピア",
+      "processingMethod": "ナチュラル",
+      "roast": "浅煎り",
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 2500,
+      "weightG": 200,
+      "stockStatus": "販売中",
+      "productUrl": "https://coffeekado.stores.jp/items/6ab0cfca06a835344f11157b",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "インドネシア・マンデリンG1・リントン 深煎り 200g",
+      "category": "ストレート",
+      "originCountry": "インドネシア",
+      "processingMethod": null,
+      "roast": "深煎り",
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 2600,
+      "weightG": 200,
+      "stockStatus": "販売中",
+      "productUrl": "https://coffeekado.stores.jp/items/6aa0df1b4e941c19fabc9284",
+      "data_source": "manual"
+    }
+  ]
+}

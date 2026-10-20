@@ -1,0 +1,120 @@
+{
+  "shop": {
+    "name": "花待ち雨珈琲",
+    "url": "https://homachiamecoffee.stores.jp/",
+    "address": "福岡県福岡市中央区六本松1-4-11-103",
+    "prefecture": "福岡県",
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "instagram_url": "https://instagram.com/homachiame.coffee/",
+    "last_verified_at": "2026-10-20",
+    "source_note": "STORES.jpの公式ショップ(https://homachiamecoffee.stores.jp/)の商品ページをブラウザfetch()で2026-10-20に確認。ABOUTに「2017年に無店舗で焙煎を始め、2020年1月に六本松に実店舗をオープン。焙煎、豆売り、カフェ…」「基本、木曜日焙煎/土曜日発送」と記載。住所は特定商取引法に基づく表示(六本松1-4-11-103)。店舗は六本松店と片江店(城南区片江1-4-7、金曜のみ)の2店。豆6銘柄(商品名の産地)を採用。コスタリカ・メキシコ(デカフェ)は内容量の記載が商品ページになく重量はnull。ドリップバッグ・水出し・教室/体験・グッズは除外。",
+    "id": "homachiame-coffee-fukuoka",
+    "google_maps_query": "花待ち雨珈琲 福岡県福岡市中央区六本松1-4-11-103",
+    "tel": null,
+    "hours": null,
+    "shop_type": "single_location",
+    "data_source": "manual",
+    "lat": 33.580128,
+    "lng": 130.378448,
+    "nearest_station": {
+      "name": "六本松",
+      "lines": [
+        "福岡市七隈線"
+      ],
+      "distance_m": 290,
+      "walk_min": 4
+    }
+  },
+  "products": [
+    {
+      "raw_name": "【華やかな風味】エチオピア",
+      "category": "ストレート",
+      "originCountry": "エチオピア",
+      "processingMethod": null,
+      "roast": "浅煎り",
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1400,
+      "weightG": 100,
+      "stockStatus": "販売中",
+      "productUrl": "https://homachiamecoffee.stores.jp/items/6635a385057a685d547573e3",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "【爽やかな味わい】ブルンジ",
+      "category": "ストレート",
+      "originCountry": "ブルンジ",
+      "processingMethod": null,
+      "roast": "浅煎り",
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1300,
+      "weightG": 100,
+      "stockStatus": "一時的に品切れ",
+      "productUrl": "https://homachiamecoffee.stores.jp/items/64719483a89fa5002f6bf38d",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "【繊細な味わい】コスタリカ",
+      "category": "ストレート",
+      "originCountry": "コスタリカ",
+      "processingMethod": null,
+      "roast": "浅煎り",
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1300,
+      "weightG": null,
+      "stockStatus": "販売中",
+      "productUrl": "https://homachiamecoffee.stores.jp/items/5f2f9c8b223ead67814dc899",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "【濃厚な風味】ケニア",
+      "category": "ストレート",
+      "originCountry": "ケニア",
+      "processingMethod": null,
+      "roast": "中煎り",
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1200,
+      "weightG": 100,
+      "stockStatus": "販売中",
+      "productUrl": "https://homachiamecoffee.stores.jp/items/6a16a429e7c5ab4a42475a17",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "【カフェインレス】メキシコ",
+      "category": "ストレート",
+      "originCountry": "メキシコ",
+      "processingMethod": null,
+      "roast": null,
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1100,
+      "weightG": null,
+      "stockStatus": "販売中",
+      "productUrl": "https://homachiamecoffee.stores.jp/items/67809b6875886100cac50ad2",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "【甘く深い味わい】ブラジル",
+      "category": "ストレート",
+      "originCountry": "ブラジル",
+      "processingMethod": null,
+      "roast": "深煎り",
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1100,
+      "weightG": 100,
+      "stockStatus": "販売中",
+      "productUrl": "https://homachiamecoffee.stores.jp/items/5ee72985b5a42523b5308749",
+      "data_source": "manual"
+    }
+  ]
+}
