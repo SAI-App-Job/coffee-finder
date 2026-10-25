@@ -1,0 +1,105 @@
+{
+  "shop": {
+    "name": "カリオモンTOKYO",
+    "url": "https://kariomon.stores.jp/",
+    "address": "東京都文京区千駄木2-33-5 メゾン・ド・ヴィレ千駄木102",
+    "prefecture": "東京都",
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "last_verified_at": "2026-10-21",
+    "source_note": "STORES.jpの公式ショップ(https://kariomon.stores.jp/)の商品ページをブラウザfetch()で2026-10-21に確認。公式(https://kariomon-tokyo.com/company/)の会社概要に「コーヒーの焙煎卸及び小売」、Copyright Kariomon COFFEE ROASTER、紹介記事に「生豆の洗浄から焙煎まで自社」。BASE(https://kariomon.base.shop/)にも併設。最小重量の200g(豆)の価格を採用。アーモンドフレーバーコーヒー(フレーバー添加)・ドリップバッグ・コールドブリュー・ギフト・菓子・プロユースセットは除外。",
+    "id": "kariomon-tokyo",
+    "instagram_url": null,
+    "google_maps_query": "カリオモンTOKYO 東京都文京区千駄木2-33-5 メゾン・ド・ヴィレ千駄木102",
+    "tel": null,
+    "hours": null,
+    "shop_type": "single_location",
+    "data_source": "manual",
+    "lat": 35.724052,
+    "lng": 139.762909,
+    "nearest_station": {
+      "name": "千駄木",
+      "lines": [
+        "東京メトロ千代田線"
+      ],
+      "distance_m": 170,
+      "walk_min": 2
+    }
+  },
+  "products": [
+    {
+      "raw_name": "モカブレンド",
+      "category": "ブレンド",
+      "originCountry": null,
+      "processingMethod": null,
+      "roast": null,
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1500,
+      "weightG": 200,
+      "stockStatus": "販売中",
+      "productUrl": "https://kariomon.stores.jp/items/67b978a251153c1a2cef2146",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "M.M",
+      "category": "ブレンド",
+      "originCountry": null,
+      "processingMethod": null,
+      "roast": null,
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1500,
+      "weightG": 200,
+      "stockStatus": "販売中",
+      "productUrl": "https://kariomon.stores.jp/items/670a24f4e84387070d7dda74",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "D.L",
+      "category": "ブレンド",
+      "originCountry": null,
+      "processingMethod": null,
+      "roast": null,
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1500,
+      "weightG": 200,
+      "stockStatus": "販売中",
+      "productUrl": "https://kariomon.stores.jp/items/670a2e6b91f26e38ca73700f",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "D.D",
+      "category": "ブレンド",
+      "originCountry": null,
+      "processingMethod": null,
+      "roast": null,
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1500,
+      "weightG": 200,
+      "stockStatus": "販売中",
+      "productUrl": "https://kariomon.stores.jp/items/670a306dccd49a5139dd9e72",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "DECAF365",
+      "category": "ストレート",
+      "originCountry": null,
+      "processingMethod": null,
+      "roast": null,
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1900,
+      "weightG": 200,
+      "stockStatus": "販売中",
+      "productUrl": "https://kariomon.stores.jp/items/670a32cf91f26e39f3736ffe",
+      "data_source": "manual"
+    }
+  ]
+}

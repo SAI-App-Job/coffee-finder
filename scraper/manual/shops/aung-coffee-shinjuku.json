@@ -1,0 +1,105 @@
+{
+  "shop": {
+    "name": "AUNG COFFEE",
+    "url": "https://aungcoffee.stores.jp/",
+    "address": "東京都新宿区原町2-7-6",
+    "prefecture": "東京都",
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "last_verified_at": "2026-10-21",
+    "source_note": "STORES.jpの公式ショップ(https://aungcoffee.stores.jp/)の商品一覧をブラウザfetch()で2026-10-21に確認。公式(https://aungcoffee.com/about/)に「輸入・焙煎・提供までを一貫して手がけています」、店舗は牛込柳町店(新宿区原町2-7-6)と新宿御苑前店(新宿2-15-25)の2店(https://aungcoffee.com/store/)。ミャンマー産専門。販売中の200g(豆のまま)の5商品を登録。「次回焙煎をお待ちください」の一時品切れ約30商品(価格が一覧に出ない)と【終売】【販売終了】は除外。ドリップバッグは除外。",
+    "id": "aung-coffee-shinjuku",
+    "instagram_url": null,
+    "google_maps_query": "AUNG COFFEE 東京都新宿区原町2-7-6",
+    "tel": null,
+    "hours": null,
+    "shop_type": "single_location",
+    "data_source": "manual",
+    "lat": 35.699459,
+    "lng": 139.723953,
+    "nearest_station": {
+      "name": "牛込柳町",
+      "lines": [
+        "都営大江戸線"
+      ],
+      "distance_m": 100,
+      "walk_min": 1
+    }
+  },
+  "products": [
+    {
+      "raw_name": "ユワンガン ミャゼディ ナチュラル",
+      "category": "ストレート",
+      "originCountry": "ミャンマー",
+      "processingMethod": "ナチュラル",
+      "roast": null,
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 2060,
+      "weightG": 200,
+      "stockStatus": "販売中",
+      "productUrl": "https://aungcoffee.stores.jp/items/6237edcb7d11614736232f25",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "ホーポン パームーン ナチュラル",
+      "category": "ストレート",
+      "originCountry": "ミャンマー",
+      "processingMethod": "ナチュラル",
+      "roast": null,
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 2060,
+      "weightG": 200,
+      "stockStatus": "販売中",
+      "productUrl": "https://aungcoffee.stores.jp/items/6472dc9384ab9a007c6f09df",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "ユワンガン アナエロビック ナチュラル",
+      "category": "ストレート",
+      "originCountry": "ミャンマー",
+      "processingMethod": "アナエロビック",
+      "roast": null,
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 2180,
+      "weightG": 200,
+      "stockStatus": "販売中",
+      "productUrl": "https://aungcoffee.stores.jp/items/6a50b54c820089a61ff1827c",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "ユワンガン カーボニックマセレーション ナチュラル",
+      "category": "ストレート",
+      "originCountry": "ミャンマー",
+      "processingMethod": "ナチュラル",
+      "roast": null,
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 2480,
+      "weightG": 200,
+      "stockStatus": "販売中",
+      "productUrl": "https://aungcoffee.stores.jp/items/63b7939d5ff423314579cdea",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "ユワンガン チャウクーピン ナチュラル",
+      "category": "ストレート",
+      "originCountry": "ミャンマー",
+      "processingMethod": "ナチュラル",
+      "roast": "浅煎り",
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 2060,
+      "weightG": 200,
+      "stockStatus": "販売中",
+      "productUrl": "https://aungcoffee.stores.jp/items/66694ef2ff050400344588e0",
+      "data_source": "manual"
+    }
+  ]
+}

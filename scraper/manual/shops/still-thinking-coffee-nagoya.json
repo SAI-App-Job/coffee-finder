@@ -1,0 +1,91 @@
+{
+  "shop": {
+    "name": "STILL THINKING COFFEE",
+    "url": "https://stcoffee.shop/",
+    "address": "愛知県名古屋市中区錦2-10-8 袋町繊維会館 1F",
+    "prefecture": "愛知県",
+    "platform": "STORES.jp(独自ドメイン、ブラウザfetch()経由で取得)",
+    "last_verified_at": "2026-10-21",
+    "source_note": "STORES.jpの公式ショップ(https://stcoffee.shop/)の商品ページをブラウザfetch()で2026-10-21に確認。公式(https://s-t-coffee.com/)に「炭火焙煎にこだわり、ひとつひとつ丁寧に焼き上げる焙煎士 川上敦久」、ACCESS(中区錦、食べログ 伏見駅307m)。楽天ショップにも出店。ショップは衣類・雑貨が大半で、炭火焙煎のコーヒー豆(ブレンド4種)のみ登録。100g(200gもあり)の価格を採用。ドリップバッグ・ギフトボックス・チケット・グッズは除外。",
+    "id": "still-thinking-coffee-nagoya",
+    "instagram_url": null,
+    "google_maps_query": "STILL THINKING COFFEE 愛知県名古屋市中区錦2-10-8 袋町繊維会館 1F",
+    "tel": null,
+    "hours": null,
+    "shop_type": "single_location",
+    "data_source": "manual",
+    "lat": 35.17112,
+    "lng": 136.899323,
+    "nearest_station": {
+      "name": "丸の内",
+      "lines": [
+        "名古屋市桜通線",
+        "名古屋市鶴舞線"
+      ],
+      "distance_m": 250,
+      "walk_min": 3
+    }
+  },
+  "products": [
+    {
+      "raw_name": "NO.0 IBI ビターブレンド",
+      "category": "ブレンド",
+      "originCountry": null,
+      "processingMethod": null,
+      "roast": null,
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1728,
+      "weightG": 100,
+      "stockStatus": "販売中",
+      "productUrl": "https://stcoffee.shop/items/64cf025b8ae1781bb842f927",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "NO.1 HAVANA ダークブレンド",
+      "category": "ブレンド",
+      "originCountry": null,
+      "processingMethod": null,
+      "roast": null,
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1728,
+      "weightG": 100,
+      "stockStatus": "販売中",
+      "productUrl": "https://stcoffee.shop/items/61c54a15b91b7578d506e517",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "NO.2 San Miguel de Allende ライトブレンド",
+      "category": "ブレンド",
+      "originCountry": null,
+      "processingMethod": null,
+      "roast": "ライトロースト",
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1728,
+      "weightG": 100,
+      "stockStatus": "販売中",
+      "productUrl": "https://stcoffee.shop/items/61c54a667d278d7e93ff59b0",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "NO.3 NGY アメリカンブレンド",
+      "category": "ブレンド",
+      "originCountry": null,
+      "processingMethod": null,
+      "roast": null,
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1296,
+      "weightG": 100,
+      "stockStatus": "販売中",
+      "productUrl": "https://stcoffee.shop/items/623e7bfa34e017401d6bd293",
+      "data_source": "manual"
+    }
+  ]
+}

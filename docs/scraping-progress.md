@@ -9466,3 +9466,15 @@ A群・B群の一部を、スクレイパー27店舗・STORES手動入力7店舗
 
 - 座標は国土地理院の住所検索(番地まで引けた店。琥珀の刻・熊本珈琲Roasterなど一部は町字まで)。
 - 影響: 38店舗・479商品を追加(1497→1535店舗、24390→24869商品)。既存店舗・商品への意図しない変更が無いことをisolation-merge検証で確認済み。
+
+## 東京・神奈川・愛知・京都の未登録店の追加(独自EC・STORES・価格表、2026-10-25)
+
+福岡・熊本に続き、食べログの地域別キーワード一覧から公式URLをたどる方法で、東京都(中心・北東部、西南部、多摩)、神奈川県、愛知県、京都府の未登録店を発掘した。STORES.jpの店はブラウザのfetch()で一覧・商品を取得し、ボット確認が出た時点で止めて回避しない。識別可能なUA、アクセス間隔1.5秒以上(BASEは5秒以上)、robots.txtの許可範囲のみで取得した。
+
+- **東京都67店**: Shopify(WAVY COFFEE ROASTERS、COFFEE VALLEY、WESTSIDE COFFEE、SOL'S COFFEE、BICYCLE COFFEE TOKYO、マキネスティコーヒー、A day in the coffee、KITASANDŌ COFFEE Roastery)、BASE(すみだ珈琲、Donish Coffee Company、上板橋珈琲焙煎所、マヤ珈琲焙煎所、Jubilee Coffee and Roaster、MAHIRO COFFEE ROASTERY ほか)、カラーミー・MakeShop・FC2・Ocnk・Welcart・ショップサーブ・楽天・Yahoo!(カフェテナンゴ、AMAMERIA ESPRESSO、GLAUBELL COFFEE、三軒茶屋珈琲 red-clover、豆虎、パオコーヒー ほか)、STORES(自家焙煎珈琲ナガシマ、AUNG COFFEE、Kanda Coffee、LUCENT COFFEE、ハニービーンズ、カルマ珈琲、トイロ珈琲店、カリオモンTOKYO、LUSH-COFFEE、1.414 Coffee Roastery、まるたま、小豆沢珈琲焙煎所、Little Darling Coffee Roasters、waku coffee roaster、Jalk Coffee、Roaster Café ARANCIATO、トンツーコーヒースタジオ、KOGUMA COFFEE、珈琲豆焙煎工房 まめ吉、珈琲 笠間)、価格表のみ(しげの珈琲工房、はにわ屋、カフェアルベール、自家焙煎 珈琲散歩、アンダンテ、自家焙煎珈琲 Fractal)。
+- **神奈川県22店**: Weave Coffee Roaster、SpLen coffee SHONAN、BEAT COFFEE ROASTER、mellow coffee & bakes、ALOHA BEANS、コーヒーカンタータ、BlueDOOR Coffee、珈琲福、STORY BOX & coffee roaster、てらす珈琲、Muu COFFEE、PocoPoco.Coffee.Roasters、Coffee Cherry & Roastery、焙煎工房 豆太、Cafetier 葉山、CASTLE SEA COFFEE、パイオニアコーヒー工房、トマシーナ珈琲、カフェハンズ、いる1ばん、JOHN DEE COFFEE ROASTERS、ジャスト珈琲(価格表)。
+- **愛知県18店**: 珈琲豆ストア コモン、松島珈琲、イトウコーヒー、豆珈房、澤井コーヒー本店、ARCHE COFFEE、珈琲豆家 マエムラコーヒー、ワダコーヒー、awai、深田珈琲 犬山焙煎所、WORKBENCH COFFEE ROASTERS、タスコ珈琲、自家焙煎珈琲 ごりら、マウンテンコーヒー、アルベロ・あづまや珈琲店(価格表)、Glams Coffee Roastery(STORES)、STILL THINKING COFFEE(STORES、炭火焙煎ブレンド4種)。
+- **京都府19店**: 北大路焙煎室、BASTET COFFEE、京都グレートコーヒー、DRIP & DROP COFFEE SUPPLY、山香社、ヨコシマ珈琲焙煎所、グローブマウンテン珈琲、oinai coffee、DOORS COFFEE ROASTERY、八月の犬コーヒー、miepump coffee shop、Cafe Saboroso、はしもと珈琲、Latteart Junkies Roastingshop、京都スーパーコーヒー、UMEMIDAI COFFEE & Roaster(価格表)、フレッシュビーンズフルカワ(価格表)、まめどん家(価格表)、Coffee Shop GARAKUTA(STORES)。
+- 価格・重量の注意: 生豆基準の価格(ばいせん工房と同様)を上板橋珈琲焙煎所・マヤ珈琲焙煎所・カフェアルベール・珈琲散歩・café unsan・オリオン珈琲焙煎所・トマシーナ珈琲などで採用(重量は生豆の表記、source_noteに明記)。Shopifyの一部(北大路焙煎室、BASTET COFFEE、京都グレートコーヒー、DRIP & DROP、A day in the coffee、KITASANDŌ COFFEE)はレート制限(429)のため、制限前に取得した2026-10-21〜25時点のスナップショットから生成。
+- 座標は国土地理院の住所検索(番地まで引けた店は番地、そうでない店は町字まで)。
+- 影響: 126店舗・2,389商品を追加(1535→1661店舗、24869→27258商品)。既存店舗・商品への意図しない変更が無いことをisolation-merge検証で確認済み。
