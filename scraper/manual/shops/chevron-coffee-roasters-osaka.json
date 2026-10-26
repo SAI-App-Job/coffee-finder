@@ -1,0 +1,105 @@
+{
+  "shop": {
+    "name": "Chevron Coffee Roasters",
+    "url": "https://chevron-coffee.stores.jp/",
+    "address": "大阪府大阪市住吉区帝塚山中1-1-16",
+    "prefecture": "大阪府",
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "last_verified_at": "2026-10-26",
+    "source_note": "STORES.jpの公式ショップ(https://chevron-coffee.stores.jp/)の商品ページをブラウザfetch()で2026-10-26に確認。公式(https://chevroncoffee.jp/)に「シェブロンコーヒーロースターズはスモールバッチロースタリーです。新鮮な豆を丁寧に焙煎し…」、Locationsに帝塚山中1-1-16。豆5銘柄(いずれも200g、豆のまま)の価格を採用。ドリップバッグ・チャイ・マグ・Tシャツ・雑貨は除外。焙煎度の記載は商品ページに無く null。",
+    "id": "chevron-coffee-roasters-osaka",
+    "instagram_url": null,
+    "google_maps_query": "Chevron Coffee Roasters 大阪府大阪市住吉区帝塚山中1-1-16",
+    "tel": null,
+    "hours": null,
+    "shop_type": "single_location",
+    "data_source": "manual",
+    "lat": 34.623699,
+    "lng": 135.502548,
+    "nearest_station": {
+      "name": "姫松",
+      "lines": [
+        "阪堺電軌上町線"
+      ],
+      "distance_m": 80,
+      "walk_min": 1
+    }
+  },
+  "products": [
+    {
+      "raw_name": "Chevron Blend",
+      "category": "ブレンド",
+      "originCountry": null,
+      "processingMethod": null,
+      "roast": null,
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1800,
+      "weightG": 200,
+      "stockStatus": "販売中",
+      "productUrl": "https://chevron-coffee.stores.jp/items/5fb438f98a45723d1e72d195",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "Guatemala Huehuetenango",
+      "category": "ストレート",
+      "originCountry": "グアテマラ",
+      "processingMethod": null,
+      "roast": null,
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 2000,
+      "weightG": 200,
+      "stockStatus": "販売中",
+      "productUrl": "https://chevron-coffee.stores.jp/items/5f4c5722d3f167161d52bde9",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "Ethiopia Sidamo Guji",
+      "category": "ストレート",
+      "originCountry": "エチオピア",
+      "processingMethod": null,
+      "roast": null,
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 2000,
+      "weightG": 200,
+      "stockStatus": "販売中",
+      "productUrl": "https://chevron-coffee.stores.jp/items/5fb3a669f0b108492defc14e",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "Colombia Huila Origen",
+      "category": "ストレート",
+      "originCountry": "コロンビア",
+      "processingMethod": null,
+      "roast": null,
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 2000,
+      "weightG": 200,
+      "stockStatus": "販売中",
+      "productUrl": "https://chevron-coffee.stores.jp/items/5f5d904207e1634a144682eb",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "Brazil South Minas Gerais",
+      "category": "ストレート",
+      "originCountry": "ブラジル",
+      "processingMethod": null,
+      "roast": null,
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 2000,
+      "weightG": 200,
+      "stockStatus": "販売中",
+      "productUrl": "https://chevron-coffee.stores.jp/items/608a290fc9827a186e628a48",
+      "data_source": "manual"
+    }
+  ]
+}

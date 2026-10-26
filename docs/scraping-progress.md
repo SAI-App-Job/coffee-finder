@@ -9478,3 +9478,19 @@ A群・B群の一部を、スクレイパー27店舗・STORES手動入力7店舗
 - 価格・重量の注意: 生豆基準の価格(ばいせん工房と同様)を上板橋珈琲焙煎所・マヤ珈琲焙煎所・カフェアルベール・珈琲散歩・café unsan・オリオン珈琲焙煎所・トマシーナ珈琲などで採用(重量は生豆の表記、source_noteに明記)。Shopifyの一部(北大路焙煎室、BASTET COFFEE、京都グレートコーヒー、DRIP & DROP、A day in the coffee、KITASANDŌ COFFEE)はレート制限(429)のため、制限前に取得した2026-10-21〜25時点のスナップショットから生成。
 - 座標は国土地理院の住所検索(番地まで引けた店は番地、そうでない店は町字まで)。
 - 影響: 126店舗・2,389商品を追加(1535→1661店舗、24869→27258商品)。既存店舗・商品への意図しない変更が無いことをisolation-merge検証で確認済み。
+
+## 2026-10-26 全国の独自EC・STORES・価格表の未登録店 追加(第2波: 兵庫・静岡・大阪・埼玉・千葉・広島)
+
+食べログのキーワード一覧→各店の公式URL欄をたどる方法で、検索エンジンに出にくい独自EC・モール・STORES・店頭価格表のみの自家焙煎店を発掘し、84店舗・1,576商品を追加した(1661→1745店舗、27258→28834商品)。
+
+- **兵庫県13店**: COZY COFFEE(神戸)(STORES。福岡の同名店と区別するため店名に(神戸)を付与)、みやまめ珈琲、SAKU COFFEE、The Sowers、FRANK、珈琲豆やティアレ(以上STORES)、六珈・tent-coffee・brocante coffee・まめや元町店・林 COFFEESTAND・珈琲屋ドリーム(BASE)、岬の焙煎所(Ocnk)。
+- **静岡県12店**: かもめの珈琲屋さん・シシリコーヒー ロースターズ・hibitano coffee roastery(STORES)、浜松自家焙煎 豆煎人(WooCommerce)、鴨江珈琲(Wix)、KEIGAN COFFEE ROASTERS(Shopify)、自家焙煎珈琲 ちとせ105・DAISY COFFEE・Veludo Coffee Roasters(BASE)、NICE COFFEE ROASTER・カフェローステライ・ヴェッカー・ポルトボヌール(価格表)。
+- **大阪府21店**: BEARCOFFEE・マホロバ珈琲堂・フジコ珈琲・珈琲通信・12 Coffee Roasters・kinan coffee・Hue Coffee Roaster・珈琲豆焙煎所 mountain(BASE。茨木市で、高槻市の MOUNTAIN 1999 とは別店)、豆一珈楽・焙煎香房シマノ・ひろしげ珈琲倶楽部・花田コーヒ(カラーミー)、kawakami coffee roaster・Le Premier Cafe(WordPress/WooCommerce)、自家焙煎珈琲やすらぎ(ショップサーブ)、もなか珈琲(xaas3)、焙煎珈琲豆 楓(Yahoo!)、TERRA COFFEE ROASTERS(Shopify)、喫茶路地・Chevron Coffee Roasters・Odoriba Coffee(STORES)。
+- **埼玉県15店**: Macky.coffee・ChieCoffee・百福豆珈琲・PO-RT COFFEE(BASE系)、自家焙煎珈琲屋どんぐり・78coffee(カラーミー)、角川クラフト 東所沢焙煎所(独自EC)、TAKERU COFFEE・上田珈琲豆焙煎堂・銀林珈琲(STORES)、自家焙煎珈琲カプリコーン・豆春・珈琲パウエル・まめや忍・はらだ珈琲(価格表のみ)。
+- **千葉県17店**: SEIKODO COFFEE・HOUEI COFFEE and STORE・ふくろう珈琲(BASE)、銀河コーヒー・自家焙煎珈琲 ブラジル屋(カラーミー)、焙煎職人 鈴木正美の店・ゆうかCoffee(EC-CUBE)、Kaffee Brücke・クライム珈琲・COFFEE RIN・BaseCafe(STORES)、Hatch Coffee Roastery・こーひー豆のゆら(Wix)、自家焙煎珈琲店 ドゥ ムートン・自家焙煎珈琲 銹釉・いちCafe珈琲焙煎・福笑屋珈琲(価格表のみ)。
+- **広島県6店**: 灰ケ峰 COFFEE ROASTERY・LIMINAL COFFEE ROASTER(BASE)、Coffee Story(珈琲物語)(カラーミー。岐阜の「珈琲物語」とは別店)、Satie coffee・DOMA COFFEE(STORES)、自家焙煎イブリック(公式サイトの価格表。電話・FAX注文)。
+- 価格・重量の注意: ふくろう珈琲など200g/400gの別商品は200gを代表、まめや忍・上田珈琲豆焙煎堂は200g(焙煎後約200g)・税別/税込表記を各店のsource_noteに明記。はらだ珈琲は「750円～」の下限表記、ポルトボヌールは単位の明記がなく「100gから販売」の記述から100gと解釈、BaseCafeは4銘柄で内容量の記載がなく重量null。
+- 除外した製法: インフューズド(果実・香料を加える)、カルチャリング(Satie coffee・TAKERU COFFEEの該当ロット)、ウイスキー樽熟成(銀河コーヒー・豆煎人)、Satieのライトローストブレンド(インヒューズド豆使用)。
+- STORESはブラウザからのfetchで取得。連続取得で429/Cloudflareが出た場合は間隔を空け、回避はしていない(Satie coffeeは429で一度中断し再開)。
+- 座標は国土地理院の住所検索(番地まで引けた店は番地、そうでない店は町字まで)。
+- 影響: 既存店舗・商品への意図しない変更が無いことをisolation-merge検証で確認済み。

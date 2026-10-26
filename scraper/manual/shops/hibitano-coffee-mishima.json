@@ -1,0 +1,90 @@
+{
+  "shop": {
+    "name": "hibitano coffee roastery",
+    "url": "https://hibitano.stores.jp/",
+    "address": "静岡県三島市広小路町11-10",
+    "prefecture": "静岡県",
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "last_verified_at": "2026-10-26",
+    "source_note": "STORES.jpの公式ショップ(https://hibitano.stores.jp/)の商品ページをブラウザfetch()で2026-10-26に確認。STORESのNEWS(2022/01/22「焙煎機購入しました!」)、店名のcoffee roastery、カテゴリ「Daily Edition」「Premium Edition」。住所は食べログによる(STORES上に住所の記載なし、公式側の実店舗の根拠が弱い)。150g(豆のまま)の4商品とdaily selection(500g〜)を登録。タンブラー・フィルター・コールドブリュー・ドリップパック・テイスティングセット・豆卸販売は除外。",
+    "id": "hibitano-coffee-mishima",
+    "instagram_url": null,
+    "google_maps_query": "hibitano coffee roastery 静岡県三島市広小路町11-10",
+    "tel": null,
+    "hours": null,
+    "shop_type": "single_location",
+    "data_source": "manual",
+    "lat": 35.117893,
+    "lng": 138.910538,
+    "nearest_station": {
+      "name": "三島広小路",
+      "lines": [
+        "伊豆箱根鉄道駿豆線"
+      ],
+      "distance_m": 160,
+      "walk_min": 2
+    }
+  },
+  "products": [
+    {
+      "raw_name": "Tanzania Acacia Hills Geisha AB/PB washed",
+      "category": "ストレート",
+      "originCountry": "タンザニア",
+      "processingMethod": "ウォッシュド",
+      "roast": null,
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 3000,
+      "weightG": 150,
+      "stockStatus": "販売中",
+      "productUrl": "https://hibitano.stores.jp/items/6a6c25214c27e8d7352e20e9",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "Colombia Las Flores Tabi Washed",
+      "category": "ストレート",
+      "originCountry": "コロンビア",
+      "processingMethod": "ウォッシュド",
+      "roast": null,
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 3750,
+      "weightG": 150,
+      "stockStatus": "一時的に品切れ",
+      "productUrl": "https://hibitano.stores.jp/items/6a34b5fbff39a112805db8d7",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "HOUSE BLEND",
+      "category": "ブレンド",
+      "originCountry": null,
+      "processingMethod": null,
+      "roast": null,
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1500,
+      "weightG": 150,
+      "stockStatus": "販売中",
+      "productUrl": "https://hibitano.stores.jp/items/688978d426a38233c3fee7c8",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "Ethiopia Yirgacheffe Wote Konga 2300 Washed",
+      "category": "ストレート",
+      "originCountry": "エチオピア",
+      "processingMethod": "ウォッシュド",
+      "roast": null,
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1650,
+      "weightG": 150,
+      "stockStatus": "販売中",
+      "productUrl": "https://hibitano.stores.jp/items/65f432e224c2f420dcb24925",
+      "data_source": "manual"
+    }
+  ]
+}

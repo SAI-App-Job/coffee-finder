@@ -1,0 +1,75 @@
+{
+  "shop": {
+    "name": "かもめの珈琲屋さん",
+    "url": "https://kamome-coffeeroaster.stores.jp/",
+    "address": "静岡県浜松市天竜区二俣町二俣1283-1 山ノ舎ビル1階",
+    "prefecture": "静岡県",
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "last_verified_at": "2026-10-26",
+    "source_note": "STORES.jpの公式ショップ(https://kamome-coffeeroaster.stores.jp/)の商品ページをブラウザfetch()で2026-10-26に確認。公式(https://kamome-coffeeroaster.com/about/)に「浜松市天竜二俣の山と川に囲まれた静かな街で小さな焙煎室を営んでおります」、店舗は星霜店(天竜区二俣町)と湖舶店(浜名区三ヶ日町大崎45)の2店。月替わりの星座blend(200g・送料込み価格、過去月は完売)は販売中の2種のみ、コロンビアライチ(150g)と合わせて3商品を登録。ボトル/ギフトBOXは除外。",
+    "id": "kamome-coffee-hamamatsu",
+    "instagram_url": null,
+    "google_maps_query": "かもめの珈琲屋さん 静岡県浜松市天竜区二俣町二俣1283-1 山ノ舎ビル1階",
+    "tel": null,
+    "hours": null,
+    "shop_type": "single_location",
+    "data_source": "manual",
+    "lat": 34.864159,
+    "lng": 137.815002,
+    "nearest_station": {
+      "name": "二俣本町",
+      "lines": [
+        "天竜浜名湖鉄道"
+      ],
+      "distance_m": 550,
+      "walk_min": 7
+    }
+  },
+  "products": [
+    {
+      "raw_name": "−当店一番人気のオススメ豆– コロンビアライチ",
+      "category": "ストレート",
+      "originCountry": "コロンビア",
+      "processingMethod": null,
+      "roast": null,
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 5500,
+      "weightG": 150,
+      "stockStatus": "販売中",
+      "productUrl": "https://kamome-coffeeroaster.stores.jp/items/658181203626e4046cdea289",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "天秤座- 星座blend 《送料込》",
+      "category": "ブレンド",
+      "originCountry": null,
+      "processingMethod": null,
+      "roast": null,
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 2300,
+      "weightG": 200,
+      "stockStatus": "販売中",
+      "productUrl": "https://kamome-coffeeroaster.stores.jp/items/6736ed31b2945305971b6c96",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "蠍座- 星座blend 《送料込》",
+      "category": "ブレンド",
+      "originCountry": null,
+      "processingMethod": null,
+      "roast": null,
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 2300,
+      "weightG": 200,
+      "stockStatus": "販売中",
+      "productUrl": "https://kamome-coffeeroaster.stores.jp/items/66f20696860b1f02e54c626f",
+      "data_source": "manual"
+    }
+  ]
+}

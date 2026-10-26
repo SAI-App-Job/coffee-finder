@@ -5,7 +5,7 @@
 `scraper/manual/shops/`配下、それ以外は`scraper/scrape_*.py`で自動取得。
 実装を見送った店舗は`docs/not-implementable-shops.md`を参照。
 
-合計1661店舗・27258商品(生成日: 2026-10-25)。
+合計1745店舗・28834商品(生成日: 2026-10-26)。
 
 再生成コマンド:
 ```
@@ -532,8 +532,10 @@ aggregate_shops.py実行後の`git diff --staged --quiet || git commit`が該当
 |---|---|---|---|
 | 盈舟屋珈琲 | 安芸高田市八千代町118-1 | カラーミー | 15 |
 | 深やき珈琲 そにろき | 呉市宮原13丁目23-3 | FC2ショッピングカート(cart.fc2.com) | 8 |
+| DOMA COFFEE | 呉市郷原町2505 | STORES(手動) | 8 |
 | 昴珈琲店 | 呉市中通2丁目5-3 | 独自ECシステム | 33 |
 | みなと珈琲店 | 呉市中通3-1-30 | 独自ECシステム(レガシーCGIカート) | 26 |
+| 灰ケ峰 COFFEE ROASTERY | 呉市中通4丁目5-5 いしだカメラ店2階 | BASE | 3 |
 | 広島珈琲 | 広島市安芸区矢野東5丁目2-24 | Yahoo!ショッピング | 31 |
 | 珈琲豆屋 大和 | 広島市安佐南区安東2-2-5 | カラーミー | 33 |
 | おます珈琲 | 広島市安佐南区大塚西3-23-5 | STORES(手動) | 14 |
@@ -546,6 +548,7 @@ aggregate_shops.py実行後の`git diff --staged --quiet || git commit`が該当
 | Progress COFFEE Roastery & Sweets Factory | 広島市中区十日市町2-6-18 | STORES(手動) | 6 |
 | CUE.COFFEE | 広島市中区上八丁堀5-1 新上八丁堀ビル1F | BASE | 46 |
 | BAGTOWN COFFEE | 広島市中区袋町2-1 | Shopify | 23 |
+| Coffee Story(珈琲物語) | 広島市中区立町1-12 イナリビル2階 | カラーミー | 29 |
 | スペシャルティコーヒー専門店 スマイル | 広島市東区二葉の里2-8-9 | 手動 | 7 |
 | green coffee | 広島市南区段原一丁目5-7 KSビルド1F | BASE | 10 |
 | shimaji coffee roasters | 広島市南区的場町1-6-8 1F | STORES(手動) | 9 |
@@ -553,6 +556,7 @@ aggregate_shops.py実行後の`git diff --staged --quiet || git commit`が該当
 | Ringall Coffee | 三原市久井町坂井原280-4 | BASE | 6 |
 | 高谷山珈琲焙煎所 | 三次市十日市西4-7-1 | BASE | 21 |
 | 珈琲屋スプレモ | 三次市十日市東3丁目3-22 マスダランドビル1F | 独自CMS(Movable Type)+決済カート(ec-sites.jp) | 21 |
+| 自家焙煎イブリック | 大竹市新町1丁目1-11 | STORES(手動) | 12 |
 | 十字屋珈琲焙煎店 | 東広島市西条栄町6-16-101 | 手動 | 2 |
 | ai珈琲 | 東広島市西条中央4丁目10-43 フロンティア相沢 | BASE | 7 |
 | Y COFFEE LABO(寄田珈琲研究所) | 東広島市西条町田口707-50 | 手動 | 18 |
@@ -560,8 +564,10 @@ aggregate_shops.py実行後の`git diff --staged --quiet || git commit`が該当
 | ShiRuShi COFFEE | 東広島市八本松町飯田744-7 | BASE | 11 |
 | 珈琲豆ましろ | 尾道市向島町5557-17 | EC Force | 8 |
 | 尾道浪漫珈琲 | 尾道市十四日元町4-1 | カラーミー | 9 |
+| Satie coffee | 尾道市西土堂10-26 | STORES(手動) | 58 |
 | WELCOME COFFEE ROASTER | 尾道市土堂1-17-15 | BASE | 9 |
 | Classico | 尾道市土堂1-3-28 | 独自ECシステム(EC-CUBE系と推定) | 7 |
+| LIMINAL COFFEE ROASTER | 尾道市日比崎町1-16 Lemonsea 1F | BASE | 5 |
 | リトルウイング珈琲 | 福山市今津町3-2-28 | 楽々シリーズ(Raku-Uru) | 11 |
 | 東珈琲店 | 福山市城見町2-5-17 | Shopify | 7 |
 | ビーンズコーヒーカンパニー | 福山市新市町大字戸手780-1 | BASE | 10 |
@@ -636,18 +642,28 @@ aggregate_shops.py実行後の`git diff --staged --quiet || git commit`が該当
 | ALL THAT COFFEEWORKS | さいたま市大宮区土手町2-35 | BASE | 11 |
 | TAKA COFFEE STAND | さいたま市南区沼影1-25-12 | BASE | 11 |
 | coffee REforme | さいたま市南区大谷口989-16 | 手動 | 14 |
+| ChieCoffee | ふじみ野市上福岡1-2-16 | BASE | 11 |
+| PO-RT COFFEE | ふじみ野市上福岡4-6-11 | BASE | 10 |
+| はらだ珈琲 | 羽生市下手子林2025-1 | 手動 | 13 |
 | ビーンズ(越谷) | 越谷市蒲生寿町18-30 | 独自サイト(CGIカート) | 20 |
 | コーヒーロースト オリティエ | 越谷市宮本町3-172-1 | WooCommerce(Store API) | 24 |
+| 珈琲パウエル | 久喜市久喜中央4-1-4 | 手動 | 11 |
+| 自家焙煎珈琲屋どんぐり | 久喜市青葉4-1-20 | カラーミー | 23 |
 | 柊豆 | 熊谷市船木 | BASE | 9 |
 | アキモトコーヒーロースターズ | 熊谷市本石2-341-4 | BASE | 6 |
 | 珈水亭 | 熊谷市末広3-12-4 | 自社サイト(WordPress、静的な通販ページ) | 13 |
 | 自家焙煎珈琲工房 まめぞう | 戸田市上戸田5-11-1 | 独自CMSショップ | 35 |
+| まめや忍 | 行田市忍1-9-2 | 手動 | 30 |
+| 78coffee | 鴻巣市前砂427-10 | カラーミー | 12 |
+| 百福豆珈琲 | 坂戸市八幡1-3-42 | BASE | 17 |
 | 三郷珈琲焙煎所 | 三郷市彦成5-149-2 | BASE | 6 |
 | KiaOra COFFEE | 春日部市大沼3-123-1 | BASE | 12 |
+| 自家焙煎珈琲カプリコーン | 所沢市下安松160-1 | 手動 | 12 |
 | しかくCOFFEE | 所沢市若狭1-2626-43 | BASE | 13 |
 | lit coffee service | 所沢市小手指町2-11-10 | STORES(手動) | 4 |
 | HASABA COFFEE ROASTERS | 所沢市松葉町16-14 | BASE | 7 |
 | 豆定 | 所沢市東狭山ケ丘1-69-5 | 手動 | 23 |
+| 角川クラフト 東所沢焙煎所 | 所沢市東所沢和田2-17-11 グランドウール東所沢101 | 独自ドメインEC | 27 |
 | LIMENAS COFFEE | 所沢市日吉町6-7 | STORES(手動) | 20 |
 | 自家焙煎珈琲 beans shop Kieido | 所沢市日吉町7-6 | 手動 | 14 |
 | Coffee&Beans takechiyo | 上尾市原市261-30 | BASE | 14 |
@@ -658,12 +674,15 @@ aggregate_shops.py実行後の`git diff --staged --quiet || git commit`が該当
 | トレビアン珈琲 | 川越市鯨井新田16-47 | WordPress | 39 |
 | COFFEE GALLERY | 川越市松江町2-3-5 | BASE | 17 |
 | COFFEE POST | 川越市新富町1-1-5 | BASE | 9 |
+| TAKERU COFFEE | 川越市仙波町3-4-5 | STORES(手動) | 16 |
 | HILL PINE'S ESPRESSO | 川越市連雀町13-1 | BASE | 5 |
+| Macky.coffee | 川越市連雀町27-1 | BASE | 10 |
 | glin coffee | 川越市脇田本町8-1 U_PLACE 1F | Shopify | 8 |
 | どんぐりの木 | 川口市安行原2161-11 | 手動 | 26 |
 | AMBER DROP COFFEE ROASTERS | 川口市幸町2-15-4 ノザキヤビル1F | BASE | 23 |
 | 86 COFFEE ROASTERS | 川口市川口4-2-4 アイビービル101 | Jimdo Shop | 9 |
 | タカノ珈琲 | 川口市中青木2-3-40 | EC-CUBE | 46 |
+| 銀林珈琲 | 川口市並木2-2-3 星野ビル | STORES(手動) | 20 |
 | ecoma coffee | 草加市住吉1-13-2 | STORES(手動) | 12 |
 | トレモロコーヒーロースター | 草加市草加3-8-15 | BASE | 18 |
 | 珈琲豆専門店 Kopi Luak | 草加市中央2-2-7 | Wix(Wix Stores) | 26 |
@@ -673,7 +692,9 @@ aggregate_shops.py実行後の`git diff --staged --quiet || git commit`が該当
 | コヤナギコーヒーニッポン | 東松山市下唐子1967-2 | Wix(Wix Stores) | 9 |
 | coffee mameco | 東松山市六反町3-32 | Shopify | 13 |
 | Cafe Sorte | 日高市梅原64-8 | BASE | 4 |
+| 豆春 | 入間市久保稲荷2-12-14 | 手動 | 16 |
 | Braikan coffee | 八潮市大曽根1250-3 | STORES(手動) | 10 |
+| 上田珈琲豆焙煎堂 | 飯能市茜台1-4-25 | STORES(手動) | 21 |
 | COFFEE ROASTERY Nakajima | 飯能市下畑213-9 | STORES(手動) | 14 |
 | やまびより珈琲 | 飯能市仲町19-12 | BASE | 20 |
 | アスロンコーヒー焙煎所 | 飯能市名栗 | Ocnk | 9 |
@@ -1002,10 +1023,13 @@ aggregate_shops.py実行後の`git diff --staged --quiet || git commit`が該当
 |---|---|---|---|
 | ITOKU COFFEE | 伊東市玖須美元和田716-396 | ショップサーブ | 42 |
 | 珈ノ鳥 | 伊東市松川町1-20 えんビル1階 | STORES(手動) | 10 |
+| カフェローステライ・ヴェッカー | 伊東市和田1-7-12 | 手動 | 18 |
 | 東伊豆珈琲焙煎所 | 賀茂郡東伊豆町白田185-3 | Shopify | 14 |
 | ICHI COFFEE ROASTERY | 掛川市掛川1068-4 | BASE | 7 |
 | ASH COFFEE | 掛川市上西郷1035-7 | 独自ASP(xaas3.jp基盤、schema.org JSON-LD公開) | 10 |
+| シシリコーヒー ロースターズ | 掛川市日坂910 | STORES(手動) | 7 |
 | 唐良里(からり) | 三島市加茂川町4115-6 | 手動 | 15 |
+| hibitano coffee roastery | 三島市広小路町11-10 | STORES(手動) | 4 |
 | COFFEE&CO. | 三島市南本町8-26 Airstream | Shopify | 180 |
 | 石垣珈琲 | 駿東郡清水町新宿7-1 | カラーミー | 36 |
 | 焙煎工房 豆や | 駿東郡長泉町下土狩1321 ケニーズビル1F | 手動 | 42 |
@@ -1013,6 +1037,7 @@ aggregate_shops.py実行後の`git diff --staged --quiet || git commit`が該当
 | ARCHIPELAGO ROASTERY | 沼津市戸田1588-3 | BASE | 4 |
 | 自家焙煎珈琲屋 花野子 | 沼津市今沢383-1 | カラーミー | 19 |
 | caffe maco | 焼津市中里556-1 | BASE | 5 |
+| DAISY COFFEE | 焼津市本町2-13-28 | BASE | 9 |
 | シロネコ | 榛原郡吉田町住吉188-1 | カラーミー | 9 |
 | 自家焙煎 Bulldogbeans | 裾野市 | BASE | 7 |
 | 鳥仙珈琲 | 静岡市葵区瀬名中央4-1-11 | 手動 | 12 |
@@ -1028,23 +1053,31 @@ aggregate_shops.py実行後の`git diff --staged --quiet || git commit`が該当
 | JUNKISSA COFFEE ROASTERY | 島田市稲荷2-2-3 | BASE | 11 |
 | かりおもん | 藤枝市音羽町3-17-3 | EC-CUBE | 6 |
 | 熱海 coffee house 茶々 | 熱海市清水町11-11 | BASE | 7 |
+| 自家焙煎珈琲 ちとせ105 | 熱海市泉127-19 | BASE | 17 |
 | 豆吉庵 | 磐田市国府台86-1-105 | WooCommerce | 8 |
 | 大橋珈琲 | 磐田市中泉2908-3 | BASE | 8 |
 | 市野珈琲焙煎所 | 浜松市 | BASE | 6 |
 | TRANSIT COFFEE ROASTERS | 浜松市中央区卸本町28 | BASE | 6 |
 | 香茶屋 | 浜松市中央区舘山寺町2543-2 | カラーミー | 11 |
+| 浜松自家焙煎 豆煎人 | 浜松市中央区原島町453-3 | WooCommerce | 80 |
 | Type2 | 浜松市中央区湖東町306 | 手動 | 131 |
 | chord coffee | 浜松市中央区高林1-1-36 古民家ヤマヤ内 | BASE | 4 |
 | まるたけ堂珈琲 | 浜松市中央区佐鳴台 | STORES(手動) | 12 |
+| 鴨江珈琲 | 浜松市中央区三組町139-8 | Wix(Wix Stores) | 14 |
 | ties coffee roaster | 浜松市中央区三方原町195-2 | BASE | 3 |
+| Veludo Coffee Roasters | 浜松市中央区松小池町740-1 | BASE | 8 |
 | Anny coffee | 浜松市中央区中野町17-1 | カラーミー | 6 |
 | renag coffee | 浜松市中央区尾張町127-13 | Shopify | 3 |
 | タタズミ珈琲焙煎場 | 浜松市中区助信町5-37 | Shopify | 1 |
+| かもめの珈琲屋さん | 浜松市天竜区二俣町二俣1283-1 山ノ舎ビル1階 | STORES(手動) | 3 |
 | Green Coffee | 浜松市浜名区新都田2-19-3 | 手動 | 6 |
+| ポルトボヌール | 浜松市浜名区染地台1-44-17 | 手動 | 11 |
 | 自家焙煎珈琲きのわ | 富士宮市 | 手動 | 9 |
 | 珈琲焙煎処 earthdrop | 富士宮市黒田287-15 | BASE | 9 |
 | 赤富士珈琲 | 富士宮市北町19-7 | カラーミー | 21 |
 | STERNE COFFEE LABORATORY | 富士市本市場町786 | STORES(手動) | 8 |
+| KEIGAN COFFEE ROASTERS | 富士市蓼原834-16 | Shopify | 122 |
+| NICE COFFEE ROASTER | 牧之原市細江2874番地 | Wix(手動) | 23 |
 
 ### 石川県
 
@@ -1078,37 +1111,52 @@ aggregate_shops.py実行後の`git diff --staged --quiet || git commit`が該当
 | 豆NAKANO |  | カラーミー | 17 |
 | Asahi Sunrise Coffee | 旭市イ1402 | STORES(手動) | 10 |
 | 珈琲 抱/HUG | 夷隅郡大多喜町堀之内407 | BASE | 7 |
+| ゆうかCoffee | 浦安市北栄1-1-13 岩波ビル1F | EC-CUBE 4系(独自ドメイン) | 23 |
+| 焙煎職人 鈴木正美の店 | 我孫子市若松139-4 1F | EC-CUBE(独自ドメイン) | 51 |
 | BLOWER COFFEE ROASTERY | 館山市宮城78-3 | 独自CMS(Digital Stage系)+ショッピングカート | 5 |
 | サルビアコーヒー | 館山市北条2576 | Welcart | 18 |
 | 珈琲玉澤 | 香取市佐原イ3401 | カラーミー | 12 |
 | 珈琲工房わげん | 佐倉市栄町19-5 | 静的HTML(メール・FAX・電話注文) | 12 |
+| 自家焙煎珈琲 銹釉 | 佐倉市王子台6-27-14 | 手動 | 18 |
 | 豆猫舎 | 佐倉市宮前2-11-7 | カラーミー | 6 |
 | 珈琲豆の館 | 山武市成東668-6 富楽モール1A号室 | WordPress | 21 |
+| 福笑屋珈琲 | 山武市殿台229(コーヒースタンド) | 手動 | 10 |
 | maruto.coffee | 山武市姫島584 | STORES(手動) | 17 |
 | TABEI COFFEE | 四街道市 | Welcart | 12 |
 | ヤマドリ珈琲 | 市原市月出1045 月出工舎1F | STORES(手動) | 8 |
 | おたべの森の珈琲 | 市原市小田部116-9 | STORES(手動) | 7 |
+| SEIKODO COFFEE | 市原市八幡1072-1 | BASE | 17 |
 | CaffeNil | 市川市行徳駅前1-7-9 | STORES(手動) | 9 |
+| いちCafe珈琲焙煎 | 市川市国分6-10-1(道の駅いちかわ内) | 手動 | 31 |
 | 平野珈琲 | 市川市市川2-30-25 | 独自サイト(静的HTML) | 14 |
 | CAMBLEM グリーン珈琲焙煎所 | 市川市市川南1丁目(市川店) | Shopify | 43 |
 | 麻生珈琲店 | 市川市新田4-17-9 | BASE | 10 |
+| 銀河コーヒー | 市川市真間1-15-20 真間ビル1F | カラーミー | 49 |
 | Cafe Lutra | 市川市大野町4丁目3154-22 | 独自サイト(WordPress・店頭価格表) | 43 |
 | 萌季屋 | 市川市八幡 | カラーミー | 14 |
 | BONUS COFFEE Roastery | 習志野市津田沼7-5-16 | BASE | 4 |
 | SPAiCE COFFEE | 勝浦市勝浦111 | BASE | 8 |
 | Tokoa coffee | 松戸市河原塚394-3-101 | STORES(手動) | 7 |
+| Kaffee Brücke | 松戸市小金原2-13-8 | STORES(手動) | 20 |
+| BaseCafe | 松戸市小根本159-3 アムール豊友104 | STORES(手動) | 5 |
 | MOKICHI珈琲 | 松戸市日暮1-2-8 雅裕ビル1F | ショップサーブ | 12 |
+| HOUEI COFFEE and STORE | 成田市東町601-2 | BASE | 11 |
 | SEVEN STEPS COFFEE CLUB | 千葉市稲毛区黒砂台1-11-21 高橋ビル1G | Shopify | 7 |
 | ku.(コーヒー豆と器のお店) | 千葉市稲毛区小仲台2-13-13 | EC-CUBE | 4 |
 | Eureka Coffee Roasters | 千葉市稲毛区緑町1-8-16 | Shopify | 35 |
 | ROASTER's HOUSE | 千葉市花見川区花園1-20-7 | BASE | 21 |
 | エトナコーヒー | 千葉市花見川区幕張 | MakeShop | 89 |
+| COFFEE RIN | 千葉市中央区新千葉1-4-2 ウェストリオ2 3F-2 | STORES(手動) | 7 |
 | 自家焙煎珈琲豆屋 じゃくう鳥 | 千葉市中央区大巌寺町 | STORES(手動) | 12 |
 | 虹の珈琲焙煎所 | 千葉市中央区登戸3-17-6 | STORES(手動) | 6 |
 | RUMOR'S COFFEE | 千葉市緑区おゆみ野南2-16-3 | BASE | 39 |
 | Coffee Roast 焙香 | 船橋市 | BASE | 35 |
 | 珈琲豆のおおつか | 船橋市 | らくうるカート | 49 |
+| ふくろう珈琲 | 船橋市行田1-45-17 塚田のなかにわⅢ 1B | BASE | 7 |
+| Hatch Coffee Roastery | 船橋市三山8-24-12 | Wix(手動) | 15 |
+| こーひー豆のゆら | 船橋市習志野台4-69-11 | Wix(手動) | 17 |
 | CAFE&ROASTER SABUROHE | 船橋市飯山満町3-1367 | BASE | 6 |
+| 自家焙煎珈琲店 ドゥ ムートン | 匝瑳市亀崎198-2 | 手動 | 21 |
 | The Rising Sun Coffee | 大網白里市大網1481-3 | Shopify | 8 |
 | 港乃珈琲店 | 銚子市 | STORES(手動) | 10 |
 | TONEGAWA COFFEE | 長生郡一宮町新地甲1921-10 | 独自カート(eshop-do) | 19 |
@@ -1120,9 +1168,11 @@ aggregate_shops.py実行後の`git diff --staged --quiet || git commit`が該当
 | SOLITO MAGO COFFEE LABO | 柏市若柴226番地42 中央144街区2 C棟 | BASE | 11 |
 | 珈琲工房豆壱 | 柏市中央2-9-11-102 | BASE | 47 |
 | 自家焙煎 珈琲豆屋 | 柏市柏1-1-11 | Yahoo!ショッピング | 16 |
+| クライム珈琲 | 柏市北柏1-7-26 | STORES(手動) | 59 |
 | きたみcoffee | 八千代市 | EC-CUBE | 24 |
 | PEACE COFFEE ROASTERS | 茂原市茂原15-5 山田ビル1F | WooCommerce | 10 |
 | MIFUNEYAMA COFFEE | 木更津市畑沢南5-8-9 | STORES(手動) | 3 |
+| 自家焙煎珈琲 ブラジル屋 | 木更津市文京3-1-10 | カラーミー | 15 |
 | Scrop COFFEE ROASTERS | 流山市おおたかの森南1-5-1 流山おおたかの森S・C 3F | Shopify | 20 |
 | 南流山こーひー焙煎 | 流山市鰭ケ崎8-3 シナプス流山1B | STORES(手動) | 17 |
 
@@ -1133,6 +1183,7 @@ aggregate_shops.py実行後の`git diff --staged --quiet || git commit`が該当
 | 焙煎工房てんぷす | 茨木市 | Shopify | 51 |
 | たたらば珈琲 | 茨木市(忍頂寺焙煎所) | STORES(手動) | 20 |
 | Java Jive West | 茨木市舟木町11-36 | BASE | 8 |
+| 珈琲豆焙煎所 mountain | 茨木市沢良宜西1丁目19番14号 | BASE | 15 |
 | ばいせん工房珈琲倶楽部 | 羽曳野市栄町6-3 | 楽天市場 | 70 |
 | 自家焙煎珈琲 Old Lanterns Cafe | 羽曳野市島泉6-4-15 | BASE | 14 |
 | SIMPLY COFFEE | 貝塚市 | STORES(手動) | 8 |
@@ -1148,15 +1199,24 @@ aggregate_shops.py実行後の`git diff --staged --quiet || git commit`が該当
 | 土居珈琲 | 堺市西区浜寺元町4-496-1 | 独自サイト(自社カートCGI) | 37 |
 | 4trees coffee 焙煎LABO堺 | 堺市西区平岡町89-3 KLビル1F | Shopify | 12 |
 | ふかい珈琲 | 堺市中区深井沢町3400 | STORES(手動) | 13 |
+| 12 Coffee Roasters | 堺市南区新檜尾台3-6-7 1F | BASE | 6 |
 | 寝屋川焙煎所 | 寝屋川市大利元町12-8 | BASE | 8 |
+| 焙煎珈琲豆 楓 | 吹田市古江台4丁目2-25 dios北千里5番館105号 | Yahoo!ショッピング | 34 |
 | さつき珈琲 | 吹田市五月が丘北25-40 ユタカビル1F | BASE | 11 |
 | mametomo1(珈琲オーダー焙煎まめとも) | 吹田市山田西1-2-14 千里エキスポハイツ102 | BASE | 16 |
+| TERRA COFFEE ROASTERS | 吹田市垂水町3-30-9 | Shopify | 5 |
+| kinan coffee | 摂津市三島2-1-13 | BASE | 7 |
 | LIGHT HOUSE | 泉佐野市羽倉崎1丁目1番5号 | BASE | 4 |
+| 自家焙煎珈琲やすらぎ | 泉佐野市市場西1-1-10 | ショップサーブ | 17 |
 | MAHOT COFFEE | 泉大津市田中町11-9 | BASE | 14 |
+| BEARCOFFEE | 泉南郡熊取町野田1-5-5 | BASE | 13 |
+| ひろしげ珈琲倶楽部 | 泉南郡岬町淡輪1478-1 | カラーミー | 23 |
 | 自家焙煎工房カフェ littleisland | 大阪狭山市狭山2-944-1 | WooCommerce | 24 |
+| 焙煎香房シマノ | 大阪狭山市茱萸木4丁目238-1 | カラーミー | 37 |
 | うさぎとぼく | 大阪市阿倍野区阪南町3-9-10 | BASE | 20 |
 | チャオッペ | 大阪市旭区清水5-12-12 | BASE | 16 |
 | コーヒーロースタリーむすぶ | 大阪市住吉区長居東4-11-19 ファミール長居1F | BASE(theshop) | 9 |
+| Chevron Coffee Roasters | 大阪市住吉区帝塚山中1-1-16 | STORES(手動) | 5 |
 | ArcaFabaFactory. | 大阪市住之江区浜口西1-6-10 | BASE | 30 |
 | コモレビコーヒー焙煎所 | 大阪市城東区関目1-12-13 | STORES(手動) | 8 |
 | 煎りたてハマ珈琲 | 大阪市城東区今福西2-16-12 | Ocnk | 23 |
@@ -1165,12 +1225,17 @@ aggregate_shops.py実行後の`git diff --staged --quiet || git commit`が該当
 | MONDIAL KAFFEE 328 | 大阪市西区南堀江1-1-20 | BASE | 12 |
 | 旭珈琲 | 大阪市西区南堀江3-12-21 | MakeShop | 43 |
 | TOMACAFE | 大阪市西区立売堀5-7-12-601 | STORES(手動) | 3 |
+| フジコ珈琲 | 大阪市大正区三軒家東1-16-2 | BASE | 20 |
 | 井尻珈琲焙煎所 | 大阪市大正区三軒家東1-4-11 | BASE | 4 |
 | 平岡珈琲店 | 大阪市中央区瓦町3丁目6-11 | BASE | 1 |
 | aoma coffee | 大阪市中央区久太郎町3-4-2 | Shopify | 8 |
+| Odoriba Coffee | 大阪市中央区玉造2丁目4-20 | STORES(手動) | 7 |
+| 花田コーヒ | 大阪市中央区高津3-2-10 | カラーミー | 26 |
 | 自家焙煎コーヒーくまきち | 大阪市中央区上町1-26-14 | Square Online | 3 |
 | Enon coffee roasters | 大阪市中央区上町1-6-4 | STORES(手動) | 9 |
+| Le Premier Cafe | 大阪市中央区心斎橋筋1-3-28 ビギ1stビル3F | WooCommerce | 8 |
 | LiLo Coffee Roasters | 大阪市中央区西心斎橋1-10-28 | Shopify | 44 |
+| Hue Coffee Roaster | 大阪市中央区谷町4丁目3-7 | BASE | 3 |
 | 大洋珈琲 | 大阪市中央区内久宝寺町3-3-15 | BASE | 35 |
 | エルマーズグリーン / EMBANKMENT Coffee | 大阪市中央区北浜1丁目1-23 1F | Shopify | 7 |
 | 喫茶ルプラ | 大阪市天王寺区 | カラーミー | 13 |
@@ -1185,14 +1250,17 @@ aggregate_shops.py実行後の`git diff --staged --quiet || git commit`が該当
 | やぶ珈琲 | 大阪市平野区喜連東3-13-4 | Shopify | 40 |
 | 川崎珈琲商会 | 大阪市北区 | Ocnk | 17 |
 | 北浜ポート焙煎所 | 大阪市北区菅原町11-14 | STORES(手動) | 9 |
+| もなか珈琲 | 大阪市北区中崎3-3-13 | xaas3 | 12 |
 | 42195 COFFEE | 大阪市北区中津3-12-15 | Wix | 5 |
 | 喫茶サンシャイン | 大阪市北区梅田1丁目1-3 大阪駅前第3ビルB2-89 | BASE | 1 |
 | HAIKU COFFEE ROASTERS | 大阪市北区浮田2-4-4 | BASE | 4 |
+| 喫茶路地 | 大阪市北区浪花町9-5 | STORES(手動) | 9 |
 | つばめ通り珈琲店 | 大阪市淀川区十三東3-12-16 | STORES(手動) | 12 |
 | 阪奈珈琲豆店(HANNA COFFEE R*) | 大東市野崎4-7-31 | Ocnk | 13 |
 | ロッソビーンズカフェ | 池田市栄町3-14 | MakeShop | 24 |
 | 大阪箕面珈琲珈琲焙煎所 | 池田市神田1-22-8 | 独自(WordPress、単品ラインナップページ。購入はBASE〈minohcoffee.base.shop〉の選べるセット経由) | 14 |
 | Puente Coffee | 東大阪市(石切参道) | STORES(手動) | 38 |
+| 珈琲通信 | 東大阪市小阪3-1-13 | BASE | 6 |
 | NIRVANA Coffee | 東大阪市西岩田1-8-19 | BASE | 9 |
 | 鶴屋 | 東大阪市足代2-7-27 | BASE | 5 |
 | THE COFFEE COFFEE COFFEE | 東大阪市菱屋東2-1-28 TRACT the local 2F | BASE | 8 |
@@ -1205,11 +1273,14 @@ aggregate_shops.py実行後の`git diff --staged --quiet || git commit`が該当
 | 亀田珈琲焙煎所 | 豊中市利倉1-8-18 | BASE | 6 |
 | Indigo Coffee Roasters | 枚方市岡東町19-20 エル枚方1F | BASE(theshop) | 5 |
 | ワタスキ珈琲焙煎所 | 枚方市茄子作4-26-37 | BASE | 28 |
+| マホロバ珈琲堂 | 枚方市長尾元町5-2-7 | BASE | 13 |
 | 後珈琲焙煎所 | 枚方市片鉾本町25-1 | BASE | 5 |
 | 仲井の珈琲 | 箕面市 | STORES(手動) | 7 |
+| kawakami coffee roaster | 箕面市船場東1-8-58 1F | WooCommerce | 12 |
 | 朋珈琲焙煎所 | 門真市宮前町3丁目 | STORES(手動) | 12 |
 | すぎはらコーヒーロースター | 門真市浜町5-24 | カラーミー | 37 |
 | 辻本珈琲 | 和泉市春木町1156-1 | フューチャーショップ(独自ドメイン) | 45 |
+| 豆一珈楽 | 和泉市唐国町1-9-57 | カラーミー | 63 |
 
 ### 大分県
 
@@ -1809,6 +1880,8 @@ aggregate_shops.py実行後の`git diff --staged --quiet || git commit`が該当
 | LIMA COFFEE | 神戸市中央区栄町通3丁目2-6 1F | BASE | 23 |
 | Y's coffee roaster & baked shop | 神戸市中央区花隈町3-3 1F | BASE | 9 |
 | Café Lavenir | 神戸市中央区元町高架通3-184 | Ocnk | 7 |
+| まめや元町店 | 神戸市中央区元町通2丁目3-2 ジェムビルB1 | BASE | 20 |
+| FRANK | 神戸市中央区元町通3-3-2 IMAGAWA BLDG | STORES(手動) | 25 |
 | コーヒーロースト ワンズ | 神戸市中央区元町通5-4-8三木ビル1F | カラーミー | 138 |
 | はた珈琲店 | 神戸市中央区元町通5-7-12 | Welcart(WordPress) | 16 |
 | 神戸にしむら珈琲店 | 神戸市中央区中山手通1-26-3 | カラーミー | 12 |
@@ -1817,14 +1890,24 @@ aggregate_shops.py実行後の`git diff --staged --quiet || git commit`が該当
 | 神戸珈琲物語 | 神戸市長田区上池田6-8-23 | ショップサーブ | 22 |
 | 豆匠 まめのたくみ | 神戸市長田区菅原通2-108 | カラーミー | 17 |
 | YOSHIMURA COFFEE ROASTERS | 神戸市東灘区魚崎北町1-8-29 | BASE | 23 |
+| 林 COFFEESTAND | 神戸市東灘区森南町1-5-1 セルバ甲南山手B1F | BASE | 12 |
+| SAKU COFFEE | 神戸市灘区宮山町2丁目5-3 椿荘1F | STORES(手動) | 8 |
 | Beans. Coffee&Roasters | 神戸市灘区高徳町3丁目1-7-103 | Shopify | 8 |
 | コーヒーロースト神戸六甲道 | 神戸市灘区桜口町5丁目1-1 ウェルブ六甲道5番街1番館1階 | BASE | 5 |
 | 萩原珈琲 | 神戸市灘区城内通1-6-18 | 独自カート(Vue.js + JSON API) | 39 |
+| 六珈 | 神戸市灘区八幡町2-10-5 | BASE | 4 |
+| COZY COFFEE(神戸) | 神戸市兵庫区荒田町1-18-8 マミービル1F | STORES(手動) | 20 |
 | NAKAMURA coffee | 神戸市兵庫区中道通3-2-11 | カラーミー | 24 |
+| tent-coffee | 神戸市兵庫区東山町3-1-1 | BASE | 7 |
 | HiTo Coffee Beans | 神戸市兵庫区梅元町7-3 | BASE | 18 |
+| 岬の焙煎所 | 神戸市兵庫区和田宮通3-2-22 | Ocnk | 12 |
+| The Sowers | 神戸市北区山田町原野字舟田2-1 | STORES(手動) | 10 |
 | ridge by coffee up! | 神戸市北区若葉台3-18-22 | STORES(手動) | 6 |
 | 自家焙煎珈琲 珈嗜園 | 西宮市甲子園網引町2-17 | 楽天市場 | 22 |
+| 珈琲屋ドリーム | 西宮市甲風園1-12-12 | BASE | 3 |
 | としはる珈琲 | 西宮市常磐町1-32 サンアロー1F | STORES(手動) | 8 |
+| brocante coffee | 西宮市神楽町11-20 | BASE | 3 |
+| みやまめ珈琲 | 西宮市西田町5-1 夙川サンらいふ内 | STORES(手動) | 13 |
 | BUNDY BEANS | 西宮市石刎町16-20 | STORES(手動) | 15 |
 | しくもコーヒー | 西宮市染殿町3-14 | STORES(手動) | 39 |
 | 珈琲工房トゥリパーノ | 西宮市田代町7-1 | 手動 | 35 |
@@ -1850,6 +1933,7 @@ aggregate_shops.py実行後の`git diff --staged --quiet || git commit`が該当
 | ヒメジコーヒーファクトリー | 姫路市辻井6丁目11-16 | 手動 | 14 |
 | 豆や珈楽 | 姫路市土山2丁目199-1 | 手動 | 24 |
 | コムヒー | 姫路市八代本町1-8-15 | BASE | 8 |
+| 珈琲豆やティアレ | 姫路市網干区大江島 | STORES(手動) | 42 |
 | NAKAZAKI COFFEE ROASTER | 姫路市野里東同心町5-10 | BASE | 15 |
 | 8COFFEEROAST | 宝塚市安倉南1-17-14 | BASE | 15 |
 | SHIZUKU COFFEE ROASTER | 宝塚市宮の町7-6 | STORES(手動) | 10 |

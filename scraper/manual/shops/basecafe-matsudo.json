@@ -1,0 +1,105 @@
+{
+  "shop": {
+    "name": "BaseCafe",
+    "url": "https://base-cafe.stores.jp/",
+    "address": "千葉県松戸市小根本159-3 アムール豊友104",
+    "prefecture": "千葉県",
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "last_verified_at": "2026-10-26",
+    "source_note": "STORES.jpの公式ショップ(https://base-cafe.stores.jp/、公式 https://basecafe.jp/ の「ウェブストア」リンク先)の商品ページをブラウザfetch()で2026-10-26に確認。公式に「自家焙煎コーヒースタンド…厳選された4種のコーヒー豆を店内で焙煎し…焙煎豆やドリップバッグの販売も行っています」、会社情報に〒271-0073 千葉県松戸市小根本159-3 アムール豊友104。商品ページに内容量の記載がない豆4銘柄は重量をnullとした(デカフェのみ商品名に200gと明記)。ドリップバッグ各種・セットは除外。",
+    "id": "basecafe-matsudo",
+    "instagram_url": null,
+    "google_maps_query": "BaseCafe 千葉県松戸市小根本159-3 アムール豊友104",
+    "tel": null,
+    "hours": null,
+    "shop_type": "single_location",
+    "data_source": "manual",
+    "lat": 35.788311,
+    "lng": 139.908508,
+    "nearest_station": {
+      "name": "上本郷",
+      "lines": [
+        "京成松戸線"
+      ],
+      "distance_m": 690,
+      "walk_min": 9
+    }
+  },
+  "products": [
+    {
+      "raw_name": "エチオピア・モカ Chelbesa Natural",
+      "category": "ストレート",
+      "originCountry": "エチオピア",
+      "processingMethod": "ナチュラル",
+      "roast": null,
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1900,
+      "weightG": null,
+      "stockStatus": "販売中",
+      "productUrl": "https://base-cafe.stores.jp/items/664b1ebb8577a9104f444910",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "タンザニア・キリマンジャロ AA Arusha Sshuton Washed",
+      "category": "ストレート",
+      "originCountry": "タンザニア",
+      "processingMethod": "ウォッシュド",
+      "roast": null,
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1880,
+      "weightG": null,
+      "stockStatus": "販売中",
+      "productUrl": "https://base-cafe.stores.jp/items/695250372e1f47693cd088d2",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "インドネシア・マンデリン TrueBlue SuperGrade Microlot",
+      "category": "ストレート",
+      "originCountry": "インドネシア",
+      "processingMethod": null,
+      "roast": null,
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1780,
+      "weightG": null,
+      "stockStatus": "販売中",
+      "productUrl": "https://base-cafe.stores.jp/items/67301ce722d856079bb6bd5a",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "ブラジル・サントスNo2 アマレロブルボン Yellow Bourbon P-Natural",
+      "category": "ストレート",
+      "originCountry": "ブラジル",
+      "processingMethod": "ナチュラル",
+      "roast": null,
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1620,
+      "weightG": null,
+      "stockStatus": "販売中",
+      "productUrl": "https://base-cafe.stores.jp/items/6905d6efd34c9ce347b039b0",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "【デカフェ】インドネシア スマトラクイーン マンデリン G1",
+      "category": "ストレート",
+      "originCountry": "インドネシア",
+      "processingMethod": "ウェットハルド",
+      "roast": null,
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 2010,
+      "weightG": 200,
+      "stockStatus": "販売中",
+      "productUrl": "https://base-cafe.stores.jp/items/688ec0733e0c06b05ab616b4",
+      "data_source": "manual"
+    }
+  ]
+}
