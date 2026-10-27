@@ -41385,6 +41385,19 @@
     "data_source": "manual",
     "source_note": "STORES.jpの公式ショップ(https://base-cafe.stores.jp/、公式 https://basecafe.jp/ の「ウェブストア」リンク先)の商品ページをブラウザfetch()で2026-10-26に確認。公式に「自家焙煎コーヒースタンド…厳選された4種のコーヒー豆を店内で焙煎し…焙煎豆やドリップバッグの販売も行っています」、会社情報に〒271-0073 千葉県松戸市小根本159-3 アムール豊友104。商品ページに内容量の記載がない豆4銘柄は重量をnullとした(デカフェのみ商品名に200gと明記)。ドリップバッグ各種・セットは除外。",
     "last_verified_at": "2026-10-26",
+    "locations": [
+      {
+        "label": null,
+        "address": "千葉県松戸市小根本159-3 アムール豊友104",
+        "prefecture": "千葉県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "BaseCafe 千葉県松戸市小根本159-3 アムール豊友104",
+        "lat": 35.788311,
+        "lng": 139.908508
+      }
+    ],
     "lat": 35.788311,
     "lng": 139.908508
   },
@@ -41409,6 +41422,19 @@
     "data_source": "manual",
     "source_note": "公式 https://capricorn1997.com/ の「珈琲豆メニュー(一覧)」を2026-10-26に確認。価格は100gあたりの税込価格(税抜は734〜918円→680〜850円)。同ページ下部の店舗情報に〒359-0024 埼玉県所沢市下安松160-1、豆挽き売り・喫茶の営業時間、10席と記載。食べログ(https://tabelog.com/saitama/A1106/A110601/11041642/)でも同住所・自家焙煎。公式サイトは新サイト公開までの簡易案内ページ(2026年2月値上げ後の価格、11月の営業時間告知あり)。通販は電話・メール注文のみ。",
     "last_verified_at": "2026-10-26",
+    "locations": [
+      {
+        "label": null,
+        "address": "埼玉県所沢市下安松160-1",
+        "prefecture": "埼玉県",
+        "hours": "豆挽き売り11:00-18:00(12:30-13:00昼休み)、喫茶14:00-18:00(水曜・第2/第4木曜定休)",
+        "tel": "04-2945-4080",
+        "is_headquarters": false,
+        "map_query": "自家焙煎珈琲カプリコーン 埼玉県所沢市下安松160-1",
+        "lat": 35.786636,
+        "lng": 139.51059
+      }
+    ],
     "lat": 35.786636,
     "lng": 139.51059
   },
@@ -41433,6 +41459,19 @@
     "data_source": "manual",
     "source_note": "STORES.jpの公式ショップ(https://chevron-coffee.stores.jp/)の商品ページをブラウザfetch()で2026-10-26に確認。公式(https://chevroncoffee.jp/)に「シェブロンコーヒーロースターズはスモールバッチロースタリーです。新鮮な豆を丁寧に焙煎し…」、Locationsに帝塚山中1-1-16。豆5銘柄(いずれも200g、豆のまま)の価格を採用。ドリップバッグ・チャイ・マグ・Tシャツ・雑貨は除外。焙煎度の記載は商品ページに無く null。",
     "last_verified_at": "2026-10-26",
+    "locations": [
+      {
+        "label": null,
+        "address": "大阪府大阪市住吉区帝塚山中1-1-16",
+        "prefecture": "大阪府",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "Chevron Coffee Roasters 大阪府大阪市住吉区帝塚山中1-1-16",
+        "lat": 34.623699,
+        "lng": 135.502548
+      }
+    ],
     "lat": 34.623699,
     "lng": 135.502548
   },
@@ -41457,6 +41496,19 @@
     "data_source": "manual",
     "source_note": "STORES.jpの公式ショップ(https://climbcoffee.stores.jp/)の商品ページをブラウザfetch()で2026-10-26に確認。公式(https://www.climb.co.jp/coffee/)に「ご注文をいただいてからコーヒー豆を焙煎する注文焙煎のお店」、店頭受付カウンター・イートイン、〒277-0832 千葉県柏市北柏1-7-26、TEL 04-7160-1373、定休 土日月。各銘柄の焙煎豆100g(豆のまま)の価格を採用。4袋セット・ドリップパック・水出し・宅急便チケットは除外。焙煎度は商品説明の「◆焙煎度」から補った。",
     "last_verified_at": "2026-10-26",
+    "locations": [
+      {
+        "label": null,
+        "address": "千葉県柏市北柏1-7-26",
+        "prefecture": "千葉県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "クライム珈琲 千葉県柏市北柏1-7-26",
+        "lat": 35.874382,
+        "lng": 139.98555
+      }
+    ],
     "lat": 35.874382,
     "lng": 139.98555
   },
@@ -41487,6 +41539,19 @@
     "data_source": "manual",
     "source_note": "STORES.jpの公式ショップ「Café Rin」(https://yachiwa.stores.jp/、公式 https://coffee-rin.com/ の通販リンク先)の商品ページをブラウザfetch()で2026-10-26に確認。公式に「こだわりの炭火自家焙煎コーヒー」「珈琲は自家焙煎にこだわる」。店舗は東京・銀座並木通りの本店ほか6拠点(11店舗未満)で、主な焙煎は銀座本店。住所は千葉市の店舗(COFFEE RIN新千葉店)を採用(千葉県で登録するか東京都にするかは要判断)。100gの豆のままの価格を採用。80g×3〜4種セット・ドリップパック・焼き菓子・マグは除外。",
     "last_verified_at": "2026-10-26",
+    "locations": [
+      {
+        "label": null,
+        "address": "千葉県千葉市中央区新千葉1-4-2 ウェストリオ2 3F-2",
+        "prefecture": "千葉県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "COFFEE RIN 千葉県千葉市中央区新千葉1-4-2 ウェストリオ2 3F-2",
+        "lat": 35.612934,
+        "lng": 140.112839
+      }
+    ],
     "lat": 35.612934,
     "lng": 140.112839
   },
@@ -41511,6 +41576,19 @@
     "data_source": "manual",
     "source_note": "公式サイトの珈琲豆リスト(http://www.deuxmoutons.com/itemlist.html)を2026-10-26に確認。「税込100グラムの価格です」と明記、「少量焙煎をしています」。住所は同ページのフッター。不定期焙煎(カフェインレス)・数量限定(カメルーン)・休止中(水出しパック・アイスブレンド・ボトルアイス)・ドリップバッグ・器具・ギフトは除外。期間限定のアニバーサリーブレンド(10〜12月)は現在販売期間のため採用。",
     "last_verified_at": "2026-10-26",
+    "locations": [
+      {
+        "label": null,
+        "address": "千葉県匝瑳市亀崎198-2",
+        "prefecture": "千葉県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "自家焙煎珈琲店 ドゥ ムートン 千葉県匝瑳市亀崎198-2",
+        "lat": 35.703354,
+        "lng": 140.503296
+      }
+    ],
     "lat": 35.703354,
     "lng": 140.503296
   },
@@ -41535,6 +41613,19 @@
     "data_source": "manual",
     "source_note": "STORES.jpの公式ショップ(https://domacoffee.stores.jp/)の商品ページをブラウザfetch()で2026-10-26に確認。トップに「小さな珈琲豆自家焙煎所 DOMA COFFEE です。小さな工房で、少量ずつ心を込めて丁寧に焙煎」「注文頂いた後に焙煎」。住所は食べログと既存docsによる(STORES上の番地は未確認)。NEWSの最新は2024/10/28で更新は古い。各銘柄の豆100gの価格を採用(粉は除外)。ドリップバッグのセットは除外。以前は旧テンプレートを理由に見送った店。",
     "last_verified_at": "2026-10-26",
+    "locations": [
+      {
+        "label": null,
+        "address": "広島県呉市郷原町2505",
+        "prefecture": "広島県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "DOMA COFFEE 広島県呉市郷原町2505",
+        "lat": 34.296562,
+        "lng": 132.627655
+      }
+    ],
     "lat": 34.296562,
     "lng": 132.627655
   },
@@ -41561,6 +41652,19 @@
     "data_source": "manual",
     "source_note": "STORES.jpの公式ショップ(https://coffeelabofrank.stores.jp/)の商品ページをブラウザfetch()で2026-10-26に確認。ショップに「焙煎士」5名を掲載、「神戸元町のスペシャリティコーヒー専門店…常時18種類以上の厳選されたコーヒー豆」(焙煎が店内か外部かは明確でなく要確認)。住所はRetty掲載(同ビル3Fで豆販売、階数の表記が混在)。各銘柄の最小重量(Specialは50g/100g、通常は200g、500gもあり)の価格を採用。ドリップバッグ・コーヒーリキッド・ギフト・定期便・セット・ゲイシャのピーチ/ウォーターメロン(果実風味の加工)は除外。",
     "last_verified_at": "2026-10-26",
+    "locations": [
+      {
+        "label": null,
+        "address": "兵庫県神戸市中央区元町通3-3-2 IMAGAWA BLDG",
+        "prefecture": "兵庫県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "FRANK 兵庫県神戸市中央区元町通3-3-2 IMAGAWA BLDG",
+        "lat": 34.687447,
+        "lng": 135.186188
+      }
+    ],
     "lat": 34.687447,
     "lng": 135.186188
   },
@@ -41586,6 +41690,19 @@
     "data_source": "manual",
     "source_note": "公式Coffeeページ(https://fukumiya-coffee.com/?page_id=39)を2026-10-26に確認。表示は税抜(税込)併記で、税込価格を採用(税抜は200g 1,700〜2,900円)。ブラジル モンテアレグレ農園のみ100g(税抜1,300円)があり最小重量を採用、他は200g。Aboutページ(https://fukumiya-coffee.com/?page_id=6)に「自家焙煎コーヒー店」「アメリカ製の半熱風式焙煎機」「2022年9月…固定店舗(COFFEE STAND 千葉県山武市殿台229)」と記載。ドリップバッグは除外。ブログの最新は2026-07-29。",
     "last_verified_at": "2026-10-26",
+    "locations": [
+      {
+        "label": null,
+        "address": "千葉県山武市殿台229(コーヒースタンド)",
+        "prefecture": "千葉県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "福笑屋珈琲 千葉県山武市殿台229(コーヒースタンド)",
+        "lat": 35.604034,
+        "lng": 140.417542
+      }
+    ],
     "lat": 35.604034,
     "lng": 140.417542
   },
@@ -41610,6 +41727,19 @@
     "data_source": "manual",
     "source_note": "STORES.jpの公式ショップ(https://swc006.stores.jp/)の商品ページをブラウザfetch()で2026-10-26に確認。Yahoo!ショッピング(https://store.shopping.yahoo.co.jp/silverwoodscoffee/)にも出店しているが、STORESを採用。Yahoo!ストア紹介(info.html)に「自家焙煎珈琲専門店・銀林珈琲。GIESENで焙煎した新鮮なコーヒー豆を販売中」、公式サイト(http://www.silverwoodscoffee.com/)に「喫茶・自家焙煎コーヒー豆販売」、電話048-446-7288、西川口駅東口徒歩2分。住所は公式/Yahoo!/食べログで一致(号室は102と1Fで食い違うため建物名までとした)。各銘柄の100g(豆のまま)の価格を採用。500gのまとめ割引は同一銘柄のため除外、カフェオレブレンドは用途限定のため除外。",
     "last_verified_at": "2026-10-26",
+    "locations": [
+      {
+        "label": null,
+        "address": "埼玉県川口市並木2-2-3 星野ビル",
+        "prefecture": "埼玉県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "銀林珈琲 埼玉県川口市並木2-2-3 星野ビル",
+        "lat": 35.816429,
+        "lng": 139.705963
+      }
+    ],
     "lat": 35.816429,
     "lng": 139.705963
   },
@@ -41634,6 +41764,19 @@
     "data_source": "manual",
     "source_note": "公式 http://www.harada-coffee.com/index.html の「現在店頭にて販売している豆のご案内」を2026-10-26に確認。価格は「100g / 750円～(税込)」「Price(変動あり)」と下限表記のため、下限値をpriceに採用(実際の価格は変動する可能性あり)。同ページは他にも店頭に常時15〜20種類の豆があると記載しており、掲載13銘柄のみ登録。公式の所在地 埼玉県羽生市下手子林2025-1、営業10:00-18:00、水・木定休。食べログ(https://tabelog.com/saitama/A1104/A110403/11057398/)にも「自家焙煎屋 はらだ珈琲」として同住所で掲載。更新: 2026年10〜11月のイベント出店スケジュールを掲載。",
     "last_verified_at": "2026-10-26",
+    "locations": [
+      {
+        "label": null,
+        "address": "埼玉県羽生市下手子林2025-1",
+        "prefecture": "埼玉県",
+        "hours": "10:00-18:00(水曜・木曜定休。イベント出店で臨時休業あり)",
+        "tel": "048-506-0778",
+        "is_headquarters": false,
+        "map_query": "はらだ珈琲 埼玉県羽生市下手子林2025-1",
+        "lat": 36.156628,
+        "lng": 139.581467
+      }
+    ],
     "lat": 36.156628,
     "lng": 139.581467
   },
@@ -41658,6 +41801,19 @@
     "data_source": "manual",
     "source_note": "公式オンラインストア(https://www.8hatchcoffee.com/)のトップ(全商品一覧)を2026-10-26に確認。住所・営業時間は同ページのADDRESS欄。自家焙煎は飲食店ドットコム記事(https://www.inshokuten.com/foodist/article/4715/)に「自家焙煎コーヒー豆の専門店」「店内で目を引くのは大きな焙煎機」と記載(公式サイトに明示文は無い)。各銘柄200g(税込)を採用。ドリップバッグ・保存缶・ギフトボックスは除外。更新日の表記なし(季節限定ブレンドが在庫あり)。",
     "last_verified_at": "2026-10-26",
+    "locations": [
+      {
+        "label": null,
+        "address": "千葉県船橋市三山8-24-12",
+        "prefecture": "千葉県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "Hatch Coffee Roastery 千葉県船橋市三山8-24-12",
+        "lat": 35.698196,
+        "lng": 140.057159
+      }
+    ],
     "lat": 35.698196,
     "lng": 140.057159
   },
@@ -41682,6 +41838,19 @@
     "data_source": "manual",
     "source_note": "STORES.jpの公式ショップ(https://hibitano.stores.jp/)の商品ページをブラウザfetch()で2026-10-26に確認。STORESのNEWS(2022/01/22「焙煎機購入しました!」)、店名のcoffee roastery、カテゴリ「Daily Edition」「Premium Edition」。住所は食べログによる(STORES上に住所の記載なし、公式側の実店舗の根拠が弱い)。150g(豆のまま)の4商品とdaily selection(500g〜)を登録。タンブラー・フィルター・コールドブリュー・ドリップパック・テイスティングセット・豆卸販売は除外。",
     "last_verified_at": "2026-10-26",
+    "locations": [
+      {
+        "label": null,
+        "address": "静岡県三島市広小路町11-10",
+        "prefecture": "静岡県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "hibitano coffee roastery 静岡県三島市広小路町11-10",
+        "lat": 35.117893,
+        "lng": 138.910538
+      }
+    ],
     "lat": 35.117893,
     "lng": 138.910538
   },
@@ -41706,6 +41875,19 @@
     "data_source": "manual",
     "source_note": "公式サイト(https://ibrik21.com/)の商品ページ(?menu=<銘柄>の12ページ)の価格表示を2026-10-26に確認。価格は100g税込。NEWS 2025.12.27「価格改定の知らせ」(2026年1月7日より価格改定)があり、商品ページの価格は改定後と思われるが、各商品ページに更新日の記載はない。自家焙煎は公式「自家焙煎イブリックについて」(1995年創業、直火式焙煎機・焙煎日表示)、住所・電話・営業時間は公式ACCESSページ。アイスコーヒーは夏季限定商品(ブレンド扱いで採用)。焙煎度の記載なし。",
     "last_verified_at": "2026-10-26",
+    "locations": [
+      {
+        "label": null,
+        "address": "広島県大竹市新町1丁目1-11",
+        "prefecture": "広島県",
+        "hours": "平日・日曜 13:00-18:00 / 定休日 月曜・祝日",
+        "tel": "0827-52-9204",
+        "is_headquarters": false,
+        "map_query": "自家焙煎イブリック 広島県大竹市新町1丁目1-11",
+        "lat": 34.217094,
+        "lng": 132.222992
+      }
+    ],
     "lat": 34.217094,
     "lng": 132.222992
   },
@@ -41730,6 +41912,19 @@
     "data_source": "manual",
     "source_note": "道の駅いちかわ公式サイト内の店舗ページ(https://www.michinoeki-ichikawa.jp/purchase/roastery/)の商品一覧(PRODUCT LIST、31品)を2026-10-26に確認。「世界各国の厳選コーヒー豆を常時30種類程取り揃え」「ジェットロースターでムラなくスピーディーに焙煎」と記載。店頭販売のみ(EC無し)。ページ内お知らせの最新は2026.10.24。価格はすべて税込。ドリップバッグ(別価格併記)は除外し、豆の200g(ゲイシャ・ブルーマウンテン・コナ・エスメラルダは100g)を採用。",
     "last_verified_at": "2026-10-26",
+    "locations": [
+      {
+        "label": null,
+        "address": "千葉県市川市国分6-10-1(道の駅いちかわ内)",
+        "prefecture": "千葉県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "いちCafe珈琲焙煎 千葉県市川市国分6-10-1(道の駅いちかわ内)",
+        "lat": 35.748348,
+        "lng": 139.920166
+      }
+    ],
     "lat": 35.748348,
     "lng": 139.920166
   },
@@ -41754,6 +41949,19 @@
     "data_source": "manual",
     "source_note": "STORES.jpの独自ドメイン店(https://kaffeebrucke.com/)の商品ページをブラウザfetch()で2026-10-26に確認。aboutに「SCAJ公認コーヒーマイスターの店主…生豆を高性能焙煎機(大和鉄工所・マイスター5)を駆使し日々ブレのない適正焙煎」、〒270-0021 千葉県松戸市小金原2-13-8、TEL 047-382-5700、営業10:30〜18:00。【クリックポスト】と【宅急便】で同銘柄が並ぶ(送料が違うだけ)ため1商品に統合し、各銘柄の100g(豆のまま)の価格を採用。カップオンコーヒー・定期便・ギフト・水出しパック・器具は除外。以前は公式URL未特定で保留していた店。",
     "last_verified_at": "2026-10-26",
+    "locations": [
+      {
+        "label": null,
+        "address": "千葉県松戸市小金原2-13-8",
+        "prefecture": "千葉県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "Kaffee Brücke 千葉県松戸市小金原2-13-8",
+        "lat": 35.824085,
+        "lng": 139.947449
+      }
+    ],
     "lat": 35.824085,
     "lng": 139.947449
   },
@@ -41778,6 +41986,19 @@
     "data_source": "manual",
     "source_note": "STORES.jpの公式ショップ(https://kamome-coffeeroaster.stores.jp/)の商品ページをブラウザfetch()で2026-10-26に確認。公式(https://kamome-coffeeroaster.com/about/)に「浜松市天竜二俣の山と川に囲まれた静かな街で小さな焙煎室を営んでおります」、店舗は星霜店(天竜区二俣町)と湖舶店(浜名区三ヶ日町大崎45)の2店。月替わりの星座blend(200g・送料込み価格、過去月は完売)は販売中の2種のみ、コロンビアライチ(150g)と合わせて3商品を登録。ボトル/ギフトBOXは除外。",
     "last_verified_at": "2026-10-26",
+    "locations": [
+      {
+        "label": null,
+        "address": "静岡県浜松市天竜区二俣町二俣1283-1 山ノ舎ビル1階",
+        "prefecture": "静岡県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "かもめの珈琲屋さん 静岡県浜松市天竜区二俣町二俣1283-1 山ノ舎ビル1階",
+        "lat": 34.864159,
+        "lng": 137.815002
+      }
+    ],
     "lat": 34.864159,
     "lng": 137.815002
   },
@@ -41804,6 +42025,19 @@
     "data_source": "manual",
     "source_note": "STORES.jpの公式ショップ(https://kitusaroji.stores.jp/)の商品ページをブラウザfetch()で2026-10-26に確認。公式サイト(https://kitusaroji.com/)に「大阪大空襲を逃れた路地の長屋の一角で、日々、淡々と豆を焼いています」「オンラインショップ: 各種コーヒー豆」、アクセス欄に北区浪花町9-5。【配送】と【店頭受取】が別商品で並ぶ銘柄は配送のほうを採用。各銘柄の豆のまま200g(最小重量)の価格を採用。ドリップパック・ギフト・保存缶セット・お菓子・店主のおまかせ・雑貨は除外。以前はBASE店がサンプルのみのため見送った店。",
     "last_verified_at": "2026-10-26",
+    "locations": [
+      {
+        "label": null,
+        "address": "大阪府大阪市北区浪花町9-5",
+        "prefecture": "大阪府",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "喫茶路地 大阪府大阪市北区浪花町9-5",
+        "lat": 34.708065,
+        "lng": 135.510178
+      }
+    ],
     "lat": 34.708065,
     "lng": 135.510178
   },
@@ -41828,6 +42062,19 @@
     "data_source": "manual",
     "source_note": "公式 https://mameharu.com/coffee/ の「珈琲豆」価格表を2026-10-26に確認。100gあたり税込価格、価格は2026年4月時点と明記(取り扱い豆はときどき変わる/在庫なしの場合あり)。住所は公式アクセスページ(https://mameharu.com/access/)の〒358-0024 埼玉県入間市久保稲荷2-12-14。通販なし・店頭のみ。散歩の達人2020年2月号(https://san-tatsu.jp/collects/14219/)にも同住所・自家焙煎として掲載。",
     "last_verified_at": "2026-10-26",
+    "locations": [
+      {
+        "label": null,
+        "address": "埼玉県入間市久保稲荷2-12-14",
+        "prefecture": "埼玉県",
+        "hours": null,
+        "tel": "04-2006-0675",
+        "is_headquarters": false,
+        "map_query": "豆春 埼玉県入間市久保稲荷2-12-14",
+        "lat": 35.825703,
+        "lng": 139.394714
+      }
+    ],
     "lat": 35.825703,
     "lng": 139.394714
   },
@@ -41852,6 +42099,19 @@
     "data_source": "manual",
     "source_note": "公式 https://mameya-oshi.com/coffee/ の「珈琲豆リスト」を2026-10-26に確認。価格は200gあたりの税別価格(100g換算せず weight=200 のまま)。公式トップ(https://mameya-oshi.com/)に〒361-0077 埼玉県行田市忍1-9-2、月曜定休、行田市駅から徒歩7分。「直火焙煎」「ご注文ごとに焙煎」と記載。熊谷経済新聞(https://kumagaya.keizai.biz/headline/274/)にも直火焙煎・200gから豆販売・オーダーごとに生豆を焙煎として掲載、NAVITIMEにも行田市忍1-9として掲載。豆リスト掲載日は2025-12-21表記(以降更新の有無は不明)、サイト全体の著作権表記は2026年。",
     "last_verified_at": "2026-10-26",
+    "locations": [
+      {
+        "label": null,
+        "address": "埼玉県行田市忍1-9-2",
+        "prefecture": "埼玉県",
+        "hours": null,
+        "tel": "048-598-4815",
+        "is_headquarters": false,
+        "map_query": "まめや忍 埼玉県行田市忍1-9-2",
+        "lat": 36.140572,
+        "lng": 139.455215
+      }
+    ],
     "lat": 36.140572,
     "lng": 139.455215
   },
@@ -41877,6 +42137,19 @@
     "data_source": "manual",
     "source_note": "STORES.jpの公式ショップ(https://miyamame.stores.jp/)の商品ページをブラウザfetch()で2026-10-26に確認。ABOUTに「『みやまめ珈琲』は、兵庫県西宮市にある珈琲焙煎所です」「自家焙煎珈琲をお届けします」、住所(〒662-0034)も同ページ。各銘柄の100g(豆、200gもあり)の価格を採用。クッキー・カヌレ・ゼリー・ドリップ・コーヒーバッグ・定期便・お試しセットは除外。",
     "last_verified_at": "2026-10-26",
+    "locations": [
+      {
+        "label": null,
+        "address": "兵庫県西宮市西田町5-1 夙川サンらいふ内",
+        "prefecture": "兵庫県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "みやまめ珈琲 兵庫県西宮市西田町5-1 夙川サンらいふ内",
+        "lat": 34.743256,
+        "lng": 135.337936
+      }
+    ],
     "lat": 34.743256,
     "lng": 135.337936
   },
@@ -41901,6 +42174,19 @@
     "data_source": "manual",
     "source_note": "公式サイト(Wix)の価格表ページ https://www.nicecoffeeroaster.com/商品価格 と店舗案内 https://www.nicecoffeeroaster.com/店舗案内 を2026-10-26に確認(sitemap lastmodは2026-05-19、各商品に「価格改定」の注記あり)。価格は焙煎豆100g当たりの表示(税込表記の明記なし)。焼菓子・ドリップパック・水出しコーヒー粉パック・雑貨は除外。コロンビア アナエロビック サントゥアリオ農園の「ラズベリー」「パッションフルーツ」2品は、フルーツ添加(インフューズド)の可能性があるため除外。店頭販売のみで通販(EC)はなし。",
     "last_verified_at": "2026-10-26",
+    "locations": [
+      {
+        "label": null,
+        "address": "静岡県牧之原市細江2874番地",
+        "prefecture": "静岡県",
+        "hours": "10:00-18:30(木曜定休・月曜は午前休)",
+        "tel": "0548-22-3537",
+        "is_headquarters": false,
+        "map_query": "NICE COFFEE ROASTER 静岡県牧之原市細江2874番地",
+        "lat": 34.756611,
+        "lng": 138.238586
+      }
+    ],
     "lat": 34.756611,
     "lng": 138.238586
   },
@@ -41926,6 +42212,19 @@
     "data_source": "manual",
     "source_note": "STORES.jpの独自ドメイン店(https://odoriba-coffee.net/)の商品ページをブラウザfetch()で2026-10-26に確認。公式(https://odoriba-coffee.com/ja)に「大阪・玉造の自家焙煎コーヒー専門店」、所在地〒540-0004 大阪市中央区玉造2丁目4−20。シェアロースター(焙煎機の時間貸し)も運営。2026-04-23のお知らせ「Odoriba Coffee Open」で新規開店。豆7銘柄(いずれも100g)の価格を採用。ドリップパックは除外。焙煎度・精製は商品説明の記載から補った。",
     "last_verified_at": "2026-10-26",
+    "locations": [
+      {
+        "label": null,
+        "address": "大阪府大阪市中央区玉造2丁目4-20",
+        "prefecture": "大阪府",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "Odoriba Coffee 大阪府大阪市中央区玉造2丁目4-20",
+        "lat": 34.677612,
+        "lng": 135.530548
+      }
+    ],
     "lat": 34.677612,
     "lng": 135.530548
   },
@@ -41950,6 +42249,19 @@
     "data_source": "manual",
     "source_note": "公式サイトの自家焙煎珈琲ページ https://portebonheaur.com/gift/coffee-beans/ を2026-10-26に確認。静岡新聞アットエス https://www.at-s.com/gourmet/article/127197 で住所・自家焙煎を確認。ページに「100gから豆の販売もしております」とあり、価格は100g当たりとして採用(価格表に単位の明記はなし)。税込表記の明記なし。カップオンコーヒー・リキッドコーヒー(軽井沢のカフェ製)は除外。店頭販売のみで通販(EC)はなし。",
     "last_verified_at": "2026-10-26",
+    "locations": [
+      {
+        "label": null,
+        "address": "静岡県浜松市浜名区染地台1-44-17",
+        "prefecture": "静岡県",
+        "hours": "火-木 10:00-16:00、土・日 7:00-18:00(月・金定休)",
+        "tel": "053-585-5420",
+        "is_headquarters": false,
+        "map_query": "ポルトボヌール 静岡県浜松市浜名区染地台1-44-17",
+        "lat": 34.780731,
+        "lng": 137.745514
+      }
+    ],
     "lat": 34.780731,
     "lng": 137.745514
   },
@@ -41975,6 +42287,19 @@
     "data_source": "manual",
     "source_note": "公式 http://coffee-powell.a.la9.jp/price.html の「自家焙煎珈琲豆 価格表(100gの値段)」を2026-10-26に確認。価格は2026年1月6日現在(生豆の価格変動等により改定あり)、店頭渡し価格で、通販は別途配送料。同ページ下部に〒346-0003 埼玉県久喜市久喜中央4-1-4、14時〜17時・木金定休。トップに「当店の珈琲は自家焙煎です」。NAVITIME(https://www.navitime.co.jp/category/0301002011/11232/)・食べログ(https://tabelog.com/saitama/A1104/A110402/11019151/)でも同住所の喫茶店として掲載。",
     "last_verified_at": "2026-10-26",
+    "locations": [
+      {
+        "label": null,
+        "address": "埼玉県久喜市久喜中央4-1-4",
+        "prefecture": "埼玉県",
+        "hours": "14:00-17:00(木曜・金曜定休)",
+        "tel": "0480-21-3224",
+        "is_headquarters": false,
+        "map_query": "珈琲パウエル 埼玉県久喜市久喜中央4-1-4",
+        "lat": 36.067139,
+        "lng": 139.673599
+      }
+    ],
     "lat": 36.067139,
     "lng": 139.673599
   },
@@ -41999,6 +42324,19 @@
     "data_source": "manual",
     "source_note": "公式ショップ(http://www.cafe-sabiyuu.com/np_shop/shop.cgi?class=0&keyword=&superkey=1&FF=0&order=&pic_only= ブレンド、class=1 ストレート)を2026-10-26に確認。100g(税込・豆のまま)の価格を採用。公式トップに「高品質の生豆のみを選び…焙煎を行っています」「喫茶、珈琲豆の販売は通常の営業」と記載、住所・営業日カレンダーも同トップ。お知らせ欄の最新は2026/7/1(営業時間変更)。2025/12/5付でカート不具合による販売停止の告知が残るが、ショップページは現在表示される。ブラジル セラード ヴィーニョは入荷待ち表示のため品切れ。",
     "last_verified_at": "2026-10-26",
+    "locations": [
+      {
+        "label": null,
+        "address": "千葉県佐倉市王子台6-27-14",
+        "prefecture": "千葉県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "自家焙煎珈琲 銹釉 千葉県佐倉市王子台6-27-14",
+        "lat": 35.721008,
+        "lng": 140.176208
+      }
+    ],
     "lat": 35.721008,
     "lng": 140.176208
   },
@@ -42023,6 +42361,19 @@
     "data_source": "manual",
     "source_note": "STORES.jpの公式ショップ(https://saku-coffee-rokko.stores.jp/)の商品ページをブラウザfetch()で2026-10-26に確認。トップに「朔コーヒーは兵庫県神戸市・六甲にある自家焙煎のスペシャルティコーヒーショップです」、阪急六甲駅徒歩1分。2022年11月オープン。住所はSTORESのABOUTによる(〒657-0065)。各銘柄の100g(豆のまま、200g・500gもあり。500gは同一銘柄の大容量)の価格を採用(スーダンルメは200gが最小)。定期便は除外。",
     "last_verified_at": "2026-10-26",
+    "locations": [
+      {
+        "label": null,
+        "address": "兵庫県神戸市灘区宮山町2丁目5-3 椿荘1F",
+        "prefecture": "兵庫県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "SAKU COFFEE 兵庫県神戸市灘区宮山町2丁目5-3 椿荘1F",
+        "lat": 34.720551,
+        "lng": 135.235016
+      }
+    ],
     "lat": 34.720551,
     "lng": 135.235016
   },
@@ -42047,6 +42398,19 @@
     "data_source": "manual",
     "source_note": "STORES.jpの公式ショップ(https://satiecoffee.stores.jp/)の商品ページをブラウザfetch()で2026-10-26に確認(連続取得で429が出たため中断し間隔を空けて再開)。ABOUT(https://satiecoffee.stores.jp/about)に「坂のまち尾道の鉄道線路沿いにある小さな珈琲焙煎所です」「当店は珈琲の焙煎所です」、営業情報の案内あり。住所は食べログ(https://tabelog.com/hiroshima/A3406/A340302/34023154/)による(STORES特商法は未確認)。各銘柄の豆の最小重量(100g、浅/中/深煎りを選べる商品は焙煎度null)の価格を採用。インフューズド・カルチャリング(果実等を加える/風味付けの特殊発酵)の豆、ライトローストブレンド(インヒューズド豆を使用)、おまかせ2種、期間限定豆の混合ページ、ドリップバッグ・ギフト・定期便・水出し・ネルは除外。",
     "last_verified_at": "2026-10-26",
+    "locations": [
+      {
+        "label": null,
+        "address": "広島県尾道市西土堂10-26",
+        "prefecture": "広島県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "Satie coffee 広島県尾道市西土堂10-26",
+        "lat": 34.408607,
+        "lng": 133.195496
+      }
+    ],
     "lat": 34.408607,
     "lng": 133.195496
   },
@@ -42071,6 +42435,19 @@
     "data_source": "manual",
     "source_note": "STORES.jpの公式ショップ(https://shishiricoffee.stores.jp/、屋号 shishi_ri coffee)の商品ページをブラウザfetch()で2026-10-26に確認。静岡新聞グルメ(https://www.at-s.com/gourmet/article/1439801)に「2023年5月にオープンした夫婦で営む自家焙煎コーヒーが自慢のカフェ…オンラインショップもあり、豆やドリップバッグを販売」、住所・営業時間・駐車場5台、食べログにも掲載。100gの豆の価格を採用。ドリップバッグは除外。",
     "last_verified_at": "2026-10-26",
+    "locations": [
+      {
+        "label": null,
+        "address": "静岡県掛川市日坂910",
+        "prefecture": "静岡県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "シシリコーヒー ロースターズ 静岡県掛川市日坂910",
+        "lat": 34.803268,
+        "lng": 138.074844
+      }
+    ],
     "lat": 34.803268,
     "lng": 138.074844
   },
@@ -42096,6 +42473,19 @@
     "data_source": "manual",
     "source_note": "STORES.jpの公式ショップ(https://takerucoffee.stores.jp/、公式 https://takerucoffee.com/ の「ONLINE SHOP」リンク先)の商品ページをブラウザfetch()で2026-10-26に確認。公式 https://takerucoffee.com/contact/ に「独自焙煎を行い…オンデマンド焙煎にて発送致します」。住所は食べログ(https://tabelog.com/saitama/A1103/A110303/11060375/、コーヒースタンド)による(公式サイトでは住所の記載を確認できず、実店舗の根拠は食べログのみ)。各銘柄の最小重量(100g、一部80g)の価格を採用。ドリップバッグ・ギフト・定期便・ラテベース・水出し・器具・グッズ・焙煎講習は除外。カルチャリング(リサラルダ)は除外。",
     "last_verified_at": "2026-10-26",
+    "locations": [
+      {
+        "label": null,
+        "address": "埼玉県川越市仙波町3-4-5",
+        "prefecture": "埼玉県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "TAKERU COFFEE 埼玉県川越市仙波町3-4-5",
+        "lat": 35.911587,
+        "lng": 139.491684
+      }
+    ],
     "lat": 35.911587,
     "lng": 139.491684
   },
@@ -42120,6 +42510,19 @@
     "data_source": "manual",
     "source_note": "STORES.jpの公式ショップ(https://thesowers-kobe.stores.jp/)の商品ページをブラウザfetch()で2026-10-26に確認。ウォーカープラス(https://www.walkerplus.com/article/1181764/)に「ブレンドは中〜深煎り、シングルオリジンは浅煎りを中心に焙煎」、オーナーはQグレーダーで焙煎士(元 The ANCHOR 焙煎士)。住所はウォーカープラスと無印良品 神戸阪急のイベント投稿による(番地の表記は要確認)。各銘柄の最小重量(100g/200g、400gもあり)の価格を採用。Agi Culturing・Mandarine Azahar(果実を用いる発酵・培養)・ギフト・ドリップバッグ・焼き菓子・カフェオレベース・手ぬぐいは除外。",
     "last_verified_at": "2026-10-26",
+    "locations": [
+      {
+        "label": null,
+        "address": "兵庫県神戸市北区山田町原野字舟田2-1",
+        "prefecture": "兵庫県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "The Sowers 兵庫県神戸市北区山田町原野字舟田2-1",
+        "lat": 34.764633,
+        "lng": 135.14502
+      }
+    ],
     "lat": 34.764633,
     "lng": 135.14502
   },
@@ -42144,6 +42547,19 @@
     "data_source": "manual",
     "source_note": "STORES.jpの公式ショップ(https://tiare-coffee.stores.jp/)の商品ページをブラウザfetch()で2026-10-26に確認。トップに「陶器焙煎にこだわり、【焙煎「器」珈悦】を使って焙煎しています」、「姫路市網干区大江島に店舗開店」。STORESの特定商取引法の住所がSTORES本社表示のため番地は確認できず大江島まで。各銘柄の100g(豆、500gまであり)の価格を採用。600g以上の大容量・1kg・ドリップバッグ・水出し・サブスク・飲み比べセット・満喫箱は除外。",
     "last_verified_at": "2026-10-26",
+    "locations": [
+      {
+        "label": null,
+        "address": "兵庫県姫路市網干区大江島",
+        "prefecture": "兵庫県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "珈琲豆やティアレ 兵庫県姫路市網干区大江島",
+        "lat": 34.785706,
+        "lng": 134.597198
+      }
+    ],
     "lat": 34.785706,
     "lng": 134.597198
   },
@@ -42168,6 +42584,19 @@
     "data_source": "manual",
     "source_note": "STORES.jpの公式ショップ(https://uedacoffeebeans.stores.jp/)の商品ページをブラウザfetch()で2026-10-26に確認。公式サイト(https://uedacoffee.web.fc2.com/)に「〒357-0069 埼玉県飯能市茜台1-4-25」、取り扱い豆ページ(https://uedacoffee.web.fc2.com/toriatsukaichu.html)に「1袋は生豆時240g、焙煎後約200gになります」。全商品が焙煎後約200g(生豆240g)の1袋売りのため weight=200 とした。デカフェ・ブレンド・アイス用ブレンド含む。",
     "last_verified_at": "2026-10-26",
+    "locations": [
+      {
+        "label": null,
+        "address": "埼玉県飯能市茜台1-4-25",
+        "prefecture": "埼玉県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "上田珈琲豆焙煎堂 埼玉県飯能市茜台1-4-25",
+        "lat": 35.847424,
+        "lng": 139.295944
+      }
+    ],
     "lat": 35.847424,
     "lng": 139.295944
   },
@@ -42193,6 +42622,19 @@
     "data_source": "manual",
     "source_note": "公式サイト「コーヒー豆全国通販.COM」の価格表 http://www.kaffee-wecker.com/shopping.html と各銘柄ページ、購入方法・特商法表示 http://www.kaffee-wecker.com/kounyuuhouhou.html を2026-10-26に確認(価格はR8年5月改定=2026年5月)。価格は100g当たり・税込。注文は200g以上、注文フォーム/FAX/電話で受付(カート型ECではない)。カップオンコーヒー・器具・ギフトセットは除外。",
     "last_verified_at": "2026-10-26",
+    "locations": [
+      {
+        "label": null,
+        "address": "静岡県伊東市和田1-7-12",
+        "prefecture": "静岡県",
+        "hours": "10:00-18:00(日曜・第一金曜定休)",
+        "tel": "0557-38-6173",
+        "is_headquarters": false,
+        "map_query": "カフェローステライ・ヴェッカー 静岡県伊東市和田1-7-12",
+        "lat": 34.969547,
+        "lng": 139.100555
+      }
+    ],
     "lat": 34.969547,
     "lng": 139.100555
   },
@@ -42217,6 +42659,19 @@
     "data_source": "manual",
     "source_note": "公式サイトの豆の入荷状況(https://www.yuracoffee.com/beans)の「コーヒー豆のご案内」(2026年10月のおすすめ)を2026-10-26に確認。価格は税込・200g。住所は公式アクセスページ(https://www.yuracoffee.com/access)に〒274-0063 千葉県船橋市習志野台4-69-11、営業10:30〜18:00。注文ページに「豆は発送日に焙煎・お挽きしたものをお送りします」、店頭受取あり。ビジャロボス(コスタリカ)は完売表示のため品切れ。コーヒーバッグ・水出しパック・飲み頃ブレンド(400g)・セットは除外。",
     "last_verified_at": "2026-10-26",
+    "locations": [
+      {
+        "label": null,
+        "address": "千葉県船橋市習志野台4-69-11",
+        "prefecture": "千葉県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "こーひー豆のゆら 千葉県船橋市習志野台4-69-11",
+        "lat": 35.713333,
+        "lng": 140.049042
+      }
+    ],
     "lat": 35.713333,
     "lng": 140.049042
   },
@@ -42241,6 +42696,19 @@
     "data_source": "manual",
     "source_note": "STORES.jpの公式ショップ(https://cozycoffee.stores.jp/)の商品ページをブラウザfetch()で2026-10-26に確認。店トップに「ドイツ製の焙煎機『プロバット』で一つひとつ丁寧に焙煎しています」「焙煎から1週間以内のものを」、店舗情報(荒田町1-18-8、ルルブ掲載も同住所)。各銘柄の最小重量80g(豆のまま、150gもあり)の価格を採用。ドリップバッグ・セット・カフェラテベース・ZINEは除外。",
     "last_verified_at": "2026-10-26",
+    "locations": [
+      {
+        "label": null,
+        "address": "兵庫県神戸市兵庫区荒田町1-18-8 マミービル1F",
+        "prefecture": "兵庫県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "COZY COFFEE 兵庫県神戸市兵庫区荒田町1-18-8 マミービル1F",
+        "lat": 34.680668,
+        "lng": 135.166824
+      }
+    ],
     "lat": 34.680668,
     "lng": 135.166824
   }
