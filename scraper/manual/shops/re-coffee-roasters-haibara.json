@@ -1,0 +1,120 @@
+{
+  "shop": {
+    "name": "Re:Coffee Roasters 榛原焙煎所",
+    "url": "https://recoffeeroasters.stores.jp/",
+    "address": "奈良県宇陀市榛原長峯15-3",
+    "prefecture": "奈良県",
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "last_verified_at": "2026-11-02",
+    "source_note": "STORES.jpの公式ショップ(https://recoffeeroasters.stores.jp/)の商品ページをブラウザfetch()で2026-11-02に確認。住所は食べログ(https://tabelog.com/nara/A2904/A290403/29013755/)とHAMONIの「奈良県宇陀市榛原長峯15-3」による(STORESの特商法は運営会社の住所表示のため公式側では番地を確認できていない)。自家焙煎はウォーカープラスの紹介記事(https://www.walkerplus.com/article/1316762/)で店主が焙煎に専念とあり、STORES特商法の代表者名と一致。別店の「:re coffee」(recoffee.stores.jp)とは無関係。各銘柄の最小重量(100g、100gが無いものは200g、豆のまま)の価格を採用。",
+    "id": "re-coffee-roasters-haibara",
+    "instagram_url": null,
+    "google_maps_query": "Re:Coffee Roasters 榛原焙煎所 奈良県宇陀市榛原長峯15-3",
+    "tel": null,
+    "hours": null,
+    "shop_type": "single_location",
+    "data_source": "manual",
+    "lat": 34.536289,
+    "lng": 135.965027,
+    "nearest_station": {
+      "name": "榛原",
+      "lines": [
+        "近鉄大阪線"
+      ],
+      "distance_m": 1180,
+      "walk_min": 15
+    }
+  },
+  "products": [
+    {
+      "raw_name": "Indonesia Mandheling Bintang Lima",
+      "category": "ストレート",
+      "originCountry": "インドネシア",
+      "processingMethod": null,
+      "roast": null,
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 2000,
+      "weightG": 200,
+      "stockStatus": "販売中",
+      "productUrl": "https://recoffeeroasters.stores.jp/items/6aaf6806fe5daa7dcae26a0e",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "Brazil FAZENDA TRAPIA Yellow Bourbon",
+      "category": "ストレート",
+      "originCountry": "ブラジル",
+      "processingMethod": null,
+      "roast": null,
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1800,
+      "weightG": 200,
+      "stockStatus": "販売中",
+      "productUrl": "https://recoffeeroasters.stores.jp/items/6aaf5f6df632886ef9e2691f",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "Colombia Las Perlitas Pink Bourbon Washed",
+      "category": "ストレート",
+      "originCountry": "コロンビア",
+      "processingMethod": "ウォッシュド",
+      "roast": null,
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1250,
+      "weightG": 100,
+      "stockStatus": "販売中",
+      "productUrl": "https://recoffeeroasters.stores.jp/items/6aaf5cd5689c26fe578b5554",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "Thailand Chiangmai Black Honey",
+      "category": "ストレート",
+      "originCountry": "タイ",
+      "processingMethod": "ハニー",
+      "roast": null,
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1600,
+      "weightG": 100,
+      "stockStatus": "販売中",
+      "productUrl": "https://recoffeeroasters.stores.jp/items/6aae0c2c844d279441f99d72",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "Colombia Granja Paraiso92 Yellow Typica Double Anaerobic",
+      "category": "ストレート",
+      "originCountry": "コロンビア",
+      "processingMethod": "アナエロビック",
+      "roast": null,
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 2500,
+      "weightG": 100,
+      "stockStatus": "販売中",
+      "productUrl": "https://recoffeeroasters.stores.jp/items/6a8aa2279025334fcb19aa11",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "Ethiopia Guji Rasta Washed",
+      "category": "ストレート",
+      "originCountry": "エチオピア",
+      "processingMethod": "ウォッシュド",
+      "roast": null,
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1250,
+      "weightG": 100,
+      "stockStatus": "販売中",
+      "productUrl": "https://recoffeeroasters.stores.jp/items/6a7aa7ccc347023f98389efc",
+      "data_source": "manual"
+    }
+  ]
+}

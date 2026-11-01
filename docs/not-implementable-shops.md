@@ -3228,3 +3228,23 @@ docs/scraping-progress.md「栃木県再調査」冒頭の教訓セクション�
 ### 次点・Instagramのみ
 - 食べログに公式URLがなくInstagramのみの店が、北海道・長野・山梨・茨城・栃木・群馬・新潟・宮城・福島の各県で多数あり、販売先と価格が確認できないため未登録。
 - 前回と同じく、閉店・ドメイン失効・チェーン(11店舗以上)の店は対象外。
+
+## 2026-11-02 第4波(岐阜・三重・滋賀・奈良・岡山・香川・山口・大分・沖縄・鹿児島)で登録を見送った店
+
+### 登録を保留した店(データ取得は済み・要判断)
+- 白川珈琲焙煎所(高松市): 取得できた5銘柄がいずれも「100g×3袋」でしか売られておらず、番地の根拠も食べログと個人ブログのみ(data_shirakawacoffee.json 作成済み・未登録)。
+- 焙煎珈房 満(鹿児島市): BASEのAccess欄が空で実店舗を確認できない(焙煎所・通販中心の可能性)(data_kobomitsu.json 作成済み・未登録)。
+- しげとし珈琲(岡山市): 楽天店のみで、店頭販売の記載が見つからない(data_shigecafe.json 作成済み・未登録)。MellowCoffee(高梁市): 住所が4種類あり(特商法・楽天・食べログで食い違う)、実店舗が未確認(data_mellowcoffee.json 作成済み・未登録)。
+- カヨラコーヒー∩ラボ(甑島): 番地が非公開で「下甑町手打」は推定、営業時間も確認できない(data_kayoracoffeelab.json 作成済み・未登録)。
+- 一湊珈琲焙煎所(屋久島): Shopifyの `/products.json` が429で、最終版スクリプトの再実行に成功していない(data_issoucoffee.json は初回取得分からの生成。次回取得できる時に再生成して登録)。
+
+### 取得できなかった店
+- 三重県: colorful coffee(津市。公式に豆の一覧・価格がない)、LIAISON Coffee Roasters(伊勢市。Square Onlineで価格が静的HTMLに出ない)。食べログ掲載店の約7割は公式サイトがなくInstagramのみ。
+- 大分県: 未登録の有力店(オセロ、STELLIUM COFFEE、樹豆珈琲、ON CLOUD NINE、田中町珈琲店、日曜日の昼さがり)は公式がInstagram・Facebookのみ。湯布珈琲(由布市)はShopifyが429のまま。モカ珈琲(佐伯市)はBASEの商品が0件。
+- 山口県: ピーコック(宇部市。STORESが403)。Ameba Ownd が調査中503で、坊主珈琲・アミルコーヒー・oriental coffee は確認できず。灰原珈琲店はCloudflareで403、WEST TOWN COFFEEは接続不可。
+- 岡山県: EMPIRE COFFEE ROASTERS(Shopifyが429)。キノシタショウテン(STORES)は既登録の THE COFFEE HOUSE と同グループの可能性。ユウイチローズ・下山珈琲は上限調整のため次点。
+- 沖縄県・鹿児島県: 安座間珈琲・DAYS COFFEE(住所が食い違う)・珈琲よろずよ・珈琲喫茶キナリ・宮出珈琲園(STORESが403)、CAPTAIN COOK(豆の単品がなくセットのみ)、BASSHILINE COFFEE(豆が全て売り切れ)。
+- 奈良県: CHAMI(奈良市。Shopifyの collections が429、店内焙煎の明言が未確認)。
+
+### 登録したが要確認の点がある店
+- YAMADA COFFEE OKINAWA・珈琲ソルジャー: 公式に「自家焙煎」の一文がなく、前者は求人の「ロースト業務サポート」と第三者記事、後者は「姶良ロースタリー」とSNS・業界紹介記事が根拠。小屋珈琲: 焙煎所はあるが店頭販売は未確認で、ブログの更新が古い。Cafe Restaurant Inti: 価格表の見出しが「販売一例」。THE INY COFFEE: 豆は実質ブレンド2銘柄のみ。

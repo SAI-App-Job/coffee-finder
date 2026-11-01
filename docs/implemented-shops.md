@@ -5,7 +5,7 @@
 `scraper/manual/shops/`配下、それ以外は`scraper/scrape_*.py`で自動取得。
 実装を見送った店舗は`docs/not-implementable-shops.md`を参照。
 
-合計1785店舗・29331商品(生成日: 2026-11-01)。
+合計1823店舗・29845商品(生成日: 2026-11-01)。
 
 再生成コマンド:
 ```
@@ -201,24 +201,35 @@ aggregate_shops.py実行後の`git diff --staged --quiet || git commit`が該当
 | 店舗名 | 所在地 | 方式 | 件数 |
 |---|---|---|---|
 | ポルトコーヒー | 岡山市中区浜3丁目11-7 カルチェWe105 | BASE(theshop) | 13 |
+| 小西珈琲焙煎所 | 岡山市東区瀬戸町万富337-9 | BASE | 17 |
 | 豆工房ウイニングラン | 岡山市東区楢原514-6 | Ocnk | 35 |
+| 小屋珈琲 | 岡山市北区下足守757 | BASE | 9 |
 | アロマコーヒーロースタリー | 岡山市北区下中野351-115 | ショップサーブ | 10 |
+| 後藤珈琲 | 岡山市北区岩田町7-14 | 手動 | 17 |
 | YIRGA COFFEE ROASTERS | 岡山市北区弓之町 | BASE | 27 |
+| Sunny Day Coffee | 岡山市北区建部町建部上60 | STORES(手動) | 9 |
 | ホンキートンク | 岡山市北区西古松西町9-25 | 手動 | 7 |
 | THE COFFEE HOUSE | 岡山市北区大供本町708-8 | BASE | 5 |
 | 1518珈琲 | 岡山市北区中山下1丁目5番33号 | MakeShop | 49 |
 | 武蔵野珈琲 | 岡山市北区中仙道57-101 | カラーミー | 25 |
+| UCHIDA COFFEE | 岡山市北区中島田町1-2-2 | WooCommerce | 5 |
 | 渡辺珈琲 | 岡山市北区東古松1-5-16 | 手動 | 19 |
 | en. 珈琲焙煎所 | 岡山市北区表町1丁目10-28 | Shopify | 26 |
+| 吉備の国珈琲焙煎所 | 岡山市北区表町1丁目7-15 パークスクエアSHOWA 1F | 楽天市場 | 13 |
 | 珈琲工房サントス | 岡山市北区富田531-2 | WordPress | 24 |
 | ONSAYA COFFEE | 岡山市北区奉還町2-9-1 | Shopify | 8 |
 | coffee market banca | 岡山市北区野田3丁目22番3号 | BASE | 34 |
 | 富岡珈琲 | 真庭市中396-1 真庭あぐりガーデン内 | BASE | 11 |
+| 天領倉敷珈琲 | 倉敷市阿知2-7-19 | Ocnk | 10 |
+| 名曲喫茶 時の回廊 | 倉敷市下津井田之浦1-16-22 | BASE | 24 |
+| maarto coffee | 倉敷市玉島黒崎4349 | STORES(手動) | 7 |
 | LeN Coffee Lab. | 倉敷市笹沖 | BASE | 12 |
+| コーヒーモストロ | 倉敷市真備町有井69-10 | BASE | 3 |
 | コーヒーローストおかべ | 倉敷市水島西常盤町5-23 | 手動 | 34 |
 | パワープラントコーヒー | 倉敷市藤戸町天城1760-1 | BASE | 24 |
 | 倉敷珈琲館 | 倉敷市本町4-1 | カラーミー | 12 |
 | kobacoffee | 倉敷市本町5-27 | BASE | 4 |
+| 珈琲豆 木蓮 | 総社市三輪141-2 | BASE | 16 |
 | ばんこく珈琲 津山 | 津山市沼10丁目5番 | BASE | 17 |
 
 ### 沖縄県
@@ -235,11 +246,14 @@ aggregate_shops.py実行後の`git diff --staged --quiet || git commit`が該当
 | 又吉コーヒー園 | 国頭郡東村字慶佐次718-28 | 独自カート(xaas3.jp) | 7 |
 | チャンプルーコーヒー | 石垣市石垣13 玉城ビル1F | BASE | 1 |
 | KLATCH COFFEE | 石垣市大川200-1 | Shopify | 3 |
+| 福珈琲 | 石垣市大浜518-1 | BASE | 4 |
 | FUSHI COFFEE ROASTERS | 石垣市登野城9-2 1F | STORES(手動) | 11 |
 | bloom coffee okinawa | 中頭郡読谷村座喜味577 | STORES(手動) | 6 |
+| 自家焙煎珈琲 ゆくれ実 | 中頭郡北谷町桑江538-7 | BASE | 6 |
 | ZHYVAGO COFFEE ROASTERY | 中頭郡北谷町美浜34-1 LeQu沖縄北谷スパ&リゾート プレミア棟1F | Shopify | 2 |
 | COFFEE potohoto | 那覇市安里388-1(栄町市場内) | MakeShop | 12 |
 | TAMAGUSUKU COFFEE ROASTERS | 那覇市松尾2-19-39 グリーンハイツ那覇202 | STORES(手動) | 2 |
+| YAMADA COFFEE OKINAWA | 那覇市泊2-15-6 | カラーミー | 24 |
 | rokkan COFFEE CREATORS | 那覇市樋川1-29-9 | BASE | 7 |
 | Purecastle珈琲 | 豊見城市豊崎1-40 プロースト102号室 | Welcart | 10 |
 | 豊崎珈琲工場 | 豊見城市豊崎3-61 | Wix | 9 |
@@ -270,6 +284,8 @@ aggregate_shops.py実行後の`git diff --staged --quiet || git commit`が該当
 |---|---|---|---|
 | 自家焙煎珈琲工房Perigord | 下呂市森1075-3 | 手動 | 9 |
 | 緑の館 | 下呂市萩原町花池123番地 | Ocnk | 24 |
+| 珈琲工房ひぐち | 各務原市那加桜町1丁目72-1 | 楽天市場 | 40 |
+| カフェ・アダチ | 関市小瀬1833 | 楽天市場 | 16 |
 | 珈琲豆自家焙煎店 開化珈琲 | 関市倉知3261-1 | 手動 | 12 |
 | cafe 旅人の木 | 岐阜市金町5-3-4 金神社会館地下1階 | BASE | 12 |
 | ミーツコーヒーロースターズ | 岐阜市西河渡3-78-1 | BASE | 10 |
@@ -284,6 +300,7 @@ aggregate_shops.py実行後の`git diff --staged --quiet || git commit`が該当
 | 自家焙煎珈琲 津田屋 | 高山市下二之町77 | BASE | 7 |
 | イーグルコーヒー高山 | 高山市石浦町2丁目398番地 | カラーミー | 20 |
 | 待夢珈琲店 | 瑞浪市一色町4丁目48-3 | WordPress | 41 |
+| 珈琲工房豆家 | 多治見市虎渓山町2-63 | Yahoo!ショッピング | 15 |
 | GOOD DAYS COFFEE | 多治見市太平町4-50 グリュックリヒ・ファミーリエ1F D | BASE | 8 |
 | Jikan ryoko | 多治見市池田町5-142 | BASE | 12 |
 | 華きりんコーヒーロースター | 大垣市昼飯町411 | BASE | 9 |
@@ -597,6 +614,7 @@ aggregate_shops.py実行後の`git diff --staged --quiet || git commit`が該当
 | コーヒービーンズショップ アロバー | 高松市国分寺町新名1225-5 | ショップサーブ | 9 |
 | コルシカ珈琲 | 高松市中央町18-9 | BASE(独自ドメイン) | 14 |
 | プシプシーナ珈琲 | 高松市朝日町2-19-16 | BASE | 44 |
+| 焙煎珈琲 胡桃 | 高松市鶴市町1034-1 | Wix(Wix Stores) | 15 |
 | SchopBean(スコップビーン) | 高松市田町3-10 | BASE | 20 |
 | ARSENAL Coffee Roasters | 高松市兵庫町2-1 | STORES(手動) | 2 |
 | RANACOFFEE | 高松市牟礼町牟礼2421-13 | FC2ショッピングカート(独自ドメイン beans-store.ranacoffee.com) | 10 |
@@ -604,6 +622,7 @@ aggregate_shops.py実行後の`git diff --staged --quiet || git commit`が該当
 | 逸珈琲 | 高松市林町1545-1 | 独自カート(xaas3.jp) | 12 |
 | 珈琲工房セピア | 坂出市京町3丁目1-3 | カラーミー | 13 |
 | coffeebeans&sweets Antique | 善通寺市善通寺町2031-7 | STORES(手動) | 17 |
+| COFFEE ROASTER K-ship | 木田郡三木町池戸2903-1 | FC2ショッピングカート(cart.fc2.com) | 7 |
 
 ### 高知県
 
@@ -772,6 +791,7 @@ aggregate_shops.py実行後の`git diff --staged --quiet || git commit`が該当
 |---|---|---|---|
 | 長屋門珈琲 カフェ・ティカル | 〒758-0025 萩市土原298-1 | 手動 | 2 |
 | 大島珈琲店 | 宇部市新天町2丁目7-1 | FC2ショッピングカート(oshimacoffee.cart.fc2.com) | 51 |
+| WAVES COFFEE | 宇部市朝日町2-1 | BASE | 10 |
 | ふじ珈琲 | 下関市中之町1-14 | 手動 | 15 |
 | SOU/ZAEMON by TAKADA COFFEE | 下関市長府侍町1丁目2番39号 | WordPress | 8 |
 | SIMONS COFFEE（シモンズコーヒー） | 下関市武久町1丁目18-23 | 手動 | 1 |
@@ -782,6 +802,7 @@ aggregate_shops.py実行後の`git diff --staged --quiet || git commit`が該当
 | カフェカンパニー | 岩国市南岩国町1丁目17-45 | 楽天市場 | 9 |
 | 岩田珈琲店 | 熊毛郡上関町祝島3675 | カラーミー | 8 |
 | CAPIME coffee | 山口市大内問田3丁目2-41 | BASE | 18 |
+| LOG COFFEE ROASTERS | 山口市中市町4-14 | BASE | 11 |
 | Nishida Coffee | 山口市湯田温泉五丁目7-6 | BASE | 11 |
 | ミルトンコーヒーロースタリー | 周南市児玉町3-7-1 | Shopify | 20 |
 | コーヒーシティ | 周南市楠木1丁目8-1 | Yahoo!ショッピング | 29 |
@@ -835,9 +856,14 @@ aggregate_shops.py実行後の`git diff --staged --quiet || git commit`が該当
 | 漕人 cogito | 高島市鴨1318-2 | カラーミー | 13 |
 | 米安珈琲 | 守山市守山1-11-12 | Shopify | 15 |
 | 伊吹珈琲豆店 | 守山市守山1丁目6-5 | STORES(手動) | 20 |
+| THREE MOUNTAIN COFFEE 草津焙煎所 | 草津市渋川1-1-50 近鉄百貨店草津店 1階食品売場 | 手動 | 13 |
 | 自家焙煎工房 焙煎香珈琲(Housenka Coffee Roastery) | 草津市大路1丁目10-27 くさつ平和堂2F(商店街側) | 手動 | 6 |
+| Cafe Restaurant Inti | 大津市御陵町2-3 大津市歴史博物館・大津市立市民文化会館1F | 手動 | 16 |
 | 自家焙煎珈琲ビーンズ | 大津市国分2丁目5-53 | 手動 | 14 |
 | マウンテン瀬田 | 大津市大萱1-14-15 | 手動 | 24 |
+| 疏水焙煎所/KIKKAKEKKO | 大津市大門通4-3 | BASE | 11 |
+| MATSUBARA COFFEE | 大津市浜大津4-4-8 1階店舗 | STORES(手動) | 7 |
+| 北比良焙煎所 | 大津市北比良1043-152 | BASE | 15 |
 | 珈琲院ロマン亭 | 長浜市元浜町18-13 | BASE | 10 |
 | kohaku coffee | 長浜市湖北東尾上町197 | BASE | 9 |
 | MICRO-LADY COFFEE STAND | 彦根市古沢町40-2 JR彦根駅構内 | カラーミー | 6 |
@@ -853,15 +879,20 @@ aggregate_shops.py実行後の`git diff --staged --quiet || git commit`が該当
 |---|---|---|---|
 | 山田珈琲 Amami Island | 奄美市笠利町和野364-3 | BASE | 7 |
 | てるまに珈琲 | 奄美市名瀬幸町12番22号もとじビル1階 | BASE | 2 |
+| BY THE TREE COFFEE | 奄美市名瀬幸町4-1 1F | BASE | 7 |
+| 珈琲こん日和 | 奄美市名瀬港町22-18 | Wix(Wix Stores) | 6 |
 | 珈琲倶楽部 船倉 | 薩摩川内市白和町4-12 | カラーミー | 13 |
 | やました珈琲 | 鹿屋市寿5丁目14-7 | Ocnk | 13 |
 | POT A CUP OF COFFEE | 鹿屋市東原町2848-3 | カラーミー | 3 |
+| HATANAKA COFFEE | 鹿児島市易居町6-1 | xaas3 | 16 |
 | 珈琲豆専門店 mikoya134 | 鹿児島市下荒田3丁目37-1 | カラーミー | 9 |
 | PLAIN COFFEE SHOP | 鹿児島市加治屋町9-14 | BASE | 4 |
 | アカヤコーヒー | 鹿児島市金生町7-13 | カラーミー | 11 |
 | Blue Beans Roastery | 鹿児島市上竜尾町4-21 エスクテンド上竜尾1F | STORES(手動) | 6 |
 | ジニス コーヒー&スイーツ | 鹿児島市城山町2-30 石蔵 | カラーミー | 6 |
 | nest coffee | 鹿児島市中山町2039-1 | Ocnk | 8 |
+| 珈琲ソルジャー | 鹿児島市東千石町17-9 松清ビル1-B | カラーミー | 10 |
+| Coffeer | 鹿児島市名山町3-7 | BASE | 9 |
 | ヴォアラ珈琲 | 霧島市国分中央5-3-17 | Ocnk | 13 |
 | Bird be There | 霧島市隼人町神宮3-2-3 | BASE | 4 |
 | tombo coffee(トンボコーヒー) | 霧島市隼人町神宮6-4-7 | STORES(手動) | 6 |
@@ -1704,22 +1735,29 @@ aggregate_shops.py実行後の`git diff --staged --quiet || git commit`が該当
 | 店舗名 | 所在地 | 方式 | 件数 |
 |---|---|---|---|
 | Heartfelt Coffee | 磯城郡田原本町宮森10-1 | BASE | 3 |
+| Re:Coffee Roasters 榛原焙煎所 | 宇陀市榛原長峯15-3 | STORES(手動) | 6 |
 | 珈琲の富田屋 | 橿原市今井町1丁目10-17 | WordPress | 16 |
+| THE INY COFFEE | 葛城市新在家389-1 | BASE | 2 |
 | KOTO COFFEE ROASTERS | 五條市上之町481 | STORES(手動) | 10 |
 | にしかぜ珈琲豆店 | 香芝市下田西2-2-51 宮の北ハイツＣ | BASE | 13 |
 | Slack Tisa | 生駒郡三郷町立野南2-11-9 | STORES(手動) | 16 |
+| 丸珈商店 | 生駒郡斑鳩町興留7-1-12 エコーハイツ法隆寺101 | 手動 | 10 |
 | すぎた珈琲 | 生駒郡平群町菊美台１－８００－１ | BASE | 11 |
 | 原珈琲 | 生駒市西白庭台1丁目13-8 | 手動 | 18 |
+| マウンテン生駒 | 生駒市辻町756-1 | 手動 | 24 |
 | 喫茶イレブン | 生駒市東松ヶ丘2-14-101 | BASE | 7 |
 | 奈良藤枝珈琲焙煎所 | 大和郡山市大江町112-1 | Shopify | 4 |
 | K COFFEE | 大和郡山市柳4-46 | Shopify | 16 |
+| MCG珈琲 | 奈良市押熊町1104-1 | 手動 | 31 |
 | 珈琲屋 凡豆 | 奈良市紀寺町1023 | 手動 | 14 |
+| 福田珈琲店 | 奈良市秋篠町1543-2 | 手動 | 35 |
 | ROKUMEI COFFEE CO. | 奈良市西御門町31 | Future Shop(フューチャーショップ、house未確立パターン。schema.org JSON-LDを情報源として使用) | 24 |
 | 珈琲＆紅茶館 | 奈良市西木辻町126 | カラーミー | 72 |
 | 天迦久珈琲 -ROASTERY & BREAD- | 奈良市中新屋町18 | Shopify | 7 |
 | 松焙煎店 | 奈良市北風呂町20-2 | BASE | 24 |
 | 大和自家焙煎 桜座珈琲 | 奈良市恋の窪2丁目1-8 徳丸ビル103 | STORES(手動) | 11 |
 | Coffee Gallery Nob | 北葛城郡河合町高塚台1-9-1 | 手動 | 32 |
+| 吉川電気商会 COFFEE ROASTERS | 北葛城郡河合町佐味田1632-4 | STORES(手動) | 18 |
 
 ### 富山県
 
