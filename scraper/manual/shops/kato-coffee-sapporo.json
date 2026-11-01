@@ -1,0 +1,75 @@
+{
+  "shop": {
+    "name": "家登珈琲焙煎工房",
+    "url": "https://kcoffeebeans.stores.jp/",
+    "address": "北海道札幌市中央区南14条西18丁目1-36",
+    "prefecture": "北海道",
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "last_verified_at": "2026-10-26",
+    "source_note": "STORES.jpの公式ショップ(https://kcoffeebeans.stores.jp/、屋号「家登珈琲焙煎工房(カトウコーヒー)」)の商品ページをブラウザfetch()で2026-10-26に確認。住所と自家焙煎(食べログ「自家焙煎の珈琲専門店」、屋号に焙煎工房)は食べログ(https://tabelog.com/hokkaido/A0101/A010104/1079707/)による(公式側の記載は未確認)。豆3銘柄の100g(豆)の価格を採用(200gもあり)。",
+    "id": "kato-coffee-sapporo",
+    "instagram_url": null,
+    "google_maps_query": "家登珈琲焙煎工房 北海道札幌市中央区南14条西18丁目1-36",
+    "tel": null,
+    "hours": null,
+    "shop_type": "single_location",
+    "data_source": "manual",
+    "lat": 43.041069,
+    "lng": 141.330795,
+    "nearest_station": {
+      "name": "西線14条",
+      "lines": [
+        "札幌市電"
+      ],
+      "distance_m": 460,
+      "walk_min": 6
+    }
+  },
+  "products": [
+    {
+      "raw_name": "インドネシア",
+      "category": "ストレート",
+      "originCountry": "インドネシア",
+      "processingMethod": null,
+      "roast": null,
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1290,
+      "weightG": 100,
+      "stockStatus": "販売中",
+      "productUrl": "https://kcoffeebeans.stores.jp/items/6671597ad34c9c0247ff3aa2",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "グァテマラ",
+      "category": "ストレート",
+      "originCountry": "グアテマラ",
+      "processingMethod": null,
+      "roast": null,
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1260,
+      "weightG": 100,
+      "stockStatus": "販売中",
+      "productUrl": "https://kcoffeebeans.stores.jp/items/667158bec774eb01397bd633",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "エチオピア",
+      "category": "ストレート",
+      "originCountry": "エチオピア",
+      "processingMethod": null,
+      "roast": null,
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1290,
+      "weightG": 100,
+      "stockStatus": "販売中",
+      "productUrl": "https://kcoffeebeans.stores.jp/items/666fe6ba1435c10032934e53",
+      "data_source": "manual"
+    }
+  ]
+}

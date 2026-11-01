@@ -1,0 +1,45 @@
+{
+  "shop": {
+    "name": "自家焙煎コーヒーノキ",
+    "url": "http://coffeenoki.org/",
+    "address": "福島県福島市霞町8-21",
+    "prefecture": "福島県",
+    "platform": "静的HTML(店頭販売のみ。通販は準備中)",
+    "last_verified_at": "2026-10-26",
+    "tel": "080-2155-5937",
+    "hours": "8:00〜17:00(営業日 木・金・土・日・月)",
+    "instagram_url": "https://www.instagram.com/coffeenoki22",
+    "source_note": "公式サイト(http://coffeenoki.org/ のトップ・coffee.html・store.html)を2026-10-26に確認。トップに「東ティモールのコーヒー豆を自家焙煎しています」、store.htmlに住所「〒960-8021 福島県福島市霞町8-21」と営業時間8:00〜17:00、coffee.htmlに焙煎機NOVO MARKⅡ(熱風式)と記載。オンラインショップは準備中のため店頭販売の価格表。トップの価格表(100g 750円/200g 1400円/300g 2250円)の100gを採用。お知らせの最終更新は2025-12-25(値上げ)。浅煎り・中煎り・深煎り・アイスコーヒー用(極深煎り)から焙煎度を選べる。",
+    "id": "coffeenoki-fukushima",
+    "google_maps_query": "自家焙煎コーヒーノキ 福島県福島市霞町8-21",
+    "shop_type": "single_location",
+    "data_source": "manual",
+    "lat": 37.764542,
+    "lng": 140.471008,
+    "nearest_station": {
+      "name": "曽根田",
+      "lines": [
+        "福島交通飯坂線"
+      ],
+      "distance_m": 1120,
+      "walk_min": 14
+    }
+  },
+  "products": [
+    {
+      "raw_name": "東ティモール コーヒー豆",
+      "category": "ストレート",
+      "originCountry": "東ティモール",
+      "processingMethod": null,
+      "roast": null,
+      "flavorNotes": "フェアトレード。コカマウ生産協同組合(アイナロ県マウベシ郡ハヒマウ集落)の無農薬・無化学肥料栽培、水洗式、標高1300〜1600m。浅煎り・中煎り・深煎り・アイスコーヒー用(極深煎り)から焙煎度を選べる。焙煎後1週間以内の豆を製造日明記で販売。",
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 750,
+      "weightG": 100,
+      "stockStatus": "販売中",
+      "productUrl": "http://coffeenoki.org/#%E6%9D%B1%E3%83%86%E3%82%A3%E3%83%A2%E3%83%BC%E3%83%AB%20%E3%82%B3%E3%83%BC%E3%83%92%E3%83%BC%E8%B1%86",
+      "data_source": "manual"
+    }
+  ]
+}

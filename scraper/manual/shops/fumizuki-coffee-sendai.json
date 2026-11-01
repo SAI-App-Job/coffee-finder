@@ -1,0 +1,120 @@
+{
+  "shop": {
+    "name": "文月珈琲",
+    "url": "https://fumizukicoffee.stores.jp/",
+    "address": "宮城県仙台市青葉区中山8-4-23",
+    "prefecture": "宮城県",
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "last_verified_at": "2026-10-26",
+    "instagram_url": "https://www.instagram.com/fumizukicoffee/",
+    "source_note": "STORES.jpの公式ショップ(https://fumizukicoffee.stores.jp/)の商品ページをブラウザfetch()で2026-10-26に確認。AboutにSTORESの「〒981-0952 仙台市青葉区中山8-4-23」、「コーヒー豆の焙煎は1人で担当しています。毎週水曜日に…オーダーをまとめて焙煎し、木曜日に発送」。食べログにもコーヒースタンドとして同住所。デカフェ(カフェインレス)中心の店。各銘柄の最小重量150g(豆のまま、300gもあり)の価格を採用。ドリップバッグ・お試しセット・熨斗・手提げ袋は除外。商品名の〈かろやか〉〈まんなか〉などの味の段階は商品名から外した。",
+    "id": "fumizuki-coffee-sendai",
+    "google_maps_query": "文月珈琲 宮城県仙台市青葉区中山8-4-23",
+    "tel": null,
+    "hours": null,
+    "shop_type": "single_location",
+    "data_source": "manual",
+    "lat": 38.298382,
+    "lng": 140.833969,
+    "nearest_station": {
+      "name": "東北福祉大前",
+      "lines": [
+        "JR仙山線"
+      ],
+      "distance_m": 2130,
+      "walk_min": 27
+    }
+  },
+  "products": [
+    {
+      "raw_name": "グアテマラ",
+      "category": "ストレート",
+      "originCountry": "グアテマラ",
+      "processingMethod": null,
+      "roast": null,
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1700,
+      "weightG": 150,
+      "stockStatus": "販売中",
+      "productUrl": "https://fumizukicoffee.stores.jp/items/6a1a74961ebb49e270df5ffe",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "デカフェ ほっくりブレンド",
+      "category": "ブレンド",
+      "originCountry": null,
+      "processingMethod": null,
+      "roast": null,
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1850,
+      "weightG": 150,
+      "stockStatus": "販売中",
+      "productUrl": "https://fumizukicoffee.stores.jp/items/68ddefb8d4450312a4e4699e",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "デカフェ エチオピア",
+      "category": "ストレート",
+      "originCountry": "エチオピア",
+      "processingMethod": null,
+      "roast": null,
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1800,
+      "weightG": 150,
+      "stockStatus": "販売中",
+      "productUrl": "https://fumizukicoffee.stores.jp/items/672382e22d25990ec246cece",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "デカフェ メキシコ",
+      "category": "ストレート",
+      "originCountry": "メキシコ",
+      "processingMethod": null,
+      "roast": null,
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1800,
+      "weightG": 150,
+      "stockStatus": "販売中",
+      "productUrl": "https://fumizukicoffee.stores.jp/items/67238516e295350fca1cc404",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "デカフェ コロンビア",
+      "category": "ストレート",
+      "originCountry": "コロンビア",
+      "processingMethod": null,
+      "roast": null,
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1850,
+      "weightG": 150,
+      "stockStatus": "販売中",
+      "productUrl": "https://fumizukicoffee.stores.jp/items/672385ff191a4b0f244abfb5",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "デカフェ インドネシア",
+      "category": "ストレート",
+      "originCountry": "インドネシア",
+      "processingMethod": null,
+      "roast": null,
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1850,
+      "weightG": 150,
+      "stockStatus": "販売中",
+      "productUrl": "https://fumizukicoffee.stores.jp/items/672386ea6746820ff9f0a5fa",
+      "data_source": "manual"
+    }
+  ]
+}

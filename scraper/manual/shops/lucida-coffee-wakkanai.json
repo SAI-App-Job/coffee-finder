@@ -1,0 +1,75 @@
+{
+  "shop": {
+    "name": "LUCIDA COFFEE ROASTERS",
+    "url": "https://lucidacoffee.stores.jp/",
+    "address": "北海道稚内市萩見5丁目12番10号",
+    "prefecture": "北海道",
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "last_verified_at": "2026-10-26",
+    "source_note": "STORES.jpの公式ショップ(https://lucidacoffee.stores.jp/、公式 https://lucidacoffee.jp/)の商品ページをブラウザfetch()で2026-10-26に確認。公式に「珈琲のまち稚内から高品質な自家焙煎…」(スペシャルティコーヒーロースター)、〒097-0016 稚内市萩見5丁目12番10号、営業時間の記載あり。ブレンド3種の100g(豆のまま)の価格を採用(200g・400gは同一銘柄)。",
+    "id": "lucida-coffee-wakkanai",
+    "instagram_url": null,
+    "google_maps_query": "LUCIDA COFFEE ROASTERS 北海道稚内市萩見5丁目12番10号",
+    "tel": null,
+    "hours": null,
+    "shop_type": "single_location",
+    "data_source": "manual",
+    "lat": 45.386528,
+    "lng": 141.710419,
+    "nearest_station": {
+      "name": "南稚内",
+      "lines": [
+        "JR宗谷本線"
+      ],
+      "distance_m": 2500,
+      "walk_min": 31
+    }
+  },
+  "products": [
+    {
+      "raw_name": "オリジナルブレンド 中深煎り",
+      "category": "ブレンド",
+      "originCountry": null,
+      "processingMethod": null,
+      "roast": null,
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1210,
+      "weightG": 100,
+      "stockStatus": "販売中",
+      "productUrl": "https://lucidacoffee.stores.jp/items/65406b0807e367002b36d744",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "潮風ブレンド 中煎り",
+      "category": "ブレンド",
+      "originCountry": null,
+      "processingMethod": null,
+      "roast": null,
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1150,
+      "weightG": 100,
+      "stockStatus": "販売中",
+      "productUrl": "https://lucidacoffee.stores.jp/items/65406bc74e11f1003038eeac",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "牧場ブレンド 深煎り",
+      "category": "ブレンド",
+      "originCountry": null,
+      "processingMethod": null,
+      "roast": null,
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 1270,
+      "weightG": 100,
+      "stockStatus": "販売中",
+      "productUrl": "https://lucidacoffee.stores.jp/items/65406b734e11f1002a38f1b4",
+      "data_source": "manual"
+    }
+  ]
+}
