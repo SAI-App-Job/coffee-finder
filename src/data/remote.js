@@ -39,6 +39,7 @@ function mapShop(raw) {
     hours: raw.hours,
     platform: raw.platform,
     url: raw.url,
+    instagramUrl: raw.instagram_url ?? null,
     mapQuery: raw.map_query,
     lat: typeof raw.lat === "number" ? raw.lat : null,
     lng: typeof raw.lng === "number" ? raw.lng : null,

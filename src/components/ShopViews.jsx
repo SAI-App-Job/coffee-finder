@@ -258,17 +258,17 @@ export function ShopDetailView({
               Googleマップで開く
             </button>
           )}
-          <a
-            href={shop.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={`flex items-center justify-center gap-1.5 py-2.5 rounded-xl border border-[#4A3A2A] text-[#B8A891] text-[13px] ${
-              hasMultipleLocations ? "flex-1" : "flex-1"
-            }`}
-          >
-            公式サイト
-            <ExternalLink size={12} />
-          </a>
+          {(shop.url || shop.instagramUrl) && (
+            <a
+              href={shop.url || shop.instagramUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex-1 flex items-center justify-center gap-1.5 py-2.5 rounded-xl border border-[#4A3A2A] text-[#B8A891] text-[13px]"
+            >
+              {shop.url ? "公式サイト" : "公式Instagram"}
+              <ExternalLink size={12} />
+            </a>
+          )}
         </div>
 
         {hasMultipleLocations && (
