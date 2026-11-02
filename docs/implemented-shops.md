@@ -5,7 +5,7 @@
 `scraper/manual/shops/`配下、それ以外は`scraper/scrape_*.py`で自動取得。
 実装を見送った店舗は`docs/not-implementable-shops.md`を参照。
 
-合計1823店舗・29845商品(生成日: 2026-11-01)。
+合計1847店舗・30159商品(生成日: 2026-11-02)。
 
 再生成コマンド:
 ```
@@ -134,9 +134,12 @@ aggregate_shops.py実行後の`git diff --staged --quiet || git commit`が該当
 | 八幡焙煎所 | 伊予郡砥部町北川毛589-4 | BASE | 1 |
 | カトラッチャ珈琲焙煎所 | 伊予市双海町串3561-2 | カラーミー | 10 |
 | Coffee Reverb | 伊予市中山町佐礼谷丙1233 | STORES(手動) | 6 |
+| 手焼珈琲RODAN | 伊予市米湊1140-4 | カラーミー | 6 |
 | 神楽珈琲 | 喜多郡内子町川中181 | BASE | 63 |
 | 越智商店 | 今治市国分6-4-22 | BASE | 3 |
 | Pieceful Coffee Roaster | 松山市萱町1丁目4-1 第一グリーンビル101 | BASE | 32 |
+| アールビー | 松山市山越1-9-4 | 手動 | 38 |
+| i珈琲 | 松山市石風呂町50-7 | BASE | 12 |
 | しゃん珈琲 | 松山市束本2丁目11-23-1 | 手動 | 9 |
 | cafe bc | 松山市大街道2丁目2-20 | BASE | 3 |
 | ICOI COFFEE | 松山市辰巳町1-6-2 | BASE | 3 |
@@ -265,11 +268,15 @@ aggregate_shops.py実行後の`git diff --staged --quiet || git commit`が該当
 | 店舗名 | 所在地 | 方式 | 件数 |
 |---|---|---|---|
 | 日本珈琲社 | 奥州市水沢区宮下町25 | 静的HTML+ショップメーカーカート | 30 |
+| 地球屋 | 奥州市水沢東町4 山口ビル2F | BASE | 10 |
 | 豆工房タカハシ | 花巻市桜台2-32-6 | 独自EC(PHPカート) | 17 |
 | FishmanCoffee | 花巻市上町1-3 | STORES(手動) | 17 |
+| 珈琲 薺 | 岩手郡岩手町子抱5地割17-4 | STORES(手動) | 2 |
 | Aurora Coffee Roasters | 岩手郡雫石町上野二ツ森2-2 | 独自EC(xaas3.jp) | 41 |
 | 風光舎 | 岩手郡雫石町長山堀切野8-7 | カラーミー | 22 |
+| さとう珈琲豆直売 | 宮古市向町5-1 | Ocnk | 12 |
 | 二輪社 | 盛岡市 | STORES(手動) | 5 |
+| 焙煎喫茶 chanoma coffee | 盛岡市永井19地割38-68 | Wix(Wix Stores) | 35 |
 | キャメル珈琲店 | 盛岡市加賀野4丁目13-28 | 手動 | 13 |
 | NAGASAWA COFFEE | 盛岡市上田1丁目11-23 | 独自EC | 26 |
 | 珈琲・うつわ わたなべ | 盛岡市中央通3丁目18-14 | STORES(手動) | 2 |
@@ -277,6 +284,7 @@ aggregate_shops.py実行後の`git diff --staged --quiet || git commit`が該当
 | いなだ珈琲舎 | 盛岡市南大通1丁目12-18 松栄館1F | BASE | 12 |
 | オールドコーヒーの店 機屋 | 盛岡市本町通3丁目2-11 | STORES(手動) | 20 |
 | fulalafu（フララフ） | 盛岡市鉈屋町15-8 | 手動 | 13 |
+| 自家焙煎珈琲専門店 よしの珈琲 | 大船渡市盛町字内ノ目3-32 | Ocnk | 9 |
 
 ### 岐阜県
 
@@ -321,6 +329,7 @@ aggregate_shops.py実行後の`git diff --staged --quiet || git commit`が該当
 | 喫茶バンビ | 延岡市本小路64 | BASE | 1 |
 | なかはら珈琲工場 | 宮崎市阿波岐原町坊ノ下2852-1 | 手動 | 22 |
 | THE ROSA COFFEE | 宮崎市旭1-3-11 | BASE | 8 |
+| ウルワシ | 宮崎市橘通西3丁目10-36 原ビル2F(橘通本店)/宮崎県宮崎市阿波岐原町前浜4276-1083(一ツ葉店・焙煎所) | BASE | 4 |
 | 恋史郎コーヒー | 宮崎市橘通東3-3-8カブトビル102 | BASE | 7 |
 | GARAGE COFFEE | 宮崎市広島2-6-14 中川ビル | BASE | 11 |
 | Calmness of Beauty | 宮崎市江平東町9-12 Lビル102号 | BASE | 5 |
@@ -332,6 +341,7 @@ aggregate_shops.py実行後の`git diff --staged --quiet || git commit`が該当
 | Wonderful World 珈琲 | 都城市郡元町3332-8 | STORES(手動) | 7 |
 | THE ROASTERY 焙煎門 | 都城市山田町中霧島3292-4 | 手動 | 13 |
 | 日向珈琲 | 日向市鶴町1-7-1 | Shopify | 44 |
+| 中村珈琲 | 北諸県郡三股町大字宮村2874-2 | そのまんま百貨店(独自CGIカート) | 21 |
 
 ### 宮城県
 
@@ -654,6 +664,7 @@ aggregate_shops.py実行後の`git diff --staged --quiet || git commit`が該当
 | OK COFFEE Saga Roastery | 神埼郡吉野ヶ里町吉田273-11 | 楽天市場 | 23 |
 | ARS OF COFFEE ROASTERS | 鳥栖市真木町2050-2 | STORES(手動) | 8 |
 | Grab coffee | 鳥栖市藤木町2288-4 | 手動 | 3 |
+| コーヒーショップ 喜蔵 | 武雄市武雄町武雄7353 | 楽天市場 | 16 |
 
 ### 埼玉県
 
@@ -765,7 +776,9 @@ aggregate_shops.py実行後の`git diff --staged --quiet || git commit`が該当
 
 | 店舗名 | 所在地 | 方式 | 件数 |
 |---|---|---|---|
+| coffee BLABO | 寒河江市栄町2-2 | BASE | 5 |
 | CoffeeRoaster&Cafe culmino | 寒河江市寒河江字内ノ袋32 | BASE(thebase.in) | 8 |
+| 0123 COFFEE | 山形市みはらしの丘4-6-9 | STORES(手動) | 15 |
 | Day & Coffee | 山形市香澄町1丁目11-18 とみひろビル01 | BASE(official.ec) | 9 |
 | BOTA coffee | 山形市七日町2-7-18 | STORES(手動) | 1 |
 | じゃらんじゃらん | 山形市七日町2丁目7-10 ナナビーンズ1F | カラーミー | 23 |
@@ -776,9 +789,11 @@ aggregate_shops.py実行後の`git diff --staged --quiet || git commit`が該当
 | 蔵王の森焙煎工房 | 山形市旅篭町1-9-14 | 手動 | 25 |
 | 焙煎工房（サプラス） | 酒田市広野新田字川端割70-2 | 手動 | 6 |
 | COFFEE山椒小路 | 酒田市本町2-3-2 | BASE | 33 |
+| サニープレイスコーヒー | 上山市権現堂89 | BASE | 8 |
 | 狸森焙煎所 | 上山市狸森1198-8 | 手動 | 1 |
 | 自家焙煎珈琲の店 bino | 新庄市上金沢町4-7 | 手動 | 15 |
 | ばいせんはうすNISHI | 村山市楯岡笛田4-1-61 | 手動 | 5 |
+| 新野焙煎 | 長井市九野本879 | BASE | 5 |
 | 千一珈琲 | 鶴岡市山王町10-37 | STORES(手動) | 15 |
 | パラディーゾ コーヒーロースターズ | 鶴岡市本町一丁目6-11 | カラーミー | 9 |
 | 珈琲島 | 鶴岡市余慶町1-2 こぴあ内 | BASE | 14 |
@@ -903,6 +918,7 @@ aggregate_shops.py実行後の`git diff --staged --quiet || git commit`が該当
 | 店舗名 | 所在地 | 方式 | 件数 |
 |---|---|---|---|
 | 栗谷珈琲焙煎所 | 横手市増田町増田字土肥館230-5 | STORES(手動) | 7 |
+| 自家焙煎珈琲 cafe SAKUYA | 鹿角市花輪字八正寺19-1 | BASE | 27 |
 | 08COFFEE | 秋田市山王新町13-21 三栄ビル2F | BASE | 16 |
 | どるず珈琲店 | 秋田市中通4-7-35 秋田市民市場内 | BASE | 7 |
 | BOX COFFEE | 秋田市土崎港西港西入丁目184地内 | STORES(手動) | 7 |
@@ -1127,6 +1143,7 @@ aggregate_shops.py実行後の`git diff --staged --quiet || git commit`が該当
 
 | 店舗名 | 所在地 | 方式 | 件数 |
 |---|---|---|---|
+| クレイズcoffee | かほく市指江ト83 | BASE | 8 |
 | 芭蕉珈琲 | 加賀市山中温泉本町1丁目ヤ6 | BASE | 9 |
 | Sea Side Cafe うみぼうず | 加賀市片野町3-6 | Welcart | 6 |
 | 謎屋珈琲店 | 金沢市安江町19-6(金沢本店) | BASE | 11 |
@@ -1142,6 +1159,7 @@ aggregate_shops.py実行後の`git diff --staged --quiet || git commit`が該当
 | 金澤ちとせ珈琲 | 金沢市長坂台1-41(長坂台店) | Ocnk | 13 |
 | blanket cafe | 金沢市尾山町12-2 チェントロ尾山1F | BASE | 13 |
 | キャラバンサライ | 金沢市保古3-47(本店) | ショップサーブ | 27 |
+| リセットコーヒー 焙煎所 | 小松市下牧町己1街区-20 フレスポ小松内 | BASE | 6 |
 
 ### 千葉県
 
@@ -1440,6 +1458,7 @@ aggregate_shops.py実行後の`git diff --staged --quiet || git commit`が該当
 | 自家焙煎 燕珈琲 | 鳥取市用瀬町宮原38-6 | ホームページマイスター for ネットショップ(株式会社アイフラッグ、独自ASP) | 9 |
 | ワク珈琲 | 東伯郡琴浦町赤碕1574 | STORES(手動) | 11 |
 | ホームベース焙煎所 | 東伯郡北栄町由良宿479-1 | Wix | 6 |
+| 自家焙煎珈琲クレエ | 米子市上後藤2丁目4-12 | STORES(手動) | 9 |
 | ブラザーズ・コーヒー | 米子市東福原7-4-18 | ショップサーブ | 9 |
 
 ### 島根県
@@ -1769,6 +1788,7 @@ aggregate_shops.py実行後の`git diff --staged --quiet || git commit`が該当
 | 自家焙煎・水出し珈琲 水の時計 | 黒部市荻生2671-3 | STORES(手動) | 5 |
 | CAFE BRIO | 射水市赤井24-2 | BASE | 6 |
 | GUMP COFFEE ROASTERS. | 中新川郡立山町五郎丸1-1 | STORES(手動) | 10 |
+| 19HITOYASUMI | 砺波市幸町3-5 | カラーミー | 14 |
 | haiz coffee roastery | 南砺市本町3丁目35 | Shopify | 10 |
 | hazeru coffee | 富山市古沢111-2 | BASE | 7 |
 | 空の森 珈琲焙煎所 | 富山市呉羽町160 | BASE | 6 |
@@ -1785,7 +1805,9 @@ aggregate_shops.py実行後の`git diff --staged --quiet || git commit`が該当
 | 店舗名 | 所在地 | 方式 | 件数 |
 |---|---|---|---|
 | MAMI CAFÉ たちばな屋 | 越前市稲寄町7-22-1 | STORES(手動) | 24 |
+| Coffee fam. | 越前市広瀬町168-8-70 | Shopify | 9 |
 | Kohaku珈琲 | 今立郡池田町菅生25 | BASE | 12 |
+| POSSE COFFEE | 坂井市三国町運動公園2-18-20 | BASE | 12 |
 | coffee shop HONANO | 鯖江市舟津町1-1-12 | BASE | 3 |
 | くじら珈琲 | 鯖江市神明町1-8-12 | BASE | 3 |
 | 自家焙煎珈琲屋 Farbe | 鯖江市鳥羽1-5-12 | 手動 | 19 |
@@ -1793,6 +1815,7 @@ aggregate_shops.py実行後の`git diff --staged --quiet || git commit`が該当
 | モモンガコーヒー | 大野市元町8-17 中央共同ビル1F | BASE | 16 |
 | 平凡珈琲 | 敦賀市櫛川95-7-8 | BASE | 5 |
 | 新田珈琲 | 敦賀市本町1-11-3 | BASE | 22 |
+| marQ coffee | 敦賀市野坂69-25-1 | BASE | 17 |
 | sou's coffee roastery | 南条郡南越前町今庄81-11 | BASE | 10 |
 | マイスターズ・コーヒー TANAKA | 福井市城東4丁目11-23 玉冠ビル1F-4 | BASE | 23 |
 | WoodWood Coffee Roast Service | 福井市成和1-2231 WWビル1F | Shopify | 24 |
@@ -2086,6 +2109,7 @@ aggregate_shops.py実行後の`git diff --staged --quiet || git commit`が該当
 | マルキ珈琲株式会社 MARKEY'S COFFEE | 〒640-8412 和歌山市狐島598-1 | 手動 | 3 |
 | 手網焙煎 歩里人珈琲 Po-rito Coffee | 〒649-7167 伊都郡かつらぎ町大字移218 | Shopify | 1 |
 | Blooming Coffee | 伊都郡かつらぎ町丁ノ町2247-11 | BASE | 9 |
+| 日方珈琲焙煎所 | 海南市日方463-13 | STORES(手動) | 14 |
 | KAMIN COFFEE ROASTERS | 岩出市宮60-1 | STORES(手動) | 19 |
 | タウンコーヒー | 岩出市荊本235 | カラーミー | 55 |
 | モリカワ | 田辺市城山台2-10 | 独自カート | 49 |

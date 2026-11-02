@@ -1,0 +1,61 @@
+{
+  "shop": {
+    "name": "珈琲 薺",
+    "url": "https://coffeenazuna.stores.jp/",
+    "address": "岩手県岩手郡岩手町子抱5地割17-4",
+    "prefecture": "岩手県",
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "instagram_url": "https://www.instagram.com/coffeenazuna/",
+    "last_verified_at": "2026-11-03",
+    "source_note": "STORES.jpの公式ショップ(https://coffeenazuna.stores.jp/)の商品ページをブラウザfetch()で2026-11-03に確認。検索結果のSTORESページ紹介文に「岩手県北で厳選した高品質の珈琲豆を焙煎、販売しております。焙煎後1週間以内の豆を発送」。住所と実店舗(喫茶店・カフェ、2024-12オープン)は食べログ(https://tabelog.com/iwate/A0305/A030503/3012981/)による(STORES上の住所は未確認)。豆2銘柄の100g(豆)の価格を採用(200gもあり)。",
+    "id": "nazuna-coffee-iwate",
+    "google_maps_query": "珈琲 薺 岩手県岩手郡岩手町子抱5地割17-4",
+    "tel": null,
+    "hours": null,
+    "shop_type": "single_location",
+    "data_source": "manual",
+    "lat": 39.954288,
+    "lng": 141.20639,
+    "nearest_station": {
+      "name": "いわて沼宮内",
+      "lines": [
+        "東北新幹線",
+        "いわて銀河鉄道線"
+      ],
+      "distance_m": 1110,
+      "walk_min": 14
+    }
+  },
+  "products": [
+    {
+      "raw_name": "グアテマラ・アンティグア",
+      "category": "ストレート",
+      "originCountry": "グアテマラ",
+      "processingMethod": null,
+      "roast": null,
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 950,
+      "weightG": 100,
+      "stockStatus": "販売中",
+      "productUrl": "https://coffeenazuna.stores.jp/items/663517f8dbaefd3e64f62901",
+      "data_source": "manual"
+    },
+    {
+      "raw_name": "ケニアAA キリニャガ・キチュグ",
+      "category": "ストレート",
+      "originCountry": "ケニア",
+      "processingMethod": null,
+      "roast": null,
+      "flavorNotes": null,
+      "farmNote": null,
+      "decafProcess": null,
+      "price": 950,
+      "weightG": 100,
+      "stockStatus": "販売中",
+      "productUrl": "https://coffeenazuna.stores.jp/items/66310bc980278e12bf901eed",
+      "data_source": "manual"
+    }
+  ]
+}

@@ -1518,6 +1518,26 @@ SOURCE_FILES = {
     "WAVES COFFEE": "data_wavescoffee.json",
     "YAMADA COFFEE OKINAWA": "data_yamadacoffeeokinawa.json",
     "自家焙煎珈琲 ゆくれ実": "data_yukuremicoffee.json",
+    # wave5: 山形・秋田・岩手・青森・福井・石川・富山・愛媛・長崎・佐賀・宮崎・鳥取・和歌山の独自EC・楽天・STORES・価格表の未登録店 (2026-11-03)
+    "19HITOYASUMI": "data_19hitoyasumi.json",
+    "自家焙煎珈琲 cafe SAKUYA": "data_cafesakuya.json",
+    "焙煎喫茶 chanoma coffee": "data_chanomacoffee.json",
+    "地球屋": "data_chikyuya.json",
+    "coffee BLABO": "data_coffeeblabo.json",
+    "Coffee fam.": "data_coffeefam.json",
+    "クレイズcoffee": "data_crazcoffee.json",
+    "i珈琲": "data_icoffee.json",
+    "コーヒーショップ 喜蔵": "data_kizou.json",
+    "marQ coffee": "data_marqcoffee.json",
+    "中村珈琲": "data_nakamurakohi.json",
+    "新野焙煎": "data_niinobaisen.json",
+    "POSSE COFFEE": "data_possecoffee.json",
+    "リセットコーヒー 焙煎所": "data_resetcoffeebaisen.json",
+    "手焼珈琲RODAN": "data_rodan.json",
+    "さとう珈琲豆直売": "data_satocoffeebeans.json",
+    "サニープレイスコーヒー": "data_sunnyplacecoffee.json",
+    "ウルワシ": "data_uruwashi.json",
+    "自家焙煎珈琲専門店 よしの珈琲": "data_yoshinocoffee.json",
 }
 
 

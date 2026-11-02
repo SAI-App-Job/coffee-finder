@@ -44411,6 +44411,19 @@
     "data_source": "manual",
     "source_note": "公式サイトの「焙煎へのこだわり」ページ(https://inti.shiga.jp/home-roasted/)の自家焙煎豆の計量販売価格表(100g税込)を2026-11-01に確認。「自家焙煎機『DISCOVERY』でメニューの珈琲豆を焙煎した計量販売を行っております」と記載。住所は店舗情報ページ(/page-5092/)。ページ見出しは「販売一例」のため、店頭にはこの他の銘柄がある可能性あり。秀長・秀吉コーヒーのみBASE(https://intishiga.base.shop/)の自家焙煎豆200g(100g×2袋)を採用し、ドリップバッグ・400g・500gは除外。",
     "last_verified_at": "2026-11-01",
+    "locations": [
+      {
+        "label": null,
+        "address": "滋賀県大津市御陵町2-3 大津市歴史博物館・大津市立市民文化会館1F",
+        "prefecture": "滋賀県",
+        "hours": "9:00-17:00(月曜定休、祝日の場合は翌日休業)",
+        "tel": "077-599-4570",
+        "is_headquarters": false,
+        "map_query": "Cafe Restaurant Inti 滋賀県大津市御陵町2-3 大津市歴史博物館・大津市立市民文化会館1F",
+        "lat": 35.016991,
+        "lng": 135.854324
+      }
+    ],
     "lat": 35.016991,
     "lng": 135.854324
   },
@@ -44435,6 +44448,19 @@
     "data_source": "manual",
     "source_note": "公式サイトの珈琲豆一覧(https://www.aromacafe.jp/CoffeeBeansALL.html)と各銘柄ページを2026-11-01に確認(robots.txtは404)。住所はShopInfo/特商法ページ、自家焙煎は Concept ページ(「生豆は15分ほどお時間をいただき、その場で丁寧に焙煎いたします」)の記載。100g表記の価格を採用。売り切れ表示の銘柄は品切れとして反映し、価格欄が空欄のものは価格null。花蜂蜜(170g)は除外。焙煎度は各銘柄ページの「オススメ焙煎度合い(注文時におまかせを選んだ場合の焙煎度)」。2026新豆の掲載あり。",
     "last_verified_at": "2026-11-01",
+    "locations": [
+      {
+        "label": null,
+        "address": "奈良県奈良市秋篠町1543-2",
+        "prefecture": "奈良県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "福田珈琲店 奈良県奈良市秋篠町1543-2",
+        "lat": 34.712799,
+        "lng": 135.778076
+      }
+    ],
     "lat": 34.712799,
     "lng": 135.778076
   },
@@ -44459,6 +44485,19 @@
     "data_source": "manual",
     "source_note": "公式サイト(https://goto-coffee.com/)の商品紹介ページ(/menu)の価格表(税込100g)を2026-11-02に確認。店頭販売のみで通販なし(県外は相談の上宅配便)。店舗情報(/about)に岡山市北区岩田町7-14・JR岡山駅徒歩5分・営業9:00-18:00(土日祝休)、サービス(/free/service)に「併設された焙煎工場で専用の大型焙煎機で焙煎」「コーヒーは100gより小売」と記載。創業1949年。紅茶は除外。インフォメーションは月1件程度更新(2026-10)。",
     "last_verified_at": "2026-11-02",
+    "locations": [
+      {
+        "label": null,
+        "address": "岡山県岡山市北区岩田町7-14",
+        "prefecture": "岡山県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "後藤珈琲 岡山県岡山市北区岩田町7-14",
+        "lat": 34.669128,
+        "lng": 133.921799
+      }
+    ],
     "lat": 34.669128,
     "lng": 133.921799
   },
@@ -44483,6 +44522,19 @@
     "data_source": "manual",
     "source_note": "STORES.jpの公式ショップ(https://maartocoffee.stores.jp/)の商品ページをブラウザfetch()で2026-11-02に確認。Aboutに「maarto coffeeは程好い深煎りコーヒーの自家焙煎珈琲店です」、所在地は倉敷市玉島黒崎4349(食べログも同住所)。営業は不定期の可能性(Aboutは活動状況をInstagramで案内)。各銘柄の200g(豆のまま。100gの単品はなし)の価格を採用。お試しセット・おまかせセット・定期便・ディップスタイルは除外。同名で品切れの重複ページ(Mandheling)は在庫のある側のみ。",
     "last_verified_at": "2026-11-02",
+    "locations": [
+      {
+        "label": null,
+        "address": "岡山県倉敷市玉島黒崎4349",
+        "prefecture": "岡山県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "maarto coffee 岡山県倉敷市玉島黒崎4349",
+        "lat": 34.511177,
+        "lng": 133.647461
+      }
+    ],
     "lat": 34.511177,
     "lng": 133.647461
   },
@@ -44507,6 +44559,19 @@
     "data_source": "manual",
     "source_note": "公式サイト(ペライチ https://maruka-shoten.hp.peraichi.com/)のラインナップを2026-11-01に確認(robots.txt許可)。ネット決済はなく、店頭または前日17時までの予約焙煎(予約焙煎は100gあたり20円引き)。税込100g価格を採用。「自家焙煎珈琲豆屋です」「焙煎してから1週間以内のものしか取り扱いません」の記載。エルサルバドルとブラジルは「10月中/11月中に変更予定」と注記されているが掲載中のため採用。",
     "last_verified_at": "2026-11-01",
+    "locations": [
+      {
+        "label": null,
+        "address": "奈良県生駒郡斑鳩町興留7-1-12 エコーハイツ法隆寺101",
+        "prefecture": "奈良県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "丸珈商店 奈良県生駒郡斑鳩町興留7-1-12 エコーハイツ法隆寺101",
+        "lat": 34.60191,
+        "lng": 135.73764
+      }
+    ],
     "lat": 34.60191,
     "lng": 135.73764
   },
@@ -44531,6 +44596,19 @@
     "data_source": "manual",
     "source_note": "STORES.jpの公式ショップ(https://matsubaracoffee.stores.jp/)の商品ページをブラウザfetch()で2026-11-01に確認。特商法(https://matsubaracoffee.stores.jp/tokushoho)に「〒5200047 滋賀県大津市浜大津4-4-8 1階店舗」、ABOUTに営業時間(水木金11:00-17:00、土日8:00-17:00)。自家焙煎の根拠は STORES 上に「自家焙煎」の字句がなく、Kurasu の記事(https://kurasu.kyoto/blogs/kurasu-journal/matsubara-coffee-shiga-2025-april-kurasupartnerroaster)の「焙煎機にはProbat」とSTORESのNEWSの新豆告知(2026/10/23)による。各銘柄の100g(豆)の価格を採用(200gもあり)。ドリップバッグ・水出しバッグ・焼き菓子は除外。",
     "last_verified_at": "2026-11-01",
+    "locations": [
+      {
+        "label": null,
+        "address": "滋賀県大津市浜大津4-4-8 1階店舗",
+        "prefecture": "滋賀県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "MATSUBARA COFFEE 滋賀県大津市浜大津4-4-8 1階店舗",
+        "lat": 35.01405,
+        "lng": 135.862
+      }
+    ],
     "lat": 35.01405,
     "lng": 135.862
   },
@@ -44555,6 +44633,19 @@
     "data_source": "manual",
     "source_note": "公式サイト(Jimdo https://mcgcoffee.jimdofree.com/)の商品ページを2026-11-01に確認(robots.txtのDisallow(/j/ /app/)は取得せず、Crawl-Delay 5秒を順守)。住所はフッター(〒631-0011 奈良市押熊町1104-1)、自家焙煎は「自家焙煎のお店を始めました」の記載。電話注文・店頭販売。最小の200g袋の税抜価格を採用(2025/01改訂の価格表。グアテマラSHB・エクアドル・インドは改訂日の記載なし)。500g袋・器具は除外。ページ内容の更新は2015年が中心で、価格のみ2025年1月に改定。",
     "last_verified_at": "2026-11-01",
+    "locations": [
+      {
+        "label": null,
+        "address": "奈良県奈良市押熊町1104-1",
+        "prefecture": "奈良県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "MCG珈琲 奈良県奈良市押熊町1104-1",
+        "lat": 34.720528,
+        "lng": 135.770767
+      }
+    ],
     "lat": 34.720528,
     "lng": 135.770767
   },
@@ -44579,6 +44670,19 @@
     "data_source": "manual",
     "source_note": "公式サイトのストレート(https://mt-ikoma.jp/coffee/coffee.htm)・ブレンド(https://mt-ikoma.jp/coffee/coffee-blend.htm)の価格表を2026-11-01に確認(robots.txtは404)。住所と自家焙煎は shop.htm(「本格自家焙煎珈琲専門店です」)の記載。通販ページはなく店頭・電話注文。100g入り袋の100g価格を採用。価格欄が空欄の銘柄(ペルー チャンチャマイヨ、ブラジル カルモ デ ミナスほか名称・価格とも未記入の枠)は除外。期間限定の「秋日和ブレンド」(11月30日まで)を含む。",
     "last_verified_at": "2026-11-01",
+    "locations": [
+      {
+        "label": null,
+        "address": "奈良県生駒市辻町756-1",
+        "prefecture": "奈良県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "マウンテン生駒 奈良県生駒市辻町756-1",
+        "lat": 34.693157,
+        "lng": 135.71019
+      }
+    ],
     "lat": 34.693157,
     "lng": 135.71019
   },
@@ -44603,6 +44707,19 @@
     "data_source": "manual",
     "source_note": "STORES.jpの公式ショップ(https://recoffeeroasters.stores.jp/)の商品ページをブラウザfetch()で2026-11-02に確認。住所は食べログ(https://tabelog.com/nara/A2904/A290403/29013755/)とHAMONIの「奈良県宇陀市榛原長峯15-3」による(STORESの特商法は運営会社の住所表示のため公式側では番地を確認できていない)。自家焙煎はウォーカープラスの紹介記事(https://www.walkerplus.com/article/1316762/)で店主が焙煎に専念とあり、STORES特商法の代表者名と一致。別店の「:re coffee」(recoffee.stores.jp)とは無関係。各銘柄の最小重量(100g、100gが無いものは200g、豆のまま)の価格を採用。",
     "last_verified_at": "2026-11-02",
+    "locations": [
+      {
+        "label": null,
+        "address": "奈良県宇陀市榛原長峯15-3",
+        "prefecture": "奈良県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "Re:Coffee Roasters 榛原焙煎所 奈良県宇陀市榛原長峯15-3",
+        "lat": 34.536289,
+        "lng": 135.965027
+      }
+    ],
     "lat": 34.536289,
     "lng": 135.965027
   },
@@ -44627,6 +44744,19 @@
     "data_source": "manual",
     "source_note": "STORES.jpの独自ドメイン店(https://shop-sunnyday-coffee.com/、公式 https://www.sunnyday-coffee.com/)の商品ページをブラウザfetch()で2026-11-02に確認。公式に「建部町で自家焙煎を行う珈琲専門店」「直火式焙煎機」、店舗紹介に「小さな焙煎工房兼販売所」、マップページに岡山市北区建部町建部上60番。2026-10-28のお知らせあり、2026-09-24に価格改定。各銘柄の100g(豆。粉と同額)の価格を採用(200gもあり)。100gが無い単品(エチオピア等)は200g。ドリップバッグ・飲み比べセット・フィルター・紅茶は除外。",
     "last_verified_at": "2026-11-02",
+    "locations": [
+      {
+        "label": null,
+        "address": "岡山県岡山市北区建部町建部上60",
+        "prefecture": "岡山県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "Sunny Day Coffee 岡山県岡山市北区建部町建部上60",
+        "lat": 34.861336,
+        "lng": 133.903183
+      }
+    ],
     "lat": 34.861336,
     "lng": 133.903183
   },
@@ -44652,6 +44782,19 @@
     "data_source": "manual",
     "source_note": "公式サイトの商品一覧(https://www.three-mountain-coffee.jp/list/)の焙煎豆価格表(100g税込)を2026-11-01に確認。店舗情報(/shop/)に草津焙煎所の住所、「店内焙煎と鮮度管理」(/tmc/freshness/)に「焙煎の工程を店頭で行う」と記載。表は「一部の紹介」で入荷時期により価格・焙煎度が変わる。橿原店のみ取扱の銘柄(モカマタリNo9)・季節限定ブレンド(内容不定)・橿原ブレンド(取扱店の記載が不明確)は除外。同ブランドの橿原焙煎所(奈良県橿原市北八木町3-65-11 近鉄百貨店橿原店 地階食料品売場)は別店舗として扱う。",
     "last_verified_at": "2026-11-01",
+    "locations": [
+      {
+        "label": null,
+        "address": "滋賀県草津市渋川1-1-50 近鉄百貨店草津店 1階食品売場",
+        "prefecture": "滋賀県",
+        "hours": "10:00-19:30(近鉄百貨店草津店に準ずる)",
+        "tel": "077-564-1111",
+        "is_headquarters": false,
+        "map_query": "THREE MOUNTAIN COFFEE 草津焙煎所 滋賀県草津市渋川1-1-50 近鉄百貨店草津店 1階食品売場",
+        "lat": 35.023121,
+        "lng": 135.962952
+      }
+    ],
     "lat": 35.023121,
     "lng": 135.962952
   },
@@ -44676,7 +44819,564 @@
     "data_source": "manual",
     "source_note": "STORES.jpの公式ショップ(https://yds-lab.stores.jp/、公式 https://yds-lab.com/)の商品ページをブラウザfetch()で2026-11-01に確認。公式に「当店では、α NOVOによる高精度焙煎を採用」、営業 10:00〜17:00 不定休、プレスリリース(https://dime.jp/company_news/detail/?pr=2665909)に「〒636-0062 奈良県北葛城郡河合町佐味田1632-4」「奈良県河合町の古民家を再生した焙煎所」。2026年7月開業の新店(EC開設 2026/08/01)。各銘柄の200g(豆)の価格を採用。コーヒーギフト・コールドブリュー・ナッツ・ミル・Tシャツは除外。サントゥアリオ農園のパッションフルーツ・ラズベリー(果実名を冠したロット)はインフューズドの可能性があるため除外。",
     "last_verified_at": "2026-11-01",
+    "locations": [
+      {
+        "label": null,
+        "address": "奈良県北葛城郡河合町佐味田1632-4",
+        "prefecture": "奈良県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "吉川電気商会 COFFEE ROASTERS 奈良県北葛城郡河合町佐味田1632-4",
+        "lat": 34.563171,
+        "lng": 135.733337
+      }
+    ],
     "lat": 34.563171,
     "lng": 135.733337
+  },
+  {
+    "name": "19HITOYASUMI",
+    "url": "https://19hitoyasumi.shop-pro.jp/",
+    "platform": "カラーミーショップ(shop-pro.jp)",
+    "shop_type": "single_location",
+    "robots_txt_status": "許可(2026-11-03確認。/cart/以外は制限なし)",
+    "address": "富山県砺波市幸町3-5",
+    "prefecture": "富山県",
+    "hours": null,
+    "map_query": "19HITOYASUMI",
+    "nearest_station": {
+      "name": "砺波",
+      "lines": [
+        "JR城端線"
+      ],
+      "distance_m": 390,
+      "walk_min": 5
+    },
+    "last_scraped_at": "2026-11-02T04:50:44.731956+00:00",
+    "lat": 36.636799,
+    "lng": 136.957947
+  },
+  {
+    "name": "自家焙煎珈琲 cafe SAKUYA",
+    "url": "https://cafesakuya.base.shop/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-11-03確認。User-agent: * は Allow: / で /cart/ 等のみ禁止。python-requests/curl等は個別にDisallow: /指定のため識別可能なUser-Agentを使用、間隔5秒以上)",
+    "address": "秋田県鹿角市花輪字八正寺19-1",
+    "prefecture": "秋田県",
+    "hours": null,
+    "map_query": "自家焙煎珈琲 cafe SAKUYA",
+    "nearest_station": {
+      "name": "鹿角花輪",
+      "lines": [
+        "JR花輪線"
+      ],
+      "distance_m": 370,
+      "walk_min": 5
+    },
+    "last_scraped_at": "2026-11-02T04:50:44.731956+00:00",
+    "lat": 40.19133,
+    "lng": 140.787216
+  },
+  {
+    "name": "焙煎喫茶 chanoma coffee",
+    "url": "https://www.chanoma-coffee.com/",
+    "platform": "Wix(Wix Stores)",
+    "shop_type": "single_location",
+    "robots_txt_status": "許可(User-agent: * は Allow: /。識別可能なUser-Agentを使用)",
+    "address": "岩手県盛岡市永井19地割38-68",
+    "prefecture": "岩手県",
+    "hours": null,
+    "map_query": "焙煎喫茶 chanoma coffee",
+    "nearest_station": {
+      "name": "岩手飯岡",
+      "lines": [
+        "JR東北本線"
+      ],
+      "distance_m": 600,
+      "walk_min": 8
+    },
+    "last_scraped_at": "2026-11-02T04:50:44.731956+00:00",
+    "lat": 39.649235,
+    "lng": 141.14299
+  },
+  {
+    "name": "地球屋",
+    "url": "https://chikyuuya.thebase.in/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-11-03確認。User-agent: * は Allow: / で /cart/ 等のみ禁止。python-requests/curl等は個別にDisallow: /指定のため識別可能なUser-Agentを使用、間隔5秒以上)",
+    "address": "岩手県奥州市水沢東町4 山口ビル2F",
+    "prefecture": "岩手県",
+    "hours": null,
+    "map_query": "地球屋",
+    "nearest_station": {
+      "name": "水沢",
+      "lines": [
+        "JR東北本線"
+      ],
+      "distance_m": 370,
+      "walk_min": 5
+    },
+    "last_scraped_at": "2026-11-02T04:50:44.731956+00:00",
+    "lat": 39.139671,
+    "lng": 141.142197
+  },
+  {
+    "name": "coffee BLABO",
+    "url": "https://coffeeblabo.base.shop/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-11-03確認。User-agent: * は Allow: / で /cart/ 等のみ禁止。python-requests/curl等は個別にDisallow: /指定のため識別可能なUser-Agentを使用、間隔5秒以上)",
+    "address": "山形県寒河江市栄町2-2",
+    "prefecture": "山形県",
+    "hours": null,
+    "map_query": "coffee BLABO",
+    "nearest_station": {
+      "name": "寒河江",
+      "lines": [
+        "JR左沢線"
+      ],
+      "distance_m": 460,
+      "walk_min": 6
+    },
+    "last_scraped_at": "2026-11-02T04:50:44.731956+00:00",
+    "lat": 38.369446,
+    "lng": 140.278
+  },
+  {
+    "name": "Coffee fam.",
+    "url": "https://coffee-fam-shop.com/",
+    "platform": "Shopify",
+    "shop_type": "single_location",
+    "robots_txt_status": "許可(2026-11-03確認。/products.json は禁止されていない)",
+    "address": "福井県越前市広瀬町168-8-70",
+    "prefecture": "福井県",
+    "hours": null,
+    "map_query": "Coffee fam.",
+    "nearest_station": {
+      "name": "王子保",
+      "lines": [
+        "ハピラインふくい線"
+      ],
+      "distance_m": 4020,
+      "walk_min": 50
+    },
+    "last_scraped_at": "2026-11-02T04:50:44.731956+00:00",
+    "lat": 35.876358,
+    "lng": 136.122787
+  },
+  {
+    "name": "クレイズcoffee",
+    "url": "https://crazcoffee.base.shop/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-11-03確認。Disallowは/cart/等のみ。python-requests/curl等は個別禁止のため識別可能なUser-Agentを使用)",
+    "address": "石川県かほく市指江ト83",
+    "prefecture": "石川県",
+    "hours": null,
+    "map_query": "クレイズcoffee",
+    "nearest_station": {
+      "name": "能瀬",
+      "lines": [
+        "JR七尾線"
+      ],
+      "distance_m": 1390,
+      "walk_min": 17
+    },
+    "last_scraped_at": "2026-11-02T04:50:44.731956+00:00",
+    "lat": 36.705479,
+    "lng": 136.717575
+  },
+  {
+    "name": "i珈琲",
+    "url": "https://icoffee.theshop.jp/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-11-03確認。/cart/等のみ制限。python-requests/curl名義は禁止のため識別UAを使用)",
+    "address": "愛媛県松山市石風呂町50-7",
+    "prefecture": "愛媛県",
+    "hours": null,
+    "map_query": "i珈琲",
+    "nearest_station": {
+      "name": "港山",
+      "lines": [
+        "伊予鉄高浜線"
+      ],
+      "distance_m": 800,
+      "walk_min": 10
+    },
+    "last_scraped_at": "2026-11-02T04:50:44.731956+00:00",
+    "lat": 33.874454,
+    "lng": 132.719681
+  },
+  {
+    "name": "コーヒーショップ 喜蔵",
+    "url": "https://www.rakuten.co.jp/kizou-h/",
+    "platform": "楽天市場",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可とみなす(2026-11-03確認。item.rakuten.co.jpのrobots.txtは検索系パラメータ(?i= ?s=)のみ禁止。www.rakuten.co.jpは/com/ /shops/等のみ禁止)",
+    "address": "佐賀県武雄市武雄町武雄7353",
+    "prefecture": "佐賀県",
+    "hours": null,
+    "map_query": "コーヒーショップ 喜蔵",
+    "nearest_station": {
+      "name": "武雄温泉",
+      "lines": [
+        "JR佐世保線",
+        "西九州新幹線"
+      ],
+      "distance_m": 1720,
+      "walk_min": 22
+    },
+    "last_scraped_at": "2026-11-02T04:50:44.731956+00:00",
+    "lat": 33.186131,
+    "lng": 130.008301
+  },
+  {
+    "name": "marQ coffee",
+    "url": "https://marqcoffee.thebase.in/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-11-03確認。Disallowは/cart/等のみ。python-requests/curl等は個別禁止のため識別可能なUser-Agentを使用)",
+    "address": "福井県敦賀市野坂69-25-1",
+    "prefecture": "福井県",
+    "hours": null,
+    "map_query": "marQ coffee",
+    "nearest_station": {
+      "name": "粟野",
+      "lines": [
+        "JR小浜線"
+      ],
+      "distance_m": 340,
+      "walk_min": 4
+    },
+    "last_scraped_at": "2026-11-02T04:50:44.731956+00:00",
+    "lat": 35.615608,
+    "lng": 136.030426
+  },
+  {
+    "name": "中村珈琲",
+    "url": "https://www.nakamura-coffee.com/",
+    "platform": "そのまんま百貨店(独自CGIカート)",
+    "shop_type": "single_location",
+    "robots_txt_status": "制限なし(2026-11-03確認。robots.txtは404)",
+    "address": "宮崎県北諸県郡三股町大字宮村2874-2",
+    "prefecture": "宮崎県",
+    "hours": null,
+    "map_query": "中村珈琲",
+    "nearest_station": {
+      "name": "三股",
+      "lines": [
+        "JR日豊本線"
+      ],
+      "distance_m": 1780,
+      "walk_min": 22
+    },
+    "last_scraped_at": "2026-11-02T04:50:44.731956+00:00",
+    "lat": 31.726883,
+    "lng": 131.102402
+  },
+  {
+    "name": "新野焙煎",
+    "url": "https://niinobaisen.base.shop/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-11-03確認。User-agent: * は Allow: / で /cart/ 等のみ禁止。python-requests/curl等は個別にDisallow: /指定のため識別可能なUser-Agentを使用、間隔5秒以上)",
+    "address": "山形県長井市九野本879",
+    "prefecture": "山形県",
+    "hours": null,
+    "map_query": "新野焙煎",
+    "nearest_station": {
+      "name": "南長井",
+      "lines": [
+        "山形鉄道フラワー長井線"
+      ],
+      "distance_m": 1800,
+      "walk_min": 23
+    },
+    "last_scraped_at": "2026-11-02T04:50:44.731956+00:00",
+    "lat": 38.091644,
+    "lng": 140.015472
+  },
+  {
+    "name": "POSSE COFFEE",
+    "url": "https://possecoffee.base.ec/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-11-03確認。Disallowは/cart/等のみ。python-requests/curl等は個別禁止のため識別可能なUser-Agentを使用)",
+    "address": "福井県坂井市三国町運動公園2-18-20",
+    "prefecture": "福井県",
+    "hours": null,
+    "map_query": "POSSE COFFEE",
+    "nearest_station": {
+      "name": "三国港",
+      "lines": [
+        "えちぜん鉄道三国芦原線"
+      ],
+      "distance_m": 1030,
+      "walk_min": 13
+    },
+    "last_scraped_at": "2026-11-02T04:50:44.731956+00:00",
+    "lat": 36.228157,
+    "lng": 136.145981
+  },
+  {
+    "name": "リセットコーヒー 焙煎所",
+    "url": "https://resetcoffee.base.shop/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-11-03確認。Disallowは/cart/等のみ。python-requests/curl等は個別禁止のため識別可能なUser-Agentを使用)",
+    "address": "石川県小松市下牧町己1街区-20 フレスポ小松内",
+    "prefecture": "石川県",
+    "hours": null,
+    "map_query": "リセットコーヒー 焙煎所",
+    "nearest_station": {
+      "name": "小松",
+      "lines": [
+        "IRいしかわ鉄道線",
+        "北陸新幹線"
+      ],
+      "distance_m": 1360,
+      "walk_min": 17
+    },
+    "last_scraped_at": "2026-11-02T04:50:44.731956+00:00",
+    "lat": 36.409088,
+    "lng": 136.440094
+  },
+  {
+    "name": "手焼珈琲RODAN",
+    "url": "https://www.rodan24.com/",
+    "platform": "カラーミーショップ",
+    "shop_type": "single_location",
+    "robots_txt_status": "許可(2026-11-03確認。User-agent: * は /cart/ のみ制限)",
+    "address": "愛媛県伊予市米湊1140-4",
+    "prefecture": "愛媛県",
+    "hours": null,
+    "map_query": "手焼珈琲RODAN",
+    "nearest_station": {
+      "name": "伊予市",
+      "lines": [
+        "JR予讃線"
+      ],
+      "distance_m": 680,
+      "walk_min": 9
+    },
+    "last_scraped_at": "2026-11-02T04:50:44.731956+00:00",
+    "lat": 33.749496,
+    "lng": 132.70137
+  },
+  {
+    "name": "さとう珈琲豆直売",
+    "url": "https://satocoffeebeans.ocnk.net/",
+    "platform": "おちゃのこネット",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-11-03確認。robots.txtはGPTBot・Bytespider等の特定クローラのみ全面禁止で、それ以外は制限なし。識別可能なUser-Agentを使用)",
+    "address": "岩手県宮古市向町5-1",
+    "prefecture": "岩手県",
+    "hours": null,
+    "map_query": "さとう珈琲豆直売",
+    "nearest_station": {
+      "name": "宮古",
+      "lines": [
+        "JR山田線",
+        "三陸鉄道リアス線"
+      ],
+      "distance_m": 630,
+      "walk_min": 8
+    },
+    "last_scraped_at": "2026-11-02T04:50:44.731956+00:00",
+    "lat": 39.640873,
+    "lng": 141.953781
+  },
+  {
+    "name": "サニープレイスコーヒー",
+    "url": "https://shop.sunnyplace-coffee.com/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-11-03確認。User-agent: * は Allow: / で /cart/ 等のみ禁止。python-requests/curl等は個別にDisallow: /指定のため識別可能なUser-Agentを使用、間隔5秒以上)",
+    "address": "山形県上山市権現堂89",
+    "prefecture": "山形県",
+    "hours": null,
+    "map_query": "サニープレイスコーヒー",
+    "nearest_station": {
+      "name": "茂吉記念館前",
+      "lines": [
+        "JR奥羽本線"
+      ],
+      "distance_m": 2290,
+      "walk_min": 29
+    },
+    "last_scraped_at": "2026-11-02T04:50:44.731956+00:00",
+    "lat": 38.165604,
+    "lng": 140.323349
+  },
+  {
+    "name": "ウルワシ",
+    "url": "https://uruwashi.base.ec/",
+    "platform": "BASE",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-11-03確認。User-agent: * は /cart/ /web_cart/ /shops/ 等のみ不許可で商品ページは許可。python-requests/curl等は個別にDisallowのため識別UAを使用)",
+    "address": "宮崎県宮崎市橘通西3丁目10-36 原ビル2F(橘通本店)/宮崎県宮崎市阿波岐原町前浜4276-1083(一ツ葉店・焙煎所)",
+    "prefecture": "宮崎県",
+    "hours": null,
+    "map_query": "ウルワシ",
+    "nearest_station": {
+      "name": "宮崎",
+      "lines": [
+        "JR日豊本線"
+      ],
+      "distance_m": 860,
+      "walk_min": 11
+    },
+    "last_scraped_at": "2026-11-02T04:50:44.731956+00:00",
+    "lat": 31.915522,
+    "lng": 131.422867
+  },
+  {
+    "name": "自家焙煎珈琲専門店 よしの珈琲",
+    "url": "https://yoshino-coffee.ocnk.net/",
+    "platform": "おちゃのこネット",
+    "shop_type": "single_location",
+    "robots_txt_status": "実質許可(2026-11-03確認。robots.txtはGPTBot・Bytespider等の特定クローラのみ全面禁止で、それ以外は制限なし。識別可能なUser-Agentを使用)",
+    "address": "岩手県大船渡市盛町字内ノ目3-32",
+    "prefecture": "岩手県",
+    "hours": null,
+    "map_query": "自家焙煎珈琲専門店 よしの珈琲",
+    "nearest_station": {
+      "name": "盛",
+      "lines": [
+        "JR大船渡BRT線",
+        "三陸鉄道リアス線"
+      ],
+      "distance_m": 200,
+      "walk_min": 3
+    },
+    "last_scraped_at": "2026-11-02T04:50:44.731956+00:00",
+    "lat": 39.084648,
+    "lng": 141.71022
+  },
+  {
+    "name": "アールビー",
+    "url": "https://rb-coffee.com/beans/",
+    "instagram_url": null,
+    "platform": "WordPress(価格表のみ・メール注文)",
+    "shop_type": "single_location",
+    "address": "愛媛県松山市山越1-9-4",
+    "prefecture": "愛媛県",
+    "hours": null,
+    "map_query": "アールビー 愛媛県松山市山越1-9-4",
+    "nearest_station": {
+      "name": "本町六丁目",
+      "lines": [
+        "伊予鉄城北線",
+        "伊予鉄本町線"
+      ],
+      "distance_m": 550,
+      "walk_min": 7
+    },
+    "data_source": "manual",
+    "source_note": "公式サイト(https://rb-coffee.com/)の豆メニュー(価格表 https://rb-coffee.com/beans/)を2026-11-03に確認(サイトマップ上の更新は2026-10-12)。店舗アクセスに「ご注文を聞いてから、1袋ずつ遠赤直火焙煎機にて焙煎して真空パック」、住所は山越1-9-4。【価格の基準】表の価格は生豆1袋(240g入)の税別価格で、表記は旧税率の「消費税8%別途」のまま。焙煎後は約200〜220gになる。このため weight=240・価格は表記のまま(税別・生豆基準)で登録しており、100g換算や税込換算はしていない。焙煎度・挽き方は購入時に客が選べるため焙煎度は未設定。ネット注文は問い合わせフォーム経由のメール注文でカートはない。シナモン/バニラのフレーバーコーヒー、紅茶、ココア、紙フィルターは除外。",
+    "last_verified_at": "2026-11-03",
+    "lat": 33.858288,
+    "lng": 132.757324
+  },
+  {
+    "name": "0123 COFFEE",
+    "url": "https://0123coffee.stores.jp/",
+    "instagram_url": null,
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "山形県山形市みはらしの丘4-6-9",
+    "prefecture": "山形県",
+    "hours": null,
+    "map_query": "0123 COFFEE 山形県山形市みはらしの丘4-6-9",
+    "nearest_station": {
+      "name": "茂吉記念館前",
+      "lines": [
+        "JR奥羽本線"
+      ],
+      "distance_m": 1550,
+      "walk_min": 19
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://0123coffee.stores.jp/)の商品ページをブラウザfetch()で2026-11-03に確認。検索結果のSTORESページ紹介文に「山形市みはらしの丘でコーヒー豆を焙煎」。住所と実店舗(コーヒースタンド)は食べログ(https://tabelog.com/yamagata/A0601/A060101/6013237/)による(STORES上の住所は未確認)。各銘柄の100g(豆。粉と同額)の価格を採用(200gもあり、ゲイシャのみ50g/100g)。ドリップバッグ・ギフト・コールドブリュー・缶・器具・グッズは除外。",
+    "last_verified_at": "2026-11-03",
+    "lat": 38.183262,
+    "lng": 140.2892
+  },
+  {
+    "name": "自家焙煎珈琲クレエ",
+    "url": "https://creercoffeeroasters.stores.jp/",
+    "instagram_url": null,
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "鳥取県米子市上後藤2丁目4-12",
+    "prefecture": "鳥取県",
+    "hours": null,
+    "map_query": "自家焙煎珈琲クレエ 鳥取県米子市上後藤2丁目4-12",
+    "nearest_station": {
+      "name": "三本松口",
+      "lines": [
+        "JR境線"
+      ],
+      "distance_m": 360,
+      "walk_min": 5
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ「Créer Coffee Roasters」(https://creercoffeeroasters.stores.jp/、公式 https://cafecreer.com/。楽天・Yahoo!ショッピングにも出店しているが、100g/200gの単品が素直に出るSTORESを採用)の商品ページをブラウザfetch()で2026-11-03に確認。住所は公式サイトのフッター・楽天会社概要(有限会社ショウコーポレーション〒683-0841)による。自家焙煎の根拠は店名と商品説明の「発送日当日焙煎」「クレエ焙煎人イチオシ」。店頭販売の記載は未確認(焙煎所兼店舗の可能性が高い)。各銘柄の最小重量(100g、100gが無いものは200g、豆のまま)の価格を採用。セット・まとめ買い・大容量・ギフトは除外。",
+    "last_verified_at": "2026-11-03",
+    "lat": 35.444607,
+    "lng": 133.319641
+  },
+  {
+    "name": "日方珈琲焙煎所",
+    "url": "https://square-wakayama.stores.jp/",
+    "instagram_url": null,
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "和歌山県海南市日方463-13",
+    "prefecture": "和歌山県",
+    "hours": null,
+    "map_query": "日方珈琲焙煎所 和歌山県海南市日方463-13",
+    "nearest_station": {
+      "name": "海南",
+      "lines": [
+        "JR紀勢本線"
+      ],
+      "distance_m": 620,
+      "walk_min": 8
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式オンラインストア(https://square-wakayama.stores.jp/、公式 https://hikatacoffee.com/)の商品ページをブラウザfetch()で2026-11-03に確認。公式(https://hikatacoffee.com/stores/kainan)に「店内で焙煎した、香り立つ珈琲豆」「自家焙煎の一杯と自家製スイーツ」「ご注文・決済は公式STORESで」、席数10席・営業13:00〜18:00・電話073-400-7197。店舗は海南本店と岩出市の金池ロースタリー(和歌山県岩出市金池423-1 フロンティア21)の2店。各銘柄の最小重量(100g、豆のまま)の価格を採用(50g・200gもあり)。ドリップバッグ・ギフト・飲み比べ・定期便・ネル・器具・雑貨・ハンドメイド品・チョコは除外。",
+    "last_verified_at": "2026-11-03",
+    "lat": 34.159668,
+    "lng": 135.211914
+  },
+  {
+    "name": "珈琲 薺",
+    "url": "https://coffeenazuna.stores.jp/",
+    "instagram_url": "https://www.instagram.com/coffeenazuna/",
+    "platform": "STORES.jp(ブラウザfetch()経由で取得)",
+    "shop_type": "single_location",
+    "address": "岩手県岩手郡岩手町子抱5地割17-4",
+    "prefecture": "岩手県",
+    "hours": null,
+    "map_query": "珈琲 薺 岩手県岩手郡岩手町子抱5地割17-4",
+    "nearest_station": {
+      "name": "いわて沼宮内",
+      "lines": [
+        "東北新幹線",
+        "いわて銀河鉄道線"
+      ],
+      "distance_m": 1110,
+      "walk_min": 14
+    },
+    "data_source": "manual",
+    "source_note": "STORES.jpの公式ショップ(https://coffeenazuna.stores.jp/)の商品ページをブラウザfetch()で2026-11-03に確認。検索結果のSTORESページ紹介文に「岩手県北で厳選した高品質の珈琲豆を焙煎、販売しております。焙煎後1週間以内の豆を発送」。住所と実店舗(喫茶店・カフェ、2024-12オープン)は食べログ(https://tabelog.com/iwate/A0305/A030503/3012981/)による(STORES上の住所は未確認)。豆2銘柄の100g(豆)の価格を採用(200gもあり)。",
+    "last_verified_at": "2026-11-03",
+    "lat": 39.954288,
+    "lng": 141.20639
   }
 ]
