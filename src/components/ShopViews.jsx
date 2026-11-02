@@ -1,7 +1,21 @@
 import { useMemo, useState } from "react";
-import { Package, Clock, ArrowLeft, MapPin, ExternalLink, Search, X, Heart, LocateFixed } from "lucide-react";
-import { SectionHeading } from "./common";
+import {
+  Package,
+  Clock,
+  ArrowLeft,
+  MapPin,
+  ExternalLink,
+  Search,
+  X,
+  Heart,
+  LocateFixed,
+  NotebookPen,
+  Trash2,
+} from "lucide-react";
+import { SectionHeading, StarRating } from "./common";
 import { ProductCard } from "./ProductCard";
+import { FlavorChips } from "./FlavorPicker";
+import { formatDateTime } from "../utils/format";
 
 const SHOP_SORT_MODE_ITEMS = [
   { id: "distance", label: "近い順", icon: MapPin },
@@ -212,6 +226,33 @@ export function LocationCard({ location, onOpenMap }) {
   );
 }
 
+function ShopNoteCard({ note, onDelete }) {
+  return (
+    <div className="rounded-xl bg-[#3B2211] border border-[#4A3A2A] p-3.5 flex flex-col gap-2">
+      <div className="flex items-start justify-between gap-3">
+        <div className="min-w-0">
+          <p className="text-[14px] font-medium text-[#F2E9DD] leading-snug">{note.productName}</p>
+          {note.rating > 0 && (
+            <div className="mt-1">
+              <StarRating value={note.rating} size={13} readOnly />
+            </div>
+          )}
+          <p className="text-[11px] text-[#8B7361] mt-1">{formatDateTime(note.recordedAt)}</p>
+        </div>
+        <button
+          onClick={() => onDelete(note.id)}
+          className="shrink-0 text-[#8B7361] hover:text-[#F2E9DD] transition-colors -m-1 p-1"
+          aria-label="このノートを削除"
+        >
+          <Trash2 size={13} />
+        </button>
+      </div>
+      {note.note && <p className="text-[12px] text-[#B8A891] leading-relaxed">{note.note}</p>}
+      <FlavorChips flavors={note.flavors} />
+    </div>
+  );
+}
+
 export function ShopDetailView({
   shop,
   products,
@@ -221,6 +262,9 @@ export function ShopDetailView({
   isFavorite,
   onToggleFavorite,
   onOpenDetail,
+  tastingNotes = [],
+  onCreateTastingNote,
+  onDeleteTastingNote,
 }) {
   const hasMultipleLocations = shop.locations && shop.locations.length > 0;
 
@@ -270,6 +314,25 @@ export function ShopDetailView({
             </a>
           )}
         </div>
+
+        <button
+          onClick={onCreateTastingNote}
+          className="w-full mt-2 flex items-center justify-center gap-1.5 py-2.5 rounded-xl border border-[var(--accent)] text-[var(--accent)] text-[13px] font-medium hover:bg-[var(--accent)] hover:text-[#231810] transition-colors"
+        >
+          <NotebookPen size={14} strokeWidth={2} />
+          テイスティングノートを作成
+        </button>
+
+        {tastingNotes.length > 0 && (
+          <div className="mt-4">
+            <p className="text-[12px] text-[#8B7361] mb-2">この店のテイスティングノート {tastingNotes.length}件</p>
+            <div className="flex flex-col gap-2">
+              {tastingNotes.map((n) => (
+                <ShopNoteCard key={n.id} note={n} onDelete={onDeleteTastingNote} />
+              ))}
+            </div>
+          </div>
+        )}
 
         {hasMultipleLocations && (
           <div className="mt-4">

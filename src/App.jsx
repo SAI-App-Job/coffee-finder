@@ -18,6 +18,7 @@ import { useViewHistory } from "./hooks/useViewHistory";
 import { useComparison } from "./hooks/useComparison";
 import { useRatings } from "./hooks/useRatings";
 import { useTastingLog } from "./hooks/useTastingLog";
+import { useShopTastingNotes } from "./hooks/useShopTastingNotes";
 import { useAlerts } from "./hooks/useAlerts";
 import { useGeolocation } from "./hooks/useGeolocation";
 import { useDisplayRadius } from "./hooks/useDisplayRadius";
@@ -25,6 +26,7 @@ import { useFavoriteArea } from "./hooks/useFavoriteArea";
 import { ProductCard, DiscoveryFactCard } from "./components/ProductCard";
 import { ProductDetailModal } from "./components/ProductDetailModal";
 import { TastingLogModal } from "./components/TastingLogModal";
+import { ShopTastingNoteModal } from "./components/ShopTastingNoteModal";
 import { AlertsPanel } from "./components/AlertsPanel";
 import { AboutView } from "./components/AboutView";
 import { FilterSheet } from "./components/FilterSheet";
@@ -81,6 +83,8 @@ export default function CoffeeProductList() {
   } = useComparison(isPremium, showToast);
   const { getRating, setRating } = useRatings();
   const { getLogs, addLog, deleteLog } = useTastingLog();
+  const { getNotes: getShopNotes, addNote: addShopNote, deleteNote: deleteShopNote } = useShopTastingNotes();
+  const [noteFormShop, setNoteFormShop] = useState(null);
 
   const [tab, setTab] = useState("products"); // "products" | "favorites" | "shops" | "guide" | "trivia" | "mypage"
   const [detailProduct, setDetailProduct] = useState(null);
@@ -94,6 +98,8 @@ export default function CoffeeProductList() {
     country: "",
     prefecture: "",
     flavorCategory: new Set(),
+    // 自分がつけた★評価の下限(0=指定なし、1〜5=★N以上)
+    minRating: 0,
   });
   const [sheetOpen, setSheetOpen] = useState(false);
   const [mapTarget, setMapTarget] = useState(null);
@@ -187,17 +193,20 @@ export default function CoffeeProductList() {
   const viewProductsForCountry = (country) => {
     setSearchQuery("");
     setFilters({
-      country: new Set([country]),
-      prefecture: new Set(),
+      country,
+      prefecture: "",
       flavorCategory: new Set(),
-      roast: new Set(),
+      minRating: 0,
     });
     setSelectedShop(null);
     setTab("products");
   };
 
   const activeCount =
-    (filters.country ? 1 : 0) + (filters.prefecture ? 1 : 0) + filters.flavorCategory.size;
+    (filters.country ? 1 : 0) +
+    (filters.prefecture ? 1 : 0) +
+    filters.flavorCategory.size +
+    (filters.minRating ? 1 : 0);
 
   const filtered = useMemo(() => {
     const q = searchQuery.trim().toLowerCase();
@@ -214,6 +223,7 @@ export default function CoffeeProductList() {
         if (!countries.includes(filters.country)) return false;
       }
       if (filters.prefecture && p.prefecture !== filters.prefecture) return false;
+      if (filters.minRating && getRating(p.id) < filters.minRating) return false;
       if (filters.flavorCategory.size) {
         const productCats = categorizeFlavorNotes(p.flavorNotes).map((c) => c.ja);
         const hasMatch = productCats.some((ja) => filters.flavorCategory.has(ja));
@@ -236,7 +246,7 @@ export default function CoffeeProductList() {
       }
       return true;
     });
-  }, [products, filters, searchQuery, showOutOfStock]);
+  }, [products, filters, searchQuery, showOutOfStock, getRating]);
 
   // 並べ替え軸ごとの表示リスト。
   // - "distance": 位置情報の取得に成功していれば距離順。許可待ち・タイムアウト・
@@ -347,6 +357,7 @@ export default function CoffeeProductList() {
   const removeFilter = (dim, value) => {
     setFilters((prev) => {
       if (dim === "country" || dim === "prefecture") return { ...prev, [dim]: "" };
+      if (dim === "minRating") return { ...prev, minRating: 0 };
       const next = new Set(prev[dim]);
       next.delete(value);
       return { ...prev, [dim]: next };
@@ -357,6 +368,7 @@ export default function CoffeeProductList() {
     ...(filters.country ? [{ dim: "country", v: filters.country }] : []),
     ...(filters.prefecture ? [{ dim: "prefecture", v: filters.prefecture }] : []),
     ...[...filters.flavorCategory].map((v) => ({ dim: "flavorCategory", v })),
+    ...(filters.minRating ? [{ dim: "minRating", v: `★${filters.minRating}以上` }] : []),
   ];
 
   const openMapForProduct = useCallback(
@@ -664,6 +676,9 @@ export default function CoffeeProductList() {
           isFavorite={isFavorite}
           onToggleFavorite={toggleFavorite}
           onOpenDetail={openProductDetail}
+          tastingNotes={getShopNotes(selectedShop.name)}
+          onCreateTastingNote={() => setNoteFormShop(selectedShop)}
+          onDeleteTastingNote={(noteId) => deleteShopNote(selectedShop.name, noteId)}
         />
       )}
 
@@ -723,6 +738,11 @@ export default function CoffeeProductList() {
         onAddLog={(entry) => addLog(tastingLogProduct.id, entry)}
         onDeleteLog={(entryId) => deleteLog(tastingLogProduct.id, entryId)}
         onClose={() => setTastingLogProduct(null)}
+      />
+      <ShopTastingNoteModal
+        shop={noteFormShop}
+        onAddNote={(entry) => addShopNote(noteFormShop.name, entry)}
+        onClose={() => setNoteFormShop(null)}
       />
       {compareModalOpen && (
         <ComparisonModal

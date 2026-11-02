@@ -3,6 +3,7 @@ import { Search, Check, X } from "lucide-react";
 import { ORIGIN_GUIDE, ORIGIN_ZONE_ORDER, ORIGIN_ZONE_LABELS } from "../data/originGuide";
 import { FLAVOR_WHEEL_DATA, FLAVOR_CATEGORY_OPTIONS } from "../data/flavorWheel";
 import { FILTER_SEARCH_THRESHOLD } from "../data/navigation";
+import { StarRating } from "./common";
 
 // 産地(国)フィルタの選択肢は、店舗の実データ(originCountryの表記ゆれが多い)
 // ではなく、17ヶ国を整理済みのORIGIN_GUIDEを唯一の情報源とする。アフリカ/
@@ -176,7 +177,8 @@ export function FilterSheet({
 
   const selectSingle = (dim, value) => setFilters((prev) => ({ ...prev, [dim]: value }));
 
-  const clearAll = () => setFilters({ country: "", prefecture: "", flavorCategory: new Set() });
+  const clearAll = () =>
+    setFilters({ country: "", prefecture: "", flavorCategory: new Set(), minRating: 0 });
 
   return (
     <div
@@ -231,6 +233,25 @@ export function FilterSheet({
             onToggle={(v) => toggle("flavorCategory", v)}
             getColor={(opt) => FLAVOR_WHEEL_DATA.find((c) => c.ja === opt)?.color}
           />
+
+          <div>
+            <div className="flex items-center justify-between mb-2">
+              <p className="text-[12px] text-[#8B7361]">自分の評価(★)</p>
+              {filters.minRating > 0 && (
+                <span className="text-[11px] text-[var(--accent)] font-medium">
+                  ★{filters.minRating}以上
+                </span>
+              )}
+            </div>
+            <StarRating
+              value={filters.minRating}
+              size={26}
+              onChange={(stars) => selectSingle("minRating", stars)}
+            />
+            <p className="text-[11px] text-[#8B7361] mt-1.5">
+              選んだ星の数以上の評価をつけた商品だけを表示します(同じ星をもう一度押すと解除)
+            </p>
+          </div>
 
           <div>
             <p className="text-[12px] text-[#8B7361] mb-2">都道府県</p>
