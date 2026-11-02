@@ -40870,29 +40870,6 @@
     "lng": 135.559799
   },
   {
-    "name": "Le Premier Cafe",
-    "url": "https://le-premier-cafe.com/",
-    "platform": "WordPress + WooCommerce",
-    "shop_type": "single_location",
-    "robots_txt_status": "取得可(/wp-json/・/?s=・add-to-cart 等はDisallow。API不使用でHTMLのみ取得)",
-    "address": "大阪府大阪市中央区心斎橋筋1-3-28 ビギ1stビル3F",
-    "prefecture": "大阪府",
-    "hours": null,
-    "map_query": "Le Premier Cafe",
-    "nearest_station": {
-      "name": "心斎橋",
-      "lines": [
-        "大阪長堀鶴見緑地線",
-        "大阪御堂筋線"
-      ],
-      "distance_m": 160,
-      "walk_min": 2
-    },
-    "last_scraped_at": "2026-10-26T09:32:17.403487+00:00",
-    "lat": 34.674286,
-    "lng": 135.501785
-  },
-  {
     "name": "LIMINAL COFFEE ROASTER",
     "url": "https://lmnljp.base.shop/",
     "platform": "BASE",

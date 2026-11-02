@@ -9485,7 +9485,7 @@ A群・B群の一部を、スクレイパー27店舗・STORES手動入力7店舗
 
 - **兵庫県13店**: COZY COFFEE(神戸)(STORES。福岡の同名店と区別するため店名に(神戸)を付与)、みやまめ珈琲、SAKU COFFEE、The Sowers、FRANK、珈琲豆やティアレ(以上STORES)、六珈・tent-coffee・brocante coffee・まめや元町店・林 COFFEESTAND・珈琲屋ドリーム(BASE)、岬の焙煎所(Ocnk)。
 - **静岡県12店**: かもめの珈琲屋さん・シシリコーヒー ロースターズ・hibitano coffee roastery(STORES)、浜松自家焙煎 豆煎人(WooCommerce)、鴨江珈琲(Wix)、KEIGAN COFFEE ROASTERS(Shopify)、自家焙煎珈琲 ちとせ105・DAISY COFFEE・Veludo Coffee Roasters(BASE)、NICE COFFEE ROASTER・カフェローステライ・ヴェッカー・ポルトボヌール(価格表)。
-- **大阪府21店**: BEARCOFFEE・マホロバ珈琲堂・フジコ珈琲・珈琲通信・12 Coffee Roasters・kinan coffee・Hue Coffee Roaster・珈琲豆焙煎所 mountain(BASE。茨木市で、高槻市の MOUNTAIN 1999 とは別店)、豆一珈楽・焙煎香房シマノ・ひろしげ珈琲倶楽部・花田コーヒ(カラーミー)、kawakami coffee roaster・Le Premier Cafe(WordPress/WooCommerce)、自家焙煎珈琲やすらぎ(ショップサーブ)、もなか珈琲(xaas3)、焙煎珈琲豆 楓(Yahoo!)、TERRA COFFEE ROASTERS(Shopify)、喫茶路地・Chevron Coffee Roasters・Odoriba Coffee(STORES)。
+- **大阪府21店**: BEARCOFFEE・マホロバ珈琲堂・フジコ珈琲・珈琲通信・12 Coffee Roasters・kinan coffee・Hue Coffee Roaster・珈琲豆焙煎所 mountain(BASE。茨木市で、高槻市の MOUNTAIN 1999 とは別店)、豆一珈楽・焙煎香房シマノ・ひろしげ珈琲倶楽部・花田コーヒ(カラーミー)、kawakami coffee roaster(WordPress)・Le Premier Cafe(WooCommerce。robots.txt禁止パスを取得したため後日登録を取り下げ)、自家焙煎珈琲やすらぎ(ショップサーブ)、もなか珈琲(xaas3)、焙煎珈琲豆 楓(Yahoo!)、TERRA COFFEE ROASTERS(Shopify)、喫茶路地・Chevron Coffee Roasters・Odoriba Coffee(STORES)。
 - **埼玉県15店**: Macky.coffee・ChieCoffee・百福豆珈琲・PO-RT COFFEE(BASE系)、自家焙煎珈琲屋どんぐり・78coffee(カラーミー)、角川クラフト 東所沢焙煎所(独自EC)、TAKERU COFFEE・上田珈琲豆焙煎堂・銀林珈琲(STORES)、自家焙煎珈琲カプリコーン・豆春・珈琲パウエル・まめや忍・はらだ珈琲(価格表のみ)。
 - **千葉県17店**: SEIKODO COFFEE・HOUEI COFFEE and STORE・ふくろう珈琲(BASE)、銀河コーヒー・自家焙煎珈琲 ブラジル屋(カラーミー)、焙煎職人 鈴木正美の店・ゆうかCoffee(EC-CUBE)、Kaffee Brücke・クライム珈琲・COFFEE RIN・BaseCafe(STORES)、Hatch Coffee Roastery・こーひー豆のゆら(Wix)、自家焙煎珈琲店 ドゥ ムートン・自家焙煎珈琲 銹釉・いちCafe珈琲焙煎・福笑屋珈琲(価格表のみ)。
 - **広島県6店**: 灰ケ峰 COFFEE ROASTERY・LIMINAL COFFEE ROASTER(BASE)、Coffee Story(珈琲物語)(カラーミー。岐阜の「珈琲物語」とは別店)、Satie coffee・DOMA COFFEE(STORES)、自家焙煎イブリック(公式サイトの価格表。電話・FAX注文)。
@@ -9534,3 +9534,5 @@ A群・B群の一部を、スクレイパー27店舗・STORES手動入力7店舗
 - 価格・重量の注意: SAKUYA・marQ・クレイズ(一部)・アールビーは生豆基準または重量不明(null)、リセットコーヒーはBASEの価格を採用(公式サイトと価格が違う)、0123 COFFEEは100g(ゲイシャのみ50g/100g)。
 - STORESはブラウザからのfetchで取得。レート制限(429)が出た場合は回避せず、Shopifyの `/products.json` が429のままだった店(Cafe Crema、まめ福)は取得しなかった。
 - 影響: 既存店舗の変更は第4波の手入力店12店に `locations` が付与されただけ(座標は不変)。既存商品の変更なし。
+
+- 2026-11-03 追記: Le Premier Cafe(大阪)は規則に関わる取得(robots.txt禁止パス)があったため登録を取り下げた(1847→1846店舗、30159→30151商品)。

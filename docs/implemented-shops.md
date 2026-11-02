@@ -5,7 +5,7 @@
 `scraper/manual/shops/`配下、それ以外は`scraper/scrape_*.py`で自動取得。
 実装を見送った店舗は`docs/not-implementable-shops.md`を参照。
 
-合計1847店舗・30159商品(生成日: 2026-11-02)。
+合計1846店舗・30151商品(生成日: 2026-11-02)。
 
 再生成コマンド:
 ```
@@ -1295,7 +1295,6 @@ aggregate_shops.py実行後の`git diff --staged --quiet || git commit`が該当
 | 花田コーヒ | 大阪市中央区高津3-2-10 | カラーミー | 26 |
 | 自家焙煎コーヒーくまきち | 大阪市中央区上町1-26-14 | Square Online | 3 |
 | Enon coffee roasters | 大阪市中央区上町1-6-4 | STORES(手動) | 9 |
-| Le Premier Cafe | 大阪市中央区心斎橋筋1-3-28 ビギ1stビル3F | WooCommerce | 8 |
 | LiLo Coffee Roasters | 大阪市中央区西心斎橋1-10-28 | Shopify | 44 |
 | Hue Coffee Roaster | 大阪市中央区谷町4丁目3-7 | BASE | 3 |
 | 大洋珈琲 | 大阪市中央区内久宝寺町3-3-15 | BASE | 35 |

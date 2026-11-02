@@ -1444,7 +1444,6 @@ SOURCE_FILES = {
     "kawakami coffee roaster": "data_kawakamicoffee.json",
     "KEIGAN COFFEE ROASTERS": "data_keigancoffee.json",
     "kinan coffee": "data_kinancoffee.json",
-    "Le Premier Cafe": "data_lepremiercafe.json",
     "LIMINAL COFFEE ROASTER": "data_liminalcoffee.json",
     "Macky.coffee": "data_mackycoffee.json",
     "マホロバ珈琲堂": "data_mahorobacoffee.json",
