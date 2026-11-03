@@ -45256,6 +45256,19 @@
     "data_source": "manual",
     "source_note": "公式サイト(https://rb-coffee.com/)の豆メニュー(価格表 https://rb-coffee.com/beans/)を2026-11-03に確認(サイトマップ上の更新は2026-10-12)。店舗アクセスに「ご注文を聞いてから、1袋ずつ遠赤直火焙煎機にて焙煎して真空パック」、住所は山越1-9-4。【価格の基準】表の価格は生豆1袋(240g入)の税別価格で、表記は旧税率の「消費税8%別途」のまま。焙煎後は約200〜220gになる。このため weight=240・価格は表記のまま(税別・生豆基準)で登録しており、100g換算や税込換算はしていない。焙煎度・挽き方は購入時に客が選べるため焙煎度は未設定。ネット注文は問い合わせフォーム経由のメール注文でカートはない。シナモン/バニラのフレーバーコーヒー、紅茶、ココア、紙フィルターは除外。",
     "last_verified_at": "2026-11-03",
+    "locations": [
+      {
+        "label": null,
+        "address": "愛媛県松山市山越1-9-4",
+        "prefecture": "愛媛県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "アールビー 愛媛県松山市山越1-9-4",
+        "lat": 33.858288,
+        "lng": 132.757324
+      }
+    ],
     "lat": 33.858288,
     "lng": 132.757324
   },
@@ -45280,6 +45293,19 @@
     "data_source": "manual",
     "source_note": "STORES.jpの公式ショップ(https://0123coffee.stores.jp/)の商品ページをブラウザfetch()で2026-11-03に確認。検索結果のSTORESページ紹介文に「山形市みはらしの丘でコーヒー豆を焙煎」。住所と実店舗(コーヒースタンド)は食べログ(https://tabelog.com/yamagata/A0601/A060101/6013237/)による(STORES上の住所は未確認)。各銘柄の100g(豆。粉と同額)の価格を採用(200gもあり、ゲイシャのみ50g/100g)。ドリップバッグ・ギフト・コールドブリュー・缶・器具・グッズは除外。",
     "last_verified_at": "2026-11-03",
+    "locations": [
+      {
+        "label": null,
+        "address": "山形県山形市みはらしの丘4-6-9",
+        "prefecture": "山形県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "0123 COFFEE 山形県山形市みはらしの丘4-6-9",
+        "lat": 38.183262,
+        "lng": 140.2892
+      }
+    ],
     "lat": 38.183262,
     "lng": 140.2892
   },
@@ -45304,6 +45330,19 @@
     "data_source": "manual",
     "source_note": "STORES.jpの公式ショップ「Créer Coffee Roasters」(https://creercoffeeroasters.stores.jp/、公式 https://cafecreer.com/。楽天・Yahoo!ショッピングにも出店しているが、100g/200gの単品が素直に出るSTORESを採用)の商品ページをブラウザfetch()で2026-11-03に確認。住所は公式サイトのフッター・楽天会社概要(有限会社ショウコーポレーション〒683-0841)による。自家焙煎の根拠は店名と商品説明の「発送日当日焙煎」「クレエ焙煎人イチオシ」。店頭販売の記載は未確認(焙煎所兼店舗の可能性が高い)。各銘柄の最小重量(100g、100gが無いものは200g、豆のまま)の価格を採用。セット・まとめ買い・大容量・ギフトは除外。",
     "last_verified_at": "2026-11-03",
+    "locations": [
+      {
+        "label": null,
+        "address": "鳥取県米子市上後藤2丁目4-12",
+        "prefecture": "鳥取県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "自家焙煎珈琲クレエ 鳥取県米子市上後藤2丁目4-12",
+        "lat": 35.444607,
+        "lng": 133.319641
+      }
+    ],
     "lat": 35.444607,
     "lng": 133.319641
   },
@@ -45328,6 +45367,19 @@
     "data_source": "manual",
     "source_note": "STORES.jpの公式オンラインストア(https://square-wakayama.stores.jp/、公式 https://hikatacoffee.com/)の商品ページをブラウザfetch()で2026-11-03に確認。公式(https://hikatacoffee.com/stores/kainan)に「店内で焙煎した、香り立つ珈琲豆」「自家焙煎の一杯と自家製スイーツ」「ご注文・決済は公式STORESで」、席数10席・営業13:00〜18:00・電話073-400-7197。店舗は海南本店と岩出市の金池ロースタリー(和歌山県岩出市金池423-1 フロンティア21)の2店。各銘柄の最小重量(100g、豆のまま)の価格を採用(50g・200gもあり)。ドリップバッグ・ギフト・飲み比べ・定期便・ネル・器具・雑貨・ハンドメイド品・チョコは除外。",
     "last_verified_at": "2026-11-03",
+    "locations": [
+      {
+        "label": null,
+        "address": "和歌山県海南市日方463-13",
+        "prefecture": "和歌山県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "日方珈琲焙煎所 和歌山県海南市日方463-13",
+        "lat": 34.159668,
+        "lng": 135.211914
+      }
+    ],
     "lat": 34.159668,
     "lng": 135.211914
   },
@@ -45353,6 +45405,19 @@
     "data_source": "manual",
     "source_note": "STORES.jpの公式ショップ(https://coffeenazuna.stores.jp/)の商品ページをブラウザfetch()で2026-11-03に確認。検索結果のSTORESページ紹介文に「岩手県北で厳選した高品質の珈琲豆を焙煎、販売しております。焙煎後1週間以内の豆を発送」。住所と実店舗(喫茶店・カフェ、2024-12オープン)は食べログ(https://tabelog.com/iwate/A0305/A030503/3012981/)による(STORES上の住所は未確認)。豆2銘柄の100g(豆)の価格を採用(200gもあり)。",
     "last_verified_at": "2026-11-03",
+    "locations": [
+      {
+        "label": null,
+        "address": "岩手県岩手郡岩手町子抱5地割17-4",
+        "prefecture": "岩手県",
+        "hours": null,
+        "tel": null,
+        "is_headquarters": false,
+        "map_query": "珈琲 薺 岩手県岩手郡岩手町子抱5地割17-4",
+        "lat": 39.954288,
+        "lng": 141.20639
+      }
+    ],
     "lat": 39.954288,
     "lng": 141.20639
   }
