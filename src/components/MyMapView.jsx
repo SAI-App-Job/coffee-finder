@@ -86,13 +86,13 @@ export function MyMapView({ favoriteShops }) {
     <main className="px-5 py-5 flex flex-col gap-3 max-w-xl mx-auto">
       <SectionHeading en="My Map" ja="マイマップ" />
       <p className="text-[13px] text-[var(--c-text-3)]">
-        お気に入り商品を扱う店舗を自動的に地図表示します({pins.length}拠点)
+        コレクションの商品を扱う店舗を自動的に地図表示します({pins.length}拠点)
       </p>
 
       {favoriteShops.length === 0 && (
         <div className="text-center py-10 text-[var(--c-text-3)]">
           <Heart size={28} className="mx-auto mb-3 opacity-40" />
-          <p className="text-[14px]">お気に入り商品を追加すると、取扱店舗がここに表示されます</p>
+          <p className="text-[14px]">コレクションに商品を追加すると、取扱店舗がここに表示されます</p>
         </div>
       )}
 

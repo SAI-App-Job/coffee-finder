@@ -158,10 +158,10 @@ export function SettingsView({
           <h3 className="text-[14px] font-medium text-[var(--c-text)]">プレミアム(広告非表示)</h3>
         </div>
         <p className="text-[12px] text-[var(--c-text-3)] leading-relaxed">
-          月額100円で、広告非表示に加えてお気に入り・閲覧履歴・比較の件数上限がすべて無制限になります(決済機能は準備中です)。
+          月額100円で、広告非表示に加えてコレクション・閲覧履歴・比較の件数上限がすべて無制限になります(決済機能は準備中です)。
         </p>
         <ul className="text-[11px] text-[var(--c-text-3)] leading-relaxed list-disc pl-4 flex flex-col gap-0.5">
-          <li>お気に入り: 無料{FREE_FAVORITES_LIMIT}件 → 有料は無制限</li>
+          <li>コレクションに保存できる商品: 無料{FREE_FAVORITES_LIMIT}件 → 有料は無制限</li>
           <li>閲覧履歴の保存期間: 無料{FREE_HISTORY_RETENTION_DAYS}日間 → 有料は無制限</li>
           <li>比較できる商品数: 無料{FREE_COMPARE_LIMIT}件 → 有料は無制限</li>
         </ul>

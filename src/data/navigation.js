@@ -37,7 +37,7 @@ export const TRIVIA_SUB_TABS = [
 //   子メニューの項目を選ぶとその画面へ移動する(page = 画面ID、sub = 豆知識のサブ画面ID)。
 // - children を持たないタブ: 押すと page の画面へ直接移動する。
 // 子メニューの項目が action を持つ場合は、画面移動ではなくその操作を行う("alerts" = お知らせパネルを開く)。
-// 画面ID(page): products | shops | guide | favorites | history | settings | trivia
+// 画面ID(page): products | shops | guide | collection | history | settings | trivia
 export const NAV_TABS = [
   {
     id: "search",
@@ -55,7 +55,7 @@ export const NAV_TABS = [
     icon: User,
     ja: "マイページ",
     children: [
-      { page: "favorites", icon: Heart, ja: "お気に入り" },
+      { page: "collection", icon: Heart, ja: "コレクション" },
       { page: "history", icon: History, ja: "履歴" },
       { page: "settings", icon: Settings, ja: "設定" },
     ],

@@ -6,12 +6,12 @@ export function FavoritesView({ products, isFavorite, onToggleFavorite, onOpenMa
 
   return (
     <main className="px-5 py-5 flex flex-col gap-3 max-w-xl mx-auto">
-      <p className="text-[13px] text-[var(--c-text-3)]">{favorites.length}件のお気に入り</p>
+      <p className="text-[13px] text-[var(--c-text-3)]">保存した商品 {favorites.length}件</p>
       {favorites.length === 0 ? (
         <div className="text-center py-16 text-[var(--c-text-3)]">
           <Heart size={28} className="mx-auto mb-3 opacity-40" />
-          <p className="text-[14px]">まだお気に入りがありません</p>
-          <p className="text-[12px] mt-1">商品カードのハートアイコンをタップして追加できます</p>
+          <p className="text-[14px]">まだ保存した商品がありません</p>
+          <p className="text-[12px] mt-1">商品カードのハートアイコンをタップして、コレクションに追加できます</p>
         </div>
       ) : (
         favorites.map((product) => (

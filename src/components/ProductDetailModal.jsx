@@ -214,7 +214,7 @@ export function ProductDetailModal({
               }`}
             >
               <Heart size={14} strokeWidth={2} className={favorited ? "fill-[var(--accent)]" : ""} />
-              {favorited ? "お気に入り済み" : "お気に入りに追加"}
+              {favorited ? "コレクションに追加済み" : "コレクションに追加"}
             </button>
             <button
               onClick={() => onToggleCompare?.(product.id)}

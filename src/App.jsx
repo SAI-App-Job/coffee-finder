@@ -18,6 +18,7 @@ import { useViewHistory } from "./hooks/useViewHistory";
 import { useComparison } from "./hooks/useComparison";
 import { useRatings } from "./hooks/useRatings";
 import { useTastingLog } from "./hooks/useTastingLog";
+import { useUserCollection } from "./hooks/useUserCollection";
 import { useShopTastingNotes } from "./hooks/useShopTastingNotes";
 import { useAlerts } from "./hooks/useAlerts";
 import { useGeolocation } from "./hooks/useGeolocation";
@@ -31,7 +32,9 @@ import { AlertsPanel } from "./components/AlertsPanel";
 import { AboutView } from "./components/AboutView";
 import { FilterSheet } from "./components/FilterSheet";
 import { ShopListView, ShopDetailView } from "./components/ShopViews";
-import { FavoritesTabView } from "./components/FavoritesTabView";
+import { CollectionView } from "./components/CollectionView";
+import { UserShopFormModal } from "./components/UserShopFormModal";
+import { UserProductFormModal } from "./components/UserProductFormModal";
 import { BuyingGuideView } from "./components/BuyingGuideView";
 import { TriviaView } from "./components/TriviaView";
 import { SettingsView } from "./components/SettingsView";
@@ -85,11 +88,15 @@ export default function CoffeeProductList() {
   } = useComparison(isPremium, showToast);
   const { getRating, setRating } = useRatings();
   const { getLogs, addLog, deleteLog } = useTastingLog();
+  const userCollection = useUserCollection();
+  // コレクションの「登録した商品」: 店舗フォーム({}=新規 / {shop}=編集)と商品フォーム({shop, product?})
+  const [userShopForm, setUserShopForm] = useState(null);
+  const [userProductForm, setUserProductForm] = useState(null);
   const { getNotes: getShopNotes, addNote: addShopNote, deleteNote: deleteShopNote } = useShopTastingNotes();
   const [noteFormShop, setNoteFormShop] = useState(null);
 
   // いま開いている画面。下部メニュー(BottomNav)から切り替える。
-  // "products" | "shops" | "guide" | "favorites" | "history" | "settings" | "trivia"
+  // "products" | "shops" | "guide" | "collection" | "history" | "settings" | "trivia"
   const [tab, setTab] = useState("products");
   const [triviaSub, setTriviaSub] = useState(TRIVIA_SUB_TABS[0].id);
   const [detailProduct, setDetailProduct] = useState(null);
@@ -389,6 +396,46 @@ export default function CoffeeProductList() {
       setMapTarget({ shopName: product.shopName, shopAddress: product.shopAddress, mapQuery: product.mapQuery }),
     []
   );
+  // 店舗フォームの候補(アプリに収録済みの店舗。選ぶと住所が自動で入る)
+  const appShopSuggestions = useMemo(
+    () => shops.map((s) => ({ name: s.name, address: s.address ?? "" })),
+    [shops]
+  );
+
+  // 新規の店舗を登録したら、続けてその店舗の商品登録フォームを開く(店舗 → 商品の流れ)
+  const saveUserShop = (data, editing) => {
+    if (editing) {
+      userCollection.updateShop(editing.id, data);
+      setUserShopForm(null);
+      return;
+    }
+    const id = userCollection.addShop(data);
+    setUserShopForm(null);
+    if (id) setUserProductForm({ shop: { id, ...data } });
+  };
+
+  const saveUserProduct = (data, shop, editing) => {
+    if (editing) userCollection.updateProduct(editing.id, data);
+    else userCollection.addProduct(shop.id, data);
+    setUserProductForm(null);
+  };
+
+  // 削除した商品の評価(★)も一緒に消す。テイスティングログは履歴として端末に残る。
+  const deleteUserShop = (shopId) => {
+    userCollection.deleteShop(shopId).forEach((productId) => setRating(productId, 0));
+  };
+  const deleteUserProduct = (productId) => {
+    userCollection.deleteProduct(productId);
+    setRating(productId, 0);
+  };
+
+  // 手動登録した店舗: 店舗名+住所でGoogleマップを検索する(座標は持たないため)
+  const openMapForUserShop = (shop) =>
+    setMapTarget({
+      shopName: shop.name,
+      shopAddress: shop.address,
+      mapQuery: `${shop.name} ${shop.address}`.trim(),
+    });
   const openMapForShop = (shop) =>
     setMapTarget({ shopName: shop.name, shopAddress: shop.address, mapQuery: shop.mapQuery });
   const openMapForLocation = (location) =>
@@ -608,8 +655,8 @@ export default function CoffeeProductList() {
         </main>
       )}
 
-      {tab === "favorites" && (
-        <FavoritesTabView
+      {tab === "collection" && (
+        <CollectionView
           products={products}
           isFavorite={isFavorite}
           onToggleFavorite={toggleFavorite}
@@ -617,10 +664,29 @@ export default function CoffeeProductList() {
           onLearnOrigin={learnAboutOrigin}
           onOpenDetail={openProductDetail}
           favoriteShops={favoriteShops}
-          favoriteIds={favoriteIds}
-          importFavorites={importFavorites}
-          isPremium={isPremium}
           getRating={getRating}
+          backup={{
+            favoriteIds,
+            importFavorites,
+            isPremium,
+            userShops: userCollection.userShops,
+            userProducts: userCollection.userProducts,
+            importUserCollection: userCollection.importCollection,
+          }}
+          registered={{
+            userShops: userCollection.userShops,
+            userProducts: userCollection.userProducts,
+            onRate: setRating,
+            getLogCount: (id) => getLogs(id).length,
+            onAddShop: () => setUserShopForm({}),
+            onEditShop: (shop) => setUserShopForm({ shop }),
+            onDeleteShop: deleteUserShop,
+            onAddProduct: (shop) => setUserProductForm({ shop }),
+            onEditProduct: (shop, product) => setUserProductForm({ shop, product }),
+            onDeleteProduct: deleteUserProduct,
+            onOpenTastingLog: (product) => setTastingLogProduct({ id: product.id, rawName: product.name }),
+            onOpenShopMap: openMapForUserShop,
+          }}
         />
       )}
 
@@ -702,6 +768,14 @@ export default function CoffeeProductList() {
         logCount={detailProduct ? getLogs(detailProduct.id).length : 0}
         onOpenTastingLog={setTastingLogProduct}
       />
+      <UserShopFormModal
+        target={userShopForm}
+        appShops={appShopSuggestions}
+        userShops={userCollection.userShops}
+        onSave={saveUserShop}
+        onClose={() => setUserShopForm(null)}
+      />
+      <UserProductFormModal target={userProductForm} onSave={saveUserProduct} onClose={() => setUserProductForm(null)} />
       <TastingLogModal
         product={tastingLogProduct}
         logs={tastingLogProduct ? getLogs(tastingLogProduct.id) : []}

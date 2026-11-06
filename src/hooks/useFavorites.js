@@ -37,7 +37,7 @@ export function useFavorites(isPremium, showToast) {
         if (prev.includes(key)) return prev.filter((existing) => existing !== key);
         if (!isPremium && prev.length >= FREE_FAVORITES_LIMIT) {
           showToast?.(
-            `お気に入りは無料プランで${FREE_FAVORITES_LIMIT}件までです。有料プランでは無制限に保存できます。`
+            `コレクションに保存できる商品は、無料プランで${FREE_FAVORITES_LIMIT}件までです。有料プランでは無制限に保存できます。`
           );
           return prev;
         }

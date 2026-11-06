@@ -211,7 +211,7 @@ function ProductCardImpl({ product, onOpenMap, onLearnOrigin, isFavorite, onTogg
                 e.stopPropagation();
                 onToggleFavorite?.(product.id);
               }}
-              aria-label={favorited ? "お気に入りから削除" : "お気に入りに追加"}
+              aria-label={favorited ? "コレクションから削除" : "コレクションに追加"}
               aria-pressed={favorited}
               className="p-1 -m-1 text-[var(--c-text-3)] hover:text-[var(--accent)] transition-colors"
             >

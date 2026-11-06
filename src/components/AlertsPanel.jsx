@@ -39,7 +39,7 @@ export function AlertsPanel({ open, alerts, products, onClose, onOpenDetail }) {
             <Bell size={28} className="mx-auto mb-3 opacity-40" />
             <p className="text-[14px]">新しいお知らせはありません</p>
             <p className="text-[12px] mt-1 leading-relaxed">
-              お気に入り商品の値下げ・在庫復活、お気に入り店舗の新商品をお知らせします
+              コレクションの商品の値下げ・在庫復活と、その商品を扱う店舗の新商品をお知らせします
             </p>
           </div>
         ) : (
