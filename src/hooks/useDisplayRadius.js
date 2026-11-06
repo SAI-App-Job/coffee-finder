@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 const STORAGE_KEY = "coffee-finder:display-radius";
 
-// ランダム表示にのみ適用する表示範囲設定(マイページ)。値はkm単位の数値、
+// ランダム表示にのみ適用する表示範囲設定(設定画面)。値はkm単位の数値、
 // または"auto"(段階的拡大方式)・"all"(全国、絞り込み無し)。
 export const DISPLAY_RADIUS_OPTIONS = [
   { id: "auto", label: "自動(おすすめ)" },

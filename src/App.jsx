@@ -1,10 +1,10 @@
-import { useState, useMemo, useEffect, useCallback } from "react";
+import { useState, useMemo, useEffect, useCallback, useRef } from "react";
 import { Virtuoso } from "react-virtuoso";
-import { Search, X, SlidersHorizontal, Coffee, Bell, Info, MapPin, Sparkles, Shuffle, LocateFixed, Heart, Settings } from "lucide-react";
+import { Search, X, SlidersHorizontal, Coffee, MapPin, Sparkles, Shuffle, LocateFixed, Heart } from "lucide-react";
 import { MOCK_PRODUCTS } from "./data/products";
 import { SHOPS } from "./data/shops";
 import { EVENTS } from "./data/events";
-import { TAB_ITEMS } from "./data/navigation";
+import { TRIVIA_SUB_TABS } from "./data/navigation";
 import { ORIGIN_GUIDE } from "./data/originGuide";
 import { categorizeFlavorNotes } from "./utils/flavor";
 import { loadRemoteData } from "./data/remote";
@@ -34,7 +34,9 @@ import { ShopListView, ShopDetailView } from "./components/ShopViews";
 import { FavoritesTabView } from "./components/FavoritesTabView";
 import { BuyingGuideView } from "./components/BuyingGuideView";
 import { TriviaView } from "./components/TriviaView";
-import { MyPageView } from "./components/MyPageView";
+import { SettingsView } from "./components/SettingsView";
+import { HistoryView } from "./components/HistoryView";
+import { BottomNav } from "./components/BottomNav";
 import { AdBannerPlaceholder } from "./components/AdBanner";
 import { CompareTray, ComparisonModal } from "./components/Compare";
 import { CopyrightFooter, MapLinkModal, Toast } from "./components/common";
@@ -86,7 +88,10 @@ export default function CoffeeProductList() {
   const { getNotes: getShopNotes, addNote: addShopNote, deleteNote: deleteShopNote } = useShopTastingNotes();
   const [noteFormShop, setNoteFormShop] = useState(null);
 
-  const [tab, setTab] = useState("products"); // "products" | "favorites" | "shops" | "guide" | "trivia" | "mypage"
+  // いま開いている画面。下部メニュー(BottomNav)から切り替える。
+  // "products" | "shops" | "guide" | "favorites" | "history" | "settings" | "trivia"
+  const [tab, setTab] = useState("products");
+  const [triviaSub, setTriviaSub] = useState(TRIVIA_SUB_TABS[0].id);
   const [detailProduct, setDetailProduct] = useState(null);
   const [tastingLogProduct, setTastingLogProduct] = useState(null);
   const [compareModalOpen, setCompareModalOpen] = useState(false);
@@ -110,7 +115,7 @@ export default function CoffeeProductList() {
 
   // 商品タブの並べ替え軸。"distance"(近い順、初期表示)|"new"(新規掲載)|
   // "random"(ランダム)。端末内のセッション状態としてのみ保持し(再読み込みで
-  // "distance"に戻る)、"random"の表示範囲設定のみマイページで永続化する。
+  // "distance"に戻る)、"random"の表示範囲設定のみ設定で永続化する。
   const [sortMode, setSortMode] = useState("distance");
   // 店舗タブの並べ替え軸。商品タブと違い「新規掲載」「ランダム」は対象外
   // (店舗自体に新着・ランダム表示の概念が無いため)、"distance"|"favoriteArea"|
@@ -190,6 +195,14 @@ export default function CoffeeProductList() {
     [showToast]
   );
 
+  // 下部メニューからの画面移動。店舗詳細は開いたままにせず、移動先の先頭から表示する。
+  const navigateTo = useCallback(({ page, sub }) => {
+    setTab(page);
+    if (page === "trivia" && sub) setTriviaSub(sub);
+    setSelectedShop(null);
+    window.scrollTo({ top: 0 });
+  }, []);
+
   const viewProductsForCountry = (country) => {
     setSearchQuery("");
     setFilters({
@@ -253,16 +266,16 @@ export default function CoffeeProductList() {
   //   拒否・非対応の間は「近い順」を騙らず、登録店舗数が多い都道府県順(東京都
   //   から)の全件表示にする(このボタンもその間は非選択状態にする。取得成功時
   //   に自動で距離順へ切り替わり、拒否時に自動再試行はしない)。
-  // - "favoriteArea": マイページで手動登録した都道府県・市区町村(住所文字列の
+  // - "favoriteArea": 設定で手動登録した都道府県・市区町村(住所文字列の
   //   部分一致)に該当する商品のみ、新しい順に表示。郵便番号やジオコーディング
   //   は使わない(店舗網羅率が市区町村単位でも疎らなため、登録は手入力とし、
-  //   0件になる場合はマイページでの再登録を促す)。
+  //   0件になる場合は設定での再登録を促す)。
   // - "new": 新規掲載(30日以内)のみを対象に新しい順。表示範囲は全国固定。
-  // - "random": マイページの表示範囲設定に応じた範囲内からランダムに表示。
+  // - "random": 設定の表示範囲に応じた範囲内からランダムに表示。
   const displayed = useMemo(() => {
     if (sortMode === "favoriteArea") {
       // 都道府県が未登録の間は絞り込みようがないため、全国表示にフォール
-      // バックせず空にする(マイページでの登録を促す)。
+      // バックせず空にする(設定での登録を促す)。
       if (!favoriteArea.prefecture) return [];
       return sortByRecency(filterByFavoriteArea(filtered, favoriteArea));
     }
@@ -301,7 +314,7 @@ export default function CoffeeProductList() {
   // 店舗タブの表示リスト。商品タブのdisplayedと同じ考え方で、
   // - "distance": 位置情報取得に成功していれば店舗自身のlat/lngで距離順。
   //   失敗・未取得の間はデフォルト順にフォールバックする。
-  // - "favoriteArea": マイページ登録エリアに該当する店舗のみ(デフォルト順)。
+  // - "favoriteArea": 設定の登録エリアに該当する店舗のみ(デフォルト順)。
   //   都道府県が未登録の間は0件にする(商品タブと同じ方針)。
   const displayedShops = useMemo(() => {
     if (shopSortMode === "favoriteArea") {
@@ -381,16 +394,26 @@ export default function CoffeeProductList() {
   const openMapForLocation = (location) =>
     setMapTarget({ shopName: location.label, shopAddress: location.address, mapQuery: location.mapQuery });
 
-  // 著作権表示は広告・比較トレイの有無に関わらず常時表示するため、下部固定バー
-  // 自体は常にレンダリングする。パディングは、著作権表示に加えて広告・比較
-  // トレイがいくつ重なるかで変える。
+  // 下部固定バーは、メインメニュー(タブバー)と著作権表示を常に表示し、その上に
+  // 比較トレイが条件つきで重なる。段数で高さが変わる(安全領域の余白も加わる)ため、
+  // 実際の高さを測って、ページ末尾が固定バーに隠れないよう下余白に反映する。
+  // 広告はメニューの誤タップを避けるため、下部ではなくページ最上部に置く。
   const compareTrayVisible = compareIds.length > 0;
   const adVisible = !isPremium;
-  const bottomBarPadding =
-    compareTrayVisible && adVisible ? "pb-[152px]" : compareTrayVisible || adVisible ? "pb-[104px]" : "pb-[48px]";
+  const bottomBarRef = useRef(null);
+  const [bottomBarHeight, setBottomBarHeight] = useState(140);
+  useEffect(() => {
+    const el = bottomBarRef.current;
+    if (!el) return;
+    const update = () => setBottomBarHeight(el.offsetHeight);
+    update();
+    const observer = new ResizeObserver(update);
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
 
   return (
-    <div className={`min-h-full bg-[var(--c-bg)] text-[var(--c-text)] ${bottomBarPadding}`}>
+    <div className="min-h-full bg-[var(--c-bg)] text-[var(--c-text)]" style={{ paddingBottom: bottomBarHeight }}>
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
         .font-serif { font-family: 'Fraunces', serif; }
@@ -398,75 +421,13 @@ export default function CoffeeProductList() {
         .font-mono { font-family: 'IBM Plex Mono', monospace; }
       `}</style>
 
-      <header className="px-5 pt-6 pb-3 border-b border-[var(--c-border)] sticky top-0 bg-[var(--c-bg)]/95 backdrop-blur-sm z-10">
-        <div className="flex items-start justify-between gap-3">
-          <div>
-            <p className="text-[11px] tracking-[0.2em] text-[var(--accent-label)] uppercase">
-              Coffee Finder
-            </p>
-            <h1 className="font-serif text-[26px] leading-tight mt-1">
-              近くの自家焙煎豆を探す
-            </h1>
-            <p className="text-[12px] text-[var(--c-text-3)] mt-0.5">Find Local Roasters Near You</p>
-          </div>
-          <div className="flex items-center shrink-0 mt-1">
-            <button
-              onClick={() => setAboutOpen(true)}
-              className="p-1.5 text-[var(--c-text-2)] hover:text-[var(--c-text)] transition-colors"
-              aria-label="このアプリについて"
-            >
-              <Info size={20} strokeWidth={1.75} />
-            </button>
-            <button
-              onClick={() => setAlertsPanelOpen(true)}
-              className="relative p-1.5 text-[var(--c-text-2)] hover:text-[var(--c-text)] transition-colors"
-              aria-label="お知らせ"
-            >
-              <Bell size={20} strokeWidth={1.75} />
-              {alerts.length > 0 && (
-                <span className="absolute top-0.5 right-0.5 min-w-[16px] h-4 px-1 rounded-full bg-[var(--accent)] text-[var(--on-accent)] text-[10px] font-bold flex items-center justify-center">
-                  {alerts.length > 9 ? "9+" : alerts.length}
-                </span>
-              )}
-            </button>
-            <button
-              onClick={() => { setTab("mypage"); setSelectedShop(null); }}
-              className={`p-1.5 transition-colors ${
-                tab === "mypage" ? "text-[var(--accent)]" : "text-[var(--c-text-2)] hover:text-[var(--c-text)]"
-              }`}
-              aria-label="マイページ"
-              aria-current={tab === "mypage" ? "page" : undefined}
-            >
-              <Settings size={20} strokeWidth={1.75} />
-            </button>
-          </div>
-        </div>
+      {/* 広告: ページ最上部。固定せず、スクロールで流れる(直後のヘッダーは上に固定される)。 */}
+      {adVisible && <AdBannerPlaceholder />}
 
-        {/* スマホ幅(640px未満)では、アイコンを隠して余白を詰め、横スクロールなしで
-            5つのタブが収まるようにしている(360pxの端末で収まることを確認済み)。 */}
-        <div className="flex gap-1 mt-4 p-1 rounded-full bg-[var(--c-surface-2)] w-fit overflow-x-auto scrollbar-hide max-w-full">
-          {TAB_ITEMS.map(({ id, icon: Icon, ja, en }) => (
-            <button
-              key={id}
-              onClick={() => { setTab(id); setSelectedShop(null); }}
-              className={`flex items-center gap-1.5 shrink-0 px-1.5 sm:px-3.5 py-1.5 rounded-full transition-colors ${
-                tab === id ? "bg-[var(--accent)] text-[var(--on-accent)]" : "text-[var(--c-text-2)]"
-              }`}
-            >
-              <Icon size={13} strokeWidth={2} className="hidden sm:block" />
-              <span className="flex flex-col items-start leading-none">
-                <span className="text-[13px] font-medium">{ja}</span>
-                <span
-                  className={`text-[9px] tracking-wide uppercase mt-0.5 ${
-                    tab === id ? "text-[var(--on-accent)]/70" : "text-[var(--c-text-2)]/60"
-                  }`}
-                >
-                  {en}
-                </span>
-              </span>
-            </button>
-          ))}
-        </div>
+      <header className="px-5 pt-6 pb-3 border-b border-[var(--c-border)] sticky top-0 bg-[var(--c-bg)]/95 backdrop-blur-sm z-10">
+        <p className="text-[11px] tracking-[0.2em] text-[var(--accent-label)] uppercase">Coffee Finder</p>
+        <h1 className="font-serif text-[26px] leading-tight mt-1 text-balance">近くの自家焙煎豆を探す</h1>
+        <p className="text-[12px] text-[var(--c-text-3)] mt-0.5">Find Local Roasters Near You</p>
       </header>
 
       {tab === "products" && !selectedShop && (
@@ -533,14 +494,14 @@ export default function CoffeeProductList() {
           {sortMode === "favoriteArea" && (
             <p className="text-[11px] text-[var(--c-text-3)] mt-1.5">
               {favoriteArea.prefecture
-                ? `登録エリア: ${favoriteArea.prefecture}${favoriteArea.city ? ` ${favoriteArea.city}` : ""}(マイページで変更できます)`
-                : "登録エリアが未登録です(マイページで登録できます)"}
+                ? `登録エリア: ${favoriteArea.prefecture}${favoriteArea.city ? ` ${favoriteArea.city}` : ""}(設定で変更できます)`
+                : "登録エリアが未登録です(設定で登録できます)"}
             </p>
           )}
           {sortMode === "random" && (
             <p className="text-[11px] text-[var(--c-text-3)] mt-1.5">
               表示範囲: {displayRadiusOptions.find((o) => o.id === displayRadiusId)?.label}
-              (マイページで変更できます)
+              (設定で変更できます)
             </p>
           )}
           <div className="relative mt-3">
@@ -615,8 +576,8 @@ export default function CoffeeProductList() {
               ) : sortMode === "favoriteArea" ? (
                 <p className="text-[14px]">
                   {favoriteArea.prefecture
-                    ? "登録したエリアには該当する商品がありません。マイページでエリアを変更してみてください"
-                    : "マイページで登録エリア(都道府県・市区町村)を登録してください"}
+                    ? "登録したエリアには該当する商品がありません。設定でエリアを変更してみてください"
+                    : "設定で登録エリア(都道府県・市区町村)を登録してください"}
                 </p>
               ) : (
                 <p className="text-[14px]">現在30日以内に新規掲載された商品はありません</p>
@@ -656,7 +617,15 @@ export default function CoffeeProductList() {
           onLearnOrigin={learnAboutOrigin}
           onOpenDetail={openProductDetail}
           favoriteShops={favoriteShops}
+          favoriteIds={favoriteIds}
+          importFavorites={importFavorites}
+          isPremium={isPremium}
+          getRating={getRating}
         />
+      )}
+
+      {tab === "history" && (
+        <HistoryView historyItems={historyItems} isPremium={isPremium} onOpenDetail={openProductDetail} />
       )}
 
       {tab === "shops" && !selectedShop && (
@@ -690,27 +659,23 @@ export default function CoffeeProductList() {
       {tab === "guide" && (
         <BuyingGuideView pendingOriginCountry={pendingOriginCountry} onViewProducts={viewProductsForCountry} />
       )}
-      {tab === "trivia" && <TriviaView onLearnOrigin={learnAboutOrigin} events={events} />}
+      {tab === "trivia" && <TriviaView subTab={triviaSub} onLearnOrigin={learnAboutOrigin} events={events} />}
 
-      {tab === "mypage" && (
-        <MyPageView
+      {tab === "settings" && (
+        <SettingsView
           themeId={themeId}
           setThemeId={setThemeId}
           themes={themes}
           isPremium={isPremium}
           setPremium={setPremium}
-          favoriteIds={favoriteIds}
-          importFavorites={importFavorites}
-          historyItems={historyItems}
           products={products}
-          getRating={getRating}
-          onOpenDetail={openProductDetail}
           displayRadiusId={displayRadiusId}
           setDisplayRadiusId={setDisplayRadiusId}
           displayRadiusOptions={displayRadiusOptions}
           favoriteArea={favoriteArea}
           setFavoriteAreaPrefecture={setFavoriteAreaPrefecture}
           setFavoriteAreaCity={setFavoriteAreaCity}
+          onOpenAbout={() => setAboutOpen(true)}
         />
       )}
 
@@ -779,7 +744,10 @@ export default function CoffeeProductList() {
       />
       <AboutView open={aboutOpen} onClose={() => setAboutOpen(false)} />
 
-      <div className="fixed bottom-0 inset-x-0 z-20 bg-[var(--c-bar)]/95 backdrop-blur-sm">
+      {/* 下から順に: メインメニュー(タブバー) → 著作権表示 → 比較トレイ。
+          backdrop-filter は、中の子メニュー用の透明な面(fixed)の基準を狂わせるため付けず、
+          ぼかしの代わりに背景は不透明にしている(半透明だと下の文字が透けて見える)。 */}
+      <div ref={bottomBarRef} className="fixed bottom-0 inset-x-0 z-20 bg-[var(--c-bar)] flex flex-col">
         {compareTrayVisible && (
           <CompareTray
             count={compareIds.length}
@@ -788,8 +756,14 @@ export default function CoffeeProductList() {
             onOpen={() => setCompareModalOpen(true)}
           />
         )}
-        {adVisible && <AdBannerPlaceholder />}
         <CopyrightFooter />
+        <BottomNav
+          page={tab}
+          triviaSub={triviaSub}
+          onNavigate={navigateTo}
+          alertCount={alerts.length}
+          onAction={(action) => action === "alerts" && setAlertsPanelOpen(true)}
+        />
       </div>
     </div>
   );

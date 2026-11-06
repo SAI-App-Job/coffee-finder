@@ -96,7 +96,8 @@ export function MyMapView({ favoriteShops }) {
         </div>
       )}
 
-      <div className="rounded-2xl overflow-hidden border border-[var(--c-border)]">
+      {/* isolate: 地図内部(Leaflet)の大きな z-index が、下部メニューより手前に出ないよう閉じ込める */}
+      <div className="isolate rounded-2xl overflow-hidden border border-[var(--c-border)]">
         <div ref={containerRef} className="w-full h-[60vh] min-h-[360px]" />
       </div>
 

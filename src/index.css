@@ -59,6 +59,26 @@ html {
   background-color: var(--c-bg);
 }
 
+/* 下部メニューの子メニューが開くときの、ごく短いフェード+せり上がり */
+@keyframes nav-popup-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+.nav-popup {
+  animation: nav-popup-in 140ms ease-out;
+}
+@media (prefers-reduced-motion: reduce) {
+  .nav-popup {
+    animation: none;
+  }
+}
+
 /* 横スクロールの行(タブ・並べ替え・絞り込みチップ)でスクロールバーを隠す */
 .scrollbar-hide {
   scrollbar-width: none;

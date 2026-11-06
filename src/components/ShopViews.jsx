@@ -142,8 +142,8 @@ export function ShopListView({
       {sortMode === "favoriteArea" && (
         <p className="text-[11px] text-[var(--c-text-3)]">
           {favoriteArea.prefecture
-            ? `登録エリア: ${favoriteArea.prefecture}${favoriteArea.city ? ` ${favoriteArea.city}` : ""}(マイページで変更できます)`
-            : "登録エリアが未登録です(マイページで登録できます)"}
+            ? `登録エリア: ${favoriteArea.prefecture}${favoriteArea.city ? ` ${favoriteArea.city}` : ""}(設定で変更できます)`
+            : "登録エリアが未登録です(設定で登録できます)"}
         </p>
       )}
       <div className="relative mb-1">
@@ -169,8 +169,8 @@ export function ShopListView({
         <p className="text-center py-12 text-[13px] text-[var(--c-text-3)]">
           {sortMode === "favoriteArea"
             ? favoriteArea.prefecture
-              ? "登録したエリアには該当する店舗がありません。マイページでエリアを変更してみてください"
-              : "マイページで登録エリア(都道府県・市区町村)を登録してください"
+              ? "登録したエリアには該当する店舗がありません。設定でエリアを変更してみてください"
+              : "設定で登録エリア(都道府県・市区町村)を登録してください"
             : "該当する店舗が見つかりませんでした"}
         </p>
       ) : filteredShops.length === 0 ? (

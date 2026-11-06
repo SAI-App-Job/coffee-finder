@@ -1,36 +1,28 @@
-import { useMemo, useRef, useState } from "react";
-import { Palette, Check, Sparkles, Heart, Download, Upload, Info, History, Shuffle, MapPinned } from "lucide-react";
+import { useMemo } from "react";
+import { Palette, Check, Sparkles, Info, Shuffle, MapPinned, ChevronRight } from "lucide-react";
 import { SectionHeading } from "./common";
-import { TasteProfile } from "./TasteProfile";
 import { FREE_FAVORITES_LIMIT } from "../hooks/useFavorites";
 import { FREE_COMPARE_LIMIT } from "../hooks/useComparison";
 import { FREE_HISTORY_RETENTION_DAYS } from "../hooks/useViewHistory";
-import { formatRelativeTime } from "../utils/format";
 import { ALL_PREFECTURES } from "../data/prefectures";
 import { filterByFavoriteArea } from "../utils/productSort";
 
-export function MyPageView({
+// 「設定」画面: カラーテーマ・登録エリア・表示範囲・プレミアム・このアプリについて(末尾)
+export function SettingsView({
   themeId,
   setThemeId,
   themes,
   isPremium,
   setPremium,
-  favoriteIds,
-  importFavorites,
-  historyItems,
   products,
-  getRating,
-  onOpenDetail,
   displayRadiusId,
   setDisplayRadiusId,
   displayRadiusOptions,
   favoriteArea,
   setFavoriteAreaPrefecture,
   setFavoriteAreaCity,
+  onOpenAbout,
 }) {
-  const fileInputRef = useRef(null);
-  const [importMessage, setImportMessage] = useState(null);
-
   // 入力(都道府県・市区町村)のたびに該当件数をその場で数える。ジオコーディング
   // 不要な住所文字列の部分一致のみなので、全商品数(数千件)規模でも軽い。
   const favoriteAreaMatchCount = useMemo(
@@ -38,46 +30,9 @@ export function MyPageView({
     [products, favoriteArea]
   );
 
-  const handleExport = () => {
-    const payload = {
-      version: 1,
-      exportedAt: new Date().toISOString(),
-      favorites: favoriteIds,
-    };
-    const blob = new Blob([JSON.stringify(payload, null, 2)], { type: "application/json" });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement("a");
-    a.href = url;
-    a.download = `coffee-finder-favorites-${new Date().toISOString().slice(0, 10)}.json`;
-    document.body.appendChild(a);
-    a.click();
-    a.remove();
-    URL.revokeObjectURL(url);
-  };
-
-  const handleFileChange = async (e) => {
-    const file = e.target.files?.[0];
-    e.target.value = ""; // 同じファイルを連続選択してもchangeが発火するようにリセット
-    if (!file) return;
-    try {
-      const parsed = JSON.parse(await file.text());
-      if (!Array.isArray(parsed.favorites)) {
-        setImportMessage({ type: "error", text: "対応していないファイル形式です" });
-        return;
-      }
-      const { total, added } = importFavorites(parsed.favorites);
-      setImportMessage({
-        type: "success",
-        text: `${total}件中${added}件を追加しました(${total - added}件は登録済みでした)`,
-      });
-    } catch {
-      setImportMessage({ type: "error", text: "ファイルの読み込みに失敗しました" });
-    }
-  };
-
   return (
     <main className="px-5 py-5 flex flex-col gap-6 max-w-xl mx-auto">
-      <SectionHeading en="My Page" ja="マイページ" />
+      <SectionHeading en="Settings" ja="設定" />
 
       <section className="rounded-2xl bg-[var(--c-surface)] border border-[var(--c-border)] p-4 flex flex-col gap-3">
         <div className="flex items-center gap-1.5">
@@ -214,7 +169,7 @@ export function MyPageView({
           <div>
             <p className="text-[13px] text-[var(--c-text)]">{isPremium ? "プレミアム有効" : "無料プラン"}</p>
             <p className="text-[11px] text-[var(--c-text-3)] mt-0.5">
-              {isPremium ? "広告は表示されません" : "画面下部に広告が表示されます"}
+              {isPremium ? "広告は表示されません" : "画面上部に広告が表示されます"}
             </p>
           </div>
           <button
@@ -232,71 +187,16 @@ export function MyPageView({
         </div>
       </section>
 
-      <section className="rounded-2xl bg-[var(--c-surface)] border border-[var(--c-border)] p-4 flex flex-col gap-3">
-        <div className="flex items-center gap-1.5">
-          <Heart size={14} className="text-[var(--accent)]" strokeWidth={1.75} />
-          <h3 className="text-[14px] font-medium text-[var(--c-text)]">お気に入りのバックアップ</h3>
-        </div>
-        <p className="text-[12px] text-[var(--c-text-3)] leading-relaxed">
-          お気に入りは端末内にのみ保存されています。機種変更前や念のためのバックアップとして、ファイルへの書き出し・読み込みができます。
-          {!isPremium && `(無料プランは${FREE_FAVORITES_LIMIT}件まで保存できます)`}
-        </p>
-        <div className="flex gap-2">
-          <button
-            onClick={handleExport}
-            disabled={favoriteIds.length === 0}
-            className="flex-1 flex items-center justify-center gap-1.5 py-2.5 rounded-xl bg-[var(--accent)] text-[var(--on-accent)] text-[13px] font-medium disabled:opacity-40 disabled:cursor-not-allowed"
-          >
-            <Download size={14} strokeWidth={2} />
-            書き出す({favoriteIds.length}件)
-          </button>
-          <button
-            onClick={() => fileInputRef.current?.click()}
-            className="flex-1 flex items-center justify-center gap-1.5 py-2.5 rounded-xl border border-[var(--c-border)] text-[var(--c-text-2)] text-[13px]"
-          >
-            <Upload size={14} strokeWidth={2} />
-            読み込む
-          </button>
-          <input ref={fileInputRef} type="file" accept="application/json" className="hidden" onChange={handleFileChange} />
-        </div>
-        {importMessage && (
-          <p className={`text-[12px] ${importMessage.type === "error" ? "text-[var(--c-danger)]" : "text-[var(--accent)]"}`}>
-            {importMessage.text}
-          </p>
-        )}
-      </section>
-
-      <section className="rounded-2xl bg-[var(--c-surface)] border border-[var(--c-border)] p-4 flex flex-col gap-3">
-        <div className="flex items-center gap-1.5">
-          <History size={14} className="text-[var(--accent)]" strokeWidth={1.75} />
-          <h3 className="text-[14px] font-medium text-[var(--c-text)]">閲覧履歴</h3>
-        </div>
-        <p className="text-[12px] text-[var(--c-text-3)] leading-relaxed">
-          {isPremium
-            ? "閲覧履歴は無制限に保存されます。"
-            : `無料プランでは直近${FREE_HISTORY_RETENTION_DAYS}日分のみ保存されます(有料プランでは無制限)。`}
-        </p>
-        {historyItems.length === 0 ? (
-          <p className="text-[12px] text-[var(--c-text-3)]">商品をタップすると、ここに閲覧履歴が表示されます。</p>
-        ) : (
-          <div className="flex flex-col gap-2">
-            {historyItems.slice(0, 8).map(({ product, viewedAt }) => (
-              <div
-                key={product.id}
-                className="flex items-center justify-between gap-3 rounded-xl bg-[var(--c-surface-2)] border border-[var(--c-border)] px-3.5 py-2.5"
-              >
-                <div className="min-w-0">
-                  <p className="text-[12px] text-[var(--c-text)] truncate">{product.rawName}</p>
-                  <p className="text-[11px] text-[var(--c-text-3)] mt-0.5">{product.shopName}</p>
-                </div>
-                <p className="text-[10px] text-[var(--c-text-3)] shrink-0">{formatRelativeTime(viewedAt)}</p>
-              </div>
-            ))}
-          </div>
-        )}
-      </section>
-
-      <TasteProfile products={products} getRating={getRating} onOpenDetail={onOpenDetail} />
+      <button
+        onClick={onOpenAbout}
+        className="w-full flex items-center justify-between gap-3 rounded-2xl bg-[var(--c-surface)] border border-[var(--c-border)] p-4 text-left hover:border-[var(--accent-label)] transition-colors"
+      >
+        <span className="flex items-center gap-1.5">
+          <Info size={14} className="text-[var(--accent)]" strokeWidth={1.75} />
+          <span className="text-[14px] font-medium text-[var(--c-text)]">このアプリについて</span>
+        </span>
+        <ChevronRight size={16} className="text-[var(--c-text-3)]" strokeWidth={1.75} />
+      </button>
     </main>
   );
 }
