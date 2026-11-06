@@ -1,6 +1,6 @@
 import { useState, useMemo, useEffect, useCallback } from "react";
 import { Virtuoso } from "react-virtuoso";
-import { Search, X, SlidersHorizontal, Coffee, Bell, Info, MapPin, Sparkles, Shuffle, LocateFixed, Heart } from "lucide-react";
+import { Search, X, SlidersHorizontal, Coffee, Bell, Info, MapPin, Sparkles, Shuffle, LocateFixed, Heart, Settings } from "lucide-react";
 import { MOCK_PRODUCTS } from "./data/products";
 import { SHOPS } from "./data/shops";
 import { EVENTS } from "./data/events";
@@ -11,7 +11,7 @@ import { loadRemoteData } from "./data/remote";
 import { sortByDistance, sortNewArrivalsFirst, sortByRecency, pickRandomDisplaySet, filterByFavoriteArea, shuffle, sortShopsByDistance, filterShopsByFavoriteArea } from "./utils/productSort";
 import { buildPrefectureRank, sortByPrefecturePopularity } from "./utils/prefectureOrder";
 import { useFavorites } from "./hooks/useFavorites";
-import { useAccentTheme } from "./hooks/useAccentTheme";
+import { useColorTheme } from "./hooks/useColorTheme";
 import { usePremium } from "./hooks/usePremium";
 import { useToast } from "./hooks/useToast";
 import { useViewHistory } from "./hooks/useViewHistory";
@@ -68,7 +68,7 @@ export default function CoffeeProductList() {
     };
   }, []);
 
-  const { themeId, setThemeId, themes } = useAccentTheme();
+  const { themeId, setThemeId, themes } = useColorTheme();
   const { isPremium, setPremium } = usePremium();
   const { message: toastMessage, showToast, dismissToast } = useToast();
   const { favoriteIds, isFavorite, toggleFavorite, importFavorites } = useFavorites(isPremium, showToast);
@@ -390,22 +390,15 @@ export default function CoffeeProductList() {
     compareTrayVisible && adVisible ? "pb-[152px]" : compareTrayVisible || adVisible ? "pb-[104px]" : "pb-[48px]";
 
   return (
-    <div className={`min-h-full bg-[#231810] text-[#F2E9DD] ${bottomBarPadding}`}>
+    <div className={`min-h-full bg-[var(--c-bg)] text-[var(--c-text)] ${bottomBarPadding}`}>
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
-        :root {
-          --accent: #D4A24E;
-          --accent-soft: #E8C89A;
-          --accent-muted: #C9A876;
-          --accent-label: #8B5E2E;
-          --accent-glow: rgba(212, 162, 78, 0.35);
-        }
         .font-serif { font-family: 'Fraunces', serif; }
         * { font-family: 'Inter', sans-serif; }
         .font-mono { font-family: 'IBM Plex Mono', monospace; }
       `}</style>
 
-      <header className="px-5 pt-6 pb-3 border-b border-[#4A3A2A] sticky top-0 bg-[#231810]/95 backdrop-blur-sm z-10">
+      <header className="px-5 pt-6 pb-3 border-b border-[var(--c-border)] sticky top-0 bg-[var(--c-bg)]/95 backdrop-blur-sm z-10">
         <div className="flex items-start justify-between gap-3">
           <div>
             <p className="text-[11px] tracking-[0.2em] text-[var(--accent-label)] uppercase">
@@ -414,46 +407,58 @@ export default function CoffeeProductList() {
             <h1 className="font-serif text-[26px] leading-tight mt-1">
               近くの自家焙煎豆を探す
             </h1>
-            <p className="text-[12px] text-[#8B7361] mt-0.5">Find Local Roasters Near You</p>
+            <p className="text-[12px] text-[var(--c-text-3)] mt-0.5">Find Local Roasters Near You</p>
           </div>
           <div className="flex items-center shrink-0 mt-1">
             <button
               onClick={() => setAboutOpen(true)}
-              className="p-1.5 text-[#B8A891] hover:text-[#F2E9DD] transition-colors"
+              className="p-1.5 text-[var(--c-text-2)] hover:text-[var(--c-text)] transition-colors"
               aria-label="このアプリについて"
             >
               <Info size={20} strokeWidth={1.75} />
             </button>
             <button
               onClick={() => setAlertsPanelOpen(true)}
-              className="relative p-1.5 text-[#B8A891] hover:text-[#F2E9DD] transition-colors"
+              className="relative p-1.5 text-[var(--c-text-2)] hover:text-[var(--c-text)] transition-colors"
               aria-label="お知らせ"
             >
               <Bell size={20} strokeWidth={1.75} />
               {alerts.length > 0 && (
-                <span className="absolute top-0.5 right-0.5 min-w-[16px] h-4 px-1 rounded-full bg-[var(--accent)] text-[#231810] text-[10px] font-bold flex items-center justify-center">
+                <span className="absolute top-0.5 right-0.5 min-w-[16px] h-4 px-1 rounded-full bg-[var(--accent)] text-[var(--on-accent)] text-[10px] font-bold flex items-center justify-center">
                   {alerts.length > 9 ? "9+" : alerts.length}
                 </span>
               )}
             </button>
+            <button
+              onClick={() => { setTab("mypage"); setSelectedShop(null); }}
+              className={`p-1.5 transition-colors ${
+                tab === "mypage" ? "text-[var(--accent)]" : "text-[var(--c-text-2)] hover:text-[var(--c-text)]"
+              }`}
+              aria-label="マイページ"
+              aria-current={tab === "mypage" ? "page" : undefined}
+            >
+              <Settings size={20} strokeWidth={1.75} />
+            </button>
           </div>
         </div>
 
-        <div className="flex gap-1 mt-4 p-1 rounded-full bg-[#3B2211] w-fit overflow-x-auto max-w-full">
+        {/* スマホ幅(640px未満)では、アイコンを隠して余白を詰め、横スクロールなしで
+            5つのタブが収まるようにしている(360pxの端末で収まることを確認済み)。 */}
+        <div className="flex gap-1 mt-4 p-1 rounded-full bg-[var(--c-surface-2)] w-fit overflow-x-auto scrollbar-hide max-w-full">
           {TAB_ITEMS.map(({ id, icon: Icon, ja, en }) => (
             <button
               key={id}
               onClick={() => { setTab(id); setSelectedShop(null); }}
-              className={`flex items-center gap-1.5 shrink-0 px-3.5 py-1.5 rounded-full transition-colors ${
-                tab === id ? "bg-[var(--accent)] text-[#231810]" : "text-[#B8A891]"
+              className={`flex items-center gap-1.5 shrink-0 px-1.5 sm:px-3.5 py-1.5 rounded-full transition-colors ${
+                tab === id ? "bg-[var(--accent)] text-[var(--on-accent)]" : "text-[var(--c-text-2)]"
               }`}
             >
-              <Icon size={13} strokeWidth={2} />
+              <Icon size={13} strokeWidth={2} className="hidden sm:block" />
               <span className="flex flex-col items-start leading-none">
                 <span className="text-[13px] font-medium">{ja}</span>
                 <span
                   className={`text-[9px] tracking-wide uppercase mt-0.5 ${
-                    tab === id ? "text-[#231810]/70" : "text-[#B8A891]/60"
+                    tab === id ? "text-[var(--on-accent)]/70" : "text-[var(--c-text-2)]/60"
                   }`}
                 >
                   {en}
@@ -466,7 +471,7 @@ export default function CoffeeProductList() {
 
       {tab === "products" && !selectedShop && (
         <div className="px-5 pt-4 max-w-xl mx-auto">
-          <p className="text-[13px] text-[#8B7361]">
+          <p className="text-[13px] text-[var(--c-text-3)]">
             {displayed.length}件の商品(産地・精選方法・グレードで正規化済み)
           </p>
           <div className="flex items-center gap-1.5 mt-3 overflow-x-auto scrollbar-hide">
@@ -482,8 +487,8 @@ export default function CoffeeProductList() {
                   aria-pressed={isActive}
                   className={`flex items-center gap-1 shrink-0 text-[12px] px-3 py-1.5 rounded-full border transition-colors ${
                     isActive
-                      ? "bg-[var(--accent)] text-[#231810] border-[var(--accent)]"
-                      : "border-[#4A3A2A] text-[#B8A891]"
+                      ? "bg-[var(--accent)] text-[var(--on-accent)] border-[var(--accent)]"
+                      : "border-[var(--c-border)] text-[var(--c-text-2)]"
                   }`}
                 >
                   <Icon size={12} strokeWidth={2} />
@@ -493,7 +498,7 @@ export default function CoffeeProductList() {
             })}
           </div>
           {sortMode === "distance" && geolocation.status !== "success" && (
-            <div className="flex items-start gap-1 text-[11px] text-[#8B7361] mt-1.5">
+            <div className="flex items-start gap-1 text-[11px] text-[var(--c-text-3)] mt-1.5">
               <LocateFixed size={11} strokeWidth={1.75} className="shrink-0 mt-0.5" />
               <p>
                 {geolocation.status === "pending" && "位置情報を取得中です(取得できるまで全件表示しています)"}
@@ -526,31 +531,31 @@ export default function CoffeeProductList() {
             </div>
           )}
           {sortMode === "favoriteArea" && (
-            <p className="text-[11px] text-[#8B7361] mt-1.5">
+            <p className="text-[11px] text-[var(--c-text-3)] mt-1.5">
               {favoriteArea.prefecture
                 ? `登録エリア: ${favoriteArea.prefecture}${favoriteArea.city ? ` ${favoriteArea.city}` : ""}(マイページで変更できます)`
                 : "登録エリアが未登録です(マイページで登録できます)"}
             </p>
           )}
           {sortMode === "random" && (
-            <p className="text-[11px] text-[#8B7361] mt-1.5">
+            <p className="text-[11px] text-[var(--c-text-3)] mt-1.5">
               表示範囲: {displayRadiusOptions.find((o) => o.id === displayRadiusId)?.label}
               (マイページで変更できます)
             </p>
           )}
           <div className="relative mt-3">
-            <Search size={14} className="absolute left-3 top-1/2 -translate-y-1/2 text-[#8B7361]" strokeWidth={2} />
+            <Search size={14} className="absolute left-3 top-1/2 -translate-y-1/2 text-[var(--c-text-3)]" strokeWidth={2} />
             <input
               type="text"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder="商品名・産地・銘柄・店舗名・住所・駅名で検索"
-              className="w-full pl-9 pr-9 py-2.5 rounded-xl bg-[#2F241A] border border-[#4A3A2A] text-[13px] text-[#F2E9DD] placeholder:text-[#8B7361] focus:outline-none focus:border-[var(--accent-label)]"
+              className="w-full pl-9 pr-9 py-2.5 rounded-xl bg-[var(--c-surface)] border border-[var(--c-border)] text-[13px] text-[var(--c-text)] placeholder:text-[var(--c-text-3)] focus:outline-none focus:border-[var(--accent-label)]"
             />
             {searchQuery && (
               <button
                 onClick={() => setSearchQuery("")}
-                className="absolute right-3 top-1/2 -translate-y-1/2 text-[#8B7361] hover:text-[#F2E9DD]"
+                className="absolute right-3 top-1/2 -translate-y-1/2 text-[var(--c-text-3)] hover:text-[var(--c-text)]"
                 aria-label="検索をクリア"
               >
                 <X size={14} />
@@ -560,12 +565,12 @@ export default function CoffeeProductList() {
           <div className="flex items-center gap-2 mt-3">
             <button
               onClick={() => setSheetOpen(true)}
-              className="flex items-center gap-1.5 shrink-0 text-[13px] px-3.5 py-1.5 rounded-full border border-[var(--accent-label)] text-[var(--accent)] hover:bg-[#3B2211] transition-colors"
+              className="flex items-center gap-1.5 shrink-0 text-[13px] px-3.5 py-1.5 rounded-full border border-[var(--accent-label)] text-[var(--accent)] hover:bg-[var(--c-surface-2)] transition-colors"
             >
               <SlidersHorizontal size={13} strokeWidth={2} />
               絞り込み
               {activeCount > 0 && (
-                <span className="ml-0.5 text-[11px] bg-[var(--accent)] text-[#231810] rounded-full w-4 h-4 flex items-center justify-center font-medium">
+                <span className="ml-0.5 text-[11px] bg-[var(--accent)] text-[var(--on-accent)] rounded-full w-4 h-4 flex items-center justify-center font-medium">
                   {activeCount}
                 </span>
               )}
@@ -575,7 +580,7 @@ export default function CoffeeProductList() {
                 <button
                   key={`${dim}-${v}`}
                   onClick={() => removeFilter(dim, v)}
-                  className="shrink-0 flex items-center gap-1 text-[12px] pl-2.5 pr-1.5 py-1 rounded-full bg-[#3B2211] text-[var(--accent-muted)] border border-[#4A3A2A]"
+                  className="shrink-0 flex items-center gap-1 text-[12px] pl-2.5 pr-1.5 py-1 rounded-full bg-[var(--c-surface-2)] text-[var(--accent-muted)] border border-[var(--c-border)]"
                 >
                   {v}
                   <X size={11} />
@@ -583,7 +588,7 @@ export default function CoffeeProductList() {
               ))}
             </div>
           </div>
-          <label className="flex items-center gap-1.5 mt-2.5 text-[12px] text-[#8B7361] cursor-pointer select-none w-fit">
+          <label className="flex items-center gap-1.5 mt-2.5 text-[12px] text-[var(--c-text-3)] cursor-pointer select-none w-fit">
             <input
               type="checkbox"
               checked={showOutOfStock}
@@ -601,7 +606,7 @@ export default function CoffeeProductList() {
             <DiscoveryFactCard />
           </div>
           {displayed.length === 0 ? (
-            <div className="text-center py-16 text-[#8B7361]">
+            <div className="text-center py-16 text-[var(--c-text-3)]">
               <Coffee size={28} className="mx-auto mb-3 opacity-40" />
               {filtered.length === 0 ? (
                 <p className="text-[14px]">該当する商品が見つかりませんでした</p>
@@ -774,7 +779,7 @@ export default function CoffeeProductList() {
       />
       <AboutView open={aboutOpen} onClose={() => setAboutOpen(false)} />
 
-      <div className="fixed bottom-0 inset-x-0 z-20 bg-[#1C140D]/95 backdrop-blur-sm">
+      <div className="fixed bottom-0 inset-x-0 z-20 bg-[var(--c-bar)]/95 backdrop-blur-sm">
         {compareTrayVisible && (
           <CompareTray
             count={compareIds.length}

@@ -6,8 +6,8 @@ import { GLOSSARY_TERMS } from "../data/glossary";
 export function GlossaryItem({ item, open, onToggle }) {
   return (
     <div
-      className={`rounded-2xl bg-[#2F241A] border-2 overflow-hidden transition-colors ${
-        open ? "border-[var(--accent)]" : "border-[#4A3A2A]"
+      className={`rounded-2xl bg-[var(--c-surface)] border-2 overflow-hidden transition-colors ${
+        open ? "border-[var(--accent)]" : "border-[var(--c-border)]"
       }`}
     >
       <button
@@ -18,14 +18,14 @@ export function GlossaryItem({ item, open, onToggle }) {
           <span
             className={`text-[11px] px-2 py-0.5 rounded-full border transition-colors ${
               open
-                ? "bg-[var(--accent)] text-[#231810] border-[var(--accent)] font-medium"
-                : "bg-[#3B2211] text-[var(--accent-muted)] border-[#4A3A2A]"
+                ? "bg-[var(--accent)] text-[var(--on-accent)] border-[var(--accent)] font-medium"
+                : "bg-[var(--c-surface-2)] text-[var(--accent-muted)] border-[var(--c-border)]"
             }`}
           >
             {item.category}
           </span>
-          <h3 className="font-serif text-[17px] text-[#F2E9DD] mt-1.5">{item.term}</h3>
-          <p className="text-[13px] text-[#8B7361] mt-1">{item.summary}</p>
+          <h3 className="font-serif text-[17px] text-[var(--c-text)] mt-1.5">{item.term}</h3>
+          <p className="text-[13px] text-[var(--c-text-3)] mt-1">{item.summary}</p>
         </div>
         <ChevronDown
           size={16}
@@ -34,7 +34,7 @@ export function GlossaryItem({ item, open, onToggle }) {
       </button>
       {open && (
         <div className="px-4 pb-4 pt-0">
-          <p className="text-[13px] leading-relaxed text-[#B8A891] border-t border-[#4A3A2A] pt-3">
+          <p className="text-[13px] leading-relaxed text-[var(--c-text-2)] border-t border-[var(--c-border)] pt-3">
             {item.detail}
           </p>
         </div>
@@ -48,7 +48,7 @@ export function GlossaryView({ hideHeading = false }) {
   return (
     <main className="px-5 py-5 flex flex-col gap-3 max-w-xl mx-auto">
       {!hideHeading && <SectionHeading en="Glossary" ja="用語解説" />}
-      <p className="text-[13px] text-[#8B7361]">
+      <p className="text-[13px] text-[var(--c-text-3)]">
         精選方法・焙煎度・グレードなど、コーヒー豆選びに役立つ基礎用語をまとめました。
       </p>
       {GLOSSARY_TERMS.map((item) => (

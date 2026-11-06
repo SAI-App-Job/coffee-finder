@@ -11,7 +11,21 @@ const TERM_COLOR = (() => {
   return map;
 })();
 
-const termColor = (term) => TERM_COLOR.get(term) ?? "#8B7361";
+// 色の末尾に透明度(`33`等)を付けて使うため、変数ではなく16進の固定色で返す
+const termColor = (term) => TERM_COLOR.get(term) ?? "#8b7361";
+
+// 分類の色を背景に塗ったときに、コントラストが高くなる方の文字色(白/濃い茶)を返す。
+// 分類色は明るいもの(ゴールド等)から暗いもの(ロースト)まであるため、テーマとは無関係に色から決める。
+function readableOn(hex) {
+  const [r, g, b] = [1, 3, 5].map((i) => {
+    const v = parseInt(hex.slice(i, i + 2), 16) / 255;
+    return v <= 0.03928 ? v / 12.92 : ((v + 0.055) / 1.055) ** 2.4;
+  });
+  const lum = 0.2126 * r + 0.7152 * g + 0.0722 * b;
+  const contrastWithDark = (lum + 0.05) / (0.0095 + 0.05); // 濃い茶 #231810
+  const contrastWithWhite = 1.05 / (lum + 0.05);
+  return contrastWithDark >= contrastWithWhite ? "#231810" : "#ffffff";
+}
 
 // 記録済みの風味を色付きのチップで並べる(一覧表示用)
 export function FlavorChips({ flavors }) {
@@ -21,7 +35,7 @@ export function FlavorChips({ flavors }) {
       {flavors.map((term) => (
         <span
           key={term}
-          className="text-[11px] px-2 py-0.5 rounded-full border text-[#F2E9DD]"
+          className="text-[11px] px-2 py-0.5 rounded-full border text-[var(--c-text)]"
           style={{ borderColor: termColor(term), backgroundColor: `${termColor(term)}33` }}
         >
           {term}
@@ -48,7 +62,7 @@ export function FlavorPicker({ value, onChange }) {
           <button
             type="button"
             onClick={() => onChange([])}
-            className="shrink-0 text-[11px] text-[#8B7361] hover:text-[#F2E9DD] underline underline-offset-2"
+            className="shrink-0 text-[11px] text-[var(--c-text-3)] hover:text-[var(--c-text)] underline underline-offset-2"
           >
             すべて外す
           </button>
@@ -63,8 +77,8 @@ export function FlavorPicker({ value, onChange }) {
         return (
           <div
             key={cat.en}
-            className="rounded-xl bg-[#3B2211] border overflow-hidden"
-            style={{ borderColor: open || selectedCount > 0 ? cat.color : "#4A3A2A" }}
+            className="rounded-xl bg-[var(--c-surface-2)] border overflow-hidden"
+            style={{ borderColor: open || selectedCount > 0 ? cat.color : "var(--c-border)" }}
           >
             <button
               type="button"
@@ -74,11 +88,11 @@ export function FlavorPicker({ value, onChange }) {
             >
               <span className="flex items-center gap-2">
                 <span className="w-2.5 h-2.5 rounded-full shrink-0" style={{ backgroundColor: cat.color }} />
-                <span className="text-[13px] text-[#F2E9DD]">{cat.ja}</span>
+                <span className="text-[13px] text-[var(--c-text)]">{cat.ja}</span>
                 {selectedCount > 0 && (
                   <span
-                    className="text-[10px] px-1.5 py-0.5 rounded-full text-[#231810] font-medium"
-                    style={{ backgroundColor: cat.color }}
+                    className="text-[10px] px-1.5 py-0.5 rounded-full font-medium"
+                    style={{ backgroundColor: cat.color, color: readableOn(cat.color) }}
                   >
                     {selectedCount}
                   </span>
@@ -90,10 +104,10 @@ export function FlavorPicker({ value, onChange }) {
               />
             </button>
             {open && (
-              <div className="px-3 pb-3 pt-2.5 flex flex-col gap-2.5 border-t border-[#4A3A2A]">
+              <div className="px-3 pb-3 pt-2.5 flex flex-col gap-2.5 border-t border-[var(--c-border)]">
                 {cat.sub.map((s) => (
                   <div key={s.group}>
-                    <p className="text-[11px] text-[#8B7361] mb-1">{s.group}</p>
+                    <p className="text-[11px] text-[var(--c-text-3)] mb-1">{s.group}</p>
                     <div className="flex flex-wrap gap-1.5">
                       {s.terms.map((term) => {
                         const selected = value.includes(term);
@@ -105,10 +119,14 @@ export function FlavorPicker({ value, onChange }) {
                             aria-pressed={selected}
                             className={`text-[12px] px-2.5 py-1 rounded-full border transition-colors ${
                               selected
-                                ? "text-[#231810] font-medium"
-                                : "bg-[#2F241A] text-[var(--accent-muted)] border-[#4A3A2A] hover:border-[var(--accent-label)]"
+                                ? "font-medium"
+                                : "bg-[var(--c-surface)] text-[var(--accent-muted)] border-[var(--c-border)] hover:border-[var(--accent-label)]"
                             }`}
-                            style={selected ? { backgroundColor: cat.color, borderColor: cat.color } : undefined}
+                            style={
+                              selected
+                                ? { backgroundColor: cat.color, borderColor: cat.color, color: readableOn(cat.color) }
+                                : undefined
+                            }
                           >
                             {term}
                           </button>

@@ -24,14 +24,14 @@ export function FavoritesTabView({
   return (
     <div className="max-w-xl mx-auto">
       <div className="px-5 pt-5 flex justify-end">
-        <div className="flex gap-1 p-1 rounded-full bg-[#3B2211]">
+        <div className="flex gap-1 p-1 rounded-full bg-[var(--c-surface-2)]">
           {VIEW_MODES.map(({ id, icon: Icon, label }) => (
             <button
               key={id}
               onClick={() => setViewMode(id)}
               aria-pressed={viewMode === id}
               className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-[12px] font-medium transition-colors ${
-                viewMode === id ? "bg-[var(--accent)] text-[#231810]" : "text-[#B8A891]"
+                viewMode === id ? "bg-[var(--accent)] text-[var(--on-accent)]" : "text-[var(--c-text-2)]"
               }`}
             >
               <Icon size={13} strokeWidth={2} />

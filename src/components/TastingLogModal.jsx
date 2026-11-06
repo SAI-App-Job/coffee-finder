@@ -45,41 +45,41 @@ function LogEntryCard({ entry, onDelete }) {
   ].filter(Boolean);
 
   return (
-    <div className="rounded-xl bg-[#3B2211] border border-[#4A3A2A] p-3.5 flex flex-col gap-2.5">
+    <div className="rounded-xl bg-[var(--c-surface-2)] border border-[var(--c-border)] p-3.5 flex flex-col gap-2.5">
       <div className="flex items-start justify-between gap-3">
         <div className="flex items-center gap-2">
           <span
             className={`px-2 py-0.5 rounded-full text-[10px] border ${
               isShop
                 ? "border-[var(--accent)] text-[var(--accent)]"
-                : "border-[#4A3A2A] text-[#B8A891]"
+                : "border-[var(--c-border)] text-[var(--c-text-2)]"
             }`}
           >
             {isShop ? "店舗" : "自宅"}
           </span>
-          <p className="text-[11px] text-[#8B7361]">{formatDateTime(entry.recordedAt)}</p>
+          <p className="text-[11px] text-[var(--c-text-3)]">{formatDateTime(entry.recordedAt)}</p>
         </div>
         <button
           onClick={() => onDelete(entry.id)}
-          className="text-[#8B7361] hover:text-[#F2E9DD] transition-colors -m-1 p-1"
+          className="text-[var(--c-text-3)] hover:text-[var(--c-text)] transition-colors -m-1 p-1"
           aria-label="このログを削除"
         >
           <Trash2 size={13} />
         </button>
       </div>
       {!isShop && recipeParts.length > 0 && (
-        <p className="text-[12px] text-[#F2E9DD] leading-relaxed">{recipeParts.join(" ・ ")}</p>
+        <p className="text-[12px] text-[var(--c-text)] leading-relaxed">{recipeParts.join(" ・ ")}</p>
       )}
       {!isShop && (
         <div className="flex items-center gap-3">
           <DialInGauge value={entry.dialInScore ?? 0} size={72} />
           <div className="flex-1">
             <p className="text-[10px] text-[var(--accent-label)] uppercase tracking-wide">Dial-in Score</p>
-            <p className="text-[11px] text-[#8B7361] mt-0.5">目指した味にどれだけ近づけたか</p>
+            <p className="text-[11px] text-[var(--c-text-3)] mt-0.5">目指した味にどれだけ近づけたか</p>
           </div>
         </div>
       )}
-      {entry.note && <p className="text-[12px] text-[#B8A891] leading-relaxed">{entry.note}</p>}
+      {entry.note && <p className="text-[12px] text-[var(--c-text-2)] leading-relaxed">{entry.note}</p>}
       <FlavorChips flavors={entry.flavors} />
     </div>
   );
@@ -134,7 +134,7 @@ export function TastingLogModal({ product, logs, onAddLog, onDeleteLog, onClose 
       onClick={onClose}
     >
       <div
-        className="w-full sm:w-[440px] max-h-[85vh] overflow-y-auto bg-[#2F241A] border border-[#4A3A2A] rounded-t-2xl sm:rounded-2xl p-5"
+        className="w-full sm:w-[440px] max-h-[85vh] overflow-y-auto bg-[var(--c-surface)] border border-[var(--c-border)] rounded-t-2xl sm:rounded-2xl p-5"
         onClick={(e) => e.stopPropagation()}
       >
         <div className="flex items-start justify-between gap-3 mb-4">
@@ -142,7 +142,7 @@ export function TastingLogModal({ product, logs, onAddLog, onDeleteLog, onClose 
             {mode === "form" && (
               <button
                 onClick={() => setMode("list")}
-                className="shrink-0 text-[#8B7361] hover:text-[#F2E9DD] transition-colors -m-1 p-1"
+                className="shrink-0 text-[var(--c-text-3)] hover:text-[var(--c-text)] transition-colors -m-1 p-1"
                 aria-label="一覧に戻る"
               >
                 <ArrowLeft size={18} />
@@ -152,14 +152,14 @@ export function TastingLogModal({ product, logs, onAddLog, onDeleteLog, onClose 
               <p className="text-[11px] tracking-wider text-[var(--accent-label)] uppercase">
                 {mode === "list" ? "Tasting Log" : "New Log"}
               </p>
-              <h3 className="font-serif text-[17px] text-[#F2E9DD] mt-0.5 leading-snug truncate">
+              <h3 className="font-serif text-[17px] text-[var(--c-text)] mt-0.5 leading-snug truncate">
                 {product.rawName}
               </h3>
             </div>
           </div>
           <button
             onClick={onClose}
-            className="shrink-0 text-[#8B7361] hover:text-[#F2E9DD] transition-colors min-w-[36px] min-h-[36px] flex items-center justify-center -m-2"
+            className="shrink-0 text-[var(--c-text-3)] hover:text-[var(--c-text)] transition-colors min-w-[36px] min-h-[36px] flex items-center justify-center -m-2"
             aria-label="閉じる"
           >
             <X size={18} />
@@ -170,18 +170,18 @@ export function TastingLogModal({ product, logs, onAddLog, onDeleteLog, onClose 
           <div className="flex flex-col gap-3">
             <button
               onClick={() => setMode("form")}
-              className="flex items-center justify-center gap-1.5 py-2.5 rounded-xl bg-[var(--accent)] text-[#231810] text-[13px] font-medium hover:bg-[var(--accent-soft)] transition-colors"
+              className="flex items-center justify-center gap-1.5 py-2.5 rounded-xl bg-[var(--accent)] text-[var(--on-accent)] text-[13px] font-medium hover:bg-[var(--accent-soft)] transition-colors"
             >
               <Plus size={14} strokeWidth={2} />
               新しく記録する
             </button>
             {logs.length === 0 ? (
-              <p className="text-[12px] text-[#8B7361] text-center py-8">
+              <p className="text-[12px] text-[var(--c-text-3)] text-center py-8">
                 まだ記録がありません。自宅で淹れたときは抽出条件とDial-in Score、店舗で飲んだときはテイスティングノートを記録できます。
               </p>
             ) : (
               <>
-                <p className="text-[11px] text-[#8B7361]">
+                <p className="text-[11px] text-[var(--c-text-3)]">
                   同じ豆の記録を見比べられます({logs.length}件)
                 </p>
                 {logs.map((entry) => (
@@ -192,7 +192,7 @@ export function TastingLogModal({ product, logs, onAddLog, onDeleteLog, onClose 
           </div>
         ) : (
           <div className="flex flex-col gap-4">
-            <div className="grid grid-cols-2 gap-1 p-1 rounded-xl bg-[#3B2211] border border-[#4A3A2A]">
+            <div className="grid grid-cols-2 gap-1 p-1 rounded-xl bg-[var(--c-surface-2)] border border-[var(--c-border)]">
               {PLACES.map((place) => (
                 <button
                   key={place.value}
@@ -201,8 +201,8 @@ export function TastingLogModal({ product, logs, onAddLog, onDeleteLog, onClose 
                   aria-pressed={form.place === place.value}
                   className={`py-2 rounded-lg text-[12px] transition-colors ${
                     form.place === place.value
-                      ? "bg-[var(--accent)] text-[#231810] font-medium"
-                      : "text-[#B8A891] hover:text-[#F2E9DD]"
+                      ? "bg-[var(--accent)] text-[var(--on-accent)] font-medium"
+                      : "text-[var(--c-text-2)] hover:text-[var(--c-text)]"
                   }`}
                 >
                   {place.label}
@@ -221,7 +221,7 @@ export function TastingLogModal({ product, logs, onAddLog, onDeleteLog, onClose 
                 value={form.brewMethod}
                 onChange={(e) => setForm((f) => ({ ...f, brewMethod: e.target.value }))}
                 placeholder="例: V60、エアロプレス、エスプレッソ"
-                className="w-full px-3 py-2 rounded-lg bg-[#3B2211] border border-[#4A3A2A] text-[13px] text-[#F2E9DD] placeholder:text-[#8B7361] focus:outline-none focus:border-[var(--accent)]"
+                className="w-full px-3 py-2 rounded-lg bg-[var(--c-surface-2)] border border-[var(--c-border)] text-[13px] text-[var(--c-text)] placeholder:text-[var(--c-text-3)] focus:outline-none focus:border-[var(--accent)]"
               />
             </div>
 
@@ -235,7 +235,7 @@ export function TastingLogModal({ product, logs, onAddLog, onDeleteLog, onClose 
                   inputMode="decimal"
                   value={form.doseG}
                   onChange={(e) => setForm((f) => ({ ...f, doseG: e.target.value }))}
-                  className="w-full px-3 py-2 rounded-lg bg-[#3B2211] border border-[#4A3A2A] text-[13px] text-[#F2E9DD] focus:outline-none focus:border-[var(--accent)]"
+                  className="w-full px-3 py-2 rounded-lg bg-[var(--c-surface-2)] border border-[var(--c-border)] text-[13px] text-[var(--c-text)] focus:outline-none focus:border-[var(--accent)]"
                 />
               </div>
               <div>
@@ -247,11 +247,11 @@ export function TastingLogModal({ product, logs, onAddLog, onDeleteLog, onClose 
                   inputMode="decimal"
                   value={form.waterG}
                   onChange={(e) => setForm((f) => ({ ...f, waterG: e.target.value }))}
-                  className="w-full px-3 py-2 rounded-lg bg-[#3B2211] border border-[#4A3A2A] text-[13px] text-[#F2E9DD] focus:outline-none focus:border-[var(--accent)]"
+                  className="w-full px-3 py-2 rounded-lg bg-[var(--c-surface-2)] border border-[var(--c-border)] text-[13px] text-[var(--c-text)] focus:outline-none focus:border-[var(--accent)]"
                 />
               </div>
             </div>
-            {ratio && <p className="text-[12px] text-[#8B7361] -mt-2">比率(自動計算): {ratio}</p>}
+            {ratio && <p className="text-[12px] text-[var(--c-text-3)] -mt-2">比率(自動計算): {ratio}</p>}
 
             <div>
               <label className="text-[11px] tracking-wide text-[var(--accent-label)] uppercase mb-1 block">
@@ -262,7 +262,7 @@ export function TastingLogModal({ product, logs, onAddLog, onDeleteLog, onClose 
                 value={form.grindSize}
                 onChange={(e) => setForm((f) => ({ ...f, grindSize: e.target.value }))}
                 placeholder="例: 中細挽き、コマンダンテ20クリック"
-                className="w-full px-3 py-2 rounded-lg bg-[#3B2211] border border-[#4A3A2A] text-[13px] text-[#F2E9DD] placeholder:text-[#8B7361] focus:outline-none focus:border-[var(--accent)]"
+                className="w-full px-3 py-2 rounded-lg bg-[var(--c-surface-2)] border border-[var(--c-border)] text-[13px] text-[var(--c-text)] placeholder:text-[var(--c-text-3)] focus:outline-none focus:border-[var(--accent)]"
               />
             </div>
 
@@ -276,7 +276,7 @@ export function TastingLogModal({ product, logs, onAddLog, onDeleteLog, onClose 
                   inputMode="decimal"
                   value={form.waterTempC}
                   onChange={(e) => setForm((f) => ({ ...f, waterTempC: e.target.value }))}
-                  className="w-full px-3 py-2 rounded-lg bg-[#3B2211] border border-[#4A3A2A] text-[13px] text-[#F2E9DD] focus:outline-none focus:border-[var(--accent)]"
+                  className="w-full px-3 py-2 rounded-lg bg-[var(--c-surface-2)] border border-[var(--c-border)] text-[13px] text-[var(--c-text)] focus:outline-none focus:border-[var(--accent)]"
                 />
               </div>
               <div>
@@ -288,7 +288,7 @@ export function TastingLogModal({ product, logs, onAddLog, onDeleteLog, onClose 
                   value={form.brewTime}
                   onChange={(e) => setForm((f) => ({ ...f, brewTime: e.target.value }))}
                   placeholder="例: 2:30"
-                  className="w-full px-3 py-2 rounded-lg bg-[#3B2211] border border-[#4A3A2A] text-[13px] text-[#F2E9DD] placeholder:text-[#8B7361] focus:outline-none focus:border-[var(--accent)]"
+                  className="w-full px-3 py-2 rounded-lg bg-[var(--c-surface-2)] border border-[var(--c-border)] text-[13px] text-[var(--c-text)] placeholder:text-[var(--c-text-3)] focus:outline-none focus:border-[var(--accent)]"
                 />
               </div>
             </div>
@@ -300,7 +300,7 @@ export function TastingLogModal({ product, logs, onAddLog, onDeleteLog, onClose 
                   Dial-in Score
                 </label>
               </div>
-              <p className="text-[11px] text-[#8B7361] mb-3">目指した味にどれだけ近づけられたか</p>
+              <p className="text-[11px] text-[var(--c-text-3)] mb-3">目指した味にどれだけ近づけられたか</p>
               <div className="flex items-center gap-4">
                 <DialInGauge value={Number(form.dialInScore)} size={88} />
                 <input
@@ -329,7 +329,7 @@ export function TastingLogModal({ product, logs, onAddLog, onDeleteLog, onClose 
                     ? "店で飲んだときの香り・酸味・甘み・後味など、感じたことを自由に"
                     : "香り・酸味・甘み・後味など、感じたことを自由に"
                 }
-                className="w-full px-3 py-2 rounded-lg bg-[#3B2211] border border-[#4A3A2A] text-[13px] text-[#F2E9DD] placeholder:text-[#8B7361] focus:outline-none focus:border-[var(--accent)] resize-none"
+                className="w-full px-3 py-2 rounded-lg bg-[var(--c-surface-2)] border border-[var(--c-border)] text-[13px] text-[var(--c-text)] placeholder:text-[var(--c-text-3)] focus:outline-none focus:border-[var(--accent)] resize-none"
               />
             </div>
 
@@ -337,7 +337,7 @@ export function TastingLogModal({ product, logs, onAddLog, onDeleteLog, onClose 
               <label className="text-[11px] tracking-wide text-[var(--accent-label)] uppercase mb-1 block">
                 風味
               </label>
-              <p className="text-[11px] text-[#8B7361] mb-2">感じた風味を複数選べます(分類をタップすると詳細が開きます)</p>
+              <p className="text-[11px] text-[var(--c-text-3)] mb-2">感じた風味を複数選べます(分類をタップすると詳細が開きます)</p>
               <FlavorPicker
                 value={form.flavors}
                 onChange={(flavors) => setForm((f) => ({ ...f, flavors }))}
@@ -347,7 +347,7 @@ export function TastingLogModal({ product, logs, onAddLog, onDeleteLog, onClose 
             <button
               onClick={handleSubmit}
               disabled={!canSubmit}
-              className="flex items-center justify-center gap-1.5 py-2.5 rounded-xl bg-[var(--accent)] text-[#231810] text-[13px] font-medium hover:bg-[var(--accent-soft)] transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
+              className="flex items-center justify-center gap-1.5 py-2.5 rounded-xl bg-[var(--accent)] text-[var(--on-accent)] text-[13px] font-medium hover:bg-[var(--accent-soft)] transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
             >
               <NotebookPen size={14} strokeWidth={2} />
               この記録を保存

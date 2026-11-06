@@ -233,10 +233,10 @@ export function OriginMapView({ origins, selected, onSelect }) {
   };
 
   return (
-    <div className="rounded-2xl bg-[#2F241A] border border-[#4A3A2A]" style={{ padding: 16 }}>
+    <div className="rounded-2xl bg-[var(--c-surface)] border border-[var(--c-border)]" style={{ padding: 16 }}>
       <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 8 }}>
         <p className="text-[11px] tracking-[0.15em] text-[var(--accent-label)] uppercase">Coffee Belt Map</p>
-        <span className="text-[10px] text-[#8B7361]">ピンチ/ホイールで拡大縮小、ドラッグで移動</span>
+        <span className="text-[10px] text-[var(--c-text-3)]">ピンチ/ホイールで拡大縮小、ドラッグで移動</span>
       </div>
 
       <div style={{ display: "flex", alignItems: "center", gap: 6, marginBottom: 8, flexWrap: "wrap" }}>
@@ -244,7 +244,7 @@ export function OriginMapView({ origins, selected, onSelect }) {
           <button
             key={region}
             onClick={() => setViewBox(MAP_REGION_PRESETS[region])}
-            className="text-[11px] px-3 py-1 rounded-full border border-[var(--accent-label)] text-[var(--accent)] hover:bg-[#3B2211] transition-colors"
+            className="text-[11px] px-3 py-1 rounded-full border border-[var(--accent-label)] text-[var(--accent)] hover:bg-[var(--c-surface-2)] transition-colors"
           >
             {region}
           </button>
@@ -252,7 +252,7 @@ export function OriginMapView({ origins, selected, onSelect }) {
         {isZoomed && (
           <button
             onClick={resetZoom}
-            className="text-[11px] px-3 py-1 rounded-full border border-[#4A3A2A] text-[#8B7361] hover:text-[var(--accent)] transition-colors"
+            className="text-[11px] px-3 py-1 rounded-full border border-[var(--c-border)] text-[var(--c-text-3)] hover:text-[var(--accent)] transition-colors"
           >
             全体表示
           </button>
@@ -277,11 +277,11 @@ export function OriginMapView({ origins, selected, onSelect }) {
           cursor: isDragging ? "grabbing" : "grab",
         }}
       >
-        <rect x="80" y="108" width="920" height="284" fill="#1C140D" />
+        <rect x="80" y="108" width="920" height="284" fill="var(--c-sea)" />
 
         {/* 大陸の輪郭(背景) */}
         {Object.entries(CONTINENT_PATHS).map(([name, d]) => (
-          <path key={name} d={d} fill="#2F241A" stroke="#3B2211" strokeWidth="0.6" />
+          <path key={name} d={d} fill="var(--c-surface)" stroke="var(--c-surface-2)" strokeWidth="0.6" />
         ))}
 
         {/* 赤道の帯(正距円筒図法でlat=0はy=250) */}
@@ -289,7 +289,7 @@ export function OriginMapView({ origins, selected, onSelect }) {
         <text x="88" y="244" fontSize="11" fill="var(--accent-label)" opacity="0.8">赤道</text>
 
         {/* 日本(特別な強調はせず、大陸と同じ背景色で自然に溶け込ませる) */}
-        <path d={JAPAN_PATH} fill="#2F241A" stroke="#3B2211" strokeWidth="0.6" />
+        <path d={JAPAN_PATH} fill="var(--c-surface)" stroke="var(--c-surface-2)" strokeWidth="0.6" />
 
         {/* 対象国(強調表示) */}
         {Object.entries(COUNTRY_PATHS).map(([name, d]) => (
@@ -352,7 +352,7 @@ export function OriginMapView({ origins, selected, onSelect }) {
                   cy={pos.y}
                   r={selected_ ? 6 : 4.5}
                   fill={selected_ ? "var(--accent)" : "var(--accent-soft)"}
-                  stroke="#231810"
+                  stroke="var(--c-bg)"
                   strokeWidth="1"
                 />
                 {override && (
@@ -361,7 +361,7 @@ export function OriginMapView({ origins, selected, onSelect }) {
                     y1={pos.y}
                     x2={labelX}
                     y2={lineEndY}
-                    stroke={selected_ ? "var(--accent)" : "#8B7361"}
+                    stroke={selected_ ? "var(--accent)" : "var(--c-text-3)"}
                     strokeWidth="0.8"
                   />
                 )}
@@ -371,7 +371,7 @@ export function OriginMapView({ origins, selected, onSelect }) {
                   width={textWidth}
                   height="16"
                   rx="8"
-                  fill={selected_ ? "var(--accent)" : "#3B2211"}
+                  fill={selected_ ? "var(--accent)" : "var(--c-surface-2)"}
                   fillOpacity="0.95"
                 />
                 <text
@@ -379,7 +379,7 @@ export function OriginMapView({ origins, selected, onSelect }) {
                   y={labelY}
                   fontSize="10.5"
                   textAnchor={anchor}
-                  fill={selected_ ? "#231810" : "#B8A891"}
+                  fill={selected_ ? "var(--on-accent)" : "var(--c-text-2)"}
                   fontWeight={selected_ ? "600" : "400"}
                 >
                   {origin.country}

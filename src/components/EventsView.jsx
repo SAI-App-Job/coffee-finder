@@ -4,16 +4,16 @@ import { EVENT_TYPE_LABELS } from "../data/events";
 import { JAPAN_COMPETITIONS } from "../data/japanCompetitions";
 
 export function EventCard({ event, onLearnOrigin }) {
-  const typeInfo = EVENT_TYPE_LABELS[event.eventType] || { ja: event.eventType, color: "#8B7361" };
+  const typeInfo = EVENT_TYPE_LABELS[event.eventType] || { ja: event.eventType, color: "var(--c-text-3)" };
   return (
-    <div className="rounded-2xl bg-[#2F241A] border border-[#4A3A2A] p-4 flex flex-col gap-2">
+    <div className="rounded-2xl bg-[var(--c-surface)] border border-[var(--c-border)] p-4 flex flex-col gap-2">
       <div className="flex items-start justify-between gap-2">
         <div>
           <p className="text-[11px] tracking-[0.1em] text-[var(--accent-label)] uppercase">
             {event.source}
             {event.shopLocationLabel ? ` ・ ${event.shopLocationLabel}` : ""}
           </p>
-          <h3 className="font-serif text-[16px] text-[#F2E9DD] mt-0.5">{event.name}</h3>
+          <h3 className="font-serif text-[16px] text-[var(--c-text)] mt-0.5">{event.name}</h3>
         </div>
         <span
           className="shrink-0 text-[11px] px-2 py-0.5 rounded-full font-medium"
@@ -23,7 +23,7 @@ export function EventCard({ event, onLearnOrigin }) {
         </span>
       </div>
 
-      <div className="flex flex-col gap-1 text-[12px] text-[#B8A891]">
+      <div className="flex flex-col gap-1 text-[12px] text-[var(--c-text-2)]">
         <div className="flex items-center gap-1.5">
           <Calendar size={12} className="text-[var(--accent-label)] shrink-0" strokeWidth={1.75} />
           <span>{event.dateRange}</span>
@@ -34,7 +34,7 @@ export function EventCard({ event, onLearnOrigin }) {
         </div>
       </div>
 
-      <p className="text-[12px] text-[#8B7361] leading-relaxed border-t border-[#4A3A2A] pt-2">{event.note}</p>
+      <p className="text-[12px] text-[var(--c-text-3)] leading-relaxed border-t border-[var(--c-border)] pt-2">{event.note}</p>
 
       <div className="flex items-center justify-between pt-1">
         {event.relatedCountry && event.relatedCountry !== "日本" ? (
@@ -51,7 +51,7 @@ export function EventCard({ event, onLearnOrigin }) {
           href={event.sourceUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center gap-1 text-[11px] text-[#8B7361] hover:text-[#B8A891] transition-colors"
+          className="flex items-center gap-1 text-[11px] text-[var(--c-text-3)] hover:text-[var(--c-text-2)] transition-colors"
         >
           公式サイト
           <ExternalLink size={11} />
@@ -63,23 +63,23 @@ export function EventCard({ event, onLearnOrigin }) {
 
 export function JapanCompetitionCard({ competition }) {
   return (
-    <div className="rounded-2xl bg-[#2F241A] border border-[#4A3A2A] p-4 flex flex-col gap-2.5">
+    <div className="rounded-2xl bg-[var(--c-surface)] border border-[var(--c-border)] p-4 flex flex-col gap-2.5">
       <div className="flex items-center gap-2">
-        <span className="shrink-0 text-[11px] px-2 py-0.5 rounded-full bg-[var(--accent)] text-[#231810] font-medium font-mono">
+        <span className="shrink-0 text-[11px] px-2 py-0.5 rounded-full bg-[var(--accent)] text-[var(--on-accent)] font-medium font-mono">
           {competition.abbr}
         </span>
-        <h3 className="font-serif text-[16px] text-[#F2E9DD]">{competition.name}</h3>
+        <h3 className="font-serif text-[16px] text-[var(--c-text)]">{competition.name}</h3>
       </div>
       <p className="text-[13px] text-[var(--accent)]">{competition.tagline}</p>
 
-      <p className="text-[12px] text-[#B8A891] leading-relaxed border-t border-[#4A3A2A] pt-2.5">
+      <p className="text-[12px] text-[var(--c-text-2)] leading-relaxed border-t border-[var(--c-border)] pt-2.5">
         {competition.history}
       </p>
       {competition.format && (
-        <p className="text-[12px] text-[#B8A891] leading-relaxed">{competition.format}</p>
+        <p className="text-[12px] text-[var(--c-text-2)] leading-relaxed">{competition.format}</p>
       )}
       {competition.latestResult && (
-        <p className="text-[12px] text-[#8B7361] leading-relaxed bg-[#3B2211] rounded-lg p-2.5">
+        <p className="text-[12px] text-[var(--c-text-3)] leading-relaxed bg-[var(--c-surface-2)] rounded-lg p-2.5">
           {competition.latestResult}
         </p>
       )}
@@ -91,7 +91,7 @@ export function JapanCompetitionCard({ competition }) {
             href={source.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-1 text-[11px] text-[#8B7361] hover:text-[#B8A891] transition-colors"
+            className="flex items-center gap-1 text-[11px] text-[var(--c-text-3)] hover:text-[var(--c-text-2)] transition-colors"
           >
             {source.label}
             <ExternalLink size={11} />
@@ -108,20 +108,20 @@ export function JapanCompetitionCard({ competition }) {
 export function WorldChampionshipCard({ event }) {
   const concluded = Boolean(event.note);
   return (
-    <div className="rounded-2xl bg-[#2F241A] border border-[#4A3A2A] p-4 flex flex-col gap-2">
+    <div className="rounded-2xl bg-[var(--c-surface)] border border-[var(--c-border)] p-4 flex flex-col gap-2">
       <div className="flex items-start justify-between gap-2">
-        <h4 className="font-serif text-[15px] text-[#F2E9DD]">{event.name}</h4>
+        <h4 className="font-serif text-[15px] text-[var(--c-text)]">{event.name}</h4>
         <span
           className={`shrink-0 text-[11px] px-2 py-0.5 rounded-full font-medium ${
             concluded
-              ? "bg-[#3B2211] text-[#8B7361] border border-[#4A3A2A]"
-              : "bg-[var(--accent)] text-[#231810]"
+              ? "bg-[var(--c-surface-2)] text-[var(--c-text-3)] border border-[var(--c-border)]"
+              : "bg-[var(--accent)] text-[var(--on-accent)]"
           }`}
         >
           {concluded ? "開催済み" : "開催予定"}
         </span>
       </div>
-      <div className="flex flex-col gap-1 text-[12px] text-[#B8A891]">
+      <div className="flex flex-col gap-1 text-[12px] text-[var(--c-text-2)]">
         <div className="flex items-center gap-1.5">
           <Calendar size={12} className="text-[var(--accent-label)] shrink-0" strokeWidth={1.75} />
           <span>{event.dateRange}</span>
@@ -132,13 +132,13 @@ export function WorldChampionshipCard({ event }) {
         </div>
       </div>
       {event.note && (
-        <p className="text-[12px] text-[#8B7361] leading-relaxed border-t border-[#4A3A2A] pt-2">{event.note}</p>
+        <p className="text-[12px] text-[var(--c-text-3)] leading-relaxed border-t border-[var(--c-border)] pt-2">{event.note}</p>
       )}
       <a
         href={event.sourceUrl}
         target="_blank"
         rel="noopener noreferrer"
-        className="self-end flex items-center gap-1 text-[11px] text-[#8B7361] hover:text-[#B8A891] transition-colors"
+        className="self-end flex items-center gap-1 text-[11px] text-[var(--c-text-3)] hover:text-[var(--c-text-2)] transition-colors"
       >
         公式サイト
         <ExternalLink size={11} />
@@ -155,7 +155,7 @@ export function EventsView({ hideHeading = false, onLearnOrigin, events }) {
   return (
     <main className="px-5 py-5 flex flex-col gap-3 max-w-xl mx-auto">
       {!hideHeading && <SectionHeading en="Events" ja="イベント" />}
-      <p className="text-[13px] text-[#8B7361]">
+      <p className="text-[13px] text-[var(--c-text-3)]">
         国内展示会・フェスティバル・国際品評会の開催スケジュールをまとめました。世界大会(WCC)は競技会タブでご覧いただけます。産地に関連するイベントはタップして産地タブへ移動できます。
       </p>
       <div className="flex flex-col gap-2.5">
@@ -194,9 +194,9 @@ export function CompetitionsView({ hideHeading = false, events = [] }) {
         <div className="flex flex-col gap-2.5">
           <div className="flex items-center gap-1.5">
             <Globe2 size={14} className="text-[var(--accent)]" strokeWidth={1.75} />
-            <h3 className="text-[14px] font-medium text-[#F2E9DD]">世界大会(WCC)</h3>
+            <h3 className="text-[14px] font-medium text-[var(--c-text)]">世界大会(WCC)</h3>
           </div>
-          <p className="text-[13px] text-[#8B7361] -mt-1">
+          <p className="text-[13px] text-[var(--c-text-3)] -mt-1">
             World Coffee Championshipsが年間を通じて世界各地で開催する大会。開催日順に並んでいます。
           </p>
           <div className="flex flex-col gap-2.5">
@@ -207,12 +207,12 @@ export function CompetitionsView({ hideHeading = false, events = [] }) {
         </div>
       )}
 
-      <div className="flex flex-col gap-2.5 pt-2 border-t border-[#4A3A2A]">
+      <div className="flex flex-col gap-2.5 pt-2 border-t border-[var(--c-border)]">
         <div className="flex items-center gap-1.5">
           <Trophy size={14} className="text-[var(--accent)]" strokeWidth={1.75} />
-          <h3 className="text-[14px] font-medium text-[#F2E9DD]">日本国内の主要競技会(SCAJ主催)</h3>
+          <h3 className="text-[14px] font-medium text-[var(--c-text)]">日本国内の主要競技会(SCAJ主催)</h3>
         </div>
-        <p className="text-[13px] text-[#8B7361] -mt-1">
+        <p className="text-[13px] text-[var(--c-text-3)] -mt-1">
           SCAJ(日本スペシャルティコーヒー協会)が主催する国内競技会9大会。優勝者の多くは世界大会へ日本代表として出場する。
         </p>
         <div className="flex flex-col gap-2.5">

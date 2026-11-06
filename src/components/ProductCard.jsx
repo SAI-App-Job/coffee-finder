@@ -22,7 +22,7 @@ export function DiscoveryFactCard() {
   };
 
   return (
-    <div className="rounded-2xl bg-[#2F241A] border border-[#4A3A2A] p-4 flex flex-col gap-2">
+    <div className="rounded-2xl bg-[var(--c-surface)] border border-[var(--c-border)] p-4 flex flex-col gap-2">
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-1.5">
           <Sparkles size={13} className="text-[var(--accent)]" strokeWidth={1.75} />
@@ -30,13 +30,13 @@ export function DiscoveryFactCard() {
         </div>
         <button
           onClick={showAnother}
-          className="text-[11px] text-[#8B7361] hover:text-[var(--accent)] transition-colors"
+          className="text-[11px] text-[var(--c-text-3)] hover:text-[var(--accent)] transition-colors"
         >
           別の話を見る
         </button>
       </div>
-      <h3 className="font-serif text-[16px] text-[#F2E9DD]">{fact.title}</h3>
-      <p className="text-[13px] leading-relaxed text-[#B8A891]">{fact.text}</p>
+      <h3 className="font-serif text-[16px] text-[var(--c-text)]">{fact.title}</h3>
+      <p className="text-[13px] leading-relaxed text-[var(--c-text-2)]">{fact.text}</p>
     </div>
   );
 }
@@ -61,7 +61,7 @@ export function HoverExplainTag({ label, category, detail }) {
           e.stopPropagation();
           setOpen((o) => !o);
         }}
-        className="text-[11px] px-2 py-0.5 rounded-full bg-[#3B2211] text-[var(--accent-muted)] border border-[#4A3A2A] border-dashed hover:border-[var(--accent)] hover:text-[var(--accent)] transition-colors"
+        className="text-[11px] px-2 py-0.5 rounded-full bg-[var(--c-surface-2)] text-[var(--accent-muted)] border border-[var(--c-border)] border-dashed hover:border-[var(--accent)] hover:text-[var(--accent)] transition-colors"
       >
         {label}
       </button>
@@ -77,7 +77,7 @@ export function HoverExplainTag({ label, category, detail }) {
             width: 224,
             borderRadius: 12,
             backgroundColor: "#100b07",
-            border: "1px solid #4A3A2A",
+            border: "1px solid var(--c-border)",
             padding: 12,
             boxShadow: "0 8px 24px rgba(0,0,0,0.55)",
           }}
@@ -115,7 +115,7 @@ export function HoverExplainTag({ label, category, detail }) {
               height: 0,
               borderLeft: "6px solid transparent",
               borderRight: "6px solid transparent",
-              borderTop: "6px solid #4A3A2A",
+              borderTop: "6px solid var(--c-border)",
             }}
           />
         </div>
@@ -145,7 +145,7 @@ function ProductCardImpl({ product, onOpenMap, onLearnOrigin, isFavorite, onTogg
 
   return (
     <div
-      className={`relative rounded-2xl bg-[#2F241A] border border-[#4A3A2A] flex ${onOpenDetail ? "cursor-pointer" : ""}`}
+      className={`relative rounded-2xl bg-[var(--c-surface)] border border-[var(--c-border)] flex ${onOpenDetail ? "cursor-pointer" : ""}`}
       onClick={() => onOpenDetail?.(product)}
       role={onOpenDetail ? "button" : undefined}
       tabIndex={onOpenDetail ? 0 : undefined}
@@ -174,7 +174,7 @@ function ProductCardImpl({ product, onOpenMap, onLearnOrigin, isFavorite, onTogg
                 blendCountries.map((country) => (
                   <span
                     key={country}
-                    className="text-[11px] px-2 py-0.5 rounded-full bg-[#3B2211] text-[var(--accent-muted)] border border-[#4A3A2A]"
+                    className="text-[11px] px-2 py-0.5 rounded-full bg-[var(--c-surface-2)] text-[var(--accent-muted)] border border-[var(--c-border)]"
                   >
                     {country}
                   </span>
@@ -188,7 +188,7 @@ function ProductCardImpl({ product, onOpenMap, onLearnOrigin, isFavorite, onTogg
                 <span
                   className={`text-[10px] px-1.5 py-0.5 rounded-full font-medium leading-none ${
                     product.stockStatus === "終売"
-                      ? "bg-[#3B2211] text-[#8B7361] border border-[#4A3A2A]"
+                      ? "bg-[var(--c-surface-2)] text-[var(--c-text-3)] border border-[var(--c-border)]"
                       : "bg-[#4A2E12] text-[#E8B86D] border border-[#6B4A22]"
                   }`}
                 >
@@ -196,12 +196,12 @@ function ProductCardImpl({ product, onOpenMap, onLearnOrigin, isFavorite, onTogg
                 </span>
               )}
               {isNewArrival(product) && (
-                <span className="text-[10px] px-1.5 py-0.5 rounded-full font-medium leading-none bg-[var(--accent-glow)] text-[var(--accent)] border border-[var(--accent-label)]">
+                <span className="text-[10px] px-1.5 py-0.5 rounded-full font-medium leading-none bg-[var(--accent-glow)] text-[var(--accent-on-glow)] border border-[var(--accent-label)]">
                   新規掲載
                 </span>
               )}
             </div>
-            <h3 className="font-serif text-[17px] leading-snug text-[#F2E9DD] mt-0.5">
+            <h3 className="font-serif text-[17px] leading-snug text-[var(--c-text)] mt-0.5">
               {product.rawName}
             </h3>
           </div>
@@ -213,7 +213,7 @@ function ProductCardImpl({ product, onOpenMap, onLearnOrigin, isFavorite, onTogg
               }}
               aria-label={favorited ? "お気に入りから削除" : "お気に入りに追加"}
               aria-pressed={favorited}
-              className="p-1 -m-1 text-[#8B7361] hover:text-[var(--accent)] transition-colors"
+              className="p-1 -m-1 text-[var(--c-text-3)] hover:text-[var(--accent)] transition-colors"
             >
               <Heart
                 size={17}
@@ -221,11 +221,11 @@ function ProductCardImpl({ product, onOpenMap, onLearnOrigin, isFavorite, onTogg
                 className={favorited ? "fill-[var(--accent)] text-[var(--accent)]" : ""}
               />
             </button>
-            <p className="font-mono text-[#F2E9DD] text-[15px] max-w-[100px] whitespace-normal break-words">
+            <p className="font-mono text-[var(--c-text)] text-[15px] max-w-[100px] whitespace-normal break-words">
               {formatPrice(product) ?? (product.priceNote ? "要問合せ" : "価格未確認")}
             </p>
             {typeof product.weightG === "number" && (
-              <p className="font-mono text-[11px] text-[#8B7361]">{product.weightG}g</p>
+              <p className="font-mono text-[11px] text-[var(--c-text-3)]">{product.weightG}g</p>
             )}
           </div>
         </div>
@@ -273,25 +273,25 @@ function ProductCardImpl({ product, onOpenMap, onLearnOrigin, isFavorite, onTogg
               <span
                 key={tag}
                 title={tag}
-                className="text-[11px] px-2 py-0.5 rounded-full bg-[#3B2211] text-[var(--accent-muted)] border border-[#4A3A2A] max-w-[220px] truncate whitespace-nowrap"
+                className="text-[11px] px-2 py-0.5 rounded-full bg-[var(--c-surface-2)] text-[var(--accent-muted)] border border-[var(--c-border)] max-w-[220px] truncate whitespace-nowrap"
               >
                 {tag}
               </span>
             ))}
             {product.roastSelectable && (
-              <span className="text-[11px] px-2 py-0.5 rounded-full bg-transparent text-[#8B7361] border border-dashed border-[#4A3A2A]">
+              <span className="text-[11px] px-2 py-0.5 rounded-full bg-transparent text-[var(--c-text-3)] border border-dashed border-[var(--c-border)]">
                 焙煎度は注文時に選択
               </span>
             )}
           </div>
         )}
 
-        <div className="flex items-center justify-between pt-1.5 mt-auto border-t border-[#4A3A2A]">
-          <div className="flex items-center gap-1 text-[12px] text-[#8B7361]">
+        <div className="flex items-center justify-between pt-1.5 mt-auto border-t border-[var(--c-border)]">
+          <div className="flex items-center gap-1 text-[12px] text-[var(--c-text-3)]">
             <Coffee size={13} strokeWidth={1.75} />
             <span>{product.shopName}</span>
             {product.shopAddress && (
-              <span className="text-[#8B7361]/70">・{cityFromAddress(product.shopAddress)}</span>
+              <span className="text-[var(--c-text-3)]/70">・{cityFromAddress(product.shopAddress)}</span>
             )}
           </div>
           <button
@@ -316,7 +316,7 @@ function ProductCardImpl({ product, onOpenMap, onLearnOrigin, isFavorite, onTogg
             className={`flex items-center justify-center gap-1.5 text-[12px] py-1 transition-colors ${
               hasOriginGuide
                 ? "text-[var(--accent-label)] hover:text-[var(--accent)]"
-                : "text-[#8B7361] opacity-60"
+                : "text-[var(--c-text-3)] opacity-60"
             }`}
           >
             <Sparkles size={12} strokeWidth={1.75} />

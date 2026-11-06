@@ -15,7 +15,7 @@ const COUNTRIES_BY_ZONE = ORIGIN_ZONE_ORDER.map((zone) => ({
 }));
 
 const SELECT_CLASS =
-  "w-full py-2.5 px-3 rounded-xl bg-[#3B2211] border border-[#4A3A2A] text-[13px] text-[#F2E9DD] focus:outline-none focus:border-[var(--accent-label)]";
+  "w-full py-2.5 px-3 rounded-xl bg-[var(--c-surface-2)] border border-[var(--c-border)] text-[13px] text-[var(--c-text)] focus:outline-none focus:border-[var(--accent-label)]";
 
 function FilterChip({ opt, active, onToggle, dotColor }) {
   return (
@@ -23,8 +23,8 @@ function FilterChip({ opt, active, onToggle, dotColor }) {
       onClick={() => onToggle(opt)}
       className={`flex items-center gap-1.5 text-[13px] px-3 py-1.5 rounded-full border-2 transition-all ${
         active
-          ? "bg-white text-[#231810] border-white font-medium shadow-[0_0_0_3px_var(--accent-glow)]"
-          : "border-[#4A3A2A] text-[#B8A891] hover:border-[var(--accent-label)]"
+          ? "bg-[var(--c-chip-active)] text-[var(--c-chip-active-text)] border-[var(--c-chip-active)] font-medium shadow-[0_0_0_3px_var(--accent-glow)]"
+          : "border-[var(--c-border)] text-[var(--c-text-2)] hover:border-[var(--accent-label)]"
       }`}
     >
       {dotColor && (
@@ -52,7 +52,7 @@ export function FilterSection({ title, options, selected, onToggle, getColor }) 
   return (
     <div>
       <div className="flex items-center justify-between mb-2">
-        <p className="text-[12px] text-[#8B7361]">{title}</p>
+        <p className="text-[12px] text-[var(--c-text-3)]">{title}</p>
         {selected.size > 0 && (
           <span className="text-[11px] text-[var(--accent)] font-medium">{selected.size}件選択中</span>
         )}
@@ -60,20 +60,20 @@ export function FilterSection({ title, options, selected, onToggle, getColor }) 
 
       {isSearchable && (
         <div className="relative mb-2">
-          <Search size={12} className="absolute left-2.5 top-1/2 -translate-y-1/2 text-[#8B7361]" strokeWidth={2} />
+          <Search size={12} className="absolute left-2.5 top-1/2 -translate-y-1/2 text-[var(--c-text-3)]" strokeWidth={2} />
           <input
             type="text"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             placeholder={`${title}で検索(${options.length}件)`}
-            className="w-full pl-7 pr-2.5 py-1.5 rounded-lg bg-[#3B2211] border border-[#4A3A2A] text-[12px] text-[#F2E9DD] placeholder:text-[#8B7361] focus:outline-none focus:border-[var(--accent-label)]"
+            className="w-full pl-7 pr-2.5 py-1.5 rounded-lg bg-[var(--c-surface-2)] border border-[var(--c-border)] text-[12px] text-[var(--c-text)] placeholder:text-[var(--c-text-3)] focus:outline-none focus:border-[var(--accent-label)]"
           />
         </div>
       )}
 
       <div className="flex flex-wrap gap-2 max-h-[240px] overflow-y-auto overscroll-contain">
         {orderedOptions.length === 0 && (
-          <p className="text-[12px] text-[#8B7361] py-1">「{query}」に一致する項目がありません</p>
+          <p className="text-[12px] text-[var(--c-text-3)] py-1">「{query}」に一致する項目がありません</p>
         )}
         {orderedOptions.map((opt) => (
           <FilterChip
@@ -187,15 +187,15 @@ export function FilterSheet({
     >
       <div
         ref={sheetRef}
-        className="w-full sm:w-[420px] overflow-y-auto overscroll-contain bg-[#2F241A] border border-[#4A3A2A] rounded-t-2xl sm:rounded-2xl p-5"
+        className="w-full sm:w-[420px] overflow-y-auto overscroll-contain bg-[var(--c-surface)] border border-[var(--c-border)] rounded-t-2xl sm:rounded-2xl p-5"
         style={{ WebkitOverflowScrolling: "touch", maxHeight: Math.round(viewportH * 0.85) }}
         onClick={(e) => e.stopPropagation()}
       >
         <div className="flex items-center justify-between mb-4">
-          <h4 className="font-serif text-[19px] text-[#F2E9DD]">絞り込み</h4>
+          <h4 className="font-serif text-[19px] text-[var(--c-text)]">絞り込み</h4>
           <button
             onClick={onClose}
-            className="text-[#8B7361] hover:text-[#F2E9DD] transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center -m-2.5"
+            className="text-[var(--c-text-3)] hover:text-[var(--c-text)] transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center -m-2.5"
             aria-label="閉じる"
           >
             <X size={18} />
@@ -207,7 +207,7 @@ export function FilterSheet({
             ダウン、風味カテゴリのみ複数選択のチップのままにしている。 */}
         <div className="flex flex-col gap-5">
           <div>
-            <p className="text-[12px] text-[#8B7361] mb-2">産地(国)</p>
+            <p className="text-[12px] text-[var(--c-text-3)] mb-2">産地(国)</p>
             <select
               value={filters.country}
               onChange={(e) => selectSingle("country", e.target.value)}
@@ -236,7 +236,7 @@ export function FilterSheet({
 
           <div>
             <div className="flex items-center justify-between mb-2">
-              <p className="text-[12px] text-[#8B7361]">自分の評価(★)</p>
+              <p className="text-[12px] text-[var(--c-text-3)]">自分の評価(★)</p>
               {filters.minRating > 0 && (
                 <span className="text-[11px] text-[var(--accent)] font-medium">
                   ★{filters.minRating}以上
@@ -248,13 +248,13 @@ export function FilterSheet({
               size={26}
               onChange={(stars) => selectSingle("minRating", stars)}
             />
-            <p className="text-[11px] text-[#8B7361] mt-1.5">
+            <p className="text-[11px] text-[var(--c-text-3)] mt-1.5">
               選んだ星の数以上の評価をつけた商品だけを表示します(同じ星をもう一度押すと解除)
             </p>
           </div>
 
           <div>
-            <p className="text-[12px] text-[#8B7361] mb-2">都道府県</p>
+            <p className="text-[12px] text-[var(--c-text-3)] mb-2">都道府県</p>
             <select
               value={filters.prefecture}
               onChange={(e) => selectSingle("prefecture", e.target.value)}
@@ -278,16 +278,16 @@ export function FilterSheet({
           </div>
         </div>
 
-        <div className="flex flex-col gap-2.5 mt-6 pt-4 border-t border-[#4A3A2A]">
+        <div className="flex flex-col gap-2.5 mt-6 pt-4 border-t border-[var(--c-border)]">
           <button
             onClick={onClose}
-            className="w-full py-3.5 rounded-xl bg-[var(--accent)] text-[#231810] text-[15px] font-bold shadow-[0_4px_16px_var(--accent-glow)] hover:bg-[var(--accent-soft)] transition-colors"
+            className="w-full py-3.5 rounded-xl bg-[var(--accent)] text-[var(--on-accent)] text-[15px] font-bold shadow-[0_4px_16px_var(--accent-glow)] hover:bg-[var(--accent-soft)] transition-colors"
           >
             結果を見る({resultCount}件)
           </button>
           <button
             onClick={clearAll}
-            className="w-full py-2 text-[#8B7361] text-[12px] underline underline-offset-2 hover:text-[#B8A891] transition-colors"
+            className="w-full py-2 text-[var(--c-text-3)] text-[12px] underline underline-offset-2 hover:text-[var(--c-text-2)] transition-colors"
           >
             条件をクリア
           </button>

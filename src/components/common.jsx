@@ -4,7 +4,7 @@ export function SectionHeading({ en, ja, className = "" }) {
   return (
     <div className={className}>
       <p className="text-[11px] tracking-[0.2em] text-[var(--accent-label)] uppercase">{en}</p>
-      <h2 className="font-serif text-[22px] leading-tight text-[#F2E9DD] mt-1">{ja}</h2>
+      <h2 className="font-serif text-[22px] leading-tight text-[var(--c-text)] mt-1">{ja}</h2>
     </div>
   );
 }
@@ -13,11 +13,11 @@ export function Toast({ message, onDismiss }) {
   if (!message) return null;
   return (
     <div className="fixed top-3 inset-x-0 z-50 flex justify-center px-5 pointer-events-none">
-      <div className="pointer-events-auto max-w-xl w-full flex items-center gap-3 bg-[#100b07] border border-[var(--accent)] rounded-xl px-4 py-3 shadow-[0_8px_24px_rgba(0,0,0,0.55)]">
-        <p className="text-[13px] text-[#F2E9DD] leading-snug flex-1">{message}</p>
+      <div className="pointer-events-auto max-w-xl w-full flex items-center gap-3 bg-[var(--c-toast)] border border-[var(--accent)] rounded-xl px-4 py-3 shadow-[0_8px_24px_rgba(0,0,0,0.55)]">
+        <p className="text-[13px] text-[var(--c-text)] leading-snug flex-1">{message}</p>
         <button
           onClick={onDismiss}
-          className="text-[#8B7361] hover:text-[#F2E9DD] transition-colors shrink-0"
+          className="text-[var(--c-text-3)] hover:text-[var(--c-text)] transition-colors shrink-0"
           aria-label="閉じる"
         >
           <X size={14} />
@@ -46,7 +46,7 @@ export function StarRating({ value = 0, onChange, size = 20, readOnly = false })
           <Star
             size={size}
             strokeWidth={1.75}
-            className={star <= value ? "fill-[var(--accent)] text-[var(--accent)]" : "text-[#8B7361]"}
+            className={star <= value ? "fill-[var(--accent)] text-[var(--accent)]" : "text-[var(--c-text-3)]"}
           />
         </button>
       ))}
@@ -67,7 +67,7 @@ export function DialInGauge({ value = 0, size = 120 }) {
 
   return (
     <svg width={size} height={size / 2 + strokeWidth} viewBox={`0 0 ${size} ${size / 2 + strokeWidth}`}>
-      <path d={arcPath} fill="none" stroke="#3B2211" strokeWidth={strokeWidth} strokeLinecap="round" />
+      <path d={arcPath} fill="none" stroke="var(--c-surface-2)" strokeWidth={strokeWidth} strokeLinecap="round" />
       <path
         d={arcPath}
         fill="none"
@@ -78,10 +78,10 @@ export function DialInGauge({ value = 0, size = 120 }) {
         strokeDashoffset={offset}
         style={{ transition: "stroke-dashoffset 0.2s ease" }}
       />
-      <text x={center} y={center - 4} textAnchor="middle" fontSize="20" fontWeight="600" fill="#F2E9DD">
+      <text x={center} y={center - 4} textAnchor="middle" fontSize="20" fontWeight="600" fill="var(--c-text)">
         {clamped}
       </text>
-      <text x={center} y={center + 12} textAnchor="middle" fontSize="9" fill="#8B7361">
+      <text x={center} y={center + 12} textAnchor="middle" fontSize="9" fill="var(--c-text-3)">
         / 100
       </text>
     </svg>
@@ -93,8 +93,8 @@ export function DialInGauge({ value = 0, size = 120 }) {
 // 明示しておく。
 export function CopyrightFooter() {
   return (
-    <div className="max-w-xl mx-auto w-full px-5 py-1.5 border-t border-[#4A3A2A]">
-      <p className="text-[10px] text-[#8B7361] text-center">
+    <div className="max-w-xl mx-auto w-full px-5 py-1.5 border-t border-[var(--c-border)]">
+      <p className="text-[10px] text-[var(--c-text-3)] text-center">
         © 2026 SAI. All Rights Reserved.
       </p>
     </div>
@@ -103,8 +103,8 @@ export function CopyrightFooter() {
 
 export function SourceCredit({ sources }) {
   return (
-    <div className="mt-2 pt-3 border-t border-[#4A3A2A]">
-      <p className="text-[11px] text-[#8B7361] leading-relaxed">
+    <div className="mt-2 pt-3 border-t border-[var(--c-border)]">
+      <p className="text-[11px] text-[var(--c-text-3)] leading-relaxed">
         出典: {sources.join(" / ")}
       </p>
     </div>
@@ -122,18 +122,18 @@ export function MapLinkModal({ target, onClose }) {
       onClick={onClose}
     >
       <div
-        className="w-full sm:w-[380px] bg-[#2F241A] border border-[#4A3A2A] rounded-t-2xl sm:rounded-2xl p-5"
+        className="w-full sm:w-[380px] bg-[var(--c-surface)] border border-[var(--c-border)] rounded-t-2xl sm:rounded-2xl p-5"
         onClick={(e) => e.stopPropagation()}
       >
         <div className="flex items-start justify-between mb-3">
           <div>
             <p className="text-[11px] text-[var(--accent-label)] uppercase tracking-wider">店舗へ行く</p>
-            <h4 className="font-serif text-[18px] text-[#F2E9DD] mt-0.5">{target.shopName}</h4>
-            <p className="text-[13px] text-[#8B7361] mt-0.5">{target.shopAddress}</p>
+            <h4 className="font-serif text-[18px] text-[var(--c-text)] mt-0.5">{target.shopName}</h4>
+            <p className="text-[13px] text-[var(--c-text-3)] mt-0.5">{target.shopAddress}</p>
           </div>
           <button
             onClick={onClose}
-            className="text-[#8B7361] hover:text-[#F2E9DD] transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center -m-2.5"
+            className="text-[var(--c-text-3)] hover:text-[var(--c-text)] transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center -m-2.5"
             aria-label="閉じる"
           >
             <X size={18} />
@@ -143,7 +143,7 @@ export function MapLinkModal({ target, onClose }) {
           href={mapUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center justify-center gap-2 w-full py-3 rounded-xl bg-[var(--accent)] text-[#231810] font-medium text-[14px] hover:bg-[var(--accent-soft)] transition-colors"
+          className="flex items-center justify-center gap-2 w-full py-3 rounded-xl bg-[var(--accent)] text-[var(--on-accent)] font-medium text-[14px] hover:bg-[var(--accent-soft)] transition-colors"
         >
           <MapPin size={16} strokeWidth={2} />
           Googleマップで開く

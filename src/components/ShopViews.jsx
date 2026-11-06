@@ -26,32 +26,32 @@ export function ShopCard({ shop, productCount, onSelect }) {
   return (
     <button
       onClick={onSelect}
-      className="w-full text-left rounded-2xl bg-[#2F241A] border border-[#4A3A2A] p-4 flex flex-col gap-2 hover:border-[var(--accent-label)] transition-colors"
+      className="w-full text-left rounded-2xl bg-[var(--c-surface)] border border-[var(--c-border)] p-4 flex flex-col gap-2 hover:border-[var(--accent-label)] transition-colors"
     >
       <div className="flex items-start justify-between gap-3">
         <div>
           <p className="text-[11px] tracking-wider text-[var(--accent-label)] font-medium uppercase">
             {shop.prefecture}
           </p>
-          <h3 className="font-serif text-[18px] leading-snug text-[#F2E9DD] mt-0.5">
+          <h3 className="font-serif text-[18px] leading-snug text-[var(--c-text)] mt-0.5">
             {shop.name}
           </h3>
         </div>
-        <span className="shrink-0 text-[11px] px-2 py-0.5 rounded-full bg-[#3B2211] text-[var(--accent-muted)] border border-[#4A3A2A] flex items-center gap-1">
+        <span className="shrink-0 text-[11px] px-2 py-0.5 rounded-full bg-[var(--c-surface-2)] text-[var(--accent-muted)] border border-[var(--c-border)] flex items-center gap-1">
           <Package size={11} />
           {productCount}件
         </span>
       </div>
-      <p className="text-[13px] text-[#8B7361]">
+      <p className="text-[13px] text-[var(--c-text-3)]">
         {shop.address}
         {shop.nearestStation?.name && (
-          <span className="text-[#8B7361]/70">
+          <span className="text-[var(--c-text-3)]/70">
             ・{shop.nearestStation.name}駅
             {typeof shop.nearestStation.walkMin === "number" && ` 徒歩${shop.nearestStation.walkMin}分`}
           </span>
         )}
       </p>
-      <div className="flex items-center gap-1.5 text-[12px] text-[#8B7361] pt-1 mt-1 border-t border-[#4A3A2A]">
+      <div className="flex items-center gap-1.5 text-[12px] text-[var(--c-text-3)] pt-1 mt-1 border-t border-[var(--c-border)]">
         <Clock size={12} strokeWidth={1.75} />
         <span>{shop.hours}</span>
       </div>
@@ -96,8 +96,8 @@ export function ShopListView({
               aria-pressed={isActive}
               className={`flex items-center gap-1 shrink-0 text-[12px] px-3 py-1.5 rounded-full border transition-colors ${
                 isActive
-                  ? "bg-[var(--accent)] text-[#231810] border-[var(--accent)]"
-                  : "border-[#4A3A2A] text-[#B8A891]"
+                  ? "bg-[var(--accent)] text-[var(--on-accent)] border-[var(--accent)]"
+                  : "border-[var(--c-border)] text-[var(--c-text-2)]"
               }`}
             >
               <Icon size={12} strokeWidth={2} />
@@ -107,7 +107,7 @@ export function ShopListView({
         })}
       </div>
       {sortMode === "distance" && geolocation.status !== "success" && (
-        <div className="flex items-start gap-1 text-[11px] text-[#8B7361]">
+        <div className="flex items-start gap-1 text-[11px] text-[var(--c-text-3)]">
           <LocateFixed size={11} strokeWidth={1.75} className="shrink-0 mt-0.5" />
           <p>
             {geolocation.status === "pending" && "位置情報を取得中です(取得できるまで全件表示しています)"}
@@ -140,25 +140,25 @@ export function ShopListView({
         </div>
       )}
       {sortMode === "favoriteArea" && (
-        <p className="text-[11px] text-[#8B7361]">
+        <p className="text-[11px] text-[var(--c-text-3)]">
           {favoriteArea.prefecture
             ? `登録エリア: ${favoriteArea.prefecture}${favoriteArea.city ? ` ${favoriteArea.city}` : ""}(マイページで変更できます)`
             : "登録エリアが未登録です(マイページで登録できます)"}
         </p>
       )}
       <div className="relative mb-1">
-        <Search size={14} className="absolute left-3 top-1/2 -translate-y-1/2 text-[#8B7361]" strokeWidth={2} />
+        <Search size={14} className="absolute left-3 top-1/2 -translate-y-1/2 text-[var(--c-text-3)]" strokeWidth={2} />
         <input
           type="text"
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
           placeholder="店舗名・都道府県・住所・駅名で検索"
-          className="w-full pl-9 pr-9 py-2.5 rounded-xl bg-[#2F241A] border border-[#4A3A2A] text-[13px] text-[#F2E9DD] placeholder:text-[#8B7361] focus:outline-none focus:border-[var(--accent-label)]"
+          className="w-full pl-9 pr-9 py-2.5 rounded-xl bg-[var(--c-surface)] border border-[var(--c-border)] text-[13px] text-[var(--c-text)] placeholder:text-[var(--c-text-3)] focus:outline-none focus:border-[var(--accent-label)]"
         />
         {searchQuery && (
           <button
             onClick={() => setSearchQuery("")}
-            className="absolute right-3 top-1/2 -translate-y-1/2 text-[#8B7361] hover:text-[#F2E9DD]"
+            className="absolute right-3 top-1/2 -translate-y-1/2 text-[var(--c-text-3)] hover:text-[var(--c-text)]"
             aria-label="検索をクリア"
           >
             <X size={14} />
@@ -166,7 +166,7 @@ export function ShopListView({
         )}
       </div>
       {shops.length === 0 ? (
-        <p className="text-center py-12 text-[13px] text-[#8B7361]">
+        <p className="text-center py-12 text-[13px] text-[var(--c-text-3)]">
           {sortMode === "favoriteArea"
             ? favoriteArea.prefecture
               ? "登録したエリアには該当する店舗がありません。マイページでエリアを変更してみてください"
@@ -174,7 +174,7 @@ export function ShopListView({
             : "該当する店舗が見つかりませんでした"}
         </p>
       ) : filteredShops.length === 0 ? (
-        <p className="text-center py-12 text-[13px] text-[#8B7361]">
+        <p className="text-center py-12 text-[13px] text-[var(--c-text-3)]">
           該当する店舗が見つかりませんでした
         </p>
       ) : (
@@ -193,11 +193,11 @@ export function ShopListView({
 
 export function LocationCard({ location, onOpenMap }) {
   return (
-    <div className="rounded-xl bg-[#3B2211] border border-[#4A3A2A] p-3 flex flex-col gap-1.5">
-      <p className="text-[14px] font-medium text-[#F2E9DD]">{location.label}</p>
-      <p className="text-[12px] text-[#B8A891]">{location.address}</p>
+    <div className="rounded-xl bg-[var(--c-surface-2)] border border-[var(--c-border)] p-3 flex flex-col gap-1.5">
+      <p className="text-[14px] font-medium text-[var(--c-text)]">{location.label}</p>
+      <p className="text-[12px] text-[var(--c-text-2)]">{location.address}</p>
       {(location.hours || location.tel || location.email) && (
-        <div className="flex flex-wrap items-center gap-x-1.5 gap-y-0.5 text-[12px] text-[#8B7361]">
+        <div className="flex flex-wrap items-center gap-x-1.5 gap-y-0.5 text-[12px] text-[var(--c-text-3)]">
           {location.hours && (
             <span className="flex items-center gap-1.5">
               <Clock size={12} strokeWidth={1.75} />
@@ -228,26 +228,26 @@ export function LocationCard({ location, onOpenMap }) {
 
 function ShopNoteCard({ note, onDelete }) {
   return (
-    <div className="rounded-xl bg-[#3B2211] border border-[#4A3A2A] p-3.5 flex flex-col gap-2">
+    <div className="rounded-xl bg-[var(--c-surface-2)] border border-[var(--c-border)] p-3.5 flex flex-col gap-2">
       <div className="flex items-start justify-between gap-3">
         <div className="min-w-0">
-          <p className="text-[14px] font-medium text-[#F2E9DD] leading-snug">{note.productName}</p>
+          <p className="text-[14px] font-medium text-[var(--c-text)] leading-snug">{note.productName}</p>
           {note.rating > 0 && (
             <div className="mt-1">
               <StarRating value={note.rating} size={13} readOnly />
             </div>
           )}
-          <p className="text-[11px] text-[#8B7361] mt-1">{formatDateTime(note.recordedAt)}</p>
+          <p className="text-[11px] text-[var(--c-text-3)] mt-1">{formatDateTime(note.recordedAt)}</p>
         </div>
         <button
           onClick={() => onDelete(note.id)}
-          className="shrink-0 text-[#8B7361] hover:text-[#F2E9DD] transition-colors -m-1 p-1"
+          className="shrink-0 text-[var(--c-text-3)] hover:text-[var(--c-text)] transition-colors -m-1 p-1"
           aria-label="このノートを削除"
         >
           <Trash2 size={13} />
         </button>
       </div>
-      {note.note && <p className="text-[12px] text-[#B8A891] leading-relaxed">{note.note}</p>}
+      {note.note && <p className="text-[12px] text-[var(--c-text-2)] leading-relaxed">{note.note}</p>}
       <FlavorChips flavors={note.flavors} />
     </div>
   );
@@ -273,7 +273,7 @@ export function ShopDetailView({
       <div className="px-5 pt-4">
         <button
           onClick={onBack}
-          className="flex items-center gap-1 text-[13px] text-[#8B7361] hover:text-[#F2E9DD] transition-colors mb-4"
+          className="flex items-center gap-1 text-[13px] text-[var(--c-text-3)] hover:text-[var(--c-text)] transition-colors mb-4"
         >
           <ArrowLeft size={14} />
           店舗一覧に戻る
@@ -282,11 +282,11 @@ export function ShopDetailView({
         <p className="text-[11px] tracking-wider text-[var(--accent-label)] font-medium uppercase">
           {shop.prefecture} ・ {shop.platform}
         </p>
-        <h2 className="font-serif text-[24px] text-[#F2E9DD] mt-1">{shop.name}</h2>
-        <p className="text-[13px] text-[#8B7361] mt-1.5">{shop.address}</p>
+        <h2 className="font-serif text-[24px] text-[var(--c-text)] mt-1">{shop.name}</h2>
+        <p className="text-[13px] text-[var(--c-text-3)] mt-1.5">{shop.address}</p>
 
         {!hasMultipleLocations && (
-          <div className="flex items-center gap-1.5 text-[13px] text-[#B8A891] mt-2">
+          <div className="flex items-center gap-1.5 text-[13px] text-[var(--c-text-2)] mt-2">
             <Clock size={13} strokeWidth={1.75} />
             <span>{shop.hours}</span>
           </div>
@@ -296,7 +296,7 @@ export function ShopDetailView({
           {!hasMultipleLocations && (
             <button
               onClick={onOpenMap}
-              className="flex-1 flex items-center justify-center gap-1.5 py-2.5 rounded-xl bg-[var(--accent)] text-[#231810] text-[13px] font-medium"
+              className="flex-1 flex items-center justify-center gap-1.5 py-2.5 rounded-xl bg-[var(--accent)] text-[var(--on-accent)] text-[13px] font-medium"
             >
               <MapPin size={14} strokeWidth={2} />
               Googleマップで開く
@@ -307,7 +307,7 @@ export function ShopDetailView({
               href={shop.url || shop.instagramUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex-1 flex items-center justify-center gap-1.5 py-2.5 rounded-xl border border-[#4A3A2A] text-[#B8A891] text-[13px]"
+              className="flex-1 flex items-center justify-center gap-1.5 py-2.5 rounded-xl border border-[var(--c-border)] text-[var(--c-text-2)] text-[13px]"
             >
               {shop.url ? "公式サイト" : "公式Instagram"}
               <ExternalLink size={12} />
@@ -317,7 +317,7 @@ export function ShopDetailView({
 
         <button
           onClick={onCreateTastingNote}
-          className="w-full mt-2 flex items-center justify-center gap-1.5 py-2.5 rounded-xl border border-[var(--accent)] text-[var(--accent)] text-[13px] font-medium hover:bg-[var(--accent)] hover:text-[#231810] transition-colors"
+          className="w-full mt-2 flex items-center justify-center gap-1.5 py-2.5 rounded-xl border border-[var(--accent)] text-[var(--accent)] text-[13px] font-medium hover:bg-[var(--accent)] hover:text-[var(--on-accent)] transition-colors"
         >
           <NotebookPen size={14} strokeWidth={2} />
           テイスティングノートを作成
@@ -325,7 +325,7 @@ export function ShopDetailView({
 
         {tastingNotes.length > 0 && (
           <div className="mt-4">
-            <p className="text-[12px] text-[#8B7361] mb-2">この店のテイスティングノート {tastingNotes.length}件</p>
+            <p className="text-[12px] text-[var(--c-text-3)] mb-2">この店のテイスティングノート {tastingNotes.length}件</p>
             <div className="flex flex-col gap-2">
               {tastingNotes.map((n) => (
                 <ShopNoteCard key={n.id} note={n} onDelete={onDeleteTastingNote} />
@@ -336,7 +336,7 @@ export function ShopDetailView({
 
         {hasMultipleLocations && (
           <div className="mt-4">
-            <p className="text-[12px] text-[#8B7361] mb-2">
+            <p className="text-[12px] text-[var(--c-text-3)] mb-2">
               実店舗 {shop.locations.length}箇所
             </p>
             <div className="flex flex-col gap-2">
@@ -349,7 +349,7 @@ export function ShopDetailView({
       </div>
 
       <div className="px-5 py-5 flex flex-col gap-3">
-        <p className="text-[12px] text-[#8B7361]">取扱商品 {products.length}件</p>
+        <p className="text-[12px] text-[var(--c-text-3)]">取扱商品 {products.length}件</p>
         {products.map((product) => (
           <ProductCard
             key={product.id}

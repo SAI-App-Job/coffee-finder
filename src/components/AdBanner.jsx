@@ -7,7 +7,7 @@ import { Megaphone } from "lucide-react";
 export function AdBannerPlaceholder() {
   return (
     <div className="max-w-xl mx-auto px-5 py-2">
-      <div className="h-[50px] rounded-lg border border-dashed border-[#4A3A2A] flex items-center justify-center gap-2 text-[#8B7361]">
+      <div className="h-[50px] rounded-lg border border-dashed border-[var(--c-border)] flex items-center justify-center gap-2 text-[var(--c-text-3)]">
         <Megaphone size={13} strokeWidth={1.75} />
         <span className="text-[11px]">広告スペース(プレースホルダー)</span>
       </div>

@@ -11,8 +11,8 @@ function DetailRow({ label, value, detail }) {
   return (
     <div>
       <p className="text-[11px] tracking-wide text-[var(--accent-label)] uppercase mb-1">{label}</p>
-      <p className="text-[13px] text-[#F2E9DD] whitespace-pre-line">{value}</p>
-      {detail && <p className="text-[12px] text-[#B8A891] leading-relaxed mt-1">{detail}</p>}
+      <p className="text-[13px] text-[var(--c-text)] whitespace-pre-line">{value}</p>
+      {detail && <p className="text-[12px] text-[var(--c-text-2)] leading-relaxed mt-1">{detail}</p>}
     </div>
   );
 }
@@ -52,7 +52,7 @@ export function ProductDetailModal({
       onClick={onClose}
     >
       <div
-        className="w-full sm:w-[440px] max-h-[85vh] overflow-y-auto bg-[#2F241A] border border-[#4A3A2A] rounded-t-2xl sm:rounded-2xl p-5"
+        className="w-full sm:w-[440px] max-h-[85vh] overflow-y-auto bg-[var(--c-surface)] border border-[var(--c-border)] rounded-t-2xl sm:rounded-2xl p-5"
         onClick={(e) => e.stopPropagation()}
       >
         <div className="flex items-start justify-between gap-3 mb-3">
@@ -62,7 +62,7 @@ export function ProductDetailModal({
                 blendCountries.map((country) => (
                   <span
                     key={country}
-                    className="text-[11px] px-2 py-0.5 rounded-full bg-[#3B2211] text-[var(--accent-muted)] border border-[#4A3A2A]"
+                    className="text-[11px] px-2 py-0.5 rounded-full bg-[var(--c-surface-2)] text-[var(--accent-muted)] border border-[var(--c-border)]"
                   >
                     {country}
                   </span>
@@ -76,7 +76,7 @@ export function ProductDetailModal({
                 <span
                   className={`text-[10px] px-1.5 py-0.5 rounded-full font-medium leading-none ${
                     product.stockStatus === "終売"
-                      ? "bg-[#3B2211] text-[#8B7361] border border-[#4A3A2A]"
+                      ? "bg-[var(--c-surface-2)] text-[var(--c-text-3)] border border-[var(--c-border)]"
                       : "bg-[#4A2E12] text-[#E8B86D] border border-[#6B4A22]"
                   }`}
                 >
@@ -84,16 +84,16 @@ export function ProductDetailModal({
                 </span>
               )}
               {isNewArrival(product) && (
-                <span className="text-[10px] px-1.5 py-0.5 rounded-full font-medium leading-none bg-[var(--accent-glow)] text-[var(--accent)] border border-[var(--accent-label)]">
+                <span className="text-[10px] px-1.5 py-0.5 rounded-full font-medium leading-none bg-[var(--accent-glow)] text-[var(--accent-on-glow)] border border-[var(--accent-label)]">
                   新規掲載
                 </span>
               )}
             </div>
-            <h3 className="font-serif text-[19px] leading-snug text-[#F2E9DD] mt-0.5">{product.rawName}</h3>
+            <h3 className="font-serif text-[19px] leading-snug text-[var(--c-text)] mt-0.5">{product.rawName}</h3>
           </div>
           <button
             onClick={onClose}
-            className="shrink-0 text-[#8B7361] hover:text-[#F2E9DD] transition-colors min-w-[36px] min-h-[36px] flex items-center justify-center -m-2"
+            className="shrink-0 text-[var(--c-text-3)] hover:text-[var(--c-text)] transition-colors min-w-[36px] min-h-[36px] flex items-center justify-center -m-2"
             aria-label="閉じる"
           >
             <X size={18} />
@@ -101,16 +101,16 @@ export function ProductDetailModal({
         </div>
 
         <div className="flex items-center justify-between mb-3">
-          <p className="font-mono text-[#F2E9DD] text-[18px] whitespace-normal break-words">
+          <p className="font-mono text-[var(--c-text)] text-[18px] whitespace-normal break-words">
             {formatPrice(product) ?? product.priceNote ?? "価格未確認"}
           </p>
           {typeof product.weightG === "number" && (
-            <p className="font-mono text-[12px] text-[#8B7361]">{product.weightG}g</p>
+            <p className="font-mono text-[12px] text-[var(--c-text-3)]">{product.weightG}g</p>
           )}
         </div>
 
-        <div className="flex items-center justify-between gap-3 mb-4 pb-4 border-b border-[#4A3A2A]">
-          <p className="text-[12px] text-[#8B7361]">この商品を評価</p>
+        <div className="flex items-center justify-between gap-3 mb-4 pb-4 border-b border-[var(--c-border)]">
+          <p className="text-[12px] text-[var(--c-text-3)]">この商品を評価</p>
           <StarRating value={rating} onChange={(stars) => onRate?.(product.id, stars)} />
         </div>
 
@@ -136,12 +136,12 @@ export function ProductDetailModal({
           {flavorCategories.length > 0 && (
             <div>
               <p className="text-[11px] tracking-wide text-[var(--accent-label)] uppercase mb-1">フレーバーノート</p>
-              <p className="text-[13px] text-[#F2E9DD] mb-1.5">{product.flavorNotes}</p>
+              <p className="text-[13px] text-[var(--c-text)] mb-1.5">{product.flavorNotes}</p>
               <div className="flex flex-wrap gap-1.5">
                 {flavorCategories.map((cat) => (
                   <span
                     key={cat.en}
-                    className="flex items-center gap-1.5 text-[11px] px-2 py-0.5 rounded-full bg-[#3B2211] text-[var(--accent-muted)] border border-[#4A3A2A]"
+                    className="flex items-center gap-1.5 text-[11px] px-2 py-0.5 rounded-full bg-[var(--c-surface-2)] text-[var(--accent-muted)] border border-[var(--c-border)]"
                   >
                     <span className="w-1.5 h-1.5 rounded-full shrink-0" style={{ backgroundColor: cat.color }} />
                     {cat.ja}
@@ -165,9 +165,9 @@ export function ProductDetailModal({
                     c.processingMethod && `精選方法: ${c.processingMethod}`,
                   ].filter(Boolean);
                   return (
-                    <div key={i} className="rounded-xl bg-[#3B2211] border border-[#4A3A2A] p-3">
+                    <div key={i} className="rounded-xl bg-[var(--c-surface-2)] border border-[var(--c-border)] p-3">
                       <div className="flex items-center justify-between gap-2">
-                        <p className="text-[13px] text-[#F2E9DD] font-medium">
+                        <p className="text-[13px] text-[var(--c-text)] font-medium">
                           {c.originCountry ?? "産地不明"}
                         </p>
                         {typeof c.percentage === "number" && (
@@ -177,7 +177,7 @@ export function ProductDetailModal({
                         )}
                       </div>
                       {details.length > 0 && (
-                        <p className="text-[12px] text-[#B8A891] leading-relaxed mt-1">
+                        <p className="text-[12px] text-[var(--c-text-2)] leading-relaxed mt-1">
                           {details.join(" ／ ")}
                         </p>
                       )}
@@ -191,16 +191,16 @@ export function ProductDetailModal({
           )}
         </div>
 
-        <div className="flex items-center gap-1.5 text-[12px] text-[#8B7361] pt-3 border-t border-[#4A3A2A] mb-4">
+        <div className="flex items-center gap-1.5 text-[12px] text-[var(--c-text-3)] pt-3 border-t border-[var(--c-border)] mb-4">
           <Coffee size={13} strokeWidth={1.75} />
           <span>{product.shopName}</span>
-          {product.shopAddress && <span className="text-[#8B7361]/70">・{cityFromAddress(product.shopAddress)}</span>}
+          {product.shopAddress && <span className="text-[var(--c-text-3)]/70">・{cityFromAddress(product.shopAddress)}</span>}
         </div>
 
         <div className="flex flex-col gap-2">
           <button
             onClick={() => onOpenMap(product)}
-            className="flex items-center justify-center gap-1.5 py-2.5 rounded-xl bg-[var(--accent)] text-[#231810] text-[13px] font-medium hover:bg-[var(--accent-soft)] transition-colors"
+            className="flex items-center justify-center gap-1.5 py-2.5 rounded-xl bg-[var(--accent)] text-[var(--on-accent)] text-[13px] font-medium hover:bg-[var(--accent-soft)] transition-colors"
           >
             <MapPin size={14} strokeWidth={2} />
             地図で開く
@@ -210,7 +210,7 @@ export function ProductDetailModal({
             <button
               onClick={() => onToggleFavorite?.(product.id)}
               className={`flex-1 flex items-center justify-center gap-1.5 py-2.5 rounded-xl border text-[13px] transition-colors ${
-                favorited ? "border-[var(--accent)] text-[var(--accent)]" : "border-[#4A3A2A] text-[#B8A891]"
+                favorited ? "border-[var(--accent)] text-[var(--accent)]" : "border-[var(--c-border)] text-[var(--c-text-2)]"
               }`}
             >
               <Heart size={14} strokeWidth={2} className={favorited ? "fill-[var(--accent)]" : ""} />
@@ -219,7 +219,7 @@ export function ProductDetailModal({
             <button
               onClick={() => onToggleCompare?.(product.id)}
               className={`flex-1 flex items-center justify-center gap-1.5 py-2.5 rounded-xl border text-[13px] transition-colors ${
-                comparing ? "border-[var(--accent)] text-[var(--accent)]" : "border-[#4A3A2A] text-[#B8A891]"
+                comparing ? "border-[var(--accent)] text-[var(--accent)]" : "border-[var(--c-border)] text-[var(--c-text-2)]"
               }`}
             >
               {comparing ? <Check size={14} strokeWidth={2} /> : <ArrowLeftRight size={14} strokeWidth={2} />}
@@ -228,7 +228,7 @@ export function ProductDetailModal({
           </div>
           <button
             onClick={() => onOpenTastingLog?.(product)}
-            className="flex items-center justify-center gap-1.5 py-2.5 rounded-xl border border-[#4A3A2A] text-[#B8A891] text-[13px] hover:border-[var(--accent)] transition-colors"
+            className="flex items-center justify-center gap-1.5 py-2.5 rounded-xl border border-[var(--c-border)] text-[var(--c-text-2)] text-[13px] hover:border-[var(--accent)] transition-colors"
           >
             <NotebookPen size={14} strokeWidth={2} />
             テイスティングログを記録{logCount > 0 ? `(${logCount}件記録済み)` : ""}
@@ -236,7 +236,7 @@ export function ProductDetailModal({
         </div>
 
         {product.originCountry && (
-          <p className="flex items-center justify-center gap-1.5 text-[11px] text-[#8B7361] mt-3">
+          <p className="flex items-center justify-center gap-1.5 text-[11px] text-[var(--c-text-3)] mt-3">
             <Sparkles size={11} strokeWidth={1.75} />
             産地タブから{product.originCountry}についてさらに詳しく見られます
           </p>

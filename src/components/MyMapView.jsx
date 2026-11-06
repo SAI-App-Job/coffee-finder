@@ -85,27 +85,27 @@ export function MyMapView({ favoriteShops }) {
   return (
     <main className="px-5 py-5 flex flex-col gap-3 max-w-xl mx-auto">
       <SectionHeading en="My Map" ja="マイマップ" />
-      <p className="text-[13px] text-[#8B7361]">
+      <p className="text-[13px] text-[var(--c-text-3)]">
         お気に入り商品を扱う店舗を自動的に地図表示します({pins.length}拠点)
       </p>
 
       {favoriteShops.length === 0 && (
-        <div className="text-center py-10 text-[#8B7361]">
+        <div className="text-center py-10 text-[var(--c-text-3)]">
           <Heart size={28} className="mx-auto mb-3 opacity-40" />
           <p className="text-[14px]">お気に入り商品を追加すると、取扱店舗がここに表示されます</p>
         </div>
       )}
 
-      <div className="rounded-2xl overflow-hidden border border-[#4A3A2A]">
+      <div className="rounded-2xl overflow-hidden border border-[var(--c-border)]">
         <div ref={containerRef} className="w-full h-[60vh] min-h-[360px]" />
       </div>
 
       {favoriteShops.length > 0 && (
         <div className="flex flex-col gap-2 mt-1">
           {favoriteShops.map((shop) => (
-            <div key={shop.name} className="flex items-center gap-2 text-[12px] text-[#8B7361]">
+            <div key={shop.name} className="flex items-center gap-2 text-[12px] text-[var(--c-text-3)]">
               <MapPin size={12} className="text-[var(--accent)] shrink-0" strokeWidth={1.75} />
-              <span className="text-[#F2E9DD]">{shop.name}</span>
+              <span className="text-[var(--c-text)]">{shop.name}</span>
               {shop.locations && shop.locations.length > 1 && <span>・{shop.locations.length}拠点</span>}
             </div>
           ))}

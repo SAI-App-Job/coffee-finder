@@ -17,17 +17,17 @@ export function AlertsPanel({ open, alerts, products, onClose, onOpenDetail }) {
       onClick={onClose}
     >
       <div
-        className="w-full sm:w-[440px] max-h-[85vh] overflow-y-auto bg-[#2F241A] border border-[#4A3A2A] rounded-t-2xl sm:rounded-2xl p-5"
+        className="w-full sm:w-[440px] max-h-[85vh] overflow-y-auto bg-[var(--c-surface)] border border-[var(--c-border)] rounded-t-2xl sm:rounded-2xl p-5"
         onClick={(e) => e.stopPropagation()}
       >
         <div className="flex items-center justify-between mb-4">
           <div className="flex items-center gap-1.5">
             <Bell size={16} className="text-[var(--accent)]" strokeWidth={1.75} />
-            <h3 className="font-serif text-[18px] text-[#F2E9DD]">お知らせ</h3>
+            <h3 className="font-serif text-[18px] text-[var(--c-text)]">お知らせ</h3>
           </div>
           <button
             onClick={onClose}
-            className="shrink-0 text-[#8B7361] hover:text-[#F2E9DD] transition-colors min-w-[36px] min-h-[36px] flex items-center justify-center -m-2"
+            className="shrink-0 text-[var(--c-text-3)] hover:text-[var(--c-text)] transition-colors min-w-[36px] min-h-[36px] flex items-center justify-center -m-2"
             aria-label="閉じる"
           >
             <X size={18} />
@@ -35,7 +35,7 @@ export function AlertsPanel({ open, alerts, products, onClose, onOpenDetail }) {
         </div>
 
         {alerts.length === 0 ? (
-          <div className="text-center py-10 text-[#8B7361]">
+          <div className="text-center py-10 text-[var(--c-text-3)]">
             <Bell size={28} className="mx-auto mb-3 opacity-40" />
             <p className="text-[14px]">新しいお知らせはありません</p>
             <p className="text-[12px] mt-1 leading-relaxed">
@@ -52,15 +52,15 @@ export function AlertsPanel({ open, alerts, products, onClose, onOpenDetail }) {
                 <button
                   key={alert.id}
                   onClick={() => product && onOpenDetail(product)}
-                  className="text-left rounded-xl bg-[#3B2211] border border-[#4A3A2A] px-3.5 py-3 hover:border-[var(--accent)] transition-colors flex items-start gap-2.5"
+                  className="text-left rounded-xl bg-[var(--c-surface-2)] border border-[var(--c-border)] px-3.5 py-3 hover:border-[var(--accent)] transition-colors flex items-start gap-2.5"
                 >
                   <Icon size={15} className="text-[var(--accent)] shrink-0 mt-0.5" strokeWidth={1.75} />
                   <div className="min-w-0">
                     <p className="text-[10px] text-[var(--accent-label)] uppercase tracking-wide">
                       {meta.label} ・ {alert.shopName}
                     </p>
-                    <p className="text-[13px] text-[#F2E9DD] mt-0.5 truncate">{alert.productName}</p>
-                    <p className="text-[12px] text-[#B8A891] mt-0.5">{alert.detail}</p>
+                    <p className="text-[13px] text-[var(--c-text)] mt-0.5 truncate">{alert.productName}</p>
+                    <p className="text-[12px] text-[var(--c-text-2)] mt-0.5">{alert.detail}</p>
                   </div>
                 </button>
               );

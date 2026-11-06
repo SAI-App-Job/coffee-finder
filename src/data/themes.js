@@ -1,59 +1,23 @@
 // ---------------------------------------------------------------------------
-// アクセントカラーのプリセット。配色そのものはダーク基調(#231810等)に固定し、
-// ボタン・アクティブタブ・リンクなどに使う「アクセント」だけをここから選ぶ。
-// 各色は以下4トークンを持つ:
-//   accent      : 主要な塗り色(ボタン背景・アクティブタブ・強調テキスト)
-//   accentSoft  : ホバー時の明るいバリエーション
-//   accentMuted : タグ/ピルの控えめなテキスト色
-//   accentLabel : 見出しラベル・アイコン・ボーダーに使う、やや暗めのトーン
-//   accentGlow  : ボタンのドロップシャドウに使うrgba文字列
+// アプリの配色テーマ(2種類)。実際の色は src/index.css の CSS 変数で定義していて、
+// <html data-theme="..."> の値で切り替える("dark" は属性なしの既定値と同じ)。
+//   dark  : 従来の配色(ダークブラウン基調+ゴールドのアクセント)
+//   light : 白を基調にした配色
+// preview はマイページの選択カードに描く見本の色(背景・文字・アクセント)。
 // ---------------------------------------------------------------------------
-export const ACCENT_THEMES = [
+export const COLOR_THEMES = [
   {
-    id: "gold",
-    label: "ゴールド",
-    accent: "#D4A24E",
-    accentSoft: "#E8C89A",
-    accentMuted: "#C9A876",
-    accentLabel: "#8B5E2E",
-    accentGlow: "rgba(212, 162, 78, 0.35)",
+    id: "dark",
+    label: "ダーク",
+    description: "ダークブラウン基調(従来の配色)",
+    preview: { bg: "#231810", surface: "#2f241a", text: "#f2e9dd", accent: "#d4a24e" },
   },
   {
-    id: "terracotta",
-    label: "テラコッタ",
-    accent: "#C1663A",
-    accentSoft: "#E3A47C",
-    accentMuted: "#D0916A",
-    accentLabel: "#8A4A2A",
-    accentGlow: "rgba(193, 102, 58, 0.35)",
-  },
-  {
-    id: "sage",
-    label: "セージグリーン",
-    accent: "#7C9473",
-    accentSoft: "#B7CBA9",
-    accentMuted: "#A0B693",
-    accentLabel: "#556B4A",
-    accentGlow: "rgba(124, 148, 115, 0.35)",
-  },
-  {
-    id: "dustyblue",
-    label: "ダスティブルー",
-    accent: "#5E85A8",
-    accentSoft: "#A6C4DB",
-    accentMuted: "#89ABC4",
-    accentLabel: "#3E5F7A",
-    accentGlow: "rgba(94, 133, 168, 0.35)",
-  },
-  {
-    id: "plum",
-    label: "プラム",
-    accent: "#9B5C7A",
-    accentSoft: "#D19DB4",
-    accentMuted: "#BD84A0",
-    accentLabel: "#6B3A52",
-    accentGlow: "rgba(155, 92, 122, 0.35)",
+    id: "light",
+    label: "ホワイト",
+    description: "白を基調にした明るい配色",
+    preview: { bg: "#ffffff", surface: "#faf6f0", text: "#2a1f16", accent: "#9a6a1e" },
   },
 ];
 
-export const DEFAULT_ACCENT_THEME_ID = "gold";
+export const DEFAULT_COLOR_THEME_ID = "dark";

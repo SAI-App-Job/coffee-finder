@@ -1,1 +1,68 @@
 @import "tailwindcss";
+
+/* 配色トークン。既定はダーク(従来の配色)、<html data-theme="light"> でホワイト基調に切り替える。
+   コンポーネントは色を直書きせず、必ず var(--c-*) / var(--accent*) 経由で参照する。
+   ライトの accent 系は、白地の上の文字・アイコンとしても読めるコントラスト(4.5:1前後)を確保している。 */
+:root {
+  --c-bg: #231810;
+  --c-surface: #2f241a;
+  --c-surface-2: #3b2211;
+  --c-border: #4a3a2a;
+  --c-text: #f2e9dd;
+  --c-text-2: #b8a891;
+  --c-text-3: #8b7361;
+  --c-bar: #1c140d;
+  --c-toast: #100b07;
+  --c-sea: #1c140d;
+  --c-danger: #c9506b;
+  --c-chip-active: #ffffff;
+  --c-chip-active-text: #231810;
+  --on-accent: #231810;
+  --accent: #d4a24e;
+  --accent-soft: #e8c89a;
+  --accent-muted: #c9a876;
+  --accent-label: #8b5e2e;
+  --accent-glow: rgba(212, 162, 78, 0.35);
+  /* accent の薄い塗り(--accent-glow)の上に載せる文字色 */
+  --accent-on-glow: #d4a24e;
+  /* 分類ごとの色(フレーバーホイール等)を文字に使うときに、黒を混ぜる割合。ダークは混ぜない。 */
+  --label-darken: 0%;
+  color-scheme: dark;
+}
+
+:root[data-theme="light"] {
+  --c-bg: #ffffff;
+  --c-surface: #faf6f0;
+  --c-surface-2: #f0e8dd;
+  --c-border: #e3d8c9;
+  --c-text: #2a1f16;
+  --c-text-2: #5c4a3a;
+  --c-text-3: #7a6756;
+  --c-bar: #ffffff;
+  --c-toast: #ffffff;
+  --c-sea: #ece4d6;
+  --c-danger: #b3354f;
+  --c-chip-active: #2a1f16;
+  --c-chip-active-text: #ffffff;
+  --on-accent: #ffffff;
+  --accent: #9a6a1e;
+  --accent-soft: #ae7d2a;
+  --accent-muted: #7a5226;
+  --accent-label: #7a5226;
+  --accent-glow: rgba(154, 106, 30, 0.25);
+  --accent-on-glow: #7a5226;
+  --label-darken: 35%;
+  color-scheme: light;
+}
+
+html {
+  background-color: var(--c-bg);
+}
+
+/* 横スクロールの行(タブ・並べ替え・絞り込みチップ)でスクロールバーを隠す */
+.scrollbar-hide {
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}

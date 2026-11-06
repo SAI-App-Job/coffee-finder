@@ -21,7 +21,7 @@ export function TriviaView({ onLearnOrigin, events }) {
               key={id}
               onClick={() => setSubTab(id)}
               className={`flex flex-col items-center justify-center gap-1 py-2.5 px-1 rounded-xl transition-colors ${
-                subTab === id ? "bg-[var(--accent)] text-[#231810]" : "bg-[#3B2211] text-[#B8A891]"
+                subTab === id ? "bg-[var(--accent)] text-[var(--on-accent)]" : "bg-[var(--c-surface-2)] text-[var(--c-text-2)]"
               }`}
             >
               <Icon size={16} strokeWidth={2} />

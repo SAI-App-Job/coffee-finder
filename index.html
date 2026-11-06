@@ -5,6 +5,14 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>coffee-app-project</title>
+    <script>
+      // 初回描画の前に保存済みの配色テーマを適用して、ダーク→ホワイトの一瞬のちらつきを防ぐ
+      // (本体は src/hooks/useColorTheme.js。キーと値はそちらと同じ)。
+      try {
+        var t = localStorage.getItem("coffee-finder:color-theme");
+        if (t === "light" || t === "dark") document.documentElement.dataset.theme = t;
+      } catch (e) {}
+    </script>
   </head>
   <body>
     <div id="root"></div>
