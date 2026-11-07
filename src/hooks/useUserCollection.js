@@ -23,6 +23,8 @@ function sanitizeShop(raw) {
     id,
     name,
     address: asString(raw.address),
+    // アプリに収録されている店舗と紐づいている場合の、その店舗名(手動で作った店舗は空)
+    appShopName: asString(raw.appShopName),
     createdAt: asString(raw.createdAt) || new Date().toISOString(),
   };
 }
@@ -64,7 +66,9 @@ function load() {
 
 // ユーザーが手動で登録した「店舗 → 商品」。アプリ収録の店舗・商品データ(GitHub上のJSON)とは
 // 完全に別の、端末内だけのデータで、コレクション画面の「登録した商品」に表示する。
-// レコード: shops = { id, name, address, createdAt }[]、
+// レコード: shops = { id, name, address, appShopName, createdAt }[]、
+//   appShopName があるものは、アプリ収録の店舗(店名で一致)に紐づく「登録商品のまとまり」で、
+//   店舗そのものを新しく作ったわけではない(店舗画面にも、その店舗の登録商品として表示する)。
 //           products = { id, shopId, name, price, weightG, originCountry, roast,
 //                        processingMethod, flavors[], note, createdAt }[]
 // 商品IDは評価(★)・テイスティングログのキーにも使う(アプリ収録の商品IDとは衝突しない "user-" 始まり)。
@@ -85,6 +89,16 @@ export function useUserCollection() {
     setData((prev) => ({ ...prev, shops: [...prev.shops, shop] }));
     return shop.id;
   }, []);
+
+  // アプリ収録の店舗に紐づく登録先を返す(無ければ作る)。店名で一致させ、同じ店舗の重複は作らない。
+  const findOrCreateAppShop = useCallback(
+    ({ name, address }) => {
+      const existing = data.shops.find((s) => s.appShopName === name);
+      if (existing) return existing.id;
+      return addShop({ name, address, appShopName: name });
+    },
+    [data.shops, addShop]
+  );
 
   const updateShop = useCallback((id, input) => {
     setData((prev) => ({
@@ -163,6 +177,7 @@ export function useUserCollection() {
     userShops: data.shops,
     userProducts: data.products,
     addShop,
+    findOrCreateAppShop,
     updateShop,
     deleteShop,
     addProduct,

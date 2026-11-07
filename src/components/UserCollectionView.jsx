@@ -1,119 +1,18 @@
 import { useState } from "react";
-import { Plus, Pencil, Trash2, MapPin, NotebookPen, Store } from "lucide-react";
-import { StarRating } from "./common";
-import { FlavorChips } from "./FlavorPicker";
+import { Plus, Pencil, MapPin, Store } from "lucide-react";
 import { PRIMARY_BUTTON_CLASS } from "./formStyles";
+import { DeleteControl, ICON_BUTTON_CLASS, UserProductList } from "./UserProductCard";
 
-const formatYen = (n) => `¥${n.toLocaleString("ja-JP")}`;
-
-const ICON_BUTTON_CLASS =
-  "p-1.5 rounded-lg text-[var(--c-text-3)] hover:text-[var(--c-text)] hover:bg-[var(--c-surface-2)] transition-colors";
-
-// 削除は、1回目で確認表示に切り替え、2回目で実行する(誤タップで消さないため)
-function DeleteControl({ confirming, onAsk, onCancel, onConfirm, label, confirmText }) {
-  if (!confirming) {
-    return (
-      <button onClick={onAsk} className={ICON_BUTTON_CLASS} aria-label={label}>
-        <Trash2 size={14} strokeWidth={1.75} />
-      </button>
-    );
-  }
-  return (
-    <span className="flex items-center gap-1.5 text-[11px]">
-      <span className="text-[var(--c-danger)]">{confirmText}</span>
-      <button
-        onClick={onConfirm}
-        className="px-2 py-1 rounded-md bg-[var(--c-danger)] text-white font-medium"
-      >
-        削除
-      </button>
-      <button onClick={onCancel} className="px-2 py-1 rounded-md border border-[var(--c-border)] text-[var(--c-text-2)]">
-        やめる
-      </button>
-    </span>
-  );
-}
-
-function UserProductCard({
-  product,
-  rating,
-  onRate,
-  logCount,
-  onOpenTastingLog,
-  onEdit,
-  confirming,
-  onAskDelete,
-  onCancelDelete,
-  onConfirmDelete,
-}) {
-  const meta = [
-    typeof product.price === "number" && formatYen(product.price),
-    typeof product.weightG === "number" && `${product.weightG}g`,
-  ].filter(Boolean);
-  const tags = [product.originCountry, product.roast, product.processingMethod].filter(Boolean);
-
-  return (
-    <div className="rounded-xl bg-[var(--c-surface-2)] border border-[var(--c-border)] p-3.5 flex flex-col gap-2">
-      <div className="flex items-start justify-between gap-3">
-        <h4 className="text-[14px] font-medium text-[var(--c-text)] leading-snug min-w-0">{product.name}</h4>
-        {meta.length > 0 && (
-          <p className="shrink-0 font-mono text-[12px] text-[var(--c-text-2)]">{meta.join(" / ")}</p>
-        )}
-      </div>
-
-      {tags.length > 0 && (
-        <div className="flex flex-wrap gap-1.5">
-          {tags.map((t) => (
-            <span
-              key={t}
-              className="text-[11px] px-2 py-0.5 rounded-full bg-[var(--c-surface)] text-[var(--accent-muted)] border border-[var(--c-border)]"
-            >
-              {t}
-            </span>
-          ))}
-        </div>
-      )}
-
-      <FlavorChips flavors={product.flavors} />
-      {product.note && <p className="text-[12px] text-[var(--c-text-2)] leading-relaxed whitespace-pre-line">{product.note}</p>}
-
-      <div className="flex items-center justify-between gap-3 pt-2 mt-0.5 border-t border-[var(--c-border)]">
-        <StarRating value={rating} onChange={onRate} size={16} />
-        <div className="flex items-center gap-0.5">
-          <button
-            onClick={onOpenTastingLog}
-            className="flex items-center gap-1 px-2 py-1.5 rounded-lg text-[11px] text-[var(--accent-on-glow)] hover:bg-[var(--c-surface)] transition-colors"
-          >
-            <NotebookPen size={13} strokeWidth={1.75} />
-            ログ{logCount > 0 ? `(${logCount})` : ""}
-          </button>
-          {!confirming && (
-            <button onClick={onEdit} className={ICON_BUTTON_CLASS} aria-label="商品を編集">
-              <Pencil size={14} strokeWidth={1.75} />
-            </button>
-          )}
-          <DeleteControl
-            confirming={confirming}
-            onAsk={onAskDelete}
-            onCancel={onCancelDelete}
-            onConfirm={onConfirmDelete}
-            label="商品を削除"
-            confirmText="削除しますか?"
-          />
-        </div>
-      </div>
-    </div>
-  );
-}
-
-// コレクション画面の「登録した商品」。ユーザーが手動で登録した 店舗 → 商品 を、店舗ごとにまとめて表示する。
+// コレクション画面の「登録した商品」。ユーザーが手動で登録した商品を、店舗ごとにまとめて表示する。
+// 店舗は2種類ある: アプリに載っている店舗(appShopName あり。店頭だけで売っている豆の登録など)と、
+// アプリに載っていない店舗(手動で作ったもの)。
 export function UserCollectionView({
   userShops,
   userProducts,
   getRating,
   onRate,
   getLogCount,
-  onAddShop,
+  onRegisterProduct,
   onEditShop,
   onDeleteShop,
   onAddProduct,
@@ -122,19 +21,22 @@ export function UserCollectionView({
   onOpenTastingLog,
   onOpenShopMap,
 }) {
-  const [confirming, setConfirming] = useState(null); // "shop:<id>" | "product:<id>"
+  const [confirmingShopId, setConfirmingShopId] = useState(null);
 
-  const shops = [...userShops].sort((a, b) => b.createdAt.localeCompare(a.createdAt));
+  // アプリの店舗に紐づく登録先は、商品が1件も無いときは表示しない(登録の途中経過を見せないため)
+  const shops = userShops
+    .filter((s) => !s.appShopName || userProducts.some((p) => p.shopId === s.id))
+    .sort((a, b) => b.createdAt.localeCompare(a.createdAt));
 
   return (
     <div className="px-5 py-5 flex flex-col gap-4">
       <div className="flex items-center justify-between gap-3">
         <p className="text-[13px] text-[var(--c-text-3)]">
-          {userShops.length}店舗・{userProducts.length}商品
+          {shops.length}店舗・{userProducts.length}商品
         </p>
-        <button onClick={onAddShop} className={`${PRIMARY_BUTTON_CLASS} px-3.5`}>
+        <button onClick={onRegisterProduct} className={`${PRIMARY_BUTTON_CLASS} px-3.5`}>
           <Plus size={14} strokeWidth={2.2} />
-          店舗を登録
+          商品を登録
         </button>
       </div>
 
@@ -143,15 +45,16 @@ export function UserCollectionView({
           <Store size={28} className="mx-auto mb-3 opacity-40" />
           <p className="text-[14px]">まだ登録した商品がありません</p>
           <p className="text-[12px] mt-1 leading-relaxed">
-            お店で買った豆を、「店舗 → 商品」の順に登録して、
+            お店を選んで、買った豆を登録できます。
             <br />
-            評価やテイスティングの記録と一緒に残せます
+            ネットでは売っていない店頭の豆や、アプリに載っていないお店も登録できます
           </p>
         </div>
       ) : (
         shops.map((shop) => {
           const products = userProducts.filter((p) => p.shopId === shop.id);
-          const shopConfirming = confirming === `shop:${shop.id}`;
+          const shopConfirming = confirmingShopId === shop.id;
+          const linked = Boolean(shop.appShopName);
           return (
             <section
               key={shop.id}
@@ -159,6 +62,11 @@ export function UserCollectionView({
             >
               <div className="flex items-start justify-between gap-3">
                 <div className="min-w-0">
+                  {linked && (
+                    <span className="inline-block text-[10px] px-1.5 py-0.5 mb-1 rounded-full bg-[var(--c-surface-2)] text-[var(--accent-muted)] border border-[var(--c-border)]">
+                      アプリ掲載店
+                    </span>
+                  )}
                   <h3 className="font-serif text-[17px] leading-snug text-[var(--c-text)]">{shop.name}</h3>
                   {shop.address && <p className="text-[12px] text-[var(--c-text-3)] mt-0.5">{shop.address}</p>}
                 </div>
@@ -168,43 +76,35 @@ export function UserCollectionView({
                       <MapPin size={14} strokeWidth={1.75} />
                     </button>
                   )}
-                  {!shopConfirming && (
+                  {/* アプリ掲載店の名前・住所はアプリ側のデータなので、ここでは編集しない */}
+                  {!linked && !shopConfirming && (
                     <button onClick={() => onEditShop(shop)} className={ICON_BUTTON_CLASS} aria-label="店舗を編集">
                       <Pencil size={14} strokeWidth={1.75} />
                     </button>
                   )}
                   <DeleteControl
                     confirming={shopConfirming}
-                    onAsk={() => setConfirming(`shop:${shop.id}`)}
-                    onCancel={() => setConfirming(null)}
+                    onAsk={() => setConfirmingShopId(shop.id)}
+                    onCancel={() => setConfirmingShopId(null)}
                     onConfirm={() => {
-                      setConfirming(null);
+                      setConfirmingShopId(null);
                       onDeleteShop(shop.id);
                     }}
-                    label="店舗を削除"
+                    label={linked ? "この店舗の登録商品をすべて削除" : "店舗を削除"}
                     confirmText={products.length > 0 ? `商品${products.length}件も消えます` : "削除しますか?"}
                   />
                 </div>
               </div>
 
-              {products.map((product) => (
-                <UserProductCard
-                  key={product.id}
-                  product={product}
-                  rating={getRating(product.id)}
-                  onRate={(stars) => onRate(product.id, stars)}
-                  logCount={getLogCount(product.id)}
-                  onOpenTastingLog={() => onOpenTastingLog(product)}
-                  onEdit={() => onEditProduct(shop, product)}
-                  confirming={confirming === `product:${product.id}`}
-                  onAskDelete={() => setConfirming(`product:${product.id}`)}
-                  onCancelDelete={() => setConfirming(null)}
-                  onConfirmDelete={() => {
-                    setConfirming(null);
-                    onDeleteProduct(product.id);
-                  }}
-                />
-              ))}
+              <UserProductList
+                products={products}
+                getRating={getRating}
+                onRate={onRate}
+                getLogCount={getLogCount}
+                onOpenTastingLog={onOpenTastingLog}
+                onEdit={(product) => onEditProduct(shop, product)}
+                onDelete={onDeleteProduct}
+              />
 
               <button
                 onClick={() => onAddProduct(shop)}

@@ -5,7 +5,8 @@ import { INPUT_CLASS, LABEL_CLASS, PRIMARY_BUTTON_CLASS } from "./formStyles";
 const normalizeName = (s) => s.normalize("NFKC").trim().toLowerCase();
 
 // 「店舗を登録」フォーム。コレクションに手動で商品を登録する前の、最初のステップ。
-// 店舗名を入力すると、アプリに収録済みの店舗が候補に出て、選ぶと住所が自動で入る。
+// 店舗名を入力すると、アプリに収録済みの店舗が候補に出て、選ぶと住所が自動で入る(その店舗に紐づく)。
+// アプリに載っていないお店を登録するための入口(掲載済みの店舗は、先に検索して選ぶ)。
 // target: null(閉じる) | { shop: 既存の店舗 }(編集) | {}(新規)
 export function UserShopFormModal({ target, appShops, userShops, onSave, onClose }) {
   const editing = target?.shop ?? null;
@@ -39,7 +40,9 @@ export function UserShopFormModal({ target, appShops, userShops, onSave, onClose
       setError("同じ名前の店舗がすでに登録されています");
       return;
     }
-    onSave({ name: trimmedName, address: address.trim() }, editing);
+    // アプリ収録の店舗と同じ名前なら、その店舗に紐づけて登録する(店舗画面にも登録商品が出る)
+    const appShopName = appShops.some((s) => s.name === trimmedName) ? trimmedName : "";
+    onSave({ name: trimmedName, address: address.trim(), appShopName }, editing);
   };
 
   return (

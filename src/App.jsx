@@ -34,6 +34,7 @@ import { FilterSheet } from "./components/FilterSheet";
 import { ShopListView, ShopDetailView } from "./components/ShopViews";
 import { CollectionView } from "./components/CollectionView";
 import { UserShopFormModal } from "./components/UserShopFormModal";
+import { UserShopPickerModal } from "./components/UserShopPickerModal";
 import { UserProductFormModal } from "./components/UserProductFormModal";
 import { BuyingGuideView } from "./components/BuyingGuideView";
 import { TriviaView } from "./components/TriviaView";
@@ -90,6 +91,7 @@ export default function CoffeeProductList() {
   const { getLogs, addLog, deleteLog } = useTastingLog();
   const userCollection = useUserCollection();
   // コレクションの「登録した商品」: 店舗フォーム({}=新規 / {shop}=編集)と商品フォーム({shop, product?})
+  const [userShopPickerOpen, setUserShopPickerOpen] = useState(false);
   const [userShopForm, setUserShopForm] = useState(null);
   const [userProductForm, setUserProductForm] = useState(null);
   const { getNotes: getShopNotes, addNote: addShopNote, deleteNote: deleteShopNote } = useShopTastingNotes();
@@ -414,10 +416,24 @@ export default function CoffeeProductList() {
     if (id) setUserProductForm({ shop: { id, ...data } });
   };
 
+  // アプリ掲載店はまだ登録先(店舗の記録)が無いことがあるので、保存するときに探して、無ければ作る
   const saveUserProduct = (data, shop, editing) => {
     if (editing) userCollection.updateProduct(editing.id, data);
-    else userCollection.addProduct(shop.id, data);
+    else userCollection.addProduct(shop.id ?? userCollection.findOrCreateAppShop(shop), data);
     setUserProductForm(null);
+  };
+
+  // 商品登録の最初のステップ「どのお店?」の選択結果 → 商品フォームを開く
+  const pickAppShopForProduct = (appShop) => {
+    const linked = userCollection.userShops.find((s) => s.appShopName === appShop.name);
+    setUserShopPickerOpen(false);
+    setUserProductForm({
+      shop: linked ?? { name: appShop.name, address: appShop.address, appShopName: appShop.name },
+    });
+  };
+  const pickUserShopForProduct = (shop) => {
+    setUserShopPickerOpen(false);
+    setUserProductForm({ shop });
   };
 
   // 削除した商品の評価(★)も一緒に消す。テイスティングログは履歴として端末に残る。
@@ -427,6 +443,28 @@ export default function CoffeeProductList() {
   const deleteUserProduct = (productId) => {
     userCollection.deleteProduct(productId);
     setRating(productId, 0);
+  };
+
+  // 店舗画面の「店頭の商品(手動登録)」: 選んだアプリ掲載店に紐づく、手動登録した商品
+  const linkedUserShop = selectedShop
+    ? userCollection.userShops.find((s) => s.appShopName === selectedShop.name)
+    : undefined;
+  const registeredForSelectedShop = selectedShop && {
+    products: linkedUserShop ? userCollection.userProducts.filter((p) => p.shopId === linkedUserShop.id) : [],
+    onRegister: () =>
+      setUserProductForm({
+        shop: linkedUserShop ?? {
+          name: selectedShop.name,
+          address: selectedShop.address ?? "",
+          appShopName: selectedShop.name,
+        },
+      }),
+    onEdit: (product) => setUserProductForm({ shop: linkedUserShop, product }),
+    onDelete: deleteUserProduct,
+    getRating,
+    onRate: setRating,
+    getLogCount: (id) => getLogs(id).length,
+    onOpenTastingLog: (product) => setTastingLogProduct({ id: product.id, rawName: product.name }),
   };
 
   // 手動登録した店舗: 店舗名+住所でGoogleマップを検索する(座標は持たないため)
@@ -678,7 +716,7 @@ export default function CoffeeProductList() {
             userProducts: userCollection.userProducts,
             onRate: setRating,
             getLogCount: (id) => getLogs(id).length,
-            onAddShop: () => setUserShopForm({}),
+            onRegisterProduct: () => setUserShopPickerOpen(true),
             onEditShop: (shop) => setUserShopForm({ shop }),
             onDeleteShop: deleteUserShop,
             onAddProduct: (shop) => setUserProductForm({ shop }),
@@ -719,6 +757,7 @@ export default function CoffeeProductList() {
           tastingNotes={getShopNotes(selectedShop.name)}
           onCreateTastingNote={() => setNoteFormShop(selectedShop)}
           onDeleteTastingNote={(noteId) => deleteShopNote(selectedShop.name, noteId)}
+          registered={registeredForSelectedShop}
         />
       )}
 
@@ -767,6 +806,18 @@ export default function CoffeeProductList() {
         onRate={setRating}
         logCount={detailProduct ? getLogs(detailProduct.id).length : 0}
         onOpenTastingLog={setTastingLogProduct}
+      />
+      <UserShopPickerModal
+        open={userShopPickerOpen}
+        appShops={appShopSuggestions}
+        userShops={userCollection.userShops}
+        onPickAppShop={pickAppShopForProduct}
+        onPickUserShop={pickUserShopForProduct}
+        onNewShop={() => {
+          setUserShopPickerOpen(false);
+          setUserShopForm({});
+        }}
+        onClose={() => setUserShopPickerOpen(false)}
       />
       <UserShopFormModal
         target={userShopForm}

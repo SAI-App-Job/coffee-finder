@@ -11,10 +11,12 @@ import {
   LocateFixed,
   NotebookPen,
   Trash2,
+  Plus,
 } from "lucide-react";
 import { SectionHeading, StarRating } from "./common";
 import { ProductCard } from "./ProductCard";
 import { FlavorChips } from "./FlavorPicker";
+import { UserProductList } from "./UserProductCard";
 import { formatDateTime } from "../utils/format";
 
 const SHOP_SORT_MODE_ITEMS = [
@@ -265,6 +267,7 @@ export function ShopDetailView({
   tastingNotes = [],
   onCreateTastingNote,
   onDeleteTastingNote,
+  registered,
 }) {
   const hasMultipleLocations = shop.locations && shop.locations.length > 0;
 
@@ -314,6 +317,36 @@ export function ShopDetailView({
             </a>
           )}
         </div>
+
+        {/* 店頭でしか買えない豆など、アプリに載っていない商品を、この店舗の商品として手動で登録する */}
+        {registered && (
+          <button
+            onClick={registered.onRegister}
+            className="w-full mt-2 flex items-center justify-center gap-1.5 py-2.5 rounded-xl bg-[var(--accent)] text-[var(--on-accent)] text-[13px] font-medium hover:bg-[var(--accent-soft)] transition-colors"
+          >
+            <Plus size={14} strokeWidth={2.2} />
+            店頭の商品を登録
+          </button>
+        )}
+
+        {registered && registered.products.length > 0 && (
+          <div className="mt-4">
+            <p className="text-[12px] text-[var(--c-text-3)] mb-2">
+              店頭の商品(手動登録) {registered.products.length}件
+            </p>
+            <div className="flex flex-col gap-2">
+              <UserProductList
+                products={registered.products}
+                getRating={registered.getRating}
+                onRate={registered.onRate}
+                getLogCount={registered.getLogCount}
+                onOpenTastingLog={registered.onOpenTastingLog}
+                onEdit={registered.onEdit}
+                onDelete={registered.onDelete}
+              />
+            </div>
+          </div>
+        )}
 
         <button
           onClick={onCreateTastingNote}
