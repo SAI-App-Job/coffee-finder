@@ -64,11 +64,12 @@ export const NAV_TABS = [
     id: "trivia",
     icon: BookOpen,
     ja: "豆知識",
-    children: TRIVIA_SUB_TABS.map(({ id, icon, ja, popupLabel }) => ({
+    children: TRIVIA_SUB_TABS.map(({ id, icon, ja, en, popupLabel }) => ({
       page: "trivia",
       sub: id,
       icon,
       ja,
+      en, // 英語表示の名前(辞書の訳だと、画面内の別の場所と同じ日本語が別の意味になるため、ここで持つ)
       popupLabel,
     })),
   },

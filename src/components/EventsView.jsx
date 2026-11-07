@@ -2,8 +2,10 @@ import { Calendar, MapPin, ExternalLink, Trophy, Globe2 } from "lucide-react";
 import { SectionHeading, SourceCredit } from "./common";
 import { EVENT_TYPE_LABELS } from "../data/events";
 import { JAPAN_COMPETITIONS } from "../data/japanCompetitions";
+import { useT } from "../i18n";
 
 export function EventCard({ event, onLearnOrigin }) {
+  const t = useT();
   const typeInfo = EVENT_TYPE_LABELS[event.eventType] || { ja: event.eventType, color: "var(--c-text-3)" };
   return (
     <div className="rounded-2xl bg-[var(--c-surface)] border border-[var(--c-border)] p-4 flex flex-col gap-2">
@@ -42,7 +44,7 @@ export function EventCard({ event, onLearnOrigin }) {
             onClick={() => onLearnOrigin(event.relatedCountry)}
             className="text-[11px] text-[var(--accent)] hover:text-[var(--accent-soft)] transition-colors"
           >
-            産地タブで{event.relatedCountry}を見る →
+            {t("産地タブで{country}を見る →", { country: t(event.relatedCountry) })}
           </button>
         ) : (
           <span />
@@ -53,7 +55,7 @@ export function EventCard({ event, onLearnOrigin }) {
           rel="noopener noreferrer"
           className="flex items-center gap-1 text-[11px] text-[var(--c-text-3)] hover:text-[var(--c-text-2)] transition-colors"
         >
-          公式サイト
+          {t("公式サイト")}
           <ExternalLink size={11} />
         </a>
       </div>
@@ -106,6 +108,7 @@ export function JapanCompetitionCard({ competition }) {
 // event.note(優勝者テキストが入っていれば開催済み)の有無で判定し、バッジで
 // 明示的に区別する。
 export function WorldChampionshipCard({ event }) {
+  const t = useT();
   const concluded = Boolean(event.note);
   return (
     <div className="rounded-2xl bg-[var(--c-surface)] border border-[var(--c-border)] p-4 flex flex-col gap-2">
@@ -118,7 +121,7 @@ export function WorldChampionshipCard({ event }) {
               : "bg-[var(--accent)] text-[var(--on-accent)]"
           }`}
         >
-          {concluded ? "開催済み" : "開催予定"}
+          {concluded ? t("開催済み") : t("開催予定")}
         </span>
       </div>
       <div className="flex flex-col gap-1 text-[12px] text-[var(--c-text-2)]">
@@ -140,7 +143,7 @@ export function WorldChampionshipCard({ event }) {
         rel="noopener noreferrer"
         className="self-end flex items-center gap-1 text-[11px] text-[var(--c-text-3)] hover:text-[var(--c-text-2)] transition-colors"
       >
-        公式サイト
+        {t("公式サイト")}
         <ExternalLink size={11} />
       </a>
     </div>

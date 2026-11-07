@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { ChevronUp } from "lucide-react";
 import { NAV_TABS, isNavTabActive, isNavTargetCurrent } from "../data/navigation";
+import { useLang, useT } from "../i18n";
 
 const POPUP_CELL_PX = 76;
 const POPUP_MAX_COLUMNS = 4;
@@ -40,6 +41,8 @@ function CountBadge({ count, className = "" }) {
 // alertCount: お知らせの件数(action: "alerts" の項目とその親タブにバッジで表示)。
 // onAction: action を持つ子メニュー項目が押されたときに呼ぶ。
 export function BottomNav({ page, triviaSub, onNavigate, alertCount = 0, onAction }) {
+  const t = useT();
+  const { lang } = useLang();
   const [openTabId, setOpenTabId] = useState(null);
 
   useEffect(() => {
@@ -72,7 +75,7 @@ export function BottomNav({ page, triviaSub, onNavigate, alertCount = 0, onActio
       {openTabId && <div className="fixed inset-0 z-0" onClick={() => setOpenTabId(null)} aria-hidden="true" />}
 
       <nav
-        aria-label="メインメニュー"
+        aria-label={t("メインメニュー")}
         className="relative z-10 border-t border-[var(--c-border)] bg-[var(--c-bar)] pb-[env(safe-area-inset-bottom)]"
       >
         <div className="relative max-w-xl mx-auto flex">
@@ -103,7 +106,7 @@ export function BottomNav({ page, triviaSub, onNavigate, alertCount = 0, onActio
                   />
                 </span>
                 <span className="flex items-center gap-0.5 text-[10px] font-medium leading-none">
-                  {tab.ja}
+                  {t(tab.ja)}
                   {tab.children && (
                     <ChevronUp
                       size={9}
@@ -122,7 +125,7 @@ export function BottomNav({ page, triviaSub, onNavigate, alertCount = 0, onActio
                 <div
                   key={tab.id}
                   role="menu"
-                  aria-label={`${tab.ja}のメニュー`}
+                  aria-label={t("{name}のメニュー", { name: t(tab.ja) })}
                   className="nav-popup absolute bottom-full mb-2 grid gap-y-3 rounded-2xl bg-[var(--c-surface)] border border-[var(--c-border)] shadow-[0_8px_24px_rgba(0,0,0,0.3)]"
                   style={{ ...popupStyle(index, tab.children.length), padding: POPUP_PADDING_PX }}
                 >
@@ -152,7 +155,7 @@ export function BottomNav({ page, triviaSub, onNavigate, alertCount = 0, onActio
                             current ? "text-[var(--accent)] font-medium" : "text-[var(--c-text-2)]"
                           }`}
                         >
-                          {child.popupLabel ?? child.ja}
+                          {lang === "en" && child.en ? child.en : t(child.popupLabel ?? child.ja)}
                         </span>
                       </button>
                     );

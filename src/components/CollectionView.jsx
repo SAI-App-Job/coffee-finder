@@ -1,4 +1,5 @@
 import { useMemo, useState } from "react";
+import { useT } from "../i18n";
 import { List, Map as MapIcon, Heart, Coffee } from "lucide-react";
 import { SectionHeading } from "./common";
 import { FavoritesView } from "./FavoritesView";
@@ -34,6 +35,7 @@ export function CollectionView({
   backup,
   registered,
 }) {
+  const t = useT();
   const [section, setSection] = useState("favorites");
   const [viewMode, setViewMode] = useState("list");
 
@@ -58,7 +60,7 @@ export function CollectionView({
               }`}
             >
               <Icon size={13} strokeWidth={2} />
-              {label}
+              {t(label)}
               <span className={section === id ? "opacity-80" : "opacity-60"}>{counts[id]}</span>
             </button>
           ))}
@@ -79,7 +81,7 @@ export function CollectionView({
                   }`}
                 >
                   <Icon size={13} strokeWidth={2} />
-                  {label}
+                  {t(label)}
                 </button>
               ))}
             </div>

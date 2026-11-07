@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 import { FLAVOR_WHEEL_DATA } from "../data/flavorWheel";
+import { useT } from "../i18n";
 
 // 用語 → 大分類の色。記録に保存するのは用語(例: "糖蜜")だけで、色は表示時に引く。
 const TERM_COLOR = (() => {
@@ -29,6 +30,7 @@ function readableOn(hex) {
 
 // 記録済みの風味を色付きのチップで並べる(一覧表示用)
 export function FlavorChips({ flavors }) {
+  const t = useT();
   if (!Array.isArray(flavors) || flavors.length === 0) return null;
   return (
     <div className="flex flex-wrap gap-1.5">
@@ -38,7 +40,7 @@ export function FlavorChips({ flavors }) {
           className="text-[11px] px-2 py-0.5 rounded-full border text-[var(--c-text)]"
           style={{ borderColor: termColor(term), backgroundColor: `${termColor(term)}33` }}
         >
-          {term}
+          {t(term)}
         </span>
       ))}
     </div>
@@ -48,6 +50,7 @@ export function FlavorChips({ flavors }) {
 // 豆知識タブのフレーバーホイールと同じ9大分類・詳細項目から、複数の風味を選ぶ入力部品。
 // value: 選択中の用語の配列、onChange: 新しい配列を受け取る。
 export function FlavorPicker({ value, onChange }) {
+  const t = useT();
   const [openCat, setOpenCat] = useState(null);
 
   const toggle = (term) => {
@@ -64,7 +67,7 @@ export function FlavorPicker({ value, onChange }) {
             onClick={() => onChange([])}
             className="shrink-0 text-[11px] text-[var(--c-text-3)] hover:text-[var(--c-text)] underline underline-offset-2"
           >
-            すべて外す
+            {t("すべて外す")}
           </button>
         </div>
       )}
@@ -88,7 +91,7 @@ export function FlavorPicker({ value, onChange }) {
             >
               <span className="flex items-center gap-2">
                 <span className="w-2.5 h-2.5 rounded-full shrink-0" style={{ backgroundColor: cat.color }} />
-                <span className="text-[13px] text-[var(--c-text)]">{cat.ja}</span>
+                <span className="text-[13px] text-[var(--c-text)]">{t(cat.ja)}</span>
                 {selectedCount > 0 && (
                   <span
                     className="text-[10px] px-1.5 py-0.5 rounded-full font-medium"
@@ -107,7 +110,7 @@ export function FlavorPicker({ value, onChange }) {
               <div className="px-3 pb-3 pt-2.5 flex flex-col gap-2.5 border-t border-[var(--c-border)]">
                 {cat.sub.map((s) => (
                   <div key={s.group}>
-                    <p className="text-[11px] text-[var(--c-text-3)] mb-1">{s.group}</p>
+                    <p className="text-[11px] text-[var(--c-text-3)] mb-1">{t(s.group)}</p>
                     <div className="flex flex-wrap gap-1.5">
                       {s.terms.map((term) => {
                         const selected = value.includes(term);
@@ -128,7 +131,7 @@ export function FlavorPicker({ value, onChange }) {
                                 : undefined
                             }
                           >
-                            {term}
+                            {t(term)}
                           </button>
                         );
                       })}

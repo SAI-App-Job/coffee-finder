@@ -13,11 +13,12 @@ import {
   Trash2,
   Plus,
 } from "lucide-react";
-import { SectionHeading, StarRating } from "./common";
+import { SectionHeading, StarRating, JaOnlyNote } from "./common";
 import { ProductCard } from "./ProductCard";
 import { FlavorChips } from "./FlavorPicker";
 import { UserProductList } from "./UserProductCard";
 import { formatDateTime } from "../utils/format";
+import { Trans, useT } from "../i18n";
 
 const SHOP_SORT_MODE_ITEMS = [
   { id: "distance", label: "近い順", icon: MapPin },
@@ -25,6 +26,7 @@ const SHOP_SORT_MODE_ITEMS = [
 ];
 
 export function ShopCard({ shop, productCount, onSelect }) {
+  const t = useT();
   return (
     <button
       onClick={onSelect}
@@ -33,7 +35,7 @@ export function ShopCard({ shop, productCount, onSelect }) {
       <div className="flex items-start justify-between gap-3">
         <div>
           <p className="text-[11px] tracking-wider text-[var(--accent-label)] font-medium uppercase">
-            {shop.prefecture}
+            {t(shop.prefecture)}
           </p>
           <h3 className="font-serif text-[18px] leading-snug text-[var(--c-text)] mt-0.5">
             {shop.name}
@@ -41,15 +43,15 @@ export function ShopCard({ shop, productCount, onSelect }) {
         </div>
         <span className="shrink-0 text-[11px] px-2 py-0.5 rounded-full bg-[var(--c-surface-2)] text-[var(--accent-muted)] border border-[var(--c-border)] flex items-center gap-1">
           <Package size={11} />
-          {productCount}件
+          {t("{n}件", { n: productCount })}
         </span>
       </div>
       <p className="text-[13px] text-[var(--c-text-3)]">
         {shop.address}
         {shop.nearestStation?.name && (
           <span className="text-[var(--c-text-3)]/70">
-            ・{shop.nearestStation.name}駅
-            {typeof shop.nearestStation.walkMin === "number" && ` 徒歩${shop.nearestStation.walkMin}分`}
+            {t("・{name}駅", { name: shop.nearestStation.name })}
+            {typeof shop.nearestStation.walkMin === "number" && ` ${t("徒歩{n}分", { n: shop.nearestStation.walkMin })}`}
           </span>
         )}
       </p>
@@ -70,6 +72,7 @@ export function ShopListView({
   geolocation,
   favoriteArea,
 }) {
+  const t = useT();
   const [searchQuery, setSearchQuery] = useState("");
 
   const filteredShops = useMemo(() => {
@@ -85,6 +88,7 @@ export function ShopListView({
   return (
     <main className="px-5 py-5 flex flex-col gap-3 max-w-xl mx-auto">
       <SectionHeading en="Shops" ja="店舗一覧" className="mb-1" />
+      <JaOnlyNote />
       <div className="flex items-center gap-1.5 overflow-x-auto scrollbar-hide">
         {SHOP_SORT_MODE_ITEMS.map(({ id, label, icon: Icon }) => {
           // 「近い順」は、実際に距離順ソートが有効な(位置情報取得に成功した)
@@ -103,7 +107,7 @@ export function ShopListView({
               }`}
             >
               <Icon size={12} strokeWidth={2} />
-              {label}
+              {t(label)}
             </button>
           );
         })}
@@ -112,40 +116,43 @@ export function ShopListView({
         <div className="flex items-start gap-1 text-[11px] text-[var(--c-text-3)]">
           <LocateFixed size={11} strokeWidth={1.75} className="shrink-0 mt-0.5" />
           <p>
-            {geolocation.status === "pending" && "位置情報を取得中です(取得できるまで全件表示しています)"}
+            {geolocation.status === "pending" && t("位置情報を取得中です(取得できるまで全件表示しています)")}
             {geolocation.status === "denied" && (
-              <>
-                位置情報が許可されていないため、全件表示しています。ブラウザの拒否設定はアプリからは解除できないため、ブラウザのアドレスバー付近のアイコンから位置情報の許可を変更したうえで、
-                <button
-                  onClick={geolocation.retry}
-                  className="text-[var(--accent)] underline underline-offset-2"
-                >
-                  再試行
-                </button>
-                してください
-              </>
+              <Trans
+                k="位置情報が許可されていないため、全件表示しています。ブラウザの拒否設定はアプリからは解除できないため、ブラウザのアドレスバー付近のアイコンから位置情報の許可を変更したうえで、{retry}してください"
+                values={{
+                  retry: (
+                    <button onClick={geolocation.retry} className="text-[var(--accent)] underline underline-offset-2">
+                      {t("再試行")}
+                    </button>
+                  ),
+                }}
+              />
             )}
             {geolocation.status === "error" && (
-              <>
-                位置情報を取得できなかったため、全件表示しています。
-                <button
-                  onClick={geolocation.retry}
-                  className="text-[var(--accent)] underline underline-offset-2"
-                >
-                  位置情報を取得
-                </button>
-              </>
+              <Trans
+                k="位置情報を取得できなかったため、全件表示しています。{retry}"
+                values={{
+                  retry: (
+                    <button onClick={geolocation.retry} className="text-[var(--accent)] underline underline-offset-2">
+                      {t("位置情報を取得")}
+                    </button>
+                  ),
+                }}
+              />
             )}
             {geolocation.status === "unsupported" &&
-              "この端末・ブラウザは位置情報に対応していないため、全件表示しています"}
+              t("この端末・ブラウザは位置情報に対応していないため、全件表示しています")}
           </p>
         </div>
       )}
       {sortMode === "favoriteArea" && (
         <p className="text-[11px] text-[var(--c-text-3)]">
           {favoriteArea.prefecture
-            ? `登録エリア: ${favoriteArea.prefecture}${favoriteArea.city ? ` ${favoriteArea.city}` : ""}(設定で変更できます)`
-            : "登録エリアが未登録です(設定で登録できます)"}
+            ? t("登録エリア: {area}(設定で変更できます)", {
+                area: `${t(favoriteArea.prefecture)}${favoriteArea.city ? ` ${favoriteArea.city}` : ""}`,
+              })
+            : t("登録エリアが未登録です(設定で登録できます)")}
         </p>
       )}
       <div className="relative mb-1">
@@ -154,14 +161,14 @@ export function ShopListView({
           type="text"
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
-          placeholder="店舗名・都道府県・住所・駅名で検索"
+          placeholder={t("店舗名・都道府県・住所・駅名で検索")}
           className="w-full pl-9 pr-9 py-2.5 rounded-xl bg-[var(--c-surface)] border border-[var(--c-border)] text-[13px] text-[var(--c-text)] placeholder:text-[var(--c-text-3)] focus:outline-none focus:border-[var(--accent-label)]"
         />
         {searchQuery && (
           <button
             onClick={() => setSearchQuery("")}
             className="absolute right-3 top-1/2 -translate-y-1/2 text-[var(--c-text-3)] hover:text-[var(--c-text)]"
-            aria-label="検索をクリア"
+            aria-label={t("検索をクリア")}
           >
             <X size={14} />
           </button>
@@ -171,13 +178,13 @@ export function ShopListView({
         <p className="text-center py-12 text-[13px] text-[var(--c-text-3)]">
           {sortMode === "favoriteArea"
             ? favoriteArea.prefecture
-              ? "登録したエリアには該当する店舗がありません。設定でエリアを変更してみてください"
-              : "設定で登録エリア(都道府県・市区町村)を登録してください"
-            : "該当する店舗が見つかりませんでした"}
+              ? t("登録したエリアには該当する店舗がありません。設定でエリアを変更してみてください")
+              : t("設定で登録エリア(都道府県・市区町村)を登録してください")
+            : t("該当する店舗が見つかりませんでした")}
         </p>
       ) : filteredShops.length === 0 ? (
         <p className="text-center py-12 text-[13px] text-[var(--c-text-3)]">
-          該当する店舗が見つかりませんでした
+          {t("該当する店舗が見つかりませんでした")}
         </p>
       ) : (
         filteredShops.map((shop) => (
@@ -194,6 +201,7 @@ export function ShopListView({
 }
 
 export function LocationCard({ location, onOpenMap }) {
+  const t = useT();
   return (
     <div className="rounded-xl bg-[var(--c-surface-2)] border border-[var(--c-border)] p-3 flex flex-col gap-1.5">
       <p className="text-[14px] font-medium text-[var(--c-text)]">{location.label}</p>
@@ -222,13 +230,14 @@ export function LocationCard({ location, onOpenMap }) {
         className="mt-1 self-start flex items-center gap-1.5 text-[12px] text-[var(--accent)] hover:text-[var(--accent-soft)] transition-colors"
       >
         <MapPin size={12} strokeWidth={2} />
-        この店舗をGoogleマップで開く
+        {t("この店舗をGoogleマップで開く")}
       </button>
     </div>
   );
 }
 
 function ShopNoteCard({ note, onDelete }) {
+  const t = useT();
   return (
     <div className="rounded-xl bg-[var(--c-surface-2)] border border-[var(--c-border)] p-3.5 flex flex-col gap-2">
       <div className="flex items-start justify-between gap-3">
@@ -239,12 +248,12 @@ function ShopNoteCard({ note, onDelete }) {
               <StarRating value={note.rating} size={13} readOnly />
             </div>
           )}
-          <p className="text-[11px] text-[var(--c-text-3)] mt-1">登録日 {formatDateTime(note.recordedAt)}</p>
+          <p className="text-[11px] text-[var(--c-text-3)] mt-1">{t("登録日 {date}", { date: formatDateTime(note.recordedAt) })}</p>
         </div>
         <button
           onClick={() => onDelete(note.id)}
           className="shrink-0 text-[var(--c-text-3)] hover:text-[var(--c-text)] transition-colors -m-1 p-1"
-          aria-label="このノートを削除"
+          aria-label={t("このノートを削除")}
         >
           <Trash2 size={13} />
         </button>
@@ -269,6 +278,7 @@ export function ShopDetailView({
   onDeleteTastingNote,
   registered,
 }) {
+  const t = useT();
   const hasMultipleLocations = shop.locations && shop.locations.length > 0;
 
   return (
@@ -279,11 +289,11 @@ export function ShopDetailView({
           className="flex items-center gap-1 text-[13px] text-[var(--c-text-3)] hover:text-[var(--c-text)] transition-colors mb-4"
         >
           <ArrowLeft size={14} />
-          店舗一覧に戻る
+          {t("店舗一覧に戻る")}
         </button>
 
         <p className="text-[11px] tracking-wider text-[var(--accent-label)] font-medium uppercase">
-          {shop.prefecture} ・ {shop.platform}
+          {t(shop.prefecture)} ・ {shop.platform}
         </p>
         <h2 className="font-serif text-[24px] text-[var(--c-text)] mt-1">{shop.name}</h2>
         <p className="text-[13px] text-[var(--c-text-3)] mt-1.5">{shop.address}</p>
@@ -302,7 +312,7 @@ export function ShopDetailView({
               className="flex-1 flex items-center justify-center gap-1.5 py-2.5 rounded-xl bg-[var(--accent)] text-[var(--on-accent)] text-[13px] font-medium"
             >
               <MapPin size={14} strokeWidth={2} />
-              Googleマップで開く
+              {t("Googleマップで開く")}
             </button>
           )}
           {(shop.url || shop.instagramUrl) && (
@@ -312,7 +322,7 @@ export function ShopDetailView({
               rel="noopener noreferrer"
               className="flex-1 flex items-center justify-center gap-1.5 py-2.5 rounded-xl border border-[var(--c-border)] text-[var(--c-text-2)] text-[13px]"
             >
-              {shop.url ? "公式サイト" : "公式Instagram"}
+              {shop.url ? t("公式サイト") : t("公式Instagram")}
               <ExternalLink size={12} />
             </a>
           )}
@@ -325,14 +335,14 @@ export function ShopDetailView({
             className="w-full mt-2 flex items-center justify-center gap-1.5 py-2.5 rounded-xl bg-[var(--accent)] text-[var(--on-accent)] text-[13px] font-medium hover:bg-[var(--accent-soft)] transition-colors"
           >
             <Plus size={14} strokeWidth={2.2} />
-            店頭の商品を登録
+            {t("店頭の商品を登録")}
           </button>
         )}
 
         {registered && registered.products.length > 0 && (
           <div className="mt-4">
             <p className="text-[12px] text-[var(--c-text-3)] mb-2">
-              店頭の商品(手動登録) {registered.products.length}件
+              {t("店頭の商品(手動登録) {n}件", { n: registered.products.length })}
             </p>
             <div className="flex flex-col gap-2">
               <UserProductList
@@ -354,12 +364,12 @@ export function ShopDetailView({
           className="w-full mt-2 flex items-center justify-center gap-1.5 py-2.5 rounded-xl border border-[var(--accent)] text-[var(--accent)] text-[13px] font-medium hover:bg-[var(--accent)] hover:text-[var(--on-accent)] transition-colors"
         >
           <NotebookPen size={14} strokeWidth={2} />
-          テイスティングノートを作成
+          {t("テイスティングノートを作成")}
         </button>
 
         {tastingNotes.length > 0 && (
           <div className="mt-4">
-            <p className="text-[12px] text-[var(--c-text-3)] mb-2">この店のテイスティングノート {tastingNotes.length}件</p>
+            <p className="text-[12px] text-[var(--c-text-3)] mb-2">{t("この店のテイスティングノート {n}件", { n: tastingNotes.length })}</p>
             <div className="flex flex-col gap-2">
               {tastingNotes.map((n) => (
                 <ShopNoteCard key={n.id} note={n} onDelete={onDeleteTastingNote} />
@@ -371,7 +381,7 @@ export function ShopDetailView({
         {hasMultipleLocations && (
           <div className="mt-4">
             <p className="text-[12px] text-[var(--c-text-3)] mb-2">
-              実店舗 {shop.locations.length}箇所
+              {t("実店舗 {n}箇所", { n: shop.locations.length })}
             </p>
             <div className="flex flex-col gap-2">
               {shop.locations.map((loc) => (
@@ -383,7 +393,7 @@ export function ShopDetailView({
       </div>
 
       <div className="px-5 py-5 flex flex-col gap-3">
-        <p className="text-[12px] text-[var(--c-text-3)]">取扱商品 {products.length}件</p>
+        <p className="text-[12px] text-[var(--c-text-3)]">{t("取扱商品 {n}件", { n: products.length })}</p>
         {products.map((product) => (
           <ProductCard
             key={product.id}

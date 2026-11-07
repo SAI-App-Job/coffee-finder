@@ -1,3 +1,4 @@
+import { translate } from "../i18n";
 import { useCallback, useState } from "react";
 
 export const FREE_COMPARE_LIMIT = 3;
@@ -17,7 +18,7 @@ export function useComparison(isPremium, showToast) {
         if (prev.includes(key)) return prev.filter((existing) => existing !== key);
         if (!isPremium && prev.length >= FREE_COMPARE_LIMIT) {
           showToast?.(
-            `比較は無料プランで${FREE_COMPARE_LIMIT}件までです。有料プランでは無制限に比較できます。`
+            translate("比較は無料プランで{n}件までです。有料プランでは無制限に比較できます。", { n: FREE_COMPARE_LIMIT })
           );
           return prev;
         }

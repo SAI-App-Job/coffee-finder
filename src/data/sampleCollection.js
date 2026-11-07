@@ -2,6 +2,7 @@
 // 登録した商品が空のときに、ボタンで追加できる。架空のお店・商品で、実在のものではない。
 // ID に "-sample-" を含めることで、サンプルかどうかを見分ける(バックアップに入れても、復元後も「サンプル」と分かる)。
 import { ROAST_LEVELS } from "./roastLevels";
+import { translate } from "../i18n";
 
 export const SAMPLE_SHOP_ID = "user-shop-sample-1";
 
@@ -13,6 +14,17 @@ const DAY_MS = 24 * 60 * 60 * 1000;
 const SAMPLE_PRODUCTS = [
   {
     id: "user-product-sample-1",
+    en: {
+      name: "Ethiopia Yirgacheffe",
+      note: "Bought after trying it in the shop. Floral aroma with a bright, lemon-like acidity.",
+      logs: {
+        "sample-log-1a": { brewMethod: "V60", grindSize: "Medium-fine", note: "Acidity is a bit too sharp. The jasmine aroma comes through." },
+        "sample-log-1b": {
+          grindSize: "Medium-fine (one step finer)",
+          note: "A lower water temperature and a finer grind rounded off the acidity and brought out sweetness.",
+        },
+      },
+    },
     name: "エチオピア イルガチェフェ",
     price: 1600,
     weightG: 200,
@@ -61,6 +73,13 @@ const SAMPLE_PRODUCTS = [
   },
   {
     id: "user-product-sample-2",
+    en: {
+      name: "Colombia Huila",
+      note: "Well balanced and easy to drink every day. An in-store-only bean that isn't sold online.",
+      logs: {
+        "sample-log-2a": { brewMethod: "AeroPress", grindSize: "Medium", note: "The caramel sweetness and the orange acidity came out beautifully." },
+      },
+    },
     name: "コロンビア ウイラ",
     price: 1450,
     weightG: 200,
@@ -93,6 +112,13 @@ const SAMPLE_PRODUCTS = [
   },
   {
     id: "user-product-sample-3",
+    en: {
+      name: "Brazil Dark Roast Blend",
+      note: "Great with milk.",
+      logs: {
+        "sample-log-3a": { brewMethod: "Espresso", grindSize: "Extra fine", note: "Quite bitter. I'd like to try a longer extraction." },
+      },
+    },
     name: "ブラジル 深煎りブレンド",
     price: 1200,
     weightG: 250,
@@ -127,12 +153,14 @@ const SAMPLE_PRODUCTS = [
 
 // 追加するレコード一式を作る(日付は「いま」からの相対で決める)。
 // 返り値: { shops, products, ratings: { [id]: ★ }, logs: { [id]: { id, recordedAt, ...entry }[] } }
-export function buildSampleCollection(now = new Date()) {
+// lang: "en" のとき、店舗名・商品名・メモ・ログの文章を英語で作る(産地・焙煎度・風味の用語は、画面側で翻訳して表示する)。
+export function buildSampleCollection(now = new Date(), lang = "ja") {
+  const en = lang === "en";
   const at = (daysAgo) => new Date(now.getTime() - daysAgo * DAY_MS).toISOString();
   const shops = [
     {
       id: SAMPLE_SHOP_ID,
-      name: "サンプル珈琲店",
+      name: en ? "Sample Coffee Shop" : "サンプル珈琲店",
       address: "",
       appShopName: "",
       createdAt: at(Math.max(...SAMPLE_PRODUCTS.map((p) => p.daysAgo))),
@@ -141,14 +169,14 @@ export function buildSampleCollection(now = new Date()) {
   const products = SAMPLE_PRODUCTS.map((p) => ({
     id: p.id,
     shopId: SAMPLE_SHOP_ID,
-    name: p.name,
+    name: en ? p.en.name : p.name,
     price: p.price,
     weightG: p.weightG,
     originCountry: p.originCountry,
     roast: p.roast,
     processingMethod: p.processingMethod,
     flavors: p.flavors,
-    note: p.note,
+    note: en ? p.en.note : p.note,
     createdAt: at(p.daysAgo),
   }));
   const ratings = Object.fromEntries(SAMPLE_PRODUCTS.map((p) => [p.id, p.rating]));
@@ -160,6 +188,7 @@ export function buildSampleCollection(now = new Date()) {
         // 登録日より後で、未来にならない日時にする
         recordedAt: at(Math.max(0, p.daysAgo - l.daysAfter)),
         ...l.entry,
+        ...(en ? p.en.logs[l.id] : {}),
       })),
     ])
   );
@@ -208,7 +237,8 @@ const roundRect = (ctx, x, y, w, h, r) => {
 
 // サンプル商品のパッケージ写真(コーヒー豆の袋のイラスト)を、その場で描いて JPEG にする。
 // 画像ファイルを同梱せず、実在の商品のパッケージも使わない。"SAMPLE" の文字を入れて、実物と間違えないようにする。
-export async function renderSamplePackage(productId) {
+export async function renderSamplePackage(productId, lang = "ja") {
+  const en = lang === "en";
   const product = SAMPLE_PRODUCTS.find((p) => p.id === productId);
   if (!product) throw new Error("unknown-sample-product");
   const { bag } = product;
@@ -303,7 +333,7 @@ export async function renderSamplePackage(productId) {
   const nameLines = (() => {
     ctx.save();
     const y0 = 470;
-    const n = drawWrapped(ctx, product.name, 390, y0, 360, 58);
+    const n = drawWrapped(ctx, en ? product.en.name : product.name, 390, y0, 360, 58);
     ctx.restore();
     return n;
   })();
@@ -312,7 +342,7 @@ export async function renderSamplePackage(productId) {
   ctx.fillStyle = "#6b4a30";
   ctx.font = `400 26px ${sans}`;
   const infoY = 470 + nameLines * 58 + 8;
-  ctx.fillText(`${product.originCountry}  /  ${product.processingMethod}`, 390, infoY);
+  ctx.fillText(`${translate(product.originCountry)}  /  ${translate(product.processingMethod)}`, 390, infoY);
 
   // 焙煎度のバー(8段階のうち、該当する段階を強調)
   const barX = 215;
@@ -327,7 +357,7 @@ export async function renderSamplePackage(productId) {
   ctx.globalAlpha = 1;
   ctx.fillStyle = "#6b4a30";
   ctx.font = `400 22px ${sans}`;
-  ctx.fillText(`焙煎度: ${product.roast}`, 390, barY + 50);
+  ctx.fillText(en ? `Roast: ${translate(product.roast)}` : `焙煎度: ${product.roast}`, 390, barY + 50);
 
   // 内容量
   ctx.font = `600 24px ${sans}`;
@@ -338,7 +368,7 @@ export async function renderSamplePackage(productId) {
   ctx.fillRect(130, 800, 520, 60);
   ctx.fillStyle = bag.ink;
   ctx.font = `600 22px ${sans}`;
-  ctx.fillText("これはサンプルです(架空の商品)", 390, 838);
+  ctx.fillText(en ? "This is a sample (fictional product)" : "これはサンプルです(架空の商品)", 390, 838);
 
   const blob = await new Promise((resolve) => canvas.toBlob(resolve, "image/jpeg", 0.78));
   if (!blob) throw new Error("encode-failed");

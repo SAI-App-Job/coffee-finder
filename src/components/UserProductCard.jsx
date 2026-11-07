@@ -5,6 +5,7 @@ import { FlavorChips } from "./FlavorPicker";
 import { PhotoThumb } from "./ProductPhoto";
 
 import { formatDate } from "../utils/format";
+import { useT } from "../i18n";
 
 const formatYen = (n) => `¥${n.toLocaleString("ja-JP")}`;
 
@@ -13,6 +14,7 @@ export const ICON_BUTTON_CLASS =
 
 // 削除は、1回目で確認表示に切り替え、2回目で実行する(誤タップで消さないため)
 export function DeleteControl({ confirming, onAsk, onCancel, onConfirm, label, confirmText }) {
+  const t = useT();
   if (!confirming) {
     return (
       <button onClick={onAsk} className={ICON_BUTTON_CLASS} aria-label={label}>
@@ -24,10 +26,10 @@ export function DeleteControl({ confirming, onAsk, onCancel, onConfirm, label, c
     <span className="flex items-center gap-1.5 text-[11px]">
       <span className="text-[var(--c-danger)]">{confirmText}</span>
       <button onClick={onConfirm} className="px-2 py-1 rounded-md bg-[var(--c-danger)] text-white font-medium">
-        削除
+        {t("削除")}
       </button>
       <button onClick={onCancel} className="px-2 py-1 rounded-md border border-[var(--c-border)] text-[var(--c-text-2)]">
-        やめる
+        {t("やめる")}
       </button>
     </span>
   );
@@ -46,16 +48,17 @@ function UserProductCard({
   onCancelDelete,
   onConfirmDelete,
 }) {
+  const t = useT();
   const meta = [
     typeof product.price === "number" && formatYen(product.price),
     typeof product.weightG === "number" && `${product.weightG}g`,
   ].filter(Boolean);
-  const tags = [product.originCountry, product.roast, product.processingMethod].filter(Boolean);
+  const tags = [product.originCountry, product.roast, product.processingMethod].filter(Boolean).map((v) => t(v));
 
   return (
     <div className="rounded-xl bg-[var(--c-surface-2)] border border-[var(--c-border)] p-3.5 flex flex-col gap-2">
       <div className="flex items-start gap-3">
-        <PhotoThumb url={photoUrl} alt={`${product.name}のパッケージ写真`} />
+        <PhotoThumb url={photoUrl} alt={t("{name}のパッケージ写真", { name: product.name })} />
         <div className="flex-1 min-w-0 flex items-start justify-between gap-3">
           <h4 className="text-[14px] font-medium text-[var(--c-text)] leading-snug min-w-0">{product.name}</h4>
           {meta.length > 0 && <p className="shrink-0 font-mono text-[12px] text-[var(--c-text-2)]">{meta.join(" / ")}</p>}
@@ -81,7 +84,7 @@ function UserProductCard({
       )}
 
       {formatDate(product.createdAt) && (
-        <p className="text-[11px] text-[var(--c-text-3)]">登録日 {formatDate(product.createdAt)}</p>
+        <p className="text-[11px] text-[var(--c-text-3)]">{t("登録日 {date}", { date: formatDate(product.createdAt) })}</p>
       )}
 
       <div className="flex items-center justify-between gap-3 pt-2 mt-0.5 border-t border-[var(--c-border)]">
@@ -92,10 +95,10 @@ function UserProductCard({
             className="flex items-center gap-1 px-2 py-1.5 rounded-lg text-[11px] text-[var(--accent-on-glow)] hover:bg-[var(--c-surface)] transition-colors"
           >
             <NotebookPen size={13} strokeWidth={1.75} />
-            ログ{logCount > 0 ? `(${logCount})` : ""}
+            {t("ログ")}{logCount > 0 ? `(${logCount})` : ""}
           </button>
           {!confirming && (
-            <button onClick={onEdit} className={ICON_BUTTON_CLASS} aria-label="商品を編集">
+            <button onClick={onEdit} className={ICON_BUTTON_CLASS} aria-label={t("商品を編集")}>
               <Pencil size={14} strokeWidth={1.75} />
             </button>
           )}
@@ -104,8 +107,8 @@ function UserProductCard({
             onAsk={onAskDelete}
             onCancel={onCancelDelete}
             onConfirm={onConfirmDelete}
-            label="商品を削除"
-            confirmText="削除しますか?"
+            label={t("商品を削除")}
+            confirmText={t("削除しますか?")}
           />
         </div>
       </div>

@@ -45,7 +45,8 @@ import { HistoryView } from "./components/HistoryView";
 import { BottomNav } from "./components/BottomNav";
 import { AdBannerPlaceholder } from "./components/AdBanner";
 import { CompareTray, ComparisonModal } from "./components/Compare";
-import { CopyrightFooter, MapLinkModal, Toast } from "./components/common";
+import { CopyrightFooter, MapLinkModal, Toast, JaOnlyNote } from "./components/common";
+import { Trans, getLang, useT } from "./i18n";
 
 const SORT_MODE_ITEMS = [
   { id: "distance", label: "近い順", icon: MapPin },
@@ -55,6 +56,7 @@ const SORT_MODE_ITEMS = [
 ];
 
 export default function CoffeeProductList() {
+  const t = useT();
   // 初期値はローカルのモックデータ(=フォールバック)。GitHub上のJSONの取得に
   // 成功した場合のみ、下のuseEffectで実データに差し替える。
   const [products, setProducts] = useState(MOCK_PRODUCTS);
@@ -395,7 +397,7 @@ export default function CoffeeProductList() {
     ...(filters.country ? [{ dim: "country", v: filters.country }] : []),
     ...(filters.prefecture ? [{ dim: "prefecture", v: filters.prefecture }] : []),
     ...[...filters.flavorCategory].map((v) => ({ dim: "flavorCategory", v })),
-    ...(filters.minRating ? [{ dim: "minRating", v: `★${filters.minRating}以上` }] : []),
+    ...(filters.minRating ? [{ dim: "minRating", v: t("★{n}以上", { n: filters.minRating }) }] : []),
   ];
 
   const openMapForProduct = useCallback(
@@ -465,7 +467,7 @@ export default function CoffeeProductList() {
   const hasSamples = userCollection.userShops.some((s) => isSampleId(s.id));
   const addSamples = async () => {
     if (hasSamples) return;
-    const sample = buildSampleCollection();
+    const sample = buildSampleCollection(new Date(), getLang());
     userCollection.importCollection({ shops: sample.shops, products: sample.products });
     Object.entries(sample.ratings).forEach(([id, stars]) => setRating(id, stars));
     Object.entries(sample.logs).forEach(([id, entries]) => {
@@ -477,7 +479,7 @@ export default function CoffeeProductList() {
     const results = await Promise.all(
       sample.products.map(async (p) => {
         try {
-          return await setPhoto(p.id, await renderSamplePackage(p.id));
+          return await setPhoto(p.id, await renderSamplePackage(p.id, getLang()));
         } catch {
           return false;
         }
@@ -556,14 +558,15 @@ export default function CoffeeProductList() {
 
       <header className="px-5 pt-6 pb-3 border-b border-[var(--c-border)] sticky top-0 bg-[var(--c-bg)]/95 backdrop-blur-sm z-10">
         <p className="text-[11px] tracking-[0.2em] text-[var(--accent-label)] uppercase">Coffee Finder</p>
-        <h1 className="font-serif text-[26px] leading-tight mt-1 text-balance">近くの自家焙煎豆を探す</h1>
-        <p className="text-[12px] text-[var(--c-text-3)] mt-0.5">Find Local Roasters Near You</p>
+        <h1 className="font-serif text-[26px] leading-tight mt-1 text-balance">{t("近くの自家焙煎豆を探す")}</h1>
+        {getLang() === "ja" && <p className="text-[12px] text-[var(--c-text-3)] mt-0.5">Find Local Roasters Near You</p>}
       </header>
 
       {tab === "products" && !selectedShop && (
         <div className="px-5 pt-4 max-w-xl mx-auto">
+          <JaOnlyNote className="mb-1.5" />
           <p className="text-[13px] text-[var(--c-text-3)]">
-            {displayed.length}件の商品(産地・精選方法・グレードで正規化済み)
+            {t("{n}件の商品(産地・精選方法・グレードで正規化済み)", { n: displayed.length })}
           </p>
           <div className="flex items-center gap-1.5 mt-3 overflow-x-auto scrollbar-hide">
             {SORT_MODE_ITEMS.map(({ id, label, icon: Icon }) => {
@@ -583,7 +586,7 @@ export default function CoffeeProductList() {
                   }`}
                 >
                   <Icon size={12} strokeWidth={2} />
-                  {label}
+                  {t(label)}
                 </button>
               );
             })}
@@ -592,46 +595,50 @@ export default function CoffeeProductList() {
             <div className="flex items-start gap-1 text-[11px] text-[var(--c-text-3)] mt-1.5">
               <LocateFixed size={11} strokeWidth={1.75} className="shrink-0 mt-0.5" />
               <p>
-                {geolocation.status === "pending" && "位置情報を取得中です(取得できるまで全件表示しています)"}
+                {geolocation.status === "pending" && t("位置情報を取得中です(取得できるまで全件表示しています)")}
                 {geolocation.status === "denied" && (
-                  <>
-                    位置情報が許可されていないため、全件表示しています。ブラウザの拒否設定はアプリからは解除できないため、ブラウザのアドレスバー付近のアイコンから位置情報の許可を変更したうえで、
-                    <button
-                      onClick={geolocation.retry}
-                      className="text-[var(--accent)] underline underline-offset-2"
-                    >
-                      再試行
-                    </button>
-                    してください
-                  </>
+                  <Trans
+                    k="位置情報が許可されていないため、全件表示しています。ブラウザの拒否設定はアプリからは解除できないため、ブラウザのアドレスバー付近のアイコンから位置情報の許可を変更したうえで、{retry}してください"
+                    values={{
+                      retry: (
+                        <button onClick={geolocation.retry} className="text-[var(--accent)] underline underline-offset-2">
+                          {t("再試行")}
+                        </button>
+                      ),
+                    }}
+                  />
                 )}
                 {geolocation.status === "error" && (
-                  <>
-                    位置情報を取得できなかったため、全件表示しています。
-                    <button
-                      onClick={geolocation.retry}
-                      className="text-[var(--accent)] underline underline-offset-2"
-                    >
-                      位置情報を取得
-                    </button>
-                  </>
+                  <Trans
+                    k="位置情報を取得できなかったため、全件表示しています。{retry}"
+                    values={{
+                      retry: (
+                        <button onClick={geolocation.retry} className="text-[var(--accent)] underline underline-offset-2">
+                          {t("位置情報を取得")}
+                        </button>
+                      ),
+                    }}
+                  />
                 )}
                 {geolocation.status === "unsupported" &&
-                  "この端末・ブラウザは位置情報に対応していないため、全件表示しています"}
+                  t("この端末・ブラウザは位置情報に対応していないため、全件表示しています")}
               </p>
             </div>
           )}
           {sortMode === "favoriteArea" && (
             <p className="text-[11px] text-[var(--c-text-3)] mt-1.5">
               {favoriteArea.prefecture
-                ? `登録エリア: ${favoriteArea.prefecture}${favoriteArea.city ? ` ${favoriteArea.city}` : ""}(設定で変更できます)`
-                : "登録エリアが未登録です(設定で登録できます)"}
+                ? t("登録エリア: {area}(設定で変更できます)", {
+                    area: `${t(favoriteArea.prefecture)}${favoriteArea.city ? ` ${favoriteArea.city}` : ""}`,
+                  })
+                : t("登録エリアが未登録です(設定で登録できます)")}
             </p>
           )}
           {sortMode === "random" && (
             <p className="text-[11px] text-[var(--c-text-3)] mt-1.5">
-              表示範囲: {displayRadiusOptions.find((o) => o.id === displayRadiusId)?.label}
-              (設定で変更できます)
+              {t("表示範囲: {label}(設定で変更できます)", {
+                label: t(displayRadiusOptions.find((o) => o.id === displayRadiusId)?.label ?? ""),
+              })}
             </p>
           )}
           <div className="relative mt-3">
@@ -640,14 +647,14 @@ export default function CoffeeProductList() {
               type="text"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              placeholder="商品名・産地・銘柄・店舗名・住所・駅名で検索"
+              placeholder={t("商品名・産地・銘柄・店舗名・住所・駅名で検索")}
               className="w-full pl-9 pr-9 py-2.5 rounded-xl bg-[var(--c-surface)] border border-[var(--c-border)] text-[13px] text-[var(--c-text)] placeholder:text-[var(--c-text-3)] focus:outline-none focus:border-[var(--accent-label)]"
             />
             {searchQuery && (
               <button
                 onClick={() => setSearchQuery("")}
                 className="absolute right-3 top-1/2 -translate-y-1/2 text-[var(--c-text-3)] hover:text-[var(--c-text)]"
-                aria-label="検索をクリア"
+                aria-label={t("検索をクリア")}
               >
                 <X size={14} />
               </button>
@@ -659,7 +666,7 @@ export default function CoffeeProductList() {
               className="flex items-center gap-1.5 shrink-0 text-[13px] px-3.5 py-1.5 rounded-full border border-[var(--accent-label)] text-[var(--accent)] hover:bg-[var(--c-surface-2)] transition-colors"
             >
               <SlidersHorizontal size={13} strokeWidth={2} />
-              絞り込み
+              {t("絞り込み")}
               {activeCount > 0 && (
                 <span className="ml-0.5 text-[11px] bg-[var(--accent)] text-[var(--on-accent)] rounded-full w-4 h-4 flex items-center justify-center font-medium">
                   {activeCount}
@@ -673,7 +680,7 @@ export default function CoffeeProductList() {
                   onClick={() => removeFilter(dim, v)}
                   className="shrink-0 flex items-center gap-1 text-[12px] pl-2.5 pr-1.5 py-1 rounded-full bg-[var(--c-surface-2)] text-[var(--accent-muted)] border border-[var(--c-border)]"
                 >
-                  {v}
+                  {t(v)}
                   <X size={11} />
                 </button>
               ))}
@@ -686,7 +693,7 @@ export default function CoffeeProductList() {
               onChange={(e) => setShowOutOfStock(e.target.checked)}
               className="accent-[var(--accent)] w-3.5 h-3.5"
             />
-            売り切れ商品も表示
+            {t("売り切れ商品も表示")}
           </label>
         </div>
       )}
@@ -700,17 +707,17 @@ export default function CoffeeProductList() {
             <div className="text-center py-16 text-[var(--c-text-3)]">
               <Coffee size={28} className="mx-auto mb-3 opacity-40" />
               {filtered.length === 0 ? (
-                <p className="text-[14px]">該当する商品が見つかりませんでした</p>
+                <p className="text-[14px]">{t("該当する商品が見つかりませんでした")}</p>
               ) : sortMode === "random" ? (
-                <p className="text-[14px]">この範囲には商品がありません。表示範囲を広げてみてください</p>
+                <p className="text-[14px]">{t("この範囲には商品がありません。表示範囲を広げてみてください")}</p>
               ) : sortMode === "favoriteArea" ? (
                 <p className="text-[14px]">
                   {favoriteArea.prefecture
-                    ? "登録したエリアには該当する商品がありません。設定でエリアを変更してみてください"
-                    : "設定で登録エリア(都道府県・市区町村)を登録してください"}
+                    ? t("登録したエリアには該当する商品がありません。設定でエリアを変更してみてください")
+                    : t("設定で登録エリア(都道府県・市区町村)を登録してください")}
                 </p>
               ) : (
-                <p className="text-[14px]">現在30日以内に新規掲載された商品はありません</p>
+                <p className="text-[14px]">{t("現在30日以内に新規掲載された商品はありません")}</p>
               )}
             </div>
           ) : (

@@ -2,8 +2,10 @@ import { SectionHeading, SourceCredit } from "./common";
 import { DESIGNATED_BRANDS } from "../data/designatedBrands";
 import { DESIGNATED_BRAND_EXPLANATIONS } from "../data/explanations";
 import { ORIGIN_GUIDE } from "../data/originGuide";
+import { useT } from "../i18n";
 
 export function DesignatedBrandsView({ hideHeading = false, onLearnOrigin }) {
+  const t = useT();
   return (
     <main className="px-5 py-5 flex flex-col gap-3 max-w-xl mx-auto">
       {!hideHeading && <SectionHeading en="Designated Brands" ja="特定銘柄" />}
@@ -26,15 +28,15 @@ export function DesignatedBrandsView({ hideHeading = false, onLearnOrigin }) {
               <div className="flex items-center justify-between gap-2">
                 <p className="font-serif text-[16px] text-[var(--c-text)]">{b.name}</p>
                 <span className="shrink-0 text-[11px] px-2 py-0.5 rounded-full bg-[var(--c-surface-2)] text-[var(--accent-muted)] border border-[var(--c-border)]">
-                  {b.country ?? "キューバ"}
+                  {t(b.country ?? "キューバ")}
                 </span>
               </div>
               {b.note && <p className="text-[12px] text-[var(--c-text-3)]">{b.note}</p>}
               {explanation && <p className="text-[12px] text-[var(--c-text-2)] leading-relaxed">{explanation}</p>}
               {matchedOrigin ? (
-                <span className="text-[11px] text-[var(--accent)] mt-1">産地タブでこの国を見る →</span>
+                <span className="text-[11px] text-[var(--accent)] mt-1">{t("産地タブでこの国を見る →")}</span>
               ) : (
-                <span className="text-[11px] text-[var(--c-text-3)] mt-1">この産地は地図の対象国には未収録です</span>
+                <span className="text-[11px] text-[var(--c-text-3)] mt-1">{t("この産地は地図の対象国には未収録です")}</span>
               )}
             </button>
           );

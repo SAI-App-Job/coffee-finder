@@ -1,3 +1,5 @@
+import { getLocale, translate } from "../i18n";
+
 // 住所文字列から都道府県部分を除いた市区(以降)だけを取り出す
 // 例:「神奈川県川崎市多摩区」→「川崎市多摩区」、「愛知県名古屋市」→「名古屋市」
 export const cityFromAddress = (address) => {
@@ -25,25 +27,25 @@ export const formatPrice = ({ price, priceMin, priceMax }) => {
 export const formatRelativeTime = (isoString) => {
   const diffMs = Date.now() - new Date(isoString).getTime();
   const minutes = Math.floor(diffMs / 60000);
-  if (minutes < 1) return "たった今";
-  if (minutes < 60) return `${minutes}分前`;
+  if (minutes < 1) return translate("たった今");
+  if (minutes < 60) return translate("{n}分前", { n: minutes });
   const hours = Math.floor(minutes / 60);
-  if (hours < 24) return `${hours}時間前`;
+  if (hours < 24) return translate("{n}時間前", { n: hours });
   const days = Math.floor(hours / 24);
-  return `${days}日前`;
+  return translate("{n}日前", { n: days });
 };
 
 // 登録日の表記(例: 2026/11/08)。不正な値・空のときは空文字を返す
 export const formatDate = (isoString) => {
   const d = new Date(isoString);
   if (!isoString || Number.isNaN(d.getTime())) return "";
-  return d.toLocaleDateString("ja-JP", { year: "numeric", month: "2-digit", day: "2-digit" });
+  return d.toLocaleDateString(getLocale(), { year: "numeric", month: "2-digit", day: "2-digit" });
 };
 
 // テイスティングログ等、同じ豆の複数記録を日時で見分けるための絶対日時表記
 export const formatDateTime = (isoString) => {
   const d = new Date(isoString);
-  return d.toLocaleString("ja-JP", {
+  return d.toLocaleString(getLocale(), {
     year: "numeric",
     month: "2-digit",
     day: "2-digit",

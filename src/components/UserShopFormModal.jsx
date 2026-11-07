@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { X, Store } from "lucide-react";
 import { INPUT_CLASS, LABEL_CLASS, PRIMARY_BUTTON_CLASS } from "./formStyles";
+import { useT } from "../i18n";
 
 const normalizeName = (s) => s.normalize("NFKC").trim().toLowerCase();
 
@@ -9,6 +10,7 @@ const normalizeName = (s) => s.normalize("NFKC").trim().toLowerCase();
 // アプリに載っていないお店を登録するための入口(掲載済みの店舗は、先に検索して選ぶ)。
 // target: null(閉じる) | { shop: 既存の店舗 }(編集) | {}(新規)
 export function UserShopFormModal({ target, appShops, userShops, onSave, onClose }) {
+  const t = useT();
   const editing = target?.shop ?? null;
   const [name, setName] = useState("");
   const [address, setAddress] = useState("");
@@ -37,7 +39,7 @@ export function UserShopFormModal({ target, appShops, userShops, onSave, onClose
       (s) => s.id !== editing?.id && normalizeName(s.name) === normalizeName(trimmedName)
     );
     if (duplicated) {
-      setError("同じ名前の店舗がすでに登録されています");
+      setError(t("同じ名前の店舗がすでに登録されています"));
       return;
     }
     // アプリ収録の店舗と同じ名前なら、その店舗に紐づけて登録する(店舗画面にも登録商品が出る)
@@ -60,13 +62,13 @@ export function UserShopFormModal({ target, appShops, userShops, onSave, onClose
               {editing ? "Edit Shop" : "New Shop"}
             </p>
             <h3 className="font-serif text-[17px] text-[var(--c-text)] mt-0.5">
-              {editing ? "店舗を編集" : "店舗を登録"}
+              {editing ? t("店舗を編集") : t("店舗を登録")}
             </h3>
           </div>
           <button
             onClick={onClose}
             className="shrink-0 text-[var(--c-text-3)] hover:text-[var(--c-text)] transition-colors min-w-[36px] min-h-[36px] flex items-center justify-center -m-2"
-            aria-label="閉じる"
+            aria-label={t("閉じる")}
           >
             <X size={18} />
           </button>
@@ -75,7 +77,7 @@ export function UserShopFormModal({ target, appShops, userShops, onSave, onClose
         <div className="flex flex-col gap-4">
           <div>
             <label className={LABEL_CLASS} htmlFor="user-shop-name">
-              店舗名
+              {t("店舗名")}
             </label>
             <input
               id="user-shop-name"
@@ -83,7 +85,7 @@ export function UserShopFormModal({ target, appShops, userShops, onSave, onClose
               list="user-shop-suggestions"
               value={name}
               onChange={(e) => handleNameChange(e.target.value)}
-              placeholder="例: FUGLEN COFFEE ROASTERS"
+              placeholder={t("例: FUGLEN COFFEE ROASTERS")}
               autoComplete="off"
               className={INPUT_CLASS}
             />
@@ -94,29 +96,29 @@ export function UserShopFormModal({ target, appShops, userShops, onSave, onClose
               ))}
             </datalist>
             <p className="text-[11px] text-[var(--c-text-3)] mt-1.5">
-              アプリに載っていないお店も、自由に入力して登録できます。
+              {t("アプリに載っていないお店も、自由に入力して登録できます。")}
             </p>
             {error && <p className="text-[12px] text-[var(--c-danger)] mt-1.5">{error}</p>}
           </div>
 
           <div>
             <label className={LABEL_CLASS} htmlFor="user-shop-address">
-              住所(任意)
+              {t("住所(任意)")}
             </label>
             <input
               id="user-shop-address"
               type="text"
               value={address}
               onChange={(e) => setAddress(e.target.value)}
-              placeholder="例: 東京都渋谷区富ヶ谷1-16-11"
+              placeholder={t("例: 東京都渋谷区富ヶ谷1-16-11")}
               className={INPUT_CLASS}
             />
-            <p className="text-[11px] text-[var(--c-text-3)] mt-1.5">入力すると、地図で店舗を開けるようになります。</p>
+            <p className="text-[11px] text-[var(--c-text-3)] mt-1.5">{t("入力すると、地図で店舗を開けるようになります。")}</p>
           </div>
 
           <button onClick={handleSubmit} disabled={!name.trim()} className={PRIMARY_BUTTON_CLASS}>
             <Store size={14} strokeWidth={2} />
-            {editing ? "変更を保存" : "この店舗を登録"}
+            {editing ? t("変更を保存") : t("この店舗を登録")}
           </button>
         </div>
       </div>

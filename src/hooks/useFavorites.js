@@ -1,3 +1,4 @@
+import { translate } from "../i18n";
 import { useCallback, useEffect, useRef, useState } from "react";
 
 const STORAGE_KEY = "coffee-finder:favorites";
@@ -69,7 +70,7 @@ export function useFavorites(isPremium, showToast) {
       }
       if (!isPremium && prev.length >= FREE_FAVORITES_LIMIT) {
         showToast?.(
-          `コレクションに保存できる商品は、無料プランで${FREE_FAVORITES_LIMIT}件までです。有料プランでは無制限に保存できます。`
+          translate("コレクションに保存できる商品は、無料プランで{n}件までです。有料プランでは無制限に保存できます。", { n: FREE_FAVORITES_LIMIT })
         );
         return;
       }

@@ -6,6 +6,7 @@ import { cityFromAddress, formatPrice } from "../utils/format";
 import { isNewArrival } from "../utils/productSort";
 import { StarRating } from "./common";
 import { PhotoPicker } from "./ProductPhoto";
+import { useT } from "../i18n";
 
 function DetailRow({ label, value, detail }) {
   if (!value) return null;
@@ -36,6 +37,7 @@ export function ProductDetailModal({
   photoUrl,
   onChangePhoto,
 }) {
+  const t = useT();
   if (!product) return null;
 
   const processingDetail = product.processingMethod ? PROCESSING_EXPLANATIONS[product.processingMethod] : null;
@@ -67,12 +69,12 @@ export function ProductDetailModal({
                     key={country}
                     className="text-[11px] px-2 py-0.5 rounded-full bg-[var(--c-surface-2)] text-[var(--accent-muted)] border border-[var(--c-border)]"
                   >
-                    {country}
+                    {t(country)}
                   </span>
                 ))
               ) : (
                 <p className="text-[11px] tracking-wider text-[var(--accent-label)] font-medium uppercase">
-                  {product.originCountry}
+                  {t(product.originCountry)}
                 </p>
               )}
               {product.stockStatus && product.stockStatus !== "販売中" && (
@@ -83,12 +85,12 @@ export function ProductDetailModal({
                       : "bg-[#4A2E12] text-[#E8B86D] border border-[#6B4A22]"
                   }`}
                 >
-                  {product.stockStatus === "終売" ? "終売" : "売り切れ"}
+                  {product.stockStatus === "終売" ? t("終売") : t("売り切れ")}
                 </span>
               )}
               {isNewArrival(product) && (
                 <span className="text-[10px] px-1.5 py-0.5 rounded-full font-medium leading-none bg-[var(--accent-glow)] text-[var(--accent-on-glow)] border border-[var(--accent-label)]">
-                  新規掲載
+                  {t("新規掲載")}
                 </span>
               )}
             </div>
@@ -97,7 +99,7 @@ export function ProductDetailModal({
           <button
             onClick={onClose}
             className="shrink-0 text-[var(--c-text-3)] hover:text-[var(--c-text)] transition-colors min-w-[36px] min-h-[36px] flex items-center justify-center -m-2"
-            aria-label="閉じる"
+            aria-label={t("閉じる")}
           >
             <X size={18} />
           </button>
@@ -105,7 +107,7 @@ export function ProductDetailModal({
 
         <div className="flex items-center justify-between mb-3">
           <p className="font-mono text-[var(--c-text)] text-[18px] whitespace-normal break-words">
-            {formatPrice(product) ?? product.priceNote ?? "価格未確認"}
+            {formatPrice(product) ?? product.priceNote ?? t("価格未確認")}
           </p>
           {typeof product.weightG === "number" && (
             <p className="font-mono text-[12px] text-[var(--c-text-3)]">{product.weightG}g</p>
@@ -113,43 +115,43 @@ export function ProductDetailModal({
         </div>
 
         <div className="flex items-center justify-between gap-3 mb-4 pb-4 border-b border-[var(--c-border)]">
-          <p className="text-[12px] text-[var(--c-text-3)]">この商品を評価</p>
+          <p className="text-[12px] text-[var(--c-text-3)]">{t("この商品を評価")}</p>
           <StarRating value={rating} onChange={(stars) => onRate?.(product.id, stars)} />
         </div>
 
         {onChangePhoto && (
           <div className="mb-4 pb-4 border-b border-[var(--c-border)]">
-            <p className="text-[11px] tracking-wide text-[var(--accent-label)] uppercase mb-2">パッケージ写真</p>
+            <p className="text-[11px] tracking-wide text-[var(--accent-label)] uppercase mb-2">{t("パッケージ写真")}</p>
             <PhotoPicker
               url={photoUrl}
               onChange={(blob) => onChangePhoto(product.id, blob)}
-              alt={`${product.rawName}のパッケージ写真`}
+              alt={t("{name}のパッケージ写真", { name: product.rawName })}
             />
           </div>
         )}
 
         <div className="flex flex-col gap-3.5 mb-4">
           <DetailRow
-            label="特定銘柄"
+            label={t("特定銘柄")}
             value={product.designatedBrand}
             detail={
               product.designatedBrand &&
-              (DESIGNATED_BRAND_EXPLANATIONS[product.designatedBrand] || "この銘柄についての解説はまだ用意されていません。")
+              (DESIGNATED_BRAND_EXPLANATIONS[product.designatedBrand] || t("この銘柄についての解説はまだ用意されていません。"))
             }
           />
           <DetailRow
-            label="精選方法"
-            value={product.processingMethod}
-            detail={product.processingMethod && (processingDetail || "この精選方法についての解説はまだ用意されていません。")}
+            label={t("精選方法")}
+            value={t(product.processingMethod)}
+            detail={product.processingMethod && (processingDetail || t("この精選方法についての解説はまだ用意されていません。"))}
           />
-          <DetailRow label="グレード" value={product.grade} detail={gradeDetail} />
+          <DetailRow label={t("グレード")} value={product.grade} detail={gradeDetail} />
           <DetailRow
-            label="焙煎度"
-            value={product.roast ?? (product.roastSelectable ? "注文時に選択" : null)}
+            label={t("焙煎度")}
+            value={product.roast ? t(product.roast) : product.roastSelectable ? t("注文時に選択") : null}
           />
           {flavorCategories.length > 0 && (
             <div>
-              <p className="text-[11px] tracking-wide text-[var(--accent-label)] uppercase mb-1">フレーバーノート</p>
+              <p className="text-[11px] tracking-wide text-[var(--accent-label)] uppercase mb-1">{t("フレーバーノート")}</p>
               <p className="text-[13px] text-[var(--c-text)] mb-1.5">{product.flavorNotes}</p>
               <div className="flex flex-wrap gap-1.5">
                 {flavorCategories.map((cat) => (
@@ -158,7 +160,7 @@ export function ProductDetailModal({
                     className="flex items-center gap-1.5 text-[11px] px-2 py-0.5 rounded-full bg-[var(--c-surface-2)] text-[var(--accent-muted)] border border-[var(--c-border)]"
                   >
                     <span className="w-1.5 h-1.5 rounded-full shrink-0" style={{ backgroundColor: cat.color }} />
-                    {cat.ja}
+                    {t(cat.ja)}
                   </span>
                 ))}
               </div>
@@ -167,22 +169,22 @@ export function ProductDetailModal({
           {product.blendComponents?.length > 0 ? (
             <div>
               <p className="text-[11px] tracking-wide text-[var(--accent-label)] uppercase mb-2">
-                ブレンドの構成(産地別)
+                {t("ブレンドの構成(産地別)")}
               </p>
               <div className="flex flex-col gap-2.5">
                 {product.blendComponents.map((c, i) => {
                   const details = [
-                    c.farm && `農園: ${c.farm}`,
-                    c.producer && `生産者: ${c.producer}`,
-                    c.variety && `品種: ${c.variety}`,
-                    c.altitude && `標高: ${c.altitude}`,
-                    c.processingMethod && `精選方法: ${c.processingMethod}`,
+                    c.farm && t("農園: {v}", { v: c.farm }),
+                    c.producer && t("生産者: {v}", { v: c.producer }),
+                    c.variety && t("品種: {v}", { v: c.variety }),
+                    c.altitude && t("標高: {v}", { v: c.altitude }),
+                    c.processingMethod && t("精選方法: {v}", { v: t(c.processingMethod) }),
                   ].filter(Boolean);
                   return (
                     <div key={i} className="rounded-xl bg-[var(--c-surface-2)] border border-[var(--c-border)] p-3">
                       <div className="flex items-center justify-between gap-2">
                         <p className="text-[13px] text-[var(--c-text)] font-medium">
-                          {c.originCountry ?? "産地不明"}
+                          {c.originCountry ? t(c.originCountry) : t("産地不明")}
                         </p>
                         {typeof c.percentage === "number" && (
                           <span className="text-[11px] text-[var(--accent)] font-mono shrink-0">
@@ -201,7 +203,7 @@ export function ProductDetailModal({
               </div>
             </div>
           ) : (
-            <DetailRow label="農園情報" value={product.farmNote} />
+            <DetailRow label={t("農園情報")} value={product.farmNote} />
           )}
         </div>
 
@@ -217,7 +219,7 @@ export function ProductDetailModal({
             className="flex items-center justify-center gap-1.5 py-2.5 rounded-xl bg-[var(--accent)] text-[var(--on-accent)] text-[13px] font-medium hover:bg-[var(--accent-soft)] transition-colors"
           >
             <MapPin size={14} strokeWidth={2} />
-            地図で開く
+            {t("地図で開く")}
             <ExternalLink size={11} strokeWidth={1.75} />
           </button>
           <div className="flex gap-2">
@@ -228,7 +230,7 @@ export function ProductDetailModal({
               }`}
             >
               <Heart size={14} strokeWidth={2} className={favorited ? "fill-[var(--accent)]" : ""} />
-              {favorited ? "コレクションに追加済み" : "コレクションに追加"}
+              {favorited ? t("コレクションに追加済み") : t("コレクションに追加")}
             </button>
             <button
               onClick={() => onToggleCompare?.(product.id)}
@@ -237,7 +239,7 @@ export function ProductDetailModal({
               }`}
             >
               {comparing ? <Check size={14} strokeWidth={2} /> : <ArrowLeftRight size={14} strokeWidth={2} />}
-              {comparing ? "比較に追加済み" : "比較に追加"}
+              {comparing ? t("比較に追加済み") : t("比較に追加")}
             </button>
           </div>
           <button
@@ -245,14 +247,14 @@ export function ProductDetailModal({
             className="flex items-center justify-center gap-1.5 py-2.5 rounded-xl border border-[var(--c-border)] text-[var(--c-text-2)] text-[13px] hover:border-[var(--accent)] transition-colors"
           >
             <NotebookPen size={14} strokeWidth={2} />
-            テイスティングログを記録{logCount > 0 ? `(${logCount}件記録済み)` : ""}
+            {logCount > 0 ? t("テイスティングログを記録({n}件記録済み)", { n: logCount }) : t("テイスティングログを記録")}
           </button>
         </div>
 
         {product.originCountry && (
           <p className="flex items-center justify-center gap-1.5 text-[11px] text-[var(--c-text-3)] mt-3">
             <Sparkles size={11} strokeWidth={1.75} />
-            産地タブから{product.originCountry}についてさらに詳しく見られます
+            {t("産地タブから{country}についてさらに詳しく見られます", { country: t(product.originCountry) })}
           </p>
         )}
       </div>

@@ -1,18 +1,19 @@
 import { ArrowRight, Trash2, X } from "lucide-react";
 import { formatPrice } from "../utils/format";
+import { useT } from "../i18n";
 
 export function CompareTray({ count, limit, isPremium, onOpen }) {
+  const t = useT();
   return (
     <div className="border-b border-[var(--c-border)] max-w-xl mx-auto w-full px-5 py-2.5 flex items-center justify-between">
       <p className="text-[12px] text-[var(--c-text-2)]">
-        比較リスト {count}
-        {isPremium ? "" : `/${limit}`}件
+        {t("比較リスト {count}件", { count: isPremium ? count : `${count}/${limit}` })}
       </p>
       <button
         onClick={onOpen}
         className="flex items-center gap-1.5 text-[12px] px-3.5 py-1.5 rounded-full bg-[var(--accent)] text-[var(--on-accent)] font-medium"
       >
-        比較する
+        {t("比較する")}
         <ArrowRight size={13} strokeWidth={2} />
       </button>
     </div>
@@ -30,6 +31,7 @@ function CompareField({ label, value }) {
 }
 
 export function ComparisonModal({ products, onClose, onRemove, onClearAll, isPremium, limit }) {
+  const t = useT();
   if (products.length === 0) return null;
   return (
     <div
@@ -43,19 +45,19 @@ export function ComparisonModal({ products, onClose, onRemove, onClearAll, isPre
         <div className="flex items-center justify-between mb-3">
           <div>
             <p className="text-[11px] tracking-wider text-[var(--accent-label)] uppercase">Compare</p>
-            <h3 className="font-serif text-[18px] text-[var(--c-text)] mt-0.5">比較({products.length}件)</h3>
+            <h3 className="font-serif text-[18px] text-[var(--c-text)] mt-0.5">{t("比較({n}件)", { n: products.length })}</h3>
           </div>
           <div className="flex items-center gap-3">
             <button
               onClick={onClearAll}
               className="text-[11px] text-[var(--c-text-3)] hover:text-[var(--c-text)] transition-colors underline underline-offset-2"
             >
-              すべて解除
+              {t("すべて解除")}
             </button>
             <button
               onClick={onClose}
               className="text-[var(--c-text-3)] hover:text-[var(--c-text)] transition-colors min-w-[36px] min-h-[36px] flex items-center justify-center -m-2"
-              aria-label="閉じる"
+              aria-label={t("閉じる")}
             >
               <X size={18} />
             </button>
@@ -64,7 +66,7 @@ export function ComparisonModal({ products, onClose, onRemove, onClearAll, isPre
 
         {!isPremium && (
           <p className="text-[11px] text-[var(--c-text-3)] mb-3">
-            無料プランは{limit}件まで比較できます。有料プランでは無制限です。
+            {t("無料プランは{n}件まで比較できます。有料プランでは無制限です。", { n: limit })}
           </p>
         )}
 
@@ -79,18 +81,18 @@ export function ComparisonModal({ products, onClose, onRemove, onClearAll, isPre
                 <button
                   onClick={() => onRemove(p.id)}
                   className="text-[var(--c-text-3)] hover:text-[var(--c-text)] transition-colors"
-                  aria-label="比較から削除"
+                  aria-label={t("比較から削除")}
                 >
                   <Trash2 size={13} />
                 </button>
               </div>
               <p className="font-serif text-[14px] text-[var(--c-text)] leading-snug">{p.rawName}</p>
-              <p className="font-mono text-[var(--c-text)] text-[14px]">{formatPrice(p) ?? "価格未確認"}</p>
-              <CompareField label="精選方法" value={p.processingMethod} />
-              <CompareField label="グレード" value={p.grade} />
-              <CompareField label="焙煎度" value={p.roast ?? (p.roastSelectable ? "注文時選択" : null)} />
-              <CompareField label="フレーバー" value={p.flavorNotes} />
-              <CompareField label="店舗" value={p.shopName} />
+              <p className="font-mono text-[var(--c-text)] text-[14px]">{formatPrice(p) ?? t("価格未確認")}</p>
+              <CompareField label={t("精選方法")} value={p.processingMethod} />
+              <CompareField label={t("グレード")} value={p.grade} />
+              <CompareField label={t("焙煎度")} value={p.roast ? t(p.roast) : p.roastSelectable ? t("注文時選択") : null} />
+              <CompareField label={t("フレーバー")} value={p.flavorNotes} />
+              <CompareField label={t("店舗{ctx}", { ctx: "" })} value={p.shopName} />
             </div>
           ))}
         </div>

@@ -4,6 +4,7 @@ import { ORIGIN_GUIDE, ORIGIN_ZONE_ORDER, ORIGIN_ZONE_LABELS } from "../data/ori
 import { FLAVOR_WHEEL_DATA, FLAVOR_CATEGORY_OPTIONS } from "../data/flavorWheel";
 import { FILTER_SEARCH_THRESHOLD } from "../data/navigation";
 import { StarRating } from "./common";
+import { useT } from "../i18n";
 
 // 産地(国)フィルタの選択肢は、店舗の実データ(originCountryの表記ゆれが多い)
 // ではなく、17ヶ国を整理済みのORIGIN_GUIDEを唯一の情報源とする。アフリカ/
@@ -18,6 +19,7 @@ const SELECT_CLASS =
   "w-full py-2.5 px-3 rounded-xl bg-[var(--c-surface-2)] border border-[var(--c-border)] text-[13px] text-[var(--c-text)] focus:outline-none focus:border-[var(--accent-label)]";
 
 function FilterChip({ opt, active, onToggle, dotColor }) {
+  const t = useT();
   return (
     <button
       onClick={() => onToggle(opt)}
@@ -31,12 +33,13 @@ function FilterChip({ opt, active, onToggle, dotColor }) {
         <span className="w-2 h-2 rounded-full shrink-0" style={{ backgroundColor: dotColor }} />
       )}
       {active && <Check size={12} strokeWidth={3} />}
-      {opt}
+      {t(opt)}
     </button>
   );
 }
 
 export function FilterSection({ title, options, selected, onToggle, getColor }) {
+  const t = useT();
   const [query, setQuery] = useState("");
   const isSearchable = options.length > FILTER_SEARCH_THRESHOLD;
 
@@ -54,7 +57,7 @@ export function FilterSection({ title, options, selected, onToggle, getColor }) 
       <div className="flex items-center justify-between mb-2">
         <p className="text-[12px] text-[var(--c-text-3)]">{title}</p>
         {selected.size > 0 && (
-          <span className="text-[11px] text-[var(--accent)] font-medium">{selected.size}件選択中</span>
+          <span className="text-[11px] text-[var(--accent)] font-medium">{t("{n}件選択中", { n: selected.size })}</span>
         )}
       </div>
 
@@ -65,7 +68,7 @@ export function FilterSection({ title, options, selected, onToggle, getColor }) 
             type="text"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            placeholder={`${title}で検索(${options.length}件)`}
+            placeholder={t("{title}で検索({n}件)", { title, n: options.length })}
             className="w-full pl-7 pr-2.5 py-1.5 rounded-lg bg-[var(--c-surface-2)] border border-[var(--c-border)] text-[12px] text-[var(--c-text)] placeholder:text-[var(--c-text-3)] focus:outline-none focus:border-[var(--accent-label)]"
           />
         </div>
@@ -73,7 +76,7 @@ export function FilterSection({ title, options, selected, onToggle, getColor }) 
 
       <div className="flex flex-wrap gap-2 max-h-[240px] overflow-y-auto overscroll-contain">
         {orderedOptions.length === 0 && (
-          <p className="text-[12px] text-[var(--c-text-3)] py-1">「{query}」に一致する項目がありません</p>
+          <p className="text-[12px] text-[var(--c-text-3)] py-1">{t("「{query}」に一致する項目がありません", { query })}</p>
         )}
         {orderedOptions.map((opt) => (
           <FilterChip
@@ -98,6 +101,7 @@ export function FilterSheet({
   prefectureOptions,
   favoriteAreaPrefecture,
 }) {
+  const t = useT();
   // Claude Cowork/アプリ内WebViewのような組み込み表示環境では、CSSの
   // ビューポート単位(vh/dvh)が正しく解決されないことがあり、シートの
   // 表示位置がずれる不具合が実際に発生した。そのため、window.innerHeight
@@ -192,11 +196,11 @@ export function FilterSheet({
         onClick={(e) => e.stopPropagation()}
       >
         <div className="flex items-center justify-between mb-4">
-          <h4 className="font-serif text-[19px] text-[var(--c-text)]">絞り込み</h4>
+          <h4 className="font-serif text-[19px] text-[var(--c-text)]">{t("絞り込み")}</h4>
           <button
             onClick={onClose}
             className="text-[var(--c-text-3)] hover:text-[var(--c-text)] transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center -m-2.5"
-            aria-label="閉じる"
+            aria-label={t("閉じる")}
           >
             <X size={18} />
           </button>
@@ -207,18 +211,18 @@ export function FilterSheet({
             ダウン、風味カテゴリのみ複数選択のチップのままにしている。 */}
         <div className="flex flex-col gap-5">
           <div>
-            <p className="text-[12px] text-[var(--c-text-3)] mb-2">産地(国)</p>
+            <p className="text-[12px] text-[var(--c-text-3)] mb-2">{t("産地(国)")}</p>
             <select
               value={filters.country}
               onChange={(e) => selectSingle("country", e.target.value)}
               className={SELECT_CLASS}
             >
-              <option value="">すべて</option>
+              <option value="">{t("すべて")}</option>
               {COUNTRIES_BY_ZONE.map((g) => (
-                <optgroup key={g.zone} label={g.label}>
+                <optgroup key={g.zone} label={t(g.label)}>
                   {g.countries.map((c) => (
                     <option key={c} value={c}>
-                      {c}
+                      {t(c)}
                     </option>
                   ))}
                 </optgroup>
@@ -227,7 +231,7 @@ export function FilterSheet({
           </div>
 
           <FilterSection
-            title="風味カテゴリ(フレーバーホイール)"
+            title={t("風味カテゴリ(フレーバーホイール)")}
             options={FLAVOR_CATEGORY_OPTIONS}
             selected={filters.flavorCategory}
             onToggle={(v) => toggle("flavorCategory", v)}
@@ -236,10 +240,10 @@ export function FilterSheet({
 
           <div>
             <div className="flex items-center justify-between mb-2">
-              <p className="text-[12px] text-[var(--c-text-3)]">自分の評価(★)</p>
+              <p className="text-[12px] text-[var(--c-text-3)]">{t("自分の評価(★)")}</p>
               {filters.minRating > 0 && (
                 <span className="text-[11px] text-[var(--accent)] font-medium">
-                  ★{filters.minRating}以上
+                  {t("★{n}以上", { n: filters.minRating })}
                 </span>
               )}
             </div>
@@ -249,21 +253,21 @@ export function FilterSheet({
               onChange={(stars) => selectSingle("minRating", stars)}
             />
             <p className="text-[11px] text-[var(--c-text-3)] mt-1.5">
-              選んだ星の数以上の評価をつけた商品だけを表示します(同じ星をもう一度押すと解除)
+              {t("選んだ星の数以上の評価をつけた商品だけを表示します(同じ星をもう一度押すと解除)")}
             </p>
           </div>
 
           <div>
-            <p className="text-[12px] text-[var(--c-text-3)] mb-2">都道府県</p>
+            <p className="text-[12px] text-[var(--c-text-3)] mb-2">{t("都道府県")}</p>
             <select
               value={filters.prefecture}
               onChange={(e) => selectSingle("prefecture", e.target.value)}
               className={SELECT_CLASS}
             >
-              <option value="">すべて</option>
+              <option value="">{t("すべて")}</option>
               {prefectureOptions.map(({ value, count }) => (
                 <option key={value} value={value}>
-                  {value}({count})
+                  {t(value)}({count})
                 </option>
               ))}
             </select>
@@ -272,7 +276,7 @@ export function FilterSheet({
                 onClick={() => selectSingle("prefecture", favoriteAreaPrefecture)}
                 className="mt-2 text-[12px] text-[var(--accent)] underline underline-offset-2"
               >
-                登録エリア({favoriteAreaPrefecture})で絞り込む
+                {t("登録エリア({area})で絞り込む", { area: t(favoriteAreaPrefecture) })}
               </button>
             )}
           </div>
@@ -283,13 +287,13 @@ export function FilterSheet({
             onClick={onClose}
             className="w-full py-3.5 rounded-xl bg-[var(--accent)] text-[var(--on-accent)] text-[15px] font-bold shadow-[0_4px_16px_var(--accent-glow)] hover:bg-[var(--accent-soft)] transition-colors"
           >
-            結果を見る({resultCount}件)
+            {t("結果を見る({n}件)", { n: resultCount })}
           </button>
           <button
             onClick={clearAll}
             className="w-full py-2 text-[var(--c-text-3)] text-[12px] underline underline-offset-2 hover:text-[var(--c-text-2)] transition-colors"
           >
-            条件をクリア
+            {t("条件をクリア")}
           </button>
         </div>
       </div>

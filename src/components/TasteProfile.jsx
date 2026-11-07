@@ -1,6 +1,7 @@
 import { Sparkles } from "lucide-react";
 import { computeFlavorPreferenceScores, recommendByFlavorCategories } from "../utils/flavor";
 import { formatPrice } from "../utils/format";
+import { useT } from "../i18n";
 
 const TOP_CATEGORY_COUNT = 3;
 const SHOWN_CATEGORY_COUNT = 6;
@@ -10,6 +11,7 @@ const RECOMMEND_LIMIT = 6;
 // 使い、flavorNotesのカテゴリを星の数で重み付け集計してレーダー的な傾向を出し、
 // 傾向上位カテゴリに合致する未評価商品をレコメンドする。
 export function TasteProfile({ products, getRating, onOpenDetail }) {
+  const t = useT();
   const ratedEntries = products
     .map((product) => ({ product, rating: getRating(product.id) }))
     .filter((entry) => entry.rating > 0);
@@ -27,24 +29,24 @@ export function TasteProfile({ products, getRating, onOpenDetail }) {
     <section className="rounded-2xl bg-[var(--c-surface)] border border-[var(--c-border)] p-4 flex flex-col gap-3">
       <div className="flex items-center gap-1.5">
         <Sparkles size={14} className="text-[var(--accent)]" strokeWidth={1.75} />
-        <h3 className="text-[14px] font-medium text-[var(--c-text)]">好みの傾向</h3>
+        <h3 className="text-[14px] font-medium text-[var(--c-text)]">{t("好みの傾向")}</h3>
       </div>
 
       {ratedEntries.length === 0 ? (
         <p className="text-[12px] text-[var(--c-text-3)]">
-          商品詳細で★評価すると、ここに好みの傾向とおすすめが表示されます。
+          {t("商品詳細で★評価すると、ここに好みの傾向とおすすめが表示されます。")}
         </p>
       ) : (
         <>
           <p className="text-[12px] text-[var(--c-text-3)] leading-relaxed">
-            評価した{ratedEntries.length}件の商品のフレーバーノートを、星の数を重みにして集計しています。
+            {t("評価した{n}件の商品のフレーバーノートを、星の数を重みにして集計しています。", { n: ratedEntries.length })}
           </p>
 
           <div className="flex flex-col gap-2">
             {categoryScores.slice(0, SHOWN_CATEGORY_COUNT).map(({ category, score, count }) => (
               <div key={category.en} className="flex items-center gap-2.5">
                 <span className="w-1.5 h-1.5 rounded-full shrink-0" style={{ backgroundColor: category.color }} />
-                <span className="text-[12px] text-[var(--c-text)] w-[104px] shrink-0 truncate">{category.ja}</span>
+                <span className="text-[12px] text-[var(--c-text)] w-[104px] shrink-0 truncate">{t(category.ja)}</span>
                 <div className="flex-1 h-1.5 rounded-full bg-[var(--c-surface-2)] overflow-hidden">
                   <div
                     className="h-full rounded-full"
@@ -54,7 +56,7 @@ export function TasteProfile({ products, getRating, onOpenDetail }) {
                     }}
                   />
                 </div>
-                <span className="text-[10px] text-[var(--c-text-3)] w-9 text-right shrink-0">{count}件</span>
+                <span className="text-[10px] text-[var(--c-text-3)] w-9 text-right shrink-0">{t("{n}件", { n: count })}</span>
               </div>
             ))}
           </div>
@@ -62,7 +64,7 @@ export function TasteProfile({ products, getRating, onOpenDetail }) {
           {recommendations.length > 0 && (
             <div className="mt-2 pt-3 border-t border-[var(--c-border)]">
               <p className="text-[11px] tracking-wide text-[var(--accent-label)] uppercase mb-2">
-                {topCategoryLabels.join("・")}が好きなあなたにおすすめ
+                {t("{cats}が好きなあなたにおすすめ", { cats: topCategoryLabels.map((l) => t(l)).join(t("・")) })}
               </p>
               <div className="flex flex-col gap-2">
                 {recommendations.map((product) => (

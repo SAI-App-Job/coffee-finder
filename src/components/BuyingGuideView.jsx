@@ -1,9 +1,11 @@
+import { JaOnlyNote } from "./common";
 import { useState, useRef } from "react";
 import { Globe2, Clock, Dna, Package, BookOpen, MapPin, Coffee, Award, Gauge } from "lucide-react";
 import { SectionHeading, SourceCredit } from "./common";
 import { OriginMapView } from "./OriginMapView";
 import { DESIGNATED_BRANDS } from "../data/designatedBrands";
 import { ORIGIN_GUIDE } from "../data/originGuide";
+import { useT } from "../i18n";
 
 export function OriginSection({ icon: Icon, label, children }) {
   if (!children) return null;
@@ -19,6 +21,7 @@ export function OriginSection({ icon: Icon, label, children }) {
 }
 
 export function OriginGuideCard({ origin, onViewProducts }) {
+  const t = useT();
   const relatedBrands = DESIGNATED_BRANDS.filter((b) => b.country === origin.country);
   const hasDetail = Boolean(origin.terroir);
 
@@ -27,7 +30,7 @@ export function OriginGuideCard({ origin, onViewProducts }) {
       <div className="flex items-center justify-between gap-2">
         <div className="flex items-center gap-2">
           <Globe2 size={15} className="text-[var(--accent-label)]" strokeWidth={1.75} />
-          <h3 className="font-serif text-[18px] text-[var(--c-text)]">{origin.country}</h3>
+          <h3 className="font-serif text-[18px] text-[var(--c-text)]">{t(origin.country)}</h3>
         </div>
         {onViewProducts && (
           <button
@@ -35,16 +38,16 @@ export function OriginGuideCard({ origin, onViewProducts }) {
             className="flex items-center gap-1 shrink-0 text-[11px] px-2.5 py-1.5 rounded-full bg-[var(--accent)] text-[var(--on-accent)] font-medium hover:bg-[var(--accent-soft)] transition-colors"
           >
             <Coffee size={11} strokeWidth={2} />
-            この産地の商品を見る
+            {t("この産地の商品を見る")}
           </button>
         )}
       </div>
       <p className="text-[13px] text-[var(--accent)]">{origin.tagline}</p>
-      <p className="text-[12px] text-[var(--c-text-3)]">代表地域: {origin.regions}</p>
+      <p className="text-[12px] text-[var(--c-text-3)]">{t("代表地域: {regions}", { regions: origin.regions })}</p>
 
       {relatedBrands.length > 0 && (
         <div className="flex flex-wrap items-center gap-1.5 pt-1">
-          <span className="text-[11px] text-[var(--c-text-3)]">この産地の特定銘柄:</span>
+          <span className="text-[11px] text-[var(--c-text-3)]">{t("この産地の特定銘柄:")}</span>
           {relatedBrands.map((b) => (
             <span
               key={b.name}
@@ -59,18 +62,18 @@ export function OriginGuideCard({ origin, onViewProducts }) {
 
       {hasDetail ? (
         <div className="pt-2 mt-1 border-t border-[var(--c-border)] flex flex-col gap-3.5">
-          <OriginSection icon={Globe2} label="Terroir / テロワール">{origin.terroir}</OriginSection>
-          <OriginSection icon={Clock} label="Harvest / 収穫時期">{origin.harvestSeason}</OriginSection>
-          <OriginSection icon={Dna} label="Varieties / 栽培品種">{origin.varietiesDetail}</OriginSection>
-          <OriginSection icon={Package} label="Farm Structure / 農園規模">{origin.farmStructure}</OriginSection>
-          <OriginSection icon={BookOpen} label="History / 歴史">{origin.history}</OriginSection>
-          <OriginSection icon={Gauge} label="Grade System / グレード基準">{origin.gradeSystem}</OriginSection>
+          <OriginSection icon={Globe2} label={t("Terroir / テロワール")}>{origin.terroir}</OriginSection>
+          <OriginSection icon={Clock} label={t("Harvest / 収穫時期")}>{origin.harvestSeason}</OriginSection>
+          <OriginSection icon={Dna} label={t("Varieties / 栽培品種")}>{origin.varietiesDetail}</OriginSection>
+          <OriginSection icon={Package} label={t("Farm Structure / 農園規模")}>{origin.farmStructure}</OriginSection>
+          <OriginSection icon={BookOpen} label={t("History / 歴史")}>{origin.history}</OriginSection>
+          <OriginSection icon={Gauge} label={t("Grade System / グレード基準")}>{origin.gradeSystem}</OriginSection>
 
           {origin.subRegions && (
             <div>
               <div className="flex items-center gap-1.5 mb-2">
                 <MapPin size={12} className="text-[var(--accent-label)]" strokeWidth={1.75} />
-                <span className="text-[11px] tracking-wide text-[var(--accent-label)] uppercase">Sub-Regions / サブリージョン</span>
+                <span className="text-[11px] tracking-wide text-[var(--accent-label)] uppercase">{t("Sub-Regions / サブリージョン")}</span>
               </div>
               <div className="flex flex-col gap-2">
                 {origin.subRegions.map((sr) => (
@@ -104,6 +107,7 @@ export function OriginGuideCard({ origin, onViewProducts }) {
 }
 
 export function BuyingGuideView({ pendingOriginCountry, onViewProducts }) {
+  const t = useT();
   // 商品一覧の「産地をもっと知る」から遷移してきた場合、その産地国を初期選択にする。
   // このビューはタブ切り替えのたびにアンマウント/再マウントされるため、
   // useStateの初期値関数だけで最新のpendingOriginCountryを反映できる。
@@ -144,9 +148,10 @@ export function BuyingGuideView({ pendingOriginCountry, onViewProducts }) {
   return (
     <main className="px-5 py-5 flex flex-col gap-5 max-w-xl mx-auto">
       <SectionHeading en="Origin" ja="産地" />
+      <JaOnlyNote />
       <div>
         <p className="text-[13px] text-[var(--c-text-3)] mb-3">
-          マップ上のピンをタップすると、その産地の特徴と各国の公式コーヒー協会(海外情報を翻訳・要約)が表示されます。
+          {t("マップ上のピンをタップすると、その産地の特徴と各国の公式コーヒー協会(海外情報を翻訳・要約)が表示されます。")}
         </p>
         <OriginMapView origins={ORIGIN_GUIDE} selected={selected} onSelect={handleSelect} />
         <div ref={detailRef} className="mt-3">
@@ -154,7 +159,7 @@ export function BuyingGuideView({ pendingOriginCountry, onViewProducts }) {
             <OriginGuideCard origin={selected} onViewProducts={onViewProducts} />
           ) : (
             <p className="text-[13px] text-[var(--c-text-3)] text-center py-8">
-              マップから産地を選んでください
+              {t("マップから産地を選んでください")}
             </p>
           )}
         </div>

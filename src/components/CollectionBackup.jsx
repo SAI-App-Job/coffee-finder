@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { Archive, Download, Upload } from "lucide-react";
 import { FREE_FAVORITES_LIMIT } from "../hooks/useFavorites";
 import { resizeImageToBlob } from "../utils/imageResize";
+import { useT } from "../i18n";
 
 const BACKUP_VERSION = 2;
 // base64 にすると、元のバイト数の約1.33倍になる
@@ -35,6 +36,7 @@ export function CollectionBackup({
   importUserCollection,
   photos,
 }) {
+  const t = useT();
   const fileInputRef = useRef(null);
   const [importMessage, setImportMessage] = useState(null);
   const [includePhotos, setIncludePhotos] = useState(false);
@@ -89,7 +91,7 @@ export function CollectionBackup({
       a.remove();
       URL.revokeObjectURL(url);
     } catch {
-      setImportMessage({ type: "error", text: "書き出しに失敗しました" });
+      setImportMessage({ type: "error", text: t("書き出しに失敗しました") });
     } finally {
       setBusy(null);
     }
@@ -126,7 +128,7 @@ export function CollectionBackup({
       const hasFavorites = Array.isArray(parsed.favorites);
       const hasUserData = Array.isArray(parsed.userShops) || Array.isArray(parsed.userProducts);
       if (!hasFavorites && !hasUserData) {
-        setImportMessage({ type: "error", text: "対応していないファイル形式です" });
+        setImportMessage({ type: "error", text: t("対応していないファイル形式です") });
         return;
       }
       const fav = hasFavorites ? importFavorites(parsed.favorites, parsed.favoriteDates) : { total: 0, added: 0 };
@@ -137,18 +139,18 @@ export function CollectionBackup({
       const photoResult = photoEntries.length > 0 ? await photos.importAll(photoEntries) : null;
 
       const parts = [];
-      if (hasFavorites) parts.push(`保存した商品${fav.total}件中${fav.added}件`);
-      if (hasUserData) parts.push(`店舗${user.shopsAdded}件・商品${user.productsAdded}件`);
-      if (photoResult) parts.push(`写真${photoResult.added}枚`);
+      if (hasFavorites) parts.push(t("保存した商品{total}件中{added}件", { total: fav.total, added: fav.added }));
+      if (hasUserData) parts.push(t("店舗{shops}件・商品{products}件", { shops: user.shopsAdded, products: user.productsAdded }));
+      if (photoResult) parts.push(t("写真{n}枚", { n: photoResult.added }));
       const failed = photoResult?.failed ?? 0;
       setImportMessage({
         type: failed > 0 ? "error" : "success",
         text:
-          `${parts.join("、")}を追加しました(登録済みのものは追加していません)` +
-          (failed > 0 ? `。写真${failed}枚は保存できませんでした(端末の空き容量や設定をご確認ください)` : ""),
+          t("{parts}を追加しました(登録済みのものは追加していません)", { parts: parts.join(t("、")) }) +
+          (failed > 0 ? t("。写真{n}枚は保存できませんでした(端末の空き容量や設定をご確認ください)", { n: failed }) : ""),
       });
     } catch {
-      setImportMessage({ type: "error", text: "ファイルの読み込みに失敗しました" });
+      setImportMessage({ type: "error", text: t("ファイルの読み込みに失敗しました") });
     } finally {
       setBusy(null);
     }
@@ -158,11 +160,11 @@ export function CollectionBackup({
     <section className="rounded-2xl bg-[var(--c-surface)] border border-[var(--c-border)] p-4 flex flex-col gap-3">
       <div className="flex items-center gap-1.5">
         <Archive size={14} className="text-[var(--accent)]" strokeWidth={1.75} />
-        <h3 className="text-[14px] font-medium text-[var(--c-text)]">コレクションのバックアップ</h3>
+        <h3 className="text-[14px] font-medium text-[var(--c-text)]">{t("コレクションのバックアップ")}</h3>
       </div>
       <p className="text-[12px] text-[var(--c-text-3)] leading-relaxed">
-        コレクション(保存した商品と、登録した店舗・商品)は、端末内にのみ保存されています。機種変更前や念のためのバックアップとして、ファイルへの書き出し・読み込みができます(評価とテイスティングログは含まれません。パッケージ写真は、書き出すときに選んだ場合だけ含まれます)。
-        {!isPremium && `(無料プランは、商品を${FREE_FAVORITES_LIMIT}件までコレクションに保存できます)`}
+        {t("コレクション(保存した商品と、登録した店舗・商品)は、端末内にのみ保存されています。機種変更前や念のためのバックアップとして、ファイルへの書き出し・読み込みができます(評価とテイスティングログは含まれません。パッケージ写真は、書き出すときに選んだ場合だけ含まれます)。")}
+        {!isPremium && t("(無料プランは、商品を{n}件までコレクションに保存できます)", { n: FREE_FAVORITES_LIMIT })}
       </p>
 
       {photos.count > 0 && (
@@ -174,9 +176,9 @@ export function CollectionBackup({
             className="mt-0.5 accent-[var(--accent)]"
           />
           <span>
-            パッケージ写真も含める({photos.count}枚・ファイルが約{formatMB(photoBytes * BASE64_RATIO)}増えます)
+            {t("パッケージ写真も含める({n}枚・ファイルが約{size}増えます)", { n: photos.count, size: formatMB(photoBytes * BASE64_RATIO) })}
             <span className="block text-[11px] text-[var(--c-text-3)]">
-              ファイルが大きいと、メールで送れなかったり、読み込みに時間がかかったりすることがあります。
+              {t("ファイルが大きいと、メールで送れなかったり、読み込みに時間がかかったりすることがあります。")}
             </span>
           </span>
         </label>
@@ -189,7 +191,7 @@ export function CollectionBackup({
           className="flex-1 flex items-center justify-center gap-1.5 py-2.5 rounded-xl bg-[var(--accent)] text-[var(--on-accent)] text-[13px] font-medium disabled:opacity-40 disabled:cursor-not-allowed"
         >
           <Download size={14} strokeWidth={2} />
-          {busy === "export" ? "書き出し中…" : `書き出す(${totalCount}件)`}
+          {busy === "export" ? t("書き出し中…") : t("書き出す({n}件)", { n: totalCount })}
         </button>
         <button
           onClick={() => fileInputRef.current?.click()}
@@ -197,7 +199,7 @@ export function CollectionBackup({
           className="flex-1 flex items-center justify-center gap-1.5 py-2.5 rounded-xl border border-[var(--c-border)] text-[var(--c-text-2)] text-[13px] disabled:opacity-40 disabled:cursor-not-allowed"
         >
           <Upload size={14} strokeWidth={2} />
-          {busy === "import" ? "読み込み中…" : "読み込む"}
+          {busy === "import" ? t("読み込み中…") : t("読み込む")}
         </button>
         <input ref={fileInputRef} type="file" accept="application/json" className="hidden" onChange={handleFileChange} />
       </div>

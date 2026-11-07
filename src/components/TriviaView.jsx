@@ -1,4 +1,4 @@
-import { SectionHeading } from "./common";
+import { JaOnlyNote, SectionHeading } from "./common";
 import { FlavorWheelView } from "./FlavorWheelView";
 import { GlossaryView } from "./GlossaryView";
 import { DesignatedBrandsView } from "./DesignatedBrandsView";
@@ -13,6 +13,7 @@ export function TriviaView({ subTab, onLearnOrigin, events }) {
     <div className="max-w-xl mx-auto">
       <div className="px-5 pt-4">
         <SectionHeading en="Trivia" ja="豆知識" />
+        <JaOnlyNote className="mt-1" />
       </div>
 
       {subTab === "flavorWheel" && <FlavorWheelView />}

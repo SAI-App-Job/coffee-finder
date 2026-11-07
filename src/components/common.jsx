@@ -1,6 +1,16 @@
 import { MapPin, Star, X } from "lucide-react";
+import { useLang, useT } from "../i18n";
 
+// 見出し。日本語では「英語の小さなラベル + 日本語の見出し」、英語では英語の見出しだけを出す(同じ語が重ならないように)。
 export function SectionHeading({ en, ja, className = "" }) {
+  const { lang } = useLang();
+  if (lang === "en") {
+    return (
+      <div className={className}>
+        <h2 className="font-serif text-[22px] leading-tight text-[var(--c-text)]">{en}</h2>
+      </div>
+    );
+  }
   return (
     <div className={className}>
       <p className="text-[11px] tracking-[0.2em] text-[var(--accent-label)] uppercase">{en}</p>
@@ -9,7 +19,20 @@ export function SectionHeading({ en, ja, className = "" }) {
   );
 }
 
+// 英語表示のとき、データと本文が日本語のままであることを知らせる注記
+export function JaOnlyNote({ className = "" }) {
+  const { lang } = useLang();
+  const t = useT();
+  if (lang !== "en") return null;
+  return (
+    <p className={`text-[11px] text-[var(--c-text-3)] leading-relaxed ${className}`}>
+      {t("商品・店舗のデータと、豆知識・産地ガイドの本文は、日本語のみです。")}
+    </p>
+  );
+}
+
 export function Toast({ message, onDismiss }) {
+  const t = useT();
   if (!message) return null;
   return (
     <div className="fixed top-3 inset-x-0 z-50 flex justify-center px-5 pointer-events-none">
@@ -18,7 +41,7 @@ export function Toast({ message, onDismiss }) {
         <button
           onClick={onDismiss}
           className="text-[var(--c-text-3)] hover:text-[var(--c-text)] transition-colors shrink-0"
-          aria-label="閉じる"
+          aria-label={t("閉じる")}
         >
           <X size={14} />
         </button>
@@ -28,6 +51,7 @@ export function Toast({ message, onDismiss }) {
 }
 
 export function StarRating({ value = 0, onChange, size = 20, readOnly = false }) {
+  const t = useT();
   return (
     <div className="flex items-center gap-1">
       {[1, 2, 3, 4, 5].map((star) => (
@@ -39,7 +63,7 @@ export function StarRating({ value = 0, onChange, size = 20, readOnly = false })
             e.stopPropagation();
             onChange?.(star === value ? 0 : star);
           }}
-          aria-label={`${star}つ星`}
+          aria-label={t("{n}つ星", { n: star })}
           aria-pressed={star <= value}
           className={readOnly ? "cursor-default" : "p-0.5 -m-0.5"}
         >
@@ -102,16 +126,18 @@ export function CopyrightFooter() {
 }
 
 export function SourceCredit({ sources }) {
+  const t = useT();
   return (
     <div className="mt-2 pt-3 border-t border-[var(--c-border)]">
       <p className="text-[11px] text-[var(--c-text-3)] leading-relaxed">
-        出典: {sources.join(" / ")}
+        {t("出典: {sources}", { sources: sources.join(" / ") })}
       </p>
     </div>
   );
 }
 
 export function MapLinkModal({ target, onClose }) {
+  const t = useT();
   if (!target) return null;
   const mapUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
     target.mapQuery
@@ -127,14 +153,14 @@ export function MapLinkModal({ target, onClose }) {
       >
         <div className="flex items-start justify-between mb-3">
           <div>
-            <p className="text-[11px] text-[var(--accent-label)] uppercase tracking-wider">店舗へ行く</p>
+            <p className="text-[11px] text-[var(--accent-label)] uppercase tracking-wider">{t("店舗へ行く")}</p>
             <h4 className="font-serif text-[18px] text-[var(--c-text)] mt-0.5">{target.shopName}</h4>
             <p className="text-[13px] text-[var(--c-text-3)] mt-0.5">{target.shopAddress}</p>
           </div>
           <button
             onClick={onClose}
             className="text-[var(--c-text-3)] hover:text-[var(--c-text)] transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center -m-2.5"
-            aria-label="閉じる"
+            aria-label={t("閉じる")}
           >
             <X size={18} />
           </button>
@@ -146,7 +172,7 @@ export function MapLinkModal({ target, onClose }) {
           className="flex items-center justify-center gap-2 w-full py-3 rounded-xl bg-[var(--accent)] text-[var(--on-accent)] font-medium text-[14px] hover:bg-[var(--accent-soft)] transition-colors"
         >
           <MapPin size={16} strokeWidth={2} />
-          Googleマップで開く
+          {t("Googleマップで開く")}
         </a>
       </div>
     </div>

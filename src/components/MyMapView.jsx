@@ -7,6 +7,7 @@ import markerShadow from "leaflet/dist/images/marker-shadow.png";
 import { MapPin, Heart } from "lucide-react";
 import { SectionHeading } from "./common";
 import { shopToPins, spreadOverlappingPins } from "../utils/mapPins";
+import { useT } from "../i18n";
 
 // Viteのバンドル環境ではLeafletのデフォルトマーカー画像への相対パス解決が
 // 壊れるため、バンドラーが解決したURLを明示的に差し替える(Leaflet+Vite定番の対処)。
@@ -20,15 +21,15 @@ L.Icon.Default.mergeOptions({
 const JAPAN_CENTER = [36.5, 138];
 const JAPAN_DEFAULT_ZOOM = 5;
 
-function popupHtml(pin) {
+function popupHtml(pin, t) {
   const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(pin.mapQuery)}`;
   return `
     <div style="font-family:Inter,sans-serif;min-width:160px">
       ${pin.label ? `<p style="font-size:11px;color:var(--accent-label);text-transform:uppercase;letter-spacing:0.05em;margin:0 0 2px">${pin.label}</p>` : ""}
       <p style="font-size:14px;font-weight:600;color:#231810;margin:0 0 4px">${pin.shopName}</p>
       ${pin.address ? `<p style="font-size:12px;color:#4A3A2A;margin:0 0 8px">${pin.address}</p>` : ""}
-      ${pin.approximate ? `<p style="font-size:10px;color:#8B7361;margin:0 0 8px">※近隣に他拠点があるため位置は目安です</p>` : ""}
-      <a href="${mapsUrl}" target="_blank" rel="noopener noreferrer" style="font-size:12px;color:var(--accent-label);text-decoration:underline">Googleマップで開く</a>
+      ${pin.approximate ? `<p style="font-size:10px;color:#8B7361;margin:0 0 8px">${t("※近隣に他拠点があるため位置は目安です")}</p>` : ""}
+      <a href="${mapsUrl}" target="_blank" rel="noopener noreferrer" style="font-size:12px;color:var(--accent-label);text-decoration:underline">${t("Googleマップで開く")}</a>
     </div>
   `;
 }
@@ -36,6 +37,7 @@ function popupHtml(pin) {
 // お気に入り商品を扱う店舗(App.jsxで導出済み)を、Leaflet + OpenStreetMapの
 // タイルで地図表示する。Google Maps APIキーは使わない方針のためLeafletを自前実装。
 export function MyMapView({ favoriteShops }) {
+  const t = useT();
   const containerRef = useRef(null);
   const mapRef = useRef(null);
   const markersRef = useRef([]);
@@ -65,7 +67,7 @@ export function MyMapView({ favoriteShops }) {
     if (!map) return;
 
     markersRef.current.forEach((marker) => marker.remove());
-    markersRef.current = pins.map((pin) => L.marker([pin.lat, pin.lng]).bindPopup(popupHtml(pin)).addTo(map));
+    markersRef.current = pins.map((pin) => L.marker([pin.lat, pin.lng]).bindPopup(popupHtml(pin, t)).addTo(map));
 
     // タブ切替直後は親要素のレイアウトが確定する前にLeafletがコンテナサイズを
     // キャッシュしてしまい、fitBoundsのズーム計算が大きくずれることがある。
@@ -86,13 +88,13 @@ export function MyMapView({ favoriteShops }) {
     <main className="px-5 py-5 flex flex-col gap-3 max-w-xl mx-auto">
       <SectionHeading en="My Map" ja="マイマップ" />
       <p className="text-[13px] text-[var(--c-text-3)]">
-        コレクションの商品を扱う店舗を自動的に地図表示します({pins.length}拠点)
+        {t("コレクションの商品を扱う店舗を自動的に地図表示します({n}拠点)", { n: pins.length })}
       </p>
 
       {favoriteShops.length === 0 && (
         <div className="text-center py-10 text-[var(--c-text-3)]">
           <Heart size={28} className="mx-auto mb-3 opacity-40" />
-          <p className="text-[14px]">コレクションに商品を追加すると、取扱店舗がここに表示されます</p>
+          <p className="text-[14px]">{t("コレクションに商品を追加すると、取扱店舗がここに表示されます")}</p>
         </div>
       )}
 
@@ -107,7 +109,7 @@ export function MyMapView({ favoriteShops }) {
             <div key={shop.name} className="flex items-center gap-2 text-[12px] text-[var(--c-text-3)]">
               <MapPin size={12} className="text-[var(--accent)] shrink-0" strokeWidth={1.75} />
               <span className="text-[var(--c-text)]">{shop.name}</span>
-              {shop.locations && shop.locations.length > 1 && <span>・{shop.locations.length}拠点</span>}
+              {shop.locations && shop.locations.length > 1 && <span>{t("・{n}拠点", { n: shop.locations.length })}</span>}
             </div>
           ))}
         </div>

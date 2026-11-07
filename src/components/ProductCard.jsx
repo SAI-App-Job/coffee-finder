@@ -7,8 +7,10 @@ import { getGradeExplanation } from "../utils/grade";
 import { categorizeFlavorNotes } from "../utils/flavor";
 import { cityFromAddress, formatDate, formatPrice } from "../utils/format";
 import { isNewArrival } from "../utils/productSort";
+import { useT } from "../i18n";
 
 export function DiscoveryFactCard() {
+  const t = useT();
   const [index, setIndex] = useState(() => Math.floor(Math.random() * DISCOVERY_FACTS.length));
   const fact = DISCOVERY_FACTS[index];
 
@@ -32,7 +34,7 @@ export function DiscoveryFactCard() {
           onClick={showAnother}
           className="text-[11px] text-[var(--c-text-3)] hover:text-[var(--accent)] transition-colors"
         >
-          別の話を見る
+          {t("別の話を見る")}
         </button>
       </div>
       <h3 className="font-serif text-[16px] text-[var(--c-text)]">{fact.title}</h3>
@@ -126,6 +128,7 @@ export function HoverExplainTag({ label, category, detail }) {
 
 // savedAt: コレクションに保存した日時(コレクション画面でだけ渡す)
 function ProductCardImpl({ product, onOpenMap, onLearnOrigin, isFavorite, onToggleFavorite, onOpenDetail, savedAt }) {
+  const t = useT();
   const processingDetail = product.processingMethod
     ? PROCESSING_EXPLANATIONS[product.processingMethod]
     : null;
@@ -163,12 +166,12 @@ function ProductCardImpl({ product, onOpenMap, onLearnOrigin, isFavorite, onTogg
                     key={country}
                     className="text-[11px] px-2 py-0.5 rounded-full bg-[var(--c-surface-2)] text-[var(--accent-muted)] border border-[var(--c-border)]"
                   >
-                    {country}
+                    {t(country)}
                   </span>
                 ))
               ) : (
                 <p className="text-[11px] tracking-wider text-[var(--accent-label)] font-medium uppercase">
-                  {product.originCountry}
+                  {t(product.originCountry)}
                 </p>
               )}
               {product.stockStatus && product.stockStatus !== "販売中" && (
@@ -179,12 +182,12 @@ function ProductCardImpl({ product, onOpenMap, onLearnOrigin, isFavorite, onTogg
                       : "bg-[#4A2E12] text-[#E8B86D] border border-[#6B4A22]"
                   }`}
                 >
-                  {product.stockStatus === "終売" ? "終売" : "売り切れ"}
+                  {product.stockStatus === "終売" ? t("終売") : t("売り切れ")}
                 </span>
               )}
               {isNewArrival(product) && (
                 <span className="text-[10px] px-1.5 py-0.5 rounded-full font-medium leading-none bg-[var(--accent-glow)] text-[var(--accent-on-glow)] border border-[var(--accent-label)]">
-                  新規掲載
+                  {t("新規掲載")}
                 </span>
               )}
             </div>
@@ -198,7 +201,7 @@ function ProductCardImpl({ product, onOpenMap, onLearnOrigin, isFavorite, onTogg
                 e.stopPropagation();
                 onToggleFavorite?.(product.id);
               }}
-              aria-label={favorited ? "コレクションから削除" : "コレクションに追加"}
+              aria-label={favorited ? t("コレクションから削除") : t("コレクションに追加")}
               aria-pressed={favorited}
               className="p-1 -m-1 text-[var(--c-text-3)] hover:text-[var(--accent)] transition-colors"
             >
@@ -209,7 +212,7 @@ function ProductCardImpl({ product, onOpenMap, onLearnOrigin, isFavorite, onTogg
               />
             </button>
             <p className="font-mono text-[var(--c-text)] text-[15px] max-w-[100px] whitespace-normal break-words">
-              {formatPrice(product) ?? (product.priceNote ? "要問合せ" : "価格未確認")}
+              {formatPrice(product) ?? (product.priceNote ? t("要問合せ") : t("価格未確認"))}
             </p>
             {typeof product.weightG === "number" && (
               <p className="font-mono text-[11px] text-[var(--c-text-3)]">{product.weightG}g</p>
@@ -222,29 +225,29 @@ function ProductCardImpl({ product, onOpenMap, onLearnOrigin, isFavorite, onTogg
             {product.designatedBrand && (
               <HoverExplainTag
                 label={product.designatedBrand}
-                category="特定銘柄"
+                category={t("特定銘柄")}
                 detail={
                   DESIGNATED_BRAND_EXPLANATIONS[product.designatedBrand] ||
-                  "この銘柄についての解説はまだ用意されていません。"
+                  t("この銘柄についての解説はまだ用意されていません。")
                 }
               />
             )}
             {product.processingMethod && (
               <HoverExplainTag
-                label={product.processingMethod}
-                category="精選方法"
-                detail={processingDetail || "この精選方法についての解説はまだ用意されていません。"}
+                label={t(product.processingMethod)}
+                category={t("精選方法")}
+                detail={processingDetail || t("この精選方法についての解説はまだ用意されていません。")}
               />
             )}
             {product.grade && (
-              <HoverExplainTag label={product.grade} category="グレード" detail={gradeDetail} />
+              <HoverExplainTag label={product.grade} category={t("グレード")} detail={gradeDetail} />
             )}
             {roastTag && (
               <span
-                title={`焙煎度: ${roastTag}`}
+                title={t("焙煎度: {roast}", { roast: t(roastTag) })}
                 className="text-[11px] px-2 py-0.5 rounded-full bg-[var(--c-surface-2)] text-[var(--accent-muted)] border border-[var(--c-border)] max-w-[220px] truncate whitespace-nowrap"
               >
-                焙煎 {roastTag}
+                {t("焙煎 {roast}", { roast: t(roastTag) })}
               </span>
             )}
             {flavorCategories.map((cat) => (
@@ -253,11 +256,11 @@ function ProductCardImpl({ product, onOpenMap, onLearnOrigin, isFavorite, onTogg
                 label={
                   <span className="flex items-center gap-1.5">
                     <span className="w-1.5 h-1.5 rounded-full shrink-0" style={{ backgroundColor: cat.color }} />
-                    {cat.ja}
+                    {t(cat.ja)}
                   </span>
                 }
-                category="フレーバーホイール"
-                detail={`テイスティングノート「${product.flavorNotes}」から、SCA/WCRフレーバーホイールの「${cat.en}」カテゴリに該当すると自動分類。`}
+                category={t("フレーバーホイール")}
+                detail={t("テイスティングノート「{notes}」から、SCA/WCRフレーバーホイールの「{cat}」カテゴリに該当すると自動分類。", { notes: product.flavorNotes, cat: cat.en })}
               />
             ))}
             {staticTags.map((tag) => (
@@ -275,7 +278,7 @@ function ProductCardImpl({ product, onOpenMap, onLearnOrigin, isFavorite, onTogg
             ))}
             {product.roastSelectable && (
               <span className="text-[11px] px-2 py-0.5 rounded-full bg-transparent text-[var(--c-text-3)] border border-dashed border-[var(--c-border)]">
-                焙煎度は注文時に選択
+                {t("焙煎度は注文時に選択")}
               </span>
             )}
           </div>
@@ -297,13 +300,13 @@ function ProductCardImpl({ product, onOpenMap, onLearnOrigin, isFavorite, onTogg
             className="flex items-center gap-1 text-[12px] text-[var(--accent)] hover:text-[var(--accent-soft)] transition-colors"
           >
             <MapPin size={13} strokeWidth={1.75} />
-            <span>地図で開く</span>
+            <span>{t("地図で開く")}</span>
             <ExternalLink size={11} strokeWidth={1.75} />
           </button>
         </div>
 
         {savedAt && formatDate(savedAt) && (
-          <p className="text-[11px] text-[var(--c-text-3)]">登録日 {formatDate(savedAt)}</p>
+          <p className="text-[11px] text-[var(--c-text-3)]">{t("登録日 {date}", { date: formatDate(savedAt) })}</p>
         )}
 
         {onLearnOrigin && (
@@ -319,7 +322,7 @@ function ProductCardImpl({ product, onOpenMap, onLearnOrigin, isFavorite, onTogg
             }`}
           >
             <Sparkles size={12} strokeWidth={1.75} />
-            <span>{product.originCountry}という産地をもっと知る</span>
+            <span>{t("{country}という産地をもっと知る", { country: t(product.originCountry) })}</span>
           </button>
         )}
       </div>

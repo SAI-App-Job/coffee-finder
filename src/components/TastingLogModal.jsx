@@ -3,6 +3,7 @@ import { X, ArrowLeft, Plus, Trash2, NotebookPen, Gauge } from "lucide-react";
 import { DialInGauge } from "./common";
 import { FlavorChips, FlavorPicker } from "./FlavorPicker";
 import { formatDateTime } from "../utils/format";
+import { useT } from "../i18n";
 
 // 記録の場所。"home"=自宅などで自分で淹れた記録(抽出条件+Dial-in Score+ノート)、
 // "shop"=店舗で飲んだ記録(ノートのみ)。place未設定の既存記録は"home"として扱う。
@@ -32,6 +33,7 @@ function computeRatio(doseG, waterG) {
 }
 
 function LogEntryCard({ entry, onDelete }) {
+  const t = useT();
   const isShop = entry.place === "shop";
   const ratio = computeRatio(entry.doseG, entry.waterG);
   const recipeParts = [
@@ -55,14 +57,14 @@ function LogEntryCard({ entry, onDelete }) {
                 : "border-[var(--c-border)] text-[var(--c-text-2)]"
             }`}
           >
-            {isShop ? "店舗" : "自宅"}
+            {isShop ? t("店舗") : t("自宅")}
           </span>
-          <p className="text-[11px] text-[var(--c-text-3)]">登録日 {formatDateTime(entry.recordedAt)}</p>
+          <p className="text-[11px] text-[var(--c-text-3)]">{t("登録日 {date}", { date: formatDateTime(entry.recordedAt) })}</p>
         </div>
         <button
           onClick={() => onDelete(entry.id)}
           className="text-[var(--c-text-3)] hover:text-[var(--c-text)] transition-colors -m-1 p-1"
-          aria-label="このログを削除"
+          aria-label={t("このログを削除")}
         >
           <Trash2 size={13} />
         </button>
@@ -75,7 +77,7 @@ function LogEntryCard({ entry, onDelete }) {
           <DialInGauge value={entry.dialInScore ?? 0} size={72} />
           <div className="flex-1">
             <p className="text-[10px] text-[var(--accent-label)] uppercase tracking-wide">Dial-in Score</p>
-            <p className="text-[11px] text-[var(--c-text-3)] mt-0.5">目指した味にどれだけ近づけたか</p>
+            <p className="text-[11px] text-[var(--c-text-3)] mt-0.5">{t("目指した味にどれだけ近づけたか")}</p>
           </div>
         </div>
       )}
@@ -89,6 +91,7 @@ function LogEntryCard({ entry, onDelete }) {
 // 同じ豆に対する複数の抽出記録を並べて見返せるようにし(条件を変えた比較)、
 // Dial-in Score(=目指した味にどれだけ近づけたか)をゲージで直感的に示す。
 export function TastingLogModal({ product, logs, onAddLog, onDeleteLog, onClose }) {
+  const t = useT();
   const [mode, setMode] = useState("list");
   const [form, setForm] = useState(EMPTY_FORM);
 
@@ -143,7 +146,7 @@ export function TastingLogModal({ product, logs, onAddLog, onDeleteLog, onClose 
               <button
                 onClick={() => setMode("list")}
                 className="shrink-0 text-[var(--c-text-3)] hover:text-[var(--c-text)] transition-colors -m-1 p-1"
-                aria-label="一覧に戻る"
+                aria-label={t("一覧に戻る")}
               >
                 <ArrowLeft size={18} />
               </button>
@@ -160,7 +163,7 @@ export function TastingLogModal({ product, logs, onAddLog, onDeleteLog, onClose 
           <button
             onClick={onClose}
             className="shrink-0 text-[var(--c-text-3)] hover:text-[var(--c-text)] transition-colors min-w-[36px] min-h-[36px] flex items-center justify-center -m-2"
-            aria-label="閉じる"
+            aria-label={t("閉じる")}
           >
             <X size={18} />
           </button>
@@ -173,16 +176,16 @@ export function TastingLogModal({ product, logs, onAddLog, onDeleteLog, onClose 
               className="flex items-center justify-center gap-1.5 py-2.5 rounded-xl bg-[var(--accent)] text-[var(--on-accent)] text-[13px] font-medium hover:bg-[var(--accent-soft)] transition-colors"
             >
               <Plus size={14} strokeWidth={2} />
-              新しく記録する
+              {t("新しく記録する")}
             </button>
             {logs.length === 0 ? (
               <p className="text-[12px] text-[var(--c-text-3)] text-center py-8">
-                まだ記録がありません。自宅で淹れたときは抽出条件とDial-in Score、店舗で飲んだときはテイスティングノートを記録できます。
+                {t("まだ記録がありません。自宅で淹れたときは抽出条件とDial-in Score、店舗で飲んだときはテイスティングノートを記録できます。")}
               </p>
             ) : (
               <>
                 <p className="text-[11px] text-[var(--c-text-3)]">
-                  同じ豆の記録を見比べられます({logs.length}件)
+                  {t("同じ豆の記録を見比べられます({n}件)", { n: logs.length })}
                 </p>
                 {logs.map((entry) => (
                   <LogEntryCard key={entry.id} entry={entry} onDelete={onDeleteLog} />
@@ -205,7 +208,7 @@ export function TastingLogModal({ product, logs, onAddLog, onDeleteLog, onClose 
                       : "text-[var(--c-text-2)] hover:text-[var(--c-text)]"
                   }`}
                 >
-                  {place.label}
+                  {t(place.label)}
                 </button>
               ))}
             </div>
@@ -214,13 +217,13 @@ export function TastingLogModal({ product, logs, onAddLog, onDeleteLog, onClose 
               <>
             <div>
               <label className="text-[11px] tracking-wide text-[var(--accent-label)] uppercase mb-1 block">
-                抽出方法
+                {t("抽出方法")}
               </label>
               <input
                 type="text"
                 value={form.brewMethod}
                 onChange={(e) => setForm((f) => ({ ...f, brewMethod: e.target.value }))}
-                placeholder="例: V60、エアロプレス、エスプレッソ"
+                placeholder={t("例: V60、エアロプレス、エスプレッソ")}
                 className="w-full px-3 py-2 rounded-lg bg-[var(--c-surface-2)] border border-[var(--c-border)] text-[13px] text-[var(--c-text)] placeholder:text-[var(--c-text-3)] focus:outline-none focus:border-[var(--accent)]"
               />
             </div>
@@ -228,7 +231,7 @@ export function TastingLogModal({ product, logs, onAddLog, onDeleteLog, onClose 
             <div className="grid grid-cols-2 gap-3">
               <div>
                 <label className="text-[11px] tracking-wide text-[var(--accent-label)] uppercase mb-1 block">
-                  粉量(g)
+                  {t("粉量(g)")}
                 </label>
                 <input
                   type="number"
@@ -240,7 +243,7 @@ export function TastingLogModal({ product, logs, onAddLog, onDeleteLog, onClose 
               </div>
               <div>
                 <label className="text-[11px] tracking-wide text-[var(--accent-label)] uppercase mb-1 block">
-                  湯量(g)
+                  {t("湯量(g)")}
                 </label>
                 <input
                   type="number"
@@ -251,17 +254,17 @@ export function TastingLogModal({ product, logs, onAddLog, onDeleteLog, onClose 
                 />
               </div>
             </div>
-            {ratio && <p className="text-[12px] text-[var(--c-text-3)] -mt-2">比率(自動計算): {ratio}</p>}
+            {ratio && <p className="text-[12px] text-[var(--c-text-3)] -mt-2">{t("比率(自動計算): {ratio}", { ratio })}</p>}
 
             <div>
               <label className="text-[11px] tracking-wide text-[var(--accent-label)] uppercase mb-1 block">
-                挽き目
+                {t("挽き目")}
               </label>
               <input
                 type="text"
                 value={form.grindSize}
                 onChange={(e) => setForm((f) => ({ ...f, grindSize: e.target.value }))}
-                placeholder="例: 中細挽き、コマンダンテ20クリック"
+                placeholder={t("例: 中細挽き、コマンダンテ20クリック")}
                 className="w-full px-3 py-2 rounded-lg bg-[var(--c-surface-2)] border border-[var(--c-border)] text-[13px] text-[var(--c-text)] placeholder:text-[var(--c-text-3)] focus:outline-none focus:border-[var(--accent)]"
               />
             </div>
@@ -269,7 +272,7 @@ export function TastingLogModal({ product, logs, onAddLog, onDeleteLog, onClose 
             <div className="grid grid-cols-2 gap-3">
               <div>
                 <label className="text-[11px] tracking-wide text-[var(--accent-label)] uppercase mb-1 block">
-                  湯温(℃)
+                  {t("湯温(℃)")}
                 </label>
                 <input
                   type="number"
@@ -281,13 +284,13 @@ export function TastingLogModal({ product, logs, onAddLog, onDeleteLog, onClose 
               </div>
               <div>
                 <label className="text-[11px] tracking-wide text-[var(--accent-label)] uppercase mb-1 block">
-                  抽出時間
+                  {t("抽出時間")}
                 </label>
                 <input
                   type="text"
                   value={form.brewTime}
                   onChange={(e) => setForm((f) => ({ ...f, brewTime: e.target.value }))}
-                  placeholder="例: 2:30"
+                  placeholder={t("例: 2:30")}
                   className="w-full px-3 py-2 rounded-lg bg-[var(--c-surface-2)] border border-[var(--c-border)] text-[13px] text-[var(--c-text)] placeholder:text-[var(--c-text-3)] focus:outline-none focus:border-[var(--accent)]"
                 />
               </div>
@@ -300,7 +303,7 @@ export function TastingLogModal({ product, logs, onAddLog, onDeleteLog, onClose 
                   Dial-in Score
                 </label>
               </div>
-              <p className="text-[11px] text-[var(--c-text-3)] mb-3">目指した味にどれだけ近づけられたか</p>
+              <p className="text-[11px] text-[var(--c-text-3)] mb-3">{t("目指した味にどれだけ近づけられたか")}</p>
               <div className="flex items-center gap-4">
                 <DialInGauge value={Number(form.dialInScore)} size={88} />
                 <input
@@ -318,7 +321,7 @@ export function TastingLogModal({ product, logs, onAddLog, onDeleteLog, onClose 
 
             <div>
               <label className="text-[11px] tracking-wide text-[var(--accent-label)] uppercase mb-1 block">
-                テイスティングノート
+                {t("テイスティングノート")}
               </label>
               <textarea
                 value={form.note}
@@ -326,8 +329,8 @@ export function TastingLogModal({ product, logs, onAddLog, onDeleteLog, onClose 
                 rows={isShopForm ? 5 : 3}
                 placeholder={
                   isShopForm
-                    ? "店で飲んだときの香り・酸味・甘み・後味など、感じたことを自由に"
-                    : "香り・酸味・甘み・後味など、感じたことを自由に"
+                    ? t("店で飲んだときの香り・酸味・甘み・後味など、感じたことを自由に")
+                    : t("香り・酸味・甘み・後味など、感じたことを自由に")
                 }
                 className="w-full px-3 py-2 rounded-lg bg-[var(--c-surface-2)] border border-[var(--c-border)] text-[13px] text-[var(--c-text)] placeholder:text-[var(--c-text-3)] focus:outline-none focus:border-[var(--accent)] resize-none"
               />
@@ -335,9 +338,9 @@ export function TastingLogModal({ product, logs, onAddLog, onDeleteLog, onClose 
 
             <div>
               <label className="text-[11px] tracking-wide text-[var(--accent-label)] uppercase mb-1 block">
-                風味
+                {t("風味")}
               </label>
-              <p className="text-[11px] text-[var(--c-text-3)] mb-2">感じた風味を複数選べます(分類をタップすると詳細が開きます)</p>
+              <p className="text-[11px] text-[var(--c-text-3)] mb-2">{t("感じた風味を複数選べます(分類をタップすると詳細が開きます)")}</p>
               <FlavorPicker
                 value={form.flavors}
                 onChange={(flavors) => setForm((f) => ({ ...f, flavors }))}
@@ -350,7 +353,7 @@ export function TastingLogModal({ product, logs, onAddLog, onDeleteLog, onClose 
               className="flex items-center justify-center gap-1.5 py-2.5 rounded-xl bg-[var(--accent)] text-[var(--on-accent)] text-[13px] font-medium hover:bg-[var(--accent-soft)] transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
             >
               <NotebookPen size={14} strokeWidth={2} />
-              この記録を保存
+              {t("この記録を保存")}
             </button>
           </div>
         )}

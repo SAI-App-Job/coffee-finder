@@ -8,8 +8,10 @@ import {
   MAP_REGION_PRESETS,
   MAP_MIN_WIDTH,
 } from "../data/originMapPaths";
+import { useT } from "../i18n";
 
 export function OriginMapView({ origins, selected, onSelect }) {
+  const t = useT();
   // 実データ(Natural Earth由来のGeoJSON)をSVGパスに変換して描画している。
   // 大陸の輪郭(CONTINENT_PATHS、薄い色)を背景レイヤーとして敷き、その上に
   // 対象国(COUNTRY_PATHS、強調色)と日本(JAPAN_PATH、現在地の目印)を重ねている。
@@ -236,7 +238,7 @@ export function OriginMapView({ origins, selected, onSelect }) {
     <div className="rounded-2xl bg-[var(--c-surface)] border border-[var(--c-border)]" style={{ padding: 16 }}>
       <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 8 }}>
         <p className="text-[11px] tracking-[0.15em] text-[var(--accent-label)] uppercase">Coffee Belt Map</p>
-        <span className="text-[10px] text-[var(--c-text-3)]">ピンチ/ホイールで拡大縮小、ドラッグで移動</span>
+        <span className="text-[10px] text-[var(--c-text-3)]">{t("ピンチ/ホイールで拡大縮小、ドラッグで移動")}</span>
       </div>
 
       <div style={{ display: "flex", alignItems: "center", gap: 6, marginBottom: 8, flexWrap: "wrap" }}>
@@ -246,7 +248,7 @@ export function OriginMapView({ origins, selected, onSelect }) {
             onClick={() => setViewBox(MAP_REGION_PRESETS[region])}
             className="text-[11px] px-3 py-1 rounded-full border border-[var(--accent-label)] text-[var(--accent)] hover:bg-[var(--c-surface-2)] transition-colors"
           >
-            {region}
+            {t(region)}
           </button>
         ))}
         {isZoomed && (
@@ -254,7 +256,7 @@ export function OriginMapView({ origins, selected, onSelect }) {
             onClick={resetZoom}
             className="text-[11px] px-3 py-1 rounded-full border border-[var(--c-border)] text-[var(--c-text-3)] hover:text-[var(--accent)] transition-colors"
           >
-            全体表示
+            {t("全体表示")}
           </button>
         )}
       </div>
@@ -286,7 +288,7 @@ export function OriginMapView({ origins, selected, onSelect }) {
 
         {/* 赤道の帯(正距円筒図法でlat=0はy=250) */}
         <line x1="80" y1="250" x2="1000" y2="250" stroke="var(--accent-label)" strokeOpacity="0.4" strokeDasharray="6 6" />
-        <text x="88" y="244" fontSize="11" fill="var(--accent-label)" opacity="0.8">赤道</text>
+        <text x="88" y="244" fontSize="11" fill="var(--accent-label)" opacity="0.8">{t("赤道")}</text>
 
         {/* 日本(特別な強調はせず、大陸と同じ背景色で自然に溶け込ませる) */}
         <path d={JAPAN_PATH} fill="var(--c-surface)" stroke="var(--c-surface-2)" strokeWidth="0.6" />
@@ -382,7 +384,7 @@ export function OriginMapView({ origins, selected, onSelect }) {
                   fill={selected_ ? "var(--on-accent)" : "var(--c-text-2)"}
                   fontWeight={selected_ ? "600" : "400"}
                 >
-                  {origin.country}
+                  {t(origin.country)}
                 </text>
               </g>
             );
