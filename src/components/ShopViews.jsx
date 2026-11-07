@@ -239,7 +239,7 @@ function ShopNoteCard({ note, onDelete }) {
               <StarRating value={note.rating} size={13} readOnly />
             </div>
           )}
-          <p className="text-[11px] text-[var(--c-text-3)] mt-1">{formatDateTime(note.recordedAt)}</p>
+          <p className="text-[11px] text-[var(--c-text-3)] mt-1">登録日 {formatDateTime(note.recordedAt)}</p>
         </div>
         <button
           onClick={() => onDelete(note.id)}

@@ -5,7 +5,7 @@ import { PROCESSING_EXPLANATIONS, DESIGNATED_BRAND_EXPLANATIONS } from "../data/
 import { ORIGIN_GUIDE } from "../data/originGuide";
 import { getGradeExplanation } from "../utils/grade";
 import { categorizeFlavorNotes } from "../utils/flavor";
-import { cityFromAddress, formatPrice } from "../utils/format";
+import { cityFromAddress, formatDate, formatPrice } from "../utils/format";
 import { isNewArrival } from "../utils/productSort";
 
 export function DiscoveryFactCard() {
@@ -124,7 +124,8 @@ export function HoverExplainTag({ label, category, detail }) {
   );
 }
 
-function ProductCardImpl({ product, onOpenMap, onLearnOrigin, isFavorite, onToggleFavorite, onOpenDetail }) {
+// savedAt: コレクションに保存した日時(コレクション画面でだけ渡す)
+function ProductCardImpl({ product, onOpenMap, onLearnOrigin, isFavorite, onToggleFavorite, onOpenDetail, savedAt }) {
   const processingDetail = product.processingMethod
     ? PROCESSING_EXPLANATIONS[product.processingMethod]
     : null;
@@ -300,6 +301,10 @@ function ProductCardImpl({ product, onOpenMap, onLearnOrigin, isFavorite, onTogg
             <ExternalLink size={11} strokeWidth={1.75} />
           </button>
         </div>
+
+        {savedAt && formatDate(savedAt) && (
+          <p className="text-[11px] text-[var(--c-text-3)]">登録日 {formatDate(savedAt)}</p>
+        )}
 
         {onLearnOrigin && (
           <button

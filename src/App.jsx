@@ -78,7 +78,7 @@ export default function CoffeeProductList() {
   const { themeId, setThemeId, themes } = useColorTheme();
   const { isPremium, setPremium } = usePremium();
   const { message: toastMessage, showToast, dismissToast } = useToast();
-  const { favoriteIds, isFavorite, toggleFavorite, importFavorites } = useFavorites(isPremium, showToast);
+  const { favoriteIds, favoriteDates, isFavorite, toggleFavorite, importFavorites } = useFavorites(isPremium, showToast);
   const { history, recordView } = useViewHistory(isPremium);
   const {
     compareIds,
@@ -715,9 +715,11 @@ export default function CoffeeProductList() {
           onLearnOrigin={learnAboutOrigin}
           onOpenDetail={openProductDetail}
           favoriteShops={favoriteShops}
+          favoriteDates={favoriteDates}
           getRating={getRating}
           backup={{
             favoriteIds,
+            favoriteDates,
             importFavorites,
             isPremium,
             userShops: userCollection.userShops,

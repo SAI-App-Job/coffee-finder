@@ -33,6 +33,13 @@ export const formatRelativeTime = (isoString) => {
   return `${days}日前`;
 };
 
+// 登録日の表記(例: 2026/11/08)。不正な値・空のときは空文字を返す
+export const formatDate = (isoString) => {
+  const d = new Date(isoString);
+  if (!isoString || Number.isNaN(d.getTime())) return "";
+  return d.toLocaleDateString("ja-JP", { year: "numeric", month: "2-digit", day: "2-digit" });
+};
+
 // テイスティングログ等、同じ豆の複数記録を日時で見分けるための絶対日時表記
 export const formatDateTime = (isoString) => {
   const d = new Date(isoString);

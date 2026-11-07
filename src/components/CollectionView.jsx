@@ -29,6 +29,7 @@ export function CollectionView({
   onLearnOrigin,
   onOpenDetail,
   favoriteShops,
+  favoriteDates,
   getRating,
   backup,
   registered,
@@ -87,6 +88,7 @@ export function CollectionView({
           {viewMode === "list" ? (
             <FavoritesView
               products={products}
+              favoriteDates={favoriteDates}
               isFavorite={isFavorite}
               onToggleFavorite={onToggleFavorite}
               onOpenMap={onOpenMap}

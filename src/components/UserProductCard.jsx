@@ -4,6 +4,8 @@ import { StarRating } from "./common";
 import { FlavorChips } from "./FlavorPicker";
 import { PhotoThumb } from "./ProductPhoto";
 
+import { formatDate } from "../utils/format";
+
 const formatYen = (n) => `¥${n.toLocaleString("ja-JP")}`;
 
 export const ICON_BUTTON_CLASS =
@@ -76,6 +78,10 @@ function UserProductCard({
       <FlavorChips flavors={product.flavors} />
       {product.note && (
         <p className="text-[12px] text-[var(--c-text-2)] leading-relaxed whitespace-pre-line">{product.note}</p>
+      )}
+
+      {formatDate(product.createdAt) && (
+        <p className="text-[11px] text-[var(--c-text-3)]">登録日 {formatDate(product.createdAt)}</p>
       )}
 
       <div className="flex items-center justify-between gap-3 pt-2 mt-0.5 border-t border-[var(--c-border)]">

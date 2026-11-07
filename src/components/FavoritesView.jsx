@@ -1,7 +1,7 @@
 import { Heart } from "lucide-react";
 import { ProductCard } from "./ProductCard";
 
-export function FavoritesView({ products, isFavorite, onToggleFavorite, onOpenMap, onLearnOrigin, onOpenDetail }) {
+export function FavoritesView({ products, favoriteDates, isFavorite, onToggleFavorite, onOpenMap, onLearnOrigin, onOpenDetail }) {
   const favorites = products.filter((p) => isFavorite(p.id));
 
   return (
@@ -23,6 +23,7 @@ export function FavoritesView({ products, isFavorite, onToggleFavorite, onOpenMa
             isFavorite={isFavorite}
             onToggleFavorite={onToggleFavorite}
             onOpenDetail={onOpenDetail}
+            savedAt={favoriteDates?.[String(product.id)]}
           />
         ))
       )}

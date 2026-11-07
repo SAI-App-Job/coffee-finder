@@ -27,6 +27,7 @@ const blobToDataUrl = (blob) =>
 // パッケージ写真は大きいので、書き出すときに「写真も含める」を選んだ場合だけ、photos として入れる。
 export function CollectionBackup({
   favoriteIds,
+  favoriteDates,
   importFavorites,
   isPremium,
   userShops,
@@ -67,6 +68,7 @@ export function CollectionBackup({
         version: BACKUP_VERSION,
         exportedAt: new Date().toISOString(),
         favorites: favoriteIds,
+        favoriteDates: Object.fromEntries(Object.entries(favoriteDates).filter(([id]) => favoriteIds.includes(id))),
         userShops,
         userProducts,
       };
@@ -127,7 +129,7 @@ export function CollectionBackup({
         setImportMessage({ type: "error", text: "対応していないファイル形式です" });
         return;
       }
-      const fav = hasFavorites ? importFavorites(parsed.favorites) : { total: 0, added: 0 };
+      const fav = hasFavorites ? importFavorites(parsed.favorites, parsed.favoriteDates) : { total: 0, added: 0 };
       const user = hasUserData
         ? importUserCollection({ shops: parsed.userShops, products: parsed.userProducts })
         : { shopsAdded: 0, productsAdded: 0, productIds: userProducts.map((p) => p.id) };

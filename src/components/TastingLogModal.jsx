@@ -57,7 +57,7 @@ function LogEntryCard({ entry, onDelete }) {
           >
             {isShop ? "店舗" : "自宅"}
           </span>
-          <p className="text-[11px] text-[var(--c-text-3)]">{formatDateTime(entry.recordedAt)}</p>
+          <p className="text-[11px] text-[var(--c-text-3)]">登録日 {formatDateTime(entry.recordedAt)}</p>
         </div>
         <button
           onClick={() => onDelete(entry.id)}
