@@ -79,6 +79,14 @@ export function AboutView({ open, onClose }) {
               </li>
             </ul>
             <p className="text-[11px] text-[var(--c-text-3)]">最終更新: 2026年11月8日</p>
+            <a
+              href={`${import.meta.env.BASE_URL}privacy-policy.html`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 self-start text-[12px] text-[var(--accent-label)] hover:text-[var(--accent)] transition-colors underline underline-offset-2"
+            >
+              プライバシーポリシー(全文)
+            </a>
           </section>
 
           <section className="flex flex-col gap-3">
