@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Pencil, Trash2, NotebookPen } from "lucide-react";
 import { StarRating } from "./common";
 import { FlavorChips } from "./FlavorPicker";
+import { PhotoThumb } from "./ProductPhoto";
 
 const formatYen = (n) => `¥${n.toLocaleString("ja-JP")}`;
 
@@ -32,6 +33,7 @@ export function DeleteControl({ confirming, onAsk, onCancel, onConfirm, label, c
 
 function UserProductCard({
   product,
+  photoUrl,
   rating,
   onRate,
   logCount,
@@ -50,9 +52,12 @@ function UserProductCard({
 
   return (
     <div className="rounded-xl bg-[var(--c-surface-2)] border border-[var(--c-border)] p-3.5 flex flex-col gap-2">
-      <div className="flex items-start justify-between gap-3">
-        <h4 className="text-[14px] font-medium text-[var(--c-text)] leading-snug min-w-0">{product.name}</h4>
-        {meta.length > 0 && <p className="shrink-0 font-mono text-[12px] text-[var(--c-text-2)]">{meta.join(" / ")}</p>}
+      <div className="flex items-start gap-3">
+        <PhotoThumb url={photoUrl} alt={`${product.name}のパッケージ写真`} />
+        <div className="flex-1 min-w-0 flex items-start justify-between gap-3">
+          <h4 className="text-[14px] font-medium text-[var(--c-text)] leading-snug min-w-0">{product.name}</h4>
+          {meta.length > 0 && <p className="shrink-0 font-mono text-[12px] text-[var(--c-text-2)]">{meta.join(" / ")}</p>}
+        </div>
       </div>
 
       {tags.length > 0 && (
@@ -104,13 +109,14 @@ function UserProductCard({
 
 // 手動登録した商品のカード一覧(コレクションの店舗ごと / 店舗画面の「店頭の商品」で共通)。
 // 削除の確認表示は、一覧の中で1件ずつ管理する。
-export function UserProductList({ products, getRating, onRate, getLogCount, onOpenTastingLog, onEdit, onDelete }) {
+export function UserProductList({ products, getPhotoUrl, getRating, onRate, getLogCount, onOpenTastingLog, onEdit, onDelete }) {
   const [confirmingId, setConfirmingId] = useState(null);
 
   return products.map((product) => (
     <UserProductCard
       key={product.id}
       product={product}
+      photoUrl={getPhotoUrl?.(product.id)}
       rating={getRating(product.id)}
       onRate={(stars) => onRate(product.id, stars)}
       logCount={getLogCount(product.id)}

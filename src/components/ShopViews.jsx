@@ -337,6 +337,7 @@ export function ShopDetailView({
             <div className="flex flex-col gap-2">
               <UserProductList
                 products={registered.products}
+                getPhotoUrl={registered.getPhotoUrl}
                 getRating={registered.getRating}
                 onRate={registered.onRate}
                 getLogCount={registered.getLogCount}

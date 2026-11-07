@@ -5,6 +5,7 @@ import { categorizeFlavorNotes } from "../utils/flavor";
 import { cityFromAddress, formatPrice } from "../utils/format";
 import { isNewArrival } from "../utils/productSort";
 import { StarRating } from "./common";
+import { PhotoPicker } from "./ProductPhoto";
 
 function DetailRow({ label, value, detail }) {
   if (!value) return null;
@@ -32,6 +33,8 @@ export function ProductDetailModal({
   onRate,
   logCount = 0,
   onOpenTastingLog,
+  photoUrl,
+  onChangePhoto,
 }) {
   if (!product) return null;
 
@@ -113,6 +116,17 @@ export function ProductDetailModal({
           <p className="text-[12px] text-[var(--c-text-3)]">この商品を評価</p>
           <StarRating value={rating} onChange={(stars) => onRate?.(product.id, stars)} />
         </div>
+
+        {onChangePhoto && (
+          <div className="mb-4 pb-4 border-b border-[var(--c-border)]">
+            <p className="text-[11px] tracking-wide text-[var(--accent-label)] uppercase mb-2">パッケージ写真</p>
+            <PhotoPicker
+              url={photoUrl}
+              onChange={(blob) => onChangePhoto(product.id, blob)}
+              alt={`${product.rawName}のパッケージ写真`}
+            />
+          </div>
+        )}
 
         <div className="flex flex-col gap-3.5 mb-4">
           <DetailRow

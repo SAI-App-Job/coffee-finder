@@ -18,6 +18,7 @@ import { useViewHistory } from "./hooks/useViewHistory";
 import { useComparison } from "./hooks/useComparison";
 import { useRatings } from "./hooks/useRatings";
 import { useTastingLog } from "./hooks/useTastingLog";
+import { useProductPhotos } from "./hooks/useProductPhotos";
 import { useUserCollection } from "./hooks/useUserCollection";
 import { useShopTastingNotes } from "./hooks/useShopTastingNotes";
 import { useAlerts } from "./hooks/useAlerts";
@@ -90,6 +91,9 @@ export default function CoffeeProductList() {
   const { getRating, setRating } = useRatings();
   const { getLogs, addLog, deleteLog } = useTastingLog();
   const userCollection = useUserCollection();
+  // 商品のパッケージ写真(端末内のIndexedDBに保存。商品IDがキー)
+  const { getPhotoUrl, setPhoto, removePhoto, removePhotos, photoCount, exportPhotos, getPhotoBytes, importPhotos } =
+    useProductPhotos();
   // コレクションの「登録した商品」: 店舗フォーム({}=新規 / {shop}=編集)と商品フォーム({shop, product?})
   const [userShopPickerOpen, setUserShopPickerOpen] = useState(false);
   const [userShopForm, setUserShopForm] = useState(null);
@@ -417,10 +421,15 @@ export default function CoffeeProductList() {
   };
 
   // アプリ掲載店はまだ登録先(店舗の記録)が無いことがあるので、保存するときに探して、無ければ作る
-  const saveUserProduct = (data, shop, editing) => {
-    if (editing) userCollection.updateProduct(editing.id, data);
-    else userCollection.addProduct(shop.id ?? userCollection.findOrCreateAppShop(shop), data);
+  // photoChange: undefined=写真は変更なし / Blob=新しい写真 / null=写真を削除
+  const saveUserProduct = async (data, shop, editing, photoChange) => {
+    const productId = editing
+      ? (userCollection.updateProduct(editing.id, data), editing.id)
+      : userCollection.addProduct(shop.id ?? userCollection.findOrCreateAppShop(shop), data);
     setUserProductForm(null);
+    if (!productId || photoChange === undefined) return;
+    if (photoChange === null) removePhoto(productId);
+    else if (!(await setPhoto(productId, photoChange))) showToast("商品は登録しましたが、写真を保存できませんでした");
   };
 
   // 商品登録の最初のステップ「どのお店?」の選択結果 → 商品フォームを開く
@@ -438,11 +447,14 @@ export default function CoffeeProductList() {
 
   // 削除した商品の評価(★)も一緒に消す。テイスティングログは履歴として端末に残る。
   const deleteUserShop = (shopId) => {
-    userCollection.deleteShop(shopId).forEach((productId) => setRating(productId, 0));
+    const removedIds = userCollection.deleteShop(shopId);
+    removedIds.forEach((productId) => setRating(productId, 0));
+    removePhotos(removedIds);
   };
   const deleteUserProduct = (productId) => {
     userCollection.deleteProduct(productId);
     setRating(productId, 0);
+    removePhoto(productId);
   };
 
   // 店舗画面の「店頭の商品(手動登録)」: 選んだアプリ掲載店に紐づく、手動登録した商品
@@ -461,6 +473,7 @@ export default function CoffeeProductList() {
       }),
     onEdit: (product) => setUserProductForm({ shop: linkedUserShop, product }),
     onDelete: deleteUserProduct,
+    getPhotoUrl,
     getRating,
     onRate: setRating,
     getLogCount: (id) => getLogs(id).length,
@@ -710,10 +723,12 @@ export default function CoffeeProductList() {
             userShops: userCollection.userShops,
             userProducts: userCollection.userProducts,
             importUserCollection: userCollection.importCollection,
+            photos: { count: photoCount, getBytes: getPhotoBytes, exportAll: exportPhotos, importAll: importPhotos },
           }}
           registered={{
             userShops: userCollection.userShops,
             userProducts: userCollection.userProducts,
+            getPhotoUrl,
             onRate: setRating,
             getLogCount: (id) => getLogs(id).length,
             onRegisterProduct: () => setUserShopPickerOpen(true),
@@ -806,6 +821,8 @@ export default function CoffeeProductList() {
         onRate={setRating}
         logCount={detailProduct ? getLogs(detailProduct.id).length : 0}
         onOpenTastingLog={setTastingLogProduct}
+        photoUrl={detailProduct ? getPhotoUrl(detailProduct.id) : null}
+        onChangePhoto={(productId, blob) => (blob ? setPhoto(productId, blob) : removePhoto(productId))}
       />
       <UserShopPickerModal
         open={userShopPickerOpen}
@@ -826,7 +843,12 @@ export default function CoffeeProductList() {
         onSave={saveUserShop}
         onClose={() => setUserShopForm(null)}
       />
-      <UserProductFormModal target={userProductForm} onSave={saveUserProduct} onClose={() => setUserProductForm(null)} />
+      <UserProductFormModal
+        target={userProductForm}
+        photoUrl={userProductForm?.product ? getPhotoUrl(userProductForm.product.id) : null}
+        onSave={saveUserProduct}
+        onClose={() => setUserProductForm(null)}
+      />
       <TastingLogModal
         product={tastingLogProduct}
         logs={tastingLogProduct ? getLogs(tastingLogProduct.id) : []}

@@ -9,6 +9,7 @@ import { DeleteControl, ICON_BUTTON_CLASS, UserProductList } from "./UserProduct
 export function UserCollectionView({
   userShops,
   userProducts,
+  getPhotoUrl,
   getRating,
   onRate,
   getLogCount,
@@ -98,6 +99,7 @@ export function UserCollectionView({
 
               <UserProductList
                 products={products}
+                getPhotoUrl={getPhotoUrl}
                 getRating={getRating}
                 onRate={onRate}
                 getLogCount={getLogCount}

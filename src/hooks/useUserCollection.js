@@ -168,7 +168,12 @@ export function useUserCollection() {
           products: [...prev.products, ...newProducts],
         }));
       }
-      return { shopsAdded: newShops.length, productsAdded: newProducts.length };
+      return {
+        shopsAdded: newShops.length,
+        productsAdded: newProducts.length,
+        // 取り込み後に存在する、手動登録した商品のID(写真の復元で、行き先のない写真を弾くのに使う)
+        productIds: [...data.products, ...newProducts].map((p) => p.id),
+      };
     },
     [data]
   );

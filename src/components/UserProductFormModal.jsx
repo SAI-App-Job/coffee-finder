@@ -1,6 +1,7 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { X, Coffee } from "lucide-react";
 import { FlavorPicker } from "./FlavorPicker";
+import { PhotoPicker } from "./ProductPhoto";
 import { INPUT_CLASS, LABEL_CLASS, PRIMARY_BUTTON_CLASS } from "./formStyles";
 import { ORIGIN_GUIDE } from "../data/originGuide";
 import { ROAST_LEVELS } from "../data/roastLevels";
@@ -40,15 +41,28 @@ const toNumberOrNull = (v) => {
 
 // 「商品を登録」フォーム。店舗を先に登録したあと、その店舗の商品として登録する。
 // target: null(閉じる) | { shop, product? }(productがあれば編集)
-export function UserProductFormModal({ target, onSave, onClose }) {
+// photoUrl: 編集中の商品に、すでに保存されている写真のURL。
+// 写真は「保存」を押すまで確定しない。pendingPhoto: undefined=変更なし / Blob=新しい写真 / null=削除。
+export function UserProductFormModal({ target, photoUrl, onSave, onClose }) {
   const editing = target?.product ?? null;
   const [form, setForm] = useState(EMPTY_FORM);
+  const [pendingPhoto, setPendingPhoto] = useState(undefined);
 
   useEffect(() => {
     setForm(editing ? toForm(editing) : EMPTY_FORM);
+    setPendingPhoto(undefined);
   }, [target, editing]);
 
+  // 選んだ写真のプレビュー用URL(新しい写真を選んだときだけ作る)
+  const pendingUrl = useMemo(
+    () => (pendingPhoto instanceof Blob ? URL.createObjectURL(pendingPhoto) : null),
+    [pendingPhoto]
+  );
+  useEffect(() => () => pendingUrl && URL.revokeObjectURL(pendingUrl), [pendingUrl]);
+
   if (!target) return null;
+
+  const shownPhotoUrl = pendingPhoto === undefined ? photoUrl : pendingUrl;
 
   const set = (key) => (e) => setForm((f) => ({ ...f, [key]: e.target.value }));
   const name = form.name.trim();
@@ -67,7 +81,8 @@ export function UserProductFormModal({ target, onSave, onClose }) {
         note: form.note.trim(),
       },
       target.shop,
-      editing
+      editing,
+      pendingPhoto
     );
   };
 
@@ -210,6 +225,11 @@ export function UserProductFormModal({ target, onSave, onClose }) {
               感じた風味を複数選べます(分類をタップすると詳細が開きます)
             </p>
             <FlavorPicker value={form.flavors} onChange={(flavors) => setForm((f) => ({ ...f, flavors }))} />
+          </div>
+
+          <div>
+            <label className={LABEL_CLASS}>パッケージ写真(任意)</label>
+            <PhotoPicker url={shownPhotoUrl} onChange={(blob) => setPendingPhoto(blob)} />
           </div>
 
           <div>
