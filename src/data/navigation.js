@@ -13,8 +13,8 @@ import {
   Calendar,
   Trophy,
   Heart,
-  History,
   Settings,
+  CalendarDays,
 } from "lucide-react";
 
 // 「豆知識」タブ内のサブナビゲーション(旧: 用語解説/品種/淹れ方タブを統合)。
@@ -37,7 +37,7 @@ export const TRIVIA_SUB_TABS = [
 //   子メニューの項目を選ぶとその画面へ移動する(page = 画面ID、sub = 豆知識のサブ画面ID)。
 // - children を持たないタブ: 押すと page の画面へ直接移動する。
 // 子メニューの項目が action を持つ場合は、画面移動ではなくその操作を行う("alerts" = お知らせパネルを開く)。
-// 画面ID(page): products | shops | guide | collection | history | settings | trivia
+// 画面ID(page): products | shops | guide | collection | diary | achievements | settings | trivia
 export const NAV_TABS = [
   {
     id: "search",
@@ -56,7 +56,8 @@ export const NAV_TABS = [
     ja: "マイページ",
     children: [
       { page: "collection", icon: Heart, ja: "コレクション" },
-      { page: "history", icon: History, ja: "履歴" },
+      { page: "diary", icon: CalendarDays, ja: "日記" },
+      { page: "achievements", icon: Trophy, ja: "実績" },
       { page: "settings", icon: Settings, ja: "設定" },
     ],
   },

@@ -2,6 +2,18 @@ import { useCallback, useEffect, useRef, useState } from "react";
 
 const DB_NAME = "coffee-finder-photos";
 const STORE = "photos";
+// 写真を追加した日(日記・実績の集計用)。この記録を始める前から保存していた写真・バックアップから戻した写真は、日付を持たない。
+const DATES_KEY = "coffee-finder:photo-dates";
+
+function loadDates() {
+  try {
+    const parsed = JSON.parse(localStorage.getItem(DATES_KEY) ?? "null");
+    if (!parsed || typeof parsed !== "object" || Array.isArray(parsed)) return {};
+    return Object.fromEntries(Object.entries(parsed).filter(([, v]) => typeof v === "string" && !Number.isNaN(new Date(v).getTime())));
+  } catch {
+    return {};
+  }
+}
 
 function openDb() {
   return new Promise((resolve, reject) => {
@@ -31,6 +43,7 @@ function run(db, mode, action) {
 // 値は縮小済みの JPEG(Blob)。表示用には、読み込んだ Blob から作った URL を使う。
 export function useProductPhotos() {
   const [urls, setUrls] = useState({});
+  const [dates, setDates] = useState(loadDates);
   const dbRef = useRef(null);
   const urlsRef = useRef({});
   urlsRef.current = urls;
@@ -68,10 +81,19 @@ export function useProductPhotos() {
     };
   }, []);
 
+  useEffect(() => {
+    try {
+      localStorage.setItem(DATES_KEY, JSON.stringify(dates));
+    } catch {
+      // 保存できない環境では、日付の保存をスキップ
+    }
+  }, [dates]);
+
   const getPhotoUrl = useCallback((productId) => urls[productId] ?? null, [urls]);
 
   // 保存できたら true。失敗(容量不足・IndexedDB 非対応など)は false を返す。
-  const setPhoto = useCallback(async (productId, blob) => {
+  // restore: バックアップからの復元。追加した日として数えない(日付を付けない)。
+  const setPhoto = useCallback(async (productId, blob, { restore = false } = {}) => {
     try {
       const db = dbRef.current ?? (dbRef.current = await openDb());
       await run(db, "readwrite", (s) => s.put(blob, productId));
@@ -79,6 +101,7 @@ export function useProductPhotos() {
       const old = urlsRef.current[productId];
       setUrls((prev) => ({ ...prev, [productId]: url }));
       if (old) URL.revokeObjectURL(old);
+      if (!restore) setDates((prev) => (prev[productId] ? prev : { ...prev, [productId]: new Date().toISOString() }));
       return true;
     } catch {
       return false;
@@ -98,6 +121,12 @@ export function useProductPhotos() {
     }
     ids.forEach((id) => URL.revokeObjectURL(urlsRef.current[id]));
     setUrls((prev) => {
+      const next = { ...prev };
+      ids.forEach((id) => delete next[id]);
+      return next;
+    });
+    setDates((prev) => {
+      if (!ids.some((id) => id in prev)) return prev;
       const next = { ...prev };
       ids.forEach((id) => delete next[id]);
       return next;
@@ -136,7 +165,7 @@ export function useProductPhotos() {
       for (const { id, blob } of entries) {
         if (id in urlsRef.current) {
           result.skipped += 1;
-        } else if (await setPhoto(id, blob)) {
+        } else if (await setPhoto(id, blob, { restore: true })) {
           result.added += 1;
         } else {
           result.failed += 1;
@@ -147,7 +176,8 @@ export function useProductPhotos() {
     [setPhoto]
   );
 
-  const photoCount = Object.keys(urls).length;
+  const photoIds = Object.keys(urls);
+  const photoCount = photoIds.length;
 
-  return { getPhotoUrl, setPhoto, removePhoto, removePhotos, photoCount, exportPhotos, getPhotoBytes, importPhotos };
+  return { getPhotoUrl, setPhoto, removePhoto, removePhotos, photoIds, photoDates: dates, photoCount, exportPhotos, getPhotoBytes, importPhotos };
 }

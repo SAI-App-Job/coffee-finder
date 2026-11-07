@@ -1,16 +1,18 @@
 import { useMemo, useState } from "react";
 import { useT } from "../i18n";
-import { List, Map as MapIcon, Heart, Coffee } from "lucide-react";
+import { List, Map as MapIcon, Heart, Coffee, Frame } from "lucide-react";
 import { SectionHeading } from "./common";
 import { FavoritesView } from "./FavoritesView";
 import { MyMapView } from "./MyMapView";
 import { UserCollectionView } from "./UserCollectionView";
 import { TasteProfile } from "./TasteProfile";
 import { CollectionBackup } from "./CollectionBackup";
+import { PhotoShelf } from "./PhotoShelf";
 
 const SECTIONS = [
   { id: "favorites", icon: Heart, label: "保存した商品" },
   { id: "registered", icon: Coffee, label: "登録した商品" },
+  { id: "display", icon: Frame, label: "ディスプレイ" },
 ];
 
 const VIEW_MODES = [
@@ -34,6 +36,7 @@ export function CollectionView({
   getRating,
   backup,
   registered,
+  shelf,
 }) {
   const t = useT();
   const [section, setSection] = useState("favorites");
@@ -43,19 +46,19 @@ export function CollectionView({
     () => products.filter((p) => isFavorite(p.id)).length,
     [products, isFavorite]
   );
-  const counts = { favorites: favoriteCount, registered: registered.userProducts.length };
+  const counts = { favorites: favoriteCount, registered: registered.userProducts.length, display: shelf.items.length };
 
   return (
     <div className="max-w-xl mx-auto">
       <div className="px-5 pt-5">
         <SectionHeading en="Collection" ja="コレクション" />
-        <div className="grid grid-cols-2 gap-1 p-1 mt-4 rounded-full bg-[var(--c-surface-2)]">
+        <div className="grid grid-cols-3 gap-1 p-1 mt-4 rounded-full bg-[var(--c-surface-2)]">
           {SECTIONS.map(({ id, icon: Icon, label }) => (
             <button
               key={id}
               onClick={() => setSection(id)}
               aria-pressed={section === id}
-              className={`flex items-center justify-center gap-1.5 py-2 rounded-full text-[12px] font-medium transition-colors ${
+              className={`flex items-center justify-center gap-x-1 gap-y-0 flex-wrap px-1 py-2 rounded-full text-[11px] leading-tight font-medium transition-colors ${
                 section === id ? "bg-[var(--accent)] text-[var(--on-accent)]" : "text-[var(--c-text-2)]"
               }`}
             >
@@ -101,6 +104,8 @@ export function CollectionView({
             <MyMapView favoriteShops={favoriteShops} />
           )}
         </>
+      ) : section === "display" ? (
+        <PhotoShelf items={shelf.items} onOpen={shelf.onOpen} />
       ) : (
         <UserCollectionView getRating={getRating} {...registered} />
       )}

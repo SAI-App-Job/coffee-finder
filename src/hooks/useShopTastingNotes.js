@@ -53,5 +53,5 @@ export function useShopTastingNotes() {
     });
   }, []);
 
-  return { getNotes, addNote, deleteNote };
+  return { notesByShop, getNotes, addNote, deleteNote };
 }

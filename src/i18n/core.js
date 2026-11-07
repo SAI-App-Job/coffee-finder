@@ -4,6 +4,7 @@ import { EN } from "./en";
 // 画面の言語(日本語 / 英語)。文言は「日本語の文そのものをキー」にして、英語の辞書(en.js)で置き換える。
 // - 辞書に無い文は、日本語のまま表示する(未翻訳でも画面が壊れない)。
 // - 文の中の変わる部分は {name} と書き、translate("…{n}件", { n: 3 }) のように渡す。
+//   英語の単数形・複数形は、辞書の側で {n?log:logs} と書く(n が 1 のとき log、それ以外は logs)。
 // - 商品・店舗のデータ、豆知識・産地ガイドの本文は、日本語のまま(翻訳しない)。
 const STORAGE_KEY = "coffee-finder:language";
 
@@ -36,6 +37,10 @@ export function translate(key, params) {
   if (typeof key !== "string") return key;
   let text = currentLang === "en" ? (EN[key] ?? key) : key;
   if (params) {
+    // 単数形・複数形: {n?log:logs} は、n が 1 のとき "log"、それ以外は "logs"
+    text = text.replace(/\{(\w+)\?([^:}]*):([^}]*)\}/g, (match, name, one, other) =>
+      name in params ? (Number(params[name]) === 1 ? one : other) : match
+    );
     text = text.replace(/\{(\w+)\}/g, (match, name) => (name in params ? String(params[name]) : match));
   }
   return text;

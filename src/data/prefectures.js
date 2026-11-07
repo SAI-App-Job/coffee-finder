@@ -14,3 +14,16 @@ export const ALL_PREFECTURES = [
   "福岡県", "佐賀県", "長崎県", "熊本県", "大分県", "宮崎県", "鹿児島県",
   "沖縄県",
 ];
+
+// 地方区分(実績の「○○地方制覇」と、都道府県スタンプの並び順に使う)。
+// 都道府県の表記は ALL_PREFECTURES と同じ。
+export const PREFECTURE_REGIONS = [
+  { id: "hokkaido", name: "北海道", en: "Hokkaido", prefectures: ["北海道"] },
+  { id: "tohoku", name: "東北", en: "Tohoku", prefectures: ["青森県", "岩手県", "宮城県", "秋田県", "山形県", "福島県"] },
+  { id: "kanto", name: "関東", en: "Kanto", prefectures: ["茨城県", "栃木県", "群馬県", "埼玉県", "千葉県", "東京都", "神奈川県"] },
+  { id: "chubu", name: "中部", en: "Chubu", prefectures: ["新潟県", "富山県", "石川県", "福井県", "山梨県", "長野県", "岐阜県", "静岡県", "愛知県"] },
+  { id: "kinki", name: "近畿", en: "Kinki", prefectures: ["三重県", "滋賀県", "京都府", "大阪府", "兵庫県", "奈良県", "和歌山県"] },
+  { id: "chugoku", name: "中国", en: "Chugoku", prefectures: ["鳥取県", "島根県", "岡山県", "広島県", "山口県"] },
+  { id: "shikoku", name: "四国", en: "Shikoku", prefectures: ["徳島県", "香川県", "愛媛県", "高知県"] },
+  { id: "kyushu", name: "九州・沖縄", en: "Kyushu & Okinawa", prefectures: ["福岡県", "佐賀県", "長崎県", "熊本県", "大分県", "宮崎県", "鹿児島県", "沖縄県"] },
+];

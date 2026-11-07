@@ -41,7 +41,11 @@ import { UserProductFormModal } from "./components/UserProductFormModal";
 import { BuyingGuideView } from "./components/BuyingGuideView";
 import { TriviaView } from "./components/TriviaView";
 import { SettingsView } from "./components/SettingsView";
-import { HistoryView } from "./components/HistoryView";
+import { DiaryView } from "./components/DiaryView";
+import { AchievementsView } from "./components/AchievementsView";
+import { buildDiaryEvents } from "./utils/diary";
+import { achievementParams } from "./utils/achievements";
+import { useAchievements } from "./hooks/useAchievements";
 import { BottomNav } from "./components/BottomNav";
 import { AdBannerPlaceholder } from "./components/AdBanner";
 import { CompareTray, ComparisonModal } from "./components/Compare";
@@ -91,21 +95,31 @@ export default function CoffeeProductList() {
     clearCompare,
     limit: compareLimit,
   } = useComparison(isPremium, showToast);
-  const { getRating, setRating } = useRatings();
-  const { getLogs, addLog, deleteLog, clearLogs } = useTastingLog();
+  const { ratings, getRating, setRating } = useRatings();
+  const { logsByProduct, getLogs, addLog, deleteLog, clearLogs } = useTastingLog();
   const userCollection = useUserCollection();
   // 商品のパッケージ写真(端末内のIndexedDBに保存。商品IDがキー)
-  const { getPhotoUrl, setPhoto, removePhoto, removePhotos, photoCount, exportPhotos, getPhotoBytes, importPhotos } =
-    useProductPhotos();
+  const {
+    getPhotoUrl,
+    setPhoto,
+    removePhoto,
+    removePhotos,
+    photoIds,
+    photoDates,
+    photoCount,
+    exportPhotos,
+    getPhotoBytes,
+    importPhotos,
+  } = useProductPhotos();
   // コレクションの「登録した商品」: 店舗フォーム({}=新規 / {shop}=編集)と商品フォーム({shop, product?})
   const [userShopPickerOpen, setUserShopPickerOpen] = useState(false);
   const [userShopForm, setUserShopForm] = useState(null);
   const [userProductForm, setUserProductForm] = useState(null);
-  const { getNotes: getShopNotes, addNote: addShopNote, deleteNote: deleteShopNote } = useShopTastingNotes();
+  const { notesByShop, getNotes: getShopNotes, addNote: addShopNote, deleteNote: deleteShopNote } = useShopTastingNotes();
   const [noteFormShop, setNoteFormShop] = useState(null);
 
   // いま開いている画面。下部メニュー(BottomNav)から切り替える。
-  // "products" | "shops" | "guide" | "collection" | "history" | "settings" | "trivia"
+  // "products" | "shops" | "guide" | "collection" | "diary" | "achievements" | "settings" | "trivia"
   const [tab, setTab] = useState("products");
   const [triviaSub, setTriviaSub] = useState(TRIVIA_SUB_TABS[0].id);
   const [detailProduct, setDetailProduct] = useState(null);
@@ -198,7 +212,7 @@ export default function CoffeeProductList() {
       // 確認し、無い場合はタブ遷移自体を行わずトーストで案内する。
       const matched = ORIGIN_GUIDE.some((o) => o.country === country);
       if (!matched) {
-        showToast("この産地の情報は準備中です");
+        showToast(t("この産地の情報は準備中です"));
         return;
       }
       setPendingOriginCountry(country);
@@ -208,7 +222,7 @@ export default function CoffeeProductList() {
       // なる不具合になっていたため、ジャンプ時は明示的に先頭へ戻す。
       window.scrollTo({ top: 0 });
     },
-    [showToast]
+    [showToast, t]
   );
 
   // 下部メニューからの画面移動。店舗詳細は開いたままにせず、移動先の先頭から表示する。
@@ -432,7 +446,7 @@ export default function CoffeeProductList() {
     setUserProductForm(null);
     if (!productId || photoChange === undefined) return;
     if (photoChange === null) removePhoto(productId);
-    else if (!(await setPhoto(productId, photoChange))) showToast("商品は登録しましたが、写真を保存できませんでした");
+    else if (!(await setPhoto(productId, photoChange))) showToast(t("商品は登録しましたが、写真を保存できませんでした"));
   };
 
   // 商品登録の最初のステップ「どのお店?」の選択結果 → 商品フォームを開く
@@ -485,7 +499,7 @@ export default function CoffeeProductList() {
         }
       })
     );
-    if (results.some((ok) => ok === false)) showToast("サンプルの写真を一部作成できませんでした");
+    if (results.some((ok) => ok === false)) showToast(t("サンプルの写真を一部作成できませんでした"));
   };
   const removeSamples = () => {
     userCollection.userShops.filter((s) => isSampleId(s.id)).forEach((s) => deleteUserShop(s.id));
@@ -513,6 +527,63 @@ export default function CoffeeProductList() {
     getLogCount: (id) => getLogs(id).length,
     onOpenTastingLog: (product) => setTastingLogProduct({ id: product.id, rawName: product.name }),
   };
+
+  // コーヒー日記・実績の元になる記録(ログ・ノート・商品登録・写真)と、★評価の時刻
+  const shopsByName = useMemo(() => new Map(shops.map((s) => [s.name, s])), [shops]);
+  const diaryEvents = useMemo(
+    () =>
+      buildDiaryEvents({
+        logsByProduct,
+        notesByShop,
+        userProducts: userCollection.userProducts,
+        userShops: userCollection.userShops,
+        photoIds,
+        photoDates,
+        productsById,
+        shopsByName,
+      }),
+    [logsByProduct, notesByShop, userCollection.userProducts, userCollection.userShops, photoIds, photoDates, productsById, shopsByName]
+  );
+  const ratingTimes = useMemo(
+    () =>
+      Object.entries(ratings)
+        .filter(([id]) => !isSampleId(id))
+        .map(([, r]) => Date.parse(r.ratedAt))
+        .filter((t0) => !Number.isNaN(t0)),
+    [ratings]
+  );
+  const achievements = useAchievements({ events: diaryEvents, ratingTimes });
+  const { freshItems, consumeFresh } = achievements;
+  useEffect(() => {
+    if (freshItems.length === 0) return;
+    const name = (item) => t(item.title, achievementParams(item));
+    showToast(
+      freshItems.length === 1
+        ? t("実績を獲得しました: {title}", { title: name(freshItems[0]) })
+        : t("実績を獲得しました: {title} ほか{n}件", { title: name(freshItems[0]), n: freshItems.length - 1 })
+    );
+    consumeFresh();
+  }, [freshItems, consumeFresh, showToast, t]);
+
+  // 「ディスプレイ」: パッケージ写真のある豆(手動登録した商品+アプリの商品)。新しい写真が先頭
+  const shelfItems = useMemo(() => {
+    const userById = new Map(userCollection.userProducts.map((p) => [p.id, p]));
+    const items = [];
+    for (const id of photoIds) {
+      const url = getPhotoUrl(id);
+      if (!url) continue;
+      const user = userById.get(id);
+      if (user) {
+        items.push({ id, kind: "user", name: user.name, url, rating: getRating(id), t: Date.parse(photoDates[id] ?? user.createdAt) || 0 });
+        continue;
+      }
+      const product = productsById.get(String(id));
+      if (product) items.push({ id, kind: "app", name: product.rawName, url, rating: getRating(id), t: Date.parse(photoDates[id] ?? "") || 0, product });
+    }
+    return items.sort((a, b) => b.t - a.t);
+  }, [photoIds, photoDates, getPhotoUrl, getRating, userCollection.userProducts, productsById]);
+  const openShelfItem = (item) =>
+    item.kind === "user" ? setTastingLogProduct({ id: item.id, rawName: item.name }) : openProductDetail(item.product);
 
   // 手動登録した店舗: 店舗名+住所でGoogleマップを検索する(座標は持たないため)
   const openMapForUserShop = (shop) =>
@@ -756,6 +827,7 @@ export default function CoffeeProductList() {
           favoriteShops={favoriteShops}
           favoriteDates={favoriteDates}
           getRating={getRating}
+          shelf={{ items: shelfItems, onOpen: openShelfItem }}
           backup={{
             favoriteIds,
             favoriteDates,
@@ -787,8 +859,20 @@ export default function CoffeeProductList() {
         />
       )}
 
-      {tab === "history" && (
-        <HistoryView historyItems={historyItems} isPremium={isPremium} onOpenDetail={openProductDetail} />
+      {tab === "diary" && (
+        <DiaryView
+          events={diaryEvents}
+          onOpenLog={(event) => setTastingLogProduct({ id: event.productId, rawName: event.title })}
+          history={{ items: historyItems, isPremium, onOpenDetail: openProductDetail }}
+        />
+      )}
+
+      {tab === "achievements" && (
+        <AchievementsView
+          items={achievements.items}
+          earnedCount={achievements.earnedCount}
+          visitedPrefectures={achievements.visitedPrefectures}
+        />
       )}
 
       {tab === "shops" && !selectedShop && (

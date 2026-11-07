@@ -7,7 +7,7 @@ import { join } from "node:path";
 import { pathToFileURL } from "node:url";
 
 const JP = /[぀-ヿ一-鿿]/;
-const CALL = /(?<![\w.$])(?:t|translate)\(\s*("(?:[^"\\]|\\.)*")/g;
+const CALL = /(?<![\w.$])(?:t|translate|L)\(\s*("(?:[^"\\]|\\.)*")/g;
 const TRANS = /<Trans\s+k="((?:[^"\\]|\\.)*)"/g;
 
 function walk(dir, out = []) {
