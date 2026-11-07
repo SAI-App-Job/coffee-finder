@@ -1,7 +1,8 @@
 import { useState } from "react";
-import { Plus, Pencil, MapPin, Store } from "lucide-react";
+import { Plus, Pencil, MapPin, Store, Sparkles } from "lucide-react";
 import { PRIMARY_BUTTON_CLASS } from "./formStyles";
 import { DeleteControl, ICON_BUTTON_CLASS, UserProductList } from "./UserProductCard";
+import { isSampleId } from "../data/sampleCollection";
 
 // コレクション画面の「登録した商品」。ユーザーが手動で登録した商品を、店舗ごとにまとめて表示する。
 // 店舗は2種類ある: アプリに載っている店舗(appShopName あり。店頭だけで売っている豆の登録など)と、
@@ -14,6 +15,9 @@ export function UserCollectionView({
   onRate,
   getLogCount,
   onRegisterProduct,
+  hasSamples,
+  onAddSamples,
+  onRemoveSamples,
   onEditShop,
   onDeleteShop,
   onAddProduct,
@@ -23,6 +27,8 @@ export function UserCollectionView({
   onOpenShopMap,
 }) {
   const [confirmingShopId, setConfirmingShopId] = useState(null);
+  const [confirmingSamples, setConfirmingSamples] = useState(false);
+  const [addingSamples, setAddingSamples] = useState(false);
 
   // アプリの店舗に紐づく登録先は、商品が1件も無いときは表示しない(登録の途中経過を見せないため)
   const shops = userShops
@@ -41,6 +47,25 @@ export function UserCollectionView({
         </button>
       </div>
 
+      {hasSamples && (
+        <div className="rounded-xl bg-[var(--c-surface-2)] border border-[var(--c-border)] px-3.5 py-3 flex items-center justify-between gap-3">
+          <p className="text-[12px] text-[var(--c-text-2)] leading-relaxed min-w-0">
+            サンプルが入っています(架空の店舗・商品)。写真・★評価・テイスティングログも付いています。
+          </p>
+          <DeleteControl
+            confirming={confirmingSamples}
+            onAsk={() => setConfirmingSamples(true)}
+            onCancel={() => setConfirmingSamples(false)}
+            onConfirm={() => {
+              setConfirmingSamples(false);
+              onRemoveSamples();
+            }}
+            label="サンプルを削除"
+            confirmText="サンプルを削除しますか?"
+          />
+        </div>
+      )}
+
       {shops.length === 0 ? (
         <div className="text-center py-14 text-[var(--c-text-3)]">
           <Store size={28} className="mx-auto mb-3 opacity-40" />
@@ -50,6 +75,21 @@ export function UserCollectionView({
             <br />
             ネットでは売っていない店頭の豆や、アプリに載っていないお店も登録できます
           </p>
+          <button
+            onClick={async () => {
+              setAddingSamples(true);
+              try {
+                await onAddSamples();
+              } finally {
+                setAddingSamples(false);
+              }
+            }}
+            disabled={addingSamples}
+            className="mt-5 inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl border border-[var(--accent-label)] text-[var(--accent-on-glow)] text-[13px] font-medium hover:bg-[var(--c-surface-2)] transition-colors disabled:opacity-50"
+          >
+            <Sparkles size={14} strokeWidth={2} />
+            {addingSamples ? "サンプルを作成中…" : "サンプルを追加して使い方を見る"}
+          </button>
         </div>
       ) : (
         shops.map((shop) => {
@@ -66,6 +106,11 @@ export function UserCollectionView({
                   {linked && (
                     <span className="inline-block text-[10px] px-1.5 py-0.5 mb-1 rounded-full bg-[var(--c-surface-2)] text-[var(--accent-muted)] border border-[var(--c-border)]">
                       アプリ掲載店
+                    </span>
+                  )}
+                  {isSampleId(shop.id) && (
+                    <span className="inline-block text-[10px] px-1.5 py-0.5 mb-1 rounded-full bg-[var(--c-surface-2)] text-[var(--accent-muted)] border border-[var(--c-border)]">
+                      サンプル
                     </span>
                   )}
                   <h3 className="font-serif text-[17px] leading-snug text-[var(--c-text)]">{shop.name}</h3>

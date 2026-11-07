@@ -55,5 +55,16 @@ export function useTastingLog() {
     });
   }, []);
 
-  return { logsByProduct, getLogs, addLog, deleteLog };
+  // 商品の削除に合わせて、その商品のログをまとめて消す(サンプルの削除用)
+  const clearLogs = useCallback((ids) => {
+    const keys = ids.map(String);
+    setLogsByProduct((prev) => {
+      if (!keys.some((k) => k in prev)) return prev;
+      const next = { ...prev };
+      keys.forEach((k) => delete next[k]);
+      return next;
+    });
+  }, []);
+
+  return { logsByProduct, getLogs, addLog, deleteLog, clearLogs };
 }

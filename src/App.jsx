@@ -19,6 +19,7 @@ import { useComparison } from "./hooks/useComparison";
 import { useRatings } from "./hooks/useRatings";
 import { useTastingLog } from "./hooks/useTastingLog";
 import { useProductPhotos } from "./hooks/useProductPhotos";
+import { buildSampleCollection, isSampleId, renderSamplePackage } from "./data/sampleCollection";
 import { useUserCollection } from "./hooks/useUserCollection";
 import { useShopTastingNotes } from "./hooks/useShopTastingNotes";
 import { useAlerts } from "./hooks/useAlerts";
@@ -89,7 +90,7 @@ export default function CoffeeProductList() {
     limit: compareLimit,
   } = useComparison(isPremium, showToast);
   const { getRating, setRating } = useRatings();
-  const { getLogs, addLog, deleteLog } = useTastingLog();
+  const { getLogs, addLog, deleteLog, clearLogs } = useTastingLog();
   const userCollection = useUserCollection();
   // 商品のパッケージ写真(端末内のIndexedDBに保存。商品IDがキー)
   const { getPhotoUrl, setPhoto, removePhoto, removePhotos, photoCount, exportPhotos, getPhotoBytes, importPhotos } =
@@ -446,15 +447,46 @@ export default function CoffeeProductList() {
   };
 
   // 削除した商品の評価(★)も一緒に消す。テイスティングログは履歴として端末に残る。
+  // (サンプルの商品だけは、使い方を見せるためのデータなので、ログも一緒に消す)
   const deleteUserShop = (shopId) => {
     const removedIds = userCollection.deleteShop(shopId);
     removedIds.forEach((productId) => setRating(productId, 0));
     removePhotos(removedIds);
+    clearLogs(removedIds.filter(isSampleId));
   };
   const deleteUserProduct = (productId) => {
     userCollection.deleteProduct(productId);
     setRating(productId, 0);
     removePhoto(productId);
+    if (isSampleId(productId)) clearLogs([productId]);
+  };
+
+  // 「登録した商品」のサンプル(架空の店舗・商品+パッケージ写真・★評価・テイスティングログ)
+  const hasSamples = userCollection.userShops.some((s) => isSampleId(s.id));
+  const addSamples = async () => {
+    if (hasSamples) return;
+    const sample = buildSampleCollection();
+    userCollection.importCollection({ shops: sample.shops, products: sample.products });
+    Object.entries(sample.ratings).forEach(([id, stars]) => setRating(id, stars));
+    Object.entries(sample.logs).forEach(([id, entries]) => {
+      // 削除したサンプルのログが残っていても、同じものを重複して入れない
+      const existing = new Set(getLogs(id).map((l) => l.id));
+      entries.filter((l) => !existing.has(l.id)).forEach((l) => addLog(id, l));
+    });
+    // 写真はその場で描く。失敗しても、商品などは登録済みのままにする
+    const results = await Promise.all(
+      sample.products.map(async (p) => {
+        try {
+          return await setPhoto(p.id, await renderSamplePackage(p.id));
+        } catch {
+          return false;
+        }
+      })
+    );
+    if (results.some((ok) => ok === false)) showToast("サンプルの写真を一部作成できませんでした");
+  };
+  const removeSamples = () => {
+    userCollection.userShops.filter((s) => isSampleId(s.id)).forEach((s) => deleteUserShop(s.id));
   };
 
   // 店舗画面の「店頭の商品(手動登録)」: 選んだアプリ掲載店に紐づく、手動登録した商品
@@ -734,6 +766,9 @@ export default function CoffeeProductList() {
             onRate: setRating,
             getLogCount: (id) => getLogs(id).length,
             onRegisterProduct: () => setUserShopPickerOpen(true),
+            hasSamples,
+            onAddSamples: addSamples,
+            onRemoveSamples: removeSamples,
             onEditShop: (shop) => setUserShopForm({ shop }),
             onDeleteShop: deleteUserShop,
             onAddProduct: (shop) => setUserProductForm({ shop }),
