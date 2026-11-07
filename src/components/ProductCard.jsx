@@ -5,7 +5,7 @@ import { PROCESSING_EXPLANATIONS, DESIGNATED_BRAND_EXPLANATIONS } from "../data/
 import { ORIGIN_GUIDE } from "../data/originGuide";
 import { getGradeExplanation } from "../utils/grade";
 import { categorizeFlavorNotes } from "../utils/flavor";
-import { roastColor, cityFromAddress, formatPrice } from "../utils/format";
+import { cityFromAddress, formatPrice } from "../utils/format";
 import { isNewArrival } from "../utils/productSort";
 
 export function DiscoveryFactCard() {
@@ -136,6 +136,8 @@ function ProductCardImpl({ product, onOpenMap, onLearnOrigin, isFavorite, onTogg
   const hasOriginGuide = ORIGIN_GUIDE.some((o) => o.country === product.originCountry);
 
   const staticTags = [product.farmNote].filter(Boolean);
+  // 焙煎度がわかっている商品は文字のタグで示す(「注文時に選択」の商品は、専用のタグが別にある)
+  const roastTag = product.roast && !product.roastSelectable ? product.roast : null;
   const favorited = isFavorite?.(product.id) ?? false;
   // ブレンドは単一のoriginCountryを持たないため、構成国をタグとして
   // 表示する(ストレート商品の産地表示と同じ見た目=既存のタグpillスタイルを流用)
@@ -150,22 +152,6 @@ function ProductCardImpl({ product, onOpenMap, onLearnOrigin, isFavorite, onTogg
       role={onOpenDetail ? "button" : undefined}
       tabIndex={onOpenDetail ? 0 : undefined}
     >
-      {/* 焙煎度カラーバー(未選択=注文時選択の場合はストライプで示す)
-          カード側のoverflow-hiddenは、ホバーで飛び出すツールチップまで
-          切り取ってしまうため使わず、カラーバー自体の左端だけを丸めている */}
-      <div
-        className="w-1.5 shrink-0 rounded-l-2xl"
-        style={
-          product.roast
-            ? { backgroundColor: roastColor(product.roast) }
-            : {
-                backgroundImage:
-                  "repeating-linear-gradient(135deg, var(--accent-soft) 0 4px, #24140A 4px 8px)",
-              }
-        }
-        aria-hidden="true"
-      />
-
       <div className="flex-1 p-4 flex flex-col gap-2.5">
         <div className="flex items-start justify-between gap-3">
           <div>
@@ -230,7 +216,7 @@ function ProductCardImpl({ product, onOpenMap, onLearnOrigin, isFavorite, onTogg
           </div>
         </div>
 
-        {(product.designatedBrand || staticTags.length > 0 || product.processingMethod || product.grade || flavorCategories.length > 0) && (
+        {(product.designatedBrand || staticTags.length > 0 || product.processingMethod || product.grade || roastTag || product.roastSelectable || flavorCategories.length > 0) && (
           <div className="flex flex-wrap gap-1.5">
             {product.designatedBrand && (
               <HoverExplainTag
@@ -251,6 +237,14 @@ function ProductCardImpl({ product, onOpenMap, onLearnOrigin, isFavorite, onTogg
             )}
             {product.grade && (
               <HoverExplainTag label={product.grade} category="グレード" detail={gradeDetail} />
+            )}
+            {roastTag && (
+              <span
+                title={`焙煎度: ${roastTag}`}
+                className="text-[11px] px-2 py-0.5 rounded-full bg-[var(--c-surface-2)] text-[var(--accent-muted)] border border-[var(--c-border)] max-w-[220px] truncate whitespace-nowrap"
+              >
+                焙煎 {roastTag}
+              </span>
             )}
             {flavorCategories.map((cat) => (
               <HoverExplainTag
