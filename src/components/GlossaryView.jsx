@@ -2,8 +2,12 @@ import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 import { SectionHeading } from "./common";
 import { GLOSSARY_TERMS } from "../data/glossary";
+import { localizeGlossaryTerm } from "../data/localize";
+import { useT } from "../i18n";
 
-export function GlossaryItem({ item, open, onToggle }) {
+export function GlossaryItem({ item: rawItem, open, onToggle }) {
+  const t = useT();
+  const item = localizeGlossaryTerm(rawItem);
   return (
     <div
       className={`rounded-2xl bg-[var(--c-surface)] border-2 overflow-hidden transition-colors ${
@@ -22,7 +26,7 @@ export function GlossaryItem({ item, open, onToggle }) {
                 : "bg-[var(--c-surface-2)] text-[var(--accent-muted)] border-[var(--c-border)]"
             }`}
           >
-            {item.category}
+            {t(item.category)}
           </span>
           <h3 className="font-serif text-[17px] text-[var(--c-text)] mt-1.5">{item.term}</h3>
           <p className="text-[13px] text-[var(--c-text-3)] mt-1">{item.summary}</p>
@@ -44,12 +48,13 @@ export function GlossaryItem({ item, open, onToggle }) {
 }
 
 export function GlossaryView({ hideHeading = false }) {
+  const t = useT();
   const [openTerm, setOpenTerm] = useState(null);
   return (
     <main className="px-5 py-5 flex flex-col gap-3 max-w-xl mx-auto">
       {!hideHeading && <SectionHeading en="Glossary" ja="用語解説" />}
       <p className="text-[13px] text-[var(--c-text-3)]">
-        精選方法・焙煎度・グレードなど、コーヒー豆選びに役立つ基礎用語をまとめました。
+        {t("精選方法・焙煎度・グレードなど、コーヒー豆選びに役立つ基礎用語をまとめました。")}
       </p>
       {GLOSSARY_TERMS.map((item) => (
         <GlossaryItem

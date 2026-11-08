@@ -2,10 +2,13 @@ import { Calendar, MapPin, ExternalLink, Trophy, Globe2 } from "lucide-react";
 import { SectionHeading, SourceCredit } from "./common";
 import { EVENT_TYPE_LABELS } from "../data/events";
 import { JAPAN_COMPETITIONS } from "../data/japanCompetitions";
+import { localizeCompetition, localizeEvent } from "../data/localize";
+import { getLang } from "../i18n";
 import { useT } from "../i18n";
 
-export function EventCard({ event, onLearnOrigin }) {
+export function EventCard({ event: rawEvent, onLearnOrigin }) {
   const t = useT();
+  const event = localizeEvent(rawEvent);
   const typeInfo = EVENT_TYPE_LABELS[event.eventType] || { ja: event.eventType, color: "var(--c-text-3)" };
   return (
     <div className="rounded-2xl bg-[var(--c-surface)] border border-[var(--c-border)] p-4 flex flex-col gap-2">
@@ -21,7 +24,7 @@ export function EventCard({ event, onLearnOrigin }) {
           className="shrink-0 text-[11px] px-2 py-0.5 rounded-full font-medium"
           style={{ backgroundColor: typeInfo.color, color: "#231810" }}
         >
-          {typeInfo.ja}
+          {getLang() === "en" && typeInfo.en ? typeInfo.en : typeInfo.ja}
         </span>
       </div>
 
@@ -63,7 +66,8 @@ export function EventCard({ event, onLearnOrigin }) {
   );
 }
 
-export function JapanCompetitionCard({ competition }) {
+export function JapanCompetitionCard({ competition: rawCompetition }) {
+  const competition = localizeCompetition(rawCompetition);
   return (
     <div className="rounded-2xl bg-[var(--c-surface)] border border-[var(--c-border)] p-4 flex flex-col gap-2.5">
       <div className="flex items-center gap-2">
@@ -107,8 +111,9 @@ export function JapanCompetitionCard({ competition }) {
 // WCC(World Coffee Championships)の1大会分。開催済み(優勝者情報あり)かどうかを
 // event.note(優勝者テキストが入っていれば開催済み)の有無で判定し、バッジで
 // 明示的に区別する。
-export function WorldChampionshipCard({ event }) {
+export function WorldChampionshipCard({ event: rawEvent }) {
   const t = useT();
+  const event = localizeEvent(rawEvent);
   const concluded = Boolean(event.note);
   return (
     <div className="rounded-2xl bg-[var(--c-surface)] border border-[var(--c-border)] p-4 flex flex-col gap-2">
@@ -151,6 +156,7 @@ export function WorldChampionshipCard({ event }) {
 }
 
 export function EventsView({ hideHeading = false, onLearnOrigin, events }) {
+  const t = useT();
   // WCC(世界大会)は「競技会」タブの世界大会セクションに表示するため、
   // ここでは展示会・オークション・フェスティバル等のスケジュールのみを扱う
   const scheduleEvents = events.filter((event) => event.sourceId !== "wcc");
@@ -159,8 +165,13 @@ export function EventsView({ hideHeading = false, onLearnOrigin, events }) {
     <main className="px-5 py-5 flex flex-col gap-3 max-w-xl mx-auto">
       {!hideHeading && <SectionHeading en="Events" ja="イベント" />}
       <p className="text-[13px] text-[var(--c-text-3)]">
-        国内展示会・フェスティバル・国際品評会の開催スケジュールをまとめました。世界大会(WCC)は競技会タブでご覧いただけます。産地に関連するイベントはタップして産地タブへ移動できます。
+        {t("国内展示会・フェスティバル・国際品評会の開催スケジュールをまとめました。世界大会(WCC)は競技会タブでご覧いただけます。産地に関連するイベントはタップして産地タブへ移動できます。")}
       </p>
+      {getLang() === "en" && (
+        <p className="text-[11px] text-[var(--c-text-3)] leading-relaxed -mt-1">
+          {t("イベントの名称・会場・説明は、主催者が掲載した内容のまま表示しています(日本語のものがあります)。")}
+        </p>
+      )}
       <div className="flex flex-col gap-2.5">
         {scheduleEvents.map((event) => (
           <EventCard key={event.id ?? event.name} event={event} onLearnOrigin={onLearnOrigin} />
@@ -173,7 +184,7 @@ export function EventsView({ hideHeading = false, onLearnOrigin, events }) {
           "Japan Coffee Festival(japancoffeefestival.com)",
           "TOKYO COFFEE FESTIVAL(tokyocoffeefestival.co)",
           "NAGOYA COFFEE FES.(nagoyacoffeefes.com)",
-          "珈琲博覧日(onedaycoffeeexpo.com)",
+          t("珈琲博覧日(onedaycoffeeexpo.com)"),
           "COFFEE CITY FESTIVAL(coffee-city-fes.com)",
           "27 COFFEE ROASTERS(27coffee.jp)",
           "Roast Design Coffee(roast-design-coffee.com)",
@@ -185,6 +196,7 @@ export function EventsView({ hideHeading = false, onLearnOrigin, events }) {
 }
 
 export function CompetitionsView({ hideHeading = false, events = [] }) {
+  const t = useT();
   const worldChampionships = [...events]
     .filter((event) => event.sourceId === "wcc")
     .sort((a, b) => (a.startDate || "9999-99-99").localeCompare(b.startDate || "9999-99-99"));
@@ -197,10 +209,10 @@ export function CompetitionsView({ hideHeading = false, events = [] }) {
         <div className="flex flex-col gap-2.5">
           <div className="flex items-center gap-1.5">
             <Globe2 size={14} className="text-[var(--accent)]" strokeWidth={1.75} />
-            <h3 className="text-[14px] font-medium text-[var(--c-text)]">世界大会(WCC)</h3>
+            <h3 className="text-[14px] font-medium text-[var(--c-text)]">{t("世界大会(WCC)")}</h3>
           </div>
           <p className="text-[13px] text-[var(--c-text-3)] -mt-1">
-            World Coffee Championshipsが年間を通じて世界各地で開催する大会。開催日順に並んでいます。
+            {t("World Coffee Championshipsが年間を通じて世界各地で開催する大会。開催日順に並んでいます。")}
           </p>
           <div className="flex flex-col gap-2.5">
             {worldChampionships.map((event) => (
@@ -213,10 +225,10 @@ export function CompetitionsView({ hideHeading = false, events = [] }) {
       <div className="flex flex-col gap-2.5 pt-2 border-t border-[var(--c-border)]">
         <div className="flex items-center gap-1.5">
           <Trophy size={14} className="text-[var(--accent)]" strokeWidth={1.75} />
-          <h3 className="text-[14px] font-medium text-[var(--c-text)]">日本国内の主要競技会(SCAJ主催)</h3>
+          <h3 className="text-[14px] font-medium text-[var(--c-text)]">{t("日本国内の主要競技会(SCAJ主催)")}</h3>
         </div>
         <p className="text-[13px] text-[var(--c-text-3)] -mt-1">
-          SCAJ(日本スペシャルティコーヒー協会)が主催する国内競技会9大会。優勝者の多くは世界大会へ日本代表として出場する。
+          {t("SCAJ(日本スペシャルティコーヒー協会)が主催する国内競技会9大会。優勝者の多くは世界大会へ日本代表として出場する。")}
         </p>
         <div className="flex flex-col gap-2.5">
           {JAPAN_COMPETITIONS.map((competition) => (

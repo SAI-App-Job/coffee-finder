@@ -1,8 +1,12 @@
 import { Coffee, Thermometer, Timer, Award, SlidersHorizontal } from "lucide-react";
 import { SectionHeading, SourceCredit } from "./common";
 import { BREW_METHODS, EXTRACTION_VARIABLES, EXTRACTION_DIAGNOSIS } from "../data/brewGuide";
+import { localizeBrewMethod, localizeExtractionDiagnosis, localizeExtractionVariable } from "../data/localize";
+import { useT } from "../i18n";
 
-export function BrewMethodCard({ brew }) {
+export function BrewMethodCard({ brew: rawBrew }) {
+  const t = useT();
+  const brew = localizeBrewMethod(rawBrew);
   return (
     <div className="rounded-2xl bg-[var(--c-surface)] border border-[var(--c-border)] p-4 flex flex-col gap-3">
       <div>
@@ -28,7 +32,7 @@ export function BrewMethodCard({ brew }) {
 
       {brew.grindSize && (
         <p className="text-[12px] text-[var(--c-text-2)]">
-          <span className="text-[var(--accent-label)]">粒度:</span> {brew.grindSize}
+          <span className="text-[var(--accent-label)]">{t("粒度:")}</span> {brew.grindSize}
         </p>
       )}
 
@@ -57,7 +61,8 @@ export function BrewMethodCard({ brew }) {
   );
 }
 
-export function ExtractionVariableCard({ v }) {
+export function ExtractionVariableCard({ v: rawV }) {
+  const v = localizeExtractionVariable(rawV);
   return (
     <div className="rounded-xl bg-[var(--c-surface-2)] border border-[var(--c-border)] p-3">
       <p className="text-[13px] text-[var(--c-text)] font-medium">{v.title}</p>
@@ -68,13 +73,14 @@ export function ExtractionVariableCard({ v }) {
 }
 
 export function ExtractionScienceSection() {
+  const t = useT();
   return (
     <div className="rounded-2xl bg-[var(--c-surface)] border border-[var(--c-border)] p-4 flex flex-col gap-3">
       <div>
         <p className="text-[11px] tracking-[0.15em] text-[var(--accent-label)] uppercase">Extraction Science</p>
-        <h3 className="font-serif text-[19px] text-[var(--c-text)] mt-0.5">抽出理論:なぜ濃さ・酸味・苦味が変わるのか</h3>
+        <h3 className="font-serif text-[19px] text-[var(--c-text)] mt-0.5">{t("抽出理論:なぜ濃さ・酸味・苦味が変わるのか")}</h3>
         <p className="text-[13px] text-[var(--c-text-2)] mt-1.5 leading-relaxed">
-          SCA(スペシャルティコーヒー協会)の「ゴールデンカップ基準」は、抽出強度(TDS)1.15〜1.35%・抽出収率18〜22%を適正抽出の目安として定めている。粒度・焙煎度・湯温・時間は、すべてこの「どこまで成分が溶け出したか」を左右する変数として連動している。
+          {t("SCA(スペシャルティコーヒー協会)の「ゴールデンカップ基準」は、抽出強度(TDS)1.15〜1.35%・抽出収率18〜22%を適正抽出の目安として定めている。粒度・焙煎度・湯温・時間は、すべてこの「どこまで成分が溶け出したか」を左右する変数として連動している。")}
         </p>
       </div>
 
@@ -85,22 +91,25 @@ export function ExtractionScienceSection() {
       </div>
 
       <div>
-        <p className="text-[11px] tracking-wide text-[var(--accent-label)] uppercase mb-2">未抽出・適正・過抽出の見分け方</p>
+        <p className="text-[11px] tracking-wide text-[var(--accent-label)] uppercase mb-2">{t("未抽出・適正・過抽出の見分け方")}</p>
         <div className="flex flex-col gap-2">
-          {EXTRACTION_DIAGNOSIS.map((d) => (
-            <div key={d.label} className="bg-[var(--c-surface-2)] rounded-lg p-2.5">
+          {EXTRACTION_DIAGNOSIS.map((raw) => {
+            const d = localizeExtractionDiagnosis(raw);
+            return (
+            <div key={raw.label} className="bg-[var(--c-surface-2)] rounded-lg p-2.5">
               <p className="text-[13px] text-[var(--c-text)] font-medium">{d.label}</p>
-              <p className="text-[12px] text-[var(--c-text-3)] mt-0.5">原因: {d.cause}</p>
-              <p className="text-[12px] text-[var(--c-text-2)] mt-0.5">味わい: {d.taste}</p>
+              <p className="text-[12px] text-[var(--c-text-3)] mt-0.5">{t("原因: {v}", { v: d.cause })}</p>
+              <p className="text-[12px] text-[var(--c-text-2)] mt-0.5">{t("味わい: {v}", { v: d.taste })}</p>
             </div>
-          ))}
+            );
+          })}
         </div>
       </div>
 
       <SourceCredit
         sources={[
           "SCA(Specialty Coffee Association)Golden Cup Standard",
-          "科学論文(ScienceDirect, Nature Scientific Reports 等)の抽出動態研究",
+          t("科学論文(ScienceDirect, Nature Scientific Reports 等)の抽出動態研究"),
         ]}
       />
     </div>
@@ -108,11 +117,12 @@ export function ExtractionScienceSection() {
 }
 
 export function BrewGuideView({ hideHeading = false }) {
+  const t = useT();
   return (
     <main className="px-5 py-5 flex flex-col gap-3 max-w-xl mx-auto">
       {!hideHeading && <SectionHeading en="Brewing Guide" ja="コーヒーの淹れ方" />}
       <p className="text-[13px] text-[var(--c-text-3)] mb-1">
-        代表的な4つの抽出方法と、豆の焙煎度との相性をまとめました。
+        {t("代表的な4つの抽出方法と、豆の焙煎度との相性をまとめました。")}
       </p>
       {BREW_METHODS.map((brew) => (
         <BrewMethodCard key={brew.method} brew={brew} />

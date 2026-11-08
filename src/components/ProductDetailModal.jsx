@@ -1,5 +1,5 @@
 import { X, MapPin, ExternalLink, Heart, ArrowLeftRight, Check, Coffee, Sparkles, NotebookPen } from "lucide-react";
-import { PROCESSING_EXPLANATIONS, DESIGNATED_BRAND_EXPLANATIONS } from "../data/explanations";
+import { brandName, designatedBrandExplanation, processingExplanation } from "../data/localize";
 import { getGradeExplanation } from "../utils/grade";
 import { categorizeFlavorNotes } from "../utils/flavor";
 import { cityFromAddress, formatPrice } from "../utils/format";
@@ -40,7 +40,7 @@ export function ProductDetailModal({
   const t = useT();
   if (!product) return null;
 
-  const processingDetail = product.processingMethod ? PROCESSING_EXPLANATIONS[product.processingMethod] : null;
+  const processingDetail = product.processingMethod ? processingExplanation(product.processingMethod) : null;
   const gradeDetail = product.grade
     ? getGradeExplanation(product.grade, product.originCountry, product.designatedBrand)
     : null;
@@ -133,10 +133,10 @@ export function ProductDetailModal({
         <div className="flex flex-col gap-3.5 mb-4">
           <DetailRow
             label={t("特定銘柄")}
-            value={product.designatedBrand}
+            value={brandName(product.designatedBrand)}
             detail={
               product.designatedBrand &&
-              (DESIGNATED_BRAND_EXPLANATIONS[product.designatedBrand] || t("この銘柄についての解説はまだ用意されていません。"))
+              (designatedBrandExplanation(product.designatedBrand) || t("この銘柄についての解説はまだ用意されていません。"))
             }
           />
           <DetailRow

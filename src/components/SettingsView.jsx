@@ -59,7 +59,7 @@ export function SettingsView({
           ))}
         </div>
         <p className="text-[11px] text-[var(--c-text-3)] leading-relaxed">
-          {t("画面の言語を切り替えます。商品・店舗のデータと、豆知識・産地ガイドの本文は、日本語のみです。")}
+          {t("画面の言語を切り替えます。商品・店舗のデータ(商品名・フレーバーの説明・住所など)は、日本語のみです。")}
         </p>
       </section>
 

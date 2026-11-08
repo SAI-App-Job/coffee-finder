@@ -1,3 +1,5 @@
+import { GLOSSARY_CATEGORIES_EN } from "../data/en/trivia.js";
+
 // 英語の辞書(キー = 日本語の文、値 = 英語)。
 // - 文の中の {name} は、そのまま残す(呼び出し側が値を入れる)。
 // - 件数は複数形の揺れを避けるため、"Items: {n}" のように数字を後ろに置く書き方にしている。
@@ -31,8 +33,6 @@ const UI = {
   "この端末・ブラウザは位置情報に対応していないため、全件表示しています":
     "This device or browser does not support location, so all items are shown",
   "★{n}以上": "★{n}+",
-  "商品・店舗のデータと、豆知識・産地ガイドの本文は、日本語のみです。":
-    "Product and shop data, and the Trivia and Origin guide texts, are available in Japanese only.",
 
   // ---- 下部メニュー・見出し・共通部品 ----
   "メインメニュー": "Main menu",
@@ -342,8 +342,6 @@ const UI = {
   "商品をタップすると、ここに履歴が表示されます": "Tap a product and it will appear here",
   "閲覧履歴は無制限に保存されます。": "Your viewing history is kept without limit.",
   "無料プランでは直近{n}日分のみ保存されます(有料プランでは無制限)。": "The free plan keeps only the last {n} days (unlimited on the paid plan).",
-  "画面の言語を切り替えます。商品・店舗のデータと、豆知識・産地ガイドの本文は、日本語のみです。":
-    "Switches the language of the app screens. Product and shop data, and the Trivia and Origin guide texts, are available in Japanese only.",
   "カラーテーマ": "Color theme",
   "ダーク": "Dark",
   "ホワイト": "White",
@@ -599,4 +597,59 @@ const DIARY = {
   "全国47都道府県のお店で、商品を登録するか、テイスティングノートを記録する": "Register a product or record a tasting note at shops in all 47 prefectures of Japan",
 };
 
-export const EN = { ...PREFECTURES, ...UI, ...DIARY, ...LABELS, ...COUNTRIES, ...ROAST, ...PROCESSING, ...FLAVOR };
+// ---- コンテンツ画面(豆知識・産地・解説)の文言 ----
+const CONTENT = {
+  "イベントの名称・会場・説明は、主催者が掲載した内容のまま表示しています(日本語のものがあります)。": "Event names, venues and descriptions are shown as published by the organizers (some are in Japanese).",
+  "Qima Coffee関連報道(Authority.Coffee等)": "Reports on Qima Coffee (Authority.Coffee, etc.)",
+  "粒度:": "Grind size:",
+  "抽出理論:なぜ濃さ・酸味・苦味が変わるのか": "Extraction science: why strength, acidity and bitterness change",
+  "SCA(スペシャルティコーヒー協会)の「ゴールデンカップ基準」は、抽出強度(TDS)1.15〜1.35%・抽出収率18〜22%を適正抽出の目安として定めている。粒度・焙煎度・湯温・時間は、すべてこの「どこまで成分が溶け出したか」を左右する変数として連動している。":
+    "The SCA's (Specialty Coffee Association's) \"Golden Cup Standard\" sets an extraction strength (TDS) of 1.15-1.35% and an extraction yield of 18-22% as the guide for proper extraction. Grind size, roast level, water temperature and time are all linked as variables that govern how far the components have dissolved.",
+  "未抽出・適正・過抽出の見分け方": "How to tell under-extraction, proper extraction and over-extraction",
+  "原因: {v}": "Cause: {v}",
+  "味わい: {v}": "Taste: {v}",
+  "科学論文(ScienceDirect, Nature Scientific Reports 等)の抽出動態研究": "Studies of extraction kinetics in scientific papers (ScienceDirect, Nature Scientific Reports, etc.)",
+  "代表的な4つの抽出方法と、豆の焙煎度との相性をまとめました。": "A summary of four representative brewing methods and how well each suits different roast levels.",
+  "SCA(スペシャルティコーヒー協会)とWCR(ワールドコーヒーリサーチ)が2016年に共同開発した、コーヒーの風味を語るための共通言語。9つの大分類をタップすると、含まれる具体的な表現が開きます。":
+    "A common language for talking about coffee flavor, developed jointly in 2016 by the SCA (Specialty Coffee Association) and WCR (World Coffee Research). Tap one of the nine main categories to open the specific expressions it contains.",
+  "円形の公式図(SCA/WCR著作物)はそのまま複製せず、公開されている用語データを独自のカード形式に再構成しています。実際の円形の図はSCAの公式サイトで確認・購入できます。":
+    "The official circular chart (a work of the SCA/WCR) is not reproduced as is; the publicly available term data has been restructured into this app's own card format. The actual circular chart can be viewed and purchased on the SCA's official website.",
+  "精選方法・焙煎度・グレードなど、コーヒー豆選びに役立つ基礎用語をまとめました。": "A summary of basic terms useful for choosing coffee beans, such as processing method, roast level and grade.",
+  "WCR(ワールドコーヒーリサーチ)の品種カタログを基に、系統ごとの特徴をまとめました。": "A summary of the characteristics of each lineage, based on the variety catalog of WCR (World Coffee Research).",
+  "World Coffee Research(worldcoffeeresearch.org)品種カタログ": "World Coffee Research (worldcoffeeresearch.org) variety catalog",
+  "全日本コーヒー公正取引協議会の規約による、日本国内での14種類の銘柄表示ルール。タップすると「産地」タブでその生産国が表示されます。":
+    "The brand-labeling rules in Japan for 14 types of coffee, set by the All Japan Coffee Fair Trade Council. Tap one to see its producing country in the Origin tab.",
+  "全日本コーヒー公正取引協議会": "All Japan Coffee Fair Trade Council",
+  "国内展示会・フェスティバル・国際品評会の開催スケジュールをまとめました。世界大会(WCC)は競技会タブでご覧いただけます。産地に関連するイベントはタップして産地タブへ移動できます。":
+    "A summary of the schedules of domestic exhibitions, festivals and international competitions. World championships (WCC) can be seen in the Competitions tab. Tap an event related to an origin to move to the Origin tab.",
+  "珈琲博覧日(onedaycoffeeexpo.com)": "Coffee Expo Day (onedaycoffeeexpo.com)",
+  "世界大会(WCC)": "World championships (WCC)",
+  "World Coffee Championshipsが年間を通じて世界各地で開催する大会。開催日順に並んでいます。": "Competitions held around the world throughout the year by World Coffee Championships, listed in order of date.",
+  "日本国内の主要競技会(SCAJ主催)": "Major domestic competitions (run by the SCAJ)",
+  "SCAJ(日本スペシャルティコーヒー協会)が主催する国内競技会9大会。優勝者の多くは世界大会へ日本代表として出場する。":
+    "Nine domestic competitions run by the SCAJ (Specialty Coffee Association of Japan). Many winners go on to compete in world championships as Japan's representatives.",
+  "商品・店舗のデータ(商品名・フレーバーの説明・住所など)は、日本語のみです。": "Product and shop data (names, flavor notes, addresses, etc.) is in Japanese only.",
+  "画面の言語を切り替えます。商品・店舗のデータ(商品名・フレーバーの説明・住所など)は、日本語のみです。":
+    "Switches the language of the app screens. Product and shop data (names, flavor notes, addresses, etc.) is in Japanese only.",
+  // グレード表記の解説
+  "ジャマイカ・ブルーマウンテン地区独自の等級。No.1が最上位(木樽出荷)で、No.2、No.3と続き、規格外はピーベリー・トリアージとして扱われる。":
+    "A grade system specific to Jamaica's Blue Mountain district. No. 1 is the top (shipped in wooden barrels), followed by No. 2 and No. 3, and off-grade lots are handled as peaberry and triage.",
+  "エチオピアの{grade}は欠点数(300gあたり)による格付け。G1は欠点0〜3個の最高等級で、地域・精選方法によっては特別に扱われることも。数字が大きいほど欠点が多い。":
+    "Ethiopia's {grade} is a grade based on defect count (per 300 g). G1 is the top grade with 0-3 defects, and depending on the area and processing method it may be treated specially. The larger the number, the more defects.",
+  "インドネシアの{grade}も欠点数による格付けだが、基準はエチオピアより緩め(G1で欠点0〜11個程度)。同じ「G1」でも国によって意味する品質水準が異なる点に注意。":
+    "Indonesia's {grade} is also graded by defect count, but the standard is looser than Ethiopia's (about 0-11 defects for G1). Note that even the same \"G1\" means a different quality level depending on the country.",
+  "欠点数による格付け(数字が小さいほど高品質)。ただし基準は生産国ごとに異なる。":
+    "Grading by defect count (the smaller the number, the higher the quality). The standard differs by producing country, however.",
+  "スクリーンサイズ(豆の粒の大きさ)による格付け。ケニア・タンザニアで使われる代表的な表記で、AAは大粒の等級を示す。粒の大きさは必ずしも風味の良さを保証しない。":
+    "Grading by screen size (bean size). A typical notation used in Kenya and Tanzania, where AA indicates a large-bean grade. Bean size does not necessarily guarantee good flavor.",
+  "Strictly Hard Bean。標高の高さで格付けする表記で、グアテマラやコスタリカでは標高1,350m前後以上が目安。標高が高いほど豆が硬く締まり、高品質とされる。":
+    "Strictly Hard Bean. A notation that grades by altitude; in Guatemala and Costa Rica, about 1,350 m and above is the guideline. The higher the altitude, the harder and denser the bean, and the higher the quality is considered to be.",
+  "生産地・店舗によって意味が異なる通し番号やロット表記。ブラジルでは欠点数による等級(No.2〜8)を指すことが多い。":
+    "A serial number or lot notation whose meaning differs by origin and shop. In Brazil it often refers to the defect-count grades (No. 2-8).",
+  "コロンビア(FNC)のスクリーンサイズ(豆の粒の大きさ)による等級体系。「エクセルソ」は7段階の等級群に共通する親カテゴリ名で、単独では等級を特定できないため常にサブグレード名と組み合わせて表記される。本商品のサブグレードは「{subGrade}」。":
+    "Colombia's (FNC) grading system by screen size (bean size). \"Excelso\" is the name of a parent category common to a group of seven grades; it cannot identify a grade on its own, so it is always written together with a sub-grade name. This product's sub-grade is \"{subGrade}\".",
+  "国別グレードは、標高・スクリーンサイズ(粒の大きさ)・欠点数など、生産国ごとに異なる基準で決まる。同じ表記でも国が違えば意味が異なることがある。":
+    "National grades are determined by criteria that differ by producing country, such as altitude, screen size (bean size) and defect count. The same notation can mean different things in different countries.",
+};
+
+export const EN = { ...PREFECTURES, ...UI, ...DIARY, ...CONTENT, ...GLOSSARY_CATEGORIES_EN, ...LABELS, ...COUNTRIES, ...ROAST, ...PROCESSING, ...FLAVOR };

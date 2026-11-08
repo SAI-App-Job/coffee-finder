@@ -13,11 +13,11 @@ Google Play(Android・TWA)を主、App Store を従として、英語の掲載�
 |---|---|---|
 | Google Play: App name | 29 / 30 | OK |
 | Google Play: Short description | 70 / 80 | OK |
-| Google Play: Full description | 1980 / 4000 | OK |
+| Google Play: Full description | 2014 / 4000 | OK |
 | App Store: Name | 13 / 30 | OK |
 | App Store: Subtitle | 27 / 30 | OK |
 | App Store: Promotional text | 145 / 170 | OK |
-| App Store: Description | 1980 / 4000 | OK |
+| App Store: Description | 2014 / 4000 | OK |
 | App Store: Keywords | 98 / 100 | OK |
 
 ## Google Play
@@ -67,7 +67,7 @@ PRIVATE BY DESIGN
 
 GOOD TO KNOW
 • The app interface is available in English and Japanese. It follows your device language, and you can switch it in Settings.
-• Shop and product data (names, tasting notes, farm information, addresses) and the Trivia and Origin guide texts are in Japanese only.
+• Shop and product data (names, tasting notes, farm information, addresses) is in Japanese only. The Trivia and Origin guides are available in both English and Japanese.
 • All shops are located in Japan.
 ```
 

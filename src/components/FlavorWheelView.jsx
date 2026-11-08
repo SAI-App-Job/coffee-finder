@@ -2,8 +2,10 @@ import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 import { SectionHeading, SourceCredit } from "./common";
 import { FLAVOR_WHEEL_DATA } from "../data/flavorWheel";
+import { useT } from "../i18n";
 
 export function FlavorWheelCategory({ cat, open, onToggle }) {
+  const t = useT();
   return (
     <div
       className="rounded-2xl bg-[var(--c-surface)] border overflow-hidden"
@@ -19,7 +21,7 @@ export function FlavorWheelCategory({ cat, open, onToggle }) {
             >
               {cat.en}
             </p>
-            <p className="text-[14px] font-medium text-[var(--c-text)]">{cat.ja}</p>
+            <p className="text-[14px] font-medium text-[var(--c-text)]">{t(cat.ja)}</p>
           </div>
         </div>
         <ChevronDown
@@ -31,14 +33,14 @@ export function FlavorWheelCategory({ cat, open, onToggle }) {
         <div className="px-3.5 pb-3.5 flex flex-col gap-2.5 border-t border-[var(--c-border)] pt-3">
           {cat.sub.map((s) => (
             <div key={s.group}>
-              <p className="text-[11px] text-[var(--c-text-3)] mb-1">{s.group}</p>
+              <p className="text-[11px] text-[var(--c-text-3)] mb-1">{t(s.group)}</p>
               <div className="flex flex-wrap gap-1.5">
-                {s.terms.map((t) => (
+                {s.terms.map((term) => (
                   <span
-                    key={t}
+                    key={term}
                     className="text-[12px] px-2.5 py-1 rounded-full bg-[var(--c-surface-2)] text-[var(--accent-muted)] border border-[var(--c-border)]"
                   >
-                    {t}
+                    {t(term)}
                   </span>
                 ))}
               </div>
@@ -67,16 +69,17 @@ export function FlavorWheelExplorer() {
 }
 
 export function FlavorWheelView({ hideHeading = false }) {
+  const t = useT();
   return (
     <main className="px-5 py-5 flex flex-col gap-3 max-w-xl mx-auto">
       {!hideHeading && <SectionHeading en="Flavor Wheel" ja="フレーバーホイール" />}
       <p className="text-[13px] text-[var(--c-text-3)]">
-        SCA(スペシャルティコーヒー協会)とWCR(ワールドコーヒーリサーチ)が2016年に共同開発した、コーヒーの風味を語るための共通言語。9つの大分類をタップすると、含まれる具体的な表現が開きます。
+        {t("SCA(スペシャルティコーヒー協会)とWCR(ワールドコーヒーリサーチ)が2016年に共同開発した、コーヒーの風味を語るための共通言語。9つの大分類をタップすると、含まれる具体的な表現が開きます。")}
       </p>
       <FlavorWheelExplorer />
       <div className="text-[11px] text-[var(--c-text-3)] leading-relaxed border-t border-[var(--c-border)] pt-3 mt-1">
         <p>
-          円形の公式図(SCA/WCR著作物)はそのまま複製せず、公開されている用語データを独自のカード形式に再構成しています。実際の円形の図はSCAの公式サイトで確認・購入できます。
+          {t("円形の公式図(SCA/WCR著作物)はそのまま複製せず、公開されている用語データを独自のカード形式に再構成しています。実際の円形の図はSCAの公式サイトで確認・購入できます。")}
         </p>
       </div>
       <SourceCredit sources={["SCA(Specialty Coffee Association)", "WCR(World Coffee Research)Sensory Lexicon"]} />

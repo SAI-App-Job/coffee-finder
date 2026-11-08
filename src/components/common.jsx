@@ -26,7 +26,7 @@ export function JaOnlyNote({ className = "" }) {
   if (lang !== "en") return null;
   return (
     <p className={`text-[11px] text-[var(--c-text-3)] leading-relaxed ${className}`}>
-      {t("商品・店舗のデータと、豆知識・産地ガイドの本文は、日本語のみです。")}
+      {t("商品・店舗のデータ(商品名・フレーバーの説明・住所など)は、日本語のみです。")}
     </p>
   );
 }

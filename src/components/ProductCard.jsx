@@ -1,7 +1,7 @@
 import { memo, useState } from "react";
 import { Sparkles, Coffee, MapPin, ExternalLink, Heart } from "lucide-react";
 import { DISCOVERY_FACTS } from "../data/discoveryFacts";
-import { PROCESSING_EXPLANATIONS, DESIGNATED_BRAND_EXPLANATIONS } from "../data/explanations";
+import { brandName, designatedBrandExplanation, localizeFact, processingExplanation } from "../data/localize";
 import { ORIGIN_GUIDE } from "../data/originGuide";
 import { getGradeExplanation } from "../utils/grade";
 import { categorizeFlavorNotes } from "../utils/flavor";
@@ -12,7 +12,7 @@ import { useT } from "../i18n";
 export function DiscoveryFactCard() {
   const t = useT();
   const [index, setIndex] = useState(() => Math.floor(Math.random() * DISCOVERY_FACTS.length));
-  const fact = DISCOVERY_FACTS[index];
+  const fact = localizeFact(DISCOVERY_FACTS[index]);
 
   const showAnother = () => {
     setIndex((prev) => {
@@ -130,7 +130,7 @@ export function HoverExplainTag({ label, category, detail }) {
 function ProductCardImpl({ product, onOpenMap, onLearnOrigin, isFavorite, onToggleFavorite, onOpenDetail, savedAt }) {
   const t = useT();
   const processingDetail = product.processingMethod
-    ? PROCESSING_EXPLANATIONS[product.processingMethod]
+    ? processingExplanation(product.processingMethod)
     : null;
   const gradeDetail = getGradeExplanation(product.grade, product.originCountry, product.designatedBrand);
   const flavorCategories = categorizeFlavorNotes(product.flavorNotes);
@@ -224,10 +224,10 @@ function ProductCardImpl({ product, onOpenMap, onLearnOrigin, isFavorite, onTogg
           <div className="flex flex-wrap gap-1.5">
             {product.designatedBrand && (
               <HoverExplainTag
-                label={product.designatedBrand}
+                label={brandName(product.designatedBrand)}
                 category={t("特定銘柄")}
                 detail={
-                  DESIGNATED_BRAND_EXPLANATIONS[product.designatedBrand] ||
+                  designatedBrandExplanation(product.designatedBrand) ||
                   t("この銘柄についての解説はまだ用意されていません。")
                 }
               />

@@ -1,7 +1,10 @@
 import { SectionHeading, SourceCredit } from "./common";
 import { VARIETY_GUIDE } from "../data/varietyGuide";
+import { localizeVariety } from "../data/localize";
+import { useT } from "../i18n";
 
-export function VarietyCard({ v }) {
+export function VarietyCard({ v: rawV }) {
+  const v = localizeVariety(rawV);
   return (
     <div className="rounded-2xl bg-[var(--c-surface)] border border-[var(--c-border)] p-4 flex flex-col gap-2.5">
       <div>
@@ -29,16 +32,17 @@ export function VarietyCard({ v }) {
 }
 
 export function VarietyGuideView({ hideHeading = false }) {
+  const t = useT();
   return (
     <main className="px-5 py-5 flex flex-col gap-3 max-w-xl mx-auto">
       {!hideHeading && <SectionHeading en="Coffee Varieties" ja="品種" />}
       <p className="text-[13px] text-[var(--c-text-3)] mb-1">
-        WCR(ワールドコーヒーリサーチ)の品種カタログを基に、系統ごとの特徴をまとめました。
+        {t("WCR(ワールドコーヒーリサーチ)の品種カタログを基に、系統ごとの特徴をまとめました。")}
       </p>
       {VARIETY_GUIDE.map((v) => (
         <VarietyCard key={v.lineage} v={v} />
       ))}
-      <SourceCredit sources={["World Coffee Research(worldcoffeeresearch.org)品種カタログ"]} />
+      <SourceCredit sources={[t("World Coffee Research(worldcoffeeresearch.org)品種カタログ")]} />
     </main>
   );
 }

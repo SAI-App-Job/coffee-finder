@@ -63,9 +63,9 @@ export const EVENTS = [
 ];
 
 export const EVENT_TYPE_LABELS = {
-  competition: { ja: "競技会", color: "#D4A24E" },
-  exhibition: { ja: "展示会", color: "#6DA7EC" },
-  auction: { ja: "オークション", color: "#CDE2FB" },
-  festival: { ja: "フェスティバル", color: "#E8956D" },
-  seminar: { ja: "セミナー", color: "#A8C97F" },
+  competition: { ja: "競技会", en: "Competition", color: "#D4A24E" },
+  exhibition: { ja: "展示会", en: "Exhibition", color: "#6DA7EC" },
+  auction: { ja: "オークション", en: "Auction", color: "#CDE2FB" },
+  festival: { ja: "フェスティバル", en: "Festival", color: "#E8956D" },
+  seminar: { ja: "セミナー", en: "Seminar", color: "#A8C97F" },
 };

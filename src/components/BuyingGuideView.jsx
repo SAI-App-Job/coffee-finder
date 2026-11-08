@@ -1,10 +1,10 @@
-import { JaOnlyNote } from "./common";
 import { useState, useRef } from "react";
 import { Globe2, Clock, Dna, Package, BookOpen, MapPin, Coffee, Award, Gauge } from "lucide-react";
 import { SectionHeading, SourceCredit } from "./common";
 import { OriginMapView } from "./OriginMapView";
 import { DESIGNATED_BRANDS } from "../data/designatedBrands";
 import { ORIGIN_GUIDE } from "../data/originGuide";
+import { brandName, localizeBrand, localizeOrigin } from "../data/localize";
 import { useT } from "../i18n";
 
 export function OriginSection({ icon: Icon, label, children }) {
@@ -20,8 +20,9 @@ export function OriginSection({ icon: Icon, label, children }) {
   );
 }
 
-export function OriginGuideCard({ origin, onViewProducts }) {
+export function OriginGuideCard({ origin: rawOrigin, onViewProducts }) {
   const t = useT();
+  const origin = localizeOrigin(rawOrigin);
   const relatedBrands = DESIGNATED_BRANDS.filter((b) => b.country === origin.country);
   const hasDetail = Boolean(origin.terroir);
 
@@ -52,9 +53,9 @@ export function OriginGuideCard({ origin, onViewProducts }) {
             <span
               key={b.name}
               className="text-[12px] px-2.5 py-1 rounded-full bg-[var(--accent)] text-[var(--on-accent)] font-medium"
-              title={b.note ?? undefined}
+              title={localizeBrand(b).note ?? undefined}
             >
-              {b.name}
+              {brandName(b.name)}
             </span>
           ))}
         </div>
@@ -91,7 +92,7 @@ export function OriginGuideCard({ origin, onViewProducts }) {
             <span>{origin.officialBody}</span>
           </div>
 
-          {origin.sources && <SourceCredit sources={origin.sources} />}
+          {origin.sources && <SourceCredit sources={origin.sources.map((source) => t(source))} />}
         </div>
       ) : (
         <div className="pt-2 mt-1 border-t border-[var(--c-border)] flex flex-col gap-2">
@@ -148,7 +149,6 @@ export function BuyingGuideView({ pendingOriginCountry, onViewProducts }) {
   return (
     <main className="px-5 py-5 flex flex-col gap-5 max-w-xl mx-auto">
       <SectionHeading en="Origin" ja="産地" />
-      <JaOnlyNote />
       <div>
         <p className="text-[13px] text-[var(--c-text-3)] mb-3">
           {t("マップ上のピンをタップすると、その産地の特徴と各国の公式コーヒー協会(海外情報を翻訳・要約)が表示されます。")}
