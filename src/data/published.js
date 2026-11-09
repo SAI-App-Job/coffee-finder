@@ -5,6 +5,7 @@
 // 台帳に「内容(content)」がある記述は、監査を経て直した内容を表示する(データ側の本文は使わない)。
 // その英訳(contentEn)があれば _en に付ける。英訳が無ければ、英語表示でも日本語の内容を出す。
 import { isPublishable, contentOf, contentEnOf } from "./ledger";
+import { getLang } from "../i18n";
 import { DISCOVERY_FACTS } from "./discoveryFacts";
 import { GLOSSARY_TERMS } from "./glossary";
 import { BREW_METHODS, EXTRACTION_VARIABLES, EXTRACTION_DIAGNOSIS } from "./brewGuide";
@@ -145,13 +146,14 @@ export function publishedOrigin(origin) {
 /** 言語に合わせた産地ガイド(localized)から、出典を確認できていない項目を取り除く。判定は日本語の原文(raw)で行う。 */
 export function gateLocalizedOrigin(localized, raw) {
   const published = publishedOrigin(raw);
+  const en = getLang() === "en"; // 英語表示のときだけ、台帳の英訳を使う
   const out = { ...localized };
   for (const field of ORIGIN_FIELDS) {
     if (!published[field]) {
       out[field] = "";
     } else if (contentOf(`origin:${raw.country}:${field}`)) {
       // 直した内容を出す。英訳があれば英訳、無ければ日本語
-      out[field] = published.en[field] ?? published[field];
+      out[field] = en ? (published.en[field] ?? published[field]) : published[field];
     }
   }
   const names = new Set(published.subRegions.map((sub) => sub.name));
@@ -161,7 +163,7 @@ export function gateLocalizedOrigin(localized, raw) {
     .map(({ sub, shown }) => {
       if (!contentOf(`origin:${raw.country}:sub:${sub.name}`)) return shown;
       const ja = published.subRegions.find((s) => s.name === sub.name);
-      return { ...shown, detail: published.en.subs[sub.name] ?? ja.detail };
+      return { ...shown, detail: en ? (published.en.subs[sub.name] ?? ja.detail) : ja.detail };
     });
   return out;
 }
