@@ -49,17 +49,7 @@ export const EVENTS = [
     note: "グアテマラのCup of Excellence 2026。優勝豆はオンラインオークションで販売される(COE公式の年別データによる)。",
     sourceUrl: "https://cupofexcellence.org/",
   },
-  {
-    source: "ACE(Alliance for Coffee Excellence)",
-    sourceId: "ace",
-    name: "Nicaragua Cup of Excellence 2026",
-    eventType: "auction",
-    venue: "ニカラグア",
-    dateRange: "日程はCOE公式サイトを参照",
-    relatedCountry: null,
-    note: "ニカラグアのCup of Excellence 2026。",
-    sourceUrl: "https://cupofexcellence.org/",
-  },
+
 ];
 
 export const EVENT_TYPE_LABELS = {

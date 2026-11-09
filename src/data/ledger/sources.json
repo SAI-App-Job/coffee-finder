@@ -637,6 +637,15 @@
   "accessed": "2026-11-08",
   "note": "取得元はInternet Archive(Wayback Machine)に保存された公式URLの複製(この環境から公式サイトへ直接接続できなかったため)。 画像のみのPDF(スキャン)で、pypdfでは本文が取れない。全ページを画像として読み、quoteは目視で書き写した(機械照合はできない)。"
  },
+ "fnc-res-05-2018": {
+  "title": "Resolución 05 de 2018 (27 de junio) - Lineamientos de la política de prevención y control para garantizar la calidad del café para exportación a los mercados internacionales",
+  "org": "Comité Nacional de Cafeteros / Federación Nacional de Cafeteros de Colombia",
+  "url": "https://federaciondecafeteros.org/wp-content/uploads/2025/11/RESOLUCION-O5-DE-2018-Lineamientos-Politica-de-Prevencion-y-Control_-Calidad-de-Cafe.pdf",
+  "kind": "primary",
+  "readMethod": "full-text",
+  "accessed": "2026-11-08",
+  "note": "取得元はInternet Archive(Wayback Machine)に保存された公式URLの複製(この環境から公式サイトへ直接接続できなかったため)。 画像のみのPDF(スキャン)で、pypdfでは本文が取れない。全ページを画像として読み、quoteは目視で書き写した(機械照合はできない)。"
+ },
  "gaeki-legalitas": {
   "title": "Legalitas (GAEKI)",
   "org": "Gabungan Eksportir Kopi Indonesia (GAEKI)",
@@ -860,15 +869,6 @@
   "readMethod": "full-text",
   "accessed": "2026-11-08",
   "note": "ICOのサイトに掲載された、インドネシアのコーヒー・カカオ研究所(ICCRI)による発表資料。"
- },
- "ico-mexico-value-chain-2025": {
-  "title": "Mexico's Coffee Value Chain (ICO Coffee Public Private Taskforce, prepared by COSA)",
-  "org": "International Coffee Organization",
-  "url": "https://ico.org/global-knowledge-hub/wp-content/uploads/2025/03/Mexico_Coffee-Value-Chain-Study.pdf",
-  "kind": "primary",
-  "readMethod": "full-text",
-  "accessed": "2026-11-09",
-  "note": "ICOタスクフォース向けにCOSAが作成した調査報告をICOが掲載。ICO自身の統計文書ではない"
  },
  "ico-profile-el-salvador-2016": {
   "title": "El Salvador - ICO Coffee Profile (ICC-117-8)",

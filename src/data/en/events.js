@@ -20,11 +20,7 @@ export const EVENTS_EN = {
     dateRange: "COE judging: June 1-4 / auction: July 23 (13:00 UTC)",
     note: "Guatemala Cup of Excellence 2026. The winning lots are sold in an online auction (per the COE official yearly data).",
   },
-  "Nicaragua Cup of Excellence 2026": {
-    venue: "Nicaragua",
-    dateRange: "See the COE website for the schedule",
-    note: "Nicaragua Cup of Excellence 2026.",
-  },
+
 };
 
 // 開催元の名前(日本語 → 英語)

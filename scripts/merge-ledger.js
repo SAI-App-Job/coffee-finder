@@ -178,6 +178,36 @@ if (fs.existsSync(AUDIT)) {
   }
 }
 
+// ユーザーの決定(docs/ledger-drafts/decisions.json): 取り下げ(withdraw)と、出典を明示して内容を直す(edits)。
+const DECISIONS = path.join(DRAFTS, "decisions.json");
+const dec = { withdrawn: [], edited: [], rejected: [] };
+if (fs.existsSync(DECISIONS)) {
+  const d = JSON.parse(fs.readFileSync(DECISIONS, "utf8"));
+  for (const key of d.withdraw ?? []) {
+    if (entries[key]) {
+      delete entries[key];
+      dec.withdrawn.push(key);
+    }
+  }
+  for (const [key, ed] of Object.entries(d.edits ?? {})) {
+    const base = entries[key];
+    if (!base) {
+      dec.rejected.push([key, "元の記述が台帳に無い"]);
+      continue;
+    }
+    const added = (ed.addClaims ?? []).map((c) => ({ ...c, usable: backs(c) }));
+    const bad = added.filter((c) => c.usable.length === 0 || !c.quote || !c.location);
+    const problem = validContent(key, ed.content);
+    if (bad.length || problem) {
+      dec.rejected.push([key, problem || "根拠にできない主張を追加している"]);
+      continue;
+    }
+    const claims = [...base.claims, ...added.map((c) => ({ text: c.text, status: "verified", sourceIds: c.usable, quote: c.quote, location: c.location }))];
+    entries[key] = { status: "verified", content: ed.content, textHash: hashText(JSON.stringify(ed.content)), claims, ...(ed.contentEn ? { contentEn: ed.contentEn } : {}) };
+    dec.edited.push(key);
+  }
+}
+
 // 英訳(docs/ledger-drafts/translations/): 翻訳した時点の内容(packets)が、いまの内容と同じ記述にだけ付ける。
 // 日本語の内容が変わっていたら付けない(英語表示では日本語を出す)。
 const TRANS = path.join(DRAFTS, "translations");
@@ -260,5 +290,7 @@ console.log(`英訳: 付けた ${tr.attached} 件 / 翻訳後に日本語が変�
 tr.badShape.forEach((k) => console.log(`  英訳を付けない(構造/日本語): ${k}`));
 console.log(`英訳で日本語の数字が見当たらない記述(要目視 ${tr.numberReview.length} 件):`);
 tr.numberReview.forEach(([k, d]) => console.log(`  ${k}: ${d}`));
+console.log(`ユーザーの決定: 取り下げ ${dec.withdrawn.length} 件 / 直した ${dec.edited.length} 件 / 不正で外した ${dec.rejected.length} 件`);
+dec.rejected.forEach(([k, why]) => console.log(`  決定を適用できない: ${k} (${why})`));
 console.log("取り込んだキー(現在の本文のまま):");
 report.merged.forEach((k) => console.log(`  ${k}`));
