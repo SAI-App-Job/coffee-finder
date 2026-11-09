@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from "react";
-import { Search, Check, X } from "lucide-react";
+import { Search, Check, X, ChevronDown } from "lucide-react";
 import { ORIGIN_GUIDE, ORIGIN_ZONE_ORDER, ORIGIN_ZONE_LABELS } from "../data/originGuide";
-import { FLAVOR_WHEEL_DATA, FLAVOR_CATEGORY_OPTIONS } from "../data/flavorWheel";
+import { FLAVOR_CATEGORIES } from "../data/flavorVocabulary";
 import { FILTER_SEARCH_THRESHOLD } from "../data/navigation";
 import { StarRating } from "./common";
 import { useT } from "../i18n";
@@ -87,6 +87,60 @@ export function FilterSection({ title, options, selected, onToggle, getColor }) 
             dotColor={getColor ? getColor(opt) : null}
           />
         ))}
+      </div>
+    </div>
+  );
+}
+
+// 風味の絞り込み。大分類(カテゴリ)と詳細分類(語)のどちらも選べる(どれかに該当する商品を出す)。
+// 詳細分類は、商品の説明文から自動で付く語だけを出す(酸味など、利用者が判断する語は、商品に付かないので出さない)。
+function FlavorFilter({ selected, onToggle }) {
+  const t = useT();
+  const [openId, setOpenId] = useState(null);
+  return (
+    <div>
+      <div className="flex items-center justify-between mb-2">
+        <p className="text-[12px] text-[var(--c-text-3)]">{t("風味(大分類・詳細分類)")}</p>
+        {selected.size > 0 && (
+          <span className="text-[11px] text-[var(--accent)] font-medium">{t("{n}件選択中", { n: selected.size })}</span>
+        )}
+      </div>
+      <div className="flex flex-wrap gap-2">
+        {FLAVOR_CATEGORIES.map((cat) => (
+          <FilterChip key={cat.id} opt={cat.ja} active={selected.has(cat.ja)} onToggle={onToggle} dotColor={cat.color} />
+        ))}
+      </div>
+      <p className="text-[11px] text-[var(--c-text-3)] mt-3 mb-1.5">{t("詳細な風味から選ぶ")}</p>
+      <div className="flex flex-col gap-1.5">
+        {FLAVOR_CATEGORIES.map((cat) => {
+          const terms = cat.terms.filter((term) => term.auto !== false);
+          const open = openId === cat.id;
+          const count = terms.filter((term) => selected.has(term.ja)).length;
+          return (
+            <div key={cat.id} className="rounded-xl bg-[var(--c-surface-2)] border border-[var(--c-border)] overflow-hidden">
+              <button
+                type="button"
+                onClick={() => setOpenId(open ? null : cat.id)}
+                aria-expanded={open}
+                className="w-full flex items-center justify-between gap-3 px-3 py-2 text-left"
+              >
+                <span className="flex items-center gap-2 text-[12px] text-[var(--c-text)]">
+                  <span className="w-2 h-2 rounded-full shrink-0" style={{ backgroundColor: cat.color }} />
+                  {t(cat.ja)}
+                  {count > 0 && <span className="text-[11px] text-[var(--accent)] font-medium">{count}</span>}
+                </span>
+                <ChevronDown size={14} className={`shrink-0 text-[var(--accent-label)] transition-transform ${open ? "rotate-180" : ""}`} />
+              </button>
+              {open && (
+                <div className="px-3 pb-3 pt-2 flex flex-wrap gap-2 border-t border-[var(--c-border)]">
+                  {terms.map((term) => (
+                    <FilterChip key={term.ja} opt={term.ja} active={selected.has(term.ja)} onToggle={onToggle} dotColor={cat.color} />
+                  ))}
+                </div>
+              )}
+            </div>
+          );
+        })}
       </div>
     </div>
   );
@@ -182,7 +236,7 @@ export function FilterSheet({
   const selectSingle = (dim, value) => setFilters((prev) => ({ ...prev, [dim]: value }));
 
   const clearAll = () =>
-    setFilters({ country: "", prefecture: "", flavorCategory: new Set(), minRating: 0 });
+    setFilters({ country: "", prefecture: "", flavor: new Set(), minRating: 0 });
 
   return (
     <div
@@ -230,13 +284,7 @@ export function FilterSheet({
             </select>
           </div>
 
-          <FilterSection
-            title={t("風味カテゴリ(フレーバーホイール)")}
-            options={FLAVOR_CATEGORY_OPTIONS}
-            selected={filters.flavorCategory}
-            onToggle={(v) => toggle("flavorCategory", v)}
-            getColor={(opt) => FLAVOR_WHEEL_DATA.find((c) => c.ja === opt)?.color}
-          />
+          <FlavorFilter selected={filters.flavor} onToggle={(v) => toggle("flavor", v)} />
 
           <div>
             <div className="flex items-center justify-between mb-2">

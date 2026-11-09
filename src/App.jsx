@@ -6,7 +6,7 @@ import { SHOPS } from "./data/shops";
 import { EVENTS } from "./data/events";
 import { TRIVIA_SUB_TABS } from "./data/navigation";
 import { ORIGIN_GUIDE } from "./data/originGuide";
-import { categorizeFlavorNotes } from "./utils/flavor";
+import { analyzeFlavorNotes } from "./utils/flavor";
 import { loadRemoteData } from "./data/remote";
 import { sortByDistance, sortNewArrivalsFirst, sortByRecency, pickRandomDisplaySet, filterByFavoriteArea, shuffle, sortShopsByDistance, filterShopsByFavoriteArea } from "./utils/productSort";
 import { buildPrefectureRank, sortByPrefecturePopularity } from "./utils/prefectureOrder";
@@ -126,13 +126,13 @@ export default function CoffeeProductList() {
   const [tastingLogProduct, setTastingLogProduct] = useState(null);
   const [compareModalOpen, setCompareModalOpen] = useState(false);
   // country/prefectureは単一選択のプルダウンのため空文字列("")が未選択を表す。
-  // flavorCategoryのみ複数選択(チップ)のままなのでSetで持つ。焙煎度フィルタは
+  // flavor(風味の大分類・詳細分類。どちらも名前をそのまま入れる)のみ複数選択(チップ)のままなのでSetで持つ。焙煎度フィルタは
   // 実データではほぼ機能しない(roastSelectable商品が62.5%を占め、どの焙煎度を
   // 選んでも同じ結果になっていた)ため廃止した。
   const [filters, setFilters] = useState({
     country: "",
     prefecture: "",
-    flavorCategory: new Set(),
+    flavor: new Set(),
     // 自分がつけた★評価の下限(0=指定なし、1〜5=★N以上)
     minRating: 0,
   });
@@ -238,7 +238,7 @@ export default function CoffeeProductList() {
     setFilters({
       country,
       prefecture: "",
-      flavorCategory: new Set(),
+      flavor: new Set(),
       minRating: 0,
     });
     setSelectedShop(null);
@@ -248,7 +248,7 @@ export default function CoffeeProductList() {
   const activeCount =
     (filters.country ? 1 : 0) +
     (filters.prefecture ? 1 : 0) +
-    filters.flavorCategory.size +
+    filters.flavor.size +
     (filters.minRating ? 1 : 0);
 
   const filtered = useMemo(() => {
@@ -267,9 +267,11 @@ export default function CoffeeProductList() {
       }
       if (filters.prefecture && p.prefecture !== filters.prefecture) return false;
       if (filters.minRating && getRating(p.id) < filters.minRating) return false;
-      if (filters.flavorCategory.size) {
-        const productCats = categorizeFlavorNotes(p.flavorNotes).map((c) => c.ja);
-        const hasMatch = productCats.some((ja) => filters.flavorCategory.has(ja));
+      if (filters.flavor.size) {
+        // 大分類(カテゴリ名)・詳細分類(語)のどれかに該当すればヒット
+        const analysis = analyzeFlavorNotes(p.flavorNotes);
+        const hasMatch =
+          analysis.categories.some((c) => filters.flavor.has(c.ja)) || analysis.terms.some((x) => filters.flavor.has(x.ja));
         if (!hasMatch) return false;
       }
       if (q) {
@@ -410,7 +412,7 @@ export default function CoffeeProductList() {
   const activeChips = [
     ...(filters.country ? [{ dim: "country", v: filters.country }] : []),
     ...(filters.prefecture ? [{ dim: "prefecture", v: filters.prefecture }] : []),
-    ...[...filters.flavorCategory].map((v) => ({ dim: "flavorCategory", v })),
+    ...[...filters.flavor].map((v) => ({ dim: "flavor", v })),
     ...(filters.minRating ? [{ dim: "minRating", v: t("★{n}以上", { n: filters.minRating }) }] : []),
   ];
 

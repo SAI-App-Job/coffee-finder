@@ -9,7 +9,8 @@
     "lint": "oxlint",
     "i18n:check": "node scripts/check-i18n.js",
     "sources:check": "node scripts/check-sources.js",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "flavor:check": "node scripts/check-flavor-vocab.js"
   },
   "dependencies": {
     "leaflet": "^1.9.4",

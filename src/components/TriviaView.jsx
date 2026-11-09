@@ -1,5 +1,4 @@
 import { SectionHeading } from "./common";
-import { FlavorWheelView } from "./FlavorWheelView";
 import { GlossaryView } from "./GlossaryView";
 import { DesignatedBrandsView } from "./DesignatedBrandsView";
 import { VarietyGuideView } from "./VarietyGuideView";
@@ -15,7 +14,6 @@ export function TriviaView({ subTab, onLearnOrigin, events }) {
         <SectionHeading en="Trivia" ja="豆知識" />
       </div>
 
-      {subTab === "flavorWheel" && <FlavorWheelView />}
       {subTab === "glossary" && <GlossaryView />}
       {subTab === "brands" && <DesignatedBrandsView onLearnOrigin={onLearnOrigin} />}
       {subTab === "variety" && <VarietyGuideView />}

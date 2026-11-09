@@ -1,16 +1,41 @@
-import { FLAVOR_TERM_INDEX } from "../data/flavorWheel";
+import { findAffirmedWord } from "./flavorMatch";
+import { FLAVOR_TERM_ENTRIES, FLAVOR_CATEGORY_WORDS, FLAVOR_CATEGORIES } from "../data/flavorVocabulary";
 
-export function categorizeFlavorNotes(text) {
-  if (!text) return [];
+// 商品のテイスティングノート(説明文)から、風味の詳細(語)とカテゴリを判定する。
+// terms: 説明文に載っていた語 { ja, en, cat, generic, word(見つかった表記) }(カテゴリ→語の順)
+// categories: 分類されたカテゴリ(語が見つかったカテゴリ+カテゴリ全体の別表記だけで分類されたもの)
+// categoryOnly: 語は特定できず、カテゴリだけに分類されたもの
+const cache = new Map();
+export function analyzeFlavorNotes(text) {
+  if (!text) return { terms: [], categories: [], categoryOnly: [] };
+  const hit = cache.get(text);
+  if (hit) return hit;
   const lower = text.toLowerCase();
-  const matched = [];
-  for (const { term, cat } of FLAVOR_TERM_INDEX) {
-    if (lower.includes(term) && !matched.find((c) => c.en === cat.en)) {
-      matched.push(cat);
-    }
+  const terms = [];
+  for (const e of FLAVOR_TERM_ENTRIES) {
+    const word = findAffirmedWord(lower, e.words);
+    if (word) terms.push({ ja: e.ja, en: e.en, cat: e.cat, generic: e.generic, word });
   }
-  return matched;
+  const withTerm = new Set(terms.map((t) => t.cat.id));
+  const generalWords = new Set(FLAVOR_CATEGORY_WORDS.filter(({ words }) => findAffirmedWord(lower, words)).map(({ cat }) => cat.id));
+  const categories = FLAVOR_CATEGORIES.filter((c) => withTerm.has(c.id) || generalWords.has(c.id));
+  const categoryOnly = categories.filter((c) => !withTerm.has(c.id));
+  const result = { terms, categories, categoryOnly };
+  if (cache.size > 5000) cache.clear();
+  cache.set(text, result);
+  return result;
 }
+
+// 一覧カードに並べる順: 特定の語 → 一般的な語 → 語を特定できなかったカテゴリ
+export function flavorTagItems(analysis) {
+  return [
+    ...analysis.terms.filter((x) => !x.generic).map((x) => ({ key: `t:${x.ja}`, label: x.ja, cat: x.cat, word: x.word })),
+    ...analysis.terms.filter((x) => x.generic).map((x) => ({ key: `t:${x.ja}`, label: x.ja, cat: x.cat, word: x.word })),
+    ...analysis.categoryOnly.map((c) => ({ key: `c:${c.id}`, label: c.ja, cat: c, word: null })),
+  ];
+}
+
+export const categorizeFlavorNotes = (text) => analyzeFlavorNotes(text).categories;
 
 // 評価済み商品のflavorNotesを星の数で重み付けして集計し、フレーバー
 // カテゴリごとの好み傾向スコアを算出する。1商品が複数カテゴリに

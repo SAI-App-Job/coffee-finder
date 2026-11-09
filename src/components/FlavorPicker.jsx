@@ -1,19 +1,10 @@
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
-import { FLAVOR_WHEEL_DATA } from "../data/flavorWheel";
+import { FLAVOR_CATEGORIES, flavorCategoryOf, flavorTermColor, isCurrentFlavorTerm } from "../data/flavorVocabulary";
 import { useT } from "../i18n";
 
-// 用語 → 大分類の色。記録に保存するのは用語(例: "糖蜜")だけで、色は表示時に引く。
-const TERM_COLOR = (() => {
-  const map = new Map();
-  FLAVOR_WHEEL_DATA.forEach((cat) => {
-    cat.sub.forEach((s) => s.terms.forEach((t) => !map.has(t) && map.set(t, cat.color)));
-  });
-  return map;
-})();
-
-// 色の末尾に透明度(`33`等)を付けて使うため、変数ではなく16進の固定色で返す
-const termColor = (term) => TERM_COLOR.get(term) ?? "#8b7361";
+// 色の末尾に透明度(`33`等)を付けて使うため、変数ではなく16進の固定色で返す(語の色は flavorVocabulary)
+const termColor = flavorTermColor;
 
 // 分類の色を背景に塗ったときに、コントラストが高くなる方の文字色(白/濃い茶)を返す。
 // 分類色は明るいもの(ゴールド等)から暗いもの(ロースト)まであるため、テーマとは無関係に色から決める。
@@ -47,14 +38,39 @@ export function FlavorChips({ flavors }) {
   );
 }
 
-// 豆知識タブのフレーバーホイールと同じ9大分類・詳細項目から、複数の風味を選ぶ入力部品。
+// アプリ独自の風味語彙(data/flavorVocabulary.json)から、複数の風味を選ぶ入力部品。
 // value: 選択中の用語の配列、onChange: 新しい配列を受け取る。
+// 旧い語彙で記録した語(選択肢に無い語)も、選択中なら所属カテゴリの中に出して、外せるようにする。
 export function FlavorPicker({ value, onChange }) {
   const t = useT();
   const [openCat, setOpenCat] = useState(null);
 
   const toggle = (term) => {
     onChange(value.includes(term) ? value.filter((t) => t !== term) : [...value, term]);
+  };
+
+  // 選択中の旧い語を、カテゴリごとに(所属が無い語は別枠に)分ける
+  const retired = value.filter((term) => !isCurrentFlavorTerm(term));
+  const retiredIn = (cat) => retired.filter((term) => flavorCategoryOf(term)?.id === cat.id);
+  const homeless = retired.filter((term) => !flavorCategoryOf(term));
+
+  const TermButton = ({ term, cat }) => {
+    const selected = value.includes(term);
+    return (
+      <button
+        type="button"
+        onClick={() => toggle(term)}
+        aria-pressed={selected}
+        className={`text-[12px] px-2.5 py-1 rounded-full border transition-colors ${
+          selected
+            ? "font-medium"
+            : "bg-[var(--c-surface)] text-[var(--accent-muted)] border-[var(--c-border)] hover:border-[var(--accent-label)]"
+        }`}
+        style={selected ? { backgroundColor: cat.color, borderColor: cat.color, color: readableOn(cat.color) } : undefined}
+      >
+        {t(term)}
+      </button>
+    );
   };
 
   return (
@@ -71,21 +87,19 @@ export function FlavorPicker({ value, onChange }) {
           </button>
         </div>
       )}
-      {FLAVOR_WHEEL_DATA.map((cat) => {
-        const open = openCat === cat.en;
-        const selectedCount = cat.sub.reduce(
-          (n, s) => n + s.terms.filter((t) => value.includes(t)).length,
-          0
-        );
+      {FLAVOR_CATEGORIES.map((cat) => {
+        const open = openCat === cat.id;
+        const extra = retiredIn(cat);
+        const selectedCount = cat.terms.filter((term) => value.includes(term.ja)).length + extra.length;
         return (
           <div
-            key={cat.en}
+            key={cat.id}
             className="rounded-xl bg-[var(--c-surface-2)] border overflow-hidden"
             style={{ borderColor: open || selectedCount > 0 ? cat.color : "var(--c-border)" }}
           >
             <button
               type="button"
-              onClick={() => setOpenCat(open ? null : cat.en)}
+              onClick={() => setOpenCat(open ? null : cat.id)}
               aria-expanded={open}
               className="w-full flex items-center justify-between gap-3 px-3 py-2.5 text-left"
             >
@@ -107,42 +121,23 @@ export function FlavorPicker({ value, onChange }) {
               />
             </button>
             {open && (
-              <div className="px-3 pb-3 pt-2.5 flex flex-col gap-2.5 border-t border-[var(--c-border)]">
-                {cat.sub.map((s) => (
-                  <div key={s.group}>
-                    <p className="text-[11px] text-[var(--c-text-3)] mb-1">{t(s.group)}</p>
-                    <div className="flex flex-wrap gap-1.5">
-                      {s.terms.map((term) => {
-                        const selected = value.includes(term);
-                        return (
-                          <button
-                            key={term}
-                            type="button"
-                            onClick={() => toggle(term)}
-                            aria-pressed={selected}
-                            className={`text-[12px] px-2.5 py-1 rounded-full border transition-colors ${
-                              selected
-                                ? "font-medium"
-                                : "bg-[var(--c-surface)] text-[var(--accent-muted)] border-[var(--c-border)] hover:border-[var(--accent-label)]"
-                            }`}
-                            style={
-                              selected
-                                ? { backgroundColor: cat.color, borderColor: cat.color, color: readableOn(cat.color) }
-                                : undefined
-                            }
-                          >
-                            {t(term)}
-                          </button>
-                        );
-                      })}
-                    </div>
-                  </div>
+              <div className="px-3 pb-3 pt-2.5 flex flex-wrap gap-1.5 border-t border-[var(--c-border)]">
+                {[...cat.terms.map((term) => term.ja), ...extra].map((term) => (
+                  <TermButton key={term} term={term} cat={cat} />
                 ))}
               </div>
             )}
           </div>
         );
       })}
+      {homeless.length > 0 && (
+        <div className="flex flex-wrap items-center gap-1.5">
+          <span className="text-[11px] text-[var(--c-text-3)]">{t("以前の記録の語")}</span>
+          {homeless.map((term) => (
+            <TermButton key={term} term={term} cat={{ color: termColor(term) }} />
+          ))}
+        </div>
+      )}
     </div>
   );
 }

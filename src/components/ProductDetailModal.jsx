@@ -1,7 +1,7 @@
 import { X, MapPin, ExternalLink, Heart, ArrowLeftRight, Check, Coffee, Sparkles, NotebookPen } from "lucide-react";
 import { brandName, designatedBrandExplanation, processingExplanation } from "../data/localize";
 import { getGradeExplanation, getGradeExplanationKey } from "../utils/grade";
-import { categorizeFlavorNotes } from "../utils/flavor";
+import { analyzeFlavorNotes } from "../utils/flavor";
 import { cityFromAddress, formatPrice } from "../utils/format";
 import { isNewArrival } from "../utils/productSort";
 import { StarRating, SourceLinks } from "./common";
@@ -51,7 +51,8 @@ export function ProductDetailModal({
     : null;
   const gradeKey = gradeDetail ? getGradeExplanationKey(product.grade, product.originCountry, product.designatedBrand) : null;
   const brandExplanation = product.designatedBrand ? designatedBrandExplanation(product.designatedBrand) : null;
-  const flavorCategories = categorizeFlavorNotes(product.flavorNotes);
+  const flavor = analyzeFlavorNotes(product.flavorNotes);
+  const flavorCategories = flavor.categories;
   const favorited = isFavorite?.(product.id) ?? false;
   const comparing = isComparing?.(product.id) ?? false;
   const blendCountries = product.blendComponents?.length
@@ -167,16 +168,27 @@ export function ProductDetailModal({
             <div>
               <p className="text-[11px] tracking-wide text-[var(--accent-label)] uppercase mb-1">{t("フレーバーノート")}</p>
               <p className="text-[13px] text-[var(--c-text)] mb-1.5">{product.flavorNotes}</p>
-              <div className="flex flex-wrap gap-1.5">
-                {flavorCategories.map((cat) => (
-                  <span
-                    key={cat.en}
-                    className="flex items-center gap-1.5 text-[11px] px-2 py-0.5 rounded-full bg-[var(--c-surface-2)] text-[var(--accent-muted)] border border-[var(--c-border)]"
-                  >
-                    <span className="w-1.5 h-1.5 rounded-full shrink-0" style={{ backgroundColor: cat.color }} />
-                    {t(cat.ja)}
-                  </span>
-                ))}
+              <div className="flex flex-col gap-2">
+                {flavorCategories.map((cat) => {
+                  const terms = flavor.terms.filter((x) => x.cat.id === cat.id);
+                  return (
+                    <div key={cat.en} className="flex flex-wrap items-center gap-1.5">
+                      <span className="flex items-center gap-1.5 text-[11px] text-[var(--c-text-3)] mr-1">
+                        <span className="w-1.5 h-1.5 rounded-full shrink-0" style={{ backgroundColor: cat.color }} />
+                        {t(cat.ja)}
+                      </span>
+                      {terms.map((x) => (
+                        <span
+                          key={x.ja}
+                          className="text-[11px] px-2 py-0.5 rounded-full border text-[var(--c-text)]"
+                          style={{ borderColor: cat.color, backgroundColor: `${cat.color}33` }}
+                        >
+                          {t(x.ja)}
+                        </span>
+                      ))}
+                    </div>
+                  );
+                })}
               </div>
             </div>
           )}

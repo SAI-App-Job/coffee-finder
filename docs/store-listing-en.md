@@ -40,7 +40,7 @@ Coffee Finder brings together more than 1,800 small roasting shops and over 25,0
 
 FIND
 • Search by product, origin, brand, shop, address, or nearest station
-• Filter by origin country, flavor category (based on the SCA/WCR flavor wheel), prefecture, and your own star ratings
+• Filter by origin country, flavor category (the app's own classification), prefecture, and your own star ratings
 • Sort by distance from you, your registered area, newly listed beans, or at random for a little serendipity
 • Open any shop in Google Maps
 
@@ -56,7 +56,7 @@ STAY UPDATED
 • Compare beans side by side
 
 LEARN
-• Trivia: glossary, designated brands, coffee varieties, brewing guide, events, and competitions (restore "flavor wheel" here once its sources have been re-verified)
+• Trivia: glossary, designated brands, coffee varieties, brewing guide, events, and competitions
 • An origin map with guides to major coffee-producing countries
 
 PRIVATE BY DESIGN

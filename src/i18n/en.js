@@ -1,4 +1,5 @@
 import { GLOSSARY_CATEGORIES_EN } from "../data/en/trivia.js";
+import { FLAVOR_EN } from "../data/flavorVocabulary.js";
 
 // 英語の辞書(キー = 日本語の文、値 = 英語)。
 // - 文の中の {name} は、そのまま残す(呼び出し側が値を入れる)。
@@ -250,7 +251,10 @@ const UI = {
   "注文時に選択": "Chosen when ordering",
   "注文時選択": "Chosen when ordering",
   "フレーバーノート": "Flavor notes",
-  "フレーバーホイール": "Flavor wheel",
+  "風味カテゴリ": "Flavor category",
+  "風味(大分類・詳細分類)": "Flavor (category / specific note)",
+  "詳細な風味から選ぶ": "Pick specific flavors",
+  "以前の記録の語": "Earlier terms",
   "ブレンドの構成(産地別)": "Blend composition (by origin)",
   "農園: {v}": "Farm: {v}",
   "生産者: {v}": "Producer: {v}",
@@ -266,8 +270,11 @@ const UI = {
   "別の話を見る": "See another fact",
   "この精選方法についての解説はまだ用意されていません。": "No explanation is available yet for this processing method.",
   "この銘柄についての解説はまだ用意されていません。": "No explanation is available yet for this brand.",
-  "テイスティングノート「{notes}」から、SCA/WCRフレーバーホイールの「{cat}」カテゴリに該当すると自動分類。":
-    "Automatically classified into the \"{cat}\" category of the SCA/WCR flavor wheel based on the tasting note \"{notes}\".",
+  "テイスティングノート「{notes}」から、アプリ独自の風味カテゴリ「{cat}」に該当すると自動分類。":
+    "Automatically classified into the app's own flavor category \"{cat}\" based on the tasting note \"{notes}\".",
+  "テイスティングノート「{notes}」に「{word}」の記載があるため、アプリ独自の風味カテゴリ「{cat}」の「{term}」に自動分類。":
+    "Automatically classified as \"{term}\" in the app's own flavor category \"{cat}\", because the tasting note \"{notes}\" mentions \"{word}\".",
+  "ほか{n}件": "+{n} more",
 
   // ---- 比較 ----
   "比較リスト {count}件": "Compare list: {count}",
@@ -281,7 +288,6 @@ const UI = {
 
   // ---- 絞り込み ----
   "産地(国)": "Origin (country)",
-  "風味カテゴリ(フレーバーホイール)": "Flavor category (flavor wheel)",
   "自分の評価(★)": "My rating (★)",
   "選んだ星の数以上の評価をつけた商品だけを表示します(同じ星をもう一度押すと解除)": "Shows only products you rated at or above the selected stars (tap the same star again to clear)",
   "都道府県": "Prefecture",
@@ -455,34 +461,8 @@ const PROCESSING = {
   "インフューズド": "Infused", "インフューズドハニー": "Infused honey",
 };
 
-// フレーバーホイール(大分類・グループ・用語)
-const FLAVOR = {
-  "フルーティー": "Fruity", "フローラル": "Floral", "スイート/甘み": "Sweet", "ナッツ/カカオ": "Nutty / Cocoa",
-  "スパイス": "Spices", "ロースト": "Roasted", "グリーン/野菜っぽさ": "Green / Vegetative", "酸味/発酵": "Sour / Fermented", "その他": "Other",
-  "ベリー": "Berry", "ドライフルーツ": "Dried fruit", "その他フルーツ": "Other fruit", "柑橘": "Citrus", "花": "Flowers",
-  "ブラウンシュガー系": "Brown sugar", "バニラ系": "Vanilla", "ナッツ": "Nuts", "カカオ": "Cocoa", "刺激的な香り": "Pungent",
-  "褐色系スパイス": "Brown spice", "たばこ系": "Tobacco", "焦げ": "Burnt", "穀物系": "Cereal", "青っぽさ": "Green notes",
-  "豆っぽさ": "Beany", "酸味": "Sour", "発酵系": "Fermented", "紙っぽさ/カビっぽさ": "Papery / Musty", "ケミカル": "Chemical",
-  "その他の要素": "Other elements",
-  "ブラックベリー": "Blackberry", "ラズベリー": "Raspberry", "ブルーベリー": "Blueberry", "イチゴ": "Strawberry",
-  "レーズン": "Raisin", "プルーン": "Prune", "ココナッツ": "Coconut", "チェリー": "Cherry", "ザクロ": "Pomegranate",
-  "パイナップル": "Pineapple", "ぶどう": "Grape", "リンゴ": "Apple", "桃": "Peach", "洋梨": "Pear",
-  "グレープフルーツ": "Grapefruit", "オレンジ": "Orange", "レモン": "Lemon", "ライム": "Lime",
-  "カモミール": "Chamomile", "ローズ": "Rose", "ジャスミン": "Jasmine",
-  "糖蜜": "Molasses", "メープルシロップ": "Maple syrup", "カラメル": "Caramel", "はちみつ": "Honey",
-  "バニラ": "Vanilla", "バニリン": "Vanillin", "全体的な甘さ": "Overall sweetness", "甘い香り": "Sweet aromatics", "紅茶": "Black tea",
-  "ピーナッツ": "Peanuts", "ヘーゼルナッツ": "Hazelnut", "アーモンド": "Almond", "チョコレート": "Chocolate", "ダークチョコレート": "Dark chocolate",
-  "ピリッとした香り": "Pungent", "ペッパー": "Pepper", "アニス": "Anise", "ナツメグ": "Nutmeg", "クローブ": "Clove",
-  "パイプたばこ": "Pipe tobacco", "たばこ": "Tobacco", "刺激臭": "Acrid", "灰っぽさ": "Ashy", "スモーキー": "Smoky", "ロースト香": "Brown roast",
-  "穀物": "Grain", "麦芽": "Malt", "未熟": "Underripe", "さやえんどう": "Peapod", "フレッシュ": "Fresh", "濃い緑": "Dark green",
-  "野菜っぽさ": "Vegetative", "干し草様": "Hay-like", "ハーブ様": "Herb-like", "豆様": "Beany",
-  "酸っぱい香り": "Sour aromatics", "酢酸": "Acetic acid", "酪酸": "Butyric acid", "イソ吉草酸": "Isovaleric acid",
-  "クエン酸": "Citric acid", "リンゴ酸": "Malic acid", "ワインのような": "Winey", "ウイスキーのような": "Whiskey-like",
-  "発酵": "Fermented", "過熟": "Overripe", "古紙様": "Stale", "段ボール様": "Cardboard-like", "紙様": "Papery", "木質様": "Woody",
-  "カビ様": "Moldy", "埃っぽい": "Dusty", "土っぽい": "Earthy", "苦味": "Bitter", "塩味": "Salty",
-  "薬品様": "Medicinal", "石油様": "Petroleum-like", "スカンク様": "Skunky", "ゴム様": "Rubber-like", "動物臭": "Animalic",
-  "肉様/だし様": "Meaty / Brothy", "フェノール様": "Phenolic", "オリーブオイル様": "Olive oil-like",
-};
+// 風味語彙(カテゴリ・語・旧い語)は src/data/flavorVocabulary.json から作る
+const FLAVOR = FLAVOR_EN;
 
 // 都道府県
 const PREFECTURES = {
@@ -613,10 +593,6 @@ const CONTENT = {
   "味わい: {v}": "Taste: {v}",
   "科学論文(ScienceDirect, Nature Scientific Reports 等)の抽出動態研究": "Studies of extraction kinetics in scientific papers (ScienceDirect, Nature Scientific Reports, etc.)",
   "代表的な4つの抽出方法と、豆の焙煎度との相性をまとめました。": "A summary of four representative brewing methods and how well each suits different roast levels.",
-  "SCA(スペシャルティコーヒー協会)とWCR(ワールドコーヒーリサーチ)が2016年に共同開発した、コーヒーの風味を語るための共通言語。9つの大分類をタップすると、含まれる具体的な表現が開きます。":
-    "A common language for talking about coffee flavor, developed jointly in 2016 by the SCA (Specialty Coffee Association) and WCR (World Coffee Research). Tap one of the nine main categories to open the specific expressions it contains.",
-  "円形の公式図(SCA/WCR著作物)はそのまま複製せず、公開されている用語データを独自のカード形式に再構成しています。実際の円形の図はSCAの公式サイトで確認・購入できます。":
-    "The official circular chart (a work of the SCA/WCR) is not reproduced as is; the publicly available term data has been restructured into this app's own card format. The actual circular chart can be viewed and purchased on the SCA's official website.",
   "精選方法・焙煎度・グレードなど、コーヒー豆選びに役立つ基礎用語をまとめました。": "A summary of basic terms useful for choosing coffee beans, such as processing method, roast level and grade.",
   "WCR(ワールドコーヒーリサーチ)の品種カタログを基に、系統ごとの特徴をまとめました。": "A summary of the characteristics of each lineage, based on the variety catalog of WCR (World Coffee Research).",
   "World Coffee Research(worldcoffeeresearch.org)品種カタログ": "World Coffee Research (worldcoffeeresearch.org) variety catalog",

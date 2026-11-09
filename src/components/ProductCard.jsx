@@ -5,7 +5,7 @@ import { SourceLinks } from "./common";
 import { brandName, designatedBrandExplanation, localizeFact, processingExplanation } from "../data/localize";
 import { ORIGIN_GUIDE } from "../data/originGuide";
 import { getGradeExplanation, getGradeExplanationKey } from "../utils/grade";
-import { categorizeFlavorNotes } from "../utils/flavor";
+import { analyzeFlavorNotes, flavorTagItems } from "../utils/flavor";
 import { cityFromAddress, formatDate, formatPrice } from "../utils/format";
 import { isNewArrival } from "../utils/productSort";
 import { useT } from "../i18n";
@@ -138,6 +138,9 @@ export function HoverExplainTag({ label, category, detail, sourceKeys }) {
   );
 }
 
+// 一覧カードに出す風味タグの最大数(残りは詳細画面で見られる)
+const FLAVOR_TAG_LIMIT = 6;
+
 // savedAt: コレクションに保存した日時(コレクション画面でだけ渡す)
 function ProductCardImpl({ product, onOpenMap, onLearnOrigin, isFavorite, onToggleFavorite, onOpenDetail, savedAt }) {
   const t = useT();
@@ -149,7 +152,8 @@ function ProductCardImpl({ product, onOpenMap, onLearnOrigin, isFavorite, onTogg
   const brandExplanation = product.designatedBrand ? designatedBrandExplanation(product.designatedBrand) : null;
   const brandSourceKeys = brandExplanation ? [`brand:${product.designatedBrand}`] : [];
   const processingSourceKeys = processingDetail ? [`processing:${product.processingMethod}`] : [];
-  const flavorCategories = categorizeFlavorNotes(product.flavorNotes);
+  const flavorTags = flavorTagItems(analyzeFlavorNotes(product.flavorNotes));
+  const flavorTagsShown = flavorTags.slice(0, FLAVOR_TAG_LIMIT);
   // 産地タブに詳細ページが無い国は、ボタン自体は表示したままグレーアウトする
   // (非表示にすると「情報が無いこと」自体が伝わらないため)。実際の遷移可否・
   // 未収録時のトースト表示はApp.jsxのlearnAboutOrigin側で一元的に判定する。
@@ -270,19 +274,28 @@ function ProductCardImpl({ product, onOpenMap, onLearnOrigin, isFavorite, onTogg
                 {t("焙煎 {roast}", { roast: t(roastTag) })}
               </span>
             )}
-            {flavorCategories.map((cat) => (
+            {flavorTagsShown.map((item) => (
               <HoverExplainTag
-                key={cat.en}
+                key={item.key}
                 label={
                   <span className="flex items-center gap-1.5">
-                    <span className="w-1.5 h-1.5 rounded-full shrink-0" style={{ backgroundColor: cat.color }} />
-                    {t(cat.ja)}
+                    <span className="w-1.5 h-1.5 rounded-full shrink-0" style={{ backgroundColor: item.cat.color }} />
+                    {t(item.label)}
                   </span>
                 }
-                category={t("フレーバーホイール")}
-                detail={t("テイスティングノート「{notes}」から、SCA/WCRフレーバーホイールの「{cat}」カテゴリに該当すると自動分類。", { notes: product.flavorNotes, cat: cat.en })}
+                category={t(item.cat.ja)}
+                detail={
+                  item.word
+                    ? t("テイスティングノート「{notes}」に「{word}」の記載があるため、アプリ独自の風味カテゴリ「{cat}」の「{term}」に自動分類。", { notes: product.flavorNotes, word: item.word, cat: t(item.cat.ja), term: t(item.label) })
+                    : t("テイスティングノート「{notes}」から、アプリ独自の風味カテゴリ「{cat}」に該当すると自動分類。", { notes: product.flavorNotes, cat: t(item.cat.ja) })
+                }
               />
             ))}
+            {flavorTags.length > flavorTagsShown.length && (
+              <span className="text-[11px] px-1 py-0.5 text-[var(--c-text-3)]">
+                {t("ほか{n}件", { n: flavorTags.length - flavorTagsShown.length })}
+              </span>
+            )}
             {staticTags.map((tag) => (
               // farmNoteは店舗によって数百字の自由記述になり得るため(例:
               // COFFEE ROASTERY MEGUROの産地解説)、一覧カードでは1行に

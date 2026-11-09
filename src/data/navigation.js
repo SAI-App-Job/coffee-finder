@@ -6,7 +6,6 @@ import {
   Bell,
   User,
   BookOpen,
-  Palette,
   Tag,
   Dna,
   Droplet,
@@ -23,7 +22,6 @@ import {
 // という2つの入れ物に対応)。
 // popupLabel: 下部メニューの子メニュー(1項目76px幅)で、ラベルが長いときの改行位置。
 export const TRIVIA_SUB_TABS = [
-  { id: "flavorWheel", icon: Palette, ja: "フレーバーホイール", popupLabel: "フレーバー\nホイール", en: "Flavor Wheel" },
   { id: "glossary", icon: BookOpen, ja: "用語解説", en: "Glossary" },
   { id: "brands", icon: Tag, ja: "特定銘柄", en: "Designated Brands" },
   { id: "variety", icon: Dna, ja: "品種", en: "Varieties" },

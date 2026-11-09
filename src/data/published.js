@@ -27,7 +27,6 @@ import {
   brandItem,
   processingItem,
   competitionItem,
-  flavorWheelItem,
   proseItem,
 } from "./ledger/items";
 import { PROSE } from "./ledger/prose";
@@ -96,8 +95,6 @@ export function publishedProcessing(name) {
   };
 }
 
-export const IS_FLAVOR_WHEEL_PUBLISHED = ok(flavorWheelItem());
-
 // 台帳のキー(出典の表示に使う)
 export const factKey = (f) => factItem(f).key;
 export const glossaryKey = (g) => glossaryItem(g).key;
@@ -106,7 +103,6 @@ export const extractionKey = (v) => extractionItem(v).key;
 export const diagnosisKey = (d) => diagnosisItem(d).key;
 export const varietyKey = (v) => varietyItem(v).key;
 export const brandKey = (b) => brandItem(b).key;
-export const FLAVOR_WHEEL_KEY = flavorWheelItem().key;
 
 /**
  * 産地ガイドの1か国分。出典を確認できていない項目は取り除く(空になる)。

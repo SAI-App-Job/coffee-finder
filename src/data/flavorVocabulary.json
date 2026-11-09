@@ -1,0 +1,992 @@
+{
+  "_readme": "アプリ独自の風味語彙。ここを書き換えると、入力の選択肢・検索の絞り込み・商品の自動分類・英語表示が変わる。手順は docs/flavor-vocabulary.md。検査: npm run flavor:check",
+  "_origin": "アプリ独自の分類(SCA/WCRのホイールの構造・用語一覧は使っていない)。語は、商品説明(2026-11-10時点で24,849件)での出現数と、日本語で一般に使われる表現から選んだ。",
+  "neutralColor": "#8B7361",
+  "categories": [
+    {
+      "id": "fruit",
+      "ja": "果実",
+      "en": "Fruit",
+      "color": "#EE6C4D",
+      "match": [
+        "フルーツ",
+        "フルーティ",
+        "fruity",
+        "fruit"
+      ],
+      "terms": [
+        {
+          "ja": "ベリー",
+          "en": "Berry",
+          "match": [
+            "berry"
+          ]
+        },
+        {
+          "ja": "チェリー",
+          "en": "Cherry",
+          "match": [
+            "cherry",
+            "さくらんぼ"
+          ]
+        },
+        {
+          "ja": "オレンジ",
+          "en": "Orange",
+          "match": [
+            "orange",
+            "みかん",
+            "蜜柑"
+          ]
+        },
+        {
+          "ja": "柑橘",
+          "en": "Citrus",
+          "match": [
+            "citrus",
+            "シトラス"
+          ]
+        },
+        {
+          "ja": "レモン",
+          "en": "Lemon",
+          "match": [
+            "lemon"
+          ]
+        },
+        {
+          "ja": "桃",
+          "en": "Peach",
+          "match": [
+            "peach",
+            "ピーチ"
+          ]
+        },
+        {
+          "ja": "リンゴ",
+          "en": "Apple",
+          "match": [
+            "apple",
+            "アップル",
+            "りんご"
+          ]
+        },
+        {
+          "ja": "グレープフルーツ",
+          "en": "Grapefruit",
+          "match": [
+            "grapefruit"
+          ]
+        },
+        {
+          "ja": "ブルーベリー",
+          "en": "Blueberry",
+          "match": [
+            "blueberry"
+          ]
+        },
+        {
+          "ja": "イチゴ",
+          "en": "Strawberry",
+          "match": [
+            "strawberry",
+            "ストロベリー",
+            "いちご"
+          ]
+        },
+        {
+          "ja": "カシス",
+          "en": "Blackcurrant",
+          "match": [
+            "blackcurrant",
+            "ブラックカラント"
+          ]
+        },
+        {
+          "ja": "アプリコット",
+          "en": "Apricot",
+          "match": [
+            "apricot",
+            "あんず"
+          ]
+        },
+        {
+          "ja": "トロピカルフルーツ",
+          "en": "Tropical fruit",
+          "match": [
+            "トロピカル",
+            "tropical"
+          ]
+        },
+        {
+          "ja": "ラズベリー",
+          "en": "Raspberry",
+          "match": [
+            "raspberry"
+          ]
+        },
+        {
+          "ja": "マンゴー",
+          "en": "Mango",
+          "match": [
+            "mango"
+          ]
+        },
+        {
+          "ja": "マスカット",
+          "en": "Muscat grape",
+          "match": [
+            "muscat"
+          ]
+        },
+        {
+          "ja": "ぶどう",
+          "en": "Grape",
+          "match": [
+            "grape",
+            "グレープ",
+            "ブドウ"
+          ]
+        },
+        {
+          "ja": "ライチ",
+          "en": "Lychee",
+          "match": [
+            "lychee"
+          ]
+        },
+        {
+          "ja": "ライム",
+          "en": "Lime",
+          "match": [
+            "lime"
+          ]
+        },
+        {
+          "ja": "パイナップル",
+          "en": "Pineapple",
+          "match": [
+            "pineapple"
+          ]
+        },
+        {
+          "ja": "レーズン",
+          "en": "Raisin",
+          "match": [
+            "raisin"
+          ]
+        },
+        {
+          "ja": "ドライフルーツ",
+          "en": "Dried fruit"
+        },
+        {
+          "ja": "バナナ",
+          "en": "Banana"
+        },
+        {
+          "ja": "メロン",
+          "en": "Melon"
+        },
+        {
+          "ja": "プルーン",
+          "en": "Prune"
+        },
+        {
+          "ja": "ブラックベリー",
+          "en": "Blackberry",
+          "match": [
+            "blackberry"
+          ]
+        },
+        {
+          "ja": "パッションフルーツ",
+          "en": "Passion fruit"
+        },
+        {
+          "ja": "洋梨",
+          "en": "Pear",
+          "match": [
+            "洋ナシ"
+          ]
+        },
+        {
+          "ja": "クランベリー",
+          "en": "Cranberry",
+          "match": [
+            "cranberry"
+          ]
+        },
+        {
+          "ja": "ココナッツ",
+          "en": "Coconut",
+          "match": [
+            "coconut"
+          ]
+        },
+        {
+          "ja": "梅",
+          "en": "Ume plum"
+        },
+        {
+          "ja": "いちじく",
+          "en": "Fig",
+          "match": [
+            "イチジク",
+            "fig"
+          ]
+        },
+        {
+          "ja": "柚子",
+          "en": "Yuzu",
+          "match": [
+            "ゆず",
+            "yuzu"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "floral",
+      "ja": "花・お茶",
+      "en": "Floral & Tea",
+      "color": "#B565A7",
+      "match": [
+        "フローラル",
+        "floral",
+        "花の香"
+      ],
+      "terms": [
+        {
+          "ja": "フローラル",
+          "en": "Floral"
+        },
+        {
+          "ja": "紅茶",
+          "en": "Black tea"
+        },
+        {
+          "ja": "ジャスミン",
+          "en": "Jasmine",
+          "match": [
+            "jasmine"
+          ]
+        },
+        {
+          "ja": "ベルガモット",
+          "en": "Bergamot",
+          "match": [
+            "bergamot"
+          ]
+        },
+        {
+          "ja": "アールグレイ",
+          "en": "Earl Grey",
+          "match": [
+            "earl grey"
+          ]
+        },
+        {
+          "ja": "ローズ",
+          "en": "Rose",
+          "match": [
+            "rose",
+            "薔薇"
+          ]
+        },
+        {
+          "ja": "カモミール",
+          "en": "Chamomile"
+        },
+        {
+          "ja": "ラベンダー",
+          "en": "Lavender"
+        },
+        {
+          "ja": "緑茶",
+          "en": "Green tea",
+          "match": [
+            "green tea"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sweet",
+      "ja": "甘み",
+      "en": "Sweetness",
+      "color": "#F0A530",
+      "match": [],
+      "terms": [
+        {
+          "ja": "甘さ",
+          "en": "Sweetness",
+          "match": [
+            "甘み",
+            "甘い",
+            "甘く",
+            "sweet"
+          ],
+          "generic": true
+        },
+        {
+          "ja": "キャラメル",
+          "en": "Caramel",
+          "match": [
+            "caramel",
+            "カラメル"
+          ]
+        },
+        {
+          "ja": "ブラウンシュガー",
+          "en": "Brown sugar",
+          "match": [
+            "brown sugar"
+          ]
+        },
+        {
+          "ja": "黒糖",
+          "en": "Dark brown sugar"
+        },
+        {
+          "ja": "はちみつ",
+          "en": "Honey",
+          "match": [
+            "honey",
+            "ハチミツ",
+            "蜂蜜"
+          ]
+        },
+        {
+          "ja": "シロップ",
+          "en": "Syrup"
+        },
+        {
+          "ja": "バニラ",
+          "en": "Vanilla",
+          "match": [
+            "vanilla"
+          ]
+        },
+        {
+          "ja": "メープル",
+          "en": "Maple",
+          "match": [
+            "maple",
+            "メープルシロップ"
+          ]
+        },
+        {
+          "ja": "糖蜜",
+          "en": "Molasses",
+          "match": [
+            "molasses"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "nutcocoa",
+      "ja": "チョコ・ナッツ",
+      "en": "Chocolate & Nuts",
+      "color": "#7A4A2B",
+      "match": [
+        "cocoa",
+        "nutty"
+      ],
+      "terms": [
+        {
+          "ja": "チョコレート",
+          "en": "Chocolate",
+          "match": [
+            "chocolate",
+            "チョコ"
+          ]
+        },
+        {
+          "ja": "ナッツ",
+          "en": "Nuts",
+          "match": [
+            "nut"
+          ]
+        },
+        {
+          "ja": "カカオ",
+          "en": "Cacao",
+          "match": [
+            "cocoa",
+            "cacao",
+            "ココア"
+          ]
+        },
+        {
+          "ja": "ミルクチョコ",
+          "en": "Milk chocolate"
+        },
+        {
+          "ja": "ダークチョコレート",
+          "en": "Dark chocolate",
+          "match": [
+            "ダークチョコ"
+          ]
+        },
+        {
+          "ja": "アーモンド",
+          "en": "Almond",
+          "match": [
+            "almond"
+          ]
+        },
+        {
+          "ja": "ヘーゼルナッツ",
+          "en": "Hazelnut",
+          "match": [
+            "hazelnut"
+          ]
+        },
+        {
+          "ja": "クルミ",
+          "en": "Walnut",
+          "match": [
+            "くるみ",
+            "walnut"
+          ]
+        },
+        {
+          "ja": "ピーナッツ",
+          "en": "Peanut",
+          "match": [
+            "peanut"
+          ]
+        },
+        {
+          "ja": "カシューナッツ",
+          "en": "Cashew"
+        },
+        {
+          "ja": "ピスタチオ",
+          "en": "Pistachio"
+        }
+      ]
+    },
+    {
+      "id": "spice",
+      "ja": "スパイス",
+      "en": "Spice",
+      "color": "#9E2A2B",
+      "match": [
+        "スパイス",
+        "spice"
+      ],
+      "terms": [
+        {
+          "ja": "スパイシー",
+          "en": "Spicy",
+          "match": [
+            "spicy"
+          ]
+        },
+        {
+          "ja": "シナモン",
+          "en": "Cinnamon",
+          "match": [
+            "cinnamon"
+          ]
+        },
+        {
+          "ja": "クローブ",
+          "en": "Clove",
+          "match": [
+            "clove"
+          ]
+        },
+        {
+          "ja": "ペッパー",
+          "en": "Pepper",
+          "match": [
+            "pepper",
+            "胡椒",
+            "コショウ"
+          ]
+        },
+        {
+          "ja": "ナツメグ",
+          "en": "Nutmeg",
+          "match": [
+            "nutmeg"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "roast",
+      "ja": "香ばしさ",
+      "en": "Roasty",
+      "color": "#4A3426",
+      "match": [
+        "roasted"
+      ],
+      "terms": [
+        {
+          "ja": "香ばしい",
+          "en": "Toasty aroma",
+          "match": [
+            "香ばしさ",
+            "香ばし"
+          ]
+        },
+        {
+          "ja": "ロースト感",
+          "en": "Roasted note",
+          "match": [
+            "ロースト香",
+            "ローストの香"
+          ]
+        },
+        {
+          "ja": "スモーキー",
+          "en": "Smoky",
+          "match": [
+            "smoky",
+            "燻製",
+            "燻した"
+          ]
+        },
+        {
+          "ja": "ビター",
+          "en": "Bitter",
+          "match": [
+            "bitter"
+          ]
+        },
+        {
+          "ja": "トースト",
+          "en": "Toast",
+          "match": [
+            "toast"
+          ]
+        },
+        {
+          "ja": "焦げ",
+          "en": "Burnt"
+        },
+        {
+          "ja": "麦芽",
+          "en": "Malt",
+          "match": [
+            "malt",
+            "モルト"
+          ]
+        },
+        {
+          "ja": "穀物",
+          "en": "Grain"
+        },
+        {
+          "ja": "たばこ",
+          "en": "Tobacco",
+          "match": [
+            "tobacco",
+            "タバコ"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "herbal",
+      "ja": "ハーブ・青み",
+      "en": "Herbal & Green",
+      "color": "#5E9E6E",
+      "match": [
+        "herbal",
+        "grassy",
+        "vegetal",
+        "青み",
+        "青っぽ"
+      ],
+      "terms": [
+        {
+          "ja": "ハーブ",
+          "en": "Herb",
+          "match": [
+            "herb"
+          ]
+        },
+        {
+          "ja": "グリーン",
+          "en": "Green"
+        },
+        {
+          "ja": "草っぽい",
+          "en": "Grassy",
+          "match": [
+            "草っぽ",
+            "青草"
+          ]
+        },
+        {
+          "ja": "ミント",
+          "en": "Mint",
+          "match": [
+            "mint"
+          ]
+        },
+        {
+          "ja": "ウッディ",
+          "en": "Woody",
+          "match": [
+            "wood",
+            "木の香"
+          ]
+        },
+        {
+          "ja": "土っぽい",
+          "en": "Earthy",
+          "match": [
+            "earthy",
+            "アーシー",
+            "土の香"
+          ]
+        },
+        {
+          "ja": "野菜っぽい",
+          "en": "Vegetal",
+          "match": [
+            "野菜っぽ"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sour",
+      "ja": "酸味・発酵",
+      "en": "Acidity & Ferment",
+      "color": "#D4B83A",
+      "match": [],
+      "terms": [
+        {
+          "ja": "酸味",
+          "en": "Acidity",
+          "match": [
+            "酸っぱ",
+            "acidity"
+          ],
+          "generic": true,
+          "auto": false
+        },
+        {
+          "ja": "爽やか",
+          "en": "Refreshing",
+          "match": [
+            "爽快"
+          ],
+          "generic": true
+        },
+        {
+          "ja": "フレッシュ",
+          "en": "Fresh",
+          "match": [
+            "fresh"
+          ]
+        },
+        {
+          "ja": "明るい酸味",
+          "en": "Bright acidity",
+          "match": [
+            "bright"
+          ],
+          "auto": false
+        },
+        {
+          "ja": "ワイン",
+          "en": "Wine",
+          "match": [
+            "wine",
+            "winey",
+            "ワイニー"
+          ]
+        },
+        {
+          "ja": "発酵",
+          "en": "Fermented",
+          "match": [
+            "ferment"
+          ]
+        },
+        {
+          "ja": "ウイスキー",
+          "en": "Whiskey",
+          "match": [
+            "whiskey",
+            "whisky"
+          ]
+        },
+        {
+          "ja": "ラム酒",
+          "en": "Rum",
+          "match": [
+            "rum"
+          ]
+        },
+        {
+          "ja": "ブランデー",
+          "en": "Brandy"
+        },
+        {
+          "ja": "熟成",
+          "en": "Aged"
+        }
+      ]
+    },
+    {
+      "id": "texture",
+      "ja": "質感・後味",
+      "en": "Mouthfeel & Finish",
+      "color": "#4F86A8",
+      "match": [],
+      "terms": [
+        {
+          "ja": "コク",
+          "en": "Richness",
+          "generic": true
+        },
+        {
+          "ja": "まろやか",
+          "en": "Mellow",
+          "match": [
+            "mellow",
+            "マイルド"
+          ]
+        },
+        {
+          "ja": "クリーン",
+          "en": "Clean",
+          "match": [
+            "clean",
+            "クリア"
+          ]
+        },
+        {
+          "ja": "すっきり",
+          "en": "Crisp"
+        },
+        {
+          "ja": "ジューシー",
+          "en": "Juicy",
+          "match": [
+            "juicy",
+            "みずみずしい"
+          ]
+        },
+        {
+          "ja": "なめらか",
+          "en": "Smooth",
+          "match": [
+            "滑らか",
+            "smooth",
+            "シルキー",
+            "silky"
+          ]
+        },
+        {
+          "ja": "軽やか",
+          "en": "Light",
+          "match": [
+            "軽快"
+          ]
+        },
+        {
+          "ja": "重厚",
+          "en": "Heavy",
+          "match": [
+            "ヘビー"
+          ]
+        },
+        {
+          "ja": "余韻",
+          "en": "Lingering finish",
+          "match": [
+            "後味",
+            "aftertaste"
+          ],
+          "generic": true
+        },
+        {
+          "ja": "キレ",
+          "en": "Snappy finish"
+        },
+        {
+          "ja": "クリーミー",
+          "en": "Creamy",
+          "match": [
+            "creamy"
+          ]
+        }
+      ]
+    }
+  ],
+  "legacy": {
+    "ザクロ": {
+      "category": "fruit",
+      "en": "Pomegranate"
+    },
+    "メープルシロップ": {
+      "category": "sweet",
+      "en": "Maple syrup"
+    },
+    "カラメル": {
+      "category": "sweet",
+      "en": "Caramel"
+    },
+    "バニリン": {
+      "category": "sweet",
+      "en": "Vanillin"
+    },
+    "全体的な甘さ": {
+      "category": "sweet",
+      "en": "Overall sweetness"
+    },
+    "甘い香り": {
+      "category": "sweet",
+      "en": "Sweet aromatics"
+    },
+    "ピリッとした香り": {
+      "category": "spice",
+      "en": "Pungent"
+    },
+    "アニス": {
+      "category": "spice",
+      "en": "Anise"
+    },
+    "パイプたばこ": {
+      "category": "roast",
+      "en": "Pipe tobacco"
+    },
+    "刺激臭": {
+      "category": "roast",
+      "en": "Acrid"
+    },
+    "灰っぽさ": {
+      "category": "roast",
+      "en": "Ashy"
+    },
+    "ロースト香": {
+      "category": "roast",
+      "en": "Brown roast"
+    },
+    "未熟": {
+      "category": "herbal",
+      "en": "Underripe"
+    },
+    "さやえんどう": {
+      "category": "herbal",
+      "en": "Peapod"
+    },
+    "濃い緑": {
+      "category": "herbal",
+      "en": "Dark green"
+    },
+    "野菜っぽさ": {
+      "category": "herbal",
+      "en": "Vegetative"
+    },
+    "干し草様": {
+      "category": "herbal",
+      "en": "Hay-like"
+    },
+    "ハーブ様": {
+      "category": "herbal",
+      "en": "Herb-like"
+    },
+    "豆様": {
+      "category": "herbal",
+      "en": "Beany"
+    },
+    "酸っぱい香り": {
+      "category": "sour",
+      "en": "Sour aromatics"
+    },
+    "酢酸": {
+      "category": "sour",
+      "en": "Acetic acid"
+    },
+    "酪酸": {
+      "category": "sour",
+      "en": "Butyric acid"
+    },
+    "イソ吉草酸": {
+      "category": "sour",
+      "en": "Isovaleric acid"
+    },
+    "クエン酸": {
+      "category": "sour",
+      "en": "Citric acid"
+    },
+    "リンゴ酸": {
+      "category": "sour",
+      "en": "Malic acid"
+    },
+    "ワインのような": {
+      "category": "sour",
+      "en": "Winey"
+    },
+    "ウイスキーのような": {
+      "category": "sour",
+      "en": "Whiskey-like"
+    },
+    "過熟": {
+      "category": "sour",
+      "en": "Overripe"
+    },
+    "古紙様": {
+      "en": "Stale"
+    },
+    "段ボール様": {
+      "en": "Cardboard-like"
+    },
+    "紙様": {
+      "en": "Papery"
+    },
+    "木質様": {
+      "category": "herbal",
+      "en": "Woody"
+    },
+    "カビ様": {
+      "en": "Moldy"
+    },
+    "埃っぽい": {
+      "en": "Dusty"
+    },
+    "苦味": {
+      "category": "roast",
+      "en": "Bitter"
+    },
+    "塩味": {
+      "en": "Salty"
+    },
+    "薬品様": {
+      "en": "Medicinal"
+    },
+    "石油様": {
+      "en": "Petroleum-like"
+    },
+    "スカンク様": {
+      "en": "Skunky"
+    },
+    "ゴム様": {
+      "en": "Rubber-like"
+    },
+    "動物臭": {
+      "en": "Animalic"
+    },
+    "肉様/だし様": {
+      "en": "Meaty / Brothy"
+    },
+    "フェノール様": {
+      "en": "Phenolic"
+    },
+    "オリーブオイル様": {
+      "en": "Olive oil-like"
+    }
+  }
+}

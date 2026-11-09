@@ -9,7 +9,6 @@ import { DESIGNATED_BRANDS } from "../designatedBrands";
 import { PROCESSING_EXPLANATIONS, DESIGNATED_BRAND_EXPLANATIONS } from "../explanations";
 import { JAPAN_COMPETITIONS } from "../japanCompetitions";
 import { EVENTS } from "../events";
-import { FLAVOR_WHEEL_DATA } from "../flavorWheel";
 import { GRADE_EXPLANATION_TEMPLATES } from "../../utils/grade";
 import { PROSE } from "./prose";
 
@@ -52,7 +51,6 @@ export const eventItem = (e) => ({
   text: [e.name, e.venue ?? "", e.dateRange ?? "", e.note ?? ""].join("\n"),
 });
 export const proseItem = (id) => ({ key: `prose:${id}`, text: PROSE[id] });
-export const flavorWheelItem = () => ({ key: "flavorwheel:all", text: JSON.stringify(FLAVOR_WHEEL_DATA) });
 
 /** 台帳が必要な記述を、すべて列挙する(検査スクリプト用)。 */
 export function allItems() {
@@ -78,7 +76,6 @@ export function allItems() {
     });
   });
   EVENTS.forEach((e) => items.push(eventItem(e)));
-  items.push(flavorWheelItem());
   Object.keys(PROSE).forEach((id) => items.push(proseItem(id)));
   return items;
 }
