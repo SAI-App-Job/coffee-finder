@@ -1,0 +1,1906 @@
+{
+  "scope": "origin-3: ORIGIN_GUIDE ルワンダ・エルサルバドル",
+  "verifiedOn": "2026-11-08",
+  "sources": {
+    "asamblea-decreto-835-2023": {
+      "title": "Decreto N°. 835 - Ley del Instituto Salvadoreño del Café (2023-08-29, D.O. N° 167, Tomo 440, 2023-09-08)",
+      "org": "Asamblea Legislativa de la República de El Salvador",
+      "url": "https://www.asamblea.gob.sv/sites/default/files/documents/decretos/4B8D61A9-F597-4643-BCD9-ABB2D99A4F4E.pdf",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": "curlでPDFを取得しpypdfで全17ページを抽出して通読。FAOLEX(faolex.fao.org/docs/pdf/els235114.pdf)の写しと本文は同一。"
+    },
+    "fao-faolex-decreto-965-2024": {
+      "title": "Decreto No. 965 - Ley Especial para la Comercialización, Registro y Protección de la Propiedad del Café (2024-03-12, D.O. N° 63, Tomo 443, 2024-04-05)",
+      "org": "Asamblea Legislativa de El Salvador (FAO FAOLEX掲載の原文PDF)",
+      "url": "http://faolex.fao.org/docs/pdf/els235128.pdf",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": "法令原文PDFをFAO FAOLEXから取得(全18ページをpypdfで抽出)。asamblea.gob.sv上の同法PDFは未取得。2026-04に改正案が可決された(asamblea-prensa-reforma-2026)が、官報公布・施行は未確認で、本文は改正前。"
+    },
+    "asamblea-prensa-ley-cafe-2024": {
+      "title": "Nueva ley facilitará la comercialización del café dentro y fuera del país (2024-03-12)",
+      "org": "Asamblea Legislativa de El Salvador(公式発表)",
+      "url": "https://www.asamblea.gob.sv/node/13122",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": "curlでHTMLを取得して通読。立法議会の公式発表(プレスリリース)。"
+    },
+    "asamblea-prensa-reforma-2026": {
+      "title": "Pleno reforma ley para agilizar exportación de café (2026-04-15)",
+      "org": "Asamblea Legislativa de El Salvador(公式発表)",
+      "url": "https://www.asamblea.gob.sv/node/13917",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": "curlでHTMLを取得して通読。改正の可決報道(プレスリリース)であり、改正法の公布・施行は未確認。"
+    },
+    "osartec-rts-67-08-01-18-wto": {
+      "title": "RTS 67.08.01:18 Café. Café verde (café oro). Requisitos de calidad",
+      "org": "OSARTEC(Organismo Salvadoreño de Reglamentación Técnica)",
+      "url": "https://members.wto.org/crnattachments/2018/SPS/SLV/18_6014_00_s.pdf",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": "WTO SPS通報(2018年)に添付された文書をcurl+pypdfで全11ページ通読。通報時点の文書であり、官報で公布された最終版と同一かは未確認(osartec.gob.svは522エラーで取得失敗)。"
+    },
+    "ico-el-salvador-coffee-profile-2016": {
+      "title": "El Salvador Coffee Profile (Consejo Salvadoreño del Café, ICO 2015-16 presentation)",
+      "org": "International Coffee Organization(提出:Consejo Salvadoreño del Café)",
+      "url": "https://www.ico.org/documents/cy2015-16/Presentations/7.2%20EL%20SALVADOR.pdf",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": "curl+pypdfで全36スライドの本文を抽出(図表の一部は画像で本文なし)。2015/16年時点のデータ。"
+    },
+    "wcr-variety-pacas": {
+      "title": "Varieties Catalog: Pacas",
+      "org": "World Coffee Research",
+      "url": "https://varieties.worldcoffeeresearch.org/varieties/pacas",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": "curlでHTML取得。"
+    },
+    "wcr-variety-pacamara": {
+      "title": "Varieties Catalog: Pacamara",
+      "org": "World Coffee Research",
+      "url": "https://varieties.worldcoffeeresearch.org/varieties/pacamara",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": "curlでHTML取得。"
+    },
+    "wcr-country-el-salvador": {
+      "title": "World Coffee Research | El Salvador",
+      "org": "World Coffee Research",
+      "url": "https://worldcoffeeresearch.org/countries/el-salvador",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": "curlでHTML取得。"
+    },
+    "asamblea-constitucion-sv": {
+      "title": "Constitución de la República de El Salvador (texto de la Asamblea Legislativa)",
+      "org": "Asamblea Legislativa de El Salvador",
+      "url": "https://www.asamblea.gob.sv/sites/default/files/2026-04/1.%20CONSTITUCI%C3%93N%20DE%20LA%20REP%C3%9ABLICA.pdf",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": "curl+pypdfで全60ページ抽出、第105条を通読。"
+    },
+    "coe-el-salvador-2003": {
+      "title": "El Salvador 2003 - Cup of Excellence",
+      "org": "Alliance for Coffee Excellence / Cup of Excellence",
+      "url": "https://cupofexcellence.org/el-salvador-2003/",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": "curlでHTML取得。"
+    },
+    "coe-results-list": {
+      "title": "Competition / Auction Results - Cup of Excellence",
+      "org": "Alliance for Coffee Excellence / Cup of Excellence",
+      "url": "https://cupofexcellence.org/competition-auction-results/",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": "curlでHTML取得。国別の開催年一覧。"
+    },
+    "isc-gob-sv-home": {
+      "title": "ISC 公式サイト isc.gob.sv",
+      "org": "Instituto Salvadoreño del Café",
+      "url": "https://isc.gob.sv/",
+      "kind": "primary",
+      "readMethod": "failed",
+      "accessed": "2026-11-08",
+      "note": "curl: HTTP 403(Cloudflareのボット確認ページ)。回避せず失敗として記録。"
+    },
+    "jurisprudencia-decreto-835": {
+      "title": "Decreto 835 (jurisprudencia.gob.sv)",
+      "org": "Centro de Documentación Judicial",
+      "url": "https://www.jurisprudencia.gob.sv/DocumentosBoveda/D/2/2020-2029/2023/09/FB7A5.PDF",
+      "kind": "primary",
+      "readMethod": "failed",
+      "accessed": "2026-11-08",
+      "note": "curl: HTTP 403(Cloudflare)。asamblea.gob.svの同令PDFを代わりに取得できたが、これは失敗の代用ではなく同一文書の別所蔵として記録。"
+    },
+    "osartec-gob-sv": {
+      "title": "OSARTEC 公式サイト",
+      "org": "OSARTEC",
+      "url": "https://www.osartec.gob.sv/",
+      "kind": "primary",
+      "readMethod": "failed",
+      "accessed": "2026-11-08",
+      "note": "curl: HTTP 522(接続タイムアウト)。"
+    },
+    "usda-fas-gain-el-salvador-2022": {
+      "title": "Coffee Annual San Salvador ES2022-0004",
+      "org": "USDA FAS",
+      "url": "https://apps.fas.usda.gov/newgainapi/api/Report/DownloadReportByFileName?fileName=Coffee+Annual_San+Salvador_El+Salvador_ES2022-0004.pdf",
+      "kind": "primary",
+      "readMethod": "failed",
+      "accessed": "2026-11-08",
+      "note": "curl: 接続できず(HTTP 000)。未読。"
+    },
+    "un-peacekeeping-onusal": {
+      "title": "ONUSAL (UN Peacekeeping)",
+      "org": "United Nations",
+      "url": "https://peacekeeping.un.org/en/mission/onusal",
+      "kind": "primary",
+      "readMethod": "failed",
+      "accessed": "2026-11-08",
+      "note": "curl: HTTP 403。未読。"
+    },
+    "naeb-about-rwanda-coffee": {
+      "title": "About Rwanda coffee",
+      "org": "National Agricultural Export Development Board (NAEB)",
+      "url": "https://www.naeb.gov.rw/rwanda-coffee/about-rwanda-coffee",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": "curlでHTML取得。成長カレンダーの表(Table 1)は画像で本文なし。"
+    },
+    "naeb-overview-read-more": {
+      "title": "NAEB Overview / Read more (mission)",
+      "org": "National Agricultural Export Development Board (NAEB)",
+      "url": "https://www.naeb.gov.rw/about-naeb/overview/read-more",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": "curlでHTML取得。"
+    },
+    "rw-law-13-2017-gazette": {
+      "title": "Law nº 13/2017 of 14/04/2017 establishing NAEB (Official Gazette nº 18 of 01/05/2017)",
+      "org": "Republic of Rwanda(官報)",
+      "url": "https://archive.gazettes.africa/archive/rw/2017/rw-government-gazette-dated-2017-05-01-no-18.pdf",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": "官報第18号(104ページ)をpypdfで抽出し、NAEB法(キニャルワンダ語・英語・仏語の3列)を通読。gazettes.africaのアーカイブ写し。"
+    },
+    "rw-law-39-2010-faolex": {
+      "title": "Law nº 39/2010 of 25/11/2010 establishing NAEB (Official Gazette n°04 of 24/01/2011)",
+      "org": "Republic of Rwanda(官報; FAO FAOLEX掲載の原文PDF)",
+      "url": "http://faolex.fao.org/docs/pdf/rwa105463.pdf",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": "FAOLEXのPDF(15ページ)をpypdfで抽出して通読。"
+    },
+    "ico-icc122-12-national-quality-standards": {
+      "title": "ICC 122-12 National Quality Standards (2018-08-23)",
+      "org": "International Coffee Organization",
+      "url": "https://www.ico.org/documents/cy2017-18/icc-122-12e-national-quality-standards.pdf",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": "curl+pypdfで全35ページ抽出、ルワンダの節(A-18〜A-20)を通読。加盟国の回答を収録した2018年時点の文書で、現行の規格かは未確認。"
+    },
+    "ico-rwanda-coffee-value-chain-2024": {
+      "title": "Rwanda's Coffee Value Chain: Insights into coffee production costs, household actual income, and supply chain efficiency",
+      "org": "International Coffee Organization (ICO CPPTF) / COSA, NAEB協力",
+      "url": "https://ico.org/documents/GKH/Rwanda_.pdf",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": "curl+pypdfで全76ページ抽出。調査標本は13郡43CWSの農家約1,200件規模(標本の範囲を超える一般化は不可)。"
+    },
+    "ico-icc120-7-african-coffee-sector": {
+      "title": "ICC 120-7 The African coffee sector",
+      "org": "International Coffee Organization",
+      "url": "https://www.ico.org/documents/cy2016-17/icc-120-7e-african-coffee-sector.pdf",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": "curl+pypdfで全15ページ抽出。"
+    },
+    "worldbank-rwanda-agri-strategy-1991": {
+      "title": "Rwanda Agricultural Strategy Review (Report No. 87044RW, 1991-05-22)",
+      "org": "World Bank",
+      "url": "https://documents1.worldbank.org/curated/en/669521468105854094/pdf/multi-page.pdf",
+      "kind": "primary",
+      "readMethod": "excerpt",
+      "accessed": "2026-11-08",
+      "note": "全98ページを抽出したがOCR品質が悪く、読んだのは第3段落と5.9節などの抜粋のみ。claimの根拠にはしない(参考)。"
+    },
+    "wcr-country-rwanda": {
+      "title": "World Coffee Research | Rwanda",
+      "org": "World Coffee Research",
+      "url": "https://worldcoffeeresearch.org/countries/rwanda",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": "curlでHTML取得。"
+    },
+    "wcr-variety-rab-c15": {
+      "title": "Varieties Catalog: RAB C15",
+      "org": "World Coffee Research",
+      "url": "https://varieties.worldcoffeeresearch.org/varieties/rab-c15",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": "curlでHTML取得。"
+    },
+    "wcr-variety-mibirizi": {
+      "title": "Varieties Catalog: Mibirizi",
+      "org": "World Coffee Research",
+      "url": "https://varieties.worldcoffeeresearch.org/varieties/mibirizi",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": "curlでHTML取得。"
+    },
+    "meteo-rwanda-climatology": {
+      "title": "Climatology of Rwanda",
+      "org": "Rwanda Meteorology Agency (Meteo Rwanda)",
+      "url": "https://www.meteorwanda.gov.rw/services/climatology-of-rwanda",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": "curlでHTML取得。"
+    },
+    "coe-rwanda-2008": {
+      "title": "Rwanda 2008 - Cup of Excellence",
+      "org": "Alliance for Coffee Excellence / Cup of Excellence",
+      "url": "https://cupofexcellence.org/rwanda-2008/",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": "curlでHTML取得。"
+    },
+    "ace-blog-rwanda-coe-2018": {
+      "title": "After Hiatus, Rwanda Cup of Excellence Returns with 340+ Coffee Submissions (2018-08-23)",
+      "org": "Alliance for Coffee Excellence",
+      "url": "https://allianceforcoffeeexcellence.org/blog/2018/08/23/after-hiatus-rwanda-cup-of-excellence-returns-with-340-coffee-submissions/",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": "curlでHTML取得。"
+    },
+    "coe-farmdir-dukundekawa-musasa-2015": {
+      "title": "Dukundekawa Musasa/Mbirima/Rwashoscco - Rwanda 2015 - Cup of Excellence Farm Directory",
+      "org": "Alliance for Coffee Excellence / Cup of Excellence(農家掲載文)",
+      "url": "https://farmdirectory.cupofexcellence.org/?p=4982",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": "curlでHTML取得。協同組合が提出した紹介文(自己申告)をCoEが掲載したもの。"
+    },
+    "policyvault-naeb-law": {
+      "title": "Law establishing NAEB (policyvault.africa PDF)",
+      "org": "policyvault.africa",
+      "url": "https://policyvault.africa/wp-content/uploads/policy/RWA159.pdf",
+      "kind": "secondary",
+      "readMethod": "failed",
+      "accessed": "2026-11-08",
+      "note": "curl: 接続できず(HTTP 000)。官報PDFを別所蔵(gazettes.africa)から取得できたので代用ではなく別所蔵として扱う。"
+    },
+    "usaid-pearl-spread-docs": {
+      "title": "USAID PEARL / SPREAD project documents",
+      "org": "USAID",
+      "url": "(未取得)",
+      "kind": "primary",
+      "readMethod": "failed",
+      "accessed": "2026-11-08",
+      "note": "検索で一次文書(pdf.usaid.gov / dec.usaid.gov)に到達できず。PEARL・SPREADに関する記述は二次資料(大学・報道・小売)でしか見つからず、本検証では根拠にしていない。"
+    }
+  },
+  "entries": {
+    "origin:エルサルバドル:tagline": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "ブルボン種が栽培品種の大きな割合(ブルボン62%、パカス31%、パカマラ2%、その他5%)を占める",
+          "status": "verified",
+          "sourceIds": [
+            "ico-el-salvador-coffee-profile-2016"
+          ],
+          "quote": "VARIETIES Bourbon Pacas Pacamara Otros 62% 31% 2% 5%",
+          "location": "スライド10 VARIETIES",
+          "note": "凡例の並びと数値の並びから対応づけ(図の凡例)。同スライド11の山系別表でも Bourbon が最多。2015/16年時点。"
+        },
+        {
+          "text": "内戦を経て伝統品種ブルボンが『残った』(内戦と品種残存の因果関係)",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "一次資料で因果関係を確認できず。ICOスライドは『1980 Production fell for internal civil strife』のみ。"
+        },
+        {
+          "text": "カップが『上品でバランスの取れた』味わい",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "官能評価に関する公式文書の根拠なし(宣伝的表現)。"
+        }
+      ],
+      "suggestedText": "伝統品種のブルボンが栽培品種の6割余りを占める、エルサルバドル(ICO資料、2015/16年時点)。",
+      "note": "英訳も同じ主張(差異なし)。キャッチコピーのため味の評価は一次資料で裏付けできない。"
+    },
+    "origin:エルサルバドル:regions": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "アパネカ・イラマテペック(Apaneca-Ilamatepec)はコーヒー産地(山系)の一つ",
+          "status": "verified",
+          "sourceIds": [
+            "ico-el-salvador-coffee-profile-2016"
+          ],
+          "quote": "Mountain range Apaneca-Ilamatepec 64.2% Borbón",
+          "location": "スライド11 Main Coffee-producing Areas",
+          "note": "ICOスライドは6つの山系産地を載せる: Apaneca-Ilamatepec / El Bálsamo-Quezaltepec / Chichontepec / Tecapa-Chinameca / Cacahuatique / Alotepec-Metapán。"
+        },
+        {
+          "text": "『サンタアナ』が独立した産地区分である",
+          "status": "unverified",
+          "sourceIds": [
+            "ico-el-salvador-coffee-profile-2016"
+          ],
+          "quote": "",
+          "location": "",
+          "note": "ICOの6山系に『Santa Ana』は無い(サンタアナは県名・火山名。Apaneca-Ilamatepec山系の中にある可能性が高いが、この資料では確認できない)。"
+        },
+        {
+          "text": "『テカパ・チチョンテペック』という一つの産地区分がある",
+          "status": "incorrect",
+          "sourceIds": [
+            "ico-el-salvador-coffee-profile-2016"
+          ],
+          "quote": "Mountain range Chichontepec 71.7% Borbón … Mountain range Tecapa-Chinameca 69.5% Borbón",
+          "location": "スライド11",
+          "note": "原文ではChichontepecとTecapa-Chinamecaは別々の山系。『Tecapa-Chichontepec』という区分は原文に無い。"
+        }
+      ],
+      "suggestedText": "アパネカ・イラマテペック、エル・バルサモ・ケサルテペック、チチョンテペック、テカパ・チナメカ、カカワティケ、アロテペク・メタパンの6山系(ICO資料、2015/16年時点)。",
+      "note": "ICO資料はConsejo Salvadoreño del Café提出の2015/16年時点のスライド。英訳も日本語と同じ産地列挙。主要産地だけを挙げる意図なら『アパネカ・イラマテペック、エル・バルサモ・ケサルテペック、テカパ・チナメカ』等に直す必要がある(面積順)。"
+    },
+    "origin:エルサルバドル:terroir": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "国内の標高区分はSHG(1,201m超)、HG(801〜1,200m)、CS(800m以下)",
+          "status": "verified",
+          "sourceIds": [
+            "osartec-rts-67-08-01-18-wto"
+          ],
+          "quote": "a) café producido hasta 800 m.s.n.m.; Central Estándar o CS; b) café producido de 801 a 1 200 m.s.n.m.; Media Altura o HG; c) café producido a más de 1 201 m.s.n.m.; Estricta Altura o SHG.",
+          "location": "5.1.1 Altitud",
+          "note": "原文はSHGを『más de 1 201』(1,201m超)とする。アプリの『1,201m以上』とは境界が1m違う。ICOスライド9はSHG>1,200m、HG 800〜1,200m、CS 600〜800mとしており、区分の下限・境界に資料間の差がある(RTSの方が法規の文言)。"
+        },
+        {
+          "text": "格付けは標高『基準』(RTSの分類は標高・精選方法・欠点数の3基準)",
+          "status": "verified",
+          "sourceIds": [
+            "osartec-rts-67-08-01-18-wto"
+          ],
+          "quote": "La clasificación y designación se basan en tres criterios: altitud, método de beneficiado y número de imperfecciones.",
+          "location": "5.1",
+          "note": "『国内格付けは標高基準』は不完全(標高のほか精選方法・欠点数)。"
+        },
+        {
+          "text": "アパネカ・イラマテペックは標高500〜2,365mで、6山系中、最高標高(上限)の産地",
+          "status": "verified",
+          "sourceIds": [
+            "ico-el-salvador-coffee-profile-2016"
+          ],
+          "quote": "Apaneca-Ilamatepec 64.2% Borbón 25.6% Pacas 10.2% Mixture of Bourbon, Pacas and others From 500 to 2,365 m a.s.l.",
+          "location": "スライド11",
+          "note": "他の山系の上限: Tecapa-Chinameca 2,139m、Alotepec-Metapán 2,000m、El Bálsamo-Quezaltepec 1,960m、Cacahuatique 1,663m、Chichontepec 1,000m(同表)。"
+        },
+        {
+          "text": "全土に20の火山(一部現役)がある『火山の国』",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式資料で未確認。"
+        },
+        {
+          "text": "火山性土壌・豊富な日照と降雨に恵まれる",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式資料で未確認。"
+        }
+      ],
+      "suggestedText": "国内の標高区分はSHG(1,201m超)、HG(801〜1,200m)、CS(800m以下)で、格付けは標高のほか精選方法と欠点数の3基準による(RTS 67.08.01:18)。アパネカ・イラマテペックは標高500〜2,365mで、ICO資料に載る6山系の中で最も高い上限を持つ。",
+      "note": "火山の数・土壌・日照・降雨の記述は根拠が取れず除外。英訳は日本語と同じ主張(差異なし)。RTSはWTO通報版を読んだ(最終公布版との同一性は未確認)。"
+    },
+    "origin:エルサルバドル:harvestSeason": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "収穫期は10月から翌3月",
+          "status": "verified",
+          "sourceIds": [
+            "ico-el-salvador-coffee-profile-2016"
+          ],
+          "quote": "COFEE SEASON: Seeding Harvesting Management activities June-July October - March Permanent",
+          "location": "スライド13",
+          "note": "アプリは『概ね11月〜翌3月』で始期が1か月ずれる。月別生産量(スライド15)でも10月に出荷がある(60kg袋: 2010/11年産35,960、2012/13年産140,735)。"
+        },
+        {
+          "text": "ピークは12〜2月",
+          "status": "incorrect",
+          "sourceIds": [
+            "ico-el-salvador-coffee-profile-2016"
+          ],
+          "quote": "MONTH 2010/11 2011/12 2012/13 2013/14 2014/15 2015/16 October 35,960 101,170 140,735 9,475 62,740 35,410 November 386,275 328,485 407,115 54,685 193,400 193,390 December 561,250 361,525 380,935 214,210 221,390 161,890 January 379,365 231,755 185,310 147,180 121,185 83,565 February 189,480",
+          "location": "スライド15 VOLUME OF PRODUCTION",
+          "note": "6年産の月別生産量では、最大月は11月または12月で、2月は11〜1月よりかなり小さい。ピークは概ね11月〜1月。"
+        }
+      ],
+      "suggestedText": "収穫期は概ね10月から翌3月(ICO資料)。月別の生産量は11月〜1月が大きい(2010/11〜2015/16年産)。",
+      "note": "英訳も同じ主張(差異なし)。出典は2015/16年時点で、年産により変動する。"
+    },
+    "origin:エルサルバドル:varietiesDetail": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "ブルボン種が過半(約6割)を占める",
+          "status": "verified",
+          "sourceIds": [
+            "ico-el-salvador-coffee-profile-2016"
+          ],
+          "quote": "VARIETIES Bourbon Pacas Pacamara Otros 62% 31% 2% 5%",
+          "location": "スライド10",
+          "note": "62%(2015/16年時点)。『資料により5〜6割』のうち根拠を確認できたのは62%。『中米でも突出した比率』は別途未確認。"
+        },
+        {
+          "text": "ブルボン比率は『中米でも突出』している",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "中米他国との比較資料を確認していない。"
+        },
+        {
+          "text": "パカス種は約25%を占める",
+          "status": "conflict",
+          "sourceIds": [
+            "wcr-variety-pacas",
+            "ico-el-salvador-coffee-profile-2016"
+          ],
+          "quote": "it accounts for about 25% of the country's coffee production … VARIETIES Bourbon Pacas Pacamara Otros 62% 31% 2% 5%",
+          "location": "WCR Pacas History / ICOスライド10",
+          "note": "WCRは約25%、ICO(CSC提出資料)は31%(図の並びから)。公式資料どうしの食い違い。"
+        },
+        {
+          "text": "パカスはブルボンの矮性の自然変異で、国内で1949年に発見された",
+          "status": "verified",
+          "sourceIds": [
+            "wcr-variety-pacas"
+          ],
+          "quote": "Pacas is a natural mutation of Bourbon … The variety was discovered in 1949 on a farm owned by the Pacas family in the Santa Ana region of El Salvador.",
+          "location": "WCR Varieties Catalog: Pacas / History",
+          "note": "サンタアナ地方のパカス家の農園で発見(原文)。"
+        },
+        {
+          "text": "パカマラはパカス×マラゴジッペの交配種で、国内の研究機関(ISIC)で選抜された",
+          "status": "verified",
+          "sourceIds": [
+            "wcr-variety-pacamara"
+          ],
+          "quote": "Originated from a cross between Pacas and Maragogipe. An incomplete pedigree selection was conducted by the Salvadoran Institute of Coffee Research (ISIC).",
+          "location": "WCR Varieties Catalog: Pacamara / History",
+          "note": "『国立コーヒー研究所』という訳は原文に無い(Salvadoran Institute of Coffee Research)。"
+        },
+        {
+          "text": "パカマラの交配は1958年に始まった",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "WCRのPacamara頁に年の記載なし。二次資料のみ(検索結果の断片、読み取り未了)。"
+        },
+        {
+          "text": "パカマラは1992年頃に実用化された",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "確認できず。検索断片では1980年代とする記述もあり、年は不明。"
+        },
+        {
+          "text": "近年、さび病対策として耐病性品種を導入している",
+          "status": "verified",
+          "sourceIds": [
+            "wcr-country-el-salvador"
+          ],
+          "quote": "rust-resistant arabica varieties are increasingly planted following the 2012–13 leaf rust crisis",
+          "location": "WCR El Salvador 概要",
+          "note": "具体的品種名(カティモール・サルチモール等)は原文に無い。"
+        },
+        {
+          "text": "導入されている品種はカティモール・サルチモール等",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "ICOスライド11はAlotepec-Metapánの『その他5%』に Catuaí と Catimor を挙げるのみ。"
+        }
+      ],
+      "suggestedText": "ブルボン種が栽培品種の6割余り(ICO資料、2015/16年時点で62%)を占める。パカスはブルボンの矮性の自然変異で、1949年にサンタアナ地方で発見された。パカマラはパカスとマラゴジッペの交配種で、国内の研究機関ISICが選抜した。近年はさび病対策として耐病性品種が植えられている(WCR)。パカスの割合は資料により25%(WCR)〜31%(ICO)と異なる。",
+      "note": "英訳は日本語と同じ主張。ISICの正式名は、2021年の令第206号の前文では1982年設立の『Instituto Salvadoreño de Investigaciones del Café』とされ、1960年にパカス選抜を始めたとするWCRの記述とも年代の整合は未確認。"
+    },
+    "origin:エルサルバドル:farmStructure": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "生産者の約8割が3.5ヘクタール以下",
+          "status": "verified",
+          "sourceIds": [
+            "ico-el-salvador-coffee-profile-2016"
+          ],
+          "quote": "0.01 a 3.50 ha 10,943 5,987 57 16,987 18,399 … TOTAL 13,269 7,392 877 21,538 132,890",
+          "location": "スライド14 FARM SIZE",
+          "note": "16,987/21,538=78.9%(2015/16年時点)。原文は『0.01〜3.50 ha』で『3.5ha未満』ではない。"
+        },
+        {
+          "text": "別資料では95%が20ヘクタール未満",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "確認できず。ICO表では17.5ha以下が約90.0%、35ha以下が約96.4%で、20ha境界の数字は得られない。"
+        },
+        {
+          "text": "内戦後の土地改革により大農園の分割が進んだ",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "一次資料で確認できず。"
+        },
+        {
+          "text": "1人(自然人・法人)あたりの農地所有上限は245ヘクタール",
+          "status": "verified",
+          "sourceIds": [
+            "asamblea-constitucion-sv"
+          ],
+          "quote": "La extensión máxima de tierra rústica perteneciente a una misma persona natural o jurídica no podrá exceder de doscientas cuarenta y cinco hectáreas. Esta limitación no será aplicable a las asociaciones cooperativas o comunales campesinas.",
+          "location": "憲法第105条",
+          "note": "憲法上の規定。協同組合・農民共同体は適用除外。『250ヘクタール』とする記述は原文に無い。"
+        },
+        {
+          "text": "所有上限は245〜250ヘクタール(250ヘクタールとする根拠)",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "250haは根拠なし。"
+        }
+      ],
+      "suggestedText": "生産者の約8割が3.5ヘクタール以下(ICO資料、2015/16年時点で21,538件中16,987件)。農地の所有上限は、憲法第105条により1人(自然人・法人)あたり245ヘクタール(協同組合・農民共同体は適用除外)。",
+      "note": "英訳は日本語と同じ主張。『内戦後の土地改革』との因果は根拠なしで除外。"
+    },
+    "origin:エルサルバドル:history": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "コーヒーは1740年にエルサルバドルに持ち込まれた(アプリの『18世紀後半に国内消費用として導入』は不正確)",
+          "status": "incorrect",
+          "sourceIds": [
+            "ico-el-salvador-coffee-profile-2016"
+          ],
+          "quote": "COFFEE HISTORY 1740 Coffee brought into El Salvador",
+          "location": "スライド6 COFFEE HISTORY",
+          "note": "1740年は18世紀前半。『国内消費用』という用途は原文に無い。"
+        },
+        {
+          "text": "1855年にエルサルバドル産コーヒーが初めて輸出された",
+          "status": "verified",
+          "sourceIds": [
+            "ico-el-salvador-coffee-profile-2016"
+          ],
+          "quote": "1855 First Export of Salvadoran Coffee",
+          "location": "スライド6",
+          "note": "アプリには無い事実(suggestedText用)。"
+        },
+        {
+          "text": "1880年代にインディゴに代わる主要輸出作物となった",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "ICOスライドは『1864 Economic Take Off』とのみ。インディゴへの言及なし。"
+        },
+        {
+          "text": "1930年に最大の輸出品となった",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "ICOスライドは『1930 Coffee growing, and sowing in new coffee-growing areas』のみ。"
+        },
+        {
+          "text": "1970年代末にGDPの約5割をコーヒーが占めた",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "確認できず。ICO資料のGDP表は2009〜2014年でコーヒーは0.6〜1.6%。1970年代末のデータは本文に無い。"
+        },
+        {
+          "text": "1974/75年産で世界第4位の生産国だった",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "ICOのグラフは本文に順位なし。"
+        },
+        {
+          "text": "1980年に国内の紛争により生産が落ち込んだ",
+          "status": "verified",
+          "sourceIds": [
+            "ico-el-salvador-coffee-profile-2016"
+          ],
+          "quote": "1980 Production fell for internal civil strife",
+          "location": "スライド6",
+          "note": "『内戦が1979〜1992年』『農園の多くが放置された』は原文に無く未確認。"
+        },
+        {
+          "text": "内戦は1979〜1992年",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "UN PKO頁は403で未読(un-peacekeeping-onusal)。"
+        },
+        {
+          "text": "内戦下で農園が手つかずのまま放置された結果、伝統品種が高い比率で温存された(Cafe Imports自身が公表)",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "Cafe Imports(輸入商)の記述で、本検証では原文を読んでいない。因果は一次資料なし。"
+        },
+        {
+          "text": "1992年以降、土地改革と協同組合の再編が進んだ",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "確認できず。"
+        },
+        {
+          "text": "エルサルバドルのカップ・オブ・エクセレンス(COE)は2003年に開催された(ACE結果一覧で最古の開催年)",
+          "status": "verified",
+          "sourceIds": [
+            "coe-results-list",
+            "coe-el-salvador-2003"
+          ],
+          "quote": "El Salvador 2021 2020 2019 2018 2017 2015 2014 2013 2012 2011 2010 2009 2008 2007 2006 2005 2004 2003 Ethiopia",
+          "location": "COE Competition / Auction Results 一覧",
+          "note": "『2003年が近年のスペシャルティ復権のきっかけ』という因果は未確認。"
+        }
+      ],
+      "suggestedText": "コーヒーは1740年にエルサルバドルに持ち込まれ、1855年に初めて輸出された。1980年には国内の紛争のため生産が落ち込んだ。カップ・オブ・エクセレンスはACEの結果一覧で最も古い2003年から開催されている。",
+      "note": "『1880年代』『1930年』『1970年代末GDP約5割』『1974/75年第4位』『内戦の期間』『Cafe Importsの説明』『1992年以降の土地改革』は一次資料で確認できず。英訳は日本語と同じ主張。アプリの本文はCafe Importsの説明をさらに評釈した文になっており、評釈部分は根拠なし。"
+    },
+    "origin:エルサルバドル:sub:アパネカ・イラマテペック": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "標高500〜2,365m(山系の標高範囲)",
+          "status": "verified",
+          "sourceIds": [
+            "ico-el-salvador-coffee-profile-2016"
+          ],
+          "quote": "Apaneca-Ilamatepec 64.2% Borbón 25.6% Pacas 10.2% Mixture of Bourbon, Pacas and others From 500 to 2,365 m a.s.l.",
+          "location": "スライド11",
+          "note": ""
+        },
+        {
+          "text": "国内最高標高(の上限)の産地",
+          "status": "verified",
+          "sourceIds": [
+            "ico-el-salvador-coffee-profile-2016"
+          ],
+          "quote": "Tecapa-Chinameca 69.5% Borbón 22.2% Pacas 8.3% Mixture of Borbón and Pacas From 500 to 2,139 m a.s.l.",
+          "location": "スライド11",
+          "note": "6山系の上限の比較による(Tecapa-Chinamecaなど他は2,139m以下)。"
+        },
+        {
+          "text": "栽培面積は国内最大(66,550ha、50.1%)",
+          "status": "verified",
+          "sourceIds": [
+            "ico-el-salvador-coffee-profile-2016"
+          ],
+          "quote": "66,550 50.1%",
+          "location": "スライド11",
+          "note": "アプリには無い事実(suggestedText用)。"
+        },
+        {
+          "text": "サンタアナ・ソンソナテ・アワチャパン県にまたがる",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "ICOスライドの地図は画像で本文なし。"
+        },
+        {
+          "text": "国内随一の名門産地・火山性土壌",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "根拠なし。"
+        },
+        {
+          "text": "チョコレート・ナッツ・柑橘のバランス型",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "官能評価の公式根拠なし。"
+        }
+      ],
+      "suggestedText": "標高500〜2,365m。ICO資料に載る6山系のうち上限が最も高く、栽培面積も最大(66,550ha、全体の50.1%)。",
+      "note": "英訳は日本語と同じ主張。"
+    },
+    "origin:エルサルバドル:sub:サンタアナ": {
+      "status": "unverified",
+      "claims": [
+        {
+          "text": "サンタアナという産地区分があり、標高500〜2,365m",
+          "status": "unverified",
+          "sourceIds": [
+            "ico-el-salvador-coffee-profile-2016"
+          ],
+          "quote": "",
+          "location": "",
+          "note": "ICOの6山系に『Santa Ana』は無い。500〜2,365mはApaneca-Ilamatepecの数値と同一で、同じ産地の重複記載の可能性が高い。"
+        },
+        {
+          "text": "ウォッシュド中心",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "山系別のウォッシュド比率の資料なし(ICOは全国で96%が水洗式)。"
+        },
+        {
+          "text": "チョコレート・スパイス・ナッツのなめらかなプロファイル",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "根拠なし。"
+        }
+      ],
+      "suggestedText": "",
+      "note": "表示する根拠がない。独立項目としては削除し、Apaneca-Ilamatepecに統合するのが妥当。"
+    },
+    "origin:エルサルバドル:sub:エルバルサモ・ケサルテペック": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "標高500〜1,900m(アプリの数字)",
+          "status": "incorrect",
+          "sourceIds": [
+            "ico-el-salvador-coffee-profile-2016"
+          ],
+          "quote": "Mountain range El Bálsamo-Quezaltepec 51.8% Borbón 22.5% Pacas 25.7% Mixture of Bourbon, Pacas and others From 500 to 1,960 m a.s.l.",
+          "location": "スライド11",
+          "note": "原文は500〜1,960m。"
+        },
+        {
+          "text": "栽培面積は37,545ha(28.3%)で、アパネカ・イラマテペックに次ぐ国内2位",
+          "status": "verified",
+          "sourceIds": [
+            "ico-el-salvador-coffee-profile-2016"
+          ],
+          "quote": "37,545 28.3%",
+          "location": "スライド11",
+          "note": "アプリには無い事実。"
+        },
+        {
+          "text": "ラ・リベルタ/サンサルバドル県",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "未確認。"
+        },
+        {
+          "text": "スムースで甘く、ナッツ/チョコレート系",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "根拠なし。"
+        }
+      ],
+      "suggestedText": "標高500〜1,960m。栽培面積は37,545ha(全体の28.3%)で、アパネカ・イラマテペックに次ぐ(ICO資料、2015/16年時点)。",
+      "note": "英訳は日本語と同じ主張(1,900m)。"
+    },
+    "origin:エルサルバドル:sub:テカパ・チチョンテペック": {
+      "status": "unverified",
+      "claims": [
+        {
+          "text": "Tecapa-Chinamecaは標高500〜2,139m(アプリの『2,130m』は不正確)",
+          "status": "incorrect",
+          "sourceIds": [
+            "ico-el-salvador-coffee-profile-2016"
+          ],
+          "quote": "Mountain range Tecapa-Chinameca 69.5% Borbón 22.2% Pacas 8.3% Mixture of Borbón and Pacas From 500 to 2,139 m a.s.l.",
+          "location": "スライド11",
+          "note": "原文は2,139m。"
+        },
+        {
+          "text": "品種はブルボン69.5%、パカス22.2%、ブルボンとパカスの混植8.3%(アプリの『パカマラ中心』は原文に無い)",
+          "status": "incorrect",
+          "sourceIds": [
+            "ico-el-salvador-coffee-profile-2016"
+          ],
+          "quote": "Mountain range Tecapa-Chinameca 69.5% Borbón 22.2% Pacas 8.3% Mixture of Borbón and Pacas",
+          "location": "スライド11",
+          "note": "表にパカマラの記載なし。"
+        },
+        {
+          "text": "『テカパ・チチョンテペック』は一つの産地である",
+          "status": "incorrect",
+          "sourceIds": [
+            "ico-el-salvador-coffee-profile-2016"
+          ],
+          "quote": "Mountain range Chichontepec 71.7% Borbón 7.4% Pacas 20.9% Mixture of Bourbon, Pacas and others From 500 to 1.000 m a.s.l.",
+          "location": "スライド11",
+          "note": "Chichontepec(500〜1,000m、6,075ha)は別の山系。アプリの『サンビセンテ火山』はChichontepecに関わる記述と思われ、2つを混同している可能性がある(火山名は未確認)。"
+        },
+        {
+          "text": "火山性土壌の甘くフルボディなカップ",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "根拠なし。"
+        }
+      ],
+      "suggestedText": "Tecapa-Chinameca:標高500〜2,139m。品種はブルボン69.5%、パカス22.2%、ブルボンとパカスの混植8.3%。栽培面積15,705ha(11.8%)。Chichontepecは別の山系(標高500〜1,000m)(ICO資料、2015/16年時点)。",
+      "note": "英訳も同じ数字(2,130m、Pacamara)で同じ誤り。"
+    },
+    "origin:エルサルバドル:gradeSystem": {
+      "status": "verified",
+      "claims": [
+        {
+          "text": "OSARTEC(エルサルバドル技術規制機構)のRTS 67.08.01:18が生豆の品質要件を定める",
+          "status": "verified",
+          "sourceIds": [
+            "osartec-rts-67-08-01-18-wto"
+          ],
+          "quote": "CAFÉ. CAFÉ VERDE (CAFÉ ORO). REQUISITOS DE CALIDAD … Editada por el Organismo Salvadoreño de Reglamentación Técnica",
+          "location": "表紙",
+          "note": "WTO SPS通報に添付された文書。最終公布版との同一性は未確認。"
+        },
+        {
+          "text": "分類は標高・精選方法・欠点数の3基準",
+          "status": "verified",
+          "sourceIds": [
+            "osartec-rts-67-08-01-18-wto"
+          ],
+          "quote": "La clasificación y designación se basan en tres criterios: altitud, método de beneficiado y número de imperfecciones.",
+          "location": "5.1",
+          "note": ""
+        },
+        {
+          "text": "標高区分はSHG(Strictly High Grown、1,201m以上)、HG(High Grown、801〜1,200m)、CS(Central Standard、800m以下)の3段階",
+          "status": "verified",
+          "sourceIds": [
+            "osartec-rts-67-08-01-18-wto"
+          ],
+          "quote": "a) café producido hasta 800 m.s.n.m.; Central Estándar o CS; b) café producido de 801 a 1 200 m.s.n.m.; Media Altura o HG; c) café producido a más de 1 201 m.s.n.m.; Estricta Altura o SHG.",
+          "location": "5.1.1",
+          "note": "原文はSHGを『más de 1 201』(超)とする。英名は4.の略語表『SHG (Strictly High Grown): Estricta Altura』等。"
+        },
+        {
+          "text": "運用はかつてCSC(エルサルバドル・コーヒー審議会)が担っていた",
+          "status": "verified",
+          "sourceIds": [
+            "osartec-rts-67-08-01-18-wto"
+          ],
+          "quote": "La vigilancia y verificación del cumplimiento de este Reglamento Técnico Salvadoreño le corresponde al Consejo Salvadoreño del Café",
+          "location": "9.1",
+          "note": ""
+        },
+        {
+          "text": "2023年にISCへ引き継がれた",
+          "status": "verified",
+          "sourceIds": [
+            "asamblea-decreto-835-2023"
+          ],
+          "quote": "Art. 32.- El nuevo Instituto Salvadoreño del Café sucede por ministerio de ley a partir de la vigencia de esta Ley en las funciones, atribuciones, competencias, responsabilidades, derechos y obligaciones que correspondían al Consejo Salvadoreño del Café",
+          "location": "令第835号 第32条",
+          "note": "令は2023-08-29可決、2023-09-08官報公布、公布8日後施行(第44条)。"
+        }
+      ],
+      "suggestedText": "",
+      "note": "全主張verified。RTSはWTO通報版を読んだ。ICOスライド9はCSを600〜800mとするなど下限に差がある。英訳は日本語と同じ主張(差異なし)。"
+    },
+    "origin:エルサルバドル:officialBody": {
+      "status": "verified",
+      "claims": [
+        {
+          "text": "名称はエルサルバドル・コーヒー研究所(Instituto Salvadoreño del Café・ISC)",
+          "status": "verified",
+          "sourceIds": [
+            "asamblea-decreto-835-2023"
+          ],
+          "quote": "Art. 1. - Créase el INSTITUTO SALVADOREÑO DEL CAFÉ , que en lo sucesivo se denominará el “INSTITUTO SALVADOREÑO DEL CAFÉ” , “ISC” o el “Instituto”",
+          "location": "令第835号 第1条",
+          "note": ""
+        },
+        {
+          "text": "2021年に研究・技術支援の機関として新設された",
+          "status": "verified",
+          "sourceIds": [
+            "asamblea-decreto-835-2023"
+          ],
+          "quote": "Que por Decreto Legislativo N°. 206, de fecha 9 de noviembre de 2021, publicado en el Diario Oficial N°. 223, Tomo No. 433, de fecha 23 de ese mismo mes y año, se creó el Instituto Salvadoreño del Café",
+          "location": "令第835号 前文IV",
+          "note": "前文IV: 『ente técnico y científico, rector de las actividades de investigación científica, transferencia de tecnología e innovación aplicables a la caficultura』。2021年令第206号(令の日付2021-11-09、官報2021-11-23)。"
+        },
+        {
+          "text": "2023年8月29日の立法府令第835号(ISC法)で成立した",
+          "status": "verified",
+          "sourceIds": [
+            "asamblea-decreto-835-2023"
+          ],
+          "quote": "DADO EN EL SALÓN AZUL DEL PALACIO LEGISLATIVO: San Salvador, a los veintinueve días del mes de agosto de dos mil veintitrés.",
+          "location": "令第835号 末尾",
+          "note": "8月29日は立法議会の可決日。大統領署名2023-09-04、官報第167号 Tomo 440 2023-09-08公布、公布8日後施行。"
+        },
+        {
+          "text": "同令がCSCと2021年のISCを統合・代替した",
+          "status": "verified",
+          "sourceIds": [
+            "asamblea-decreto-835-2023"
+          ],
+          "quote": "Derógase el Decreto Legislativo N° 353 , de fecha 19 de octubre de 1989, publicada en el Diario Oficial N° 200, Tomo N° 305, del 30 del mismo mes y año, que contiene la Ley de l Consejo Salvadoreño del Café. Asimismo, derógase el Decreto Legislativo N° 206",
+          "location": "令第835号 第31条(第32条: 新ISCがCSCと旧ISCの機能・権限を承継)",
+          "note": "令の条文は『廃止(derógase)』と『承継(sucede)』。『fusiona y sustituye』という語はFAOLEXの要旨にあり令本文には無い。"
+        },
+        {
+          "text": "CSCは1989年設立",
+          "status": "verified",
+          "sourceIds": [
+            "asamblea-decreto-835-2023"
+          ],
+          "quote": "Decreto Legislativo N°. 353, de fecha 19 de octubre de 1989, publicado en el Diario Oficial N°. 200, Tomo N°. 305, de fecha 30 de ese mismo mes y año, se creó el Consejo Salvadoreño del Café",
+          "location": "令第835号 前文III",
+          "note": ""
+        },
+        {
+          "text": "農業省の所管(農業省を通じて行政府と関係する)",
+          "status": "verified",
+          "sourceIds": [
+            "asamblea-decreto-835-2023"
+          ],
+          "quote": "quien se relacionará con el Órgano Ejecutivo a través del Ministerio de Agricultura y Ganadería",
+          "location": "令第835号 第1条",
+          "note": "第7条: 『institución adscrita al Ministerio de Agricultura y Ganadería』。"
+        },
+        {
+          "text": "輸出者は海外販売契約をISCに登録する必要がある",
+          "status": "verified",
+          "sourceIds": [
+            "fao-faolex-decreto-965-2024"
+          ],
+          "quote": "Los exportadores deberán inscribir sus contratos de venta externa en el ISC.",
+          "location": "令第965号(2024年) 第8条末尾、第30条",
+          "note": "令第965号は2024-03-12可決、官報第63号 2024-04-05。2026-04に契約通知期限などを改める改正が可決された(asamblea-prensa-reforma-2026)が公布は未確認。"
+        },
+        {
+          "text": "ISCの輸出許可がなければ税関は輸出を認めない",
+          "status": "verified",
+          "sourceIds": [
+            "fao-faolex-decreto-965-2024",
+            "asamblea-prensa-ley-cafe-2024"
+          ],
+          "quote": "Art. 9.- El servicio aduanero no podrá autorizar la exportación de ninguna cantidad de caf é que no esté respaldada por el permiso extendido por el Instituto.",
+          "location": "令第965号 第9条 / 立法議会の発表(2024-03-12)",
+          "note": "『立法議会の発表による』は発表でも法令原文でも確認できた。"
+        }
+      ],
+      "suggestedText": "",
+      "note": "全主張verified。英訳は『merged and replaced the CSC』とのみ書き、2021年のISCも統合・代替された点(第31条)と『2023年8月29日』を落としている(日本語と主張が完全には一致しない)。ISC公式サイト(isc.gob.sv)とjurisprudencia.gob.svはCloudflareで403のため取得失敗(回避せず)。asamblea.gob.svのPDF原文を読んだ。"
+    },
+    "origin:ルワンダ:tagline": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "輸出の約62%がフリーウォッシュド(水洗式)",
+          "status": "verified",
+          "sourceIds": [
+            "wcr-country-rwanda"
+          ],
+          "quote": "About 62% of exports are fully washed, reflecting post-2000 investments in processing quality.",
+          "location": "WCR Rwanda 概要(NAEB資料を引用)",
+          "note": "WCRの数字(NAEBの引用)。"
+        },
+        {
+          "text": "『千の丘の国』と呼ばれる",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式資料で未確認(通称)。"
+        },
+        {
+          "text": "紅茶のように澄んだ酸とフローラルな香り",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "官能評価の公式根拠なし(宣伝的表現)。"
+        }
+      ],
+      "suggestedText": "輸出の約62%がフリーウォッシュドのルワンダ(WCR、NAEB資料引用)。",
+      "note": "英訳は日本語と同じ主張(差異なし)。キャッチコピーの味の評価は一次資料で裏付けできない。"
+    },
+    "origin:ルワンダ:regions": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "西部州・キブ湖岸でコーヒーが栽培されている(収穫は西部州のキブ湖岸で2月下旬に始まる)",
+          "status": "verified",
+          "sourceIds": [
+            "naeb-about-rwanda-coffee"
+          ],
+          "quote": "the harvesting period starts late February in the Western Province on the shores of Lake Kivu and Early March elsewhere",
+          "location": "NAEB About Rwanda coffee / Coffee growing calendar",
+          "note": ""
+        },
+        {
+          "text": "西部州ニャマシェケ郡(Nyamasheke)のCWSが2008年COEに入賞",
+          "status": "verified",
+          "sourceIds": [
+            "coe-rwanda-2008"
+          ],
+          "quote": "Nyabumera Coop-Abaryoshyakawa Hategika Francois Nyamasheke, Western",
+          "location": "COE Rwanda 2008 Winning Farms 15位",
+          "note": "産地として栽培されていることの確認。『主要産地』である根拠ではない。"
+        },
+        {
+          "text": "南部州フイエ郡(Huye)のCWSが2008年COEに入賞",
+          "status": "verified",
+          "sourceIds": [
+            "coe-rwanda-2008"
+          ],
+          "quote": "Buremera Mig Uwimana Rose Huye, South",
+          "location": "COE Rwanda 2008 Winning Farms 1位",
+          "note": ""
+        },
+        {
+          "text": "北部州ガケンケ郡(Gakenke)のCWSが2008年COEに入賞",
+          "status": "verified",
+          "sourceIds": [
+            "coe-rwanda-2008"
+          ],
+          "quote": "Sdl Minazi Abakundakawa Ribarimana Jean Baptiste Gakenke, North",
+          "location": "COE Rwanda 2008 Winning Farms 4位",
+          "note": ""
+        },
+        {
+          "text": "この3地域が国の主要な生産地域である",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "NAEBは『ほとんどの州で栽培』とするのみで、産地の序列・主要産地の定義は確認できず。"
+        }
+      ],
+      "suggestedText": "コーヒーは国内の多くの州で栽培され、西部州のキブ湖岸、南部州フイエ郡、北部州ガケンケ郡、西部州ニャマシェケ郡などの生産者が2008年のカップ・オブ・エクセレンスで入賞している。",
+      "note": "NAEBの原文: 『it is grown in most provinces in the country at an altitude less than 1900 m』。英訳は日本語と同じ列挙。"
+    },
+    "origin:ルワンダ:terroir": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "標高は概ね1,400〜2,200m超",
+          "status": "conflict",
+          "sourceIds": [
+            "naeb-about-rwanda-coffee",
+            "ico-rwanda-coffee-value-chain-2024"
+          ],
+          "quote": "it is grown in most provinces in the country at an altitude less than 1900 m … Coffee cultivation typically occurs within an altitude range of 1300 – 2150 meters above sea level",
+          "location": "NAEB About Rwanda coffee / ICO Rwanda's Coffee Value Chain 第3.1節",
+          "note": "NAEBは1,900m未満、ICO(調査標本)は1,300〜2,150m。アプリの1,400〜2,200m超はどちらとも合わない。"
+        },
+        {
+          "text": "西部ニャマシェケ地区のウォッシングステーションは1,750〜2,200m",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "確認できず。"
+        },
+        {
+          "text": "北部ガケンケ地区のムビリマCWSは2,020mで国内最高標高級",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "CoE掲載文では同協同組合のMusasa CWSが約2,000m(2013年掲載は2002m)だが、Mbilimaの標高は確認できず。"
+        },
+        {
+          "text": "火山性の肥沃な土壌に恵まれる(国全体)",
+          "status": "verified",
+          "sourceIds": [
+            "ico-rwanda-coffee-value-chain-2024"
+          ],
+          "quote": "The country benefits from fertile volcanic soils, high altitudes, sufficient rainfall, and moderate temperatures.",
+          "location": "ICO Rwanda's Coffee Value Chain 第1章",
+          "note": "アプリの『西部キブ湖岸は砂質火山土、北部は火山性ローム』の土壌区分は未確認。"
+        },
+        {
+          "text": "年2回の雨季がある",
+          "status": "verified",
+          "sourceIds": [
+            "meteo-rwanda-climatology"
+          ],
+          "quote": "two rainy seasons are generally distinguishable, one centered around March – May and the other around October – December.",
+          "location": "Meteo Rwanda Climatology of Rwanda",
+          "note": ""
+        },
+        {
+          "text": "雨季は2〜5月と9〜12月",
+          "status": "incorrect",
+          "sourceIds": [
+            "meteo-rwanda-climatology"
+          ],
+          "quote": "The maximum rainfall seasons occurs over March, April and May (MAM) and in September, October, November and December (SOND).",
+          "location": "Meteo Rwanda Climatology of Rwanda",
+          "note": "原文は3〜5月と9〜12月が最大降雨期(別の箇所では10〜12月中心)。『2月』は原文に無い。"
+        },
+        {
+          "text": "夜間の冷え込みとキブ湖からの風が明るい酸を育む",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "根拠なし。"
+        }
+      ],
+      "suggestedText": "国は火山性の肥沃な土壌に恵まれ(ICO)、栽培標高はNAEBが1,900m未満、ICOの調査標本では1,300〜2,150mとされる。年2回の雨季があり、降雨が最大になるのは3〜5月と9〜12月(Meteo Rwanda)。",
+      "note": "標高の記述は資料間で食い違うため、ユーザー判断が必要(conflict)。英訳は日本語と同じ主張。"
+    },
+    "origin:ルワンダ:harvestSeason": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "収穫は西部のキブ湖岸で2月下旬、その他の地域で3月上旬に始まる",
+          "status": "verified",
+          "sourceIds": [
+            "naeb-about-rwanda-coffee"
+          ],
+          "quote": "the harvesting period starts late February in the Western Province on the shores of Lake Kivu and Early March elsewhere",
+          "location": "NAEB About Rwanda coffee / Coffee growing calendar",
+          "note": ""
+        },
+        {
+          "text": "北部州の一部では8月まで収穫が続く",
+          "status": "verified",
+          "sourceIds": [
+            "naeb-about-rwanda-coffee"
+          ],
+          "quote": "However in the some areas in the Northern Province coffee is still harvest until August.",
+          "location": "NAEB About Rwanda coffee / Coffee growing calendar",
+          "note": "アプリの『8〜10月頃まで』のうち10月は原文に無い。"
+        },
+        {
+          "text": "収穫が10月頃まで続く",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "NAEBは8月まで。10月の根拠なし。"
+        },
+        {
+          "text": "最盛期は4〜5月",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "NAEBの成長カレンダーの表(Table 1)は画像で本文を取得できず、最盛期の記述は確認できない。"
+        }
+      ],
+      "suggestedText": "収穫は西部州のキブ湖岸で2月下旬、その他の地域で3月上旬に始まり、北部州の一部では8月まで続く(NAEB)。",
+      "note": "英訳は日本語と同じ主張(差異なし)。"
+    },
+    "origin:ルワンダ:varietiesDetail": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "品種はブルボン系が主体",
+          "status": "verified",
+          "sourceIds": [
+            "naeb-about-rwanda-coffee"
+          ],
+          "quote": "it is dominated by mainly ‘bourbon’ type of Arabica coffees.",
+          "location": "NAEB About Rwanda coffee / Background",
+          "note": "WCRは『predominantly traditional varieties like Bourbon and Typica』。"
+        },
+        {
+          "text": "在来のレッド・ブルボンが現地推定約95%",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "『95%』『レッド・ブルボン』は公式資料で確認できず(二次資料のみ)。ICOはアラビカが99%とするのみ。"
+        },
+        {
+          "text": "コーヒーはドイツ人により1900年代初めに導入された",
+          "status": "verified",
+          "sourceIds": [
+            "naeb-about-rwanda-coffee"
+          ],
+          "quote": "Coffee was introduced by Germans in early 1900s",
+          "location": "NAEB About Rwanda coffee / Background",
+          "note": "『1904年』『宣教師』『チャンググ』は原文に無い。"
+        },
+        {
+          "text": "1904年、ドイツ人宣教師がチャンググのミビリジ伝道所にブルボン系統を植えたのが起源",
+          "status": "conflict",
+          "sourceIds": [
+            "wcr-variety-mibirizi",
+            "naeb-about-rwanda-coffee"
+          ],
+          "quote": "The origin of Mibirizi is poorly documented. According to the Belgian coffee historian Edmund Leplae, it was introduced from Guatemala by the German administration in Rwanda in the 1910s. … Recent genetic tests have confirmed that Mibirizi is related to the Typica genetic group.",
+          "location": "WCR Varieties Catalog: Mibirizi / History",
+          "note": "WCRは『ミビリジは1910年代にグアテマラからドイツ当局が導入、系統はティピカ』とし、起源は文書化が乏しいとする。NAEBは『1900年代初め、ブルボン主体』。1904年・ミビリジ伝道所でブルボンという主張は両資料と合わない。"
+        },
+        {
+          "text": "樹齢30年超の木が全体の約4割",
+          "status": "verified",
+          "sourceIds": [
+            "ico-rwanda-coffee-value-chain-2024"
+          ],
+          "quote": "many coffee trees are old, with around 39% being 30 years or older",
+          "location": "ICO Rwanda's Coffee Value Chain 要約",
+          "note": "WCRも『39%』。"
+        },
+        {
+          "text": "さび病と炭疽病(CBD)に耐性の品種『RAB C15』が2015年にリリースされた",
+          "status": "verified",
+          "sourceIds": [
+            "wcr-variety-rab-c15"
+          ],
+          "quote": "RAB C15 was released by the Rwandan Agricultural Board in 2015.",
+          "location": "WCR Varieties Catalog: RAB C15 / History",
+          "note": "同カタログ冒頭: 『High yielding tall variety resistant to rust and coffee berry disease』。"
+        },
+        {
+          "text": "RAB C15の普及はまだ限定的",
+          "status": "verified",
+          "sourceIds": [
+            "wcr-country-rwanda"
+          ],
+          "quote": "an improved variety resistant to rust and CBD called RAB C15 was released in 2015, but is not widely planted yet.",
+          "location": "WCR Rwanda 概要",
+          "note": ""
+        },
+        {
+          "text": "アンテスティアカメムシ(ポテト欠点の原因)への対策として導入が進む",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "WCRはポテト欠点の資料を載せるが、品種導入の理由として結びつける記述は確認できず。"
+        }
+      ],
+      "suggestedText": "品種はブルボン系が主体で、コーヒーは1900年代初めにドイツ人が導入した(NAEB)。樹齢30年を超える木が全体の約4割(ICO)。さび病とコーヒーベリー病に耐性の品種RAB C15が2015年にリリースされたが、普及はまだ限られる(WCR)。",
+      "note": "起源(1904年・ミビリジ)は資料間で食い違うためユーザー判断が必要。英訳は日本語と同じ主張(差異なし)。"
+    },
+    "origin:ルワンダ:farmStructure": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "農家一軒当たりのコーヒー栽培面積は平均約0.26ヘクタール",
+          "status": "verified",
+          "sourceIds": [
+            "ico-rwanda-coffee-value-chain-2024"
+          ],
+          "quote": "farmers typically owning an average of 0.26 hectares of land dedicated to coffee cultivation",
+          "location": "ICO Rwanda's Coffee Value Chain 要約",
+          "note": "標本調査(13郡43CWS)の結果。農場全体の平均は0.76ha。アプリの『0.3ha程度』は概ね合う。"
+        },
+        {
+          "text": "全国の零細農家は推定40万世帯",
+          "status": "conflict",
+          "sourceIds": [
+            "naeb-about-rwanda-coffee",
+            "ico-rwanda-coffee-value-chain-2024"
+          ],
+          "quote": "Currently, ca. 400,000 small holder farm families produce it and depend on it for their livelihoods. … In the 2015 census, the latest available data, approximately 350,000 smallholder farmers in Rwanda cultivated coffee (NAEB, 2015).",
+          "location": "NAEB About Rwanda coffee / ICO Rwanda's Coffee Value Chain 第1章",
+          "note": "NAEB: 約40万世帯、ICO(2015年センサス引用): 約35万の小農。WCRは『up to 400,000』。"
+        },
+        {
+          "text": "CWSはジェノサイド前は実質1か所しかなかった",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "一次資料で確認できず(二次資料のみ)。"
+        },
+        {
+          "text": "USAID資金のPEARLプロジェクト(2000年開始)を通じてCWSが急増した",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "USAIDの一次文書に到達できず(usaid-pearl-spread-docs)。"
+        },
+        {
+          "text": "CWSは2015年時点で245か所",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "NAEBの2015年センサスの原文は未入手。二次資料(MSU)のみ。"
+        },
+        {
+          "text": "CWSは現在約300か所",
+          "status": "verified",
+          "sourceIds": [
+            "ico-rwanda-coffee-value-chain-2024"
+          ],
+          "quote": "totaling 313 CWSs in 2021",
+          "location": "ICO Rwanda's Coffee Value Chain 第1章",
+          "note": "『313か所(2021年)』。『現在』ではなく2021年時点と書く必要がある。"
+        },
+        {
+          "text": "アバフザムガンビ協同組合(南部フイエ県マラバ)が1999年にジェノサイドで夫を失ったツチ人女性の自立支援のため発足した",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "一次資料で確認できず。COE 2008では『Kabuye/Maraba II/Abahuza』がHuye(南部)の入賞ロット(協同組合の所在地は一致する可能性があるが設立年・経緯は未確認)。"
+        },
+        {
+          "text": "2001年に国内初の高品質志向ウォッシングステーション『チャルンボ』を開設(組合員1,872名)",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "確認できず。英訳は『Karambo』、日本語は『チャルンボ』と綴りが不一致で、実在名(Cyarumbo/Karambo等)も未確認。"
+        },
+        {
+          "text": "ドゥクンデ・カワ協同組合は北部ガケンケ県にあり2000年設立",
+          "status": "verified",
+          "sourceIds": [
+            "coe-farmdir-dukundekawa-musasa-2015"
+          ],
+          "quote": "Founded in the year 2000, Dukunde Kawa Musasa Coopertive cultivates its high quality coffee not very far from Gorilla Mountains in Gakenke district, Northern Province in Rwanda.",
+          "location": "CoE Farm Directory 2015 / Description",
+          "note": "協同組合の自己申告をCoEが掲載。同ページのCWS情報では『Creation date: 2004』(Musasa CWS)。"
+        },
+        {
+          "text": "ドゥクンデ・カワ協同組合は労働力の8割以上を女性が占める",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "CoE掲載文は『1,816 members … 33% are women』(会員の33%が女性)。労働力8割以上女性の根拠は無く、会員比率では食い違う。"
+        },
+        {
+          "text": "『WCEカワ・ヤク』は2017年設立で会員350名から700名以上に拡大",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "確認できず。"
+        }
+      ],
+      "suggestedText": "農家一軒当たりのコーヒー栽培面積は平均約0.26ヘクタール(ICO調査標本)。零細農家数はNAEBが約40万世帯、ICOが2015年センサスに基づき約35万と、資料により異なる。ウォッシングステーションは2021年に313か所(ICO)。北部ガケンケ県のドゥクンデ・カワ協同組合は2000年設立と自己紹介している(CoE掲載文。会員約1,816人、うち33%が女性)。",
+      "note": "協同組合の個別事例(チャルンボ、アバフザムガンビ、WCEカワ・ヤク)は一次資料で確認できなかったため除外。英訳は日本語と同じ主張(Karamboの綴りのみ日本語と異なる)。"
+    },
+    "origin:ルワンダ:history": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "コーヒー導入は1904年、ドイツ人宣教師がチャンググのミビリジ伝道所にブルボン系アラビカ種を植えたことに始まる",
+          "status": "conflict",
+          "sourceIds": [
+            "wcr-variety-mibirizi",
+            "naeb-about-rwanda-coffee"
+          ],
+          "quote": "Coffee was introduced by Germans in early 1900s … it was introduced from Guatemala by the German administration in Rwanda in the 1910s",
+          "location": "NAEB About Rwanda coffee / WCR Mibirizi",
+          "note": "varietiesDetailと同じ食い違い。"
+        },
+        {
+          "text": "1917年に輸出が始まった",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "確認できず。"
+        },
+        {
+          "text": "第一次大戦後ベルギー委任統治領へ移行した",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "本検証では一次資料を読んでいない。"
+        },
+        {
+          "text": "1931年、ベルギー植民地当局が現地首長を通じて農民に強制的にコーヒー栽培を課す政策を導入した",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "確認できず(検索で二次資料がコーヒー栽培の強制を述べるが年は未確認)。"
+        },
+        {
+          "text": "1970年頃までにコーヒーは輸出収入の約7割を占めた",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "1970年頃の数字は確認できず。ICO ICC 120-7は『1990年に輸出額の75.2%・GDPの3.2%、2015年に9.4%・0.8%』(下の別claim)。世界銀行1991は1989年に76%(OCR抜粋、根拠には使わない)。"
+        },
+        {
+          "text": "コーヒーは1990年に輸出額の75.2%、GDPの3.2%を占めた",
+          "status": "verified",
+          "sourceIds": [
+            "ico-icc120-7-african-coffee-sector"
+          ],
+          "quote": "Rwanda 3.2 0.8 75.2 9.4",
+          "location": "ICC 120-7 Table 1(列: コーヒーのGDP比1990/2015、輸出額比1990/2015)",
+          "note": "表の列見出し『Coffee share in % of GDP 1990 2015 / Coffee share in % of export value 1990 2015』。アプリには無い事実。"
+        },
+        {
+          "text": "1989年の国際コーヒー協定の経済条項終了後、供給過剰で価格が下落し、各国のコーヒー部門が停滞した(ルワンダは紛争の影響で悪化)",
+          "status": "verified",
+          "sourceIds": [
+            "ico-icc120-7-african-coffee-sector"
+          ],
+          "quote": "When coffee prices dropped as a result of oversupply in the immediate aftermath of the end of the economic clauses of the Agreement, many national coffee sectors stalled.",
+          "location": "ICC 120-7 第8項(第9項: Rwandaは暴力的紛争と内戦で悪化)",
+          "note": "『1989年』の年号は同文書に無い(別資料では1989年7月に割当停止)。"
+        },
+        {
+          "text": "1989年の価格暴落が1994年のジェノサイドに至る社会経済的緊張の一因となった",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "因果関係を述べる一次資料を確認できず。"
+        },
+        {
+          "text": "ジェノサイドはコーヒー産業にも壊滅的な打撃を与え、多くの技術者・生産者が命を落とすか国外へ逃れた",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "ICOは1990年代初めの生産減と紛争の影響を述べるのみ。"
+        },
+        {
+          "text": "2000年にUSAIDのPEARLが始動し『量から質へ』の転換が図られた",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "USAID一次文書に到達できず。"
+        },
+        {
+          "text": "2003年からユニオン・ハンドロースト(ロンドン)へ販売",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "確認できず。"
+        },
+        {
+          "text": "2005年にPEARLは後継のSPREADプロジェクトへ移行",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "確認できず。検索断片ではSPREADの開始年が2005年/2006年と食い違う(二次資料のみ)。"
+        },
+        {
+          "text": "2008年にルワンダでカップ・オブ・エクセレンスが開催された(アフリカ初の開催国)",
+          "status": "verified",
+          "sourceIds": [
+            "ace-blog-rwanda-coe-2018",
+            "coe-rwanda-2008"
+          ],
+          "quote": "Rwanda was the first African country to host a CoE competition, led by the Portland, Oregon-based Alliance for Coffee Excellence along with in-country partners, with the first CoE there dating back to 2008.",
+          "location": "ACEブログ(2018-08-23) / COE Rwanda 2008 結果頁",
+          "note": ""
+        },
+        {
+          "text": "2017年4月、法律第13/2017号によりNAEBが設立された",
+          "status": "incorrect",
+          "sourceIds": [
+            "rw-law-13-2017-gazette",
+            "rw-law-39-2010-faolex"
+          ],
+          "quote": "This Law establishes the National Agricultural Export Development Board, abbreviated as “NAEB”. … Law nº 39/2010 of 25/11/2010 establishing National Agricultural Export Development Board (NAEB) and determining its responsibilities, organisation and functioning and all prior provisions contrary to this Law are repealed.",
+          "location": "法律第13/2017号(2017-04-14、官報第18号 2017-05-01)第1条・第35条 / 法律第39/2010号",
+          "note": "NAEBは2010年法第39/2010号(2010-11-25、官報2011-01-24)で既に設立されており、2017年法はこれを廃止して改めて設置した(第29条: 旧NAEBの財産・契約・活動を引き継ぐ)。『2017年に設立』は誤り。"
+        },
+        {
+          "text": "NAEBは品質認証・輸出管理を一元的に担う",
+          "status": "unverified",
+          "sourceIds": [
+            "rw-law-13-2017-gazette"
+          ],
+          "quote": "",
+          "location": "",
+          "note": "法律第13/2017号第3条は『原産・真正性の証明書の発行』『品質基準の設定・検査に他機関と協力して参加』であり、『品質認証・輸出管理を一元的に』とは書かれていない。"
+        }
+      ],
+      "suggestedText": "ドイツ人により1900年代初めにコーヒーが導入された(NAEB)。コーヒーは1990年に輸出額の75.2%、GDPの3.2%を占めた(ICO)。1989年の国際コーヒー協定の経済条項終了後の価格下落で多くの国のコーヒー部門が停滞し、ルワンダでは紛争の影響でさらに悪化した(ICO)。2008年にはアフリカで初めてカップ・オブ・エクセレンスが開催された。NAEBは2010年の法律第39/2010号で設立され、2017年の法律第13/2017号で改めて設置された。",
+      "note": "導入年(1904年)・宣教師・ミビリジ伝道所は資料間で食い違うため conflict。1917年、委任統治、1931年の強制栽培、1970年の7割、ジェノサイドの影響、PEARL/SPREAD、ユニオン・ハンドロースト販売は一次資料で確認できず。英訳は日本語と同じ主張。"
+    },
+    "origin:ルワンダ:sub:ニャマシェケ(西部州・キブ湖岸)": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "ニャマシェケ郡(西部)にコーヒーの生産者がある(2008年COE入賞)",
+          "status": "verified",
+          "sourceIds": [
+            "coe-rwanda-2008"
+          ],
+          "quote": "Nyabumera Coop-Abaryoshyakawa Hategika Francois Nyamasheke, Western",
+          "location": "COE Rwanda 2008 15位",
+          "note": ""
+        },
+        {
+          "text": "標高1,450〜2,200m",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "確認できず。"
+        },
+        {
+          "text": "キブ湖畔の砂質火山性土壌と湖からの風",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "確認できず。"
+        },
+        {
+          "text": "レッド・ブルボンによる華やかなフローラルと熱帯果実",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "官能評価の公式根拠なし。"
+        },
+        {
+          "text": "ナチュラル/ハニー精製の先進地",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "確認できず。"
+        }
+      ],
+      "suggestedText": "西部州ニャマシェケ郡の生産者が2008年のカップ・オブ・エクセレンスで入賞している。",
+      "note": "標高・土壌・味・精製の記述は根拠なし。英訳は日本語と同じ主張。"
+    },
+    "origin:ルワンダ:sub:フイエ/ニャマガベ(南部州・旧マラバ地区)": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "南部州フイエ郡にコーヒーの生産者がある(2008年COE入賞、1位)",
+          "status": "verified",
+          "sourceIds": [
+            "coe-rwanda-2008"
+          ],
+          "quote": "Buremera Mig Uwimana Rose Huye, South",
+          "location": "COE Rwanda 2008 1位",
+          "note": ""
+        },
+        {
+          "text": "標高約1,750m",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "確認できず。"
+        },
+        {
+          "text": "国内初のスペシャルティ志向ウォッシングステーション『チャルンボ』(2001年)を擁するアバフザムガンビ協同組合の拠点",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "確認できず(綴りも日英で不一致)。"
+        },
+        {
+          "text": "レッドフルーツ、キャラメル、スパイス",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "官能評価の公式根拠なし。"
+        }
+      ],
+      "suggestedText": "南部州フイエ郡の生産者が2008年のカップ・オブ・エクセレンスで1位に入賞している。",
+      "note": "名称の『ニャマガベ』や『旧マラバ地区』も未確認。英訳は日本語と同じ主張。"
+    },
+    "origin:ルワンダ:sub:ガケンケ(北部州)": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "ドゥクンデ・カワ協同組合は北部州ガケンケ郡にあり、CWSは標高1,500〜2,000m",
+          "status": "verified",
+          "sourceIds": [
+            "coe-farmdir-dukundekawa-musasa-2015"
+          ],
+          "quote": "Province : North District : Gakenke Sector: Ruli Latitude (m): 482750 Longitudes (m): 9800044 Altitude : 1500 to 2000 meters",
+          "location": "CoE Farm Directory 2015 / CWS Geographical locations and conditions",
+          "note": "協同組合の自己申告(CoE掲載)。アプリの『1,500〜2,100m』と上限が違う(原文は2,000m)。"
+        },
+        {
+          "text": "ガケンケ地区の標高は1,500〜2,100m、ムビリマCWSは2,020m、火山性ローム土壌",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "上限2,100m、Mbilima 2,020m、火山性ロームは確認できず。"
+        },
+        {
+          "text": "ドゥクンデ・カワは労働力の8割超が女性",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "CoE掲載文は会員の33%が女性。"
+        },
+        {
+          "text": "収穫期は3〜10月と国内最長級",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "NAEBは『北部州の一部では8月まで収穫が続く』。10月は未確認。"
+        }
+      ],
+      "suggestedText": "ドゥクンデ・カワ協同組合は北部州ガケンケ郡にあり、そのCWSの標高は1,500〜2,000m(CoE掲載の自己申告)。北部州の一部では収穫が8月まで続く(NAEB)。",
+      "note": "英訳は日本語と同じ主張(2,100m、80%超)で同じ誤り。"
+    },
+    "origin:ルワンダ:sub:西部州キブ湖東岸(ルツィロ/カロンギ)": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "ルツィロ郡(西部)にコーヒーの生産者がある(2008年COE入賞)",
+          "status": "verified",
+          "sourceIds": [
+            "coe-rwanda-2008"
+          ],
+          "quote": "Horizon Mushonyi Twizerimana Ismael Rutsiro, Western",
+          "location": "COE Rwanda 2008 17位",
+          "note": ""
+        },
+        {
+          "text": "キブ・ベルト社が複数のCWSを運営",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "確認できず。"
+        },
+        {
+          "text": "オレンジ・レモン系の柑橘とほのかなスパイス、艶やかなボディを伴う紅茶のようなカップ",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "官能評価の公式根拠なし。"
+        },
+        {
+          "text": "キブ湖『東岸』にルツィロ/カロンギがある",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "確認できず(キブ湖は国の西端にあり、ルツィロ郡は湖の東岸側とされるが一次資料で未確認)。"
+        }
+      ],
+      "suggestedText": "西部州ルツィロ郡の生産者が2008年のカップ・オブ・エクセレンスで入賞している。",
+      "note": "企業名・味・位置の記述は根拠なし。英訳は日本語と同じ主張。"
+    },
+    "origin:ルワンダ:gradeSystem": {
+      "status": "verified",
+      "claims": [
+        {
+          "text": "品質規格はルワンダ規格協会(RSB)とNAEBが規制している",
+          "status": "verified",
+          "sourceIds": [
+            "ico-icc122-12-national-quality-standards"
+          ],
+          "quote": "National quality standards in Rwanda are regulated by the Rwanda Standards Board and by the National Agricultural Export Development Board.",
+          "location": "ICC 122-12 A-18 RWANDA",
+          "note": "2018年時点の回答。"
+        },
+        {
+          "text": "350gのサンプルでカッピング(官能評価)と物理分析を行い格付けする",
+          "status": "verified",
+          "sourceIds": [
+            "ico-icc122-12-national-quality-standards"
+          ],
+          "quote": "A sample of 350g is taken for both physical and organoleptic analysis (Cupping)",
+          "location": "ICC 122-12 A-18 Arabica",
+          "note": ""
+        },
+        {
+          "text": "フリーウォッシュド: Super Specialty(90〜100点、主要欠点不可)",
+          "status": "verified",
+          "sourceIds": [
+            "ico-icc122-12-national-quality-standards"
+          ],
+          "quote": "Super specialty grade: score 90-100% points. No more than 5 full defects in 350 g of coffee. No primary defect allowed",
+          "location": "ICC 122-12 A-18 (a) Fully washed",
+          "note": ""
+        },
+        {
+          "text": "フリーウォッシュド: Specialty(80〜90点)",
+          "status": "verified",
+          "sourceIds": [
+            "ico-icc122-12-national-quality-standards"
+          ],
+          "quote": "Specialty grade: score 80-90% points.",
+          "location": "ICC 122-12 A-19",
+          "note": ""
+        },
+        {
+          "text": "フリーウォッシュド: Grade 1〜3はスコア50〜79点(Grade1: 70〜79点・欠点9〜23、Grade2: 60〜69点・欠点24〜86、Grade3: 50〜59点・欠点86超)",
+          "status": "verified",
+          "sourceIds": [
+            "ico-icc122-12-national-quality-standards"
+          ],
+          "quote": "Grade 1: score 70-79% points. No more than 9 -23 full defects in 350 g of coffee. … Grade 2: score 60-69% points. No more than 24-86 full defects in 350g of coffee. … Grade 3: score 50-59% points. More than 86 full defects in 350g of coffee.",
+          "location": "ICC 122-12 A-19",
+          "note": "アプリの『欠点数9超』は大づかみ。"
+        },
+        {
+          "text": "セミウォッシュドはGrade 1〜4",
+          "status": "verified",
+          "sourceIds": [
+            "ico-icc122-12-national-quality-standards"
+          ],
+          "quote": "(b) Semi washed − Grade 1: score 70-80%.",
+          "location": "ICC 122-12 A-19(Grade 4: score below 40%)",
+          "note": ""
+        },
+        {
+          "text": "ロブスタはGrade 1(フリーウォッシュド)/Grade 2(セミウォッシュド)",
+          "status": "verified",
+          "sourceIds": [
+            "ico-icc122-12-national-quality-standards"
+          ],
+          "quote": "Robusta − Grade 1: Robusta fully washed − Grade2: Robusta Semi washed",
+          "location": "ICC 122-12 A-19",
+          "note": ""
+        }
+      ],
+      "suggestedText": "",
+      "note": "全主張verified。ただしICOの2018年時点の文書で、現行のRSB規格かは未確認(RSB公式の最新規格は未取得)。英訳は日本語と同じ主張(差異なし)。"
+    },
+    "origin:ルワンダ:officialBody": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "名称は国家農業輸出開発庁(National Agricultural Export Development Board・NAEB)",
+          "status": "verified",
+          "sourceIds": [
+            "naeb-overview-read-more"
+          ],
+          "quote": "National Agricultural Export Development Board, abbreviated as “NAEB” is a commercial public institution established by the law No 13/2017 of 14/04/2017",
+          "location": "NAEB Overview / Read more",
+          "note": ""
+        },
+        {
+          "text": "2017年4月制定の法律第13/2017号により『発足』した",
+          "status": "incorrect",
+          "sourceIds": [
+            "rw-law-13-2017-gazette",
+            "rw-law-39-2010-faolex"
+          ],
+          "quote": "Law nº 39/2010 of 25/11/2010 establishing National Agricultural Export Development Board (NAEB) and determining its responsibilities, organisation and functioning and all prior provisions contrary to this Law are repealed.",
+          "location": "法律第13/2017号(2017-04-14、官報第18号 2017-05-01)第35条",
+          "note": "NAEB自身は『established by the law No 13/2017 of 14/04/2017』と述べるが、官報の条文では2010年法第39/2010号を廃止して改めて設置したもの(旧NAEBの財産等は第29条で承継)。『2017年4月制定』の法律であることは正しい。"
+        },
+        {
+          "text": "コーヒー・茶・園芸の各振興機関(OCIR-CAFE、OCIR-THE、RHODA)の活動を統合した",
+          "status": "verified",
+          "sourceIds": [
+            "rw-law-39-2010-faolex"
+          ],
+          "quote": "NAEB is given a period not exceeding six (6) months from the date of publication of this Law in the Official Gazette of the Republic of Rwanda to merge activities of export development formerly performed by the following institutions : 1° Rwanda Coffee Development Authority (OCIR-CAFE) ; 2° Rwanda Tea Development Authority (OCIR-THE); 3° Rwanda Horticulture Development Authority (RHODA).",
+          "location": "法律第39/2010号 第17条",
+          "note": "この統合を定めたのは2010年法であって、2017年法ではない。"
+        },
+        {
+          "text": "輸出前の『品質証明書』を発行する",
+          "status": "incorrect",
+          "sourceIds": [
+            "rw-law-13-2017-gazette"
+          ],
+          "quote": "9º to issue certificates of authenticity and origin of agricultural and livestock export commodities;",
+          "location": "法律第13/2017号 第3条9号",
+          "note": "原文は『真正性及び原産地の証明書』。品質基準は『8º to participate in the setting and checking of quality standards … in collaboration with other relevant institutions』(関係機関と協力して基準の設定・検査に参加)。"
+        },
+        {
+          "text": "輸出促進を担う",
+          "status": "verified",
+          "sourceIds": [
+            "naeb-about-rwanda-coffee"
+          ],
+          "quote": "Promotion, marketing and export of Rwanda coffee",
+          "location": "NAEB About Rwanda coffee / NAEBの責任",
+          "note": ""
+        },
+        {
+          "text": "農家への技術支援を行う",
+          "status": "verified",
+          "sourceIds": [
+            "naeb-about-rwanda-coffee"
+          ],
+          "quote": "Support to the coffee production by providing technical assistance and planting material to farmers",
+          "location": "NAEB About Rwanda coffee / NAEBの責任",
+          "note": ""
+        },
+        {
+          "text": "チェリー(コーヒーの実)の最低買取価格を設定する",
+          "status": "verified",
+          "sourceIds": [
+            "ico-rwanda-coffee-value-chain-2024"
+          ],
+          "quote": "NAEB plays a pivotal role in establishing the annual coffee cherry floor price in collaboration with key stakeholders",
+          "location": "ICO Rwanda's Coffee Value Chain 第1章",
+          "note": "法律第3条15号は『facilitate negotiations for setting and publishing minimum farm gate prices … in collaboration with stakeholders』。関係者と協力して設定。『一手に』ではない。"
+        },
+        {
+          "text": "上記を『一手に』担う",
+          "status": "unverified",
+          "sourceIds": [
+            "rw-law-13-2017-gazette"
+          ],
+          "quote": "",
+          "location": "",
+          "note": "品質基準は他機関と協力(第3条8号)、規格はRSBも規制(ICC 122-12)。『一手に』は過大。"
+        }
+      ],
+      "suggestedText": "国家農業輸出開発庁(NAEB)。2017年の法律第13/2017号(2017年4月14日)により改めて設置された公共機関で、2010年の法律第39/2010号が定めたコーヒー・茶・園芸の各振興機関(OCIR-CAFE、OCIR-THE、RHODA)の統合に始まる。輸出促進、農家への技術支援、輸出農産物の真正性・原産地の証明書の発行、関係者と協力したチェリー最低価格の設定などを担う。",
+      "note": "法律名: NAEB自身の頁は『law No 13/2017 of 14/04/2017』。英訳も同じ主張(『quality certificates』『in one place』など同じ過大表現)。"
+    }
+  }
+}

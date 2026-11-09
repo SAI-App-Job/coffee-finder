@@ -41,7 +41,7 @@ export const DISCOVERY_FACTS_EN = {
   },
   "ハワイには「ハワイ産と名乗れる最低ライン」がある": {
     title: "Hawaii has a minimum bar for calling coffee \"Hawaiian\"",
-    text: "Under Hawaii state law, green coffee shipped out of state may not be labeled \"Hawaii coffee\" unless it meets Hawaii No. 3 grade or better. If it does not, it must be clearly labeled in large letters as \"OFFGRADE COFFEE.\"",
+    text: "Under Hawaii's administrative rules, Hawaii-grown green coffee that does not meet the quality standards of Hawaii No. 3 may not be sold with a Hawaiian place name. It must instead be labeled \"offgrade\" or simply \"coffee,\" with no geographic reference.",
   },
   "タンザニアは輸出まで一つの機関が管理": {
     title: "Tanzania manages everything through export with one agency",
@@ -113,7 +113,7 @@ export const DISCOVERY_FACTS_EN = {
   },
   "ケニアのSL28はカシス風味の立役者": {
     title: "Kenya's SL28 is the star behind the blackcurrant flavor",
-    text: "The variety SL28, selected in the 1930s and 40s, has deep, drought-resistant roots, and its malic-acid-dominant structure produces the blackcurrant-like flavor characteristic of Kenyan coffee.",
+    text: "The variety SL28, selected in the 1930s, has deep, drought-resistant roots, and its malic-acid-dominant structure produces the blackcurrant-like flavor characteristic of Kenyan coffee.",
   },
   "ブラジルの生産地はある年の大霜害で移動した": {
     title: "Brazil's growing areas shifted after one year's great frost",
@@ -366,7 +366,7 @@ export const GLOSSARY_EN = {
     term: "Designated brands",
     summary: "The brand-labeling rules in Japan, with 14 types, set by the All Japan Coffee Fair Trade Council.",
     detail:
-      "A voluntary industry regulation in Japan under which 14 brands such as Blue Mountain and Kilimanjaro cannot be used in a product name unless the origin conditions are met. When used in a blend, at least 30% of the green coffee by weight must be used. Note that these are not brands officially certified by the producing country; they are only Japanese labeling rules.",
+      "A voluntary industry regulation in Japan under which 14 brands such as Blue Mountain and Kilimanjaro (defined in an appendix to the code) cannot be used in a product name unless the origin conditions are met. To call a product a \"(brand) blend,\" at least 30% of the green coffee used must be that brand. Note that these are not brands officially certified by the producing country; they are only Japanese labeling rules.",
   },
   "スペシャルティコーヒー": {
     term: "Specialty coffee",

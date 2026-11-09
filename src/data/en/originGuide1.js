@@ -91,7 +91,7 @@ export const ORIGIN_GUIDE_EN_1 = {
     gradeSystem:
       "\"Excelso\" is the name of a parent category common to a group of seven grades; it has no meaning on its own and is always written as a compound, \"Excelso + sub-name\" (Premium / Supremo / Extra / Europe / UGQ / Maragogipe / Caracol, screen 12-18). Only screen 16 and above and peaberry (Caracol) are classified as specialty coffee.",
     officialBody:
-      "The FNC (National Federation of Coffee Growers, established in 1927) legally enforces a minimum export standard under which only Excelso and above can be exported (Resolution No. 5 of the Comité Nacional de Cafeteros, 2002).",
+      "The FNC (National Federation of Coffee Growers, established in 1927) legally enforces a minimum export standard under which only Excelso and above can be exported (Resolution No. 2 of 2016 of the Comité Nacional de Cafeteros, which the FNC's December 2025 circular cites as the basis for green coffee quality control).",
   },
   "ケニア": {
     tagline: "Concentrated fruit flavor and sharp acidity",
@@ -101,7 +101,7 @@ export const ORIGIN_GUIDE_EN_1 = {
     harvestSeason:
       "The main crop is October-December. In some areas, a fly crop occurs in June-August.",
     varietiesDetail:
-      "SL28 and SL34 are the core. They were selected by Scott Agricultural Laboratories in the 1930s and 40s. SL28 is drought tolerant and deep rooted, and its malic- and phosphoric-acid-dominant structure plays the leading role in its blackcurrant-like flavor. SL34 is higher yielding and better suited to heavy rain. Also Ruiru 11 and Batian (both disease resistant).",
+      "SL28 and SL34 are the core. They were selected by Scott Agricultural Laboratories in the 1930s (1935-39). SL28 is drought tolerant and deep rooted, and its malic- and phosphoric-acid-dominant structure plays the leading role in its blackcurrant-like flavor. SL34 is higher yielding and better suited to heavy rain. Also Ruiru 11 and Batian (both disease resistant).",
     farmStructure:
       "Smallholders account for about 75% of national production. More than half of them produce as members of Farmer Cooperative Societies (FCS); each FCS owns and oversees several factories (wet mills) that collect and process the cherries, while the cooperative itself handles financing and sales. The main sales channel was traditionally the weekly Tuesday auction at the Nairobi Coffee Exchange, but a legal reform at the end of 2006 introduced a \"second window\" system that allows producers and buyers to negotiate directly without going through intermediaries.",
     history:

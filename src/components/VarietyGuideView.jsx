@@ -1,5 +1,5 @@
-import { SectionHeading, SourceCredit } from "./common";
-import { VARIETY_GUIDE } from "../data/varietyGuide";
+import { SectionHeading, VerifiedSources } from "./common";
+import { PUBLISHED_VARIETIES, varietyKey, prose } from "../data/published";
 import { localizeVariety } from "../data/localize";
 import { useT } from "../i18n";
 
@@ -27,6 +27,7 @@ export function VarietyCard({ v: rawV }) {
       <p className="text-[13px] leading-relaxed text-[var(--c-text-2)] border-t border-[var(--c-border)] pt-3">
         {v.note}
       </p>
+      <VerifiedSources keys={[varietyKey(rawV)]} />
     </div>
   );
 }
@@ -36,13 +37,12 @@ export function VarietyGuideView({ hideHeading = false }) {
   return (
     <main className="px-5 py-5 flex flex-col gap-3 max-w-xl mx-auto">
       {!hideHeading && <SectionHeading en="Coffee Varieties" ja="品種" />}
-      <p className="text-[13px] text-[var(--c-text-3)] mb-1">
-        {t("WCR(ワールドコーヒーリサーチ)の品種カタログを基に、系統ごとの特徴をまとめました。")}
-      </p>
-      {VARIETY_GUIDE.map((v) => (
+      {prose("variety.intro") && (
+        <p className="text-[13px] text-[var(--c-text-3)] mb-1">{t(prose("variety.intro"))}</p>
+      )}
+      {PUBLISHED_VARIETIES.map((v) => (
         <VarietyCard key={v.lineage} v={v} />
       ))}
-      <SourceCredit sources={[t("World Coffee Research(worldcoffeeresearch.org)品種カタログ")]} />
     </main>
   );
 }

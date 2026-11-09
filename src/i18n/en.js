@@ -42,6 +42,9 @@ const UI = {
   "やめる": "Cancel",
   "{n}つ星": "Rating {n}",
   "出典: {sources}": "Source: {sources}",
+  "出典:": "Source:",
+  "この国の解説は、出典の確認が済み次第、公開します。": "This country's guide will be published once its sources have been verified.",
+  "確認日: {date}": "checked {date}",
   "店舗へ行く": "Go to the shop",
   "Googleマップで開く": "Open in Google Maps",
   "この店舗をGoogleマップで開く": "Open this shop in Google Maps",
@@ -101,8 +104,8 @@ const UI = {
   "この産地の商品を見る": "View products from this origin",
   "代表地域: {regions}": "Main regions: {regions}",
   "この産地の特定銘柄:": "Designated brands from this origin:",
-  "マップ上のピンをタップすると、その産地の特徴と各国の公式コーヒー協会(海外情報を翻訳・要約)が表示されます。":
-    "Tap a pin on the map to see the characteristics of that origin and the official coffee association of each country (overseas information, translated and summarized).",
+  "マップ上のピンをタップすると、その産地の解説が表示されます。解説には、確認した出典を付けています。":
+    "Tap a pin on the map to see the guide for that origin. Each guide lists the sources we checked.",
   "マップから産地を選んでください": "Choose an origin on the map",
   "ピンチ/ホイールで拡大縮小、ドラッグで移動": "Pinch / wheel to zoom, drag to move",
   "全体表示": "Show all",

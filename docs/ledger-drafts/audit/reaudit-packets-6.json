@@ -1,0 +1,1480 @@
+[
+ {
+  "key": "origin:パナマ:varietiesDetail",
+  "content": {
+   "text": "ゲイシャ種は、1930年代にエチオピアのコーヒーの森から採取された(WCR)。1953年に中米のCATIE(Centro Agronómico Tropical de Investigación y Enseñanza)に持ち込まれ、登録番号T2722が付けられた(WCR)。さび病への耐性(tolerance)が認められたのち、1960年代にCATIE経由でパナマ全土に配布されたが、枝が折れやすく農家に好まれなかったため、広くは植えられなかった(WCR)。SCAPは、ゲイシャをパナマが他の生産国より上に位置づけられるに至った品種だと述べる。"
+  },
+  "claims": [
+   {
+    "index": 0,
+    "text": "ゲイシャ種がパナマの国際的評価を高めた",
+    "quote": "es una variedad de café que llevó a Panamá a ubicarse por encima de los demás países productores del grano.",
+    "location": "本文(Geishaの段落)",
+    "sourceIds": [
+     "scap-historia-2024"
+    ]
+   },
+   {
+    "index": 1,
+    "text": "エチオピア原産",
+    "quote": "This variety was originally collected from coffee forests in Ethiopia in the 1930s.",
+    "location": "Geisha (Panama) / Origin",
+    "sourceIds": [
+     "wcr-geisha-panama"
+    ]
+   },
+   {
+    "index": 2,
+    "text": "コスタリカの農業研究機関CATIEを経由して1960年代にパナマへ導入された",
+    "quote": "It was distributed throughout Panama via CATIE in the 1960s after it had been recognized for tolerance to coffee leaf rust.",
+    "location": "Geisha (Panama) / Origin",
+    "sourceIds": [
+     "wcr-geisha-panama"
+    ]
+   },
+   {
+    "index": 3,
+    "text": "枝が折れやすく農家に好まれず、広く植えられなかった",
+    "quote": "However, the plant's branches were brittle and not favored by farmers so it was not widely planted.",
+    "location": "Geisha (Panama) / Origin",
+    "sourceIds": [
+     "wcr-geisha-panama"
+    ]
+   },
+   {
+    "index": 4,
+    "text": "1953年にCATIEに到達した",
+    "quote": "and then brought to Centro Agronómico Tropical de Investigación y Enseñanza (CATIE) in Central America in the 1953, where it was logged as accession T2722.",
+    "location": "Geisha (Panama) / Origin",
+    "sourceIds": [
+     "wcr-geisha-panama"
+    ]
+   }
+  ],
+  "sources": {
+   "scap-historia-2024": {
+    "title": "El café de Panamá guarda su historia (SCAP報道発表・XXVIII BOP)",
+    "org": "Specialty Coffee Association of Panama (SCAP)",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": "SCAPの発表文(Nota de Prensa)。発表日は『31 de mayo』で年は明記なし(XXVIII版・『20年後』の記述から2024年と推定)"
+   },
+   "wcr-geisha-panama": {
+    "title": "Geisha (Panama) - Arabica Varieties Catalog",
+    "org": "World Coffee Research",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": ""
+   }
+  }
+ },
+ {
+  "key": "origin:ブラジル:farmStructure",
+  "content": {
+   "text": "コーヒーは、国立産業財産院(INPI)に14件の地理的表示が登録されている。Embrapaの記事は、コーヒーをブラジルで地理的表示の数が最も多い産品としている。Cerrado Mineiroの地理的表示は、2013年に原産地呼称(DO)の登録に切り替えられた(Embrapa)。"
+  },
+  "claims": [
+   {
+    "index": 0,
+    "text": "原産地呼称制度も発達している",
+    "quote": "O Café possui 14 registros de Indicações Geográficas no Instituto Nacional da Propriedade Industrial (INPI).",
+    "location": "Embrapa 'Café segue como o produto com maior número de IGs no Brasil'",
+    "sourceIds": [
+     "embrapa-igs-cafe"
+    ]
+   },
+   {
+    "index": 1,
+    "text": "Cerrado Mineiroが2013年にDOとなった",
+    "quote": "As regiões do Cerrado Mineiro e da Mantiqueira de Minas tiveram seus registros de IP alterados para registro de Denominação de Origem, respectivamente, em 2013 e 2020.",
+    "location": "Embrapa 'Café segue como o produto com maior número de IGs no Brasil'",
+    "sourceIds": [
+     "embrapa-igs-cafe"
+    ]
+   }
+  ],
+  "sources": {
+   "embrapa-igs-cafe": {
+    "title": "Café segue como o produto com maior número de IGs no Brasil",
+    "org": "Embrapa (Embrapa Café)",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": ""
+   }
+  }
+ },
+ {
+  "key": "origin:ブラジル:gradeSystem",
+  "content": {
+   "text": "MAPAの規則(Instrução Normativa 8/2003)の付属書では、生豆(Café Beneficiado Grão Cru)は欠点数によってタイプ2〜8に分類され、数字が小さいほど欠点が少ない。ふるい(スクリーンサイズ)による分類もある。この規則に反して生豆を商業化することは、詐欺とみなされる。また、MAPAが作成したブラジル公式分類(COB)の新しい表が、2026年のCecaféの連絡(Comunicado 081-2026)で言及されている。"
+  },
+  "claims": [
+   {
+    "index": 0,
+    "text": "ブラジルの公式分類(COB)がある",
+    "quote": "nova tabela de Classificação Oficial Brasileira (COB) do café, elaborada pelo Ministério da Agricultura e Pecuária (MAPA)",
+    "location": "Cecafé Comunicado 081-2026",
+    "sourceIds": [
+     "cecafe-workshop-nova-cob-2026"
+    ]
+   },
+   {
+    "index": 1,
+    "text": "欠点数でタイプ2〜8に分類される",
+    "quote": "360 8 200 > 360 Fora de Tipo",
+    "location": "IN 8/2003 Anexo, 16.3 Tabela 3",
+    "sourceIds": [
+     "mapa-in-8-2003"
+    ]
+   },
+   {
+    "index": 2,
+    "text": "数字が小さいほど高品質(欠点が少ない)",
+    "quote": "4 2 + 100 46 5 50",
+    "location": "IN 8/2003 Anexo, 16.3 Tabela 3",
+    "sourceIds": [
+     "mapa-in-8-2003"
+    ]
+   },
+   {
+    "index": 3,
+    "text": "スクリーンサイズ(ふるい)でも分類される",
+    "quote": "Chato graúdo: peneiras 19/18 e 17;",
+    "location": "IN 8/2003 Anexo, 4.2 Subcategoria",
+    "sourceIds": [
+     "mapa-in-8-2003"
+    ]
+   },
+   {
+    "index": 4,
+    "text": "商業取引にはこの分類が必須",
+    "quote": "Será também considerada fraude a comercialização do Café Beneficiado Grão Cru, em desacordo com o estabelecido neste Regulamento.",
+    "location": "IN 8/2003 Anexo, 14.2 / 10.1",
+    "sourceIds": [
+     "mapa-in-8-2003"
+    ]
+   }
+  ],
+  "sources": {
+   "cecafe-workshop-nova-cob-2026": {
+    "title": "Workshop - Proposta do MAPA para Nova Tabela de Classificação Oficial do Café (Comunicado 081-2026)",
+    "org": "Cecafé",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": "会員向け連絡(公開ページで本文を取得)。"
+   },
+   "mapa-in-8-2003": {
+    "title": "Instrução Normativa nº 8, de 11 de junho de 2003 - Regulamento Técnico de Identidade e de Qualidade para a Classificação do Café Beneficiado Grão Cru",
+    "org": "MAPA (Ministério da Agricultura, Pecuária e Abastecimento) - Sislegis",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": "MAPA公式の法令DB(Sislegis)からcurlでHTMLを取得し本文を抽出。表3のレイアウトは1セル1行に崩れて抽出される(数字の並びで読む)。取得時点で廃止の表示は見つからなかったが、現在の有効性は未確認。州政府サイトの同文PDFでも条文を照合した。"
+   }
+  }
+ },
+ {
+  "key": "origin:ブラジル:harvestSeason",
+  "content": {
+   "text": "USDA FASの『Coffee Annual - Brazil』(2025年5月)によると、2025/26年度のブラジルのコーヒー収穫は、ロブスタが4月、アラビカが5月に始まり、9月までに終わる見込み。"
+  },
+  "claims": [
+   {
+    "index": 0,
+    "text": "収穫は5〜9月",
+    "quote": "The 2025/26 Brazilian coffee harvest began at a slow pace, with robusta varieties in April and arabica in May, and expected to conclude by September.",
+    "location": "USDA FAS Coffee Annual Brazil 2025, 'Harvest Outlook'",
+    "sourceIds": [
+     "usda-fas-coffee-annual-br-2025"
+    ]
+   }
+  ],
+  "sources": {
+   "usda-fas-coffee-annual-br-2025": {
+    "title": "Coffee Annual - Brazil (BR2025-0013, 2025-05-19)",
+    "org": "USDA Foreign Agricultural Service (GAIN)",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": "pypdfで全19頁を抽出。2025/26年度の収穫の記述。"
+   }
+  }
+ },
+ {
+  "key": "origin:ブラジル:history",
+  "content": {
+   "text": "コーヒーは1727年にパラ州ベレンからブラジルに入ったとされる(MAPA)。1975年7月18日、パラナ州で記録された最大級の霜害の一つがコーヒー畑を壊滅させ、同州の農畜産の姿を変えた(パラナ州政府)。"
+  },
+  "claims": [
+   {
+    "index": 0,
+    "text": "1727年に導入されたとされる",
+    "quote": "O café chegou ao Brasil, por Belém no Pará, em 1727, vindo da Guiana Francesa",
+    "location": "MAPA 'Café no Brasil' 歴史の項",
+    "sourceIds": [
+     "mapa-cafe-no-brasil"
+    ]
+   },
+   {
+    "index": 1,
+    "text": "1975年の大霜害があった(7月18日)",
+    "quote": "Há 50 anos, em 18 de julho de 1975, uma das maiores geadas já registrada no Estado devastou os cafezais e mudou o perfil agropecuário do Paraná.",
+    "location": "パラナ州農業局 記事 冒頭",
+    "sourceIds": [
+     "pr-geada-negra-1975"
+    ]
+   }
+  ],
+  "sources": {
+   "mapa-cafe-no-brasil": {
+    "title": "Café no Brasil e Ementário do Café (cafeicultura brasileira)",
+    "org": "MAPA (Ministério da Agricultura e Pecuária)",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": "統計は2017〜2018年の旧い記述を含むページ。"
+   },
+   "pr-geada-negra-1975": {
+    "title": "Há 50 anos geada negra marcava fim de um ciclo, mas provocou diversificação da economia do Paraná",
+    "org": "Governo do Estado do Paraná (Secretaria da Agricultura e do Abastecimento)",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": "州政府の広報記事(2025年)。"
+   }
+  }
+ },
+ {
+  "key": "origin:ブラジル:officialBody",
+  "content": {
+   "text": "Cecafé(Conselho dos Exportadores de Café do Brasil)は1999年に設立され、コーヒー輸出部門の発展を国内外で代表し、推進している(Cecafé)。生豆の分類証明書(Certificado de Classificação)は、MAPAまたはMAPAが正式に認定した法人が発行する(IN 8/2003)。"
+  },
+  "claims": [
+   {
+    "index": 0,
+    "text": "Cecaféは輸出者評議会で、1999年設立",
+    "quote": "Fundado em 1999, o Cecafé representa e promove ativamente o desenvolvimento do setor exportador de café nos âmbitos nacional e internacional.",
+    "location": "Cecafé 月次レポート(2026-03-10)末尾の団体紹介",
+    "sourceIds": [
+     "cecafe-relatorio-fev-2026"
+    ]
+   },
+   {
+    "index": 1,
+    "text": "実際の格付け権限はMAPAが持つ",
+    "quote": "O Certificado de Classificação será emitido pelo Ministério da Agricultura, Pecuária e Abastecimento ou pelas pessoas jurídicas devidamente credenciadas pelo mesmo",
+    "location": "IN 8/2003 Anexo, 13.1",
+    "sourceIds": [
+     "mapa-in-8-2003"
+    ]
+   }
+  ],
+  "sources": {
+   "cecafe-relatorio-fev-2026": {
+    "title": "Exportação de café do Brasil soma 2,6 mi de sacas e cai 23,5% em fev/2026",
+    "org": "Cecafé (Conselho dos Exportadores de Café do Brasil)",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": "Cecafé自身の公式サイトの月次レポート。団体概要の段落を使用。"
+   },
+   "mapa-in-8-2003": {
+    "title": "Instrução Normativa nº 8, de 11 de junho de 2003 - Regulamento Técnico de Identidade e de Qualidade para a Classificação do Café Beneficiado Grão Cru",
+    "org": "MAPA (Ministério da Agricultura, Pecuária e Abastecimento) - Sislegis",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": "MAPA公式の法令DB(Sislegis)からcurlでHTMLを取得し本文を抽出。表3のレイアウトは1セル1行に崩れて抽出される(数字の並びで読む)。取得時点で廃止の表示は見つからなかったが、現在の有効性は未確認。州政府サイトの同文PDFでも条文を照合した。"
+   }
+  }
+ },
+ {
+  "key": "origin:ブラジル:sub:セラード(セラード・ミネイロ)",
+  "content": {
+   "detail": "Cerrado Mineiroは、ブラジルでコーヒーとして初のDO(原産地呼称)を取得した産地(2013年。Embrapa)。Embrapaは、この地域で土壌改良・施肥・灌漑・栽培品種(cultivares)などの技術が使われていると記す。"
+  },
+  "claims": [
+   {
+    "index": 0,
+    "text": "コーヒーで初の原産地呼称(DO)を取得した(2013年)",
+    "quote": "conquistou, recentemente, a primeira DO para café no país.",
+    "location": "Embrapa 'Cerrado Mineiro é destaque…' 冒頭",
+    "sourceIds": [
+     "embrapa-cerrado-do",
+     "embrapa-igs-cafe"
+    ]
+   },
+   {
+    "index": 1,
+    "text": "長い乾期と低肥沃度の土壌に、土壌改良・施肥・灌漑などの技術が使われている",
+    "quote": "correção do solo, adubação, irrigação e cultivares",
+    "location": "Embrapa 'Cerrado Mineiro é destaque…' 本文",
+    "sourceIds": [
+     "embrapa-cerrado-do"
+    ]
+   }
+  ],
+  "sources": {
+   "embrapa-cerrado-do": {
+    "title": "Cerrado Mineiro é destaque na produção de cafés diferenciados",
+    "org": "Embrapa (Embrapa Café)",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": ""
+   },
+   "embrapa-igs-cafe": {
+    "title": "Café segue como o produto com maior número de IGs no Brasil",
+    "org": "Embrapa (Embrapa Café)",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": ""
+   }
+  }
+ },
+ {
+  "key": "origin:ブラジル:tagline",
+  "content": {
+   "text": "世界の生産量の4割近くを占める(USDA FAS、2026年7月)"
+  },
+  "claims": [
+   {
+    "index": 0,
+    "text": "生産量世界一",
+    "quote": "Brazil accounts for nearly 40 percent of world production and exerts significant influence on global supplies and prices.",
+    "location": "USDA FAS 'Coffee: World Markets and Trade' July 2026, 冒頭要旨の次の段落",
+    "sourceIds": [
+     "usda-fas-coffee-world-2026-07",
+     "embrapa-cafe-endereco"
+    ]
+   }
+  ],
+  "sources": {
+   "usda-fas-coffee-world-2026-07": {
+    "title": "Coffee: World Markets and Trade (July 2026)",
+    "org": "USDA Foreign Agricultural Service",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": "pypdfで抽出(10頁)。"
+   },
+   "embrapa-cafe-endereco": {
+    "title": "Café com endereço e qualidade",
+    "org": "Embrapa",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": ""
+   }
+  }
+ },
+ {
+  "key": "origin:ブラジル:terroir",
+  "content": {
+   "text": "ミナスジェライス州はブラジル国内で最大のコーヒー生産州で、エスピリトサント、サンパウロ、バイーア、ロンドニアが続く(USDA FAS、2025年)。Embrapaは、セラード(Cerrado Mineiro)を長い乾期と低肥沃度の土壌が特徴の地域とし、土壌改良・施肥・灌漑・栽培品種(cultivares)などの技術が用いられていると記す。"
+  },
+  "claims": [
+   {
+    "index": 0,
+    "text": "ミナスジェライス州が国内生産の柱",
+    "quote": "Minas Gerais remains the leading coffee producer in the country, followed by Espírito Santo, São Paulo, Bahia, and Rondônia.",
+    "location": "USDA FAS Coffee Annual Brazil 2025, 'Harvest Outlook'",
+    "sourceIds": [
+     "usda-fas-coffee-annual-br-2025",
+     "usda-fas-coffee-world-2026-07"
+    ]
+   },
+   {
+    "index": 1,
+    "text": "セラードは長い乾期と低肥沃度の土壌が特徴",
+    "quote": "caracterizada por estiagens prolongadas e solos de baixa fertilidade",
+    "location": "Embrapa 'Cerrado Mineiro é destaque…' 本文",
+    "sourceIds": [
+     "embrapa-cerrado-do"
+    ]
+   },
+   {
+    "index": 2,
+    "text": "セラードでは土壌改良・施肥・灌漑などの技術が用いられている",
+    "quote": "correção do solo, adubação, irrigação e cultivares",
+    "location": "Embrapa 'Cerrado Mineiro é destaque…' 本文",
+    "sourceIds": [
+     "embrapa-cerrado-do"
+    ]
+   }
+  ],
+  "sources": {
+   "usda-fas-coffee-annual-br-2025": {
+    "title": "Coffee Annual - Brazil (BR2025-0013, 2025-05-19)",
+    "org": "USDA Foreign Agricultural Service (GAIN)",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": "pypdfで全19頁を抽出。2025/26年度の収穫の記述。"
+   },
+   "usda-fas-coffee-world-2026-07": {
+    "title": "Coffee: World Markets and Trade (July 2026)",
+    "org": "USDA Foreign Agricultural Service",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": "pypdfで抽出(10頁)。"
+   },
+   "embrapa-cerrado-do": {
+    "title": "Cerrado Mineiro é destaque na produção de cafés diferenciados",
+    "org": "Embrapa (Embrapa Café)",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": ""
+   }
+  }
+ },
+ {
+  "key": "origin:ブラジル:varietiesDetail",
+  "content": {
+   "text": "ムンドノーボはスマトラと赤ブルボンの自然交雑に由来し、樹高が高く茎が細い(Embrapa Rondônia)。Embrapaは、ムンドノーボとカトゥアイ・ベルメーリョ(赤)が、ブラジルのアラビカ栽培面積の約9割に存在すると記す。カトゥアイ(赤・黄)はムンドノーボとカトゥーラ・アマレーロ(黄)の交配で、1972年に圃場に出た(Embrapa)。Alta Mogianaの項では、最も多く栽培されている品種として、カトゥアイ・ベルメーリョ、カトゥアイ・アマレーロ、ムンドノーボ、ブルボン・アマレーロ(黄ブルボン)、オバタIAC 1669-20が挙げられている(Embrapa)。"
+  },
+  "claims": [
+   {
+    "index": 0,
+    "text": "ムンドノーボはスマトラ×赤ブルボンの自然交雑",
+    "quote": "cruzamento natural entre as variedad es ‘Sumatra’ e ‘Bourbon Vermelho’",
+    "location": "Embrapa Rondônia Doc.93 'Mundo novo'",
+    "sourceIds": [
+     "embrapa-doc93-rondonia"
+    ]
+   },
+   {
+    "index": 1,
+    "text": "ムンドノーボは樹高が高く多収",
+    "quote": "As plantas têm porte alto e caule fino",
+    "location": "Embrapa Rondônia Doc.93 'Mundo novo'",
+    "sourceIds": [
+     "embrapa-doc93-rondonia"
+    ]
+   },
+   {
+    "index": 2,
+    "text": "ムンドノーボ(とカトゥアイ)がブラジルのアラビカ生産の屋台骨",
+    "quote": "As cultivares Mundo Novo e Catuaí Vermelho são consideradas desbravadoras do Cerrado Mineiro e hoje se encontram espalhadas pelo Brasil afora, estando presentes em cerca de 90% da área cultivada com café arábica no País.",
+    "location": "Embrapa 'Café com endereço e qualidade' 'Mundo Novo e Catuaí'",
+    "sourceIds": [
+     "embrapa-cafe-endereco"
+    ]
+   },
+   {
+    "index": 3,
+    "text": "カトゥアイは黄カトゥーラ×ムンドノーボの交配",
+    "quote": "Em 1972, chegam ao campo as cultivares Catuaí Vermelho e Catuaí Amarelo, resultantes de cruzamento da cultivar Mundo Novo com a cultivar Caturra Amarelo",
+    "location": "Embrapa 'Café com endereço e qualidade' 'Mundo Novo e Catuaí'",
+    "sourceIds": [
+     "embrapa-cafe-endereco"
+    ]
+   },
+   {
+    "index": 4,
+    "text": "ほかにオバタ、黄ブルボンなどが栽培される",
+    "quote": "sendo as variedades mais cultivadas Catuaí Vermelho, Catuaí Amarelo, Mundo Novo, Bourbon Amarelo e Obatã IAC 1669-20",
+    "location": "Embrapa 'Café com endereço e qualidade'(Alta Mogiana の項)",
+    "sourceIds": [
+     "embrapa-cafe-endereco"
+    ]
+   }
+  ],
+  "sources": {
+   "embrapa-doc93-rondonia": {
+    "title": "Características das principais variedades de café cultivadas em Rondônia (Documentos 93)",
+    "org": "Embrapa Rondônia",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": "pypdfで抽出(26頁)。抽出テキストで単語中に空白が入る箇所あり(例: 'variedad es')。ロンドニア州の品種の解説。"
+   },
+   "embrapa-cafe-endereco": {
+    "title": "Café com endereço e qualidade",
+    "org": "Embrapa",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": ""
+   }
+  }
+ },
+ {
+  "key": "origin:ベトナム:farmStructure",
+  "content": {
+   "text": "USDA FAS(2026年)によると、60万戸超の小農世帯がコーヒー生産に関わる。EUDR(EU森林破壊規制)は2026年12月に施行される(同)。USDA FAS(2025年)は、EUDRがベトナムのコーヒー生産者にとって課題を生んでいること、ベトナムのコーヒー輸出の41%がEU向けであることを記す。"
+  },
+  "claims": [
+   {
+    "index": 0,
+    "text": "60万戸超の小農世帯がコーヒー生産に関わる(アプリの『64万戸超』の代替)",
+    "quote": "more than 600,000 smallholder households involved in coffee production",
+    "location": "Production",
+    "sourceIds": [
+     "usda-fas-vn-coffee-annual-2026"
+    ]
+   },
+   {
+    "index": 1,
+    "text": "EUDR(EU森林破壊規制)は2026年12月施行",
+    "quote": "(EUDR) requirements, which take effect in December 2026.",
+    "location": "Production",
+    "sourceIds": [
+     "usda-fas-vn-coffee-annual-2026"
+    ]
+   },
+   {
+    "index": 2,
+    "text": "EUDRへの対応が輸出上の課題",
+    "quote": "The EU Deforestation Regulation (EUDR), which comes into force in 2026, is creating challenges for Vietnam coffee producers.",
+    "location": "Production",
+    "sourceIds": [
+     "usda-fas-vn-coffee-annual-2025"
+    ]
+   },
+   {
+    "index": 3,
+    "text": "輸出の約4割がEU向け",
+    "quote": "Forty one percent of Vietnam’s coffee exports go to European Union.",
+    "location": "Production",
+    "sourceIds": [
+     "usda-fas-vn-coffee-annual-2025"
+    ]
+   }
+  ],
+  "sources": {
+   "usda-fas-vn-coffee-annual-2026": {
+    "title": "Vietnam: Coffee Annual (VM2026-0016, 2026-05-20)",
+    "org": "USDA Foreign Agricultural Service (FAS Ho Chi Minh City)",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": "pypdfで全文抽出"
+   },
+   "usda-fas-vn-coffee-annual-2025": {
+    "title": "Vietnam: Coffee Annual (VM2025-0018, 2025-05-19)",
+    "org": "USDA Foreign Agricultural Service (FAS Hanoi)",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": "pypdfで全文抽出"
+   }
+  }
+ },
+ {
+  "key": "origin:ベトナム:history",
+  "content": {
+   "text": "1857年、フランスの宣教師を通じて、アラビカがベトナムに最初に導入されたコーヒー品種となった(ICO、2019年3月)。VICOFAの沿革は、最終的にアラビカ(Chè)をロブスタ(Vối)とエクセルサ(Mít)に置き換えることにしたと記す。ドイモイ(経済改革)は1986年に始まった(ICO)。1986年以降、ベトナム政府はコーヒー部門への投資に資源を集中してきた(ICO)。ICOの2019年3月の資料では、ベトナムは世界第2位のコーヒー生産国・輸出国の地位を保つことが目標に挙げられている。VICOFAは、ロブスタの最大の輸出国はベトナムだと記す。"
+  },
+  "claims": [
+   {
+    "index": 0,
+    "text": "1857年にフランス人がアラビカを導入した",
+    "quote": "Arabica (Coffea arabica) was the first coffee variety to have been introduced into Vietnam in 1857, through French missionaries.",
+    "location": "1.3 Summary of the history of coffee in Vietnam",
+    "sourceIds": [
+     "ico-icc-124-9-profile-vietnam"
+    ]
+   },
+   {
+    "index": 1,
+    "text": "中部高原では当初アラビカが植えられたが、さび病のため劣化し、ロブスタとエクセルサに置き換えられた(アプリに無い。転換理由の訂正用)",
+    "quote": "Cuối cùng, người ta quyết định thay thế cà phê Chè bằng cà phê Vối và cà phê Mít.",
+    "location": "Quá trình phát triển cà phê ở Việt Nam",
+    "sourceIds": [
+     "vicofa-luoc-su-nganh-ca-phe"
+    ]
+   },
+   {
+    "index": 2,
+    "text": "1986年にドイモイ(経済改革)が始まった",
+    "quote": "launched in 1986, have spurred rapid economic growth",
+    "location": "1.2 Economic setting",
+    "sourceIds": [
+     "ico-icc-124-9-profile-vietnam"
+    ]
+   },
+   {
+    "index": 3,
+    "text": "1986年以降、政府が(コーヒー部門への)投資を本格化した",
+    "quote": "Since 1986, the Government of Vietnam has concentrated its resources on investing in the coffee sector",
+    "location": "1.3 Summary of the history of coffee in Vietnam",
+    "sourceIds": [
+     "ico-icc-124-9-profile-vietnam"
+    ]
+   },
+   {
+    "index": 4,
+    "text": "ベトナムは世界第2位の生産国",
+    "quote": "firstly, to maintain its position as the world’s second largest producer and exporter of coffee green beans",
+    "location": "Foreword",
+    "sourceIds": [
+     "ico-icc-124-9-profile-vietnam"
+    ]
+   },
+   {
+    "index": 5,
+    "text": "ロブスタ最大の輸出国",
+    "quote": "Nước xuất khẩu cà phê Robusta lớn nhất thế giới là Việt Nam.",
+    "location": "CÀ PHÊ VỐI (ROBUSTA)",
+    "sourceIds": [
+     "vicofa-luoc-su-nganh-ca-phe"
+    ]
+   }
+  ],
+  "sources": {
+   "ico-icc-124-9-profile-vietnam": {
+    "title": "Country Coffee Profile: Vietnam (ICC-124-9, 4 March 2019)",
+    "org": "International Coffee Organization(ベトナムコーヒーカカオ協会VICOFAが作成を担当)",
+    "kind": "primary",
+    "accessed": "2026-11-09",
+    "note": "2018年までのデータ。pypdfで全文抽出。12か月再確認の対象"
+   },
+   "vicofa-luoc-su-nganh-ca-phe": {
+    "title": "Lược sử ngành cà phê(コーヒー産業略史)",
+    "org": "Hiệp hội Cà phê - Ca cao Việt Nam (VICOFA)",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": "掲載日 2018-08-07。curlで生HTMLを取得"
+   }
+  }
+ },
+ {
+  "key": "origin:ベトナム:officialBody",
+  "content": {
+   "text": "VICOFA(ベトナムコーヒーカカオ協会)は1990年に設立された、非営利の社会・職業団体(VICOFA)。今日の国家標準計量品質委員会(Ủy ban Tiêu chuẩn Đo lường Chất lượng Quốc gia)は前身をSTAMEQ(標準計量品質総局)とし、STAMEQは科学技術省に直属する機関とされている(STAMEQ)。"
+  },
+  "claims": [
+   {
+    "index": 0,
+    "text": "VICOFA(ベトナムコーヒーカカオ協会)は1990年設立",
+    "quote": "Hiệp hội Cà phê - Ca Cao Việt Nam (VICOFA) được thành lập theo Nghị quyết của Hội nghị các hội viên sáng lập ngày 04/01/1990",
+    "location": "Bộ máy tổ chức",
+    "sourceIds": [
+     "vicofa-bo-may-to-chuc"
+    ]
+   },
+   {
+    "index": 1,
+    "text": "VICOFAは業界団体である",
+    "quote": "Hiệp hội Cà phê - Ca cao Việt Nam là một tổ chức xã hội - nghề nghiệp, phi lợi nhuận",
+    "location": "Bộ máy tổ chức",
+    "sourceIds": [
+     "vicofa-bo-may-to-chuc"
+    ]
+   },
+   {
+    "index": 2,
+    "text": "STAMEQは科学技術省に属する機関",
+    "quote": "Ủy ban Tiêu chuẩn Đo lường Chất lượng Quốc gia ngày nay có tiền thân là Tổng cục Tiêu chuẩn Đo lường Chất lượng (STAMEQ) là cơ quan trực thuộc Bộ Khoa học và Công nghệ",
+    "location": "Giới thiệu chung",
+    "sourceIds": [
+     "stamex-tcvn-gioi-thieu-chung"
+    ]
+   }
+  ],
+  "sources": {
+   "vicofa-bo-may-to-chuc": {
+    "title": "Bộ máy tổ chức(VICOFAの組織・沿革)",
+    "org": "Hiệp hội Cà phê - Ca cao Việt Nam (VICOFA)",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": "curlで生HTMLを取得"
+   },
+   "stamex-tcvn-gioi-thieu-chung": {
+    "title": "Giới thiệu chung(国家標準計量品質委員会の紹介)",
+    "org": "Ủy ban Tiêu chuẩn Đo lường Chất lượng Quốc gia (STAMEQ)",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": "curlで生HTMLを取得"
+   }
+  }
+ },
+ {
+  "key": "origin:ベトナム:sub:Da Lat/Cau Dat(Lam Dong)",
+  "content": {
+   "detail": "Cau Dat-Da Latは地理的表示の対象産地(ICO)。"
+  },
+  "claims": [
+   {
+    "index": 0,
+    "text": "Cau Dat-Da Latは地理的表示の産地",
+    "quote": "There are some geographic indications of the coffee regions (‘Buon Ma Thuot’, ‘Cau Dat – Da Lat’ and ‘Son La’)",
+    "location": "1.3 Summary of the history of coffee in Vietnam",
+    "sourceIds": [
+     "ico-icc-124-9-profile-vietnam"
+    ]
+   }
+  ],
+  "sources": {
+   "ico-icc-124-9-profile-vietnam": {
+    "title": "Country Coffee Profile: Vietnam (ICC-124-9, 4 March 2019)",
+    "org": "International Coffee Organization(ベトナムコーヒーカカオ協会VICOFAが作成を担当)",
+    "kind": "primary",
+    "accessed": "2026-11-09",
+    "note": "2018年までのデータ。pypdfで全文抽出。12か月再確認の対象"
+   }
+  }
+ },
+ {
+  "key": "origin:ベトナム:sub:ダクラク(Buon Ma Thuot)",
+  "content": {
+   "detail": "VICOFAは、ダクラク、とりわけブオンマトートがコーヒーの「首都(thủ phủ)」とみなされてきたと記す。"
+  },
+  "claims": [
+   {
+    "index": 0,
+    "text": "ダクラク(ブオンマトート)はコーヒーの『首都(thủ phủ)』とされる",
+    "quote": "Đây cũng chính là lý do Đắk Lắk và nhất là Buôn Ma Thuột vốn được xem là thủ phủ cà phê",
+    "location": "CÀ PHÊ MÍT(エクセルサ)の節",
+    "sourceIds": [
+     "vicofa-luoc-su-nganh-ca-phe"
+    ]
+   }
+  ],
+  "sources": {
+   "vicofa-luoc-su-nganh-ca-phe": {
+    "title": "Lược sử ngành cà phê(コーヒー産業略史)",
+    "org": "Hiệp hội Cà phê - Ca cao Việt Nam (VICOFA)",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": "掲載日 2018-08-07。curlで生HTMLを取得"
+   }
+  }
+ },
+ {
+  "key": "origin:ベトナム:tagline",
+  "content": {
+   "text": "ICOの国別プロファイル(2019年3月)の序文は、ベトナムを世界第2位のコーヒー生産国・輸出国としている。同プロファイルは、ロブスタが総生産量の97%を占めると記す。"
+  },
+  "claims": [
+   {
+    "index": 0,
+    "text": "ベトナムは世界第2位のコーヒー生産国",
+    "quote": "firstly, to maintain its position as the world’s second largest producer and exporter of coffee green beans",
+    "location": "Foreword(VICOFA議長)",
+    "sourceIds": [
+     "ico-icc-124-9-profile-vietnam"
+    ]
+   },
+   {
+    "index": 1,
+    "text": "ロブスタが主体",
+    "quote": "Robusta accounts for 97% of Vietnam's total output volume.",
+    "location": "2.1 Types of coffee and coffee-growing areas",
+    "sourceIds": [
+     "ico-icc-124-9-profile-vietnam"
+    ]
+   }
+  ],
+  "sources": {
+   "ico-icc-124-9-profile-vietnam": {
+    "title": "Country Coffee Profile: Vietnam (ICC-124-9, 4 March 2019)",
+    "org": "International Coffee Organization(ベトナムコーヒーカカオ協会VICOFAが作成を担当)",
+    "kind": "primary",
+    "accessed": "2026-11-09",
+    "note": "2018年までのデータ。pypdfで全文抽出。12か月再確認の対象"
+   }
+  }
+ },
+ {
+  "key": "origin:ベトナム:terroir",
+  "content": {
+   "text": "USDA FAS(2025年)は、中部高原(タイグエン)がコーヒー栽培面積全体の92%を占めると記す。ICOの国別プロファイル(2019年)には、コーヒー栽培に適した広い面積の赤色バサルト土壌があると書かれている。USDA FAS(2026年)は、早すぎる、または過剰な灌漑は短期的には収量を増やしうるが、長期的には地下水を枯渇させ、生産コストを押し上げると記す。"
+  },
+  "claims": [
+   {
+    "index": 0,
+    "text": "中部高原(タイグエン地方)が栽培面積の約9割",
+    "quote": "accounts for 92 percent of the total coffee cultivation area and 90 percent of national coffee output.",
+    "location": "Production",
+    "sourceIds": [
+     "usda-fas-vn-coffee-annual-2025"
+    ]
+   },
+   {
+    "index": 1,
+    "text": "赤色バサルト土壌が広がる",
+    "quote": "There is a large area of red soil basalt suitable for coffee growing which was brought by the French in 1857.",
+    "location": "Foreword",
+    "sourceIds": [
+     "ico-icc-124-9-profile-vietnam"
+    ]
+   },
+   {
+    "index": 2,
+    "text": "地下水の過剰揚水が課題になっている",
+    "quote": "Early or excessive irrigation may increase coffee yield in the short term, but in the long run, it depletes groundwater and increases production costs over time.",
+    "location": "Production",
+    "sourceIds": [
+     "usda-fas-vn-coffee-annual-2026"
+    ]
+   }
+  ],
+  "sources": {
+   "usda-fas-vn-coffee-annual-2025": {
+    "title": "Vietnam: Coffee Annual (VM2025-0018, 2025-05-19)",
+    "org": "USDA Foreign Agricultural Service (FAS Hanoi)",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": "pypdfで全文抽出"
+   },
+   "ico-icc-124-9-profile-vietnam": {
+    "title": "Country Coffee Profile: Vietnam (ICC-124-9, 4 March 2019)",
+    "org": "International Coffee Organization(ベトナムコーヒーカカオ協会VICOFAが作成を担当)",
+    "kind": "primary",
+    "accessed": "2026-11-09",
+    "note": "2018年までのデータ。pypdfで全文抽出。12か月再確認の対象"
+   },
+   "usda-fas-vn-coffee-annual-2026": {
+    "title": "Vietnam: Coffee Annual (VM2026-0016, 2026-05-20)",
+    "org": "USDA Foreign Agricultural Service (FAS Ho Chi Minh City)",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": "pypdfで全文抽出"
+   }
+  }
+ },
+ {
+  "key": "origin:ベトナム:varietiesDetail",
+  "content": {
+   "text": "ICOの国別プロファイル(2019年3月)の2.1節は、ベトナムで栽培されるアラビカのほぼ99%がカティモール種だと記す。同じ節には、ベトナムの研究者がクローンTR4、TR5、TR6、TR7、TR8、TR9、TR11、TR12、TR13、TR14、TR15(TRS 1)と名付けた、との記述がある。また、2015年のAVPA受賞に関する記述に、Cau Dat‒Da Lat産のアラビカ・ブルボンが出てくる。"
+  },
+  "claims": [
+   {
+    "index": 0,
+    "text": "主力は選抜クローンのTRシリーズ(TR4、TR9等)",
+    "quote": "named by Vietnamese researchers as clone TR4, TR5, TR6, TR7, TR8, TR9, TR11, TR12, TR13, TR14 and TR15 or TRS 1.",
+    "location": "2.1 Types of coffee and coffee-growing areas",
+    "sourceIds": [
+     "ico-icc-124-9-profile-vietnam"
+    ]
+   },
+   {
+    "index": 1,
+    "text": "アラビカはカティモールが支配的",
+    "quote": "almost 99% of the Arabica coffee grown in Vietnam is of the Catimor variety",
+    "location": "2.1 Types of coffee and coffee-growing areas",
+    "sourceIds": [
+     "ico-icc-124-9-profile-vietnam"
+    ]
+   },
+   {
+    "index": 2,
+    "text": "Da Lat周辺にブルボンが残る",
+    "quote": "mixture of Arabica Bourbon from Cau Dat ‒ Da Lat and Robusta from Buon Ma Thuot",
+    "location": "2.1(AVPA 2015の受賞の記述)",
+    "sourceIds": [
+     "ico-icc-124-9-profile-vietnam"
+    ]
+   }
+  ],
+  "sources": {
+   "ico-icc-124-9-profile-vietnam": {
+    "title": "Country Coffee Profile: Vietnam (ICC-124-9, 4 March 2019)",
+    "org": "International Coffee Organization(ベトナムコーヒーカカオ協会VICOFAが作成を担当)",
+    "kind": "primary",
+    "accessed": "2026-11-09",
+    "note": "2018年までのデータ。pypdfで全文抽出。12か月再確認の対象"
+   }
+  }
+ },
+ {
+  "key": "origin:ペルー:farmStructure",
+  "content": {
+   "text": "USDA FAS(2025年5月)によると、ペルーのコーヒーの90%超は、5ヘクタール未満の区画で小規模農家が生産している。同資料は、ペルーを世界有数の有機コーヒー輸出国(world's leading exporter of organic coffee)とも記す。Junta Nacional del Café(JNC)は公式サイト(2024年3月保存版)で、協会と協同組合を合わせた56のコーヒー関連組織が加盟し、14のコーヒー産地にまたがる約7万世帯が会員だと述べる。"
+  },
+  "claims": [
+   {
+    "index": 0,
+    "text": "生産者の90%超が5ヘクタール未満の小規模農家",
+    "quote": "Over 90 percent of Peruvian coffee is grown by smallholder farmers on plots smaller than 5 hectares.",
+    "location": "USDA FAS Coffee Annual 2025, Production",
+    "sourceIds": [
+     "usda-fas-peru-coffee-annual-2025"
+    ]
+   },
+   {
+    "index": 1,
+    "text": "JNCには14の産地にまたがる56の協同組合・団体、約7万戸の加盟農家が参加",
+    "quote": "Hoy reúne a un total de 56 organizaciones cafetaleras, entre asociaciones y cooperativas que suman 70 mil familias socias arraigadas en catorce zonas cafetaleras del país.",
+    "location": "JNC「Nosotros」(2024-03保存)",
+    "sourceIds": [
+     "jnc-nosotros-2024"
+    ]
+   },
+   {
+    "index": 2,
+    "text": "世界最大級の有機コーヒー輸出国",
+    "quote": "Peru is the world’s leading exporter of organic coffee",
+    "location": "USDA FAS 2025",
+    "sourceIds": [
+     "usda-fas-peru-coffee-annual-2025"
+    ]
+   }
+  ],
+  "sources": {
+   "usda-fas-peru-coffee-annual-2025": {
+    "title": "Coffee Annual - Peru (Report Number PE2025-0018, May 21, 2025)",
+    "org": "USDA Foreign Agricultural Service (GAIN), Lima",
+    "kind": "primary",
+    "accessed": "2026-11-09",
+    "note": "curl + pypdfで本文を抽出。米国農務省の駐在官報告(ペルー政府の資料ではない)。2026年5月版(PE2026-0008)は公式サイトが403でこの環境から取得できなかったため、2025年版を使用。"
+   },
+   "jnc-nosotros-2024": {
+    "title": "Nosotros - Junta Nacional del Café",
+    "org": "Junta Nacional del Café (JNC)",
+    "kind": "primary",
+    "accessed": "2026-11-09",
+    "note": "Internet Archive(Wayback Machine)に保存された公式URLの複製を取得し、HTMLから本文を抽出(公式サイトの現行ページは2026-10時点で「工事中」表示のため)。使用した保存日: 2024-03-14。"
+   }
+  }
+ },
+ {
+  "key": "origin:ペルー:gradeSystem",
+  "content": {
+   "text": "INACAL(ペルー国家品質院)の実施ガイドGIP 101:2026(第2版)は、NTP 209.027:2024 + CT 1:2025(コーヒー生豆の要求事項)のためのガイドである。同ガイドによると、欠点(defectos o imperfecciones)の上限はGrado 1が15、Grado 2が23、Grado 3が30。水分は10〜12.5%で、粒度は最低でも50%がマラ15(6mm)に残ること。別の規格NTP 209.311(スペシャルティコーヒー、2019年版)の実施ガイドGIP 107:2021は、主要欠点0、二次欠点は最大5と示す。"
+  },
+  "claims": [
+   {
+    "index": 0,
+    "text": "Grado 1は最大15欠点、当期収穫・色と粒サイズが均一・香りが非常にフレッシュ",
+    "quote": "Grado 1 Compuesto por granos de cosecha actual, color y tamaño homogéneo y de olor intensamente fresco. || a) Grado 1 Se admite un máximo de 15 defectos o imperfecciones",
+    "location": "GIP 101:2026 第5章・6.2.4(2018年版の記述はGIP 101:2021も同じ)",
+    "sourceIds": [
+     "inacal-gip-101-2026"
+    ]
+   },
+   {
+    "index": 1,
+    "text": "Grado 2は最大23欠点",
+    "quote": "b) Grado 2 Se admite un máximo de 23 defectos o imperfecciones",
+    "location": "GIP 101:2026 6.2.4",
+    "sourceIds": [
+     "inacal-gip-101-2026"
+    ]
+   },
+   {
+    "index": 2,
+    "text": "Grado 3は最大30欠点で、色・粒サイズにばらつきがある",
+    "quote": "Grado 3 Compuestos por granos de tamaño y color variable, olor de poca a mediana intensidad. || c) Grado 3 Se admite un máximo de 30 defectos o imperfecciones",
+    "location": "GIP 101:2026 第5章・6.2.4",
+    "sourceIds": [
+     "inacal-gip-101-2026"
+    ]
+   },
+   {
+    "index": 3,
+    "text": "共通基準は水分10〜12.5%",
+    "quote": "La humedad del café verde debe estar en el rango de 10 a 12,5%",
+    "location": "GIP 101:2026 6.2.2",
+    "sourceIds": [
+     "inacal-gip-101-2026"
+    ]
+   },
+   {
+    "index": 4,
+    "text": "粒度は50%以上がマラ15(6.0mm)以上",
+    "quote": "Mínimo: El 50% debe estar retenido en malla 15 (6mm).",
+    "location": "GIP 101:2026 6.2.3",
+    "sourceIds": [
+     "inacal-gip-101-2026"
+    ]
+   },
+   {
+    "index": 5,
+    "text": "NTP 209.311のスペシャルティコーヒー規格は主要欠点0個",
+    "quote": "Defectos primarios: 0 Defectos secundarios: Máximo 5",
+    "location": "GIP 107:2021(NTP 209.311:2019の実施ガイド)",
+    "sourceIds": [
+     "inacal-gip-107-2021"
+    ]
+   }
+  ],
+  "sources": {
+   "inacal-gip-101-2026": {
+    "title": "GIP 101:2026 Guía de Implementación de la NTP 209.027:2024 + CT 1:2025 CAFÉ. Café verde. Requisitos (2ª Edición)",
+    "org": "INACAL (Instituto Nacional de Calidad)",
+    "kind": "primary",
+    "accessed": "2026-11-09",
+    "note": "curl + pypdfで本文を抽出。規格(NTP)本体ではなくINACALの「実施ガイド」(2026-02-13)。NTP本体は有料のため取得していない。"
+   },
+   "inacal-gip-107-2021": {
+    "title": "GIP 107:2021 Guía de Implementación de la NTP 209.311:2019 CAFÉS ESPECIALES. Requisitos (1ª Edición)",
+    "org": "INACAL (Instituto Nacional de Calidad)",
+    "kind": "primary",
+    "accessed": "2026-11-09",
+    "note": "curl + pypdfで本文を抽出。規格(NTP)本体ではなくINACALの「実施ガイド」。2021年版のため、後続版の有無は未確認。"
+   }
+  }
+ },
+ {
+  "key": "origin:ペルー:history",
+  "content": {
+   "text": "COE(カップ・オブ・エクセレンス)ペルー大会の1位は、2017年がFinca La Flor(Juan Heredia Sanchez、カハマルカ州ハエン、92.25点)。その後の大会でも、2019年・2022年・2023年・2024年・2025年・2026年の1位はカハマルカ産だった(ACE公式サイトの結果ページ)。"
+  },
+  "claims": [
+   {
+    "index": 0,
+    "text": "2017年の1位はFinca La Flor、92.25点",
+    "quote": "1A 6 La Flor 2017 – {ORG} Juan Heredia Sanchez Jaén, Cajamarca 92.25",
+    "location": "ACE「Perú 2017」Winning Farms",
+    "sourceIds": [
+     "ace-coe-peru-2017"
+    ]
+   },
+   {
+    "index": 1,
+    "text": "カハマルカはその後も2019・2022・2024・2025年にCOEで1位を取った",
+    "quote": "1a 180 La Lucuma Grimanes Morales Lizana Cajamarca 92.28 || 1a 90.39 LA BOLA BLANCA FLOR CORDOVA JIMENEZ CAJAMARCA || 1A 90,54 El Mirador Miguel Padilla Chinguel Caturra, Bourbon, Geisha Washed Cajamarca || 1A 90,64 La Catarata Angel Antonio Manosalva Palomino Geisha Washed Cajamarca",
+    "location": "ACE 各年の「Winning Farms」1位",
+    "sourceIds": [
+     "ace-coe-peru-2019",
+     "ace-coe-peru-2022",
+     "ace-coe-peru-2024",
+     "ace-coe-peru-2025"
+    ]
+   },
+   {
+    "index": 2,
+    "text": "2023年・2026年もカハマルカ産が1位(列挙から漏れている)",
+    "quote": "1A 90.74 Alto Mirador Yoniser Mego Silva Cajamarca || 1 91.71 Finca La Esperanza Fidel Huancas Huancas Washed Geisha Cajamarca",
+    "location": "ACE Perú 2023 / 2026 の1位",
+    "sourceIds": [
+     "ace-coe-peru-2023",
+     "ace-coe-peru-2026"
+    ]
+   }
+  ],
+  "sources": {
+   "ace-coe-peru-2017": {
+    "title": "Perú 2017 - Cup of Excellence (competition results)",
+    "org": "Alliance for Coffee Excellence (Cup of Excellence)",
+    "kind": "primary",
+    "accessed": "2026-11-09",
+    "note": "curlで取得したHTMLの本文。"
+   },
+   "ace-coe-peru-2019": {
+    "title": "Perú 2019 - Cup of Excellence (competition results)",
+    "org": "Alliance for Coffee Excellence (Cup of Excellence)",
+    "kind": "primary",
+    "accessed": "2026-11-09",
+    "note": "curlで取得したHTMLの本文。"
+   },
+   "ace-coe-peru-2022": {
+    "title": "Perú 2022 - Cup of Excellence (competition results)",
+    "org": "Alliance for Coffee Excellence (Cup of Excellence)",
+    "kind": "primary",
+    "accessed": "2026-11-09",
+    "note": "curlで取得したHTMLの本文。"
+   },
+   "ace-coe-peru-2024": {
+    "title": "Perú 2024 - Cup of Excellence (competition results)",
+    "org": "Alliance for Coffee Excellence (Cup of Excellence)",
+    "kind": "primary",
+    "accessed": "2026-11-09",
+    "note": "curlで取得したHTMLの本文。"
+   },
+   "ace-coe-peru-2025": {
+    "title": "Perú 2025 - Cup of Excellence (competition results)",
+    "org": "Alliance for Coffee Excellence (Cup of Excellence)",
+    "kind": "primary",
+    "accessed": "2026-11-09",
+    "note": "curlで取得したHTMLの本文。"
+   },
+   "ace-coe-peru-2023": {
+    "title": "Perú 2023 - Cup of Excellence (competition results)",
+    "org": "Alliance for Coffee Excellence (Cup of Excellence)",
+    "kind": "primary",
+    "accessed": "2026-11-09",
+    "note": "curlで取得したHTMLの本文。"
+   },
+   "ace-coe-peru-2026": {
+    "title": "Perú 2026 - Cup of Excellence (competition results)",
+    "org": "Alliance for Coffee Excellence (Cup of Excellence)",
+    "kind": "primary",
+    "accessed": "2026-11-09",
+    "note": "curlで取得したHTMLの本文。"
+   }
+  }
+ },
+ {
+  "key": "origin:ペルー:officialBody",
+  "content": {
+   "text": "Junta Nacional del Café(JNC)は1993年1月6日に正式に設置された。JNC自身の説明では、ペルーのコーヒー生産者を国に対して代表する機関で、14のコーヒー地帯にまたがる56のコーヒー関連組織(協会・協同組合)と約7万の加盟世帯をまとめている(2024〜2026年の公式サイト掲載)。"
+  },
+  "claims": [
+   {
+    "index": 0,
+    "text": "JNC(Junta Nacional del Café)は1993年設立",
+    "quote": "La JNC fue instalada oficialmente el 6 de enero de 1993.",
+    "location": "JNC「Nosotros」",
+    "sourceIds": [
+     "jnc-nosotros-2024",
+     "jnc-historia"
+    ]
+   },
+   {
+    "index": 1,
+    "text": "14の産地にまたがる56の協同組合・生産者団体、約7万戸の加盟農家",
+    "quote": "Hoy reúne a un total de 56 organizaciones cafetaleras, entre asociaciones y cooperativas que suman 70 mil familias socias arraigadas en catorce zonas cafetaleras del país.",
+    "location": "JNC「Nosotros」(2024-03保存)、トップページ(2026-05保存)",
+    "sourceIds": [
+     "jnc-nosotros-2024",
+     "jnc-inicio-2026"
+    ]
+   },
+   {
+    "index": 2,
+    "text": "生産者を代表する組織である",
+    "quote": "La Junta Nacional del Café (JNC) es una institución que congrega y representa a los productores cafetaleros peruanos frente al Estado.",
+    "location": "JNC「Nosotros」",
+    "sourceIds": [
+     "jnc-nosotros-2024"
+    ]
+   }
+  ],
+  "sources": {
+   "jnc-nosotros-2024": {
+    "title": "Nosotros - Junta Nacional del Café",
+    "org": "Junta Nacional del Café (JNC)",
+    "kind": "primary",
+    "accessed": "2026-11-09",
+    "note": "Internet Archive(Wayback Machine)に保存された公式URLの複製を取得し、HTMLから本文を抽出(公式サイトの現行ページは2026-10時点で「工事中」表示のため)。使用した保存日: 2024-03-14。"
+   },
+   "jnc-historia": {
+    "title": "Historia de la JNC (2018-10-30)",
+    "org": "Junta Nacional del Café (JNC)",
+    "kind": "primary",
+    "accessed": "2026-11-09",
+    "note": "Internet Archive(Wayback Machine)に保存された公式URLの複製を取得し、HTMLから本文を抽出(公式サイトの現行ページは2026-10時点で「工事中」表示のため)。使用した保存日: 2024-07-05。"
+   },
+   "jnc-inicio-2026": {
+    "title": "Junta Nacional del Café (portada)",
+    "org": "Junta Nacional del Café (JNC)",
+    "kind": "primary",
+    "accessed": "2026-11-09",
+    "note": "Internet Archive(Wayback Machine)に保存された公式URLの複製を取得し、HTMLから本文を抽出(公式サイトの現行ページは2026-10時点で「工事中」表示のため)。使用した保存日: 2026-05-06。"
+   }
+  }
+ },
+ {
+  "key": "origin:ペルー:regions",
+  "content": {
+   "text": "USDA FAS(2025年5月)によれば、主要産地にはカハマルカ(生産の22%)、サンマルティン(20%)、フニン(19%)、アマソナス(15%)が含まれる。"
+  },
+  "claims": [
+   {
+    "index": 0,
+    "text": "主要産地はカハマルカ・サンマルティン・フニン",
+    "quote": "The main coffee-producing regions include Cajamarca (22% of total production), San Martín (20%), Junín (19%), and Amazonas (15%).",
+    "location": "USDA FAS 2025",
+    "sourceIds": [
+     "usda-fas-peru-coffee-annual-2025"
+    ]
+   }
+  ],
+  "sources": {
+   "usda-fas-peru-coffee-annual-2025": {
+    "title": "Coffee Annual - Peru (Report Number PE2025-0018, May 21, 2025)",
+    "org": "USDA Foreign Agricultural Service (GAIN), Lima",
+    "kind": "primary",
+    "accessed": "2026-11-09",
+    "note": "curl + pypdfで本文を抽出。米国農務省の駐在官報告(ペルー政府の資料ではない)。2026年5月版(PE2026-0008)は公式サイトが403でこの環境から取得できなかったため、2025年版を使用。"
+   }
+  }
+ },
+ {
+  "key": "origin:ペルー:sub:アマソナス(ロドリゲス・デ・メンドーサ)",
+  "content": {
+   "detail": "アマソナス: 全国生産の15%を占める(USDA FAS、2025年5月)。"
+  },
+  "claims": [
+   {
+    "index": 0,
+    "text": "アマソナスは全国生産の15%",
+    "quote": "The main coffee-producing regions include Cajamarca (22% of total production), San Martín (20%), Junín (19%), and Amazonas (15%).",
+    "location": "USDA FAS 2025",
+    "sourceIds": [
+     "usda-fas-peru-coffee-annual-2025"
+    ]
+   }
+  ],
+  "sources": {
+   "usda-fas-peru-coffee-annual-2025": {
+    "title": "Coffee Annual - Peru (Report Number PE2025-0018, May 21, 2025)",
+    "org": "USDA Foreign Agricultural Service (GAIN), Lima",
+    "kind": "primary",
+    "accessed": "2026-11-09",
+    "note": "curl + pypdfで本文を抽出。米国農務省の駐在官報告(ペルー政府の資料ではない)。2026年5月版(PE2026-0008)は公式サイトが403でこの環境から取得できなかったため、2025年版を使用。"
+   }
+  }
+ },
+ {
+  "key": "origin:ペルー:sub:カハマルカ",
+  "content": {
+   "detail": "カハマルカ: 全国生産量の22%を占め、USDA FASが挙げる主要産地(カハマルカ・サンマルティン・フニン・アマソナス)の中で最も大きい(USDA FAS、2025年5月)。COEペルー大会(ACE公式結果)では、カハマルカ産のロットが1位になった年がある。"
+  },
+  "claims": [
+   {
+    "index": 0,
+    "text": "国内最大の産地(全国生産量の22%)",
+    "quote": "The main coffee-producing regions include Cajamarca (22% of total production), San Martín (20%), Junín (19%), and Amazonas (15%).",
+    "location": "USDA FAS 2025",
+    "sourceIds": [
+     "usda-fas-peru-coffee-annual-2025"
+    ]
+   },
+   {
+    "index": 1,
+    "text": "COE常連",
+    "quote": "3A 6 San Pedro – El Shimir 2017 -… Fredy Bermeo Guevara San Ignacio, Cajamarca 90.48 || 1a 180 La Lucuma Grimanes Morales Lizana Cajamarca 92.28 || 1A 90.74 Alto Mirador Yoniser Mego Silva Cajamarca",
+    "location": "ACE 各年の結果",
+    "sourceIds": [
+     "ace-coe-peru-2017",
+     "ace-coe-peru-2019",
+     "ace-coe-peru-2022",
+     "ace-coe-peru-2023",
+     "ace-coe-peru-2024",
+     "ace-coe-peru-2025"
+    ]
+   }
+  ],
+  "sources": {
+   "usda-fas-peru-coffee-annual-2025": {
+    "title": "Coffee Annual - Peru (Report Number PE2025-0018, May 21, 2025)",
+    "org": "USDA Foreign Agricultural Service (GAIN), Lima",
+    "kind": "primary",
+    "accessed": "2026-11-09",
+    "note": "curl + pypdfで本文を抽出。米国農務省の駐在官報告(ペルー政府の資料ではない)。2026年5月版(PE2026-0008)は公式サイトが403でこの環境から取得できなかったため、2025年版を使用。"
+   },
+   "ace-coe-peru-2017": {
+    "title": "Perú 2017 - Cup of Excellence (competition results)",
+    "org": "Alliance for Coffee Excellence (Cup of Excellence)",
+    "kind": "primary",
+    "accessed": "2026-11-09",
+    "note": "curlで取得したHTMLの本文。"
+   },
+   "ace-coe-peru-2019": {
+    "title": "Perú 2019 - Cup of Excellence (competition results)",
+    "org": "Alliance for Coffee Excellence (Cup of Excellence)",
+    "kind": "primary",
+    "accessed": "2026-11-09",
+    "note": "curlで取得したHTMLの本文。"
+   },
+   "ace-coe-peru-2022": {
+    "title": "Perú 2022 - Cup of Excellence (competition results)",
+    "org": "Alliance for Coffee Excellence (Cup of Excellence)",
+    "kind": "primary",
+    "accessed": "2026-11-09",
+    "note": "curlで取得したHTMLの本文。"
+   },
+   "ace-coe-peru-2023": {
+    "title": "Perú 2023 - Cup of Excellence (competition results)",
+    "org": "Alliance for Coffee Excellence (Cup of Excellence)",
+    "kind": "primary",
+    "accessed": "2026-11-09",
+    "note": "curlで取得したHTMLの本文。"
+   },
+   "ace-coe-peru-2024": {
+    "title": "Perú 2024 - Cup of Excellence (competition results)",
+    "org": "Alliance for Coffee Excellence (Cup of Excellence)",
+    "kind": "primary",
+    "accessed": "2026-11-09",
+    "note": "curlで取得したHTMLの本文。"
+   },
+   "ace-coe-peru-2025": {
+    "title": "Perú 2025 - Cup of Excellence (competition results)",
+    "org": "Alliance for Coffee Excellence (Cup of Excellence)",
+    "kind": "primary",
+    "accessed": "2026-11-09",
+    "note": "curlで取得したHTMLの本文。"
+   }
+  }
+ },
+ {
+  "key": "origin:ペルー:sub:クスコ(南部)",
+  "content": {
+   "detail": "クスコ: COEペルー大会で2018年(91.08点)と2021年(90.2点)に、Nueva Alianzaのロットが1位になった(COE公式サイト)。"
+  },
+  "claims": [
+   {
+    "index": 0,
+    "text": "クスコ産ロットがCOEペルーで1位になった年がある(2018年、2021年)",
+    "quote": "1a 6 (+1 Partial) Nueva Alianza Dwigth Aguilar Masias Cusco 91.08 || 1a 90.2 Nueva Alianza Dwight Aguilar Masías Cusco",
+    "location": "ACE Perú 2018 / 2021 の1位",
+    "sourceIds": [
+     "ace-coe-peru-2018",
+     "ace-coe-peru-2021"
+    ]
+   }
+  ],
+  "sources": {
+   "ace-coe-peru-2018": {
+    "title": "Perú 2018 - Cup of Excellence (competition results)",
+    "org": "Alliance for Coffee Excellence (Cup of Excellence)",
+    "kind": "primary",
+    "accessed": "2026-11-09",
+    "note": "curlで取得したHTMLの本文。"
+   },
+   "ace-coe-peru-2021": {
+    "title": "Perú 2021 - Cup of Excellence (competition results)",
+    "org": "Alliance for Coffee Excellence (Cup of Excellence)",
+    "kind": "primary",
+    "accessed": "2026-11-09",
+    "note": "curlで取得したHTMLの本文。"
+   }
+  }
+ },
+ {
+  "key": "origin:ペルー:sub:フニン(チャンチャマヨ/サティポ)",
+  "content": {
+   "detail": "フニン: 全国生産の19%を占める(USDA FAS、2025年5月)。"
+  },
+  "claims": [
+   {
+    "index": 0,
+    "text": "フニンは全国生産の19%",
+    "quote": "The main coffee-producing regions include Cajamarca (22% of total production), San Martín (20%), Junín (19%), and Amazonas (15%).",
+    "location": "USDA FAS 2025",
+    "sourceIds": [
+     "usda-fas-peru-coffee-annual-2025"
+    ]
+   }
+  ],
+  "sources": {
+   "usda-fas-peru-coffee-annual-2025": {
+    "title": "Coffee Annual - Peru (Report Number PE2025-0018, May 21, 2025)",
+    "org": "USDA Foreign Agricultural Service (GAIN), Lima",
+    "kind": "primary",
+    "accessed": "2026-11-09",
+    "note": "curl + pypdfで本文を抽出。米国農務省の駐在官報告(ペルー政府の資料ではない)。2026年5月版(PE2026-0008)は公式サイトが403でこの環境から取得できなかったため、2025年版を使用。"
+   }
+  }
+ },
+ {
+  "key": "origin:ペルー:tagline",
+  "content": {
+   "text": "ペルーのコーヒーは主にアンデスの東斜面で栽培される。USDA FAS(2025年5月)によれば、生産の9割超は5ヘクタール未満の小規模農家によるもので、世界有数の有機コーヒー輸出国でもある。"
+  },
+  "claims": [
+   {
+    "index": 0,
+    "text": "小規模農家が生産を担う",
+    "quote": "Over 90 percent of Peruvian coffee is grown by smallholder farmers on plots smaller than 5 hectares.",
+    "location": "USDA FAS 2025",
+    "sourceIds": [
+     "usda-fas-peru-coffee-annual-2025"
+    ]
+   },
+   {
+    "index": 1,
+    "text": "有機コーヒーで知られる(世界最大の有機コーヒー輸出国)",
+    "quote": "Peru is the world’s leading exporter of organic coffee",
+    "location": "USDA FAS 2025",
+    "sourceIds": [
+     "usda-fas-peru-coffee-annual-2025"
+    ]
+   },
+   {
+    "index": 2,
+    "text": "アンデス(の東斜面)で育つ",
+    "quote": "Coffee in Peru is primarily grown along the eastern slopes of the Andes.",
+    "location": "USDA FAS 2025",
+    "sourceIds": [
+     "usda-fas-peru-coffee-annual-2025"
+    ]
+   }
+  ],
+  "sources": {
+   "usda-fas-peru-coffee-annual-2025": {
+    "title": "Coffee Annual - Peru (Report Number PE2025-0018, May 21, 2025)",
+    "org": "USDA Foreign Agricultural Service (GAIN), Lima",
+    "kind": "primary",
+    "accessed": "2026-11-09",
+    "note": "curl + pypdfで本文を抽出。米国農務省の駐在官報告(ペルー政府の資料ではない)。2026年5月版(PE2026-0008)は公式サイトが403でこの環境から取得できなかったため、2025年版を使用。"
+   }
+  }
+ },
+ {
+  "key": "origin:ペルー:terroir",
+  "content": {
+   "text": "ペルーのコーヒーは主にアンデスの東斜面で栽培される(USDA FAS、2025年5月)。"
+  },
+  "claims": [
+   {
+    "index": 0,
+    "text": "アンデス東斜面からアマゾン盆地への移行地帯",
+    "quote": "Coffee in Peru is primarily grown along the eastern slopes of the Andes.",
+    "location": "USDA FAS 2025",
+    "sourceIds": [
+     "usda-fas-peru-coffee-annual-2025"
+    ]
+   }
+  ],
+  "sources": {
+   "usda-fas-peru-coffee-annual-2025": {
+    "title": "Coffee Annual - Peru (Report Number PE2025-0018, May 21, 2025)",
+    "org": "USDA Foreign Agricultural Service (GAIN), Lima",
+    "kind": "primary",
+    "accessed": "2026-11-09",
+    "note": "curl + pypdfで本文を抽出。米国農務省の駐在官報告(ペルー政府の資料ではない)。2026年5月版(PE2026-0008)は公式サイトが403でこの環境から取得できなかったため、2025年版を使用。"
+   }
+  }
+ },
+ {
+  "key": "origin:ペルー:varietiesDetail",
+  "content": {
+   "text": "USDA FAS(2025年5月)によれば、ペルーは主にアラビカを生産し、ティピカが70%超、次いでカトゥーラ(20%)、その他の品種(10%)である。"
+  },
+  "claims": [
+   {
+    "index": 0,
+    "text": "ティピカが約7割",
+    "quote": "Peru primarily produces Arabica coffee, with over 70 percent being the Typica variety, followed by Caturra (20%) and other varieties (10%).",
+    "location": "USDA FAS 2025, Production",
+    "sourceIds": [
+     "usda-fas-peru-coffee-annual-2025"
+    ]
+   },
+   {
+    "index": 1,
+    "text": "カトゥーラが約2割",
+    "quote": "Peru primarily produces Arabica coffee, with over 70 percent being the Typica variety, followed by Caturra (20%) and other varieties (10%).",
+    "location": "USDA FAS 2025, Production",
+    "sourceIds": [
+     "usda-fas-peru-coffee-annual-2025"
+    ]
+   }
+  ],
+  "sources": {
+   "usda-fas-peru-coffee-annual-2025": {
+    "title": "Coffee Annual - Peru (Report Number PE2025-0018, May 21, 2025)",
+    "org": "USDA Foreign Agricultural Service (GAIN), Lima",
+    "kind": "primary",
+    "accessed": "2026-11-09",
+    "note": "curl + pypdfで本文を抽出。米国農務省の駐在官報告(ペルー政府の資料ではない)。2026年5月版(PE2026-0008)は公式サイトが403でこの環境から取得できなかったため、2025年版を使用。"
+   }
+  }
+ },
+ {
+  "key": "origin:メキシコ:farmStructure",
+  "content": {
+   "text": "SAGARPA(2017年)によれば、メキシコのコーヒー生産には50万を超える生産者が関わっている。"
+  },
+  "claims": [
+   {
+    "index": 0,
+    "text": "全国で推定50万戸の生産者がいる",
+    "quote": "su producción emplea a más de 500,000 productores de 14 entidades federativas y 480 municipios. || aproximadamente participan 500 mil cafeticultores en todo el país",
+    "location": "SAGARPA 2017 / SADER 記事",
+    "sourceIds": [
+     "sader-planeacion-cafe-2017",
+     "sader-cafe-manos-sabias"
+    ]
+   }
+  ],
+  "sources": {
+   "sader-planeacion-cafe-2017": {
+    "title": "Café Mexicano - Planeación Agrícola Nacional 2017-2030",
+    "org": "SAGARPA Subsecretaría de Agricultura(現SADER)",
+    "kind": "primary",
+    "accessed": "2026-11-09",
+    "note": "pypdfでの取得時にcryptography/fontToolsの警告あり(本文抽出は成功)。"
+   },
+   "sader-cafe-manos-sabias": {
+    "title": "El café, una producción en manos sabias",
+    "org": "Secretaría de Agricultura y Desarrollo Rural (SADER)",
+    "kind": "primary",
+    "accessed": "2026-11-09",
+    "note": "公開日はページ本文から確認していない(2019年頃の記事)。"
+   }
+  }
+ }
+]

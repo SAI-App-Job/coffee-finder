@@ -1,0 +1,1283 @@
+[
+ {
+  "key": "brand:クリスタルマウンテン",
+  "content": {
+   "note": "キューバ産",
+   "explanation": "全日本コーヒー公正取引協議会の規約(別表2)では、キューバにて生産された同国輸出規格に基づくアラビカコーヒー豆と定義される銘柄。同じ別表で、ブルーマウンテン(ジャマイカ・ブルーマウンテン地区産)とは別の銘柄・別の産地として定義されている。"
+  },
+  "claims": [
+   {
+    "index": 0,
+    "text": "クリスタルマウンテンは、キューバにて生産された同国輸出規格に基づくアラビカコーヒー豆と定義される(規約別表2)。",
+    "quote": "クリスタルマウンテン : キューバにて生産された同国輸出規格に基づくアラビカコーヒー豆をいう。",
+    "location": "別表2(産地、品種、銘柄の区分及び範囲の例示) 4)",
+    "sourceIds": [
+     "jfftc-kiyaku-coffee"
+    ]
+   },
+   {
+    "index": 1,
+    "text": "ブルーマウンテン(ジャマイカ・ブルーマウンテン地区産)とクリスタルマウンテン(キューバ産)は、規約で別々の銘柄・別々の産地として定義されている",
+    "quote": "ブルーマウンテン : ジャマイカ・ブルーマウンテン地区にて生産されたアラビカコーヒー豆をいう。",
+    "location": "別表2(産地、品種、銘柄の区分及び範囲の例示) 1)と4)",
+    "sourceIds": [
+     "jfftc-kiyaku-coffee"
+    ]
+   }
+  ],
+  "sources": {
+   "jfftc-kiyaku-coffee": {
+    "title": "レギュラーコーヒー及びインスタントコーヒーの表示に関する公正競争規約・施行規則(令和6年10月1日施行の変更を含む)",
+    "org": "全国公正取引協議会連合会(掲載)。規約の主体は全日本コーヒー公正取引協議会",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": "curlで保存し、pypdfで全16ページの本文を抽出して読んだ。別表2は14ページ目。"
+   }
+  }
+ },
+ {
+  "key": "brand:ブルーマウンテン",
+  "content": {
+   "note": null,
+   "explanation": "全日本コーヒー公正取引協議会の規約(別表2)では、ジャマイカ・ブルーマウンテン地区にて生産されたアラビカコーヒー豆と定義される銘柄。ジャマイカのJACRA(Jamaica Agricultural Commodities Regulatory Authority)のコーヒー許認可のページには「Trademark User Licence」の項目があり、自社ラベルを使い、Jamaica Blue Mountain および High Mountain Supreme 商標の使用を認められた業者(dealers)と外国輸入業者(foreign importers)向けと記されている。"
+  },
+  "claims": [
+   {
+    "index": 0,
+    "text": "ブルーマウンテンは、ジャマイカ・ブルーマウンテン地区にて生産されたアラビカコーヒー豆と定義される(規約別表2)。",
+    "quote": "ブルーマウンテン : ジャマイカ・ブルーマウンテン地区にて生産されたアラビカコーヒー豆をいう。",
+    "location": "別表2(産地、品種、銘柄の区分及び範囲の例示) 1)",
+    "sourceIds": [
+     "jfftc-kiyaku-coffee"
+    ]
+   },
+   {
+    "index": 1,
+    "text": "JACRAは、自社ラベルで「Jamaica Blue Mountain」「High Mountain Supreme」商標を使う輸出業者・外国輸入業者に、Trademark User Licence(商標使用許諾)を求めている",
+    "quote": "Trademark User Licence – Exporters Required for dealers and foreign importers that utilize their own labels and are authorised to use the Jamaica Blue Mountain and High Mountain Supreme Trademark.",
+    "location": "jacra.org/divisions/coffee/licensing-permits/ 'Licensing & Permits'",
+    "sourceIds": [
+     "jacra-coffee-licensing"
+    ]
+   },
+   {
+    "index": 2,
+    "text": "JACRAの正式名は Jamaica Agricultural Commodities Regulatory Authority(日本語『ジャマイカ農産物規制庁』はアプリ側の訳)",
+    "quote": "Jamaica Agricultural Commodities Regulatory Authority",
+    "location": "jacra.org トップページ見出し",
+    "sourceIds": [
+     "jacra-home"
+    ]
+   }
+  ],
+  "sources": {
+   "jfftc-kiyaku-coffee": {
+    "title": "レギュラーコーヒー及びインスタントコーヒーの表示に関する公正競争規約・施行規則(令和6年10月1日施行の変更を含む)",
+    "org": "全国公正取引協議会連合会(掲載)。規約の主体は全日本コーヒー公正取引協議会",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": "curlで保存し、pypdfで全16ページの本文を抽出して読んだ。別表2は14ページ目。"
+   },
+   "jacra-coffee-licensing": {
+    "title": "JACRA Coffee - Licensing & Permits",
+    "org": "Jamaica Agricultural Commodities Regulatory Authority (JACRA)",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": "curlで生HTMLを取得して読んだ。"
+   },
+   "jacra-home": {
+    "title": "Jamaica Agricultural Commodities Regulatory Authority(トップページ)",
+    "org": "Jamaica Agricultural Commodities Regulatory Authority (JACRA) / Government of Jamaica",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": "curlで生HTMLを取得して読んだ。"
+   }
+  }
+ },
+ {
+  "key": "brand:モカ・ハラー",
+  "content": {
+   "note": "ハラー地区産",
+   "explanation": "全日本コーヒー公正取引協議会の規約(別表2)では、エチオピア・ハラー地区にて生産されたアラビカコーヒー豆と定義される銘柄。"
+  },
+  "claims": [
+   {
+    "index": 0,
+    "text": "モカ・ハラーは、エチオピア・ハラー地区にて生産されたアラビカコーヒー豆と定義される(規約別表2)。",
+    "quote": "モカハラー : エチオピア・ハラー地区にて生産されたアラビカコーヒー豆をいう。",
+    "location": "別表2(産地、品種、銘柄の区分及び範囲の例示) 7)",
+    "sourceIds": [
+     "jfftc-kiyaku-coffee"
+    ]
+   }
+  ],
+  "sources": {
+   "jfftc-kiyaku-coffee": {
+    "title": "レギュラーコーヒー及びインスタントコーヒーの表示に関する公正競争規約・施行規則(令和6年10月1日施行の変更を含む)",
+    "org": "全国公正取引協議会連合会(掲載)。規約の主体は全日本コーヒー公正取引協議会",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": "curlで保存し、pypdfで全16ページの本文を抽出して読んだ。別表2は14ページ目。"
+   }
+  }
+ },
+ {
+  "key": "brew:エアロプレス",
+  "content": {
+   "temp": "85℃(AeroPress公式サイトの標準レシピ。185°F)",
+   "grindSize": "中細挽き(AeroPress公式: Medium-Fine)",
+   "ratio": "粉16〜18g(AeroPress公式サイトの標準レシピ)",
+   "steps": [
+    "フィルターをフィルターキャップにセットし、チャンバーにねじ込む",
+    "やさしく約3秒かき混ぜる",
+    "プランジャーを、シューという音が始まって終わるまで押す(最後の抽出液が粉の層を通り抜けた合図)"
+   ]
+  },
+  "claims": [
+   {
+    "index": 0,
+    "text": "粉16g",
+    "quote": "1 heaping Scoop or 16-18 grams of medium-fine ground coffee",
+    "location": "AeroPress How To Use > Signature Brew Preparation (Medium-Fine)",
+    "sourceIds": [
+     "aeropress-how-to-use"
+    ]
+   },
+   {
+    "index": 1,
+    "text": "湯温80〜85℃の『85℃』",
+    "quote": "Heat water to 185°F (85°C) using your kettle.",
+    "location": "AeroPress How To Use > Signature Brew Preparation",
+    "sourceIds": [
+     "aeropress-how-to-use"
+    ]
+   },
+   {
+    "index": 2,
+    "text": "粒度は中細挽き",
+    "quote": "Grind Size: Medium-Fine",
+    "location": "AeroPress How To Use > Signature Brew Preparation(グラインダーあり版)",
+    "sourceIds": [
+     "aeropress-how-to-use"
+    ]
+   },
+   {
+    "index": 3,
+    "text": "手順1: フィルターをキャップにセットする",
+    "quote": "Insert Paper Filter into Filter Cap and twist Filter Cap onto Chamber.",
+    "location": "AeroPress How To Use > Step-by-step",
+    "sourceIds": [
+     "aeropress-how-to-use"
+    ]
+   },
+   {
+    "index": 4,
+    "text": "手順2: 粉をチャンバーに入れ、湯を注いで軽くかき混ぜる",
+    "quote": "Stir gently for about 3 seconds.",
+    "location": "AeroPress How To Use > Step-by-step",
+    "sourceIds": [
+     "aeropress-how-to-use"
+    ]
+   },
+   {
+    "index": 5,
+    "text": "手順4: 『シュー』という空気の抜ける音がしたら抽出完了の合図",
+    "quote": "Press until you hear the hissing sound begin and end, an indication the last bit of brew has passed through the coffee bed and your coffee is ready.",
+    "location": "AeroPress How To Use > Step-by-step",
+    "sourceIds": [
+     "aeropress-how-to-use"
+    ]
+   }
+  ],
+  "sources": {
+   "aeropress-how-to-use": {
+    "title": "How To Use AeroPress (Signature Brew Preparation)",
+    "org": "AeroPress, Inc.(製造元の公式サイト)",
+    "kind": "primary",
+    "accessed": "2026-11-09",
+    "note": "製品の公式使用説明。curlで取得した生HTMLの本文を読んだ。"
+   }
+  }
+ },
+ {
+  "key": "brew:ペーパードリップ",
+  "content": {
+   "ratio": "SCAのゴールデンカップ基準を満たすための推奨は 55g/L ±10%(およそ1:18)",
+   "temp": "SCAのゴールデンカップ基準を満たすための推奨は、コーヒーに触れる時点の湯温が 94.0℃±2(92〜96℃、200°F±5°)"
+  },
+  "claims": [
+   {
+    "index": 0,
+    "text": "SCAゴールデンカップ基準は55g/L(≒1:18)",
+    "quote": "Coffee-to-Water Ratio: To achieve the Golden Cup Standard, the recommended coffee-to-water ratio is 55 g/L ± 10%.",
+    "location": "SCA Protocols and Best Practices (Revised 2018) p.17, Brewing Best Practices",
+    "sourceIds": [
+     "sca-protocols-best-practices-2018"
+    ]
+   },
+   {
+    "index": 1,
+    "text": "湯温92〜96℃",
+    "quote": "Coffee Preparation Temperature: To achieve the Golden Cup Standard, water temperature, at the point of contact with coffee, is recommended to fall between 200°F ± 5° & 94.0°C ± 2°.",
+    "location": "SCA Protocols and Best Practices (Revised 2018) p.17, Brewing Best Practices",
+    "sourceIds": [
+     "sca-protocols-best-practices-2018"
+    ]
+   }
+  ],
+  "sources": {
+   "sca-protocols-best-practices-2018": {
+    "title": "Protocols and Best Practices (Revised 2018), 4 Brewing Best Practices",
+    "org": "Specialty Coffee Association",
+    "kind": "primary",
+    "accessed": "2026-11-09",
+    "note": "SCA公式PDF(2018年改訂)。curlで取得しpypdfで本文抽出(20ページ)。該当箇所は17ページ。"
+   }
+  }
+ },
+ {
+  "key": "brew:水出し(コールドブリュー)",
+  "content": {
+   "calibration": "Rao 2018(Scientific Reports)の比較では、ホットブリューのコーヒーのほうが、水出しのコーヒーより総滴定酸の濃度が高かった。"
+  },
+  "claims": [
+   {
+    "index": 0,
+    "text": "低温では酸の抽出がホットより少ない(酸味系の抽出効率がホットより低い)",
+    "quote": "The hot brew coffees were found to have higher concentrations of total titratable acids, as well as higher antioxidant activity, than that of their cold brew counterparts.",
+    "location": "Rao 2018 Sci Rep, Abstract",
+    "sourceIds": [
+     "rao-2018-scirep"
+    ]
+   }
+  ],
+  "sources": {
+   "rao-2018-scirep": {
+    "title": "Acidity and Antioxidant Activity of Cold Brew Coffee (Scientific Reports 2018)",
+    "org": "Scientific Reports",
+    "kind": "primary",
+    "accessed": "2026-11-09",
+    "note": "査読論文(オープンアクセス)の原文をcurlで取得して読んだ。"
+   }
+  }
+ },
+ {
+  "key": "competition:jbc:latestResult",
+  "content": {
+   "text": "2024年は猿田彦珈琲の伊藤大貴選手が優勝し、翌2025年のWBC(ミラノ)に日本代表として出場した。2026年大会(10月)でも伊藤選手(猿田彦珈琲)が優勝した。"
+  },
+  "claims": [
+   {
+    "index": 0,
+    "text": "2024年のJBCは猿田彦珈琲の伊藤大貴選手が優勝した",
+    "quote": "優勝 | 伊藤 大貴 | Hiroki Ito | 猿田彦珈琲株式会社 | 東京都 | 703.5",
+    "location": "過去の競技結果 2024年の表",
+    "sourceIds": [
+     "scaj-jbc-results"
+    ]
+   },
+   {
+    "index": 1,
+    "text": "伊藤選手は翌2025年のWBCへ日本代表として出場した",
+    "quote": "5. Hiroki Ito, Japan",
+    "location": "2025 WBC(ミラノ、HostMilano)の最終順位上位6名の一覧。本文は「representing their respective competition bodies」と説明。",
+    "sourceIds": [
+     "wcc-2025-wbc-champion"
+    ]
+   },
+   {
+    "index": 2,
+    "text": "2026年大会でも伊藤選手(猿田彦珈琲)が優勝した",
+    "quote": "優勝 | 伊藤 大貴 | Hiroki Ito | 猿田彦珈琲株式会社 | 東京都 | 718",
+    "location": "JBC2026 決勝 競技結果",
+    "sourceIds": [
+     "scaj-jbc-2026-results"
+    ]
+   },
+   {
+    "index": 3,
+    "text": "2026年大会は10月に開催された",
+    "quote": "準決勝 2026年10月14日(水) 、 決 勝 2026年10月15日(木)",
+    "location": "競技スケジュール(準決勝･決勝)",
+    "sourceIds": [
+     "scaj-jbc-2026-competition"
+    ]
+   }
+  ],
+  "sources": {
+   "scaj-jbc-results": {
+    "title": "JBC 過去の競技結果(2003年～2025年)",
+    "org": "日本スペシャルティコーヒー協会(SCAJ)",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": ""
+   },
+   "wcc-2025-wbc-champion": {
+    "title": "Announcing the 2025 World Barista Champion: Jack Simpson representing Australia",
+    "org": "World Coffee Championships (Specialty Coffee Association)",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": ""
+   },
+   "scaj-jbc-2026-results": {
+    "title": "JBC 2026 競技結果",
+    "org": "日本スペシャルティコーヒー協会(SCAJ)",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": ""
+   },
+   "scaj-jbc-2026-competition": {
+    "title": "JBC 2026 競技者募集(競技スケジュール)",
+    "org": "日本スペシャルティコーヒー協会(SCAJ)",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": ""
+   }
+  }
+ },
+ {
+  "key": "competition:jbc:tagline",
+  "content": {
+   "text": "エスプレッソ、ミルクビバレッジ、シグネチャービバレッジ(創作ドリンク)の3種類を提供して競う競技会"
+  },
+  "claims": [
+   {
+    "index": 0,
+    "text": "エスプレッソ・ミルクビバレッジ・シグネチャービバレッジの3種類を提供して競う",
+    "quote": "まず「エスプレッソ」、そして「ミルクビバレッジ」、最後に「シグネチャービバレッジ」と呼ばれる創作ドリンクを提供し",
+    "location": "JBCの歴史",
+    "sourceIds": [
+     "scaj-jbc-overview"
+    ]
+   }
+  ],
+  "sources": {
+   "scaj-jbc-overview": {
+    "title": "JBC 概要",
+    "org": "日本スペシャルティコーヒー協会(SCAJ)",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": ""
+   }
+  }
+ },
+ {
+  "key": "competition:jcrc:latestResult",
+  "content": {
+   "text": "2016年はいつか珈琲屋(神奈川県)の近藤啓選手が優勝。翌2017年のWorld Coffee Roasting Championship(中国・広州)に出場し、第7位(21ヶ国中)だった。"
+  },
+  "claims": [
+   {
+    "index": 0,
+    "text": "2016年はいつか珈琲屋の近藤啓選手が優勝した(神奈川県)",
+    "quote": "優勝 | 近藤 啓 | Hiraku Kondo | いつか珈琲屋 | いつか珈琲屋 | 神奈川県 | 536.75",
+    "location": "過去の競技結果 2016年",
+    "sourceIds": [
+     "scaj-jcrc-past-results"
+    ]
+   },
+   {
+    "index": 1,
+    "text": "翌2017年のWorld Coffee Roasting Championship(中国・広州)へ出場し7位入賞",
+    "quote": "2016年優勝者の世界大会での成績 | ワールド コーヒー ロースティング チャンピオンシップ 2017 (WCRC2017) | 中国/広州大会 | 近藤 啓(JCRC2016優勝者) | 第7位 (21ヶ国中)",
+    "location": "過去の競技結果 2016年の下",
+    "sourceIds": [
+     "scaj-jcrc-past-results"
+    ]
+   }
+  ],
+  "sources": {
+   "scaj-jcrc-past-results": {
+    "title": "JCRC 過去の競技結果(2012年～2025年)",
+    "org": "日本スペシャルティコーヒー協会(SCAJ)",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": ""
+   }
+  }
+ },
+ {
+  "key": "competition:jcrc:tagline",
+  "content": {
+   "text": "焙煎前に目指す風味特性を『焙煎ログ』で事前に申告してから挑む競技会"
+  },
+  "claims": [
+   {
+    "index": 0,
+    "text": "焙煎前に目指す風味特性を宣言してから挑む",
+    "quote": "「如何なる風味特性」の焙煎に仕上げるか『焙煎ログ』を事前に申告した上で焙煎に挑む点が見どころです。",
+    "location": "見どころ",
+    "sourceIds": [
+     "scaj-jcrc-overview"
+    ]
+   }
+  ],
+  "sources": {
+   "scaj-jcrc-overview": {
+    "title": "JCRC 概要",
+    "org": "日本スペシャルティコーヒー協会(SCAJ)",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": ""
+   }
+  }
+ },
+ {
+  "key": "competition:jctc:history",
+  "content": {
+   "text": "海外ではスペシャルティコーヒーの基本であるカッピング技術を競技化した世界大会が開催されており、2009年9月に第1回JCTCを日本で開催。2009年の世界大会(ケルン)には日本から選手が参加し、後藤選手が世界第3位となった。"
+  },
+  "claims": [
+   {
+    "index": 0,
+    "text": "カッピング技術を競技化した世界大会が海外で開催されており、それに触発されて2009年9月に第1回JCTCが日本で開催された",
+    "quote": "海外ではスペシャルティコーヒーの基本であるカッピング技術を競技化し、広めるために、カップ テイスターズ チャンピオンシップが開催されております。 ... 当協会では2009年9月に世界大会に向けての代表選手選考会を兼ねた、第1回目のジャパン カップテイスターズ チャンピオンシップ（JCTC）を日本で初めて開催し",
+    "location": "JCTCの歴史",
+    "sourceIds": [
+     "scaj-jctc-overview"
+    ]
+   },
+   {
+    "index": 1,
+    "text": "2009年の世界大会(ケルン)に日本から選手が参加し、後藤選手が世界第3位となった",
+    "quote": "2009年の世界大会（ケルン開催）には日本からも選手が参加し、後藤選手が世界第3位となりました。",
+    "location": "JCTCの歴史",
+    "sourceIds": [
+     "scaj-jctc-overview"
+    ]
+   }
+  ],
+  "sources": {
+   "scaj-jctc-overview": {
+    "title": "JCTC 概要",
+    "org": "日本スペシャルティコーヒー協会(SCAJ)",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": ""
+   }
+  }
+ },
+ {
+  "key": "competition:jhdc:format",
+  "content": {
+   "text": "SCAJの2026年審査員プログラムによると、審査は添加物を加えないドリップコーヒーの味覚審査が中心。予選では、量の異なる2種類の抽出コーヒーの均一性が重要な評価項目となる。決勝では大会前に配布されるコーヒー豆を使い、抽出の均一性を含む、コーヒーサービスにおけるプロフェッショナルとしての総合的な技術が評価される。"
+  },
+  "claims": [
+   {
+    "index": 0,
+    "text": "審査は添加物を加えないドリップコーヒーの味覚評価が中心",
+    "quote": "本競技会の審査は、添加物を加えないドリップコーヒーの味覚審査が中心となります。",
+    "location": "2026 審査員プログラム 本文冒頭",
+    "sourceIds": [
+     "scaj-jhdc-2026-judge"
+    ]
+   },
+   {
+    "index": 1,
+    "text": "予選では、量の異なる2種類の抽出コーヒーの均一性が重要な評価項目",
+    "quote": "予選では、量の異なる2種類の抽出コーヒーの 均一性が重要な評価項目となり",
+    "location": "2026 審査員プログラム",
+    "sourceIds": [
+     "scaj-jhdc-2026-judge"
+    ]
+   },
+   {
+    "index": 2,
+    "text": "決勝では大会前に配布された豆を使い、抽出の均一性を含むプロフェッショナルとしての総合的な技術が評価される",
+    "quote": "決勝においては、大会前（約1か月前）に配布されるコーヒー豆を使用し、各自が準備したうえで、本番のプレゼンテーション（同一ルールでの抽出）にて2回の抽出を行います。抽出の均一性を含む、コーヒーサービスにおけるプロフェッショナルとしての総合的な技術が評価されます。",
+    "location": "2026 審査員プログラム",
+    "sourceIds": [
+     "scaj-jhdc-2026-judge"
+    ]
+   }
+  ],
+  "sources": {
+   "scaj-jhdc-2026-judge": {
+    "title": "JHDC 2026 審査員プログラム",
+    "org": "日本スペシャルティコーヒー協会(SCAJ)",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": ""
+   }
+  }
+ },
+ {
+  "key": "competition:jhdc:latestResult",
+  "content": {
+   "text": "新田和雄選手(福井県・新田珈琲)が2023年・2024年と連覇したのち、2025年は新田衣祥選手、2026年は新田千香子選手が優勝し、2023〜2026年の4年連続で新田珈琲の選手が優勝した(SCAJ公式の競技結果による)。"
+  },
+  "claims": [
+   {
+    "index": 0,
+    "text": "新田和雄選手(福井県・新田珈琲)が2023年・2024年と連覇した",
+    "quote": "優勝 | 新田 和雄 | Kazuo Nitta | 有限会社新田珈琲 | 新田珈琲 | 福井県",
+    "location": "過去の競技結果 2024年・2023年の表(両年とも優勝)",
+    "sourceIds": [
+     "scaj-jhdc-past-results"
+    ]
+   },
+   {
+    "index": 1,
+    "text": "2025年は新田衣祥選手が優勝した",
+    "quote": "優勝 | 新田 衣祥 | 有限会社 新田珈琲/新田珈琲 | 116.5 | 295.0",
+    "location": "過去の競技結果 2025年",
+    "sourceIds": [
+     "scaj-jhdc-past-results"
+    ]
+   },
+   {
+    "index": 2,
+    "text": "2026年は新田千香子選手が優勝した",
+    "quote": "優勝 | 新田 千香子 | 有限会社新田珈琲 | 120.0 | 168.5",
+    "location": "JHDC2026 競技結果",
+    "sourceIds": [
+     "scaj-jhdc-2026-results"
+    ]
+   },
+   {
+    "index": 3,
+    "text": "新田珈琲の選手が2023〜2026年の4年連続で優勝した",
+    "quote": "優勝 | 新田 千香子 | 有限会社新田珈琲",
+    "location": "過去の競技結果 2023年(新田 和雄)・2024年(新田 和雄)・2025年(新田 衣祥)の優勝欄と、2026 競技結果(新田 千香子)。所属はいずれも有限会社新田珈琲",
+    "sourceIds": [
+     "scaj-jhdc-past-results",
+     "scaj-jhdc-2026-results"
+    ]
+   }
+  ],
+  "sources": {
+   "scaj-jhdc-past-results": {
+    "title": "JHDC 過去の競技結果(2012年～2025年)",
+    "org": "日本スペシャルティコーヒー協会(SCAJ)",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": ""
+   },
+   "scaj-jhdc-2026-results": {
+    "title": "JHDC 2026 競技結果",
+    "org": "日本スペシャルティコーヒー協会(SCAJ)",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": ""
+   }
+  }
+ },
+ {
+  "key": "competition:jsc:history",
+  "content": {
+   "text": "2003年、JBC(ジャパン バリスタ チャンピオンシップ)のサイフォン部門として誕生。通常のブレンドコーヒーと、それを使った各選手オリジナルのシグニチャービバレッジの抽出技術を競う。年々競技の規模を拡大し、2007年に「ジャパン サイフォニスト チャンピオンシップ」として生まれ変わった。2009年には世界規模の「ワールド サイフォニスト チャンピオンシップ(WSC)」が世界で初めて開催された。優勝者は各国から推薦された代表とともに、日本代表として世界選手権に出場する。"
+  },
+  "claims": [
+   {
+    "index": 0,
+    "text": "2003年、JBCのサイフォン部門として誕生した",
+    "quote": "JSCは2003年にジャパン バリスタ チャンピオンシップ（JBC）のサイフォン部門として誕生しました。",
+    "location": "JSCの歴史",
+    "sourceIds": [
+     "scaj-jsc-overview"
+    ]
+   },
+   {
+    "index": 1,
+    "text": "通常のブレンドコーヒーと、それを使った各選手オリジナルのシグニチャービバレッジの抽出技術を競う",
+    "quote": "競技では、2種類のブレンドコーヒーの抽出技術を競います。通常のブレンドコーヒー、そしてブレンドコーヒーを使った各選手オリジナルのシグニチャービバレッジを時間内に作成します。",
+    "location": "JSCの歴史",
+    "sourceIds": [
+     "scaj-jsc-overview"
+    ]
+   },
+   {
+    "index": 2,
+    "text": "年々規模を拡大した",
+    "quote": "年々競技の規模を拡大し、",
+    "location": "JSCの歴史",
+    "sourceIds": [
+     "scaj-jsc-overview"
+    ]
+   },
+   {
+    "index": 3,
+    "text": "2007年に「ジャパン サイフォニスト チャンピオンシップ」として生まれ変わった",
+    "quote": "2007年には「ジャパン サイフォニスト チャンピオンシップ」として生まれ変わりました。",
+    "location": "JSCの歴史",
+    "sourceIds": [
+     "scaj-jsc-overview"
+    ]
+   },
+   {
+    "index": 4,
+    "text": "2009年に世界規模のWSC(ワールド サイフォニスト チャンピオンシップ)が世界で初めて開催された",
+    "quote": "また2009年には競技を世界規模とし世界初の「ワールド サイフォニスト チャンピオンシップ（WSC）」も開催されました。",
+    "location": "JSCの歴史",
+    "sourceIds": [
+     "scaj-jsc-overview"
+    ]
+   },
+   {
+    "index": 5,
+    "text": "優勝者は各国代表とともに世界選手権に日本代表として出場する",
+    "quote": "JSCの優勝者は、各国から推薦された代表と共に、日本代表として世界選手権を戦います。",
+    "location": "JSCの歴史",
+    "sourceIds": [
+     "scaj-jsc-overview"
+    ]
+   }
+  ],
+  "sources": {
+   "scaj-jsc-overview": {
+    "title": "JSC 概要",
+    "org": "日本スペシャルティコーヒー協会(SCAJ)",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": ""
+   }
+  }
+ },
+ {
+  "key": "competition:jsc:tagline",
+  "content": {
+   "text": "通常のブレンドコーヒーと、それを使った各選手オリジナルのシグニチャービバレッジ(創作ドリンク)を時間内に作成して競う競技会"
+  },
+  "claims": [
+   {
+    "index": 0,
+    "text": "サイフォン抽出の技術と創作ドリンクを競う",
+    "quote": "通常のブレンドコーヒー、そしてブレンドコーヒーを使った各選手オリジナルのシグニチャービバレッジを時間内に作成します。",
+    "location": "JSCの歴史",
+    "sourceIds": [
+     "scaj-jsc-overview"
+    ]
+   }
+  ],
+  "sources": {
+   "scaj-jsc-overview": {
+    "title": "JSC 概要",
+    "org": "日本スペシャルティコーヒー協会(SCAJ)",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": ""
+   }
+  }
+ },
+ {
+  "key": "competition:kikikohi:history",
+  "content": {
+   "text": "出場資格はSCAJコーヒーマイスター認定資格の有資格者。SCAJトレイニング委員会による、コーヒーの官能評価を競う競技会で、第12回は2026年10月14日にSCAJ2026のステージBで開催すると告知されている(SCAJ公式ページ)。第12回の優勝者は「2026年コーヒーマイスター利き珈琲王」として表彰され、トロフィーが授与される。"
+  },
+  "claims": [
+   {
+    "index": 0,
+    "text": "SCAJコーヒーマイスター認定資格の有資格者を対象とする",
+    "quote": "SCAJコーヒーマイスター認定資格の有資格者",
+    "location": "選手権 出場資格",
+    "sourceIds": [
+     "scaj-kikikohi-12th"
+    ]
+   },
+   {
+    "index": 1,
+    "text": "SCAJトレイニング委員会がSCAJ展示会のイベントステージで開催するカッピング競技会",
+    "quote": "SCAJ2026イベントステージにて、SCAJトレイニング委員会による、コーヒーの官能評価を競う「第12回利き珈琲選手権」を開催します。",
+    "location": "第12回 概要",
+    "sourceIds": [
+     "scaj-kikikohi-12th"
+    ]
+   },
+   {
+    "index": 2,
+    "text": "2026年に第12回を開催(予定)する",
+    "quote": "2026年10月14日(水) SCAJ2026 ステージBにて、皆様のご来場をお待ちしております。",
+    "location": "第12回 概要",
+    "sourceIds": [
+     "scaj-kikikohi-12th"
+    ]
+   },
+   {
+    "index": 3,
+    "text": "優勝者は「コーヒーマイスター利き珈琲王」として表彰される",
+    "quote": "優勝者は「2026年コーヒーマイスター利き珈琲王」として表彰し、トロフィーを授与いたします。",
+    "location": "第12回 概要",
+    "sourceIds": [
+     "scaj-kikikohi-12th"
+    ]
+   }
+  ],
+  "sources": {
+   "scaj-kikikohi-12th": {
+    "title": "第12回利き珈琲選手権(概要・歴代利き珈琲王インタビュー)",
+    "org": "日本スペシャルティコーヒー協会(SCAJ)",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": ""
+   }
+  }
+ },
+ {
+  "key": "diagnosis:未抽出(Under-extraction)",
+  "content": {
+   "cause": "抽出時間が短いこと。Batali et al. 2020(ドリップ)は、抽出収率(PE)が高い試料ほど長い滞留時間で淹れられ、抽出収率が低い試料ははるかに短い抽出時間だったと述べている。",
+   "taste": "酸っぱい(Batali et al. 2020の官能評価で、濃度(TDS)が高いほど強まり、抽出収率が高いほど弱まる属性の1つとして Sour が挙げられている)"
+  },
+  "claims": [
+   {
+    "index": 0,
+    "text": "原因: 抽出時間が短いと抽出収率が低くなる",
+    "quote": "An important point is that higher PE in general is achieved by longer residence time",
+    "location": "Batali 2020 Sci Rep, Discussion",
+    "sourceIds": [
+     "batali-2020-scirep"
+    ]
+   },
+   {
+    "index": 1,
+    "text": "味: 酸っぱい",
+    "quote": "The next category of attributes involved those that increased with TDS but decreased with PE: Sour, Citrus, Dark Green, Smoky, Brown Spice, and Fermented",
+    "location": "Batali 2020 Sci Rep, Discussion",
+    "sourceIds": [
+     "batali-2020-scirep"
+    ]
+   }
+  ],
+  "sources": {
+   "batali-2020-scirep": {
+    "title": "Brew temperature, at fixed brew strength and extraction, has little impact on the sensory profile of drip brew coffee (Batali, Ristenpart, Guinard; Scientific Reports 2020)",
+    "org": "Scientific Reports / UC Davis Coffee Center(SCA資金の査読論文)",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": "査読論文(オープンアクセス)の原文をcurlで取得して読んだ。論文が引用しているSCAハンドブック等の記述は論文を通した引用であり、SCA原文そのものではない。"
+   }
+  }
+ },
+ {
+  "key": "diagnosis:過抽出(Over-extraction)",
+  "content": {
+   "cause": "抽出時間が長いこと。Batali et al. 2020(ドリップ)は、抽出収率(PE)が高いのは、一般に滞留時間が長い場合だと述べている。",
+   "taste": ""
+  },
+  "claims": [
+   {
+    "index": 0,
+    "text": "原因: 抽出時間が長いと抽出収率が高くなる",
+    "quote": "An important point is that higher PE in general is achieved by longer residence time",
+    "location": "Batali 2020 Sci Rep, Discussion",
+    "sourceIds": [
+     "batali-2020-scirep"
+    ]
+   }
+  ],
+  "sources": {
+   "batali-2020-scirep": {
+    "title": "Brew temperature, at fixed brew strength and extraction, has little impact on the sensory profile of drip brew coffee (Batali, Ristenpart, Guinard; Scientific Reports 2020)",
+    "org": "Scientific Reports / UC Davis Coffee Center(SCA資金の査読論文)",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": "査読論文(オープンアクセス)の原文をcurlで取得して読んだ。論文が引用しているSCAハンドブック等の記述は論文を通した引用であり、SCA原文そのものではない。"
+   }
+  }
+ },
+ {
+  "key": "diagnosis:適正抽出",
+  "content": {
+   "cause": "SCA Coffee StandardsのGolden Cup Standardでは、ブリュー強度(TDS)が11.5〜13.5 g/L(SCAブリューイング・コントロール・チャート上の1.15〜1.35「パーセント」に相当)で、可溶成分の抽出収率が18〜22%とされている。",
+   "taste": ""
+  },
+  "claims": [
+   {
+    "index": 0,
+    "text": "SCA基準では抽出収率が18〜22%が目安",
+    "quote": "Coffee shall exhibit a brew strength, measured in Total Dissolved Solids, of 11.5 to 13.5 grams per liter, corresponding to 1.15 to 1.35 \"percent\" on the SCA Brewing Control Chart, resulting from a solubles extraction yield of 18 to 22 percent*.",
+    "location": "SCA Coffee Standards 5.1 Golden Cup Standard (PDF p.13) / ページ Brewing Standards > Golden Cup Standard",
+    "sourceIds": [
+     "sca-coffee-standards-page-2020",
+     "sca-coffee-standards-pdf-2020",
+     "sca-news-cbi-2013"
+    ]
+   },
+   {
+    "index": 1,
+    "text": "SCA基準ではTDS(濃度)が1.15〜1.35%が目安",
+    "quote": "Coffee shall exhibit a brew strength, measured in Total Dissolved Solids, of 11.5 to 13.5 grams per liter, corresponding to 1.15 to 1.35 \"percent\" on the SCA Brewing Control Chart",
+    "location": "SCA Coffee Standards 5.1 Golden Cup Standard (PDF p.13)",
+    "sourceIds": [
+     "sca-coffee-standards-page-2020",
+     "sca-coffee-standards-pdf-2020",
+     "sca-news-cbi-2013"
+    ]
+   }
+  ],
+  "sources": {
+   "sca-coffee-standards-page-2020": {
+    "title": "Coffee Standards (Brewing Standards > Golden Cup Standard)",
+    "org": "Specialty Coffee Association",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": "SCA公式ページの2020-04-25付Wayback保存版をcurlで取得し本文を読んだ。現行の https://sca.coffee/research/coffee-standards にはこの節がない(現行版はSCA-310等の会員限定規格の一覧に変わっている)。"
+   },
+   "sca-coffee-standards-pdf-2020": {
+    "title": "Coffee Standards (PDF) 5.1 Golden Cup Standard",
+    "org": "Specialty Coffee Association",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": "上のページからリンクされていたSCA公式PDFのWayback保存版。curlで取得しpypdfで本文抽出(14ページ)。5.1は13ページ。"
+   },
+   "sca-news-cbi-2013": {
+    "title": "The Coffee Brewing Institute: Setting the Stage for Specialty Coffee (Emma Sage, SCA Coffee Science Manager, Issue No. 4, 2013)",
+    "org": "Specialty Coffee Association",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": "SCA公式ニュースサイトの記事。原URL scanews.coffee は接続不能だったため、Wayback保存版をcurlで取得して本文を読んだ。"
+   }
+  }
+ },
+ {
+  "key": "extraction:roast",
+  "content": {
+   "summary": "焙煎度が上がるほど、焙煎豆の多孔度が高くなると報告されている",
+   "detail": "走査型電子顕微鏡で焙煎豆の多孔度を測定したところ、焙煎度が上がるほど多孔度が高くなったと報告されている(Scientific Reports 2024, Caffeine content in filter coffee brews as a function of degree of roast and extraction yield)。"
+  },
+  "claims": [
+   {
+    "index": 0,
+    "text": "深煎りほど豆の内部構造が壊れ、多孔質になる",
+    "quote": "Scanning electron microscopy was used to measure porosity of roasted seeds and showed increasing porosity with the degree of roast.",
+    "location": "Lindsey 2024 Sci Rep, Abstract",
+    "sourceIds": [
+     "lindsey-2024-scirep"
+    ]
+   }
+  ],
+  "sources": {
+   "lindsey-2024-scirep": {
+    "title": "Caffeine content in filter coffee brews as a function of degree of roast and extraction yield (Scientific Reports 14, 29126, 2024)",
+    "org": "Scientific Reports",
+    "kind": "primary",
+    "accessed": "2026-11-09",
+    "note": "査読論文(オープンアクセス)の原文をcurlで取得して読んだ。著者名は未確認(本文取得で確認していない)。"
+   }
+  }
+ },
+ {
+  "key": "extraction:time",
+  "content": {
+   "summary": "",
+   "detail": "Batali et al.(Scientific Reports 2020, ドリップ)は、抽出収率(PE)が高いのは一般に滞留時間が長い場合で、抽出収率が低い試料ははるかに短い抽出時間だったと述べている。また、Sour(酸っぱさ)などは、濃度(TDS)が高いほど強まり、抽出収率が高いほど弱まる属性として挙げられている。"
+  },
+  "claims": [
+   {
+    "index": 0,
+    "text": "抽出時間が長いほど抽出収率(PE)が高くなる",
+    "quote": "An important point is that higher PE in general is achieved by longer residence time (cf. brewing parameters in Supplementary Table S1), compared to the low PE samples, which involve much shorter brew times.",
+    "location": "Batali 2020 Sci Rep, Discussion",
+    "sourceIds": [
+     "batali-2020-scirep"
+    ]
+   },
+   {
+    "index": 1,
+    "text": "抽出時間が短すぎると酸味成分ばかりの『未抽出』になる",
+    "quote": "The next category of attributes involved those that increased with TDS but decreased with PE: Sour, Citrus, Dark Green, Smoky, Brown Spice, and Fermented",
+    "location": "Batali 2020 Sci Rep, Discussion",
+    "sourceIds": [
+     "batali-2020-scirep"
+    ]
+   }
+  ],
+  "sources": {
+   "batali-2020-scirep": {
+    "title": "Brew temperature, at fixed brew strength and extraction, has little impact on the sensory profile of drip brew coffee (Batali, Ristenpart, Guinard; Scientific Reports 2020)",
+    "org": "Scientific Reports / UC Davis Coffee Center(SCA資金の査読論文)",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": "査読論文(オープンアクセス)の原文をcurlで取得して読んだ。論文が引用しているSCAハンドブック等の記述は論文を通した引用であり、SCA原文そのものではない。"
+   }
+  }
+ },
+ {
+  "key": "fact:SCAJ誕生のきっかけは「コーヒークライシス」だった",
+  "content": {
+   "title": "SCAJは2003年に新規設立された",
+   "text": "日本スペシャルティコーヒー協会(SCAJ)は、国内外に向けてより開かれた協会として、2003年に「日本スペシャルティコーヒー協会」として新規設立された(SCAJ「沿革」より)。"
+  },
+  "claims": [
+   {
+    "index": 0,
+    "text": "SCAJ(日本スペシャルティコーヒー協会)は2003年に設立された",
+    "quote": "2003年 国内外に向けより開かれた協会として、「日本スペシャルティコーヒー協会」として新規設立",
+    "location": "沿革",
+    "sourceIds": [
+     "scaj-overview-ja"
+    ]
+   }
+  ],
+  "sources": {
+   "scaj-overview-ja": {
+    "title": "協会概要・沿革(日本スペシャルティコーヒー協会)",
+    "org": "日本スペシャルティコーヒー協会(SCAJ)",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": ""
+   }
+  }
+ },
+ {
+  "key": "fact:「80点基準」はSCA自身が2021年に卒業していた",
+  "content": {
+   "title": "SCAは2021年のホワイトペーパーでスペシャルティコーヒーを定義した",
+   "text": "SCAのホワイトペーパー『Towards a Definition of Specialty Coffee』(2021年)は、スペシャルティコーヒーを、特有の特性が認められ、その特性ゆえに市場で大きな付加価値を持つコーヒー(またはコーヒー体験)と定義している。"
+  },
+  "claims": [
+   {
+    "index": 0,
+    "text": "SCAは2021年に、スペシャルティコーヒーを「特性ゆえに市場で高い付加価値を持つコーヒー」とする定義を示した(ホワイトペーパー'Towards a Definition of Specialty Coffee', (c) 2021)",
+    "quote": "Specialty coffee is a coffee or coffee experience recognized for its distinctive attributes, and because of these attributes, has significant extra value in the marketplace.",
+    "location": "p.6 'The Attribute-based Definition of Specialty Coffee'; 著作権表示 (c) 2021",
+    "sourceIds": [
+     "sca-whitepaper-definition-2021"
+    ]
+   }
+  ],
+  "sources": {
+   "sca-whitepaper-definition-2021": {
+    "title": "Towards a Definition of Specialty Coffee: A Conception Based on Attributes (c) 2021",
+    "org": "Specialty Coffee Association",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": ""
+   }
+  }
+ },
+ {
+  "key": "fact:「コーヒーのオリンピック」はブラジルのオークションから始まった",
+  "content": {
+   "title": "Cup of Excellenceの最初の大会は1999年の「Best of Brazil」",
+   "text": "Alliance for Coffee Excellenceによると、Cup of Excellenceの最初の大会は1999年の「Best of Brazil」と呼ばれた。ICOの文書(WP Board 978/05)によると、世界初のインターネットコーヒーオークションは1999年にブラジルで開かれ、Cup of Excellenceの競技会とオークションのプログラムにつながった。"
+  },
+  "claims": [
+   {
+    "index": 0,
+    "text": "Cup of Excellenceの最初の大会は1999年の「Best of Brazil」である",
+    "quote": "The first competition in 1999 was called “Best of Brazil”, executed as an experimental program under the “Gourmet Project” started by Susie Spindler, George Howell, the Brazil Specialty Coffee Association and the Specialty Coffee Association of America.",
+    "location": "'The founders' の項",
+    "sourceIds": [
+     "ace-10-things-2020"
+    ]
+   },
+   {
+    "index": 1,
+    "text": "1999年にブラジルで、世界初のインターネットコーヒーオークションが開かれ、Cup of Excellenceにつながった",
+    "quote": "The project included the world’s first Internet coffee auction which took place in Brazil in 1999 and led to the Cup of Excellence ® competition and auction programme",
+    "location": "WP Board 978/05 の Coffee Guide 関連の段落(Gourmet Coffee Project の説明)",
+    "sourceIds": [
+     "ico-wpboard978-2005"
+    ]
+   }
+  ],
+  "sources": {
+   "ace-10-things-2020": {
+    "title": "10 Things You Should Know About Cup of Excellence (2020-08-17)",
+    "org": "Alliance for Coffee Excellence",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": ""
+   },
+   "ico-wpboard978-2005": {
+    "title": "WP Board 978/05 Project proposal: The Coffee Guide Website 2006/07 (Executive Board, 27-29 September 2005)",
+    "org": "International Coffee Organization",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": ""
+   }
+  }
+ },
+ {
+  "key": "fact:「フレーバー」には2つの意味がある",
+  "content": {
+   "title": "SCAが定義する「フレーバー」",
+   "text": "SCA Standard 103-2024(Coffee Value Assessment: Descriptive Assessment)のカッピング項目では、Flavor(フレーバー)を、口の中にあるあいだに、抽出液の味と、抽出液の口中から鼻に抜ける香り(retronasal olfactory)の両方から得られる知覚と定義している。"
+  },
+  "claims": [
+   {
+    "index": 0,
+    "text": "風味を表す『フレーバー』(Flavor)は、味と香りを合わせた知覚を指す",
+    "quote": "Flavor. The perception coming from both the taste of the brew and the brew’s retronasal olfactory component, while the brew is in the mouth.",
+    "location": "4.3 Cupping Sections (p.6)",
+    "sourceIds": [
+     "sca-standard-103-2024"
+    ]
+   }
+  ],
+  "sources": {
+   "sca-standard-103-2024": {
+    "title": "SCA Standard 103-2024 Coffee Value Assessment: Descriptive Assessment",
+    "org": "Specialty Coffee Association",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": "暗号化PDFをpypdf+cryptographyで本文抽出"
+   }
+  }
+ },
+ {
+  "key": "fact:「緑のカエル」は合併で生まれたロゴ",
+  "content": {
+   "title": "Rainforest Allianceは1987年設立、2018年にUTZが合流した",
+   "text": "Rainforest Allianceは1987年に共同設立された団体。同団体の創設者の回想では、数百万人がスーパーで「小さな緑のカエル」を頼りに、より持続可能な選択をしていると述べられている。2018年にUTZが合流した(joined forces)。UTZは2002年に、グアテマラのコーヒー農家とオランダのロースターによって立ち上げられた。"
+  },
+  "claims": [
+   {
+    "index": 0,
+    "text": "Rainforest Allianceは1987年に共同設立された組織で、2018年の合併より前から存在した",
+    "quote": "Back in 1987, a 24-year-old Daniel Katz co-founded the Rainforest Alliance, a tiny organization with a big mission: save the rainforests.",
+    "location": "冒頭の紹介文",
+    "sourceIds": [
+     "ra-katz-origins"
+    ]
+   },
+   {
+    "index": 1,
+    "text": "RAとUTZは2018年に合併した(UTZがRAに合流した)",
+    "quote": "The UTZ organization joined forces with the Rainforest Alliance in 2018 to create a better future for people and nature",
+    "location": "'UTZ is part of the Rainforest Alliance' の項",
+    "sourceIds": [
+     "ra-utz-page"
+    ]
+   },
+   {
+    "index": 2,
+    "text": "UTZはグアテマラ人生産者とオランダ人ロースターが創設した",
+    "quote": "It was launched in 2002 by a Guatemalan coffee farmer and a Dutch roaster who wanted to bring coffee certification to a global market",
+    "location": "'UTZ means good' の項",
+    "sourceIds": [
+     "ra-utz-page"
+    ]
+   },
+   {
+    "index": 3,
+    "text": "「緑のカエル」はRainforest Allianceのシンボル(認証マーク)である",
+    "quote": "Millions of people trust our little green frog to lead them to a more sustainable choice at the supermarket",
+    "location": "結びの段落",
+    "sourceIds": [
+     "ra-katz-origins"
+    ]
+   }
+  ],
+  "sources": {
+   "ra-katz-origins": {
+    "title": "Our Founder, Daniel Katz, Reflects on the Origins of the Rainforest Alliance",
+    "org": "Rainforest Alliance",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": ""
+   },
+   "ra-utz-page": {
+    "title": "UTZ Certification (Now Part of the Rainforest Alliance)",
+    "org": "Rainforest Alliance",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": ""
+   }
+  }
+ },
+ {
+  "key": "fact:イエメンには公的な等級認証機関が事実上ない",
+  "content": {
+   "title": "イエメンの標準計量局(SMA)には、コーヒーの文書化された規格・分類がない",
+   "text": "FAOとIFCの2023年の報告書は、イエメンの標準計量局(SMA)には、イエメン産コーヒー豆とその品種についての文書化された規格も分類もない、としている。同報告書は、品質基準の設定は民間部門が引き受けており、イエメンのSCAがスペシャルティコーヒーの基準を設定し、第三者による品質検証・検査も行っていると述べている。"
+  },
+  "claims": [
+   {
+    "index": 0,
+    "text": "イエメンの標準計量局(SMA, Standards and Metrology Authority)には、イエメン産コーヒーの公式な等級規格・分類が存在しない(モカマタリのような銘柄を含む)",
+    "quote": "it does not have any written standards nor classification for Yemeni coffee beans and its varieties",
+    "location": "FAO/IFC 2023, 4.1 付近(Yemen coffee sector の governance 説明)",
+    "sourceIds": [
+     "fao-ifc-yemen-coffee-vc-2023",
+     "ico-pm-29-quality-standards-2013"
+    ]
+   },
+   {
+    "index": 1,
+    "text": "品質の検証は民間団体に頼っている",
+    "quote": "The private sector has picked up the mantle for setting the quality standards, with the Specialty Coffee Association (SCA) of Yemen setting standards for specialty coffee in addition to providing third- party quality verification and testing.",
+    "location": "同上の段落",
+    "sourceIds": [
+     "fao-ifc-yemen-coffee-vc-2023"
+    ]
+   }
+  ],
+  "sources": {
+   "fao-ifc-yemen-coffee-vc-2023": {
+    "title": "Coffee value chain in Yemen: export potential and investment opportunities",
+    "org": "FAO and IFC",
+    "kind": "primary",
+    "accessed": "2026-11-09",
+    "note": "2023年。curlでPDF取得(約12MB)、pypdfで本文抽出"
+   },
+   "ico-pm-29-quality-standards-2013": {
+    "title": "National Quality Standards (PM-29/13), Promotion and Market Development Committee 6th meeting, 9 September 2013",
+    "org": "International Coffee Organization",
+    "kind": "primary",
+    "accessed": "2026-11-09",
+    "note": "2013年時点の加盟国の回答をまとめた文書"
+   }
+  }
+ },
+ {
+  "key": "fact:インドネシアには輸出者団体が2つある",
+  "content": {
+   "title": "インドネシアには似た名前の団体、AEKIとGAEKIがある",
+   "text": "インドネシアには、AEKI(Asosiasi Eksportir dan Industri Kopi Indonesia)とGAEKI(Gabungan Eksportir Kopi Indonesia)という、似た名前の団体がある。どちらも名称に Eksportir(輸出者)を含む。"
+  },
+  "claims": [
+   {
+    "index": 0,
+    "text": "インドネシアにはAEKI(Asosiasi Eksportir dan Industri Kopi Indonesia)とGAEKI(Gabungan Eksportir Kopi Indonesia)という似た名前の輸出者団体がある",
+    "quote": "GAEKI didirikan di Kota Surabaya dan dapat berkedudukan di seluruh wilayah hukum Indonesia.",
+    "location": "GAEKI: Legalitas。AEKI: Sejarah AEKI(『Sejarah AEKI, Asosiasi Eksportir dan Industri Kopi Indonesia』『AEKI didirikan pada 30 Juli 1979』)",
+    "sourceIds": [
+     "aeki-sejarah",
+     "gaeki-legalitas"
+    ]
+   }
+  ],
+  "sources": {
+   "aeki-sejarah": {
+    "title": "Sejarah AEKI: Berdiri 30 Juli 1979 hingga Kini",
+    "org": "Asosiasi Eksportir dan Industri Kopi Indonesia (AEKI)",
+    "kind": "primary",
+    "accessed": "2026-11-09",
+    "note": "団体自身の公式サイト。GAEKIとの関係・分裂は書かれていない"
+   },
+   "gaeki-legalitas": {
+    "title": "Legalitas (GAEKI)",
+    "org": "Gabungan Eksportir Kopi Indonesia (GAEKI)",
+    "kind": "primary",
+    "accessed": "2026-11-09",
+    "note": "団体自身の公式サイト。設立の経緯(分裂)については書かれていない"
+   }
+  }
+ },
+ {
+  "key": "fact:エチオピアは価格上「ブラジルの仲間」",
+  "content": {
+   "title": "エチオピアはICOの区分で、ブラジルと同じ「Brazilian Natural Arabicas」グループ",
+   "text": "国際コーヒー機関(ICO)の用語集によると、Brazilian Natural Arabicasは協定のもとで設けられたアラビカのグループの一つで、このグループの国はブラジル、エチオピア、パラグアイとされている。ICOの統計文書(SC-105/21)は、アラビカのグループのうち、Mild Arabicasは湿式、Brazilian Naturalsは乾式で精製されると説明している。"
+  },
+  "claims": [
+   {
+    "index": 0,
+    "text": "ICOの価格指標で、エチオピアはブラジルと同じ Brazilian Naturals グループに分類される",
+    "quote": "Brazilian Natural Arabicas One of the groups of Arabica coffee established under the Agreement. Countries in this group are: Brazil Ethiopia Paraguay",
+    "location": "Glossary: Brazilian Natural Arabicas",
+    "sourceIds": [
+     "ico-glossary-dev"
+    ]
+   },
+   {
+    "index": 1,
+    "text": "グループ化は「ナチュラル精選」という製法軸による(Brazilian Naturalsは乾式、Mild Arabicasは湿式)",
+    "quote": "Among the Arabica groups, Mild Arabicas are processed using the wet method, while Brazilian Naturals are processed using the dry method.",
+    "location": "SC-105/21 'Group of Coffee' の項",
+    "sourceIds": [
+     "ico-sc105-2021-data-concepts"
+    ]
+   }
+  ],
+  "sources": {
+   "ico-glossary-dev": {
+    "title": "ICO Glossary of terms used (legacy site)",
+    "org": "International Coffee Organization",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": "旧サイト(dev.ico.org)の用語集。ICA 2001時代の記述を含む"
+   },
+   "ico-sc105-2021-data-concepts": {
+    "title": "SC-105/21 Data concepts and variables used in the statistics of the Organization (Statistics Committee, 13 April 2021)",
+    "org": "International Coffee Organization",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": ""
+   }
+  }
+ },
+ {
+  "key": "fact:クリスタルマウンテンはジャマイカ産ではない",
+  "content": {
+   "title": "クリスタルマウンテンは、公正競争規約ではキューバ産と定められている",
+   "text": "全日本コーヒー公正取引協議会の公正競争規約(別表2)では、クリスタルマウンテンは、キューバにて生産された同国輸出規格に基づくアラビカコーヒー豆と定められている。ジャマイカは別の区分(別表2の3)で、「ジャマイカにて生産されたアラビカコーヒー豆のうち、1)及び2)以外のもの」と定められている。"
+  },
+  "claims": [
+   {
+    "index": 0,
+    "text": "特定銘柄としての「クリスタルマウンテン」はキューバ産のコーヒーを指す",
+    "quote": "4) クリスタルマウンテン : キューバにて生産さ れた同国輸出規格に基づくアラビカコーヒー豆 をいう。",
+    "location": "(別表2) 産地、品種、銘柄の区分及び範囲の例示 4)",
+    "sourceIds": [
+     "ajcft-kiyaku-regular-coffee"
+    ]
+   },
+   {
+    "index": 1,
+    "text": "クリスタルマウンテンはジャマイカ産ではない",
+    "quote": "3) ジャマイカ : ジャマイカにて生産されたアラビカコーヒー豆のうち、 １） 及び２） 以外のもの をいう。",
+    "location": "(別表2) 3)・4)",
+    "sourceIds": [
+     "ajcft-kiyaku-regular-coffee"
+    ]
+   }
+  ],
+  "sources": {
+   "ajcft-kiyaku-regular-coffee": {
+    "title": "レギュラーコーヒー及びインスタントコーヒーの表示に関する公正競争規約・公正競争規約施行規則(別表2 産地、品種、銘柄の区分及び範囲の例示)",
+    "org": "全日本コーヒー公正取引協議会(規約PDFの掲載: 全国公正取引協議会連合会)",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": "curlでPDF取得、pypdfで本文抽出。改版日は本文から確認していない。抽出本文には改行由来の空白が混じる"
+   }
+  }
+ },
+ {
+  "key": "fact:グアテマラだけの輸出税",
+  "content": {
+   "title": "グアテマラのコーヒー輸出には、FOB価額の1%の課徴がある",
+   "text": "WTOのグアテマラ貿易政策検討報告書(WT/TPR/S/477、2025年10月)によると、グアテマラでは、コーヒー輸出に対し、輸出するコーヒー1キンタルごとにFOB価額の1%の課徴がかかる。報告書は、その課徴の残り(the remainder)がANACAFÉに入ると記している。"
+  },
+  "claims": [
+   {
+    "index": 0,
+    "text": "グアテマラでは、コーヒー輸出に対しFOB価額の1%が課される",
+    "quote": "Coffee exports are subject to a charge of 1% of the f.o.b. value for each quintal of coffee exported.",
+    "location": "WTO WT/TPR/S/477 para 3.39 (3.2.2 Taxes, charges, and levies)",
+    "sourceIds": [
+     "wto-tpr-s477-guatemala",
+     "anacafe-legislacion-cafe"
+    ]
+   },
+   {
+    "index": 1,
+    "text": "この税収はAnacafé(全国コーヒー協会)の財源になっている",
+    "quote": "with the remainder going to ANACAFÉ.",
+    "location": "WTO WT/TPR/S/477 para 3.39",
+    "sourceIds": [
+     "wto-tpr-s477-guatemala",
+     "anacafe-legislacion-cafe"
+    ]
+   }
+  ],
+  "sources": {
+   "wto-tpr-s477-guatemala": {
+    "title": "Trade Policy Review: Guatemala, Report by the Secretariat WT/TPR/S/477 (8 October 2025)",
+    "org": "World Trade Organization",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": ""
+   },
+   "anacafe-legislacion-cafe": {
+    "title": "Legislación sobre Café (Ley del Café Decreto 19-69, Reglamento y Decretos; Decreto-Ley 111-85 を含む)",
+    "org": "Asociación Nacional del Café (Anacafé)",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": "Anacafé公式サイトの法令集PDF(転載)。発行年は本文から確認していない"
+   }
+  }
+ }
+]

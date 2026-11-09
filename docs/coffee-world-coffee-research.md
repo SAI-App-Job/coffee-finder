@@ -38,7 +38,7 @@ WCRのリソースライブラリは50件以上あるが、大半は**気候変�
   - **カトゥーラ/カトゥアイ系統**: Caturra, Catuai, Mundo Novo, Maragogype, Pacamara
   - **サルチモール/カティモール系統**(コーヒーサビ病耐性の交配品種): Catimor,
     Sarchimor, Ruiru 11, Batian, Parainema
-  - **特殊・高付加価値品種**: Geisha(ゲイシャ)、Starmaya・Marsellesa(F1ハイブリッド)
+  - **特殊・高付加価値品種**: Geisha(ゲイシャ)、Starmaya(F1ハイブリッド)。※Marsellesaは、WCRの分類ではF1ではなくSarchimor系(Introgressed)でサルチモール/カティモール系統に移した(2026-11-08)
 - ロブスタは西アフリカのサハラ以南の森林が原産。1870年頃コンゴで商業栽培が
   始まり、1950年頃からブラジル・ベトナムを中心に急拡大した
 

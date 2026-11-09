@@ -1,0 +1,1372 @@
+{
+  "scope": "origin-2 (ケニア・タンザニア)",
+  "verifiedOn": "2026-11-09",
+  "sources": {
+    "eas130-1999": {
+      "title": "EAS 130:1999 Green coffee beans - Specification",
+      "org": "East African Community (EAC)",
+      "url": "https://law.resource.org/pub/eac/ibr/eas.130.1999.html",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": "law.resource.org掲載のEAC規格全文(HTMLをcurlで取得)。"
+    },
+    "ke-gazette-ln102-2019": {
+      "title": "The Crops (Coffee) (General) Regulations, 2019 (Legal Notice No. 102, Kenya Gazette Supplement No. 100, 1 July 2019)",
+      "org": "Government of Kenya",
+      "url": "https://infotradekenya.go.ke/media/Legal%20Notice%20102%20-%20Coffee%20General%20Regulations.PDF",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": "PDF全文をpypdfで抽出。"
+    },
+    "ke-ln100-2006": {
+      "title": "The Coffee (General) (Amendment) Rules, 2006 (Legal Notice No. 100)",
+      "org": "Government of Kenya (via FAOLEX)",
+      "url": "https://faolex.fao.org/docs/pdf/ken101631.pdf",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": "PDF全文をpypdfで抽出。"
+    },
+    "afa-history-coffee": {
+      "title": "History - Coffee Directorate",
+      "org": "Agriculture and Food Authority (AFA), Kenya",
+      "url": "https://afa.go.ke/history-coffee-directorate/",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": ""
+    },
+    "afa-coffee-directorate-home": {
+      "title": "Home - Coffee Directorate",
+      "org": "Agriculture and Food Authority (AFA), Kenya",
+      "url": "https://afa.go.ke/home-coffee-directorate/",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": ""
+    },
+    "afa-update-2024-10": {
+      "title": "Charting the Path Towards a Sustainable Coffee Sub-Sector in Kenya (2024-10-21)",
+      "org": "Agriculture and Food Authority (AFA), Kenya",
+      "url": "https://afa.go.ke/updates/charting-the-path-towards-a-sustainable-coffee-sub-sector-in-kenya/",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": ""
+    },
+    "kilimo-cdms-2024": {
+      "title": "Coffee Development and Marketing Strategy (Final Draft, 27 Jan 2024)",
+      "org": "Ministry of Agriculture and Livestock Development, Kenya",
+      "url": "https://kilimo.go.ke/wp-content/uploads/2024/10/Final-Draft-Coffee-Developemnt-and-Marketing-Strategy-27-Jan-2024-1.pdf",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": "「Final Draft」と題された政府文書(PDF全文をpypdfで抽出)。"
+    },
+    "nce-kenya-origin": {
+      "title": "Kenya Coffee Origin",
+      "org": "Nairobi Coffee Exchange",
+      "url": "https://www.nairobicoffeeexchange.co.ke/kenya-coffee-origin",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": ""
+    },
+    "nce-coffee-grades": {
+      "title": "Understanding Kenya Coffee Grades",
+      "org": "Nairobi Coffee Exchange",
+      "url": "https://www.nairobicoffeeexchange.co.ke/kenya-coffee-origin/coffee-grades",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": ""
+    },
+    "nce-auction-calendar": {
+      "title": "Auction Calendar",
+      "org": "Nairobi Coffee Exchange",
+      "url": "https://www.nairobicoffeeexchange.co.ke/auctions",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": ""
+    },
+    "ico-profile-kenya-2019": {
+      "title": "ICO Coffee Profile: Kenya (ICC-124-7)",
+      "org": "International Coffee Organization (ICO)",
+      "url": "https://www.ico.org/documents/cy2018-19/icc-124-7e-profile-kenya.pdf",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": "国のプロファイルはケニア政府が作成してICOに提出した文書(2018/19年度)。PDF全文をpypdfで抽出。"
+    },
+    "wcr-sl28": {
+      "title": "SL28 (World Coffee Research Arabica Variety Catalog)",
+      "org": "World Coffee Research",
+      "url": "https://varieties.worldcoffeeresearch.org/varieties/sl28",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": ""
+    },
+    "wcr-sl34": {
+      "title": "SL34 (World Coffee Research Arabica Variety Catalog)",
+      "org": "World Coffee Research",
+      "url": "https://varieties.worldcoffeeresearch.org/varieties/sl34",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": ""
+    },
+    "wcr-ruiru11": {
+      "title": "Ruiru 11 (World Coffee Research Arabica Variety Catalog)",
+      "org": "World Coffee Research",
+      "url": "https://varieties.worldcoffeeresearch.org/varieties/ruiru-11",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": ""
+    },
+    "wcr-batian": {
+      "title": "Batian (World Coffee Research Arabica Variety Catalog)",
+      "org": "World Coffee Research",
+      "url": "https://varieties.worldcoffeeresearch.org/varieties/batian",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": ""
+    },
+    "unesco-mount-kenya": {
+      "title": "Mount Kenya National Park/Natural Forest (World Heritage List 800)",
+      "org": "UNESCO World Heritage Centre",
+      "url": "https://whc.unesco.org/en/list/800/",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": ""
+    },
+    "tz-coffee-industry-act-2001": {
+      "title": "The Coffee Industry Act, 2001 (Act No. 23 of 2001)",
+      "org": "United Republic of Tanzania (via FAOLEX)",
+      "url": "https://faolex.fao.org/docs/pdf/tan34185.pdf",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": "官報付録のPDF全文をpypdfで抽出(OCR由来の誤字あり)。2009年法で改正済み(TCBのサイトによる)ため、改正後の条文は別途確認が必要。"
+    },
+    "tz-coffee-regs-2013": {
+      "title": "The Coffee Industry Regulations, 2013 (Government Notice No. 385 of 2013)",
+      "org": "United Republic of Tanzania (via FAOLEX)",
+      "url": "https://faolex.fao.org/docs/pdf/tan168710.pdf",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": "官報付録のPDF全文をpypdfで抽出(OCR由来の誤字・空白あり)。2013年版であり、その後の改正(GN 65 of 2014 等)は未確認。"
+    },
+    "tcb-coffee-production": {
+      "title": "Coffee Farming",
+      "org": "Tanzania Coffee Board (TCB)",
+      "url": "https://www.coffee.go.tz/pages/coffee-production",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": ""
+    },
+    "tcb-establishment": {
+      "title": "Establishment",
+      "org": "Tanzania Coffee Board (TCB)",
+      "url": "https://www.coffee.go.tz/pages/establishment",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": ""
+    },
+    "tacri-home": {
+      "title": "Tanzania Coffee Research Institute (TaCRI) home",
+      "org": "Tanzania Coffee Research Institute (TaCRI)",
+      "url": "https://www.tacri.org/",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": ""
+    },
+    "tacri-lyamungu": {
+      "title": "TaCRI Sub Stations: Lyamungu",
+      "org": "Tanzania Coffee Research Institute (TaCRI)",
+      "url": "https://www.tacri.org/tacri-sub-stations/lyamungu/",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": ""
+    },
+    "tacri-released-varieties": {
+      "title": "Released varieties (Characteristics of Improved Coffee Varieties; Farmers' Assessment of Improved Coffee Hybrids, 2005)",
+      "org": "Tanzania Coffee Research Institute (TaCRI) / Ministry of Agriculture and Food Security",
+      "url": "https://tacri.org/fileadmin/03_uploads/03_documents/TaCRI.documents/Released_varieties.pdf",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": "TaCRIのサイトに置かれたPDF。2005年のCoffee Release Committee会合向けの論文(SARI)を含む。"
+    },
+    "usda-fas-tz-2018": {
+      "title": "Tanzania Coffee Annual 2018 (GAIN, 2018-05-24)",
+      "org": "USDA Foreign Agricultural Service",
+      "url": "https://apps.fas.usda.gov/newgainapi/api/report/downloadreportbyfilename?filename=Coffee+Annual_Nairobi_Tanzania+-+United+Republic+of_5-24-2018.pdf",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": ""
+    },
+    "usda-fas-tz-2019": {
+      "title": "Tanzania Coffee Annual 2019 (GAIN, 2019-05-23)",
+      "org": "USDA Foreign Agricultural Service",
+      "url": "https://apps.fas.usda.gov/newgainapi/api/report/downloadreportbyfilename?filename=Coffee+Annual_Nairobi_Tanzania+-+United+Republic+of_5-23-2019.pdf",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": ""
+    },
+    "usda-fas-tz-2021": {
+      "title": "Tanzania Coffee Annual (TZ2021-0002, 2021-05-14)",
+      "org": "USDA Foreign Agricultural Service",
+      "url": "https://apps.fas.usda.gov/newgainapi/api/Report/DownloadReportByFileName?fileName=Coffee+Annual_Dar+Es+Salaam_Tanzania_05-15-2021.pdf",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": ""
+    },
+    "usda-fas-tz-2025": {
+      "title": "Tanzania Coffee Annual (TZ2025-0004, 2025-05-20)",
+      "org": "USDA Foreign Agricultural Service",
+      "url": "https://apps.fas.usda.gov/newgainapi/api/Report/DownloadReportByFileName?fileName=Coffee+Annual_Dar+Es+Salaam_Tanzania_TZ2025-0004.pdf",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": ""
+    },
+    "usda-fas-tz-2026": {
+      "title": "Tanzania Coffee Annual (TZ2026-0003, 2026-05-18)",
+      "org": "USDA Foreign Agricultural Service",
+      "url": "https://apps.fas.usda.gov/newgainapi/api/Report/DownloadReportByFileName?fileName=Coffee+Annual_Dar+Es+Salaam_Tanzania_TZ2026-0003.pdf",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": ""
+    },
+    "tbs-deas130-2022": {
+      "title": "DEAS 130:2022 Green coffee beans - Specification (draft for public review)",
+      "org": "Tanzania Bureau of Standards (TBS)",
+      "url": "https://www.tbs.go.tz/uploads/publications/en-1661943498-DEAS%20130%202022%20Green%20coffee%20beans--%20Specification%20for%20public%20review.pdf",
+      "kind": "primary",
+      "readMethod": "failed",
+      "accessed": "2026-11-09",
+      "note": "検索結果で見つけたURLだが取得時に404。本文は読めていない。TBSがEAS 130を採択したか、第2版の草案が最終化したかは未確認。"
+    }
+  },
+  "entries": {
+    "origin:ケニア:tagline": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "ケニア産は明るい酸味と、果実やワインを思わせる風味で知られる",
+          "status": "verified",
+          "sourceIds": [
+            "nce-kenya-origin"
+          ],
+          "quote": "Kenyan coffees are known for bright acidity, full body, and fruity or wine-like flavours.",
+          "location": "Kenya Coffee Origin ページ",
+          "note": ""
+        },
+        {
+          "text": "風味が「凝縮感のある」果実味と「鋭い」酸味である",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式資料にこの表現(凝縮感・鋭い)は見つからない。NCEは\"bright acidity ... fruity or wine-like flavours\"と記す。"
+        }
+      ],
+      "suggestedText": "明るい酸味と、果実やワインを思わせる風味で知られる(ナイロビ・コーヒー・エクスチェンジの記述)。",
+      "note": "英訳\"Concentrated fruit flavor and sharp acidity\"は日本語と同じ主張(同じく未確認部分を含む)。"
+    },
+    "origin:ケニア:regions": {
+      "status": "verified",
+      "claims": [
+        {
+          "text": "ニエリ、キリニャガはケニアの主要なコーヒー産地(県)である",
+          "status": "verified",
+          "sourceIds": [
+            "afa-update-2024-10"
+          ],
+          "quote": "The leading coffee-producing counties are Kiambu, Kirinyaga, Nyeri, Murang’a, Kericho and Bungoma.",
+          "location": "AFA Charting the Path ... 本文",
+          "note": ""
+        }
+      ],
+      "suggestedText": "",
+      "note": "英訳\"Nyeri, Kirinyaga\"は同じ主張。主要産地は他にもKiambu, Murang'a等がある(AFA)。"
+    },
+    "origin:ケニア:terroir": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "ケニア山の標高は5,199m",
+          "status": "verified",
+          "sourceIds": [
+            "unesco-mount-kenya"
+          ],
+          "quote": "At 5,199 m, Mount Kenya is the second highest peak in Africa.",
+          "location": "World Heritage List 800 説明文",
+          "note": ""
+        },
+        {
+          "text": "コーヒー産地に中央部(Mt Kenya地域)が含まれる",
+          "status": "verified",
+          "sourceIds": [
+            "ico-profile-kenya-2019"
+          ],
+          "quote": "Coffee-growing areas are located within the Western, Rift Valley, Central Kenya and Mt Kenya regions",
+          "location": "ICO Coffee Profile Kenya 2.1",
+          "note": ""
+        },
+        {
+          "text": "アバデア山系の斜面でもコーヒーが栽培される",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式資料でアバデア山系への言及を確認できなかった。"
+        },
+        {
+          "text": "土壌は火山性の赤土(深く水はけがよい)",
+          "status": "verified",
+          "sourceIds": [
+            "ico-profile-kenya-2019"
+          ],
+          "quote": "in red volcanic soils tha t are deep and well drained",
+          "location": "ICO Coffee Profile Kenya 2.1",
+          "note": "原文は\"volcanic loam\"ではなく\"red volcanic soils ... deep and well drained\"。"
+        },
+        {
+          "text": "標高は概ね1,400〜2,100m",
+          "status": "conflict",
+          "sourceIds": [
+            "nce-kenya-origin",
+            "ico-profile-kenya-2019"
+          ],
+          "quote": "Coffee is grown at roughly 1,400–2,100 m in volcanic soils, with distinct wet and dry seasons.",
+          "location": "NCE Kenya Coffee Origin",
+          "note": "NCEは1,400〜2,100m。ICOは別の数字(下記)。公式資料どうしの食い違いのためユーザー判断。 [ico-profile-kenya-2019] 「Coffee is grown in the high potential areas between 1,400 and 2,200 metres above sea level」 [ico-profile-kenya-2019] 「high altitude (1,500 – 2,000 metres above sea level)」"
+        },
+        {
+          "text": "中央部が国内生産の約6割を占める",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式資料に「約6割」の記述を確認できなかった(県別の数値はkilimo-cdms-2024にあるが、中央部合計の6割とは書かれていない)。"
+        },
+        {
+          "text": "降雨は二季制(10〜11月、4〜6月)",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "ICOは植え付けを\"rainy seasons, in the months of April and October\"と記すのみで、降雨の月は書かれていない。"
+        }
+      ],
+      "suggestedText": "ケニア山(標高5,199m)地域はコーヒー産地の一つ。土壌は深く水はけのよい赤色の火山性土壌。",
+      "note": "標高は資料により異なる(NCE 1,400〜2,100m、ICO 1,400〜2,200m/1,500〜2,000m)ため本文から外した。英訳は日本語と同じ主張。"
+    },
+    "origin:ケニア:harvestSeason": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "収穫期の一つは10〜12月",
+          "status": "verified",
+          "sourceIds": [
+            "ico-profile-kenya-2019"
+          ],
+          "quote": "with the first crop from April to June and the second from October to December",
+          "location": "ICO Coffee Profile Kenya 2.3 Coffee season",
+          "note": ""
+        },
+        {
+          "text": "地域によっては副次(fly crop)の収穫が6〜8月にある",
+          "status": "incorrect",
+          "sourceIds": [
+            "ico-profile-kenya-2019"
+          ],
+          "quote": "harvesting takes place during two periods every year, with the first crop from April to June and the second from October to December",
+          "location": "ICO Coffee Profile Kenya 2.3",
+          "note": "ICOは年2回(4〜6月と10〜12月)。6〜8月の収穫期は確認できない。「主収穫(main crop)」「fly crop」の呼称も原文にない。"
+        }
+      ],
+      "suggestedText": "年2回の収穫期があり、4〜6月と10〜12月(ICOケニア・プロファイル)。",
+      "note": "英訳は日本語と同じ主張。"
+    },
+    "origin:ケニア:varietiesDetail": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "SL28とSL34は主要品種である(ほかにK7、Ruiru 11、Batian、Blue Mountain)",
+          "status": "verified",
+          "sourceIds": [
+            "ico-profile-kenya-2019"
+          ],
+          "quote": "whose main varieties are SL 28, SL 34, K7, Ruiru 11, Batian and Blue Mountain",
+          "location": "ICO Coffee Profile Kenya 2.1",
+          "note": "「中核」という語はなく、上記6品種が\"main varieties\"として並ぶ。"
+        },
+        {
+          "text": "SL28は1930年代(1935〜39年の選抜期)にScott Agricultural Laboratoriesで選抜された",
+          "status": "verified",
+          "sourceIds": [
+            "wcr-sl28"
+          ],
+          "quote": "Individual tree selections made at the Scott Laboratories during the 1935-1939 period were prefixed SL.",
+          "location": "WCR SL28 History",
+          "note": "SL28は1935年に単一の木から選抜(同History)。"
+        },
+        {
+          "text": "SL34も1930年代後半にScott Agricultural Laboratoriesで選抜された",
+          "status": "verified",
+          "sourceIds": [
+            "wcr-sl34"
+          ],
+          "quote": "SL34 was originally selected in Kenya the late 1930s at the Scott Agricultural Laboratories",
+          "location": "WCR SL34 History",
+          "note": ""
+        },
+        {
+          "text": "SL28は干ばつ耐性がある",
+          "status": "verified",
+          "sourceIds": [
+            "wcr-sl28"
+          ],
+          "quote": "Drought tolerant and very good cup quality potential, but susceptible to major diseases.",
+          "location": "WCR SL28 概要",
+          "note": ""
+        },
+        {
+          "text": "SL28は深根性",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "WCRのSL28ページに「深根性」の記述はない。"
+        },
+        {
+          "text": "SL28のリンゴ酸・リン酸主体の構造がカシス様の風味を生む",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式資料で確認できない。"
+        },
+        {
+          "text": "SL34は高標高で降雨の多い地域に適応している",
+          "status": "verified",
+          "sourceIds": [
+            "wcr-sl34"
+          ],
+          "quote": "SL34 is adapted to high altitude areas with good rainfall.",
+          "location": "WCR SL34 Additional agronomic information",
+          "note": ""
+        },
+        {
+          "text": "SL34はSL28より多収",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "WCRの本文に収量の比較記述はない(収量はアイコン表示で本文から読めない)。"
+        },
+        {
+          "text": "Ruiru 11は耐病性(さび病に耐性、CBDに抵抗性)",
+          "status": "verified",
+          "sourceIds": [
+            "wcr-ruiru11"
+          ],
+          "quote": "tolerant to coffee leaf rust and resistant to coffee berry disease",
+          "location": "WCR Ruiru 11 概要",
+          "note": ""
+        },
+        {
+          "text": "Batianは耐病性(さび病に耐性、CBDに抵抗性)",
+          "status": "verified",
+          "sourceIds": [
+            "wcr-batian"
+          ],
+          "quote": "tolerance to coffee leaf rust, resistance to coffee berry disease, and good cup quality",
+          "location": "WCR Batian 概要",
+          "note": ""
+        }
+      ],
+      "suggestedText": "SL28・SL34はK7、Ruiru 11、Batian、Blue Mountainとともにケニアの主要品種(ICO)。SL28は1935〜39年の選抜期にScott Agricultural Laboratoriesで選ばれ(WCR)、干ばつに強い。SL34も1930年代後半に同研究所で選ばれ、高標高で降雨の多い地域に適応する。Ruiru 11とBatianはコーヒーさび病に耐性、コーヒー果実病(CBD)に抵抗性がある(WCR)。",
+      "note": "英訳は日本語と同じ主張。"
+    },
+    "origin:ケニア:farmStructure": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "国内生産の約75%を小規模農家が担う",
+          "status": "incorrect",
+          "sourceIds": [
+            "afa-update-2024-10"
+          ],
+          "quote": "About 70 percent of coffee in Kenya is produced by smallholder farmers under cooperative societies while the remaining 30 percent is produced by small, medium and large-scale estates.",
+          "location": "AFA Charting the Path ... 本文",
+          "note": "AFAは約70%。同じ記事の2022/23年度の数字(協同組合34,488MT/総計48,648MT)も約71%。"
+        },
+        {
+          "text": "小規模農家の過半数が生産者組合(FCS)に加盟して生産する",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式資料は小規模農家を協同組合に所属するものとして記述する(ICO: smallholder farmers affiliated to co-operative societies)が、「過半数」という割合の記述は確認できない。"
+        },
+        {
+          "text": "小規模農家は摘んだ果実を所属する組合(primary society)に届けて加工される",
+          "status": "verified",
+          "sourceIds": [
+            "ico-profile-kenya-2019"
+          ],
+          "quote": "After harvest, farmers deliver their cherries to their primary societies for processing.",
+          "location": "ICO Coffee Profile Kenya 概要",
+          "note": ""
+        },
+        {
+          "text": "各FCSは複数のfactory(ウェットミル)を所有・監督し、資金調達・販売は組合本体が担う",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "該当する公式記述を確認できなかった。"
+        },
+        {
+          "text": "ナイロビ・コーヒー・エクスチェンジ(NCE)の競売は毎週火曜に開かれる",
+          "status": "verified",
+          "sourceIds": [
+            "nce-auction-calendar"
+          ],
+          "quote": "Times follow each event's schedule (typically Tuesday mornings at the Trading Floor).",
+          "location": "NCE Auction Calendar",
+          "note": "カレンダーの全日程が\"Tuesday 9:00 am EAT\"。"
+        },
+        {
+          "text": "NCEの中央競売はケニアの主要な販売経路である",
+          "status": "verified",
+          "sourceIds": [
+            "ico-profile-kenya-2019"
+          ],
+          "quote": "In Kenya coffee is marketed through a central auction system managed by the Nairobi",
+          "location": "ICO Coffee Profile Kenya 概要",
+          "note": "別経路として直接販売(second window)もある。「伝統的に」の語は原文にない。"
+        },
+        {
+          "text": "2006年末の法改正でセカンドウィンドウ(直接販売)が導入され、仲介業者を介さず生産者と買い手が直接交渉できる",
+          "status": "incorrect",
+          "sourceIds": [
+            "ke-ln100-2006",
+            "kilimo-cdms-2024"
+          ],
+          "quote": "Made on the 17th July, 2006.",
+          "location": "Coffee (General) (Amendment) Rules 2006, 末尾",
+          "note": "直接販売の導入は法律ではなく規則(L.N.100)の改正で、2006年7月17日付。定義は\"between the grower and his or its marketing agent and a buyer located outside Kenya\"で、販売代理人(marketing agent)が関与しうるため「仲介業者を介さず」とも言えない。別に農業省戦略(kilimo-cdms-2024)は2005年財政法による導入、2007年に利用開始と記し、公式資料どうしも一致しない。 [ke-ln100-2006] 「\"direct sales\" means a contractual agreement between the grower and his or its marketing agent and a buyer located outside Kenya」 [kilimo-cdms-2024] 「Following introduction of direct sales sometimes referred to as the second window of selling coffee in 2007」"
+        }
+      ],
+      "suggestedText": "国内生産の約70%を、協同組合に所属する小規模農家が担い、残り約30%を各規模のエステートが生産する(AFA、2024年)。農家は摘んだ果実を所属する組合に届けて加工される。NCEの競売は毎週火曜に開かれる。2006年7月17日付のコーヒー(一般)(改正)規則(L.N.100)で、海外の買い手への直接販売(second window)が定義された。",
+      "note": "英訳は日本語と同じ主張(75%、2006年末の記述も同じ)。"
+    },
+    "origin:ケニア:history": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "1893年、ケニアのコーヒーはタイタヒルズのブラで初めて植えられた",
+          "status": "verified",
+          "sourceIds": [
+            "afa-history-coffee"
+          ],
+          "quote": "Coffee was first planted in Kenya at Bura in Taita Hills in 1893",
+          "location": "AFA History - Background",
+          "note": ""
+        },
+        {
+          "text": "それを行ったのはフランス系宣教師(聖霊修道会/Spiritans)で、レユニオン島由来のブルボン種の種子を植えた",
+          "status": "verified",
+          "sourceIds": [
+            "wcr-sl34"
+          ],
+          "quote": "French missionaries known as Spiritans established a mission in 1893 at Bura (Taita Hills, Kenya), in which Bourbon coffee seeds originating from La Réunion island were planted.",
+          "location": "WCR SL34 History",
+          "note": "「旧ブルボン島」の補足は原文にないが同島の別名。"
+        },
+        {
+          "text": "種子・苗木の輸送中に宣教師の一部が命を落とした",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式資料で確認できなかった。"
+        },
+        {
+          "text": "1900年に鉄道がナイロビへ到達した",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式資料で確認していない。"
+        },
+        {
+          "text": "ブラの苗はナイロビ近郊の聖オースティン伝道所に運ばれ、そこから栽培を望む入植者に種子が配られた(1899年)",
+          "status": "verified",
+          "sourceIds": [
+            "wcr-sl34"
+          ],
+          "quote": "The seedlings from Bura were brought to another French Mission in Saint Austin (near Nairobi) in 1899, and from there seeds were distributed to settlers willing to grow coffee.",
+          "location": "WCR SL34 History",
+          "note": "日本語は「1900年前後」と書くが、WCRは1899年。"
+        },
+        {
+          "text": "聖霊修道会が聖オースティン周辺で1900年前後に「大規模な植栽」を行った",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "「大規模な植栽」はWCRにもAFAにも記述がない。AFAは「1900年にKibweziで灌漑栽培、1904年にナイロビ近郊のKikuyuで栽培」と記す。"
+        },
+        {
+          "text": "英領時代、栽培は白人入植者に限られていた",
+          "status": "verified",
+          "sourceIds": [
+            "kilimo-cdms-2024"
+          ],
+          "quote": "Coffee was first planted in Kenya in 1893 in Taita Hills an d was reserved for white settlers until 1930s",
+          "location": "Coffee Development and Marketing Strategy, 2章 背景",
+          "note": ""
+        },
+        {
+          "text": "1950年代の土地改革(独立前後)で小農栽培が解禁・拡大した",
+          "status": "incorrect",
+          "sourceIds": [
+            "kilimo-cdms-2024",
+            "afa-history-coffee"
+          ],
+          "quote": "was reserved for white settlers until 1930s when the privilege was extended to Africans in Kisii and Meru on experimental basis.",
+          "location": "Coffee Development and Marketing Strategy, 2章 背景",
+          "note": "公式資料は、アフリカ人への栽培許可は1930年代にKisiiとMeruで試験的に始まったと記す。1950年代の土地改革による解禁は確認できない。 [afa-history-coffee] 「In the 1930s, following the Devonshire White Paper Report of 1923, the Colonial Government allowed controlled planting of coffee outside the European settled areas in Kisii and Meru in particular.」"
+        }
+      ],
+      "suggestedText": "1893年、フランス系宣教師(聖霊修道会)がタイタヒルズのブラ伝道所に、レユニオン島由来のブルボン種の種子を植えたのが、ケニアでのコーヒー栽培の始まり。ブラの苗は1899年にナイロビ近郊の聖オースティン伝道所へ運ばれ、そこから栽培を望む入植者に種子が配られた(WCR)。栽培は白人入植者に限られていたが、1930年代にキシイとメルーでアフリカ人にも試験的に認められた(ケニア農業省・AFA)。",
+      "note": "英訳は日本語と同じ主張(1950年代の記述も同じ)。"
+    },
+    "origin:ケニア:gradeSystem": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "等級はスクリーンサイズ・カップ品質・水分量の3点で決まる",
+          "status": "incorrect",
+          "sourceIds": [
+            "nce-coffee-grades",
+            "ico-profile-kenya-2019"
+          ],
+          "quote": "Grades are set using simple, measurable factors so farmers and buyers know what they are trading.",
+          "location": "NCE Understanding Kenya Coffee Grades",
+          "note": "NCEは要素を「豆の大きさ(スクリーン)、重さ・密度、欠点、カップ品質」と記す(水分量は等級要素に入っていない)。ケニア標準(2019年規則・第5付表)の等級表はスクリーン番号と密度分離で定義。水分量はICOが「パーチメントの乾燥確認に分析する」と書くのみ。 [nce-coffee-grades] 「Bean size (screen size) Beans are sorted by size.」 [nce-coffee-grades] 「Cup quality Taste and aroma are assessed」 [ico-profile-kenya-2019] 「Parchment coffee is an alyzed for moisture content to ensure adequate drying before it is milled into seven primary grades of clean coffee」"
+        },
+        {
+          "text": "大粒から順にAA・AB・C等の記号で表記する(AAは平豆でスクリーン21を通過し18に残る7.2mm、ABは18を通過し16に残る6.35mm)",
+          "status": "verified",
+          "sourceIds": [
+            "ke-gazette-ln102-2019"
+          ],
+          "quote": "AA Flat beans Through 21 retained on 18 (7.2 mm)",
+          "location": "Crops (Coffee) (General) Regulations 2019, Fifth Schedule A. Kenya Standards",
+          "note": "ABは同表に\"AB Flat beans Through 18 retained on 16 (6.35 mm)\"、Cは\"Small flat beans Through 16 retained on 10 (3.96mm)\"。 [ke-gazette-ln102-2019] 「AB Flat beans Through 18 retained on 16 (6.35 mm)」"
+        },
+        {
+          "text": "E(エレファント)とPB(ピーベリー)は等級表の別枠である",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "2019年規則・第5付表ではE、PB、AA、AB、C、TT、Tが同じ\"STANDARD COFFEE GRADES\"表に並ぶ。「別枠」とは書かれていない。"
+        },
+        {
+          "text": "AAは大粒の等級だが、粒の大きさは必ずしも風味の良さを保証しない",
+          "status": "verified",
+          "sourceIds": [
+            "eas130-1999"
+          ],
+          "quote": "Grading by size and shape is only a fair estimate of coffee quality.",
+          "location": "EAS 130:1999 5.3 Grading by cup quality",
+          "note": "EAC規格の記述(ケニア固有の規則ではない)。AAの大きさはke-gazette-ln102-2019の等級表のとおり。"
+        }
+      ],
+      "suggestedText": "スクリーンサイズ(ふるい目)などで等級分けする。ケニア標準(2019年規則・第5付表)では、AAは平豆でスクリーン21を通過し18に残る大きさ(7.2mm)、ABは18を通過し16に残る大きさ(6.35mm)。ただし大きさ・形による格付けは品質のおおよその目安にすぎない(EAS 130)。",
+      "note": "英訳は日本語と同じ主張(3点・別枠の記述も同じ)。"
+    },
+    "origin:ケニア:officialBody": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "AFA Coffee Directorateは農業食糧庁(AFA)の下にある部局である",
+          "status": "verified",
+          "sourceIds": [
+            "afa-coffee-directorate-home"
+          ],
+          "quote": "Coffee Directorate is a Directorate under the Agriculture and Food Authority (AFA) established under the Agriculture and Food Authority Act of 2013.",
+          "location": "AFA Coffee Directorate Home",
+          "note": ""
+        },
+        {
+          "text": "AFAは輸出前の等級認定・承認を義務付けている",
+          "status": "unverified",
+          "sourceIds": [
+            "ke-gazette-ln102-2019"
+          ],
+          "quote": "(2) The Authority shall authorize all coffee exports through issuance of the coffee buyer's licence",
+          "location": "Crops (Coffee) (General) Regulations 2019 reg.29(2)",
+          "note": "規則29条(2)はAFAが「買い手ライセンス、直接販売契約の届出・登録、原産地証明書、品質証明書(certificate of quality)、移動許可」の発行を通じてすべての輸出を承認すると定める。「等級認定」という語はなく、「義務付け」の文言も上記のとおりではないため未確認とした。"
+        }
+      ],
+      "suggestedText": "AFA Coffee Directorateは農業食糧庁(AFA)の下にある部局。2019年のコーヒー(一般)規則29条(2)により、AFAは買い手ライセンス、直接販売契約の届出・登録、原産地証明書、品質証明書、移動許可の発行を通じてすべてのコーヒー輸出を承認する。",
+      "note": "英訳は日本語と同じ主張。"
+    },
+    "origin:ケニア:sub:ニエリ": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "ニエリ県はケニアの主要なコーヒー生産県の一つで、2022/23年度の果実生産量上位3県に入る",
+          "status": "verified",
+          "sourceIds": [
+            "afa-update-2024-10"
+          ],
+          "quote": "The three counties that led in the production of the cherries were Kiambu, Kirinyaga and Nyeri respectively.",
+          "location": "AFA Charting the Path ... Coffee Production",
+          "note": ""
+        },
+        {
+          "text": "標高1,220〜2,200m",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式資料で県別の標高を確認できなかった。"
+        },
+        {
+          "text": "深紅の火山性土壌",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "ICOは全国について赤色の火山性土壌と記すのみで、ニエリ固有の記述はない。"
+        },
+        {
+          "text": "国内最高峰の産地とされる",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式資料に序列の記述はない。"
+        },
+        {
+          "text": "フルクトース由来の甘さ、ジューシーな口当たり、強いタルト系の酸、カシスを軸にワイン様のボディ",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式資料にニエリの風味記述はない。"
+        }
+      ],
+      "suggestedText": "ニエリ県は、ケニアの主要なコーヒー生産県の一つで、2022/23年度の果実生産量はキアンブ、キリニャガに次ぐ3位(AFA)。",
+      "note": "英訳は日本語と同じ主張。"
+    },
+    "origin:ケニア:sub:キリニャガ": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "キリニャガ県はケニアの主要なコーヒー生産県の一つで、2022/23年度の果実生産量は2位",
+          "status": "verified",
+          "sourceIds": [
+            "afa-update-2024-10"
+          ],
+          "quote": "The three counties that led in the production of the cherries were Kiambu, Kirinyaga and Nyeri respectively.",
+          "location": "AFA Charting the Path ... Coffee Production",
+          "note": ""
+        },
+        {
+          "text": "標高1,310〜1,900m前後",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式資料で県別の標高を確認できなかった。"
+        },
+        {
+          "text": "赤土",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "キリニャガ固有の土壌記述はない(全国は赤色火山性土壌:ICO)。"
+        },
+        {
+          "text": "ニエリよりフローラルで繊細、洗練された複雑さ",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式資料に産地間の風味比較はない。"
+        },
+        {
+          "text": "柑橘の明るさ、レッドカラント・タンジェリン、ジャミーな甘み",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式資料にキリニャガの風味記述はない。"
+        }
+      ],
+      "suggestedText": "キリニャガ県は、ケニアの主要なコーヒー生産県の一つで、2022/23年度の果実生産量はキアンブに次ぐ2位(AFA)。",
+      "note": "英訳は日本語と同じ主張。"
+    },
+    "origin:タンザニア:tagline": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "キリマンジャロ山麓(ハイ県)は、100年近くコーヒーを生産してきた産地である",
+          "status": "verified",
+          "sourceIds": [
+            "tacri-lyamungu"
+          ],
+          "quote": "The zone has an almost 100 years-long history of producing some of the finest Arabica coffee in the world by both smallholders and estates.",
+          "location": "TaCRI Lyamungu 副研究所ページ",
+          "note": "原文の\"zone\"はキリマンジャロ、アルーシャ、マニャラ、タンガの4州(Lyamungu station serves the four regions ...)。"
+        },
+        {
+          "text": "風味が「明るい酸味とワインのような風味」である",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式資料にこの風味記述は見つからない(TaCRIは\"finest Arabica\"と主観的に記すのみ)。"
+        }
+      ],
+      "suggestedText": "キリマンジャロ山麓を含む北部は、100年近くコーヒーを生産してきた産地(TaCRI)。",
+      "note": "英訳は日本語と同じ主張。"
+    },
+    "origin:タンザニア:regions": {
+      "status": "verified",
+      "claims": [
+        {
+          "text": "キリマンジャロ州はアラビカの産地であり、ハイ県のLyamungu研究所はキリマンジャロ山の斜面にある",
+          "status": "verified",
+          "sourceIds": [
+            "tcb-coffee-production",
+            "tacri-lyamungu"
+          ],
+          "quote": "Tanzania’s Arabica growing regions are Kilimanjaro, Arusha, Tanga, Iringa, Mbeya, Kigoma, Manyara, Mwanza, Katavi, Mara, Njombe, Songwe, Rukwa, Geita and Ruvuma while Robusta is grown in Kagera and Morogoro regions.",
+          "location": "TCB Coffee Farming",
+          "note": "Lyamungu: \"located at the TaCRI Head Office in Hai District on the slopes of Mount Kilimanjaro\"。産地はキリマンジャロのみではなく、TCBは15州を挙げる(日本語の「キリマンジャロ山麓」だけでは産地を代表しない点に注意)。 [tacri-lyamungu] 「Lyamungu station is located at the TaCRI Head Office in Hai District on the slopes of Mount Kilimanjaro, 23 km from Moshi town.」"
+        }
+      ],
+      "suggestedText": "",
+      "note": "英訳は日本語と同じ主張。"
+    },
+    "origin:タンザニア:terroir": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "アラビカの産地にキリマンジャロ、アルーシャ、ムベヤ、ルブマ、ソングウェが含まれる",
+          "status": "verified",
+          "sourceIds": [
+            "tcb-coffee-production"
+          ],
+          "quote": "Tanzania’s Arabica growing regions are Kilimanjaro, Arusha, Tanga, Iringa, Mbeya, Kigoma, Manyara, Mwanza, Katavi, Mara, Njombe, Songwe, Rukwa, Geita and Ruvuma while Robusta is grown in Kagera and Morogoro regions.",
+          "location": "TCB Coffee Farming",
+          "note": ""
+        },
+        {
+          "text": "メルー山麓もアラビカ産地に含まれる",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "TCB・USDAの産地リストにMeru(山麓)の記載はない。"
+        },
+        {
+          "text": "北部ではバナナなどとの混作が多い",
+          "status": "verified",
+          "sourceIds": [
+            "usda-fas-tz-2021"
+          ],
+          "quote": "intercropped and bananas/smallholder (mainly in the north and west)",
+          "location": "USDA FAS Tanzania Coffee Annual 2021, Crop Area",
+          "note": ""
+        },
+        {
+          "text": "北部は火山性土壌で標高約1,400〜2,000m",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式資料に標高・土壌の数値を確認できなかった。"
+        },
+        {
+          "text": "北部は甘くバランスの良いカップになりやすい(バニラ・チョコ・プラリネ様)",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式資料に風味の記述はない。"
+        },
+        {
+          "text": "南部高地は標高1,250〜1,400mの火山性土壌",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式資料で確認できなかった。"
+        },
+        {
+          "text": "南部高地は近年生産の中心で国内生産の75〜85%を占める",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式資料にこの割合の記述はない。TCBはアラビカが生産の60.9%と記す(全国のアラビカ+ロブスタ)ため、アラビカ産地の南部が75〜85%とは整合しにくい。"
+        },
+        {
+          "text": "南部高地の風味(黒チェリー・タンジェリン、チョコレート・モラセス・キャラメル)",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式資料に風味の記述はない。"
+        },
+        {
+          "text": "降雨は二季制",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式資料で確認できなかった。"
+        }
+      ],
+      "suggestedText": "アラビカは、キリマンジャロ、アルーシャ、ムベヤ、ルブマ、ソングウェなどの州で栽培される(TCB)。北部ではコーヒーとバナナの混作が多い(USDA FAS)。",
+      "note": "英訳は日本語と同じ主張。"
+    },
+    "origin:タンザニア:harvestSeason": {
+      "status": "unverified",
+      "claims": [
+        {
+          "text": "USDA FASによれば、収穫期は概ね7月に始まり10月まで",
+          "status": "conflict",
+          "sourceIds": [
+            "usda-fas-tz-2025",
+            "usda-fas-tz-2026"
+          ],
+          "quote": "The coffee harvest season runs from July to October.",
+          "location": "USDA FAS Tanzania Coffee Annual 2025 (TZ2025-0004), Production",
+          "note": "USDA FASの2024・2025年報告は「7月〜10月」。しかし2026年報告の「Tanzania Coffee Calendar」(出典: Coffee Board of Tanzania)は北部・南部が7月〜12月、西部が5月〜10月。USDAの報告どうし(TCB由来の表)で食い違うためユーザー判断。 [usda-fas-tz-2026] 「Zone From To North July December Southern July December Western May October」 [usda-fas-tz-2026] 「Source: Coffee Board of Tanzania (CBT)」"
+        }
+      ],
+      "suggestedText": "USDA FASの2025年報告は収穫期を7月〜10月とする。2026年報告(Coffee Board of Tanzania提供のカレンダー)は北部・南部を7月〜12月、西部を5月〜10月とする。",
+      "note": "英訳は日本語と同じ主張(USDA GAIN attribution を含む)。"
+    },
+    "origin:タンザニア:varietiesDetail": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "アラビカは生産の約6割(60.9%)を占める",
+          "status": "verified",
+          "sourceIds": [
+            "tcb-coffee-production",
+            "usda-fas-tz-2025"
+          ],
+          "quote": "Tanzania produces two types of coffee, Arabica which contributes an average of 60.9% and Robusta accounting for 39.1%.",
+          "location": "TCB Coffee Farming",
+          "note": "日本語は「約6〜7割」。USDA 2019年報告は「約3分の2がマイルド・アラビカ、残りはハード・アラビカとロブスタ」と記し(別の言い方)、TCBとUSDA 2025年報告は60.9%。 [usda-fas-tz-2025] 「Tanzania produces both Arabica (60.9 percent) and Robusta (39.1 percent) coffee.」"
+        },
+        {
+          "text": "商業品種の主力はブルボン系(N39)とケント(KP423)(2004年まで)",
+          "status": "verified",
+          "sourceIds": [
+            "tacri-released-varieties"
+          ],
+          "quote": "Until 2004 the only commercial varieties grown in the country were/are Bourbon (N.39) and Kents (KP 423).",
+          "location": "TaCRI Released varieties.pdf(2005年の論文)",
+          "note": "2004年までの記述。2005年以降にTaCRIが多数の交配品種を公表している。現在の品種構成は確認できていない。"
+        },
+        {
+          "text": "N39はTaCRIが開発したブルボン系の選抜品種",
+          "status": "incorrect",
+          "sourceIds": [
+            "tacri-released-varieties",
+            "tacri-home"
+          ],
+          "quote": "N.39 was selected in the 1920s whereas KP 423 was selected in the 1930s.",
+          "location": "TaCRI Released varieties.pdf",
+          "note": "N39は1920年代に選抜された旧来の品種。TaCRIは2001年に活動を始めた機関(tacri-home)で、同機関が公表したのはN39-1〜N39-7などの改良系統(いずれもTYPEはBOURBON)。 [tacri-home] 「TaCRI, incorporated in 2000 as a company limited by guarantee and without share capital under the Companies Ordinance (CAP. 212), became legally constituted and operational in September 2001」"
+        },
+        {
+          "text": "ケニア由来のSL28/SL34、K7、Ruiru-11/Batianも導入されている",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "タンザニア側の公式資料で導入を確認できなかった。WCRはK7を\"Found primarily in Kenya and Tanzania\"と記すのみ。"
+        }
+      ],
+      "suggestedText": "アラビカはタンザニアの生産の約60.9%を占める(TCB)。2004年まで商業的に栽培されていた品種はブルボン系のN39とケントのKP423だった(TaCRI)。N39は1920年代の選抜。",
+      "note": "英訳は日本語と同じ主張(N39をTaCRI開発とする記述も同じ)。"
+    },
+    "origin:タンザニア:farmStructure": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "約45万戸の小農が国内生産の約90%を担い、残り約10%は大規模エステート",
+          "status": "conflict",
+          "sourceIds": [
+            "usda-fas-tz-2019",
+            "tcb-coffee-production"
+          ],
+          "quote": "About 90 percent of total coffee production comes from approximately 450,000 family operations. Estates produce the remaining 10 percent.",
+          "location": "USDA FAS Tanzania Coffee Annual 2019, Production",
+          "note": "USDA 2019は約45万の農家世帯(同じ報告の別の箇所は約40万の小農)。TCBは約32万の小農が90%、101の登録エステートが10%。USDA 2024〜2026年報告も約32万。年次・資料で数が異なるためユーザー判断。 [tcb-coffee-production] 「About 90% of the total coffee production in Tanzania comes from about 320,000 coffee smallholder farmers with an average of 200 coffee trees and farm sizes of 0.5 - 2 acres. The remaining 10% of coffee is produced by 101 registered coffee estates.」"
+        },
+        {
+          "text": "農家一戸あたりの木の本数は380〜2,000本程度",
+          "status": "incorrect",
+          "sourceIds": [
+            "usda-fas-tz-2021",
+            "usda-fas-tz-2025",
+            "tcb-coffee-production"
+          ],
+          "quote": "A typical grower raises between 389 and 1,962 trees which are 22 years old on average.",
+          "location": "USDA FAS Tanzania Coffee Annual 2021, Crop Area",
+          "note": "公式資料の数字は、USDA 2021年389〜1,962本、USDA 2025年400〜2,000本、TCBは平均200本。「380」はどれにも一致しない。 [usda-fas-tz-2025] 「Farm sizes vary, with 400 to 2,000 trees per farm」 [tcb-coffee-production] 「average of 200 coffee trees」"
+        },
+        {
+          "text": "農家の多くは1ヘクタール未満",
+          "status": "verified",
+          "sourceIds": [
+            "tcb-coffee-production",
+            "usda-fas-tz-2025"
+          ],
+          "quote": "farm sizes of 0.5 - 2 acres",
+          "location": "TCB Coffee Farming",
+          "note": "0.5〜2エーカーは約0.2〜0.8ヘクタール。USDA 2025年報告は平均0.63ha。 [usda-fas-tz-2025] 「Most farmers cultivate coffee on small plots averaging 0.63 hectares」"
+        },
+        {
+          "text": "2018年以降、AMCOSが生産の95%を管理する体制となった",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "USDA 2018〜2026年報告、TCBのサイト、規則・法令のいずれにも95%の記述は確認できなかった(二次資料のみ: 検索結果の要約にPerfect Daily Grindが「40万超の小農世帯が95%」と書くとあるが未読・出典不一致)。"
+        },
+        {
+          "text": "小農はAMCOSに登録することで市場アクセス・生産支援・政府支援を受けられる",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式資料で確認できなかった。"
+        },
+        {
+          "text": "KNCU(Kilimanjaro Native Co-operative Union)はアフリカ最古級の協同組合の一つ",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式資料では確認できなかった(二次資料のみ。設立年も資料により1922/1925/1930/1933と食い違うと検索結果の要約にある。未読)。"
+        }
+      ],
+      "suggestedText": "タンザニアのコーヒーの約90%は小農が、残りは登録エステートが生産する(TCB、USDA FAS)。小農の数はTCBが約32万、USDA FASの2019年報告が約45万とされ、資料により異なる。農地の規模は0.5〜2エーカー(TCB)、平均約0.63ヘクタール(USDA FAS 2025年報告)。",
+      "note": "英訳は日本語と同じ主張。"
+    },
+    "origin:タンザニア:history": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "1898年、カトリック宣教師がキリマンジャロ山麓にコーヒーを持ち込んだ(ドイツ領時代)",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式資料で確認できなかった。"
+        },
+        {
+          "text": "1925年にChagga族が最初の協同組合(KNPA)を設立し、ロンドン市場へ直接販売した",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式資料で確認できなかった(二次資料のみ: 検索結果の要約に「1925年にKilimanjaro Native Planters Associationが結成」とあるが、別資料は1922年と書き、未読)。"
+        },
+        {
+          "text": "2018年1月、政府は農家と契約した業者による直接輸出を禁止した",
+          "status": "verified",
+          "sourceIds": [
+            "usda-fas-tz-2019",
+            "usda-fas-tz-2018"
+          ],
+          "quote": "1. Ban on direct export of coffee by local and foreign traders who had agreements with farmers; (Ban temporarily lifted January 2019)",
+          "location": "USDA FAS Tanzania Coffee Annual 2019, Policy",
+          "note": "同報告に\"For example in January 2018, the GOT issued the following new procedures ...\"とある。 [usda-fas-tz-2018] 「From January 2018, the government of Tanzania banned direct export marketing of coffee.」"
+        },
+        {
+          "text": "農家にAMCOSへの加入を義務づけた",
+          "status": "verified",
+          "sourceIds": [
+            "usda-fas-tz-2019"
+          ],
+          "quote": "2. Dissolve all producer groups and require farmers to join AMCOS;",
+          "location": "USDA FAS Tanzania Coffee Annual 2019, Policy",
+          "note": ""
+        },
+        {
+          "text": "全量をモシの中央オークションで売るよう定めた",
+          "status": "verified",
+          "sourceIds": [
+            "usda-fas-tz-2019"
+          ],
+          "quote": "5. Require all coffee beans to be auctioned at the central TCB auction in Moshi; prohibit all producers, exporters or processors from bypassing auction.",
+          "location": "USDA FAS Tanzania Coffee Annual 2019, Policy",
+          "note": ""
+        },
+        {
+          "text": "この直接輸出の禁止は2019年1月に一時解除され、TCBが上質なコーヒーの生産者による直接取引を認めた",
+          "status": "verified",
+          "sourceIds": [
+            "usda-fas-tz-2019"
+          ],
+          "quote": "The Tanzanian Government banned direct coffee exports in January 2018; however, the TCB relaxed the ban after a year of instability. TCB allowed premium producers to establish direct contacts with overseas buyers",
+          "location": "USDA FAS Tanzania Coffee Annual 2019, Marketing",
+          "note": "同報告のPolicy欄に\"Ban temporarily lifted January 2019\"。"
+        },
+        {
+          "text": "2021年には新法で、上質なコーヒーの生産者が海外の買い手と直接取引し、オークションを経由しない道が開かれた(USDA FASの報告による)",
+          "status": "verified",
+          "sourceIds": [
+            "usda-fas-tz-2021"
+          ],
+          "quote": "Currently, a new law allows premium producers to establish direct contacts with overseas buyers, engage with agricultural marketing and cooperative societies (AMCOS), and bypass auctions.",
+          "location": "USDA FAS Tanzania Coffee Annual 2021, Stocks",
+          "note": "報告は2021年5月付で、法律名・施行日は書かれていない。「2021年に新法」と断定せず「2021年5月の報告時点で新法がある」と書く方が正確。なお2013年規則(GN 385)の第5付表にも上質コーヒーの直接輸出手続がある。"
+        }
+      ],
+      "suggestedText": "2018年1月、政府は農家と契約した現地・外国の業者による直接輸出を禁止し、農家にAMCOSへの加入を義務づけ、全量をTCBのモシの中央オークションで売るよう定めた。この直接輸出の禁止は2019年1月に一時解除され、TCBが上質なコーヒーの生産者による海外の買い手との直接取引を認めた。2021年5月のUSDA FASの報告は、新しい法律により上質なコーヒーの生産者が海外の買い手と直接取引し、オークションを経由しない道が開かれたと記す。",
+      "note": "英訳は日本語と同じ主張(1898年、1925年の記述も同じ)。"
+    },
+    "origin:タンザニア:gradeSystem": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "独自規格ではなく、東アフリカ共同体(EAC)共通のEAS 130:1999を採用している",
+          "status": "incorrect",
+          "sourceIds": [
+            "tz-coffee-regs-2013",
+            "tbs-deas130-2022"
+          ],
+          "quote": "(3) Robusta and Arabica coffee shall be processed and sorted into grades specified under the Sixth Schedule of these Regulations.",
+          "location": "Coffee Industry Regulations 2013 (GN 385), 規則20(3)",
+          "note": "タンザニアのコーヒー産業規則(2013年)は、独自の等級を第6付表で定める。TBSがEAS 130を採択した事実は確認できず(TBS DEAS 130:2022草案のURLは取得失敗)、EAS 130:1999の内容(E/AA/AB/C/PB/TT/T)はタンザニアの規則の等級とは異なる。"
+        },
+        {
+          "text": "タンザニアの規則はマイルド・アラビカの精製豆を、スクリーン規格でAA・A・B・PB・AF・TT・E・Fに区分する",
+          "status": "verified",
+          "sourceIds": [
+            "tz-coffee-regs-2013"
+          ],
+          "quote": "AA Retained minimum 90% of screen 18. Maximum 8 - 10% of screen 17",
+          "location": "Coffee Industry Regulations 2013 (GN 385), Sixth Schedule II (Mild Arabica) 2.0",
+          "note": "同表: \"PB Retained minimum 95% pea-berry beans 14\"、\"E Minimum 90% 18.\"、\"AF Minimum 90% screen 17\"、Fは「Light broken beans resulting from all above grades」(原文OCRに誤字あり)。OCR由来の空白がある。2013年版で、その後の改正は未確認。 [tz-coffee-regs-2013] 「PB Retained minimum 95% pea-berry beans 14」 [tz-coffee-regs-2013] 「AF Minimum 90% screen 17」"
+        },
+        {
+          "text": "スクリーンサイズによりE(象豆。AAより大粒)・AA(平豆で最大)・AB・C・PB(ピーベリー)・TT・T(最小)に区分する",
+          "status": "incorrect",
+          "sourceIds": [
+            "eas130-1999"
+          ],
+          "quote": "E (elephant) Two beans joined together, it is a genetic defect. And includes very large (bold) AA.",
+          "location": "EAS 130:1999 Table 1",
+          "note": "この区分はEAS 130:1999(EAC規格)の内容であって、タンザニアの規則の等級(AA, A, B, PB, AF, TT, E, F)とは異なる。ABとT、Cの扱いが違う。"
+        },
+        {
+          "text": "各等級は最低95%が該当サイズであることが条件",
+          "status": "incorrect",
+          "sourceIds": [
+            "eas130-1999"
+          ],
+          "quote": "When a coffee grade is specified, a minimum 95 % of the beans shall fall in that grade category.",
+          "location": "EAS 130:1999 5.1",
+          "note": "95%はEAS 130の条件。タンザニアの規則ではAAは最低90%(スクリーン18)、PBは最低95%など等級ごとに異なる。"
+        },
+        {
+          "text": "これとは別に品質クラス1〜10が定められている(1〜6はカップ品質でFine〜Poor to fair、7〜10は選別で除かれた欠点豆など)",
+          "status": "unverified",
+          "sourceIds": [
+            "eas130-1999"
+          ],
+          "quote": "Six cup qualities are defined as follows:",
+          "location": "EAS 130:1999 5.3",
+          "note": "EAS 130:1999にはこの品質クラス(Annex C)があるが、タンザニアの規則・TCB資料での採用は確認できていない。"
+        },
+        {
+          "text": "ウガンダ等と共通",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "EAC規格であることは確認できる(EAS 130:1999)が、「共通で採用」している国の確認はできていない。"
+        }
+      ],
+      "suggestedText": "タンザニアのコーヒー産業規則(2013年、GN 385)の第6付表が、アラビカ(マイルド)の精製豆を、スクリーン規格でAA・A・B・PB・AF・TT・E・Fの8等級に区分している。例えばAAはスクリーン18に最低90%が残る豆、PBはピーベリー最低95%。",
+      "note": "英訳は日本語と同じ主張(EAS 130を採用とする記述も同じ)。"
+    },
+    "origin:タンザニア:officialBody": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "TCBは2001年のコーヒー産業法で再設立された",
+          "status": "verified",
+          "sourceIds": [
+            "tz-coffee-industry-act-2001",
+            "tcb-establishment"
+          ],
+          "quote": "An Act make better provisions for the regulation, improvement and development of the Coffee Industry, to re-establish the Tanzania Coffee Board, to repeal the Tanzania Coffee Board Act of 1984",
+          "location": "Coffee Industry Act 2001 前文(No. 23 of 2001)",
+          "note": "TCBのサイトも\"established under Section 3 of the Coffee Industry Act, Cap. 347 R.E. 2023\"と記す。 [tcb-establishment] 「The Tanzania Coffee Board (TCB) is a statutory government regulatory body established under Section 3 of the Coffee Industry Act, Cap. 347 R.E. 2023.」"
+        },
+        {
+          "text": "同法は2002年7月に施行された",
+          "status": "unverified",
+          "sourceIds": [
+            "tz-coffee-industry-act-2001"
+          ],
+          "quote": "1. This Act be cited as the Coffee Industry Act, 2001 and shall come into operation on such date as the Minister may, by notice published in the Gazette appoint.",
+          "location": "Coffee Industry Act 2001 s.1",
+          "note": "条文は「大臣が官報で定める日に施行」とのみ。施行日(2002年7月)は一次資料で確認できていない(二次資料のみ: 検索結果の要約にTanzLIIが2002-07-31版を載せるとあるが未読)。"
+        },
+        {
+          "text": "TCBは輸出の許可、コーヒー取引業者の登録、オークションの実施の権限を持つ",
+          "status": "verified",
+          "sourceIds": [
+            "tz-coffee-industry-act-2001"
+          ],
+          "quote": "(a) to grant licences or permits for coffee export;",
+          "location": "Coffee Industry Act 2001 s.5(2)",
+          "note": "s.5(2)(b)は登録、(d)は\"to conduct coffee auctions\"。品質については5(1)(e)\"to regulate and control the quality of coffee and coffee by-products\"。 [tz-coffee-industry-act-2001] 「(b) to register various coffee dealers;」 [tz-coffee-industry-act-2001] 「to conduct coffee auctions」"
+        },
+        {
+          "text": "TCBは「唯一」輸出許可・格付け・オークションを一元管理する政府機関である",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "法令にはTCBの権限が書かれているが、「唯一」「一元管理」「格付け」の文言は確認できない(格付けは規則上、栽培者・加工者に義務付けられた等級区分で、TCBは品質を規制する)。"
+        },
+        {
+          "text": "すべての商業的な買付・加工・輸出にライセンスが必須",
+          "status": "verified",
+          "sourceIds": [
+            "tz-coffee-industry-act-2001"
+          ],
+          "quote": "(3) No person on commercial basis shall buy, liquor, process roast, warehouse centrally pulp, or export any coffee without a licence issued by the Board.",
+          "location": "Coffee Industry Act 2001 s.12(3)",
+          "note": "買付・liquoring・加工・焙煎・倉庫保管・中央パルピング・輸出が対象。"
+        }
+      ],
+      "suggestedText": "Tanzania Coffee Board(TCB)は、2001年のコーヒー産業法(Act No. 23 of 2001)で再設立された。同法により、輸出の許可、コーヒー取引業者の登録、オークションの実施の権限を持つ。商業目的でコーヒーの買付・liquoring・加工・焙煎・倉庫保管・中央パルピング・輸出を行うには、TCBのライセンスが必要。",
+      "note": "英訳は日本語と同じ主張(2002年7月施行、唯一・一元管理の記述も同じ)。"
+    },
+    "origin:タンザニア:sub:キリマンジャロ山麓(北部)": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "キリマンジャロ山麓ではバナナ等との混作が多い",
+          "status": "verified",
+          "sourceIds": [
+            "usda-fas-tz-2021"
+          ],
+          "quote": "intercropped and bananas/smallholder (mainly in the north and west)",
+          "location": "USDA FAS Tanzania Coffee Annual 2021, Crop Area",
+          "note": "「北部と西部」の記述で、キリマンジャロ山麓に限定した記述ではない。"
+        },
+        {
+          "text": "まろやかでマイルド",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式資料に風味記述なし。"
+        },
+        {
+          "text": "特定銘柄「キリマンジャロ」の産地(ブコバ地区産を除く)",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式資料で銘柄の定義を確認できなかった。"
+        },
+        {
+          "text": "バニラ・チョコレート・プラリネ様の風味",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式資料に風味記述なし。"
+        }
+      ],
+      "suggestedText": "北部(北部と西部)ではコーヒーとバナナなどの混作が多い(USDA FAS)。",
+      "note": "英訳は日本語と同じ主張。"
+    },
+    "origin:タンザニア:sub:南部高地(Mbeya・Ruvuma・Songwe等)": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "ムベヤ、ルブマ、ソングウェはアラビカの産地",
+          "status": "verified",
+          "sourceIds": [
+            "tcb-coffee-production"
+          ],
+          "quote": "Tanzania’s Arabica growing regions are Kilimanjaro, Arusha, Tanga, Iringa, Mbeya, Kigoma, Manyara, Mwanza, Katavi, Mara, Njombe, Songwe, Rukwa, Geita and Ruvuma while Robusta is grown in Kagera and Morogoro regions.",
+          "location": "TCB Coffee Farming",
+          "note": ""
+        },
+        {
+          "text": "標高1,250〜1,400m",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式資料で確認できなかった。"
+        },
+        {
+          "text": "国内生産の75〜85%を占める最大産地",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式資料に割合の記述なし。"
+        },
+        {
+          "text": "黒チェリー・タンジェリン、チョコレート・モラセス・キャラメル、絹のようなボディ",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式資料に風味記述なし。"
+        }
+      ],
+      "suggestedText": "ムベヤ、ルブマ、ソングウェは、アラビカの産地に含まれる(TCB)。",
+      "note": "英訳は日本語と同じ主張。"
+    }
+  }
+}

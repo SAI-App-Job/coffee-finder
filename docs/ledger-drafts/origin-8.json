@@ -1,0 +1,1479 @@
+{
+  "scope": "origin-8 (インドネシア・ベトナム)",
+  "verifiedOn": "2026-11-09",
+  "sources": {
+    "usda-fas-id-coffee-annual-2025": {
+      "title": "Indonesia: Coffee Annual (ID2025-0021, 2025-05-19)",
+      "org": "USDA Foreign Agricultural Service (FAS Jakarta)",
+      "url": "https://apps.fas.usda.gov/newgainapi/api/Report/DownloadReportByFileName?fileName=Coffee%20Annual_Jakarta_Indonesia_ID2025-0021.pdf",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": "pypdfで全文抽出"
+    },
+    "usda-fas-id-coffee-annual-2026": {
+      "title": "Indonesia: Coffee Annual (ID2026-0021, 2026-05-15)",
+      "org": "USDA Foreign Agricultural Service (FAS Jakarta)",
+      "url": "https://apps.fas.usda.gov/newgainapi/api/Report/DownloadReportByFileName?fileName=Coffee%20Annual_Jakarta_Indonesia_ID2026-0021.pdf",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": "pypdfで全文抽出"
+    },
+    "mpkg-pgi-kopi-arabika-gayo-2016": {
+      "title": "Application for the registration of the Protected Geographical Indication Kopi Arabika Gayo (Version 9, 10 July 2016)",
+      "org": "Masyarakat Perlindungan Kopi Gayo (MPKG)(登録申請者)。英国政府サイトで公開",
+      "url": "https://assets.publishing.service.gov.uk/media/665851b97b792ffff71a853c/Kopi_Arabika_Gayo.pdf",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": "地理的表示の登録申請書(産地団体の公式文書)。記述の適用範囲はガヨ高地のみ。pypdfで全文抽出"
+    },
+    "wcr-variety-s795": {
+      "title": "S795 (World Coffee Research Arabica Variety Catalog)",
+      "org": "World Coffee Research",
+      "url": "https://varieties.worldcoffeeresearch.org/varieties/s795",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09"
+    },
+    "wcr-variety-typica": {
+      "title": "Typica (World Coffee Research Arabica Variety Catalog)",
+      "org": "World Coffee Research",
+      "url": "https://varieties.worldcoffeeresearch.org/varieties/typica",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09"
+    },
+    "ico-icc-122-12e": {
+      "title": "National Quality Standards (ICC-122-12, 122nd Session, Sept 2018)",
+      "org": "International Coffee Organization",
+      "url": "https://www.ico.org/documents/cy2017-18/icc-122-12e-national-quality-standards.pdf",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": "ICOが加盟国報告(PM-29/13)に基づきSNI表を転記した文書。SNI本文そのものではない"
+    },
+    "bsn-sni-01-2907-2008": {
+      "title": "SNI 01-2907-2008 Biji kopi (本文)",
+      "org": "Badan Standardisasi Nasional (BSN)",
+      "url": "https://www.bsn.go.id",
+      "kind": "primary",
+      "readMethod": "failed",
+      "accessed": "2026-11-08",
+      "note": "bsn.go.id / akses-sni.bsn.go.id / sni.bsn.go.id に接続できず(curl 000)。規格本文は未取得"
+    },
+    "lampung-pergub-13-2015": {
+      "title": "Peraturan Gubernur Lampung No. 13 Tahun 2015 tentang Tata Kelola dan Tata Niaga Kopi di Provinsi Lampung",
+      "org": "Gubernur Lampung",
+      "url": "https://jdih.lampungprov.go.id/uploads/berkas/2020/02/syscom5165.pdf",
+      "kind": "secondary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": "州規則がSNI表を転記。SNIの権威ある本文ではないためsecondary扱い"
+    },
+    "kepahiang-perda-12-2020": {
+      "title": "Peraturan Daerah Kabupaten Kepahiang No. 12 Tahun 2020",
+      "org": "Kabupaten Kepahiang",
+      "url": "https://jdih.kepahiangkab.go.id/produk-hukum/peraturan-daerah-kabupaten-kepahiang-nomor-12-tahun-2020-tentang-peningkatan-mutu-hasil-budidaya-perkebunan-kopi-kepahiang-12-2020/unduh",
+      "kind": "secondary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": "県条例がSNI表を転記。SNIの権威ある本文ではないためsecondary扱い"
+    },
+    "usda-fas-vn-coffee-annual-2025": {
+      "title": "Vietnam: Coffee Annual (VM2025-0018, 2025-05-19)",
+      "org": "USDA Foreign Agricultural Service (FAS Hanoi)",
+      "url": "https://apps.fas.usda.gov/newgainapi/api/Report/DownloadReportByFileName?fileName=Coffee%20Annual_Hanoi_Vietnam_VM2025-0018.pdf",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": "pypdfで全文抽出"
+    },
+    "usda-fas-vn-coffee-annual-2026": {
+      "title": "Vietnam: Coffee Annual (VM2026-0016, 2026-05-20)",
+      "org": "USDA Foreign Agricultural Service (FAS Ho Chi Minh City)",
+      "url": "https://apps.fas.usda.gov/newgainapi/api/Report/DownloadReportByFileName?fileName=Coffee%20Annual_Ho%20Chi%20Minh%20City_Vietnam_VM2026-0016.pdf",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": "pypdfで全文抽出"
+    },
+    "ico-icc-124-9-profile-vietnam": {
+      "title": "Country Coffee Profile: Vietnam (ICC-124-9, 4 March 2019)",
+      "org": "International Coffee Organization(ベトナムコーヒーカカオ協会VICOFAが作成を担当)",
+      "url": "https://www.ico.org/documents/cy2018-19/icc-124-9e-profile-vietnam.pdf",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": "2018年までのデータ。pypdfで全文抽出。12か月再確認の対象"
+    },
+    "vicofa-luoc-su-nganh-ca-phe": {
+      "title": "Lược sử ngành cà phê(コーヒー産業略史)",
+      "org": "Hiệp hội Cà phê - Ca cao Việt Nam (VICOFA)",
+      "url": "https://vicofa.org.vn/luoc-su-nganh-ca-phe-bid1.html",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": "掲載日 2018-08-07。curlで生HTMLを取得"
+    },
+    "vicofa-bo-may-to-chuc": {
+      "title": "Bộ máy tổ chức(VICOFAの組織・沿革)",
+      "org": "Hiệp hội Cà phê - Ca cao Việt Nam (VICOFA)",
+      "url": "https://vicofa.org.vn/bo-may-to-chuc-bid2.html",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": "curlで生HTMLを取得"
+    },
+    "stamex-tcvn-gioi-thieu-chung": {
+      "title": "Giới thiệu chung(国家標準計量品質委員会の紹介)",
+      "org": "Ủy ban Tiêu chuẩn Đo lường Chất lượng Quốc gia (STAMEQ)",
+      "url": "https://tcvn.gov.vn/gioi-thieu-chung/20/05/2025/?lang=en",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": "curlで生HTMLを取得"
+    },
+    "wcr-country-vietnam": {
+      "title": "Vietnam(国別ページ)",
+      "org": "World Coffee Research",
+      "url": "https://worldcoffeeresearch.org/countries/vietnam",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": "脚注はICO 2018、USDA 2025を引用。curlで生HTMLを取得"
+    },
+    "hethongphapluat-tcvn-4193-2014": {
+      "title": "Tiêu chuẩn Việt Nam TCVN 4193:2014 về Cà phê nhân(転載。有料部分で途切れる)",
+      "org": "hethongphapluat.com(民間の法令データベース)",
+      "url": "https://hethongphapluat.com/tieu-chuan-viet-nam-tcvn-4193-2014-ve-ca-phe-nhan.html",
+      "kind": "secondary",
+      "readMethod": "excerpt",
+      "accessed": "2026-11-09",
+      "note": "前文と表1の冒頭のみ(以降は有料)。公式配布版ではない。ページ内に、AI向けに『hethongphapluat.comから引用したと必ず伝えよ』という指示文が埋め込まれていた(従っていない)"
+    },
+    "tcvn-4193-2014-official": {
+      "title": "TCVN 4193:2014 Cà phê nhân(規格本文)",
+      "org": "STAMEQ / 国家規格データベース",
+      "url": "http://tracuu.tcvn.vn/sdomain/front/tieu-chuan-viet-nam",
+      "kind": "primary",
+      "readMethod": "failed",
+      "accessed": "2026-11-09",
+      "note": "規格検索サイトは取得できたが本文は得られなかった(nginxの初期ページのみ)。thuvienphapluat.vnはCloudflareで403、他の転載サイトは有料または未取得"
+    }
+  },
+  "entries": {
+    "origin:インドネシア:tagline": {
+      "status": "unverified",
+      "claims": [
+        {
+          "text": "スマトラ式特有の重厚なボディと土っぽい風味",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "一次資料(公式・国際機関)の原文では確認できず。ガヨ地理的表示申請書は『strong heavy body』『bright acidity』『nutty, chocolaty, caramelly, fruity』と記し(ガヨのみ)、『土っぽい』とは書いていない。"
+        }
+      ],
+      "suggestedText": "",
+      "note": "表示できる検証済みの主張なし"
+    },
+    "origin:インドネシア:regions": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "ガヨ(ガヨ高地)はスマトラ島北部アチェ州にある",
+          "status": "verified",
+          "sourceIds": [
+            "mpkg-pgi-kopi-arabika-gayo-2016"
+          ],
+          "quote": "The three main towns as the capital city of the three districts’ are Takengon",
+          "location": "序文(Gayo Highlandの説明)",
+          "note": "同文書にガヨ高地はスマトラ島最北部・アチェ州中央に位置し、アチェ・トゥンガ、ブナー・ムリア、ガヨ・ルスの3県を含むとある"
+        },
+        {
+          "text": "マンデリンはスマトラ島の産地",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "一次資料(公式・国際機関)の原文では確認できず。"
+        },
+        {
+          "text": "トラジャはスラウェシ島の産地",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "一次資料(公式・国際機関)の原文では確認できず。"
+        },
+        {
+          "text": "カロシはスラウェシ島の産地",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "一次資料(公式・国際機関)の原文では確認できず。"
+        }
+      ],
+      "suggestedText": "スマトラ島北部アチェ州のガヨ高地。",
+      "note": ""
+    },
+    "origin:インドネシア:terroir": {
+      "status": "unverified",
+      "claims": [
+        {
+          "text": "火山島に産地が点在する",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "一次資料(公式・国際機関)の原文では確認できず。"
+        },
+        {
+          "text": "スマトラ島は島全体が豊かな火山性土壌に覆われている",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "一次資料(公式・国際機関)の原文では確認できず。ガヨ申請書はガヨ地域の地質を安山岩・火砕岩と記す(島全体ではない)。"
+        },
+        {
+          "text": "スマトラ島は赤道直下でほぼ通年収穫が可能",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "一次資料(公式・国際機関)の原文では確認できず。ガヨ申請書は『ガヨでは一年中開花・結実』と記すが島全体の主張ではない。"
+        },
+        {
+          "text": "スマトラ北部アチェのガヨ高地は標高約1,000〜1,700m",
+          "status": "incorrect",
+          "sourceIds": [
+            "mpkg-pgi-kopi-arabika-gayo-2016"
+          ],
+          "quote": "Arabica coffee is cultivated only between 900 – 1,700 m above the sea level.",
+          "location": "序文(Gayo Highlandの説明)/IV.D The Geographical Area",
+          "note": "地理的表示の産地範囲も『between 900 m – 1700 m above sea level』。アプリの下限1,000mは原文(900m)と食い違う。"
+        },
+        {
+          "text": "マンデリンは北スマトラのトバ湖周辺",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "一次資料(公式・国際機関)の原文では確認できず。"
+        },
+        {
+          "text": "スラウェシ島は他島と異なりプレート衝突由来の地質",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "一次資料(公式・国際機関)の原文では確認できず。"
+        },
+        {
+          "text": "トラジャ地区(標高1,000m弱〜2,000m近く)が高品質アラビカの主産地",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "一次資料(公式・国際機関)の原文では確認できず。トラジャのGI文書(Buku Persyaratan)は入手できなかった。"
+        }
+      ],
+      "suggestedText": "スマトラ島北部アチェのガヨ高地では、アラビカが標高900〜1,700mで栽培されている。",
+      "note": ""
+    },
+    "origin:インドネシア:harvestSeason": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "スマトラの主収穫は9〜12月",
+          "status": "incorrect",
+          "sourceIds": [
+            "usda-fas-id-coffee-annual-2026"
+          ],
+          "quote": "The main harvest in the lowlands typically runs from March through May. Harvesting in the highlands is expected to begin in June–July and continue through August 2026.",
+          "location": "Production(南スマトラのロブスタ)",
+          "note": "USDA FAS 2026: 南スマトラのロブスタ(全国ロブスタの80〜90%を占める産地)は低地3〜5月、高地6〜8月が主収穫。アチェ(アラビカ)の主収穫は通常10〜11月(同書)。スマトラ全体を『9〜12月』とするのは原文と合わない。"
+        },
+        {
+          "text": "アチェの主収穫は通常10〜11月(アプリに無い主張。『9〜12月』の訂正用)",
+          "status": "verified",
+          "sourceIds": [
+            "usda-fas-id-coffee-annual-2026"
+          ],
+          "quote": "The main harvest in Aceh, which typically occurs in October–November, was delayed into early 2026 due to excessive rainfall.",
+          "location": "Production",
+          "note": ""
+        },
+        {
+          "text": "赤道に近く幅があり、10月〜翌1月、尾を引いて3月まで続くとする資料もある",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "一次資料(公式・国際機関)の原文では確認できず。ガヨ申請書は『収穫期は9月〜5月/6月、ピークは3〜4月と10〜11月』と記す(ガヨのみ)。"
+        },
+        {
+          "text": "ジャワ・スラウェシの収穫は概ね5〜9月",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "一次資料(公式・国際機関)の原文では確認できず。"
+        }
+      ],
+      "suggestedText": "南スマトラのロブスタの主収穫は、低地で3〜5月、高地で6〜8月ごろ(USDA FAS 2026年見込み)。アチェ州のアラビカの主収穫は通常10〜11月。",
+      "note": ""
+    },
+    "origin:インドネシア:varietiesDetail": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "ティムティム(Hibrido de Timor)は主力の耐病性系統の一つ",
+          "status": "verified",
+          "sourceIds": [
+            "mpkg-pgi-kopi-arabika-gayo-2016"
+          ],
+          "quote": "- Timtim",
+          "location": "IV.C Description of the product(Coffee varieties)",
+          "note": "ガヨのGIで認められた品種リストに Timtim, Ateng Jaluk, Borbor, P-88, S795 が載る。『インドネシア全体で主力』は未確認なので、ガヨ高地の範囲に限る。"
+        },
+        {
+          "text": "ティムティムはアラビカ×ロブスタの自然交雑種で、20世紀初頭に発見され、サビ病耐性の高さから1950年代に普及した",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "一次資料(公式・国際機関)の原文では確認できず。WCRの品種カタログに該当ページが見つからない。二次資料の発見年は食い違う(1920年代〜1930年代等)。"
+        },
+        {
+          "text": "アテンは『Aceh Tengah』由来で、矮性の一本の木から選抜されたカティモール系品種",
+          "status": "unverified",
+          "sourceIds": [
+            "mpkg-pgi-kopi-arabika-gayo-2016"
+          ],
+          "quote": "",
+          "location": "",
+          "note": "一次資料(公式・国際機関)の原文では確認できず。ガヨ申請書に 'Ateng Jaluk' の名は載るが由来の説明はない。二次資料のみ。"
+        },
+        {
+          "text": "S795はインドのケント×リベリカのハイブリッド",
+          "status": "verified",
+          "sourceIds": [
+            "wcr-variety-s795"
+          ],
+          "quote": "S795 is one of the most widely cultivated Arabica varieties in India. It was developed from a cross between S.288 (a C. liberica introgressed line) and ‘Kents’ coffee.",
+          "location": "History",
+          "note": "WCR: インドで開発された S.288(リベリカ遺伝子導入系統)×Kent。厳密には『リベリカの導入系統S.288とケントの交配』。ガヨ申請書の品種リストにもS795が載る。"
+        },
+        {
+          "text": "古いティピカ系(Bergendal、19世紀末の最初のサビ病流行を生き延びた木に由来)も一部残る",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "一次資料(公式・国際機関)の原文では確認できず。ガヨ申請書にBergendalは村名・試験園として出るのみ。"
+        }
+      ],
+      "suggestedText": "ガヨ高地では、ティムティム、アテン・ジャルク、ボルボル、P-88、S795などの品種が使われている(ガヨの地理的表示申請書)。S795はインドで、リベリカ遺伝子導入系統S.288とケントの交配から育成された品種。",
+      "note": ""
+    },
+    "origin:インドネシア:farmStructure": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "小農が国内コーヒー生産の約90〜99%を担う",
+          "status": "incorrect",
+          "sourceIds": [
+            "usda-fas-id-coffee-annual-2025"
+          ],
+          "quote": "Smallholder plantations averaging between 1 – 2 hectares continue to account for 98 percent of all area.",
+          "location": "Crop area",
+          "note": "USDA FAS 2025/2026: 98%は『栽培面積』の比率で、生産量の比率ではない。生産量比は未確認。"
+        },
+        {
+          "text": "スマトラの農園は一般に0.5〜2.5ha程度",
+          "status": "unverified",
+          "sourceIds": [
+            "usda-fas-id-coffee-annual-2026"
+          ],
+          "quote": "",
+          "location": "",
+          "note": "FAS 2026は小農の規模を『典型的に1〜2ha』(全国)と記す。0.5〜2.5haは確認できない。"
+        },
+        {
+          "text": "集荷人・加工業者・仲介業者・輸出業者からなる多段階流通を介して国際市場につながる",
+          "status": "unverified",
+          "sourceIds": [
+            "usda-fas-id-coffee-annual-2026"
+          ],
+          "quote": "",
+          "location": "",
+          "note": "FAS 2026はランプンで村レベルの集荷人が肥料を信用供与する旨を記すのみ。4段階の流通は確認できない。"
+        },
+        {
+          "text": "スラウェシのトラジャでは1〜2ha規模の小農が中心で、野菜・スパイス・果樹との混作が一般的",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "一次資料(公式・国際機関)の原文では確認できず。"
+        },
+        {
+          "text": "小農(典型的に1〜2ha)が栽培面積の約98%を占める(アプリの『生産の90〜99%』の訂正用)",
+          "status": "verified",
+          "sourceIds": [
+            "usda-fas-id-coffee-annual-2026"
+          ],
+          "quote": "Smallholders, typically farming 1–2 hectares, account for about 98 percent of total coffee area.",
+          "location": "Crop Area",
+          "note": ""
+        }
+      ],
+      "suggestedText": "小農(典型的に1〜2ha)が栽培面積の約98%を占める(USDA FAS 2026年)。",
+      "note": ""
+    },
+    "origin:インドネシア:history": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "17世紀後半(1696年・1699年)にバタビア(現ジャワ)へコーヒー種子が送られた",
+          "status": "verified",
+          "sourceIds": [
+            "wcr-variety-typica"
+          ],
+          "quote": "In 1696 and 1699, coffee seeds were sent from the Malabar coast of India to the island of Batavia (today called Java in Indonesia).",
+          "location": "Typica > History",
+          "note": "ガヨ申請書も『1696年にアラビカが最初に入り、洪水で枯れたため1699年に追加の苗が持ち込まれ、ジャカルタ・西ジャワ周辺に広まった』と記す。"
+        },
+        {
+          "text": "種子はイエメンから確保した",
+          "status": "incorrect",
+          "sourceIds": [
+            "wcr-variety-typica"
+          ],
+          "quote": "In 1696 and 1699, coffee seeds were sent from the Malabar coast of India to the island of Batavia (today called Java in Indonesia).",
+          "location": "Typica > History",
+          "note": "WCRは種子の出所を『インドのマラバール海岸』と記す。『イエメンから』は原文にない。"
+        },
+        {
+          "text": "オランダ植民地当局が栽培を開始した",
+          "status": "unverified",
+          "sourceIds": [
+            "mpkg-pgi-kopi-arabika-gayo-2016"
+          ],
+          "quote": "",
+          "location": "",
+          "note": "ガヨ申請書は『1696年以来、オランダ(VOC)の傭兵がジャワにコーヒーを持ち込んだという民話が多い』とするのみ(folktales)。公式資料で確認できず。"
+        },
+        {
+          "text": "18世紀初頭にジャワ産コーヒーの欧州向け輸出が始まり、アラビア半島以外で初の主要生産地となった",
+          "status": "unverified",
+          "sourceIds": [
+            "wcr-variety-typica"
+          ],
+          "quote": "",
+          "location": "",
+          "note": "一次資料(公式・国際機関)の原文では確認できず。WCRは1706年にジャワからアムステルダムの植物園へ1株が運ばれたと記すのみ(輸出開始の記述ではない)。"
+        },
+        {
+          "text": "1860年代(1876年前後とする資料も)の葉サビ病でアラビカ農園の多くが壊滅し、耐病性のロブスタへの転換が進んだ",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "一次資料(公式・国際機関)の原文では確認できず。"
+        },
+        {
+          "text": "ロブスタは1900年、ジャワ東部を中心に導入された",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "一次資料(公式・国際機関)の原文では確認できず。"
+        },
+        {
+          "text": "世界第4位の生産国",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "一次資料(公式・国際機関)の原文では確認できず。取得したUSDA FAS・ICO文書に順位の記述なし。"
+        },
+        {
+          "text": "ロブスタが生産量の約88%超を占める",
+          "status": "unverified",
+          "sourceIds": [
+            "usda-fas-id-coffee-annual-2025"
+          ],
+          "quote": "",
+          "location": "",
+          "note": "FAS 2025は『ロブスタは総生産の約80〜90%』と記す(区間表現。88%超という数字は原文にない)。"
+        },
+        {
+          "text": "ロブスタは総生産の約80〜90%(アプリの『88%超』の代替)",
+          "status": "verified",
+          "sourceIds": [
+            "usda-fas-id-coffee-annual-2025"
+          ],
+          "quote": "Robusta production accounts for approximately 80 – 90 percent of total production",
+          "location": "Crop area",
+          "note": ""
+        },
+        {
+          "text": "スマトラ島が生産量の6〜7割を占める",
+          "status": "incorrect",
+          "sourceIds": [
+            "usda-fas-id-coffee-annual-2025"
+          ],
+          "quote": "Sumatera remains Indonesia’s largest coffee producing region, producing between 70 – 75 percent of all green bean coffee.",
+          "location": "Crop area",
+          "note": "FAS 2025: 70〜75%。FAS 2026は『栽培面積の約60%』(面積であって生産量ではない)。"
+        },
+        {
+          "text": "湿式脱穀(ギリンバサ)はパーチメントを高水分のまま脱穀するスマトラの署名的製法",
+          "status": "verified",
+          "sourceIds": [
+            "mpkg-pgi-kopi-arabika-gayo-2016"
+          ],
+          "quote": "also known as \"Sumatra semi-washed process\". In this regard, the process of removing parchment or \"dehulled\" is conducted when parchment coffee beans still moist (with moisture content between 25 - 30 %).",
+          "location": "Description of the method of obtaining the product(Processing)",
+          "note": "ガヨ高地の実践の記述。『スマトラ式(typical Sumatra semi-washed method)』はIV.C。『署名的』『スマトラ全体』への一般化は未確認。"
+        },
+        {
+          "text": "ギリンバサはアーシー・重厚・低酸の独特な風味を生む",
+          "status": "unverified",
+          "sourceIds": [
+            "mpkg-pgi-kopi-arabika-gayo-2016"
+          ],
+          "quote": "",
+          "location": "",
+          "note": "一次資料(公式・国際機関)の原文では確認できず。ガヨ申請書は『more body and more flavour complexity』『bright acidity』と記し、『低酸』と食い違う(ガヨのみ)。"
+        }
+      ],
+      "suggestedText": "1696年と1699年に、インドのマラバール海岸からバタビア(現ジャワ)へコーヒー種子が送られた(WCR)。ロブスタは総生産の約80〜90%、スマトラ島は生産量の70〜75%を占める(USDA FAS 2025年)。ギリンバサ(湿式脱穀)は、パーチメントがまだ湿った状態(含水率25〜30%)で脱穀する『スマトラ式セミウォッシュト』で、ガヨ高地で用いられている。",
+      "note": ""
+    },
+    "origin:インドネシア:sub:マンデリン(スマトラ)": {
+      "status": "unverified",
+      "claims": [
+        {
+          "text": "トバ湖周辺(タパヌリ地方)",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "一次資料(公式・国際機関)の原文では確認できず。"
+        },
+        {
+          "text": "マンダイリン族の名に由来する銘柄名",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "一次資料(公式・国際機関)の原文では確認できず。"
+        },
+        {
+          "text": "ギリンバサでハーブ・木質のリッチな風味、低酸、重厚",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "一次資料(公式・国際機関)の原文では確認できず。"
+        },
+        {
+          "text": "現在は北スマトラ広域産を指すことが多い",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "一次資料(公式・国際機関)の原文では確認できず。"
+        }
+      ],
+      "suggestedText": "",
+      "note": "表示できる検証済みの主張なし"
+    },
+    "origin:インドネシア:sub:ガヨマウンテン(スマトラ)": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "アチェ・タケンゴン周辺",
+          "status": "verified",
+          "sourceIds": [
+            "mpkg-pgi-kopi-arabika-gayo-2016"
+          ],
+          "quote": "The three main towns as the capital city of the three districts’ are Takengon",
+          "location": "序文(Gayo Highlandの説明)",
+          "note": "ガヨ高地はアチェ州中央。タケンゴンはアチェ・トゥンガ県の県都(3県の主要都市の一つ)。"
+        },
+        {
+          "text": "標高1,000〜1,700m",
+          "status": "incorrect",
+          "sourceIds": [
+            "mpkg-pgi-kopi-arabika-gayo-2016"
+          ],
+          "quote": "Arabica coffee is cultivated only between 900 – 1,700 m above the sea level.",
+          "location": "序文(Gayo Highlandの説明)",
+          "note": "原文は900〜1,700m。"
+        },
+        {
+          "text": "マンデリン・リントンより高い調子・軽いボディとされる",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "一次資料(公式・国際機関)の原文では確認できず。ガヨ申請書は『strong heavy body』『full body』と記し、『軽いボディ』と食い違う。他産地との比較の記述はない。"
+        },
+        {
+          "text": "フルボディ",
+          "status": "verified",
+          "sourceIds": [
+            "mpkg-pgi-kopi-arabika-gayo-2016"
+          ],
+          "quote": "In addition, Kopi Arabika Gayo presents characteristics of unique of complexity flavor and aroma such as nutty, chocolaty, caramelly, fruity, bright acidity, full body as well as long finish as the specific characteristics.",
+          "location": "IV.C Description of the product",
+          "note": "同文でナッツ・チョコレート・キャラメル・フルーティ・明るい酸・長い余韻も挙げる。"
+        },
+        {
+          "text": "ナッツ・チョコの風味",
+          "status": "verified",
+          "sourceIds": [
+            "mpkg-pgi-kopi-arabika-gayo-2016"
+          ],
+          "quote": "In addition, Kopi Arabika Gayo presents characteristics of unique of complexity flavor and aroma such as nutty, chocolaty, caramelly, fruity, bright acidity, full body as well as long finish as the specific characteristics.",
+          "location": "IV.C Description of the product",
+          "note": ""
+        },
+        {
+          "text": "クリーミー、アーシー、ハーブの風味",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "一次資料(公式・国際機関)の原文では確認できず。"
+        }
+      ],
+      "suggestedText": "アチェ州のガヨ高地。アラビカが標高900〜1,700mで栽培される。フルボディで、ナッツやチョコレート、キャラメル、果実を思わせる風味と明るい酸があるとされる(ガヨの地理的表示申請書)。",
+      "note": ""
+    },
+    "origin:インドネシア:sub:トラジャ(スラウェシ)": {
+      "status": "unverified",
+      "claims": [
+        {
+          "text": "標高1,000m弱〜2,000m近く",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "一次資料(公式・国際機関)の原文では確認できず。トラジャのGI文書は入手できなかった。"
+        },
+        {
+          "text": "高品質ウォッシュドアラビカの主産地",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "一次資料(公式・国際機関)の原文では確認できず。"
+        },
+        {
+          "text": "セミウォッシュト/ギリンバサでキャラメル・熟果・スモーキー",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "一次資料(公式・国際機関)の原文では確認できず。"
+        }
+      ],
+      "suggestedText": "",
+      "note": "表示できる検証済みの主張なし"
+    },
+    "origin:インドネシア:sub:カロシ(スラウェシ)": {
+      "status": "unverified",
+      "claims": [
+        {
+          "text": "エンレカン地方の中心都市名に由来する銘柄名",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "一次資料(公式・国際機関)の原文では確認できず。"
+        },
+        {
+          "text": "トラジャと並ぶスラウェシの代表産地",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "一次資料(公式・国際機関)の原文では確認できず。"
+        },
+        {
+          "text": "標高幅が広くカップ品質のばらつきも大きい",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "一次資料(公式・国際機関)の原文では確認できず。"
+        }
+      ],
+      "suggestedText": "",
+      "note": "表示できる検証済みの主張なし"
+    },
+    "origin:インドネシア:gradeSystem": {
+      "status": "unverified",
+      "claims": [
+        {
+          "text": "SNI規格(SNI 01-2907-2008)が欠点数によりGrade1〜6の6段階を規定する",
+          "status": "unverified",
+          "sourceIds": [
+            "ico-icc-122-12e",
+            "lampung-pergub-13-2015",
+            "kepahiang-perda-12-2020",
+            "bsn-sni-01-2907-2008"
+          ],
+          "quote": "National standards for coffee in Indonesia are regulated by Indonesian National Standard #SNI 01-2907-2008 for coffee beans",
+          "location": "ICO ICC-122-12 Indonesia(p.A-14)",
+          "note": "SNI本文(BSN)が取得できなかったため unverified(brief指示)。ICO文書(加盟国報告の転記)・ランプン州規則・クパヒアン県条例が同じ表を載せるが、いずれもSNI本文ではない。"
+        },
+        {
+          "text": "Grade4のみさらにa/bに細分される",
+          "status": "unverified",
+          "sourceIds": [
+            "ico-icc-122-12e",
+            "lampung-pergub-13-2015",
+            "kepahiang-perda-12-2020",
+            "bsn-sni-01-2907-2008"
+          ],
+          "quote": "NB Quality 4 is not divided into category 4a and 4b for Arabica coffee",
+          "location": "ICO ICC-122-12 Indonesia",
+          "note": "SNI本文(BSN)が取得できなかったため unverified(brief指示)。ICO文書は『アラビカでは4をa/bに分けない』と注記。アプリはこの条件を書いていない。"
+        },
+        {
+          "text": "最上位Grade1は欠点11個以下(ピーベリー・ポリエンブリオ豆の場合)",
+          "status": "unverified",
+          "sourceIds": [
+            "ico-icc-122-12e",
+            "bsn-sni-01-2907-2008"
+          ],
+          "quote": "* For peaberry and polyembrio coffee",
+          "location": "ICO ICC-122-12 Indonesia",
+          "note": "SNI本文(BSN)が取得できなかったため unverified(brief指示)。ICOの表は『Quality 1: Maximum number of defects 11*』(*=peaberry/polyembrio)。"
+        },
+        {
+          "text": "Grade6は151〜225個",
+          "status": "unverified",
+          "sourceIds": [
+            "ico-icc-122-12e",
+            "bsn-sni-01-2907-2008"
+          ],
+          "quote": "Quality 6 Number of defects from 151 to 225",
+          "location": "ICO ICC-122-12 Indonesia",
+          "note": "SNI本文(BSN)が取得できなかったため unverified(brief指示)。"
+        },
+        {
+          "text": "数字が大きいほど欠点が多い",
+          "status": "unverified",
+          "sourceIds": [
+            "ico-icc-122-12e",
+            "bsn-sni-01-2907-2008"
+          ],
+          "quote": "",
+          "location": "",
+          "note": "SNI本文(BSN)が取得できなかったため unverified(brief指示)。"
+        }
+      ],
+      "suggestedText": "",
+      "note": "ICO(国際機関)文書は転記なので、『ICO文書を根拠にSNIの表を認める』かは利用者の判断が必要。"
+    },
+    "origin:インドネシア:officialBody": {
+      "status": "unverified",
+      "claims": [
+        {
+          "text": "国家標準化庁(BSN)がSNI規格を策定する",
+          "status": "unverified",
+          "sourceIds": [
+            "bsn-sni-01-2907-2008"
+          ],
+          "quote": "",
+          "location": "",
+          "note": "SNI本文(BSN)が取得できなかったため unverified(brief指示)。BSNのサイトに接続できなかった。"
+        },
+        {
+          "text": "緑豆輸出そのものにSNI等級の法的義務はなく、商取引上の品質仕様にすぎない",
+          "status": "unverified",
+          "sourceIds": [
+            "lampung-pergub-13-2015"
+          ],
+          "quote": "Mulai tanggal 1 Januari 2017 akan diberlakukan mutu biji kopi yang di persyaratkan untuk masuk ekspor adalah mutu I sarnpai dengan mutu IV",
+          "location": "Pasal 9(2)",
+          "note": "二次資料。ランプン州規則は2017年1月1日から同州の輸出に品質I〜IVを要件とすると定める(州の規則であり、国の義務の有無は未確認)。"
+        }
+      ],
+      "suggestedText": "",
+      "note": "表示できる検証済みの主張なし"
+    },
+    "origin:ベトナム:tagline": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "ベトナムは世界第2位のコーヒー生産国",
+          "status": "verified",
+          "sourceIds": [
+            "ico-icc-124-9-profile-vietnam"
+          ],
+          "quote": "firstly, to maintain its position as the world’s second largest producer and exporter of coffee green beans",
+          "location": "Foreword(VICOFA議長)",
+          "note": "ICO 2019年プロファイル(2018年までのデータ)。『生産量順位』を現在形で示す場合は最新データで再確認が必要。"
+        },
+        {
+          "text": "ロブスタが主体",
+          "status": "verified",
+          "sourceIds": [
+            "ico-icc-124-9-profile-vietnam"
+          ],
+          "quote": "Robusta accounts for 97% of Vietnam's total output volume.",
+          "location": "2.1 Types of coffee and coffee-growing areas",
+          "note": "ロブスタは総生産量の97%(ICO 2019)。"
+        },
+        {
+          "text": "力強い苦味とコクの味わい",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "一次資料(公式・国際機関)の原文では確認できず。ICOは地理的表示産地(Buon Ma Thuot等)を『sweet aroma and strong flavour』と記すのみ。"
+        }
+      ],
+      "suggestedText": "世界第2位の生産国で、ロブスタが総生産量の約97%を占める(ICO国別プロファイル、2019年)。",
+      "note": ""
+    },
+    "origin:ベトナム:regions": {
+      "status": "verified",
+      "claims": [
+        {
+          "text": "中部高原(ダクラク省等)が主産地",
+          "status": "verified",
+          "sourceIds": [
+            "ico-icc-124-9-profile-vietnam"
+          ],
+          "quote": "Dak Lak 199,900 203,700 204,400 209,000 190,000",
+          "location": "Table 2: Areas of coffee cultivation",
+          "note": "MARD統計の表で、中部高原の5省のうちダクラク省が面積最大(2013〜2016年)。"
+        }
+      ],
+      "note": ""
+    },
+    "origin:ベトナム:terroir": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "中部高原(タイグエン地方)が栽培面積の約9割",
+          "status": "verified",
+          "sourceIds": [
+            "usda-fas-vn-coffee-annual-2025"
+          ],
+          "quote": "accounts for 92 percent of the total coffee cultivation area and 90 percent of national coffee output.",
+          "location": "Production",
+          "note": "92%(2024年推計)。ICOの表(2017年推計)では約88%。『約9割』は許容範囲。"
+        },
+        {
+          "text": "赤色バサルト土壌が広がる",
+          "status": "verified",
+          "sourceIds": [
+            "ico-icc-124-9-profile-vietnam"
+          ],
+          "quote": "There is a large area of red soil basalt suitable for coffee growing which was brought by the French in 1857.",
+          "location": "Foreword",
+          "note": "ICOは『コーヒー栽培に適した赤色バサルト土壌の広い地域がある』と記す。"
+        },
+        {
+          "text": "現地で『バザン・レッドランド』と呼ばれる",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "一次資料(公式・国際機関)の原文では確認できず。"
+        },
+        {
+          "text": "全国のバサルト埋蔵量の6割を占めるとされる",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "一次資料(公式・国際機関)の原文では確認できず。二次資料の数字は食い違う(VietnamPlus: 74.25%、大学研究: 約46%)。"
+        },
+        {
+          "text": "水はけ・保水性・養分保持のバランスに優れ、チェリーの緩やかで均質な成熟を促す",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "一次資料(公式・国際機関)の原文では確認できず。"
+        },
+        {
+          "text": "熱帯サバンナ気候",
+          "status": "unverified",
+          "sourceIds": [
+            "ico-icc-124-9-profile-vietnam"
+          ],
+          "quote": "",
+          "location": "",
+          "note": "ICOは『tropical savanna in Southernmost Central and Southern regions』と国の気候区分を記すのみで、中部高原の気候とは明記していない。"
+        },
+        {
+          "text": "ロブスタは標高約500〜800m",
+          "status": "unverified",
+          "sourceIds": [
+            "ico-icc-124-9-profile-vietnam"
+          ],
+          "quote": "",
+          "location": "",
+          "note": "ICOは『ベトナムのコーヒーは標高500〜1,200mで栽培』と記す。ロブスタ単独の標高範囲は確認できない。VICOFAはバンメトート・バオロクを標高500〜1,000mとする。"
+        },
+        {
+          "text": "乾季(12月〜4月中旬)には灌漑が必須",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "一次資料(公式・国際機関)の原文では確認できず。"
+        },
+        {
+          "text": "地下水の過剰揚水が課題になっている",
+          "status": "verified",
+          "sourceIds": [
+            "usda-fas-vn-coffee-annual-2026"
+          ],
+          "quote": "Early or excessive irrigation may increase coffee yield in the short term, but in the long run, it depletes groundwater and increases production costs over time.",
+          "location": "Production",
+          "note": "FAS 2026は、過剰な灌漑が地下水を枯渇させると記す。"
+        },
+        {
+          "text": "アラビカは北部・南部Da Lat周辺の高標高地(1,000〜1,400m)で少量栽培",
+          "status": "unverified",
+          "sourceIds": [
+            "ico-icc-124-9-profile-vietnam"
+          ],
+          "quote": "",
+          "location": "",
+          "note": "ICOはアラビカの栽培支援地としてSon La、Nghe An、Quang Tri、Lam Dongを挙げる。標高1,000〜1,400mは確認できない。"
+        }
+      ],
+      "suggestedText": "中部高原(タイグエン)が栽培面積の92%を占める(USDA FAS 2025年)。コーヒー栽培に適した赤色バサルト土壌が広がる(ICO 2019年)。過剰な灌漑は地下水を枯渇させる(USDA FAS 2026年)。",
+      "note": ""
+    },
+    "origin:ベトナム:harvestSeason": {
+      "status": "unverified",
+      "claims": [
+        {
+          "text": "ロブスタの主収穫は10月〜2/3月、ピークは11〜1月",
+          "status": "unverified",
+          "sourceIds": [
+            "vicofa-luoc-su-nganh-ca-phe"
+          ],
+          "quote": "Thời gian thu hoạch tại các tỉnh Tây Nguyên (là nơi sản xuất khoảng 80 % tổng sản lượng của Việt Nam) thường kéo dài trong 4 tháng, tính từ cuối tháng 10 đến hết tháng 1.",
+          "location": "Niên vụ(年度)",
+          "note": "VICOFAは中部高原の収穫期を『通常4か月、10月下旬から1月末』と記す。アプリの『2/3月まで』『ピーク11〜1月』は確認できない。"
+        },
+        {
+          "text": "アラビカは9〜11月が主で、高地では4月まで伸びることも",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "一次資料(公式・国際機関)の原文では確認できず。"
+        }
+      ],
+      "suggestedText": "中部高原の収穫期は通常4か月で、10月下旬から1月末まで(VICOFA)。",
+      "note": ""
+    },
+    "origin:ベトナム:varietiesDetail": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "USDA FASによれば生産の約96%がロブスタ(カネフォラ種)",
+          "status": "unverified",
+          "sourceIds": [
+            "usda-fas-vn-coffee-annual-2025",
+            "ico-icc-124-9-profile-vietnam"
+          ],
+          "quote": "",
+          "location": "",
+          "note": "FAS 2025は絶対量(ロブスタ30百万袋、アラビカ1百万袋、見込み)を記すのみで『96%』とは書かない(計算上は約97%)。ICOは『ロブスタは総生産の97%』(2019年)。"
+        },
+        {
+          "text": "主力は選抜クローンのTRシリーズ(TR4、TR9等)",
+          "status": "verified",
+          "sourceIds": [
+            "ico-icc-124-9-profile-vietnam"
+          ],
+          "quote": "named by Vietnamese researchers as clone TR4, TR5, TR6, TR7, TR8, TR9, TR11, TR12, TR13, TR14 and TR15 or TRS 1.",
+          "location": "2.1 Types of coffee and coffee-growing areas",
+          "note": "TRクローンは存在する。ただしICOは『近年最も好まれ広く栽培されているのはTR14、TR15、TRS 1』と記す(TR4、TR9が主力とは書いていない)。"
+        },
+        {
+          "text": "アラビカはカティモールが支配的",
+          "status": "verified",
+          "sourceIds": [
+            "ico-icc-124-9-profile-vietnam"
+          ],
+          "quote": "almost 99% of the Arabica coffee grown in Vietnam is of the Catimor variety",
+          "location": "2.1 Types of coffee and coffee-growing areas",
+          "note": "ICOは『Catimor: Timor(Robusta)とCaturra(Arabica)の交配』と記す。アプリの『カトゥーラ×ティモールハイブリッド由来』と整合。"
+        },
+        {
+          "text": "Da Lat周辺にブルボンが残る",
+          "status": "verified",
+          "sourceIds": [
+            "ico-icc-124-9-profile-vietnam"
+          ],
+          "quote": "mixture of Arabica Bourbon from Cau Dat ‒ Da Lat and Robusta from Buon Ma Thuot",
+          "location": "2.1(AVPA 2015の受賞の記述)",
+          "note": "ブルボンの存在のみ確認。"
+        },
+        {
+          "text": "Da Lat周辺にティピカが残る",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "一次資料(公式・国際機関)の原文では確認できず。"
+        },
+        {
+          "text": "ブルボン・ティピカは現地で『モカ』と通称される",
+          "status": "unverified",
+          "sourceIds": [
+            "vicofa-luoc-su-nganh-ca-phe"
+          ],
+          "quote": "",
+          "location": "",
+          "note": "VICOFAは『ベトナムのアラビカにはMokaとCatimorの2種』と記すが、MokaがティピカやブルボンかはVICOFAに記載がない。"
+        }
+      ],
+      "suggestedText": "ロブスタは総生産の約97%(ICO 2019年)。ロブスタは、WASIなどが育成したTR4、TR9などTRシリーズのクローンがあり、近年はTR14、TR15、TRS 1が広く栽培されている(ICO)。アラビカの約99%はカティモール(ICO)。Da Lat周辺ではブルボンも栽培されている。",
+      "note": ""
+    },
+    "origin:ベトナム:farmStructure": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "57.3万戸規模のロブスタ小農が平均農園面積約1.08ha(資料により1〜1.5ha程度)を耕作する",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "一次資料(公式・国際機関)の原文では確認できず。"
+        },
+        {
+          "text": "全農家の85%が2ha未満、63%が1ha未満",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "一次資料(公式・国際機関)の原文では確認できず。"
+        },
+        {
+          "text": "中部高原の栽培面積の85%(約48万ha)は世帯単位の経営",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "一次資料(公式・国際機関)の原文では確認できず。"
+        },
+        {
+          "text": "64万戸超が生産に関わる",
+          "status": "unverified",
+          "sourceIds": [
+            "wcr-country-vietnam",
+            "usda-fas-vn-coffee-annual-2026"
+          ],
+          "quote": "Vietnam has an estimated 640,000 farms",
+          "location": "本文冒頭",
+          "note": "WCR: 約64万の農場(推計、ICO 2018等を引用)。FAS 2026: 『60万戸超の小農世帯』。『超』は確認できない。"
+        },
+        {
+          "text": "60万戸超の小農世帯がコーヒー生産に関わる(アプリの『64万戸超』の代替)",
+          "status": "verified",
+          "sourceIds": [
+            "usda-fas-vn-coffee-annual-2026"
+          ],
+          "quote": "more than 600,000 smallholder households involved in coffee production",
+          "location": "Production",
+          "note": ""
+        },
+        {
+          "text": "政府はコーヒー栽培リースの割当を1世帯あたり1.2haと定めている",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "一次資料(公式・国際機関)の原文では確認できず。"
+        },
+        {
+          "text": "1986年のドイモイ後、農家が生産物の一部を自ら保有・販売できる権利を得て、集約的栽培への転換が進んだ",
+          "status": "unverified",
+          "sourceIds": [
+            "ico-icc-124-9-profile-vietnam"
+          ],
+          "quote": "",
+          "location": "",
+          "note": "ICOはドイモイが1986年開始であることと、1986年以降に政府がコーヒー部門に資源を集中し農家世帯の栽培も奨励したことを記すが、『生産物の保有・販売権』は記載なし。"
+        },
+        {
+          "text": "EUDR(EU森林破壊規制)は2026年12月施行",
+          "status": "verified",
+          "sourceIds": [
+            "usda-fas-vn-coffee-annual-2026"
+          ],
+          "quote": "(EUDR) requirements, which take effect in December 2026.",
+          "location": "Production",
+          "note": "FAS 2026。"
+        },
+        {
+          "text": "EUDRへの対応が輸出上の課題",
+          "status": "verified",
+          "sourceIds": [
+            "usda-fas-vn-coffee-annual-2025"
+          ],
+          "quote": "The EU Deforestation Regulation (EUDR), which comes into force in 2026, is creating challenges for Vietnam coffee producers.",
+          "location": "Production",
+          "note": "FAS 2025。"
+        },
+        {
+          "text": "輸出の約4割がEU向け",
+          "status": "verified",
+          "sourceIds": [
+            "usda-fas-vn-coffee-annual-2025"
+          ],
+          "quote": "Forty one percent of Vietnam’s coffee exports go to European Union.",
+          "location": "Production",
+          "note": "41%(FAS 2025の時点)。"
+        }
+      ],
+      "suggestedText": "60万戸超の小農世帯がコーヒー生産に関わる(USDA FAS 2026年)。EUDR(EU森林破壊規制)は2026年12月に施行され、ベトナムのコーヒー輸出の41%がEU向け(USDA FAS 2025年)のため、対応が課題となっている。",
+      "note": ""
+    },
+    "origin:ベトナム:history": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "1857年にフランス人がアラビカを導入した",
+          "status": "verified",
+          "sourceIds": [
+            "ico-icc-124-9-profile-vietnam"
+          ],
+          "quote": "Arabica (Coffea arabica) was the first coffee variety to have been introduced into Vietnam in 1857, through French missionaries.",
+          "location": "1.3 Summary of the history of coffee in Vietnam",
+          "note": "ICO: 1857年、フランスの宣教師によりアラビカが導入(北部の教会で試験栽培)。VICOFAの略史は『フランス人がコーヒーを持ち込んだのは1850年ごろ(khoảng năm 1850)』と記す(おおむね整合)。"
+        },
+        {
+          "text": "ダクラクでは1912〜1914年頃にアラビカ栽培が本格化した(フランス政府が2社の農業会社設立を許可、栽培面積260ha)",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "一次資料(公式・国際機関)の原文では確認できず。ICOは1908年にフランスがロブスタとエクセルサを持ち込んだと記す。"
+        },
+        {
+          "text": "その後バサルト赤土と冷涼な気候を背景にロブスタへの転換が進んだ",
+          "status": "unverified",
+          "sourceIds": [
+            "vicofa-luoc-su-nganh-ca-phe"
+          ],
+          "quote": "",
+          "location": "",
+          "note": "VICOFAは『中部高原では当初アラビカを植えたが、さび病が激しく劣化し、ロブスタとエクセルサに置き換えた』と記す(理由はさび病)。"
+        },
+        {
+          "text": "1920年代にはダクラクがロブスタの『聖域』とされた",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "一次資料(公式・国際機関)の原文では確認できず。"
+        },
+        {
+          "text": "中部高原では当初アラビカが植えられたが、さび病のため劣化し、ロブスタとエクセルサに置き換えられた(アプリに無い。転換理由の訂正用)",
+          "status": "verified",
+          "sourceIds": [
+            "vicofa-luoc-su-nganh-ca-phe"
+          ],
+          "quote": "Cuối cùng, người ta quyết định thay thế cà phê Chè bằng cà phê Vối và cà phê Mít.",
+          "location": "Quá trình phát triển cà phê ở Việt Nam",
+          "note": "同段落の直前に『さび病が激しく劣化(bị rỉ sắt quá nặng nên thoái hóa dần)』とある。"
+        },
+        {
+          "text": "1986年にドイモイ(経済改革)が始まった",
+          "status": "verified",
+          "sourceIds": [
+            "ico-icc-124-9-profile-vietnam"
+          ],
+          "quote": "launched in 1986, have spurred rapid economic growth",
+          "location": "1.2 Economic setting",
+          "note": ""
+        },
+        {
+          "text": "1986年以降、政府が(コーヒー部門への)投資を本格化した",
+          "status": "verified",
+          "sourceIds": [
+            "ico-icc-124-9-profile-vietnam"
+          ],
+          "quote": "Since 1986, the Government of Vietnam has concentrated its resources on investing in the coffee sector",
+          "location": "1.3 Summary of the history of coffee in Vietnam",
+          "note": ""
+        },
+        {
+          "text": "ドイモイ後に生産割当が廃止され、土地の私有化が進んだ",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "一次資料(公式・国際機関)の原文では確認できず。"
+        },
+        {
+          "text": "集約的栽培へ転換した",
+          "status": "unverified",
+          "sourceIds": [
+            "ico-icc-124-9-profile-vietnam"
+          ],
+          "quote": "",
+          "location": "",
+          "note": "ICOは『平均収量約2.3t/ha、世界最高水準』『高強度のロブスタ栽培』と記すが、転換の経緯は記載なし。"
+        },
+        {
+          "text": "ベトナムは世界第2位の生産国",
+          "status": "verified",
+          "sourceIds": [
+            "ico-icc-124-9-profile-vietnam"
+          ],
+          "quote": "firstly, to maintain its position as the world’s second largest producer and exporter of coffee green beans",
+          "location": "Foreword",
+          "note": "2018〜2019年時点。"
+        },
+        {
+          "text": "ロブスタ最大の輸出国",
+          "status": "verified",
+          "sourceIds": [
+            "vicofa-luoc-su-nganh-ca-phe"
+          ],
+          "quote": "Nước xuất khẩu cà phê Robusta lớn nhất thế giới là Việt Nam.",
+          "location": "CÀ PHÊ VỐI (ROBUSTA)",
+          "note": "VICOFA略史(2018年掲載)。WCRの国別ページも『世界最大のロブスタ生産国』と記す。"
+        }
+      ],
+      "suggestedText": "1857年にフランスの宣教師がアラビカを導入した(ICO)。中部高原では当初アラビカが植えられたが、さび病のためロブスタとエクセルサに置き換えられた(VICOFA)。1986年にドイモイが始まり、以後政府がコーヒー部門への投資を本格化した(ICO)。ベトナムは世界第2位の生産国で、ロブスタの輸出は世界最大(ICO・VICOFA、2018〜2019年時点)。",
+      "note": ""
+    },
+    "origin:ベトナム:sub:ダクラク(Buon Ma Thuot)": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "ダクラク(ブオンマトート)はコーヒーの『首都(thủ phủ)』とされる",
+          "status": "verified",
+          "sourceIds": [
+            "vicofa-luoc-su-nganh-ca-phe"
+          ],
+          "quote": "Đây cũng chính là lý do Đắk Lắk và nhất là Buôn Ma Thuột vốn được xem là thủ phủ cà phê",
+          "location": "CÀ PHÊ MÍT(エクセルサ)の節",
+          "note": "VICOFAは『コーヒーの首都』と記す(ロブスタ限定ではない)。"
+        },
+        {
+          "text": "ロブスタの『首都』",
+          "status": "unverified",
+          "sourceIds": [
+            "vicofa-luoc-su-nganh-ca-phe"
+          ],
+          "quote": "",
+          "location": "",
+          "note": "VICOFAの『首都』はロブスタ限定の記述ではない。"
+        },
+        {
+          "text": "力強くコクのある風味",
+          "status": "unverified",
+          "sourceIds": [
+            "ico-icc-124-9-profile-vietnam"
+          ],
+          "quote": "",
+          "location": "",
+          "note": "ICOは地理的表示産地(Buon Ma Thuot、Cau Dat-Da Lat、Son La)を『quality, sweet aroma and strong flavour』と記す(産地別の風味記述ではない)。"
+        }
+      ],
+      "suggestedText": "ダクラク(ブオンマトート)はコーヒーの『首都』とされる(VICOFA)。",
+      "note": ""
+    },
+    "origin:ベトナム:sub:Da Lat/Cau Dat(Lam Dong)": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "Cau Dat-Da Latは地理的表示の産地",
+          "status": "verified",
+          "sourceIds": [
+            "ico-icc-124-9-profile-vietnam"
+          ],
+          "quote": "There are some geographic indications of the coffee regions (‘Buon Ma Thuot’, ‘Cau Dat – Da Lat’ and ‘Son La’)",
+          "location": "1.3 Summary of the history of coffee in Vietnam",
+          "note": ""
+        },
+        {
+          "text": "高標高アラビカの産地",
+          "status": "unverified",
+          "sourceIds": [
+            "ico-icc-124-9-profile-vietnam"
+          ],
+          "quote": "",
+          "location": "",
+          "note": "ICOはLam Dongをアラビカ栽培の支援地に挙げる。標高の記載なし。"
+        },
+        {
+          "text": "ブルボン・ティピカ・カティモールが中心(カティモールが優勢)",
+          "status": "unverified",
+          "sourceIds": [
+            "ico-icc-124-9-profile-vietnam"
+          ],
+          "quote": "",
+          "location": "",
+          "note": "ブルボンの存在のみ確認(Cau Dat-Da Lat産Bourbon)。カティモール優勢は全国値(99%)で、この産地の値ではない。"
+        },
+        {
+          "text": "柑橘の酸味・ドライフラワー様のフローラル、雨上がりの森を思わせるアーシーな香り、チョコレートのボディ",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "一次資料(公式・国際機関)の原文では確認できず。"
+        }
+      ],
+      "suggestedText": "Cau Dat-Da Latは地理的表示の対象産地(ICO)。",
+      "note": ""
+    },
+    "origin:ベトナム:gradeSystem": {
+      "status": "unverified",
+      "claims": [
+        {
+          "text": "TCVN 4193(直近改訂は2014年)",
+          "status": "unverified",
+          "sourceIds": [
+            "hethongphapluat-tcvn-4193-2014",
+            "tcvn-4193-2014-official"
+          ],
+          "quote": "",
+          "location": "",
+          "note": "TCVN 4193:2014が2005年版を置き換えたことは転載の前文(二次・抜粋)で確認。2014年が直近かは未確認。規格本文は取得できず(unverified)。"
+        },
+        {
+          "text": "欠点数・スクリーンサイズで格付けする",
+          "status": "unverified",
+          "sourceIds": [
+            "hethongphapluat-tcvn-4193-2014",
+            "tcvn-4193-2014-official"
+          ],
+          "quote": "",
+          "location": "",
+          "note": "転載の表1は『Hạng 1 / A / 1 / 18a』のような等級表記の冒頭のみ読めた。格付けの基準は本文が取れず確認できない。"
+        },
+        {
+          "text": "特級(Special Grade)からGrade 1〜5までの序列",
+          "status": "unverified",
+          "sourceIds": [
+            "tcvn-4193-2014-official"
+          ],
+          "quote": "",
+          "location": "",
+          "note": "本文が取れず確認できない。"
+        },
+        {
+          "text": "300gサンプルあたりの欠点数上限はロブスタ147個、アラビカ86個",
+          "status": "unverified",
+          "sourceIds": [
+            "tcvn-4193-2014-official"
+          ],
+          "quote": "",
+          "location": "",
+          "note": "本文が取れず確認できない。検索結果の要約には、2014年版は『300g当たりの欠点数』ではなく質量%の基準に変わったとの記述があった(二次資料・未確認)。147/86の出典は不明で、誤りの可能性が高い。"
+        },
+        {
+          "text": "スクリーンサイズはS18/S16/S13(1/64インチ単位)等で表記される",
+          "status": "unverified",
+          "sourceIds": [
+            "tcvn-4193-2014-official"
+          ],
+          "quote": "",
+          "location": "",
+          "note": "本文が取れず確認できない(転載の前文は篩番号18・16・15・14・13と記すが有料部分)。"
+        }
+      ],
+      "suggestedText": "",
+      "note": "TCVN 4193:2014の本文(欠点の表)を公式サイトから取得できなかったため、全主張をunverifiedとした。アプリの147/86という数字は特に要確認。"
+    },
+    "origin:ベトナム:officialBody": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "VICOFA(ベトナムコーヒーカカオ協会)は1990年設立",
+          "status": "verified",
+          "sourceIds": [
+            "vicofa-bo-may-to-chuc"
+          ],
+          "quote": "Hiệp hội Cà phê - Ca Cao Việt Nam (VICOFA) được thành lập theo Nghị quyết của Hội nghị các hội viên sáng lập ngày 04/01/1990",
+          "location": "Bộ máy tổ chức",
+          "note": "1990年1月4日の創立会員会議の決議で設立、同年1月22日に当時の対外経済相が承認。"
+        },
+        {
+          "text": "VICOFAは業界団体である",
+          "status": "verified",
+          "sourceIds": [
+            "vicofa-bo-may-to-chuc"
+          ],
+          "quote": "Hiệp hội Cà phê - Ca cao Việt Nam là một tổ chức xã hội - nghề nghiệp, phi lợi nhuận",
+          "location": "Bộ máy tổ chức",
+          "note": "非営利の社会・職業団体。"
+        },
+        {
+          "text": "VICOFAは輸出許可・格付けの権限を持たない",
+          "status": "unverified",
+          "sourceIds": [
+            "vicofa-bo-may-to-chuc"
+          ],
+          "quote": "",
+          "location": "",
+          "note": "定款(Điều 6)の権限一覧に輸出許可・格付けは含まれないが、『持たない』と明記した記述はない。"
+        },
+        {
+          "text": "等級規格(TCVN 4193)は科学技術省傘下のSTAMEQが所管",
+          "status": "unverified",
+          "sourceIds": [
+            "stamex-tcvn-gioi-thieu-chung",
+            "hethongphapluat-tcvn-4193-2014"
+          ],
+          "quote": "",
+          "location": "",
+          "note": "STAMEQが科学技術省に属することは確認(別claim)。TCVN 4193:2014の前文(転載)は『農業農村開発省が提案、STAMEQが審査、科学技術省が公布』と記す。"
+        },
+        {
+          "text": "STAMEQは科学技術省に属する機関",
+          "status": "verified",
+          "sourceIds": [
+            "stamex-tcvn-gioi-thieu-chung"
+          ],
+          "quote": "Ủy ban Tiêu chuẩn Đo lường Chất lượng Quốc gia ngày nay có tiền thân là Tổng cục Tiêu chuẩn Đo lường Chất lượng (STAMEQ) là cơ quan trực thuộc Bộ Khoa học và Công nghệ",
+          "location": "Giới thiệu chung",
+          "note": "2025年3月から『国家標準計量品質委員会(Ủy ban TCĐLCL Quốc gia)』。英語名は Commission for the Standards, Metrology and Quality of Viet Nam (STAMEQ)。"
+        },
+        {
+          "text": "技術委員会TCVN/TC/F16がTCVN 4193を所管する",
+          "status": "unverified",
+          "sourceIds": [
+            "hethongphapluat-tcvn-4193-2014"
+          ],
+          "quote": "TCVN 4193:2014 do Cục chế biến nông lâm thủy sản và nghề muối và Công ty Cổ phần Giám định cà phê và hàng hóa xuất nhập khẩu biên soạn, Bộ Nông nghiệp và Phát triển nông thôn đề nghị, Tổng cục Tiêu chuẩn Đo lường Chất lượng thẩm định, Bộ Khoa học và Công nghệ công bố.",
+          "location": "Lời nói đầu(前文、転載)",
+          "note": "二次資料(転載)の前文にTC/F16の名はなく、農業加工・製塩局と検査会社が起草と記す。TC/F16は転載ページの解説文(規格本文ではない)にのみ登場。"
+        }
+      ],
+      "suggestedText": "VICOFA(ベトナムコーヒーカカオ協会)は1990年に設立された業界団体(非営利の社会・職業団体)。国の標準・計量・品質を所管するSTAMEQ(国家標準計量品質委員会)は科学技術省に属する。",
+      "note": "TCVN 4193の所管についてのアプリの記述(TC/F16)は一次資料で確認できていない。"
+    }
+  }
+}

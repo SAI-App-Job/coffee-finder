@@ -1,9 +1,10 @@
 import { memo, useState } from "react";
 import { Sparkles, Coffee, MapPin, ExternalLink, Heart } from "lucide-react";
-import { DISCOVERY_FACTS } from "../data/discoveryFacts";
+import { PUBLISHED_FACTS, factKey } from "../data/published";
+import { SourceLinks } from "./common";
 import { brandName, designatedBrandExplanation, localizeFact, processingExplanation } from "../data/localize";
 import { ORIGIN_GUIDE } from "../data/originGuide";
-import { getGradeExplanation } from "../utils/grade";
+import { getGradeExplanation, getGradeExplanationKey } from "../utils/grade";
 import { categorizeFlavorNotes } from "../utils/flavor";
 import { cityFromAddress, formatDate, formatPrice } from "../utils/format";
 import { isNewArrival } from "../utils/productSort";
@@ -11,14 +12,17 @@ import { useT } from "../i18n";
 
 export function DiscoveryFactCard() {
   const t = useT();
-  const [index, setIndex] = useState(() => Math.floor(Math.random() * DISCOVERY_FACTS.length));
-  const fact = localizeFact(DISCOVERY_FACTS[index]);
+  const [index, setIndex] = useState(() => Math.floor(Math.random() * PUBLISHED_FACTS.length));
+  // 出典を確認できた豆知識だけを出す。1話も無ければ、カード自体を出さない。
+  if (PUBLISHED_FACTS.length === 0) return null;
+  const rawFact = PUBLISHED_FACTS[index % PUBLISHED_FACTS.length];
+  const fact = localizeFact(rawFact);
 
   const showAnother = () => {
     setIndex((prev) => {
-      if (DISCOVERY_FACTS.length <= 1) return prev;
-      let next = Math.floor(Math.random() * DISCOVERY_FACTS.length);
-      while (next === prev) next = Math.floor(Math.random() * DISCOVERY_FACTS.length);
+      if (PUBLISHED_FACTS.length <= 1) return prev;
+      let next = Math.floor(Math.random() * PUBLISHED_FACTS.length);
+      while (next === prev) next = Math.floor(Math.random() * PUBLISHED_FACTS.length);
       return next;
     });
   };
@@ -39,11 +43,14 @@ export function DiscoveryFactCard() {
       </div>
       <h3 className="font-serif text-[16px] text-[var(--c-text)]">{fact.title}</h3>
       <p className="text-[13px] leading-relaxed text-[var(--c-text-2)]">{fact.text}</p>
+      <p className="text-[11px] text-[var(--c-text-3)] leading-relaxed">
+        <SourceLinks keys={[factKey(rawFact)]} />
+      </p>
     </div>
   );
 }
 
-export function HoverExplainTag({ label, category, detail }) {
+export function HoverExplainTag({ label, category, detail, sourceKeys }) {
   // マウスホバーで解説をポップ表示するタグ。タッチ端末では代わりにタップで
   // 開閉できるよう、ホバーとクリックの両方をトリガーにしている。
   //
@@ -106,6 +113,11 @@ export function HoverExplainTag({ label, category, detail }) {
           >
             {detail}
           </p>
+          {sourceKeys && sourceKeys.length > 0 && (
+            <p style={{ marginTop: 6, marginBottom: 0, fontSize: 10, lineHeight: 1.5, color: "#A89880" }}>
+              <SourceLinks keys={sourceKeys} />
+            </p>
+          )}
           {/* ふきだしの三角形 */}
           <div
             style={{
@@ -133,6 +145,10 @@ function ProductCardImpl({ product, onOpenMap, onLearnOrigin, isFavorite, onTogg
     ? processingExplanation(product.processingMethod)
     : null;
   const gradeDetail = getGradeExplanation(product.grade, product.originCountry, product.designatedBrand);
+  const gradeKey = gradeDetail ? getGradeExplanationKey(product.grade, product.originCountry, product.designatedBrand) : null;
+  const brandExplanation = product.designatedBrand ? designatedBrandExplanation(product.designatedBrand) : null;
+  const brandSourceKeys = brandExplanation ? [`brand:${product.designatedBrand}`] : [];
+  const processingSourceKeys = processingDetail ? [`processing:${product.processingMethod}`] : [];
   const flavorCategories = categorizeFlavorNotes(product.flavorNotes);
   // 産地タブに詳細ページが無い国は、ボタン自体は表示したままグレーアウトする
   // (非表示にすると「情報が無いこと」自体が伝わらないため)。実際の遷移可否・
@@ -226,10 +242,8 @@ function ProductCardImpl({ product, onOpenMap, onLearnOrigin, isFavorite, onTogg
               <HoverExplainTag
                 label={brandName(product.designatedBrand)}
                 category={t("特定銘柄")}
-                detail={
-                  designatedBrandExplanation(product.designatedBrand) ||
-                  t("この銘柄についての解説はまだ用意されていません。")
-                }
+                detail={brandExplanation || t("この銘柄についての解説はまだ用意されていません。")}
+                sourceKeys={brandSourceKeys}
               />
             )}
             {product.processingMethod && (
@@ -237,10 +251,16 @@ function ProductCardImpl({ product, onOpenMap, onLearnOrigin, isFavorite, onTogg
                 label={t(product.processingMethod)}
                 category={t("精選方法")}
                 detail={processingDetail || t("この精選方法についての解説はまだ用意されていません。")}
+                sourceKeys={processingSourceKeys}
               />
             )}
             {product.grade && (
-              <HoverExplainTag label={product.grade} category={t("グレード")} detail={gradeDetail} />
+              <HoverExplainTag
+                label={product.grade}
+                category={t("グレード")}
+                detail={gradeDetail}
+                sourceKeys={gradeKey ? [gradeKey] : []}
+              />
             )}
             {roastTag && (
               <span

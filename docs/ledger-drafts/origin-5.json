@@ -1,0 +1,1448 @@
+{
+  "scope": "origin-5 (コスタリカ・パナマ)",
+  "verifiedOn": "2026-11-08",
+  "sources": {
+    "icafe-acerca": {
+      "title": "Acerca del ICAFE",
+      "org": "Instituto del Café de Costa Rica (ICAFE)",
+      "url": "https://www.icafe.cr/transparencia-institucional-icafe/acceso-a-la-informacion/acerca-del-icafe/index.php",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": "curlで取得した生HTMLから本文抽出"
+    },
+    "icafe-estructura": {
+      "title": "Estructura del Sector",
+      "org": "Instituto del Café de Costa Rica (ICAFE)",
+      "url": "http://www.icafe.cr/transparencia-institucional-icafe/acceso-a-la-informacion/estructura-del-sector/index.php",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": "ページに作成年の記載なし(数値は時点不明)"
+    },
+    "icafe-regiones": {
+      "title": "Regiones Cafetaleras de Costa Rica",
+      "org": "Instituto del Café de Costa Rica (ICAFE)",
+      "url": "https://www.icafe.cr/nuestro-cafe/regiones-cafetaleras/",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08"
+    },
+    "icafe-lossantos": {
+      "title": "Los Santos (Regiones Cafetaleras)",
+      "org": "Instituto del Café de Costa Rica (ICAFE)",
+      "url": "https://www.icafe.cr/nuestro-cafe/regiones-cafetaleras/lossantos/",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08"
+    },
+    "icafe-pliego-ig-2008": {
+      "title": "Pliego de Condiciones, Indicación Geográfica 'Café de Costa Rica' (2008)",
+      "org": "Instituto del Café de Costa Rica (ICAFE)",
+      "url": "https://www.icafe.cr/wp-content/uploads/indicacion_geografica/Pliego%20de%20Condiciones.pdf",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": "128ページ。歴史の章は研究文献(Hallほか)を引用して書かれたICAFEの文書。pypdfで全文抽出"
+    },
+    "icafe-informe-actividad-2025": {
+      "title": "Informe sobre la Actividad Cafetalera en Costa Rica 2025 (cosecha 2024-2025)",
+      "org": "Instituto del Café de Costa Rica (ICAFE)",
+      "url": "https://www.icafe.cr/wp-content/uploads/informacion_mercado/informes_actividad/actual/Informe%20Actividad%20Cafetalera.pdf",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": "95ページ。pypdfで全文抽出"
+    },
+    "cr-ley-2762": {
+      "title": "Ley N° 2762 Ley sobre el Régimen de Relaciones entre Productores, Beneficiadores y Exportadores de Café (改正を含む統合版)",
+      "org": "Asamblea Legislativa de la República de Costa Rica(FAOLEXが転載)",
+      "url": "https://faolex.fao.org/docs/pdf/cos73525-2001.pdf",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": "立法府(Departamento de Servicios Parlamentarios)作成の統合版PDFをFAOLEXが公開。公式官報(pgrweb)は403で取得できず。1961年法の本文はOficina del Caféと表記し、改正で名称が変わった箇所を含む。pypdfで全文抽出"
+    },
+    "usda-fas-cr-coffee-annual-2025": {
+      "title": "Costa Rica Coffee Annual CS2025-0010 (2025-05)",
+      "org": "USDA Foreign Agricultural Service (GAIN)",
+      "url": "https://apps.fas.usda.gov/newgainapi/api/Report/DownloadReportByFileName?fileName=Coffee+Annual_San+Jose_Costa+Rica_CS2025-0010.pdf",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": "コスタリカの報告(パナマの記述ではない)"
+    },
+    "wcr-villa-sarchi": {
+      "title": "Villa Sarchi (World Coffee Research Coffee Varieties Catalog)",
+      "org": "World Coffee Research",
+      "url": "https://varieties.worldcoffeeresearch.org/varieties/villa-sarchi",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08"
+    },
+    "catie-contact": {
+      "title": "Contact - CATIE",
+      "org": "CATIE (Centro Agronómico Tropical de Investigación y Enseñanza)",
+      "url": "https://www.catie.ac.cr/en/contact/",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08"
+    },
+    "cr-pgrweb-ley2762": {
+      "title": "SCIJ(PGR)のLey 2762本文ページ",
+      "org": "Procuraduría General de la República (Costa Rica)",
+      "url": "https://www.pgrweb.go.cr/scij/Busqueda/Normativa/Normas/nrm_texto_completo.aspx?param1=NRTC&nValor1=1&nValor2=1&nValor3=0&strTipM=TC",
+      "kind": "primary",
+      "readMethod": "failed",
+      "accessed": "2026-11-08",
+      "note": "curlで403。代用せず、FAOLEX転載の統合版で読んだ"
+    },
+    "icafe-presentacion-unfccc": {
+      "title": "charla_icafe_mexico_aaron.pdf(ICAFE発表資料)",
+      "org": "ICAFE(UNFCCCサイトに掲載)",
+      "url": "https://unfccc.int/files/focus/mitigation/application/pdf/charla_icafe_mexico_aaron.pdf",
+      "kind": "primary",
+      "readMethod": "failed",
+      "accessed": "2026-11-08",
+      "note": "curlの返答がPDFではなくHTML。取得できず(回避せず)"
+    },
+    "cafedecostarica-com": {
+      "title": "cafedecostarica.com",
+      "org": "ICAFE関連",
+      "url": "https://www.cafedecostarica.com",
+      "kind": "primary",
+      "readMethod": "failed",
+      "accessed": "2026-11-08",
+      "note": "Account Suspended / Incapsulaのページが返るのみ"
+    },
+    "usda-fas-cr-coffee-annual-2026": {
+      "title": "Costa Rica Coffee Annual CS2026-0004 (2026-05)",
+      "org": "USDA FAS",
+      "url": "https://www.fas.usda.gov/data/gain-report/2026/05/Coffee%20Annual_San%20Jose_Costa%20Rica_CS2026-0004.pdf",
+      "kind": "primary",
+      "readMethod": "failed",
+      "accessed": "2026-11-08",
+      "note": "www.fas.usda.gov は Access Denied。apps.fas.usda.gov経由で2026年版PDFは取得したが本文の照合は未実施(2025年版を使用)"
+    },
+    "nacion-tarrazu-do-snippet": {
+      "title": "Café Tarrazú logra protección de origen (La Nación)",
+      "org": "La Nación",
+      "url": "https://www.nacion.com/economia/agro/cafe-tarrazu-logra-proteccion-de-origen-en-180/VKXPHHZ7HRDJJOH3MXJAMXGPTQ/story/",
+      "kind": "secondary",
+      "readMethod": "snippet",
+      "accessed": "2026-11-08",
+      "note": "検索要約のみ。本文は読んでいない"
+    },
+    "fob-80pct-snippet": {
+      "title": "Café Imports / Atlas Coffee / Tico Times の産地解説(検索要約)",
+      "org": "小売・報道",
+      "url": "https://www.cafeimports.com/australia/costa-rica",
+      "kind": "secondary",
+      "readMethod": "snippet",
+      "accessed": "2026-11-08",
+      "note": "FOBの80%などを述べるとされる二次資料。検索要約のみで本文未読"
+    },
+    "scap-story": {
+      "title": "Our Story",
+      "org": "Specialty Coffee Association of Panama (SCAP)",
+      "url": "https://scap-panama.com/about-scap/story/",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08"
+    },
+    "scap-about": {
+      "title": "About SCAP",
+      "org": "Specialty Coffee Association of Panama (SCAP)",
+      "url": "https://scap-panama.com/about-scap/",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08"
+    },
+    "scap-historia-2024": {
+      "title": "El café de Panamá guarda su historia (SCAP報道発表・XXVIII BOP)",
+      "org": "Specialty Coffee Association of Panama (SCAP)",
+      "url": "https://scap-panama.com/el-cafe-de-panama-guarda-su-historia/",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": "SCAPの発表文(Nota de Prensa)。発表日は『31 de mayo』で年は明記なし(XXVIII版・『20年後』の記述から2024年と推定)"
+    },
+    "scap-hacienda-esmeralda": {
+      "title": "HACIENDA LA ESMERALDA (SCAP会員紹介)",
+      "org": "Specialty Coffee Association of Panama (SCAP)",
+      "url": "https://scap-panama.com/haciendaesmeralda/",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08"
+    },
+    "scap-bop2017": {
+      "title": "Best of Panama 2017",
+      "org": "Specialty Coffee Association of Panama (SCAP)",
+      "url": "https://scap-panama.com/bop2017/",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08"
+    },
+    "scap-auctions-2001-2017": {
+      "title": "Auctions 2001-2017 (Results 2017)",
+      "org": "Specialty Coffee Association of Panama (SCAP)",
+      "url": "https://scap-panama.com/auctions2001-2017/",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08"
+    },
+    "scap-results-2004": {
+      "title": "Best of Panama 2004 - Final Results (画像 results2004.jpeg)",
+      "org": "Specialty Coffee Association of Panama (SCAP)",
+      "url": "http://scap-panama.com/wp-content/uploads/2017/10/results2004.jpeg",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": "画像を取得し目視で読んだ(ページ末尾『Page last modified July 3, 2004』)。quoteは目視転記でスクリプト照合の対象外(転記ファイル results2004_tr.txt)"
+    },
+    "scap-press-2025-record": {
+      "title": "Café Geisha de Panamá sacude al mundo con impresionantes récords mundiales (SCAP報道発表、2025年8月)",
+      "org": "Specialty Coffee Association of Panama (SCAP)",
+      "url": "https://scap-panama.com/cafe-geisha-de-panama-sacude-al-mundo-con-impresionantes-records-mundiales/",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08"
+    },
+    "scap-press-2025-bop": {
+      "title": "Hacienda La Esmeralda arrasó en el BOP 2025 (SCAP報道発表、2025-06-08)",
+      "org": "Specialty Coffee Association of Panama (SCAP)",
+      "url": "https://scap-panama.com/hacienda-la-esmeralda-arraso-en-el-bop-2025/",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08"
+    },
+    "scap-finca-carmen": {
+      "title": "Finca Carmen (SCAP会員紹介)",
+      "org": "SCAP",
+      "url": "https://scap-panama.com/carmen/",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": "会員農園自身の紹介文をSCAPが掲載"
+    },
+    "scap-finca-deborah": {
+      "title": "Finca Deborah (SCAP会員紹介)",
+      "org": "SCAP",
+      "url": "https://scap-panama.com/finca-deborah/",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": "会員農園自身の紹介文をSCAPが掲載"
+    },
+    "scap-finca-lerida": {
+      "title": "Finca Lerida (SCAP会員紹介)",
+      "org": "SCAP",
+      "url": "https://scap-panama.com/finca-lerida/",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": "会員農園自身の紹介文をSCAPが掲載"
+    },
+    "scap-press-members": {
+      "title": "Press (SCAP会員農園紹介の一覧)",
+      "org": "SCAP",
+      "url": "https://scap-panama.com/press/",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08"
+    },
+    "bop-about-2026": {
+      "title": "About us 2026 - Best of Panama",
+      "org": "Best of Panama / SCAP",
+      "url": "https://bestofpanama.org/about2026",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08"
+    },
+    "bop-auction-2018": {
+      "title": "Best of Panama Auction 2018 (結果)",
+      "org": "Best of Panama / SCAP",
+      "url": "https://bestofpanama.auction/auction-2018",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08"
+    },
+    "bop-auction-2021": {
+      "title": "Best of Panama Auction 2021 (結果)",
+      "org": "Best of Panama / SCAP",
+      "url": "https://bestofpanama.auction/auction-2021",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08"
+    },
+    "wcr-geisha-panama": {
+      "title": "Geisha (Panama) - World Coffee Research Coffee Varieties Catalog",
+      "org": "World Coffee Research",
+      "url": "https://varieties.worldcoffeeresearch.org/varieties/geisha-panama",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08"
+    },
+    "laestrella-ngabe-snippet": {
+      "title": "La zafra cafetalera en Panamá y el rol de la mano de obra Ngäbe Buglé",
+      "org": "La Estrella de Panamá",
+      "url": "https://www.laestrella.com.pa/panama/nacional/la-zafra-cafetalera-en-panama-y-el-rol-de-la-mano-de-obra-ngabe-bugle-EN19366741",
+      "kind": "secondary",
+      "readMethod": "snippet",
+      "accessed": "2026-11-08",
+      "note": "検索要約のみ"
+    },
+    "bestofpanama-org-home": {
+      "title": "Home 2026 - Best of Panama",
+      "org": "Best of Panama / SCAP",
+      "url": "https://bestofpanama.org",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": "歴史ページはなく設立年の記載なし(『Three decades of Best of Panama』のみ)"
+    }
+  },
+  "entries": {
+    "origin:コスタリカ:tagline": {
+      "status": "unverified",
+      "claims": [
+        {
+          "text": "明るくクリーンな酸味と、しっかりしたコク",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "味わいの形容は一次資料の原文で確認できない。ICAFEはロス・サントス地域について『buen cuerpo, con una taza de alta acidez, fina y no punzante』と述べるが、国全体の説明ではない"
+        },
+        {
+          "text": "ハニープロセス発祥の地",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "ICAFE・WCR・USDA FASの原文でハニープロセスの発祥に触れた記述を確認できず(取得した資料内に該当語なし)"
+        }
+      ],
+      "suggestedText": "",
+      "note": "英訳(Bright, clean acidity and solid body. The home of the honey process)は日本語と同じ主張。 (suggestedText 未作成: 確認できた主張のみでは文にならない)"
+    },
+    "origin:コスタリカ:regions": {
+      "status": "verified",
+      "claims": [
+        {
+          "text": "タラス(Tarrazú)は主要産地",
+          "status": "verified",
+          "sourceIds": [
+            "icafe-informe-actividad-2025"
+          ],
+          "quote": "Tarrazú se mantuvo como el principal cantón cafetalero de Costa Rica por octava cosecha consecutiva",
+          "location": "2.2.2 Distribución de la producción por cantones",
+          "note": "Tarrazúは『地域(region)』ではなくロス・サントス地域に属する『郡(cantón)』"
+        },
+        {
+          "text": "ウエストバレー(Valle Occidental)はICAFEの生産地域の一つ",
+          "status": "verified",
+          "sourceIds": [
+            "icafe-informe-actividad-2025"
+          ],
+          "quote": "Valle Occidental 331,378 388,093 315,367 267,012 14.7% -48,355 -15.3%",
+          "location": "Tabla 2-2 Producción de Café Fruta por Región Cafetalera",
+          "note": ""
+        }
+      ],
+      "suggestedText": "",
+      "note": "英訳(Tarrazú, West Valley)は日本語と同じ。ICAFEの地域名はLos Santos(タラスを含む)。"
+    },
+    "origin:コスタリカ:terroir": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "太平洋・大西洋両方の影響を受ける",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "取得した資料(ICAFE地域ページ・Los Santosページ・Informe 2025・USDA FAS)に該当する記述を確認できず。ICAFE地域ページは『vertientes(斜面)による違い』にのみ触れる"
+        },
+        {
+          "text": "標高1,200m超の高地は火山起源の土壌",
+          "status": "verified",
+          "sourceIds": [
+            "icafe-regiones"
+          ],
+          "quote": "y las zonas altas, arriba de 1.200 metros, de origen volcánico, donde el café es más fuerte o más ácido y también más aromático",
+          "location": "Regiones Cafetaleras de Costa Rica 第3段落",
+          "note": ""
+        },
+        {
+          "text": "土壌は肥沃",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "ICAFEのLos Santosページは土壌を『suelos en su gran mayoría de origen sedimentario ... regular calidad, ... alta acidez y bajo contenido de bases』と述べ、『肥沃』とは書いていない(ロス・サントス地域の記述) [icafe-lossantos] \"En su gran mayoría los suelos son de regular calidad, caracterizados por su alta acidez y bajo contenido de bases\""
+        },
+        {
+          "text": "多様な微気候",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "『microclima』という語を含む記述は取得資料になし。ICAFE地域ページは標高に応じた降水・気温の変化を述べる"
+        },
+        {
+          "text": "ICAFEが8つの公式産地を定義",
+          "status": "conflict",
+          "sourceIds": [
+            "icafe-regiones",
+            "icafe-informe-actividad-2025"
+          ],
+          "quote": "la excelencia del café de Costa Rica puede disfrutarse de ocho formas distintas, pues son ocho las zonas productoras de café",
+          "location": "icafe.cr 地域ページ 冒頭",
+          "note": "ICAFE自身の2資料が食い違う: 地域ページは8つ。一方、Informe 2025のTabla 2-2は『artículo 197 del Reglamento が定める地域』として7地域(Coto Brus, Los Santos, Pérez Zeledón, Turrialba, Valle Central, Valle Occidental, Zona Norte)を表示。USDA FAS(ICAFE地図を引用)は『8 coffee production regions』と書き、表では7行(括弧内の旧区分名で8)。数え方の違いの可能性があるが、ユーザーが判断 [icafe-informe-actividad-2025] \"*/ Con base en las regiones cafetaleras que define el artículo 197 del Reglamento a la Ley No 2762.\" [usda-fas-cr-coffee-annual-2025] \"The following map shows the 8 coffee production regions of Costa Rica.\""
+        },
+        {
+          "text": "タラス地方は標高約1,500〜1,900m",
+          "status": "unverified",
+          "sourceIds": [
+            "icafe-lossantos"
+          ],
+          "quote": "La producción cafetalera está ubicada entre los 1.200 y 1.900 metros de altitud",
+          "location": "Los Santos 本文",
+          "note": "ICAFEはロス・サントス地域(タラス郡・ドタ郡・レオン・コルテス郡を含む)の生産地を標高1,200〜1,900mと述べ、『Dota, Tarrazú y León Cortés tienen alturas que llegan hasta los 1.900 metros』とする。1,500mという下限は確認できず(別の報道はICAFE引用で1,350〜1,700mとするが二次資料のみ)"
+        },
+        {
+          "text": "国内最高標高帯の一つ",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "比較の根拠となる一次資料なし"
+        },
+        {
+          "text": "ミル自体は標高1,600m、上部の畑は1,800m付近",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "どのミルか不明。一次資料に該当なし"
+        },
+        {
+          "text": "雨季は5〜11月、乾季は12〜4月(ロス・サントス地域)",
+          "status": "verified",
+          "sourceIds": [
+            "icafe-lossantos"
+          ],
+          "quote": "se caracteriza por una época lluviosa de siete meses (mayo a noviembre) y seca (diciembre a abril) bien definidas",
+          "location": "Los Santos 気候の段落",
+          "note": "ICAFEの記述はロス・サントス地域のもの。国全体の記述ではない"
+        }
+      ],
+      "suggestedText": "コスタリカでは、標高1,200mを超える高地は火山起源の土壌とICAFEは説明する。ロス・サントス地域(タラス郡などを含む)の生産地は標高1,200〜1,900mで、雨季は5〜11月、乾季は12〜4月(ICAFE)。",
+      "note": "英訳は日本語と同じ主張(差異なし)。"
+    },
+    "origin:コスタリカ:harvestSeason": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "収穫は11月から2月に集中する",
+          "status": "verified",
+          "sourceIds": [
+            "usda-fas-cr-coffee-annual-2025"
+          ],
+          "quote": "The coffee harvest is concentrated in the months of November to February.",
+          "location": "Production / Harvest の段落(p.4)",
+          "note": ""
+        },
+        {
+          "text": "主収穫期は11月中旬から",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "『中旬』の根拠なし(FAS: November to February、ICAFE Los Santos: noviembre a marzo)"
+        },
+        {
+          "text": "ピークは12〜2月",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "ピーク月を述べた一次資料を確認できず"
+        },
+        {
+          "text": "標高の高い地域では3月頃まで伸びる(ロス・サントス地域の収穫は11月〜3月)",
+          "status": "verified",
+          "sourceIds": [
+            "icafe-lossantos"
+          ],
+          "quote": "La recolección comprende un período de cinco meses, de noviembre a marzo.",
+          "location": "Los Santos 収穫の段落",
+          "note": "USDA FASは『can end around May in some higher altitude areas』と、より遅い終期も記載"
+        }
+      ],
+      "suggestedText": "収穫は11月から2月に集中する(USDA FASがICAFEの情報として報告)。ロス・サントス地域(標高1,200〜1,900m)の収穫期は11月から3月(ICAFE)。標高の高い地域では5月頃まで続くこともある(USDA FAS)。",
+      "note": "USDA FAS原文: harvest starts around August in the lower altitudes ... and can end around May in some higher altitude areas。英訳は日本語と同じ主張。"
+    },
+    "origin:コスタリカ:varietiesDetail": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "カトゥーラ、カトゥアイが主力",
+          "status": "verified",
+          "sourceIds": [
+            "icafe-estructura"
+          ],
+          "quote": "Predomina la siembra de cultivares de porte bajo y alta productividad, como el caturra y el catauí, los cuales cubren más de 90 por ciento del área cafetalera nacional.",
+          "location": "Estructura del Sector / Productores",
+          "note": "原文表記は『catauí』。時点不明"
+        },
+        {
+          "text": "Villa Sarchiはブルボンの単一遺伝子変異による矮性の自然変異",
+          "status": "verified",
+          "sourceIds": [
+            "wcr-villa-sarchi"
+          ],
+          "quote": "Villa Sarchi (also called La Luisa or Villalobos Bourbon) is a natural mutation of a Bourbon population with a single-gene mutation that causes the plant to grow smaller",
+          "location": "Villa Sarchi / Origin",
+          "note": ""
+        },
+        {
+          "text": "Villa Sarchiはウエストバレー地域で最初に選抜された",
+          "status": "unverified",
+          "sourceIds": [
+            "wcr-villa-sarchi"
+          ],
+          "quote": "The variety was discovered in Costa Rica in the 1950s or 1960s in the northwestern region of the province of Alajuela, and has subsequently undergone pedigree selection",
+          "location": "Villa Sarchi / Origin",
+          "note": "WCRは『アラフエラ県北西部で発見され、その後そこで系統選抜』と述べるが『ウエストバレー(Valle Occidental)』『最初に選抜』とは書いていない"
+        },
+        {
+          "text": "Villa Lobosも在来の変異種",
+          "status": "conflict",
+          "sourceIds": [
+            "icafe-pliego-ig-2008",
+            "wcr-villa-sarchi"
+          ],
+          "quote": "Typica, Villalobos (subtipo del Typica), Híbrido Tico, Villa Sarchí y Mundo Nova",
+          "location": "Pliego p.7 Caturra",
+          "note": "資料どうしが食い違う: ICAFE(2008)はVillalobosをTypicaの亜種とし、WCRはVilla Sarchiの別名を『Villalobos Bourbon』とする。ユーザーが判断 [wcr-villa-sarchi] \"Villa Sarchi (also called La Luisa or Villalobos Bourbon)\""
+        },
+        {
+          "text": "近年はSL28やゲイシャなど実験的品種へ転換が進む",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "一次資料の原文で確認できず"
+        },
+        {
+          "text": "耐病性のICAFE 95等への転換も進む",
+          "status": "unverified",
+          "sourceIds": [
+            "icafe-informe-actividad-2025"
+          ],
+          "quote": "Catigua MG2, Costa Rica 95, Obata Rojo, Obata Amarillo y Paraíso MG1 H4 -19",
+          "location": "Informe 2025 c) Semilla seleccionada de Café",
+          "note": "ICAFEの認定種子プログラム(2024-25)に『Costa Rica 95』『Obatá』『Paraíso MG1』『Catiguá MG2』が登録品種として載る事実は確認。ただし名称は『ICAFE 95』ではなく『Costa Rica 95』、『耐病性』『転換が進む』という記述は確認できず"
+        }
+      ],
+      "suggestedText": "カトゥーラ、カトゥアイが主力(ICAFE。両者で全国のコーヒー栽培面積の90%超)。Villa Sarchiはブルボンの単一遺伝子変異による矮性の自然変異(WCR)。",
+      "note": "英訳は日本語と同じ主張(差異なし)。"
+    },
+    "origin:コスタリカ:farmStructure": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "生産者の約9割(92%)が5ha未満",
+          "status": "verified",
+          "sourceIds": [
+            "icafe-estructura"
+          ],
+          "quote": "El 92 por ciento de los productores tienen una área sembrada de café menor de cinco hectáreas y, en conjunto, representan 44 por ciento del área total.",
+          "location": "Estructura del Sector / Productores",
+          "note": "ICAFEのページに年の記載なし(1990年代末にも『90%超』とICAFEのPliego p.102)。5ha未満の生産者は面積では44%"
+        },
+        {
+          "text": "2005〜2008年頃からタラス等で独立ミル(マイクロミル)が誕生",
+          "status": "unverified",
+          "sourceIds": [
+            "usda-fas-cr-coffee-annual-2025"
+          ],
+          "quote": "the number of coffee mills increased from 210 in MY 2013/14 to 308 mills in MY 2023/24. Many of these mills are very small, known as micro-mills",
+          "location": "Production(p.5)",
+          "note": "マイクロミルの存在と増加(2013/14→2023/24)は確認。『2005〜2008年頃』『タラス』の起点は確認できず"
+        },
+        {
+          "text": "「マイクロミル革命」と呼ばれる潮流",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "呼称の一次資料なし"
+        },
+        {
+          "text": "生産者が大農園・多国籍企業に売る代わりに自分の土地で加工する",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "一次資料の原文で確認できず"
+        },
+        {
+          "text": "CoopeTarrazúのような大規模協同組合も併存する",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "取得資料にCoopetarrazúの記述なし"
+        }
+      ],
+      "suggestedText": "生産者の92%は5ha未満の栽培面積で、面積では全体の44%を占める(ICAFE。年の記載なし)。コーヒーのミルは2013/14年度の210から2023/24年度の308に増え、小規模な『マイクロミル』も多い(USDA FAS、ICAFEのデータ)。",
+      "note": "英訳は日本語と同じ主張(差異なし)。"
+    },
+    "origin:コスタリカ:history": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "1700年代後半に種子が持ち込まれた",
+          "status": "verified",
+          "sourceIds": [
+            "icafe-pliego-ig-2008"
+          ],
+          "quote": "Aunque las primeras semillas llegaron a fines del siglo XVIII, es hasta después de 1808 que se tiene certeza, apoyada por evidencia histórica, de que en Costa Rica se empezó a",
+          "location": "Pliego p.56",
+          "note": ""
+        },
+        {
+          "text": "1779年、キューバから持ち込まれた",
+          "status": "unverified",
+          "sourceIds": [
+            "icafe-pliego-ig-2008"
+          ],
+          "quote": "En el caso costarricense, no existe evidencia suficiente acerca de la fecha en que el",
+          "location": "Pliego p.55",
+          "note": "ICAFEは『到来の日付を示す十分な証拠がない』とし、最古の文書は1791年の手紙。1808年の種子についても『ジャマイカ産でほぼ確実で、従来考えられていたキューバではない』と述べる。『1779年』『キューバ』は確認できず(特に『キューバ』は原文が否定的) [icafe-pliego-ig-2008] \"es casi seguro que las mismas provenían de |Jamaica, donde ellos comerciaban libremente, y no de Cuba - como se creía anteriormente\""
+        },
+        {
+          "text": "カリブ海経由で持ち込まれた",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "一次資料の原文で確認できず"
+        },
+        {
+          "text": "1808年に商業生産が本格化した(1808年以降に重要な栽培活動が確認できる)",
+          "status": "verified",
+          "sourceIds": [
+            "icafe-pliego-ig-2008"
+          ],
+          "quote": "Aunque las primeras semillas llegaron a fines del siglo XVIII, es hasta después de 1808 que se tiene certeza, apoyada por evidencia histórica, de que en Costa Rica se empezó a",
+          "location": "Pliego p.56",
+          "note": "原文は『1808年以降に重要なコーヒー栽培活動が始まった確証がある』。『商業生産』という語は原文になし"
+        },
+        {
+          "text": "独立(1821年)前後に当局が苗木や土地を無償で配布して栽培を奨励した",
+          "status": "verified",
+          "sourceIds": [
+            "icafe-pliego-ig-2008"
+          ],
+          "quote": "La corporación josefina distribuyó gratuitamente matas de café entre los indigentes en el mismo año de la Independencia (1821).",
+          "location": "Pliego p.56",
+          "note": "配布の主体はサンホセ市の自治体(corporación josefina)。土地は『Para complementar la medida anterior concedió terrenos a quienes se dedicaran a la caficultura』。ICAFEの別の段落に『premiaron su cultivo con la liberación de gravámenes y la entrega gratuita de tierras』(p.19)。『政府』という書き方は主体が異なる"
+        },
+        {
+          "text": "1843年、英国向けの輸出が始まった(William Le Lacheur所有の帆船The Monarchによる)",
+          "status": "verified",
+          "sourceIds": [
+            "icafe-pliego-ig-2008"
+          ],
+          "quote": "fue a partir de 1843, con el envío de fruta a Inglaterra en el velero “The Monarch” de William Le Lacheur",
+          "location": "Pliego p.19",
+          "note": "ICAFEは『1843年から』国際商取引に本格参入と述べる。『ある船長の働きかけ』は不確認: 原文はLe Lacheurを『propietario del velero(船主)』とし、船長とは書かない"
+        },
+        {
+          "text": "それまでは主に南米向けに輸出されていた",
+          "status": "unverified",
+          "sourceIds": [
+            "icafe-pliego-ig-2008"
+          ],
+          "quote": "cuando el alemán George Stiepel logró transportar un cargamento cafetalero a Chile que se reexportó bajo la marca",
+          "location": "Pliego p.58",
+          "note": "1832年にドイツ人がチリへ積み出した事実は確認。『主に南米向け』とまでは書かれていない(別の箇所は『1832年の輸出が欧州市場への道を開いた』)"
+        },
+        {
+          "text": "独立後しばらくコーヒーが国の唯一の輸出品だった",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "取得資料に該当記述なし"
+        }
+      ],
+      "suggestedText": "最初の種子は18世紀末に持ち込まれたが、到来の日付を示す十分な証拠はない。コーヒー栽培が重要な活動になったと確証できるのは1808年以降(ICAFE)。独立の年の1821年にはサンホセ市が苗木を無償で配り、栽培者に土地を与えた。1832年にはドイツ人がチリへ積み出し、1843年にはウィリアム・ル・ラシュールの帆船ザ・モナーク号が英国へコーヒーを運んだ。",
+      "note": "英訳は日本語と同じ主張(1779年・キューバ・船長の記述も同じ)。"
+    },
+    "origin:コスタリカ:sub:タラス": {
+      "status": "unverified",
+      "claims": [
+        {
+          "text": "標高約1,500〜1,900m",
+          "status": "unverified",
+          "sourceIds": [
+            "icafe-lossantos"
+          ],
+          "quote": "Dota, Tarrazú y León Cortés tienen alturas que llegan hasta los 1.900 metros.",
+          "location": "Los Santos 副地域の段落",
+          "note": "下限1,500mは確認できず。ロス・サントス地域全体は1,200〜1,900m"
+        },
+        {
+          "text": "高標高でシャープな酸味・複雑な風味",
+          "status": "incorrect",
+          "sourceIds": [
+            "icafe-lossantos"
+          ],
+          "quote": "una taza de alta acidez, fina y no punzante",
+          "location": "Los Santos 風味の段落",
+          "note": "ICAFEはロス・サントスの酸味を『高く、きめ細かく、刺すようではない(no punzante)』と述べる。『シャープ』は原文と合わない可能性(訳語の問題の可能性あり)。『複雑』は確認できず"
+        },
+        {
+          "text": "国内生産の約35%を占める最大産地",
+          "status": "incorrect",
+          "sourceIds": [
+            "icafe-informe-actividad-2025"
+          ],
+          "quote": "Los Santos 674,838 774,837 660,211 806,474 44.5% 146,263 22.2%",
+          "location": "Tabla 2-2",
+          "note": "2024-25年度の生産量(果実ファネガ)ではロス・サントス地域が全国の44.5%、タラス郡単独は15.9%(Tabla 2-3)。『約35%』は栽培面積の比率(USDA FAS表: 28,519ha / 82,539ha = 34.6%、2022年)と一致するが、生産量の比率ではない [usda-fas-cr-coffee-annual-2025] \"Los Santos (Tarrazú) 27,944 28,519\" [icafe-informe-actividad-2025] \"Tarrazú 250,941 267,864 239,649 288,213 15.9% 48,564 20.3%\""
+        },
+        {
+          "text": "2019年に原産地呼称を取得",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "登録機関(Registro Nacional)の原文は未確認。二次資料のみ: nacion-tarrazu-do-snippet(検索要約のみ。『2019年2月』とする記述と、『1月4日承認』とする別の報道があり食い違い)"
+        }
+      ],
+      "suggestedText": "ロス・サントス地域(タラス郡・ドタ郡・レオン・コルテス郡を含む)は、2024-25年度の生産量で全国の44.5%を占める最大の生産地域。タラス郡は全国最大の生産郡(ICAFE Informe 2025)。",
+      "note": "英訳は日本語と同じ主張(差異なし)。キー名のタラスはTarrazú。"
+    },
+    "origin:コスタリカ:sub:ウエストバレー": {
+      "status": "unverified",
+      "claims": [
+        {
+          "text": "Cup of Excellence受賞が多い",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "Cup of Excellence公式サイトの受賞一覧は未照合"
+        },
+        {
+          "text": "在来品種(Villa Sarchi等)と実験的品種の宝庫",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "Villa Sarchiがアラフエラ県北西部で発見された点はWCRで確認(varietiesDetail参照)が、『宝庫』『実験的品種』は確認できず"
+        },
+        {
+          "text": "蜂蜜・ストーンフルーツ系の風味",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "一次資料の原文で確認できず"
+        }
+      ],
+      "suggestedText": "",
+      "note": "英訳は日本語と同じ主張(差異なし)。 (suggestedText 未作成: 確認できた主張のみでは文にならない)"
+    },
+    "origin:コスタリカ:gradeSystem": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "標高による等級区分(SHB / GHB / MHB)がある",
+          "status": "unverified",
+          "sourceIds": [
+            "icafe-pliego-ig-2008"
+          ],
+          "quote": "con casi la mitad de la producción de tipo strictly hard bean y una parte significativa de good hard bean",
+          "location": "Pliego p.102",
+          "note": "ICAFEの文書にSHBとGHBの語は出るが、標高との対応や等級の定義(基準値)を述べた公式資料は取得資料内に見つからなかった。Ley 2762・Reglamento(28018-MAG、39854-MAG)にも等級の標高基準なし(FAOLEX転載で確認)"
+        },
+        {
+          "text": "SHB(Strictly Hard Bean)は標高1,350m超が目安",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式資料に基準値なし。参考(二次資料のみ・根拠にしない): 業界の記述は1,200m/1,350m/1,372m等でまちまち(検索要約)。ICAFE地域ページは『1,200m超の高地は火山起源』と述べるのみ"
+        },
+        {
+          "text": "SHG(Strictly High Grown)とほぼ同義で併用される",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "一次資料に該当なし"
+        },
+        {
+          "text": "GHBは約1,000〜1,190m、MHBは約490〜915m",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式資料に基準値なし(検索要約の二次資料はGHB 1,000〜1,200m等とするが一致しない)"
+        },
+        {
+          "text": "標高が高いほど豆が硬く締まり高品質とされる",
+          "status": "verified",
+          "sourceIds": [
+            "icafe-regiones"
+          ],
+          "quote": "La altitud está relacionada con factores climáticos y, en conjunto, afecta el tamaño y la dureza de la semilla e influye, además, en ciertos componentes de la calidad de la bebida, especialmente con la acidez.",
+          "location": "Regiones Cafetaleras 第2段落",
+          "note": "ICAFEは『標高が種子の大きさと硬さに影響する』と述べる。『高いほど高品質』とまでは書かない"
+        },
+        {
+          "text": "グアテマラのSHBと同じ考え方",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "グアテマラ側の規格との比較は別範囲(未照合)"
+        },
+        {
+          "text": "ロス・サントス地域のコーヒーはSHB(estrictamente duro)",
+          "status": "verified",
+          "sourceIds": [
+            "icafe-lossantos"
+          ],
+          "quote": "Se estima que cerca del 95% del grano es del tipo SHB (Strictly Hard Bean).",
+          "location": "Los Santos 生産の段落",
+          "note": ""
+        }
+      ],
+      "suggestedText": "ICAFEは、ロス・サントス地域のコーヒーの約95%がSHB(Strictly Hard Bean、スペイン語でestrictamente duro)と推定している。標高は種子の大きさと硬さに影響するとICAFEは述べる。等級ごとの標高の基準値は公式資料で確認できていない。",
+      "note": "英訳は日本語と同じ主張。標高の閾値(1,350m超/1,000-1,190m/490-915m)は公式の原文で確認できず(取得できなかったICAFE発表資料にある可能性は残る)。"
+    },
+    "origin:コスタリカ:officialBody": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "ICAFEは1933年設立",
+          "status": "verified",
+          "sourceIds": [
+            "icafe-acerca"
+          ],
+          "quote": "El ICAFE es una institución pública de carácter no estatal, fundada en 1933 como rectora de la caficultura costarricense.",
+          "location": "Acerca del ICAFE",
+          "note": ""
+        },
+        {
+          "text": "ICAFEはコーヒー法(Ley 2762、1961年6月21日)に基づく",
+          "status": "verified",
+          "sourceIds": [
+            "icafe-estructura"
+          ],
+          "quote": "regulados por las disposiciones de la Ley 2762 del 21 de junio de 1961 y sus reformas y por el Reglamento a esa ley",
+          "location": "Estructura del Sector 冒頭",
+          "note": "1961年の法文ではOficina del Caféと表記され、現在の名称ICAFEは後の改正による(Ley 2762の統合版本文で確認)"
+        },
+        {
+          "text": "業界を規制する・全ミルの許認可・監督を行う",
+          "status": "verified",
+          "sourceIds": [
+            "icafe-estructura"
+          ],
+          "quote": "Para operar como beneficiador, no solo hay que respetar las leyes ecológicas del país, sino que se requiere estar inscrito en un registro que posee el Instituto del Café de Costa Rica y someterse a las leyes vigentes.",
+          "location": "Estructura del Sector / Beneficios",
+          "note": "『許認可』: 法文は『Para operar una planta de beneficio, se requi ere obtener licencia de la Oficina del Café』(第7条) [cr-ley-2762] \"Para operar una planta de beneficio, se requi ere obtener licencia de la Oficina del Café\""
+        },
+        {
+          "text": "法律により全生産者がFOB価格の一定割合を受け取ることを保証している",
+          "status": "unverified",
+          "sourceIds": [
+            "cr-ley-2762"
+          ],
+          "quote": "un nueve por ciento en favor del beneficiador por toda su intervención en la industrialización y mercadeo del café, en su aspecto legal.",
+          "location": "Ley 2762 第57条5)",
+          "note": "法文にFOB価格の一定割合の保証は見当たらない。実際の仕組みは、販売額から認められた経費・税を引いた残りからミル(beneficiador)に9%、輸出業者の利益は取引額の2.5%(買い取り時)または1.5%(仲介のみ)を上限とし、残りを生産者への精算額とする(第57条、第95条、ICAFE Estructura del Sector) [cr-ley-2762] \"La utilidad neta para el exportador por su intervención en el negocio no podrá ser mayor de un dos y medio por ciento\" [icafe-estructura] \"no podrá nunca ser mayor a 2,5 por ciento del valor de la transacción, cuando se compra asumiendo el riesgo de las fluctuaciones del mercado y 1,5 por ciento cuando actúe simplemente como intermediario\""
+        },
+        {
+          "text": "割合は資料により77.6/78.1/80%と幅がある",
+          "status": "unverified",
+          "sourceIds": [
+            "fob-80pct-snippet"
+          ],
+          "quote": "",
+          "location": "",
+          "note": "二次資料のみ: fob-80pct-snippet(検索要約。『80%』『約79%』などの記述)。ICAFE・法令の原文で確認できる数値はなし。ICAFE Informe 2025にもFOB取り分の記載なし(FOB語の全検索で確認)"
+        }
+      ],
+      "suggestedText": "ICAFE(コスタリカコーヒー協会)は1933年に設立された公的機関(非国家)で、コーヒー法(Ley 2762、1961年6月21日)に基づき、ミルや輸出業者の登録・許認可を担う。同法は、ミルの取り分を精算後の収入の9%、輸出業者の利益を取引額の2.5%(仲介のみの場合は1.5%)までと定めている。",
+      "note": "英訳(77.6, 78.1 or 80%)も日本語と同じ主張で、同じ理由で確認できない。"
+    },
+    "origin:パナマ:tagline": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "ゲイシャ種が世界の価格記録を塗り替えている(2025年に1kg 30,204ドルの世界記録)",
+          "status": "verified",
+          "sourceIds": [
+            "scap-press-2025-record"
+          ],
+          "quote": "Con un insólito precio de US$ 30,204 por kilogramo, el café Geisha Lavado de 98 puntos de Hacienda La Esmeralda sorprendió al mundo, tras alcanzar un inigualable e histórico récord mundial en la prestigiosa subasta anual del Best of Panama, al vender un lote de 20 kilogramos en US$ 604,080 dólares, comprado por la empresa Julith Coffee de Dubai.",
+          "location": "本文第1段落",
+          "note": ""
+        },
+        {
+          "text": "小さな名門産地",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "評価語。一次資料の原文では検証できない"
+        }
+      ],
+      "suggestedText": "ゲイシャ種が、ベスト・オブ・パナマのオークションで世界記録の落札価格を出し続けている産地(2025年に1kgあたり30,204ドル。SCAP発表)。",
+      "note": "英訳は日本語と同じ主張(差異なし)。"
+    },
+    "origin:パナマ:regions": {
+      "status": "verified",
+      "claims": [
+        {
+          "text": "ボケテとボルカン(ボルカン・カンデラ)が主な産地",
+          "status": "verified",
+          "sourceIds": [
+            "scap-about"
+          ],
+          "quote": "Our plantations are mainly located in the Panamanian Cordillera Central, in the mountainous area that surrounds the Baru Volcano, near the picturesque towns of Boquete and Volcan – Candela.",
+          "location": "About SCAP 第2段落",
+          "note": "SCAP会員の農園の所在についての記述"
+        }
+      ],
+      "suggestedText": "",
+      "note": "英訳(Boquete, Volcán)は日本語と同じ。"
+    },
+    "origin:パナマ:terroir": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "ボケテとボルカンはバルー火山周辺の山地にある(SCAP会員農園の所在地)",
+          "status": "verified",
+          "sourceIds": [
+            "scap-about"
+          ],
+          "quote": "Our plantations are mainly located in the Panamanian Cordillera Central, in the mountainous area that surrounds the Baru Volcano, near the picturesque towns of Boquete and Volcan – Candela.",
+          "location": "About SCAP 第2段落",
+          "note": ""
+        },
+        {
+          "text": "ボケテはチリキ州にある",
+          "status": "verified",
+          "sourceIds": [
+            "scap-historia-2024"
+          ],
+          "quote": "Los expertos en café de especialidad de diferentes partes del mundo llegan a Boquete, Chiriquí, a calificar la calidad de estos cafés",
+          "location": "本文 BOP説明の段落",
+          "note": ""
+        },
+        {
+          "text": "バルー火山の東斜面にボケテ、西斜面にボルカン",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "SCAPの取得ページに東西斜面の記述なし(個別農園の紹介にバルー火山『東斜面』とする例が検索要約にあるが未確認)"
+        },
+        {
+          "text": "レナシミエント地区(コスタリカ国境に近い)も産地",
+          "status": "unverified",
+          "sourceIds": [
+            "scap-press-members"
+          ],
+          "quote": "FARM INFORMATION Location: Santa Clara, Renacimiento, Chiriquí. Highest elevation: 1500 m.a.s.l. Lowest elevation: 1280 m.a.s.l.",
+          "location": "会員農園紹介(Finca Aguilar Peralta)",
+          "note": "レナシミエントにSCAP会員農園(標高1,280〜1,500m)があることは確認。『国境に近い』は確認できず"
+        },
+        {
+          "text": "標高は概ね1,000〜1,650m、上質なロットは1,600〜1,800m",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "パナマ全体・産地全体の標高範囲を述べた公式資料は見つからず。SCAP会員農園の標高は農園ごとにまちまち(Hacienda La Esmeralda El Velo農場1,650〜1,900m、Finca Lérida 1,500〜2,000m、Renacimiento 1,280〜1,500m等)"
+        },
+        {
+          "text": "高標高ゲイシャ農園では1,950m超に達する",
+          "status": "verified",
+          "sourceIds": [
+            "scap-press-2025-record"
+          ],
+          "quote": "se ubican en un área parecida a un jardín secreto a 2,050 metros de altura",
+          "location": "本文(Hacienda La Esmeralda『El Nido』区画)",
+          "note": "2025年の世界記録ロットの産地がHacienda La Esmeralda(Cañas Verdes)のEl Nido区画で標高2,050m。Finca Deborahの標高はSCAP掲載の農園紹介で『1900+ meters』(『1,950m超』とは書かれていない) [scap-finca-deborah] \"Located at an elevation of 1900+ meters\""
+        },
+        {
+          "text": "バルー火山由来の火山性土壌",
+          "status": "verified",
+          "sourceIds": [
+            "scap-about"
+          ],
+          "quote": "In this area the weather and the rich and nutrient volcanic soil nourish perfectly the coffee trees creating a final product of immense quality.",
+          "location": "About SCAP 第2段落",
+          "note": "SCAP原文は『rich and nutrient volcanic soil』(バルー火山周辺の山地の記述)"
+        },
+        {
+          "text": "太平洋・カリブ海双方の風が交互に入れ替わり冷涼な気候をもたらす",
+          "status": "unverified",
+          "sourceIds": [
+            "scap-hacienda-esmeralda"
+          ],
+          "quote": "Situated amongst volcanic mountain ridges surrounding the Boquete River Valley, our farms offer a range of lush micro-climates, fed by two ocean breezes.",
+          "location": "Hacienda La Esmeralda 紹介",
+          "note": "Hacienda La Esmeraldaについて『2つの海からの風が当たる』は確認。『交互に入れ替わる』『冷涼』はパナマ全体の記述として確認できず。Finca Carmenの紹介は『太平洋と大西洋の近さの影響が強い。涼しく霜のない夜』"
+        }
+      ],
+      "suggestedText": "SCAPは、会員の農園がバルー火山を囲む山地、ボケテとボルカン・カンデラの近くにあり、肥沃な火山性土壌をもつと説明する。2025年の世界記録ロットが生まれたHacienda La Esmeraldaの区画『El Nido』は標高2,050m。",
+      "note": "英訳は日本語と同じ主張(差異なし)。"
+    },
+    "origin:パナマ:harvestSeason": {
+      "status": "unverified",
+      "claims": [
+        {
+          "text": "収穫は概ね11月〜翌3月",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "SCAP・パナマ政府・USDA FAS(取得したのはコスタリカの報告のみ)の原文で確認できず。報道(La Estrella、検索要約)はボケテの収穫を『11月中旬〜2月末』とする(二次資料のみ・根拠にしない)"
+        }
+      ],
+      "suggestedText": "",
+      "note": "英訳(Generally from November to the following March)は日本語と同じ主張。 (suggestedText 未作成: 確認できた主張のみでは文にならない)"
+    },
+    "origin:パナマ:varietiesDetail": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "伝統的にティピカ・ブルボンが基盤で、カトゥアイ・カトゥーラ・ムンドノーボもある",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "一次資料の原文で確認できず。SCAP会員農園の紹介にはCatuai、Caturra、Geisha、Pacamara、Maragogype、Red Bourbonなどが載る程度"
+        },
+        {
+          "text": "ゲイシャ種がパナマの国際的評価を高めた",
+          "status": "verified",
+          "sourceIds": [
+            "scap-historia-2024"
+          ],
+          "quote": "es una variedad de café que llevó a Panamá a ubicarse por encima de los demás países productores del grano.",
+          "location": "本文(Geishaの段落)",
+          "note": "SCAPの表現。『今日の国際的な名声はほぼゲイシャ種によるもの』の『ほぼ』は原文になく別の主張"
+        },
+        {
+          "text": "エチオピア原産",
+          "status": "verified",
+          "sourceIds": [
+            "wcr-geisha-panama"
+          ],
+          "quote": "This variety was originally collected from coffee forests in Ethiopia in the 1930s.",
+          "location": "Geisha (Panama) / Origin",
+          "note": "WCRは『Ethiopian landrace』。原文は『エチオピアの森林から1930年代に採取』"
+        },
+        {
+          "text": "コスタリカの農業研究機関CATIEを経由して1960年代にパナマへ導入された",
+          "status": "verified",
+          "sourceIds": [
+            "wcr-geisha-panama"
+          ],
+          "quote": "It was distributed throughout Panama via CATIE in the 1960s after it had been recognized for tolerance to coffee leaf rust.",
+          "location": "Geisha (Panama) / Origin",
+          "note": "CATIEの所在: 『Sede Central, CATIE. Cartago, Turrialba 30501 Costa Rica』(CATIE公式) [catie-contact] \"Sede Central, CATIE. Cartago, Turrialba 30501 Costa Rica\""
+        },
+        {
+          "text": "導入当初は味わいではなくさび病耐性を期待して植えられた",
+          "status": "unverified",
+          "sourceIds": [
+            "wcr-geisha-panama"
+          ],
+          "quote": "It was distributed throughout Panama via CATIE in the 1960s after it had been recognized for tolerance to coffee leaf rust.",
+          "location": "Geisha (Panama) / Origin",
+          "note": "WCRは『さび病への耐性が認められた後にCATIE経由でパナマ全土に配布された』まで。『味わいではなく』は原文になし"
+        },
+        {
+          "text": "枝が折れやすく農家に好まれず、広く植えられなかった",
+          "status": "verified",
+          "sourceIds": [
+            "wcr-geisha-panama"
+          ],
+          "quote": "However, the plant's branches were brittle and not favored by farmers so it was not widely planted.",
+          "location": "Geisha (Panama) / Origin",
+          "note": "『収量面で』『長年注目されず』は原文になし。WCRは2005年に注目されたと述べる(下記note)"
+        },
+        {
+          "text": "1953年にCATIEに到達した",
+          "status": "verified",
+          "sourceIds": [
+            "wcr-geisha-panama"
+          ],
+          "quote": "and then brought to Centro Agronómico Tropical de Investigación y Enseñanza (CATIE) in Central America in the 1953, where it was logged as accession T2722.",
+          "location": "Geisha (Panama) / Origin",
+          "note": "WCRは経路を『エチオピア→タンザニアのLyamungu研究所→CATIE(1953年、T2722)』と記す(確定した事実として記述)"
+        },
+        {
+          "text": "1964年のFAO調査団採取説がある",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "WCRの原文にFAO調査団・1964年の記述なし。『導入経路に複数の記録があり確定していない』という主張も、WCRは経路を確定した事実として書いているため確認できない"
+        }
+      ],
+      "suggestedText": "ゲイシャ種はエチオピアの森林で1930年代に採取され、タンザニアのLyamungu研究所を経て、1953年にCATIE(コスタリカ・トゥリアルバ)に到達した(T2722)。さび病への耐性が認められたため、1960年代にCATIE経由でパナマ全土に配られたが、枝が折れやすく農家に好まれず広く植えられなかった(WCR)。ゲイシャはパナマの評価を押し上げたとSCAPは述べる。",
+      "note": "英訳は日本語と同じ主張(差異なし)。WCRは『2005年にPeterson家がBest of Panamaに出品して注目された』と記し、SCAPの『2004年』と1年ずれる。"
+    },
+    "origin:パナマ:farmStructure": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "収穫労働力の多くを先住民族ンゴベ族・ブグレ族が担う",
+          "status": "unverified",
+          "sourceIds": [
+            "laestrella-ngabe-snippet"
+          ],
+          "quote": "",
+          "location": "",
+          "note": "二次資料のみ: laestrella-ngabe-snippet(検索要約)。USDA FASの原文(取得済み)の『Ngäbe-Buglé tribes now harvest most of the coffee crop』はコスタリカの報告。SCAP掲載のFinca Deborah紹介は『The Nôbe-Buglé people are the primary workforce on the farm』と、1農園についてのみ述べる [usda-fas-cr-coffee-annual-2025] \"Panamanian workers of the Ngäbe-Buglé tribes now harvest most of the coffee crop\" [scap-finca-deborah] \"The Nôbe-Buglé people are the primary workforce on the farm\""
+        },
+        {
+          "text": "スペシャルティ市場は少数の著名農園が主導する構造",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "一次資料の原文で確認できず(SCAPは『50以上の活動会員』と記す: Our Story)"
+        },
+        {
+          "text": "ハシエンダ・ラ・エスメラルダはピーターソン家が所有",
+          "status": "verified",
+          "sourceIds": [
+            "scap-hacienda-esmeralda"
+          ],
+          "quote": "Hacienda La Esmeralda is owned by the Peterson Family.",
+          "location": "Hacienda La Esmeralda 紹介",
+          "note": ""
+        },
+        {
+          "text": "カルメン農園(フランチェスキ家)",
+          "status": "incorrect",
+          "sourceIds": [
+            "scap-finca-carmen"
+          ],
+          "quote": "En 1960 Efraín y Carmen Franceschi comenzaron a cultivar variedades de café arábica (Caturra, Geishas, Catuai) en sus fincas",
+          "location": "Finca Carmen 紹介",
+          "note": "フランチェスキ家が栽培を始めたのは『1960年』(SCAP掲載の農園紹介)。アプリの『1950年頃』と食い違う"
+        },
+        {
+          "text": "フィンカ・デボラ(標高1,950m超)",
+          "status": "incorrect",
+          "sourceIds": [
+            "scap-finca-deborah"
+          ],
+          "quote": "Located at an elevation of 1900+ meters",
+          "location": "Finca Deborah 紹介",
+          "note": "SCAP掲載の農園紹介は『1900+ meters』。『1,950m超』とは書かれていない"
+        },
+        {
+          "text": "エリダ農園(ラマストゥス家)",
+          "status": "verified",
+          "sourceIds": [
+            "scap-historia-2024"
+          ],
+          "quote": "Mientras que en 1918, comenzó la historia de Elida Estate Coffee, hoy Wilford Lamastus es la tercera generación.",
+          "location": "本文",
+          "note": "Elida Estate CoffeeとLamastus家の関係を確認。続柄の詳細は原文のとおり『第3世代』"
+        },
+        {
+          "text": "フィンカ・レリダ(ボケテ)",
+          "status": "verified",
+          "sourceIds": [
+            "scap-finca-lerida"
+          ],
+          "quote": "Finca Lérida is conformed by 5 farms located in the province of Chiriquí in Panama, specifically in the Boquete region.",
+          "location": "Finca Lerida 紹介",
+          "note": ""
+        }
+      ],
+      "suggestedText": "ハシエンダ・ラ・エスメラルダ(ピーターソン家)、エリダ農園(ラマストゥス家)、フィンカ・レリダ(ボケテ)などが知られる。カルメン農園はフランチェスキ家が1960年に栽培を始め(SCAP掲載の農園紹介)、フィンカ・デボラは標高1900m超(同)。",
+      "note": "英訳は日本語と同じ主張(差異なし)。"
+    },
+    "origin:パナマ:history": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "19世紀にヨーロッパ系移民がコーヒーを導入した",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "一次資料の原文で確認できず"
+        },
+        {
+          "text": "産業としての本格的な確立はこの20年余り(ゲイシャブーム以降)",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "一次資料の原文で確認できず"
+        },
+        {
+          "text": "1996年、国際コーヒー価格の低迷を受けボケテ・ボルカンの生産者7名がSCAPを設立",
+          "status": "verified",
+          "sourceIds": [
+            "scap-story"
+          ],
+          "quote": "In 1996, during the crisis of low international prices of coffee and the beginning of Special Coffees category, a group of 7 coffee producers from the areas of Boquete and Volcan –Candela got together with the idea to get their coffees known.",
+          "location": "Our Story 第1段落",
+          "note": "地域名は『Boquete and Volcan–Candela』。SCAP別記事も『nace en 1996 la Asociación de Cafés Especiales de Panamá』 [scap-historia-2024] \"nace en 1996 la Asociación de Cafés Especiales de Panamá (SCAP por sus siglas en ingles)\""
+        },
+        {
+          "text": "同年(1996年)から品評会ベスト・オブ・パナマ(BoP)を開始した",
+          "status": "conflict",
+          "sourceIds": [
+            "scap-bop2017"
+          ],
+          "quote": "Since 1996, the Best of Panama represents the opportunity for local estates to promote the quality of their harvests",
+          "location": "SCAP『Best of Panama 2017』第2段落",
+          "note": "SCAPの文は『1996年から』だが『開始』とは書かない。SCAP自身の回数表記は、2017年が『XXI Best of Panama』、2025年が『XXIX Cata Internacional』、2026年が『XXX』で、毎年開催なら第1回は1997年になる(推論)。SCAP会員Berlina Estateの紹介は『finalist in the best of Panamá from 1997 to 1999』。第1回の年はユーザーが判断 [scap-bop2017] \"The Specialty Coffee Association of Panama (SCAP) celebrated its XXI Best of Panama this year.\" [scap-press-2025-bop] \"Dos récords mundiales impone el Panama Geisha en la XXIX Cata Internacional del Best of Panama (BOP).\""
+        },
+        {
+          "text": "2002〜2003年頃のBoPで、ハシエンダ・ラ・エスメラルダのハラミージョ農園のゲイシャが優勝した",
+          "status": "incorrect",
+          "sourceIds": [
+            "scap-hacienda-esmeralda"
+          ],
+          "quote": "The Geisha coffee from Hacienda La Esmeralda first competed and won in the Best of Panama in 2004.",
+          "location": "Hacienda La Esmeralda 紹介(Jaramillo Farm)",
+          "note": "SCAPは『ハラミージョ農園でゲイシャを再発見したのは2004年、BoPに初出品して優勝したのも2004年』と述べる。アプリの『2002〜2003年頃』は誤り(農園名は一致) [scap-hacienda-esmeralda] \"The Jaramillo Farm is where the Geisha variety was rediscovered in 2004 by Daniel Peterson\" [scap-historia-2024] \"confiesa que no puede olvidar el momento en que se descubre el Geisha en una mesa de cata en el 2004.\""
+        },
+        {
+          "text": "ジャスミンのような際立ったフローラルさで話題をさらった",
+          "status": "unverified",
+          "sourceIds": [
+            "scap-historia-2024"
+          ],
+          "quote": "",
+          "location": "",
+          "note": "SCAPは『国際審査員が驚いていた(Vimos a los jueces internacionales sorprendidos, con lo que estaban probando)』と述べる。『ジャスミンのような』はこのロットについての記述として確認できず(WCRはゲイシャ種の特徴として『floral, jasmine, and peach-like aromas』) [scap-historia-2024] \"Vimos a los jueces internacionales sorprendidos, con lo que estaban probando\""
+        },
+        {
+          "text": "2004年、ロースター7社でこのロットを分け合い、1ポンド21ドルを記録した",
+          "status": "verified",
+          "sourceIds": [
+            "scap-results-2004"
+          ],
+          "quote": "Best of Panama 2004 - Final Results Item Number PA101 | Bags 7 | High Bid* $21.00",
+          "location": "2004最終結果表 PA101 Jaramillo Special(画像を目視転記)",
+          "note": "表のPA101『Jaramillo Special』は7袋、高値21.00ドル/ポンド。落札者表記はThe Roasterie / Public Market Coffee / Groundwork Coffeeの3社で、注記に『これらは他社と分け合う手配をした。The Roasterie, Public Market Coffee Co., Groundwork Coffee, Intelligentsia, G.H. Howell Co., Stumptown Coffee and Sweet Maria's Coffee(計7社)に各1袋』とある(正式な落札者は3社、分配先は7社) [scap-results-2004] \"The following companies will each receive one bag of the winning coffee. The Roasterie, Public Market Coffee Co., Groundwork Coffee, Intelligentsia, G.H. Howell Co., Stumptown Coffee and Sweet Maria's Coffee.\""
+        },
+        {
+          "text": "2004年『5月』の落札",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "結果表は『Page last modified July 3, 2004』のみで落札月は不明(SCAPは2017年のBoPを5月開催と述べるが2004年の月は未確認)"
+        },
+        {
+          "text": "当時の生豆オークション史上の記録価格",
+          "status": "verified",
+          "sourceIds": [
+            "wcr-geisha-panama"
+          ],
+          "quote": "It received exceptionally high marks and broke the then-record for green coffee auction prices, selling for over $20/pound.",
+          "location": "Geisha (Panama) / Origin",
+          "note": "WCRは年を『2005年』と記し、SCAPの『2004年』と食い違う(上記)"
+        },
+        {
+          "text": "「ゲイシャブームの起点」「パナマの格を一変させた」と業界で語られている",
+          "status": "unverified",
+          "sourceIds": [
+            "scap-press-2025-record"
+          ],
+          "quote": "Hacienda la Esmeralda de la familia Peterson fue quien puso a Panamá en el mapa mundial de los cafés de especialidad en el 2004",
+          "location": "本文 末尾近く",
+          "note": "SCAPは『Hacienda La Esmeraldaが2004年にパナマを世界のスペシャルティコーヒーの地図に載せた』と述べる(SCAP自身の表現)。『業界で語られている』という伝聞は確認できず"
+        },
+        {
+          "text": "2017年に1ポンド803ドル",
+          "status": "incorrect",
+          "sourceIds": [
+            "scap-auctions-2001-2017"
+          ],
+          "quote": "Esmeralda Geisha Cañas Verdes Natural which was sold at $601 per pound.",
+          "location": "Results 2017",
+          "note": "SCAPは2017年の最高値を『Esmeralda Geisha Cañas Verdes Natural、1ポンド601ドル(価格記録更新)』と記す。803ドル/ポンドは2018年のオークション結果(BOP-GN-1、ELIDA GEISHA GREEN TIP NATURAL、$803.00/lb、総額$80,300) [bop-auction-2018] \"$803.00/lb\""
+        },
+        {
+          "text": "2021年に2,568ドル(1ポンド)",
+          "status": "verified",
+          "sourceIds": [
+            "bop-auction-2021"
+          ],
+          "quote": "$2,568.00/lb \"> $256,800.00 \"> Nuguo Fermented",
+          "location": "Auction 2021 / Natural Geisha GN-01",
+          "note": "(抽出テキストの区切りに '\">' が残る)同ページの最高値。『記録』と明記した原文は未確認(同ページ内の最高値であることのみ確認)"
+        },
+        {
+          "text": "2025年8月のBoP国際オークションで、ハシエンダ・ラ・エスメラルダのウォッシュドゲイシャ(20kgロット、98点)が1kgあたり30,204ドルで落札され世界記録となった",
+          "status": "verified",
+          "sourceIds": [
+            "scap-press-2025-record"
+          ],
+          "quote": "Con un insólito precio de US$ 30,204 por kilogramo, el café Geisha Lavado de 98 puntos de Hacienda La Esmeralda sorprendió al mundo, tras alcanzar un inigualable e histórico récord mundial en la prestigiosa subasta anual del Best of Panama, al vender un lote de 20 kilogramos en US$ 604,080 dólares, comprado por la empresa Julith Coffee de Dubai.",
+          "location": "本文第1段落",
+          "note": "開催日: 『la subasta electrónica que inició este miércoles 6 de agosto a las 6:00pm』(年は『superó su propia marca del 2024』等から2025年) [scap-press-2025-record] \"la subasta electrónica que inició este miércoles 6 de agosto a las 6:00pm hora local de Panamá\""
+        },
+        {
+          "text": "98点はパナマ産ウォッシュドゲイシャの歴代最高スコア",
+          "status": "verified",
+          "sourceIds": [
+            "scap-press-2025-bop"
+          ],
+          "quote": "Un histórico puntaje de 98.00 puntos en la categoría de Geisha Lavado",
+          "location": "本文第1段落",
+          "note": "SCAPは『世界記録のスコア(récord en puntajes a nivel mundial)』と、より強く述べる [scap-press-2025-bop] \"los Geishas Lavados, cinco jueces dieron los 100 puntos al lote que rompe récord en puntajes a nivel mundial\""
+        },
+        {
+          "text": "落札者はドバイを拠点とする開業5日目の業者",
+          "status": "unverified",
+          "sourceIds": [
+            "scap-press-2025-record"
+          ],
+          "quote": "",
+          "location": "",
+          "note": "落札者が『Julith Coffee de Dubai』であることはSCAP発表で確認。『開業5日目』の記述はSCAP発表・取得資料になし"
+        }
+      ],
+      "suggestedText": "1996年、国際コーヒー価格の低迷を受け、ボケテとボルカン・カンデラの生産者7名がパナマ・スペシャルティコーヒー協会(SCAP)を結成した(SCAP)。ハシエンダ・ラ・エスメラルダのハラミージョ農園でゲイシャが再発見されたのは2004年で、同年のベスト・オブ・パナマに初出品して優勝した(SCAP)。2004年の結果表では、ハラミージョ・スペシャル(7袋)が1ポンド21ドルで落札され、落札者は7社で分け合った。SCAPは、同農園が2004年にパナマを世界のスペシャルティコーヒーの地図に載せたと述べる。2017年の最高値は1ポンド601ドル(SCAP)、2018年は803ドル、2021年は2,568ドル(いずれもBoPオークション結果)。2025年8月のBoP国際オークションで、同農園の98点のウォッシュドゲイシャ(20kgロット)が1kgあたり30,204ドルで、ドバイのJulith Coffeeが落札した。",
+      "note": "英訳は日本語と同じ主張(誤りも同じ)。BoP第1回の年は資料どうしに揺れがあり未決(ユーザー判断)。"
+    },
+    "origin:パナマ:sub:ボケテ": {
+      "status": "unverified",
+      "claims": [
+        {
+          "text": "標高1,200〜1,800m、バルー火山東斜面",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "一次資料の原文で確認できず"
+        },
+        {
+          "text": "太平洋・カリブ海の風が入れ替わる冷涼な立地",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "terroirと同じ。確認できず"
+        },
+        {
+          "text": "ハシエンダ・ラ・エスメラルダをはじめゲイシャの名門農園が集中し国際的評価が最も高い産地",
+          "status": "unverified",
+          "sourceIds": [
+            "scap-hacienda-esmeralda"
+          ],
+          "quote": "Hacienda La Esmeralda is a family-owned company that produces specialty coffee in the highlands of Boquete",
+          "location": "Hacienda La Esmeralda 紹介",
+          "note": "ハシエンダ・ラ・エスメラルダがボケテの高地にあることは確認。『集中』『評価が最も高い』は確認できず"
+        },
+        {
+          "text": "ジャスミン、柑橘、桃のようなフローラル/フルーティ",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "WCRはゲイシャ種の特徴を『delicate floral, jasmine, and peach-like aromas』と述べる(品種の記述で、ボケテ産の記述ではない)"
+        }
+      ],
+      "suggestedText": "ハシエンダ・ラ・エスメラルダはボケテの高地にある(SCAP)。",
+      "note": "英訳は日本語と同じ主張(差異なし)。"
+    },
+    "origin:パナマ:sub:ボルカン": {
+      "status": "unverified",
+      "claims": [
+        {
+          "text": "標高1,000〜1,650m(一部農園は2,000m超)、バルー火山西斜面",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "一次資料の原文で確認できず。SCAP掲載の会員農園紹介にはVolcánの農園として『between 1650 and 2200 meters』(Flying Pumas、会員農園の自己紹介)などがある"
+        },
+        {
+          "text": "ボケテと同等の品質を持ちながら競争が少なく価格面で狙い目",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "評価。一次資料で検証できない"
+        },
+        {
+          "text": "伝統品種とゲイシャ実験栽培が併存",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "一次資料の原文で確認できず"
+        }
+      ],
+      "suggestedText": "",
+      "note": "英訳は日本語と同じ主張(差異なし)。 (suggestedText 未作成: 確認できた主張のみでは文にならない)"
+    },
+    "origin:パナマ:officialBody": {
+      "status": "verified",
+      "claims": [
+        {
+          "text": "パナマ・スペシャルティコーヒー協会(SCAP)は1996年にボケテ・ボルカン地区の生産者7名により設立",
+          "status": "verified",
+          "sourceIds": [
+            "scap-story"
+          ],
+          "quote": "In 1996, during the crisis of low international prices of coffee and the beginning of Special Coffees category, a group of 7 coffee producers from the areas of Boquete and Volcan –Candela got together with the idea to get their coffees known.",
+          "location": "Our Story 第1段落",
+          "note": "SCAPは非営利団体と自己紹介(About SCAP)"
+        },
+        {
+          "text": "品評会ベスト・オブ・パナマとそれに連動するオークションを主催",
+          "status": "verified",
+          "sourceIds": [
+            "scap-historia-2024"
+          ],
+          "quote": "El BOP es el evento anual que organiza la SCAP",
+          "location": "本文",
+          "note": "オークションについて同記事『El BOP finaliza con una subasta electrónica anual de 50 lotes de cafés』。BoP公式サイトも『100% designed and organized by the Specialty Coffee Association of Panama (SCAP)』 [scap-historia-2024] \"El BOP finaliza con una subasta electrónica anual de 50 lotes de cafés\" [bop-about-2026] \"This activity is 100% designed and organized by the Specialty Coffee Association of Panama (SCAP)\""
+        },
+        {
+          "text": "世界記録価格を更新し続ける枠組みそのものを運営している",
+          "status": "verified",
+          "sourceIds": [
+            "scap-press-2025-record"
+          ],
+          "quote": "Panamá logra imponer varios récords en ventas.",
+          "location": "本文第2段落",
+          "note": "2025年に複数の世界記録(Geisha Lavado、Geisha Natural、Laurinaの各部門)をSCAPが発表"
+        }
+      ],
+      "suggestedText": "",
+      "note": "英訳は日本語と同じ主張(差異なし)。"
+    }
+  }
+}

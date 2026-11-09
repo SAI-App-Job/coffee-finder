@@ -8,6 +8,7 @@
     "build": "vite build",
     "lint": "oxlint",
     "i18n:check": "node scripts/check-i18n.js",
+    "sources:check": "node scripts/check-sources.js",
     "preview": "vite preview"
   },
   "dependencies": {

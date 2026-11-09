@@ -1,0 +1,467 @@
+[
+ {
+  "key": "brand:クリスタルマウンテン",
+  "content": {
+   "note": "キューバ産",
+   "explanation": "全日本コーヒー公正取引協議会の規約(別表2)では、キューバにて生産された同国輸出規格に基づくアラビカコーヒー豆と定義される銘柄。同じ別表で、ブルーマウンテン(ジャマイカ・ブルーマウンテン地区産)とは別の銘柄・別の産地として定義されている。"
+  },
+  "quotes": [
+   "クリスタルマウンテン : キューバにて生産された同国輸出規格に基づくアラビカコーヒー豆をいう。",
+   "ブルーマウンテン : ジャマイカ・ブルーマウンテン地区にて生産されたアラビカコーヒー豆をいう。"
+  ]
+ },
+ {
+  "key": "brand:ブルーマウンテン",
+  "content": {
+   "note": null,
+   "explanation": "全日本コーヒー公正取引協議会の規約(別表2)では、ジャマイカ・ブルーマウンテン地区にて生産されたアラビカコーヒー豆と定義される銘柄。ジャマイカのJACRA(Jamaica Agricultural Commodities Regulatory Authority)のコーヒー許認可のページには「Trademark User Licence」の項目があり、自社ラベルを使い、Jamaica Blue Mountain および High Mountain Supreme 商標の使用を認められた業者(dealers)と外国輸入業者(foreign importers)向けと記されている。"
+  },
+  "quotes": [
+   "ブルーマウンテン : ジャマイカ・ブルーマウンテン地区にて生産されたアラビカコーヒー豆をいう。",
+   "Trademark User Licence – Exporters Required for dealers and foreign importers that utilize their own labels and are authorised to use the Jamaica Blue Mountain and High Mountain Supreme Trademark.",
+   "Jamaica Agricultural Commodities Regulatory Authority"
+  ]
+ },
+ {
+  "key": "brand:モカ・ハラー",
+  "content": {
+   "note": "ハラー地区産",
+   "explanation": "全日本コーヒー公正取引協議会の規約(別表2)では、エチオピア・ハラー地区にて生産されたアラビカコーヒー豆と定義される銘柄。"
+  },
+  "quotes": [
+   "モカハラー : エチオピア・ハラー地区にて生産されたアラビカコーヒー豆をいう。"
+  ]
+ },
+ {
+  "key": "brew:エアロプレス",
+  "content": {
+   "temp": "85℃(AeroPress公式サイト Signature Brew Preparation の記載。185°F)",
+   "grindSize": "中細挽き(AeroPress公式: Medium-Fine)",
+   "ratio": "粉16〜18g(AeroPress公式サイト Signature Brew Preparation の記載)",
+   "steps": [
+    "フィルターをフィルターキャップにセットし、チャンバーにねじ込む",
+    "やさしく約3秒かき混ぜる",
+    "プランジャーを、シューという音が始まって終わるまで押す(最後の抽出液が粉の層を通り抜けた合図)"
+   ]
+  },
+  "quotes": [
+   "1 heaping Scoop or 16-18 grams of medium-fine ground coffee",
+   "Heat water to 185°F (85°C) using your kettle.",
+   "Grind Size: Medium-Fine",
+   "Insert Paper Filter into Filter Cap and twist Filter Cap onto Chamber.",
+   "Stir gently for about 3 seconds.",
+   "Press until you hear the hissing sound begin and end, an indication the last bit of brew has passed through the coffee bed and your coffee is ready."
+  ]
+ },
+ {
+  "key": "brew:ペーパードリップ",
+  "content": {
+   "ratio": "SCAのゴールデンカップ基準を満たすための推奨は 55g/L ±10%",
+   "temp": "SCAのゴールデンカップ基準を満たすための推奨は、コーヒーに触れる時点の湯温が 200°F±5°、94.0℃±2"
+  },
+  "quotes": [
+   "Coffee-to-Water Ratio: To achieve the Golden Cup Standard, the recommended coffee-to-water ratio is 55 g/L ± 10%.",
+   "Coffee Preparation Temperature: To achieve the Golden Cup Standard, water temperature, at the point of contact with coffee, is recommended to fall between 200°F ± 5° & 94.0°C ± 2°."
+  ]
+ },
+ {
+  "key": "brew:水出し(コールドブリュー)",
+  "content": {
+   "calibration": "Scientific Reports 2018の論文「Acidity and Antioxidant Activity of Cold Brew Coffee」では、ホットブリューのコーヒーのほうが、水出し(cold brew)のコーヒーより総滴定酸の濃度が高いことが分かった。"
+  },
+  "quotes": [
+   "The hot brew coffees were found to have higher concentrations of total titratable acids, as well as higher antioxidant activity, than that of their cold brew counterparts."
+  ]
+ },
+ {
+  "key": "competition:jbc:latestResult",
+  "content": {
+   "text": "2026年大会(準決勝10月14日、決勝10月15日)では、猿田彦珈琲株式会社(東京都)の伊藤大貴選手(Hiroki Ito)が優勝した。SCAJの過去の競技結果の表にも、伊藤大貴選手(猿田彦珈琲株式会社)の優勝の行がある。World Coffee Championshipsの2025年の発表(2025 World Barista Champion)の上位の一覧には「5. Hiroki Ito, Japan」とある。"
+  },
+  "quotes": [
+   "優勝 | 伊藤 大貴 | Hiroki Ito | 猿田彦珈琲株式会社 | 東京都 | 703.5",
+   "5. Hiroki Ito, Japan",
+   "優勝 | 伊藤 大貴 | Hiroki Ito | 猿田彦珈琲株式会社 | 東京都 | 718",
+   "準決勝 2026年10月14日(水) 、 決 勝 2026年10月15日(木)"
+  ]
+ },
+ {
+  "key": "competition:jbc:tagline",
+  "content": {
+   "text": "エスプレッソ、ミルクビバレッジ、シグネチャービバレッジ(創作ドリンク)の3種類を提供して競う競技会"
+  },
+  "quotes": [
+   "まず「エスプレッソ」、そして「ミルクビバレッジ」、最後に「シグネチャービバレッジ」と呼ばれる創作ドリンクを提供し"
+  ]
+ },
+ {
+  "key": "competition:jcrc:latestResult",
+  "content": {
+   "text": "2016年はいつか珈琲屋(神奈川県)の近藤啓選手が優勝。翌2017年のWorld Coffee Roasting Championship(中国・広州)に出場し、第7位(21ヶ国中)だった。"
+  },
+  "quotes": [
+   "優勝 | 近藤 啓 | Hiraku Kondo | いつか珈琲屋 | いつか珈琲屋 | 神奈川県 | 536.75",
+   "2016年優勝者の世界大会での成績 | ワールド コーヒー ロースティング チャンピオンシップ 2017 (WCRC2017) | 中国/広州大会 | 近藤 啓(JCRC2016優勝者) | 第7位 (21ヶ国中)"
+  ]
+ },
+ {
+  "key": "competition:jcrc:tagline",
+  "content": {
+   "text": "焙煎前に目指す風味特性を『焙煎ログ』で事前に申告してから挑む競技会"
+  },
+  "quotes": [
+   "「如何なる風味特性」の焙煎に仕上げるか『焙煎ログ』を事前に申告した上で焙煎に挑む点が見どころです。"
+  ]
+ },
+ {
+  "key": "competition:jctc:history",
+  "content": {
+   "text": "海外ではスペシャルティコーヒーの基本であるカッピング技術を競技化した世界大会が開催されており、2009年9月に第1回JCTCを日本で開催。2009年の世界大会(ケルン)には日本から選手が参加し、後藤選手が世界第3位となった。"
+  },
+  "quotes": [
+   "海外ではスペシャルティコーヒーの基本であるカッピング技術を競技化し、広めるために、カップ テイスターズ チャンピオンシップが開催されております。 ... 当協会では2009年9月に世界大会に向けての代表選手選考会を兼ねた、第1回目のジャパン カップテイスターズ チャンピオンシップ（JCTC）を日本で初めて開催し",
+   "2009年の世界大会（ケルン開催）には日本からも選手が参加し、後藤選手が世界第3位となりました。"
+  ]
+ },
+ {
+  "key": "competition:jhdc:format",
+  "content": {
+   "text": "SCAJの2026年審査員プログラムによると、審査は添加物を加えないドリップコーヒーの味覚審査が中心。予選では、量の異なる2種類の抽出コーヒーの均一性が重要な評価項目となる。決勝では大会前に配布されるコーヒー豆を使い、抽出の均一性を含む、コーヒーサービスにおけるプロフェッショナルとしての総合的な技術が評価される。"
+  },
+  "quotes": [
+   "本競技会の審査は、添加物を加えないドリップコーヒーの味覚審査が中心となります。",
+   "予選では、量の異なる2種類の抽出コーヒーの 均一性が重要な評価項目となり",
+   "決勝においては、大会前（約1か月前）に配布されるコーヒー豆を使用し、各自が準備したうえで、本番のプレゼンテーション（同一ルールでの抽出）にて2回の抽出を行います。抽出の均一性を含む、コーヒーサービスにおけるプロフェッショナルとしての総合的な技術が評価されます。"
+  ]
+ },
+ {
+  "key": "competition:jhdc:latestResult",
+  "content": {
+   "text": "SCAJの競技結果によると、JHDC 2026の優勝は新田千香子選手(有限会社新田珈琲)。過去の競技結果(2012年〜2025年)の表には、優勝として新田和雄選手(有限会社新田珈琲、福井県)と新田衣祥選手(有限会社 新田珈琲/新田珈琲)の行がある。"
+  },
+  "quotes": [
+   "優勝 | 新田 和雄 | Kazuo Nitta | 有限会社新田珈琲 | 新田珈琲 | 福井県",
+   "優勝 | 新田 衣祥 | 有限会社 新田珈琲/新田珈琲 | 116.5 | 295.0",
+   "優勝 | 新田 千香子 | 有限会社新田珈琲 | 120.0 | 168.5"
+  ]
+ },
+ {
+  "key": "competition:jsc:history",
+  "content": {
+   "text": "2003年、JBC(ジャパン バリスタ チャンピオンシップ)のサイフォン部門として誕生。通常のブレンドコーヒーと、それを使った各選手オリジナルのシグニチャービバレッジの抽出技術を競う。年々競技の規模を拡大し、2007年に「ジャパン サイフォニスト チャンピオンシップ」として生まれ変わった。2009年には世界規模の「ワールド サイフォニスト チャンピオンシップ(WSC)」が世界で初めて開催された。優勝者は各国から推薦された代表とともに、日本代表として世界選手権に出場する。"
+  },
+  "quotes": [
+   "JSCは2003年にジャパン バリスタ チャンピオンシップ（JBC）のサイフォン部門として誕生しました。",
+   "競技では、2種類のブレンドコーヒーの抽出技術を競います。通常のブレンドコーヒー、そしてブレンドコーヒーを使った各選手オリジナルのシグニチャービバレッジを時間内に作成します。",
+   "年々競技の規模を拡大し、",
+   "2007年には「ジャパン サイフォニスト チャンピオンシップ」として生まれ変わりました。",
+   "また2009年には競技を世界規模とし世界初の「ワールド サイフォニスト チャンピオンシップ（WSC）」も開催されました。",
+   "JSCの優勝者は、各国から推薦された代表と共に、日本代表として世界選手権を戦います。"
+  ]
+ },
+ {
+  "key": "competition:jsc:tagline",
+  "content": {
+   "text": "通常のブレンドコーヒーと、それを使った各選手オリジナルのシグニチャービバレッジを時間内に作成して競う競技会"
+  },
+  "quotes": [
+   "通常のブレンドコーヒー、そしてブレンドコーヒーを使った各選手オリジナルのシグニチャービバレッジを時間内に作成します。"
+  ]
+ },
+ {
+  "key": "competition:kikikohi:history",
+  "content": {
+   "text": "SCAJの第12回利き珈琲選手権のページには、「SCAJコーヒーマイスター認定資格の有資格者」との記載がある。SCAJトレイニング委員会による、コーヒーの官能評価を競う競技会で、第12回は2026年10月14日にSCAJ2026のステージBで開催すると告知されている(SCAJ公式ページ)。第12回の優勝者は「2026年コーヒーマイスター利き珈琲王」として表彰され、トロフィーが授与される。"
+  },
+  "quotes": [
+   "SCAJコーヒーマイスター認定資格の有資格者",
+   "SCAJ2026イベントステージにて、SCAJトレイニング委員会による、コーヒーの官能評価を競う「第12回利き珈琲選手権」を開催します。",
+   "2026年10月14日(水) SCAJ2026 ステージBにて、皆様のご来場をお待ちしております。",
+   "優勝者は「2026年コーヒーマイスター利き珈琲王」として表彰し、トロフィーを授与いたします。"
+  ]
+ },
+ {
+  "key": "diagnosis:未抽出(Under-extraction)",
+  "content": {
+   "cause": "Batali et al. 2020(ドリップ)は、抽出収率(PE)が高いのは一般に滞留時間が長い場合で、抽出収率が低い試料は(それと比べて)はるかに短い抽出時間だったと述べている。",
+   "taste": "酸っぱい(Batali et al. 2020の官能評価で、濃度(TDS)が高いほど強まり、抽出収率が高いほど弱まる属性の1つとして Sour が挙げられている)"
+  },
+  "quotes": [
+   "An important point is that higher PE in general is achieved by longer residence time",
+   "The next category of attributes involved those that increased with TDS but decreased with PE: Sour, Citrus, Dark Green, Smoky, Brown Spice, and Fermented"
+  ]
+ },
+ {
+  "key": "diagnosis:過抽出(Over-extraction)",
+  "content": {
+   "cause": "Batali et al. 2020(ドリップ)は、抽出収率(PE)が高いのは一般に滞留時間が長い場合だと述べている。",
+   "taste": ""
+  },
+  "quotes": [
+   "An important point is that higher PE in general is achieved by longer residence time"
+  ]
+ },
+ {
+  "key": "diagnosis:適正抽出",
+  "content": {
+   "cause": "SCA Coffee Standards(2020年保存版)のGolden Cup Standardでは、ブリュー強度(TDS)が11.5〜13.5 g/L(SCAブリューイング・コントロール・チャート上の1.15〜1.35「パーセント」に相当)で、可溶成分の抽出収率が18〜22%とされている。",
+   "taste": ""
+  },
+  "quotes": [
+   "Coffee shall exhibit a brew strength, measured in Total Dissolved Solids, of 11.5 to 13.5 grams per liter, corresponding to 1.15 to 1.35 \"percent\" on the SCA Brewing Control Chart, resulting from a solubles extraction yield of 18 to 22 percent*.",
+   "Coffee shall exhibit a brew strength, measured in Total Dissolved Solids, of 11.5 to 13.5 grams per liter, corresponding to 1.15 to 1.35 \"percent\" on the SCA Brewing Control Chart"
+  ]
+ },
+ {
+  "key": "extraction:roast",
+  "content": {
+   "summary": "焙煎度が上がるほど、焙煎豆の多孔度が高くなると報告されている",
+   "detail": "走査型電子顕微鏡で焙煎豆の多孔度を測定したところ、焙煎度が上がるほど多孔度が高くなったと報告されている(Scientific Reports 2024, Caffeine content in filter coffee brews as a function of degree of roast and extraction yield)。"
+  },
+  "quotes": [
+   "Scanning electron microscopy was used to measure porosity of roasted seeds and showed increasing porosity with the degree of roast."
+  ]
+ },
+ {
+  "key": "extraction:time",
+  "content": {
+   "summary": "",
+   "detail": "Batali et al.(Scientific Reports 2020, ドリップ)は、抽出収率(PE)が高いのは一般に滞留時間が長い場合で、抽出収率が低い試料ははるかに短い抽出時間だったと述べている。また、Sour(酸っぱさ)などは、濃度(TDS)が高いほど強まり、抽出収率が高いほど弱まる属性として挙げられている。"
+  },
+  "quotes": [
+   "An important point is that higher PE in general is achieved by longer residence time (cf. brewing parameters in Supplementary Table S1), compared to the low PE samples, which involve much shorter brew times.",
+   "The next category of attributes involved those that increased with TDS but decreased with PE: Sour, Citrus, Dark Green, Smoky, Brown Spice, and Fermented"
+  ]
+ },
+ {
+  "key": "fact:SCAJ誕生のきっかけは「コーヒークライシス」だった",
+  "content": {
+   "title": "SCAJは2003年に新規設立された",
+   "text": "日本スペシャルティコーヒー協会(SCAJ)は、国内外に向けてより開かれた協会として、2003年に「日本スペシャルティコーヒー協会」として新規設立された(SCAJ「沿革」より)。"
+  },
+  "quotes": [
+   "2003年 国内外に向けより開かれた協会として、「日本スペシャルティコーヒー協会」として新規設立"
+  ]
+ },
+ {
+  "key": "fact:「80点基準」はSCA自身が2021年に卒業していた",
+  "content": {
+   "title": "SCAは2021年のホワイトペーパーでスペシャルティコーヒーを定義した",
+   "text": "SCAのホワイトペーパー『Towards a Definition of Specialty Coffee』(2021年)は、スペシャルティコーヒーを、特有の特性が認められ、その特性ゆえに市場で大きな付加価値を持つコーヒー(またはコーヒー体験)と定義している。"
+  },
+  "quotes": [
+   "Specialty coffee is a coffee or coffee experience recognized for its distinctive attributes, and because of these attributes, has significant extra value in the marketplace."
+  ]
+ },
+ {
+  "key": "fact:「コーヒーのオリンピック」はブラジルのオークションから始まった",
+  "content": {
+   "title": "Cup of Excellenceの最初の大会は1999年の「Best of Brazil」",
+   "text": "Alliance for Coffee Excellenceによると、Cup of Excellenceの最初の大会は1999年の「Best of Brazil」と呼ばれた。ICOの文書(WP Board 978/05)によると、世界初のインターネットコーヒーオークションは1999年にブラジルで開かれ、Cup of Excellenceの競技会とオークションのプログラムにつながった。"
+  },
+  "quotes": [
+   "The first competition in 1999 was called “Best of Brazil”, executed as an experimental program under the “Gourmet Project” started by Susie Spindler, George Howell, the Brazil Specialty Coffee Association and the Specialty Coffee Association of America.",
+   "The project included the world’s first Internet coffee auction which took place in Brazil in 1999 and led to the Cup of Excellence ® competition and auction programme"
+  ]
+ },
+ {
+  "key": "fact:「フレーバー」には2つの意味がある",
+  "content": {
+   "title": "SCAが定義する「フレーバー」",
+   "text": "SCA Standard 103-2024(Coffee Value Assessment: Descriptive Assessment)では、Flavor(フレーバー)を、口の中にあるあいだに、抽出液の味と、抽出液の retronasal olfactory(後鼻腔の嗅覚)の成分の両方から得られる知覚と定義している。"
+  },
+  "quotes": [
+   "Flavor. The perception coming from both the taste of the brew and the brew’s retronasal olfactory component, while the brew is in the mouth."
+  ]
+ },
+ {
+  "key": "fact:「緑のカエル」は合併で生まれたロゴ",
+  "content": {
+   "title": "Rainforest Allianceは1987年設立、2018年にUTZが合流した",
+   "text": "Rainforest Allianceは1987年に共同設立された団体。同団体の創設者の回想では、数百万人がスーパーで「小さな緑のカエル」を頼りに、より持続可能な選択をしていると述べられている。2018年にUTZが合流した(joined forces)。UTZは2002年に、グアテマラのコーヒー農家とオランダのロースターによって立ち上げられた。"
+  },
+  "quotes": [
+   "Back in 1987, a 24-year-old Daniel Katz co-founded the Rainforest Alliance, a tiny organization with a big mission: save the rainforests.",
+   "The UTZ organization joined forces with the Rainforest Alliance in 2018 to create a better future for people and nature",
+   "It was launched in 2002 by a Guatemalan coffee farmer and a Dutch roaster who wanted to bring coffee certification to a global market",
+   "Millions of people trust our little green frog to lead them to a more sustainable choice at the supermarket"
+  ]
+ },
+ {
+  "key": "fact:イエメンには公的な等級認証機関が事実上ない",
+  "content": {
+   "title": "イエメンでは、品質基準の設定を民間部門が担っているとFAOとIFCの報告書は述べている",
+   "text": "FAOとIFCの2023年の報告書は、品質基準の設定は民間部門が引き受けており、イエメンのSCA(Specialty Coffee Association of Yemen)がスペシャルティコーヒーの基準を設定し、第三者による品質検証・検査も行っていると述べている。"
+  },
+  "quotes": [
+   "The private sector has picked up the mantle for setting the quality standards, with the Specialty Coffee Association (SCA) of Yemen setting standards for specialty coffee in addition to providing third- party quality verification and testing."
+  ]
+ },
+ {
+  "key": "fact:インドネシアには輸出者団体が2つある",
+  "content": {
+   "title": "インドネシアには似た名前の団体、AEKIとGAEKIがある",
+   "text": "インドネシアには、AEKI(Asosiasi Eksportir dan Industri Kopi Indonesia)とGAEKI(Gabungan Eksportir Kopi Indonesia)という、似た名前の団体がある。どちらも名称に Eksportir(輸出者)を含む。"
+  },
+  "quotes": [
+   "GAEKI didirikan di Kota Surabaya dan dapat berkedudukan di seluruh wilayah hukum Indonesia."
+  ]
+ },
+ {
+  "key": "fact:エチオピアは価格上「ブラジルの仲間」",
+  "content": {
+   "title": "エチオピアはICOの区分で、ブラジルと同じ「Brazilian Natural Arabicas」グループ",
+   "text": "国際コーヒー機関(ICO)の用語集によると、Brazilian Natural Arabicasは協定のもとで設けられたアラビカのグループの一つで、このグループの国はブラジル、エチオピア、パラグアイとされている。ICOの統計文書(SC-105/21)は、アラビカのグループのうち、Mild Arabicasは湿式、Brazilian Naturalsは乾式で精製されると説明している。"
+  },
+  "quotes": [
+   "Brazilian Natural Arabicas One of the groups of Arabica coffee established under the Agreement. Countries in this group are: Brazil Ethiopia Paraguay",
+   "Among the Arabica groups, Mild Arabicas are processed using the wet method, while Brazilian Naturals are processed using the dry method."
+  ]
+ },
+ {
+  "key": "fact:クリスタルマウンテンはジャマイカ産ではない",
+  "content": {
+   "title": "クリスタルマウンテンは、公正競争規約ではキューバ産と定められている",
+   "text": "全日本コーヒー公正取引協議会の公正競争規約(別表2)では、クリスタルマウンテンは、キューバにて生産された同国輸出規格に基づくアラビカコーヒー豆と定められている。ジャマイカは別の区分(別表2の3)で、「ジャマイカにて生産されたアラビカコーヒー豆のうち、1)及び2)以外のもの」と定められている。"
+  },
+  "quotes": [
+   "4) クリスタルマウンテン : キューバにて生産さ れた同国輸出規格に基づくアラビカコーヒー豆 をいう。",
+   "3) ジャマイカ : ジャマイカにて生産されたアラビカコーヒー豆のうち、 １） 及び２） 以外のもの をいう。"
+  ]
+ },
+ {
+  "key": "fact:グアテマラだけの輸出税",
+  "content": {
+   "title": "グアテマラのコーヒー輸出には、FOB価額の1%の課徴がある",
+   "text": "WTOのグアテマラ貿易政策検討報告書(WT/TPR/S/477、2025年10月)によると、グアテマラでは、コーヒー輸出に対し、輸出するコーヒー1キンタルごとにFOB価額の1%の課徴がかかる。同じ報告書には、「with the remainder going to ANACAFÉ」(残りはANACAFÉに入る)との記載がある。"
+  },
+  "quotes": [
+   "Coffee exports are subject to a charge of 1% of the f.o.b. value for each quintal of coffee exported.",
+   "with the remainder going to ANACAFÉ."
+  ]
+ },
+ {
+  "key": "fact:グアテマラには300を超える微気候がある",
+  "content": {
+   "title": "グアテマラには300を超える微気候がある",
+   "text": "グアテマラのコーヒー産地の多くは標高1,100mを超える山岳地帯にあり、生態・環境の要因が重なって、300を超える微気候ができているとされる(Anacafe)。"
+  },
+  "quotes": [
+   "La mayor parte de las áreas cafetaleras se encuentran localizadas en sistemas montañosos arriba de los 1,100 metros sobre el nivel del mar, donde factores ecológicos y medioambientales se combinan para crear más de 300 microclimas que permiten obtener cafés de alta calidad, reconocidos mundialmente."
+  ]
+ },
+ {
+  "key": "fact:ケニアのSL28はカシス風味の立役者",
+  "content": {
+   "title": "ケニアのSL28は1930年代に選抜された品種",
+   "text": "品種SL28は、ケニアで1930年代に選抜された。WCRのカタログは、SL28が干ばつへの耐性を示すとしている。"
+  },
+  "quotes": [
+   "It has consequently spread from Kenya, where it was originally selected in the 1930s ... SL28 was selected in 1935 from a single tree in a population called Tanganyika Drought Resistant.",
+   "The variety is suited for medium to high altitudes and shows resistance to drought, but is susceptible to the major diseases of coffee."
+  ]
+ },
+ {
+  "key": "fact:コロンビア・ケニア・タンザニアは「同じ仲間」",
+  "content": {
+   "title": "コロンビア・ケニア・タンザニアは「同じ仲間」",
+   "text": "ICOの指標価格に関する規則(統計規則の附属書I)は、4つのグループ(Colombian Milds、Other Milds、Brazilian Naturals、Robustas)を挙げ、それぞれの米国とEUの市場の割合を示している。ICOの資料(SC-105/21)によると、Colombian Mildsに含まれる国はコロンビア、ケニア、タンザニアの3カ国で、他の国のマイルドアラビカはOther Mildsに分類される。"
+  },
+  "quotes": [
+   "The share of each market in the four groups is as follows: Colombian Milds: 46% USA – 54% EU Other Milds: 40% USA – 60% EU Brazilian Naturals: 24% USA – 76% EU Robustas: 16% USA – 84% EU",
+   "Countries included in the Colombian Milds group are Colombia, Kenya and Tanzania. Mild Arabicas produced in all other countries are classified as Other Milds."
+  ]
+ },
+ {
+  "key": "fact:コーヒーの木の寿命は20〜30年",
+  "content": {
+   "title": "品種選びは次の世代にまで影響する",
+   "text": "WCRのカタログ解説は、どの品種を植えるかという生産者の判断の結果は、次の世代まで続くとしている。"
+  },
+  "quotes": [
+   "the decision producers make about which variety to plant will have consequences until the next generation. If a farmer makes a poor decision on variety, the cumulative loss can be huge."
+  ]
+ },
+ {
+  "key": "fact:コーヒー価格の重み付けは生きている",
+  "content": {
+   "title": "コーヒー価格の重み付けは生きている",
+   "text": "ICOの統計規則(指標価格)では、各グループの重み付けは2年ごとに見直すこととされている。2005年10月1日からの重み付けは、Colombian Milds 13%、Other Milds 24%、Brazilian Naturals 29%、Robustas 34%。2007年については、ICOの資料に、新しいグループの市場割合と重み付けを2007年10月1日から適用するよう委員会が理事会に勧告したとある。"
+  },
+  "quotes": [
+   "(c) the weighting of each group is to be reviewed every two years.",
+   "The calculation of the ICO composite indicator price is weighted as follows: Colombian Milds: 13% Other Milds: 24% Brazilian Naturals: 29% Robustas: 34%",
+   "A similar review last took place in 2007 when the Committee recommended to the Council that the new group market shares and their weightings were to take effect from 1 October 2007 ... Colombian Milds 11 584 617 13.38 14.00 / Other Milds 19 561 272 22.59 20.00 / Brazilian Naturals 26 277 292 30.34 31.00 / Robustas 29 181 018 33.69 35.00"
+  ]
+ },
+ {
+  "key": "fact:コーヒー鑑定士資格「Qグレーダー」の運営元が変わった",
+  "content": {
+   "title": "コーヒー鑑定士資格「Qグレーダー」の運営元が変わった",
+   "text": "Qグレーダーは、コーヒーの品質を評価・伝達するための資格。Coffee Quality Institute(CQI)は2004年にQ(Quality)コーヒーシステムを導入し、Qグレーダー認定を運営してきたが、2025年にその運営を終了した。SCAは2025年10月1日、更新版プログラムの一環としてQグレーダー講座が始まったと発表し、プログラムの内容を発展させ、運営をCQIから移管するとしている。更新後のカリキュラムは、CVA(Coffee Value Assessment)を基盤にしている。"
+  },
+  "quotes": [
+   "The globally respected license for coffee professionals to evaluate and communicate coffee quality has been updated to align with the latest in coffee science.",
+   "in 2004 CQI introduced the Q (quality) Coffee System ... The Q Grader certification became one of the most valuable professional credentials ... In 2025 CQI ceased to administer this mature program",
+   "Today, Q Grader courses launch as part of the updated program with the Specialty Coffee Association (SCA) for the first time. ... the SCA would evolve the content of the Q Grader Program and transition its management from the Coffee Quality Institute (CQI).",
+   "The updated curriculum, now grounded in the Coffee Value Assessment (CVA), reflects the latest advancements in sensory science."
+  ]
+ },
+ {
+  "key": "fact:サパティスタ運動が今のメキシココーヒーの姿を作った",
+  "content": {
+   "title": "メキシコのコーヒー農家は小規模農家が中心",
+   "text": "ICOが掲載した報告書(Mexico's Coffee Value Chain、COSA作成)によると、メキシコのコーヒー農家の多くは小規模農家で、農場面積の平均は2.9ヘクタール(中央値2.0ヘクタール)。ベラクルス州の農場はより大きく(平均2.3ヘクタール)、チアパス州は1.7ヘクタール、プエブラ州は1.6ヘクタール。"
+  },
+  "quotes": [
+   "Most coffee farmers are smallholders, with an average farm size of 2.9 hectares and a median value of 2.0 hectares. ... In Veracruz, farms are larger, (averaging 2.3 hectares) compared to Chiapas and Puebla (1.7 and 1.6 hectares, respectively)."
+  ]
+ },
+ {
+  "key": "fact:ジャマイカは2025年のハリケーンで収穫の4割を失った",
+  "content": {
+   "title": "ジャマイカは2025年のハリケーンでコーヒーの4割を失ったとされる",
+   "text": "2025年10月28日、ハリケーン・メリッサがカテゴリー5でジャマイカのウェストモアランドのニューホープ付近に上陸した。ジャマイカ政府の広報機関JISの2026年1月14日付の記事は、メリッサによるコーヒーの40%の損失に触れている。"
+  },
+  "quotes": [
+   "On Tuesday, October 28, Jamaica endured one of the most punishing natural disasters in our modern history. Hurricane Melissa made landfall near New Hope in Westmoreland as a Category 5 hurricane",
+   "following the loss of 40 per cent of coffee during Hurricane Melissa"
+  ]
+ },
+ {
+  "key": "fact:スペシャルティの基準は「点数」から「4つの軸」へ",
+  "content": {
+   "title": "SCAの評価は「単一のカッピングスコア」から「4つの評価タイプ」へ",
+   "text": "SCAは、CVA(Coffee Value Assessment)の記述的評価と嗜好的評価を新しいカッピング標準として正式に採用したと発表した。これらの標準は、2004年のカッピングプロトコルに取って代わる。SCAは、CVAを、コーヒーを単一のカッピングスコアで表すことの限界からの転換だと説明している。CVAは単一のスコアに頼らず、4つの補完的な評価タイプを組み合わせる。"
+  },
+  "quotes": [
+   "These standards, approved by the SCA Standards Development Panel, supersede the 2004 Cupping Protocol and Form",
+   "Rather than rely on a single score, the CVA combines four complementary assessment types",
+   "the Coffee Value Assessment represents a shift from the limitations of a singular cupping score to describe a coffee"
+  ]
+ },
+ {
+  "key": "fact:スマトラ式は2段階で乾燥させる",
+  "content": {
+   "title": "マンデリンは脱穀してから生豆を乾燥させる",
+   "text": "FAO/ICO/CFCの報告書(Origins of Mandheling Coffee Characterの附属書)によると、湿ったパーチメントは含水率40〜50%の状態で脱穀される(hulled wet)。脱穀した生豆は、その後で天日乾燥される。"
+  },
+  "quotes": [
+   "A number of trading and storage steps can take place before the wet parchment is eventually hulled wet, at 40-50% moisture content.",
+   "The hulled green bean is then sun dried."
+  ]
+ },
+ {
+  "key": "fact:タンザニアは輸出まで一つの機関が管理",
+  "content": {
+   "title": "タンザニアのCoffee Industry Act 2001が定める事項",
+   "text": "Tanzania Coffee Board(タンザニアコーヒー局)は、Coffee Industry Act 2001によって再設置された機関。同法の条文には、コーヒーおよび副産物の品質の規制・管理、コーヒーのオークションの実施、コーヒーの輸出の許可・認可の付与が挙げられている(2001年制定の条文による)。"
+  },
+  "quotes": [
+   "An Act make better provisions for the regulation, improvement and development of the Coffee Industry, to re-establish the Tanzania Coffee Board, to repeal the Tanzania Coffee Board Act of 1984",
+   "(e) to regulate and control the quality of coffee and coffee by-products;",
+   "(d) to conduct coffee auctions:",
+   "(a) to grant licences or permits for coffee export;"
+  ]
+ }
+]

@@ -1,0 +1,1602 @@
+{
+  "scope": "コロンビア・ペルー(origin-6)",
+  "verifiedOn": "2026-11-09",
+  "sources": {
+    "fnc-res-02-2016": {
+      "title": "Resolución 02 de 2016 (25 de abril) - Por la cual se unifican y actualizan las normas de calidad del café verde en almendra para exportación",
+      "org": "Comité Nacional de Cafeteros / Federación Nacional de Cafeteros de Colombia",
+      "url": "https://federaciondecafeteros.org/wp-content/uploads/2025/11/Resolucion-2-2016_cafe_verde.pdf",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": "取得元はInternet Archive(Wayback Machine)に保存された公式URLの複製(この環境から公式サイトへ直接接続できなかったため)。 画像のみのPDF(スキャン)で、pypdfでは本文が取れない。全ページを画像として読み、quoteは目視で書き写した(機械照合はできない)。"
+    },
+    "fnc-res-05-2018": {
+      "title": "Resolución 05 de 2018 (27 de junio) - Lineamientos de la política de prevención y control para garantizar la calidad del café para exportación a los mercados internacionales",
+      "org": "Comité Nacional de Cafeteros / Federación Nacional de Cafeteros de Colombia",
+      "url": "https://federaciondecafeteros.org/wp-content/uploads/2025/11/RESOLUCION-O5-DE-2018-Lineamientos-Politica-de-Prevencion-y-Control_-Calidad-de-Cafe.pdf",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": "取得元はInternet Archive(Wayback Machine)に保存された公式URLの複製(この環境から公式サイトへ直接接続できなかったため)。 画像のみのPDF(スキャン)で、pypdfでは本文が取れない。全ページを画像として読み、quoteは目視で書き写した(機械照合はできない)。"
+    },
+    "fnc-res-05-2002": {
+      "title": "Resolución 5 de 2002 (6 de junio)",
+      "org": "Comité Nacional de Cafeteros / Federación Nacional de Cafeteros de Colombia",
+      "url": "https://federaciondecafeteros.org/static/files/RESOL5-2002.pdf",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": "取得元はInternet Archive(Wayback Machine)に保存された公式URLの複製(この環境から公式サイトへ直接接続できなかったため)。2016年決議2号により廃止された旧規則(比較用)。"
+    },
+    "fnc-circular-007-2025": {
+      "title": "Circular N° 007 - FRC25I00014 (Regulación cafetera): Recomendaciones para la exportación de café",
+      "org": "Federación Nacional de Cafeteros de Colombia",
+      "url": "https://federaciondecafeteros.org/wp-content/uploads/2026/02/CIRCULAR-N°-007-FRC25I00014-DEL-15-DE-DICIEMBRE-DE-2025-2-3.pdf",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": "取得元はInternet Archive(Wayback Machine)に保存された公式URLの複製(この環境から公式サイトへ直接接続できなかったため)。本文冒頭の日付は「17 DE DICIEMBRE DE 2025」、ファイル名は「15 DE DICIEMBRE DE 2025」。"
+    },
+    "fnc-res-08-2019-en": {
+      "title": "Resolution Nº 08 of 2019 (June 12) - certified English translation",
+      "org": "National Coffee Growers Committee / Federación Nacional de Cafeteros de Colombia",
+      "url": "https://federaciondecafeteros.org/app/uploads/2020/01/Resolution-N°08-of-2019-To-guarantee-the-quality-of-coffee-exports-to-the-japanese-market.pdf",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": "取得元はInternet Archive(Wayback Machine)に保存された公式URLの複製(この環境から公式サイトへ直接接続できなかったため)。公認英訳。"
+    },
+    "fnc-federacion-historia": {
+      "title": "Federación - Nuestra Historia (FNC)",
+      "org": "Federación Nacional de Cafeteros de Colombia",
+      "url": "https://federaciondecafeteros.org/wp/federacion/",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": "Wayback保存(2026-02-10時点)のHTMLを取得し本文を抽出。"
+    },
+    "cafedecolombia-do-regional": {
+      "title": "Regional Designations of Origin",
+      "org": "Café de Colombia (Federación Nacional de Cafeteros)",
+      "url": "https://cafedecolombia.com/en/regional-designation-of-origin/",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": "curlで取得したHTMLの本文。"
+    },
+    "cafedecolombia-regions": {
+      "title": "Coffee Growing Regions",
+      "org": "Café de Colombia (Federación Nacional de Cafeteros)",
+      "url": "https://cafedecolombia.com/en/coffee-growing-regions/",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": "curlで取得したHTMLの本文。"
+    },
+    "cafedecolombia-seed-to-mug": {
+      "title": "From seed to mug",
+      "org": "Café de Colombia (Federación Nacional de Cafeteros)",
+      "url": "https://cafedecolombia.com/en/from-seed-to-mug/",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": "curlで取得したHTMLの本文。"
+    },
+    "cafedecolombia-growers": {
+      "title": "Our Coffee Growers",
+      "org": "Café de Colombia (Federación Nacional de Cafeteros)",
+      "url": "https://cafedecolombia.com/en/our-coffee-growers/",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": "curlで取得したHTMLの本文。"
+    },
+    "cenicafe-avt-426-2012": {
+      "title": "Avance Técnico 426: Variedad Castillo - Preguntas frecuentes (Diciembre de 2012)",
+      "org": "Cenicafé / Federación Nacional de Cafeteros (Fondo Nacional del Café)",
+      "url": "https://biblioteca.cenicafe.org/bitstream/10778/410/1/avt0426.pdf",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": "curl + pypdfで本文を抽出。"
+    },
+    "cenicafe-avt-337-2005": {
+      "title": "Avance Técnico 337: Castillo: nueva variedad de café con resistencia a la roya (Julio de 2005)",
+      "org": "Cenicafé / Federación Nacional de Cafeteros",
+      "url": "https://biblioteca.cenicafe.org/bitstream/10778/401/1/avt0337.pdf",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": "curl + pypdfで本文を抽出。"
+    },
+    "cenicafe-avt-344-2006": {
+      "title": "Avance Técnico 344: La Variedad Castillo El Tambo para regiones cafeteras de Cauca, Nariño, Huila, Tolima y Valle del Cauca (Febrero de 2006)",
+      "org": "Cenicafé / Federación Nacional de Cafeteros",
+      "url": "https://biblioteca.cenicafe.org/bitstream/10778/390/1/avt0344.pdf",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": "curl + pypdfで本文を抽出。"
+    },
+    "fnc-noticia-salazar": {
+      "title": "SALAZAR DE LAS PALMAS: CUNA DEL CAFÉ COLOMBIANO (noticia FNC)",
+      "org": "Federación Nacional de Cafeteros de Colombia",
+      "url": "https://federaciondecafeteros.org/wp/listado-noticias/salazar-de-las-palmas-cuna-del-cafe-colombiano/",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": "Wayback保存(2026-01-24時点)のHTMLを取得し本文を抽出。FNCの広報記事であり、史料ではない。"
+    },
+    "eafit-fnc-90-years": {
+      "title": "National Federation of Coffee Growers of Colombia, 1927-2017: 90 Years (Colombian Coffee: Growing for the Future)",
+      "org": "Editorial EAFIT(Universidad EAFIT)。Cenicafé図書館が公開",
+      "url": "https://biblioteca.cenicafe.org/bitstream/10778/4277/3/90%20YearsColombian%20Coffee_%20Growing%20for%20the%20future.pdf",
+      "kind": "secondary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": "FNC創設90年の記念書籍(大学出版)。機関の公式文書ではなく、二次資料として扱う。curl + pypdfで本文を抽出。"
+    },
+    "usda-fas-peru-coffee-annual-2025": {
+      "title": "Coffee Annual - Peru (Report Number PE2025-0018, May 21, 2025)",
+      "org": "USDA Foreign Agricultural Service (GAIN), Lima",
+      "url": "https://apps.fas.usda.gov/newgainapi/api/Report/DownloadReportByFileName?fileName=Coffee+Annual_Lima_Peru_PE2025-0018.pdf",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": "curl + pypdfで本文を抽出。米国農務省の駐在官報告(ペルー政府の資料ではない)。2026年5月版(PE2026-0008)は公式サイトが403でこの環境から取得できなかったため、2025年版を使用。"
+    },
+    "jnc-nosotros-2024": {
+      "title": "Nosotros - Junta Nacional del Café",
+      "org": "Junta Nacional del Café (JNC)",
+      "url": "https://juntadelcafe.org.pe/nosotros/",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": "Internet Archive(Wayback Machine)に保存された公式URLの複製を取得し、HTMLから本文を抽出(公式サイトの現行ページは2026-10時点で「工事中」表示のため)。使用した保存日: 2024-03-14。"
+    },
+    "jnc-inicio-2026": {
+      "title": "Junta Nacional del Café (portada)",
+      "org": "Junta Nacional del Café (JNC)",
+      "url": "https://juntadelcafe.org.pe/",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": "Internet Archive(Wayback Machine)に保存された公式URLの複製を取得し、HTMLから本文を抽出(公式サイトの現行ページは2026-10時点で「工事中」表示のため)。使用した保存日: 2026-05-06。"
+    },
+    "jnc-historia": {
+      "title": "Historia de la JNC (2018-10-30)",
+      "org": "Junta Nacional del Café (JNC)",
+      "url": "https://juntadelcafe.org.pe/historia-de-la-jnc/",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": "Internet Archive(Wayback Machine)に保存された公式URLの複製を取得し、HTMLから本文を抽出(公式サイトの現行ページは2026-10時点で「工事中」表示のため)。使用した保存日: 2024-07-05。"
+    },
+    "inacal-gip-101-2021": {
+      "title": "GIP 101:2021 Guía de Implementación de la NTP 209.027:2018 CAFÉ. Café verde. Requisitos (1ª Edición)",
+      "org": "INACAL (Instituto Nacional de Calidad)",
+      "url": "https://cdn.www.gob.pe/uploads/document/file/2223203/GIP%20101.pdf.pdf",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": "curl + pypdfで本文を抽出。規格(NTP)本体ではなくINACALの「実施ガイド」。NTP本体は有料のため取得していない。R.D. N° 015-2021-INACAL/DN。"
+    },
+    "inacal-gip-101-2026": {
+      "title": "GIP 101:2026 Guía de Implementación de la NTP 209.027:2024 + CT 1:2025 CAFÉ. Café verde. Requisitos (2ª Edición)",
+      "org": "INACAL (Instituto Nacional de Calidad)",
+      "url": "https://www.inacal.gob.pe/repositorioaps/data/1/1/1/jer/guiasdeimplementacion/files/GIP%20101%202026.pdf",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": "curl + pypdfで本文を抽出。規格(NTP)本体ではなくINACALの「実施ガイド」(2026-02-13)。NTP本体は有料のため取得していない。"
+    },
+    "inacal-rd-003-2026": {
+      "title": "Resolución Directoral N° 000003-2026-INACAL/DN (El Peruano, 25 de febrero de 2026): Aprueban Guías de Implementación Peruanas de las NTP café verde y café tostado",
+      "org": "INACAL (Instituto Nacional de Calidad)",
+      "url": "https://www.gob.pe/institucion/inacal/normas-legales/7783865-000003-2026-inacal-dn",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": "gob.peのPDF(https://cdn.www.gob.pe/uploads/document/file/9508992/7783865-2026-rd03.pdf)をcurl + pypdfで取得。官報ページ全体のうち、該当の決議の部分を読んだ。"
+    },
+    "inacal-gip-107-2021": {
+      "title": "GIP 107:2021 Guía de Implementación de la NTP 209.311:2019 CAFÉS ESPECIALES. Requisitos (1ª Edición)",
+      "org": "INACAL (Instituto Nacional de Calidad)",
+      "url": "https://cdn.www.gob.pe/uploads/document/file/2223207/GIP%20107.pdf.pdf",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": "curl + pypdfで本文を抽出。規格(NTP)本体ではなくINACALの「実施ガイド」。2021年版のため、後続版の有無は未確認。"
+    },
+    "midagri-boletin-014": {
+      "title": "Boletín N° 014: Producción y exportación de café convencional y orgánico en el Perú",
+      "org": "MIDAGRI (Ministerio de Desarrollo Agrario y Riego)",
+      "url": "https://cdn.www.gob.pe/uploads/document/file/4922461/N.%C2%B0014%7C%20Producci%C3%B3n%20y%20exportaci%C3%B3n%20de%20caf%C3%A9%20convencional%20y%20org%C3%A1nico%20en%20el%20Per%C3%BA.pdf?v=1690851294",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": "curl + pypdfで本文を抽出(2023年7月)。"
+    },
+    "ace-coe-peru-2017": {
+      "title": "Perú 2017 - Cup of Excellence (competition results)",
+      "org": "Alliance for Coffee Excellence (Cup of Excellence)",
+      "url": "https://allianceforcoffeeexcellence.org/peru-2017/",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": "curlで取得したHTMLの本文。"
+    },
+    "ace-coe-peru-2018": {
+      "title": "Perú 2018 - Cup of Excellence (competition results)",
+      "org": "Alliance for Coffee Excellence (Cup of Excellence)",
+      "url": "https://allianceforcoffeeexcellence.org/peru-2018/",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": "curlで取得したHTMLの本文。"
+    },
+    "ace-coe-peru-2019": {
+      "title": "Perú 2019 - Cup of Excellence (competition results)",
+      "org": "Alliance for Coffee Excellence (Cup of Excellence)",
+      "url": "https://allianceforcoffeeexcellence.org/peru-2019/",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": "curlで取得したHTMLの本文。"
+    },
+    "ace-coe-peru-2021": {
+      "title": "Perú 2021 - Cup of Excellence (competition results)",
+      "org": "Alliance for Coffee Excellence (Cup of Excellence)",
+      "url": "https://allianceforcoffeeexcellence.org/peru-2021/",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": "curlで取得したHTMLの本文。"
+    },
+    "ace-coe-peru-2022": {
+      "title": "Perú 2022 - Cup of Excellence (competition results)",
+      "org": "Alliance for Coffee Excellence (Cup of Excellence)",
+      "url": "https://allianceforcoffeeexcellence.org/peru-2022/",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": "curlで取得したHTMLの本文。"
+    },
+    "ace-coe-peru-2023": {
+      "title": "Perú 2023 - Cup of Excellence (competition results)",
+      "org": "Alliance for Coffee Excellence (Cup of Excellence)",
+      "url": "https://allianceforcoffeeexcellence.org/peru-2023/",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": "curlで取得したHTMLの本文。"
+    },
+    "ace-coe-peru-2024": {
+      "title": "Perú 2024 - Cup of Excellence (competition results)",
+      "org": "Alliance for Coffee Excellence (Cup of Excellence)",
+      "url": "https://allianceforcoffeeexcellence.org/peru-2024/",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": "curlで取得したHTMLの本文。"
+    },
+    "ace-coe-peru-2025": {
+      "title": "Perú 2025 - Cup of Excellence (competition results)",
+      "org": "Alliance for Coffee Excellence (Cup of Excellence)",
+      "url": "https://allianceforcoffeeexcellence.org/peru-2025/",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": "curlで取得したHTMLの本文。"
+    },
+    "ace-coe-peru-2026": {
+      "title": "Perú 2026 - Cup of Excellence (competition results)",
+      "org": "Alliance for Coffee Excellence (Cup of Excellence)",
+      "url": "https://allianceforcoffeeexcellence.org/peru-2026/",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": "curlで取得したHTMLの本文。"
+    }
+  },
+  "entries": {
+    "origin:コロンビア:officialBody": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "FNC(全国コーヒー生産者連盟)は1927年設立",
+          "status": "verified",
+          "sourceIds": [
+            "fnc-federacion-historia"
+          ],
+          "quote": "Creación de la Federación Nacional de Cafeteros - FNC 1927 Se crea la FNC una entidad privada, sin ánimo de lucro y de carácter gremial",
+          "location": "「Nuestra Historia」の1927年の項",
+          "note": ""
+        },
+        {
+          "text": "Comité Nacional de Cafeteros(全国コーヒー生産者委員会)の決議第2号・2016年が、輸出用生豆の品質規則である",
+          "status": "verified",
+          "sourceIds": [
+            "fnc-res-02-2016"
+          ],
+          "quote": "RESOLUCIÓN 02 DE 2016 (25 de abril) POR LA CUAL SE UNIFICAN Y ACTUALIZAN LAS NORMAS DE CALIDAD DEL CAFÉ VERDE EN ALMENDRA PARA EXPORTACIÓN",
+          "location": "表題(1頁)",
+          "note": "決議の日付は2016年4月25日。"
+        },
+        {
+          "text": "FNCは「エキセルソ以上のみ輸出可能」という最低輸出基準を運用している",
+          "status": "incorrect",
+          "sourceIds": [
+            "fnc-res-02-2016",
+            "fnc-federacion-historia"
+          ],
+          "quote": "ARTÍCULO 4°. Exportación de otras calidades. Podrá exportarse café verde en almendra colombiano de calidades distintas a las mencionadas en el artículo segundo de esta resolución. || permite a partir de la fecha exportar diferentes calidades del café colombiano",
+          "location": "決議2号 第4条(4頁) / FNC歴史ページ 2016年の項",
+          "note": "決議2号は、Excelso以外の品質の生豆の輸出も認めている(植物検疫要件・異物なし・水分8〜12.5%などを満たすこと。FNCは品質を認証せず、「Producto de Colombia」と表示する)。「エキセルソ以上のみ」は原文と食い違う。"
+        },
+        {
+          "text": "FNCの2025年12月の通達が、生豆の品質管理の根拠として決議2号(2016年)を挙げている",
+          "status": "verified",
+          "sourceIds": [
+            "fnc-circular-007-2025"
+          ],
+          "quote": "El control de calidad del café verde se realiza conforme a lo establecido en la Resolución 2 de 2016 del Comité Nacional",
+          "location": "Circular N° 007(FRC25I00014)「NORMA DE CALIDAD」の項",
+          "note": "通達の本文冒頭の日付は2025年12月17日。"
+        },
+        {
+          "text": "生豆の品質規範(根拠となる決議)は決議2号(2016年)か、決議05号(2018年)か、という資料間の食い違い",
+          "status": "conflict",
+          "sourceIds": [
+            "fnc-res-02-2016",
+            "fnc-res-05-2018",
+            "fnc-circular-007-2025"
+          ],
+          "quote": "POR LA CUAL SE UNIFICAN Y ACTUALIZAN LAS NORMAS DE CALIDAD DEL CAFÉ VERDE EN ALMENDRA PARA EXPORTACIÓN || POR LA CUAL SE ESTABLECEN LOS LINEAMIENTOS DE LA POLÍTICA DE PREVENCIÓN Y CONTROL PARA GARANTIZAR LA CALIDAD DEL CAFÉ PARA EXPORTACIÓN A LOS MERCADOS INTERNACIONALES || El control de calidad del café verde se realiza conforme a lo establecido en la Resolución 2 de 2016 del Comité Nacional",
+          "location": "決議2号 表題 / 決議05号 表題 / 通達007「NORMA DE CALIDAD」",
+          "note": "【ユーザーが決める事項】決議2号(2016)は生豆の規格(スクリーン、水分、欠点数、臭い、カップ)そのものを定める(第2〜4条)。決議05号(2018)は、輸出品の品質を守るための「予防・管理の政策の方針」(教育、残留農薬のモニタリング、委員会の設置等)を定め、生豆の規格値は含まない(全3頁を確認)。通達007は、生豆の品質管理は決議2号に従うと述べ、別段で決議05号を「予防・管理の方針」として挙げる。以上は検証者の観察であり、どちらを正とするかは解決していない。"
+        }
+      ],
+      "suggestedText": "FNC(全国コーヒー生産者連盟)は1927年に設立された。輸出用の生豆の品質規則は、全国コーヒー生産者委員会(Comité Nacional de Cafeteros)の決議第2号(2016年4月25日)が定める。同決議はExcelsoの規格を定めるとともに、Excelso以外の品質の生豆の輸出も認めている。FNCの2025年12月の通達も、生豆の品質管理は決議第2号(2016年)に従うとしている。",
+      "note": "「生豆の品質規範が決議2/2016か05/2018か」は、conflictとして両方の原文を記録した(検証者は解決しない)。"
+    },
+    "origin:コロンビア:gradeSystem": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "「エクセルソ(Excelso)」は7段階の等級群に共通する親カテゴリ名で、単独では意味をなさず常に「エクセルソ+サブ名」で表記される",
+          "status": "unverified",
+          "sourceIds": [
+            "fnc-res-02-2016"
+          ],
+          "quote": "Será objeto de exportación el Café Verde en Almendra Excelso, que es el café compuesto de grano grande, principalmente plano, parejo, retenido por encima de malla catorce (14)",
+          "location": "決議2号 第2条(2頁)",
+          "note": "公式の一次資料の原文では確認できない(探索: FNC決議・通達、FNC歴史ページ、Café de Colombia公式サイト)。決議2号は「Excelso」を単独の輸出品種として定義し(第2条)、サブ名や7段階の等級は挙げていない。決議2号の原文は、本文の「親カテゴリ名/7段階」という記述を支持しない。"
+        },
+        {
+          "text": "サブ名はプレミアム/スプレモ/エクストラ/ヨーロッパ/UGQ/マラゴジッペ/カラコル、スクリーン12〜18",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式の一次資料の原文では確認できない(探索: FNC決議・通達、FNC歴史ページ、Café de Colombia公式サイト)。決議2号(2016)にも旧決議5号(2002)にも、Supremo・Premium・Extra・Europa・UGQ・Maragogipeの記載はない。旧決議5号(2002)は「Excelso de Exportación」と「Caracol」(ピーベリー)を挙げる。"
+        },
+        {
+          "text": "Excelsoは、大粒で主に平たく揃った豆で、スクリーン14(malla 14)より上に残り、5%まではそれより小さくスクリーン12に残る豆を許容する",
+          "status": "verified",
+          "sourceIds": [
+            "fnc-res-02-2016"
+          ],
+          "quote": "Será objeto de exportación el Café Verde en Almendra Excelso, que es el café compuesto de grano grande, principalmente plano, parejo, retenido por encima de malla catorce (14), con tolerancia hasta del cinco por ciento (5%) inferior a esa malla, pero retenido por la malla doce (12)",
+          "location": "決議2号 第2条(2頁)",
+          "note": ""
+        },
+        {
+          "text": "Excelsoは、少なくとも50%の豆がスクリーン15に残る(Green Coffee Association of New York Cityの規格に準拠)",
+          "status": "verified",
+          "sourceIds": [
+            "fnc-res-02-2016"
+          ],
+          "quote": "En todo caso este café debe tener por lo menos un cincuenta por ciento (50%) de granos retenidos sobre la malla quince (15), de acuerdo con lo previsto en las normas de la Green Coffee Association of New York City, Inc.",
+          "location": "決議2号 第2条(2頁)",
+          "note": ""
+        },
+        {
+          "text": "スクリーン16以上とピーベリー(カラコル)のみがスペシャルティコーヒーに分類される",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式の一次資料の原文では確認できない(探索: FNC決議・通達、FNC歴史ページ、Café de Colombia公式サイト)。FNCの決議2号は「スペシャルティ」の分類を定めていない。"
+        }
+      ],
+      "suggestedText": "全国コーヒー生産者委員会の決議第2号(2016年)は、輸出用の生豆Excelsoを、大粒で主に平たく揃った豆で、スクリーン14(malla 14)より上に残るもの(5%まではそれより小さくスクリーン12に残る豆を許容)と定め、少なくとも50%の豆がスクリーン15に残ることを求める。",
+      "note": "サブ名7種・スクリーン12〜18・スペシャルティ分類は、一次資料で確認できていない。決議2号は水分12.5%以下(第3.1条)、500gの試料で24欠点以下(第3.2条)も定める。"
+    },
+    "origin:コロンビア:regions": {
+      "status": "verified",
+      "claims": [
+        {
+          "text": "ウイラ・ナリーニョ・トリマはコロンビアのコーヒー産地で、いずれも原産地呼称(DO)が保護されている",
+          "status": "verified",
+          "sourceIds": [
+            "cafedecolombia-do-regional"
+          ],
+          "quote": "Resolution No. 17989 of April 16, 2013, in which the protection of Cafe de Huila is declared || the protection of the DO Cafe de Nariño || On January 30, 2017, the Superintendencia de Industria y Comercio (SIC) through Resolution No. 2458 declared the protection of the DO Café del Tolima",
+          "location": "Regional Designations of Origin: Huila / Nariño / Tolima の各項",
+          "note": "原産地呼称を持つ産地は他にもカウカ(2011)、サンタンデール(2014)、シエラネバダ(2017)がある。3産地が「代表的」という順位づけは確認していない。"
+        }
+      ],
+      "note": "産地名の列挙。選定理由(代表性)は主張としては書かれていない。"
+    },
+    "origin:コロンビア:tagline": {
+      "status": "unverified",
+      "claims": [
+        {
+          "text": "バランスの取れた酸味とコク、安定した品質",
+          "status": "unverified",
+          "sourceIds": [
+            "fnc-res-02-2016"
+          ],
+          "quote": "Que Colombia se ha caracterizado por entregar al mercado un café que es sinónimo de buena calidad",
+          "location": "決議2号 前文(1頁)",
+          "note": "公式の一次資料の原文では確認できない(探索: FNC決議・通達、FNC歴史ページ、Café de Colombia公式サイト)。FNCの決議2号は、コロンビアは「良い品質の代名詞」となるコーヒーを市場に届けてきたと述べるが、「バランスの取れた酸味とコク」「安定した品質」という評価は原文にない(FNCの自己評価である点にも注意)。"
+        }
+      ],
+      "suggestedText": "FNCは、コロンビアのコーヒーを「良い品質の代名詞」と位置づけている(決議2号・2016年)。"
+    },
+    "origin:コロンビア:sub:ウイラ": {
+      "status": "unverified",
+      "claims": [
+        {
+          "text": "標高1,200〜2,000m",
+          "status": "incorrect",
+          "sourceIds": [
+            "cafedecolombia-do-regional"
+          ],
+          "quote": "ranges of height between 1000 and 2200 meters (m.a.s.l.)",
+          "location": "Regional DO: Huila",
+          "note": "FNCのDO説明は1,000〜2,200m。"
+        },
+        {
+          "text": "火山性土壌",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式の一次資料の原文では確認できない(探索: FNC決議・通達、FNC歴史ページ、Café de Colombia公式サイト)。"
+        },
+        {
+          "text": "バランス良くジューシーでクリーン、青リンゴ・柑橘・チョコの甘み",
+          "status": "unverified",
+          "sourceIds": [
+            "cafedecolombia-do-regional",
+            "cafedecolombia-regions"
+          ],
+          "quote": "The Denomination of Origin Cafe del Huila protects the mild washed Arabica coffee, which is identified by having a balanced global impression, with sweet notes, acidity and medium/high body, and intense fragrance/aroma with fruity and caramel notes.",
+          "location": "Regional DO: Huila",
+          "note": "公式の一次資料の原文では確認できない(探索: FNC決議・通達、FNC歴史ページ、Café de Colombia公式サイト)。FNCの記述は「バランスの取れた全体印象、甘い風味、中〜高の酸、中〜高のボディ、フルーティーとキャラメルの香り」。「ジューシー」「青リンゴ」「柑橘」「チョコ」は原文にない(地域別カップ表は酸を「Media - High, citrus」と表記)。"
+        },
+        {
+          "text": "国内で最も受賞の多い地域の一つ",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式の一次資料の原文では確認できない(探索: FNC決議・通達、FNC歴史ページ、Café de Colombia公式サイト)。"
+        }
+      ],
+      "suggestedText": "ウイラ: 標高は1,000〜2,200m(FNCの原産地呼称の説明)。バランスの取れた全体印象で、甘い風味、中〜高の酸と中〜高のボディ、フルーティーでキャラメルの香りを持つウォッシュドのアラビカ。原産地呼称は2013年4月16日のSIC決議17989号で保護された。"
+    },
+    "origin:コロンビア:sub:ナリーニョ": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "最大2,300m級",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式の一次資料の原文では確認できない(探索: FNC決議・通達、FNC歴史ページ、Café de Colombia公式サイト)。"
+        },
+        {
+          "text": "火山性土壌",
+          "status": "unverified",
+          "sourceIds": [
+            "cafedecolombia-do-regional"
+          ],
+          "quote": "the high content of organic matter in the soil",
+          "location": "Regional DO: Nariño",
+          "note": "公式の一次資料の原文では確認できない(探索: FNC決議・通達、FNC歴史ページ、Café de Colombia公式サイト)。FNCは「土壌の有機物含量が高い」と述べ、火山性とは書いていない。"
+        },
+        {
+          "text": "極端な高標高",
+          "status": "verified",
+          "sourceIds": [
+            "cafedecolombia-do-regional"
+          ],
+          "quote": "the high altitude where it is grown and the low temperatures that force the plant to conserve its sweetness",
+          "location": "Regional DO: Nariño",
+          "note": "「高標高」と低温が品質要因と記載。標高の数値は記載なし。「極端な」は原文にない。"
+        },
+        {
+          "text": "明るい酸",
+          "status": "conflict",
+          "sourceIds": [
+            "cafedecolombia-do-regional",
+            "cafedecolombia-regions"
+          ],
+          "quote": "Giving as a final result a drink of high acidity, medium body, sweet notes, clean, soft cup, and very pronounced aroma. || Nariño Aroma Sweet, Fruity Taste Sweet, Fruity and floral Acidity Medium, citric Body Medium, creamy",
+          "location": "Regional DO: Nariño || Coffee Growing Regions: Nariño",
+          "note": "【ユーザーが決める事項】FNC公式サイトの2ページで酸の強さが食い違う(DO説明は「high acidity」、地域別カップ表は「Medium, citric」)。"
+        },
+        {
+          "text": "フルボディ",
+          "status": "incorrect",
+          "sourceIds": [
+            "cafedecolombia-do-regional"
+          ],
+          "quote": "a drink of high acidity, medium body",
+          "location": "Regional DO: Nariño(地域別カップ表もBody: Medium, creamy)",
+          "note": "FNCの記述は両ページとも「medium body」。"
+        }
+      ],
+      "suggestedText": "ナリーニョ: 高標高と低温が品質の要因とされる(FNCの原産地呼称の説明)。カップはミディアムボディ、甘い風味とクリーンでやわらかい味わい、非常にはっきりした香り。酸の強さはFNC公式サイト内で「high」と「Medium, citric」の2通りの記載がある。原産地呼称は2011年2月11日のSIC決議06093号で保護された。"
+    },
+    "origin:コロンビア:sub:トリマ": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "標高1,200〜1,900m",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式の一次資料の原文では確認できない(探索: FNC決議・通達、FNC歴史ページ、Café de Colombia公式サイト)。"
+        },
+        {
+          "text": "火山性土壌",
+          "status": "unverified",
+          "sourceIds": [
+            "cafedecolombia-do-regional"
+          ],
+          "quote": "the soils of sandy texture, which benefits crops with a higher availability of nutrients",
+          "location": "Regional DO: Tolima",
+          "note": "公式の一次資料の原文では確認できない(探索: FNC決議・通達、FNC歴史ページ、Café de Colombia公式サイト)。FNCは「砂質の土壌」と述べ、火山性とは書いていない(矛盾すると断定はしない)。"
+        },
+        {
+          "text": "近年台頭",
+          "status": "unverified",
+          "sourceIds": [
+            "cafedecolombia-do-regional"
+          ],
+          "quote": "On January 30, 2017, the Superintendencia de Industria y Comercio (SIC) through Resolution No. 2458 declared the protection of the DO Café del Tolima",
+          "location": "Regional DO: Tolima",
+          "note": "公式の一次資料の原文では確認できない(探索: FNC決議・通達、FNC歴史ページ、Café de Colombia公式サイト)。DOの保護宣言が2017年1月30日(SIC決議2458号)であることは確認できるが、「台頭」という評価は原文にない。"
+        },
+        {
+          "text": "酸は柑橘系(中〜高)",
+          "status": "verified",
+          "sourceIds": [
+            "cafedecolombia-regions"
+          ],
+          "quote": "Tolima Aroma Sweet and Fruity Taste Sweet, Fruity Acidity Media - High, citrus Body Medium-high, creamy",
+          "location": "Coffee Growing Regions: Tolima",
+          "note": "酸は「Media - High, citrus」(中〜高、柑橘)。本文の「明るい」は原文にない形容。"
+        },
+        {
+          "text": "赤い果実・キャラメル・スパイス",
+          "status": "unverified",
+          "sourceIds": [
+            "cafedecolombia-do-regional"
+          ],
+          "quote": "with balance and diverse flavors in the spectrum of sweets, combined with citrus and fruit sensations",
+          "location": "Regional DO: Tolima",
+          "note": "公式の一次資料の原文では確認できない(探索: FNC決議・通達、FNC歴史ページ、Café de Colombia公式サイト)。FNCは「甘さ系の多様な風味、柑橘と果実の印象」と述べ、赤い果実・キャラメル・スパイスの語はない。"
+        }
+      ],
+      "suggestedText": "トリマ: FNCの説明では、酸は中〜高で柑橘系、ボディは中〜高でクリーミー、甘さ系の多様な風味に柑橘と果実の印象が重なる。土壌は砂質とされる。原産地呼称は2017年1月30日のSIC決議2458号で保護された。"
+    },
+    "origin:コロンビア:farmStructure": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "FNCが代表するコーヒー生産世帯は約54万",
+          "status": "verified",
+          "sourceIds": [
+            "cafedecolombia-seed-to-mug"
+          ],
+          "quote": "540,000 Colombian families grow coffee with passion and dedication, supported by the National Federation of Coffee Growers.",
+          "location": "From seed to mug",
+          "note": "FNC公式サイトの表記は「540,000 Colombian families」。"
+        },
+        {
+          "text": "平均農園面積は2ha未満(FNCの記述として引用)",
+          "status": "unverified",
+          "sourceIds": [
+            "cafedecolombia-growers"
+          ],
+          "quote": "more than half a million of coffee growing families transform their small plots of land",
+          "location": "Our Coffee Growers",
+          "note": "公式の一次資料の原文では確認できない(探索: FNC決議・通達、FNC歴史ページ、Café de Colombia公式サイト)。FNC公式サイトの「Our Coffee Growers」は「small plots of land」と述べるのみで、平均面積の数値は載せていない(本文の引用符つきの文言は原文にない)。"
+        },
+        {
+          "text": "FNCと協同組合が品質向上・乾燥設備投資を支援している",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式の一次資料の原文では確認できない(探索: FNC決議・通達、FNC歴史ページ、Café de Colombia公式サイト)。"
+        }
+      ],
+      "suggestedText": "FNC公式サイトは、コロンビアで約54万世帯(540,000 families)がコーヒーを栽培していると述べている。"
+    },
+    "origin:コロンビア:history": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "コーヒーに関する最古の文献記録は、イエズス会士ホセ・グミジャの『El Orinoco Ilustrado』(1730年)にある",
+          "status": "unverified",
+          "sourceIds": [
+            "eafit-fnc-90-years"
+          ],
+          "quote": "Joseph Gumilla’s account, whom in 1741 wrote in El Orinoco Ilustrado about the existence of coffee bushes in Santa Teresa de Tabage",
+          "location": "EAFIT書籍「Origins of coffee crops in Colombia」(p.35)",
+          "note": "二次資料のみ: eafit-fnc-90-years。同書は刊行年を1741年(Madrid, 1741, p.331)としており、本文の「1730年」と食い違う。一次資料(原著・図書館目録)で未確認のため、ユーザー判断。"
+        },
+        {
+          "text": "第二の記録は大司教副王カバジェロ・イ・ゴンゴラの1787年の報告書で、ヒロンやムソ周辺に言及している",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式の一次資料の原文では確認できない(探索: FNC決議・通達、FNC歴史ページ、Café de Colombia公式サイト、Cenicafé技術資料)。"
+        },
+        {
+          "text": "サラサール・デ・ラス・パルマスの司祭フランシスコ・ロメロが、告解の贖罪としてコーヒーの植樹を課したという言い伝えがある",
+          "status": "verified",
+          "sourceIds": [
+            "fnc-noticia-salazar"
+          ],
+          "quote": "fue el padre Francisco Romero, un sacerdote venido de Rubio, Venezuela, quien llevó consigo las primeras semillas de café || Para cada pecado confesado, la penitencia consistía en sembrar y cuidar cafetos.",
+          "location": "FNCニュース「Salazar de las Palmas: cuna del café colombiano」",
+          "note": "FNCは「何世代にもわたって集められた語り(Según los relatos recopilados por generaciones)」として紹介し、年代は示していない。"
+        },
+        {
+          "text": "1835年にドゥラニア/サラサール・デ・ラス・パルマスで商業栽培が始まり、ククタ税関から最初の輸出が記録された",
+          "status": "unverified",
+          "sourceIds": [
+            "eafit-fnc-90-years"
+          ],
+          "quote": "In 1834, in the former Province of Pamplona, the first coffee bushes for trading purposes known to have existed in Colombia, were planted. It was only until then that coffee was considered a commercial product; the first export was 2,560 sacks through customs in Cucuta.",
+          "location": "EAFIT書籍(p.35)",
+          "note": "二次資料のみ: eafit-fnc-90-years。同書は栽培開始を1834年(パンプローナ旧県)、最初の輸出を2,560袋(ククタ税関)と記す。「1835年」「ドゥラニア」は一次資料で未確認。"
+        },
+        {
+          "text": "19世紀を通じてアンデス内陸部へ栽培が拡大し、世界第3位の生産国となった",
+          "status": "unverified",
+          "sourceIds": [
+            "eafit-fnc-90-years"
+          ],
+          "quote": "which sent Colombia from second to third place among coffee-exporting countries worldwide",
+          "location": "EAFIT書籍(FoNCの項)",
+          "note": "公式の一次資料の原文では確認できない(探索: FNC決議・通達、FNC歴史ページ、Café de Colombia公式サイト、Cenicafé技術資料)。二次資料のみ: eafit-fnc-90-years。同書の「第3位」は、2〜3位から近年(1990年以降の約20年間)に順位を下げた輸出国としての記述で、19世紀の話ではない。本文の時期の書き方は原文と合わない。"
+        },
+        {
+          "text": "原産地呼称(DO)として複数地域を保有している",
+          "status": "verified",
+          "sourceIds": [
+            "cafedecolombia-do-regional"
+          ],
+          "quote": "Resolution No. 41788 declared the protection of the DO Cafe de Cauca || Resolution No. 17989 of April 16, 2013, in which the protection of Cafe de Huila is declared as Protected Designation of Origin || Resolution No. 50042, through which it declares the protection of the DO Café de Santander",
+          "location": "Regional DO: Cauca / Huila / Santander",
+          "note": "Cauca(2011)、Nariño(2011)、Huila(2013)、Santander(2014)、Tolima(2017)、Sierra Nevada(2017)。"
+        },
+        {
+          "text": "ウイラは2013年にDOを取得",
+          "status": "verified",
+          "sourceIds": [
+            "cafedecolombia-do-regional"
+          ],
+          "quote": "Upon request of the Federacion Nacional De Cafeteros, the Superintendencia de Industria y Comercio (SIC) issued the Resolution No. 17989 of April 16, 2013, in which the protection of Cafe de Huila is declared as Protected Designation of Origin.",
+          "location": "Regional DO: Huila",
+          "note": "2013年4月16日のSIC決議17989号。"
+        }
+      ],
+      "suggestedText": "FNCの紹介では、サラサール・デ・ラス・パルマス(ノルテ・デ・サンタンデール県)に、司祭フランシスコ・ロメロがコーヒーの種をベネズエラのルビオから持ち込み、告解のたびにコーヒーの植樹を贖罪とした、という言い伝えが残る(年代は示されていない)。コロンビアには、カウカ(2011年)、ナリーニョ(2011年)、ウイラ(2013年)、サンタンデール(2014年)、トリマ(2017年)、シエラネバダ(2017年)の地域別の原産地呼称(DO)があり、ウイラは2013年4月16日のSIC決議17989号で保護が宣言された。"
+    },
+    "origin:コロンビア:varietiesDetail": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "Cenicafé(コロンビアの国立コーヒー研究センター)は1938年設立",
+          "status": "verified",
+          "sourceIds": [
+            "fnc-federacion-historia"
+          ],
+          "quote": "Centro Nacional de Investigaciones del Café - Cenicafé 1938 Se crea el Centro de Investigaciones de Café más grande del mundo, propiedad de los caficultores colombianos",
+          "location": "FNC「Nuestra Historia」1938年の項",
+          "note": "本文の「FNCの研究機関」という言い方は原文にない(FNCの沿革に載り、所有者は「コロンビアの生産者」と記載)。"
+        },
+        {
+          "text": "カスティージョはCenicafeが開発した品種で、カトゥーラ×ティモールハイブリッドの交配に由来する",
+          "status": "verified",
+          "sourceIds": [
+            "cenicafe-avt-426-2012"
+          ],
+          "quote": "variedades que fueron desarrolladas en el Centro Nacional de Investigaciones de Café (Cenicafé) a partir del cruzamiento entre la variedad Caturra y el Híbrido de Timor",
+          "location": "Avance Técnico 426 冒頭",
+          "note": ""
+        },
+        {
+          "text": "コロンビア種は、カトゥーラ×ティモールハイブリッドの交配に由来する",
+          "status": "verified",
+          "sourceIds": [
+            "cenicafe-avt-426-2012"
+          ],
+          "quote": "Para la obtención de las variedades Colombia y Castillo® se partió del cruzamiento entre dos padres constrastantes por su resistencia a la roya, la variedad Caturra (susceptible) y el Híbrido de Timor",
+          "location": "Avance Técnico 426「¿Cómo se obtuvieron…?」の項",
+          "note": ""
+        },
+        {
+          "text": "カトゥーラはさび病耐性がほぼない",
+          "status": "verified",
+          "sourceIds": [
+            "cenicafe-avt-337-2005"
+          ],
+          "quote": "Sin embargo, es altamente susceptible a la roya del cafeto y a la enfermedad de las cerezas",
+          "location": "Avance Técnico 337(Caturraの説明)",
+          "note": "原文は「さび病に非常に感受性が高い(altamente susceptible)」。"
+        },
+        {
+          "text": "カスティージョはさび病への高い耐性があり、今日最も広く植えられている",
+          "status": "unverified",
+          "sourceIds": [
+            "cenicafe-avt-426-2012"
+          ],
+          "quote": "se han renovado 234.000 ha, más del 90% con las Variedades Castillo ®, aumentando a 54% el área sembrada en variedades resistentes (SICA, consultado en 2012)",
+          "location": "Avance Technico 426",
+          "note": "公式の一次資料の原文では確認できない(探索: FNC決議・通達、FNC歴史ページ、Café de Colombia公式サイト、Cenicafé技術資料)。2012年時点の資料は、更新された234,000haの90%超がCastillo、と述べるのみ。「今日最も広く」を示す最新の面積統計は未確認。高い耐性(elevada resistencia a la roya)は同資料の冒頭に記載。"
+        },
+        {
+          "text": "タビ(ティピカ×ブルボン×ティモールハイブリッド)はCenicaféが開発したさび病耐性系統",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式の一次資料の原文では確認できない(探索: FNC決議・通達、FNC歴史ページ、Café de Colombia公式サイト、Cenicafé技術資料)。"
+        },
+        {
+          "text": "主要品種はティピカ・ブルボン・カトゥーラ・マラゴジッペ",
+          "status": "unverified",
+          "sourceIds": [
+            "cenicafe-avt-337-2005"
+          ],
+          "quote": "los testigos comerciales Típica, Caturra, Borbón",
+          "location": "Avance Técnico 337",
+          "note": "公式の一次資料の原文では確認できない(探索: FNC決議・通達、FNC歴史ページ、Café de Colombia公式サイト、Cenicafé技術資料)。Cenicaféの資料に、Típica・Caturra・Borbónが「商業品種(対照)」として出てくるが、「主要品種」の根拠にはならない。Maragogipeの記載は未確認。"
+        },
+        {
+          "text": "「ピンクブルボン」は国内でまれに発生する自然変異で、甘さとトロピカルフルーツ様の複雑さが注目されている",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式の一次資料の原文では確認できない(探索: FNC決議・通達、FNC歴史ページ、Café de Colombia公式サイト、Cenicafé技術資料)。"
+        }
+      ],
+      "suggestedText": "Cenicafé(コロンビアの国立コーヒー研究センター)は1938年に設立された。カスティージョとコロンビア種は、Cenicaféがさび病耐性を目的に、カトゥーラ(さび病に感受性)とティモールハイブリッドの交配から育成した品種である。",
+      "note": "主要品種の一覧、タビの交配、ピンクブルボンは一次資料で確認できていない。"
+    },
+    "origin:コロンビア:terroir": {
+      "status": "unverified",
+      "claims": [
+        {
+          "text": "アンデス3山脈(西・中央・東コルディレラ)にまたがる",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式の一次資料の原文では確認できない(探索: FNC決議・通達、FNC歴史ページ、Café de Colombia公式サイト、Cenicafé技術資料)。"
+        },
+        {
+          "text": "南西部のナリーニョ・カウカ・ウイラは特に高標高の農園が多い",
+          "status": "unverified",
+          "sourceIds": [
+            "cafedecolombia-do-regional"
+          ],
+          "quote": "the high altitude where it is grown and the low temperatures that force the plant to conserve its sweetness",
+          "location": "Regional DO: Nariño",
+          "note": "公式の一次資料の原文では確認できない(探索: FNC決議・通達、FNC歴史ページ、Café de Colombia公式サイト、Cenicafé技術資料)。ナリーニョの「高標高」はFNCが記載。ウイラはDO説明で1,000〜2,200m。カウカは標高の記載を確認していない。"
+        },
+        {
+          "text": "中部のトリマは火山性土壌と幅のある標高の組み合わせ",
+          "status": "unverified",
+          "sourceIds": [
+            "cafedecolombia-do-regional"
+          ],
+          "quote": "the soils of sandy texture, which benefits crops with a higher availability of nutrients",
+          "location": "Regional DO: Tolima",
+          "note": "公式の一次資料の原文では確認できない(探索: FNC決議・通達、FNC歴史ページ、Café de Colombia公式サイト、Cenicafé技術資料)。FNCのトリマの説明は砂質の土壌。火山性とは書いていない。"
+        },
+        {
+          "text": "火山性土壌・高標高・赤道直下の日照が組み合わさり良好な栽培条件を形成する",
+          "status": "unverified",
+          "sourceIds": [
+            "cafedecolombia-regions"
+          ],
+          "quote": "It is the perfect combination of soil, temperature and altitude that makes it so special.",
+          "location": "Coffee Growing Regions",
+          "note": "公式の一次資料の原文では確認できない(探索: FNC決議・通達、FNC歴史ページ、Café de Colombia公式サイト、Cenicafé技術資料)。FNCは「土壌・気温・標高の組み合わせ」と述べるのみで、火山性土壌や日照は挙げていない(ウイラのDO説明は、曇りで日照時間は1日3.5時間と少ないとしている)。"
+        }
+      ],
+      "suggestedText": "FNCは、コロンビアのコーヒーの特長を「土壌・気温・標高の完璧な組み合わせ」によるものと説明している。",
+      "note": "3山脈、火山性土壌の記述は一次資料で確認できていない。"
+    },
+    "origin:コロンビア:harvestSeason": {
+      "status": "unverified",
+      "claims": [
+        {
+          "text": "ウイラは主収穫11〜1月・副次5〜7月、ナリーニョ等はその逆",
+          "status": "unverified",
+          "sourceIds": [
+            "cenicafe-avt-344-2006"
+          ],
+          "quote": "De acuerdo a la distribución de las lluvias se presentan dos períodos de cosecha. Una principal en el primer semestre del año entre los meses de abril a junio, y una segunda cosecha o de mitaca en el segundo semestre entre los meses de noviembre a enero.",
+          "location": "Avance Técnico 344「Distribución de cosecha」(カウカ県エル・タンボの試験地)",
+          "note": "公式の一次資料の原文では確認できない(探索: FNC決議・通達、FNC歴史ページ、Café de Colombia公式サイト、Cenicafé技術資料)。Cenicaféの資料は、カウカ県エル・タンボの試験地について主収穫4〜6月、副収穫(mitaca)11〜1月(主収穫が年産の70〜85%)と記載。ウイラ・ナリーニョの月は一次資料で確認できていない。"
+        },
+        {
+          "text": "国全体では事実上通年で収穫がある",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式の一次資料の原文では確認できない(探索: FNC決議・通達、FNC歴史ページ、Café de Colombia公式サイト、Cenicafé技術資料)。"
+        }
+      ],
+      "suggestedText": "Cenicaféの資料(カウカ県エル・タンボの試験地)では、収穫は雨の分布により年2回あり、主収穫は4〜6月、副収穫(mitaca)は11〜1月で、主収穫が年産の70〜85%を占める。",
+      "note": "ウイラ・ナリーニョの収穫月は未確認。"
+    },
+    "origin:ペルー:officialBody": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "JNC(Junta Nacional del Café)は1993年設立",
+          "status": "verified",
+          "sourceIds": [
+            "jnc-nosotros-2024",
+            "jnc-historia"
+          ],
+          "quote": "La JNC fue instalada oficialmente el 6 de enero de 1993.",
+          "location": "JNC「Nosotros」",
+          "note": "1993年1月6日に正式に設置。創設時は5つの協同組合連合が集まった(「Historia de la JNC」)。"
+        },
+        {
+          "text": "14の産地にまたがる56の協同組合・生産者団体、約7万戸の加盟農家",
+          "status": "verified",
+          "sourceIds": [
+            "jnc-nosotros-2024",
+            "jnc-inicio-2026"
+          ],
+          "quote": "Hoy reúne a un total de 56 organizaciones cafetaleras, entre asociaciones y cooperativas que suman 70 mil familias socias arraigadas en catorce zonas cafetaleras del país.",
+          "location": "JNC「Nosotros」(2024-03保存)、トップページ(2026-05保存)",
+          "note": "JNCの現行ページは2026-10時点で「工事中」表示で読めない。2018年の沿革ページは「50以上の組織・10地域・5万世帯」と書いており、時期で数字が異なる。"
+        },
+        {
+          "text": "生産者を代表する組織である",
+          "status": "verified",
+          "sourceIds": [
+            "jnc-nosotros-2024"
+          ],
+          "quote": "La Junta Nacional del Café (JNC) es una institución que congrega y representa a los productores cafetaleros peruanos frente al Estado.",
+          "location": "JNC「Nosotros」",
+          "note": ""
+        },
+        {
+          "text": "法的な輸出許可・格付け権限を持つ規制機関ではなく、業界団体としての性格が強い",
+          "status": "unverified",
+          "sourceIds": [
+            "jnc-nosotros-2024"
+          ],
+          "quote": "",
+          "location": "",
+          "note": "公式の一次資料の原文では確認できない(探索: USDA FAS、JNC、INACAL、MIDAGRI、Cup of Excellence公式)。本文自体が「とみられる」と推測で書いている。JNCは自らを生産者を代表する機関と説明しているが、権限の有無を述べた一次資料は確認していない。"
+        },
+        {
+          "text": "等級認証自体はINACALが所管する",
+          "status": "unverified",
+          "sourceIds": [
+            "inacal-rd-003-2026"
+          ],
+          "quote": "es el ente rector y máxima autoridad técnico normativa del Sistema Nacional para la Calidad",
+          "location": "決議 N° 000003-2026-INACAL/DN 前文",
+          "note": "公式の一次資料の原文では確認できない(探索: USDA FAS、JNC、INACAL、MIDAGRI、Cup of Excellence公式)。INACALが国家品質システムの規格(NTP)の最高の技術・規範機関であることは確認できたが、「等級認証」を所管するかは未確認。"
+        }
+      ],
+      "suggestedText": "中央生産者組合(Junta Nacional del Café・JNC)は1993年1月6日に正式に設置された。JNC自身の説明では、ペルーのコーヒー生産者を代表する機関で、14のコーヒー地帯にまたがる56のコーヒー関連組織(協会・協同組合)と約7万の加盟世帯をまとめている(2024〜2026年の公式サイト掲載)。INACAL(国立品質院)は、ペルーの国家品質システムの規格(NTP)を所管する機関である。"
+    },
+    "origin:ペルー:gradeSystem": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "INACALのNTP 209.027:2018が、コーヒー豆(生豆)の等級を規定している(現行規格である)",
+          "status": "incorrect",
+          "sourceIds": [
+            "inacal-rd-003-2026",
+            "inacal-gip-101-2021"
+          ],
+          "quote": "GIP 101:2026 Guía de Implementación de la Norma Técnica Peruana NTP 209.027:2024 + CT 1:2025 CAFÉ. Café verde. Requisitos. 2ª Edición Reemplaza a la GIP 101:2021",
+          "location": "INACAL 決議 N° 000003-2026-INACAL/DN(2026年2月19日付、官報2026年2月25日)",
+          "note": "生豆の規格は、2024年版(+CT 1:2025)の第2版に改訂されている。2018年版の実施ガイド(GIP 101:2021)は2026年に置き換えられた。本文の「NTP 209.027:2018」は旧版。"
+        },
+        {
+          "text": "3段階の番号グレード(Grado 1〜3)がある",
+          "status": "incorrect",
+          "sourceIds": [
+            "inacal-gip-101-2026"
+          ],
+          "quote": "d) Grado 4 Se admite un máximo de 31 a 60 defectos y/o imperfecciones",
+          "location": "GIP 101:2026 6.2.4",
+          "note": "2024年版の実施ガイド(GIP 101:2026)はGrado 4(31〜60欠点)も載せる。ただし同ガイドの第5章は「tres grados(3段階)」とも書いており、ガイド内部で記述が一致しない。規格本体(NTP 209.027:2024)は未取得のため、等級数はユーザー判断(検証者は解決しない)。"
+        },
+        {
+          "text": "Grado 1は最大15欠点、当期収穫・色と粒サイズが均一・香りが非常にフレッシュ",
+          "status": "verified",
+          "sourceIds": [
+            "inacal-gip-101-2026"
+          ],
+          "quote": "Grado 1 Compuesto por granos de cosecha actual, color y tamaño homogéneo y de olor intensamente fresco. || a) Grado 1 Se admite un máximo de 15 defectos o imperfecciones",
+          "location": "GIP 101:2026 第5章・6.2.4(2018年版の記述はGIP 101:2021も同じ)",
+          "note": "原文は「intensamente fresco」(強くフレッシュ)。"
+        },
+        {
+          "text": "Grado 2は最大23欠点",
+          "status": "verified",
+          "sourceIds": [
+            "inacal-gip-101-2026"
+          ],
+          "quote": "b) Grado 2 Se admite un máximo de 23 defectos o imperfecciones",
+          "location": "GIP 101:2026 6.2.4",
+          "note": ""
+        },
+        {
+          "text": "Grado 3は最大30欠点で、色・粒サイズにばらつきがある",
+          "status": "verified",
+          "sourceIds": [
+            "inacal-gip-101-2026"
+          ],
+          "quote": "Grado 3 Compuestos por granos de tamaño y color variable, olor de poca a mediana intensidad. || c) Grado 3 Se admite un máximo de 30 defectos o imperfecciones",
+          "location": "GIP 101:2026 第5章・6.2.4",
+          "note": ""
+        },
+        {
+          "text": "共通基準は水分10〜12.5%",
+          "status": "verified",
+          "sourceIds": [
+            "inacal-gip-101-2026"
+          ],
+          "quote": "La humedad del café verde debe estar en el rango de 10 a 12,5%",
+          "location": "GIP 101:2026 6.2.2",
+          "note": ""
+        },
+        {
+          "text": "粒度は50%以上がマラ15(6.0mm)以上",
+          "status": "verified",
+          "sourceIds": [
+            "inacal-gip-101-2026"
+          ],
+          "quote": "Mínimo: El 50% debe estar retenido en malla 15 (6mm).",
+          "location": "GIP 101:2026 6.2.3",
+          "note": "同項は「14番メッシュ(5.60mm)を通る豆は最大5%」も定める。"
+        },
+        {
+          "text": "NTP 209.311のスペシャルティコーヒー規格は主要欠点0個",
+          "status": "verified",
+          "sourceIds": [
+            "inacal-gip-107-2021"
+          ],
+          "quote": "Defectos primarios: 0 Defectos secundarios: Máximo 5",
+          "location": "GIP 107:2021(NTP 209.311:2019の実施ガイド)",
+          "note": "2019年版規格の実施ガイド。二次欠点は最大5個。後続版の有無は未確認。"
+        },
+        {
+          "text": "NTP 209.311はGrado 1のさらに上位に位置する",
+          "status": "unverified",
+          "sourceIds": [
+            "inacal-gip-107-2021"
+          ],
+          "quote": "",
+          "location": "",
+          "note": "公式の一次資料の原文では確認できない(探索: USDA FAS、JNC、INACAL、MIDAGRI、Cup of Excellence公式)。実施ガイドは、スペシャルティは「欠点0」など別の基準としているが、「Grado 1の上位」という位置づけの記述は確認できない。"
+        },
+        {
+          "text": "コロンビアやエルサルバドルのような銘柄名ではなく番号グレードで表す",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式の一次資料の原文では確認できない(探索: USDA FAS、JNC、INACAL、MIDAGRI、Cup of Excellence公式)。"
+        }
+      ],
+      "suggestedText": "ペルーの生豆規格はINACALのNTP 209.027で、2018年版は2024年版(+CT 1:2025、第2版)に改訂された(INACAL決議 N° 000003-2026-INACAL/DN)。実施ガイド(GIP 101:2026)によれば、等級はGrado 1(最大15欠点)、Grado 2(最大23欠点)、Grado 3(最大30欠点)、Grado 4(31〜60欠点)の記載がある。水分は10〜12.5%、粒度は50%以上がマラ15(6mm)に残り、14番メッシュ(5.60mm)を通る豆は5%以下。別の規格NTP 209.311(スペシャルティ、2019年版)の実施ガイドは、主要欠点0・二次欠点最大5を示す。",
+      "note": "NTP本体は有料で取得できず、INACALの実施ガイド(GIP)から読んだ。2018年版の内容はGIP 101:2021でも同じ数値(15/23/30欠点、水分10〜12.5%、マラ15で50%)を確認した。"
+    },
+    "origin:ペルー:farmStructure": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "生産者の90%超が5ヘクタール未満の小規模農家",
+          "status": "verified",
+          "sourceIds": [
+            "usda-fas-peru-coffee-annual-2025"
+          ],
+          "quote": "Over 90 percent of Peruvian coffee is grown by smallholder farmers on plots smaller than 5 hectares.",
+          "location": "USDA FAS Coffee Annual 2025, Production",
+          "note": "原文は「コーヒーの90%超が、5ヘクタール未満の小規模農家によって生産される」(生産者の人数比ではなく生産量の比)。"
+        },
+        {
+          "text": "平均農園面積は2〜3ヘクタール",
+          "status": "unverified",
+          "sourceIds": [
+            "usda-fas-peru-coffee-annual-2025"
+          ],
+          "quote": "",
+          "location": "",
+          "note": "公式の一次資料の原文では確認できない(探索: USDA FAS、JNC、INACAL、MIDAGRI、Cup of Excellence公式)。2025年のFASレポートには平均面積の記載がない。"
+        },
+        {
+          "text": "約15万戸の生産者家族",
+          "status": "incorrect",
+          "sourceIds": [
+            "usda-fas-peru-coffee-annual-2025",
+            "midagri-boletin-014"
+          ],
+          "quote": "an estimated 223,000 families rely on coffee production as their primary source of income || estima que la producción de café involucra a 230 000 familias",
+          "location": "USDA FAS 2025 / MIDAGRI Boletín N°014(JNCの2023年推計を引用)",
+          "note": "FASは約22.3万世帯、MIDAGRIはJNCの推計として23万世帯。15万戸は原文と食い違う。"
+        },
+        {
+          "text": "年間約400万袋を生産",
+          "status": "unverified",
+          "sourceIds": [
+            "usda-fas-peru-coffee-annual-2025"
+          ],
+          "quote": "Peru’s coffee production for marketing year 2025/2026 is forecast at 4.2 million 60-kg bags",
+          "location": "USDA FAS 2025, Production",
+          "note": "公式の一次資料の原文では確認できない(探索: USDA FAS、JNC、INACAL、MIDAGRI、Cup of Excellence公式)。FASは2025/26年度の予測を420万袋(60kg)としている(2024/25の推定は約388万袋)。「約400万袋」は丸めた数字で、年度が不明。"
+        },
+        {
+          "text": "JNCには14の産地にまたがる56の協同組合・団体、約7万戸の加盟農家が参加",
+          "status": "verified",
+          "sourceIds": [
+            "jnc-nosotros-2024"
+          ],
+          "quote": "Hoy reúne a un total de 56 organizaciones cafetaleras, entre asociaciones y cooperativas que suman 70 mil familias socias arraigadas en catorce zonas cafetaleras del país.",
+          "location": "JNC「Nosotros」(2024-03保存)",
+          "note": ""
+        },
+        {
+          "text": "有機認証面積は国内で9万ヘクタール超",
+          "status": "unverified",
+          "sourceIds": [
+            "usda-fas-peru-coffee-annual-2025"
+          ],
+          "quote": "Peru is the world’s leading exporter of organic coffee, with approximately 90,000 hectares certified organic.",
+          "location": "USDA FAS 2025",
+          "note": "公式の一次資料の原文では確認できない(探索: USDA FAS、JNC、INACAL、MIDAGRI、Cup of Excellence公式)。原文は「約9万ヘクタール(approximately 90,000)」で、「超」ではない。"
+        },
+        {
+          "text": "世界最大級の有機コーヒー輸出国",
+          "status": "verified",
+          "sourceIds": [
+            "usda-fas-peru-coffee-annual-2025"
+          ],
+          "quote": "Peru is the world’s leading exporter of organic coffee",
+          "location": "USDA FAS 2025",
+          "note": "原文は「世界最大の(leading)有機コーヒー輸出国」。"
+        }
+      ],
+      "suggestedText": "コーヒーの90%超が、5ヘクタール未満の小規模農家によって生産される。約22.3万世帯がコーヒー生産を主な収入源としている(USDA FAS、2025年5月)。中央生産者組合(JNC)には、14のコーヒー地帯にまたがる56の組織(協会・協同組合)、約7万の加盟世帯が参加している(JNC公式サイト)。ペルーは世界最大の有機コーヒー輸出国で、有機認証面積は約9万ヘクタール(USDA FAS)。"
+    },
+    "origin:ペルー:varietiesDetail": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "ティピカが約7割",
+          "status": "verified",
+          "sourceIds": [
+            "usda-fas-peru-coffee-annual-2025"
+          ],
+          "quote": "Peru primarily produces Arabica coffee, with over 70 percent being the Typica variety, followed by Caturra (20%) and other varieties (10%).",
+          "location": "USDA FAS 2025, Production",
+          "note": "原文は「70%超」。"
+        },
+        {
+          "text": "カトゥーラが約2割",
+          "status": "verified",
+          "sourceIds": [
+            "usda-fas-peru-coffee-annual-2025"
+          ],
+          "quote": "Peru primarily produces Arabica coffee, with over 70 percent being the Typica variety, followed by Caturra (20%) and other varieties (10%).",
+          "location": "USDA FAS 2025, Production",
+          "note": ""
+        },
+        {
+          "text": "残りをカティモール・パチェが占める",
+          "status": "unverified",
+          "sourceIds": [
+            "usda-fas-peru-coffee-annual-2025"
+          ],
+          "quote": "Peru primarily produces Arabica coffee, with over 70 percent being the Typica variety, followed by Caturra (20%) and other varieties (10%).",
+          "location": "USDA FAS 2025, Production",
+          "note": "公式の一次資料の原文では確認できない(探索: USDA FAS、JNC、INACAL、MIDAGRI、Cup of Excellence公式)。FASは「その他の品種10%」とのみ書き、カティモール・パチェの名は挙げていない。"
+        },
+        {
+          "text": "カハマルカでは伝統的にカティモール・カトゥーラ・ティピカ・ブルボンが中心",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式の一次資料の原文では確認できない(探索: USDA FAS、JNC、INACAL、MIDAGRI、Cup of Excellence公式)。"
+        },
+        {
+          "text": "新規植樹ではマルセリェサ・パライネマ・タビ等も導入されている",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式の一次資料の原文では確認できない(探索: USDA FAS、JNC、INACAL、MIDAGRI、Cup of Excellence公式)。英訳(originGuide2.js)は「パライネマ」を「Paraíso」と訳しており、日本語と英語で品種名が食い違う(パライネマ=Parainema、Paraíso=パライソ)。どちらが正しいか未確認。"
+        },
+        {
+          "text": "高品質マイクロロットではゲイシャ・パカマラ・マラゴジッペの実験栽培も進む",
+          "status": "unverified",
+          "sourceIds": [
+            "ace-coe-peru-2025"
+          ],
+          "quote": "1A 90,64 La Catarata Angel Antonio Manosalva Palomino Geisha Washed Cajamarca",
+          "location": "COE Perú 2025 優勝ロット",
+          "note": "公式の一次資料の原文では確認できない(探索: USDA FAS、JNC、INACAL、MIDAGRI、Cup of Excellence公式)。COEの優勝ロット(2018、2021〜2026の1位)にゲイシャが多いことは確認できるが、「実験栽培が進む」「パカマラ・マラゴジッペ」は未確認。"
+        }
+      ],
+      "suggestedText": "ペルーはアラビカが中心で、ティピカが70%超、カトゥーラが約20%、その他の品種が約10%(USDA FAS、2025年5月)。"
+    },
+    "origin:ペルー:harvestSeason": {
+      "status": "unverified",
+      "claims": [
+        {
+          "text": "標高により4〜10月と幅広い",
+          "status": "unverified",
+          "sourceIds": [
+            "usda-fas-peru-coffee-annual-2025"
+          ],
+          "quote": "The harvest season begins in April and extends through September, with peak activity between June and July.",
+          "location": "USDA FAS 2025",
+          "note": "公式の一次資料の原文では確認できない(探索: USDA FAS、JNC、INACAL、MIDAGRI、Cup of Excellence公式)。FAS(2025)は「4月に始まり9月まで」。10月までとは書いていない。"
+        },
+        {
+          "text": "全国的なピークは概ね7〜9月",
+          "status": "incorrect",
+          "sourceIds": [
+            "usda-fas-peru-coffee-annual-2025"
+          ],
+          "quote": "The harvest season begins in April and extends through September, with peak activity between June and July. Approximately 85 percent of the crop is harvested from April to July.",
+          "location": "USDA FAS 2025",
+          "note": "FASは、ピークは6〜7月、収穫の約85%が4〜7月と述べる。7〜9月ピークは食い違う。"
+        }
+      ],
+      "suggestedText": "収穫は4月に始まり9月まで続き、ピークは6〜7月、収穫の約85%が4〜7月に行われる(USDA FAS、2025年5月)。"
+    },
+    "origin:ペルー:terroir": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "アンデス東斜面からアマゾン盆地への移行地帯",
+          "status": "verified",
+          "sourceIds": [
+            "usda-fas-peru-coffee-annual-2025"
+          ],
+          "quote": "Coffee in Peru is primarily grown along the eastern slopes of the Andes.",
+          "location": "USDA FAS 2025",
+          "note": "原文は「主にアンデスの東斜面で栽培」。「アマゾン盆地への移行地帯」という表現は原文にない。"
+        },
+        {
+          "text": "北部(カハマルカ・サンマルティン・アマソナス)は900〜2,100m、中央高地(チャンチャマヨ/フニン)は1,500〜2,400mで国内最高標高帯、南部クスコは900〜2,000m",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式の一次資料の原文では確認できない(探索: USDA FAS、JNC、INACAL、MIDAGRI、Cup of Excellence公式)。"
+        },
+        {
+          "text": "全国生産の75%超が標高1,200m以上で栽培される",
+          "status": "incorrect",
+          "sourceIds": [
+            "usda-fas-peru-coffee-annual-2025"
+          ],
+          "quote": "Approximately 75 percent of coffee is cultivated at elevations between 1,000 and 1,800 meters above sea level.",
+          "location": "USDA FAS 2025",
+          "note": "FASは「約75%が標高1,000〜1,800m」。「75%超が1,200m以上」とは食い違う。"
+        },
+        {
+          "text": "カハマルカは谷ごとに標高・降雨・気温が大きく異なる複雑な地形",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式の一次資料の原文では確認できない(探索: USDA FAS、JNC、INACAL、MIDAGRI、Cup of Excellence公式)。"
+        }
+      ],
+      "suggestedText": "ペルーのコーヒーは主にアンデスの東斜面で栽培される。約75%が標高1,000〜1,800mで栽培され、大半が日陰栽培(USDA FAS、2025年5月)。"
+    },
+    "origin:ペルー:regions": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "主要産地はカハマルカ・サンマルティン・フニン",
+          "status": "verified",
+          "sourceIds": [
+            "usda-fas-peru-coffee-annual-2025"
+          ],
+          "quote": "The main coffee-producing regions include Cajamarca (22% of total production), San Martín (20%), Junín (19%), and Amazonas (15%).",
+          "location": "USDA FAS 2025",
+          "note": "FASの上位4地域はカハマルカ22%、サンマルティン20%、フニン19%、アマソナス15%。"
+        },
+        {
+          "text": "クスコは主要産地の一つ",
+          "status": "unverified",
+          "sourceIds": [
+            "usda-fas-peru-coffee-annual-2025"
+          ],
+          "quote": "The main coffee-producing regions include Cajamarca (22% of total production), San Martín (20%), Junín (19%), and Amazonas (15%).",
+          "location": "USDA FAS 2025",
+          "note": "公式の一次資料の原文では確認できない(探索: USDA FAS、JNC、INACAL、MIDAGRI、Cup of Excellence公式)。FAS(2025)の主要産地の列挙にクスコは含まれない(生産比率の数字なし)。MIDAGRIの2025年の報道では上位産地に含める記述もあるが、原文未取得。"
+        },
+        {
+          "text": "「チャンチャマヨ」はフニン県の産地",
+          "status": "unverified",
+          "sourceIds": [
+            "ace-coe-peru-2017"
+          ],
+          "quote": "Chanchamayo, Junin 90.41",
+          "location": "COE Perú 2017 4位のロット",
+          "note": "公式の一次資料の原文では確認できない(探索: USDA FAS、JNC、INACAL、MIDAGRI、Cup of Excellence公式)。COE公式の表がChanchamayoをJunínの地名として表示することは確認できる。"
+        }
+      ],
+      "suggestedText": "USDA FAS(2025年5月)によれば、主要産地はカハマルカ(生産の22%)、サンマルティン(20%)、フニン(19%)、アマソナス(15%)。"
+    },
+    "origin:ペルー:tagline": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "小規模農家が生産を担う",
+          "status": "verified",
+          "sourceIds": [
+            "usda-fas-peru-coffee-annual-2025"
+          ],
+          "quote": "Over 90 percent of Peruvian coffee is grown by smallholder farmers on plots smaller than 5 hectares.",
+          "location": "USDA FAS 2025",
+          "note": ""
+        },
+        {
+          "text": "有機コーヒーで知られる(世界最大の有機コーヒー輸出国)",
+          "status": "verified",
+          "sourceIds": [
+            "usda-fas-peru-coffee-annual-2025"
+          ],
+          "quote": "Peru is the world’s leading exporter of organic coffee",
+          "location": "USDA FAS 2025",
+          "note": ""
+        },
+        {
+          "text": "アンデス(の東斜面)で育つ",
+          "status": "verified",
+          "sourceIds": [
+            "usda-fas-peru-coffee-annual-2025"
+          ],
+          "quote": "Coffee in Peru is primarily grown along the eastern slopes of the Andes.",
+          "location": "USDA FAS 2025",
+          "note": ""
+        },
+        {
+          "text": "クリーンでバランスの取れた甘み",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式の一次資料の原文では確認できない(探索: USDA FAS、JNC、INACAL、MIDAGRI、Cup of Excellence公式)。味の評価で、一次資料に記載がない。"
+        }
+      ],
+      "suggestedText": "アンデスの東斜面で、小規模農家が生産を担う世界最大の有機コーヒー輸出国。"
+    },
+    "origin:ペルー:history": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "コーヒー導入は1700年代、エクアドル経由とされる",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式の一次資料の原文では確認できない(探索: USDA FAS、JNC、INACAL、MIDAGRI、Cup of Excellence公式)。"
+        },
+        {
+          "text": "19世紀末まで小規模な国内消費作物にとどまり、欧州需要の高まりとインドネシアのさび病禍による供給減を受けて商業輸出作物化した",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式の一次資料の原文では確認できない(探索: USDA FAS、JNC、INACAL、MIDAGRI、Cup of Excellence公式)。"
+        },
+        {
+          "text": "20世紀半ばの土地改革・協同組合化政策が小農中心の構造を決定づけた",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式の一次資料の原文では確認できない(探索: USDA FAS、JNC、INACAL、MIDAGRI、Cup of Excellence公式)。"
+        },
+        {
+          "text": "1990年代以降は有機認証への投資が本格化し、栽培面積は1995年の16.3万haから37.5万ha超へ拡大した",
+          "status": "unverified",
+          "sourceIds": [
+            "midagri-boletin-014"
+          ],
+          "quote": "el Perú dispone de un área instalada de 460 mil hectáreas al año 2022",
+          "location": "MIDAGRI Boletín N°014",
+          "note": "公式の一次資料の原文では確認できない(探索: USDA FAS、JNC、INACAL、MIDAGRI、Cup of Excellence公式)。MIDAGRIは2022年の栽培面積(instalada)を46万ha、収穫面積を42.38万haとする。FASは収穫面積33.5万ha(2025)。「1995年16.3万ha」は未確認。"
+        },
+        {
+          "text": "価格の安さから長らくブレンドの「かさ増し」だったが、2010〜2017年頃からマイクロロット化・直接取引による品質差別化が進んだ",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式の一次資料の原文では確認できない(探索: USDA FAS、JNC、INACAL、MIDAGRI、Cup of Excellence公式)。"
+        },
+        {
+          "text": "2017年にペルー初のカップ・オブ・エクセレンスがリマで開催された",
+          "status": "unverified",
+          "sourceIds": [
+            "ace-coe-peru-2017"
+          ],
+          "quote": "announce the Cup of Excellence will be held in Lima",
+          "location": "ACE「Perú 2017」",
+          "note": "公式の一次資料の原文では確認できない(探索: USDA FAS、JNC、INACAL、MIDAGRI、Cup of Excellence公式)。ACEの告知文に「リマで開催」とあるが、「ペルー初」「9月」は読んだ範囲に記載がない。"
+        },
+        {
+          "text": "2017年の1位はFinca La Flor、92.25点",
+          "status": "verified",
+          "sourceIds": [
+            "ace-coe-peru-2017"
+          ],
+          "quote": "1A 6 La Flor 2017 – {ORG} Juan Heredia Sanchez Jaén, Cajamarca 92.25",
+          "location": "ACE「Perú 2017」Winning Farms",
+          "note": "農園名は「La Flor」(表記は「Finca La Flor」ではなく「La Flor 2017」)。ハエン(カハマルカ県)の生産者Juan Heredia Sanchez。"
+        },
+        {
+          "text": "上位入賞は全てカハマルカ産",
+          "status": "incorrect",
+          "sourceIds": [
+            "ace-coe-peru-2017"
+          ],
+          "quote": "4A 6 San Antonio 2017 Marco Antonio Montes Damiano Chanchamayo, Junin 90.41 || Chachapoyas, Amazonas 90.11",
+          "location": "ACE「Perú 2017」Winning Farms",
+          "note": "1〜3位はカハマルカ(サンイグナシオ、ハエン)だが、4位はフニン(チャンチャマヨ、90.41)、5位はアマソナス(チャチャポヤス、90.11)。「上位入賞は全て」は誤り。"
+        },
+        {
+          "text": "カハマルカはその後も2019・2022・2024・2025年にCOEで1位を取った",
+          "status": "verified",
+          "sourceIds": [
+            "ace-coe-peru-2019",
+            "ace-coe-peru-2022",
+            "ace-coe-peru-2024",
+            "ace-coe-peru-2025"
+          ],
+          "quote": "1a 180 La Lucuma Grimanes Morales Lizana Cajamarca 92.28 || 1a 90.39 LA BOLA BLANCA FLOR CORDOVA JIMENEZ CAJAMARCA || 1A 90,54 El Mirador Miguel Padilla Chinguel Caturra, Bourbon, Geisha Washed Cajamarca || 1A 90,64 La Catarata Angel Antonio Manosalva Palomino Geisha Washed Cajamarca",
+          "location": "ACE 各年の「Winning Farms」1位",
+          "note": "列挙された4年は原文と一致。ただし他の年も記載が必要: 2023年(Alto Mirador、Cajamarca、90.74)と2026年(La Esperanza、Cajamarca、91.71)もカハマルカが1位。一方2018年(Nueva Alianza、91.08)と2021年(同、90.2)の1位はクスコ産。2020年は地域の記載がない。列挙は網羅ではない。"
+        },
+        {
+          "text": "2023年・2026年もカハマルカ産が1位(列挙から漏れている)",
+          "status": "verified",
+          "sourceIds": [
+            "ace-coe-peru-2023",
+            "ace-coe-peru-2026"
+          ],
+          "quote": "1A 90.74 Alto Mirador Yoniser Mego Silva Cajamarca || 1 91.71 Finca La Esperanza Fidel Huancas Huancas Washed Geisha Cajamarca",
+          "location": "ACE Perú 2023 / 2026 の1位",
+          "note": "2026年のオークションは2026年12月8日の予定(ACEページ)。結果の位置づけ(確定の可否)は未確認。"
+        }
+      ],
+      "suggestedText": "カップ・オブ・エクセレンス(COE)ペルー大会の1位は、2017年がカハマルカ(La Flor、92.25点)で、1〜3位はカハマルカ産だった。4位はフニン(チャンチャマヨ)、5位はアマソナス。その後の1位は、2018年と2021年がクスコ(Nueva Alianza)、2019・2022・2023・2024・2025・2026年がカハマルカ。(COE公式サイトの結果ページ)"
+    },
+    "origin:ペルー:sub:カハマルカ": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "標高900〜2,100m",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式の一次資料の原文では確認できない(探索: USDA FAS、JNC、INACAL、MIDAGRI、Cup of Excellence公式)。COE 2017の優勝農園ページ(La Flor)に「標高1,800m」の記載があるのみ。"
+        },
+        {
+          "text": "国内最大の産地(全国生産量の22%)",
+          "status": "verified",
+          "sourceIds": [
+            "usda-fas-peru-coffee-annual-2025"
+          ],
+          "quote": "The main coffee-producing regions include Cajamarca (22% of total production), San Martín (20%), Junín (19%), and Amazonas (15%).",
+          "location": "USDA FAS 2025",
+          "note": "FASの列挙で最大の比率。"
+        },
+        {
+          "text": "認証輸出量の48.2%",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式の一次資料の原文では確認できない(探索: USDA FAS、JNC、INACAL、MIDAGRI、Cup of Excellence公式)。"
+        },
+        {
+          "text": "谷ごとの微気候差が大きく、ワバル(ハエン)、チリノス/タバコナス(サンイグナシオ)等のサブゾーンに分かれる",
+          "status": "unverified",
+          "sourceIds": [
+            "ace-coe-peru-2017"
+          ],
+          "quote": "Jaén, Cajamarca 92.25",
+          "location": "COE Perú 2017",
+          "note": "公式の一次資料の原文では確認できない(探索: USDA FAS、JNC、INACAL、MIDAGRI、Cup of Excellence公式)。COEの表にハエンとサンイグナシオ(ともにカハマルカ県)の地名はあるが、サブゾーン名の根拠ではない。"
+        },
+        {
+          "text": "COE常連",
+          "status": "verified",
+          "sourceIds": [
+            "ace-coe-peru-2017",
+            "ace-coe-peru-2019",
+            "ace-coe-peru-2022",
+            "ace-coe-peru-2023",
+            "ace-coe-peru-2024",
+            "ace-coe-peru-2025"
+          ],
+          "quote": "3A 6 San Pedro – El Shimir 2017 -… Fredy Bermeo Guevara San Ignacio, Cajamarca 90.48 || 1a 180 La Lucuma Grimanes Morales Lizana Cajamarca 92.28 || 1A 90.74 Alto Mirador Yoniser Mego Silva Cajamarca",
+          "location": "ACE 各年の結果",
+          "note": "2017年に1〜3位、2019・2022〜2025年に1位。"
+        }
+      ],
+      "suggestedText": "カハマルカ: ペルー最大の産地で、全国生産量の22%を占める(USDA FAS、2025年5月)。COEペルー大会では、2017年に1〜3位、2019・2022・2023・2024・2025年に1位を占めた。"
+    },
+    "origin:ペルー:sub:アマソナス(ロドリゲス・デ・メンドーサ)": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "標高1,520〜1,820m",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式の一次資料の原文では確認できない(探索: USDA FAS、JNC、INACAL、MIDAGRI、Cup of Excellence公式)。"
+        },
+        {
+          "text": "カティモール・カトゥーラ中心",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式の一次資料の原文では確認できない(探索: USDA FAS、JNC、INACAL、MIDAGRI、Cup of Excellence公式)。"
+        },
+        {
+          "text": "バジェ・ベルデ協同組合(2016年設立、女性生産者35%)",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式の一次資料の原文では確認できない(探索: USDA FAS、JNC、INACAL、MIDAGRI、Cup of Excellence公式)。JNCの組合一覧(2024年保存)にバジェ・ベルデの項は見つからなかった。ロドリゲス・デ・メンドーサの協同組合として別組織(COOPARM、1990年設立)が載っている。"
+        },
+        {
+          "text": "ドライフルーツ、キャラメルの甘み",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式の一次資料の原文では確認できない(探索: USDA FAS、JNC、INACAL、MIDAGRI、Cup of Excellence公式)。"
+        },
+        {
+          "text": "アマソナスは全国生産の15%",
+          "status": "verified",
+          "sourceIds": [
+            "usda-fas-peru-coffee-annual-2025"
+          ],
+          "quote": "The main coffee-producing regions include Cajamarca (22% of total production), San Martín (20%), Junín (19%), and Amazonas (15%).",
+          "location": "USDA FAS 2025",
+          "note": "本文には書かれていない補足(アマソナス県全体の比率)。"
+        }
+      ],
+      "suggestedText": "アマソナス: 全国生産の約15%を占める(USDA FAS、2025年5月)。"
+    },
+    "origin:ペルー:sub:フニン(チャンチャマヨ/サティポ)": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "標高1,500〜2,400m、国内最高標高帯",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式の一次資料の原文では確認できない(探索: USDA FAS、JNC、INACAL、MIDAGRI、Cup of Excellence公式)。"
+        },
+        {
+          "text": "国内で最も酸が強く力強いカップとされる",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式の一次資料の原文では確認できない(探索: USDA FAS、JNC、INACAL、MIDAGRI、Cup of Excellence公式)。"
+        },
+        {
+          "text": "フレッシュフルーツ、凝縮感のある酸、クリーミーなボディ",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式の一次資料の原文では確認できない(探索: USDA FAS、JNC、INACAL、MIDAGRI、Cup of Excellence公式)。"
+        },
+        {
+          "text": "フニンは全国生産の19%",
+          "status": "verified",
+          "sourceIds": [
+            "usda-fas-peru-coffee-annual-2025"
+          ],
+          "quote": "The main coffee-producing regions include Cajamarca (22% of total production), San Martín (20%), Junín (19%), and Amazonas (15%).",
+          "location": "USDA FAS 2025",
+          "note": "本文には書かれていない補足(フニン県全体の比率)。"
+        }
+      ],
+      "suggestedText": "フニン: 全国生産の約19%を占める(USDA FAS、2025年5月)。COEペルー2017では、チャンチャマヨ(フニン県)のロットが4位(90.41点)に入った。"
+    },
+    "origin:ペルー:sub:クスコ(南部)": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "標高900〜2,000m",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式の一次資料の原文では確認できない(探索: USDA FAS、JNC、INACAL、MIDAGRI、Cup of Excellence公式)。"
+        },
+        {
+          "text": "北部より穏やかで丸みのあるカップ",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式の一次資料の原文では確認できない(探索: USDA FAS、JNC、INACAL、MIDAGRI、Cup of Excellence公式)。"
+        },
+        {
+          "text": "レッドフルーツ・チョコレート様",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式の一次資料の原文では確認できない(探索: USDA FAS、JNC、INACAL、MIDAGRI、Cup of Excellence公式)。"
+        },
+        {
+          "text": "クスコ産ロットがCOEペルーで1位になった年がある(2018年、2021年)",
+          "status": "verified",
+          "sourceIds": [
+            "ace-coe-peru-2018",
+            "ace-coe-peru-2021"
+          ],
+          "quote": "1a 6 (+1 Partial) Nueva Alianza Dwigth Aguilar Masias Cusco 91.08 || 1a 90.2 Nueva Alianza Dwight Aguilar Masías Cusco",
+          "location": "ACE Perú 2018 / 2021 の1位",
+          "note": "本文には書かれていない補足。農園名はNueva Alianza(生産者名の綴りは2ページで異なる)。"
+        }
+      ],
+      "suggestedText": "クスコ: COEペルー大会で2018年(91.08点)と2021年(90.2点)に、Nueva Alianza農園のロットが1位になった(COE公式サイト)。"
+    }
+  }
+}

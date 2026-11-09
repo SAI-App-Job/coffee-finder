@@ -1,7 +1,7 @@
 import { Calendar, MapPin, ExternalLink, Trophy, Globe2 } from "lucide-react";
-import { SectionHeading, SourceCredit } from "./common";
+import { SectionHeading, SourceCredit, VerifiedSources } from "./common";
 import { EVENT_TYPE_LABELS } from "../data/events";
-import { JAPAN_COMPETITIONS } from "../data/japanCompetitions";
+import { PUBLISHED_COMPETITIONS, prose } from "../data/published";
 import { localizeCompetition, localizeEvent } from "../data/localize";
 import { getLang } from "../i18n";
 import { useT } from "../i18n";
@@ -68,6 +68,10 @@ export function EventCard({ event: rawEvent, onLearnOrigin }) {
 
 export function JapanCompetitionCard({ competition: rawCompetition }) {
   const competition = localizeCompetition(rawCompetition);
+  // 出典を確認できていない項目は、英訳があっても出さない(判定は日本語の原文)
+  for (const field of ["tagline", "history", "format", "latestResult"]) {
+    if (!rawCompetition[field]) competition[field] = undefined;
+  }
   return (
     <div className="rounded-2xl bg-[var(--c-surface)] border border-[var(--c-border)] p-4 flex flex-col gap-2.5">
       <div className="flex items-center gap-2">
@@ -76,11 +80,13 @@ export function JapanCompetitionCard({ competition: rawCompetition }) {
         </span>
         <h3 className="font-serif text-[16px] text-[var(--c-text)]">{competition.name}</h3>
       </div>
-      <p className="text-[13px] text-[var(--accent)]">{competition.tagline}</p>
+      {competition.tagline && <p className="text-[13px] text-[var(--accent)]">{competition.tagline}</p>}
 
-      <p className="text-[12px] text-[var(--c-text-2)] leading-relaxed border-t border-[var(--c-border)] pt-2.5">
-        {competition.history}
-      </p>
+      {competition.history && (
+        <p className="text-[12px] text-[var(--c-text-2)] leading-relaxed border-t border-[var(--c-border)] pt-2.5">
+          {competition.history}
+        </p>
+      )}
       {competition.format && (
         <p className="text-[12px] text-[var(--c-text-2)] leading-relaxed">{competition.format}</p>
       )}
@@ -90,20 +96,7 @@ export function JapanCompetitionCard({ competition: rawCompetition }) {
         </p>
       )}
 
-      <div className="flex flex-wrap items-center gap-x-3 gap-y-1 pt-1">
-        {competition.sources.map((source) => (
-          <a
-            key={source.url}
-            href={source.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-1 text-[11px] text-[var(--c-text-3)] hover:text-[var(--c-text-2)] transition-colors"
-          >
-            {source.label}
-            <ExternalLink size={11} />
-          </a>
-        ))}
-      </div>
+      <VerifiedSources keys={rawCompetition.keys} />
     </div>
   );
 }
@@ -211,9 +204,9 @@ export function CompetitionsView({ hideHeading = false, events = [] }) {
             <Globe2 size={14} className="text-[var(--accent)]" strokeWidth={1.75} />
             <h3 className="text-[14px] font-medium text-[var(--c-text)]">{t("世界大会(WCC)")}</h3>
           </div>
-          <p className="text-[13px] text-[var(--c-text-3)] -mt-1">
-            {t("World Coffee Championshipsが年間を通じて世界各地で開催する大会。開催日順に並んでいます。")}
-          </p>
+          {prose("competitions.wccIntro") && (
+            <p className="text-[13px] text-[var(--c-text-3)] -mt-1">{t(prose("competitions.wccIntro"))}</p>
+          )}
           <div className="flex flex-col gap-2.5">
             {worldChampionships.map((event) => (
               <WorldChampionshipCard key={event.id ?? event.name} event={event} />
@@ -227,11 +220,11 @@ export function CompetitionsView({ hideHeading = false, events = [] }) {
           <Trophy size={14} className="text-[var(--accent)]" strokeWidth={1.75} />
           <h3 className="text-[14px] font-medium text-[var(--c-text)]">{t("日本国内の主要競技会(SCAJ主催)")}</h3>
         </div>
-        <p className="text-[13px] text-[var(--c-text-3)] -mt-1">
-          {t("SCAJ(日本スペシャルティコーヒー協会)が主催する国内競技会9大会。優勝者の多くは世界大会へ日本代表として出場する。")}
-        </p>
+        {prose("competitions.japanIntro") && (
+          <p className="text-[13px] text-[var(--c-text-3)] -mt-1">{t(prose("competitions.japanIntro"))}</p>
+        )}
         <div className="flex flex-col gap-2.5">
-          {JAPAN_COMPETITIONS.map((competition) => (
+          {PUBLISHED_COMPETITIONS.map((competition) => (
             <JapanCompetitionCard key={competition.id} competition={competition} />
           ))}
         </div>

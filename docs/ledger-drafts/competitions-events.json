@@ -1,0 +1,1565 @@
+{
+  "scope": "competitions-events",
+  "verifiedOn": "2026-11-08",
+  "sources": {
+    "scaj-jbc-overview": {
+      "title": "JBC 概要",
+      "org": "日本スペシャルティコーヒー協会(SCAJ)",
+      "url": "https://scaj.org/activity/competitions/jbc/jbc-overview",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08"
+    },
+    "scaj-jbc-results": {
+      "title": "JBC 過去の競技結果(2003年～2025年)",
+      "org": "日本スペシャルティコーヒー協会(SCAJ)",
+      "url": "https://scaj.org/activity/competitions/jbc/results",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08"
+    },
+    "scaj-jbc-2026-results": {
+      "title": "JBC 2026 競技結果",
+      "org": "日本スペシャルティコーヒー協会(SCAJ)",
+      "url": "https://scaj.org/activity/competitions/jbc/2026-results",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08"
+    },
+    "scaj-jbc-2026-competition": {
+      "title": "JBC 2026 競技者募集(競技スケジュール)",
+      "org": "日本スペシャルティコーヒー協会(SCAJ)",
+      "url": "https://scaj.org/activity/competitions/jbc/2026-jbc-competition",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08"
+    },
+    "scaj-jhdc-overview": {
+      "title": "JHDC 概要",
+      "org": "日本スペシャルティコーヒー協会(SCAJ)",
+      "url": "https://scaj.org/activity/competitions/jhdc-2",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08"
+    },
+    "scaj-jhdc-past-results": {
+      "title": "JHDC 過去の競技結果(2012年～2025年)",
+      "org": "日本スペシャルティコーヒー協会(SCAJ)",
+      "url": "https://scaj.org/activity/competitions/jhdc-2/past_results",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08"
+    },
+    "scaj-jhdc-2026-results": {
+      "title": "JHDC 2026 競技結果",
+      "org": "日本スペシャルティコーヒー協会(SCAJ)",
+      "url": "https://scaj.org/activity/competitions/jhdc-2/2026-results",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08"
+    },
+    "scaj-jhdc-2026-judge": {
+      "title": "JHDC 2026 審査員プログラム",
+      "org": "日本スペシャルティコーヒー協会(SCAJ)",
+      "url": "https://scaj.org/activity/competitions/jhdc-2/2026-judgecertification",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08"
+    },
+    "scaj-jsc-overview": {
+      "title": "JSC 概要",
+      "org": "日本スペシャルティコーヒー協会(SCAJ)",
+      "url": "https://scaj.org/activity/competitions/jsc",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08"
+    },
+    "scaj-jsc-2026-results": {
+      "title": "JSC 2026 競技結果",
+      "org": "日本スペシャルティコーヒー協会(SCAJ)",
+      "url": "https://scaj.org/activity/competitions/jsc/2026-results",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08"
+    },
+    "scaj-jlac-overview": {
+      "title": "JLAC 概要",
+      "org": "日本スペシャルティコーヒー協会(SCAJ)",
+      "url": "https://scaj.org/activity/competitions/jlac",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08"
+    },
+    "scaj-jlac-2026-results": {
+      "title": "JLAC 2026 競技結果",
+      "org": "日本スペシャルティコーヒー協会(SCAJ)",
+      "url": "https://scaj.org/activity/competitions/jlac/2026-results",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08"
+    },
+    "scaj-jctc-overview": {
+      "title": "JCTC 概要",
+      "org": "日本スペシャルティコーヒー協会(SCAJ)",
+      "url": "https://scaj.org/activity/competitions/jctc",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08"
+    },
+    "scaj-jctc-results": {
+      "title": "JCTC 過去の競技結果(2009年～2025年)",
+      "org": "日本スペシャルティコーヒー協会(SCAJ)",
+      "url": "https://scaj.org/activity/competitions/jctc/results",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08"
+    },
+    "scaj-jcrc-overview": {
+      "title": "JCRC 概要",
+      "org": "日本スペシャルティコーヒー協会(SCAJ)",
+      "url": "https://scaj.org/activity/competitions/jcrc",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08"
+    },
+    "scaj-jcrc-past-results": {
+      "title": "JCRC 過去の競技結果(2012年～2025年)",
+      "org": "日本スペシャルティコーヒー協会(SCAJ)",
+      "url": "https://scaj.org/activity/competitions/jcrc/past_results",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08"
+    },
+    "scaj-jcrc-2026-competition": {
+      "title": "JCRC 2026 競技者募集(競技スケジュール)",
+      "org": "日本スペシャルティコーヒー協会(SCAJ)",
+      "url": "https://scaj.org/activity/competitions/jcrc/2026-competitor",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08"
+    },
+    "scaj-jcigsc-overview": {
+      "title": "JCIGSC 概要",
+      "org": "日本スペシャルティコーヒー協会(SCAJ)",
+      "url": "https://scaj.org/activity/competitions/jcigsc",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08"
+    },
+    "scaj-jcigsc-past-results": {
+      "title": "JCIGSC 過去の競技結果(2013年～2025年)",
+      "org": "日本スペシャルティコーヒー協会(SCAJ)",
+      "url": "https://scaj.org/activity/competitions/jcigsc/past_results",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08"
+    },
+    "scaj-jbrc-overview": {
+      "title": "JBrC 概要",
+      "org": "日本スペシャルティコーヒー協会(SCAJ)",
+      "url": "https://scaj.org/activity/competitions/jbrc",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08"
+    },
+    "scaj-jbrc-past-results": {
+      "title": "JBrC 過去の競技結果(2014年～2025年)",
+      "org": "日本スペシャルティコーヒー協会(SCAJ)",
+      "url": "https://scaj.org/activity/competitions/jbrc/past_results",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08"
+    },
+    "scaj-kikikohi-12th": {
+      "title": "第12回利き珈琲選手権(概要・歴代利き珈琲王インタビュー)",
+      "org": "日本スペシャルティコーヒー協会(SCAJ)",
+      "url": "https://scaj.org/meister/tasting12th",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08"
+    },
+    "wcc-2025-wbc-champion": {
+      "title": "Announcing the 2025 World Barista Champion: Jack Simpson representing Australia",
+      "org": "World Coffee Championships (Specialty Coffee Association)",
+      "url": "https://wcc.coffee/latest-news/announcing-the-2025-world-barista-champion",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08"
+    },
+    "wcc-wbrc-page": {
+      "title": "World Brewers Cup",
+      "org": "World Coffee Championships (Specialty Coffee Association)",
+      "url": "https://wcc.coffee/world-brewers-cup",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08"
+    },
+    "wcc-wbc-page": {
+      "title": "World Barista Championship",
+      "org": "World Coffee Championships (Specialty Coffee Association)",
+      "url": "https://wcc.coffee/world-barista-championship",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08"
+    },
+    "wcc-wbc-panama-2026": {
+      "title": "WBC Panama 2026",
+      "org": "World Coffee Championships (Specialty Coffee Association)",
+      "url": "https://wcc.coffee/wbc-panama-2026",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08"
+    },
+    "wcc-wbc-2026-rankings": {
+      "title": "2026 WBC Rankings (PDF)",
+      "org": "World Coffee Championships (Specialty Coffee Association)",
+      "url": "https://wcc.coffee/s/2026-WBC-Rankings-Coffee-Info-pmtd.pdf",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": "pypdfで本文抽出"
+    },
+    "scajconf-2026-overview": {
+      "title": "開催概要 SCAJ2026",
+      "org": "日本スペシャルティコーヒー協会(SCAJ)",
+      "url": "https://scajconference.jp/overview",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08"
+    },
+    "coe-home": {
+      "title": "Cup of Excellence (トップページ)",
+      "org": "Cup of Excellence / Alliance for Coffee Excellence",
+      "url": "https://cupofexcellence.org/",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": "トップページ(生のHTML)。開催スケジュールのカード(年の記載なし)と、年別の結果データ(year/ctry/auction/jury)の両方がある。"
+    },
+    "wcc-wbrc-2026-rankings": {
+      "title": "2026 WBrC Rankings (PDF)",
+      "org": "World Coffee Championships (Specialty Coffee Association)",
+      "url": "https://wcc.coffee/s/2026-WBrC-Rankings-Public.pdf",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": "pypdfで本文抽出"
+    },
+    "ace-about-coe-auctions": {
+      "title": "About COE Auctions",
+      "org": "Alliance for Coffee Excellence",
+      "url": "https://allianceforcoffeeexcellence.org/about-coe-auctions/",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09"
+    },
+    "ucdavis-wcc-rankings-archive": {
+      "title": "Specialty Coffee Association World Championship Rankings (UC Davis Library Digital Collections)",
+      "org": "UC Davis Library / WCC",
+      "url": "https://digital.ucdavis.edu/collection/ark:/87293/d3s756w20",
+      "kind": "primary",
+      "readMethod": "failed",
+      "accessed": "2026-11-09",
+      "note": "スクリプト描画で本文が空(タイトルのみ)。WBC開始年(2000年)の確認に使おうとしたが取得できなかった。"
+    }
+  },
+  "entries": {
+    "competition:jbc:tagline": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "エスプレッソ・ミルクビバレッジ・シグネチャービバレッジの3種類を提供して競う",
+          "status": "verified",
+          "sourceIds": [
+            "scaj-jbc-overview"
+          ],
+          "quote": "まず「エスプレッソ」、そして「ミルクビバレッジ」、最後に「シグネチャービバレッジ」と呼ばれる創作ドリンクを提供し",
+          "location": "JBCの歴史"
+        },
+        {
+          "text": "国内競技会の最高峰",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "SCAJの各競技会ページに、JBCを国内競技会の最高峰とする記述は見つからない(評価表現)。"
+        }
+      ],
+      "suggestedText": "エスプレッソ・ミルクビバレッジ・シグネチャービバレッジを競う、SCAJ主催の競技会"
+    },
+    "competition:jbc:history": {
+      "status": "verified",
+      "claims": [
+        {
+          "text": "2003年から実施されているSCAJ主催の競技会",
+          "status": "verified",
+          "sourceIds": [
+            "scaj-jbc-results",
+            "scaj-jbc-overview"
+          ],
+          "quote": "JBCは、コーヒーの競技会として日本スペシャルティコーヒー協会主催にて開催されてきました。",
+          "location": "概要「JBCの歴史」/ 過去の競技結果(2003年～2025年)の2003年の表(門脇 洋之 JBC2003優勝者)"
+        },
+        {
+          "text": "制限時間内に「エスプレッソ」「ミルクビバレッジ」「シグネチャービバレッジ(創作ドリンク)」の3種類を提供する",
+          "status": "verified",
+          "sourceIds": [
+            "scaj-jbc-overview"
+          ],
+          "quote": "決められた制限時間の中で３種類のドリンクを提供いたします。",
+          "location": "JBCの歴史"
+        },
+        {
+          "text": "味わいだけでなく提供までの全工程の適切性・正確性・一貫性が審査される",
+          "status": "verified",
+          "sourceIds": [
+            "scaj-jbc-overview"
+          ],
+          "quote": "味覚評価だけでなく、その過程を含めて提供するまでの全ての作業内容の適切性、正確性、一貫性などを評価します。",
+          "location": "JBCの歴史"
+        },
+        {
+          "text": "ルールはWBCに準じており、JBC優勝者は日本代表としてWBCに出場する",
+          "status": "verified",
+          "sourceIds": [
+            "scaj-jbc-overview"
+          ],
+          "quote": "競技会のルールはバリスタ チャンピオンシップの世界大会である「World Barista Championship（WBC）」に則り決められており、JBCの優勝者は、WBCへ日本代表として参加しております。",
+          "location": "JBCの歴史"
+        },
+        {
+          "text": "2007年、アジアで初めてWBCが東京で開催された",
+          "status": "verified",
+          "sourceIds": [
+            "scaj-jbc-overview"
+          ],
+          "quote": "2007年には、アジアで初めて開催されたWBC東京大会（日本）での宮前選手の世界第4位とベストカプチーノ賞の同時受賞",
+          "location": "JBCの歴史"
+        },
+        {
+          "text": "宮前選手は世界第4位とベストカプチーノ賞を同時受賞した",
+          "status": "verified",
+          "sourceIds": [
+            "scaj-jbc-overview",
+            "scaj-jbc-results"
+          ],
+          "quote": "宮前 みゆき (JBC2007優勝者) | 第4位 (45ヶ国中) | ベストカプチーノ賞受賞",
+          "location": "過去の競技結果 2007年優勝者の世界大会での成績"
+        }
+      ]
+    },
+    "competition:jbc:latestResult": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "2024年のJBCは猿田彦珈琲の伊藤大貴選手が優勝した",
+          "status": "verified",
+          "sourceIds": [
+            "scaj-jbc-results"
+          ],
+          "quote": "優勝 | 伊藤 大貴 | Hiroki Ito | 猿田彦珈琲株式会社 | 東京都 | 703.5",
+          "location": "過去の競技結果 2024年の表"
+        },
+        {
+          "text": "猿田彦珈琲として初のJBC優勝",
+          "status": "unverified",
+          "sourceIds": [
+            "scaj-jbc-results"
+          ],
+          "quote": "",
+          "location": "",
+          "note": "SCAJの過去の競技結果ページには2020・2021年の表がなく(2022年の次が2019年)、2003〜2025年の掲載分では猿田彦珈琲の優勝者は2024年のみだが、『初』と断言できる記載はない。"
+        },
+        {
+          "text": "伊藤選手は翌2025年のWBCへ日本代表として出場した",
+          "status": "verified",
+          "sourceIds": [
+            "wcc-2025-wbc-champion"
+          ],
+          "quote": "5. Hiroki Ito, Japan",
+          "location": "2025 WBC(ミラノ、HostMilano)の最終順位上位6名の一覧。本文は「representing their respective competition bodies」と説明。",
+          "note": "SCAJのJBC結果ページの2024年の表には『世界大会での成績』が載っていない。WCC公式で確認した。結果は5位。"
+        },
+        {
+          "text": "2026年大会でも伊藤選手(猿田彦珈琲)が優勝した",
+          "status": "verified",
+          "sourceIds": [
+            "scaj-jbc-2026-results"
+          ],
+          "quote": "優勝 | 伊藤 大貴 | Hiroki Ito | 猿田彦珈琲株式会社 | 東京都 | 718",
+          "location": "JBC2026 決勝 競技結果"
+        },
+        {
+          "text": "2026年大会は10月に開催された",
+          "status": "verified",
+          "sourceIds": [
+            "scaj-jbc-2026-competition"
+          ],
+          "quote": "準決勝 2026年10月14日(水) 、 決 勝 2026年10月15日(木)",
+          "location": "競技スケジュール(準決勝･決勝)",
+          "note": "予定として掲載された日程。結果ページ自体には日付がない。"
+        }
+      ],
+      "note": "最新性: 2026年の結果ページ(2026-11-08確認)が最新で、現在の記述は古くない。参考: 同ページによれば2026年優勝者は『World Barista Championship 2027』(2027年東京開催予定)に派遣される。WCCページでも2027 WBCは『April 28 - May 1, 2027 / World of Coffee Tokyo』。なお2026年10月のWBC(パナマ)にはJBC2025優勝者の本間啓介(サザコーヒー)が日本から出場している(WCC順位表PDF)。",
+      "suggestedText": "2024年は猿田彦珈琲の伊藤大貴選手が優勝し、翌2025年のWBC(ミラノ)に日本代表として出場した。2026年大会(10月)でも伊藤選手(猿田彦珈琲)が優勝した。"
+    },
+    "competition:jhdc:tagline": {
+      "status": "verified",
+      "claims": [
+        {
+          "text": "日本で最も親しまれている抽出方法「ハンドドリップ」に特化した競技会",
+          "status": "verified",
+          "sourceIds": [
+            "scaj-jhdc-overview"
+          ],
+          "quote": "コーヒー専門店から各家庭まで、日本で最も親しまれている抽出方法「ハンドドリップ」に特化した競技会です。",
+          "location": "JHDCとは"
+        }
+      ]
+    },
+    "competition:jhdc:history": {
+      "status": "verified",
+      "claims": [
+        {
+          "text": "2012年に誕生したSCAJ主催の競技会",
+          "status": "verified",
+          "sourceIds": [
+            "scaj-jhdc-overview"
+          ],
+          "quote": "JHDCは2012年に誕生した日本スペシャルティコーヒー協会主催の競技会です。",
+          "location": "JHDCの歴史"
+        },
+        {
+          "text": "日本の文化や時代背景を取り込んだオリジナリティのあるルールが特徴",
+          "status": "verified",
+          "sourceIds": [
+            "scaj-jhdc-overview"
+          ],
+          "quote": "日本の文化や時代背景を十分に取り込んだオリジナリティに溢れるルールが魅力の競技会です。",
+          "location": "JHDCの歴史"
+        },
+        {
+          "text": "2014年からトーナメント方式を採用",
+          "status": "verified",
+          "sourceIds": [
+            "scaj-jhdc-overview"
+          ],
+          "quote": "また、2014年からはトーナメント方式を採用。",
+          "location": "JHDCの歴史"
+        },
+        {
+          "text": "2016年にスコアシートが大幅に改良され、香味や質感という日本独自の表現が取り入れられた",
+          "status": "verified",
+          "sourceIds": [
+            "scaj-jhdc-overview"
+          ],
+          "quote": "さらに2016年からはスコアシートも大幅に改良、香味や質感という日本独自の表現を取り入れています。",
+          "location": "JHDCの歴史"
+        },
+        {
+          "text": "予選・決勝とも共通の豆を使用する",
+          "status": "verified",
+          "sourceIds": [
+            "scaj-jhdc-overview"
+          ],
+          "quote": "予選、決勝共に豆は共通豆を使用します。",
+          "location": "競技について"
+        },
+        {
+          "text": "決勝はブラインド審査のドリップ競技と、プレゼンテーションを伴うフリー競技の2部構成",
+          "status": "verified",
+          "sourceIds": [
+            "scaj-jhdc-overview"
+          ],
+          "quote": "決勝大会ではブラインド審査のドリップ競技、プレゼンテーションを伴うフリー競技とで争われます。",
+          "location": "競技について"
+        }
+      ]
+    },
+    "competition:jhdc:format": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "審査は添加物を加えないドリップコーヒーの味覚評価が中心",
+          "status": "verified",
+          "sourceIds": [
+            "scaj-jhdc-2026-judge"
+          ],
+          "quote": "本競技会の審査は、添加物を加えないドリップコーヒーの味覚審査が中心となります。",
+          "location": "2026 審査員プログラム 本文冒頭"
+        },
+        {
+          "text": "予選では、量の異なる2種類の抽出コーヒーの均一性が重要な評価項目",
+          "status": "verified",
+          "sourceIds": [
+            "scaj-jhdc-2026-judge"
+          ],
+          "quote": "予選では、量の異なる2種類の抽出コーヒーの 均一性が重要な評価項目となり",
+          "location": "2026 審査員プログラム"
+        },
+        {
+          "text": "注ぎの技術だけで異なる分量のコーヒーを同じ味わいに仕上げる技術が問われる",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "SCAJの原文は『均一性が重要な評価項目』までで、『注ぎの技術だけで』『同じ味わいに仕上げる技術が問われる』という記述はない(言い換え・推論)。"
+        },
+        {
+          "text": "決勝では大会前に配布された豆を使い、抽出の均一性を含むプロフェッショナルとしての総合的な技術が評価される",
+          "status": "verified",
+          "sourceIds": [
+            "scaj-jhdc-2026-judge"
+          ],
+          "quote": "決勝においては、大会前（約1か月前）に配布されるコーヒー豆を使用し、各自が準備したうえで、本番のプレゼンテーション（同一ルールでの抽出）にて2回の抽出を行います。抽出の均一性を含む、コーヒーサービスにおけるプロフェッショナルとしての総合的な技術が評価されます。",
+          "location": "2026 審査員プログラム"
+        }
+      ],
+      "suggestedText": "審査は添加物を加えないドリップコーヒーの味覚評価が中心。予選では、量の異なる2種類の抽出コーヒーの均一性が重要な評価項目となる。決勝では大会前に配布された豆を使い、抽出の均一性を含むプロフェッショナルとしての総合的な技術が評価される。"
+    },
+    "competition:jhdc:latestResult": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "新田和雄選手(福井県・新田珈琲)が2023年・2024年と連覇した",
+          "status": "verified",
+          "sourceIds": [
+            "scaj-jhdc-past-results"
+          ],
+          "quote": "優勝 | 新田 和雄 | Kazuo Nitta | 有限会社新田珈琲 | 新田珈琲 | 福井県",
+          "location": "過去の競技結果 2024年・2023年の表(両年とも優勝)"
+        },
+        {
+          "text": "2025年は新田衣祥選手が優勝した",
+          "status": "verified",
+          "sourceIds": [
+            "scaj-jhdc-past-results"
+          ],
+          "quote": "優勝 | 新田 衣祥 | 有限会社 新田珈琲/新田珈琲 | 116.5 | 295.0",
+          "location": "過去の競技結果 2025年"
+        },
+        {
+          "text": "新田衣祥選手は新田和雄選手の長女である",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "SCAJの競技結果・概要・審査員プログラムのいずれのページにも続柄の記載がない。アプリは『新田珈琲のプレスリリースによる』とするが、そのプレスリリースは未確認。"
+        },
+        {
+          "text": "2026年は新田千香子選手が優勝した",
+          "status": "verified",
+          "sourceIds": [
+            "scaj-jhdc-2026-results"
+          ],
+          "quote": "優勝 | 新田 千香子 | 有限会社新田珈琲 | 120.0 | 168.5",
+          "location": "JHDC2026 競技結果"
+        },
+        {
+          "text": "新田千香子選手は新田和雄選手の妻である",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "SCAJの公式ページに続柄の記載がない。SCAJ結果ページでは2017・2019年に『新田 千香子(有限会社チモトコーヒー / Nitta Coffee、福井県)』が3位として載るのみ。"
+        },
+        {
+          "text": "新田珈琲の選手が2023〜2026年の4年連続で優勝した",
+          "status": "verified",
+          "sourceIds": [
+            "scaj-jhdc-past-results",
+            "scaj-jhdc-2026-results"
+          ],
+          "quote": "優勝 | 新田 千香子 | 有限会社新田珈琲",
+          "location": "過去の競技結果 2023年(新田 和雄)・2024年(新田 和雄)・2025年(新田 衣祥)の優勝欄と、2026 競技結果(新田 千香子)。所属はいずれも有限会社新田珈琲",
+          "note": "SCAJの結果表の所属欄から導いた事実。『家族』という点は別の主張。"
+        },
+        {
+          "text": "優勝者4人が同じ新田珈琲の『家族』である",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "続柄を示す一次資料が取れていない。"
+        },
+        {
+          "text": "4年連続の優勝はJHDC史上初の記録",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "SCAJは『史上初』と述べていない。結果表(2012〜2020、2023〜2026年掲載、2021・2022年は『2020年(2022年延期後開催)』の表のみ)から読み取れる推論にとどまる。"
+        },
+        {
+          "text": "家族関係は新田珈琲のプレスリリースによる",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "プレスリリースを取得して読んでいないため、出典として確認していない。"
+        }
+      ],
+      "suggestedText": "新田和雄選手(福井県・新田珈琲)が2023年・2024年と連覇したのち、2025年は新田衣祥選手、2026年は新田千香子選手が優勝し、新田珈琲の選手が4年連続で優勝した(SCAJ公式の競技結果による)。",
+      "note": "最新性: 2026年結果ページ(2026-11-08確認)に基づき、優勝者の記述は古くない。家族の続柄(長女・妻)はSCAJ公式ページにないため unverified。続柄を残すには新田珈琲自身の公式発表(プレスリリース原文)を取得して確認する必要がある。"
+    },
+    "competition:jsc:tagline": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "サイフォン抽出の技術と創作ドリンクを競う",
+          "status": "verified",
+          "sourceIds": [
+            "scaj-jsc-overview"
+          ],
+          "quote": "通常のブレンドコーヒー、そしてブレンドコーヒーを使った各選手オリジナルのシグニチャービバレッジを時間内に作成します。",
+          "location": "JSCの歴史"
+        },
+        {
+          "text": "日本発祥の世界大会にもつながる",
+          "status": "unverified",
+          "sourceIds": [
+            "scaj-jsc-overview"
+          ],
+          "quote": "",
+          "location": "",
+          "note": "SCAJは2009年に『世界初のWSCも開催』とするのみ。『日本発祥』と述べる記載は取れていない。"
+        }
+      ],
+      "suggestedText": "サイフォン抽出の技術と創作ドリンクを競う競技会"
+    },
+    "competition:jsc:history": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "2003年、JBCのサイフォン部門として誕生した",
+          "status": "verified",
+          "sourceIds": [
+            "scaj-jsc-overview"
+          ],
+          "quote": "JSCは2003年にジャパン バリスタ チャンピオンシップ（JBC）のサイフォン部門として誕生しました。",
+          "location": "JSCの歴史"
+        },
+        {
+          "text": "通常のブレンドコーヒーと、それを使った各選手オリジナルのシグニチャービバレッジの抽出技術を競う",
+          "status": "verified",
+          "sourceIds": [
+            "scaj-jsc-overview"
+          ],
+          "quote": "競技では、2種類のブレンドコーヒーの抽出技術を競います。通常のブレンドコーヒー、そしてブレンドコーヒーを使った各選手オリジナルのシグニチャービバレッジを時間内に作成します。",
+          "location": "JSCの歴史"
+        },
+        {
+          "text": "年々規模を拡大した",
+          "status": "verified",
+          "sourceIds": [
+            "scaj-jsc-overview"
+          ],
+          "quote": "年々競技の規模を拡大し、",
+          "location": "JSCの歴史"
+        },
+        {
+          "text": "2007年に「ジャパン サイフォニスト チャンピオンシップ」として生まれ変わった",
+          "status": "verified",
+          "sourceIds": [
+            "scaj-jsc-overview"
+          ],
+          "quote": "2007年には「ジャパン サイフォニスト チャンピオンシップ」として生まれ変わりました。",
+          "location": "JSCの歴史"
+        },
+        {
+          "text": "2007年に独立した競技会になった",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "原文は『生まれ変わりました』のみで、『独立した競技会』とは書かれていない(言い換え)。"
+        },
+        {
+          "text": "2009年に世界規模のWSC(ワールド サイフォニスト チャンピオンシップ)が世界で初めて開催された",
+          "status": "verified",
+          "sourceIds": [
+            "scaj-jsc-overview"
+          ],
+          "quote": "また2009年には競技を世界規模とし世界初の「ワールド サイフォニスト チャンピオンシップ（WSC）」も開催されました。",
+          "location": "JSCの歴史"
+        },
+        {
+          "text": "WSCは日本発祥の世界大会となった",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "原文に『日本発祥』の記載はない。"
+        },
+        {
+          "text": "優勝者は各国代表とともに世界選手権に日本代表として出場する",
+          "status": "verified",
+          "sourceIds": [
+            "scaj-jsc-overview"
+          ],
+          "quote": "JSCの優勝者は、各国から推薦された代表と共に、日本代表として世界選手権を戦います。",
+          "location": "JSCの歴史"
+        }
+      ],
+      "suggestedText": "2003年、JBC(ジャパン バリスタ チャンピオンシップ)のサイフォン部門として誕生。通常のブレンドコーヒーと、それを使った各選手オリジナルのシグニチャービバレッジの抽出技術を競う。年々競技の規模を拡大し、2007年に「ジャパン サイフォニスト チャンピオンシップ」として生まれ変わった。2009年には世界規模の「ワールド サイフォニスト チャンピオンシップ(WSC)」が世界で初めて開催された。優勝者は各国から推薦された代表とともに、日本代表として世界選手権に出場する。",
+      "note": "2026年のJSC結果ページ(優勝: 清水兼聖、株式会社嗜好品研究所)あり。アプリに latestResult はないので書き換え対象なし。"
+    },
+    "competition:jlac:tagline": {
+      "status": "verified",
+      "claims": [
+        {
+          "text": "ラテアートの芸術性・独創性・再現性を競う",
+          "status": "verified",
+          "sourceIds": [
+            "scaj-jlac-overview"
+          ],
+          "quote": "表現されたデザインの芸術性・独創性・再現性・複雑さなどの「外観」と、プロフェッショナルとしての「サービス」「衛生管理」が審査のポイント。",
+          "location": "見どころ"
+        }
+      ]
+    },
+    "competition:jlac:history": {
+      "status": "verified",
+      "claims": [
+        {
+          "text": "2006年からSCAJ展示会のエキシビションとして開催されていたラテアートコンペティションが起源",
+          "status": "verified",
+          "sourceIds": [
+            "scaj-jlac-overview"
+          ],
+          "quote": "2006年よりSCAJ展示会にてエキシビションとして開催されてきたラテアートコンペティションは、",
+          "location": "JLACの歴史"
+        },
+        {
+          "text": "2008年、JBC2008準優勝の岡田章宏選手がWLACに日本代表として出場し世界第3位に入賞した",
+          "status": "verified",
+          "sourceIds": [
+            "scaj-jlac-overview",
+            "scaj-jbc-results"
+          ],
+          "quote": "2008年にJBC2008準優勝の岡田章宏バリスタがWLACに日本代表として参加し、世界第3位として表彰された",
+          "location": "JLACの歴史。JBC結果ページ2008年の表でも2位 岡田 章宏(小川珈琲 株式会社、京都府)"
+        },
+        {
+          "text": "それをきっかけに2009年に正式競技「JLAC」として発足した",
+          "status": "verified",
+          "sourceIds": [
+            "scaj-jlac-overview"
+          ],
+          "quote": "2009年ジャパン ラテアート チャンピオンシップ（JLAC）として正式に競技化されました。",
+          "location": "JLACの歴史"
+        }
+      ]
+    },
+    "competition:jlac:format": {
+      "status": "verified",
+      "claims": [
+        {
+          "text": "8分間の競技時間内に、カフェラテ/カプチーノ・カフェマキャート・デザイナーズビバレッジの3種類のドリンクをそれぞれ2杯提供する",
+          "status": "verified",
+          "sourceIds": [
+            "scaj-jlac-overview"
+          ],
+          "quote": "8分間の競技時間内に3種類のドリンク（カフェラテ/カプチーノ・カフェマキャート/デザイナーズ ビバレッジ）を2杯提供。",
+          "location": "見どころ",
+          "note": "原文は『3種類のドリンクを2杯提供』。『それぞれ』の語は原文にないが、同じ意味に読める。"
+        },
+        {
+          "text": "デザインの芸術性・独創性・再現性・複雑さが審査される",
+          "status": "verified",
+          "sourceIds": [
+            "scaj-jlac-overview"
+          ],
+          "quote": "表現されたデザインの芸術性・独創性・再現性・複雑さなどの「外観」",
+          "location": "見どころ"
+        },
+        {
+          "text": "提供された2杯のデザインができる限りシンメトリー(左右対称)であることも高得点の要因になる",
+          "status": "verified",
+          "sourceIds": [
+            "scaj-jlac-overview"
+          ],
+          "quote": "提供された2杯のデザインが出来る限りシンメトリー（左右対称）であることも高得点の要因。",
+          "location": "見どころ"
+        },
+        {
+          "text": "優勝者はワールド ラテアート チャンピオンシップへ日本代表として出場する",
+          "status": "verified",
+          "sourceIds": [
+            "scaj-jlac-overview"
+          ],
+          "quote": "優勝者はワールド ラテアート チャンピオンシップに日本代表として出場いたします。",
+          "location": "見どころ"
+        }
+      ],
+      "note": "2026年のJLAC結果ページ(優勝: 石橋晨弥、Connect Coffee、福岡県)あり。アプリに latestResult はない。"
+    },
+    "competition:jctc:tagline": {
+      "status": "verified",
+      "claims": [
+        {
+          "text": "3つのカップから違う味の1つを「カッピング」で当てる技術と速さを競う",
+          "status": "verified",
+          "sourceIds": [
+            "scaj-jctc-overview"
+          ],
+          "quote": "３つのカップの内１つだけが違う味のコーヒーが入っております。この違う味のカップを「カッピング」と呼ばれる手法を使って当てるのがカップ テイスターズ チャンピオンシップ競技です。 / そのため１つのカップを5秒程度で判断するなど、スピード感が重要となります。",
+          "location": "見どころ"
+        }
+      ]
+    },
+    "competition:jctc:history": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "カッピング技術を競技化した世界大会が海外で開催されており、それに触発されて2009年9月に第1回JCTCが日本で開催された",
+          "status": "verified",
+          "sourceIds": [
+            "scaj-jctc-overview"
+          ],
+          "quote": "海外ではスペシャルティコーヒーの基本であるカッピング技術を競技化し、広めるために、カップ テイスターズ チャンピオンシップが開催されております。 ... 当協会では2009年9月に世界大会に向けての代表選手選考会を兼ねた、第1回目のジャパン カップテイスターズ チャンピオンシップ（JCTC）を日本で初めて開催し",
+          "location": "JCTCの歴史",
+          "note": "『触発され』は言い換えだが、原文の流れ(「そこで当協会では」)と矛盾しない。"
+        },
+        {
+          "text": "2009年の世界大会(ケルン)に日本から選手が参加し、後藤選手が世界第3位となった",
+          "status": "verified",
+          "sourceIds": [
+            "scaj-jctc-overview"
+          ],
+          "quote": "2009年の世界大会（ケルン開催）には日本からも選手が参加し、後藤選手が世界第3位となりました。",
+          "location": "JCTCの歴史"
+        },
+        {
+          "text": "ケルンはドイツにある(『ドイツ・ケルン』の『ドイツ』)",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "SCAJの原文は『ケルン開催』のみで国名の記載がない。地理的事実だが、台帳には資料がない。"
+        }
+      ],
+      "suggestedText": "海外ではスペシャルティコーヒーの基本であるカッピング技術を競技化した世界大会が開催されており、2009年9月に第1回JCTCを日本で開催。2009年の世界大会(ケルン)には日本から選手が参加し、後藤選手が世界第3位となった。",
+      "note": "2026年のJCTC結果ページは別URL(jctc2026競技結果)にあるが、アプリに latestResult はない。"
+    },
+    "competition:jctc:format": {
+      "status": "verified",
+      "claims": [
+        {
+          "text": "1問につき3つのカップが並び、そのうち1つだけ違う味のコーヒーが入っている",
+          "status": "verified",
+          "sourceIds": [
+            "scaj-jctc-overview"
+          ],
+          "quote": "この問題ごとに３つのカップが置かれており、３つのカップの内１つだけが違う味のコーヒーが入っております。",
+          "location": "見どころ"
+        },
+        {
+          "text": "この1つを「カッピング」の手法で当てる",
+          "status": "verified",
+          "sourceIds": [
+            "scaj-jctc-overview"
+          ],
+          "quote": "この違う味のカップを「カッピング」と呼ばれる手法を使って当てる",
+          "location": "見どころ"
+        },
+        {
+          "text": "1問1分・計8問(合計8分)以内で正解数を競う",
+          "status": "verified",
+          "sourceIds": [
+            "scaj-jctc-overview"
+          ],
+          "quote": "カップ テイスターズ チャンピオンシップでは選手ごとに８の問題が出題されます。 / 競技は各設問１分ずつ、計8分以内に正解した数が一番多かった選手が優勝となります",
+          "location": "見どころ"
+        },
+        {
+          "text": "正解数が同じ場合は解答にかかった時間の短さで優劣を決める",
+          "status": "verified",
+          "sourceIds": [
+            "scaj-jctc-overview"
+          ],
+          "quote": "正解数が同じ場合は全問解答するまでにかかった時間が一番短い方が優勝となります。",
+          "location": "見どころ"
+        }
+      ]
+    },
+    "competition:jcrc:tagline": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "焙煎前に目指す風味特性を宣言してから挑む",
+          "status": "verified",
+          "sourceIds": [
+            "scaj-jcrc-overview"
+          ],
+          "quote": "「如何なる風味特性」の焙煎に仕上げるか『焙煎ログ』を事前に申告した上で焙煎に挑む点が見どころです。",
+          "location": "見どころ"
+        },
+        {
+          "text": "他大会にはないユニークな審査方式",
+          "status": "unverified",
+          "sourceIds": [
+            "scaj-jcrc-overview"
+          ],
+          "quote": "",
+          "location": "",
+          "note": "SCAJは『これまでのSCAA Roaster's Guild Retreat、SCAJローストマスターズ・リトリート』との違いを述べるのみで、『他大会にはない』とは述べていない。"
+        }
+      ],
+      "suggestedText": "焙煎前に目指す風味特性を『焙煎ログ』で事前に申告してから挑む競技会"
+    },
+    "competition:jcrc:history": {
+      "status": "verified",
+      "claims": [
+        {
+          "text": "WCE(World Coffee Events)が2012年のウィーン大会から導入した新競技「Coffee Roasting Challenge(CRC)」",
+          "status": "verified",
+          "sourceIds": [
+            "scaj-jcrc-overview"
+          ],
+          "quote": "SCAE 2012 ウィーン大会から導入されたWCE(World Coffee Events ) の新しいプログラムであるCRC (Coffee Roasting Challenge)は、焙煎技術を競う世界大会ですが",
+          "location": "JCRCの歴史"
+        },
+        {
+          "text": "CRCは2013年に「World Coffee Roasting Championship」へ改称された",
+          "status": "verified",
+          "sourceIds": [
+            "scaj-jcrc-overview"
+          ],
+          "quote": "なおCRCは、2013年からWorld Coffee Roasting Championshipと名称が変更されました。",
+          "location": "JCRCの歴史"
+        },
+        {
+          "text": "JCRCはCRCの日本選考会として開始され、優勝者を世界大会へ送り出すためSCAJが日本国内向けに開催している",
+          "status": "verified",
+          "sourceIds": [
+            "scaj-jcrc-overview"
+          ],
+          "quote": "優勝者を世界へ送りだすべく、日本市場における選考会としてJCRCを開始いたしました。",
+          "location": "JCRCの歴史"
+        }
+      ]
+    },
+    "competition:jcrc:format": {
+      "status": "verified",
+      "claims": [
+        {
+          "text": "従来の焙煎競技(SCAA Roaster's Guild Retreat、SCAJローストマスターズ・リトリート)は事前申告なしで結果のカップクオリティのみを審査していた",
+          "status": "verified",
+          "sourceIds": [
+            "scaj-jcrc-overview"
+          ],
+          "quote": "これまでのSCAA Roaster’S Guild Retreat、およびSCAJローストマスターズ・リトリートでは、事前にFlavor Profilesを申告せず、結果のカップクオリティのみで優劣を判定しておりましたが",
+          "location": "見どころ"
+        },
+        {
+          "text": "JCRCでは競技前に目指す風味特性を『焙煎ログ』として事前申告したうえで焙煎に挑む",
+          "status": "verified",
+          "sourceIds": [
+            "scaj-jcrc-overview"
+          ],
+          "quote": "「如何なる風味特性」の焙煎に仕上げるか『焙煎ログ』を事前に申告した上で焙煎に挑む点が見どころです。",
+          "location": "見どころ"
+        },
+        {
+          "text": "競技最終日、実際の焙煎結果が申告内容に最も近づいた選手が優勝となる",
+          "status": "verified",
+          "sourceIds": [
+            "scaj-jcrc-overview"
+          ],
+          "quote": "競技最終日に、事前申告されたFlavor Profilesに最も近い焙煎コーヒーに仕上げた方が優勝者として認定されます。",
+          "location": "見どころ"
+        }
+      ]
+    },
+    "competition:jcrc:latestResult": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "2016年はいつか珈琲屋の近藤啓選手が優勝した(神奈川県)",
+          "status": "verified",
+          "sourceIds": [
+            "scaj-jcrc-past-results"
+          ],
+          "quote": "優勝 | 近藤 啓 | Hiraku Kondo | いつか珈琲屋 | いつか珈琲屋 | 神奈川県 | 536.75",
+          "location": "過去の競技結果 2016年"
+        },
+        {
+          "text": "いつか珈琲屋の所在地は神奈川県平塚市",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "SCAJ結果ページの所在地は『神奈川県』まで。『平塚市』は別の資料(店の公式サイト等)で未確認。"
+        },
+        {
+          "text": "近藤啓選手は初出場で優勝した",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "SCAJ結果ページに出場回数の記載がない(2012〜2025年の表にも他年の近藤 啓の名前なし、ただしこれは『初出場』の証拠にならない)。"
+        },
+        {
+          "text": "翌2017年のWorld Coffee Roasting Championship(中国・広州)へ出場し7位入賞",
+          "status": "verified",
+          "sourceIds": [
+            "scaj-jcrc-past-results"
+          ],
+          "quote": "2016年優勝者の世界大会での成績 | ワールド コーヒー ロースティング チャンピオンシップ 2017 (WCRC2017) | 中国/広州大会 | 近藤 啓(JCRC2016優勝者) | 第7位 (21ヶ国中)",
+          "location": "過去の競技結果 2016年の下"
+        }
+      ],
+      "suggestedText": "2016年はいつか珈琲屋(神奈川県)の近藤啓選手が優勝。翌2017年のWorld Coffee Roasting Championship(中国・広州)に出場し、第7位(21ヶ国中)だった。",
+      "note": "【最新性: 古い】この記述は2016年の結果だが、SCAJの過去の競技結果ページ(2012〜2025年)には2017〜2025年の結果もある(2020・2021年なし)。最新は2025年: 優勝 仲村 良行(Yoshiyuki Nakamura、株式会社土と根、豆ポレポレ、沖縄県、608点)、WCRC2026(ブリュッセル/ベルギー)で第12位(28ヶ国と地域)。引用: 『優勝 | 仲村 良行 | Yoshiyuki Nakamura | 株式会社土と根 | 豆ポレポレ | 沖縄県 | 608』『仲村 良行 (JCRC2025優勝者) | 第12位 (28ヶ国と地域)』(scaj-jcrc-past-results、2025年の表と『2025年優勝者の世界大会での成績』)。JCRC2026は予選が2026年11月17〜19日、決勝が2027年1月22〜25日の予定でまだ開催されていない(scaj-jcrc-2026-competition)。書き換え案(提案のみ): 『2025年は仲村良行選手(株式会社土と根・豆ポレポレ、沖縄県)が優勝し、2026年のWorld Coffee Roasting Championship(ブリュッセル)で第12位(28ヶ国と地域)だった。』"
+    },
+    "competition:jcigsc:tagline": {
+      "status": "verified",
+      "claims": [
+        {
+          "text": "コーヒーとお酒を組み合わせたオリジナルのカクテルを競う",
+          "status": "verified",
+          "sourceIds": [
+            "scaj-jcigsc-overview"
+          ],
+          "quote": "WCIGSC(World Coffee In Good Spirits Championship)は、コーヒーにウィスキーやスピリッツなどを加えて作る、オリジナルコーヒーカクテルの大会であり",
+          "location": "歴史",
+          "note": "世界大会WCIGSCの説明。JCIGSCは『WCIGSCに則り決められて』いる(見どころ)。"
+        }
+      ]
+    },
+    "competition:jcigsc:history": {
+      "status": "verified",
+      "claims": [
+        {
+          "text": "欧州発の世界大会WCIGSCは、SCAE(欧州スペシャリティコーヒー協会)が立ち上げた",
+          "status": "verified",
+          "sourceIds": [
+            "scaj-jcigsc-overview"
+          ],
+          "quote": "欧州スペシャリティコーヒー協会(SCAE)が立ち上げたWCIGSC(World Coffee In Good Spirits Championship)",
+          "location": "歴史"
+        },
+        {
+          "text": "日本代表を送るために競技会を始めた",
+          "status": "verified",
+          "sourceIds": [
+            "scaj-jcigsc-overview"
+          ],
+          "quote": "これまで、日本からも選手を輩出しようという動きはありましたが、選手の推薦・育成方法など、クリアにしなければならない問題がありました。 ... 当協会でも参加に向けての気運が高まりました。",
+          "location": "歴史",
+          "note": "『日本代表を送るため』という目的は、この経緯の要約として妥当。"
+        },
+        {
+          "text": "2012年2月にデモンストレーション競技が行われた",
+          "status": "verified",
+          "sourceIds": [
+            "scaj-jcigsc-overview"
+          ],
+          "quote": "2012年2月、デモンストレーション競技が大きな盛り上がりを見せたことを受けて、",
+          "location": "歴史"
+        },
+        {
+          "text": "2013年に第1回JCIGSC(日本大会)が開催された",
+          "status": "verified",
+          "sourceIds": [
+            "scaj-jcigsc-overview",
+            "scaj-jcigsc-past-results"
+          ],
+          "quote": "2013年初めての日本大会が行われました。",
+          "location": "歴史。過去の競技結果(2013年～2025年)に2013年の表(優勝 大渕 修一)"
+        }
+      ]
+    },
+    "competition:jcigsc:format": {
+      "status": "verified",
+      "claims": [
+        {
+          "text": "10分間の競技時間内に合計4杯を作成する",
+          "status": "verified",
+          "sourceIds": [
+            "scaj-jcigsc-overview"
+          ],
+          "quote": "10分間の競技時間内で合計4杯作成します。",
+          "location": "見どころ"
+        },
+        {
+          "text": "アイリッシュコーヒー2杯と、コーヒーを使ったアルコールベースのデザイナードリンク(ホットまたはコールド)2杯",
+          "status": "verified",
+          "sourceIds": [
+            "scaj-jcigsc-overview"
+          ],
+          "quote": "アイリッシュコーヒー2杯と、コーヒーを使用したアルコールベース2杯(ホットもしくはコールド)のデザイナードリンクを作成します。",
+          "location": "見どころ"
+        },
+        {
+          "text": "ルールはWCIGSCに準じ、優勝者は日本代表として世界大会に出場する",
+          "status": "verified",
+          "sourceIds": [
+            "scaj-jcigsc-overview"
+          ],
+          "quote": "競技会のルールは「World Coffee In Good Spirits Championship(WCIGSC)」に則り決められており、JCIGSCの優勝者は、WCIGSCへ日本代表として参加いたします。",
+          "location": "見どころ"
+        }
+      ],
+      "note": "2026年のJCIGSC結果ページ(scaj-jcigsc 2026-results)は、見出しが『2025年 決勝』のまま2025年の表(優勝 図師 聡)を表示しており、2026年の結果が載っているか不明。アプリに latestResult はない。"
+    },
+    "competition:jbrc:tagline": {
+      "status": "verified",
+      "claims": [
+        {
+          "text": "ペーパー・ネルドリップに限らず、幅広い抽出器具で競う",
+          "status": "verified",
+          "sourceIds": [
+            "scaj-jbrc-overview"
+          ],
+          "quote": "JHDCがペーパー・ネルドリップに特化した競技会であるのに対し、JBrCではより幅広い抽出器具の使用が許されています。",
+          "location": "JBrCの沿革"
+        }
+      ]
+    },
+    "competition:jbrc:history": {
+      "status": "verified",
+      "claims": [
+        {
+          "text": "2014年に新設されたSCAJ主催の競技会",
+          "status": "verified",
+          "sourceIds": [
+            "scaj-jbrc-overview"
+          ],
+          "quote": "「ジャパン ブリューワーズカップ」（JBrC）は、2014年新規に開催されることとなったコーヒー抽出の国内競技会です。",
+          "location": "JBrCの沿革",
+          "note": "『SCAJ主催』は、SCAJのサイト上の競技会として掲載。"
+        },
+        {
+          "text": "ペーパー・ネルドリップに特化したJHDCに対し、ペーパードリップ、ネルドリップ、フレンチプレス、エアロプレスなど機械的動力を伴わない手動の抽出器具を自由に選択できる",
+          "status": "verified",
+          "sourceIds": [
+            "scaj-jbrc-overview"
+          ],
+          "quote": "ペーパードリップ、ネルドリップ、フレンチプレス、エアロプレスなど機械的動力を伴わない手動の器具を、競技者が自身で選択し抽出技術を競う競技会",
+          "location": "見どころ"
+        },
+        {
+          "text": "世界大会WBrCの国内選考会と位置づけられ、優勝者には日本代表としてWBrCへ出場する権利が与えられる",
+          "status": "verified",
+          "sourceIds": [
+            "scaj-jbrc-overview"
+          ],
+          "quote": "「ワールド ブリューワーズ カップ」（WBrC）の国内大会と位置づけられ、JBrC優勝者には、日本代表としてWBrCへ出場の権利が与えられます。",
+          "location": "JBrCの沿革",
+          "note": "原文は『国内大会』。『選考会』は言い換え。"
+        },
+        {
+          "text": "2014年はJBrC2014優勝者の尾籠一誠選手(株式会社サザコーヒー)が、イタリア・リミニで開催されたWBrC2014に日本代表として出場した",
+          "status": "verified",
+          "sourceIds": [
+            "scaj-jbrc-overview",
+            "scaj-jbrc-past-results"
+          ],
+          "quote": "2014年は、JBrC2014優勝者である尾籠一誠さん（株式会社サザコーヒー所属）が日本代表として、イタリア／リミニで開催されたWBrC2014にてその技を競いました。",
+          "location": "JBrCの沿革。結果ページ: 尾籠 一誠 (JBrC2014優勝者) 9位 (27ヶ国中)"
+        }
+      ]
+    },
+    "competition:jbrc:format": {
+      "status": "verified",
+      "claims": [
+        {
+          "text": "予選競技会では大会公式の焙煎豆を使う「必修サービス」で、純粋に味覚のみが評価される",
+          "status": "verified",
+          "sourceIds": [
+            "scaj-jbrc-overview"
+          ],
+          "quote": "予選競技会では「必修サービス」として競技者は公式の焙煎豆を使用、純粋に味覚のみが評価されます。",
+          "location": "競技について"
+        },
+        {
+          "text": "準決勝・決勝では各自が選んだ豆を持ち寄る「オープンサービス」で、抽出技術とプレゼンテーションでその豆の魅力をアピールする",
+          "status": "verified",
+          "sourceIds": [
+            "scaj-jbrc-overview"
+          ],
+          "quote": "準決勝／決勝競技会では「オープンサービス」として競技者それぞれが焙煎豆を持ち寄り、その豆の魅力を抽出技術とプレゼンテーションによってアピールします。",
+          "location": "競技について"
+        }
+      ],
+      "note": "2026年のJBrC結果ページは別URL(jbrc/2026-競技結果)。アプリに latestResult はない。"
+    },
+    "competition:kikikohi:tagline": {
+      "status": "verified",
+      "claims": [
+        {
+          "text": "SCAJコーヒーマイスター有資格者限定",
+          "status": "verified",
+          "sourceIds": [
+            "scaj-kikikohi-12th"
+          ],
+          "quote": "※コーヒーマイスター有資格者を対象に募集します。 / SCAJコーヒーマイスター認定資格の有資格者（SCAJ会員であり、有効なコーヒーマイスター資格を所持されている方）",
+          "location": "第12回 概要・選手権出場資格"
+        },
+        {
+          "text": "コーヒーの官能評価(カッピング)精度を競う",
+          "status": "verified",
+          "sourceIds": [
+            "scaj-kikikohi-12th"
+          ],
+          "quote": "SCAJトレイニング委員会による、コーヒーの官能評価を競う「第12回利き珈琲選手権」 / コーヒーのカッピング精度を競い",
+          "location": "第12回 概要"
+        }
+      ]
+    },
+    "competition:kikikohi:history": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "SCAJコーヒーマイスター認定資格の有資格者を対象とする",
+          "status": "verified",
+          "sourceIds": [
+            "scaj-kikikohi-12th"
+          ],
+          "quote": "SCAJコーヒーマイスター認定資格の有資格者",
+          "location": "選手権 出場資格"
+        },
+        {
+          "text": "SCAJトレイニング委員会がSCAJ展示会のイベントステージで開催するカッピング競技会",
+          "status": "verified",
+          "sourceIds": [
+            "scaj-kikikohi-12th"
+          ],
+          "quote": "SCAJ2026イベントステージにて、SCAJトレイニング委員会による、コーヒーの官能評価を競う「第12回利き珈琲選手権」を開催します。",
+          "location": "第12回 概要"
+        },
+        {
+          "text": "2024年に第10回、2025年に第11回が開催された",
+          "status": "unverified",
+          "sourceIds": [
+            "scaj-kikikohi-12th"
+          ],
+          "quote": "",
+          "location": "",
+          "note": "第12回のページには第10回・第11回の優勝者インタビューはあるが、開催年は書かれていない。年の対応は『第12回=2026年』からの推論(第5回インタビューに『2017年の大会』への言及があり、年次の対応は単純でない可能性)。"
+        },
+        {
+          "text": "2026年に第12回を開催(予定)する",
+          "status": "verified",
+          "sourceIds": [
+            "scaj-kikikohi-12th"
+          ],
+          "quote": "2026年10月14日(水) SCAJ2026 ステージBにて、皆様のご来場をお待ちしております。",
+          "location": "第12回 概要",
+          "note": "予定の告知ページ。開催後の結果ページは未取得。2026-11-09時点では開催日が過ぎており『予定されている』は古い表現。"
+        },
+        {
+          "text": "優勝者は「コーヒーマイスター利き珈琲王」として表彰される",
+          "status": "verified",
+          "sourceIds": [
+            "scaj-kikikohi-12th"
+          ],
+          "quote": "優勝者は「2026年コーヒーマイスター利き珈琲王」として表彰し、トロフィーを授与いたします。",
+          "location": "第12回 概要"
+        }
+      ],
+      "suggestedText": "SCAJコーヒーマイスター認定資格の有資格者を対象に、SCAJトレイニング委員会がSCAJ展示会のイベントステージで開催しているカッピング競技会。第12回は2026年10月14日にSCAJ2026のステージBで開催が告知されている。優勝者は「コーヒーマイスター利き珈琲王」として表彰される。"
+    },
+    "competition:kikikohi:format": {
+      "status": "verified",
+      "claims": [
+        {
+          "text": "予選・決勝でコーヒーのカッピング精度を競い、正解の多い競技者からサドンデス方式で優勝者を決める",
+          "status": "verified",
+          "sourceIds": [
+            "scaj-kikikohi-12th"
+          ],
+          "quote": "予選、決勝戦でコーヒーのカッピング精度を競います。 ... 正解の多いコーヒーマイスターからサドンデス方式で優勝者を決定します。",
+          "location": "選手権 競技内容"
+        },
+        {
+          "text": "出題は生産国・生産処理方式・格付けの違いなどがテーマ",
+          "status": "verified",
+          "sourceIds": [
+            "scaj-kikikohi-12th"
+          ],
+          "quote": "生産国の違いや生産処理方式、格付け違いなどから出題されます。",
+          "location": "選手権 競技内容"
+        },
+        {
+          "text": "歴代優勝者の証言(第7回)では、スペシャルティだけでなくコマーシャルコーヒーを含むあらゆる豆が出題され、アラビカだけでなくカネフォラ種も出題された",
+          "status": "verified",
+          "sourceIds": [
+            "scaj-kikikohi-12th"
+          ],
+          "quote": "「利き珈琲選手権」はスペシャルティコーヒーだけでなく、コマーシャルコーヒーを含んだあらゆる豆が出題され、アラビカだけでなくカネフォラ種も出題されたことで",
+          "location": "歴代利き珈琲王インタビュー 第7回 苅込 孝史 様",
+          "note": "『(ロブスタ)』の併記は、第8回インタビューに『スペシャルティロブスタが出題』とあることと整合。"
+        }
+      ]
+    },
+    "event:World Brewers Cup 2026": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "2026年のWorld Brewers Cupは2026年6月25日〜27日に開催された",
+          "status": "verified",
+          "sourceIds": [
+            "wcc-wbrc-page"
+          ],
+          "quote": "2026 World Brewers Cup / June 25–27, 2026 / World of Coffee | Brussels, Belgium",
+          "location": "WCC World Brewers Cup ページ『Upcoming Event』欄"
+        },
+        {
+          "text": "会場はWorld of Coffee Brussels",
+          "status": "verified",
+          "sourceIds": [
+            "wcc-wbrc-page"
+          ],
+          "quote": "World of Coffee | Brussels, Belgium",
+          "location": "WCC World Brewers Cup ページ"
+        },
+        {
+          "text": "手淹れ抽出の技術を競う世界大会",
+          "status": "verified",
+          "sourceIds": [
+            "wcc-wbrc-page"
+          ],
+          "quote": "The World Brewers Cup (WBrC) is an international coffee brewing competition designed to showcase the craft and skill of manual filter coffee brewing.",
+          "location": "WCC World Brewers Cup ページ本文"
+        },
+        {
+          "text": "粕谷哲氏は2016年大会の優勝者",
+          "status": "verified",
+          "sourceIds": [
+            "scaj-jbrc-past-results"
+          ],
+          "quote": "粕谷 哲 (JBrC2015優勝者) | 優勝 (36ヶ国中)",
+          "location": "SCAJ JBrC過去の競技結果 2015年の下『2015年優勝者の世界大会での成績 / ワールド ブリューワーズカップ 2016 (WBrC2016) / アイルランド/ダブリン大会』",
+          "note": "SCAJの結果表での粕谷哲氏の所属は『有限会社フルハシ / コーヒーファクトリー(茨城県)』。"
+        },
+        {
+          "text": "粕谷哲氏はPHILOCOFFEAの人物である(『PHILOCOFFEA(粕谷哲氏)』という紐づけ)",
+          "status": "unverified",
+          "sourceIds": [
+            "scaj-jbrc-past-results"
+          ],
+          "quote": "",
+          "location": "",
+          "note": "SCAJの2015・2016年の結果表では所属がコーヒーファクトリー。PHILOCOFFEAとの関係を示す一次資料は取れていない(二次資料の報道のみ)。"
+        }
+      ],
+      "suggestedText": "手淹れ抽出の技術を競う世界大会。粕谷哲氏は2016年大会の優勝者。",
+      "note": "【開催済み】2026-11-09時点で開催日を過ぎている(アプリでは『過去のイベント』に分類される)。WCC順位表PDF(2026 WBrC)の決勝1位は Nas Jaafar(Falcon Coffees、Malaysia、469.0点)。引用『1 Nas Jaafar Falcon Coffees Malaysia 339.0 130.0 469.0 Finca Nuguo Panama Geisha Anaerobic Natural』(wcc-wbrc-2026-rankings、FINAL ROUND)。アプリの説明は大会の紹介なので結果は不要だが、『過去のイベント』として出すなら結果を足す案もある。英訳(EVENTS_EN)は日本語と同じ主張で、食い違いなし。"
+    },
+    "event:World Barista Championship 2026": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "2026年のWorld Barista Championshipは2026年10月22日〜25日に開催された",
+          "status": "verified",
+          "sourceIds": [
+            "wcc-wbc-panama-2026"
+          ],
+          "quote": "The 26th World Barista Championship comes to Panama City this October 22–25, the first time the event has been held in Central America.",
+          "location": "WCC WBC Panama 2026 ページ"
+        },
+        {
+          "text": "会場はWorld of Coffee Panama(パナマ)",
+          "status": "verified",
+          "sourceIds": [
+            "wcc-wbc-panama-2026"
+          ],
+          "quote": "The championship is the headline event of the inaugural World of Coffee Panama",
+          "location": "WCC WBC Panama 2026 ページ。同ページに『Panama Convention Center』の記載もある"
+        },
+        {
+          "text": "エスプレッソ・ミルクドリンク・シグネチャードリンクを競う",
+          "status": "verified",
+          "sourceIds": [
+            "wcc-wbc-panama-2026"
+          ],
+          "quote": "baristas get just 15 minutes each to prepare four espressos, four milk-based drinks, and four signature beverages",
+          "location": "WCC WBC Panama 2026 ページ"
+        },
+        {
+          "text": "2000年に始まった",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "WCCの公式ページ(WBCページ、Panama 2026ページ、About)に開始年の記載がない。Panama 2026ページは『26th』と書くのみ。過去順位表はUC Davisのアーカイブにあるがスクリプト描画で取得できなかった。"
+        },
+        {
+          "text": "最も歴史のある世界大会",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "WCCの公式ページに『最も歴史がある』とする記述は見つからない。"
+        }
+      ],
+      "suggestedText": "エスプレッソ・ミルクドリンク・シグネチャードリンクを競う世界大会(第26回)。",
+      "note": "【開催済み】2026-11-09時点で開催日を過ぎている(アプリでは『過去のイベント』に分類される)。結果: 2026年の世界チャンピオンは Pan Wei(中国、Parking Coffee、575.5点)(wcc-wbc-panama-2026、wcc-wbc-2026-rankings)。2027年大会は『April 28 - May 1, 2027 / World of Coffee Tokyo | Tokyo, Japan』(wcc-wbc-page)。英訳(EVENTS_EN)は日本語と同じ主張。"
+    },
+    "event:SCAJ2026 ワールドスペシャルティコーヒーカンファレンス&エキシビション": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "名称: SCAJ ワールド スペシャルティコーヒー カンファレンス アンド エキシビション 2026(SCAJ2026)",
+          "status": "verified",
+          "sourceIds": [
+            "scajconf-2026-overview"
+          ],
+          "quote": "SCAJ ワールド スペシャルティコーヒー / カンファレンス アンド エキシビション 2026 / （略称：SCAJ2026）",
+          "location": "開催概要 名称"
+        },
+        {
+          "text": "会場は東京ビッグサイト 南展示棟1-4ホール",
+          "status": "verified",
+          "sourceIds": [
+            "scajconf-2026-overview"
+          ],
+          "quote": "東京ビッグサイト 南展示棟1-4ホール",
+          "location": "開催概要 会場"
+        },
+        {
+          "text": "会期は2026年10月14日〜17日",
+          "status": "verified",
+          "sourceIds": [
+            "scajconf-2026-overview"
+          ],
+          "quote": "南3-4ホール： 2026年10⽉14日(水)〜17日(土)",
+          "location": "開催概要 会期",
+          "note": "南1-2ホールは10月14日〜16日(最終日16:00まで)。全体の会期としては14〜17日で合っているが、ホールによって最終日が異なる。"
+        },
+        {
+          "text": "主催はSCAJ(日本スペシャルティコーヒー協会)",
+          "status": "verified",
+          "sourceIds": [
+            "scajconf-2026-overview"
+          ],
+          "quote": "主催 / 一般社団法人 日本スペシャルティコーヒー協会",
+          "location": "開催概要 主催"
+        },
+        {
+          "text": "日本最大級のスペシャルティコーヒー展示会",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式ページに『日本最大級』の記載はない(評価表現)。出展500社/750小間(見込)は書かれているが、他の展示会との比較資料はない。"
+        },
+        {
+          "text": "前回は4日間で75,000人超が来場した",
+          "status": "incorrect",
+          "sourceIds": [
+            "scajconf-2026-overview"
+          ],
+          "quote": "来場規模 / 4日間のべ95,000名 見込 / ［前回 96,823名］",
+          "location": "開催概要 来場規模",
+          "note": "公式の開催概要では『前回(2025年)96,823名』。75,000人超は公式の前回値と合わない(古い回の数字の可能性)。英語欄の『[2025: 96,823 visitors]』と一致。"
+        }
+      ],
+      "suggestedText": "日本のスペシャルティコーヒー展示会。会期は2026年10月14日〜17日(南3-4ホール。南1-2ホールは14日〜16日)。前回(2025年)の来場者は4日間で96,823名(SCAJ2026開催概要による)。",
+      "note": "【開催済み】2026-11-09時点で開催日を過ぎている(アプリでは『過去のイベント』に分類される)。英訳(EVENTS_EN)は『One of Japan's largest ... previous edition drew over 75,000 visitors over four days』で、日本語と同じ誤り・同じ未確認表現を持つ(日本語を直すとき英訳も直す)。英語の名称・会場表記は公式英語欄(SCAJ WORLD SPECIALTY COFFEE CONFERENCE AND EXHIBITION 2026 / Tokyo Big Sight South Halls 1-4)と合っている。開催後の実績来場者数は未取得(確認していない)。"
+    },
+    "event:Guatemala Cup of Excellence 2026": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "グアテマラのCup of Excellence 2026が開催される(COE公式の年別データに2026年の記録がある)",
+          "status": "verified",
+          "sourceIds": [
+            "coe-home"
+          ],
+          "quote": "\"year\":2026,\"ctry\":\"Guatemala\",\"n\":41",
+          "location": "cupofexcellence.org トップページ内の年別結果データ"
+        },
+        {
+          "text": "COE(オークション)は7月15日",
+          "status": "incorrect",
+          "sourceIds": [
+            "coe-home"
+          ],
+          "quote": "\"year\":2026,\"ctry\":\"Guatemala\" ... \"auction\":\"July 23, 2026 13:00 UTC\",\"jury\":\"June 1 – 4, 2026\"",
+          "location": "cupofexcellence.org トップページ内の年別結果データ(2026年のGuatemala)",
+          "note": "公式データでは2026年のオークションは2026年7月23日(13:00 UTC)。アプリの『7月15日』は、同じデータの2025年の記録『\"auction\":\"July 15, 2025\"』およびトップページのカード『COE: July 15 / NW: July 14 – 18』(年の記載なし)と一致するため、2025年の日付を2026年に流用した可能性が高い。"
+        },
+        {
+          "text": "NW(審査週間)は7月14日〜18日",
+          "status": "unverified",
+          "sourceIds": [
+            "coe-home"
+          ],
+          "quote": "COE: July 15 / NW: July 14 – 18",
+          "location": "cupofexcellence.org トップページのGuatemalaのカード(年の記載なし)",
+          "note": "年の記載がなく、2026年の記録ではない可能性が高い(2025年のオークション日と一致)。『NW』はNational Winner。『審査週間』という訳も公式資料で確認できていない。2026年の審査(COE jury)は2026年6月1〜4日。"
+        },
+        {
+          "text": "『コーヒーのオリンピック』と呼ばれる国際品評会",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "COE公式は『The most prestigious coffee competition in the world』と自称。『オリンピック』の呼称は公式ページに見つからない。"
+        },
+        {
+          "text": "優勝豆はオンラインオークションで販売される",
+          "status": "verified",
+          "sourceIds": [
+            "coe-home",
+            "ace-about-coe-auctions"
+          ],
+          "quote": "Members of ACE can buy samples of the coffees and bid on them during the online auctions.",
+          "location": "cupofexcellence.org トップページ『Coffee Auctions』"
+        },
+        {
+          "text": "生産者に直接利益が渡る",
+          "status": "unverified",
+          "sourceIds": [
+            "ace-about-coe-auctions"
+          ],
+          "quote": "These auctions have set the standard for the increased premiums that farmers have been able to receive for their exemplary coffees",
+          "location": "ACE『About COE Auctions』",
+          "note": "『プレミアムの上昇』は書かれているが、『直接』利益が渡るとは書かれていない。"
+        }
+      ],
+      "suggestedText": "グアテマラのCup of Excellence 2026。COEの審査は2026年6月1日〜4日、オークションは2026年7月23日(13:00 UTC)(COE公式の年別データによる)。優勝豆はオンラインオークションで販売される。",
+      "note": "【開催済み】2026-11-09時点で開催日を過ぎている(アプリでは『過去のイベント』に分類される)。日付が公式と食い違うため、書き換えが必要。英訳(EVENTS_EN)も同じ日付・『Olympics of coffee』・『profits go directly to producers』を持つ。"
+    },
+    "event:Nicaragua Cup of Excellence 2026": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "ニカラグアのCup of Excellence 2026が開催される(COE公式の年別データに2026年の記録がある)",
+          "status": "verified",
+          "sourceIds": [
+            "coe-home"
+          ],
+          "quote": "\"year\":2026,\"ctry\":\"Nicaragua\",\"n\":31",
+          "location": "cupofexcellence.org トップページ内の年別結果データ"
+        },
+        {
+          "text": "COE(オークション)は6月19日",
+          "status": "conflict",
+          "sourceIds": [
+            "coe-home"
+          ],
+          "quote": "(A) COE: June 19  (B) \"year\":2026,\"ctry\":\"Nicaragua\" ... \"auction\":\"June 25, 2025 13:00 UTC\",\"jury\":\"May 11 – 15, 2025\"",
+          "location": "cupofexcellence.org トップページ: (A) 開催カード、(B) 年別データの2026年Nicaraguaの記録",
+          "note": "同じ公式サイトで、年の記載のないカードは6月19日(2025年のNicaraguaのオークション『June 19, 2025 13:00 UTC』と一致)、2026年の記録は6月25日(ただし文字列の年が『2025』のままで、記録内の誤記の可能性)。どちらが2026年の正しい日付かをこちらでは決めない。ユーザーの判断が必要。"
+        },
+        {
+          "text": "2026年シーズンの開幕を飾る大会",
+          "status": "unverified",
+          "sourceIds": [
+            "coe-home"
+          ],
+          "quote": "",
+          "location": "",
+          "note": "年別データでは2026年の記録のうちオークションが最も早い(6月25日)が、El Salvadorと審査週が同じ(5月11〜15日)で、公式が『開幕』と述べる記載はない(推論)。2026年の記録の年表記の誤りもある。"
+        }
+      ],
+      "suggestedText": "ニカラグアのCup of Excellence 2026(COE公式の年別データに2026年の記録がある)。オークション日は公式データ内で食い違うため、日付は載せない。",
+      "note": "【開催済み】2026-11-09時点で開催日を過ぎている(アプリでは『過去のイベント』に分類される)。COE公式の2026年Nicaraguaの結果は 'sold':true、31ロット(\"n\":31,\"priced\":31)。日付の解決をユーザーに依頼。英訳(EVENTS_EN)は日本語と同じ日付・同じ『opens the 2026 season』。"
+    }
+  }
+}

@@ -1,0 +1,1893 @@
+[
+ {
+  "key": "origin:ペルー:officialBody",
+  "proposed": {
+   "text": "中央生産者組合(Junta Nacional del Café・JNC)は1993年1月6日に正式に設置された。JNC自身の説明では、ペルーのコーヒー生産者を代表する機関で、14のコーヒー地帯にまたがる56のコーヒー関連組織(協会・協同組合)と約7万の加盟世帯をまとめている(2024〜2026年の公式サイト掲載)。INACAL(国立品質院)は、ペルーの国家品質システムの規格(NTP)を所管する機関である。"
+  },
+  "verifiedClaims": [
+   {
+    "index": 0,
+    "text": "JNC(Junta Nacional del Café)は1993年設立",
+    "status": "verified",
+    "quote": "La JNC fue instalada oficialmente el 6 de enero de 1993.",
+    "location": "JNC「Nosotros」",
+    "sourceIds": [
+     "jnc-nosotros-2024",
+     "jnc-historia"
+    ]
+   },
+   {
+    "index": 1,
+    "text": "14の産地にまたがる56の協同組合・生産者団体、約7万戸の加盟農家",
+    "status": "verified",
+    "quote": "Hoy reúne a un total de 56 organizaciones cafetaleras, entre asociaciones y cooperativas que suman 70 mil familias socias arraigadas en catorce zonas cafetaleras del país.",
+    "location": "JNC「Nosotros」(2024-03保存)、トップページ(2026-05保存)",
+    "sourceIds": [
+     "jnc-nosotros-2024",
+     "jnc-inicio-2026"
+    ]
+   },
+   {
+    "index": 2,
+    "text": "生産者を代表する組織である",
+    "status": "verified",
+    "quote": "La Junta Nacional del Café (JNC) es una institución que congrega y representa a los productores cafetaleros peruanos frente al Estado.",
+    "location": "JNC「Nosotros」",
+    "sourceIds": [
+     "jnc-nosotros-2024"
+    ]
+   }
+  ],
+  "rejectedClaims": [
+   {
+    "text": "法的な輸出許可・格付け権限を持つ規制機関ではなく、業界団体としての性格が強い",
+    "status": "unverified"
+   },
+   {
+    "text": "等級認証自体はINACALが所管する",
+    "status": "unverified"
+   }
+  ],
+  "sources": {
+   "jnc-nosotros-2024": {
+    "title": "Nosotros - Junta Nacional del Café",
+    "org": "Junta Nacional del Café (JNC)",
+    "kind": "primary",
+    "readMethod": "full-text"
+   },
+   "jnc-historia": {
+    "title": "Historia de la JNC (2018-10-30)",
+    "org": "Junta Nacional del Café (JNC)",
+    "kind": "primary",
+    "readMethod": "full-text"
+   },
+   "jnc-inicio-2026": {
+    "title": "Junta Nacional del Café (portada)",
+    "org": "Junta Nacional del Café (JNC)",
+    "kind": "primary",
+    "readMethod": "full-text"
+   }
+  },
+  "verifierNote": ""
+ },
+ {
+  "key": "origin:ペルー:regions",
+  "proposed": {
+   "text": "USDA FAS(2025年5月)によれば、主要産地はカハマルカ(生産の22%)、サンマルティン(20%)、フニン(19%)、アマソナス(15%)。"
+  },
+  "verifiedClaims": [
+   {
+    "index": 0,
+    "text": "主要産地はカハマルカ・サンマルティン・フニン",
+    "status": "verified",
+    "quote": "The main coffee-producing regions include Cajamarca (22% of total production), San Martín (20%), Junín (19%), and Amazonas (15%).",
+    "location": "USDA FAS 2025",
+    "sourceIds": [
+     "usda-fas-peru-coffee-annual-2025"
+    ]
+   }
+  ],
+  "rejectedClaims": [
+   {
+    "text": "クスコは主要産地の一つ",
+    "status": "unverified"
+   },
+   {
+    "text": "「チャンチャマヨ」はフニン県の産地",
+    "status": "unverified"
+   }
+  ],
+  "sources": {
+   "usda-fas-peru-coffee-annual-2025": {
+    "title": "Coffee Annual - Peru (Report Number PE2025-0018, May 21, 2025)",
+    "org": "USDA Foreign Agricultural Service (GAIN), Lima",
+    "kind": "primary",
+    "readMethod": "full-text"
+   }
+  },
+  "verifierNote": ""
+ },
+ {
+  "key": "origin:ペルー:sub:アマソナス(ロドリゲス・デ・メンドーサ)",
+  "proposed": {
+   "detail": "アマソナス: 全国生産の約15%を占める(USDA FAS、2025年5月)。"
+  },
+  "verifiedClaims": [
+   {
+    "index": 4,
+    "text": "アマソナスは全国生産の15%",
+    "status": "verified",
+    "quote": "The main coffee-producing regions include Cajamarca (22% of total production), San Martín (20%), Junín (19%), and Amazonas (15%).",
+    "location": "USDA FAS 2025",
+    "sourceIds": [
+     "usda-fas-peru-coffee-annual-2025"
+    ]
+   }
+  ],
+  "rejectedClaims": [
+   {
+    "text": "標高1,520〜1,820m",
+    "status": "unverified"
+   },
+   {
+    "text": "カティモール・カトゥーラ中心",
+    "status": "unverified"
+   },
+   {
+    "text": "バジェ・ベルデ協同組合(2016年設立、女性生産者35%)",
+    "status": "unverified"
+   },
+   {
+    "text": "ドライフルーツ、キャラメルの甘み",
+    "status": "unverified"
+   }
+  ],
+  "sources": {
+   "usda-fas-peru-coffee-annual-2025": {
+    "title": "Coffee Annual - Peru (Report Number PE2025-0018, May 21, 2025)",
+    "org": "USDA Foreign Agricultural Service (GAIN), Lima",
+    "kind": "primary",
+    "readMethod": "full-text"
+   }
+  },
+  "verifierNote": ""
+ },
+ {
+  "key": "origin:ペルー:sub:カハマルカ",
+  "proposed": {
+   "detail": "カハマルカ: ペルー最大の産地で、全国生産量の22%を占める(USDA FAS、2025年5月)。COEペルー大会では、2017年に1〜3位、2019・2022・2023・2024・2025年に1位を占めた。"
+  },
+  "verifiedClaims": [
+   {
+    "index": 1,
+    "text": "国内最大の産地(全国生産量の22%)",
+    "status": "verified",
+    "quote": "The main coffee-producing regions include Cajamarca (22% of total production), San Martín (20%), Junín (19%), and Amazonas (15%).",
+    "location": "USDA FAS 2025",
+    "sourceIds": [
+     "usda-fas-peru-coffee-annual-2025"
+    ]
+   },
+   {
+    "index": 4,
+    "text": "COE常連",
+    "status": "verified",
+    "quote": "3A 6 San Pedro – El Shimir 2017 -… Fredy Bermeo Guevara San Ignacio, Cajamarca 90.48 || 1a 180 La Lucuma Grimanes Morales Lizana Cajamarca 92.28 || 1A 90.74 Alto Mirador Yoniser Mego Silva Cajamarca",
+    "location": "ACE 各年の結果",
+    "sourceIds": [
+     "ace-coe-peru-2017",
+     "ace-coe-peru-2019",
+     "ace-coe-peru-2022",
+     "ace-coe-peru-2023",
+     "ace-coe-peru-2024",
+     "ace-coe-peru-2025"
+    ]
+   }
+  ],
+  "rejectedClaims": [
+   {
+    "text": "標高900〜2,100m",
+    "status": "unverified"
+   },
+   {
+    "text": "認証輸出量の48.2%",
+    "status": "unverified"
+   },
+   {
+    "text": "谷ごとの微気候差が大きく、ワバル(ハエン)、チリノス/タバコナス(サンイグナシオ)等のサブゾーンに分かれる",
+    "status": "unverified"
+   }
+  ],
+  "sources": {
+   "usda-fas-peru-coffee-annual-2025": {
+    "title": "Coffee Annual - Peru (Report Number PE2025-0018, May 21, 2025)",
+    "org": "USDA Foreign Agricultural Service (GAIN), Lima",
+    "kind": "primary",
+    "readMethod": "full-text"
+   },
+   "ace-coe-peru-2017": {
+    "title": "Perú 2017 - Cup of Excellence (competition results)",
+    "org": "Alliance for Coffee Excellence (Cup of Excellence)",
+    "kind": "primary",
+    "readMethod": "full-text"
+   },
+   "ace-coe-peru-2019": {
+    "title": "Perú 2019 - Cup of Excellence (competition results)",
+    "org": "Alliance for Coffee Excellence (Cup of Excellence)",
+    "kind": "primary",
+    "readMethod": "full-text"
+   },
+   "ace-coe-peru-2022": {
+    "title": "Perú 2022 - Cup of Excellence (competition results)",
+    "org": "Alliance for Coffee Excellence (Cup of Excellence)",
+    "kind": "primary",
+    "readMethod": "full-text"
+   },
+   "ace-coe-peru-2023": {
+    "title": "Perú 2023 - Cup of Excellence (competition results)",
+    "org": "Alliance for Coffee Excellence (Cup of Excellence)",
+    "kind": "primary",
+    "readMethod": "full-text"
+   },
+   "ace-coe-peru-2024": {
+    "title": "Perú 2024 - Cup of Excellence (competition results)",
+    "org": "Alliance for Coffee Excellence (Cup of Excellence)",
+    "kind": "primary",
+    "readMethod": "full-text"
+   },
+   "ace-coe-peru-2025": {
+    "title": "Perú 2025 - Cup of Excellence (competition results)",
+    "org": "Alliance for Coffee Excellence (Cup of Excellence)",
+    "kind": "primary",
+    "readMethod": "full-text"
+   }
+  },
+  "verifierNote": ""
+ },
+ {
+  "key": "origin:ペルー:sub:クスコ(南部)",
+  "proposed": {
+   "detail": "クスコ: COEペルー大会で2018年(91.08点)と2021年(90.2点)に、Nueva Alianza農園のロットが1位になった(COE公式サイト)。"
+  },
+  "verifiedClaims": [
+   {
+    "index": 3,
+    "text": "クスコ産ロットがCOEペルーで1位になった年がある(2018年、2021年)",
+    "status": "verified",
+    "quote": "1a 6 (+1 Partial) Nueva Alianza Dwigth Aguilar Masias Cusco 91.08 || 1a 90.2 Nueva Alianza Dwight Aguilar Masías Cusco",
+    "location": "ACE Perú 2018 / 2021 の1位",
+    "sourceIds": [
+     "ace-coe-peru-2018",
+     "ace-coe-peru-2021"
+    ]
+   }
+  ],
+  "rejectedClaims": [
+   {
+    "text": "標高900〜2,000m",
+    "status": "unverified"
+   },
+   {
+    "text": "北部より穏やかで丸みのあるカップ",
+    "status": "unverified"
+   },
+   {
+    "text": "レッドフルーツ・チョコレート様",
+    "status": "unverified"
+   }
+  ],
+  "sources": {
+   "ace-coe-peru-2018": {
+    "title": "Perú 2018 - Cup of Excellence (competition results)",
+    "org": "Alliance for Coffee Excellence (Cup of Excellence)",
+    "kind": "primary",
+    "readMethod": "full-text"
+   },
+   "ace-coe-peru-2021": {
+    "title": "Perú 2021 - Cup of Excellence (competition results)",
+    "org": "Alliance for Coffee Excellence (Cup of Excellence)",
+    "kind": "primary",
+    "readMethod": "full-text"
+   }
+  },
+  "verifierNote": ""
+ },
+ {
+  "key": "origin:ペルー:sub:フニン(チャンチャマヨ/サティポ)",
+  "proposed": {
+   "detail": "フニン: 全国生産の約19%を占める(USDA FAS、2025年5月)。COEペルー2017では、チャンチャマヨ(フニン県)のロットが4位(90.41点)に入った。"
+  },
+  "verifiedClaims": [
+   {
+    "index": 3,
+    "text": "フニンは全国生産の19%",
+    "status": "verified",
+    "quote": "The main coffee-producing regions include Cajamarca (22% of total production), San Martín (20%), Junín (19%), and Amazonas (15%).",
+    "location": "USDA FAS 2025",
+    "sourceIds": [
+     "usda-fas-peru-coffee-annual-2025"
+    ]
+   }
+  ],
+  "rejectedClaims": [
+   {
+    "text": "標高1,500〜2,400m、国内最高標高帯",
+    "status": "unverified"
+   },
+   {
+    "text": "国内で最も酸が強く力強いカップとされる",
+    "status": "unverified"
+   },
+   {
+    "text": "フレッシュフルーツ、凝縮感のある酸、クリーミーなボディ",
+    "status": "unverified"
+   }
+  ],
+  "sources": {
+   "usda-fas-peru-coffee-annual-2025": {
+    "title": "Coffee Annual - Peru (Report Number PE2025-0018, May 21, 2025)",
+    "org": "USDA Foreign Agricultural Service (GAIN), Lima",
+    "kind": "primary",
+    "readMethod": "full-text"
+   }
+  },
+  "verifierNote": ""
+ },
+ {
+  "key": "origin:ペルー:tagline",
+  "proposed": {
+   "text": "アンデスの東斜面で、小規模農家が生産を担う世界最大の有機コーヒー輸出国。"
+  },
+  "verifiedClaims": [
+   {
+    "index": 0,
+    "text": "小規模農家が生産を担う",
+    "status": "verified",
+    "quote": "Over 90 percent of Peruvian coffee is grown by smallholder farmers on plots smaller than 5 hectares.",
+    "location": "USDA FAS 2025",
+    "sourceIds": [
+     "usda-fas-peru-coffee-annual-2025"
+    ]
+   },
+   {
+    "index": 1,
+    "text": "有機コーヒーで知られる(世界最大の有機コーヒー輸出国)",
+    "status": "verified",
+    "quote": "Peru is the world’s leading exporter of organic coffee",
+    "location": "USDA FAS 2025",
+    "sourceIds": [
+     "usda-fas-peru-coffee-annual-2025"
+    ]
+   },
+   {
+    "index": 2,
+    "text": "アンデス(の東斜面)で育つ",
+    "status": "verified",
+    "quote": "Coffee in Peru is primarily grown along the eastern slopes of the Andes.",
+    "location": "USDA FAS 2025",
+    "sourceIds": [
+     "usda-fas-peru-coffee-annual-2025"
+    ]
+   }
+  ],
+  "rejectedClaims": [
+   {
+    "text": "クリーンでバランスの取れた甘み",
+    "status": "unverified"
+   }
+  ],
+  "sources": {
+   "usda-fas-peru-coffee-annual-2025": {
+    "title": "Coffee Annual - Peru (Report Number PE2025-0018, May 21, 2025)",
+    "org": "USDA Foreign Agricultural Service (GAIN), Lima",
+    "kind": "primary",
+    "readMethod": "full-text"
+   }
+  },
+  "verifierNote": ""
+ },
+ {
+  "key": "origin:ペルー:terroir",
+  "proposed": {
+   "text": "ペルーのコーヒーは主にアンデスの東斜面で栽培される。約75%が標高1,000〜1,800mで栽培され、大半が日陰栽培(USDA FAS、2025年5月)。"
+  },
+  "verifiedClaims": [
+   {
+    "index": 0,
+    "text": "アンデス東斜面からアマゾン盆地への移行地帯",
+    "status": "verified",
+    "quote": "Coffee in Peru is primarily grown along the eastern slopes of the Andes.",
+    "location": "USDA FAS 2025",
+    "sourceIds": [
+     "usda-fas-peru-coffee-annual-2025"
+    ]
+   }
+  ],
+  "rejectedClaims": [
+   {
+    "text": "北部(カハマルカ・サンマルティン・アマソナス)は900〜2,100m、中央高地(チャンチャマヨ/フニン)は1,500〜2,400mで国内最高標高帯、南部クスコは900〜2,000m",
+    "status": "unverified"
+   },
+   {
+    "text": "全国生産の75%超が標高1,200m以上で栽培される",
+    "status": "incorrect"
+   },
+   {
+    "text": "カハマルカは谷ごとに標高・降雨・気温が大きく異なる複雑な地形",
+    "status": "unverified"
+   }
+  ],
+  "sources": {
+   "usda-fas-peru-coffee-annual-2025": {
+    "title": "Coffee Annual - Peru (Report Number PE2025-0018, May 21, 2025)",
+    "org": "USDA Foreign Agricultural Service (GAIN), Lima",
+    "kind": "primary",
+    "readMethod": "full-text"
+   }
+  },
+  "verifierNote": ""
+ },
+ {
+  "key": "origin:ペルー:varietiesDetail",
+  "proposed": {
+   "text": "ペルーはアラビカが中心で、ティピカが70%超、カトゥーラが約20%、その他の品種が約10%(USDA FAS、2025年5月)。"
+  },
+  "verifiedClaims": [
+   {
+    "index": 0,
+    "text": "ティピカが約7割",
+    "status": "verified",
+    "quote": "Peru primarily produces Arabica coffee, with over 70 percent being the Typica variety, followed by Caturra (20%) and other varieties (10%).",
+    "location": "USDA FAS 2025, Production",
+    "sourceIds": [
+     "usda-fas-peru-coffee-annual-2025"
+    ]
+   },
+   {
+    "index": 1,
+    "text": "カトゥーラが約2割",
+    "status": "verified",
+    "quote": "Peru primarily produces Arabica coffee, with over 70 percent being the Typica variety, followed by Caturra (20%) and other varieties (10%).",
+    "location": "USDA FAS 2025, Production",
+    "sourceIds": [
+     "usda-fas-peru-coffee-annual-2025"
+    ]
+   }
+  ],
+  "rejectedClaims": [
+   {
+    "text": "残りをカティモール・パチェが占める",
+    "status": "unverified"
+   },
+   {
+    "text": "カハマルカでは伝統的にカティモール・カトゥーラ・ティピカ・ブルボンが中心",
+    "status": "unverified"
+   },
+   {
+    "text": "新規植樹ではマルセリェサ・パライネマ・タビ等も導入されている",
+    "status": "unverified"
+   },
+   {
+    "text": "高品質マイクロロットではゲイシャ・パカマラ・マラゴジッペの実験栽培も進む",
+    "status": "unverified"
+   }
+  ],
+  "sources": {
+   "usda-fas-peru-coffee-annual-2025": {
+    "title": "Coffee Annual - Peru (Report Number PE2025-0018, May 21, 2025)",
+    "org": "USDA Foreign Agricultural Service (GAIN), Lima",
+    "kind": "primary",
+    "readMethod": "full-text"
+   }
+  },
+  "verifierNote": ""
+ },
+ {
+  "key": "origin:メキシコ:farmStructure",
+  "proposed": {
+   "text": "メキシコのコーヒー生産には50万を超える生産者が関わり(SAGARPA、2017年)、生産量の92.1%は5ヘクタール以下の小規模生産者によるもの(SADER)。"
+  },
+  "verifiedClaims": [
+   {
+    "index": 0,
+    "text": "全国で推定50万戸の生産者がいる",
+    "status": "verified",
+    "quote": "su producción emplea a más de 500,000 productores de 14 entidades federativas y 480 municipios. || aproximadamente participan 500 mil cafeticultores en todo el país",
+    "location": "SAGARPA 2017 / SADER 記事",
+    "sourceIds": [
+     "sader-planeacion-cafe-2017",
+     "sader-cafe-manos-sabias"
+    ]
+   }
+  ],
+  "rejectedClaims": [
+   {
+    "text": "うち95%が3ヘクタール未満",
+    "status": "unverified"
+   },
+   {
+    "text": "1989年のINMECAFE解体後、生産者支援の空白を埋める形で1990年代に各地で協同組合が組織された",
+    "status": "unverified"
+   },
+   {
+    "text": "オアハカのCEPCO、チアパスのCESMACH(35コミュニティ・生産者478名)が代表例",
+    "status": "unverified"
+   }
+  ],
+  "sources": {
+   "sader-planeacion-cafe-2017": {
+    "title": "Café Mexicano - Planeación Agrícola Nacional 2017-2030",
+    "org": "SAGARPA Subsecretaría de Agricultura(現SADER)",
+    "kind": "primary",
+    "readMethod": "full-text"
+   },
+   "sader-cafe-manos-sabias": {
+    "title": "El café, una producción en manos sabias",
+    "org": "Secretaría de Agricultura y Desarrollo Rural (SADER)",
+    "kind": "primary",
+    "readMethod": "full-text"
+   }
+  },
+  "verifierNote": "英訳は日本語と同じ主張。"
+ },
+ {
+  "key": "origin:メキシコ:harvestSeason",
+  "proposed": {
+   "text": "収穫は主に11月から3月(FIRA、2016年)。"
+  },
+  "verifiedClaims": [
+   {
+    "index": 0,
+    "text": "収穫は主に11月から3月",
+    "status": "verified",
+    "quote": "La cosecha del café se realiza principalmente de noviembre a marzo.",
+    "location": "FIRA Panorama 2016 脚注10",
+    "sourceIds": [
+     "fira-panorama-cafe-2016"
+    ]
+   }
+  ],
+  "rejectedClaims": [
+   {
+    "text": "10〜11月に始まる",
+    "status": "unverified"
+   },
+   {
+    "text": "標高の高いロットほど収穫が遅い",
+    "status": "unverified"
+   }
+  ],
+  "sources": {
+   "fira-panorama-cafe-2016": {
+    "title": "Panorama Agroalimentario | Café 2016",
+    "org": "FIRA(Fideicomisos Instituidos en Relación con la Agricultura、メキシコ政府系金融機関)、SIAP-SAGARPA統計を引用",
+    "kind": "primary",
+    "readMethod": "full-text"
+   }
+  },
+  "verifierNote": "英訳は日本語と同じ主張。"
+ },
+ {
+  "key": "origin:メキシコ:history",
+  "proposed": {
+   "text": "コーヒーは18世紀末にメキシコへ伝わった(SADER)。国際コーヒー機関(ICO)の割当制度は1989年に停止し、その後数年は価格が非常に低くなり『コーヒー危機』と呼ばれた(ICO)。メキシコでは、国のコーヒー機関INMECAFEが1989年まで担当機関を務め、その法的根拠の法律は1993年5月31日公布の政令で廃止された(SAGARPA資料)。"
+  },
+  "verifiedClaims": [
+   {
+    "index": 0,
+    "text": "コーヒーの導入は18世紀後半",
+    "status": "verified",
+    "quote": "Este cultivo llegó a México a finales del siglo XVIII",
+    "location": "SADER 2019-10-02 記事",
+    "sourceIds": [
+     "sader-cafe-muy-suyo-2019"
+    ]
+   },
+   {
+    "index": 4,
+    "text": "国際コーヒー協定(ICA)の価格支持制度の崩壊(1989年)",
+    "status": "verified",
+    "quote": "The ICO operated a quota system, whereby coffee supplies in excess of consumer requirements were withheld from the market, on and off from 1962 to 1989, when the system was suspended because of failure to agree on quota distribution.",
+    "location": "ICO FAQ",
+    "sourceIds": [
+     "ico-faq"
+    ]
+   }
+  ],
+  "rejectedClaims": [
+   {
+    "text": "1870年代以降、輸出作物として拡大した",
+    "status": "unverified"
+   },
+   {
+    "text": "1980年代には国内最大の農産物輸出品となった",
+    "status": "unverified"
+   },
+   {
+    "text": "1989年のINMECAFE解体",
+    "status": "unverified"
+   },
+   {
+    "text": "1990〜2003年頃『コーヒー危機』と呼ばれる価格暴落・生産者困窮期が続いた",
+    "status": "unverified"
+   },
+   {
+    "text": "この困窮は1994年1月のサパティスタ民族解放軍(EZLN)蜂起の背景の一つ",
+    "status": "unverified"
+   },
+   {
+    "text": "蜂起はエヒード(共同体的土地保有)の私有化(1992年憲法改正)への反発と結びついていた",
+    "status": "unverified"
+   },
+   {
+    "text": "蜂起後の土地占拠・再分配により、チアパスでは大農園化が進まず小農中心の構造が維持された",
+    "status": "unverified"
+   }
+  ],
+  "sources": {
+   "sader-cafe-muy-suyo-2019": {
+    "title": "México ha hecho del café algo muy suyo (2019-10-02)",
+    "org": "Secretaría de Agricultura y Desarrollo Rural (SADER)",
+    "kind": "primary",
+    "readMethod": "full-text"
+   },
+   "ico-faq": {
+    "title": "FAQs",
+    "org": "International Coffee Organization (ICO)",
+    "kind": "primary",
+    "readMethod": "full-text"
+   }
+  },
+  "verifierNote": "チアパスの蜂起・エヒード・1870年代の輸出拡大・1980年代の最大輸出農産物は公式資料で未確認のため除外。英訳は日本語と同じ主張。"
+ },
+ {
+  "key": "origin:メキシコ:officialBody",
+  "proposed": {
+   "text": "AMECAFE(Asociación Mexicana de la Cadena Productiva del Café, A.C.)は、コーヒー輸出に必要な原産地証明書(Certificado de Origen)を発給する団体で(官報、2020年12月26日)、2006年に、それ以前にConsejo Mexicano del Caféが持っていたこの権限を担うことになった(官報、2007年2月7日)。"
+  },
+  "verifiedClaims": [
+   {
+    "index": 0,
+    "text": "AMECAFE(Asociación Mexicana de la Cadena Productiva del Café, A.C.、メキシコ・コーヒー生産チェーン協会)",
+    "status": "verified",
+    "quote": "I. AMECAFÉ: La Asociación Mexicana de la Cadena Productiva del Café, A.C.;",
+    "location": "官報 2020-12-26 協定の定義規定",
+    "sourceIds": [
+     "dof-acuerdo-certificado-origen-2020"
+    ]
+   },
+   {
+    "index": 2,
+    "text": "国営機構INMECAFE(1989年解体)の後継的役割を担う",
+    "status": "verified",
+    "quote": "el decreto que abrogó la ley que había creado al INMECAFÉ, mismo que fue sustituido por el CMC. || En el 2006 y hasta el 2012, el CMC evolucionó a lo que hoy conocemos como AMECAFE",
+    "location": "SAGARPA PIAC スライド p.10-11",
+    "sourceIds": [
+     "sagarpa-piac-arreglo-institucional-2016"
+    ]
+   }
+  ],
+  "rejectedClaims": [
+   {
+    "text": "2006年設立",
+    "status": "unverified"
+   },
+   {
+    "text": "輸出許可権限を持つ規制機関ではない",
+    "status": "incorrect"
+   },
+   {
+    "text": "生産者・加工業者・政府をつなぐ業界団体としての性格が強い",
+    "status": "unverified"
+   }
+  ],
+  "sources": {
+   "dof-acuerdo-certificado-origen-2020": {
+    "title": "ACUERDO que establece las mercancías cuya importación está sujeta a regulación por parte de la SADER, así como la emisión del certificado de origen para la exportación de café (DOF 2020-12-26)",
+    "org": "Secretaría de Economía / SADER(官報)",
+    "kind": "primary",
+    "readMethod": "full-text"
+   },
+   "sagarpa-piac-arreglo-institucional-2016": {
+    "title": "Modelo de Arreglo Institucional para el Sector Cafetalero Mexicano(SAGARPA/PIAC のスライド資料、2016)",
+    "org": "SAGARPA Programa de Atención Integral al Café (PIAC)",
+    "kind": "primary",
+    "readMethod": "full-text"
+   }
+  },
+  "verifierNote": "2025年12月19日付官報の新法『Ley para el Desarrollo Sustentable de la Cafeticultura』が公的機関の位置づけを変えている可能性があるが、サイトに接続できず(failed)未確認。英訳は日本語と同じ主張。"
+ },
+ {
+  "key": "origin:メキシコ:sub:チアパス(ソコヌスコ・エルトリウンフ)",
+  "proposed": {
+   "detail": "エルトリウンフ生物圏保護区(UNESCO MAB。雲霧林)の周辺。保護区の緩衝地帯ではコーヒーが地域の経済基盤になっている(UNESCO)。"
+  },
+  "verifiedClaims": [
+   {
+    "index": 1,
+    "text": "エルトリウンフ生物圏保護区(雲霧林)周辺",
+    "status": "verified",
+    "quote": "El Triunfo is the most diverse evergreen cloud forest in Mexico",
+    "location": "UNESCO MAB El Triunfo",
+    "sourceIds": [
+     "unesco-mab-el-triunfo"
+    ]
+   }
+  ],
+  "rejectedClaims": [
+   {
+    "text": "標高900〜1,750m",
+    "status": "unverified"
+   },
+   {
+    "text": "CESMACH等の協同組合が中心",
+    "status": "unverified"
+   },
+   {
+    "text": "ウォッシュド中心、穏やかな酸とカカオ感、リンゴ・カシューナッツのニュアンス",
+    "status": "unverified"
+   }
+  ],
+  "sources": {
+   "unesco-mab-el-triunfo": {
+    "title": "El Triunfo - Man and the Biosphere Programme (MAB)",
+    "org": "UNESCO",
+    "kind": "primary",
+    "readMethod": "full-text"
+   }
+  },
+  "verifierNote": "英訳は同じ主張。"
+ },
+ {
+  "key": "origin:メキシコ:tagline",
+  "proposed": {
+   "text": "小規模な生産者が中心となって支えられている(SADER)。"
+  },
+  "verifiedClaims": [
+   {
+    "index": 0,
+    "text": "小規模農家が支える",
+    "status": "verified",
+    "quote": "Los caficultores del país son en su mayoría productores de pequeña y muy pequeña escala presentes fundamentalmente en 15 entidades de la República Mexicana.",
+    "location": "SADER『El café, una producción en manos sabias』",
+    "sourceIds": [
+     "sader-cafe-manos-sabias"
+    ]
+   }
+  ],
+  "rejectedClaims": [
+   {
+    "text": "穏やかな酸とチョコレートのようなやさしい甘みが特徴",
+    "status": "unverified"
+   }
+  ],
+  "sources": {
+   "sader-cafe-manos-sabias": {
+    "title": "El café, una producción en manos sabias",
+    "org": "Secretaría de Agricultura y Desarrollo Rural (SADER)",
+    "kind": "primary",
+    "readMethod": "full-text"
+   }
+  },
+  "verifierNote": "英訳は日本語と同じ主張。"
+ },
+ {
+  "key": "origin:メキシコ:terroir",
+  "proposed": {
+   "text": "メキシコでコーヒーが栽培されるのは14州で、チアパス、ベラクルス、プエブラ、オアハカの4州で生産量の91.4%を占める(USDA FAS、2025年報告)。栽培地の山岳地帯は標高900m超(FIRA、2016年)。チアパス州のエルトリウンフ生物圏保護区(UNESCO MAB)は雲霧林で、保護区の緩衝地帯ではコーヒーが地域の経済基盤になっている。"
+  },
+  "verifiedClaims": [
+   {
+    "index": 4,
+    "text": "チアパス州エルトリウンフ生物圏保護区(ユネスコ)周辺は雲霧林である",
+    "status": "verified",
+    "quote": "El Triunfo is the most diverse evergreen cloud forest in Mexico",
+    "location": "UNESCO MAB El Triunfo 一般情報",
+    "sourceIds": [
+     "unesco-mab-el-triunfo"
+    ]
+   }
+  ],
+  "rejectedClaims": [
+   {
+    "text": "栽培の94%をチアパス・オアハカ・ベラクルス・プエブラの4州が占める",
+    "status": "incorrect"
+   },
+   {
+    "text": "標高は概ね900〜2,200m",
+    "status": "unverified"
+   },
+   {
+    "text": "上質なロットは1,700m以上が目安",
+    "status": "unverified"
+   },
+   {
+    "text": "火山性土壌",
+    "status": "unverified"
+   },
+   {
+    "text": "チアパスは穏やかな酸とカカオ感、ベラクルスはより明るい酸とフローラルな香りが出やすい",
+    "status": "unverified"
+   }
+  ],
+  "sources": {
+   "unesco-mab-el-triunfo": {
+    "title": "El Triunfo - Man and the Biosphere Programme (MAB)",
+    "org": "UNESCO",
+    "kind": "primary",
+    "readMethod": "full-text"
+   }
+  },
+  "verifierNote": "英訳は日本語と同じ主張(確認済み)。『14州』はFAS原文 'Coffee cultivation in Mexico spans 14 states.'(別の資料SADER 2017も14州、SADER 2019は15州と食い違いがあるので、表示するならFASの年を明記)。"
+ },
+ {
+  "key": "origin:メキシコ:varietiesDetail",
+  "proposed": {
+   "text": "国立研究機関INIFAPが開発したさび病耐性品種『オロ・アステカ』の種子が生産者に配布されている(INIFAP)。"
+  },
+  "verifiedClaims": [
+   {
+    "index": 3,
+    "text": "『オロ・アステカ』はメキシコ国内で開発された耐性品種",
+    "status": "verified",
+    "quote": "“Oro Azteca” —variedad resistente a la roya—, desarrollada por el Instituto Nacional de Investigaciones, Forestales, Agrícolas y Pecuarias (INIFAP)",
+    "location": "INIFAPプレスリリース",
+    "sourceIds": [
+     "inifap-oro-azteca"
+    ]
+   }
+  ],
+  "rejectedClaims": [
+   {
+    "text": "伝統的にティピカ・ブルボンが中心(数十年単位の古木も残る)",
+    "status": "unverified"
+   },
+   {
+    "text": "カトゥーラ、ムンドノーボ、マラゴジッペ、カトゥアイも広く栽培",
+    "status": "unverified"
+   },
+   {
+    "text": "さび病対策としてカティモールの導入が進む",
+    "status": "unverified"
+   },
+   {
+    "text": "『ガルニカ』『ガリエン』も国内で開発された耐性品種",
+    "status": "unverified"
+   }
+  ],
+  "sources": {
+   "inifap-oro-azteca": {
+    "title": "INIFAP entrega semillas de café Oro Azteca resistente a la roya / Café Oro Azteca, variedad resistente a enfermedades(2ページ)",
+    "org": "INIFAP(gob.mx)",
+    "kind": "primary",
+    "readMethod": "full-text"
+   }
+  },
+  "verifierNote": "英訳は日本語と同じ主張。"
+ },
+ {
+  "key": "origin:ルワンダ:farmStructure",
+  "proposed": {
+   "text": "農家一軒当たりのコーヒー栽培面積は平均約0.26ヘクタール(ICO調査標本)。零細農家数はNAEBが約40万世帯、ICOが2015年センサスに基づき約35万と、資料により異なる。ウォッシングステーションは2021年に313か所(ICO)。北部ガケンケ県のドゥクンデ・カワ協同組合は2000年設立と自己紹介している(CoE掲載文。会員約1,816人、うち33%が女性)。"
+  },
+  "verifiedClaims": [
+   {
+    "index": 0,
+    "text": "農家一軒当たりのコーヒー栽培面積は平均約0.26ヘクタール",
+    "status": "verified",
+    "quote": "farmers typically owning an average of 0.26 hectares of land dedicated to coffee cultivation",
+    "location": "ICO Rwanda's Coffee Value Chain 要約",
+    "sourceIds": [
+     "ico-rwanda-coffee-value-chain-2024"
+    ]
+   },
+   {
+    "index": 5,
+    "text": "CWSは現在約300か所",
+    "status": "verified",
+    "quote": "totaling 313 CWSs in 2021",
+    "location": "ICO Rwanda's Coffee Value Chain 第1章",
+    "sourceIds": [
+     "ico-rwanda-coffee-value-chain-2024"
+    ]
+   },
+   {
+    "index": 8,
+    "text": "ドゥクンデ・カワ協同組合は北部ガケンケ県にあり2000年設立",
+    "status": "verified",
+    "quote": "Founded in the year 2000, Dukunde Kawa Musasa Coopertive cultivates its high quality coffee not very far from Gorilla Mountains in Gakenke district, Northern Province in Rwanda.",
+    "location": "CoE Farm Directory 2015 / Description",
+    "sourceIds": [
+     "coe-farmdir-dukundekawa-musasa-2015"
+    ]
+   }
+  ],
+  "rejectedClaims": [
+   {
+    "text": "全国の零細農家は推定40万世帯",
+    "status": "conflict"
+   },
+   {
+    "text": "CWSはジェノサイド前は実質1か所しかなかった",
+    "status": "unverified"
+   },
+   {
+    "text": "USAID資金のPEARLプロジェクト(2000年開始)を通じてCWSが急増した",
+    "status": "unverified"
+   },
+   {
+    "text": "CWSは2015年時点で245か所",
+    "status": "unverified"
+   },
+   {
+    "text": "アバフザムガンビ協同組合(南部フイエ県マラバ)が1999年にジェノサイドで夫を失ったツチ人女性の自立支援のため発足した",
+    "status": "unverified"
+   },
+   {
+    "text": "2001年に国内初の高品質志向ウォッシングステーション『チャルンボ』を開設(組合員1,872名)",
+    "status": "unverified"
+   },
+   {
+    "text": "ドゥクンデ・カワ協同組合は労働力の8割以上を女性が占める",
+    "status": "unverified"
+   },
+   {
+    "text": "『WCEカワ・ヤク』は2017年設立で会員350名から700名以上に拡大",
+    "status": "unverified"
+   }
+  ],
+  "sources": {
+   "ico-rwanda-coffee-value-chain-2024": {
+    "title": "Rwanda's Coffee Value Chain: Insights into coffee production costs, household actual income, and supply chain efficiency",
+    "org": "International Coffee Organization (ICO CPPTF) / COSA, NAEB協力",
+    "kind": "primary",
+    "readMethod": "full-text"
+   },
+   "coe-farmdir-dukundekawa-musasa-2015": {
+    "title": "Dukundekawa Musasa/Mbirima/Rwashoscco - Rwanda 2015 - Cup of Excellence Farm Directory",
+    "org": "Alliance for Coffee Excellence / Cup of Excellence(農家掲載文)",
+    "kind": "primary",
+    "readMethod": "full-text"
+   }
+  },
+  "verifierNote": "協同組合の個別事例(チャルンボ、アバフザムガンビ、WCEカワ・ヤク)は一次資料で確認できなかったため除外。英訳は日本語と同じ主張(Karamboの綴りのみ日本語と異なる)。"
+ },
+ {
+  "key": "origin:ルワンダ:harvestSeason",
+  "proposed": {
+   "text": "収穫は西部州のキブ湖岸で2月下旬、その他の地域で3月上旬に始まり、北部州の一部では8月まで続く(NAEB)。"
+  },
+  "verifiedClaims": [
+   {
+    "index": 0,
+    "text": "収穫は西部のキブ湖岸で2月下旬、その他の地域で3月上旬に始まる",
+    "status": "verified",
+    "quote": "the harvesting period starts late February in the Western Province on the shores of Lake Kivu and Early March elsewhere",
+    "location": "NAEB About Rwanda coffee / Coffee growing calendar",
+    "sourceIds": [
+     "naeb-about-rwanda-coffee"
+    ]
+   },
+   {
+    "index": 1,
+    "text": "北部州の一部では8月まで収穫が続く",
+    "status": "verified",
+    "quote": "However in the some areas in the Northern Province coffee is still harvest until August.",
+    "location": "NAEB About Rwanda coffee / Coffee growing calendar",
+    "sourceIds": [
+     "naeb-about-rwanda-coffee"
+    ]
+   }
+  ],
+  "rejectedClaims": [
+   {
+    "text": "収穫が10月頃まで続く",
+    "status": "unverified"
+   },
+   {
+    "text": "最盛期は4〜5月",
+    "status": "unverified"
+   }
+  ],
+  "sources": {
+   "naeb-about-rwanda-coffee": {
+    "title": "About Rwanda coffee",
+    "org": "National Agricultural Export Development Board (NAEB)",
+    "kind": "primary",
+    "readMethod": "full-text"
+   }
+  },
+  "verifierNote": "英訳は日本語と同じ主張(差異なし)。"
+ },
+ {
+  "key": "origin:ルワンダ:history",
+  "proposed": {
+   "text": "ドイツ人により1900年代初めにコーヒーが導入された(NAEB)。コーヒーは1990年に輸出額の75.2%、GDPの3.2%を占めた(ICO)。1989年の国際コーヒー協定の経済条項終了後の価格下落で多くの国のコーヒー部門が停滞し、ルワンダでは紛争の影響でさらに悪化した(ICO)。2008年にはアフリカで初めてカップ・オブ・エクセレンスが開催された。NAEBは2010年の法律第39/2010号で設立され、2017年の法律第13/2017号で改めて設置された。"
+  },
+  "verifiedClaims": [
+   {
+    "index": 5,
+    "text": "コーヒーは1990年に輸出額の75.2%、GDPの3.2%を占めた",
+    "status": "verified",
+    "quote": "Rwanda 3.2 0.8 75.2 9.4",
+    "location": "ICC 120-7 Table 1(列: コーヒーのGDP比1990/2015、輸出額比1990/2015)",
+    "sourceIds": [
+     "ico-icc120-7-african-coffee-sector"
+    ]
+   },
+   {
+    "index": 6,
+    "text": "1989年の国際コーヒー協定の経済条項終了後、供給過剰で価格が下落し、各国のコーヒー部門が停滞した(ルワンダは紛争の影響で悪化)",
+    "status": "verified",
+    "quote": "When coffee prices dropped as a result of oversupply in the immediate aftermath of the end of the economic clauses of the Agreement, many national coffee sectors stalled.",
+    "location": "ICC 120-7 第8項(第9項: Rwandaは暴力的紛争と内戦で悪化)",
+    "sourceIds": [
+     "ico-icc120-7-african-coffee-sector"
+    ]
+   },
+   {
+    "index": 12,
+    "text": "2008年にルワンダでカップ・オブ・エクセレンスが開催された(アフリカ初の開催国)",
+    "status": "verified",
+    "quote": "Rwanda was the first African country to host a CoE competition, led by the Portland, Oregon-based Alliance for Coffee Excellence along with in-country partners, with the first CoE there dating back to 2008.",
+    "location": "ACEブログ(2018-08-23) / COE Rwanda 2008 結果頁",
+    "sourceIds": [
+     "ace-blog-rwanda-coe-2018",
+     "coe-rwanda-2008"
+    ]
+   }
+  ],
+  "rejectedClaims": [
+   {
+    "text": "コーヒー導入は1904年、ドイツ人宣教師がチャンググのミビリジ伝道所にブルボン系アラビカ種を植えたことに始まる",
+    "status": "conflict"
+   },
+   {
+    "text": "1917年に輸出が始まった",
+    "status": "unverified"
+   },
+   {
+    "text": "第一次大戦後ベルギー委任統治領へ移行した",
+    "status": "unverified"
+   },
+   {
+    "text": "1931年、ベルギー植民地当局が現地首長を通じて農民に強制的にコーヒー栽培を課す政策を導入した",
+    "status": "unverified"
+   },
+   {
+    "text": "1970年頃までにコーヒーは輸出収入の約7割を占めた",
+    "status": "unverified"
+   },
+   {
+    "text": "1989年の価格暴落が1994年のジェノサイドに至る社会経済的緊張の一因となった",
+    "status": "unverified"
+   },
+   {
+    "text": "ジェノサイドはコーヒー産業にも壊滅的な打撃を与え、多くの技術者・生産者が命を落とすか国外へ逃れた",
+    "status": "unverified"
+   },
+   {
+    "text": "2000年にUSAIDのPEARLが始動し『量から質へ』の転換が図られた",
+    "status": "unverified"
+   },
+   {
+    "text": "2003年からユニオン・ハンドロースト(ロンドン)へ販売",
+    "status": "unverified"
+   },
+   {
+    "text": "2005年にPEARLは後継のSPREADプロジェクトへ移行",
+    "status": "unverified"
+   },
+   {
+    "text": "2017年4月、法律第13/2017号によりNAEBが設立された",
+    "status": "incorrect"
+   },
+   {
+    "text": "NAEBは品質認証・輸出管理を一元的に担う",
+    "status": "unverified"
+   }
+  ],
+  "sources": {
+   "ico-icc120-7-african-coffee-sector": {
+    "title": "ICC 120-7 The African coffee sector",
+    "org": "International Coffee Organization",
+    "kind": "primary",
+    "readMethod": "full-text"
+   },
+   "ace-blog-rwanda-coe-2018": {
+    "title": "After Hiatus, Rwanda Cup of Excellence Returns with 340+ Coffee Submissions (2018-08-23)",
+    "org": "Alliance for Coffee Excellence",
+    "kind": "primary",
+    "readMethod": "full-text"
+   },
+   "coe-rwanda-2008": {
+    "title": "Rwanda 2008 - Cup of Excellence",
+    "org": "Alliance for Coffee Excellence / Cup of Excellence",
+    "kind": "primary",
+    "readMethod": "full-text"
+   }
+  },
+  "verifierNote": "導入年(1904年)・宣教師・ミビリジ伝道所は資料間で食い違うため conflict。1917年、委任統治、1931年の強制栽培、1970年の7割、ジェノサイドの影響、PEARL/SPREAD、ユニオン・ハンドロースト販売は一次資料で確認できず。英訳は日本語と同じ主張。"
+ },
+ {
+  "key": "origin:ルワンダ:officialBody",
+  "proposed": {
+   "text": "国家農業輸出開発庁(NAEB)。2017年の法律第13/2017号(2017年4月14日)により改めて設置された公共機関で、2010年の法律第39/2010号が定めたコーヒー・茶・園芸の各振興機関(OCIR-CAFE、OCIR-THE、RHODA)の統合に始まる。輸出促進、農家への技術支援、輸出農産物の真正性・原産地の証明書の発行、関係者と協力したチェリー最低価格の設定などを担う。"
+  },
+  "verifiedClaims": [
+   {
+    "index": 0,
+    "text": "名称は国家農業輸出開発庁(National Agricultural Export Development Board・NAEB)",
+    "status": "verified",
+    "quote": "National Agricultural Export Development Board, abbreviated as “NAEB” is a commercial public institution established by the law No 13/2017 of 14/04/2017",
+    "location": "NAEB Overview / Read more",
+    "sourceIds": [
+     "naeb-overview-read-more"
+    ]
+   },
+   {
+    "index": 2,
+    "text": "コーヒー・茶・園芸の各振興機関(OCIR-CAFE、OCIR-THE、RHODA)の活動を統合した",
+    "status": "verified",
+    "quote": "NAEB is given a period not exceeding six (6) months from the date of publication of this Law in the Official Gazette of the Republic of Rwanda to merge activities of export development formerly performed by the following institutions : 1° Rwanda Coffee Development Authority (OCIR-CAFE) ; 2° Rwanda Tea Development Authority (OCIR-THE); 3° Rwanda Horticulture Development Authority (RHODA).",
+    "location": "法律第39/2010号 第17条",
+    "sourceIds": [
+     "rw-law-39-2010-faolex"
+    ]
+   },
+   {
+    "index": 4,
+    "text": "輸出促進を担う",
+    "status": "verified",
+    "quote": "Promotion, marketing and export of Rwanda coffee",
+    "location": "NAEB About Rwanda coffee / NAEBの責任",
+    "sourceIds": [
+     "naeb-about-rwanda-coffee"
+    ]
+   },
+   {
+    "index": 5,
+    "text": "農家への技術支援を行う",
+    "status": "verified",
+    "quote": "Support to the coffee production by providing technical assistance and planting material to farmers",
+    "location": "NAEB About Rwanda coffee / NAEBの責任",
+    "sourceIds": [
+     "naeb-about-rwanda-coffee"
+    ]
+   },
+   {
+    "index": 6,
+    "text": "チェリー(コーヒーの実)の最低買取価格を設定する",
+    "status": "verified",
+    "quote": "NAEB plays a pivotal role in establishing the annual coffee cherry floor price in collaboration with key stakeholders",
+    "location": "ICO Rwanda's Coffee Value Chain 第1章",
+    "sourceIds": [
+     "ico-rwanda-coffee-value-chain-2024"
+    ]
+   }
+  ],
+  "rejectedClaims": [
+   {
+    "text": "2017年4月制定の法律第13/2017号により『発足』した",
+    "status": "incorrect"
+   },
+   {
+    "text": "輸出前の『品質証明書』を発行する",
+    "status": "incorrect"
+   },
+   {
+    "text": "上記を『一手に』担う",
+    "status": "unverified"
+   }
+  ],
+  "sources": {
+   "naeb-overview-read-more": {
+    "title": "NAEB Overview / Read more (mission)",
+    "org": "National Agricultural Export Development Board (NAEB)",
+    "kind": "primary",
+    "readMethod": "full-text"
+   },
+   "rw-law-39-2010-faolex": {
+    "title": "Law nº 39/2010 of 25/11/2010 establishing NAEB (Official Gazette n°04 of 24/01/2011)",
+    "org": "Republic of Rwanda(官報; FAO FAOLEX掲載の原文PDF)",
+    "kind": "primary",
+    "readMethod": "full-text"
+   },
+   "naeb-about-rwanda-coffee": {
+    "title": "About Rwanda coffee",
+    "org": "National Agricultural Export Development Board (NAEB)",
+    "kind": "primary",
+    "readMethod": "full-text"
+   },
+   "ico-rwanda-coffee-value-chain-2024": {
+    "title": "Rwanda's Coffee Value Chain: Insights into coffee production costs, household actual income, and supply chain efficiency",
+    "org": "International Coffee Organization (ICO CPPTF) / COSA, NAEB協力",
+    "kind": "primary",
+    "readMethod": "full-text"
+   }
+  },
+  "verifierNote": "法律名: NAEB自身の頁は『law No 13/2017 of 14/04/2017』。英訳も同じ主張(『quality certificates』『in one place』など同じ過大表現)。"
+ },
+ {
+  "key": "origin:ルワンダ:regions",
+  "proposed": {
+   "text": "コーヒーは国内の多くの州で栽培され、西部州のキブ湖岸、南部州フイエ郡、北部州ガケンケ郡、西部州ニャマシェケ郡などの生産者が2008年のカップ・オブ・エクセレンスで入賞している。"
+  },
+  "verifiedClaims": [
+   {
+    "index": 0,
+    "text": "西部州・キブ湖岸でコーヒーが栽培されている(収穫は西部州のキブ湖岸で2月下旬に始まる)",
+    "status": "verified",
+    "quote": "the harvesting period starts late February in the Western Province on the shores of Lake Kivu and Early March elsewhere",
+    "location": "NAEB About Rwanda coffee / Coffee growing calendar",
+    "sourceIds": [
+     "naeb-about-rwanda-coffee"
+    ]
+   },
+   {
+    "index": 1,
+    "text": "西部州ニャマシェケ郡(Nyamasheke)のCWSが2008年COEに入賞",
+    "status": "verified",
+    "quote": "Nyabumera Coop-Abaryoshyakawa Hategika Francois Nyamasheke, Western",
+    "location": "COE Rwanda 2008 Winning Farms 15位",
+    "sourceIds": [
+     "coe-rwanda-2008"
+    ]
+   },
+   {
+    "index": 2,
+    "text": "南部州フイエ郡(Huye)のCWSが2008年COEに入賞",
+    "status": "verified",
+    "quote": "Buremera Mig Uwimana Rose Huye, South",
+    "location": "COE Rwanda 2008 Winning Farms 1位",
+    "sourceIds": [
+     "coe-rwanda-2008"
+    ]
+   },
+   {
+    "index": 3,
+    "text": "北部州ガケンケ郡(Gakenke)のCWSが2008年COEに入賞",
+    "status": "verified",
+    "quote": "Sdl Minazi Abakundakawa Ribarimana Jean Baptiste Gakenke, North",
+    "location": "COE Rwanda 2008 Winning Farms 4位",
+    "sourceIds": [
+     "coe-rwanda-2008"
+    ]
+   }
+  ],
+  "rejectedClaims": [
+   {
+    "text": "この3地域が国の主要な生産地域である",
+    "status": "unverified"
+   }
+  ],
+  "sources": {
+   "naeb-about-rwanda-coffee": {
+    "title": "About Rwanda coffee",
+    "org": "National Agricultural Export Development Board (NAEB)",
+    "kind": "primary",
+    "readMethod": "full-text"
+   },
+   "coe-rwanda-2008": {
+    "title": "Rwanda 2008 - Cup of Excellence",
+    "org": "Alliance for Coffee Excellence / Cup of Excellence",
+    "kind": "primary",
+    "readMethod": "full-text"
+   }
+  },
+  "verifierNote": "NAEBの原文: 『it is grown in most provinces in the country at an altitude less than 1900 m』。英訳は日本語と同じ列挙。"
+ },
+ {
+  "key": "origin:ルワンダ:sub:ガケンケ(北部州)",
+  "proposed": {
+   "detail": "ドゥクンデ・カワ協同組合は北部州ガケンケ郡にあり、そのCWSの標高は1,500〜2,000m(CoE掲載の自己申告)。北部州の一部では収穫が8月まで続く(NAEB)。"
+  },
+  "verifiedClaims": [
+   {
+    "index": 0,
+    "text": "ドゥクンデ・カワ協同組合は北部州ガケンケ郡にあり、CWSは標高1,500〜2,000m",
+    "status": "verified",
+    "quote": "Province : North District : Gakenke Sector: Ruli Latitude (m): 482750 Longitudes (m): 9800044 Altitude : 1500 to 2000 meters",
+    "location": "CoE Farm Directory 2015 / CWS Geographical locations and conditions",
+    "sourceIds": [
+     "coe-farmdir-dukundekawa-musasa-2015"
+    ]
+   }
+  ],
+  "rejectedClaims": [
+   {
+    "text": "ガケンケ地区の標高は1,500〜2,100m、ムビリマCWSは2,020m、火山性ローム土壌",
+    "status": "unverified"
+   },
+   {
+    "text": "ドゥクンデ・カワは労働力の8割超が女性",
+    "status": "unverified"
+   },
+   {
+    "text": "収穫期は3〜10月と国内最長級",
+    "status": "unverified"
+   }
+  ],
+  "sources": {
+   "coe-farmdir-dukundekawa-musasa-2015": {
+    "title": "Dukundekawa Musasa/Mbirima/Rwashoscco - Rwanda 2015 - Cup of Excellence Farm Directory",
+    "org": "Alliance for Coffee Excellence / Cup of Excellence(農家掲載文)",
+    "kind": "primary",
+    "readMethod": "full-text"
+   }
+  },
+  "verifierNote": "英訳は日本語と同じ主張(2,100m、80%超)で同じ誤り。"
+ },
+ {
+  "key": "origin:ルワンダ:sub:ニャマシェケ(西部州・キブ湖岸)",
+  "proposed": {
+   "detail": "西部州ニャマシェケ郡の生産者が2008年のカップ・オブ・エクセレンスで入賞している。"
+  },
+  "verifiedClaims": [
+   {
+    "index": 0,
+    "text": "ニャマシェケ郡(西部)にコーヒーの生産者がある(2008年COE入賞)",
+    "status": "verified",
+    "quote": "Nyabumera Coop-Abaryoshyakawa Hategika Francois Nyamasheke, Western",
+    "location": "COE Rwanda 2008 15位",
+    "sourceIds": [
+     "coe-rwanda-2008"
+    ]
+   }
+  ],
+  "rejectedClaims": [
+   {
+    "text": "標高1,450〜2,200m",
+    "status": "unverified"
+   },
+   {
+    "text": "キブ湖畔の砂質火山性土壌と湖からの風",
+    "status": "unverified"
+   },
+   {
+    "text": "レッド・ブルボンによる華やかなフローラルと熱帯果実",
+    "status": "unverified"
+   },
+   {
+    "text": "ナチュラル/ハニー精製の先進地",
+    "status": "unverified"
+   }
+  ],
+  "sources": {
+   "coe-rwanda-2008": {
+    "title": "Rwanda 2008 - Cup of Excellence",
+    "org": "Alliance for Coffee Excellence / Cup of Excellence",
+    "kind": "primary",
+    "readMethod": "full-text"
+   }
+  },
+  "verifierNote": "標高・土壌・味・精製の記述は根拠なし。英訳は日本語と同じ主張。"
+ },
+ {
+  "key": "origin:ルワンダ:sub:フイエ/ニャマガベ(南部州・旧マラバ地区)",
+  "proposed": {
+   "detail": "南部州フイエ郡の生産者が2008年のカップ・オブ・エクセレンスで1位に入賞している。"
+  },
+  "verifiedClaims": [
+   {
+    "index": 0,
+    "text": "南部州フイエ郡にコーヒーの生産者がある(2008年COE入賞、1位)",
+    "status": "verified",
+    "quote": "Buremera Mig Uwimana Rose Huye, South",
+    "location": "COE Rwanda 2008 1位",
+    "sourceIds": [
+     "coe-rwanda-2008"
+    ]
+   }
+  ],
+  "rejectedClaims": [
+   {
+    "text": "標高約1,750m",
+    "status": "unverified"
+   },
+   {
+    "text": "国内初のスペシャルティ志向ウォッシングステーション『チャルンボ』(2001年)を擁するアバフザムガンビ協同組合の拠点",
+    "status": "unverified"
+   },
+   {
+    "text": "レッドフルーツ、キャラメル、スパイス",
+    "status": "unverified"
+   }
+  ],
+  "sources": {
+   "coe-rwanda-2008": {
+    "title": "Rwanda 2008 - Cup of Excellence",
+    "org": "Alliance for Coffee Excellence / Cup of Excellence",
+    "kind": "primary",
+    "readMethod": "full-text"
+   }
+  },
+  "verifierNote": "名称の『ニャマガベ』や『旧マラバ地区』も未確認。英訳は日本語と同じ主張。"
+ },
+ {
+  "key": "origin:ルワンダ:sub:西部州キブ湖東岸(ルツィロ/カロンギ)",
+  "proposed": {
+   "detail": "西部州ルツィロ郡の生産者が2008年のカップ・オブ・エクセレンスで入賞している。"
+  },
+  "verifiedClaims": [
+   {
+    "index": 0,
+    "text": "ルツィロ郡(西部)にコーヒーの生産者がある(2008年COE入賞)",
+    "status": "verified",
+    "quote": "Horizon Mushonyi Twizerimana Ismael Rutsiro, Western",
+    "location": "COE Rwanda 2008 17位",
+    "sourceIds": [
+     "coe-rwanda-2008"
+    ]
+   }
+  ],
+  "rejectedClaims": [
+   {
+    "text": "キブ・ベルト社が複数のCWSを運営",
+    "status": "unverified"
+   },
+   {
+    "text": "オレンジ・レモン系の柑橘とほのかなスパイス、艶やかなボディを伴う紅茶のようなカップ",
+    "status": "unverified"
+   },
+   {
+    "text": "キブ湖『東岸』にルツィロ/カロンギがある",
+    "status": "unverified"
+   }
+  ],
+  "sources": {
+   "coe-rwanda-2008": {
+    "title": "Rwanda 2008 - Cup of Excellence",
+    "org": "Alliance for Coffee Excellence / Cup of Excellence",
+    "kind": "primary",
+    "readMethod": "full-text"
+   }
+  },
+  "verifierNote": "企業名・味・位置の記述は根拠なし。英訳は日本語と同じ主張。"
+ },
+ {
+  "key": "origin:ルワンダ:tagline",
+  "proposed": {
+   "text": "輸出の約62%がフリーウォッシュドのルワンダ(WCR、NAEB資料引用)。"
+  },
+  "verifiedClaims": [
+   {
+    "index": 0,
+    "text": "輸出の約62%がフリーウォッシュド(水洗式)",
+    "status": "verified",
+    "quote": "About 62% of exports are fully washed, reflecting post-2000 investments in processing quality.",
+    "location": "WCR Rwanda 概要(NAEB資料を引用)",
+    "sourceIds": [
+     "wcr-country-rwanda"
+    ]
+   }
+  ],
+  "rejectedClaims": [
+   {
+    "text": "『千の丘の国』と呼ばれる",
+    "status": "unverified"
+   },
+   {
+    "text": "紅茶のように澄んだ酸とフローラルな香り",
+    "status": "unverified"
+   }
+  ],
+  "sources": {
+   "wcr-country-rwanda": {
+    "title": "World Coffee Research | Rwanda",
+    "org": "World Coffee Research",
+    "kind": "primary",
+    "readMethod": "full-text"
+   }
+  },
+  "verifierNote": "英訳は日本語と同じ主張(差異なし)。キャッチコピーの味の評価は一次資料で裏付けできない。"
+ },
+ {
+  "key": "origin:ルワンダ:terroir",
+  "proposed": {
+   "text": "国は火山性の肥沃な土壌に恵まれ(ICO)、栽培標高はNAEBが1,900m未満、ICOの調査標本では1,300〜2,150mとされる。年2回の雨季があり、降雨が最大になるのは3〜5月と9〜12月(Meteo Rwanda)。"
+  },
+  "verifiedClaims": [
+   {
+    "index": 3,
+    "text": "火山性の肥沃な土壌に恵まれる(国全体)",
+    "status": "verified",
+    "quote": "The country benefits from fertile volcanic soils, high altitudes, sufficient rainfall, and moderate temperatures.",
+    "location": "ICO Rwanda's Coffee Value Chain 第1章",
+    "sourceIds": [
+     "ico-rwanda-coffee-value-chain-2024"
+    ]
+   },
+   {
+    "index": 4,
+    "text": "年2回の雨季がある",
+    "status": "verified",
+    "quote": "two rainy seasons are generally distinguishable, one centered around March – May and the other around October – December.",
+    "location": "Meteo Rwanda Climatology of Rwanda",
+    "sourceIds": [
+     "meteo-rwanda-climatology"
+    ]
+   }
+  ],
+  "rejectedClaims": [
+   {
+    "text": "標高は概ね1,400〜2,200m超",
+    "status": "conflict"
+   },
+   {
+    "text": "西部ニャマシェケ地区のウォッシングステーションは1,750〜2,200m",
+    "status": "unverified"
+   },
+   {
+    "text": "北部ガケンケ地区のムビリマCWSは2,020mで国内最高標高級",
+    "status": "unverified"
+   },
+   {
+    "text": "雨季は2〜5月と9〜12月",
+    "status": "incorrect"
+   },
+   {
+    "text": "夜間の冷え込みとキブ湖からの風が明るい酸を育む",
+    "status": "unverified"
+   }
+  ],
+  "sources": {
+   "ico-rwanda-coffee-value-chain-2024": {
+    "title": "Rwanda's Coffee Value Chain: Insights into coffee production costs, household actual income, and supply chain efficiency",
+    "org": "International Coffee Organization (ICO CPPTF) / COSA, NAEB協力",
+    "kind": "primary",
+    "readMethod": "full-text"
+   },
+   "meteo-rwanda-climatology": {
+    "title": "Climatology of Rwanda",
+    "org": "Rwanda Meteorology Agency (Meteo Rwanda)",
+    "kind": "primary",
+    "readMethod": "full-text"
+   }
+  },
+  "verifierNote": "標高の記述は資料間で食い違うため、ユーザー判断が必要(conflict)。英訳は日本語と同じ主張。"
+ },
+ {
+  "key": "origin:ルワンダ:varietiesDetail",
+  "proposed": {
+   "text": "品種はブルボン系が主体で、コーヒーは1900年代初めにドイツ人が導入した(NAEB)。樹齢30年を超える木が全体の約4割(ICO)。さび病とコーヒーベリー病に耐性の品種RAB C15が2015年にリリースされたが、普及はまだ限られる(WCR)。"
+  },
+  "verifiedClaims": [
+   {
+    "index": 0,
+    "text": "品種はブルボン系が主体",
+    "status": "verified",
+    "quote": "it is dominated by mainly ‘bourbon’ type of Arabica coffees.",
+    "location": "NAEB About Rwanda coffee / Background",
+    "sourceIds": [
+     "naeb-about-rwanda-coffee"
+    ]
+   },
+   {
+    "index": 2,
+    "text": "コーヒーはドイツ人により1900年代初めに導入された",
+    "status": "verified",
+    "quote": "Coffee was introduced by Germans in early 1900s",
+    "location": "NAEB About Rwanda coffee / Background",
+    "sourceIds": [
+     "naeb-about-rwanda-coffee"
+    ]
+   },
+   {
+    "index": 4,
+    "text": "樹齢30年超の木が全体の約4割",
+    "status": "verified",
+    "quote": "many coffee trees are old, with around 39% being 30 years or older",
+    "location": "ICO Rwanda's Coffee Value Chain 要約",
+    "sourceIds": [
+     "ico-rwanda-coffee-value-chain-2024"
+    ]
+   },
+   {
+    "index": 5,
+    "text": "さび病と炭疽病(CBD)に耐性の品種『RAB C15』が2015年にリリースされた",
+    "status": "verified",
+    "quote": "RAB C15 was released by the Rwandan Agricultural Board in 2015.",
+    "location": "WCR Varieties Catalog: RAB C15 / History",
+    "sourceIds": [
+     "wcr-variety-rab-c15"
+    ]
+   },
+   {
+    "index": 6,
+    "text": "RAB C15の普及はまだ限定的",
+    "status": "verified",
+    "quote": "an improved variety resistant to rust and CBD called RAB C15 was released in 2015, but is not widely planted yet.",
+    "location": "WCR Rwanda 概要",
+    "sourceIds": [
+     "wcr-country-rwanda"
+    ]
+   }
+  ],
+  "rejectedClaims": [
+   {
+    "text": "在来のレッド・ブルボンが現地推定約95%",
+    "status": "unverified"
+   },
+   {
+    "text": "1904年、ドイツ人宣教師がチャンググのミビリジ伝道所にブルボン系統を植えたのが起源",
+    "status": "conflict"
+   },
+   {
+    "text": "アンテスティアカメムシ(ポテト欠点の原因)への対策として導入が進む",
+    "status": "unverified"
+   }
+  ],
+  "sources": {
+   "naeb-about-rwanda-coffee": {
+    "title": "About Rwanda coffee",
+    "org": "National Agricultural Export Development Board (NAEB)",
+    "kind": "primary",
+    "readMethod": "full-text"
+   },
+   "ico-rwanda-coffee-value-chain-2024": {
+    "title": "Rwanda's Coffee Value Chain: Insights into coffee production costs, household actual income, and supply chain efficiency",
+    "org": "International Coffee Organization (ICO CPPTF) / COSA, NAEB協力",
+    "kind": "primary",
+    "readMethod": "full-text"
+   },
+   "wcr-variety-rab-c15": {
+    "title": "Varieties Catalog: RAB C15",
+    "org": "World Coffee Research",
+    "kind": "primary",
+    "readMethod": "full-text"
+   },
+   "wcr-country-rwanda": {
+    "title": "World Coffee Research | Rwanda",
+    "org": "World Coffee Research",
+    "kind": "primary",
+    "readMethod": "full-text"
+   }
+  },
+  "verifierNote": "起源(1904年・ミビリジ)は資料間で食い違うためユーザー判断が必要。英訳は日本語と同じ主張(差異なし)。"
+ },
+ {
+  "key": "processing:アナエロビック",
+  "proposed": {
+   "explanation": "発酵の間の酸素を制限する、または無くす発酵(嫌気発酵)を行う、近年広まった精選方法。"
+  },
+  "verifiedClaims": [
+   {
+    "index": 0,
+    "text": "発酵中の酸素を制限する、または無くす発酵(嫌気発酵)である",
+    "status": "verified",
+    "quote": "the trendy anaerobic fermentation (i.e., with limiting or absence of oxygen during fermentation).",
+    "location": "25 Magazine Issue 10 / 序盤",
+    "sourceIds": [
+     "sca-25-issue10-fermentation-effect"
+    ]
+   },
+   {
+    "index": 3,
+    "text": "比較的新しい手法",
+    "status": "verified",
+    "quote": "many hybrid or novel methods also have gained popularity in the coffee production regions",
+    "location": "25 Magazine Issue 10 / 序盤",
+    "sourceIds": [
+     "sca-25-issue10-fermentation-effect"
+    ]
+   }
+  ],
+  "rejectedClaims": [
+   {
+    "text": "密閉容器内で行う",
+    "status": "unverified"
+   },
+   {
+    "text": "チェリーのまま発酵させる",
+    "status": "unverified"
+   },
+   {
+    "text": "ワインやフルーツ様の強い個性的な風味が出やすい",
+    "status": "unverified"
+   }
+  ],
+  "sources": {
+   "sca-25-issue10-fermentation-effect": {
+    "title": "The Fermentation Effect (25 Magazine, Issue 10)",
+    "org": "Specialty Coffee Association",
+    "kind": "primary",
+    "readMethod": "full-text"
+   }
+  },
+  "verifierNote": "「密閉容器」「チェリー」「風味」は根拠なし。 英訳(src/data/en/guides.js または src/i18n/en.js)は日本語と同じ主張で、食い違いなし。"
+ },
+ {
+  "key": "processing:インフューズド",
+  "proposed": {
+   "explanation": "精選の工程で、微生物スターター・発酵補助材・香料などの添加物を加えて風味を調整する手法がある(SCAは\"added stuff\"と総称)。その扱いは、SCAが2025年7月時点で検討中である。(果物・スパイス・密閉容器・フレーバーコーヒーとの違いの記述は削除)"
+  },
+  "verifiedClaims": [
+   {
+    "index": 2,
+    "text": "SCAは、加工中に微生物スターター・発酵補助材・香料などの添加物を使って風味を調整する例を認めている(添加物の総称\"added stuff\")",
+    "status": "verified",
+    "quote": "from microbial starters and fermentation adjuncts all the way to flavoring agents—could be used to modulate the flavor of coffee during processing.",
+    "location": "SCA 25 Issue 24 / 前半",
+    "sourceIds": [
+     "sca-25-issue24-identity"
+    ]
+   }
+  ],
+  "rejectedClaims": [
+   {
+    "text": "精選(発酵)の工程で果物やスパイスを密閉容器に加え、コーヒーチェリーと一緒に発酵させる",
+    "status": "unverified"
+   },
+   {
+    "text": "果物由来の香りが豆に移る",
+    "status": "unverified"
+   },
+   {
+    "text": "スペシャルティコーヒーの技法の一つに位置づけられる",
+    "status": "unverified"
+   },
+   {
+    "text": "焙煎後に香料を添加する「フレーバーコーヒー」とは異なる",
+    "status": "unverified"
+   }
+  ],
+  "sources": {
+   "sca-25-issue24-identity": {
+    "title": "Unpacking the Debate Around Coffee Identity: Insights from Re:co Spotlight, 2025 (25, Issue 24)",
+    "org": "Specialty Coffee Association",
+    "kind": "primary",
+    "readMethod": "full-text"
+   }
+  },
+  "verifierNote": "このキー全体が現状では表示不可(根拠が取れない)。 英訳(src/data/en/guides.js または src/i18n/en.js)は日本語と同じ主張で、食い違いなし。"
+ },
+ {
+  "key": "processing:インフューズドハニー",
+  "proposed": {
+   "explanation": "ハニープロセス(果肉を除去し、ミューシレージを一部または全部残したままパーチメントの状態で乾燥)に、添加物を使って風味を調整する手法を組み合わせたもの。その扱いは、SCAが2025年7月時点で検討中である。(果物・スパイス・発酵・フレーバーコーヒーとの違いの記述は削除)"
+  },
+  "verifiedClaims": [
+   {
+    "index": 0,
+    "text": "ハニープロセス(果肉除去のみ行い、ミューシレージを残したまま乾燥)",
+    "status": "verified",
+    "quote": "Red and yellow honey coffees, a pulped natural dried with less than all the mucilage attached to parchment",
+    "location": "25 Magazine Issue 6",
+    "sourceIds": [
+     "sca-25-issue6-mucilage-removers"
+    ]
+   },
+   {
+    "index": 2,
+    "text": "SCAは、加工中に微生物スターター・発酵補助材・香料などの添加物を使って風味を調整する例を認めている(添加物の総称\"added stuff\")",
+    "status": "verified",
+    "quote": "from microbial starters and fermentation adjuncts all the way to flavoring agents—could be used to modulate the flavor of coffee during processing.",
+    "location": "SCA 25 Issue 24 / 前半",
+    "sourceIds": [
+     "sca-25-issue24-identity"
+    ]
+   }
+  ],
+  "rejectedClaims": [
+   {
+    "text": "ハニープロセスに果物やスパイスを加えて発酵させる工程を組み合わせた技法",
+    "status": "unverified"
+   },
+   {
+    "text": "スペシャルティコーヒーの技法の一つに位置づけられる",
+    "status": "unverified"
+   },
+   {
+    "text": "焙煎後に香料を添加する「フレーバーコーヒー」とは異なる",
+    "status": "unverified"
+   }
+  ],
+  "sources": {
+   "sca-25-issue6-mucilage-removers": {
+    "title": "The Impact of Mucilage Removers on Coffee Sustainability and Quality (25 Magazine: Issue 6)",
+    "org": "Specialty Coffee Association",
+    "kind": "primary",
+    "readMethod": "full-text"
+   },
+   "sca-25-issue24-identity": {
+    "title": "Unpacking the Debate Around Coffee Identity: Insights from Re:co Spotlight, 2025 (25, Issue 24)",
+    "org": "Specialty Coffee Association",
+    "kind": "primary",
+    "readMethod": "full-text"
+   }
+  },
+  "verifierNote": "ハニー部分のみ確認。「インフューズド」の定義は確認できていない。 英訳(src/data/en/guides.js または src/i18n/en.js)は日本語と同じ主張で、食い違いなし。"
+ },
+ {
+  "key": "processing:ウェットハルド",
+  "proposed": {
+   "explanation": "主にインドネシア・北スマトラの伝統的な方法(セミウォッシュド)で、パーチメント(殻付き)を、含水率がまだ高い(ICCRIは約30〜35%、FAOは35〜45%としている)うちに脱殻し、その後、生豆の状態で天日乾燥を続けて含水率12〜13%程度にする方式。"
+  },
+  "verifiedClaims": [
+   {
+    "index": 0,
+    "text": "パーチメント(殻付き)を湿ったまま脱殻し、その後に生豆を乾燥させる2段階の方式",
+    "status": "verified",
+    "quote": "typically the parchment removal is done when the bean still moist with moisture content at about 30 – 35 %. After the wet hulling the green beans are continued for sun drying until 12 – 13 % of moisture content.",
+    "location": "ICCRI(Mawardi)ICOセミナー資料 Slide 5",
+    "sourceIds": [
+     "iccri-mawardi-ico-2008"
+    ]
+   },
+   {
+    "index": 1,
+    "text": "高い含水率の状態で脱穀する(30〜35%程度、または35〜45%)",
+    "status": "verified",
+    "quote": "parchment o f 35-45% m.c.",
+    "location": "FAO Annex E.6 / p.2(huller改造の説明)",
+    "sourceIds": [
+     "iccri-mawardi-ico-2008",
+     "fao-cfc-annex-e6"
+    ]
+   }
+  ],
+  "rejectedClaims": [
+   {
+    "text": "インドネシア特有",
+    "status": "unverified"
+   },
+   {
+    "text": "(この方法で)重厚なボディと土っぽい風味が生まれる",
+    "status": "unverified"
+   }
+  ],
+  "sources": {
+   "iccri-mawardi-ico-2008": {
+    "title": "Use of Geographical Indications for Coffee: Experience of Indonesia (S. Mawardi, ICCRI; ICO Seminar on Geographical Indication for Coffee, London, 20 May 2008)",
+    "org": "Indonesian Coffee and Cocoa Research Institute (ICCRI) / ICO",
+    "kind": "primary",
+    "readMethod": "full-text"
+   },
+   "fao-cfc-annex-e6": {
+    "title": "Storage of wet Arabica parchment prior to wet hulling (Project GCP/INT/743/CFC; \"Origins of Mandheling Coffee Character\") Annex E.6",
+    "org": "FAO / CFC / ICO",
+    "kind": "primary",
+    "readMethod": "full-text"
+   }
+  },
+  "verifierNote": "風味(重厚なボディ・土っぽさ)を方式の結果とする記述は根拠なし。FAO資料は、Mandheling特有の風味の由来は不明とする。 英訳(src/data/en/guides.js または src/i18n/en.js)は日本語と同じ主張で、食い違いなし。"
+ },
+ {
+  "key": "processing:ウォッシュド",
+  "proposed": {
+   "explanation": "果肉を除去し、水槽の水中で発酵させたあと、水洗いでミューシレージ(粘液質)を取り除き、乾燥させる工程(ウェット方式)。"
+  },
+  "verifiedClaims": [
+   {
+    "index": 0,
+    "text": "果肉除去→水中で発酵→ミューシレージ除去→水洗い→乾燥という工程",
+    "status": "verified",
+    "quote": "During basic wet processing, fresh coffee cherries have their pulp removed (depulping) and submerged under water (fermentation). Afterwards, the fermentation tank is drained, and the fermented beans are cleaned with water to remove any remnant mucilage (washing).",
+    "location": "25 Magazine Issue 10 / Different Processes Accumulate...",
+    "sourceIds": [
+     "sca-25-issue10-fermentation-effect"
+    ]
+   }
+  ],
+  "rejectedClaims": [
+   {
+    "text": "クリーンで明瞭な酸味が特徴",
+    "status": "unverified"
+   },
+   {
+    "text": "雑味が少ない",
+    "status": "unverified"
+   }
+  ],
+  "sources": {
+   "sca-25-issue10-fermentation-effect": {
+    "title": "The Fermentation Effect (25 Magazine, Issue 10)",
+    "org": "Specialty Coffee Association",
+    "kind": "primary",
+    "readMethod": "full-text"
+   }
+  },
+  "verifierNote": "風味の記述(クリーン・明瞭な酸味・雑味が少ない)は削除が必要。 英訳(src/data/en/guides.js または src/i18n/en.js)は日本語と同じ主張で、食い違いなし。"
+ }
+]

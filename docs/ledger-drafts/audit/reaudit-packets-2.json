@@ -1,0 +1,1413 @@
+[
+ {
+  "key": "fact:グアテマラには300を超える微気候がある",
+  "content": {
+   "title": "グアテマラには300を超える微気候がある",
+   "text": "グアテマラのコーヒー産地の多くは標高1,100mを超える山岳地帯にあり、生態・環境の要因が重なって、300を超える微気候ができているとされる(Anacafe)。"
+  },
+  "claims": [
+   {
+    "index": 0,
+    "text": "グアテマラのコーヒー産地には300を超える微気候がある",
+    "quote": "La mayor parte de las áreas cafetaleras se encuentran localizadas en sistemas montañosos arriba de los 1,100 metros sobre el nivel del mar, donde factores ecológicos y medioambientales se combinan para crear más de 300 microclimas que permiten obtener cafés de alta calidad, reconocidos mundialmente.",
+    "location": "1. Presentación(PDF p.5)",
+    "sourceIds": [
+     "anacafe-politica-laboral"
+    ]
+   }
+  ],
+  "sources": {
+   "anacafe-politica-laboral": {
+    "title": "Politica Laboral para el sector cafe de Guatemala",
+    "org": "Anacafe (Asociacion Nacional del Cafe)",
+    "kind": "primary",
+    "accessed": "2026-11-09",
+    "note": "発行年は文書内で未確認"
+   }
+  }
+ },
+ {
+  "key": "fact:ケニアのSL28はカシス風味の立役者",
+  "content": {
+   "title": "ケニアのSL28は1930年代に選抜された品種",
+   "text": "品種SL28は、ケニアで1930年代に選抜された。WCRのカタログは、SL28が干ばつへの耐性を示すとしている。"
+  },
+  "claims": [
+   {
+    "index": 0,
+    "text": "品種SL28は1930年代に選抜された",
+    "quote": "It has consequently spread from Kenya, where it was originally selected in the 1930s ... SL28 was selected in 1935 from a single tree in a population called Tanganyika Drought Resistant.",
+    "location": "History",
+    "sourceIds": [
+     "wcr-variety-sl28"
+    ]
+   },
+   {
+    "index": 1,
+    "text": "SL28は干ばつに強い",
+    "quote": "The variety is suited for medium to high altitudes and shows resistance to drought, but is susceptible to the major diseases of coffee.",
+    "location": "History",
+    "sourceIds": [
+     "wcr-variety-sl28"
+    ]
+   }
+  ],
+  "sources": {
+   "wcr-variety-sl28": {
+    "title": "SL28 (World Coffee Research Variety Catalog)",
+    "org": "World Coffee Research",
+    "kind": "primary",
+    "accessed": "2026-11-09",
+    "note": "ページ本文にソフトハイフンが含まれる。引用は除去して転記"
+   }
+  }
+ },
+ {
+  "key": "fact:コロンビア・ケニア・タンザニアは「同じ仲間」",
+  "content": {
+   "title": "コロンビア・ケニア・タンザニアは「同じ仲間」",
+   "text": "ICOのコンポジット指標価格(I-CIP)は、4つのグループ(Colombian Milds、Other Milds、Brazilian Naturals、Robustas)で構成される。このうちColombian Mildsに含まれる国は、コロンビア、ケニア、タンザニアの3カ国だけ(他の国のマイルドアラビカはOther Milds)。"
+  },
+  "claims": [
+   {
+    "index": 0,
+    "text": "ICOのコンポジット指標価格(I-CIP)は4つのグループ(Colombian Milds、Other Milds、Brazilian Naturals、Robustas)で構成される",
+    "quote": "The share of each market in the four groups is as follows: Colombian Milds: 46% USA – 54% EU Other Milds: 40% USA – 60% EU Brazilian Naturals: 24% USA – 76% EU Robustas: 16% USA – 84% EU",
+    "location": "Annex I",
+    "sourceIds": [
+     "ico-rules-indicator-prices-annex1"
+    ]
+   },
+   {
+    "index": 1,
+    "text": "Colombian Milds グループの国はコロンビア、ケニア、タンザニアの3カ国のみ(他国のMild ArabicasはOther Milds)",
+    "quote": "Countries included in the Colombian Milds group are Colombia, Kenya and Tanzania. Mild Arabicas produced in all other countries are classified as Other Milds.",
+    "location": "SC-105/21 の 'Group of Coffee' の項",
+    "sourceIds": [
+     "ico-sc105-2021-data-concepts",
+     "ico-glossary-dev"
+    ]
+   }
+  ],
+  "sources": {
+   "ico-rules-indicator-prices-annex1": {
+    "title": "ICC-105-17 Rules on Statistics - Indicator prices, Annex I (share of markets and weighting)",
+    "org": "International Coffee Organization",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": ""
+   },
+   "ico-sc105-2021-data-concepts": {
+    "title": "SC-105/21 Data concepts and variables used in the statistics of the Organization (Statistics Committee, 13 April 2021)",
+    "org": "International Coffee Organization",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": ""
+   },
+   "ico-glossary-dev": {
+    "title": "ICO Glossary of terms used (legacy site)",
+    "org": "International Coffee Organization",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": "旧サイト(dev.ico.org)の用語集。ICA 2001時代の記述を含む"
+   }
+  }
+ },
+ {
+  "key": "fact:コーヒーの木の寿命は20〜30年",
+  "content": {
+   "title": "品種選びは次の世代にまで影響する",
+   "text": "WCRのカタログ解説は、どの品種を植えるかという生産者の判断の結果は、次の世代まで続くとしている。"
+  },
+  "claims": [
+   {
+    "index": 0,
+    "text": "品種選びは20〜30年先まで影響する重い判断である",
+    "quote": "the decision producers make about which variety to plant will have consequences until the next generation. If a farmer makes a poor decision on variety, the cumulative loss can be huge.",
+    "location": "wcr-varieties-about 本文",
+    "sourceIds": [
+     "wcr-varieties-about"
+    ]
+   }
+  ],
+  "sources": {
+   "wcr-varieties-about": {
+    "title": "About the Catalog (World Coffee Research Arabica Variety Catalog)",
+    "org": "World Coffee Research",
+    "kind": "primary",
+    "accessed": "2026-11-09",
+    "note": "ページ本文にソフトハイフンが含まれる。引用は除去して転記"
+   }
+  }
+ },
+ {
+  "key": "fact:コーヒー価格の重み付けは生きている",
+  "content": {
+   "title": "コーヒー価格の重み付けは生きている",
+   "text": "ICOの統計規則では、コンポジット指標価格(I-CIP)を構成する4グループの重み付けは、2年ごとに見直すこととされている。重み付けは、2005年10月1日適用が13/24/29/34%、2007年10月1日適用が14/20/31/35%(順にColombian Milds/Other Milds/Brazilian Naturals/Robustas)。"
+  },
+  "claims": [
+   {
+    "index": 0,
+    "text": "I-CIPを構成する4グループの重み付けは定期的に見直される(2年ごと)",
+    "quote": "(c) the weighting of each group is to be reviewed every two years.",
+    "location": "Annex I (c)",
+    "sourceIds": [
+     "ico-rules-indicator-prices-annex1"
+    ]
+   },
+   {
+    "index": 1,
+    "text": "2005年(10月1日適用)の重み付けは 13/24/29/34%(Colombian Milds/Other Milds/Brazilian Naturals/Robustas)",
+    "quote": "The calculation of the ICO composite indicator price is weighted as follows: Colombian Milds: 13% Other Milds: 24% Brazilian Naturals: 29% Robustas: 34%",
+    "location": "Annex I 'from 1 October 2005'",
+    "sourceIds": [
+     "ico-ed1953-2005"
+    ]
+   },
+   {
+    "index": 2,
+    "text": "2007年(10月1日適用)の重み付けは 14/20/31/35%",
+    "quote": "A similar review last took place in 2007 when the Committee recommended to the Council that the new group market shares and their weightings were to take effect from 1 October 2007 ... Colombian Milds 11 584 617 13.38 14.00 / Other Milds 19 561 272 22.59 20.00 / Brazilian Naturals 26 277 292 30.34 31.00 / Robustas 29 181 018 33.69 35.00",
+    "location": "WP Statistics 139/09 para.2 と TABLE 1 の 'Current' 列",
+    "sourceIds": [
+     "ico-wp-statistics-139-09"
+    ]
+   }
+  ],
+  "sources": {
+   "ico-rules-indicator-prices-annex1": {
+    "title": "ICC-105-17 Rules on Statistics - Indicator prices, Annex I (share of markets and weighting)",
+    "org": "International Coffee Organization",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": ""
+   },
+   "ico-ed1953-2005": {
+    "title": "ED 1953/05 Share of markets and their weightings ... from 1 October 2005 (Annex I)",
+    "org": "International Coffee Organization",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": ""
+   },
+   "ico-wp-statistics-139-09": {
+    "title": "WP Statistics 139/09 ICO composite and group indicator prices: Share of markets and group weightings, calendar year averages 2005 to 2008",
+    "org": "International Coffee Organization",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": ""
+   }
+  }
+ },
+ {
+  "key": "fact:コーヒー鑑定士資格「Qグレーダー」の運営元が変わった",
+  "content": {
+   "title": "コーヒー鑑定士資格「Qグレーダー」の運営元が変わった",
+   "text": "Qグレーダーは、コーヒーの品質を評価・伝達するための資格。Coffee Quality Institute(CQI)は2004年にQ(Quality)コーヒーシステムを導入し、Qグレーダー認定を運営してきたが、2025年にその運営を終了した。SCAは2025年10月1日、更新版プログラムの一環としてQグレーダー講座が始まったと発表し、プログラムの内容を発展させ、運営をCQIから移管するとしている。更新後のカリキュラムは、CVA(Coffee Value Assessment)を基盤にしている。"
+  },
+  "claims": [
+   {
+    "index": 0,
+    "text": "Qグレーダーは、コーヒーの品質を評価・伝達するための資格である",
+    "quote": "The globally respected license for coffee professionals to evaluate and communicate coffee quality has been updated to align with the latest in coffee science.",
+    "location": "本文第1段落",
+    "sourceIds": [
+     "sca-news-q-grader-launch-2025-10-01"
+    ]
+   },
+   {
+    "index": 1,
+    "text": "CQI(Coffee Quality Institute)が運営してきた",
+    "quote": "in 2004 CQI introduced the Q (quality) Coffee System ... The Q Grader certification became one of the most valuable professional credentials ... In 2025 CQI ceased to administer this mature program",
+    "location": "Our pathway",
+    "sourceIds": [
+     "cqi-about-us"
+    ]
+   },
+   {
+    "index": 2,
+    "text": "2025年10月からSCAへ完全移管された",
+    "quote": "Today, Q Grader courses launch as part of the updated program with the Specialty Coffee Association (SCA) for the first time. ... the SCA would evolve the content of the Q Grader Program and transition its management from the Coffee Quality Institute (CQI).",
+    "location": "2025-10-01 告知 第1〜2段落",
+    "sourceIds": [
+     "sca-news-q-grader-launch-2025-10-01",
+     "sca-news-listing-2025"
+    ]
+   },
+   {
+    "index": 3,
+    "text": "新制度はCVA(4軸評価体系)を基盤にしている",
+    "quote": "The updated curriculum, now grounded in the Coffee Value Assessment (CVA), reflects the latest advancements in sensory science.",
+    "location": "本文第3段落; 'physical, descriptive, affective, and extrinsic assessments'(第2段落)",
+    "sourceIds": [
+     "sca-news-q-grader-launch-2025-10-01"
+    ]
+   }
+  ],
+  "sources": {
+   "sca-news-q-grader-launch-2025-10-01": {
+    "title": "Q Grader Courses Now Available Across Various Regions and Languages (2025-10-01)",
+    "org": "Specialty Coffee Association",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": ""
+   },
+   "cqi-about-us": {
+    "title": "About Us (Coffee Quality Institute)",
+    "org": "Coffee Quality Institute",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": ""
+   },
+   "sca-news-listing-2025": {
+    "title": "SCA News and Announcements listing (excerpt of 2024 Annual Report announcement, 2025-10-15)",
+    "org": "Specialty Coffee Association",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": "一覧ページ(ページ全体を取得)に載る告知の要旨の文"
+   }
+  }
+ },
+ {
+  "key": "fact:サパティスタ運動が今のメキシココーヒーの姿を作った",
+  "content": {
+   "title": "メキシコのコーヒー農家は小規模農家が中心",
+   "text": "ICOの報告(Mexico's Coffee Value Chain)によると、メキシコのコーヒー農家の多くは小規模農家で、農場面積の平均は2.9ヘクタール(中央値2.0ヘクタール)。チアパス州の平均は1.7ヘクタール(ベラクルス州は2.3ヘクタール、プエブラ州は1.6ヘクタール)。"
+  },
+  "claims": [
+   {
+    "index": 0,
+    "text": "チアパス州は小規模農家中心の生産構造である(今日まで)",
+    "quote": "Most coffee farmers are smallholders, with an average farm size of 2.9 hectares and a median value of 2.0 hectares. ... In Veracruz, farms are larger, (averaging 2.3 hectares) compared to Chiapas and Puebla (1.7 and 1.6 hectares, respectively).",
+    "location": "Section 3.1 / 3.2",
+    "sourceIds": [
+     "ico-mexico-value-chain-2025"
+    ]
+   }
+  ],
+  "sources": {
+   "ico-mexico-value-chain-2025": {
+    "title": "Mexico's Coffee Value Chain (ICO Coffee Public Private Taskforce, prepared by COSA)",
+    "org": "International Coffee Organization",
+    "kind": "primary",
+    "accessed": "2026-11-09",
+    "note": "ICOタスクフォース向けにCOSAが作成した調査報告をICOが掲載。ICO自身の統計文書ではない"
+   }
+  }
+ },
+ {
+  "key": "fact:ジャマイカは2025年のハリケーンで収穫の4割を失った",
+  "content": {
+   "title": "ジャマイカは2025年のハリケーンでコーヒーの4割を失ったとされる",
+   "text": "2025年10月28日、ハリケーン・メリッサがカテゴリー5でジャマイカのウェストモアランド教区のニューホープ付近に上陸した。ジャマイカ政府の広報機関JISの2026年1月14日付の記事は、メリッサによるコーヒーの40%の損失に触れている。"
+  },
+  "claims": [
+   {
+    "index": 0,
+    "text": "2025年10月28日、ハリケーン・メリッサがカテゴリー5でジャマイカに上陸した",
+    "quote": "On Tuesday, October 28, Jamaica endured one of the most punishing natural disasters in our modern history. Hurricane Melissa made landfall near New Hope in Westmoreland as a Category 5 hurricane",
+    "location": "冒頭部",
+    "sourceIds": [
+     "jis-parliament-melissa-2025"
+    ]
+   },
+   {
+    "index": 1,
+    "text": "ジャマイカ政府は、メリッサでコーヒーの約4割が失われたと述べている(木の約40%に被害、生産は40〜45%減)",
+    "quote": "following the loss of 40 per cent of coffee during Hurricane Melissa",
+    "location": "jis-coffee-intercrop-2026-01 本文冒頭(農業大臣Floyd Green; 2026-01-14)",
+    "sourceIds": [
+     "jis-coffee-intercrop-2026-01",
+     "jis-agri-damage-melissa"
+    ]
+   }
+  ],
+  "sources": {
+   "jis-parliament-melissa-2025": {
+    "title": "Statement to Parliament on the aftermath of Hurricane Melissa (Government of Jamaica, Nov 2025)",
+    "org": "Government of Jamaica / Jamaica Information Service",
+    "kind": "primary",
+    "accessed": "2026-11-09",
+    "note": ""
+   },
+   "jis-coffee-intercrop-2026-01": {
+    "title": "Coffee Farmers Urged to Plant Short-Term Crops After Hurricane Melissa Losses (2026-01-14)",
+    "org": "Jamaica Information Service (Government of Jamaica)",
+    "kind": "primary",
+    "accessed": "2026-11-09",
+    "note": ""
+   },
+   "jis-agri-damage-melissa": {
+    "title": "Preliminary Assessments Reveal $29.5B in Agricultural Damage from Hurricane Melissa",
+    "org": "Jamaica Information Service (Government of Jamaica)",
+    "kind": "primary",
+    "accessed": "2026-11-09",
+    "note": "農業大臣の発言を伝える政府広報。ページ内に日付が見当たらず、発言日は未確認"
+   }
+  }
+ },
+ {
+  "key": "fact:スペシャルティの基準は「点数」から「4つの軸」へ",
+  "content": {
+   "title": "SCAの評価は「単一のカッピングスコア」から「4つの軸」へ",
+   "text": "SCAは、CVA(Coffee Value Assessment)のSCA-102・103・104を正式なカッピング標準として採用し、2004年のカッピングプロトコルに置き換えた。SCAは、CVAを、単一のカッピングスコアで表す限界からの転換だと説明している。CVAは物理・記述・嗜好・外的要因の4つの評価を組み合わせ、単一のスコアだけに頼らずコーヒーを評価する。"
+  },
+  "claims": [
+   {
+    "index": 0,
+    "text": "SCAは2024年に、CVA(Coffee Value Assessment)のSCA-102・103・104を正式なカッピング標準として採用し、2004年のカッピングプロトコルに置き換えた",
+    "quote": "These standards, approved by the SCA Standards Development Panel, supersede the 2004 Cupping Protocol and Form",
+    "location": "本文第1段落",
+    "sourceIds": [
+     "sca-news-cva-cupping-standards"
+    ]
+   },
+   {
+    "index": 1,
+    "text": "CVAは物理・記述・嗜好(affective)・外的要因(extrinsic)の4つの評価を組み合わせる",
+    "quote": "Rather than rely on a single score, the CVA combines four complementary assessment types",
+    "location": "The CVA Framework",
+    "sourceIds": [
+     "sca-value-assessment"
+    ]
+   },
+   {
+    "index": 2,
+    "text": "SCAの基準が『点数』から『4軸』へ移行した",
+    "quote": "the Coffee Value Assessment represents a shift from the limitations of a singular cupping score to describe a coffee",
+    "location": "本文第2段落",
+    "sourceIds": [
+     "sca-news-cva-cupping-standards"
+    ]
+   }
+  ],
+  "sources": {
+   "sca-news-cva-cupping-standards": {
+    "title": "The SCA Officially Adopts CVA Descriptive and Affective Assessments as New Cupping Standards",
+    "org": "Specialty Coffee Association",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": "ページに『Nov 4』とあるが年の表記は本文になく、規格名の『-2024』から2024年と判断"
+   },
+   "sca-value-assessment": {
+    "title": "The Coffee Value Assessment",
+    "org": "Specialty Coffee Association",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": ""
+   }
+  }
+ },
+ {
+  "key": "fact:スマトラ式は2段階で乾燥させる",
+  "content": {
+   "title": "スマトラ式は脱穀してから生豆を乾燥させる",
+   "text": "FAO/ICO/CFCの報告書によると、北スマトラ(マンデリン)では、湿ったパーチメントが含水率40〜50%の状態で脱穀される(ウェットハルド)。脱穀した生豆は、その後で天日乾燥される。"
+  },
+  "claims": [
+   {
+    "index": 0,
+    "text": "北スマトラ(マンデリン)では、湿ったパーチメントを高い含水率のまま脱穀する(ウェットハルド)",
+    "quote": "A number of trading and storage steps can take place before the wet parchment is eventually hulled wet, at 40-50% moisture content.",
+    "location": "2. RATIONALE",
+    "sourceIds": [
+     "fao-ico-cfc-mandheling-annex-e6"
+    ]
+   },
+   {
+    "index": 1,
+    "text": "脱穀後の生豆を乾燥させる(2次乾燥)",
+    "quote": "The hulled green bean is then sun dried.",
+    "location": "2. RATIONALE",
+    "sourceIds": [
+     "fao-ico-cfc-mandheling-annex-e6"
+    ]
+   }
+  ],
+  "sources": {
+   "fao-ico-cfc-mandheling-annex-e6": {
+    "title": "Storage of wet Arabica parchment prior to wet hulling, including the storage of dry green bean coffee: 'Origins of Mandheling Coffee Character' (Project GCP/INT/743/CFC - CFC/ICO/06)",
+    "org": "FAO / ICO / Common Fund for Commodities",
+    "kind": "primary",
+    "accessed": "2026-11-09",
+    "note": "プロジェクト報告(著者A. Marsh)の附属書。北スマトラのマンデリンの加工を述べる。抽出本文は語中に空白が入るため、引用は空白を詰めた"
+   }
+  }
+ },
+ {
+  "key": "fact:タンザニアは輸出まで一つの機関が管理",
+  "content": {
+   "title": "タンザニアコーヒー局の役割",
+   "text": "Tanzania Coffee Board(タンザニアコーヒー局)は、Coffee Industry Act 2001によって再設置された機関。同法は、同局の機能として、コーヒーおよび副産物の品質の規制・管理(第5条(1)(e))、コーヒーのオークションの実施、コーヒーの輸出許可・認可の付与(第5条(2))を挙げている(2001年制定の条文による)。"
+  },
+  "claims": [
+   {
+    "index": 0,
+    "text": "Tanzania Coffee Board(タンザニアコーヒー局)は、法律(Coffee Industry Act 2001)で再設置された機関である",
+    "quote": "An Act make better provisions for the regulation, improvement and development of the Coffee Industry, to re-establish the Tanzania Coffee Board, to repeal the Tanzania Coffee Board Act of 1984",
+    "location": "前文",
+    "sourceIds": [
+     "tanzania-coffee-industry-act-2001"
+    ]
+   },
+   {
+    "index": 1,
+    "text": "同局は、コーヒーの品質を規制・管理する",
+    "quote": "(e) to regulate and control the quality of coffee and coffee by-products;",
+    "location": "第5条(1)(e)",
+    "sourceIds": [
+     "tanzania-coffee-industry-act-2001"
+    ]
+   },
+   {
+    "index": 2,
+    "text": "同局は、コーヒーのオークションを運営する",
+    "quote": "(d) to conduct coffee auctions:",
+    "location": "第5条(2)(d)",
+    "sourceIds": [
+     "tanzania-coffee-industry-act-2001"
+    ]
+   },
+   {
+    "index": 3,
+    "text": "同局は、コーヒーの輸出許可を出す",
+    "quote": "(a) to grant licences or permits for coffee export;",
+    "location": "第5条(2)(a)",
+    "sourceIds": [
+     "tanzania-coffee-industry-act-2001"
+    ]
+   }
+  ],
+  "sources": {
+   "tanzania-coffee-industry-act-2001": {
+    "title": "The Coffee Industry Act, 2001 (Act No. 23 of 2001), Acts Supplement No. 2",
+    "org": "United Republic of Tanzania (Government Printer 発行のActをFAO FAOLEXが掲載)",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": "2001年法の原文。その後の改正・2013年コーヒー産業規則(G.N. 385)は読んでいない"
+   }
+  }
+ },
+ {
+  "key": "fact:ハワイには「ハワイ産と名乗れる最低ライン」がある",
+  "content": {
+   "title": "ハワイ州の規則では、Hawaii No.3より下は「Offgrade」",
+   "text": "ハワイ州の行政規則(Chapter 4-143)の要約表によると、Hawaii No.3より品質が低いコーヒーは「Offgrade」とされ、Offgradeという語と組み合わせて「Hawaii」という語を使うことは禁じられている。"
+  },
+  "claims": [
+   {
+    "index": 0,
+    "text": "ハワイ州の行政規則(Chapter 4-143)では、Hawaii No.3より品質が低いコーヒーはOffgradeとされ、ハワイの地域名を付けられない",
+    "quote": "OFFGRADE = quality lower than Hawaii No. 3.  Use of the term \"Hawaii\" in conjunction with the term Offgrade is prohibited.",
+    "location": "要約表p.1 下部の注記",
+    "sourceIds": [
+     "dab-hi-har143-summary-2020"
+    ]
+   }
+  ],
+  "sources": {
+   "dab-hi-har143-summary-2020": {
+    "title": "Summary of Chapter 4-143 (effective July 1, 2020) Hawaii Administrative Rules - Standards for Coffee",
+    "org": "Hawaii Department of Agriculture and Biosecurity (旧HDOA) Quality Assurance Division",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": "規則本文ではなく、州農務局作成の要約表"
+   }
+  }
+ },
+ {
+  "key": "fact:フレーバーホイールの生みの親",
+  "content": {
+   "title": "フレーバーホイールの土台になったレキシコン",
+   "text": "SCAのコーヒーテイスターズフレーバーホイールは、WCRのセンサリーレキシコンを土台にしている。このレキシコンは、カンザス州立大学のセンサリー分析センターで作られた。"
+  },
+  "claims": [
+   {
+    "index": 0,
+    "text": "SCAのコーヒーテイスターズフレーバーホイールは、WCRのセンサリーレキシコンを基にしている(2016年の更新版)",
+    "quote": "The foundation of this work, the World Coffee Research Sensory Lexicon, is the product of dozens of professional sensory panelists",
+    "location": "商品説明(Flavor Wheel)",
+    "sourceIds": [
+     "sca-flavor-wheel-store"
+    ]
+   },
+   {
+    "index": 1,
+    "text": "WCRのセンサリーレキシコンはカンザス州立大学が作成した",
+    "quote": "Created at the Sensory Analysis Center at Kansas State University, the lexicon identifies 110 flavor, aroma, and texture attributes present in coffee",
+    "location": "Sensory Lexicon ページ本文",
+    "sourceIds": [
+     "wcr-sensory-lexicon"
+    ]
+   }
+  ],
+  "sources": {
+   "sca-flavor-wheel-store": {
+    "title": "The Coffee Taster's Flavor Wheel - English",
+    "org": "Specialty Coffee Association",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": "SCA公式の商品ページ。製品説明文を根拠にしている"
+   },
+   "wcr-sensory-lexicon": {
+    "title": "Sensory Lexicon (resources page)",
+    "org": "World Coffee Research",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": ""
+   }
+  }
+ },
+ {
+  "key": "fact:ブラジルの「タイプ1」は実在しない",
+  "content": {
+   "title": "ブラジルの公式の格付け表に「タイプ1」はない",
+   "text": "ブラジル農務省(MAPA)の規則IN 8/2003(2003年6月11日)の表では、欠点数による格付け(Tipo)は2から8までで、タイプ1はない。最上位はタイプ2(欠点4個)で、欠点が360を超えるとFora de Tipo(格外)とされる。"
+  },
+  "claims": [
+   {
+    "index": 0,
+    "text": "ブラジルの公式な欠点数による格付け(Tipo)は2から8まである(欠点が360を超えるとFora de Tipo)",
+    "quote": "16.3.TABELA 3 - Classificação do Café Beneficiado Grão Cru, em função do defeito/tipo. Defeitos Tipos Pontos Defeitos Tipos Pontos 4 2 + 100 46 5 50",
+    "location": "16.3 TABELA 3(末尾に『360 8 200 > 360 Fora de Tipo』)",
+    "sourceIds": [
+     "mapa-in-8-2003-cafe-cru"
+    ]
+   },
+   {
+    "index": 1,
+    "text": "公式の表にタイプ1はなく、最上位はタイプ2(欠点4個、+100点)である",
+    "quote": "4 2 + 100",
+    "location": "16.3 TABELA 3 の第1行",
+    "sourceIds": [
+     "mapa-in-8-2003-cafe-cru"
+    ]
+   }
+  ],
+  "sources": {
+   "mapa-in-8-2003-cafe-cru": {
+    "title": "Instrução Normativa nº 8, de 11 de junho de 2003 - Regulamento Técnico de Identidade e de Qualidade para a Classificação do Café Beneficiado Grão Cru",
+    "org": "Ministério da Agricultura, Pecuária e Abastecimento (MAPA, ブラジル農務省)",
+    "kind": "primary",
+    "accessed": "2026-11-09",
+    "note": "MAPA法令データベース(SISLEGIS)のテキスト。表はHTMLの並びを読んだ。その後の改正の有無は確認していない"
+   }
+  }
+ },
+ {
+  "key": "fact:ブラジルの生産地はある年の大霜害で移動した",
+  "content": {
+   "title": "ブラジルの生産の優位は、ある年の大霜害でパラナ州からミナスジェライス州に移った",
+   "text": "1975年7月18日、前例のない寒気団がパラナ州を襲い、コーヒー農地を壊滅させた(パラナ州政府のIDR-パラナ)。サンパウロ州農業経済研究所(IEA)の1995年の資料は、1975年の霜害がブラジルのコーヒー生産におけるパラナ州の優位を崩し、その地位はミナスジェライス州に移ったとしている。"
+  },
+  "claims": [
+   {
+    "index": 0,
+    "text": "1975年に大霜害があった(パラナ州、1975年7月18日)",
+    "quote": "Uma massa de ar polar sem precedentes atingiu o Paraná em 18 de julho de 1975 e aniquilou as lavouras de café, base da economia estadual na época.",
+    "location": "冒頭の段落",
+    "sourceIds": [
+     "idr-parana-geada-negra"
+    ]
+   },
+   {
+    "index": 1,
+    "text": "この霜害で、ブラジルのコーヒー生産の主役がパラナ州からミナスジェライス州に移った(主要産地の構図が変わった)",
+    "quote": "Recorde-se que foi a geada de 1975 que quebrou a hegemonia do Estado do Paraná na produção brasileira de café, cedendo essa posição para o Estado de Minas Gerais.",
+    "location": "1 Introdução 以降(Tabela 1の直前の段落)",
+    "sourceIds": [
+     "iea-sp-1995-geadas"
+    ]
+   }
+  ],
+  "sources": {
+   "idr-parana-geada-negra": {
+    "title": "Geada negra impos novas estrategias para a pesquisa em cafe",
+    "org": "IDR-Parana (Governo do Estado do Parana)",
+    "kind": "primary",
+    "accessed": "2026-11-09",
+    "note": ""
+   },
+   "iea-sp-1995-geadas": {
+    "title": "Geadas e seca de 1994: perspectivas do mercado cafeeiro (Informacoes Economicas, SP, v.25, n.6, jun. 1995)",
+    "org": "Instituto de Economia Agricola (Governo do Estado de Sao Paulo)",
+    "kind": "primary",
+    "accessed": "2026-11-09",
+    "note": ""
+   }
+  }
+ },
+ {
+  "key": "fact:ブルーマウンテンは商標で守られている",
+  "content": {
+   "title": "ブルーマウンテンは米国で認証商標として登録されている",
+   "text": "WIPOのIP Advantageの事例紹介によると、ブルーマウンテンコーヒーは米国特許商標庁(USPTO)に認証商標(登録番号1,414,598)として登録されている。ジャマイカには、Jamaica Agricultural Commodities Regulatory Authority(JACRA、農産物規制庁)という機関がある。"
+  },
+  "claims": [
+   {
+    "index": 0,
+    "text": "ブルーマウンテンの名称は商標として保護されている(米国では認証商標として登録)",
+    "quote": "Blue Mountain Coffee is registered with the United States Patent and Trademark Office (USPTO) as a certification mark (No. 1,414,598)",
+    "location": "Trademark and Branding の節",
+    "sourceIds": [
+     "wipo-ip-advantage-jbm"
+    ]
+   },
+   {
+    "index": 1,
+    "text": "ジャマイカのJACRA(Jamaica Agricultural Commodities Regulatory Authority、農産物規制庁)という機関がある",
+    "quote": "through the Jamaica Agricultural Commodities Regulatory Authority (JACRA)",
+    "location": "本文第3段落",
+    "sourceIds": [
+     "jis-coffee-trademarks-2019"
+    ]
+   }
+  ],
+  "sources": {
+   "wipo-ip-advantage-jbm": {
+    "title": "In Search of a Perfect Cup (IP Advantage case study: Jamaica Blue Mountain Coffee)",
+    "org": "World Intellectual Property Organization (WIPO)",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": "WIPOの事例紹介ページ。発行年は本文にない。JACRA設立(2018年頃)より前の記述で、所有者を『CIB(Coffee Industry Board)』と書く"
+   },
+   "jis-coffee-trademarks-2019": {
+    "title": "Government Examining Long-term Solutions to Advance Coffee Industry (2019-01-06)",
+    "org": "Jamaica Information Service (ジャマイカ政府の広報機関)",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": ""
+   }
+  }
+ },
+ {
+  "key": "fact:ベトナムはロブスタが9割超",
+  "content": {
+   "title": "ベトナムはロブスタが9割超",
+   "text": "USDA FAS「Coffee: World Markets and Trade」(2026年7月)の表では、ベトナムはブラジルに次ぐ生産量の国で、ベトナムの生産のうちロブスタ種が9割を超えている。"
+  },
+  "claims": [
+   {
+    "index": 0,
+    "text": "ベトナムは世界第2位のコーヒー生産国である(生産量でブラジルに次ぐ)",
+    "quote": "Production none 58,100 Brazil 62,600 66,300 65,500 63,000 71,900 31,580 Vietnam 28,300 27,550 29,000 31,700 32,500 11,800 Colombia",
+    "location": "Coffee Summary / Production(千60kg袋)",
+    "sourceIds": [
+     "usda-fas-coffee-wmt-2026-07"
+    ]
+   },
+   {
+    "index": 1,
+    "text": "ベトナムの生産の9割超をロブスタ種が占める",
+    "quote": "Robusta Production none 30,480 Vietnam 27,300 26,550 28,000 30,500 31,400",
+    "location": "Coffee Summary / Robusta Production(千60kg袋)",
+    "sourceIds": [
+     "usda-fas-coffee-wmt-2026-07"
+    ]
+   }
+  ],
+  "sources": {
+   "usda-fas-coffee-wmt-2026-07": {
+    "title": "Coffee: World Markets and Trade (July 2026)",
+    "org": "USDA Foreign Agricultural Service",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": "月次で更新される固定URLのため、将来は別の号に置き換わる。表の列は抽出本文では行頭の数値が列と対応しにくいので、本文の記述(ブラジル2026/27 71.9百万袋、ベトナム 2025/26 31.7・2026/27 32.5)と突き合わせて読んだ"
+   }
+  }
+ },
+ {
+  "key": "fact:マンデリンとガヨマウンテンは排他的な関係",
+  "content": {
+   "title": "マンデリンとガヨマウンテンは排他的な関係",
+   "text": "全日本コーヒー公正取引協議会の公正競争規約(別表2)では、ガヨマウンテンはインドネシアのスマトラ島タケンゴン地区で生産されたアラビカ豆、マンデリンはインドネシアの北スマトラ州及びアチェ州(タケンゴン周辺のガヨマウンテン生産地区を除く)で生産されたアラビカ豆とされている。マンデリンの定義からガヨマウンテンの生産地区が除かれているため、両者は表示上重ならない。"
+  },
+  "claims": [
+   {
+    "index": 0,
+    "text": "ガヨマウンテンは、スマトラ島のタケンゴン地区で生産されたアラビカ豆と定められている",
+    "quote": "12) ガヨマウンテン : インドネシアのスマトラ島 タケンゴン地区にて生産されたアラビカコーヒ ー豆をいう。",
+    "location": "(別表2) 12)",
+    "sourceIds": [
+     "ajcft-kiyaku-regular-coffee"
+    ]
+   },
+   {
+    "index": 1,
+    "text": "マンデリンは、北スマトラ州及びアチェ州(タケンゴン周辺のガヨマウンテン生産地区を除く)で生産されたアラビカ豆と定められている",
+    "quote": "13) マンデリン : インドネシアの北スマトラ州及びアチェ州 （タケンゴン周辺のガヨマウンテン生産地区を除く）にて生産されたアラビカコーヒー 豆をいう。",
+    "location": "(別表2) 13)",
+    "sourceIds": [
+     "ajcft-kiyaku-regular-coffee"
+    ]
+   },
+   {
+    "index": 2,
+    "text": "タケンゴン周辺(ガヨマウンテン地区)産かどうかで名乗れる特定銘柄名が変わり、同じ島でも重ならない",
+    "quote": "13) マンデリン : インドネシアの北スマトラ州及びアチェ州 （タケンゴン周辺のガヨマウンテン生産地区を除く）にて生産されたアラビカコーヒー 豆をいう。",
+    "location": "(別表2) 12)・13)",
+    "sourceIds": [
+     "ajcft-kiyaku-regular-coffee"
+    ]
+   }
+  ],
+  "sources": {
+   "ajcft-kiyaku-regular-coffee": {
+    "title": "レギュラーコーヒー及びインスタントコーヒーの表示に関する公正競争規約・公正競争規約施行規則(別表2 産地、品種、銘柄の区分及び範囲の例示)",
+    "org": "全日本コーヒー公正取引協議会(規約PDFの掲載: 全国公正取引協議会連合会)",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": "curlでPDF取得、pypdfで本文抽出。改版日は本文から確認していない。抽出本文には改行由来の空白が混じる"
+   }
+  }
+ },
+ {
+  "key": "fact:ロブスタの鑑定士はウガンダが認定する",
+  "content": {
+   "title": "Qグレーダーにはロブスタ版の「Q Robusta」がある",
+   "text": "アラビカ用のQグレーダー(Q Arabica)とは別に、ロブスタ版の「Q Robusta」グレーダーがある。ウガンダコーヒー開発公社(UCDA)の記事によると、Q Venueは、Q ArabicaとQ Robustaのグレーダーの認定を支える。"
+  },
+  "claims": [
+   {
+    "index": 0,
+    "text": "アラビカ用のQグレーダーとは別に、ロブスタ版のQグレーダー(Q Robusta)がある",
+    "quote": "The Q venue supports the certification of Q Arabica and Q Robusta graders",
+    "location": "記事本文の Q Venue の説明の段落",
+    "sourceIds": [
+     "ucda-q-venue-2024"
+    ]
+   }
+  ],
+  "sources": {
+   "ucda-q-venue-2024": {
+    "title": "UCDA Coffee Laboratory gets Q Venue Certification",
+    "org": "Uganda Coffee Development Authority",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": ""
+   }
+  }
+ },
+ {
+  "key": "fact:内戦が皮肉にも伝統品種を守った",
+  "content": {
+   "title": "エルサルバドルのコーヒーは1980年代の内紛で大きな打撃を受けた",
+   "text": "ICOのエルサルバドルのコーヒープロファイルによると、1980年代の国内の内紛(internal civil strife)は同国の経済活動と生産に大きな影響を与え、コーヒーは最も打撃を受けた部門の一つで、生産は平均でおよそ25%減った。"
+  },
+  "claims": [
+   {
+    "index": 0,
+    "text": "1980年代の内戦で、コーヒー生産は大きな打撃を受けた",
+    "quote": "The internal civil strife in the 1980s had a drastic effect on the country’s economic activity and output, with coffee being one of the worst hit sectors, where production fell by an average of around 25%.",
+    "location": "Country profile 'history of coffee' の項",
+    "sourceIds": [
+     "ico-profile-el-salvador-2016"
+    ]
+   }
+  ],
+  "sources": {
+   "ico-profile-el-salvador-2016": {
+    "title": "El Salvador - ICO Coffee Profile (ICC-117-8)",
+    "org": "International Coffee Organization",
+    "kind": "primary",
+    "accessed": "2026-11-09",
+    "note": ""
+   }
+  }
+ },
+ {
+  "key": "glossary:Coffee Value Assessment(CVA)",
+  "content": {
+   "summary": "SCAのCVA(Coffee Value Assessment)は、コーヒーを4つの評価(物理・記述・嗜好・外的要因)で評価する枠組み。",
+   "detail": "物理評価(色・欠点豆・水分値・大きさなど)、記述評価(香り・フレーバー・質感・後味を標準化された言語で客観的に記録)、嗜好評価(評価者の好みや市場の好みに基づく品質の印象)、外的要因評価(認証・産地トレーサビリティ・精選方法の情報など、カップの外にある価値の情報)の4つを組み合わせる。単一の点数に頼らず、コーヒーの価値の全体像を捉えることを目指す。"
+  },
+  "claims": [
+   {
+    "index": 0,
+    "text": "CVAはSCAの、コーヒーを評価するための枠組み(システム)である",
+    "quote": "The Coffee Value Assessment (CVA) is the Specialty Coffee Association’s system and tool for evaluating coffee.",
+    "location": "SCA「The Coffee Value Assessment」冒頭",
+    "sourceIds": [
+     "sca-cva-page"
+    ]
+   },
+   {
+    "index": 1,
+    "text": "コーヒーを4つの軸(評価)で評価する",
+    "quote": "Rather than rely on a single score, the CVA combines four complementary assessment types to capture a full picture of coffee’s value.",
+    "location": "SCA「The Coffee Value Assessment」The CVA Framework",
+    "sourceIds": [
+     "sca-cva-page"
+    ]
+   },
+   {
+    "index": 2,
+    "text": "物理評価は、色・欠点豆・水分値等を評価する",
+    "quote": "Evaluates the physical attributes of coffee, such as color, defects, moisture content, and size.",
+    "location": "SCA「The Coffee Value Assessment」1 Physical Assessment",
+    "sourceIds": [
+     "sca-cva-page"
+    ]
+   },
+   {
+    "index": 3,
+    "text": "記述評価は、香り・フレーバー・質感・後味を標準化された言語で客観的に記録する",
+    "quote": "Objectively records sensory attributes of coffee, including aroma, flavor, texture, and aftertaste using standardized language.",
+    "location": "SCA「The Coffee Value Assessment」2 Descriptive Assessment(SCA Standard 103)",
+    "sourceIds": [
+     "sca-cva-page"
+    ]
+   },
+   {
+    "index": 4,
+    "text": "嗜好評価は、評価者・市場の好みに基づく印象を捉える",
+    "quote": "Captures an evaluator’s impression of coffee quality, related to their personal preference or or the preferences of their market.",
+    "location": "SCA「The Coffee Value Assessment」3 Affective Assessment(SCA Standard 104)",
+    "sourceIds": [
+     "sca-cva-page"
+    ]
+   },
+   {
+    "index": 5,
+    "text": "外的要因評価は、認証・産地トレーサビリティ・精選方法情報などを評価する",
+    "quote": "Evaluates information beyond the cup that adds value, such as certifications, origin traceability, and processing information.",
+    "location": "SCA「The Coffee Value Assessment」4 Extrinsic Assessment(SCA Standard 105)",
+    "sourceIds": [
+     "sca-cva-page"
+    ]
+   },
+   {
+    "index": 6,
+    "text": "単一の点数に価値を集約しないことを重視した設計思想である",
+    "quote": "Rather than rely on a single score, the CVA combines four complementary assessment types to capture a full picture of coffee’s value.",
+    "location": "SCA「The Coffee Value Assessment」The CVA Framework。ニュース記事にも「a shift from the limitations of a singular cupping score」",
+    "sourceIds": [
+     "sca-cva-page",
+     "sca-cva-standards-news"
+    ]
+   }
+  ],
+  "sources": {
+   "sca-cva-page": {
+    "title": "The Coffee Value Assessment",
+    "org": "Specialty Coffee Association",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": ""
+   },
+   "sca-cva-standards-news": {
+    "title": "The SCA Officially Adopts CVA Descriptive and Affective Assessments as New Cupping Standards (2024-11-04)",
+    "org": "Specialty Coffee Association",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": ""
+   }
+  }
+ },
+ {
+  "key": "glossary:アナエロビック(Anaerobic)",
+  "content": {
+   "summary": "酸素を制限または遮断した状態で発酵させる精選方法。",
+   "detail": "SCAは、ハニープロセスと並んで産地で広まった新しい方法の一つとして、嫌気発酵(発酵中の酸素を制限、または無くす方法)を挙げている。SCAは、ワインの世界に着想を得た発酵技術の例として、カーボニックマセレーション(carbonic maceration)なども挙げている。"
+  },
+  "claims": [
+   {
+    "index": 0,
+    "text": "酸素を制限または遮断した状態で発酵させる精選方法である",
+    "quote": "many hybrid or novel methods also have gained popularity in the coffee production regions, such as the well-known pulped honey process or the trendy anaerobic fermentation (i.e., with limiting or absence of oxygen during fermentation).",
+    "location": "SCA 25 Magazine Issue 10「The Fermentation Effect」本文",
+    "sourceIds": [
+     "sca-25-issue10-fermentation-effect"
+    ]
+   },
+   {
+    "index": 1,
+    "text": "ワイン醸造由来の「カーボニックマセレーション(炭酸ガス浸漬)」を取り入れた手法がある",
+    "quote": "apply a variety of fermentation techniques inspired by the wine world, like carbonic maceration or “methode Beaujolais,” a semi-carbonic maceration used for the fruity and light Beaujolais wines",
+    "location": "SCA 25「Not Just a World of Coffee: Connecting Coffee, Wine, and Cacao」本文(Wine continues to serve as an inspiration… の段落)",
+    "sourceIds": [
+     "sca-25-coffee-wine-cacao"
+    ]
+   }
+  ],
+  "sources": {
+   "sca-25-issue10-fermentation-effect": {
+    "title": "The Fermentation Effect (25 Magazine, Issue 10)",
+    "org": "Specialty Coffee Association",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": ""
+   },
+   "sca-25-coffee-wine-cacao": {
+    "title": "Not Just a World of Coffee: Connecting Coffee, Wine, and Cacao (25)",
+    "org": "Specialty Coffee Association",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": ""
+   }
+  }
+ },
+ {
+  "key": "glossary:ウェットハルド(Wet Hulled)",
+  "content": {
+   "summary": "スマトラ式(セミウォッシュド)とも呼ばれる、パーチメントを水分を含んだまま脱穀し、その後に再度乾燥させる方法。",
+   "detail": "全日本コーヒー協会は、スマトラ式(セミウォッシュド)の工程を、水分を含んだまま脱穀して生豆を取り出し、再度乾燥させるものと説明している。ICOのセミナー資料(2008年、インドネシアの研究所による発表)にも、パーチメントを取り除くのは豆がまだ湿っているうちに行うとの記述がある。"
+  },
+  "claims": [
+   {
+    "index": 0,
+    "text": "スマトラ式とも呼ばれる",
+    "quote": "スマトラ式（セミウォッシュド）",
+    "location": "全日本コーヒー協会「加工処理・選別」精製方法の見出し(3つ目)",
+    "sourceIds": [
+     "ajca-process-4476"
+    ]
+   },
+   {
+    "index": 1,
+    "text": "乾燥を2段階で行う(1次乾燥→脱穀→2次乾燥)方式である",
+    "quote": "水分を含んだまま脱穀し、生豆を取り出す。 ... 再度乾燥させる。",
+    "location": "全日本コーヒー協会「加工処理・選別」スマトラ式(セミウォッシュド)の工程(乾燥→脱穀→乾燥)。ICO資料(2008) Slide no. 5",
+    "sourceIds": [
+     "ajca-process-4476",
+     "ico-mawardi-2008-gi-indonesia"
+    ]
+   },
+   {
+    "index": 2,
+    "text": "生豆(パーチメント付きの豆)が高含水率のまま脱穀される",
+    "quote": "水分を含んだまま脱穀し、生豆を取り出す。",
+    "location": "全日本コーヒー協会「加工処理・選別」スマトラ式(セミウォッシュド)。ICO資料(2008) Slide no. 5「the parchment removal is done when the bean still moist」",
+    "sourceIds": [
+     "ajca-process-4476",
+     "ico-mawardi-2008-gi-indonesia"
+    ]
+   }
+  ],
+  "sources": {
+   "ajca-process-4476": {
+    "title": "コーヒーができるまで② 加工処理・選別",
+    "org": "一般社団法人 全日本コーヒー協会",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": ""
+   },
+   "ico-mawardi-2008-gi-indonesia": {
+    "title": "Use of Geographical Indications for Coffee: Experience of Indonesia (ICO Seminar on Geographical Indication for Coffee, London, 20 May 2008)",
+    "org": "International Coffee Organization(ICO主催セミナーの発表資料。発表者はIndonesian Coffee and Cocoa Research Institute)",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": "ICOのサイトに掲載された、インドネシアのコーヒー・カカオ研究所(ICCRI)による発表資料。"
+   }
+  }
+ },
+ {
+  "key": "glossary:ウォッシュド(Washed)",
+  "content": {
+   "summary": "果肉を除去し、ミューシレージを発酵させてから水で洗い、乾燥させる方法。",
+   "detail": "全日本コーヒー協会によると、コーヒーチェリーから果肉を除去し、豆についた粘液質(ミューシレージ)を発酵させてから、きれいな水で洗い、乾燥させる製法。"
+  },
+  "claims": [
+   {
+    "index": 0,
+    "text": "工程は、果肉除去→水槽で発酵・ミューシレージ除去→水洗い→乾燥",
+    "quote": "コーヒーチェリーから果肉を除去し、豆についた粘液質(ミューシレージ)を発酵させてから、きれいな水で洗い、乾燥させる製法です。",
+    "location": "全日本コーヒー協会「加工処理・選別」水洗式(ウォッシュド)。ICO ED 2074/09(Codex実施規範) 4.5 Wet processing 第27項",
+    "sourceIds": [
+     "ajca-process-4476",
+     "ico-codex-ota-code-ed2074"
+    ]
+   }
+  ],
+  "sources": {
+   "ajca-process-4476": {
+    "title": "コーヒーができるまで② 加工処理・選別",
+    "org": "一般社団法人 全日本コーヒー協会",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": ""
+   },
+   "ico-codex-ota-code-ed2074": {
+    "title": "ED 2074/09 Code of Practice: Prevention and reduction of ochratoxin A contamination in coffee (Codex Alimentarius Commission)",
+    "org": "International Coffee Organization(Codex Alimentarius Commission採択の実施規範を回付した文書)",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": "pdftotextで本文を抽出。用語定義(Dry process / Wet process / semi-washed)と4.4・4.5節を使用。"
+   }
+  }
+ },
+ {
+  "key": "glossary:スペシャルティコーヒー",
+  "content": {
+   "summary": "SCA(Specialty Coffee Association)は、スペシャルティコーヒーを、際立った特性と、市場でのより高い価値によって認識されるコーヒーと説明している。",
+   "detail": "SCAの『25』誌(Issue 18)によると、2021年の白書で新しい定義が示された。同誌は、スペシャルティコーヒーを「際立った属性(distinctive attributes)によって認識され、その属性ゆえに市場で大きな付加価値を持つコーヒーまたはコーヒー体験」としている。一方、ICOが2025年10月1日付でまとめた既存のスペシャルティコーヒーの定義の資料(FGSC 03/24 Rev.1)には、ブラジルスペシャルティコーヒー協会の定義として、官能評価で80点を超えることを挙げるものが載っている。"
+  },
+  "claims": [
+   {
+    "index": 0,
+    "text": "SCAは、スペシャルティコーヒーを「際立った特性によって認識され、その特性ゆえに市場でより高い価値を持つコーヒー」と定義している",
+    "quote": "Specialty coffee is coffee recognized for its distinctive characteristics and higher value in the market.",
+    "location": "SCA「What is Specialty Coffee」冒頭。25 Issue 18の本文は「specialty coffee is a coffee or coffee experience recognized for its distinctive attributes, and because of these attributes, has significant extra value in the marketplace」",
+    "sourceIds": [
+     "sca-what-is-specialty",
+     "sca-25-issue18-valuing-coffee"
+    ]
+   },
+   {
+    "index": 1,
+    "text": "この定性的な(属性に基づく)定義は2021年に示された",
+    "quote": "A new definition, proffered in a 2021 white paper,[3] slowly evolved from discussions with community members and researchers.",
+    "location": "25 Issue 18「Valuing Coffee」本文。白書の紹介ページにも「In this 2021 white paper, the SCA presents its definition of specialty coffee and the logic behind it. This definition is based on attributes」",
+    "sourceIds": [
+     "sca-25-issue18-valuing-coffee"
+    ]
+   },
+   {
+    "index": 2,
+    "text": "旧来の「80点基準」は今も業界で使われている",
+    "quote": "Specialty Coffees are beans free from impurities and defects that have distinct sensory attributes. These attributes, which include a clean and sweet beverage, balanced body and acidity, qualify the beverage as above 80 points in the sensory analysis.",
+    "location": "ICO FGSC 03/24 Rev.1(2025年10月1日) Annex I の4(Brazilian Specialty Coffee Association の定義)",
+    "sourceIds": [
+     "ico-fgsc3-definitions-specialty"
+    ]
+   }
+  ],
+  "sources": {
+   "sca-what-is-specialty": {
+    "title": "What is Specialty Coffee",
+    "org": "Specialty Coffee Association",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": ""
+   },
+   "sca-25-issue18-valuing-coffee": {
+    "title": "Valuing Coffee: Evolving the SCA’s Cupping Protocol into a Coffee Value Assessment System (25, Issue 18)",
+    "org": "Specialty Coffee Association",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": ""
+   },
+   "ico-fgsc3-definitions-specialty": {
+    "title": "FGSC 03/24 Rev.1 Existing definitions of specialty coffee (1 October 2025)",
+    "org": "International Coffee Organization",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": "ICOの作業文書。加盟国・団体が提出した既存の定義を並べたもの(ICO自身の定義ではない)。"
+   }
+  }
+ },
+ {
+  "key": "glossary:ダイヤルイン(Dial-in)",
+  "content": {
+   "summary": "抽出条件を調整して、そのコーヒーの風味が最適になる条件を探していく作業。",
+   "detail": "なじみのないコーヒーを出すとき、バリスタは「ダイヤルイン(dialing in)」と呼ばれる手順を踏み、粉量(dose)、挽き目(grind)、抽出度(extraction level)などを調整して、コーヒーの風味を最適にする。SCAはこれを、最適な風味が現れるまで変数を順に調整していく、一種のチューニングだと説明している。"
+  },
+  "claims": [
+   {
+    "index": 0,
+    "text": "抽出条件を調整して、コーヒーの風味を最適にしていく作業(ダイヤルイン)である",
+    "quote": "Every barista knows the process: when serving an unfamiliar coffee, we go through a procedure known as “dialing in,” where we adjust factors like dose, grind, and extraction level to optimize the flavor of a coffee brew. It’s a kind of tuning: adjusting variables methodically until the optimal flavor appears.",
+    "location": "SCA「Coffee Decoded: The Science of “Dialing-In”」冒頭",
+    "sourceIds": [
+     "sca-coffee-decoded-dialing-in"
+    ]
+   },
+   {
+    "index": 1,
+    "text": "1回で正解に辿り着くものではなく、抽出→試飲→調整を繰り返すプロセスそのものを指す",
+    "quote": "It’s a kind of tuning: adjusting variables methodically until the optimal flavor appears.",
+    "location": "SCA「Coffee Decoded: The Science of “Dialing-In”」冒頭",
+    "sourceIds": [
+     "sca-coffee-decoded-dialing-in"
+    ]
+   }
+  ],
+  "sources": {
+   "sca-coffee-decoded-dialing-in": {
+    "title": "Coffee Decoded: The Science of “Dialing-In”",
+    "org": "Specialty Coffee Association",
+    "kind": "primary",
+    "accessed": "2026-11-09",
+    "note": ""
+   }
+  }
+ },
+ {
+  "key": "glossary:ナチュラル(Natural)",
+  "content": {
+   "summary": "チェリーのまま乾燥させ、その後に脱穀して生豆を取り出す方法。",
+   "detail": "全日本コーヒー協会によると、果肉がついたままのコーヒーチェリーを天日干しで乾燥させて、その後、脱穀してコーヒー豆を取り出す製法。"
+  },
+  "claims": [
+   {
+    "index": 0,
+    "text": "チェリーのまま乾燥させ、その後まとめて脱穀する",
+    "quote": "果肉がついたままのコーヒーチェリーを天日干しで乾燥させて、その後、脱穀してコーヒー豆を取り出す製法です。",
+    "location": "全日本コーヒー協会「加工処理・選別」非水洗式(ナチュラル)。ICO ED 2074/09 用語定義 Dry process",
+    "sourceIds": [
+     "ajca-process-4476",
+     "ico-codex-ota-code-ed2074"
+    ]
+   }
+  ],
+  "sources": {
+   "ajca-process-4476": {
+    "title": "コーヒーができるまで② 加工処理・選別",
+    "org": "一般社団法人 全日本コーヒー協会",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": ""
+   },
+   "ico-codex-ota-code-ed2074": {
+    "title": "ED 2074/09 Code of Practice: Prevention and reduction of ochratoxin A contamination in coffee (Codex Alimentarius Commission)",
+    "org": "International Coffee Organization(Codex Alimentarius Commission採択の実施規範を回付した文書)",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": "pdftotextで本文を抽出。用語定義(Dry process / Wet process / semi-washed)と4.4・4.5節を使用。"
+   }
+  }
+ },
+ {
+  "key": "glossary:ハニー(Honey)",
+  "content": {
+   "summary": "果肉を除去し、ミューシレージを残したまま乾燥させる方法。",
+   "detail": "果肉を除去したあと、ミューシレージを一部、またはすべて残したまま乾燥させる。SCAは、レッド・イエローハニーはミューシレージを全部ではなく一部残して乾燥させたもの、ブラックハニーはミューシレージをすべて残して乾燥させたものと説明している。全日本コーヒー協会は、近年、中米エリアでセミウォッシュドの改良型が実践されており、コスタリカの「ハニープロセス」はウォッシュドよりも水の使用量を抑えていると説明している。"
+  },
+  "claims": [
+   {
+    "index": 0,
+    "text": "果肉を除去し、ミューシレージを(すべて、または一部)残したまま乾燥させる",
+    "quote": "Red and yellow honey coffees, a pulped natural dried with less than all the mucilage attached to parchment, requires the use of good quality, adjustable mucilage removers. Pulped natural coffee that dries with all mucilage attached to parchment, also known as black honey, does not obviously require mucilage removers.",
+    "location": "SCA 25 Magazine Issue 6「The Impact of Mucilage Removers on Coffee Sustainability and Quality」本文の最後から2段落目",
+    "sourceIds": [
+     "sca-25-issue6-mucilage-removers"
+    ]
+   },
+   {
+    "index": 1,
+    "text": "中米で多く見られる",
+    "quote": "近年、中米エリアではセミウォッシュドの改良型が実践されています。コスタリカで行われている精製方法は「ハニープロセス」と呼ばれ、ウォッシュドよりも水の使用量を抑えています。",
+    "location": "全日本コーヒー協会「加工処理・選別」各国に広がる新しいセミウォッシュド方式",
+    "sourceIds": [
+     "ajca-process-4476"
+    ]
+   }
+  ],
+  "sources": {
+   "sca-25-issue6-mucilage-removers": {
+    "title": "The Impact of Mucilage Removers on Coffee Sustainability and Quality (25 Magazine: Issue 6)",
+    "org": "Specialty Coffee Association",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": ""
+   },
+   "ajca-process-4476": {
+    "title": "コーヒーができるまで② 加工処理・選別",
+    "org": "一般社団法人 全日本コーヒー協会",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": ""
+   }
+  }
+ },
+ {
+  "key": "glossary:ブレンド(Blend)",
+  "content": {
+   "summary": "数種類の豆を配合したコーヒー。",
+   "detail": "単体では出せない風味を出すために、数種類の豆を配合することを「ブレンド」と呼ぶ。全日本コーヒー協会は、ブレンドの目的として、好みの風味を出す、新しい風味をつくる、調和の取れた品質を維持する、価格を維持・安定させる、の4つを挙げている。全日本コーヒー公正取引協議会の規約の施行規則では、「○○ブレンド」(○○はコーヒー生豆の産地、品種、銘柄等)と表示できるのは、その生豆を30パーセント以上使用しているものに限られる。"
+  },
+  "claims": [
+   {
+    "index": 0,
+    "text": "数種類の豆を配合したものをブレンドと呼ぶ(アプリ本文は「複数産地の生豆を配合した商品」)",
+    "quote": "単体では出せない風味を出すために、数種類の豆を配合することを「ブレンド」と呼びます。",
+    "location": "全日本コーヒー協会「焙煎・配合・粉砕」Blend配合(ブレンド)",
+    "sourceIds": [
+     "ajca-roast-blend-4472"
+    ]
+   },
+   {
+    "index": 1,
+    "text": "ブレンドの意義の一つは「新しい味の創造」(単一産地では出せない香味バランスを配合で設計すること)",
+    "quote": "単体では出せない風味を出すために、数種類の豆を配合することを「ブレンド」と呼びます。①好みの風味を出す②新しい風味をつくる③調和の取れた品質を維持する④価格を維持・安定させるという、４つの目的があります。",
+    "location": "全日本コーヒー協会「焙煎・配合・粉砕」Blend配合(ブレンド)",
+    "sourceIds": [
+     "ajca-roast-blend-4472"
+    ]
+   },
+   {
+    "index": 2,
+    "text": "全日本コーヒー公正取引協議会の規約では、産地・銘柄名を冠した「○○ブレンド」と名乗るには、その生豆を30%以上使用している必要がある",
+    "quote": "「○○○ブレンド」（「○○○」は、コーヒー生豆の産地、品種、銘柄等をいう。）と表示する場合は、当該コーヒー生豆を 30 パーセント以上使用しているものに限り表示することができる。",
+    "location": "公正競争規約施行規則 第3条第1項第1号イ(p.7)。別表3 Ⅱ-3(p.15)にも「30 パーセント以上」の記載",
+    "sourceIds": [
+     "jfftc-coffee-kiyaku"
+    ]
+   }
+  ],
+  "sources": {
+   "ajca-roast-blend-4472": {
+    "title": "コーヒーができるまで④ 焙煎・配合・粉砕",
+    "org": "一般社団法人 全日本コーヒー協会",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": ""
+   },
+   "jfftc-coffee-kiyaku": {
+    "title": "レギュラーコーヒー及びインスタントコーヒーの表示に関する公正競争規約・同施行規則(令和6年10月1日施行の変更を含む)",
+    "org": "全日本コーヒー公正取引協議会(PDFは全国公正取引協議会連合会が公開)",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": "全16ページ。pypdfでは3ページ目以降が文字化けしたため、pdftotext(poppler)で本文を抽出して読んだ。ページ番号は紙面の番号。"
+   }
+  }
+ },
+ {
+  "key": "glossary:焙煎度(ロースト)",
+  "content": {
+   "summary": "生豆を煎る度合い。全日本コーヒー協会は、焙煎度はライトローストからイタリアンローストまで8段階あるとしている。",
+   "detail": "浅煎りから深煎りの順に、ライト→シナモン→ミディアム→ハイ→シティ→フルシティ→フレンチ→イタリアン。全日本コーヒー協会は、一般的には浅炒りほど酸味が強く、深炒りになるほど苦味を感じるようになると説明している。SCAの記事では、アグトロン値(Agtron number)を下げることを、より深く焙煎すること(roasting darker)と表している。"
+  },
+  "claims": [
+   {
+    "index": 0,
+    "text": "焙煎度は、ライトローストからイタリアンローストまで8段階ある(日本で一般に使われる区分)",
+    "quote": "焙煎度は最も浅いライトローストから真っ黒になるまで炒り上げたイタリアンローストまで8段階ありますが、",
+    "location": "全日本コーヒー協会「焙煎・配合・粉砕」Roast焙煎",
+    "sourceIds": [
+     "ajca-roast-blend-4472"
+    ]
+   },
+   {
+    "index": 1,
+    "text": "浅煎りから深煎りの順に、ライト→シナモン→ミディアム→ハイ→シティ→フルシティ→フレンチ→イタリアン",
+    "quote": "浅煎り ライトロースト ... シナモンロースト ... 中煎り ミディアムロースト ... ハイロースト ... シティロースト ... 深煎り フルシティロースト ... フレンチロースト ... イタリアンロースト",
+    "location": "全日本コーヒー協会「焙煎・配合・粉砕」Roast焙煎の一覧(見出しの並び)",
+    "sourceIds": [
+     "ajca-roast-blend-4472"
+    ]
+   },
+   {
+    "index": 2,
+    "text": "生豆を煎る度合いである(焙煎によって酸味・苦味・甘味・香りが引き出される)",
+    "quote": "無味無臭の生豆は焙煎することで、豆が内部に隠し持っている酸味、苦味、甘味、香りなどが引き出されます。",
+    "location": "全日本コーヒー協会「焙煎・配合・粉砕」Roast焙煎",
+    "sourceIds": [
+     "ajca-roast-blend-4472"
+    ]
+   },
+   {
+    "index": 3,
+    "text": "一般に、浅炒りほど酸味が強く、深炒りになるほど苦味を感じるようになる",
+    "quote": "一般的には浅炒りほど酸味が強く、深炒りになるほど苦味を感じるようになります。",
+    "location": "全日本コーヒー協会「焙煎・配合・粉砕」Roast焙煎",
+    "sourceIds": [
+     "ajca-roast-blend-4472"
+    ]
+   },
+   {
+    "index": 4,
+    "text": "客観指標として、赤外線で豆の色を測る「アグトロン値」があり、数値が大きいほど浅煎りである",
+    "quote": "Reducing the Agtron number (i.e. roasting darker) led to increased perceptions of “bitter,” “gritty,” and “roasted” attributes, while reducing the perceived “acidity” and “fruitiness.”",
+    "location": "SCA 25 Magazine Issue 5「Modulating Perception」(焙煎度の段落)。SCA Standard 102-2024 5.1.1 Roast Level",
+    "sourceIds": [
+     "sca-102-2024",
+     "sca-25-issue5-modulating-perception"
+    ]
+   }
+  ],
+  "sources": {
+   "ajca-roast-blend-4472": {
+    "title": "コーヒーができるまで④ 焙煎・配合・粉砕",
+    "org": "一般社団法人 全日本コーヒー協会",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": ""
+   },
+   "sca-102-2024": {
+    "title": "SCA Standard 102-2024 Coffee Value Assessment: Sample Preparation and Tasting Mechanics",
+    "org": "Specialty Coffee Association",
+    "kind": "primary",
+    "accessed": "2026-11-09",
+    "note": "pdftotextで本文を抽出。5.1.1 Roast Level を使用。"
+   },
+   "sca-25-issue5-modulating-perception": {
+    "title": "Modulating Perception (25 Magazine: Issue 5)",
+    "org": "Specialty Coffee Association",
+    "kind": "primary",
+    "accessed": "2026-11-09",
+    "note": ""
+   }
+  }
+ },
+ {
+  "key": "glossary:特定銘柄",
+  "content": {
+   "summary": "全日本コーヒー公正取引協議会の「レギュラーコーヒー及びインスタントコーヒーの表示に関する公正競争規約」の施行規則が、産地・銘柄の区分と範囲として14種類を例示している。",
+   "detail": "ブルーマウンテンやキリマンジャロなど14の銘柄の区分と範囲が、施行規則の別表2に例示されている。この規約は、事業者・事業者団体が景品表示法に基づき、消費者庁長官と公正取引委員会の認定を受けて設定した、日本国内の表示のルール。「○○ブレンド」(○○は生豆の産地、品種、銘柄等)と表示できるのは、その生豆を30パーセント以上使用しているものに限られる。"
+  },
+  "claims": [
+   {
+    "index": 0,
+    "text": "全日本コーヒー公正取引協議会が定める(銘柄表示のルール)",
+    "quote": "公正取引協議会は、この規約の実施及び運営に関する事項について施行規則を定めることができる。",
+    "location": "公正競争規約 第12条第1項(p.12)。協議会の名称は第7条(p.10)「全日本コーヒー公正取引協議会（以下「公正取引協議会」という。）を設置する。」",
+    "sourceIds": [
+     "jfftc-coffee-kiyaku"
+    ]
+   },
+   {
+    "index": 1,
+    "text": "日本国内の表示ルールである(レギュラーコーヒー及びインスタントコーヒーの表示に関する規約)",
+    "quote": "レギュラーコーヒー及びインスタントコーヒーの表示に関する公正競争規約",
+    "location": "規約の表題(p.1)および第1条(目的)",
+    "sourceIds": [
+     "jfftc-coffee-kiyaku"
+    ]
+   },
+   {
+    "index": 2,
+    "text": "14種類の銘柄(ブルーマウンテンやキリマンジャロなど)の区分と範囲が、規約の別表で示されている",
+    "quote": "産地、品種、銘柄の区分及び範囲の例示 1) ブルーマウンテン : ジャマイカ・ブルーマウンテン地区にて生産されたアラビカコーヒー豆をいう。 ... 9) キリマンジャロ : タンザニアにて生産されたアラビカコーヒー豆をいう。ただし、ブコバ地区でとれるアラビカコーヒー豆は含まない｡ ... 14) ハワイコナ : アメリカのハワイ州南コナ地区及び北コナ地区にて生産されたアラビカコーヒー豆をいう。",
+    "location": "公正競争規約施行規則 別表2(p.13-14)。施行規則第3条第1項第1号ウが別表2を参照",
+    "sourceIds": [
+     "jfftc-coffee-kiyaku"
+    ]
+   },
+   {
+    "index": 3,
+    "text": "「○○ブレンド」と名乗る場合は、その銘柄の生豆を30%以上使用している必要がある",
+    "quote": "「○○○ブレンド」（「○○○」は、コーヒー生豆の産地、品種、銘柄等をいう。）と表示する場合は、当該コーヒー生豆を 30 パーセント以上使用しているものに限り表示することができる。",
+    "location": "公正競争規約施行規則 第3条第1項第1号イ(p.7)",
+    "sourceIds": [
+     "jfftc-coffee-kiyaku"
+    ]
+   },
+   {
+    "index": 4,
+    "text": "日本国内の業界自主規制である",
+    "quote": "公正競争規約は、景品表示法（不当景品類及び不当表示防止法）第36条の規定により、事業者または事業者団体が、消費者庁長官および公正取引委員会の認定を受けて、景品類または表示に関する事項について自主的に設定する業界のルールです。",
+    "location": "全国公正取引協議会連合会「公正競争規約とは」",
+    "sourceIds": [
+     "jfftc-kiyaku-about"
+    ]
+   }
+  ],
+  "sources": {
+   "jfftc-coffee-kiyaku": {
+    "title": "レギュラーコーヒー及びインスタントコーヒーの表示に関する公正競争規約・同施行規則(令和6年10月1日施行の変更を含む)",
+    "org": "全日本コーヒー公正取引協議会(PDFは全国公正取引協議会連合会が公開)",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": "全16ページ。pypdfでは3ページ目以降が文字化けしたため、pdftotext(poppler)で本文を抽出して読んだ。ページ番号は紙面の番号。"
+   },
+   "jfftc-kiyaku-about": {
+    "title": "公正競争規約とは(公正競争規約のページ)",
+    "org": "全国公正取引協議会連合会",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": "curlでHTMLを取得し、本文を取り出して読んだ。"
+   }
+  }
+ }
+]

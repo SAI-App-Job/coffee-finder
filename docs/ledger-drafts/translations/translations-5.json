@@ -1,0 +1,263 @@
+{
+  "translations": {
+    "origin:ペルー:gradeSystem": {
+      "en": {
+        "text": "The INACAL (Peru's National Institute of Quality) implementation guide GIP 101:2026 (2nd edition) is a guide for NTP 209.027:2024 + CT 1:2025 (requirements for green coffee). According to the guide, the upper limit of defects (defectos o imperfecciones) is 15 for Grado 1, 23 for Grado 2, and 30 for Grado 3. Moisture is 10-12.5%, and for screen size, at least 50% must be retained on malla 15 (6 mm). The implementation guide GIP 107:2021 for a separate standard, NTP 209.311 (specialty coffee, 2019 edition), indicates 0 primary defects and a maximum of 5 secondary defects."
+      },
+      "notes": "INACAL=National Institute of Quality と訳出。「実施ガイド」はimplementation guide"
+    },
+    "origin:ペルー:history": {
+      "en": {
+        "text": "The 1st-place lot at the COE (Cup of Excellence) Peru competition in 2017 was La Flor (Juan Heredia Sanchez, Jaén, Cajamarca, 92.25 points). In later competitions as well, the 1st-place lots in 2019, 2022, 2023, 2024, 2025 and 2026 were from Cajamarca (results pages on the ACE official website)."
+      },
+      "notes": ""
+    },
+    "origin:ペルー:officialBody": {
+      "en": {
+        "text": "The Junta Nacional del Café (JNC) was officially established on January 6, 1993. By the JNC's own description, it is the body that represents Peru's coffee producers before the state, and it brings together a total of 70,000 member households across 56 coffee-related organizations (associations and cooperatives) spanning 14 coffee zones (as published on the official website, 2024-2026)."
+      },
+      "notes": ""
+    },
+    "origin:ペルー:regions": {
+      "en": {
+        "text": "According to USDA FAS (May 2025), the main producing regions include Cajamarca (22% of production), San Martín (20%), Junín (19%), and Amazonas (15%)."
+      },
+      "notes": ""
+    },
+    "origin:ペルー:sub:アマソナス(ロドリゲス・デ・メンドーサ)": {
+      "en": {
+        "detail": "Amazonas: accounts for 15% of national production (USDA FAS, May 2025)."
+      },
+      "notes": ""
+    },
+    "origin:ペルー:sub:カハマルカ": {
+      "en": {
+        "detail": "Cajamarca: accounts for 22% of national production, the largest among the main producing regions listed by USDA FAS (Cajamarca, San Martín, Junín, Amazonas) (USDA FAS, May 2025). At the COE Peru competitions (official ACE results), there are years in which a lot from Cajamarca took 1st place."
+      },
+      "notes": ""
+    },
+    "origin:ペルー:sub:クスコ(南部)": {
+      "en": {
+        "detail": "Cusco: at the COE Peru competitions, a lot from Nueva Alianza took 1st place in 2018 (91.08 points) and in 2021 (90.2 points) (COE official website)."
+      },
+      "notes": ""
+    },
+    "origin:ペルー:sub:フニン(チャンチャマヨ/サティポ)": {
+      "en": {
+        "detail": "Junín: accounts for 19% of national production (USDA FAS, May 2025)."
+      },
+      "notes": ""
+    },
+    "origin:ペルー:tagline": {
+      "en": {
+        "text": "According to USDA FAS (May 2025), Peruvian coffee is grown mainly on the eastern slopes of the Andes. More than 90% of production comes from smallholder farmers on plots smaller than 5 hectares, and Peru is also one of the world's leading exporters of organic coffee."
+      },
+      "notes": ""
+    },
+    "origin:ペルー:terroir": {
+      "en": {
+        "text": "Peruvian coffee is grown mainly on the eastern slopes of the Andes (USDA FAS, May 2025)."
+      },
+      "notes": ""
+    },
+    "origin:ペルー:varietiesDetail": {
+      "en": {
+        "text": "According to USDA FAS (May 2025), Peru primarily produces Arabica, with Typica at over 70%, followed by Caturra (20%) and other varieties (10%)."
+      },
+      "notes": ""
+    },
+    "origin:メキシコ:farmStructure": {
+      "en": {
+        "text": "According to SAGARPA's \"Café Mexicano - Planeación Agrícola Nacional 2017-2030\", more than 500,000 producers are involved in coffee production in Mexico."
+      },
+      "notes": ""
+    },
+    "origin:メキシコ:harvestSeason": {
+      "en": {
+        "text": "Harvest takes place mainly from November to March (FIRA, 2016)."
+      },
+      "notes": ""
+    },
+    "origin:メキシコ:history": {
+      "en": {
+        "text": "Coffee was introduced to Mexico at the end of the 18th century (SADER). The International Coffee Organization (ICO) operated a quota system on and off from 1962 to 1989, and the system was suspended in 1989 because of a failure to agree on quota distribution (ICO)."
+      },
+      "notes": ""
+    },
+    "origin:メキシコ:officialBody": {
+      "en": {
+        "text": "The name AMECAFÉ (Asociación Mexicana de la Cadena Productiva del Café, A.C.) is listed as item \"I. AMECAFÉ\" in an agreement on certificates of origin for coffee exports published in the Official Gazette (December 26, 2020). A SAGARPA document (2016) explains that the CMC evolved into what is now AMECAFE between 2006 and 2012."
+      },
+      "notes": ""
+    },
+    "origin:メキシコ:sub:チアパス(ソコヌスコ・エルトリウンフ)": {
+      "en": {
+        "detail": "El Triunfo is the most diverse evergreen cloud forest in Mexico (UNESCO MAB)."
+      },
+      "notes": ""
+    },
+    "origin:メキシコ:tagline": {
+      "en": {
+        "text": "Most of Mexico's coffee producers are small-scale and very small-scale producers (SADER)."
+      },
+      "notes": ""
+    },
+    "origin:メキシコ:terroir": {
+      "en": {
+        "text": "El Triunfo is the most diverse evergreen cloud forest in Mexico (UNESCO MAB)."
+      },
+      "notes": ""
+    },
+    "origin:メキシコ:varietiesDetail": {
+      "en": {
+        "text": "An INIFAP press release states that the rust-resistant variety \"Oro Azteca\" was developed by INIFAP."
+      },
+      "notes": ""
+    },
+    "origin:ルワンダ:farmStructure": {
+      "en": {
+        "text": "An ICO survey report states that farmers typically own an average of 0.26 hectares of land for coffee cultivation. There were 313 CWSs (washing stations) in total in 2021 (ICO). The Dukunde Kawa Musasa cooperative in Gakenke district in the north introduces itself as founded in 2000 (CoE text)."
+      },
+      "notes": "CWS=Coffee Washing Station(原文はCWSsのみ。日本語の「ウォッシングステーション」をそのまま括弧で訳出)"
+    },
+    "origin:ルワンダ:harvestSeason": {
+      "en": {
+        "text": "Harvest starts in late February on the shores of Lake Kivu in the Western Province and in early March elsewhere, and continues until August in parts of the Northern Province (NAEB)."
+      },
+      "notes": ""
+    },
+    "origin:ルワンダ:history": {
+      "en": {
+        "text": "An ICO document states that when coffee prices fell because of oversupply immediately after the end of the Agreement's economic clauses, the coffee sectors of many countries stalled. Rwanda was the first African country to host a Cup of Excellence (COE) competition, and the first COE there dates back to 2008 (ACE)."
+      },
+      "notes": ""
+    },
+    "origin:ルワンダ:officialBody": {
+      "en": {
+        "text": "National Agricultural Export Development Board (NAEB). NAEB's own page describes it as a public institution (commercial public institution) established by Law No. 13/2017 of April 14, 2017. Law No. 39/2010 (2010) gives NAEB a period not exceeding six months from the date of publication in the Official Gazette to merge the export development activities formerly performed by the Rwanda Coffee Development Authority (OCIR-CAFE), the Rwanda Tea Development Authority (OCIR-THE), and the Rwanda Horticulture Development Authority (RHODA). NAEB's page \"About Rwanda coffee\" describes the promotion, marketing and export of Rwandan coffee, and support for coffee production by providing technical assistance and planting material to farmers. An ICO report states that NAEB plays a pivotal role in establishing the annual coffee cherry floor price in collaboration with stakeholders."
+      },
+      "notes": ""
+    },
+    "origin:ルワンダ:regions": {
+      "en": {
+        "text": "The COE official website's \"Rwanda 2008\" page lists the entries \"Buremera Mig Uwimana Rose Huye, South\" (Huye district, Southern Province), \"Sdl Minazi Abakundakawa Ribarimana Jean Baptiste Gakenke, North\" (Gakenke district, Northern Province), and \"Nyabumera Coop-Abaryoshyakawa Hategika Francois Nyamasheke, Western\" (Nyamasheke district, Western Province). According to NAEB, harvest starts in late February on the shores of Lake Kivu in the Western Province and in early March elsewhere."
+      },
+      "notes": ""
+    },
+    "origin:ルワンダ:sub:ガケンケ(北部州)": {
+      "en": {
+        "detail": "The CoE Farm Directory 2015 page for \"Dukundekawa Musasa/Mbirima/Rwashoscco\" (CoE text) states Province: North, District: Gakenke, Sector: Ruli, and an altitude of 1,500-2,000 m (Altitude: 1500 to 2000 meters)."
+      },
+      "notes": ""
+    },
+    "origin:ルワンダ:sub:ニャマシェケ(西部州・キブ湖岸)": {
+      "en": {
+        "detail": "The COE official website's \"Rwanda 2008\" page lists the entry \"Nyabumera Coop-Abaryoshyakawa Hategika Francois Nyamasheke, Western\" (Nyamasheke district, Western Province)."
+      },
+      "notes": ""
+    },
+    "origin:ルワンダ:sub:フイエ/ニャマガベ(南部州・旧マラバ地区)": {
+      "en": {
+        "detail": "The COE official website's \"Rwanda 2008\" page lists the entry \"Buremera Mig Uwimana Rose Huye, South\" (Huye district, Southern Province)."
+      },
+      "notes": ""
+    },
+    "origin:ルワンダ:sub:西部州キブ湖東岸(ルツィロ/カロンギ)": {
+      "en": {
+        "detail": "The COE official website's \"Rwanda 2008\" page lists the entry \"Horizon Mushonyi Twizerimana Ismael Rutsiro, Western\" (Rutsiro district, Western Province)."
+      },
+      "notes": ""
+    },
+    "origin:ルワンダ:tagline": {
+      "en": {
+        "text": "According to WCR, about 62% of Rwanda's exports are fully washed."
+      },
+      "notes": ""
+    },
+    "origin:ルワンダ:terroir": {
+      "en": {
+        "text": "Rwanda benefits from fertile volcanic soils (ICO). According to Meteo Rwanda, climatologically two rainy seasons can generally be distinguished, centered around March-May and around October-December."
+      },
+      "notes": ""
+    },
+    "origin:ルワンダ:varietiesDetail": {
+      "en": {
+        "text": "According to NAEB, Rwandan coffee is dominated mainly by \"bourbon\" type Arabica, and coffee was introduced by the Germans in the early 1900s. According to an ICO survey report, trees aged 30 years or older account for about 39%. RAB C15, an improved variety resistant to rust and CBD, was released in 2015 but is not yet widely planted (WCR)."
+      },
+      "notes": ""
+    },
+    "processing:アナエロビック": {
+      "en": {
+        "explanation": "The SCA article \"The Fermentation Effect\" (25 Magazine, Issue 10) describes anaerobic fermentation as fermentation with limiting or absence of oxygen during fermentation, and calls it a trendy method."
+      },
+      "notes": ""
+    },
+    "processing:ウェットハルド": {
+      "en": {
+        "explanation": "Wet hulling is a method in which the parchment (the husk) is removed while still moist. According to ICCRI (S. Mawardi, 2008 ICO seminar material), the parchment is typically removed when the moisture content is about 30-35%, and afterwards the green beans continue to be sun-dried until the moisture content reaches 12-13%."
+      },
+      "notes": ""
+    },
+    "processing:ウォッシュド": {
+      "en": {
+        "explanation": "In basic wet processing, the pulp of the cherries is removed and the beans are submerged under water and fermented. Afterwards, the water in the fermentation tank is drained, and the fermented beans are washed with water to remove the remaining mucilage (SCA \"25 Magazine\")."
+      },
+      "notes": ""
+    },
+    "processing:ナチュラル": {
+      "en": {
+        "explanation": "A method (dry method) in which the coffee is dried as whole cherries (the fruit) and hulled after drying. The ICO writes that the harvested cherries are placed on racks and dried in the sun."
+      },
+      "notes": ""
+    },
+    "processing:ハニー": {
+      "en": {
+        "explanation": "A method in which, after the pulp is removed, the coffee is dried in parchment (the husk) with some or all of the mucilage left on (a type of pulped natural). SCA's \"25 Magazine\" (Issue 6) describes red and yellow honey as pulped natural coffees dried with some, but not all, of the mucilage attached, and says that the one dried with all the mucilage attached is also called black honey. The same magazine (Issue 10) lists the pulped honey process as one of the hybrid or novel methods that have gained popularity in the producing regions."
+      },
+      "notes": ""
+    },
+    "variety:カトゥーラ/カトゥアイ系統": {
+      "en": {
+        "tagline": "",
+        "varieties": [],
+        "note": "Caturra is a natural mutation of Bourbon, in which a single-gene mutation causes the plant to grow smaller (dwarf/compact). WCR describes it as a compact plant of standard quality in Central America with good yield potential. Catuai is a cross between Mundo Novo (a natural cross of Bourbon and Typica) and Caturra, created by the IAC (Instituto Agronomico) in Campinas, São Paulo State, Brazil, and is widely cultivated in Brazil. Maragogype (Maragogipe) is a mutation with especially large beans, internode spacing and leaves, and very low yield. Pacamara is a cross between Pacas and Maragogipe, grown primarily in El Salvador, where, WCR writes, it frequently dominates Cup of Excellence competitions."
+      },
+      "notes": "Catuai=原文に従いCatuai(日本語もカトゥアイ)。サンパウロ州はSão Paulo State(引用はSao Paulo State)"
+    },
+    "variety:サルチモール/カティモール系統": {
+      "en": {
+        "tagline": "",
+        "varieties": [],
+        "note": "A group of crossbred varieties whose parent is the Timor Hybrid (a variety that appeared in the 1920s on the island of Timor from a spontaneous natural cross between Arabica and Robusta). WCR writes that the crosses Timor Hybrid x Caturra and Timor Hybrid x Villa Sarchi led to the creation of the two main groups of introgressed Arabica varieties: Catimors and Sarchimors. WCR writes that these varieties have traditionally been associated with lower cup quality than others. Marsellesa is a cross of Timor Hybrid 832/2 and Villa Sarchi CIFC 971/10, released in 2009."
+      },
+      "notes": ""
+    },
+    "variety:ティピカ系統": {
+      "en": {
+        "tagline": "WCR writes that Typica has very low yield but good cup quality",
+        "varieties": [
+          "Typica",
+          "Pache"
+        ],
+        "note": "Historians believe that coffee seeds were first taken from the forests of southwestern Ethiopia to Yemen and cultivated there as a crop. WCR writes that the Typica branch likely separated from Bourbon around the time the Dutch sent seeds from the Malabar coast of India to Batavia in 1696 and 1699. WCR describes Typica as a variety with very low yield, susceptibility to the major diseases, and good cup quality. Pache is a natural mutation of Typica."
+      },
+      "notes": "varietiesは日本語「Typica(ティピカ)」「Pache(パチェ)」の括弧内カナを除き英語名のみ。要素数は同じ(2)"
+    },
+    "variety:ブルボン系統": {
+      "en": {
+        "tagline": "WCR writes that it was introduced from Yemen to Bourbon Island (now Réunion), and the island's name gave the variety its name",
+        "varieties": [],
+        "note": "Bourbon is a variety that French missionaries introduced from Yemen to Bourbon Island (now Réunion) in the early 1700s, and the island's name is the origin of the variety's name. WCR describes Pacas as a natural mutation of Bourbon and Villa Sarchi as a natural mutation of a Bourbon population."
+      },
+      "notes": "La Réunion→Réunion(日本語は「レユニオン島」)"
+    },
+    "variety:特殊・高付加価値品種": {
+      "en": {
+        "tagline": "",
+        "varieties": [],
+        "note": "According to WCR, Geisha is a variety collected in Ethiopian forests in the 1930s. It came to prominence in 2005 when the Peterson family of Boquete, Panama, entered it into the \"Best of Panama\" competition and auction. Starmaya is a first-generation (F1) hybrid from a cross between Marsellesa and a male-sterile Ethiopian or Sudanese landrace. WCR writes that, so far, Starmaya is the only F1 hybrid in the world that professional seed producers can propagate by seed, rather than through costly biotechnology."
+      },
+      "notes": ""
+    }
+  }
+}

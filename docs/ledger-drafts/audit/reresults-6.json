@@ -1,0 +1,302 @@
+{
+  "results": {
+    "origin:パナマ:varietiesDetail": {
+      "verdict": "ok",
+      "problems": []
+    },
+    "origin:ブラジル:farmStructure": {
+      "verdict": "fix",
+      "finalContent": {
+        "text": "Embrapaの記事によると、コーヒーは国立産業財産院(INPI)に14件の地理的表示が登録されている。Cerrado Mineiroの地理的表示は、2013年に原産地呼称(DO)の登録に切り替えられた(Embrapa)。"
+      },
+      "usedClaims": [
+        0,
+        1
+      ],
+      "problems": [
+        "「地理的表示の数が最も多い産品」は引用に無い(資料の題名にあるのみ)ので削除"
+      ]
+    },
+    "origin:ブラジル:gradeSystem": {
+      "verdict": "fix",
+      "finalContent": {
+        "text": "MAPAの規則(Instrução Normativa 8/2003)の付属書には、ふるい(peneiras)の番号を挙げた記載(「Chato graúdo: peneiras 19/18 e 17」)がある。この規則に反して生豆(Café Beneficiado Grão Cru)を商業化することは、詐欺とみなされる。また、MAPAが作成したブラジル公式分類(COB)の新しい表が、2026年のCecaféの連絡(Comunicado 081-2026)で言及されている。"
+      },
+      "usedClaims": [
+        0,
+        3,
+        4
+      ],
+      "problems": [
+        "「欠点数によるタイプ2〜8」「数字が小さいほど欠点が少ない」は、引用(表の数字の断片)から読み取れないので削除",
+        "ふるい分類は引用の範囲(peneirasの記載がある)に限定"
+      ]
+    },
+    "origin:ブラジル:harvestSeason": {
+      "verdict": "ok",
+      "problems": []
+    },
+    "origin:ブラジル:history": {
+      "verdict": "ok",
+      "problems": []
+    },
+    "origin:ブラジル:officialBody": {
+      "verdict": "ok",
+      "problems": []
+    },
+    "origin:ブラジル:sub:セラード(セラード・ミネイロ)": {
+      "verdict": "fix",
+      "finalContent": {
+        "detail": "Cerrado Mineiroは、ブラジルでコーヒーとして初のDO(原産地呼称)を取得した産地(Embrapa)。"
+      },
+      "usedClaims": [
+        0
+      ],
+      "problems": [
+        "「2013年」は引用に無い",
+        "「土壌改良・施肥・灌漑・栽培品種などの技術が使われている」は引用が語句の列挙のみで、使われているとは読み取れないので削除",
+        "主語(Cerrado Mineiro)は引用に無く、記事題名に依拠(要注意)"
+      ]
+    },
+    "origin:ブラジル:tagline": {
+      "verdict": "ok",
+      "problems": []
+    },
+    "origin:ブラジル:terroir": {
+      "verdict": "fix",
+      "finalContent": {
+        "text": "ミナスジェライス州はブラジル国内で最大のコーヒー生産州で、エスピリトサント、サンパウロ、バイーア、ロンドニアが続く(USDA FAS、2025年)。Embrapaの記事『Cerrado Mineiro é destaque…』は、長い乾期と低肥沃度の土壌を特徴として挙げる。"
+      },
+      "usedClaims": [
+        0,
+        1
+      ],
+      "problems": [
+        "「土壌改良・施肥・灌漑・栽培品種などの技術が用いられている」は引用が語句の列挙のみなので削除",
+        "「セラード=特徴の主語」は引用に無く記事題名に依拠するため、記事名を明示"
+      ]
+    },
+    "origin:ブラジル:varietiesDetail": {
+      "verdict": "fix",
+      "finalContent": {
+        "text": "ムンドノーボはスマトラと赤ブルボンの自然交雑に由来し、樹高が高く茎が細い(Embrapa Rondônia)。Embrapaは、ムンドノーボとカトゥアイ・ベルメーリョ(赤)が、ブラジルのアラビカ栽培面積の約9割に存在すると記す。カトゥアイ(赤・黄)はムンドノーボとカトゥーラ・アマレーロ(黄)の交配で、1972年に圃場に出た(Embrapa)。"
+      },
+      "usedClaims": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "problems": [
+        "「Alta Mogianaの項では最も多く栽培…」は、地域名が引用に無く(場所の注記のみ)、地域を外すと意味が変わるので文ごと削除"
+      ]
+    },
+    "origin:ベトナム:farmStructure": {
+      "verdict": "fix",
+      "finalContent": {
+        "text": "USDA FAS(2026年)によると、60万戸超の小農世帯がコーヒー生産に関わる。EUDR(EU森林破壊規制)の要件は2026年12月に施行される(同)。USDA FAS(2025年)は、EUDRがベトナムのコーヒー生産者にとって課題を生んでいること、ベトナムのコーヒー輸出の41%がEU向けであることを記す。"
+      },
+      "usedClaims": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "problems": [
+        "引用は「EUDRの要件(requirements)が2026年12月に発効」なので、規則そのものの施行と読めないよう「要件は」に修正"
+      ]
+    },
+    "origin:ベトナム:history": {
+      "verdict": "fix",
+      "finalContent": {
+        "text": "1857年、フランスの宣教師を通じて、アラビカがベトナムに最初に導入されたコーヒー品種となった(ICO、2019年3月)。VICOFAの沿革は、最終的にアラビカ(Chè)をロブスタ(Vối)とエクセルサ(Mít)に置き換えることにしたと記す。1986年以降、ベトナム政府はコーヒー部門への投資に資源を集中してきた(ICO)。ICOの2019年3月の資料では、ベトナムは世界第2位のコーヒー生産国・輸出国の地位を保つことが目標に挙げられている。VICOFAは、ロブスタの最大の輸出国はベトナムだと記す。"
+      },
+      "usedClaims": [
+        0,
+        1,
+        3,
+        4,
+        5
+      ],
+      "problems": [
+        "「ドイモイは1986年に始まった」は、引用(launched in 1986, have spurred rapid economic growth)にドイモイの語も主語も無いので削除"
+      ]
+    },
+    "origin:ベトナム:officialBody": {
+      "verdict": "ok",
+      "problems": [
+        "引用中の「là cơ quan trực thuộc…」の係り先(STAMEQか委員会か)が引用だけでは曖昧。資料の主張どおりSTAMEQに係る解釈で維持(要注意)"
+      ]
+    },
+    "origin:ベトナム:sub:Da Lat/Cau Dat(Lam Dong)": {
+      "verdict": "ok",
+      "problems": []
+    },
+    "origin:ベトナム:sub:ダクラク(Buon Ma Thuot)": {
+      "verdict": "ok",
+      "problems": []
+    },
+    "origin:ベトナム:tagline": {
+      "verdict": "fix",
+      "finalContent": {
+        "text": "ICOの国別プロファイル(2019年3月)は、ベトナムを世界第2位のコーヒー生産国・輸出国としている。同プロファイルは、ロブスタが総生産量の97%を占めると記す。"
+      },
+      "usedClaims": [
+        0,
+        1
+      ],
+      "problems": [
+        "「序文」は場所の注記にしか無いので削除"
+      ]
+    },
+    "origin:ベトナム:terroir": {
+      "verdict": "fix",
+      "finalContent": {
+        "text": "ICOの国別プロファイル(2019年)には、コーヒー栽培に適した広い面積の赤色バサルト土壌があると書かれている。USDA FAS(2026年)は、早すぎる、または過剰な灌漑は短期的には収量を増やしうるが、長期的には地下水を枯渇させ、生産コストを押し上げると記す。"
+      },
+      "usedClaims": [
+        1,
+        2
+      ],
+      "problems": [
+        "「中部高原(タイグエン)が栽培面積の92%」は、引用に主語(中部高原)が無く場所の注記だけなので削除"
+      ]
+    },
+    "origin:ベトナム:varietiesDetail": {
+      "verdict": "fix",
+      "finalContent": {
+        "text": "ICOの国別プロファイル(2019年3月)は、ベトナムで栽培されるアラビカのほぼ99%がカティモール種だと記す。同プロファイルには、ベトナムの研究者がクローンTR4、TR5、TR6、TR7、TR8、TR9、TR11、TR12、TR13、TR14、TR15(またはTRS 1)と名付けた、との記述がある。また、Cau Dat‒Da Lat産のアラビカ・ブルボンとBuon Ma Thuot産のロブスタの混合(mixture)に関する記述もある。"
+      },
+      "usedClaims": [
+        0,
+        1,
+        2
+      ],
+      "problems": [
+        "「2.1節」は場所の注記のみなので削除",
+        "「2015年のAVPA受賞」は引用に無い(場所の注記のみ)ので削除し、引用の範囲の記述に直した",
+        "「TR15(TRS 1)」は引用が「TR15 or TRS 1」なので「またはTRS 1」に修正"
+      ]
+    },
+    "origin:ペルー:farmStructure": {
+      "verdict": "fix",
+      "finalContent": {
+        "text": "USDA FAS(2025年5月)によると、ペルーのコーヒーの90%超は、5ヘクタール未満の区画で小規模農家が生産している。同資料は、ペルーを世界有数の有機コーヒー輸出国(world's leading exporter of organic coffee)とも記す。Junta Nacional del Café(JNC)は公式サイト(2024年3月保存版)で、協会と協同組合を合わせた56のコーヒー関連組織が集まり、会員世帯は合計7万で、14のコーヒー地帯に根ざしていると述べる。"
+      },
+      "usedClaims": [
+        0,
+        1,
+        2
+      ],
+      "problems": [
+        "引用は「70 mil familias」で、「約」は引用に無いので削除",
+        "「加盟」「産地にまたがる」は引用(reúne / arraigadas en)に合わせて言い換え"
+      ]
+    },
+    "origin:ペルー:gradeSystem": {
+      "verdict": "fix",
+      "finalContent": {
+        "text": "INACAL(ペルー国家品質院)の実施ガイドGIP 101:2026(第2版)は、NTP 209.027:2024 + CT 1:2025(コーヒー生豆の要求事項)のためのガイドである。同ガイドによると、欠点(defectos o imperfecciones)の上限はGrado 1が15、Grado 2が23、Grado 3が30。水分は10〜12.5%で、粒度は最低でも50%がmalla 15(6mm)に残ること。別の規格NTP 209.311(スペシャルティコーヒー、2019年版)の実施ガイドGIP 107:2021は、主要欠点0、二次欠点は最大5と示す。"
+      },
+      "usedClaims": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "problems": [
+        "内容は引用と一致。ただし「マラ15」は引用の語malla 15の不正確な音写なので原語表記に修正"
+      ]
+    },
+    "origin:ペルー:history": {
+      "verdict": "fix",
+      "finalContent": {
+        "text": "COE(カップ・オブ・エクセレンス)ペルー大会の1位は、2017年がLa Flor(Juan Heredia Sanchez、ハエン(Jaén)、カハマルカ、92.25点)。その後の大会でも、2019年・2022年・2023年・2024年・2025年・2026年の1位はカハマルカ産だった(ACE公式サイトの結果ページ)。"
+      },
+      "usedClaims": [
+        0,
+        1,
+        2
+      ],
+      "problems": [
+        "引用は「La Flor」で「Finca」は無い",
+        "引用は「Jaén, Cajamarca」で「カハマルカ州ハエン」と行政区分を断定していないので並記に修正",
+        "年と順位の対応は引用の並び順と資料題名に依拠(要注意)"
+      ]
+    },
+    "origin:ペルー:officialBody": {
+      "verdict": "fix",
+      "finalContent": {
+        "text": "Junta Nacional del Café(JNC)は1993年1月6日に正式に設置された。JNC自身の説明では、ペルーのコーヒー生産者を国に対して代表する機関で、14のコーヒー地帯にまたがる56のコーヒー関連組織(協会・協同組合)の会員世帯合計7万をまとめている(2024〜2026年の公式サイト掲載)。"
+      },
+      "usedClaims": [
+        0,
+        1,
+        2
+      ],
+      "problems": [
+        "「約7万」の「約」は引用(70 mil)に無いので削除"
+      ]
+    },
+    "origin:ペルー:regions": {
+      "verdict": "ok",
+      "problems": []
+    },
+    "origin:ペルー:sub:アマソナス(ロドリゲス・デ・メンドーサ)": {
+      "verdict": "ok",
+      "problems": []
+    },
+    "origin:ペルー:sub:カハマルカ": {
+      "verdict": "ok",
+      "problems": [
+        "1位は引用の「1a/1A」表記に依拠、年と順位の対応は資料題名に依拠(要注意)"
+      ]
+    },
+    "origin:ペルー:sub:クスコ(南部)": {
+      "verdict": "ok",
+      "problems": [
+        "年と点数の対応は引用の並び順と資料題名に依拠(要注意)"
+      ]
+    },
+    "origin:ペルー:sub:フニン(チャンチャマヨ/サティポ)": {
+      "verdict": "ok",
+      "problems": []
+    },
+    "origin:ペルー:tagline": {
+      "verdict": "fix",
+      "finalContent": {
+        "text": "USDA FAS(2025年5月)によれば、ペルーのコーヒーは主にアンデスの東斜面で栽培される。生産の9割超は5ヘクタール未満の小規模農家によるもので、世界有数の有機コーヒー輸出国でもある。"
+      },
+      "usedClaims": [
+        0,
+        1,
+        2
+      ],
+      "problems": [
+        "冒頭の栽培地の文に帰属(USDA FAS)が無かったので、帰属を全体にかかるよう修正"
+      ]
+    },
+    "origin:ペルー:terroir": {
+      "verdict": "ok",
+      "problems": []
+    },
+    "origin:ペルー:varietiesDetail": {
+      "verdict": "ok",
+      "problems": []
+    },
+    "origin:メキシコ:farmStructure": {
+      "verdict": "fix",
+      "finalContent": {
+        "text": "SAGARPAの『Café Mexicano - Planeación Agrícola Nacional 2017-2030』によれば、メキシコのコーヒー生産には50万を超える生産者が関わっている。"
+      },
+      "usedClaims": [
+        0
+      ],
+      "problems": [
+        "「SAGARPA(2017年)」の年は資料題名の「2017-2030」にしか根拠が無いので、資料名で帰属を示す形に修正"
+      ]
+    }
+  }
+}

@@ -1,20 +1,25 @@
 import { X, MapPin, ExternalLink, Heart, ArrowLeftRight, Check, Coffee, Sparkles, NotebookPen } from "lucide-react";
 import { brandName, designatedBrandExplanation, processingExplanation } from "../data/localize";
-import { getGradeExplanation } from "../utils/grade";
+import { getGradeExplanation, getGradeExplanationKey } from "../utils/grade";
 import { categorizeFlavorNotes } from "../utils/flavor";
 import { cityFromAddress, formatPrice } from "../utils/format";
 import { isNewArrival } from "../utils/productSort";
-import { StarRating } from "./common";
+import { StarRating, SourceLinks } from "./common";
 import { PhotoPicker } from "./ProductPhoto";
 import { useT } from "../i18n";
 
-function DetailRow({ label, value, detail }) {
+function DetailRow({ label, value, detail, sourceKeys }) {
   if (!value) return null;
   return (
     <div>
       <p className="text-[11px] tracking-wide text-[var(--accent-label)] uppercase mb-1">{label}</p>
       <p className="text-[13px] text-[var(--c-text)] whitespace-pre-line">{value}</p>
       {detail && <p className="text-[12px] text-[var(--c-text-2)] leading-relaxed mt-1">{detail}</p>}
+      {detail && sourceKeys && sourceKeys.length > 0 && (
+        <p className="text-[11px] text-[var(--c-text-3)] leading-relaxed mt-1">
+          <SourceLinks keys={sourceKeys} />
+        </p>
+      )}
     </div>
   );
 }
@@ -44,6 +49,8 @@ export function ProductDetailModal({
   const gradeDetail = product.grade
     ? getGradeExplanation(product.grade, product.originCountry, product.designatedBrand)
     : null;
+  const gradeKey = gradeDetail ? getGradeExplanationKey(product.grade, product.originCountry, product.designatedBrand) : null;
+  const brandExplanation = product.designatedBrand ? designatedBrandExplanation(product.designatedBrand) : null;
   const flavorCategories = categorizeFlavorNotes(product.flavorNotes);
   const favorited = isFavorite?.(product.id) ?? false;
   const comparing = isComparing?.(product.id) ?? false;
@@ -136,15 +143,22 @@ export function ProductDetailModal({
             value={brandName(product.designatedBrand)}
             detail={
               product.designatedBrand &&
-              (designatedBrandExplanation(product.designatedBrand) || t("この銘柄についての解説はまだ用意されていません。"))
+              (brandExplanation || t("この銘柄についての解説はまだ用意されていません。"))
             }
+            sourceKeys={brandExplanation ? [`brand:${product.designatedBrand}`] : []}
           />
           <DetailRow
             label={t("精選方法")}
             value={t(product.processingMethod)}
             detail={product.processingMethod && (processingDetail || t("この精選方法についての解説はまだ用意されていません。"))}
+            sourceKeys={processingDetail ? [`processing:${product.processingMethod}`] : []}
           />
-          <DetailRow label={t("グレード")} value={product.grade} detail={gradeDetail} />
+          <DetailRow
+            label={t("グレード")}
+            value={product.grade}
+            detail={gradeDetail}
+            sourceKeys={gradeKey ? [gradeKey] : []}
+          />
           <DetailRow
             label={t("焙煎度")}
             value={product.roast ? t(product.roast) : product.roastSelectable ? t("注文時に選択") : null}

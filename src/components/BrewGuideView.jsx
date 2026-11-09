@@ -1,6 +1,15 @@
 import { Coffee, Thermometer, Timer, Award, SlidersHorizontal } from "lucide-react";
-import { SectionHeading, SourceCredit } from "./common";
-import { BREW_METHODS, EXTRACTION_VARIABLES, EXTRACTION_DIAGNOSIS } from "../data/brewGuide";
+import { SectionHeading, VerifiedSources } from "./common";
+import {
+  PUBLISHED_BREW_METHODS,
+  PUBLISHED_EXTRACTION_VARIABLES,
+  PUBLISHED_EXTRACTION_DIAGNOSIS,
+  brewKey,
+  extractionKey,
+  diagnosisKey,
+  prose,
+  proseKey,
+} from "../data/published";
 import { localizeBrewMethod, localizeExtractionDiagnosis, localizeExtractionVariable } from "../data/localize";
 import { useT } from "../i18n";
 
@@ -12,22 +21,28 @@ export function BrewMethodCard({ brew: rawBrew }) {
       <div>
         <p className="text-[11px] tracking-[0.15em] text-[var(--accent-label)] uppercase">{brew.english}</p>
         <h3 className="font-serif text-[19px] text-[var(--c-text)] mt-0.5">{brew.method}</h3>
-        <p className="text-[13px] text-[var(--accent)] mt-1">{brew.tagline}</p>
+        {brew.tagline && <p className="text-[13px] text-[var(--accent)] mt-1">{brew.tagline}</p>}
       </div>
 
       <div className="grid grid-cols-3 gap-2">
-        <div className="bg-[var(--c-surface-2)] rounded-lg p-2 flex flex-col items-center gap-1 text-center">
-          <Coffee size={13} className="text-[var(--accent-label)]" strokeWidth={1.75} />
-          <span className="text-[11px] text-[var(--c-text-2)] leading-tight">{brew.ratio}</span>
-        </div>
-        <div className="bg-[var(--c-surface-2)] rounded-lg p-2 flex flex-col items-center gap-1 text-center">
-          <Thermometer size={13} className="text-[var(--accent-label)]" strokeWidth={1.75} />
-          <span className="text-[11px] text-[var(--c-text-2)] leading-tight">{brew.temp}</span>
-        </div>
-        <div className="bg-[var(--c-surface-2)] rounded-lg p-2 flex flex-col items-center gap-1 text-center">
-          <Timer size={13} className="text-[var(--accent-label)]" strokeWidth={1.75} />
-          <span className="text-[11px] text-[var(--c-text-2)] leading-tight">{brew.time}</span>
-        </div>
+        {brew.ratio && (
+          <div className="bg-[var(--c-surface-2)] rounded-lg p-2 flex flex-col items-center gap-1 text-center">
+            <Coffee size={13} className="text-[var(--accent-label)]" strokeWidth={1.75} />
+            <span className="text-[11px] text-[var(--c-text-2)] leading-tight">{brew.ratio}</span>
+          </div>
+        )}
+        {brew.temp && (
+          <div className="bg-[var(--c-surface-2)] rounded-lg p-2 flex flex-col items-center gap-1 text-center">
+            <Thermometer size={13} className="text-[var(--accent-label)]" strokeWidth={1.75} />
+            <span className="text-[11px] text-[var(--c-text-2)] leading-tight">{brew.temp}</span>
+          </div>
+        )}
+        {brew.time && (
+          <div className="bg-[var(--c-surface-2)] rounded-lg p-2 flex flex-col items-center gap-1 text-center">
+            <Timer size={13} className="text-[var(--accent-label)]" strokeWidth={1.75} />
+            <span className="text-[11px] text-[var(--c-text-2)] leading-tight">{brew.time}</span>
+          </div>
+        )}
       </div>
 
       {brew.grindSize && (
@@ -47,16 +62,19 @@ export function BrewMethodCard({ brew: rawBrew }) {
         ))}
       </ol>
 
-      <div className="flex items-start gap-1.5 text-[12px] text-[var(--c-text-3)] bg-[var(--c-surface-2)] rounded-lg p-2.5">
-        <Award size={13} className="shrink-0 mt-0.5 text-[var(--accent-label)]" strokeWidth={1.75} />
-        <span>{brew.pairing}</span>
-      </div>
+      {brew.pairing && (
+        <div className="flex items-start gap-1.5 text-[12px] text-[var(--c-text-3)] bg-[var(--c-surface-2)] rounded-lg p-2.5">
+          <Award size={13} className="shrink-0 mt-0.5 text-[var(--accent-label)]" strokeWidth={1.75} />
+          <span>{brew.pairing}</span>
+        </div>
+      )}
       {brew.calibration && (
         <div className="flex items-start gap-1.5 text-[12px] text-[var(--c-text-3)] border-t border-[var(--c-border)] pt-2.5">
           <SlidersHorizontal size={13} className="shrink-0 mt-0.5 text-[var(--accent-label)]" strokeWidth={1.75} />
           <span>{brew.calibration}</span>
         </div>
       )}
+      <VerifiedSources keys={[brewKey(rawBrew)]} />
     </div>
   );
 }
@@ -66,26 +84,32 @@ export function ExtractionVariableCard({ v: rawV }) {
   return (
     <div className="rounded-xl bg-[var(--c-surface-2)] border border-[var(--c-border)] p-3">
       <p className="text-[13px] text-[var(--c-text)] font-medium">{v.title}</p>
-      <p className="text-[12px] text-[var(--accent)] mt-0.5">{v.summary}</p>
-      <p className="text-[12px] text-[var(--c-text-2)] leading-relaxed mt-1.5">{v.detail}</p>
+      {v.summary && <p className="text-[12px] text-[var(--accent)] mt-0.5">{v.summary}</p>}
+      {v.detail && <p className="text-[12px] text-[var(--c-text-2)] leading-relaxed mt-1.5">{v.detail}</p>}
     </div>
   );
 }
 
 export function ExtractionScienceSection() {
   const t = useT();
+  const intro = prose("brew.extractionIntro");
+  // 出典を確認できた項目が1つも無ければ、この枠ごと出さない
+  if (!intro && PUBLISHED_EXTRACTION_VARIABLES.length === 0 && PUBLISHED_EXTRACTION_DIAGNOSIS.length === 0) return null;
+  const sourceKeys = [
+    ...(intro ? [proseKey("brew.extractionIntro")] : []),
+    ...PUBLISHED_EXTRACTION_VARIABLES.map(extractionKey),
+    ...PUBLISHED_EXTRACTION_DIAGNOSIS.map(diagnosisKey),
+  ];
   return (
     <div className="rounded-2xl bg-[var(--c-surface)] border border-[var(--c-border)] p-4 flex flex-col gap-3">
       <div>
         <p className="text-[11px] tracking-[0.15em] text-[var(--accent-label)] uppercase">Extraction Science</p>
         <h3 className="font-serif text-[19px] text-[var(--c-text)] mt-0.5">{t("抽出理論:なぜ濃さ・酸味・苦味が変わるのか")}</h3>
-        <p className="text-[13px] text-[var(--c-text-2)] mt-1.5 leading-relaxed">
-          {t("SCA(スペシャルティコーヒー協会)の「ゴールデンカップ基準」は、抽出強度(TDS)1.15〜1.35%・抽出収率18〜22%を適正抽出の目安として定めている。粒度・焙煎度・湯温・時間は、すべてこの「どこまで成分が溶け出したか」を左右する変数として連動している。")}
-        </p>
+        {intro && <p className="text-[13px] text-[var(--c-text-2)] mt-1.5 leading-relaxed">{t(intro)}</p>}
       </div>
 
       <div className="flex flex-col gap-2.5">
-        {EXTRACTION_VARIABLES.map((v) => (
+        {PUBLISHED_EXTRACTION_VARIABLES.map((v) => (
           <ExtractionVariableCard key={v.key} v={v} />
         ))}
       </div>
@@ -93,25 +117,20 @@ export function ExtractionScienceSection() {
       <div>
         <p className="text-[11px] tracking-wide text-[var(--accent-label)] uppercase mb-2">{t("未抽出・適正・過抽出の見分け方")}</p>
         <div className="flex flex-col gap-2">
-          {EXTRACTION_DIAGNOSIS.map((raw) => {
+          {PUBLISHED_EXTRACTION_DIAGNOSIS.map((raw) => {
             const d = localizeExtractionDiagnosis(raw);
             return (
             <div key={raw.label} className="bg-[var(--c-surface-2)] rounded-lg p-2.5">
               <p className="text-[13px] text-[var(--c-text)] font-medium">{d.label}</p>
-              <p className="text-[12px] text-[var(--c-text-3)] mt-0.5">{t("原因: {v}", { v: d.cause })}</p>
-              <p className="text-[12px] text-[var(--c-text-2)] mt-0.5">{t("味わい: {v}", { v: d.taste })}</p>
+              {d.cause && <p className="text-[12px] text-[var(--c-text-3)] mt-0.5">{t("原因: {v}", { v: d.cause })}</p>}
+              {d.taste && <p className="text-[12px] text-[var(--c-text-2)] mt-0.5">{t("味わい: {v}", { v: d.taste })}</p>}
             </div>
             );
           })}
         </div>
       </div>
 
-      <SourceCredit
-        sources={[
-          "SCA(Specialty Coffee Association)Golden Cup Standard",
-          t("科学論文(ScienceDirect, Nature Scientific Reports 等)の抽出動態研究"),
-        ]}
-      />
+      <VerifiedSources keys={sourceKeys} />
     </div>
   );
 }
@@ -124,7 +143,7 @@ export function BrewGuideView({ hideHeading = false }) {
       <p className="text-[13px] text-[var(--c-text-3)] mb-1">
         {t("代表的な4つの抽出方法と、豆の焙煎度との相性をまとめました。")}
       </p>
-      {BREW_METHODS.map((brew) => (
+      {PUBLISHED_BREW_METHODS.map((brew) => (
         <BrewMethodCard key={brew.method} brew={brew} />
       ))}
       <ExtractionScienceSection />

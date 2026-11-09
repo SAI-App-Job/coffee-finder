@@ -1,0 +1,734 @@
+{
+  "scope": "origin-9 (ハワイ)",
+  "verifiedOn": "2026-11-09",
+  "sources": {
+    "dab-grading-stats-2026": {
+      "title": "Statistics on Grading Standards for Hawaiʻi's Green Coffee, State of Hawaiʻi, 2023-2025 (January 2026)",
+      "org": "Hawaiʻi Department of Agriculture and Biosecurity (Market Analysis and News Branch, with USDA NASS Pacific Region)",
+      "url": "https://dab.hawaii.gov/add/files/2026/02/Grading-Standards-for-Hawaii-Green-Coffee-2023-2025_Jan.2026-final.pdf",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": "curl + pypdf (2ページ全文)"
+    },
+    "dab-har-4-143-2001": {
+      "title": "Hawaii Administrative Rules Title 4 Subtitle 7 Chapter 143 Standards for Coffee (AR-143.pdf, Eff 10/8/01)",
+      "org": "Hawaiʻi Department of Agriculture (DAB掲載)",
+      "url": "https://dab.hawaii.gov/wp-content/uploads/2012/12/AR-143.pdf",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": "2001年版。2014年改正前の旧規則。DABの2026年資料が規則本体として今もこのURLを脚注に挙げているが、内容は旧版(Natural Prime等を含まない)。curl + pypdf(20ページ全文)"
+    },
+    "dab-har-summary-2020": {
+      "title": "Summary of Chapter 4-143 (effective July 1, 2020) - Hawaii Administrative Rules, Standards for Coffee",
+      "org": "Hawaiʻi Department of Agriculture, Quality Assurance Division",
+      "url": "https://dab.hawaii.gov/qad/files/2020/07/2020-Coffee-HAR-143-Summary-Defects-Allowance-back-to-15-eff-July1.pdf",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": "curl + pypdf。規則の要約表(規則本文ではない)"
+    },
+    "dab-har-summary-2014": {
+      "title": "Summary of Chapter 4-143 (effective May 24, 2014)",
+      "org": "Hawaiʻi Department of Agriculture, Quality Assurance Division",
+      "url": "https://dab.hawaii.gov/qad/files/2012/12/Summary-of-Chapter-4-143-7.14.pdf",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": "curl + pypdf。規則の要約表"
+    },
+    "dab-har-ramseyer-proposed": {
+      "title": "Amendment and Compilation of Chapter 4-143, Hawaii Administrative Rules (Ramseyer draft, 'Month xx, XXXX')",
+      "org": "Hawaiʻi Department of Agriculture (DAB掲載)",
+      "url": "https://dab.hawaii.gov/wp-content/uploads/2013/01/Ramseyer-4-143-to-post.pdf",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": "改正案(採択前の草案、日付はxx)であり確定した規則文ではない。2014年5月24日施行の確定版PDF(Chapter-4-143-5.24-14-final.pdf)は画像のみで、pypdfで本文を抽出できず(OCR環境なし)、読めていない"
+    },
+    "hi-act198-2024": {
+      "title": "Act 198 (H.B. No. 2298), Session Laws of Hawaii 2024: Relating to Consumer Protection (Approved July 3, 2024)",
+      "org": "Hawaiʻi State Legislature (Session Laws)",
+      "url": "https://data.capitol.hawaii.gov/sessions/sessionlaws/Years/SLH2024/SLH2024_Act198.pdf",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": "curl + pypdf(4ページ全文)。一部の語が抽出時に分断される"
+    },
+    "dab-coffee-labeling-guidelines-2024": {
+      "title": "General Guidelines for Labeling Roasted Hawaii-Grown Coffee (update 20240802)",
+      "org": "Hawaiʻi Department of Agriculture, Quality Assurance Division, Measurement Standards Branch",
+      "url": "https://dab.hawaii.gov/qad/files/2024/08/MSB-Coffee-labeling-guidelines-8-2024.pdf",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": "curl + pypdf(4ページ全文)。ガイドライン(法文そのものではない)"
+    },
+    "ctahr-growing-coffee-2008": {
+      "title": "Growing Coffee in Hawaii, Revised Edition (Bittenbender and Smith; accurate as of March 2008)",
+      "org": "University of Hawaiʻi at Mānoa, CTAHR (College of Tropical Agriculture and Human Resources)",
+      "url": "https://www3.ctahr.hawaii.edu/oc/freepubs/pdf/coffee08.pdf",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": "curl + pypdf(40ページ全文)。2008年3月時点の記述で古い。内容には1999年時点などの記述も含む"
+    },
+    "kcfa-ecological-profile": {
+      "title": "Kona Coffee's Unique Ecological & Agronomical Profile",
+      "org": "Kona Coffee Farmers Association",
+      "url": "https://konacoffeefarmers.org/100-kona-coffee/kona-coffees-unique-ecological-agronomical-profile/",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": "curlで生HTMLを取得して本文抽出。地域のコーヒー農家協会の公式サイト(research-rules.mdの「協会の公式サイト」に当たるとして primary としたが、全国・政府機関ではない。ユーザーの判断を仰ぎたい)"
+    },
+    "kccf-timeline": {
+      "title": "Kona Coffee Historical Timeline",
+      "org": "Kona Coffee Cultural Festival",
+      "url": "https://konacoffeefest.com/kona-coffee-historical-timeline/",
+      "kind": "secondary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": "イベント主催団体の年表。curlで生HTMLを取得"
+    },
+    "usda-nass-coffee-2025-01": {
+      "title": "Coffee (Released January 24, 2025)",
+      "org": "USDA National Agricultural Statistics Service",
+      "url": "https://esmis.nal.usda.gov/sites/default/release-files/3t945q80c/cn69nz03f/7w62h548q/cafean25.pdf",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": "curl + pypdf(4ページ全文)"
+    },
+    "wcr-typica": {
+      "title": "Typica (World Coffee Research Variety Catalog)",
+      "org": "World Coffee Research",
+      "url": "https://varieties.worldcoffeeresearch.org/varieties/typica",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": "curlで生HTMLを取得。語中に軟ハイフンが入るため照合時に除去。Hawaii/Konaへの言及なし"
+    },
+    "lii-har-4-143-6": {
+      "title": "Haw. Code R. § 4-143-6 - Standards for grades of green coffee",
+      "org": "Cornell Legal Information Institute (規則の転載)",
+      "url": "https://www.law.cornell.edu/regulations/hawaii/Haw-Code-R-SS-4-143-6",
+      "kind": "secondary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": "州規則の転載サイト。公式原文ではない"
+    },
+    "lii-har-4-143-7": {
+      "title": "Haw. Code R. § 4-143-7 - REPEALED",
+      "org": "Cornell Legal Information Institute (規則の転載)",
+      "url": "https://www.law.cornell.edu/regulations/hawaii/Haw-Code-R-SS-4-143-7",
+      "kind": "secondary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": "州規則の転載サイト。公式原文ではない"
+    },
+    "hca-history": {
+      "title": "Hawaii Coffee Association - History",
+      "org": "Hawaii Coffee Association",
+      "url": "https://hawaiicoffeeassoc.org/History",
+      "kind": "primary",
+      "readMethod": "failed",
+      "accessed": "2026-11-09",
+      "note": "curlが接続できず(タイムアウト/000)。検索結果の断片のみ見たが根拠にしていない"
+    },
+    "konahistorical-history": {
+      "title": "The History of Kona Coffee in Hawai`i",
+      "org": "Kona Historical Society",
+      "url": "http://store.konahistorical.org/pages/The-History-of-Kona-Coffee-in-Hawai%60i.html",
+      "kind": "secondary",
+      "readMethod": "failed",
+      "accessed": "2026-11-09",
+      "note": "curlが接続できず"
+    },
+    "uhpress-boki-chapter": {
+      "title": "From Boki's Beans to Kona Coffee: The 'Oiwi (Native) Roots of an Exotic Species (Migrant Ecologies)",
+      "org": "University of Hawai'i Press (Manifold)",
+      "url": "https://manifold.uhpress.hawaii.edu/read/migrant-ecologies/section/328441c1-5956-4b2c-a831-511ca5df03c7",
+      "kind": "secondary",
+      "readMethod": "failed",
+      "accessed": "2026-11-09",
+      "note": "curlでは本文がJavaScript描画で取得できず(Cookie表示のみ)"
+    }
+  },
+  "entries": {
+    "origin:ハワイ:gradeSystem": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "等級名は Extra Fancy、Fancy、Hawaii No.1、Select、Prime、Hawaii No.3 を含む",
+          "status": "verified",
+          "sourceIds": [
+            "dab-grading-stats-2026"
+          ],
+          "quote": "The standards for grades of green coffee include Extra Fancy, Fancy, Hawaii No.1, Select, Prime, Hawaii No.3, Natural Prime, Mixed Natural Prime, and Off Grade.",
+          "location": "p.1 冒頭の本文(第1段落)",
+          "note": "公式の等級は上記9つ。アプリの本文は6つだけ挙げて『Hawaii No.3までの段階的な等級』と書き、Natural Prime・Mixed Natural Prime・Off Gradeに触れない(誤りではないが網羅ではない)"
+        },
+        {
+          "text": "Extra Fancyが最上位(欠点許容数・サイズ基準が最も厳しい)",
+          "status": "verified",
+          "sourceIds": [
+            "dab-har-summary-2020"
+          ],
+          "quote": "8 (FULL IMPERFECTIONS PER 300 GRAMS) 12 (FULL IMPERFECTIONS PER 300 GRAMS) 18 (FULL IMPERFECTIONS PER 300 GRAMS)",
+          "location": "2020年7月1日施行の要約表『ALLOWANCE FOR DEFECTS』行(Extra Fancy=8、Fancy=12、No.1=18)",
+          "note": "原文に『最上位』の語はない。欠点許容数が最少であること(表の左端がExtra Fancy)からの読み取り。サイズ最低もExtra FancyがType I Size 19で最大(同表)"
+        },
+        {
+          "text": "Hawaii No.3未満(Off Grade)には『Hawaii』の語を使えない",
+          "status": "verified",
+          "sourceIds": [
+            "dab-har-summary-2020"
+          ],
+          "quote": "OFFGRADE = quality lower than Hawaii No. 3. Use of the term \"Hawaii\" in conjunction with the term Offgrade is prohibited.",
+          "location": "2020年7月1日施行の要約表の脚注",
+          "note": ""
+        },
+        {
+          "text": "州外へ卸売出荷する全緑豆は最低でもHawaii No.3を満たさなければならない(したがって満たさないとハワイ産地名を表示できない)",
+          "status": "conflict",
+          "sourceIds": [
+            "dab-har-4-143-2001",
+            "dab-har-ramseyer-proposed"
+          ],
+          "quote": "Green coffee destined for shipment in wholesale quantities to points outside the State shall meet the requirements of Hawaii No. 3 green coffee",
+          "location": "2001年版 §4-143-7(Minimum export requirement)。対して、改正案の目次に『§4-143-7 Repealed』、DAB2026年資料に『Prime未満は地域名を使えない』",
+          "note": "【資料の食い違い。私は解決しない】(1) DAB掲載のAR-143.pdf(2001年版)§4-143-7は、州外への卸売出荷はHawaii No.3以上を要すると定める(Off gradeは『OFFGRADE COFFEE』表示で輸出可)。(2) 改正案(Ramseyer草案、日付xx)の目次は§4-143-7を『Repealed』とし、DAB 2014年要約の施行日は2014年5月24日、転載サイトLII(二次資料)も§4-143-7を『REPEALED』『R MAY 24 2014』とするが、確定した2014年版の原文は画像PDFで私は読めていない。(3) DAB 2026年資料は『Prime未満はHamakua/Kau/Kauai/Kona/Maui/Molokai/Oahuを製品ラベルに使えない』と書く(Kona等の地域名の下限はNo.3ではなくPrime)。アプリの『最低でもNo.3で産地名を表示』は、州名『Hawaii』にはあてはまるが、Kona等の地域名の下限(Prime)とは異なり、『州外出荷の最低要件』は旧規則由来の可能性が高い。確定版原文での確認が必要"
+        }
+      ],
+      "suggestedText": "緑豆の等級には Extra Fancy、Fancy、Hawaii No.1、Select、Prime、Hawaii No.3、Natural Prime、Mixed Natural Prime、Off Grade がある(ハワイ州行政規則第4-143章)。Hawaii No.3未満のOff Gradeには「Hawaii」の語を使えない。Primeより品質が低いコーヒーは、Kona・Kauなどの地域名を製品ラベルに使えない。",
+      "note": "suggestedTextの最後の文は、DAB 2026年資料の原文(quote: 'Coffee with a quality lower than Prime is prohibited from using geographic terms such as')に基づく。この主張は元の本文にないため、台帳に加える場合は別主張として登録が必要。英訳(en/originGuide2.js)は日本語と同じ主張(6等級・『州外へ卸売出荷はHawaii No.3以上でHawaiian place name表示』)で、日本語との食い違いなし。"
+    },
+    "origin:ハワイ:officialBody": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "ハワイ州の農業部局(品質保証部の商品課)が、ハワイ産緑豆の検査・認証を担う(旧称HDOA、現在の名称はDepartment of Agriculture and Biosecurity)",
+          "status": "verified",
+          "sourceIds": [
+            "dab-grading-stats-2026"
+          ],
+          "quote": "is responsible for inspecting and certifying green coffee produced in Hawai",
+          "location": "p.1 冒頭の本文",
+          "note": "原文は『The Commodities Branch at the Hawaiʻi Department of Agriculture and Biosecurity is responsible for inspecting and certifying green coffee produced in Hawaiʻi』。表の出典欄は『Commodities Branch, Quality Assurance Division』。アプリの『HDOA品質保証部』は旧名称で、現在の機関名は Department of Agriculture and Biosecurity"
+        },
+        {
+          "text": "等級認証を『法的に運用』している",
+          "status": "unverified",
+          "sourceIds": [
+            "dab-grading-stats-2026"
+          ],
+          "quote": "The certification of green coffee is a voluntary program in Hawaiʻi",
+          "location": "p.1 第2段落",
+          "note": "同じDAB資料は、認証は任意(voluntary)の制度で、2024-2025年季は利用生産量の約51%が認証を受けたと書く。HAR 4-143が規格と認証手続を定めること自体は同資料に明記(『outlines coffee standards and the certification process』)。『法的に運用』は、認証が義務であるかのような誤解を招く"
+        },
+        {
+          "text": "州法Act 198は2024年に施行された(2024年7月1日施行、7月3日承認)",
+          "status": "verified",
+          "sourceIds": [
+            "hi-act198-2024"
+          ],
+          "quote": "SECTION 4. This Act shall take effect on July 1, 2024.",
+          "location": "Act 198 SECTION 4(末尾に『Approved July 3, 2024.』)",
+          "note": "DABのガイドラインも『Act 198 was signed on 3 July 2024 and became effective on 1 July 2024』と記す"
+        },
+        {
+          "text": "2027年7月1日以降、産地名の使用に必要な最低含有率は(現在の10%から)51%になる",
+          "status": "verified",
+          "sourceIds": [
+            "hi-act198-2024"
+          ],
+          "quote": "(B) On or after July 1, 2027, fifty-one per cent coffee by weight from that geographic origin;",
+          "location": "Act 198 SECTION 2、HRS §486-120.6(d)(2)",
+          "note": "同(A)は『Until June 30, 2027, ten per cent coffee by weight from that geographic origin』。対象は焙煎豆・インスタント・ready-to-drinkコーヒー飲料のラベル・広告での地域名使用(緑豆の等級とは別の規制)で、重量比。アプリの『産地名表示に必要な最低含有率』は趣旨として合っているが、対象製品が焙煎豆等であることは書かれていない"
+        }
+      ],
+      "suggestedText": "ハワイ州農業・生物保安局(Department of Agriculture and Biosecurity、旧農務省HDOA)の品質保証部が、ハワイ産の緑豆の検査・認証を担う(認証は任意)。2024年7月1日施行の州法Act 198により、焙煎豆・インスタント・ready-to-drinkコーヒー飲料でハワイの地域名をラベルや広告に使うには、その産地のコーヒーを重量で、2027年6月30日までは10%以上、2027年7月1日以降は51%以上含むことが必要になる。",
+      "note": "suggestedTextの『認証は任意』『焙煎豆・インスタント・RTD』『農業・生物保安局』は、DAB 2026年資料とAct 198原文に基づく。『法的に運用』は削除した。英訳は日本語と同じ主張で食い違いなし。"
+    },
+    "origin:ハワイ:regions": {
+      "status": "verified",
+      "claims": [
+        {
+          "text": "コナ地区は南コナ・北コナ(両地区)を指す",
+          "status": "verified",
+          "sourceIds": [
+            "dab-har-4-143-2001"
+          ],
+          "quote": "Kona is the North Kona and South Kona districts on the island of",
+          "location": "HAR §4-143-3 'Geographic region'の定義",
+          "note": "2001年版の定義。LII(二次資料)の現行版転載も同内容。州の規則は地域として Hamakua、Hawaii Island、Kau、Kauai、Kona、Maui、Molokai、Oahu を定義しており、アプリのregionsはコナだけを挙げる(Kauはsubregionsに別記)"
+        }
+      ],
+      "suggestedText": "",
+      "note": "『regions』の本文はコナ地区のみ。公式の地域区分は上記のとおり他にもある(漏れだが誤りではない)。英訳も同内容。"
+    },
+    "origin:ハワイ:terroir": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "コナ・コーヒー・ベルトはビッグアイランド(ハワイ島)西側の、フアラライ山とマウナロア山の斜面にある",
+          "status": "verified",
+          "sourceIds": [
+            "kcfa-ecological-profile"
+          ],
+          "quote": "It lies on the western slopes of the enormous volcanoes of Hualalai and Mauna Loa.",
+          "location": "本文『Kona's coffee-growing belt mimics other coffee-growing origins...』の段落",
+          "note": "コナ・コーヒー農家協会(地域団体)。CTAHRの2008年資料は場所をPalani Junction〜Puuhonua Roadと記し、火山名の記述なし"
+        },
+        {
+          "text": "ベルトの全長は約35マイル",
+          "status": "conflict",
+          "sourceIds": [
+            "ctahr-growing-coffee-2008",
+            "kcfa-ecological-profile"
+          ],
+          "quote": "coffee production is ideal in a narrow zone in Kona approximately 20 miles long and 2 miles wide known",
+          "location": "CTAHR 2008『The Kona coffee belt』節(p.5)/KCFA『2)』項",
+          "note": "【資料の食い違い。私は解決しない】CTAHR(ハワイ大学・2008年)は約20マイル、KCFAは約30マイル(離れた南コナの農園を含めた場合)。アプリの35マイルはどちらの一次資料にもない。"
+        },
+        {
+          "text": "ベルトの幅は約1.5マイル",
+          "status": "conflict",
+          "sourceIds": [
+            "ctahr-growing-coffee-2008",
+            "kcfa-ecological-profile"
+          ],
+          "quote": "The main coffee belt is scarcely more than a mile wide, owing to the steepness of the mountain slopes.",
+          "location": "KCFA『2)』項/CTAHR p.5",
+          "note": "【資料の食い違い。私は解決しない】KCFAは『主要部は1マイルをわずかに超える程度』、CTAHRは約2マイル。アプリの1.5マイルはどちらにもない。"
+        },
+        {
+          "text": "標高はベルト全体で150〜975m(約500〜3,200フィート)",
+          "status": "conflict",
+          "sourceIds": [
+            "ctahr-growing-coffee-2008",
+            "kcfa-ecological-profile"
+          ],
+          "quote": "it lies between approximately 700 ft and 2000 ft elevation.",
+          "location": "CTAHR p.5『The Kona coffee belt』/KCFA『2)』項",
+          "note": "【資料の食い違い。私は解決しない】CTAHRは約700〜2000フィート(約213〜610m)、KCFAは800〜2500フィート(約244〜762m)。アプリの150〜975mはどちらにもない。"
+        },
+        {
+          "text": "最高品質帯は標高550〜760m",
+          "status": "unverified",
+          "sourceIds": [
+            "kcfa-ecological-profile"
+          ],
+          "quote": "over the years the prize-winning entries in the blind cupping at the annual Kona Coffee Cultural Festival include many farms below 1000 feet elevation.",
+          "location": "KCFA『5)』項",
+          "note": "最高品質の標高帯を公式に定めた資料は見つからず。KCFAは『高標高ほど明るい味とされるが、実際には1000フィート未満の農園の入賞も多い』と書く。"
+        },
+        {
+          "text": "土壌は火山性(溶岩の上)である",
+          "status": "verified",
+          "sourceIds": [
+            "kcfa-ecological-profile"
+          ],
+          "quote": "Lava flows form the surface of the Kona coffee belt",
+          "location": "KCFA『3)』項",
+          "note": "CTAHR p.5も『Some soils in Kona and elsewhere in Hawaii are of recent origin and appear to be almost pure lava』と書くが、これは『若い土壌』の一般記述で、『水はけの良い若い火山性土壌』という断定はどちらにもない"
+        },
+        {
+          "text": "土壌は水はけが良い・若い",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "KCFAは『良質なコーヒーと相関する条件の例として well-drained volcanic soils』を一般論として挙げるのみで、コナの土壌が水はけ良好とは明記していない。公式資料では確認できず"
+        },
+        {
+          "text": "午後は雲と雨になり、夏の暑さから木を守る(天然の日除け)",
+          "status": "verified",
+          "sourceIds": [
+            "kcfa-ecological-profile"
+          ],
+          "quote": "The clouds that bring rain in the afternoon sea breeze, as they waft upslope, also shelter the coffee from the worst heat of the summer days.",
+          "location": "KCFA『1)』項",
+          "note": "『朝は晴れ』『コナ・コーヒー・レイン』という呼び名は原文になく別主張として扱う"
+        },
+        {
+          "text": "朝は晴れる/『コナ・コーヒー・レイン』と呼ばれる",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式資料に該当記述なし"
+        },
+        {
+          "text": "年間降雨量は70インチ超",
+          "status": "incorrect",
+          "sourceIds": [
+            "ctahr-growing-coffee-2008",
+            "kcfa-ecological-profile"
+          ],
+          "quote": "The annual rainfall averaged 68 inches historically, but since the Kilauea volcano began erupting in 1983, it has been drier, averaging 49 inches.",
+          "location": "CTAHR p.5(コナ研究ステーション、ベルトの中心部)",
+          "note": "CTAHRは歴史的平均68インチ、1983年以降は平均49インチ。KCFAは40〜60インチ。『70インチ超』はどちらとも合わない"
+        },
+        {
+          "text": "日較差は30°F以内",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式資料に該当記述なし。CTAHRはコナ研究ステーション(標高1460〜1670フィート)で年平均最低60°F・最高78°F、12〜2月は57°F〜77°Fと書くが、『30°F以内』の記述はない"
+        }
+      ],
+      "suggestedText": "コナ・コーヒー・ベルトは、ビッグアイランド西側のフアラライ山とマウナロア山の斜面にあり、溶岩の上に広がる。夏の午後に雲と雨が来て、暑さから木を守る(コナ・コーヒー農家協会)。ベルトの大きさと標高は資料によって異なり、ハワイ大学CTAHR(2008年)は長さ約20マイル・幅約2マイル・標高約700〜2000フィート、コナ・コーヒー農家協会は長さ約30マイル・主要部の幅は1マイルをわずかに超える程度・標高800〜2500フィートとしている。年間降雨量は、CTAHRによれば歴史的な平均が68インチ、1983年以降は平均49インチ(同協会は40〜60インチ)。",
+      "note": "suggestedTextは、各資料が実際に書いている数字を出典付きで併記した(食い違いの解決はしていない)。英訳(en/originGuide2.js)は日本語と同じ主張・同じ数字(35マイル・1.5マイル・150-975 m・550-760 m・70 inches・30°F)で、日本語との食い違いなし。"
+    },
+    "origin:ハワイ:tagline": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "アメリカ唯一のコーヒー産地",
+          "status": "unverified",
+          "sourceIds": [
+            "usda-nass-coffee-2025-01"
+          ],
+          "quote": "7,500 7,500 7,400 7,400 7,000 7,000",
+          "location": "p.1 表『Coffee Bearing Acreage, Yield, Production, Price, and Value - Hawaii and United States』の結実面積(エーカー)",
+          "note": "『唯一』と明記した公式資料は見つからず。USDA NASSの2024-2025年季報告では、全米(United States)の数値がハワイ州の数値と全項目で同一で、NASSのコーヒー統計はハワイのみを集計している。ただし『他州・準州(カリフォルニア州、プエルトリコなど)に産地がない』ことまでは示さないため、『唯一』は確認できない"
+        },
+        {
+          "text": "(代替主張)USDA NASSの2024-2025年季のコーヒー統計で、全米の結実面積はハワイ州と同じ7,000エーカー",
+          "status": "verified",
+          "sourceIds": [
+            "usda-nass-coffee-2025-01"
+          ],
+          "quote": "7,500 7,500 7,400 7,400 7,000 7,000",
+          "location": "p.1 表(2022-2023、2023-2024、2024-2025の順にHawaiiとUnited Statesが同値)",
+          "note": "原文の表はHawaii行とUnited States行の数値が上の並びで同一"
+        },
+        {
+          "text": "マイルドな酸味とナッツのような風味",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "味わいの記述。公式資料(政府・機関・協会)に該当記述を見つけられず"
+        }
+      ],
+      "suggestedText": "USDAの統計(NASS)では、全米のコーヒーの結実面積(2024-2025年季は7,000エーカー)がハワイ州の数値と同じ。",
+      "note": "suggestedTextは『唯一』と味わいを削除し、確認できたNASSの事実に置き換えた(主張の差し替え)。英訳は日本語と同じ主張(only coffee-growing region in the United States / mild acidity and nutty flavor)で食い違いなし。"
+    },
+    "origin:ハワイ:harvestSeason": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "収穫は8月〜翌1月",
+          "status": "incorrect",
+          "sourceIds": [
+            "ctahr-growing-coffee-2008"
+          ],
+          "quote": "In the lower part of the Kona coffee belt, coffee ripens from late August to December.",
+          "location": "CTAHR p.32『Harvesting』",
+          "note": "CTAHR 2008は、コナ・コーヒー・ベルトの低い部分で8月下旬〜12月。さらに『ベルト上部(より涼しく湿って曇る)では収穫期が1年中に及びうる』と記す(『in the extreme upper (cooler), wet and cloudy section of Kona, the harvesting period can stretch throughout the year』)。『翌1月』は、同資料ではカウアイ・モロカイ・マウイ・オアフの新興地の収穫期(8月〜1月)にあたる記述で、コナについては出てこない"
+        },
+        {
+          "text": "ピークは9〜11月(情報源により10〜12月とする場合も)",
+          "status": "incorrect",
+          "sourceIds": [
+            "ctahr-growing-coffee-2008"
+          ],
+          "quote": "The period from late September to early November is the busiest.",
+          "location": "CTAHR p.32『Harvesting』",
+          "note": "原文は『9月下旬〜11月上旬が最も忙しい』。月に丸めた『9〜11月』『10〜12月』は原文の数字と異なる(原文を丸めない)"
+        },
+        {
+          "text": "成熟に7〜9か月を要する",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式資料に該当記述なし。CTAHR 2008は開花(3〜4月)から収穫(8月下旬〜)までの降雨パターンを記すが、『7〜9か月』という数字はない"
+        },
+        {
+          "text": "単一の一斉収穫はできず、同じ木を数回巡る選択的手摘みで行う",
+          "status": "verified",
+          "sourceIds": [
+            "ctahr-growing-coffee-2008"
+          ],
+          "quote": "In Kona, picking in four to eight rounds in any one season is common",
+          "location": "CTAHR p.33(前段p.32に『Coffee fruit on a tree does not mature all at once』)",
+          "note": "同資料は『熟した実を1つずつ摘む(個別に摘む)のはコナのやり方』とも書く(『Cherries are sometimes picked individually when ripe, as is done in Kona』)。回数は『4〜8回、間隔は約1か月』"
+        }
+      ],
+      "suggestedText": "コナ・コーヒー・ベルトの低い部分では、実は8月下旬から12月にかけて熟し、9月下旬から11月上旬が最も忙しい。ベルト上部では収穫期が1年中に及ぶこともある。1本の木の実は一斉に熟さないため、コナでは1つずつ熟した実を摘み、1シーズンに4〜8回(約1か月おき)摘むのが一般的(ハワイ大学CTAHR、2008年)。",
+      "note": "suggestedTextはCTAHR 2008の記述だけで構成(2008年時点)。英訳は日本語と同じ主張・同じ数字(August to January、September-November、7-9 months)で、日本語との食い違いなし。"
+    },
+    "origin:ハワイ:varietiesDetail": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "9割超が「コナ・ティピカ」",
+          "status": "unverified",
+          "sourceIds": [
+            "ctahr-growing-coffee-2008"
+          ],
+          "quote": "Today, in 1999, due to a large corporate planting on Kauai, the greatest acreage of coffee in the state is planted with the Brazilian cultivar",
+          "location": "CTAHR p.14『The ‘Guatemalan’ or “Kona typica” variety is preferred』",
+          "note": "『9割超』を示す公式資料は見つからず。CTAHRは1999年時点で州内最大面積の品種はカウアイの大規模植栽のYellow Catuaiと書く(州全体の話)。Konaに限れば『Kona coffeeがハワイ島のコーヒーの約95%』という二次資料(Kona Coffee Cultural Festival)があるが、品種の割合ではない"
+        },
+        {
+          "text": "1825年、オアフ総督ボキが英国訪問の帰路ブラジル経由で持ち帰った苗が(コナ・ティピカの)起源とされる",
+          "status": "unverified",
+          "sourceIds": [
+            "kccf-timeline",
+            "ctahr-growing-coffee-2008"
+          ],
+          "quote": "Traveling with King Kamehameha II and his wife Kamamalu, High Chief Boki, Royal Governor of Oahu visits England, names John Wilkinson, agriculturalist, to cultivate sugar and coffee on Boki",
+          "location": "KCCF年表『1825』(二次資料)/CTAHR p.14",
+          "note": "二次資料のみ(kccf-timeline)。KCCFは1825年にボキが英国訪問でウィルキンソンに砂糖・コーヒー栽培を命じ、1825/26年にウィルキンソンがマノア渓谷で植えたと書く。CTAHR(一次)は、当初の『kanaka koppe』(いわゆるHawaiian coffee)は『おそらく1824年にジョン・ウィルキンソンがブラジルから持ち込んだ30本から』と書き、ボキへの言及がない。さらにCTAHRは、この初期の品種はグアテマラ種(コナ・ティピカ)に置き換えられたと記すので、『ボキの苗がコナ・ティピカの起源』というアプリの書き方(次文で1892年の系統が現在のコナ・ティピカと書く点と矛盾)は成り立たない。HCA歴史ページは接続できず未確認"
+        },
+        {
+          "text": "1892年、ヘルマン・ヴィーデマンがグアテマラから導入した系統が現在の『コナ・ティピカ』になった",
+          "status": "verified",
+          "sourceIds": [
+            "ctahr-growing-coffee-2008"
+          ],
+          "quote": "Hermann Widemann introduced the ‘Guatemalan’ variety to Hawaii from Guatemala in 1892 (Goto 1982).",
+          "location": "CTAHR p.14『The ‘Guatemalan’ or “Kona typica” variety is preferred』",
+          "note": "同資料は『‘Guatemalan’(別名“Kona typica”)がコナの標準品種』、『コナ・コーヒーの産業と評判は‘Guatemalan’(一部の生産者が“Kona typica”と呼ぶ)に基づく』とも書く(表『Guatemalan 6432 Standard cultivar in Kona; also known as “Kona typica”』)。1892年の導入者の綴りはCTAHRではHermann Widemann"
+        },
+        {
+          "text": "WCR系統ではティピカ/ブルボン・ティピカ系統に分類される",
+          "status": "unverified",
+          "sourceIds": [
+            "wcr-typica"
+          ],
+          "quote": "",
+          "location": "",
+          "note": "WCRのTypicaページ(品種カタログ)にはHawaii/Konaの記述がなく、『コナ・ティピカ』がWCRで分類されている根拠は取れていない。CTAHRはコナ・ティピカを‘typica’の中米系ランドレース(『an early 19th century Central American land race of Coffea arabica “typica”』)と書く"
+        },
+        {
+          "text": "(代替主張)ティピカ(品種)はコーヒーさび病に対する感受性が非常に高い",
+          "status": "verified",
+          "sourceIds": [
+            "wcr-typica"
+          ],
+          "quote": "Very high susceptibility to coffee leaf rust",
+          "location": "WCR品種カタログ『Typica』の概要",
+          "note": "WCRはTypica品種についての記述。『コナ・ティピカ』を直接扱ってはいない。CTAHR 2008は当時ハワイにさび病はなく検疫していると書く"
+        },
+        {
+          "text": "高標高では高品質だがサビ病に弱いヘリテージ品種",
+          "status": "unverified",
+          "sourceIds": [
+            "wcr-typica"
+          ],
+          "quote": "",
+          "location": "",
+          "note": "『高標高で高品質』『ヘリテージ品種』はWCRの該当ページに見当たらない(WCRは『high quality in Central America』と書く)。サビ病の感受性は上の代替主張を参照"
+        },
+        {
+          "text": "近年はゲイシャも増加傾向",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式資料に該当記述なし"
+        }
+      ],
+      "suggestedText": "コナの標準品種は‘Guatemalan’(別名コナ・ティピカ)で、1892年にヘルマン・ヴィーデマンがグアテマラからハワイに導入した(ハワイ大学CTAHR、2008年)。ティピカ品種はコーヒーさび病への感受性が非常に高い(WCR)。",
+      "note": "suggestedTextは確認できた主張のみ。ボキ・ウィルキンソンの初期導入は二次資料(KCCF)のみのため削除した。英訳は日本語と同じ主張(Over 90% Kona Typica、Boki 1825、Widemann 1892、WCR lineage、Gesha)で、日本語との食い違いなし。"
+    },
+    "origin:ハワイ:farmStructure": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "コナでは小規模家族農園が中心である",
+          "status": "verified",
+          "sourceIds": [
+            "kcfa-ecological-profile"
+          ],
+          "quote": "The coffee crop has for a century, come from small family holdings.",
+          "location": "KCFA『4)』項",
+          "note": "ハワイ全体ではなくコナの記述"
+        },
+        {
+          "text": "5エーカー未満の小農園が多数を占める",
+          "status": "verified",
+          "sourceIds": [
+            "kcfa-ecological-profile"
+          ],
+          "quote": "But 50 acres remains an exceptionally large farm in Kona, and most of its 700-odd farms comprise fewer than five acres.",
+          "location": "KCFA『4)』項",
+          "note": "コナ地区の記述(ハワイ全体ではない)。KCCF(二次資料)は『約650農園、典型的な農園の規模は3エーカー』と書く(参考)"
+        },
+        {
+          "text": "数百エーカー規模の大農園も存在する",
+          "status": "unverified",
+          "sourceIds": [
+            "ctahr-growing-coffee-2008"
+          ],
+          "quote": "span a range of producers from 1-acre, certified organic, rainfed farms to 4000-acre, totally mechanized, irrigated plantations",
+          "location": "CTAHR p.3『Hawaii's coffee industry today』",
+          "note": "CTAHR(2008年時点)は1エーカーから4000エーカーまでと書き、『数百エーカー』という数字は出てこない。KCFAはコナで『50エーカーでも例外的に大きい』と書く。大農園がコナ以外(州内の他の島)にあるという趣旨なら合うが、数字『数百エーカー』は確認できない"
+        },
+        {
+          "text": "コナは急斜面で、熟した実を1つずつ手で摘む",
+          "status": "verified",
+          "sourceIds": [
+            "kcfa-ecological-profile",
+            "ctahr-growing-coffee-2008"
+          ],
+          "quote": "the steep rocky terrain is laborious to cultivate",
+          "location": "KCFA『4)』項(急斜面・岩場)/CTAHR p.32(個別摘み)",
+          "note": "『高標高』は相対表現で、公式の数字(CTAHR 700〜2000ft、KCFA 800〜2500ft)とは別に評価できない。『伝統的ティピカ』はCTAHRの‘Guatemalan’=コナ・ティピカが標準品種という記述(varietiesDetail参照)"
+        },
+        {
+          "text": "Maui/Kauai等は低地・大規模・機械収穫という別モデルを取る",
+          "status": "unverified",
+          "sourceIds": [
+            "ctahr-growing-coffee-2008"
+          ],
+          "quote": "Irrigation is essential in Hawaii’s recently planted dry coffee-growing areas, such as Kaanapali on Maui, Eleele on Kauai",
+          "location": "CTAHR p.5",
+          "note": "CTAHR 2008はMaui・Kauaiなどの新しい産地が乾燥地で灌漑が必須と書き、州内に4000エーカーの全機械化・灌漑の大農場があるとは書くが、それが『Maui/Kauai』だとは書かない。『低地・大規模・機械収穫』を島別に示す公式資料は確認できず"
+        }
+      ],
+      "suggestedText": "コナのコーヒーは、1世紀にわたり小規模な家族経営の農園から生まれてきた。コナには約700の農園があり、その大半が5エーカー未満(コナ・コーヒー農家協会)。熟した実を1つずつ摘むのがコナのやり方で、急で岩だらけの地形は耕作に手がかかる。ハワイ全体では、1エーカーの農園から4000エーカーの全機械化・灌漑農場まで幅がある(ハワイ大学CTAHR、2008年)。",
+      "note": "suggestedTextは確認できた主張のみ(KCFAは『700-odd farms』と書く)。英訳は日本語と同じ主張で食い違いなし。"
+    },
+    "origin:ハワイ:history": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "1825年、オアフ総督ボキがブラジルからアラビカ(ティピカ)苗を持ち帰ったのがハワイコーヒーの起点",
+          "status": "unverified",
+          "sourceIds": [
+            "kccf-timeline",
+            "ctahr-growing-coffee-2008"
+          ],
+          "quote": "Traveling with King Kamehameha II and his wife Kamamalu, High Chief Boki, Royal Governor of Oahu visits England, names John Wilkinson, agriculturalist, to cultivate sugar and coffee on Boki",
+          "location": "KCCF年表『1825』(二次資料)/CTAHR p.14",
+          "note": "二次資料のみ(kccf-timeline)。一次のCTAHRは、最初に導入されたとみられる品種(kanaka koppe)を『おそらく1824年にジョン・ウィルキンソンがブラジルから持ち込んだ30本から』と書き、ボキに言及しない。KCCFはボキが1825年に英国訪問でウィルキンソンを指名したと書き、ブラジル経由・ティピカの記述はない。HCA歴史ページは接続不能で未確認。同CTAHRは、この初期品種はグアテマラ種に置き換えられたとも書く"
+        },
+        {
+          "text": "1828年、宣教師サミュエル・ラグルスがコナ地区に(苗を)移植した",
+          "status": "unverified",
+          "sourceIds": [
+            "kccf-timeline"
+          ],
+          "quote": "Reverend Samuel Ruggles, brought cuttings from Governor Boki",
+          "location": "KCCF年表『1828』(二次資料)",
+          "note": "二次資料のみ(kccf-timeline: 『Reverend Samuel Ruggles, brought cuttings from Governor Boki’s land in Manoa to Napoopoo, South Kona』)。ハワイ大学CTAHR 2008にはラグルスの記述が見当たらない。公式の一次資料は未確認"
+        },
+        {
+          "text": "ラグルスは、火山性土壌と独特の微気候がコーヒー栽培に適していることを見出した",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "該当記述を資料で確認できず"
+        },
+        {
+          "text": "1892年、ヘルマン・ヴィーデマンがグアテマラから導入した品種が現在のコナ・ティピカの系統となった",
+          "status": "verified",
+          "sourceIds": [
+            "ctahr-growing-coffee-2008"
+          ],
+          "quote": "Hermann Widemann introduced the ‘Guatemalan’ variety to Hawaii from Guatemala in 1892 (Goto 1982).",
+          "location": "CTAHR p.14『The ‘Guatemalan’ or “Kona typica” variety is preferred』",
+          "note": "同p.14は『コナ・コーヒーの産業と評判は‘Guatemalan’(一部の生産者が“Kona typica”と呼ぶ)に基づく』とも書く。CTAHRの綴りはHermann Widemann"
+        },
+        {
+          "text": "1980年代以降のスペシャルティコーヒーの世界的興隆とともに名声を回復した",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式資料に該当記述なし。KCCF年表(二次)は1981年に『栽培面積は1,600エーカーにまで減った』と書く"
+        },
+        {
+          "text": "(代替主張)ヴィーデマンは種子をジョン・ホーナーに渡し、ホーナーはハマクアに800本の果樹園を植えて新品種と従来品種を比べた",
+          "status": "verified",
+          "sourceIds": [
+            "ctahr-growing-coffee-2008"
+          ],
+          "quote": "He gave seeds to John Horner, who planted an orchard of 800 trees in Hamakua",
+          "location": "CTAHR p.14",
+          "note": "続けて『新品種400本と、当時の品種kanaka koppe(最初に導入されたとみられるいわゆるHawaiian coffee)400本を比較』『1895年までにホーナーは新品種が優れていると確信』"
+        },
+        {
+          "text": "(代替主張)1910年までにコナの生産者は新しい品種(グアテマラ種)の優位を確信した",
+          "status": "verified",
+          "sourceIds": [
+            "ctahr-growing-coffee-2008"
+          ],
+          "quote": "By 1910, Kona coffee growers were convinced of the superiority of the new variety.",
+          "location": "CTAHR p.14",
+          "note": ""
+        }
+      ],
+      "suggestedText": "ハワイ大学CTAHR(2008年)によれば、1892年にヘルマン・ヴィーデマンがグアテマラから‘Guatemalan’種(別名コナ・ティピカ)をハワイに導入した。ヴィーデマンは種子をジョン・ホーナーに渡し、ホーナーはハマクアに800本の果樹園を植えて、新品種と従来品種を400本ずつ比べた。1910年までに、コナの生産者は新しい品種の優位を確信した。",
+      "note": "suggestedTextは、CTAHR(一次)で確認できた主張のみ。ボキ(1825)・ラグルス(1828)は二次資料(KCCF年表)にしか見つからず削除。HCA歴史ページ(hawaiicoffeeassoc.org/History)、Kona Historical Society、UH Press章は取得に失敗し、読めていない。英訳は日本語と同じ主張で食い違いなし。"
+    },
+    "origin:ハワイ:sub:コナ": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "コナは北コナ地区と南コナ地区(ハワイ島)",
+          "status": "verified",
+          "sourceIds": [
+            "dab-har-4-143-2001"
+          ],
+          "quote": "Kona is the North Kona and South Kona districts on the island of",
+          "location": "HAR §4-143-3 'Geographic region'",
+          "note": "アプリのサブ産地詳細にはこの記述はない(代替主張)"
+        },
+        {
+          "text": "マイルドでバランス型、ココア・ナッツ・キャラメル・軽い酸味",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "味わいの記述。公式資料(政府・機関・協会)で確認できず"
+        }
+      ],
+      "suggestedText": "ハワイ州の規則では、コナは北コナ地区と南コナ地区を指す。",
+      "note": "味わいの記述は公式一次資料で確認できないため削除。英訳は日本語と同じ主張。"
+    },
+    "origin:ハワイ:sub:カウ(Ka'ū、南部)": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "カウ(Ka'ū)はハワイ島の地区",
+          "status": "verified",
+          "sourceIds": [
+            "dab-har-4-143-2001"
+          ],
+          "quote": "Kau is the district of Ka=u on the island of Hawai=i, as designated by the State of Hawaii Tax Map",
+          "location": "HAR §4-143-3 'Geographic region'",
+          "note": "原文のアポストロフィ(ʻokina)は抽出時に『=』になっている。アプリのサブ産地詳細にはこの記述はない(代替主張)。『南部』は規則に書かれていない"
+        },
+        {
+          "text": "南部にある",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "規則は『ハワイ島のKa‘u地区』とのみ定義し、方角は書かない"
+        },
+        {
+          "text": "近年品質向上が著しく優秀なロットも出てきている新興産地",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式資料に該当記述なし"
+        }
+      ],
+      "suggestedText": "ハワイ州の規則では、カウ(Ka‘ū)はハワイ島のKa‘u地区を指す。",
+      "note": "品質・新興産地の記述と『南部』は確認できず削除。英訳は日本語と同じ主張。"
+    }
+  }
+}

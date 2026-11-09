@@ -1,0 +1,648 @@
+{
+  "scope": "特定銘柄14種 + フレーバーホイール全体",
+  "verifiedOn": "2026-11-09",
+  "sources": {
+    "jfftc-kiyaku-coffee": {
+      "title": "レギュラーコーヒー及びインスタントコーヒーの表示に関する公正競争規約・施行規則(令和6年10月1日施行の変更を含む)",
+      "org": "全国公正取引協議会連合会(掲載)。規約の主体は全日本コーヒー公正取引協議会",
+      "url": "https://www.jfftc.org/DATA/Kiyaku_pdf/b05_H_coffee.pdf",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": "curlで保存し、pypdfで全16ページの本文を抽出して読んだ。別表2は14ページ目。"
+    },
+    "jacra-home": {
+      "title": "Jamaica Agricultural Commodities Regulatory Authority(トップページ)",
+      "org": "Jamaica Agricultural Commodities Regulatory Authority (JACRA) / Government of Jamaica",
+      "url": "https://jacra.org/",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": "curlで生HTMLを取得して読んだ。"
+    },
+    "jacra-coffee-introduction": {
+      "title": "JACRA Coffee - Introduction",
+      "org": "Jamaica Agricultural Commodities Regulatory Authority (JACRA)",
+      "url": "https://jacra.org/divisions/coffee/introduction/",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": "curlで生HTMLを取得して読んだ。"
+    },
+    "jacra-coffee-licensing": {
+      "title": "JACRA Coffee - Licensing & Permits",
+      "org": "Jamaica Agricultural Commodities Regulatory Authority (JACRA)",
+      "url": "https://jacra.org/divisions/coffee/licensing-permits/",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": "curlで生HTMLを取得して読んだ。"
+    },
+    "jacra-ipweek2021": {
+      "title": "Intellectual Property Week 2021(新聞付録内のJACRA掲載文)",
+      "org": "JACRA(掲載媒体: go-jamaica.com の付録)",
+      "url": "https://go-jamaica.com/supplement/pdf/IPWeek/10",
+      "kind": "secondary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": "JACRA名義の掲載文だが、ホスト先は報道系の付録サイトなのでsecondary扱い。2021年時点の記述。"
+    },
+    "ico-icc122-12": {
+      "title": "National quality standards (ICC 122-12, 23 August 2018)",
+      "org": "International Coffee Organization (ICO)",
+      "url": "https://www.ico.org/documents/cy2017-18/icc-122-12e-national-quality-standards.pdf",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": "curlで保存しpypdfで全35ページを抽出。コロンビアの項は付録A-6(PDFの10ページ目)。ICOが加盟国からの回答を集約した文書で、コロンビア側の原文(FNC決議)そのものではない。"
+    },
+    "fnc-site-and-resolutions": {
+      "title": "Federacion Nacional de Cafeteros de Colombia 公式サイト(用語集Supremo、品質規則 Resolucion 2 de 2016 / RESOL04.pdf)",
+      "org": "Federacion Nacional de Cafeteros de Colombia",
+      "url": "https://federaciondecafeteros.org/",
+      "kind": "primary",
+      "readMethod": "failed",
+      "accessed": "2026-11-08",
+      "note": "curl・WebFetchとも接続リセット(Recv failure: Connection was reset / ECONNRESET)で取得できなかった。別の資料で代用して済ませていない。"
+    },
+    "justia-uspto-jamaica-blue-mountain": {
+      "title": "JAMAICA BLUE MOUNTAIN COFFEE - Trademark Details (USPTO登録 Reg. No. 5216578)",
+      "org": "Justia Trademarks(USPTO記録の転載)",
+      "url": "https://trademarks.justia.com/870/53/jamaica-blue-mountain-87053503.html",
+      "kind": "secondary",
+      "readMethod": "snippet",
+      "accessed": "2026-11-08",
+      "note": "curlは403。検索結果の要約に『所有者はCoffee Marks Limited』とあっただけで、本文は読めていない。手がかりのみ。"
+    },
+    "sca-flavor-wheel-en": {
+      "title": "The Coffee Taster's Flavor Wheel (English poster, V.3, (c) 2021 SCA and WCR) - SCAストアの商品画像",
+      "org": "Specialty Coffee Association (SCA) / World Coffee Research (WCR)",
+      "url": "https://sca.coffee/store/p/the-coffee-tasters-flavor-wheel-poster-english-dkx89",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": "SCA公式ストアが商品画像として載せている2160x2160px画像(images.squarespace-cdn.com ... The+Coffee+Taster's+Flavor+Wheel+Poster+-++English.jpg)をcurlで取得し、画像を目視で読んだ(文字抽出ではない)。ホイール全体が1枚で見え、内輪・中輪・外輪の語を読み取れたが、薄い色の語(Almond、Lemon、Citric acid等)は読みにくい。語の存在と中間グループはレキシコン本文(テキスト)でも照合した。購入が必要な高解像度ファイル(PDF)は取得していない。"
+    },
+    "sca-flavor-wheel-ja": {
+      "title": "The Coffee Taster's Flavor Wheel (日本語版ポスター) - SCAストアの商品画像",
+      "org": "Specialty Coffee Association (SCA)",
+      "url": "https://sca.coffee/store/flavor-wheel",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": "SCA公式ストアの日本語版ポスターの商品画像(2160x2160px)を目視で読んだ。公式日本語訳との対応確認に使った。公式日本語版自体に、中輪の語が1つずれて見える箇所がある(例: Alcohol/Fermentedの位置に『オリーブオイル』と見える)ので、日本語版の中輪ラベルは根拠にしていない(外輪の語の対応だけを使用)。"
+    },
+    "wcr-sensory-lexicon-v2": {
+      "title": "World Coffee Research Sensory Lexicon, Version 2.0 (2017) - Unabridged Definition and References (English PDF)",
+      "org": "World Coffee Research (WCR)",
+      "url": "https://worldcoffeeresearch.org/download/bf904452-fc8c-488f-b591-c0b20d9bcab2",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": "WCRのSensory Lexiconページ(https://worldcoffeeresearch.org/resources/sensory-lexicon)にあるEnglish PDFをcurlで保存し、pypdfで全54ページを抽出。目次の語の階層と、各語の定義を読んだ。レキシコンの上位分類(Stale/Papery、Earthy、Chemical、Roasted等)はホイールの9分類とは異なる。"
+    },
+    "sca-store-wheel-license": {
+      "title": "The Coffee Taster's Flavor Wheel - English(商品説明のライセンス表記)",
+      "org": "Specialty Coffee Association (SCA)",
+      "url": "https://sca.coffee/store/p/the-coffee-tasters-flavor-wheel-poster-english-dkx89",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": "curlで生HTMLを取得して読んだ。"
+    }
+  },
+  "entries": {
+    "brand:ブルーマウンテン": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "ブルーマウンテンは、ジャマイカ・ブルーマウンテン地区にて生産されたアラビカコーヒー豆と定義される(規約別表2)。",
+          "status": "verified",
+          "sourceIds": [
+            "jfftc-kiyaku-coffee"
+          ],
+          "quote": "ブルーマウンテン : ジャマイカ・ブルーマウンテン地区にて生産されたアラビカコーヒー豆をいう。",
+          "location": "別表2(産地、品種、銘柄の区分及び範囲の例示) 1)",
+          "note": ""
+        },
+        {
+          "text": "JACRA(ジャマイカ農産物規制庁)がブルーマウンテンの商標権を保有している",
+          "status": "conflict",
+          "sourceIds": [
+            "jacra-home",
+            "jacra-coffee-introduction",
+            "jacra-ipweek2021",
+            "justia-uspto-jamaica-blue-mountain"
+          ],
+          "quote": "Owner of the Jamaica Blue Mountain ® & Jamaica High Mountain Supreme ® Coffee Trade Marks",
+          "location": "jacra.org トップページ(JACRA自身が所有者と表示)",
+          "note": "JACRA自身の公式サイトの記述が食い違う。(A) トップページ: 「Owner of the Jamaica Blue Mountain ® & Jamaica High Mountain Supreme ® Coffee Trade Marks」。(B) 同サイトのCoffee/Introduction: 「Coffee Marks Limited, a wholly owned subsidiary of JACRA is the owner of the Jamaica Blue Mountain® and Jamaican High Mountain Supreme® trademarks and is responsible for the integrity and licensing of the brand.」(所有者はJACRA全額出資子会社のCoffee Marks Limited)。(C) 2021年の掲載文(secondary): 「JACRA is the sole and exclusive owner of Trade Marks Jamaica Blue Mountain® Coffee; Jamaica High Mountain Supreme® Coffee and Jamaica Blue®.」。米国登録の記録(Justia)は検索要約にCoffee Marks Limitedとあるのみ(snippet、未読)。また商標は『Jamaica Blue Mountain』等の語で、日本語の一般名『ブルーマウンテン』そのものではない。保有者をJACRAと書くかは、ユーザーが決める。"
+        },
+        {
+          "text": "商標の使用許諾を受けた(アプリ記述では「認証を受けた」)業者のみが名乗れる",
+          "status": "unverified",
+          "sourceIds": [
+            "jacra-coffee-licensing"
+          ],
+          "quote": "",
+          "location": "",
+          "note": "JACRAのLicensing & Permitsは、自社ラベルで商標を使う輸出業者等にTrademark User Licenceを要求すると述べるだけで、『認証』『のみが名乗れる』とは書いていない。日本国内の『ブルーマウンテン』表示は規約別表2が産地で定義しており、JACRAの許諾との関係は資料で確認できない。"
+        },
+        {
+          "text": "JACRAは、自社ラベルで「Jamaica Blue Mountain」「High Mountain Supreme」商標を使う輸出業者・外国輸入業者に、Trademark User Licence(商標使用許諾)を求めている",
+          "status": "verified",
+          "sourceIds": [
+            "jacra-coffee-licensing"
+          ],
+          "quote": "Trademark User Licence – Exporters Required for dealers and foreign importers that utilize their own labels and are authorised to use the Jamaica Blue Mountain and High Mountain Supreme Trademark.",
+          "location": "jacra.org/divisions/coffee/licensing-permits/ 'Licensing & Permits'",
+          "note": "アプリの『認証を受けた業者のみ』を原文の範囲に直した主張(suggestedText用)。"
+        },
+        {
+          "text": "JACRAの正式名は Jamaica Agricultural Commodities Regulatory Authority(日本語『ジャマイカ農産物規制庁』はアプリ側の訳)",
+          "status": "verified",
+          "sourceIds": [
+            "jacra-home"
+          ],
+          "quote": "Jamaica Agricultural Commodities Regulatory Authority",
+          "location": "jacra.org トップページ見出し",
+          "note": "日本語の訳は公式のものではない。"
+        }
+      ],
+      "suggestedText": "ジャマイカ・ブルーマウンテン地区にて生産されたアラビカコーヒー豆と定義される特定銘柄。ジャマイカのJACRA(Jamaica Agricultural Commodities Regulatory Authority)は、自社ラベルで「Jamaica Blue Mountain」商標を使う輸出業者などにTrademark User Licence(商標使用許諾)を求めている。",
+      "note": "英訳(DESIGNATED_BRAND_EXPLANATIONS_EN)も同じ主張(JACRAが商標を保有/認証を受けた会社のみが使える)で、同じ扱い。規約の別表2は『例示』と題されている。"
+    },
+    "brand:ハイマウンテン": {
+      "status": "verified",
+      "claims": [
+        {
+          "text": "ハイマウンテンは、ジャマイカ・ハイマウンテン地区にて生産されたアラビカコーヒー豆と定義される(規約別表2)。",
+          "status": "verified",
+          "sourceIds": [
+            "jfftc-kiyaku-coffee"
+          ],
+          "quote": "ハイマウンテン : ジャマイカ・ハイマウンテン地区にて生産されたアラビカコーヒー豆をいう。",
+          "location": "別表2(産地、品種、銘柄の区分及び範囲の例示) 2)",
+          "note": ""
+        }
+      ],
+      "suggestedText": "",
+      "note": ""
+    },
+    "brand:ジャマイカ": {
+      "status": "verified",
+      "claims": [
+        {
+          "text": "ジャマイカは、ジャマイカにて生産されたアラビカコーヒー豆のうち、ブルーマウンテン・ハイマウンテン以外のものと定義される(規約別表2)。",
+          "status": "verified",
+          "sourceIds": [
+            "jfftc-kiyaku-coffee"
+          ],
+          "quote": "ジャマイカ : ジャマイカにて生産されたアラビカコーヒー豆のうち、 １） 及び２） 以外のものをいう。",
+          "location": "別表2(産地、品種、銘柄の区分及び範囲の例示) 3)",
+          "note": ""
+        }
+      ],
+      "suggestedText": "",
+      "note": ""
+    },
+    "brand:クリスタルマウンテン": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "クリスタルマウンテンは、キューバにて生産された同国輸出規格に基づくアラビカコーヒー豆と定義される(規約別表2)。",
+          "status": "verified",
+          "sourceIds": [
+            "jfftc-kiyaku-coffee"
+          ],
+          "quote": "クリスタルマウンテン : キューバにて生産された同国輸出規格に基づくアラビカコーヒー豆をいう。",
+          "location": "別表2(産地、品種、銘柄の区分及び範囲の例示) 4)",
+          "note": ""
+        },
+        {
+          "text": "ブルーマウンテン(ジャマイカ・ブルーマウンテン地区産)とクリスタルマウンテン(キューバ産)は、規約で別々の銘柄・別々の産地として定義されている",
+          "status": "verified",
+          "sourceIds": [
+            "jfftc-kiyaku-coffee"
+          ],
+          "quote": "ブルーマウンテン : ジャマイカ・ブルーマウンテン地区にて生産されたアラビカコーヒー豆をいう。",
+          "location": "別表2(産地、品種、銘柄の区分及び範囲の例示) 1)と4)",
+          "note": "1)ブルーマウンテンはジャマイカ、4)クリスタルマウンテンはキューバと、別項目・別産地で定義(4)の原文はクリスタルマウンテンの項に引用)。"
+        },
+        {
+          "text": "名前が似ているが、ジャマイカのブルーマウンテンとは無関係",
+          "status": "unverified",
+          "sourceIds": [
+            "jfftc-kiyaku-coffee"
+          ],
+          "quote": "",
+          "location": "",
+          "note": "規約は産地(キューバ/ジャマイカ)を別に定めるだけで、名称の由来や『無関係』かどうかには触れていない。キューバ側の公式資料は取得していない。"
+        },
+        {
+          "text": "(注記)地図の対象国には未収録",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "アプリ内部の仕様の記述(ORIGIN_GUIDEの国17件にキューバがないことをデータで確認済み)。外部資料の主張ではないので、台帳の対象外とするか検査側で決めてほしい。"
+        }
+      ],
+      "suggestedText": "キューバにて生産された同国輸出規格に基づくアラビカコーヒー豆と定義される特定銘柄。ジャマイカ・ブルーマウンテン地区産のブルーマウンテンとは別に、キューバ産として定義されている。",
+      "note": "『無関係』は規約から言えず、『別の産地・別の銘柄として定義』までが確認できる範囲。英訳(has no relation to Jamaica's Blue Mountain)も同じ主張で同じ扱い。注記の『地図の対象国には未収録』はアプリの仕様。"
+    },
+    "brand:コロンビアスプレモ": {
+      "status": "verified",
+      "claims": [
+        {
+          "text": "コロンビアスプレモは、コロンビアにて生産された同国輸出規格に基づくアラビカコーヒー豆と定義される(規約別表2)。",
+          "status": "verified",
+          "sourceIds": [
+            "jfftc-kiyaku-coffee"
+          ],
+          "quote": "コロンビアスプレモ : コロンビアにて生産された同国輸出規格に基づくアラビカコーヒー豆をいう。",
+          "location": "別表2(産地、品種、銘柄の区分及び範囲の例示) 6)",
+          "note": ""
+        },
+        {
+          "text": "「スプレモ(Supremo)」は、コロンビアの輸出用コーヒー豆の等級名でもある",
+          "status": "verified",
+          "sourceIds": [
+            "ico-icc122-12"
+          ],
+          "quote": "2. Supremo Screen size 17, with tolerance of 5% at screen 14",
+          "location": "ICC 122-12 付録 A-6 'COLOMBIA'(Denominationの表の2行目)",
+          "note": "同ページに『National quality standards in Colombia are regulated by the Comité Nacional de Cafeteros ... according to Resolution No. 5 of 2002』とある(2018年時点のICO集約文書)。FNC自身の現行規則(Resolucion 2 de 2016等)は接続不可で取得できなかった(fnc-site-and-resolutions: failed)ので、現行規則での扱いは未確認。『コロンビア独自』の『独自』(他国で使われないこと)は確認していない。"
+        }
+      ],
+      "suggestedText": "",
+      "note": "全主張verifiedだが、(1)根拠はICOが2018年にまとめた文書で、FNC原文ではない、(2)『独自』は確認していない、の2点は残る。本文の『コロンビア独自のグレード表記』は、検査に通すなら『コロンビアの等級名でもある』に直すのが安全。英訳も同じ。『二重の意味を持つ』は上の2主張から導く言い回しで、独立の主張としては検証していない。"
+    },
+    "brand:モカ・ハラー": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "モカ・ハラーは、エチオピア・ハラー地区にて生産されたアラビカコーヒー豆と定義される(規約別表2)。",
+          "status": "verified",
+          "sourceIds": [
+            "jfftc-kiyaku-coffee"
+          ],
+          "quote": "モカハラー : エチオピア・ハラー地区にて生産されたアラビカコーヒー豆をいう。",
+          "location": "別表2(産地、品種、銘柄の区分及び範囲の例示) 7)",
+          "note": "規約の表記は「モカハラー」(アプリの表記との違いは中黒・テ/ティのみ)。"
+        },
+        {
+          "text": "「モカシダモ」等は法的な特定銘柄ではなく、業界の慣用的な通称である",
+          "status": "unverified",
+          "sourceIds": [
+            "jfftc-kiyaku-coffee"
+          ],
+          "quote": "",
+          "location": "",
+          "note": "規約別表2の題は『産地、品種、銘柄の区分及び範囲の例示』で、14項目は『例示』。モカシダモは載っていないが、例示なので『載っていない=法的な特定銘柄でない』とは言えない。規約全文(施行規則を含む)に『モカシダモ』や『通称』による区別の記載はない。第三者の公式資料でも未確認。"
+        }
+      ],
+      "suggestedText": "エチオピア・ハラー地区にて生産されたアラビカコーヒー豆と定義される特定銘柄。",
+      "note": "英訳も同じ主張(Mocha Sidamoは法的な特定銘柄ではない)で、同じ扱い。『14種』という数え方は、別表2が『例示』であることと食い違う可能性がある(DesignatedBrandsViewの説明文『14種類の銘柄表示ルール』も要確認。規約は14を『例示』と題している)。"
+    },
+    "brand:グアテマラアンティグア": {
+      "status": "verified",
+      "claims": [
+        {
+          "text": "グアテマラアンティグアは、グアテマラ・アンティグア地区にて生産されたアラビカコーヒー豆と定義される(規約別表2)。",
+          "status": "verified",
+          "sourceIds": [
+            "jfftc-kiyaku-coffee"
+          ],
+          "quote": "グアテマラアンテイグア : グアテマラ・アンテイグア地区にて生産されたアラビカコーヒー豆をいう。",
+          "location": "別表2(産地、品種、銘柄の区分及び範囲の例示) 5)",
+          "note": "規約の表記は「グアテマラアンテイグア」(アプリの表記との違いは中黒・テ/ティのみ)。"
+        }
+      ],
+      "suggestedText": "",
+      "note": ""
+    },
+    "brand:モカ・マタリ": {
+      "status": "verified",
+      "claims": [
+        {
+          "text": "モカ・マタリは、イエメンにて生産されたアラビカコーヒー豆と定義される(規約別表2)。",
+          "status": "verified",
+          "sourceIds": [
+            "jfftc-kiyaku-coffee"
+          ],
+          "quote": "モカマタリ : イエメンにて生産されたアラビカコーヒー豆をいう。",
+          "location": "別表2(産地、品種、銘柄の区分及び範囲の例示) 8)",
+          "note": "規約の表記は「モカマタリ」(アプリの表記との違いは中黒・テ/ティのみ)。"
+        }
+      ],
+      "suggestedText": "",
+      "note": ""
+    },
+    "brand:キリマンジャロ": {
+      "status": "verified",
+      "claims": [
+        {
+          "text": "キリマンジャロは、タンザニアにて生産されたアラビカコーヒー豆と定義される。ただしブコバ地区でとれるアラビカコーヒー豆は含まない(規約別表2)。",
+          "status": "verified",
+          "sourceIds": [
+            "jfftc-kiyaku-coffee"
+          ],
+          "quote": "キリマンジャロ : タンザニアにて生産されたアラビカコーヒー豆をいう。ただし、 ブコバ地区でとれるアラビカコーヒー豆は含まない｡",
+          "location": "別表2(産地、品種、銘柄の区分及び範囲の例示) 9)",
+          "note": ""
+        }
+      ],
+      "suggestedText": "",
+      "note": ""
+    },
+    "brand:トラジャ": {
+      "status": "verified",
+      "claims": [
+        {
+          "text": "トラジャは、インドネシアのスラウェシ島トラジャ地区にて生産されたアラビカコーヒー豆と定義される(規約別表2)。",
+          "status": "verified",
+          "sourceIds": [
+            "jfftc-kiyaku-coffee"
+          ],
+          "quote": "トラジャ : インドネシアのスラウェシ島トラジャ地区にて生産されたアラビカコーヒー豆をいう。",
+          "location": "別表2(産地、品種、銘柄の区分及び範囲の例示) 10)",
+          "note": ""
+        }
+      ],
+      "suggestedText": "",
+      "note": ""
+    },
+    "brand:カロシ": {
+      "status": "verified",
+      "claims": [
+        {
+          "text": "カロシは、インドネシアのスラウェシ島カロシ地区にて生産されたアラビカコーヒー豆と定義される(規約別表2)。",
+          "status": "verified",
+          "sourceIds": [
+            "jfftc-kiyaku-coffee"
+          ],
+          "quote": "カロシ : インドネシアのスラウェシ島カロシ地区にて生産されたアラビカコーヒー豆をいう。",
+          "location": "別表2(産地、品種、銘柄の区分及び範囲の例示) 11)",
+          "note": ""
+        }
+      ],
+      "suggestedText": "",
+      "note": ""
+    },
+    "brand:ガヨマウンテン": {
+      "status": "verified",
+      "claims": [
+        {
+          "text": "ガヨマウンテンは、インドネシアのスマトラ島タケンゴン地区にて生産されたアラビカコーヒー豆と定義される(規約別表2)。",
+          "status": "verified",
+          "sourceIds": [
+            "jfftc-kiyaku-coffee"
+          ],
+          "quote": "ガヨマウンテン : インドネシアのスマトラ島タケンゴン地区にて生産されたアラビカコーヒー豆をいう。",
+          "location": "別表2(産地、品種、銘柄の区分及び範囲の例示) 12)",
+          "note": ""
+        }
+      ],
+      "suggestedText": "",
+      "note": ""
+    },
+    "brand:マンデリン": {
+      "status": "verified",
+      "claims": [
+        {
+          "text": "マンデリンは、インドネシアの北スマトラ州及びアチェ州(タケンゴン周辺のガヨマウンテン生産地区を除く)にて生産されたアラビカコーヒー豆と定義される(規約別表2)。",
+          "status": "verified",
+          "sourceIds": [
+            "jfftc-kiyaku-coffee"
+          ],
+          "quote": "マンデリン : インドネシアの北スマトラ州及びアチェ州 （タケンゴン周辺のガヨマウンテン生産地区を除く）にて生産されたアラビカコーヒー豆をいう。",
+          "location": "別表2(産地、品種、銘柄の区分及び範囲の例示) 13)",
+          "note": ""
+        }
+      ],
+      "suggestedText": "",
+      "note": ""
+    },
+    "brand:ハワイコナ": {
+      "status": "verified",
+      "claims": [
+        {
+          "text": "ハワイコナは、アメリカのハワイ州南コナ地区及び北コナ地区にて生産されたアラビカコーヒー豆と定義される(規約別表2)。",
+          "status": "verified",
+          "sourceIds": [
+            "jfftc-kiyaku-coffee"
+          ],
+          "quote": "ハワイコナ : アメリカのハワイ州南コナ地区及び北コナ地区にて生産されたアラビカコーヒー豆をいう。",
+          "location": "別表2(産地、品種、銘柄の区分及び範囲の例示) 14)",
+          "note": ""
+        }
+      ],
+      "suggestedText": "",
+      "note": ""
+    },
+    "flavorwheel:all": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "ホイールは、フルーティー(Fruity)、フローラル(Floral)、スイート(Sweet)、ナッツ/カカオ(Nutty/Cocoa)、スパイス(Spices)、ロースト(Roasted)、グリーン/野菜っぽさ(Green/Vegetative)、酸味/発酵(Sour/Fermented)、その他(Other)の9大カテゴリからなる",
+          "status": "verified",
+          "sourceIds": [
+            "sca-flavor-wheel-en",
+            "sca-flavor-wheel-ja"
+          ],
+          "quote": "FRUITY / FLORAL / SWEET / NUTTY/COCOA / SPICES / ROASTED / OTHER / GREEN/VEGETATIVE / SOUR/FERMENTED",
+          "location": "SCAホイール内輪(innermost ring)のラベル9つ(画像を目視)",
+          "note": "文字として抽出した引用ではなく、画像の内輪ラベルを読んだ記録。WCRレキシコンの上位分類は別(Fruity, Sour/Acid, Alcohol/Fermented, Green/Vegetative, Stale/Papery, Earthy, Chemical, Roasted, Cereal, Spices, Nutty, Cocoa, Sweet, Floral)で、9分類に束ねたのはホイール。日本語のカテゴリ名はアプリ独自の訳(公式日本語版は『果物』『花』『甘い』『ナッツ/ココア』『葉野菜/植物』『サワー/発酵』など)で、意味は対応している。"
+        },
+        {
+          "text": "フルーティー: ベリー(ブラックベリー、ラズベリー、ブルーベリー、イチゴ)、ドライフルーツ(レーズン、プルーン)、その他フルーツ(ココナッツ、チェリー、ザクロ、パイナップル、ぶどう、リンゴ、桃、洋梨)、柑橘(グレープフルーツ、オレンジ、レモン、ライム)",
+          "status": "verified",
+          "sourceIds": [
+            "wcr-sensory-lexicon-v2",
+            "sca-flavor-wheel-en",
+            "sca-flavor-wheel-ja"
+          ],
+          "quote": "Fruity Berry Strawberry Raspberry Blueberry Blackberry Dried Fruit Raisin Prune Other Fruit Apple Pear Peach Grape Cherry Pomegranate Coconut Pineapple Citrus fruit Lemon Grapefruit Orange Lime",
+          "location": "Table of Contents(目次) 'Fruity' (p.16)",
+          "note": "日本語の語と英語の対応は、SCA公式日本語版ホイール(sca-flavor-wheel-ja)の外輪の語と目視で照合した。アプリの語は公式日本語版と表記が違うものがあるが(例: イチゴ/ストロベリー、洋梨/梨)、同じ語を指す。"
+        },
+        {
+          "text": "フローラル: 花(カモミール、ローズ、ジャスミン)。語の対応は正しいが、紅茶(Black tea)も本来ここに属する(次の紅茶の主張を参照)",
+          "status": "verified",
+          "sourceIds": [
+            "wcr-sensory-lexicon-v2",
+            "sca-flavor-wheel-en",
+            "sca-flavor-wheel-ja"
+          ],
+          "quote": "Floral Rose Jasmine Chamomile Black tea",
+          "location": "Table of Contents(目次) 'Floral' (p.48)",
+          "note": "カモミール/ローズ/ジャスミンの3語は正しい。紅茶が抜けている。"
+        },
+        {
+          "text": "スイート: ブラウンシュガー系(糖蜜、メープルシロップ、カラメル、はちみつ)、バニラ系(バニラ、バニリン)、その他(全体的な甘さ、甘い香り)の語がスイートに属する",
+          "status": "verified",
+          "sourceIds": [
+            "wcr-sensory-lexicon-v2",
+            "sca-flavor-wheel-en",
+            "sca-flavor-wheel-ja"
+          ],
+          "quote": "Molasses Maple Syrup Brown sugar Caramelized Honey Vanilla Vanillin Sweet Aromatics Overall sweet",
+          "location": "Table of Contents(目次) 'Sweet' (p.45)",
+          "note": "語(Molasses, Maple Syrup, Caramelized, Honey, Vanilla, Vanillin, Overall sweet=全体的な甘さ, Sweet Aromatics=甘い香り)の所属は正しい。ただし、グループ名『バニラ系』『その他』と、バニラ・バニリンを1つにまとめる分け方は公式にない(次のグループ名の主張を参照)。日本語の語と英語の対応は、SCA公式日本語版ホイール(sca-flavor-wheel-ja)の外輪の語と目視で照合した。アプリの語は公式日本語版と表記が違うものがあるが(例: イチゴ/ストロベリー、洋梨/梨)、同じ語を指す。"
+        },
+        {
+          "text": "紅茶(Black tea)はスイートの『その他』グループに属する",
+          "status": "incorrect",
+          "sourceIds": [
+            "wcr-sensory-lexicon-v2",
+            "sca-flavor-wheel-en"
+          ],
+          "quote": "Floral Rose Jasmine Chamomile Black tea",
+          "location": "Table of Contents(目次) 'Floral' (p.48)",
+          "note": "レキシコンの目次では Black tea は Floral の項(Floral, Rose, Jasmine, Chamomile, Black tea)に載る。SCAホイールでも、Black teaの区画はスイートでなくフローラル側に付く(目視)。正しくはフローラル。(根拠の原文は、レキシコンのFloral項。)"
+        },
+        {
+          "text": "バニラ系、その他、刺激的な香り、たばこ系 などの『グループ名』は、ホイールの分類である",
+          "status": "unverified",
+          "sourceIds": [
+            "wcr-sensory-lexicon-v2",
+            "sca-flavor-wheel-en"
+          ],
+          "quote": "",
+          "location": "",
+          "note": "これらの名前はアプリ独自のまとめ方。ホイールの中輪は、スイートがBrown Sugar / Vanilla / Vanillin / Overall Sweet / Sweet Aromatics、スパイスがPungent / Pepper / Brown Spice、ローストがPipe Tobacco / Tobacco / Burnt / Cereal と、個別の区画になっている。『ブラウンシュガー系』(Brown Sugar)、『褐色系スパイス』(Brown Spice)、『焦げ』(Burnt)、『穀物系』(Cereal)、『ベリー』などは、ホイールの区画名に対応する。"
+        },
+        {
+          "text": "ナッツ/カカオ: ナッツ(ピーナッツ、ヘーゼルナッツ、アーモンド)、カカオ(チョコレート、ダークチョコレート)",
+          "status": "verified",
+          "sourceIds": [
+            "wcr-sensory-lexicon-v2",
+            "sca-flavor-wheel-en",
+            "sca-flavor-wheel-ja"
+          ],
+          "quote": "Chocolate Cocoa Dark Chocolate",
+          "location": "Table of Contents(目次) 'Cocoa' (p.44)",
+          "note": "同じ目次で Nutty の項は Nutty, Almond, Hazelnut, Peanuts。ホイールではNutty配下にPeanuts, Hazelnut, Almond、Cocoa配下にChocolate, Dark Chocolate。『カカオ』はホイールのCocoa(公式日本語版は『ココア』)の訳。日本語の語と英語の対応は、SCA公式日本語版ホイール(sca-flavor-wheel-ja)の外輪の語と目視で照合した。アプリの語は公式日本語版と表記が違うものがあるが(例: イチゴ/ストロベリー、洋梨/梨)、同じ語を指す。"
+        },
+        {
+          "text": "スパイス: ピリッとした香り(Pungent)、ペッパー(Pepper)、褐色系スパイス(アニス、ナツメグ、シナモン、クローブ)",
+          "status": "verified",
+          "sourceIds": [
+            "wcr-sensory-lexicon-v2",
+            "sca-flavor-wheel-en",
+            "sca-flavor-wheel-ja"
+          ],
+          "quote": "Pungent Pepper Anise Nutmeg Brown spice Cinnamon Clove",
+          "location": "Table of Contents(目次) 'Spices' (p.40)",
+          "note": "語の所属は正しい。『ピリッとした香り』はPungent(公式日本語版は『刺激する』)の訳。日本語の語と英語の対応は、SCA公式日本語版ホイール(sca-flavor-wheel-ja)の外輪の語と目視で照合した。アプリの語は公式日本語版と表記が違うものがあるが(例: イチゴ/ストロベリー、洋梨/梨)、同じ語を指す。"
+        },
+        {
+          "text": "ロースト: たばこ系(パイプたばこ、たばこ)、焦げ(刺激臭=Acrid、灰っぽさ=Ashy、スモーキー=Smoky)、穀物系(穀物、麦芽)の語がローストに属する",
+          "status": "verified",
+          "sourceIds": [
+            "wcr-sensory-lexicon-v2",
+            "sca-flavor-wheel-en",
+            "sca-flavor-wheel-ja"
+          ],
+          "quote": "Tobacco Pipe tobacco Acrid Ashy Burnt Smoky Roasted Brown, roast Cereal",
+          "location": "Table of Contents(目次) 'Roasted' (p.36)",
+          "note": "目次のRoasted項はTobacco, Pipe tobacco, Acrid, Ashy, Burnt, Smoky, Roasted, Brown roast。Cereal(Grain, Malt)は別項だが、ホイールではRoastedの内側に入る。Acridの定義は『The sharp, pungent, bitter, acidic aromatic associated with products that are excessively roasted or browned.』で、『刺激臭』と対応する。日本語の語と英語の対応は、SCA公式日本語版ホイール(sca-flavor-wheel-ja)の外輪の語と目視で照合した。アプリの語は公式日本語版と表記が違うものがあるが(例: イチゴ/ストロベリー、洋梨/梨)、同じ語を指す。"
+        },
+        {
+          "text": "ロースト香(Brown, roast)は穀物系(Cereal)グループに属する",
+          "status": "incorrect",
+          "sourceIds": [
+            "wcr-sensory-lexicon-v2",
+            "sca-flavor-wheel-en"
+          ],
+          "quote": "Smoky Roasted Brown, roast Cereal",
+          "location": "Table of Contents(目次) 'Roasted' (p.36)",
+          "note": "レキシコンの目次では Brown, roast は Roasted の項の最後に載り、Cereal(Grain, Malt)はその後の別項。SCAホイールでも、Brown, Roast はBurnt(Acrid, Ashy, Smoky, Brown Roast)の外輪にあり、Cereal(Grain, Malt)にはない(目視)。穀物系は『穀物』『麦芽』の2語のみが正しい。なお訳語『ロースト香』は、Brown, roast(定義: A rich, full, round aromatic impression always characterized as some degree of darkness...)に対し言葉が足りないが、レキシコンにはRoasted(別の語)もあり、どちらを指すか紛らわしい。公式日本語版は『茶色、ローストされた』。"
+        },
+        {
+          "text": "グリーン/野菜っぽさ: 青っぽさ(未熟、さやえんどう、フレッシュ、濃い緑、野菜っぽさ、干し草様、ハーブ様)、豆っぽさ(豆様)",
+          "status": "verified",
+          "sourceIds": [
+            "wcr-sensory-lexicon-v2",
+            "sca-flavor-wheel-en",
+            "sca-flavor-wheel-ja"
+          ],
+          "quote": "Under–ripe Peapod Green Fresh Dark Green Vegetative Hay-like Herb-like Beany",
+          "location": "Table of Contents(目次) 'Green/Vegetative' (p.28)",
+          "note": "7語とBeanyの所属は正しい(目次のGreenはホイールの中輪名Green/Vegetativeに当たり、外輪の語ではない)。日本語の語と英語の対応は、SCA公式日本語版ホイール(sca-flavor-wheel-ja)の外輪の語と目視で照合した。アプリの語は公式日本語版と表記が違うものがあるが(例: イチゴ/ストロベリー、洋梨/梨)、同じ語を指す。"
+        },
+        {
+          "text": "オリーブオイル様(Olive oil)は『その他』カテゴリの『その他の要素』に属する",
+          "status": "incorrect",
+          "sourceIds": [
+            "wcr-sensory-lexicon-v2",
+            "sca-flavor-wheel-en"
+          ],
+          "quote": "Olive Oil Raw Under–ripe Peapod Green Fresh Dark Green Vegetative Hay-like Herb-like Beany",
+          "location": "Table of Contents(目次) 'Green/Vegetative' (p.28)",
+          "note": "レキシコンの目次では Olive Oil はGreen/Vegetativeの項の先頭(Olive Oil, Raw, ...)。SCAホイールでも、Olive OilとRawは緑(Green/Vegetative)の区画に付く(目視)。正しくはグリーン/野菜っぽさ。なお同じ項のRaw(生。定義: An aromatic associated with uncooked products.)は、アプリに載っていない(省略。『公式リストの全体』ではない)。"
+        },
+        {
+          "text": "酸味/発酵: 酸味(酸っぱい香り、酢酸、酪酸、イソ吉草酸、クエン酸、リンゴ酸)、発酵系(ワインのような、ウイスキーのような、発酵、過熟)",
+          "status": "verified",
+          "sourceIds": [
+            "wcr-sensory-lexicon-v2",
+            "sca-flavor-wheel-en",
+            "sca-flavor-wheel-ja"
+          ],
+          "quote": "Sour Aromatics Acetic acid Butyric acid Isovaleric acid Citric acid Malic acid",
+          "location": "Table of Contents(目次) 'Sour/Acid' (p.23); 'Alcohol/Fermented' (p.26): Alcohol, Whiskey, Winey, Fermented, Overripe/Near fermented",
+          "note": "『酸っぱい香り』はSour Aromatics(定義: An aromatic associated with the impression of a sour product.)の訳。『過熟』はOverripe(レキシコンはOverripe/Near fermented)。ホイールでは『Sour』と『Alcohol/Fermented』の2区画がSour/Fermentedの下にまとまる。日本語の語と英語の対応は、SCA公式日本語版ホイール(sca-flavor-wheel-ja)の外輪の語と目視で照合した。アプリの語は公式日本語版と表記が違うものがあるが(例: イチゴ/ストロベリー、洋梨/梨)、同じ語を指す。"
+        },
+        {
+          "text": "その他: 紙っぽさ/カビっぽさ(古紙様、段ボール様、紙様、木質様、カビ様、埃っぽい、土っぽい)の語がこのカテゴリに属する(古紙様以外)",
+          "status": "verified",
+          "sourceIds": [
+            "wcr-sensory-lexicon-v2",
+            "sca-flavor-wheel-en",
+            "sca-flavor-wheel-ja"
+          ],
+          "quote": "Stale Papery Cardboard / Musty/earthy Musty/dusty Moldy/damp Phenolic Animalic Meaty/brothy Woody",
+          "location": "Table of Contents(目次) 'Stale/Papery' (p.31), 'Earthy' (p.32)",
+          "note": "Papery=紙様、Cardboard=段ボール様、Woody=木質様、Moldy/damp=カビ様(damp=湿気が訳に出ない)、Musty/dusty=埃っぽい、Musty/earthy=土っぽい。ホイールではこれらがPapery/Mustyの区画。日本語の語と英語の対応は、SCA公式日本語版ホイール(sca-flavor-wheel-ja)の外輪の語と目視で照合した。アプリの語は公式日本語版と表記が違うものがあるが(例: イチゴ/ストロベリー、洋梨/梨)、同じ語を指す。"
+        },
+        {
+          "text": "『古紙様』は Stale の訳である",
+          "status": "incorrect",
+          "sourceIds": [
+            "wcr-sensory-lexicon-v2"
+          ],
+          "quote": "STALE The aromatic characterized by a lack of freshness.",
+          "location": "Definitions, 'STALE/PAPERY' 'STALE'(p.31)",
+          "note": "Staleの定義は『鮮度のなさ』。『古紙(古い紙)のような』は原文にない意味を足している(紙の香りはPapery/Cardboardが別にある)。公式日本語版は『古くなった』。『古くなった』『鮮度が落ちた』などが原文に沿う。"
+        },
+        {
+          "text": "動物臭(Animalic)、肉様/だし様(Meaty/Brothy)、フェノール様(Phenolic)は、『紙っぽさ/カビっぽさ』とは別の『その他の要素』グループに属する",
+          "status": "incorrect",
+          "sourceIds": [
+            "wcr-sensory-lexicon-v2",
+            "sca-flavor-wheel-en"
+          ],
+          "quote": "Musty/earthy Musty/dusty Moldy/damp Phenolic Animalic Meaty/brothy Woody",
+          "location": "Table of Contents(目次) 'Earthy' (p.32)",
+          "note": "レキシコンの目次では、Phenolic, Animalic, Meaty/brothy は Musty/earthy, Musty/dusty, Moldy/damp, Woody と同じ項(Earthy)。SCAホイールでも、Animalic, Meaty Brothy, Phenolic はPapery/Mustyの区画の外輪にある(目視)。アプリは3語を別グループにしている(上位のOtherカテゴリには入っているので、カテゴリ判定は正しい)。"
+        },
+        {
+          "text": "ケミカル: 苦味、塩味、薬品様、石油様、スカンク様、ゴム様",
+          "status": "verified",
+          "sourceIds": [
+            "wcr-sensory-lexicon-v2",
+            "sca-flavor-wheel-en",
+            "sca-flavor-wheel-ja"
+          ],
+          "quote": "Bitter Salty Medicinal Rubber Petroleum Skunky",
+          "location": "Table of Contents(目次) 'Chemical' (p.34-35)",
+          "note": "Bitter, Salty, Medicinal, Rubber, Petroleum, Skunky。ホイールではChemicalの区画。日本語の語と英語の対応は、SCA公式日本語版ホイール(sca-flavor-wheel-ja)の外輪の語と目視で照合した。アプリの語は公式日本語版と表記が違うものがあるが(例: イチゴ/ストロベリー、洋梨/梨)、同じ語を指す。"
+        }
+      ],
+      "suggestedText": "フレーバーホイール(SCAとWCRが公開した用語リストを基にした構成)の修正案: (1)紅茶(Black tea)をスイートの『その他』から、フローラルへ移す(花: カモミール、ローズ、ジャスミン、紅茶)。(2)オリーブオイル様(Olive oil)を『その他』から、グリーン/野菜っぽさへ移す。(3)ロースト香(Brown, roast)を穀物系から外し、焦げ(Burnt)の側へ移す(穀物系は穀物と麦芽のみ)。(4)古紙様(Stale)の訳を、鮮度が落ちた状態を表す語(例: 古くなった)に直す。(5)動物臭、肉様/だし様、フェノール様を、紙っぽさ/カビっぽさ(Papery/Musty)と同じグループにする。(6)バニラ系、刺激的な香り、たばこ系、その他、その他の要素 というグループ名は、公式の区画名ではない(アプリ独自のまとめ方)ことを踏まえ、そのまま使うか、公式の区画(Brown Sugar、Vanilla、Vanillin、Overall Sweet、Sweet Aromatics、Pungent、Pepper、Brown Spice、Pipe Tobacco、Tobacco、Burnt、Cereal など)に合わせて直す。(7)公式の語のうちRaw(生)が載っていない。",
+      "note": "【確認の範囲】SCA公式ストアのホイール画像(英語版・日本語版、画像を目視)とWCR Sensory Lexicon v2.0の英語PDF(全文を抽出)で、全カテゴリ・全グループ・全用語(約100語)を1つずつ照合した。ホイールのPDF(高解像度版)は購入が必要で取得していない。画像で読めた語は、薄い色の語(Almond、Lemon、Citric acidなど)で確度が下がる。ホイールのバージョンは画像のV.3(2021)で、2016年版との違いは確認していない。【出典表記】src/data/flavorWheel.js の冒頭コメントは出典を『coffee-flavor-notes.md』(内部メモ)としている。内部メモは出典にならないので、画面の出典はSCA/WCRの公式資料(名称・リンク・確認日)にする。【ライセンス】SCAのストアは『The Coffee Taster's Flavor Wheel by SCA and WCR (©2016) is licensed under a Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License.』と表示している。アプリはこの語彙を日本語に訳し、独自のカード形式に再構成して掲載し、アプリが商用か(広告・課金の有無)にかかわらず、改変(NoDerivatives)に当たるかどうかの判断が必要(法的判断は検証の範囲外。ユーザーに確認を)。【FLAVOR_TERM_INDEX】分類専用の索引(englishTerms、japaneseSynonyms)にはSCA/WCRの語でないもの(bergamot、berry、citrus、herbal、earthy、ベリー、フルーツ、キャラメル、スパイシーなど)が含まれる。画面には出ないが、判定のしかたはSCA/WCRのものではない旨を、表示するときは書き分ける必要がある。"
+    }
+  }
+}

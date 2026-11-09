@@ -1,0 +1,336 @@
+{
+  "results": {
+    "origin:コロンビア:sub:トリマ": {
+      "verdict": "ok",
+      "problems": []
+    },
+    "origin:コロンビア:sub:ナリーニョ": {
+      "verdict": "ok",
+      "problems": []
+    },
+    "origin:コロンビア:varietiesDetail": {
+      "verdict": "ok",
+      "problems": []
+    },
+    "origin:ジャマイカ:farmStructure": {
+      "verdict": "fix",
+      "finalContent": {
+        "text": "JACRAは、品質基準の設定、品質保証と認証サービスの提供、コーヒーなどの取引の統括を担う(JIS)。"
+      },
+      "usedClaims": [
+        0
+      ],
+      "problems": [
+        "正式名称「Jamaica Agricultural Commodities Regulatory Authority」は引用に無いため削除"
+      ]
+    },
+    "origin:ジャマイカ:history": {
+      "verdict": "fix",
+      "finalContent": {
+        "text": "JISは、コーヒーが1728年にジャマイカ島に初めて導入されたと述べている。JCEA(ジャマイカ・コーヒー輸出業者協会)は、隣のイスパニョーラ島から島に持ち込んだのは英国の総督サー・ニコラス・ロウズだとしている。JISの記事(2026年1月22日)は、日本はジャマイカ産ブルーマウンテンコーヒーの輸出の半分超を占めるとしている。農業省の記事(2024年7月19日)は、ハリケーン・ベリルの通過について、全教区のコーヒー農園・インフラに推定60%の被害があり、推定25,000箱の損失があったと述べている。また農業省の記事は、ハリケーン・メリッサでコーヒーの40%が失われたと述べている。"
+      },
+      "usedClaims": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "problems": [
+        "「農業大臣」は引用に無い(locationのみ)ため、JIS記事の記述に変更",
+        "ロウズの引用は主語(何を持ち込んだか)が切れているため「コーヒーを導入した」と断定せず、引用の範囲に",
+        "ベリルの「2024年7月」は記事日付(2024-07-19)の表記に変更(通過の時期は引用に無い)"
+      ]
+    },
+    "origin:ジャマイカ:officialBody": {
+      "verdict": "fix",
+      "finalContent": {
+        "text": "JACRAは、農業省の閣僚文書(Ministry Paper、2015年)で、既存のCoffee Industry Boardに替わる新しい機関とされている。"
+      },
+      "usedClaims": [
+        0
+      ],
+      "problems": [
+        "正式名称の展開は引用に無いため削除",
+        "引用は「the new body」としか言わず、これがJACRAであることは資料の注記・locationにのみ依拠(要注意)"
+      ]
+    },
+    "origin:ジャマイカ:sub:ハイマウンテン地区": {
+      "verdict": "ok",
+      "problems": []
+    },
+    "origin:ジャマイカ:sub:ブルーマウンテン地区": {
+      "verdict": "fix",
+      "finalContent": {
+        "detail": "JACRA規則2018は、「Jamaica Blue Mountain Coffee」を、ジャマイカのブルーマウンテン区域(Blue Mountain area of Jamaica)で栽培されたコーヒーと定義している。"
+      },
+      "usedClaims": [
+        0
+      ],
+      "problems": [
+        "「その区域は第1附則で定められている」は引用に無い(locationのみ)ため削除"
+      ]
+    },
+    "origin:ジャマイカ:tagline": {
+      "verdict": "fix",
+      "finalContent": {
+        "text": "WIPOは、ジャマイカのブルーマウンテンの地形、降雨パターン、ブルーマウンテンの霧、そして全体の条件が、世界でも特に名高く愛されるコーヒーの一つの栽培に申し分なく適していると述べている。"
+      },
+      "usedClaims": [
+        0
+      ],
+      "problems": [
+        "「ブルーマウンテンの地形」は、引用では「Blue Mountain mist」のみがBlue Mountain付き。引用の並びに直した"
+      ]
+    },
+    "origin:ジャマイカ:terroir": {
+      "verdict": "ok",
+      "problems": []
+    },
+    "origin:タンザニア:farmStructure": {
+      "verdict": "fix",
+      "finalContent": {
+        "text": "TCB(Tanzania Coffee Board)の「Coffee Farming」のページは、農場の規模(farm sizes)を0.5〜2エーカーとしている。"
+      },
+      "usedClaims": [
+        0
+      ],
+      "problems": [
+        "引用に「コーヒー農家」の語は無いため、資料題名による帰属に変更"
+      ]
+    },
+    "origin:タンザニア:gradeSystem": {
+      "verdict": "fix",
+      "finalContent": {
+        "text": "タンザニアのコーヒー産業規則(2013年、政府告示第385号)は、等級AAを、スクリーン18に最低90%が残るもの(スクリーン17は最大8〜10%)としている。"
+      },
+      "usedClaims": [
+        0
+      ],
+      "problems": [
+        "「第6付表(マイルドアラビカ)」はlocationのみのため削除",
+        "引用に「豆」の語は無い"
+      ]
+    },
+    "origin:タンザニア:history": {
+      "verdict": "fix",
+      "finalContent": {
+        "text": "USDA FASの2019年報告は、次の項目を挙げている: 農家と契約のあった現地・外国の業者によるコーヒーの直接輸出の禁止(2019年1月に一時解除)、農家のAMCOSへの加入の義務づけ、全量をモシのTCB中央オークションで売る義務(生産者・輸出業者・加工業者によるオークションの迂回の禁止)。同報告は、政府が直接輸出を禁止したのは2018年1月で、TCBは1年の不安定の後に禁止を緩和し、上質なコーヒーの生産者が海外の買い手と直接取引することを認めたと記す。2021年5月のUSDA FASの報告は、新しい法律により、上質なコーヒーの生産者が海外の買い手と直接取引し、AMCOSと関わり、オークションを経由しないことが認められていると記す。"
+      },
+      "usedClaims": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "problems": [
+        "「(Policy)」「政府の施策として」は引用に無い(location由来)ため、「次の項目を挙げている」に変更",
+        "禁止の「一時解除(2019年1月)」は引用1の括弧書きの範囲で記載"
+      ]
+    },
+    "origin:タンザニア:officialBody": {
+      "verdict": "fix",
+      "finalContent": {
+        "text": "Tanzania Coffee Board(TCB)は、2001年のコーヒー産業法(Act No. 23 of 2001)で再設立された。2001年法の条文は、商業目的でコーヒーの買付・liquoring・加工・焙煎・倉庫保管・中央パルピング・輸出を行うには、同法のBoard(TCB)が発行するライセンスが必要と定めている。"
+      },
+      "usedClaims": [
+        0,
+        2
+      ],
+      "problems": [
+        "「TCBの権限として輸出ライセンス・許可の付与を挙げる(第5条(2))」は、引用(a)に主語が無く条番号もlocationのみのため削除",
+        "「第12条(3)」の条番号はlocationのみのため削除",
+        "資料注記に2009年法で改正済みとあるため「2001年法の条文は」と限定",
+        "「the Board」=TCBは、前文(TCBの再設立)と資料からの同定(軽微)"
+      ]
+    },
+    "origin:タンザニア:sub:キリマンジャロ山麓(北部)": {
+      "verdict": "fix",
+      "finalContent": {
+        "detail": "USDA FASの2021年報告は、「混作およびバナナ/小農」(intercropped and bananas/smallholder)について、主に北部と西部と記している。"
+      },
+      "usedClaims": [
+        0
+      ],
+      "problems": [
+        "引用は断片(intercropped and bananas/smallholder (mainly in the north and west))で、「バナナ等」の「等」、「栽培」、キリマンジャロ山麓への言及は無い。断片の範囲に直した"
+      ]
+    },
+    "origin:タンザニア:sub:南部高地(Mbeya・Ruvuma・Songwe等)": {
+      "verdict": "ok",
+      "problems": []
+    },
+    "origin:タンザニア:tagline": {
+      "verdict": "fix",
+      "finalContent": {
+        "text": "TaCRIのLyamungu副研究所のページによると、そのページがいう地帯(the zone)には、小農とエステートの双方によるアラビカコーヒーの生産が100年近く続いてきた歴史がある。"
+      },
+      "usedClaims": [
+        0
+      ],
+      "problems": [
+        "「キリマンジャロ山麓(ハイ県)」は引用に無い(引用は「The zone」)ため削除"
+      ]
+    },
+    "origin:タンザニア:terroir": {
+      "verdict": "fix",
+      "finalContent": {
+        "text": "TCBは、アラビカの産地としてキリマンジャロ、アルーシャ、ムベヤ、ルブマ、ソングウェなどの地域(regions)を挙げている。USDA FASの2021年報告は、「混作およびバナナ/小農」(intercropped and bananas/smallholder)について、主に北部と西部と記している。"
+      },
+      "usedClaims": [
+        0,
+        1
+      ],
+      "problems": [
+        "「州」は引用のregionsに合わせて「地域」に",
+        "混作・バナナの断片は引用の範囲に直した(「バナナ等」「栽培」は引用に無い)"
+      ]
+    },
+    "origin:タンザニア:varietiesDetail": {
+      "verdict": "ok",
+      "problems": []
+    },
+    "origin:ハワイ:gradeSystem": {
+      "verdict": "fix",
+      "finalContent": {
+        "text": "ハワイ州農業・バイオセキュリティ局の統計資料(2026年1月)は、生豆(green coffee)の等級基準として Extra Fancy、Fancy、Hawaii No.1、Select、Prime、Hawaii No.3、Natural Prime、Mixed Natural Prime、Off Grade を挙げている。ハワイ州行政規則第4-143章の要約(2020年7月1日施行)では、Hawaii No.3より品質が低いOff Gradeに「Hawaii」の語を併用することが禁じられている。"
+      },
+      "usedClaims": [
+        0,
+        1
+      ],
+      "problems": [
+        "「緑豆」は日本語ではmung beanを指す誤訳。green coffee=生豆に修正"
+      ]
+    },
+    "origin:ハワイ:harvestSeason": {
+      "verdict": "ok",
+      "problems": []
+    },
+    "origin:ハワイ:history": {
+      "verdict": "fix",
+      "finalContent": {
+        "text": "ハワイ大学CTAHR(2008年)によれば、1892年にヘルマン・ヴィーデマンがグアテマラから‘Guatemalan’種をハワイに導入した。ヴィーデマンは種子をジョン・ホーナーに渡し、ホーナーはハマクアに800本の果樹園を植えた。1910年までに、コナの生産者は新しい品種の優位を確信した。"
+      },
+      "usedClaims": [
+        0,
+        1,
+        2
+      ],
+      "problems": [
+        "「別名コナ・ティピカ」は引用に無い(locationの見出しのみ)ため削除"
+      ]
+    },
+    "origin:ハワイ:officialBody": {
+      "verdict": "fix",
+      "finalContent": {
+        "text": "ハワイ州の州法Act 198(Relating to Consumer Protection、2024年7月3日承認)は、2024年7月1日に施行された。同法の条文には、2027年7月1日以降について「その産地(that geographic origin)のコーヒーを重量で51%」とする規定がある。"
+      },
+      "usedClaims": [
+        1,
+        2
+      ],
+      "problems": [
+        "「農業部局(品質保証部の商品課)が検査・認証を担う」は、引用に主語が無く課の名前も引用に無いため削除",
+        "「コーヒーの産地名を使うには」「51%以上」は引用に無い(location/主張文由来)ため、引用の文言の範囲に直した"
+      ]
+    },
+    "origin:ハワイ:sub:カウ(Ka'ū、南部)": {
+      "verdict": "fix",
+      "finalContent": {
+        "detail": "ハワイ州行政規則第4-143章(2001年10月8日施行の版)では、カウ(Kau)は、ハワイ州のTax Map(税務地図)で定められたハワイ島のKa‘u地区とされている。"
+      },
+      "usedClaims": [
+        0
+      ],
+      "problems": [
+        "「§4-143-3」はlocationのみのため削除",
+        "資料は2001年版(旧規則)のため、版を明示"
+      ]
+    },
+    "origin:ハワイ:sub:コナ": {
+      "verdict": "fix",
+      "finalContent": {
+        "detail": "ハワイ州行政規則第4-143章(2001年10月8日施行の版)では、コナは北コナ(North Kona)地区と南コナ(South Kona)地区とされている。"
+      },
+      "usedClaims": [
+        0
+      ],
+      "problems": [
+        "資料は2001年版(旧規則)のため、版を明示",
+        "引用が切れているため「ハワイ島」は書かない"
+      ]
+    },
+    "origin:ハワイ:tagline": {
+      "verdict": "drop",
+      "problems": [
+        "引用は数字の羅列(7,500 7,500 7,400 7,400 7,000 7,000)のみで、結実面積・エーカー・季・ハワイ/全米の対応は引用に無くlocationのみに依拠。引用の範囲で言えることが残らない"
+      ]
+    },
+    "origin:ハワイ:varietiesDetail": {
+      "verdict": "fix",
+      "finalContent": {
+        "text": "1892年、ヘルマン・ヴィーデマンがグアテマラから‘Guatemalan’品種をハワイに導入した(ハワイ大学CTAHR、2008年)。ティピカ品種は、コーヒーさび病への感受性が非常に高い(WCR品種カタログ)。"
+      },
+      "usedClaims": [
+        0,
+        1
+      ],
+      "problems": [
+        "「この系統が現在の『コナ・ティピカ』になった」は引用に無い(locationの見出しのみ)ため削除"
+      ]
+    },
+    "origin:パナマ:farmStructure": {
+      "verdict": "fix",
+      "finalContent": {
+        "text": "SCAPの資料には、ハシエンダ・ラ・エスメラルダ(ピーターソン家が所有)、フィンカ・レリダ(ボケテ地域)、エリダ農園(Elida Estate Coffee、1918年に歴史が始まり、ウィルフォード・ラマストゥス氏が3代目)が載っている。"
+      },
+      "usedClaims": [
+        0,
+        1,
+        2
+      ],
+      "problems": [
+        "引用はラマストゥス家の「所有」を述べず「Wilford Lamastusが3代目」とのみ。「ラマストゥス家」の表記を引用の範囲に直した"
+      ]
+    },
+    "origin:パナマ:history": {
+      "verdict": "fix",
+      "finalContent": {
+        "text": "1996年、国際コーヒー価格の低迷期に、ボケテとボルカン・カンデラの生産者7名が、自分たちのコーヒーを知ってもらおうと集まった(SCAP「Our Story」)。2004年のBest of Panama最終結果表では、PA101が7袋、High Bid 21.00ドルと記載されている(SCAP)。WCRは、パナマのゲイシャが当時の生豆オークションの価格記録を更新し、1ポンドあたり20ドルを超えたと記す。2021年のBest of Panamaオークションの結果表には、1ポンド2,568ドルの価格が載っている。SCAPの2025年8月の報道発表によると、Best of Panamaの年次オークションで、ハシエンダ・ラ・エスメラルダの98点のウォッシュドゲイシャ(20kgロット)が1kgあたり30,204ドルで、ドバイのJulith Coffeeに購入され、SCAPはこれを世界記録としている。"
+      },
+      "usedClaims": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "problems": [
+        "「Jaramillo Special」は引用に無い(locationのみ)ため削除",
+        "2004年の「1ポンド」は引用に無い($21.00のみ)ため単位を外した",
+        "「ロットGN-01」はlocationのみのため削除"
+      ]
+    },
+    "origin:パナマ:tagline": {
+      "verdict": "ok",
+      "problems": []
+    },
+    "origin:パナマ:terroir": {
+      "verdict": "fix",
+      "finalContent": {
+        "text": "SCAPは、「私たちの農園」(Our plantations)は主にパナマの中央山脈(Cordillera Central)のうち、バルー火山を囲む山地で、ボケテとボルカン・カンデラの町の近くにあると説明する。同じ資料は、この一帯では天候と、養分に富んだ火山性土壌がコーヒーの木をよく育てると述べる(About SCAP)。"
+      },
+      "usedClaims": [
+        0,
+        2
+      ],
+      "problems": [
+        "「会員の農園」は引用に無い(引用はOur plantations)ため修正",
+        "「El Nido」標高2,050mの文は、引用に主語(区画・農園名)が無くEl Nido / Hacienda La Esmeraldaはlocationのみのため削除",
+        "「気候」は引用のweatherに合わせ「天候」に"
+      ]
+    }
+  }
+}

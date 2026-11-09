@@ -1,0 +1,2209 @@
+[
+ {
+  "key": "origin:ハワイ:officialBody",
+  "proposed": {
+   "text": "ハワイ州農業・生物保安局(Department of Agriculture and Biosecurity、旧農務省HDOA)の品質保証部が、ハワイ産の緑豆の検査・認証を担う(認証は任意)。2024年7月1日施行の州法Act 198により、焙煎豆・インスタント・ready-to-drinkコーヒー飲料でハワイの地域名をラベルや広告に使うには、その産地のコーヒーを重量で、2027年6月30日までは10%以上、2027年7月1日以降は51%以上含むことが必要になる。"
+  },
+  "verifiedClaims": [
+   {
+    "index": 0,
+    "text": "ハワイ州の農業部局(品質保証部の商品課)が、ハワイ産緑豆の検査・認証を担う(旧称HDOA、現在の名称はDepartment of Agriculture and Biosecurity)",
+    "status": "verified",
+    "quote": "is responsible for inspecting and certifying green coffee produced in Hawai",
+    "location": "p.1 冒頭の本文",
+    "sourceIds": [
+     "dab-grading-stats-2026"
+    ]
+   },
+   {
+    "index": 2,
+    "text": "州法Act 198は2024年に施行された(2024年7月1日施行、7月3日承認)",
+    "status": "verified",
+    "quote": "SECTION 4. This Act shall take effect on July 1, 2024.",
+    "location": "Act 198 SECTION 4(末尾に『Approved July 3, 2024.』)",
+    "sourceIds": [
+     "hi-act198-2024"
+    ]
+   },
+   {
+    "index": 3,
+    "text": "2027年7月1日以降、産地名の使用に必要な最低含有率は(現在の10%から)51%になる",
+    "status": "verified",
+    "quote": "(B) On or after July 1, 2027, fifty-one per cent coffee by weight from that geographic origin;",
+    "location": "Act 198 SECTION 2、HRS §486-120.6(d)(2)",
+    "sourceIds": [
+     "hi-act198-2024"
+    ]
+   }
+  ],
+  "rejectedClaims": [
+   {
+    "text": "等級認証を『法的に運用』している",
+    "status": "unverified"
+   }
+  ],
+  "sources": {
+   "dab-grading-stats-2026": {
+    "title": "Statistics on Grading Standards for Hawaiʻi's Green Coffee, State of Hawaiʻi, 2023-2025 (January 2026)",
+    "org": "Hawaiʻi Department of Agriculture and Biosecurity (Market Analysis and News Branch, with USDA NASS Pacific Region)",
+    "kind": "primary",
+    "readMethod": "full-text"
+   },
+   "hi-act198-2024": {
+    "title": "Act 198 (H.B. No. 2298), Session Laws of Hawaii 2024: Relating to Consumer Protection (Approved July 3, 2024)",
+    "org": "Hawaiʻi State Legislature (Session Laws)",
+    "kind": "primary",
+    "readMethod": "full-text"
+   }
+  },
+  "verifierNote": "suggestedTextの『認証は任意』『焙煎豆・インスタント・RTD』『農業・生物保安局』は、DAB 2026年資料とAct 198原文に基づく。『法的に運用』は削除した。英訳は日本語と同じ主張で食い違いなし。"
+ },
+ {
+  "key": "origin:ハワイ:sub:カウ(Ka'ū、南部)",
+  "proposed": {
+   "detail": "ハワイ州の規則では、カウ(Ka‘ū)はハワイ島のKa‘u地区を指す。"
+  },
+  "verifiedClaims": [
+   {
+    "index": 0,
+    "text": "カウ(Ka'ū)はハワイ島の地区",
+    "status": "verified",
+    "quote": "Kau is the district of Ka=u on the island of Hawai=i, as designated by the State of Hawaii Tax Map",
+    "location": "HAR §4-143-3 'Geographic region'",
+    "sourceIds": [
+     "dab-har-4-143-2001"
+    ]
+   }
+  ],
+  "rejectedClaims": [
+   {
+    "text": "南部にある",
+    "status": "unverified"
+   },
+   {
+    "text": "近年品質向上が著しく優秀なロットも出てきている新興産地",
+    "status": "unverified"
+   }
+  ],
+  "sources": {
+   "dab-har-4-143-2001": {
+    "title": "Hawaii Administrative Rules Title 4 Subtitle 7 Chapter 143 Standards for Coffee (AR-143.pdf, Eff 10/8/01)",
+    "org": "Hawaiʻi Department of Agriculture (DAB掲載)",
+    "kind": "primary",
+    "readMethod": "full-text"
+   }
+  },
+  "verifierNote": "品質・新興産地の記述と『南部』は確認できず削除。英訳は日本語と同じ主張。"
+ },
+ {
+  "key": "origin:ハワイ:sub:コナ",
+  "proposed": {
+   "detail": "ハワイ州の規則では、コナは北コナ地区と南コナ地区を指す。"
+  },
+  "verifiedClaims": [
+   {
+    "index": 0,
+    "text": "コナは北コナ地区と南コナ地区(ハワイ島)",
+    "status": "verified",
+    "quote": "Kona is the North Kona and South Kona districts on the island of",
+    "location": "HAR §4-143-3 'Geographic region'",
+    "sourceIds": [
+     "dab-har-4-143-2001"
+    ]
+   }
+  ],
+  "rejectedClaims": [
+   {
+    "text": "マイルドでバランス型、ココア・ナッツ・キャラメル・軽い酸味",
+    "status": "unverified"
+   }
+  ],
+  "sources": {
+   "dab-har-4-143-2001": {
+    "title": "Hawaii Administrative Rules Title 4 Subtitle 7 Chapter 143 Standards for Coffee (AR-143.pdf, Eff 10/8/01)",
+    "org": "Hawaiʻi Department of Agriculture (DAB掲載)",
+    "kind": "primary",
+    "readMethod": "full-text"
+   }
+  },
+  "verifierNote": "味わいの記述は公式一次資料で確認できないため削除。英訳は日本語と同じ主張。"
+ },
+ {
+  "key": "origin:ハワイ:tagline",
+  "proposed": {
+   "text": "USDAの統計(NASS)では、全米のコーヒーの結実面積(2024-2025年季は7,000エーカー)がハワイ州の数値と同じ。"
+  },
+  "verifiedClaims": [
+   {
+    "index": 1,
+    "text": "(代替主張)USDA NASSの2024-2025年季のコーヒー統計で、全米の結実面積はハワイ州と同じ7,000エーカー",
+    "status": "verified",
+    "quote": "7,500 7,500 7,400 7,400 7,000 7,000",
+    "location": "p.1 表(2022-2023、2023-2024、2024-2025の順にHawaiiとUnited Statesが同値)",
+    "sourceIds": [
+     "usda-nass-coffee-2025-01"
+    ]
+   }
+  ],
+  "rejectedClaims": [
+   {
+    "text": "アメリカ唯一のコーヒー産地",
+    "status": "unverified"
+   },
+   {
+    "text": "マイルドな酸味とナッツのような風味",
+    "status": "unverified"
+   }
+  ],
+  "sources": {
+   "usda-nass-coffee-2025-01": {
+    "title": "Coffee (Released January 24, 2025)",
+    "org": "USDA National Agricultural Statistics Service",
+    "kind": "primary",
+    "readMethod": "full-text"
+   }
+  },
+  "verifierNote": "suggestedTextは『唯一』と味わいを削除し、確認できたNASSの事実に置き換えた(主張の差し替え)。英訳は日本語と同じ主張(only coffee-growing region in the United States / mild acidity and nutty flavor)で食い違いなし。"
+ },
+ {
+  "key": "origin:ハワイ:terroir",
+  "proposed": {
+   "text": "コナ・コーヒー・ベルトは、ビッグアイランド西側のフアラライ山とマウナロア山の斜面にあり、溶岩の上に広がる。夏の午後に雲と雨が来て、暑さから木を守る(コナ・コーヒー農家協会)。ベルトの大きさと標高は資料によって異なり、ハワイ大学CTAHR(2008年)は長さ約20マイル・幅約2マイル・標高約700〜2000フィート、コナ・コーヒー農家協会は長さ約30マイル・主要部の幅は1マイルをわずかに超える程度・標高800〜2500フィートとしている。年間降雨量は、CTAHRによれば歴史的な平均が68インチ、1983年以降は平均49インチ(同協会は40〜60インチ)。"
+  },
+  "verifiedClaims": [
+   {
+    "index": 0,
+    "text": "コナ・コーヒー・ベルトはビッグアイランド(ハワイ島)西側の、フアラライ山とマウナロア山の斜面にある",
+    "status": "verified",
+    "quote": "It lies on the western slopes of the enormous volcanoes of Hualalai and Mauna Loa.",
+    "location": "本文『Kona's coffee-growing belt mimics other coffee-growing origins...』の段落",
+    "sourceIds": [
+     "kcfa-ecological-profile"
+    ]
+   },
+   {
+    "index": 5,
+    "text": "土壌は火山性(溶岩の上)である",
+    "status": "verified",
+    "quote": "Lava flows form the surface of the Kona coffee belt",
+    "location": "KCFA『3)』項",
+    "sourceIds": [
+     "kcfa-ecological-profile"
+    ]
+   },
+   {
+    "index": 7,
+    "text": "午後は雲と雨になり、夏の暑さから木を守る(天然の日除け)",
+    "status": "verified",
+    "quote": "The clouds that bring rain in the afternoon sea breeze, as they waft upslope, also shelter the coffee from the worst heat of the summer days.",
+    "location": "KCFA『1)』項",
+    "sourceIds": [
+     "kcfa-ecological-profile"
+    ]
+   }
+  ],
+  "rejectedClaims": [
+   {
+    "text": "ベルトの全長は約35マイル",
+    "status": "conflict"
+   },
+   {
+    "text": "ベルトの幅は約1.5マイル",
+    "status": "conflict"
+   },
+   {
+    "text": "標高はベルト全体で150〜975m(約500〜3,200フィート)",
+    "status": "conflict"
+   },
+   {
+    "text": "最高品質帯は標高550〜760m",
+    "status": "unverified"
+   },
+   {
+    "text": "土壌は水はけが良い・若い",
+    "status": "unverified"
+   },
+   {
+    "text": "朝は晴れる/『コナ・コーヒー・レイン』と呼ばれる",
+    "status": "unverified"
+   },
+   {
+    "text": "年間降雨量は70インチ超",
+    "status": "incorrect"
+   },
+   {
+    "text": "日較差は30°F以内",
+    "status": "unverified"
+   }
+  ],
+  "sources": {
+   "kcfa-ecological-profile": {
+    "title": "Kona Coffee's Unique Ecological & Agronomical Profile",
+    "org": "Kona Coffee Farmers Association",
+    "kind": "primary",
+    "readMethod": "full-text"
+   }
+  },
+  "verifierNote": "suggestedTextは、各資料が実際に書いている数字を出典付きで併記した(食い違いの解決はしていない)。英訳(en/originGuide2.js)は日本語と同じ主張・同じ数字(35マイル・1.5マイル・150-975 m・550-760 m・70 inches・30°F)で、日本語との食い違いなし。"
+ },
+ {
+  "key": "origin:ハワイ:varietiesDetail",
+  "proposed": {
+   "text": "コナの標準品種は‘Guatemalan’(別名コナ・ティピカ)で、1892年にヘルマン・ヴィーデマンがグアテマラからハワイに導入した(ハワイ大学CTAHR、2008年)。ティピカ品種はコーヒーさび病への感受性が非常に高い(WCR)。"
+  },
+  "verifiedClaims": [
+   {
+    "index": 2,
+    "text": "1892年、ヘルマン・ヴィーデマンがグアテマラから導入した系統が現在の『コナ・ティピカ』になった",
+    "status": "verified",
+    "quote": "Hermann Widemann introduced the ‘Guatemalan’ variety to Hawaii from Guatemala in 1892 (Goto 1982).",
+    "location": "CTAHR p.14『The ‘Guatemalan’ or “Kona typica” variety is preferred』",
+    "sourceIds": [
+     "ctahr-growing-coffee-2008"
+    ]
+   },
+   {
+    "index": 4,
+    "text": "(代替主張)ティピカ(品種)はコーヒーさび病に対する感受性が非常に高い",
+    "status": "verified",
+    "quote": "Very high susceptibility to coffee leaf rust",
+    "location": "WCR品種カタログ『Typica』の概要",
+    "sourceIds": [
+     "wcr-typica"
+    ]
+   }
+  ],
+  "rejectedClaims": [
+   {
+    "text": "9割超が「コナ・ティピカ」",
+    "status": "unverified"
+   },
+   {
+    "text": "1825年、オアフ総督ボキが英国訪問の帰路ブラジル経由で持ち帰った苗が(コナ・ティピカの)起源とされる",
+    "status": "unverified"
+   },
+   {
+    "text": "WCR系統ではティピカ/ブルボン・ティピカ系統に分類される",
+    "status": "unverified"
+   },
+   {
+    "text": "高標高では高品質だがサビ病に弱いヘリテージ品種",
+    "status": "unverified"
+   },
+   {
+    "text": "近年はゲイシャも増加傾向",
+    "status": "unverified"
+   }
+  ],
+  "sources": {
+   "ctahr-growing-coffee-2008": {
+    "title": "Growing Coffee in Hawaii, Revised Edition (Bittenbender and Smith; accurate as of March 2008)",
+    "org": "University of Hawaiʻi at Mānoa, CTAHR (College of Tropical Agriculture and Human Resources)",
+    "kind": "primary",
+    "readMethod": "full-text"
+   },
+   "wcr-typica": {
+    "title": "Typica (World Coffee Research Variety Catalog)",
+    "org": "World Coffee Research",
+    "kind": "primary",
+    "readMethod": "full-text"
+   }
+  },
+  "verifierNote": "suggestedTextは確認できた主張のみ。ボキ・ウィルキンソンの初期導入は二次資料(KCCF)のみのため削除した。英訳は日本語と同じ主張(Over 90% Kona Typica、Boki 1825、Widemann 1892、WCR lineage、Gesha)で、日本語との食い違いなし。"
+ },
+ {
+  "key": "origin:パナマ:farmStructure",
+  "proposed": {
+   "text": "ハシエンダ・ラ・エスメラルダ(ピーターソン家)、エリダ農園(ラマストゥス家)、フィンカ・レリダ(ボケテ)などが知られる。カルメン農園はフランチェスキ家が1960年に栽培を始め(SCAP掲載の農園紹介)、フィンカ・デボラは標高1900m超(同)。"
+  },
+  "verifiedClaims": [
+   {
+    "index": 2,
+    "text": "ハシエンダ・ラ・エスメラルダはピーターソン家が所有",
+    "status": "verified",
+    "quote": "Hacienda La Esmeralda is owned by the Peterson Family.",
+    "location": "Hacienda La Esmeralda 紹介",
+    "sourceIds": [
+     "scap-hacienda-esmeralda"
+    ]
+   },
+   {
+    "index": 5,
+    "text": "エリダ農園(ラマストゥス家)",
+    "status": "verified",
+    "quote": "Mientras que en 1918, comenzó la historia de Elida Estate Coffee, hoy Wilford Lamastus es la tercera generación.",
+    "location": "本文",
+    "sourceIds": [
+     "scap-historia-2024"
+    ]
+   },
+   {
+    "index": 6,
+    "text": "フィンカ・レリダ(ボケテ)",
+    "status": "verified",
+    "quote": "Finca Lérida is conformed by 5 farms located in the province of Chiriquí in Panama, specifically in the Boquete region.",
+    "location": "Finca Lerida 紹介",
+    "sourceIds": [
+     "scap-finca-lerida"
+    ]
+   }
+  ],
+  "rejectedClaims": [
+   {
+    "text": "収穫労働力の多くを先住民族ンゴベ族・ブグレ族が担う",
+    "status": "unverified"
+   },
+   {
+    "text": "スペシャルティ市場は少数の著名農園が主導する構造",
+    "status": "unverified"
+   },
+   {
+    "text": "カルメン農園(フランチェスキ家)",
+    "status": "incorrect"
+   },
+   {
+    "text": "フィンカ・デボラ(標高1,950m超)",
+    "status": "incorrect"
+   }
+  ],
+  "sources": {
+   "scap-hacienda-esmeralda": {
+    "title": "HACIENDA LA ESMERALDA (SCAP会員紹介)",
+    "org": "Specialty Coffee Association of Panama (SCAP)",
+    "kind": "primary",
+    "readMethod": "full-text"
+   },
+   "scap-historia-2024": {
+    "title": "El café de Panamá guarda su historia (SCAP報道発表・XXVIII BOP)",
+    "org": "Specialty Coffee Association of Panama (SCAP)",
+    "kind": "primary",
+    "readMethod": "full-text"
+   },
+   "scap-finca-lerida": {
+    "title": "Finca Lerida (SCAP会員紹介)",
+    "org": "SCAP",
+    "kind": "primary",
+    "readMethod": "full-text"
+   }
+  },
+  "verifierNote": "英訳は日本語と同じ主張(差異なし)。"
+ },
+ {
+  "key": "origin:パナマ:history",
+  "proposed": {
+   "text": "1996年、国際コーヒー価格の低迷を受け、ボケテとボルカン・カンデラの生産者7名がパナマ・スペシャルティコーヒー協会(SCAP)を結成した(SCAP)。ハシエンダ・ラ・エスメラルダのハラミージョ農園でゲイシャが再発見されたのは2004年で、同年のベスト・オブ・パナマに初出品して優勝した(SCAP)。2004年の結果表では、ハラミージョ・スペシャル(7袋)が1ポンド21ドルで落札され、落札者は7社で分け合った。SCAPは、同農園が2004年にパナマを世界のスペシャルティコーヒーの地図に載せたと述べる。2017年の最高値は1ポンド601ドル(SCAP)、2018年は803ドル、2021年は2,568ドル(いずれもBoPオークション結果)。2025年8月のBoP国際オークションで、同農園の98点のウォッシュドゲイシャ(20kgロット)が1kgあたり30,204ドルで、ドバイのJulith Coffeeが落札した。"
+  },
+  "verifiedClaims": [
+   {
+    "index": 2,
+    "text": "1996年、国際コーヒー価格の低迷を受けボケテ・ボルカンの生産者7名がSCAPを設立",
+    "status": "verified",
+    "quote": "In 1996, during the crisis of low international prices of coffee and the beginning of Special Coffees category, a group of 7 coffee producers from the areas of Boquete and Volcan –Candela got together with the idea to get their coffees known.",
+    "location": "Our Story 第1段落",
+    "sourceIds": [
+     "scap-story"
+    ]
+   },
+   {
+    "index": 6,
+    "text": "2004年、ロースター7社でこのロットを分け合い、1ポンド21ドルを記録した",
+    "status": "verified",
+    "quote": "Best of Panama 2004 - Final Results Item Number PA101 | Bags 7 | High Bid* $21.00",
+    "location": "2004最終結果表 PA101 Jaramillo Special(画像を目視転記)",
+    "sourceIds": [
+     "scap-results-2004"
+    ]
+   },
+   {
+    "index": 8,
+    "text": "当時の生豆オークション史上の記録価格",
+    "status": "verified",
+    "quote": "It received exceptionally high marks and broke the then-record for green coffee auction prices, selling for over $20/pound.",
+    "location": "Geisha (Panama) / Origin",
+    "sourceIds": [
+     "wcr-geisha-panama"
+    ]
+   },
+   {
+    "index": 11,
+    "text": "2021年に2,568ドル(1ポンド)",
+    "status": "verified",
+    "quote": "$2,568.00/lb \"> $256,800.00 \"> Nuguo Fermented",
+    "location": "Auction 2021 / Natural Geisha GN-01",
+    "sourceIds": [
+     "bop-auction-2021"
+    ]
+   },
+   {
+    "index": 12,
+    "text": "2025年8月のBoP国際オークションで、ハシエンダ・ラ・エスメラルダのウォッシュドゲイシャ(20kgロット、98点)が1kgあたり30,204ドルで落札され世界記録となった",
+    "status": "verified",
+    "quote": "Con un insólito precio de US$ 30,204 por kilogramo, el café Geisha Lavado de 98 puntos de Hacienda La Esmeralda sorprendió al mundo, tras alcanzar un inigualable e histórico récord mundial en la prestigiosa subasta anual del Best of Panama, al vender un lote de 20 kilogramos en US$ 604,080 dólares, comprado por la empresa Julith Coffee de Dubai.",
+    "location": "本文第1段落",
+    "sourceIds": [
+     "scap-press-2025-record"
+    ]
+   },
+   {
+    "index": 13,
+    "text": "98点はパナマ産ウォッシュドゲイシャの歴代最高スコア",
+    "status": "verified",
+    "quote": "Un histórico puntaje de 98.00 puntos en la categoría de Geisha Lavado",
+    "location": "本文第1段落",
+    "sourceIds": [
+     "scap-press-2025-bop"
+    ]
+   }
+  ],
+  "rejectedClaims": [
+   {
+    "text": "19世紀にヨーロッパ系移民がコーヒーを導入した",
+    "status": "unverified"
+   },
+   {
+    "text": "産業としての本格的な確立はこの20年余り(ゲイシャブーム以降)",
+    "status": "unverified"
+   },
+   {
+    "text": "同年(1996年)から品評会ベスト・オブ・パナマ(BoP)を開始した",
+    "status": "conflict"
+   },
+   {
+    "text": "2002〜2003年頃のBoPで、ハシエンダ・ラ・エスメラルダのハラミージョ農園のゲイシャが優勝した",
+    "status": "incorrect"
+   },
+   {
+    "text": "ジャスミンのような際立ったフローラルさで話題をさらった",
+    "status": "unverified"
+   },
+   {
+    "text": "2004年『5月』の落札",
+    "status": "unverified"
+   },
+   {
+    "text": "「ゲイシャブームの起点」「パナマの格を一変させた」と業界で語られている",
+    "status": "unverified"
+   },
+   {
+    "text": "2017年に1ポンド803ドル",
+    "status": "incorrect"
+   },
+   {
+    "text": "落札者はドバイを拠点とする開業5日目の業者",
+    "status": "unverified"
+   }
+  ],
+  "sources": {
+   "scap-story": {
+    "title": "Our Story",
+    "org": "Specialty Coffee Association of Panama (SCAP)",
+    "kind": "primary",
+    "readMethod": "full-text"
+   },
+   "scap-results-2004": {
+    "title": "Best of Panama 2004 - Final Results (画像 results2004.jpeg)",
+    "org": "Specialty Coffee Association of Panama (SCAP)",
+    "kind": "primary",
+    "readMethod": "full-text"
+   },
+   "wcr-geisha-panama": {
+    "title": "Geisha (Panama) - Arabica Varieties Catalog",
+    "org": "World Coffee Research",
+    "kind": "primary",
+    "readMethod": "full-text"
+   },
+   "bop-auction-2021": {
+    "title": "Best of Panama Auction 2021 (結果)",
+    "org": "Best of Panama / SCAP",
+    "kind": "primary",
+    "readMethod": "full-text"
+   },
+   "scap-press-2025-record": {
+    "title": "Café Geisha de Panamá sacude al mundo con impresionantes récords mundiales (SCAP報道発表、2025年8月)",
+    "org": "Specialty Coffee Association of Panama (SCAP)",
+    "kind": "primary",
+    "readMethod": "full-text"
+   },
+   "scap-press-2025-bop": {
+    "title": "Hacienda La Esmeralda arrasó en el BOP 2025 (SCAP報道発表、2025-06-08)",
+    "org": "Specialty Coffee Association of Panama (SCAP)",
+    "kind": "primary",
+    "readMethod": "full-text"
+   }
+  },
+  "verifierNote": "英訳は日本語と同じ主張(誤りも同じ)。BoP第1回の年は資料どうしに揺れがあり未決(ユーザー判断)。"
+ },
+ {
+  "key": "origin:パナマ:sub:ボケテ",
+  "proposed": {
+   "detail": "ハシエンダ・ラ・エスメラルダはボケテの高地にある(SCAP)。"
+  },
+  "verifiedClaims": [],
+  "rejectedClaims": [
+   {
+    "text": "標高1,200〜1,800m、バルー火山東斜面",
+    "status": "unverified"
+   },
+   {
+    "text": "太平洋・カリブ海の風が入れ替わる冷涼な立地",
+    "status": "unverified"
+   },
+   {
+    "text": "ハシエンダ・ラ・エスメラルダをはじめゲイシャの名門農園が集中し国際的評価が最も高い産地",
+    "status": "unverified"
+   },
+   {
+    "text": "ジャスミン、柑橘、桃のようなフローラル/フルーティ",
+    "status": "unverified"
+   }
+  ],
+  "sources": {},
+  "verifierNote": "英訳は日本語と同じ主張(差異なし)。"
+ },
+ {
+  "key": "origin:パナマ:tagline",
+  "proposed": {
+   "text": "ゲイシャ種が、ベスト・オブ・パナマのオークションで世界記録の落札価格を出し続けている産地(2025年に1kgあたり30,204ドル。SCAP発表)。"
+  },
+  "verifiedClaims": [
+   {
+    "index": 0,
+    "text": "ゲイシャ種が世界の価格記録を塗り替えている(2025年に1kg 30,204ドルの世界記録)",
+    "status": "verified",
+    "quote": "Con un insólito precio de US$ 30,204 por kilogramo, el café Geisha Lavado de 98 puntos de Hacienda La Esmeralda sorprendió al mundo, tras alcanzar un inigualable e histórico récord mundial en la prestigiosa subasta anual del Best of Panama, al vender un lote de 20 kilogramos en US$ 604,080 dólares, comprado por la empresa Julith Coffee de Dubai.",
+    "location": "本文第1段落",
+    "sourceIds": [
+     "scap-press-2025-record"
+    ]
+   }
+  ],
+  "rejectedClaims": [
+   {
+    "text": "小さな名門産地",
+    "status": "unverified"
+   }
+  ],
+  "sources": {
+   "scap-press-2025-record": {
+    "title": "Café Geisha de Panamá sacude al mundo con impresionantes récords mundiales (SCAP報道発表、2025年8月)",
+    "org": "Specialty Coffee Association of Panama (SCAP)",
+    "kind": "primary",
+    "readMethod": "full-text"
+   }
+  },
+  "verifierNote": "英訳は日本語と同じ主張(差異なし)。"
+ },
+ {
+  "key": "origin:パナマ:terroir",
+  "proposed": {
+   "text": "SCAPは、会員の農園がバルー火山を囲む山地、ボケテとボルカン・カンデラの近くにあり、肥沃な火山性土壌をもつと説明する。2025年の世界記録ロットが生まれたHacienda La Esmeraldaの区画『El Nido』は標高2,050m。"
+  },
+  "verifiedClaims": [
+   {
+    "index": 0,
+    "text": "ボケテとボルカンはバルー火山周辺の山地にある(SCAP会員農園の所在地)",
+    "status": "verified",
+    "quote": "Our plantations are mainly located in the Panamanian Cordillera Central, in the mountainous area that surrounds the Baru Volcano, near the picturesque towns of Boquete and Volcan – Candela.",
+    "location": "About SCAP 第2段落",
+    "sourceIds": [
+     "scap-about"
+    ]
+   },
+   {
+    "index": 1,
+    "text": "ボケテはチリキ州にある",
+    "status": "verified",
+    "quote": "Los expertos en café de especialidad de diferentes partes del mundo llegan a Boquete, Chiriquí, a calificar la calidad de estos cafés",
+    "location": "本文 BOP説明の段落",
+    "sourceIds": [
+     "scap-historia-2024"
+    ]
+   },
+   {
+    "index": 5,
+    "text": "高標高ゲイシャ農園では1,950m超に達する",
+    "status": "verified",
+    "quote": "se ubican en un área parecida a un jardín secreto a 2,050 metros de altura",
+    "location": "本文(Hacienda La Esmeralda『El Nido』区画)",
+    "sourceIds": [
+     "scap-press-2025-record"
+    ]
+   },
+   {
+    "index": 6,
+    "text": "バルー火山由来の火山性土壌",
+    "status": "verified",
+    "quote": "In this area the weather and the rich and nutrient volcanic soil nourish perfectly the coffee trees creating a final product of immense quality.",
+    "location": "About SCAP 第2段落",
+    "sourceIds": [
+     "scap-about"
+    ]
+   }
+  ],
+  "rejectedClaims": [
+   {
+    "text": "バルー火山の東斜面にボケテ、西斜面にボルカン",
+    "status": "unverified"
+   },
+   {
+    "text": "レナシミエント地区(コスタリカ国境に近い)も産地",
+    "status": "unverified"
+   },
+   {
+    "text": "標高は概ね1,000〜1,650m、上質なロットは1,600〜1,800m",
+    "status": "unverified"
+   },
+   {
+    "text": "太平洋・カリブ海双方の風が交互に入れ替わり冷涼な気候をもたらす",
+    "status": "unverified"
+   }
+  ],
+  "sources": {
+   "scap-about": {
+    "title": "About SCAP",
+    "org": "Specialty Coffee Association of Panama (SCAP)",
+    "kind": "primary",
+    "readMethod": "full-text"
+   },
+   "scap-historia-2024": {
+    "title": "El café de Panamá guarda su historia (SCAP報道発表・XXVIII BOP)",
+    "org": "Specialty Coffee Association of Panama (SCAP)",
+    "kind": "primary",
+    "readMethod": "full-text"
+   },
+   "scap-press-2025-record": {
+    "title": "Café Geisha de Panamá sacude al mundo con impresionantes récords mundiales (SCAP報道発表、2025年8月)",
+    "org": "Specialty Coffee Association of Panama (SCAP)",
+    "kind": "primary",
+    "readMethod": "full-text"
+   }
+  },
+  "verifierNote": "英訳は日本語と同じ主張(差異なし)。"
+ },
+ {
+  "key": "origin:パナマ:varietiesDetail",
+  "proposed": {
+   "text": "ゲイシャ種はエチオピアの森林で1930年代に採取され、タンザニアのLyamungu研究所を経て、1953年にCATIE(コスタリカ・トゥリアルバ)に到達した(T2722)。さび病への耐性が認められたため、1960年代にCATIE経由でパナマ全土に配られたが、枝が折れやすく農家に好まれず広く植えられなかった(WCR)。ゲイシャはパナマの評価を押し上げたとSCAPは述べる。"
+  },
+  "verifiedClaims": [
+   {
+    "index": 1,
+    "text": "ゲイシャ種がパナマの国際的評価を高めた",
+    "status": "verified",
+    "quote": "es una variedad de café que llevó a Panamá a ubicarse por encima de los demás países productores del grano.",
+    "location": "本文(Geishaの段落)",
+    "sourceIds": [
+     "scap-historia-2024"
+    ]
+   },
+   {
+    "index": 2,
+    "text": "エチオピア原産",
+    "status": "verified",
+    "quote": "This variety was originally collected from coffee forests in Ethiopia in the 1930s.",
+    "location": "Geisha (Panama) / Origin",
+    "sourceIds": [
+     "wcr-geisha-panama"
+    ]
+   },
+   {
+    "index": 3,
+    "text": "コスタリカの農業研究機関CATIEを経由して1960年代にパナマへ導入された",
+    "status": "verified",
+    "quote": "It was distributed throughout Panama via CATIE in the 1960s after it had been recognized for tolerance to coffee leaf rust.",
+    "location": "Geisha (Panama) / Origin",
+    "sourceIds": [
+     "wcr-geisha-panama"
+    ]
+   },
+   {
+    "index": 5,
+    "text": "枝が折れやすく農家に好まれず、広く植えられなかった",
+    "status": "verified",
+    "quote": "However, the plant's branches were brittle and not favored by farmers so it was not widely planted.",
+    "location": "Geisha (Panama) / Origin",
+    "sourceIds": [
+     "wcr-geisha-panama"
+    ]
+   },
+   {
+    "index": 6,
+    "text": "1953年にCATIEに到達した",
+    "status": "verified",
+    "quote": "and then brought to Centro Agronómico Tropical de Investigación y Enseñanza (CATIE) in Central America in the 1953, where it was logged as accession T2722.",
+    "location": "Geisha (Panama) / Origin",
+    "sourceIds": [
+     "wcr-geisha-panama"
+    ]
+   }
+  ],
+  "rejectedClaims": [
+   {
+    "text": "伝統的にティピカ・ブルボンが基盤で、カトゥアイ・カトゥーラ・ムンドノーボもある",
+    "status": "unverified"
+   },
+   {
+    "text": "導入当初は味わいではなくさび病耐性を期待して植えられた",
+    "status": "unverified"
+   },
+   {
+    "text": "1964年のFAO調査団採取説がある",
+    "status": "unverified"
+   }
+  ],
+  "sources": {
+   "scap-historia-2024": {
+    "title": "El café de Panamá guarda su historia (SCAP報道発表・XXVIII BOP)",
+    "org": "Specialty Coffee Association of Panama (SCAP)",
+    "kind": "primary",
+    "readMethod": "full-text"
+   },
+   "wcr-geisha-panama": {
+    "title": "Geisha (Panama) - Arabica Varieties Catalog",
+    "org": "World Coffee Research",
+    "kind": "primary",
+    "readMethod": "full-text"
+   }
+  },
+  "verifierNote": "英訳は日本語と同じ主張(差異なし)。WCRは『2005年にPeterson家がBest of Panamaに出品して注目された』と記し、SCAPの『2004年』と1年ずれる。"
+ },
+ {
+  "key": "origin:ブラジル:farmStructure",
+  "proposed": {
+   "text": "ブラジルのコーヒー産地では地理的表示の登録が進み、Embrapaによればコーヒーは地理的表示の登録数が最も多い農産物。Cerrado Mineiroは2013年に原産地呼称(DO)に切り替わり、コーヒーで初のDOとなった(Embrapa)。"
+  },
+  "verifiedClaims": [
+   {
+    "index": 6,
+    "text": "原産地呼称制度も発達している",
+    "status": "verified",
+    "quote": "O Café possui 14 registros de Indicações Geográficas no Instituto Nacional da Propriedade Industrial (INPI).",
+    "location": "Embrapa 'Café segue como o produto com maior número de IGs no Brasil'",
+    "sourceIds": [
+     "embrapa-igs-cafe"
+    ]
+   },
+   {
+    "index": 7,
+    "text": "Cerrado Mineiroが2013年にDOとなった",
+    "status": "verified",
+    "quote": "As regiões do Cerrado Mineiro e da Mantiqueira de Minas tiveram seus registros de IP alterados para registro de Denominação de Origem, respectivamente, em 2013 e 2020.",
+    "location": "Embrapa 'Café segue como o produto com maior número de IGs no Brasil'",
+    "sourceIds": [
+     "embrapa-igs-cafe"
+    ]
+   }
+  ],
+  "rejectedClaims": [
+   {
+    "text": "規模の二極化が大きい",
+    "status": "unverified"
+   },
+   {
+    "text": "アラビカ生産者の87%は栽培面積20ha未満の小規模農家",
+    "status": "unverified"
+   },
+   {
+    "text": "小規模農家は生産量の43%",
+    "status": "unverified"
+   },
+   {
+    "text": "小規模農家は急傾斜地など機械収穫が難しい土地に多い",
+    "status": "unverified"
+   },
+   {
+    "text": "平坦〜緩斜面の大規模・機械化農園(2,000ha超の事例も)が生産の過半を担う",
+    "status": "unverified"
+   },
+   {
+    "text": "高い最低賃金を背景に機械収穫への投資が進む",
+    "status": "unverified"
+   },
+   {
+    "text": "それがブラジル初のDOである",
+    "status": "unverified"
+   }
+  ],
+  "sources": {
+   "embrapa-igs-cafe": {
+    "title": "Café segue como o produto com maior número de IGs no Brasil",
+    "org": "Embrapa (Embrapa Café)",
+    "kind": "primary",
+    "readMethod": "full-text"
+   }
+  },
+  "verifierNote": "農園規模に関する数字(87%・43%・2,000ha超など)は全て未確認。英訳(src/data/en/originGuide1.js)は日本語と同じ主張で、主張の追加・欠落は見つからなかった。"
+ },
+ {
+  "key": "origin:ブラジル:gradeSystem",
+  "proposed": {
+   "text": "ブラジルの生豆の分類は、MAPAの規則(Instrução Normativa 8/2003)で、種(アラビカ/ロブスタ)、豆の形と大きさ(ふるい)、飲み口(アラビカは Estritamente Mole、Mole、Apenas Mole、Duro、Riado、Rio、Rio Zona の7区分)、色、欠点数によるタイプ(Tipo 2〜8。数字が小さいほど欠点が少なく、Tipo 2は300g中4点、Tipo 8は360点)で定められている。製品には分類証明書(Certificado de Classificação)が添付される。"
+  },
+  "verifiedClaims": [
+   {
+    "index": 0,
+    "text": "ブラジルの公式分類(COB)がある",
+    "status": "verified",
+    "quote": "nova tabela de Classificação Oficial Brasileira (COB) do café, elaborada pelo Ministério da Agricultura e Pecuária (MAPA)",
+    "location": "Cecafé Comunicado 081-2026",
+    "sourceIds": [
+     "cecafe-workshop-nova-cob-2026"
+    ]
+   },
+   {
+    "index": 1,
+    "text": "欠点数でタイプ2〜8に分類される",
+    "status": "verified",
+    "quote": "360 8 200 > 360 Fora de Tipo",
+    "location": "IN 8/2003 Anexo, 16.3 Tabela 3",
+    "sourceIds": [
+     "mapa-in-8-2003"
+    ]
+   },
+   {
+    "index": 2,
+    "text": "数字が小さいほど高品質(欠点が少ない)",
+    "status": "verified",
+    "quote": "4 2 + 100 46 5 50",
+    "location": "IN 8/2003 Anexo, 16.3 Tabela 3",
+    "sourceIds": [
+     "mapa-in-8-2003"
+    ]
+   },
+   {
+    "index": 3,
+    "text": "スクリーンサイズ(ふるい)でも分類される",
+    "status": "verified",
+    "quote": "Chato graúdo: peneiras 19/18 e 17;",
+    "location": "IN 8/2003 Anexo, 4.2 Subcategoria",
+    "sourceIds": [
+     "mapa-in-8-2003"
+    ]
+   },
+   {
+    "index": 6,
+    "text": "商業取引にはこの分類が必須",
+    "status": "verified",
+    "quote": "Será também considerada fraude a comercialização do Café Beneficiado Grão Cru, em desacordo com o estabelecido neste Regulamento.",
+    "location": "IN 8/2003 Anexo, 14.2 / 10.1",
+    "sourceIds": [
+     "mapa-in-8-2003"
+    ]
+   }
+  ],
+  "rejectedClaims": [
+   {
+    "text": "官能評価はEstritamente MoleからRioまでの4段階",
+    "status": "incorrect"
+   },
+   {
+    "text": "欠点数・スクリーンサイズ・官能評価など4軸で分類",
+    "status": "incorrect"
+   }
+  ],
+  "sources": {
+   "cecafe-workshop-nova-cob-2026": {
+    "title": "Workshop - Proposta do MAPA para Nova Tabela de Classificação Oficial do Café (Comunicado 081-2026)",
+    "org": "Cecafé",
+    "kind": "primary",
+    "readMethod": "full-text"
+   },
+   "mapa-in-8-2003": {
+    "title": "Instrução Normativa nº 8, de 11 de junho de 2003 - Regulamento Técnico de Identidade e de Qualidade para a Classificação do Café Beneficiado Grão Cru",
+    "org": "MAPA (Ministério da Agricultura, Pecuária e Abastecimento) - Sislegis",
+    "kind": "primary",
+    "readMethod": "full-text"
+   }
+  },
+  "verifierNote": "Tipo 1は規則の表3に存在しない(2〜8のみ)。2026年にMAPAが新しいCOB表を提案中で、現行規則が改定される可能性がある。英訳(src/data/en/originGuide1.js)は日本語と同じ主張で、主張の追加・欠落は見つからなかった。"
+ },
+ {
+  "key": "origin:ブラジル:harvestSeason",
+  "proposed": {
+   "text": "アラビカの収穫は5月ごろに始まり、9月ごろまでに終わる(USDA、2025/26年度)。"
+  },
+  "verifiedClaims": [
+   {
+    "index": 0,
+    "text": "収穫は5〜9月",
+    "status": "verified",
+    "quote": "The 2025/26 Brazilian coffee harvest began at a slow pace, with robusta varieties in April and arabica in May, and expected to conclude by September.",
+    "location": "USDA FAS Coffee Annual Brazil 2025, 'Harvest Outlook'",
+    "sourceIds": [
+     "usda-fas-coffee-annual-br-2025"
+    ]
+   }
+  ],
+  "rejectedClaims": [
+   {
+    "text": "乾季と重なる単一の集中収穫期",
+    "status": "unverified"
+   },
+   {
+    "text": "ピークは6〜7月",
+    "status": "unverified"
+   },
+   {
+    "text": "乾燥・予測可能な気候が機械収穫・乾燥に適する",
+    "status": "unverified"
+   }
+  ],
+  "sources": {
+   "usda-fas-coffee-annual-br-2025": {
+    "title": "Coffee Annual - Brazil (BR2025-0013, 2025-05-19)",
+    "org": "USDA Foreign Agricultural Service (GAIN)",
+    "kind": "primary",
+    "readMethod": "full-text"
+   }
+  },
+  "verifierNote": "英訳(src/data/en/originGuide1.js)は日本語と同じ主張で、主張の追加・欠落は見つからなかった。"
+ },
+ {
+  "key": "origin:ブラジル:history",
+  "proposed": {
+   "text": "コーヒーは1727年にパラ州ベレンから入ったとされる(MAPA)。1975年7月18日の大霜害はパラナ州のコーヒー栽培に壊滅的な被害を与え、栽培地が現在の地域へ移る一因になった(パラナ州政府、Embrapa)。"
+  },
+  "verifiedClaims": [
+   {
+    "index": 0,
+    "text": "1727年に導入されたとされる",
+    "status": "verified",
+    "quote": "O café chegou ao Brasil, por Belém no Pará, em 1727, vindo da Guiana Francesa",
+    "location": "MAPA 'Café no Brasil' 歴史の項",
+    "sourceIds": [
+     "mapa-cafe-no-brasil"
+    ]
+   },
+   {
+    "index": 3,
+    "text": "1975年の大霜害があった(7月18日)",
+    "status": "verified",
+    "quote": "Há 50 anos, em 18 de julho de 1975, uma das maiores geadas já registrada no Estado devastou os cafezais e mudou o perfil agropecuário do Paraná.",
+    "location": "パラナ州農業局 記事 冒頭",
+    "sourceIds": [
+     "pr-geada-negra-1975"
+    ]
+   }
+  ],
+  "rejectedClaims": [
+   {
+    "text": "1830年頃には世界最大の生産国となった",
+    "status": "unverified"
+   },
+   {
+    "text": "以後、世界シェア30〜40%超を維持",
+    "status": "unverified"
+   },
+   {
+    "text": "南部の生産者が、霜害の少ないミナスジェライスへ移動した",
+    "status": "unverified"
+   }
+  ],
+  "sources": {
+   "mapa-cafe-no-brasil": {
+    "title": "Café no Brasil e Ementário do Café (cafeicultura brasileira)",
+    "org": "MAPA (Ministério da Agricultura e Pecuária)",
+    "kind": "primary",
+    "readMethod": "full-text"
+   },
+   "pr-geada-negra-1975": {
+    "title": "Há 50 anos geada negra marcava fim de um ciclo, mas provocou diversificação da economia do Paraná",
+    "org": "Governo do Estado do Paraná (Secretaria da Agricultura e do Abastecimento)",
+    "kind": "primary",
+    "readMethod": "full-text"
+   }
+  },
+  "verifierNote": "英訳(src/data/en/originGuide1.js)は日本語と同じ主張で、主張の追加・欠落は見つからなかった。"
+ },
+ {
+  "key": "origin:ブラジル:officialBody",
+  "proposed": {
+   "text": "Cecafé(Conselho dos Exportadores de Café do Brasil)は1999年に設立され、コーヒー輸出部門を代表し振興する団体(Cecafé)。CNC(Conselho Nacional do Café)は、生産者と協同組合を代表する団体(MAPA)。生豆の分類証明書は、MAPAまたはMAPAが認定した法人が発行する(IN 8/2003)。"
+  },
+  "verifiedClaims": [
+   {
+    "index": 0,
+    "text": "Cecaféは輸出者評議会で、1999年設立",
+    "status": "verified",
+    "quote": "Fundado em 1999, o Cecafé representa e promove ativamente o desenvolvimento do setor exportador de café nos âmbitos nacional e internacional.",
+    "location": "Cecafé 月次レポート(2026-03-10)末尾の団体紹介",
+    "sourceIds": [
+     "cecafe-relatorio-fev-2026"
+    ]
+   },
+   {
+    "index": 3,
+    "text": "実際の格付け権限はMAPAが持つ",
+    "status": "verified",
+    "quote": "O Certificado de Classificação será emitido pelo Ministério da Agricultura, Pecuária e Abastecimento ou pelas pessoas jurídicas devidamente credenciadas pelo mesmo",
+    "location": "IN 8/2003 Anexo, 13.1",
+    "sourceIds": [
+     "mapa-in-8-2003"
+    ]
+   }
+  ],
+  "rejectedClaims": [
+   {
+    "text": "CNC(全国コーヒー評議会)は1981年設立",
+    "status": "unverified"
+   },
+   {
+    "text": "CecaféやCNCは輸出許可・格付けの権限を持たず、統計収集や業界代表が主な役割",
+    "status": "unverified"
+   }
+  ],
+  "sources": {
+   "cecafe-relatorio-fev-2026": {
+    "title": "Exportação de café do Brasil soma 2,6 mi de sacas e cai 23,5% em fev/2026",
+    "org": "Cecafé (Conselho dos Exportadores de Café do Brasil)",
+    "kind": "primary",
+    "readMethod": "full-text"
+   },
+   "mapa-in-8-2003": {
+    "title": "Instrução Normativa nº 8, de 11 de junho de 2003 - Regulamento Técnico de Identidade e de Qualidade para a Classificação do Café Beneficiado Grão Cru",
+    "org": "MAPA (Ministério da Agricultura, Pecuária e Abastecimento) - Sislegis",
+    "kind": "primary",
+    "readMethod": "full-text"
+   }
+  },
+  "verifierNote": "英訳(src/data/en/originGuide1.js)は日本語と同じ主張で、主張の追加・欠落は見つからなかった。"
+ },
+ {
+  "key": "origin:ブラジル:sub:セラード(セラード・ミネイロ)",
+  "proposed": {
+   "detail": "Cerrado Mineiroは、コーヒーで初のDOとなった産地(2013年。Embrapa)。長い乾期と低肥沃度の土壌に対し、土壌改良・施肥・灌漑などの技術が使われている(Embrapa)。"
+  },
+  "verifiedClaims": [
+   {
+    "index": 0,
+    "text": "コーヒーで初の原産地呼称(DO)を取得した(2013年)",
+    "status": "verified",
+    "quote": "conquistou, recentemente, a primeira DO para café no país.",
+    "location": "Embrapa 'Cerrado Mineiro é destaque…' 冒頭",
+    "sourceIds": [
+     "embrapa-cerrado-do",
+     "embrapa-igs-cafe"
+    ]
+   },
+   {
+    "index": 1,
+    "text": "長い乾期と低肥沃度の土壌に、土壌改良・施肥・灌漑などの技術が使われている",
+    "status": "verified",
+    "quote": "correção do solo, adubação, irrigação e cultivares",
+    "location": "Embrapa 'Cerrado Mineiro é destaque…' 本文",
+    "sourceIds": [
+     "embrapa-cerrado-do"
+    ]
+   }
+  ],
+  "rejectedClaims": [
+   {
+    "text": "標高800〜1,300m、terra roxa",
+    "status": "unverified"
+   },
+   {
+    "text": "ブラジル初のDO",
+    "status": "unverified"
+   },
+   {
+    "text": "高めの酸・強い甘み、ダークチョコ・キャラメル",
+    "status": "unverified"
+   },
+   {
+    "text": "大規模・機械化・灌漑",
+    "status": "unverified"
+   }
+  ],
+  "sources": {
+   "embrapa-cerrado-do": {
+    "title": "Cerrado Mineiro é destaque na produção de cafés diferenciados",
+    "org": "Embrapa (Embrapa Café)",
+    "kind": "primary",
+    "readMethod": "full-text"
+   },
+   "embrapa-igs-cafe": {
+    "title": "Café segue como o produto com maior número de IGs no Brasil",
+    "org": "Embrapa (Embrapa Café)",
+    "kind": "primary",
+    "readMethod": "full-text"
+   }
+  },
+  "verifierNote": "英訳(src/data/en/originGuide1.js)は日本語と同じ主張で、主張の追加・欠落は見つからなかった。"
+ },
+ {
+  "key": "origin:ブラジル:tagline",
+  "proposed": {
+   "text": "生産量世界一(世界生産のおよそ4割。USDA、2026年7月)"
+  },
+  "verifiedClaims": [
+   {
+    "index": 0,
+    "text": "生産量世界一",
+    "status": "verified",
+    "quote": "Brazil accounts for nearly 40 percent of world production and exerts significant influence on global supplies and prices.",
+    "location": "USDA FAS 'Coffee: World Markets and Trade' July 2026, 冒頭要旨の次の段落",
+    "sourceIds": [
+     "usda-fas-coffee-world-2026-07",
+     "embrapa-cafe-endereco"
+    ]
+   }
+  ],
+  "rejectedClaims": [
+   {
+    "text": "ナッツやチョコレートを思わせる甘みとまろやかな口当たり",
+    "status": "unverified"
+   }
+  ],
+  "sources": {
+   "usda-fas-coffee-world-2026-07": {
+    "title": "Coffee: World Markets and Trade (July 2026)",
+    "org": "USDA Foreign Agricultural Service",
+    "kind": "primary",
+    "readMethod": "full-text"
+   },
+   "embrapa-cafe-endereco": {
+    "title": "Café com endereço e qualidade",
+    "org": "Embrapa",
+    "kind": "primary",
+    "readMethod": "full-text"
+   }
+  },
+  "verifierNote": "英訳(src/data/en/originGuide1.js)は日本語と同じ主張で、主張の追加・欠落は見つからなかった。"
+ },
+ {
+  "key": "origin:ブラジル:terroir",
+  "proposed": {
+   "text": "ミナスジェライス州はブラジル最大のコーヒー生産州で、アラビカ生産の7割超を占める(USDA)。主なアラビカ産地はセラード・ミネイロ、スル・デ・ミナス、(サンパウロ州の)モジアナ(Embrapa)。セラードは長い乾期と低肥沃度の土壌が特徴で、土壌改良・施肥・灌漑などの技術で栽培が成り立っている(Embrapa)。"
+  },
+  "verifiedClaims": [
+   {
+    "index": 0,
+    "text": "ミナスジェライス州が国内生産の柱",
+    "status": "verified",
+    "quote": "Minas Gerais remains the leading coffee producer in the country, followed by Espírito Santo, São Paulo, Bahia, and Rondônia.",
+    "location": "USDA FAS Coffee Annual Brazil 2025, 'Harvest Outlook'",
+    "sourceIds": [
+     "usda-fas-coffee-annual-br-2025",
+     "usda-fas-coffee-world-2026-07"
+    ]
+   },
+   {
+    "index": 4,
+    "text": "セラードは長い乾期と低肥沃度の土壌が特徴",
+    "status": "verified",
+    "quote": "caracterizada por estiagens prolongadas e solos de baixa fertilidade",
+    "location": "Embrapa 'Cerrado Mineiro é destaque…' 本文",
+    "sourceIds": [
+     "embrapa-cerrado-do"
+    ]
+   },
+   {
+    "index": 5,
+    "text": "セラードでは土壌改良・施肥・灌漑などの技術が用いられている",
+    "status": "verified",
+    "quote": "correção do solo, adubação, irrigação e cultivares",
+    "location": "Embrapa 'Cerrado Mineiro é destaque…' 本文",
+    "sourceIds": [
+     "embrapa-cerrado-do"
+    ]
+   }
+  ],
+  "rejectedClaims": [
+   {
+    "text": "総生産価値の約5割",
+    "status": "unverified"
+   },
+   {
+    "text": "セラード・ミネイロは標高800〜1,300mの平坦なサバンナ地形",
+    "status": "unverified"
+   },
+   {
+    "text": "セラードの土壌は土壌改良を要するやや痩せた赤いラトソル(terra roxa)で、平坦な地形",
+    "status": "unverified"
+   },
+   {
+    "text": "モジアナは標高900〜1,100m、有機物に富む深い赤黄色ラトソルの起伏ある地形で、非常に甘くバランスの良いカップになりやすい",
+    "status": "unverified"
+   },
+   {
+    "text": "スル・デ・ミナスは最大1,380mに達する地域もある",
+    "status": "unverified"
+   }
+  ],
+  "sources": {
+   "usda-fas-coffee-annual-br-2025": {
+    "title": "Coffee Annual - Brazil (BR2025-0013, 2025-05-19)",
+    "org": "USDA Foreign Agricultural Service (GAIN)",
+    "kind": "primary",
+    "readMethod": "full-text"
+   },
+   "usda-fas-coffee-world-2026-07": {
+    "title": "Coffee: World Markets and Trade (July 2026)",
+    "org": "USDA Foreign Agricultural Service",
+    "kind": "primary",
+    "readMethod": "full-text"
+   },
+   "embrapa-cerrado-do": {
+    "title": "Cerrado Mineiro é destaque na produção de cafés diferenciados",
+    "org": "Embrapa (Embrapa Café)",
+    "kind": "primary",
+    "readMethod": "full-text"
+   }
+  },
+  "verifierNote": "suggestedTextの『7割超』は、USDAの 'over 70 percent of Arabica coffee is grown' による(アラビカ)。英訳(src/data/en/originGuide1.js)は日本語と同じ主張で、主張の追加・欠落は見つからなかった。"
+ },
+ {
+  "key": "origin:ブラジル:varietiesDetail",
+  "proposed": {
+   "text": "ムンドノーボはスマトラと赤ブルボンの自然交雑に由来し、樹高が高く多収(Embrapa)。ムンドノーボとカトゥアイ赤は、ブラジルのアラビカ栽培面積の約9割に植えられている(Embrapa)。カトゥアイはムンドノーボと黄カトゥーラの交配で、1972年に圃場に出た(Embrapa)。ほかにオバタ、黄ブルボンなども栽培される(Embrapa、Alta Mogiana)。"
+  },
+  "verifiedClaims": [
+   {
+    "index": 0,
+    "text": "ムンドノーボはスマトラ×赤ブルボンの自然交雑",
+    "status": "verified",
+    "quote": "cruzamento natural entre as variedad es ‘Sumatra’ e ‘Bourbon Vermelho’",
+    "location": "Embrapa Rondônia Doc.93 'Mundo novo'",
+    "sourceIds": [
+     "embrapa-doc93-rondonia"
+    ]
+   },
+   {
+    "index": 1,
+    "text": "ムンドノーボは樹高が高く多収",
+    "status": "verified",
+    "quote": "As plantas têm porte alto e caule fino",
+    "location": "Embrapa Rondônia Doc.93 'Mundo novo'",
+    "sourceIds": [
+     "embrapa-doc93-rondonia"
+    ]
+   },
+   {
+    "index": 3,
+    "text": "ムンドノーボ(とカトゥアイ)がブラジルのアラビカ生産の屋台骨",
+    "status": "verified",
+    "quote": "As cultivares Mundo Novo e Catuaí Vermelho são consideradas desbravadoras do Cerrado Mineiro e hoje se encontram espalhadas pelo Brasil afora, estando presentes em cerca de 90% da área cultivada com café arábica no País.",
+    "location": "Embrapa 'Café com endereço e qualidade' 'Mundo Novo e Catuaí'",
+    "sourceIds": [
+     "embrapa-cafe-endereco"
+    ]
+   },
+   {
+    "index": 4,
+    "text": "カトゥアイは黄カトゥーラ×ムンドノーボの交配",
+    "status": "verified",
+    "quote": "Em 1972, chegam ao campo as cultivares Catuaí Vermelho e Catuaí Amarelo, resultantes de cruzamento da cultivar Mundo Novo com a cultivar Caturra Amarelo",
+    "location": "Embrapa 'Café com endereço e qualidade' 'Mundo Novo e Catuaí'",
+    "sourceIds": [
+     "embrapa-cafe-endereco"
+    ]
+   },
+   {
+    "index": 6,
+    "text": "ほかにオバタ、黄ブルボンなどが栽培される",
+    "status": "verified",
+    "quote": "sendo as variedades mais cultivadas Catuaí Vermelho, Catuaí Amarelo, Mundo Novo, Bourbon Amarelo e Obatã IAC 1669-20",
+    "location": "Embrapa 'Café com endereço e qualidade'(Alta Mogiana の項)",
+    "sourceIds": [
+     "embrapa-cafe-endereco"
+    ]
+   }
+  ],
+  "rejectedClaims": [
+   {
+    "text": "ムンドノーボは成熟が遅い",
+    "status": "unverified"
+   },
+   {
+    "text": "カトゥアイ(赤)は、赤い実をつける個体が選抜され定着した",
+    "status": "unverified"
+   },
+   {
+    "text": "ティピカも栽培される",
+    "status": "unverified"
+   },
+   {
+    "text": "カトゥーラも栽培される",
+    "status": "unverified"
+   },
+   {
+    "text": "ナチュラルおよびパルプドナチュラルが主流で、ウォッシュドは少数",
+    "status": "unverified"
+   }
+  ],
+  "sources": {
+   "embrapa-doc93-rondonia": {
+    "title": "Características das principais variedades de café cultivadas em Rondônia (Documentos 93)",
+    "org": "Embrapa Rondônia",
+    "kind": "primary",
+    "readMethod": "full-text"
+   },
+   "embrapa-cafe-endereco": {
+    "title": "Café com endereço e qualidade",
+    "org": "Embrapa",
+    "kind": "primary",
+    "readMethod": "full-text"
+   }
+  },
+  "verifierNote": "英訳(src/data/en/originGuide1.js)は日本語と同じ主張で、主張の追加・欠落は見つからなかった。"
+ },
+ {
+  "key": "origin:ベトナム:farmStructure",
+  "proposed": {
+   "text": "60万戸超の小農世帯がコーヒー生産に関わる(USDA FAS 2026年)。EUDR(EU森林破壊規制)は2026年12月に施行され、ベトナムのコーヒー輸出の41%がEU向け(USDA FAS 2025年)のため、対応が課題となっている。"
+  },
+  "verifiedClaims": [
+   {
+    "index": 4,
+    "text": "60万戸超の小農世帯がコーヒー生産に関わる(アプリの『64万戸超』の代替)",
+    "status": "verified",
+    "quote": "more than 600,000 smallholder households involved in coffee production",
+    "location": "Production",
+    "sourceIds": [
+     "usda-fas-vn-coffee-annual-2026"
+    ]
+   },
+   {
+    "index": 7,
+    "text": "EUDR(EU森林破壊規制)は2026年12月施行",
+    "status": "verified",
+    "quote": "(EUDR) requirements, which take effect in December 2026.",
+    "location": "Production",
+    "sourceIds": [
+     "usda-fas-vn-coffee-annual-2026"
+    ]
+   },
+   {
+    "index": 8,
+    "text": "EUDRへの対応が輸出上の課題",
+    "status": "verified",
+    "quote": "The EU Deforestation Regulation (EUDR), which comes into force in 2026, is creating challenges for Vietnam coffee producers.",
+    "location": "Production",
+    "sourceIds": [
+     "usda-fas-vn-coffee-annual-2025"
+    ]
+   },
+   {
+    "index": 9,
+    "text": "輸出の約4割がEU向け",
+    "status": "verified",
+    "quote": "Forty one percent of Vietnam’s coffee exports go to European Union.",
+    "location": "Production",
+    "sourceIds": [
+     "usda-fas-vn-coffee-annual-2025"
+    ]
+   }
+  ],
+  "rejectedClaims": [
+   {
+    "text": "57.3万戸規模のロブスタ小農が平均農園面積約1.08ha(資料により1〜1.5ha程度)を耕作する",
+    "status": "unverified"
+   },
+   {
+    "text": "全農家の85%が2ha未満、63%が1ha未満",
+    "status": "unverified"
+   },
+   {
+    "text": "中部高原の栽培面積の85%(約48万ha)は世帯単位の経営",
+    "status": "unverified"
+   },
+   {
+    "text": "64万戸超が生産に関わる",
+    "status": "unverified"
+   },
+   {
+    "text": "政府はコーヒー栽培リースの割当を1世帯あたり1.2haと定めている",
+    "status": "unverified"
+   },
+   {
+    "text": "1986年のドイモイ後、農家が生産物の一部を自ら保有・販売できる権利を得て、集約的栽培への転換が進んだ",
+    "status": "unverified"
+   }
+  ],
+  "sources": {
+   "usda-fas-vn-coffee-annual-2026": {
+    "title": "Vietnam: Coffee Annual (VM2026-0016, 2026-05-20)",
+    "org": "USDA Foreign Agricultural Service (FAS Ho Chi Minh City)",
+    "kind": "primary",
+    "readMethod": "full-text"
+   },
+   "usda-fas-vn-coffee-annual-2025": {
+    "title": "Vietnam: Coffee Annual (VM2025-0018, 2025-05-19)",
+    "org": "USDA Foreign Agricultural Service (FAS Hanoi)",
+    "kind": "primary",
+    "readMethod": "full-text"
+   }
+  },
+  "verifierNote": ""
+ },
+ {
+  "key": "origin:ベトナム:harvestSeason",
+  "proposed": {
+   "text": "中部高原の収穫期は通常4か月で、10月下旬から1月末まで(VICOFA)。"
+  },
+  "verifiedClaims": [],
+  "rejectedClaims": [
+   {
+    "text": "ロブスタの主収穫は10月〜2/3月、ピークは11〜1月",
+    "status": "unverified"
+   },
+   {
+    "text": "アラビカは9〜11月が主で、高地では4月まで伸びることも",
+    "status": "unverified"
+   }
+  ],
+  "sources": {},
+  "verifierNote": ""
+ },
+ {
+  "key": "origin:ベトナム:history",
+  "proposed": {
+   "text": "1857年にフランスの宣教師がアラビカを導入した(ICO)。中部高原では当初アラビカが植えられたが、さび病のためロブスタとエクセルサに置き換えられた(VICOFA)。1986年にドイモイが始まり、以後政府がコーヒー部門への投資を本格化した(ICO)。ベトナムは世界第2位の生産国で、ロブスタの輸出は世界最大(ICO・VICOFA、2018〜2019年時点)。"
+  },
+  "verifiedClaims": [
+   {
+    "index": 0,
+    "text": "1857年にフランス人がアラビカを導入した",
+    "status": "verified",
+    "quote": "Arabica (Coffea arabica) was the first coffee variety to have been introduced into Vietnam in 1857, through French missionaries.",
+    "location": "1.3 Summary of the history of coffee in Vietnam",
+    "sourceIds": [
+     "ico-icc-124-9-profile-vietnam"
+    ]
+   },
+   {
+    "index": 4,
+    "text": "中部高原では当初アラビカが植えられたが、さび病のため劣化し、ロブスタとエクセルサに置き換えられた(アプリに無い。転換理由の訂正用)",
+    "status": "verified",
+    "quote": "Cuối cùng, người ta quyết định thay thế cà phê Chè bằng cà phê Vối và cà phê Mít.",
+    "location": "Quá trình phát triển cà phê ở Việt Nam",
+    "sourceIds": [
+     "vicofa-luoc-su-nganh-ca-phe"
+    ]
+   },
+   {
+    "index": 5,
+    "text": "1986年にドイモイ(経済改革)が始まった",
+    "status": "verified",
+    "quote": "launched in 1986, have spurred rapid economic growth",
+    "location": "1.2 Economic setting",
+    "sourceIds": [
+     "ico-icc-124-9-profile-vietnam"
+    ]
+   },
+   {
+    "index": 6,
+    "text": "1986年以降、政府が(コーヒー部門への)投資を本格化した",
+    "status": "verified",
+    "quote": "Since 1986, the Government of Vietnam has concentrated its resources on investing in the coffee sector",
+    "location": "1.3 Summary of the history of coffee in Vietnam",
+    "sourceIds": [
+     "ico-icc-124-9-profile-vietnam"
+    ]
+   },
+   {
+    "index": 9,
+    "text": "ベトナムは世界第2位の生産国",
+    "status": "verified",
+    "quote": "firstly, to maintain its position as the world’s second largest producer and exporter of coffee green beans",
+    "location": "Foreword",
+    "sourceIds": [
+     "ico-icc-124-9-profile-vietnam"
+    ]
+   },
+   {
+    "index": 10,
+    "text": "ロブスタ最大の輸出国",
+    "status": "verified",
+    "quote": "Nước xuất khẩu cà phê Robusta lớn nhất thế giới là Việt Nam.",
+    "location": "CÀ PHÊ VỐI (ROBUSTA)",
+    "sourceIds": [
+     "vicofa-luoc-su-nganh-ca-phe"
+    ]
+   }
+  ],
+  "rejectedClaims": [
+   {
+    "text": "ダクラクでは1912〜1914年頃にアラビカ栽培が本格化した(フランス政府が2社の農業会社設立を許可、栽培面積260ha)",
+    "status": "unverified"
+   },
+   {
+    "text": "その後バサルト赤土と冷涼な気候を背景にロブスタへの転換が進んだ",
+    "status": "unverified"
+   },
+   {
+    "text": "1920年代にはダクラクがロブスタの『聖域』とされた",
+    "status": "unverified"
+   },
+   {
+    "text": "ドイモイ後に生産割当が廃止され、土地の私有化が進んだ",
+    "status": "unverified"
+   },
+   {
+    "text": "集約的栽培へ転換した",
+    "status": "unverified"
+   }
+  ],
+  "sources": {
+   "ico-icc-124-9-profile-vietnam": {
+    "title": "Country Coffee Profile: Vietnam (ICC-124-9, 4 March 2019)",
+    "org": "International Coffee Organization(ベトナムコーヒーカカオ協会VICOFAが作成を担当)",
+    "kind": "primary",
+    "readMethod": "full-text"
+   },
+   "vicofa-luoc-su-nganh-ca-phe": {
+    "title": "Lược sử ngành cà phê(コーヒー産業略史)",
+    "org": "Hiệp hội Cà phê - Ca cao Việt Nam (VICOFA)",
+    "kind": "primary",
+    "readMethod": "full-text"
+   }
+  },
+  "verifierNote": ""
+ },
+ {
+  "key": "origin:ベトナム:officialBody",
+  "proposed": {
+   "text": "VICOFA(ベトナムコーヒーカカオ協会)は1990年に設立された業界団体(非営利の社会・職業団体)。国の標準・計量・品質を所管するSTAMEQ(国家標準計量品質委員会)は科学技術省に属する。"
+  },
+  "verifiedClaims": [
+   {
+    "index": 0,
+    "text": "VICOFA(ベトナムコーヒーカカオ協会)は1990年設立",
+    "status": "verified",
+    "quote": "Hiệp hội Cà phê - Ca Cao Việt Nam (VICOFA) được thành lập theo Nghị quyết của Hội nghị các hội viên sáng lập ngày 04/01/1990",
+    "location": "Bộ máy tổ chức",
+    "sourceIds": [
+     "vicofa-bo-may-to-chuc"
+    ]
+   },
+   {
+    "index": 1,
+    "text": "VICOFAは業界団体である",
+    "status": "verified",
+    "quote": "Hiệp hội Cà phê - Ca cao Việt Nam là một tổ chức xã hội - nghề nghiệp, phi lợi nhuận",
+    "location": "Bộ máy tổ chức",
+    "sourceIds": [
+     "vicofa-bo-may-to-chuc"
+    ]
+   },
+   {
+    "index": 4,
+    "text": "STAMEQは科学技術省に属する機関",
+    "status": "verified",
+    "quote": "Ủy ban Tiêu chuẩn Đo lường Chất lượng Quốc gia ngày nay có tiền thân là Tổng cục Tiêu chuẩn Đo lường Chất lượng (STAMEQ) là cơ quan trực thuộc Bộ Khoa học và Công nghệ",
+    "location": "Giới thiệu chung",
+    "sourceIds": [
+     "stamex-tcvn-gioi-thieu-chung"
+    ]
+   }
+  ],
+  "rejectedClaims": [
+   {
+    "text": "VICOFAは輸出許可・格付けの権限を持たない",
+    "status": "unverified"
+   },
+   {
+    "text": "等級規格(TCVN 4193)は科学技術省傘下のSTAMEQが所管",
+    "status": "unverified"
+   },
+   {
+    "text": "技術委員会TCVN/TC/F16がTCVN 4193を所管する",
+    "status": "unverified"
+   }
+  ],
+  "sources": {
+   "vicofa-bo-may-to-chuc": {
+    "title": "Bộ máy tổ chức(VICOFAの組織・沿革)",
+    "org": "Hiệp hội Cà phê - Ca cao Việt Nam (VICOFA)",
+    "kind": "primary",
+    "readMethod": "full-text"
+   },
+   "stamex-tcvn-gioi-thieu-chung": {
+    "title": "Giới thiệu chung(国家標準計量品質委員会の紹介)",
+    "org": "Ủy ban Tiêu chuẩn Đo lường Chất lượng Quốc gia (STAMEQ)",
+    "kind": "primary",
+    "readMethod": "full-text"
+   }
+  },
+  "verifierNote": "TCVN 4193の所管についてのアプリの記述(TC/F16)は一次資料で確認できていない。"
+ },
+ {
+  "key": "origin:ベトナム:sub:Da Lat/Cau Dat(Lam Dong)",
+  "proposed": {
+   "detail": "Cau Dat-Da Latは地理的表示の対象産地(ICO)。"
+  },
+  "verifiedClaims": [
+   {
+    "index": 0,
+    "text": "Cau Dat-Da Latは地理的表示の産地",
+    "status": "verified",
+    "quote": "There are some geographic indications of the coffee regions (‘Buon Ma Thuot’, ‘Cau Dat – Da Lat’ and ‘Son La’)",
+    "location": "1.3 Summary of the history of coffee in Vietnam",
+    "sourceIds": [
+     "ico-icc-124-9-profile-vietnam"
+    ]
+   }
+  ],
+  "rejectedClaims": [
+   {
+    "text": "高標高アラビカの産地",
+    "status": "unverified"
+   },
+   {
+    "text": "ブルボン・ティピカ・カティモールが中心(カティモールが優勢)",
+    "status": "unverified"
+   },
+   {
+    "text": "柑橘の酸味・ドライフラワー様のフローラル、雨上がりの森を思わせるアーシーな香り、チョコレートのボディ",
+    "status": "unverified"
+   }
+  ],
+  "sources": {
+   "ico-icc-124-9-profile-vietnam": {
+    "title": "Country Coffee Profile: Vietnam (ICC-124-9, 4 March 2019)",
+    "org": "International Coffee Organization(ベトナムコーヒーカカオ協会VICOFAが作成を担当)",
+    "kind": "primary",
+    "readMethod": "full-text"
+   }
+  },
+  "verifierNote": ""
+ },
+ {
+  "key": "origin:ベトナム:sub:ダクラク(Buon Ma Thuot)",
+  "proposed": {
+   "detail": "ダクラク(ブオンマトート)はコーヒーの『首都』とされる(VICOFA)。"
+  },
+  "verifiedClaims": [
+   {
+    "index": 0,
+    "text": "ダクラク(ブオンマトート)はコーヒーの『首都(thủ phủ)』とされる",
+    "status": "verified",
+    "quote": "Đây cũng chính là lý do Đắk Lắk và nhất là Buôn Ma Thuột vốn được xem là thủ phủ cà phê",
+    "location": "CÀ PHÊ MÍT(エクセルサ)の節",
+    "sourceIds": [
+     "vicofa-luoc-su-nganh-ca-phe"
+    ]
+   }
+  ],
+  "rejectedClaims": [
+   {
+    "text": "ロブスタの『首都』",
+    "status": "unverified"
+   },
+   {
+    "text": "力強くコクのある風味",
+    "status": "unverified"
+   }
+  ],
+  "sources": {
+   "vicofa-luoc-su-nganh-ca-phe": {
+    "title": "Lược sử ngành cà phê(コーヒー産業略史)",
+    "org": "Hiệp hội Cà phê - Ca cao Việt Nam (VICOFA)",
+    "kind": "primary",
+    "readMethod": "full-text"
+   }
+  },
+  "verifierNote": ""
+ },
+ {
+  "key": "origin:ベトナム:tagline",
+  "proposed": {
+   "text": "世界第2位の生産国で、ロブスタが総生産量の約97%を占める(ICO国別プロファイル、2019年)。"
+  },
+  "verifiedClaims": [
+   {
+    "index": 0,
+    "text": "ベトナムは世界第2位のコーヒー生産国",
+    "status": "verified",
+    "quote": "firstly, to maintain its position as the world’s second largest producer and exporter of coffee green beans",
+    "location": "Foreword(VICOFA議長)",
+    "sourceIds": [
+     "ico-icc-124-9-profile-vietnam"
+    ]
+   },
+   {
+    "index": 1,
+    "text": "ロブスタが主体",
+    "status": "verified",
+    "quote": "Robusta accounts for 97% of Vietnam's total output volume.",
+    "location": "2.1 Types of coffee and coffee-growing areas",
+    "sourceIds": [
+     "ico-icc-124-9-profile-vietnam"
+    ]
+   }
+  ],
+  "rejectedClaims": [
+   {
+    "text": "力強い苦味とコクの味わい",
+    "status": "unverified"
+   }
+  ],
+  "sources": {
+   "ico-icc-124-9-profile-vietnam": {
+    "title": "Country Coffee Profile: Vietnam (ICC-124-9, 4 March 2019)",
+    "org": "International Coffee Organization(ベトナムコーヒーカカオ協会VICOFAが作成を担当)",
+    "kind": "primary",
+    "readMethod": "full-text"
+   }
+  },
+  "verifierNote": ""
+ },
+ {
+  "key": "origin:ベトナム:terroir",
+  "proposed": {
+   "text": "中部高原(タイグエン)が栽培面積の92%を占める(USDA FAS 2025年)。コーヒー栽培に適した赤色バサルト土壌が広がる(ICO 2019年)。過剰な灌漑は地下水を枯渇させる(USDA FAS 2026年)。"
+  },
+  "verifiedClaims": [
+   {
+    "index": 0,
+    "text": "中部高原(タイグエン地方)が栽培面積の約9割",
+    "status": "verified",
+    "quote": "accounts for 92 percent of the total coffee cultivation area and 90 percent of national coffee output.",
+    "location": "Production",
+    "sourceIds": [
+     "usda-fas-vn-coffee-annual-2025"
+    ]
+   },
+   {
+    "index": 1,
+    "text": "赤色バサルト土壌が広がる",
+    "status": "verified",
+    "quote": "There is a large area of red soil basalt suitable for coffee growing which was brought by the French in 1857.",
+    "location": "Foreword",
+    "sourceIds": [
+     "ico-icc-124-9-profile-vietnam"
+    ]
+   },
+   {
+    "index": 8,
+    "text": "地下水の過剰揚水が課題になっている",
+    "status": "verified",
+    "quote": "Early or excessive irrigation may increase coffee yield in the short term, but in the long run, it depletes groundwater and increases production costs over time.",
+    "location": "Production",
+    "sourceIds": [
+     "usda-fas-vn-coffee-annual-2026"
+    ]
+   }
+  ],
+  "rejectedClaims": [
+   {
+    "text": "現地で『バザン・レッドランド』と呼ばれる",
+    "status": "unverified"
+   },
+   {
+    "text": "全国のバサルト埋蔵量の6割を占めるとされる",
+    "status": "unverified"
+   },
+   {
+    "text": "水はけ・保水性・養分保持のバランスに優れ、チェリーの緩やかで均質な成熟を促す",
+    "status": "unverified"
+   },
+   {
+    "text": "熱帯サバンナ気候",
+    "status": "unverified"
+   },
+   {
+    "text": "ロブスタは標高約500〜800m",
+    "status": "unverified"
+   },
+   {
+    "text": "乾季(12月〜4月中旬)には灌漑が必須",
+    "status": "unverified"
+   },
+   {
+    "text": "アラビカは北部・南部Da Lat周辺の高標高地(1,000〜1,400m)で少量栽培",
+    "status": "unverified"
+   }
+  ],
+  "sources": {
+   "usda-fas-vn-coffee-annual-2025": {
+    "title": "Vietnam: Coffee Annual (VM2025-0018, 2025-05-19)",
+    "org": "USDA Foreign Agricultural Service (FAS Hanoi)",
+    "kind": "primary",
+    "readMethod": "full-text"
+   },
+   "ico-icc-124-9-profile-vietnam": {
+    "title": "Country Coffee Profile: Vietnam (ICC-124-9, 4 March 2019)",
+    "org": "International Coffee Organization(ベトナムコーヒーカカオ協会VICOFAが作成を担当)",
+    "kind": "primary",
+    "readMethod": "full-text"
+   },
+   "usda-fas-vn-coffee-annual-2026": {
+    "title": "Vietnam: Coffee Annual (VM2026-0016, 2026-05-20)",
+    "org": "USDA Foreign Agricultural Service (FAS Ho Chi Minh City)",
+    "kind": "primary",
+    "readMethod": "full-text"
+   }
+  },
+  "verifierNote": ""
+ },
+ {
+  "key": "origin:ベトナム:varietiesDetail",
+  "proposed": {
+   "text": "ロブスタは総生産の約97%(ICO 2019年)。ロブスタは、WASIなどが育成したTR4、TR9などTRシリーズのクローンがあり、近年はTR14、TR15、TRS 1が広く栽培されている(ICO)。アラビカの約99%はカティモール(ICO)。Da Lat周辺ではブルボンも栽培されている。"
+  },
+  "verifiedClaims": [
+   {
+    "index": 1,
+    "text": "主力は選抜クローンのTRシリーズ(TR4、TR9等)",
+    "status": "verified",
+    "quote": "named by Vietnamese researchers as clone TR4, TR5, TR6, TR7, TR8, TR9, TR11, TR12, TR13, TR14 and TR15 or TRS 1.",
+    "location": "2.1 Types of coffee and coffee-growing areas",
+    "sourceIds": [
+     "ico-icc-124-9-profile-vietnam"
+    ]
+   },
+   {
+    "index": 2,
+    "text": "アラビカはカティモールが支配的",
+    "status": "verified",
+    "quote": "almost 99% of the Arabica coffee grown in Vietnam is of the Catimor variety",
+    "location": "2.1 Types of coffee and coffee-growing areas",
+    "sourceIds": [
+     "ico-icc-124-9-profile-vietnam"
+    ]
+   },
+   {
+    "index": 3,
+    "text": "Da Lat周辺にブルボンが残る",
+    "status": "verified",
+    "quote": "mixture of Arabica Bourbon from Cau Dat ‒ Da Lat and Robusta from Buon Ma Thuot",
+    "location": "2.1(AVPA 2015の受賞の記述)",
+    "sourceIds": [
+     "ico-icc-124-9-profile-vietnam"
+    ]
+   }
+  ],
+  "rejectedClaims": [
+   {
+    "text": "USDA FASによれば生産の約96%がロブスタ(カネフォラ種)",
+    "status": "unverified"
+   },
+   {
+    "text": "Da Lat周辺にティピカが残る",
+    "status": "unverified"
+   },
+   {
+    "text": "ブルボン・ティピカは現地で『モカ』と通称される",
+    "status": "unverified"
+   }
+  ],
+  "sources": {
+   "ico-icc-124-9-profile-vietnam": {
+    "title": "Country Coffee Profile: Vietnam (ICC-124-9, 4 March 2019)",
+    "org": "International Coffee Organization(ベトナムコーヒーカカオ協会VICOFAが作成を担当)",
+    "kind": "primary",
+    "readMethod": "full-text"
+   }
+  },
+  "verifierNote": ""
+ },
+ {
+  "key": "origin:ペルー:farmStructure",
+  "proposed": {
+   "text": "コーヒーの90%超が、5ヘクタール未満の小規模農家によって生産される。約22.3万世帯がコーヒー生産を主な収入源としている(USDA FAS、2025年5月)。中央生産者組合(JNC)には、14のコーヒー地帯にまたがる56の組織(協会・協同組合)、約7万の加盟世帯が参加している(JNC公式サイト)。ペルーは世界最大の有機コーヒー輸出国で、有機認証面積は約9万ヘクタール(USDA FAS)。"
+  },
+  "verifiedClaims": [
+   {
+    "index": 0,
+    "text": "生産者の90%超が5ヘクタール未満の小規模農家",
+    "status": "verified",
+    "quote": "Over 90 percent of Peruvian coffee is grown by smallholder farmers on plots smaller than 5 hectares.",
+    "location": "USDA FAS Coffee Annual 2025, Production",
+    "sourceIds": [
+     "usda-fas-peru-coffee-annual-2025"
+    ]
+   },
+   {
+    "index": 4,
+    "text": "JNCには14の産地にまたがる56の協同組合・団体、約7万戸の加盟農家が参加",
+    "status": "verified",
+    "quote": "Hoy reúne a un total de 56 organizaciones cafetaleras, entre asociaciones y cooperativas que suman 70 mil familias socias arraigadas en catorce zonas cafetaleras del país.",
+    "location": "JNC「Nosotros」(2024-03保存)",
+    "sourceIds": [
+     "jnc-nosotros-2024"
+    ]
+   },
+   {
+    "index": 6,
+    "text": "世界最大級の有機コーヒー輸出国",
+    "status": "verified",
+    "quote": "Peru is the world’s leading exporter of organic coffee",
+    "location": "USDA FAS 2025",
+    "sourceIds": [
+     "usda-fas-peru-coffee-annual-2025"
+    ]
+   }
+  ],
+  "rejectedClaims": [
+   {
+    "text": "平均農園面積は2〜3ヘクタール",
+    "status": "unverified"
+   },
+   {
+    "text": "約15万戸の生産者家族",
+    "status": "incorrect"
+   },
+   {
+    "text": "年間約400万袋を生産",
+    "status": "unverified"
+   },
+   {
+    "text": "有機認証面積は国内で9万ヘクタール超",
+    "status": "unverified"
+   }
+  ],
+  "sources": {
+   "usda-fas-peru-coffee-annual-2025": {
+    "title": "Coffee Annual - Peru (Report Number PE2025-0018, May 21, 2025)",
+    "org": "USDA Foreign Agricultural Service (GAIN), Lima",
+    "kind": "primary",
+    "readMethod": "full-text"
+   },
+   "jnc-nosotros-2024": {
+    "title": "Nosotros - Junta Nacional del Café",
+    "org": "Junta Nacional del Café (JNC)",
+    "kind": "primary",
+    "readMethod": "full-text"
+   }
+  },
+  "verifierNote": ""
+ },
+ {
+  "key": "origin:ペルー:gradeSystem",
+  "proposed": {
+   "text": "ペルーの生豆規格はINACALのNTP 209.027で、2018年版は2024年版(+CT 1:2025、第2版)に改訂された(INACAL決議 N° 000003-2026-INACAL/DN)。実施ガイド(GIP 101:2026)によれば、等級はGrado 1(最大15欠点)、Grado 2(最大23欠点)、Grado 3(最大30欠点)、Grado 4(31〜60欠点)の記載がある。水分は10〜12.5%、粒度は50%以上がマラ15(6mm)に残り、14番メッシュ(5.60mm)を通る豆は5%以下。別の規格NTP 209.311(スペシャルティ、2019年版)の実施ガイドは、主要欠点0・二次欠点最大5を示す。"
+  },
+  "verifiedClaims": [
+   {
+    "index": 2,
+    "text": "Grado 1は最大15欠点、当期収穫・色と粒サイズが均一・香りが非常にフレッシュ",
+    "status": "verified",
+    "quote": "Grado 1 Compuesto por granos de cosecha actual, color y tamaño homogéneo y de olor intensamente fresco. || a) Grado 1 Se admite un máximo de 15 defectos o imperfecciones",
+    "location": "GIP 101:2026 第5章・6.2.4(2018年版の記述はGIP 101:2021も同じ)",
+    "sourceIds": [
+     "inacal-gip-101-2026"
+    ]
+   },
+   {
+    "index": 3,
+    "text": "Grado 2は最大23欠点",
+    "status": "verified",
+    "quote": "b) Grado 2 Se admite un máximo de 23 defectos o imperfecciones",
+    "location": "GIP 101:2026 6.2.4",
+    "sourceIds": [
+     "inacal-gip-101-2026"
+    ]
+   },
+   {
+    "index": 4,
+    "text": "Grado 3は最大30欠点で、色・粒サイズにばらつきがある",
+    "status": "verified",
+    "quote": "Grado 3 Compuestos por granos de tamaño y color variable, olor de poca a mediana intensidad. || c) Grado 3 Se admite un máximo de 30 defectos o imperfecciones",
+    "location": "GIP 101:2026 第5章・6.2.4",
+    "sourceIds": [
+     "inacal-gip-101-2026"
+    ]
+   },
+   {
+    "index": 5,
+    "text": "共通基準は水分10〜12.5%",
+    "status": "verified",
+    "quote": "La humedad del café verde debe estar en el rango de 10 a 12,5%",
+    "location": "GIP 101:2026 6.2.2",
+    "sourceIds": [
+     "inacal-gip-101-2026"
+    ]
+   },
+   {
+    "index": 6,
+    "text": "粒度は50%以上がマラ15(6.0mm)以上",
+    "status": "verified",
+    "quote": "Mínimo: El 50% debe estar retenido en malla 15 (6mm).",
+    "location": "GIP 101:2026 6.2.3",
+    "sourceIds": [
+     "inacal-gip-101-2026"
+    ]
+   },
+   {
+    "index": 7,
+    "text": "NTP 209.311のスペシャルティコーヒー規格は主要欠点0個",
+    "status": "verified",
+    "quote": "Defectos primarios: 0 Defectos secundarios: Máximo 5",
+    "location": "GIP 107:2021(NTP 209.311:2019の実施ガイド)",
+    "sourceIds": [
+     "inacal-gip-107-2021"
+    ]
+   }
+  ],
+  "rejectedClaims": [
+   {
+    "text": "INACALのNTP 209.027:2018が、コーヒー豆(生豆)の等級を規定している(現行規格である)",
+    "status": "incorrect"
+   },
+   {
+    "text": "3段階の番号グレード(Grado 1〜3)がある",
+    "status": "incorrect"
+   },
+   {
+    "text": "NTP 209.311はGrado 1のさらに上位に位置する",
+    "status": "unverified"
+   },
+   {
+    "text": "コロンビアやエルサルバドルのような銘柄名ではなく番号グレードで表す",
+    "status": "unverified"
+   }
+  ],
+  "sources": {
+   "inacal-gip-101-2026": {
+    "title": "GIP 101:2026 Guía de Implementación de la NTP 209.027:2024 + CT 1:2025 CAFÉ. Café verde. Requisitos (2ª Edición)",
+    "org": "INACAL (Instituto Nacional de Calidad)",
+    "kind": "primary",
+    "readMethod": "full-text"
+   },
+   "inacal-gip-107-2021": {
+    "title": "GIP 107:2021 Guía de Implementación de la NTP 209.311:2019 CAFÉS ESPECIALES. Requisitos (1ª Edición)",
+    "org": "INACAL (Instituto Nacional de Calidad)",
+    "kind": "primary",
+    "readMethod": "full-text"
+   }
+  },
+  "verifierNote": "NTP本体は有料で取得できず、INACALの実施ガイド(GIP)から読んだ。2018年版の内容はGIP 101:2021でも同じ数値(15/23/30欠点、水分10〜12.5%、マラ15で50%)を確認した。"
+ },
+ {
+  "key": "origin:ペルー:harvestSeason",
+  "proposed": {
+   "text": "収穫は4月に始まり9月まで続き、ピークは6〜7月、収穫の約85%が4〜7月に行われる(USDA FAS、2025年5月)。"
+  },
+  "verifiedClaims": [],
+  "rejectedClaims": [
+   {
+    "text": "標高により4〜10月と幅広い",
+    "status": "unverified"
+   },
+   {
+    "text": "全国的なピークは概ね7〜9月",
+    "status": "incorrect"
+   }
+  ],
+  "sources": {},
+  "verifierNote": ""
+ },
+ {
+  "key": "origin:ペルー:history",
+  "proposed": {
+   "text": "カップ・オブ・エクセレンス(COE)ペルー大会の1位は、2017年がカハマルカ(La Flor、92.25点)で、1〜3位はカハマルカ産だった。4位はフニン(チャンチャマヨ)、5位はアマソナス。その後の1位は、2018年と2021年がクスコ(Nueva Alianza)、2019・2022・2023・2024・2025・2026年がカハマルカ。(COE公式サイトの結果ページ)"
+  },
+  "verifiedClaims": [
+   {
+    "index": 6,
+    "text": "2017年の1位はFinca La Flor、92.25点",
+    "status": "verified",
+    "quote": "1A 6 La Flor 2017 – {ORG} Juan Heredia Sanchez Jaén, Cajamarca 92.25",
+    "location": "ACE「Perú 2017」Winning Farms",
+    "sourceIds": [
+     "ace-coe-peru-2017"
+    ]
+   },
+   {
+    "index": 8,
+    "text": "カハマルカはその後も2019・2022・2024・2025年にCOEで1位を取った",
+    "status": "verified",
+    "quote": "1a 180 La Lucuma Grimanes Morales Lizana Cajamarca 92.28 || 1a 90.39 LA BOLA BLANCA FLOR CORDOVA JIMENEZ CAJAMARCA || 1A 90,54 El Mirador Miguel Padilla Chinguel Caturra, Bourbon, Geisha Washed Cajamarca || 1A 90,64 La Catarata Angel Antonio Manosalva Palomino Geisha Washed Cajamarca",
+    "location": "ACE 各年の「Winning Farms」1位",
+    "sourceIds": [
+     "ace-coe-peru-2019",
+     "ace-coe-peru-2022",
+     "ace-coe-peru-2024",
+     "ace-coe-peru-2025"
+    ]
+   },
+   {
+    "index": 9,
+    "text": "2023年・2026年もカハマルカ産が1位(列挙から漏れている)",
+    "status": "verified",
+    "quote": "1A 90.74 Alto Mirador Yoniser Mego Silva Cajamarca || 1 91.71 Finca La Esperanza Fidel Huancas Huancas Washed Geisha Cajamarca",
+    "location": "ACE Perú 2023 / 2026 の1位",
+    "sourceIds": [
+     "ace-coe-peru-2023",
+     "ace-coe-peru-2026"
+    ]
+   }
+  ],
+  "rejectedClaims": [
+   {
+    "text": "コーヒー導入は1700年代、エクアドル経由とされる",
+    "status": "unverified"
+   },
+   {
+    "text": "19世紀末まで小規模な国内消費作物にとどまり、欧州需要の高まりとインドネシアのさび病禍による供給減を受けて商業輸出作物化した",
+    "status": "unverified"
+   },
+   {
+    "text": "20世紀半ばの土地改革・協同組合化政策が小農中心の構造を決定づけた",
+    "status": "unverified"
+   },
+   {
+    "text": "1990年代以降は有機認証への投資が本格化し、栽培面積は1995年の16.3万haから37.5万ha超へ拡大した",
+    "status": "unverified"
+   },
+   {
+    "text": "価格の安さから長らくブレンドの「かさ増し」だったが、2010〜2017年頃からマイクロロット化・直接取引による品質差別化が進んだ",
+    "status": "unverified"
+   },
+   {
+    "text": "2017年にペルー初のカップ・オブ・エクセレンスがリマで開催された",
+    "status": "unverified"
+   },
+   {
+    "text": "上位入賞は全てカハマルカ産",
+    "status": "incorrect"
+   }
+  ],
+  "sources": {
+   "ace-coe-peru-2017": {
+    "title": "Perú 2017 - Cup of Excellence (competition results)",
+    "org": "Alliance for Coffee Excellence (Cup of Excellence)",
+    "kind": "primary",
+    "readMethod": "full-text"
+   },
+   "ace-coe-peru-2019": {
+    "title": "Perú 2019 - Cup of Excellence (competition results)",
+    "org": "Alliance for Coffee Excellence (Cup of Excellence)",
+    "kind": "primary",
+    "readMethod": "full-text"
+   },
+   "ace-coe-peru-2022": {
+    "title": "Perú 2022 - Cup of Excellence (competition results)",
+    "org": "Alliance for Coffee Excellence (Cup of Excellence)",
+    "kind": "primary",
+    "readMethod": "full-text"
+   },
+   "ace-coe-peru-2024": {
+    "title": "Perú 2024 - Cup of Excellence (competition results)",
+    "org": "Alliance for Coffee Excellence (Cup of Excellence)",
+    "kind": "primary",
+    "readMethod": "full-text"
+   },
+   "ace-coe-peru-2025": {
+    "title": "Perú 2025 - Cup of Excellence (competition results)",
+    "org": "Alliance for Coffee Excellence (Cup of Excellence)",
+    "kind": "primary",
+    "readMethod": "full-text"
+   },
+   "ace-coe-peru-2023": {
+    "title": "Perú 2023 - Cup of Excellence (competition results)",
+    "org": "Alliance for Coffee Excellence (Cup of Excellence)",
+    "kind": "primary",
+    "readMethod": "full-text"
+   },
+   "ace-coe-peru-2026": {
+    "title": "Perú 2026 - Cup of Excellence (competition results)",
+    "org": "Alliance for Coffee Excellence (Cup of Excellence)",
+    "kind": "primary",
+    "readMethod": "full-text"
+   }
+  },
+  "verifierNote": ""
+ }
+]

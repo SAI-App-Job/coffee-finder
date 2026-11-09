@@ -1,0 +1,1238 @@
+{
+  "scope": "facts-b: src/data/discoveryFacts.js DISCOVERY_FACTS 23番目〜43番目(ヘアルーム〜タンザニア等級規格)",
+  "verifiedOn": "2026-11-09",
+  "sources": {
+    "ico-rules-indicator-prices-annex1": {
+      "title": "ICC-105-17 Rules on Statistics - Indicator prices, Annex I (share of markets and weighting)",
+      "org": "International Coffee Organization",
+      "url": "https://www.ico.org/documents/icc-105-17e-rules-indicator-prices-a1.pdf",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": ""
+    },
+    "ico-ed1953-2005": {
+      "title": "ED 1953/05 Share of markets and their weightings ... from 1 October 2005 (Annex I)",
+      "org": "International Coffee Organization",
+      "url": "https://ico.org/documents/ed1953e.pdf",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": ""
+    },
+    "ico-wp-statistics-139-09": {
+      "title": "WP Statistics 139/09 ICO composite and group indicator prices: Share of markets and group weightings, calendar year averages 2005 to 2008",
+      "org": "International Coffee Organization",
+      "url": "https://ico.org/documents/wp-statistics-139e-composite%20prices.pdf",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": ""
+    },
+    "ico-sc105-2021-data-concepts": {
+      "title": "SC-105/21 Data concepts and variables used in the statistics of the Organization (Statistics Committee, 13 April 2021)",
+      "org": "International Coffee Organization",
+      "url": "https://ico.org/documents/cy2020-21/sc-105e-data-concepts.pdf",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": ""
+    },
+    "ico-glossary-dev": {
+      "title": "ICO Glossary of terms used (legacy site)",
+      "org": "International Coffee Organization",
+      "url": "http://dev.ico.org/glossary.asp",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": "旧サイト(dev.ico.org)の用語集。ICA 2001時代の記述を含む"
+    },
+    "ico-cmr-2025-10": {
+      "title": "Coffee Market Report - October 2025",
+      "org": "International Coffee Organization",
+      "url": "https://www.ico.org/documents/cy2025-26/cmr-1025-e.pdf",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": ""
+    },
+    "sca-whitepaper-definition-2021": {
+      "title": "Towards a Definition of Specialty Coffee: A Conception Based on Attributes (c) 2021",
+      "org": "Specialty Coffee Association",
+      "url": "https://sca.coffee/s/Towards-a-Definition-of-Specialty-Coffee-White-Paper.pdf",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": ""
+    },
+    "sca-what-is-specialty-coffee": {
+      "title": "What is Specialty Coffee? (SCA website)",
+      "org": "Specialty Coffee Association",
+      "url": "https://sca.coffee/what-is-specialty-coffee",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": ""
+    },
+    "sca-news-q-grader-launch-2025-10-01": {
+      "title": "Q Grader Courses Now Available Across Various Regions and Languages (2025-10-01)",
+      "org": "Specialty Coffee Association",
+      "url": "https://sca.coffee/sca-news/2025/10/1/q-grader-courses-now-available-across-various-regions-and-languages-zakzc",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": ""
+    },
+    "sca-news-listing-2025": {
+      "title": "SCA News and Announcements listing (excerpt of 2024 Annual Report announcement, 2025-10-15)",
+      "org": "Specialty Coffee Association",
+      "url": "https://sca.coffee/sca-news?category=Announcements",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": "一覧ページ(ページ全体を取得)に載る告知の要旨の文"
+    },
+    "cqi-about-us": {
+      "title": "About Us (Coffee Quality Institute)",
+      "org": "Coffee Quality Institute",
+      "url": "https://www.coffeeinstitute.org/about-us/",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": ""
+    },
+    "ico-wpboard978-2005": {
+      "title": "WP Board 978/05 Project proposal: The Coffee Guide Website 2006/07 (Executive Board, 27-29 September 2005)",
+      "org": "International Coffee Organization",
+      "url": "https://www.ico.org/documents/wpboard978e.pdf",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": ""
+    },
+    "ace-10-things-2020": {
+      "title": "10 Things You Should Know About Cup of Excellence (2020-08-17)",
+      "org": "Alliance for Coffee Excellence",
+      "url": "https://allianceforcoffeeexcellence.org/blog/2020/08/17/10-things-you-should-know-about-cup-of-excellence/",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": ""
+    },
+    "ace-about-us": {
+      "title": "About Us / History (Alliance for Coffee Excellence)",
+      "org": "Alliance for Coffee Excellence",
+      "url": "https://allianceforcoffeeexcellence.org/about-us/",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": ""
+    },
+    "ra-utz-page": {
+      "title": "UTZ Certification (Now Part of the Rainforest Alliance)",
+      "org": "Rainforest Alliance",
+      "url": "https://www.rainforest-alliance.org/utz/",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": ""
+    },
+    "ra-katz-origins": {
+      "title": "Our Founder, Daniel Katz, Reflects on the Origins of the Rainforest Alliance",
+      "org": "Rainforest Alliance",
+      "url": "https://www.rainforest-alliance.org/insights/our-founder-daniel-katz-reflects-on-the-origins-of-the-rainforest-alliance/",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": ""
+    },
+    "ra-coffee-breakfast-2018": {
+      "title": "Rainforest Alliance celebrates Coffee Producers, Merger with UTZ at Annual Sustainable Coffee Breakfast (2018)",
+      "org": "Rainforest Alliance",
+      "url": "https://www.rainforest-alliance.org/press-releases/sustainable-coffee-breakfast-2018/",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": ""
+    },
+    "scaj-overview-ja": {
+      "title": "協会概要・沿革(日本スペシャルティコーヒー協会)",
+      "org": "日本スペシャルティコーヒー協会(SCAJ)",
+      "url": "https://scaj.org/about/overview",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": ""
+    },
+    "ico-icc105-16-strategy": {
+      "title": "Development Strategy for Coffee (ICC-105-16 Rev. 1, International Coffee Council 113th Session, 2014)",
+      "org": "International Coffee Organization",
+      "url": "https://ico.org/documents/Key%20documents/kd-icc-105-16-r1e-strategy.pdf",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": ""
+    },
+    "ico-globalcrisis-2002": {
+      "title": "Communication presentee au Sommet mondial sur le developpement durable, Johannesburg, 21 aout 2002 (crise du cafe)",
+      "org": "International Coffee Organization",
+      "url": "https://ico.org/documents/globalcrisisf.pdf",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": "フランス語版"
+    },
+    "ico-history-50-years": {
+      "title": "ICO Annual Review 2006/07 / History of the ICO (50 years)",
+      "org": "International Coffee Organization",
+      "url": "https://www.ico.org/documents/cy2012-13/history-ico-50-years-e.pdf",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": ""
+    },
+    "ucda-q-venue-2024": {
+      "title": "UCDA Coffee Laboratory gets Q Venue Certification",
+      "org": "Uganda Coffee Development Authority",
+      "url": "https://ugandacoffee.go.ug/node/998",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": ""
+    },
+    "eac-eas130-1999": {
+      "title": "EAS 130:1999 Green coffee beans - Specification (East African Standard)",
+      "org": "East African Community",
+      "url": "https://law.resource.org/pub/eac/ibr/eas.130.1999.html",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": "law.resource.org に掲載された規格全文"
+    },
+    "ico-icc122-national-quality-standards-2018": {
+      "title": "National Quality Standards (ICC-122-12, International Coffee Council 122nd Session, 17-21 September 2018)",
+      "org": "International Coffee Organization",
+      "url": "https://www.ico.org/documents/cy2017-18/icc-122-12e-national-quality-standards.pdf",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": ""
+    },
+    "ico-icc110-9-tanzania-strategy": {
+      "title": "Tanzania - coffee industry development strategy (ICC 110-9, 7 March 2013; Tanzania Coffee Industry Development Strategy 2011/2021, amended 2012)",
+      "org": "International Coffee Organization",
+      "url": "https://www.ico.org/documents/icc-110-9e-tanzania-coffee-policy.pdf",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": ""
+    },
+    "tcb-profile": {
+      "title": "Tanzania Coffee Board - Tanzania coffee profile",
+      "org": "Tanzania Coffee Board",
+      "url": "https://www.coffeeboard.or.tz/tzcoffee_%20profile.php",
+      "kind": "primary",
+      "readMethod": "failed",
+      "accessed": "2026-11-09",
+      "note": "curl が接続エラー(HTTP 000)で取得できず。WebSearchの要約に等級名(AA, A, B, PB, C, E, F, AF, TT, UG, TEX)の記載があるとされたが、原文は未読のため根拠にしない"
+    },
+    "esmeralda-our-story": {
+      "title": "Our Story (Hacienda La Esmeralda)",
+      "org": "Hacienda La Esmeralda(生産者の公式サイト)",
+      "url": "https://www.haciendaesmeralda.com/our-story",
+      "kind": "secondary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": "生産者(当事者)自身の記述。政府・協会の公式文書ではないため二次資料扱い"
+    },
+    "esmeralda-forbes-repost": {
+      "title": "Forbes (Hacienda La Esmeralda blog, 2025-09-01): Forbes記事の冒頭1文の転載",
+      "org": "Hacienda La Esmeralda(生産者サイト上の転載)",
+      "url": "https://haciendaesmeralda.com/forbes/",
+      "kind": "secondary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": "Forbes記事の冒頭1文のみの転載。Best of Panama主催者(SCAP)側の結果ページは取得できず"
+    },
+    "bop-auction-site": {
+      "title": "Best of Panama Auction (主催者の競売サイト)",
+      "org": "Specialty Coffee Association of Panama / Best of Panama",
+      "url": "https://auction.bestofpanama.org/",
+      "kind": "primary",
+      "readMethod": "excerpt",
+      "accessed": "2026-11-09",
+      "note": "トップページのみ(現行2026年の案内)。2025年の落札結果ページはURL不明で取得できず(過去ページは404)"
+    },
+    "wcr-varieties-about": {
+      "title": "About the Catalog (World Coffee Research Arabica Variety Catalog)",
+      "org": "World Coffee Research",
+      "url": "https://varieties.worldcoffeeresearch.org/about-the-catalog",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": "ページ本文にソフトハイフンが含まれる。引用は除去して転記"
+    },
+    "wcr-why-seed-systems": {
+      "title": "Why Do Seed Systems Matter?",
+      "org": "World Coffee Research",
+      "url": "https://worldcoffeeresearch.org/programs/why-do-seed-systems-matter",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": ""
+    },
+    "wcr-variety-sl28": {
+      "title": "SL28 (World Coffee Research Variety Catalog)",
+      "org": "World Coffee Research",
+      "url": "https://varieties.worldcoffeeresearch.org/varieties/sl28",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": "ページ本文にソフトハイフンが含まれる。引用は除去して転記"
+    },
+    "idr-parana-geada-negra": {
+      "title": "Geada negra impos novas estrategias para a pesquisa em cafe",
+      "org": "IDR-Parana (Governo do Estado do Parana)",
+      "url": "https://www.idrparana.pr.gov.br/Noticia/Geada-negra-impos-novas-estrategias-para-pesquisa-em-cafe",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": ""
+    },
+    "seab-parana-50-anos-geada": {
+      "title": "Ha 50 anos geada negra marcava fim de um ciclo, mas provocou diversificacao da economia do Parana",
+      "org": "Secretaria da Agricultura e do Abastecimento do Parana (Governo do Estado do Parana)",
+      "url": "https://www.agricultura.pr.gov.br/Noticia/Ha-50-anos-geada-negra-marcava-fim-de-um-ciclo-mas-provocou-diversificacao-da-economia-do",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": ""
+    },
+    "iea-sp-1995-geadas": {
+      "title": "Geadas e seca de 1994: perspectivas do mercado cafeeiro (Informacoes Economicas, SP, v.25, n.6, jun. 1995)",
+      "org": "Instituto de Economia Agricola (Governo do Estado de Sao Paulo)",
+      "url": "https://iea.agricultura.sp.gov.br/ftpiea/ie/1995/tec4-0695.pdf",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": ""
+    },
+    "jis-parliament-melissa-2025": {
+      "title": "Statement to Parliament on the aftermath of Hurricane Melissa (Government of Jamaica, Nov 2025)",
+      "org": "Government of Jamaica / Jamaica Information Service",
+      "url": "https://jis.gov.jm/media/2025/11/STATEMENT-TO-PARLIAMENT-on-the-aftermath-of-Hurricane-Melissa2.pdf",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": ""
+    },
+    "jis-coffee-intercrop-2026-01": {
+      "title": "Coffee Farmers Urged to Plant Short-Term Crops After Hurricane Melissa Losses (2026-01-14)",
+      "org": "Jamaica Information Service (Government of Jamaica)",
+      "url": "https://jis.gov.jm/coffee-farmers-urged-to-plant-short-term-crops-after-hurricane-melissa-losses/",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": ""
+    },
+    "jis-agri-damage-melissa": {
+      "title": "Preliminary Assessments Reveal $29.5B in Agricultural Damage from Hurricane Melissa",
+      "org": "Jamaica Information Service (Government of Jamaica)",
+      "url": "https://jis.gov.jm/preliminary-assessments-reveal-29-5b-in-agricultural-damage-from-hurricane-melissa/",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": "農業大臣の発言を伝える政府広報。ページ内に日付が見当たらず、発言日は未確認"
+    },
+    "anacafe-politica-laboral": {
+      "title": "Politica Laboral para el sector cafe de Guatemala",
+      "org": "Anacafe (Asociacion Nacional del Cafe)",
+      "url": "https://www.anacafe.org/uploads/file/5807996c8c77433eb96e89d55b49e98e/Politica_laboral-Sector_Caf%C3%A9-Guatemala.pdf",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": "発行年は文書内で未確認"
+    },
+    "fnc-narino-ciclos-cosecha": {
+      "title": "Los ciclos de Cosecha en Narino (Federacion Nacional de Cafeteros, micrositio)",
+      "org": "Federacion Nacional de Cafeteros de Colombia",
+      "url": "http://narino.cafedecolombia.com/narino/solo_para_expertos/los_ciclos_de_cosecha_en_narino/",
+      "kind": "primary",
+      "readMethod": "failed",
+      "accessed": "2026-11-09",
+      "note": "curlが接続エラー(HTTP 000)で取得できず。federaciondecafeteros.org 系の各ドメインも同様。WebSearchの断片(snippet)にNarinoの主収穫は4〜7月、mitacaは12〜1月とあるが、原文は未読のため根拠にしない"
+    },
+    "ico-mexico-value-chain-2025": {
+      "title": "Mexico's Coffee Value Chain (ICO Coffee Public Private Taskforce, prepared by COSA)",
+      "org": "International Coffee Organization",
+      "url": "https://ico.org/global-knowledge-hub/wp-content/uploads/2025/03/Mexico_Coffee-Value-Chain-Study.pdf",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": "ICOタスクフォース向けにCOSAが作成した調査報告をICOが掲載。ICO自身の統計文書ではない"
+    },
+    "ico-profile-el-salvador-2016": {
+      "title": "El Salvador - ICO Coffee Profile (ICC-117-8)",
+      "org": "International Coffee Organization",
+      "url": "https://ico.org/documents/cy2015-16/icc-117-8e-profile-el-salvador.pdf",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": ""
+    }
+  },
+  "entries": {
+    "fact:コロンビア・ケニア・タンザニアは「同じ仲間」": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "ICOのコンポジット指標価格(I-CIP)は4つのグループ(Colombian Milds、Other Milds、Brazilian Naturals、Robustas)で構成される",
+          "status": "verified",
+          "sourceIds": [
+            "ico-rules-indicator-prices-annex1"
+          ],
+          "quote": "The share of each market in the four groups is as follows: Colombian Milds: 46% USA – 54% EU Other Milds: 40% USA – 60% EU Brazilian Naturals: 24% USA – 76% EU Robustas: 16% USA – 84% EU",
+          "location": "Annex I",
+          "note": ""
+        },
+        {
+          "text": "Colombian Milds グループの国はコロンビア、ケニア、タンザニアの3カ国のみ(他国のMild ArabicasはOther Milds)",
+          "status": "verified",
+          "sourceIds": [
+            "ico-sc105-2021-data-concepts",
+            "ico-glossary-dev"
+          ],
+          "quote": "Countries included in the Colombian Milds group are Colombia, Kenya and Tanzania. Mild Arabicas produced in all other countries are classified as Other Milds.",
+          "location": "SC-105/21 の 'Group of Coffee' の項",
+          "note": "用語集(Colombian Mild Arabicas: Countries in this group are: Colombia Kenya Tanzania)とも一致"
+        },
+        {
+          "text": "3カ国の共通点は地理ではなく「完全ウォッシュド・高地栽培」という精選品質",
+          "status": "unverified",
+          "sourceIds": [
+            "ico-sc105-2021-data-concepts"
+          ],
+          "quote": "",
+          "location": "",
+          "note": "ICOは 'Mild Arabicas are processed using the wet method' と書くのみ。Colombian Milds 3カ国の共通点が完全ウォッシュド・高地栽培だという記述はICO原文に見当たらない(Other Milds側も湿式)。「高地栽培」の根拠なし"
+        }
+      ],
+      "suggestedText": "世界のコーヒー価格指標(I-CIP)は、国際コーヒー機関(ICO)が定める4つのグループ(Colombian Milds、Other Milds、Brazilian Naturals、Robustas)の価格を加重して算出される。このうちColombian Mildsに含まれる国は、コロンビア、ケニア、タンザニアの3カ国だけ。",
+      "note": "英訳(DISCOVERY_FACTS_EN)は日本語と同じ主張(3カ国のみ、共通点は処理品質)。主張の食い違いなし。"
+    },
+    "fact:エチオピアは価格上「ブラジルの仲間」": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "ICOの価格指標で、エチオピアはブラジルと同じ Brazilian Naturals グループに分類される",
+          "status": "verified",
+          "sourceIds": [
+            "ico-glossary-dev"
+          ],
+          "quote": "Brazilian Natural Arabicas One of the groups of Arabica coffee established under the Agreement. Countries in this group are: Brazil Ethiopia Paraguay",
+          "location": "Glossary: Brazilian Natural Arabicas",
+          "note": "注意: ICO 2025年10月のCoffee Market Report(ico-cmr-2025-10)では、エチオピアがBrazilian Naturalsの輸出国としても、Other Mildsの増減要因としても名前が挙がる(Other Mildsの項: 'with Ethiopia, Mexico and Nicaragua being the main positive drivers')。エチオピアの湿式輸出がOther Milds側に数えられている可能性があり、「エチオピア=Brazilian Naturals」と単純には言えない。ICOの定義文(SC-105/21)は 'Mild Arabicas are processed using the wet method, while Brazilian Naturals are processed using the dry method.' と処理方法でグループを分ける。この扱いは依頼者が判断してください。"
+        },
+        {
+          "text": "グループ化は「ナチュラル精選」という製法軸による(Brazilian Naturalsは乾式、Mild Arabicasは湿式)",
+          "status": "verified",
+          "sourceIds": [
+            "ico-sc105-2021-data-concepts"
+          ],
+          "quote": "Among the Arabica groups, Mild Arabicas are processed using the wet method, while Brazilian Naturals are processed using the dry method.",
+          "location": "SC-105/21 'Group of Coffee' の項",
+          "note": ""
+        },
+        {
+          "text": "エチオピアとブラジルは産地の性格が正反対",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "評価的な表現で、一次資料での根拠なし"
+        }
+      ],
+      "suggestedText": "国際コーヒー機関(ICO)の価格指標では、エチオピアはブラジルと同じ「Brazilian Naturals」グループに含まれる。このグループは、乾式(ナチュラル)で精選されるアラビカで構成される。",
+      "note": "英訳は日本語と同じ主張。ただし上記のとおりICO自身の文書にエチオピアの扱いの揺れがあり、要判断。"
+    },
+    "fact:コーヒー価格の重み付けは生きている": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "I-CIPを構成する4グループの重み付けは定期的に見直される(2年ごと)",
+          "status": "verified",
+          "sourceIds": [
+            "ico-rules-indicator-prices-annex1"
+          ],
+          "quote": "(c) the weighting of each group is to be reviewed every two years.",
+          "location": "Annex I (c)",
+          "note": ""
+        },
+        {
+          "text": "2005年(10月1日適用)の重み付けは 13/24/29/34%(Colombian Milds/Other Milds/Brazilian Naturals/Robustas)",
+          "status": "verified",
+          "sourceIds": [
+            "ico-ed1953-2005"
+          ],
+          "quote": "The calculation of the ICO composite indicator price is weighted as follows: Colombian Milds: 13% Other Milds: 24% Brazilian Naturals: 29% Robustas: 34%",
+          "location": "Annex I 'from 1 October 2005'",
+          "note": ""
+        },
+        {
+          "text": "2007年(10月1日適用)の重み付けは 14/20/31/35%",
+          "status": "verified",
+          "sourceIds": [
+            "ico-wp-statistics-139-09"
+          ],
+          "quote": "A similar review last took place in 2007 when the Committee recommended to the Council that the new group market shares and their weightings were to take effect from 1 October 2007 ... Colombian Milds 11 584 617 13.38 14.00 / Other Milds 19 561 272 22.59 20.00 / Brazilian Naturals 26 277 292 30.34 31.00 / Robustas 29 181 018 33.69 35.00",
+          "location": "WP Statistics 139/09 para.2 と TABLE 1 の 'Current' 列",
+          "note": "2007年の設定値そのものを載せた2007年の文書は取得できず、2009年の見直し文書の「Current」列(=2009年10月まで適用中の値)で確認。ICO旧サイトの文書一覧では 'EB-3776/01 Rev. 1 Add. 4' が 'from 1 October 2007' と題されているが、実体は2009年10月適用(13/23/30/34)の文書で、題名と内容が食い違っている。"
+        },
+        {
+          "text": "見直しは世界の生産構造の変化に応じて行われる",
+          "status": "unverified",
+          "sourceIds": [
+            "ico-wp-statistics-139-09"
+          ],
+          "quote": "",
+          "location": "",
+          "note": "ICOの根拠は各グループの米国・EU向け輸出実績('the share of each group is based on the average export performance to the USA and to the European Union')であり、「生産構造の変化」とは書かれていない"
+        }
+      ],
+      "suggestedText": "世界のコーヒー価格指標(I-CIP)を構成する4グループの重み付けは、各グループの輸出実績に基づき2年ごとに見直される。2005年10月適用の「13/24/29/34%」は、2007年10月適用で「14/20/31/35%」に改定された。",
+      "note": "英訳は日本語と同じ主張。"
+    },
+    "fact:「80点基準」はSCA自身が2021年に卒業していた": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "SCAは2021年に、スペシャルティコーヒーを「特性ゆえに市場で高い付加価値を持つコーヒー」とする定義を示した(ホワイトペーパー'Towards a Definition of Specialty Coffee', (c) 2021)",
+          "status": "verified",
+          "sourceIds": [
+            "sca-whitepaper-definition-2021"
+          ],
+          "quote": "Specialty coffee is a coffee or coffee experience recognized for its distinctive attributes, and because of these attributes, has significant extra value in the marketplace.",
+          "location": "p.6 'The Attribute-based Definition of Specialty Coffee'; 著作権表示 (c) 2021",
+          "note": ""
+        },
+        {
+          "text": "「スペシャルティ=カッピング80点以上」はSCA自身の基準で、この定義に置き換えられた",
+          "status": "unverified",
+          "sourceIds": [
+            "sca-whitepaper-definition-2021"
+          ],
+          "quote": "",
+          "location": "",
+          "note": "同ホワイトペーパーは 'specialty coffee is coffee graded above 80 points on a 100 point scale' を、業界にある定義の一例('Definitions range from the tautological ... to the narrow and highly technical')として挙げ、'A concise, comprehensive definition for specialty coffee has never been published by the Specialty Coffee Association (SCA)' と述べる。80点基準を「SCA自身の基準」とも「置き換えた」とも書いていない。"
+        },
+        {
+          "text": "旧基準(80点以上)は業界の通説として今も根強く使われている",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "一次資料に根拠なし"
+        }
+      ],
+      "suggestedText": "「スペシャルティコーヒー=カッピング80点以上」という定義は、業界で語られてきた定義の一つ。SCAは2021年のホワイトペーパーで、スペシャルティコーヒーを「特性ゆえに市場で高い付加価値を持つコーヒー」と定義した。",
+      "note": "英訳は日本語と同じ主張(replaced by the SCA itself in 2021 / still widely used)。"
+    },
+    "fact:コーヒー鑑定士資格「Qグレーダー」の運営元が変わった": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "Qグレーダーは、コーヒーの品質を評価・伝達するための資格である",
+          "status": "verified",
+          "sourceIds": [
+            "sca-news-q-grader-launch-2025-10-01"
+          ],
+          "quote": "The globally respected license for coffee professionals to evaluate and communicate coffee quality has been updated to align with the latest in coffee science.",
+          "location": "本文第1段落",
+          "note": ""
+        },
+        {
+          "text": "CQI(Coffee Quality Institute)が運営してきた",
+          "status": "verified",
+          "sourceIds": [
+            "cqi-about-us"
+          ],
+          "quote": "in 2004 CQI introduced the Q (quality) Coffee System ... The Q Grader certification became one of the most valuable professional credentials ... In 2025 CQI ceased to administer this mature program",
+          "location": "Our pathway",
+          "note": ""
+        },
+        {
+          "text": "運営は2003年からである",
+          "status": "incorrect",
+          "sourceIds": [
+            "cqi-about-us"
+          ],
+          "quote": "in 2004 CQI introduced the Q (quality) Coffee System, a cycle of education, evaluation, certification and a common language",
+          "location": "Our pathway",
+          "note": "CQI自身は2004年導入と書く。2024年に20周年('By 2024, CQI celebrated the twentieth anniversary of that program')。"
+        },
+        {
+          "text": "2025年10月からSCAへ完全移管された",
+          "status": "verified",
+          "sourceIds": [
+            "sca-news-q-grader-launch-2025-10-01",
+            "sca-news-listing-2025"
+          ],
+          "quote": "Today, Q Grader courses launch as part of the updated program with the Specialty Coffee Association (SCA) for the first time. ... the SCA would evolve the content of the Q Grader Program and transition its management from the Coffee Quality Institute (CQI).",
+          "location": "2025-10-01 告知 第1〜2段落",
+          "note": "SCA: 'we assumed administration of the Q Grader License from the Coffee Quality Institute'(SCA News一覧の2024年次報告告知)。「完全」の語はSCA文書にない"
+        },
+        {
+          "text": "新制度はCVA(4軸評価体系)を基盤にしている",
+          "status": "verified",
+          "sourceIds": [
+            "sca-news-q-grader-launch-2025-10-01"
+          ],
+          "quote": "The updated curriculum, now grounded in the Coffee Value Assessment (CVA), reflects the latest advancements in sensory science.",
+          "location": "本文第3段落; 'physical, descriptive, affective, and extrinsic assessments'(第2段落)",
+          "note": ""
+        }
+      ],
+      "suggestedText": "コーヒーの品質を評価・伝達するための資格「Qグレーダー」は、2004年にCQI(コーヒー品質協会)が導入した制度で、2025年10月にSCAが更新版プログラムとして講座を開始し、運営がSCAに移った。新しいカリキュラムはCVA(物理・記述・嗜好・外的要因の4軸評価体系)を基盤にしている。",
+      "note": "英訳は日本語と同じ主張(2003を含む)。日本語・英語とも「2003」を「2004」へ直す必要あり。"
+    },
+    "fact:「緑のカエル」は合併で生まれたロゴ": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "Rainforest Allianceは1987年に共同設立された組織で、2018年の合併より前から存在した",
+          "status": "verified",
+          "sourceIds": [
+            "ra-katz-origins"
+          ],
+          "quote": "Back in 1987, a 24-year-old Daniel Katz co-founded the Rainforest Alliance, a tiny organization with a big mission: save the rainforests.",
+          "location": "冒頭の紹介文",
+          "note": ""
+        },
+        {
+          "text": "RAとUTZは2018年に合併した(UTZがRAに合流した)",
+          "status": "verified",
+          "sourceIds": [
+            "ra-utz-page"
+          ],
+          "quote": "The UTZ organization joined forces with the Rainforest Alliance in 2018 to create a better future for people and nature",
+          "location": "'UTZ is part of the Rainforest Alliance' の項",
+          "note": ""
+        },
+        {
+          "text": "UTZはグアテマラ人生産者とオランダ人ロースターが創設した",
+          "status": "verified",
+          "sourceIds": [
+            "ra-utz-page"
+          ],
+          "quote": "It was launched in 2002 by a Guatemalan coffee farmer and a Dutch roaster who wanted to bring coffee certification to a global market",
+          "location": "'UTZ means good' の項",
+          "note": "原文は 'Guatemalan coffee farmer'(国籍か所在かは不明)。「グアテマラ人」と訳すのは断定しすぎの可能性。"
+        },
+        {
+          "text": "「緑のカエル」はRainforest Allianceのシンボル(認証マーク)である",
+          "status": "verified",
+          "sourceIds": [
+            "ra-katz-origins"
+          ],
+          "quote": "Millions of people trust our little green frog to lead them to a more sustainable choice at the supermarket",
+          "location": "結びの段落",
+          "note": ""
+        },
+        {
+          "text": "「緑のカエル」(Rainforest Alliance)は、2018年の合併で生まれた統合ブランド/ロゴである",
+          "status": "incorrect",
+          "sourceIds": [
+            "ra-katz-origins",
+            "ra-coffee-breakfast-2018"
+          ],
+          "quote": "Back in 1987, a 24-year-old Daniel Katz co-founded the Rainforest Alliance",
+          "location": "Katz記事 冒頭; 2018年告知は 'the “new” Rainforest Alliance' と書く",
+          "note": "RAは1987年設立で合併前から存在(UTZがRAに合流した形)。カエルの認証マークも合併前から使われている(RAは2017年に30周年の #FollowTheFrog キャンペーンを実施)。合併で「生まれた」ブランド・ロゴという記述は誤り。2018年の合併後、2020年に新しい認証マーク(seal)が導入された(ra-utz-page: 'the introduction of the new Rainforest Alliance seal in September of that year')が、これが「緑のカエル」と同一かは未確認。"
+        }
+      ],
+      "suggestedText": "サステナビリティ認証でおなじみの「緑のカエル」ことRainforest Allianceは、1987年に設立された団体。2018年にUTZ(グアテマラの生産者とオランダのロースターが創設)と合併した。",
+      "note": "英訳は日本語と同じ主張(a combined brand formed in 2018)。日本語と同じ誤りを含む。"
+    },
+    "fact:SCAJ誕生のきっかけは「コーヒークライシス」だった": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "SCAJ(日本スペシャルティコーヒー協会)は2003年に設立された",
+          "status": "verified",
+          "sourceIds": [
+            "scaj-overview-ja"
+          ],
+          "quote": "2003年 国内外に向けより開かれた協会として、「日本スペシャルティコーヒー協会」として新規設立",
+          "location": "沿革",
+          "note": "同じ沿革に、1987年に「全日本グルメコーヒー協会」として発足、1999年に改称、とある"
+        },
+        {
+          "text": "2001〜02年に国際相場が史上最低価格をつけた",
+          "status": "incorrect",
+          "sourceIds": [
+            "ico-icc105-16-strategy"
+          ],
+          "quote": "The coffee crisis, which lasted from 2000 to 2004, saw prices fall to their lowest levels in nominal terms since the late 1960s",
+          "location": "§ coffee crisis の段落",
+          "note": "ICOは「名目で1960年代後半以来の最低水準」と書き、「史上最低」とは書かない。ICOの2002年の文書(ico-globalcrisis-2002)は 'les prix les plus bas en valeur reelle depuis 100 ans'(実質で100年ぶりの安値)と書く。いずれも「史上最低」ではなく、期間も2000〜04年のクライシスの中。"
+        },
+        {
+          "text": "危機で生産国も消費国も疲弊した",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "ICO文書は生産国の収入減を述べる(生産国の輸出収入が年平均102億ドルから62億ドルへ: ico-history-50-years)が、消費国の疲弊の根拠は見当たらない"
+        },
+        {
+          "text": "SCAJ誕生の背景にコーヒークライシスへの危機感があった",
+          "status": "unverified",
+          "sourceIds": [
+            "scaj-overview-ja"
+          ],
+          "quote": "",
+          "location": "",
+          "note": "SCAJの沿革・基本構想にクライシスへの言及なし。SCAJ自身は「国内外に向けより開かれた協会として新規設立」とのみ書く"
+        }
+      ],
+      "suggestedText": "日本スペシャルティコーヒー協会(SCAJ)は、2003年に「日本スペシャルティコーヒー協会」として新規設立された(1987年に「全日本グルメコーヒー協会」として発足)。",
+      "note": "英訳は日本語と同じ主張(record lows in 2001-02, alarm over the crisis)。同じ誤り・未確認を含む。"
+    },
+    "fact:「コーヒーのオリンピック」はブラジルのオークションから始まった": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "Cup of Excellenceの最初の大会は1999年の「Best of Brazil」である",
+          "status": "verified",
+          "sourceIds": [
+            "ace-10-things-2020"
+          ],
+          "quote": "The first competition in 1999 was called “Best of Brazil”, executed as an experimental program under the “Gourmet Project” started by Susie Spindler, George Howell, the Brazil Specialty Coffee Association and the Specialty Coffee Association of America.",
+          "location": "'The founders' の項",
+          "note": ""
+        },
+        {
+          "text": "1999年にブラジルで、世界初のインターネットコーヒーオークションが開かれ、Cup of Excellenceにつながった",
+          "status": "verified",
+          "sourceIds": [
+            "ico-wpboard978-2005"
+          ],
+          "quote": "The project included the world’s first Internet coffee auction which took place in Brazil in 1999 and led to the Cup of Excellence ® competition and auction programme",
+          "location": "WP Board 978/05 の Coffee Guide 関連の段落(Gourmet Coffee Project の説明)",
+          "note": "ACEの沿革にも 'In 1999 the Cup of Excellence (COE) founders along with the Specialty Coffee Association of America developed the first global internet auction platform' とある(ace-about-us)"
+        },
+        {
+          "text": "設立時の資金にICO(国際コーヒー機関)も関わっていた",
+          "status": "unverified",
+          "sourceIds": [
+            "ico-wpboard978-2005"
+          ],
+          "quote": "",
+          "location": "",
+          "note": "ICO文書は 'The ICO, the ITC and the Fund also worked together on the Gourmet Coffee Project (1997-2000)' と、ICOが共同で携わったことを書くが、費用は 'The total cost ... US$1.4 million of which the Fund financed US$1,018,000 (73%)' とあり、ICO自身の資金拠出は書かれていない。「資金に関わった」は確認できない。なお「Gourmet Coffee Project」(ICO文書)とACEの「Gourmet Project」が同一事業かは明記されていない"
+        },
+        {
+          "text": "Cup of Excellenceは「コーヒーのオリンピック」と呼ばれる",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "一次資料で確認できない(通称・比喩)"
+        }
+      ],
+      "suggestedText": "国際品評会Cup of Excellenceの最初の大会は、1999年にブラジルで行われた「Best of Brazil」。同じ1999年に、ブラジルで世界初のインターネットコーヒーオークションが開かれ、これがCup of Excellenceにつながった。この企画(Gourmet Coffee Project)には、ICO(国際コーヒー機関)も、ITCと共通基金(CFC)とともに携わった。",
+      "note": "英訳は日本語と同じ主張(ICO was also involved in the funding)。同じ未確認を含む。"
+    },
+    "fact:ロブスタの鑑定士はウガンダが認定する": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "アラビカ用のQグレーダーとは別に、ロブスタ版のQグレーダー(Q Robusta)がある",
+          "status": "verified",
+          "sourceIds": [
+            "ucda-q-venue-2024"
+          ],
+          "quote": "The Q venue supports the certification of Q Arabica and Q Robusta graders",
+          "location": "記事本文の Q Venue の説明の段落",
+          "note": ""
+        },
+        {
+          "text": "ウガンダコーヒー開発公社(UCDA)が、ロブスタ版Qグレーダーの国際的な認定を担っている",
+          "status": "incorrect",
+          "sourceIds": [
+            "ucda-q-venue-2024"
+          ],
+          "quote": "The Coffee Quality Institute (CQI), the world’s leading body in coffee quality training and certification, has awarded Q Venue recognition to the Uganda Coffee Development Authority (UCDA).",
+          "location": "記事 冒頭段落",
+          "note": "UCDAの研究所はCQIからQ Venue(講座を開く会場)の認定を受け、Q ArabicaとQ Robustaの講座を提供できるようになった('allows UCDA to offer Q Arabica and Q Robusta training')。認定(資格の付与)の主体はCQI(2025年10月以降はSCAが運営)で、UCDAではない。"
+        }
+      ],
+      "suggestedText": "アラビカ用のQグレーダーとは別に、ロブスタ版の「Q Robusta」資格がある。ウガンダコーヒー開発公社(UCDA)の研究所は、CQI(コーヒー品質協会)からQ Venue認定を受け、Q ArabicaとQ Robustaの講座を提供できるようになった。",
+      "note": "英訳は日本語と同じ主張(UCDAが国際的な認定を担う)。同じ誤りを含む。UCDA記事の日付は未確認(2024年2月ごろの報道あり: eagle.co.ug。二次資料)。2025年10月のSCAへの運営移管後のQ Venue/Q Robustaの扱いは未確認。"
+    },
+    "fact:タンザニアには「自国だけの」等級規格がない": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "タンザニアは独自のコーヒー等級規格を持たない",
+          "status": "incorrect",
+          "sourceIds": [
+            "ico-icc110-9-tanzania-strategy"
+          ],
+          "quote": "By 2021 a minimum of 70% of the coffee produced in Tanzania is of classes 1-7 (according to Tanzanian classification)",
+          "location": "戦略文書 Strategic thrust 3 の Indicators of success",
+          "note": "同文書の行動計画に 'Consider possible streamlining of existing grading/ coffee classification systems'(TCB, Existing)ともある。タンザニア自身の等級(Tanzanian classification)が存在することをICO提出の公式戦略文書が示す。タンザニア・コーヒー局の等級名一覧ページは取得失敗(tcb-profile)。"
+        },
+        {
+          "text": "タンザニアはEAC共通規格「EAS 130:1999」を採用している",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "タンザニアがEAS 130:1999を自国の規格として採用していることを述べる一次資料は見つからなかった。タンザニアのWTO通報(TBT/TZA/19/1531, 焙煎豆の規格案)がEAS 130を引用規格に挙げるのみで、生豆の等級の採用を示すものではない"
+        },
+        {
+          "text": "EAS 130:1999は東アフリカコミュニティ(EAC)共通の規格である",
+          "status": "verified",
+          "sourceIds": [
+            "eac-eas130-1999"
+          ],
+          "quote": "Development of the East African Standards has been necessitated by the need for harmonizing requirements governing quality of products and services in the East African Community.",
+          "location": "規格の Foreword(© EAC 1999)",
+          "note": ""
+        },
+        {
+          "text": "EACの事務局はタンザニアのアルーシャにある",
+          "status": "verified",
+          "sourceIds": [
+            "eac-eas130-1999"
+          ],
+          "quote": "East African Community AICC Building Kilimanjaro Wing, 5th Floor P.O. Box 1096 Arusha Tanzania",
+          "location": "規格の Foreword(EAC所在地の表記)",
+          "note": "規格書に載るEACの所在地。「事務局」の語は規格書に出てこないため、EACの本部所在地として確認"
+        },
+        {
+          "text": "ウガンダもEAS 130:1999に準拠していることを、ICOへの提出資料で明らかにしている",
+          "status": "verified",
+          "sourceIds": [
+            "ico-icc122-national-quality-standards-2018"
+          ],
+          "quote": "Uganda follows the East African Standard EAS 130:1999 combined with national green coffee grades and classification, which are specific by coffee type.",
+          "location": "UGANDA の項 'Green Coffee'(ウガンダがICOの照会に回答。回答国一覧に Uganda あり)",
+          "note": "ウガンダはEAS 130に加えて独自の等級・分類(Tables 10-13)も持つ。「同じ規格を共有」だけでは、ウガンダの独自等級の存在が抜ける"
+        },
+        {
+          "text": "東アフリカの複数国が規格を共有している",
+          "status": "verified",
+          "sourceIds": [
+            "eac-eas130-1999"
+          ],
+          "quote": "The Committee is composed of representatives of the National Standards Bodies in Partner States, together with the representatives from the private sectors and consumer organizations.",
+          "location": "規格の Foreword",
+          "note": "EAS 130はEACのパートナー国共通の規格として策定された(ウガンダの例はICO文書で確認)"
+        }
+      ],
+      "suggestedText": "東アフリカコミュニティ(EAC)は、生豆の規格として共通規格「EAS 130:1999」を定めている。EACの所在地はタンザニアのアルーシャで、ウガンダはEAS 130:1999に自国の等級・分類を組み合わせて用いると、ICOへの回答で述べている。タンザニアにも「Tanzanian classification」と呼ばれる独自の等級がある。",
+      "note": "英訳は日本語と同じ主張(Tanzania has no grading standard of its own / uses EAS 130:1999)。同じ誤り・未確認を含む。"
+    },
+    "fact:パナマゲイシャは1kgあたり3万ドルを超えた": {
+      "status": "unverified",
+      "claims": [
+        {
+          "text": "2004年、ハシエンダ・ラ・エスメラルダのゲイシャ種ロットが、当時の記録価格で落札された",
+          "status": "unverified",
+          "sourceIds": [
+            "esmeralda-our-story"
+          ],
+          "quote": "",
+          "location": "",
+          "note": "二次資料のみ: esmeralda-our-story(生産者自身の記述)'Hacienda La Esmeralda went on to win the 2004 Best of Panama competition with their Geisha coffee, and that year set a record for the highest price ever paid for a coffee at auction.' 主催者(SCAP/Best of Panama)や機関の公式文書では確認できていない"
+        },
+        {
+          "text": "そのロットは「業界を一変させた」と評された",
+          "status": "unverified",
+          "sourceIds": [
+            "esmeralda-our-story"
+          ],
+          "quote": "",
+          "location": "",
+          "note": "二次資料のみ: 生産者サイトの宣伝文句 'Discover the coffee that changed the industry' (haciendaesmeralda.com トップ)。第三者の評価としては確認できない"
+        },
+        {
+          "text": "その後も記録は更新を重ねた",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "一次資料で確認できていない"
+        },
+        {
+          "text": "2025年に1kgあたり30,204ドルという世界記録を樹立した",
+          "status": "unverified",
+          "sourceIds": [
+            "esmeralda-forbes-repost"
+          ],
+          "quote": "",
+          "location": "",
+          "note": "二次資料のみ: esmeralda-forbes-repost(Forbes記事の転載)'At the international Best of Panama auction, a lot of Geisha coffee from Hacienda La Esmeralda in Boquete was sold for $30,204 per kilogram.' 主催者の結果ページは取得できず。多数の報道が同額・洗浄(washed)ゲイシャロットとするが、報道は根拠にしない。「世界記録」の語はこの転載文にない"
+        }
+      ],
+      "suggestedText": "",
+      "note": "検証済みの主張なし(全て二次資料のみ)。表示するなら、主催者のBest of Panama結果(SCAP)で2004年と2025年の落札価格・ロット・日付を確認してから。英訳は日本語と同じ主張。"
+    },
+    "fact:コーヒーの木の寿命は20〜30年": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "コーヒーの木の寿命は20〜30年である",
+          "status": "conflict",
+          "sourceIds": [
+            "wcr-varieties-about",
+            "wcr-why-seed-systems"
+          ],
+          "quote": "Because the life of a coffee tree is 20 – 30 years, the decision producers make about which variety to plant will have consequences until the next generation.",
+          "location": "wcr-varieties-about 本文",
+          "note": "WCRの別ページ(wcr-why-seed-systems)は 'Because coffee is a tree crop that remains in farmers’ fields for 20-50 years, having low-quality or improper varieties can amount to huge lifetime reductions in productivity, profitability, and climate resilience.' と20〜50年と書く。同じWCR内で数字が食い違うため conflict。あなたが解決しない(依頼者が決める)。"
+        },
+        {
+          "text": "品種選びは20〜30年先まで影響する重い判断である",
+          "status": "verified",
+          "sourceIds": [
+            "wcr-varieties-about"
+          ],
+          "quote": "the decision producers make about which variety to plant will have consequences until the next generation. If a farmer makes a poor decision on variety, the cumulative loss can be huge.",
+          "location": "wcr-varieties-about 本文",
+          "note": "WCRの表現は「次の世代まで影響する」。「20〜30年先」はこの数字に依存するため、上の数字の食い違いが解決するまで保留が望ましい"
+        }
+      ],
+      "suggestedText": "コーヒーの木は一度植えると長く栽培され続けるため、品種選びは生産者にとって、次の世代にまで影響する重い判断になる(寿命の数字はWCRの資料間で20〜30年と20〜50年に分かれるため、確定するまで書かない)。",
+      "note": "conflict を含むため記述全体は partial。英訳は日本語と同じ主張。"
+    },
+    "fact:ケニアのSL28はカシス風味の立役者": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "品種SL28は1930年代に選抜された",
+          "status": "verified",
+          "sourceIds": [
+            "wcr-variety-sl28"
+          ],
+          "quote": "It has consequently spread from Kenya, where it was originally selected in the 1930s ... SL28 was selected in 1935 from a single tree in a population called Tanganyika Drought Resistant.",
+          "location": "History",
+          "note": "ケニアのScott Agricultural Laboratories(現NARL)で選抜"
+        },
+        {
+          "text": "SL28は干ばつに強い",
+          "status": "verified",
+          "sourceIds": [
+            "wcr-variety-sl28"
+          ],
+          "quote": "The variety is suited for medium to high altitudes and shows resistance to drought, but is susceptible to the major diseases of coffee.",
+          "location": "History",
+          "note": ""
+        },
+        {
+          "text": "SL28は干ばつに強い「深い根」を持つ",
+          "status": "unverified",
+          "sourceIds": [
+            "wcr-variety-sl28"
+          ],
+          "quote": "",
+          "location": "",
+          "note": "WCRのSL28の項に根の深さの記述なし(干ばつ耐性のみ)"
+        },
+        {
+          "text": "SL28のリンゴ酸主体の構造が、ケニアコーヒー特有のカシス(黒スグリ)様の風味を生む",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "WCRの項に、リンゴ酸・カシス風味との因果関係の記述なし。一次資料で確認できていない"
+        }
+      ],
+      "suggestedText": "品種SL28は、1930年代にケニアで選抜された品種で、干ばつに強い。",
+      "note": "英訳は日本語と同じ主張(deep drought-resistant roots / malic-acid / blackcurrant)。同じ未確認を含む。"
+    },
+    "fact:ブラジルの生産地はある年の大霜害で移動した": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "1975年に大霜害があった(パラナ州、1975年7月18日)",
+          "status": "verified",
+          "sourceIds": [
+            "idr-parana-geada-negra"
+          ],
+          "quote": "Uma massa de ar polar sem precedentes atingiu o Paraná em 18 de julho de 1975 e aniquilou as lavouras de café, base da economia estadual na época.",
+          "location": "冒頭の段落",
+          "note": "SEAB-PR: 'pelo menos 60% dos cafezais que cobriam 1,8 milhão de hectares foram destruídos'(seab-parana-50-anos-geada)"
+        },
+        {
+          "text": "この霜害で、ブラジルのコーヒー生産の主役がパラナ州からミナスジェライス州に移った(主要産地の構図が変わった)",
+          "status": "verified",
+          "sourceIds": [
+            "iea-sp-1995-geadas"
+          ],
+          "quote": "Recorde-se que foi a geada de 1975 que quebrou a hegemonia do Estado do Paraná na produção brasileira de café, cedendo essa posição para o Estado de Minas Gerais.",
+          "location": "1 Introdução 以降(Tabela 1の直前の段落)",
+          "note": "サンパウロ州政府の研究機関(IEA)の1995年の論文中の記述"
+        },
+        {
+          "text": "被害の大きかった南部の生産者が、霜の少ないミナスジェライス州へ移動した",
+          "status": "unverified",
+          "sourceIds": [
+            "seab-parana-50-anos-geada"
+          ],
+          "quote": "",
+          "location": "",
+          "note": "パラナ州政府(idr-parana-geada-negra)は 'Os grandes produtores migraram para a pecuaria ou para culturas mecanizadas, que exigem maior escala.' と、大規模生産者が牧畜や機械化作物へ移ったと書く。生産者のミナスへの移動も、ミナスの霜の少なさも、原文では確認できない"
+        }
+      ],
+      "suggestedText": "1975年7月18日にパラナ州を襲った大霜害でコーヒー園の多くが壊滅し、ブラジルのコーヒー生産でのパラナ州の首位は崩れて、ミナスジェライス州に移った。",
+      "note": "英訳は日本語と同じ主張(producers moved to Minas Gerais where frost is less common)。同じ未確認を含む。"
+    },
+    "fact:「ヘアルーム」は品種名ではない": {
+      "status": "unverified",
+      "claims": [
+        {
+          "text": "「heirloom(ヘアルーム)」は特定の品種名ではない",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "一次資料で確認できていない。WCRの品種カタログ(varieties.worldcoffeeresearch.org)とエチオピア国ページ(worldcoffeeresearch.org/countries/ethiopia)に 'heirloom' の説明は見当たらなかった"
+        },
+        {
+          "text": "「ヘアルーム」はエチオピア在来種の総称である",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "同上。検索ではEIAR/JARC/FAO等でも 'heirloom' の定義は見つからなかった"
+        },
+        {
+          "text": "エチオピア在来種は数千種にのぼるとされる",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "「数千」の数字を示す公式資料は見つからなかった(WCRはJARCが42品種を放出と記載するのみ: worldcoffeeresearch.org/countries/ethiopia)"
+        }
+      ],
+      "suggestedText": "",
+      "note": "検証済みの主張なし。表示するなら、EIAR/JARCやWCR等の一次資料で 'heirloom' の定義と在来種の数を確認してから。英訳は日本語と同じ主張。"
+    },
+    "fact:ジャマイカは2025年のハリケーンで収穫の4割を失った": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "2025年10月28日、ハリケーン・メリッサがカテゴリー5でジャマイカに上陸した",
+          "status": "verified",
+          "sourceIds": [
+            "jis-parliament-melissa-2025"
+          ],
+          "quote": "On Tuesday, October 28, Jamaica endured one of the most punishing natural disasters in our modern history. Hurricane Melissa made landfall near New Hope in Westmoreland as a Category 5 hurricane",
+          "location": "冒頭部",
+          "note": "文書内の年は明記が見当たらないが、ファイルは2025年11月付の議会向け声明"
+        },
+        {
+          "text": "ジャマイカ政府は、メリッサでコーヒーの約4割が失われたと述べている(木の約40%に被害、生産は40〜45%減)",
+          "status": "verified",
+          "sourceIds": [
+            "jis-coffee-intercrop-2026-01",
+            "jis-agri-damage-melissa"
+          ],
+          "quote": "following the loss of 40 per cent of coffee during Hurricane Melissa",
+          "location": "jis-coffee-intercrop-2026-01 本文冒頭(農業大臣Floyd Green; 2026-01-14)",
+          "note": "jis-agri-damage-melissa: 'coffee has sustained 40 per cent damage to trees, resulting in a 40 to 45 per cent loss in production, with estimated damage valued at $800 million.' JACRA幹部は別の機会に 'approximately 35 per cent damage to the coffee industry' と述べた(jis.gov.jm/jacra-commences-handover...)。数字は発言ごとに異なり、暫定値"
+        },
+        {
+          "text": "失われたのは「成熟した作物」の約4割である",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "政府発言は 'loss of 40 per cent of coffee' / '40 per cent damage to trees' / '40 to 45 per cent loss in production' で、「成熟した作物(mature crop)」とは書かれていない。タイトルの「収穫の4割」も、木の被害率・生産減の数字と同一ではない"
+        }
+      ],
+      "suggestedText": "2025年10月28日にジャマイカを直撃したハリケーン・メリッサで、同国のコーヒーは約4割が失われたと、農業大臣が述べている(木の約40%に被害、生産は40〜45%減との暫定評価)。",
+      "note": "英訳は日本語と同じ主張(about 40% of mature crop)。「mature」は原文にない点も同じ。"
+    },
+    "fact:グアテマラには300を超える微気候がある": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "グアテマラのコーヒー産地には300を超える微気候がある",
+          "status": "verified",
+          "sourceIds": [
+            "anacafe-politica-laboral"
+          ],
+          "quote": "La mayor parte de las áreas cafetaleras se encuentran localizadas en sistemas montañosos arriba de los 1,100 metros sobre el nivel del mar, donde factores ecológicos y medioambientales se combinan para crear más de 300 microclimas que permiten obtener cafés de alta calidad, reconocidos mundialmente.",
+          "location": "1. Presentación(PDF p.5)",
+          "note": "原文は「コーヒー産地(areas cafetaleras)」の話で、国全体ではない。「とされる」の言い回しは妥当"
+        },
+        {
+          "text": "その原因は活火山・休火山と豊かな生物多様性である",
+          "status": "unverified",
+          "sourceIds": [
+            "anacafe-politica-laboral"
+          ],
+          "quote": "",
+          "location": "",
+          "note": "Anacafeの文書は原因を「生態・環境の要因(factores ecologicos y medioambientales)」の組み合わせとし、標高1,100m超の山岳地帯を挙げる。「活火山・休火山」を原因とする記述は同文書にない(「biodiversidadの保全」には触れるが、微気候の原因としてではない)"
+        }
+      ],
+      "suggestedText": "グアテマラのコーヒー産地の多くは標高1,100mを超える山岳地帯にあり、生態・環境の要因が重なって、300を超える微気候ができているとされる(Anacafe)。",
+      "note": "英訳は日本語と同じ主張(active and dormant volcanoes and rich biodiversity)。同じ未確認を含む。"
+    },
+    "fact:コロンビアは地域で収穫期が真逆になる": {
+      "status": "unverified",
+      "claims": [
+        {
+          "text": "コロンビアでは、地域によって主収穫と副次収穫(mitaca)の時期が入れ替わる",
+          "status": "unverified",
+          "sourceIds": [
+            "fnc-narino-ciclos-cosecha"
+          ],
+          "quote": "",
+          "location": "",
+          "note": "FNCのドメインに接続できず原文未読(failed)。二次的な断片のみ: ナリーニョの主収穫は4〜7月、mitacaは12〜1月(WebSearch断片。根拠にしない)"
+        },
+        {
+          "text": "北部のウイラと南部のナリーニョ等で時期が入れ替わる(ウイラは北部)",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "ウイラ県はコロンビア南西部に位置し、一般に「北部」とは呼ばれない。この点は地理的に誤りの疑いが強い(原文未読のため断定せず unverified)。FNCの公式資料で、どの県がどちらの収穫サイクルかを確認する必要がある"
+        },
+        {
+          "text": "国全体では実質通年で収穫がある",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "原文未読。検索断片は「年2回の収穫期」(地域・標高で時期が異なる)と述べるのみで「通年」の根拠は見つからなかった"
+        }
+      ],
+      "suggestedText": "",
+      "note": "検証済みの主張なし(FNCサイト接続失敗)。英訳は日本語と同じ主張(Huila in the north)。"
+    },
+    "fact:サパティスタ運動が今のメキシココーヒーの姿を作った": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "1994年、サパティスタ民族解放軍(EZLN)が蜂起した",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "この記述では調べていない(ICOのメキシコ・チアパス関連文書2件にはEZLN/1994の言及なし)"
+        },
+        {
+          "text": "蜂起は土地制度をめぐる反発から起きた",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "一次資料で確認できていない"
+        },
+        {
+          "text": "蜂起後の土地再分配により、チアパス州では大農園化が進まなかった",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "ICOのメキシコ・バリューチェーン報告に土地再分配への言及なし。因果関係の一次資料なし"
+        },
+        {
+          "text": "チアパス州は小規模農家中心の生産構造である(今日まで)",
+          "status": "verified",
+          "sourceIds": [
+            "ico-mexico-value-chain-2025"
+          ],
+          "quote": "Most coffee farmers are smallholders, with an average farm size of 2.9 hectares and a median value of 2.0 hectares. ... In Veracruz, farms are larger, (averaging 2.3 hectares) compared to Chiapas and Puebla (1.7 and 1.6 hectares, respectively).",
+          "location": "Section 3.1 / 3.2",
+          "note": "メキシコ全体および州別の農園規模(チアパスは平均1.7ha)。原因が蜂起後の再分配かどうかは別問題"
+        }
+      ],
+      "suggestedText": "チアパス州のコーヒー生産は小規模農家が中心で、1農園あたりの平均コーヒー面積は1.7ヘクタール(ICOのメキシコ調査報告)。",
+      "note": "英訳は日本語と同じ主張。"
+    },
+    "fact:内戦が皮肉にも伝統品種を守った": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "エルサルバドルの内戦は1979〜1992年に起きた",
+          "status": "unverified",
+          "sourceIds": [
+            "ico-profile-el-salvador-2016"
+          ],
+          "quote": "",
+          "location": "",
+          "note": "ICOは 'The internal civil strife in the 1980s' とのみ書く(年範囲なし)。1979〜1992年を示す公式資料は未確認"
+        },
+        {
+          "text": "1980年代の内戦で、コーヒー生産は大きな打撃を受けた",
+          "status": "verified",
+          "sourceIds": [
+            "ico-profile-el-salvador-2016"
+          ],
+          "quote": "The internal civil strife in the 1980s had a drastic effect on the country’s economic activity and output, with coffee being one of the worst hit sectors, where production fell by an average of around 25%.",
+          "location": "Country profile 'history of coffee' の項",
+          "note": "app本文にない補足(生産は平均約25%減)"
+        },
+        {
+          "text": "1980年代、多くの中米諸国は高収量品種への植え替えを進めていた",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "一次資料で確認できていない"
+        },
+        {
+          "text": "同国の農園は放置された結果、伝統品種が温存された",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "ICOプロファイルに、内戦と品種温存の因果関係の記述なし"
+        },
+        {
+          "text": "ティピカ・ブルボンやパカマラが高い比率で温存された(現在もその比率が高い)",
+          "status": "incorrect",
+          "sourceIds": [
+            "ico-profile-el-salvador-2016"
+          ],
+          "quote": "The principal varieties are Bourbon, which covers around 64% of the area under cultivation, followed by Pacas ( a Bourbon cultivar) covering 28%, followed by a group of varieties, each of which covers 2% or less of the total area, namely: Pacamara, Cuscatleco, Catimor, Catisic and others.",
+          "location": "Country profile 'varieties' の項",
+          "note": "ICOの内訳ではブルボン約64%、パカス(ブルボンの栽培品種)28%、パカマラは2%以下。ティピカの記載なし。「パカマラが高い比率」は原文と食い違う(ブルボンとパカスが中心)。文書は2015/16年時点"
+        }
+      ],
+      "suggestedText": "エルサルバドルでは1980年代の内戦がコーヒー産業に大きな打撃を与え(生産は平均約25%減)、今日の主要品種はブルボン(栽培面積の約64%)とパカス(約28%)である(ICOのコーヒープロファイル、2015/16年版)。",
+      "note": "英訳は日本語と同じ主張。同じ誤り・未確認を含む。"
+    },
+    "fact:ルワンダのコーヒー復興を導いたのは女性たちだった": {
+      "status": "unverified",
+      "claims": [
+        {
+          "text": "1994年のジェノサイド後、夫を失った女性たちの自立支援を目的にマラバの協同組合が発足した",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "一次資料で確認できなかった。ICOのルワンダ報告(icocoffee.org/documents/GKH/Rwanda_.pdf)にMaraba・女性・寡婦の記述なし。二次資料のみ: sustainableharvest.com(買い手の紹介)はMarabaを1994年設立と書き、女性・寡婦の起源には触れない(WebSearch要約。原文は未読)"
+        },
+        {
+          "text": "女性たちが協同組合の主要な運営者としてコーヒー産業の復興を牽引してきた",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "一次資料で確認できていない"
+        }
+      ],
+      "suggestedText": "",
+      "note": "検証済みの主張なし。英訳は日本語と同じ主張。"
+    }
+  }
+}

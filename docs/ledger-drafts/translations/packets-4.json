@@ -1,0 +1,430 @@
+[
+ {
+  "key": "origin:ジャマイカ:sub:ブルーマウンテン地区",
+  "content": {
+   "detail": "JACRA規則2018は、「Jamaica Blue Mountain Coffee」を、ジャマイカのブルーマウンテン区域(Blue Mountain area of Jamaica)で栽培されたコーヒーと定義している。"
+  },
+  "quotes": [
+   "“Jamaica Blue Mountain Coffee” means coffee that is grown in the Blue Mountain area of Jamaica;"
+  ]
+ },
+ {
+  "key": "origin:ジャマイカ:tagline",
+  "content": {
+   "text": "WIPOは、ジャマイカのブルーマウンテンの地形、降雨パターン、ブルーマウンテンの霧、そして全体の条件が、世界でも特に名高く愛されるコーヒーの一つの栽培に申し分なく適していると述べている。"
+  },
+  "quotes": [
+   "The terrain, rainfall pattern, Blue Mountain mist, and overall conditions are perfectly suitable for the cultivation of one of the world’s most distinguished and cherished coffees"
+  ]
+ },
+ {
+  "key": "origin:ジャマイカ:terroir",
+  "content": {
+   "text": "ブルーマウンテン山系は、ジャマイカ島の東端にある(WIPO)。ジャマイカの最高峰は標高7,402フィート(約2,256m)(JIS)。この地域の気候は降水量が多いのが特徴で、ブルーマウンテンの冷涼な微気候のため、コーヒーチェリーが熟すのに長い時間がかかる(WIPO)。"
+  },
+  "quotes": [
+   "The eastern end of the Caribbean island of Jamaica is adorned by the majestic Blue Mountains range.",
+   "Jamaica’s highest mountain standing at 7,402 feet",
+   "The climate in this region is marked by abundant rainfall",
+   "Due to the cool microclimatic conditions in the Blue Mountains, it takes a longer time for the coffee berries to ripen"
+  ]
+ },
+ {
+  "key": "origin:タンザニア:farmStructure",
+  "content": {
+   "text": "TCB(Tanzania Coffee Board)の「Coffee Farming」のページは、農場の規模(farm sizes)を0.5〜2エーカーとしている。"
+  },
+  "quotes": [
+   "farm sizes of 0.5 - 2 acres"
+  ]
+ },
+ {
+  "key": "origin:タンザニア:gradeSystem",
+  "content": {
+   "text": "タンザニアのコーヒー産業規則(2013年、政府告示第385号)は、等級AAを、スクリーン18に最低90%が残るもの(スクリーン17は最大8〜10%)としている。"
+  },
+  "quotes": [
+   "AA Retained minimum 90% of screen 18. Maximum 8 - 10% of screen 17"
+  ]
+ },
+ {
+  "key": "origin:タンザニア:history",
+  "content": {
+   "text": "USDA FASの2019年報告は、次の項目を挙げている: 農家と契約のあった現地・外国の業者によるコーヒーの直接輸出の禁止(2019年1月に一時解除)、農家のAMCOSへの加入の義務づけ、全量をモシのTCB中央オークションで売る義務(生産者・輸出業者・加工業者によるオークションの迂回の禁止)。同報告は、政府が直接輸出を禁止したのは2018年1月で、TCBは1年の不安定の後に禁止を緩和し、上質なコーヒーの生産者が海外の買い手と直接取引することを認めたと記す。2021年5月のUSDA FASの報告は、新しい法律により、上質なコーヒーの生産者が海外の買い手と直接取引し、AMCOSと関わり、オークションを経由しないことが認められていると記す。"
+  },
+  "quotes": [
+   "1. Ban on direct export of coffee by local and foreign traders who had agreements with farmers; (Ban temporarily lifted January 2019)",
+   "2. Dissolve all producer groups and require farmers to join AMCOS;",
+   "5. Require all coffee beans to be auctioned at the central TCB auction in Moshi; prohibit all producers, exporters or processors from bypassing auction.",
+   "The Tanzanian Government banned direct coffee exports in January 2018; however, the TCB relaxed the ban after a year of instability. TCB allowed premium producers to establish direct contacts with overseas buyers",
+   "Currently, a new law allows premium producers to establish direct contacts with overseas buyers, engage with agricultural marketing and cooperative societies (AMCOS), and bypass auctions."
+  ]
+ },
+ {
+  "key": "origin:タンザニア:officialBody",
+  "content": {
+   "text": "Tanzania Coffee Board(TCB)は、2001年のコーヒー産業法(Act No. 23 of 2001)で再設立された。2001年法の条文は、商業目的でコーヒーの買付・liquoring・加工・焙煎・倉庫保管・中央パルピング・輸出を行うには、同法のBoard(TCB)が発行するライセンスが必要と定めている。"
+  },
+  "quotes": [
+   "An Act make better provisions for the regulation, improvement and development of the Coffee Industry, to re-establish the Tanzania Coffee Board, to repeal the Tanzania Coffee Board Act of 1984",
+   "(3) No person on commercial basis shall buy, liquor, process roast, warehouse centrally pulp, or export any coffee without a licence issued by the Board."
+  ]
+ },
+ {
+  "key": "origin:タンザニア:sub:キリマンジャロ山麓(北部)",
+  "content": {
+   "detail": "USDA FASの2021年報告は、「混作およびバナナ/小農」(intercropped and bananas/smallholder)について、主に北部と西部と記している。"
+  },
+  "quotes": [
+   "intercropped and bananas/smallholder (mainly in the north and west)"
+  ]
+ },
+ {
+  "key": "origin:タンザニア:sub:南部高地(Mbeya・Ruvuma・Songwe等)",
+  "content": {
+   "detail": "ムベヤ、ルブマ、ソングウェは、アラビカの産地に含まれる(TCB)。"
+  },
+  "quotes": [
+   "Tanzania’s Arabica growing regions are Kilimanjaro, Arusha, Tanga, Iringa, Mbeya, Kigoma, Manyara, Mwanza, Katavi, Mara, Njombe, Songwe, Rukwa, Geita and Ruvuma while Robusta is grown in Kagera and Morogoro regions."
+  ]
+ },
+ {
+  "key": "origin:タンザニア:tagline",
+  "content": {
+   "text": "TaCRIのLyamungu副研究所のページによると、そのページがいう地帯(the zone)には、小農とエステートの双方によるアラビカコーヒーの生産が100年近く続いてきた歴史がある。"
+  },
+  "quotes": [
+   "The zone has an almost 100 years-long history of producing some of the finest Arabica coffee in the world by both smallholders and estates."
+  ]
+ },
+ {
+  "key": "origin:タンザニア:terroir",
+  "content": {
+   "text": "TCBは、アラビカの産地としてキリマンジャロ、アルーシャ、ムベヤ、ルブマ、ソングウェなどの地域(regions)を挙げている。USDA FASの2021年報告は、「混作およびバナナ/小農」(intercropped and bananas/smallholder)について、主に北部と西部と記している。"
+  },
+  "quotes": [
+   "Tanzania’s Arabica growing regions are Kilimanjaro, Arusha, Tanga, Iringa, Mbeya, Kigoma, Manyara, Mwanza, Katavi, Mara, Njombe, Songwe, Rukwa, Geita and Ruvuma while Robusta is grown in Kagera and Morogoro regions.",
+   "intercropped and bananas/smallholder (mainly in the north and west)"
+  ]
+ },
+ {
+  "key": "origin:タンザニア:varietiesDetail",
+  "content": {
+   "text": "タンザニアのコーヒー生産のうち、アラビカは平均60.9%を占める(TCB)。TaCRIの資料(2005年)は、2004年まで国内で栽培されていた商業品種はブルボン(N39)とケント(KP423)だけだったと記している。"
+  },
+  "quotes": [
+   "Tanzania produces two types of coffee, Arabica which contributes an average of 60.9% and Robusta accounting for 39.1%.",
+   "Until 2004 the only commercial varieties grown in the country were/are Bourbon (N.39) and Kents (KP 423)."
+  ]
+ },
+ {
+  "key": "origin:ハワイ:gradeSystem",
+  "content": {
+   "text": "ハワイ州農業・バイオセキュリティ局の統計資料(2026年1月)は、生豆(green coffee)の等級基準として Extra Fancy、Fancy、Hawaii No.1、Select、Prime、Hawaii No.3、Natural Prime、Mixed Natural Prime、Off Grade を挙げている。ハワイ州行政規則第4-143章の要約(2020年7月1日施行)では、Hawaii No.3より品質が低いOff Gradeに「Hawaii」の語を併用することが禁じられている。"
+  },
+  "quotes": [
+   "The standards for grades of green coffee include Extra Fancy, Fancy, Hawaii No.1, Select, Prime, Hawaii No.3, Natural Prime, Mixed Natural Prime, and Off Grade.",
+   "OFFGRADE = quality lower than Hawaii No. 3. Use of the term \"Hawaii\" in conjunction with the term Offgrade is prohibited."
+  ]
+ },
+ {
+  "key": "origin:ハワイ:harvestSeason",
+  "content": {
+   "text": "ハワイ大学CTAHR(2008年)によると、コナでは1シーズンに4〜8回に分けて摘むのが一般的とされている。"
+  },
+  "quotes": [
+   "In Kona, picking in four to eight rounds in any one season is common"
+  ]
+ },
+ {
+  "key": "origin:ハワイ:history",
+  "content": {
+   "text": "ハワイ大学CTAHR(2008年)によれば、1892年にヘルマン・ヴィーデマンがグアテマラから‘Guatemalan’種をハワイに導入した。ヴィーデマンは種子をジョン・ホーナーに渡し、ホーナーはハマクアに800本の果樹園を植えた。1910年までに、コナの生産者は新しい品種の優位を確信した。"
+  },
+  "quotes": [
+   "Hermann Widemann introduced the ‘Guatemalan’ variety to Hawaii from Guatemala in 1892 (Goto 1982).",
+   "He gave seeds to John Horner, who planted an orchard of 800 trees in Hamakua",
+   "By 1910, Kona coffee growers were convinced of the superiority of the new variety."
+  ]
+ },
+ {
+  "key": "origin:ハワイ:officialBody",
+  "content": {
+   "text": "ハワイ州の州法Act 198(Relating to Consumer Protection、2024年7月3日承認)は、2024年7月1日に施行された。同法の条文には、2027年7月1日以降について「その産地(that geographic origin)のコーヒーを重量で51%」とする規定がある。"
+  },
+  "quotes": [
+   "SECTION 4. This Act shall take effect on July 1, 2024.",
+   "(B) On or after July 1, 2027, fifty-one per cent coffee by weight from that geographic origin;"
+  ]
+ },
+ {
+  "key": "origin:ハワイ:sub:カウ(Ka'ū、南部)",
+  "content": {
+   "detail": "ハワイ州行政規則第4-143章(2001年10月8日施行の版)では、カウ(Kau)は、ハワイ州のTax Map(税務地図)で定められたハワイ島のKa‘u地区とされている。"
+  },
+  "quotes": [
+   "Kau is the district of Ka=u on the island of Hawai=i, as designated by the State of Hawaii Tax Map"
+  ]
+ },
+ {
+  "key": "origin:ハワイ:sub:コナ",
+  "content": {
+   "detail": "ハワイ州行政規則第4-143章(2001年10月8日施行の版)では、コナは北コナ(North Kona)地区と南コナ(South Kona)地区とされている。"
+  },
+  "quotes": [
+   "Kona is the North Kona and South Kona districts on the island of"
+  ]
+ },
+ {
+  "key": "origin:ハワイ:varietiesDetail",
+  "content": {
+   "text": "1892年、ヘルマン・ヴィーデマンがグアテマラから‘Guatemalan’品種をハワイに導入した(ハワイ大学CTAHR、2008年)。ティピカ品種は、コーヒーさび病への感受性が非常に高い(WCR品種カタログ)。"
+  },
+  "quotes": [
+   "Hermann Widemann introduced the ‘Guatemalan’ variety to Hawaii from Guatemala in 1892 (Goto 1982).",
+   "Very high susceptibility to coffee leaf rust"
+  ]
+ },
+ {
+  "key": "origin:パナマ:farmStructure",
+  "content": {
+   "text": "SCAPの資料には、ハシエンダ・ラ・エスメラルダ(ピーターソン家が所有)、フィンカ・レリダ(ボケテ地域)、エリダ農園(Elida Estate Coffee、1918年に歴史が始まり、ウィルフォード・ラマストゥス氏が3代目)が載っている。"
+  },
+  "quotes": [
+   "Hacienda La Esmeralda is owned by the Peterson Family.",
+   "Mientras que en 1918, comenzó la historia de Elida Estate Coffee, hoy Wilford Lamastus es la tercera generación.",
+   "Finca Lérida is conformed by 5 farms located in the province of Chiriquí in Panama, specifically in the Boquete region."
+  ]
+ },
+ {
+  "key": "origin:パナマ:history",
+  "content": {
+   "text": "1996年、国際コーヒー価格の低迷期に、ボケテとボルカン・カンデラの生産者7名が、自分たちのコーヒーを知ってもらおうと集まった(SCAP「Our Story」)。2004年のBest of Panama最終結果表では、PA101が7袋、High Bid 21.00ドルと記載されている(SCAP)。WCRは、パナマのゲイシャが当時の生豆オークションの価格記録を更新し、1ポンドあたり20ドルを超えたと記す。2021年のBest of Panamaオークションの結果表には、1ポンド2,568ドルの価格が載っている。SCAPの2025年8月の報道発表によると、Best of Panamaの年次オークションで、ハシエンダ・ラ・エスメラルダの98点のウォッシュドゲイシャ(20kgロット)が1kgあたり30,204ドルで、ドバイのJulith Coffeeに購入され、SCAPはこれを世界記録としている。"
+  },
+  "quotes": [
+   "In 1996, during the crisis of low international prices of coffee and the beginning of Special Coffees category, a group of 7 coffee producers from the areas of Boquete and Volcan –Candela got together with the idea to get their coffees known.",
+   "Best of Panama 2004 - Final Results Item Number PA101 | Bags 7 | High Bid* $21.00",
+   "It received exceptionally high marks and broke the then-record for green coffee auction prices, selling for over $20/pound.",
+   "$2,568.00/lb \"> $256,800.00 \"> Nuguo Fermented",
+   "Con un insólito precio de US$ 30,204 por kilogramo, el café Geisha Lavado de 98 puntos de Hacienda La Esmeralda sorprendió al mundo, tras alcanzar un inigualable e histórico récord mundial en la prestigiosa subasta anual del Best of Panama, al vender un lote de 20 kilogramos en US$ 604,080 dólares, comprado por la empresa Julith Coffee de Dubai."
+  ]
+ },
+ {
+  "key": "origin:パナマ:tagline",
+  "content": {
+   "text": "SCAPの発表によると、2025年のBest of Panamaの年次オークションで、ハシエンダ・ラ・エスメラルダの98点のウォッシュドゲイシャが1kgあたり30,204ドルで取引され、世界記録とされた。"
+  },
+  "quotes": [
+   "Con un insólito precio de US$ 30,204 por kilogramo, el café Geisha Lavado de 98 puntos de Hacienda La Esmeralda sorprendió al mundo, tras alcanzar un inigualable e histórico récord mundial en la prestigiosa subasta anual del Best of Panama, al vender un lote de 20 kilogramos en US$ 604,080 dólares, comprado por la empresa Julith Coffee de Dubai."
+  ]
+ },
+ {
+  "key": "origin:パナマ:terroir",
+  "content": {
+   "text": "SCAPは、「私たちの農園」(Our plantations)は主にパナマの中央山脈(Cordillera Central)のうち、バルー火山を囲む山地で、ボケテとボルカン・カンデラの町の近くにあると説明する。同じ資料は、この一帯では天候と、養分に富んだ火山性土壌がコーヒーの木をよく育てると述べる(About SCAP)。"
+  },
+  "quotes": [
+   "Our plantations are mainly located in the Panamanian Cordillera Central, in the mountainous area that surrounds the Baru Volcano, near the picturesque towns of Boquete and Volcan – Candela.",
+   "In this area the weather and the rich and nutrient volcanic soil nourish perfectly the coffee trees creating a final product of immense quality."
+  ]
+ },
+ {
+  "key": "origin:パナマ:varietiesDetail",
+  "content": {
+   "text": "ゲイシャ種は、1930年代にエチオピアのコーヒーの森から採取された(WCR)。1953年に中米のCATIE(Centro Agronómico Tropical de Investigación y Enseñanza)に持ち込まれ、登録番号T2722が付けられた(WCR)。さび病への耐性(tolerance)が認められたのち、1960年代にCATIE経由でパナマ全土に配布されたが、枝が折れやすく農家に好まれなかったため、広くは植えられなかった(WCR)。SCAPは、ゲイシャをパナマが他の生産国より上に位置づけられるに至った品種だと述べる。"
+  },
+  "quotes": [
+   "es una variedad de café que llevó a Panamá a ubicarse por encima de los demás países productores del grano.",
+   "This variety was originally collected from coffee forests in Ethiopia in the 1930s.",
+   "It was distributed throughout Panama via CATIE in the 1960s after it had been recognized for tolerance to coffee leaf rust.",
+   "However, the plant's branches were brittle and not favored by farmers so it was not widely planted.",
+   "and then brought to Centro Agronómico Tropical de Investigación y Enseñanza (CATIE) in Central America in the 1953, where it was logged as accession T2722."
+  ]
+ },
+ {
+  "key": "origin:ブラジル:farmStructure",
+  "content": {
+   "text": "Embrapaの記事によると、コーヒーは国立産業財産院(INPI)に14件の地理的表示が登録されている。Cerrado Mineiroの地理的表示は、2013年に原産地呼称(DO)の登録に切り替えられた(Embrapa)。"
+  },
+  "quotes": [
+   "O Café possui 14 registros de Indicações Geográficas no Instituto Nacional da Propriedade Industrial (INPI).",
+   "As regiões do Cerrado Mineiro e da Mantiqueira de Minas tiveram seus registros de IP alterados para registro de Denominação de Origem, respectivamente, em 2013 e 2020."
+  ]
+ },
+ {
+  "key": "origin:ブラジル:gradeSystem",
+  "content": {
+   "text": "MAPAの規則(Instrução Normativa 8/2003)の付属書には、ふるい(peneiras)の番号を挙げた記載(「Chato graúdo: peneiras 19/18 e 17」)がある。この規則に反して生豆(Café Beneficiado Grão Cru)を商業化することは、詐欺とみなされる。また、MAPAが作成したブラジル公式分類(COB)の新しい表が、2026年のCecaféの連絡(Comunicado 081-2026)で言及されている。"
+  },
+  "quotes": [
+   "nova tabela de Classificação Oficial Brasileira (COB) do café, elaborada pelo Ministério da Agricultura e Pecuária (MAPA)",
+   "Chato graúdo: peneiras 19/18 e 17;",
+   "Será também considerada fraude a comercialização do Café Beneficiado Grão Cru, em desacordo com o estabelecido neste Regulamento."
+  ]
+ },
+ {
+  "key": "origin:ブラジル:harvestSeason",
+  "content": {
+   "text": "USDA FASの『Coffee Annual - Brazil』(2025年5月)によると、2025/26年度のブラジルのコーヒー収穫は、ロブスタが4月、アラビカが5月に始まり、9月までに終わる見込み。"
+  },
+  "quotes": [
+   "The 2025/26 Brazilian coffee harvest began at a slow pace, with robusta varieties in April and arabica in May, and expected to conclude by September."
+  ]
+ },
+ {
+  "key": "origin:ブラジル:history",
+  "content": {
+   "text": "コーヒーは1727年にパラ州ベレンからブラジルに入ったとされる(MAPA)。1975年7月18日、パラナ州で記録された最大級の霜害の一つがコーヒー畑を壊滅させ、同州の農畜産の姿を変えた(パラナ州政府)。"
+  },
+  "quotes": [
+   "O café chegou ao Brasil, por Belém no Pará, em 1727, vindo da Guiana Francesa",
+   "Há 50 anos, em 18 de julho de 1975, uma das maiores geadas já registrada no Estado devastou os cafezais e mudou o perfil agropecuário do Paraná."
+  ]
+ },
+ {
+  "key": "origin:ブラジル:officialBody",
+  "content": {
+   "text": "Cecafé(Conselho dos Exportadores de Café do Brasil)は1999年に設立され、コーヒー輸出部門の発展を国内外で代表し、推進している(Cecafé)。生豆の分類証明書(Certificado de Classificação)は、MAPAまたはMAPAが正式に認定した法人が発行する(IN 8/2003)。"
+  },
+  "quotes": [
+   "Fundado em 1999, o Cecafé representa e promove ativamente o desenvolvimento do setor exportador de café nos âmbitos nacional e internacional.",
+   "O Certificado de Classificação será emitido pelo Ministério da Agricultura, Pecuária e Abastecimento ou pelas pessoas jurídicas devidamente credenciadas pelo mesmo"
+  ]
+ },
+ {
+  "key": "origin:ブラジル:sub:セラード(セラード・ミネイロ)",
+  "content": {
+   "detail": "Cerrado Mineiroは、ブラジルでコーヒーとして初のDO(原産地呼称)を取得した産地(Embrapa)。"
+  },
+  "quotes": [
+   "conquistou, recentemente, a primeira DO para café no país."
+  ]
+ },
+ {
+  "key": "origin:ブラジル:tagline",
+  "content": {
+   "text": "世界の生産量の4割近くを占める(USDA FAS、2026年7月)"
+  },
+  "quotes": [
+   "Brazil accounts for nearly 40 percent of world production and exerts significant influence on global supplies and prices."
+  ]
+ },
+ {
+  "key": "origin:ブラジル:terroir",
+  "content": {
+   "text": "ミナスジェライス州はブラジル国内で最大のコーヒー生産州で、エスピリトサント、サンパウロ、バイーア、ロンドニアが続く(USDA FAS、2025年)。Embrapaの記事『Cerrado Mineiro é destaque…』は、長い乾期と低肥沃度の土壌を特徴として挙げる。"
+  },
+  "quotes": [
+   "Minas Gerais remains the leading coffee producer in the country, followed by Espírito Santo, São Paulo, Bahia, and Rondônia.",
+   "caracterizada por estiagens prolongadas e solos de baixa fertilidade"
+  ]
+ },
+ {
+  "key": "origin:ブラジル:varietiesDetail",
+  "content": {
+   "text": "ムンドノーボはスマトラと赤ブルボンの自然交雑に由来し、樹高が高く茎が細い(Embrapa Rondônia)。Embrapaは、ムンドノーボとカトゥアイ・ベルメーリョ(赤)が、ブラジルのアラビカ栽培面積の約9割に存在すると記す。カトゥアイ(赤・黄)はムンドノーボとカトゥーラ・アマレーロ(黄)の交配で、1972年に圃場に出た(Embrapa)。"
+  },
+  "quotes": [
+   "cruzamento natural entre as variedad es ‘Sumatra’ e ‘Bourbon Vermelho’",
+   "As plantas têm porte alto e caule fino",
+   "As cultivares Mundo Novo e Catuaí Vermelho são consideradas desbravadoras do Cerrado Mineiro e hoje se encontram espalhadas pelo Brasil afora, estando presentes em cerca de 90% da área cultivada com café arábica no País.",
+   "Em 1972, chegam ao campo as cultivares Catuaí Vermelho e Catuaí Amarelo, resultantes de cruzamento da cultivar Mundo Novo com a cultivar Caturra Amarelo"
+  ]
+ },
+ {
+  "key": "origin:ベトナム:farmStructure",
+  "content": {
+   "text": "USDA FAS(2026年)によると、60万戸超の小農世帯がコーヒー生産に関わる。EUDR(EU森林破壊規制)の要件は2026年12月に施行される(同)。USDA FAS(2025年)は、EUDRがベトナムのコーヒー生産者にとって課題を生んでいること、ベトナムのコーヒー輸出の41%がEU向けであることを記す。"
+  },
+  "quotes": [
+   "more than 600,000 smallholder households involved in coffee production",
+   "(EUDR) requirements, which take effect in December 2026.",
+   "The EU Deforestation Regulation (EUDR), which comes into force in 2026, is creating challenges for Vietnam coffee producers.",
+   "Forty one percent of Vietnam’s coffee exports go to European Union."
+  ]
+ },
+ {
+  "key": "origin:ベトナム:history",
+  "content": {
+   "text": "1857年、フランスの宣教師を通じて、アラビカがベトナムに最初に導入されたコーヒー品種となった(ICO、2019年3月)。VICOFAの沿革は、最終的にアラビカ(Chè)をロブスタ(Vối)とエクセルサ(Mít)に置き換えることにしたと記す。1986年以降、ベトナム政府はコーヒー部門への投資に資源を集中してきた(ICO)。ICOの2019年3月の資料では、ベトナムは世界第2位のコーヒー生産国・輸出国の地位を保つことが目標に挙げられている。VICOFAは、ロブスタの最大の輸出国はベトナムだと記す。"
+  },
+  "quotes": [
+   "Arabica (Coffea arabica) was the first coffee variety to have been introduced into Vietnam in 1857, through French missionaries.",
+   "Cuối cùng, người ta quyết định thay thế cà phê Chè bằng cà phê Vối và cà phê Mít.",
+   "Since 1986, the Government of Vietnam has concentrated its resources on investing in the coffee sector",
+   "firstly, to maintain its position as the world’s second largest producer and exporter of coffee green beans",
+   "Nước xuất khẩu cà phê Robusta lớn nhất thế giới là Việt Nam."
+  ]
+ },
+ {
+  "key": "origin:ベトナム:officialBody",
+  "content": {
+   "text": "VICOFA(ベトナムコーヒーカカオ協会)は1990年に設立された、非営利の社会・職業団体(VICOFA)。今日の国家標準計量品質委員会(Ủy ban Tiêu chuẩn Đo lường Chất lượng Quốc gia)は前身をSTAMEQ(標準計量品質総局)とし、STAMEQは科学技術省に直属する機関とされている(STAMEQ)。"
+  },
+  "quotes": [
+   "Hiệp hội Cà phê - Ca Cao Việt Nam (VICOFA) được thành lập theo Nghị quyết của Hội nghị các hội viên sáng lập ngày 04/01/1990",
+   "Hiệp hội Cà phê - Ca cao Việt Nam là một tổ chức xã hội - nghề nghiệp, phi lợi nhuận",
+   "Ủy ban Tiêu chuẩn Đo lường Chất lượng Quốc gia ngày nay có tiền thân là Tổng cục Tiêu chuẩn Đo lường Chất lượng (STAMEQ) là cơ quan trực thuộc Bộ Khoa học và Công nghệ"
+  ]
+ },
+ {
+  "key": "origin:ベトナム:sub:Da Lat/Cau Dat(Lam Dong)",
+  "content": {
+   "detail": "Cau Dat-Da Latは地理的表示の対象産地(ICO)。"
+  },
+  "quotes": [
+   "There are some geographic indications of the coffee regions (‘Buon Ma Thuot’, ‘Cau Dat – Da Lat’ and ‘Son La’)"
+  ]
+ },
+ {
+  "key": "origin:ベトナム:sub:ダクラク(Buon Ma Thuot)",
+  "content": {
+   "detail": "VICOFAは、ダクラク、とりわけブオンマトートがコーヒーの「首都(thủ phủ)」とみなされてきたと記す。"
+  },
+  "quotes": [
+   "Đây cũng chính là lý do Đắk Lắk và nhất là Buôn Ma Thuột vốn được xem là thủ phủ cà phê"
+  ]
+ },
+ {
+  "key": "origin:ベトナム:tagline",
+  "content": {
+   "text": "ICOの国別プロファイル(2019年3月)は、ベトナムを世界第2位のコーヒー生産国・輸出国としている。同プロファイルは、ロブスタが総生産量の97%を占めると記す。"
+  },
+  "quotes": [
+   "firstly, to maintain its position as the world’s second largest producer and exporter of coffee green beans",
+   "Robusta accounts for 97% of Vietnam's total output volume."
+  ]
+ },
+ {
+  "key": "origin:ベトナム:terroir",
+  "content": {
+   "text": "ICOの国別プロファイル(2019年)には、コーヒー栽培に適した広い面積の赤色バサルト土壌があると書かれている。USDA FAS(2026年)は、早すぎる、または過剰な灌漑は短期的には収量を増やしうるが、長期的には地下水を枯渇させ、生産コストを押し上げると記す。"
+  },
+  "quotes": [
+   "There is a large area of red soil basalt suitable for coffee growing which was brought by the French in 1857.",
+   "Early or excessive irrigation may increase coffee yield in the short term, but in the long run, it depletes groundwater and increases production costs over time."
+  ]
+ },
+ {
+  "key": "origin:ベトナム:varietiesDetail",
+  "content": {
+   "text": "ICOの国別プロファイル(2019年3月)は、ベトナムで栽培されるアラビカのほぼ99%がカティモール種だと記す。同プロファイルには、ベトナムの研究者がクローンTR4、TR5、TR6、TR7、TR8、TR9、TR11、TR12、TR13、TR14、TR15(またはTRS 1)と名付けた、との記述がある。また、Cau Dat‒Da Lat産のアラビカ・ブルボンとBuon Ma Thuot産のロブスタの混合(mixture)に関する記述もある。"
+  },
+  "quotes": [
+   "named by Vietnamese researchers as clone TR4, TR5, TR6, TR7, TR8, TR9, TR11, TR12, TR13, TR14 and TR15 or TRS 1.",
+   "almost 99% of the Arabica coffee grown in Vietnam is of the Catimor variety",
+   "mixture of Arabica Bourbon from Cau Dat ‒ Da Lat and Robusta from Buon Ma Thuot"
+  ]
+ },
+ {
+  "key": "origin:ペルー:farmStructure",
+  "content": {
+   "text": "USDA FAS(2025年5月)によると、ペルーのコーヒーの90%超は、5ヘクタール未満の区画で小規模農家が生産している。同資料は、ペルーを世界有数の有機コーヒー輸出国(world's leading exporter of organic coffee)とも記す。Junta Nacional del Café(JNC)は公式サイト(2024年3月保存版)で、協会と協同組合を合わせた56のコーヒー関連組織が集まり、会員世帯は合計7万で、14のコーヒー地帯に根ざしていると述べる。"
+  },
+  "quotes": [
+   "Over 90 percent of Peruvian coffee is grown by smallholder farmers on plots smaller than 5 hectares.",
+   "Hoy reúne a un total de 56 organizaciones cafetaleras, entre asociaciones y cooperativas que suman 70 mil familias socias arraigadas en catorce zonas cafetaleras del país.",
+   "Peru is the world’s leading exporter of organic coffee"
+  ]
+ }
+]

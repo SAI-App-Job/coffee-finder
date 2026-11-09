@@ -1,0 +1,1851 @@
+{
+  "scope": "varieties-processing-grade",
+  "verifiedOn": "2026-11-09",
+  "sources": {
+    "wcr-typica": {
+      "title": "WCR Varieties Catalog: Typica",
+      "org": "World Coffee Research",
+      "url": "https://varieties.worldcoffeeresearch.org/varieties/typica",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": ""
+    },
+    "wcr-bourbon": {
+      "title": "WCR Varieties Catalog: Bourbon",
+      "org": "World Coffee Research",
+      "url": "https://varieties.worldcoffeeresearch.org/varieties/bourbon",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": ""
+    },
+    "wcr-sl28": {
+      "title": "WCR Varieties Catalog: SL28",
+      "org": "World Coffee Research",
+      "url": "https://varieties.worldcoffeeresearch.org/varieties/sl28",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": ""
+    },
+    "wcr-sl34": {
+      "title": "WCR Varieties Catalog: SL34",
+      "org": "World Coffee Research",
+      "url": "https://varieties.worldcoffeeresearch.org/varieties/sl34",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": ""
+    },
+    "wcr-pache": {
+      "title": "WCR Varieties Catalog: Pache",
+      "org": "World Coffee Research",
+      "url": "https://varieties.worldcoffeeresearch.org/varieties/pache",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": ""
+    },
+    "wcr-java": {
+      "title": "WCR Varieties Catalog: Java",
+      "org": "World Coffee Research",
+      "url": "https://varieties.worldcoffeeresearch.org/varieties/java",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": ""
+    },
+    "wcr-pacas": {
+      "title": "WCR Varieties Catalog: Pacas",
+      "org": "World Coffee Research",
+      "url": "https://varieties.worldcoffeeresearch.org/varieties/pacas",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": ""
+    },
+    "wcr-villa-sarchi": {
+      "title": "WCR Varieties Catalog: Villa Sarchi",
+      "org": "World Coffee Research",
+      "url": "https://varieties.worldcoffeeresearch.org/varieties/villa-sarchi",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": ""
+    },
+    "wcr-caturra": {
+      "title": "WCR Varieties Catalog: Caturra",
+      "org": "World Coffee Research",
+      "url": "https://varieties.worldcoffeeresearch.org/varieties/caturra",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": ""
+    },
+    "wcr-catuai": {
+      "title": "WCR Varieties Catalog: Catuai",
+      "org": "World Coffee Research",
+      "url": "https://varieties.worldcoffeeresearch.org/varieties/catuai",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": ""
+    },
+    "wcr-mundo-novo": {
+      "title": "WCR Varieties Catalog: Mundo Novo",
+      "org": "World Coffee Research",
+      "url": "https://varieties.worldcoffeeresearch.org/varieties/mundo-novo",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": ""
+    },
+    "wcr-maragogipe": {
+      "title": "WCR Varieties Catalog: Maragogipe",
+      "org": "World Coffee Research",
+      "url": "https://varieties.worldcoffeeresearch.org/varieties/maragogipe",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": ""
+    },
+    "wcr-pacamara": {
+      "title": "WCR Varieties Catalog: Pacamara",
+      "org": "World Coffee Research",
+      "url": "https://varieties.worldcoffeeresearch.org/varieties/pacamara",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": ""
+    },
+    "wcr-ruiru11": {
+      "title": "WCR Varieties Catalog: Ruiru 11",
+      "org": "World Coffee Research",
+      "url": "https://varieties.worldcoffeeresearch.org/varieties/ruiru-11",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": ""
+    },
+    "wcr-batian": {
+      "title": "WCR Varieties Catalog: Batian",
+      "org": "World Coffee Research",
+      "url": "https://varieties.worldcoffeeresearch.org/varieties/batian",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": ""
+    },
+    "wcr-parainema": {
+      "title": "WCR Varieties Catalog: Parainema",
+      "org": "World Coffee Research",
+      "url": "https://varieties.worldcoffeeresearch.org/varieties/parainema",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": ""
+    },
+    "wcr-marsellesa": {
+      "title": "WCR Varieties Catalog: Marsellesa",
+      "org": "World Coffee Research",
+      "url": "https://varieties.worldcoffeeresearch.org/varieties/marsellesa",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": ""
+    },
+    "wcr-starmaya": {
+      "title": "WCR Varieties Catalog: Starmaya",
+      "org": "World Coffee Research",
+      "url": "https://varieties.worldcoffeeresearch.org/varieties/starmaya",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": ""
+    },
+    "wcr-geisha": {
+      "title": "WCR Varieties Catalog: Geisha (Panama)",
+      "org": "World Coffee Research",
+      "url": "https://varieties.worldcoffeeresearch.org/varieties/geisha-panama",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": ""
+    },
+    "wcr-t5296": {
+      "title": "WCR Varieties Catalog: T5296",
+      "org": "World Coffee Research",
+      "url": "https://varieties.worldcoffeeresearch.org/varieties/t5296",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": ""
+    },
+    "wcr-t8667": {
+      "title": "WCR Varieties Catalog: T8667",
+      "org": "World Coffee Research",
+      "url": "https://varieties.worldcoffeeresearch.org/varieties/t8667",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": ""
+    },
+    "wcr-history-of-arabica": {
+      "title": "WCR Varieties Catalog: History of Arabica",
+      "org": "World Coffee Research",
+      "url": "https://varieties.worldcoffeeresearch.org/arabica-2/history-of-arabica",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": ""
+    },
+    "wcr-arabica-home": {
+      "title": "WCR Varieties Catalog: Arabica",
+      "org": "World Coffee Research",
+      "url": "https://varieties.worldcoffeeresearch.org/arabica",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": ""
+    },
+    "ico-glossary": {
+      "title": "ICO Glossary of Terms Used (glossary.asp; Unwashed coffee / Washed coffee)",
+      "org": "International Coffee Organization",
+      "url": "http://dev.ico.org/glossary.asp",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": "dev.ico.org(旧サイト)。日付の記載なし。"
+    },
+    "ico-data-concepts-2021": {
+      "title": "ICO Statistics Committee 19th Meeting (13 April 2021): sc-105e Data concepts (Method of Processing)",
+      "org": "International Coffee Organization",
+      "url": "https://www.ico.org/documents/cy2020-21/sc-105e-data-concepts.pdf",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": ""
+    },
+    "ico-ed2050-2008": {
+      "title": "ICO ED 2050/08 (4 November 2008): Coffee development strategy",
+      "org": "International Coffee Organization",
+      "url": "https://www.ico.org/documents/ed2050e.pdf",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": ""
+    },
+    "sca-25-issue10-fermentation-effect": {
+      "title": "The Fermentation Effect - 25 Magazine, Issue 10",
+      "org": "Specialty Coffee Association",
+      "url": "https://sca.coffee/sca-news/25-magazine/issue-10/english/the-fermentation-effect-25-magazine-issue-10-bw558",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": "SCA機関誌。著者はVUB/Nestlé Researchの研究者。"
+    },
+    "sca-25-issue6-mucilage-removers": {
+      "title": "The Impact of Mucilage Removers on Coffee Sustainability and Quality - 25 Magazine: Issue 6",
+      "org": "Specialty Coffee Association",
+      "url": "https://sca.coffee/sca-news/25-magazine/issue-6/english/water-saving-demucilagers-y5bwa",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": "SCA機関誌。"
+    },
+    "sca-coffee-decoded-20": {
+      "title": "Coffee Decoded: What Makes Fruit-Dried Coffees Taste Fruity?",
+      "org": "Specialty Coffee Association",
+      "url": "https://sca.coffee/sca-news/coffee-decoded-20-fruit-dried-coffees-fruity",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": "SCAの連載コラム(Peter Giuliano)。"
+    },
+    "sca-25-issue24-identity": {
+      "title": "Unpacking the Debate Around Coffee Identity: Insights from Re:co Spotlight, 2025 (25, Issue 24)",
+      "org": "Specialty Coffee Association",
+      "url": "https://sca.coffee/sca-news/25/issue-24-green-coffee-identity-zht4g",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": "執筆時点は2025年7月。"
+    },
+    "ace-coe-brazil-2023": {
+      "title": "Brazil 2023 - Alliance For Coffee Excellence (Cup of Excellence)",
+      "org": "Alliance for Coffee Excellence",
+      "url": "https://allianceforcoffeeexcellence.org/brazil-2023/",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": ""
+    },
+    "descamex-procesos": {
+      "title": "Proceso Mountain Water | Descamex (Procesos)",
+      "org": "Descamex(Mountain Water Processの事業者)",
+      "url": "https://www.descamex.com.mx/procesos",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": "事業者自身の公式サイト。機関・協会ではないため、primary扱いにするか、ユーザーの判断が必要。"
+    },
+    "descamex-home": {
+      "title": "Decaf Coffee | Mountain Water Decaf | Descamex",
+      "org": "Descamex",
+      "url": "https://www.descamex.com.mx/",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": "事業者自身の公式サイト。"
+    },
+    "iccri-mawardi-ico-2008": {
+      "title": "Use of Geographical Indications for Coffee: Experience of Indonesia (S. Mawardi, ICCRI; ICO Seminar on Geographical Indication for Coffee, London, 20 May 2008)",
+      "org": "Indonesian Coffee and Cocoa Research Institute (ICCRI) / ICO",
+      "url": "http://dev.ico.org/event_pdfs/gi/presentations/Mawarditxt.pdf",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": ""
+    },
+    "fao-cfc-annex-e6": {
+      "title": "Storage of wet Arabica parchment prior to wet hulling (Project GCP/INT/743/CFC; \"Origins of Mandheling Coffee Character\") Annex E.6",
+      "org": "FAO / CFC / ICO",
+      "url": "https://www.fao.org/fileadmin/user_upload/agns/pdf/coffee/Annex-E.6.pdf",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": ""
+    },
+    "fao-cfc-annex-e8": {
+      "title": "Enhancement of Coffee Quality through Prevention of Mould Formation: Executive Summary (Annex E.8)",
+      "org": "FAO / CFC / ICO",
+      "url": "https://www.fao.org/fileadmin/user_upload/agns/pdf/coffee/Annex-E.8.pdf",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": ""
+    },
+    "ecx-coffee-contracts-2010": {
+      "title": "ECX Coffee Contracts - October 2010(ウェイバックの保存コピー)",
+      "org": "Ethiopia Commodity Exchange (ECX)",
+      "url": "http://www.ecx.com.et/Pages/downloads/contracts/Coffee/CoffeeContracts.pdf",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": "ECX直接のURLは接続エラー(000)。https://web.archive.org/web/2016/http://www.ecx.com.et/Pages/downloads/contracts/Coffee/CoffeeContracts.pdf の保存コピーを読んだ。2010年10月版で、現行(ECTA)の基準とは異なる可能性がある。"
+    },
+    "usda-fas-ethiopia-coffee-annual-2026": {
+      "title": "Coffee Annual (Ethiopia) ET2026-0005, 2026-05-20",
+      "org": "USDA Foreign Agricultural Service",
+      "url": "https://apps.fas.usda.gov/newgainapi/api/Report/DownloadReportByFileName?fileName=Coffee+Annual_Addis+Ababa_Ethiopia_ET2026-0005.pdf",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": ""
+    },
+    "ico-icc122-national-quality-standards-2018": {
+      "title": "ICC-122-12: National Quality Standards (International Coffee Council 122nd Session, 17-21 September 2018)",
+      "org": "International Coffee Organization",
+      "url": "https://www.ico.org/documents/cy2017-18/icc-122-12e-national-quality-standards.pdf",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": "ICOが加盟国の報告をまとめた文書。インドネシアの欄は2013年のPM-29/13から。SNI原文そのものではない。"
+    },
+    "ico-icc124-kenya-profile-2019": {
+      "title": "ICO Coffee Profile Kenya (ICC-124-7, March 2019)",
+      "org": "International Coffee Organization",
+      "url": "https://www.ico.org/documents/cy2018-19/icc-124-7e-profile-kenya.pdf",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": ""
+    },
+    "tz-gn153-2003": {
+      "title": "Tanzania Coffee Industry Regulations, 2003 (Government Notice No. 153, 30/05/2003)",
+      "org": "United Republic of Tanzania / Tanzania Coffee Board",
+      "url": "https://media.tanzlii.org/media/legislation/317785/source_file/514e739ead7bd604/tz-act-gn-2003-153-publication-document.pdf",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": "スキャン文書のOCR。2003年の規則で、現行版は未確認。"
+    },
+    "eac-eas130-1999": {
+      "title": "EAS 130:1999 Green coffee beans - Specification",
+      "org": "East African Community",
+      "url": "https://law.resource.org/pub/eac/ibr/eas.130.1999.html",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": "EAC(東アフリカ共同体)の規格。law.resource.orgの掲載コピー。"
+    },
+    "icafe-recibos-2-p-3-1": {
+      "title": "Procedimiento llenado de Recibos de Café, Código 2-P-3.1 (Zonificación Cafetalera de Costa Rica)",
+      "org": "Instituto del Café de Costa Rica (ICAFE)",
+      "url": "http://www.icafe.cr/wp-content/uploads/disposiciones/documentos/D4.6/D4.6-3/D4.6-3-3-2-P-3.1.pdf",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": "ICAFEの内部手順書。日付の記載なし。"
+    },
+    "icafe-tres-rios": {
+      "title": "Tres Ríos (Regiones Cafetaleras)",
+      "org": "Instituto del Café de Costa Rica (ICAFE)",
+      "url": "https://www.icafe.cr/nuestro-cafe/regiones-cafetaleras/tres-rios/",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": ""
+    },
+    "icafe-regiones": {
+      "title": "Regiones Cafetaleras de Costa Rica",
+      "org": "Instituto del Café de Costa Rica (ICAFE)",
+      "url": "https://www.icafe.cr/nuestro-cafe/regiones-cafetaleras/",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": ""
+    },
+    "anacafe-microlotes": {
+      "title": "Retos y oportunidades en la preparación de microlotes especiales (presentación)",
+      "org": "Asociación Nacional del Café (Anacafé)",
+      "url": "https://www.anacafe.org/uploads/file/30bbb3f380094fe39c2594730b2cd7a1/05-Microlotes.pdf",
+      "kind": "primary",
+      "readMethod": "excerpt",
+      "accessed": "2026-11-09",
+      "note": "スライドのグラフ(標高と等級の対応)は文字抽出のみで、対応関係を画像で確認できていない。"
+    },
+    "anacafe-cifras-2018-2019": {
+      "title": "Guatemala Café en Cifras 2018-2019",
+      "org": "Asociación Nacional del Café (Anacafé)",
+      "url": "https://www.anacafe.org/uploads/file/cd2552c54b3a4616b0e82ae14c7db79a/GuatemalaCafeenCifras-2018-2019.pdf",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": ""
+    },
+    "mapa-in8-2003": {
+      "title": "Instrução Normativa nº 8, de 11 de junho de 2003 (Regulamento Técnico de Identidade e de Qualidade para a Classificação do Café Beneficiado Grão Cru)",
+      "org": "Ministério da Agricultura, Pecuária e Abastecimento (Brasil)",
+      "url": "https://sistemasweb.agricultura.gov.br/sislegis/action/detalhaAto.do?method=recuperarTextoAtoTematicaPortal&codigoTematica=1229303",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": "2003年の原文。その後の改正・廃止は未確認。"
+    },
+    "fnc-cafe-verde-archive": {
+      "title": "Verde: Craft (Cafés especiales) / Tipos de Café Verde(ウェイバックの保存コピー)",
+      "org": "Federación Nacional de Cafeteros de Colombia",
+      "url": "https://federaciondecafeteros.org/cafe-verde/",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": "FNC直接のURLは接続エラー(000)。https://web.archive.org/web/2025/https://federaciondecafeteros.org/cafe-verde/ の保存コピーを読んだ。"
+    },
+    "jis-jacra-traceability": {
+      "title": "JACRA to Implement Cutting-Edge Traceability and Regulatory Platform This Year",
+      "org": "Jamaica Information Service (JIS)",
+      "url": "https://jis.gov.jm/jacra-to-implement-cutting-edge-traceability-and-regulatory-platform-this-year/",
+      "kind": "secondary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": "政府広報の記事(規則・規格の原文ではない)。"
+    },
+    "bluemountaincoffee-com-jm": {
+      "title": "The Cultivation Process (Blue Mountain Coffee, 販売業者サイト)",
+      "org": "bluemountaincoffee.com.jm(販売業者)",
+      "url": "https://bluemountaincoffee.com.jm/the-cultivation-process/",
+      "kind": "secondary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": "小売・販売業者のサイト。根拠にしない。"
+    },
+    "jacra-site": {
+      "title": "JACRA(ジャマイカ農産物規制庁)公式サイト",
+      "org": "Jamaica Agricultural Commodities Regulatory Authority",
+      "url": "https://jacra.gov.jm",
+      "kind": "primary",
+      "readMethod": "failed",
+      "accessed": "2026-11-09",
+      "note": "接続エラー(000)"
+    },
+    "jm-coffee-industry-regulation-act-regs": {
+      "title": "The Coffee Industry Regulation Act (sub leg) 規則",
+      "org": "Government of Jamaica (laws.moj.gov.jm)",
+      "url": "https://laws.moj.gov.jm/legislation/subsids/C/The%20Coffee%20Industry%20Regulation%20Act%20(sub%20leg).pdf",
+      "kind": "primary",
+      "readMethod": "failed",
+      "accessed": "2026-11-09",
+      "note": "HTTP 503(2回再試行)"
+    },
+    "kenyalaw-coffee-general-regs-2016": {
+      "title": "The Coffee (General) Regulations, 2016 (LN 120/2016)",
+      "org": "Kenya Law",
+      "url": "https://new.kenyalaw.org/akn/ke/act/ln/2016/120/eng@2022-12-31",
+      "kind": "primary",
+      "readMethod": "failed",
+      "accessed": "2026-11-09",
+      "note": "HTTP 202、本文が空(複数回再試行)"
+    },
+    "bsn-sni-01-2907-2008": {
+      "title": "SNI 01-2907-2008 Biji kopi (原文)",
+      "org": "Badan Standardisasi Nasional (BSN)",
+      "url": "https://www.bsn.go.id",
+      "kind": "primary",
+      "readMethod": "failed",
+      "accessed": "2026-11-09",
+      "note": "原文は取得できず。repository.pertanian.go.id は接続エラー(000)、bali.brmp.pertanian.go.id は403"
+    },
+    "fnc-circular-007-2025": {
+      "title": "FNC 通達第007号(2025年12月15日)",
+      "org": "Federación Nacional de Cafeteros de Colombia",
+      "url": "https://federaciondecafeteros.org/wp-content/uploads/2026/02/CIRCULAR-N%C2%B0-007-FRC25I00014-DEL-15-DE-DICIEMBRE-DE-2025-2-3.pdf",
+      "kind": "primary",
+      "readMethod": "failed",
+      "accessed": "2026-11-09",
+      "note": "接続エラー(000)(ウェイバック経由は429)"
+    },
+    "ecx-direct": {
+      "title": "ECX Coffee Contracts(ECX直接URL)",
+      "org": "Ethiopia Commodity Exchange",
+      "url": "http://www.ecx.com.et/Pages/downloads/contracts/Coffee/CoffeeContracts.pdf",
+      "kind": "primary",
+      "readMethod": "failed",
+      "accessed": "2026-11-09",
+      "note": "接続エラー(000)。ウェイバックの保存コピーで代用して読んだ(ecx-coffee-contracts-2010)"
+    }
+  },
+  "entries": {
+    "variety:ティピカ系統": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "エチオピア原産のコーヒー(の種子)がイエメンに渡り、そこから世界に広がった",
+          "status": "verified",
+          "sourceIds": [
+            "wcr-history-of-arabica"
+          ],
+          "quote": "Historians believe that coffee seeds were first taken from the coffee forests of Southwestern Ethiopia to Yemen, where it was cultivated as a crop.",
+          "location": "History of Arabica 冒頭",
+          "note": "WCRは「歴史家は〜と考えている」と推定として書く。アプリは断定。"
+        },
+        {
+          "text": "ティピカはイエメンの種子がインド・ジャワ島(オランダ)を経て広がった系統",
+          "status": "verified",
+          "sourceIds": [
+            "wcr-history-of-arabica"
+          ],
+          "quote": "The Typica branch likely separated from Bourbon when the Dutch sent seeds in 1696 and 1699 from Malabar coast of India to Batavia",
+          "location": "History of Arabica / The Typica lineage",
+          "note": "アプリ本文は経路に触れていない。WCRは「イエメンから直接ではなく、インド経由でジャワ島に渡った」と書く。"
+        },
+        {
+          "text": "ティピカ系統は「最も古い系統のひとつ」",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "WCRに「最も古い」という記述はない。"
+        },
+        {
+          "text": "ティピカ系統はブルボンと並び「ほぼ全ての栽培品種の祖先」にあたる",
+          "status": "incorrect",
+          "sourceIds": [
+            "wcr-history-of-arabica"
+          ],
+          "quote": "forming the basis of most modern arabica coffee cultivation.",
+          "location": "History of Arabica 第2段落",
+          "note": "WCRは「現代のアラビカ栽培の大半(most)の基礎」。「ほぼ全て」は言い過ぎ。"
+        },
+        {
+          "text": "ティピカは収量が少なく病害に弱い",
+          "status": "verified",
+          "sourceIds": [
+            "wcr-typica"
+          ],
+          "quote": "It is a tall variety characterized by very low production, susceptibility to the major diseases, and good cup quality.",
+          "location": "Typica / History",
+          "note": ""
+        },
+        {
+          "text": "ティピカは上品な酸味とクリーンな味わいで根強い評価がある",
+          "status": "unverified",
+          "sourceIds": [
+            "wcr-typica"
+          ],
+          "quote": "",
+          "location": "",
+          "note": "WCRは「good cup quality」とだけ書く。酸味・クリーンさの記述なし。"
+        },
+        {
+          "text": "tagline「コーヒーの原点」「上品でクリーンな味わい」",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "WCRに該当する表現なし。「収量は少ない」の部分のみ上の主張で確認。"
+        },
+        {
+          "text": "Pache(パチェ)はティピカの自然変異種(系統に含める)",
+          "status": "verified",
+          "sourceIds": [
+            "wcr-pache"
+          ],
+          "quote": "A natural mutation of Typica.",
+          "location": "Pache / Lineage",
+          "note": ""
+        },
+        {
+          "text": "Kent(ケント)をティピカ系統に含める",
+          "status": "incorrect",
+          "sourceIds": [
+            "wcr-history-of-arabica"
+          ],
+          "quote": "Recent DNA fingerprinting has shown that old Indian varieties known as Coorg and Kent are related to the Bourbon-descended varieties.",
+          "location": "History of Arabica / The Bourbon lineage",
+          "note": "WCRはKentをブルボン由来の品種と近縁と書く。ケントのカタログページはない。"
+        },
+        {
+          "text": "Java(ジャバ)をティピカ系統に含める",
+          "status": "incorrect",
+          "sourceIds": [
+            "wcr-java"
+          ],
+          "quote": "genetic fingerprinting of molecular markers has revealed that Java is a selection from an Ethiopian landrace population called Abysinia.",
+          "location": "Java / History",
+          "note": "WCRの遺伝グループは「Ethiopian landrace」。かつてはTypicaの選抜と考えられていた(\"It was originally thought to be a Typica selection.\")。"
+        }
+      ],
+      "suggestedText": "tagline: 収量は少ないが、カップ品質の良い系統\nvarieties: Typica(ティピカ)、Pache(パチェ)\nnote: エチオピア原産のコーヒーが、イエメン、インド、ジャワ島(オランダ経由)を経て世界に広がった系統。ブルボン系統とともに、現代のアラビカ種栽培の大半の基礎になっている。収量が非常に少なく、主要な病害に弱いが、カップ品質は良いとされる。(Kent・Javaは除く。Kentはブルボン由来の品種と近縁、Javaはエチオピア在来種の選抜)",
+      "note": "Kent・Javaの分類は、WCRとアプリで食い違う(WCRはカタログページなし/Ethiopian landrace)。 英訳(src/data/en/guides.js または src/i18n/en.js)は日本語と同じ主張で、食い違いなし。"
+    },
+    "variety:ブルボン系統": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "ブルボンはレユニオン島(旧ブルボン島)で発見されたティピカの自然変異種",
+          "status": "incorrect",
+          "sourceIds": [
+            "wcr-history-of-arabica",
+            "wcr-bourbon"
+          ],
+          "quote": "Seeds were also introduced from Yemen to the island of Bourbon, which gave rise to the",
+          "location": "History of Arabica / Bourbon and Typica Group",
+          "note": "WCRは、BourbonとTypicaはイエメンから別々の経路で広がった2つの遺伝グループと書く。ブルボンはイエメンの種子をブルボン島に持ち込んだもの(フランス人宣教師が18世紀初め)で、「ティピカの変異種」「島で発見された」とは書かない。"
+        },
+        {
+          "text": "レユニオン島(旧ブルボン島)にイエメンから導入され、島の名が品種名の由来",
+          "status": "verified",
+          "sourceIds": [
+            "wcr-bourbon"
+          ],
+          "quote": "French missionaries introduced Bourbon from Yemen to Bourbon Island (now La Réunion)—giving it the name it has today—in the early 1700s.",
+          "location": "Bourbon / History",
+          "note": ""
+        },
+        {
+          "text": "ブルボンはティピカよりコクと甘みが強い",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "WCRにコク・甘みの比較なし(Bourbonは\"excellent cup quality\"と記載)。"
+        },
+        {
+          "text": "ブルボンの収量はティピカより比較的多い",
+          "status": "verified",
+          "sourceIds": [
+            "wcr-typica",
+            "wcr-bourbon"
+          ],
+          "quote": "For reference, Caturra, Bourbon, and K 7 = Medium, and SL 28 = Low",
+          "location": "Typica / Yield Potential (Typica=Low), Bourbon / Yield Potential (Medium)",
+          "note": "WCRのYield Potential欄は、Typica=Low、Bourbon=Medium。ただしBourbonの履歴文は「relatively low production」とも書く。"
+        },
+        {
+          "text": "SL28はケニアで選抜された品種(ブルボン系の遺伝背景)",
+          "status": "verified",
+          "sourceIds": [
+            "wcr-sl28"
+          ],
+          "quote": "SL28 was selected in 1935 from a single tree in a population called Tanganyika Drought Resistant.",
+          "location": "SL28 / History; Lineage: Bourbon-like genetic background.",
+          "note": "「変異選抜」ではなく、タンガニイカの干ばつ耐性集団の1本からの選抜。"
+        },
+        {
+          "text": "SL34をブルボン系統に含める",
+          "status": "incorrect",
+          "sourceIds": [
+            "wcr-sl34"
+          ],
+          "quote": "recent genetic tests have indicated that SL34 is related to the Typica genetic group.",
+          "location": "SL34 / History; Lineage: Typica-like genetic background.",
+          "note": "WCRの遺伝背景はTypica-like。「French Mission(=ブルボンと一般に理解)」由来という話が誤りの可能性があるとも書く。"
+        },
+        {
+          "text": "SL28・SL34は黒すぐりのような風味で知られる",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "WCRに該当する風味の記述なし(SL34は\"Exceptional cup quality\")。"
+        },
+        {
+          "text": "エルサルバドルのPacasはブルボンの変異",
+          "status": "verified",
+          "sourceIds": [
+            "wcr-pacas"
+          ],
+          "quote": "Pacas is a natural mutation of Bourbon",
+          "location": "Pacas / History",
+          "note": ""
+        },
+        {
+          "text": "コスタリカのVilla Sarchiはブルボンの変異",
+          "status": "verified",
+          "sourceIds": [
+            "wcr-villa-sarchi"
+          ],
+          "quote": "Villa Sarchi (also called La Luisa or Villalobos Bourbon) is a natural mutation of a Bourbon population",
+          "location": "Villa Sarchi / History",
+          "note": ""
+        },
+        {
+          "text": "各国で独自の変異選抜が進んだ(ケニア・エルサルバドル・コスタリカ)",
+          "status": "verified",
+          "sourceIds": [
+            "wcr-pacas",
+            "wcr-villa-sarchi",
+            "wcr-sl28"
+          ],
+          "quote": "In 1960, the Salvadoran Institute for Coffee Research (ISIC) began a program of pedigree selection",
+          "location": "Pacas / History",
+          "note": "Villa Sarchiもコスタリカでpedigree selection。SL28は変異ではなく選抜。"
+        },
+        {
+          "text": "tagline「ティピカより甘みが強く、バランスの良い味わい」",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "WCRに該当する記述なし。"
+        }
+      ],
+      "suggestedText": "tagline: (味の比較は根拠なしのため削除)イエメンから伝わり、ティピカ系統とは別の系統として世界に広がったアラビカ種\nnote: ブルボンは、フランス人宣教師が18世紀初めにイエメンからブルボン島(現レユニオン島)に持ち込んだ品種。ティピカとは別の遺伝グループとして世界に広がった。ブルボンの突然変異として、エルサルバドルのPacas、コスタリカのVilla Sarchiが知られる。ケニアのSL28はブルボンに近い遺伝背景を持つ品種で、タンガニイカ干ばつ耐性集団の1本から選抜された。SL34はティピカに近い遺伝背景を持つとされる。",
+      "note": "SL34の系統、「変異種」「コク・甘み」「黒すぐり」の記述はアプリの修正が必要。 英訳(src/data/en/guides.js または src/i18n/en.js)は日本語と同じ主張で、食い違いなし。"
+    },
+    "variety:カトゥーラ/カトゥアイ系統": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "Caturraはブルボンの突然変異",
+          "status": "verified",
+          "sourceIds": [
+            "wcr-caturra"
+          ],
+          "quote": "Caturra is a natural mutation of the Bourbon variety.",
+          "location": "Caturra / History",
+          "note": ""
+        },
+        {
+          "text": "Caturraは樹高が低くコンパクト",
+          "status": "verified",
+          "sourceIds": [
+            "wcr-caturra"
+          ],
+          "quote": "Caturra has a single-gene mutation that causes the plant to grow smaller (called Dwarf/Compactism).",
+          "location": "Caturra / History",
+          "note": ""
+        },
+        {
+          "text": "Caturraは収量が多い",
+          "status": "verified",
+          "sourceIds": [
+            "wcr-caturra"
+          ],
+          "quote": "A compact plant with good yielding potential of standard quality in Central America.",
+          "location": "Caturra / 冒頭の要約",
+          "note": "WCRは「good yielding potential」。"
+        },
+        {
+          "text": "CatuaiはMundo NovoとCaturraの人工交配種",
+          "status": "verified",
+          "sourceIds": [
+            "wcr-catuai"
+          ],
+          "quote": "A cross between highly productive Mundo Novo and compact Caturra, made by the Instituto Agronomico (IAC) of Sao Paulo State in Campinas, Brazil.",
+          "location": "Catuai / History",
+          "note": ""
+        },
+        {
+          "text": "Mundo Novoはティピカとブルボンの自然交配",
+          "status": "verified",
+          "sourceIds": [
+            "wcr-mundo-novo"
+          ],
+          "quote": "Mundo Novo is the result of a natural cross between the Bourbon and Typica varieties",
+          "location": "Mundo Novo / History",
+          "note": ""
+        },
+        {
+          "text": "Catuaiはブラジルで広く栽培される",
+          "status": "verified",
+          "sourceIds": [
+            "wcr-catuai"
+          ],
+          "quote": "is in wide cultivation there.",
+          "location": "Catuai / History",
+          "note": "文脈はブラジル(\"released in Brazil 1972 ... and is in wide cultivation there\")。"
+        },
+        {
+          "text": "Maragogypeは豆が非常に大きい変異種",
+          "status": "verified",
+          "sourceIds": [
+            "wcr-maragogipe"
+          ],
+          "quote": "The mutation causes the beans, internode spacing and leaves to be especially large",
+          "location": "Maragogipe / History",
+          "note": "ティピカの自然変異(\"A natural mutation of Typica\")。"
+        },
+        {
+          "text": "Maragogypeは収量が少ない",
+          "status": "verified",
+          "sourceIds": [
+            "wcr-maragogipe"
+          ],
+          "quote": "Very low yielding, large leaves and large internodes.",
+          "location": "Maragogipe / 冒頭の要約",
+          "note": ""
+        },
+        {
+          "text": "PacamaraはPacasとMaragogypeの交配種",
+          "status": "verified",
+          "sourceIds": [
+            "wcr-pacamara"
+          ],
+          "quote": "Originated from a cross between Pacas and Maragogipe",
+          "location": "Pacamara / History",
+          "note": ""
+        },
+        {
+          "text": "Pacamaraは大粒で複雑な風味が出やすい",
+          "status": "unverified",
+          "sourceIds": [
+            "wcr-pacamara"
+          ],
+          "quote": "",
+          "location": "",
+          "note": "WCRの豆の大きさはVery Large、カップは\"Capable of producing exceptional cup quality\"。「複雑な風味」の記述はなし。「大粒」のみ確認(Bean Size欄=Very Large、引用可能な文はなし)。"
+        },
+        {
+          "text": "PacamaraはエルサルバドルのCOEで高評価を得ることが多い",
+          "status": "verified",
+          "sourceIds": [
+            "wcr-pacamara"
+          ],
+          "quote": "Grown primarily in El Salvador, where it is frequently dominates Cup of Excellence competitions for high cup quality.",
+          "location": "Pacamara / History",
+          "note": ""
+        },
+        {
+          "text": "tagline「コンパクトな樹形で収量が多く、生産性重視の系統」(系統全体)",
+          "status": "incorrect",
+          "sourceIds": [
+            "wcr-mundo-novo",
+            "wcr-maragogipe"
+          ],
+          "quote": "The plant is characterized by its very tall stature.",
+          "location": "Mundo Novo / History",
+          "note": "Mundo Novoは「very tall stature」、Maragogipeは「Very low yielding」。リストの品種に当てはまらないものがある(Caturra/Catuai/Pacamaraの一部のみ)。"
+        }
+      ],
+      "suggestedText": "note: Caturraはブルボンの自然突然変異で、樹高が低くコンパクトな品種。収量の見込みが高い。CatuaiはMundo Novo(ブルボンとティピカの自然交配)とCaturraを掛け合わせたブラジル農業研究所(IAC)作出の品種で、ブラジルで広く栽培される。Maragogype(Maragogipe)はティピカの自然突然変異で、豆が非常に大きく収量は非常に少ない。PacamaraはPacasとMaragogipeの交配種で、エルサルバドルのカップ・オブ・エクセレンスでよく上位を占める。(tagline: 樹形・収量の記述は系統全体に当てはまらないため要修正。Mundo Novoは樹高が非常に高い)",
+      "note": "Pacamaraの「複雑な風味」は根拠なし。 英訳(src/data/en/guides.js または src/i18n/en.js)は日本語と同じ主張で、食い違いなし。"
+    },
+    "variety:サルチモール/カティモール系統": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "ティモール・ハイブリッドはアラビカ種とロブスタ種の自然交配種",
+          "status": "verified",
+          "sourceIds": [
+            "wcr-t5296"
+          ],
+          "quote": "Timor Hybrid is a natural cross between C. arabica and C. canephora (Robusta) that appeared spontaneously on the island of Timor in 1920s.",
+          "location": "T5296 / History",
+          "note": "C. canephora=ロブスタ。"
+        },
+        {
+          "text": "ティモール・ハイブリッドを親に持つ、コーヒーサビ病への耐性を持たせた交配品種群(カティモール・サルチモール)",
+          "status": "verified",
+          "sourceIds": [
+            "wcr-history-of-arabica"
+          ],
+          "quote": "These crosses (Timor Hybrid x Caturra, and Timor Hybrid x Villa Sarchi) led to the creation of the two main groups of introgressed Arabica varieties: Catimors and Sarchimors.",
+          "location": "History of Arabica / Introgressed (Catimor/Sarchimor)",
+          "note": "CatimorとSarchimorは単一品種ではなく、親が似た多数の品種の群(\"neither Catimors nor Sarchimors are themselves distinct varieties\")。"
+        },
+        {
+          "text": "コーヒーサビ病は葉に発生する深刻な病害",
+          "status": "verified",
+          "sourceIds": [
+            "wcr-typica"
+          ],
+          "quote": "Coffee rust is a foliar disease of coffee caused by the fungus Hemileia vastatrix that causes defoliation and may result in severe crop losses.",
+          "location": "Typica / Coffee leaf rust 欄",
+          "note": ""
+        },
+        {
+          "text": "Marsellesaはティモール・ハイブリッドとVilla Sarchiの交配から選抜された",
+          "status": "verified",
+          "sourceIds": [
+            "wcr-marsellesa"
+          ],
+          "quote": "Timor Hybrid 832/2 x Villa Sarchi CIFC 971/10",
+          "location": "Marsellesa / History",
+          "note": "選抜は\"Pedigree selection made by ECOM-CIRAD in Nicaragua\"。"
+        },
+        {
+          "text": "Marsellesaは2009年公開",
+          "status": "verified",
+          "sourceIds": [
+            "wcr-marsellesa"
+          ],
+          "quote": "It was released in 2009.",
+          "location": "Marsellesa / History",
+          "note": ""
+        },
+        {
+          "text": "Ruiru 11はティモール・ハイブリッド由来の血統を持つ(Catimorを母親に持つ)",
+          "status": "verified",
+          "sourceIds": [
+            "wcr-ruiru11"
+          ],
+          "quote": "Catimor (female parent) x multicross selection involving K7, SL28, N39, Rume Sudan, among others (male parent).",
+          "location": "Ruiru 11 / Lineage",
+          "note": "WCRの分類はF1 hybrid (introgressed)。CBD耐性の由来にTimor Hybrid lines(\"coming from Rume Sudan, Timor Hybrid lines, and K7\")。"
+        },
+        {
+          "text": "Batianはティモール・ハイブリッドを親に持つ",
+          "status": "verified",
+          "sourceIds": [
+            "wcr-batian"
+          ],
+          "quote": "Composite variety containing parentage from: SL28, SL34, Rume Sudan, N39, K7, SL4 and the Timor Hybrid.",
+          "location": "Batian / Lineage",
+          "note": "WCRの分類は「Introgressed (Other)」でCatimor/Sarchimorには含めていない。"
+        },
+        {
+          "text": "Parainemaはサルチモール系(T5296の選抜)",
+          "status": "verified",
+          "sourceIds": [
+            "wcr-parainema"
+          ],
+          "quote": "Pedigree selection of [T5296] (/varieties/t5296), made by Instituto Hondureño del Café (IHCAFE); released in 2004.",
+          "location": "Parainema / History",
+          "note": "WCRの分類は「Introgressed (Sarchimor related)」。"
+        },
+        {
+          "text": "カップ品質は伝統的なブルボン・ティピカ系統に劣るとされてきた",
+          "status": "verified",
+          "sourceIds": [
+            "wcr-history-of-arabica"
+          ],
+          "quote": "These varieties have traditionally been associated with lower cup quality than others",
+          "location": "History of Arabica / Introgressed",
+          "note": "WCRは「他の品種より」と書く(ブルボン・ティピカに限定していない)。"
+        },
+        {
+          "text": "育種の進化により品質改善が進んでいる",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "WCRに該当する記述は見つからない。"
+        },
+        {
+          "text": "気候変動による病害リスクの高まりで栽培面積が拡大している",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "WCRに栽培面積拡大の記述なし。WCRはむしろ「サビ病耐性の崩壊が各地で進んでいる」と書く(\"the breakdown of rust resistance is accelerating in many parts of the world\")。"
+        }
+      ],
+      "suggestedText": "note: ティモール・ハイブリッド(アラビカ種とロブスタ種が1920年代に東ティモール島で自然交配して生まれた品種)を親に持つ、コーヒーサビ病(葉に発生し、収量に大きな損失を与えうる病害)への耐性を持たせた交配品種群。CaturraとTimor Hybridの交配がカティモール、Villa SarchiとTimor Hybridの交配がサルチモール。Marsellesaはサルチモール系で、Timor Hybrid 832/2とVilla Sarchiの交配から選抜された(2009年公開)。WCRは、これらの品種は従来、他の品種より低いカップ品質と結びつけられてきたと書く。(Ruiru 11・Batianはティモール・ハイブリッドを親にもつが、WCRはカティモール/サルチモールには分類していない)",
+      "note": "「品質改善」「栽培面積の拡大」は根拠なしのため削除。 英訳(src/data/en/guides.js または src/i18n/en.js)は日本語と同じ主張で、食い違いなし。"
+    },
+    "variety:特殊・高付加価値品種": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "Geisha(ゲイシャ)はエチオピア原産",
+          "status": "verified",
+          "sourceIds": [
+            "wcr-geisha"
+          ],
+          "quote": "This variety was originally collected from coffee forests in Ethiopia in the 1930s.",
+          "location": "Geisha (Panama) / History",
+          "note": ""
+        },
+        {
+          "text": "パナマで栽培されたゲイシャがオークションで当時の最高価格を記録して有名になった",
+          "status": "verified",
+          "sourceIds": [
+            "wcr-geisha"
+          ],
+          "quote": "The coffee came to prominence in 2005 when the Peterson family of Boquete, Panama, entered it into the \"Best of Panama\" competition and auction.",
+          "location": "Geisha (Panama) / History",
+          "note": "WCRは「then-record for green coffee auction prices, selling for over $20/pound」(2005年)。「史上最高クラス」は現在の記録ではなく当時の記録。"
+        },
+        {
+          "text": "その農園が「Hacienda La Esmeralda等」",
+          "status": "unverified",
+          "sourceIds": [
+            "wcr-geisha"
+          ],
+          "quote": "",
+          "location": "",
+          "note": "WCRはPeterson family of Boquete(ボケテ)としか書かない。農園名の記述なし。"
+        },
+        {
+          "text": "ゲイシャはジャスミンやベルガモットを思わせる華やかな香り",
+          "status": "unverified",
+          "sourceIds": [
+            "wcr-geisha"
+          ],
+          "quote": "is known for its delicate floral, jasmine, and peach-like aromas.",
+          "location": "Geisha (Panama) / History",
+          "note": "ジャスミンはWCRで確認。ベルガモットの記述はなし(WCRは桃のような香り)。"
+        },
+        {
+          "text": "Starmayaは近年開発されたF1ハイブリッド",
+          "status": "verified",
+          "sourceIds": [
+            "wcr-starmaya"
+          ],
+          "quote": "A first-generation (F1) hybrid originating from a cross between Marsellesa and a male-sterile Ethiopian or Sudanese landrace variety.",
+          "location": "Starmaya / History",
+          "note": "「近年」の根拠は\"F1 hybrid varieties are still relatively new in coffee agriculture\"(WCR)。"
+        },
+        {
+          "text": "Starmayaは種子で増やせる",
+          "status": "verified",
+          "sourceIds": [
+            "wcr-starmaya"
+          ],
+          "quote": "So far, Starmaya is the only F1 hybrid in the world that professional seed producers can propagate by seed, rather than through costly biotechnology.",
+          "location": "Starmaya / History",
+          "note": ""
+        },
+        {
+          "text": "F1ハイブリッドは高い生産性と品質の両立を目指す",
+          "status": "verified",
+          "sourceIds": [
+            "wcr-history-of-arabica"
+          ],
+          "quote": "created to combine the best characteristics of the two parents, including high cup quality, high yield, and disease resist",
+          "location": "History of Arabica / F1 Hybrid",
+          "note": "WCRはF1ハイブリッド全般の説明。"
+        },
+        {
+          "text": "Heirloomはエチオピアで伝統的に栽培されてきた無数の在来種の総称で、単一の品種名ではない",
+          "status": "unverified",
+          "sourceIds": [
+            "wcr-history-of-arabica"
+          ],
+          "quote": "",
+          "location": "",
+          "note": "WCRは「Ethiopian Landrace」を在来の栽培品種(\"most landrace varieties originate from the forests of Ethiopia\")と説明するが、「Heirloom」という語の定義はなし。"
+        },
+        {
+          "text": "tagline「ジャスミンやベルガモットを思わせる、突出した華やかさ」(Geisha以外にも当てはまるか)",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "Starmaya・Heirloomの風味ではない。Starmayaは\"Notably high acidity in the cup\"。"
+        }
+      ],
+      "suggestedText": "note: Geisha(ゲイシャ)は、1930年代にエチオピアの森林で採取された品種。2005年に、パナマ・ボケテのPeterson家が「Best of Panama」に出品し、当時の生豆オークション最高価格(1ポンド20ドル超)を記録して有名になった。繊細な花、ジャスミン、桃のような香りで知られる。Starmayaは、Marsellesaとエチオピア/スーダン系の雄性不稔の在来種を掛け合わせたF1ハイブリッドで、種子で増やせる点が世界で唯一とWCRは書く。",
+      "note": "Hacienda La Esmeralda・ベルガモット・Heirloomの定義は未確認(別資料で追う場合は農園公式サイト等)。 英訳(src/data/en/guides.js または src/i18n/en.js)は日本語と同じ主張で、食い違いなし。"
+    },
+    "processing:ハニー": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "ハニーは果肉除去のみ行う(パルプトナチュラルの一種)",
+          "status": "verified",
+          "sourceIds": [
+            "sca-25-issue6-mucilage-removers"
+          ],
+          "quote": "Red and yellow honey coffees, a pulped natural dried with less than all the mucilage attached to parchment",
+          "location": "25 Magazine Issue 6 / 後半",
+          "note": "SCA機関誌の記述。レッド/イエローハニーは「一部」のミューシレージを残し、ブラックハニーは「全て」を残す。"
+        },
+        {
+          "text": "ミューシレージを残したまま乾燥させる",
+          "status": "verified",
+          "sourceIds": [
+            "sca-25-issue6-mucilage-removers"
+          ],
+          "quote": "Pulped natural coffee that dries with all mucilage attached to parchment, also known as black honey",
+          "location": "25 Magazine Issue 6 / 後半",
+          "note": "アプリは「残したまま」と書くが、SCAは残す量が一部(レッド・イエロー)か全部(ブラック)かで区別。"
+        },
+        {
+          "text": "ハニーはウォッシュドとナチュラルの混成(ハイブリッド)的な方法",
+          "status": "verified",
+          "sourceIds": [
+            "sca-25-issue10-fermentation-effect"
+          ],
+          "quote": "many hybrid or novel methods also have gained popularity in the coffee production regions, such as the well-known pulped honey process",
+          "location": "25 Magazine Issue 10 / 序盤",
+          "note": "SCAは\"hybrid or novel methods\"の例としてpulped honeyを挙げる。"
+        },
+        {
+          "text": "風味・性質がウォッシュドとナチュラルの中間",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "SCA/ICOに風味の中間性を述べる記述は見つからない。"
+        }
+      ],
+      "suggestedText": "果肉を除去したあと、ミューシレージ(粘液質)を一部または全部残したまま、パーチメント(殻)の状態で乾燥させる方法(パルプトナチュラル)。残すミューシレージの量でレッド・イエロー・ブラックハニーなどに分けられる。ウォッシュドとナチュラルの混成(ハイブリッド)的な方法のひとつ。",
+      "note": "「中間的な性質」は風味の話としては根拠なし。 英訳(src/data/en/guides.js または src/i18n/en.js)は日本語と同じ主張で、食い違いなし。"
+    },
+    "processing:ウォッシュド": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "果肉除去→水中で発酵→ミューシレージ除去→水洗い→乾燥という工程",
+          "status": "verified",
+          "sourceIds": [
+            "sca-25-issue10-fermentation-effect"
+          ],
+          "quote": "During basic wet processing, fresh coffee cherries have their pulp removed (depulping) and submerged under water (fermentation). Afterwards, the fermentation tank is drained, and the fermented beans are cleaned with water to remove any remnant mucilage (washing).",
+          "location": "25 Magazine Issue 10 / Different Processes Accumulate...",
+          "note": "乾燥は同記事の次の文(\"After washing or soaking, the beans are dried during a drying step.\")。ICO ED2050/08もwet methodを\"pulping, fermentation to remove mucilage, drying and hulling\"と書く。"
+        },
+        {
+          "text": "クリーンで明瞭な酸味が特徴",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "SCA/ICOに該当する記述なし。"
+        },
+        {
+          "text": "雑味が少ない",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "SCA/ICOに該当する記述なし。SCA機関誌は発酵時間が長いと「果実様・花様の揮発成分が増える」とし、洗浄・浸漬は発酵由来の代謝物を減らすと書く。"
+        }
+      ],
+      "suggestedText": "果肉を除去し、水槽の水中で発酵させたあと、水洗いでミューシレージ(粘液質)を取り除き、乾燥させる工程(ウェット方式)。",
+      "note": "風味の記述(クリーン・明瞭な酸味・雑味が少ない)は削除が必要。 英訳(src/data/en/guides.js または src/i18n/en.js)は日本語と同じ主張で、食い違いなし。"
+    },
+    "processing:ナチュラル": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "チェリー(果実)のまま乾燥させる",
+          "status": "verified",
+          "sourceIds": [
+            "ico-data-concepts-2021",
+            "sca-coffee-decoded-20"
+          ],
+          "quote": "Dry processed coffee is green coffee that has been dried in the whole cherry.",
+          "location": "ICO sc-105e / Method of Processing",
+          "note": "SCA Coffee Decodedも\"a coffee picked and dried entirely in its fruit, without a depulping or washing stage\"。"
+        },
+        {
+          "text": "天日乾燥させる",
+          "status": "verified",
+          "sourceIds": [
+            "ico-ed2050-2008"
+          ],
+          "quote": "In the dry method the harvested berries are placed on racks to dry in the sun for some three weeks, following which hulling can take place.",
+          "location": "ICO ED 2050/08 para.3",
+          "note": "ICOは「ラックに広げて天日で約3週間」と書く(2008年)。"
+        },
+        {
+          "text": "機械乾燥でも乾燥させる",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "ICO/SCAで機械乾燥への言及を確認できていない(SCAはdrying tables or patios)。"
+        },
+        {
+          "text": "乾燥のあと、まとめて脱穀(ハルリング)する",
+          "status": "verified",
+          "sourceIds": [
+            "sca-coffee-decoded-20"
+          ],
+          "quote": "as they dry thoroughly before hulling and roasting.",
+          "location": "SCA Coffee Decoded 第1段落",
+          "note": "ICOも\"following which hulling can take place\"。"
+        },
+        {
+          "text": "フルーティになりやすい",
+          "status": "verified",
+          "sourceIds": [
+            "sca-coffee-decoded-20"
+          ],
+          "quote": "Mysteriously, not all fruit-dried coffees taste this way.",
+          "location": "SCA Coffee Decoded",
+          "note": "SCAは、ブルーベリーやイチゴのようなフルーティな風味が記憶に残る例が多いが、全てのナチュラルがそうなるわけではないと書く。"
+        },
+        {
+          "text": "甘みが強い",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "該当する記述なし。"
+        },
+        {
+          "text": "個性が出やすい",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "該当する記述なし(「全てのナチュラルがフルーティではない」との記述はある)。"
+        }
+      ],
+      "suggestedText": "コーヒーチェリー(果実)のまま、果肉を取らずに乾燥させ、乾燥後に脱穀(ハルリング)する方法(ドライ方式)。ICOは「ラックに広げて天日で乾燥させる」と書く。SCAは、ブルーベリーやイチゴのようなフルーティな風味が出ることがあるが、全てのナチュラルがそうなるわけではないと書く。",
+      "note": "「甘みが強い」「個性が出やすい」は根拠なし。「機械乾燥」は未確認。 英訳(src/data/en/guides.js または src/i18n/en.js)は日本語と同じ主張で、食い違いなし。"
+    },
+    "processing:ウェットハルド": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "パーチメント(殻付き)を湿ったまま脱殻し、その後に生豆を乾燥させる2段階の方式",
+          "status": "verified",
+          "sourceIds": [
+            "iccri-mawardi-ico-2008"
+          ],
+          "quote": "typically the parchment removal is done when the bean still moist with moisture content at about 30 – 35 %. After the wet hulling the green beans are continued for sun drying until 12 – 13 % of moisture content.",
+          "location": "ICCRI(Mawardi)ICOセミナー資料 Slide 5",
+          "note": "ICCRIは北スマトラのMandheling(伝統的なsemi washed)の工程として記述。"
+        },
+        {
+          "text": "高い含水率の状態で脱穀する(30〜35%程度、または35〜45%)",
+          "status": "verified",
+          "sourceIds": [
+            "iccri-mawardi-ico-2008",
+            "fao-cfc-annex-e6"
+          ],
+          "quote": "parchment o f 35-45% m.c.",
+          "location": "FAO Annex E.6 / p.2(huller改造の説明)",
+          "note": "ICCRI: 約30〜35%。FAO: 35〜45%のパーチメントを脱殻できるよう改造したhuller。脱穀の対象は「生豆」ではなくパーチメント。"
+        },
+        {
+          "text": "インドネシア特有",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "ICCRI/FAOは北スマトラ(Mandheling)の伝統的な方法として記述。他国との比較・「特有」とする記述は確認できていない。"
+        },
+        {
+          "text": "(この方法で)重厚なボディと土っぽい風味が生まれる",
+          "status": "unverified",
+          "sourceIds": [
+            "fao-cfc-annex-e6"
+          ],
+          "quote": "The origins of the Mandheling character are not understood .",
+          "location": "FAO Annex E.6 / Abstract",
+          "note": "FAOはMandhelingを\"spicy flavour, complex, earthy body and low acidity\"と記述するが、その特徴の由来は「理解されていない」とし、湿潤パーチメント保管の影響は明確でないとする。ウェットハルドが原因とは書かれていない。"
+        }
+      ],
+      "suggestedText": "主にインドネシア・北スマトラの伝統的な方法(セミウォッシュド)で、パーチメント(殻付き)を、含水率がまだ高い(ICCRIは約30〜35%、FAOは35〜45%としている)うちに脱殻し、その後、生豆の状態で天日乾燥を続けて含水率12〜13%程度にする方式。",
+      "note": "風味(重厚なボディ・土っぽさ)を方式の結果とする記述は根拠なし。FAO資料は、Mandheling特有の風味の由来は不明とする。 英訳(src/data/en/guides.js または src/i18n/en.js)は日本語と同じ主張で、食い違いなし。"
+    },
+    "processing:アナエロビック": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "発酵中の酸素を制限する、または無くす発酵(嫌気発酵)である",
+          "status": "verified",
+          "sourceIds": [
+            "sca-25-issue10-fermentation-effect"
+          ],
+          "quote": "the trendy anaerobic fermentation (i.e., with limiting or absence of oxygen during fermentation).",
+          "location": "25 Magazine Issue 10 / 序盤",
+          "note": ""
+        },
+        {
+          "text": "密閉容器内で行う",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "SCAは酸素の制限/不在としか書かない。「密閉容器」の記述は確認できていない。"
+        },
+        {
+          "text": "チェリーのまま発酵させる",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "SCAは発酵の対象(チェリー/パルプド)を指定していない。"
+        },
+        {
+          "text": "比較的新しい手法",
+          "status": "verified",
+          "sourceIds": [
+            "sca-25-issue10-fermentation-effect"
+          ],
+          "quote": "many hybrid or novel methods also have gained popularity in the coffee production regions",
+          "location": "25 Magazine Issue 10 / 序盤",
+          "note": "SCAは\"hybrid or novel methods\"として挙げる。"
+        },
+        {
+          "text": "ワインやフルーツ様の強い個性的な風味が出やすい",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "SCA機関誌は\"rigorous scientific proof ... remains veiled\"と書き、風味への影響は科学的に確立していないとする。"
+        }
+      ],
+      "suggestedText": "発酵の間の酸素を制限する、または無くす発酵(嫌気発酵)を行う、近年広まった精選方法。",
+      "note": "「密閉容器」「チェリー」「風味」は根拠なし。 英訳(src/data/en/guides.js または src/i18n/en.js)は日本語と同じ主張で、食い違いなし。"
+    },
+    "processing:マウンテンウォータープロセス(デカフェ用)": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "コーヒー豆由来の可溶性固形分で飽和させた水の溶液を使って、カフェインを抽出する",
+          "status": "verified",
+          "sourceIds": [
+            "descamex-procesos"
+          ],
+          "quote": "utilizando una solución saturada a base de agua de sólidos solubles obtenidos de los granos de café.",
+          "location": "Descamex Procesos / Proceso agua",
+          "note": "Descamex(Mountain Water Processの事業者)の記述。アプリの「カフェイン以外の旨み成分」は「コーヒー豆由来の可溶性固形分」に相当。"
+        },
+        {
+          "text": "生豆を水に浸す",
+          "status": "unverified",
+          "sourceIds": [
+            "descamex-procesos"
+          ],
+          "quote": "Extraemos la cafeína bajo condiciones controladas de flujo, temperatura, presión y vacío",
+          "location": "Descamex Procesos / Proceso agua",
+          "note": "Descamexは、蒸気を当てて準備した豆から、流量・温度・圧力・真空を制御して抽出すると書く。「浸す」とは書かない。"
+        },
+        {
+          "text": "カフェインだけが溶け出す",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "Descamexは「カフェインを抽出する」と書き、「だけ」とは書かない(抽出率は97%超と記載)。"
+        }
+      ],
+      "suggestedText": "Mountain Water Processは、メキシコのDescamexが運営する水を使った脱カフェイン方法。蒸気で準備した生豆から、コーヒー豆由来の可溶性固形分で飽和させた水の溶液を使い、流量・温度・圧力・真空を制御してカフェインを抽出する(Descamex)。",
+      "note": "事業者サイトが唯一の一次資料。「浸す」「だけ」は根拠なし。 英訳(src/data/en/guides.js または src/i18n/en.js)は日本語と同じ主張で、食い違いなし。"
+    },
+    "processing:インフューズド": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "精選(発酵)の工程で果物やスパイスを密閉容器に加え、コーヒーチェリーと一緒に発酵させる",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "果物・スパイス・密閉容器・チェリーとの共発酵について、SCA/ICO等の定義は確認できていない。"
+        },
+        {
+          "text": "果物由来の香りが豆に移る",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "確認できていない。SCAは、ナチュラルのフルーティさは果実の風味が移るのではなく、収穫後に生じるエステル類によると書く(\"the fruitiness doesn't come from the coffee fruit's existing flavor at all\")。"
+        },
+        {
+          "text": "SCAは、加工中に微生物スターター・発酵補助材・香料などの添加物を使って風味を調整する例を認めている(添加物の総称\"added stuff\")",
+          "status": "verified",
+          "sourceIds": [
+            "sca-25-issue24-identity"
+          ],
+          "quote": "from microbial starters and fermentation adjuncts all the way to flavoring agents—could be used to modulate the flavor of coffee during processing.",
+          "location": "SCA 25 Issue 24 / 前半",
+          "note": "「果物やスパイスを加える」とは書かれていない。"
+        },
+        {
+          "text": "スペシャルティコーヒーの技法の一つに位置づけられる",
+          "status": "unverified",
+          "sourceIds": [
+            "sca-25-issue24-identity"
+          ],
+          "quote": "At the time of writing (July 2025), we are still sifting through all the information we gathered in our short time",
+          "location": "SCA 25 Issue 24 / 末尾",
+          "note": "SCAは、添加物を使った「infused」コーヒーの扱い(アイデンティティの基準)を検討中で、2025年7月時点で結論は出ていない。生産者の自由な革新を支持する立場と、透明性を求める立場(\"anti-stuff purists\")が併記される。またCup of Excellence(ACE)のブラジル2023は、Experimentals部門を\"ensuring no additives other than water are introduced\"としている(ace-coe-brazil-2023)。"
+        },
+        {
+          "text": "焙煎後に香料を添加する「フレーバーコーヒー」とは異なる",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "SCA/ICOで両者を区別して定義する記述は確認できていない。"
+        }
+      ],
+      "suggestedText": "精選の工程で、微生物スターター・発酵補助材・香料などの添加物を加えて風味を調整する手法がある(SCAは\"added stuff\"と総称)。その扱いは、SCAが2025年7月時点で検討中である。(果物・スパイス・密閉容器・フレーバーコーヒーとの違いの記述は削除)",
+      "note": "このキー全体が現状では表示不可(根拠が取れない)。 英訳(src/data/en/guides.js または src/i18n/en.js)は日本語と同じ主張で、食い違いなし。"
+    },
+    "processing:インフューズドハニー": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "ハニープロセス(果肉除去のみ行い、ミューシレージを残したまま乾燥)",
+          "status": "verified",
+          "sourceIds": [
+            "sca-25-issue6-mucilage-removers"
+          ],
+          "quote": "Red and yellow honey coffees, a pulped natural dried with less than all the mucilage attached to parchment",
+          "location": "25 Magazine Issue 6",
+          "note": "残す量は一部(レッド・イエロー)か全部(ブラック)。"
+        },
+        {
+          "text": "ハニープロセスに果物やスパイスを加えて発酵させる工程を組み合わせた技法",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "確認できていない。"
+        },
+        {
+          "text": "SCAは、加工中に微生物スターター・発酵補助材・香料などの添加物を使って風味を調整する例を認めている(添加物の総称\"added stuff\")",
+          "status": "verified",
+          "sourceIds": [
+            "sca-25-issue24-identity"
+          ],
+          "quote": "from microbial starters and fermentation adjuncts all the way to flavoring agents—could be used to modulate the flavor of coffee during processing.",
+          "location": "SCA 25 Issue 24 / 前半",
+          "note": "「果物やスパイスを加える」とは書かれていない。"
+        },
+        {
+          "text": "スペシャルティコーヒーの技法の一つに位置づけられる",
+          "status": "unverified",
+          "sourceIds": [
+            "sca-25-issue24-identity"
+          ],
+          "quote": "At the time of writing (July 2025), we are still sifting through all the information we gathered in our short time",
+          "location": "SCA 25 Issue 24 / 末尾",
+          "note": "SCAは、添加物を使った「infused」コーヒーの扱い(アイデンティティの基準)を検討中で、2025年7月時点で結論は出ていない。生産者の自由な革新を支持する立場と、透明性を求める立場(\"anti-stuff purists\")が併記される。またCup of Excellence(ACE)のブラジル2023は、Experimentals部門を\"ensuring no additives other than water are introduced\"としている(ace-coe-brazil-2023)。"
+        },
+        {
+          "text": "焙煎後に香料を添加する「フレーバーコーヒー」とは異なる",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "SCA/ICOで両者を区別して定義する記述は確認できていない。"
+        }
+      ],
+      "suggestedText": "ハニープロセス(果肉を除去し、ミューシレージを一部または全部残したままパーチメントの状態で乾燥)に、添加物を使って風味を調整する手法を組み合わせたもの。その扱いは、SCAが2025年7月時点で検討中である。(果物・スパイス・発酵・フレーバーコーヒーとの違いの記述は削除)",
+      "note": "ハニー部分のみ確認。「インフューズド」の定義は確認できていない。 英訳(src/data/en/guides.js または src/i18n/en.js)は日本語と同じ主張で、食い違いなし。"
+    },
+    "grade:bluemountain": {
+      "status": "unverified",
+      "claims": [
+        {
+          "text": "ブルーマウンテンの等級は、ジャマイカ・ブルーマウンテン地区独自の等級である",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "JACRA公式サイトとジャマイカ法令(laws.moj.gov.jm)は取得失敗(failed)。公式の等級規定の原文を読めていない。"
+        },
+        {
+          "text": "No.1が最上位で、No.2、No.3と続く",
+          "status": "unverified",
+          "sourceIds": [
+            "bluemountaincoffee-com-jm"
+          ],
+          "quote": "",
+          "location": "",
+          "note": "二次資料のみ: bluemountaincoffee-com-jm(販売業者サイトは、No.1=スクリーン17/20、No.2=16/17、No.3=15/16、欠点2%以下、と書く)。公式の規定は未取得。"
+        },
+        {
+          "text": "No.1は木樽で出荷される",
+          "status": "unverified",
+          "sourceIds": [
+            "jis-jacra-traceability"
+          ],
+          "quote": "On the barrels of the coffee that go out we’ll have QR codes.",
+          "location": "JIS記事",
+          "note": "二次資料のみ: jis-jacra-traceability(輸出されるコーヒーの樽にQRコードを付ける、という発言)。「No.1だけ」か、どの等級かの根拠はない。"
+        },
+        {
+          "text": "規格外はピーベリー・トリアージとして扱われる",
+          "status": "unverified",
+          "sourceIds": [
+            "bluemountaincoffee-com-jm"
+          ],
+          "quote": "",
+          "location": "",
+          "note": "二次資料のみ: 販売業者サイトは、Peaberry(96%がピーベリー)とTriage(別の区分)を、No.1〜3と並ぶ5つの区分として書く。「規格外」とは書かない。"
+        }
+      ],
+      "suggestedText": "(公式の原文で確認できないため、表示不可。確認できるまで削除、または「ブルーマウンテンの等級はジャマイカの規則で定められている」程度に留める。ただしこの文も原文未確認)",
+      "note": "公式資料(JACRA/ジャマイカ法令)が取得できなかった。要・別経路での一次資料の取得(JS 61:2016 規格など)。 英訳(src/data/en/guides.js または src/i18n/en.js)は日本語と同じ主張で、食い違いなし。"
+    },
+    "grade:ethiopia": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "エチオピアのG1〜G6は、欠点数(300gあたり)による格付けである",
+          "status": "incorrect",
+          "sourceIds": [
+            "ecx-coffee-contracts-2010"
+          ],
+          "quote": "Grade Total Value ( Raw Value + Cup Quality Value)",
+          "location": "ECX Coffee Contracts (2010) p.8 / GRADING OF WASHED COMMERCIAL COFFEE",
+          "note": "ECX(2010年版)の等級は、生豆の評価(欠点・形・色・臭い 40%)とカップ品質(60%)の合計点による(Grade 1=91〜100点、Grade 9=20〜30点)。欠点数のみで決まるとは書かれていない。現行の基準(ECTA)の原文は未取得。USDA FAS 2026は「輸出品の等級は水分・欠点・カップ品質に基づく」と書く。"
+        },
+        {
+          "text": "G1は欠点0〜3個(300gあたり)の最高等級",
+          "status": "unverified",
+          "sourceIds": [
+            "ecx-coffee-contracts-2010"
+          ],
+          "quote": "Grade 1  91 -100",
+          "location": "ECX Coffee Contracts (2010) p.8",
+          "note": "ECX(2010)のGrade 1は合計点91〜100点で、「欠点0〜3個」の記述なし。公式の原文で「0〜3個」を確認できない。"
+        },
+        {
+          "text": "数字が大きいほど欠点が多い(等級が低い)",
+          "status": "unverified",
+          "sourceIds": [
+            "ecx-coffee-contracts-2010",
+            "usda-fas-ethiopia-coffee-annual-2026"
+          ],
+          "quote": "Export-grade coffee (Grades 1–5) cannot be diverted to the domestic market",
+          "location": "USDA FAS ET2026-0005 / 規制の節",
+          "note": "等級番号が大きいほど低い点数(ECX2010)であることは確認。「欠点が多い」という書き方は根拠なし。輸出等級はGrades 1〜5(USDA FAS 2026)。"
+        },
+        {
+          "text": "地域・精選方法によっては特別に扱われる",
+          "status": "verified",
+          "sourceIds": [
+            "ecx-coffee-contracts-2010"
+          ],
+          "quote": "EXPORT -  SPECIALTY – WASHED",
+          "location": "ECX Coffee Contracts (2010) p.1 / 1.1",
+          "note": "ECXにはウォッシュド・アンウォッシュドの「スペシャルティ」区分(Q1・Q2)が、産地(Yirgachefe、Wenago等)ごとの契約として別にある(2010年版)。"
+        }
+      ],
+      "suggestedText": "エチオピアの等級(Grade 1〜)は、ECX(2010年版)では、生豆の評価とカップ品質の合計点で決まり、Grade 1は91〜100点。ウォッシュド・アンウォッシュドのスペシャルティ(Q1・Q2)は別の区分として扱われる。(現行の基準は原文未確認。「欠点0〜3個」の記述は削除)",
+      "note": "ECX 2010年版(ウェイバックの保存コピー)による。現行のECTA基準は未取得のため、表示する場合は「2010年版」と明記するか、現行資料の取得が必要。 英訳(src/data/en/guides.js または src/i18n/en.js)は日本語と同じ主張で、食い違いなし。"
+    },
+    "grade:indonesia": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "インドネシアのG1〜G6は欠点数による格付け",
+          "status": "verified",
+          "sourceIds": [
+            "ico-icc122-national-quality-standards-2018"
+          ],
+          "quote": "National standards for coffee in Indonesia are regulated by Indonesian National Standard #SNI 01-2907-2008 for coffee beans, which gives quality classifications for Robusta and Arabica coffee as follows:",
+          "location": "ICO ICC-122-12 附属書 A-13 INDONESIA",
+          "note": "ICO文書(加盟国の報告の再掲)による。SNI(BSN)原文は取得失敗。SNIの表記は「Quality(Mutu)1〜6」で「G1」ではない。"
+        },
+        {
+          "text": "G1(Quality 1)は欠点0〜11個程度",
+          "status": "verified",
+          "sourceIds": [
+            "ico-icc122-national-quality-standards-2018"
+          ],
+          "quote": "Quality 1 Maximum number of defects 11*",
+          "location": "ICO ICC-122-12 附属書 A-13",
+          "note": "「Maximum number of defects 11」(注*は\"For peaberry and polyembrio coffee\")。「0〜」は書かれていない(最大値のみ)。ICOによる再掲で、SNI原文は未確認。"
+        },
+        {
+          "text": "基準はエチオピアより緩め",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "エチオピアの欠点数の基準が原文で確認できないため、比較できない。"
+        },
+        {
+          "text": "同じ「G1」でも国によって意味する品質水準が異なる",
+          "status": "verified",
+          "sourceIds": [
+            "ico-icc122-national-quality-standards-2018",
+            "mapa-in8-2003"
+          ],
+          "quote": "360 8 200 > 360 Fora de Tipo",
+          "location": "MAPA IN 8/2003 Tabela 3 / ICO A-13",
+          "note": "インドネシアQuality 1=欠点最大11、ブラジルTipo 2=欠点4(Tabela 3)と、国ごとに欠点の数え方・上限が異なる例を確認。「G1」という同名の表記が各国にあるかは別。"
+        }
+      ],
+      "suggestedText": "インドネシアの国家規格SNI 01-2907-2008は、生豆の欠点数でQuality 1〜6に分ける(Quality 1は欠点が最大11、Quality 2は12〜25、Quality 6は151〜225)。(ICOの文書による。「G1」の表記・「エチオピアより緩め」は削除)",
+      "note": "SNI原文(BSN)は取得失敗。ICO文書の再掲を根拠にしたため、孫引きにあたる。ユーザー判断で扱いを決めてください。新しい版(SNI 2907:2018など)の有無は未確認。 英訳(src/data/en/guides.js または src/i18n/en.js)は日本語と同じ主張で、食い違いなし。"
+    },
+    "grade:defect-generic": {
+      "status": "verified",
+      "claims": [
+        {
+          "text": "欠点数による格付けがある(数字が小さいほど高品質)",
+          "status": "verified",
+          "sourceIds": [
+            "mapa-in8-2003",
+            "ico-icc122-national-quality-standards-2018"
+          ],
+          "quote": "Quality 1 Maximum number of defects 11*",
+          "location": "ICO ICC-122-12 A-13 / MAPA IN 8/2003 Tabela 3",
+          "note": "インドネシアはQuality 1が最良(欠点最大11)、ブラジルはTipo 2が最良(欠点4)。「G1〜G6」という表記の国別の確認はしていない。"
+        },
+        {
+          "text": "基準は生産国ごとに異なる",
+          "status": "verified",
+          "sourceIds": [
+            "mapa-in8-2003",
+            "ico-icc122-national-quality-standards-2018"
+          ],
+          "quote": "Quality 4a Number of defects from 45 to 60",
+          "location": "ICO ICC-122-12 A-13 / MAPA IN 8/2003 Tabela 3",
+          "note": "同じ「4番目の等級」でも、インドネシアQuality 4aは欠点45〜60、ブラジルTipo 4は26(Base)。"
+        }
+      ],
+      "note": "一般論の文。確認できた範囲(インドネシア・ブラジル)で成り立つ。 英訳(src/data/en/guides.js または src/i18n/en.js)は日本語と同じ主張で、食い違いなし。"
+    },
+    "grade:aa": {
+      "status": "verified",
+      "claims": [
+        {
+          "text": "ケニアではスクリーンサイズによる格付け(AAは「スクリーン18/17で保持される(7.2mm)」平豆)",
+          "status": "verified",
+          "sourceIds": [
+            "ico-icc124-kenya-profile-2019"
+          ],
+          "quote": "AA (Flat bean) Retained by screen 18/17 (7.2mm)",
+          "location": "ICO Kenya Profile Table 8",
+          "note": "ケニアの等級はE、AA、AB、PB、C、T、TT。ケニア法令(Coffee (General) Regulations 2016)は取得失敗。"
+        },
+        {
+          "text": "タンザニアでもサイズによる等級(AA等)で格付けする",
+          "status": "verified",
+          "sourceIds": [
+            "tz-gn153-2003"
+          ],
+          "quote": "Shall grade mild Arabica by size to obtain the saleable grades AA, A, B, C, PB, AF, E, TT, and F",
+          "location": "Tanzania Coffee Industry Regulations 2003 / Rules for coffee processing licence (washed coffee) 4.",
+          "note": "2003年の規則。AAは「スクリーン18に90%以上が保持」(\"Retained minimum 90% of screen 18.\")。"
+        },
+        {
+          "text": "AAは大粒の等級(ただし最大ではない)",
+          "status": "verified",
+          "sourceIds": [
+            "ico-icc124-kenya-profile-2019",
+            "eac-eas130-1999"
+          ],
+          "quote": "E (Elephant) Two beans joint together Retained by screen 21 (8.3mm)",
+          "location": "ICO Kenya Profile Table 8 / EAS 130:1999 Table 1",
+          "note": "E(エレファント)はスクリーン21(8.3mm)でAA(7.2mm)より大きい。アプリは「AAは大粒」とだけ書き、「最大」とは書いていないので誤りではない。"
+        },
+        {
+          "text": "粒の大きさは必ずしも風味の良さを保証しない",
+          "status": "verified",
+          "sourceIds": [
+            "eac-eas130-1999"
+          ],
+          "quote": "Grading by size and shape is only a fair estimate of coffee quality.",
+          "location": "EAS 130:1999 5.3 Grading by cup quality",
+          "note": "EACの規格は、サイズと形による格付けは品質の目安にすぎず、実際の品質はカップで評価すると書く。"
+        }
+      ],
+      "note": "ケニア法令の原文は取得失敗のため、ケニアの根拠はICOのプロファイル(2019年)。 英訳(src/data/en/guides.js または src/i18n/en.js)は日本語と同じ主張で、食い違いなし。"
+    },
+    "grade:shb": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "SHBはStrictly Hard Beanの略",
+          "status": "verified",
+          "sourceIds": [
+            "icafe-tres-rios"
+          ],
+          "quote": "Se le conoce como Strictly Hard Bean (SHB) central.",
+          "location": "ICAFE Tres Ríos",
+          "note": ""
+        },
+        {
+          "text": "SHBは標高の高さで格付けする表記",
+          "status": "verified",
+          "sourceIds": [
+            "icafe-recibos-2-p-3-1",
+            "anacafe-microlotes"
+          ],
+          "quote": "STRICTLY HARD BEAN Norte Los Santos: Dota, Tarrazú y León Cortés Altitud 1200 a 1700 m.",
+          "location": "ICAFE 2-P-3.1 Zonificación Cafetalera de Costa Rica p.5",
+          "note": "Anacaféの資料も\"Tipos de café basados de altitud\"と書く。"
+        },
+        {
+          "text": "コスタリカのSHBは標高1,350m前後以上が目安",
+          "status": "incorrect",
+          "sourceIds": [
+            "icafe-recibos-2-p-3-1"
+          ],
+          "quote": "STRICTLY HARD BEAN Norte Los Santos: Dota, Tarrazú y León Cortés Altitud 1200 a 1700 m.",
+          "location": "ICAFE 2-P-3.1 p.5",
+          "note": "ICAFEのStrictly Hard Beanの区分は標高1200〜1700m(Los Santos、Central、Sur)。1,350mではない。Good Hard Bean(1000〜1200m)、Hard Bean(Meseta Central 1200m超)も別に記載。"
+        },
+        {
+          "text": "グアテマラのSHBは標高1,350m前後以上が目安",
+          "status": "unverified",
+          "sourceIds": [
+            "anacafe-microlotes",
+            "anacafe-cifras-2018-2019"
+          ],
+          "quote": "Tipos de café basados de altitud",
+          "location": "Anacafé 05-Microlotes p.3",
+          "note": "Anacaféの資料は「SHBは4,500 PSNM超(約1,372m)」を示す図の文字列(\"> 4,500\")があるが、図と等級の対応を画像で確認できていない(readMethod: excerpt)。別資料では「café de altura=1,300 msnm超」(Anacafé 2018-19)。1,350m前後を直接確認できない。"
+        },
+        {
+          "text": "標高が高いほど豆が硬く締まる",
+          "status": "unverified",
+          "sourceIds": [
+            "icafe-regiones"
+          ],
+          "quote": "La altitud está relacionada con factores climáticos y, en conjunto, afecta el tamaño y la dureza de la semilla",
+          "location": "ICAFE Regiones Cafetaleras",
+          "note": "ICAFEは「標高は種子の大きさと硬さに影響する」と書くが、「高いほど硬い」とは明記していない。"
+        },
+        {
+          "text": "標高が高いほど高品質とされる",
+          "status": "unverified",
+          "sourceIds": [
+            "icafe-regiones"
+          ],
+          "quote": "e influye, además, en ciertos componentes de la calidad de la bebida, especialmente con la acidez.",
+          "location": "ICAFE Regiones Cafetaleras",
+          "note": "ICAFEは標高が飲料の品質要素(特に酸味)に影響すると書くが、「高品質」とは書かない。"
+        }
+      ],
+      "suggestedText": "Strictly Hard Bean(SHB)。標高で分ける表記で、コスタリカ(ICAFE)では標高1200〜1700mの地域がStrictly Hard Beanの区分。標高は豆の大きさと硬さに影響する(ICAFE)。(グアテマラの標高の目安・「高品質」は原文未確認のため削除)",
+      "note": "コスタリカの数字(1,350m前後)はアプリの誤り。グアテマラの標高基準はAnacaféの原文で確認できず。ICAFE資料は日付なしの内部手順書。 英訳(src/data/en/guides.js または src/i18n/en.js)は日本語と同じ主張で、食い違いなし。"
+    },
+    "grade:number": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "「No.2〜8」のような番号は、生産地・店舗によって意味が異なる",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "一般論で、公式資料に該当する記述はない。"
+        },
+        {
+          "text": "ブラジルの公式等級(COB)は、欠点数によるTipo(タイプ)2〜8である",
+          "status": "verified",
+          "sourceIds": [
+            "mapa-in8-2003"
+          ],
+          "quote": "360 8 200 > 360 Fora de Tipo",
+          "location": "MAPA IN 8/2003 Tabela 3 / 11.5",
+          "note": "300gの試料で欠点を数え、4欠点=Tipo 2、26欠点=Tipo 4(Base)、86=Tipo 6、360=Tipo 8、360超=Fora de Tipo(2003年の原文)。"
+        },
+        {
+          "text": "ブラジルでは「No.2〜8」と表記する/指すことが多い",
+          "status": "unverified",
+          "sourceIds": [
+            "mapa-in8-2003"
+          ],
+          "quote": "",
+          "location": "",
+          "note": "規則の用語は\"Tipo\"で、「No.」ではない。「指すことが多い」という頻度の根拠もない。"
+        }
+      ],
+      "suggestedText": "ブラジルの公式等級(COB)では、300gの試料の欠点数でTipo 2〜8に分ける(Tipo 2は欠点4個、Tipo 8は360個、360超はFora de Tipo。2003年のMAPA IN 8/2003)。",
+      "note": "「No.」表記・「意味が異なる」は根拠なし。 英訳(src/data/en/guides.js または src/i18n/en.js)は日本語と同じ主張で、食い違いなし。"
+    },
+    "grade:excelso": {
+      "status": "unverified",
+      "claims": [
+        {
+          "text": "エクセルソはコロンビア(FNC)の等級である",
+          "status": "unverified",
+          "sourceIds": [
+            "fnc-cafe-verde-archive"
+          ],
+          "quote": "Café comercial con un perfil clásico colombiano. Se ofrece según los requerimientos de preparación y defectos del cliente.",
+          "location": "FNC Verde: Craft / Cafés Comerciales / Excelso",
+          "note": "FNCはExcelsoを「コロンビアらしい味の商業用コーヒー。顧客の準備(サイズ)・欠点の要求に応じて提供」と書く。「等級」とは書かれていない。"
+        },
+        {
+          "text": "エクセルソはスクリーンサイズによる等級体系である",
+          "status": "unverified",
+          "sourceIds": [
+            "fnc-cafe-verde-archive"
+          ],
+          "quote": "Europa malla 15 Café retenido sobre la malla 15 con tolerancia entre el 10% y 5% inferior a esta, pero retenido por la malla 12.",
+          "location": "FNC Verde: Craft / Granulometría",
+          "note": "FNCは、スクリーンサイズによる「準備」(Supremo malla 16〜18、Europa=EP malla 15、UGQ malla 14、Extra malla 16)を別に列挙する。Excelso自体をサイズ等級と定義する記述は読んだ範囲にない。"
+        },
+        {
+          "text": "「エクセルソ」は7段階の等級群に共通する親カテゴリ名",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "FNCの当該ページで「7段階」は確認できない(列挙は UGQ 5%/1.5%、EP 10%/5%、Extra、Supremo 17/18・18 など)。"
+        },
+        {
+          "text": "単独では等級を特定できないため、常にサブグレード名と組み合わせて表記される",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "確認できていない。"
+        }
+      ],
+      "suggestedText": "エクセルソ(Excelso)は、コロンビア・コーヒー生産者連合会(FNC)が「コロンビアらしい味の商業用コーヒー」として提供する区分で、準備(スクリーンサイズ)や欠点の条件は顧客の要求に応じて決まる。(「7段階」「サブグレードと組み合わせて表記」は原文未確認のため削除)",
+      "note": "FNC通達第007号(2025年)は接続エラーで取得失敗。FNCのページはウェイバック(2025年)の保存コピー。 英訳(src/data/en/guides.js または src/i18n/en.js)は日本語と同じ主張で、食い違いなし。"
+    },
+    "grade:generic": {
+      "status": "verified",
+      "claims": [
+        {
+          "text": "国別グレードは、標高・スクリーンサイズ・欠点数など、生産国ごとに異なる基準で決まる",
+          "status": "verified",
+          "sourceIds": [
+            "icafe-recibos-2-p-3-1",
+            "ico-icc124-kenya-profile-2019",
+            "ico-icc122-national-quality-standards-2018"
+          ],
+          "quote": "Quality 1 Maximum number of defects 11*",
+          "location": "ICAFE 2-P-3.1(コスタリカ:標高) / ICO Kenya Profile(ケニア:スクリーン) / ICO ICC-122-12(インドネシア:欠点数)",
+          "note": "標高(コスタリカ)、スクリーンサイズ(ケニア)、欠点数(インドネシア・ブラジル)の例を確認。"
+        },
+        {
+          "text": "同じ表記でも国が違えば意味が異なることがある",
+          "status": "verified",
+          "sourceIds": [
+            "ico-icc122-national-quality-standards-2018",
+            "ecx-coffee-contracts-2010"
+          ],
+          "quote": "Grade 1  91 -100",
+          "location": "ECX 2010 p.8 / ICO ICC-122-12 A-13",
+          "note": "エチオピアECXのGrade 1は合計点91〜100点、インドネシアQuality 1は欠点最大11と、数字「1」の意味が国で異なる例。"
+        }
+      ],
+      "note": "一般論の文。確認できた範囲で成り立つ。 英訳(src/data/en/guides.js または src/i18n/en.js)は日本語と同じ主張で、食い違いなし。"
+    }
+  }
+}

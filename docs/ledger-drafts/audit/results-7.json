@@ -1,0 +1,358 @@
+{
+  "results": {
+    "origin:ペルー:officialBody": {
+      "verdict": "edit",
+      "finalContent": {
+        "text": "Junta Nacional del Café(JNC)は1993年1月6日に正式に設置された。JNC自身の説明では、ペルーのコーヒー生産者を国に対して代表する機関で、14のコーヒー地帯にまたがる56のコーヒー関連組織(協会・協同組合)と約7万の加盟世帯をまとめている(2024〜2026年の公式サイト掲載)。"
+      },
+      "usedClaims": [
+        0,
+        1,
+        2
+      ],
+      "notes": "INACALの文は確認済み主張になく(関連主張はrejected)削除。「中央生産者組合」という訳語も根拠がないため原語表記に。"
+    },
+    "origin:ペルー:regions": {
+      "verdict": "edit",
+      "finalContent": {
+        "text": "USDA FAS(2025年5月)によれば、主要産地にはカハマルカ(生産の22%)、サンマルティン(20%)、フニン(19%)、アマソナス(15%)が含まれる。"
+      },
+      "usedClaims": [
+        0
+      ],
+      "notes": "原文は \"include\"(網羅ではない)なので「〜は」を「〜が含まれる」に。アマソナス15%は主張テキストにはないが同じ引用に含まれるため残した。"
+    },
+    "origin:ペルー:sub:アマソナス(ロドリゲス・デ・メンドーサ)": {
+      "verdict": "edit",
+      "finalContent": {
+        "detail": "アマソナス: 全国生産の15%を占める(USDA FAS、2025年5月)。"
+      },
+      "usedClaims": [
+        4
+      ],
+      "notes": "引用は「15%」で「約」は付いていないため削除。"
+    },
+    "origin:ペルー:sub:カハマルカ": {
+      "verdict": "edit",
+      "finalContent": {
+        "detail": "カハマルカ: 全国生産量の22%を占め、USDA FASが挙げる主要産地(カハマルカ・サンマルティン・フニン・アマソナス)の中で最も大きい(USDA FAS、2025年5月)。COEペルー大会(ACE公式結果)では、カハマルカ産のロットが1位になった年がある。"
+      },
+      "usedClaims": [
+        1,
+        4
+      ],
+      "notes": "「ペルー最大の産地」は引用(main regions include…)では断定できないため、挙げられた産地間の比較に限定。COE年別の順位(2017年1〜3位、2019・2022〜2025年1位)は引用に年・順位の裏付けがなく(1位・3位のカハマルカ産エントリーが示されるのみ)、削除。"
+    },
+    "origin:ペルー:sub:クスコ(南部)": {
+      "verdict": "edit",
+      "finalContent": {
+        "detail": "クスコ: COEペルー大会で2018年(91.08点)と2021年(90.2点)に、Nueva Alianzaのロットが1位になった(COE公式サイト)。"
+      },
+      "usedClaims": [
+        3
+      ],
+      "notes": "引用に「農園」の語はなく、名称の列挙のみのため「農園」を外した。"
+    },
+    "origin:ペルー:sub:フニン(チャンチャマヨ/サティポ)": {
+      "verdict": "edit",
+      "finalContent": {
+        "detail": "フニン: 全国生産の19%を占める(USDA FAS、2025年5月)。"
+      },
+      "usedClaims": [
+        3
+      ],
+      "notes": "「約」を削除。COE2017チャンチャマヨ4位(90.41点)は裏付けとなる確認済み主張がなく、「チャンチャマヨはフニン県」も未確認(rejected)のため削除。"
+    },
+    "origin:ペルー:tagline": {
+      "verdict": "edit",
+      "finalContent": {
+        "text": "ペルーのコーヒーは主にアンデスの東斜面で栽培される。USDA FAS(2025年5月)によれば、生産の9割超は5ヘクタール未満の小規模農家によるもので、世界有数の有機コーヒー輸出国でもある。"
+      },
+      "usedClaims": [
+        0,
+        1,
+        2
+      ],
+      "notes": "「小規模農家が担う」は「9割超・5ha未満」に具体化、帰属を明記。原文 \"world’s leading exporter\" を「世界最大」と断定する根拠が弱いため「世界有数」に弱めた(迷った点)。"
+    },
+    "origin:ペルー:terroir": {
+      "verdict": "edit",
+      "finalContent": {
+        "text": "ペルーのコーヒーは主にアンデスの東斜面で栽培される(USDA FAS、2025年5月)。"
+      },
+      "usedClaims": [
+        0
+      ],
+      "notes": "「約75%が標高1,000〜1,800m」「大半が日陰栽培」は確認済み主張になく削除(関連する75%主張はincorrect)。"
+    },
+    "origin:ペルー:varietiesDetail": {
+      "verdict": "edit",
+      "finalContent": {
+        "text": "USDA FAS(2025年5月)によれば、ペルーは主にアラビカを生産し、ティピカが70%超、次いでカトゥーラ(20%)、その他の品種(10%)である。"
+      },
+      "usedClaims": [
+        0,
+        1
+      ],
+      "notes": "引用は「20%」「10%」で「約」は付いていないため削除。"
+    },
+    "origin:メキシコ:farmStructure": {
+      "verdict": "edit",
+      "finalContent": {
+        "text": "SAGARPA(2017年)によれば、メキシコのコーヒー生産には50万を超える生産者が関わっている。"
+      },
+      "usedClaims": [
+        0
+      ],
+      "notes": "「生産量の92.1%は5ha以下の小規模生産者」は確認済み主張がなく削除。"
+    },
+    "origin:メキシコ:harvestSeason": {
+      "verdict": "pass",
+      "finalContent": {
+        "text": "収穫は主に11月から3月(FIRA、2016年)。"
+      },
+      "usedClaims": [
+        0
+      ],
+      "notes": ""
+    },
+    "origin:メキシコ:history": {
+      "verdict": "edit",
+      "finalContent": {
+        "text": "コーヒーは18世紀末にメキシコへ伝わった(SADER)。国際コーヒー機関(ICO)は1962年から1989年まで断続的に割当制度を運用し、1989年に割当配分で合意できなかったため同制度は停止された(ICO)。"
+      },
+      "usedClaims": [
+        0,
+        4
+      ],
+      "notes": "「コーヒー危機」と呼ばれた記述、INMECAFEが1989年まで担当、1993年5月31日の政令廃止は確認済み主張がなく(関連はrejected)削除。ICOの主張は引用の範囲(1962〜1989年・停止理由)で書き直した。"
+    },
+    "origin:メキシコ:officialBody": {
+      "verdict": "edit",
+      "finalContent": {
+        "text": "AMECAFE(Asociación Mexicana de la Cadena Productiva del Café, A.C.)は、官報(2020年12月26日)の協定の定義規定に挙げられている組織である。SAGARPAの資料(2016年)は、CMCが2006年から2012年にかけて現在のAMECAFEへ発展したと説明している。"
+      },
+      "usedClaims": [
+        0,
+        2
+      ],
+      "notes": "原産地証明書の発給団体であること、2006年にConsejo Mexicano del Caféの権限を引き継いだこと(官報2007年)は確認済み主張になく削除。「2006年設立」もrejected。CMCの正式名称は引用にないため略称のまま。"
+    },
+    "origin:メキシコ:sub:チアパス(ソコヌスコ・エルトリウンフ)": {
+      "verdict": "edit",
+      "finalContent": {
+        "detail": "エルトリウンフはメキシコで最も多様な常緑の雲霧林である(UNESCO MAB)。"
+      },
+      "usedClaims": [
+        1
+      ],
+      "notes": "引用は雲霧林であることのみ。「周辺」や「緩衝地帯でコーヒーが地域の経済基盤」は引用にも他の確認済み主張にもなく削除。"
+    },
+    "origin:メキシコ:tagline": {
+      "verdict": "edit",
+      "finalContent": {
+        "text": "メキシコのコーヒー生産者の大半は、小規模・極小規模の生産者である(SADER)。"
+      },
+      "usedClaims": [
+        0
+      ],
+      "notes": "引用(en su mayoría … pequeña y muy pequeña escala)の範囲に合わせて言い換え。"
+    },
+    "origin:メキシコ:terroir": {
+      "verdict": "edit",
+      "finalContent": {
+        "text": "エルトリウンフはメキシコで最も多様な常緑の雲霧林である(UNESCO MAB)。"
+      },
+      "usedClaims": [
+        4
+      ],
+      "notes": "14州・4州で91.4%(FAS)、標高900m超(FIRA)、緩衝地帯でコーヒーが経済基盤、はいずれも確認済み主張になく削除(関連する94%・標高主張はincorrect/unverified)。引用にチアパス州の語はないため州名も外した。"
+    },
+    "origin:メキシコ:varietiesDetail": {
+      "verdict": "edit",
+      "finalContent": {
+        "text": "INIFAPは、さび病に耐性のある品種「オロ・アステカ(Oro Azteca)」を自ら開発したと発表している(INIFAPのプレスリリース)。"
+      },
+      "usedClaims": [
+        3
+      ],
+      "notes": "「種子が生産者に配布されている」は引用になく削除。"
+    },
+    "origin:ルワンダ:farmStructure": {
+      "verdict": "edit",
+      "finalContent": {
+        "text": "ICOによれば、農家一軒当たりのコーヒー栽培面積は平均0.26ヘクタールとされる。ウォッシングステーションは2021年に313か所(ICO)。北部ガケンケ郡のドゥクンデ・カワ(Dukunde Kawa Musasa)協同組合は、2000年設立と自己紹介している(CoE掲載文)。"
+      },
+      "usedClaims": [
+        0,
+        5,
+        8
+      ],
+      "notes": "零細農家数(NAEB約40万=conflict、ICO約35万=確認済み主張なし)、「ICO調査標本」、会員約1,816人・女性33%は根拠がなく削除。313か所は引用の数字を使用(主張テキストの「約300」は不採用)。"
+    },
+    "origin:ルワンダ:harvestSeason": {
+      "verdict": "pass",
+      "finalContent": {
+        "text": "収穫は西部州のキブ湖岸で2月下旬、その他の地域で3月上旬に始まり、北部州の一部では8月まで続く(NAEB)。"
+      },
+      "usedClaims": [
+        0,
+        1
+      ],
+      "notes": ""
+    },
+    "origin:ルワンダ:history": {
+      "verdict": "edit",
+      "finalContent": {
+        "text": "ICOによれば、コーヒーは1990年にルワンダの輸出額の75.2%、GDPの3.2%を占めた。1989年の国際コーヒー協定の経済条項が終了した直後、供給過剰でコーヒー価格が下落し、多くの国のコーヒー部門が停滞した(ICO)。ルワンダはアフリカで初めてカップ・オブ・エクセレンス(COE)を開催した国で、最初のCOEは2008年にさかのぼる(ACE)。"
+      },
+      "usedClaims": [
+        5,
+        6,
+        12
+      ],
+      "notes": "ドイツ人による導入(この記述の確認済み主張なし、導入年は資料間でconflict)、「ルワンダでは紛争で悪化」(引用になく)、NAEB設立法の文(この記述の確認済み主張なし、「2017年に設立」はincorrect)を削除。"
+    },
+    "origin:ルワンダ:officialBody": {
+      "verdict": "edit",
+      "finalContent": {
+        "text": "国家農業輸出開発庁(NAEB、National Agricultural Export Development Board)。NAEB自身の頁は、2017年4月14日の法律第13/2017号により設立された公的機関(commercial public institution)と記している。2010年の法律第39/2010号(第17条)は、コーヒー・茶・園芸の各振興機関(OCIR-CAFE、OCIR-THE、RHODA)がそれまで行っていた輸出振興の活動を、公布から6か月以内に統合する期間をNAEBに与えている。NAEBの責任には、ルワンダ産コーヒーの販売促進・マーケティング・輸出と、農家への技術支援・苗木の提供によるコーヒー生産の支援が挙げられている(NAEB)。また、関係者と協力して年間のコーヒーチェリー最低価格を設定する重要な役割を担う(ICO)。"
+      },
+      "usedClaims": [
+        0,
+        2,
+        4,
+        5,
+        6
+      ],
+      "notes": "「改めて設置」「統合に始まる」は推論のため引用どおりの記述に。輸出農産物の真正性・原産地証明書の発行は確認済み主張になく削除(品質証明書はincorrect)。"
+    },
+    "origin:ルワンダ:regions": {
+      "verdict": "edit",
+      "finalContent": {
+        "text": "2008年のカップ・オブ・エクセレンスでは、南部州フイエ郡(1位)、北部州ガケンケ郡(4位)、西部州ニャマシェケ郡(15位)の生産者が入賞した(COE公式サイト)。NAEBによれば、収穫は西部州のキブ湖岸で2月下旬、その他の地域で3月上旬に始まる。"
+      },
+      "usedClaims": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "notes": "「コーヒーは国内の多くの州で栽培され」は確認済み主張に引用がなく(verifierNoteのみ)削除。「キブ湖岸の生産者が入賞」は引用の裏付けがなく、COE入賞地域とは別に収穫開始時期の文として書き直した。"
+    },
+    "origin:ルワンダ:sub:ガケンケ(北部州)": {
+      "verdict": "edit",
+      "finalContent": {
+        "detail": "CoE Farm Directory 2015によれば、ドゥクンデ・カワ協同組合のウォッシングステーションの所在地は北部州ガケンケ郡ルリ地区で、標高は1,500〜2,000mと記載されている。"
+      },
+      "usedClaims": [
+        0
+      ],
+      "notes": "「北部州の一部では収穫が8月まで続く(NAEB)」はこの記述の確認済み主張になく削除。標高は自己申告の記載として表現。"
+    },
+    "origin:ルワンダ:sub:ニャマシェケ(西部州・キブ湖岸)": {
+      "verdict": "pass",
+      "finalContent": {
+        "detail": "西部州ニャマシェケ郡の生産者が2008年のカップ・オブ・エクセレンスで入賞している。"
+      },
+      "usedClaims": [
+        0
+      ],
+      "notes": ""
+    },
+    "origin:ルワンダ:sub:フイエ/ニャマガベ(南部州・旧マラバ地区)": {
+      "verdict": "pass",
+      "finalContent": {
+        "detail": "南部州フイエ郡の生産者が2008年のカップ・オブ・エクセレンスで1位に入賞している。"
+      },
+      "usedClaims": [
+        0
+      ],
+      "notes": ""
+    },
+    "origin:ルワンダ:sub:西部州キブ湖東岸(ルツィロ/カロンギ)": {
+      "verdict": "pass",
+      "finalContent": {
+        "detail": "西部州ルツィロ郡の生産者が2008年のカップ・オブ・エクセレンスで入賞している。"
+      },
+      "usedClaims": [
+        0
+      ],
+      "notes": ""
+    },
+    "origin:ルワンダ:tagline": {
+      "verdict": "edit",
+      "finalContent": {
+        "text": "WCRによれば、ルワンダの輸出の約62%がフルウォッシュド(fully washed)である。"
+      },
+      "usedClaims": [
+        0
+      ],
+      "notes": "引用は \"fully washed\" で「フリーウォッシュド」は誤訳に近いため修正。「NAEB資料引用」は引用本文にないため削除。"
+    },
+    "origin:ルワンダ:terroir": {
+      "verdict": "edit",
+      "finalContent": {
+        "text": "ルワンダは肥沃な火山性土壌に恵まれている(ICO)。気候学上は、3〜5月ごろと10〜12月ごろを中心とする2つの雨季が区別できる(Meteo Rwanda)。"
+      },
+      "usedClaims": [
+        3,
+        4
+      ],
+      "notes": "栽培標高(NAEB・ICOで食い違い=conflict)は削除。「降雨最大は3〜5月と9〜12月」は引用(10〜12月ごろ)と不一致で、雨季の記述に直した。"
+    },
+    "origin:ルワンダ:varietiesDetail": {
+      "verdict": "edit",
+      "finalContent": {
+        "text": "NAEBによれば、ルワンダの品種は主にブルボン系のアラビカで占められ、コーヒーは1900年代初めにドイツ人が導入した。ICOによれば樹齢30年以上の木が約39%を占める。さび病とCBDに耐性の改良品種RAB C15は2015年にリリースされたが、まだ広くは植えられていない(WCR)。"
+      },
+      "usedClaims": [
+        0,
+        2,
+        4,
+        5,
+        6
+      ],
+      "notes": "「30年を超える」を引用どおり「30年以上」に。CBDは引用に展開表記がないため略称のまま。"
+    },
+    "processing:アナエロビック": {
+      "verdict": "edit",
+      "finalContent": {
+        "explanation": "発酵中に酸素を制限する、または酸素がない状態で行う発酵(嫌気発酵)。SCAの記事は、これを流行している(trendy)手法と表現している。"
+      },
+      "usedClaims": [
+        0,
+        3
+      ],
+      "notes": "「近年広まった精選方法」は引用(trendyな嫌気発酵/新しい手法が普及)より強いため、引用の表現に限定。"
+    },
+    "processing:インフューズド": {
+      "verdict": "drop",
+      "notes": "確認済み主張は「添加物で風味を調整しうる」というSCA記事の一文のみで、「インフューズド」の定義とは確認されていない。「SCAが検討中(2025年7月時点)」も裏付けなし。文中に内部メモの括弧書きも混入。"
+    },
+    "processing:インフューズドハニー": {
+      "verdict": "drop",
+      "notes": "ハニー部分とSCAの添加物の記述は別個に確認されただけで、「インフューズドハニー=両者の組み合わせ」という定義は確認済み主張にない。「SCAが検討中」も裏付けなし。"
+    },
+    "processing:ウェットハルド": {
+      "verdict": "edit",
+      "finalContent": {
+        "explanation": "ウェットハルドは、パーチメント(殻付き)をまだ湿った状態で脱殻する方式。ICCRI(S. Mawardi、2008年ICOセミナー資料)では、通常、含水率約30〜35%のうちにパーチメントを脱殻し、その後は生豆の状態で含水率12〜13%になるまで天日乾燥を続けるとされる。"
+      },
+      "usedClaims": [
+        0
+      ],
+      "notes": "「インドネシア・北スマトラの伝統的な方法(セミウォッシュド)」は確認済み主張にない(インドネシア特有はunverified)。FAOの35〜45%は引用が断片(parchment of 35-45% m.c.)で「脱殻時の含水率」と断定できないため不採用(claim 1は不使用)。"
+    },
+    "processing:ウォッシュド": {
+      "verdict": "edit",
+      "finalContent": {
+        "explanation": "ウェット方式(basic wet processing)では、チェリーの果肉を除去し、水中に浸けて発酵させる。その後、発酵槽の水を抜き、発酵した豆を水で洗って残ったミューシレージ(粘液質)を取り除く(SCA『25 Magazine』)。"
+      },
+      "usedClaims": [
+        0
+      ],
+      "notes": "引用は洗浄までで、乾燥工程の記述はないため「乾燥させる」を削除。"
+    }
+  }
+}

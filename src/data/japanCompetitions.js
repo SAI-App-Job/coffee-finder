@@ -48,10 +48,11 @@ export const JAPAN_COMPETITIONS = [
     history:
       "2003年から実施されているSCAJ主催の競技会。制限時間内に「エスプレッソ」「ミルクビバレッジ」「シグネチャービバレッジ(創作ドリンク)」の3種類を提供し、味わいだけでなく提供までの全工程の適切性・正確性・一貫性が審査される。ルールは世界大会「World Barista Championship(WBC)」に準じており、JBC優勝者は日本代表としてWBCに出場する。2007年、アジアで初めてWBCが東京で開催された際には宮前選手が世界第4位とベストカプチーノ賞を同時受賞する好成績を残した。",
     latestResult:
-      "2024年は猿田彦珈琲の伊藤大貴選手が優勝(同社として初のJBC優勝)。翌2025年のWBCへ日本代表として出場した。",
+      "2024年は猿田彦珈琲の伊藤大貴選手が優勝(同社として初のJBC優勝)。翌2025年のWBCへ日本代表として出場した。2026年大会(10月)でも伊藤選手(猿田彦珈琲)が優勝した。",
     sources: [
       { label: "JBC概要", url: "https://scaj.org/activity/competitions/jbc/jbc-overview" },
       { label: "過去の競技結果", url: "https://scaj.org/activity/competitions/jbc/results" },
+      { label: "2026年の競技結果", url: "https://scaj.org/activity/competitions/jbc/2026-results" },
     ],
   },
   {
@@ -64,11 +65,12 @@ export const JAPAN_COMPETITIONS = [
     format:
       "審査は添加物を加えないドリップコーヒーの味覚評価が中心。予選では、量の異なる2種類の抽出コーヒーの均一性が重要な評価項目となり、注ぎの技術だけで異なる分量のコーヒーを同じ味わいに仕上げる技術が問われる。決勝では大会前に配布された豆を使い、抽出の均一性を含むプロフェッショナルとしての総合的な技術が評価される。",
     latestResult:
-      "新田和雄選手(福井県・新田珈琲)が2023・2024年と連覇したのち、2025年には娘の新田衣祥選手が優勝。親子で3年連続の優勝という珍しい記録になった。",
+      "新田和雄選手(福井県・新田珈琲)が2023・2024年と連覇したのち、2025年には長女の新田衣祥選手、2026年には妻の新田千香子選手が優勝。同じ新田珈琲の家族が4年連続で優勝する、JHDC史上初の記録になった(家族関係は新田珈琲のプレスリリースによる)。",
     sources: [
       { label: "JHDC概要", url: "https://scaj.org/activity/competitions/jhdc-2" },
       { label: "過去の競技結果", url: "https://scaj.org/activity/competitions/jhdc-2/past_results" },
       { label: "審査員プログラム(競技詳細)", url: "https://scaj.org/activity/competitions/jhdc-2/2026-judgecertification" },
+      { label: "2026年の競技結果", url: "https://scaj.org/activity/competitions/jhdc-2/2026-results" },
     ],
   },
   {

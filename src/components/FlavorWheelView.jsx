@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
-import { SectionHeading, SourceCredit } from "./common";
+import { SectionHeading, VerifiedSources } from "./common";
+import { IS_FLAVOR_WHEEL_PUBLISHED, FLAVOR_WHEEL_KEY, prose, proseKey } from "../data/published";
 import { FLAVOR_WHEEL_DATA } from "../data/flavorWheel";
 import { useT } from "../i18n";
 
@@ -73,16 +74,20 @@ export function FlavorWheelView({ hideHeading = false }) {
   return (
     <main className="px-5 py-5 flex flex-col gap-3 max-w-xl mx-auto">
       {!hideHeading && <SectionHeading en="Flavor Wheel" ja="フレーバーホイール" />}
-      <p className="text-[13px] text-[var(--c-text-3)]">
-        {t("SCA(スペシャルティコーヒー協会)とWCR(ワールドコーヒーリサーチ)が2016年に共同開発した、コーヒーの風味を語るための共通言語。9つの大分類をタップすると、含まれる具体的な表現が開きます。")}
-      </p>
-      <FlavorWheelExplorer />
-      <div className="text-[11px] text-[var(--c-text-3)] leading-relaxed border-t border-[var(--c-border)] pt-3 mt-1">
-        <p>
-          {t("円形の公式図(SCA/WCR著作物)はそのまま複製せず、公開されている用語データを独自のカード形式に再構成しています。実際の円形の図はSCAの公式サイトで確認・購入できます。")}
-        </p>
-      </div>
-      <SourceCredit sources={["SCA(Specialty Coffee Association)", "WCR(World Coffee Research)Sensory Lexicon"]} />
+      {IS_FLAVOR_WHEEL_PUBLISHED && (
+        <>
+          {prose("flavorwheel.intro") && <p className="text-[13px] text-[var(--c-text-3)]">{t(prose("flavorwheel.intro"))}</p>}
+          <FlavorWheelExplorer />
+          {prose("flavorwheel.note") && (
+            <div className="text-[11px] text-[var(--c-text-3)] leading-relaxed border-t border-[var(--c-border)] pt-3 mt-1">
+              <p>{t(prose("flavorwheel.note"))}</p>
+            </div>
+          )}
+          <VerifiedSources
+            keys={[FLAVOR_WHEEL_KEY, ...(prose("flavorwheel.intro") ? [proseKey("flavorwheel.intro")] : []), ...(prose("flavorwheel.note") ? [proseKey("flavorwheel.note")] : [])]}
+          />
+        </>
+      )}
     </main>
   );
 }

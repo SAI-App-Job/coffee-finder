@@ -1,0 +1,293 @@
+{
+ "translations": {
+  "brand:クリスタルマウンテン": {
+   "en": {
+    "note": "Product of Cuba",
+    "explanation": "Under the code of the All Japan Coffee Fair Trade Council (Appendix Table 2), this brand is defined as Arabica coffee beans produced in Cuba in accordance with that country's export standard. The same appendix table defines it as a brand and origin separate from Blue Mountain (produced in the Jamaica Blue Mountain district)."
+   },
+   "notes": "全日本コーヒー公正取引協議会は All Japan Coffee Fair Trade Council と仮訳(引用に英語表記なし)"
+  },
+  "brand:ブルーマウンテン": {
+   "en": {
+    "note": null,
+    "explanation": "Under the code of the All Japan Coffee Fair Trade Council (Appendix Table 2), this brand is defined as Arabica coffee beans produced in the Jamaica Blue Mountain district. The coffee licensing page of Jamaica's JACRA (Jamaica Agricultural Commodities Regulatory Authority) has a \"Trademark User Licence\" item, which states that it is for dealers and foreign importers who use their own labels and are authorised to use the Jamaica Blue Mountain and High Mountain Supreme trademarks."
+   },
+   "notes": "Trademark User Licence は引用の表記のまま。dealers / foreign importers は日本語の括弧どおり"
+  },
+  "brand:モカ・ハラー": {
+   "en": {
+    "note": "Produced in the Harar district",
+    "explanation": "Under the code of the All Japan Coffee Fair Trade Council (Appendix Table 2), this brand is defined as Arabica coffee beans produced in the Harar district of Ethiopia."
+   },
+   "notes": ""
+  },
+  "brew:エアロプレス": {
+   "en": {
+    "temp": "85°C (as stated in the AeroPress official site's Signature Brew Preparation; 185°F)",
+    "grindSize": "Medium-fine grind (AeroPress official: Medium-Fine)",
+    "ratio": "16-18 g of ground coffee (as stated in the AeroPress official site's Signature Brew Preparation)",
+    "steps": [
+     "Place the filter in the filter cap and twist it onto the chamber",
+     "Stir gently for about 3 seconds",
+     "Press the plunger until the hissing sound begins and ends (a sign that the last of the brew has passed through the coffee bed)"
+    ]
+   },
+   "notes": "日本語の「16〜18g」は範囲表記のためハイフンで写した"
+  },
+  "brew:ペーパードリップ": {
+   "en": {
+    "ratio": "The recommendation for meeting the SCA Golden Cup Standard is 55 g/L ±10%",
+    "temp": "The recommendation for meeting the SCA Golden Cup Standard is a water temperature, at the point of contact with the coffee, of 200°F ±5°, 94.0°C ±2"
+   },
+   "notes": "日本語末尾の「±2」は単位なしのまま(原文どおり)"
+  },
+  "brew:水出し(コールドブリュー)": {
+   "en": {
+    "calibration": "The 2018 Scientific Reports paper \"Acidity and Antioxidant Activity of Cold Brew Coffee\" found that hot brew coffee has a higher concentration of total titratable acids than cold brew coffee."
+   },
+   "notes": ""
+  },
+  "competition:jbc:latestResult": {
+   "en": {
+    "text": "At the 2026 championship (semi-final on October 14, final on October 15), Hiroki Ito of Sarutahiko Coffee Co., Ltd. (Tokyo) won. SCAJ's table of past competition results also has a row for Hiroki Ito (Sarutahiko Coffee Co., Ltd.) as the winner. In the top-placings list of the World Coffee Championships' 2025 announcement (2025 World Barista Champion), \"5. Hiroki Ito, Japan\" appears."
+   },
+   "notes": "猿田彦珈琲株式会社は Sarutahiko Coffee Co., Ltd. と仮訳(引用に英語表記なし)"
+  },
+  "competition:jbc:tagline": {
+   "en": {
+    "text": "A competition in which competitors serve three kinds of drinks: espresso, a milk beverage, and a signature beverage (an original creation)"
+   },
+   "notes": ""
+  },
+  "competition:jcrc:latestResult": {
+   "en": {
+    "text": "In 2016, Hiraku Kondo of Itsuka Kohiya (Kanagawa) won. He competed in the following year's (2017) World Coffee Roasting Championship (Guangzhou, China) and placed 7th (out of 21 countries)."
+   },
+   "notes": "いつか珈琲屋は Itsuka Kohiya とローマ字化(引用に英語表記なし)。近藤啓は引用の Hiraku Kondo"
+  },
+  "competition:jcrc:tagline": {
+   "en": {
+    "text": "A competition in which competitors declare in advance, in a \"roast log,\" the flavor characteristics they aim for before roasting"
+   },
+   "notes": ""
+  },
+  "competition:jctc:history": {
+   "en": {
+    "text": "Overseas, a world championship that turns cupping, the foundation of specialty coffee, into a competition is held, and the first JCTC was held in Japan in September 2009. Competitors from Japan took part in the 2009 world championship (Cologne), and Goto (後藤) placed third in the world."
+   },
+   "notes": "後藤選手は引用に英語表記なく「後藤 (Goto)」とした。JCTCは略称のまま"
+  },
+  "competition:jhdc:format": {
+   "en": {
+    "text": "According to SCAJ's 2026 judges program, judging centers on a sensory evaluation of drip coffee with no additives. In the preliminary round, the uniformity of two brewed coffees of different quantities is an important evaluation item. In the final, using coffee beans distributed before the competition, the overall technique of a professional in coffee service, including the uniformity of brewing, is evaluated."
+   },
+   "notes": ""
+  },
+  "competition:jhdc:latestResult": {
+   "en": {
+    "text": "According to SCAJ's competition results, the winner of JHDC 2026 was 新田千香子 (Nitta) of Nitta Coffee Co., Ltd. In the table of past competition results (2012-2025), there are winner rows for Kazuo Nitta (Nitta Coffee Co., Ltd., Fukui) and 新田衣祥 (Nitta) (Nitta Coffee Co., Ltd. / Nitta Coffee)."
+   },
+   "notes": "新田千香子・新田衣祥は引用に英語表記がなく「漢字+姓」。有限会社新田珈琲は Nitta Coffee Co., Ltd. と仮訳"
+  },
+  "competition:jsc:history": {
+   "en": {
+    "text": "Born in 2003 as the siphon division of the JBC (Japan Barista Championship). Competitors compete in the brewing technique of a regular blend coffee and of each competitor's own original signature beverage made with it. The scale of the competition grew year by year, and in 2007 it was reborn as the \"Japan Siphonist Championship.\" In 2009, the world-scale \"World Siphonist Championship (WSC)\" was held for the first time in the world. The winner competes in the world championship as Japan's representative, together with representatives recommended by various countries."
+   },
+   "notes": "JBCの英名 Japan Barista Championship は一般的な表記"
+  },
+  "competition:jsc:tagline": {
+   "en": {
+    "text": "A competition in which competitors prepare, within the time limit, a regular blend coffee and each competitor's own original signature beverage made with it"
+   },
+   "notes": ""
+  },
+  "competition:kikikohi:history": {
+   "en": {
+    "text": "SCAJ's page for the 12th Kikikohi (Coffee Tasting) Championship states \"holders of the SCAJ Coffee Meister certification.\" It is a competition on the sensory evaluation of coffee run by the SCAJ Training Committee, and the 12th is announced to be held on October 14, 2026 at Stage B of SCAJ2026 (SCAJ official page). The winner of the 12th will be honored as the \"2026 Coffee Meister Kikikohi King\" and presented with a trophy."
+   },
+   "notes": "利き珈琲選手権は Kikikohi (Coffee Tasting) Championship と音訳+補足。日本語の「有資格者」を holders of ... certification と訳した"
+  },
+  "diagnosis:未抽出(Under-extraction)": {
+   "en": {
+    "cause": "Batali et al. 2020 (drip) state that a higher extraction yield (PE) is generally achieved with a longer residence time, and that the samples with low extraction yield had much shorter brew times (by comparison).",
+    "taste": "Sour (in the sensory evaluation of Batali et al. 2020, Sour is listed as one of the attributes that increase with higher concentration (TDS) and decrease with higher extraction yield)"
+   },
+   "notes": ""
+  },
+  "diagnosis:過抽出(Over-extraction)": {
+   "en": {
+    "cause": "Batali et al. 2020 (drip) state that a higher extraction yield (PE) is generally achieved with a longer residence time.",
+    "taste": ""
+   },
+   "notes": ""
+  },
+  "diagnosis:適正抽出": {
+   "en": {
+    "cause": "The Golden Cup Standard in the SCA Coffee Standards (2020 archived version) specifies a brew strength (TDS) of 11.5 to 13.5 g/L (corresponding to 1.15 to 1.35 \"percent\" on the SCA Brewing Control Chart) and a solubles extraction yield of 18 to 22%.",
+    "taste": ""
+   },
+   "notes": ""
+  },
+  "extraction:roast": {
+   "en": {
+    "summary": "It has been reported that the higher the degree of roast, the higher the porosity of the roasted beans",
+    "detail": "When the porosity of roasted beans was measured with a scanning electron microscope, porosity was reported to increase as the degree of roast increased (Scientific Reports 2024, Caffeine content in filter coffee brews as a function of degree of roast and extraction yield)."
+   },
+   "notes": ""
+  },
+  "extraction:time": {
+   "en": {
+    "summary": "",
+    "detail": "Batali et al. (Scientific Reports 2020, drip) state that a higher extraction yield (PE) is generally achieved with a longer residence time, and that the samples with low extraction yield had much shorter brew times. They also list Sour (sourness) and others as attributes that increase with higher concentration (TDS) and decrease with higher extraction yield."
+   },
+   "notes": ""
+  },
+  "fact:SCAJ誕生のきっかけは「コーヒークライシス」だった": {
+   "en": {
+    "title": "SCAJ was newly established in 2003",
+    "text": "The Specialty Coffee Association of Japan (SCAJ) was newly established in 2003 as the \"Specialty Coffee Association of Japan,\" an association more open to Japan and the world (from SCAJ's \"History\")."
+   },
+   "notes": ""
+  },
+  "fact:「80点基準」はSCA自身が2021年に卒業していた": {
+   "en": {
+    "title": "The SCA defined specialty coffee in its 2021 white paper",
+    "text": "The SCA's white paper \"Towards a Definition of Specialty Coffee\" (2021) defines specialty coffee as a coffee (or coffee experience) recognized for its distinctive attributes and, because of those attributes, having significant extra value in the marketplace."
+   },
+   "notes": ""
+  },
+  "fact:「コーヒーのオリンピック」はブラジルのオークションから始まった": {
+   "en": {
+    "title": "The first Cup of Excellence competition was \"Best of Brazil\" in 1999",
+    "text": "According to the Alliance for Coffee Excellence, the first Cup of Excellence competition, in 1999, was called \"Best of Brazil.\" According to an ICO document (WP Board 978/05), the world's first Internet coffee auction was held in Brazil in 1999 and led to the Cup of Excellence competition and auction programme."
+   },
+   "notes": ""
+  },
+  "fact:「フレーバー」には2つの意味がある": {
+   "en": {
+    "title": "How the SCA defines \"flavor\"",
+    "text": "SCA Standard 103-2024 (Coffee Value Assessment: Descriptive Assessment) defines Flavor as the perception coming from both the taste of the brew and the brew's retronasal olfactory component, while the brew is in the mouth."
+   },
+   "notes": "日本語の「抽出液の retronasal olfactory(後鼻腔の嗅覚)の成分」を、引用の英語表記で写した"
+  },
+  "fact:「緑のカエル」は合併で生まれたロゴ": {
+   "en": {
+    "title": "The Rainforest Alliance was founded in 1987, and UTZ joined it in 2018",
+    "text": "The Rainforest Alliance is an organization that was co-founded in 1987. In a recollection by the organization's founder, it is stated that millions of people rely on the \"little green frog\" at the supermarket to choose more sustainably. UTZ joined forces in 2018. UTZ was launched in 2002 by a Guatemalan coffee farmer and a Dutch roaster."
+   },
+   "notes": ""
+  },
+  "fact:イエメンには公的な等級認証機関が事実上ない": {
+   "en": {
+    "title": "The FAO and IFC report states that the private sector sets quality standards in Yemen",
+    "text": "A 2023 report by the FAO and IFC states that setting quality standards has been taken on by the private sector, and that the SCA (Specialty Coffee Association of Yemen) sets standards for specialty coffee and also carries out third-party quality verification and testing."
+   },
+   "notes": ""
+  },
+  "fact:インドネシアには輸出者団体が2つある": {
+   "en": {
+    "title": "Indonesia has two similarly named organizations, AEKI and GAEKI",
+    "text": "Indonesia has two similarly named organizations: AEKI (Asosiasi Eksportir dan Industri Kopi Indonesia) and GAEKI (Gabungan Eksportir Kopi Indonesia). Both include Eksportir (exporter) in their names."
+   },
+   "notes": ""
+  },
+  "fact:エチオピアは価格上「ブラジルの仲間」": {
+   "en": {
+    "title": "In the ICO classification, Ethiopia is in the same \"Brazilian Natural Arabicas\" group as Brazil",
+    "text": "According to the International Coffee Organization (ICO) glossary, Brazilian Natural Arabicas is one of the Arabica groups established under the Agreement, and the countries in this group are Brazil, Ethiopia and Paraguay. An ICO statistics document (SC-105/21) explains that, among the Arabica groups, Mild Arabicas are processed by the wet method and Brazilian Naturals by the dry method."
+   },
+   "notes": ""
+  },
+  "fact:クリスタルマウンテンはジャマイカ産ではない": {
+   "en": {
+    "title": "The Fair Competition Code defines Crystal Mountain as a product of Cuba",
+    "text": "In the Fair Competition Code of the All Japan Coffee Fair Trade Council (Appendix Table 2), Crystal Mountain is defined as Arabica coffee beans produced in Cuba in accordance with that country's export standard. Jamaica is under a separate category (Appendix Table 2, item 3), defined as \"Arabica coffee beans produced in Jamaica other than those in 1) and 2).\""
+   },
+   "notes": "公正競争規約は Fair Competition Code と仮訳(引用に英語表記なし)"
+  },
+  "fact:グアテマラだけの輸出税": {
+   "en": {
+    "title": "Guatemala's coffee exports are subject to a levy of 1% of the FOB value",
+    "text": "According to the WTO's Trade Policy Review report on Guatemala (WT/TPR/S/477, October 2025), in Guatemala coffee exports are subject to a charge of 1% of the FOB value for each quintal of coffee exported. The same report includes the statement \"with the remainder going to ANACAFÉ\" (the remainder goes to ANACAFÉ)."
+   },
+   "notes": ""
+  },
+  "fact:グアテマラには300を超える微気候がある": {
+   "en": {
+    "title": "Guatemala has more than 300 microclimates",
+    "text": "Most of Guatemala's coffee-growing areas are in mountainous terrain above 1,100 m, where ecological and environmental factors combine to create more than 300 microclimates (Anacafe)."
+   },
+   "notes": ""
+  },
+  "fact:ケニアのSL28はカシス風味の立役者": {
+   "en": {
+    "title": "Kenya's SL28 is a variety selected in the 1930s",
+    "text": "The variety SL28 was selected in Kenya in the 1930s. The WCR catalog states that SL28 shows resistance to drought."
+   },
+   "notes": "WCR は引用の略称のまま"
+  },
+  "fact:コロンビア・ケニア・タンザニアは「同じ仲間」": {
+   "en": {
+    "title": "Colombia, Kenya and Tanzania are in \"the same group\"",
+    "text": "The ICO's rules on indicator prices (Annex I of the statistical rules) list four groups (Colombian Milds, Other Milds, Brazilian Naturals, Robustas) and give each group's market shares in the USA and the EU. According to an ICO document (SC-105/21), the countries included in Colombian Milds are the three countries Colombia, Kenya and Tanzania, and Mild Arabicas from other countries are classified as Other Milds."
+   },
+   "notes": ""
+  },
+  "fact:コーヒーの木の寿命は20〜30年": {
+   "en": {
+    "title": "Choosing a variety affects the next generation as well",
+    "text": "The WCR catalog commentary states that the consequences of a producer's decision about which variety to plant last until the next generation."
+   },
+   "notes": ""
+  },
+  "fact:コーヒー価格の重み付けは生きている": {
+   "en": {
+    "title": "The weighting in coffee prices is a living one",
+    "text": "Under the ICO's statistical rules (indicator prices), the weighting of each group is to be reviewed every two years. The weighting from October 1, 2005 is Colombian Milds 13%, Other Milds 24%, Brazilian Naturals 29%, Robustas 34%. For 2007, an ICO document says that the Committee recommended to the Council that the new group market shares and weightings take effect from October 1, 2007."
+   },
+   "notes": "「生きている」は living と直訳(タイトル)"
+  },
+  "fact:コーヒー鑑定士資格「Qグレーダー」の運営元が変わった": {
+   "en": {
+    "title": "The organization that runs the \"Q Grader\" coffee-assessor qualification has changed",
+    "text": "The Q Grader is a qualification for evaluating and communicating coffee quality. The Coffee Quality Institute (CQI) introduced the Q (Quality) Coffee System in 2004 and had administered the Q Grader certification, but ceased to administer it in 2025. On October 1, 2025, the SCA announced that Q Grader courses had launched as part of an updated program, and says it will evolve the content of the program and transition its management from CQI. The updated curriculum is grounded in the CVA (Coffee Value Assessment)."
+   },
+   "notes": ""
+  },
+  "fact:サパティスタ運動が今のメキシココーヒーの姿を作った": {
+   "en": {
+    "title": "Mexico's coffee farmers are mostly smallholders",
+    "text": "According to a report published by the ICO (Mexico's Coffee Value Chain, prepared by COSA), most coffee farmers in Mexico are smallholders, with an average farm size of 2.9 hectares (median 2.0 hectares). Farms in the state of Veracruz are larger (averaging 2.3 hectares), while the state of Chiapas is 1.7 hectares and the state of Puebla is 1.6 hectares."
+   },
+   "notes": "日本語のとおり「Veracruzは2.3ヘクタールで『より大きく』」を写した(全体平均2.9haより小さい点は日本語側の記述の問題の可能性あり。要確認)"
+  },
+  "fact:ジャマイカは2025年のハリケーンで収穫の4割を失った": {
+   "en": {
+    "title": "Jamaica is said to have lost 40% of its coffee to the 2025 hurricane",
+    "text": "On October 28, 2025, Hurricane Melissa made landfall near New Hope in Westmoreland, Jamaica, as a Category 5 hurricane. A January 14, 2026 article by JIS, the Jamaican government's information agency, mentions a 40% loss of coffee due to Melissa."
+   },
+   "notes": "JIS は引用に略称のみ"
+  },
+  "fact:スペシャルティの基準は「点数」から「4つの軸」へ": {
+   "en": {
+    "title": "The SCA's evaluation has moved from \"a single cupping score\" to \"four assessment types\"",
+    "text": "The SCA announced that it has formally adopted the CVA (Coffee Value Assessment) descriptive assessment and affective assessment as its new cupping standards. These standards supersede the 2004 cupping protocol. The SCA describes the CVA as a shift away from the limitations of describing a coffee with a single cupping score. The CVA does not rely on a single score and combines four complementary assessment types."
+   },
+   "notes": "「嗜好的評価」は引用に無く affective assessment とした(CVAの公式用語)。要確認"
+  },
+  "fact:スマトラ式は2段階で乾燥させる": {
+   "en": {
+    "title": "Mandheling is hulled before the green beans are dried",
+    "text": "According to an FAO/ICO/CFC report (an annex of Origins of Mandheling Coffee Character), wet parchment is hulled at a moisture content of 40-50% (hulled wet). The hulled green beans are then sun-dried."
+   },
+   "notes": "「脱穀」は hulled と訳した(引用どおり)"
+  },
+  "fact:タンザニアは輸出まで一つの機関が管理": {
+   "en": {
+    "title": "What Tanzania's Coffee Industry Act 2001 provides",
+    "text": "The Tanzania Coffee Board is an agency re-established by the Coffee Industry Act 2001. The provisions of the Act list regulating and controlling the quality of coffee and coffee by-products, conducting coffee auctions, and granting licences or permits for coffee export (per the provisions enacted in 2001)."
+   },
+   "notes": ""
+  }
+ }
+}

@@ -1,9 +1,9 @@
 import { useState, useRef } from "react";
 import { Globe2, Clock, Dna, Package, BookOpen, MapPin, Coffee, Award, Gauge } from "lucide-react";
-import { SectionHeading, SourceCredit } from "./common";
+import { SectionHeading, VerifiedSources } from "./common";
 import { OriginMapView } from "./OriginMapView";
-import { DESIGNATED_BRANDS } from "../data/designatedBrands";
 import { ORIGIN_GUIDE } from "../data/originGuide";
+import { PUBLISHED_DESIGNATED_BRANDS, publishedOrigin, gateLocalizedOrigin } from "../data/published";
 import { brandName, localizeBrand, localizeOrigin } from "../data/localize";
 import { useT } from "../i18n";
 
@@ -22,9 +22,11 @@ export function OriginSection({ icon: Icon, label, children }) {
 
 export function OriginGuideCard({ origin: rawOrigin, onViewProducts }) {
   const t = useT();
-  const origin = localizeOrigin(rawOrigin);
-  const relatedBrands = DESIGNATED_BRANDS.filter((b) => b.country === origin.country);
-  const hasDetail = Boolean(origin.terroir);
+  // 出典を確認できた項目だけを出す(判定は日本語の原文。台帳: origin:<国>:<項目>)
+  const published = publishedOrigin(rawOrigin);
+  const origin = gateLocalizedOrigin(localizeOrigin(rawOrigin), rawOrigin);
+  const relatedBrands = PUBLISHED_DESIGNATED_BRANDS.filter((b) => b.country === origin.country);
+  const hasDetail = published.keys.length > 0;
 
   return (
     <div className="rounded-2xl bg-[var(--c-surface)] border border-[var(--c-border)] p-4 flex flex-col gap-2.5">
@@ -43,8 +45,8 @@ export function OriginGuideCard({ origin: rawOrigin, onViewProducts }) {
           </button>
         )}
       </div>
-      <p className="text-[13px] text-[var(--accent)]">{origin.tagline}</p>
-      <p className="text-[12px] text-[var(--c-text-3)]">{t("代表地域: {regions}", { regions: origin.regions })}</p>
+      {origin.tagline && <p className="text-[13px] text-[var(--accent)]">{origin.tagline}</p>}
+      {origin.regions && <p className="text-[12px] text-[var(--c-text-3)]">{t("代表地域: {regions}", { regions: origin.regions })}</p>}
 
       {relatedBrands.length > 0 && (
         <div className="flex flex-wrap items-center gap-1.5 pt-1">
@@ -70,7 +72,7 @@ export function OriginGuideCard({ origin: rawOrigin, onViewProducts }) {
           <OriginSection icon={BookOpen} label={t("History / 歴史")}>{origin.history}</OriginSection>
           <OriginSection icon={Gauge} label={t("Grade System / グレード基準")}>{origin.gradeSystem}</OriginSection>
 
-          {origin.subRegions && (
+          {origin.subRegions && origin.subRegions.length > 0 && (
             <div>
               <div className="flex items-center gap-1.5 mb-2">
                 <MapPin size={12} className="text-[var(--accent-label)]" strokeWidth={1.75} />
@@ -87,20 +89,20 @@ export function OriginGuideCard({ origin: rawOrigin, onViewProducts }) {
             </div>
           )}
 
-          <div className="flex items-start gap-1.5 text-[12px] text-[var(--c-text-3)] bg-[var(--c-surface-2)] rounded-lg p-2.5">
-            <Award size={13} className="shrink-0 mt-0.5 text-[var(--accent-label)]" strokeWidth={1.75} />
-            <span>{origin.officialBody}</span>
-          </div>
+          {origin.officialBody && (
+            <div className="flex items-start gap-1.5 text-[12px] text-[var(--c-text-3)] bg-[var(--c-surface-2)] rounded-lg p-2.5">
+              <Award size={13} className="shrink-0 mt-0.5 text-[var(--accent-label)]" strokeWidth={1.75} />
+              <span>{origin.officialBody}</span>
+            </div>
+          )}
 
-          {origin.sources && <SourceCredit sources={origin.sources.map((source) => t(source))} />}
+          <VerifiedSources keys={published.keys} />
         </div>
       ) : (
         <div className="pt-2 mt-1 border-t border-[var(--c-border)] flex flex-col gap-2">
-          <p className="text-[13px] leading-relaxed text-[var(--c-text-2)]">{origin.note}</p>
-          <div className="flex items-start gap-1.5 text-[12px] text-[var(--c-text-3)] bg-[var(--c-surface-2)] rounded-lg p-2.5">
-            <Award size={13} className="shrink-0 mt-0.5 text-[var(--accent-label)]" strokeWidth={1.75} />
-            <span>{origin.officialBody}</span>
-          </div>
+          <p className="text-[13px] leading-relaxed text-[var(--c-text-2)]">
+            {t("この国の解説は、出典の確認が済み次第、公開します。")}
+          </p>
         </div>
       )}
     </div>
@@ -151,7 +153,7 @@ export function BuyingGuideView({ pendingOriginCountry, onViewProducts }) {
       <SectionHeading en="Origin" ja="産地" />
       <div>
         <p className="text-[13px] text-[var(--c-text-3)] mb-3">
-          {t("マップ上のピンをタップすると、その産地の特徴と各国の公式コーヒー協会(海外情報を翻訳・要約)が表示されます。")}
+          {t("マップ上のピンをタップすると、その産地の解説が表示されます。解説には、確認した出典を付けています。")}
         </p>
         <OriginMapView origins={ORIGIN_GUIDE} selected={selected} onSelect={handleSelect} />
         <div ref={detailRef} className="mt-3">

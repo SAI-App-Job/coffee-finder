@@ -1,0 +1,375 @@
+{
+  "results": {
+    "brand:クリスタルマウンテン": {
+      "verdict": "edit",
+      "finalContent": {
+        "note": "キューバ産",
+        "explanation": "全日本コーヒー公正取引協議会の規約(別表2)では、キューバにて生産された同国輸出規格に基づくアラビカコーヒー豆と定義される銘柄。同じ別表で、ブルーマウンテン(ジャマイカ・ブルーマウンテン地区産)とは別の銘柄・別の産地として定義されている。"
+      },
+      "usedClaims": [
+        0,
+        1
+      ],
+      "notes": "rejectedの注記『地図の対象国には未収録』を削除。『別とは別に』を、規約で別々に定義されている範囲に直し、規約の帰属を明示した。"
+    },
+    "brand:ブルーマウンテン": {
+      "verdict": "edit",
+      "finalContent": {
+        "note": null,
+        "explanation": "全日本コーヒー公正取引協議会の規約(別表2)では、ジャマイカ・ブルーマウンテン地区にて生産されたアラビカコーヒー豆と定義される銘柄。ジャマイカのJACRA(Jamaica Agricultural Commodities Regulatory Authority)のコーヒー許認可のページには「Trademark User Licence」の項目があり、自社ラベルを使い、Jamaica Blue Mountain および High Mountain Supreme 商標の使用を認められた業者(dealers)と外国輸入業者(foreign importers)向けと記されている。"
+      },
+      "usedClaims": [
+        0,
+        3,
+        4
+      ],
+      "notes": "規約の帰属を明示。JACRAの記述は、主張(輸出業者・外国輸入業者に求める)が引用(dealers and foreign importers ... authorised to use)より広いため引用の範囲に直し、『輸出業者など』『求めている』の断定を避けた。"
+    },
+    "brand:モカ・ハラー": {
+      "verdict": "edit",
+      "finalContent": {
+        "note": "ハラー地区産",
+        "explanation": "全日本コーヒー公正取引協議会の規約(別表2)では、エチオピア・ハラー地区にて生産されたアラビカコーヒー豆と定義される銘柄。"
+      },
+      "usedClaims": [
+        0
+      ],
+      "notes": "注記の『のみ』は主張にない排他性の追加なので削除。規約の帰属を追加。"
+    },
+    "brew:エアロプレス": {
+      "verdict": "edit",
+      "finalContent": {
+        "temp": "85℃(AeroPress公式サイトの標準レシピ。185°F)",
+        "grindSize": "中細挽き(AeroPress公式: Medium-Fine)",
+        "ratio": "粉16〜18g(AeroPress公式サイトの標準レシピ)",
+        "steps": [
+          "フィルターをフィルターキャップにセットし、チャンバーにねじ込む",
+          "やさしく約3秒かき混ぜる",
+          "プランジャーを、シューという音が始まって終わるまで押す(最後の抽出液が粉の層を通り抜けた合図)"
+        ]
+      },
+      "usedClaims": [
+        2,
+        4,
+        7,
+        9,
+        11,
+        13
+      ],
+      "notes": "『挽き済みの粉はMedium』『目盛り4』『プランジャーを半インチ差し込んで60秒/30秒待つ』『一定の軽い力』は主張にない(待ち時間はrejected)ため削除。手順2は引用が撹拌のみなので撹拌に限定。"
+    },
+    "brew:フレンチプレス": {
+      "verdict": "drop",
+      "notes": "proposedが空で、verifiedClaimsもなし(全てunverified)。"
+    },
+    "brew:ペーパードリップ": {
+      "verdict": "edit",
+      "finalContent": {
+        "ratio": "SCAのゴールデンカップ基準を満たすための推奨は 55g/L ±10%(およそ1:18)",
+        "temp": "SCAのゴールデンカップ基準を満たすための推奨は、コーヒーに触れる時点の湯温が 94.0℃±2(92〜96℃、200°F±5°)"
+      },
+      "usedClaims": [
+        2,
+        3
+      ],
+      "notes": "『推奨』であること、湯温が『コーヒーに触れる時点』であることなど、原文の条件を明示した。数値は引用と一致。1:18と92〜96℃は引用値からの換算。"
+    },
+    "brew:水出し(コールドブリュー)": {
+      "verdict": "edit",
+      "finalContent": {
+        "calibration": "Rao 2018(Scientific Reports)の比較では、ホットブリューのコーヒーのほうが、水出しのコーヒーより総滴定酸の濃度が高かった。"
+      },
+      "usedClaims": [
+        8
+      ],
+      "notes": "『同じ粉:水比で』『pHは同程度』は主張にない追加。引用の範囲(ホットのほうが総滴定酸濃度が高い)に直し、出典を帰属した。"
+    },
+    "competition:jbc:latestResult": {
+      "verdict": "pass",
+      "usedClaims": [
+        0,
+        2,
+        3,
+        4
+      ],
+      "notes": ""
+    },
+    "competition:jbc:tagline": {
+      "verdict": "edit",
+      "finalContent": {
+        "text": "エスプレッソ、ミルクビバレッジ、シグネチャービバレッジ(創作ドリンク)の3種類を提供して競う競技会"
+      },
+      "usedClaims": [
+        0
+      ],
+      "notes": "『SCAJ主催』は主張にないため削除。引用の範囲(3種類を提供して競う)に直した。"
+    },
+    "competition:jcrc:latestResult": {
+      "verdict": "pass",
+      "usedClaims": [
+        0,
+        3
+      ],
+      "notes": "文面は確認済み主張の範囲内。ただし検証担当のメモの通り2016年は最新ではなく、2025年の結果(2017〜2025年のページ)が存在する。『latestResult』欄に出すなら、2025年の結果を検証して差し替える必要がある(パケットには2025年の確認済み主張がないため、監査では書き換えられない)。"
+    },
+    "competition:jcrc:tagline": {
+      "verdict": "pass",
+      "usedClaims": [
+        0
+      ],
+      "notes": ""
+    },
+    "competition:jctc:history": {
+      "verdict": "pass",
+      "usedClaims": [
+        0,
+        1
+      ],
+      "notes": ""
+    },
+    "competition:jhdc:format": {
+      "verdict": "edit",
+      "finalContent": {
+        "text": "SCAJの2026年審査員プログラムによると、審査は添加物を加えないドリップコーヒーの味覚審査が中心。予選では、量の異なる2種類の抽出コーヒーの均一性が重要な評価項目となる。決勝では大会前に配布されるコーヒー豆を使い、抽出の均一性を含む、コーヒーサービスにおけるプロフェッショナルとしての総合的な技術が評価される。"
+      },
+      "usedClaims": [
+        0,
+        1,
+        3
+      ],
+      "notes": "資料が2026年の審査員プログラムなので、帰属(2026年版)を明示。語尾・語を引用に合わせた。"
+    },
+    "competition:jhdc:latestResult": {
+      "verdict": "edit",
+      "finalContent": {
+        "text": "新田和雄選手(福井県・新田珈琲)が2023年・2024年と連覇したのち、2025年は新田衣祥選手、2026年は新田千香子選手が優勝し、2023〜2026年の4年連続で新田珈琲の選手が優勝した(SCAJ公式の競技結果による)。"
+      },
+      "usedClaims": [
+        0,
+        1,
+        3,
+        5
+      ],
+      "notes": "『4年連続』の期間(2023〜2026年)を明示しただけの軽微な修正。続柄などは含まれていない。"
+    },
+    "competition:jsc:history": {
+      "verdict": "pass",
+      "usedClaims": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        7
+      ],
+      "notes": ""
+    },
+    "competition:jsc:tagline": {
+      "verdict": "edit",
+      "finalContent": {
+        "text": "通常のブレンドコーヒーと、それを使った各選手オリジナルのシグニチャービバレッジ(創作ドリンク)を時間内に作成して競う競技会"
+      },
+      "usedClaims": [
+        0
+      ],
+      "notes": "主張の『サイフォン抽出の技術』は、引用(ブレンドコーヒーとシグニチャービバレッジを時間内に作成)にサイフォンの語が無いため削除した。サイフォンはcompetition:jsc:historyの引用(JBCのサイフォン部門として誕生)で別に確認されている。"
+    },
+    "competition:kikikohi:history": {
+      "verdict": "edit",
+      "finalContent": {
+        "text": "出場資格はSCAJコーヒーマイスター認定資格の有資格者。SCAJトレイニング委員会による、コーヒーの官能評価を競う競技会で、第12回は2026年10月14日にSCAJ2026のステージBで開催すると告知されている(SCAJ公式ページ)。第12回の優勝者は「2026年コーヒーマイスター利き珈琲王」として表彰され、トロフィーが授与される。"
+      },
+      "usedClaims": [
+        0,
+        1,
+        3,
+        4
+      ],
+      "notes": "主張は『カッピング競技会』『SCAJ展示会』としていたが、引用は『官能評価を競う』『SCAJ2026イベントステージ』のため引用の範囲に直した。賞の名称は引用どおり『2026年コーヒーマイスター利き珈琲王』(第12回)に限定。2026-11-10時点で開催日は過ぎており、告知の記述にとどめた。"
+    },
+    "diagnosis:未抽出(Under-extraction)": {
+      "verdict": "edit",
+      "finalContent": {
+        "cause": "抽出時間が短いこと。Batali et al. 2020(ドリップ)は、抽出収率(PE)が高い試料ほど長い滞留時間で淹れられ、抽出収率が低い試料ははるかに短い抽出時間だったと述べている。",
+        "taste": "酸っぱい(Batali et al. 2020の官能評価で、濃度(TDS)が高いほど強まり、抽出収率が高いほど弱まる属性の1つとして Sour が挙げられている)"
+      },
+      "usedClaims": [
+        1,
+        3
+      ],
+      "notes": "『挽き目が粗い』(claim 0)は、引用が『the observed values of both』で切れていて何の値か引用から読めないため外した(引用を取り直せば復活可)。『のいずれか(または複数)』も主張にない追加なので削除。味は引用の範囲(TDSで増え、PEで減る)に直した。"
+    },
+    "diagnosis:過抽出(Over-extraction)": {
+      "verdict": "edit",
+      "finalContent": {
+        "cause": "抽出時間が長いこと。Batali et al. 2020(ドリップ)は、抽出収率(PE)が高いのは、一般に滞留時間が長い場合だと述べている。",
+        "taste": ""
+      },
+      "usedClaims": [
+        1
+      ],
+      "notes": "『挽き目が細かい』(claim 0)は、引用が『the observed values of both』で切れていて何の値か引用から読めないため外した(引用を取り直せば復活可)。『のいずれか(または複数)』も削除。味は元から空。"
+    },
+    "diagnosis:適正抽出": {
+      "verdict": "edit",
+      "finalContent": {
+        "cause": "SCA Coffee StandardsのGolden Cup Standardでは、ブリュー強度(TDS)が11.5〜13.5 g/L(SCAブリューイング・コントロール・チャート上の1.15〜1.35「パーセント」に相当)で、可溶成分の抽出収率が18〜22%とされている。",
+        "taste": ""
+      },
+      "usedClaims": [
+        0,
+        1
+      ],
+      "notes": "『2020年時点』は、パケットの資料情報(題名・機関)に年の記載がなく確認できないため削除。数値と『とされている』の帰属は引用と一致。"
+    },
+    "extraction:grind": {
+      "verdict": "drop",
+      "notes": "残る主張は1つだけで、その引用が『the observed values of both』で切れており、何の値(抽出収率か)が引用から読めない。『やや』『19〜23%』は主張に無い。引用を取り直して抽出収率と確認できれば、『粒度が細かいほど抽出収率が高くなる(全浸漬、Liang 2021)』として復活できる。"
+    },
+    "extraction:roast": {
+      "verdict": "edit",
+      "finalContent": {
+        "summary": "焙煎度が上がるほど、焙煎豆の多孔度が高くなると報告されている",
+        "detail": "走査型電子顕微鏡で焙煎豆の多孔度を測定したところ、焙煎度が上がるほど多孔度が高くなったと報告されている(Scientific Reports 2024, Caffeine content in filter coffee brews as a function of degree of roast and extraction yield)。"
+      },
+      "usedClaims": [
+        0
+      ],
+      "notes": "主張の『豆の内部構造が壊れ』は引用(多孔度が焙煎度とともに増加)にないため削除。抽出収率が深煎りほど低い/先行研究に逆の結果、という後半はどの確認済み主張にもなく(conflictのrejected)、削除。断定を『報告されている』に調整。"
+    },
+    "extraction:temperature": {
+      "verdict": "drop",
+      "notes": "verifiedClaimsが空で、proposedの内容(SCAの水温推奨、Batali 2020の87〜93℃の知見)を裏付ける主張がこのパケットにない。"
+    },
+    "extraction:time": {
+      "verdict": "edit",
+      "finalContent": {
+        "summary": "",
+        "detail": "Batali et al.(Scientific Reports 2020, ドリップ)は、抽出収率(PE)が高いのは一般に滞留時間が長い場合で、抽出収率が低い試料ははるかに短い抽出時間だったと述べている。また、Sour(酸っぱさ)などは、濃度(TDS)が高いほど強まり、抽出収率が高いほど弱まる属性として挙げられている。"
+      },
+      "usedClaims": [
+        0,
+        2
+      ],
+      "notes": "『短い=酸味が強い』という直接のつなぎは引用にない(引用はSourがTDSで増えPEで減ると述べるのみ)ため、原文の範囲に直した。『一般に』の限定と帰属を追加。"
+    },
+    "fact:SCAJ誕生のきっかけは「コーヒークライシス」だった": {
+      "verdict": "edit",
+      "finalContent": {
+        "title": "SCAJは2003年に新規設立された",
+        "text": "日本スペシャルティコーヒー協会(SCAJ)は、国内外に向けてより開かれた協会として、2003年に「日本スペシャルティコーヒー協会」として新規設立された(SCAJ「沿革」より)。"
+      },
+      "usedClaims": [
+        0
+      ],
+      "notes": "見出しの『コーヒークライシスがきっかけ』は主張にない(rejected)ため見出しを差し替え。本文の『1987年に全日本グルメコーヒー協会として発足』は確認済み主張にないため削除。"
+    },
+    "fact:「80点基準」はSCA自身が2021年に卒業していた": {
+      "verdict": "edit",
+      "finalContent": {
+        "title": "SCAは2021年のホワイトペーパーでスペシャルティコーヒーを定義した",
+        "text": "SCAのホワイトペーパー『Towards a Definition of Specialty Coffee』(2021年)は、スペシャルティコーヒーを、特有の特性が認められ、その特性ゆえに市場で大きな付加価値を持つコーヒー(またはコーヒー体験)と定義している。"
+      },
+      "usedClaims": [
+        0
+      ],
+      "notes": "見出しの『80点基準を卒業』と、本文の『カッピング80点以上は業界で語られてきた定義の一つ』は確認済み主張になく(置き換えはrejected)、削除。定義の引用の範囲に直した。"
+    },
+    "fact:「コーヒーのオリンピック」はブラジルのオークションから始まった": {
+      "verdict": "edit",
+      "finalContent": {
+        "title": "Cup of Excellenceの最初の大会は1999年の「Best of Brazil」",
+        "text": "Alliance for Coffee Excellenceによると、Cup of Excellenceの最初の大会は1999年の「Best of Brazil」と呼ばれた。ICOの文書(WP Board 978/05)によると、世界初のインターネットコーヒーオークションは1999年にブラジルで開かれ、Cup of Excellenceの競技会とオークションのプログラムにつながった。"
+      },
+      "usedClaims": [
+        0,
+        1
+      ],
+      "notes": "見出しの『コーヒーのオリンピック』という呼称(rejected)、ICOがGourmet Coffee Projectに携わった/ITC・CFCとの関与(rejected)、最初の大会が『ブラジルで行われた』(引用にない)を削除。『国際品評会』も主張にないため外した。"
+    },
+    "fact:「フレーバー」には2つの意味がある": {
+      "verdict": "edit",
+      "finalContent": {
+        "title": "SCAが定義する「フレーバー」",
+        "text": "SCA Standard 103-2024(Coffee Value Assessment: Descriptive Assessment)のカッピング項目では、Flavor(フレーバー)を、口の中にあるあいだに、抽出液の味と、抽出液の口中から鼻に抜ける香り(retronasal olfactory)の両方から得られる知覚と定義している。"
+      },
+      "usedClaims": [
+        0
+      ],
+      "notes": "見出しの『2つの意味がある』は主張にない(『まったく別の意味』はrejected)ため差し替え。本文はSCA定義の範囲に限定し、出典の帰属を追加。"
+    },
+    "fact:「緑のカエル」は合併で生まれたロゴ": {
+      "verdict": "edit",
+      "finalContent": {
+        "title": "Rainforest Allianceは1987年設立、2018年にUTZが合流した",
+        "text": "Rainforest Allianceは1987年に共同設立された団体。同団体の創設者の回想では、数百万人がスーパーで「小さな緑のカエル」を頼りに、より持続可能な選択をしていると述べられている。2018年にUTZが合流した(joined forces)。UTZは2002年に、グアテマラのコーヒー農家とオランダのロースターによって立ち上げられた。"
+      },
+      "usedClaims": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "notes": "見出しの『合併で生まれたロゴ』は原文と食い違う(incorrect)ため差し替え。『合併』は原文の『joined forces』より強いので『合流』に。カエルの記述は引用(our little green frog)の範囲に限定。"
+    },
+    "fact:イエメンには公的な等級認証機関が事実上ない": {
+      "verdict": "edit",
+      "finalContent": {
+        "title": "イエメンの標準計量局(SMA)には、コーヒーの文書化された規格・分類がない",
+        "text": "FAOとIFCの2023年の報告書は、イエメンの標準計量局(SMA)には、イエメン産コーヒー豆とその品種についての文書化された規格も分類もない、としている。同報告書は、品質基準の設定は民間部門が引き受けており、イエメンのSCAがスペシャルティコーヒーの基準を設定し、第三者による品質検証・検査も行っていると述べている。"
+      },
+      "usedClaims": [
+        0,
+        2
+      ],
+      "notes": "見出しの『公的な等級認証機関が事実上ない』は主張(SMAに文書化された規格・分類がない)より広いので差し替え。『品質基準の設定や検証は民間(イエメンのSCA)が担う』は、引用が『民間部門が基準設定を引き受け、イエメンSCAがスペシャルティの基準設定と第三者検証を行う』なので範囲を合わせ、報告書の帰属を追加。"
+    },
+    "fact:インドネシアには輸出者団体が2つある": {
+      "verdict": "edit",
+      "finalContent": {
+        "title": "インドネシアには似た名前の団体、AEKIとGAEKIがある",
+        "text": "インドネシアには、AEKI(Asosiasi Eksportir dan Industri Kopi Indonesia)とGAEKI(Gabungan Eksportir Kopi Indonesia)という、似た名前の団体がある。どちらも名称に Eksportir(輸出者)を含む。"
+      },
+      "usedClaims": [
+        0
+      ],
+      "notes": "見出しの『2つある』は、他に無いと読める数の断定なので、2団体の名前を挙げる形に直した。引用はGAEKIの設立地のみで、団体の位置づけ(輸出者団体)は名称からの読みにとどめた。分裂・係争の話は含まれていない。"
+    },
+    "fact:エチオピアは価格上「ブラジルの仲間」": {
+      "verdict": "edit",
+      "finalContent": {
+        "title": "エチオピアはICOの区分で、ブラジルと同じ「Brazilian Natural Arabicas」グループ",
+        "text": "国際コーヒー機関(ICO)の用語集によると、Brazilian Natural Arabicasは協定のもとで設けられたアラビカのグループの一つで、このグループの国はブラジル、エチオピア、パラグアイとされている。ICOの統計文書(SC-105/21)は、アラビカのグループのうち、Mild Arabicasは湿式、Brazilian Naturalsは乾式で精製されると説明している。"
+      },
+      "usedClaims": [
+        0,
+        1
+      ],
+      "notes": "見出しの『価格上』と本文の『価格指標』は、引用(協定のもとで設けられたアラビカのグループ)に価格の語がないため外した。『このグループは乾式で構成される』は、引用の説明(グループごとの精製方法)に合わせて帰属を明示。検証担当のメモに『ICO自身の文書にエチオピアの扱いの揺れがあり要判断』とあるが、その根拠はパケットにないため、確認できていない。"
+    },
+    "fact:クリスタルマウンテンはジャマイカ産ではない": {
+      "verdict": "edit",
+      "finalContent": {
+        "title": "クリスタルマウンテンは、公正競争規約ではキューバ産と定められている",
+        "text": "全日本コーヒー公正取引協議会の公正競争規約(別表2)では、クリスタルマウンテンは、キューバにて生産された同国輸出規格に基づくアラビカコーヒー豆と定められている。ジャマイカは別の区分(別表2の3)で、「ジャマイカにて生産されたアラビカコーヒー豆のうち、1)及び2)以外のもの」と定められている。"
+      },
+      "usedClaims": [
+        0,
+        1
+      ],
+      "notes": "『ジャマイカ産ではない』は引用(ジャマイカの区分の定義)から直接は言えない推論なので、規約の定義を並べる形に直した。規約の帰属を明示。"
+    },
+    "fact:グアテマラだけの輸出税": {
+      "verdict": "edit",
+      "finalContent": {
+        "title": "グアテマラのコーヒー輸出には、FOB価額の1%の課徴がある",
+        "text": "WTOのグアテマラ貿易政策検討報告書(WT/TPR/S/477、2025年10月)によると、グアテマラでは、コーヒー輸出に対し、輸出するコーヒー1キンタルごとにFOB価額の1%の課徴がかかる。報告書は、その課徴の残り(the remainder)がANACAFÉに入ると記している。"
+      },
+      "usedClaims": [
+        0,
+        1
+      ],
+      "notes": "見出しの『だけ』(唯一/他国にない、いずれもrejected)を削除。『税収の大半(市町村への配分分を除く)』は引用にない配分の話なので、引用どおり『残りがANACAFÉに入る』に直した。報告書の帰属と時期を追加。"
+    }
+  }
+}

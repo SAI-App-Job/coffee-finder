@@ -1,0 +1,1007 @@
+{
+  "scope": "brew (BREW_METHODS 4件 / EXTRACTION_VARIABLES 4件 / EXTRACTION_DIAGNOSIS 3件)",
+  "verifiedOn": "2026-11-09",
+  "sources": {
+    "sca-coffee-standards-page-2020": {
+      "title": "Coffee Standards (Brewing Standards > Golden Cup Standard)",
+      "org": "Specialty Coffee Association",
+      "url": "https://web.archive.org/web/20200425161710/https://sca.coffee/research/coffee-standards",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": "SCA公式ページの2020-04-25付Wayback保存版をcurlで取得し本文を読んだ。現行の https://sca.coffee/research/coffee-standards にはこの節がない(現行版はSCA-310等の会員限定規格の一覧に変わっている)。"
+    },
+    "sca-coffee-standards-pdf-2020": {
+      "title": "Coffee Standards (PDF) 5.1 Golden Cup Standard",
+      "org": "Specialty Coffee Association",
+      "url": "https://web.archive.org/web/20200425161710id_/https://sca.coffee/s/Coffee-Standards-compressed.pdf",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": "上のページからリンクされていたSCA公式PDFのWayback保存版。curlで取得しpypdfで本文抽出(14ページ)。5.1は13ページ。"
+    },
+    "sca-protocols-best-practices-2018": {
+      "title": "Protocols and Best Practices (Revised 2018), 4 Brewing Best Practices",
+      "org": "Specialty Coffee Association",
+      "url": "https://static1.squarespace.com/static/587af1d4db29d69a1a226b95/t/60748749cf593c00972df582/1618249556105/SCA+Protocols+%26+Best+Practices.pdf",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": "SCA公式PDF(2018年改訂)。curlで取得しpypdfで本文抽出(20ページ)。該当箇所は17ページ。"
+    },
+    "sca-news-cbi-2013": {
+      "title": "The Coffee Brewing Institute: Setting the Stage for Specialty Coffee (Emma Sage, SCA Coffee Science Manager, Issue No. 4, 2013)",
+      "org": "Specialty Coffee Association",
+      "url": "https://web.archive.org/web/20211024215032/https://scanews.coffee/2013/10/04/the-coffee-brewing-institute/",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": "SCA公式ニュースサイトの記事。原URL scanews.coffee は接続不能だったため、Wayback保存版をcurlで取得して本文を読んだ。"
+    },
+    "sca-coffee-decoded-dialling-in": {
+      "title": "Coffee Decoded: The Science of \"Dialing-In\"",
+      "org": "Specialty Coffee Association",
+      "url": "https://sca.coffee/sca-news/coffee-decoded-14-dialling-in",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": "curlで取得した生HTMLの本文を読んだ。"
+    },
+    "batali-2020-scirep": {
+      "title": "Brew temperature, at fixed brew strength and extraction, has little impact on the sensory profile of drip brew coffee (Batali, Ristenpart, Guinard; Scientific Reports 2020)",
+      "org": "Scientific Reports / UC Davis Coffee Center(SCA資金の査読論文)",
+      "url": "https://www.nature.com/articles/s41598-020-73341-4",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": "査読論文(オープンアクセス)の原文をcurlで取得して読んだ。論文が引用しているSCAハンドブック等の記述は論文を通した引用であり、SCA原文そのものではない。"
+    },
+    "liang-2021-scirep": {
+      "title": "An equilibrium desorption model for the strength and extraction yield of full immersion brewed coffee (Liang, Chan, Ristenpart; Scientific Reports 2021)",
+      "org": "Scientific Reports / UC Davis(Coffee Science Foundation資金の査読論文)",
+      "url": "https://www.nature.com/articles/s41598-021-85787-1",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": "査読論文(オープンアクセス)の原文をcurlで取得して読んだ。"
+    },
+    "lindsey-2024-scirep": {
+      "title": "Caffeine content in filter coffee brews as a function of degree of roast and extraction yield (Scientific Reports 14, 29126, 2024)",
+      "org": "Scientific Reports",
+      "url": "https://www.nature.com/articles/s41598-024-80385-3",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": "査読論文(オープンアクセス)の原文をcurlで取得して読んだ。著者名は未確認(本文取得で確認していない)。"
+    },
+    "rao-2018-scirep": {
+      "title": "Acidity and Antioxidant Activity of Cold Brew Coffee (Scientific Reports 2018)",
+      "org": "Scientific Reports",
+      "url": "https://www.nature.com/articles/s41598-018-34392-w",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": "査読論文(オープンアクセス)の原文をcurlで取得して読んだ。"
+    },
+    "batali-2022-foods": {
+      "title": "Sensory Analysis of Full Immersion Coffee: Cold Brew Is More Floral, and Less Bitter, Sour, and Rubbery Than Hot Brew (Foods 2022)",
+      "org": "Foods (MDPI) / UC Davis, PMC掲載版",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9407127/",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": "MDPI本体は403のため、PMC掲載の査読論文全文をcurlで取得して読んだ。"
+    },
+    "espresso-kinetics-pmc10418593": {
+      "title": "Influence of Flow Rate, Particle Size, and Temperature on Espresso Extraction Kinetics",
+      "org": "査読論文(PMC掲載、雑誌名は未確認)",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10418593/",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": "PMC掲載の全文をcurlで取得して読んだ。エスプレッソの研究で、ドリップ・浸漬にそのまま当てはまるとは限らない。序論の記述は引用文献に基づく。"
+    },
+    "batali-2020-jsfa-pubmed": {
+      "title": "Sensory and monosaccharide analysis of drip brew coffee fractions versus brewing time (J Sci Food Agric 100(7):2953-2962, 2020)",
+      "org": "PubMed(NLMの抄録レコード)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32031262/",
+      "kind": "primary",
+      "readMethod": "excerpt",
+      "accessed": "2026-11-09",
+      "note": "抄録のみ(eutilsのXML)を読んだ。本文は取得していない。抄録に書かれた事実の範囲に限って使う。"
+    },
+    "aeropress-how-to-use": {
+      "title": "How To Use AeroPress (Signature Brew Preparation)",
+      "org": "AeroPress, Inc.(製造元の公式サイト)",
+      "url": "https://aeropress.com/pages/how-to-use",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": "製品の公式使用説明。curlで取得した生HTMLの本文を読んだ。"
+    },
+    "aeropress-how-it-works": {
+      "title": "How AeroPress Works",
+      "org": "AeroPress, Inc.(製造元の公式サイト)",
+      "url": "https://aeropress.com/pages/how-it-works",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": "curlで取得した生HTMLの本文を読んだ。"
+    }
+  },
+  "entries": {
+    "brew:ペーパードリップ": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "ペーパードリップは最も一般的な抽出方法で、豆の個性をクリアに引き出せる",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式一次資料では確認できなかった(「最も一般的」は統計が要る)。"
+        },
+        {
+          "text": "粉15g:湯250ml(1:16〜17)",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "レシピの目安であり公式な根拠は見つからなかった。算術: 250/15=16.7。15g/250mlは60g/Lで、SCAの55g/L±10%(49.5〜60.5g/L)の上端に当たる(算術による)。"
+        },
+        {
+          "text": "SCAゴールデンカップ基準は55g/L(≒1:18)",
+          "status": "verified",
+          "sourceIds": [
+            "sca-protocols-best-practices-2018"
+          ],
+          "quote": "Coffee-to-Water Ratio: To achieve the Golden Cup Standard, the recommended coffee-to-water ratio is 55 g/L ± 10%.",
+          "location": "SCA Protocols and Best Practices (Revised 2018) p.17, Brewing Best Practices",
+          "note": "55g/L±10%が原文。1:18は1000/55=18.2の概算(1L=1000gとした場合)。SCAブリューイング・コントロール・チャートの注記は1L=963g(93℃)であり、その場合は約1:17.5。「≒1:18」は概算として許容、「±10%」を落とさない方がよい。"
+        },
+        {
+          "text": "湯温92〜96℃",
+          "status": "verified",
+          "sourceIds": [
+            "sca-protocols-best-practices-2018"
+          ],
+          "quote": "Coffee Preparation Temperature: To achieve the Golden Cup Standard, water temperature, at the point of contact with coffee, is recommended to fall between 200°F ± 5° & 94.0°C ± 2°.",
+          "location": "SCA Protocols and Best Practices (Revised 2018) p.17, Brewing Best Practices",
+          "note": "SCAのゴールデンカップ向け推奨は94.0℃±2(=92〜96℃)。ペーパードリップ固有の推奨ではなく、SCAの一般的な水温推奨に一致するという意味。"
+        },
+        {
+          "text": "SCA基準は90〜96℃",
+          "status": "incorrect",
+          "sourceIds": [
+            "sca-protocols-best-practices-2018"
+          ],
+          "quote": "Coffee Preparation Temperature: To achieve the Golden Cup Standard, water temperature, at the point of contact with coffee, is recommended to fall between 200°F ± 5° & 94.0°C ± 2°.",
+          "location": "SCA Protocols and Best Practices (Revised 2018) p.17, Brewing Best Practices",
+          "note": "SCAの原文は 200°F±5°(=195〜205°F)および 94.0°C±2°(=92〜96°C)。90〜96℃という数字はSCA原文にない(195°Fを摂氏に直すと約90.6℃であり、90℃への切り下げと思われる)。正しくは「SCA基準は94.0℃±2(92〜96℃)、200°F±5°」。"
+        },
+        {
+          "text": "抽出時間は約2分30秒〜3分",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式一次資料に根拠なし。参考: SCAは接触時間を粒度別に 'Fine 1-4分 / Drip 4-6分 / Coarse 6-8分' と記す(Q: Time of Coffee-to-water Contact: 1-4 minutes Fine, 4-6 minutes Drip, 6-8 minutes Coarse)。アプリの値と食い違う可能性があるが、SCAの値はゴールデンカップ用の機器条件であり単純比較はできない。"
+        },
+        {
+          "text": "粒度は中細挽き(目安400〜600ミクロン)",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式一次資料に根拠なし。"
+        },
+        {
+          "text": "手順: ペーパーフィルターに粉をセットし、30秒ほど蒸らし(ガスを抜き、抽出を均一にする)、「の」の字に中心から外側へ2〜3回に分けて注湯する",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "蒸らしの目的・注湯の手順とも公式根拠なし。"
+        },
+        {
+          "text": "手順: 湯が落ちきる前に次を注ぎ、常に少し湯が残っている状態を保つ",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": ""
+        },
+        {
+          "text": "手順: 目安の抽出量に達したら湯が残っていてもドリッパーを外す(雑味の抽出を防ぐ)",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "Batali 2020 Sci Rep(full-text)は、ドリップで苦味・渋味はTDSに伴って増え、抽出収率(PE)との関係は有意でなかったと述べる。「後半の雑味を避ける」という理屈の根拠は確認できない。"
+        },
+        {
+          "text": "浅煎り〜中煎り(ライト〜シティ)の華やかな酸味を活かしやすい",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": ""
+        },
+        {
+          "text": "抽出が2分を切るなら粉を細かく、3分半を超えるなら粗くする",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "Batali 2020は目標TDS・PEに合わせて粒度と抽出時間を調整したと述べる(quote: 'adjusting the grind size and overall brew time as necessary to achieve the target TDS and PE')が、2分/3分半という数値基準は確認できない。"
+        }
+      ],
+      "suggestedText": {
+        "ratio": "SCAゴールデンカップ基準は55g/L(±10%、およそ1:18)",
+        "temp": "SCAの推奨は94.0℃±2(92〜96℃、200°F±5°)",
+        "note": "上記以外のフィールド(tagline/ratioの粉量・time/grindSize/steps/pairing/calibration)は、公式根拠が取れないため、台帳上は未確認。"
+      },
+      "note": "SCA原文で確認できたのは55g/L(±10%)と水温94.0℃±2(200°F±5°)のみ。「SCA基準は90〜96℃」は原文と食い違う(incorrect)。"
+    },
+    "brew:フレンチプレス": {
+      "status": "unverified",
+      "claims": [
+        {
+          "text": "金属フィルターでオイル分ごと抽出し、コクの強い一杯になる",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式一次資料に根拠なし。"
+        },
+        {
+          "text": "粉18g:湯250ml(1:12〜14)",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "レシピ値。算術: 18g/250ml=72g/L、250/18=13.9。SCAの55g/L±10%(49.5〜60.5g/L)より濃い。アプリはSCA基準とは言っていないが、SCA基準との差は利用者に誤解されうる。"
+        },
+        {
+          "text": "湯温93〜96℃",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式一次資料にフレンチプレス固有の推奨なし。SCAの一般推奨94.0℃±2(92〜96℃)の範囲内ではある。"
+        },
+        {
+          "text": "浸漬4分",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "参考: SCAは 'Coarse 6-8 minutes' を接触時間として記す(Time of Coffee-to-water Contact: 1-4 minutes Fine, 4-6 minutes Drip, 6-8 minutes Coarse)。アプリの4分とは異なる。SCAの値は機器条件の一覧であり、フレンチプレスの推奨ではない。"
+        },
+        {
+          "text": "粗挽き(目安800〜1,000ミクロン)",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": ""
+        },
+        {
+          "text": "手順: 粉を入れ、湯を注いで軽くかき混ぜ、蓋をして4分浸漬し、プランジャーをゆっくり押し下げる",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": ""
+        },
+        {
+          "text": "抽出後は粉が湯に浸かったままだと過抽出になるため、すぐ別容器に移す",
+          "status": "unverified",
+          "sourceIds": [
+            "liang-2021-scirep"
+          ],
+          "quote": "Changes in the brew temperature, grind size, and agitation will alter the dynamics of the extraction, but not the composition of the final brew itself",
+          "location": "Liang 2021 Discussion",
+          "note": "全浸漬では平衡に達すると抽出収率が頭打ち(Liangは平衡のEが約21%と報告)になるという報告があり、「浸かったままだと過抽出」とは直接合わない。ただし官能面(苦味など)の時間変化は別問題で、この論文は検証していない。判定はunverified。"
+        },
+        {
+          "text": "中深煎り〜深煎り(フルシティ〜フレンチ)のコクをしっかり感じられる",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": ""
+        },
+        {
+          "text": "粗挽きが基本。細かすぎると微粉が舌に残り雑味・過抽出の原因になる",
+          "status": "unverified",
+          "sourceIds": [
+            "liang-2021-scirep"
+          ],
+          "quote": "Furthermore, we found that the finer the grinds, the higher the observed values of both",
+          "location": "Liang 2021 Results",
+          "note": "全浸漬では粒度が細かいほどEはわずかに高いが、広い粒度範囲でも約19〜23%に収まったと報告される(Liang)。「微粉が舌に残る」「雑味・過抽出の原因」は確認できない。"
+        }
+      ],
+      "suggestedText": {},
+      "note": "全項目が公式根拠なし(unverified)。表示するなら、数値・手順は『一般的な目安』として根拠なしで残すことになり、ルール上は表示不可。"
+    },
+    "brew:エアロプレス": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "空気圧で押し出す抽出(空気圧が抽出を速める)",
+          "status": "verified",
+          "sourceIds": [
+            "aeropress-how-it-works"
+          ],
+          "quote": "As the plunger is pressed, air pressure increases the speed of the brewing process, which reduces the acidity and bitterness found in longer-brew time methods.",
+          "location": "AeroPress How It Works > Air Pressure & Micro-Filtration",
+          "note": "製造元の説明。「酸味・苦味が減る」は製造元の主張であり、独立した検証ではない。"
+        },
+        {
+          "text": "短時間でクリーンな味わい",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "製造元は 'smooth mouth-feel and signature AeroPress flavor' と書く(\"clean\"の語はない)。"
+        },
+        {
+          "text": "粉16g",
+          "status": "verified",
+          "sourceIds": [
+            "aeropress-how-to-use"
+          ],
+          "quote": "1 heaping Scoop or 16-18 grams of medium-fine ground coffee",
+          "location": "AeroPress How To Use > Signature Brew Preparation (Medium-Fine)",
+          "note": "公式の標準レシピは16〜18g(1杯分)。16gはその範囲内。"
+        },
+        {
+          "text": "湯220ml(1:14前後)",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式は水量をml指定せず、チャンバーの目盛り『4』まで注ぐ(\"Pour water up to #4 marked on the side of the Chamber\")とする。220mlは公式の記述から確認できない。"
+        },
+        {
+          "text": "湯温80〜85℃の『85℃』",
+          "status": "verified",
+          "sourceIds": [
+            "aeropress-how-to-use"
+          ],
+          "quote": "Heat water to 185°F (85°C) using your kettle.",
+          "location": "AeroPress How To Use > Signature Brew Preparation",
+          "note": "公式の標準レシピは85℃(185°F)。ページの別の記述では『温度調節ケトルがなければ沸騰水でもよい』ともある。"
+        },
+        {
+          "text": "湯温80〜85℃の『80℃』(下限)",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式の記述は85℃のみ。80℃は確認できない。"
+        },
+        {
+          "text": "抽出時間1〜2分",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式の待機時間は 'Wait 60 seconds'(中挽き)または 'Wait 30 seconds'(中細挽き)で、その後プレスする。1〜2分という総時間の記述は確認できない。'Less than 2 Minutes' は 'Prep and Clean Up Time'(準備と片付けの時間)であり抽出時間ではない。"
+        },
+        {
+          "text": "粒度は中細挽き",
+          "status": "verified",
+          "sourceIds": [
+            "aeropress-how-to-use"
+          ],
+          "quote": "Grind Size: Medium-Fine",
+          "location": "AeroPress How To Use > Signature Brew Preparation(グラインダーあり版)",
+          "note": "挽きたて用は中細挽き、挽き済み粉用は中挽き(Medium)と書かれる。"
+        },
+        {
+          "text": "粒度は『エスプレッソよりは粗く、ペーパードリップよりは細かめ』",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": ""
+        },
+        {
+          "text": "手順1: フィルターをキャップにセットする",
+          "status": "verified",
+          "sourceIds": [
+            "aeropress-how-to-use"
+          ],
+          "quote": "Insert Paper Filter into Filter Cap and twist Filter Cap onto Chamber.",
+          "location": "AeroPress How To Use > Step-by-step",
+          "note": ""
+        },
+        {
+          "text": "手順1: フィルターを湯ですすぐ(紙の匂い移り防止)",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "取得した使用説明にはすすぎの手順がない('rinse' は使用後の洗浄の記述のみ)。"
+        },
+        {
+          "text": "手順2: 粉をチャンバーに入れ、湯を注いで軽くかき混ぜる",
+          "status": "verified",
+          "sourceIds": [
+            "aeropress-how-to-use"
+          ],
+          "quote": "Stir gently for about 3 seconds.",
+          "location": "AeroPress How To Use > Step-by-step",
+          "note": "公式は『約3秒かき混ぜる』。"
+        },
+        {
+          "text": "手順3: 1分ほど待ってからキャップを閉め、ゆっくりプランジャーを押し込む",
+          "status": "incorrect",
+          "sourceIds": [
+            "aeropress-how-to-use"
+          ],
+          "quote": "Insert Paper Filter into Filter Cap and twist Filter Cap onto Chamber. ... Quickly insert Plunger about ½ inch into Chamber, then pull up slightly to create a vacuum to stop drip-through. Wait 60 seconds.",
+          "location": "AeroPress How To Use > Step-by-step",
+          "note": "公式の標準手順ではキャップは最初に取り付け済みで、待機中はプランジャーを半インチ差し込んだ状態。『待ってからキャップを閉める』手順は公式ページに書かれていない(別の入れ方=インバート式を指している可能性はあるが、アプリはそうは書いていない)。待機は60秒(中挽き)または30秒(中細挽き)。"
+        },
+        {
+          "text": "手順4: 『シュー』という空気の抜ける音がしたら抽出完了の合図",
+          "status": "verified",
+          "sourceIds": [
+            "aeropress-how-to-use"
+          ],
+          "quote": "Press until you hear the hissing sound begin and end, an indication the last bit of brew has passed through the coffee bed and your coffee is ready.",
+          "location": "AeroPress How To Use > Step-by-step",
+          "note": "公式は『シューという音が始まり、終わるまで押す』。"
+        },
+        {
+          "text": "低めの湯温を活かせるため、繊細な酸味の浅煎り豆とも相性が良い",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": ""
+        },
+        {
+          "text": "密閉式(湯温が下がりにくい)のため、温度のブレが仕上がりに直結しやすい",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "Batali 2020(full-text)は、ドリップで87〜93℃の範囲では温度は官能プロファイルにほぼ影響しなかったと報告する(TDS・PEを固定した場合)。『温度のブレが仕上がりに直結』とは方向が異なる。"
+        }
+      ],
+      "suggestedText": {
+        "temp": "85℃(公式の標準レシピ)",
+        "grindSize": "中細挽き(公式: Medium-Fine。挽き済みの粉は Medium)",
+        "ratio": "粉16〜18g(公式の標準レシピ。水量はチャンバーの目盛り『4』まで)",
+        "steps": [
+          "フィルターをフィルターキャップにセットし、チャンバーにねじ込む",
+          "粉を入れ、目盛り『4』まで湯を注ぐ",
+          "約3秒かき混ぜ、プランジャーを半インチほど差し込んで待つ(公式は60秒、中細挽きは30秒)",
+          "一定の軽い力でプランジャーを押し、シューという音が始まって終わるまで押す"
+        ],
+        "note": "tagline/pairing/calibration/time は公式根拠が取れないため台帳上は未確認。『インバート式』は未確認。"
+      },
+      "note": "製造元(AeroPress, Inc.)の公式説明に限った判定。製造元はSCAのような中立機関ではない。"
+    },
+    "brew:水出し(コールドブリュー)": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "水出しは低温・長時間接触で抽出する方法",
+          "status": "verified",
+          "sourceIds": [
+            "rao-2018-scirep"
+          ],
+          "quote": "Cold brew coffee is made through a low-temperature, long-contact brewing method.",
+          "location": "Rao 2018 Sci Rep, Introduction",
+          "note": ""
+        },
+        {
+          "text": "まろやかで酸味が穏やか",
+          "status": "unverified",
+          "sourceIds": [
+            "batali-2022-foods",
+            "rao-2018-scirep"
+          ],
+          "quote": "We find that four attributes exhibited statistically significant variations with brew temperature for all origins and roast levels tested, with bitter taste, sour taste, and rubber flavor all higher in hot brewed coffees, and floral flavor higher in cold brewed coffee.",
+          "location": "Batali 2022 Foods, Abstract",
+          "note": "酸っぱさ(sour)が低温で低いという官能結果は確認できる(同一TDS2%・同一提供温度、全浸漬)。一方Rao 2018は、pHは冷熱でほぼ同じ(4.85〜5.13)と報告する。『まろやか』は確認できず、『酸味が穏やか』は官能・滴定酸度では支持されるがpHでは支持されない。主張の幅を決めるのは台帳の運用側。"
+        },
+        {
+          "text": "粉50g:水500ml(1:10、濃縮タイプ)",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": ""
+        },
+        {
+          "text": "温度は常温〜冷水",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "Batali 2022は4℃・22℃・92℃で比較した研究。レシピの推奨ではない。"
+        },
+        {
+          "text": "8〜12時間(冷蔵庫でじっくり)",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": ""
+        },
+        {
+          "text": "粗挽き(フレンチプレスと同程度〜やや粗め)",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": ""
+        },
+        {
+          "text": "手順(粉を入れ、水を注ぎ、冷蔵庫で8〜12時間静置、漉して氷や水で割る)",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": ""
+        },
+        {
+          "text": "苦味と酸味が穏やかになるため、深煎り豆の力強さをまろやかに楽しめる",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "『苦味・酸味が低い』部分は Batali 2022(bitter/sour とも熱いほど高い)で支持されるが、『深煎りとの相性』『まろやか』は確認できない。"
+        },
+        {
+          "text": "低温では酸の抽出がホットより少ない(酸味系の抽出効率がホットより低い)",
+          "status": "verified",
+          "sourceIds": [
+            "rao-2018-scirep"
+          ],
+          "quote": "The hot brew coffees were found to have higher concentrations of total titratable acids, as well as higher antioxidant activity, than that of their cold brew counterparts.",
+          "location": "Rao 2018 Sci Rep, Abstract",
+          "note": "同じ粉:水比で比較。滴定酸度はホットが高い。pHは同程度。"
+        },
+        {
+          "text": "低温ではメラノイジン(褐色成分)等の溶け出しが穏やかで、褐変系の抽出効率がホットより低い",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "メラノイジン・褐変成分についての記述は、読んだ範囲の論文にない。"
+        }
+      ],
+      "suggestedText": {
+        "calibration": "同じ粉:水比で比べると、水出しの方がホットより総滴定酸度が低い(pHは同程度)",
+        "note": "他のフィールドは未確認のため表示不可。"
+      },
+      "note": "Batali 2022は全浸漬を同一TDS(2%)・同一提供温度に揃えた比較で、市販の水出し製品や一般的な水出しレシピ(1:10濃縮など)の推奨根拠にはならない。"
+    },
+    "extraction:grind": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "粒度が細かいほど抽出収率が高くなる(表面積が増える)",
+          "status": "verified",
+          "sourceIds": [
+            "liang-2021-scirep",
+            "espresso-kinetics-pmc10418593"
+          ],
+          "quote": "Furthermore, we found that the finer the grinds, the higher the observed values of both",
+          "location": "Liang 2021 Sci Rep, Results (全浸漬)",
+          "note": "エスプレッソ研究の序論も 'Finer grinding levels (GL) increase the particle surface area in contact with water, enabling a higher extraction yield for trigonelline, caffeine, and 5-caffeoylquinic acid' と述べる(引用文献に基づく記述)。ただしLiangでは差は小さく(E 19〜23%)、全浸漬の話。ドリップには直接当てはまると限らない。"
+        },
+        {
+          "text": "細かいほど抽出が速くなる",
+          "status": "unverified",
+          "sourceIds": [
+            "liang-2021-scirep"
+          ],
+          "quote": "Changes in the brew temperature, grind size, and agitation will alter the dynamics of the extraction, but not the composition of the final brew itself",
+          "location": "Liang 2021 Sci Rep, Discussion",
+          "note": "粒度は抽出の『速さ(動態)』に影響するとは書かれているが、細かいほど速いという方向は、読んだ範囲の記述では明示されていない。"
+        },
+        {
+          "text": "粉を挽くと表面積が指数的に増える",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": ""
+        },
+        {
+          "text": "10gの粉を400ミクロンまで挽くと表面積は1平方メートルを超える",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "根拠を見つけられなかった(Lindsey 2024は表面積/体積比と拡散距離が抽出速度・収率に影響すると述べるのみ)。"
+        },
+        {
+          "text": "実験で極細挽き(平均282ミクロン)は5分で93%が溶け出し、極粗挽き(平均1,057ミクロン)では61%にとどまった",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "出典の論文を特定できなかった。検索でも該当する数値の論文は見つからなかった。出典不明の実験値は表示不可。"
+        }
+      ],
+      "suggestedText": {
+        "summary": "粒度が細かいほど、抽出収率がやや高くなる(全浸漬の実験では19〜23%の範囲)",
+        "detail": ""
+      },
+      "note": "具体的な数値(表面積1m²超、282/1,057ミクロン、93%/61%)は出典が見つからず未確認。"
+    },
+    "extraction:roast": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "深煎りほど豆の内部構造が壊れ、多孔質になる",
+          "status": "verified",
+          "sourceIds": [
+            "lindsey-2024-scirep"
+          ],
+          "quote": "Scanning electron microscopy was used to measure porosity of roasted seeds and showed increasing porosity with the degree of roast.",
+          "location": "Lindsey 2024 Sci Rep, Abstract",
+          "note": "『もろくなる』は確認できていない。"
+        },
+        {
+          "text": "浅煎り豆は組織が密でち密なまま",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "『ち密』の裏付けは、Lindsey 2024の『浅煎りほど多孔度が低い』から間接的に読めるのみ。"
+        },
+        {
+          "text": "同じ粒度・同じレシピなら、深煎りの方が抽出率が高くなりやすい",
+          "status": "conflict",
+          "sourceIds": [
+            "lindsey-2024-scirep"
+          ],
+          "quote": "extraction yield measurements showed a general trend of lower extraction yields for darker roasts (R5, R7) than light and medium roasts (R0, R1, R3).",
+          "location": "Lindsey 2024 Sci Rep, Abstract / Results (Extraction yield)",
+          "note": "Lindsey 2024(AeroPress、15:1、同一条件)は、深煎りほど抽出収率が低くなる傾向を報告。同論文の序論は、先行研究には『焙煎度が上がるとTDSが増える』報告と『減る』報告の両方があると述べる(Lindsey 2024 序論、2文目付近)。資料が食い違うため、私は解決しない。"
+        },
+        {
+          "text": "深煎りは粒度を粗めにする(または粉の量を減らす)、浅煎りは細かめにして表面積を補う、という調整が行われる",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": ""
+        },
+        {
+          "text": "浅煎り豆は密度が高い分、同じ体積(スプーン一杯等)あたりのカフェイン量は深煎りよりむしろ多い",
+          "status": "unverified",
+          "sourceIds": [
+            "lindsey-2024-scirep"
+          ],
+          "quote": "However, at identical extraction yields, dark roasts generally exhibited higher caffeine concentrations than lighter roasted coffees.",
+          "location": "Lindsey 2024 Sci Rep, Abstract",
+          "note": "査読論文では『体積あたり』の比較は見つからなかった。Lindseyは同一条件の杯では深煎りの方が低濃度、同一抽出収率では深煎りの方が高濃度と報告し、焙煎度とカフェインの関係は単純でないとする。"
+        }
+      ],
+      "suggestedText": {
+        "summary": "焙煎が深くなるほど、豆は多孔質になる",
+        "detail": "走査型電子顕微鏡による測定で、焙煎度が上がるほど豆の多孔度が高くなることが報告されている(Scientific Reports 2024, Caffeine content in filter coffee brews as a function of degree of roast and extraction yield)。一方、同じ条件で淹れたときの抽出収率は、この研究では深煎りほど低くなる傾向があり、先行研究には逆の結果もあって、一定していない。"
+      },
+      "note": "summary『同じ挽き方でも溶けやすくなる』は、資料が食い違うため表示不可。"
+    },
+    "extraction:temperature": {
+      "status": "unverified",
+      "claims": [
+        {
+          "text": "湯温が高いほど抽出が速く強くなる",
+          "status": "unverified",
+          "sourceIds": [
+            "espresso-kinetics-pmc10418593",
+            "liang-2021-scirep"
+          ],
+          "quote": "Higher water temperatures (T) increase the components’ solubility and reduce water viscosity ... the influence of water temperature on EC component mass in the cup has been inconclusive for experiments with otherwise constant conditions",
+          "location": "PMC10418593 Introduction (エスプレッソ)",
+          "note": "Liang 2021(全浸漬、80〜99℃)は平衡のTDSとEが湯温でほとんど変わらなかったと報告('80〜99℃で平衡定数Kが温度で大きく変わらなかった')。条件によって結果が異なり、一般論としては確認できない。"
+        },
+        {
+          "text": "水温が高いほど、酸・糖・オイル・苦味成分すべての溶解が速まる",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": ""
+        },
+        {
+          "text": "湯温が90℃未満だと糖分やオイルの抽出が追いつかず、酸味だけが際立つ『未抽出』になりやすい",
+          "status": "unverified",
+          "sourceIds": [
+            "batali-2020-scirep"
+          ],
+          "quote": "Three separate brew temperatures of 87 °C, 90 °C, or 93 °C were tested, adjusting the grind size and overall brew time as necessary to achieve the target TDS and PE. Although the TDS and PE both significantly affected the sensory profile of the coffee, surprisingly the brew temperature had no appreciable impact.",
+          "location": "Batali 2020 Sci Rep, Abstract",
+          "note": "TDSとPEを揃えたドリップでは87〜93℃の差は官能にほぼ影響しなかったと報告されており、『90℃未満=酸味だけが際立つ』とは合わない。ただしTDS・PEを揃えない通常の淹れ方での影響は、この論文では検証していない。"
+        },
+        {
+          "text": "湯温が高すぎると渋み成分(タンニン等)まで余分に溶け出し、苦く角の立った『過抽出』になりやすい",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "タンニンへの言及は確認できなかった。Batali 2020は、苦味・渋味はTDSとともに増え、PEとの関係は有意でなかったと報告('Five attributes increased with TDS only— Bitter, Astringent, Rubber, Earthy, and Viscous')。"
+        },
+        {
+          "text": "SCAの基準では90〜96℃(195〜205°F)が目安",
+          "status": "incorrect",
+          "sourceIds": [
+            "sca-protocols-best-practices-2018"
+          ],
+          "quote": "Coffee Preparation Temperature: To achieve the Golden Cup Standard, water temperature, at the point of contact with coffee, is recommended to fall between 200°F ± 5° & 94.0°C ± 2°.",
+          "location": "SCA Protocols and Best Practices (Revised 2018) p.17, Brewing Best Practices",
+          "note": "SCA原文は 200°F±5°(=195〜205°F)と 94.0°C±2°(=92〜96°C)。『90〜96℃』はSCA原文の摂氏値と合わない。『195〜205°F』は原文どおり。また、Batali 2020 Sci Rep(full-text)によればSCAハンドブックは92〜96℃を'proper extraction'に必要とし、SCAのホームブリューワー認証は『最初の1分で92℃に達し、96℃を超えない』を要求する(論文経由の引用で、SCA原文は未読)。"
+        }
+      ],
+      "suggestedText": {
+        "summary": "",
+        "detail": "SCAのベストプラクティスは、コーヒーに触れる時点の水温を94.0℃±2(92〜96℃、200°F±5°)と推奨している(SCA Protocols and Best Practices, 2018)。一方、ドリップでTDSと抽出収率を揃えた実験では、87〜93℃の違いは官能評価にほぼ影響しなかったと報告されている(Batali et al., Scientific Reports 2020)。"
+      },
+      "note": "SCAの摂氏値の誤り(90℃)が、BREW_METHODSのペーパードリップにもある。"
+    },
+    "extraction:time": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "抽出時間が長いほど抽出収率(PE)が高くなる",
+          "status": "verified",
+          "sourceIds": [
+            "batali-2020-scirep"
+          ],
+          "quote": "An important point is that higher PE in general is achieved by longer residence time (cf. brewing parameters in Supplementary Table S1), compared to the low PE samples, which involve much shorter brew times.",
+          "location": "Batali 2020 Sci Rep, Discussion",
+          "note": "ドリップでの結果。"
+        },
+        {
+          "text": "成分は溶け出す順番が決まっている: 酸味・香り成分が最初の数十秒、甘み・バランスの取れた風味成分が中盤、苦味・渋み成分が終盤",
+          "status": "conflict",
+          "sourceIds": [
+            "batali-2020-jsfa-pubmed",
+            "batali-2020-scirep"
+          ],
+          "quote": "the earlier fractions were systematically more bitter and more sour than later fractions ... later fractions were systematically sweeter and more floral than earlier fractions",
+          "location": "Batali 2020 J Sci Food Agric, Abstract(抄録のみ) / Batali 2020 Sci Rep, Discussion",
+          "note": "JSFA 2020の抄録は『前半の画分ほど苦く酸っぱく、後半ほど甘く花の風味』と述べ、『苦味が終盤』『甘みが中盤』と食い違う(ただし画分ごとの濃度(TDS)の違いが混ざる)。Batali 2020 Sci Rep(full-text)は『速く抽出される成分と遅く抽出される成分があり、最終的な官能はその比で決まる』と述べ、『PEは苦味化合物と酸の比を変えるらしい(likely)』とも書く。『酸味が先に抽出される』は 'possibly due to the relatively fast extraction of organic acids' と推測の形で書かれる。資料が食い違うため解決しない。"
+        },
+        {
+          "text": "抽出時間が短すぎると酸味成分ばかりの『未抽出』になる",
+          "status": "verified",
+          "sourceIds": [
+            "batali-2020-scirep"
+          ],
+          "quote": "The next category of attributes involved those that increased with TDS but decreased with PE: Sour, Citrus, Dark Green, Smoky, Brown Spice, and Fermented",
+          "location": "Batali 2020 Sci Rep, Discussion",
+          "note": "低PE(短い抽出)で酸味(Sour)が強いという意味で一致する。『ばかり』は言い過ぎ。"
+        },
+        {
+          "text": "長すぎる(あるいは粒度が細かすぎて時間がかかりすぎる)と、終盤の苦味・渋み成分まで余分に溶け出す『過抽出』になる",
+          "status": "conflict",
+          "sourceIds": [
+            "batali-2020-scirep"
+          ],
+          "quote": "In particular, the results regarding Bitter taste differ with the classic brewing control chart, which implies that bitterness is maximized at high PE values",
+          "location": "Batali 2020 Sci Rep, Discussion",
+          "note": "Batali 2020は、苦味・渋味はTDSでのみ増え、PEとの関係は統計的に有意でなかったと報告。同論文は、Frostらの別研究が『苦味は焙煎度全体でTDSとPEの両方で増える』と示唆するとも書く(そのFrost論文は未読)。資料が食い違うため解決しない。"
+        },
+        {
+          "text": "粒度・湯温・時間は独立した変数ではなく、3つ揃って抽出収率を決める",
+          "status": "unverified",
+          "sourceIds": [
+            "batali-2020-scirep",
+            "liang-2021-scirep"
+          ],
+          "quote": "adjusting the grind size and overall brew time as necessary to achieve the target TDS and PE",
+          "location": "Batali 2020 Sci Rep, Abstract",
+          "note": "粒度と時間でPEを調整できることは確認できる。湯温については、Batali・Liangとも『温度はほとんど影響しない』結果で、『3つ揃って』は確認できない。Liang 2021: 'Changes in the brew temperature, grind size, and agitation will alter the dynamics of the extraction, but not the composition of the final brew itself'(全浸漬)。"
+        }
+      ],
+      "suggestedText": {
+        "summary": "",
+        "detail": "ドリップでは、抽出時間が長いほど抽出収率(PE)は高くなる。抽出収率が低い(時間が短い)と酸味(Sour)が強く感じられる、という報告がある(Batali et al., Scientific Reports 2020)。"
+      },
+      "note": "抽出される順番(酸→甘→苦)と『過抽出=苦い』は、公式文献どうしが食い違うため表示不可。"
+    },
+    "diagnosis:未抽出(Under-extraction)": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "原因: 挽き目が粗いと抽出収率が低くなる",
+          "status": "verified",
+          "sourceIds": [
+            "liang-2021-scirep"
+          ],
+          "quote": "Furthermore, we found that the finer the grinds, the higher the observed values of both",
+          "location": "Liang 2021 Sci Rep, Results",
+          "note": "全浸漬での結果。差は小さい(E 約19〜23%)。"
+        },
+        {
+          "text": "原因: 抽出時間が短いと抽出収率が低くなる",
+          "status": "verified",
+          "sourceIds": [
+            "batali-2020-scirep"
+          ],
+          "quote": "An important point is that higher PE in general is achieved by longer residence time",
+          "location": "Batali 2020 Sci Rep, Discussion",
+          "note": ""
+        },
+        {
+          "text": "原因: 湯温が低いと抽出不足になる",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "Batali 2020(87〜93℃)・Liang 2021(80〜99℃)とも、温度の影響は小さいと報告。確認できない。"
+        },
+        {
+          "text": "味: 酸っぱい",
+          "status": "verified",
+          "sourceIds": [
+            "batali-2020-scirep"
+          ],
+          "quote": "The next category of attributes involved those that increased with TDS but decreased with PE: Sour, Citrus, Dark Green, Smoky, Brown Spice, and Fermented",
+          "location": "Batali 2020 Sci Rep, Discussion",
+          "note": "TDSが高く抽出収率(PE)が低い条件で酸味が強い、という意味。"
+        },
+        {
+          "text": "味: 薄い",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "Batali 2020はチャートの 'weak'/'strong' はTDSの尺度で、抽出収率の高低を示す語ではないと指摘('Strong and Weak as terms on the chart could be misleading')。『未抽出=薄い』は確認できない。"
+        },
+        {
+          "text": "味: 塩気を感じる",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": ""
+        },
+        {
+          "text": "味: 風味の余韻が短い",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": ""
+        }
+      ],
+      "suggestedText": {
+        "cause": "挽き目が粗い/抽出時間が短い のいずれか(または複数)で、抽出収率が低くなる",
+        "taste": "酸っぱい(抽出収率が低く、濃度が高い条件で酸味が強い)"
+      },
+      "note": "湯温・薄い・塩気・余韻は未確認のため削除案。"
+    },
+    "diagnosis:適正抽出": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "SCA基準では抽出収率が18〜22%が目安",
+          "status": "verified",
+          "sourceIds": [
+            "sca-coffee-standards-page-2020",
+            "sca-coffee-standards-pdf-2020",
+            "sca-news-cbi-2013"
+          ],
+          "quote": "Coffee shall exhibit a brew strength, measured in Total Dissolved Solids, of 11.5 to 13.5 grams per liter, corresponding to 1.15 to 1.35 \"percent\" on the SCA Brewing Control Chart, resulting from a solubles extraction yield of 18 to 22 percent*.",
+          "location": "SCA Coffee Standards 5.1 Golden Cup Standard (PDF p.13) / ページ Brewing Standards > Golden Cup Standard",
+          "note": "2020年4月時点のSCA公式文書。現行のSCAサイトでは同じ節は確認できなかった。SCA記事(2013)も 'The desirable extraction limits were determined to be within a range of 18 - 22 % of the original weight used in the brew.' と述べる。"
+        },
+        {
+          "text": "SCA基準ではTDS(濃度)が1.15〜1.35%が目安",
+          "status": "verified",
+          "sourceIds": [
+            "sca-coffee-standards-page-2020",
+            "sca-coffee-standards-pdf-2020",
+            "sca-news-cbi-2013"
+          ],
+          "quote": "Coffee shall exhibit a brew strength, measured in Total Dissolved Solids, of 11.5 to 13.5 grams per liter, corresponding to 1.15 to 1.35 \"percent\" on the SCA Brewing Control Chart",
+          "location": "SCA Coffee Standards 5.1 Golden Cup Standard (PDF p.13)",
+          "note": "原文はTDS 11.5〜13.5 g/L(チャート上の1.15〜1.35『パーセント』に相当)。『TDS 1.15〜1.35%』はこの対応づけを前提にした言い換え。SCA記事(2013)も 'A range of strength from 1.15 - 1.35 % coffee soluble material in the beverage was determined to be the most enjoyable through CBI testing.'"
+        },
+        {
+          "text": "味: 甘み・酸味・苦味のバランスが取れる",
+          "status": "unverified",
+          "sourceIds": [
+            "batali-2020-scirep"
+          ],
+          "quote": "",
+          "location": "",
+          "note": "SCA原文にGolden Cup範囲の味の記述はない。Batali 2020は、チャートの『ideal』が快楽的な語・尺度の語・記述的な語を混ぜていて、どの消費者が中央を『ideal』と感じるかも不明と述べる。"
+        },
+        {
+          "text": "味: 風味の余韻が長く続く",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": ""
+        }
+      ],
+      "suggestedText": {
+        "cause": "SCAのGolden Cup基準(2020年時点の公式文書)は、TDS 11.5〜13.5 g/L(SCAブリューイング・コントロール・チャート上の1.15〜1.35「パーセント」に相当)、抽出収率18〜22%",
+        "taste": ""
+      },
+      "note": "causeは全主張が確認済み。tasteは確認できないため削除案。"
+    },
+    "diagnosis:過抽出(Over-extraction)": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "原因: 挽き目が細かいと抽出収率が高くなる",
+          "status": "verified",
+          "sourceIds": [
+            "liang-2021-scirep"
+          ],
+          "quote": "Furthermore, we found that the finer the grinds, the higher the observed values of both",
+          "location": "Liang 2021 Sci Rep, Results",
+          "note": "全浸漬での結果。差は小さい(E 約19〜23%)。"
+        },
+        {
+          "text": "原因: 抽出時間が長いと抽出収率が高くなる",
+          "status": "verified",
+          "sourceIds": [
+            "batali-2020-scirep"
+          ],
+          "quote": "An important point is that higher PE in general is achieved by longer residence time",
+          "location": "Batali 2020 Sci Rep, Discussion",
+          "note": ""
+        },
+        {
+          "text": "原因: 湯温が高いと過抽出になる",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "Batali 2020・Liang 2021とも温度の影響は小さいと報告。確認できない。"
+        },
+        {
+          "text": "味: 苦い、渋い",
+          "status": "conflict",
+          "sourceIds": [
+            "batali-2020-scirep"
+          ],
+          "quote": "In particular, the results regarding Bitter taste differ with the classic brewing control chart, which implies that bitterness is maximized at high PE values",
+          "location": "Batali 2020 Sci Rep, Discussion",
+          "note": "苦味・渋味はTDSとともに増え、PE(抽出収率)との関係は有意でなかった、という報告。Frost らの別研究はPEとの関係も示唆する(論文経由、そのFrost論文は未読)。資料が食い違うため解決しない。"
+        },
+        {
+          "text": "味: えぐみを感じる",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": ""
+        },
+        {
+          "text": "味: 後味がくどい",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": ""
+        }
+      ],
+      "suggestedText": {
+        "cause": "挽き目が細かい/抽出時間が長い のいずれか(または複数)で、抽出収率が高くなる",
+        "taste": ""
+      },
+      "note": "『過抽出=苦い』は資料が食い違う(conflict)。湯温・えぐみ・くどさは未確認。"
+    }
+  }
+}

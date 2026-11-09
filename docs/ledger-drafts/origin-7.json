@@ -1,0 +1,1504 @@
+{
+  "scope": "origin-7: ブラジル・ジャマイカ(産地ガイド)",
+  "verifiedOn": "2026-11-08",
+  "sources": {
+    "wipo-ipadvantage-perfect-cup": {
+      "title": "In Search of a Perfect Cup (WIPO IP Advantage, Jamaica Blue Mountain coffee)",
+      "org": "WIPO",
+      "url": "https://www.wipo.int/ipadvantage/en/articles/article_0091.html",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": "Coffee Industry Board(CIB)時代に書かれた旧い記事(JACRA設立=2018年より前)。"
+    },
+    "jis-blue-mountain-coffee": {
+      "title": "Blue Mountain Coffee (Jamaican cuisine / Visit Jamaica)",
+      "org": "Jamaica Information Service (ジャマイカ政府広報機関)",
+      "url": "https://jis.gov.jm/jamaica/blue-mountain-coffee-jamaican-cuisine-visit-jamaica/",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": ""
+    },
+    "jam-jacra-regulations-2018": {
+      "title": "The Jamaica Agricultural Commodities Regulatory Authority Regulations, 2018 (Jamaica Gazette Supplement, March 2, 2018)",
+      "org": "Government of Jamaica / JACRA",
+      "url": "https://jamaicacoffee.org/html/wp-content/uploads/2019/05/JACRA-Act-Regulations.pdf",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": "官報のPDFを Jamaica Coffee Exporters Association(jamaicacoffee.org)が掲載しているものを取得し、pypdfで本文抽出(69頁)。政府サイトからの直接取得ではない。"
+    },
+    "moa-ministry-paper-jacra": {
+      "title": "Ministry Paper /2015: Rationalization of Selected Agricultural Commodity Boards, as well as the Export Division",
+      "org": "Ministry of Agriculture and Fisheries, Jamaica",
+      "url": "https://www.moa.gov.jm/sites/default/files/Selected_Agricultural_Commodity_Boards_Ministry_Paper.pdf",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": "JACRA設立の計画段階の文書(PDF 4頁をpypdfで抽出。冒頭の4頁分のみ)。"
+    },
+    "moa-beryl-2024": {
+      "title": "Agriculture Sector Sustains $4.73b in Losses from Hurricane Beryl's Passage (2024-07-19)",
+      "org": "Ministry of Agriculture, Fisheries and Mining, Jamaica",
+      "url": "https://www.moa.gov.jm/content/agriculture-sector-sustains-473b-losses-hurricane-beryl%E2%80%99s-passage",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": ""
+    },
+    "moa-melissa-2026": {
+      "title": "Coffee Farmers Urged to Plant Short-Term Crops After Hurricane Melissa Losses",
+      "org": "Ministry of Agriculture, Fisheries and Mining, Jamaica",
+      "url": "https://www.moa.gov.jm/content/coffee-farmers-urged-plant-short-term-crops-after-hurricane-melissa-losses",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": "2026年1月9日のBlue Mountain Coffee Dayでの農業大臣の発言を伝える記事。"
+    },
+    "jis-chainsaw-2026": {
+      "title": "Coffee Farmers to Get Chainsaws to Clear Debris and Restore Access to Farms (2026-01-22)",
+      "org": "Jamaica Information Service",
+      "url": "https://jis.gov.jm/coffee-farmers-to-get-chainsaws-to-clear-debris-and-restore-access-to-farms/",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": ""
+    },
+    "jis-132m-2025": {
+      "title": "$132 Million Spent to Rehabilitate Coffee Sector",
+      "org": "Jamaica Information Service",
+      "url": "https://jis.gov.jm/132-million-spent-to-rehabilitate-coffee-sector/",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": "JACRA代理局長の発言を含む。"
+    },
+    "jcea-about": {
+      "title": "About Us",
+      "org": "Jamaica Coffee Exporters Association",
+      "url": "https://jamaicacoffee.org/about-us/",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": "輸出者協会の公式サイト。"
+    },
+    "jcea-what-we-do": {
+      "title": "What We Do",
+      "org": "Jamaica Coffee Exporters Association",
+      "url": "https://jamaicacoffee.org/what-we-do/",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": ""
+    },
+    "jcea-home": {
+      "title": "Jamaica Coffee Exporters Association (home page)",
+      "org": "Jamaica Coffee Exporters Association",
+      "url": "https://jamaicacoffee.org/",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": ""
+    },
+    "jcea-mavis-bank": {
+      "title": "Mavis Bank Coffee Factory (member profile)",
+      "org": "Mavis Bank Coffee Factory Ltd. (JCEAサイト掲載の会員紹介)",
+      "url": "https://jamaicacoffee.org/mavis-bank-coffee-factory/",
+      "kind": "secondary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": "企業の自己紹介。公的機関の文書ではないため二次扱い。"
+    },
+    "gleaner-history-2014": {
+      "title": "Historical background of coffee in Jamaica (Jamaica Gleaner, 2014-09-29)",
+      "org": "The Gleaner (新聞)",
+      "url": "http://past.jamaica-gleaner.com/article/news/20140929/historical-background-coffee-jamaica",
+      "kind": "secondary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": "報道なので根拠にしない。"
+    },
+    "mapa-in-8-2003": {
+      "title": "Instrução Normativa nº 8, de 11 de junho de 2003 - Regulamento Técnico de Identidade e de Qualidade para a Classificação do Café Beneficiado Grão Cru",
+      "org": "MAPA (Ministério da Agricultura, Pecuária e Abastecimento) - Sislegis",
+      "url": "https://sistemasweb.agricultura.gov.br/sislegis/action/detalhaAto.do?method=visualizarAtoPortalMapa&chave=550412066",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": "MAPA公式の法令DB(Sislegis)からcurlでHTMLを取得し本文を抽出。表3のレイアウトは1セル1行に崩れて抽出される(数字の並びで読む)。取得時点で廃止の表示は見つからなかったが、現在の有効性は未確認。州政府サイトの同文PDFでも条文を照合した。"
+    },
+    "mapa-cafe-no-brasil": {
+      "title": "Café no Brasil e Ementário do Café (cafeicultura brasileira)",
+      "org": "MAPA (Ministério da Agricultura e Pecuária)",
+      "url": "https://www.gov.br/agricultura/pt-br/assuntos/politica-agricola/cafe/cafeicultura-brasileira",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": "統計は2017〜2018年の旧い記述を含むページ。"
+    },
+    "cecafe-relatorio-fev-2026": {
+      "title": "Exportação de café do Brasil soma 2,6 mi de sacas e cai 23,5% em fev/2026",
+      "org": "Cecafé (Conselho dos Exportadores de Café do Brasil)",
+      "url": "https://www.cecafe.com.br/publicacoes/noticias/relatorio-exportacao-cecafe-fev-2026-20260310/",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": "Cecafé自身の公式サイトの月次レポート。団体概要の段落を使用。"
+    },
+    "cecafe-workshop-nova-cob-2026": {
+      "title": "Workshop - Proposta do MAPA para Nova Tabela de Classificação Oficial do Café (Comunicado 081-2026)",
+      "org": "Cecafé",
+      "url": "https://www.cecafe.com.br/sem-categoria/workshop-proposta-de-nova-tabela-de-classificacao-oficial-do-cafe-20260915/",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": "会員向け連絡(公開ページで本文を取得)。"
+    },
+    "embrapa-cerrado-do": {
+      "title": "Cerrado Mineiro é destaque na produção de cafés diferenciados",
+      "org": "Embrapa (Embrapa Café)",
+      "url": "https://www.embrapa.br/en/busca-de-noticias/-/noticia/1577309/cerrado-mineiro-e-destaque-na-producao-de-cafes-diferenciados",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": ""
+    },
+    "embrapa-igs-cafe": {
+      "title": "Café segue como o produto com maior número de IGs no Brasil",
+      "org": "Embrapa (Embrapa Café)",
+      "url": "https://www.embrapa.br/en/busca-de-noticias/-/noticia/79335973/cafe-segue-como-o-produto-com-maior-numero-de-igs-no-brasil",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": ""
+    },
+    "embrapa-cafe-endereco": {
+      "title": "Café com endereço e qualidade",
+      "org": "Embrapa",
+      "url": "https://www.embrapa.br/en/busca-de-noticias/-/noticia/8515144/cafe-com-endereco-e-qualidade",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": ""
+    },
+    "embrapa-doc93-rondonia": {
+      "title": "Características das principais variedades de café cultivadas em Rondônia (Documentos 93)",
+      "org": "Embrapa Rondônia",
+      "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/906832/1/Doc93cafe.pdf",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": "pypdfで抽出(26頁)。抽出テキストで単語中に空白が入る箇所あり(例: 'variedad es')。ロンドニア州の品種の解説。"
+    },
+    "embrapa-geada-2021": {
+      "title": "Artigo - Embrapa usa imagens de satélite brasileiro para o mapeamento de cafezais afetados pelas geadas em Minas Gerais",
+      "org": "Embrapa",
+      "url": "https://www.embrapa.br/en/busca-de-noticias/-/noticia/64395221/artigo---embrapa-usa-imagens-de-satelite-brasileiro-para-o-mapeamento-de-cafezais-afetados-pelas-geadas-em-minas-gerais",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": "2021年の霜の記事。背景説明として1975年の霜に触れる。"
+    },
+    "pr-geada-negra-1975": {
+      "title": "Há 50 anos geada negra marcava fim de um ciclo, mas provocou diversificação da economia do Paraná",
+      "org": "Governo do Estado do Paraná (Secretaria da Agricultura e do Abastecimento)",
+      "url": "https://www.agricultura.pr.gov.br/Noticia/Ha-50-anos-geada-negra-marcava-fim-de-um-ciclo-mas-provocou-diversificacao-da-economia-do",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": "州政府の広報記事(2025年)。"
+    },
+    "usda-fas-coffee-annual-br-2025": {
+      "title": "Coffee Annual - Brazil (BR2025-0013, 2025-05-19)",
+      "org": "USDA Foreign Agricultural Service (GAIN)",
+      "url": "https://apps.fas.usda.gov/newgainapi/api/Report/DownloadReportByFileName?fileName=Coffee+Annual_Brasilia_Brazil_BR2025-0013.pdf",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": "pypdfで全19頁を抽出。2025/26年度の収穫の記述。"
+    },
+    "usda-fas-coffee-world-2026-07": {
+      "title": "Coffee: World Markets and Trade (July 2026)",
+      "org": "USDA Foreign Agricultural Service",
+      "url": "https://apps.fas.usda.gov/psdonline/circulars/coffee.pdf",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": "pypdfで抽出(10頁)。"
+    },
+    "usda-fas-coffee-annual-br-2026": {
+      "title": "Coffee Annual - Brazil (BR2026-0025)",
+      "org": "USDA Foreign Agricultural Service (GAIN)",
+      "url": "https://www.fas.usda.gov/data/gain-report/2026/06/Coffee%20Annual_Brasilia_Brazil_BR2026-0025.pdf",
+      "kind": "primary",
+      "readMethod": "failed",
+      "accessed": "2026-11-08",
+      "note": "HTTP 403で取得できず(代わりに2025年版を取得したが、2026年版の内容の代用にはしていない)。"
+    },
+    "cna-cnc-40-anos": {
+      "title": "Presidente da CNA participa de comemoração dos 40 anos do Conselho Nacional do Café",
+      "org": "CNA",
+      "url": "https://www.cnabrasil.org.br/noticias/presidente-da-cna-participa-de-comemoracao-dos-40-anos-do-conselho-nacional-do-cafe",
+      "kind": "primary",
+      "readMethod": "failed",
+      "accessed": "2026-11-08",
+      "note": "HTTP 403。CNC(1981年)の根拠にできなかった。"
+    },
+    "cnc-site": {
+      "title": "Conselho Nacional do Café (CNC) 公式サイト",
+      "org": "CNC",
+      "url": "https://cncafe.com.br/",
+      "kind": "primary",
+      "readMethod": "failed",
+      "accessed": "2026-11-08",
+      "note": "HTTP 406。"
+    },
+    "planalto-lei-9972-2000": {
+      "title": "Lei nº 9.972, de 25 de maio de 2000 (classificação de produtos vegetais)",
+      "org": "Presidência da República",
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/l9972.htm",
+      "kind": "primary",
+      "readMethod": "failed",
+      "accessed": "2026-11-08",
+      "note": "接続できず(証明書の検証を無効にする回避はしていない)。分類の義務の範囲は未確認。"
+    },
+    "ibge-geografia-do-cafe": {
+      "title": "IBGE lança A Geografia do Café",
+      "org": "IBGE",
+      "url": "https://censos.ibge.gov.br/2013-agencia-de-noticias/releases/9485-ibge-lanca-a-geografia-do-cafe-obra-que-inaugura-a-serie-dinamica-territorial-da-producao-agropecuaria.html",
+      "kind": "primary",
+      "readMethod": "failed",
+      "accessed": "2026-11-08",
+      "note": "接続できず。"
+    },
+    "inpi-lista-do": {
+      "title": "Indicações Geográficas: Denominações de Origem reconhecidas (At. 23 Junho 2026)",
+      "org": "INPI",
+      "url": "https://www.gov.br/inpi/pt-br/servicos/indicacoes-geograficas/arquivos/status-pedidos/LISTACOMASDENOMINAESDEORIGEMRECONHECIDAS.At23Junho2026.pdf",
+      "kind": "primary",
+      "readMethod": "failed",
+      "accessed": "2026-11-08",
+      "note": "HTTP 404。INPIの登録簿そのものは未確認(Cerrado Mineiro DO 2013はEmbrapaの記述による)。"
+    }
+  },
+  "entries": {
+    "origin:ジャマイカ:tagline": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "ブルーマウンテン山系がコーヒーを育む",
+          "status": "verified",
+          "sourceIds": [
+            "wipo-ipadvantage-perfect-cup"
+          ],
+          "quote": "The terrain, rainfall pattern, Blue Mountain mist, and overall conditions are perfectly suitable for the cultivation of one of the world’s most distinguished and cherished coffees",
+          "location": "WIPO 'In Search of a Perfect Cup' 概説段落",
+          "note": ""
+        },
+        {
+          "text": "上品でまろやかな味わい",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "味の評価語。公式資料の記述として確認できず(WIPOは 'unique flavor, intense aroma, delicate acid balance and sweetness' と書くが別の語)。"
+        }
+      ],
+      "suggestedText": "ブルーマウンテン山系が育むコーヒー",
+      "note": "英訳(src/data/en/originGuide1.js)は日本語と同じ主張で、主張の追加・欠落は見つからなかった。"
+    },
+    "origin:ジャマイカ:regions": {
+      "status": "verified",
+      "claims": [
+        {
+          "text": "産地はブルーマウンテン地区と、その外(ハイマウンテン)に区分される",
+          "status": "verified",
+          "sourceIds": [
+            "jam-jacra-regulations-2018"
+          ],
+          "quote": "“Jamaica High Mountain Supreme Coffee” means the premium grades from Jamaican coffee grown outside of the Blue Mountain area of Jamaica;",
+          "location": "JACRA Regulations 2018, reg.2 (Interpretation) / First Schedule",
+          "note": "規則2条は Blue Mountain area(第1附則で境界を定義)と、その外で育つ High Mountain Supreme を区分する。『ハイマウンテン地区』という地区名は規則に出ない(規則上は『ブルーマウンテン区域の外』)。JISは『3,000フィート未満はJamaica High Mountain』と書く。"
+        }
+      ],
+      "suggestedText": "",
+      "note": "掲載文『ブルーマウンテン地区、ハイマウンテン地区』は規則上の区分と矛盾しないが、『ハイマウンテン地区』の名は規則上は『ブルーマウンテン区域外』。英訳(src/data/en/originGuide1.js)は日本語と同じ主張で、主張の追加・欠落は見つからなかった。"
+    },
+    "origin:ジャマイカ:terroir": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "ブルーマウンテン山系は島の東部にある",
+          "status": "verified",
+          "sourceIds": [
+            "wipo-ipadvantage-perfect-cup"
+          ],
+          "quote": "The eastern end of the Caribbean island of Jamaica is adorned by the majestic Blue Mountains range.",
+          "location": "WIPO 概説段落",
+          "note": ""
+        },
+        {
+          "text": "最高峰は2,256m",
+          "status": "verified",
+          "sourceIds": [
+            "jis-blue-mountain-coffee"
+          ],
+          "quote": "Jamaica’s highest mountain standing at 7,402 feet",
+          "location": "JIS 'Blue Mountain Coffee' 冒頭",
+          "note": "JISは7,402フィートと書く。7,402 ft x 0.3048 = 2,256.1 m(換算は検証者の計算。2,256mという数字そのものは原文にない)。"
+        },
+        {
+          "text": "「ブルーマウンテンコーヒー」と名乗るには標高3,000〜5,500フィート(約914〜1,676m)での栽培が条件",
+          "status": "conflict",
+          "sourceIds": [
+            "jis-blue-mountain-coffee",
+            "wipo-ipadvantage-perfect-cup",
+            "jam-jacra-regulations-2018"
+          ],
+          "quote": "Only coffee grown between 3,000 and 5,500 feet can be classified as Jamaica Blue Mountain Coffee",
+          "location": "JIS 'Did you know?' 欄 / WIPO 'Trademark and Branding' / JACRA Regs 2018 reg.2 と First Schedule",
+          "note": "JISとWIPOは標高3,000〜5,500フィートと書く(WIPO: 'Only coffee grown at elevations between 3,000 and 5,500 feet in the parishes of Saint Andrew, Saint Thomas, Portland and Saint Mary can be called Jamaica Blue Mountain.')。一方、現行のJACRA規則2018(reg.2)は 'Jamaica Blue Mountain Coffee means coffee that is grown in the Blue Mountain area of Jamaica' とだけ書き、区域は第1附則の地点を結ぶ境界線(Skibo起点)で定義し、標高を書かない。『標高が法令上の条件』と書けるかは、利用者の判断が必要。"
+        },
+        {
+          "text": "北東貿易風が山にぶつかり雲・霧を発生させる",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式資料では確認できず(WIPOは 'Blue Mountain mist' とのみ)。"
+        },
+        {
+          "text": "冷涼で湿潤な気候",
+          "status": "verified",
+          "sourceIds": [
+            "wipo-ipadvantage-perfect-cup"
+          ],
+          "quote": "The climate in this region is marked by abundant rainfall",
+          "location": "WIPO 概説段落(湿潤)",
+          "note": "『冷涼』は 'Due to the cool microclimatic conditions in the Blue Mountains' で裏付け。"
+        },
+        {
+          "text": "土壌は変成岩・火成岩由来で水はけがよい(肥沃だがリーチングしやすいとする資料もある)",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式資料では確認できず。"
+        },
+        {
+          "text": "この気候がチェリーの成熟を遅らせる",
+          "status": "verified",
+          "sourceIds": [
+            "wipo-ipadvantage-perfect-cup"
+          ],
+          "quote": "Due to the cool microclimatic conditions in the Blue Mountains, it takes a longer time for the coffee berries to ripen",
+          "location": "WIPO Background 段落",
+          "note": "『土壌条件が』成熟を遅らせるという部分は未確認(気候のみ確認)。"
+        },
+        {
+          "text": "成熟の遅れが糖度と複雑性を高める",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "WIPOは 'helps the beans to mature with more substance' と書くのみ。糖度・複雑性は未確認。"
+        },
+        {
+          "text": "5,500フィート超は森林保護区(ブルー・ジョン・クロウ山脈国立公園)で栽培不可",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "Wikipediaミラーに類似記述があるのみ。政府資料は未取得。"
+        }
+      ],
+      "suggestedText": "東部ブルーマウンテン山系(最高峰は標高7,402フィート、約2,256m。JIS)。降水量の多い気候で、冷涼な微気候のためコーヒーチェリーの成熟に時間がかかる(WIPO)。JIS(ジャマイカ政府広報機関)は、標高3,000〜5,500フィートで栽培されたコーヒーだけが「ジャマイカ・ブルーマウンテン」に分類されるとしている。",
+      "note": "標高条件は資料間の扱いが異なる(conflict)。suggestedTextは『JISは〜としている』と帰属させ、法令上の条件とは書いていない。英訳(src/data/en/originGuide1.js)は日本語と同じ主張で、主張の追加・欠落は見つからなかった。"
+    },
+    "origin:ジャマイカ:harvestSeason": {
+      "status": "unverified",
+      "claims": [
+        {
+          "text": "確度の高い収穫期は特定できていない",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "検証者が読んだ公式資料(JIS、WIPO、JCEA、MOA)に収穫期の記述はなかった。JACRA自身のサイトは名前解決できず取得失敗(jacra.gov.jm)。"
+        },
+        {
+          "text": "Cafe Importsは「2〜6月」とする",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "Cafe Importsは輸入業者(二次資料)。今回は取得していない。"
+        },
+        {
+          "text": "他の資料では「9月〜翌1月」「8月中旬〜翌5月」等",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "出典不明。"
+        },
+        {
+          "text": "標高が高く成熟が非常に遅いため収穫期が長期化する傾向",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "成熟が遅いことはWIPOにあるが、収穫期の長期化は未確認。"
+        }
+      ],
+      "suggestedText": "",
+      "note": "全主張が未確認。公式の一次資料で収穫期を確認できるまで、表示しないことを推奨。英訳(src/data/en/originGuide1.js)は日本語と同じ主張で、主張の追加・欠落は見つからなかった。"
+    },
+    "origin:ジャマイカ:varietiesDetail": {
+      "status": "unverified",
+      "claims": [
+        {
+          "text": "大半がアラビカのティピカ",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式の一次資料では確認できず。"
+        },
+        {
+          "text": "JACRAは「優れたカップ品質が世界最高のコーヒーの一つにしている。ただしティピカは多収ではない」とする",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "JACRAの原文を見つけられていない(JACRAサイト取得失敗)。引用形式の文なので、原文なしに掲載しない方がよい。"
+        },
+        {
+          "text": "ピーベリーも珍重される",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式資料では確認できず。"
+        }
+      ],
+      "suggestedText": "",
+      "note": "英訳(src/data/en/originGuide1.js)は日本語と同じ主張で、主張の追加・欠落は見つからなかった。"
+    },
+    "origin:ジャマイカ:farmStructure": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "全体で約10,000戸の生産者が関わる(Cafe Imports)",
+          "status": "unverified",
+          "sourceIds": [
+            "jcea-home"
+          ],
+          "quote": "over 7,000 farmers, mostly small farmers",
+          "location": "JCEA home page 冒頭",
+          "note": "Cafe Importsは未取得の二次資料。JCEA公式は『over 7,000 farmers, mostly small farmers』と書き、数字が食い違う。"
+        },
+        {
+          "text": "平均的な農家は80〜175本程度の木を持つ小規模経営",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "出典未確認。"
+        },
+        {
+          "text": "Mavis Bank(旧国営)は約6,000戸の生産者からのコーヒーを処理する最大手",
+          "status": "unverified",
+          "sourceIds": [
+            "jcea-mavis-bank"
+          ],
+          "quote": "MBCF processes approximately 1million pounds of green beans from approximately 6000 farmers per year.",
+          "location": "JCEA site 'Mavis Bank Coffee Factory' 会員紹介",
+          "note": "二次資料のみ: jcea-mavis-bank(企業の自己紹介。'Jamaica’s largest fully integrated Jamaica Blue Mountain Coffee Facility' とも)。『旧国営』『最大手』は公的資料では未確認。"
+        },
+        {
+          "text": "Mavis Bankは2016年、Wallenfordは2013年に民間売却され、2016年以降は同一の買収者の傘下",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式資料では確認できず。"
+        },
+        {
+          "text": "2015年頃からJamaican Coffee Farmers Associationのような若手生産者団体が自ら加工・販売する動きが出た",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式資料では確認できず。"
+        },
+        {
+          "text": "JACRA(旧Coffee Industry Board)が輸出コーヒーの品質管理・認証を担う",
+          "status": "verified",
+          "sourceIds": [
+            "jis-132m-2025",
+            "moa-ministry-paper-jacra"
+          ],
+          "quote": "JACRA sets the quality standards, provides quality assurance and certification services, and governs the trading in the coffee, cocoa, coconut, turmeric, ginger, as well as pimento industries in Jamaica.",
+          "location": "JIS '$132 Million Spent to Rehabilitate Coffee Sector'",
+          "note": "旧CIBについては、MOA閣僚文書に 'the new body will replace the existing Coffee Industry Board'(計画段階。移行日は未確認。JACRA法PDFは画像で本文抽出不可)。『輸出コーヒーの』という限定はJISにはなく、品質基準の設定・品質保証と認証・取引の統括と書かれている。"
+        }
+      ],
+      "suggestedText": "JACRA(Jamaica Agricultural Commodities Regulatory Authority)は、品質基準の設定、品質保証と認証サービスの提供、コーヒーなどの取引の統括を担う(JIS)。JACRAは従来のCoffee Industry Boardに替わる機関として構想された(農業省閣僚文書)。",
+      "note": "生産者数・農園構造・民営化の年は公式資料で確認できず。英訳(src/data/en/originGuide1.js)は日本語と同じ主張で、主張の追加・欠落は見つからなかった。"
+    },
+    "origin:ジャマイカ:history": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "1728年にコーヒーが導入された",
+          "status": "verified",
+          "sourceIds": [
+            "jis-blue-mountain-coffee",
+            "wipo-ipadvantage-perfect-cup"
+          ],
+          "quote": "Blue Mountain coffee has been grown in Jamaica since 1728 when coffee was first introduced to the island.",
+          "location": "JIS 'Blue Mountain Coffee' 冒頭",
+          "note": "WIPOも 'Coffee was first introduced on the island in 1728'。"
+        },
+        {
+          "text": "導入したのは当時のジャマイカ総督",
+          "status": "verified",
+          "sourceIds": [
+            "jcea-about"
+          ],
+          "quote": "were brought to the island from neighbouring Hispaniola by the British Governor Sir Nicholas Lawes.",
+          "location": "JCEA 'About Us' 'Who We Are'",
+          "note": "総督による導入はJCEA(協会公式)とGleaner(二次)が一致。導入元は食い違う(次の主張)。"
+        },
+        {
+          "text": "マルティニークから導入した",
+          "status": "conflict",
+          "sourceIds": [
+            "jcea-about",
+            "gleaner-history-2014"
+          ],
+          "quote": "Coffee production began in Jamaica in 1728 when the then governor of Jamaica, Sir Nicholas Lawes, brought approximately eight coffee seedlings from Martinique.",
+          "location": "Gleaner 2014(二次) vs JCEA About Us(協会公式)",
+          "note": "JCEA(協会公式)は 'a few precious Arabica coffee seedlings were brought to the island from neighbouring Hispaniola by the British Governor Sir Nicholas Lawes'(ヒスパニョーラ島から)。Gleaner(二次)はマルティニークから約8本。公的機関(Institute of Jamaica等)の一次資料は未取得。ユーザーの判断が必要。"
+        },
+        {
+          "text": "導入されたのはアラビカ・ティピカ",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "JCEAは 'Arabica coffee seedlings' と書くのみ。品種(ティピカ)は一次資料で未確認。"
+        },
+        {
+          "text": "1800年頃には686農園",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式資料では確認できず(別のGleaner旧記事は『1814年に600農園』と書き、数字が食い違う。いずれも二次)。"
+        },
+        {
+          "text": "1814年には年産約1,500万kg",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式資料では確認できず。"
+        },
+        {
+          "text": "日本向け輸出が伝統的に高比率",
+          "status": "verified",
+          "sourceIds": [
+            "jis-chainsaw-2026",
+            "jcea-what-we-do"
+          ],
+          "quote": "Japan accounts for more than half of Jamaica’s Blue Mountain Coffee exports.",
+          "location": "JIS 2026-01-22(農業大臣の発言)",
+          "note": "JCEA: 'In 2017/18 the Japanese market consumed 70% of the 264,500 boxes of coffee exported from Jamaica.'"
+        },
+        {
+          "text": "近年は市場多様化で日本向け比率が低下傾向",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式資料では確認できず(70%(2017/18、全輸出箱数比)と『半分超』(2026、BM輸出比)は基準が異なり、傾向とは書けない)。"
+        },
+        {
+          "text": "ハリケーン・ベリルで被害を受けた",
+          "status": "verified",
+          "sourceIds": [
+            "moa-beryl-2024"
+          ],
+          "quote": "There was an estimated 60 per cent damage to coffee farms and infrastructure across all parishes, with an estimated loss of 25,000 boxes, equivalent to approximately $200 million in revenue,” he said.",
+          "location": "MOA 2024-07-19 'Agriculture Sector Sustains $4.73b in Losses from Hurricane Beryl’s Passage'",
+          "note": "農業大臣の議会声明(7月16日)。被害は推定値。"
+        },
+        {
+          "text": "ハリケーン・メリッサで被害を受けた",
+          "status": "verified",
+          "sourceIds": [
+            "moa-melissa-2026"
+          ],
+          "quote": "following the loss of 40 per cent of coffee during Hurricane Melissa.",
+          "location": "MOA 'Coffee Farmers Urged to Plant Short-Term Crops After Hurricane Melissa Losses'",
+          "note": "2026年1月9日の農業大臣の発言。"
+        },
+        {
+          "text": "そのため生産が大きく落ち込んでいる",
+          "status": "unverified",
+          "sourceIds": [
+            "jis-132m-2025"
+          ],
+          "quote": "at the end of the year, 145,000 boxes of Jamaica Blue Mountain coffee were produced.",
+          "location": "JIS '$132 Million Spent to Rehabilitate Coffee Sector'",
+          "note": "被害の発表はあるが、『生産が大きく落ち込んだ』と言える生産量の確認はできていない。JACRA代理局長は2025年の生産を『見込み127,000箱に対し145,000箱』と述べている(JBMのみ)。"
+        }
+      ],
+      "suggestedText": "1728年にコーヒーが導入された(JIS)。導入したのは当時の総督サー・ニコラス・ロウズとされる(JCEA)。日本はブルーマウンテンコーヒー輸出の半分超を占める(ジャマイカ農業大臣、2026年1月)。近年はハリケーンの被害を受けた。農業省は、ベリルの通過後(2024年7月)にコーヒー農園・インフラの約60%が被害を受け25,000箱の損失と見積もり、メリッサではコーヒーの40%を失ったと述べている。",
+      "note": "導入元(マルティニーク/ヒスパニョーラ)の食い違いはJCEA(協会公式)とGleaner(報道)の間。suggestedTextは導入元に触れていない。英訳(src/data/en/originGuide1.js)は日本語と同じ主張で、主張の追加・欠落は見つからなかった。"
+    },
+    "origin:ジャマイカ:gradeSystem": {
+      "status": "unverified",
+      "claims": [
+        {
+          "text": "No.1が最上位(木樽出荷)で、No.2、No.3と続く",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式の一次資料の等級表は取得できず。小売・輸入業者のページ(二次、未取得)にのみ記載。"
+        },
+        {
+          "text": "規格外はピーベリー・トリアージとして扱われる",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "同上。"
+        },
+        {
+          "text": "ブルーマウンテン地区独自の等級で、国別グレードとは別体系",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式資料では確認できず。"
+        }
+      ],
+      "suggestedText": "",
+      "note": "参考: JACRA規則2018のreg.2は、Jamaica Blue Mountain Coffee(ブルーマウンテン区域産)、Jamaica High Mountain Supreme Coffee(区域外のジャマイカ産の上級等級)、およびそれぞれのブレンド(30%以上)を定義するが、No.1〜3などの等級は定義していない。等級を載せるならJACRAの基準の原文が必要。英訳(src/data/en/originGuide1.js)は日本語と同じ主張で、主張の追加・欠落は見つからなかった。"
+    },
+    "origin:ジャマイカ:officialBody": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "JACRA(旧Coffee Industry Board)",
+          "status": "verified",
+          "sourceIds": [
+            "moa-ministry-paper-jacra"
+          ],
+          "quote": "the new body will replace the existing Coffee Industry Board",
+          "location": "MOA Ministry Paper 1.0 Purpose",
+          "note": "計画段階の文書。実際の移行日は未確認。"
+        },
+        {
+          "text": "JACRAが「ブルーマウンテン」の商標権を独占保有している",
+          "status": "conflict",
+          "sourceIds": [
+            "jis-132m-2025",
+            "wipo-ipadvantage-perfect-cup"
+          ],
+          "quote": "We own the trademark of the Jamaica Blue Mountain and the Jamaica High Mountain.",
+          "location": "JIS(JACRA代理局長の発言) vs WIPO 'Background'",
+          "note": "JACRA代理局長は『我々が商標を所有』と発言(JIS、2025年)。WIPOの旧記事は 'The CIB owns all the marks through its wholly-owned subsidiary Coffee Marks Limited.'(子会社名義)。『独占』の語はどちらにもない。現在の登録名義人は登録簿(USPTO等)で未確認。"
+        },
+        {
+          "text": "認証を受けた業者のみが名乗れる",
+          "status": "verified",
+          "sourceIds": [
+            "jam-jacra-regulations-2018"
+          ],
+          "quote": "shall not, unless authorized in writing by the Authority",
+          "location": "JACRA Regs 2018, reg.21(1)",
+          "note": "規則21条: 当局の書面による許可なく、『Blue Mountain』『High Mountain』の語を含む名称で(該当する正規のコーヒー以外を)購入・販売・輸出することは禁止。違反は罰金(2百万ドル以下)。『認証』ではなく『当局の書面許可』。"
+        }
+      ],
+      "suggestedText": "JACRA(Jamaica Agricultural Commodities Regulatory Authority)は、品質基準の設定・品質保証と認証サービスの提供・コーヒーなどの取引の統括を担う(JIS)。JACRA規則2018の第21条は、当局の書面による許可なく、「Blue Mountain」「High Mountain」の語を含む名称でコーヒーを購入・販売・輸出することを禁じている。",
+      "note": "商標所有者の記述は未解決(conflict)でsuggestedTextに含めていない。英訳(src/data/en/originGuide1.js)は日本語と同じ主張で、主張の追加・欠落は見つからなかった。"
+    },
+    "origin:ジャマイカ:sub:ブルーマウンテン地区": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "規則上のブルーマウンテン区域は、第1附則の境界線で定義される",
+          "status": "verified",
+          "sourceIds": [
+            "jam-jacra-regulations-2018"
+          ],
+          "quote": "“Jamaica Blue Mountain Coffee” means coffee that is grown in the Blue Mountain area of Jamaica;",
+          "location": "JACRA Regs 2018, reg.2 / First Schedule 'Blue Mountain Area of Jamaica'",
+          "note": "suggestedText用に原文どおりの範囲で分けた主張(境界線は附則に地名の列挙として記載)。"
+        },
+        {
+          "text": "標高914〜1,676m(3,000〜5,500フィート)",
+          "status": "conflict",
+          "sourceIds": [
+            "jis-blue-mountain-coffee",
+            "wipo-ipadvantage-perfect-cup",
+            "jam-jacra-regulations-2018"
+          ],
+          "quote": "Only coffee grown at elevations between 3,000 and 5,500 feet in the parishes of Saint Andrew, Saint Thomas, Portland and Saint Mary can be called Jamaica Blue Mountain.",
+          "location": "WIPO 'Trademark and Branding'",
+          "note": "terroirの標高主張と同じ扱い。規則は境界線(第1附則)で区域を定義し標高を書かない。"
+        },
+        {
+          "text": "なめらかでバランスに優れ、苦味がほぼなく、明るいがシャープすぎない酸",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "味の描写。公式資料で確認できず。"
+        },
+        {
+          "text": "「コーヒーのシャンパン」とも呼ばれる",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式資料で確認できず。"
+        }
+      ],
+      "suggestedText": "規則上のブルーマウンテン区域は、JACRA規則2018の第1附則で定められた境界線の内側。JISは標高3,000〜5,500フィートで栽培されたものとしている。",
+      "note": "英訳(src/data/en/originGuide1.js)は日本語と同じ主張で、主張の追加・欠落は見つからなかった。"
+    },
+    "origin:ジャマイカ:sub:ハイマウンテン地区": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "ブルーマウンテン地区外",
+          "status": "verified",
+          "sourceIds": [
+            "jam-jacra-regulations-2018"
+          ],
+          "quote": "“Jamaica High Mountain Supreme Coffee” means the premium grades from Jamaican coffee grown outside of the Blue Mountain area of Jamaica;",
+          "location": "JACRA Regs 2018, reg.2",
+          "note": "規則上の名称は 'Jamaica High Mountain Supreme Coffee'(区域外で育つジャマイカ産の上級等級)。"
+        },
+        {
+          "text": "標高457〜914m",
+          "status": "unverified",
+          "sourceIds": [
+            "jis-blue-mountain-coffee"
+          ],
+          "quote": "while below 3,000 feet it is classified as Jamaica High Mountain Coffee",
+          "location": "JIS 'Did you know?'",
+          "note": "JISは『3,000フィート(約914m)未満はHigh Mountain』とだけ書き、下限(1,500フィート=457m)は書かない。"
+        },
+        {
+          "text": "マイルドでクリーンだがブルーマウンテンほどの複雑さはない",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "味の描写。"
+        },
+        {
+          "text": "近年は生産減少が著しい",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式資料で確認できず。"
+        }
+      ],
+      "suggestedText": "ブルーマウンテン区域の外で育つジャマイカ産コーヒーの上級等級は、規則で「Jamaica High Mountain Supreme Coffee」と定義されている(JACRA規則2018)。",
+      "note": "英訳(src/data/en/originGuide1.js)は日本語と同じ主張で、主張の追加・欠落は見つからなかった。"
+    },
+    "origin:ブラジル:tagline": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "生産量世界一",
+          "status": "verified",
+          "sourceIds": [
+            "usda-fas-coffee-world-2026-07",
+            "embrapa-cafe-endereco"
+          ],
+          "quote": "Brazil accounts for nearly 40 percent of world production and exerts significant influence on global supplies and prices.",
+          "location": "USDA FAS 'Coffee: World Markets and Trade' July 2026, 冒頭要旨の次の段落",
+          "note": "Embrapaも 'o que faz do País o maior produtor e exportador do mundo e segundo maior consumidor' と記述。"
+        },
+        {
+          "text": "ナッツやチョコレートを思わせる甘みとまろやかな口当たり",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "味の描写。Embrapaは Alta Mogiana について 'notas suavemente achocolatadas' 等を述べるが、ブラジル全体の味の特徴としての公式記述は確認できず。"
+        }
+      ],
+      "suggestedText": "生産量世界一(世界生産のおよそ4割。USDA、2026年7月)",
+      "note": "英訳(src/data/en/originGuide1.js)は日本語と同じ主張で、主張の追加・欠落は見つからなかった。"
+    },
+    "origin:ブラジル:regions": {
+      "status": "verified",
+      "claims": [
+        {
+          "text": "主なアラビカ産地はセラード(ミネイロ)、モジアナ、スル・デ・ミナス",
+          "status": "verified",
+          "sourceIds": [
+            "embrapa-geada-2021"
+          ],
+          "quote": "as maiores áreas de cultivo e qualidade da bebida estão nas regiões do Cerrado Mineiro, Sul de Minas e Mogiana (em São Paulo), em altitudes entre 850 e 1.200 metros",
+          "location": "Embrapa 記事(2021年)本文 'Pelo mapeamento' 手前の導入部",
+          "note": "Embrapaは、これら3地域をアラビカの栽培面積と品質の面で最大の地域と記述。"
+        }
+      ],
+      "suggestedText": "",
+      "note": "英訳(src/data/en/originGuide1.js)は日本語と同じ主張で、主張の追加・欠落は見つからなかった。"
+    },
+    "origin:ブラジル:terroir": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "ミナスジェライス州が国内生産の柱",
+          "status": "verified",
+          "sourceIds": [
+            "usda-fas-coffee-annual-br-2025",
+            "usda-fas-coffee-world-2026-07"
+          ],
+          "quote": "Minas Gerais remains the leading coffee producer in the country, followed by Espírito Santo, São Paulo, Bahia, and Rondônia.",
+          "location": "USDA FAS Coffee Annual Brazil 2025, 'Harvest Outlook'",
+          "note": "USDA世界レポート(2026-07): 'Minas Gerais, where over 70 percent of Arabica coffee is grown'。"
+        },
+        {
+          "text": "総生産価値の約5割",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "生産『価値』の割合は公式資料で確認できず。パラナ州政府の記事に『Minas Geraisは国内生産の53%』という記述があるが、生産量であり、本検証では原文を取得していない。"
+        },
+        {
+          "text": "セラード・ミネイロは標高800〜1,300mの平坦なサバンナ地形",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "標高・地形はEmbrapa取得ページに記載なし(一般にアラビカは850〜1,200mとするのみ)。"
+        },
+        {
+          "text": "セラードの土壌は土壌改良を要するやや痩せた赤いラトソル(terra roxa)で、平坦な地形",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "『赤いラトソル』『terra roxa』は公式資料で確認できず(低肥沃度は下の主張で確認)。"
+        },
+        {
+          "text": "セラードは長い乾期と低肥沃度の土壌が特徴",
+          "status": "verified",
+          "sourceIds": [
+            "embrapa-cerrado-do"
+          ],
+          "quote": "caracterizada por estiagens prolongadas e solos de baixa fertilidade",
+          "location": "Embrapa 'Cerrado Mineiro é destaque…' 本文",
+          "note": "原文の『明瞭な乾湿季』のうち、乾期が長い点を確認(湿季の記述はない)。"
+        },
+        {
+          "text": "セラードでは土壌改良・施肥・灌漑などの技術が用いられている",
+          "status": "verified",
+          "sourceIds": [
+            "embrapa-cerrado-do"
+          ],
+          "quote": "correção do solo, adubação, irrigação e cultivares",
+          "location": "Embrapa 'Cerrado Mineiro é destaque…' 本文",
+          "note": "原文は 'Dentre as principais tecnologias utilizadas nesse sistema produtivo destacam-se…'。"
+        },
+        {
+          "text": "モジアナは標高900〜1,100m、有機物に富む深い赤黄色ラトソルの起伏ある地形で、非常に甘くバランスの良いカップになりやすい",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式資料では確認できず。"
+        },
+        {
+          "text": "スル・デ・ミナスは最大1,380mに達する地域もある",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式資料では確認できず。"
+        }
+      ],
+      "suggestedText": "ミナスジェライス州はブラジル最大のコーヒー生産州で、アラビカ生産の7割超を占める(USDA)。主なアラビカ産地はセラード・ミネイロ、スル・デ・ミナス、(サンパウロ州の)モジアナ(Embrapa)。セラードは長い乾期と低肥沃度の土壌が特徴で、土壌改良・施肥・灌漑などの技術で栽培が成り立っている(Embrapa)。",
+      "note": "suggestedTextの『7割超』は、USDAの 'over 70 percent of Arabica coffee is grown' による(アラビカ)。英訳(src/data/en/originGuide1.js)は日本語と同じ主張で、主張の追加・欠落は見つからなかった。"
+    },
+    "origin:ブラジル:harvestSeason": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "収穫は5〜9月",
+          "status": "verified",
+          "sourceIds": [
+            "usda-fas-coffee-annual-br-2025"
+          ],
+          "quote": "The 2025/26 Brazilian coffee harvest began at a slow pace, with robusta varieties in April and arabica in May, and expected to conclude by September.",
+          "location": "USDA FAS Coffee Annual Brazil 2025, 'Harvest Outlook'",
+          "note": "2025/26年度についての記述(アラビカは5月開始、9月までに終了見込み)。年によって前後する。"
+        },
+        {
+          "text": "乾季と重なる単一の集中収穫期",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式資料では確認できず。"
+        },
+        {
+          "text": "ピークは6〜7月",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式資料では確認できず。"
+        },
+        {
+          "text": "乾燥・予測可能な気候が機械収穫・乾燥に適する",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "USDA世界レポートは 'Brazil’s geography also supports mechanized pruning' と述べるのみで、収穫・乾燥への適性は未確認。"
+        }
+      ],
+      "suggestedText": "アラビカの収穫は5月ごろに始まり、9月ごろまでに終わる(USDA、2025/26年度)。",
+      "note": "英訳(src/data/en/originGuide1.js)は日本語と同じ主張で、主張の追加・欠落は見つからなかった。"
+    },
+    "origin:ブラジル:varietiesDetail": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "ムンドノーボはスマトラ×赤ブルボンの自然交雑",
+          "status": "verified",
+          "sourceIds": [
+            "embrapa-doc93-rondonia"
+          ],
+          "quote": "cruzamento natural entre as variedad es ‘Sumatra’ e ‘Bourbon Vermelho’",
+          "location": "Embrapa Rondônia Doc.93 'Mundo novo'",
+          "note": "抽出テキストでは 'variedad es' と空白が入る。"
+        },
+        {
+          "text": "ムンドノーボは樹高が高く多収",
+          "status": "verified",
+          "sourceIds": [
+            "embrapa-doc93-rondonia"
+          ],
+          "quote": "As plantas têm porte alto e caule fino",
+          "location": "Embrapa Rondônia Doc.93 'Mundo novo'",
+          "note": "同箇所に 'elevada rusticidade, vigor e produtividade'。『多収』は『produtividade elevada』と読める。"
+        },
+        {
+          "text": "ムンドノーボは成熟が遅い",
+          "status": "unverified",
+          "sourceIds": [
+            "embrapa-doc93-rondonia"
+          ],
+          "quote": "É susceptível à ferrugem-do-cafeeiro e apresenta maturação mais precoce e uniforme",
+          "location": "Embrapa Rondônia Doc.93 'Mundo novo'",
+          "note": "Embrapa(ロンドニア)は逆に『maturação mais precoce e uniforme』(より早く均一に成熟)と記述(カトゥアイとの比較。同書でカトゥアイは 'mais tardia e mais desuniforme do que a variedade Mundo Novo')。『成熟が遅い』を裏付ける公式資料は見つからず、食い違う記述がある。"
+        },
+        {
+          "text": "ムンドノーボ(とカトゥアイ)がブラジルのアラビカ生産の屋台骨",
+          "status": "verified",
+          "sourceIds": [
+            "embrapa-cafe-endereco"
+          ],
+          "quote": "As cultivares Mundo Novo e Catuaí Vermelho são consideradas desbravadoras do Cerrado Mineiro e hoje se encontram espalhadas pelo Brasil afora, estando presentes em cerca de 90% da área cultivada com café arábica no País.",
+          "location": "Embrapa 'Café com endereço e qualidade' 'Mundo Novo e Catuaí'",
+          "note": "『長らく』の部分は歴史記述として未確認。ムンドノーボとカトゥアイ赤の合計で約90%。"
+        },
+        {
+          "text": "カトゥアイは黄カトゥーラ×ムンドノーボの交配",
+          "status": "verified",
+          "sourceIds": [
+            "embrapa-cafe-endereco"
+          ],
+          "quote": "Em 1972, chegam ao campo as cultivares Catuaí Vermelho e Catuaí Amarelo, resultantes de cruzamento da cultivar Mundo Novo com a cultivar Caturra Amarelo",
+          "location": "Embrapa 'Café com endereço e qualidade' 'Mundo Novo e Catuaí'",
+          "note": ""
+        },
+        {
+          "text": "カトゥアイ(赤)は、赤い実をつける個体が選抜され定着した",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "赤・黄の2系統が同じ交配から出たとEmbrapaは述べるが、『赤い個体の選抜』の経緯は確認できず。"
+        },
+        {
+          "text": "ほかにオバタ、黄ブルボンなどが栽培される",
+          "status": "verified",
+          "sourceIds": [
+            "embrapa-cafe-endereco"
+          ],
+          "quote": "sendo as variedades mais cultivadas Catuaí Vermelho, Catuaí Amarelo, Mundo Novo, Bourbon Amarelo e Obatã IAC 1669-20",
+          "location": "Embrapa 'Café com endereço e qualidade'(Alta Mogiana の項)",
+          "note": "Embrapaの記述は Alta Mogiana の品種。国全体の一覧ではない。"
+        },
+        {
+          "text": "ティピカも栽培される",
+          "status": "unverified",
+          "sourceIds": [
+            "embrapa-cafe-endereco"
+          ],
+          "quote": "Típica, introduzida no Brasil em 1727",
+          "location": "Embrapa 'Mundo Novo e Catuaí' 節",
+          "note": "1727年に導入された品種としての言及のみ。現在の栽培は未確認。"
+        },
+        {
+          "text": "カトゥーラも栽培される",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "Caturra Amarelo はカトゥアイの親としての言及のみ。現在の栽培は未確認。"
+        },
+        {
+          "text": "ナチュラルおよびパルプドナチュラルが主流で、ウォッシュドは少数",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式資料では確認できず。"
+        }
+      ],
+      "suggestedText": "ムンドノーボはスマトラと赤ブルボンの自然交雑に由来し、樹高が高く多収(Embrapa)。ムンドノーボとカトゥアイ赤は、ブラジルのアラビカ栽培面積の約9割に植えられている(Embrapa)。カトゥアイはムンドノーボと黄カトゥーラの交配で、1972年に圃場に出た(Embrapa)。ほかにオバタ、黄ブルボンなども栽培される(Embrapa、Alta Mogiana)。",
+      "note": "英訳(src/data/en/originGuide1.js)は日本語と同じ主張で、主張の追加・欠落は見つからなかった。"
+    },
+    "origin:ブラジル:farmStructure": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "規模の二極化が大きい",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式資料では確認できず。MAPAは 'cerca de 300 mil produtores, predominando mini e pequenos' と記述(2018年頃の記述)。"
+        },
+        {
+          "text": "アラビカ生産者の87%は栽培面積20ha未満の小規模農家",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式資料では確認できず(IBGE等は取得失敗)。"
+        },
+        {
+          "text": "小規模農家は生産量の43%",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "同上。"
+        },
+        {
+          "text": "小規模農家は急傾斜地など機械収穫が難しい土地に多い",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "同上。"
+        },
+        {
+          "text": "平坦〜緩斜面の大規模・機械化農園(2,000ha超の事例も)が生産の過半を担う",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "同上。"
+        },
+        {
+          "text": "高い最低賃金を背景に機械収穫への投資が進む",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "同上。"
+        },
+        {
+          "text": "原産地呼称制度も発達している",
+          "status": "verified",
+          "sourceIds": [
+            "embrapa-igs-cafe"
+          ],
+          "quote": "O Café possui 14 registros de Indicações Geográficas no Instituto Nacional da Propriedade Industrial (INPI).",
+          "location": "Embrapa 'Café segue como o produto com maior número de IGs no Brasil'",
+          "note": "記事の日付は不明(取得ページに日付なし)。"
+        },
+        {
+          "text": "Cerrado Mineiroが2013年にDOとなった",
+          "status": "verified",
+          "sourceIds": [
+            "embrapa-igs-cafe"
+          ],
+          "quote": "As regiões do Cerrado Mineiro e da Mantiqueira de Minas tiveram seus registros de IP alterados para registro de Denominação de Origem, respectivamente, em 2013 e 2020.",
+          "location": "Embrapa 'Café segue como o produto com maior número de IGs no Brasil'",
+          "note": "INPIの登録簿は取得失敗(inpi-lista-do)。"
+        },
+        {
+          "text": "それがブラジル初のDOである",
+          "status": "unverified",
+          "sourceIds": [
+            "embrapa-cerrado-do"
+          ],
+          "quote": "conquistou, recentemente, a primeira DO para café no país.",
+          "location": "Embrapa 'Cerrado Mineiro é destaque…' 冒頭",
+          "note": "Embrapaは『コーヒーで初のDO』と書く。コーヒー以外を含む『ブラジル初のDO』かは未確認(他品目のDOが先にある可能性あり)。表現は『コーヒーで初のDO』が確認できる範囲。"
+        }
+      ],
+      "suggestedText": "ブラジルのコーヒー産地では地理的表示の登録が進み、Embrapaによればコーヒーは地理的表示の登録数が最も多い農産物。Cerrado Mineiroは2013年に原産地呼称(DO)に切り替わり、コーヒーで初のDOとなった(Embrapa)。",
+      "note": "農園規模に関する数字(87%・43%・2,000ha超など)は全て未確認。英訳(src/data/en/originGuide1.js)は日本語と同じ主張で、主張の追加・欠落は見つからなかった。"
+    },
+    "origin:ブラジル:history": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "1727年に導入されたとされる",
+          "status": "verified",
+          "sourceIds": [
+            "mapa-cafe-no-brasil"
+          ],
+          "quote": "O café chegou ao Brasil, por Belém no Pará, em 1727, vindo da Guiana Francesa",
+          "location": "MAPA 'Café no Brasil' 歴史の項",
+          "note": "Embrapaも 'Típica, introduzida no Brasil em 1727'。"
+        },
+        {
+          "text": "1830年頃には世界最大の生産国となった",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式資料では確認できず(MAPAは『19世紀半ばにパライバ渓谷で本格化し、約1世紀、コーヒーが国の主要な富だった』と記述するのみ)。"
+        },
+        {
+          "text": "以後、世界シェア30〜40%超を維持",
+          "status": "unverified",
+          "sourceIds": [
+            "usda-fas-coffee-world-2026-07",
+            "embrapa-cafe-endereco"
+          ],
+          "quote": "Brazil accounts for nearly 40 percent of world production",
+          "location": "USDA FAS 2026-07",
+          "note": "現在(2026年)の約4割、近年約3分の1(Embrapa)は確認。『1830年以後ずっと』は未確認。"
+        },
+        {
+          "text": "1975年の大霜害があった(7月18日)",
+          "status": "verified",
+          "sourceIds": [
+            "pr-geada-negra-1975"
+          ],
+          "quote": "Há 50 anos, em 18 de julho de 1975, uma das maiores geadas já registrada no Estado devastou os cafezais e mudou o perfil agropecuário do Paraná.",
+          "location": "パラナ州農業局 記事 冒頭",
+          "note": ""
+        },
+        {
+          "text": "南部の生産者が、霜害の少ないミナスジェライスへ移動した",
+          "status": "unverified",
+          "sourceIds": [
+            "embrapa-geada-2021"
+          ],
+          "quote": "A forte geada de 1975 praticamente dizimou a cafeicultura paranaense e contribuiu para a migração das áreas de cultivo para as regiões atuais.",
+          "location": "Embrapa 記事(2021年)導入部",
+          "note": "Embrapaは『1975年の霜がパラナのコーヒー栽培をほぼ壊滅させ、栽培地が現在の地域へ移る一因になった』と書く。『ミナスジェライスへ』『霜害が少ない』『生産者が移動』は原文にない。"
+        }
+      ],
+      "suggestedText": "コーヒーは1727年にパラ州ベレンから入ったとされる(MAPA)。1975年7月18日の大霜害はパラナ州のコーヒー栽培に壊滅的な被害を与え、栽培地が現在の地域へ移る一因になった(パラナ州政府、Embrapa)。",
+      "note": "英訳(src/data/en/originGuide1.js)は日本語と同じ主張で、主張の追加・欠落は見つからなかった。"
+    },
+    "origin:ブラジル:gradeSystem": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "ブラジルの公式分類(COB)がある",
+          "status": "verified",
+          "sourceIds": [
+            "cecafe-workshop-nova-cob-2026"
+          ],
+          "quote": "nova tabela de Classificação Oficial Brasileira (COB) do café, elaborada pelo Ministério da Agricultura e Pecuária (MAPA)",
+          "location": "Cecafé Comunicado 081-2026",
+          "note": "COBの名称は、IN 8/2003の本文には出てこない。Cecafé(2026年9月)は、MAPAが新しいCOB表を提案し、業界と協議中と伝える(新規則が公布済みかは未確認)。"
+        },
+        {
+          "text": "欠点数でタイプ2〜8に分類される",
+          "status": "verified",
+          "sourceIds": [
+            "mapa-in-8-2003"
+          ],
+          "quote": "360 8 200 > 360 Fora de Tipo",
+          "location": "IN 8/2003 Anexo, 16.3 Tabela 3",
+          "note": "Tipo 2=4点、3=12点、4=26点(Base)、5=46点、6=86点、7=160点、8=360点、360超はFora de Tipo。表にTipo 1はない。"
+        },
+        {
+          "text": "数字が小さいほど高品質(欠点が少ない)",
+          "status": "verified",
+          "sourceIds": [
+            "mapa-in-8-2003"
+          ],
+          "quote": "4 2 + 100 46 5 50",
+          "location": "IN 8/2003 Anexo, 16.3 Tabela 3",
+          "note": "Tipo 2が4欠点、Tipo 5が46欠点(300gの作業用サンプル: 11.5項)。『高品質』は規則の語ではなく、欠点数の少なさ。"
+        },
+        {
+          "text": "スクリーンサイズ(ふるい)でも分類される",
+          "status": "verified",
+          "sourceIds": [
+            "mapa-in-8-2003"
+          ],
+          "quote": "Chato graúdo: peneiras 19/18 e 17;",
+          "location": "IN 8/2003 Anexo, 4.2 Subcategoria",
+          "note": ""
+        },
+        {
+          "text": "官能評価はEstritamente MoleからRioまでの4段階",
+          "status": "incorrect",
+          "sourceIds": [
+            "mapa-in-8-2003"
+          ],
+          "quote": "será classificado em 07 (sete) Subgrupos do Grupo I e 4 (quatro) Subgrupos II",
+          "location": "IN 8/2003 Anexo, 4.4 Subgrupo",
+          "note": "アラビカ(Grupo I)の飲み口(Subgrupo)は7区分: Bebidas Finas = Estritamente mole、Mole、Apenas mole、Duro。Bebidas Fenicadas = Riado、Rio、Rio Zona(4.4.1〜4.4.2)。ロブスタ(Grupo II)は4区分(Excelente、Boa、Regular、Anormal)。『4段階』は誤り。"
+        },
+        {
+          "text": "欠点数・スクリーンサイズ・官能評価など4軸で分類",
+          "status": "incorrect",
+          "sourceIds": [
+            "mapa-in-8-2003"
+          ],
+          "quote": "será classificado em CATEGORIA, SUBCATEGORIA, GRUPO, SUBGRUPO, CLASSE e TIPO",
+          "location": "IN 8/2003 Anexo, 4. Classificação",
+          "note": "規則の分類要素は6つ: 種(Categoria)、豆の形・大きさ(Subcategoria)、Grupo(アラビカ/ロブスタ)、飲み口(Subgrupo)、色(Classe。8区分)、欠点によるTipo。『4軸』は誤り。"
+        },
+        {
+          "text": "商業取引にはこの分類が必須",
+          "status": "verified",
+          "sourceIds": [
+            "mapa-in-8-2003"
+          ],
+          "quote": "Será também considerada fraude a comercialização do Café Beneficiado Grão Cru, em desacordo com o estabelecido neste Regulamento.",
+          "location": "IN 8/2003 Anexo, 14.2 / 10.1",
+          "note": "10.1: 'deverá o produto estar acompanhado do seu respectivo Certificado de Classificação'。ただし義務の適用範囲を定める Lei 9.972/2000 は取得失敗で未確認。"
+        }
+      ],
+      "suggestedText": "ブラジルの生豆の分類は、MAPAの規則(Instrução Normativa 8/2003)で、種(アラビカ/ロブスタ)、豆の形と大きさ(ふるい)、飲み口(アラビカは Estritamente Mole、Mole、Apenas Mole、Duro、Riado、Rio、Rio Zona の7区分)、色、欠点数によるタイプ(Tipo 2〜8。数字が小さいほど欠点が少なく、Tipo 2は300g中4点、Tipo 8は360点)で定められている。製品には分類証明書(Certificado de Classificação)が添付される。",
+      "note": "Tipo 1は規則の表3に存在しない(2〜8のみ)。2026年にMAPAが新しいCOB表を提案中で、現行規則が改定される可能性がある。英訳(src/data/en/originGuide1.js)は日本語と同じ主張で、主張の追加・欠落は見つからなかった。"
+    },
+    "origin:ブラジル:officialBody": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "Cecaféは輸出者評議会で、1999年設立",
+          "status": "verified",
+          "sourceIds": [
+            "cecafe-relatorio-fev-2026"
+          ],
+          "quote": "Fundado em 1999, o Cecafé representa e promove ativamente o desenvolvimento do setor exportador de café nos âmbitos nacional e internacional.",
+          "location": "Cecafé 月次レポート(2026-03-10)末尾の団体紹介",
+          "note": ""
+        },
+        {
+          "text": "CNC(全国コーヒー評議会)は1981年設立",
+          "status": "unverified",
+          "sourceIds": [
+            "mapa-cafe-no-brasil"
+          ],
+          "quote": "As entidades privadas são representadas pelo Conselho Nacional do Café - CNC, que representa os produtores e cooperativas do setor cafeeiro",
+          "location": "MAPA 'Café no Brasil'",
+          "note": "MAPAはCNCを『生産者と協同組合を代表する団体』と記述(確認済み)。設立年1981は、CNA(403)・CNC公式(406)が取得失敗のため未確認。"
+        },
+        {
+          "text": "CecaféやCNCは輸出許可・格付けの権限を持たず、統計収集や業界代表が主な役割",
+          "status": "unverified",
+          "sourceIds": [
+            "cecafe-relatorio-fev-2026"
+          ],
+          "quote": "Fundado em 1999, o Cecafé representa e promove ativamente o desenvolvimento do setor exportador de café nos âmbitos nacional e internacional.",
+          "location": "Cecafé 月次レポート",
+          "note": "『代表・振興する』は確認。『権限を持たない』『統計収集が主な役割』を述べる公式資料は未確認(Cecaféが輸出統計を公表している事実のみ)。"
+        },
+        {
+          "text": "実際の格付け権限はMAPAが持つ",
+          "status": "verified",
+          "sourceIds": [
+            "mapa-in-8-2003"
+          ],
+          "quote": "O Certificado de Classificação será emitido pelo Ministério da Agricultura, Pecuária e Abastecimento ou pelas pessoas jurídicas devidamente credenciadas pelo mesmo",
+          "location": "IN 8/2003 Anexo, 13.1",
+          "note": "分類証明書の発行主体はMAPAまたはMAPAが認定した法人。"
+        }
+      ],
+      "suggestedText": "Cecafé(Conselho dos Exportadores de Café do Brasil)は1999年に設立され、コーヒー輸出部門を代表し振興する団体(Cecafé)。CNC(Conselho Nacional do Café)は、生産者と協同組合を代表する団体(MAPA)。生豆の分類証明書は、MAPAまたはMAPAが認定した法人が発行する(IN 8/2003)。",
+      "note": "英訳(src/data/en/originGuide1.js)は日本語と同じ主張で、主張の追加・欠落は見つからなかった。"
+    },
+    "origin:ブラジル:sub:セラード(セラード・ミネイロ)": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "コーヒーで初の原産地呼称(DO)を取得した(2013年)",
+          "status": "verified",
+          "sourceIds": [
+            "embrapa-cerrado-do",
+            "embrapa-igs-cafe"
+          ],
+          "quote": "conquistou, recentemente, a primeira DO para café no país.",
+          "location": "Embrapa 'Cerrado Mineiro é destaque…' 冒頭",
+          "note": "DOへの切り替えは2013年(embrapa-igs-cafe)。記述の追加ではなく、suggestedText用に原文どおりの範囲で分けた主張。"
+        },
+        {
+          "text": "長い乾期と低肥沃度の土壌に、土壌改良・施肥・灌漑などの技術が使われている",
+          "status": "verified",
+          "sourceIds": [
+            "embrapa-cerrado-do"
+          ],
+          "quote": "correção do solo, adubação, irrigação e cultivares",
+          "location": "Embrapa 'Cerrado Mineiro é destaque…' 本文",
+          "note": "suggestedText用に原文どおりの範囲で分けた主張。"
+        },
+        {
+          "text": "標高800〜1,300m、terra roxa",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式資料では確認できず。Embrapaは土壌を 'solos de baixa fertilidade' と記述。"
+        },
+        {
+          "text": "ブラジル初のDO",
+          "status": "unverified",
+          "sourceIds": [
+            "embrapa-cerrado-do"
+          ],
+          "quote": "conquistou, recentemente, a primeira DO para café no país.",
+          "location": "Embrapa 'Cerrado Mineiro é destaque…' 冒頭",
+          "note": "確認できるのは『コーヒーで初のDO』(farmStructureのnote参照)。"
+        },
+        {
+          "text": "高めの酸・強い甘み、ダークチョコ・キャラメル",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "味の描写。公式資料では確認できず。"
+        },
+        {
+          "text": "大規模・機械化・灌漑",
+          "status": "unverified",
+          "sourceIds": [
+            "embrapa-cerrado-do"
+          ],
+          "quote": "correção do solo, adubação, irrigação e cultivares",
+          "location": "Embrapa 'Cerrado Mineiro é destaque…'",
+          "note": "灌漑を含む技術の利用は確認。『大規模・機械化』は未確認。"
+        }
+      ],
+      "suggestedText": "Cerrado Mineiroは、コーヒーで初のDOとなった産地(2013年。Embrapa)。長い乾期と低肥沃度の土壌に対し、土壌改良・施肥・灌漑などの技術が使われている(Embrapa)。",
+      "note": "英訳(src/data/en/originGuide1.js)は日本語と同じ主張で、主張の追加・欠落は見つからなかった。"
+    },
+    "origin:ブラジル:sub:モジアナ(アルタ・モジアナ)": {
+      "status": "unverified",
+      "claims": [
+        {
+          "text": "標高900〜1,100m、深い赤黄色ラトソル、起伏のある地形",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式資料では確認できず。"
+        },
+        {
+          "text": "非常に甘くバランスの良いカップ",
+          "status": "unverified",
+          "sourceIds": [
+            "embrapa-cafe-endereco"
+          ],
+          "quote": "Os cafés são caracterizados pelo corpo cremoso aveludado, acidez média equilibrada e retrogosto prolongado com doçura de caramelo e notas de chocolate amargo.",
+          "location": "Embrapa 'Café com endereço e qualidade' Alta Mogiana の項",
+          "note": "Embrapaの記述(corpo cremoso、acidez média equilibrada、doçura de caramelo)は近いが、『非常に甘い』とは書かない。"
+        }
+      ],
+      "suggestedText": "",
+      "note": "Alta MogianaはEmbrapaでサンパウロ州北東部の産地で、2013年に地理的表示(IP)を取得したと記述。英訳(src/data/en/originGuide1.js)は日本語と同じ主張で、主張の追加・欠落は見つからなかった。"
+    },
+    "origin:ブラジル:sub:スル・デ・ミナス": {
+      "status": "unverified",
+      "claims": [
+        {
+          "text": "最大1,380m",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式資料では確認できず。"
+        },
+        {
+          "text": "ブラジル最大のアラビカ産地(国内アラビカの約3割)",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式資料では確認できず。Embrapaは Sul de Minas を主要アラビカ産地の一つとして挙げる(regions参照)。"
+        },
+        {
+          "text": "チョコレート様で丸みのあるバランス型",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "味の描写。公式資料では確認できず。"
+        }
+      ],
+      "suggestedText": "",
+      "note": "英訳(src/data/en/originGuide1.js)は日本語と同じ主張で、主張の追加・欠落は見つからなかった。"
+    },
+    "fact:ブラジルの「タイプ1」は実在しない": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "ブラジルの欠点数グレードはNo.2〜8である",
+          "status": "verified",
+          "sourceIds": [
+            "mapa-in-8-2003"
+          ],
+          "quote": "360 8 200 > 360 Fora de Tipo",
+          "location": "IN 8/2003 Anexo, 16.3 Tabela 3",
+          "note": "表にあるのはTipo 2〜8とFora de Tipo。Tipo 1は表にも条文にもない。"
+        },
+        {
+          "text": "最上位表記の『No.1』が理論上の基準として存在する",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "IN 8/2003にTipo 1の定義・言及はない。『理論上の基準として存在』を裏付ける公式資料は見つからなかった(出典は内部メモ docs/coffee-processing-and-grades.md)。"
+        },
+        {
+          "text": "実際の流通ではNo.2が事実上の最高等級として扱われる",
+          "status": "verified",
+          "sourceIds": [
+            "mapa-in-8-2003"
+          ],
+          "quote": "4 2 + 100 46 5 50",
+          "location": "IN 8/2003 Anexo, 16.3 Tabela 3",
+          "note": "規則上、表の最上位はTipo 2(欠点4点)。『実際の流通で』の部分は未確認(規則上の記述のみ)。"
+        }
+      ],
+      "suggestedText": "ブラジルの生豆の欠点数によるタイプは、MAPAの規則(IN 8/2003)の表ではTipo 2からTipo 8までで、Tipo 1は定められていない。Tipo 2は300gの見本中4欠点、Tipo 8は360欠点で、360を超えるとFora de Tipo(規格外)になる。",
+      "note": "key名は src/data/discoveryFacts.js の title による。産地ガイドの範囲外だが、依頼の指定で確認した。同じ出典欄の別の豆知識『ブラジルは世界初の格付け国』(1836年)は今回確認していない。"
+    }
+  }
+}

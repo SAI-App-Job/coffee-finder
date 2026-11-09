@@ -1,0 +1,1395 @@
+[
+ {
+  "key": "origin:エルサルバドル:tagline",
+  "content": {
+   "text": "栽培品種ではブルボンが62%を占める、エルサルバドル(ICO資料、2015/16年時点)。"
+  },
+  "claims": [
+   {
+    "index": 0,
+    "text": "ブルボン種が栽培品種の大きな割合(ブルボン62%、パカス31%、パカマラ2%、その他5%)を占める",
+    "quote": "VARIETIES Bourbon Pacas Pacamara Otros 62% 31% 2% 5%",
+    "location": "スライド10 VARIETIES",
+    "sourceIds": [
+     "ico-el-salvador-coffee-profile-2016"
+    ]
+   }
+  ],
+  "sources": {
+   "ico-el-salvador-coffee-profile-2016": {
+    "title": "El Salvador Coffee Profile (Consejo Salvadoreño del Café, ICO 2015-16 presentation)",
+    "org": "International Coffee Organization(提出:Consejo Salvadoreño del Café)",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": "curl+pypdfで全36スライドの本文を抽出(図表の一部は画像で本文なし)。2015/16年時点のデータ。"
+   }
+  }
+ },
+ {
+  "key": "origin:エルサルバドル:terroir",
+  "content": {
+   "text": "国内の標高区分はSHG(1,201m超)、HG(801〜1,200m)、CS(800m以下)で、格付けは標高のほか精選方法と欠点数の3基準による(RTS 67.08.01:18。WTO通報版を確認)。アパネカ・イラマテペックの標高は500〜2,365m(ICO資料、2015/16年時点)。"
+  },
+  "claims": [
+   {
+    "index": 0,
+    "text": "国内の標高区分はSHG(1,201m超)、HG(801〜1,200m)、CS(800m以下)",
+    "quote": "a) café producido hasta 800 m.s.n.m.; Central Estándar o CS; b) café producido de 801 a 1 200 m.s.n.m.; Media Altura o HG; c) café producido a más de 1 201 m.s.n.m.; Estricta Altura o SHG.",
+    "location": "5.1.1 Altitud",
+    "sourceIds": [
+     "osartec-rts-67-08-01-18-wto"
+    ]
+   },
+   {
+    "index": 1,
+    "text": "格付けは標高『基準』(RTSの分類は標高・精選方法・欠点数の3基準)",
+    "quote": "La clasificación y designación se basan en tres criterios: altitud, método de beneficiado y número de imperfecciones.",
+    "location": "5.1",
+    "sourceIds": [
+     "osartec-rts-67-08-01-18-wto"
+    ]
+   },
+   {
+    "index": 2,
+    "text": "アパネカ・イラマテペックは標高500〜2,365mで、6山系中、最高標高(上限)の産地",
+    "quote": "Apaneca-Ilamatepec 64.2% Borbón 25.6% Pacas 10.2% Mixture of Bourbon, Pacas and others From 500 to 2,365 m a.s.l.",
+    "location": "スライド11",
+    "sourceIds": [
+     "ico-el-salvador-coffee-profile-2016"
+    ]
+   }
+  ],
+  "sources": {
+   "osartec-rts-67-08-01-18-wto": {
+    "title": "RTS 67.08.01:18 Café. Café verde (café oro). Requisitos de calidad",
+    "org": "OSARTEC(Organismo Salvadoreño de Reglamentación Técnica)",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": "WTO SPS通報(2018年)に添付された文書をcurl+pypdfで全11ページ通読。通報時点の文書であり、官報で公布された最終版と同一かは未確認(osartec.gob.svは522エラーで取得失敗)。"
+   },
+   "ico-el-salvador-coffee-profile-2016": {
+    "title": "El Salvador Coffee Profile (Consejo Salvadoreño del Café, ICO 2015-16 presentation)",
+    "org": "International Coffee Organization(提出:Consejo Salvadoreño del Café)",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": "curl+pypdfで全36スライドの本文を抽出(図表の一部は画像で本文なし)。2015/16年時点のデータ。"
+   }
+  }
+ },
+ {
+  "key": "origin:エルサルバドル:varietiesDetail",
+  "content": {
+   "text": "ブルボン種が栽培品種の62%(約6割)を占める(ICO資料、2015/16年時点)。パカスはブルボンの自然変異で、1949年にサンタアナ地方で発見された(WCR)。パカマラはパカスとマラゴジッペの交配種で、国内の研究機関ISIC(Salvadoran Institute of Coffee Research)が系統選抜を行った(WCR)。2012〜13年のさび病の被害を受け、さび病に耐性のあるアラビカ種の作付けが増えている(WCR)。"
+  },
+  "claims": [
+   {
+    "index": 0,
+    "text": "ブルボン種が過半(約6割)を占める",
+    "quote": "VARIETIES Bourbon Pacas Pacamara Otros 62% 31% 2% 5%",
+    "location": "スライド10",
+    "sourceIds": [
+     "ico-el-salvador-coffee-profile-2016"
+    ]
+   },
+   {
+    "index": 1,
+    "text": "パカスはブルボンの矮性の自然変異で、国内で1949年に発見された",
+    "quote": "Pacas is a natural mutation of Bourbon … The variety was discovered in 1949 on a farm owned by the Pacas family in the Santa Ana region of El Salvador.",
+    "location": "WCR Varieties Catalog: Pacas / History",
+    "sourceIds": [
+     "wcr-variety-pacas"
+    ]
+   },
+   {
+    "index": 2,
+    "text": "パカマラはパカス×マラゴジッペの交配種で、国内の研究機関(ISIC)で選抜された",
+    "quote": "Originated from a cross between Pacas and Maragogipe. An incomplete pedigree selection was conducted by the Salvadoran Institute of Coffee Research (ISIC).",
+    "location": "WCR Varieties Catalog: Pacamara / History",
+    "sourceIds": [
+     "wcr-variety-pacamara"
+    ]
+   },
+   {
+    "index": 3,
+    "text": "近年、さび病対策として耐病性品種を導入している",
+    "quote": "rust-resistant arabica varieties are increasingly planted following the 2012–13 leaf rust crisis",
+    "location": "WCR El Salvador 概要",
+    "sourceIds": [
+     "wcr-country-el-salvador"
+    ]
+   }
+  ],
+  "sources": {
+   "ico-el-salvador-coffee-profile-2016": {
+    "title": "El Salvador Coffee Profile (Consejo Salvadoreño del Café, ICO 2015-16 presentation)",
+    "org": "International Coffee Organization(提出:Consejo Salvadoreño del Café)",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": "curl+pypdfで全36スライドの本文を抽出(図表の一部は画像で本文なし)。2015/16年時点のデータ。"
+   },
+   "wcr-variety-pacas": {
+    "title": "Varieties Catalog: Pacas",
+    "org": "World Coffee Research",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": "curlでHTML取得。"
+   },
+   "wcr-variety-pacamara": {
+    "title": "Varieties Catalog: Pacamara",
+    "org": "World Coffee Research",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": "curlでHTML取得。"
+   },
+   "wcr-country-el-salvador": {
+    "title": "World Coffee Research | El Salvador",
+    "org": "World Coffee Research",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": "curlでHTML取得。"
+   }
+  }
+ },
+ {
+  "key": "origin:グアテマラ:farmStructure",
+  "content": {
+   "text": "グアテマラのコーヒー生産者の97%は小規模生産者で、生産量の44%を占める(USDA FAS、2025年)。Anacaféは1960年設立で、土壌・植物・水の分析(Analab)やカッピング(官能評価)の運営などを行っている。Anacaféは国内のコーヒーを8つの産地に区分している(2020年11月20日のプレスリリース)。"
+  },
+  "claims": [
+   {
+    "index": 0,
+    "text": "小規模生産者が全生産者の大半を占める構造",
+    "quote": "Smallholder farmers form the backbone of Guatemala’s coffee sector, accounting for 97 percent of all coffee producers and contributing 44 percent of the nation’s total coffee output.",
+    "location": "USDA FAS GT2025-0007(農家構成の段落)",
+    "sourceIds": [
+     "usda-fas-gt-coffee-annual-2025"
+    ]
+   },
+   {
+    "index": 1,
+    "text": "Anacaféは1960年設立",
+    "quote": "fundada en 1960 y regulada por la Ley del Café, decreto 19-69",
+    "location": "FAQ 1.",
+    "sourceIds": [
+     "anacafe-faq"
+    ]
+   },
+   {
+    "index": 2,
+    "text": "Anacaféは土壌・水・葉(植物)の分析を提供する",
+    "quote": "Análisis de Suelos, Plantas y Aguas de Anacafé -Analab-",
+    "location": "Analab ページ冒頭",
+    "sourceIds": [
+     "anacafe-analab"
+    ]
+   },
+   {
+    "index": 3,
+    "text": "Anacaféは官能評価(カッピング)の技術支援・サービスを提供する",
+    "quote": "organizar cataciones, arbitrajes, registros, estadísticas",
+    "location": "Laboratorio de Catación ページ",
+    "sourceIds": [
+     "anacafe-catacion"
+    ]
+   },
+   {
+    "index": 4,
+    "text": "国内を8つの公式産地に定義した",
+    "quote": "Con esta estrategia se establecieron los 8 diferentes orígenes con perfiles de taza únicos",
+    "location": "プレスリリース 2020-11-20",
+    "sourceIds": [
+     "anacafe-microregionalizacion"
+    ]
+   }
+  ],
+  "sources": {
+   "usda-fas-gt-coffee-annual-2025": {
+    "title": "Guatemala: Coffee Annual (GT2025-0007, 2025-04-30)",
+    "org": "USDA Foreign Agricultural Service",
+    "kind": "primary",
+    "accessed": "2026-11-09",
+    "note": "報告ページ: https://www.fas.usda.gov/data/guatemala-coffee-annual-10 (curlは403、PDFはAPI経由で取得)。"
+   },
+   "anacafe-faq": {
+    "title": "Preguntas Frecuentes",
+    "org": "Asociación Nacional del Café (Anacafé)",
+    "kind": "primary",
+    "accessed": "2026-11-09",
+    "note": ""
+   },
+   "anacafe-analab": {
+    "title": "Analab(土壌・植物・水の分析)",
+    "org": "Anacafé",
+    "kind": "primary",
+    "accessed": "2026-11-09",
+    "note": ""
+   },
+   "anacafe-catacion": {
+    "title": "Laboratorio de Catación",
+    "org": "Anacafé",
+    "kind": "primary",
+    "accessed": "2026-11-09",
+    "note": ""
+   },
+   "anacafe-microregionalizacion": {
+    "title": "Estrategia de Microregionalización 'A Rainbow of Choices'(2020-11-20)",
+    "org": "Anacafé",
+    "kind": "primary",
+    "accessed": "2026-11-09",
+    "note": ""
+   }
+  }
+ },
+ {
+  "key": "origin:グアテマラ:gradeSystem",
+  "content": {
+   "text": "Anacaféの標高図(Coffee types)では、グアテマラのコーヒーの等級は標高で区分され、SHBが標高4,500フィート(1,370m)超、Semi-Hard / Hardが3,500〜4,500フィート(1,066〜1,370m)、Extra Prime / EPWが2,500〜3,500フィート(764〜1,066m)とされる。Anacaféの2019年品種モニタリング報告は、品種の品質は栽培地の標高と直接関係すると述べる。"
+  },
+  "claims": [
+   {
+    "index": 0,
+    "text": "等級は標高によって区分される",
+    "quote": "SHB +4500 ft / +1370 m || Semi-Hard / Hard 3500 - 4500 ft / 1066 - 1370 m || Extra Prime / EPW 2500 - 3500 ft / 764 - 1066 m",
+    "location": "Coffee types(Altitude 図)",
+    "sourceIds": [
+     "anacafe-gc-altitudes"
+    ]
+   },
+   {
+    "index": 1,
+    "text": "標高が高いほど品質が高いとされる",
+    "quote": "La calidad de las variedades se relaciona directamente con la altura sobre el nivel del mar (msnm) en la que la unidad productiva se encuentra ubicada.",
+    "location": "Informe sobre Monitoreo Nacional de Variedades(Conclusiones 1.)",
+    "sourceIds": [
+     "anacafe-boletin-monitoreo-variedades-2019"
+    ]
+   }
+  ],
+  "sources": {
+   "anacafe-gc-altitudes": {
+    "title": "Coffee types(標高別の等級図 types_altitudes.png)",
+    "org": "Anacafé(Guatemalan Coffees)",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": "画像(図/インフォグラフィック)。画像を直接見て内容を確認し、quote はOCR文字起こしで機械照合した。画像URL: https://www.guatemalancoffees.com/media/1095/types_altitudes.png。ページ下部の著作表示は Guatemalan National Coffee Association。"
+   },
+   "anacafe-boletin-monitoreo-variedades-2019": {
+    "title": "Informe sobre Monitoreo Nacional de Variedades (Boletín CEDICAFÉ, agosto 2019)",
+    "org": "Anacafé / Cedicafé",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": ""
+   }
+  }
+ },
+ {
+  "key": "origin:グアテマラ:history",
+  "content": {
+   "text": "Anacaféの年表によると、18世紀(1700年の項)にイエズス会の司祭が、植民都市アンティグアの修道院の庭の観賞用植物として、最初のコーヒーの木を持ち込んだ。1800年の項には、バッタの大量発生が、経済が依存していた2つの輸出作物の一つである藍(インディゴ)の農園を壊滅させたと記されている。"
+  },
+  "claims": [
+   {
+    "index": 0,
+    "text": "18世紀にイエズス会の司祭がアンティグアの修道院の庭の観賞用植物としてコーヒーの木を持ち込んだのが最初",
+    "quote": "Sacerdotes jesuitas traen las primeras matas de café a la ciudad colonial de Antigua, como plantas ornamentales para los jardines de su monasterio.",
+    "location": "Historia del café(1700『Un inicio monegasco』)",
+    "sourceIds": [
+     "anacafe-historia-infografia"
+    ]
+   },
+   {
+    "index": 1,
+    "text": "当初は観賞用として栽培された",
+    "quote": "como plantas ornamentales para los jardines de su monasterio.",
+    "location": "Historia del café(1700)",
+    "sourceIds": [
+     "anacafe-historia-infografia"
+    ]
+   },
+   {
+    "index": 2,
+    "text": "19世紀初頭にバッタの大量発生で藍(インディゴ)農園が打撃を受けた",
+    "quote": "La plaga de langosta devasta las plantaciones de anil, arrasando con uno de los dos cultivos de exportacion de los cuales, la economia dependia",
+    "location": "Historia del café(1800『El año de la plaga』)",
+    "sourceIds": [
+     "anacafe-historia-infografia"
+    ]
+   }
+  ],
+  "sources": {
+   "anacafe-historia-infografia": {
+    "title": "Historia del café(インフォグラフィック Historia-del-cafe-Guatemala-2020.png)",
+    "org": "Anacafé",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": "画像(図/インフォグラフィック)。画像を直接見て内容を確認し、quote はOCR文字起こしで機械照合した。画像URL: http://www.anacafe.org/uploads/image/132f80e93b734016a2b996437f930ee6/Historia-del-cafe-Guatemala-2020.png"
+   }
+  }
+ },
+ {
+  "key": "origin:グアテマラ:sub:アンティグア",
+  "content": {
+   "detail": "アグア、フエゴ、アカテナンゴの3つの火山に囲まれた谷。Anacaféはカップを、上品でバランスが良く、豊かな香りと非常に甘い味わいと紹介している。"
+  },
+  "claims": [
+   {
+    "index": 0,
+    "text": "Agua・Fuego・Acatenangoの3火山に囲まれる",
+    "quote": "This valley is surrounded by three volcanoes: Agua, Fuego, and Acatenango.",
+    "location": "Antigua Coffee 紹介本文",
+    "sourceIds": [
+     "anacafe-gc-regiones"
+    ]
+   },
+   {
+    "index": 1,
+    "text": "甘い味わい",
+    "quote": "Elegant and well balanced with a rich aroma and very sweet taste.",
+    "location": "Antigua in the cup",
+    "sourceIds": [
+     "anacafe-gc-regiones"
+    ]
+   }
+  ],
+  "sources": {
+   "anacafe-gc-regiones": {
+    "title": "Regions and profiles(8産地の紹介8ページ)",
+    "org": "Anacafé(Guatemalan Coffees)",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": "各産地ページ(/antigua-coffee/ など8ページ)の本文と Region profile(気温・降雨・湿度・標高。単位表記は標高が ft、Antigua のみ単位表記なし)を取得。"
+   }
+  }
+ },
+ {
+  "key": "origin:グアテマラ:sub:ウエウエテナンゴ",
+  "content": {
+   "detail": "Anacaféの紹介では、栽培標高は最大2,000m(6,500フィート)。メキシコのテワンテペク平原から山地に吹き込む乾いた熱風により、霜から守られている。カップは繊細で強い酸味、フルボディ、心地よいワインのような風味とされる。"
+  },
+  "claims": [
+   {
+    "index": 0,
+    "text": "栽培標高は最大2,000m",
+    "quote": "Highland Huehue to be cultivated up to 6,500 feet (2,000 meters)",
+    "location": "Highland Huehue 紹介本文",
+    "sourceIds": [
+     "anacafe-gc-regiones"
+    ]
+   },
+   {
+    "index": 1,
+    "text": "メキシコ側から吹く暖かい風が霜を防ぐ",
+    "quote": "Thanks to the dry, hot winds that blow into the mountains from Mexico’s Tehuantepec plain, the region is protected from frost",
+    "location": "Highland Huehue 紹介本文",
+    "sourceIds": [
+     "anacafe-gc-regiones"
+    ]
+   },
+   {
+    "index": 2,
+    "text": "強い酸、フルボディ、ワイン様",
+    "quote": "Fine, intense acidity with a full body and pleasant wine notes.",
+    "location": "Highland Huehue in the cup",
+    "sourceIds": [
+     "anacafe-gc-regiones"
+    ]
+   }
+  ],
+  "sources": {
+   "anacafe-gc-regiones": {
+    "title": "Regions and profiles(8産地の紹介8ページ)",
+    "org": "Anacafé(Guatemalan Coffees)",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": "各産地ページ(/antigua-coffee/ など8ページ)の本文と Region profile(気温・降雨・湿度・標高。単位表記は標高が ft、Antigua のみ単位表記なし)を取得。"
+   }
+  }
+ },
+ {
+  "key": "origin:グアテマラ:tagline",
+  "content": {
+   "text": "標高の高いグアテマラのコーヒーは、心地よい酸味と豊かなコク、繊細な甘みを備える(Anacafé)。"
+  },
+  "claims": [
+   {
+    "index": 0,
+    "text": "標高の高いグアテマラのコーヒーは、心地よい酸味と豊かなコク(ボディ)、繊細な甘みを備える",
+    "quote": "Todos los cafés de altura de Guatemala desarrollan un delicioso aroma, acidez agradable, mucho cuerpo y dulzura delicada",
+    "location": "Café de Guatemala ページ本文",
+    "sourceIds": [
+     "anacafe-cafe-de-guatemala"
+    ]
+   }
+  ],
+  "sources": {
+   "anacafe-cafe-de-guatemala": {
+    "title": "Café de Guatemala (Patrimonio Intangible de la Nación)",
+    "org": "Anacafé",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": ""
+   }
+  }
+ },
+ {
+  "key": "origin:グアテマラ:varietiesDetail",
+  "content": {
+   "text": "Anacaféの品種ガイド(2020)は、栽培されている品種として、カトゥーラ、カトゥアイ、パチェ、パチェ・コリス、ブルボン、ムンドノーボ、パカマラ、ティピカなどを挙げている。パチェは1949年にグアテマラのサンタロサで見つかったティピカの変異種。サルチモールは樹高が低く、収量が高く、低〜中標高地に適している(同ガイド)。"
+  },
+  "claims": [
+   {
+    "index": 0,
+    "text": "カトゥアイ、ティピカ、パチェも広く栽培されている",
+    "quote": "las cuales son: Caturra, Catuaí, Pache, Pache Colís, Bourbón, Mundo Novo, Pacamara, Típica entre otras.",
+    "location": "Guía de variedades 2020 p.4付近",
+    "sourceIds": [
+     "anacafe-guia-variedades-2020"
+    ]
+   },
+   {
+    "index": 1,
+    "text": "パチェは1940年代にグアテマラで発見されたティピカの自然変異",
+    "quote": "Es una mutación de la variedad Típica, encontrada en Santa Rosa, Guatemala, en 1949.",
+    "location": "Guía de variedades 2020 p.12(Pache Común の項)",
+    "sourceIds": [
+     "anacafe-guia-variedades-2020"
+    ]
+   },
+   {
+    "index": 2,
+    "text": "サルチモールは高収量のハイブリッド品種",
+    "quote": "Los Sarchimores, son plantas de porte bajo, brote verde o bronce, vigor y producción alta, bien adaptado en zonas de baja y media altitud, y buena calidad de taza.",
+    "location": "Guía de variedades 2020 B. Variedades de Sarchimor 付近",
+    "sourceIds": [
+     "anacafe-guia-variedades-2020"
+    ]
+   }
+  ],
+  "sources": {
+   "anacafe-guia-variedades-2020": {
+    "title": "Guía de variedades de café Anacafé 2020",
+    "org": "Anacafé",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": "PDFの抽出順は図版キャプションの都合で見出しと本文がずれる箇所がある。"
+   }
+  }
+ },
+ {
+  "key": "origin:ケニア:farmStructure",
+  "content": {
+   "text": "農家は収穫後、摘んだ果実を所属する組合(primary society)に届け、加工される(ICOケニア・プロファイル)。ナイロビ・コーヒー・エクスチェンジ(NCE)の競売は、通常、火曜の午前に取引フロアで開かれる(NCE競売カレンダー)。ケニアのコーヒーは、同取引所が運営する中央競売システムを通じて販売される(ICO)。"
+  },
+  "claims": [
+   {
+    "index": 0,
+    "text": "小規模農家は摘んだ果実を所属する組合(primary society)に届けて加工される",
+    "quote": "After harvest, farmers deliver their cherries to their primary societies for processing.",
+    "location": "ICO Coffee Profile Kenya 概要",
+    "sourceIds": [
+     "ico-profile-kenya-2019"
+    ]
+   },
+   {
+    "index": 1,
+    "text": "ナイロビ・コーヒー・エクスチェンジ(NCE)の競売は毎週火曜に開かれる",
+    "quote": "Times follow each event's schedule (typically Tuesday mornings at the Trading Floor).",
+    "location": "NCE Auction Calendar",
+    "sourceIds": [
+     "nce-auction-calendar"
+    ]
+   },
+   {
+    "index": 2,
+    "text": "NCEの中央競売はケニアの主要な販売経路である",
+    "quote": "In Kenya coffee is marketed through a central auction system managed by the Nairobi",
+    "location": "ICO Coffee Profile Kenya 概要",
+    "sourceIds": [
+     "ico-profile-kenya-2019"
+    ]
+   }
+  ],
+  "sources": {
+   "ico-profile-kenya-2019": {
+    "title": "ICO Coffee Profile: Kenya (ICC-124-7)",
+    "org": "International Coffee Organization (ICO)",
+    "kind": "primary",
+    "accessed": "2026-11-09",
+    "note": "国のプロファイルはケニア政府が作成してICOに提出した文書(2018/19年度)。PDF全文をpypdfで抽出。"
+   },
+   "nce-auction-calendar": {
+    "title": "Auction Calendar",
+    "org": "Nairobi Coffee Exchange",
+    "kind": "primary",
+    "accessed": "2026-11-09",
+    "note": ""
+   }
+  }
+ },
+ {
+  "key": "origin:ケニア:gradeSystem",
+  "content": {
+   "text": "ケニアのコーヒー(一般)規則2019(Legal Notice No. 102)の第5付表(ケニア標準)では、AAは平豆でスクリーン21を通過し18に残る大きさ(7.2mm)とされる。ただし、大きさ・形による格付けは、コーヒーの品質のおおよその目安にすぎない(EAS 130:1999)。"
+  },
+  "claims": [
+   {
+    "index": 0,
+    "text": "大粒から順にAA・AB・C等の記号で表記する(AAは平豆でスクリーン21を通過し18に残る7.2mm、ABは18を通過し16に残る6.35mm)",
+    "quote": "AA Flat beans Through 21 retained on 18 (7.2 mm)",
+    "location": "Crops (Coffee) (General) Regulations 2019, Fifth Schedule A. Kenya Standards",
+    "sourceIds": [
+     "ke-gazette-ln102-2019"
+    ]
+   },
+   {
+    "index": 1,
+    "text": "AAは大粒の等級だが、粒の大きさは必ずしも風味の良さを保証しない",
+    "quote": "Grading by size and shape is only a fair estimate of coffee quality.",
+    "location": "EAS 130:1999 5.3 Grading by cup quality",
+    "sourceIds": [
+     "eas130-1999"
+    ]
+   }
+  ],
+  "sources": {
+   "ke-gazette-ln102-2019": {
+    "title": "The Crops (Coffee) (General) Regulations, 2019 (Legal Notice No. 102, Kenya Gazette Supplement No. 100, 1 July 2019)",
+    "org": "Government of Kenya",
+    "kind": "primary",
+    "accessed": "2026-11-09",
+    "note": "PDF全文をpypdfで抽出。"
+   },
+   "eas130-1999": {
+    "title": "EAS 130:1999 Green coffee beans - Specification",
+    "org": "East African Community (EAC)",
+    "kind": "primary",
+    "accessed": "2026-11-09",
+    "note": "law.resource.org掲載のEAC規格全文(HTMLをcurlで取得)。"
+   }
+  }
+ },
+ {
+  "key": "origin:ケニア:harvestSeason",
+  "content": {
+   "text": "年2回の収穫期があり、4〜6月と10〜12月(ICOケニア・プロファイル)。"
+  },
+  "claims": [
+   {
+    "index": 0,
+    "text": "収穫期の一つは10〜12月",
+    "quote": "with the first crop from April to June and the second from October to December",
+    "location": "ICO Coffee Profile Kenya 2.3 Coffee season",
+    "sourceIds": [
+     "ico-profile-kenya-2019"
+    ]
+   }
+  ],
+  "sources": {
+   "ico-profile-kenya-2019": {
+    "title": "ICO Coffee Profile: Kenya (ICC-124-7)",
+    "org": "International Coffee Organization (ICO)",
+    "kind": "primary",
+    "accessed": "2026-11-09",
+    "note": "国のプロファイルはケニア政府が作成してICOに提出した文書(2018/19年度)。PDF全文をpypdfで抽出。"
+   }
+  }
+ },
+ {
+  "key": "origin:ケニア:history",
+  "content": {
+   "text": "1893年、フランス系宣教師(聖霊修道会/Spiritans)がタイタヒルズのブラ伝道所に、レユニオン島由来のブルボン種の種子を植えたのが、ケニアでのコーヒー栽培の始まり(AFA、WCR)。ブラの苗は1899年にナイロビ近郊の聖オースティン伝道所へ運ばれ、そこから栽培を望む入植者に種子が配られた(WCR)。ケニア農業畜産開発省の戦略文書(2024年草案)は、栽培が1930年代まで白人入植者に限られていたと記している。"
+  },
+  "claims": [
+   {
+    "index": 0,
+    "text": "1893年、ケニアのコーヒーはタイタヒルズのブラで初めて植えられた",
+    "quote": "Coffee was first planted in Kenya at Bura in Taita Hills in 1893",
+    "location": "AFA History - Background",
+    "sourceIds": [
+     "afa-history-coffee"
+    ]
+   },
+   {
+    "index": 1,
+    "text": "それを行ったのはフランス系宣教師(聖霊修道会/Spiritans)で、レユニオン島由来のブルボン種の種子を植えた",
+    "quote": "French missionaries known as Spiritans established a mission in 1893 at Bura (Taita Hills, Kenya), in which Bourbon coffee seeds originating from La Réunion island were planted.",
+    "location": "WCR SL34 History",
+    "sourceIds": [
+     "wcr-sl34"
+    ]
+   },
+   {
+    "index": 2,
+    "text": "ブラの苗はナイロビ近郊の聖オースティン伝道所に運ばれ、そこから栽培を望む入植者に種子が配られた(1899年)",
+    "quote": "The seedlings from Bura were brought to another French Mission in Saint Austin (near Nairobi) in 1899, and from there seeds were distributed to settlers willing to grow coffee.",
+    "location": "WCR SL34 History",
+    "sourceIds": [
+     "wcr-sl34"
+    ]
+   },
+   {
+    "index": 3,
+    "text": "英領時代、栽培は白人入植者に限られていた",
+    "quote": "Coffee was first planted in Kenya in 1893 in Taita Hills an d was reserved for white settlers until 1930s",
+    "location": "Coffee Development and Marketing Strategy, 2章 背景",
+    "sourceIds": [
+     "kilimo-cdms-2024"
+    ]
+   }
+  ],
+  "sources": {
+   "afa-history-coffee": {
+    "title": "History - Coffee Directorate",
+    "org": "Agriculture and Food Authority (AFA), Kenya",
+    "kind": "primary",
+    "accessed": "2026-11-09",
+    "note": ""
+   },
+   "wcr-sl34": {
+    "title": "SL34 (World Coffee Research Arabica Variety Catalog)",
+    "org": "World Coffee Research",
+    "kind": "primary",
+    "accessed": "2026-11-09",
+    "note": ""
+   },
+   "kilimo-cdms-2024": {
+    "title": "Coffee Development and Marketing Strategy (Final Draft, 27 Jan 2024)",
+    "org": "Ministry of Agriculture and Livestock Development, Kenya",
+    "kind": "primary",
+    "accessed": "2026-11-09",
+    "note": "「Final Draft」と題された政府文書(PDF全文をpypdfで抽出)。"
+   }
+  }
+ },
+ {
+  "key": "origin:ケニア:officialBody",
+  "content": {
+   "text": "AFA Coffee Directorateは、農業食糧庁(AFA)の下にある部局。"
+  },
+  "claims": [
+   {
+    "index": 0,
+    "text": "AFA Coffee Directorateは農業食糧庁(AFA)の下にある部局である",
+    "quote": "Coffee Directorate is a Directorate under the Agriculture and Food Authority (AFA) established under the Agriculture and Food Authority Act of 2013.",
+    "location": "AFA Coffee Directorate Home",
+    "sourceIds": [
+     "afa-coffee-directorate-home"
+    ]
+   }
+  ],
+  "sources": {
+   "afa-coffee-directorate-home": {
+    "title": "Home - Coffee Directorate",
+    "org": "Agriculture and Food Authority (AFA), Kenya",
+    "kind": "primary",
+    "accessed": "2026-11-09",
+    "note": ""
+   }
+  }
+ },
+ {
+  "key": "origin:ケニア:sub:キリニャガ",
+  "content": {
+   "detail": "キリニャガ県は、ケニアの主要なコーヒー生産県の一つで、2022/23年度の果実生産量はキアンブに次ぐ2位(AFA)。"
+  },
+  "claims": [
+   {
+    "index": 0,
+    "text": "キリニャガ県はケニアの主要なコーヒー生産県の一つで、2022/23年度の果実生産量は2位",
+    "quote": "The three counties that led in the production of the cherries were Kiambu, Kirinyaga and Nyeri respectively.",
+    "location": "AFA Charting the Path ... Coffee Production",
+    "sourceIds": [
+     "afa-update-2024-10"
+    ]
+   }
+  ],
+  "sources": {
+   "afa-update-2024-10": {
+    "title": "Charting the Path Towards a Sustainable Coffee Sub-Sector in Kenya (2024-10-21)",
+    "org": "Agriculture and Food Authority (AFA), Kenya",
+    "kind": "primary",
+    "accessed": "2026-11-09",
+    "note": ""
+   }
+  }
+ },
+ {
+  "key": "origin:ケニア:sub:ニエリ",
+  "content": {
+   "detail": "ニエリ県は、ケニアの主要なコーヒー生産県の一つで、2022/23年度の果実生産量はキアンブ、キリニャガに次ぐ3位(AFA)。"
+  },
+  "claims": [
+   {
+    "index": 0,
+    "text": "ニエリ県はケニアの主要なコーヒー生産県の一つで、2022/23年度の果実生産量上位3県に入る",
+    "quote": "The three counties that led in the production of the cherries were Kiambu, Kirinyaga and Nyeri respectively.",
+    "location": "AFA Charting the Path ... Coffee Production",
+    "sourceIds": [
+     "afa-update-2024-10"
+    ]
+   }
+  ],
+  "sources": {
+   "afa-update-2024-10": {
+    "title": "Charting the Path Towards a Sustainable Coffee Sub-Sector in Kenya (2024-10-21)",
+    "org": "Agriculture and Food Authority (AFA), Kenya",
+    "kind": "primary",
+    "accessed": "2026-11-09",
+    "note": ""
+   }
+  }
+ },
+ {
+  "key": "origin:ケニア:tagline",
+  "content": {
+   "text": "明るい酸味と、果実やワインを思わせる風味で知られる(ナイロビ・コーヒー・エクスチェンジの記述)。"
+  },
+  "claims": [
+   {
+    "index": 0,
+    "text": "ケニア産は明るい酸味と、果実やワインを思わせる風味で知られる",
+    "quote": "Kenyan coffees are known for bright acidity, full body, and fruity or wine-like flavours.",
+    "location": "Kenya Coffee Origin ページ",
+    "sourceIds": [
+     "nce-kenya-origin"
+    ]
+   }
+  ],
+  "sources": {
+   "nce-kenya-origin": {
+    "title": "Kenya Coffee Origin",
+    "org": "Nairobi Coffee Exchange",
+    "kind": "primary",
+    "accessed": "2026-11-09",
+    "note": ""
+   }
+  }
+ },
+ {
+  "key": "origin:ケニア:terroir",
+  "content": {
+   "text": "ICOのケニア・プロファイルによると、コーヒー産地は西部、リフトバレー、中央ケニア、ケニア山の各地域にある。ケニア山の標高は5,199m(UNESCO世界遺産リスト)。栽培地の土壌として、深く水はけのよい赤色の火山性土壌が挙げられている(ICO)。"
+  },
+  "claims": [
+   {
+    "index": 0,
+    "text": "ケニア山の標高は5,199m",
+    "quote": "At 5,199 m, Mount Kenya is the second highest peak in Africa.",
+    "location": "World Heritage List 800 説明文",
+    "sourceIds": [
+     "unesco-mount-kenya"
+    ]
+   },
+   {
+    "index": 1,
+    "text": "コーヒー産地に中央部(Mt Kenya地域)が含まれる",
+    "quote": "Coffee-growing areas are located within the Western, Rift Valley, Central Kenya and Mt Kenya regions",
+    "location": "ICO Coffee Profile Kenya 2.1",
+    "sourceIds": [
+     "ico-profile-kenya-2019"
+    ]
+   },
+   {
+    "index": 2,
+    "text": "土壌は火山性の赤土(深く水はけがよい)",
+    "quote": "in red volcanic soils tha t are deep and well drained",
+    "location": "ICO Coffee Profile Kenya 2.1",
+    "sourceIds": [
+     "ico-profile-kenya-2019"
+    ]
+   }
+  ],
+  "sources": {
+   "unesco-mount-kenya": {
+    "title": "Mount Kenya National Park/Natural Forest (World Heritage List 800)",
+    "org": "UNESCO World Heritage Centre",
+    "kind": "primary",
+    "accessed": "2026-11-09",
+    "note": ""
+   },
+   "ico-profile-kenya-2019": {
+    "title": "ICO Coffee Profile: Kenya (ICC-124-7)",
+    "org": "International Coffee Organization (ICO)",
+    "kind": "primary",
+    "accessed": "2026-11-09",
+    "note": "国のプロファイルはケニア政府が作成してICOに提出した文書(2018/19年度)。PDF全文をpypdfで抽出。"
+   }
+  }
+ },
+ {
+  "key": "origin:ケニア:varietiesDetail",
+  "content": {
+   "text": "SL28・SL34は、K7、Ruiru 11、Batian、Blue Mountainとともにケニアの主要品種(ICO)。WCRのSL28の記述では、Scott Laboratoriesで1935〜39年に行われた個体選抜には接頭辞SLが付けられた。SL28は干ばつ耐性がある(WCR)。SL34は1930年代後半にScott Agricultural Laboratoriesで選抜され、高標高で降雨の多い地域に適応している(WCR)。Ruiru 11とBatianはコーヒーさび病に耐性があり、コーヒー果実病(CBD)に抵抗性がある(WCR)。"
+  },
+  "claims": [
+   {
+    "index": 0,
+    "text": "SL28とSL34は主要品種である(ほかにK7、Ruiru 11、Batian、Blue Mountain)",
+    "quote": "whose main varieties are SL 28, SL 34, K7, Ruiru 11, Batian and Blue Mountain",
+    "location": "ICO Coffee Profile Kenya 2.1",
+    "sourceIds": [
+     "ico-profile-kenya-2019"
+    ]
+   },
+   {
+    "index": 1,
+    "text": "SL28は1930年代(1935〜39年の選抜期)にScott Agricultural Laboratoriesで選抜された",
+    "quote": "Individual tree selections made at the Scott Laboratories during the 1935-1939 period were prefixed SL.",
+    "location": "WCR SL28 History",
+    "sourceIds": [
+     "wcr-sl28"
+    ]
+   },
+   {
+    "index": 2,
+    "text": "SL34も1930年代後半にScott Agricultural Laboratoriesで選抜された",
+    "quote": "SL34 was originally selected in Kenya the late 1930s at the Scott Agricultural Laboratories",
+    "location": "WCR SL34 History",
+    "sourceIds": [
+     "wcr-sl34"
+    ]
+   },
+   {
+    "index": 3,
+    "text": "SL28は干ばつ耐性がある",
+    "quote": "Drought tolerant and very good cup quality potential, but susceptible to major diseases.",
+    "location": "WCR SL28 概要",
+    "sourceIds": [
+     "wcr-sl28"
+    ]
+   },
+   {
+    "index": 4,
+    "text": "SL34は高標高で降雨の多い地域に適応している",
+    "quote": "SL34 is adapted to high altitude areas with good rainfall.",
+    "location": "WCR SL34 Additional agronomic information",
+    "sourceIds": [
+     "wcr-sl34"
+    ]
+   },
+   {
+    "index": 5,
+    "text": "Ruiru 11は耐病性(さび病に耐性、CBDに抵抗性)",
+    "quote": "tolerant to coffee leaf rust and resistant to coffee berry disease",
+    "location": "WCR Ruiru 11 概要",
+    "sourceIds": [
+     "wcr-ruiru11"
+    ]
+   },
+   {
+    "index": 6,
+    "text": "Batianは耐病性(さび病に耐性、CBDに抵抗性)",
+    "quote": "tolerance to coffee leaf rust, resistance to coffee berry disease, and good cup quality",
+    "location": "WCR Batian 概要",
+    "sourceIds": [
+     "wcr-batian"
+    ]
+   }
+  ],
+  "sources": {
+   "ico-profile-kenya-2019": {
+    "title": "ICO Coffee Profile: Kenya (ICC-124-7)",
+    "org": "International Coffee Organization (ICO)",
+    "kind": "primary",
+    "accessed": "2026-11-09",
+    "note": "国のプロファイルはケニア政府が作成してICOに提出した文書(2018/19年度)。PDF全文をpypdfで抽出。"
+   },
+   "wcr-sl28": {
+    "title": "SL28 (World Coffee Research Arabica Variety Catalog)",
+    "org": "World Coffee Research",
+    "kind": "primary",
+    "accessed": "2026-11-09",
+    "note": ""
+   },
+   "wcr-sl34": {
+    "title": "SL34 (World Coffee Research Arabica Variety Catalog)",
+    "org": "World Coffee Research",
+    "kind": "primary",
+    "accessed": "2026-11-09",
+    "note": ""
+   },
+   "wcr-ruiru11": {
+    "title": "Ruiru 11 (World Coffee Research Arabica Variety Catalog)",
+    "org": "World Coffee Research",
+    "kind": "primary",
+    "accessed": "2026-11-09",
+    "note": ""
+   },
+   "wcr-batian": {
+    "title": "Batian (World Coffee Research Arabica Variety Catalog)",
+    "org": "World Coffee Research",
+    "kind": "primary",
+    "accessed": "2026-11-09",
+    "note": ""
+   }
+  }
+ },
+ {
+  "key": "origin:コスタリカ:farmStructure",
+  "content": {
+   "text": "生産者の92%は栽培面積が5ha未満で、合わせて全体の面積の44%を占める(ICAFE。年の記載なし)。"
+  },
+  "claims": [
+   {
+    "index": 0,
+    "text": "生産者の約9割(92%)が5ha未満",
+    "quote": "El 92 por ciento de los productores tienen una área sembrada de café menor de cinco hectáreas y, en conjunto, representan 44 por ciento del área total.",
+    "location": "Estructura del Sector / Productores",
+    "sourceIds": [
+     "icafe-estructura"
+    ]
+   }
+  ],
+  "sources": {
+   "icafe-estructura": {
+    "title": "Estructura del Sector",
+    "org": "Instituto del Café de Costa Rica (ICAFE)",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": "ページに作成年の記載なし(数値は時点不明)"
+   }
+  }
+ },
+ {
+  "key": "origin:コスタリカ:gradeSystem",
+  "content": {
+   "text": "ICAFEは、ロス・サントス地域のコーヒーの約95%がSHB(Strictly Hard Bean)と推定している。ICAFEは、標高は種子の大きさと硬さに影響し、カップ品質の一部(特に酸味)にも影響すると述べている。等級ごとの標高の基準値は、公式資料で確認できていない。"
+  },
+  "claims": [
+   {
+    "index": 0,
+    "text": "標高が高いほど豆が硬く締まり高品質とされる",
+    "quote": "La altitud está relacionada con factores climáticos y, en conjunto, afecta el tamaño y la dureza de la semilla e influye, además, en ciertos componentes de la calidad de la bebida, especialmente con la acidez.",
+    "location": "Regiones Cafetaleras 第2段落",
+    "sourceIds": [
+     "icafe-regiones"
+    ]
+   },
+   {
+    "index": 1,
+    "text": "ロス・サントス地域のコーヒーはSHB(estrictamente duro)",
+    "quote": "Se estima que cerca del 95% del grano es del tipo SHB (Strictly Hard Bean).",
+    "location": "Los Santos 生産の段落",
+    "sourceIds": [
+     "icafe-lossantos"
+    ]
+   }
+  ],
+  "sources": {
+   "icafe-regiones": {
+    "title": "Regiones Cafetaleras de Costa Rica",
+    "org": "Instituto del Café de Costa Rica (ICAFE)",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": ""
+   },
+   "icafe-lossantos": {
+    "title": "Los Santos (Regiones Cafetaleras)",
+    "org": "Instituto del Café de Costa Rica (ICAFE)",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": ""
+   }
+  }
+ },
+ {
+  "key": "origin:コスタリカ:harvestSeason",
+  "content": {
+   "text": "収穫は11月から2月に集中する(USDA FAS、2025年)。ロス・サントス地域の収穫期は11月から3月の5か月間(ICAFE)。"
+  },
+  "claims": [
+   {
+    "index": 0,
+    "text": "収穫は11月から2月に集中する",
+    "quote": "The coffee harvest is concentrated in the months of November to February.",
+    "location": "Production / Harvest の段落(p.4)",
+    "sourceIds": [
+     "usda-fas-cr-coffee-annual-2025"
+    ]
+   },
+   {
+    "index": 1,
+    "text": "標高の高い地域では3月頃まで伸びる(ロス・サントス地域の収穫は11月〜3月)",
+    "quote": "La recolección comprende un período de cinco meses, de noviembre a marzo.",
+    "location": "Los Santos 収穫の段落",
+    "sourceIds": [
+     "icafe-lossantos"
+    ]
+   }
+  ],
+  "sources": {
+   "usda-fas-cr-coffee-annual-2025": {
+    "title": "Costa Rica Coffee Annual CS2025-0010 (2025-05)",
+    "org": "USDA Foreign Agricultural Service (GAIN)",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": "コスタリカの報告(パナマの記述ではない)"
+   },
+   "icafe-lossantos": {
+    "title": "Los Santos (Regiones Cafetaleras)",
+    "org": "Instituto del Café de Costa Rica (ICAFE)",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": ""
+   }
+  }
+ },
+ {
+  "key": "origin:コスタリカ:history",
+  "content": {
+   "text": "ICAFEの資料(2008年)によると、最初の種子は18世紀末に到来したが、コスタリカでコーヒー栽培が始まったと歴史的証拠で確実に言えるのは1808年以降。独立の年の1821年には、サンホセの自治体(corporación josefina)が貧しい人々(indigentes)にコーヒーの苗を無償で配った。1843年から、ウィリアム・ル・ラシュールの帆船ザ・モナーク号による英国向けの積み出しが始まった。"
+  },
+  "claims": [
+   {
+    "index": 0,
+    "text": "1700年代後半に種子が持ち込まれた",
+    "quote": "Aunque las primeras semillas llegaron a fines del siglo XVIII, es hasta después de 1808 que se tiene certeza, apoyada por evidencia histórica, de que en Costa Rica se empezó a",
+    "location": "Pliego p.56",
+    "sourceIds": [
+     "icafe-pliego-ig-2008"
+    ]
+   },
+   {
+    "index": 1,
+    "text": "1808年に商業生産が本格化した(1808年以降に重要な栽培活動が確認できる)",
+    "quote": "Aunque las primeras semillas llegaron a fines del siglo XVIII, es hasta después de 1808 que se tiene certeza, apoyada por evidencia histórica, de que en Costa Rica se empezó a",
+    "location": "Pliego p.56",
+    "sourceIds": [
+     "icafe-pliego-ig-2008"
+    ]
+   },
+   {
+    "index": 2,
+    "text": "独立(1821年)前後に当局が苗木や土地を無償で配布して栽培を奨励した",
+    "quote": "La corporación josefina distribuyó gratuitamente matas de café entre los indigentes en el mismo año de la Independencia (1821).",
+    "location": "Pliego p.56",
+    "sourceIds": [
+     "icafe-pliego-ig-2008"
+    ]
+   },
+   {
+    "index": 3,
+    "text": "1843年、英国向けの輸出が始まった(William Le Lacheur所有の帆船The Monarchによる)",
+    "quote": "fue a partir de 1843, con el envío de fruta a Inglaterra en el velero “The Monarch” de William Le Lacheur",
+    "location": "Pliego p.19",
+    "sourceIds": [
+     "icafe-pliego-ig-2008"
+    ]
+   }
+  ],
+  "sources": {
+   "icafe-pliego-ig-2008": {
+    "title": "Pliego de Condiciones, Indicación Geográfica 'Café de Costa Rica' (2008)",
+    "org": "Instituto del Café de Costa Rica (ICAFE)",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": "128ページ。歴史の章は研究文献(Hallほか)を引用して書かれたICAFEの文書。pypdfで全文抽出"
+   }
+  }
+ },
+ {
+  "key": "origin:コスタリカ:officialBody",
+  "content": {
+   "text": "ICAFE(Instituto del Café de Costa Rica)は、1933年にコスタリカのコーヒー栽培を統括する機関として設立された、国家機関ではない公的機関。ICAFEのセクター構造のページは、1961年6月21日の法律第2762号(Ley 2762)とその改正、および同法の規則による規制に言及している。ミル(beneficiador)として操業するには、ICAFEが管理する登録簿への登録が必要。"
+  },
+  "claims": [
+   {
+    "index": 0,
+    "text": "ICAFEは1933年設立",
+    "quote": "El ICAFE es una institución pública de carácter no estatal, fundada en 1933 como rectora de la caficultura costarricense.",
+    "location": "Acerca del ICAFE",
+    "sourceIds": [
+     "icafe-acerca"
+    ]
+   },
+   {
+    "index": 1,
+    "text": "ICAFEはコーヒー法(Ley 2762、1961年6月21日)に基づく",
+    "quote": "regulados por las disposiciones de la Ley 2762 del 21 de junio de 1961 y sus reformas y por el Reglamento a esa ley",
+    "location": "Estructura del Sector 冒頭",
+    "sourceIds": [
+     "icafe-estructura"
+    ]
+   },
+   {
+    "index": 2,
+    "text": "業界を規制する・全ミルの許認可・監督を行う",
+    "quote": "Para operar como beneficiador, no solo hay que respetar las leyes ecológicas del país, sino que se requiere estar inscrito en un registro que posee el Instituto del Café de Costa Rica y someterse a las leyes vigentes.",
+    "location": "Estructura del Sector / Beneficios",
+    "sourceIds": [
+     "icafe-estructura"
+    ]
+   }
+  ],
+  "sources": {
+   "icafe-acerca": {
+    "title": "Acerca del ICAFE",
+    "org": "Instituto del Café de Costa Rica (ICAFE)",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": "curlで取得した生HTMLから本文抽出"
+   },
+   "icafe-estructura": {
+    "title": "Estructura del Sector",
+    "org": "Instituto del Café de Costa Rica (ICAFE)",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": "ページに作成年の記載なし(数値は時点不明)"
+   }
+  }
+ },
+ {
+  "key": "origin:コスタリカ:terroir",
+  "content": {
+   "text": "ICAFEは、標高1,200mを超える高地は火山起源の土壌と説明している。ロス・サントス地域は、雨季(5〜11月)と乾季(12〜4月)がはっきり分かれている(ICAFE)。"
+  },
+  "claims": [
+   {
+    "index": 0,
+    "text": "標高1,200m超の高地は火山起源の土壌",
+    "quote": "y las zonas altas, arriba de 1.200 metros, de origen volcánico, donde el café es más fuerte o más ácido y también más aromático",
+    "location": "Regiones Cafetaleras de Costa Rica 第3段落",
+    "sourceIds": [
+     "icafe-regiones"
+    ]
+   },
+   {
+    "index": 1,
+    "text": "雨季は5〜11月、乾季は12〜4月(ロス・サントス地域)",
+    "quote": "se caracteriza por una época lluviosa de siete meses (mayo a noviembre) y seca (diciembre a abril) bien definidas",
+    "location": "Los Santos 気候の段落",
+    "sourceIds": [
+     "icafe-lossantos"
+    ]
+   }
+  ],
+  "sources": {
+   "icafe-regiones": {
+    "title": "Regiones Cafetaleras de Costa Rica",
+    "org": "Instituto del Café de Costa Rica (ICAFE)",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": ""
+   },
+   "icafe-lossantos": {
+    "title": "Los Santos (Regiones Cafetaleras)",
+    "org": "Instituto del Café de Costa Rica (ICAFE)",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": ""
+   }
+  }
+ },
+ {
+  "key": "origin:コスタリカ:varietiesDetail",
+  "content": {
+   "text": "ICAFEによると、背が低く生産性の高い品種(カトゥーラ、カトゥアイなど)の栽培が中心で、これらは全国のコーヒー栽培面積の90%超を占める。Villa Sarchiは、ブルボン集団の自然変異で、単一遺伝子の変異により株が小さく育つ(WCR)。"
+  },
+  "claims": [
+   {
+    "index": 0,
+    "text": "カトゥーラ、カトゥアイが主力",
+    "quote": "Predomina la siembra de cultivares de porte bajo y alta productividad, como el caturra y el catauí, los cuales cubren más de 90 por ciento del área cafetalera nacional.",
+    "location": "Estructura del Sector / Productores",
+    "sourceIds": [
+     "icafe-estructura"
+    ]
+   },
+   {
+    "index": 1,
+    "text": "Villa Sarchiはブルボンの単一遺伝子変異による矮性の自然変異",
+    "quote": "Villa Sarchi (also called La Luisa or Villalobos Bourbon) is a natural mutation of a Bourbon population with a single-gene mutation that causes the plant to grow smaller",
+    "location": "Villa Sarchi / Origin",
+    "sourceIds": [
+     "wcr-villa-sarchi"
+    ]
+   }
+  ],
+  "sources": {
+   "icafe-estructura": {
+    "title": "Estructura del Sector",
+    "org": "Instituto del Café de Costa Rica (ICAFE)",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": "ページに作成年の記載なし(数値は時点不明)"
+   },
+   "wcr-villa-sarchi": {
+    "title": "Villa Sarchi (World Coffee Research Coffee Varieties Catalog)",
+    "org": "World Coffee Research",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": ""
+   }
+  }
+ },
+ {
+  "key": "origin:コロンビア:farmStructure",
+  "content": {
+   "text": "FNCのCafé de Colombia公式サイトは、コロンビアで54万世帯(540,000 families)がコーヒーを栽培していると述べている。"
+  },
+  "claims": [
+   {
+    "index": 0,
+    "text": "FNCが代表するコーヒー生産世帯は約54万",
+    "quote": "540,000 Colombian families grow coffee with passion and dedication, supported by the National Federation of Coffee Growers.",
+    "location": "From seed to mug",
+    "sourceIds": [
+     "cafedecolombia-seed-to-mug"
+    ]
+   }
+  ],
+  "sources": {
+   "cafedecolombia-seed-to-mug": {
+    "title": "From seed to mug",
+    "org": "Café de Colombia (Federación Nacional de Cafeteros)",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": "curlで取得したHTMLの本文。"
+   }
+  }
+ },
+ {
+  "key": "origin:コロンビア:gradeSystem",
+  "content": {
+   "text": "全国コーヒー生産者委員会の決議第2号(2016年)は、輸出用の生豆Excelsoを、大粒で主に平たく揃った豆で、スクリーン14(malla 14)より上に残るもの(5%まではそれより小さくスクリーン12に残る豆を許容)と定め、少なくとも50%の豆がスクリーン15に残ることを求める。"
+  },
+  "claims": [
+   {
+    "index": 0,
+    "text": "Excelsoは、大粒で主に平たく揃った豆で、スクリーン14(malla 14)より上に残り、5%まではそれより小さくスクリーン12に残る豆を許容する",
+    "quote": "Será objeto de exportación el Café Verde en Almendra Excelso, que es el café compuesto de grano grande, principalmente plano, parejo, retenido por encima de malla catorce (14), con tolerancia hasta del cinco por ciento (5%) inferior a esa malla, pero retenido por la malla doce (12)",
+    "location": "決議2号 第2条(2頁)",
+    "sourceIds": [
+     "fnc-res-02-2016"
+    ]
+   },
+   {
+    "index": 1,
+    "text": "Excelsoは、少なくとも50%の豆がスクリーン15に残る(Green Coffee Association of New York Cityの規格に準拠)",
+    "quote": "En todo caso este café debe tener por lo menos un cincuenta por ciento (50%) de granos retenidos sobre la malla quince (15), de acuerdo con lo previsto en las normas de la Green Coffee Association of New York City, Inc.",
+    "location": "決議2号 第2条(2頁)",
+    "sourceIds": [
+     "fnc-res-02-2016"
+    ]
+   }
+  ],
+  "sources": {
+   "fnc-res-02-2016": {
+    "title": "Resolución 02 de 2016 (25 de abril) - Por la cual se unifican y actualizan las normas de calidad del café verde en almendra para exportación",
+    "org": "Comité Nacional de Cafeteros / Federación Nacional de Cafeteros de Colombia",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": "取得元はInternet Archive(Wayback Machine)に保存された公式URLの複製(この環境から公式サイトへ直接接続できなかったため)。 画像のみのPDF(スキャン)で、pypdfでは本文が取れない。全ページを画像として読み、quoteは目視で書き写した(機械照合はできない)。"
+   }
+  }
+ },
+ {
+  "key": "origin:コロンビア:history",
+  "content": {
+   "text": "FNCのニュース記事には、サラサール・デ・ラス・パルマスで、ベネズエラのルビオから来た司祭フランシスコ・ロメロが最初のコーヒーの種を持ち込み、告解した罪ごとの贖罪としてコーヒーの木を植えて世話させた、という言い伝えが紹介されている。Café de Colombia(FNC)のサイトによると、カウカ、ウイラ、サンタンデールについては原産地呼称(DO)の保護が宣言されている。ウイラは2013年4月16日のSIC決議17989号で、DOとして保護が宣言された。"
+  },
+  "claims": [
+   {
+    "index": 0,
+    "text": "サラサール・デ・ラス・パルマスの司祭フランシスコ・ロメロが、告解の贖罪としてコーヒーの植樹を課したという言い伝えがある",
+    "quote": "fue el padre Francisco Romero, un sacerdote venido de Rubio, Venezuela, quien llevó consigo las primeras semillas de café || Para cada pecado confesado, la penitencia consistía en sembrar y cuidar cafetos.",
+    "location": "FNCニュース「Salazar de las Palmas: cuna del café colombiano」",
+    "sourceIds": [
+     "fnc-noticia-salazar"
+    ]
+   },
+   {
+    "index": 1,
+    "text": "原産地呼称(DO)として複数地域を保有している",
+    "quote": "Resolution No. 41788 declared the protection of the DO Cafe de Cauca || Resolution No. 17989 of April 16, 2013, in which the protection of Cafe de Huila is declared as Protected Designation of Origin || Resolution No. 50042, through which it declares the protection of the DO Café de Santander",
+    "location": "Regional DO: Cauca / Huila / Santander",
+    "sourceIds": [
+     "cafedecolombia-do-regional"
+    ]
+   },
+   {
+    "index": 2,
+    "text": "ウイラは2013年にDOを取得",
+    "quote": "Upon request of the Federacion Nacional De Cafeteros, the Superintendencia de Industria y Comercio (SIC) issued the Resolution No. 17989 of April 16, 2013, in which the protection of Cafe de Huila is declared as Protected Designation of Origin.",
+    "location": "Regional DO: Huila",
+    "sourceIds": [
+     "cafedecolombia-do-regional"
+    ]
+   }
+  ],
+  "sources": {
+   "fnc-noticia-salazar": {
+    "title": "SALAZAR DE LAS PALMAS: CUNA DEL CAFÉ COLOMBIANO (noticia FNC)",
+    "org": "Federación Nacional de Cafeteros de Colombia",
+    "kind": "primary",
+    "accessed": "2026-11-09",
+    "note": "Wayback保存(2026-01-24時点)のHTMLを取得し本文を抽出。FNCの広報記事であり、史料ではない。"
+   },
+   "cafedecolombia-do-regional": {
+    "title": "Regional Designations of Origin",
+    "org": "Café de Colombia (Federación Nacional de Cafeteros)",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": "curlで取得したHTMLの本文。"
+   }
+  }
+ },
+ {
+  "key": "origin:コロンビア:officialBody",
+  "content": {
+   "text": "FNC(全国コーヒー生産者連盟)は1927年に設立された。全国コーヒー生産者委員会(Comité Nacional de Cafeteros)の決議第2号(2016年4月25日)は、輸出用の生豆(café verde en almendra)の品質規則を統一し更新する決議である。FNCの2025年12月の通達も、生豆の品質管理は同委員会の決議2号(2016年)に従って行うとしている。"
+  },
+  "claims": [
+   {
+    "index": 0,
+    "text": "FNC(全国コーヒー生産者連盟)は1927年設立",
+    "quote": "Creación de la Federación Nacional de Cafeteros - FNC 1927 Se crea la FNC una entidad privada, sin ánimo de lucro y de carácter gremial",
+    "location": "「Nuestra Historia」の1927年の項",
+    "sourceIds": [
+     "fnc-federacion-historia"
+    ]
+   },
+   {
+    "index": 1,
+    "text": "Comité Nacional de Cafeteros(全国コーヒー生産者委員会)の決議第2号・2016年が、輸出用生豆の品質規則である",
+    "quote": "RESOLUCIÓN 02 DE 2016 (25 de abril) POR LA CUAL SE UNIFICAN Y ACTUALIZAN LAS NORMAS DE CALIDAD DEL CAFÉ VERDE EN ALMENDRA PARA EXPORTACIÓN",
+    "location": "表題(1頁)",
+    "sourceIds": [
+     "fnc-res-02-2016"
+    ]
+   },
+   {
+    "index": 2,
+    "text": "FNCの2025年12月の通達が、生豆の品質管理の根拠として決議2号(2016年)を挙げている",
+    "quote": "El control de calidad del café verde se realiza conforme a lo establecido en la Resolución 2 de 2016 del Comité Nacional",
+    "location": "Circular N° 007(FRC25I00014)「NORMA DE CALIDAD」の項",
+    "sourceIds": [
+     "fnc-circular-007-2025"
+    ]
+   }
+  ],
+  "sources": {
+   "fnc-federacion-historia": {
+    "title": "Federación - Nuestra Historia (FNC)",
+    "org": "Federación Nacional de Cafeteros de Colombia",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": "Wayback保存(2026-02-10時点)のHTMLを取得し本文を抽出。"
+   },
+   "fnc-res-02-2016": {
+    "title": "Resolución 02 de 2016 (25 de abril) - Por la cual se unifican y actualizan las normas de calidad del café verde en almendra para exportación",
+    "org": "Comité Nacional de Cafeteros / Federación Nacional de Cafeteros de Colombia",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": "取得元はInternet Archive(Wayback Machine)に保存された公式URLの複製(この環境から公式サイトへ直接接続できなかったため)。 画像のみのPDF(スキャン)で、pypdfでは本文が取れない。全ページを画像として読み、quoteは目視で書き写した(機械照合はできない)。"
+   },
+   "fnc-circular-007-2025": {
+    "title": "Circular N° 007 - FRC25I00014 (Regulación cafetera): Recomendaciones para la exportación de café",
+    "org": "Federación Nacional de Cafeteros de Colombia",
+    "kind": "primary",
+    "accessed": "2026-11-08",
+    "note": "取得元はInternet Archive(Wayback Machine)に保存された公式URLの複製(この環境から公式サイトへ直接接続できなかったため)。本文冒頭の日付は「17 DE DICIEMBRE DE 2025」、ファイル名は「15 DE DICIEMBRE DE 2025」。"
+   }
+  }
+ }
+]

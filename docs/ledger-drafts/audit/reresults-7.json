@@ -1,0 +1,289 @@
+{
+ "results": {
+  "origin:メキシコ:harvestSeason": {
+   "verdict": "ok",
+   "problems": []
+  },
+  "origin:メキシコ:history": {
+   "verdict": "ok",
+   "problems": []
+  },
+  "origin:メキシコ:officialBody": {
+   "verdict": "fix",
+   "finalContent": {
+    "text": "AMECAFÉ(Asociación Mexicana de la Cadena Productiva del Café, A.C.)の名は、官報(2020年12月26日)の、コーヒーの輸出の原産地証明書に関する協定に、項目「I. AMECAFÉ」として記載されている。SAGARPAの資料(2016年)は、CMCが2006年から2012年にかけて現在のAMECAFEへ発展したと説明している。"
+   },
+   "usedClaims": [
+    0,
+    1
+   ],
+   "problems": [
+    "「協定の定義規定」は引用になく location にしかない情報のため、引用に書かれた『I. AMECAFÉ: …』の記載として言い直した",
+    "「組織である」という断定は引用にないため、記載されているという範囲に直した"
+   ]
+  },
+  "origin:メキシコ:sub:チアパス(ソコヌスコ・エルトリウンフ)": {
+   "verdict": "ok",
+   "problems": []
+  },
+  "origin:メキシコ:tagline": {
+   "verdict": "ok",
+   "problems": []
+  },
+  "origin:メキシコ:terroir": {
+   "verdict": "ok",
+   "problems": []
+  },
+  "origin:メキシコ:varietiesDetail": {
+   "verdict": "fix",
+   "finalContent": {
+    "text": "INIFAPのプレスリリースは、さび病に耐性のある品種「オロ・アステカ(Oro Azteca)」がINIFAPによって開発されたと述べている。"
+   },
+   "usedClaims": [
+    0
+   ],
+   "problems": [
+    "「自ら開発した」の『自ら』は引用(desarrollada por INIFAP)にない強調のため除いた"
+   ]
+  },
+  "origin:ルワンダ:farmStructure": {
+   "verdict": "fix",
+   "finalContent": {
+    "text": "ICOの調査報告書は、農家が典型的にはコーヒー栽培用に平均0.26ヘクタールの土地を所有していると述べている。CWS(ウォッシングステーション)は2021年に計313か所(ICO)。北部ガケンケ郡のドゥクンデ・カワ(Dukunde Kawa Musasa)協同組合は、2000年設立と自己紹介している(CoE掲載文)。"
+   },
+   "usedClaims": [
+    0,
+    1,
+    2
+   ],
+   "problems": [
+    "引用の『typically』が落ちて一般化されていたため『典型的には』を補った(資料注記: 調査標本の範囲を超える一般化は不可なので『調査報告書』と帰属)",
+    "『totaling 313 CWSs in 2021』を『計313か所』に合わせ、引用にはCWSの語注がないためCWSの表記を残した(ウォッシングステーションは訳語として併記、確認度は引用内の略語のみ)"
+   ]
+  },
+  "origin:ルワンダ:harvestSeason": {
+   "verdict": "ok",
+   "problems": []
+  },
+  "origin:ルワンダ:history": {
+   "verdict": "fix",
+   "finalContent": {
+    "text": "ICOの文書は、協定の経済条項が終了した直後、供給過剰によってコーヒー価格が下落したとき、多くの国のコーヒー部門が停滞したと述べている。ルワンダはアフリカで初めてカップ・オブ・エクセレンス(COE)を開催した国で、最初のCOEは2008年にさかのぼる(ACE)。"
+   },
+   "usedClaims": [
+    1,
+    2
+   ],
+   "problems": [
+    "1990年に輸出額の75.2%・GDPの3.2%という文は、引用が表の1行(Rwanda 3.2 0.8 75.2 9.4)だけで、列の意味(GDP比・輸出額比・年)は location にしかないため削除",
+    "『1989年の国際コーヒー協定』は引用では『the Agreement』のみで年・名称がないため『協定』に直し、『ICOによれば』は『ICOの文書は…述べている』と帰属を明確にした"
+   ]
+  },
+  "origin:ルワンダ:officialBody": {
+   "verdict": "fix",
+   "finalContent": {
+    "text": "国家農業輸出開発庁(NAEB、National Agricultural Export Development Board)。NAEB自身の頁は、2017年4月14日の法律第13/2017号により設立された公的機関(commercial public institution)と記している。2010年の法律第39/2010号は、ルワンダ・コーヒー開発庁(OCIR-CAFE)、ルワンダ茶開発庁(OCIR-THE)、ルワンダ園芸開発庁(RHODA)がそれまで行っていた輸出開発(export development)の活動を、官報での公布から6か月を超えない期間内に統合するよう、NAEBに期間を与えている。NAEBの頁「About Rwanda coffee」には、ルワンダ産コーヒーの販売促進・マーケティング・輸出と、農家への技術支援・苗木の提供によるコーヒー生産の支援が記されている。ICOの報告書は、NAEBが関係者と協力して年間のコーヒーチェリー最低価格を設定する重要な役割を果たしていると述べている。"
+   },
+   "usedClaims": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "problems": [
+    "『第17条』は引用になく location にしかないため削除",
+    "『NAEBの責任』は引用にない(location のみ)ため、NAEBの頁に記されている内容という言い方に直した",
+    "『輸出振興』は原文 export development に合わせて『輸出開発』、『6か月以内』は『6か月を超えない期間』に直した",
+    "最低価格の文はICOの記述である帰属を明示"
+   ]
+  },
+  "origin:ルワンダ:regions": {
+   "verdict": "fix",
+   "finalContent": {
+    "text": "COE公式サイトの「Rwanda 2008」のページには、「Buremera Mig Uwimana Rose Huye, South」(南部州フイエ郡)、「Sdl Minazi Abakundakawa Ribarimana Jean Baptiste Gakenke, North」(北部州ガケンケ郡)、「Nyabumera Coop-Abaryoshyakawa Hategika Francois Nyamasheke, Western」(西部州ニャマシェケ郡)という項目が載っている。NAEBによれば、収穫は西部州のキブ湖岸で2月下旬、その他の地域で3月上旬に始まる。"
+   },
+   "usedClaims": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "problems": [
+    "順位(1位・4位・15位)と『入賞した』は引用になく location(Winning Farms 欄)にしかないため削除し、引用に書かれた項目名と地名の範囲に直した"
+   ]
+  },
+  "origin:ルワンダ:sub:ガケンケ(北部州)": {
+   "verdict": "fix",
+   "finalContent": {
+    "detail": "CoE Farm Directory 2015の「Dukundekawa Musasa/Mbirima/Rwashoscco」の頁(CoE掲載文)には、Province: North(北部州)、District: Gakenke(ガケンケ郡)、Sector: Ruli(ルリ地区)、標高1,500〜2,000m(Altitude: 1500 to 2000 meters)と記載されている。"
+   },
+   "usedClaims": [
+    0
+   ],
+   "problems": [
+    "『協同組合のウォッシングステーションの所在地』は引用になく location(CWS Geographical locations)にしかないため、頁の記載という範囲に直した"
+   ]
+  },
+  "origin:ルワンダ:sub:ニャマシェケ(西部州・キブ湖岸)": {
+   "verdict": "fix",
+   "finalContent": {
+    "detail": "COE公式サイトの「Rwanda 2008」のページには、「Nyabumera Coop-Abaryoshyakawa Hategika Francois Nyamasheke, Western」という項目(西部州ニャマシェケ郡)が載っている。"
+   },
+   "usedClaims": [
+    0
+   ],
+   "problems": [
+    "『生産者が入賞している』は引用になく(入賞・順位は location のみ)、引用は項目名と地名のみのため、記載されているという範囲に直した"
+   ]
+  },
+  "origin:ルワンダ:sub:フイエ/ニャマガベ(南部州・旧マラバ地区)": {
+   "verdict": "fix",
+   "finalContent": {
+    "detail": "COE公式サイトの「Rwanda 2008」のページには、「Buremera Mig Uwimana Rose Huye, South」という項目(南部州フイエ郡)が載っている。"
+   },
+   "usedClaims": [
+    0
+   ],
+   "problems": [
+    "『1位に入賞』は引用になく location のみのため削除し、引用の記載の範囲に直した"
+   ]
+  },
+  "origin:ルワンダ:sub:西部州キブ湖東岸(ルツィロ/カロンギ)": {
+   "verdict": "fix",
+   "finalContent": {
+    "detail": "COE公式サイトの「Rwanda 2008」のページには、「Horizon Mushonyi Twizerimana Ismael Rutsiro, Western」という項目(西部州ルツィロ郡)が載っている。"
+   },
+   "usedClaims": [
+    0
+   ],
+   "problems": [
+    "『生産者が入賞している』は引用になく location のみのため、引用の記載の範囲に直した"
+   ]
+  },
+  "origin:ルワンダ:tagline": {
+   "verdict": "ok",
+   "problems": []
+  },
+  "origin:ルワンダ:terroir": {
+   "verdict": "fix",
+   "finalContent": {
+    "text": "ルワンダは肥沃な火山性土壌に恵まれている(ICO)。Meteo Rwandaによれば、気候学上は、3〜5月ごろと10〜12月ごろを中心とする2つの雨季が一般に区別できる。"
+   },
+   "usedClaims": [
+    0,
+    1
+   ],
+   "problems": [
+    "引用の『generally distinguishable』の『一般に』が落ちていたため補った"
+   ]
+  },
+  "origin:ルワンダ:varietiesDetail": {
+   "verdict": "fix",
+   "finalContent": {
+    "text": "NAEBによれば、ルワンダのコーヒーは主に「ブルボン」型のアラビカ種で占められ、コーヒーは1900年代初めにドイツ人が導入した。ICOの調査報告書によれば、樹齢30年以上の木が約39%を占める。さび病とCBDに耐性の改良品種RAB C15は2015年にリリースされたが、まだ広くは植えられていない(WCR)。"
+   },
+   "usedClaims": [
+    0,
+    1,
+    2,
+    4
+   ],
+   "problems": [
+    "『ブルボン系』は引用の「'bourbon' type」に合わせて『ブルボン型』に直し、『品種は…占められ』を引用どおり『アラビカ種』が占めるとした",
+    "39%は調査標本に基づく数字で一般化不可(資料注記)のため『調査報告書』と帰属した"
+   ]
+  },
+  "processing:アナエロビック": {
+   "verdict": "fix",
+   "finalContent": {
+    "explanation": "SCAの記事「The Fermentation Effect」(25 Magazine第10号)は、嫌気発酵(anaerobic fermentation)を「発酵中に酸素を制限する、または酸素がない状態」の発酵と説明し、流行している(trendy)手法と表現している。"
+   },
+   "usedClaims": [
+    0
+   ],
+   "problems": [
+    "定義が無帰属の断定になっていたため、SCA記事の説明と帰属を明示した"
+   ]
+  },
+  "processing:ウェットハルド": {
+   "verdict": "ok",
+   "problems": []
+  },
+  "processing:ウォッシュド": {
+   "verdict": "ok",
+   "problems": []
+  },
+  "processing:ナチュラル": {
+   "verdict": "fix",
+   "finalContent": {
+    "explanation": "コーヒーチェリー(果実)のまま乾燥させ、乾燥後に脱穀(ハルリング)する方法(ドライ方式)。ICOは、収穫した果実をラックに置いて天日で乾燥させると書く。"
+   },
+   "usedClaims": [
+    0,
+    1,
+    2
+   ],
+   "problems": [
+    "『ラックに広げて』は引用の『placed on racks』に合わせて『置いて』に直した",
+    "『すべてフルーティな味になるとは限らない』は引用の『this way』の指す内容が引用内になく(資料題名からの推測)、迷うため削除"
+   ]
+  },
+  "processing:ハニー": {
+   "verdict": "ok",
+   "problems": []
+  },
+  "variety:カトゥーラ/カトゥアイ系統": {
+   "verdict": "ok",
+   "problems": [
+    "Catuaiの『ブラジルで広く栽培』は引用『in wide cultivation there』の『there』が同資料内の先行引用(ブラジル)に依存するが、同一資料内として許容"
+   ]
+  },
+  "variety:サルチモール/カティモール系統": {
+   "verdict": "fix",
+   "finalContent": {
+    "tagline": "",
+    "varieties": [],
+    "note": "ティモール・ハイブリッド(アラビカ種とロブスタ種が1920年代にティモール島で自然発生的に交配して現れた品種)を親に持つ交配品種のグループ。WCRは、ティモール・ハイブリッド×Caturra、ティモール・ハイブリッド×Villa Sarchiの交配から、introgressed Arabica(導入系アラビカ)品種の2大グループであるカティモールとサルチモールが生まれたと書く。WCRは、これらの品種は従来、他の品種より低いカップ品質と結びつけられてきたと書く。MarsellesaはTimor Hybrid 832/2とVilla Sarchi CIFC 971/10の交配で、2009年に公開された。"
+   },
+   "usedClaims": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "problems": [
+    "引用『These varieties』はカティモール・サルチモールを指す文脈のため、Marsellesaの文の後ろにあると指示対象が曖昧になる。直前の文に移して指示対象を明確にした"
+   ]
+  },
+  "variety:ティピカ系統": {
+   "verdict": "fix",
+   "finalContent": {
+    "tagline": "ティピカは収量が非常に少ないが、カップ品質は良いとWCRは書く",
+    "varieties": [
+     "Typica(ティピカ)",
+     "Pache(パチェ)"
+    ],
+    "note": "歴史家は、コーヒーの種子が最初にエチオピア南西部の森からイエメンに持ち出され、作物として栽培されたと考えている。WCRは、ティピカの枝は、オランダ人が1696年と1699年にインドのマラバール海岸からバタビアへ種子を送った頃にブルボンから分かれたと見られると書く。ティピカは、収量が非常に少なく、主要な病害に弱く、カップ品質は良い品種とWCRは書く。Pache(パチェ)はティピカの自然突然変異。"
+   },
+   "usedClaims": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "problems": [
+    "引用の『first taken』の『最初に』が落ちていたため補った"
+   ]
+  },
+  "variety:ブルボン系統": {
+   "verdict": "ok",
+   "problems": []
+  },
+  "variety:特殊・高付加価値品種": {
+   "verdict": "ok",
+   "problems": []
+  }
+ }
+}

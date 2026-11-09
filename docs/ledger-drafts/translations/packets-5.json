@@ -1,0 +1,439 @@
+[
+ {
+  "key": "origin:ペルー:gradeSystem",
+  "content": {
+   "text": "INACAL(ペルー国家品質院)の実施ガイドGIP 101:2026(第2版)は、NTP 209.027:2024 + CT 1:2025(コーヒー生豆の要求事項)のためのガイドである。同ガイドによると、欠点(defectos o imperfecciones)の上限はGrado 1が15、Grado 2が23、Grado 3が30。水分は10〜12.5%で、粒度は最低でも50%がmalla 15(6mm)に残ること。別の規格NTP 209.311(スペシャルティコーヒー、2019年版)の実施ガイドGIP 107:2021は、主要欠点0、二次欠点は最大5と示す。"
+  },
+  "quotes": [
+   "Grado 1 Compuesto por granos de cosecha actual, color y tamaño homogéneo y de olor intensamente fresco. || a) Grado 1 Se admite un máximo de 15 defectos o imperfecciones",
+   "b) Grado 2 Se admite un máximo de 23 defectos o imperfecciones",
+   "Grado 3 Compuestos por granos de tamaño y color variable, olor de poca a mediana intensidad. || c) Grado 3 Se admite un máximo de 30 defectos o imperfecciones",
+   "La humedad del café verde debe estar en el rango de 10 a 12,5%",
+   "Mínimo: El 50% debe estar retenido en malla 15 (6mm).",
+   "Defectos primarios: 0 Defectos secundarios: Máximo 5"
+  ]
+ },
+ {
+  "key": "origin:ペルー:history",
+  "content": {
+   "text": "COE(カップ・オブ・エクセレンス)ペルー大会の1位は、2017年がLa Flor(Juan Heredia Sanchez、ハエン(Jaén)、カハマルカ、92.25点)。その後の大会でも、2019年・2022年・2023年・2024年・2025年・2026年の1位はカハマルカ産だった(ACE公式サイトの結果ページ)。"
+  },
+  "quotes": [
+   "1A 6 La Flor 2017 – {ORG} Juan Heredia Sanchez Jaén, Cajamarca 92.25",
+   "1a 180 La Lucuma Grimanes Morales Lizana Cajamarca 92.28 || 1a 90.39 LA BOLA BLANCA FLOR CORDOVA JIMENEZ CAJAMARCA || 1A 90,54 El Mirador Miguel Padilla Chinguel Caturra, Bourbon, Geisha Washed Cajamarca || 1A 90,64 La Catarata Angel Antonio Manosalva Palomino Geisha Washed Cajamarca",
+   "1A 90.74 Alto Mirador Yoniser Mego Silva Cajamarca || 1 91.71 Finca La Esperanza Fidel Huancas Huancas Washed Geisha Cajamarca"
+  ]
+ },
+ {
+  "key": "origin:ペルー:officialBody",
+  "content": {
+   "text": "Junta Nacional del Café(JNC)は1993年1月6日に正式に設置された。JNC自身の説明では、ペルーのコーヒー生産者を国に対して代表する機関で、14のコーヒー地帯にまたがる56のコーヒー関連組織(協会・協同組合)の会員世帯合計7万をまとめている(2024〜2026年の公式サイト掲載)。"
+  },
+  "quotes": [
+   "La JNC fue instalada oficialmente el 6 de enero de 1993.",
+   "Hoy reúne a un total de 56 organizaciones cafetaleras, entre asociaciones y cooperativas que suman 70 mil familias socias arraigadas en catorce zonas cafetaleras del país.",
+   "La Junta Nacional del Café (JNC) es una institución que congrega y representa a los productores cafetaleros peruanos frente al Estado."
+  ]
+ },
+ {
+  "key": "origin:ペルー:regions",
+  "content": {
+   "text": "USDA FAS(2025年5月)によれば、主要産地にはカハマルカ(生産の22%)、サンマルティン(20%)、フニン(19%)、アマソナス(15%)が含まれる。"
+  },
+  "quotes": [
+   "The main coffee-producing regions include Cajamarca (22% of total production), San Martín (20%), Junín (19%), and Amazonas (15%)."
+  ]
+ },
+ {
+  "key": "origin:ペルー:sub:アマソナス(ロドリゲス・デ・メンドーサ)",
+  "content": {
+   "detail": "アマソナス: 全国生産の15%を占める(USDA FAS、2025年5月)。"
+  },
+  "quotes": [
+   "The main coffee-producing regions include Cajamarca (22% of total production), San Martín (20%), Junín (19%), and Amazonas (15%)."
+  ]
+ },
+ {
+  "key": "origin:ペルー:sub:カハマルカ",
+  "content": {
+   "detail": "カハマルカ: 全国生産量の22%を占め、USDA FASが挙げる主要産地(カハマルカ・サンマルティン・フニン・アマソナス)の中で最も大きい(USDA FAS、2025年5月)。COEペルー大会(ACE公式結果)では、カハマルカ産のロットが1位になった年がある。"
+  },
+  "quotes": [
+   "The main coffee-producing regions include Cajamarca (22% of total production), San Martín (20%), Junín (19%), and Amazonas (15%).",
+   "3A 6 San Pedro – El Shimir 2017 -… Fredy Bermeo Guevara San Ignacio, Cajamarca 90.48 || 1a 180 La Lucuma Grimanes Morales Lizana Cajamarca 92.28 || 1A 90.74 Alto Mirador Yoniser Mego Silva Cajamarca"
+  ]
+ },
+ {
+  "key": "origin:ペルー:sub:クスコ(南部)",
+  "content": {
+   "detail": "クスコ: COEペルー大会で2018年(91.08点)と2021年(90.2点)に、Nueva Alianzaのロットが1位になった(COE公式サイト)。"
+  },
+  "quotes": [
+   "1a 6 (+1 Partial) Nueva Alianza Dwigth Aguilar Masias Cusco 91.08 || 1a 90.2 Nueva Alianza Dwight Aguilar Masías Cusco"
+  ]
+ },
+ {
+  "key": "origin:ペルー:sub:フニン(チャンチャマヨ/サティポ)",
+  "content": {
+   "detail": "フニン: 全国生産の19%を占める(USDA FAS、2025年5月)。"
+  },
+  "quotes": [
+   "The main coffee-producing regions include Cajamarca (22% of total production), San Martín (20%), Junín (19%), and Amazonas (15%)."
+  ]
+ },
+ {
+  "key": "origin:ペルー:tagline",
+  "content": {
+   "text": "USDA FAS(2025年5月)によれば、ペルーのコーヒーは主にアンデスの東斜面で栽培される。生産の9割超は5ヘクタール未満の小規模農家によるもので、世界有数の有機コーヒー輸出国でもある。"
+  },
+  "quotes": [
+   "Over 90 percent of Peruvian coffee is grown by smallholder farmers on plots smaller than 5 hectares.",
+   "Peru is the world’s leading exporter of organic coffee",
+   "Coffee in Peru is primarily grown along the eastern slopes of the Andes."
+  ]
+ },
+ {
+  "key": "origin:ペルー:terroir",
+  "content": {
+   "text": "ペルーのコーヒーは主にアンデスの東斜面で栽培される(USDA FAS、2025年5月)。"
+  },
+  "quotes": [
+   "Coffee in Peru is primarily grown along the eastern slopes of the Andes."
+  ]
+ },
+ {
+  "key": "origin:ペルー:varietiesDetail",
+  "content": {
+   "text": "USDA FAS(2025年5月)によれば、ペルーは主にアラビカを生産し、ティピカが70%超、次いでカトゥーラ(20%)、その他の品種(10%)である。"
+  },
+  "quotes": [
+   "Peru primarily produces Arabica coffee, with over 70 percent being the Typica variety, followed by Caturra (20%) and other varieties (10%).",
+   "Peru primarily produces Arabica coffee, with over 70 percent being the Typica variety, followed by Caturra (20%) and other varieties (10%)."
+  ]
+ },
+ {
+  "key": "origin:メキシコ:farmStructure",
+  "content": {
+   "text": "SAGARPAの『Café Mexicano - Planeación Agrícola Nacional 2017-2030』によれば、メキシコのコーヒー生産には50万を超える生産者が関わっている。"
+  },
+  "quotes": [
+   "su producción emplea a más de 500,000 productores de 14 entidades federativas y 480 municipios. || aproximadamente participan 500 mil cafeticultores en todo el país"
+  ]
+ },
+ {
+  "key": "origin:メキシコ:harvestSeason",
+  "content": {
+   "text": "収穫は主に11月から3月(FIRA、2016年)。"
+  },
+  "quotes": [
+   "La cosecha del café se realiza principalmente de noviembre a marzo."
+  ]
+ },
+ {
+  "key": "origin:メキシコ:history",
+  "content": {
+   "text": "コーヒーは18世紀末にメキシコへ伝わった(SADER)。国際コーヒー機関(ICO)は1962年から1989年まで断続的に割当制度を運用し、1989年に割当配分で合意できなかったため同制度は停止された(ICO)。"
+  },
+  "quotes": [
+   "Este cultivo llegó a México a finales del siglo XVIII",
+   "The ICO operated a quota system, whereby coffee supplies in excess of consumer requirements were withheld from the market, on and off from 1962 to 1989, when the system was suspended because of failure to agree on quota distribution."
+  ]
+ },
+ {
+  "key": "origin:メキシコ:officialBody",
+  "content": {
+   "text": "AMECAFÉ(Asociación Mexicana de la Cadena Productiva del Café, A.C.)の名は、官報(2020年12月26日)の、コーヒーの輸出の原産地証明書に関する協定に、項目「I. AMECAFÉ」として記載されている。SAGARPAの資料(2016年)は、CMCが2006年から2012年にかけて現在のAMECAFEへ発展したと説明している。"
+  },
+  "quotes": [
+   "I. AMECAFÉ: La Asociación Mexicana de la Cadena Productiva del Café, A.C.;",
+   "el decreto que abrogó la ley que había creado al INMECAFÉ, mismo que fue sustituido por el CMC. || En el 2006 y hasta el 2012, el CMC evolucionó a lo que hoy conocemos como AMECAFE"
+  ]
+ },
+ {
+  "key": "origin:メキシコ:sub:チアパス(ソコヌスコ・エルトリウンフ)",
+  "content": {
+   "detail": "エルトリウンフはメキシコで最も多様な常緑の雲霧林である(UNESCO MAB)。"
+  },
+  "quotes": [
+   "El Triunfo is the most diverse evergreen cloud forest in Mexico"
+  ]
+ },
+ {
+  "key": "origin:メキシコ:tagline",
+  "content": {
+   "text": "メキシコのコーヒー生産者の大半は、小規模・極小規模の生産者である(SADER)。"
+  },
+  "quotes": [
+   "Los caficultores del país son en su mayoría productores de pequeña y muy pequeña escala presentes fundamentalmente en 15 entidades de la República Mexicana."
+  ]
+ },
+ {
+  "key": "origin:メキシコ:terroir",
+  "content": {
+   "text": "エルトリウンフはメキシコで最も多様な常緑の雲霧林である(UNESCO MAB)。"
+  },
+  "quotes": [
+   "El Triunfo is the most diverse evergreen cloud forest in Mexico"
+  ]
+ },
+ {
+  "key": "origin:メキシコ:varietiesDetail",
+  "content": {
+   "text": "INIFAPのプレスリリースは、さび病に耐性のある品種「オロ・アステカ(Oro Azteca)」がINIFAPによって開発されたと述べている。"
+  },
+  "quotes": [
+   "“Oro Azteca” —variedad resistente a la roya—, desarrollada por el Instituto Nacional de Investigaciones, Forestales, Agrícolas y Pecuarias (INIFAP)"
+  ]
+ },
+ {
+  "key": "origin:ルワンダ:farmStructure",
+  "content": {
+   "text": "ICOの調査報告書は、農家が典型的にはコーヒー栽培用に平均0.26ヘクタールの土地を所有していると述べている。CWS(ウォッシングステーション)は2021年に計313か所(ICO)。北部ガケンケ郡のドゥクンデ・カワ(Dukunde Kawa Musasa)協同組合は、2000年設立と自己紹介している(CoE掲載文)。"
+  },
+  "quotes": [
+   "farmers typically owning an average of 0.26 hectares of land dedicated to coffee cultivation",
+   "totaling 313 CWSs in 2021",
+   "Founded in the year 2000, Dukunde Kawa Musasa Coopertive cultivates its high quality coffee not very far from Gorilla Mountains in Gakenke district, Northern Province in Rwanda."
+  ]
+ },
+ {
+  "key": "origin:ルワンダ:harvestSeason",
+  "content": {
+   "text": "収穫は西部州のキブ湖岸で2月下旬、その他の地域で3月上旬に始まり、北部州の一部では8月まで続く(NAEB)。"
+  },
+  "quotes": [
+   "the harvesting period starts late February in the Western Province on the shores of Lake Kivu and Early March elsewhere",
+   "However in the some areas in the Northern Province coffee is still harvest until August."
+  ]
+ },
+ {
+  "key": "origin:ルワンダ:history",
+  "content": {
+   "text": "ICOの文書は、協定の経済条項が終了した直後、供給過剰によってコーヒー価格が下落したとき、多くの国のコーヒー部門が停滞したと述べている。ルワンダはアフリカで初めてカップ・オブ・エクセレンス(COE)を開催した国で、最初のCOEは2008年にさかのぼる(ACE)。"
+  },
+  "quotes": [
+   "When coffee prices dropped as a result of oversupply in the immediate aftermath of the end of the economic clauses of the Agreement, many national coffee sectors stalled.",
+   "Rwanda was the first African country to host a CoE competition, led by the Portland, Oregon-based Alliance for Coffee Excellence along with in-country partners, with the first CoE there dating back to 2008."
+  ]
+ },
+ {
+  "key": "origin:ルワンダ:officialBody",
+  "content": {
+   "text": "国家農業輸出開発庁(NAEB、National Agricultural Export Development Board)。NAEB自身の頁は、2017年4月14日の法律第13/2017号により設立された公的機関(commercial public institution)と記している。2010年の法律第39/2010号は、ルワンダ・コーヒー開発庁(OCIR-CAFE)、ルワンダ茶開発庁(OCIR-THE)、ルワンダ園芸開発庁(RHODA)がそれまで行っていた輸出開発(export development)の活動を、官報での公布から6か月を超えない期間内に統合するよう、NAEBに期間を与えている。NAEBの頁「About Rwanda coffee」には、ルワンダ産コーヒーの販売促進・マーケティング・輸出と、農家への技術支援・苗木の提供によるコーヒー生産の支援が記されている。ICOの報告書は、NAEBが関係者と協力して年間のコーヒーチェリー最低価格を設定する重要な役割を果たしていると述べている。"
+  },
+  "quotes": [
+   "National Agricultural Export Development Board, abbreviated as “NAEB” is a commercial public institution established by the law No 13/2017 of 14/04/2017",
+   "NAEB is given a period not exceeding six (6) months from the date of publication of this Law in the Official Gazette of the Republic of Rwanda to merge activities of export development formerly performed by the following institutions : 1° Rwanda Coffee Development Authority (OCIR-CAFE) ; 2° Rwanda Tea Development Authority (OCIR-THE); 3° Rwanda Horticulture Development Authority (RHODA).",
+   "Promotion, marketing and export of Rwanda coffee",
+   "Support to the coffee production by providing technical assistance and planting material to farmers",
+   "NAEB plays a pivotal role in establishing the annual coffee cherry floor price in collaboration with key stakeholders"
+  ]
+ },
+ {
+  "key": "origin:ルワンダ:regions",
+  "content": {
+   "text": "COE公式サイトの「Rwanda 2008」のページには、「Buremera Mig Uwimana Rose Huye, South」(南部州フイエ郡)、「Sdl Minazi Abakundakawa Ribarimana Jean Baptiste Gakenke, North」(北部州ガケンケ郡)、「Nyabumera Coop-Abaryoshyakawa Hategika Francois Nyamasheke, Western」(西部州ニャマシェケ郡)という項目が載っている。NAEBによれば、収穫は西部州のキブ湖岸で2月下旬、その他の地域で3月上旬に始まる。"
+  },
+  "quotes": [
+   "the harvesting period starts late February in the Western Province on the shores of Lake Kivu and Early March elsewhere",
+   "Nyabumera Coop-Abaryoshyakawa Hategika Francois Nyamasheke, Western",
+   "Buremera Mig Uwimana Rose Huye, South",
+   "Sdl Minazi Abakundakawa Ribarimana Jean Baptiste Gakenke, North"
+  ]
+ },
+ {
+  "key": "origin:ルワンダ:sub:ガケンケ(北部州)",
+  "content": {
+   "detail": "CoE Farm Directory 2015の「Dukundekawa Musasa/Mbirima/Rwashoscco」の頁(CoE掲載文)には、Province: North(北部州)、District: Gakenke(ガケンケ郡)、Sector: Ruli(ルリ地区)、標高1,500〜2,000m(Altitude: 1500 to 2000 meters)と記載されている。"
+  },
+  "quotes": [
+   "Province : North District : Gakenke Sector: Ruli Latitude (m): 482750 Longitudes (m): 9800044 Altitude : 1500 to 2000 meters"
+  ]
+ },
+ {
+  "key": "origin:ルワンダ:sub:ニャマシェケ(西部州・キブ湖岸)",
+  "content": {
+   "detail": "COE公式サイトの「Rwanda 2008」のページには、「Nyabumera Coop-Abaryoshyakawa Hategika Francois Nyamasheke, Western」という項目(西部州ニャマシェケ郡)が載っている。"
+  },
+  "quotes": [
+   "Nyabumera Coop-Abaryoshyakawa Hategika Francois Nyamasheke, Western"
+  ]
+ },
+ {
+  "key": "origin:ルワンダ:sub:フイエ/ニャマガベ(南部州・旧マラバ地区)",
+  "content": {
+   "detail": "COE公式サイトの「Rwanda 2008」のページには、「Buremera Mig Uwimana Rose Huye, South」という項目(南部州フイエ郡)が載っている。"
+  },
+  "quotes": [
+   "Buremera Mig Uwimana Rose Huye, South"
+  ]
+ },
+ {
+  "key": "origin:ルワンダ:sub:西部州キブ湖東岸(ルツィロ/カロンギ)",
+  "content": {
+   "detail": "COE公式サイトの「Rwanda 2008」のページには、「Horizon Mushonyi Twizerimana Ismael Rutsiro, Western」という項目(西部州ルツィロ郡)が載っている。"
+  },
+  "quotes": [
+   "Horizon Mushonyi Twizerimana Ismael Rutsiro, Western"
+  ]
+ },
+ {
+  "key": "origin:ルワンダ:tagline",
+  "content": {
+   "text": "WCRによれば、ルワンダの輸出の約62%がフルウォッシュド(fully washed)である。"
+  },
+  "quotes": [
+   "About 62% of exports are fully washed, reflecting post-2000 investments in processing quality."
+  ]
+ },
+ {
+  "key": "origin:ルワンダ:terroir",
+  "content": {
+   "text": "ルワンダは肥沃な火山性土壌に恵まれている(ICO)。Meteo Rwandaによれば、気候学上は、3〜5月ごろと10〜12月ごろを中心とする2つの雨季が一般に区別できる。"
+  },
+  "quotes": [
+   "The country benefits from fertile volcanic soils, high altitudes, sufficient rainfall, and moderate temperatures.",
+   "two rainy seasons are generally distinguishable, one centered around March – May and the other around October – December."
+  ]
+ },
+ {
+  "key": "origin:ルワンダ:varietiesDetail",
+  "content": {
+   "text": "NAEBによれば、ルワンダのコーヒーは主に「ブルボン」型のアラビカ種で占められ、コーヒーは1900年代初めにドイツ人が導入した。ICOの調査報告書によれば、樹齢30年以上の木が約39%を占める。さび病とCBDに耐性の改良品種RAB C15は2015年にリリースされたが、まだ広くは植えられていない(WCR)。"
+  },
+  "quotes": [
+   "it is dominated by mainly ‘bourbon’ type of Arabica coffees.",
+   "Coffee was introduced by Germans in early 1900s",
+   "many coffee trees are old, with around 39% being 30 years or older",
+   "an improved variety resistant to rust and CBD called RAB C15 was released in 2015, but is not widely planted yet."
+  ]
+ },
+ {
+  "key": "processing:アナエロビック",
+  "content": {
+   "explanation": "SCAの記事「The Fermentation Effect」(25 Magazine第10号)は、嫌気発酵(anaerobic fermentation)を「発酵中に酸素を制限する、または酸素がない状態」の発酵と説明し、流行している(trendy)手法と表現している。"
+  },
+  "quotes": [
+   "the trendy anaerobic fermentation (i.e., with limiting or absence of oxygen during fermentation)."
+  ]
+ },
+ {
+  "key": "processing:ウェットハルド",
+  "content": {
+   "explanation": "ウェットハルドは、パーチメント(殻付き)をまだ湿った状態で脱殻する方式。ICCRI(S. Mawardi、2008年ICOセミナー資料)では、通常、含水率約30〜35%のうちにパーチメントを脱殻し、その後は生豆の状態で含水率12〜13%になるまで天日乾燥を続けるとされる。"
+  },
+  "quotes": [
+   "typically the parchment removal is done when the bean still moist with moisture content at about 30 – 35 %. After the wet hulling the green beans are continued for sun drying until 12 – 13 % of moisture content."
+  ]
+ },
+ {
+  "key": "processing:ウォッシュド",
+  "content": {
+   "explanation": "ウェット方式(basic wet processing)では、チェリーの果肉を除去し、水中に浸けて発酵させる。その後、発酵槽の水を抜き、発酵した豆を水で洗って残ったミューシレージ(粘液質)を取り除く(SCA『25 Magazine』)。"
+  },
+  "quotes": [
+   "During basic wet processing, fresh coffee cherries have their pulp removed (depulping) and submerged under water (fermentation). Afterwards, the fermentation tank is drained, and the fermented beans are cleaned with water to remove any remnant mucilage (washing)."
+  ]
+ },
+ {
+  "key": "processing:ナチュラル",
+  "content": {
+   "explanation": "コーヒーチェリー(果実)のまま乾燥させ、乾燥後に脱穀(ハルリング)する方法(ドライ方式)。ICOは、収穫した果実をラックに置いて天日で乾燥させると書く。"
+  },
+  "quotes": [
+   "Dry processed coffee is green coffee that has been dried in the whole cherry.",
+   "In the dry method the harvested berries are placed on racks to dry in the sun for some three weeks, following which hulling can take place.",
+   "as they dry thoroughly before hulling and roasting."
+  ]
+ },
+ {
+  "key": "processing:ハニー",
+  "content": {
+   "explanation": "果肉を除去したあと、ミューシレージ(粘液質)を一部または全部残したまま、パーチメント(殻)の状態で乾燥させる方法(パルプトナチュラルの一種)。SCAの『25 Magazine』(第6号)は、レッドハニー・イエローハニーを、ミューシレージをすべてではなく一部残して乾燥させるパルプトナチュラルとし、ミューシレージをすべて残して乾燥させるものをブラックハニーとも呼ぶと書く。同誌(第10号)は、パルプト・ハニー・プロセスを、産地で広まったハイブリッド的または新しい方法のひとつとして挙げる。"
+  },
+  "quotes": [
+   "Red and yellow honey coffees, a pulped natural dried with less than all the mucilage attached to parchment",
+   "Pulped natural coffee that dries with all mucilage attached to parchment, also known as black honey",
+   "many hybrid or novel methods also have gained popularity in the coffee production regions, such as the well-known pulped honey process"
+  ]
+ },
+ {
+  "key": "variety:カトゥーラ/カトゥアイ系統",
+  "content": {
+   "tagline": "",
+   "varieties": [],
+   "note": "Caturraはブルボンの自然突然変異で、単一遺伝子の変異により植物が小さく育つ(矮性・コンパクト)。WCRは、中米で標準的な品質の、収量の見込みが良いコンパクトな植物と書く。CatuaiはMundo Novo(ブルボンとティピカの自然交配)とCaturraを掛け合わせた品種で、ブラジル・サンパウロ州カンピナスのIAC(Instituto Agronomico)が作出し、ブラジルで広く栽培される。Maragogype(Maragogipe)は突然変異で、豆・節間・葉が特に大きく、収量は非常に少ない。PacamaraはPacasとMaragogipeの交配種で、主にエルサルバドルで栽培され、同国のカップ・オブ・エクセレンスで上位を占めることが多いとWCRは書く。"
+  },
+  "quotes": [
+   "Caturra is a natural mutation of the Bourbon variety.",
+   "Caturra has a single-gene mutation that causes the plant to grow smaller (called Dwarf/Compactism).",
+   "A compact plant with good yielding potential of standard quality in Central America.",
+   "A cross between highly productive Mundo Novo and compact Caturra, made by the Instituto Agronomico (IAC) of Sao Paulo State in Campinas, Brazil.",
+   "Mundo Novo is the result of a natural cross between the Bourbon and Typica varieties",
+   "is in wide cultivation there.",
+   "The mutation causes the beans, internode spacing and leaves to be especially large",
+   "Very low yielding, large leaves and large internodes.",
+   "Originated from a cross between Pacas and Maragogipe",
+   "Grown primarily in El Salvador, where it is frequently dominates Cup of Excellence competitions for high cup quality."
+  ]
+ },
+ {
+  "key": "variety:サルチモール/カティモール系統",
+  "content": {
+   "tagline": "",
+   "varieties": [],
+   "note": "ティモール・ハイブリッド(アラビカ種とロブスタ種が1920年代にティモール島で自然発生的に交配して現れた品種)を親に持つ交配品種のグループ。WCRは、ティモール・ハイブリッド×Caturra、ティモール・ハイブリッド×Villa Sarchiの交配から、introgressed Arabica(導入系アラビカ)品種の2大グループであるカティモールとサルチモールが生まれたと書く。WCRは、これらの品種は従来、他の品種より低いカップ品質と結びつけられてきたと書く。MarsellesaはTimor Hybrid 832/2とVilla Sarchi CIFC 971/10の交配で、2009年に公開された。"
+  },
+  "quotes": [
+   "Timor Hybrid is a natural cross between C. arabica and C. canephora (Robusta) that appeared spontaneously on the island of Timor in 1920s.",
+   "These crosses (Timor Hybrid x Caturra, and Timor Hybrid x Villa Sarchi) led to the creation of the two main groups of introgressed Arabica varieties: Catimors and Sarchimors.",
+   "Timor Hybrid 832/2 x Villa Sarchi CIFC 971/10",
+   "It was released in 2009.",
+   "These varieties have traditionally been associated with lower cup quality than others"
+  ]
+ },
+ {
+  "key": "variety:ティピカ系統",
+  "content": {
+   "tagline": "ティピカは収量が非常に少ないが、カップ品質は良いとWCRは書く",
+   "varieties": [
+    "Typica(ティピカ)",
+    "Pache(パチェ)"
+   ],
+   "note": "歴史家は、コーヒーの種子が最初にエチオピア南西部の森からイエメンに持ち出され、作物として栽培されたと考えている。WCRは、ティピカの枝は、オランダ人が1696年と1699年にインドのマラバール海岸からバタビアへ種子を送った頃にブルボンから分かれたと見られると書く。ティピカは、収量が非常に少なく、主要な病害に弱く、カップ品質は良い品種とWCRは書く。Pache(パチェ)はティピカの自然突然変異。"
+  },
+  "quotes": [
+   "Historians believe that coffee seeds were first taken from the coffee forests of Southwestern Ethiopia to Yemen, where it was cultivated as a crop.",
+   "The Typica branch likely separated from Bourbon when the Dutch sent seeds in 1696 and 1699 from Malabar coast of India to Batavia",
+   "It is a tall variety characterized by very low production, susceptibility to the major diseases, and good cup quality.",
+   "A natural mutation of Typica."
+  ]
+ },
+ {
+  "key": "variety:ブルボン系統",
+  "content": {
+   "tagline": "イエメンからブルボン島(現レユニオン島)に導入され、島の名が品種名の由来になったとWCRは書く",
+   "varieties": [],
+   "note": "ブルボンは、フランス人宣教師が18世紀初めにイエメンからブルボン島(現レユニオン島)に導入した品種で、この島の名が品種名の由来になった。WCRは、Pacasをブルボンの自然突然変異、Villa Sarchiをブルボン集団の自然突然変異と書く。"
+  },
+  "quotes": [
+   "French missionaries introduced Bourbon from Yemen to Bourbon Island (now La Réunion)—giving it the name it has today—in the early 1700s.",
+   "Pacas is a natural mutation of Bourbon",
+   "Villa Sarchi (also called La Luisa or Villalobos Bourbon) is a natural mutation of a Bourbon population"
+  ]
+ },
+ {
+  "key": "variety:特殊・高付加価値品種",
+  "content": {
+   "tagline": "",
+   "varieties": [],
+   "note": "Geisha(ゲイシャ)は、WCRによると1930年代にエチオピアの森林で採取された品種。2005年にパナマ・ボケテのPeterson家が「Best of Panama」の競技会・オークションに出品したことで注目を集めた。Starmayaは、Marsellesaとエチオピアまたはスーダンの雄性不稔の在来種を掛け合わせたF1(第一世代)ハイブリッド。WCRは、プロの種子生産者が高価なバイオテクノロジーに頼らず種子で増やせるF1ハイブリッドは、現時点で世界でStarmayaだけと書く。"
+  },
+  "quotes": [
+   "This variety was originally collected from coffee forests in Ethiopia in the 1930s.",
+   "The coffee came to prominence in 2005 when the Peterson family of Boquete, Panama, entered it into the \"Best of Panama\" competition and auction.",
+   "A first-generation (F1) hybrid originating from a cross between Marsellesa and a male-sterile Ethiopian or Sudanese landrace variety.",
+   "So far, Starmaya is the only F1 hybrid in the world that professional seed producers can propagate by seed, rather than through costly biotechnology."
+  ]
+ }
+]

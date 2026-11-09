@@ -1,0 +1,276 @@
+{
+ "translations": {
+  "fact:ハワイには「ハワイ産と名乗れる最低ライン」がある": {
+   "en": {
+    "title": "Under Hawaii's state rules, anything below Hawaii No.3 is \"Offgrade\"",
+    "text": "According to the summary table in Hawaii's administrative rules (Chapter 4-143), coffee of lower quality than Hawaii No.3 is classed as \"Offgrade,\" and using the word \"Hawaii\" in combination with the term Offgrade is prohibited."
+   },
+   "notes": ""
+  },
+  "fact:フレーバーホイールの生みの親": {
+   "en": {
+    "title": "The lexicon that became the foundation of the flavor wheel",
+    "text": "The SCA Coffee Taster's Flavor Wheel is built on the WCR Sensory Lexicon. The lexicon was created at the Sensory Analysis Center at Kansas State University."
+   },
+   "notes": "「コーヒーテイスターズフレーバーホイール」は公式名 Coffee Taster's Flavor Wheel とした(引用には wheel の名称なし)"
+  },
+  "fact:ブラジルの生産地はある年の大霜害で移動した": {
+   "en": {
+    "title": "Brazil's production lead shifted from Paraná State to Minas Gerais State after a major frost in one year",
+    "text": "On July 18, 1975, an unprecedented polar air mass struck Paraná State and devastated its coffee farmland (IDR-Paraná, the Paraná state government). A 1995 document from the São Paulo State Institute of Agricultural Economics (IEA) says that the 1975 frost broke Paraná's dominance in Brazilian coffee production, and that this position passed to Minas Gerais State."
+   },
+   "notes": "IEA は Instituto de Economia Agrícola の日本語名の直訳(São Paulo State Institute of Agricultural Economics)"
+  },
+  "fact:ブルーマウンテンは商標で守られている": {
+   "en": {
+    "title": "Blue Mountain is registered in the United States as a certification mark",
+    "text": "According to a case study in WIPO's IP Advantage, Blue Mountain Coffee is registered with the United States Patent and Trademark Office (USPTO) as a certification mark (registration No. 1,414,598)."
+   },
+   "notes": ""
+  },
+  "fact:ベトナムはロブスタが9割超": {
+   "en": {
+    "title": "Over 90% of Vietnam's coffee is Robusta",
+    "text": "Comparing Vietnam's production row with its Robusta production row in the table of the USDA FAS \"Coffee: World Markets and Trade\" (July 2026) shows that Robusta accounts for more than 90% of Vietnam's production."
+   },
+   "notes": ""
+  },
+  "fact:マンデリンとガヨマウンテンは排他的な関係": {
+   "en": {
+    "title": "The code's definition of Mandheling excludes the Gayo Mountain production area",
+    "text": "In the Fair Competition Code of the All Japan Coffee Fair Trade Council (Appendix Table 2), Gayo Mountain is defined as Arabica beans produced in the Takengon district of Sumatra, Indonesia, and Mandheling as Arabica beans produced in North Sumatra Province and Aceh Province, Indonesia (excluding the Gayo Mountain production area around Takengon)."
+   },
+   "notes": "全日本コーヒー公正取引協議会 = All Japan Coffee Fair Trade Council(英語の公式表記は引用になく、直訳)。マンデリンは Mandheling 表記"
+  },
+  "fact:ロブスタの鑑定士はウガンダが認定する": {
+   "en": {
+    "title": "Q Graders come in two types: \"Q Arabica\" and \"Q Robusta\"",
+    "text": "According to an article by the Uganda Coffee Development Authority (UCDA), the Q Venue supports the certification of Q Arabica and Q Robusta graders."
+   },
+   "notes": ""
+  },
+  "fact:内戦が皮肉にも伝統品種を守った": {
+   "en": {
+    "title": "El Salvador's coffee was hit hard by the internal strife of the 1980s",
+    "text": "According to the ICO's El Salvador coffee profile, the internal civil strife of the 1980s had a drastic effect on the country's economic activity and output; coffee was one of the worst-hit sectors, and production fell by an average of around 25%."
+   },
+   "notes": ""
+  },
+  "glossary:Coffee Value Assessment(CVA)": {
+   "en": {
+    "summary": "The SCA's CVA (Coffee Value Assessment) is the SCA's system and tool for evaluating coffee. Rather than relying on a single score, it combines four complementary assessment types.",
+    "detail": "The four assessment types are as follows. (1) Evaluates the physical attributes of coffee (color, defects, moisture content, size, etc.). (2) Objectively records sensory attributes such as aroma, flavor, texture, and aftertaste using standardized language. (3) Captures the evaluator's impression of coffee quality (related to personal preference or the preferences of their market). (4) Evaluates information beyond the cup that adds value (certifications, origin traceability, processing information, etc.). Combined, these capture a full picture of the coffee's value."
+   },
+   "notes": ""
+  },
+  "glossary:アナエロビック(Anaerobic)": {
+   "en": {
+    "summary": "A fermentation method in which oxygen is limited or absent during fermentation.",
+    "detail": "The SCA lists anaerobic fermentation (a method that limits or eliminates oxygen during fermentation) as one of the newer methods that have become popular in producing regions, alongside the honey process. The SCA also cites carbonic maceration, among others, as an example of a fermentation technique inspired by the wine world."
+   },
+   "notes": ""
+  },
+  "glossary:ウェットハルド(Wet Hulled)": {
+   "en": {
+    "summary": "A method in which the beans are hulled while still moist to take out the green beans, which are then dried again. The All Japan Coffee Association describes this as the Sumatra-style (semi-washed) process.",
+    "detail": "The All Japan Coffee Association describes the Sumatra-style (semi-washed) process as one in which the beans are hulled while still moist to take out the green beans, which are then dried again."
+   },
+   "notes": "全日本コーヒー協会 = All Japan Coffee Association(直訳)。脱穀 = hulled"
+  },
+  "glossary:ウォッシュド(Washed)": {
+   "en": {
+    "summary": "A method in which the pulp is removed, the mucilage is fermented, and the beans are then washed with water and dried.",
+    "detail": "According to the All Japan Coffee Association, this is a process in which the pulp is removed from the coffee cherry, the sticky layer on the beans (mucilage) is fermented, and the beans are then washed with clean water and dried."
+   },
+   "notes": ""
+  },
+  "glossary:スペシャルティコーヒー": {
+   "en": {
+    "summary": "The SCA (Specialty Coffee Association) describes specialty coffee as coffee recognized for its distinctive characteristics and higher value in the market.",
+    "detail": "According to the SCA's \"25\" magazine (Issue 18), a new definition was presented in a 2021 white paper. Separately, the ICO working document \"Existing definitions of specialty coffee\" (FGSC 03/24 Rev.1, October 1, 2025) includes a definition of specialty coffee as beans free from impurities and defects that have distinct sensory attributes; because of these attributes (such as a clean and sweet beverage and balanced body and acidity), the beverage qualifies as scoring above 80 points in sensory analysis."
+   },
+   "notes": "『25』誌は \"25\" magazine とした"
+  },
+  "glossary:ダイヤルイン(Dial-in)": {
+   "en": {
+    "summary": "The work of adjusting brewing conditions to find the conditions under which that coffee's flavor is at its best.",
+    "detail": "According to an SCA article, when serving an unfamiliar coffee, one goes through a procedure called \"dialing in,\" adjusting factors such as dose, grind, and extraction level to optimize the flavor of the coffee. The SCA describes this as a kind of tuning: adjusting variables methodically until the optimal flavor appears."
+   },
+   "notes": ""
+  },
+  "glossary:ナチュラル(Natural)": {
+   "en": {
+    "summary": "A method in which the cherries are dried as they are, and then hulled to take out the green beans.",
+    "detail": "According to the All Japan Coffee Association, this is a process in which coffee cherries are dried in the sun with the pulp still attached, and then hulled to take out the coffee beans."
+   },
+   "notes": ""
+  },
+  "glossary:ハニー(Honey)": {
+   "en": {
+    "summary": "A method in which the pulp is removed and the beans are dried with the mucilage left on.",
+    "detail": "After the pulp is removed, the beans are dried with some or all of the mucilage left on. The SCA describes red and yellow honey as dried with some, but not all, of the mucilage left on, and black honey as dried with all of the mucilage left on. The All Japan Coffee Association explains that in recent years an improved version of the semi-washed process has been practiced in Central America, and that Costa Rica's \"honey process\" uses less water than the washed process."
+   },
+   "notes": ""
+  },
+  "glossary:ブレンド(Blend)": {
+   "en": {
+    "summary": "Coffee made by combining several kinds of beans.",
+    "detail": "Combining several kinds of beans to achieve a flavor that a single bean cannot produce is called \"blending.\" The All Japan Coffee Association gives four purposes of blending: to bring out a preferred flavor, to create a new flavor, to maintain harmonious quality, and to maintain and stabilize the price. Under the enforcement regulations of the Fair Competition Code of the All Japan Coffee Fair Trade Council, a product may be labeled \"XX Blend\" (where XX is the origin, variety, brand name, etc. of the green coffee beans) only if it uses 30 percent or more of those green beans."
+   },
+   "notes": ""
+  },
+  "glossary:焙煎度(ロースト)": {
+   "en": {
+    "summary": "The degree to which green beans are roasted. The All Japan Coffee Association says there are eight roast levels, from Light Roast to Italian Roast.",
+    "detail": "From light to dark roast: Light, Cinnamon, Medium, High, City, Full City, French, Italian. The All Japan Coffee Association explains that, in general, the lighter the roast, the stronger the acidity, and the darker the roast, the more bitterness is perceived. An SCA article describes lowering the Agtron number as roasting darker."
+   },
+   "notes": ""
+  },
+  "glossary:特定銘柄": {
+   "en": {
+    "summary": "The enforcement regulations of the All Japan Coffee Fair Trade Council's \"Fair Competition Code Concerning the Labeling of Regular Coffee and Instant Coffee\" give 14 types as examples of the classification and scope of origins and brands.",
+    "detail": "The classification and scope of 14 brands, including Blue Mountain and Kilimanjaro, are given as examples in Appendix Table 2 of the enforcement regulations. Regarding fair competition codes, the National Federation of Fair Trade Councils explains that, under the provisions of the Act against Unjustifiable Premiums and Misleading Representations, they are industry rules that businesses or business associations voluntarily set on matters such as labeling, after being authorized by the Commissioner of the Consumer Affairs Agency and the Fair Trade Commission. A product may be labeled \"XX Blend\" (where XX is the origin, variety, brand name, etc. of the green coffee beans) only if it uses 30 percent or more of those green beans."
+   },
+   "notes": "全国公正取引協議会連合会 = National Federation of Fair Trade Councils(直訳)、認定 = authorized(直訳)"
+  },
+  "glossary:精選(せいせん)": {
+   "en": {
+    "summary": "Processing work carried out after harvest, such as pulping, washing, drying, hulling, and sorting.",
+    "detail": "The All Japan Coffee Association explains that after harvest, processing work such as pulping, washing, drying, hulling, and sorting is carried out."
+   },
+   "notes": ""
+  },
+  "grade:shb": {
+   "en": {
+    "text": "SHB stands for Strictly Hard Bean. In a document from Costa Rica's ICAFE (code 2-P-3.1), Norte Los Santos (Dota, Tarrazú, León Cortés) is listed as \"STRICTLY HARD BEAN,\" with an altitude of 1200 to 1700 m."
+   },
+   "notes": ""
+  },
+  "origin:イエメン:farmStructure": {
+   "en": {
+    "text": "Most coffee land is not owned by the farmers but rented from landowners (FAO/IFC 2023). Qat is expanding more and more onto land formerly planted with coffee (FAO/IFC 2023)."
+   },
+   "notes": "カート = qat"
+  },
+  "origin:イエメン:harvestSeason": {
+   "en": {
+    "text": "Coffee has two harvest seasons, a main season and a secondary season, in all 15 governorates (FAO/IFC 2023). Most coffee is natural (dry) processed, and drying is done on rooftops or in primary drying centers (FAO 2025)."
+   },
+   "notes": ""
+  },
+  "origin:イエメン:history": {
+   "en": {
+    "text": "Coffee was already being cultivated in Yemen in the 15th century (ICO). WCR writes that coffee seeds were first taken from the coffee forests of southwestern Ethiopia to Yemen, where they were cultivated as a crop. The port of Mocha (Al Mokha) was historically the main hub for coffee exports from Yemen, and \"mocha\" coffee is associated with this port (FAO/IFC 2023). The conflict that began in 2015 further damaged the country's already deteriorating infrastructure (FAO/IFC 2023)."
+   },
+   "notes": ""
+  },
+  "origin:イエメン:officialBody": {
+   "en": {
+    "text": "The Standards and Metrology Authority (SMA) is responsible for setting coffee quality standards, but it has no written standards or classification for Yemeni coffee beans and their varieties (FAO/IFC 2023)."
+   },
+   "notes": ""
+  },
+  "origin:イエメン:tagline": {
+   "en": {
+    "text": "One of the historical birthplaces of Arabica coffee (FAO). Natural processing gives Yemeni coffee the winey characteristic that distinguishes it from others (FAO/IFC 2023)."
+   },
+   "notes": ""
+  },
+  "origin:イエメン:terroir": {
+   "en": {
+    "text": "Coffee is grown mainly in the mountains and valleys of 15 governorates, generally on terraces (FAO/IFC 2023). It is grown mainly on terraces in the western highlands, using traditional methods (FAO 2025). All varieties of Arabica evolved to adapt to Yemen's arid climate (FAO/IFC 2023). Farmers depend on the rainy seasons to water their coffee trees, but without irrigation management they cannot safely capture and store rainwater, and they have no access to reservoirs or dams for use in the dry season (FAO/IFC 2023)."
+   },
+   "notes": ""
+  },
+  "origin:イエメン:varietiesDetail": {
+   "en": {
+    "text": "In Yemen, tall trees are called Udaini, Jufaini, and Jadi, and compact trees are called Dawairi and Tufahi (2021 paper). On August 14, 2020, Qima Coffee announced the discovery of an entirely new mother population previously unknown to the coffee world (from the company's \"YEMENIA\" page). The 2021 paper examined 137 samples of C. arabica. The paper also states that it found one cluster made up only of Yemeni samples and containing no other cultivars from around the world."
+   },
+   "notes": ""
+  },
+  "origin:インドネシア:farmStructure": {
+   "en": {
+    "text": "Smallholders (typically 1–2 ha) account for about 98% of the cultivated area (USDA FAS 2026)."
+   },
+   "notes": ""
+  },
+  "origin:インドネシア:harvestSeason": {
+   "en": {
+    "text": "The main harvest in Aceh is typically in October–November (USDA FAS, report dated May 15, 2026)."
+   },
+   "notes": ""
+  },
+  "origin:インドネシア:history": {
+   "en": {
+    "text": "In 1696 and 1699, coffee seeds were sent from the Malabar coast of India to Batavia (now Java) (WCR). Robusta accounts for about 80–90% of total production (USDA FAS 2025). The geographical indication application for Gayo Arabica (2016) states, following a note that it is also called the \"Sumatra semi-washed process,\" that the step of removing the parchment (hulling) is carried out while the parchment is still moist (moisture content of 25–30%)."
+   },
+   "notes": ""
+  },
+  "origin:インドネシア:sub:ガヨマウンテン(スマトラ)": {
+   "en": {
+    "detail": "The geographical indication application for Gayo Arabica (Kopi Arabika Gayo) lists as its characteristics nutty, chocolaty, caramelly, and fruity flavors and aromas, bright acidity, full body, and a long finish."
+   },
+   "notes": ""
+  },
+  "origin:エチオピア:farmStructure": {
+   "en": {
+    "text": "According to the 2026 USDA FAS report, smallholders account for 90% of the country's total coffee production. The ECX (Ethiopia Commodity Exchange) was established in 2008 (USDA FAS 2019). A 2019 policy reform allowed smallholders owning 2 ha or more of land to obtain export licenses and sell their coffee directly to international markets (USDA FAS 2025)."
+   },
+   "notes": ""
+  },
+  "origin:エチオピア:gradeSystem": {
+   "en": {
+    "text": "Coffee for export is graded Grade 1–5 (USDA FAS, May 2026)."
+   },
+   "notes": ""
+  },
+  "origin:エチオピア:harvestSeason": {
+   "en": {
+    "text": "The main harvest period is October to December (USDA FAS, May 2026)."
+   },
+   "notes": ""
+  },
+  "origin:エチオピア:history": {
+   "en": {
+    "text": "UNESCO describes Kafa as the birthplace of wild Arabica coffee, and the Kafa Zone as the centre of origin and genetic diversity of wild Coffea arabica. Coffee accounts for about one-third of the country's export earnings (USDA FAS 2025), and the coffee sector supports about 15 million people, including smallholders and other market players (USDA FAS 2025). Ethiopia has one of the highest domestic coffee consumption rates among producing countries (USDA FAS 2025), and coffee plays a central role in daily life and traditional ceremonies (same source)."
+   },
+   "notes": "約1,500万人 = about 15 million people"
+  },
+  "origin:エチオピア:regions": {
+   "en": {
+    "text": "Yirgacheffe, Harar (an ICO 2010 conference document lists them as coffee names known internationally), former Sidamo (south) (listed in the same document), and Jimma (USDA FAS 2026 lists it as a production area in the west and southwest)."
+   },
+   "notes": ""
+  },
+  "origin:エチオピア:sub:ボンガ": {
+   "en": {
+    "detail": "The \"Year of Nomination\" in the UNESCO MAB document \"Kafa\" is 2010. UNESCO states that the Kafa Zone is the centre of origin and genetic diversity of wild Coffea arabica, and that it contains close to 5,000 wild varieties."
+   },
+   "notes": ""
+  },
+  "origin:エチオピア:tagline": {
+   "en": {
+    "text": "The birthplace of Arabica coffee."
+   },
+   "notes": "原文引用は Coffea arabica だが、日本語は「アラビカ種コーヒー」なので Arabica coffee とした"
+  },
+  "origin:エチオピア:terroir": {
+   "en": {
+    "text": "Elevations range from 1,500 m to over 2,200 m (USDA FAS, June 2025). An ICO 2010 conference document (a presentation by a researcher affiliated with EIAR) states that coffee is mainly produced in the southwest (former Kaffa, Illubabor, and Wollega), southeast (Bale and Arsi), south (former Sidamo), and southeast (Harerge; spelling as in the document)."
+   },
+   "notes": ""
+  },
+  "origin:エチオピア:varietiesDetail": {
+   "en": {
+    "text": "An ICO 2010 conference document states that Coffea arabica is the only species occurring in Ethiopia. WCR states that most landrace varieties originate from the forests of Ethiopia. The WCR catalog says that Geisha was collected from coffee forests in Ethiopia in the 1930s."
+   },
+   "notes": ""
+  },
+  "origin:エルサルバドル:farmStructure": {
+   "en": {
+    "text": "According to the Constitution of El Salvador (text from the Legislative Assembly), the maximum area of rural land (tierra rústica) that may be owned by the same natural or legal person must not exceed 245 hectares. This limit does not apply to cooperative associations or peasant community associations (asociaciones cooperativas o comunales campesinas)."
+   },
+   "notes": ""
+  }
+ }
+}

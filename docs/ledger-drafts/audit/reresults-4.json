@@ -1,0 +1,313 @@
+{
+  "results": {
+    "origin:エルサルバドル:tagline": {
+      "verdict": "ok",
+      "problems": [
+        "ブルボン=62%は表の列順による対応づけ(引用は項目名と数値の並び)。表示文は引用の範囲内"
+      ]
+    },
+    "origin:エルサルバドル:terroir": {
+      "verdict": "ok",
+      "problems": [
+        "RTS通報版・ICO資料の帰属あり。数字・限定語とも引用と一致"
+      ]
+    },
+    "origin:エルサルバドル:varietiesDetail": {
+      "verdict": "fix",
+      "finalContent": {
+        "text": "ブルボン種が栽培品種の62%(約6割)を占める(ICO資料、2015/16年時点)。パカスはブルボンの自然変異で、1949年にサンタアナ地方で発見された(WCR)。パカマラはパカスとマラゴジッペの交配種で、国内の研究機関ISIC(Salvadoran Institute of Coffee Research)が不完全な系統選抜を行った(WCR)。2012〜13年のさび病危機を受け、さび病に耐性のあるアラビカ種の作付けが増えている(WCR)。"
+      },
+      "usedClaims": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "problems": [
+        "引用は「不完全な系統選抜(incomplete pedigree selection)」なのに「不完全な」が脱落していた",
+        "「さび病の被害」は引用の「leaf rust crisis(危機)」より言い換えが広いので「危機」に戻した"
+      ]
+    },
+    "origin:グアテマラ:farmStructure": {
+      "verdict": "fix",
+      "finalContent": {
+        "text": "グアテマラのコーヒー生産者の97%は小規模生産者で、生産量の44%を占める(USDA FAS、2025年)。Anacaféは1960年設立で、土壌・植物・水の分析(Analab)やカッピング(官能評価)の開催などを行っている。Anacaféの2020年11月20日のプレスリリースによると、それぞれ独自のカップ特性を持つ8つの産地が設けられた。"
+      },
+      "usedClaims": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "problems": [
+        "「国内のコーヒーを8つの産地に区分している」は引用(8つの産地が設けられた/establecieron)より強い言い換えのため、設けられたに直した",
+        "「カッピングの運営」は引用(organizar cataciones=カッピングの開催)に合わせて「開催」に直した",
+        "引用にある「独自のカップ特性(perfiles de taza únicos)」を産地の記述に合わせて反映"
+      ]
+    },
+    "origin:グアテマラ:gradeSystem": {
+      "verdict": "fix",
+      "finalContent": {
+        "text": "Anacaféの標高図(Coffee types)には、標高帯ごとに、SHBが標高4,500フィート(1,370m)超、Semi-Hard / Hardが3,500〜4,500フィート(1,066〜1,370m)、Extra Prime / EPWが2,500〜3,500フィート(764〜1,066m)と示されている。Anacaféの2019年品種モニタリング報告は、品種の品質は栽培地の標高と直接関係すると述べている。"
+      },
+      "usedClaims": [
+        0,
+        1
+      ],
+      "problems": [
+        "引用に「等級は標高で区分される」とは書かれておらず(標高帯と名称の並びのみ)、「等級」「区分され」は主張の文の言い換えだったので、示されている内容に直した"
+      ]
+    },
+    "origin:グアテマラ:history": {
+      "verdict": "fix",
+      "finalContent": {
+        "text": "Anacaféの歴史のインフォグラフィックによると、イエズス会の司祭が、植民都市アンティグアの修道院の庭の観賞用植物として、最初のコーヒーの木を持ち込んだ。また、バッタの大量発生が、経済が依存していた2つの輸出作物の一つである藍(インディゴ)の農園を壊滅させたと記されている。"
+      },
+      "usedClaims": [
+        0,
+        1,
+        2
+      ],
+      "problems": [
+        "「18世紀(1700年の項)」「1800年の項」は引用に無く、location(見出し)にしか無いため削除",
+        "「年表」も引用に無いため「歴史のインフォグラフィック」(資料の題名)に直した"
+      ]
+    },
+    "origin:グアテマラ:sub:アンティグア": {
+      "verdict": "ok",
+      "problems": []
+    },
+    "origin:グアテマラ:sub:ウエウエテナンゴ": {
+      "verdict": "ok",
+      "problems": [
+        "「繊細で強い酸味」は原文fine, intense acidityの訳として許容範囲"
+      ]
+    },
+    "origin:グアテマラ:tagline": {
+      "verdict": "fix",
+      "finalContent": {
+        "text": "Anacaféによると、グアテマラの標高の高い地域のコーヒーはいずれも、心地よい酸味、豊かなボディ、繊細な甘みを備える。"
+      },
+      "usedClaims": [
+        0
+      ],
+      "problems": [
+        "引用の「todos(すべての)」が脱落し、Anacaféの記述を事実の断定として書いていた。帰属を付け、「いずれも」を戻した",
+        "「コク」は引用の「cuerpo(ボディ)」に直した"
+      ]
+    },
+    "origin:グアテマラ:varietiesDetail": {
+      "verdict": "fix",
+      "finalContent": {
+        "text": "Anacaféの品種ガイド(2020)は、カトゥーラ、カトゥアイ、パチェ、パチェ・コリス、ブルボン、ムンドノーボ、パカマラ、ティピカなどの品種を挙げている。パチェは1949年にグアテマラのサンタロサで見つかったティピカの変異種。サルチモールは樹高が低く、収量が高く、低〜中標高地に適している(同ガイド)。"
+      },
+      "usedClaims": [
+        0,
+        1,
+        2
+      ],
+      "problems": [
+        "引用は「las cuales son: ...」の列挙のみで「栽培されている」とは書かれていないため削除(品種ガイドの題名の範囲で「品種を挙げている」とした)"
+      ]
+    },
+    "origin:ケニア:farmStructure": {
+      "verdict": "fix",
+      "finalContent": {
+        "text": "農家は収穫後、摘んだ果実を所属する組合(primary society)に届け、加工される(ICOケニア・プロファイル)。ナイロビ・コーヒー・エクスチェンジ(NCE)の競売は、通常、火曜の午前に取引フロアで開かれる(NCE競売カレンダー)。ケニアでは、コーヒーは中央競売システムを通じて販売される(ICO)。"
+      },
+      "usedClaims": [
+        0,
+        1,
+        2
+      ],
+      "problems": [
+        "引用は「central auction system managed by the Nairobi」で途切れ、「同取引所(NCE)が運営」とは読めないため削除"
+      ]
+    },
+    "origin:ケニア:gradeSystem": {
+      "verdict": "fix",
+      "finalContent": {
+        "text": "ケニアのコーヒー(一般)規則2019(Legal Notice No. 102)では、AAは平豆で、21を通過し18に残る大きさ(7.2mm)とされる。ただし、大きさ・形による格付けは、コーヒーの品質のおおよその目安にすぎない(EAS 130:1999)。"
+      },
+      "usedClaims": [
+        0,
+        1
+      ],
+      "problems": [
+        "引用に「スクリーン」の語は無く(Through 21 retained on 18)、location由来のため削除",
+        "「第5付表(ケニア標準)」は引用に無くlocationのみのため削除"
+      ]
+    },
+    "origin:ケニア:harvestSeason": {
+      "verdict": "ok",
+      "problems": []
+    },
+    "origin:ケニア:history": {
+      "verdict": "ok",
+      "problems": [
+        "フランス系宣教師・Spiritans・1893年・1899年・白人入植者(1930年代まで)とも引用と一致。「聖霊修道会」はSpiritansの日本語名"
+      ]
+    },
+    "origin:ケニア:officialBody": {
+      "verdict": "ok",
+      "problems": []
+    },
+    "origin:ケニア:sub:キリニャガ": {
+      "verdict": "fix",
+      "finalContent": {
+        "detail": "AFAの2024年10月21日の記事によると、キリニャガ県は、果実の生産量で先頭だった3県(キアンブ、キリニャガ、ニエリの順)の2番目に挙げられている。"
+      },
+      "usedClaims": [
+        0
+      ],
+      "problems": [
+        "「主要なコーヒー生産県の一つ」は引用に無い",
+        "「2022/23年度」は引用に無くlocationにも無く確認できないため削除(資料の日付2024-10-21に置き換え)"
+      ]
+    },
+    "origin:ケニア:sub:ニエリ": {
+      "verdict": "fix",
+      "finalContent": {
+        "detail": "AFAの2024年10月21日の記事によると、ニエリ県は、果実の生産量で先頭だった3県(キアンブ、キリニャガ、ニエリの順)の3番目に挙げられている。"
+      },
+      "usedClaims": [
+        0
+      ],
+      "problems": [
+        "「主要なコーヒー生産県の一つ」は引用に無い",
+        "「2022/23年度」は引用に無く確認できないため削除(資料の日付2024-10-21に置き換え)"
+      ]
+    },
+    "origin:ケニア:tagline": {
+      "verdict": "ok",
+      "problems": [
+        "引用のfull bodyは省略されているが、省略は可"
+      ]
+    },
+    "origin:ケニア:terroir": {
+      "verdict": "fix",
+      "finalContent": {
+        "text": "ICOのケニア・プロファイルによると、コーヒー産地は西部、リフトバレー、中央ケニア、ケニア山の各地域にある。ケニア山の標高は5,199m(UNESCO世界遺産リスト)。同プロファイルには、深く水はけのよい赤色の火山性土壌という記述がある(ICO)。"
+      },
+      "usedClaims": [
+        0,
+        1,
+        2
+      ],
+      "problems": [
+        "土壌の引用は「in red volcanic soils that are deep and well drained」と途中から始まり、何の土壌かが引用内に無い。「栽培地の土壌として」は引用の範囲を超えるため、記述の存在を述べる形に直した"
+      ]
+    },
+    "origin:ケニア:varietiesDetail": {
+      "verdict": "fix",
+      "finalContent": {
+        "text": "SL28・SL34は、K7、Ruiru 11、Batian、Blue Mountainとともにケニアの主要品種(ICO)。WCRのSL28の記述では、Scott Laboratoriesで1935〜39年に行われた個体選抜には接頭辞SLが付けられた。SL28は干ばつ耐性がある(WCR)。SL34は1930年代後半にScott Agricultural Laboratoriesで選抜され、十分な降雨のある高標高の地域に適応している(WCR)。Ruiru 11とBatianはコーヒーさび病に耐性があり、コーヒー果実病(CBD)に抵抗性がある(WCR)。"
+      },
+      "usedClaims": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "problems": [
+        "引用は「good rainfall(十分な降雨)」で、「降雨の多い」は意味が違うため直した"
+      ]
+    },
+    "origin:コスタリカ:farmStructure": {
+      "verdict": "ok",
+      "problems": []
+    },
+    "origin:コスタリカ:gradeSystem": {
+      "verdict": "ok",
+      "problems": [
+        "最後の「等級ごとの標高の基準値は、公式資料で確認できていない」は調査状況の開示であり、引用では裏付けられない(事実主張ではなく未確認の開示。ご判断ください)"
+      ]
+    },
+    "origin:コスタリカ:harvestSeason": {
+      "verdict": "ok",
+      "problems": []
+    },
+    "origin:コスタリカ:history": {
+      "verdict": "fix",
+      "finalContent": {
+        "text": "ICAFEの資料(2008年)によると、最初の種子は18世紀末に到来したが、コスタリカでコーヒー栽培が始まったと歴史的証拠で確実に言えるのは1808年以降。独立の年の1821年には、サンホセの自治体(corporación josefina)が貧しい人々(indigentes)にコーヒーの苗を無償で配った。1843年から、ウィリアム・ル・ラシュールの帆船ザ・モナーク号による英国への果実の積み出しがあった。"
+      },
+      "usedClaims": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "problems": [
+        "引用は「envío de fruta a Inglaterra(英国への果実の積み出し)」で、「始まった」「コーヒー」とは書かれていないため直した",
+        "1808年の引用は「se empezó a」で途切れている(動詞は引用内に無い)が、前後の文脈上の栽培開始として許容"
+      ]
+    },
+    "origin:コスタリカ:officialBody": {
+      "verdict": "fix",
+      "finalContent": {
+        "text": "ICAFE(Instituto del Café de Costa Rica)は、1933年にコスタリカのコーヒー栽培を統括する機関として設立された、国家機関ではない公的機関。ICAFEのセクター構造のページは、1961年6月21日の法律第2762号(Ley 2762)とその改正、および同法の規則による規制に言及している。ミル(beneficiador)として操業するには、ICAFEが保有する登録簿への登録が必要。"
+      },
+      "usedClaims": [
+        0,
+        1,
+        2
+      ],
+      "problems": [
+        "引用は「registro que posee el ICAFE(ICAFEが保有する登録簿)」で、「管理する」は強い言い換えのため直した"
+      ]
+    },
+    "origin:コスタリカ:terroir": {
+      "verdict": "fix",
+      "finalContent": {
+        "text": "ICAFEは、標高1,200mを超える高地は火山起源としている。ロス・サントス地域は、雨季(5〜11月)と乾季(12〜4月)がはっきり分かれている(ICAFE)。"
+      },
+      "usedClaims": [
+        0,
+        1
+      ],
+      "problems": [
+        "引用は「zonas altas ... de origen volcánico(高地が火山起源)」で、「土壌」とは書かれていないため直した"
+      ]
+    },
+    "origin:コスタリカ:varietiesDetail": {
+      "verdict": "ok",
+      "problems": []
+    },
+    "origin:コロンビア:farmStructure": {
+      "verdict": "ok",
+      "problems": []
+    },
+    "origin:コロンビア:gradeSystem": {
+      "verdict": "ok",
+      "problems": [
+        "画像PDFのため引用は目視書き写し(機械照合なし)。表示文は引用と一致"
+      ]
+    },
+    "origin:コロンビア:history": {
+      "verdict": "fix",
+      "finalContent": {
+        "text": "FNCのニュース記事「Salazar de las Palmas: cuna del café colombiano」は、ベネズエラのルビオから来た司祭フランシスコ・ロメロが最初のコーヒーの種を持ち込んだと述べ、告解した罪ごとの贖罪は、コーヒーの木を植えて世話することだったと述べている。Café de Colombia(FNC)のサイトによると、カウカ、ウイラ、サンタンデールについては原産地呼称(DO)の保護が宣言されている。ウイラは2013年4月16日のSIC決議17989号で、DOとして保護が宣言された。"
+      },
+      "usedClaims": [
+        0,
+        1,
+        2
+      ],
+      "problems": [
+        "「言い伝え」は引用に無く(検証メモの解釈)、断定の強さを帰属表現に直した",
+        "「サラサール・デ・ラス・パルマスで」持ち込んだとは引用に無い(記事見出しのみ)ため、見出しを記事名として示す形にした"
+      ]
+    },
+    "origin:コロンビア:officialBody": {
+      "verdict": "ok",
+      "problems": [
+        "引用が画像PDF由来の部分は目視書き写し(機械照合なし)"
+      ]
+    }
+  }
+}

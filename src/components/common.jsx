@@ -1,5 +1,6 @@
 import { MapPin, Star, X } from "lucide-react";
 import { useLang, useT } from "../i18n";
+import { sourcesFor } from "../data/ledger";
 
 // 見出し。日本語では「英語の小さなラベル + 日本語の見出し」、英語では英語の見出しだけを出す(同じ語が重ならないように)。
 export function SectionHeading({ en, ja, className = "" }) {
@@ -131,6 +132,46 @@ export function SourceCredit({ sources }) {
     <div className="mt-2 pt-3 border-t border-[var(--c-border)]">
       <p className="text-[11px] text-[var(--c-text-3)] leading-relaxed">
         {t("出典: {sources}", { sources: sources.join(" / ") })}
+      </p>
+    </div>
+  );
+}
+
+// 出典(資料名・リンク・確認日)。台帳(src/data/ledger)で原文を確認できた資料だけを出す。
+// keys は、画面に出している記述の台帳のキー。出典が1つも無ければ何も出さない。
+export function SourceLinks({ keys, className = "" }) {
+  const t = useT();
+  const sources = sourcesFor(keys);
+  if (sources.length === 0) return null;
+  const checked = sources.map((s) => s.accessed).sort().at(-1);
+  return (
+    <span className={className}>
+      <span>{t("出典:")} </span>
+      {sources.map((source, i) => (
+        <span key={source.id}>
+          {i > 0 && " / "}
+          <a
+            href={source.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={(e) => e.stopPropagation()}
+            className="underline underline-offset-2 break-words"
+          >
+            {source.org ? `${source.org} ${source.title}` : source.title}
+          </a>
+        </span>
+      ))}
+      <span> ({t("確認日: {date}", { date: checked })})</span>
+    </span>
+  );
+}
+
+export function VerifiedSources({ keys }) {
+  if (sourcesFor(keys).length === 0) return null;
+  return (
+    <div className="mt-2 pt-3 border-t border-[var(--c-border)]">
+      <p className="text-[11px] text-[var(--c-text-3)] leading-relaxed">
+        <SourceLinks keys={keys} />
       </p>
     </div>
   );

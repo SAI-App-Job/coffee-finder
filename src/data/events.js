@@ -12,7 +12,7 @@ export const EVENTS = [
     dateRange: "2026年6月25日〜27日",
     startDate: "2026-06-25",
     relatedCountry: null,
-    note: "手淹れ抽出の技術を競う世界大会。PHILOCOFFEA(粕谷哲氏)は2016年大会の優勝者。",
+    note: "手淹れ抽出の技術を競う世界大会。粕谷哲氏は2016年大会の優勝者。",
     sourceUrl: "https://wcc.coffee/world-brewers-cup",
   },
   {
@@ -24,7 +24,7 @@ export const EVENTS = [
     dateRange: "2026年10月22日〜25日",
     startDate: "2026-10-22",
     relatedCountry: "パナマ",
-    note: "エスプレッソ・ミルクドリンク・シグネチャードリンクを競う、最も歴史のある世界大会(2000年開始)。",
+    note: "エスプレッソ・ミルクドリンク・シグネチャードリンクを競う世界大会(第26回)。",
     sourceUrl: "https://wcc.coffee/world-barista-championship",
   },
   {
@@ -35,7 +35,7 @@ export const EVENTS = [
     venue: "東京ビッグサイト 南展示棟1-4ホール",
     dateRange: "2026年10月14日〜17日",
     relatedCountry: "日本",
-    note: "日本最大級のスペシャルティコーヒー展示会。前回は4日間で75,000人超が来場。",
+    note: "日本のスペシャルティコーヒー展示会。南3-4ホールは10月14日〜17日、南1-2ホールは14日〜16日。前回(2025年)の来場者は4日間で96,823名(SCAJ2026開催概要による)。",
     sourceUrl: "https://scajconference.jp/overview",
   },
   {
@@ -44,9 +44,9 @@ export const EVENTS = [
     name: "Guatemala Cup of Excellence 2026",
     eventType: "auction",
     venue: "グアテマラ",
-    dateRange: "COE(オークション): 7月15日 / NW(審査週間): 7月14日〜18日",
+    dateRange: "COE審査: 6月1日〜4日 / オークション: 7月23日(13:00 UTC)",
     relatedCountry: "グアテマラ",
-    note: "「コーヒーのオリンピック」と呼ばれる国際品評会。優勝豆はオンラインオークションで販売され、生産者に直接利益が渡る。",
+    note: "グアテマラのCup of Excellence 2026。優勝豆はオンラインオークションで販売される(COE公式の年別データによる)。",
     sourceUrl: "https://cupofexcellence.org/",
   },
   {
@@ -55,9 +55,9 @@ export const EVENTS = [
     name: "Nicaragua Cup of Excellence 2026",
     eventType: "auction",
     venue: "ニカラグア",
-    dateRange: "COE(オークション): 6月19日",
+    dateRange: "日程はCOE公式サイトを参照",
     relatedCountry: null,
-    note: "2026年シーズンの開幕を飾る大会。",
+    note: "ニカラグアのCup of Excellence 2026。",
     sourceUrl: "https://cupofexcellence.org/",
   },
 ];

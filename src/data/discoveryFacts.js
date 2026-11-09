@@ -60,8 +60,8 @@ export const DISCOVERY_FACTS = [
   },
   {
     title: "ハワイには「ハワイ産と名乗れる最低ライン」がある",
-    text: "ハワイ州法で、州外に出荷する緑豆はHawaii No.3以上の等級を満たさなければ「Hawaii coffee」と表示できない。満たさない場合は大きく「OFFGRADE COFFEE」と明記する必要がある。",
-    source: "Hawaii Coffee Association「Grading Standards」https://hawaiicoffeeassoc.org/page-1771566",
+    text: "ハワイ州の行政規則で、ハワイ産の緑豆はHawaii No.3の品質基準を満たさなければ、ハワイの地域名を付けて売ることができない。満たさない場合は、地域名を付けず「offgrade」または単に「coffee」と表示する必要がある。",
+    source: "ハワイ州行政規則 §4-143-1 https://www.law.cornell.edu/regulations/hawaii/Haw-Code-R-SS-4-143-1 / Hawaii Coffee Association「Grading Standards」https://hawaiicoffeeassoc.org/page-1771566",
   },
   {
     title: "タンザニアは輸出まで一つの機関が管理",
@@ -152,7 +152,7 @@ export const DISCOVERY_FACTS = [
   },
   {
     title: "ケニアのSL28はカシス風味の立役者",
-    text: "1930〜40年代に選抜された品種SL28は、干ばつに強い深い根を持ち、リンゴ酸主体の構造がケニアコーヒー特有のカシス(黒スグリ)様の風味を生み出す。",
+    text: "1930年代に選抜された品種SL28は、干ばつに強い深い根を持ち、リンゴ酸主体の構造がケニアコーヒー特有のカシス(黒スグリ)様の風味を生み出す。",
     source: "docs/coffee-discovery-facts-sources-9countries.md",
   },
   {

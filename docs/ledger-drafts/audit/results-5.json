@@ -1,0 +1,344 @@
+{
+  "results": {
+    "origin:コスタリカ:terroir": {
+      "verdict": "edit",
+      "finalContent": {
+        "text": "ICAFEは、標高1,200mを超える高地は火山起源の土壌と説明している。ロス・サントス地域は、雨季(5〜11月)と乾季(12〜4月)がはっきり分かれている(ICAFE)。"
+      },
+      "usedClaims": [
+        1,
+        8
+      ],
+      "notes": "ロス・サントスの標高1,200〜1,900m、タラス郡を含む旨は主張に無いため削除。「〜はっきり分かれている」は引用(bien definidas)の範囲に合わせた。"
+    },
+    "origin:コスタリカ:varietiesDetail": {
+      "verdict": "edit",
+      "finalContent": {
+        "text": "ICAFEによると、背が低く生産性の高い品種(カトゥーラ、カトゥアイなど)の栽培が中心で、これらは全国のコーヒー栽培面積の90%超を占める。Villa Sarchiは、ブルボン集団の自然変異で、単一遺伝子の変異により株が小さく育つ(WCR)。"
+      },
+      "usedClaims": [
+        0,
+        1
+      ],
+      "notes": "引用は「caturra y catauí のような低木・高生産性の品種群」が90%超で、「両者で90%超」とは読めないため修正。「矮性」は引用の「株が小さく育つ」に合わせた。"
+    },
+    "origin:コロンビア:farmStructure": {
+      "verdict": "edit",
+      "finalContent": {
+        "text": "FNCのCafé de Colombia公式サイトは、コロンビアで54万世帯(540,000 families)がコーヒーを栽培していると述べている。"
+      },
+      "usedClaims": [
+        0
+      ],
+      "notes": "引用は540,000と正確な数字なので「約」を外した。"
+    },
+    "origin:コロンビア:gradeSystem": {
+      "verdict": "pass",
+      "finalContent": {
+        "text": "全国コーヒー生産者委員会の決議第2号(2016年)は、輸出用の生豆Excelsoを、大粒で主に平たく揃った豆で、スクリーン14(malla 14)より上に残るもの(5%まではそれより小さくスクリーン12に残る豆を許容)と定め、少なくとも50%の豆がスクリーン15に残ることを求める。"
+      },
+      "usedClaims": [
+        2,
+        3
+      ],
+      "notes": ""
+    },
+    "origin:コロンビア:harvestSeason": {
+      "verdict": "drop",
+      "notes": "verifiedClaimsが空で資料も無く、Cenicafé資料の収穫期の記述を裏付ける主張が無い。"
+    },
+    "origin:コロンビア:history": {
+      "verdict": "edit",
+      "finalContent": {
+        "text": "FNCのニュース記事には、サラサール・デ・ラス・パルマスで、ベネズエラのルビオから来た司祭フランシスコ・ロメロが最初のコーヒーの種を持ち込み、告解した罪ごとの贖罪としてコーヒーの木を植えて世話させた、という言い伝えが紹介されている。Café de Colombia(FNC)のサイトによると、カウカ、ウイラ、サンタンデールについては原産地呼称(DO)の保護が宣言されている。ウイラは2013年4月16日のSIC決議17989号で、DOとして保護が宣言された。"
+      },
+      "usedClaims": [
+        2,
+        5,
+        6
+      ],
+      "notes": "ノルテ・デ・サンタンデール県、「年代は示されていない」、カウカ・ナリーニョ2011年・サンタンデール2014年・トリマ/シエラネバダ2017年の年とナリーニョ・トリマ・シエラネバダのDOは主張に無いため削除。引用で確認できるカウカ・ウイラ・サンタンデールに絞った。"
+    },
+    "origin:コロンビア:officialBody": {
+      "verdict": "edit",
+      "finalContent": {
+        "text": "FNC(全国コーヒー生産者連盟)は1927年に設立された。全国コーヒー生産者委員会(Comité Nacional de Cafeteros)の決議第2号(2016年4月25日)は、輸出用の生豆(café verde en almendra)の品質規則を統一し更新する決議である。FNCの2025年12月の通達も、生豆の品質管理は同委員会の決議2号(2016年)に従って行うとしている。"
+      },
+      "usedClaims": [
+        0,
+        1,
+        3
+      ],
+      "notes": "「Excelso以外の品質の生豆の輸出も認めている」は確認済み主張に無いため削除。「〜が定める」は引用(表題)の範囲に合わせて「統一し更新する決議」とした。"
+    },
+    "origin:コロンビア:sub:ウイラ": {
+      "verdict": "drop",
+      "notes": "verifiedClaimsが空で資料も無く、標高・風味・SIC決議17989号のいずれも裏付けが無い。"
+    },
+    "origin:コロンビア:sub:トリマ": {
+      "verdict": "edit",
+      "finalContent": {
+        "detail": "トリマ: FNC(Café de Colombia)の説明では、酸は中〜高で柑橘系。"
+      },
+      "usedClaims": [
+        3
+      ],
+      "notes": "確認済みの主張は酸のみ。ボディ・風味(引用には記載あり)、土壌が砂質、SIC決議2458号は主張に無いため削除。引用にあるボディ(中〜高・クリーミー)等は、検証担当が主張化すれば追加可能。"
+    },
+    "origin:コロンビア:sub:ナリーニョ": {
+      "verdict": "edit",
+      "finalContent": {
+        "detail": "ナリーニョ: FNCの原産地呼称の説明では、栽培される高い標高と低い気温が、植物に甘さを保たせるとされている。"
+      },
+      "usedClaims": [
+        2
+      ],
+      "notes": "主張は「極端な高標高」だが引用は「high altitude」のみ。引用の範囲に直し、「品質の要因」も引用(低温が甘さを保たせる)に合わせた。カップ特性・酸の記載・SIC決議06093号は主張に無いため削除。"
+    },
+    "origin:コロンビア:tagline": {
+      "verdict": "drop",
+      "notes": "verifiedClaimsが空で、「良い品質の代名詞」の根拠が無い。"
+    },
+    "origin:コロンビア:terroir": {
+      "verdict": "drop",
+      "notes": "verifiedClaimsが空で、「完璧な組み合わせ」の根拠が無い。"
+    },
+    "origin:コロンビア:varietiesDetail": {
+      "verdict": "edit",
+      "finalContent": {
+        "text": "Cenicafé(コロンビアの国立コーヒー研究センター)は1938年に設立された(FNC)。カスティージョはCenicaféが開発した品種で、カトゥーラとティモールハイブリッドの交配に由来する。コロンビア種も同じ交配に由来する。この交配の親はさび病への抵抗性が対照的で、カトゥーラは感受性とされ、Cenicaféの資料ではさび病に非常に弱いと記されている。"
+      },
+      "usedClaims": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "notes": "「さび病耐性を目的に」は主張に無い(引用は親の抵抗性が対照的とだけ述べる)ため削除。「耐性がほぼない」は引用(altamente susceptible)に合わせた。"
+    },
+    "origin:ジャマイカ:farmStructure": {
+      "verdict": "edit",
+      "finalContent": {
+        "text": "JACRA(Jamaica Agricultural Commodities Regulatory Authority)は、品質基準の設定、品質保証と認証サービスの提供、コーヒーなどの取引の統括を担う(JIS)。"
+      },
+      "usedClaims": [
+        5
+      ],
+      "notes": "「従来のCoffee Industry Boardに替わる機関として構想された」は、この主張の引用(JIS)には書かれておらず裏付けが無いため削除。"
+    },
+    "origin:ジャマイカ:history": {
+      "verdict": "edit",
+      "finalContent": {
+        "text": "JISは、コーヒーが1728年にジャマイカ島に初めて導入されたと述べている。JCEA(ジャマイカ・コーヒー輸出業者協会)は、導入したのは英国の総督サー・ニコラス・ロウズだとしている。ジャマイカの農業大臣は、日本はジャマイカ産ブルーマウンテンコーヒーの輸出の半分超を占めると述べた(JIS、2026年1月22日)。農業省は、ハリケーン・ベリルの通過(2024年7月)について、全教区のコーヒー農園・インフラに推定60%の被害があり、推定25,000箱の損失があったと述べている。また農業省の記事は、ハリケーン・メリッサでコーヒーの40%が失われたと述べている。"
+      },
+      "usedClaims": [
+        0,
+        1,
+        6,
+        8,
+        9
+      ],
+      "notes": "「当時の(ジャマイカ)総督」は引用(British Governor)に合わせ「英国の総督」に、「近年」「約60%」は引用の範囲(推定60%、全教区)に直した。ベリルの数値は引用中の発言者「he」を農業省の発表の中の発言として書いた(話者の特定は引用だけでは不明)。導入元(ヒスパニョーラ/マルティニーク)は未解決のため記載しない。"
+    },
+    "origin:ジャマイカ:officialBody": {
+      "verdict": "edit",
+      "finalContent": {
+        "text": "JACRA(Jamaica Agricultural Commodities Regulatory Authority)は、農業省の閣僚文書(Ministry Paper)で、既存のCoffee Industry Boardに替わる新しい機関として位置づけられている。"
+      },
+      "usedClaims": [
+        0
+      ],
+      "notes": "最初の文(品質基準の設定等・JIS)は、このパケットの確認済み主張に引用が無いため削除。規則21条の「Blue Mountain/High Mountainを含む名称の購入・販売・輸出禁止」は、引用が『shall not, unless authorized in writing by the Authority』だけで対象語・行為が確認できないため削除。"
+    },
+    "origin:ジャマイカ:sub:ハイマウンテン地区": {
+      "verdict": "pass",
+      "finalContent": {
+        "detail": "ブルーマウンテン区域の外で育つジャマイカ産コーヒーの上級等級は、規則で「Jamaica High Mountain Supreme Coffee」と定義されている(JACRA規則2018)。"
+      },
+      "usedClaims": [
+        0
+      ],
+      "notes": ""
+    },
+    "origin:ジャマイカ:sub:ブルーマウンテン地区": {
+      "verdict": "edit",
+      "finalContent": {
+        "detail": "JACRA規則2018は、「Jamaica Blue Mountain Coffee」を、ジャマイカのブルーマウンテン区域(Blue Mountain area of Jamaica)で栽培されたコーヒーと定義し、その区域は第1附則で定められている。"
+      },
+      "usedClaims": [
+        0
+      ],
+      "notes": "「JISは標高3,000〜5,500フィートで栽培されたものとしている」は、確認済みの主張に無く(標高条件は資料間でconflict)、削除。"
+    },
+    "origin:ジャマイカ:tagline": {
+      "verdict": "edit",
+      "finalContent": {
+        "text": "WIPOは、ジャマイカのブルーマウンテンの地形、降雨パターン、霧などの条件が、世界でも特に名高く愛されるコーヒーの一つの栽培に申し分なく適していると述べている。"
+      },
+      "usedClaims": [
+        0
+      ],
+      "notes": "主張は「山系がコーヒーを育む」だが、引用は「地形・降雨・霧などの条件が栽培に適している」という内容のため、引用の範囲に直し、WIPOへの帰属を付けた。"
+    },
+    "origin:ジャマイカ:terroir": {
+      "verdict": "edit",
+      "finalContent": {
+        "text": "ブルーマウンテン山系は、ジャマイカ島の東端にある(WIPO)。ジャマイカの最高峰は標高7,402フィート(約2,256m)(JIS)。この地域の気候は降水量が多いのが特徴で、ブルーマウンテンの冷涼な微気候のため、コーヒーチェリーが熟すのに長い時間がかかる(WIPO)。"
+      },
+      "usedClaims": [
+        0,
+        1,
+        4,
+        6
+      ],
+      "notes": "標高3,000〜5,500フィートの文はconflictで主張に無いため削除。最高峰は引用が「ジャマイカの最高峰」なので、ブルーマウンテン山系の最高峰とは書かず直した。「東部」は引用の「東端」に合わせた。"
+    },
+    "origin:タンザニア:farmStructure": {
+      "verdict": "edit",
+      "finalContent": {
+        "text": "TCB(Tanzania Coffee Board)は、コーヒー農家の農地の規模を0.5〜2エーカーとしている。"
+      },
+      "usedClaims": [
+        2
+      ],
+      "notes": "小農約90%、小農数(TCB約32万/USDA約45万)、平均約0.63ヘクタールは確認済みの主張に無く(約45万/90%の主張はconflict)削除。主張は「1ヘクタール未満の農家が多い」だが引用は0.5〜2エーカーのみのため引用の範囲に直した。"
+    },
+    "origin:タンザニア:gradeSystem": {
+      "verdict": "edit",
+      "finalContent": {
+        "text": "タンザニアのコーヒー産業規則(2013年、GN 385)の第6付表(マイルドアラビカ)は、等級AAを、スクリーン18に最低90%が残る豆(スクリーン17は最大8〜10%)と定めている。"
+      },
+      "usedClaims": [
+        1
+      ],
+      "notes": "主張は8等級(AA・A・B・PB・AF・TT・E・F)の区分だが、引用はAAの行だけで8等級の列挙を確認できない。PBの「ピーベリー最低95%」も引用に無い。引用で確認できるAAの基準に絞った。検証担当が8等級を示す引用を追加すれば復元可能。"
+    },
+    "origin:タンザニア:harvestSeason": {
+      "verdict": "drop",
+      "notes": "verifiedClaimsが空で資料も無く、USDA FASの収穫期の記述を裏付ける主張が無い。"
+    },
+    "origin:タンザニア:history": {
+      "verdict": "edit",
+      "finalContent": {
+        "text": "USDA FASの2019年報告(Policy)は、政府の施策として、農家と契約のあった現地・外国の業者によるコーヒーの直接輸出の禁止、農家のAMCOSへの加入の義務づけ、全量をモシのTCB中央オークションで売る義務(オークションの迂回の禁止)を挙げている。同報告は、政府が直接輸出を禁止したのは2018年1月で、TCBは1年の不安定の後に禁止を緩和し(禁止は2019年1月に一時解除)、上質なコーヒーの生産者が海外の買い手と直接取引することを認めたと記す。2021年5月のUSDA FASの報告は、新しい法律により、上質なコーヒーの生産者が海外の買い手と直接取引し、AMCOSと関わり、オークションを経由しないことが認められていると記す。"
+      },
+      "usedClaims": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "notes": "AMCOS加入義務とモシ中央オークション義務の引用には時期が無く「2018年1月に定めた」とは言えないため、「施策として挙げている」に直した。2018年1月は直接輸出禁止の引用のみ。「道が開かれた」は引用(allows)に合わせ「認められている」とした。"
+    },
+    "origin:タンザニア:officialBody": {
+      "verdict": "edit",
+      "finalContent": {
+        "text": "Tanzania Coffee Board(TCB)は、2001年のコーヒー産業法(Act No. 23 of 2001)で再設立された。同法は、TCBの権限として、コーヒーの輸出のライセンスまたは許可の付与を挙げている(第5条(2))。また同法第12条(3)は、商業目的でコーヒーの買付・liquoring・加工・焙煎・倉庫保管・中央パルピング・輸出を行うには、TCBが発行するライセンスが必要と定めている。"
+      },
+      "usedClaims": [
+        0,
+        2,
+        4
+      ],
+      "notes": "「コーヒー取引業者の登録」「オークションの実施」の権限は引用(s.5(2)(a)の輸出ライセンスのみ)に無いため削除。"
+    },
+    "origin:タンザニア:sub:キリマンジャロ山麓(北部)": {
+      "verdict": "edit",
+      "finalContent": {
+        "detail": "USDA FASの2021年報告は、バナナ等との混作・小農による栽培が、主に北部と西部にあると記している。"
+      },
+      "usedClaims": [
+        0
+      ],
+      "notes": "引用は北部と西部を合わせた記述で、キリマンジャロ山麓だけの記述ではない。「北部(北部と西部)」を、引用どおり「主に北部と西部」に直した。引用は断片で文の構造がやや不明瞭。"
+    },
+    "origin:タンザニア:sub:南部高地(Mbeya・Ruvuma・Songwe等)": {
+      "verdict": "pass",
+      "finalContent": {
+        "detail": "ムベヤ、ルブマ、ソングウェは、アラビカの産地に含まれる(TCB)。"
+      },
+      "usedClaims": [
+        0
+      ],
+      "notes": ""
+    },
+    "origin:タンザニア:tagline": {
+      "verdict": "edit",
+      "finalContent": {
+        "text": "TaCRIのLyamungu副研究所のページによると、キリマンジャロ山麓(ハイ県)の地帯には、小農とエステートの双方によるアラビカコーヒーの生産が100年近く続いてきた歴史がある。"
+      },
+      "usedClaims": [
+        0
+      ],
+      "notes": "「キリマンジャロ山麓を含む北部」は主張(キリマンジャロ山麓(ハイ県))より広いので直した。引用の「世界最高級の一部(some of the finest)」は評価表現のため入れず、「小農とエステートの双方」「almost 100 years」は引用に合わせた。"
+    },
+    "origin:タンザニア:terroir": {
+      "verdict": "edit",
+      "finalContent": {
+        "text": "TCBは、アラビカの産地としてキリマンジャロ、アルーシャ、ムベヤ、ルブマ、ソングウェなどの州を挙げている。USDA FASの2021年報告は、バナナ等との混作・小農による栽培が、主に北部と西部にあると記している。"
+      },
+      "usedClaims": [
+        0,
+        2
+      ],
+      "notes": "「北部ではコーヒーとバナナの混作が多い」は、引用が「主に北部と西部(mainly in the north and west)」のため、引用の範囲に直した。「栽培される」は、TCBの産地一覧(Arabica growing regions)に合わせ、帰属を明記した。"
+    },
+    "origin:タンザニア:varietiesDetail": {
+      "verdict": "edit",
+      "finalContent": {
+        "text": "タンザニアのコーヒー生産のうち、アラビカは平均60.9%を占める(TCB)。TaCRIの資料(2005年)は、2004年まで国内で栽培されていた商業品種はブルボン(N39)とケント(KP423)だけだったと記している。"
+      },
+      "usedClaims": [
+        0,
+        1
+      ],
+      "notes": "「約60.9%」は引用が「平均60.9%(an average of 60.9%)」なので修正。「N39は1920年代の選抜」は主張に無く(関連主張はincorrect)削除。「主力」は引用では「only commercial varieties」。"
+    },
+    "origin:ハワイ:farmStructure": {
+      "verdict": "edit",
+      "finalContent": {
+        "text": "コナ・コーヒー農家協会(KCFA)によると、コナのコーヒーは1世紀にわたり小規模な家族経営の農園から生まれてきた。コナには700あまりの農園があり、その大半は5エーカー未満である。同協会は、コナの急で岩だらけの地形は耕作に手がかかるとも述べている。"
+      },
+      "usedClaims": [
+        0,
+        1,
+        3
+      ],
+      "notes": "「熟した実を1つずつ摘む」は、主張3の引用(KCFA)に無い(CTAHRの該当引用が示されていない)ため削除。ハワイ全体の「1エーカーから4000エーカー」(CTAHR 2008年)は確認済みの主張に無く削除。「約700」は引用の「700-odd」に合わせ「700あまり」。"
+    },
+    "origin:ハワイ:gradeSystem": {
+      "verdict": "edit",
+      "finalContent": {
+        "text": "ハワイ州農業・バイオセキュリティ局の統計資料(2026年1月)は、緑豆の等級基準として Extra Fancy、Fancy、Hawaii No.1、Select、Prime、Hawaii No.3、Natural Prime、Mixed Natural Prime、Off Grade を挙げている。ハワイ州行政規則第4-143章の要約(2020年7月1日施行)では、Hawaii No.3より品質が低いOff Gradeに「Hawaii」の語を併用することが禁じられている。"
+      },
+      "usedClaims": [
+        0,
+        2
+      ],
+      "notes": "等級の列挙は統計資料の引用であり、行政規則第4-143章に基づくとは引用から言えないため、出典を分けて書いた。「Prime未満は地域名(Kona・Kau等)をラベルに使えない」は確認済みの主張に無い(検証担当メモも未登録と認めている)ため削除。"
+    },
+    "origin:ハワイ:harvestSeason": {
+      "verdict": "edit",
+      "finalContent": {
+        "text": "ハワイ大学CTAHR(2008年)によると、コナでは1シーズンに4〜8回に分けて摘むのが一般的とされている。"
+      },
+      "usedClaims": [
+        3
+      ],
+      "notes": "収穫期(8月下旬〜12月、ピーク9月下旬〜11月上旬、ベルト上部は通年)は、関連主張が incorrect で確認されておらず削除。「約1か月おき」「実が一斉に熟さない」「1つずつ摘む」も、引用(4〜8回が一般的)に無いため削除(「一斉に熟さない」はlocationにのみあり引用には無い)。"
+    },
+    "origin:ハワイ:history": {
+      "verdict": "edit",
+      "finalContent": {
+        "text": "ハワイ大学CTAHR(2008年)によれば、1892年にヘルマン・ヴィーデマンがグアテマラから‘Guatemalan’種(別名コナ・ティピカ)をハワイに導入した。ヴィーデマンは種子をジョン・ホーナーに渡し、ホーナーはハマクアに800本の果樹園を植えた。1910年までに、コナの生産者は新しい品種の優位を確信した。"
+      },
+      "usedClaims": [
+        3,
+        5,
+        6
+      ],
+      "notes": "「新品種と従来品種を400本ずつ比べた」は引用(800本の果樹園を植えた)に無く削除。"
+    }
+  }
+}

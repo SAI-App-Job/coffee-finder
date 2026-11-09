@@ -1,0 +1,1417 @@
+{
+  "scope": "origin-4 (グアテマラ・メキシコ)",
+  "verifiedOn": "2026-11-09",
+  "sources": {
+    "anacafe-faq": {
+      "title": "Preguntas Frecuentes",
+      "org": "Asociación Nacional del Café (Anacafé)",
+      "url": "https://www.anacafe.org/preguntas-frecuentes/",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": ""
+    },
+    "anacafe-cafe-de-guatemala": {
+      "title": "Café de Guatemala (Patrimonio Intangible de la Nación)",
+      "org": "Anacafé",
+      "url": "https://www.anacafe.org/cafe-de-guatemala/",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": ""
+    },
+    "anacafe-ley-cafe": {
+      "title": "Legislación sobre Café: Ley del Café (Decreto 19-69), Reglamento (Acuerdo Gubernativo M. de A. 13-70), Decreto Ley 111-85 ほか",
+      "org": "Anacafé(法令集の公開版)",
+      "url": "https://www.anacafe.org/uploads/file/a750889e55144d9c8cf95df69096d67f/Ley_Reglamento_Decretos.pdf",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": "Anacaféが公開する法令集PDF(52ページ)。官報原本ではなく、改正の反映状況は不明(版の日付が資料内にない)。現行条文は官報で要確認。"
+    },
+    "anacafe-historia-infografia": {
+      "title": "Historia del café(インフォグラフィック Historia-del-cafe-Guatemala-2020.png)",
+      "org": "Anacafé",
+      "url": "https://www.anacafe.org/conozcanos/historia/",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": "画像(図/インフォグラフィック)。画像を直接見て内容を確認し、quote はOCR文字起こしで機械照合した。画像URL: http://www.anacafe.org/uploads/image/132f80e93b734016a2b996437f930ee6/Historia-del-cafe-Guatemala-2020.png"
+    },
+    "anacafe-gc-altitudes": {
+      "title": "Coffee types(標高別の等級図 types_altitudes.png)",
+      "org": "Anacafé(Guatemalan Coffees)",
+      "url": "https://www.guatemalancoffees.com/main/coffee-types/",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": "画像(図/インフォグラフィック)。画像を直接見て内容を確認し、quote はOCR文字起こしで機械照合した。画像URL: https://www.guatemalancoffees.com/media/1095/types_altitudes.png。ページ下部の著作表示は Guatemalan National Coffee Association。"
+    },
+    "anacafe-gc-regiones": {
+      "title": "Regions and profiles(8産地の紹介8ページ)",
+      "org": "Anacafé(Guatemalan Coffees)",
+      "url": "https://www.guatemalancoffees.com/main/regions-and-profiles/",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": "各産地ページ(/antigua-coffee/ など8ページ)の本文と Region profile(気温・降雨・湿度・標高。単位表記は標高が ft、Antigua のみ単位表記なし)を取得。"
+    },
+    "anacafe-microregionalizacion": {
+      "title": "Estrategia de Microregionalización 'A Rainbow of Choices'(2020-11-20)",
+      "org": "Anacafé",
+      "url": "https://www.anacafe.org/articles/estrategia-de-microregionalizacion-a-rainbow-of-choices/",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": ""
+    },
+    "anacafe-analab": {
+      "title": "Analab(土壌・植物・水の分析)",
+      "org": "Anacafé",
+      "url": "https://www.anacafe.org/Servicios/Analab/",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": ""
+    },
+    "anacafe-catacion": {
+      "title": "Laboratorio de Catación",
+      "org": "Anacafé",
+      "url": "https://www.anacafe.org/Servicios/Catacion/",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": ""
+    },
+    "anacafe-guia-variedades-2020": {
+      "title": "Guía de variedades de café Anacafé 2020",
+      "org": "Anacafé",
+      "url": "https://www.anacafe.org/uploads/file/8ee92f426ab648318001477e70d0bbe1/Gu%C3%ADa-de-variedades-Anacaf%C3%A9-2020.pdf",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": "PDFの抽出順は図版キャプションの都合で見出しと本文がずれる箇所がある。"
+    },
+    "anacafe-memoria-2021": {
+      "title": "Memoria de labores 2020-2021",
+      "org": "Anacafé",
+      "url": "https://www.anacafe.org/uploads/file/75f7f1d3e1434358bc075480749ce99e/Memoria-Anacafe-2021.pdf",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": ""
+    },
+    "anacafe-memoria-2024-25": {
+      "title": "Memoria de labores 2024-2025",
+      "org": "Anacafé",
+      "url": "https://www.anacafe.org/uploads/file/b7e6d68ba1b84832a940745715e270f8/Memoria_de_labores_Anacafe_2025_web.pdf",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": ""
+    },
+    "anacafe-cafe-en-cifras-2026": {
+      "title": "Café de Guatemala en cifras(インフォグラフィック、2025-2026年度)",
+      "org": "Anacafé",
+      "url": "https://www.anacafe.org/uploads/file/efb11ed3531240ff93e66fc66dcef299/Infografi%CC%81a_Cafe%CC%81_en_Cifras_-_media_carta_-_ES.pdf",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": ""
+    },
+    "anacafe-boletin-monitoreo-variedades-2019": {
+      "title": "Informe sobre Monitoreo Nacional de Variedades (Boletín CEDICAFÉ, agosto 2019)",
+      "org": "Anacafé / Cedicafé",
+      "url": "https://www.anacafe.org/uploads/file/79ca030eae3640399eda011cdc27d546/Boletin-CEDICAFE-Agosto-2019.pdf",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": ""
+    },
+    "usda-fas-gt-coffee-annual-2025": {
+      "title": "Guatemala: Coffee Annual (GT2025-0007, 2025-04-30)",
+      "org": "USDA Foreign Agricultural Service",
+      "url": "https://apps.fas.usda.gov/newgainapi/api/Report/DownloadReportByFileName?fileName=Coffee%20Annual_Guatemala%20City_Guatemala_GT2025-0007.pdf",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": "報告ページ: https://www.fas.usda.gov/data/guatemala-coffee-annual-10 (curlは403、PDFはAPI経由で取得)。"
+    },
+    "usda-fas-mx-coffee-annual-2025": {
+      "title": "Mexico: Coffee Annual (MX2025-0023, 2025-05-20)",
+      "org": "USDA Foreign Agricultural Service",
+      "url": "https://apps.fas.usda.gov/newgainapi/api/Report/DownloadReportByFileName?fileName=Coffee%20Annual_Mexico%20City_Mexico_MX2025-0023.pdf",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": "報告ページ(https://www.fas.usda.gov/data/mexico-coffee-annual-3 等)はcurlで403。PDFはAPI経由で取得。"
+    },
+    "sader-planeacion-cafe-2017": {
+      "title": "Café Mexicano - Planeación Agrícola Nacional 2017-2030",
+      "org": "SAGARPA Subsecretaría de Agricultura(現SADER)",
+      "url": "https://www.gob.mx/cms/uploads/attachment/file/256426/B_sico-Caf_.pdf",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": "pypdfでの取得時にcryptography/fontToolsの警告あり(本文抽出は成功)。"
+    },
+    "sader-cafe-muy-suyo-2019": {
+      "title": "México ha hecho del café algo muy suyo (2019-10-02)",
+      "org": "Secretaría de Agricultura y Desarrollo Rural (SADER)",
+      "url": "https://www.gob.mx/agricultura/articulos/mexico-ha-hecho-del-cafe-algo-muy-suyo",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": "『18世紀末に伝来』の文には脚注があり、民間ブログ(mycoffeebox.com)を出典にしている。SADERの公式見解としての記述だが、根拠は二次資料。"
+    },
+    "sader-cafe-manos-sabias": {
+      "title": "El café, una producción en manos sabias",
+      "org": "Secretaría de Agricultura y Desarrollo Rural (SADER)",
+      "url": "https://www.gob.mx/agricultura/articulos/el-cafe-una-produccion-en-manos-sabias",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": "公開日はページ本文から確認していない(2019年頃の記事)。"
+    },
+    "fira-panorama-cafe-2016": {
+      "title": "Panorama Agroalimentario | Café 2016",
+      "org": "FIRA(Fideicomisos Instituidos en Relación con la Agricultura、メキシコ政府系金融機関)、SIAP-SAGARPA統計を引用",
+      "url": "https://www.gob.mx/cms/uploads/attachment/file/200636/Panorama_Agroalimentario_Caf__2016.pdf",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": "2015/16年度の数字。2016年10月時点の情報。"
+    },
+    "sagarpa-piac-arreglo-institucional-2016": {
+      "title": "Modelo de Arreglo Institucional para el Sector Cafetalero Mexicano(SAGARPA/PIAC のスライド資料、2016)",
+      "org": "SAGARPA Programa de Atención Integral al Café (PIAC)",
+      "url": "https://www.biodiversidad.gob.mx/media/1/region/files/spsb/11-modelo-arreglo-institucional-sector-cafetalero-mex.pdf",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": "政府職員(PIAC調整官)のスライド資料。箇条書きのため日付・因果の細部は粗い。"
+    },
+    "dof-acuerdo-certificado-origen-2007": {
+      "title": "Acuerdo ... certificado de origen expedido por la Asociación Mexicana de la Cadena Productiva del Café, A.C. (DOF 2007-02-07)",
+      "org": "Secretaría de Economía / SAGARPA(官報掲載)",
+      "url": "https://amecafe.org.mx/wp-content/uploads/2016/10/Acuerdo-A382-26172254.pdf",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": "AMECAFEサイトに掲載された、官報(2007年2月7日付)の協定全文のコピー。"
+    },
+    "dof-acuerdo-certificado-origen-2020": {
+      "title": "ACUERDO que establece las mercancías cuya importación está sujeta a regulación por parte de la SADER, así como la emisión del certificado de origen para la exportación de café (DOF 2020-12-26)",
+      "org": "Secretaría de Economía / SADER(官報)",
+      "url": "https://www.gob.mx/cms/uploads/attachment/file/647405/Acuerdo.pdf",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": ""
+    },
+    "amecafe-mision": {
+      "title": "Misión",
+      "org": "AMECAFE (Asociación Mexicana de la Cadena Productiva del Café, A.C.)",
+      "url": "https://amecafe.org.mx/mision/",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": ""
+    },
+    "amecafe-exportacion": {
+      "title": "Exportación(輸出登録・原産地証明書)",
+      "org": "AMECAFE",
+      "url": "https://amecafe.org.mx/exportacion/",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": ""
+    },
+    "ico-faq": {
+      "title": "FAQs",
+      "org": "International Coffee Organization (ICO)",
+      "url": "https://ico.org/what-we-do/faq/",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": ""
+    },
+    "ico-history-1963-2013": {
+      "title": "International Coffee Organization 1963 to 2013",
+      "org": "International Coffee Organization (ICO)",
+      "url": "https://www.ico.org/documents/cy2012-13/history-ico-50-years-e.pdf",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": ""
+    },
+    "unesco-mab-el-triunfo": {
+      "title": "El Triunfo - Man and the Biosphere Programme (MAB)",
+      "org": "UNESCO",
+      "url": "https://www.unesco.org/en/mab/el-triunfo",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": "curlはボット対策のJS画面で本文を取得できなかった。ブラウザペインで開いて表示された本文(get_page_text)を読み、該当箇所を逐語で複写したファイルと照合した(curl/pypdfではない)。"
+    },
+    "inifap-oro-azteca": {
+      "title": "INIFAP entrega semillas de café Oro Azteca resistente a la roya / Café Oro Azteca, variedad resistente a enfermedades(2ページ)",
+      "org": "INIFAP(gob.mx)",
+      "url": "https://www.gob.mx/inifap/prensa/inifap-entrega-semillas-de-cafe-oro-azteca-resistente-a-la-roya",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": ""
+    },
+    "diputados-ley-desarrollo-sustentable-cafeticultura-2025": {
+      "title": "Ley para el Desarrollo Sustentable de la Cafeticultura(DOF 2025-12-19)",
+      "org": "Cámara de Diputados / DOF",
+      "url": "https://gaceta.diputados.gob.mx/PDF/66/2025/dic/DOF19DIC2025-LeyDesarrolloSustentableCafeticultura.pdf",
+      "kind": "primary",
+      "readMethod": "failed",
+      "accessed": "2026-11-09",
+      "note": "curlで接続タイムアウト(gaceta.diputados.gob.mx と www.diputados.gob.mx に接続できず)。この法律がAMECAFEや公的機関の位置づけを変えている可能性があるが、未確認。"
+    },
+    "unesco-mab-el-triunfo-curl": {
+      "title": "(同上)curlでの取得試行",
+      "org": "UNESCO",
+      "url": "https://www.unesco.org/en/mab/el-triunfo",
+      "kind": "primary",
+      "readMethod": "failed",
+      "accessed": "2026-11-09",
+      "note": "curl: ボット対策画面(本文なし)。上のブラウザ経由の取得で代替したが、規則上は curl/pypdf での取得が標準のため失敗も記録する。"
+    }
+  },
+  "entries": {
+    "origin:グアテマラ:tagline": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "標高の高いグアテマラのコーヒーは、心地よい酸味と豊かなコク(ボディ)、繊細な甘みを備える",
+          "status": "verified",
+          "sourceIds": [
+            "anacafe-cafe-de-guatemala"
+          ],
+          "quote": "Todos los cafés de altura de Guatemala desarrollan un delicioso aroma, acidez agradable, mucho cuerpo y dulzura delicada",
+          "location": "Café de Guatemala ページ本文",
+          "note": ""
+        },
+        {
+          "text": "酸味は柑橘系",
+          "status": "unverified",
+          "sourceIds": [
+            "anacafe-gc-regiones"
+          ],
+          "quote": "Delightfully aromatic with a bright citrus acidity and full body.",
+          "location": "Traditional Atitlan の紹介のみ",
+          "note": "Anacaféの国全体の説明には柑橘の語がない。8産地のうち柑橘に触れるのは Atitlán のみ(quoteはその一文)。"
+        },
+        {
+          "text": "火山性土壌が(この味わいを)育む",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "土壌と味の因果関係を述べた公式資料は確認できていない。Anacaféは8産地のうち3産地を非火山性としている(terroir 参照)。"
+        }
+      ],
+      "suggestedText": "標高の高いグアテマラのコーヒーは、心地よい酸味と豊かなコク、繊細な甘みを備える",
+      "note": "英訳(Substantial body and citrus acidity, from volcanic soil)は日本語と同じ主張。"
+    },
+    "origin:グアテマラ:regions": {
+      "status": "verified",
+      "claims": [
+        {
+          "text": "アンティグアとウエウエテナンゴは、Anacaféの8つの産地(Antigua Coffee / Highland Huehue)に含まれる",
+          "status": "verified",
+          "sourceIds": [
+            "anacafe-microregionalizacion",
+            "anacafe-gc-regiones"
+          ],
+          "quote": "Con esta estrategia se establecieron los 8 diferentes orígenes con perfiles de taza únicos: Acatenango Valley, Antigua Coffee, Traditional Atitlán, Rainforest Cobán, Fraijanes Plateau, Highland Huehue, New Oriente y Volcanic San Marcos.",
+          "location": "プレスリリース 2020-11-20 本文",
+          "note": "8産地のうち2つを挙げた記述なので事実としては正しい。代表産地として2つだけを挙げる編集上の選択は台帳の検証範囲外。"
+        }
+      ],
+      "suggestedText": "",
+      "note": "英訳(Antigua, Huehuetenango)は同じ主張。"
+    },
+    "origin:グアテマラ:terroir": {
+      "status": "unverified",
+      "claims": [
+        {
+          "text": "活火山・休火山と高い生物多様性により300超の微気候がある",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "Anacaféの資料(本検証で取得した範囲)に『300超』の記載は見つからなかった(公式は『微気候が多様』と述べるのみ)。"
+        },
+        {
+          "text": "降雨量は年800〜5,000mmで地域差が大きい",
+          "status": "unverified",
+          "sourceIds": [
+            "anacafe-gc-regiones"
+          ],
+          "quote": "32 - 48 in || 160 - 200 in",
+          "location": "8産地の Region profile(Antigua 32-48 in、Volcanic San Marcos 160-200 in)",
+          "note": "公式の数値はインチ表記の産地別レンジで、全国の『800〜5,000mm』という表現は公式にない(32in≒813mm、200in≒5,080mm と換算は概ね一致)。換算・集約は執筆者の加工のため verified にしない。"
+        },
+        {
+          "text": "栽培標高は概ね1,300〜2,000m",
+          "status": "unverified",
+          "sourceIds": [
+            "anacafe-gc-regiones"
+          ],
+          "quote": "4300 - 6500 ft || 5000 - 6500 ft",
+          "location": "Acatenango Valley / Highland Huehue の Region profile",
+          "note": "公式は産地別にフィート表記(8産地全体で約4,300〜6,500ft=約1,311〜1,981m)。『概ね1,300〜2,000m』は換算した丸めで公式表現ではないため verified にしない。"
+        },
+        {
+          "text": "火山性土壌が全土の基盤",
+          "status": "incorrect",
+          "sourceIds": [
+            "anacafe-gc-regiones"
+          ],
+          "quote": "Of the three non-volcanic regions, Huehuetenango is the highest and driest under cultivation.",
+          "location": "Highland Huehue の紹介本文",
+          "note": "Anacaféは8産地のうち3産地を『非火山性』と述べており、全土が火山性土壌という記述と食い違う。"
+        }
+      ],
+      "suggestedText": "グアテマラのコーヒー産地は、Anacaféが定めた8つの産地(Acatenango Valley、Antigua Coffee、Traditional Atitlán、Rainforest Cobán、Fraijanes Plateau、Highland Huehue、New Oriente、Volcanic San Marcos)に分かれる。産地ごとの栽培標高は約4,300〜6,500フィート(約1,311〜1,981m)、年間降水量は32〜200インチ(約813〜5,080mm)と地域差が大きい。8産地のうち3産地は火山性ではない地域とされる。",
+      "note": "英訳は日本語と同じ主張(確認済み)。suggestedTextのうち『8産地』はmicroregionalizacion記事、標高・降水量の産地別数値はRegion profile、『3産地は非火山性』はHuehueの紹介文に基づく(各産地の数値の最小・最大をとった範囲であることは本文に明示する必要があり、アプリ側で出典を併記すること)。"
+    },
+    "origin:グアテマラ:harvestSeason": {
+      "status": "unverified",
+      "claims": [
+        {
+          "text": "全体としては12月〜3/4月が目安",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "Anacaféの資料(取得範囲)に収穫期の月は見つからなかった。Anacaféは年度を10月〜9月(año cafetalero)で区切る(Café en cifras)が、収穫期ではない。"
+        },
+        {
+          "text": "アンティグアは1〜3月",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式資料で確認できず。"
+        },
+        {
+          "text": "ウエウエテナンゴは12月〜4月",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式資料で確認できず。"
+        }
+      ],
+      "suggestedText": "",
+      "note": "収穫期は公式一次資料で確認できないため、アプリでは非表示にするか、確認できる資料が見つかるまで削除を推奨。英訳は日本語と同じ主張。"
+    },
+    "origin:グアテマラ:varietiesDetail": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "約94%がアラビカ",
+          "status": "conflict",
+          "sourceIds": [
+            "usda-fas-gt-coffee-annual-2025",
+            "anacafe-memoria-2021"
+          ],
+          "quote": "Arabica continues to dominate production, accounting for approximately 98 percent of the total planted area, while Robusta represents the remaining 2 percent || el 35% del área cultivada con café corresponde a variedades resistentes a la Roya y un 4.4% a variedad Robusta.",
+          "location": "USDA FAS GT2025-0007 CROP AREA / Anacafé Memoria 2020-21 『Variedades de café en Guatemala』",
+          "note": "USDA FAS(2025)はアラビカ約98%(植付面積)、Anacafé(2021)はロブスタ4.4%(面積。アラビカ約95.6%に相当)。2資料が食い違い、どちらも94%ではない。解決はユーザー判断。"
+        },
+        {
+          "text": "伝統品種はブルボン・カトゥーラが中心",
+          "status": "unverified",
+          "sourceIds": [
+            "anacafe-guia-variedades-2020"
+          ],
+          "quote": "las cuales son: Caturra, Catuaí, Pache, Pache Colís, Bourbón, Mundo Novo, Pacamara, Típica entre otras.",
+          "location": "Guía de variedades 2020 p.4付近(最も栽培される伝統品種の列挙)",
+          "note": "Anacaféは『最も栽培される伝統品種』として Caturra, Catuaí, Pache, Pache Colís, Bourbón, Mundo Novo, Pacamara, Típica を並べるだけで、『ブルボン・カトゥーラが中心』という優劣は確認できない。"
+        },
+        {
+          "text": "カトゥアイ、ティピカ、パチェも広く栽培されている",
+          "status": "verified",
+          "sourceIds": [
+            "anacafe-guia-variedades-2020"
+          ],
+          "quote": "las cuales son: Caturra, Catuaí, Pache, Pache Colís, Bourbón, Mundo Novo, Pacamara, Típica entre otras.",
+          "location": "Guía de variedades 2020 p.4付近",
+          "note": "『最も栽培される伝統品種』にカトゥアイ・パチェ・ティピカが含まれる。"
+        },
+        {
+          "text": "パチェは1940年代にグアテマラで発見されたティピカの自然変異",
+          "status": "verified",
+          "sourceIds": [
+            "anacafe-guia-variedades-2020"
+          ],
+          "quote": "Es una mutación de la variedad Típica, encontrada en Santa Rosa, Guatemala, en 1949.",
+          "location": "Guía de variedades 2020 p.12(Pache Común の項)",
+          "note": "PDF抽出順では見出し『c. Pache Común』が本文の後に出るが、本文の『copa ... pache』『plantaciones de Pache』の記述から Pache Común の説明。1949年=1940年代。『自然変異』は原文が『mutación』。"
+        },
+        {
+          "text": "サルチモールは高収量のハイブリッド品種",
+          "status": "verified",
+          "sourceIds": [
+            "anacafe-guia-variedades-2020"
+          ],
+          "quote": "Los Sarchimores, son plantas de porte bajo, brote verde o bronce, vigor y producción alta, bien adaptado en zonas de baja y media altitud, y buena calidad de taza.",
+          "location": "Guía de variedades 2020 B. Variedades de Sarchimor 付近",
+          "note": ""
+        },
+        {
+          "text": "近年サルチモールの導入が進んでいる",
+          "status": "unverified",
+          "sourceIds": [
+            "anacafe-memoria-2021"
+          ],
+          "quote": "el 35% del área cultivada con café corresponde a variedades resistentes a la Roya",
+          "location": "Memoria 2020-21",
+          "note": "さび病耐性品種(サルチモール、カティモール等)が面積の35%という数字はあるが、サルチモールの導入が『進んでいる』ことの直接の根拠ではない。"
+        },
+        {
+          "text": "ゲイシャ・パカマラ・マラゴジッペは実験的に導入されている",
+          "status": "incorrect",
+          "sourceIds": [
+            "anacafe-guia-variedades-2020",
+            "anacafe-memoria-2021"
+          ],
+          "quote": "las cuales son: Caturra, Catuaí, Pache, Pache Colís, Bourbón, Mundo Novo, Pacamara, Típica entre otras. || En Guatemala, caficultores que cultivan la variedad Geisha tienen acceso a mercados especiales",
+          "location": "Guía de variedades 2020 p.4付近、Geisha の項(p.31)",
+          "note": "Anacaféはパカマラを『伝統品種』に分類し、Memoria 2020-21 でもゲイシャ・パカマラを高標高の植え替え品種に挙げる。『実験的』ではない。Geisha については栽培面積が増えているとある。マラゴジッペは公式の伝統品種リストには入っていない(Guía内に項はある)。"
+        }
+      ],
+      "suggestedText": "グアテマラの伝統品種には、カトゥーラ、カトゥアイ、パチェ、パチェ・コリス、ブルボン、ムンドノーボ、パカマラ、ティピカなどがある(Anacafé)。パチェは1949年にグアテマラのサンタロサで見つかったティピカの変異種。サルチモールは、収量が高く低〜中標高に適したハイブリッド品種。",
+      "note": "英訳は日本語と同じ主張(確認済み。誤りも同じく英訳に含まれる)。"
+    },
+    "origin:グアテマラ:farmStructure": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "小規模生産者が全生産者の大半を占める構造",
+          "status": "verified",
+          "sourceIds": [
+            "usda-fas-gt-coffee-annual-2025"
+          ],
+          "quote": "Smallholder farmers form the backbone of Guatemala’s coffee sector, accounting for 97 percent of all coffee producers and contributing 44 percent of the nation’s total coffee output.",
+          "location": "USDA FAS GT2025-0007(農家構成の段落)",
+          "note": "原文の数字: 小規模生産者は生産者の97%、生産量の44%。中規模が3%で31%、大規模が1%未満で25%。アプリ本文は数字を使っていない(定性的な記述として一致)。"
+        },
+        {
+          "text": "家族経営・小農中心の地域(ウエウエテナンゴ等)と大規模エステート伝統の地域(アンティグア)が併存",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "地域ごとの農園規模の特徴を述べた公式資料は未確認。"
+        },
+        {
+          "text": "ウエウエテナンゴの住民の推定7割が先住民系",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式資料で未確認(Anacaféの Highland Huehue 紹介には記載なし)。"
+        },
+        {
+          "text": "アンティグアの農園は『タブロン』と呼ばれる区画ごとに単一品種を植え、グレビレアで日陰を作る",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式資料で未確認。(Anacafé: 全体の98%が日陰栽培、は別の主張)"
+        },
+        {
+          "text": "Anacaféは1960年設立",
+          "status": "verified",
+          "sourceIds": [
+            "anacafe-faq"
+          ],
+          "quote": "fundada en 1960 y regulada por la Ley del Café, decreto 19-69",
+          "location": "FAQ 1.",
+          "note": ""
+        },
+        {
+          "text": "Anacaféは土壌・水・葉(植物)の分析を提供する",
+          "status": "verified",
+          "sourceIds": [
+            "anacafe-analab"
+          ],
+          "quote": "Análisis de Suelos, Plantas y Aguas de Anacafé -Analab-",
+          "location": "Analab ページ冒頭",
+          "note": ""
+        },
+        {
+          "text": "Anacaféは官能評価(カッピング)の技術支援・サービスを提供する",
+          "status": "verified",
+          "sourceIds": [
+            "anacafe-catacion"
+          ],
+          "quote": "organizar cataciones, arbitrajes, registros, estadísticas",
+          "location": "Laboratorio de Catación ページ",
+          "note": "『cataciones』=カッピング。"
+        },
+        {
+          "text": "Anacaféは施肥指導を提供する",
+          "status": "unverified",
+          "sourceIds": [
+            "anacafe-faq"
+          ],
+          "quote": "La Asesoría Técnica es gratuita.",
+          "location": "FAQ 16.",
+          "note": "技術相談が無料という記載はあるが、施肥指導という具体は確認できず。"
+        },
+        {
+          "text": "国内を8つの公式産地に定義した",
+          "status": "verified",
+          "sourceIds": [
+            "anacafe-microregionalizacion"
+          ],
+          "quote": "Con esta estrategia se establecieron los 8 diferentes orígenes con perfiles de taza únicos",
+          "location": "プレスリリース 2020-11-20",
+          "note": "Anacaféが1990年代に導入した産地区分(Guatemalan Coffees ブランド戦略)。『公式』は Anacafé 自身の区分という意味で確認。"
+        }
+      ],
+      "suggestedText": "グアテマラのコーヒー生産者の97%は小規模生産者で、生産量の44%を占める(USDA FAS、2025年)。1960年設立のAnacaféは、土壌・植物・水の分析や官能評価(カッピング)のサービスを提供し、国内のコーヒーを8つの産地に区分している。",
+      "note": "英訳は日本語と同じ主張(確認済み)。"
+    },
+    "origin:グアテマラ:history": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "18世紀にイエズス会の司祭がアンティグアの修道院の庭の観賞用植物としてコーヒーの木を持ち込んだのが最初",
+          "status": "verified",
+          "sourceIds": [
+            "anacafe-historia-infografia"
+          ],
+          "quote": "Sacerdotes jesuitas traen las primeras matas de café a la ciudad colonial de Antigua, como plantas ornamentales para los jardines de su monasterio.",
+          "location": "Historia del café(1700『Un inicio monegasco』)",
+          "note": "公式は『1700年』と記す。『18世紀』と整合。『最初とされる』という留保は原文にない(原文は断定)。"
+        },
+        {
+          "text": "1730年代説・1767年以前説の両方があり正確な年は特定できない",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式(Anacafé)は年を『1700』としており、この2説は公式資料では確認できない。"
+        },
+        {
+          "text": "当初は観賞用として栽培された",
+          "status": "verified",
+          "sourceIds": [
+            "anacafe-historia-infografia"
+          ],
+          "quote": "como plantas ornamentales para los jardines de su monasterio.",
+          "location": "Historia del café(1700)",
+          "note": ""
+        },
+        {
+          "text": "当初は薬用としても栽培された",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式資料で未確認。"
+        },
+        {
+          "text": "飲用作物としての本格利用は19世紀半ば以降",
+          "status": "unverified",
+          "sourceIds": [
+            "anacafe-historia-infografia"
+          ],
+          "quote": "LA PRIMERA PRODUCCION COMERCIAL DE CAFE: 383 SACOS DE 60 KILOGRAMOS ENVIADA A EUROPA CASI EN SU TOTALIDAD.",
+          "location": "Historia del café(1859)",
+          "note": "公式は1859年を『最初の商業生産(60kg袋383袋、ほぼ全量を欧州へ)』とする。『飲用作物としての本格利用』という表現は原文にない。"
+        },
+        {
+          "text": "19世紀初頭にバッタの大量発生で藍(インディゴ)農園が打撃を受けた",
+          "status": "verified",
+          "sourceIds": [
+            "anacafe-historia-infografia"
+          ],
+          "quote": "La plaga de langosta devasta las plantaciones de anil, arrasando con uno de los dos cultivos de exportacion de los cuales, la economia dependia",
+          "location": "Historia del café(1800『El año de la plaga』)",
+          "note": "公式の年は1800年(『19世紀初頭』は1800年を含める解釈。厳密には1800年は18世紀最後の年)。"
+        },
+        {
+          "text": "その約50年後に欧州で合成染料が発明されて藍(インディゴ)生産の採算が悪化し、コーヒーへの転換が進んだ",
+          "status": "incorrect",
+          "sourceIds": [
+            "anacafe-historia-infografia"
+          ],
+          "quote": "La invencion de tintes sinteticos, elimina el segundo producto agricola de exportacion de la epoca: la cochinilla, una materia prima de tinte natural y de intercambio internacional. El gobierno ofrece incentivos para cultivar cafe.",
+          "location": "Historia del café(1850『Crisis de intercambio internacional』)",
+          "note": "公式は、合成染料が打撃を与えたのは藍ではなく『コチニール(カイガラムシ由来の天然染料)』と述べる。年は1850年(1800年の約50年後で整合)。『欧州で』という記述は原文にない。政府がコーヒー栽培の奨励策を出したのは原文どおり。"
+        },
+        {
+          "text": "1871年の自由主義革命(フスト・ルフィノ・バリオス政権)がコーヒーへの転換を決定づけた転機",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "Anacaféの歴史資料に記載なし。他の一次資料は本検証で未取得。"
+        },
+        {
+          "text": "同政権は先住民の共同体的土地を含む公有地を将校やドイツ人入植者らへ払い下げた",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "一次資料で未確認。"
+        },
+        {
+          "text": "1871〜1883年の間に推定40万ヘクタールがコーヒー農園向けに売却された",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "一次資料で未確認。"
+        }
+      ],
+      "suggestedText": "18世紀(1700年)に、イエズス会の司祭がアンティグアの修道院の庭の観賞用植物としてコーヒーの木を持ち込んだ(Anacafé)。1800年にはバッタの大量発生で、輸出作物の一つだった藍の農園が壊滅した。1850年には合成染料の発明で、もう一つの輸出農産物であったコチニール(天然染料)が成り立たなくなり、政府はコーヒー栽培の奨励策を出した。1859年に最初の商業生産(60kg袋383袋、ほぼ全量を欧州向け)が行われた。",
+      "note": "1871年の革命・土地払い下げ・40万haは公式資料で確認できず、suggestedTextから除いた。英訳は日本語と同じ主張(誤りも同じ)。"
+    },
+    "origin:グアテマラ:gradeSystem": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "等級は標高によって区分される",
+          "status": "verified",
+          "sourceIds": [
+            "anacafe-gc-altitudes"
+          ],
+          "quote": "SHB +4500 ft / +1370 m || Semi-Hard / Hard 3500 - 4500 ft / 1066 - 1370 m || Extra Prime / EPW 2500 - 3500 ft / 764 - 1066 m",
+          "location": "Coffee types(Altitude 図)",
+          "note": "画像(図/インフォグラフィック)。画像を直接見て内容を確認し、quote はOCR文字起こしで機械照合した。"
+        },
+        {
+          "text": "SHBは標高1,350m前後以上が目安の最上位",
+          "status": "incorrect",
+          "sourceIds": [
+            "anacafe-gc-altitudes"
+          ],
+          "quote": "SHB +4500 ft / +1370 m",
+          "location": "Coffee types(Altitude 図)",
+          "note": "公式図は『+4500ft / +1370m』(4,500ft超・1,370m超)。『1,350m前後』は公式の数字ではない(二次資料に1,350mと書くものがあるが一次資料ではない)。最上位としての位置づけは図のとおりSHBが最上段。"
+        },
+        {
+          "text": "SHB未満はHB(Hard Bean)となる",
+          "status": "incorrect",
+          "sourceIds": [
+            "anacafe-gc-altitudes"
+          ],
+          "quote": "Semi-Hard / Hard 3500 - 4500 ft / 1066 - 1370 m || Extra Prime / EPW 2500 - 3500 ft / 764 - 1066 m",
+          "location": "Coffee types(Altitude 図)",
+          "note": "公式図ではSHBの下に『Semi-Hard / Hard』(3,500〜4,500ft、1,066〜1,370m)と『Extra Prime / EPW』(2,500〜3,500ft、764〜1,066m)の2段階がある。『それ未満はHB』は単純化しすぎ。"
+        },
+        {
+          "text": "標高が高いほど品質が高いとされる",
+          "status": "verified",
+          "sourceIds": [
+            "anacafe-boletin-monitoreo-variedades-2019"
+          ],
+          "quote": "La calidad de las variedades se relaciona directamente con la altura sobre el nivel del mar (msnm) en la que la unidad productiva se encuentra ubicada.",
+          "location": "Informe sobre Monitoreo Nacional de Variedades(Conclusiones 1.)",
+          "note": "原文は『品種の品質は標高に直接関係する』。"
+        },
+        {
+          "text": "標高が高いほど豆が硬く締まる",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式資料で『硬く締まる』理由の説明は未確認(等級名に Hard Bean を含むのみ)。"
+        },
+        {
+          "text": "Anacaféが標高等級を検証する",
+          "status": "unverified",
+          "sourceIds": [
+            "anacafe-ley-cafe"
+          ],
+          "quote": "Exportar únicamente café proveniente de pergamino de primera, de acuerdo con los tipos y calidades que fija la Asociación Nacional del Café",
+          "location": "Reglamento(Acuerdo Gubernativo 13-70)Art. 21 f)",
+          "note": "Anacaféが輸出向けの『tipos y calidades(種類と品質)』を定めるとはあるが、『標高等級を検証する』という具体は確認できず。"
+        },
+        {
+          "text": "最低輸出等級の指定はなく、低品質でも輸出自体は可能",
+          "status": "incorrect",
+          "sourceIds": [
+            "anacafe-ley-cafe",
+            "anacafe-cafe-en-cifras-2026"
+          ],
+          "quote": "Exportar únicamente café proveniente de pergamino de primera, de acuerdo con los tipos y calidades que fija la Asociación Nacional del Café || Velar por la pureza del producto que se exporte y al efecto, podrá hacer inspecciones regulares y extraordinarias en los puertos y otros lugares adecuados, a fin de impedir la exportación de cafés inferiores.",
+          "location": "Reglamento Art. 21 f)、Ley del Café Art. 7 e)",
+          "note": "法令集では、輸出業者は『一等のパーチメント』のコーヒーだけを、Anacafeが定める種類・品質に従って輸出する義務があり(Reglamento 21 f)、Anacaféは『劣等なコーヒーの輸出を防ぐため』港などで検査できる(Ley 7 e)とある。『最低輸出等級の指定がない』という記述と食い違う。ただし(1)この法令集の版・改正状況が不明、(2)現行運用で『最低等級』がどう定義されるか(2025-26年度の輸出はSHB84%、Semi-Hard/Hard 9%、Prima/Extra prima 2%、その他5%、ロブスタ1%という実績がある)は公式資料で確認していない。そのため『ない』と断定する記述は表示しない。"
+        }
+      ],
+      "suggestedText": "グアテマラのコーヒーは標高で等級が分かれ、Anacaféの図では、SHB(Strictly Hard Bean)が標高4,500フィート(1,370m)超、Semi-Hard / Hard が3,500〜4,500フィート(1,066〜1,370m)、Extra Prime / EPW が2,500〜3,500フィート(764〜1,066m)とされる。標高が高いほど品質が高い傾向がある(Anacafé)。",
+      "note": "輸出税1%について(アプリ本文には含まれないが依頼で確認): 法令集内の Decreto Ley 111-85 第1条は『1キンタル(46kg)あたりFOB価額の1%の税』(ミュニシパリティへ1キンタルあたりQ0.10、残りはAnacafé)と定めるが、現行で有効かは未確認。また Ley del Café Art.11 はAnacaféへの Q0.25/キンタルの拠出を定める。アプリにこの主張が無いので、台帳には載せない。英訳は日本語と同じ主張。"
+    },
+    "origin:グアテマラ:officialBody": {
+      "status": "verified",
+      "claims": [
+        {
+          "text": "Anacafé(Asociación Nacional del Café、全国コーヒー協会)",
+          "status": "verified",
+          "sourceIds": [
+            "anacafe-faq"
+          ],
+          "quote": "La Asociación Nacional del Café -Anacafé- es una institución privada, de servicio público, autónoma, con patrimonio propio y fondo privativos fundada en 1960",
+          "location": "FAQ 1.",
+          "note": "FAQは『民間機関』、Ley del Café 第4条は『公法上の団体(entidad de derecho público)』と表現が異なるが、アプリは法的性格を述べていない。"
+        },
+        {
+          "text": "1960年設立",
+          "status": "verified",
+          "sourceIds": [
+            "anacafe-faq"
+          ],
+          "quote": "fundada en 1960 y regulada por la Ley del Café, decreto 19-69",
+          "location": "FAQ 1.",
+          "note": "公式年表(Historia del café)にも1960の記載あり。"
+        },
+        {
+          "text": "輸出許可の権限を持つ",
+          "status": "verified",
+          "sourceIds": [
+            "anacafe-ley-cafe",
+            "anacafe-faq"
+          ],
+          "quote": "La Asociación será la única autorizada para extender los permisos de exportación y embarque cuando se hayan satisfecho todos los requisitos y disposiciones vigentes. || Extender Licencias de Exportación.",
+          "location": "Ley del Café Art. 6 / FAQ 4.",
+          "note": "法令集の版は要確認だが、Anacafé自身のFAQでも現在の権限として明記。"
+        }
+      ],
+      "suggestedText": "",
+      "note": "英訳は日本語と同じ主張(確認済み)。"
+    },
+    "origin:グアテマラ:sub:アンティグア": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "標高1,300〜1,600m",
+          "status": "incorrect",
+          "sourceIds": [
+            "anacafe-gc-regiones"
+          ],
+          "quote": "5000 - 5600",
+          "location": "Antigua Coffee の Region profile(標高欄)",
+          "note": "公式は『5000 - 5600』(単位表記なし。同ページ他産地はftで表記)。ftなら約1,524〜1,707m。『1,300〜1,600m』は公式の数字と食い違う。単位がページに明記されていない点は要注意。"
+        },
+        {
+          "text": "Agua・Fuego・Acatenangoの3火山に囲まれる",
+          "status": "verified",
+          "sourceIds": [
+            "anacafe-gc-regiones"
+          ],
+          "quote": "This valley is surrounded by three volcanoes: Agua, Fuego, and Acatenango.",
+          "location": "Antigua Coffee 紹介本文",
+          "note": ""
+        },
+        {
+          "text": "甘い味わい",
+          "status": "verified",
+          "sourceIds": [
+            "anacafe-gc-regiones"
+          ],
+          "quote": "Elegant and well balanced with a rich aroma and very sweet taste.",
+          "location": "Antigua in the cup",
+          "note": "原文は『上品でバランスが良く、豊かな香りと非常に甘い味』。"
+        },
+        {
+          "text": "なめらか・酸は低〜中程度",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式の紹介に『なめらか』『低〜中程度の酸』の記載なし(カッププロファイルのレーダーに酸味の数値はあるが文言ではない)。"
+        },
+        {
+          "text": "大規模エステート伝統の産地",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式資料で未確認。"
+        }
+      ],
+      "suggestedText": "標高は5,000〜5,600(Anacafé表記。単位は同ページの他産地に合わせればフィートで約1,524〜1,707m)。アグア、フエゴ、アカテナンゴの3つの火山に囲まれる。カップは上品でバランスが良く、豊かな香りと非常に甘い味わい。",
+      "note": "英訳(1,300-1,600 m 等)は日本語と同じ主張(確認済み)。"
+    },
+    "origin:グアテマラ:sub:ウエウエテナンゴ": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "栽培標高は最大2,000m",
+          "status": "verified",
+          "sourceIds": [
+            "anacafe-gc-regiones"
+          ],
+          "quote": "Highland Huehue to be cultivated up to 6,500 feet (2,000 meters)",
+          "location": "Highland Huehue 紹介本文",
+          "note": "Region profile も『5000 - 6500 ft』。"
+        },
+        {
+          "text": "国内最高標高",
+          "status": "unverified",
+          "sourceIds": [
+            "anacafe-gc-regiones"
+          ],
+          "quote": "Of the three non-volcanic regions, Huehuetenango is the highest and driest under cultivation.",
+          "location": "Highland Huehue 紹介本文",
+          "note": "公式の『最高』は『3つの非火山性産地の中で』。Acatenango Valley も標高上限が6,500ftで同じ(Region profile)。国内最高とは言えない。"
+        },
+        {
+          "text": "メキシコ側から吹く暖かい風が霜を防ぐ",
+          "status": "verified",
+          "sourceIds": [
+            "anacafe-gc-regiones"
+          ],
+          "quote": "Thanks to the dry, hot winds that blow into the mountains from Mexico’s Tehuantepec plain, the region is protected from frost",
+          "location": "Highland Huehue 紹介本文",
+          "note": "原文は『メキシコのテワンテペク平原から吹く乾いた暖かい風』。アプリの『メキシコ国境の』は原文にない言い方。"
+        },
+        {
+          "text": "強い酸、フルボディ、ワイン様",
+          "status": "verified",
+          "sourceIds": [
+            "anacafe-gc-regiones"
+          ],
+          "quote": "Fine, intense acidity with a full body and pleasant wine notes.",
+          "location": "Highland Huehue in the cup",
+          "note": ""
+        },
+        {
+          "text": "柑橘の風味",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "Highland Huehue の紹介に柑橘の記載なし。"
+        },
+        {
+          "text": "住民の多くがマム・カンホバル等のマヤ系先住民",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式資料で未確認。"
+        }
+      ],
+      "suggestedText": "栽培標高は最大2,000m(6,500フィート)。メキシコのテワンテペク平原から山地に吹き込む乾いた暖かい風が霜を防ぐ。カップは繊細で強い酸味、フルボディ、心地よいワインのような風味。",
+      "note": "英訳は日本語と同じ主張(確認済み)。"
+    },
+    "origin:メキシコ:tagline": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "小規模農家が支える",
+          "status": "verified",
+          "sourceIds": [
+            "sader-cafe-manos-sabias"
+          ],
+          "quote": "Los caficultores del país son en su mayoría productores de pequeña y muy pequeña escala presentes fundamentalmente en 15 entidades de la República Mexicana.",
+          "location": "SADER『El café, una producción en manos sabias』",
+          "note": ""
+        },
+        {
+          "text": "穏やかな酸とチョコレートのようなやさしい甘みが特徴",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式資料で確認できる味の記述が見つからない(カップ特性は取得範囲の公式資料にない)。"
+        }
+      ],
+      "suggestedText": "小規模な生産者が中心となって支えられている(SADER)。",
+      "note": "英訳は日本語と同じ主張。"
+    },
+    "origin:メキシコ:regions": {
+      "status": "verified",
+      "claims": [
+        {
+          "text": "チアパス、オアハカ、ベラクルス、プエブラは主要な産地",
+          "status": "verified",
+          "sourceIds": [
+            "usda-fas-mx-coffee-annual-2025"
+          ],
+          "quote": "Just four states—Chiapas, Veracruz, Puebla, and Oaxaca—account for 91.4 percent of Mexico's total coffee output.",
+          "location": "USDA FAS MX2025-0023 Crop Area and Yield",
+          "note": "4州で生産量の91.4%(2025年報告)。"
+        }
+      ],
+      "suggestedText": "",
+      "note": "英訳は同じ主張。"
+    },
+    "origin:メキシコ:terroir": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "栽培の94%をチアパス・オアハカ・ベラクルス・プエブラの4州が占める",
+          "status": "incorrect",
+          "sourceIds": [
+            "usda-fas-mx-coffee-annual-2025",
+            "fira-panorama-cafe-2016"
+          ],
+          "quote": "Just four states—Chiapas, Veracruz, Puebla, and Oaxaca—account for 91.4 percent of Mexico's total coffee output. || En 2015/16, el 93.4 por ciento de la cosecha nacional de café cereza se concentró en cinco entidades: Chiapas (37.3 por ciento), Veracruz (26.9 por ciento), Puebla (16.7 por ciento), Oaxaca (8.0 por ciento y Guerrero (4.4 por ciento).",
+          "location": "USDA FAS MX2025-0023 / FIRA Panorama 2016 §3.1",
+          "note": "公式の数字は、4州で生産量の91.4%(USDA FAS、2025年報告)。2015/16年度は5州(ゲレロを含む)で93.4%、4州の生産シェア合計は約88.9%(37.3+26.9+16.7+8.0)、収穫面積は約82.8%(36.0+19.7+17.8+9.3)。『栽培の94%』に一致する公式の数字は見つからなかった(なお FIRA 2016 には『生産の94.5%がアラビカ』という別の数字がある)。"
+        },
+        {
+          "text": "標高は概ね900〜2,200m",
+          "status": "unverified",
+          "sourceIds": [
+            "fira-panorama-cafe-2016"
+          ],
+          "quote": "zonas montañosas del sureste del país que se encuentran a altitudes mayores a 900 metros sobre el nivel del mar",
+          "location": "FIRA Panorama 2016 §3.1",
+          "note": "公式資料は『900m超』と述べるのみ。2,200mという上限の根拠は未確認。USDA FASは『標高900m超で高品質アラビカ(国内生産の約35%)、600〜900mでさらに44%』。"
+        },
+        {
+          "text": "上質なロットは1,700m以上が目安",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式資料で未確認。"
+        },
+        {
+          "text": "火山性土壌",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "メキシコ産地の土壌に関する公式の記述は未確認(SAGARPA 2017 は一般論として『崩れた火山岩を含む土壌が良い』と述べるのみ)。"
+        },
+        {
+          "text": "チアパス州エルトリウンフ生物圏保護区(ユネスコ)周辺は雲霧林である",
+          "status": "verified",
+          "sourceIds": [
+            "unesco-mab-el-triunfo"
+          ],
+          "quote": "El Triunfo is the most diverse evergreen cloud forest in Mexico",
+          "location": "UNESCO MAB El Triunfo 一般情報",
+          "note": "保護区はUNESCO MAB(人間と生物圏計画)の生物圏保護区(登録/推薦年1993)。コーヒーは緩衝地帯の『地域の経済基盤』(Coffee in the buffer zone is the economic base of the region.)。『雲霧林気候』という気候区分の記述は原文になく、『cloud forest(雲霧林)』の森林。"
+        },
+        {
+          "text": "チアパスは穏やかな酸とカカオ感、ベラクルスはより明るい酸とフローラルな香りが出やすい",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式資料で未確認(カップ特性)。"
+        }
+      ],
+      "suggestedText": "メキシコでコーヒーが栽培されるのは14州で、チアパス、ベラクルス、プエブラ、オアハカの4州で生産量の91.4%を占める(USDA FAS、2025年報告)。栽培地の山岳地帯は標高900m超(FIRA、2016年)。チアパス州のエルトリウンフ生物圏保護区(UNESCO MAB)は雲霧林で、保護区の緩衝地帯ではコーヒーが地域の経済基盤になっている。",
+      "note": "英訳は日本語と同じ主張(確認済み)。『14州』はFAS原文 'Coffee cultivation in Mexico spans 14 states.'(別の資料SADER 2017も14州、SADER 2019は15州と食い違いがあるので、表示するならFASの年を明記)。"
+    },
+    "origin:メキシコ:harvestSeason": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "収穫は主に11月から3月",
+          "status": "verified",
+          "sourceIds": [
+            "fira-panorama-cafe-2016"
+          ],
+          "quote": "La cosecha del café se realiza principalmente de noviembre a marzo.",
+          "location": "FIRA Panorama 2016 脚注10",
+          "note": "原文は『主に11〜3月』。10月はコーヒー年度(10〜9月)の開始月。"
+        },
+        {
+          "text": "10〜11月に始まる",
+          "status": "unverified",
+          "sourceIds": [
+            "fira-panorama-cafe-2016"
+          ],
+          "quote": "El ciclo cafetalero para México inicia en octubre y termina en septiembre.",
+          "location": "FIRA Panorama 2016 脚注10",
+          "note": "10月は年度の始まりで、収穫の開始とは書かれていない。"
+        },
+        {
+          "text": "標高の高いロットほど収穫が遅い",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式資料で未確認。"
+        }
+      ],
+      "suggestedText": "収穫は主に11月から3月(FIRA、2016年)。",
+      "note": "英訳は日本語と同じ主張。"
+    },
+    "origin:メキシコ:varietiesDetail": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "伝統的にティピカ・ブルボンが中心(数十年単位の古木も残る)",
+          "status": "unverified",
+          "sourceIds": [
+            "fira-panorama-cafe-2016"
+          ],
+          "quote": "Las variedades más conocidas del café arábiga son Typica y Borbón",
+          "location": "FIRA Panorama 2016 §2",
+          "note": "世界のアラビカの一般論で、メキシコの品種構成の記述ではない。古木の記述も未確認。"
+        },
+        {
+          "text": "カトゥーラ、ムンドノーボ、マラゴジッペ、カトゥアイも広く栽培",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "メキシコでの栽培状況を述べる公式資料は未確認。"
+        },
+        {
+          "text": "さび病対策としてカティモールの導入が進む",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式資料で未確認。"
+        },
+        {
+          "text": "『オロ・アステカ』はメキシコ国内で開発された耐性品種",
+          "status": "verified",
+          "sourceIds": [
+            "inifap-oro-azteca"
+          ],
+          "quote": "“Oro Azteca” —variedad resistente a la roya—, desarrollada por el Instituto Nacional de Investigaciones, Forestales, Agrícolas y Pecuarias (INIFAP)",
+          "location": "INIFAPプレスリリース",
+          "note": "INIFAP(国立林業・農業・畜産研究所)が開発したさび病耐性品種。"
+        },
+        {
+          "text": "『ガルニカ』『ガリエン』も国内で開発された耐性品種",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式資料で未確認。"
+        }
+      ],
+      "suggestedText": "国立研究機関INIFAPが開発したさび病耐性品種『オロ・アステカ』の種子が生産者に配布されている(INIFAP)。",
+      "note": "英訳は日本語と同じ主張。"
+    },
+    "origin:メキシコ:farmStructure": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "全国で推定50万戸の生産者がいる",
+          "status": "verified",
+          "sourceIds": [
+            "sader-planeacion-cafe-2017",
+            "sader-cafe-manos-sabias"
+          ],
+          "quote": "su producción emplea a más de 500,000 productores de 14 entidades federativas y 480 municipios. || aproximadamente participan 500 mil cafeticultores en todo el país",
+          "location": "SAGARPA 2017 / SADER 記事",
+          "note": "原文は『50万超の生産者』『約50万人のコーヒー生産者』。『戸』ではなく『生産者(productores)』。"
+        },
+        {
+          "text": "うち95%が3ヘクタール未満",
+          "status": "unverified",
+          "sourceIds": [
+            "sader-cafe-manos-sabias"
+          ],
+          "quote": "el 92.1 por ciento de la producción de café cereza proviene de pequeños productores con superficies de cultivo no mayores a cinco hectáreas",
+          "location": "SADER 記事",
+          "note": "公式の近い数字は『生産量の92.1%が5ha以下の小生産者(SADER)』。『生産者の95%』『3ha未満』という数字は公式資料で確認できなかった。"
+        },
+        {
+          "text": "1989年のINMECAFE解体後、生産者支援の空白を埋める形で1990年代に各地で協同組合が組織された",
+          "status": "unverified",
+          "sourceIds": [
+            "sagarpa-piac-arreglo-institucional-2016"
+          ],
+          "quote": "La desaparición del Instituto, dejo en situación de vulnerabilidad a la mayoría de los productores",
+          "location": "SAGARPA PIAC スライド p.10",
+          "note": "SAGARPAはINMECAFE廃止後に生産者が脆弱な状態に置かれたと述べるが、協同組合が各地で組織された経緯は述べていない。"
+        },
+        {
+          "text": "オアハカのCEPCO、チアパスのCESMACH(35コミュニティ・生産者478名)が代表例",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式資料(各組織の公式サイト等)は本検証で未取得。"
+        }
+      ],
+      "suggestedText": "メキシコのコーヒー生産には50万を超える生産者が関わり(SAGARPA、2017年)、生産量の92.1%は5ヘクタール以下の小規模生産者によるもの(SADER)。",
+      "note": "英訳は日本語と同じ主張。"
+    },
+    "origin:メキシコ:history": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "コーヒーの導入は18世紀後半",
+          "status": "verified",
+          "sourceIds": [
+            "sader-cafe-muy-suyo-2019"
+          ],
+          "quote": "Este cultivo llegó a México a finales del siglo XVIII",
+          "location": "SADER 2019-10-02 記事",
+          "note": "原文は『18世紀末』。SADERの記述だが、脚注の根拠は民間ブログ。"
+        },
+        {
+          "text": "1870年代以降、輸出作物として拡大した",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式資料で未確認。"
+        },
+        {
+          "text": "1980年代には国内最大の農産物輸出品となった",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式資料で未確認。"
+        },
+        {
+          "text": "1989年のINMECAFE解体",
+          "status": "unverified",
+          "sourceIds": [
+            "sagarpa-piac-arreglo-institucional-2016"
+          ],
+          "quote": "A partir de 1956, y hasta 1989, el INMECAFÉ fue la instancia gubernamental encargada de atender al sector cafetalero || el 31 de mayo de 1993 se publicó en el Diario Oficial de la Federación el decreto que abrogó la ley que había creado al INMECAFÉ",
+          "location": "SAGARPA PIAC スライド p.7, p.10",
+          "note": "SAGARPAは『1989年まで』INMECAFEが担当機関だったとし、89/90年度から自由市場が実質的に始まったとする一方、INMECAFEを創設した法律を廃止する政令の官報公布は1993年5月31日(後継はConsejo Mexicano del Café)と述べる。『1989年解体』は『1989年に役割を終えた』なら一致するが、法的な廃止は1993年。"
+        },
+        {
+          "text": "国際コーヒー協定(ICA)の価格支持制度の崩壊(1989年)",
+          "status": "verified",
+          "sourceIds": [
+            "ico-faq"
+          ],
+          "quote": "The ICO operated a quota system, whereby coffee supplies in excess of consumer requirements were withheld from the market, on and off from 1962 to 1989, when the system was suspended because of failure to agree on quota distribution.",
+          "location": "ICO FAQ",
+          "note": "原文は『割当(クォータ)制度が1989年に停止』。『価格支持』という語はICOの原文にない(クォータで供給を抑える制度)。"
+        },
+        {
+          "text": "1990〜2003年頃『コーヒー危機』と呼ばれる価格暴落・生産者困窮期が続いた",
+          "status": "unverified",
+          "sourceIds": [
+            "ico-history-1963-2013"
+          ],
+          "quote": "The elimination of quotas in July 1989 was accompanied by several years of prices so low that the market situation became known as the coffee crisis. || by the end of 2000 prices had fallen to levels even lower than in the 1989 -1993 period",
+          "location": "ICO 1963-2013 §VI / 2001協定の節",
+          "note": "ICOは、1989年7月のクォータ廃止に伴う『数年間の低価格』を『コーヒー危機』と呼び、2000年末にはさらに低い水準になったと述べる。『1990〜2003年頃』という一続きの期間設定はICOの記述ではない(メキシコ国内の困窮期の公式資料は未確認)。"
+        },
+        {
+          "text": "この困窮は1994年1月のサパティスタ民族解放軍(EZLN)蜂起の背景の一つ",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "一次資料は本検証で未取得。"
+        },
+        {
+          "text": "蜂起はエヒード(共同体的土地保有)の私有化(1992年憲法改正)への反発と結びついていた",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "一次資料は本検証で未取得。"
+        },
+        {
+          "text": "蜂起後の土地占拠・再分配により、チアパスでは大農園化が進まず小農中心の構造が維持された",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "一次資料は本検証で未取得。"
+        }
+      ],
+      "suggestedText": "コーヒーは18世紀末にメキシコへ伝わった(SADER)。国際コーヒー機関(ICO)の割当制度は1989年に停止し、その後数年は価格が非常に低くなり『コーヒー危機』と呼ばれた(ICO)。メキシコでは、国のコーヒー機関INMECAFEが1989年まで担当機関を務め、その法的根拠の法律は1993年5月31日公布の政令で廃止された(SAGARPA資料)。",
+      "note": "チアパスの蜂起・エヒード・1870年代の輸出拡大・1980年代の最大輸出農産物は公式資料で未確認のため除外。英訳は日本語と同じ主張。"
+    },
+    "origin:メキシコ:officialBody": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "AMECAFE(Asociación Mexicana de la Cadena Productiva del Café, A.C.、メキシコ・コーヒー生産チェーン協会)",
+          "status": "verified",
+          "sourceIds": [
+            "dof-acuerdo-certificado-origen-2020"
+          ],
+          "quote": "I. AMECAFÉ: La Asociación Mexicana de la Cadena Productiva del Café, A.C.;",
+          "location": "官報 2020-12-26 協定の定義規定",
+          "note": ""
+        },
+        {
+          "text": "2006年設立",
+          "status": "unverified",
+          "sourceIds": [
+            "dof-acuerdo-certificado-origen-2007",
+            "sagarpa-piac-arreglo-institucional-2016"
+          ],
+          "quote": "determinaron ejercer a través de la Asociación Mexicana de la Cadena Productiva del Café, A.C., la facultad que habían otorgado al Consejo Mexicano del Café, A.C., para la emisión de dichos certificados de origen || En el 2006 y hasta el 2012, el CMC evolucionó a lo que hoy conocemos como AMECAFE",
+          "location": "官報 2007-02-07 協定 前文 / SAGARPA PIAC スライド p.11",
+          "note": "設立(法人設立)の年を述べる公式資料は見つからなかった。官報(2007年2月7日)は2006年10月に輸出入委員会が好意的意見を出したことを述べ、SAGARPA資料は『2006年にConsejo Mexicano del CaféがAMECAFEへ発展した』とする。2006年に権限が移った点は一致するが『設立』とは言っていない。"
+        },
+        {
+          "text": "国営機構INMECAFE(1989年解体)の後継的役割を担う",
+          "status": "verified",
+          "sourceIds": [
+            "sagarpa-piac-arreglo-institucional-2016"
+          ],
+          "quote": "el decreto que abrogó la ley que había creado al INMECAFÉ, mismo que fue sustituido por el CMC. || En el 2006 y hasta el 2012, el CMC evolucionó a lo que hoy conocemos como AMECAFE",
+          "location": "SAGARPA PIAC スライド p.10-11",
+          "note": "SAGARPA資料の系譜は INMECAFE → Consejo Mexicano del Café(CMC) → AMECAFE。『後継的』は妥当だが直接の後継はCMC。『1989年解体』の扱いは history の注記を参照。"
+        },
+        {
+          "text": "輸出許可権限を持つ規制機関ではない",
+          "status": "incorrect",
+          "sourceIds": [
+            "dof-acuerdo-certificado-origen-2020",
+            "dof-acuerdo-certificado-origen-2007",
+            "amecafe-exportacion"
+          ],
+          "quote": "Certificado de Origen para la exportación de café, expedido por la Asociación Mexicana de la Cadena Productiva del Café, A.C., cuyo cumplimiento se deberá acreditar ante las autoridades competentes. || Todo aquel asociado que inicia su registro como exportador en la AMECAFÉ debe saber que el objetivo de dicho registro es la Emisión de Certificados de Origen",
+          "location": "官報 2020-12-26 協定 / AMECAFE『Exportación』ページ",
+          "note": "官報の協定により、コーヒーの輸出には AMECAFE が発給する原産地証明書(Certificado de Origen)が必要で、輸出者はAMECAFEに登録する。『輸出許可』そのものではないが、輸出に関する公的な権限(証明書の発給)を持つため、『輸出に関する権限を持たない』という趣旨の記述は不正確。"
+        },
+        {
+          "text": "生産者・加工業者・政府をつなぐ業界団体としての性格が強い",
+          "status": "unverified",
+          "sourceIds": [
+            "amecafe-mision"
+          ],
+          "quote": "Hacer de la cafeticultura una agroindustria rentable y sostenible que promueva el desarrollo regional y que propicie la generación de ingresos",
+          "location": "AMECAFE『Misión』",
+          "note": "公式の使命は『コーヒー栽培を収益性・持続可能性の高い農産業にする』ことで、『生産者・加工業者・政府をつなぐ』という表現は未確認。SAGARPA資料はAMECAFEを『CNSPC(国家コーヒー・システム・プロダクト委員会)の代表』と述べる。"
+        }
+      ],
+      "suggestedText": "AMECAFE(Asociación Mexicana de la Cadena Productiva del Café, A.C.)は、コーヒー輸出に必要な原産地証明書(Certificado de Origen)を発給する団体で(官報、2020年12月26日)、2006年に、それ以前にConsejo Mexicano del Caféが持っていたこの権限を担うことになった(官報、2007年2月7日)。",
+      "note": "2025年12月19日付官報の新法『Ley para el Desarrollo Sustentable de la Cafeticultura』が公的機関の位置づけを変えている可能性があるが、サイトに接続できず(failed)未確認。英訳は日本語と同じ主張。"
+    },
+    "origin:メキシコ:sub:チアパス(ソコヌスコ・エルトリウンフ)": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "標高900〜1,750m",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式資料で未確認。"
+        },
+        {
+          "text": "エルトリウンフ生物圏保護区(雲霧林)周辺",
+          "status": "verified",
+          "sourceIds": [
+            "unesco-mab-el-triunfo"
+          ],
+          "quote": "El Triunfo is the most diverse evergreen cloud forest in Mexico",
+          "location": "UNESCO MAB El Triunfo",
+          "note": "保護区の緩衝地帯ではコーヒーが地域の経済基盤。"
+        },
+        {
+          "text": "CESMACH等の協同組合が中心",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式資料で未確認。"
+        },
+        {
+          "text": "ウォッシュド中心、穏やかな酸とカカオ感、リンゴ・カシューナッツのニュアンス",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式資料で未確認。"
+        }
+      ],
+      "suggestedText": "エルトリウンフ生物圏保護区(UNESCO MAB。雲霧林)の周辺。保護区の緩衝地帯ではコーヒーが地域の経済基盤になっている(UNESCO)。",
+      "note": "英訳は同じ主張。"
+    },
+    "origin:メキシコ:sub:オアハカ(プルマ・イダルゴ)": {
+      "status": "unverified",
+      "claims": [
+        {
+          "text": "標高900〜2,200m",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式資料で未確認。"
+        },
+        {
+          "text": "国内最古参の産地の一つ",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式資料で未確認。"
+        },
+        {
+          "text": "CEPCO協同組合",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式資料で未確認。"
+        },
+        {
+          "text": "穏やかな酸味、ミディアムボディ、カカオ・モルト・レーズン様",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式資料で未確認。"
+        }
+      ],
+      "suggestedText": "",
+      "note": "公式一次資料で確認できた記述がなく、表示するなら全面的に出典が必要。英訳は同じ主張。"
+    },
+    "origin:メキシコ:sub:ベラクルス(コアテペック・ワトゥスコ)": {
+      "status": "unverified",
+      "claims": [
+        {
+          "text": "標高1,200〜1,900m",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式資料で未確認。"
+        },
+        {
+          "text": "火山性土壌、シエラマドレ東部の湿潤高地",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式資料で未確認。"
+        },
+        {
+          "text": "他地域より明るい酸とフローラルな香り",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式資料で未確認。"
+        },
+        {
+          "text": "コアテペックは『メキシコのコーヒー首都』とも呼ばれる",
+          "status": "unverified",
+          "sourceIds": [
+            "usda-fas-mx-coffee-annual-2025"
+          ],
+          "quote": "such as the Chiapas Coffee Route, the Coatepec Coffee Route in Veracruz, and the Puebla Coffee",
+          "location": "USDA FAS MX2025-0023 (観光ルートの記述)",
+          "note": "FASはコアテペックのコーヒールート(観光)に触れるのみ。『首都』という呼称は未確認。"
+        }
+      ],
+      "suggestedText": "",
+      "note": "公式一次資料で確認できた記述がほとんどなく、表示するなら全面的に出典が必要。英訳は同じ主張。"
+    }
+  }
+}

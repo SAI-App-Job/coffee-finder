@@ -1,0 +1,1816 @@
+[
+ {
+  "key": "origin:コスタリカ:terroir",
+  "proposed": {
+   "text": "コスタリカでは、標高1,200mを超える高地は火山起源の土壌とICAFEは説明する。ロス・サントス地域(タラス郡などを含む)の生産地は標高1,200〜1,900mで、雨季は5〜11月、乾季は12〜4月(ICAFE)。"
+  },
+  "verifiedClaims": [
+   {
+    "index": 1,
+    "text": "標高1,200m超の高地は火山起源の土壌",
+    "status": "verified",
+    "quote": "y las zonas altas, arriba de 1.200 metros, de origen volcánico, donde el café es más fuerte o más ácido y también más aromático",
+    "location": "Regiones Cafetaleras de Costa Rica 第3段落",
+    "sourceIds": [
+     "icafe-regiones"
+    ]
+   },
+   {
+    "index": 8,
+    "text": "雨季は5〜11月、乾季は12〜4月(ロス・サントス地域)",
+    "status": "verified",
+    "quote": "se caracteriza por una época lluviosa de siete meses (mayo a noviembre) y seca (diciembre a abril) bien definidas",
+    "location": "Los Santos 気候の段落",
+    "sourceIds": [
+     "icafe-lossantos"
+    ]
+   }
+  ],
+  "rejectedClaims": [
+   {
+    "text": "太平洋・大西洋両方の影響を受ける",
+    "status": "unverified"
+   },
+   {
+    "text": "土壌は肥沃",
+    "status": "unverified"
+   },
+   {
+    "text": "多様な微気候",
+    "status": "unverified"
+   },
+   {
+    "text": "ICAFEが8つの公式産地を定義",
+    "status": "conflict"
+   },
+   {
+    "text": "タラス地方は標高約1,500〜1,900m",
+    "status": "unverified"
+   },
+   {
+    "text": "国内最高標高帯の一つ",
+    "status": "unverified"
+   },
+   {
+    "text": "ミル自体は標高1,600m、上部の畑は1,800m付近",
+    "status": "unverified"
+   }
+  ],
+  "sources": {
+   "icafe-regiones": {
+    "title": "Regiones Cafetaleras de Costa Rica",
+    "org": "Instituto del Café de Costa Rica (ICAFE)",
+    "kind": "primary",
+    "readMethod": "full-text"
+   },
+   "icafe-lossantos": {
+    "title": "Los Santos (Regiones Cafetaleras)",
+    "org": "Instituto del Café de Costa Rica (ICAFE)",
+    "kind": "primary",
+    "readMethod": "full-text"
+   }
+  },
+  "verifierNote": "英訳は日本語と同じ主張(差異なし)。"
+ },
+ {
+  "key": "origin:コスタリカ:varietiesDetail",
+  "proposed": {
+   "text": "カトゥーラ、カトゥアイが主力(ICAFE。両者で全国のコーヒー栽培面積の90%超)。Villa Sarchiはブルボンの単一遺伝子変異による矮性の自然変異(WCR)。"
+  },
+  "verifiedClaims": [
+   {
+    "index": 0,
+    "text": "カトゥーラ、カトゥアイが主力",
+    "status": "verified",
+    "quote": "Predomina la siembra de cultivares de porte bajo y alta productividad, como el caturra y el catauí, los cuales cubren más de 90 por ciento del área cafetalera nacional.",
+    "location": "Estructura del Sector / Productores",
+    "sourceIds": [
+     "icafe-estructura"
+    ]
+   },
+   {
+    "index": 1,
+    "text": "Villa Sarchiはブルボンの単一遺伝子変異による矮性の自然変異",
+    "status": "verified",
+    "quote": "Villa Sarchi (also called La Luisa or Villalobos Bourbon) is a natural mutation of a Bourbon population with a single-gene mutation that causes the plant to grow smaller",
+    "location": "Villa Sarchi / Origin",
+    "sourceIds": [
+     "wcr-villa-sarchi"
+    ]
+   }
+  ],
+  "rejectedClaims": [
+   {
+    "text": "Villa Sarchiはウエストバレー地域で最初に選抜された",
+    "status": "unverified"
+   },
+   {
+    "text": "Villa Lobosも在来の変異種",
+    "status": "conflict"
+   },
+   {
+    "text": "近年はSL28やゲイシャなど実験的品種へ転換が進む",
+    "status": "unverified"
+   },
+   {
+    "text": "耐病性のICAFE 95等への転換も進む",
+    "status": "unverified"
+   }
+  ],
+  "sources": {
+   "icafe-estructura": {
+    "title": "Estructura del Sector",
+    "org": "Instituto del Café de Costa Rica (ICAFE)",
+    "kind": "primary",
+    "readMethod": "full-text"
+   },
+   "wcr-villa-sarchi": {
+    "title": "Villa Sarchi (World Coffee Research Coffee Varieties Catalog)",
+    "org": "World Coffee Research",
+    "kind": "primary",
+    "readMethod": "full-text"
+   }
+  },
+  "verifierNote": "英訳は日本語と同じ主張(差異なし)。"
+ },
+ {
+  "key": "origin:コロンビア:farmStructure",
+  "proposed": {
+   "text": "FNC公式サイトは、コロンビアで約54万世帯(540,000 families)がコーヒーを栽培していると述べている。"
+  },
+  "verifiedClaims": [
+   {
+    "index": 0,
+    "text": "FNCが代表するコーヒー生産世帯は約54万",
+    "status": "verified",
+    "quote": "540,000 Colombian families grow coffee with passion and dedication, supported by the National Federation of Coffee Growers.",
+    "location": "From seed to mug",
+    "sourceIds": [
+     "cafedecolombia-seed-to-mug"
+    ]
+   }
+  ],
+  "rejectedClaims": [
+   {
+    "text": "平均農園面積は2ha未満(FNCの記述として引用)",
+    "status": "unverified"
+   },
+   {
+    "text": "FNCと協同組合が品質向上・乾燥設備投資を支援している",
+    "status": "unverified"
+   }
+  ],
+  "sources": {
+   "cafedecolombia-seed-to-mug": {
+    "title": "From seed to mug",
+    "org": "Café de Colombia (Federación Nacional de Cafeteros)",
+    "kind": "primary",
+    "readMethod": "full-text"
+   }
+  },
+  "verifierNote": ""
+ },
+ {
+  "key": "origin:コロンビア:gradeSystem",
+  "proposed": {
+   "text": "全国コーヒー生産者委員会の決議第2号(2016年)は、輸出用の生豆Excelsoを、大粒で主に平たく揃った豆で、スクリーン14(malla 14)より上に残るもの(5%まではそれより小さくスクリーン12に残る豆を許容)と定め、少なくとも50%の豆がスクリーン15に残ることを求める。"
+  },
+  "verifiedClaims": [
+   {
+    "index": 2,
+    "text": "Excelsoは、大粒で主に平たく揃った豆で、スクリーン14(malla 14)より上に残り、5%まではそれより小さくスクリーン12に残る豆を許容する",
+    "status": "verified",
+    "quote": "Será objeto de exportación el Café Verde en Almendra Excelso, que es el café compuesto de grano grande, principalmente plano, parejo, retenido por encima de malla catorce (14), con tolerancia hasta del cinco por ciento (5%) inferior a esa malla, pero retenido por la malla doce (12)",
+    "location": "決議2号 第2条(2頁)",
+    "sourceIds": [
+     "fnc-res-02-2016"
+    ]
+   },
+   {
+    "index": 3,
+    "text": "Excelsoは、少なくとも50%の豆がスクリーン15に残る(Green Coffee Association of New York Cityの規格に準拠)",
+    "status": "verified",
+    "quote": "En todo caso este café debe tener por lo menos un cincuenta por ciento (50%) de granos retenidos sobre la malla quince (15), de acuerdo con lo previsto en las normas de la Green Coffee Association of New York City, Inc.",
+    "location": "決議2号 第2条(2頁)",
+    "sourceIds": [
+     "fnc-res-02-2016"
+    ]
+   }
+  ],
+  "rejectedClaims": [
+   {
+    "text": "「エクセルソ(Excelso)」は7段階の等級群に共通する親カテゴリ名で、単独では意味をなさず常に「エクセルソ+サブ名」で表記される",
+    "status": "unverified"
+   },
+   {
+    "text": "サブ名はプレミアム/スプレモ/エクストラ/ヨーロッパ/UGQ/マラゴジッペ/カラコル、スクリーン12〜18",
+    "status": "unverified"
+   },
+   {
+    "text": "スクリーン16以上とピーベリー(カラコル)のみがスペシャルティコーヒーに分類される",
+    "status": "unverified"
+   }
+  ],
+  "sources": {
+   "fnc-res-02-2016": {
+    "title": "Resolución 02 de 2016 (25 de abril) - Por la cual se unifican y actualizan las normas de calidad del café verde en almendra para exportación",
+    "org": "Comité Nacional de Cafeteros / Federación Nacional de Cafeteros de Colombia",
+    "kind": "primary",
+    "readMethod": "full-text"
+   }
+  },
+  "verifierNote": "サブ名7種・スクリーン12〜18・スペシャルティ分類は、一次資料で確認できていない。決議2号は水分12.5%以下(第3.1条)、500gの試料で24欠点以下(第3.2条)も定める。"
+ },
+ {
+  "key": "origin:コロンビア:harvestSeason",
+  "proposed": {
+   "text": "Cenicaféの資料(カウカ県エル・タンボの試験地)では、収穫は雨の分布により年2回あり、主収穫は4〜6月、副収穫(mitaca)は11〜1月で、主収穫が年産の70〜85%を占める。"
+  },
+  "verifiedClaims": [],
+  "rejectedClaims": [
+   {
+    "text": "ウイラは主収穫11〜1月・副次5〜7月、ナリーニョ等はその逆",
+    "status": "unverified"
+   },
+   {
+    "text": "国全体では事実上通年で収穫がある",
+    "status": "unverified"
+   }
+  ],
+  "sources": {},
+  "verifierNote": "ウイラ・ナリーニョの収穫月は未確認。"
+ },
+ {
+  "key": "origin:コロンビア:history",
+  "proposed": {
+   "text": "FNCの紹介では、サラサール・デ・ラス・パルマス(ノルテ・デ・サンタンデール県)に、司祭フランシスコ・ロメロがコーヒーの種をベネズエラのルビオから持ち込み、告解のたびにコーヒーの植樹を贖罪とした、という言い伝えが残る(年代は示されていない)。コロンビアには、カウカ(2011年)、ナリーニョ(2011年)、ウイラ(2013年)、サンタンデール(2014年)、トリマ(2017年)、シエラネバダ(2017年)の地域別の原産地呼称(DO)があり、ウイラは2013年4月16日のSIC決議17989号で保護が宣言された。"
+  },
+  "verifiedClaims": [
+   {
+    "index": 2,
+    "text": "サラサール・デ・ラス・パルマスの司祭フランシスコ・ロメロが、告解の贖罪としてコーヒーの植樹を課したという言い伝えがある",
+    "status": "verified",
+    "quote": "fue el padre Francisco Romero, un sacerdote venido de Rubio, Venezuela, quien llevó consigo las primeras semillas de café || Para cada pecado confesado, la penitencia consistía en sembrar y cuidar cafetos.",
+    "location": "FNCニュース「Salazar de las Palmas: cuna del café colombiano」",
+    "sourceIds": [
+     "fnc-noticia-salazar"
+    ]
+   },
+   {
+    "index": 5,
+    "text": "原産地呼称(DO)として複数地域を保有している",
+    "status": "verified",
+    "quote": "Resolution No. 41788 declared the protection of the DO Cafe de Cauca || Resolution No. 17989 of April 16, 2013, in which the protection of Cafe de Huila is declared as Protected Designation of Origin || Resolution No. 50042, through which it declares the protection of the DO Café de Santander",
+    "location": "Regional DO: Cauca / Huila / Santander",
+    "sourceIds": [
+     "cafedecolombia-do-regional"
+    ]
+   },
+   {
+    "index": 6,
+    "text": "ウイラは2013年にDOを取得",
+    "status": "verified",
+    "quote": "Upon request of the Federacion Nacional De Cafeteros, the Superintendencia de Industria y Comercio (SIC) issued the Resolution No. 17989 of April 16, 2013, in which the protection of Cafe de Huila is declared as Protected Designation of Origin.",
+    "location": "Regional DO: Huila",
+    "sourceIds": [
+     "cafedecolombia-do-regional"
+    ]
+   }
+  ],
+  "rejectedClaims": [
+   {
+    "text": "コーヒーに関する最古の文献記録は、イエズス会士ホセ・グミジャの『El Orinoco Ilustrado』(1730年)にある",
+    "status": "unverified"
+   },
+   {
+    "text": "第二の記録は大司教副王カバジェロ・イ・ゴンゴラの1787年の報告書で、ヒロンやムソ周辺に言及している",
+    "status": "unverified"
+   },
+   {
+    "text": "1835年にドゥラニア/サラサール・デ・ラス・パルマスで商業栽培が始まり、ククタ税関から最初の輸出が記録された",
+    "status": "unverified"
+   },
+   {
+    "text": "19世紀を通じてアンデス内陸部へ栽培が拡大し、世界第3位の生産国となった",
+    "status": "unverified"
+   }
+  ],
+  "sources": {
+   "fnc-noticia-salazar": {
+    "title": "SALAZAR DE LAS PALMAS: CUNA DEL CAFÉ COLOMBIANO (noticia FNC)",
+    "org": "Federación Nacional de Cafeteros de Colombia",
+    "kind": "primary",
+    "readMethod": "full-text"
+   },
+   "cafedecolombia-do-regional": {
+    "title": "Regional Designations of Origin",
+    "org": "Café de Colombia (Federación Nacional de Cafeteros)",
+    "kind": "primary",
+    "readMethod": "full-text"
+   }
+  },
+  "verifierNote": ""
+ },
+ {
+  "key": "origin:コロンビア:officialBody",
+  "proposed": {
+   "text": "FNC(全国コーヒー生産者連盟)は1927年に設立された。輸出用の生豆の品質規則は、全国コーヒー生産者委員会(Comité Nacional de Cafeteros)の決議第2号(2016年4月25日)が定める。同決議はExcelsoの規格を定めるとともに、Excelso以外の品質の生豆の輸出も認めている。FNCの2025年12月の通達も、生豆の品質管理は決議第2号(2016年)に従うとしている。"
+  },
+  "verifiedClaims": [
+   {
+    "index": 0,
+    "text": "FNC(全国コーヒー生産者連盟)は1927年設立",
+    "status": "verified",
+    "quote": "Creación de la Federación Nacional de Cafeteros - FNC 1927 Se crea la FNC una entidad privada, sin ánimo de lucro y de carácter gremial",
+    "location": "「Nuestra Historia」の1927年の項",
+    "sourceIds": [
+     "fnc-federacion-historia"
+    ]
+   },
+   {
+    "index": 1,
+    "text": "Comité Nacional de Cafeteros(全国コーヒー生産者委員会)の決議第2号・2016年が、輸出用生豆の品質規則である",
+    "status": "verified",
+    "quote": "RESOLUCIÓN 02 DE 2016 (25 de abril) POR LA CUAL SE UNIFICAN Y ACTUALIZAN LAS NORMAS DE CALIDAD DEL CAFÉ VERDE EN ALMENDRA PARA EXPORTACIÓN",
+    "location": "表題(1頁)",
+    "sourceIds": [
+     "fnc-res-02-2016"
+    ]
+   },
+   {
+    "index": 3,
+    "text": "FNCの2025年12月の通達が、生豆の品質管理の根拠として決議2号(2016年)を挙げている",
+    "status": "verified",
+    "quote": "El control de calidad del café verde se realiza conforme a lo establecido en la Resolución 2 de 2016 del Comité Nacional",
+    "location": "Circular N° 007(FRC25I00014)「NORMA DE CALIDAD」の項",
+    "sourceIds": [
+     "fnc-circular-007-2025"
+    ]
+   }
+  ],
+  "rejectedClaims": [
+   {
+    "text": "FNCは「エキセルソ以上のみ輸出可能」という最低輸出基準を運用している",
+    "status": "incorrect"
+   },
+   {
+    "text": "生豆の品質規範(根拠となる決議)は決議2号(2016年)か、決議05号(2018年)か、という資料間の食い違い",
+    "status": "conflict"
+   }
+  ],
+  "sources": {
+   "fnc-federacion-historia": {
+    "title": "Federación - Nuestra Historia (FNC)",
+    "org": "Federación Nacional de Cafeteros de Colombia",
+    "kind": "primary",
+    "readMethod": "full-text"
+   },
+   "fnc-res-02-2016": {
+    "title": "Resolución 02 de 2016 (25 de abril) - Por la cual se unifican y actualizan las normas de calidad del café verde en almendra para exportación",
+    "org": "Comité Nacional de Cafeteros / Federación Nacional de Cafeteros de Colombia",
+    "kind": "primary",
+    "readMethod": "full-text"
+   },
+   "fnc-circular-007-2025": {
+    "title": "Circular N° 007 - FRC25I00014 (Regulación cafetera): Recomendaciones para la exportación de café",
+    "org": "Federación Nacional de Cafeteros de Colombia",
+    "kind": "primary",
+    "readMethod": "full-text"
+   }
+  },
+  "verifierNote": "「生豆の品質規範が決議2/2016か05/2018か」は、conflictとして両方の原文を記録した(検証者は解決しない)。"
+ },
+ {
+  "key": "origin:コロンビア:sub:ウイラ",
+  "proposed": {
+   "detail": "ウイラ: 標高は1,000〜2,200m(FNCの原産地呼称の説明)。バランスの取れた全体印象で、甘い風味、中〜高の酸と中〜高のボディ、フルーティーでキャラメルの香りを持つウォッシュドのアラビカ。原産地呼称は2013年4月16日のSIC決議17989号で保護された。"
+  },
+  "verifiedClaims": [],
+  "rejectedClaims": [
+   {
+    "text": "標高1,200〜2,000m",
+    "status": "incorrect"
+   },
+   {
+    "text": "火山性土壌",
+    "status": "unverified"
+   },
+   {
+    "text": "バランス良くジューシーでクリーン、青リンゴ・柑橘・チョコの甘み",
+    "status": "unverified"
+   },
+   {
+    "text": "国内で最も受賞の多い地域の一つ",
+    "status": "unverified"
+   }
+  ],
+  "sources": {},
+  "verifierNote": ""
+ },
+ {
+  "key": "origin:コロンビア:sub:トリマ",
+  "proposed": {
+   "detail": "トリマ: FNCの説明では、酸は中〜高で柑橘系、ボディは中〜高でクリーミー、甘さ系の多様な風味に柑橘と果実の印象が重なる。土壌は砂質とされる。原産地呼称は2017年1月30日のSIC決議2458号で保護された。"
+  },
+  "verifiedClaims": [
+   {
+    "index": 3,
+    "text": "酸は柑橘系(中〜高)",
+    "status": "verified",
+    "quote": "Tolima Aroma Sweet and Fruity Taste Sweet, Fruity Acidity Media - High, citrus Body Medium-high, creamy",
+    "location": "Coffee Growing Regions: Tolima",
+    "sourceIds": [
+     "cafedecolombia-regions"
+    ]
+   }
+  ],
+  "rejectedClaims": [
+   {
+    "text": "標高1,200〜1,900m",
+    "status": "unverified"
+   },
+   {
+    "text": "火山性土壌",
+    "status": "unverified"
+   },
+   {
+    "text": "近年台頭",
+    "status": "unverified"
+   },
+   {
+    "text": "赤い果実・キャラメル・スパイス",
+    "status": "unverified"
+   }
+  ],
+  "sources": {
+   "cafedecolombia-regions": {
+    "title": "Coffee Growing Regions",
+    "org": "Café de Colombia (Federación Nacional de Cafeteros)",
+    "kind": "primary",
+    "readMethod": "full-text"
+   }
+  },
+  "verifierNote": ""
+ },
+ {
+  "key": "origin:コロンビア:sub:ナリーニョ",
+  "proposed": {
+   "detail": "ナリーニョ: 高標高と低温が品質の要因とされる(FNCの原産地呼称の説明)。カップはミディアムボディ、甘い風味とクリーンでやわらかい味わい、非常にはっきりした香り。酸の強さはFNC公式サイト内で「high」と「Medium, citric」の2通りの記載がある。原産地呼称は2011年2月11日のSIC決議06093号で保護された。"
+  },
+  "verifiedClaims": [
+   {
+    "index": 2,
+    "text": "極端な高標高",
+    "status": "verified",
+    "quote": "the high altitude where it is grown and the low temperatures that force the plant to conserve its sweetness",
+    "location": "Regional DO: Nariño",
+    "sourceIds": [
+     "cafedecolombia-do-regional"
+    ]
+   }
+  ],
+  "rejectedClaims": [
+   {
+    "text": "最大2,300m級",
+    "status": "unverified"
+   },
+   {
+    "text": "火山性土壌",
+    "status": "unverified"
+   },
+   {
+    "text": "明るい酸",
+    "status": "conflict"
+   },
+   {
+    "text": "フルボディ",
+    "status": "incorrect"
+   }
+  ],
+  "sources": {
+   "cafedecolombia-do-regional": {
+    "title": "Regional Designations of Origin",
+    "org": "Café de Colombia (Federación Nacional de Cafeteros)",
+    "kind": "primary",
+    "readMethod": "full-text"
+   }
+  },
+  "verifierNote": ""
+ },
+ {
+  "key": "origin:コロンビア:tagline",
+  "proposed": {
+   "text": "FNCは、コロンビアのコーヒーを「良い品質の代名詞」と位置づけている(決議2号・2016年)。"
+  },
+  "verifiedClaims": [],
+  "rejectedClaims": [
+   {
+    "text": "バランスの取れた酸味とコク、安定した品質",
+    "status": "unverified"
+   }
+  ],
+  "sources": {},
+  "verifierNote": ""
+ },
+ {
+  "key": "origin:コロンビア:terroir",
+  "proposed": {
+   "text": "FNCは、コロンビアのコーヒーの特長を「土壌・気温・標高の完璧な組み合わせ」によるものと説明している。"
+  },
+  "verifiedClaims": [],
+  "rejectedClaims": [
+   {
+    "text": "アンデス3山脈(西・中央・東コルディレラ)にまたがる",
+    "status": "unverified"
+   },
+   {
+    "text": "南西部のナリーニョ・カウカ・ウイラは特に高標高の農園が多い",
+    "status": "unverified"
+   },
+   {
+    "text": "中部のトリマは火山性土壌と幅のある標高の組み合わせ",
+    "status": "unverified"
+   },
+   {
+    "text": "火山性土壌・高標高・赤道直下の日照が組み合わさり良好な栽培条件を形成する",
+    "status": "unverified"
+   }
+  ],
+  "sources": {},
+  "verifierNote": "3山脈、火山性土壌の記述は一次資料で確認できていない。"
+ },
+ {
+  "key": "origin:コロンビア:varietiesDetail",
+  "proposed": {
+   "text": "Cenicafé(コロンビアの国立コーヒー研究センター)は1938年に設立された。カスティージョとコロンビア種は、Cenicaféがさび病耐性を目的に、カトゥーラ(さび病に感受性)とティモールハイブリッドの交配から育成した品種である。"
+  },
+  "verifiedClaims": [
+   {
+    "index": 0,
+    "text": "Cenicafé(コロンビアの国立コーヒー研究センター)は1938年設立",
+    "status": "verified",
+    "quote": "Centro Nacional de Investigaciones del Café - Cenicafé 1938 Se crea el Centro de Investigaciones de Café más grande del mundo, propiedad de los caficultores colombianos",
+    "location": "FNC「Nuestra Historia」1938年の項",
+    "sourceIds": [
+     "fnc-federacion-historia"
+    ]
+   },
+   {
+    "index": 1,
+    "text": "カスティージョはCenicafeが開発した品種で、カトゥーラ×ティモールハイブリッドの交配に由来する",
+    "status": "verified",
+    "quote": "variedades que fueron desarrolladas en el Centro Nacional de Investigaciones de Café (Cenicafé) a partir del cruzamiento entre la variedad Caturra y el Híbrido de Timor",
+    "location": "Avance Técnico 426 冒頭",
+    "sourceIds": [
+     "cenicafe-avt-426-2012"
+    ]
+   },
+   {
+    "index": 2,
+    "text": "コロンビア種は、カトゥーラ×ティモールハイブリッドの交配に由来する",
+    "status": "verified",
+    "quote": "Para la obtención de las variedades Colombia y Castillo® se partió del cruzamiento entre dos padres constrastantes por su resistencia a la roya, la variedad Caturra (susceptible) y el Híbrido de Timor",
+    "location": "Avance Técnico 426「¿Cómo se obtuvieron…?」の項",
+    "sourceIds": [
+     "cenicafe-avt-426-2012"
+    ]
+   },
+   {
+    "index": 3,
+    "text": "カトゥーラはさび病耐性がほぼない",
+    "status": "verified",
+    "quote": "Sin embargo, es altamente susceptible a la roya del cafeto y a la enfermedad de las cerezas",
+    "location": "Avance Técnico 337(Caturraの説明)",
+    "sourceIds": [
+     "cenicafe-avt-337-2005"
+    ]
+   }
+  ],
+  "rejectedClaims": [
+   {
+    "text": "カスティージョはさび病への高い耐性があり、今日最も広く植えられている",
+    "status": "unverified"
+   },
+   {
+    "text": "タビ(ティピカ×ブルボン×ティモールハイブリッド)はCenicaféが開発したさび病耐性系統",
+    "status": "unverified"
+   },
+   {
+    "text": "主要品種はティピカ・ブルボン・カトゥーラ・マラゴジッペ",
+    "status": "unverified"
+   },
+   {
+    "text": "「ピンクブルボン」は国内でまれに発生する自然変異で、甘さとトロピカルフルーツ様の複雑さが注目されている",
+    "status": "unverified"
+   }
+  ],
+  "sources": {
+   "fnc-federacion-historia": {
+    "title": "Federación - Nuestra Historia (FNC)",
+    "org": "Federación Nacional de Cafeteros de Colombia",
+    "kind": "primary",
+    "readMethod": "full-text"
+   },
+   "cenicafe-avt-426-2012": {
+    "title": "Avance Técnico 426: Variedad Castillo - Preguntas frecuentes (Diciembre de 2012)",
+    "org": "Cenicafé / Federación Nacional de Cafeteros (Fondo Nacional del Café)",
+    "kind": "primary",
+    "readMethod": "full-text"
+   },
+   "cenicafe-avt-337-2005": {
+    "title": "Avance Técnico 337: Castillo: nueva variedad de café con resistencia a la roya (Julio de 2005)",
+    "org": "Cenicafé / Federación Nacional de Cafeteros",
+    "kind": "primary",
+    "readMethod": "full-text"
+   }
+  },
+  "verifierNote": "主要品種の一覧、タビの交配、ピンクブルボンは一次資料で確認できていない。"
+ },
+ {
+  "key": "origin:ジャマイカ:farmStructure",
+  "proposed": {
+   "text": "JACRA(Jamaica Agricultural Commodities Regulatory Authority)は、品質基準の設定、品質保証と認証サービスの提供、コーヒーなどの取引の統括を担う(JIS)。JACRAは従来のCoffee Industry Boardに替わる機関として構想された(農業省閣僚文書)。"
+  },
+  "verifiedClaims": [
+   {
+    "index": 5,
+    "text": "JACRA(旧Coffee Industry Board)が輸出コーヒーの品質管理・認証を担う",
+    "status": "verified",
+    "quote": "JACRA sets the quality standards, provides quality assurance and certification services, and governs the trading in the coffee, cocoa, coconut, turmeric, ginger, as well as pimento industries in Jamaica.",
+    "location": "JIS '$132 Million Spent to Rehabilitate Coffee Sector'",
+    "sourceIds": [
+     "jis-132m-2025",
+     "moa-ministry-paper-jacra"
+    ]
+   }
+  ],
+  "rejectedClaims": [
+   {
+    "text": "全体で約10,000戸の生産者が関わる(Cafe Imports)",
+    "status": "unverified"
+   },
+   {
+    "text": "平均的な農家は80〜175本程度の木を持つ小規模経営",
+    "status": "unverified"
+   },
+   {
+    "text": "Mavis Bank(旧国営)は約6,000戸の生産者からのコーヒーを処理する最大手",
+    "status": "unverified"
+   },
+   {
+    "text": "Mavis Bankは2016年、Wallenfordは2013年に民間売却され、2016年以降は同一の買収者の傘下",
+    "status": "unverified"
+   },
+   {
+    "text": "2015年頃からJamaican Coffee Farmers Associationのような若手生産者団体が自ら加工・販売する動きが出た",
+    "status": "unverified"
+   }
+  ],
+  "sources": {
+   "jis-132m-2025": {
+    "title": "$132 Million Spent to Rehabilitate Coffee Sector",
+    "org": "Jamaica Information Service",
+    "kind": "primary",
+    "readMethod": "full-text"
+   },
+   "moa-ministry-paper-jacra": {
+    "title": "Ministry Paper /2015: Rationalization of Selected Agricultural Commodity Boards, as well as the Export Division",
+    "org": "Ministry of Agriculture and Fisheries, Jamaica",
+    "kind": "primary",
+    "readMethod": "full-text"
+   }
+  },
+  "verifierNote": "生産者数・農園構造・民営化の年は公式資料で確認できず。英訳(src/data/en/originGuide1.js)は日本語と同じ主張で、主張の追加・欠落は見つからなかった。"
+ },
+ {
+  "key": "origin:ジャマイカ:history",
+  "proposed": {
+   "text": "1728年にコーヒーが導入された(JIS)。導入したのは当時の総督サー・ニコラス・ロウズとされる(JCEA)。日本はブルーマウンテンコーヒー輸出の半分超を占める(ジャマイカ農業大臣、2026年1月)。近年はハリケーンの被害を受けた。農業省は、ベリルの通過後(2024年7月)にコーヒー農園・インフラの約60%が被害を受け25,000箱の損失と見積もり、メリッサではコーヒーの40%を失ったと述べている。"
+  },
+  "verifiedClaims": [
+   {
+    "index": 0,
+    "text": "1728年にコーヒーが導入された",
+    "status": "verified",
+    "quote": "Blue Mountain coffee has been grown in Jamaica since 1728 when coffee was first introduced to the island.",
+    "location": "JIS 'Blue Mountain Coffee' 冒頭",
+    "sourceIds": [
+     "jis-blue-mountain-coffee",
+     "wipo-ipadvantage-perfect-cup"
+    ]
+   },
+   {
+    "index": 1,
+    "text": "導入したのは当時のジャマイカ総督",
+    "status": "verified",
+    "quote": "were brought to the island from neighbouring Hispaniola by the British Governor Sir Nicholas Lawes.",
+    "location": "JCEA 'About Us' 'Who We Are'",
+    "sourceIds": [
+     "jcea-about"
+    ]
+   },
+   {
+    "index": 6,
+    "text": "日本向け輸出が伝統的に高比率",
+    "status": "verified",
+    "quote": "Japan accounts for more than half of Jamaica’s Blue Mountain Coffee exports.",
+    "location": "JIS 2026-01-22(農業大臣の発言)",
+    "sourceIds": [
+     "jis-chainsaw-2026",
+     "jcea-what-we-do"
+    ]
+   },
+   {
+    "index": 8,
+    "text": "ハリケーン・ベリルで被害を受けた",
+    "status": "verified",
+    "quote": "There was an estimated 60 per cent damage to coffee farms and infrastructure across all parishes, with an estimated loss of 25,000 boxes, equivalent to approximately $200 million in revenue,” he said.",
+    "location": "MOA 2024-07-19 'Agriculture Sector Sustains $4.73b in Losses from Hurricane Beryl’s Passage'",
+    "sourceIds": [
+     "moa-beryl-2024"
+    ]
+   },
+   {
+    "index": 9,
+    "text": "ハリケーン・メリッサで被害を受けた",
+    "status": "verified",
+    "quote": "following the loss of 40 per cent of coffee during Hurricane Melissa.",
+    "location": "MOA 'Coffee Farmers Urged to Plant Short-Term Crops After Hurricane Melissa Losses'",
+    "sourceIds": [
+     "moa-melissa-2026"
+    ]
+   }
+  ],
+  "rejectedClaims": [
+   {
+    "text": "マルティニークから導入した",
+    "status": "conflict"
+   },
+   {
+    "text": "導入されたのはアラビカ・ティピカ",
+    "status": "unverified"
+   },
+   {
+    "text": "1800年頃には686農園",
+    "status": "unverified"
+   },
+   {
+    "text": "1814年には年産約1,500万kg",
+    "status": "unverified"
+   },
+   {
+    "text": "近年は市場多様化で日本向け比率が低下傾向",
+    "status": "unverified"
+   },
+   {
+    "text": "そのため生産が大きく落ち込んでいる",
+    "status": "unverified"
+   }
+  ],
+  "sources": {
+   "jis-blue-mountain-coffee": {
+    "title": "Blue Mountain Coffee (Jamaican cuisine / Visit Jamaica)",
+    "org": "Jamaica Information Service (ジャマイカ政府広報機関)",
+    "kind": "primary",
+    "readMethod": "full-text"
+   },
+   "wipo-ipadvantage-perfect-cup": {
+    "title": "In Search of a Perfect Cup (WIPO IP Advantage, Jamaica Blue Mountain coffee)",
+    "org": "WIPO",
+    "kind": "primary",
+    "readMethod": "full-text"
+   },
+   "jcea-about": {
+    "title": "About Us",
+    "org": "Jamaica Coffee Exporters Association",
+    "kind": "primary",
+    "readMethod": "full-text"
+   },
+   "jis-chainsaw-2026": {
+    "title": "Coffee Farmers to Get Chainsaws to Clear Debris and Restore Access to Farms (2026-01-22)",
+    "org": "Jamaica Information Service",
+    "kind": "primary",
+    "readMethod": "full-text"
+   },
+   "jcea-what-we-do": {
+    "title": "What We Do",
+    "org": "Jamaica Coffee Exporters Association",
+    "kind": "primary",
+    "readMethod": "full-text"
+   },
+   "moa-beryl-2024": {
+    "title": "Agriculture Sector Sustains $4.73b in Losses from Hurricane Beryl's Passage (2024-07-19)",
+    "org": "Ministry of Agriculture, Fisheries and Mining, Jamaica",
+    "kind": "primary",
+    "readMethod": "full-text"
+   },
+   "moa-melissa-2026": {
+    "title": "Coffee Farmers Urged to Plant Short-Term Crops After Hurricane Melissa Losses",
+    "org": "Ministry of Agriculture, Fisheries and Mining, Jamaica",
+    "kind": "primary",
+    "readMethod": "full-text"
+   }
+  },
+  "verifierNote": "導入元(マルティニーク/ヒスパニョーラ)の食い違いはJCEA(協会公式)とGleaner(報道)の間。suggestedTextは導入元に触れていない。英訳(src/data/en/originGuide1.js)は日本語と同じ主張で、主張の追加・欠落は見つからなかった。"
+ },
+ {
+  "key": "origin:ジャマイカ:officialBody",
+  "proposed": {
+   "text": "JACRA(Jamaica Agricultural Commodities Regulatory Authority)は、品質基準の設定・品質保証と認証サービスの提供・コーヒーなどの取引の統括を担う(JIS)。JACRA規則2018の第21条は、当局の書面による許可なく、「Blue Mountain」「High Mountain」の語を含む名称でコーヒーを購入・販売・輸出することを禁じている。"
+  },
+  "verifiedClaims": [
+   {
+    "index": 0,
+    "text": "JACRA(旧Coffee Industry Board)",
+    "status": "verified",
+    "quote": "the new body will replace the existing Coffee Industry Board",
+    "location": "MOA Ministry Paper 1.0 Purpose",
+    "sourceIds": [
+     "moa-ministry-paper-jacra"
+    ]
+   },
+   {
+    "index": 2,
+    "text": "認証を受けた業者のみが名乗れる",
+    "status": "verified",
+    "quote": "shall not, unless authorized in writing by the Authority",
+    "location": "JACRA Regs 2018, reg.21(1)",
+    "sourceIds": [
+     "jam-jacra-regulations-2018"
+    ]
+   }
+  ],
+  "rejectedClaims": [
+   {
+    "text": "JACRAが「ブルーマウンテン」の商標権を独占保有している",
+    "status": "conflict"
+   }
+  ],
+  "sources": {
+   "moa-ministry-paper-jacra": {
+    "title": "Ministry Paper /2015: Rationalization of Selected Agricultural Commodity Boards, as well as the Export Division",
+    "org": "Ministry of Agriculture and Fisheries, Jamaica",
+    "kind": "primary",
+    "readMethod": "full-text"
+   },
+   "jam-jacra-regulations-2018": {
+    "title": "The Jamaica Agricultural Commodities Regulatory Authority Regulations, 2018 (Jamaica Gazette Supplement, March 2, 2018)",
+    "org": "Government of Jamaica / JACRA",
+    "kind": "primary",
+    "readMethod": "full-text"
+   }
+  },
+  "verifierNote": "商標所有者の記述は未解決(conflict)でsuggestedTextに含めていない。英訳(src/data/en/originGuide1.js)は日本語と同じ主張で、主張の追加・欠落は見つからなかった。"
+ },
+ {
+  "key": "origin:ジャマイカ:sub:ハイマウンテン地区",
+  "proposed": {
+   "detail": "ブルーマウンテン区域の外で育つジャマイカ産コーヒーの上級等級は、規則で「Jamaica High Mountain Supreme Coffee」と定義されている(JACRA規則2018)。"
+  },
+  "verifiedClaims": [
+   {
+    "index": 0,
+    "text": "ブルーマウンテン地区外",
+    "status": "verified",
+    "quote": "“Jamaica High Mountain Supreme Coffee” means the premium grades from Jamaican coffee grown outside of the Blue Mountain area of Jamaica;",
+    "location": "JACRA Regs 2018, reg.2",
+    "sourceIds": [
+     "jam-jacra-regulations-2018"
+    ]
+   }
+  ],
+  "rejectedClaims": [
+   {
+    "text": "標高457〜914m",
+    "status": "unverified"
+   },
+   {
+    "text": "マイルドでクリーンだがブルーマウンテンほどの複雑さはない",
+    "status": "unverified"
+   },
+   {
+    "text": "近年は生産減少が著しい",
+    "status": "unverified"
+   }
+  ],
+  "sources": {
+   "jam-jacra-regulations-2018": {
+    "title": "The Jamaica Agricultural Commodities Regulatory Authority Regulations, 2018 (Jamaica Gazette Supplement, March 2, 2018)",
+    "org": "Government of Jamaica / JACRA",
+    "kind": "primary",
+    "readMethod": "full-text"
+   }
+  },
+  "verifierNote": "英訳(src/data/en/originGuide1.js)は日本語と同じ主張で、主張の追加・欠落は見つからなかった。"
+ },
+ {
+  "key": "origin:ジャマイカ:sub:ブルーマウンテン地区",
+  "proposed": {
+   "detail": "規則上のブルーマウンテン区域は、JACRA規則2018の第1附則で定められた境界線の内側。JISは標高3,000〜5,500フィートで栽培されたものとしている。"
+  },
+  "verifiedClaims": [
+   {
+    "index": 0,
+    "text": "規則上のブルーマウンテン区域は、第1附則の境界線で定義される",
+    "status": "verified",
+    "quote": "“Jamaica Blue Mountain Coffee” means coffee that is grown in the Blue Mountain area of Jamaica;",
+    "location": "JACRA Regs 2018, reg.2 / First Schedule 'Blue Mountain Area of Jamaica'",
+    "sourceIds": [
+     "jam-jacra-regulations-2018"
+    ]
+   }
+  ],
+  "rejectedClaims": [
+   {
+    "text": "標高914〜1,676m(3,000〜5,500フィート)",
+    "status": "conflict"
+   },
+   {
+    "text": "なめらかでバランスに優れ、苦味がほぼなく、明るいがシャープすぎない酸",
+    "status": "unverified"
+   },
+   {
+    "text": "「コーヒーのシャンパン」とも呼ばれる",
+    "status": "unverified"
+   }
+  ],
+  "sources": {
+   "jam-jacra-regulations-2018": {
+    "title": "The Jamaica Agricultural Commodities Regulatory Authority Regulations, 2018 (Jamaica Gazette Supplement, March 2, 2018)",
+    "org": "Government of Jamaica / JACRA",
+    "kind": "primary",
+    "readMethod": "full-text"
+   }
+  },
+  "verifierNote": "英訳(src/data/en/originGuide1.js)は日本語と同じ主張で、主張の追加・欠落は見つからなかった。"
+ },
+ {
+  "key": "origin:ジャマイカ:tagline",
+  "proposed": {
+   "text": "ブルーマウンテン山系が育むコーヒー"
+  },
+  "verifiedClaims": [
+   {
+    "index": 0,
+    "text": "ブルーマウンテン山系がコーヒーを育む",
+    "status": "verified",
+    "quote": "The terrain, rainfall pattern, Blue Mountain mist, and overall conditions are perfectly suitable for the cultivation of one of the world’s most distinguished and cherished coffees",
+    "location": "WIPO 'In Search of a Perfect Cup' 概説段落",
+    "sourceIds": [
+     "wipo-ipadvantage-perfect-cup"
+    ]
+   }
+  ],
+  "rejectedClaims": [
+   {
+    "text": "上品でまろやかな味わい",
+    "status": "unverified"
+   }
+  ],
+  "sources": {
+   "wipo-ipadvantage-perfect-cup": {
+    "title": "In Search of a Perfect Cup (WIPO IP Advantage, Jamaica Blue Mountain coffee)",
+    "org": "WIPO",
+    "kind": "primary",
+    "readMethod": "full-text"
+   }
+  },
+  "verifierNote": "英訳(src/data/en/originGuide1.js)は日本語と同じ主張で、主張の追加・欠落は見つからなかった。"
+ },
+ {
+  "key": "origin:ジャマイカ:terroir",
+  "proposed": {
+   "text": "東部ブルーマウンテン山系(最高峰は標高7,402フィート、約2,256m。JIS)。降水量の多い気候で、冷涼な微気候のためコーヒーチェリーの成熟に時間がかかる(WIPO)。JIS(ジャマイカ政府広報機関)は、標高3,000〜5,500フィートで栽培されたコーヒーだけが「ジャマイカ・ブルーマウンテン」に分類されるとしている。"
+  },
+  "verifiedClaims": [
+   {
+    "index": 0,
+    "text": "ブルーマウンテン山系は島の東部にある",
+    "status": "verified",
+    "quote": "The eastern end of the Caribbean island of Jamaica is adorned by the majestic Blue Mountains range.",
+    "location": "WIPO 概説段落",
+    "sourceIds": [
+     "wipo-ipadvantage-perfect-cup"
+    ]
+   },
+   {
+    "index": 1,
+    "text": "最高峰は2,256m",
+    "status": "verified",
+    "quote": "Jamaica’s highest mountain standing at 7,402 feet",
+    "location": "JIS 'Blue Mountain Coffee' 冒頭",
+    "sourceIds": [
+     "jis-blue-mountain-coffee"
+    ]
+   },
+   {
+    "index": 4,
+    "text": "冷涼で湿潤な気候",
+    "status": "verified",
+    "quote": "The climate in this region is marked by abundant rainfall",
+    "location": "WIPO 概説段落(湿潤)",
+    "sourceIds": [
+     "wipo-ipadvantage-perfect-cup"
+    ]
+   },
+   {
+    "index": 6,
+    "text": "この気候がチェリーの成熟を遅らせる",
+    "status": "verified",
+    "quote": "Due to the cool microclimatic conditions in the Blue Mountains, it takes a longer time for the coffee berries to ripen",
+    "location": "WIPO Background 段落",
+    "sourceIds": [
+     "wipo-ipadvantage-perfect-cup"
+    ]
+   }
+  ],
+  "rejectedClaims": [
+   {
+    "text": "「ブルーマウンテンコーヒー」と名乗るには標高3,000〜5,500フィート(約914〜1,676m)での栽培が条件",
+    "status": "conflict"
+   },
+   {
+    "text": "北東貿易風が山にぶつかり雲・霧を発生させる",
+    "status": "unverified"
+   },
+   {
+    "text": "土壌は変成岩・火成岩由来で水はけがよい(肥沃だがリーチングしやすいとする資料もある)",
+    "status": "unverified"
+   },
+   {
+    "text": "成熟の遅れが糖度と複雑性を高める",
+    "status": "unverified"
+   },
+   {
+    "text": "5,500フィート超は森林保護区(ブルー・ジョン・クロウ山脈国立公園)で栽培不可",
+    "status": "unverified"
+   }
+  ],
+  "sources": {
+   "wipo-ipadvantage-perfect-cup": {
+    "title": "In Search of a Perfect Cup (WIPO IP Advantage, Jamaica Blue Mountain coffee)",
+    "org": "WIPO",
+    "kind": "primary",
+    "readMethod": "full-text"
+   },
+   "jis-blue-mountain-coffee": {
+    "title": "Blue Mountain Coffee (Jamaican cuisine / Visit Jamaica)",
+    "org": "Jamaica Information Service (ジャマイカ政府広報機関)",
+    "kind": "primary",
+    "readMethod": "full-text"
+   }
+  },
+  "verifierNote": "標高条件は資料間の扱いが異なる(conflict)。suggestedTextは『JISは〜としている』と帰属させ、法令上の条件とは書いていない。英訳(src/data/en/originGuide1.js)は日本語と同じ主張で、主張の追加・欠落は見つからなかった。"
+ },
+ {
+  "key": "origin:タンザニア:farmStructure",
+  "proposed": {
+   "text": "タンザニアのコーヒーの約90%は小農が、残りは登録エステートが生産する(TCB、USDA FAS)。小農の数はTCBが約32万、USDA FASの2019年報告が約45万とされ、資料により異なる。農地の規模は0.5〜2エーカー(TCB)、平均約0.63ヘクタール(USDA FAS 2025年報告)。"
+  },
+  "verifiedClaims": [
+   {
+    "index": 2,
+    "text": "農家の多くは1ヘクタール未満",
+    "status": "verified",
+    "quote": "farm sizes of 0.5 - 2 acres",
+    "location": "TCB Coffee Farming",
+    "sourceIds": [
+     "tcb-coffee-production",
+     "usda-fas-tz-2025"
+    ]
+   }
+  ],
+  "rejectedClaims": [
+   {
+    "text": "約45万戸の小農が国内生産の約90%を担い、残り約10%は大規模エステート",
+    "status": "conflict"
+   },
+   {
+    "text": "農家一戸あたりの木の本数は380〜2,000本程度",
+    "status": "incorrect"
+   },
+   {
+    "text": "2018年以降、AMCOSが生産の95%を管理する体制となった",
+    "status": "unverified"
+   },
+   {
+    "text": "小農はAMCOSに登録することで市場アクセス・生産支援・政府支援を受けられる",
+    "status": "unverified"
+   },
+   {
+    "text": "KNCU(Kilimanjaro Native Co-operative Union)はアフリカ最古級の協同組合の一つ",
+    "status": "unverified"
+   }
+  ],
+  "sources": {
+   "tcb-coffee-production": {
+    "title": "Coffee Farming",
+    "org": "Tanzania Coffee Board (TCB)",
+    "kind": "primary",
+    "readMethod": "full-text"
+   },
+   "usda-fas-tz-2025": {
+    "title": "Tanzania Coffee Annual (TZ2025-0004, 2025-05-20)",
+    "org": "USDA Foreign Agricultural Service",
+    "kind": "primary",
+    "readMethod": "full-text"
+   }
+  },
+  "verifierNote": "英訳は日本語と同じ主張。"
+ },
+ {
+  "key": "origin:タンザニア:gradeSystem",
+  "proposed": {
+   "text": "タンザニアのコーヒー産業規則(2013年、GN 385)の第6付表が、アラビカ(マイルド)の精製豆を、スクリーン規格でAA・A・B・PB・AF・TT・E・Fの8等級に区分している。例えばAAはスクリーン18に最低90%が残る豆、PBはピーベリー最低95%。"
+  },
+  "verifiedClaims": [
+   {
+    "index": 1,
+    "text": "タンザニアの規則はマイルド・アラビカの精製豆を、スクリーン規格でAA・A・B・PB・AF・TT・E・Fに区分する",
+    "status": "verified",
+    "quote": "AA Retained minimum 90% of screen 18. Maximum 8 - 10% of screen 17",
+    "location": "Coffee Industry Regulations 2013 (GN 385), Sixth Schedule II (Mild Arabica) 2.0",
+    "sourceIds": [
+     "tz-coffee-regs-2013"
+    ]
+   }
+  ],
+  "rejectedClaims": [
+   {
+    "text": "独自規格ではなく、東アフリカ共同体(EAC)共通のEAS 130:1999を採用している",
+    "status": "incorrect"
+   },
+   {
+    "text": "スクリーンサイズによりE(象豆。AAより大粒)・AA(平豆で最大)・AB・C・PB(ピーベリー)・TT・T(最小)に区分する",
+    "status": "incorrect"
+   },
+   {
+    "text": "各等級は最低95%が該当サイズであることが条件",
+    "status": "incorrect"
+   },
+   {
+    "text": "これとは別に品質クラス1〜10が定められている(1〜6はカップ品質でFine〜Poor to fair、7〜10は選別で除かれた欠点豆など)",
+    "status": "unverified"
+   },
+   {
+    "text": "ウガンダ等と共通",
+    "status": "unverified"
+   }
+  ],
+  "sources": {
+   "tz-coffee-regs-2013": {
+    "title": "The Coffee Industry Regulations, 2013 (Government Notice No. 385 of 2013)",
+    "org": "United Republic of Tanzania (via FAOLEX)",
+    "kind": "primary",
+    "readMethod": "full-text"
+   }
+  },
+  "verifierNote": "英訳は日本語と同じ主張(EAS 130を採用とする記述も同じ)。"
+ },
+ {
+  "key": "origin:タンザニア:harvestSeason",
+  "proposed": {
+   "text": "USDA FASの2025年報告は収穫期を7月〜10月とする。2026年報告(Coffee Board of Tanzania提供のカレンダー)は北部・南部を7月〜12月、西部を5月〜10月とする。"
+  },
+  "verifiedClaims": [],
+  "rejectedClaims": [
+   {
+    "text": "USDA FASによれば、収穫期は概ね7月に始まり10月まで",
+    "status": "conflict"
+   }
+  ],
+  "sources": {},
+  "verifierNote": "英訳は日本語と同じ主張(USDA GAIN attribution を含む)。"
+ },
+ {
+  "key": "origin:タンザニア:history",
+  "proposed": {
+   "text": "2018年1月、政府は農家と契約した現地・外国の業者による直接輸出を禁止し、農家にAMCOSへの加入を義務づけ、全量をTCBのモシの中央オークションで売るよう定めた。この直接輸出の禁止は2019年1月に一時解除され、TCBが上質なコーヒーの生産者による海外の買い手との直接取引を認めた。2021年5月のUSDA FASの報告は、新しい法律により上質なコーヒーの生産者が海外の買い手と直接取引し、オークションを経由しない道が開かれたと記す。"
+  },
+  "verifiedClaims": [
+   {
+    "index": 2,
+    "text": "2018年1月、政府は農家と契約した業者による直接輸出を禁止した",
+    "status": "verified",
+    "quote": "1. Ban on direct export of coffee by local and foreign traders who had agreements with farmers; (Ban temporarily lifted January 2019)",
+    "location": "USDA FAS Tanzania Coffee Annual 2019, Policy",
+    "sourceIds": [
+     "usda-fas-tz-2019",
+     "usda-fas-tz-2018"
+    ]
+   },
+   {
+    "index": 3,
+    "text": "農家にAMCOSへの加入を義務づけた",
+    "status": "verified",
+    "quote": "2. Dissolve all producer groups and require farmers to join AMCOS;",
+    "location": "USDA FAS Tanzania Coffee Annual 2019, Policy",
+    "sourceIds": [
+     "usda-fas-tz-2019"
+    ]
+   },
+   {
+    "index": 4,
+    "text": "全量をモシの中央オークションで売るよう定めた",
+    "status": "verified",
+    "quote": "5. Require all coffee beans to be auctioned at the central TCB auction in Moshi; prohibit all producers, exporters or processors from bypassing auction.",
+    "location": "USDA FAS Tanzania Coffee Annual 2019, Policy",
+    "sourceIds": [
+     "usda-fas-tz-2019"
+    ]
+   },
+   {
+    "index": 5,
+    "text": "この直接輸出の禁止は2019年1月に一時解除され、TCBが上質なコーヒーの生産者による直接取引を認めた",
+    "status": "verified",
+    "quote": "The Tanzanian Government banned direct coffee exports in January 2018; however, the TCB relaxed the ban after a year of instability. TCB allowed premium producers to establish direct contacts with overseas buyers",
+    "location": "USDA FAS Tanzania Coffee Annual 2019, Marketing",
+    "sourceIds": [
+     "usda-fas-tz-2019"
+    ]
+   },
+   {
+    "index": 6,
+    "text": "2021年には新法で、上質なコーヒーの生産者が海外の買い手と直接取引し、オークションを経由しない道が開かれた(USDA FASの報告による)",
+    "status": "verified",
+    "quote": "Currently, a new law allows premium producers to establish direct contacts with overseas buyers, engage with agricultural marketing and cooperative societies (AMCOS), and bypass auctions.",
+    "location": "USDA FAS Tanzania Coffee Annual 2021, Stocks",
+    "sourceIds": [
+     "usda-fas-tz-2021"
+    ]
+   }
+  ],
+  "rejectedClaims": [
+   {
+    "text": "1898年、カトリック宣教師がキリマンジャロ山麓にコーヒーを持ち込んだ(ドイツ領時代)",
+    "status": "unverified"
+   },
+   {
+    "text": "1925年にChagga族が最初の協同組合(KNPA)を設立し、ロンドン市場へ直接販売した",
+    "status": "unverified"
+   }
+  ],
+  "sources": {
+   "usda-fas-tz-2019": {
+    "title": "Tanzania Coffee Annual 2019 (GAIN, 2019-05-23)",
+    "org": "USDA Foreign Agricultural Service",
+    "kind": "primary",
+    "readMethod": "full-text"
+   },
+   "usda-fas-tz-2018": {
+    "title": "Tanzania Coffee Annual 2018 (GAIN, 2018-05-24)",
+    "org": "USDA Foreign Agricultural Service",
+    "kind": "primary",
+    "readMethod": "full-text"
+   },
+   "usda-fas-tz-2021": {
+    "title": "Tanzania Coffee Annual (TZ2021-0002, 2021-05-14)",
+    "org": "USDA Foreign Agricultural Service",
+    "kind": "primary",
+    "readMethod": "full-text"
+   }
+  },
+  "verifierNote": "英訳は日本語と同じ主張(1898年、1925年の記述も同じ)。"
+ },
+ {
+  "key": "origin:タンザニア:officialBody",
+  "proposed": {
+   "text": "Tanzania Coffee Board(TCB)は、2001年のコーヒー産業法(Act No. 23 of 2001)で再設立された。同法により、輸出の許可、コーヒー取引業者の登録、オークションの実施の権限を持つ。商業目的でコーヒーの買付・liquoring・加工・焙煎・倉庫保管・中央パルピング・輸出を行うには、TCBのライセンスが必要。"
+  },
+  "verifiedClaims": [
+   {
+    "index": 0,
+    "text": "TCBは2001年のコーヒー産業法で再設立された",
+    "status": "verified",
+    "quote": "An Act make better provisions for the regulation, improvement and development of the Coffee Industry, to re-establish the Tanzania Coffee Board, to repeal the Tanzania Coffee Board Act of 1984",
+    "location": "Coffee Industry Act 2001 前文(No. 23 of 2001)",
+    "sourceIds": [
+     "tz-coffee-industry-act-2001",
+     "tcb-establishment"
+    ]
+   },
+   {
+    "index": 2,
+    "text": "TCBは輸出の許可、コーヒー取引業者の登録、オークションの実施の権限を持つ",
+    "status": "verified",
+    "quote": "(a) to grant licences or permits for coffee export;",
+    "location": "Coffee Industry Act 2001 s.5(2)",
+    "sourceIds": [
+     "tz-coffee-industry-act-2001"
+    ]
+   },
+   {
+    "index": 4,
+    "text": "すべての商業的な買付・加工・輸出にライセンスが必須",
+    "status": "verified",
+    "quote": "(3) No person on commercial basis shall buy, liquor, process roast, warehouse centrally pulp, or export any coffee without a licence issued by the Board.",
+    "location": "Coffee Industry Act 2001 s.12(3)",
+    "sourceIds": [
+     "tz-coffee-industry-act-2001"
+    ]
+   }
+  ],
+  "rejectedClaims": [
+   {
+    "text": "同法は2002年7月に施行された",
+    "status": "unverified"
+   },
+   {
+    "text": "TCBは「唯一」輸出許可・格付け・オークションを一元管理する政府機関である",
+    "status": "unverified"
+   }
+  ],
+  "sources": {
+   "tz-coffee-industry-act-2001": {
+    "title": "The Coffee Industry Act, 2001 (Act No. 23 of 2001)",
+    "org": "United Republic of Tanzania (via FAOLEX)",
+    "kind": "primary",
+    "readMethod": "full-text"
+   },
+   "tcb-establishment": {
+    "title": "Establishment",
+    "org": "Tanzania Coffee Board (TCB)",
+    "kind": "primary",
+    "readMethod": "full-text"
+   }
+  },
+  "verifierNote": "英訳は日本語と同じ主張(2002年7月施行、唯一・一元管理の記述も同じ)。"
+ },
+ {
+  "key": "origin:タンザニア:sub:キリマンジャロ山麓(北部)",
+  "proposed": {
+   "detail": "北部(北部と西部)ではコーヒーとバナナなどの混作が多い(USDA FAS)。"
+  },
+  "verifiedClaims": [
+   {
+    "index": 0,
+    "text": "キリマンジャロ山麓ではバナナ等との混作が多い",
+    "status": "verified",
+    "quote": "intercropped and bananas/smallholder (mainly in the north and west)",
+    "location": "USDA FAS Tanzania Coffee Annual 2021, Crop Area",
+    "sourceIds": [
+     "usda-fas-tz-2021"
+    ]
+   }
+  ],
+  "rejectedClaims": [
+   {
+    "text": "まろやかでマイルド",
+    "status": "unverified"
+   },
+   {
+    "text": "特定銘柄「キリマンジャロ」の産地(ブコバ地区産を除く)",
+    "status": "unverified"
+   },
+   {
+    "text": "バニラ・チョコレート・プラリネ様の風味",
+    "status": "unverified"
+   }
+  ],
+  "sources": {
+   "usda-fas-tz-2021": {
+    "title": "Tanzania Coffee Annual (TZ2021-0002, 2021-05-14)",
+    "org": "USDA Foreign Agricultural Service",
+    "kind": "primary",
+    "readMethod": "full-text"
+   }
+  },
+  "verifierNote": "英訳は日本語と同じ主張。"
+ },
+ {
+  "key": "origin:タンザニア:sub:南部高地(Mbeya・Ruvuma・Songwe等)",
+  "proposed": {
+   "detail": "ムベヤ、ルブマ、ソングウェは、アラビカの産地に含まれる(TCB)。"
+  },
+  "verifiedClaims": [
+   {
+    "index": 0,
+    "text": "ムベヤ、ルブマ、ソングウェはアラビカの産地",
+    "status": "verified",
+    "quote": "Tanzania’s Arabica growing regions are Kilimanjaro, Arusha, Tanga, Iringa, Mbeya, Kigoma, Manyara, Mwanza, Katavi, Mara, Njombe, Songwe, Rukwa, Geita and Ruvuma while Robusta is grown in Kagera and Morogoro regions.",
+    "location": "TCB Coffee Farming",
+    "sourceIds": [
+     "tcb-coffee-production"
+    ]
+   }
+  ],
+  "rejectedClaims": [
+   {
+    "text": "標高1,250〜1,400m",
+    "status": "unverified"
+   },
+   {
+    "text": "国内生産の75〜85%を占める最大産地",
+    "status": "unverified"
+   },
+   {
+    "text": "黒チェリー・タンジェリン、チョコレート・モラセス・キャラメル、絹のようなボディ",
+    "status": "unverified"
+   }
+  ],
+  "sources": {
+   "tcb-coffee-production": {
+    "title": "Coffee Farming",
+    "org": "Tanzania Coffee Board (TCB)",
+    "kind": "primary",
+    "readMethod": "full-text"
+   }
+  },
+  "verifierNote": "英訳は日本語と同じ主張。"
+ },
+ {
+  "key": "origin:タンザニア:tagline",
+  "proposed": {
+   "text": "キリマンジャロ山麓を含む北部は、100年近くコーヒーを生産してきた産地(TaCRI)。"
+  },
+  "verifiedClaims": [
+   {
+    "index": 0,
+    "text": "キリマンジャロ山麓(ハイ県)は、100年近くコーヒーを生産してきた産地である",
+    "status": "verified",
+    "quote": "The zone has an almost 100 years-long history of producing some of the finest Arabica coffee in the world by both smallholders and estates.",
+    "location": "TaCRI Lyamungu 副研究所ページ",
+    "sourceIds": [
+     "tacri-lyamungu"
+    ]
+   }
+  ],
+  "rejectedClaims": [
+   {
+    "text": "風味が「明るい酸味とワインのような風味」である",
+    "status": "unverified"
+   }
+  ],
+  "sources": {
+   "tacri-lyamungu": {
+    "title": "TaCRI Sub Stations: Lyamungu",
+    "org": "Tanzania Coffee Research Institute (TaCRI)",
+    "kind": "primary",
+    "readMethod": "full-text"
+   }
+  },
+  "verifierNote": "英訳は日本語と同じ主張。"
+ },
+ {
+  "key": "origin:タンザニア:terroir",
+  "proposed": {
+   "text": "アラビカは、キリマンジャロ、アルーシャ、ムベヤ、ルブマ、ソングウェなどの州で栽培される(TCB)。北部ではコーヒーとバナナの混作が多い(USDA FAS)。"
+  },
+  "verifiedClaims": [
+   {
+    "index": 0,
+    "text": "アラビカの産地にキリマンジャロ、アルーシャ、ムベヤ、ルブマ、ソングウェが含まれる",
+    "status": "verified",
+    "quote": "Tanzania’s Arabica growing regions are Kilimanjaro, Arusha, Tanga, Iringa, Mbeya, Kigoma, Manyara, Mwanza, Katavi, Mara, Njombe, Songwe, Rukwa, Geita and Ruvuma while Robusta is grown in Kagera and Morogoro regions.",
+    "location": "TCB Coffee Farming",
+    "sourceIds": [
+     "tcb-coffee-production"
+    ]
+   },
+   {
+    "index": 2,
+    "text": "北部ではバナナなどとの混作が多い",
+    "status": "verified",
+    "quote": "intercropped and bananas/smallholder (mainly in the north and west)",
+    "location": "USDA FAS Tanzania Coffee Annual 2021, Crop Area",
+    "sourceIds": [
+     "usda-fas-tz-2021"
+    ]
+   }
+  ],
+  "rejectedClaims": [
+   {
+    "text": "メルー山麓もアラビカ産地に含まれる",
+    "status": "unverified"
+   },
+   {
+    "text": "北部は火山性土壌で標高約1,400〜2,000m",
+    "status": "unverified"
+   },
+   {
+    "text": "北部は甘くバランスの良いカップになりやすい(バニラ・チョコ・プラリネ様)",
+    "status": "unverified"
+   },
+   {
+    "text": "南部高地は標高1,250〜1,400mの火山性土壌",
+    "status": "unverified"
+   },
+   {
+    "text": "南部高地は近年生産の中心で国内生産の75〜85%を占める",
+    "status": "unverified"
+   },
+   {
+    "text": "南部高地の風味(黒チェリー・タンジェリン、チョコレート・モラセス・キャラメル)",
+    "status": "unverified"
+   },
+   {
+    "text": "降雨は二季制",
+    "status": "unverified"
+   }
+  ],
+  "sources": {
+   "tcb-coffee-production": {
+    "title": "Coffee Farming",
+    "org": "Tanzania Coffee Board (TCB)",
+    "kind": "primary",
+    "readMethod": "full-text"
+   },
+   "usda-fas-tz-2021": {
+    "title": "Tanzania Coffee Annual (TZ2021-0002, 2021-05-14)",
+    "org": "USDA Foreign Agricultural Service",
+    "kind": "primary",
+    "readMethod": "full-text"
+   }
+  },
+  "verifierNote": "英訳は日本語と同じ主張。"
+ },
+ {
+  "key": "origin:タンザニア:varietiesDetail",
+  "proposed": {
+   "text": "アラビカはタンザニアの生産の約60.9%を占める(TCB)。2004年まで商業的に栽培されていた品種はブルボン系のN39とケントのKP423だった(TaCRI)。N39は1920年代の選抜。"
+  },
+  "verifiedClaims": [
+   {
+    "index": 0,
+    "text": "アラビカは生産の約6割(60.9%)を占める",
+    "status": "verified",
+    "quote": "Tanzania produces two types of coffee, Arabica which contributes an average of 60.9% and Robusta accounting for 39.1%.",
+    "location": "TCB Coffee Farming",
+    "sourceIds": [
+     "tcb-coffee-production",
+     "usda-fas-tz-2025"
+    ]
+   },
+   {
+    "index": 1,
+    "text": "商業品種の主力はブルボン系(N39)とケント(KP423)(2004年まで)",
+    "status": "verified",
+    "quote": "Until 2004 the only commercial varieties grown in the country were/are Bourbon (N.39) and Kents (KP 423).",
+    "location": "TaCRI Released varieties.pdf(2005年の論文)",
+    "sourceIds": [
+     "tacri-released-varieties"
+    ]
+   }
+  ],
+  "rejectedClaims": [
+   {
+    "text": "N39はTaCRIが開発したブルボン系の選抜品種",
+    "status": "incorrect"
+   },
+   {
+    "text": "ケニア由来のSL28/SL34、K7、Ruiru-11/Batianも導入されている",
+    "status": "unverified"
+   }
+  ],
+  "sources": {
+   "tcb-coffee-production": {
+    "title": "Coffee Farming",
+    "org": "Tanzania Coffee Board (TCB)",
+    "kind": "primary",
+    "readMethod": "full-text"
+   },
+   "usda-fas-tz-2025": {
+    "title": "Tanzania Coffee Annual (TZ2025-0004, 2025-05-20)",
+    "org": "USDA Foreign Agricultural Service",
+    "kind": "primary",
+    "readMethod": "full-text"
+   },
+   "tacri-released-varieties": {
+    "title": "Released varieties (Characteristics of Improved Coffee Varieties; Farmers' Assessment of Improved Coffee Hybrids, 2005)",
+    "org": "Tanzania Coffee Research Institute (TaCRI) / Ministry of Agriculture and Food Security",
+    "kind": "primary",
+    "readMethod": "full-text"
+   }
+  },
+  "verifierNote": "英訳は日本語と同じ主張(N39をTaCRI開発とする記述も同じ)。"
+ },
+ {
+  "key": "origin:ハワイ:farmStructure",
+  "proposed": {
+   "text": "コナのコーヒーは、1世紀にわたり小規模な家族経営の農園から生まれてきた。コナには約700の農園があり、その大半が5エーカー未満(コナ・コーヒー農家協会)。熟した実を1つずつ摘むのがコナのやり方で、急で岩だらけの地形は耕作に手がかかる。ハワイ全体では、1エーカーの農園から4000エーカーの全機械化・灌漑農場まで幅がある(ハワイ大学CTAHR、2008年)。"
+  },
+  "verifiedClaims": [
+   {
+    "index": 0,
+    "text": "コナでは小規模家族農園が中心である",
+    "status": "verified",
+    "quote": "The coffee crop has for a century, come from small family holdings.",
+    "location": "KCFA『4)』項",
+    "sourceIds": [
+     "kcfa-ecological-profile"
+    ]
+   },
+   {
+    "index": 1,
+    "text": "5エーカー未満の小農園が多数を占める",
+    "status": "verified",
+    "quote": "But 50 acres remains an exceptionally large farm in Kona, and most of its 700-odd farms comprise fewer than five acres.",
+    "location": "KCFA『4)』項",
+    "sourceIds": [
+     "kcfa-ecological-profile"
+    ]
+   },
+   {
+    "index": 3,
+    "text": "コナは急斜面で、熟した実を1つずつ手で摘む",
+    "status": "verified",
+    "quote": "the steep rocky terrain is laborious to cultivate",
+    "location": "KCFA『4)』項(急斜面・岩場)/CTAHR p.32(個別摘み)",
+    "sourceIds": [
+     "kcfa-ecological-profile",
+     "ctahr-growing-coffee-2008"
+    ]
+   }
+  ],
+  "rejectedClaims": [
+   {
+    "text": "数百エーカー規模の大農園も存在する",
+    "status": "unverified"
+   },
+   {
+    "text": "Maui/Kauai等は低地・大規模・機械収穫という別モデルを取る",
+    "status": "unverified"
+   }
+  ],
+  "sources": {
+   "kcfa-ecological-profile": {
+    "title": "Kona Coffee's Unique Ecological & Agronomical Profile",
+    "org": "Kona Coffee Farmers Association",
+    "kind": "primary",
+    "readMethod": "full-text"
+   },
+   "ctahr-growing-coffee-2008": {
+    "title": "Growing Coffee in Hawaii, Revised Edition (Bittenbender and Smith; accurate as of March 2008)",
+    "org": "University of Hawaiʻi at Mānoa, CTAHR (College of Tropical Agriculture and Human Resources)",
+    "kind": "primary",
+    "readMethod": "full-text"
+   }
+  },
+  "verifierNote": "suggestedTextは確認できた主張のみ(KCFAは『700-odd farms』と書く)。英訳は日本語と同じ主張で食い違いなし。"
+ },
+ {
+  "key": "origin:ハワイ:gradeSystem",
+  "proposed": {
+   "text": "緑豆の等級には Extra Fancy、Fancy、Hawaii No.1、Select、Prime、Hawaii No.3、Natural Prime、Mixed Natural Prime、Off Grade がある(ハワイ州行政規則第4-143章)。Hawaii No.3未満のOff Gradeには「Hawaii」の語を使えない。Primeより品質が低いコーヒーは、Kona・Kauなどの地域名を製品ラベルに使えない。"
+  },
+  "verifiedClaims": [
+   {
+    "index": 0,
+    "text": "等級名は Extra Fancy、Fancy、Hawaii No.1、Select、Prime、Hawaii No.3 を含む",
+    "status": "verified",
+    "quote": "The standards for grades of green coffee include Extra Fancy, Fancy, Hawaii No.1, Select, Prime, Hawaii No.3, Natural Prime, Mixed Natural Prime, and Off Grade.",
+    "location": "p.1 冒頭の本文(第1段落)",
+    "sourceIds": [
+     "dab-grading-stats-2026"
+    ]
+   },
+   {
+    "index": 1,
+    "text": "Extra Fancyが最上位(欠点許容数・サイズ基準が最も厳しい)",
+    "status": "verified",
+    "quote": "8 (FULL IMPERFECTIONS PER 300 GRAMS) 12 (FULL IMPERFECTIONS PER 300 GRAMS) 18 (FULL IMPERFECTIONS PER 300 GRAMS)",
+    "location": "2020年7月1日施行の要約表『ALLOWANCE FOR DEFECTS』行(Extra Fancy=8、Fancy=12、No.1=18)",
+    "sourceIds": [
+     "dab-har-summary-2020"
+    ]
+   },
+   {
+    "index": 2,
+    "text": "Hawaii No.3未満(Off Grade)には『Hawaii』の語を使えない",
+    "status": "verified",
+    "quote": "OFFGRADE = quality lower than Hawaii No. 3. Use of the term \"Hawaii\" in conjunction with the term Offgrade is prohibited.",
+    "location": "2020年7月1日施行の要約表の脚注",
+    "sourceIds": [
+     "dab-har-summary-2020"
+    ]
+   }
+  ],
+  "rejectedClaims": [
+   {
+    "text": "州外へ卸売出荷する全緑豆は最低でもHawaii No.3を満たさなければならない(したがって満たさないとハワイ産地名を表示できない)",
+    "status": "conflict"
+   }
+  ],
+  "sources": {
+   "dab-grading-stats-2026": {
+    "title": "Statistics on Grading Standards for Hawaiʻi's Green Coffee, State of Hawaiʻi, 2023-2025 (January 2026)",
+    "org": "Hawaiʻi Department of Agriculture and Biosecurity (Market Analysis and News Branch, with USDA NASS Pacific Region)",
+    "kind": "primary",
+    "readMethod": "full-text"
+   },
+   "dab-har-summary-2020": {
+    "title": "Summary of Chapter 4-143 (effective July 1, 2020) - Hawaii Administrative Rules, Standards for Coffee",
+    "org": "Hawaiʻi Department of Agriculture, Quality Assurance Division",
+    "kind": "primary",
+    "readMethod": "full-text"
+   }
+  },
+  "verifierNote": "suggestedTextの最後の文は、DAB 2026年資料の原文(quote: 'Coffee with a quality lower than Prime is prohibited from using geographic terms such as')に基づく。この主張は元の本文にないため、台帳に加える場合は別主張として登録が必要。英訳(en/originGuide2.js)は日本語と同じ主張(6等級・『州外へ卸売出荷はHawaii No.3以上でHawaiian place name表示』)で、日本語との食い違いなし。"
+ },
+ {
+  "key": "origin:ハワイ:harvestSeason",
+  "proposed": {
+   "text": "コナ・コーヒー・ベルトの低い部分では、実は8月下旬から12月にかけて熟し、9月下旬から11月上旬が最も忙しい。ベルト上部では収穫期が1年中に及ぶこともある。1本の木の実は一斉に熟さないため、コナでは1つずつ熟した実を摘み、1シーズンに4〜8回(約1か月おき)摘むのが一般的(ハワイ大学CTAHR、2008年)。"
+  },
+  "verifiedClaims": [
+   {
+    "index": 3,
+    "text": "単一の一斉収穫はできず、同じ木を数回巡る選択的手摘みで行う",
+    "status": "verified",
+    "quote": "In Kona, picking in four to eight rounds in any one season is common",
+    "location": "CTAHR p.33(前段p.32に『Coffee fruit on a tree does not mature all at once』)",
+    "sourceIds": [
+     "ctahr-growing-coffee-2008"
+    ]
+   }
+  ],
+  "rejectedClaims": [
+   {
+    "text": "収穫は8月〜翌1月",
+    "status": "incorrect"
+   },
+   {
+    "text": "ピークは9〜11月(情報源により10〜12月とする場合も)",
+    "status": "incorrect"
+   },
+   {
+    "text": "成熟に7〜9か月を要する",
+    "status": "unverified"
+   }
+  ],
+  "sources": {
+   "ctahr-growing-coffee-2008": {
+    "title": "Growing Coffee in Hawaii, Revised Edition (Bittenbender and Smith; accurate as of March 2008)",
+    "org": "University of Hawaiʻi at Mānoa, CTAHR (College of Tropical Agriculture and Human Resources)",
+    "kind": "primary",
+    "readMethod": "full-text"
+   }
+  },
+  "verifierNote": "suggestedTextはCTAHR 2008の記述だけで構成(2008年時点)。英訳は日本語と同じ主張・同じ数字(August to January、September-November、7-9 months)で、日本語との食い違いなし。"
+ },
+ {
+  "key": "origin:ハワイ:history",
+  "proposed": {
+   "text": "ハワイ大学CTAHR(2008年)によれば、1892年にヘルマン・ヴィーデマンがグアテマラから‘Guatemalan’種(別名コナ・ティピカ)をハワイに導入した。ヴィーデマンは種子をジョン・ホーナーに渡し、ホーナーはハマクアに800本の果樹園を植えて、新品種と従来品種を400本ずつ比べた。1910年までに、コナの生産者は新しい品種の優位を確信した。"
+  },
+  "verifiedClaims": [
+   {
+    "index": 3,
+    "text": "1892年、ヘルマン・ヴィーデマンがグアテマラから導入した品種が現在のコナ・ティピカの系統となった",
+    "status": "verified",
+    "quote": "Hermann Widemann introduced the ‘Guatemalan’ variety to Hawaii from Guatemala in 1892 (Goto 1982).",
+    "location": "CTAHR p.14『The ‘Guatemalan’ or “Kona typica” variety is preferred』",
+    "sourceIds": [
+     "ctahr-growing-coffee-2008"
+    ]
+   },
+   {
+    "index": 5,
+    "text": "(代替主張)ヴィーデマンは種子をジョン・ホーナーに渡し、ホーナーはハマクアに800本の果樹園を植えて新品種と従来品種を比べた",
+    "status": "verified",
+    "quote": "He gave seeds to John Horner, who planted an orchard of 800 trees in Hamakua",
+    "location": "CTAHR p.14",
+    "sourceIds": [
+     "ctahr-growing-coffee-2008"
+    ]
+   },
+   {
+    "index": 6,
+    "text": "(代替主張)1910年までにコナの生産者は新しい品種(グアテマラ種)の優位を確信した",
+    "status": "verified",
+    "quote": "By 1910, Kona coffee growers were convinced of the superiority of the new variety.",
+    "location": "CTAHR p.14",
+    "sourceIds": [
+     "ctahr-growing-coffee-2008"
+    ]
+   }
+  ],
+  "rejectedClaims": [
+   {
+    "text": "1825年、オアフ総督ボキがブラジルからアラビカ(ティピカ)苗を持ち帰ったのがハワイコーヒーの起点",
+    "status": "unverified"
+   },
+   {
+    "text": "1828年、宣教師サミュエル・ラグルスがコナ地区に(苗を)移植した",
+    "status": "unverified"
+   },
+   {
+    "text": "ラグルスは、火山性土壌と独特の微気候がコーヒー栽培に適していることを見出した",
+    "status": "unverified"
+   },
+   {
+    "text": "1980年代以降のスペシャルティコーヒーの世界的興隆とともに名声を回復した",
+    "status": "unverified"
+   }
+  ],
+  "sources": {
+   "ctahr-growing-coffee-2008": {
+    "title": "Growing Coffee in Hawaii, Revised Edition (Bittenbender and Smith; accurate as of March 2008)",
+    "org": "University of Hawaiʻi at Mānoa, CTAHR (College of Tropical Agriculture and Human Resources)",
+    "kind": "primary",
+    "readMethod": "full-text"
+   }
+  },
+  "verifierNote": "suggestedTextは、CTAHR(一次)で確認できた主張のみ。ボキ(1825)・ラグルス(1828)は二次資料(KCCF年表)にしか見つからず削除。HCA歴史ページ(hawaiicoffeeassoc.org/History)、Kona Historical Society、UH Press章は取得に失敗し、読めていない。英訳は日本語と同じ主張で食い違いなし。"
+ }
+]

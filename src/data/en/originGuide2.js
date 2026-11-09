@@ -13,15 +13,15 @@ export const ORIGIN_GUIDE_EN_2 = {
     farmStructure:
       "About 450,000 smallholders account for about 90% of national production, and the remaining 10% comes from large estates. A household typically has about 380-2,000 trees, mostly on less than one hectare. Since 2018, AMCOS (agricultural marketing cooperative societies) have managed 95% of production, and smallholders get market access, production support and government support by registering with an AMCOS. The KNCU (Kilimanjaro Native Co-operative Union) is one of the oldest cooperatives in Africa.",
     history:
-      "In 1898, Catholic missionaries brought coffee to the foot of Kilimanjaro (during the German colonial period). In 1925 the Chagga people established the first cooperative (KNPA) and sold directly to the London market. In 2018 a legal change made AMCOS the only legal collection channel for smallholder coffee, and in the same year the central auction was abolished and the country moved to a regional model.",
+      "In 1898, Catholic missionaries brought coffee to the foot of Kilimanjaro (during the German colonial period). In 1925 the Chagga people established the first cooperative (KNPA) and sold directly to the London market. In January 2018 the government banned direct exports by traders who had agreements with farmers, required farmers to join AMCOS, and ordered all coffee to be sold at the central auction in Moshi. The ban on direct exports was temporarily lifted in January 2019, when the TCB allowed premium producers to deal directly with buyers. In 2021 a new law opened the way for premium producers to trade directly with overseas buyers and bypass the auction (per USDA FAS reports).",
     subRegions: [
       { name: "Foothills of Kilimanjaro (north)", detail: "Mellow and mild. The source of the designated brand \"Kilimanjaro\" (excluding coffee from the Bukoba district). Intercropped with bananas and the like; vanilla, chocolate and praline-like flavors." },
       { name: "Southern highlands (Mbeya, Ruvuma, Songwe, etc.)", detail: "1,250-1,400 m. The largest growing area, accounting for 75-85% of national production. Black cherry and tangerine fruit flavors, chocolate, molasses and caramel, and a silky body." },
     ],
     gradeSystem:
-      "Rather than its own standard, it uses EAS 130:1999, common to the East African Community (EAC) (shared with Uganda and others). By screen size it is divided into AA (largest), AB, C, PB (peaberry), E (elephant bean), TT and T (smallest), and each grade requires at least 95% of the beans to be of that size. A final quality class of 1-10 combining cup quality (Fine to Poor) and defect count (1-6 for washed beans and 7-10 for unwashed such as Mbuni) is also used.",
+      "Rather than its own standard, it uses EAS 130:1999, common to the East African Community (EAC) (shared with Uganda and others). By screen size it is divided into E (elephant bean, larger than AA), AA (the largest flat bean), AB, C, PB (peaberry), TT and T (smallest), and each grade requires at least 95% of the beans to be of that size. Separately, quality classes 1-10 are defined (classes 1-6 by cup quality, from Fine to Poor to fair; classes 7-10 for defects sorted out from the higher classes).",
     officialBody:
-      "The Tanzania Coffee Board (established in 2001) is the only government body that, by law, centrally manages export permits, grading and auctions. A license is required for all commercial purchasing, processing and exporting.",
+      "The Tanzania Coffee Board (re-established under the Coffee Industry Act 2001, in force from July 2002) is the only government body that, by law, centrally manages export permits, grading and auctions. A license is required for all commercial purchasing, processing and exporting.",
   },
   "イエメン": {
     tagline: "One of the birthplaces of coffee culture. Winey and complex flavors",
@@ -31,7 +31,7 @@ export const ORIGIN_GUIDE_EN_2 = {
     harvestSeason:
       "The main harvest is October-December (some sources say October-February, depending on the trader). Almost all coffee is processed by the natural (dry) method and dried in the sun on roofs or the ground for 2-4 weeks.",
     varietiesDetail:
-      "Genetically distinctive native heirlooms (identified by local names such as Udaini, Dawairi and Tufahi). In 2021, Qima analyzed the DNA of 137 samples and identified a fourth major genetic group called \"Yemenia\" (described as the most important discovery since the 1700s and 1900s).",
+      "Genetically distinctive native heirlooms (identified by local names such as Udaini, Dawairi and Tufahi). In August 2020, Qima announced the discovery of a new genetic group found only in Yemen, called \"Yemenia.\" The 2021 paper analyzed 137 samples.",
     farmStructure:
       "Centered on tenant smallholders; production is spread across tens of thousands of fragmented small farms, so quality varies widely between lots. About 150,000 smallholders across the country are said to depend on coffee for their livelihoods, and women make up 75% of the labor force. Only 2.4% of the country's land is arable, and much of the irrigation water goes to growing the high-profit crop qat. Qima Coffee sources from over 5,000 smallholders in 55 villages and is Yemen's only fully integrated specialty coffee operator and its largest exporter.",
     history:
@@ -84,7 +84,7 @@ export const ORIGIN_GUIDE_EN_2 = {
       { name: "Ka'u (south)", detail: "An up-and-coming area whose quality has improved markedly in recent years, with some excellent lots appearing." },
     ],
     gradeSystem:
-      "Graded in steps: Extra Fancy (top), Fancy, No. 1, Select, Prime, down to Hawaii No. 3. All green coffee shipped wholesale out of state must meet at least the \"Hawaii No. 3\" grade to carry a Hawaiian place name.",
+      "Graded in steps: Extra Fancy (top), Fancy, Hawaii No. 1, Select, Prime, down to Hawaii No. 3. All green coffee shipped wholesale out of state must meet at least the \"Hawaii No. 3\" grade to carry a Hawaiian place name.",
     officialBody:
       "The Quality Assurance Division of the Hawaii Department of Agriculture (HDOA) legally operates green coffee grade certification. Under a state law that took effect in 2024 (Act 198), the minimum content required to display a place name is scheduled to rise to 51% from July 2027.",
   },
@@ -153,9 +153,9 @@ export const ORIGIN_GUIDE_EN_2 = {
       { name: "Tecapa-Chinameca", detail: "500-2,130 m (San Vicente volcano). Centered on Bourbon, Pacas and Pacamara; sweet, full-bodied cups from volcanic soil." },
     ],
     gradeSystem:
-      "RTS 67.08.01:18 of OSARTEC (the Salvadoran Technical Regulation Body) classifies coffee on three criteria: altitude, processing method and defect count. The altitude classes are three levels: SHG (Strictly High Grown, 1,201 m and above), HG (High Grown, 801-1,200 m) and CS (Central Standard, 800 m and below). Operation is handled by the CSC (the Salvadoran Coffee Council).",
+      "RTS 67.08.01:18 of OSARTEC (the Salvadoran Technical Regulation Body) classifies coffee on three criteria: altitude, processing method and defect count. The altitude classes are three levels: SHG (Strictly High Grown, 1,201 m and above), HG (High Grown, 801-1,200 m) and CS (Central Standard, 800 m and below). Operation was formerly handled by the CSC (the Salvadoran Coffee Council), and passed to the ISC in 2023.",
     officialBody:
-      "The Consejo Salvadoreño del Café (CSC), established in 1989. In effect the regulatory body, responsible for issuing export permits and registering sales contracts. Separately, the Instituto Salvadoreño del Café (ISC), newly created in 2021, is a research and technical support organization under the Ministry of Agriculture and has no authority over export permits.",
+      "The Instituto Salvadoreño del Café (ISC). Created in 2021 as a research and technical support body, it was given the role of the Consejo Salvadoreño del Café (CSC, established in 1989) when the 2023 ISC law (Legislative Decree No. 835) merged and replaced the CSC. It falls under the Ministry of Agriculture. Exporters must register their sales contracts with the ISC, and customs may not authorize an export that lacks the ISC's export permit (per the Legislative Assembly).",
   },
   "ルワンダ": {
     tagline: "Tea-like clear acidity and floral aromas from highland washed coffee in the \"Land of a Thousand Hills\"",

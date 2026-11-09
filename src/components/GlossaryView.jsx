@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
-import { SectionHeading } from "./common";
-import { GLOSSARY_TERMS } from "../data/glossary";
+import { SectionHeading, VerifiedSources } from "./common";
+import { PUBLISHED_GLOSSARY_TERMS, glossaryKey } from "../data/published";
 import { localizeGlossaryTerm } from "../data/localize";
 import { useT } from "../i18n";
 
@@ -41,6 +41,7 @@ export function GlossaryItem({ item: rawItem, open, onToggle }) {
           <p className="text-[13px] leading-relaxed text-[var(--c-text-2)] border-t border-[var(--c-border)] pt-3">
             {item.detail}
           </p>
+          <VerifiedSources keys={[glossaryKey(rawItem)]} />
         </div>
       )}
     </div>
@@ -56,7 +57,7 @@ export function GlossaryView({ hideHeading = false }) {
       <p className="text-[13px] text-[var(--c-text-3)]">
         {t("精選方法・焙煎度・グレードなど、コーヒー豆選びに役立つ基礎用語をまとめました。")}
       </p>
-      {GLOSSARY_TERMS.map((item) => (
+      {PUBLISHED_GLOSSARY_TERMS.map((item) => (
         <GlossaryItem
           key={item.term}
           item={item}

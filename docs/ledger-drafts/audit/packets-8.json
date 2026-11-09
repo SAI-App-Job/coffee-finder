@@ -1,0 +1,817 @@
+[
+ {
+  "key": "processing:ナチュラル",
+  "proposed": {
+   "explanation": "コーヒーチェリー(果実)のまま、果肉を取らずに乾燥させ、乾燥後に脱穀(ハルリング)する方法(ドライ方式)。ICOは「ラックに広げて天日で乾燥させる」と書く。SCAは、ブルーベリーやイチゴのようなフルーティな風味が出ることがあるが、全てのナチュラルがそうなるわけではないと書く。"
+  },
+  "verifiedClaims": [
+   {
+    "index": 0,
+    "text": "チェリー(果実)のまま乾燥させる",
+    "status": "verified",
+    "quote": "Dry processed coffee is green coffee that has been dried in the whole cherry.",
+    "location": "ICO sc-105e / Method of Processing",
+    "sourceIds": [
+     "ico-data-concepts-2021",
+     "sca-coffee-decoded-20"
+    ]
+   },
+   {
+    "index": 1,
+    "text": "天日乾燥させる",
+    "status": "verified",
+    "quote": "In the dry method the harvested berries are placed on racks to dry in the sun for some three weeks, following which hulling can take place.",
+    "location": "ICO ED 2050/08 para.3",
+    "sourceIds": [
+     "ico-ed2050-2008"
+    ]
+   },
+   {
+    "index": 3,
+    "text": "乾燥のあと、まとめて脱穀(ハルリング)する",
+    "status": "verified",
+    "quote": "as they dry thoroughly before hulling and roasting.",
+    "location": "SCA Coffee Decoded 第1段落",
+    "sourceIds": [
+     "sca-coffee-decoded-20"
+    ]
+   },
+   {
+    "index": 4,
+    "text": "フルーティになりやすい",
+    "status": "verified",
+    "quote": "Mysteriously, not all fruit-dried coffees taste this way.",
+    "location": "SCA Coffee Decoded",
+    "sourceIds": [
+     "sca-coffee-decoded-20"
+    ]
+   }
+  ],
+  "rejectedClaims": [
+   {
+    "text": "機械乾燥でも乾燥させる",
+    "status": "unverified"
+   },
+   {
+    "text": "甘みが強い",
+    "status": "unverified"
+   },
+   {
+    "text": "個性が出やすい",
+    "status": "unverified"
+   }
+  ],
+  "sources": {
+   "ico-data-concepts-2021": {
+    "title": "ICO Statistics Committee 19th Meeting (13 April 2021): sc-105e Data concepts (Method of Processing)",
+    "org": "International Coffee Organization",
+    "kind": "primary",
+    "readMethod": "full-text"
+   },
+   "sca-coffee-decoded-20": {
+    "title": "Coffee Decoded: What Makes Fruit-Dried Coffees Taste Fruity?",
+    "org": "Specialty Coffee Association",
+    "kind": "primary",
+    "readMethod": "full-text"
+   },
+   "ico-ed2050-2008": {
+    "title": "ICO ED 2050/08 (4 November 2008): Coffee development strategy",
+    "org": "International Coffee Organization",
+    "kind": "primary",
+    "readMethod": "full-text"
+   }
+  },
+  "verifierNote": "「甘みが強い」「個性が出やすい」は根拠なし。「機械乾燥」は未確認。 英訳(src/data/en/guides.js または src/i18n/en.js)は日本語と同じ主張で、食い違いなし。"
+ },
+ {
+  "key": "processing:ハニー",
+  "proposed": {
+   "explanation": "果肉を除去したあと、ミューシレージ(粘液質)を一部または全部残したまま、パーチメント(殻)の状態で乾燥させる方法(パルプトナチュラル)。残すミューシレージの量でレッド・イエロー・ブラックハニーなどに分けられる。ウォッシュドとナチュラルの混成(ハイブリッド)的な方法のひとつ。"
+  },
+  "verifiedClaims": [
+   {
+    "index": 0,
+    "text": "ハニーは果肉除去のみ行う(パルプトナチュラルの一種)",
+    "status": "verified",
+    "quote": "Red and yellow honey coffees, a pulped natural dried with less than all the mucilage attached to parchment",
+    "location": "25 Magazine Issue 6 / 後半",
+    "sourceIds": [
+     "sca-25-issue6-mucilage-removers"
+    ]
+   },
+   {
+    "index": 1,
+    "text": "ミューシレージを残したまま乾燥させる",
+    "status": "verified",
+    "quote": "Pulped natural coffee that dries with all mucilage attached to parchment, also known as black honey",
+    "location": "25 Magazine Issue 6 / 後半",
+    "sourceIds": [
+     "sca-25-issue6-mucilage-removers"
+    ]
+   },
+   {
+    "index": 2,
+    "text": "ハニーはウォッシュドとナチュラルの混成(ハイブリッド)的な方法",
+    "status": "verified",
+    "quote": "many hybrid or novel methods also have gained popularity in the coffee production regions, such as the well-known pulped honey process",
+    "location": "25 Magazine Issue 10 / 序盤",
+    "sourceIds": [
+     "sca-25-issue10-fermentation-effect"
+    ]
+   }
+  ],
+  "rejectedClaims": [
+   {
+    "text": "風味・性質がウォッシュドとナチュラルの中間",
+    "status": "unverified"
+   }
+  ],
+  "sources": {
+   "sca-25-issue6-mucilage-removers": {
+    "title": "The Impact of Mucilage Removers on Coffee Sustainability and Quality (25 Magazine: Issue 6)",
+    "org": "Specialty Coffee Association",
+    "kind": "primary",
+    "readMethod": "full-text"
+   },
+   "sca-25-issue10-fermentation-effect": {
+    "title": "The Fermentation Effect (25 Magazine, Issue 10)",
+    "org": "Specialty Coffee Association",
+    "kind": "primary",
+    "readMethod": "full-text"
+   }
+  },
+  "verifierNote": "「中間的な性質」は風味の話としては根拠なし。 英訳(src/data/en/guides.js または src/i18n/en.js)は日本語と同じ主張で、食い違いなし。"
+ },
+ {
+  "key": "processing:マウンテンウォータープロセス(デカフェ用)",
+  "proposed": {
+   "explanation": "Mountain Water Processは、メキシコのDescamexが運営する水を使った脱カフェイン方法。蒸気で準備した生豆から、コーヒー豆由来の可溶性固形分で飽和させた水の溶液を使い、流量・温度・圧力・真空を制御してカフェインを抽出する(Descamex)。"
+  },
+  "verifiedClaims": [
+   {
+    "index": 0,
+    "text": "コーヒー豆由来の可溶性固形分で飽和させた水の溶液を使って、カフェインを抽出する",
+    "status": "verified",
+    "quote": "utilizando una solución saturada a base de agua de sólidos solubles obtenidos de los granos de café.",
+    "location": "Descamex Procesos / Proceso agua",
+    "sourceIds": [
+     "descamex-procesos"
+    ]
+   }
+  ],
+  "rejectedClaims": [
+   {
+    "text": "生豆を水に浸す",
+    "status": "unverified"
+   },
+   {
+    "text": "カフェインだけが溶け出す",
+    "status": "unverified"
+   }
+  ],
+  "sources": {
+   "descamex-procesos": {
+    "title": "Proceso Mountain Water | Descamex (Procesos)",
+    "org": "Descamex(Mountain Water Processの事業者)",
+    "kind": "primary",
+    "readMethod": "full-text"
+   }
+  },
+  "verifierNote": "事業者サイトが唯一の一次資料。「浸す」「だけ」は根拠なし。 英訳(src/data/en/guides.js または src/i18n/en.js)は日本語と同じ主張で、食い違いなし。"
+ },
+ {
+  "key": "variety:カトゥーラ/カトゥアイ系統",
+  "proposed": {
+   "tagline": "",
+   "varieties": [],
+   "note": "Caturraはブルボンの自然突然変異で、樹高が低くコンパクトな品種。収量の見込みが高い。CatuaiはMundo Novo(ブルボンとティピカの自然交配)とCaturraを掛け合わせたブラジル農業研究所(IAC)作出の品種で、ブラジルで広く栽培される。Maragogype(Maragogipe)はティピカの自然突然変異で、豆が非常に大きく収量は非常に少ない。PacamaraはPacasとMaragogipeの交配種で、エルサルバドルのカップ・オブ・エクセレンスでよく上位を占める。(tagline: 樹形・収量の記述は系統全体に当てはまらないため要修正。Mundo Novoは樹高が非常に高い)"
+  },
+  "verifiedClaims": [
+   {
+    "index": 0,
+    "text": "Caturraはブルボンの突然変異",
+    "status": "verified",
+    "quote": "Caturra is a natural mutation of the Bourbon variety.",
+    "location": "Caturra / History",
+    "sourceIds": [
+     "wcr-caturra"
+    ]
+   },
+   {
+    "index": 1,
+    "text": "Caturraは樹高が低くコンパクト",
+    "status": "verified",
+    "quote": "Caturra has a single-gene mutation that causes the plant to grow smaller (called Dwarf/Compactism).",
+    "location": "Caturra / History",
+    "sourceIds": [
+     "wcr-caturra"
+    ]
+   },
+   {
+    "index": 2,
+    "text": "Caturraは収量が多い",
+    "status": "verified",
+    "quote": "A compact plant with good yielding potential of standard quality in Central America.",
+    "location": "Caturra / 冒頭の要約",
+    "sourceIds": [
+     "wcr-caturra"
+    ]
+   },
+   {
+    "index": 3,
+    "text": "CatuaiはMundo NovoとCaturraの人工交配種",
+    "status": "verified",
+    "quote": "A cross between highly productive Mundo Novo and compact Caturra, made by the Instituto Agronomico (IAC) of Sao Paulo State in Campinas, Brazil.",
+    "location": "Catuai / History",
+    "sourceIds": [
+     "wcr-catuai"
+    ]
+   },
+   {
+    "index": 4,
+    "text": "Mundo Novoはティピカとブルボンの自然交配",
+    "status": "verified",
+    "quote": "Mundo Novo is the result of a natural cross between the Bourbon and Typica varieties",
+    "location": "Mundo Novo / History",
+    "sourceIds": [
+     "wcr-mundo-novo"
+    ]
+   },
+   {
+    "index": 5,
+    "text": "Catuaiはブラジルで広く栽培される",
+    "status": "verified",
+    "quote": "is in wide cultivation there.",
+    "location": "Catuai / History",
+    "sourceIds": [
+     "wcr-catuai"
+    ]
+   },
+   {
+    "index": 6,
+    "text": "Maragogypeは豆が非常に大きい変異種",
+    "status": "verified",
+    "quote": "The mutation causes the beans, internode spacing and leaves to be especially large",
+    "location": "Maragogipe / History",
+    "sourceIds": [
+     "wcr-maragogipe"
+    ]
+   },
+   {
+    "index": 7,
+    "text": "Maragogypeは収量が少ない",
+    "status": "verified",
+    "quote": "Very low yielding, large leaves and large internodes.",
+    "location": "Maragogipe / 冒頭の要約",
+    "sourceIds": [
+     "wcr-maragogipe"
+    ]
+   },
+   {
+    "index": 8,
+    "text": "PacamaraはPacasとMaragogypeの交配種",
+    "status": "verified",
+    "quote": "Originated from a cross between Pacas and Maragogipe",
+    "location": "Pacamara / History",
+    "sourceIds": [
+     "wcr-pacamara"
+    ]
+   },
+   {
+    "index": 10,
+    "text": "PacamaraはエルサルバドルのCOEで高評価を得ることが多い",
+    "status": "verified",
+    "quote": "Grown primarily in El Salvador, where it is frequently dominates Cup of Excellence competitions for high cup quality.",
+    "location": "Pacamara / History",
+    "sourceIds": [
+     "wcr-pacamara"
+    ]
+   }
+  ],
+  "rejectedClaims": [
+   {
+    "text": "Pacamaraは大粒で複雑な風味が出やすい",
+    "status": "unverified"
+   },
+   {
+    "text": "tagline「コンパクトな樹形で収量が多く、生産性重視の系統」(系統全体)",
+    "status": "incorrect"
+   }
+  ],
+  "sources": {
+   "wcr-caturra": {
+    "title": "WCR Varieties Catalog: Caturra",
+    "org": "World Coffee Research",
+    "kind": "primary",
+    "readMethod": "full-text"
+   },
+   "wcr-catuai": {
+    "title": "WCR Varieties Catalog: Catuai",
+    "org": "World Coffee Research",
+    "kind": "primary",
+    "readMethod": "full-text"
+   },
+   "wcr-mundo-novo": {
+    "title": "WCR Varieties Catalog: Mundo Novo",
+    "org": "World Coffee Research",
+    "kind": "primary",
+    "readMethod": "full-text"
+   },
+   "wcr-maragogipe": {
+    "title": "WCR Varieties Catalog: Maragogipe",
+    "org": "World Coffee Research",
+    "kind": "primary",
+    "readMethod": "full-text"
+   },
+   "wcr-pacamara": {
+    "title": "WCR Varieties Catalog: Pacamara",
+    "org": "World Coffee Research",
+    "kind": "primary",
+    "readMethod": "full-text"
+   }
+  },
+  "verifierNote": "Pacamaraの「複雑な風味」は根拠なし。 英訳(src/data/en/guides.js または src/i18n/en.js)は日本語と同じ主張で、食い違いなし。"
+ },
+ {
+  "key": "variety:サルチモール/カティモール系統",
+  "proposed": {
+   "tagline": "",
+   "varieties": [],
+   "note": "ティモール・ハイブリッド(アラビカ種とロブスタ種が1920年代に東ティモール島で自然交配して生まれた品種)を親に持つ、コーヒーサビ病(葉に発生し、収量に大きな損失を与えうる病害)への耐性を持たせた交配品種群。CaturraとTimor Hybridの交配がカティモール、Villa SarchiとTimor Hybridの交配がサルチモール。Marsellesaはサルチモール系で、Timor Hybrid 832/2とVilla Sarchiの交配から選抜された(2009年公開)。WCRは、これらの品種は従来、他の品種より低いカップ品質と結びつけられてきたと書く。(Ruiru 11・Batianはティモール・ハイブリッドを親にもつが、WCRはカティモール/サルチモールには分類していない)"
+  },
+  "verifiedClaims": [
+   {
+    "index": 0,
+    "text": "ティモール・ハイブリッドはアラビカ種とロブスタ種の自然交配種",
+    "status": "verified",
+    "quote": "Timor Hybrid is a natural cross between C. arabica and C. canephora (Robusta) that appeared spontaneously on the island of Timor in 1920s.",
+    "location": "T5296 / History",
+    "sourceIds": [
+     "wcr-t5296"
+    ]
+   },
+   {
+    "index": 1,
+    "text": "ティモール・ハイブリッドを親に持つ、コーヒーサビ病への耐性を持たせた交配品種群(カティモール・サルチモール)",
+    "status": "verified",
+    "quote": "These crosses (Timor Hybrid x Caturra, and Timor Hybrid x Villa Sarchi) led to the creation of the two main groups of introgressed Arabica varieties: Catimors and Sarchimors.",
+    "location": "History of Arabica / Introgressed (Catimor/Sarchimor)",
+    "sourceIds": [
+     "wcr-history-of-arabica"
+    ]
+   },
+   {
+    "index": 2,
+    "text": "コーヒーサビ病は葉に発生する深刻な病害",
+    "status": "verified",
+    "quote": "Coffee rust is a foliar disease of coffee caused by the fungus Hemileia vastatrix that causes defoliation and may result in severe crop losses.",
+    "location": "Typica / Coffee leaf rust 欄",
+    "sourceIds": [
+     "wcr-typica"
+    ]
+   },
+   {
+    "index": 3,
+    "text": "Marsellesaはティモール・ハイブリッドとVilla Sarchiの交配から選抜された",
+    "status": "verified",
+    "quote": "Timor Hybrid 832/2 x Villa Sarchi CIFC 971/10",
+    "location": "Marsellesa / History",
+    "sourceIds": [
+     "wcr-marsellesa"
+    ]
+   },
+   {
+    "index": 4,
+    "text": "Marsellesaは2009年公開",
+    "status": "verified",
+    "quote": "It was released in 2009.",
+    "location": "Marsellesa / History",
+    "sourceIds": [
+     "wcr-marsellesa"
+    ]
+   },
+   {
+    "index": 5,
+    "text": "Ruiru 11はティモール・ハイブリッド由来の血統を持つ(Catimorを母親に持つ)",
+    "status": "verified",
+    "quote": "Catimor (female parent) x multicross selection involving K7, SL28, N39, Rume Sudan, among others (male parent).",
+    "location": "Ruiru 11 / Lineage",
+    "sourceIds": [
+     "wcr-ruiru11"
+    ]
+   },
+   {
+    "index": 6,
+    "text": "Batianはティモール・ハイブリッドを親に持つ",
+    "status": "verified",
+    "quote": "Composite variety containing parentage from: SL28, SL34, Rume Sudan, N39, K7, SL4 and the Timor Hybrid.",
+    "location": "Batian / Lineage",
+    "sourceIds": [
+     "wcr-batian"
+    ]
+   },
+   {
+    "index": 7,
+    "text": "Parainemaはサルチモール系(T5296の選抜)",
+    "status": "verified",
+    "quote": "Pedigree selection of [T5296] (/varieties/t5296), made by Instituto Hondureño del Café (IHCAFE); released in 2004.",
+    "location": "Parainema / History",
+    "sourceIds": [
+     "wcr-parainema"
+    ]
+   },
+   {
+    "index": 8,
+    "text": "カップ品質は伝統的なブルボン・ティピカ系統に劣るとされてきた",
+    "status": "verified",
+    "quote": "These varieties have traditionally been associated with lower cup quality than others",
+    "location": "History of Arabica / Introgressed",
+    "sourceIds": [
+     "wcr-history-of-arabica"
+    ]
+   }
+  ],
+  "rejectedClaims": [
+   {
+    "text": "育種の進化により品質改善が進んでいる",
+    "status": "unverified"
+   },
+   {
+    "text": "気候変動による病害リスクの高まりで栽培面積が拡大している",
+    "status": "unverified"
+   }
+  ],
+  "sources": {
+   "wcr-t5296": {
+    "title": "WCR Varieties Catalog: T5296",
+    "org": "World Coffee Research",
+    "kind": "primary",
+    "readMethod": "full-text"
+   },
+   "wcr-history-of-arabica": {
+    "title": "History of Arabica / Main types of Arabica coffee",
+    "org": "World Coffee Research",
+    "kind": "primary",
+    "readMethod": "full-text"
+   },
+   "wcr-typica": {
+    "title": "Typica (World Coffee Research Variety Catalog)",
+    "org": "World Coffee Research",
+    "kind": "primary",
+    "readMethod": "full-text"
+   },
+   "wcr-marsellesa": {
+    "title": "WCR Varieties Catalog: Marsellesa",
+    "org": "World Coffee Research",
+    "kind": "primary",
+    "readMethod": "full-text"
+   },
+   "wcr-ruiru11": {
+    "title": "Ruiru 11 (World Coffee Research Arabica Variety Catalog)",
+    "org": "World Coffee Research",
+    "kind": "primary",
+    "readMethod": "full-text"
+   },
+   "wcr-batian": {
+    "title": "Batian (World Coffee Research Arabica Variety Catalog)",
+    "org": "World Coffee Research",
+    "kind": "primary",
+    "readMethod": "full-text"
+   },
+   "wcr-parainema": {
+    "title": "WCR Varieties Catalog: Parainema",
+    "org": "World Coffee Research",
+    "kind": "primary",
+    "readMethod": "full-text"
+   }
+  },
+  "verifierNote": "「品質改善」「栽培面積の拡大」は根拠なしのため削除。 英訳(src/data/en/guides.js または src/i18n/en.js)は日本語と同じ主張で、食い違いなし。"
+ },
+ {
+  "key": "variety:ティピカ系統",
+  "proposed": {
+   "tagline": "収量は少ないが、カップ品質の良い系統",
+   "varieties": [
+    "Typica(ティピカ)",
+    "Pache(パチェ)"
+   ],
+   "note": "エチオピア原産のコーヒーが、イエメン、インド、ジャワ島(オランダ経由)を経て世界に広がった系統。ブルボン系統とともに、現代のアラビカ種栽培の大半の基礎になっている。収量が非常に少なく、主要な病害に弱いが、カップ品質は良いとされる。(Kent・Javaは除く。Kentはブルボン由来の品種と近縁、Javaはエチオピア在来種の選抜)"
+  },
+  "verifiedClaims": [
+   {
+    "index": 0,
+    "text": "エチオピア原産のコーヒー(の種子)がイエメンに渡り、そこから世界に広がった",
+    "status": "verified",
+    "quote": "Historians believe that coffee seeds were first taken from the coffee forests of Southwestern Ethiopia to Yemen, where it was cultivated as a crop.",
+    "location": "History of Arabica 冒頭",
+    "sourceIds": [
+     "wcr-history-of-arabica"
+    ]
+   },
+   {
+    "index": 1,
+    "text": "ティピカはイエメンの種子がインド・ジャワ島(オランダ)を経て広がった系統",
+    "status": "verified",
+    "quote": "The Typica branch likely separated from Bourbon when the Dutch sent seeds in 1696 and 1699 from Malabar coast of India to Batavia",
+    "location": "History of Arabica / The Typica lineage",
+    "sourceIds": [
+     "wcr-history-of-arabica"
+    ]
+   },
+   {
+    "index": 4,
+    "text": "ティピカは収量が少なく病害に弱い",
+    "status": "verified",
+    "quote": "It is a tall variety characterized by very low production, susceptibility to the major diseases, and good cup quality.",
+    "location": "Typica / History",
+    "sourceIds": [
+     "wcr-typica"
+    ]
+   },
+   {
+    "index": 7,
+    "text": "Pache(パチェ)はティピカの自然変異種(系統に含める)",
+    "status": "verified",
+    "quote": "A natural mutation of Typica.",
+    "location": "Pache / Lineage",
+    "sourceIds": [
+     "wcr-pache"
+    ]
+   }
+  ],
+  "rejectedClaims": [
+   {
+    "text": "ティピカ系統は「最も古い系統のひとつ」",
+    "status": "unverified"
+   },
+   {
+    "text": "ティピカ系統はブルボンと並び「ほぼ全ての栽培品種の祖先」にあたる",
+    "status": "incorrect"
+   },
+   {
+    "text": "ティピカは上品な酸味とクリーンな味わいで根強い評価がある",
+    "status": "unverified"
+   },
+   {
+    "text": "tagline「コーヒーの原点」「上品でクリーンな味わい」",
+    "status": "unverified"
+   },
+   {
+    "text": "Kent(ケント)をティピカ系統に含める",
+    "status": "incorrect"
+   },
+   {
+    "text": "Java(ジャバ)をティピカ系統に含める",
+    "status": "incorrect"
+   }
+  ],
+  "sources": {
+   "wcr-history-of-arabica": {
+    "title": "History of Arabica / Main types of Arabica coffee",
+    "org": "World Coffee Research",
+    "kind": "primary",
+    "readMethod": "full-text"
+   },
+   "wcr-typica": {
+    "title": "Typica (World Coffee Research Variety Catalog)",
+    "org": "World Coffee Research",
+    "kind": "primary",
+    "readMethod": "full-text"
+   },
+   "wcr-pache": {
+    "title": "WCR Varieties Catalog: Pache",
+    "org": "World Coffee Research",
+    "kind": "primary",
+    "readMethod": "full-text"
+   }
+  },
+  "verifierNote": "Kent・Javaの分類は、WCRとアプリで食い違う(WCRはカタログページなし/Ethiopian landrace)。 英訳(src/data/en/guides.js または src/i18n/en.js)は日本語と同じ主張で、食い違いなし。"
+ },
+ {
+  "key": "variety:ブルボン系統",
+  "proposed": {
+   "tagline": "(味の比較は根拠なしのため削除)イエメンから伝わり、ティピカ系統とは別の系統として世界に広がったアラビカ種",
+   "varieties": [],
+   "note": "ブルボンは、フランス人宣教師が18世紀初めにイエメンからブルボン島(現レユニオン島)に持ち込んだ品種。ティピカとは別の遺伝グループとして世界に広がった。ブルボンの突然変異として、エルサルバドルのPacas、コスタリカのVilla Sarchiが知られる。ケニアのSL28はブルボンに近い遺伝背景を持つ品種で、タンガニイカ干ばつ耐性集団の1本から選抜された。SL34はティピカに近い遺伝背景を持つとされる。"
+  },
+  "verifiedClaims": [
+   {
+    "index": 1,
+    "text": "レユニオン島(旧ブルボン島)にイエメンから導入され、島の名が品種名の由来",
+    "status": "verified",
+    "quote": "French missionaries introduced Bourbon from Yemen to Bourbon Island (now La Réunion)—giving it the name it has today—in the early 1700s.",
+    "location": "Bourbon / History",
+    "sourceIds": [
+     "wcr-bourbon"
+    ]
+   },
+   {
+    "index": 3,
+    "text": "ブルボンの収量はティピカより比較的多い",
+    "status": "verified",
+    "quote": "For reference, Caturra, Bourbon, and K 7 = Medium, and SL 28 = Low",
+    "location": "Typica / Yield Potential (Typica=Low), Bourbon / Yield Potential (Medium)",
+    "sourceIds": [
+     "wcr-typica",
+     "wcr-bourbon"
+    ]
+   },
+   {
+    "index": 4,
+    "text": "SL28はケニアで選抜された品種(ブルボン系の遺伝背景)",
+    "status": "verified",
+    "quote": "SL28 was selected in 1935 from a single tree in a population called Tanganyika Drought Resistant.",
+    "location": "SL28 / History; Lineage: Bourbon-like genetic background.",
+    "sourceIds": [
+     "wcr-sl28"
+    ]
+   },
+   {
+    "index": 7,
+    "text": "エルサルバドルのPacasはブルボンの変異",
+    "status": "verified",
+    "quote": "Pacas is a natural mutation of Bourbon",
+    "location": "Pacas / History",
+    "sourceIds": [
+     "wcr-pacas"
+    ]
+   },
+   {
+    "index": 8,
+    "text": "コスタリカのVilla Sarchiはブルボンの変異",
+    "status": "verified",
+    "quote": "Villa Sarchi (also called La Luisa or Villalobos Bourbon) is a natural mutation of a Bourbon population",
+    "location": "Villa Sarchi / History",
+    "sourceIds": [
+     "wcr-villa-sarchi"
+    ]
+   },
+   {
+    "index": 9,
+    "text": "各国で独自の変異選抜が進んだ(ケニア・エルサルバドル・コスタリカ)",
+    "status": "verified",
+    "quote": "In 1960, the Salvadoran Institute for Coffee Research (ISIC) began a program of pedigree selection",
+    "location": "Pacas / History",
+    "sourceIds": [
+     "wcr-pacas",
+     "wcr-villa-sarchi",
+     "wcr-sl28"
+    ]
+   }
+  ],
+  "rejectedClaims": [
+   {
+    "text": "ブルボンはレユニオン島(旧ブルボン島)で発見されたティピカの自然変異種",
+    "status": "incorrect"
+   },
+   {
+    "text": "ブルボンはティピカよりコクと甘みが強い",
+    "status": "unverified"
+   },
+   {
+    "text": "SL34をブルボン系統に含める",
+    "status": "incorrect"
+   },
+   {
+    "text": "SL28・SL34は黒すぐりのような風味で知られる",
+    "status": "unverified"
+   },
+   {
+    "text": "tagline「ティピカより甘みが強く、バランスの良い味わい」",
+    "status": "unverified"
+   }
+  ],
+  "sources": {
+   "wcr-bourbon": {
+    "title": "WCR Varieties Catalog: Bourbon",
+    "org": "World Coffee Research",
+    "kind": "primary",
+    "readMethod": "full-text"
+   },
+   "wcr-typica": {
+    "title": "Typica (World Coffee Research Variety Catalog)",
+    "org": "World Coffee Research",
+    "kind": "primary",
+    "readMethod": "full-text"
+   },
+   "wcr-sl28": {
+    "title": "SL28 (World Coffee Research Arabica Variety Catalog)",
+    "org": "World Coffee Research",
+    "kind": "primary",
+    "readMethod": "full-text"
+   },
+   "wcr-pacas": {
+    "title": "WCR Varieties Catalog: Pacas",
+    "org": "World Coffee Research",
+    "kind": "primary",
+    "readMethod": "full-text"
+   },
+   "wcr-villa-sarchi": {
+    "title": "Villa Sarchi (World Coffee Research Coffee Varieties Catalog)",
+    "org": "World Coffee Research",
+    "kind": "primary",
+    "readMethod": "full-text"
+   }
+  },
+  "verifierNote": "SL34の系統、「変異種」「コク・甘み」「黒すぐり」の記述はアプリの修正が必要。 英訳(src/data/en/guides.js または src/i18n/en.js)は日本語と同じ主張で、食い違いなし。"
+ },
+ {
+  "key": "variety:特殊・高付加価値品種",
+  "proposed": {
+   "tagline": "",
+   "varieties": [],
+   "note": "Geisha(ゲイシャ)は、1930年代にエチオピアの森林で採取された品種。2005年に、パナマ・ボケテのPeterson家が「Best of Panama」に出品し、当時の生豆オークション最高価格(1ポンド20ドル超)を記録して有名になった。繊細な花、ジャスミン、桃のような香りで知られる。Starmayaは、Marsellesaとエチオピア/スーダン系の雄性不稔の在来種を掛け合わせたF1ハイブリッドで、種子で増やせる点が世界で唯一とWCRは書く。"
+  },
+  "verifiedClaims": [
+   {
+    "index": 0,
+    "text": "Geisha(ゲイシャ)はエチオピア原産",
+    "status": "verified",
+    "quote": "This variety was originally collected from coffee forests in Ethiopia in the 1930s.",
+    "location": "Geisha (Panama) / History",
+    "sourceIds": [
+     "wcr-geisha"
+    ]
+   },
+   {
+    "index": 1,
+    "text": "パナマで栽培されたゲイシャがオークションで当時の最高価格を記録して有名になった",
+    "status": "verified",
+    "quote": "The coffee came to prominence in 2005 when the Peterson family of Boquete, Panama, entered it into the \"Best of Panama\" competition and auction.",
+    "location": "Geisha (Panama) / History",
+    "sourceIds": [
+     "wcr-geisha"
+    ]
+   },
+   {
+    "index": 4,
+    "text": "Starmayaは近年開発されたF1ハイブリッド",
+    "status": "verified",
+    "quote": "A first-generation (F1) hybrid originating from a cross between Marsellesa and a male-sterile Ethiopian or Sudanese landrace variety.",
+    "location": "Starmaya / History",
+    "sourceIds": [
+     "wcr-starmaya"
+    ]
+   },
+   {
+    "index": 5,
+    "text": "Starmayaは種子で増やせる",
+    "status": "verified",
+    "quote": "So far, Starmaya is the only F1 hybrid in the world that professional seed producers can propagate by seed, rather than through costly biotechnology.",
+    "location": "Starmaya / History",
+    "sourceIds": [
+     "wcr-starmaya"
+    ]
+   },
+   {
+    "index": 6,
+    "text": "F1ハイブリッドは高い生産性と品質の両立を目指す",
+    "status": "verified",
+    "quote": "created to combine the best characteristics of the two parents, including high cup quality, high yield, and disease resist",
+    "location": "History of Arabica / F1 Hybrid",
+    "sourceIds": [
+     "wcr-history-of-arabica"
+    ]
+   }
+  ],
+  "rejectedClaims": [
+   {
+    "text": "その農園が「Hacienda La Esmeralda等」",
+    "status": "unverified"
+   },
+   {
+    "text": "ゲイシャはジャスミンやベルガモットを思わせる華やかな香り",
+    "status": "unverified"
+   },
+   {
+    "text": "Heirloomはエチオピアで伝統的に栽培されてきた無数の在来種の総称で、単一の品種名ではない",
+    "status": "unverified"
+   },
+   {
+    "text": "tagline「ジャスミンやベルガモットを思わせる、突出した華やかさ」(Geisha以外にも当てはまるか)",
+    "status": "unverified"
+   }
+  ],
+  "sources": {
+   "wcr-geisha": {
+    "title": "WCR Varieties Catalog: Geisha (Panama)",
+    "org": "World Coffee Research",
+    "kind": "primary",
+    "readMethod": "full-text"
+   },
+   "wcr-starmaya": {
+    "title": "WCR Varieties Catalog: Starmaya",
+    "org": "World Coffee Research",
+    "kind": "primary",
+    "readMethod": "full-text"
+   },
+   "wcr-history-of-arabica": {
+    "title": "History of Arabica / Main types of Arabica coffee",
+    "org": "World Coffee Research",
+    "kind": "primary",
+    "readMethod": "full-text"
+   }
+  },
+  "verifierNote": "Hacienda La Esmeralda・ベルガモット・Heirloomの定義は未確認(別資料で追う場合は農園公式サイト等)。 英訳(src/data/en/guides.js または src/i18n/en.js)は日本語と同じ主張で、食い違いなし。"
+ }
+]

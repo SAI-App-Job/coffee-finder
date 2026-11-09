@@ -8,7 +8,7 @@ export const JAPAN_COMPETITIONS_EN = {
     history:
       "A competition run by the SCAJ since 2003. Within the time limit, competitors serve three kinds of drinks - \"espresso,\" \"milk beverage\" and \"signature beverage (an original drink)\" - and are judged not only on taste but on the appropriateness, accuracy and consistency of the whole process up to serving. The rules follow those of the world competition, the World Barista Championship (WBC), and the JBC winner represents Japan at the WBC. In 2007, when the WBC was held in Asia for the first time in Tokyo, Miyamae finished 4th in the world and won the Best Cappuccino award at the same time.",
     latestResult:
-      "In 2024, 伊藤大貴 (Ito) of Sarutahiko Coffee won (the company's first JBC win). He represented Japan at the WBC the following year, 2025.",
+      "In 2024, Hiroki Ito (伊藤大貴) of Sarutahiko Coffee won (the company's first JBC win). He represented Japan at the WBC the following year, 2025. Ito also won the 2026 competition (October).",
   },
   jhdc: {
     name: "Japan Hand Drip Championship",
@@ -18,7 +18,7 @@ export const JAPAN_COMPETITIONS_EN = {
     format:
       "Judging centers on the taste evaluation of drip coffee with no additives. In the qualifying round, the uniformity of two brews of different amounts is an important evaluation item, testing the skill of finishing coffee of different amounts to the same taste through pouring technique alone. In the final, beans distributed before the event are used, and overall professional skill, including uniformity of extraction, is evaluated.",
     latestResult:
-      "After 新田和雄 (Nitta; Nitta Coffee, Fukui Prefecture) won in 2023 and 2024, his daughter 新田衣祥 (Nitta) won in 2025, a rare record of father and daughter winning three years in a row.",
+      "After 新田和雄 (Nitta; Nitta Coffee, Fukui Prefecture) won in 2023 and 2024, his eldest daughter 新田衣祥 (Nitta) won in 2025 and his wife 新田千香子 (Nitta) in 2026, the first time in JHDC history that members of one family have won four years in a row (the family relationships are from Nitta Coffee's press release).",
   },
   jsc: {
     name: "Japan Siphonist Championship",
@@ -50,7 +50,7 @@ export const JAPAN_COMPETITIONS_EN = {
     format:
       "In conventional roasting competitions (such as the SCAA Roaster's Guild Retreat and the SCAJ Roast Masters Retreat), only the cup quality of the result was judged, with no advance declaration. In the JCRC, competitors declare in advance, in a \"roast log,\" what flavor characteristics they will aim for, and then roast. On the final day, the competitor whose actual roast result comes closest to the declaration wins.",
     latestResult:
-      "In 2016, 近藤啓 (Kondo) of Itsuka Kohiya (Hiratsuka, Kanagawa Prefecture) won on his first appearance. He represented Japan at the World Coffee Roasting Championship the following year, 2017, and placed 7th.",
+      "In 2016, Hiraku Kondo (近藤啓) of Itsuka Kohiya (Hiratsuka, Kanagawa Prefecture) won on his first appearance. He represented Japan at the World Coffee Roasting Championship the following year, 2017, and placed 7th.",
   },
   jcigsc: {
     name: "Japan Coffee in Good Spirits Championship",
@@ -64,7 +64,7 @@ export const JAPAN_COMPETITIONS_EN = {
     name: "Japan Brewers Cup",
     tagline: "A competition contesting skill with a wide range of brewing tools, not limited to paper and flannel drip",
     history:
-      "A competition run by the SCAJ that was newly established in 2014. In contrast to the JHDC, which specializes in paper and flannel drip, in the JBrC competitors can freely choose manual brewing tools without mechanical power, such as paper drip, flannel drip, French press and AeroPress. It is positioned as the domestic selection for the world competition, the \"World Brewers Cup (WBrC),\" and the winner earns the right to compete in the WBrC as Japan's representative. In 2014, JBrC 2014 winner 尾籠一誠 (Saza Coffee Co., Ltd.) competed as Japan's representative at the WBrC 2014 held in Rimini, Italy.",
+      "A competition run by the SCAJ that was newly established in 2014. In contrast to the JHDC, which specializes in paper and flannel drip, in the JBrC competitors can freely choose manual brewing tools without mechanical power, such as paper drip, flannel drip, French press and AeroPress. It is positioned as the domestic selection for the world competition, the \"World Brewers Cup (WBrC),\" and the winner earns the right to compete in the WBrC as Japan's representative. In 2014, JBrC 2014 winner Ichisei Obiro (尾籠一誠, Saza Coffee Co., Ltd.) competed as Japan's representative at the WBrC 2014 held in Rimini, Italy.",
     format:
       "In the qualifying rounds, the official roasted beans of the event are used in a \"compulsory service\" judged purely on taste, while in the semifinals and final, each competitor brings beans of their own choosing in an \"open service,\" showing off the appeal of those beans through brewing technique and presentation.",
   },
@@ -91,6 +91,7 @@ export const COMPETITION_SOURCE_LABELS_EN = {
   "過去の競技結果": "Past results",
   "審査員プログラム(競技詳細)": "Judge program (competition details)",
   "第12回利き珈琲選手権(概要・歴代王者インタビュー)": "12th Coffee Tasting Championship (overview and interviews with past champions)",
+  "2026年の競技結果": "2026 results",
 };
 
 // 競技会の略称(日本語 → 英語)。"利き珈琲" だけが日本語表記
@@ -170,15 +171,15 @@ export const VARIETY_GUIDE_EN = {
   "サルチモール/カティモール系統": {
     lineage: "Sarchimor / Catimor lineage",
     tagline: "Crossbreeds with resistance to coffee leaf rust",
-    varieties: ["Catimor", "Sarchimor", "Ruiru 11", "Batian", "Parainema"],
+    varieties: ["Catimor", "Sarchimor", "Ruiru 11", "Batian", "Parainema", "Marsellesa"],
     note:
-      "A group of crossbreeds with the Timor Hybrid (a natural cross of Arabica and Robusta) as a parent, bred to resist coffee leaf rust (a serious disease that attacks the leaves). Their cup quality has been said to be inferior to the traditional Bourbon and Typica lineages, but advances in breeding are improving quality. The planted area is expanding as climate change raises the risk of disease.",
+      "A group of crossbreeds with the Timor Hybrid (a natural cross of Arabica and Robusta) as a parent, bred to resist coffee leaf rust (a serious disease that attacks the leaves). Marsellesa also belongs to this lineage: it was selected from a cross of the Timor Hybrid and Villa Sarchi (released in 2009). Their cup quality has been said to be inferior to the traditional Bourbon and Typica lineages, but advances in breeding are improving quality. The planted area is expanding as climate change raises the risk of disease.",
   },
   "特殊・高付加価値品種": {
     lineage: "Specialty varieties",
     tagline: "A standout floral quality reminiscent of jasmine and bergamot",
-    varieties: ["Geisha/Gesha", "Starmaya", "Marsellesa", "Heirloom (Ethiopian native varieties)"],
+    varieties: ["Geisha/Gesha", "Starmaya", "Heirloom (Ethiopian native varieties)"],
     note:
-      "Geisha originates in Ethiopia, and became famous overnight when lots grown on Panamanian farms (Hacienda La Esmeralda and others) set record auction prices among the highest ever. It is characterized by a showy aroma reminiscent of jasmine and bergamot. Starmaya and Marsellesa are recently developed F1 hybrids (first-generation artificial crosses that draw on genetic diversity), a new generation of varieties aiming to combine high productivity and quality. Heirloom is a collective name for the countless native varieties traditionally grown in Ethiopia, not a single variety name.",
+      "Geisha originates in Ethiopia, and became famous overnight when lots grown on Panamanian farms (Hacienda La Esmeralda and others) set record auction prices among the highest ever. It is characterized by a showy aroma reminiscent of jasmine and bergamot. Starmaya is a recently developed F1 hybrid (a first-generation artificial cross that draws on genetic diversity, and can be propagated by seed), a new generation of variety aiming to combine high productivity and quality. Heirloom is a collective name for the countless native varieties traditionally grown in Ethiopia, not a single variety name.",
   },
 };

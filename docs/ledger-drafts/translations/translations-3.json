@@ -1,0 +1,256 @@
+{
+ "translations": {
+  "origin:エルサルバドル:harvestSeason": {
+   "en": {
+    "text": "The harvest season is October to March (ICO document, as of 2015/16)."
+   },
+   "notes": ""
+  },
+  "origin:エルサルバドル:history": {
+   "en": {
+    "text": "According to an ICO document, Salvadoran coffee was first exported in 1855. The same document states that production fell in 1980 due to internal civil strife in the country. Of the El Salvador competitions listed in the Cup of Excellence (COE) ACE results list, the earliest year is 2003."
+   },
+   "notes": ""
+  },
+  "origin:エルサルバドル:regions": {
+   "en": {
+    "text": "The document \"El Salvador Coffee Profile\" (as of 2015/16), submitted to the ICO, lists Apaneca-Ilamatepec as a mountain range (Mountain range)."
+   },
+   "notes": ""
+  },
+  "origin:エルサルバドル:sub:アパネカ・イラマテペック": {
+   "en": {
+    "detail": "Altitude is 500 to 2,365 m (ICO document, as of 2015/16)."
+   },
+   "notes": ""
+  },
+  "origin:エルサルバドル:tagline": {
+   "en": {
+    "text": "El Salvador, where Bourbon accounts for 62% of the cultivated varieties (ICO document, as of 2015/16)."
+   },
+   "notes": ""
+  },
+  "origin:エルサルバドル:terroir": {
+   "en": {
+    "text": "The country's altitude categories are SHG (over 1,201 m), HG (801 to 1,200 m), and CS (800 m or below), and grading is based on three criteria: altitude, processing method, and number of defects (RTS 67.08.01:18; WTO notification version checked). The altitude of Apaneca-Ilamatepec is 500 to 2,365 m (ICO document, as of 2015/16)."
+   },
+   "notes": ""
+  },
+  "origin:エルサルバドル:varietiesDetail": {
+   "en": {
+    "text": "Bourbon accounts for 62% (about 60%) of the cultivated varieties (ICO document, as of 2015/16). Pacas is a natural mutation of Bourbon, discovered in 1949 in the Santa Ana region (WCR). Pacamara is a cross between Pacas and Maragogipe, and the domestic research institute ISIC (Salvadoran Institute of Coffee Research) carried out an incomplete pedigree selection (WCR). Following the 2012–13 leaf rust crisis, planting of rust-resistant arabica varieties is increasing (WCR)."
+   },
+   "notes": ""
+  },
+  "origin:グアテマラ:farmStructure": {
+   "en": {
+    "text": "97% of Guatemala's coffee producers are smallholders, and they account for 44% of production (USDA FAS, 2025). Anacafé was founded in 1960 and carries out activities such as soil, plant, and water analysis (Analab) and holding cuppings (sensory evaluations). According to an Anacafé press release dated November 20, 2020, eight regions, each with its own distinctive cup profile, were established."
+   },
+   "notes": ""
+  },
+  "origin:グアテマラ:gradeSystem": {
+   "en": {
+    "text": "Anacafé's altitude chart (Coffee types) shows, for each altitude band, SHB at over 4,500 feet (1,370 m), Semi-Hard / Hard at 3,500 to 4,500 feet (1,066 to 1,370 m), and Extra Prime / EPW at 2,500 to 3,500 feet (764 to 1,066 m). Anacafé's 2019 variety monitoring report states that the quality of a variety is directly related to the altitude of the place where it is grown."
+   },
+   "notes": ""
+  },
+  "origin:グアテマラ:history": {
+   "en": {
+    "text": "According to Anacafé's history infographic, Jesuit priests brought the first coffee plants to the colonial city of Antigua as ornamental plants for the gardens of their monastery. It also records that a plague of locusts devastated the indigo plantations, wiping out one of the two export crops on which the economy depended."
+   },
+   "notes": ""
+  },
+  "origin:グアテマラ:sub:アンティグア": {
+   "en": {
+    "detail": "A valley surrounded by three volcanoes: Agua, Fuego, and Acatenango. Anacafé describes the cup as elegant and well balanced, with a rich aroma and a very sweet taste."
+   },
+   "notes": ""
+  },
+  "origin:グアテマラ:sub:ウエウエテナンゴ": {
+   "en": {
+    "detail": "According to Anacafé's description, it is cultivated at altitudes of up to 2,000 m (6,500 feet). The region is protected from frost by dry, hot winds that blow into the mountains from Mexico's Tehuantepec plain. The cup is described as having fine, intense acidity, full body, and pleasant wine notes."
+   },
+   "notes": ""
+  },
+  "origin:グアテマラ:tagline": {
+   "en": {
+    "text": "According to Anacafé, all of Guatemala's high-altitude coffees have a pleasant acidity, rich body, and delicate sweetness."
+   },
+   "notes": ""
+  },
+  "origin:グアテマラ:varietiesDetail": {
+   "en": {
+    "text": "Anacafé's variety guide (2020) lists varieties such as Caturra, Catuaí, Pache, Pache Colis, Bourbon, Mundo Novo, Pacamara, and Typica. Pache is a mutation of Typica found in Santa Rosa, Guatemala, in 1949. Sarchimor has a low plant height, high yield, and is suited to low-to-medium altitudes (same guide)."
+   },
+   "notes": "サルチモール=Sarchimor(原文はSarchimores)。ティピカは原文Típicaを一般表記Typicaに。"
+  },
+  "origin:ケニア:farmStructure": {
+   "en": {
+    "text": "After harvest, farmers deliver their picked cherries to the society they belong to (primary society), where they are processed (ICO Kenya profile). Nairobi Coffee Exchange (NCE) auctions are typically held on Tuesday mornings on the trading floor (NCE auction calendar). In Kenya, coffee is sold through a central auction system (ICO)."
+   },
+   "notes": ""
+  },
+  "origin:ケニア:gradeSystem": {
+   "en": {
+    "text": "Under Kenya's Coffee (General) Rules, 2019 (Legal Notice No. 102), AA is a flat bean that passes through screen 21 and is retained on screen 18 (7.2 mm). However, grading by size and shape is only a rough estimate of coffee quality (EAS 130:1999)."
+   },
+   "notes": ""
+  },
+  "origin:ケニア:harvestSeason": {
+   "en": {
+    "text": "There are two harvest seasons a year: April to June and October to December (ICO Kenya profile)."
+   },
+   "notes": ""
+  },
+  "origin:ケニア:history": {
+   "en": {
+    "text": "In 1893, French missionaries (the Spiritans, or Congregation of the Holy Spirit) planted Bourbon seeds originating from Réunion Island at the Bura mission in the Taita Hills, which was the start of coffee cultivation in Kenya (AFA, WCR). Seedlings from Bura were taken in 1899 to the Saint Austin mission near Nairobi, and from there seeds were distributed to settlers willing to grow coffee (WCR). A strategy document of Kenya's Ministry of Agriculture and Livestock Development (2024 draft) records that cultivation was restricted to white settlers until the 1930s."
+   },
+   "notes": "省庁名は日本語訳に準拠して英語化(原文に省庁の英語表記なし)。"
+  },
+  "origin:ケニア:officialBody": {
+   "en": {
+    "text": "The AFA Coffee Directorate is a directorate under the Agriculture and Food Authority (AFA)."
+   },
+   "notes": ""
+  },
+  "origin:ケニア:sub:キリニャガ": {
+   "en": {
+    "detail": "According to an AFA article dated October 21, 2024, Kirinyaga County is listed second among the three counties that led in cherry production (Kiambu, Kirinyaga, and Nyeri, in that order)."
+   },
+   "notes": ""
+  },
+  "origin:ケニア:sub:ニエリ": {
+   "en": {
+    "detail": "According to an AFA article dated October 21, 2024, Nyeri County is listed third among the three counties that led in cherry production (Kiambu, Kirinyaga, and Nyeri, in that order)."
+   },
+   "notes": ""
+  },
+  "origin:ケニア:tagline": {
+   "en": {
+    "text": "Known for bright acidity and fruity or wine-like flavors (as described by the Nairobi Coffee Exchange)."
+   },
+   "notes": ""
+  },
+  "origin:ケニア:terroir": {
+   "en": {
+    "text": "According to the ICO's Kenya profile, coffee-growing areas are in the Western, Rift Valley, Central Kenya, and Mt Kenya regions. Mount Kenya is 5,199 m high (UNESCO World Heritage List). The same profile describes red volcanic soils that are deep and well drained (ICO)."
+   },
+   "notes": ""
+  },
+  "origin:ケニア:varietiesDetail": {
+   "en": {
+    "text": "SL28 and SL34, together with K7, Ruiru 11, Batian, and Blue Mountain, are Kenya's main varieties (ICO). According to WCR's entry on SL28, individual tree selections made at the Scott Laboratories in 1935–39 were given the prefix SL. SL28 is drought tolerant (WCR). SL34 was selected in the late 1930s at the Scott Agricultural Laboratories and is adapted to high-altitude areas with good rainfall (WCR). Ruiru 11 and Batian are tolerant to coffee leaf rust and resistant to coffee berry disease (CBD) (WCR)."
+   },
+   "notes": ""
+  },
+  "origin:コスタリカ:farmStructure": {
+   "en": {
+    "text": "92% of producers have a planted area of less than 5 ha, and together they account for 44% of the total area (ICAFE; no year given)."
+   },
+   "notes": ""
+  },
+  "origin:コスタリカ:gradeSystem": {
+   "en": {
+    "text": "ICAFE estimates that about 95% of the coffee in the Los Santos region is SHB (Strictly Hard Bean). ICAFE states that altitude affects the size and hardness of the seed and also influences some components of cup quality (especially acidity). Altitude thresholds for each grade have not been confirmed in official sources."
+   },
+   "notes": ""
+  },
+  "origin:コスタリカ:harvestSeason": {
+   "en": {
+    "text": "The harvest is concentrated from November to February (USDA FAS, 2025). In the Los Santos region, the harvest season is five months, from November to March (ICAFE)."
+   },
+   "notes": ""
+  },
+  "origin:コスタリカ:history": {
+   "en": {
+    "text": "According to an ICAFE document (2008), the first seeds arrived at the end of the 18th century, but it is only after 1808 that historical evidence allows certainty that coffee cultivation began in Costa Rica. In 1821, the year of independence, the municipality of San José (corporación josefina) distributed coffee seedlings free of charge to the poor (indigentes). From 1843, fruit was shipped to Britain on William Le Lacheur's sailing ship The Monarch."
+   },
+   "notes": ""
+  },
+  "origin:コスタリカ:officialBody": {
+   "en": {
+    "text": "ICAFE (Instituto del Café de Costa Rica) is a public institution of a non-state character, founded in 1933 as the governing body of Costa Rican coffee growing. ICAFE's page on the sector's structure refers to Law No. 2762 of June 21, 1961 (Ley 2762) and its amendments, and to regulation by the rules implementing that law. To operate as a mill (beneficiador), registration in a registry held by ICAFE is required."
+   },
+   "notes": ""
+  },
+  "origin:コスタリカ:terroir": {
+   "en": {
+    "text": "ICAFE describes the highlands above 1,200 m as being of volcanic origin. The Los Santos region has a clearly defined rainy season (May to November) and dry season (December to April) (ICAFE)."
+   },
+   "notes": ""
+  },
+  "origin:コスタリカ:varietiesDetail": {
+   "en": {
+    "text": "According to ICAFE, cultivation centers on short-statured, high-productivity varieties (Caturra, Catuaí, etc.), which account for over 90% of the national coffee-growing area. Villa Sarchi is a natural mutation of a Bourbon population, in which a single-gene mutation makes the plant grow smaller (WCR)."
+   },
+   "notes": ""
+  },
+  "origin:コロンビア:farmStructure": {
+   "en": {
+    "text": "The FNC's official Café de Colombia website states that 540,000 families grow coffee in Colombia."
+   },
+   "notes": ""
+  },
+  "origin:コロンビア:gradeSystem": {
+   "en": {
+    "text": "Resolution No. 2 (2016) of the National Committee of Coffee Growers defines export green coffee Excelso as large-grained, mainly flat, uniform beans retained above screen 14 (malla 14) (with a tolerance of up to 5% of smaller beans retained on screen 12), and requires that at least 50% of the beans be retained on screen 15."
+   },
+   "notes": ""
+  },
+  "origin:コロンビア:history": {
+   "en": {
+    "text": "An FNC news article, \"Salazar de las Palmas: cuna del café colombiano\", says that Father Francisco Romero, a priest from Rubio, Venezuela, brought the first coffee seeds, and that the penance for each confessed sin was to plant and care for coffee trees. According to the Café de Colombia (FNC) site, Denomination of Origin (DO) protection has been declared for Cauca, Huila, and Santander. For Huila, protection as a DO was declared by SIC Resolution No. 17989 of April 16, 2013."
+   },
+   "notes": "SICは原文どおり略称のまま(Superintendencia de Industria y Comercio)。"
+  },
+  "origin:コロンビア:officialBody": {
+   "en": {
+    "text": "The FNC (Federación Nacional de Cafeteros, the National Federation of Coffee Growers) was founded in 1927. Resolution No. 2 (April 25, 2016) of the National Committee of Coffee Growers (Comité Nacional de Cafeteros) is a resolution that unifies and updates the quality rules for export green coffee (café verde en almendra). An FNC circular of December 2025 also states that quality control of green coffee is to be carried out in accordance with Resolution No. 2 (2016) of that committee."
+   },
+   "notes": ""
+  },
+  "origin:コロンビア:sub:トリマ": {
+   "en": {
+    "detail": "Tolima: In the FNC (Café de Colombia) description, acidity is medium to high and citrus-like."
+   },
+   "notes": ""
+  },
+  "origin:コロンビア:sub:ナリーニョ": {
+   "en": {
+    "detail": "Nariño: In the FNC's description of its Denomination of Origin, the high altitude at which it is grown and the low temperatures are said to make the plant conserve its sweetness."
+   },
+   "notes": ""
+  },
+  "origin:コロンビア:varietiesDetail": {
+   "en": {
+    "text": "Cenicafé (Colombia's national coffee research center) was established in 1938 (FNC). Castillo is a variety developed by Cenicafé, derived from a cross between Caturra and Timor Hybrid. The Colombia variety is also derived from the same cross. The parents of this cross have contrasting resistance to rust: Caturra is described as susceptible, and a Cenicafé document describes it as highly susceptible to coffee leaf rust."
+   },
+   "notes": ""
+  },
+  "origin:ジャマイカ:farmStructure": {
+   "en": {
+    "text": "JACRA is responsible for setting quality standards, providing quality assurance and certification services, and governing trade in coffee and other products (JIS)."
+   },
+   "notes": ""
+  },
+  "origin:ジャマイカ:history": {
+   "en": {
+    "text": "JIS states that coffee was first introduced to the island of Jamaica in 1728. The JCEA (Jamaica Coffee Exporters Association) says that it was the British Governor Sir Nicholas Lawes who brought it to the island from neighboring Hispaniola. A JIS article (January 22, 2026) says that Japan accounts for more than half of Jamaica's Blue Mountain coffee exports. A Ministry of Agriculture article (July 19, 2024) says, regarding the passage of Hurricane Beryl, that there was an estimated 60% damage to coffee farms and infrastructure across all parishes, with an estimated loss of 25,000 boxes. The Ministry of Agriculture article also says that 40% of coffee was lost in Hurricane Melissa."
+   },
+   "notes": "JCEAの正式名は日本語の「ジャマイカ・コーヒー輸出業者協会」に準拠して英訳(原文引用に正式名なし)。"
+  },
+  "origin:ジャマイカ:officialBody": {
+   "en": {
+    "text": "JACRA is described in a Ministry of Agriculture Ministry Paper (2015) as a new body to replace the existing Coffee Industry Board."
+   },
+   "notes": ""
+  },
+  "origin:ジャマイカ:sub:ハイマウンテン地区": {
+   "en": {
+    "detail": "The premium grades of Jamaican coffee grown outside the Blue Mountain area are defined in the regulations as \"Jamaica High Mountain Supreme Coffee\" (JACRA Regulations 2018)."
+   },
+   "notes": ""
+  }
+ }
+}

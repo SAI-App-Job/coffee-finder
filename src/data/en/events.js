@@ -3,27 +3,27 @@
 export const EVENTS_EN = {
   "World Brewers Cup 2026": {
     dateRange: "June 25-27, 2026",
-    note: "A world competition contesting hand-brewing skill. PHILOCOFFEA (Tetsu Kasuya) won the 2016 competition.",
+    note: "A world competition contesting hand-brewing skill. Tetsu Kasuya won the 2016 competition.",
   },
   "World Barista Championship 2026": {
     dateRange: "October 22-25, 2026",
-    note: "The most historic world competition (started in 2000), contesting espresso, milk drinks and signature drinks.",
+    note: "A world competition contesting espresso, milk drinks and signature drinks (the 26th edition).",
   },
   "SCAJ2026 ワールドスペシャルティコーヒーカンファレンス&エキシビション": {
     name: "SCAJ 2026 World Specialty Coffee Conference & Exhibition",
     venue: "Tokyo Big Sight, South Halls 1-4",
     dateRange: "October 14-17, 2026",
-    note: "One of Japan's largest specialty coffee exhibitions. The previous edition drew over 75,000 visitors over four days.",
+    note: "A specialty coffee exhibition in Japan. South Halls 3-4 run October 14-17 and South Halls 1-2 run October 14-16. The previous edition (2025) drew 96,823 visitors over four days (per the SCAJ 2026 overview).",
   },
   "Guatemala Cup of Excellence 2026": {
     venue: "Guatemala",
-    dateRange: "COE (auction): July 15 / NW (judging week): July 14-18",
-    note: "An international competition called the \"Olympics of coffee.\" The winning lots are sold in an online auction, and the profits go directly to producers.",
+    dateRange: "COE judging: June 1-4 / auction: July 23 (13:00 UTC)",
+    note: "Guatemala Cup of Excellence 2026. The winning lots are sold in an online auction (per the COE official yearly data).",
   },
   "Nicaragua Cup of Excellence 2026": {
     venue: "Nicaragua",
-    dateRange: "COE (auction): June 19",
-    note: "The competition that opens the 2026 season.",
+    dateRange: "See the COE website for the schedule",
+    note: "Nicaragua Cup of Excellence 2026.",
   },
 };
 

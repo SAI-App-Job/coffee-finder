@@ -1,0 +1,283 @@
+{
+ "results": {
+  "glossary:精選(せいせん)": {
+   "verdict": "fix",
+   "finalContent": {
+    "summary": "収穫後に行われる、脱肉・水洗・乾燥・脱穀・選別などの精選作業。",
+    "detail": "全日本コーヒー協会は、収穫後は脱肉、水洗、乾燥、脱穀、選別などの精選作業が行われると説明している。"
+   },
+   "usedClaims": [
+    0
+   ],
+   "problems": [
+    "「コーヒーチェリーを生豆にするまでの工程」という定義は引用になく(主張文と場所の見出しにしかない)、引用の範囲外。引用にある作業内容の列挙だけに直した"
+   ]
+  },
+  "grade:number": {
+   "verdict": "drop",
+   "problems": [
+    "引用は「360 8 200 > 360 Fora de Tipo」という表の断片だけで、「公式等級(COB)」「Tipo 2〜8」「欠点数」「Tipo 8に対応」などは引用に無い(場所・主張文にしかない)",
+    "引用の範囲で意味のある文が残らないためdrop"
+   ]
+  },
+  "grade:shb": {
+   "verdict": "ok",
+   "problems": []
+  },
+  "origin:イエメン:farmStructure": {
+   "verdict": "ok",
+   "problems": []
+  },
+  "origin:イエメン:harvestSeason": {
+   "verdict": "ok",
+   "problems": []
+  },
+  "origin:イエメン:history": {
+   "verdict": "fix",
+   "finalContent": {
+    "text": "イエメンでは15世紀にはコーヒーが栽培されていた(ICO)。コーヒーの種子は、最初にエチオピア南西部のコーヒーの森からイエメンに運ばれ、そこで作物として栽培されたと、WCRは記している。モカ(Al Mokha)港は、歴史的にイエメンからのコーヒー輸出の主要な拠点で、「モカ」コーヒーはこの港と結びつけられている(FAO/IFC 2023)。2015年に始まった紛争は、すでに劣化していた国のインフラをさらに損なった(FAO/IFC 2023)。"
+   },
+   "usedClaims": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "problems": [
+    "「歴史家は考える」は引用(文の途中から始まる)に無い。WCRの記述として直した"
+   ]
+  },
+  "origin:イエメン:officialBody": {
+   "verdict": "fix",
+   "finalContent": {
+    "text": "標準計量局(Standards and Metrology Authority, SMA)がコーヒー品質規格の設定責任を負うが、イエメン産コーヒー豆とその品種についての成文化された規格・分類は持たない(FAO/IFC 2023)。"
+   },
+   "usedClaims": [
+    0,
+    1
+   ],
+   "problems": [
+    "「成文化された規格・分類は持たない」の対象(イエメン産コーヒー豆とその品種)が引用では限定されているため、範囲を明記した"
+   ]
+  },
+  "origin:イエメン:regions": {
+   "verdict": "drop",
+   "problems": [
+    "引用は地図のラベル「Maqbanah Bani Matar Dawran Aness」だけで、「コーヒー栽培地区」であることは引用に無い(場所の注記にしかない)"
+   ]
+  },
+  "origin:イエメン:sub:バニーマタル(マタリ)": {
+   "verdict": "drop",
+   "problems": [
+    "引用は地図のラベルだけで、「コーヒー栽培地区の一つ」は引用に無い"
+   ]
+  },
+  "origin:イエメン:tagline": {
+   "verdict": "ok",
+   "problems": []
+  },
+  "origin:イエメン:terroir": {
+   "verdict": "ok",
+   "problems": []
+  },
+  "origin:イエメン:varietiesDetail": {
+   "verdict": "fix",
+   "finalContent": {
+    "text": "イエメンでは、背の高い樹はUdaini、Jufaini、Jadi、コンパクトな樹はDawairi、Tufahiと呼ばれる(2021年の論文)。Qima Coffeeは2020年8月14日、コーヒー界でそれまで知られていなかった、まったく新しい母集団(mother population)の発見を発表した(同社の「YEMENIA」ページ)。2021年の論文では、C. arabicaの137検体が調べられた。また同論文は、イエメンの検体だけからなり、世界の他の栽培品種を含まないクラスターを1つ見つけたと記している。"
+   },
+   "usedClaims": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "problems": [
+    "「137検体を調べ、…クラスターを1つ見つけた」は、137検体と見つけたクラスターを同じ分析として結びつけているが、引用は別々の文。2文に分けた"
+   ]
+  },
+  "origin:インドネシア:farmStructure": {
+   "verdict": "ok",
+   "problems": []
+  },
+  "origin:インドネシア:harvestSeason": {
+   "verdict": "ok",
+   "problems": []
+  },
+  "origin:インドネシア:history": {
+   "verdict": "fix",
+   "finalContent": {
+    "text": "1696年と1699年に、インドのマラバール海岸からバタビア(現ジャワ)へコーヒー種子が送られた(WCR)。ロブスタは総生産の約80〜90%を占める(USDA FAS 2025年)。ガヨ・アラビカの地理的表示申請書(2016年)は、「Sumatra semi-washed process」とも呼ばれるという記載に続けて、パーチメントを取り除く(脱穀する)工程は、パーチメントがまだ湿った状態(含水率25〜30%)で行うと記している。"
+   },
+   "usedClaims": [
+    0,
+    1,
+    2
+   ],
+   "problems": [
+    "引用に「ギリンバサ」「湿式脱穀」の語は無い(「also known as」の前が引用に含まれない)ため、名称の言い換えを削除",
+    "引用の範囲がガヨ産アラビカの申請書のものであることを明示した"
+   ]
+  },
+  "origin:インドネシア:sub:ガヨマウンテン(スマトラ)": {
+   "verdict": "ok",
+   "problems": []
+  },
+  "origin:エチオピア:farmStructure": {
+   "verdict": "fix",
+   "finalContent": {
+    "text": "USDA FASの2026年版の報告によると、小農は国全体のコーヒー生産量の90%を占める。ECX(エチオピア商品取引所)は2008年に設立された(USDA FAS 2019年版)。2019年の政策改革で、2ha以上の土地を持つ小農が輸出許可を得て、コーヒーを国際市場へ直接販売できるようになった(USDA FAS 2025年版)。"
+   },
+   "usedClaims": [
+    0,
+    1,
+    2
+   ],
+   "problems": [
+    "「2019年版の報告で95%」は引用に無い(場所の注記にしか無い)ため削除"
+   ]
+  },
+  "origin:エチオピア:gradeSystem": {
+   "verdict": "ok",
+   "problems": []
+  },
+  "origin:エチオピア:harvestSeason": {
+   "verdict": "fix",
+   "finalContent": {
+    "text": "主な収穫期は10月〜12月(USDA FAS 2026年5月)。"
+   },
+   "usedClaims": [
+    0
+   ],
+   "problems": [
+    "「国全体の」は引用(the main harvest period of October to December)に無いため削除"
+   ]
+  },
+  "origin:エチオピア:history": {
+   "verdict": "ok",
+   "problems": []
+  },
+  "origin:エチオピア:regions": {
+   "verdict": "ok",
+   "problems": []
+  },
+  "origin:エチオピア:sub:ボンガ": {
+   "verdict": "fix",
+   "finalContent": {
+    "detail": "UNESCO MABの資料「Kafa」の「Year of Nomination」は2010年。UNESCOは、カファ地帯を野生Coffea arabicaの原産地・遺伝的多様性の中心と述べ、近く5,000の野生の品種が含まれるとしている。"
+   },
+   "usedClaims": [
+    0,
+    1,
+    2
+   ],
+   "problems": [
+    "「UNESCOの生物圏保護区」は引用に無い(場所の注記と主張文にしか無い)ため削除",
+    "「近く5,000の品種を含む」の主語は引用では不明なため、主語を特定しない形にした"
+   ]
+  },
+  "origin:エチオピア:tagline": {
+   "verdict": "ok",
+   "problems": []
+  },
+  "origin:エチオピア:terroir": {
+   "verdict": "fix",
+   "finalContent": {
+    "text": "標高は1,500mから2,200m超(USDA FAS 2025年6月)。ICOの2010年の会議資料(EIAR所属の研究者の発表)は、コーヒーは主に南西部(旧カファ、イルバボル、ウォレガ)、南東部(バレ、アルシ)、南部(旧シダモ)、南東部(Harerge。資料の表記のまま)で生産されると述べている。"
+   },
+   "usedClaims": [
+    0,
+    1
+   ],
+   "problems": [
+    "「約」は引用(between 1,500 and over 2,200 meters)に無いため削除",
+    "引用には何の標高かの記載が無いため、「国内の生産地の」を削除"
+   ]
+  },
+  "origin:エチオピア:varietiesDetail": {
+   "verdict": "fix",
+   "finalContent": {
+    "text": "ICOの2010年の会議資料は、Coffea arabicaがエチオピアに存在する唯一の種(species)であると述べている。WCRは、在来品種(landrace varieties)の多くはエチオピアの森に由来すると述べている。ゲイシャ(Geisha)は、1930年代にエチオピアのコーヒーの森で採集されたとWCRのカタログにある。"
+   },
+   "usedClaims": [
+    0,
+    1,
+    2
+   ],
+   "problems": [
+    "「コーヒーの種」は「種子」とも読めて曖昧。引用の「only species」に合わせた",
+    "「在来種」を引用の「landrace varieties」に合わせて「在来品種」に直した"
+   ]
+  },
+  "origin:エルサルバドル:farmStructure": {
+   "verdict": "fix",
+   "finalContent": {
+    "text": "エルサルバドル憲法(立法議会のテキスト)によると、同一の自然人または法人が所有できる農村の土地(tierra rústica)の最大面積は245ヘクタールを超えてはならない。この制限は、協同組合または農民共同体の団体(asociaciones cooperativas o comunales campesinas)には適用されない。"
+   },
+   "usedClaims": [
+    1
+   ],
+   "problems": [
+    "「生産者の約8割が3.5ヘクタール以下(21,538件中16,987件)」は、引用が表の数字の羅列で、何の件数か(生産者か農場か)が引用に無い(場所の注記にしか無い)ため削除",
+    "「第105条」は場所の注記にしか無いため削除"
+   ]
+  },
+  "origin:エルサルバドル:harvestSeason": {
+   "verdict": "fix",
+   "finalContent": {
+    "text": "収穫期は10月〜3月(ICO資料、2015/16年時点)。"
+   },
+   "usedClaims": [
+    0
+   ],
+   "problems": [
+    "「翌」は引用(October - March)に無いため削除。なお引用は表の見出しと値の羅列で、位置の対応から収穫期と読んでいる点は要注意"
+   ]
+  },
+  "origin:エルサルバドル:history": {
+   "verdict": "fix",
+   "finalContent": {
+    "text": "ICO資料によると、エルサルバドル産コーヒーは1855年に初めて輸出された。同資料によると、1980年には国内の内紛により生産が落ち込んだ。カップ・オブ・エクセレンス(COE)のACE結果一覧に載るエルサルバドル大会のうち、最も古い年は2003年。"
+   },
+   "usedClaims": [
+    0,
+    1,
+    2
+   ],
+   "problems": [
+    "2文目に帰属が無かったため「同資料によると」を補った(帰属の維持のみ)",
+    "「内紛」は引用の「internal civil strife」の言い換えで、やや弱い訳。要注意"
+   ]
+  },
+  "origin:エルサルバドル:regions": {
+   "verdict": "fix",
+   "finalContent": {
+    "text": "ICOに提出された「El Salvador Coffee Profile」(2015/16年時点)の資料に、山系(Mountain range)として、アパネカ・イラマテペック(Apaneca-Ilamatepec)が記載されている。"
+   },
+   "usedClaims": [
+    0
+   ],
+   "problems": [
+    "「主要なコーヒー産地として挙げる」は引用に無い(スライド見出しは場所の注記にしか無い)。引用にある「Mountain range Apaneca-Ilamatepec」の記載に直した"
+   ]
+  },
+  "origin:エルサルバドル:sub:アパネカ・イラマテペック": {
+   "verdict": "fix",
+   "finalContent": {
+    "detail": "標高は500〜2,365 m(ICO資料、2015/16年時点)。"
+   },
+   "usedClaims": [
+    0
+   ],
+   "problems": [
+    "「栽培面積は66,550ha(全体の50.1%)で最大」は、引用が「66,550 50.1%」の数字だけで、栽培面積・ha・最大かどうかが引用に無いため削除",
+    "標高の対応は、引用内でApaneca-Ilamatepecの品種構成の直後に続く記載に基づく(位置による対応)"
+   ]
+  },
+  "origin:エルサルバドル:sub:エルバルサモ・ケサルテペック": {
+   "verdict": "drop",
+   "problems": [
+    "引用は「37,545 28.3%」の数字だけで、栽培面積・ha・全体比・エルバルサモ・ケサルテペックの数値であることが引用に無い(場所の注記にしか無い)"
+   ]
+  }
+ }
+}

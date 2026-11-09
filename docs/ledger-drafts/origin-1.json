@@ -1,0 +1,1485 @@
+{
+  "scope": "origin-1 (エチオピア・イエメン)",
+  "verifiedOn": "2026-11-08",
+  "sources": {
+    "usda-fas-gain-et2025-0014": {
+      "title": "Coffee Annual (Ethiopia, ET2025-0014, 2025-06-03)",
+      "org": "USDA Foreign Agricultural Service",
+      "url": "https://apps.fas.usda.gov/newgainapi/api/report/downloadreportbyfilename?filename=Coffee+Annual_Addis+Ababa_Ethiopia_ET2025-0014.pdf",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": "pypdf で本文抽出"
+    },
+    "usda-fas-gain-et2026-0005": {
+      "title": "Coffee Annual (Ethiopia, ET2026-0005, 2026-05-20)",
+      "org": "USDA Foreign Agricultural Service",
+      "url": "https://apps.fas.usda.gov/newgainapi/api/report/downloadreportbyfilename?filename=Coffee+Annual_Addis+Ababa_Ethiopia_ET2026-0005.pdf",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": "pypdf で本文抽出。www.fas.usda.gov 側のURLは403、apps.fas.usda.gov のAPI経由で取得"
+    },
+    "usda-fas-gain-et2019": {
+      "title": "Coffee Annual (Ethiopia, 2019-05-29)",
+      "org": "USDA Foreign Agricultural Service",
+      "url": "https://apps.fas.usda.gov/newgainapi/api/report/downloadreportbyfilename?filename=Coffee+Annual_Addis+Ababa_Ethiopia_5-29-2019.pdf",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": "pypdf で本文抽出"
+    },
+    "unesco-mab-kafa": {
+      "title": "Kafa - Man and the Biosphere Programme (MAB)",
+      "org": "UNESCO",
+      "url": "https://www.unesco.org/en/mab/kafa",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": "curlで生HTML取得"
+    },
+    "ico-kufa-wcc2010": {
+      "title": "Environmental Sustainability and Coffee Diversity in Africa (Taye Kufa, EIAR Jimma)",
+      "org": "International Coffee Organization(World Coffee Conference 2010 発表資料。発表者はEIAR所属研究者)",
+      "url": "http://dev.ico.org/event_pdfs/wcc2010/presentations/wcc2010-kufa-notes-e.pdf",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": "ICOのサイトが公開する会議資料。機関の公式見解ではなく研究者の発表である点に注意"
+    },
+    "ico-icc112-wcc-ethiopia": {
+      "title": "International Coffee Council 112th Session: World Coffee Conference Ethiopia",
+      "org": "International Coffee Organization",
+      "url": "http://dev.ico.org/documents/cy2013-14/icc-112-6e-wcc-ethiopia.pdf",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": ""
+    },
+    "ico-history-pt": {
+      "title": "A história do café (ICO 旧サイト・ポルトガル語版)",
+      "org": "International Coffee Organization",
+      "url": "http://dev.ico.org/pt/coffee_storyp.asp?section=Sobre_o_cafE9",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": "文字コードはlatin-1/cp1252。旧サイト(dev.ico.org)のページ"
+    },
+    "wcr-ethiopia": {
+      "title": "Ethiopia (country page)",
+      "org": "World Coffee Research",
+      "url": "https://worldcoffeeresearch.org/countries/ethiopia",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": ""
+    },
+    "wcr-geisha-panama": {
+      "title": "Geisha (Panama) - Arabica Varieties Catalog",
+      "org": "World Coffee Research",
+      "url": "https://varieties.worldcoffeeresearch.org/varieties/geisha-panama",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": ""
+    },
+    "wcr-history-of-arabica": {
+      "title": "History of Arabica / Main types of Arabica coffee",
+      "org": "World Coffee Research",
+      "url": "https://varieties.worldcoffeeresearch.org/arabica-2/history-of-arabica",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": ""
+    },
+    "eth-proc-1051-2017": {
+      "title": "Coffee Marketing and Quality Control Proclamation No. 1051/2017 (Federal Negarit Gazette No. 43, 2017-06-05)",
+      "org": "Federal Democratic Republic of Ethiopia(FAOLEX 掲載のPDF)",
+      "url": "https://faolex.fao.org/docs/pdf/eth183197.pdf",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": "英語訳部分のPDF本文抽出は文字間に崩れあり(例 \"a nd\")。FAOLEXの詳細HTMLページ(fao.org/faolex/...LEX-FAOC183197)は403"
+    },
+    "ecx-website": {
+      "title": "ECX 公式サイト www.ecx.com.et",
+      "org": "Ethiopia Commodity Exchange",
+      "url": "https://www.ecx.com.et/",
+      "kind": "primary",
+      "readMethod": "failed",
+      "accessed": "2026-11-08",
+      "note": "curl で接続できず(HTTPコード000)。http/https・www有無の複数形で試行。本文は読めていない"
+    },
+    "ecta-website": {
+      "title": "ECTA 公式サイト ecta.gov.et",
+      "org": "Ethiopian Coffee and Tea Authority",
+      "url": "https://ecta.gov.et/",
+      "kind": "primary",
+      "readMethod": "failed",
+      "accessed": "2026-11-08",
+      "note": "curl で接続できず(HTTPコード000)。本文は読めていない"
+    },
+    "fao-ifc-yemen-coffee-vc-2023": {
+      "title": "Coffee value chain in Yemen: export potential and investment opportunities (2023)",
+      "org": "FAO and IFC",
+      "url": "https://openknowledge.fao.org/server/api/core/bitstreams/1f8cb82b-a8ae-4229-bb4f-0a193b5c620f/content",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": "pypdf で本文抽出。MAI(北部)の未公開データ等を引用した報告書"
+    },
+    "fao-ocop-yemen-coffee-2025": {
+      "title": "Yemen - Coffee (Coffea spp.) (OCOP fact sheet, CD5957EN, 2025)",
+      "org": "FAO",
+      "url": "https://openknowledge.fao.org/server/api/core/bitstreams/2af6c9a4-4e0b-41a5-ae83-3a41945844ea/content",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": "pypdf で本文抽出"
+    },
+    "fao-nena-yemen-news-2026": {
+      "title": "Yemen's coffee and honey carry centuries of heritage to global markets (FAO news, 2026)",
+      "org": "FAO Regional Office for Near East and North Africa",
+      "url": "https://www.fao.org/neareast/news/details/yemen-coffee-and-honey-carry-centuries-of-heritage-to-global-markets/en",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": "FAO公式ニュース。FAO職員の発言の紹介記事で、規格文書ではない"
+    },
+    "montagnon-2021-yemen-genetics": {
+      "title": "Unveiling a unique genetic diversity of cultivated Coffea arabica L. in its main domestication center: Yemen (Genetic Resources and Crop Evolution, 2021)",
+      "org": "Montagnon, Mahyoub, Solano, Sheibani(査読論文。著者にQima Coffee関係者を含む)",
+      "url": "https://d-nb.info/1230750908/34",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": "学術論文(機関・政府の文書ではない)。一次資料として扱ってよいかはユーザー判断"
+    },
+    "qima-yemenia-page": {
+      "title": "YEMENIA",
+      "org": "Qima Coffee(企業の公式ページ)",
+      "url": "https://www.qimacoffee.com/yemenia",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": "当事者(企業)自身の発表。「Qimaが発表した」ことの根拠としては一次、内容の正否の根拠には第三者資料が要る"
+    },
+    "qima-yemen-page": {
+      "title": "YEMEN",
+      "org": "Qima Coffee(企業の公式ページ)",
+      "url": "https://www.qimacoffee.com/yemen",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": "企業の自己申告"
+    },
+    "ysmo-website": {
+      "title": "イエメン標準化・計量・品質管理機関(YSMO)公式サイト ysmo.gov.ye",
+      "org": "Yemen Standardization, Metrology and Quality Control Organization",
+      "url": "https://ysmo.gov.ye/",
+      "kind": "primary",
+      "readMethod": "failed",
+      "accessed": "2026-11-08",
+      "note": "curl で接続できず(HTTPコード000)。本文は読めていない"
+    },
+    "mdpi-agronomy-2022-yemen-vernacular": {
+      "title": "Vernacular Names and Genetics of Cultivated Coffee (Coffea arabica) in Yemen (Agronomy 12(8):1970, 2022)",
+      "org": "MDPI",
+      "url": "https://doi.org/10.3390/agronomy12081970",
+      "kind": "primary",
+      "readMethod": "failed",
+      "accessed": "2026-11-08",
+      "note": "Access Denied(403)で本文を取得できず"
+    }
+  },
+  "entries": {
+    "origin:エチオピア:tagline": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "エチオピアはコーヒー(アラビカ種)発祥の地",
+          "status": "verified",
+          "sourceIds": [
+            "wcr-ethiopia",
+            "unesco-mab-kafa"
+          ],
+          "quote": "It is the birthplace of Coffea arabica",
+          "location": "WCR Ethiopia 国ページ冒頭",
+          "note": "UNESCO MAB Kafa: \"Kafa is the birthplace of wild Arabica coffee\"。「コーヒー」全般ではなく「アラビカ種」の原産地としての根拠。ICO(旧サイト)は \"provavelmente\"(おそらく)と慎重"
+        },
+        {
+          "text": "華やかな香りとフルーティな酸味",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "香味の総括は主観的な記述で、公式の一次資料に該当する記述が見つからない"
+        }
+      ],
+      "suggestedText": "アラビカ種コーヒーの原産地。",
+      "note": ""
+    },
+    "origin:エチオピア:regions": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "イルガチェフェ(Yirgacheffe)はエチオピアの主要コーヒー産地名",
+          "status": "verified",
+          "sourceIds": [
+            "ico-kufa-wcc2010"
+          ],
+          "quote": "the famous coffee types known internationally by the names Limmu, Gimbi, Yirgacheffe, Harar",
+          "location": "Overview of coffee research and conservation in Ethiopia",
+          "note": ""
+        },
+        {
+          "text": "ハラー(Harar)は主要コーヒー産地名",
+          "status": "verified",
+          "sourceIds": [
+            "ico-kufa-wcc2010"
+          ],
+          "quote": "the famous coffee types known internationally by the names Limmu, Gimbi, Yirgacheffe, Harar",
+          "location": "同上",
+          "note": ""
+        },
+        {
+          "text": "シダモ(旧Sidamo地域)は主要産地",
+          "status": "verified",
+          "sourceIds": [
+            "ico-kufa-wcc2010"
+          ],
+          "quote": "south (former Sidamo)",
+          "location": "同上",
+          "note": "「former Sidamo」と旧名で記載"
+        },
+        {
+          "text": "ジマ(Jimma)は主要産地",
+          "status": "verified",
+          "sourceIds": [
+            "usda-fas-gain-et2026-0005"
+          ],
+          "quote": "coffee-producing areas in western and southwestern regions including Jimma, Limmu, Kaffa, Benchmaji, and Sheka",
+          "location": "FAS ET2026-0005 国内産地の記述",
+          "note": ""
+        },
+        {
+          "text": "ボンガ(Bonga)は主要産地として並ぶ",
+          "status": "unverified",
+          "sourceIds": [
+            "unesco-mab-kafa"
+          ],
+          "quote": "",
+          "location": "",
+          "note": "UNESCOはKafa生物圏保護区の南の境界の一部をBonga国有林優先地域(NFPA)が成すと述べるのみで、産地名としての記述ではない"
+        }
+      ],
+      "suggestedText": "イルガチェフェ、シダモ、ハラー、ジマ(ボンガはカファ地方の野生コーヒー林の地域として別掲)。",
+      "note": ""
+    },
+    "origin:エチオピア:terroir": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "主な生産地は南西部・南東部・南部・東部",
+          "status": "verified",
+          "sourceIds": [
+            "ico-kufa-wcc2010"
+          ],
+          "quote": "coffee is mainly produced in the southwest (former Kaffa, Illubabor and Wollega), southeast (Bale and Arsi), south (former Sidamo), south east (Harerge) parts of the country",
+          "location": "Overview of coffee research and conservation in Ethiopia",
+          "note": "アプリ本文の「大地溝帯沿いの南部・南西部高地が中心」のうち「大地溝帯沿い」は未確認。KUFAは野生アラビカが大地溝帯の東西の山地林に限られると述べる(生産地一般ではない)"
+        },
+        {
+          "text": "大地溝帯沿いの高地が生産の中心",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "上記の通り、野生アラビカの分布についての記述のみ"
+        },
+        {
+          "text": "生産地の標高は約1,500〜2,200m",
+          "status": "verified",
+          "sourceIds": [
+            "usda-fas-gain-et2025-0014"
+          ],
+          "quote": "elevations between 1,500 and over 2,200 meters",
+          "location": "FAS ET2025-0014 p.4",
+          "note": "原文は「1,500〜2,200m超(over 2,200)」。アプリの「約」は近似として許容できるが、上限は超える場合がある"
+        },
+        {
+          "text": "イルガチェフェは1,700〜2,200m",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式の一次資料(full-text)で確認できなかった"
+        },
+        {
+          "text": "シダモは1,550〜2,200m",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式の一次資料(full-text)で確認できなかった"
+        },
+        {
+          "text": "高地の火山性土壌はミネラル分に富む",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "FASは \"nutrient-rich soil\"(養分に富む土壌)とのみ書き、火山性・ミネラルとの記述はない"
+        },
+        {
+          "text": "冷涼な気候がチェリーの成熟を遅らせ風味の複雑性を高める",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式の一次資料(full-text)で確認できなかった"
+        },
+        {
+          "text": "ハラー東部は乾燥・冷涼でナチュラルに適する",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "英訳は \"dry and warm\"(乾燥・温暖)で、日本語の「冷涼」と食い違う(英訳の誤りか日本語の誤りかも未確認)"
+        }
+      ],
+      "suggestedText": "国内の生産地の標高は、約1,500mから2,200m超とされる(USDA FAS 2025年6月)。主な産地は南西部・南東部・南部・東部。",
+      "note": "英訳(originGuide1.js)terroir末尾は \"dry and warm\" で、日本語「乾燥・冷涼」と不一致。"
+    },
+    "origin:エチオピア:harvestSeason": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "イルガチェフェのウォッシュド上位ロットは1月から入荷",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式の一次資料(full-text)で確認できなかった"
+        },
+        {
+          "text": "最高格付け(Grade 1)のウォッシュドは2〜4月出荷が中心",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式の一次資料(full-text)で確認できなかった"
+        },
+        {
+          "text": "シダモは低標高地で10月に収穫が始まり高標高地では2月まで続く、輸出可能ロットは1〜6月",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式の一次資料(full-text)で確認できなかった"
+        },
+        {
+          "text": "ハラーは10月〜1月が収穫期、ナチュラルは1〜4月に輸出可能",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式の一次資料(full-text)で確認できなかった"
+        },
+        {
+          "text": "(追加の確認済み事実)国全体の主な収穫期は10〜12月",
+          "status": "verified",
+          "sourceIds": [
+            "usda-fas-gain-et2026-0005"
+          ],
+          "quote": "following the main harvest period of October to December",
+          "location": "FAS ET2026-0005 Export Seasonality",
+          "note": "アプリ本文にはない事実。suggestedText用"
+        }
+      ],
+      "suggestedText": "主な収穫期は国全体で10月〜12月(USDA FAS 2026年5月)。産地別の収穫・出荷時期は未確認。",
+      "note": "産地別の時期は、取引業者・輸入商の情報が出所とみられ、公式資料では確認できなかった。"
+    },
+    "origin:エチオピア:varietiesDetail": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "エチオピアに自生するコーヒー種はアラビカのみ(全量アラビカ)",
+          "status": "verified",
+          "sourceIds": [
+            "ico-kufa-wcc2010"
+          ],
+          "quote": "Coffea arabica is the only species occurring in Ethiopia",
+          "location": "Summary",
+          "note": "「自生する種」についての記述。生産量が全量アラビカとの数字根拠は未確認だが、種の面では一致"
+        },
+        {
+          "text": "在来種(landrace)は、エチオピアの森に由来し、カップ品質が高く収量が低い傾向",
+          "status": "verified",
+          "sourceIds": [
+            "wcr-history-of-arabica"
+          ],
+          "quote": "In coffee, most landrace varieties originate from the forests of Ethiopia",
+          "location": "WCR History of Arabica / Ethiopian Landrace",
+          "note": "WCRは \"landrace\"(在来品種)の語を使う。「heirloom」「数千種」は未確認"
+        },
+        {
+          "text": "品種を特定せず「heirloom」と総称し、数千種にのぼるとされる",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式の一次資料(full-text)で確認できなかった"
+        },
+        {
+          "text": "JARCが在来種から選抜した系統(74110・74112等、1979年放出)",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "二次資料のみ(小売店・2015年の論文表では 1978/79 とされ、年に揺れがある)。EIAR/JARCの公式放出記録を取得できていない"
+        },
+        {
+          "text": "WCRの主要7系統に単純対応しない",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "WCR History of Arabica には系統の区分がある(Typica/Bourbon等)が、「主要7系統」という数や、エチオピア在来との対応関係を書いた記述を確認できていない"
+        },
+        {
+          "text": "ゲイシャはエチオピアで採集された",
+          "status": "verified",
+          "sourceIds": [
+            "wcr-geisha-panama"
+          ],
+          "quote": "This variety was originally collected from coffee forests in Ethiopia in the 1930s.",
+          "location": "Geisha (Panama) 解説",
+          "note": "「南西部Gesha村」は未確認(下記)"
+        },
+        {
+          "text": "ゲイシャの原産地は南西部のGesha村",
+          "status": "incorrect",
+          "sourceIds": [
+            "wcr-geisha-panama"
+          ],
+          "quote": "The coffee was originally collected in Ethiopia in a region close to a mountain whose name is most commonly rendered in English as Gesha.",
+          "location": "Geisha (Panama) 解説",
+          "note": "原文は「Gesha と英語表記されることが多い山の近くの地域」。「村」「南西部」とは書いていない"
+        }
+      ],
+      "suggestedText": "エチオピアに自生するコーヒーはアラビカ種のみ。品種を特定しない在来種(landrace)が中心で、カップ品質が高く収量が低い傾向がある(WCR)。ゲイシャは1930年代にエチオピアの森で採集され、Gesha と表記される山の近くの地域が由来とされる。",
+      "note": ""
+    },
+    "origin:エチオピア:farmStructure": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "小農が国のコーヒー生産の約90〜95%を担う",
+          "status": "verified",
+          "sourceIds": [
+            "usda-fas-gain-et2026-0005",
+            "usda-fas-gain-et2019"
+          ],
+          "quote": "Smallholder farmers dominate Ethiopia's coffee sector, accounting for 90 percent of total national production.",
+          "location": "FAS ET2026-0005 冒頭 / 2019年版にも \"Small land holder farmers produce 95 percent of Ethiopia's coffee\"",
+          "note": "2026年版90%、2019年版95%。年によって値が異なるため「約90〜95%(2019〜2026年のFAS)」と年を添える"
+        },
+        {
+          "text": "小農の流通系統は、ウォッシングステーションに売る小農・協同組合・私営農園/第三者ウォッシングステーションの3系統",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "FASはウォッシングステーション・協同組合・商業農園に言及するが、「3系統」の区分を述べた記述は確認できていない"
+        },
+        {
+          "text": "ECXは2008年設立",
+          "status": "verified",
+          "sourceIds": [
+            "usda-fas-gain-et2019"
+          ],
+          "quote": "The Ethiopia Commodity Exchange (ECX) was established in 2008",
+          "location": "FAS 2019年版 Trade",
+          "note": ""
+        },
+        {
+          "text": "ECXが取引・地名ベースの分類を管理",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "FAS ET2025は \"standardizes coffee grading\" とするが「地名ベースの分類」の記述は確認できていない。FAS ET2026は「ECXへの依存が下がった(reduced reliance)」と述べる"
+        },
+        {
+          "text": "2ha以上の農家に直接輸出を開く政策改革",
+          "status": "verified",
+          "sourceIds": [
+            "usda-fas-gain-et2025-0014"
+          ],
+          "quote": "policy reform in 2019 allowed smallholder farmers who own at least two hectares of land to obtain export licenses and sell their coffee directly to international markets",
+          "location": "FAS ET2025-0014 Policy / Direct Export Policy",
+          "note": "2019年の改革。FAS ET2026-0005も \"farmers with at least two hectares of land to directly export\" と記載"
+        }
+      ],
+      "suggestedText": "小農が国のコーヒー生産の約90〜95%を担う(USDA FAS、2019年版95%、2026年版90%)。ECX(エチオピア商品取引所)は2008年に設立された。2019年の政策改革で、2ha以上の土地を持つ農家が輸出許可を得て直接輸出できるようになった。",
+      "note": ""
+    },
+    "origin:エチオピア:history": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "アラビカ種の野生原産地",
+          "status": "verified",
+          "sourceIds": [
+            "wcr-ethiopia",
+            "unesco-mab-kafa"
+          ],
+          "quote": "Kafa is the birthplace of wild Arabica coffee and contains close to 5,000 wild varieties of the plant in this biodiversity hotspot.",
+          "location": "UNESCO MAB Kafa General information",
+          "note": ""
+        },
+        {
+          "text": "カファ(Kafa/Kaffa)地方が原産地とされる",
+          "status": "verified",
+          "sourceIds": [
+            "unesco-mab-kafa"
+          ],
+          "quote": "The Kafa Zone contains more than 50 per cent of Ethiopia's remaining montane forests and is the centre of origin and genetic diversity of wild Coffea arabica.",
+          "location": "UNESCO MAB Kafa Detailed information",
+          "note": "ICO旧サイトも「Kaffa州でおそらく起源」(Começa no Chifre da África ... na Província de Kaffa, Etiópia ... onde o cafeeiro provavelmente teve origem)と慎重"
+        },
+        {
+          "text": "「現ボンガ周辺」",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "Bongaの位置づけ(カファ地方の中心都市か)を公式原文で確認できていない"
+        },
+        {
+          "text": "地名「Kaffa」が「Coffee」の語源という説",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式の一次資料(full-text)で確認できなかった"
+        },
+        {
+          "text": "9世紀の山羊飼いカルディの伝説",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "ICOの理事会資料(icc-112-6e)にカルディ伝説の紹介はあるが、「9世紀」の記述は確認できていない。ICO旧サイトは同種の話を「想像力豊かだがありそうにない(improváveis)」と述べる"
+        },
+        {
+          "text": "この逸話が文献に現れるのは1671年が最初",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "二次資料のみ"
+        },
+        {
+          "text": "栽培が本格化したのは1500年代以降",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式の一次資料で確認できなかった"
+        },
+        {
+          "text": "コーヒーは輸出収入の相当部分を占める",
+          "status": "verified",
+          "sourceIds": [
+            "usda-fas-gain-et2025-0014"
+          ],
+          "quote": "accounting for roughly one-third of the country's total export earnings",
+          "location": "FAS ET2025-0014 p.4",
+          "note": "WCRは24%(wcr-ethiopia)。時点によって異なる"
+        },
+        {
+          "text": "約1,500万人がコーヒーに直接・間接に関与",
+          "status": "verified",
+          "sourceIds": [
+            "usda-fas-gain-et2025-0014",
+            "ico-icc112-wcc-ethiopia"
+          ],
+          "quote": "The coffee sector supports approximately 15 million people including smallholder farmers and other market players",
+          "location": "FAS ET2025-0014 p.4 / ICO理事会資料にも \"More than 15 million people grow the crop for a living\"",
+          "note": ""
+        },
+        {
+          "text": "人口の約25%",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "「約25%」の根拠なし。1,500万人は確認できたが、エチオピアの人口(1億人超)と合わず、約25%という比率は誤りの疑いが強い。人口の公式統計は未取得"
+        },
+        {
+          "text": "国内消費率も生産国の中で最高水準",
+          "status": "verified",
+          "sourceIds": [
+            "usda-fas-gain-et2025-0014"
+          ],
+          "quote": "Ethiopia has one of the highest domestic coffee consumption rates among coffee-producing countries, with nearly half of its annual production consumed locally.",
+          "location": "FAS ET2025-0014 CONSUMPTION",
+          "note": "原文は「生産国の中で最も高い水準の一つ」。「世界最高水準」より弱い"
+        },
+        {
+          "text": "コーヒーセレモニーなど文化に根付く",
+          "status": "verified",
+          "sourceIds": [
+            "usda-fas-gain-et2025-0014"
+          ],
+          "quote": "coffee plays a central role in daily life and traditional ceremonies",
+          "location": "FAS ET2025-0014 CONSUMPTION",
+          "note": ""
+        }
+      ],
+      "suggestedText": "アラビカ種の野生原産地で、UNESCOはカファ地方を野生アラビカの原産・遺伝的多様性の中心と説明している。コーヒーは輸出収入の約3分の1(USDA FAS)を占め、約1,500万人が関わる。国内消費も生産国の中で最高水準の一つで、コーヒーセレモニーなど日常と儀礼に根付いている。",
+      "note": ""
+    },
+    "origin:エチオピア:sub:イルガチェフェ": {
+      "status": "unverified",
+      "claims": [
+        {
+          "text": "標高1,700〜2,200m",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式の一次資料(full-text)で確認できなかった"
+        },
+        {
+          "text": "ウォッシュド中心",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式の一次資料(full-text)で確認できなかった"
+        },
+        {
+          "text": "ジャスミン様の花香、柑橘、絹のようなクリーンな口当たり",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式の一次資料(full-text)で確認できなかった"
+        }
+      ],
+      "suggestedText": "",
+      "note": ""
+    },
+    "origin:エチオピア:sub:シダモ(シダマ)": {
+      "status": "unverified",
+      "claims": [
+        {
+          "text": "標高1,550〜2,200m",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式の一次資料(full-text)で確認できなかった"
+        },
+        {
+          "text": "降雨量豊富で肥沃な火山性土壌",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式の一次資料(full-text)で確認できなかった"
+        },
+        {
+          "text": "花・柑橘・スパイス、豊かなボディ",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式の一次資料(full-text)で確認できなかった"
+        },
+        {
+          "text": "約6割がウォッシュド",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "ICO(Kufa 2010)は国全体でナチュラル70%・ウォッシュド30%と述べるが、シダモ単独の数字は確認できていない"
+        }
+      ],
+      "suggestedText": "",
+      "note": ""
+    },
+    "origin:エチオピア:sub:ハラー": {
+      "status": "unverified",
+      "claims": [
+        {
+          "text": "東部高地、乾燥・冷涼でナチュラルに適する",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "英訳は \"dry, cool\" 。terroir側の英訳は \"dry and warm\" で、英訳内でも不一致"
+        },
+        {
+          "text": "ブルーベリー・ダークチョコ様のウィニーな風味、重いボディ",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式の一次資料(full-text)で確認できなかった"
+        },
+        {
+          "text": "エスプレッソブレンドにも好まれる",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式の一次資料(full-text)で確認できなかった"
+        }
+      ],
+      "suggestedText": "",
+      "note": ""
+    },
+    "origin:エチオピア:sub:ジマ(ジンマ)": {
+      "status": "unverified",
+      "claims": [
+        {
+          "text": "標高1,400〜2,100m",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式の一次資料(full-text)で確認できなかった"
+        },
+        {
+          "text": "ナチュラル中心",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式の一次資料(full-text)で確認できなかった"
+        },
+        {
+          "text": "トロピカルフルーツ・蜂蜜様・ワイニーな香味、フルボディ",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式の一次資料(full-text)で確認できなかった"
+        }
+      ],
+      "suggestedText": "",
+      "note": ""
+    },
+    "origin:エチオピア:sub:ボンガ": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "カファ(Kafa)地方の野生アラビカの起源地帯",
+          "status": "verified",
+          "sourceIds": [
+            "unesco-mab-kafa"
+          ],
+          "quote": "is the centre of origin and genetic diversity of wild Coffea arabica",
+          "location": "UNESCO MAB Kafa",
+          "note": "UNESCOの名称は「Kafa Biosphere Reserve」。アプリの「ボンガ」はカファ地方の中心都市の名で、保護区名と一致しない"
+        },
+        {
+          "text": "2010年にUNESCO生物圏保護区に登録(Kafa Biosphere Reserve)",
+          "status": "verified",
+          "sourceIds": [
+            "unesco-mab-kafa"
+          ],
+          "quote": "Year of Nomination: 2010",
+          "location": "UNESCO MAB Kafa Key data",
+          "note": ""
+        },
+        {
+          "text": "近く5,000種の野生コーヒーの品種が自生",
+          "status": "verified",
+          "sourceIds": [
+            "unesco-mab-kafa"
+          ],
+          "quote": "contains close to 5,000 wild varieties of the plant",
+          "location": "UNESCO MAB Kafa",
+          "note": "原文は \"wild varieties\"(野生の品種)。「在来種(ヘアルーム)」とは書いていない"
+        },
+        {
+          "text": "ボンガがカファ地方の中心地",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式の一次資料(full-text)で確認できなかった"
+        }
+      ],
+      "suggestedText": "カファ生物圏保護区(Kafa Biosphere Reserve、2010年)は、野生アラビカ種の原産地・遺伝的多様性の中心とされ、近く5,000の野生の品種があるとUNESCOは述べている。",
+      "note": ""
+    },
+    "origin:エチオピア:gradeSystem": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "輸出用はGrade 1〜5の格付け",
+          "status": "verified",
+          "sourceIds": [
+            "usda-fas-gain-et2026-0005"
+          ],
+          "quote": "Export-grade coffee (Grades 1–5) cannot be diverted to the domestic market",
+          "location": "FAS ET2026-0005 Policy",
+          "note": "「G1〜G5」の等級が輸出向けにあることの根拠"
+        },
+        {
+          "text": "欠点数(300gあたり)による格付け",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式の規格(ES等)の本文を取得できていない。二次資料(輸出業者のサイト)のみ"
+        },
+        {
+          "text": "G1は欠点0〜3個",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "二次資料のみ。Grade 2〜5の数字は資料によって食い違う"
+        },
+        {
+          "text": "ECXが取引システム内で運用する",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "FAS ET2025は \"standardizes coffee grading\"(ECX)と述べる。一方、2017年の布告1051は、品質検査・格付けセンター(coffee quality inspection and grading center)が格付けを検証し、ECTAが監督すると規定。運用主体の説明が資料で一致しておらず、判断できない。布告の原文: \"The coffee quality inspection and grading center shall verify that the coffee arrived is properly sealed a nd grade through an appropriate examination based on a representative sample.\"(第4条2項)"
+        },
+        {
+          "text": "学術研究で格付けの均質性にばらつきがあるとの指摘",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式の一次資料(full-text)で確認できなかった"
+        }
+      ],
+      "suggestedText": "輸出向けのコーヒーはGrade 1〜5に格付けされる(USDA FAS 2026年5月)。",
+      "note": ""
+    },
+    "origin:エチオピア:officialBody": {
+      "status": "verified",
+      "claims": [
+        {
+          "text": "ECXは2008年設立",
+          "status": "verified",
+          "sourceIds": [
+            "usda-fas-gain-et2019"
+          ],
+          "quote": "The Ethiopia Commodity Exchange (ECX) was established in 2008",
+          "location": "FAS 2019年版 Trade",
+          "note": ""
+        },
+        {
+          "text": "ECXはコーヒーの取引と格付けの標準化に関わる",
+          "status": "verified",
+          "sourceIds": [
+            "usda-fas-gain-et2025-0014"
+          ],
+          "quote": "Facilitates coffee trading and price discovery. Also, it standardizes coffee grading, provides market access for smallholders, and enables electronic trading.",
+          "location": "FAS ET2025-0014 Key Institutions",
+          "note": "「格付け認証を運用」とは書いていない。FAS ET2026は \"reduced reliance on the Ethiopian Commodity Exchange (ECX) as the exclusive trading channel\" とも述べる"
+        },
+        {
+          "text": "(追加の確認済み事実)コーヒーの品質・マーケティング・輸出基準の規制・監督はECTA",
+          "status": "verified",
+          "sourceIds": [
+            "usda-fas-gain-et2025-0014"
+          ],
+          "quote": "Regulates, promotes, and oversees coffee quality, marketing, and export standards.",
+          "location": "FAS ET2025-0014 Key Institutions",
+          "note": "アプリ本文にはない。公式機関として最重要なECTAが欠けている"
+        }
+      ],
+      "suggestedText": "",
+      "note": "ECX・ECTAの公式サイト(ecx.com.et、ecta.gov.et)は接続できず、原文未確認(failed)。FAS(米国政府)の記述に依拠。"
+    },
+    "origin:イエメン:tagline": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "イエメンは(アラビカ)コーヒーの歴史的な発祥地の一つ",
+          "status": "verified",
+          "sourceIds": [
+            "fao-ocop-yemen-coffee-2025"
+          ],
+          "quote": "Yemen is one of the historical birthplaces of Arabica coffee",
+          "location": "FAO OCOP fact sheet General overview",
+          "note": "原文は「アラビカコーヒーの歴史的発祥地の一つ」。「コーヒー文化」とは書いていない"
+        },
+        {
+          "text": "ナチュラル精製がイエメンコーヒーを特徴づけるワイニーさを与える",
+          "status": "verified",
+          "sourceIds": [
+            "fao-ifc-yemen-coffee-vc-2023"
+          ],
+          "quote": "the natural coffee processing contributes a dynamic winey characteristic that distinguishes Yemeni coffee",
+          "location": "FAO/IFC 2023 Executive summary",
+          "note": ""
+        },
+        {
+          "text": "複雑な風味",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "「複雑」の記述は確認できていない"
+        }
+      ],
+      "suggestedText": "アラビカコーヒーの歴史的な発祥地の一つ。ナチュラル精製によるワイニーな特徴がある(FAO)。",
+      "note": ""
+    },
+    "origin:イエメン:regions": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "バニーマタル(Bani Matar)はコーヒー栽培地区の一つ",
+          "status": "verified",
+          "sourceIds": [
+            "fao-ifc-yemen-coffee-vc-2023"
+          ],
+          "quote": "Maqbanah Bani Matar Dawran Aness",
+          "location": "FAO/IFC 2023 Figure 4 地図の地区名ラベル",
+          "note": "地図(Coffee Cultivated Area)の地区名ラベルに載るのみ。特産性などの説明ではない"
+        },
+        {
+          "text": "主産地はマタリ地区(バニーマタル)のみ",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "FAOは主に15県(governorates)の山地・谷で栽培と述べ、多数の地区が地図に載る。一地区に限る根拠なし"
+        }
+      ],
+      "suggestedText": "コーヒーは主に15の県の山地や谷で栽培される(FAO)。バニーマタルはその栽培地区の一つ。",
+      "note": ""
+    },
+    "origin:イエメン:terroir": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "西部高地のテラスで栽培",
+          "status": "verified",
+          "sourceIds": [
+            "fao-ocop-yemen-coffee-2025"
+          ],
+          "quote": "Coffee is mostly cultivated on terraces in the western highlands using traditional methods.",
+          "location": "FAO OCOP fact sheet Status of coffee sector",
+          "note": "「南西部」「手作り」の記述はない"
+        },
+        {
+          "text": "山地と谷のテラスで栽培(15県)",
+          "status": "verified",
+          "sourceIds": [
+            "fao-ifc-yemen-coffee-vc-2023"
+          ],
+          "quote": "Coffee is planted mainly in 15 of Yemen's governorates, on mountains and in valleys, and is generally cultivated on terraces",
+          "location": "FAO/IFC 2023 2.2 In focus: the state of coffee",
+          "note": ""
+        },
+        {
+          "text": "ハラズ・バニーマタル・ジャバル・サブル等の高地",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "Bani Matar以外の地名は確認できていない"
+        },
+        {
+          "text": "標高約1,500〜2,500m(ハラズ山系は2,200m超)",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "FAOニュース(2026)は「約700〜3,000m」と記載: \"at elevations ranging from approximately 700 to 3 000 metres above sea level\"(nw)。アプリの範囲より広い"
+        },
+        {
+          "text": "乾燥した気候に適応した",
+          "status": "verified",
+          "sourceIds": [
+            "fao-ifc-yemen-coffee-vc-2023"
+          ],
+          "quote": "all Coffea arabica L. varieties evolved to adapt to Yemen's arid climate",
+          "location": "FAO/IFC 2023 2.2",
+          "note": "「世界で最も乾燥した産地の一つ」「短い雨季と長い乾季」「大きな日較差」はFAOに記載なし(未確認)"
+        },
+        {
+          "text": "世界で最も乾燥したコーヒー産地の一つ、短い雨季と長い乾季、大きな日較差",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式の一次資料(full-text)で確認できなかった"
+        },
+        {
+          "text": "灌漑管理が不十分で、農家は雨季の降雨に頼り、乾季用の貯水池やダムを利用できない",
+          "status": "verified",
+          "sourceIds": [
+            "fao-ifc-yemen-coffee-vc-2023"
+          ],
+          "quote": "Farmers depend on the rainy seasons to water coffee trees but – without irrigation management – cannot capture and store rainwater safely, and have no access to reservoirs or dams for the dry months.",
+          "location": "FAO/IFC 2023 Chapter 6",
+          "note": "アプリは「灌漑インフラは存在せず、伝統的スペート灌漑(石造ダム・貯水槽・テラス群)が使われる」とするが、FAOは「貯水池やダムを利用できない」と述べ、スペート灌漑の記述はない(下記の主張と食い違う可能性)"
+        },
+        {
+          "text": "伝統的なスペート灌漑(洪水を水源化する石造ダム・貯水槽・テラス群、現地でサイルやアグラフと呼ばれる)が使われる",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "FAOは「貯水池やダムを利用できない」とする。スペート灌漑・サイル・アグラフの用語は取得した公式資料に出てこない"
+        }
+      ],
+      "suggestedText": "西部高地などの山地・谷のテラスで栽培される(FAO)。乾燥した気候に適応しており、農家は雨季の降雨に頼る。標高はFAOの担当者によれば約700〜3,000m。",
+      "note": ""
+    },
+    "origin:イエメン:harvestSeason": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "主収穫は10月〜12月(10月〜2月とする資料も)",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "FAO/IFC 2023は収穫期の図(Figure 8)を載せるが、図は画像で月が本文として読めない"
+        },
+        {
+          "text": "(追加の確認済み事実)収穫は全15県で主期と副期の2期",
+          "status": "verified",
+          "sourceIds": [
+            "fao-ifc-yemen-coffee-vc-2023"
+          ],
+          "quote": "Coffee harvesting has two seasons in all the 15 governorates: a main season and a secondary season",
+          "location": "FAO/IFC 2023 3.1",
+          "note": "アプリ本文にはない"
+        },
+        {
+          "text": "大半がナチュラル(乾式)精製",
+          "status": "verified",
+          "sourceIds": [
+            "fao-ocop-yemen-coffee-2025"
+          ],
+          "quote": "Most coffee is naturally/dry processed, with cherry pulp dried on the bean to develop flavor",
+          "location": "FAO OCOP fact sheet Storage and processing",
+          "note": "原文は「大半(most)」。「ほぼ全量」とは書いていない"
+        },
+        {
+          "text": "乾燥は屋根の上などで行う",
+          "status": "verified",
+          "sourceIds": [
+            "fao-ocop-yemen-coffee-2025"
+          ],
+          "quote": "Drying done on rooftops or in primary drying centers",
+          "location": "FAO OCOP fact sheet",
+          "note": "「地面で」「2〜4週間」は未確認"
+        },
+        {
+          "text": "2〜4週間天日乾燥",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式の一次資料(full-text)で確認できなかった"
+        }
+      ],
+      "suggestedText": "コーヒーの収穫は主期と副期の2回(FAO/IFC 2023)。大半がナチュラル(乾式)精製で、屋根の上や乾燥センターで乾燥する(FAO)。",
+      "note": ""
+    },
+    "origin:イエメン:varietiesDetail": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "Udaini、Dawairi、Tufahi等は農家が付ける呼び名(樹形による呼び分け)",
+          "status": "verified",
+          "sourceIds": [
+            "montagnon-2021-yemen-genetics"
+          ],
+          "quote": "taller coffees would be called Udaini, Jufaini and Jadi while more compact trees would be called Dawairi and Tufahi",
+          "location": "Montagnon et al. 2021 Discussion",
+          "note": "呼び名は樹形(背が高い・コンパクト)による"
+        },
+        {
+          "text": "これらの地方名で遺伝的に独自の系統が識別される",
+          "status": "incorrect",
+          "sourceIds": [
+            "montagnon-2021-yemen-genetics"
+          ],
+          "quote": "There was no correlation between the genetic clusters and the name of coffee cultivars given by Yemeni coffee farmers.",
+          "location": "Montagnon et al. 2021 Discussion",
+          "note": "原文は、遺伝クラスターと農家の付ける品種名には相関がないと述べる。アプリの「地方名で識別」は誤り"
+        },
+        {
+          "text": "在来「ヘアルーム」",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式の一次資料(full-text)で確認できなかった"
+        },
+        {
+          "text": "2020年8月14日、Qimaがイエメンにだけ見つかる新しい母集団「Yemenia」の発見を発表した",
+          "status": "verified",
+          "sourceIds": [
+            "qima-yemenia-page"
+          ],
+          "quote": "On August 14th 2020, Qima Coffee announced the discovery of an entirely new mother population that was previously unknown to the coffee world.",
+          "location": "Qima YEMENIA ページ",
+          "note": "企業自身の発表。「Yemeniaは母集団(mother population)」。論文中の名称は \"New-Yemen\" クラスター"
+        },
+        {
+          "text": "このグループはイエメンだけに見つかる",
+          "status": "verified",
+          "sourceIds": [
+            "montagnon-2021-yemen-genetics"
+          ],
+          "quote": "Finally, we found one cluster which was made only of Yemeni samples and no other worldwide cultivars.",
+          "location": "Montagnon et al. 2021 Results",
+          "note": "論文の名称は \"New-Yemen\"。\"Yemenia\" はQimaの名称"
+        },
+        {
+          "text": "2021年の論文は137検体を解析した",
+          "status": "verified",
+          "sourceIds": [
+            "montagnon-2021-yemen-genetics"
+          ],
+          "quote": "137 samples of C. arabica were studied.",
+          "location": "Montagnon et al. 2021 Material and methods",
+          "note": "論文は2020年7月受付、2021年1月受理(Genetic Resources and Crop Evolution)"
+        }
+      ],
+      "suggestedText": "イエメンの農家は樹形などで「Udaini」「Dawairi」「Tufahi」などの呼び名を使うが、これらの名は遺伝的なまとまりとは対応しない(2021年の論文)。2020年8月14日、Qima Coffeeは、イエメンだけに見つかる新しい母集団「Yemenia」(論文では New-Yemen クラスター)の発見を発表した。論文は137検体を解析している。",
+      "note": ""
+    },
+    "origin:イエメン:farmStructure": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "借地が多く、農家の多くは小規模(平均0.291ヘクタール)",
+          "status": "verified",
+          "sourceIds": [
+            "fao-ifc-yemen-coffee-vc-2023"
+          ],
+          "quote": "Most coffee lands are not owned by farmers, but are rented from owners who lease out the land.",
+          "location": "FAO/IFC 2023 3.1",
+          "note": "平均0.291ha(394本): \"who on average own 0.291 hectares (394 coffee trees)\""
+        },
+        {
+          "text": "断片化した数万規模の小規模農園に生産が分散",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "「数万規模」の根拠なし"
+        },
+        {
+          "text": "生産・品質の不均一が残る",
+          "status": "verified",
+          "sourceIds": [
+            "fao-ifc-yemen-coffee-vc-2023"
+          ],
+          "quote": "this does not guarantee quality throughout the value chain and inconsistencies in production persist",
+          "location": "FAO/IFC 2023 Chapter 5",
+          "note": "「ロット間の品質のばらつきが大きい」を直接述べたものではなく、品質管理が行き届かず生産の不均一が残るとの趣旨"
+        },
+        {
+          "text": "約15万人の小農がコーヒーに依存",
+          "status": "incorrect",
+          "sourceIds": [
+            "fao-ocop-yemen-coffee-2025"
+          ],
+          "quote": "Coffee is grown by around 120 000 smallholder farmers",
+          "location": "FAO OCOP fact sheet Production",
+          "note": "FAOは約12万人。15万人は第三者のブログ等にあるが公式根拠なし"
+        },
+        {
+          "text": "労働力の75%を女性が占める",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "2013年の価値連鎖報告が「農業全般の労働の約75%を女性」とする記述があるとされるが、コーヒーに限らない。公式原文は未取得"
+        },
+        {
+          "text": "国土の耕地の2.4%(という記述)",
+          "status": "incorrect",
+          "sourceIds": [
+            "fao-ifc-yemen-coffee-vc-2023"
+          ],
+          "quote": "34 980 hectares distributed over 15 governorates – constituting around 2.4 percent of all arable lands",
+          "location": "FAO/IFC 2023 2.2",
+          "note": "FAOの2.4%は「コーヒー栽培面積が耕地全体に占める割合」。アプリの「国土の耕地はわずか2.4%」は取り違え"
+        },
+        {
+          "text": "カート(qat)がコーヒーの跡地へ拡大している",
+          "status": "verified",
+          "sourceIds": [
+            "fao-ifc-yemen-coffee-vc-2023"
+          ],
+          "quote": "with qat in the lead and expanding ever more onto land formerly planted with coffee",
+          "location": "FAO/IFC 2023 Chapter 6",
+          "note": "アプリの「灌漑用水の多くがカート栽培に回される」とは別の事実。灌漑用水の記述は未確認"
+        },
+        {
+          "text": "灌漑用水の多くが高収益作物カート栽培に回されている",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式の一次資料(full-text)で確認できなかった"
+        },
+        {
+          "text": "Qimaが調達する小農は5,000人超・55村",
+          "status": "incorrect",
+          "sourceIds": [
+            "qima-yemen-page"
+          ],
+          "quote": "Qima works with over 2,600 farmers across 53 communities throughout Yemen's coffee lands.",
+          "location": "Qima YEMEN ページ(確認日 2026-11-08)",
+          "note": "Qima自身の現在の記載は2,600人超・53コミュニティ。古い数字か別資料かは不明"
+        },
+        {
+          "text": "Qimaはイエメン唯一の完全統合型スペシャルティ事業者で最大の輸出者",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "Qimaの自社ページ(qima-yemen-page)に \"Yemen's only fully integrated specialty coffee operator and the country's largest specialty exporter\" とあるが自己申告のみで、第三者の根拠なし。アプリは「スペシャルティ」を落として「最大の輸出者」と書いている"
+        }
+      ],
+      "suggestedText": "借地が多く、農家の多くは小規模で平均0.291ヘクタール(FAO/IFC 2023)。小農は約12万人(FAO 2025)。コーヒーの栽培面積は耕地全体の約2.4%で、カートがコーヒーの跡地へ広がっている(FAO/IFC 2023)。",
+      "note": ""
+    },
+    "origin:イエメン:history": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "15世紀にはイエメンでコーヒーが栽培されていた",
+          "status": "verified",
+          "sourceIds": [
+            "ico-history-pt"
+          ],
+          "quote": "E não há dúvidas de que o café era cultivado no Iêmen no século XV e provavelmente muito antes.",
+          "location": "ICO 旧サイト「A história do café」",
+          "note": "「スーフィー修道士が夜通しの礼拝のために飲んだ」は未確認"
+        },
+        {
+          "text": "スーフィー修道士が夜通しの礼拝の集中力維持のために飲用した",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式の一次資料(full-text)で確認できなかった"
+        },
+        {
+          "text": "コーヒーの種子はエチオピア南西部の森からイエメンへ運ばれて栽培されたと歴史家は考える",
+          "status": "verified",
+          "sourceIds": [
+            "wcr-history-of-arabica"
+          ],
+          "quote": "coffee seeds were first taken from the coffee forests of Southwestern Ethiopia to Yemen, where it was cultivated as a crop",
+          "location": "WCR History of Arabica",
+          "note": "アプリ本文の「紅海を渡ってもたらされた」に対応するが、文面は異なる"
+        },
+        {
+          "text": "1544年、イエメンのイマームがカートよりコーヒーを尊いものと宣言した",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "ICO旧サイトに「当初イエメンの当局は(コーヒーを)飲むようカートの代わりに奨励した(A princípio, as autoridades do Iêmen incentivavam as pessoas a tomar em vez de consumir Kat)」の記述があるが、1544年・イマームの記述はない"
+        },
+        {
+          "text": "モカ(Al Mokha)港はコーヒー輸出の歴史的な主要拠点で、「モカ」の名はこの港に結びつく",
+          "status": "verified",
+          "sourceIds": [
+            "fao-ifc-yemen-coffee-vc-2023",
+            "ico-history-pt"
+          ],
+          "quote": "mocha coffee associated with Al Mokha port, historically a major hub for coffee exports out of Yemen",
+          "location": "FAO/IFC 2023 Executive summary",
+          "note": "ICO旧サイトも \"Moca também era o principal porto da rota marítima para Meca\" と述べる。「16世紀までに唯一の国際輸出拠点」は未確認"
+        },
+        {
+          "text": "16世紀までにモカが唯一の国際輸出拠点になった",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式の一次資料(full-text)で確認できなかった"
+        },
+        {
+          "text": "1700年代初頭には国の収入のほぼ全てがコーヒー輸出だった",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式の一次資料(full-text)で確認できなかった"
+        },
+        {
+          "text": "2015年に始まった紛争はすでに劣化していたインフラをさらに損なった",
+          "status": "verified",
+          "sourceIds": [
+            "fao-ifc-yemen-coffee-vc-2023"
+          ],
+          "quote": "The conflict that began in 2015 further damaged the country's already decaying infrastructure.",
+          "location": "FAO/IFC 2023 2.2",
+          "note": "アプリの「経済が崩壊」は原文にない言い回し"
+        },
+        {
+          "text": "2015年の内戦勃発後に公的な等級認証機関が事実上機能を失った",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "FAO/IFC 2023は、SMAには成文化された規格・分類が(もともと)ない、輸出豆に政府の品質検査がない、と述べる(officialBody参照)。2015年を境に機能を失ったとは書いていない"
+        }
+      ],
+      "suggestedText": "イエメンでは15世紀にはコーヒーが栽培されていた(ICO)。コーヒーの種子はエチオピア南西部の森からイエメンに運ばれたと歴史家は考える(WCR)。モカ港は歴史的なコーヒー輸出の主要拠点で、「モカ」の名はこの港に由来する(FAO)。2015年に始まった紛争は、すでに劣化していたインフラをさらに損なった(FAO/IFC 2023)。",
+      "note": ""
+    },
+    "origin:イエメン:sub:ハラズ": {
+      "status": "unverified",
+      "claims": [
+        {
+          "text": "国内最高標高帯(最高2,300m超)",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式の一次資料(full-text)で確認できなかった"
+        },
+        {
+          "text": "深いベリーの甘さ・ワイン様の複雑さ・シロップ質のボディ",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式の一次資料(full-text)で確認できなかった"
+        },
+        {
+          "text": "Qima Coffee等の直接貿易でイエメン最大の知名度を持つ産地",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式の一次資料(full-text)で確認できなかった"
+        }
+      ],
+      "suggestedText": "",
+      "note": ""
+    },
+    "origin:イエメン:sub:バニーマタル(マタリ)": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "バニーマタルはコーヒー栽培地区の一つ",
+          "status": "verified",
+          "sourceIds": [
+            "fao-ifc-yemen-coffee-vc-2023"
+          ],
+          "quote": "Maqbanah Bani Matar Dawran Aness",
+          "location": "FAO/IFC 2023 Figure 4 地図の地区名ラベル",
+          "note": "地図ラベルのみ"
+        },
+        {
+          "text": "ハラズに隣接し同等の高標高",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式の一次資料(full-text)で確認できなかった"
+        },
+        {
+          "text": "フルボディ、ダークチョコ・タマリンド・野性的なスパイス",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式の一次資料(full-text)で確認できなかった"
+        },
+        {
+          "text": "特定銘柄「モカ・マタリ」の産地",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式の一次資料(full-text)で確認できなかった"
+        }
+      ],
+      "suggestedText": "バニーマタルはイエメンのコーヒー栽培地区の一つ(FAO/IFC 2023)。",
+      "note": ""
+    },
+    "origin:イエメン:sub:サナニ(サナア西方)": {
+      "status": "unverified",
+      "claims": [
+        {
+          "text": "やや低標高でバランス型・果実味、ワイン様酸味は控えめ",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "公式の一次資料(full-text)で確認できなかった"
+        }
+      ],
+      "suggestedText": "",
+      "note": ""
+    },
+    "origin:イエメン:officialBody": {
+      "status": "partial",
+      "claims": [
+        {
+          "text": "標準計量局(Standards and Metrology Authority, SMA)がコーヒー品質規格の設定責任を負う",
+          "status": "verified",
+          "sourceIds": [
+            "fao-ifc-yemen-coffee-vc-2023"
+          ],
+          "quote": "The Standards and Metrology Authority (SMA) is the government organization responsible for setting the standards for coffee quality and the description of Yemeni varieties and classification of beans",
+          "location": "FAO/IFC 2023 Executive summary",
+          "note": "FAOの英名は \"Standards and Metrology Authority\"。英訳(originGuide2.js)は \"Standardization, Metrology and Quality Control Organization (SMA)\" で、組織名の英語表記が異なる(YSMO公式サイトは取得できず、正式名は未確認)"
+        },
+        {
+          "text": "SMAには成文化された規格・分類がない",
+          "status": "verified",
+          "sourceIds": [
+            "fao-ifc-yemen-coffee-vc-2023"
+          ],
+          "quote": "but it does not have any written standards nor classification for Yemeni coffee beans and its varieties.",
+          "location": "FAO/IFC 2023 Executive summary",
+          "note": ""
+        },
+        {
+          "text": "民間のSCA Yemenがスペシャルティコーヒーの規格設定と第三者の品質検証を担う",
+          "status": "conflict",
+          "sourceIds": [
+            "fao-ifc-yemen-coffee-vc-2023"
+          ],
+          "quote": "(SCA) of Yemen setting standards for specialty coffee in addition to providing",
+          "location": "FAO/IFC 2023 Executive summary",
+          "note": "同じ報告書の別の箇所は \"Sana'a-based Mocha Valley is the only entity – public or private – that provides third-party quality control and assurance.\"(第5章)と述べ、第三者の品質管理を担う主体の記述が同一資料内で食い違う。ユーザー判断が必要"
+        },
+        {
+          "text": "Qima Coffeeが品質検証を代替する",
+          "status": "unverified",
+          "sourceIds": [],
+          "quote": "",
+          "location": "",
+          "note": "FAOはQimaによる検証に言及しておらず、確認できなかった"
+        }
+      ],
+      "suggestedText": "標準計量局(Standards and Metrology Authority, SMA)がコーヒー品質規格の設定責任を負うが、成文化された規格・分類は持たない(FAO/IFC 2023)。民間側の品質検証の担い手についての記述は、同報告書内で食い違う。",
+      "note": "YSMO公式サイトは接続できず(failed)。"
+    }
+  }
+}

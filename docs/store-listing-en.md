@@ -56,7 +56,7 @@ STAY UPDATED
 • Compare beans side by side
 
 LEARN
-• Trivia: flavor wheel, glossary, designated brands, coffee varieties, brewing guide, events, and competitions
+• Trivia: glossary, designated brands, coffee varieties, brewing guide, events, and competitions (restore "flavor wheel" here once its sources have been re-verified)
 • An origin map with guides to major coffee-producing countries
 
 PRIVATE BY DESIGN
@@ -67,7 +67,7 @@ PRIVATE BY DESIGN
 
 GOOD TO KNOW
 • The app interface is available in English and Japanese. It follows your device language, and you can switch it in Settings.
-• Shop and product data (names, tasting notes, farm information, addresses) is in Japanese only. The Trivia and Origin guides are available in both English and Japanese.
+• Shop and product data (names, tasting notes, farm information, addresses) is in Japanese only. The Trivia and Origin guides are available in both English and Japanese, and show only information we could verify against official or primary sources, with the source name, link and check date.
 • All shops are located in Japan.
 ```
 
