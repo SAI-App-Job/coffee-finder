@@ -1,0 +1,188 @@
+{
+  "scope": "grades-elsalvador-2026-11-10",
+  "override": true,
+  "verifiedOn": "2026-11-10",
+  "sources": {
+    "osartec-rts-67-08-01-18-wto": {
+      "title": "RTS 67.08.01:18 Café. Café verde (café oro). Requisitos de calidad",
+      "org": "OSARTEC(Organismo Salvadoreño de Reglamentación Técnica)",
+      "url": "https://members.wto.org/crnattachments/2018/SPS/SLV/18_6014_00_s.pdf",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-10",
+      "note": "WTO SPS通報(2018年)に添付された文書をcurl+pypdfで全11ページ通読。通報時点の文書であり、官報で公布された最終版と同一かは未確認(osartec.gob.svは522エラーで取得失敗)。 2026-11-10: 再取得して、本文を読み直した(WTO通報の添付文書。最終版との同一性は未確認のまま)。"
+    },
+    "asamblea-decreto-835-2023": {
+      "title": "Decreto N°. 835 - Ley del Instituto Salvadoreño del Café (2023-08-29, D.O. N° 167, Tomo 440, 2023-09-08)",
+      "org": "Asamblea Legislativa de la República de El Salvador",
+      "url": "https://www.asamblea.gob.sv/sites/default/files/documents/decretos/4B8D61A9-F597-4643-BCD9-ABB2D99A4F4E.pdf",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": "curlでPDFを取得しpypdfで全17ページを抽出して通読。FAOLEX(faolex.fao.org/docs/pdf/els235114.pdf)の写しと本文は同一。"
+    }
+  },
+  "entries": {
+    "origin:エルサルバドル:gradeSystem": {
+      "status": "verified",
+      "claims": [
+        {
+          "text": "OSARTEC(エルサルバドル技術規制機構)のRTS 67.08.01:18が生豆の品質要件を定める",
+          "status": "verified",
+          "sourceIds": [
+            "osartec-rts-67-08-01-18-wto"
+          ],
+          "quote": "CAFÉ. CAFÉ VERDE (CAFÉ ORO). REQUISITOS DE CALIDAD … Editada por el Organismo Salvadoreño de Reglamentación Técnica",
+          "location": "表紙"
+        },
+        {
+          "text": "分類は標高・精選方法・欠点数の3基準",
+          "status": "verified",
+          "sourceIds": [
+            "osartec-rts-67-08-01-18-wto"
+          ],
+          "quote": "La clasificación y designación se basan en tres criterios: altitud, método de beneficiado y número de imperfecciones.",
+          "location": "5.1"
+        },
+        {
+          "text": "標高区分はSHG(Strictly High Grown、1,201m以上)、HG(High Grown、801〜1,200m)、CS(Central Standard、800m以下)の3段階",
+          "status": "verified",
+          "sourceIds": [
+            "osartec-rts-67-08-01-18-wto"
+          ],
+          "quote": "a) café producido hasta 800 m.s.n.m.; Central Estándar o CS; b) café producido de 801 a 1 200 m.s.n.m.; Media Altura o HG; c) café producido a más de 1 201 m.s.n.m.; Estricta Altura o SHG.",
+          "location": "5.1.1"
+        },
+        {
+          "text": "運用はかつてCSC(エルサルバドル・コーヒー審議会)が担っていた",
+          "status": "verified",
+          "sourceIds": [
+            "osartec-rts-67-08-01-18-wto"
+          ],
+          "quote": "La vigilancia y verificación del cumplimiento de este Reglamento Técnico Salvadoreño le corresponde al Consejo Salvadoreño del Café",
+          "location": "9.1"
+        },
+        {
+          "text": "2023年にISCへ引き継がれた",
+          "status": "verified",
+          "sourceIds": [
+            "asamblea-decreto-835-2023"
+          ],
+          "quote": "Art. 32.- El nuevo Instituto Salvadoreño del Café sucede por ministerio de ley a partir de la vigencia de esta Ley en las funciones, atribuciones, competencias, responsabilidades, derechos y obligaciones que correspondían al Consejo Salvadoreño del Café",
+          "location": "令第835号 第32条"
+        },
+        {
+          "text": "分類は、標高・精選方法(湿式・乾式)・欠点の数の3基準。欠点は、300gの試料で数える",
+          "status": "verified",
+          "sourceIds": [
+            "osartec-rts-67-08-01-18-wto"
+          ],
+          "quote": "La clasificación y designación se basan en tres criterios: altitud, método de beneficiado y número de imperfecciones. || Este criterio recurre al conteo de defectos que hay en una muestra de 300 g",
+          "location": "RTS 67.08.01:18(WTO通報の添付文書) 5.1"
+        },
+        {
+          "text": "洗浄式の上質(fino lavado): 欠点26個以下、水分10.5〜12.5%、色は緑、香りとカップはクリーン、豆の大きさは契約による(最低50%がふるい15番に残り、14番の下は最大5%。100gの試料)",
+          "status": "verified",
+          "sourceIds": [
+            "osartec-rts-67-08-01-18-wto"
+          ],
+          "quote": "a) debe presentar como máximo 26 imperfecciones (ver Anexo, Tabla 1); b) contenido de humedad del café verde (café oro): 10,5 % a 12,5 %; c) color: verde; d) olor y taza: limpia; e) tamaño del grano: de acuerdo al tipo de café establecido en el contrato entre el comprador y el vendedor, conforme a la Tabla 1 (ver Anexo) y como mínimo 50 % sobre tamiz # 15 y máximo 5 % bajo tamiz # 14 en base a muestra de 100 g.",
+          "location": "RTS 67.08.01:18(WTO通報の添付文書) 5.2.1.1"
+        },
+        {
+          "text": "Café especial(スペシャルティ)は、SCAAの、アラビカ生豆の分類に従う",
+          "status": "verified",
+          "sourceIds": [
+            "osartec-rts-67-08-01-18-wto"
+          ],
+          "quote": "Debe cumplir con lo establecido en el sistema de clasificación de la Asociación Americana de Cafés Especiales (SCAA por sus siglas en inglés) para el café Arábica Verde || en su versión vigente",
+          "location": "RTS 67.08.01:18(WTO通報の添付文書) 5.2.1.1.1",
+          "note": "PDFの文字抽出で「café o ro」と語の途中に空白が入るため、引用を二つに分けた。"
+        },
+        {
+          "text": "アメリカ調製(Preparación Americana)は、ブラジル/ニューヨーク方式で欠点12個以下(タイプ3)、水分10.5〜12.5%",
+          "status": "verified",
+          "sourceIds": [
+            "osartec-rts-67-08-01-18-wto"
+          ],
+          "quote": "El café exportable que sea identificado como Preparación Americana no debe contener más de 12 defectos de acuerdo al método Brasil / Nueva York (Tipo 3); con rango de humedad 10,5 % a 12,5 %.",
+          "location": "RTS 67.08.01:18(WTO通報の添付文書) 5.2.1.1.3"
+        },
+        {
+          "text": "ヨーロッパ調製(Preparación Europea)は、本文では、欠点8個以下(ブラジル/ニューヨーク方式のタイプ2-25)、水分10.5〜12.5%",
+          "status": "verified",
+          "sourceIds": [
+            "osartec-rts-67-08-01-18-wto"
+          ],
+          "quote": "Preparación Europea no debe contener más de 8 || defectos de acuerdo al método Brasil / Nueva York (Tipo 2 -25); con rango de humedad 10,5 % a 12,5 %.",
+          "location": "RTS 67.08.01:18(WTO通報の添付文書) 5.2.1.1.4",
+          "note": "本文は8個、附表1の見出しは「EP 6 IMPERFECCIONES」と書き、文書の中で食い違う。"
+        },
+        {
+          "text": "附表1(300g、ふるい15番に50%以上、14番の下は5%以下)は、欠点の個数を「EP 6」「AP 12」と示す",
+          "status": "verified",
+          "sourceIds": [
+            "osartec-rts-67-08-01-18-wto"
+          ],
+          "quote": "Tabla 1. Clasificación café verde (café oro) según método Brasil / New York 300 gramos 50 % sobre tamiz 15 – 5 % bajo tamiz 14 Imperfecciones (EP 6 IMPERFECCIONES) – (AP 12 IMPERFECCIONES)",
+          "location": "RTS 67.08.01:18(WTO通報の添付文書) Anexo Tabla 1"
+        },
+        {
+          "text": "欠点の換算(附表1): 全黒豆1個・全酸っぱい豆1個・チェリー1個=1、部分的な黒豆・酸っぱい豆は2〜5個=1、パーチメント2〜3個=1、浮き豆5個=1、割れ・つぶれ5個=1、殻2〜3個=1、貝殻豆5個=1",
+          "status": "verified",
+          "sourceIds": [
+            "osartec-rts-67-08-01-18-wto"
+          ],
+          "quote": "Total negro 1 Total agrio 1 Cereza 1 Parcial negro 2 a 5 Parcial agrio 2 a 5 Pergamino 2 a 3 Flotes 5 Cortados, quebrados, aplastados 5 Cascaras 2 o 3 Conchas 5",
+          "location": "RTS 67.08.01:18(WTO通報の添付文書) Anexo Tabla 1"
+        },
+        {
+          "text": "洗浄式の劣る豆(inferior lavado): 欠点26個超、水分10.5〜12.5%。通常、見本で取引する",
+          "status": "verified",
+          "sourceIds": [
+            "osartec-rts-67-08-01-18-wto"
+          ],
+          "quote": "Café con más de 26 imperfecciones, con rango de humedad 10,5 % a 12,5 % y que generalmente se comercializa bajo muestra.",
+          "location": "RTS 67.08.01:18(WTO通報の添付文書) 5.2.1.2"
+        },
+        {
+          "text": "乾式(sin lavar)の上質は、洗浄式のスペシャルティ・ゴルメ・アメリカ調製の要件に従う",
+          "status": "verified",
+          "sourceIds": [
+            "osartec-rts-67-08-01-18-wto"
+          ],
+          "quote": "Café verde (café oro) sin lavar: debe cumplir con lo establecido en los numerales 5.2.1.1.1., 5.2.1.1.2. y 5.2.1.1.3. de este RTS.",
+          "location": "RTS 67.08.01:18(WTO通報の添付文書) 5.2.2.1.1"
+        },
+        {
+          "text": "乾式の、熟した、または、並の乾燥チェリー(cereza seca de maduro o corriente): 欠点23個以下、水分10.5〜12.5%",
+          "status": "verified",
+          "sourceIds": [
+            "osartec-rts-67-08-01-18-wto"
+          ],
+          "quote": "Café cereza seca de maduro o corriente sin lavar Debe presentar un máximo de 23 imperfecciones y rango de humedad 10,5 % a 12,5 %.",
+          "location": "RTS 67.08.01:18(WTO通報の添付文書) 5.2.2.1.2"
+        },
+        {
+          "text": "乾式の劣る豆: PV(pepena verde)は欠点26個超、resaca sin lavarは欠点86個超(いずれも通常、見本で取引)",
+          "status": "verified",
+          "sourceIds": [
+            "osartec-rts-67-08-01-18-wto"
+          ],
+          "quote": "5.2.2.2.1. Café verde (café oro) PV (pepena verde) Café con más de 26 imperfecciones || 5.2.2.2.2. Café verde (café oro) resaca sin lavar Café con más de 86 imperfecciones",
+          "location": "RTS 67.08.01:18(WTO通報の添付文書) 5.2.2.2"
+        },
+        {
+          "text": "規格の文書は、「官報での公布の6か月後に施行される」と書く(WTO通報時点の文書。官報で公布された最終版との同一性は未確認)",
+          "status": "verified",
+          "sourceIds": [
+            "osartec-rts-67-08-01-18-wto"
+          ],
+          "quote": "El presente Reglamento Técnico Salvadoreño entrara en vigencia seis (6) meses después de su publicación en el Diario Oficial.",
+          "location": "RTS 67.08.01:18(WTO通報の添付文書) 10 Vigencia"
+        }
+      ],
+      "note": "エルサルバドルの等級の詳細(2026-11-10)。"
+    }
+  }
+}

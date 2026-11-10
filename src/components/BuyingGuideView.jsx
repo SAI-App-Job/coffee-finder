@@ -15,7 +15,7 @@ export function OriginSection({ icon: Icon, label, children }) {
         <Icon size={12} className="text-[var(--accent-label)]" strokeWidth={1.75} />
         <span className="text-[11px] tracking-wide text-[var(--accent-label)] uppercase">{label}</span>
       </div>
-      <p className="text-[13px] leading-relaxed text-[var(--c-text-2)]">{children}</p>
+      <p className="text-[13px] leading-relaxed text-[var(--c-text-2)] whitespace-pre-line">{children}</p>
     </div>
   );
 }

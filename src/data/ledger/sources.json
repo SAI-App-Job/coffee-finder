@@ -482,7 +482,7 @@
   "url": "https://dab.hawaii.gov/wp-content/uploads/2012/12/AR-143.pdf",
   "kind": "primary",
   "readMethod": "full-text",
-  "accessed": "2026-11-09",
+  "accessed": "2026-11-10",
   "note": "2001年版。2014年改正前の旧規則。DABの2026年資料が規則本体として今もこのURLを脚注に挙げているが、内容は旧版(Natural Prime等を含まない)。curl + pypdf(20ページ全文)"
  },
  "dab-har-summary-2020": {
@@ -491,7 +491,7 @@
   "url": "https://dab.hawaii.gov/qad/files/2020/07/2020-Coffee-HAR-143-Summary-Defects-Allowance-back-to-15-eff-July1.pdf",
   "kind": "primary",
   "readMethod": "full-text",
-  "accessed": "2026-11-09",
+  "accessed": "2026-11-10",
   "note": "curl + pypdf。規則の要約表(規則本文ではない)"
  },
  "dab-hi-har143-summary-2020": {
@@ -658,8 +658,8 @@
   "url": "https://federaciondecafeteros.org/wp-content/uploads/2025/11/Resolucion-2-2016_cafe_verde.pdf",
   "kind": "primary",
   "readMethod": "full-text",
-  "accessed": "2026-11-08",
-  "note": "取得元はInternet Archive(Wayback Machine)に保存された公式URLの複製(この環境から公式サイトへ直接接続できなかったため)。 画像のみのPDF(スキャン)で、pypdfでは本文が取れない。全ページを画像として読み、quoteは目視で書き写した(機械照合はできない)。"
+  "accessed": "2026-11-10",
+  "note": "取得元はInternet Archive(Wayback Machine)に保存された公式URLの複製(この環境から公式サイトへ直接接続できなかったため)。 画像のみのPDF(スキャン)で、pypdfでは本文が取れない。全ページを画像として読み、quoteは目視で書き写した(機械照合はできない)。 2026-11-10: Wayback保存版のPDFはスキャン画像で文字情報がない。ページ画像を直接見て確認した。"
  },
  "fnc-res-05-2018": {
   "title": "Resolución 05 de 2018 (27 de junio) - Lineamientos de la política de prevención y control para garantizar la calidad del café para exportación a los mercados internacionales",
@@ -770,7 +770,7 @@
   "url": "http://www.icafe.cr/wp-content/uploads/disposiciones/documentos/D4.6/D4.6-3/D4.6-3-3-2-P-3.1.pdf",
   "kind": "primary",
   "readMethod": "full-text",
-  "accessed": "2026-11-09",
+  "accessed": "2026-11-10",
   "note": "ICAFEの内部手順書。日付の記載なし。"
  },
  "icafe-regiones": {
@@ -1006,17 +1006,8 @@
   "url": "https://www.inacal.gob.pe/repositorioaps/data/1/1/1/jer/guiasdeimplementacion/files/GIP%20101%202026.pdf",
   "kind": "primary",
   "readMethod": "full-text",
-  "accessed": "2026-11-09",
+  "accessed": "2026-11-10",
   "note": "curl + pypdfで本文を抽出。規格(NTP)本体ではなくINACALの「実施ガイド」(2026-02-13)。NTP本体は有料のため取得していない。"
- },
- "inacal-gip-107-2021": {
-  "title": "GIP 107:2021 Guía de Implementación de la NTP 209.311:2019 CAFÉS ESPECIALES. Requisitos (1ª Edición)",
-  "org": "INACAL (Instituto Nacional de Calidad)",
-  "url": "https://cdn.www.gob.pe/uploads/document/file/2223207/GIP%20107.pdf.pdf",
-  "kind": "primary",
-  "readMethod": "full-text",
-  "accessed": "2026-11-09",
-  "note": "curl + pypdfで本文を抽出。規格(NTP)本体ではなくINACALの「実施ガイド」。2021年版のため、後続版の有無は未確認。"
  },
  "inifap-oro-azteca": {
   "title": "INIFAP entrega semillas de café Oro Azteca resistente a la roya / Café Oro Azteca, variedad resistente a enfermedades(2ページ)",
@@ -1225,7 +1216,7 @@
   "url": "https://sistemasweb.agricultura.gov.br/sislegis/action/detalhaAto.do?method=recuperarTextoAtoTematicaPortal&codigoTematica=1229303",
   "kind": "primary",
   "readMethod": "full-text",
-  "accessed": "2026-11-09",
+  "accessed": "2026-11-10",
   "note": "2003年の原文。その後の改正・廃止は未確認。"
  },
  "meteo-rwanda-climatology": {
@@ -1281,6 +1272,15 @@
   "accessed": "2026-11-09",
   "note": "地理的表示の登録申請書(産地団体の公式文書)。記述の適用範囲はガヨ高地のみ。pypdfで全文抽出"
  },
+ "mx-nmx-f-597-scfi-2016": {
+  "title": "NMX-F-597-SCFI-2016 Café verde - Especificaciones, preparaciones y evaluación sensorial (cancela a la NMX-F-551-SCFI-2008)",
+  "org": "Secretaría de Economía(メキシコ経済省、PLATIICA)。委員会事務局: 農業・農村開発省(SADER)",
+  "url": "https://platiica.economia.gob.mx/normalizacion/wp-content/uploads/sites/2/PDF_Normas_Publicas/nmx-f-597-scfi-2016.pdf",
+  "kind": "primary",
+  "readMethod": "full-text",
+  "accessed": "2026-11-10",
+  "note": "経済省の規格目録(PLATIICA)の「PDF de la Norma」。2016-09-29にDOFで公表、2016-11-28施行。目録の状態は「VIGENTE」(2026-11-10確認)。pypdfで全13ページの本文を抽出。"
+ },
  "naeb-about-rwanda-coffee": {
   "title": "About Rwanda coffee",
   "org": "National Agricultural Export Development Board (NAEB)",
@@ -1321,8 +1321,8 @@
   "url": "https://members.wto.org/crnattachments/2018/SPS/SLV/18_6014_00_s.pdf",
   "kind": "primary",
   "readMethod": "full-text",
-  "accessed": "2026-11-08",
-  "note": "WTO SPS通報(2018年)に添付された文書をcurl+pypdfで全11ページ通読。通報時点の文書であり、官報で公布された最終版と同一かは未確認(osartec.gob.svは522エラーで取得失敗)。"
+  "accessed": "2026-11-10",
+  "note": "WTO SPS通報(2018年)に添付された文書をcurl+pypdfで全11ページ通読。通報時点の文書であり、官報で公布された最終版と同一かは未確認(osartec.gob.svは522エラーで取得失敗)。 2026-11-10: 再取得して、本文を読み直した(WTO通報の添付文書。最終版との同一性は未確認のまま)。"
  },
  "pr-geada-negra-1975": {
   "title": "Há 50 anos geada negra marcava fim de um ciclo, mas provocou diversificação da economia do Paraná",

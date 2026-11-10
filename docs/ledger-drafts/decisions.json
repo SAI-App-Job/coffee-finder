@@ -1,68 +1,29 @@
 {
- "decidedOn": "2026-11-10",
- "decidedBy": "ユーザー",
- "withdraw": [
-  "fact:サパティスタ運動が今のメキシココーヒーの姿を作った"
- ],
- "edits": {
-  "origin:コスタリカ:gradeSystem": {
-   "reason": "決定4: 末尾の「基準値は確認できていない」(検証状況の開示)を画面から削除",
-   "content": {
-    "text": "ICAFEは、ロス・サントス地域のコーヒーの約95%がSHB(Strictly Hard Bean)と推定している。ICAFEは、標高は種子の大きさと硬さに影響し、カップ品質の一部(特に酸味)にも影響すると述べている。"
-   },
-   "contentEn": {
-    "text": "ICAFE estimates that about 95% of the coffee in the Los Santos region is SHB (Strictly Hard Bean). ICAFE states that altitude affects the size and hardness of the seed and also influences some components of cup quality (especially acidity)."
-   },
-   "addClaims": []
-  },
-  "origin:ハワイ:gradeSystem": {
-   "reason": "決定2: 食い違う2つの資料を、出典を明示して併記する",
-   "content": {
-    "text": "ハワイ州農業・バイオセキュリティ局の統計資料(2026年1月)は、生豆(green coffee)の等級基準として Extra Fancy、Fancy、Hawaii No.1、Select、Prime、Hawaii No.3、Natural Prime、Mixed Natural Prime、Off Grade を挙げている。ハワイ州行政規則第4-143章の要約(2020年7月1日施行)では、Hawaii No.3より品質が低いOff Gradeに「Hawaii」の語を併用することが禁じられている。2001年版のハワイ州行政規則(第4-143-7条)は、州外へ卸売量で出荷する生豆は、Hawaii No.3の要件を満たさなければならないと定めている。2026年1月の同局の資料は、Primeより品質が低いコーヒーは、Hamakua、Kau、Kauai、Kona、Maui、Molokai、Oahuなどの地域名を製品ラベルに使うことが禁じられている、と記している。"
-   },
-   "contentEn": {
-    "text": "A statistics document of the Hawaii Department of Agriculture and Biosecurity (January 2026) lists Extra Fancy, Fancy, Hawaii No.1, Select, Prime, Hawaii No.3, Natural Prime, Mixed Natural Prime, and Off Grade as the grade standards for green coffee. In the summary of Hawaii Administrative Rules Chapter 4-143 (effective July 1, 2020), use of the term \"Hawaii\" in conjunction with Off Grade, which is lower in quality than Hawaii No.3, is prohibited. The 2001 edition of the Hawaii Administrative Rules (section 4-143-7) provides that green coffee shipped in wholesale quantities outside the State shall meet the requirements of Hawaii No.3 green coffee. The Department's January 2026 document states that coffee with a quality lower than Prime is prohibited from using geographic terms such as Hamakua, Kau, Kauai, Kona, Maui, Molokai, or Oahu on its product label."
-   },
-   "addClaims": [
-    {
-     "text": "2001年版の行政規則§4-143-7(Minimum export requirement)は、州外へ卸売量で出荷する生豆は、Hawaii No.3の要件を満たさなければならないと定める",
-     "status": "verified",
-     "sourceIds": [
-      "dab-har-4-143-2001"
-     ],
-     "quote": "Green coffee destined for shipment in wholesale quantities to points outside the State shall meet the requirements of Hawaii No. 3 green coffee",
-     "location": "2001年版 §4-143-7(Minimum export requirement)"
-    },
-    {
-     "text": "2026年1月のDAB資料は、Primeより品質が低いコーヒーは地域名(Hamakua、Kau、Kauai、Kona、Maui、Molokai、Oahu)を製品ラベルに使うことが禁じられていると記す",
-     "status": "verified",
-     "sourceIds": [
-      "dab-grading-stats-2026"
-     ],
-     "quote": "Coffee with a quality lower than Prime is prohibited from using geographic terms such as “Hamakua”, “Kau”, “Kauai, “Kona”, “Maui, “Molokai”, or “Oahu” on its product label.",
-     "location": "p.1 第1段落"
+  "decidedOn": "2026-11-10",
+  "decidedBy": "ユーザー",
+  "withdraw": [
+    "fact:サパティスタ運動が今のメキシココーヒーの姿を作った"
+  ],
+  "edits": {
+    "origin:コロンビア:officialBody": {
+      "reason": "決定1: 決議2/2016と05/2018の役割を、それぞれの出典を明示して併記する",
+      "content": {
+        "text": "FNC(全国コーヒー生産者連盟)は1927年に設立された。全国コーヒー生産者委員会(Comité Nacional de Cafeteros)の決議第2号(2016年4月25日)は、輸出用の生豆(café verde en almendra)の品質規則を統一し更新する決議である。FNCの2025年12月の通達も、生豆の品質管理は同委員会の決議2号(2016年)に従って行うとしている。同委員会の決議第5号(2018年)は、輸出向けコーヒーの品質を保証するための予防・管理の方針の指針を定める決議である。"
+      },
+      "contentEn": {
+        "text": "The FNC (Federación Nacional de Cafeteros, the National Federation of Coffee Growers) was founded in 1927. Resolution No. 2 (April 25, 2016) of the National Committee of Coffee Growers (Comité Nacional de Cafeteros) is a resolution that unifies and updates the quality rules for export green coffee (café verde en almendra). An FNC circular of December 2025 also states that quality control of green coffee is to be carried out in accordance with Resolution No. 2 (2016) of that committee. The same committee's Resolution No. 5 (2018) sets out the guidelines of a prevention and control policy to guarantee the quality of coffee for export."
+      },
+      "addClaims": [
+        {
+          "text": "Comité Nacionalの決議第5号(2018年)は、輸出向けコーヒーの品質を保証するための予防・管理の方針の指針を定める決議である",
+          "status": "verified",
+          "sourceIds": [
+            "fnc-res-05-2018"
+          ],
+          "quote": "POR LA CUAL SE ESTABLECEN LOS LINEAMIENTOS DE LA POLÍTICA DE PREVENCIÓN Y CONTROL PARA GARANTIZAR LA CALIDAD DEL CAFÉ PARA EXPORTACIÓN A LOS MERCADOS INTERNACIONALES",
+          "location": "決議05号 表題(Resolución 05 de 2018)"
+        }
+      ]
     }
-   ]
-  },
-  "origin:コロンビア:officialBody": {
-   "reason": "決定1: 決議2/2016と05/2018の役割を、それぞれの出典を明示して併記する",
-   "content": {
-    "text": "FNC(全国コーヒー生産者連盟)は1927年に設立された。全国コーヒー生産者委員会(Comité Nacional de Cafeteros)の決議第2号(2016年4月25日)は、輸出用の生豆(café verde en almendra)の品質規則を統一し更新する決議である。FNCの2025年12月の通達も、生豆の品質管理は同委員会の決議2号(2016年)に従って行うとしている。同委員会の決議第5号(2018年)は、輸出向けコーヒーの品質を保証するための予防・管理の方針の指針を定める決議である。"
-   },
-   "contentEn": {
-    "text": "The FNC (Federación Nacional de Cafeteros, the National Federation of Coffee Growers) was founded in 1927. Resolution No. 2 (April 25, 2016) of the National Committee of Coffee Growers (Comité Nacional de Cafeteros) is a resolution that unifies and updates the quality rules for export green coffee (café verde en almendra). An FNC circular of December 2025 also states that quality control of green coffee is to be carried out in accordance with Resolution No. 2 (2016) of that committee. The same committee's Resolution No. 5 (2018) sets out the guidelines of a prevention and control policy to guarantee the quality of coffee for export."
-   },
-   "addClaims": [
-    {
-     "text": "Comité Nacionalの決議第5号(2018年)は、輸出向けコーヒーの品質を保証するための予防・管理の方針の指針を定める決議である",
-     "status": "verified",
-     "sourceIds": [
-      "fnc-res-05-2018"
-     ],
-     "quote": "POR LA CUAL SE ESTABLECEN LOS LINEAMIENTOS DE LA POLÍTICA DE PREVENCIÓN Y CONTROL PARA GARANTIZAR LA CALIDAD DEL CAFÉ PARA EXPORTACIÓN A LOS MERCADOS INTERNACIONALES",
-     "location": "決議05号 表題(Resolución 05 de 2018)"
-    }
-   ]
   }
- }
 }

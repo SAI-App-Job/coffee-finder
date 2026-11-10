@@ -1,0 +1,323 @@
+{
+  "scope": "grades-mexico-2026-11-10",
+  "override": true,
+  "verifiedOn": "2026-11-10",
+  "sources": {
+    "mx-nmx-f-597-scfi-2016": {
+      "title": "NMX-F-597-SCFI-2016 Café verde - Especificaciones, preparaciones y evaluación sensorial (cancela a la NMX-F-551-SCFI-2008)",
+      "org": "Secretaría de Economía(メキシコ経済省、PLATIICA)。委員会事務局: 農業・農村開発省(SADER)",
+      "url": "https://platiica.economia.gob.mx/normalizacion/wp-content/uploads/sites/2/PDF_Normas_Publicas/nmx-f-597-scfi-2016.pdf",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-10",
+      "note": "経済省の規格目録(PLATIICA)の「PDF de la Norma」。2016-09-29にDOFで公表、2016-11-28施行。目録の状態は「VIGENTE」(2026-11-10確認)。pypdfで全13ページの本文を抽出。"
+    }
+  },
+  "entries": {
+    "origin:メキシコ:gradeSystem": {
+      "status": "verified",
+      "claims": [
+        {
+          "text": "メキシコの規格NMX-F-597-SCFI-2016は、コーヒー生豆の仕様・調製・官能評価を定める(NMX-F-551-SCFI-2008を廃止)",
+          "status": "verified",
+          "sourceIds": [
+            "mx-nmx-f-597-scfi-2016"
+          ],
+          "quote": "CAFÉ VERDE – ESPECIFICACIONES, PREPARACIONES Y EVALUACIÓN SENSORIAL (CANCELA A LA NMX-F-551-SCFI-2008)",
+          "location": "NMX-F-597-SCFI-2016 表紙"
+        },
+        {
+          "text": "洗浄式のアラビカ(arábica lavado)は、果肉を除き、乾燥の前にミューシレージを完全に取り除いた豆。標高による4区分は、この洗浄式のアラビカの区分",
+          "status": "verified",
+          "sourceIds": [
+            "mx-nmx-f-597-scfi-2016"
+          ],
+          "quote": "arábica lavado (Coffea arabica) granos de Coffea arabica sometidos a un proceso de despulpado para eliminar la cáscara y la pulpa, a los que adicionalmente se les elimina de manera completa el mucilago previo al secado.",
+          "location": "NMX-F-597-SCFI-2016 4.1"
+        },
+        {
+          "text": "規格は、2016年9月29日付(メキシコシティ)",
+          "status": "verified",
+          "sourceIds": [
+            "mx-nmx-f-597-scfi-2016"
+          ],
+          "quote": "Ciudad de México, a 29 de septiembre de 2016.",
+          "location": "NMX-F-597-SCFI-2016 末尾"
+        },
+        {
+          "text": "この規格は、国内で生産または取引される生豆に適用される",
+          "status": "verified",
+          "sourceIds": [
+            "mx-nmx-f-597-scfi-2016"
+          ],
+          "quote": "aplica al grano de café verde que se produce o comercializa en el territorio nacional",
+          "location": "NMX-F-597-SCFI-2016 1 Objetivo y campo de aplicación"
+        },
+        {
+          "text": "Estrictamente Altura: 1,200m超で栽培。5つのカップが健全で、汚染や欠陥の香りがなく、官能の特徴が、はっきり際立つ",
+          "status": "verified",
+          "sourceIds": [
+            "mx-nmx-f-597-scfi-2016"
+          ],
+          "quote": "estrictamente altura café cultivado a más de 1 200 msnm. En su degustación debe presentar cinco tazas sanas libres de contaminaciones y aromas defectuosos, con características sensoriales altamente pronunciadas.",
+          "location": "NMX-F-597-SCFI-2016 4.1.1"
+        },
+        {
+          "text": "Altura: 900〜1,200mで栽培。官能の特徴が、ほどよく際立つ",
+          "status": "verified",
+          "sourceIds": [
+            "mx-nmx-f-597-scfi-2016"
+          ],
+          "quote": "altura café cultivado entre 900 msnm y 1 200 msnm. En su degustación debe presentar cinco tazas sanas libres de contaminaciones y aromas defectuosos, con características sensoriales moderadamente pronunciadas.",
+          "location": "NMX-F-597-SCFI-2016 4.1.2"
+        },
+        {
+          "text": "Extra Prima Lavado: 800〜900mで栽培。官能の特徴が、感じ取れる",
+          "status": "verified",
+          "sourceIds": [
+            "mx-nmx-f-597-scfi-2016"
+          ],
+          "quote": "extra prima lavado café cultivado entre 800 msnm y 900 msnm. En su degustación debe presentar cinco tazas sanas libres de contaminaciones y aromas defectuosos, con características sensoriales perceptibles.",
+          "location": "NMX-F-597-SCFI-2016 4.1.3"
+        },
+        {
+          "text": "Prima Lavado: 800m未満で栽培。官能の特徴が、ほどよく感じ取れる",
+          "status": "verified",
+          "sourceIds": [
+            "mx-nmx-f-597-scfi-2016"
+          ],
+          "quote": "prima lavado café cultivado a menos de 800 msnm. En su degustación debe presentar cinco tazas sanas libres de contaminaciones y aromas defectuosos, con características sensoriales moderadamente perceptibles.",
+          "location": "NMX-F-597-SCFI-2016 4.1.4"
+        },
+        {
+          "text": "規格は、官能の特徴は、標高の範囲だけで決まるものではなく、遺伝・産地・環境・農法・収穫後の処理・精製が、直接影響すると述べる",
+          "status": "verified",
+          "sourceIds": [
+            "mx-nmx-f-597-scfi-2016"
+          ],
+          "quote": "Se debe tomar en consideración que los atributos sensoriales propios de la descripción del producto no están regidos únicamente por el intervalo de altitud.",
+          "location": "NMX-F-597-SCFI-2016 5 Clasificación"
+        },
+        {
+          "text": "調製(preparación)は、買い手と売り手が合意する商取引の枠組み。ヨーロッパ調製(EP)は、アメリカ調製より、許容する欠点の数が厳しい",
+          "status": "verified",
+          "sourceIds": [
+            "mx-nmx-f-597-scfi-2016"
+          ],
+          "quote": "es aquella que requiere niveles más estrictos relacionados con el número de defectos permitidos",
+          "location": "NMX-F-597-SCFI-2016 4.8.1"
+        },
+        {
+          "text": "アメリカ調製は、ヨーロッパ調製より、欠点を多く許容する",
+          "status": "verified",
+          "sourceIds": [
+            "mx-nmx-f-597-scfi-2016"
+          ],
+          "quote": "la preparación americana es aquella que permite un mayor número de defectos, con respecto a la preparación europea",
+          "location": "NMX-F-597-SCFI-2016 4.8.2"
+        },
+        {
+          "text": "表1: Estrictamente Alturaは、色が青みがかった緑・オリーブ緑・明るい緑(Pantone 6色)、均一性95以上、ふるい(EP)は15番に75%以上(25%以下が下)、アメリカ調製も15番、欠点はEPが18以下、アメリカ調製が26以下",
+          "status": "verified",
+          "sourceIds": [
+            "mx-nmx-f-597-scfi-2016"
+          ],
+          "quote": "Estrictamente Altura ≥1200 VERDE AZULADO, VERDE ACEITUNA, VERDE CLARO SP (5753 C), SP (5763 C), SP (5773 C), SP (5783 C), SP (5793 C), SP (5803 C). ≥ 95 Mínimo 75% de retención de criba 15. Máximo 25% debajo de criba 15. Mínimo 75% de retención de criba 15. Máximo 25% debajo de criba 15. ≤ 18 ≤ 26",
+          "location": "NMX-F-597-SCFI-2016 Tabla 1",
+          "note": "表の列見出し: GRANO / ALTITUD / COLOR / COLOR SISTEMA PANTONE / UNIFORMIDAD DEL COLOR / TAMAÑO DE CRIBAS PREPARACIÓN EUROPEA / ...AMERICANA / NÚMERO DE DEFECTOS PREPARACIÓN EUROPEA / ...AMERICANA。"
+        },
+        {
+          "text": "表1: Alturaは、Estrictamente Alturaと同じ(ふるい15番、欠点はEPが18以下、アメリカ調製が26以下)",
+          "status": "verified",
+          "sourceIds": [
+            "mx-nmx-f-597-scfi-2016"
+          ],
+          "quote": "Altura ≥900 hasta 1200 VERDE AZULADO, VERDE ACEITUNA, VERDE CLARO SP (5753 C), SP (5763 C), SP (5773 C), SP (5783 C), SP (5793 C), SP (5803 C). ≥ 95 Mínimo 75% de retención de criba 15. Máximo 25% debajo de criba 15. Mínimo 75% de retención de criba 15. Máximo 25% debajo de criba 15. ≤ 18 ≤ 26",
+          "location": "NMX-F-597-SCFI-2016 Tabla 1"
+        },
+        {
+          "text": "表1: Extra Primaは、EPが15番、アメリカ調製が13番に75%以上(25%以下が下)。欠点はEPが18以下、アメリカ調製が26以下",
+          "status": "verified",
+          "sourceIds": [
+            "mx-nmx-f-597-scfi-2016"
+          ],
+          "quote": "Extra Prima ≥800 hasta 900 VERDE AZULADO, VERDE ACEITUNA, VERDE CLARO SP (5753 C), SP (5763 C), SP (5773 C), SP (5783 C), SP (5793 C), SP (5803 C). ≥ 95 Mínimo 75% de retención de criba 15. Máximo 25% debajo de criba 15. Mínimo 75% de retención de criba 13. Máximo 25% debajo de criba 13. ≤ 18 ≤ 26",
+          "location": "NMX-F-597-SCFI-2016 Tabla 1"
+        },
+        {
+          "text": "表1: Prima Lavadoは、EPが15番、アメリカ調製が13番に75%以上(25%以下が下)。欠点はEPが18以下、アメリカ調製が30以下",
+          "status": "verified",
+          "sourceIds": [
+            "mx-nmx-f-597-scfi-2016"
+          ],
+          "quote": "Prima Lavado <800 VERDE AZULADO, VERDE ACEITUNA, VERDE CLARO SP (5753 C), SP (5763 C), SP (5773 C), SP (5783 C), SP (5793 C), SP (5803 C). ≥ 95 Mínimo 75% de retención de criba 15. Máximo 25% debajo de criba 15. Mínimo 75% de retención de criba 13. Máximo 25% debajo de criba 13. ≤ 18 ≤ 30",
+          "location": "NMX-F-597-SCFI-2016 Tabla 1"
+        },
+        {
+          "text": "表2: 自然乾燥(ナチュラル)のアラビカは、ふるい15番に60%以上、14番の下は10%以下、13番の下は3%以下、欠点は300gあたり45個以内",
+          "status": "verified",
+          "sourceIds": [
+            "mx-nmx-f-597-scfi-2016"
+          ],
+          "quote": "Arábica natural Mínimo 60 % de retención en criba 15. Máximo 10 % debajo de criba 14. Máximo 3 % debajo de criba 13. Máximo 45 en 300 g",
+          "location": "NMX-F-597-SCFI-2016 Tabla 2"
+        },
+        {
+          "text": "表2: カネフォラ(ロブスタ)の自然乾燥は、ふるい13番に90%以上、欠点は総数の16%以下(うち、黒豆と割れ豆は5%以下)",
+          "status": "verified",
+          "sourceIds": [
+            "mx-nmx-f-597-scfi-2016"
+          ],
+          "quote": "Canephora natural Mínimo 90 % de retención en criba 13. N/A Máximo 16 % de defectos totales. Máximo 5 % de granos negros y quebrados",
+          "location": "NMX-F-597-SCFI-2016 Tabla 2"
+        },
+        {
+          "text": "表2: カネフォラの水洗は、ふるい13番に90%以上、欠点は総数の8%以下(うち、黒豆と割れ豆は5%以下)",
+          "status": "verified",
+          "sourceIds": [
+            "mx-nmx-f-597-scfi-2016"
+          ],
+          "quote": "Canephora lavado Mínimo 90 % de retención en criba 13. N/A Máximo 8 % de defectos totales. Máximo 5 % de granos negros y quebrados",
+          "location": "NMX-F-597-SCFI-2016 Tabla 2"
+        },
+        {
+          "text": "マラゴジッペは、大粒の豆で、ふるい18・19・20番の指定のふるいに90%超が残る",
+          "status": "verified",
+          "sourceIds": [
+            "mx-nmx-f-597-scfi-2016"
+          ],
+          "quote": "La criba específica para evaluar el tamaño de este grano de café incluye las cribas 18, 19 y 20 con una retención mayor al 90 % según la criba especificada.",
+          "location": "NMX-F-597-SCFI-2016 4.3"
+        },
+        {
+          "text": "どの等級でも、水分は10.0〜12.5%(湿量基準)",
+          "status": "verified",
+          "sourceIds": [
+            "mx-nmx-f-597-scfi-2016"
+          ],
+          "quote": "el contenido de humedad para el grano de café verde se establece en un intervalo de 10.0 % al 12.5 %, en base húmeda.",
+          "location": "NMX-F-597-SCFI-2016 7 Contenido de humedad"
+        },
+        {
+          "text": "小粒(granza)は、ふるい12番(5mm)に残らない、豆の断片や小さい豆で、欠点とみなす。許容は、Estrictamente Altura・Altura・Extra Prima・Prima Lavado・アラビカの自然乾燥で、12番の下が0.15%以下(カネフォラは1.5%以下)",
+          "status": "verified",
+          "sourceIds": [
+            "mx-nmx-f-597-scfi-2016"
+          ],
+          "quote": "fragmento de granos o granos de café verde de tamaño pequeño, que no son retenidos en criba 12 (5 mm) y cuya presencia se considera como defecto.",
+          "location": "NMX-F-597-SCFI-2016 4.7 granza",
+          "note": "許容の数値(0.15%・1.5%)は、規格の第6章(Tolerancias)の表。表の行の対応は、表の並びで確認した。"
+        },
+        {
+          "text": "第6章の許容: Estrictamente Alturaは、ふるい12番の下が0.15%以下",
+          "status": "verified",
+          "sourceIds": [
+            "mx-nmx-f-597-scfi-2016"
+          ],
+          "quote": "Estrictamente altura Máximo 0.15 % debajo de criba 12",
+          "location": "NMX-F-597-SCFI-2016 6 Tolerancias"
+        },
+        {
+          "text": "第6章の許容: カネフォラは、ふるい12番の下が1.5%以下",
+          "status": "verified",
+          "sourceIds": [
+            "mx-nmx-f-597-scfi-2016"
+          ],
+          "quote": "Máximo 1.5 % debajo de criba 12",
+          "location": "NMX-F-597-SCFI-2016 6 Tolerancias"
+        },
+        {
+          "text": "官能評価の表4(目安): 最低値は、香り(Aroma/Fragancia)が Estrictamente Altura=5、Altura=4、Extra Prima=4、Prima Lavado=3",
+          "status": "verified",
+          "sourceIds": [
+            "mx-nmx-f-597-scfi-2016"
+          ],
+          "quote": "ARÁBICA CANEPHORA Estrictamente altura Altura Extra prima lavado Prima lavado Natural Lavado Natural Calidad Intrínseca (Valores Mínimos) Aroma/ Fragancia 5 4 4 3 2 3 2",
+          "location": "NMX-F-597-SCFI-2016 11.6 Tabla 4"
+        },
+        {
+          "text": "表4: 味(Sabor)の最低値は、Estrictamente Altura=5、Altura=4、Extra Prima=3、Prima Lavado=3",
+          "status": "verified",
+          "sourceIds": [
+            "mx-nmx-f-597-scfi-2016"
+          ],
+          "quote": "Sabor 5 4 3 3 2 2 3",
+          "location": "NMX-F-597-SCFI-2016 11.6 Tabla 4"
+        },
+        {
+          "text": "表4: 酸(Acidez)の最低値は、Estrictamente Altura=5、Altura=5、Extra Prima=4、Prima Lavado=3",
+          "status": "verified",
+          "sourceIds": [
+            "mx-nmx-f-597-scfi-2016"
+          ],
+          "quote": "Acidez 5 5 4 3 0 N/A N/A",
+          "location": "NMX-F-597-SCFI-2016 11.6 Tabla 4"
+        },
+        {
+          "text": "表4: 後味(Resabio)の最低値は、Estrictamente Altura=5、Altura=4、Extra Prima=3、Prima Lavado=2",
+          "status": "verified",
+          "sourceIds": [
+            "mx-nmx-f-597-scfi-2016"
+          ],
+          "quote": "Resabio 5 4 3 2 2 2 2",
+          "location": "NMX-F-597-SCFI-2016 11.6 Tabla 4"
+        },
+        {
+          "text": "表4: ボディ(Cuerpo)の最低値は、Estrictamente Altura=5、Altura=4、Extra Prima=3、Prima Lavado=2",
+          "status": "verified",
+          "sourceIds": [
+            "mx-nmx-f-597-scfi-2016"
+          ],
+          "quote": "Cuerpo 5 4 3 2 2 2 3",
+          "location": "NMX-F-597-SCFI-2016 11.6 Tabla 4"
+        },
+        {
+          "text": "表4: バランス(Balance)の最低値は、Estrictamente Altura=5、Altura=4、Extra Prima=3、Prima Lavado=2",
+          "status": "verified",
+          "sourceIds": [
+            "mx-nmx-f-597-scfi-2016"
+          ],
+          "quote": "Balance 5 4 3 2 3 2 2",
+          "location": "NMX-F-597-SCFI-2016 11.6 Tabla 4"
+        },
+        {
+          "text": "表4: 均一性(Uniformidad、5つのカップのうちの数)は、Estrictamente Altura=5/5、Altura=4/5、Extra Prima=3/5、Prima Lavado=2/5",
+          "status": "verified",
+          "sourceIds": [
+            "mx-nmx-f-597-scfi-2016"
+          ],
+          "quote": "Uniformidad 5/5 4/5 3/5 2/5 5/5 5/5 5/5",
+          "location": "NMX-F-597-SCFI-2016 11.6 Tabla 4"
+        },
+        {
+          "text": "表4: 健全なカップ(Taza sana)は、すべての等級で5/5",
+          "status": "verified",
+          "sourceIds": [
+            "mx-nmx-f-597-scfi-2016"
+          ],
+          "quote": "Taza Sana 5/5 5/5 5/5 5/5 5/5 5/5 5/5",
+          "location": "NMX-F-597-SCFI-2016 11.6 Tabla 4"
+        },
+        {
+          "text": "表4: 甘み(Dulce)は、Estrictamente Altura=5/5、Altura=4/5、Extra Prima=3/5、Prima Lavado=2/5",
+          "status": "verified",
+          "sourceIds": [
+            "mx-nmx-f-597-scfi-2016"
+          ],
+          "quote": "Dulce 5/5 4/5 3/5 2/5 5/5 2/5 2/5",
+          "location": "NMX-F-597-SCFI-2016 11.6 Tabla 4"
+        },
+        {
+          "text": "表4は、官能評価の、属性の知覚の「ガイド」として示される",
+          "status": "verified",
+          "sourceIds": [
+            "mx-nmx-f-597-scfi-2016"
+          ],
+          "quote": "A continuación se presenta la tabla 4 como una guía para la percepción de los atributos evaluables del café.",
+          "location": "NMX-F-597-SCFI-2016 11.6"
+        }
+      ],
+      "note": "メキシコの等級(2026-11-10)。規格の原文を読んで書いた。"
+    }
+  }
+}

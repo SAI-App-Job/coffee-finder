@@ -611,6 +611,1410 @@
    }
   ]
  },
+ "origin:エルサルバドル:gradeSystem": {
+  "status": "verified",
+  "textHash": "4dbbc6b0",
+  "claims": [
+   {
+    "text": "OSARTEC(エルサルバドル技術規制機構)のRTS 67.08.01:18が生豆の品質要件を定める",
+    "status": "verified",
+    "sourceIds": [
+     "osartec-rts-67-08-01-18-wto"
+    ],
+    "quote": "CAFÉ. CAFÉ VERDE (CAFÉ ORO). REQUISITOS DE CALIDAD … Editada por el Organismo Salvadoreño de Reglamentación Técnica",
+    "location": "表紙"
+   },
+   {
+    "text": "分類は標高・精選方法・欠点数の3基準",
+    "status": "verified",
+    "sourceIds": [
+     "osartec-rts-67-08-01-18-wto"
+    ],
+    "quote": "La clasificación y designación se basan en tres criterios: altitud, método de beneficiado y número de imperfecciones.",
+    "location": "5.1"
+   },
+   {
+    "text": "標高区分はSHG(Strictly High Grown、1,201m以上)、HG(High Grown、801〜1,200m)、CS(Central Standard、800m以下)の3段階",
+    "status": "verified",
+    "sourceIds": [
+     "osartec-rts-67-08-01-18-wto"
+    ],
+    "quote": "a) café producido hasta 800 m.s.n.m.; Central Estándar o CS; b) café producido de 801 a 1 200 m.s.n.m.; Media Altura o HG; c) café producido a más de 1 201 m.s.n.m.; Estricta Altura o SHG.",
+    "location": "5.1.1"
+   },
+   {
+    "text": "運用はかつてCSC(エルサルバドル・コーヒー審議会)が担っていた",
+    "status": "verified",
+    "sourceIds": [
+     "osartec-rts-67-08-01-18-wto"
+    ],
+    "quote": "La vigilancia y verificación del cumplimiento de este Reglamento Técnico Salvadoreño le corresponde al Consejo Salvadoreño del Café",
+    "location": "9.1"
+   },
+   {
+    "text": "2023年にISCへ引き継がれた",
+    "status": "verified",
+    "sourceIds": [
+     "asamblea-decreto-835-2023"
+    ],
+    "quote": "Art. 32.- El nuevo Instituto Salvadoreño del Café sucede por ministerio de ley a partir de la vigencia de esta Ley en las funciones, atribuciones, competencias, responsabilidades, derechos y obligaciones que correspondían al Consejo Salvadoreño del Café",
+    "location": "令第835号 第32条"
+   },
+   {
+    "text": "分類は、標高・精選方法(湿式・乾式)・欠点の数の3基準。欠点は、300gの試料で数える",
+    "status": "verified",
+    "sourceIds": [
+     "osartec-rts-67-08-01-18-wto"
+    ],
+    "quote": "La clasificación y designación se basan en tres criterios: altitud, método de beneficiado y número de imperfecciones. || Este criterio recurre al conteo de defectos que hay en una muestra de 300 g",
+    "location": "RTS 67.08.01:18(WTO通報の添付文書) 5.1"
+   },
+   {
+    "text": "洗浄式の上質(fino lavado): 欠点26個以下、水分10.5〜12.5%、色は緑、香りとカップはクリーン、豆の大きさは契約による(最低50%がふるい15番に残り、14番の下は最大5%。100gの試料)",
+    "status": "verified",
+    "sourceIds": [
+     "osartec-rts-67-08-01-18-wto"
+    ],
+    "quote": "a) debe presentar como máximo 26 imperfecciones (ver Anexo, Tabla 1); b) contenido de humedad del café verde (café oro): 10,5 % a 12,5 %; c) color: verde; d) olor y taza: limpia; e) tamaño del grano: de acuerdo al tipo de café establecido en el contrato entre el comprador y el vendedor, conforme a la Tabla 1 (ver Anexo) y como mínimo 50 % sobre tamiz # 15 y máximo 5 % bajo tamiz # 14 en base a muestra de 100 g.",
+    "location": "RTS 67.08.01:18(WTO通報の添付文書) 5.2.1.1"
+   },
+   {
+    "text": "Café especial(スペシャルティ)は、SCAAの、アラビカ生豆の分類に従う",
+    "status": "verified",
+    "sourceIds": [
+     "osartec-rts-67-08-01-18-wto"
+    ],
+    "quote": "Debe cumplir con lo establecido en el sistema de clasificación de la Asociación Americana de Cafés Especiales (SCAA por sus siglas en inglés) para el café Arábica Verde || en su versión vigente",
+    "location": "RTS 67.08.01:18(WTO通報の添付文書) 5.2.1.1.1"
+   },
+   {
+    "text": "アメリカ調製(Preparación Americana)は、ブラジル/ニューヨーク方式で欠点12個以下(タイプ3)、水分10.5〜12.5%",
+    "status": "verified",
+    "sourceIds": [
+     "osartec-rts-67-08-01-18-wto"
+    ],
+    "quote": "El café exportable que sea identificado como Preparación Americana no debe contener más de 12 defectos de acuerdo al método Brasil / Nueva York (Tipo 3); con rango de humedad 10,5 % a 12,5 %.",
+    "location": "RTS 67.08.01:18(WTO通報の添付文書) 5.2.1.1.3"
+   },
+   {
+    "text": "ヨーロッパ調製(Preparación Europea)は、本文では、欠点8個以下(ブラジル/ニューヨーク方式のタイプ2-25)、水分10.5〜12.5%",
+    "status": "verified",
+    "sourceIds": [
+     "osartec-rts-67-08-01-18-wto"
+    ],
+    "quote": "Preparación Europea no debe contener más de 8 || defectos de acuerdo al método Brasil / Nueva York (Tipo 2 -25); con rango de humedad 10,5 % a 12,5 %.",
+    "location": "RTS 67.08.01:18(WTO通報の添付文書) 5.2.1.1.4"
+   },
+   {
+    "text": "附表1(300g、ふるい15番に50%以上、14番の下は5%以下)は、欠点の個数を「EP 6」「AP 12」と示す",
+    "status": "verified",
+    "sourceIds": [
+     "osartec-rts-67-08-01-18-wto"
+    ],
+    "quote": "Tabla 1. Clasificación café verde (café oro) según método Brasil / New York 300 gramos 50 % sobre tamiz 15 – 5 % bajo tamiz 14 Imperfecciones (EP 6 IMPERFECCIONES) – (AP 12 IMPERFECCIONES)",
+    "location": "RTS 67.08.01:18(WTO通報の添付文書) Anexo Tabla 1"
+   },
+   {
+    "text": "欠点の換算(附表1): 全黒豆1個・全酸っぱい豆1個・チェリー1個=1、部分的な黒豆・酸っぱい豆は2〜5個=1、パーチメント2〜3個=1、浮き豆5個=1、割れ・つぶれ5個=1、殻2〜3個=1、貝殻豆5個=1",
+    "status": "verified",
+    "sourceIds": [
+     "osartec-rts-67-08-01-18-wto"
+    ],
+    "quote": "Total negro 1 Total agrio 1 Cereza 1 Parcial negro 2 a 5 Parcial agrio 2 a 5 Pergamino 2 a 3 Flotes 5 Cortados, quebrados, aplastados 5 Cascaras 2 o 3 Conchas 5",
+    "location": "RTS 67.08.01:18(WTO通報の添付文書) Anexo Tabla 1"
+   },
+   {
+    "text": "洗浄式の劣る豆(inferior lavado): 欠点26個超、水分10.5〜12.5%。通常、見本で取引する",
+    "status": "verified",
+    "sourceIds": [
+     "osartec-rts-67-08-01-18-wto"
+    ],
+    "quote": "Café con más de 26 imperfecciones, con rango de humedad 10,5 % a 12,5 % y que generalmente se comercializa bajo muestra.",
+    "location": "RTS 67.08.01:18(WTO通報の添付文書) 5.2.1.2"
+   },
+   {
+    "text": "乾式(sin lavar)の上質は、洗浄式のスペシャルティ・ゴルメ・アメリカ調製の要件に従う",
+    "status": "verified",
+    "sourceIds": [
+     "osartec-rts-67-08-01-18-wto"
+    ],
+    "quote": "Café verde (café oro) sin lavar: debe cumplir con lo establecido en los numerales 5.2.1.1.1., 5.2.1.1.2. y 5.2.1.1.3. de este RTS.",
+    "location": "RTS 67.08.01:18(WTO通報の添付文書) 5.2.2.1.1"
+   },
+   {
+    "text": "乾式の、熟した、または、並の乾燥チェリー(cereza seca de maduro o corriente): 欠点23個以下、水分10.5〜12.5%",
+    "status": "verified",
+    "sourceIds": [
+     "osartec-rts-67-08-01-18-wto"
+    ],
+    "quote": "Café cereza seca de maduro o corriente sin lavar Debe presentar un máximo de 23 imperfecciones y rango de humedad 10,5 % a 12,5 %.",
+    "location": "RTS 67.08.01:18(WTO通報の添付文書) 5.2.2.1.2"
+   },
+   {
+    "text": "乾式の劣る豆: PV(pepena verde)は欠点26個超、resaca sin lavarは欠点86個超(いずれも通常、見本で取引)",
+    "status": "verified",
+    "sourceIds": [
+     "osartec-rts-67-08-01-18-wto"
+    ],
+    "quote": "5.2.2.2.1. Café verde (café oro) PV (pepena verde) Café con más de 26 imperfecciones || 5.2.2.2.2. Café verde (café oro) resaca sin lavar Café con más de 86 imperfecciones",
+    "location": "RTS 67.08.01:18(WTO通報の添付文書) 5.2.2.2"
+   },
+   {
+    "text": "規格の文書は、「官報での公布の6か月後に施行される」と書く(WTO通報時点の文書。官報で公布された最終版との同一性は未確認)",
+    "status": "verified",
+    "sourceIds": [
+     "osartec-rts-67-08-01-18-wto"
+    ],
+    "quote": "El presente Reglamento Técnico Salvadoreño entrara en vigencia seis (6) meses después de su publicación en el Diario Oficial.",
+    "location": "RTS 67.08.01:18(WTO通報の添付文書) 10 Vigencia"
+   }
+  ]
+ },
+ "origin:メキシコ:gradeSystem": {
+  "status": "verified",
+  "textHash": "335acdb8",
+  "claims": [
+   {
+    "text": "メキシコの規格NMX-F-597-SCFI-2016は、コーヒー生豆の仕様・調製・官能評価を定める(NMX-F-551-SCFI-2008を廃止)",
+    "status": "verified",
+    "sourceIds": [
+     "mx-nmx-f-597-scfi-2016"
+    ],
+    "quote": "CAFÉ VERDE – ESPECIFICACIONES, PREPARACIONES Y EVALUACIÓN SENSORIAL (CANCELA A LA NMX-F-551-SCFI-2008)",
+    "location": "NMX-F-597-SCFI-2016 表紙"
+   },
+   {
+    "text": "洗浄式のアラビカ(arábica lavado)は、果肉を除き、乾燥の前にミューシレージを完全に取り除いた豆。標高による4区分は、この洗浄式のアラビカの区分",
+    "status": "verified",
+    "sourceIds": [
+     "mx-nmx-f-597-scfi-2016"
+    ],
+    "quote": "arábica lavado (Coffea arabica) granos de Coffea arabica sometidos a un proceso de despulpado para eliminar la cáscara y la pulpa, a los que adicionalmente se les elimina de manera completa el mucilago previo al secado.",
+    "location": "NMX-F-597-SCFI-2016 4.1"
+   },
+   {
+    "text": "規格は、2016年9月29日付(メキシコシティ)",
+    "status": "verified",
+    "sourceIds": [
+     "mx-nmx-f-597-scfi-2016"
+    ],
+    "quote": "Ciudad de México, a 29 de septiembre de 2016.",
+    "location": "NMX-F-597-SCFI-2016 末尾"
+   },
+   {
+    "text": "この規格は、国内で生産または取引される生豆に適用される",
+    "status": "verified",
+    "sourceIds": [
+     "mx-nmx-f-597-scfi-2016"
+    ],
+    "quote": "aplica al grano de café verde que se produce o comercializa en el territorio nacional",
+    "location": "NMX-F-597-SCFI-2016 1 Objetivo y campo de aplicación"
+   },
+   {
+    "text": "Estrictamente Altura: 1,200m超で栽培。5つのカップが健全で、汚染や欠陥の香りがなく、官能の特徴が、はっきり際立つ",
+    "status": "verified",
+    "sourceIds": [
+     "mx-nmx-f-597-scfi-2016"
+    ],
+    "quote": "estrictamente altura café cultivado a más de 1 200 msnm. En su degustación debe presentar cinco tazas sanas libres de contaminaciones y aromas defectuosos, con características sensoriales altamente pronunciadas.",
+    "location": "NMX-F-597-SCFI-2016 4.1.1"
+   },
+   {
+    "text": "Altura: 900〜1,200mで栽培。官能の特徴が、ほどよく際立つ",
+    "status": "verified",
+    "sourceIds": [
+     "mx-nmx-f-597-scfi-2016"
+    ],
+    "quote": "altura café cultivado entre 900 msnm y 1 200 msnm. En su degustación debe presentar cinco tazas sanas libres de contaminaciones y aromas defectuosos, con características sensoriales moderadamente pronunciadas.",
+    "location": "NMX-F-597-SCFI-2016 4.1.2"
+   },
+   {
+    "text": "Extra Prima Lavado: 800〜900mで栽培。官能の特徴が、感じ取れる",
+    "status": "verified",
+    "sourceIds": [
+     "mx-nmx-f-597-scfi-2016"
+    ],
+    "quote": "extra prima lavado café cultivado entre 800 msnm y 900 msnm. En su degustación debe presentar cinco tazas sanas libres de contaminaciones y aromas defectuosos, con características sensoriales perceptibles.",
+    "location": "NMX-F-597-SCFI-2016 4.1.3"
+   },
+   {
+    "text": "Prima Lavado: 800m未満で栽培。官能の特徴が、ほどよく感じ取れる",
+    "status": "verified",
+    "sourceIds": [
+     "mx-nmx-f-597-scfi-2016"
+    ],
+    "quote": "prima lavado café cultivado a menos de 800 msnm. En su degustación debe presentar cinco tazas sanas libres de contaminaciones y aromas defectuosos, con características sensoriales moderadamente perceptibles.",
+    "location": "NMX-F-597-SCFI-2016 4.1.4"
+   },
+   {
+    "text": "規格は、官能の特徴は、標高の範囲だけで決まるものではなく、遺伝・産地・環境・農法・収穫後の処理・精製が、直接影響すると述べる",
+    "status": "verified",
+    "sourceIds": [
+     "mx-nmx-f-597-scfi-2016"
+    ],
+    "quote": "Se debe tomar en consideración que los atributos sensoriales propios de la descripción del producto no están regidos únicamente por el intervalo de altitud.",
+    "location": "NMX-F-597-SCFI-2016 5 Clasificación"
+   },
+   {
+    "text": "調製(preparación)は、買い手と売り手が合意する商取引の枠組み。ヨーロッパ調製(EP)は、アメリカ調製より、許容する欠点の数が厳しい",
+    "status": "verified",
+    "sourceIds": [
+     "mx-nmx-f-597-scfi-2016"
+    ],
+    "quote": "es aquella que requiere niveles más estrictos relacionados con el número de defectos permitidos",
+    "location": "NMX-F-597-SCFI-2016 4.8.1"
+   },
+   {
+    "text": "アメリカ調製は、ヨーロッパ調製より、欠点を多く許容する",
+    "status": "verified",
+    "sourceIds": [
+     "mx-nmx-f-597-scfi-2016"
+    ],
+    "quote": "la preparación americana es aquella que permite un mayor número de defectos, con respecto a la preparación europea",
+    "location": "NMX-F-597-SCFI-2016 4.8.2"
+   },
+   {
+    "text": "表1: Estrictamente Alturaは、色が青みがかった緑・オリーブ緑・明るい緑(Pantone 6色)、均一性95以上、ふるい(EP)は15番に75%以上(25%以下が下)、アメリカ調製も15番、欠点はEPが18以下、アメリカ調製が26以下",
+    "status": "verified",
+    "sourceIds": [
+     "mx-nmx-f-597-scfi-2016"
+    ],
+    "quote": "Estrictamente Altura ≥1200 VERDE AZULADO, VERDE ACEITUNA, VERDE CLARO SP (5753 C), SP (5763 C), SP (5773 C), SP (5783 C), SP (5793 C), SP (5803 C). ≥ 95 Mínimo 75% de retención de criba 15. Máximo 25% debajo de criba 15. Mínimo 75% de retención de criba 15. Máximo 25% debajo de criba 15. ≤ 18 ≤ 26",
+    "location": "NMX-F-597-SCFI-2016 Tabla 1"
+   },
+   {
+    "text": "表1: Alturaは、Estrictamente Alturaと同じ(ふるい15番、欠点はEPが18以下、アメリカ調製が26以下)",
+    "status": "verified",
+    "sourceIds": [
+     "mx-nmx-f-597-scfi-2016"
+    ],
+    "quote": "Altura ≥900 hasta 1200 VERDE AZULADO, VERDE ACEITUNA, VERDE CLARO SP (5753 C), SP (5763 C), SP (5773 C), SP (5783 C), SP (5793 C), SP (5803 C). ≥ 95 Mínimo 75% de retención de criba 15. Máximo 25% debajo de criba 15. Mínimo 75% de retención de criba 15. Máximo 25% debajo de criba 15. ≤ 18 ≤ 26",
+    "location": "NMX-F-597-SCFI-2016 Tabla 1"
+   },
+   {
+    "text": "表1: Extra Primaは、EPが15番、アメリカ調製が13番に75%以上(25%以下が下)。欠点はEPが18以下、アメリカ調製が26以下",
+    "status": "verified",
+    "sourceIds": [
+     "mx-nmx-f-597-scfi-2016"
+    ],
+    "quote": "Extra Prima ≥800 hasta 900 VERDE AZULADO, VERDE ACEITUNA, VERDE CLARO SP (5753 C), SP (5763 C), SP (5773 C), SP (5783 C), SP (5793 C), SP (5803 C). ≥ 95 Mínimo 75% de retención de criba 15. Máximo 25% debajo de criba 15. Mínimo 75% de retención de criba 13. Máximo 25% debajo de criba 13. ≤ 18 ≤ 26",
+    "location": "NMX-F-597-SCFI-2016 Tabla 1"
+   },
+   {
+    "text": "表1: Prima Lavadoは、EPが15番、アメリカ調製が13番に75%以上(25%以下が下)。欠点はEPが18以下、アメリカ調製が30以下",
+    "status": "verified",
+    "sourceIds": [
+     "mx-nmx-f-597-scfi-2016"
+    ],
+    "quote": "Prima Lavado <800 VERDE AZULADO, VERDE ACEITUNA, VERDE CLARO SP (5753 C), SP (5763 C), SP (5773 C), SP (5783 C), SP (5793 C), SP (5803 C). ≥ 95 Mínimo 75% de retención de criba 15. Máximo 25% debajo de criba 15. Mínimo 75% de retención de criba 13. Máximo 25% debajo de criba 13. ≤ 18 ≤ 30",
+    "location": "NMX-F-597-SCFI-2016 Tabla 1"
+   },
+   {
+    "text": "表2: 自然乾燥(ナチュラル)のアラビカは、ふるい15番に60%以上、14番の下は10%以下、13番の下は3%以下、欠点は300gあたり45個以内",
+    "status": "verified",
+    "sourceIds": [
+     "mx-nmx-f-597-scfi-2016"
+    ],
+    "quote": "Arábica natural Mínimo 60 % de retención en criba 15. Máximo 10 % debajo de criba 14. Máximo 3 % debajo de criba 13. Máximo 45 en 300 g",
+    "location": "NMX-F-597-SCFI-2016 Tabla 2"
+   },
+   {
+    "text": "表2: カネフォラ(ロブスタ)の自然乾燥は、ふるい13番に90%以上、欠点は総数の16%以下(うち、黒豆と割れ豆は5%以下)",
+    "status": "verified",
+    "sourceIds": [
+     "mx-nmx-f-597-scfi-2016"
+    ],
+    "quote": "Canephora natural Mínimo 90 % de retención en criba 13. N/A Máximo 16 % de defectos totales. Máximo 5 % de granos negros y quebrados",
+    "location": "NMX-F-597-SCFI-2016 Tabla 2"
+   },
+   {
+    "text": "表2: カネフォラの水洗は、ふるい13番に90%以上、欠点は総数の8%以下(うち、黒豆と割れ豆は5%以下)",
+    "status": "verified",
+    "sourceIds": [
+     "mx-nmx-f-597-scfi-2016"
+    ],
+    "quote": "Canephora lavado Mínimo 90 % de retención en criba 13. N/A Máximo 8 % de defectos totales. Máximo 5 % de granos negros y quebrados",
+    "location": "NMX-F-597-SCFI-2016 Tabla 2"
+   },
+   {
+    "text": "マラゴジッペは、大粒の豆で、ふるい18・19・20番の指定のふるいに90%超が残る",
+    "status": "verified",
+    "sourceIds": [
+     "mx-nmx-f-597-scfi-2016"
+    ],
+    "quote": "La criba específica para evaluar el tamaño de este grano de café incluye las cribas 18, 19 y 20 con una retención mayor al 90 % según la criba especificada.",
+    "location": "NMX-F-597-SCFI-2016 4.3"
+   },
+   {
+    "text": "どの等級でも、水分は10.0〜12.5%(湿量基準)",
+    "status": "verified",
+    "sourceIds": [
+     "mx-nmx-f-597-scfi-2016"
+    ],
+    "quote": "el contenido de humedad para el grano de café verde se establece en un intervalo de 10.0 % al 12.5 %, en base húmeda.",
+    "location": "NMX-F-597-SCFI-2016 7 Contenido de humedad"
+   },
+   {
+    "text": "小粒(granza)は、ふるい12番(5mm)に残らない、豆の断片や小さい豆で、欠点とみなす。許容は、Estrictamente Altura・Altura・Extra Prima・Prima Lavado・アラビカの自然乾燥で、12番の下が0.15%以下(カネフォラは1.5%以下)",
+    "status": "verified",
+    "sourceIds": [
+     "mx-nmx-f-597-scfi-2016"
+    ],
+    "quote": "fragmento de granos o granos de café verde de tamaño pequeño, que no son retenidos en criba 12 (5 mm) y cuya presencia se considera como defecto.",
+    "location": "NMX-F-597-SCFI-2016 4.7 granza"
+   },
+   {
+    "text": "第6章の許容: Estrictamente Alturaは、ふるい12番の下が0.15%以下",
+    "status": "verified",
+    "sourceIds": [
+     "mx-nmx-f-597-scfi-2016"
+    ],
+    "quote": "Estrictamente altura Máximo 0.15 % debajo de criba 12",
+    "location": "NMX-F-597-SCFI-2016 6 Tolerancias"
+   },
+   {
+    "text": "第6章の許容: カネフォラは、ふるい12番の下が1.5%以下",
+    "status": "verified",
+    "sourceIds": [
+     "mx-nmx-f-597-scfi-2016"
+    ],
+    "quote": "Máximo 1.5 % debajo de criba 12",
+    "location": "NMX-F-597-SCFI-2016 6 Tolerancias"
+   },
+   {
+    "text": "官能評価の表4(目安): 最低値は、香り(Aroma/Fragancia)が Estrictamente Altura=5、Altura=4、Extra Prima=4、Prima Lavado=3",
+    "status": "verified",
+    "sourceIds": [
+     "mx-nmx-f-597-scfi-2016"
+    ],
+    "quote": "ARÁBICA CANEPHORA Estrictamente altura Altura Extra prima lavado Prima lavado Natural Lavado Natural Calidad Intrínseca (Valores Mínimos) Aroma/ Fragancia 5 4 4 3 2 3 2",
+    "location": "NMX-F-597-SCFI-2016 11.6 Tabla 4"
+   },
+   {
+    "text": "表4: 味(Sabor)の最低値は、Estrictamente Altura=5、Altura=4、Extra Prima=3、Prima Lavado=3",
+    "status": "verified",
+    "sourceIds": [
+     "mx-nmx-f-597-scfi-2016"
+    ],
+    "quote": "Sabor 5 4 3 3 2 2 3",
+    "location": "NMX-F-597-SCFI-2016 11.6 Tabla 4"
+   },
+   {
+    "text": "表4: 酸(Acidez)の最低値は、Estrictamente Altura=5、Altura=5、Extra Prima=4、Prima Lavado=3",
+    "status": "verified",
+    "sourceIds": [
+     "mx-nmx-f-597-scfi-2016"
+    ],
+    "quote": "Acidez 5 5 4 3 0 N/A N/A",
+    "location": "NMX-F-597-SCFI-2016 11.6 Tabla 4"
+   },
+   {
+    "text": "表4: 後味(Resabio)の最低値は、Estrictamente Altura=5、Altura=4、Extra Prima=3、Prima Lavado=2",
+    "status": "verified",
+    "sourceIds": [
+     "mx-nmx-f-597-scfi-2016"
+    ],
+    "quote": "Resabio 5 4 3 2 2 2 2",
+    "location": "NMX-F-597-SCFI-2016 11.6 Tabla 4"
+   },
+   {
+    "text": "表4: ボディ(Cuerpo)の最低値は、Estrictamente Altura=5、Altura=4、Extra Prima=3、Prima Lavado=2",
+    "status": "verified",
+    "sourceIds": [
+     "mx-nmx-f-597-scfi-2016"
+    ],
+    "quote": "Cuerpo 5 4 3 2 2 2 3",
+    "location": "NMX-F-597-SCFI-2016 11.6 Tabla 4"
+   },
+   {
+    "text": "表4: バランス(Balance)の最低値は、Estrictamente Altura=5、Altura=4、Extra Prima=3、Prima Lavado=2",
+    "status": "verified",
+    "sourceIds": [
+     "mx-nmx-f-597-scfi-2016"
+    ],
+    "quote": "Balance 5 4 3 2 3 2 2",
+    "location": "NMX-F-597-SCFI-2016 11.6 Tabla 4"
+   },
+   {
+    "text": "表4: 均一性(Uniformidad、5つのカップのうちの数)は、Estrictamente Altura=5/5、Altura=4/5、Extra Prima=3/5、Prima Lavado=2/5",
+    "status": "verified",
+    "sourceIds": [
+     "mx-nmx-f-597-scfi-2016"
+    ],
+    "quote": "Uniformidad 5/5 4/5 3/5 2/5 5/5 5/5 5/5",
+    "location": "NMX-F-597-SCFI-2016 11.6 Tabla 4"
+   },
+   {
+    "text": "表4: 健全なカップ(Taza sana)は、すべての等級で5/5",
+    "status": "verified",
+    "sourceIds": [
+     "mx-nmx-f-597-scfi-2016"
+    ],
+    "quote": "Taza Sana 5/5 5/5 5/5 5/5 5/5 5/5 5/5",
+    "location": "NMX-F-597-SCFI-2016 11.6 Tabla 4"
+   },
+   {
+    "text": "表4: 甘み(Dulce)は、Estrictamente Altura=5/5、Altura=4/5、Extra Prima=3/5、Prima Lavado=2/5",
+    "status": "verified",
+    "sourceIds": [
+     "mx-nmx-f-597-scfi-2016"
+    ],
+    "quote": "Dulce 5/5 4/5 3/5 2/5 5/5 2/5 2/5",
+    "location": "NMX-F-597-SCFI-2016 11.6 Tabla 4"
+   },
+   {
+    "text": "表4は、官能評価の、属性の知覚の「ガイド」として示される",
+    "status": "verified",
+    "sourceIds": [
+     "mx-nmx-f-597-scfi-2016"
+    ],
+    "quote": "A continuación se presenta la tabla 4 como una guía para la percepción de los atributos evaluables del café.",
+    "location": "NMX-F-597-SCFI-2016 11.6"
+   }
+  ]
+ },
+ "origin:ケニア:gradeSystem": {
+  "status": "verified",
+  "textHash": "7245fd47",
+  "claims": [
+   {
+    "text": "Eは、2粒がつながった豆で、非常に大きい豆を含み、スクリーン21に残る(直径8.3mm)",
+    "status": "verified",
+    "sourceIds": [
+     "ke-gazette-ln102-2019"
+    ],
+    "quote": "Elephant — two beans joined together, a genetic defect and includes very large (bold) AA Retained on 21 (size diameter 8.3 mm)",
+    "location": "Crops (Coffee) (General) Regulations 2019, Fifth Schedule A. Kenya Standards(STANDARD COFFEE GRADES)"
+   },
+   {
+    "text": "AAは平豆で、21を通過し18に残る(7.2mm)",
+    "status": "verified",
+    "sourceIds": [
+     "ke-gazette-ln102-2019"
+    ],
+    "quote": "AA Flat beans Through 21 retained on 18 (7.2 mm)",
+    "location": "Crops (Coffee) (General) Regulations 2019, Fifth Schedule A. Kenya Standards(STANDARD COFFEE GRADES)"
+   },
+   {
+    "text": "ABは平豆で、18を通過し16に残る(6.35mm)",
+    "status": "verified",
+    "sourceIds": [
+     "ke-gazette-ln102-2019"
+    ],
+    "quote": "AB Flat beans Through 18 retained on 16 (6.35 mm)",
+    "location": "Crops (Coffee) (General) Regulations 2019, Fifth Schedule A. Kenya Standards(STANDARD COFFEE GRADES)"
+   },
+   {
+    "text": "Cは小さい平豆で、16を通過し10に残る(3.96mm)",
+    "status": "verified",
+    "sourceIds": [
+     "ke-gazette-ln102-2019"
+    ],
+    "quote": "C Small flat beans Through 16 retained on 10 (3.96mm)",
+    "location": "Crops (Coffee) (General) Regulations 2019, Fifth Schedule A. Kenya Standards(STANDARD COFFEE GRADES)"
+   },
+   {
+    "text": "PBは、1つの胚珠だけが育った豆で、17を通過し12に残る(4.76mm)",
+    "status": "verified",
+    "sourceIds": [
+     "ke-gazette-ln102-2019"
+    ],
+    "quote": "Pea berries — one ovule develops in Coffee of the usual two Through 17 retained on 12 (4.76 mm)",
+    "location": "Crops (Coffee) (General) Regulations 2019, Fifth Schedule A. Kenya Standards(STANDARD COFFEE GRADES)"
+   },
+   {
+    "text": "TTは、AA・AB・Eから、空気による分離で取り出した、密度の軽い豆",
+    "status": "verified",
+    "sourceIds": [
+     "ke-gazette-ln102-2019"
+    ],
+    "quote": "TT Light density beans, from AA, AB and E grades by air extraction Separated through density by blowing",
+    "location": "Crops (Coffee) (General) Regulations 2019, Fifth Schedule A. Kenya Standards(STANDARD COFFEE GRADES)"
+   },
+   {
+    "text": "Tは最も小さく、砕けた豆と小さいCからなる",
+    "status": "verified",
+    "sourceIds": [
+     "ke-gazette-ln102-2019"
+    ],
+    "quote": "T Smallest, consists of broken and small C",
+    "location": "Crops (Coffee) (General) Regulations 2019, Fifth Schedule A. Kenya Standards(STANDARD COFFEE GRADES)"
+   },
+   {
+    "text": "等級を指定する場合、95%以上の豆が、その等級の範囲に入ること",
+    "status": "verified",
+    "sourceIds": [
+     "ke-gazette-ln102-2019"
+    ],
+    "quote": "Where a coffee grade is specified a minimum 95% of beans shall fall in that grade category.",
+    "location": "Crops (Coffee) (General) Regulations 2019, Fifth Schedule A. Kenya Standards(STANDARD COFFEE GRADES)"
+   },
+   {
+    "text": "東アフリカ規格は、大きさと形による格付けは、品質のおおよその目安にすぎないと述べる",
+    "status": "verified",
+    "sourceIds": [
+     "eas130-1999"
+    ],
+    "quote": "Grading by size and shape is only a fair estimate of coffee quality.",
+    "location": "EAS 130:1999 5.3 Grading by cup quality"
+   }
+  ]
+ },
+ "origin:タンザニア:gradeSystem": {
+  "status": "verified",
+  "textHash": "7017e3fe",
+  "claims": [
+   {
+    "text": "Premium grade: 傷・割れ・黒い豆・緩んだ豆の無い、白っぽいパーチメント",
+    "status": "verified",
+    "sourceIds": [
+     "tz-coffee-regs-2013"
+    ],
+    "quote": "(1) Premium grade; which shall mean parchment whitish parchment coffee with no damaged, broken, black pods or loose beans.",
+    "location": "Coffee Industry Regulations 2013 (GN 385), Sixth Schedule II. 1"
+   },
+   {
+    "text": "Parchment I: 中央の切れ目がわずかに開いた、白っぽいパーチメント(機械で割れたものが少しある)",
+    "status": "verified",
+    "sourceIds": [
+     "tz-coffee-regs-2013"
+    ],
+    "quote": "(2) Parchment I; which shall mean whitish parchment coffee with centre cuts slightly opened or with few parchments broken by machine.",
+    "location": "Coffee Industry Regulations 2013 (GN 385), Sixth Schedule II. 2"
+   },
+   {
+    "text": "Parchment II: 茶色っぽい、まずまずの品質のパーチメントで、中央の切れ目が開いている",
+    "status": "verified",
+    "sourceIds": [
+     "tz-coffee-regs-2013"
+    ],
+    "quote": "(3) Parchment II; which shall mean a fair quality parchment coffee with brownish parchment with centre cuts opened.",
+    "location": "Coffee Industry Regulations 2013 (GN 385), Sixth Schedule II. 3"
+   },
+   {
+    "text": "Parchment III: 茶色から黒い豆で、機械で割れた豆が多く、浮き豆・変色したパーチメント・黒い豆がある",
+    "status": "verified",
+    "sourceIds": [
+     "tz-coffee-regs-2013"
+    ],
+    "quote": "(4) Parchment III; which shall mean parchment coffee, brownish to black skinned beans, with much more beans broken by machine, presence of floats, discoloured parchment and black beans.",
+    "location": "Coffee Industry Regulations 2013 (GN 385), Sixth Schedule II. 4"
+   },
+   {
+    "text": "Estate clean: 国内で脱穀した、緑がかった色の豆で、選別・格付け・磨きだけが必要なもの",
+    "status": "verified",
+    "sourceIds": [
+     "tz-coffee-regs-2013"
+    ],
+    "quote": "(5) Estate clean; which shall mean domestically hulled coffee greenish in colour and requiring cleaning, grading and polishing only",
+    "location": "Coffee Industry Regulations 2013 (GN 385), Sixth Schedule II. 5"
+   },
+   {
+    "text": "AA: スクリーン18に最低90%、17は最大8〜10%、15は最大2%",
+    "status": "verified",
+    "sourceIds": [
+     "tz-coffee-regs-2013"
+    ],
+    "quote": "AA Retained minimum 90% of screen 18. Maximum 8 - 10% of screen 17 Maximum 2% of screen 15",
+    "location": "Coffee Industry Regulations 2013 (GN 385), Sixth Schedule II. 2.0"
+   },
+   {
+    "text": "A: スクリーン15/16に最低90%、14は最大2%",
+    "status": "verified",
+    "sourceIds": [
+     "tz-coffee-regs-2013"
+    ],
+    "quote": "A Retained minimum 90% of screen 15/16 Maximum 2% of screen 14",
+    "location": "Coffee Industry Regulations 2013 (GN 385), Sixth Schedule II. 2.0"
+   },
+   {
+    "text": "PB: ピーベリーが最低95%、浮き豆は最大5%",
+    "status": "verified",
+    "sourceIds": [
+     "tz-coffee-regs-2013"
+    ],
+    "quote": "PB Retained minimum 95% pea-berry beans 14 Maximum 5% float beans",
+    "location": "Coffee Industry Regulations 2013 (GN 385), Sixth Schedule II. 2.0"
+   },
+   {
+    "text": "Fは、上記の等級から出た、軽い砕け豆",
+    "status": "verified",
+    "sourceIds": [
+     "tz-coffee-regs-2013"
+    ],
+    "quote": "F Light broken beaiis resulting from all above grades",
+    "location": "Coffee Industry Regulations 2013 (GN 385), Sixth Schedule II. 2.0"
+   },
+   {
+    "text": "Robusta over screen 18: スクリーン18を通過するのは、重量で5%以下",
+    "status": "verified",
+    "sourceIds": [
+     "tz-coffee-regs-2013"
+    ],
+    "quote": "GRADE: ROBUSTA OVER SCREEN 18 Consist of clean and dry coffee beans of which not more than five percent (5%) by weight will pass through screen 18.",
+    "location": "Coffee Industry Regulations 2013 (GN 385), Sixth Schedule I. 1"
+   },
+   {
+    "text": "Superior: スクリーン16を通過するのは、重量で5%以下。欠点は15点以内",
+    "status": "verified",
+    "sourceIds": [
+     "tz-coffee-regs-2013"
+    ],
+    "quote": "a. To consist of clean and dry coffee beans of which not more than 5% by weight will pass through Screen No. 16.",
+    "location": "Coffee Industry Regulations 2013 (GN 385), Sixth Schedule I. 2"
+   },
+   {
+    "text": "Superior: 欠点の点数は15点以内(半黒豆・虫害豆で3g=300gの1%)",
+    "status": "verified",
+    "sourceIds": [
+     "tz-coffee-regs-2013"
+    ],
+    "quote": "to have defective points count of not more than 15, which is 3 grams of defects (semi-blacks and insect damaged) or 1% from 300 grams.",
+    "location": "Coffee Industry Regulations 2013 (GN 385), Sixth Schedule I. 2"
+   },
+   {
+    "text": "FAQ: 欠点の点数は40点以内",
+    "status": "verified",
+    "sourceIds": [
+     "tz-coffee-regs-2013"
+    ],
+    "quote": "to have defective points count of not more than 40",
+    "location": "Coffee Industry Regulations 2013 (GN 385), Sixth Schedule I. 3"
+   },
+   {
+    "text": "Special UG: 欠点の点数は60点以内",
+    "status": "verified",
+    "sourceIds": [
+     "tz-coffee-regs-2013"
+    ],
+    "quote": "to have defects points count of not more than 60",
+    "location": "Coffee Industry Regulations 2013 (GN 385), Sixth Schedule I. 4"
+   },
+   {
+    "text": "UG: 欠点の点数は160点以内で、うち黒豆は60点以内",
+    "status": "verified",
+    "sourceIds": [
+     "tz-coffee-regs-2013"
+    ],
+    "quote": "to have defect the points count of not more than 160 of which not more than 60 points be attributable to black beans.",
+    "location": "Coffee Industry Regulations 2013 (GN 385), Sixth Schedule I. 5"
+   },
+   {
+    "text": "Triage: 殻は重量で1%以下",
+    "status": "verified",
+    "sourceIds": [
+     "tz-coffee-regs-2013"
+    ],
+    "quote": "GRADE: ROBUSTA TRIAGE To consist of clean and dry coffee beans free from all traces of mustiness to contain not more than 1% weight of husks",
+    "location": "Coffee Industry Regulations 2013 (GN 385), Sixth Schedule I. 6"
+   },
+   {
+    "text": "欠点の点数は、加工した豆300gの欠点を数えて、点数表で合計したもの",
+    "status": "verified",
+    "sourceIds": [
+     "tz-coffee-regs-2013"
+    ],
+    "quote": "Defectives points count means the sum of points computed according to the scale detailed hereunder of point’s value for defectives by strict count of the defectives in 300 grams of processed coffee.",
+    "location": "Coffee Industry Regulations 2013 (GN 385), Sixth Schedule I. Defectives"
+   }
+  ]
+ },
+ "origin:ブラジル:gradeSystem": {
+  "status": "verified",
+  "textHash": "e4aea66c",
+  "claims": [
+   {
+    "text": "分類は、カテゴリ・サブカテゴリ・グループ・サブグループ・クラス・タイプで行い、それぞれ、種、豆の形と粒度、香りと味、飲み物(カップ)、色、品質による",
+    "status": "verified",
+    "sourceIds": [
+     "mapa-in8-2003"
+    ],
+    "quote": "o Café Beneficiado Grão Cru será classificado em CATEGORIA, SUBCATEGORIA, GRUPO, SUBGRUPO, CLASSE e TIPO, segundo a espécie, formato do grão e a granulometria, o aroma e o sabor, a bebida, a cor e a qualidade, respectivamente.",
+    "location": "IN 8/2003 Anexo 規則 4"
+   },
+   {
+    "text": "カテゴリ1はCoffea arabica、カテゴリIIはCoffea canephora",
+    "status": "verified",
+    "sourceIds": [
+     "mapa-in8-2003"
+    ],
+    "quote": "4.1.1. Categoria 1: café proveniente da espécie Coffea arabica; 4.1.2. Categoria II: café proveniente da espécie Coffea canephora.",
+    "location": "IN 8/2003 Anexo 規則 4.1"
+   },
+   {
+    "text": "Chato(平豆)は、ふるい19/18と17がグラウド、16と15がミディオ、14以下がミウド",
+    "status": "verified",
+    "sourceIds": [
+     "mapa-in8-2003"
+    ],
+    "quote": "4.2.1.1.1. Chato graúdo: peneiras 19/18 e 17; 4.2.1.1.2. Chato médio: peneiras 16 e 15; 4.2.1.1.3. Chato miúdo: peneira 14 e menores.",
+    "location": "IN 8/2003 Anexo 規則 4.2.1"
+   },
+   {
+    "text": "Moca(丸豆)は、ふるい13/12と11がグラウド、10がミディオ、9以下がミウド",
+    "status": "verified",
+    "sourceIds": [
+     "mapa-in8-2003"
+    ],
+    "quote": "4.2.2.1.1. Moca graúdo: peneiras 13/12 e 11; 4.2.2.1.2. Moca médio: peneira 10; 4.2.2.1.3. Moca miúdo (moquinha): peneira 9 e menores.",
+    "location": "IN 8/2003 Anexo 規則 4.2.2"
+   },
+   {
+    "text": "ふるいを分けていない場合、または4つ以上のふるいにまたがる場合は、Bica corrida",
+    "status": "verified",
+    "sourceIds": [
+     "mapa-in8-2003"
+    ],
+    "quote": "Quando o Café Beneficiado Grão Cru não for sub-metido à separação em peneiras, ou quando submetido se enquadre em quatro ou mais peneiras, será considerado BICA CORRIDA (B/C).",
+    "location": "IN 8/2003 Anexo 規則 4.2.3"
+   },
+   {
+    "text": "ふるいごとの漏れ(下に抜ける量)は、最大10%まで",
+    "status": "verified",
+    "sourceIds": [
+     "mapa-in8-2003"
+    ],
+    "quote": "o vazamento máximo admissível para cada peneira será de 10%",
+    "location": "IN 8/2003 Anexo 規則 4.2.4"
+   },
+   {
+    "text": "アラビカの上質なカップ: Estritamente mole(moleの要件をすべて満たし、より際立つ)、Mole(心地よく、穏やかで甘い)、Apenas mole(ほのかに甘く柔らかいが、渋みや粗さがない)、Duro(酸っぱく、渋く、粗いが、変な味はない)",
+    "status": "verified",
+    "sourceIds": [
+     "mapa-in8-2003"
+    ],
+    "quote": "4.4.1.1. Estritamente mole: café que apresenta, em conjunto, todos os requisitos de aroma e sabor \"mole\", porém mais acentuado; || 4.4.1.2. Mole: café que apresenta aroma e sabor agradável, brando e adocicado; 4.4.1.3. Apenas mole: café que apresenta sabor levemente doce e suave, mas sem adstringência ou aspereza de paladar; 4.4.1.4. Duro: café que apresenta sabor acre, adstringente e áspero, porém não apresenta paladares estranhos.",
+    "location": "IN 8/2003 Anexo 規則 4.4.1"
+   },
+   {
+    "text": "ヨードホルム臭系: Riado(わずか)、Rio(顕著)、Rio Zona(非常に強く、不快)",
+    "status": "verified",
+    "sourceIds": [
+     "mapa-in8-2003"
+    ],
+    "quote": "4.4.2.1. Riado: café que apresenta leve sabor, típico de iodofórmio; 4.4 2.2. Rio: café que apresenta sabor típico e acentuado de iodofórmio; 4.4.2.3. Rio Zona: café que apresenta aroma e sabor muito acentuado, assemelhado ao iodofórmio ou ao ácido fênico, sendo repugnante ao paladar.",
+    "location": "IN 8/2003 Anexo 規則 4.4.2"
+   },
+   {
+    "text": "ロブスタの飲み物: Excelente、Boa、Regular、Anormal",
+    "status": "verified",
+    "sourceIds": [
+     "mapa-in8-2003"
+    ],
+    "quote": "4.4.3.1. Excelente: café que apresenta sabor neutro e acidez mediana; 4.4.3.2. Boa: café que apresenta sabor neutro e ligeira acidez; 4.4.3.3. Regular: café que apresenta sabor típico de robusta sem acidez; 4.4.3.4. Anormal: café que apresenta sabor não característico ao produto.",
+    "location": "IN 8/2003 Anexo 規則 4.4.3"
+   },
+   {
+    "text": "クラス(色)は8つ: Verde azulado / Verde cana、Verde、Amarelada、Amarela、Marrom、Chumbado、Esbranquiçada、Discrepante",
+    "status": "verified",
+    "sourceIds": [
+     "mapa-in8-2003"
+    ],
+    "quote": "será classificado em 8 (oito) classes: 4.5.1. Verde Azulado e Verde Cana: cores características do café despolpado ou degomado;",
+    "location": "IN 8/2003 Anexo 規則 4.5"
+   },
+   {
+    "text": "欠点の換算: 黒豆1個=1、発酵豆2個=1、貝殻豆3個=1、未熟(緑)豆5個=1、割れ5個=1、虫食い2〜5個=1、未熟な(中身の少ない)豆5個=1",
+    "status": "verified",
+    "sourceIds": [
+     "mapa-in8-2003"
+    ],
+    "quote": "Grão Preto 1 1 Grãos Ardidos 2 1 Conchas 3 1 Grãos Verdes 5 1 Grãos Quebrados 5 1 Grãos Brocados 2 a 5 1 Grãos Mal Granados ou Chochos 5 1",
+    "location": "IN 8/2003 Anexo 規則 16.1 Tabela 1"
+   },
+   {
+    "text": "タイプ2は欠点4個(+100点)",
+    "status": "verified",
+    "sourceIds": [
+     "mapa-in8-2003"
+    ],
+    "quote": "4 2 + 100",
+    "location": "IN 8/2003 Anexo 規則 16.3 Tabela 3"
+   },
+   {
+    "text": "タイプ3は欠点12個(+50点)",
+    "status": "verified",
+    "sourceIds": [
+     "mapa-in8-2003"
+    ],
+    "quote": "12 3 + 50",
+    "location": "IN 8/2003 Anexo 規則 16.3 Tabela 3"
+   },
+   {
+    "text": "タイプ4は欠点26個(基準)",
+    "status": "verified",
+    "sourceIds": [
+     "mapa-in8-2003"
+    ],
+    "quote": "26 4 Base",
+    "location": "IN 8/2003 Anexo 規則 16.3 Tabela 3"
+   },
+   {
+    "text": "タイプ5は欠点46個(50点)",
+    "status": "verified",
+    "sourceIds": [
+     "mapa-in8-2003"
+    ],
+    "quote": "46 5 50",
+    "location": "IN 8/2003 Anexo 規則 16.3 Tabela 3"
+   },
+   {
+    "text": "タイプ6は欠点86個(100点)",
+    "status": "verified",
+    "sourceIds": [
+     "mapa-in8-2003"
+    ],
+    "quote": "86 6 100",
+    "location": "IN 8/2003 Anexo 規則 16.3 Tabela 3"
+   },
+   {
+    "text": "タイプ7は欠点160個(150点)",
+    "status": "verified",
+    "sourceIds": [
+     "mapa-in8-2003"
+    ],
+    "quote": "160 7 150",
+    "location": "IN 8/2003 Anexo 規則 16.3 Tabela 3"
+   },
+   {
+    "text": "タイプ8は欠点360個(200点)。360個を超えると、規格外(Fora de Tipo)",
+    "status": "verified",
+    "sourceIds": [
+     "mapa-in8-2003"
+    ],
+    "quote": "360 8 200 > 360 Fora de Tipo",
+    "location": "IN 8/2003 Anexo 規則 16.3 Tabela 3"
+   },
+   {
+    "text": "黒豆が50個を超える、発酵豆が100個を超える、黒緑豆が100個を超えると、規格外",
+    "status": "verified",
+    "sourceIds": [
+     "mapa-in8-2003"
+    ],
+    "quote": "7.2. Mais de 50 grãos pretos ou mais de 100 grãos ardidos ou mais de 100 grãos preto verde;",
+    "location": "IN 8/2003 Anexo 規則 7.2"
+   },
+   {
+    "text": "水分は、等級に関わらず、12.5%を超えてはならない",
+    "status": "verified",
+    "sourceIds": [
+     "mapa-in8-2003"
+    ],
+    "quote": "os teores de umidade do Café Beneficiado Grão Cru não poderão exceder os limites máximos de tolerância de 12,5%",
+    "location": "IN 8/2003 Anexo 規則 5.1"
+   },
+   {
+    "text": "異物・不純物は、最大1%",
+    "status": "verified",
+    "sourceIds": [
+     "mapa-in8-2003"
+    ],
+    "quote": "O percentual máximo de matérias estranhas e impurezas permitido no Café Beneficiado Grão Cru será de 1%",
+    "location": "IN 8/2003 Anexo 規則 6.1"
+   },
+   {
+    "text": "この規則に反して生豆(Café Beneficiado Grão Cru)を商業化することは、詐欺とみなされる",
+    "status": "verified",
+    "sourceIds": [
+     "mapa-in8-2003"
+    ],
+    "quote": "14.2. Será também considerada fraude a comercialização do Café Beneficiado Grão Cru, em desacordo com o estabelecido neste Regulamento.",
+    "location": "IN 8/2003 Anexo 規則 14.2"
+   },
+   {
+    "text": "ブラジルの公式分類(COB)がある",
+    "status": "verified",
+    "sourceIds": [
+     "cecafe-workshop-nova-cob-2026"
+    ],
+    "quote": "nova tabela de Classificação Oficial Brasileira (COB) do café, elaborada pelo Ministério da Agricultura e Pecuária (MAPA)",
+    "location": "Cecafé Comunicado 081-2026"
+   }
+  ]
+ },
+ "origin:ペルー:gradeSystem": {
+  "status": "verified",
+  "textHash": "8f6ecaee",
+  "claims": [
+   {
+    "text": "Grado 1: 現在の収穫の豆で、色と大きさが均一、強く新鮮な香り",
+    "status": "verified",
+    "sourceIds": [
+     "inacal-gip-101-2026"
+    ],
+    "quote": "Compuesto por granos de cosecha actual, color y tamaño homogéneo y de olor intensamente fresco.",
+    "location": "INACAL GIP 101:2026(実施ガイド) 5 Grado 1"
+   },
+   {
+    "text": "Grado 1のカップは優秀で、酸味は高く、ボディは良好",
+    "status": "verified",
+    "sourceIds": [
+     "inacal-gip-101-2026"
+    ],
+    "quote": "Calidad de taza excelente, libre de defectos || Acidez: Alta Cuerpo: Bueno",
+    "location": "INACAL GIP 101:2026(実施ガイド) 6.2.1.1 a)"
+   },
+   {
+    "text": "Grado 2: 現在の収穫の豆で、色が均一、新鮮な香り",
+    "status": "verified",
+    "sourceIds": [
+     "inacal-gip-101-2026"
+    ],
+    "quote": "Compuesto por granos de cosecha actual, color homogéneo y de olor fresco.",
+    "location": "INACAL GIP 101:2026(実施ガイド) 5 Grado 2"
+   },
+   {
+    "text": "Grado 2のカップは良く、酸味は良好、ボディは中程度",
+    "status": "verified",
+    "sourceIds": [
+     "inacal-gip-101-2026"
+    ],
+    "quote": "Calidad de taza buena, libre de defectos || Acidez: Buena Cuerpo: Medio",
+    "location": "INACAL GIP 101:2026(実施ガイド) 6.2.1.1 b)"
+   },
+   {
+    "text": "Grado 3: 大きさと色がまちまちで、香りは弱から中程度",
+    "status": "verified",
+    "sourceIds": [
+     "inacal-gip-101-2026"
+    ],
+    "quote": "Compuestos por granos de tamaño y color variable, olor de poca a mediana intensidad.",
+    "location": "INACAL GIP 101:2026(実施ガイド) 5 Grado 3"
+   },
+   {
+    "text": "Grado 3のカップは中程度で、酸味は中程度、ボディは中程度",
+    "status": "verified",
+    "sourceIds": [
+     "inacal-gip-101-2026"
+    ],
+    "quote": "Calidad de taza media, libre de defectos || Acidez: Mediana Cuerpo: Medio",
+    "location": "INACAL GIP 101:2026(実施ガイド) 6.2.1.1 c)"
+   },
+   {
+    "text": "Grado 4: 古い収穫や、欠点の過多、準備・保管・輸送の不備で劣化した豆",
+    "status": "verified",
+    "sourceIds": [
+     "inacal-gip-101-2026"
+    ],
+    "quote": "que hayan sido deteriorados por el proceso de envejecimiento (cosecha antigua/cosecha pasada)",
+    "location": "INACAL GIP 101:2026(実施ガイド) 5 Grado 4"
+   },
+   {
+    "text": "Grado 4のカップは、酸味が穏やかで、カビ・発酵・そのほかの重い欠点の味が無いこと",
+    "status": "verified",
+    "sourceIds": [
+     "inacal-gip-101-2026"
+    ],
+    "quote": "Acidez: leve o suave; Sabor: libre de sabor a moho, fermentados o cualquier otro defecto drástico en la taza (por ejemplo, fenólico).",
+    "location": "INACAL GIP 101:2026(実施ガイド) 6.2.1.1 d)"
+   },
+   {
+    "text": "欠点は、Grado 1が最大15",
+    "status": "verified",
+    "sourceIds": [
+     "inacal-gip-101-2026"
+    ],
+    "quote": "a) Grado 1 Se admite un máximo de 15 defectos o imperfecciones",
+    "location": "INACAL GIP 101:2026(実施ガイド) 6.2.4 a)"
+   },
+   {
+    "text": "欠点は、Grado 2が最大23",
+    "status": "verified",
+    "sourceIds": [
+     "inacal-gip-101-2026"
+    ],
+    "quote": "b) Grado 2 Se admite un máximo de 23 defectos o imperfecciones",
+    "location": "INACAL GIP 101:2026(実施ガイド) 6.2.4 b)"
+   },
+   {
+    "text": "欠点は、Grado 3が最大30",
+    "status": "verified",
+    "sourceIds": [
+     "inacal-gip-101-2026"
+    ],
+    "quote": "c) Grado 3 Se admite un máximo de 30 defectos o imperfecciones",
+    "location": "INACAL GIP 101:2026(実施ガイド) 6.2.4 c)"
+   },
+   {
+    "text": "欠点は、Grado 4が31〜60",
+    "status": "verified",
+    "sourceIds": [
+     "inacal-gip-101-2026"
+    ],
+    "quote": "d) Grado 4 Se admite un máximo de 31 a 60 defectos y/o imperfecciones",
+    "location": "INACAL GIP 101:2026(実施ガイド) 6.2.4 d)"
+   },
+   {
+    "text": "水分は10〜12.5%",
+    "status": "verified",
+    "sourceIds": [
+     "inacal-gip-101-2026"
+    ],
+    "quote": "La humedad del café verde debe estar en el rango de 10 a 12,5%",
+    "location": "INACAL GIP 101:2026(実施ガイド) 6.2.2"
+   },
+   {
+    "text": "粒度は、最低でも50%がmalla 15(6mm)に残り、malla 14(5.60mm)を通過するのは最大5%",
+    "status": "verified",
+    "sourceIds": [
+     "inacal-gip-101-2026"
+    ],
+    "quote": "Mínimo: El 50% debe estar retenido en malla 15 (6mm). || Máximo: El 5% debe pasar la malla 14 (5,60mm).",
+    "location": "INACAL GIP 101:2026(実施ガイド) 6.2.3"
+   },
+   {
+    "text": "ガイドは本文で、「生豆は3つの等級に分類される」とも書いている",
+    "status": "verified",
+    "sourceIds": [
+     "inacal-gip-101-2026"
+    ],
+    "quote": "el café verde se clasifica en tres grados (véase el Anexo C)",
+    "location": "INACAL GIP 101:2026(実施ガイド) 5 Clasificación del café verde"
+   }
+  ]
+ },
+ "origin:コスタリカ:gradeSystem": {
+  "status": "verified",
+  "textHash": "49f6f3e2",
+  "claims": [
+   {
+    "text": "標高が高いほど豆が硬く締まり高品質とされる",
+    "status": "verified",
+    "sourceIds": [
+     "icafe-regiones"
+    ],
+    "quote": "La altitud está relacionada con factores climáticos y, en conjunto, afecta el tamaño y la dureza de la semilla e influye, además, en ciertos componentes de la calidad de la bebida, especialmente con la acidez.",
+    "location": "Regiones Cafetaleras 第2段落"
+   },
+   {
+    "text": "ロス・サントス地域のコーヒーはSHB(estrictamente duro)",
+    "status": "verified",
+    "sourceIds": [
+     "icafe-lossantos"
+    ],
+    "quote": "Se estima que cerca del 95% del grano es del tipo SHB (Strictly Hard Bean).",
+    "location": "Los Santos 生産の段落"
+   },
+   {
+    "text": "ICAFEの手順書は、LOW GROWN(大西洋側)を350〜600m、MEDIUM GROWN(トゥリアルバ)を600〜900m、HIGH GROWN(大西洋側)を900〜1,200mとする",
+    "status": "verified",
+    "sourceIds": [
+     "icafe-recibos-2-p-3-1"
+    ],
+    "quote": "LOW GROWN ATLANTIC Alto y Bajo Vertiente atlántica, San Carlos 350 a 600 msnm || ATLANTIC Turrialba y lluvioso Vertiente atlántica, Turrialba 600 a 900 msnm || HIGH GROWN ATLANTIC Vertiente atlántica Juan Viñas, Aquiares, Paraíso 900 a 1200 msnm",
+    "location": "ICAFE 手順書 2-P-3.1(Procedimiento llenado de Recibos de Café) K. ZONIFICACIÓN CAFETALERA"
+   },
+   {
+    "text": "MEDIUM HARD BEAN: コト・ブルス800〜1,200m、エル・ヘネラル400〜1,200m、中央盆地800〜1,200m",
+    "status": "verified",
+    "sourceIds": [
+     "icafe-recibos-2-p-3-1"
+    ],
+    "quote": "HARD BEAN Coto Brus Coto Brus 800 a 1200 msnm || HARD BEAN El General Pérez Zeledón 400 a 1200 msnm || HARD BEAN Meseta Central Meseta Central 800 a 1200 msnm",
+    "location": "ICAFE 手順書 2-P-3.1(Procedimiento llenado de Recibos de Café) K. ZONIFICACIÓN CAFETALERA"
+   },
+   {
+    "text": "HARD BEAN: 中央盆地(アルト・バホ) 1,200m超",
+    "status": "verified",
+    "sourceIds": [
+     "icafe-recibos-2-p-3-1"
+    ],
+    "quote": "HARD BEAN Alto y Bajo Meseta Central sobre 1200 msnm",
+    "location": "ICAFE 手順書 2-P-3.1(Procedimiento llenado de Recibos de Café) K. ZONIFICACIÓN CAFETALERA"
+   },
+   {
+    "text": "GOOD HARD BEAN: ナランホ・パルマレス・サンラモン 1,000〜1,200m",
+    "status": "verified",
+    "sourceIds": [
+     "icafe-recibos-2-p-3-1"
+    ],
+    "quote": "BEAN Naranjo, Palmares, San Ramón 1000 a 1200 msnm",
+    "location": "ICAFE 手順書 2-P-3.1(Procedimiento llenado de Recibos de Café) K. ZONIFICACIÓN CAFETALERA"
+   },
+   {
+    "text": "STRICTLY HARD BEAN: ノルテ・ロス・サントス(ドタ・タラス・レオン・コルテス) 1,200〜1,700m",
+    "status": "verified",
+    "sourceIds": [
+     "icafe-recibos-2-p-3-1"
+    ],
+    "quote": "HARD BEAN Norte Los Santos: Dota, Tarrazú y León Cortés Altitud 1200 a 1700 m.",
+    "location": "ICAFE 手順書 2-P-3.1(Procedimiento llenado de Recibos de Café) K. ZONIFICACIÓN CAFETALERA"
+   },
+   {
+    "text": "STRICTLY HARD BEAN: セントラル(アセリ・クリディバト・ラウニオン・モラビア) 1,200〜1,700m",
+    "status": "verified",
+    "sourceIds": [
+     "icafe-recibos-2-p-3-1"
+    ],
+    "quote": "HARD BEAN Central Aserrí, Curridabat, La Unión, Moravia Altitud 1200 a 1700 m.",
+    "location": "ICAFE 手順書 2-P-3.1(Procedimiento llenado de Recibos de Café) K. ZONIFICACIÓN CAFETALERA"
+   },
+   {
+    "text": "STRICTLY HARD BEAN: スル(エレディアのサンラファエルとバルバ、グレシア、アラフエラのナランホ) 1,200〜1,700m",
+    "status": "verified",
+    "sourceIds": [
+     "icafe-recibos-2-p-3-1"
+    ],
+    "quote": "HARD BEAN Sur San Rafael y Barva de Heredia, Grecia, Naranjo de Alajuela Altitud 1200 a 1700 m.",
+    "location": "ICAFE 手順書 2-P-3.1(Procedimiento llenado de Recibos de Café) K. ZONIFICACIÓN CAFETALERA"
+   },
+   {
+    "text": "太平洋側(ティララン、サンタクルス、ニコヤ、オフチャ、ナンダジュレ): 800〜1,200m",
+    "status": "verified",
+    "sourceIds": [
+     "icafe-recibos-2-p-3-1"
+    ],
+    "quote": "PACIFIC Dos de Tilarán, Santa Cruz, Nicoya, Hojancha y Nandayure 800 a 1200 msnm",
+    "location": "ICAFE 手順書 2-P-3.1(Procedimiento llenado de Recibos de Café) K. ZONIFICACIÓN CAFETALERA"
+   }
+  ]
+ },
+ "origin:ハワイ:gradeSystem": {
+  "status": "verified",
+  "textHash": "be2498e1",
+  "claims": [
+   {
+    "text": "Extra Fancyは、欠点が300gあたり8個以内で、大きさの最小はType Iがサイズ19、Type IIが13",
+    "status": "verified",
+    "sourceIds": [
+     "dab-har-4-143-2001"
+    ],
+    "quote": "which do not exceed eight full imperfections per three hundred grams as described in subsection (j); which do not exceed three per cent by weight other type b eans; and which in the case of type I beans meet the minimum size requirement of size 19 and in the case of type II beans meet the minimum size requirement of size 13",
+    "location": "ハワイ州行政規則 第4-143-6条(2001年版。州農務局の公式PDF AR-143.pdf) (a)"
+   },
+   {
+    "text": "Fancyは、欠点が300gあたり12個以内で、大きさの最小はType Iがサイズ18、Type IIが12",
+    "status": "verified",
+    "sourceIds": [
+     "dab-har-4-143-2001"
+    ],
+    "quote": "which do not exceed twelve full imperfections per three hundred grams as described in subsection (j); which do not exceed three per cent by weight other type beans; and which in the case of type I beans meet the minimum size requirement of size 18",
+    "location": "ハワイ州行政規則 第4-143-6条(2001年版。州農務局の公式PDF AR-143.pdf) (b)"
+   },
+   {
+    "text": "Hawaii No.1は、欠点が300gあたり18個以内で、大きさの最小はType Iがサイズ16、Type IIが10",
+    "status": "verified",
+    "sourceIds": [
+     "dab-har-4-143-2001"
+    ],
+    "quote": "which do not exceed eighteen full imperfections per three hundred grams as described in subsection (j); which do not exceed three per cent by weight other type beans; and which meet the minimum size requirement of size 16 for type I beans, provided a larger size may be specified, and size 10 for type II beans",
+    "location": "ハワイ州行政規則 第4-143-6条(2001年版。州農務局の公式PDF AR-143.pdf) (c)"
+   },
+   {
+    "text": "Selectは、欠点豆が重量で5%以内(うち、酸っぱい・腐敗臭・黒い・カビの豆は2%以内)で、酸っぱい・発酵・カビ・薬品臭などの好ましくない香味がない",
+    "status": "verified",
+    "sourceIds": [
+     "dab-har-4-143-2001"
+    ],
+    "quote": "which do not impart sour, fermented, moldy, medicinal, or other undesirable aromas and flavors when brewed; which do not ex ceed twelve and two tenths per cent or which do not contain less than nine per cent moisture by weight; and which do not exceed five per cent defective beans, by weight, included therein not more than two per cent, by weight, sour, stinker, black or moldy beans",
+    "location": "ハワイ州行政規則 第4-143-6条(2001年版。州農務局の公式PDF AR-143.pdf) (d)"
+   },
+   {
+    "text": "Primeは、欠点豆が重量で15%以内(うち、酸っぱい・腐敗臭・黒い・カビの豆は5%以内)",
+    "status": "verified",
+    "sourceIds": [
+     "dab-har-4-143-2001"
+    ],
+    "quote": "exceed fifteen per cent defective beans, by weight, included therein not more than five per cent, by weight, sour, stinker, black, or moldy beans",
+    "location": "ハワイ州行政規則 第4-143-6条(2001年版。州農務局の公式PDF AR-143.pdf) (e)"
+   },
+   {
+    "text": "Hawaii No.3は、欠点豆が重量で35%以内(うち、黒い・カビ・酸っぱい・腐敗臭の豆は5%以内)",
+    "status": "verified",
+    "sourceIds": [
+     "dab-har-4-143-2001"
+    ],
+    "quote": "which do not exceed thirty-five per cent defective beans, by weight, included therein not more than five per cent, by weight, black, moldy, sour, or stinker beans",
+    "location": "ハワイ州行政規則 第4-143-6条(2001年版。州農務局の公式PDF AR-143.pdf) (f)"
+   },
+   {
+    "text": "2020年7月1日施行の要約表も、欠点の許容を、8、12、18(300gあたりの欠点の個数)、5%、15%、35%と示す",
+    "status": "verified",
+    "sourceIds": [
+     "dab-har-summary-2020"
+    ],
+    "quote": "8 (FULL IMPERFECTIONS PER 300 GRAMS) 12 (FULL IMPERFECTIONS PER 300 GRAMS) 18 (FULL IMPERFECTIONS PER 300 GRAMS) 5% (DEFECTIVE BEANS INCL. NOT>2% FULL SOUR STINKER, BLACK OR MOLDY) 15% (DEFECTIVE BEANS INCL. NOT>5% FULL SOUR STINKER, BLACK OR MOLDY) 35%",
+    "location": "ハワイ州農務局 Summary of Chapter 4-143(2020年7月1日施行) ALLOWANCE FOR DEFECTS"
+   },
+   {
+    "text": "2020年の要約表は、Natural Prime・Mixed Natural Primeの欠点の許容を、欠点豆15%(うち黒い・カビの豆は5%以内)、水分を8〜13%とする",
+    "status": "verified",
+    "sourceIds": [
+     "dab-har-summary-2020"
+    ],
+    "quote": "15% (DEFECTIVE BEANS INCL. NOT>5% BLACK OR MOLDY) 15% (DEFECTIVE BEANS INCL. NOT>5% BLACK OR MOLDY)",
+    "location": "ハワイ州農務局 Summary of Chapter 4-143(2020年7月1日施行) ALLOWANCE FOR DEFECTS"
+   },
+   {
+    "text": "要約表は、水分を、Natural PrimeとMixed Natural Primeが8〜13%、それ以外が9〜12%とする",
+    "status": "verified",
+    "sourceIds": [
+     "dab-har-summary-2020"
+    ],
+    "quote": "MOISTURE (by wt.) 9 to 12% 9 to 12% 9 to 12% 9 to 12% 9 to 12% 9 to 12% 8 to 13% 8 to 13%",
+    "location": "ハワイ州農務局 Summary of Chapter 4-143(2020年7月1日施行) MOISTURE"
+   },
+   {
+    "text": "Extra Fancy・Fancy・Hawaii No.1は、清潔で、全体が均一に良い緑色で、焙煎の質が良く、淹れたときの香りと味が良い",
+    "status": "verified",
+    "sourceIds": [
+     "dab-har-4-143-2001"
+    ],
+    "quote": "which are clean and possess a uniformly good green color, good roasting quality, and good aroma and flavor when brewed",
+    "location": "ハワイ州行政規則 第4-143-6条(2001年版。州農務局の公式PDF AR-143.pdf) (a)(b)(c)"
+   },
+   {
+    "text": "Off Gradeは、Hawaii No.3より低い品質。「Hawaii」の語を併用することは禁じられている",
+    "status": "verified",
+    "sourceIds": [
+     "dab-har-summary-2020"
+    ],
+    "quote": "OFFGRADE = quality lower than Hawaii No. 3. Use of the term \"Hawaii\" in conjunction with the term Offgrade is prohibited.",
+    "location": "ハワイ州農務局 Summary of Chapter 4-143(2020年7月1日施行)"
+   },
+   {
+    "text": "等級名は Extra Fancy、Fancy、Hawaii No.1、Select、Prime、Hawaii No.3 を含む",
+    "status": "verified",
+    "sourceIds": [
+     "dab-grading-stats-2026"
+    ],
+    "quote": "The standards for grades of green coffee include Extra Fancy, Fancy, Hawaii No.1, Select, Prime, Hawaii No.3, Natural Prime, Mixed Natural Prime, and Off Grade.",
+    "location": "p.1 冒頭の本文(第1段落)"
+   },
+   {
+    "text": "Hawaii No.3未満(Off Grade)には『Hawaii』の語を使えない",
+    "status": "verified",
+    "sourceIds": [
+     "dab-har-summary-2020"
+    ],
+    "quote": "OFFGRADE = quality lower than Hawaii No. 3. Use of the term \"Hawaii\" in conjunction with the term Offgrade is prohibited.",
+    "location": "2020年7月1日施行の要約表の脚注"
+   },
+   {
+    "text": "2001年版の行政規則§4-143-7(Minimum export requirement)は、州外へ卸売量で出荷する生豆は、Hawaii No.3の要件を満たさなければならないと定める",
+    "status": "verified",
+    "sourceIds": [
+     "dab-har-4-143-2001"
+    ],
+    "quote": "Green coffee destined for shipment in wholesale quantities to points outside the State shall meet the requirements of Hawaii No. 3 green coffee",
+    "location": "2001年版 §4-143-7(Minimum export requirement)"
+   },
+   {
+    "text": "2026年1月のDAB資料は、Primeより品質が低いコーヒーは地域名(Hamakua、Kau、Kauai、Kona、Maui、Molokai、Oahu)を製品ラベルに使うことが禁じられていると記す",
+    "status": "verified",
+    "sourceIds": [
+     "dab-grading-stats-2026"
+    ],
+    "quote": "Coffee with a quality lower than Prime is prohibited from using geographic terms such as “Hamakua”, “Kau”, “Kauai, “Kona”, “Maui, “Molokai”, or “Oahu” on its product label.",
+    "location": "p.1 第1段落"
+   }
+  ]
+ },
+ "origin:コロンビア:gradeSystem": {
+  "status": "verified",
+  "textHash": "8b55f66e",
+  "claims": [
+   {
+    "text": "Excelsoは、大粒で主に平たく揃った豆で、スクリーン14(malla 14)より上に残り、5%まではそれより小さくスクリーン12に残る豆を許容する",
+    "status": "verified",
+    "sourceIds": [
+     "fnc-res-02-2016"
+    ],
+    "quote": "grano grande, principalmente plano, parejo, retenido por encima de malla catorce (14), con tolerancia hasta del cinco por ciento (5%) inferior a esa malla, pero retenido por la malla doce (12)",
+    "location": "全国コーヒー生産者委員会 決議第2号(2016年4月25日) 第2条"
+   },
+   {
+    "text": "Excelsoは、少なくとも50%の豆がスクリーン15に残る(Green Coffee Association of New York Cityの規格に準拠)",
+    "status": "verified",
+    "sourceIds": [
+     "fnc-res-02-2016"
+    ],
+    "quote": "por lo menos un cincuenta por ciento (50%) de granos retenidos sobre la malla quince (15)",
+    "location": "全国コーヒー生産者委員会 決議第2号(2016年4月25日) 第2条"
+   },
+   {
+    "text": "水分は12.5%以下",
+    "status": "verified",
+    "sourceIds": [
+     "fnc-res-02-2016"
+    ],
+    "quote": "No debe sobrepasar del doce punto cinco por ciento (12,5%)",
+    "location": "全国コーヒー生産者委員会 決議第2号(2016年4月25日) 3.1 Humedad"
+   },
+   {
+    "text": "欠点は、500gの試料で、24点(faltas)以内",
+    "status": "verified",
+    "sourceIds": [
+     "fnc-res-02-2016"
+    ],
+    "quote": "Hasta veinticuatro (24) faltas por quinientos (500) gramos de muestra.",
+    "location": "全国コーヒー生産者委員会 決議第2号(2016年4月25日) 3.2 Defectos"
+   },
+   {
+    "text": "欠点の換算: グループIは、黒豆・酸っぱい豆・古い豆(reposado)・未熟豆(cardenillo)・琥珀色(ámbar)の豆1個=1点、部分的に黒い・酸っぱい・未熟の豆2個=1点",
+    "status": "verified",
+    "sourceIds": [
+     "fnc-res-02-2016"
+    ],
+    "quote": "Granos Grupo I Un(1) Grano Negro 1.0 Un(1) Grano Vinagre 1.0 Un(1) Grano Reposado 1.0 Dos (2) Granos Parcialmente Negro 1.0",
+    "location": "全国コーヒー生産者委員会 決議第2号(2016年4月25日) 3.2 Defectos(表)"
+   },
+   {
+    "text": "欠点の換算: グループIIは、噛まれた・切れた豆、虫食い豆、変形・夏の豆、未熟豆、つぶれた豆、変色・まだらの豆、柔らかい豆、乾燥しすぎた豆が5個=1点、ブローカ(穿孔虫)の軽い食害が10個=1点",
+    "status": "verified",
+    "sourceIds": [
+     "fnc-res-02-2016"
+    ],
+    "quote": "Granos Grupo II Cinco(5 ) Granos Mordido y Cortado 1.0 Cinco(5 ) Granos Picado por Insecto 1.0 Diez (10) Ligeramente Picado por Broca 1.0",
+    "location": "全国コーヒー生産者委員会 決議第2号(2016年4月25日) 3.2 Defectos(表)"
+   },
+   {
+    "text": "香りは、そのコーヒー特有であること。明らかな異臭や汚染の兆候があれば、輸出できない",
+    "status": "verified",
+    "sourceIds": [
+     "fnc-res-02-2016"
+    ],
+    "quote": "El café deberá tener su olor característico.",
+    "location": "全国コーヒー生産者委員会 決議第2号(2016年4月25日) 3.4 Olor"
+   },
+   {
+    "text": "色は、均一な外観であること。色が混ざる場合は、Excelsoとして輸出できない",
+    "status": "verified",
+    "sourceIds": [
+     "fnc-res-02-2016"
+    ],
+    "quote": "El café deberá tener una apariencia uniforme en color. En caso de que presente mezcla de colores no se autoriza su exportación como excelso.",
+    "location": "全国コーヒー生産者委員会 決議第2号(2016年4月25日) 3.5 Color"
+   },
+   {
+    "text": "カップは、特有の味と香りがあり、発酵・化学薬品・カビ・古い(reposo)の欠陥の味が無いこと",
+    "status": "verified",
+    "sourceIds": [
+     "fnc-res-02-2016"
+    ],
+    "quote": "El café deberá tener sabor y aroma característico, debiendo estar libre de sabores defectuosos como fermento, producto químico, moho o reposo.",
+    "location": "全国コーヒー生産者委員会 決議第2号(2016年4月25日) 3.6 Prueba de taza"
+   },
+   {
+    "text": "包装には、「Excelso」、続けて「Café de Colombia」と表示する",
+    "status": "verified",
+    "sourceIds": [
+     "fnc-res-02-2016"
+    ],
+    "quote": "este café deberá marcarse, en su empaque, como \"Excelso\", seguido del descriptor \"Café de Colombia\"",
+    "location": "全国コーヒー生産者委員会 決議第2号(2016年4月25日) 第1パラグラフ"
+   },
+   {
+    "text": "輸出者と最終顧客は、豆の大きさと欠点の量を、最低条件を満たす範囲で、自由に合意できる。最低条件と異なる条件は、連盟の品質管理の検査や認証の対象にならない",
+    "status": "verified",
+    "sourceIds": [
+     "fnc-res-02-2016"
+    ],
+    "quote": "El exportador y su cliente final pueden acordar libremente las condiciones de tamaño de los granos y el contenido de defectos en el café excelso de exportación",
+    "location": "全国コーヒー生産者委員会 決議第2号(2016年4月25日) 第2パラグラフ"
+   }
+  ]
+ },
  "fact:「モカ」は港の名前でもある": {
   "status": "verified",
   "textHash": "8d0da212",
@@ -1733,57 +3137,6 @@
     ],
     "quote": "Tanzania’s Arabica growing regions are Kilimanjaro, Arusha, Tanga, Iringa, Mbeya, Kigoma, Manyara, Mwanza, Katavi, Mara, Njombe, Songwe, Rukwa, Geita and Ruvuma while Robusta is grown in Kagera and Morogoro regions.",
     "location": "TCB Coffee Farming"
-   }
-  ]
- },
- "origin:エルサルバドル:gradeSystem": {
-  "status": "verified",
-  "textHash": "fd214b71",
-  "claims": [
-   {
-    "text": "OSARTEC(エルサルバドル技術規制機構)のRTS 67.08.01:18が生豆の品質要件を定める",
-    "status": "verified",
-    "sourceIds": [
-     "osartec-rts-67-08-01-18-wto"
-    ],
-    "quote": "CAFÉ. CAFÉ VERDE (CAFÉ ORO). REQUISITOS DE CALIDAD … Editada por el Organismo Salvadoreño de Reglamentación Técnica",
-    "location": "表紙"
-   },
-   {
-    "text": "分類は標高・精選方法・欠点数の3基準",
-    "status": "verified",
-    "sourceIds": [
-     "osartec-rts-67-08-01-18-wto"
-    ],
-    "quote": "La clasificación y designación se basan en tres criterios: altitud, método de beneficiado y número de imperfecciones.",
-    "location": "5.1"
-   },
-   {
-    "text": "標高区分はSHG(Strictly High Grown、1,201m以上)、HG(High Grown、801〜1,200m)、CS(Central Standard、800m以下)の3段階",
-    "status": "verified",
-    "sourceIds": [
-     "osartec-rts-67-08-01-18-wto"
-    ],
-    "quote": "a) café producido hasta 800 m.s.n.m.; Central Estándar o CS; b) café producido de 801 a 1 200 m.s.n.m.; Media Altura o HG; c) café producido a más de 1 201 m.s.n.m.; Estricta Altura o SHG.",
-    "location": "5.1.1"
-   },
-   {
-    "text": "運用はかつてCSC(エルサルバドル・コーヒー審議会)が担っていた",
-    "status": "verified",
-    "sourceIds": [
-     "osartec-rts-67-08-01-18-wto"
-    ],
-    "quote": "La vigilancia y verificación del cumplimiento de este Reglamento Técnico Salvadoreño le corresponde al Consejo Salvadoreño del Café",
-    "location": "9.1"
-   },
-   {
-    "text": "2023年にISCへ引き継がれた",
-    "status": "verified",
-    "sourceIds": [
-     "asamblea-decreto-835-2023"
-    ],
-    "quote": "Art. 32.- El nuevo Instituto Salvadoreño del Café sucede por ministerio de ley a partir de la vigencia de esta Ley en las funciones, atribuciones, competencias, responsabilidades, derechos y obligaciones que correspondían al Consejo Salvadoreño del Café",
-    "location": "令第835号 第32条"
    }
   ]
  },
@@ -5391,36 +6744,6 @@
    "text": "After harvest, farmers deliver their picked cherries to the society they belong to (primary society), where they are processed (ICO Kenya profile). Nairobi Coffee Exchange (NCE) auctions are typically held on Tuesday mornings on the trading floor (NCE auction calendar). In Kenya, coffee is sold through a central auction system (ICO)."
   }
  },
- "origin:ケニア:gradeSystem": {
-  "status": "verified",
-  "content": {
-   "text": "ケニアのコーヒー(一般)規則2019(Legal Notice No. 102)では、AAは平豆で、21を通過し18に残る大きさ(7.2mm)とされる。ただし、大きさ・形による格付けは、コーヒーの品質のおおよその目安にすぎない(EAS 130:1999)。"
-  },
-  "textHash": "eb8f4c96",
-  "claims": [
-   {
-    "text": "大粒から順にAA・AB・C等の記号で表記する(AAは平豆でスクリーン21を通過し18に残る7.2mm、ABは18を通過し16に残る6.35mm)",
-    "status": "verified",
-    "sourceIds": [
-     "ke-gazette-ln102-2019"
-    ],
-    "quote": "AA Flat beans Through 21 retained on 18 (7.2 mm)",
-    "location": "Crops (Coffee) (General) Regulations 2019, Fifth Schedule A. Kenya Standards"
-   },
-   {
-    "text": "AAは大粒の等級だが、粒の大きさは必ずしも風味の良さを保証しない",
-    "status": "verified",
-    "sourceIds": [
-     "eas130-1999"
-    ],
-    "quote": "Grading by size and shape is only a fair estimate of coffee quality.",
-    "location": "EAS 130:1999 5.3 Grading by cup quality"
-   }
-  ],
-  "contentEn": {
-   "text": "Under Kenya's Coffee (General) Rules, 2019 (Legal Notice No. 102), AA is a flat bean that passes through screen 21 and is retained on screen 18 (7.2 mm). However, grading by size and shape is only a rough estimate of coffee quality (EAS 130:1999)."
-  }
- },
  "origin:ケニア:harvestSeason": {
   "status": "verified",
   "content": {
@@ -5709,36 +7032,6 @@
    "text": "92% of producers have a planted area of less than 5 ha, and together they account for 44% of the total area (ICAFE; no year given)."
   }
  },
- "origin:コスタリカ:gradeSystem": {
-  "status": "verified",
-  "content": {
-   "text": "ICAFEは、ロス・サントス地域のコーヒーの約95%がSHB(Strictly Hard Bean)と推定している。ICAFEは、標高は種子の大きさと硬さに影響し、カップ品質の一部(特に酸味)にも影響すると述べている。"
-  },
-  "textHash": "61c15984",
-  "claims": [
-   {
-    "text": "標高が高いほど豆が硬く締まり高品質とされる",
-    "status": "verified",
-    "sourceIds": [
-     "icafe-regiones"
-    ],
-    "quote": "La altitud está relacionada con factores climáticos y, en conjunto, afecta el tamaño y la dureza de la semilla e influye, además, en ciertos componentes de la calidad de la bebida, especialmente con la acidez.",
-    "location": "Regiones Cafetaleras 第2段落"
-   },
-   {
-    "text": "ロス・サントス地域のコーヒーはSHB(estrictamente duro)",
-    "status": "verified",
-    "sourceIds": [
-     "icafe-lossantos"
-    ],
-    "quote": "Se estima que cerca del 95% del grano es del tipo SHB (Strictly Hard Bean).",
-    "location": "Los Santos 生産の段落"
-   }
-  ],
-  "contentEn": {
-   "text": "ICAFE estimates that about 95% of the coffee in the Los Santos region is SHB (Strictly Hard Bean). ICAFE states that altitude affects the size and hardness of the seed and also influences some components of cup quality (especially acidity)."
-  }
- },
  "origin:コスタリカ:harvestSeason": {
   "status": "verified",
   "content": {
@@ -5935,36 +7228,6 @@
   ],
   "contentEn": {
    "text": "The FNC's official Café de Colombia website states that 540,000 families grow coffee in Colombia."
-  }
- },
- "origin:コロンビア:gradeSystem": {
-  "status": "verified",
-  "content": {
-   "text": "全国コーヒー生産者委員会の決議第2号(2016年)は、輸出用の生豆Excelsoを、大粒で主に平たく揃った豆で、スクリーン14(malla 14)より上に残るもの(5%まではそれより小さくスクリーン12に残る豆を許容)と定め、少なくとも50%の豆がスクリーン15に残ることを求める。"
-  },
-  "textHash": "5d8584cf",
-  "claims": [
-   {
-    "text": "Excelsoは、大粒で主に平たく揃った豆で、スクリーン14(malla 14)より上に残り、5%まではそれより小さくスクリーン12に残る豆を許容する",
-    "status": "verified",
-    "sourceIds": [
-     "fnc-res-02-2016"
-    ],
-    "quote": "Será objeto de exportación el Café Verde en Almendra Excelso, que es el café compuesto de grano grande, principalmente plano, parejo, retenido por encima de malla catorce (14), con tolerancia hasta del cinco por ciento (5%) inferior a esa malla, pero retenido por la malla doce (12)",
-    "location": "決議2号 第2条(2頁)"
-   },
-   {
-    "text": "Excelsoは、少なくとも50%の豆がスクリーン15に残る(Green Coffee Association of New York Cityの規格に準拠)",
-    "status": "verified",
-    "sourceIds": [
-     "fnc-res-02-2016"
-    ],
-    "quote": "En todo caso este café debe tener por lo menos un cincuenta por ciento (50%) de granos retenidos sobre la malla quince (15), de acuerdo con lo previsto en las normas de la Green Coffee Association of New York City, Inc.",
-    "location": "決議2号 第2条(2頁)"
-   }
-  ],
-  "contentEn": {
-   "text": "Resolution No. 2 (2016) of the National Committee of Coffee Growers defines export green coffee Excelso as large-grained, mainly flat, uniform beans retained above screen 14 (malla 14) (with a tolerance of up to 5% of smaller beans retained on screen 12), and requires that at least 50% of the beans be retained on screen 15."
   }
  },
  "origin:コロンビア:history": {
@@ -6379,27 +7642,6 @@
    "text": "The \"Coffee Farming\" page of the TCB (Tanzania Coffee Board) gives farm sizes of 0.5 to 2 acres."
   }
  },
- "origin:タンザニア:gradeSystem": {
-  "status": "verified",
-  "content": {
-   "text": "タンザニアのコーヒー産業規則(2013年、政府告示第385号)は、等級AAを、スクリーン18に最低90%が残るもの(スクリーン17は最大8〜10%)としている。"
-  },
-  "textHash": "24e930dd",
-  "claims": [
-   {
-    "text": "タンザニアの規則はマイルド・アラビカの精製豆を、スクリーン規格でAA・A・B・PB・AF・TT・E・Fに区分する",
-    "status": "verified",
-    "sourceIds": [
-     "tz-coffee-regs-2013"
-    ],
-    "quote": "AA Retained minimum 90% of screen 18. Maximum 8 - 10% of screen 17",
-    "location": "Coffee Industry Regulations 2013 (GN 385), Sixth Schedule II (Mild Arabica) 2.0"
-   }
-  ],
-  "contentEn": {
-   "text": "Tanzania's Coffee Industry Regulations (2013, Government Notice No. 385) define grade AA as a minimum of 90% retained on screen 18 (maximum 8 to 10% on screen 17)."
-  }
- },
  "origin:タンザニア:history": {
   "status": "verified",
   "content": {
@@ -6611,54 +7853,6 @@
   ],
   "contentEn": {
    "text": "Arabica accounts for an average of 60.9% of Tanzania's coffee production (TCB). A TaCRI document (2005) states that until 2004 the only commercial varieties grown in the country were Bourbon (N39) and Kent (KP423)."
-  }
- },
- "origin:ハワイ:gradeSystem": {
-  "status": "verified",
-  "content": {
-   "text": "ハワイ州農業・バイオセキュリティ局の統計資料(2026年1月)は、生豆(green coffee)の等級基準として Extra Fancy、Fancy、Hawaii No.1、Select、Prime、Hawaii No.3、Natural Prime、Mixed Natural Prime、Off Grade を挙げている。ハワイ州行政規則第4-143章の要約(2020年7月1日施行)では、Hawaii No.3より品質が低いOff Gradeに「Hawaii」の語を併用することが禁じられている。2001年版のハワイ州行政規則(第4-143-7条)は、州外へ卸売量で出荷する生豆は、Hawaii No.3の要件を満たさなければならないと定めている。2026年1月の同局の資料は、Primeより品質が低いコーヒーは、Hamakua、Kau、Kauai、Kona、Maui、Molokai、Oahuなどの地域名を製品ラベルに使うことが禁じられている、と記している。"
-  },
-  "textHash": "2dd530cb",
-  "claims": [
-   {
-    "text": "等級名は Extra Fancy、Fancy、Hawaii No.1、Select、Prime、Hawaii No.3 を含む",
-    "status": "verified",
-    "sourceIds": [
-     "dab-grading-stats-2026"
-    ],
-    "quote": "The standards for grades of green coffee include Extra Fancy, Fancy, Hawaii No.1, Select, Prime, Hawaii No.3, Natural Prime, Mixed Natural Prime, and Off Grade.",
-    "location": "p.1 冒頭の本文(第1段落)"
-   },
-   {
-    "text": "Hawaii No.3未満(Off Grade)には『Hawaii』の語を使えない",
-    "status": "verified",
-    "sourceIds": [
-     "dab-har-summary-2020"
-    ],
-    "quote": "OFFGRADE = quality lower than Hawaii No. 3. Use of the term \"Hawaii\" in conjunction with the term Offgrade is prohibited.",
-    "location": "2020年7月1日施行の要約表の脚注"
-   },
-   {
-    "text": "2001年版の行政規則§4-143-7(Minimum export requirement)は、州外へ卸売量で出荷する生豆は、Hawaii No.3の要件を満たさなければならないと定める",
-    "status": "verified",
-    "sourceIds": [
-     "dab-har-4-143-2001"
-    ],
-    "quote": "Green coffee destined for shipment in wholesale quantities to points outside the State shall meet the requirements of Hawaii No. 3 green coffee",
-    "location": "2001年版 §4-143-7(Minimum export requirement)"
-   },
-   {
-    "text": "2026年1月のDAB資料は、Primeより品質が低いコーヒーは地域名(Hamakua、Kau、Kauai、Kona、Maui、Molokai、Oahu)を製品ラベルに使うことが禁じられていると記す",
-    "status": "verified",
-    "sourceIds": [
-     "dab-grading-stats-2026"
-    ],
-    "quote": "Coffee with a quality lower than Prime is prohibited from using geographic terms such as “Hamakua”, “Kau”, “Kauai, “Kona”, “Maui, “Molokai”, or “Oahu” on its product label.",
-    "location": "p.1 第1段落"
-   }
-  ],
-  "contentEn": {
-   "text": "A statistics document of the Hawaii Department of Agriculture and Biosecurity (January 2026) lists Extra Fancy, Fancy, Hawaii No.1, Select, Prime, Hawaii No.3, Natural Prime, Mixed Natural Prime, and Off Grade as the grade standards for green coffee. In the summary of Hawaii Administrative Rules Chapter 4-143 (effective July 1, 2020), use of the term \"Hawaii\" in conjunction with Off Grade, which is lower in quality than Hawaii No.3, is prohibited. The 2001 edition of the Hawaii Administrative Rules (section 4-143-7) provides that green coffee shipped in wholesale quantities outside the State shall meet the requirements of Hawaii No.3 green coffee. The Department's January 2026 document states that coffee with a quality lower than Prime is prohibited from using geographic terms such as Hamakua, Kau, Kauai, Kona, Maui, Molokai, or Oahu on its product label."
   }
  },
  "origin:ハワイ:harvestSeason": {
@@ -7055,45 +8249,6 @@
   ],
   "contentEn": {
    "text": "According to an Embrapa article, coffee has 14 geographical indication registrations at the National Institute of Industrial Property (INPI). The Cerrado Mineiro geographical indication was changed to a Denomination of Origin (DO) registration in 2013 (Embrapa)."
-  }
- },
- "origin:ブラジル:gradeSystem": {
-  "status": "verified",
-  "content": {
-   "text": "MAPAの規則(Instrução Normativa 8/2003)の付属書には、ふるい(peneiras)の番号を挙げた記載(「Chato graúdo: peneiras 19/18 e 17」)がある。この規則に反して生豆(Café Beneficiado Grão Cru)を商業化することは、詐欺とみなされる。また、MAPAが作成したブラジル公式分類(COB)の新しい表が、2026年のCecaféの連絡(Comunicado 081-2026)で言及されている。"
-  },
-  "textHash": "b690e139",
-  "claims": [
-   {
-    "text": "ブラジルの公式分類(COB)がある",
-    "status": "verified",
-    "sourceIds": [
-     "cecafe-workshop-nova-cob-2026"
-    ],
-    "quote": "nova tabela de Classificação Oficial Brasileira (COB) do café, elaborada pelo Ministério da Agricultura e Pecuária (MAPA)",
-    "location": "Cecafé Comunicado 081-2026"
-   },
-   {
-    "text": "スクリーンサイズ(ふるい)でも分類される",
-    "status": "verified",
-    "sourceIds": [
-     "mapa-in-8-2003"
-    ],
-    "quote": "Chato graúdo: peneiras 19/18 e 17;",
-    "location": "IN 8/2003 Anexo, 4.2 Subcategoria"
-   },
-   {
-    "text": "商業取引にはこの分類が必須",
-    "status": "verified",
-    "sourceIds": [
-     "mapa-in-8-2003"
-    ],
-    "quote": "Será também considerada fraude a comercialização do Café Beneficiado Grão Cru, em desacordo com o estabelecido neste Regulamento.",
-    "location": "IN 8/2003 Anexo, 14.2 / 10.1"
-   }
-  ],
-  "contentEn": {
-   "text": "The annex to the MAPA regulation (Instrução Normativa 8/2003) contains an entry listing sieve (peneiras) numbers (\"Chato graúdo: peneiras 19/18 e 17\"). Marketing green coffee (Café Beneficiado Grão Cru) in violation of this regulation is considered fraud. In addition, a new table of the Brazilian Official Classification (COB) prepared by MAPA is mentioned in a 2026 Cecafé communication (Comunicado 081-2026)."
   }
  },
  "origin:ブラジル:harvestSeason": {
@@ -7622,72 +8777,6 @@
   ],
   "contentEn": {
    "text": "According to USDA FAS (May 2025), over 90% of Peru's coffee is grown by smallholder farmers on plots smaller than 5 hectares. The same source also describes Peru as the world's leading exporter of organic coffee. The Junta Nacional del Café (JNC), on its official website (archived March 2024 version), states that it brings together 56 coffee organizations, associations and cooperatives combined, with member households totaling 70,000, rooted in 14 coffee-growing zones."
-  }
- },
- "origin:ペルー:gradeSystem": {
-  "status": "verified",
-  "content": {
-   "text": "INACAL(ペルー国家品質院)の実施ガイドGIP 101:2026(第2版)は、NTP 209.027:2024 + CT 1:2025(コーヒー生豆の要求事項)のためのガイドである。同ガイドによると、欠点(defectos o imperfecciones)の上限はGrado 1が15、Grado 2が23、Grado 3が30。水分は10〜12.5%で、粒度は最低でも50%がmalla 15(6mm)に残ること。別の規格NTP 209.311(スペシャルティコーヒー、2019年版)の実施ガイドGIP 107:2021は、主要欠点0、二次欠点は最大5と示す。"
-  },
-  "textHash": "1cdee7b8",
-  "claims": [
-   {
-    "text": "Grado 1は最大15欠点、当期収穫・色と粒サイズが均一・香りが非常にフレッシュ",
-    "status": "verified",
-    "sourceIds": [
-     "inacal-gip-101-2026"
-    ],
-    "quote": "Grado 1 Compuesto por granos de cosecha actual, color y tamaño homogéneo y de olor intensamente fresco. || a) Grado 1 Se admite un máximo de 15 defectos o imperfecciones",
-    "location": "GIP 101:2026 第5章・6.2.4(2018年版の記述はGIP 101:2021も同じ)"
-   },
-   {
-    "text": "Grado 2は最大23欠点",
-    "status": "verified",
-    "sourceIds": [
-     "inacal-gip-101-2026"
-    ],
-    "quote": "b) Grado 2 Se admite un máximo de 23 defectos o imperfecciones",
-    "location": "GIP 101:2026 6.2.4"
-   },
-   {
-    "text": "Grado 3は最大30欠点で、色・粒サイズにばらつきがある",
-    "status": "verified",
-    "sourceIds": [
-     "inacal-gip-101-2026"
-    ],
-    "quote": "Grado 3 Compuestos por granos de tamaño y color variable, olor de poca a mediana intensidad. || c) Grado 3 Se admite un máximo de 30 defectos o imperfecciones",
-    "location": "GIP 101:2026 第5章・6.2.4"
-   },
-   {
-    "text": "共通基準は水分10〜12.5%",
-    "status": "verified",
-    "sourceIds": [
-     "inacal-gip-101-2026"
-    ],
-    "quote": "La humedad del café verde debe estar en el rango de 10 a 12,5%",
-    "location": "GIP 101:2026 6.2.2"
-   },
-   {
-    "text": "粒度は50%以上がマラ15(6.0mm)以上",
-    "status": "verified",
-    "sourceIds": [
-     "inacal-gip-101-2026"
-    ],
-    "quote": "Mínimo: El 50% debe estar retenido en malla 15 (6mm).",
-    "location": "GIP 101:2026 6.2.3"
-   },
-   {
-    "text": "NTP 209.311のスペシャルティコーヒー規格は主要欠点0個",
-    "status": "verified",
-    "sourceIds": [
-     "inacal-gip-107-2021"
-    ],
-    "quote": "Defectos primarios: 0 Defectos secundarios: Máximo 5",
-    "location": "GIP 107:2021(NTP 209.311:2019の実施ガイド)"
-   }
-  ],
-  "contentEn": {
-   "text": "The INACAL (Peru's National Institute of Quality) implementation guide GIP 101:2026 (2nd edition) is a guide for NTP 209.027:2024 + CT 1:2025 (requirements for green coffee). According to the guide, the upper limit of defects (defectos o imperfecciones) is 15 for Grado 1, 23 for Grado 2, and 30 for Grado 3. Moisture is 10-12.5%, and for screen size, at least 50% must be retained on malla 15 (6 mm). The implementation guide GIP 107:2021 for a separate standard, NTP 209.311 (specialty coffee, 2019 edition), indicates 0 primary defects and a maximum of 5 secondary defects."
   }
  },
  "origin:ペルー:history": {

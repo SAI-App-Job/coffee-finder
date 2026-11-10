@@ -1,0 +1,305 @@
+{
+  "scope": "grades-step2-3-2026-11-10",
+  "override": true,
+  "verifiedOn": "2026-11-10",
+  "sources": {
+    "dab-grading-stats-2026": {
+      "title": "Statistics on Grading Standards for Hawaiʻi's Green Coffee, State of Hawaiʻi, 2023-2025 (January 2026)",
+      "org": "Hawaiʻi Department of Agriculture and Biosecurity (Market Analysis and News Branch, with USDA NASS Pacific Region)",
+      "url": "https://dab.hawaii.gov/add/files/2026/02/Grading-Standards-for-Hawaii-Green-Coffee-2023-2025_Jan.2026-final.pdf",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": "curl + pypdf (2ページ全文)"
+    },
+    "dab-har-4-143-2001": {
+      "title": "Hawaii Administrative Rules Title 4 Subtitle 7 Chapter 143 Standards for Coffee (AR-143.pdf, Eff 10/8/01)",
+      "org": "Hawaiʻi Department of Agriculture (DAB掲載)",
+      "url": "https://dab.hawaii.gov/wp-content/uploads/2012/12/AR-143.pdf",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-10",
+      "note": "2001年版。2014年改正前の旧規則。DABの2026年資料が規則本体として今もこのURLを脚注に挙げているが、内容は旧版(Natural Prime等を含まない)。curl + pypdf(20ページ全文)"
+    },
+    "dab-har-summary-2020": {
+      "title": "Summary of Chapter 4-143 (effective July 1, 2020) - Hawaii Administrative Rules, Standards for Coffee",
+      "org": "Hawaiʻi Department of Agriculture, Quality Assurance Division",
+      "url": "https://dab.hawaii.gov/qad/files/2020/07/2020-Coffee-HAR-143-Summary-Defects-Allowance-back-to-15-eff-July1.pdf",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-10",
+      "note": "curl + pypdf。規則の要約表(規則本文ではない)"
+    },
+    "fnc-res-02-2016": {
+      "title": "Resolución 02 de 2016 (25 de abril) - Por la cual se unifican y actualizan las normas de calidad del café verde en almendra para exportación",
+      "org": "Comité Nacional de Cafeteros / Federación Nacional de Cafeteros de Colombia",
+      "url": "https://federaciondecafeteros.org/wp-content/uploads/2025/11/Resolucion-2-2016_cafe_verde.pdf",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-10",
+      "note": "取得元はInternet Archive(Wayback Machine)に保存された公式URLの複製(この環境から公式サイトへ直接接続できなかったため)。 画像のみのPDF(スキャン)で、pypdfでは本文が取れない。全ページを画像として読み、quoteは目視で書き写した(機械照合はできない)。 2026-11-10: Wayback保存版のPDFはスキャン画像で文字情報がない。ページ画像を直接見て確認した。"
+    }
+  },
+  "entries": {
+    "origin:ハワイ:gradeSystem": {
+      "status": "verified",
+      "claims": [
+        {
+          "text": "Extra Fancyは、欠点が300gあたり8個以内で、大きさの最小はType Iがサイズ19、Type IIが13",
+          "status": "verified",
+          "sourceIds": [
+            "dab-har-4-143-2001"
+          ],
+          "quote": "which do not exceed eight full imperfections per three hundred grams as described in subsection (j); which do not exceed three per cent by weight other type b eans; and which in the case of type I beans meet the minimum size requirement of size 19 and in the case of type II beans meet the minimum size requirement of size 13",
+          "location": "ハワイ州行政規則 第4-143-6条(2001年版。州農務局の公式PDF AR-143.pdf) (a)",
+          "note": "PDFの文字抽出で「type b eans」と、語の途中に空白が入っている。"
+        },
+        {
+          "text": "Fancyは、欠点が300gあたり12個以内で、大きさの最小はType Iがサイズ18、Type IIが12",
+          "status": "verified",
+          "sourceIds": [
+            "dab-har-4-143-2001"
+          ],
+          "quote": "which do not exceed twelve full imperfections per three hundred grams as described in subsection (j); which do not exceed three per cent by weight other type beans; and which in the case of type I beans meet the minimum size requirement of size 18",
+          "location": "ハワイ州行政規則 第4-143-6条(2001年版。州農務局の公式PDF AR-143.pdf) (b)"
+        },
+        {
+          "text": "Hawaii No.1は、欠点が300gあたり18個以内で、大きさの最小はType Iがサイズ16、Type IIが10",
+          "status": "verified",
+          "sourceIds": [
+            "dab-har-4-143-2001"
+          ],
+          "quote": "which do not exceed eighteen full imperfections per three hundred grams as described in subsection (j); which do not exceed three per cent by weight other type beans; and which meet the minimum size requirement of size 16 for type I beans, provided a larger size may be specified, and size 10 for type II beans",
+          "location": "ハワイ州行政規則 第4-143-6条(2001年版。州農務局の公式PDF AR-143.pdf) (c)"
+        },
+        {
+          "text": "Selectは、欠点豆が重量で5%以内(うち、酸っぱい・腐敗臭・黒い・カビの豆は2%以内)で、酸っぱい・発酵・カビ・薬品臭などの好ましくない香味がない",
+          "status": "verified",
+          "sourceIds": [
+            "dab-har-4-143-2001"
+          ],
+          "quote": "which do not impart sour, fermented, moldy, medicinal, or other undesirable aromas and flavors when brewed; which do not ex ceed twelve and two tenths per cent or which do not contain less than nine per cent moisture by weight; and which do not exceed five per cent defective beans, by weight, included therein not more than two per cent, by weight, sour, stinker, black or moldy beans",
+          "location": "ハワイ州行政規則 第4-143-6条(2001年版。州農務局の公式PDF AR-143.pdf) (d)",
+          "note": "PDFの文字抽出で「ex ceed」と、語の途中に空白が入っている。"
+        },
+        {
+          "text": "Primeは、欠点豆が重量で15%以内(うち、酸っぱい・腐敗臭・黒い・カビの豆は5%以内)",
+          "status": "verified",
+          "sourceIds": [
+            "dab-har-4-143-2001"
+          ],
+          "quote": "exceed fifteen per cent defective beans, by weight, included therein not more than five per cent, by weight, sour, stinker, black, or moldy beans",
+          "location": "ハワイ州行政規則 第4-143-6条(2001年版。州農務局の公式PDF AR-143.pdf) (e)"
+        },
+        {
+          "text": "Hawaii No.3は、欠点豆が重量で35%以内(うち、黒い・カビ・酸っぱい・腐敗臭の豆は5%以内)",
+          "status": "verified",
+          "sourceIds": [
+            "dab-har-4-143-2001"
+          ],
+          "quote": "which do not exceed thirty-five per cent defective beans, by weight, included therein not more than five per cent, by weight, black, moldy, sour, or stinker beans",
+          "location": "ハワイ州行政規則 第4-143-6条(2001年版。州農務局の公式PDF AR-143.pdf) (f)"
+        },
+        {
+          "text": "2020年7月1日施行の要約表も、欠点の許容を、8、12、18(300gあたりの欠点の個数)、5%、15%、35%と示す",
+          "status": "verified",
+          "sourceIds": [
+            "dab-har-summary-2020"
+          ],
+          "quote": "8 (FULL IMPERFECTIONS PER 300 GRAMS) 12 (FULL IMPERFECTIONS PER 300 GRAMS) 18 (FULL IMPERFECTIONS PER 300 GRAMS) 5% (DEFECTIVE BEANS INCL. NOT>2% FULL SOUR STINKER, BLACK OR MOLDY) 15% (DEFECTIVE BEANS INCL. NOT>5% FULL SOUR STINKER, BLACK OR MOLDY) 35%",
+          "location": "ハワイ州農務局 Summary of Chapter 4-143(2020年7月1日施行) ALLOWANCE FOR DEFECTS",
+          "note": "表の列は回転して印刷されており、文字抽出の並びで確認した。等級名との対応は、2001年版の条文で確認。"
+        },
+        {
+          "text": "2020年の要約表は、Natural Prime・Mixed Natural Primeの欠点の許容を、欠点豆15%(うち黒い・カビの豆は5%以内)、水分を8〜13%とする",
+          "status": "verified",
+          "sourceIds": [
+            "dab-har-summary-2020"
+          ],
+          "quote": "15% (DEFECTIVE BEANS INCL. NOT>5% BLACK OR MOLDY) 15% (DEFECTIVE BEANS INCL. NOT>5% BLACK OR MOLDY)",
+          "location": "ハワイ州農務局 Summary of Chapter 4-143(2020年7月1日施行) ALLOWANCE FOR DEFECTS"
+        },
+        {
+          "text": "要約表は、水分を、Natural PrimeとMixed Natural Primeが8〜13%、それ以外が9〜12%とする",
+          "status": "verified",
+          "sourceIds": [
+            "dab-har-summary-2020"
+          ],
+          "quote": "MOISTURE (by wt.) 9 to 12% 9 to 12% 9 to 12% 9 to 12% 9 to 12% 9 to 12% 8 to 13% 8 to 13%",
+          "location": "ハワイ州農務局 Summary of Chapter 4-143(2020年7月1日施行) MOISTURE"
+        },
+        {
+          "text": "Extra Fancy・Fancy・Hawaii No.1は、清潔で、全体が均一に良い緑色で、焙煎の質が良く、淹れたときの香りと味が良い",
+          "status": "verified",
+          "sourceIds": [
+            "dab-har-4-143-2001"
+          ],
+          "quote": "which are clean and possess a uniformly good green color, good roasting quality, and good aroma and flavor when brewed",
+          "location": "ハワイ州行政規則 第4-143-6条(2001年版。州農務局の公式PDF AR-143.pdf) (a)(b)(c)"
+        },
+        {
+          "text": "Off Gradeは、Hawaii No.3より低い品質。「Hawaii」の語を併用することは禁じられている",
+          "status": "verified",
+          "sourceIds": [
+            "dab-har-summary-2020"
+          ],
+          "quote": "OFFGRADE = quality lower than Hawaii No. 3. Use of the term \"Hawaii\" in conjunction with the term Offgrade is prohibited.",
+          "location": "ハワイ州農務局 Summary of Chapter 4-143(2020年7月1日施行)"
+        },
+        {
+          "text": "等級名は Extra Fancy、Fancy、Hawaii No.1、Select、Prime、Hawaii No.3 を含む",
+          "status": "verified",
+          "sourceIds": [
+            "dab-grading-stats-2026"
+          ],
+          "quote": "The standards for grades of green coffee include Extra Fancy, Fancy, Hawaii No.1, Select, Prime, Hawaii No.3, Natural Prime, Mixed Natural Prime, and Off Grade.",
+          "location": "p.1 冒頭の本文(第1段落)"
+        },
+        {
+          "text": "Hawaii No.3未満(Off Grade)には『Hawaii』の語を使えない",
+          "status": "verified",
+          "sourceIds": [
+            "dab-har-summary-2020"
+          ],
+          "quote": "OFFGRADE = quality lower than Hawaii No. 3. Use of the term \"Hawaii\" in conjunction with the term Offgrade is prohibited.",
+          "location": "2020年7月1日施行の要約表の脚注"
+        },
+        {
+          "text": "2001年版の行政規則§4-143-7(Minimum export requirement)は、州外へ卸売量で出荷する生豆は、Hawaii No.3の要件を満たさなければならないと定める",
+          "status": "verified",
+          "sourceIds": [
+            "dab-har-4-143-2001"
+          ],
+          "quote": "Green coffee destined for shipment in wholesale quantities to points outside the State shall meet the requirements of Hawaii No. 3 green coffee",
+          "location": "2001年版 §4-143-7(Minimum export requirement)"
+        },
+        {
+          "text": "2026年1月のDAB資料は、Primeより品質が低いコーヒーは地域名(Hamakua、Kau、Kauai、Kona、Maui、Molokai、Oahu)を製品ラベルに使うことが禁じられていると記す",
+          "status": "verified",
+          "sourceIds": [
+            "dab-grading-stats-2026"
+          ],
+          "quote": "Coffee with a quality lower than Prime is prohibited from using geographic terms such as “Hamakua”, “Kau”, “Kauai, “Kona”, “Maui, “Molokai”, or “Oahu” on its product label.",
+          "location": "p.1 第1段落"
+        }
+      ],
+      "note": "等級の詳細(2026-11-10、ステップ2・3)。"
+    },
+    "origin:コロンビア:gradeSystem": {
+      "status": "verified",
+      "claims": [
+        {
+          "text": "Excelsoは、大粒で主に平たく揃った豆で、スクリーン14(malla 14)より上に残り、5%まではそれより小さくスクリーン12に残る豆を許容する",
+          "status": "verified",
+          "sourceIds": [
+            "fnc-res-02-2016"
+          ],
+          "quote": "grano grande, principalmente plano, parejo, retenido por encima de malla catorce (14), con tolerancia hasta del cinco por ciento (5%) inferior a esa malla, pero retenido por la malla doce (12)",
+          "location": "全国コーヒー生産者委員会 決議第2号(2016年4月25日) 第2条",
+          "note": "スキャン画像(PDFに文字情報なし)を、2026-11-10に直接見て、転記した。機械照合はしていない。"
+        },
+        {
+          "text": "Excelsoは、少なくとも50%の豆がスクリーン15に残る(Green Coffee Association of New York Cityの規格に準拠)",
+          "status": "verified",
+          "sourceIds": [
+            "fnc-res-02-2016"
+          ],
+          "quote": "por lo menos un cincuenta por ciento (50%) de granos retenidos sobre la malla quince (15)",
+          "location": "全国コーヒー生産者委員会 決議第2号(2016年4月25日) 第2条",
+          "note": "スキャン画像(PDFに文字情報なし)を、2026-11-10に直接見て、転記した。機械照合はしていない。"
+        },
+        {
+          "text": "水分は12.5%以下",
+          "status": "verified",
+          "sourceIds": [
+            "fnc-res-02-2016"
+          ],
+          "quote": "No debe sobrepasar del doce punto cinco por ciento (12,5%)",
+          "location": "全国コーヒー生産者委員会 決議第2号(2016年4月25日) 3.1 Humedad",
+          "note": "スキャン画像(PDFに文字情報なし)を、2026-11-10に直接見て、転記した。機械照合はしていない。"
+        },
+        {
+          "text": "欠点は、500gの試料で、24点(faltas)以内",
+          "status": "verified",
+          "sourceIds": [
+            "fnc-res-02-2016"
+          ],
+          "quote": "Hasta veinticuatro (24) faltas por quinientos (500) gramos de muestra.",
+          "location": "全国コーヒー生産者委員会 決議第2号(2016年4月25日) 3.2 Defectos",
+          "note": "スキャン画像(PDFに文字情報なし)を、2026-11-10に直接見て、転記した。機械照合はしていない。"
+        },
+        {
+          "text": "欠点の換算: グループIは、黒豆・酸っぱい豆・古い豆(reposado)・未熟豆(cardenillo)・琥珀色(ámbar)の豆1個=1点、部分的に黒い・酸っぱい・未熟の豆2個=1点",
+          "status": "verified",
+          "sourceIds": [
+            "fnc-res-02-2016"
+          ],
+          "quote": "Granos Grupo I Un(1) Grano Negro 1.0 Un(1) Grano Vinagre 1.0 Un(1) Grano Reposado 1.0 Dos (2) Granos Parcialmente Negro 1.0",
+          "location": "全国コーヒー生産者委員会 決議第2号(2016年4月25日) 3.2 Defectos(表)",
+          "note": "スキャン画像(PDFに文字情報なし)を、2026-11-10に直接見て、転記した。機械照合はしていない。"
+        },
+        {
+          "text": "欠点の換算: グループIIは、噛まれた・切れた豆、虫食い豆、変形・夏の豆、未熟豆、つぶれた豆、変色・まだらの豆、柔らかい豆、乾燥しすぎた豆が5個=1点、ブローカ(穿孔虫)の軽い食害が10個=1点",
+          "status": "verified",
+          "sourceIds": [
+            "fnc-res-02-2016"
+          ],
+          "quote": "Granos Grupo II Cinco(5 ) Granos Mordido y Cortado 1.0 Cinco(5 ) Granos Picado por Insecto 1.0 Diez (10) Ligeramente Picado por Broca 1.0",
+          "location": "全国コーヒー生産者委員会 決議第2号(2016年4月25日) 3.2 Defectos(表)",
+          "note": "スキャン画像(PDFに文字情報なし)を、2026-11-10に直接見て、転記した。機械照合はしていない。"
+        },
+        {
+          "text": "香りは、そのコーヒー特有であること。明らかな異臭や汚染の兆候があれば、輸出できない",
+          "status": "verified",
+          "sourceIds": [
+            "fnc-res-02-2016"
+          ],
+          "quote": "El café deberá tener su olor característico.",
+          "location": "全国コーヒー生産者委員会 決議第2号(2016年4月25日) 3.4 Olor",
+          "note": "スキャン画像(PDFに文字情報なし)を、2026-11-10に直接見て、転記した。機械照合はしていない。"
+        },
+        {
+          "text": "色は、均一な外観であること。色が混ざる場合は、Excelsoとして輸出できない",
+          "status": "verified",
+          "sourceIds": [
+            "fnc-res-02-2016"
+          ],
+          "quote": "El café deberá tener una apariencia uniforme en color. En caso de que presente mezcla de colores no se autoriza su exportación como excelso.",
+          "location": "全国コーヒー生産者委員会 決議第2号(2016年4月25日) 3.5 Color",
+          "note": "スキャン画像(PDFに文字情報なし)を、2026-11-10に直接見て、転記した。機械照合はしていない。"
+        },
+        {
+          "text": "カップは、特有の味と香りがあり、発酵・化学薬品・カビ・古い(reposo)の欠陥の味が無いこと",
+          "status": "verified",
+          "sourceIds": [
+            "fnc-res-02-2016"
+          ],
+          "quote": "El café deberá tener sabor y aroma característico, debiendo estar libre de sabores defectuosos como fermento, producto químico, moho o reposo.",
+          "location": "全国コーヒー生産者委員会 決議第2号(2016年4月25日) 3.6 Prueba de taza",
+          "note": "スキャン画像(PDFに文字情報なし)を、2026-11-10に直接見て、転記した。機械照合はしていない。"
+        },
+        {
+          "text": "包装には、「Excelso」、続けて「Café de Colombia」と表示する",
+          "status": "verified",
+          "sourceIds": [
+            "fnc-res-02-2016"
+          ],
+          "quote": "este café deberá marcarse, en su empaque, como \"Excelso\", seguido del descriptor \"Café de Colombia\"",
+          "location": "全国コーヒー生産者委員会 決議第2号(2016年4月25日) 第1パラグラフ",
+          "note": "スキャン画像(PDFに文字情報なし)を、2026-11-10に直接見て、転記した。機械照合はしていない。"
+        },
+        {
+          "text": "輸出者と最終顧客は、豆の大きさと欠点の量を、最低条件を満たす範囲で、自由に合意できる。最低条件と異なる条件は、連盟の品質管理の検査や認証の対象にならない",
+          "status": "verified",
+          "sourceIds": [
+            "fnc-res-02-2016"
+          ],
+          "quote": "El exportador y su cliente final pueden acordar libremente las condiciones de tamaño de los granos y el contenido de defectos en el café excelso de exportación",
+          "location": "全国コーヒー生産者委員会 決議第2号(2016年4月25日) 第2パラグラフ",
+          "note": "スキャン画像(PDFに文字情報なし)を、2026-11-10に直接見て、転記した。機械照合はしていない。"
+        }
+      ],
+      "note": "等級の詳細(2026-11-10、ステップ2・3)。"
+    }
+  }
+}
