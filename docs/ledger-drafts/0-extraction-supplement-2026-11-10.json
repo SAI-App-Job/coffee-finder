@@ -1,0 +1,314 @@
+{
+  "scope": "extraction-supplement-2026-11-10",
+  "override": true,
+  "verifiedOn": "2026-11-10",
+  "sources": {
+    "ajca-paperdrip-4468": {
+      "title": "ペーパードリップ式の淹れ方",
+      "org": "一般社団法人 全日本コーヒー協会",
+      "url": "https://coffee.ajca.or.jp/column/4468/",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-10"
+    },
+    "ajca-principles-4452": {
+      "title": "おいしいコーヒーを淹れるための基本原則",
+      "org": "一般社団法人 全日本コーヒー協会",
+      "url": "https://coffee.ajca.or.jp/column/4452/",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-10"
+    },
+    "batali-2020-scirep": {
+      "title": "Brew temperature, at fixed brew strength and extraction, has little impact on the sensory profile of drip brew coffee (Batali, Ristenpart, Guinard; Scientific Reports 2020)",
+      "org": "Scientific Reports / UC Davis Coffee Center(SCA資金の査読論文)",
+      "url": "https://www.nature.com/articles/s41598-020-73341-4",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-10",
+      "note": "査読論文(オープンアクセス)の原文をcurlで取得して読んだ。論文が引用しているSCAハンドブック等の記述は論文を通した引用であり、SCA原文そのものではない。"
+    },
+    "sca-25-issue13-new-brewing-chart": {
+      "title": "Towards a New Brewing Chart (25 Magazine, Issue 13)",
+      "org": "Specialty Coffee Association(UC Davis Coffee Centerの研究者の寄稿)",
+      "url": "https://sca.coffee/sca-news/25/issue-13/towards-a-new-brewing-chart-xpj8t",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-10"
+    },
+    "sca-25-issue9-water-acidity": {
+      "title": "Water and Coffee Acidity: How to Adapt Your Water for Different Extraction Methods (25 Magazine, Issue 9)",
+      "org": "Specialty Coffee Association(ZHAWの研究者の寄稿)",
+      "url": "https://sca.coffee/sca-news/25/issue-9/english/water-and-coffee-acidity-how-to-adapt-your-water-for-different-extraction-methods-25-magazine-issue-9-pxjby",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-10"
+    },
+    "sca-protocols-best-practices-2018": {
+      "title": "Protocols and Best Practices (Revised 2018), 4 Brewing Best Practices",
+      "org": "Specialty Coffee Association",
+      "url": "https://static1.squarespace.com/static/587af1d4db29d69a1a226b95/t/60748749cf593c00972df582/1618249556105/SCA+Protocols+%26+Best+Practices.pdf",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-10",
+      "note": "SCA公式PDF(2018年改訂)。curlで取得しpypdfで本文抽出(20ページ)。該当箇所は17ページ。"
+    }
+  },
+  "entries": {
+    "extraction:principles": {
+      "status": "verified",
+      "claims": [
+        {
+          "text": "全日本コーヒー協会が挙げる、おいしく淹れる6つの基本原則(新鮮な焙煎豆、器具にあった挽き方、器具に合わせたコーヒー量、適切な水、清潔な器具、適切な抽出温度と抽出時間)",
+          "status": "verified",
+          "sourceIds": [
+            "ajca-principles-4452"
+          ],
+          "quote": "新鮮な 焙煎豆を使用する 器具にあった 挽き方をする 器具に合わせた コーヒー量を使用する 適切な 水を使用する 清潔な 器具を使用する 適切な抽出温度と 抽出時間を守る",
+          "location": "基本原則"
+        },
+        {
+          "text": "SCAのプロトコルは、抽出で測れる要素に、水(SCAの水質基準を満たすこと)と、粉と湯の比(55g/L±10%)を挙げる",
+          "status": "verified",
+          "sourceIds": [
+            "sca-protocols-best-practices-2018"
+          ],
+          "quote": "Water: valid when brewing water meets SCA water quality standard • Ratio of Coffee-to-Water (55 g/L ± 10%)",
+          "location": "SCA Protocols and Best Practices (Revised 2018) p.17, 4.1 Elements and Device"
+        },
+        {
+          "text": "SCAのプロトコルは、抽出で測れる要素に、粒度の分布、粉と湯の接触時間、湯温も挙げる",
+          "status": "verified",
+          "sourceIds": [
+            "sca-protocols-best-practices-2018"
+          ],
+          "quote": "Grind/particle size distribution: matches the time of coffee-to-water contact • Time of Coffee-to-water Contact: 1-4 minutes Fine, 4-6 minutes Drip, 6-8 minutes Coarse • Temperature: 200°F ± 5° & 94.0°C ± 2°)",
+          "location": "SCA Protocols and Best Practices (Revised 2018) p.17, 4.1 Elements and Device"
+        },
+        {
+          "text": "SCAのプロトコルは、抽出で測れる要素に、撹拌(粉の周りを湯が流れて、溶ける成分を均一に抽出させる混合の動き)と、濾材も挙げる",
+          "status": "verified",
+          "sourceIds": [
+            "sca-protocols-best-practices-2018"
+          ],
+          "quote": "Turbulence (mixing action of water flowing through & around the coffee particles to achieve a uniform extraction of soluble material) • Filter media",
+          "location": "SCA Protocols and Best Practices (Revised 2018) p.17, 4.1 Elements and Device"
+        }
+      ],
+      "note": "抽出理論の補足(2026-11-10)。SCAのプロトコルとマガジン、全日本コーヒー協会、Batali 2020の原文を読んで書いた。"
+    },
+    "extraction:strength": {
+      "status": "verified",
+      "claims": [
+        {
+          "text": "ロックハート(1957年)は、粉がどれだけ液体に溶け出したか(TDS)を測るだけで、コーヒーのおいしさを表せると提案した",
+          "status": "verified",
+          "sourceIds": [
+            "sca-25-issue13-new-brewing-chart"
+          ],
+          "quote": "you could describe how good your coffee is simply by measuring how much of the coffee grounds dissolved into the liquid. In modern terms, we call this measure the “total dissolved solids” or TDS of the coffee.",
+          "location": "Issue 13 本文 冒頭の節"
+        },
+        {
+          "text": "TDSは抽出収率(PE)と関係し、TDSとPEは、粉に対する湯の量(brew ratio)でつながっている",
+          "status": "verified",
+          "sourceIds": [
+            "sca-25-issue13-new-brewing-chart"
+          ],
+          "quote": "Lockhart also pointed out that the TDS is related to the “extraction yield” or percent extraction (PE), which means the fraction of the coffee grounds that have moved into the liquid phase, and that the TDS and PE are linked by the “brew ratio,” which is how much water you use per mass of coffee grounds.",
+          "location": "Issue 13 本文"
+        },
+        {
+          "text": "従来のチャートは、縦軸がTDS、横軸がPE、粉と湯の比が斜線",
+          "status": "verified",
+          "sourceIds": [
+            "sca-25-issue13-new-brewing-chart"
+          ],
+          "quote": "which has the TDS on the vertical axis, the PE on the horizontal axis, and the brew ratio as diagonal lines.",
+          "location": "Issue 13 本文"
+        },
+        {
+          "text": "SCA誌が挙げる従来のチャートの限界1: 味の描写と、消費者の好みを混同している",
+          "status": "verified",
+          "sourceIds": [
+            "sca-25-issue13-new-brewing-chart"
+          ],
+          "quote": "the chart conflates sensory descriptive attributes (“What does it taste like?”) with consumer hedonic preferences",
+          "location": "Issue 13 本文"
+        },
+        {
+          "text": "限界2: 区画が細かすぎる(抽出収率17.9%と18.1%の差を、多くの専門家は区別できない)",
+          "status": "verified",
+          "sourceIds": [
+            "sca-25-issue13-new-brewing-chart"
+          ],
+          "quote": "Most coffee experts will not be able to distinguish coffee brewed to 17.9 percent versus 18.1 percent extraction",
+          "location": "Issue 13 本文"
+        },
+        {
+          "text": "限界3: 風味の多様性を省いている",
+          "status": "verified",
+          "sourceIds": [
+            "sca-25-issue13-new-brewing-chart"
+          ],
+          "quote": "the classic chart completely omits the rich variety of flavors that we now know can occur in coffee",
+          "location": "Issue 13 本文"
+        },
+        {
+          "text": "UCデービス・コーヒーセンターは、Coffee Science FoundationとBreville社と組んで、チャートの更新と拡張に取り組んでいる",
+          "status": "verified",
+          "sourceIds": [
+            "sca-25-issue13-new-brewing-chart"
+          ],
+          "quote": "the UC Davis Coffee Center was delighted to partner with the Coffee Science Foundation and Breville Corporation to work on updating and expanding the classic Coffee Brewing Chart.",
+          "location": "Issue 13 本文"
+        },
+        {
+          "text": "全日本コーヒー協会: ドリップコーヒーの最適なブリックス(濃度)は、約1.4%前後と言われている",
+          "status": "verified",
+          "sourceIds": [
+            "ajca-paperdrip-4468"
+          ],
+          "quote": "おいしいドリップコーヒーの最適なブリックス（濃度）は、約1.4％前後と言われています。",
+          "location": "ペーパードリップ式の淹れ方"
+        }
+      ],
+      "note": "抽出理論の補足(2026-11-10)。SCAのプロトコルとマガジン、全日本コーヒー協会、Batali 2020の原文を読んで書いた。"
+    },
+    "extraction:grind": {
+      "status": "verified",
+      "claims": [
+        {
+          "text": "全日本コーヒー協会は、器具にあった挽き方をすることを、おいしく淹れる基本原則の1つに挙げる",
+          "status": "verified",
+          "sourceIds": [
+            "ajca-principles-4452"
+          ],
+          "quote": "器具にあった 挽き方をする",
+          "location": "基本原則"
+        },
+        {
+          "text": "同協会の表は、1杯分の粉の標準量を、極細挽き6〜8g、細挽き8〜10g、中細挽き約10g、中挽き12〜13g、粗挽き約15gと示す",
+          "status": "verified",
+          "sourceIds": [
+            "ajca-principles-4452"
+          ],
+          "quote": "極細挽き [ 6～8g ] 細挽き [ 8～10g ] 中細挽き [ 約10g ] 中挽き [ 12～13g ] 粗挽き [ 約15g ]",
+          "location": "基本原則 Beans 挽き方と分量"
+        },
+        {
+          "text": "SCAのプロトコルは、粒度の分布を、粉と湯の接触時間に合わせるものとする",
+          "status": "verified",
+          "sourceIds": [
+            "sca-protocols-best-practices-2018"
+          ],
+          "quote": "Grind/particle size distribution: matches the time of coffee-to-water contact",
+          "location": "SCA Protocols and Best Practices (Revised 2018) p.17, 4.1 Elements and Device"
+        },
+        {
+          "text": "SCAのプロトコルは、粉と湯の接触時間の目安を、細挽き1〜4分、ドリップ4〜6分、粗挽き6〜8分とする",
+          "status": "verified",
+          "sourceIds": [
+            "sca-protocols-best-practices-2018"
+          ],
+          "quote": "Time of Coffee-to-water Contact: 1-4 minutes Fine, 4-6 minutes Drip, 6-8 minutes Coarse",
+          "location": "SCA Protocols and Best Practices (Revised 2018) p.17, 4.1 Elements and Device"
+        },
+        {
+          "text": "Batali 2020は、87・90・93℃の実験で、目標のTDSと抽出収率に合わせて、粒度と抽出時間を調整した",
+          "status": "verified",
+          "sourceIds": [
+            "batali-2020-scirep"
+          ],
+          "quote": "Three separate brew temperatures of 87 °C, 90 °C, or 93 °C were tested, adjusting the grind size and overall brew time as necessary to achieve the target TDS and PE.",
+          "location": "Scientific Reports 10, 2020 Abstract"
+        }
+      ],
+      "note": "抽出理論の補足(2026-11-10)。SCAのプロトコルとマガジン、全日本コーヒー協会、Batali 2020の原文を読んで書いた。"
+    },
+    "extraction:temperature": {
+      "status": "verified",
+      "claims": [
+        {
+          "text": "全日本コーヒー協会: 湯は沸騰後にポットを火から離し、静まった程度(95度前後)が適温",
+          "status": "verified",
+          "sourceIds": [
+            "ajca-principles-4452"
+          ],
+          "quote": "お湯は、沸騰後にポットを火から離し、湯面がぐらぐらしているのが静まった程度（95度前後）が適温です。",
+          "location": "基本原則 Temperature 温度"
+        },
+        {
+          "text": "SCAゴールデンカップ基準の湯温は、コーヒーに触れる時点で、200°F±5°(195〜205°F)、94.0°C±2°(92〜96℃)",
+          "status": "verified",
+          "sourceIds": [
+            "sca-protocols-best-practices-2018"
+          ],
+          "quote": "Coffee Preparation Temperature: To achieve the Golden Cup Standard, water temperature, at the point of contact with coffee, is recommended to fall between 200°F ± 5° & 94.0°C ± 2°.",
+          "location": "SCA Protocols and Best Practices (Revised 2018) p.17, Brewing Best Practices"
+        },
+        {
+          "text": "Batali 2020は、ドリップで87・90・93℃を試し、粒度と抽出時間を調整してTDSと抽出収率を揃えると、湯温は目立った影響がなかったと報告する",
+          "status": "verified",
+          "sourceIds": [
+            "batali-2020-scirep"
+          ],
+          "quote": "Three separate brew temperatures of 87 °C, 90 °C, or 93 °C were tested, adjusting the grind size and overall brew time as necessary to achieve the target TDS and PE. Although the TDS and PE both significantly affected the sensory profile of the coffee, surprisingly the brew temperature had no appreciable impact.",
+          "location": "Scientific Reports 10, 2020 Abstract"
+        },
+        {
+          "text": "同論文は、風味は、湯温の違いよりも、TDSと抽出収率の違いで決まると結論し、試した温度の範囲での結論だと断る",
+          "status": "verified",
+          "sourceIds": [
+            "batali-2020-scirep"
+          ],
+          "quote": "ultimately the sensory profile is governed by differences in TDS and PE rather than the brew temperature, at least over the range of temperatures tested.",
+          "location": "Scientific Reports 10, 2020 Abstract"
+        }
+      ],
+      "note": "抽出理論の補足(2026-11-10)。SCAのプロトコルとマガジン、全日本コーヒー協会、Batali 2020の原文を読んで書いた。"
+    },
+    "extraction:water": {
+      "status": "verified",
+      "claims": [
+        {
+          "text": "SCAのマガジン: 抽出に使う水を選ぶときは、pHよりアルカリ度を一定の範囲に保つことのほうが、はるかに重要",
+          "status": "verified",
+          "sourceIds": [
+            "sca-25-issue9-water-acidity"
+          ],
+          "quote": "It is far more important to keep alkalinity within a certain range than pH when it comes to choosing a water for coffee extraction.",
+          "location": "Issue 9 pH vs. Alkalinity"
+        },
+        {
+          "text": "同記事: 感じる酸味は、コーヒーから抽出された酸の量から、水のアルカリ度の分を引いたものに相当する",
+          "status": "verified",
+          "sourceIds": [
+            "sca-25-issue9-water-acidity"
+          ],
+          "quote": "Effectively, the perceived acidity of a given coffee beverage corresponds to the amount of acids extracted from the coffee minus the amount of alkalinity from the water.",
+          "location": "Issue 9 pH vs. Alkalinity"
+        },
+        {
+          "text": "同記事: 総硬度が20〜250ppm(CaCO3)の範囲では、実験上、抽出効率への影響は小さい",
+          "status": "verified",
+          "sourceIds": [
+            "sca-25-issue9-water-acidity"
+          ],
+          "quote": "However, experimental measurements suggest that the impact of total hardness on the overall extraction efficiency is insignificant within reasonable variations in total hardness levels (20–250 CaCO3).",
+          "location": "Issue 9 Adapting Water Recipes"
+        },
+        {
+          "text": "全日本コーヒー協会: 水道水には不純物や塩素などが含まれるため、なるべく浄水器を通した水を使うのがコツ。コーヒーの味をダイレクトに楽しむには、軟水が適している",
+          "status": "verified",
+          "sourceIds": [
+            "ajca-principles-4452"
+          ],
+          "quote": "水道水の中にはさまざまな不純物や塩素などが含まれるため、なるべく浄水器を通した水を使用することがおいしいコーヒーを淹れるコツ。コーヒーの味をダイレクトに楽しむには、軟水が適しています。",
+          "location": "基本原則 Water 水"
+        }
+      ],
+      "note": "抽出理論の補足(2026-11-10)。SCAのプロトコルとマガジン、全日本コーヒー協会、Batali 2020の原文を読んで書いた。"
+    }
+  }
+}

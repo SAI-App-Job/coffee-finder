@@ -26,11 +26,20 @@ const SELF_REPORTED = {
 const files = fs.readdirSync(DRAFTS).filter((f) => f.endsWith(".json")).sort();
 const sources = {};
 const drafts = {};
+// "override": true の下書きは、同じキーの他の下書き・監査結果より優先する(記述を書き直して、全主張を確認し直したとき用)。
+// 資料(sources)も、その下書きの内容(確認日など)を優先する。
+const locked = new Set();
 for (const f of files) {
   const j = JSON.parse(fs.readFileSync(path.join(DRAFTS, f), "utf8"));
-  for (const [id, s] of Object.entries(j.sources ?? {})) sources[id] = sources[id] ?? s;
+  for (const [id, s] of Object.entries(j.sources ?? {})) sources[id] = j.override ? s : (sources[id] ?? s);
   for (const [key, e] of Object.entries(j.entries ?? {})) {
+    if (j.override) {
+      drafts[key] = e;
+      locked.add(key);
+      continue;
+    }
     // 同じキーが複数あれば、主張の多いほうを採る
+    if (locked.has(key)) continue;
     if (!drafts[key] || (e.claims?.length ?? 0) > (drafts[key].claims?.length ?? 0)) drafts[key] = e;
   }
 }

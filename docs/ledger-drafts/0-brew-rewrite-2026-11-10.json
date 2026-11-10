@@ -1,0 +1,499 @@
+{
+  "scope": "brew-rewrite-2026-11-10",
+  "verifiedOn": "2026-11-10",
+  "sources": {
+    "ajca-principles-4452": {
+      "title": "おいしいコーヒーを淹れるための基本原則",
+      "org": "一般社団法人 全日本コーヒー協会",
+      "url": "https://coffee.ajca.or.jp/column/4452/",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-10"
+    },
+    "ajca-paperdrip-4468": {
+      "title": "ペーパードリップ式の淹れ方",
+      "org": "一般社団法人 全日本コーヒー協会",
+      "url": "https://coffee.ajca.or.jp/column/4468/",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-10"
+    },
+    "ajca-tools-4460": {
+      "title": "いろいろな器具",
+      "org": "一般社団法人 全日本コーヒー協会",
+      "url": "https://coffee.ajca.or.jp/column/4460/",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-10"
+    },
+    "hario-v60-series": {
+      "title": "V60の世界(V60の基本レシピ)",
+      "org": "HARIO株式会社(製造元の公式サイト)",
+      "url": "https://www.hario.com/v60/v60series.html",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-10"
+    },
+    "hario-paper-drip": {
+      "title": "ペーパードリップ(淹れ方)",
+      "org": "HARIO株式会社(製造元の公式サイト)",
+      "url": "https://www.hario.com/coffeelife/paper-drip.html",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-10"
+    },
+    "hario-press": {
+      "title": "プレス(淹れ方)",
+      "org": "HARIO株式会社(製造元の公式サイト)",
+      "url": "https://www.hario.com/coffeelife/press.html",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-10"
+    },
+    "hario-immersion": {
+      "title": "水出し・浸漬式(淹れ方)",
+      "org": "HARIO株式会社(製造元の公式サイト)",
+      "url": "https://www.hario.com/coffeelife/immersion-type.html",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-10"
+    },
+    "aeropress-how-to-use": {
+      "title": "How To Use AeroPress (Signature Brew Preparation)",
+      "org": "AeroPress, Inc.(製造元の公式サイト)",
+      "url": "https://aeropress.com/pages/how-to-use",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-10",
+      "note": "製品の公式使用説明。curlで取得した生HTMLの本文を読んだ。"
+    },
+    "sca-protocols-best-practices-2018": {
+      "title": "Protocols and Best Practices (Revised 2018), 4 Brewing Best Practices",
+      "org": "Specialty Coffee Association",
+      "url": "https://static1.squarespace.com/static/587af1d4db29d69a1a226b95/t/60748749cf593c00972df582/1618249556105/SCA+Protocols+%26+Best+Practices.pdf",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": "SCA公式PDF(2018年改訂)。curlで取得しpypdfで本文抽出(20ページ)。該当箇所は17ページ。"
+    },
+    "rao-2018-scirep": {
+      "title": "Acidity and Antioxidant Activity of Cold Brew Coffee (Scientific Reports 2018)",
+      "org": "Scientific Reports",
+      "url": "https://www.nature.com/articles/s41598-018-34392-w",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-09",
+      "note": "査読論文(オープンアクセス)の原文をcurlで取得して読んだ。"
+    }
+  },
+  "entries": {
+    "brew:ペーパードリップ": {
+      "status": "verified",
+      "claims": [
+        {
+          "text": "ハリオ: ペーパーフィルターではクリアな味わいに仕上がり、豆の個性がストレートに出やすい",
+          "status": "verified",
+          "sourceIds": [
+            "hario-paper-drip"
+          ],
+          "quote": "ペーパーフィルターでお手入れも簡単な上、コーヒーオイルやのろ等が取り除かれるため、クリアな味わいに仕上がります。 また、豆の持つ個性がストレートに出やすく",
+          "location": "ペーパードリップの特長"
+        },
+        {
+          "text": "全日本コーヒー協会の例は、中細挽きの粉12gに湯160mL(1杯140mL分)",
+          "status": "verified",
+          "sourceIds": [
+            "ajca-paperdrip-4468"
+          ],
+          "quote": "材料（１杯140mL分） コーヒー粉（中細挽き） 12ｇ 湯 160mL",
+          "location": "ペーパードリップ式の淹れ方 材料"
+        },
+        {
+          "text": "SCAゴールデンカップ基準は55g/L(≒1:18)",
+          "status": "verified",
+          "sourceIds": [
+            "sca-protocols-best-practices-2018"
+          ],
+          "quote": "Coffee-to-Water Ratio: To achieve the Golden Cup Standard, the recommended coffee-to-water ratio is 55 g/L ± 10%.",
+          "location": "SCA Protocols and Best Practices (Revised 2018) p.17, Brewing Best Practices"
+        },
+        {
+          "text": "全日本コーヒー協会は、ペーパードリップでは、湯を沸かし、湯温が95℃前後になるまで少し置くとする",
+          "status": "verified",
+          "sourceIds": [
+            "ajca-paperdrip-4468"
+          ],
+          "quote": "湯を沸かし、湯温が95℃前後になるまで少し置く。",
+          "location": "ペーパードリップ式の淹れ方 準備"
+        },
+        {
+          "text": "全日本コーヒー協会: 湯は沸騰後にポットを火から離し、静まった程度(95度前後)が適温",
+          "status": "verified",
+          "sourceIds": [
+            "ajca-principles-4452"
+          ],
+          "quote": "お湯は、沸騰後にポットを火から離し、湯面がぐらぐらしているのが静まった程度（95度前後）が適温です。",
+          "location": "基本原則 Temperature 温度"
+        },
+        {
+          "text": "SCAゴールデンカップ基準の湯温は、200°F±5°(195〜205°F)、94.0°C±2°(92〜96℃)",
+          "status": "verified",
+          "sourceIds": [
+            "sca-protocols-best-practices-2018"
+          ],
+          "quote": "Coffee Preparation Temperature: To achieve the Golden Cup Standard, water temperature, at the point of contact with coffee, is recommended to fall between 200°F ± 5° & 94.0°C ± 2°.",
+          "location": "SCA Protocols and Best Practices (Revised 2018) p.17, Brewing Best Practices"
+        },
+        {
+          "text": "ハリオ: 粉の2倍の湯で、注ぎ切ってから30秒蒸らす",
+          "status": "verified",
+          "sourceIds": [
+            "hario-v60-series"
+          ],
+          "quote": "コーヒー粉量の2倍のお湯を粉の中心から全体がしめる程度にゆっくり注ぎ、注ぎ切ってから30秒蒸らしてください。",
+          "location": "V60の基本レシピ Step.4"
+        },
+        {
+          "text": "ハリオ: 抽出時間は、杯数に関係なく、湯が落ちきるまでを3分以内とする",
+          "status": "verified",
+          "sourceIds": [
+            "hario-v60-series"
+          ],
+          "quote": "抽出時間は杯数分に関係なく、お湯が落ちきるまでを3分以内としてください。",
+          "location": "V60の基本レシピ Step.5"
+        },
+        {
+          "text": "ハリオ: ペーパーフィルターのチャック部を折り曲げ、ドリッパーの内部にぴったりセットする",
+          "status": "verified",
+          "sourceIds": [
+            "hario-v60-series"
+          ],
+          "quote": "ペーパーフィルターのチャック部を折り曲げ、ドリッパーの内部にぴったりとセットしてください。",
+          "location": "V60の基本レシピ Step.1"
+        },
+        {
+          "text": "ハリオ: ペーパーフィルター全体が湿る程度に湯をかけ、匂いを落としつつ器具を温める。サーバーに落ちた湯は捨てる",
+          "status": "verified",
+          "sourceIds": [
+            "hario-v60-series"
+          ],
+          "quote": "ペーパーフィルターの全体が湿る程度にお湯をかけてください。ペーパーフィルターの匂いを落としつつ、器具を温めるために行います。サーバーに落ちたお湯は捨ててください。",
+          "location": "V60の基本レシピ Step.2"
+        },
+        {
+          "text": "ハリオ: 粉をドリッパーに入れ、軽くゆすって平らにする",
+          "status": "verified",
+          "sourceIds": [
+            "hario-v60-series"
+          ],
+          "quote": "杯数分のコーヒー粉をドリッパーに入れ、軽くゆすって平らにしたあと、サーバーに乗せてください。",
+          "location": "V60の基本レシピ Step.3"
+        },
+        {
+          "text": "ハリオ: 湯を3回に分けて注ぐ(1回の湯量=粉量×4倍)。中心から渦状に、フィルターに直接かからないように注ぐ",
+          "status": "verified",
+          "sourceIds": [
+            "hario-v60-series"
+          ],
+          "quote": "お湯を3回に分けて注ぎます。（1回の湯量＝粉量×4倍）注ぐ際は、中心よりうず状にお湯を注いでください。また、ペーパーフィルターに直接かからないように注ぎ",
+          "location": "V60の基本レシピ Step.5"
+        },
+        {
+          "text": "ハリオ: 湯がサーバーに落ちきったら完成",
+          "status": "verified",
+          "sourceIds": [
+            "hario-v60-series"
+          ],
+          "quote": "ドリッパーに注いだお湯がサーバーに落ちきったら完成です。",
+          "location": "V60の基本レシピ Step.6"
+        },
+        {
+          "text": "ハリオ: 素早く注げばすっきりした味に、ゆっくり注げばコク深い味になる",
+          "status": "verified",
+          "sourceIds": [
+            "hario-v60-series"
+          ],
+          "quote": "素早く注げばすっきりした味、ゆっくり注ぐとコク深い味に。",
+          "location": "V60の世界 ドリッパーの特長"
+        },
+        {
+          "text": "全日本コーヒー協会: 抽出時間が短いと「酸っぱくて薄く」なり、長いと「苦くてエグく」なる",
+          "status": "verified",
+          "sourceIds": [
+            "ajca-principles-4452"
+          ],
+          "quote": "抽出時間が短いと「酸っぱくて薄く」なり、長いと「苦くてエグく」なります。",
+          "location": "基本原則 Time 抽出時間"
+        }
+      ],
+      "note": "淹れ方の全面見直し(2026-11-10)。確認できた内容だけで書き直した。"
+    },
+    "brew:フレンチプレス": {
+      "status": "verified",
+      "claims": [
+        {
+          "text": "ハリオ: プレス式は、ポットに直接粉を入れ、湯を注いでフィルターを押すだけで、深い風味のコーヒーが楽しめる",
+          "status": "verified",
+          "sourceIds": [
+            "hario-press"
+          ],
+          "quote": "プレス式のコーヒーメーカーはポットに直接コーヒー粉を入れ、お湯を注いでフィルターを押すだけで深い風味のコーヒーが愉しめます。",
+          "location": "プレスの特長"
+        },
+        {
+          "text": "全日本コーヒー協会の表では、フレンチプレスは中挽き(1杯分12〜13g)と粗挽き(約15g)に当てはまる",
+          "status": "verified",
+          "sourceIds": [
+            "ajca-principles-4452"
+          ],
+          "quote": "中挽き [ 12～13g ] 粗挽き [ 約15g ]",
+          "location": "基本原則 Beans 挽き方と分量(表: 列=フレンチプレス)",
+          "note": "挽き目と器具の対応は、ページの表(行=挽き目、列=器具、豆のアイコンが目安)をHTMLで読んで確認した。表の文字列だけでは対応が分からないため、ここだけ構造を読んだ。"
+        },
+        {
+          "text": "全日本コーヒー協会: 湯は沸騰後にポットを火から離し、静まった程度(95度前後)が適温",
+          "status": "verified",
+          "sourceIds": [
+            "ajca-principles-4452"
+          ],
+          "quote": "お湯は、沸騰後にポットを火から離し、湯面がぐらぐらしているのが静まった程度（95度前後）が適温です。",
+          "location": "基本原則 Temperature 温度"
+        },
+        {
+          "text": "ハリオ: 粉全体が湿る程度に湯を注ぎ、約1分待つ(蒸らし)",
+          "status": "verified",
+          "sourceIds": [
+            "hario-press"
+          ],
+          "quote": "コーヒー粉全体が湿る程度にお湯を注ぎ、約１分待つ",
+          "location": "プレス 淹れ方 蒸らし"
+        },
+        {
+          "text": "ハリオ: 湯を注ぎ、コーヒーの対流が収まったら(約2分)フィルターを押し下げる",
+          "status": "verified",
+          "sourceIds": [
+            "hario-press"
+          ],
+          "quote": "お湯を注ぎ、コーヒーの対流が収まったら（約２分）フィルターを押し下げる",
+          "location": "プレス 淹れ方 プレス"
+        },
+        {
+          "text": "全日本コーヒー協会: フレンチプレスは、成分がしっかり抽出されるので、豆の味わいをダイレクトに楽しめる",
+          "status": "verified",
+          "sourceIds": [
+            "ajca-tools-4460"
+          ],
+          "quote": "ガラスポットにコーヒー粉をセットしてお湯を注ぎ、数分間待つだけで手軽にコーヒーを淹れられます。コーヒーの成分がしっかりと抽出されるので、豆の味わいをダイレクトに楽しむことができます。",
+          "location": "いろいろな器具 French press"
+        }
+      ],
+      "note": "淹れ方の全面見直し(2026-11-10)。確認できた内容だけで書き直した。"
+    },
+    "brew:エアロプレス": {
+      "status": "verified",
+      "claims": [
+        {
+          "text": "湯は85℃(185°F)。温度調節できるケトルがなければ、沸騰した湯を使う",
+          "status": "verified",
+          "sourceIds": [
+            "aeropress-how-to-use"
+          ],
+          "quote": "Heat water to 185°F (85°C) using your kettle. If you don’t have a temperature control kettle, use boiling water.",
+          "location": "How To Use AeroPress / Signature Brew Preparation"
+        },
+        {
+          "text": "チャンバーにフィルターキャップを取り付け、粉16〜18g(こんもり1スクープ)を入れる",
+          "status": "verified",
+          "sourceIds": [
+            "aeropress-how-to-use"
+          ],
+          "quote": "Stand Chamber on sturdy mug and add 1 heaping Scoop or 16-18 grams store-bought, medium ground coffee.",
+          "location": "Signature Brew Preparation(中挽き)"
+        },
+        {
+          "text": "中細挽きの粉も、16〜18g(こんもり1スクープ)",
+          "status": "verified",
+          "sourceIds": [
+            "aeropress-how-to-use"
+          ],
+          "quote": "add 1 heaping Scoop or 16-18 grams of medium-fine ground coffee",
+          "location": "Signature Brew Preparation(中細挽き)"
+        },
+        {
+          "text": "粉を平らにし、チャンバーの目盛り「4」まで湯を注ぐ。少し落ちてくるのは正常",
+          "status": "verified",
+          "sourceIds": [
+            "aeropress-how-to-use"
+          ],
+          "quote": "Shake gently to level coffee. Pour water up to the 4 marked on side of Chamber. You will hear some coffee drip through into the mug. This is a normal part of the process.",
+          "location": "Signature Brew Preparation"
+        },
+        {
+          "text": "約3秒かき混ぜ、プランジャーを約1/2インチ差し込み、少し引き上げて真空にして落下を止め、60秒待つ(中挽き)",
+          "status": "verified",
+          "sourceIds": [
+            "aeropress-how-to-use"
+          ],
+          "quote": "Stir gently for about 3 seconds. Quickly insert Plunger about ½ inch into Chamber, then pull up slightly to create a vacuum to stop drip-through. Wait 60 seconds.",
+          "location": "Signature Brew Preparation(Grind Size: Medium)"
+        },
+        {
+          "text": "中細挽きの場合は、30秒待つ",
+          "status": "verified",
+          "sourceIds": [
+            "aeropress-how-to-use"
+          ],
+          "quote": "Quickly insert Plunger about ½ inch into Chamber, then pull up slightly to create a vacuum to stop drip-through. Wait 30 seconds.",
+          "location": "Signature Brew Preparation(Grind Size: Medium-Fine)"
+        },
+        {
+          "text": "プランジャーを、穏やかに一定の力で押す。「シュー」という音が始まって終わるまで押すと、抽出完了",
+          "status": "verified",
+          "sourceIds": [
+            "aeropress-how-to-use"
+          ],
+          "quote": "Press down on the Plunger, applying gentle constant pressure (do not push too hard). Press until you hear the hissing sound begin and end, an indication the last bit of brew has passed through the coffee bed and your coffee is ready.",
+          "location": "Signature Brew Preparation"
+        },
+        {
+          "text": "製造元は、AeroPressの抽出を、なめらかで、リッチで、ボディのある味わいと説明している",
+          "status": "verified",
+          "sourceIds": [
+            "aeropress-how-to-use"
+          ],
+          "quote": "Enjoy the uniquely smooth, rich, full-bodied flavor of an AeroPress 3 in 1 Brew.",
+          "location": "Signature Brew Preparation"
+        }
+      ],
+      "note": "淹れ方の全面見直し(2026-11-10)。確認できた内容だけで書き直した。"
+    },
+    "brew:水出し(コールドブリュー)": {
+      "status": "verified",
+      "claims": [
+        {
+          "text": "ハリオ: 水出し・浸漬式は、コーヒー粉を水につけて抽出する方法で、すっきりとした甘味が特徴",
+          "status": "verified",
+          "sourceIds": [
+            "hario-immersion"
+          ],
+          "quote": "コーヒー粉を水につけて抽出しする方法。すっきりとした甘味が特徴。",
+          "location": "水出し・浸漬式の特長"
+        },
+        {
+          "text": "ハリオ: 夜に作って冷蔵庫に入れておけば、朝には水出しコーヒーが楽しめる",
+          "status": "verified",
+          "sourceIds": [
+            "hario-immersion"
+          ],
+          "quote": "夜に作って冷蔵庫に入れておけば、朝には本格的な水出しコーヒーが楽しめます。",
+          "location": "水出し・浸漬式の特長"
+        },
+        {
+          "text": "ハリオ: 必要な時間は8時間程度",
+          "status": "verified",
+          "sourceIds": [
+            "hario-immersion"
+          ],
+          "quote": "8 hours 8時間程度",
+          "location": "必要な器具と時間"
+        },
+        {
+          "text": "ハリオ: ストレーナーにコーヒー粉(深煎りの中細挽きがおすすめ)を入れる",
+          "status": "verified",
+          "sourceIds": [
+            "hario-immersion"
+          ],
+          "quote": "ストレーナーにコーヒー粉（深煎りの中細挽きがおすすめ）を入れる",
+          "location": "淹れ方 コーヒー粉をセット"
+        },
+        {
+          "text": "ハリオ: 製品についている目盛まで水を注いで、粉に水をなじませる",
+          "status": "verified",
+          "sourceIds": [
+            "hario-immersion"
+          ],
+          "quote": "製品についている目盛まで水を注いでコーヒー粉に水をなじませる",
+          "location": "淹れ方 水を注ぐ"
+        },
+        {
+          "text": "ハリオ: 冷蔵庫に入れて待つ。8時間ほどでできあがり。夜のうちに作っておけば朝に楽しめる",
+          "status": "verified",
+          "sourceIds": [
+            "hario-immersion"
+          ],
+          "quote": "８時間ほどでできあがり。夜のうちに作っておけば朝に愉しめる",
+          "location": "淹れ方 冷蔵庫に入れて待つ"
+        },
+        {
+          "text": "全日本コーヒー協会: 水出しコーヒー(滴下式)は、6〜8時間(10杯分)かけて一滴ずつ水を落として抽出する",
+          "status": "verified",
+          "sourceIds": [
+            "ajca-tools-4460"
+          ],
+          "quote": "6〜8時間(10杯分)かけて一滴ずつポタポタと水を落としてコーヒーを抽出。",
+          "location": "いろいろな器具 Water drip"
+        },
+        {
+          "text": "低温では酸の抽出がホットより少ない(酸味系の抽出効率がホットより低い)",
+          "status": "verified",
+          "sourceIds": [
+            "rao-2018-scirep"
+          ],
+          "quote": "The hot brew coffees were found to have higher concentrations of total titratable acids, as well as higher antioxidant activity, than that of their cold brew counterparts.",
+          "location": "Rao 2018 Sci Rep, Abstract",
+          "note": "2026-11-09の検証・監査済みの主張をそのまま使った(今日は原文を再取得していない)。"
+        }
+      ],
+      "note": "淹れ方の全面見直し(2026-11-10)。確認できた内容だけで書き直した。"
+    },
+    "extraction:grind": {
+      "status": "verified",
+      "claims": [
+        {
+          "text": "全日本コーヒー協会は、器具にあった挽き方をすることを、おいしく淹れる基本原則の1つに挙げる",
+          "status": "verified",
+          "sourceIds": [
+            "ajca-principles-4452"
+          ],
+          "quote": "器具にあった 挽き方をする",
+          "location": "基本原則"
+        },
+        {
+          "text": "同協会の表は、1杯分の粉の標準量を、極細挽き6〜8g、細挽き8〜10g、中細挽き約10g、中挽き12〜13g、粗挽き約15gと示す",
+          "status": "verified",
+          "sourceIds": [
+            "ajca-principles-4452"
+          ],
+          "quote": "極細挽き [ 6～8g ] 細挽き [ 8～10g ] 中細挽き [ 約10g ] 中挽き [ 12～13g ] 粗挽き [ 約15g ]",
+          "location": "基本原則 Beans 挽き方と分量"
+        }
+      ],
+      "note": "抽出理論の見直し(2026-11-10)。"
+    },
+    "extraction:temperature": {
+      "status": "verified",
+      "claims": [
+        {
+          "text": "全日本コーヒー協会: 湯は沸騰後にポットを火から離し、静まった程度(95度前後)が適温",
+          "status": "verified",
+          "sourceIds": [
+            "ajca-principles-4452"
+          ],
+          "quote": "お湯は、沸騰後にポットを火から離し、湯面がぐらぐらしているのが静まった程度（95度前後）が適温です。",
+          "location": "基本原則 Temperature 温度"
+        },
+        {
+          "text": "SCAゴールデンカップ基準の湯温は、コーヒーに触れる時点で、200°F±5°(195〜205°F)、94.0°C±2°(92〜96℃)",
+          "status": "verified",
+          "sourceIds": [
+            "sca-protocols-best-practices-2018"
+          ],
+          "quote": "Coffee Preparation Temperature: To achieve the Golden Cup Standard, water temperature, at the point of contact with coffee, is recommended to fall between 200°F ± 5° & 94.0°C ± 2°.",
+          "location": "SCA Protocols and Best Practices (Revised 2018) p.17, Brewing Best Practices"
+        }
+      ],
+      "note": "抽出理論の見直し(2026-11-10)。"
+    }
+  },
+  "override": true
+}

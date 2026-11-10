@@ -141,7 +141,7 @@ export function BrewGuideView({ hideHeading = false }) {
     <main className="px-5 py-5 flex flex-col gap-3 max-w-xl mx-auto">
       {!hideHeading && <SectionHeading en="Brewing Guide" ja="コーヒーの淹れ方" />}
       <p className="text-[13px] text-[var(--c-text-3)] mb-1">
-        {t("代表的な4つの抽出方法と、豆の焙煎度との相性をまとめました。")}
+        {t("代表的な4つの抽出方法を、製造元や協会の公式の説明に基づいてまとめました。")}
       </p>
       {PUBLISHED_BREW_METHODS.map((brew) => (
         <BrewMethodCard key={brew.method} brew={brew} />
