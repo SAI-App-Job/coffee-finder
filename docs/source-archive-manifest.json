@@ -1,0 +1,1637 @@
+{
+  "ace-10-things-2020": {
+    "url": "https://allianceforcoffeeexcellence.org/blog/2020/08/17/10-things-you-should-know-about-cup-of-excellence/",
+    "finalUrl": "https://allianceforcoffeeexcellence.org/blog/2020/08/17/10-things-you-should-know-about-cup-of-excellence/",
+    "httpStatus": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "size": 176618,
+    "sha256": "bcb51a25c7762655cc70b6582e03b3894e3e8f5cef2252b4f5689969c37beeb3",
+    "accessed": "2026-11-10",
+    "tool": "urllib(backfill)",
+    "textChars": 7169,
+    "scannedImagesOnly": false,
+    "files": [
+      "original.html",
+      "text.txt"
+    ],
+    "note": ""
+  },
+  "ace-blog-rwanda-coe-2018": {
+    "url": "https://allianceforcoffeeexcellence.org/blog/2018/08/23/after-hiatus-rwanda-cup-of-excellence-returns-with-340-coffee-submissions/",
+    "finalUrl": "https://allianceforcoffeeexcellence.org/blog/2018/08/23/after-hiatus-rwanda-cup-of-excellence-returns-with-340-coffee-submissions/",
+    "httpStatus": 200,
+    "contentType": "",
+    "size": 174644,
+    "sha256": "201340e1905204decf72bca198c708a32cfe59a110d84d4a537bf46076aa96c6",
+    "accessed": "2026-11-10",
+    "tool": "ローカルのファイルを取り込み",
+    "textChars": 5112,
+    "scannedImagesOnly": false,
+    "files": [
+      "original.html",
+      "text.txt"
+    ],
+    "note": ""
+  },
+  "ace-coe-peru-2017": {
+    "url": "https://allianceforcoffeeexcellence.org/peru-2017/",
+    "finalUrl": "https://allianceforcoffeeexcellence.org/peru-2017/",
+    "httpStatus": 200,
+    "contentType": "",
+    "size": 241675,
+    "sha256": "49c00538b61c39661e49ef1f0c2f96b98042b0fd057058f429d4efb5a275b5d6",
+    "accessed": "2026-11-10",
+    "tool": "ローカルのファイルを取り込み",
+    "textChars": 14622,
+    "scannedImagesOnly": false,
+    "files": [
+      "original.html",
+      "text.txt"
+    ],
+    "note": ""
+  },
+  "ace-coe-peru-2018": {
+    "url": "https://allianceforcoffeeexcellence.org/peru-2018/",
+    "finalUrl": "https://allianceforcoffeeexcellence.org/peru-2018/",
+    "httpStatus": 200,
+    "contentType": "",
+    "size": 366095,
+    "sha256": "19638f411d0dcb93858476269c1effed6b4fbe11a281282c19df92ba9a1cf3c9",
+    "accessed": "2026-11-10",
+    "tool": "ローカルのファイルを取り込み",
+    "textChars": 15439,
+    "scannedImagesOnly": false,
+    "files": [
+      "original.html",
+      "text.txt"
+    ],
+    "note": ""
+  },
+  "ace-coe-peru-2019": {
+    "url": "https://allianceforcoffeeexcellence.org/peru-2019/",
+    "finalUrl": "https://allianceforcoffeeexcellence.org/peru-2019/",
+    "httpStatus": 200,
+    "contentType": "",
+    "size": 325805,
+    "sha256": "d9aa357519d0f474cf7afce59731f7ccddb9189c8ca9a77f7b5d7c70b89a6e13",
+    "accessed": "2026-11-10",
+    "tool": "ローカルのファイルを取り込み",
+    "textChars": 14671,
+    "scannedImagesOnly": false,
+    "files": [
+      "original.html",
+      "text.txt"
+    ],
+    "note": ""
+  },
+  "ace-coe-peru-2020": {
+    "url": "https://allianceforcoffeeexcellence.org/peru-2020/",
+    "finalUrl": "https://allianceforcoffeeexcellence.org/peru-2020/",
+    "httpStatus": 200,
+    "contentType": "",
+    "size": 269414,
+    "sha256": "d4980d7ea558f2d66c8f9f731b094902372cc834680206c151c0110fcde0842d",
+    "accessed": "2026-11-10",
+    "tool": "ローカルのファイルを取り込み",
+    "textChars": 11654,
+    "scannedImagesOnly": false,
+    "files": [
+      "original.html",
+      "text.txt"
+    ],
+    "note": ""
+  },
+  "ace-coe-peru-2021": {
+    "url": "https://allianceforcoffeeexcellence.org/peru-2021/",
+    "finalUrl": "https://allianceforcoffeeexcellence.org/peru-2021/",
+    "httpStatus": 200,
+    "contentType": "",
+    "size": 353833,
+    "sha256": "a066fb640dfea2e71092ad22d30d5f7d727600353a78051ffee516891946bd3f",
+    "accessed": "2026-11-10",
+    "tool": "ローカルのファイルを取り込み",
+    "textChars": 15062,
+    "scannedImagesOnly": false,
+    "files": [
+      "original.html",
+      "text.txt"
+    ],
+    "note": ""
+  },
+  "ace-coe-peru-2022": {
+    "url": "https://allianceforcoffeeexcellence.org/peru-2022/",
+    "finalUrl": "https://allianceforcoffeeexcellence.org/peru-2022/",
+    "httpStatus": 200,
+    "contentType": "",
+    "size": 365638,
+    "sha256": "7d6a4a368412b7fd99b33528c8aa508eb409f667d550d7c473c6db61da312018",
+    "accessed": "2026-11-10",
+    "tool": "ローカルのファイルを取り込み",
+    "textChars": 15307,
+    "scannedImagesOnly": false,
+    "files": [
+      "original.html",
+      "text.txt"
+    ],
+    "note": ""
+  },
+  "ace-coe-peru-2023": {
+    "url": "https://allianceforcoffeeexcellence.org/peru-2023/",
+    "finalUrl": "https://allianceforcoffeeexcellence.org/peru-2023/",
+    "httpStatus": 200,
+    "contentType": "",
+    "size": 317667,
+    "sha256": "a8813bebbf3cbe071c63a1ede5a066b759932e4959152125119909b2d3fba71c",
+    "accessed": "2026-11-10",
+    "tool": "ローカルのファイルを取り込み",
+    "textChars": 16027,
+    "scannedImagesOnly": false,
+    "files": [
+      "original.html",
+      "text.txt"
+    ],
+    "note": ""
+  },
+  "ace-coe-peru-2024": {
+    "url": "https://allianceforcoffeeexcellence.org/peru-2024/",
+    "finalUrl": "https://allianceforcoffeeexcellence.org/peru-2024/",
+    "httpStatus": 200,
+    "contentType": "",
+    "size": 267009,
+    "sha256": "d7f891028ed4a90502615c56e56dbdd7b4240062a120fea3024e344c936a0f35",
+    "accessed": "2026-11-10",
+    "tool": "ローカルのファイルを取り込み",
+    "textChars": 13442,
+    "scannedImagesOnly": false,
+    "files": [
+      "original.html",
+      "text.txt"
+    ],
+    "note": ""
+  },
+  "ace-coe-peru-2025": {
+    "url": "https://allianceforcoffeeexcellence.org/peru-2025/",
+    "finalUrl": "https://allianceforcoffeeexcellence.org/peru-2025/",
+    "httpStatus": 200,
+    "contentType": "",
+    "size": 292227,
+    "sha256": "b3ad9ea4a980d089bdf77d1317b46da1d76508785eefce1538e01bb938a0fec3",
+    "accessed": "2026-11-10",
+    "tool": "ローカルのファイルを取り込み",
+    "textChars": 14729,
+    "scannedImagesOnly": false,
+    "files": [
+      "original.html",
+      "text.txt"
+    ],
+    "note": ""
+  },
+  "ace-coe-peru-2026": {
+    "url": "https://allianceforcoffeeexcellence.org/peru-2026/",
+    "finalUrl": "https://allianceforcoffeeexcellence.org/peru-2026/",
+    "httpStatus": 200,
+    "contentType": "",
+    "size": 311243,
+    "sha256": "e9bd551e86e142f6e9017814a287a08927a26dec5a537ee394c9c3cb42ab589b",
+    "accessed": "2026-11-10",
+    "tool": "ローカルのファイルを取り込み",
+    "textChars": 14577,
+    "scannedImagesOnly": false,
+    "files": [
+      "original.html",
+      "text.txt"
+    ],
+    "note": ""
+  },
+  "aeki-sejarah": {
+    "url": "https://www.aeki-aice.org/sejarah-aeki/",
+    "finalUrl": "https://www.aeki-aice.org/sejarah-aeki/",
+    "httpStatus": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "size": 303988,
+    "sha256": "020fbd6772a9b48b433d23eeb727dc5c8f6337be9125b1c385a91b155755432c",
+    "accessed": "2026-11-10",
+    "tool": "urllib(backfill)",
+    "textChars": 9335,
+    "scannedImagesOnly": false,
+    "files": [
+      "original.html",
+      "text.txt"
+    ],
+    "note": ""
+  },
+  "aeropress-how-to-use": {
+    "url": "https://aeropress.com/pages/how-to-use",
+    "finalUrl": "https://aeropress.com/pages/how-to-use",
+    "httpStatus": 200,
+    "contentType": "",
+    "size": 3596156,
+    "sha256": "1f8f8e75530d91e61b4fa9853fb983e7279adfb6ba6a317341b4a25a86a39ce7",
+    "accessed": "2026-11-10",
+    "tool": "ローカルのファイルを取り込み",
+    "textChars": 30782,
+    "scannedImagesOnly": false,
+    "files": [
+      "original.html",
+      "text.txt"
+    ],
+    "note": ""
+  },
+  "afa-coffee-directorate-home": {
+    "url": "https://afa.go.ke/home-coffee-directorate/",
+    "finalUrl": "https://afa.go.ke/home-coffee-directorate/",
+    "httpStatus": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "size": 150226,
+    "sha256": "76efac70426468c8741d5360991f518a87460442e888ea61f5f5a5d42d7baf9e",
+    "accessed": "2026-11-10",
+    "tool": "urllib(backfill)",
+    "textChars": 4094,
+    "scannedImagesOnly": false,
+    "files": [
+      "original.html",
+      "text.txt"
+    ],
+    "note": ""
+  },
+  "afa-history-coffee": {
+    "url": "https://afa.go.ke/history-coffee-directorate/",
+    "finalUrl": "https://afa.go.ke/history-coffee-directorate/",
+    "httpStatus": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "size": 104713,
+    "sha256": "dd2298bbcd3a44c8b3ddfba660d7833ce229721b4ef34d68aa98a4ee460ef2a8",
+    "accessed": "2026-11-10",
+    "tool": "urllib(backfill)",
+    "textChars": 4547,
+    "scannedImagesOnly": false,
+    "files": [
+      "original.html",
+      "text.txt"
+    ],
+    "note": ""
+  },
+  "afa-update-2024-10": {
+    "url": "https://afa.go.ke/updates/charting-the-path-towards-a-sustainable-coffee-sub-sector-in-kenya/",
+    "finalUrl": "https://afa.go.ke/updates/charting-the-path-towards-a-sustainable-coffee-sub-sector-in-kenya/",
+    "httpStatus": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "size": 134503,
+    "sha256": "b9efa278bd2c467a2dcb25c17f08b90e3da6b8841c3d6063113495a662616c88",
+    "accessed": "2026-11-10",
+    "tool": "urllib(backfill)",
+    "textChars": 14975,
+    "scannedImagesOnly": false,
+    "files": [
+      "original.html",
+      "text.txt"
+    ],
+    "note": ""
+  },
+  "ajca-basic-category": {
+    "url": "https://coffee.ajca.or.jp/column/category/basic/",
+    "finalUrl": "https://coffee.ajca.or.jp/column/category/basic/",
+    "httpStatus": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "size": 49254,
+    "sha256": "861dfd6c512ed71545567ee938595d8293411a7ed498f8e6147b0956b51522e1",
+    "accessed": "2026-11-10",
+    "tool": "urllib(backfill)",
+    "textChars": 942,
+    "scannedImagesOnly": false,
+    "files": [
+      "original.html",
+      "text.txt"
+    ],
+    "note": ""
+  },
+  "ajca-espresso-4478": {
+    "url": "https://coffee.ajca.or.jp/column/4478/",
+    "finalUrl": "https://coffee.ajca.or.jp/column/4478/",
+    "httpStatus": 200,
+    "contentType": "",
+    "size": 49339,
+    "sha256": "fb958cb6658ecb1f75bc8a63caa0ceda3ec777f834b293f2599bb3488294406e",
+    "accessed": "2026-11-10",
+    "tool": "ローカルのファイルを取り込み",
+    "textChars": 1013,
+    "scannedImagesOnly": false,
+    "files": [
+      "original.html",
+      "text.txt"
+    ],
+    "note": "未使用(取得のみ)"
+  },
+  "ajca-nel-4474": {
+    "url": "https://coffee.ajca.or.jp/column/4474/",
+    "finalUrl": "https://coffee.ajca.or.jp/column/4474/",
+    "httpStatus": 200,
+    "contentType": "",
+    "size": 48198,
+    "sha256": "b1f538f781641518080eb934d685a433602e7d5aace0688bc11cd3a21ae08fea",
+    "accessed": "2026-11-10",
+    "tool": "ローカルのファイルを取り込み",
+    "textChars": 921,
+    "scannedImagesOnly": false,
+    "files": [
+      "original.html",
+      "text.txt"
+    ],
+    "note": "未使用(取得のみ)"
+  },
+  "ajca-paperdrip-4468": {
+    "url": "https://coffee.ajca.or.jp/column/4468/",
+    "finalUrl": "https://coffee.ajca.or.jp/column/4468/",
+    "httpStatus": 200,
+    "contentType": "",
+    "size": 47683,
+    "sha256": "0d69e8c16539ae9a4f8d9219c4f5ad860cb26858c4149f0409181d671badd7e3",
+    "accessed": "2026-11-10",
+    "tool": "ローカルのファイルを取り込み",
+    "textChars": 955,
+    "scannedImagesOnly": false,
+    "files": [
+      "original.html",
+      "text.txt"
+    ],
+    "note": ""
+  },
+  "ajca-principles-4452": {
+    "url": "https://coffee.ajca.or.jp/column/4452/",
+    "finalUrl": "https://coffee.ajca.or.jp/column/4452/",
+    "httpStatus": 200,
+    "contentType": "",
+    "size": 54152,
+    "sha256": "8b6950f71c1f7b5d94e07b9e177472276f1d57ba273ae05dfc77f2be65ac8937",
+    "accessed": "2026-11-10",
+    "tool": "ローカルのファイルを取り込み",
+    "textChars": 1368,
+    "scannedImagesOnly": false,
+    "files": [
+      "original.html",
+      "text.txt"
+    ],
+    "note": ""
+  },
+  "ajca-process-4476": {
+    "url": "https://coffee.ajca.or.jp/column/4476/",
+    "finalUrl": "https://coffee.ajca.or.jp/column/4476/",
+    "httpStatus": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "size": 61009,
+    "sha256": "4b575ddf668ae1eb3d88c03b749c01afbaca02a248c8be8e1d5d3fb5082ac536",
+    "accessed": "2026-11-10",
+    "tool": "urllib(backfill)",
+    "textChars": 2372,
+    "scannedImagesOnly": false,
+    "files": [
+      "original.html",
+      "text.txt"
+    ],
+    "note": ""
+  },
+  "ajca-roast-blend-4472": {
+    "url": "https://coffee.ajca.or.jp/column/4472/",
+    "finalUrl": "https://coffee.ajca.or.jp/column/4472/",
+    "httpStatus": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "size": 54707,
+    "sha256": "93485b25ff7c74f3b957fa24b5256aabd8afc6e219da23e68a59e5f9339e4773",
+    "accessed": "2026-11-10",
+    "tool": "urllib(backfill)",
+    "textChars": 2503,
+    "scannedImagesOnly": false,
+    "files": [
+      "original.html",
+      "text.txt"
+    ],
+    "note": ""
+  },
+  "ajca-siphon-4482": {
+    "url": "https://coffee.ajca.or.jp/column/4482/",
+    "finalUrl": "https://coffee.ajca.or.jp/column/4482/",
+    "httpStatus": 200,
+    "contentType": "",
+    "size": 47409,
+    "sha256": "4043cb6608e060d6b3e506749384e7aabc1ae56a3c7cf92ebb2751b6b06de146",
+    "accessed": "2026-11-10",
+    "tool": "ローカルのファイルを取り込み",
+    "textChars": 883,
+    "scannedImagesOnly": false,
+    "files": [
+      "original.html",
+      "text.txt"
+    ],
+    "note": "未使用(取得のみ)"
+  },
+  "ajca-tools-4460": {
+    "url": "https://coffee.ajca.or.jp/column/4460/",
+    "finalUrl": "https://coffee.ajca.or.jp/column/4460/",
+    "httpStatus": 200,
+    "contentType": "",
+    "size": 48463,
+    "sha256": "abae6ecf9c5c07a3b22c4e9987ec97207fbb1b57b92569f5ea68d143a7735f21",
+    "accessed": "2026-11-10",
+    "tool": "ローカルのファイルを取り込み",
+    "textChars": 1318,
+    "scannedImagesOnly": false,
+    "files": [
+      "original.html",
+      "text.txt"
+    ],
+    "note": ""
+  },
+  "ajcft-kiyaku-regular-coffee": {
+    "url": "https://www.jfftc.org/DATA/Kiyaku_pdf/b05_H_coffee.pdf",
+    "finalUrl": "https://www.jfftc.org/DATA/Kiyaku_pdf/b05_H_coffee.pdf",
+    "httpStatus": 200,
+    "contentType": "application/pdf",
+    "size": 320851,
+    "sha256": "63bf823c4787489249c140ce20cba49d0c567215d8d579b821a67452b92d3853",
+    "accessed": "2026-11-10",
+    "tool": "urllib(backfill)",
+    "textChars": 13832,
+    "scannedImagesOnly": false,
+    "files": [
+      "original.pdf",
+      "text.txt"
+    ],
+    "note": ""
+  },
+  "anacafe-analab": {
+    "url": "https://www.anacafe.org/Servicios/Analab/",
+    "finalUrl": "https://www.anacafe.org/analab/",
+    "httpStatus": 200,
+    "contentType": "text/html; charset=utf-8",
+    "size": 44645,
+    "sha256": "e87a3f1df7e32e5ae3f650ec3ded34b2bd003b460a47a3dc9260c2a6ce46c794",
+    "accessed": "2026-11-10",
+    "tool": "urllib(backfill)",
+    "textChars": 4177,
+    "scannedImagesOnly": false,
+    "files": [
+      "original.html",
+      "text.txt"
+    ],
+    "note": ""
+  },
+  "anacafe-boletin-monitoreo-variedades-2019": {
+    "url": "https://www.anacafe.org/uploads/file/79ca030eae3640399eda011cdc27d546/Boletin-CEDICAFE-Agosto-2019.pdf",
+    "finalUrl": "https://www.anacafe.org/uploads/file/79ca030eae3640399eda011cdc27d546/Boletin-CEDICAFE-Agosto-2019.pdf",
+    "httpStatus": 200,
+    "contentType": "application/pdf",
+    "size": 3603329,
+    "sha256": "dc2f18b8a4197ee986d3fe58f73aec0f74d88bd40c38ce30e934eeb63bba40e5",
+    "accessed": "2026-11-10",
+    "tool": "urllib(backfill)",
+    "textChars": 18042,
+    "scannedImagesOnly": false,
+    "files": [
+      "original.pdf",
+      "text.txt"
+    ],
+    "note": ""
+  },
+  "anacafe-cafe-de-guatemala": {
+    "url": "https://www.anacafe.org/cafe-de-guatemala/",
+    "finalUrl": "https://www.anacafe.org/cafe-de-guatemala/",
+    "httpStatus": 200,
+    "contentType": "text/html; charset=utf-8",
+    "size": 39898,
+    "sha256": "258f4f0c059a0c6f522007de1a4ce2e7e510353042c3098e77f55a737f2f0ebc",
+    "accessed": "2026-11-10",
+    "tool": "urllib(backfill)",
+    "textChars": 3930,
+    "scannedImagesOnly": false,
+    "files": [
+      "original.html",
+      "text.txt"
+    ],
+    "note": ""
+  },
+  "anacafe-catacion": {
+    "url": "https://www.anacafe.org/Servicios/Catacion/",
+    "finalUrl": "https://www.anacafe.org/Servicios/Catacion/",
+    "httpStatus": 200,
+    "contentType": "text/html; charset=utf-8",
+    "size": 40885,
+    "sha256": "8701b7b5bf247fbe2dec01f54881c063a626b0b4e44ed4db688cd28e4c35a72e",
+    "accessed": "2026-11-10",
+    "tool": "urllib(backfill)",
+    "textChars": 4343,
+    "scannedImagesOnly": false,
+    "files": [
+      "original.html",
+      "text.txt"
+    ],
+    "note": ""
+  },
+  "anacafe-faq": {
+    "url": "https://www.anacafe.org/preguntas-frecuentes/",
+    "finalUrl": "https://www.anacafe.org/preguntas-frecuentes/",
+    "httpStatus": 200,
+    "contentType": "text/html; charset=utf-8",
+    "size": 42767,
+    "sha256": "47766a2c48c96b8422ad7ed188d09814ea9e241fa3678d2ee2ec9f0bac8419c1",
+    "accessed": "2026-11-10",
+    "tool": "urllib(backfill)",
+    "textChars": 7052,
+    "scannedImagesOnly": false,
+    "files": [
+      "original.html",
+      "text.txt"
+    ],
+    "note": ""
+  },
+  "anacafe-gc-altitudes": {
+    "url": "https://www.guatemalancoffees.com/main/coffee-types/",
+    "finalUrl": "https://www.guatemalancoffees.com/main/coffee-types/",
+    "httpStatus": 200,
+    "contentType": "",
+    "size": 10009,
+    "sha256": "1feee5f7a7e1b4d7dd03829fbe634f62b377c3b437298fc2a2f724fe6c23175b",
+    "accessed": "2026-11-10",
+    "tool": "ローカルのファイルを取り込み",
+    "textChars": 1046,
+    "scannedImagesOnly": false,
+    "files": [
+      "original.html",
+      "text.txt",
+      "types_altitudes.png"
+    ],
+    "note": "ページ本体と、標高図の画像(types_altitudes.png)。図の内容は、画像を直接見て確認した。"
+  },
+  "anacafe-gc-regiones": {
+    "url": "https://www.guatemalancoffees.com/main/regions-and-profiles/",
+    "finalUrl": "https://www.guatemalancoffees.com/main/regions-and-profiles/",
+    "httpStatus": 200,
+    "contentType": "text/html; charset=utf-8",
+    "size": 12449,
+    "sha256": "ef659e6dfd758e125cce12453aee333e3ee94e7881ae9c17876c9c7a09a58afd",
+    "accessed": "2026-11-10",
+    "tool": "urllib(backfill)",
+    "textChars": 1408,
+    "scannedImagesOnly": false,
+    "files": [
+      "original.html",
+      "text.txt"
+    ],
+    "note": ""
+  },
+  "anacafe-guia-variedades-2020": {
+    "url": "https://www.anacafe.org/uploads/file/8ee92f426ab648318001477e70d0bbe1/Gu%C3%ADa-de-variedades-Anacaf%C3%A9-2020.pdf",
+    "finalUrl": "https://www.anacafe.org/uploads/file/8ee92f426ab648318001477e70d0bbe1/Gu%C3%ADa-de-variedades-Anacaf%C3%A9-2020.pdf",
+    "httpStatus": 200,
+    "contentType": "application/pdf",
+    "size": 8882872,
+    "sha256": "5d3fa56d0606daa1f99ae1010adc85807c127152dc9518604a4414a3eaa9d356",
+    "accessed": "2026-11-10",
+    "tool": "urllib(backfill)",
+    "textChars": 92927,
+    "scannedImagesOnly": false,
+    "files": [
+      "original.pdf",
+      "text.txt"
+    ],
+    "note": ""
+  },
+  "anacafe-historia-infografia": {
+    "url": "https://www.anacafe.org/conozcanos/historia/",
+    "finalUrl": "https://www.anacafe.org/conozcanos/historia/",
+    "httpStatus": 200,
+    "contentType": "text/html; charset=utf-8",
+    "size": 36135,
+    "sha256": "1d1e8a77ad53587038b152c81be16fe5c4db039dbf0ef4019a52e1d31755aca5",
+    "accessed": "2026-11-10",
+    "tool": "urllib(backfill)",
+    "textChars": 2624,
+    "scannedImagesOnly": false,
+    "files": [
+      "original.html",
+      "text.txt"
+    ],
+    "note": ""
+  },
+  "anacafe-legislacion-cafe": {
+    "url": "https://www.anacafe.org/uploads/file/a750889e55144d9c8cf95df69096d67f/Ley_Reglamento_Decretos.pdf",
+    "finalUrl": "https://www.anacafe.org/uploads/file/a750889e55144d9c8cf95df69096d67f/Ley_Reglamento_Decretos.pdf",
+    "httpStatus": 200,
+    "contentType": "application/pdf",
+    "size": 307412,
+    "sha256": "70d364e0580289265e374534d3278258ebf0ef4359295fa23b96b474e51892c1",
+    "accessed": "2026-11-10",
+    "tool": "urllib(backfill)",
+    "textChars": 66781,
+    "scannedImagesOnly": false,
+    "files": [
+      "original.pdf",
+      "text.txt"
+    ],
+    "note": ""
+  },
+  "anacafe-ley-cafe": {
+    "url": "https://www.anacafe.org/uploads/file/a750889e55144d9c8cf95df69096d67f/Ley_Reglamento_Decretos.pdf",
+    "finalUrl": "https://www.anacafe.org/uploads/file/a750889e55144d9c8cf95df69096d67f/Ley_Reglamento_Decretos.pdf",
+    "httpStatus": 200,
+    "contentType": "application/pdf",
+    "size": 307412,
+    "sha256": "70d364e0580289265e374534d3278258ebf0ef4359295fa23b96b474e51892c1",
+    "accessed": "2026-11-10",
+    "tool": "urllib(backfill)",
+    "textChars": 66781,
+    "scannedImagesOnly": false,
+    "files": [
+      "original.pdf",
+      "text.txt"
+    ],
+    "note": ""
+  },
+  "anacafe-microregionalizacion": {
+    "url": "https://www.anacafe.org/articles/estrategia-de-microregionalizacion-a-rainbow-of-choices/",
+    "finalUrl": "https://www.anacafe.org/articles/estrategia-de-microregionalizacion-a-rainbow-of-choices/",
+    "httpStatus": 200,
+    "contentType": "text/html; charset=utf-8",
+    "size": 42659,
+    "sha256": "03fb2e23701c5bf064d330b8568a7158e5049074f89c064258b0c0d1e3dfd555",
+    "accessed": "2026-11-10",
+    "tool": "urllib(backfill)",
+    "textChars": 6963,
+    "scannedImagesOnly": false,
+    "files": [
+      "original.html",
+      "text.txt"
+    ],
+    "note": ""
+  },
+  "anacafe-politica-laboral": {
+    "url": "https://www.anacafe.org/uploads/file/5807996c8c77433eb96e89d55b49e98e/Politica_laboral-Sector_Caf%C3%A9-Guatemala.pdf",
+    "finalUrl": "https://www.anacafe.org/uploads/file/5807996c8c77433eb96e89d55b49e98e/Politica_laboral-Sector_Caf%C3%A9-Guatemala.pdf",
+    "httpStatus": 200,
+    "contentType": "application/pdf",
+    "size": 2597430,
+    "sha256": "b3116af26cd18690ba78257959821ec5647a94c23b4eff15daab5e27bd1cf3c7",
+    "accessed": "2026-11-10",
+    "tool": "urllib(backfill)",
+    "textChars": 43048,
+    "scannedImagesOnly": false,
+    "files": [
+      "original.pdf",
+      "text.txt"
+    ],
+    "note": ""
+  },
+  "asamblea-constitucion-sv": {
+    "url": "https://www.asamblea.gob.sv/sites/default/files/2026-04/1.%20CONSTITUCI%C3%93N%20DE%20LA%20REP%C3%9ABLICA.pdf",
+    "finalUrl": "https://www.asamblea.gob.sv/sites/default/files/2026-04/1.%20CONSTITUCI%C3%93N%20DE%20LA%20REP%C3%9ABLICA.pdf",
+    "httpStatus": 200,
+    "contentType": "application/pdf",
+    "size": 427229,
+    "sha256": "b6d0fb7a8025829e9aaa27496747f2e4b65d9118ebf6560853c032c60b8fcf25",
+    "accessed": "2026-11-10",
+    "tool": "urllib(backfill)",
+    "textChars": 171752,
+    "scannedImagesOnly": false,
+    "files": [
+      "original.pdf",
+      "text.txt"
+    ],
+    "note": ""
+  },
+  "asamblea-decreto-835-2023": {
+    "url": "https://www.asamblea.gob.sv/sites/default/files/documents/decretos/4B8D61A9-F597-4643-BCD9-ABB2D99A4F4E.pdf",
+    "finalUrl": "https://www.asamblea.gob.sv/sites/default/files/documents/decretos/4B8D61A9-F597-4643-BCD9-ABB2D99A4F4E.pdf",
+    "httpStatus": 200,
+    "contentType": "application/pdf",
+    "size": 402878,
+    "sha256": "4a83342f95f3d42ff1660f7154d0e58b766d8eb75454bbbf152fbccec4cd9ab8",
+    "accessed": "2026-11-10",
+    "tool": "urllib(backfill)",
+    "textChars": 39706,
+    "scannedImagesOnly": false,
+    "files": [
+      "original.pdf",
+      "text.txt"
+    ],
+    "note": ""
+  },
+  "asamblea-prensa-ley-cafe-2024": {
+    "url": "https://www.asamblea.gob.sv/node/13122",
+    "finalUrl": "https://www.asamblea.gob.sv/node/13122",
+    "httpStatus": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "size": 37750,
+    "sha256": "9adf76c9ea1d8cf5f29dd4fb62c5b3d6736add4d5e73b56fcbcc101e0a5b2fa2",
+    "accessed": "2026-11-10",
+    "tool": "urllib(backfill)",
+    "textChars": 7556,
+    "scannedImagesOnly": false,
+    "files": [
+      "original.html",
+      "text.txt"
+    ],
+    "note": ""
+  },
+  "batali-2020-scirep": {
+    "url": "https://www.nature.com/articles/s41598-020-73341-4",
+    "finalUrl": "https://www.nature.com/articles/s41598-020-73341-4",
+    "httpStatus": 200,
+    "contentType": "",
+    "size": 429287,
+    "sha256": "4792364b6c137470b9439c5c4c5c9392ae295dac5d420194075dd98054e8d38e",
+    "accessed": "2026-11-10",
+    "tool": "ローカルのファイルを取り込み",
+    "textChars": 67307,
+    "scannedImagesOnly": false,
+    "files": [
+      "original.html",
+      "text.txt"
+    ],
+    "note": ""
+  },
+  "bop-auction-2021": {
+    "url": "https://bestofpanama.auction/auction-2021",
+    "finalUrl": "https://bestofpanama.auction/auction-2021",
+    "httpStatus": 200,
+    "contentType": "text/html",
+    "size": 464397,
+    "sha256": "2ced9790f4b9e8a900dbe28fbbb19128efd5caf7a603053effcf15afcaab992c",
+    "accessed": "2026-11-10",
+    "tool": "urllib(backfill)",
+    "textChars": 10653,
+    "scannedImagesOnly": false,
+    "files": [
+      "original.html",
+      "text.txt"
+    ],
+    "note": ""
+  },
+  "cafedecolombia-do-regional": {
+    "url": "https://cafedecolombia.com/en/regional-designation-of-origin/",
+    "finalUrl": "https://cafedecolombia.com/en/regional-designation-of-origin/",
+    "httpStatus": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "size": 59798,
+    "sha256": "5dcf6b2ecc0fce271cbe7da4e14ad4ed87380dedf60dcb7f9f71c6bc457a70fa",
+    "accessed": "2026-11-10",
+    "tool": "urllib(backfill)",
+    "textChars": 8700,
+    "scannedImagesOnly": false,
+    "files": [
+      "original.html",
+      "text.txt"
+    ],
+    "note": ""
+  },
+  "cafedecolombia-regions": {
+    "url": "https://cafedecolombia.com/en/coffee-growing-regions/",
+    "finalUrl": "https://cafedecolombia.com/en/coffee-growing-regions/",
+    "httpStatus": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "size": 164854,
+    "sha256": "1e5b668e84a0e5f18451e7ba9868f074eccdf8803ae995e82815e1ddf626fd68",
+    "accessed": "2026-11-10",
+    "tool": "urllib(backfill)",
+    "textChars": 4188,
+    "scannedImagesOnly": false,
+    "files": [
+      "original.html",
+      "text.txt"
+    ],
+    "note": ""
+  },
+  "cafedecolombia-seed-to-mug": {
+    "url": "https://cafedecolombia.com/en/from-seed-to-mug/",
+    "finalUrl": "https://cafedecolombia.com/en/from-seed-to-mug/",
+    "httpStatus": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "size": 54196,
+    "sha256": "a457dd78763c063f825ff23ac01148d7e0246b40d9a4982265c59dbf72f5212d",
+    "accessed": "2026-11-10",
+    "tool": "urllib(backfill)",
+    "textChars": 2021,
+    "scannedImagesOnly": false,
+    "files": [
+      "original.html",
+      "text.txt"
+    ],
+    "note": ""
+  },
+  "cecafe-relatorio-fev-2026": {
+    "url": "https://www.cecafe.com.br/publicacoes/noticias/relatorio-exportacao-cecafe-fev-2026-20260310/",
+    "finalUrl": "https://www.cecafe.com.br/publicacoes/noticias/relatorio-exportacao-cecafe-fev-2026-20260310/",
+    "httpStatus": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "size": 1520941,
+    "sha256": "b6436954ae8ac71bd203bc1e05fc2f5808376392ba8bb6d1602d623ec1f82160",
+    "accessed": "2026-11-10",
+    "tool": "urllib(backfill)",
+    "textChars": 8117,
+    "scannedImagesOnly": false,
+    "files": [
+      "original.html",
+      "text.txt"
+    ],
+    "note": ""
+  },
+  "cecafe-workshop-nova-cob-2026": {
+    "url": "https://www.cecafe.com.br/sem-categoria/workshop-proposta-de-nova-tabela-de-classificacao-oficial-do-cafe-20260915/",
+    "finalUrl": "https://www.cecafe.com.br/sem-categoria/workshop-proposta-de-nova-tabela-de-classificacao-oficial-do-cafe-20260915/",
+    "httpStatus": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "size": 1520305,
+    "sha256": "89914bf1130226525db61c5f6f6ed08d5c89aee403ce1e204f5f2b62db454ae4",
+    "accessed": "2026-11-10",
+    "tool": "urllib(backfill)",
+    "textChars": 3724,
+    "scannedImagesOnly": false,
+    "files": [
+      "original.html",
+      "text.txt"
+    ],
+    "note": ""
+  },
+  "cenicafe-avt-337-2005": {
+    "url": "https://biblioteca.cenicafe.org/bitstream/10778/401/1/avt0337.pdf",
+    "finalUrl": "https://biblioteca.cenicafe.org/bitstream/10778/401/1/avt0337.pdf",
+    "httpStatus": 200,
+    "contentType": "application/pdf",
+    "size": 2337927,
+    "sha256": "4b655897a1d0d6e1bdf7a9b4ac8197c9ce84628d194e9de551d2c4fac67d72a6",
+    "accessed": "2026-11-10",
+    "tool": "urllib(backfill)",
+    "textChars": 19505,
+    "scannedImagesOnly": false,
+    "files": [
+      "original.pdf",
+      "text.txt"
+    ],
+    "note": ""
+  },
+  "cenicafe-avt-426-2012": {
+    "url": "https://biblioteca.cenicafe.org/bitstream/10778/410/1/avt0426.pdf",
+    "finalUrl": "https://biblioteca.cenicafe.org/bitstream/10778/410/1/avt0426.pdf",
+    "httpStatus": 200,
+    "contentType": "application/pdf",
+    "size": 1903675,
+    "sha256": "6d65ebad83fecf93ba978b47bc73b7b621af27ad11672260b43b8a39030dab23",
+    "accessed": "2026-11-10",
+    "tool": "urllib(backfill)",
+    "textChars": 34519,
+    "scannedImagesOnly": false,
+    "files": [
+      "original.pdf",
+      "text.txt"
+    ],
+    "note": ""
+  },
+  "coe-el-salvador-2003": {
+    "url": "https://cupofexcellence.org/el-salvador-2003/",
+    "finalUrl": "https://cupofexcellence.org/el-salvador-2003/",
+    "httpStatus": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "size": 188647,
+    "sha256": "14cf0370b1d93a600d52bb9c2536c6abfa5faf71e446fadebe6e5d603355a60e",
+    "accessed": "2026-11-10",
+    "tool": "urllib(backfill)",
+    "textChars": 10603,
+    "scannedImagesOnly": false,
+    "files": [
+      "original.html",
+      "text.txt"
+    ],
+    "note": ""
+  },
+  "coe-farmdir-dukundekawa-musasa-2015": {
+    "url": "https://farmdirectory.cupofexcellence.org/?p=4982",
+    "finalUrl": "https://farmdirectory.cupofexcellence.org/listing/2015-rwanda-85-97-14/",
+    "httpStatus": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "size": 140574,
+    "sha256": "ac10951cc171d7c854ad0fc3803fbc5a8d1774ac152fba61711626584cdb5450",
+    "accessed": "2026-11-10",
+    "tool": "urllib(backfill)",
+    "textChars": 3610,
+    "scannedImagesOnly": false,
+    "files": [
+      "original.html",
+      "text.txt"
+    ],
+    "note": ""
+  },
+  "coe-results-list": {
+    "url": "https://cupofexcellence.org/competition-auction-results/",
+    "finalUrl": "https://cupofexcellence.org/competition-auction-results/",
+    "httpStatus": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "size": 151109,
+    "sha256": "4cfd5d3ccaf7fbe8e2ab6621384e00b4caf20d23ce862c6627fca2f8c2acd114",
+    "accessed": "2026-11-10",
+    "tool": "urllib(backfill)",
+    "textChars": 5110,
+    "scannedImagesOnly": false,
+    "files": [
+      "original.html",
+      "text.txt"
+    ],
+    "note": ""
+  },
+  "coe-rwanda-2008": {
+    "url": "https://cupofexcellence.org/rwanda-2008/",
+    "finalUrl": "https://cupofexcellence.org/rwanda-2008/",
+    "httpStatus": 200,
+    "contentType": "",
+    "size": 182388,
+    "sha256": "d35ec9a7e76bceeffdd9ea44870a4dce1d43b4dc64f44da72cc86e0cf7184d04",
+    "accessed": "2026-11-10",
+    "tool": "ローカルのファイルを取り込み",
+    "textChars": 9650,
+    "scannedImagesOnly": false,
+    "files": [
+      "original.html",
+      "text.txt"
+    ],
+    "note": ""
+  },
+  "cornell-lii-har-4-143-6": {
+    "url": "https://www.law.cornell.edu/regulations/hawaii/Haw-Code-R-SS-4-143-6",
+    "finalUrl": "https://www.law.cornell.edu/regulations/hawaii/Haw-Code-R-SS-4-143-6",
+    "httpStatus": 200,
+    "contentType": "",
+    "size": 46348,
+    "sha256": "1dcc3da95926af4ea494053a39adda9de2c1c57c752590cf3e28de9a4966b27d",
+    "accessed": "2026-11-10",
+    "tool": "ローカルのファイルを取り込み",
+    "textChars": 15852,
+    "scannedImagesOnly": false,
+    "files": [
+      "original.html",
+      "text.txt"
+    ],
+    "note": "州規則の編纂版の転載(非公式)。2017年改正後の本文。根拠にはしていない(照合用)。"
+  },
+  "cqi-about-us": {
+    "url": "https://www.coffeeinstitute.org/about-us/",
+    "finalUrl": "https://www.coffeeinstitute.org/about",
+    "httpStatus": 200,
+    "contentType": "text/html; charset=utf-8",
+    "size": 39593,
+    "sha256": "3c7e58a07c57829ad68d10f5b1b5324a7eb15c7a3cf42fb4b14c165d58f49746",
+    "accessed": "2026-11-10",
+    "tool": "urllib(backfill)",
+    "textChars": 3679,
+    "scannedImagesOnly": false,
+    "files": [
+      "original.html",
+      "text.txt"
+    ],
+    "note": ""
+  },
+  "ctahr-growing-coffee-2008": {
+    "url": "https://www3.ctahr.hawaii.edu/oc/freepubs/pdf/coffee08.pdf",
+    "finalUrl": "https://www3.ctahr.hawaii.edu/oc/freepubs/pdf/coffee08.pdf",
+    "httpStatus": 200,
+    "contentType": "application/pdf",
+    "size": 607950,
+    "sha256": "1b72a4f896e50d3e29f16a0c5e20f32c5291dfd5fc8e385376c2fc67f1b7f40b",
+    "accessed": "2026-11-10",
+    "tool": "urllib(backfill)",
+    "textChars": 164401,
+    "scannedImagesOnly": false,
+    "files": [
+      "original.pdf",
+      "text.txt"
+    ],
+    "note": ""
+  },
+  "dab-grading-stats-2026": {
+    "url": "https://dab.hawaii.gov/add/files/2026/02/Grading-Standards-for-Hawaii-Green-Coffee-2023-2025_Jan.2026-final.pdf",
+    "finalUrl": "https://dab.hawaii.gov/add/files/2026/02/Grading-Standards-for-Hawaii-Green-Coffee-2023-2025_Jan.2026-final.pdf",
+    "httpStatus": 200,
+    "contentType": "",
+    "size": 443616,
+    "sha256": "03917ad5a1db1cebc238e83d801c0b4456fccbe20b58b83b376c361a5d92f7a6",
+    "accessed": "2026-11-10",
+    "tool": "ローカルのファイルを取り込み",
+    "textChars": 4580,
+    "scannedImagesOnly": false,
+    "files": [
+      "original.pdf",
+      "text.txt"
+    ],
+    "note": ""
+  },
+  "dab-har-4-143-2001": {
+    "url": "https://dab.hawaii.gov/wp-content/uploads/2012/12/AR-143.pdf",
+    "finalUrl": "https://dab.hawaii.gov/wp-content/uploads/2012/12/AR-143.pdf",
+    "httpStatus": 200,
+    "contentType": "",
+    "size": 208517,
+    "sha256": "2bda8945eea85ca69f5276c98cd03be241a2939ee8315e804329b51bc969625d",
+    "accessed": "2026-11-10",
+    "tool": "ローカルのファイルを取り込み",
+    "textChars": 47473,
+    "scannedImagesOnly": false,
+    "files": [
+      "original.pdf",
+      "text.txt"
+    ],
+    "note": ""
+  },
+  "dab-har-4-143-2014": {
+    "url": "https://dab.hawaii.gov/wp-content/uploads/2012/12/Chapter-4-143-5.24-14-final.pdf",
+    "finalUrl": "https://dab.hawaii.gov/wp-content/uploads/2012/12/Chapter-4-143-5.24-14-final.pdf",
+    "httpStatus": 200,
+    "contentType": "",
+    "size": 493538,
+    "sha256": "1ec6ee46a30da8f789778969efedc66551e7090c28afa8b32ecc6a28401541ac",
+    "accessed": "2026-11-10",
+    "tool": "ローカルのファイルを取り込み",
+    "textChars": 261,
+    "scannedImagesOnly": true,
+    "files": [
+      "original.pdf",
+      "text.txt",
+      "images/"
+    ],
+    "note": "2014年5月24日施行版。文字情報なし(スキャン)で、ページ画像は低コントラストで読み取れなかった。"
+  },
+  "dab-har-summary-2020": {
+    "url": "https://dab.hawaii.gov/qad/files/2020/07/2020-Coffee-HAR-143-Summary-Defects-Allowance-back-to-15-eff-July1.pdf",
+    "finalUrl": "https://dab.hawaii.gov/qad/files/2020/07/2020-Coffee-HAR-143-Summary-Defects-Allowance-back-to-15-eff-July1.pdf",
+    "httpStatus": 200,
+    "contentType": "",
+    "size": 125792,
+    "sha256": "ee525ee9a944227553cd0c8adc42c2eaca03cc8d8acfd39e0b6150271e00f8f0",
+    "accessed": "2026-11-10",
+    "tool": "ローカルのファイルを取り込み",
+    "textChars": 3633,
+    "scannedImagesOnly": false,
+    "files": [
+      "original.pdf",
+      "text.txt"
+    ],
+    "note": "表の列が回転して印刷されている"
+  },
+  "dab-hi-har143-summary-2020": {
+    "url": "https://dab.hawaii.gov/qad/files/2020/07/2020-Coffee-HAR-143-Summary-Defects-Allowance-back-to-15-eff-July1.pdf",
+    "finalUrl": "https://dab.hawaii.gov/qad/files/2020/07/2020-Coffee-HAR-143-Summary-Defects-Allowance-back-to-15-eff-July1.pdf",
+    "httpStatus": 200,
+    "contentType": "application/pdf",
+    "size": 125792,
+    "sha256": "ee525ee9a944227553cd0c8adc42c2eaca03cc8d8acfd39e0b6150271e00f8f0",
+    "accessed": "2026-11-10",
+    "tool": "urllib(backfill)",
+    "textChars": 3633,
+    "scannedImagesOnly": false,
+    "files": [
+      "original.pdf",
+      "text.txt"
+    ],
+    "note": ""
+  },
+  "dof-acuerdo-certificado-origen-2020": {
+    "url": "https://www.gob.mx/cms/uploads/attachment/file/647405/Acuerdo.pdf",
+    "finalUrl": "https://www.gob.mx/cms/uploads/attachment/file/647405/Acuerdo.pdf",
+    "httpStatus": 200,
+    "contentType": "application/pdf",
+    "size": 1505917,
+    "sha256": "55c7e11fe53cbd2c1a71cee5909b080c1cba0907524df455c5880da35fffd493",
+    "accessed": "2026-11-10",
+    "tool": "urllib(backfill)",
+    "textChars": 151254,
+    "scannedImagesOnly": false,
+    "files": [
+      "original.pdf",
+      "text.txt"
+    ],
+    "note": ""
+  },
+  "eac-eas130-1999": {
+    "url": "https://law.resource.org/pub/eac/ibr/eas.130.1999.html",
+    "finalUrl": "https://law.resource.org/pub/eac/ibr/eas.130.1999.html",
+    "httpStatus": 200,
+    "contentType": "text/html",
+    "size": 30740,
+    "sha256": "72d9fa6ca31e01c2dd27fda67fb5c6692c83bcc7e576cf5703da93316a0f6aa8",
+    "accessed": "2026-11-10",
+    "tool": "urllib(backfill)",
+    "textChars": 18838,
+    "scannedImagesOnly": false,
+    "files": [
+      "original.html",
+      "text.txt"
+    ],
+    "note": ""
+  },
+  "eas130-1999": {
+    "url": "https://law.resource.org/pub/eac/ibr/eas.130.1999.html",
+    "finalUrl": "https://law.resource.org/pub/eac/ibr/eas.130.1999.html",
+    "httpStatus": 200,
+    "contentType": "",
+    "size": 30740,
+    "sha256": "72d9fa6ca31e01c2dd27fda67fb5c6692c83bcc7e576cf5703da93316a0f6aa8",
+    "accessed": "2026-11-10",
+    "tool": "ローカルのファイルを取り込み",
+    "textChars": 18838,
+    "scannedImagesOnly": false,
+    "files": [
+      "original.html",
+      "text.txt"
+    ],
+    "note": ""
+  },
+  "embrapa-cafe-endereco": {
+    "url": "https://www.embrapa.br/en/busca-de-noticias/-/noticia/8515144/cafe-com-endereco-e-qualidade",
+    "finalUrl": "https://www.embrapa.br/en/busca-de-noticias/-/noticia/8515144/cafe-com-endereco-e-qualidade",
+    "httpStatus": 200,
+    "contentType": "text/html;charset=UTF-8",
+    "size": 166806,
+    "sha256": "6bd309442c61feffe11a4606667c7e9779d867af71a98d6b7666e61e424c272e",
+    "accessed": "2026-11-10",
+    "tool": "urllib(backfill)",
+    "textChars": 34464,
+    "scannedImagesOnly": false,
+    "files": [
+      "original.html",
+      "text.txt"
+    ],
+    "note": ""
+  },
+  "embrapa-cerrado-do": {
+    "url": "https://www.embrapa.br/en/busca-de-noticias/-/noticia/1577309/cerrado-mineiro-e-destaque-na-producao-de-cafes-diferenciados",
+    "finalUrl": "https://www.embrapa.br/en/busca-de-noticias/-/noticia/1577309/cerrado-mineiro-e-destaque-na-producao-de-cafes-diferenciados",
+    "httpStatus": 200,
+    "contentType": "text/html;charset=UTF-8",
+    "size": 132409,
+    "sha256": "2e581aac784a748243c2922f961cdebac11c059de4f531c99279157b2c3f0107",
+    "accessed": "2026-11-10",
+    "tool": "urllib(backfill)",
+    "textChars": 4973,
+    "scannedImagesOnly": false,
+    "files": [
+      "original.html",
+      "text.txt"
+    ],
+    "note": ""
+  },
+  "embrapa-doc93-rondonia": {
+    "url": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/906832/1/Doc93cafe.pdf",
+    "finalUrl": "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/906832/1/Doc93cafe.pdf",
+    "httpStatus": 200,
+    "contentType": "application/pdf",
+    "size": 203579,
+    "sha256": "30cf14d92b06e91734d2232646a101403763e0fe77111077421b794add7bf99a",
+    "accessed": "2026-11-10",
+    "tool": "urllib(backfill)",
+    "textChars": 49117,
+    "scannedImagesOnly": false,
+    "files": [
+      "original.pdf",
+      "text.txt"
+    ],
+    "note": ""
+  },
+  "embrapa-geada-2021": {
+    "url": "https://www.embrapa.br/en/busca-de-noticias/-/noticia/64395221/artigo---embrapa-usa-imagens-de-satelite-brasileiro-para-o-mapeamento-de-cafezais-afetados-pelas-geadas-em-minas-gerais",
+    "finalUrl": "https://www.embrapa.br/en/busca-de-noticias/-/noticia/64395221/artigo---embrapa-usa-imagens-de-satelite-brasileiro-para-o-mapeamento-de-cafezais-afetados-pelas-geadas-em-minas-gerais",
+    "httpStatus": 200,
+    "contentType": "text/html;charset=UTF-8",
+    "size": 143757,
+    "sha256": "4a43285c77c918489db04a7cd1b38d2f64589b893b10f4126123a44745a8f7a7",
+    "accessed": "2026-11-10",
+    "tool": "urllib(backfill)",
+    "textChars": 11459,
+    "scannedImagesOnly": false,
+    "files": [
+      "original.html",
+      "text.txt"
+    ],
+    "note": ""
+  },
+  "embrapa-igs-cafe": {
+    "url": "https://www.embrapa.br/en/busca-de-noticias/-/noticia/79335973/cafe-segue-como-o-produto-com-maior-numero-de-igs-no-brasil",
+    "finalUrl": "https://www.embrapa.br/en/busca-de-noticias/-/noticia/79335973/cafe-segue-como-o-produto-com-maior-numero-de-igs-no-brasil",
+    "httpStatus": 200,
+    "contentType": "text/html;charset=UTF-8",
+    "size": 138182,
+    "sha256": "45a606acb2ae91dbec466231b9ba57e51b1a88ca2f0a99cf5b9b70580de6407f",
+    "accessed": "2026-11-10",
+    "tool": "urllib(backfill)",
+    "textChars": 7831,
+    "scannedImagesOnly": false,
+    "files": [
+      "original.html",
+      "text.txt"
+    ],
+    "note": ""
+  },
+  "fao-faolex-decreto-965-2024": {
+    "url": "http://faolex.fao.org/docs/pdf/els235128.pdf",
+    "finalUrl": "http://faolex.fao.org/docs/pdf/els235128.pdf",
+    "httpStatus": 200,
+    "contentType": "application/pdf",
+    "size": 428227,
+    "sha256": "caf0988a4d69fbff06b7b16595c903f95dd1e75cb6e33e782ee85621a88ecc02",
+    "accessed": "2026-11-10",
+    "tool": "urllib(backfill)",
+    "textChars": 43993,
+    "scannedImagesOnly": false,
+    "files": [
+      "original.pdf",
+      "text.txt"
+    ],
+    "note": ""
+  },
+  "fao-ico-cfc-mandheling-annex-e6": {
+    "url": "https://www.fao.org/fileadmin/user_upload/agns/pdf/coffee/Annex-E.6.pdf",
+    "finalUrl": "https://www.fao.org/fileadmin/user_upload/agns/pdf/coffee/Annex-E.6.pdf",
+    "httpStatus": 200,
+    "contentType": "application/pdf",
+    "size": 1087279,
+    "sha256": "efae194f8aac588ec4615f2c2156ba1852674e418110fb41f90916980e109360",
+    "accessed": "2026-11-10",
+    "tool": "urllib(backfill)",
+    "textChars": 73212,
+    "scannedImagesOnly": false,
+    "files": [
+      "original.pdf",
+      "text.txt"
+    ],
+    "note": ""
+  },
+  "fao-ifc-yemen-coffee-vc-2023": {
+    "url": "https://openknowledge.fao.org/server/api/core/bitstreams/1f8cb82b-a8ae-4229-bb4f-0a193b5c620f/content",
+    "finalUrl": "https://openknowledge.fao.org/server/api/core/bitstreams/1f8cb82b-a8ae-4229-bb4f-0a193b5c620f/content",
+    "httpStatus": 200,
+    "contentType": "",
+    "size": 12888053,
+    "sha256": "d52cfb53389b81938000c966a91e07dfda7fef88aec669786d4a59ab1234da2b",
+    "accessed": "2026-11-10",
+    "tool": "ローカルのファイルを取り込み",
+    "textChars": 171220,
+    "scannedImagesOnly": false,
+    "files": [
+      "original.pdf",
+      "text.txt"
+    ],
+    "note": ""
+  },
+  "fao-ocop-yemen-coffee-2025": {
+    "url": "https://openknowledge.fao.org/server/api/core/bitstreams/2af6c9a4-4e0b-41a5-ae83-3a41945844ea/content",
+    "finalUrl": "https://openknowledge.fao.org/server/api/core/bitstreams/2af6c9a4-4e0b-41a5-ae83-3a41945844ea/content",
+    "httpStatus": 200,
+    "contentType": "application/pdf;charset=UTF-8",
+    "size": 1534956,
+    "sha256": "fd0008dff5fd5b5ec178395c6d6792150b6bb006d6288221ec370db90512c8f5",
+    "accessed": "2026-11-10",
+    "tool": "urllib(backfill)",
+    "textChars": 4617,
+    "scannedImagesOnly": false,
+    "files": [
+      "original.pdf",
+      "text.txt"
+    ],
+    "note": ""
+  },
+  "fira-panorama-cafe-2016": {
+    "url": "https://www.gob.mx/cms/uploads/attachment/file/200636/Panorama_Agroalimentario_Caf__2016.pdf",
+    "finalUrl": "https://www.gob.mx/cms/uploads/attachment/file/200636/Panorama_Agroalimentario_Caf__2016.pdf",
+    "httpStatus": 200,
+    "contentType": "application/pdf",
+    "size": 1382761,
+    "sha256": "ea9c0cfd71cb30fb21ec297620976680b699ee247da167949a27e245d0f8e144",
+    "accessed": "2026-11-10",
+    "tool": "urllib(backfill)",
+    "textChars": 82323,
+    "scannedImagesOnly": false,
+    "files": [
+      "original.pdf",
+      "text.txt"
+    ],
+    "note": ""
+  },
+  "fnc-res-02-2016": {
+    "url": "https://federaciondecafeteros.org/wp-content/uploads/2025/11/Resolucion-2-2016_cafe_verde.pdf",
+    "finalUrl": "https://federaciondecafeteros.org/wp-content/uploads/2025/11/Resolucion-2-2016_cafe_verde.pdf",
+    "httpStatus": 200,
+    "contentType": "",
+    "size": 1584651,
+    "sha256": "399ce3a89e70ceca887d4dd1f216bfb941f2869e131f0ea111aa30014a3194cf",
+    "accessed": "2026-11-10",
+    "tool": "ローカルのファイルを取り込み",
+    "textChars": 40,
+    "scannedImagesOnly": true,
+    "files": [
+      "original.pdf",
+      "text.txt",
+      "images/"
+    ],
+    "note": "Wayback保存版(web.archive.org/web/2025/...)から取得。スキャン画像で文字情報なし。ページ画像を直接見て確認した。"
+  },
+  "hario-immersion": {
+    "url": "https://www.hario.com/coffeelife/immersion-type.html",
+    "finalUrl": "https://www.hario.com/coffeelife/immersion-type.html",
+    "httpStatus": 200,
+    "contentType": "",
+    "size": 12172,
+    "sha256": "843054d3110985a634e16a7925f3c3407a0b1073d3399dd5e24e93eb732c486f",
+    "accessed": "2026-11-10",
+    "tool": "ローカルのファイルを取り込み",
+    "textChars": 755,
+    "scannedImagesOnly": false,
+    "files": [
+      "original.html",
+      "text.txt"
+    ],
+    "note": ""
+  },
+  "hario-paper-drip": {
+    "url": "https://www.hario.com/coffeelife/paper-drip.html",
+    "finalUrl": "https://www.hario.com/coffeelife/paper-drip.html",
+    "httpStatus": 200,
+    "contentType": "",
+    "size": 16544,
+    "sha256": "6f032823b54a5ebc3d51d41bd1b9653489265dc49ec3a78eec4dd5b483dfdce3",
+    "accessed": "2026-11-10",
+    "tool": "ローカルのファイルを取り込み",
+    "textChars": 1232,
+    "scannedImagesOnly": false,
+    "files": [
+      "original.html",
+      "text.txt"
+    ],
+    "note": ""
+  },
+  "hario-press": {
+    "url": "https://www.hario.com/coffeelife/press.html",
+    "finalUrl": "https://www.hario.com/coffeelife/press.html",
+    "httpStatus": 200,
+    "contentType": "",
+    "size": 13713,
+    "sha256": "773b1509120fe34eb6436a8c37c4c77dc6705f4d32833872be54082dbe0122b8",
+    "accessed": "2026-11-10",
+    "tool": "ローカルのファイルを取り込み",
+    "textChars": 885,
+    "scannedImagesOnly": false,
+    "files": [
+      "original.html",
+      "text.txt"
+    ],
+    "note": ""
+  },
+  "hario-v60-series": {
+    "url": "https://www.hario.com/v60/v60series.html",
+    "finalUrl": "https://www.hario.com/v60/v60series.html",
+    "httpStatus": 200,
+    "contentType": "",
+    "size": 40367,
+    "sha256": "8227200e7ae7e2919fc46a8b85ace7386b5421443e71ea982128619b9d68893d",
+    "accessed": "2026-11-10",
+    "tool": "ローカルのファイルを取り込み",
+    "textChars": 3975,
+    "scannedImagesOnly": false,
+    "files": [
+      "original.html",
+      "text.txt"
+    ],
+    "note": ""
+  },
+  "icafe-pliego-ig-2008": {
+    "url": "https://www.icafe.cr/wp-content/uploads/indicacion_geografica/Pliego%20de%20Condiciones.pdf",
+    "finalUrl": "https://www.icafe.cr/wp-content/uploads/indicacion_geografica/Pliego%20de%20Condiciones.pdf",
+    "httpStatus": 200,
+    "contentType": "",
+    "size": 2587123,
+    "sha256": "39376791eb101f219c098cbcfb485b1e9ced4ee62b5e27a6f55c5d773322b050",
+    "accessed": "2026-11-10",
+    "tool": "ローカルのファイルを取り込み",
+    "textChars": 410463,
+    "scannedImagesOnly": false,
+    "files": [
+      "original.pdf",
+      "text.txt"
+    ],
+    "note": ""
+  },
+  "icafe-recibos-2-p-3-1": {
+    "url": "http://www.icafe.cr/wp-content/uploads/disposiciones/documentos/D4.6/D4.6-3/D4.6-3-3-2-P-3.1.pdf",
+    "finalUrl": "http://www.icafe.cr/wp-content/uploads/disposiciones/documentos/D4.6/D4.6-3/D4.6-3-3-2-P-3.1.pdf",
+    "httpStatus": 200,
+    "contentType": "",
+    "size": 306340,
+    "sha256": "41f9727ef194259d5dac929dc27a1525fe9c747014f8bc28877b64f2761c4240",
+    "accessed": "2026-11-10",
+    "tool": "ローカルのファイルを取り込み",
+    "textChars": 27925,
+    "scannedImagesOnly": false,
+    "files": [
+      "original.pdf",
+      "text.txt"
+    ],
+    "note": ""
+  },
+  "ico-faq": {
+    "url": "https://ico.org/what-we-do/faq/",
+    "finalUrl": "https://ico.org/what-we-do/faq/",
+    "httpStatus": 200,
+    "contentType": "",
+    "size": 244295,
+    "sha256": "87c6f823bf8a4012c1d551c700502021a0a1e72cac6eea522e3833926228675c",
+    "accessed": "2026-11-10",
+    "tool": "ローカルのファイルを取り込み",
+    "textChars": 14310,
+    "scannedImagesOnly": false,
+    "files": [
+      "original.html",
+      "text.txt"
+    ],
+    "note": "URLは ico.org/what-we-do/faq/(リダイレクトなし)"
+  },
+  "ico-history-pt": {
+    "url": "http://dev.ico.org/pt/coffee_storyp.asp?section=Sobre_o_cafE9",
+    "finalUrl": "http://dev.ico.org/pt/coffee_storyp.asp?section=Sobre_o_cafE9",
+    "httpStatus": 200,
+    "contentType": "",
+    "size": 30837,
+    "sha256": "4a3405e1d0c954eb9af20199ca21c3c1342da6542c93473e53686a6e9ecb65ea",
+    "accessed": "2026-11-10",
+    "tool": "ローカルのファイルを取り込み",
+    "textChars": 9629,
+    "scannedImagesOnly": false,
+    "files": [
+      "original.html",
+      "text.txt"
+    ],
+    "note": "文字コードはlatin-1/cp1252"
+  },
+  "inacal-gip-101-2026": {
+    "url": "https://www.inacal.gob.pe/repositorioaps/data/1/1/1/jer/guiasdeimplementacion/files/GIP%20101%202026.pdf",
+    "finalUrl": "https://www.inacal.gob.pe/repositorioaps/data/1/1/1/jer/guiasdeimplementacion/files/GIP%20101%202026.pdf",
+    "httpStatus": 200,
+    "contentType": "",
+    "size": 2004143,
+    "sha256": "c0430b098fe5c06c1065fcddcc188660a3b7ddb78fef7b9a47e2dc030b71ea2c",
+    "accessed": "2026-11-10",
+    "tool": "ローカルのファイルを取り込み",
+    "textChars": 72276,
+    "scannedImagesOnly": false,
+    "files": [
+      "original.pdf",
+      "text.txt"
+    ],
+    "note": ""
+  },
+  "jam-jacra-regulations-2018": {
+    "url": "https://jamaicacoffee.org/html/wp-content/uploads/2019/05/JACRA-Act-Regulations.pdf",
+    "finalUrl": "https://jamaicacoffee.org/html/wp-content/uploads/2019/05/JACRA-Act-Regulations.pdf",
+    "httpStatus": 200,
+    "contentType": "",
+    "size": 896752,
+    "sha256": "6745086e7cb5412b83a8f617da4ac8ec66e4c192b4867bf213e95e31eb1bbe7e",
+    "accessed": "2026-11-10",
+    "tool": "ローカルのファイルを取り込み",
+    "textChars": 94423,
+    "scannedImagesOnly": false,
+    "files": [
+      "original.pdf",
+      "text.txt"
+    ],
+    "note": ""
+  },
+  "ke-gazette-ln102-2019": {
+    "url": "https://infotradekenya.go.ke/media/Legal%20Notice%20102%20-%20Coffee%20General%20Regulations.PDF",
+    "finalUrl": "https://infotradekenya.go.ke/media/Legal%20Notice%20102%20-%20Coffee%20General%20Regulations.PDF",
+    "httpStatus": 200,
+    "contentType": "",
+    "size": 817233,
+    "sha256": "2ec7312aa50ef59bd02c965e9ba4ff9aaa885bf0978f0026e2715c5057522fb9",
+    "accessed": "2026-11-10",
+    "tool": "ローカルのファイルを取り込み",
+    "textChars": 138854,
+    "scannedImagesOnly": false,
+    "files": [
+      "original.pdf",
+      "text.txt"
+    ],
+    "note": ""
+  },
+  "mapa-in8-2003": {
+    "url": "https://sistemasweb.agricultura.gov.br/sislegis/action/detalhaAto.do?method=recuperarTextoAtoTematicaPortal&codigoTematica=1229303",
+    "finalUrl": "https://sistemasweb.agricultura.gov.br/sislegis/action/detalhaAto.do?method=recuperarTextoAtoTematicaPortal&codigoTematica=1229303",
+    "httpStatus": 200,
+    "contentType": "",
+    "size": 55294,
+    "sha256": "a1b8c7946d7033ee58fc175ee812fd38710379cf744241bd62740f098247e575",
+    "accessed": "2026-11-10",
+    "tool": "ローカルのファイルを取り込み",
+    "textChars": 28390,
+    "scannedImagesOnly": false,
+    "files": [
+      "original.html",
+      "text.txt"
+    ],
+    "note": ""
+  },
+  "mx-nmx-f-597-scfi-2016": {
+    "url": "https://platiica.economia.gob.mx/normalizacion/wp-content/uploads/sites/2/PDF_Normas_Publicas/nmx-f-597-scfi-2016.pdf",
+    "finalUrl": "https://platiica.economia.gob.mx/normalizacion/wp-content/uploads/sites/2/PDF_Normas_Publicas/nmx-f-597-scfi-2016.pdf",
+    "httpStatus": 200,
+    "contentType": "",
+    "size": 471608,
+    "sha256": "40a4180160b9aa7dade425043970a8587d5ec18f270a7a085ae210e4cc5bef46",
+    "accessed": "2026-11-10",
+    "tool": "ローカルのファイルを取り込み",
+    "textChars": 19926,
+    "scannedImagesOnly": false,
+    "files": [
+      "original.pdf",
+      "text.txt"
+    ],
+    "note": ""
+  },
+  "platiica-nmx-f-597-record": {
+    "url": "https://platiica.economia.gob.mx/normalizacion/?p=44966",
+    "finalUrl": "https://platiica.economia.gob.mx/normalizacion/?p=44966",
+    "httpStatus": 200,
+    "contentType": "",
+    "size": 96225,
+    "sha256": "0a9f1c7a875c78e6d5246c06a067eab30a753cb2b38f7af610efc7fae86fa5cf",
+    "accessed": "2026-11-10",
+    "tool": "ローカルのファイルを取り込み",
+    "textChars": 2489,
+    "scannedImagesOnly": false,
+    "files": [
+      "original.html",
+      "text.txt"
+    ],
+    "note": "規格の目録の記録(状態VIGENTE、DOF公表日、施行日)"
+  },
+  "sca-25-issue13-new-brewing-chart": {
+    "url": "https://sca.coffee/sca-news/25/issue-13/towards-a-new-brewing-chart-xpj8t",
+    "finalUrl": "https://sca.coffee/sca-news/25/issue-13/towards-a-new-brewing-chart-xpj8t",
+    "httpStatus": 200,
+    "contentType": "",
+    "size": 649523,
+    "sha256": "2ebeb418cb77f3f3f2a08c864b3c8eed00cf3fe602c02dcd38f208677c3d6fdb",
+    "accessed": "2026-11-10",
+    "tool": "ローカルのファイルを取り込み",
+    "textChars": 18170,
+    "scannedImagesOnly": false,
+    "files": [
+      "original.html",
+      "text.txt"
+    ],
+    "note": ""
+  },
+  "sca-25-issue9-water-acidity": {
+    "url": "https://sca.coffee/sca-news/25/issue-9/english/water-and-coffee-acidity-how-to-adapt-your-water-for-different-extraction-methods-25-magazine-issue-9-pxjby",
+    "finalUrl": "https://sca.coffee/sca-news/25/issue-9/english/water-and-coffee-acidity-how-to-adapt-your-water-for-different-extraction-methods-25-magazine-issue-9-pxjby",
+    "httpStatus": 200,
+    "contentType": "",
+    "size": 533620,
+    "sha256": "c78551d08207cd87ce1c56cbbe293c113acad00e386e7fc34912649c32c7e5d4",
+    "accessed": "2026-11-10",
+    "tool": "ローカルのファイルを取り込み",
+    "textChars": 14078,
+    "scannedImagesOnly": false,
+    "files": [
+      "original.html",
+      "text.txt"
+    ],
+    "note": ""
+  },
+  "sca-protocols-best-practices-2018": {
+    "url": "https://static1.squarespace.com/static/587af1d4db29d69a1a226b95/t/60748749cf593c00972df582/1618249556105/SCA+Protocols+%26+Best+Practices.pdf",
+    "finalUrl": "https://static1.squarespace.com/static/587af1d4db29d69a1a226b95/t/60748749cf593c00972df582/1618249556105/SCA+Protocols+%26+Best+Practices.pdf",
+    "httpStatus": 200,
+    "contentType": "",
+    "size": 8179269,
+    "sha256": "8d593a84349757fc8007084cd340e987fa110719f3583660017042237f245f0a",
+    "accessed": "2026-11-10",
+    "tool": "ローカルのファイルを取り込み",
+    "textChars": 24025,
+    "scannedImagesOnly": false,
+    "files": [
+      "original.pdf",
+      "text.txt"
+    ],
+    "note": ""
+  },
+  "tz-coffee-regs-2013": {
+    "url": "https://faolex.fao.org/docs/pdf/tan168710.pdf",
+    "finalUrl": "https://faolex.fao.org/docs/pdf/tan168710.pdf",
+    "httpStatus": 200,
+    "contentType": "",
+    "size": 1668912,
+    "sha256": "3f86406c5a43c645a355c1e029547d0ebd5696fe5ca86963f2b271f8785c0600",
+    "accessed": "2026-11-10",
+    "tool": "ローカルのファイルを取り込み",
+    "textChars": 151464,
+    "scannedImagesOnly": false,
+    "files": [
+      "original.pdf",
+      "text.txt"
+    ],
+    "note": ""
+  }
+}

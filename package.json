@@ -10,7 +10,9 @@
     "i18n:check": "node scripts/check-i18n.js",
     "sources:check": "node scripts/check-sources.js",
     "preview": "vite preview",
-    "flavor:check": "node scripts/check-flavor-vocab.js"
+    "flavor:check": "node scripts/check-flavor-vocab.js",
+    "archive:check": "python scripts/archive_source.py check",
+    "archive:verify": "python scripts/archive_source.py verify"
   },
   "dependencies": {
     "leaflet": "^1.9.4",
