@@ -64,7 +64,7 @@ export function AboutView({ open, onClose }) {
             </div>
             <ul className="list-disc pl-4 flex flex-col gap-2 text-[12px] text-[var(--c-text-3)] leading-relaxed marker:text-[var(--c-text-3)]">
               <li>
-                {t("コレクション、★評価、テイスティングログ・ノート、閲覧履歴、設定などの記録は、お使いの端末(ブラウザ)内にのみ保存され、運営者が取得することはありません。")}
+                {t("コレクション、★評価、テイスティングログ・ノート、マイツール、閲覧履歴、設定などの記録は、お使いの端末(ブラウザ)内にのみ保存され、運営者が取得することはありません。")}
               </li>
               <li>
                 {t("パッケージ写真は、お使いの端末内にのみ保存され、運営者がサーバー等へ送信・取得・公開することはありません。")}

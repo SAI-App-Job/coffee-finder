@@ -1,6 +1,7 @@
 import { useMemo } from "react";
 import { Languages, Palette, Check, Sparkles, Info, Shuffle, MapPinned, ChevronRight } from "lucide-react";
 import { SectionHeading } from "./common";
+import { MyToolsSection } from "./MyToolsSection";
 import { FREE_FAVORITES_LIMIT } from "../hooks/useFavorites";
 import { FREE_COMPARE_LIMIT } from "../hooks/useComparison";
 import { FREE_HISTORY_RETENTION_DAYS } from "../hooks/useViewHistory";
@@ -22,6 +23,7 @@ export function SettingsView({
   favoriteArea,
   setFavoriteAreaPrefecture,
   setFavoriteAreaCity,
+  myTools,
   onOpenAbout,
 }) {
   const t = useT();
@@ -180,6 +182,8 @@ export function SettingsView({
           ))}
         </div>
       </section>
+
+      <MyToolsSection {...myTools} />
 
       <section className="rounded-2xl bg-[var(--c-surface)] border border-[var(--c-border)] p-4 flex flex-col gap-3">
         <div className="flex items-center gap-1.5">

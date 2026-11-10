@@ -67,8 +67,8 @@ const UI = {
   "個人〜小規模の自家焙煎店を中心に掲載しています。11店舗以上を展開する大手チェーンは対象外です(日本チェーンストア協会の定義に基づく)。ただし11店舗未満の複数拠点展開(例: FUGLEN、PHILOCOFFEA)は対象に含みます。":
     "We mainly list individual and small home-roasting shops. Large chains with 11 or more stores are excluded (based on the Japan Chain Stores Association's definition). Multi-location shops with fewer than 11 stores (e.g. FUGLEN, PHILOCOFFEA) are included.",
   "データの取り扱い(プライバシー)": "How your data is handled (privacy)",
-  "コレクション、★評価、テイスティングログ・ノート、閲覧履歴、設定などの記録は、お使いの端末(ブラウザ)内にのみ保存され、運営者が取得することはありません。":
-    "Your collection, star ratings, tasting logs and notes, viewing history, settings and similar records are stored only on your device (in the browser). The operator does not collect them.",
+  "コレクション、★評価、テイスティングログ・ノート、マイツール、閲覧履歴、設定などの記録は、お使いの端末(ブラウザ)内にのみ保存され、運営者が取得することはありません。":
+    "Your collection, star ratings, tasting logs and notes, My Tools, viewing history, settings and similar records are stored only on your device (in the browser). The operator does not collect them.",
   "パッケージ写真は、お使いの端末内にのみ保存され、運営者がサーバー等へ送信・取得・公開することはありません。":
     "Package photos are stored only on your device. The operator does not send, collect, or publish them to any server or elsewhere.",
   "位置情報は、「近い順」の並べ替えにだけ使います。端末内で計算し、サーバーへの送信や保存はしません。許可しなくても、アプリはお使いいただけます。":
@@ -641,4 +641,41 @@ const CONTENT = {
     "National grades are determined by criteria that differ by producing country, such as altitude, screen size (bean size) and defect count. The same notation can mean different things in different countries.",
 };
 
-export const EN = { ...PREFECTURES, ...UI, ...DIARY, ...CONTENT, ...GLOSSARY_CATEGORIES_EN, ...LABELS, ...COUNTRIES, ...ROAST, ...PROCESSING, ...FLAVOR };
+// 設定「マイツール」と、テイスティングログの道具の選択
+const MYTOOLS = {
+  "マイツール": "My Tools",
+  "手入力": "Type in",
+  "ドリッパー": "Dripper",
+  "ペーパー": "Filter paper",
+  "コーヒーミル": "Coffee grinder",
+  "例: HARIO V60 02 透過ドリッパー": "e.g. HARIO V60 02 dripper",
+  "例: HARIO V60用ペーパーフィルター 02": "e.g. HARIO V60 paper filter 02",
+  "例: タイムモア C3、コマンダンテ C40": "e.g. TIMEMORE C3, Comandante C40",
+  "ドリッパーを選ぶ": "Choose a dripper",
+  "ペーパーを選ぶ(任意)": "Choose a filter paper (optional)",
+  "コーヒーミルを選ぶ": "Choose a grinder",
+  "名前を入力してください": "Please enter a name",
+  "バーコードの番号(JAN・GTIN)が正しくありません。8・12・13・14桁の数字で、末尾の確認用の数字も合っている必要があります": "The barcode number (JAN / GTIN) is not valid. It must be 8, 12, 13 or 14 digits, and the final check digit must be correct.",
+  "URLの書式が正しくありません(http:// または https:// で始まるアドレス)": "The URL format is not valid (an address starting with http:// or https://).",
+  "{kind}を編集": "Edit {kind}",
+  "{kind}を登録": "Add {kind}",
+  "名前": "Name",
+  "メーカー(任意)": "Maker (optional)",
+  "バーコードの番号(JAN・GTIN、任意)": "Barcode number (JAN / GTIN, optional)",
+  "番号は、控えとして保存します。番号から商品情報を自動で調べる機能は、ありません。": "The number is saved as a note. There is no function that looks up product information from the number.",
+  "商品ページのURL(任意)": "Product page URL (optional)",
+  "アドレスは、リンクとして保存します。ページの内容は、読み込みません。": "The address is saved as a link. The content of the page is not loaded.",
+  "メモ(任意)": "Memo (optional)",
+  "保存する": "Save",
+  "登録する": "Add",
+  "削除する": "Delete",
+  "編集": "Edit",
+  "追加": "Add",
+  "お持ちのドリッパー・ペーパー・コーヒーミルを登録します。テイスティングログの「抽出方法」「挽き目」を書くときに、ここから選べます。登録した内容は、この端末の中だけに保存されます。": "Register the drippers, filter papers and grinders you own. You can pick from them when you write \"Brew method\" and \"Grind size\" in a tasting log. What you register is stored only on this device.",
+  "マイツールにドリッパー・ペーパーの登録がありません。設定の「マイツール」から登録できます。": "No drippers or filter papers are registered in My Tools. You can register them under \"My Tools\" in Settings.",
+  "マイツールにコーヒーミルの登録がありません。設定の「マイツール」から登録できます。": "No grinders are registered in My Tools. You can register them under \"My Tools\" in Settings.",
+  "目盛り・クリック数(例: 20クリック)": "Dial / clicks (e.g. 20 clicks)",
+  "目盛り・クリック数": "Dial / clicks",
+};
+
+export const EN = { ...MYTOOLS, ...PREFECTURES, ...UI, ...DIARY, ...CONTENT, ...GLOSSARY_CATEGORIES_EN, ...LABELS, ...COUNTRIES, ...ROAST, ...PROCESSING, ...FLAVOR };

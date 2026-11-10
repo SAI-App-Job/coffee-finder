@@ -3,6 +3,7 @@ import { X, ArrowLeft, Plus, Trash2, NotebookPen, Gauge } from "lucide-react";
 import { DialInGauge } from "./common";
 import { FlavorChips, FlavorPicker } from "./FlavorPicker";
 import { formatDateTime } from "../utils/format";
+import { INPUT_CLASS } from "./formStyles";
 import { useT } from "../i18n";
 
 // 記録の場所。"home"=自宅などで自分で淹れた記録(抽出条件+Dial-in Score+ノート)、
@@ -15,6 +16,13 @@ const PLACES = [
 const EMPTY_FORM = {
   place: "home",
   brewMethod: "",
+  // 「抽出方法」「挽き目」は、手入力("manual")か、マイツールから選ぶ("tools")かを選べる
+  brewSource: "manual",
+  dripperId: "",
+  paperId: "",
+  grindSource: "manual",
+  millId: "",
+  millSetting: "",
   doseG: "",
   waterG: "",
   grindSize: "",
@@ -30,6 +38,47 @@ function computeRatio(doseG, waterG) {
   const water = Number(waterG);
   if (!dose || !water) return null;
   return `1 : ${(water / dose).toFixed(1)}`;
+}
+
+// 「手入力 / マイツール」の切り替え
+function SourceToggle({ value, onChange }) {
+  const t = useT();
+  const options = [
+    { id: "manual", label: "手入力" },
+    { id: "tools", label: "マイツール" },
+  ];
+  return (
+    <div className="inline-flex gap-0.5 p-0.5 rounded-full bg-[var(--c-surface-2)] border border-[var(--c-border)]">
+      {options.map((o) => (
+        <button
+          key={o.id}
+          type="button"
+          onClick={() => onChange(o.id)}
+          aria-pressed={value === o.id}
+          className={`px-2.5 py-0.5 rounded-full text-[11px] transition-colors ${
+            value === o.id ? "bg-[var(--accent)] text-[var(--on-accent)] font-medium" : "text-[var(--c-text-2)]"
+          }`}
+        >
+          {t(o.label)}
+        </button>
+      ))}
+    </div>
+  );
+}
+
+// マイツールから選ぶ欄(1つの種類)
+function ToolSelect({ id, tools, value, onChange, emptyLabel }) {
+  const t = useT();
+  return (
+    <select id={id} value={value} onChange={(e) => onChange(e.target.value)} className={INPUT_CLASS}>
+      <option value="">{t(emptyLabel)}</option>
+      {tools.map((tool) => (
+        <option key={tool.id} value={tool.id}>
+          {tool.name}
+        </option>
+      ))}
+    </select>
+  );
 }
 
 function LogEntryCard({ entry, onDelete }) {
@@ -90,7 +139,7 @@ function LogEntryCard({ entry, onDelete }) {
 // 商品詳細モーダルの「テイスティングログを記録」から開く、記録一覧+新規記録フォーム。
 // 同じ豆に対する複数の抽出記録を並べて見返せるようにし(条件を変えた比較)、
 // Dial-in Score(=目指した味にどれだけ近づけたか)をゲージで直感的に示す。
-export function TastingLogModal({ product, logs, onAddLog, onDeleteLog, onClose }) {
+export function TastingLogModal({ product, logs, myTools = [], onAddLog, onDeleteLog, onClose }) {
   const t = useT();
   const [mode, setMode] = useState("list");
   const [form, setForm] = useState(EMPTY_FORM);
@@ -102,6 +151,19 @@ export function TastingLogModal({ product, logs, onAddLog, onDeleteLog, onClose 
 
   if (!product) return null;
 
+  const drippers = myTools.filter((tool) => tool.kind === "dripper");
+  const papers = myTools.filter((tool) => tool.kind === "paper");
+  const grinders = myTools.filter((tool) => tool.kind === "grinder");
+  // マイツールから選んだ内容を、ログに残す文字にする(道具を後で消しても、ログの文字は変わらない)
+  const toolName = (list, id) => list.find((tool) => tool.id === id)?.name ?? "";
+  const brewMethodText =
+    form.brewSource === "tools"
+      ? [toolName(drippers, form.dripperId), toolName(papers, form.paperId)].filter(Boolean).join(" / ")
+      : form.brewMethod.trim();
+  const grindSizeText =
+    form.grindSource === "tools"
+      ? [toolName(grinders, form.millId), form.millSetting.trim()].filter(Boolean).join(" ")
+      : form.grindSize.trim();
   const ratio = computeRatio(form.doseG, form.waterG);
   const isShopForm = form.place === "shop";
   // 店舗の記録はノートと風味だけが中身なので、どちらも空のまま保存できないようにする
@@ -117,10 +179,10 @@ export function TastingLogModal({ product, logs, onAddLog, onDeleteLog, onClose 
     }
     onAddLog({
       place: "home",
-      brewMethod: form.brewMethod.trim() || null,
+      brewMethod: brewMethodText || null,
       doseG: form.doseG ? Number(form.doseG) : null,
       waterG: form.waterG ? Number(form.waterG) : null,
-      grindSize: form.grindSize.trim() || null,
+      grindSize: grindSizeText || null,
       waterTempC: form.waterTempC ? Number(form.waterTempC) : null,
       brewTime: form.brewTime.trim() || null,
       dialInScore: Number(form.dialInScore),
@@ -216,16 +278,43 @@ export function TastingLogModal({ product, logs, onAddLog, onDeleteLog, onClose 
             {!isShopForm && (
               <>
             <div>
-              <label className="text-[11px] tracking-wide text-[var(--accent-label)] uppercase mb-1 block">
-                {t("抽出方法")}
-              </label>
-              <input
-                type="text"
-                value={form.brewMethod}
-                onChange={(e) => setForm((f) => ({ ...f, brewMethod: e.target.value }))}
-                placeholder={t("例: V60、エアロプレス、エスプレッソ")}
-                className="w-full px-3 py-2 rounded-lg bg-[var(--c-surface-2)] border border-[var(--c-border)] text-[13px] text-[var(--c-text)] placeholder:text-[var(--c-text-3)] focus:outline-none focus:border-[var(--accent)]"
-              />
+              <div className="flex items-center justify-between gap-2 mb-1">
+                <label htmlFor="log-brew-method" className="text-[11px] tracking-wide text-[var(--accent-label)] uppercase block">
+                  {t("抽出方法")}
+                </label>
+                <SourceToggle value={form.brewSource} onChange={(v) => setForm((f) => ({ ...f, brewSource: v }))} />
+              </div>
+              {form.brewSource === "manual" ? (
+                <input
+                  id="log-brew-method"
+                  type="text"
+                  value={form.brewMethod}
+                  onChange={(e) => setForm((f) => ({ ...f, brewMethod: e.target.value }))}
+                  placeholder={t("例: V60、エアロプレス、エスプレッソ")}
+                  className={INPUT_CLASS}
+                />
+              ) : drippers.length === 0 && papers.length === 0 ? (
+                <p className="text-[12px] text-[var(--c-text-3)] leading-relaxed">
+                  {t("マイツールにドリッパー・ペーパーの登録がありません。設定の「マイツール」から登録できます。")}
+                </p>
+              ) : (
+                <div className="flex flex-col gap-2">
+                  <ToolSelect
+                    id="log-brew-method"
+                    tools={drippers}
+                    value={form.dripperId}
+                    onChange={(v) => setForm((f) => ({ ...f, dripperId: v }))}
+                    emptyLabel="ドリッパーを選ぶ"
+                  />
+                  <ToolSelect
+                    id="log-brew-paper"
+                    tools={papers}
+                    value={form.paperId}
+                    onChange={(v) => setForm((f) => ({ ...f, paperId: v }))}
+                    emptyLabel="ペーパーを選ぶ(任意)"
+                  />
+                </div>
+              )}
             </div>
 
             <div className="grid grid-cols-2 gap-3">
@@ -257,16 +346,44 @@ export function TastingLogModal({ product, logs, onAddLog, onDeleteLog, onClose 
             {ratio && <p className="text-[12px] text-[var(--c-text-3)] -mt-2">{t("比率(自動計算): {ratio}", { ratio })}</p>}
 
             <div>
-              <label className="text-[11px] tracking-wide text-[var(--accent-label)] uppercase mb-1 block">
-                {t("挽き目")}
-              </label>
-              <input
-                type="text"
-                value={form.grindSize}
-                onChange={(e) => setForm((f) => ({ ...f, grindSize: e.target.value }))}
-                placeholder={t("例: 中細挽き、コマンダンテ20クリック")}
-                className="w-full px-3 py-2 rounded-lg bg-[var(--c-surface-2)] border border-[var(--c-border)] text-[13px] text-[var(--c-text)] placeholder:text-[var(--c-text-3)] focus:outline-none focus:border-[var(--accent)]"
-              />
+              <div className="flex items-center justify-between gap-2 mb-1">
+                <label htmlFor="log-grind-size" className="text-[11px] tracking-wide text-[var(--accent-label)] uppercase block">
+                  {t("挽き目")}
+                </label>
+                <SourceToggle value={form.grindSource} onChange={(v) => setForm((f) => ({ ...f, grindSource: v }))} />
+              </div>
+              {form.grindSource === "manual" ? (
+                <input
+                  id="log-grind-size"
+                  type="text"
+                  value={form.grindSize}
+                  onChange={(e) => setForm((f) => ({ ...f, grindSize: e.target.value }))}
+                  placeholder={t("例: 中細挽き、コマンダンテ20クリック")}
+                  className={INPUT_CLASS}
+                />
+              ) : grinders.length === 0 ? (
+                <p className="text-[12px] text-[var(--c-text-3)] leading-relaxed">
+                  {t("マイツールにコーヒーミルの登録がありません。設定の「マイツール」から登録できます。")}
+                </p>
+              ) : (
+                <div className="flex flex-col gap-2">
+                  <ToolSelect
+                    id="log-grind-size"
+                    tools={grinders}
+                    value={form.millId}
+                    onChange={(v) => setForm((f) => ({ ...f, millId: v }))}
+                    emptyLabel="コーヒーミルを選ぶ"
+                  />
+                  <input
+                    type="text"
+                    value={form.millSetting}
+                    onChange={(e) => setForm((f) => ({ ...f, millSetting: e.target.value }))}
+                    placeholder={t("目盛り・クリック数(例: 20クリック)")}
+                    aria-label={t("目盛り・クリック数")}
+                    className={INPUT_CLASS}
+                  />
+                </div>
+              )}
             </div>
 
             <div className="grid grid-cols-2 gap-3">

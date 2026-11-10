@@ -21,6 +21,7 @@ import { useTastingLog } from "./hooks/useTastingLog";
 import { useProductPhotos } from "./hooks/useProductPhotos";
 import { buildSampleCollection, isSampleId, renderSamplePackage } from "./data/sampleCollection";
 import { useUserCollection } from "./hooks/useUserCollection";
+import { useMyTools } from "./hooks/useMyTools";
 import { useShopTastingNotes } from "./hooks/useShopTastingNotes";
 import { useAlerts } from "./hooks/useAlerts";
 import { useGeolocation } from "./hooks/useGeolocation";
@@ -99,6 +100,7 @@ export default function CoffeeProductList() {
   const { ratings, getRating, setRating } = useRatings();
   const { logsByProduct, getLogs, addLog, deleteLog, clearLogs } = useTastingLog();
   const userCollection = useUserCollection();
+  const myTools = useMyTools();
   // 商品のパッケージ写真(端末内のIndexedDBに保存。商品IDがキー)
   const {
     getPhotoUrl,
@@ -929,6 +931,7 @@ export default function CoffeeProductList() {
           favoriteArea={favoriteArea}
           setFavoriteAreaPrefecture={setFavoriteAreaPrefecture}
           setFavoriteAreaCity={setFavoriteAreaCity}
+          myTools={myTools}
           onOpenAbout={() => setAboutOpen(true)}
         />
       )}
@@ -986,6 +989,7 @@ export default function CoffeeProductList() {
       <TastingLogModal
         product={tastingLogProduct}
         logs={tastingLogProduct ? getLogs(tastingLogProduct.id) : []}
+        myTools={myTools.tools}
         onAddLog={(entry) => addLog(tastingLogProduct.id, entry)}
         onDeleteLog={(entryId) => deleteLog(tastingLogProduct.id, entryId)}
         onClose={() => setTastingLogProduct(null)}
