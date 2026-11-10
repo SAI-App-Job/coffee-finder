@@ -15,3 +15,6 @@ scraper/candidates/
 
 # 出典の原文の保存先(第三者の著作物を含むため、公開リポジトリには入れない。台帳は docs/source-archive-manifest.json)
 source-archive/
+
+# 器具カタログ: ブラウザで書き出した原文(原文は source-archive/ に保存済み)
+/tools-*.json

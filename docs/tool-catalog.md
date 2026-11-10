@@ -29,13 +29,27 @@ python -X utf8 scripts/build_tools_catalog.py fellow
 python -X utf8 scripts/build_tools_catalog.py origami
 npm run tools:check
 ```
-- 取得の間隔は2秒。一覧は、全ページ(250件ずつ)取る。
+- 取得の間隔は2秒。一覧は、全ページ(250件ずつ)取る(HARIOは、「coffee」の一覧だけ)。
+- **取得制限(429)が続くとき**: 数十分〜数時間、間隔を空けてから、やり直す。それでも取れないときは、次の「ブラウザで書き出す方法」を使う。
 - 種類(ドリッパー・ペーパー・ミル)は、商品名から決める。`--dry-run` で一覧を見て、載せたくないものが入っていれば、`shopify_kind_en` / `hario_kind` の除外の語を足す。
 - JANは、桁数とチェックデジットが合うものだけ載せる(合わないものは、警告を出して、空にする)。店が入力した値のため、メーカーの公式の値と違う場合がありうる。
 - 取得した原文は、`source-archive/tools-<名前>-<日付>/` に保存される。
 
 
 取得の間隔は6秒(公式サイトへの負荷と、取得制限を避けるため)。
+
+### ブラウザで書き出す方法(取得制限がかかりやすいとき)
+ふつうの閲覧と同じ見え方で取得するため、取得制限がかかりにくい。
+1. ブラウザで、公式ショップのトップページを開く(例: https://shop.hariocorp.co.jp/)。**そのサイトの上で実行する**
+2. PowerShellで、スクリプトを、クリップボードにコピーする: `Get-Content scripts\shopify-export.js -Raw -Encoding UTF8 | Set-Clipboard`(**`-Encoding UTF8` が必要**。無いと、日本語が文字化けして、貼り付けたコードが動かない)
+3. ブラウザで F12 を押して、開発者ツールの「コンソール」を開き、貼り付けて Enter(「貼り付けを許可」と入力するよう求められたら、入力する)
+4. 数分後に、`tools-<メーカー>.json` が、自動でダウンロードされる(進み具合は、コンソールに出る)
+5. そのファイルを、プロジェクトのフォルダに置いて、実行する:
+```bash
+py -X utf8 scripts/build_tools_catalog.py hario-shop --from-file tools-hario-shop.json --dry-run   # 対象の一覧を確認
+py -X utf8 scripts/build_tools_catalog.py hario-shop --from-file tools-hario-shop.json             # 反映
+```
+種類の判定と除外は、Python側で行う(ブラウザ側の絞り込みは、取りこぼさないための、ゆるいもの)。
 
 ## 項目
 `items[]`: `id`・`kind`(dripper / paper / grinder)・`maker`・`makerAlias`(検索用の読み)・`name`・`variants[]`(`label`色・大きさ、`sku`品番、`gtin`)・`url`(公式の製品ページ)・`checkedAt`・`sourceId`(原文の資料ID)。
@@ -44,9 +58,12 @@ npm run tools:check
 | メーカー | 件数 | JAN | 取得元 | メモ |
 |---|---|---|---|---|
 | Kalita | 115製品 | 115 | 公式サイトの製品ページ(kalita.co.jp) | 製品ページの題名は型番だけのものが多いため、種類の名前(ドリッパー等)を前に付けた。ネルフィルター・セット・ポット等は除外 |
-| HARIO | 79製品(87型番) | 0 | 公式サイトの製品情報(hario.com) | **JANは、公式サイトの製品ページに無い**。JANは公式オンラインショップ(shop.hariocorp.co.jp)にあるが、この環境からは取得できなかった(429)。取得できる環境で、`/products/<ハンドル>.js` の `variants[].barcode` から取れる |
+| HARIO | 97製品(124型番) | 119 | 名前・型番は公式サイト(hario.com)、JANは公式オンラインショップ(shop.hariocorp.co.jp。ブラウザで書き出し) | ショップの商品で、hario.comに無いもの(コラボ品・限定品など19製品)も追加。JANが無い5型番は、ショップに無い(ALPHA DRIPPER TRITAN・SHIZUKA・コーヒーミル ウォールナット・マイカフェドリップフィルター)か、ショップの値が空(V60ペーパーフィルターM 50枚フック穴あり)。hario.comとショップで型番の書き方が違う1件(SUIREN ブラック＆ホワイト)は、別名の表(`HARIO_SKU_ALIAS`)で対応 |
 | Melitta | 22製品(26型番) | 26 | 公式サイトの製品ページ(melitta.co.jp。家庭用のハンドドリップ器具・フィルターペーパー・ミル) | ページの「スペック」の表(型番・JAN)から。ケトル・サーバーは除外。メリタでは、ドリッパーを「コーヒーフィルター」「アロマフィルター」と呼ぶ。業務用は未収録 |
 | 1Zpresso | 11機種 | 0 | 公式サイト(1zpresso.coffee) | 公式サイトに、型番・JANの表が無い。機種名は、各シリーズのページの見出しにあるものだけ(スクリプトが、ページにその文言があることを確かめてから載せる)。Q・X・ZP6の個別の機種名は、公式ページの見出しに無いため未収録 |
+| TIMEMORE | 17製品(36型番) | 28 | 公式オンラインショップ(www.timemore.com。ブラウザで書き出し) | 公式の英語サイトのため、JANは、中国のGS1の番号(6959…)で、日本の店で売る品のJANと違う場合がありうる。JANが空の8型番は、ショップの値が、JANではない社内コード(IF…)のため、載せていない。中古品(USED)・セット品は除外 |
+| Fellow | 4製品(16型番) | 16 | 公式オンラインショップ(fellowproducts.com。ブラウザで書き出し) | 米国向けの店。JANは、米国のUPC/EAN(840…・852…・860…)で、日本の店で売る品の番号と違う場合がありうる。Stagg [X]/[XF]、Ode Gen 2、Opus 2、Stagg専用ペーパー |
+| ORIGAMI | 11製品(47型番) | 47 | 公式オンラインショップ(origami-kai.com。ブラウザで書き出し) | JANは、日本のJAN(4536058…)。オンラインストア限定品を含む。ドリッパー形の照明(Pendant lamp)と、お茶用(Tea Dripper)は除外 |
 
 ### 既知の注意
 - Kalitaの公式ページで、**102-D と 102-DL に、同じJAN(4901369503026)が付いている**。公式の記載のまま載せている(`npm run tools:check` が警告を出す)。JANから照合すると、先に見つかった方が出る。
@@ -54,7 +71,7 @@ npm run tools:check
 - HARIOの名前は、公式ページの表記のまま(例: 「V60透過ドリッパ-01クリア」のような表記ゆれも、そのまま)。
 
 ## 未収録(次の手)
-- **TIMEMORE・Fellow・ORIGAMI(origami-kai.com)・HARIOのJAN**: 上の「公式ショップから、JANを取る」を、利用者のPCで実行する(作業用の端末では、取得制限で取得できなかった)。
-- **Comandante**(comandante.de): 403で、作業用の端末では取得できなかった。
+- **Comandante**(comandante.de): 403で、作業用の端末では取得できなかった。利用者のPCのブラウザで、公式サイトを開ける場合は、別のアダプターで収録できる(Shopify製かは未確認)。
 - **CAFEC**(cafec.co.jp)・**Kinu**(kinu-grinders.com): 作業用の端末から接続できなかった。
+- Melittaの業務用、1Zpressoの個別の機種(Q・X・ZP6)。
 - 販売店(楽天・Yahoo!・Amazonなど)の情報は、使わない(公式ではないため)。

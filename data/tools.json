@@ -189,6 +189,134 @@
    "makerAlias": "ワンゼットプレッソ"
   },
   {
+   "id": "fellow-shop-staggdripper",
+   "kind": "dripper",
+   "maker": "Fellow",
+   "name": "Stagg Pour-Over Dripper",
+   "variants": [
+    {
+     "label": "[X] / Matte Black",
+     "sku": "1130",
+     "gtin": "852212007090"
+    },
+    {
+     "label": "[XF] / Matte Black",
+     "sku": "1108",
+     "gtin": "860937000296"
+    }
+   ],
+   "url": "https://fellowproducts.com/products/staggdripper",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-fellow-2026-11-10",
+   "makerAlias": "フェロー"
+  },
+  {
+   "id": "fellow-shop-ode-brew-grinder-gen-2",
+   "kind": "grinder",
+   "maker": "Fellow",
+   "name": "Ode Brew Grinder Gen 2",
+   "variants": [
+    {
+     "label": "Matte Black / Gen 2 Brew Burrs",
+     "sku": "D1211MB-US-SB",
+     "gtin": "840228801641"
+    },
+    {
+     "label": "Matte Black / Upgraded SSP MP Brew Burrs",
+     "sku": "D1211MB-US-S2",
+     "gtin": "840228803584"
+    },
+    {
+     "label": "Matte White / Gen 2 Brew Burrs",
+     "sku": "D1211MW-US-SB",
+     "gtin": "840228801689"
+    },
+    {
+     "label": "Matte White / Upgraded SSP MP Brew Burrs",
+     "sku": "D1211MW-US-S2",
+     "gtin": "840228803591"
+    }
+   ],
+   "url": "https://fellowproducts.com/products/ode-brew-grinder-gen-2",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-fellow-2026-11-10",
+   "makerAlias": "フェロー"
+  },
+  {
+   "id": "fellow-shop-opus-2-conical-burr-grinder",
+   "kind": "grinder",
+   "maker": "Fellow",
+   "name": "Opus 2 Conical Burr Grinder",
+   "variants": [
+    {
+     "label": "Black",
+     "sku": "1222MB-NA",
+     "gtin": "840228810315"
+    },
+    {
+     "label": "White",
+     "sku": "1222MW-NA",
+     "gtin": "840228810322"
+    },
+    {
+     "label": "Malted Chocolate + Maple",
+     "sku": "1222ML-NA",
+     "gtin": "840228810360"
+    },
+    {
+     "label": "Cherry Red + Walnut",
+     "sku": "1222CH-NA",
+     "gtin": "840228810339"
+    },
+    {
+     "label": "Sesame + Maple",
+     "sku": "1222SE-NA",
+     "gtin": "840228810346"
+    },
+    {
+     "label": "Woodland + Walnut",
+     "sku": "1222WL-NA",
+     "gtin": "840228810353"
+    },
+    {
+     "label": "Black + Walnut",
+     "sku": "1222BA-NA",
+     "gtin": "840228810377"
+    },
+    {
+     "label": "Marine Blue + Walnut",
+     "sku": "1222BN-NA",
+     "gtin": "840228811381"
+    }
+   ],
+   "url": "https://fellowproducts.com/products/opus-2-conical-burr-grinder",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-fellow-2026-11-10",
+   "makerAlias": "フェロー"
+  },
+  {
+   "id": "fellow-shop-stagg-paper-filters",
+   "kind": "paper",
+   "maker": "Fellow",
+   "name": "Stagg Paper Filters",
+   "variants": [
+    {
+     "label": "[X] / 1 pack",
+     "sku": "1135",
+     "gtin": "840228800323"
+    },
+    {
+     "label": "[XF] / 1 pack",
+     "sku": "1129",
+     "gtin": "840228800330"
+    }
+   ],
+   "url": "https://fellowproducts.com/products/stagg-paper-filters",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-fellow-2026-11-10",
+   "makerAlias": "フェロー"
+  },
+  {
    "id": "hario-adt-01-b",
    "kind": "dripper",
    "maker": "HARIO",
@@ -206,6 +334,129 @@
    "makerAlias": "ハリオ"
   },
   {
+   "id": "hario-shop-nr-vdc-02",
+   "kind": "dripper",
+   "maker": "HARIO",
+   "name": "HARIO×Noritake V60 透過ドリッパー",
+   "variants": [
+    {
+     "label": "01 / ハンプシャーゴールド",
+     "sku": "NR-VDC-01-HG",
+     "gtin": "4977642003163"
+    },
+    {
+     "label": "01 / ハンプシャープラチナ",
+     "sku": "NR-VDC-01-HP",
+     "gtin": "4977642003170"
+    },
+    {
+     "label": "01 / レースウッドゴールドブルー",
+     "sku": "NR-VDC-01-LGB",
+     "gtin": "4977642003187"
+    },
+    {
+     "label": "01 / レースウッドゴールドベージュ",
+     "sku": "NR-VDC-01-LGBE",
+     "gtin": "4977642003194"
+    },
+    {
+     "label": "02 / ハンプシャーゴールド",
+     "sku": "NR-VDC-02-HG",
+     "gtin": "4977642003125"
+    },
+    {
+     "label": "02 / ハンプシャープラチナ",
+     "sku": "NR-VDC-02-HP",
+     "gtin": "4977642003118"
+    },
+    {
+     "label": "02 / レースウッドゴールドブルー",
+     "sku": "NR-VDC-02-LGB",
+     "gtin": "4977642003132"
+    },
+    {
+     "label": "02 / レースウッドゴールドベージュ",
+     "sku": "NR-VDC-02-LGBE",
+     "gtin": "4977642003149"
+    }
+   ],
+   "url": "https://shop.hariocorp.co.jp/products/nr-vdc-02",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-hario-shop-2026-11-10",
+   "makerAlias": "ハリオ"
+  },
+  {
+   "id": "hario-shop-t-vdc-02-w",
+   "kind": "dripper",
+   "maker": "HARIO",
+   "name": "HARIO×たち吉 V60透過ドリッパー 02 セラミック",
+   "variants": [
+    {
+     "label": "祥瑞",
+     "sku": "T-VDC-02-W-SZ",
+     "gtin": "4977642736733"
+    },
+    {
+     "label": "鳥獣戯画",
+     "sku": "T-VDC-02-W-CG",
+     "gtin": "4977642736740"
+    }
+   ],
+   "url": "https://shop.hariocorp.co.jp/products/t-vdc-02-w",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-hario-shop-2026-11-10",
+   "makerAlias": "ハリオ"
+  },
+  {
+   "id": "hario-shop-t-vdt-02-ob",
+   "kind": "dripper",
+   "maker": "HARIO",
+   "name": "HARIO×たち吉 V60透過ドリッパー 02 伝統釉",
+   "variants": [
+    {
+     "label": "織部",
+     "sku": "T-VDT-02-OB",
+     "gtin": "4977642736795"
+    },
+    {
+     "label": "古瀬戸",
+     "sku": "T-VDT-02-KST",
+     "gtin": "4977642736801"
+    }
+   ],
+   "url": "https://shop.hariocorp.co.jp/products/t-vdt-02-ob",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-hario-shop-2026-11-10",
+   "makerAlias": "ハリオ"
+  },
+  {
+   "id": "hario-shop-t-ssdc-200-w-cg",
+   "kind": "dripper",
+   "maker": "HARIO",
+   "name": "HARIO×たち吉 浸漬式セラミックドリッパースイッチ",
+   "variants": [
+    {
+     "label": "鳥獣戯画",
+     "sku": "T-SSDC-200-W-CG",
+     "gtin": "4977642732094"
+    },
+    {
+     "label": "丸紋祥瑞",
+     "sku": "T-SSDC-200-W-MS",
+     "gtin": "4977642732087"
+    },
+    {
+     "label": "扇面散らし",
+     "sku": "T-SSDC-200-W-ST",
+     "gtin": "4977642732100"
+    }
+   ],
+   "url": "https://shop.hariocorp.co.jp/products/t-ssdc-200-w-cg",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-hario-shop-2026-11-10",
+   "makerAlias": "ハリオ"
+  },
+  {
    "id": "hario-vdmu-02-tb",
    "kind": "dripper",
    "maker": "HARIO",
@@ -214,18 +465,19 @@
     {
      "label": "透明ブラック",
      "sku": "VDMU-02-TB",
-     "gtin": ""
+     "gtin": "4977642031302"
     },
     {
      "label": "ホワイト",
      "sku": "VDMU-02-CW",
-     "gtin": ""
+     "gtin": "4977642031326"
     }
    ],
    "url": "https://www.hario.com/product/coffee/dripper/VDMU.html",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
-   "makerAlias": "ハリオ"
+   "makerAlias": "ハリオ",
+   "gtinSourceId": "tools-hario-shop-2026-11-10"
   },
   {
    "id": "hario-vdn-01-b",
@@ -236,23 +488,24 @@
     {
      "label": "ブラック",
      "sku": "VDN-01-B",
-     "gtin": ""
+     "gtin": "4977642088658"
     },
     {
      "label": "クリア",
      "sku": "VDN-01-T",
-     "gtin": ""
+     "gtin": "4977642088740"
     },
     {
      "label": "アンバー",
      "sku": "VDN-01-AB",
-     "gtin": ""
+     "gtin": "4977642088764"
     }
    ],
    "url": "https://www.hario.com/product/coffee/dripper/VDN.html",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
-   "makerAlias": "ハリオ"
+   "makerAlias": "ハリオ",
+   "gtinSourceId": "tools-hario-shop-2026-11-10"
   },
   {
    "id": "hario-vdn-02-b",
@@ -263,23 +516,24 @@
     {
      "label": "ブラック",
      "sku": "VDN-02-B",
-     "gtin": ""
+     "gtin": "4977642088665"
     },
     {
      "label": "クリア",
      "sku": "VDN-02-T",
-     "gtin": ""
+     "gtin": "4977642088757"
     },
     {
      "label": "アンバー",
      "sku": "VDN-02-AB",
-     "gtin": ""
+     "gtin": "4977642088771"
     }
    ],
    "url": "https://www.hario.com/product/coffee/dripper/VDN.html",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
-   "makerAlias": "ハリオ"
+   "makerAlias": "ハリオ",
+   "gtinSourceId": "tools-hario-shop-2026-11-10"
   },
   {
    "id": "hario-vdsu-02-tb",
@@ -290,13 +544,14 @@
     {
      "label": "透明ブラック",
      "sku": "VDSU-02-TB",
-     "gtin": ""
+     "gtin": "4977642031371"
     }
    ],
    "url": "https://www.hario.com/product/coffee/dripper/VDSU.html",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
-   "makerAlias": "ハリオ"
+   "makerAlias": "ハリオ",
+   "gtinSourceId": "tools-hario-shop-2026-11-10"
   },
   {
    "id": "hario-vdsu-02-tri",
@@ -307,13 +562,14 @@
     {
      "label": "トリコロール",
      "sku": "VDSU-02-TRI",
-     "gtin": ""
+     "gtin": "4977642031616"
     }
    ],
    "url": "https://www.hario.com/product/coffee/dripper/VDSU.html",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
-   "makerAlias": "ハリオ"
+   "makerAlias": "ハリオ",
+   "gtinSourceId": "tools-hario-shop-2026-11-10"
   },
   {
    "id": "hario-vdsu-02-b＆w",
@@ -324,13 +580,14 @@
     {
      "label": "ブラック＆ホワイト",
      "sku": "VDSU-02-B＆W",
-     "gtin": ""
+     "gtin": "4977642031623"
     }
    ],
    "url": "https://www.hario.com/product/coffee/dripper/VDSU.html",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
-   "makerAlias": "ハリオ"
+   "makerAlias": "ハリオ",
+   "gtinSourceId": "tools-hario-shop-2026-11-10"
   },
   {
    "id": "hario-vdsu-02-nj",
@@ -341,12 +598,30 @@
     {
      "label": "虹",
      "sku": "VDSU-02-NJ",
-     "gtin": ""
+     "gtin": "4977642031647"
     }
    ],
    "url": "https://www.hario.com/product/coffee/dripper/VDSU.html",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
+   "makerAlias": "ハリオ",
+   "gtinSourceId": "tools-hario-shop-2026-11-10"
+  },
+  {
+   "id": "hario-shop-vdsc-200-spb",
+   "kind": "dripper",
+   "maker": "HARIO",
+   "name": "V60 ドリッパー スイッチ 七宝ブラック",
+   "variants": [
+    {
+     "label": "",
+     "sku": "VDSC-200-SPB",
+     "gtin": "4977642732551"
+    }
+   ],
+   "url": "https://shop.hariocorp.co.jp/products/vdsc-200-spb",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-hario-shop-2026-11-10",
    "makerAlias": "ハリオ"
   },
   {
@@ -358,13 +633,14 @@
     {
      "label": "ブラック",
      "sku": "ZB-VDF-01B",
-     "gtin": ""
+     "gtin": "4573533860725"
     }
    ],
    "url": "https://www.hario.com/product/coffee/dripper/ZB-VDF.html",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
-   "makerAlias": "ハリオ"
+   "makerAlias": "ハリオ",
+   "gtinSourceId": "tools-hario-shop-2026-11-10"
   },
   {
    "id": "hario-zb-vdfp-02b",
@@ -375,12 +651,30 @@
     {
      "label": "ブラック",
      "sku": "ZB-VDFP-02B",
-     "gtin": ""
+     "gtin": "4573533860732"
     }
    ],
    "url": "https://www.hario.com/product/coffee/dripper/ZB-VDF.html",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
+   "makerAlias": "ハリオ",
+   "gtinSourceId": "tools-hario-shop-2026-11-10"
+  },
+  {
+   "id": "hario-shop-o-vdm-02-hsv",
+   "kind": "dripper",
+   "maker": "HARIO",
+   "name": "V60 メタルドリッパー HARIO outdoor",
+   "variants": [
+    {
+     "label": "",
+     "sku": "O-VDM-02-HSV",
+     "gtin": "4977642040014"
+    }
+   ],
+   "url": "https://shop.hariocorp.co.jp/products/o-vdm-02-hsv",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-hario-shop-2026-11-10",
    "makerAlias": "ハリオ"
   },
   {
@@ -392,13 +686,14 @@
     {
      "label": "ブラック",
      "sku": "VDGR-01-B",
-     "gtin": ""
+     "gtin": "4977642730113"
     }
    ],
    "url": "https://www.hario.com/product/coffee/dripper/VDGR.html",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
-   "makerAlias": "ハリオ"
+   "makerAlias": "ハリオ",
+   "gtinSourceId": "tools-hario-shop-2026-11-10"
   },
   {
    "id": "hario-vdgr-02-b",
@@ -409,13 +704,14 @@
     {
      "label": "ブラック",
      "sku": "VDGR-02-B",
-     "gtin": ""
+     "gtin": "4977642730137"
     }
    ],
    "url": "https://www.hario.com/product/coffee/dripper/VDGR.html",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
-   "makerAlias": "ハリオ"
+   "makerAlias": "ハリオ",
+   "gtinSourceId": "tools-hario-shop-2026-11-10"
   },
   {
    "id": "hario-vdta-01-t",
@@ -426,13 +722,14 @@
     {
      "label": "クリア",
      "sku": "VDTA-01-T",
-     "gtin": ""
+     "gtin": "4977642002883"
     }
    ],
    "url": "https://www.hario.com/product/coffee/dripper/VDTA.html",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
-   "makerAlias": "ハリオ"
+   "makerAlias": "ハリオ",
+   "gtinSourceId": "tools-hario-shop-2026-11-10"
   },
   {
    "id": "hario-vdta-02-t",
@@ -443,12 +740,67 @@
     {
      "label": "クリア",
      "sku": "VDTA-02-T",
-     "gtin": ""
+     "gtin": "4977642002890"
     }
    ],
    "url": "https://www.hario.com/product/coffee/dripper/VDTA.html",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
+   "makerAlias": "ハリオ",
+   "gtinSourceId": "tools-hario-shop-2026-11-10"
+  },
+  {
+   "id": "hario-shop-vdti",
+   "kind": "dripper",
+   "maker": "HARIO",
+   "name": "V60チタンドリッパー",
+   "variants": [
+    {
+     "label": "01",
+     "sku": "VDTI-01-TSV",
+     "gtin": "4977642723597"
+    },
+    {
+     "label": "02",
+     "sku": "VDTI-02-TSV",
+     "gtin": "4977642723603"
+    }
+   ],
+   "url": "https://shop.hariocorp.co.jp/products/vdti",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-hario-shop-2026-11-10",
+   "makerAlias": "ハリオ"
+  },
+  {
+   "id": "hario-shop-vdnc",
+   "kind": "dripper",
+   "maker": "HARIO",
+   "name": "V60ドリッパーNEO セラミック",
+   "variants": [
+    {
+     "label": "01 / グレー",
+     "sku": "VDNC-01-GR-",
+     "gtin": "4977642089150"
+    },
+    {
+     "label": "01 / ホワイト",
+     "sku": "VDNC-01-W-",
+     "gtin": "4977642089143"
+    },
+    {
+     "label": "02 / グレー",
+     "sku": "VDNC-02-GR-",
+     "gtin": "4977642089174"
+    },
+    {
+     "label": "02 / ホワイト",
+     "sku": "VDNC-02-W-",
+     "gtin": "4977642089167"
+    }
+   ],
+   "url": "https://shop.hariocorp.co.jp/products/vdnc",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-hario-shop-2026-11-10",
    "makerAlias": "ハリオ"
   },
   {
@@ -460,13 +812,14 @@
     {
      "label": "ヘアラインシルバー",
      "sku": "VDMR-02-HSV",
-     "gtin": ""
+     "gtin": "4977642736702"
     }
    ],
    "url": "https://www.hario.com/product/coffee/dripper/VDM.html",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
-   "makerAlias": "ハリオ"
+   "makerAlias": "ハリオ",
+   "gtinSourceId": "tools-hario-shop-2026-11-10"
   },
   {
    "id": "hario-vdmr-02-mb",
@@ -477,13 +830,14 @@
     {
      "label": "マットブラック",
      "sku": "VDMR-02-MB",
-     "gtin": ""
+     "gtin": "4977642736719"
     }
    ],
    "url": "https://www.hario.com/product/coffee/dripper/VDM.html",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
-   "makerAlias": "ハリオ"
+   "makerAlias": "ハリオ",
+   "gtinSourceId": "tools-hario-shop-2026-11-10"
   },
   {
    "id": "hario-vdgn-03-b",
@@ -494,13 +848,14 @@
     {
      "label": "ブラック",
      "sku": "VDGN-03-B",
-     "gtin": ""
+     "gtin": "4977642730151"
     }
    ],
    "url": "https://www.hario.com/product/coffee/dripper/VDGN.html",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
-   "makerAlias": "ハリオ"
+   "makerAlias": "ハリオ",
+   "gtinSourceId": "tools-hario-shop-2026-11-10"
   },
   {
    "id": "hario-vdgr-01-ov",
@@ -511,13 +866,14 @@
     {
      "label": "オリーブウッド",
      "sku": "VDGR-01-OV",
-     "gtin": ""
+     "gtin": "4977642736689"
     }
    ],
    "url": "https://www.hario.com/product/coffee/dripper/VDG-OV.html",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
-   "makerAlias": "ハリオ"
+   "makerAlias": "ハリオ",
+   "gtinSourceId": "tools-hario-shop-2026-11-10"
   },
   {
    "id": "hario-vdgr-02-ov",
@@ -528,13 +884,14 @@
     {
      "label": "オリーブウッド",
      "sku": "VDGR-02-OV",
-     "gtin": ""
+     "gtin": "4977642736696"
     }
    ],
    "url": "https://www.hario.com/product/coffee/dripper/VDG-OV.html",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
-   "makerAlias": "ハリオ"
+   "makerAlias": "ハリオ",
+   "gtinSourceId": "tools-hario-shop-2026-11-10"
   },
   {
    "id": "hario-vdr-01-t",
@@ -545,13 +902,14 @@
     {
      "label": "透明",
      "sku": "VDR-01-T",
-     "gtin": ""
+     "gtin": "4977642143319"
     }
    ],
    "url": "https://www.hario.com/product/coffee/dripper/VD.html",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
-   "makerAlias": "ハリオ"
+   "makerAlias": "ハリオ",
+   "gtinSourceId": "tools-hario-shop-2026-11-10"
   },
   {
    "id": "hario-vdcr-01-r",
@@ -562,13 +920,14 @@
     {
      "label": "レッド",
      "sku": "VDCR-01-R",
-     "gtin": ""
+     "gtin": "4977642736665"
     }
    ],
    "url": "https://www.hario.com/product/coffee/dripper/VDC.html",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
-   "makerAlias": "ハリオ"
+   "makerAlias": "ハリオ",
+   "gtinSourceId": "tools-hario-shop-2026-11-10"
   },
   {
    "id": "hario-vdcr-01-w",
@@ -579,13 +938,14 @@
     {
      "label": "ホワイト",
      "sku": "VDCR-01-W",
-     "gtin": ""
+     "gtin": "4977642143340"
     }
    ],
    "url": "https://www.hario.com/product/coffee/dripper/VDC.html",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
-   "makerAlias": "ハリオ"
+   "makerAlias": "ハリオ",
+   "gtinSourceId": "tools-hario-shop-2026-11-10"
   },
   {
    "id": "hario-vdr-01-w",
@@ -596,13 +956,14 @@
     {
      "label": "ホワイト",
      "sku": "VDR-01-W",
-     "gtin": ""
+     "gtin": "4977642143326"
     }
    ],
    "url": "https://www.hario.com/product/coffee/dripper/VD.html",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
-   "makerAlias": "ハリオ"
+   "makerAlias": "ハリオ",
+   "gtinSourceId": "tools-hario-shop-2026-11-10"
   },
   {
    "id": "hario-vdr-01-r",
@@ -613,13 +974,14 @@
     {
      "label": "レッド",
      "sku": "VDR-01-R",
-     "gtin": ""
+     "gtin": "4977642143333"
     }
    ],
    "url": "https://www.hario.com/product/coffee/dripper/VD.html",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
-   "makerAlias": "ハリオ"
+   "makerAlias": "ハリオ",
+   "gtinSourceId": "tools-hario-shop-2026-11-10"
   },
   {
    "id": "hario-vdr-02-t",
@@ -630,13 +992,14 @@
     {
      "label": "透明",
      "sku": "VDR-02-T",
-     "gtin": ""
+     "gtin": "4977642730465"
     }
    ],
    "url": "https://www.hario.com/product/coffee/dripper/VD.html",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
-   "makerAlias": "ハリオ"
+   "makerAlias": "ハリオ",
+   "gtinSourceId": "tools-hario-shop-2026-11-10"
   },
   {
    "id": "hario-vdcr-02-r",
@@ -647,13 +1010,14 @@
     {
      "label": "レッド",
      "sku": "VDCR-02-R",
-     "gtin": ""
+     "gtin": "4977642736672"
     }
    ],
    "url": "https://www.hario.com/product/coffee/dripper/VDC.html",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
-   "makerAlias": "ハリオ"
+   "makerAlias": "ハリオ",
+   "gtinSourceId": "tools-hario-shop-2026-11-10"
   },
   {
    "id": "hario-vdcr-02-w",
@@ -664,13 +1028,14 @@
     {
      "label": "ホワイト",
      "sku": "VDCR-02-W",
-     "gtin": ""
+     "gtin": "4977642143364"
     }
    ],
    "url": "https://www.hario.com/product/coffee/dripper/VDC.html",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
-   "makerAlias": "ハリオ"
+   "makerAlias": "ハリオ",
+   "gtinSourceId": "tools-hario-shop-2026-11-10"
   },
   {
    "id": "hario-vdr-02-w",
@@ -681,13 +1046,14 @@
     {
      "label": "ホワイト",
      "sku": "VDR-02-W",
-     "gtin": ""
+     "gtin": "4977642730472"
     }
    ],
    "url": "https://www.hario.com/product/coffee/dripper/VD.html",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
-   "makerAlias": "ハリオ"
+   "makerAlias": "ハリオ",
+   "gtinSourceId": "tools-hario-shop-2026-11-10"
   },
   {
    "id": "hario-vdr-02-r",
@@ -698,13 +1064,14 @@
     {
      "label": "レッド",
      "sku": "VDR-02-R",
-     "gtin": ""
+     "gtin": "4977642730496"
     }
    ],
    "url": "https://www.hario.com/product/coffee/dripper/VD.html",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
-   "makerAlias": "ハリオ"
+   "makerAlias": "ハリオ",
+   "gtinSourceId": "tools-hario-shop-2026-11-10"
   },
   {
    "id": "hario-vdr-03-t",
@@ -715,12 +1082,69 @@
     {
      "label": "透明",
      "sku": "VDR-03-T",
-     "gtin": ""
+     "gtin": "4977642730502"
     }
    ],
    "url": "https://www.hario.com/product/coffee/dripper/VD.html",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
+   "makerAlias": "ハリオ",
+   "gtinSourceId": "tools-hario-shop-2026-11-10"
+  },
+  {
+   "id": "hario-shop-cfod-1b",
+   "kind": "dripper",
+   "maker": "HARIO",
+   "name": "カフェオールドリッパー ブラック",
+   "variants": [
+    {
+     "label": "1杯用",
+     "sku": "CFOD-1B",
+     "gtin": "4977642171404"
+    },
+    {
+     "label": "1-4杯用",
+     "sku": "CFOD-02-B",
+     "gtin": "4977642171473"
+    }
+   ],
+   "url": "https://shop.hariocorp.co.jp/products/cfod-1b",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-hario-shop-2026-11-10",
+   "makerAlias": "ハリオ"
+  },
+  {
+   "id": "hario-shop-3cfol-1br",
+   "kind": "dripper",
+   "maker": "HARIO",
+   "name": "カフェオールドリッパー ライト",
+   "variants": [
+    {
+     "label": "",
+     "sku": "CFOL-1-BR",
+     "gtin": "4977642171671"
+    }
+   ],
+   "url": "https://shop.hariocorp.co.jp/products/3cfol-1br",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-hario-shop-2026-11-10",
+   "makerAlias": "ハリオ"
+  },
+  {
+   "id": "hario-shop-bt-cfod-01",
+   "kind": "dripper",
+   "maker": "HARIO",
+   "name": "カフェオールドリッパー・BATON",
+   "variants": [
+    {
+     "label": "1杯用",
+     "sku": "BT-CFOD-01",
+     "gtin": "4977642171565"
+    }
+   ],
+   "url": "https://shop.hariocorp.co.jp/products/bt-cfod-01",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-hario-shop-2026-11-10",
    "makerAlias": "ハリオ"
   },
   {
@@ -732,12 +1156,52 @@
     {
      "label": "",
      "sku": "SSDC-200-SUN",
-     "gtin": ""
+     "gtin": "4977642038455"
     }
    ],
    "url": "https://www.hario.com/product/coffee/dripper/SSDC.html",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
+   "makerAlias": "ハリオ",
+   "gtinSourceId": "tools-hario-shop-2026-11-10"
+  },
+  {
+   "id": "hario-shop-vdc-02-spb",
+   "kind": "dripper",
+   "maker": "HARIO",
+   "name": "セラミックドリッパー 02 七宝ブラック",
+   "variants": [
+    {
+     "label": "",
+     "sku": "VDC-02-SPB",
+     "gtin": "4977642731639"
+    }
+   ],
+   "url": "https://shop.hariocorp.co.jp/products/vdc-02-spb",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-hario-shop-2026-11-10",
+   "makerAlias": "ハリオ"
+  },
+  {
+   "id": "hario-shop-dmd-01-hsv",
+   "kind": "dripper",
+   "maker": "HARIO",
+   "name": "ダブルメッシュメタルドリッパー",
+   "variants": [
+    {
+     "label": "01",
+     "sku": "DMD-01-HSV",
+     "gtin": "4977642727960"
+    },
+    {
+     "label": "02",
+     "sku": "DMD-02-HSV",
+     "gtin": "4977642727977"
+    }
+   ],
+   "url": "https://shop.hariocorp.co.jp/products/dmd-01-hsv",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-hario-shop-2026-11-10",
    "makerAlias": "ハリオ"
   },
   {
@@ -749,13 +1213,14 @@
     {
      "label": "透明",
      "sku": "PED-01-T",
-     "gtin": ""
+     "gtin": "4977642730861"
     }
    ],
    "url": "https://www.hario.com/product/coffee/dripper/PED.html",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
-   "makerAlias": "ハリオ"
+   "makerAlias": "ハリオ",
+   "gtinSourceId": "tools-hario-shop-2026-11-10"
   },
   {
    "id": "hario-ped-01-b",
@@ -766,13 +1231,14 @@
     {
      "label": "ブラック",
      "sku": "PED-01-B",
-     "gtin": ""
+     "gtin": "4977642732407"
     }
    ],
    "url": "https://www.hario.com/product/coffee/dripper/PED-B.html",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
-   "makerAlias": "ハリオ"
+   "makerAlias": "ハリオ",
+   "gtinSourceId": "tools-hario-shop-2026-11-10"
   },
   {
    "id": "hario-ped-02-t",
@@ -783,13 +1249,14 @@
     {
      "label": "透明",
      "sku": "PED-02-T",
-     "gtin": ""
+     "gtin": "4977642730878"
     }
    ],
    "url": "https://www.hario.com/product/coffee/dripper/PED.html",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
-   "makerAlias": "ハリオ"
+   "makerAlias": "ハリオ",
+   "gtinSourceId": "tools-hario-shop-2026-11-10"
   },
   {
    "id": "hario-ped-02-b",
@@ -800,13 +1267,14 @@
     {
      "label": "ブラック",
      "sku": "PED-02-B",
-     "gtin": ""
+     "gtin": "4977642732414"
     }
    ],
    "url": "https://www.hario.com/product/coffee/dripper/PED-B.html",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
-   "makerAlias": "ハリオ"
+   "makerAlias": "ハリオ",
+   "gtinSourceId": "tools-hario-shop-2026-11-10"
   },
   {
    "id": "hario-ped-03-t",
@@ -817,13 +1285,14 @@
     {
      "label": "透明",
      "sku": "PED-03-T",
-     "gtin": ""
+     "gtin": "4977642730885"
     }
    ],
    "url": "https://www.hario.com/product/coffee/dripper/PED.html",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
-   "makerAlias": "ハリオ"
+   "makerAlias": "ハリオ",
+   "gtinSourceId": "tools-hario-shop-2026-11-10"
   },
   {
    "id": "hario-ped-03-b",
@@ -834,13 +1303,14 @@
     {
      "label": "ブラック",
      "sku": "PED-03-B",
-     "gtin": ""
+     "gtin": "4977642732421"
     }
    ],
    "url": "https://www.hario.com/product/coffee/dripper/PED-B.html",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
-   "makerAlias": "ハリオ"
+   "makerAlias": "ハリオ",
+   "gtinSourceId": "tools-hario-shop-2026-11-10"
   },
   {
    "id": "hario-ssdc-200-w",
@@ -851,13 +1321,14 @@
     {
      "label": "ホワイト",
      "sku": "SSDC-200-W",
-     "gtin": ""
+     "gtin": "4977642730991"
     }
    ],
    "url": "https://www.hario.com/product/coffee/dripper/SSDC.html",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
-   "makerAlias": "ハリオ"
+   "makerAlias": "ハリオ",
+   "gtinSourceId": "tools-hario-shop-2026-11-10"
   },
   {
    "id": "hario-ssd-200-b",
@@ -868,13 +1339,14 @@
     {
      "label": "ブラック",
      "sku": "SSD-200-B",
-     "gtin": ""
+     "gtin": "4977642728165"
     }
    ],
    "url": "https://www.hario.com/product/coffee/dripper/SSD.html",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
-   "makerAlias": "ハリオ"
+   "makerAlias": "ハリオ",
+   "gtinSourceId": "tools-hario-shop-2026-11-10"
   },
   {
    "id": "hario-ssd-360-b",
@@ -885,13 +1357,14 @@
     {
      "label": "ブラック",
      "sku": "SSD-360-B",
-     "gtin": ""
+     "gtin": "4977642528789"
     }
    ],
    "url": "https://www.hario.com/product/coffee/dripper/SSD.html",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
-   "makerAlias": "ハリオ"
+   "makerAlias": "ハリオ",
+   "gtinSourceId": "tools-hario-shop-2026-11-10"
   },
   {
    "id": "hario-vdg-02-wn",
@@ -902,13 +1375,14 @@
     {
      "label": "ウォールナット",
      "sku": "VDG-02-WN",
-     "gtin": ""
+     "gtin": "4977642724020"
     }
    ],
    "url": "https://www.hario.com/product/coffee/dripper/VDG-WN.html",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
-   "makerAlias": "ハリオ"
+   "makerAlias": "ハリオ",
+   "gtinSourceId": "tools-hario-shop-2026-11-10"
   },
   {
    "id": "hario-cgp-2-b",
@@ -919,13 +1393,14 @@
     {
      "label": "ブラック",
      "sku": "CGP-2-B",
-     "gtin": ""
+     "gtin": "4977642708693"
     }
    ],
    "url": "https://www.hario.com/product/coffee/grinder/CGP.html",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
-   "makerAlias": "ハリオ"
+   "makerAlias": "ハリオ",
+   "gtinSourceId": "tools-hario-shop-2026-11-10"
   },
   {
    "id": "hario-ecg-3-b",
@@ -945,6 +1420,23 @@
    "makerAlias": "ハリオ"
   },
   {
+   "id": "hario-shop-o-vmm-1-hsv",
+   "kind": "grinder",
+   "maker": "HARIO",
+   "name": "V60 メタルコーヒーミル",
+   "variants": [
+    {
+     "label": "",
+     "sku": "O-VMM-1-HSV",
+     "gtin": "4977642040021"
+    }
+   ],
+   "url": "https://shop.hariocorp.co.jp/products/o-vmm-1-hsv",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-hario-shop-2026-11-10",
+   "makerAlias": "ハリオ"
+  },
+  {
    "id": "hario-evcn-8-b",
    "kind": "grinder",
    "maker": "HARIO",
@@ -953,12 +1445,30 @@
     {
      "label": "ブラック",
      "sku": "EVCN-8-B",
-     "gtin": ""
+     "gtin": "4977642708563"
     }
    ],
    "url": "https://www.hario.com/product/coffee/grinder/EVCN.html",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
+   "makerAlias": "ハリオ",
+   "gtinSourceId": "tools-hario-shop-2026-11-10"
+  },
+  {
+   "id": "hario-shop-mxr-2tb",
+   "kind": "grinder",
+   "maker": "HARIO",
+   "name": "クリアコーヒーグラインダー",
+   "variants": [
+    {
+     "label": "",
+     "sku": "MXR-2TB",
+     "gtin": "4977642707627"
+    }
+   ],
+   "url": "https://shop.hariocorp.co.jp/products/mxr-2tb",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-hario-shop-2026-11-10",
    "makerAlias": "ハリオ"
   },
   {
@@ -987,18 +1497,19 @@
     {
      "label": "",
      "sku": "CMCB-2",
-     "gtin": ""
+     "gtin": "4977642708679"
     },
     {
      "label": "",
      "sku": "CMCB-4",
-     "gtin": ""
+     "gtin": "4977642708686"
     }
    ],
    "url": "https://www.hario.com/product/coffee/grinder/CMCB.html",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
-   "makerAlias": "ハリオ"
+   "makerAlias": "ハリオ",
+   "gtinSourceId": "tools-hario-shop-2026-11-10"
   },
   {
    "id": "hario-cmr-502c",
@@ -1009,13 +1520,14 @@
     {
      "label": "",
      "sku": "CMR-502C",
-     "gtin": ""
+     "gtin": "4977642143067"
     }
    ],
    "url": "https://www.hario.com/product/coffee/grinder/CM.html",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
-   "makerAlias": "ハリオ"
+   "makerAlias": "ハリオ",
+   "gtinSourceId": "tools-hario-shop-2026-11-10"
   },
   {
    "id": "hario-msgn-2-t",
@@ -1026,13 +1538,14 @@
     {
      "label": "クリア",
      "sku": "MSGN-2-T",
-     "gtin": ""
+     "gtin": "4977642708587"
     }
    ],
    "url": "https://www.hario.com/product/coffee/grinder/MSGN.html",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
-   "makerAlias": "ハリオ"
+   "makerAlias": "ハリオ",
+   "gtinSourceId": "tools-hario-shop-2026-11-10"
   },
   {
    "id": "hario-msgs-2-b",
@@ -1043,13 +1556,14 @@
     {
      "label": "ブラック",
      "sku": "MSGS-2-B",
-     "gtin": ""
+     "gtin": "4977642708488"
     }
    ],
    "url": "https://www.hario.com/product/coffee/grinder/MSGS.html",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
-   "makerAlias": "ハリオ"
+   "makerAlias": "ハリオ",
+   "gtinSourceId": "tools-hario-shop-2026-11-10"
   },
   {
    "id": "hario-mss-1tb",
@@ -1060,13 +1574,14 @@
     {
      "label": "透明ブラック",
      "sku": "MSS-1TB",
-     "gtin": ""
+     "gtin": "4977642707597"
     }
    ],
    "url": "https://www.hario.com/product/coffee/grinder/MSS.html",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
-   "makerAlias": "ハリオ"
+   "makerAlias": "ハリオ",
+   "gtinSourceId": "tools-hario-shop-2026-11-10"
   },
   {
    "id": "hario-mcd-2",
@@ -1077,13 +1592,14 @@
     {
      "label": "",
      "sku": "MCD-2",
-     "gtin": ""
+     "gtin": "4977642707337"
     }
    ],
    "url": "https://www.hario.com/product/coffee/grinder/MCD.html",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
-   "makerAlias": "ハリオ"
+   "makerAlias": "ハリオ",
+   "gtinSourceId": "tools-hario-shop-2026-11-10"
   },
   {
    "id": "hario-mmr-2",
@@ -1094,13 +1610,14 @@
     {
      "label": "",
      "sku": "MMR-2",
-     "gtin": ""
+     "gtin": "4977642143135"
     }
    ],
    "url": "https://www.hario.com/product/coffee/grinder/MM.html",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
-   "makerAlias": "ハリオ"
+   "makerAlias": "ハリオ",
+   "gtinSourceId": "tools-hario-shop-2026-11-10"
   },
   {
    "id": "hario-mcwn-2-ov",
@@ -1111,13 +1628,14 @@
     {
      "label": "オリーブウッド",
      "sku": "MCWN-2-OV",
-     "gtin": ""
+     "gtin": "4977642707436"
     }
    ],
    "url": "https://www.hario.com/product/coffee/grinder/MCWN.html",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
-   "makerAlias": "ハリオ"
+   "makerAlias": "ハリオ",
+   "gtinSourceId": "tools-hario-shop-2026-11-10"
   },
   {
    "id": "hario-mscsn-2-b",
@@ -1128,13 +1646,14 @@
     {
      "label": "ブラック",
      "sku": "MSCSN-2-B",
-     "gtin": ""
+     "gtin": "4977642708358"
     }
    ],
    "url": "https://www.hario.com/product/coffee/grinder/MSCSN.html",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
-   "makerAlias": "ハリオ"
+   "makerAlias": "ハリオ",
+   "gtinSourceId": "tools-hario-shop-2026-11-10"
   },
   {
    "id": "hario-zb-cms-b",
@@ -1145,12 +1664,35 @@
     {
      "label": "ブラック",
      "sku": "ZB-CMS-B",
-     "gtin": ""
+     "gtin": "4573533860916"
     }
    ],
    "url": "https://www.hario.com/product/coffee/grinder/ZB-CMS.html",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
+   "makerAlias": "ハリオ",
+   "gtinSourceId": "tools-hario-shop-2026-11-10"
+  },
+  {
+   "id": "hario-shop-emcs-5",
+   "kind": "grinder",
+   "maker": "HARIO",
+   "name": "電動コーヒーミル・スイッチ",
+   "variants": [
+    {
+     "label": "ブラック",
+     "sku": "EMCS-5-B",
+     "gtin": "4977642708389"
+    },
+    {
+     "label": "ホワイト",
+     "sku": "EMCS-5-W",
+     "gtin": "4977642708372"
+    }
+   ],
+   "url": "https://shop.hariocorp.co.jp/products/emcs-5",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-hario-shop-2026-11-10",
    "makerAlias": "ハリオ"
   },
   {
@@ -1162,13 +1704,14 @@
     {
      "label": "ホワイト",
      "sku": "VCF-01-50-MT",
-     "gtin": ""
+     "gtin": "4977642731936"
     }
    ],
    "url": "https://www.hario.com/product/coffee/paperfilter/VCF-MT.html",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
-   "makerAlias": "ハリオ"
+   "makerAlias": "ハリオ",
+   "gtinSourceId": "tools-hario-shop-2026-11-10"
   },
   {
    "id": "hario-vcf-02-50-mt",
@@ -1179,12 +1722,35 @@
     {
      "label": "ホワイト",
      "sku": "VCF-02-50-MT",
-     "gtin": ""
+     "gtin": "4977642731929"
     }
    ],
    "url": "https://www.hario.com/product/coffee/paperfilter/VCF-MT.html",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
+   "makerAlias": "ハリオ",
+   "gtinSourceId": "tools-hario-shop-2026-11-10"
+  },
+  {
+   "id": "hario-shop-zb-vcf-01-50w",
+   "kind": "paper",
+   "maker": "HARIO",
+   "name": "V60 ペーパーフィルターW Zebrang",
+   "variants": [
+    {
+     "label": "01",
+     "sku": "ZB-VCF-01-50W",
+     "gtin": "4573533860749"
+    },
+    {
+     "label": "02",
+     "sku": "ZB-VCF-02-50W",
+     "gtin": "4573533860589"
+    }
+   ],
+   "url": "https://shop.hariocorp.co.jp/products/zb-vcf-01-50w",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-hario-shop-2026-11-10",
    "makerAlias": "ハリオ"
   },
   {
@@ -1196,13 +1762,14 @@
     {
      "label": "ブラウン",
      "sku": "VCF-01-100M",
-     "gtin": ""
+     "gtin": "4977642723344"
     }
    ],
    "url": "https://www.hario.com/product/coffee/paperfilter/VCF.html",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
-   "makerAlias": "ハリオ"
+   "makerAlias": "ハリオ",
+   "gtinSourceId": "tools-hario-shop-2026-11-10"
   },
   {
    "id": "hario-vcf-01-40m",
@@ -1213,13 +1780,14 @@
     {
      "label": "ブラウン",
      "sku": "VCF-01-40M",
-     "gtin": ""
+     "gtin": "4977642723245"
     }
    ],
    "url": "https://www.hario.com/product/coffee/paperfilter/VCF.html",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
-   "makerAlias": "ハリオ"
+   "makerAlias": "ハリオ",
+   "gtinSourceId": "tools-hario-shop-2026-11-10"
   },
   {
    "id": "hario-vcf-01-100w",
@@ -1230,13 +1798,14 @@
     {
      "label": "ホワイト",
      "sku": "VCF-01-100W",
-     "gtin": ""
+     "gtin": "4977642723313"
     }
    ],
    "url": "https://www.hario.com/product/coffee/paperfilter/VCF.html",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
-   "makerAlias": "ハリオ"
+   "makerAlias": "ハリオ",
+   "gtinSourceId": "tools-hario-shop-2026-11-10"
   },
   {
    "id": "hario-vcf-01-40w",
@@ -1247,13 +1816,14 @@
     {
      "label": "ホワイト",
      "sku": "VCF-01-40W",
-     "gtin": ""
+     "gtin": "4977642723214"
     }
    ],
    "url": "https://www.hario.com/product/coffee/paperfilter/VCF.html",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
-   "makerAlias": "ハリオ"
+   "makerAlias": "ハリオ",
+   "gtinSourceId": "tools-hario-shop-2026-11-10"
   },
   {
    "id": "hario-vcf-02-100m",
@@ -1264,13 +1834,14 @@
     {
      "label": "ブラウン",
      "sku": "VCF-02-100M",
-     "gtin": ""
+     "gtin": "4977642723351"
     }
    ],
    "url": "https://www.hario.com/product/coffee/paperfilter/VCF.html",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
-   "makerAlias": "ハリオ"
+   "makerAlias": "ハリオ",
+   "gtinSourceId": "tools-hario-shop-2026-11-10"
   },
   {
    "id": "hario-vcf-02-40m",
@@ -1281,13 +1852,14 @@
     {
      "label": "ブラウン",
      "sku": "VCF-02-40M",
-     "gtin": ""
+     "gtin": "4977642723252"
     }
    ],
    "url": "https://www.hario.com/product/coffee/paperfilter/VCF.html",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
-   "makerAlias": "ハリオ"
+   "makerAlias": "ハリオ",
+   "gtinSourceId": "tools-hario-shop-2026-11-10"
   },
   {
    "id": "hario-vcf-02-40w",
@@ -1298,13 +1870,14 @@
     {
      "label": "ホワイト",
      "sku": "VCF-02-40W",
-     "gtin": ""
+     "gtin": "4977642723221"
     }
    ],
    "url": "https://www.hario.com/product/coffee/paperfilter/VCF.html",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
-   "makerAlias": "ハリオ"
+   "makerAlias": "ハリオ",
+   "gtinSourceId": "tools-hario-shop-2026-11-10"
   },
   {
    "id": "hario-vcf-02-50m-f",
@@ -1332,13 +1905,14 @@
     {
      "label": "ブラウン",
      "sku": "VCF-03-100M",
-     "gtin": ""
+     "gtin": "4977642723368"
     }
    ],
    "url": "https://www.hario.com/product/coffee/paperfilter/VCF.html",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
-   "makerAlias": "ハリオ"
+   "makerAlias": "ハリオ",
+   "gtinSourceId": "tools-hario-shop-2026-11-10"
   },
   {
    "id": "hario-vcf-03-40m",
@@ -1349,13 +1923,14 @@
     {
      "label": "ブラウン",
      "sku": "VCF-03-40M",
-     "gtin": ""
+     "gtin": "4977642723269"
     }
    ],
    "url": "https://www.hario.com/product/coffee/paperfilter/VCF.html",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
-   "makerAlias": "ハリオ"
+   "makerAlias": "ハリオ",
+   "gtinSourceId": "tools-hario-shop-2026-11-10"
   },
   {
    "id": "hario-vcf-03-100w",
@@ -1366,13 +1941,14 @@
     {
      "label": "ホワイト",
      "sku": "VCF-03-100W",
-     "gtin": ""
+     "gtin": "4977642723337"
     }
    ],
    "url": "https://www.hario.com/product/coffee/paperfilter/VCF.html",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
-   "makerAlias": "ハリオ"
+   "makerAlias": "ハリオ",
+   "gtinSourceId": "tools-hario-shop-2026-11-10"
   },
   {
    "id": "hario-vcf-03-40w",
@@ -1383,13 +1959,14 @@
     {
      "label": "ホワイト",
      "sku": "VCF-03-40W",
-     "gtin": ""
+     "gtin": "4977642723238"
     }
    ],
    "url": "https://www.hario.com/product/coffee/paperfilter/VCF.html",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
-   "makerAlias": "ハリオ"
+   "makerAlias": "ハリオ",
+   "gtinSourceId": "tools-hario-shop-2026-11-10"
   },
   {
    "id": "hario-vcf-02-100mk",
@@ -1400,18 +1977,19 @@
     {
      "label": "ブラウン",
      "sku": "VCF-02-100MK",
-     "gtin": ""
+     "gtin": "4977642723818"
     },
     {
      "label": "ブラウン",
      "sku": "VCF-01-100MK",
-     "gtin": ""
+     "gtin": "4977642723801"
     }
    ],
    "url": "https://www.hario.com/product/coffee/paperfilter/VCF.html",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
-   "makerAlias": "ハリオ"
+   "makerAlias": "ハリオ",
+   "gtinSourceId": "tools-hario-shop-2026-11-10"
   },
   {
    "id": "hario-vcf-02-100w",
@@ -1422,13 +2000,14 @@
     {
      "label": "ホワイト",
      "sku": "VCF-02-100W",
-     "gtin": ""
+     "gtin": "4977642723320"
     }
    ],
    "url": "https://www.hario.com/product/coffee/paperfilter/VCF.html",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
-   "makerAlias": "ハリオ"
+   "makerAlias": "ハリオ",
+   "gtinSourceId": "tools-hario-shop-2026-11-10"
   },
   {
    "id": "hario-vcf-02-100wk",
@@ -1439,17 +2018,35 @@
     {
      "label": "ホワイト",
      "sku": "VCF-02-100WK",
-     "gtin": ""
+     "gtin": "4977642728776"
     },
     {
      "label": "ホワイト",
      "sku": "VCF-01-100WK",
-     "gtin": ""
+     "gtin": "4977642728769"
     }
    ],
    "url": "https://www.hario.com/product/coffee/paperfilter/VCF.html",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
+   "makerAlias": "ハリオ",
+   "gtinSourceId": "tools-hario-shop-2026-11-10"
+  },
+  {
+   "id": "hario-shop-o-vcf-02-40w",
+   "kind": "paper",
+   "maker": "HARIO",
+   "name": "V60用ペーパーフィルター02W チャック付",
+   "variants": [
+    {
+     "label": "",
+     "sku": "O-VCF-02-40W",
+     "gtin": "4977642040090"
+    }
+   ],
+   "url": "https://shop.hariocorp.co.jp/products/o-vcf-02-40w",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-hario-shop-2026-11-10",
    "makerAlias": "ハリオ"
   },
   {
@@ -1461,13 +2058,14 @@
     {
      "label": "ブラウン",
      "sku": "PEF-01-100M",
-     "gtin": ""
+     "gtin": "4977642730816"
     }
    ],
    "url": "https://www.hario.com/product/coffee/paperfilter/PEF.html",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
-   "makerAlias": "ハリオ"
+   "makerAlias": "ハリオ",
+   "gtinSourceId": "tools-hario-shop-2026-11-10"
   },
   {
    "id": "hario-pef-01-100w",
@@ -1478,13 +2076,14 @@
     {
      "label": "ホワイト",
      "sku": "PEF-01-100W",
-     "gtin": ""
+     "gtin": "4977642730809"
     }
    ],
    "url": "https://www.hario.com/product/coffee/paperfilter/PEF.html",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
-   "makerAlias": "ハリオ"
+   "makerAlias": "ハリオ",
+   "gtinSourceId": "tools-hario-shop-2026-11-10"
   },
   {
    "id": "hario-pef-02-100m",
@@ -1495,13 +2094,14 @@
     {
      "label": "ブラウン",
      "sku": "PEF-02-100M",
-     "gtin": ""
+     "gtin": "4977642730830"
     }
    ],
    "url": "https://www.hario.com/product/coffee/paperfilter/PEF.html",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
-   "makerAlias": "ハリオ"
+   "makerAlias": "ハリオ",
+   "gtinSourceId": "tools-hario-shop-2026-11-10"
   },
   {
    "id": "hario-pef-02-100w",
@@ -1512,13 +2112,14 @@
     {
      "label": "ホワイト",
      "sku": "PEF-02-100W",
-     "gtin": ""
+     "gtin": "4977642730823"
     }
    ],
    "url": "https://www.hario.com/product/coffee/paperfilter/PEF.html",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
-   "makerAlias": "ハリオ"
+   "makerAlias": "ハリオ",
+   "gtinSourceId": "tools-hario-shop-2026-11-10"
   },
   {
    "id": "hario-pef-03-100m",
@@ -1529,13 +2130,14 @@
     {
      "label": "ブラウン",
      "sku": "PEF-03-100M",
-     "gtin": ""
+     "gtin": "4977642730854"
     }
    ],
    "url": "https://www.hario.com/product/coffee/paperfilter/PEF.html",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
-   "makerAlias": "ハリオ"
+   "makerAlias": "ハリオ",
+   "gtinSourceId": "tools-hario-shop-2026-11-10"
   },
   {
    "id": "hario-pef-03-100w",
@@ -1546,13 +2148,14 @@
     {
      "label": "ホワイト",
      "sku": "PEF-03-100W",
-     "gtin": ""
+     "gtin": "4977642730847"
     }
    ],
    "url": "https://www.hario.com/product/coffee/paperfilter/PEF.html",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
-   "makerAlias": "ハリオ"
+   "makerAlias": "ハリオ",
+   "gtinSourceId": "tools-hario-shop-2026-11-10"
   },
   {
    "id": "hario-mdf-1",
@@ -4034,6 +4637,757 @@
    "checkedAt": "2026-11-10",
    "sourceId": "tools-melitta-2026-11-10",
    "makerAlias": "メリタ"
+  },
+  {
+   "id": "origami-shop-origami_dripperair_m",
+   "kind": "dripper",
+   "maker": "ORIGAMI",
+   "name": "Dripper Air M",
+   "variants": [
+    {
+     "label": "[Clear]",
+     "sku": "78022474",
+     "gtin": "4536058022474"
+    },
+    {
+     "label": "[Matte Black]",
+     "sku": "78022481",
+     "gtin": "4536058022481"
+    },
+    {
+     "label": "[Matte Beige]",
+     "sku": "78022498",
+     "gtin": "4536058022498"
+    },
+    {
+     "label": "[Matte Gray]",
+     "sku": "78022504",
+     "gtin": "4536058022504"
+    },
+    {
+     "label": "[Matte Pink]",
+     "sku": "78022511",
+     "gtin": "4536058022511"
+    },
+    {
+     "label": "[Matte Green]",
+     "sku": "78022528",
+     "gtin": "4536058022528"
+    }
+   ],
+   "url": "https://origami-kai.com/products/origami_dripperair_m",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-origami-2026-11-10",
+   "makerAlias": "オリガミ"
+  },
+  {
+   "id": "origami-shop-origami_dripperair_s",
+   "kind": "dripper",
+   "maker": "ORIGAMI",
+   "name": "Dripper Air S",
+   "variants": [
+    {
+     "label": "[Clear]",
+     "sku": "78021200",
+     "gtin": "4536058021200"
+    },
+    {
+     "label": "[Matte Black]",
+     "sku": "78021217",
+     "gtin": "4536058021217"
+    },
+    {
+     "label": "[Matte Beige]",
+     "sku": "78021224",
+     "gtin": "4536058021224"
+    },
+    {
+     "label": "[Matte Gray]",
+     "sku": "78021231",
+     "gtin": "4536058021231"
+    },
+    {
+     "label": "[Matte Pink]",
+     "sku": "78021248",
+     "gtin": "4536058021248"
+    },
+    {
+     "label": "[Matte Green]",
+     "sku": "78021255",
+     "gtin": "4536058021255"
+    }
+   ],
+   "url": "https://origami-kai.com/products/origami_dripperair_s",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-origami-2026-11-10",
+   "makerAlias": "オリガミ"
+  },
+  {
+   "id": "origami-shop-origami_dripper_m",
+   "kind": "dripper",
+   "maker": "ORIGAMI",
+   "name": "Dripper M",
+   "variants": [
+    {
+     "label": "[White]",
+     "sku": "78764985",
+     "gtin": "4536058764985"
+    },
+    {
+     "label": "[Red]",
+     "sku": "78750001",
+     "gtin": "4536058750001"
+    },
+    {
+     "label": "[Orange]",
+     "sku": "78750018",
+     "gtin": "4536058750018"
+    },
+    {
+     "label": "[Yellow]",
+     "sku": "78750025",
+     "gtin": "4536058750025"
+    },
+    {
+     "label": "[Turquoise]",
+     "sku": "78750032",
+     "gtin": "4536058750032"
+    },
+    {
+     "label": "[Matte Beige]",
+     "sku": "78004210",
+     "gtin": "4536058004210"
+    },
+    {
+     "label": "[Matte Gray]",
+     "sku": "78004227",
+     "gtin": "4536058004227"
+    },
+    {
+     "label": "[Matte Pink]",
+     "sku": "78004234",
+     "gtin": "4536058004234"
+    },
+    {
+     "label": "[Matte Green]",
+     "sku": "78004241",
+     "gtin": "4536058004241"
+    },
+    {
+     "label": "[Matte Blue]",
+     "sku": "78004258",
+     "gtin": "4536058004258"
+    },
+    {
+     "label": "[Matte Navy]",
+     "sku": "78750582",
+     "gtin": "4536058750582"
+    },
+    {
+     "label": "[Matte Black]",
+     "sku": "78750599",
+     "gtin": "4536058750599"
+    }
+   ],
+   "url": "https://origami-kai.com/products/origami_dripper_m",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-origami-2026-11-10",
+   "makerAlias": "オリガミ"
+  },
+  {
+   "id": "origami-shop-origami_dripper_s",
+   "kind": "dripper",
+   "maker": "ORIGAMI",
+   "name": "Dripper S",
+   "variants": [
+    {
+     "label": "[White]",
+     "sku": "78764879",
+     "gtin": "4536058764879"
+    },
+    {
+     "label": "[Red]",
+     "sku": "78764893",
+     "gtin": "4536058764893"
+    },
+    {
+     "label": "[Orange]",
+     "sku": "78764909",
+     "gtin": "4536058764909"
+    },
+    {
+     "label": "[Yellow]",
+     "sku": "78764916",
+     "gtin": "4536058764916"
+    },
+    {
+     "label": "[Turquoise]",
+     "sku": "78764923",
+     "gtin": "4536058764923"
+    },
+    {
+     "label": "[Matte Beige]",
+     "sku": "78004265",
+     "gtin": "4536058004265"
+    },
+    {
+     "label": "[Matte Gray]",
+     "sku": "78004272",
+     "gtin": "4536058004272"
+    },
+    {
+     "label": "[Matte Pink]",
+     "sku": "78004289",
+     "gtin": "4536058004289"
+    },
+    {
+     "label": "[Matte Green]",
+     "sku": "78004296",
+     "gtin": "4536058004296"
+    },
+    {
+     "label": "[Matte Blue]",
+     "sku": "78004302",
+     "gtin": "4536058004302"
+    },
+    {
+     "label": "[Matte Navy]",
+     "sku": "78750568",
+     "gtin": "4536058750568"
+    },
+    {
+     "label": "[Matte Black]",
+     "sku": "78750575",
+     "gtin": "4536058750575"
+    }
+   ],
+   "url": "https://origami-kai.com/products/origami_dripper_s",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-origami-2026-11-10",
+   "makerAlias": "オリガミ"
+  },
+  {
+   "id": "origami-shop-pinn-dripper",
+   "kind": "dripper",
+   "maker": "ORIGAMI",
+   "name": "Pinn Dripper＋Jig",
+   "variants": [
+    {
+     "label": "[White]",
+     "sku": "78023174",
+     "gtin": "4536058023174"
+    },
+    {
+     "label": "[Black]",
+     "sku": "78023181",
+     "gtin": "4536058023181"
+    }
+   ],
+   "url": "https://origami-kai.com/products/pinn-dripper",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-origami-2026-11-10",
+   "makerAlias": "オリガミ"
+  },
+  {
+   "id": "origami-shop-rework-dripper-m",
+   "kind": "dripper",
+   "maker": "ORIGAMI",
+   "name": "ReWork Dripper M",
+   "variants": [
+    {
+     "label": "[ReWork M]",
+     "sku": "78022177",
+     "gtin": "4536058022177"
+    }
+   ],
+   "url": "https://origami-kai.com/products/rework-dripper-m",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-origami-2026-11-10",
+   "makerAlias": "オリガミ"
+  },
+  {
+   "id": "origami-shop-rework-dripper-s",
+   "kind": "dripper",
+   "maker": "ORIGAMI",
+   "name": "ReWork Dripper S",
+   "variants": [
+    {
+     "label": "[ReWork S]",
+     "sku": "78022160",
+     "gtin": "4536058022160"
+    }
+   ],
+   "url": "https://origami-kai.com/products/rework-dripper-s",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-origami-2026-11-10",
+   "makerAlias": "オリガミ"
+  },
+  {
+   "id": "origami-shop-online-store-limited-origami-dripper-s-sabi",
+   "kind": "dripper",
+   "maker": "ORIGAMI",
+   "name": "【Online Store Limited】ORIGAMI Dripper S [sabi]",
+   "variants": [
+    {
+     "label": "[sabi]",
+     "sku": "78023327",
+     "gtin": "4536058023327"
+    }
+   ],
+   "url": "https://origami-kai.com/products/online-store-limited-origami-dripper-s-sabi",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-origami-2026-11-10",
+   "makerAlias": "オリガミ"
+  },
+  {
+   "id": "origami-shop-online-store-limited-origami-x-maruyoshi-kosaka-dripper-s",
+   "kind": "dripper",
+   "maker": "ORIGAMI",
+   "name": "【Online Store Limited】ORIGAMI×Maruyoshi Kosaka Dripper S",
+   "variants": [
+    {
+     "label": "[ao]",
+     "sku": "78023358",
+     "gtin": "4536058023358"
+    },
+    {
+     "label": "[fuji]",
+     "sku": "78023341",
+     "gtin": "4536058023341"
+    }
+   ],
+   "url": "https://origami-kai.com/products/online-store-limited-origami-x-maruyoshi-kosaka-dripper-s",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-origami-2026-11-10",
+   "makerAlias": "オリガミ"
+  },
+  {
+   "id": "origami-shop-origami_paper_filter",
+   "kind": "paper",
+   "maker": "ORIGAMI",
+   "name": "Paper Filter [Cone]",
+   "variants": [
+    {
+     "label": "2杯用(2 cups)",
+     "sku": "78764008",
+     "gtin": "4536058764008"
+    },
+    {
+     "label": "4杯用(4 cups)",
+     "sku": "78765005",
+     "gtin": "4536058765005"
+    }
+   ],
+   "url": "https://origami-kai.com/products/origami_paper_filter",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-origami-2026-11-10",
+   "makerAlias": "オリガミ"
+  },
+  {
+   "id": "origami-shop-paper-filter-wave",
+   "kind": "paper",
+   "maker": "ORIGAMI",
+   "name": "Paper Filter [Wave]",
+   "variants": [
+    {
+     "label": "2杯用(2 cups)",
+     "sku": "78750957",
+     "gtin": "4536058750957"
+    },
+    {
+     "label": "4杯用(4 cups)",
+     "sku": "78750964",
+     "gtin": "4536058750964"
+    }
+   ],
+   "url": "https://origami-kai.com/products/paper-filter-wave",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-origami-2026-11-10",
+   "makerAlias": "オリガミ"
+  },
+  {
+   "id": "timemore-shop-timemore-x-matt-winton-crystal-eye-vector-dripper",
+   "kind": "dripper",
+   "maker": "TIMEMORE",
+   "name": "Crystal Eye VECTOR Dripper",
+   "variants": [
+    {
+     "label": "",
+     "sku": "6959493518568",
+     "gtin": "6959493518568"
+    }
+   ],
+   "url": "https://www.timemore.com/products/timemore-x-matt-winton-crystal-eye-vector-dripper",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-timemore-2026-11-10",
+   "makerAlias": "タイムモア"
+  },
+  {
+   "id": "timemore-shop-timemore-crystal-eye-b75-dripper-pctg",
+   "kind": "dripper",
+   "maker": "TIMEMORE",
+   "name": "TIMEMORE Crystal Eye B75 Dripper PCTG",
+   "variants": [
+    {
+     "label": "Clear",
+     "sku": "STMUS100117",
+     "gtin": "6959493504509"
+    },
+    {
+     "label": "Amber Black",
+     "sku": "STMUS100116",
+     "gtin": "6959493504493"
+    }
+   ],
+   "url": "https://www.timemore.com/products/timemore-crystal-eye-b75-dripper-pctg",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-timemore-2026-11-10",
+   "makerAlias": "タイムモア"
+  },
+  {
+   "id": "timemore-shop-timemore-crystal-eye-dripper-02-pctg",
+   "kind": "dripper",
+   "maker": "TIMEMORE",
+   "name": "TIMEMORE Crystal Eye Dripper 02 PCTG",
+   "variants": [
+    {
+     "label": "Transparent",
+     "sku": "STMUS100120",
+     "gtin": "6959493505162"
+    },
+    {
+     "label": "Transparent Black",
+     "sku": "STMUS100121",
+     "gtin": "6959493502550"
+    }
+   ],
+   "url": "https://www.timemore.com/products/timemore-crystal-eye-dripper-02-pctg",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-timemore-2026-11-10",
+   "makerAlias": "タイムモア"
+  },
+  {
+   "id": "timemore-shop-timemore-crystal-eye-turbo-dripper-pctg",
+   "kind": "dripper",
+   "maker": "TIMEMORE",
+   "name": "TIMEMORE Crystal Eye Turbo Dripper PCTG",
+   "variants": [
+    {
+     "label": "Clear",
+     "sku": "6959493513488",
+     "gtin": "6959493513488"
+    },
+    {
+     "label": "Transparent Black",
+     "sku": "6959493513495",
+     "gtin": "6959493513495"
+    }
+   ],
+   "url": "https://www.timemore.com/products/timemore-crystal-eye-turbo-dripper-pctg",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-timemore-2026-11-10",
+   "makerAlias": "タイムモア"
+  },
+  {
+   "id": "timemore-shop-timemore-electric-coffee-grinder-sculptor-064s-gen2",
+   "kind": "grinder",
+   "maker": "TIMEMORE",
+   "name": "TIMEMORE Electric Coffee Grinder Sculptor 064S Ⅱ",
+   "variants": [
+    {
+     "label": "Black",
+     "sku": "IF100112001584",
+     "gtin": ""
+    },
+    {
+     "label": "White",
+     "sku": "IF100112001585",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.timemore.com/products/timemore-electric-coffee-grinder-sculptor-064s-gen2",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-timemore-2026-11-10",
+   "makerAlias": "タイムモア"
+  },
+  {
+   "id": "timemore-shop-timemore-electric-coffee-grinder-sculptor-078ssp",
+   "kind": "grinder",
+   "maker": "TIMEMORE",
+   "name": "TIMEMORE Electric Coffee Grinder Sculptor 078SSP",
+   "variants": [
+    {
+     "label": "Black 078SSP",
+     "sku": "IF11120301",
+     "gtin": ""
+    },
+    {
+     "label": "White 078SSP",
+     "sku": "IF11120305",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.timemore.com/products/timemore-electric-coffee-grinder-sculptor-078ssp",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-timemore-2026-11-10",
+   "makerAlias": "タイムモア"
+  },
+  {
+   "id": "timemore-shop-timemore-electric-coffee-grinder-sculptor-series",
+   "kind": "grinder",
+   "maker": "TIMEMORE",
+   "name": "TIMEMORE Electric Coffee Grinder Sculptor series",
+   "variants": [
+    {
+     "label": "Black 078S(Pour-over&Espresso)",
+     "sku": "STMUS100070",
+     "gtin": "6959493508514"
+    },
+    {
+     "label": "White 078S(Pour-over&Espresso)",
+     "sku": "STMUS100071",
+     "gtin": "6959493508378"
+    },
+    {
+     "label": "Black 078 (Pour-over Only)",
+     "sku": "STMUS100068",
+     "gtin": "6959493507937"
+    },
+    {
+     "label": "White 078 (Pour-over Only)",
+     "sku": "STMUS100069",
+     "gtin": "6959493507777"
+    },
+    {
+     "label": "Black 064S(Pour-over&Espresso)",
+     "sku": "STMUS100064",
+     "gtin": ""
+    },
+    {
+     "label": "White 064S(Pour-over&Espresso)",
+     "sku": "STMUS100065",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.timemore.com/products/timemore-electric-coffee-grinder-sculptor-series",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-timemore-2026-11-10",
+   "makerAlias": "タイムモア"
+  },
+  {
+   "id": "timemore-shop-timemore-manual-coffee-grinder-chestnut-c5-series",
+   "kind": "grinder",
+   "maker": "TIMEMORE",
+   "name": "TIMEMORE Manual Coffee Grinder Chestnut C5 Series",
+   "variants": [
+    {
+     "label": "C5 PRO Black",
+     "sku": "6959493517653",
+     "gtin": "6959493517653"
+    },
+    {
+     "label": "C5 PRO White",
+     "sku": "6959493517660",
+     "gtin": "6959493517660"
+    },
+    {
+     "label": "C5 ESP PRO Black",
+     "sku": "6959493517691",
+     "gtin": "6959493517691"
+    }
+   ],
+   "url": "https://www.timemore.com/products/timemore-manual-coffee-grinder-chestnut-c5-series",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-timemore-2026-11-10",
+   "makerAlias": "タイムモア"
+  },
+  {
+   "id": "timemore-shop-timemore-manual-coffee-grinder-chestnut-nano-3-black",
+   "kind": "grinder",
+   "maker": "TIMEMORE",
+   "name": "TIMEMORE Manual Coffee Grinder Chestnut NANO 3 Black",
+   "variants": [
+    {
+     "label": "Black",
+     "sku": "STMUS100113",
+     "gtin": "6959493504608"
+    },
+    {
+     "label": "White",
+     "sku": "6959493505513",
+     "gtin": "6959493505513"
+    }
+   ],
+   "url": "https://www.timemore.com/products/timemore-manual-coffee-grinder-chestnut-nano-3-black",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-timemore-2026-11-10",
+   "makerAlias": "タイムモア"
+  },
+  {
+   "id": "timemore-shop-timemore-manual-coffee-grinder-chestnut-s3",
+   "kind": "grinder",
+   "maker": "TIMEMORE",
+   "name": "TIMEMORE Manual Coffee Grinder Chestnut S3",
+   "variants": [
+    {
+     "label": "Black",
+     "sku": "STMUS100094",
+     "gtin": "6959493510432"
+    },
+    {
+     "label": "Green",
+     "sku": "STMUS100098",
+     "gtin": "6959493510449"
+    }
+   ],
+   "url": "https://www.timemore.com/products/timemore-manual-coffee-grinder-chestnut-s3",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-timemore-2026-11-10",
+   "makerAlias": "タイムモア"
+  },
+  {
+   "id": "timemore-shop-timemore-manual-coffee-grinder-chestnut-s5-pro",
+   "kind": "grinder",
+   "maker": "TIMEMORE",
+   "name": "TIMEMORE Manual Coffee Grinder Chestnut S5 Pro",
+   "variants": [
+    {
+     "label": "Black",
+     "sku": "6959493519992",
+     "gtin": "6959493519992"
+    },
+    {
+     "label": "Green",
+     "sku": "6959493520004",
+     "gtin": "6959493520004"
+    }
+   ],
+   "url": "https://www.timemore.com/products/timemore-manual-coffee-grinder-chestnut-s5-pro",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-timemore-2026-11-10",
+   "makerAlias": "タイムモア"
+  },
+  {
+   "id": "timemore-shop-timemore-whirly-01s-portable-electric-grinder",
+   "kind": "grinder",
+   "maker": "TIMEMORE",
+   "name": "TIMEMORE Whirly 01S Portable Electric Grinder",
+   "variants": [
+    {
+     "label": "Black",
+     "sku": "6959493514188",
+     "gtin": "6959493514188"
+    }
+   ],
+   "url": "https://www.timemore.com/products/timemore-whirly-01s-portable-electric-grinder",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-timemore-2026-11-10",
+   "makerAlias": "タイムモア"
+  },
+  {
+   "id": "timemore-shop-timemore-bricks-01s-electric-coffee-grinder",
+   "kind": "grinder",
+   "maker": "TIMEMORE",
+   "name": "Timemore Bricks 01s Electric Coffee Grinder",
+   "variants": [
+    {
+     "label": "Black",
+     "sku": "IF100112001465",
+     "gtin": ""
+    },
+    {
+     "label": "White",
+     "sku": "IF100112001466",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.timemore.com/products/timemore-bricks-01s-electric-coffee-grinder",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-timemore-2026-11-10",
+   "makerAlias": "タイムモア"
+  },
+  {
+   "id": "timemore-shop-timemore-x-millab-m01-coffee-grinder",
+   "kind": "grinder",
+   "maker": "TIMEMORE",
+   "name": "Timemore X Millab M01 Coffee Grinder",
+   "variants": [
+    {
+     "label": "Sliver",
+     "sku": "6959493515987",
+     "gtin": "6959493515987"
+    },
+    {
+     "label": "Black",
+     "sku": "6959493515970",
+     "gtin": "6959493515970"
+    }
+   ],
+   "url": "https://www.timemore.com/products/timemore-x-millab-m01-coffee-grinder",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-timemore-2026-11-10",
+   "makerAlias": "タイムモア"
+  },
+  {
+   "id": "timemore-shop-timemore-x-millab-wireless-portable-electric-coffee-grinder",
+   "kind": "grinder",
+   "maker": "TIMEMORE",
+   "name": "Timemore X Millab Wireless Portable Electric Coffee Grinder",
+   "variants": [
+    {
+     "label": "Black",
+     "sku": "STMUS100105",
+     "gtin": "6959493510654"
+    },
+    {
+     "label": "Sliver",
+     "sku": "STMUS100106",
+     "gtin": "6959493510678"
+    }
+   ],
+   "url": "https://www.timemore.com/products/timemore-x-millab-wireless-portable-electric-coffee-grinder",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-timemore-2026-11-10",
+   "makerAlias": "タイムモア"
+  },
+  {
+   "id": "timemore-shop-timemore-basket-paper-filter-01-for-b75",
+   "kind": "paper",
+   "maker": "TIMEMORE",
+   "name": "Timemore Basket Paper Filter 01 for B75",
+   "variants": [
+    {
+     "label": "",
+     "sku": "STMUS100138",
+     "gtin": "6959493513198"
+    }
+   ],
+   "url": "https://www.timemore.com/products/timemore-basket-paper-filter-01-for-b75",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-timemore-2026-11-10",
+   "makerAlias": "タイムモア"
+  },
+  {
+   "id": "timemore-shop-timemore-paper-filter-v01-v02-100pcs",
+   "kind": "paper",
+   "maker": "TIMEMORE",
+   "name": "Timemore Paper Filter V01 & V02 (100Pcs）",
+   "variants": [
+    {
+     "label": "V01 (1-2 Cups)",
+     "sku": "6959493500365",
+     "gtin": "6959493500365"
+    },
+    {
+     "label": "V02 (2-4 Cups)",
+     "sku": "STMUS100137",
+     "gtin": "6959493500396"
+    }
+   ],
+   "url": "https://www.timemore.com/products/timemore-paper-filter-v01-v02-100pcs",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-timemore-2026-11-10",
+   "makerAlias": "タイムモア"
   }
  ],
  "updatedAt": "2026-11-10"

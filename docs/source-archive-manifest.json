@@ -4097,6 +4097,22 @@
     ],
     "note": "メーカー公式サイトの商品データ(JSON)。器具カタログ(data/tools.json)の根拠"
   },
+  "tools-fellow-2026-11-10": {
+    "url": "https://fellowproducts.com/",
+    "finalUrl": "https://fellowproducts.com/",
+    "httpStatus": 200,
+    "contentType": "",
+    "size": 56559,
+    "sha256": "7346b2c0b734766c13d7089a158affc2488a41c8d3e0271bde5c48057d26422f",
+    "accessed": "2026-11-10",
+    "tool": "ローカルのファイルを取り込み",
+    "textChars": 0,
+    "scannedImagesOnly": false,
+    "files": [
+      "original.bin"
+    ],
+    "note": "メーカー公式サイトの商品データ(JSON)。器具カタログ(data/tools.json)の根拠"
+  },
   "tools-hario-2026-11-10": {
     "url": "https://www.hario.com/product/coffee/",
     "finalUrl": "https://www.hario.com/product/coffee/",
@@ -4104,6 +4120,22 @@
     "contentType": "",
     "size": 622967,
     "sha256": "36c2dad353c57319de6f8d8f59258b5ab31e0cf8fc6568ca3544c48ec1d92730",
+    "accessed": "2026-11-10",
+    "tool": "ローカルのファイルを取り込み",
+    "textChars": 0,
+    "scannedImagesOnly": false,
+    "files": [
+      "original.bin"
+    ],
+    "note": "メーカー公式サイトの商品データ(JSON)。器具カタログ(data/tools.json)の根拠"
+  },
+  "tools-hario-shop-2026-11-10": {
+    "url": "https://shop.hariocorp.co.jp/",
+    "finalUrl": "https://shop.hariocorp.co.jp/",
+    "httpStatus": 200,
+    "contentType": "",
+    "size": 502098,
+    "sha256": "c1fcb66c6499662c450a26d83ac5f64129e251d9a5286de91331863dd7bd2973",
     "accessed": "2026-11-10",
     "tool": "ローカルのファイルを取り込み",
     "textChars": 0,
@@ -4136,6 +4168,38 @@
     "contentType": "",
     "size": 14445,
     "sha256": "5043cc9cb3773810988e08ba580b507d5f148bd18d11b11d1f1b25c85cfb5396",
+    "accessed": "2026-11-10",
+    "tool": "ローカルのファイルを取り込み",
+    "textChars": 0,
+    "scannedImagesOnly": false,
+    "files": [
+      "original.bin"
+    ],
+    "note": "メーカー公式サイトの商品データ(JSON)。器具カタログ(data/tools.json)の根拠"
+  },
+  "tools-origami-2026-11-10": {
+    "url": "https://origami-kai.com/",
+    "finalUrl": "https://origami-kai.com/",
+    "httpStatus": 200,
+    "contentType": "",
+    "size": 207678,
+    "sha256": "2844686c068db29af2ec9060e2e8c4dc5519b86db0426c0dbb69bb3ce43f6659",
+    "accessed": "2026-11-10",
+    "tool": "ローカルのファイルを取り込み",
+    "textChars": 0,
+    "scannedImagesOnly": false,
+    "files": [
+      "original.bin"
+    ],
+    "note": "メーカー公式サイトの商品データ(JSON)。器具カタログ(data/tools.json)の根拠"
+  },
+  "tools-timemore-2026-11-10": {
+    "url": "https://www.timemore.com/",
+    "finalUrl": "https://www.timemore.com/",
+    "httpStatus": 200,
+    "contentType": "",
+    "size": 209190,
+    "sha256": "77f196c4179140f1dcc248e95cf0517efdbd210688b3b43725efb80cd60e5b53",
     "accessed": "2026-11-10",
     "tool": "ローカルのファイルを取り込み",
     "textChars": 0,

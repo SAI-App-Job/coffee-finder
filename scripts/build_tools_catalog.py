@@ -39,7 +39,9 @@ def get(url: str, retries: int = 12) -> bytes:
                 return r.read()
         except urllib.error.HTTPError as e:
             if e.code in (429, 503) and i < retries - 1:
-                time.sleep(min(30 * (i + 1), 180))  # 取得制限(429)は、間隔を空けて、やり直す
+                wait = min(30 * (i + 1), 180)
+                print(f"  取得制限({e.code})のため、{wait}秒待ってから、やり直します(止めずに、お待ちください)", flush=True)
+                time.sleep(wait)  # 取得制限は、間隔を空けて、やり直す
                 continue
             raise
         except urllib.error.URLError:
@@ -392,18 +394,21 @@ def z1presso(dry: bool, reuse: bool = False):
 # JAN(GTIN)は、後者の variants[].barcode にある(店が入力した、型番ごとの値)。
 # 注意: 取得の間隔が短いと、取得制限(429)がかかる。この環境(作業用の端末)では、取得できないことがあった。利用者のPCで実行する。
 SHOPIFY_DELAY = 2.0
+# hario.com(公式サイト)と公式ショップで、同じ製品の型番の書き方が違うもの(hario.comの型番 → ショップの型番)
+HARIO_SKU_ALIAS = {"VDSU-02-B＆W": "VDSU-02-BAW"}
 
 
 def shopify_kind_en(p: dict):
     """英語の商品名から、種類を決める。決められないものは None(載せない)"""
     title = f"{p.get('title', '')} {p.get('product_type', '')}"
-    if re.search(r"kettle|server|scale|brush|mug|cup\\b|carafe|tumbler|bottle|bag\\b|cover|case|stand|holder|plate|tool|cleaning|replacement|spare|burr set|gift|bundle|\\bset\\b|subscription|gift card", title, flags=re.I):
+    # 本体ではないもの(付属品・交換部品・セット・中古品など)は、載せない
+    if re.search(r"kettle|server|\bscale\b|brush|\bmug\b|\bcup\b|carafe|tumbler|bottle|\bbag\b|\bcover\b|\bcase\b|\bstand\b|holder|plate|\btool\b|cleaning|replacement|spare|burr set|gift|bundle|\bset\b|subscription|\bused\b|refurb|open[- ]box|\bdemo\b|\blamp\b|\blight\b|pendant|\btea\b", title, flags=re.I):
         return None
-    if re.search(r"filter paper|paper filter|filter papers|filters?\\b.*(paper|pack|pcs|sheets)|(paper|disposable).*filter", title, flags=re.I) and not re.search(r"metal|steel|cloth", title, flags=re.I):
+    if re.search(r"filter paper|paper filter|filter papers|filters?\b.*(paper|pack|pcs|sheets)|(paper|disposable).*filter", title, flags=re.I) and not re.search(r"metal|steel|cloth", title, flags=re.I):
         return "paper"
     if re.search(r"dripper|pour[- ]?over cone", title, flags=re.I):
         return "dripper"
-    if re.search(r"grinder|coffee mill|\\bmill\\b", title, flags=re.I):
+    if re.search(r"grinder|coffee mill|\bmill\b", title, flags=re.I):
         return "grinder"
     return None
 
@@ -429,7 +434,7 @@ def shopify_kind_hario(p: dict):
 
 
 SHOPIFY = {
-    "hario-shop": dict(maker="HARIO", base="https://shop.hariocorp.co.jp", kind=shopify_kind_hario, merge="sku"),
+    "hario-shop": dict(maker="HARIO", base="https://shop.hariocorp.co.jp", kind=shopify_kind_hario, merge="sku", collection="coffee"),
     "timemore": dict(maker="TIMEMORE", base="https://www.timemore.com", kind=shopify_kind_en, merge=None),
     "fellow": dict(maker="Fellow", base="https://fellowproducts.com", kind=shopify_kind_en, merge=None),
     "origami": dict(maker="ORIGAMI", base="https://origami-kai.com", kind=shopify_kind_en, merge=None),
@@ -461,8 +466,10 @@ def shopify_items(cfg: dict, records: list):
 def shopify_list(cfg: dict):
     """商品の一覧を、全ページ取得する"""
     out, page = [], 1
+    # コレクションを指定できるメーカー(HARIO)は、その一覧だけを取る(全商品のページ送りは、取得制限がかかりやすい)
+    path = f"/collections/{cfg['collection']}/products.json" if cfg.get("collection") else "/products.json"
     while page <= 30:
-        data = json.loads(get(f"{cfg['base']}/products.json?limit=250&page={page}"))["products"]
+        data = json.loads(get(f"{cfg['base']}{path}?limit=250&page={page}"))["products"]
         if not data:
             break
         out += data
@@ -470,14 +477,29 @@ def shopify_list(cfg: dict):
         if len(data) < 250:
             break
         page += 1
-        time.sleep(SHOPIFY_DELAY)
+        time.sleep(6)  # ページの間は、長めに空ける
     return out
 
 
 def shopify(key: str):
     cfg = SHOPIFY[key]
 
-    def run(dry: bool, reuse: bool = False):
+    def run(dry: bool, reuse: bool = False, from_file=None):
+        if from_file:
+            # ブラウザ(scripts/shopify-export.js)で書き出したファイルから作る。種類の判定と除外は、ここ(Python)で行う
+            exported = json.loads(Path(from_file).read_text(encoding="utf-8"))
+            records = []
+            for rec in exported["records"]:
+                js = rec["js"]
+                kind = cfg["kind"]({"title": js.get("title", ""), "product_type": js.get("type", "")})
+                if kind:
+                    records.append({"handle": rec["handle"], "kind": kind, "js": js})
+            print(f"{cfg['maker']}: ファイルの {len(exported['records'])} 件のうち、対象 {len(records)} 件")
+            for r in records:
+                print(f"  {r['kind']:8s} {r['handle']}  {clean(r['js'].get('title', ''))}  JAN {sum(1 for v in r['js'].get('variants', []) if v.get('barcode'))}/{len(r['js'].get('variants', []))}")
+            if dry:
+                return None
+            return {"maker": cfg["maker"], "sourceUrl": cfg["base"] + "/", "raw": {"records": records}, "items": shopify_items(cfg, records), "merge": cfg["merge"]}
         if reuse:
             raw = json.loads(sorted((ROOT / "source-archive").glob(f"tools-{key}-2*"))[-1].joinpath("original.bin").read_text(encoding="utf-8"))["records"]
             return {"maker": cfg["maker"], "sourceUrl": cfg["base"] + "/", "raw": None, "items": shopify_items(cfg, raw), "merge": cfg["merge"]}
@@ -529,9 +551,15 @@ def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("maker", choices=sorted(MAKERS))
     ap.add_argument("--dry-run", action="store_true")
+    ap.add_argument("--from-file", help="ブラウザで書き出したファイル(scripts/shopify-export.js)から作る(Shopify製の公式ショップのみ)")
     ap.add_argument("--reuse", action="store_true", help="取得済みの原文(source-archive)から作り直す。サイトにはアクセスしない(Kalitaのみ)")
     a = ap.parse_args()
-    result = MAKERS[a.maker](a.dry_run, a.reuse) if a.reuse else MAKERS[a.maker](a.dry_run)
+    if a.from_file and a.maker not in SHOPIFY:
+        ap.error("--from-file は、Shopify製の公式ショップ(hario-shop・timemore・fellow・origami)だけで使えます")
+    if a.from_file:
+        result = MAKERS[a.maker](a.dry_run, False, a.from_file)
+    else:
+        result = MAKERS[a.maker](a.dry_run, a.reuse) if a.reuse else MAKERS[a.maker](a.dry_run)
     if result is None:
         return
     source_id = save_raw(a.maker, result) if result["raw"] is not None else sorted(p.name for p in (ROOT / "source-archive").glob(f"tools-{a.maker}-2*"))[-1]
@@ -545,8 +573,10 @@ def main():
             if item["maker"] != result["maker"]:
                 continue
             for v in item["variants"]:
+                key = HARIO_SKU_ALIAS.get(v["sku"], v["sku"])
+                known.add(key)
                 known.add(v["sku"])
-                hit = shop_by_sku.get(v["sku"])
+                hit = shop_by_sku.get(key)
                 if hit and hit[1]["gtin"] and not v["gtin"]:
                     v["gtin"] = hit[1]["gtin"]
                     item["gtinSourceId"] = source_id
