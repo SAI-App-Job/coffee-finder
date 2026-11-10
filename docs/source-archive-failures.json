@@ -1,0 +1,42 @@
+{
+  "ecx-coffee-contracts-2010": {
+    "url": "http://www.ecx.com.et/Pages/downloads/contracts/Coffee/CoffeeContracts.pdf",
+    "error": "URLError: <urlopen error [WinError 10060] 接続済みの呼び出し先が一定の時間を過ぎても正しく応答しなかったため、接続できませんでした。または接続済みのホストが応答しなかったため、確立された接続は失敗しました。>",
+    "date": "2026-11-10"
+  },
+  "fnc-circular-007-2025": {
+    "url": "https://federaciondecafeteros.org/wp-content/uploads/2026/02/CIRCULAR-N°-007-FRC25I00014-DEL-15-DE-DICIEMBRE-DE-2025-2-3.pdf",
+    "error": "UnicodeEncodeError: 'ascii' codec can't encode character '\\xb0' in position 42: ordinal not in range(128)",
+    "date": "2026-11-10"
+  },
+  "fnc-federacion-historia": {
+    "url": "https://federaciondecafeteros.org/wp/federacion/",
+    "error": "RemoteDisconnected: Remote end closed connection without response",
+    "date": "2026-11-10"
+  },
+  "fnc-noticia-salazar": {
+    "url": "https://federaciondecafeteros.org/wp/listado-noticias/salazar-de-las-palmas-cuna-del-cafe-colombiano/",
+    "error": "RemoteDisconnected: Remote end closed connection without response",
+    "date": "2026-11-10"
+  },
+  "fnc-res-05-2018": {
+    "url": "https://federaciondecafeteros.org/wp-content/uploads/2025/11/RESOLUCION-O5-DE-2018-Lineamientos-Politica-de-Prevencion-y-Control_-Calidad-de-Cafe.pdf",
+    "error": "RemoteDisconnected: Remote end closed connection without response",
+    "date": "2026-11-10"
+  },
+  "jacra-coffee-licensing": {
+    "url": "https://jacra.org/divisions/coffee/licensing-permits/",
+    "error": "RemoteDisconnected: Remote end closed connection without response",
+    "date": "2026-11-10"
+  },
+  "jacra-home": {
+    "url": "https://jacra.org/",
+    "error": "RemoteDisconnected: Remote end closed connection without response",
+    "date": "2026-11-10"
+  },
+  "kilimo-cdms-2024": {
+    "url": "https://kilimo.go.ke/wp-content/uploads/2024/10/Final-Draft-Coffee-Developemnt-and-Marketing-Strategy-27-Jan-2024-1.pdf",
+    "error": "URLError: <urlopen error [WinError 10054] 既存の接続はリモート ホストに強制的に切断されました。>",
+    "date": "2026-11-10"
+  }
+}

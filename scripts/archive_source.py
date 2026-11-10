@@ -157,10 +157,37 @@ def store(source_id: str, data: bytes, url: str, final_url: str, status: int, co
     return meta
 
 
+def fetch_curl(url: str):
+    """urllib で取得できないサイト(接続を切られる、など)向けの、curl による取得。証明書の検証は、有効のまま。"""
+    import subprocess
+    import tempfile
+
+    with tempfile.NamedTemporaryFile(delete=False) as tmp:
+        out = tmp.name
+    r = subprocess.run(
+        ["curl", "-L", "-s", "-m", "150", "-A", "Mozilla/5.0", "-o", out, "-w", "%{http_code}|%{url_effective}|%{content_type}", url],
+        capture_output=True, text=True,
+    )
+    parts = (r.stdout or "").split("|", 2)
+    data = Path(out).read_bytes() if Path(out).exists() else b""
+    Path(out).unlink(missing_ok=True)
+    status = int(parts[0]) if parts and parts[0].isdigit() else 0
+    if status == 0 or status >= 400 or not data:
+        raise urllib.error.HTTPError(url, status or 599, "curl failed: " + (r.stderr or "").strip()[:100], {}, None)
+    return data, (parts[1] if len(parts) > 1 else url), status, (parts[2] if len(parts) > 2 else "")
+
+
 def fetch(url: str):
     req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept": "*/*"})
-    with urllib.request.urlopen(req, timeout=120) as r:
-        return r.read(), r.geturl(), r.status, r.headers.get("Content-Type", "")
+    try:
+        with urllib.request.urlopen(req, timeout=120) as r:
+            return r.read(), r.geturl(), r.status, r.headers.get("Content-Type", "")
+    except urllib.error.HTTPError as e:
+        if e.code in (429, 404, 410):
+            raise
+        return fetch_curl(url)
+    except Exception:
+        return fetch_curl(url)
 
 
 def cmd_add(a):

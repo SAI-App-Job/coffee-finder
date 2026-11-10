@@ -643,6 +643,15 @@
   "accessed": "2026-11-08",
   "note": "Wayback保存(2026-02-10時点)のHTMLを取得し本文を抽出。"
  },
+ "fnc-jp-grade": {
+  "title": "コロンビアコーヒーの等級",
+  "org": "FNC コロンビアコーヒー生産者連合会(東京事務局の日本語公式サイト)",
+  "url": "https://cafedecolombia.jp/colombia/specialty/grade/",
+  "kind": "primary",
+  "readMethod": "full-text",
+  "accessed": "2026-11-10",
+  "note": "FNC(コロンビアコーヒー生産者連合会)自身の日本語公式サイト。FNC自身の等級の制度についての記述。curlで生HTMLを取得し、本文を読んだ。同じページ内で、説明文と表の数値の書き方が一部異なる(ヨーロッパ・UGQ)。"
+ },
  "fnc-noticia-salazar": {
   "title": "SALAZAR DE LAS PALMAS: CUNA DEL CAFÉ COLOMBIANO (noticia FNC)",
   "org": "Federación Nacional de Cafeteros de Colombia",
