@@ -1,29 +1,17 @@
-import { Award, Camera, Flame, Globe, Map as MapIcon, MapPin, NotebookPen, PackagePlus, PenLine, Star, Trophy, Zap } from "lucide-react";
+import { Award } from "lucide-react";
+import { ACHIEVEMENT_ICONS } from "./achievementIcons";
 import { SectionHeading } from "./common";
 import { ACHIEVEMENT_GROUPS, achievementParams } from "../utils/achievements";
 import { PREFECTURE_REGIONS } from "../data/prefectures";
 import { getLang, getLocale, useT } from "../i18n";
 
-const ICONS = {
-  log: NotebookPen,
-  note: PenLine,
-  register: PackagePlus,
-  photo: Camera,
-  rating: Star,
-  all: Zap,
-  streak: Flame,
-  origin: Globe,
-  prefecture: MapPin,
-  region: MapIcon,
-  trophy: Trophy,
-};
 
 const formatEarned = (iso) =>
   new Date(iso).toLocaleDateString(getLocale(), { year: "numeric", month: "2-digit", day: "2-digit" });
 
 function Badge({ item }) {
   const t = useT();
-  const Icon = ICONS[item.icon] ?? Award;
+  const Icon = ACHIEVEMENT_ICONS[item.icon] ?? Award;
   const earned = Boolean(item.earnedAt);
   const params = achievementParams(item);
   return (

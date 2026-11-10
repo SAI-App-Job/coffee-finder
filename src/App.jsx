@@ -866,6 +866,8 @@ export default function CoffeeProductList() {
           events={diaryEvents}
           onOpenLog={(event) => setTastingLogProduct({ id: event.productId, rawName: event.title })}
           history={{ items: historyItems, isPremium, onOpenDetail: openProductDetail }}
+          achievements={achievements}
+          onOpenAchievements={() => setTab("achievements")}
         />
       )}
 

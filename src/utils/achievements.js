@@ -73,6 +73,37 @@ export const ACHIEVEMENTS = [
   },
 ];
 
+// 日記に出す「次の目標」: 系列(同じ種類の段階)ごとに、まだ獲得していない最初の段階を選び、
+// 進み具合(進捗/目標)が大きい順に limit 件返す。進捗が同じなら、目標の小さいものが先。
+// items: useAchievements の items(earnedAt・progress・goal を持つ)
+export function nextGoals(items, limit = 3) {
+  const seriesOf = (id) => id.replace(/-\d+$/, "");
+  const next = new Map();
+  for (const item of items) {
+    if (item.earnedAt) continue;
+    const key = seriesOf(item.id);
+    const cur = next.get(key);
+    if (!cur || item.goal < cur.goal) next.set(key, item);
+  }
+  return [...next.values()]
+    .sort((a, b) => b.progress / b.goal - a.progress / a.goal || a.goal - b.goal)
+    .slice(0, limit);
+}
+
+// 今の連続記録日数。今日か昨日に記録があれば、そこから過去へ連続する日数(どちらも無ければ 0)。
+// events: buildDiaryEvents の結果。未来の日時は数えない。
+export function currentStreak(events, now = new Date()) {
+  const days = new Set(events.filter((e) => e.t <= now.getTime()).map((e) => localDateKey(e.t)));
+  const day = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+  if (!days.has(localDateKey(day.getTime()))) day.setDate(day.getDate() - 1);
+  let n = 0;
+  while (days.has(localDateKey(day.getTime()))) {
+    n += 1;
+    day.setDate(day.getDate() - 1);
+  }
+  return n;
+}
+
 // ts(昇順)のうち、7日間に入る最大件数と、goal 件に初めて届いた時刻
 function windowResult(ts, goal) {
   let start = 0;
