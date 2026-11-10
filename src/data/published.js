@@ -38,7 +38,8 @@ function publish(raw, item, build) {
   if (!ok(item)) return null;
   const content = contentOf(item.key);
   if (!content) return raw;
-  return { ...build(raw, content), _ledger: true, _en: contentEnOf(item.key) };
+  // _key: 台帳のキー(元の見出しから作る)。表示用に見出しが変わっても、出典を引けるよう残す
+  return { ...build(raw, content), _ledger: true, _en: contentEnOf(item.key), _key: item.key };
 }
 
 export const PUBLISHED_FACTS = DISCOVERY_FACTS.map((f) =>
@@ -96,7 +97,7 @@ export function publishedProcessing(name) {
 }
 
 // 台帳のキー(出典の表示に使う)
-export const factKey = (f) => factItem(f).key;
+export const factKey = (f) => f._key ?? factItem(f).key;
 export const glossaryKey = (g) => glossaryItem(g).key;
 export const brewKey = (b) => brewItem(b).key;
 export const extractionKey = (v) => extractionItem(v).key;

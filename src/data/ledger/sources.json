@@ -351,6 +351,15 @@
   "readMethod": "full-text",
   "accessed": "2026-11-08"
  },
+ "bsj-djs-61-2023-public-enquiry": {
+  "title": "DJS 61:2024 Draft Jamaican Standard Specification for Coffee(JS 61:2016の改訂案。公開コメント用)",
+  "org": "BSJ(Bureau of Standards Jamaica、ジャマイカ規格局)",
+  "url": "https://web.archive.org/web/20250807155338id_/https://www.bsj.org.jm/sites/default/files/DJS%2061%202023%20Edit%20for%20Public%20Enquiry%20GB.pdf",
+  "kind": "primary",
+  "readMethod": "full-text",
+  "accessed": "2026-11-10",
+  "note": "BSJの草案(公開コメント期間 2024-01-19〜03-19)。BSJの現行サイトでは、元のURLが404のため、Internet Archive(Wayback)の保存版(2025-08-07)を取得した。草案であり、成立した版(JS 61:2024)とは違う可能性がある。成立版は有償で、未取得。草案には、等級ごとの数値の表はない。"
+ },
  "cafedecolombia-do-regional": {
   "title": "Regional Designations of Origin",
   "org": "Café de Colombia (Federación Nacional de Cafeteros)",
@@ -537,6 +546,15 @@
   "readMethod": "full-text",
   "accessed": "2026-11-09",
   "note": "ECX直接のURLは接続エラー(000)。https://web.archive.org/web/2016/http://www.ecx.com.et/Pages/downloads/contracts/Coffee/CoffeeContracts.pdf の保存コピーを読んだ。2010年10月版で、現行(ECTA)の基準とは異なる可能性がある。"
+ },
+ "ecx-coffee-contracts-ecea-2018": {
+  "title": "ECX Coffee Contracts (March 2018) -- ECXのコーヒー契約書(契約の種類・等級・採点表)",
+  "org": "ECX(Ethiopia Commodity Exchange、エチオピア商品取引所)。規制当局ECEA(Ethiopian Commodity Exchange Authority)の承認版(ファイル名による)",
+  "url": "https://web.archive.org/web/20201205023342id_/http://www.ecx.com.et/Files/ECX%20Coffee%20Contracts%20approved%20by%20ECEA%20March%2029%202018.pdf",
+  "kind": "primary",
+  "readMethod": "full-text",
+  "accessed": "2026-11-10",
+  "note": "ECXが公開していたPDF(ecx.com.et)の、Internet Archive(Wayback)による保存版(2020-12-05)。ECX自身の格付けの制度についての記述。ECXの現行サイトは接続できず、原本は取得できない。取得できたのは1,048,576バイト(11ページ)で、保存元の記録では、原本のサイズも同じ値。紙をスキャンした文書で、文字の層は読み取り結果のため崩れている。表は、ページの画像を目で読んで確認した。2018年3月版であり、現行の運用(ECTAが規制)と同じかは未確認。"
  },
  "embrapa-cafe-endereco": {
   "title": "Café com endereço e qualidade",

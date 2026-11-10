@@ -1,0 +1,167 @@
+{
+  "scope": "grades-ethiopia-2026-11-10",
+  "override": true,
+  "verifiedOn": "2026-11-10",
+  "sources": {
+    "ecx-coffee-contracts-ecea-2018": {
+      "title": "ECX Coffee Contracts (March 2018) -- ECXのコーヒー契約書(契約の種類・等級・採点表)",
+      "org": "ECX(Ethiopia Commodity Exchange、エチオピア商品取引所)。規制当局ECEA(Ethiopian Commodity Exchange Authority)の承認版(ファイル名による)",
+      "url": "https://web.archive.org/web/20201205023342id_/http://www.ecx.com.et/Files/ECX%20Coffee%20Contracts%20approved%20by%20ECEA%20March%2029%202018.pdf",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-10",
+      "note": "ECXが公開していたPDF(ecx.com.et)の、Internet Archive(Wayback)による保存版(2020-12-05)。ECX自身の格付けの制度についての記述。ECXの現行サイトは接続できず、原本は取得できない。取得できたのは1,048,576バイト(11ページ)で、保存元の記録では、原本のサイズも同じ値。紙をスキャンした文書で、文字の層は読み取り結果のため崩れている。表は、ページの画像を目で読んで確認した。2018年3月版であり、現行の運用(ECTAが規制)と同じかは未確認。"
+    }
+  },
+  "entries": {
+    "origin:エチオピア:gradeSystem": {
+      "status": "verified",
+      "claims": [
+        {
+          "text": "文書は「ECX Coffee Contract March 2018」(2018年3月版)。ECXの取引(契約)の種類は、輸出用のスペシャルティ・一般(商業用)と、国内向け(Local)に分かれ、それぞれに洗浄式・非洗浄式がある",
+          "status": "verified",
+          "sourceIds": [
+            "ecx-coffee-contracts-ecea-2018"
+          ],
+          "quote": "ECX Coffee Contract March 2018 || EXPORT - COMMERCIAL- UNWASHED || 2.4. Grading of Local washed and unwashed coffee || §1.1 EXPORT - SPECIALTY - WASHED || §1.2 EXPORT - COMMERCIAL - WASHED || §1.5 LOCAL - WASHED || §1.6 LOCAL - UNWASHED",
+          "location": "ECX Coffee Contracts(2018年3月版) p.1-5 1",
+          "note": "表と見出しは、文字の読み取り結果が崩れているため、ページの画像を目で読んで書き写した(§の引用)。"
+        },
+        {
+          "text": "輸出の等級の一般要件: 水分は重量で11.5%以下、ふるい14番の上に重量で85%以上が残ること",
+          "status": "verified",
+          "sourceIds": [
+            "ecx-coffee-contracts-ecea-2018"
+          ],
+          "quote": "The moisture content of coffee shall not be more than 11.5% by weight and minimum 85% by weight of beans remain on top of screen 14 after sieving.",
+          "location": "ECX Coffee Contracts(2018年3月版) p.6 2"
+        },
+        {
+          "text": "スペシャルティコーヒーは、カップの味が豊かで、欠点がほとんどなく、高い品質ゆえに市場で上乗せ価格が付きうるコーヒー。商業用(Commercial)は、スペシャルティの要件を満たさないコーヒー",
+          "status": "verified",
+          "sourceIds": [
+            "ecx-coffee-contracts-ecea-2018"
+          ],
+          "quote": "Coffee that is distinctive because of its full cup taste and little to no defects and that may command a market premium due to their high quality. || Coffee that is not qualified for specialty.",
+          "location": "ECX Coffee Contracts(2018年3月版) p.6 Definitions"
+        },
+        {
+          "text": "国内向け(Local)は、不純物が多い、または長く保管されて風味が落ちた、品質のとても劣るコーヒー",
+          "status": "verified",
+          "sourceIds": [
+            "ecx-coffee-contracts-ecea-2018"
+          ],
+          "quote": "Coffee that is very inferior in quality due to high presence of impurities or if the coffee is stored for a long period and loses its flavor",
+          "location": "ECX Coffee Contracts(2018年3月版) p.6 Definitions"
+        },
+        {
+          "text": "一次欠点は、全黒豆・全酸っぱい豆・カビ・異物・虫食い。二次欠点には、部分的な黒豆・酸っぱい豆、浮き豆、未熟豆、しなびた豆、殻、軽い虫食い、キツネ色などがある",
+          "status": "verified",
+          "sourceIds": [
+            "ecx-coffee-contracts-ecea-2018"
+          ],
+          "quote": "Primary Defect Full Black, Full Sour, Fungus Attacked, Foreign Matter, Insect Damaged || Partial Black, Partial Sour, Floater",
+          "location": "ECX Coffee Contracts(2018年3月版) p.6 Definitions"
+        },
+        {
+          "text": "点数の考え方: 生豆の値(一次欠点・二次欠点・形と作り・色・香り)と、カップの値(カップ欠点・酸・ボディ・風味)を足した総合点で、等級を決める",
+          "status": "verified",
+          "sourceIds": [
+            "ecx-coffee-contracts-ecea-2018"
+          ],
+          "quote": "Raw Value The sum of points of Primary Defect, Secondary Defect, Shape & Make, Color and Odor. || Cup Quality Value The sum of points of Cup defect, Acidity, Body and Flavor. || The sum of raw value and cup quality value",
+          "location": "ECX Coffee Contracts(2018年3月版) p.6 Definitions"
+        },
+        {
+          "text": "洗浄式の一般: 生豆の評価40点(欠点20点=一次欠点の個数10+二次欠点の重量10、形と作り5、色5、香り10)+カップの評価60点(クリーンさ・酸・ボディ・風味が各15)",
+          "status": "verified",
+          "sourceIds": [
+            "ecx-coffee-contracts-ecea-2018"
+          ],
+          "quote": "§RAW VALUE (40%) Defects (20%) Primary (count) (10%) Secondary (Weight) (10%) Shape & Make 5% Color 5% Odor 10% || §CUP VALUE (60%) Cup Cleanness 15% Acidity 15% Body 15% Flavour 15%",
+          "location": "ECX Coffee Contracts(2018年3月版) p.7 2.1.1-2.1.2",
+          "note": "表と見出しは、文字の読み取り結果が崩れているため、ページの画像を目で読んで書き写した(§の引用)。"
+        },
+        {
+          "text": "洗浄式の一般の等級(総合点): 1級85以上、2級75〜84、3級63〜74、4級47〜62、5級31〜46、等外(UG)15〜30",
+          "status": "verified",
+          "sourceIds": [
+            "ecx-coffee-contracts-ecea-2018"
+          ],
+          "quote": "Grade 2 75-84 Grade 3 63-74 Grade 4 47-62 || §Grade 1 ≥85 / Grade 5 31-46 / Grade UG (P) 15-30 / Grade UG (NP) 15-30",
+          "location": "ECX Coffee Contracts(2018年3月版) p.7 2.1.3",
+          "note": "表と見出しは、文字の読み取り結果が崩れているため、ページの画像を目で読んで書き写した(§の引用)。"
+        },
+        {
+          "text": "非洗浄式の一般: 生豆の評価40点(欠点30点=一次欠点の個数15+二次欠点の重量15、香り10)+カップの評価60点(洗浄式と同じ4項目が各15)",
+          "status": "verified",
+          "sourceIds": [
+            "ecx-coffee-contracts-ecea-2018"
+          ],
+          "quote": "§RAW VALUE 40% Defects (30%) Primary (count) 15% Secondary (Weight) 15% Odor (10%) || §CUP VALUE (60%) Cup Cleanness 15% Acidity 15% Body 15% Flavour 15%",
+          "location": "ECX Coffee Contracts(2018年3月版) p.8 2.2.1-2.2.2",
+          "note": "表と見出しは、文字の読み取り結果が崩れているため、ページの画像を目で読んで書き写した(§の引用)。"
+        },
+        {
+          "text": "非洗浄式の一般の等級(総合点): 1級91〜100、2級81〜90、3級71〜80、4級63〜70、5級58〜62、6級50〜57、7級40〜49、8級31〜39、9級20〜30、等外(UG)15〜19",
+          "status": "verified",
+          "sourceIds": [
+            "ecx-coffee-contracts-ecea-2018"
+          ],
+          "quote": "Grade 1 91.0 - 100 || §Grade 2 81.0 – 90.0 || Grade 3 71.0 - 80.0 Grade 4 63.0 - 70.0 Grade 5 58.0 - 62.0 Grade 6 50.0 - 57.0 Grade 7 40.0 - 49.0 Grade 8 31.0 - 39.0 Grade 9 20.0 - 30.0 || Grade UG 15.0 - 19.0 (Total Value)",
+          "location": "ECX Coffee Contracts(2018年3月版) p.8 2.2.3",
+          "note": "「Grade 2」の行は、文字の読み取り結果が崩れているため、画像を見て書き写した(§の引用)。"
+        },
+        {
+          "text": "スペシャルティの審査(Specialty Assessment): 一次審査で、非洗浄式の1〜3級と、洗浄式の1・2級になったものが受ける。カップの品質を、香り・風味・後味・酸・ボディ・均一性・バランス・クリーンカップ・甘み・総合の10項目で採点する(各6〜9.75点。Good 6〜6.75、Very Good 7〜7.75、Excellent 8〜8.75、Outstanding 9〜9.75)",
+          "status": "verified",
+          "sourceIds": [
+            "ecx-coffee-contracts-ecea-2018"
+          ],
+          "quote": "Unwashed Coffees that get grade 1 to grade 3 and washed coffee that get 1 to grade 2 in the preliminary assessment shall undergo a Specialty Assessment on cup quality to assess for the potential of specialty coffee. || §Fragrance, Flavor, After taste, Acidity, Body, Uniformity, Balance, Clean cup, Sweetness, Overall: Good 6-6.75, Very Good 7-7.75, Excellent 8-8.75, Outstanding 9-9.75 (0.25刻み)",
+          "location": "ECX Coffee Contracts(2018年3月版) p.9 2.3.1",
+          "note": "表と見出しは、文字の読み取り結果が崩れているため、ページの画像を目で読んで書き写した(§の引用)。"
+        },
+        {
+          "text": "スペシャルティの等級: Q1はカップ品質の点が85.0以上。Q2は、非洗浄式で80.0以上、洗浄式で80.0〜84.75。非洗浄式の3級で80.0未満は、3級のまま。洗浄式の2級が、一次審査で80点以上でも、Q1に届かなければQ2として発行する",
+          "status": "verified",
+          "sourceIds": [
+            "ecx-coffee-contracts-ecea-2018"
+          ],
+          "quote": "§Unwashed: Q1 Grade 1, Grade 2 coffee having ≥85 -> ≥85.0 / Q2 Grade 1, 2 and 3 -> ≥80.0 / Grade 3 -> <80.0 || §Washed: Q1 ≥85.0 / Q2 Grade 1 and Grade 2 -> 80.0-84.75 || §Note 2: If grade 2 coffee ... does not qualify specialty 1 (Q1) during specialty assessment, the coffee shall be issued as Specialty 2 (Q2)",
+          "location": "ECX Coffee Contracts(2018年3月版) p.9-10 2.3.2-2.3.3",
+          "note": "表と見出しは、文字の読み取り結果が崩れているため、ページの画像を目で読んで書き写した(§の引用)。"
+        },
+        {
+          "text": "輸出用の契約が扱う等級: スペシャルティはQ1・Q2。一般は、洗浄式が3〜5級と等外(UG(p)・UG(np))、非洗浄式が3〜9級と等外(UG)",
+          "status": "verified",
+          "sourceIds": [
+            "ecx-coffee-contracts-ecea-2018"
+          ],
+          "quote": "Q1,Q2 || 3 To 5, UG(p), UG(np) || 3To9,UG",
+          "location": "ECX Coffee Contracts(2018年3月版) p.1-4 1.1-1.4"
+        },
+        {
+          "text": "国内向け(Local)の契約が扱う等級: 洗浄式が1〜4級、非洗浄式が1〜5級",
+          "status": "verified",
+          "sourceIds": [
+            "ecx-coffee-contracts-ecea-2018"
+          ],
+          "quote": "LWSD 1To4 || LUSD 1To 5",
+          "location": "ECX Coffee Contracts(2018年3月版) p.5 1.5-1.6"
+        },
+        {
+          "text": "国内向けの等級(点数): 非洗浄式は1級81〜100、2級61〜80、3級41〜60、4級25〜40、5級25未満。洗浄式は1級80〜100、2級66〜79、3級51〜65、4級50以下",
+          "status": "verified",
+          "sourceIds": [
+            "ecx-coffee-contracts-ecea-2018"
+          ],
+          "quote": "1 81 - 100 2 61-80 3 41 -60 4 25-40 5 <25 || Grade 1 80 -100 Grade 2 66- 79 Grade 3 51- 65 || §Grade 4 ≤50",
+          "location": "ECX Coffee Contracts(2018年3月版) p.10-11 2.4",
+          "note": "表と見出しは、文字の読み取り結果が崩れているため、ページの画像を目で読んで書き写した(§の引用)。"
+        }
+      ],
+      "note": "エチオピアの等級の詳細(2026-11-10)。旧記述(G1〜G5の欠点数、G1は欠点0〜3個)は、一次資料で確認できず、ECXの契約書の記述と食い違うため、置き換えた。"
+    }
+  }
+}

@@ -770,6 +770,234 @@
    }
   ]
  },
+ "origin:エチオピア:gradeSystem": {
+  "status": "verified",
+  "textHash": "3b280b1c",
+  "claims": [
+   {
+    "text": "文書は「ECX Coffee Contract March 2018」(2018年3月版)。ECXの取引(契約)の種類は、輸出用のスペシャルティ・一般(商業用)と、国内向け(Local)に分かれ、それぞれに洗浄式・非洗浄式がある",
+    "status": "verified",
+    "sourceIds": [
+     "ecx-coffee-contracts-ecea-2018"
+    ],
+    "quote": "ECX Coffee Contract March 2018 || EXPORT - COMMERCIAL- UNWASHED || 2.4. Grading of Local washed and unwashed coffee || §1.1 EXPORT - SPECIALTY - WASHED || §1.2 EXPORT - COMMERCIAL - WASHED || §1.5 LOCAL - WASHED || §1.6 LOCAL - UNWASHED",
+    "location": "ECX Coffee Contracts(2018年3月版) p.1-5 1"
+   },
+   {
+    "text": "輸出の等級の一般要件: 水分は重量で11.5%以下、ふるい14番の上に重量で85%以上が残ること",
+    "status": "verified",
+    "sourceIds": [
+     "ecx-coffee-contracts-ecea-2018"
+    ],
+    "quote": "The moisture content of coffee shall not be more than 11.5% by weight and minimum 85% by weight of beans remain on top of screen 14 after sieving.",
+    "location": "ECX Coffee Contracts(2018年3月版) p.6 2"
+   },
+   {
+    "text": "スペシャルティコーヒーは、カップの味が豊かで、欠点がほとんどなく、高い品質ゆえに市場で上乗せ価格が付きうるコーヒー。商業用(Commercial)は、スペシャルティの要件を満たさないコーヒー",
+    "status": "verified",
+    "sourceIds": [
+     "ecx-coffee-contracts-ecea-2018"
+    ],
+    "quote": "Coffee that is distinctive because of its full cup taste and little to no defects and that may command a market premium due to their high quality. || Coffee that is not qualified for specialty.",
+    "location": "ECX Coffee Contracts(2018年3月版) p.6 Definitions"
+   },
+   {
+    "text": "国内向け(Local)は、不純物が多い、または長く保管されて風味が落ちた、品質のとても劣るコーヒー",
+    "status": "verified",
+    "sourceIds": [
+     "ecx-coffee-contracts-ecea-2018"
+    ],
+    "quote": "Coffee that is very inferior in quality due to high presence of impurities or if the coffee is stored for a long period and loses its flavor",
+    "location": "ECX Coffee Contracts(2018年3月版) p.6 Definitions"
+   },
+   {
+    "text": "一次欠点は、全黒豆・全酸っぱい豆・カビ・異物・虫食い。二次欠点には、部分的な黒豆・酸っぱい豆、浮き豆、未熟豆、しなびた豆、殻、軽い虫食い、キツネ色などがある",
+    "status": "verified",
+    "sourceIds": [
+     "ecx-coffee-contracts-ecea-2018"
+    ],
+    "quote": "Primary Defect Full Black, Full Sour, Fungus Attacked, Foreign Matter, Insect Damaged || Partial Black, Partial Sour, Floater",
+    "location": "ECX Coffee Contracts(2018年3月版) p.6 Definitions"
+   },
+   {
+    "text": "点数の考え方: 生豆の値(一次欠点・二次欠点・形と作り・色・香り)と、カップの値(カップ欠点・酸・ボディ・風味)を足した総合点で、等級を決める",
+    "status": "verified",
+    "sourceIds": [
+     "ecx-coffee-contracts-ecea-2018"
+    ],
+    "quote": "Raw Value The sum of points of Primary Defect, Secondary Defect, Shape & Make, Color and Odor. || Cup Quality Value The sum of points of Cup defect, Acidity, Body and Flavor. || The sum of raw value and cup quality value",
+    "location": "ECX Coffee Contracts(2018年3月版) p.6 Definitions"
+   },
+   {
+    "text": "洗浄式の一般: 生豆の評価40点(欠点20点=一次欠点の個数10+二次欠点の重量10、形と作り5、色5、香り10)+カップの評価60点(クリーンさ・酸・ボディ・風味が各15)",
+    "status": "verified",
+    "sourceIds": [
+     "ecx-coffee-contracts-ecea-2018"
+    ],
+    "quote": "§RAW VALUE (40%) Defects (20%) Primary (count) (10%) Secondary (Weight) (10%) Shape & Make 5% Color 5% Odor 10% || §CUP VALUE (60%) Cup Cleanness 15% Acidity 15% Body 15% Flavour 15%",
+    "location": "ECX Coffee Contracts(2018年3月版) p.7 2.1.1-2.1.2"
+   },
+   {
+    "text": "洗浄式の一般の等級(総合点): 1級85以上、2級75〜84、3級63〜74、4級47〜62、5級31〜46、等外(UG)15〜30",
+    "status": "verified",
+    "sourceIds": [
+     "ecx-coffee-contracts-ecea-2018"
+    ],
+    "quote": "Grade 2 75-84 Grade 3 63-74 Grade 4 47-62 || §Grade 1 ≥85 / Grade 5 31-46 / Grade UG (P) 15-30 / Grade UG (NP) 15-30",
+    "location": "ECX Coffee Contracts(2018年3月版) p.7 2.1.3"
+   },
+   {
+    "text": "非洗浄式の一般: 生豆の評価40点(欠点30点=一次欠点の個数15+二次欠点の重量15、香り10)+カップの評価60点(洗浄式と同じ4項目が各15)",
+    "status": "verified",
+    "sourceIds": [
+     "ecx-coffee-contracts-ecea-2018"
+    ],
+    "quote": "§RAW VALUE 40% Defects (30%) Primary (count) 15% Secondary (Weight) 15% Odor (10%) || §CUP VALUE (60%) Cup Cleanness 15% Acidity 15% Body 15% Flavour 15%",
+    "location": "ECX Coffee Contracts(2018年3月版) p.8 2.2.1-2.2.2"
+   },
+   {
+    "text": "非洗浄式の一般の等級(総合点): 1級91〜100、2級81〜90、3級71〜80、4級63〜70、5級58〜62、6級50〜57、7級40〜49、8級31〜39、9級20〜30、等外(UG)15〜19",
+    "status": "verified",
+    "sourceIds": [
+     "ecx-coffee-contracts-ecea-2018"
+    ],
+    "quote": "Grade 1 91.0 - 100 || §Grade 2 81.0 – 90.0 || Grade 3 71.0 - 80.0 Grade 4 63.0 - 70.0 Grade 5 58.0 - 62.0 Grade 6 50.0 - 57.0 Grade 7 40.0 - 49.0 Grade 8 31.0 - 39.0 Grade 9 20.0 - 30.0 || Grade UG 15.0 - 19.0 (Total Value)",
+    "location": "ECX Coffee Contracts(2018年3月版) p.8 2.2.3"
+   },
+   {
+    "text": "スペシャルティの審査(Specialty Assessment): 一次審査で、非洗浄式の1〜3級と、洗浄式の1・2級になったものが受ける。カップの品質を、香り・風味・後味・酸・ボディ・均一性・バランス・クリーンカップ・甘み・総合の10項目で採点する(各6〜9.75点。Good 6〜6.75、Very Good 7〜7.75、Excellent 8〜8.75、Outstanding 9〜9.75)",
+    "status": "verified",
+    "sourceIds": [
+     "ecx-coffee-contracts-ecea-2018"
+    ],
+    "quote": "Unwashed Coffees that get grade 1 to grade 3 and washed coffee that get 1 to grade 2 in the preliminary assessment shall undergo a Specialty Assessment on cup quality to assess for the potential of specialty coffee. || §Fragrance, Flavor, After taste, Acidity, Body, Uniformity, Balance, Clean cup, Sweetness, Overall: Good 6-6.75, Very Good 7-7.75, Excellent 8-8.75, Outstanding 9-9.75 (0.25刻み)",
+    "location": "ECX Coffee Contracts(2018年3月版) p.9 2.3.1"
+   },
+   {
+    "text": "スペシャルティの等級: Q1はカップ品質の点が85.0以上。Q2は、非洗浄式で80.0以上、洗浄式で80.0〜84.75。非洗浄式の3級で80.0未満は、3級のまま。洗浄式の2級が、一次審査で80点以上でも、Q1に届かなければQ2として発行する",
+    "status": "verified",
+    "sourceIds": [
+     "ecx-coffee-contracts-ecea-2018"
+    ],
+    "quote": "§Unwashed: Q1 Grade 1, Grade 2 coffee having ≥85 -> ≥85.0 / Q2 Grade 1, 2 and 3 -> ≥80.0 / Grade 3 -> <80.0 || §Washed: Q1 ≥85.0 / Q2 Grade 1 and Grade 2 -> 80.0-84.75 || §Note 2: If grade 2 coffee ... does not qualify specialty 1 (Q1) during specialty assessment, the coffee shall be issued as Specialty 2 (Q2)",
+    "location": "ECX Coffee Contracts(2018年3月版) p.9-10 2.3.2-2.3.3"
+   },
+   {
+    "text": "輸出用の契約が扱う等級: スペシャルティはQ1・Q2。一般は、洗浄式が3〜5級と等外(UG(p)・UG(np))、非洗浄式が3〜9級と等外(UG)",
+    "status": "verified",
+    "sourceIds": [
+     "ecx-coffee-contracts-ecea-2018"
+    ],
+    "quote": "Q1,Q2 || 3 To 5, UG(p), UG(np) || 3To9,UG",
+    "location": "ECX Coffee Contracts(2018年3月版) p.1-4 1.1-1.4"
+   },
+   {
+    "text": "国内向け(Local)の契約が扱う等級: 洗浄式が1〜4級、非洗浄式が1〜5級",
+    "status": "verified",
+    "sourceIds": [
+     "ecx-coffee-contracts-ecea-2018"
+    ],
+    "quote": "LWSD 1To4 || LUSD 1To 5",
+    "location": "ECX Coffee Contracts(2018年3月版) p.5 1.5-1.6"
+   },
+   {
+    "text": "国内向けの等級(点数): 非洗浄式は1級81〜100、2級61〜80、3級41〜60、4級25〜40、5級25未満。洗浄式は1級80〜100、2級66〜79、3級51〜65、4級50以下",
+    "status": "verified",
+    "sourceIds": [
+     "ecx-coffee-contracts-ecea-2018"
+    ],
+    "quote": "1 81 - 100 2 61-80 3 41 -60 4 25-40 5 <25 || Grade 1 80 -100 Grade 2 66- 79 Grade 3 51- 65 || §Grade 4 ≤50",
+    "location": "ECX Coffee Contracts(2018年3月版) p.10-11 2.4"
+   }
+  ]
+ },
+ "origin:ジャマイカ:gradeSystem": {
+  "status": "verified",
+  "textHash": "d461fc03",
+  "claims": [
+   {
+    "text": "草案は、「この規格は強制である」と書く(成立版で同じかは未確認)",
+    "status": "verified",
+    "sourceIds": [
+     "bsj-djs-61-2023-public-enquiry"
+    ],
+    "quote": "This standard is compulsory.",
+    "location": "DJS 61:2024 草案(公開コメント用) Foreword"
+   },
+   {
+    "text": "生豆の水分は、10〜12.5%",
+    "status": "verified",
+    "sourceIds": [
+     "bsj-djs-61-2023-public-enquiry"
+    ],
+    "quote": "Green coffee beans shall have a moisture content of 10% to 12.5%.",
+    "location": "DJS 61:2024 草案(公開コメント用) 3.1"
+   },
+   {
+    "text": "コーヒーのラベルには、産地・種類・等級・日付などを書く",
+    "status": "verified",
+    "sourceIds": [
+     "bsj-djs-61-2023-public-enquiry"
+    ],
+    "quote": "Coffee shall be labelled according to source, type, grade, date and any other information necessary for identification and traceability",
+    "location": "DJS 61:2024 草案(公開コメント用) 3.1.2.3"
+   },
+   {
+    "text": "等級ごとに分けて荷造りし、倉庫でも、等級ごとに分けて、はっきり表示した山(ロット)に置く",
+    "status": "verified",
+    "sourceIds": [
+     "bsj-djs-61-2023-public-enquiry"
+    ],
+    "quote": "Graded coffee shall be packaged according to grades and be kept separate in distinctly labelled heaps or lots in the warehouse.",
+    "location": "DJS 61:2024 草案(公開コメント用) Annex B.5 b"
+   },
+   {
+    "text": "生豆のふるい分け試験: 100gの試料をふるいにかけ、17番・16番・15番・10番のふるいに残った量と受け皿の量を、百分率で報告する",
+    "status": "verified",
+    "sourceIds": [
+     "bsj-djs-61-2023-public-enquiry"
+    ],
+    "quote": "Weigh a representative 100g sample of the coffee and place it in the top sieve. || The weight of the coffee on the No.s 17, 16, 15, 10 screens and in the pan should be reported as percentages.",
+    "location": "DJS 61:2024 草案(公開コメント用) 7.1.1, 7.1.3"
+   },
+   {
+    "text": "どの等級でも、規定より小さい豆は5%まで。ピーベリー(丸豆)は10%まで",
+    "status": "verified",
+    "sourceIds": [
+     "bsj-djs-61-2023-public-enquiry"
+    ],
+    "quote": "Maximum of 5% undersized beans is allowable in any grade of coffee except for pea berry beans where a maximum of 10% undersized beans are allowed.",
+    "location": "DJS 61:2024 草案(公開コメント用) Annex B.3 f"
+   },
+   {
+    "text": "上質の輸出等級(premium exportable grade)は、軽い欠点のある豆が、重量で3%まで",
+    "status": "verified",
+    "sourceIds": [
+     "bsj-djs-61-2023-public-enquiry"
+    ],
+    "quote": "A maximum of 3% slightly defective beans by weight is allowable in a premium exportable grade of coffee.",
+    "location": "DJS 61:2024 草案(公開コメント用) Annex B.4 g"
+   },
+   {
+    "text": "ブレンドが「ハイマウンテン」「ブルーマウンテン」と名乗るには、その名のジャマイカ産の輸出等級のコーヒーが、重量で30%以上必要。残りは、味の欠点がなく、ジャマイカ産の味を損なわない、穏やかなもの",
+    "status": "verified",
+    "sourceIds": [
+     "bsj-djs-61-2023-public-enquiry"
+    ],
+    "quote": "coffee with a minimum of 30% by weight of exportable grade Jamaican Coffee of the coffee by which the blend is named High Mountain or Blue Mountain.",
+    "location": "DJS 61:2024 草案(公開コメント用) 2.4"
+   },
+   {
+    "text": "ジャマイカ産の「ハイマウンテン・シュプリーム」「ブルーマウンテン」の上位の等級は、通常、ポプラ材の木樽に詰める",
+    "status": "verified",
+    "sourceIds": [
+     "bsj-djs-61-2023-public-enquiry"
+    ],
+    "quote": "Jamaica High Mountain ® Supreme and Jamaica Blue Mountain ® premium grades are usually packaged in wooden barrels made from odourless poplar wood.",
+    "location": "DJS 61:2024 草案(公開コメント用) Annex B.5 a"
+   }
+  ]
+ },
  "origin:メキシコ:gradeSystem": {
   "status": "verified",
   "textHash": "335acdb8",
@@ -6108,27 +6336,6 @@
   ],
   "contentEn": {
    "text": "According to the 2026 USDA FAS report, smallholders account for 90% of the country's total coffee production. The ECX (Ethiopia Commodity Exchange) was established in 2008 (USDA FAS 2019). A 2019 policy reform allowed smallholders owning 2 ha or more of land to obtain export licenses and sell their coffee directly to international markets (USDA FAS 2025)."
-  }
- },
- "origin:エチオピア:gradeSystem": {
-  "status": "verified",
-  "content": {
-   "text": "輸出向けのコーヒーはGrade 1〜5に格付けされる(USDA FAS 2026年5月)。"
-  },
-  "textHash": "ffb18744",
-  "claims": [
-   {
-    "text": "輸出用はGrade 1〜5の格付け",
-    "status": "verified",
-    "sourceIds": [
-     "usda-fas-gain-et2026-0005"
-    ],
-    "quote": "Export-grade coffee (Grades 1–5) cannot be diverted to the domestic market",
-    "location": "FAS ET2026-0005 Policy"
-   }
-  ],
-  "contentEn": {
-   "text": "Coffee for export is graded Grade 1–5 (USDA FAS, May 2026)."
   }
  },
  "origin:エチオピア:harvestSeason": {

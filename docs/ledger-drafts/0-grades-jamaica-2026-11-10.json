@@ -1,0 +1,105 @@
+{
+  "scope": "grades-jamaica-2026-11-10",
+  "override": true,
+  "verifiedOn": "2026-11-10",
+  "sources": {
+    "bsj-djs-61-2023-public-enquiry": {
+      "title": "DJS 61:2024 Draft Jamaican Standard Specification for Coffee(JS 61:2016の改訂案。公開コメント用)",
+      "org": "BSJ(Bureau of Standards Jamaica、ジャマイカ規格局)",
+      "url": "https://web.archive.org/web/20250807155338id_/https://www.bsj.org.jm/sites/default/files/DJS%2061%202023%20Edit%20for%20Public%20Enquiry%20GB.pdf",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-10",
+      "note": "BSJの草案(公開コメント期間 2024-01-19〜03-19)。BSJの現行サイトでは、元のURLが404のため、Internet Archive(Wayback)の保存版(2025-08-07)を取得した。草案であり、成立した版(JS 61:2024)とは違う可能性がある。成立版は有償で、未取得。草案には、等級ごとの数値の表はない。"
+    }
+  },
+  "entries": {
+    "origin:ジャマイカ:gradeSystem": {
+      "status": "verified",
+      "claims": [
+        {
+          "text": "草案は、「この規格は強制である」と書く(成立版で同じかは未確認)",
+          "status": "verified",
+          "sourceIds": [
+            "bsj-djs-61-2023-public-enquiry"
+          ],
+          "quote": "This standard is compulsory.",
+          "location": "DJS 61:2024 草案(公開コメント用) Foreword"
+        },
+        {
+          "text": "生豆の水分は、10〜12.5%",
+          "status": "verified",
+          "sourceIds": [
+            "bsj-djs-61-2023-public-enquiry"
+          ],
+          "quote": "Green coffee beans shall have a moisture content of 10% to 12.5%.",
+          "location": "DJS 61:2024 草案(公開コメント用) 3.1"
+        },
+        {
+          "text": "コーヒーのラベルには、産地・種類・等級・日付などを書く",
+          "status": "verified",
+          "sourceIds": [
+            "bsj-djs-61-2023-public-enquiry"
+          ],
+          "quote": "Coffee shall be labelled according to source, type, grade, date and any other information necessary for identification and traceability",
+          "location": "DJS 61:2024 草案(公開コメント用) 3.1.2.3"
+        },
+        {
+          "text": "等級ごとに分けて荷造りし、倉庫でも、等級ごとに分けて、はっきり表示した山(ロット)に置く",
+          "status": "verified",
+          "sourceIds": [
+            "bsj-djs-61-2023-public-enquiry"
+          ],
+          "quote": "Graded coffee shall be packaged according to grades and be kept separate in distinctly labelled heaps or lots in the warehouse.",
+          "location": "DJS 61:2024 草案(公開コメント用) Annex B.5 b"
+        },
+        {
+          "text": "生豆のふるい分け試験: 100gの試料をふるいにかけ、17番・16番・15番・10番のふるいに残った量と受け皿の量を、百分率で報告する",
+          "status": "verified",
+          "sourceIds": [
+            "bsj-djs-61-2023-public-enquiry"
+          ],
+          "quote": "Weigh a representative 100g sample of the coffee and place it in the top sieve. || The weight of the coffee on the No.s 17, 16, 15, 10 screens and in the pan should be reported as percentages.",
+          "location": "DJS 61:2024 草案(公開コメント用) 7.1.1, 7.1.3"
+        },
+        {
+          "text": "どの等級でも、規定より小さい豆は5%まで。ピーベリー(丸豆)は10%まで",
+          "status": "verified",
+          "sourceIds": [
+            "bsj-djs-61-2023-public-enquiry"
+          ],
+          "quote": "Maximum of 5% undersized beans is allowable in any grade of coffee except for pea berry beans where a maximum of 10% undersized beans are allowed.",
+          "location": "DJS 61:2024 草案(公開コメント用) Annex B.3 f"
+        },
+        {
+          "text": "上質の輸出等級(premium exportable grade)は、軽い欠点のある豆が、重量で3%まで",
+          "status": "verified",
+          "sourceIds": [
+            "bsj-djs-61-2023-public-enquiry"
+          ],
+          "quote": "A maximum of 3% slightly defective beans by weight is allowable in a premium exportable grade of coffee.",
+          "location": "DJS 61:2024 草案(公開コメント用) Annex B.4 g"
+        },
+        {
+          "text": "ブレンドが「ハイマウンテン」「ブルーマウンテン」と名乗るには、その名のジャマイカ産の輸出等級のコーヒーが、重量で30%以上必要。残りは、味の欠点がなく、ジャマイカ産の味を損なわない、穏やかなもの",
+          "status": "verified",
+          "sourceIds": [
+            "bsj-djs-61-2023-public-enquiry"
+          ],
+          "quote": "coffee with a minimum of 30% by weight of exportable grade Jamaican Coffee of the coffee by which the blend is named High Mountain or Blue Mountain.",
+          "location": "DJS 61:2024 草案(公開コメント用) 2.4"
+        },
+        {
+          "text": "ジャマイカ産の「ハイマウンテン・シュプリーム」「ブルーマウンテン」の上位の等級は、通常、ポプラ材の木樽に詰める",
+          "status": "verified",
+          "sourceIds": [
+            "bsj-djs-61-2023-public-enquiry"
+          ],
+          "quote": "Jamaica High Mountain ® Supreme and Jamaica Blue Mountain ® premium grades are usually packaged in wooden barrels made from odourless poplar wood.",
+          "location": "DJS 61:2024 草案(公開コメント用) Annex B.5 a"
+        }
+      ],
+      "note": "ジャマイカの等級の記述(2026-11-10)。旧記述(No.1〜3・ピーベリー・トリアージ)は、一次資料で確認できず、草案にも等級表がないため、置き換えた。"
+    }
+  }
+}

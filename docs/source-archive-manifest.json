@@ -748,6 +748,23 @@
     ],
     "note": ""
   },
+  "bmcj-specifications-quality": {
+    "url": "https://www.bluemountaincoffeejamaica.com/en/specifications-quality",
+    "finalUrl": "https://www.bluemountaincoffeejamaica.com/en/specifications-quality",
+    "httpStatus": 200,
+    "contentType": "text/html;charset=utf-8",
+    "size": 158072,
+    "sha256": "347b69db8e3558c097e695a0a39d3098cb8b6806d86975181725057af7c9d815",
+    "accessed": "2026-11-10",
+    "tool": "urllib(fetch)",
+    "textChars": 13658,
+    "scannedImagesOnly": false,
+    "files": [
+      "original.html",
+      "text.txt"
+    ],
+    "note": ""
+  },
   "bop-auction-2021": {
     "url": "https://bestofpanama.auction/auction-2021",
     "finalUrl": "https://bestofpanama.auction/auction-2021",
@@ -761,6 +778,23 @@
     "scannedImagesOnly": false,
     "files": [
       "original.html",
+      "text.txt"
+    ],
+    "note": ""
+  },
+  "bsj-djs-61-2023-public-enquiry": {
+    "url": "https://web.archive.org/web/20250807155338id_/https://www.bsj.org.jm/sites/default/files/DJS%2061%202023%20Edit%20for%20Public%20Enquiry%20GB.pdf",
+    "finalUrl": "https://web.archive.org/web/20250807155338id_/https://www.bsj.org.jm/sites/default/files/DJS%2061%202023%20Edit%20for%20Public%20Enquiry%20GB.pdf",
+    "httpStatus": 200,
+    "contentType": "application/pdf",
+    "size": 1113474,
+    "sha256": "f174e14e2665e8f2aa284f735c39ec952acf283c5daddb5b4c8df6fe1e5eaf48",
+    "accessed": "2026-11-10",
+    "tool": "urllib(fetch)",
+    "textChars": 41243,
+    "scannedImagesOnly": false,
+    "files": [
+      "original.pdf",
       "text.txt"
     ],
     "note": ""
@@ -1136,6 +1170,23 @@
     "scannedImagesOnly": false,
     "files": [
       "original.html",
+      "text.txt"
+    ],
+    "note": ""
+  },
+  "ecx-coffee-contracts-ecea-2018": {
+    "url": "https://web.archive.org/web/20201205023342id_/http://www.ecx.com.et/Files/ECX%20Coffee%20Contracts%20approved%20by%20ECEA%20March%2029%202018.pdf",
+    "finalUrl": "https://web.archive.org/web/20201205023342id_/http://www.ecx.com.et/Files/ECX%20Coffee%20Contracts%20approved%20by%20ECEA%20March%2029%202018.pdf",
+    "httpStatus": 200,
+    "contentType": "application/pdf",
+    "size": 1048576,
+    "sha256": "2242e04270bf3a84c1ea9ba35f1f0e2f84e26a9a7b8d529a6a8d40a9c42e100f",
+    "accessed": "2026-11-10",
+    "tool": "urllib(fetch)",
+    "textChars": 21576,
+    "scannedImagesOnly": false,
+    "files": [
+      "original.pdf",
       "text.txt"
     ],
     "note": ""
@@ -2586,6 +2637,23 @@
     ],
     "note": ""
   },
+  "mici-pa-catalogo-normas-tecnicas-2022": {
+    "url": "https://mici.gob.pa/wp-content/uploads/2022/09/Catalogo-de-Normas-Tecnicas-2022.pdf",
+    "finalUrl": "https://mici.gob.pa/wp-content/uploads/2022/09/Catalogo-de-Normas-Tecnicas-2022.pdf",
+    "httpStatus": 200,
+    "contentType": "application/pdf",
+    "size": 687294,
+    "sha256": "077c90815df3a4ea53a480828cd52266dd5f07389555ed7e15b17a4a22fb5a48",
+    "accessed": "2026-11-10",
+    "tool": "urllib(fetch)",
+    "textChars": 74075,
+    "scannedImagesOnly": false,
+    "files": [
+      "original.pdf",
+      "text.txt"
+    ],
+    "note": ""
+  },
   "moa-beryl-2024": {
     "url": "https://www.moa.gov.jm/content/agriculture-sector-sustains-473b-losses-hurricane-beryl%E2%80%99s-passage",
     "finalUrl": "https://www.moa.gov.jm/content/agriculture-sector-sustains-473b-losses-hurricane-beryl%E2%80%99s-passage",
@@ -2732,6 +2800,23 @@
     "accessed": "2026-11-10",
     "tool": "urllib(fetch)",
     "textChars": 2098,
+    "scannedImagesOnly": false,
+    "files": [
+      "original.html",
+      "text.txt"
+    ],
+    "note": ""
+  },
+  "naeb-inside-warehouses": {
+    "url": "https://www.naeb.gov.rw/publications/news/inside-naebs-warehouses-preserving-and-elevating-the-quality-of-rwanda-coffee",
+    "finalUrl": "https://www.naeb.gov.rw/publications/news/inside-naebs-warehouses-preserving-and-elevating-the-quality-of-rwanda-coffee",
+    "httpStatus": 200,
+    "contentType": "text/html; charset=utf-8",
+    "size": 34725,
+    "sha256": "0d31e0b908458ef607950603bf6e06339165af05d1cc9c074e9a79344f61d44b",
+    "accessed": "2026-11-10",
+    "tool": "urllib(fetch)",
+    "textChars": 7576,
     "scannedImagesOnly": false,
     "files": [
       "original.html",
@@ -2922,6 +3007,40 @@
     "scannedImagesOnly": false,
     "files": [
       "original.pdf",
+      "text.txt"
+    ],
+    "note": ""
+  },
+  "rsb-ministerial-instr-23-2015-compulsory-stds": {
+    "url": "https://www.rsb.gov.rw/fileadmin/user_upload/Publications/Laws/MINISTERIAL_INSTRUCTIONS_N__23_2015__OF_18_03_2015_MODIFYING_AND_COMPLEMENTING_THE_MINISTERIAL_INSTRUCTIONS_N__21_2013_OF_03_07_2013_DECLARING_COMPULSORY_RWANDAN_STANDARDS.pdf",
+    "finalUrl": "https://www.rsb.gov.rw/fileadmin/user_upload/Publications/Laws/MINISTERIAL_INSTRUCTIONS_N__23_2015__OF_18_03_2015_MODIFYING_AND_COMPLEMENTING_THE_MINISTERIAL_INSTRUCTIONS_N__21_2013_OF_03_07_2013_DECLARING_COMPULSORY_RWANDAN_STANDARDS.pdf",
+    "httpStatus": 200,
+    "contentType": "application/pdf",
+    "size": 294939,
+    "sha256": "611dd4a06f03ed9bd89f952b3ce3599182f6617d5641685a60197547892dcbe2",
+    "accessed": "2026-11-10",
+    "tool": "urllib(fetch)",
+    "textChars": 10007,
+    "scannedImagesOnly": false,
+    "files": [
+      "original.pdf",
+      "text.txt"
+    ],
+    "note": ""
+  },
+  "rsb-tc-035": {
+    "url": "https://www.rsb.gov.rw/standards/our-technical-committees/rsb-technical-committees/tc-details/rsb-tc-035",
+    "finalUrl": "https://www.rsb.gov.rw/standards/our-technical-committees/rsb-technical-committees/tc-details/rsb-tc-035",
+    "httpStatus": 200,
+    "contentType": "text/html; charset=utf-8",
+    "size": 44561,
+    "sha256": "fa804e5109243484701586072517effd4d65cfae73cfd0a1fce0f38a6c975436",
+    "accessed": "2026-11-10",
+    "tool": "urllib(fetch)",
+    "textChars": 5007,
+    "scannedImagesOnly": false,
+    "files": [
+      "original.html",
       "text.txt"
     ],
     "note": ""
