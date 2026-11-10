@@ -115,7 +115,7 @@ export function HoverExplainTag({ label, category, detail, sourceKeys }) {
           </p>
           {sourceKeys && sourceKeys.length > 0 && (
             <p style={{ marginTop: 6, marginBottom: 0, fontSize: 10, lineHeight: 1.5, color: "#A89880" }}>
-              <SourceLinks keys={sourceKeys} />
+              <SourceLinks keys={sourceKeys} collapse={false} />
             </p>
           )}
           {/* ふきだしの三角形 */}

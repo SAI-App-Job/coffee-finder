@@ -252,6 +252,7 @@ const UI = {
   "注文時選択": "Chosen when ordering",
   "フレーバーノート": "Flavor notes",
   "風味カテゴリ": "Flavor category",
+  "すべて表示": "Show all",
   "風味(大分類・詳細分類)": "Flavor (category / specific note)",
   "詳細な風味から選ぶ": "Pick specific flavors",
   "以前の記録の語": "Earlier terms",

@@ -1,3 +1,4 @@
+import { useLayoutEffect, useRef, useState } from "react";
 import { MapPin, Star, X } from "lucide-react";
 import { useLang, useT } from "../i18n";
 import { sourcesFor } from "../data/ledger";
@@ -139,29 +140,63 @@ export function SourceCredit({ sources }) {
 
 // 出典(資料名・リンク・確認日)。台帳(src/data/ledger)で原文を確認できた資料だけを出す。
 // keys は、画面に出している記述の台帳のキー。出典が1つも無ければ何も出さない。
-export function SourceLinks({ keys, className = "" }) {
+// 出典の一覧。画面の幅で4行以上になるときは、3行までにして「すべて表示」で開く。
+// collapse={false} にすると、常に全部表示する(ふきだしなど、タップで開けない場所向け)。
+export function SourceLinks({ keys, className = "", collapse = true }) {
   const t = useT();
+  const [open, setOpen] = useState(false);
+  const [overflow, setOverflow] = useState(false);
+  const ref = useRef(null);
   const sources = sourcesFor(keys);
-  if (sources.length === 0) return null;
+  const hasSources = sources.length > 0;
+
+  // 3行に収まらないか(折りたたんだ状態で測る)。幅が変わったら測り直す。開いている間は、直前の判定を保つ。
+  useLayoutEffect(() => {
+    const el = ref.current;
+    if (!collapse || !el || open) return;
+    const measure = () => setOverflow(el.scrollHeight > el.clientHeight + 1);
+    measure();
+    const ro = new ResizeObserver(measure);
+    ro.observe(el);
+    return () => ro.disconnect();
+  }, [collapse, open, hasSources, keys]);
+
+  if (!hasSources) return null;
   const checked = sources.map((s) => s.accessed).sort().at(-1);
+  const folded = collapse && !open;
   return (
     <span className={className}>
-      <span>{t("出典:")} </span>
-      {sources.map((source, i) => (
-        <span key={source.id}>
-          {i > 0 && " / "}
-          <a
-            href={source.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={(e) => e.stopPropagation()}
-            className="underline underline-offset-2 break-words"
-          >
-            {source.org ? `${source.org} ${source.title}` : source.title}
-          </a>
-        </span>
-      ))}
-      <span> ({t("確認日: {date}", { date: checked })})</span>
+      <span ref={ref} className={folded ? "line-clamp-3" : "block"}>
+        <span>{t("出典:")} </span>
+        {sources.map((source, i) => (
+          <span key={source.id}>
+            {i > 0 && " / "}
+            <a
+              href={source.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={(e) => e.stopPropagation()}
+              className="underline underline-offset-2 break-words"
+            >
+              {source.org ? `${source.org} ${source.title}` : source.title}
+            </a>
+          </span>
+        ))}
+        <span> ({t("確認日: {date}", { date: checked })})</span>
+      </span>
+      {collapse && overflow && (
+        <button
+          type="button"
+          aria-expanded={open}
+          onClick={(e) => {
+            e.stopPropagation();
+            setOpen((v) => !v);
+          }}
+          className="mt-1 text-[11px] text-[var(--accent)] underline underline-offset-2"
+        >
+          {open ? t("閉じる") : t("すべて表示")}
+        </button>
+      )}
     </span>
   );
 }
