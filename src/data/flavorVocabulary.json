@@ -567,10 +567,6 @@
           ]
         },
         {
-          "ja": "焦げ",
-          "en": "Burnt"
-        },
-        {
           "ja": "麦芽",
           "en": "Malt",
           "match": [
@@ -581,14 +577,6 @@
         {
           "ja": "穀物",
           "en": "Grain"
-        },
-        {
-          "ja": "たばこ",
-          "en": "Tobacco",
-          "match": [
-            "tobacco",
-            "タバコ"
-          ]
         }
       ]
     },
@@ -617,9 +605,10 @@
           "en": "Green"
         },
         {
-          "ja": "草っぽい",
+          "ja": "グラッシー",
           "en": "Grassy",
           "match": [
+            "grassy",
             "草っぽ",
             "青草"
           ]
@@ -640,19 +629,12 @@
           ]
         },
         {
-          "ja": "土っぽい",
+          "ja": "アーシー",
           "en": "Earthy",
           "match": [
             "earthy",
-            "アーシー",
+            "土っぽ",
             "土の香"
-          ]
-        },
-        {
-          "ja": "野菜っぽい",
-          "en": "Vegetal",
-          "match": [
-            "野菜っぽ"
           ]
         }
       ]
@@ -987,6 +969,26 @@
     },
     "オリーブオイル様": {
       "en": "Olive oil-like"
+    },
+    "焦げ": {
+      "category": "roast",
+      "en": "Burnt"
+    },
+    "たばこ": {
+      "category": "roast",
+      "en": "Tobacco"
+    },
+    "草っぽい": {
+      "category": "herbal",
+      "en": "Grassy"
+    },
+    "土っぽい": {
+      "category": "herbal",
+      "en": "Earthy"
+    },
+    "野菜っぽい": {
+      "category": "herbal",
+      "en": "Vegetal"
     }
   }
 }
