@@ -1,7 +1,9 @@
-import { useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Wrench, Plus, Pencil, Trash2, X, ExternalLink } from "lucide-react";
 import { TOOL_KINDS } from "../hooks/useMyTools";
 import { cleanGtin, isValidGtin, normalizeUrl } from "../utils/gtin";
+import { findToolByGtin, searchToolCatalog, toolDisplayName } from "../utils/toolCatalog";
+import { loadToolCatalog } from "../data/remote";
 import { INPUT_CLASS, LABEL_CLASS, PRIMARY_BUTTON_CLASS } from "./formStyles";
 import { useT } from "../i18n";
 
@@ -15,6 +17,28 @@ function ToolFormModal({ target, onSave, onClose }) {
   const [form, setForm] = useState(() => (editing ? { ...EMPTY, ...editing } : EMPTY));
   const [error, setError] = useState("");
   const set = (key) => (e) => setForm((f) => ({ ...f, [key]: e.target.value }));
+
+  // 器具カタログ(メーカー公式のデータ)。開いたときに1回だけ取得する。取得できなければ、候補が出ないだけ
+  const [catalog, setCatalog] = useState([]);
+  useEffect(() => {
+    let alive = true;
+    loadToolCatalog().then((rows) => alive && setCatalog(rows));
+    return () => {
+      alive = false;
+    };
+  }, []);
+  // 名前を入力し始めたときだけ候補を出す(編集の開始時や、候補を選んだ直後は出さない)
+  const [nameTouched, setNameTouched] = useState(false);
+  const suggestions = useMemo(
+    () => (nameTouched ? searchToolCatalog(catalog, target.kind, form.name) : []),
+    [catalog, target.kind, form.name, nameTouched]
+  );
+  const gtinMatch = useMemo(() => findToolByGtin(catalog, form.gtin), [catalog, form.gtin]);
+  const gtinMatchKind = gtinMatch ? TOOL_KINDS.find((k) => k.id === gtinMatch.kind) : null;
+  const applyCatalogRow = (row) => {
+    setNameTouched(false);
+    setForm((f) => ({ ...f, name: toolDisplayName(row), maker: row.maker || f.maker, gtin: row.gtin || f.gtin, url: row.url || f.url }));
+  };
 
   const submit = () => {
     const name = form.name.trim();
@@ -70,12 +94,37 @@ function ToolFormModal({ target, onSave, onClose }) {
               id="my-tool-name"
               type="text"
               value={form.name}
-              onChange={set("name")}
+              onChange={(e) => {
+                setNameTouched(true);
+                set("name")(e);
+              }}
               maxLength={80}
               placeholder={t(kind.example)}
               autoComplete="off"
               className={INPUT_CLASS}
             />
+            {suggestions.length > 0 && (
+              <div className="mt-1.5 rounded-lg border border-[var(--c-border)] bg-[var(--c-surface-2)] overflow-hidden">
+                <p className="px-3 pt-2 text-[10px] text-[var(--c-text-3)]">{t("メーカー公式の情報から選べます")}</p>
+                <ul>
+                  {suggestions.map((row) => (
+                    <li key={row.key}>
+                      <button
+                        type="button"
+                        onClick={() => applyCatalogRow(row)}
+                        className="w-full text-left px-3 py-2 text-[12px] text-[var(--c-text)] hover:bg-[var(--c-surface)] transition-colors"
+                      >
+                        <span className="block break-words">{toolDisplayName(row)}</span>
+                        <span className="block text-[10px] text-[var(--c-text-3)]">
+                          {row.maker}
+                          {row.gtin ? ` ・ JAN/GTIN ${row.gtin}` : ""}
+                        </span>
+                      </button>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
           </div>
           <div>
             <label className={LABEL_CLASS} htmlFor="my-tool-maker">
@@ -107,8 +156,23 @@ function ToolFormModal({ target, onSave, onClose }) {
               className={INPUT_CLASS}
             />
             <p className="text-[11px] text-[var(--c-text-3)] mt-1.5 leading-relaxed">
-              {t("番号は、控えとして保存します。番号から商品情報を自動で調べる機能は、ありません。")}
+              {t("番号は、控えとして保存します。メーカー公式の情報にある番号なら、名前などを自動で入力できます。")}
             </p>
+            {gtinMatch && (
+              <button
+                type="button"
+                onClick={() => (gtinMatch.kind === target.kind ? applyCatalogRow(gtinMatch) : undefined)}
+                disabled={gtinMatch.kind !== target.kind}
+                className="mt-1.5 w-full text-left px-3 py-2 rounded-lg border border-[var(--accent)] text-[12px] text-[var(--c-text)] disabled:opacity-70"
+              >
+                <span className="block text-[10px] text-[var(--accent)]">
+                  {gtinMatch.kind === target.kind
+                    ? t("この番号は、メーカー公式の情報にあります。タップで入力します")
+                    : t("この番号は、{kind}のものです", { kind: t(gtinMatchKind.label) })}
+                </span>
+                <span className="block break-words">{toolDisplayName(gtinMatch)}</span>
+              </button>
+            )}
           </div>
           <div>
             <label className={LABEL_CLASS} htmlFor="my-tool-url">

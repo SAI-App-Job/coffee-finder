@@ -1,4 +1,5 @@
 import { normalizeProcessingMethod } from "../utils/processingMethod";
+import { flattenToolCatalog } from "../utils/toolCatalog";
 
 const BASE_URL = "https://raw.githubusercontent.com/SAI-App-Job/coffee-finder/master/data/";
 
@@ -153,4 +154,17 @@ export async function loadRemoteData() {
     console.warn("リモートデータの取得に失敗したため、モックデータを使用します。", err);
     return null;
   }
+}
+
+// 器具カタログ(tools.json)。「マイツール」の追加画面を開いたときに、1回だけ取得する。
+// 取得に失敗したら、空(候補が出ないだけ)にする。次に開いたときに、もう一度取得する。
+let toolCatalogPromise = null;
+export function loadToolCatalog() {
+  toolCatalogPromise ??= fetchJSON("tools.json")
+    .then(flattenToolCatalog)
+    .catch(() => {
+      toolCatalogPromise = null;
+      return [];
+    });
+  return toolCatalogPromise;
 }

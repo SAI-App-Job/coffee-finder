@@ -12,7 +12,8 @@
     "preview": "vite preview",
     "flavor:check": "node scripts/check-flavor-vocab.js",
     "archive:check": "python scripts/archive_source.py check",
-    "archive:verify": "python scripts/archive_source.py verify"
+    "archive:verify": "python scripts/archive_source.py verify",
+    "tools:check": "node scripts/check-tools-catalog.js"
   },
   "dependencies": {
     "leaflet": "^1.9.4",

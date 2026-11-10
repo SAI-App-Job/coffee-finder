@@ -4081,6 +4081,38 @@
     ],
     "note": ""
   },
+  "tools-hario-2026-11-10": {
+    "url": "https://www.hario.com/product/coffee/",
+    "finalUrl": "https://www.hario.com/product/coffee/",
+    "httpStatus": 200,
+    "contentType": "",
+    "size": 622967,
+    "sha256": "36c2dad353c57319de6f8d8f59258b5ab31e0cf8fc6568ca3544c48ec1d92730",
+    "accessed": "2026-11-10",
+    "tool": "ローカルのファイルを取り込み",
+    "textChars": 0,
+    "scannedImagesOnly": false,
+    "files": [
+      "original.bin"
+    ],
+    "note": "メーカー公式サイトの商品データ(JSON)。器具カタログ(data/tools.json)の根拠"
+  },
+  "tools-kalita-2026-11-10": {
+    "url": "https://www.kalita.co.jp/products/",
+    "finalUrl": "https://www.kalita.co.jp/products/",
+    "httpStatus": 200,
+    "contentType": "",
+    "size": 670144,
+    "sha256": "9ee1cbb694cb9306af77d7b241375cb045e81b996365a44c10462871cf9b4ff9",
+    "accessed": "2026-11-10",
+    "tool": "ローカルのファイルを取り込み",
+    "textChars": 0,
+    "scannedImagesOnly": false,
+    "files": [
+      "original.bin"
+    ],
+    "note": "メーカー公式サイトの商品データ(JSON)。器具カタログ(data/tools.json)の根拠"
+  },
   "tz-coffee-industry-act-2001": {
     "url": "https://faolex.fao.org/docs/pdf/tan34185.pdf",
     "finalUrl": "https://faolex.fao.org/docs/pdf/tan34185.pdf",

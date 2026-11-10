@@ -1,0 +1,3459 @@
+{
+ "version": 1,
+ "items": [
+  {
+   "id": "hario-adt-01-b",
+   "kind": "dripper",
+   "maker": "HARIO",
+   "name": "ALPHA DRIPPER TRITAN",
+   "variants": [
+    {
+     "label": "ブラック",
+     "sku": "ADT-01-B",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.hario.com/product/coffee/dripper/ADT.html",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-hario-2026-11-10",
+   "makerAlias": "ハリオ"
+  },
+  {
+   "id": "hario-vdmu-02-tb",
+   "kind": "dripper",
+   "maker": "HARIO",
+   "name": "V60 1回抽出ドリッパー MUGEN",
+   "variants": [
+    {
+     "label": "透明ブラック",
+     "sku": "VDMU-02-TB",
+     "gtin": ""
+    },
+    {
+     "label": "ホワイト",
+     "sku": "VDMU-02-CW",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.hario.com/product/coffee/dripper/VDMU.html",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-hario-2026-11-10",
+   "makerAlias": "ハリオ"
+  },
+  {
+   "id": "hario-vdn-01-b",
+   "kind": "dripper",
+   "maker": "HARIO",
+   "name": "V60 ドリッパー NEO 01",
+   "variants": [
+    {
+     "label": "ブラック",
+     "sku": "VDN-01-B",
+     "gtin": ""
+    },
+    {
+     "label": "クリア",
+     "sku": "VDN-01-T",
+     "gtin": ""
+    },
+    {
+     "label": "アンバー",
+     "sku": "VDN-01-AB",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.hario.com/product/coffee/dripper/VDN.html",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-hario-2026-11-10",
+   "makerAlias": "ハリオ"
+  },
+  {
+   "id": "hario-vdn-02-b",
+   "kind": "dripper",
+   "maker": "HARIO",
+   "name": "V60 ドリッパー NEO 02",
+   "variants": [
+    {
+     "label": "ブラック",
+     "sku": "VDN-02-B",
+     "gtin": ""
+    },
+    {
+     "label": "クリア",
+     "sku": "VDN-02-T",
+     "gtin": ""
+    },
+    {
+     "label": "アンバー",
+     "sku": "VDN-02-AB",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.hario.com/product/coffee/dripper/VDN.html",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-hario-2026-11-10",
+   "makerAlias": "ハリオ"
+  },
+  {
+   "id": "hario-vdsu-02-tb",
+   "kind": "dripper",
+   "maker": "HARIO",
+   "name": "V60 ドリッパー SUIREN",
+   "variants": [
+    {
+     "label": "透明ブラック",
+     "sku": "VDSU-02-TB",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.hario.com/product/coffee/dripper/VDSU.html",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-hario-2026-11-10",
+   "makerAlias": "ハリオ"
+  },
+  {
+   "id": "hario-vdsu-02-tri",
+   "kind": "dripper",
+   "maker": "HARIO",
+   "name": "V60 ドリッパー SUIREN トリコロール",
+   "variants": [
+    {
+     "label": "トリコロール",
+     "sku": "VDSU-02-TRI",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.hario.com/product/coffee/dripper/VDSU.html",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-hario-2026-11-10",
+   "makerAlias": "ハリオ"
+  },
+  {
+   "id": "hario-vdsu-02-b＆w",
+   "kind": "dripper",
+   "maker": "HARIO",
+   "name": "V60 ドリッパー SUIREN ブラック＆ホワイト",
+   "variants": [
+    {
+     "label": "ブラック＆ホワイト",
+     "sku": "VDSU-02-B＆W",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.hario.com/product/coffee/dripper/VDSU.html",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-hario-2026-11-10",
+   "makerAlias": "ハリオ"
+  },
+  {
+   "id": "hario-vdsu-02-nj",
+   "kind": "dripper",
+   "maker": "HARIO",
+   "name": "V60 ドリッパー SUIREN 虹（NIJI)",
+   "variants": [
+    {
+     "label": "虹",
+     "sku": "VDSU-02-NJ",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.hario.com/product/coffee/dripper/VDSU.html",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-hario-2026-11-10",
+   "makerAlias": "ハリオ"
+  },
+  {
+   "id": "hario-zb-vdf-01b",
+   "kind": "dripper",
+   "maker": "HARIO",
+   "name": "V60 フラットドリッパー 01 Zebrang",
+   "variants": [
+    {
+     "label": "ブラック",
+     "sku": "ZB-VDF-01B",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.hario.com/product/coffee/dripper/ZB-VDF.html",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-hario-2026-11-10",
+   "makerAlias": "ハリオ"
+  },
+  {
+   "id": "hario-zb-vdfp-02b",
+   "kind": "dripper",
+   "maker": "HARIO",
+   "name": "V60 フラットドリッパー 02 PLUS Zebrang",
+   "variants": [
+    {
+     "label": "ブラック",
+     "sku": "ZB-VDFP-02B",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.hario.com/product/coffee/dripper/ZB-VDF.html",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-hario-2026-11-10",
+   "makerAlias": "ハリオ"
+  },
+  {
+   "id": "hario-vdgr-01-b",
+   "kind": "dripper",
+   "maker": "HARIO",
+   "name": "V60 耐熱ガラス透過ドリッパー 01",
+   "variants": [
+    {
+     "label": "ブラック",
+     "sku": "VDGR-01-B",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.hario.com/product/coffee/dripper/VDGR.html",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-hario-2026-11-10",
+   "makerAlias": "ハリオ"
+  },
+  {
+   "id": "hario-vdgr-02-b",
+   "kind": "dripper",
+   "maker": "HARIO",
+   "name": "V60 耐熱ガラス透過ドリッパー 02",
+   "variants": [
+    {
+     "label": "ブラック",
+     "sku": "VDGR-02-B",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.hario.com/product/coffee/dripper/VDGR.html",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-hario-2026-11-10",
+   "makerAlias": "ハリオ"
+  },
+  {
+   "id": "hario-vdta-01-t",
+   "kind": "dripper",
+   "maker": "HARIO",
+   "name": "V60 透過ドリッパー 01 クリア トライタン",
+   "variants": [
+    {
+     "label": "クリア",
+     "sku": "VDTA-01-T",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.hario.com/product/coffee/dripper/VDTA.html",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-hario-2026-11-10",
+   "makerAlias": "ハリオ"
+  },
+  {
+   "id": "hario-vdta-02-t",
+   "kind": "dripper",
+   "maker": "HARIO",
+   "name": "V60 透過ドリッパー 02 クリア トライタン",
+   "variants": [
+    {
+     "label": "クリア",
+     "sku": "VDTA-02-T",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.hario.com/product/coffee/dripper/VDTA.html",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-hario-2026-11-10",
+   "makerAlias": "ハリオ"
+  },
+  {
+   "id": "hario-vdmr-02-hsv",
+   "kind": "dripper",
+   "maker": "HARIO",
+   "name": "V60メタルドリッパー シルバー",
+   "variants": [
+    {
+     "label": "ヘアラインシルバー",
+     "sku": "VDMR-02-HSV",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.hario.com/product/coffee/dripper/VDM.html",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-hario-2026-11-10",
+   "makerAlias": "ハリオ"
+  },
+  {
+   "id": "hario-vdmr-02-mb",
+   "kind": "dripper",
+   "maker": "HARIO",
+   "name": "V60メタルドリッパー マットブラック",
+   "variants": [
+    {
+     "label": "マットブラック",
+     "sku": "VDMR-02-MB",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.hario.com/product/coffee/dripper/VDM.html",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-hario-2026-11-10",
+   "makerAlias": "ハリオ"
+  },
+  {
+   "id": "hario-vdgn-03-b",
+   "kind": "dripper",
+   "maker": "HARIO",
+   "name": "V60耐熱ガラス透過ドリッパー 03",
+   "variants": [
+    {
+     "label": "ブラック",
+     "sku": "VDGN-03-B",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.hario.com/product/coffee/dripper/VDGN.html",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-hario-2026-11-10",
+   "makerAlias": "ハリオ"
+  },
+  {
+   "id": "hario-vdgr-01-ov",
+   "kind": "dripper",
+   "maker": "HARIO",
+   "name": "V60耐熱ガラス透過ドリッパーオリーブウッド01",
+   "variants": [
+    {
+     "label": "オリーブウッド",
+     "sku": "VDGR-01-OV",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.hario.com/product/coffee/dripper/VDG-OV.html",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-hario-2026-11-10",
+   "makerAlias": "ハリオ"
+  },
+  {
+   "id": "hario-vdgr-02-ov",
+   "kind": "dripper",
+   "maker": "HARIO",
+   "name": "V60耐熱ガラス透過ドリッパーオリーブウッド02",
+   "variants": [
+    {
+     "label": "オリーブウッド",
+     "sku": "VDGR-02-OV",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.hario.com/product/coffee/dripper/VDG-OV.html",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-hario-2026-11-10",
+   "makerAlias": "ハリオ"
+  },
+  {
+   "id": "hario-vdr-01-t",
+   "kind": "dripper",
+   "maker": "HARIO",
+   "name": "V60透過ドリッパ-01クリア",
+   "variants": [
+    {
+     "label": "透明",
+     "sku": "VDR-01-T",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.hario.com/product/coffee/dripper/VD.html",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-hario-2026-11-10",
+   "makerAlias": "ハリオ"
+  },
+  {
+   "id": "hario-vdcr-01-r",
+   "kind": "dripper",
+   "maker": "HARIO",
+   "name": "V60透過ドリッパー01セラミックR",
+   "variants": [
+    {
+     "label": "レッド",
+     "sku": "VDCR-01-R",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.hario.com/product/coffee/dripper/VDC.html",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-hario-2026-11-10",
+   "makerAlias": "ハリオ"
+  },
+  {
+   "id": "hario-vdcr-01-w",
+   "kind": "dripper",
+   "maker": "HARIO",
+   "name": "V60透過ドリッパー01セラミックＷ",
+   "variants": [
+    {
+     "label": "ホワイト",
+     "sku": "VDCR-01-W",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.hario.com/product/coffee/dripper/VDC.html",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-hario-2026-11-10",
+   "makerAlias": "ハリオ"
+  },
+  {
+   "id": "hario-vdr-01-w",
+   "kind": "dripper",
+   "maker": "HARIO",
+   "name": "V60透過ドリッパー01ホワイト（PP製）",
+   "variants": [
+    {
+     "label": "ホワイト",
+     "sku": "VDR-01-W",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.hario.com/product/coffee/dripper/VD.html",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-hario-2026-11-10",
+   "makerAlias": "ハリオ"
+  },
+  {
+   "id": "hario-vdr-01-r",
+   "kind": "dripper",
+   "maker": "HARIO",
+   "name": "V60透過ドリッパー01レッド（PP製）",
+   "variants": [
+    {
+     "label": "レッド",
+     "sku": "VDR-01-R",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.hario.com/product/coffee/dripper/VD.html",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-hario-2026-11-10",
+   "makerAlias": "ハリオ"
+  },
+  {
+   "id": "hario-vdr-02-t",
+   "kind": "dripper",
+   "maker": "HARIO",
+   "name": "V60透過ドリッパー02クリア",
+   "variants": [
+    {
+     "label": "透明",
+     "sku": "VDR-02-T",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.hario.com/product/coffee/dripper/VD.html",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-hario-2026-11-10",
+   "makerAlias": "ハリオ"
+  },
+  {
+   "id": "hario-vdcr-02-r",
+   "kind": "dripper",
+   "maker": "HARIO",
+   "name": "V60透過ドリッパー02セラミックR",
+   "variants": [
+    {
+     "label": "レッド",
+     "sku": "VDCR-02-R",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.hario.com/product/coffee/dripper/VDC.html",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-hario-2026-11-10",
+   "makerAlias": "ハリオ"
+  },
+  {
+   "id": "hario-vdcr-02-w",
+   "kind": "dripper",
+   "maker": "HARIO",
+   "name": "V60透過ドリッパー02セラミックＷ",
+   "variants": [
+    {
+     "label": "ホワイト",
+     "sku": "VDCR-02-W",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.hario.com/product/coffee/dripper/VDC.html",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-hario-2026-11-10",
+   "makerAlias": "ハリオ"
+  },
+  {
+   "id": "hario-vdr-02-w",
+   "kind": "dripper",
+   "maker": "HARIO",
+   "name": "V60透過ドリッパー02ホワイト（PP製）",
+   "variants": [
+    {
+     "label": "ホワイト",
+     "sku": "VDR-02-W",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.hario.com/product/coffee/dripper/VD.html",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-hario-2026-11-10",
+   "makerAlias": "ハリオ"
+  },
+  {
+   "id": "hario-vdr-02-r",
+   "kind": "dripper",
+   "maker": "HARIO",
+   "name": "V60透過ドリッパー02レッド（PP製）",
+   "variants": [
+    {
+     "label": "レッド",
+     "sku": "VDR-02-R",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.hario.com/product/coffee/dripper/VD.html",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-hario-2026-11-10",
+   "makerAlias": "ハリオ"
+  },
+  {
+   "id": "hario-vdr-03-t",
+   "kind": "dripper",
+   "maker": "HARIO",
+   "name": "V60透過ドリッパー03クリア",
+   "variants": [
+    {
+     "label": "透明",
+     "sku": "VDR-03-T",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.hario.com/product/coffee/dripper/VD.html",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-hario-2026-11-10",
+   "makerAlias": "ハリオ"
+  },
+  {
+   "id": "hario-ssdc-200-sun",
+   "kind": "dripper",
+   "maker": "HARIO",
+   "name": "コーヒードリッパースイッチ サンライズ",
+   "variants": [
+    {
+     "label": "",
+     "sku": "SSDC-200-SUN",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.hario.com/product/coffee/dripper/SSDC.html",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-hario-2026-11-10",
+   "makerAlias": "ハリオ"
+  },
+  {
+   "id": "hario-ped-01-t",
+   "kind": "dripper",
+   "maker": "HARIO",
+   "name": "ペガサス ドリッパー01",
+   "variants": [
+    {
+     "label": "透明",
+     "sku": "PED-01-T",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.hario.com/product/coffee/dripper/PED.html",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-hario-2026-11-10",
+   "makerAlias": "ハリオ"
+  },
+  {
+   "id": "hario-ped-01-b",
+   "kind": "dripper",
+   "maker": "HARIO",
+   "name": "ペガサス ドリッパー01 ブラック",
+   "variants": [
+    {
+     "label": "ブラック",
+     "sku": "PED-01-B",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.hario.com/product/coffee/dripper/PED-B.html",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-hario-2026-11-10",
+   "makerAlias": "ハリオ"
+  },
+  {
+   "id": "hario-ped-02-t",
+   "kind": "dripper",
+   "maker": "HARIO",
+   "name": "ペガサス ドリッパー02",
+   "variants": [
+    {
+     "label": "透明",
+     "sku": "PED-02-T",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.hario.com/product/coffee/dripper/PED.html",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-hario-2026-11-10",
+   "makerAlias": "ハリオ"
+  },
+  {
+   "id": "hario-ped-02-b",
+   "kind": "dripper",
+   "maker": "HARIO",
+   "name": "ペガサス ドリッパー02 ブラック",
+   "variants": [
+    {
+     "label": "ブラック",
+     "sku": "PED-02-B",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.hario.com/product/coffee/dripper/PED-B.html",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-hario-2026-11-10",
+   "makerAlias": "ハリオ"
+  },
+  {
+   "id": "hario-ped-03-t",
+   "kind": "dripper",
+   "maker": "HARIO",
+   "name": "ペガサス ドリッパー03",
+   "variants": [
+    {
+     "label": "透明",
+     "sku": "PED-03-T",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.hario.com/product/coffee/dripper/PED.html",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-hario-2026-11-10",
+   "makerAlias": "ハリオ"
+  },
+  {
+   "id": "hario-ped-03-b",
+   "kind": "dripper",
+   "maker": "HARIO",
+   "name": "ペガサス ドリッパー03 ブラック",
+   "variants": [
+    {
+     "label": "ブラック",
+     "sku": "PED-03-B",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.hario.com/product/coffee/dripper/PED-B.html",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-hario-2026-11-10",
+   "makerAlias": "ハリオ"
+  },
+  {
+   "id": "hario-ssdc-200-w",
+   "kind": "dripper",
+   "maker": "HARIO",
+   "name": "浸漬式セラミックドリッパー スイッチ",
+   "variants": [
+    {
+     "label": "ホワイト",
+     "sku": "SSDC-200-W",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.hario.com/product/coffee/dripper/SSDC.html",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-hario-2026-11-10",
+   "makerAlias": "ハリオ"
+  },
+  {
+   "id": "hario-ssd-200-b",
+   "kind": "dripper",
+   "maker": "HARIO",
+   "name": "浸漬式ドリッパー スイッチ",
+   "variants": [
+    {
+     "label": "ブラック",
+     "sku": "SSD-200-B",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.hario.com/product/coffee/dripper/SSD.html",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-hario-2026-11-10",
+   "makerAlias": "ハリオ"
+  },
+  {
+   "id": "hario-ssd-360-b",
+   "kind": "dripper",
+   "maker": "HARIO",
+   "name": "浸漬式ドリッパー スイッチ 360",
+   "variants": [
+    {
+     "label": "ブラック",
+     "sku": "SSD-360-B",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.hario.com/product/coffee/dripper/SSD.html",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-hario-2026-11-10",
+   "makerAlias": "ハリオ"
+  },
+  {
+   "id": "hario-vdg-02-wn",
+   "kind": "dripper",
+   "maker": "HARIO",
+   "name": "耐熱ガラス透過ドリッパー ウォールナット",
+   "variants": [
+    {
+     "label": "ウォールナット",
+     "sku": "VDG-02-WN",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.hario.com/product/coffee/dripper/VDG-WN.html",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-hario-2026-11-10",
+   "makerAlias": "ハリオ"
+  },
+  {
+   "id": "hario-cgp-2-b",
+   "kind": "grinder",
+   "maker": "HARIO",
+   "name": "Coffee Grinder・PRO",
+   "variants": [
+    {
+     "label": "ブラック",
+     "sku": "CGP-2-B",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.hario.com/product/coffee/grinder/CGP.html",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-hario-2026-11-10",
+   "makerAlias": "ハリオ"
+  },
+  {
+   "id": "hario-ecg-3-b",
+   "kind": "grinder",
+   "maker": "HARIO",
+   "name": "Electric Coffee Grinder SHIZUKA",
+   "variants": [
+    {
+     "label": "ブラック",
+     "sku": "ECG-3-B",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.hario.com/product/coffee/grinder/ECG.html",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-hario-2026-11-10",
+   "makerAlias": "ハリオ"
+  },
+  {
+   "id": "hario-evcn-8-b",
+   "kind": "grinder",
+   "maker": "HARIO",
+   "name": "V60 電動コーヒーグラインダーコンパクトN",
+   "variants": [
+    {
+     "label": "ブラック",
+     "sku": "EVCN-8-B",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.hario.com/product/coffee/grinder/EVCN.html",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-hario-2026-11-10",
+   "makerAlias": "ハリオ"
+  },
+  {
+   "id": "hario-mcg-2-wn",
+   "kind": "grinder",
+   "maker": "HARIO",
+   "name": "コーヒーミル ウォールナット",
+   "variants": [
+    {
+     "label": "ウォールナット",
+     "sku": "MCG-2-WN",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.hario.com/product/coffee/grinder/MCG.html",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-hario-2026-11-10",
+   "makerAlias": "ハリオ"
+  },
+  {
+   "id": "hario-cmcb-2",
+   "kind": "grinder",
+   "maker": "HARIO",
+   "name": "コーヒーミル・キューブ",
+   "variants": [
+    {
+     "label": "",
+     "sku": "CMCB-2",
+     "gtin": ""
+    },
+    {
+     "label": "",
+     "sku": "CMCB-4",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.hario.com/product/coffee/grinder/CMCB.html",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-hario-2026-11-10",
+   "makerAlias": "ハリオ"
+  },
+  {
+   "id": "hario-cmr-502c",
+   "kind": "grinder",
+   "maker": "HARIO",
+   "name": "コーヒーミル・コラム",
+   "variants": [
+    {
+     "label": "",
+     "sku": "CMR-502C",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.hario.com/product/coffee/grinder/CM.html",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-hario-2026-11-10",
+   "makerAlias": "ハリオ"
+  },
+  {
+   "id": "hario-msgn-2-t",
+   "kind": "grinder",
+   "maker": "HARIO",
+   "name": "コーヒーミル・スマートG",
+   "variants": [
+    {
+     "label": "クリア",
+     "sku": "MSGN-2-T",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.hario.com/product/coffee/grinder/MSGN.html",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-hario-2026-11-10",
+   "makerAlias": "ハリオ"
+  },
+  {
+   "id": "hario-msgs-2-b",
+   "kind": "grinder",
+   "maker": "HARIO",
+   "name": "コーヒーミル・スマートG PRO",
+   "variants": [
+    {
+     "label": "ブラック",
+     "sku": "MSGS-2-B",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.hario.com/product/coffee/grinder/MSGS.html",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-hario-2026-11-10",
+   "makerAlias": "ハリオ"
+  },
+  {
+   "id": "hario-mss-1tb",
+   "kind": "grinder",
+   "maker": "HARIO",
+   "name": "コーヒーミル・セラミックスリム",
+   "variants": [
+    {
+     "label": "透明ブラック",
+     "sku": "MSS-1TB",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.hario.com/product/coffee/grinder/MSS.html",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-hario-2026-11-10",
+   "makerAlias": "ハリオ"
+  },
+  {
+   "id": "hario-mcd-2",
+   "kind": "grinder",
+   "maker": "HARIO",
+   "name": "コーヒーミル・ドーム",
+   "variants": [
+    {
+     "label": "",
+     "sku": "MCD-2",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.hario.com/product/coffee/grinder/MCD.html",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-hario-2026-11-10",
+   "makerAlias": "ハリオ"
+  },
+  {
+   "id": "hario-mmr-2",
+   "kind": "grinder",
+   "maker": "HARIO",
+   "name": "スモールコーヒーグラインダー",
+   "variants": [
+    {
+     "label": "",
+     "sku": "MMR-2",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.hario.com/product/coffee/grinder/MM.html",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-hario-2026-11-10",
+   "makerAlias": "ハリオ"
+  },
+  {
+   "id": "hario-mcwn-2-ov",
+   "kind": "grinder",
+   "maker": "HARIO",
+   "name": "セラミックコーヒーミル・ウッド N",
+   "variants": [
+    {
+     "label": "オリーブウッド",
+     "sku": "MCWN-2-OV",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.hario.com/product/coffee/grinder/MCWN.html",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-hario-2026-11-10",
+   "makerAlias": "ハリオ"
+  },
+  {
+   "id": "hario-mscsn-2-b",
+   "kind": "grinder",
+   "maker": "HARIO",
+   "name": "セラミックコーヒーミル・スケルトン N",
+   "variants": [
+    {
+     "label": "ブラック",
+     "sku": "MSCSN-2-B",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.hario.com/product/coffee/grinder/MSCSN.html",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-hario-2026-11-10",
+   "makerAlias": "ハリオ"
+  },
+  {
+   "id": "hario-zb-cms-b",
+   "kind": "grinder",
+   "maker": "HARIO",
+   "name": "ゼブランコーヒーミル ステンレスカッター",
+   "variants": [
+    {
+     "label": "ブラック",
+     "sku": "ZB-CMS-B",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.hario.com/product/coffee/grinder/ZB-CMS.html",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-hario-2026-11-10",
+   "makerAlias": "ハリオ"
+  },
+  {
+   "id": "hario-vcf-01-50-mt",
+   "kind": "paper",
+   "maker": "HARIO",
+   "name": "V60 コーヒーペーパーフィルタ―・メテオ 01",
+   "variants": [
+    {
+     "label": "ホワイト",
+     "sku": "VCF-01-50-MT",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.hario.com/product/coffee/paperfilter/VCF-MT.html",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-hario-2026-11-10",
+   "makerAlias": "ハリオ"
+  },
+  {
+   "id": "hario-vcf-02-50-mt",
+   "kind": "paper",
+   "maker": "HARIO",
+   "name": "V60 コーヒーペーパーフィルタ―・メテオ 02",
+   "variants": [
+    {
+     "label": "ホワイト",
+     "sku": "VCF-02-50-MT",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.hario.com/product/coffee/paperfilter/VCF-MT.html",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-hario-2026-11-10",
+   "makerAlias": "ハリオ"
+  },
+  {
+   "id": "hario-vcf-01-100m",
+   "kind": "paper",
+   "maker": "HARIO",
+   "name": "V60ペーパーフィルター01M 100枚",
+   "variants": [
+    {
+     "label": "ブラウン",
+     "sku": "VCF-01-100M",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.hario.com/product/coffee/paperfilter/VCF.html",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-hario-2026-11-10",
+   "makerAlias": "ハリオ"
+  },
+  {
+   "id": "hario-vcf-01-40m",
+   "kind": "paper",
+   "maker": "HARIO",
+   "name": "V60ペーパーフィルター01M 40枚",
+   "variants": [
+    {
+     "label": "ブラウン",
+     "sku": "VCF-01-40M",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.hario.com/product/coffee/paperfilter/VCF.html",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-hario-2026-11-10",
+   "makerAlias": "ハリオ"
+  },
+  {
+   "id": "hario-vcf-01-100w",
+   "kind": "paper",
+   "maker": "HARIO",
+   "name": "V60ペーパーフィルター01W 100枚",
+   "variants": [
+    {
+     "label": "ホワイト",
+     "sku": "VCF-01-100W",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.hario.com/product/coffee/paperfilter/VCF.html",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-hario-2026-11-10",
+   "makerAlias": "ハリオ"
+  },
+  {
+   "id": "hario-vcf-01-40w",
+   "kind": "paper",
+   "maker": "HARIO",
+   "name": "V60ペーパーフィルター01W 40枚",
+   "variants": [
+    {
+     "label": "ホワイト",
+     "sku": "VCF-01-40W",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.hario.com/product/coffee/paperfilter/VCF.html",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-hario-2026-11-10",
+   "makerAlias": "ハリオ"
+  },
+  {
+   "id": "hario-vcf-02-100m",
+   "kind": "paper",
+   "maker": "HARIO",
+   "name": "V60ペーパーフィルター02 M 100枚",
+   "variants": [
+    {
+     "label": "ブラウン",
+     "sku": "VCF-02-100M",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.hario.com/product/coffee/paperfilter/VCF.html",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-hario-2026-11-10",
+   "makerAlias": "ハリオ"
+  },
+  {
+   "id": "hario-vcf-02-40m",
+   "kind": "paper",
+   "maker": "HARIO",
+   "name": "V60ペーパーフィルター02 M 40枚",
+   "variants": [
+    {
+     "label": "ブラウン",
+     "sku": "VCF-02-40M",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.hario.com/product/coffee/paperfilter/VCF.html",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-hario-2026-11-10",
+   "makerAlias": "ハリオ"
+  },
+  {
+   "id": "hario-vcf-02-40w",
+   "kind": "paper",
+   "maker": "HARIO",
+   "name": "V60ペーパーフィルター02 W 40枚",
+   "variants": [
+    {
+     "label": "ホワイト",
+     "sku": "VCF-02-40W",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.hario.com/product/coffee/paperfilter/VCF.html",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-hario-2026-11-10",
+   "makerAlias": "ハリオ"
+  },
+  {
+   "id": "hario-vcf-02-50m-f",
+   "kind": "paper",
+   "maker": "HARIO",
+   "name": "V60ペーパーフィルター02M50枚フック穴あり",
+   "variants": [
+    {
+     "label": "ブラウン",
+     "sku": "VCF-02-50M-F",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.hario.com/product/coffee/paperfilter/VCF.html",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-hario-2026-11-10",
+   "makerAlias": "ハリオ"
+  },
+  {
+   "id": "hario-vcf-03-100m",
+   "kind": "paper",
+   "maker": "HARIO",
+   "name": "V60ペーパーフィルター03 M 100枚",
+   "variants": [
+    {
+     "label": "ブラウン",
+     "sku": "VCF-03-100M",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.hario.com/product/coffee/paperfilter/VCF.html",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-hario-2026-11-10",
+   "makerAlias": "ハリオ"
+  },
+  {
+   "id": "hario-vcf-03-40m",
+   "kind": "paper",
+   "maker": "HARIO",
+   "name": "V60ペーパーフィルター03 M 40枚",
+   "variants": [
+    {
+     "label": "ブラウン",
+     "sku": "VCF-03-40M",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.hario.com/product/coffee/paperfilter/VCF.html",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-hario-2026-11-10",
+   "makerAlias": "ハリオ"
+  },
+  {
+   "id": "hario-vcf-03-100w",
+   "kind": "paper",
+   "maker": "HARIO",
+   "name": "V60ペーパーフィルター03 W 100枚",
+   "variants": [
+    {
+     "label": "ホワイト",
+     "sku": "VCF-03-100W",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.hario.com/product/coffee/paperfilter/VCF.html",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-hario-2026-11-10",
+   "makerAlias": "ハリオ"
+  },
+  {
+   "id": "hario-vcf-03-40w",
+   "kind": "paper",
+   "maker": "HARIO",
+   "name": "V60ペーパーフィルター03 W 40枚",
+   "variants": [
+    {
+     "label": "ホワイト",
+     "sku": "VCF-03-40W",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.hario.com/product/coffee/paperfilter/VCF.html",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-hario-2026-11-10",
+   "makerAlias": "ハリオ"
+  },
+  {
+   "id": "hario-vcf-02-100mk",
+   "kind": "paper",
+   "maker": "HARIO",
+   "name": "V60用ペーパーフィルター M 100枚個箱入り",
+   "variants": [
+    {
+     "label": "ブラウン",
+     "sku": "VCF-02-100MK",
+     "gtin": ""
+    },
+    {
+     "label": "ブラウン",
+     "sku": "VCF-01-100MK",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.hario.com/product/coffee/paperfilter/VCF.html",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-hario-2026-11-10",
+   "makerAlias": "ハリオ"
+  },
+  {
+   "id": "hario-vcf-02-100w",
+   "kind": "paper",
+   "maker": "HARIO",
+   "name": "V60用ペーパーフィルター V60ペーパーフィルター02 W 100枚",
+   "variants": [
+    {
+     "label": "ホワイト",
+     "sku": "VCF-02-100W",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.hario.com/product/coffee/paperfilter/VCF.html",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-hario-2026-11-10",
+   "makerAlias": "ハリオ"
+  },
+  {
+   "id": "hario-vcf-02-100wk",
+   "kind": "paper",
+   "maker": "HARIO",
+   "name": "V60用ペーパーフィルター W 100枚箱入り",
+   "variants": [
+    {
+     "label": "ホワイト",
+     "sku": "VCF-02-100WK",
+     "gtin": ""
+    },
+    {
+     "label": "ホワイト",
+     "sku": "VCF-01-100WK",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.hario.com/product/coffee/paperfilter/VCF.html",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-hario-2026-11-10",
+   "makerAlias": "ハリオ"
+  },
+  {
+   "id": "hario-pef-01-100m",
+   "kind": "paper",
+   "maker": "HARIO",
+   "name": "ペガサス コーヒーペーパーフィルター01 M 100枚",
+   "variants": [
+    {
+     "label": "ブラウン",
+     "sku": "PEF-01-100M",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.hario.com/product/coffee/paperfilter/PEF.html",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-hario-2026-11-10",
+   "makerAlias": "ハリオ"
+  },
+  {
+   "id": "hario-pef-01-100w",
+   "kind": "paper",
+   "maker": "HARIO",
+   "name": "ペガサス コーヒーペーパーフィルター01 W 100枚",
+   "variants": [
+    {
+     "label": "ホワイト",
+     "sku": "PEF-01-100W",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.hario.com/product/coffee/paperfilter/PEF.html",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-hario-2026-11-10",
+   "makerAlias": "ハリオ"
+  },
+  {
+   "id": "hario-pef-02-100m",
+   "kind": "paper",
+   "maker": "HARIO",
+   "name": "ペガサス コーヒーペーパーフィルター02 M 100枚",
+   "variants": [
+    {
+     "label": "ブラウン",
+     "sku": "PEF-02-100M",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.hario.com/product/coffee/paperfilter/PEF.html",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-hario-2026-11-10",
+   "makerAlias": "ハリオ"
+  },
+  {
+   "id": "hario-pef-02-100w",
+   "kind": "paper",
+   "maker": "HARIO",
+   "name": "ペガサス コーヒーペーパーフィルター02 W 100枚",
+   "variants": [
+    {
+     "label": "ホワイト",
+     "sku": "PEF-02-100W",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.hario.com/product/coffee/paperfilter/PEF.html",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-hario-2026-11-10",
+   "makerAlias": "ハリオ"
+  },
+  {
+   "id": "hario-pef-03-100m",
+   "kind": "paper",
+   "maker": "HARIO",
+   "name": "ペガサス コーヒーペーパーフィルター03 M 100枚",
+   "variants": [
+    {
+     "label": "ブラウン",
+     "sku": "PEF-03-100M",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.hario.com/product/coffee/paperfilter/PEF.html",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-hario-2026-11-10",
+   "makerAlias": "ハリオ"
+  },
+  {
+   "id": "hario-pef-03-100w",
+   "kind": "paper",
+   "maker": "HARIO",
+   "name": "ペガサス コーヒーペーパーフィルター03 W 100枚",
+   "variants": [
+    {
+     "label": "ホワイト",
+     "sku": "PEF-03-100W",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.hario.com/product/coffee/paperfilter/PEF.html",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-hario-2026-11-10",
+   "makerAlias": "ハリオ"
+  },
+  {
+   "id": "hario-mdf-1",
+   "kind": "paper",
+   "maker": "HARIO",
+   "name": "マイカフェドリップフィルター",
+   "variants": [
+    {
+     "label": "",
+     "sku": "MDF-1",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.hario.com/product/coffee/paperfilter/MDF.html",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-hario-2026-11-10",
+   "makerAlias": "ハリオ"
+  },
+  {
+   "id": "kalita-3686",
+   "kind": "dripper",
+   "maker": "Kalita",
+   "name": "Cu 101 ドリッパー",
+   "category": "ハンドドリップ コーヒードリッパー",
+   "variants": [
+    {
+     "label": "",
+     "sku": "04157",
+     "gtin": "4901369041573"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/dripper/3686",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-kalita-2026-11-10",
+   "makerAlias": "カリタ"
+  },
+  {
+   "id": "kalita-3687",
+   "kind": "dripper",
+   "maker": "Kalita",
+   "name": "Cu 102 ドリッパー",
+   "category": "ハンドドリップ コーヒードリッパー",
+   "variants": [
+    {
+     "label": "",
+     "sku": "05153",
+     "gtin": "4901369051534"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/dripper/3687",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-kalita-2026-11-10",
+   "makerAlias": "カリタ"
+  },
+  {
+   "id": "kalita-3118",
+   "kind": "dripper",
+   "maker": "Kalita",
+   "name": "HA 101 ドリッパー",
+   "category": "Hasami",
+   "variants": [
+    {
+     "label": "",
+     "sku": "01010",
+     "gtin": "4901369010104"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/dripper/3118",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-kalita-2026-11-10",
+   "makerAlias": "カリタ"
+  },
+  {
+   "id": "kalita-3119",
+   "kind": "dripper",
+   "maker": "Kalita",
+   "name": "HA 102 ドリッパー",
+   "category": "Hasami",
+   "variants": [
+    {
+     "label": "",
+     "sku": "02010",
+     "gtin": "4901369020103"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/dripper/3119",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-kalita-2026-11-10",
+   "makerAlias": "カリタ"
+  },
+  {
+   "id": "kalita-3206",
+   "kind": "dripper",
+   "maker": "Kalita",
+   "name": "HA155ドリッパー",
+   "category": "Hasami",
+   "variants": [
+    {
+     "label": "",
+     "sku": "01035",
+     "gtin": "4901369010357"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/waveseries/3206",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-kalita-2026-11-10",
+   "makerAlias": "カリタ"
+  },
+  {
+   "id": "kalita-3208",
+   "kind": "dripper",
+   "maker": "Kalita",
+   "name": "HA185ドリッパー",
+   "category": "Hasami",
+   "variants": [
+    {
+     "label": "",
+     "sku": "02135",
+     "gtin": "4901369021353"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/waveseries/3208",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-kalita-2026-11-10",
+   "makerAlias": "カリタ"
+  },
+  {
+   "id": "kalita-3848",
+   "kind": "dripper",
+   "maker": "Kalita",
+   "name": "MI 155 ドリッパー (グロスブラウン)",
+   "category": "ハンドドリップ ウェーブシリーズ",
+   "variants": [
+    {
+     "label": "",
+     "sku": "01113",
+     "gtin": "4901369011132"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/waveseries/3848",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-kalita-2026-11-10",
+   "makerAlias": "カリタ"
+  },
+  {
+   "id": "kalita-3794",
+   "kind": "dripper",
+   "maker": "Kalita",
+   "name": "MI 155 ドリッパー (サンドグレー)",
+   "category": "ハンドドリップ ウェーブシリーズ",
+   "variants": [
+    {
+     "label": "",
+     "sku": "01105",
+     "gtin": "4901369011057"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/waveseries/3794",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-kalita-2026-11-10",
+   "makerAlias": "カリタ"
+  },
+  {
+   "id": "kalita-3793",
+   "kind": "dripper",
+   "maker": "Kalita",
+   "name": "MI 155 ドリッパー (サンドブラウン)",
+   "category": "ハンドドリップ ウェーブシリーズ",
+   "variants": [
+    {
+     "label": "",
+     "sku": "01103",
+     "gtin": "4901369011033"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/waveseries/3793",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-kalita-2026-11-10",
+   "makerAlias": "カリタ"
+  },
+  {
+   "id": "kalita-3795",
+   "kind": "dripper",
+   "maker": "Kalita",
+   "name": "MI 155 ドリッパー (サンドブラック)",
+   "category": "ハンドドリップ ウェーブシリーズ",
+   "variants": [
+    {
+     "label": "",
+     "sku": "01107",
+     "gtin": "4901369011071"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/waveseries/3795",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-kalita-2026-11-10",
+   "makerAlias": "カリタ"
+  },
+  {
+   "id": "kalita-3792",
+   "kind": "dripper",
+   "maker": "Kalita",
+   "name": "MI 155 ドリッパー (サンドベージュ)",
+   "category": "ハンドドリップ ウェーブシリーズ",
+   "variants": [
+    {
+     "label": "",
+     "sku": "01101",
+     "gtin": "4901369011019"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/waveseries/3792",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-kalita-2026-11-10",
+   "makerAlias": "カリタ"
+  },
+  {
+   "id": "kalita-3796",
+   "kind": "dripper",
+   "maker": "Kalita",
+   "name": "MI 155 ドリッパー (ピスタチオ)",
+   "category": "ハンドドリップ ウェーブシリーズ",
+   "variants": [
+    {
+     "label": "",
+     "sku": "01109",
+     "gtin": "4901369011095"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/waveseries/3796",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-kalita-2026-11-10",
+   "makerAlias": "カリタ"
+  },
+  {
+   "id": "kalita-3797",
+   "kind": "dripper",
+   "maker": "Kalita",
+   "name": "MI 155 ドリッパー (フラミンゴ)",
+   "category": "ハンドドリップ ウェーブシリーズ",
+   "variants": [
+    {
+     "label": "",
+     "sku": "01111",
+     "gtin": "4901369011118"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/waveseries/3797",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-kalita-2026-11-10",
+   "makerAlias": "カリタ"
+  },
+  {
+   "id": "kalita-3764",
+   "kind": "dripper",
+   "maker": "Kalita",
+   "name": "MI 185 ドリッパー（グロスブラウン）",
+   "category": "ハンドドリップ ウェーブシリーズ",
+   "variants": [
+    {
+     "label": "",
+     "sku": "02113",
+     "gtin": "4901369021131"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/waveseries/3764",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-kalita-2026-11-10",
+   "makerAlias": "カリタ"
+  },
+  {
+   "id": "kalita-3752",
+   "kind": "dripper",
+   "maker": "Kalita",
+   "name": "MI 185 ドリッパー（サンドグレー）",
+   "category": "ハンドドリップ ウェーブシリーズ",
+   "variants": [
+    {
+     "label": "",
+     "sku": "02105",
+     "gtin": "4901369021056"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/waveseries/3752",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-kalita-2026-11-10",
+   "makerAlias": "カリタ"
+  },
+  {
+   "id": "kalita-3751",
+   "kind": "dripper",
+   "maker": "Kalita",
+   "name": "MI 185 ドリッパー（サンドブラウン）",
+   "category": "ハンドドリップ ウェーブシリーズ",
+   "variants": [
+    {
+     "label": "",
+     "sku": "02103",
+     "gtin": "4901369021032"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/waveseries/3751",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-kalita-2026-11-10",
+   "makerAlias": "カリタ"
+  },
+  {
+   "id": "kalita-3753",
+   "kind": "dripper",
+   "maker": "Kalita",
+   "name": "MI 185 ドリッパー（サンドブラック）",
+   "category": "ハンドドリップ ウェーブシリーズ",
+   "variants": [
+    {
+     "label": "",
+     "sku": "02107",
+     "gtin": "4901369021070"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/waveseries/3753",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-kalita-2026-11-10",
+   "makerAlias": "カリタ"
+  },
+  {
+   "id": "kalita-3750",
+   "kind": "dripper",
+   "maker": "Kalita",
+   "name": "MI 185 ドリッパー（サンドベージュ）",
+   "category": "ハンドドリップ ウェーブシリーズ",
+   "variants": [
+    {
+     "label": "",
+     "sku": "02101",
+     "gtin": "4901369021018"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/waveseries/3750",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-kalita-2026-11-10",
+   "makerAlias": "カリタ"
+  },
+  {
+   "id": "kalita-3762",
+   "kind": "dripper",
+   "maker": "Kalita",
+   "name": "MI 185 ドリッパー（ピスタチオ）",
+   "category": "ハンドドリップ ウェーブシリーズ",
+   "variants": [
+    {
+     "label": "",
+     "sku": "02109",
+     "gtin": "4901369021094"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/waveseries/3762",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-kalita-2026-11-10",
+   "makerAlias": "カリタ"
+  },
+  {
+   "id": "kalita-3763",
+   "kind": "dripper",
+   "maker": "Kalita",
+   "name": "MI 185 ドリッパー（フラミンゴ）",
+   "category": "ハンドドリップ ウェーブシリーズ",
+   "variants": [
+    {
+     "label": "",
+     "sku": "02111",
+     "gtin": "4901369021117"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/waveseries/3763",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-kalita-2026-11-10",
+   "makerAlias": "カリタ"
+  },
+  {
+   "id": "kalita-3684",
+   "kind": "dripper",
+   "maker": "Kalita",
+   "name": "SS 101 ドリッパー",
+   "category": "ハンドドリップ コーヒードリッパー",
+   "variants": [
+    {
+     "label": "",
+     "sku": "04159",
+     "gtin": "4901369041597"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/dripper/3684",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-kalita-2026-11-10",
+   "makerAlias": "カリタ"
+  },
+  {
+   "id": "kalita-3685",
+   "kind": "dripper",
+   "maker": "Kalita",
+   "name": "SS 102 ドリッパー",
+   "category": "ハンドドリップ コーヒードリッパー",
+   "variants": [
+    {
+     "label": "",
+     "sku": "05155",
+     "gtin": "4901369051558"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/dripper/3685",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-kalita-2026-11-10",
+   "makerAlias": "カリタ"
+  },
+  {
+   "id": "kalita-3634",
+   "kind": "dripper",
+   "maker": "Kalita",
+   "name": "ウェーブドリッパー 155 S",
+   "category": "ハンドドリップ ウェーブシリーズ",
+   "variants": [
+    {
+     "label": "",
+     "sku": "04151",
+     "gtin": "4901369041511"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/waveseries/3634",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-kalita-2026-11-10",
+   "makerAlias": "カリタ"
+  },
+  {
+   "id": "kalita-3633",
+   "kind": "dripper",
+   "maker": "Kalita",
+   "name": "ウェーブドリッパー 185 S",
+   "category": "ハンドドリップ ウェーブシリーズ",
+   "variants": [
+    {
+     "label": "",
+     "sku": "05151",
+     "gtin": "4901369051510"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/waveseries/3633",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-kalita-2026-11-10",
+   "makerAlias": "カリタ"
+  },
+  {
+   "id": "kalita-1842",
+   "kind": "dripper",
+   "maker": "Kalita",
+   "name": "カフェドリッパー101FT",
+   "category": "ハンドドリップ コーヒードリッパー",
+   "variants": [
+    {
+     "label": "",
+     "sku": "04011",
+     "gtin": "4901369521334"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/dripper/1842",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-kalita-2026-11-10",
+   "makerAlias": "カリタ"
+  },
+  {
+   "id": "kalita-2019",
+   "kind": "dripper",
+   "maker": "Kalita",
+   "name": "カフェドリッパー102FT",
+   "category": "ハンドドリップ コーヒードリッパー",
+   "variants": [
+    {
+     "label": "",
+     "sku": "05023",
+     "gtin": "4901369521341"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/dripper/2019",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-kalita-2026-11-10",
+   "makerAlias": "カリタ"
+  },
+  {
+   "id": "kalita-2022",
+   "kind": "dripper",
+   "maker": "Kalita",
+   "name": "カフェドリッパー103FT",
+   "category": "ハンドドリップ コーヒードリッパー",
+   "variants": [
+    {
+     "label": "",
+     "sku": "06011",
+     "gtin": "4901369521358"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/dripper/2022",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-kalita-2026-11-10",
+   "makerAlias": "カリタ"
+  },
+  {
+   "id": "kalita-2023",
+   "kind": "dripper",
+   "maker": "Kalita",
+   "name": "ガラスドリッパー155",
+   "category": "ハンドドリップ ウェーブシリーズ",
+   "variants": [
+    {
+     "label": "",
+     "sku": "05045",
+     "gtin": "4901369050452"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/waveseries/2023",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-kalita-2026-11-10",
+   "makerAlias": "カリタ"
+  },
+  {
+   "id": "kalita-2021",
+   "kind": "dripper",
+   "maker": "Kalita",
+   "name": "ガラスドリッパー185",
+   "category": "ハンドドリップ ウェーブシリーズ",
+   "variants": [
+    {
+     "label": "",
+     "sku": "05039",
+     "gtin": "4901369050391"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/waveseries/2021",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-kalita-2026-11-10",
+   "makerAlias": "カリタ"
+  },
+  {
+   "id": "kalita-1941",
+   "kind": "dripper",
+   "maker": "Kalita",
+   "name": "サイフォンドリッパー",
+   "category": "ハンドドリップ コーヒードリッパー",
+   "variants": [
+    {
+     "label": "",
+     "sku": "05011",
+     "gtin": "4901369503064"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/dripper/1941",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-kalita-2026-11-10",
+   "makerAlias": "カリタ"
+  },
+  {
+   "id": "kalita-1936",
+   "kind": "dripper",
+   "maker": "Kalita",
+   "name": "ドリッパー 101-D",
+   "category": "ハンドドリップ コーヒードリッパー",
+   "variants": [
+    {
+     "label": "",
+     "sku": "04001",
+     "gtin": "4901369503019"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/dripper/1936",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-kalita-2026-11-10",
+   "makerAlias": "カリタ"
+  },
+  {
+   "id": "kalita-1937",
+   "kind": "dripper",
+   "maker": "Kalita",
+   "name": "ドリッパー 101-KP（ブラック）",
+   "category": "ハンドドリップ コーヒードリッパー",
+   "variants": [
+    {
+     "label": "",
+     "sku": "04013",
+     "gtin": "4901369521389"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/dripper/1937",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-kalita-2026-11-10",
+   "makerAlias": "カリタ"
+  },
+  {
+   "id": "kalita-1920",
+   "kind": "dripper",
+   "maker": "Kalita",
+   "name": "ドリッパー 101-ロト",
+   "category": "ハンドドリップ コーヒードリッパー",
+   "variants": [
+    {
+     "label": "",
+     "sku": "01001",
+     "gtin": "4901369502012"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/dripper/1920",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-kalita-2026-11-10",
+   "makerAlias": "カリタ"
+  },
+  {
+   "id": "kalita-1923",
+   "kind": "dripper",
+   "maker": "Kalita",
+   "name": "ドリッパー 101-ロト（ブラウン）",
+   "category": "ハンドドリップ コーヒードリッパー",
+   "variants": [
+    {
+     "label": "",
+     "sku": "01003",
+     "gtin": "4901369502029"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/dripper/1923",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-kalita-2026-11-10",
+   "makerAlias": "カリタ"
+  },
+  {
+   "id": "kalita-1922",
+   "kind": "dripper",
+   "maker": "Kalita",
+   "name": "ドリッパー 101-ロト（ブラック）",
+   "category": "ハンドドリップ コーヒードリッパー",
+   "variants": [
+    {
+     "label": "",
+     "sku": "01005",
+     "gtin": "4901369502081"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/dripper/1922",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-kalita-2026-11-10",
+   "makerAlias": "カリタ"
+  },
+  {
+   "id": "kalita-1938",
+   "kind": "dripper",
+   "maker": "Kalita",
+   "name": "ドリッパー 102-D",
+   "category": "ハンドドリップ コーヒードリッパー",
+   "variants": [
+    {
+     "label": "",
+     "sku": "05001",
+     "gtin": "4901369503026"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/dripper/1938",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-kalita-2026-11-10",
+   "makerAlias": "カリタ"
+  },
+  {
+   "id": "kalita-1939",
+   "kind": "dripper",
+   "maker": "Kalita",
+   "name": "ドリッパー 102-DL",
+   "category": "ハンドドリップ コーヒードリッパー",
+   "variants": [
+    {
+     "label": "",
+     "sku": "05003",
+     "gtin": "4901369503026"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/dripper/1939",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-kalita-2026-11-10",
+   "makerAlias": "カリタ"
+  },
+  {
+   "id": "kalita-1940",
+   "kind": "dripper",
+   "maker": "Kalita",
+   "name": "ドリッパー 102-KP（ブラック）",
+   "category": "ハンドドリップ コーヒードリッパー",
+   "variants": [
+    {
+     "label": "",
+     "sku": "05027",
+     "gtin": "4901369521396"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/dripper/1940",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-kalita-2026-11-10",
+   "makerAlias": "カリタ"
+  },
+  {
+   "id": "kalita-1924",
+   "kind": "dripper",
+   "maker": "Kalita",
+   "name": "ドリッパー 102-ロト",
+   "category": "ハンドドリップ コーヒードリッパー",
+   "variants": [
+    {
+     "label": "",
+     "sku": "02001",
+     "gtin": "4901369502043"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/dripper/1924",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-kalita-2026-11-10",
+   "makerAlias": "カリタ"
+  },
+  {
+   "id": "kalita-1925",
+   "kind": "dripper",
+   "maker": "Kalita",
+   "name": "ドリッパー 102-ロト(ブラック)",
+   "category": "ハンドドリップ コーヒードリッパー",
+   "variants": [
+    {
+     "label": "",
+     "sku": "02005",
+     "gtin": "4901369502098"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/dripper/1925",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-kalita-2026-11-10",
+   "makerAlias": "カリタ"
+  },
+  {
+   "id": "kalita-1927",
+   "kind": "dripper",
+   "maker": "Kalita",
+   "name": "ドリッパー 102-ロト（ブラウン）",
+   "category": "ハンドドリップ コーヒードリッパー",
+   "variants": [
+    {
+     "label": "",
+     "sku": "02003",
+     "gtin": "4901369502050"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/dripper/1927",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-kalita-2026-11-10",
+   "makerAlias": "カリタ"
+  },
+  {
+   "id": "kalita-1942",
+   "kind": "dripper",
+   "maker": "Kalita",
+   "name": "ドリッパー 103-D",
+   "category": "ハンドドリップ コーヒードリッパー",
+   "variants": [
+    {
+     "label": "",
+     "sku": "06001",
+     "gtin": "4901369503033"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/dripper/1942",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-kalita-2026-11-10",
+   "makerAlias": "カリタ"
+  },
+  {
+   "id": "kalita-1943",
+   "kind": "dripper",
+   "maker": "Kalita",
+   "name": "ドリッパー 103-DL",
+   "category": "ハンドドリップ コーヒードリッパー",
+   "variants": [
+    {
+     "label": "",
+     "sku": "06003",
+     "gtin": "4901369503057"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/dripper/1943",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-kalita-2026-11-10",
+   "makerAlias": "カリタ"
+  },
+  {
+   "id": "kalita-1945",
+   "kind": "dripper",
+   "maker": "Kalita",
+   "name": "ドリッパー 104-D",
+   "category": "ハンドドリップ コーヒードリッパー",
+   "variants": [
+    {
+     "label": "",
+     "sku": "07001",
+     "gtin": "4901369503040"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/dripper/1945",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-kalita-2026-11-10",
+   "makerAlias": "カリタ"
+  },
+  {
+   "id": "kalita-3133",
+   "kind": "dripper",
+   "maker": "Kalita",
+   "name": "ドリッパー WDC-155",
+   "category": "ハンドドリップ ウェーブシリーズ",
+   "variants": [
+    {
+     "label": "",
+     "sku": "04105",
+     "gtin": "4901369041054"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/waveseries/3133",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-kalita-2026-11-10",
+   "makerAlias": "カリタ"
+  },
+  {
+   "id": "kalita-3134",
+   "kind": "dripper",
+   "maker": "Kalita",
+   "name": "ドリッパー WDC-185",
+   "category": "ハンドドリップ ウェーブシリーズ",
+   "variants": [
+    {
+     "label": "",
+     "sku": "05099",
+     "gtin": "4901369050995"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/waveseries/3134",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-kalita-2026-11-10",
+   "makerAlias": "カリタ"
+  },
+  {
+   "id": "kalita-3535",
+   "kind": "dripper",
+   "maker": "Kalita",
+   "name": "ドリッパー WDG-155(RD)",
+   "category": "ハンドドリップ ウェーブシリーズ",
+   "variants": [
+    {
+     "label": "",
+     "sku": "05048",
+     "gtin": "4901369050483"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/waveseries/3535",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-kalita-2026-11-10",
+   "makerAlias": "カリタ"
+  },
+  {
+   "id": "kalita-3166",
+   "kind": "dripper",
+   "maker": "Kalita",
+   "name": "ドリッパー WDG-155（AG）",
+   "category": "ハンドドリップ ウェーブシリーズ",
+   "variants": [
+    {
+     "label": "",
+     "sku": "05064",
+     "gtin": "4901369050643"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/waveseries/3166",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-kalita-2026-11-10",
+   "makerAlias": "カリタ"
+  },
+  {
+   "id": "kalita-3170",
+   "kind": "dripper",
+   "maker": "Kalita",
+   "name": "ドリッパー WDG-155（CL）",
+   "category": "ハンドドリップ ウェーブシリーズ",
+   "variants": [
+    {
+     "label": "",
+     "sku": "05066",
+     "gtin": "4901369050667"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/waveseries/3170",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-kalita-2026-11-10",
+   "makerAlias": "カリタ"
+  },
+  {
+   "id": "kalita-3169",
+   "kind": "dripper",
+   "maker": "Kalita",
+   "name": "ドリッパー WDG-155（SB）",
+   "category": "ハンドドリップ ウェーブシリーズ",
+   "variants": [
+    {
+     "label": "",
+     "sku": "05065",
+     "gtin": "4901369050650"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/waveseries/3169",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-kalita-2026-11-10",
+   "makerAlias": "カリタ"
+  },
+  {
+   "id": "kalita-3360",
+   "kind": "dripper",
+   "maker": "Kalita",
+   "name": "ドリッパー WDG-185 しずく型",
+   "category": "ハンドドリップ ウェーブシリーズ",
+   "variants": [
+    {
+     "label": "",
+     "sku": "44308",
+     "gtin": "4901369443087"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/waveseries/3360",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-kalita-2026-11-10",
+   "makerAlias": "カリタ"
+  },
+  {
+   "id": "kalita-3361",
+   "kind": "dripper",
+   "maker": "Kalita",
+   "name": "ドリッパー WDG-185 角型",
+   "category": "ハンドドリップ ウェーブシリーズ",
+   "variants": [
+    {
+     "label": "",
+     "sku": "44306",
+     "gtin": "4901369443063"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/waveseries/3361",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-kalita-2026-11-10",
+   "makerAlias": "カリタ"
+  },
+  {
+   "id": "kalita-3534",
+   "kind": "dripper",
+   "maker": "Kalita",
+   "name": "ドリッパー WDG-185(RD)",
+   "category": "ハンドドリップ ウェーブシリーズ",
+   "variants": [
+    {
+     "label": "",
+     "sku": "05113",
+     "gtin": "4901369051138"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/waveseries/3534",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-kalita-2026-11-10",
+   "makerAlias": "カリタ"
+  },
+  {
+   "id": "kalita-3167",
+   "kind": "dripper",
+   "maker": "Kalita",
+   "name": "ドリッパー WDG-185（AG）",
+   "category": "ハンドドリップ ウェーブシリーズ",
+   "variants": [
+    {
+     "label": "",
+     "sku": "05110",
+     "gtin": "4901369051107"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/waveseries/3167",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-kalita-2026-11-10",
+   "makerAlias": "カリタ"
+  },
+  {
+   "id": "kalita-3171",
+   "kind": "dripper",
+   "maker": "Kalita",
+   "name": "ドリッパー WDG-185（CL）",
+   "category": "ハンドドリップ ウェーブシリーズ",
+   "variants": [
+    {
+     "label": "",
+     "sku": "05112",
+     "gtin": "4901369051121"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/waveseries/3171",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-kalita-2026-11-10",
+   "makerAlias": "カリタ"
+  },
+  {
+   "id": "kalita-3168",
+   "kind": "dripper",
+   "maker": "Kalita",
+   "name": "ドリッパー WDG-185（SB）",
+   "category": "ハンドドリップ ウェーブシリーズ",
+   "variants": [
+    {
+     "label": "",
+     "sku": "05111",
+     "gtin": "4901369051114"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/waveseries/3168",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-kalita-2026-11-10",
+   "makerAlias": "カリタ"
+  },
+  {
+   "id": "kalita-3135",
+   "kind": "dripper",
+   "maker": "Kalita",
+   "name": "ドリッパー WDS-155",
+   "category": "ハンドドリップ ウェーブシリーズ",
+   "variants": [
+    {
+     "label": "",
+     "sku": "04103",
+     "gtin": "4901369041030"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/waveseries/3135",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-kalita-2026-11-10",
+   "makerAlias": "カリタ"
+  },
+  {
+   "id": "kalita-3136",
+   "kind": "dripper",
+   "maker": "Kalita",
+   "name": "ドリッパー WDS-185",
+   "category": "ハンドドリップ ウェーブシリーズ",
+   "variants": [
+    {
+     "label": "",
+     "sku": "05097",
+     "gtin": "4901369050971"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/waveseries/3136",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-kalita-2026-11-10",
+   "makerAlias": "カリタ"
+  },
+  {
+   "id": "kalita-2216",
+   "kind": "dripper",
+   "maker": "Kalita",
+   "name": "ドリッパー カフェ・トール（イエロー）",
+   "category": "ハンドドリップ コーヒードリッパー",
+   "variants": [
+    {
+     "label": "",
+     "sku": "04049",
+     "gtin": "4901369040491"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/dripper/2216",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-kalita-2026-11-10",
+   "makerAlias": "カリタ"
+  },
+  {
+   "id": "kalita-2215",
+   "kind": "dripper",
+   "maker": "Kalita",
+   "name": "ドリッパー カフェ・トール（グリーン）",
+   "category": "ハンドドリップ コーヒードリッパー",
+   "variants": [
+    {
+     "label": "",
+     "sku": "04047",
+     "gtin": "4901369040477"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/dripper/2215",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-kalita-2026-11-10",
+   "makerAlias": "カリタ"
+  },
+  {
+   "id": "kalita-2214",
+   "kind": "dripper",
+   "maker": "Kalita",
+   "name": "ドリッパー カフェ・トール（ピンク）",
+   "category": "ハンドドリップ コーヒードリッパー",
+   "variants": [
+    {
+     "label": "",
+     "sku": "04045",
+     "gtin": "4901369040453"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/dripper/2214",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-kalita-2026-11-10",
+   "makerAlias": "カリタ"
+  },
+  {
+   "id": "kalita-3194",
+   "kind": "dripper",
+   "maker": "Kalita",
+   "name": "ドリッパー カフェ・トール（ＲＤＣ）",
+   "category": "ハンドドリップ コーヒードリッパー",
+   "variants": [
+    {
+     "label": "",
+     "sku": "04110",
+     "gtin": "4901369041108"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/dripper/3194",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-kalita-2026-11-10",
+   "makerAlias": "カリタ"
+  },
+  {
+   "id": "kalita-3196",
+   "kind": "dripper",
+   "maker": "Kalita",
+   "name": "ドリッパー カフェ・トール（ＳＢＣ）",
+   "category": "ハンドドリップ コーヒードリッパー",
+   "variants": [
+    {
+     "label": "",
+     "sku": "04112",
+     "gtin": "4901369041122"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/dripper/3196",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-kalita-2026-11-10",
+   "makerAlias": "カリタ"
+  },
+  {
+   "id": "kalita-1883",
+   "kind": "dripper",
+   "maker": "Kalita",
+   "name": "ドリッパー カフェ･ウノ（グリーン）",
+   "category": "ハンドドリップ コーヒードリッパー",
+   "variants": [
+    {
+     "label": "",
+     "sku": "04025",
+     "gtin": "4901369040255"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/dripper/1883",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-kalita-2026-11-10",
+   "makerAlias": "カリタ"
+  },
+  {
+   "id": "kalita-2254",
+   "kind": "dripper",
+   "maker": "Kalita",
+   "name": "ドリッパー カフェ･トール（グレー）",
+   "category": "ハンドドリップ コーヒードリッパー",
+   "variants": [
+    {
+     "label": "",
+     "sku": "04095",
+     "gtin": "4901369040958"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/dripper/2254",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-kalita-2026-11-10",
+   "makerAlias": "カリタ"
+  },
+  {
+   "id": "kalita-2255",
+   "kind": "dripper",
+   "maker": "Kalita",
+   "name": "ドリッパー カフェ･トール（ブラウン）",
+   "category": "ハンドドリップ コーヒードリッパー",
+   "variants": [
+    {
+     "label": "",
+     "sku": "04093",
+     "gtin": "4901369040934"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/dripper/2255",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-kalita-2026-11-10",
+   "makerAlias": "カリタ"
+  },
+  {
+   "id": "kalita-2253",
+   "kind": "dripper",
+   "maker": "Kalita",
+   "name": "ドリッパー カフェ･トール（ブルー）",
+   "category": "ハンドドリップ コーヒードリッパー",
+   "variants": [
+    {
+     "label": "",
+     "sku": "04097",
+     "gtin": "4901369040972"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/dripper/2253",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-kalita-2026-11-10",
+   "makerAlias": "カリタ"
+  },
+  {
+   "id": "kalita-3889",
+   "kind": "grinder",
+   "maker": "Kalita",
+   "name": "キュービックミル ac",
+   "category": "コーヒーミル 手挽きミル",
+   "variants": [
+    {
+     "label": "",
+     "sku": "42209",
+     "gtin": "4901369422099"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/mill/3889",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-kalita-2026-11-10",
+   "makerAlias": "カリタ"
+  },
+  {
+   "id": "kalita-3734",
+   "kind": "grinder",
+   "maker": "Kalita",
+   "name": "キュービックミル ＢＲ",
+   "category": "コーヒーミル 手挽きミル",
+   "variants": [
+    {
+     "label": "",
+     "sku": "42211",
+     "gtin": "4901369422112"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/mill/3734",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-kalita-2026-11-10",
+   "makerAlias": "カリタ"
+  },
+  {
+   "id": "kalita-3733",
+   "kind": "grinder",
+   "maker": "Kalita",
+   "name": "キュービックミル ＮＡ",
+   "category": "コーヒーミル 手挽きミル",
+   "variants": [
+    {
+     "label": "",
+     "sku": "42207",
+     "gtin": "4901369422075"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/mill/3733",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-kalita-2026-11-10",
+   "makerAlias": "カリタ"
+  },
+  {
+   "id": "kalita-3731",
+   "kind": "grinder",
+   "maker": "Kalita",
+   "name": "クラシックミル ＢＫ",
+   "category": "コーヒーミル 手挽きミル",
+   "variants": [
+    {
+     "label": "",
+     "sku": "42203",
+     "gtin": "4901369422037"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/mill/3731",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-kalita-2026-11-10",
+   "makerAlias": "カリタ"
+  },
+  {
+   "id": "kalita-3732",
+   "kind": "grinder",
+   "maker": "Kalita",
+   "name": "クラシックミル ＢＲ",
+   "category": "コーヒーミル 手挽きミル",
+   "variants": [
+    {
+     "label": "",
+     "sku": "42205",
+     "gtin": "4901369422051"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/mill/3732",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-kalita-2026-11-10",
+   "makerAlias": "カリタ"
+  },
+  {
+   "id": "kalita-3730",
+   "kind": "grinder",
+   "maker": "Kalita",
+   "name": "クラシックミル ＮＡ",
+   "category": "コーヒーミル 手挽きミル",
+   "variants": [
+    {
+     "label": "",
+     "sku": "42201",
+     "gtin": "4901369422013"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/mill/3730",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-kalita-2026-11-10",
+   "makerAlias": "カリタ"
+  },
+  {
+   "id": "kalita-1987",
+   "kind": "grinder",
+   "maker": "Kalita",
+   "name": "コーヒーミル CM-50（ブラック）",
+   "category": "コーヒーミル 電動ミル",
+   "variants": [
+    {
+     "label": "",
+     "sku": "43017",
+     "gtin": "4901369506416"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/mill/1987",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-kalita-2026-11-10",
+   "makerAlias": "カリタ"
+  },
+  {
+   "id": "kalita-1986",
+   "kind": "grinder",
+   "maker": "Kalita",
+   "name": "コーヒーミル CM-50（ホワイト）",
+   "category": "コーヒーミル 電動ミル",
+   "variants": [
+    {
+     "label": "",
+     "sku": "43015",
+     "gtin": "4901369506423"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/mill/1986",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-kalita-2026-11-10",
+   "makerAlias": "カリタ"
+  },
+  {
+   "id": "kalita-3896",
+   "kind": "grinder",
+   "maker": "Kalita",
+   "name": "コーヒーミル KCN-1 BK",
+   "category": "コーヒーミル 手挽きミル",
+   "variants": [
+    {
+     "label": "",
+     "sku": "42253",
+     "gtin": "4901369422532"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/mill/3896",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-kalita-2026-11-10",
+   "makerAlias": "カリタ"
+  },
+  {
+   "id": "kalita-3897",
+   "kind": "grinder",
+   "maker": "Kalita",
+   "name": "コーヒーミル KCN-1 SV",
+   "category": "コーヒーミル 手挽きミル",
+   "variants": [
+    {
+     "label": "",
+     "sku": "42255",
+     "gtin": "4901369422556"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/mill/3897",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-kalita-2026-11-10",
+   "makerAlias": "カリタ"
+  },
+  {
+   "id": "kalita-3886",
+   "kind": "grinder",
+   "maker": "Kalita",
+   "name": "コーヒーミル KH-10BK ac",
+   "category": "コーヒーミル 手挽きミル",
+   "variants": [
+    {
+     "label": "",
+     "sku": "42232",
+     "gtin": "4901369422327"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/mill/3886",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-kalita-2026-11-10",
+   "makerAlias": "カリタ"
+  },
+  {
+   "id": "kalita-3871",
+   "kind": "grinder",
+   "maker": "Kalita",
+   "name": "コーヒーミル KH-10BR ac",
+   "category": "コーヒーミル 手挽きミル",
+   "variants": [
+    {
+     "label": "",
+     "sku": "42234",
+     "gtin": "4901369422341"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/mill/3871",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-kalita-2026-11-10",
+   "makerAlias": "カリタ"
+  },
+  {
+   "id": "kalita-3877",
+   "kind": "grinder",
+   "maker": "Kalita",
+   "name": "コーヒーミル KH-10NA ac",
+   "category": "コーヒーミル 手挽きミル",
+   "variants": [
+    {
+     "label": "",
+     "sku": "42230",
+     "gtin": "4901369422303"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/mill/3877",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-kalita-2026-11-10",
+   "makerAlias": "カリタ"
+  },
+  {
+   "id": "kalita-3870",
+   "kind": "grinder",
+   "maker": "Kalita",
+   "name": "コーヒーミル KH-9BR ac",
+   "category": "コーヒーミル 手挽きミル",
+   "variants": [
+    {
+     "label": "",
+     "sku": "42228",
+     "gtin": "4901369422280"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/mill/3870",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-kalita-2026-11-10",
+   "makerAlias": "カリタ"
+  },
+  {
+   "id": "kalita-3553",
+   "kind": "grinder",
+   "maker": "Kalita",
+   "name": "コーヒーミル KPG-40(ﾌﾞﾗｯｸ)",
+   "category": "コーヒーミル 電動ミル",
+   "variants": [
+    {
+     "label": "",
+     "sku": "43041",
+     "gtin": "4901369430414"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/mill/3553",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-kalita-2026-11-10",
+   "makerAlias": "カリタ"
+  },
+  {
+   "id": "kalita-1983",
+   "kind": "grinder",
+   "maker": "Kalita",
+   "name": "セラミックミルC-90（アイボリー）",
+   "category": "コーヒーミル 電動ミル",
+   "variants": [
+    {
+     "label": "",
+     "sku": "43011",
+     "gtin": "4901369506140"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/mill/1983",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-kalita-2026-11-10",
+   "makerAlias": "カリタ"
+  },
+  {
+   "id": "kalita-1984",
+   "kind": "grinder",
+   "maker": "Kalita",
+   "name": "セラミックミルC-90（ブラック）",
+   "category": "コーヒーミル 電動ミル",
+   "variants": [
+    {
+     "label": "",
+     "sku": "43007",
+     "gtin": "4901369506249"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/mill/1984",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-kalita-2026-11-10",
+   "makerAlias": "カリタ"
+  },
+  {
+   "id": "kalita-3188",
+   "kind": "grinder",
+   "maker": "Kalita",
+   "name": "ダイヤミルＮ（ブラック）",
+   "category": "コーヒーミル 手挽きミル",
+   "variants": [
+    {
+     "label": "",
+     "sku": "42138",
+     "gtin": "4901369421382"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/mill/3188",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-kalita-2026-11-10",
+   "makerAlias": "カリタ"
+  },
+  {
+   "id": "kalita-3187",
+   "kind": "grinder",
+   "maker": "Kalita",
+   "name": "ダイヤミルＮ（レッド）",
+   "category": "コーヒーミル 手挽きミル",
+   "variants": [
+    {
+     "label": "",
+     "sku": "42137",
+     "gtin": "4901369421375"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/mill/3187",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-kalita-2026-11-10",
+   "makerAlias": "カリタ"
+  },
+  {
+   "id": "kalita-3876",
+   "kind": "grinder",
+   "maker": "Kalita",
+   "name": "ドームミル ac",
+   "category": "コーヒーミル 手挽きミル",
+   "variants": [
+    {
+     "label": "",
+     "sku": "42222",
+     "gtin": "4901369422228"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/mill/3876",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-kalita-2026-11-10",
+   "makerAlias": "カリタ"
+  },
+  {
+   "id": "kalita-3867",
+   "kind": "grinder",
+   "maker": "Kalita",
+   "name": "ミニミル ac",
+   "category": "コーヒーミル 手挽きミル",
+   "variants": [
+    {
+     "label": "",
+     "sku": "42220",
+     "gtin": "4901369422204"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/mill/3867",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-kalita-2026-11-10",
+   "makerAlias": "カリタ"
+  },
+  {
+   "id": "kalita-3872",
+   "kind": "grinder",
+   "maker": "Kalita",
+   "name": "銅板ミル ac",
+   "category": "コーヒーミル 手挽きミル",
+   "variants": [
+    {
+     "label": "",
+     "sku": "42226",
+     "gtin": "4901369422266"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/mill/3872",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-kalita-2026-11-10",
+   "makerAlias": "カリタ"
+  },
+  {
+   "id": "kalita-1837",
+   "kind": "paper",
+   "maker": "Kalita",
+   "name": "ペーパーフィルター 101ロシ ブラウン （40枚）",
+   "category": "コーヒーロシ",
+   "variants": [
+    {
+     "label": "",
+     "sku": "11141",
+     "gtin": "4901369501084"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/coffeefilter/1837",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-kalita-2026-11-10",
+   "makerAlias": "カリタ"
+  },
+  {
+   "id": "kalita-1836",
+   "kind": "paper",
+   "maker": "Kalita",
+   "name": "ペーパーフィルター 101ロシ ホワイト （40枚）",
+   "category": "コーヒーロシ",
+   "variants": [
+    {
+     "label": "",
+     "sku": "11037",
+     "gtin": "4901369501015"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/coffeefilter/1836",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-kalita-2026-11-10",
+   "makerAlias": "カリタ"
+  },
+  {
+   "id": "kalita-1840",
+   "kind": "paper",
+   "maker": "Kalita",
+   "name": "ペーパーフィルター 102ロシ ブラウン （40枚）",
+   "category": "コーヒーロシ",
+   "variants": [
+    {
+     "label": "",
+     "sku": "13143",
+     "gtin": "4901369501091"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/coffeefilter/1840",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-kalita-2026-11-10",
+   "makerAlias": "カリタ"
+  },
+  {
+   "id": "kalita-1839",
+   "kind": "paper",
+   "maker": "Kalita",
+   "name": "ペーパーフィルター 102ロシ ホワイト （40枚）",
+   "category": "コーヒーロシ",
+   "variants": [
+    {
+     "label": "",
+     "sku": "13039",
+     "gtin": "4901369501022"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/coffeefilter/1839",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-kalita-2026-11-10",
+   "makerAlias": "カリタ"
+  },
+  {
+   "id": "kalita-1847",
+   "kind": "paper",
+   "maker": "Kalita",
+   "name": "ペーパーフィルター 103ロシ ブラウン （40枚）",
+   "category": "コーヒーロシ",
+   "variants": [
+    {
+     "label": "",
+     "sku": "15131",
+     "gtin": "4901369501107"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/coffeefilter/1847",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-kalita-2026-11-10",
+   "makerAlias": "カリタ"
+  },
+  {
+   "id": "kalita-1845",
+   "kind": "paper",
+   "maker": "Kalita",
+   "name": "ペーパーフィルター 103ロシ ホワイト （40枚）",
+   "category": "コーヒーロシ",
+   "variants": [
+    {
+     "label": "",
+     "sku": "15027",
+     "gtin": "4901369501039"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/coffeefilter/1845",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-kalita-2026-11-10",
+   "makerAlias": "カリタ"
+  },
+  {
+   "id": "kalita-1860",
+   "kind": "paper",
+   "maker": "Kalita",
+   "name": "ペーパーフィルター FP101ロシ ブラウン （100枚）",
+   "category": "コーヒーロシ",
+   "variants": [
+    {
+     "label": "",
+     "sku": "11111",
+     "gtin": "4901369111115"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/coffeefilter/1860",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-kalita-2026-11-10",
+   "makerAlias": "カリタ"
+  },
+  {
+   "id": "kalita-1858",
+   "kind": "paper",
+   "maker": "Kalita",
+   "name": "ペーパーフィルター FP101ロシ ホワイト （100枚）",
+   "category": "コーヒーロシ",
+   "variants": [
+    {
+     "label": "",
+     "sku": "11109",
+     "gtin": "4901369111092"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/coffeefilter/1858",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-kalita-2026-11-10",
+   "makerAlias": "カリタ"
+  },
+  {
+   "id": "kalita-1861",
+   "kind": "paper",
+   "maker": "Kalita",
+   "name": "ペーパーフィルター FP102ロシ ブラウン （100枚）",
+   "category": "コーヒーロシ",
+   "variants": [
+    {
+     "label": "",
+     "sku": "13129",
+     "gtin": "4901369131298"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/coffeefilter/1861",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-kalita-2026-11-10",
+   "makerAlias": "カリタ"
+  },
+  {
+   "id": "kalita-1864",
+   "kind": "paper",
+   "maker": "Kalita",
+   "name": "ペーパーフィルター FP103ロシ ブラウン （100枚）",
+   "category": "コーヒーロシ",
+   "variants": [
+    {
+     "label": "",
+     "sku": "15087",
+     "gtin": "4901369150879"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/coffeefilter/1864",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-kalita-2026-11-10",
+   "makerAlias": "カリタ"
+  },
+  {
+   "id": "kalita-1862",
+   "kind": "paper",
+   "maker": "Kalita",
+   "name": "ペーパーフィルター FP103ロシ ホワイト （100枚）",
+   "category": "コーヒーロシ",
+   "variants": [
+    {
+     "label": "",
+     "sku": "15085",
+     "gtin": "4901369150855"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/coffeefilter/1862",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-kalita-2026-11-10",
+   "makerAlias": "カリタ"
+  },
+  {
+   "id": "kalita-1866",
+   "kind": "paper",
+   "maker": "Kalita",
+   "name": "ペーパーフィルター FP104ロシ ブラウン （100枚）",
+   "category": "コーヒーロシ",
+   "variants": [
+    {
+     "label": "",
+     "sku": "17031",
+     "gtin": "4901369170310"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/coffeefilter/1866",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-kalita-2026-11-10",
+   "makerAlias": "カリタ"
+  },
+  {
+   "id": "kalita-1865",
+   "kind": "paper",
+   "maker": "Kalita",
+   "name": "ペーパーフィルター FP104ロシ ホワイト （100枚）",
+   "category": "コーヒーロシ",
+   "variants": [
+    {
+     "label": "",
+     "sku": "17029",
+     "gtin": "4901369170297"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/coffeefilter/1865",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-kalita-2026-11-10",
+   "makerAlias": "カリタ"
+  },
+  {
+   "id": "kalita-1877",
+   "kind": "paper",
+   "maker": "Kalita",
+   "name": "ペーパーフィルター NK101ロシ ブラウン （100枚）",
+   "category": "コーヒーロシ",
+   "variants": [
+    {
+     "label": "",
+     "sku": "11107",
+     "gtin": "4901369111078"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/coffeefilter/1877",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-kalita-2026-11-10",
+   "makerAlias": "カリタ"
+  },
+  {
+   "id": "kalita-1874",
+   "kind": "paper",
+   "maker": "Kalita",
+   "name": "ペーパーフィルター NK101ロシ ホワイト （100枚）",
+   "category": "コーヒーロシ",
+   "variants": [
+    {
+     "label": "",
+     "sku": "11105",
+     "gtin": "4901369111054"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/coffeefilter/1874",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-kalita-2026-11-10",
+   "makerAlias": "カリタ"
+  },
+  {
+   "id": "kalita-1884",
+   "kind": "paper",
+   "maker": "Kalita",
+   "name": "ペーパーフィルター NK102ロシ ブラウン（100枚）",
+   "category": "コーヒーロシ",
+   "variants": [
+    {
+     "label": "",
+     "sku": "13125",
+     "gtin": "4901369131250"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/coffeefilter/1884",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-kalita-2026-11-10",
+   "makerAlias": "カリタ"
+  },
+  {
+   "id": "kalita-1881",
+   "kind": "paper",
+   "maker": "Kalita",
+   "name": "ペーパーフィルター NK102ロシ ホワイト （100枚）",
+   "category": "コーヒーロシ",
+   "variants": [
+    {
+     "label": "",
+     "sku": "13123",
+     "gtin": "4901369131236"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/coffeefilter/1881",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-kalita-2026-11-10",
+   "makerAlias": "カリタ"
+  },
+  {
+   "id": "kalita-1891",
+   "kind": "paper",
+   "maker": "Kalita",
+   "name": "ペーパーフィルター NK103ロシ ブラウン （100枚）",
+   "category": "コーヒーロシ",
+   "variants": [
+    {
+     "label": "",
+     "sku": "15083",
+     "gtin": "4901369150831"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/coffeefilter/1891",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-kalita-2026-11-10",
+   "makerAlias": "カリタ"
+  },
+  {
+   "id": "kalita-1888",
+   "kind": "paper",
+   "maker": "Kalita",
+   "name": "ペーパーフィルター NK103ロシ ホワイト （100枚）",
+   "category": "コーヒーロシ",
+   "variants": [
+    {
+     "label": "",
+     "sku": "15081",
+     "gtin": "4901369150817"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/coffeefilter/1888",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-kalita-2026-11-10",
+   "makerAlias": "カリタ"
+  },
+  {
+   "id": "kalita-2132",
+   "kind": "paper",
+   "maker": "Kalita",
+   "name": "ペーパーフィルター 丸ロシ #3（100枚）",
+   "category": "コーヒーロシ 丸ロシ",
+   "variants": [
+    {
+     "label": "",
+     "sku": "21005",
+     "gtin": "4901369501213"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/coffeefilter/2132",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-kalita-2026-11-10",
+   "makerAlias": "カリタ"
+  },
+  {
+   "id": "kalita-2133",
+   "kind": "paper",
+   "maker": "Kalita",
+   "name": "ペーパーフィルター 丸ロシ #6（100枚）",
+   "category": "コーヒーロシ 丸ロシ",
+   "variants": [
+    {
+     "label": "",
+     "sku": "21007",
+     "gtin": "4901369501220"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/coffeefilter/2133",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-kalita-2026-11-10",
+   "makerAlias": "カリタ"
+  },
+  {
+   "id": "kalita-1899",
+   "kind": "paper",
+   "maker": "Kalita",
+   "name": "ペーパーフィルター 丸ロシ#1（100枚）",
+   "category": "コーヒーロシ 丸ロシ",
+   "variants": [
+    {
+     "label": "",
+     "sku": "21003",
+     "gtin": "4901369501244"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/coffeefilter/1899",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-kalita-2026-11-10",
+   "makerAlias": "カリタ"
+  },
+  {
+   "id": "kalita-2134",
+   "kind": "paper",
+   "maker": "Kalita",
+   "name": "ペーパーフィルター 丸ロシ#9（100枚）",
+   "category": "コーヒーロシ 丸ロシ",
+   "variants": [
+    {
+     "label": "",
+     "sku": "21009",
+     "gtin": "4901369501237"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/coffeefilter/2134",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-kalita-2026-11-10",
+   "makerAlias": "カリタ"
+  },
+  {
+   "id": "kalita-2270",
+   "kind": "paper",
+   "maker": "Kalita",
+   "name": "ペーパーフィルター ＦＰ１０２ロシ ホワイト （100枚）",
+   "category": "コーヒーロシ",
+   "variants": [
+    {
+     "label": "",
+     "sku": "13127",
+     "gtin": "4901369131274"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/coffeefilter/2270",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-kalita-2026-11-10",
+   "makerAlias": "カリタ"
+  },
+  {
+   "id": "kalita-3760",
+   "kind": "paper",
+   "maker": "Kalita",
+   "name": "ペーパーフィルター ＫＷＦ－１５５（５０Ｐ）",
+   "category": "コーヒーロシ 家庭用コーヒーロシ",
+   "variants": [
+    {
+     "label": "",
+     "sku": "22227",
+     "gtin": "4901369222118"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/coffeefilter/3760",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-kalita-2026-11-10",
+   "makerAlias": "カリタ"
+  },
+  {
+   "id": "kalita-3761",
+   "kind": "paper",
+   "maker": "Kalita",
+   "name": "ペーパーフィルター ＫＷＦ－１８５（５０Ｐ）",
+   "category": "コーヒーロシ 家庭用コーヒーロシ",
+   "variants": [
+    {
+     "label": "",
+     "sku": "22228",
+     "gtin": "4901369222101"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/coffeefilter/3761",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-kalita-2026-11-10",
+   "makerAlias": "カリタ"
+  }
+ ],
+ "updatedAt": "2026-11-10"
+}
