@@ -43,6 +43,7 @@ for (const item of catalog.items) {
     }
   }
   if (item.sourceId && !existsSync(`source-archive/${item.sourceId}`)) missingArchive.add(item.sourceId);
+  if (item.gtinSourceId && !existsSync(`source-archive/${item.gtinSourceId}`)) missingArchive.add(item.gtinSourceId);
 }
 for (const [g, names] of gtins) if (names.length > 1) warn(`同じJAN ${g} が複数の商品に付いています: ${names.join(" / ")}`);
 for (const id of missingArchive) warn(`出典の原文 source-archive/${id} が、この端末にありません`);

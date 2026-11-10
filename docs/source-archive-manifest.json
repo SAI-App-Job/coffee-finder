@@ -4081,6 +4081,22 @@
     ],
     "note": ""
   },
+  "tools-1zpresso-2026-11-10": {
+    "url": "https://1zpresso.coffee/",
+    "finalUrl": "https://1zpresso.coffee/",
+    "httpStatus": 200,
+    "contentType": "",
+    "size": 35267,
+    "sha256": "e15c4c068339d7264b946a64fc3f71e336e0ef5428d8cf5e10d8ff7fe4e79b7d",
+    "accessed": "2026-11-10",
+    "tool": "ローカルのファイルを取り込み",
+    "textChars": 0,
+    "scannedImagesOnly": false,
+    "files": [
+      "original.bin"
+    ],
+    "note": "メーカー公式サイトの商品データ(JSON)。器具カタログ(data/tools.json)の根拠"
+  },
   "tools-hario-2026-11-10": {
     "url": "https://www.hario.com/product/coffee/",
     "finalUrl": "https://www.hario.com/product/coffee/",
@@ -4104,6 +4120,22 @@
     "contentType": "",
     "size": 670144,
     "sha256": "9ee1cbb694cb9306af77d7b241375cb045e81b996365a44c10462871cf9b4ff9",
+    "accessed": "2026-11-10",
+    "tool": "ローカルのファイルを取り込み",
+    "textChars": 0,
+    "scannedImagesOnly": false,
+    "files": [
+      "original.bin"
+    ],
+    "note": "メーカー公式サイトの商品データ(JSON)。器具カタログ(data/tools.json)の根拠"
+  },
+  "tools-melitta-2026-11-10": {
+    "url": "https://www.melitta.co.jp/melitta_hh/",
+    "finalUrl": "https://www.melitta.co.jp/melitta_hh/",
+    "httpStatus": 200,
+    "contentType": "",
+    "size": 14445,
+    "sha256": "5043cc9cb3773810988e08ba580b507d5f148bd18d11b11d1f1b25c85cfb5396",
     "accessed": "2026-11-10",
     "tool": "ローカルのファイルを取り込み",
     "textChars": 0,

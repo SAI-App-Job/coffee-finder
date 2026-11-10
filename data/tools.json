@@ -2,6 +2,193 @@
  "version": 1,
  "items": [
   {
+   "id": "1zpresso-diamond-a",
+   "kind": "grinder",
+   "maker": "1Zpresso",
+   "name": "1Zpresso Diamond A",
+   "variants": [
+    {
+     "label": "",
+     "sku": "",
+     "gtin": ""
+    }
+   ],
+   "url": "https://1zpresso.coffee/diamond-a/",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-1zpresso-2026-11-10",
+   "makerAlias": "ワンゼットプレッソ"
+  },
+  {
+   "id": "1zpresso-j",
+   "kind": "grinder",
+   "maker": "1Zpresso",
+   "name": "1Zpresso J",
+   "variants": [
+    {
+     "label": "",
+     "sku": "",
+     "gtin": ""
+    }
+   ],
+   "url": "https://1zpresso.coffee/j/",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-1zpresso-2026-11-10",
+   "makerAlias": "ワンゼットプレッソ"
+  },
+  {
+   "id": "1zpresso-j-ultra",
+   "kind": "grinder",
+   "maker": "1Zpresso",
+   "name": "1Zpresso J-Ultra",
+   "variants": [
+    {
+     "label": "",
+     "sku": "",
+     "gtin": ""
+    }
+   ],
+   "url": "https://1zpresso.coffee/j-ultra/",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-1zpresso-2026-11-10",
+   "makerAlias": "ワンゼットプレッソ"
+  },
+  {
+   "id": "1zpresso-jx",
+   "kind": "grinder",
+   "maker": "1Zpresso",
+   "name": "1Zpresso JX",
+   "variants": [
+    {
+     "label": "",
+     "sku": "",
+     "gtin": ""
+    }
+   ],
+   "url": "https://1zpresso.coffee/j/",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-1zpresso-2026-11-10",
+   "makerAlias": "ワンゼットプレッソ"
+  },
+  {
+   "id": "1zpresso-jx-s",
+   "kind": "grinder",
+   "maker": "1Zpresso",
+   "name": "1Zpresso JX S",
+   "variants": [
+    {
+     "label": "",
+     "sku": "",
+     "gtin": ""
+    }
+   ],
+   "url": "https://1zpresso.coffee/j/",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-1zpresso-2026-11-10",
+   "makerAlias": "ワンゼットプレッソ"
+  },
+  {
+   "id": "1zpresso-k-max",
+   "kind": "grinder",
+   "maker": "1Zpresso",
+   "name": "1Zpresso K-Max",
+   "variants": [
+    {
+     "label": "",
+     "sku": "",
+     "gtin": ""
+    }
+   ],
+   "url": "https://1zpresso.coffee/k/",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-1zpresso-2026-11-10",
+   "makerAlias": "ワンゼットプレッソ"
+  },
+  {
+   "id": "1zpresso-k-plus",
+   "kind": "grinder",
+   "maker": "1Zpresso",
+   "name": "1Zpresso K-Plus",
+   "variants": [
+    {
+     "label": "",
+     "sku": "",
+     "gtin": ""
+    }
+   ],
+   "url": "https://1zpresso.coffee/k/",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-1zpresso-2026-11-10",
+   "makerAlias": "ワンゼットプレッソ"
+  },
+  {
+   "id": "1zpresso-k-pro",
+   "kind": "grinder",
+   "maker": "1Zpresso",
+   "name": "1Zpresso K-Pro",
+   "variants": [
+    {
+     "label": "",
+     "sku": "",
+     "gtin": ""
+    }
+   ],
+   "url": "https://1zpresso.coffee/k/",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-1zpresso-2026-11-10",
+   "makerAlias": "ワンゼットプレッソ"
+  },
+  {
+   "id": "1zpresso-k-ultra",
+   "kind": "grinder",
+   "maker": "1Zpresso",
+   "name": "1Zpresso K-Ultra",
+   "variants": [
+    {
+     "label": "",
+     "sku": "",
+     "gtin": ""
+    }
+   ],
+   "url": "https://1zpresso.coffee/k-ultra/",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-1zpresso-2026-11-10",
+   "makerAlias": "ワンゼットプレッソ"
+  },
+  {
+   "id": "1zpresso-x-ultra",
+   "kind": "grinder",
+   "maker": "1Zpresso",
+   "name": "1Zpresso X-Ultra",
+   "variants": [
+    {
+     "label": "",
+     "sku": "",
+     "gtin": ""
+    }
+   ],
+   "url": "https://1zpresso.coffee/x/",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-1zpresso-2026-11-10",
+   "makerAlias": "ワンゼットプレッソ"
+  },
+  {
+   "id": "1zpresso-zp6-special",
+   "kind": "grinder",
+   "maker": "1Zpresso",
+   "name": "1Zpresso ZP6 Special",
+   "variants": [
+    {
+     "label": "",
+     "sku": "",
+     "gtin": ""
+    }
+   ],
+   "url": "https://1zpresso.coffee/manual-coffee-grinder/",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-1zpresso-2026-11-10",
+   "makerAlias": "ワンゼットプレッソ"
+  },
+  {
    "id": "hario-adt-01-b",
    "kind": "dripper",
    "maker": "HARIO",
@@ -3453,6 +3640,400 @@
    "checkedAt": "2026-11-10",
    "sourceId": "tools-kalita-2026-11-10",
    "makerAlias": "カリタ"
+  },
+  {
+   "id": "melitta-edofilter",
+   "kind": "dripper",
+   "maker": "Melitta",
+   "name": "edoコーヒーフィルター",
+   "variants": [
+    {
+     "label": "",
+     "sku": "EF 1×2",
+     "gtin": "4902717230182"
+    }
+   ],
+   "url": "https://www.melitta.co.jp/melitta_hh/pourover/edofilter/",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-melitta-2026-11-10",
+   "makerAlias": "メリタ"
+  },
+  {
+   "id": "melitta-aromafilter2",
+   "kind": "dripper",
+   "maker": "Melitta",
+   "name": "アロマフィルター",
+   "variants": [
+    {
+     "label": "1×1",
+     "sku": "AF-J 1×1",
+     "gtin": "4902717231080"
+    },
+    {
+     "label": "1×2",
+     "sku": "AF-J 1×2",
+     "gtin": "4902717231097"
+    },
+    {
+     "label": "1×4",
+     "sku": "AF-J 1×4",
+     "gtin": "4902717231103"
+    }
+   ],
+   "url": "https://www.melitta.co.jp/melitta_hh/pourover/aromafilter2/",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-melitta-2026-11-10",
+   "makerAlias": "メリタ"
+  },
+  {
+   "id": "melitta-new_cafeleena",
+   "kind": "dripper",
+   "maker": "Melitta",
+   "name": "カフェリーナ",
+   "variants": [
+    {
+     "label": "",
+     "sku": "MJ500S",
+     "gtin": "4902717227250"
+    }
+   ],
+   "url": "https://www.melitta.co.jp/melitta_hh/pourover/new_cafeleena/",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-melitta-2026-11-10",
+   "makerAlias": "メリタ"
+  },
+  {
+   "id": "melitta-coffeefilter2",
+   "kind": "dripper",
+   "maker": "Melitta",
+   "name": "クリアフィルター",
+   "variants": [
+    {
+     "label": "1×1",
+     "sku": "CF-J1×1",
+     "gtin": "4902717231066"
+    },
+    {
+     "label": "1×2",
+     "sku": "CF-J 1×2",
+     "gtin": "4902717231073"
+    }
+   ],
+   "url": "https://www.melitta.co.jp/melitta_hh/pourover/coffeefilter2/",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-melitta-2026-11-10",
+   "makerAlias": "メリタ"
+  },
+  {
+   "id": "melitta-coffeefilter1_6",
+   "kind": "dripper",
+   "maker": "Melitta",
+   "name": "コーヒーフィルター",
+   "variants": [
+    {
+     "label": "ブラウン",
+     "sku": "SF-PP 1×6",
+     "gtin": "4902717116165"
+    }
+   ],
+   "url": "https://www.melitta.co.jp/melitta_hh/pourover/coffeefilter1_6/",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-melitta-2026-11-10",
+   "makerAlias": "メリタ"
+  },
+  {
+   "id": "melitta-hasamifilter",
+   "kind": "dripper",
+   "maker": "Melitta",
+   "name": "波佐見焼コーヒーフィルター",
+   "variants": [
+    {
+     "label": "1×1",
+     "sku": "HF 1×1",
+     "gtin": "4902717230168"
+    },
+    {
+     "label": "1×2",
+     "sku": "HF 1×2",
+     "gtin": "4902717230175"
+    }
+   ],
+   "url": "https://www.melitta.co.jp/melitta_hh/pourover/hasamifilter/",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-melitta-2026-11-10",
+   "makerAlias": "メリタ"
+  },
+  {
+   "id": "melitta-ryusokucoffeefilter",
+   "kind": "dripper",
+   "maker": "Melitta",
+   "name": "流速コーヒーフィルター 1×2",
+   "variants": [
+    {
+     "label": "",
+     "sku": "RF 1×2",
+     "gtin": "4902717230274"
+    }
+   ],
+   "url": "https://www.melitta.co.jp/melitta_hh/pourover/ryusokucoffeefilter/",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-melitta-2026-11-10",
+   "makerAlias": "メリタ"
+  },
+  {
+   "id": "melitta-coffeemill_classic",
+   "kind": "grinder",
+   "maker": "Melitta",
+   "name": "コーヒーミル クラシック",
+   "variants": [
+    {
+     "label": "",
+     "sku": "MJ-0503",
+     "gtin": "4902717503019"
+    }
+   ],
+   "url": "https://www.melitta.co.jp/melitta_hh/coffeegrinder/coffeemill_classic/",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-melitta-2026-11-10",
+   "makerAlias": "メリタ"
+  },
+  {
+   "id": "melitta-varie_piazza",
+   "kind": "grinder",
+   "maker": "Melitta",
+   "name": "バリエ ピアッツア",
+   "variants": [
+    {
+     "label": "ブラック",
+     "sku": "ECG65-1B",
+     "gtin": "4902717222996"
+    }
+   ],
+   "url": "https://www.melitta.co.jp/melitta_hh/coffeegrinder/varie_piazza/",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-melitta-2026-11-10",
+   "makerAlias": "メリタ"
+  },
+  {
+   "id": "melitta-vario_e",
+   "kind": "grinder",
+   "maker": "Melitta",
+   "name": "バリオ-E",
+   "variants": [
+    {
+     "label": "",
+     "sku": "CG-124",
+     "gtin": "4902717223030"
+    }
+   ],
+   "url": "https://www.melitta.co.jp/melitta_hh/coffeegrinder/vario_e/",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-melitta-2026-11-10",
+   "makerAlias": "メリタ"
+  },
+  {
+   "id": "melitta-flatcutter_grinder",
+   "kind": "grinder",
+   "maker": "Melitta",
+   "name": "フラットカッターディスク コーヒーグラインダー",
+   "variants": [
+    {
+     "label": "",
+     "sku": "ECG71-1B",
+     "gtin": "4902717222781"
+    }
+   ],
+   "url": "https://www.melitta.co.jp/melitta_hh/coffeegrinder/flatcutter_grinder/",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-melitta-2026-11-10",
+   "makerAlias": "メリタ"
+  },
+  {
+   "id": "melitta-aromagic1_1_nb40",
+   "kind": "paper",
+   "maker": "Melitta",
+   "name": "アロマジック 1×1 ナチュラルブラウン40枚",
+   "variants": [
+    {
+     "label": "ナチュラルブラウン",
+     "sku": "PA 1×1 NB",
+     "gtin": "4902717043119"
+    }
+   ],
+   "url": "https://www.melitta.co.jp/melitta_hh/paper/aromagic1_1_nb40/",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-melitta-2026-11-10",
+   "makerAlias": "メリタ"
+  },
+  {
+   "id": "melitta-aromagic1_1_nw100",
+   "kind": "paper",
+   "maker": "Melitta",
+   "name": "アロマジック 1×1 ナチュラルホワイト100枚",
+   "variants": [
+    {
+     "label": "ナチュラルホワイト",
+     "sku": "PA 1x1G NW",
+     "gtin": "4902717001119"
+    }
+   ],
+   "url": "https://www.melitta.co.jp/melitta_hh/paper/aromagic1_1_nw100/",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-melitta-2026-11-10",
+   "makerAlias": "メリタ"
+  },
+  {
+   "id": "melitta-aromagic1_1_nw40",
+   "kind": "paper",
+   "maker": "Melitta",
+   "name": "アロマジック 1×1ナチュラルホワイト40枚",
+   "variants": [
+    {
+     "label": "ナチュラルホワイト",
+     "sku": "PA 1×1 NW",
+     "gtin": "4902717003113"
+    }
+   ],
+   "url": "https://www.melitta.co.jp/melitta_hh/paper/aromagic1_1_nw40/",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-melitta-2026-11-10",
+   "makerAlias": "メリタ"
+  },
+  {
+   "id": "melitta-aromagic1_2_nb100",
+   "kind": "paper",
+   "maker": "Melitta",
+   "name": "アロマジック 1×2 ナチュラルブラウン100枚",
+   "variants": [
+    {
+     "label": "ナチュラルブラウン",
+     "sku": "PA 1x2G NB",
+     "gtin": "4902717230717"
+    }
+   ],
+   "url": "https://www.melitta.co.jp/melitta_hh/paper/aromagic1_2_nb100/",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-melitta-2026-11-10",
+   "makerAlias": "メリタ"
+  },
+  {
+   "id": "melitta-aromagic1_2_nb40",
+   "kind": "paper",
+   "maker": "Melitta",
+   "name": "アロマジック 1×2 ナチュラルブラウン40枚",
+   "variants": [
+    {
+     "label": "ナチュラルブラウン",
+     "sku": "PA 1×2 NB",
+     "gtin": "4902717230700"
+    }
+   ],
+   "url": "https://www.melitta.co.jp/melitta_hh/paper/aromagic1_2_nb40/",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-melitta-2026-11-10",
+   "makerAlias": "メリタ"
+  },
+  {
+   "id": "melitta-aromagic1_2_nw100",
+   "kind": "paper",
+   "maker": "Melitta",
+   "name": "アロマジック 1×2 ナチュラルホワイト100枚",
+   "variants": [
+    {
+     "label": "ナチュラルホワイト",
+     "sku": "PA 1x2G NW",
+     "gtin": "4902717230731"
+    }
+   ],
+   "url": "https://www.melitta.co.jp/melitta_hh/paper/aromagic1_2_nw100/",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-melitta-2026-11-10",
+   "makerAlias": "メリタ"
+  },
+  {
+   "id": "melitta-aromagic1_2_nw40",
+   "kind": "paper",
+   "maker": "Melitta",
+   "name": "アロマジック 1×2 ナチュラルホワイト40枚",
+   "variants": [
+    {
+     "label": "ナチュラルホワイト",
+     "sku": "PA 1×2 NW",
+     "gtin": "4902717230724"
+    }
+   ],
+   "url": "https://www.melitta.co.jp/melitta_hh/paper/aromagic1_2_nw40/",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-melitta-2026-11-10",
+   "makerAlias": "メリタ"
+  },
+  {
+   "id": "melitta-original1_4_nb",
+   "kind": "paper",
+   "maker": "Melitta",
+   "name": "オリジナル 1×4 ナチュラルブラウン80枚",
+   "variants": [
+    {
+     "label": "ナチュラルブラウン",
+     "sku": "PO 1×4 NB",
+     "gtin": "4902717230656"
+    }
+   ],
+   "url": "https://www.melitta.co.jp/melitta_hh/paper/original1_4_nb/",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-melitta-2026-11-10",
+   "makerAlias": "メリタ"
+  },
+  {
+   "id": "melitta-original1_4_nw",
+   "kind": "paper",
+   "maker": "Melitta",
+   "name": "オリジナル 1×4 ナチュラルホワイト80枚",
+   "variants": [
+    {
+     "label": "ナチュラルホワイト",
+     "sku": "PO 1×4 NW",
+     "gtin": "4902717230663"
+    }
+   ],
+   "url": "https://www.melitta.co.jp/melitta_hh/paper/original1_4_nw/",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-melitta-2026-11-10",
+   "makerAlias": "メリタ"
+  },
+  {
+   "id": "melitta-original1_6_nb",
+   "kind": "paper",
+   "maker": "Melitta",
+   "name": "オリジナル 1×6 ナチュラルブラウン40枚",
+   "variants": [
+    {
+     "label": "ナチュラルブラウン",
+     "sku": "PA-164B",
+     "gtin": "4006508123834"
+    }
+   ],
+   "url": "https://www.melitta.co.jp/melitta_hh/paper/original1_6_nb/",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-melitta-2026-11-10",
+   "makerAlias": "メリタ"
+  },
+  {
+   "id": "melitta-original_intense1_4_nb",
+   "kind": "paper",
+   "maker": "Melitta",
+   "name": "オリジナル インテンス 1×4 ナチュラルブラウン80枚",
+   "variants": [
+    {
+     "label": "ナチュラルブラウン",
+     "sku": "PI 1×4 NB",
+     "gtin": "4902717230649"
+    }
+   ],
+   "url": "https://www.melitta.co.jp/melitta_hh/paper/original_intense1_4_nb/",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-melitta-2026-11-10",
+   "makerAlias": "メリタ"
   }
  ],
  "updatedAt": "2026-11-10"

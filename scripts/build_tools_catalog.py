@@ -9,7 +9,8 @@
   - 価格は載せない(変わりやすいため)。画像も載せない(著作権)。
 使い方:
   python scripts/build_tools_catalog.py hario            HARIOを取得して、data/tools.json に反映する
-  python scripts/build_tools_catalog.py hario --dry-run  取得せず、対象の商品の一覧だけを出す(商品一覧の1回だけ取得)
+  python scripts/build_tools_catalog.py hario --dry-run  取得せず、対象の商品の一覧だけを出す
+  python scripts/build_tools_catalog.py hario-shop|timemore|fellow|origami  Shopify製の公式ショップから、JANを取る(docs/tool-catalog.md)
 """
 import argparse
 import json
@@ -114,7 +115,7 @@ def hario_items(page: dict):
 
 def hario(dry: bool, reuse: bool = False):
     if reuse:
-        raw = json.loads(sorted((ROOT / "source-archive").glob("tools-hario-*"))[-1].joinpath("original.bin").read_text(encoding="utf-8"))["pages"]
+        raw = json.loads(sorted((ROOT / "source-archive").glob("tools-hario-2*"))[-1].joinpath("original.bin").read_text(encoding="utf-8"))["pages"]
         return {"maker": "HARIO", "sourceUrl": f"{HARIO_BASE}/product/coffee/", "raw": None, "items": [i for pg in raw for i in hario_items(pg)]}
     listing = get(f"{HARIO_BASE}/product/coffee/").decode("utf-8", errors="replace")
     pages = []
@@ -241,10 +242,273 @@ def kalita(dry: bool, reuse: bool = False):
     return {"maker": "Kalita", "sourceUrl": f"{KALITA_BASE}/products/", "raw": {"pages": raw}, "items": items}
 
 
-# 検索用: メーカー名の日本語の読み
-MAKER_ALIAS = {"HARIO": "ハリオ", "Kalita": "カリタ"}
+# ---------------------------------------------------------------- Melitta(メリタジャパン。公式サイトの製品ページ。家庭用)
+MELITTA_BASE = "https://www.melitta.co.jp"
+MELITTA_DIRS = [("pourover", "dripper"), ("paper", "paper"), ("coffeegrinder", "grinder")]
+MELITTA_EXCLUDE = re.compile(r"ケトル|サーバー|ポット|セット|スケール|ブラシ|ミルク")
+SPEC_LABELS = ["製品名", "型番", "品目コード", "JAN", "容量", "寸法", "本体質量", "カラー", "付属品", "そのほか", "関連製品", "材質", "原産国", "サイズ", "質量"]
 
-MAKERS = {"hario": hario, "kalita": kalita}
+
+def melitta_spec(html_body: str):
+    """製品ページの「スペック」の表を、{項目名: 値の文字列} にする。無ければ None"""
+    import html as _html
+    i = html_body.find("スペック")
+    if i < 0:
+        return None
+    seg = re.sub(r"<script.*?</script>|<style.*?</style>", "", html_body[i:i + 9000], flags=re.S)
+    toks = [clean(t) for t in re.split(r"\s*\|\s*", _html.unescape(re.sub(r"<[^>]+>", " | ", seg))) if clean(t)]
+    spec, cur = {}, None
+    for tok in toks:
+        if tok == "スペック" or tok == "-->":
+            continue
+        if tok in SPEC_LABELS:
+            cur = tok
+            spec.setdefault(cur, [])
+        elif cur:
+            spec[cur].append(tok)
+        if tok == "関連製品":
+            break
+    return {k: v for k, v in spec.items()}
+
+
+def melitta_items(page: dict):
+    spec, kind = page.get("spec"), page["kind"]
+    if not spec or not spec.get("製品名"):
+        return []
+    name = clean(" ".join(spec["製品名"]))  # 製品名が2つの語に分かれている製品がある(例: フラットカッターディスク コーヒーグラインダー)
+    if MELITTA_EXCLUDE.search(name):
+        return []
+
+    def keyed(label):
+        out = {}
+        toks = spec.get(label, [])
+        if label == "JAN":  # JANの欄の後ろに、電源・消費電力などが続くことがある。数字(または「型: 数字」)だけを取る
+            toks = [t for t in toks if re.match(r"^(?:[^:：]{1,12}[:：]\s*)?[0-9 ]{8,16}$", t)]
+        if label == "カラー":  # カラーの欄の後ろに、電源・消費電力が続くことがある
+            toks = toks[: toks.index("電源")] if "電源" in toks else toks
+        for tok in toks:
+            m = re.match(r"^([^:：]{1,12})[:：]\s*(.+)$", tok)
+            out[m.group(1) if m else ""] = (m.group(2) if m else tok)
+        return out
+
+    models, jans, colors = keyed("型番"), keyed("JAN"), keyed("カラー")
+    keys = list(dict.fromkeys(list(models) + list(jans)))
+    variants = []
+    for k in keys or [""]:
+        gtin = re.sub(r"\D", "", jans.get(k, jans.get("", "")) if k in jans or "" in jans else "")
+        if gtin and not valid_gtin(gtin):
+            print(f"  警告: {page['url']} のJANが不正のため載せません: {gtin}")
+            gtin = ""
+        label = k or colors.get("", "")
+        variants.append({"label": label, "sku": models.get(k, models.get("", "")), "gtin": gtin})
+    return [{
+        "id": "melitta-" + page["url"].rstrip("/").rsplit("/", 1)[-1], "kind": kind, "maker": "Melitta", "name": name,
+        "variants": variants, "url": page["url"], "checkedAt": TODAY,
+    }]
+
+
+def melitta(dry: bool, reuse: bool = False):
+    if reuse:
+        raw = json.loads(sorted((ROOT / "source-archive").glob("tools-melitta-*"))[-1].joinpath("original.bin").read_text(encoding="utf-8"))["pages"]
+        return {"maker": "Melitta", "sourceUrl": f"{MELITTA_BASE}/melitta_hh/", "raw": None, "items": [i for pg in raw for i in melitta_items(pg)]}
+    pages = []
+    for d, kind in MELITTA_DIRS:
+        time.sleep(DELAY)
+        body = get(f"{MELITTA_BASE}/melitta_hh/{d}/").decode("utf-8", errors="replace")
+        slugs = sorted(set(re.findall(rf'href="{re.escape(MELITTA_BASE)}/melitta_hh/{d}/([a-z0-9_]+)/"', body)) - {"feed"})
+        pages += [(f"{MELITTA_BASE}/melitta_hh/{d}/{sl}/", kind) for sl in slugs]
+        print(f"Melitta: {d} 累計 {len(pages)} ページ")
+    if dry:
+        return None
+    raw, items = [], []
+    for n, (url, kind) in enumerate(pages, 1):
+        time.sleep(DELAY)
+        try:
+            body = get(url).decode("utf-8", errors="replace")
+        except Exception as e:  # noqa: BLE001
+            print(f"  取得失敗 {url}: {e}")
+            continue
+        page = {"url": url, "kind": kind, "spec": melitta_spec(body)}
+        raw.append(page)
+        got = melitta_items(page)
+        items += got
+        print(f"  [{n}/{len(pages)}] {kind:8s} {url.rsplit('/', 2)[-2]}: {', '.join(g['name'] + '×' + str(len(g['variants'])) for g in got) or '対象外/表なし'}")
+    return {"maker": "Melitta", "sourceUrl": f"{MELITTA_BASE}/melitta_hh/", "raw": {"pages": raw}, "items": items}
+
+
+# ---------------------------------------------------------------- 1Zpresso(公式サイト 1zpresso.coffee。手挽きミル)
+# 公式サイトには、型番・JANの表が無く、機種名は、各シリーズのページの見出しにある。
+# そのため、「機種名と、それが書かれているページ・文言」の対応を、ここに書き、取得したページに、その文言が実際にあることを確かめてから載せる
+# (記憶や他のサイトの情報で、機種を足さない)。JANは、公式サイトに無いため、空にする。
+Z1_BASE = "https://1zpresso.coffee"
+# (機種名, ページ, ページに書かれている文言)
+Z1_MODELS = [
+    ("Diamond A", "diamond-a", "Diamond A"),
+    ("JX", "j", "JX Series ( JX / JX S / J )"),
+    ("JX S", "j", "JX Series ( JX / JX S / J )"),
+    ("J", "j", "JX Series ( JX / JX S / J )"),
+    ("J-Ultra", "j-ultra", "J-Ultra Grinder"),
+    ("K-Pro", "k", "K-Pro Grinder"),
+    ("K-Max", "k", "K-Max Grinder"),
+    ("K-Plus", "k", "K-Plus Grinder"),
+    ("K-Ultra", "k-ultra", "K-Ultra Grinder"),
+    ("X-Ultra", "x", "X-Ultra Grinder"),
+    ("ZP6 Special", "manual-coffee-grinder", "ZP6 Special"),
+]
+
+
+def z1presso_items(pages: dict):
+    items = []
+    for model, slug, phrase in Z1_MODELS:
+        page = pages.get(slug)
+        if not page or phrase not in page["text"]:
+            print(f"  警告: {model}: ページ {slug} に「{phrase}」が見つからないため、載せません")
+            continue
+        items.append({
+            "id": "1zpresso-" + re.sub(r"[^a-z0-9]+", "-", model.lower()).strip("-"), "kind": "grinder", "maker": "1Zpresso",
+            "name": f"1Zpresso {model}", "variants": [{"label": "", "sku": "", "gtin": ""}],
+            "url": f"{Z1_BASE}/{slug}/", "checkedAt": TODAY,
+        })
+    return items
+
+
+def z1presso(dry: bool, reuse: bool = False):
+    if reuse:
+        raw = json.loads(sorted((ROOT / "source-archive").glob("tools-1zpresso-*"))[-1].joinpath("original.bin").read_text(encoding="utf-8"))["pages"]
+        return {"maker": "1Zpresso", "sourceUrl": f"{Z1_BASE}/", "raw": None, "items": z1presso_items({p["slug"]: p for p in raw})}
+    slugs = list(dict.fromkeys(sl for _, sl, _ in Z1_MODELS))
+    print(f"1Zpresso: ページ {len(slugs)} 件")
+    if dry:
+        return None
+    raw = []
+    for sl in slugs:
+        time.sleep(DELAY)
+        raw.append({"slug": sl, "url": f"{Z1_BASE}/{sl}/", "text": html_text(get(f"{Z1_BASE}/{sl}/"))[:20000]})
+    return {"maker": "1Zpresso", "sourceUrl": f"{Z1_BASE}/", "raw": {"pages": raw}, "items": z1presso_items({p["slug"]: p for p in raw})}
+
+
+# ---------------------------------------------------------------- Shopify製の公式ショップ(HARIO・TIMEMORE・Fellow・ORIGAMI)
+# Shopifyの公式ショップは、商品の一覧(/products.json)と、商品ごとのデータ(/products/<ハンドル>.js)を公開している。
+# JAN(GTIN)は、後者の variants[].barcode にある(店が入力した、型番ごとの値)。
+# 注意: 取得の間隔が短いと、取得制限(429)がかかる。この環境(作業用の端末)では、取得できないことがあった。利用者のPCで実行する。
+SHOPIFY_DELAY = 2.0
+
+
+def shopify_kind_en(p: dict):
+    """英語の商品名から、種類を決める。決められないものは None(載せない)"""
+    title = f"{p.get('title', '')} {p.get('product_type', '')}"
+    if re.search(r"kettle|server|scale|brush|mug|cup\\b|carafe|tumbler|bottle|bag\\b|cover|case|stand|holder|plate|tool|cleaning|replacement|spare|burr set|gift|bundle|\\bset\\b|subscription|gift card", title, flags=re.I):
+        return None
+    if re.search(r"filter paper|paper filter|filter papers|filters?\\b.*(paper|pack|pcs|sheets)|(paper|disposable).*filter", title, flags=re.I) and not re.search(r"metal|steel|cloth", title, flags=re.I):
+        return "paper"
+    if re.search(r"dripper|pour[- ]?over cone", title, flags=re.I):
+        return "dripper"
+    if re.search(r"grinder|coffee mill|\\bmill\\b", title, flags=re.I):
+        return "grinder"
+    return None
+
+
+# HARIOの公式ショップの商品名(日本語)から、種類を決める。本体ではないもの・別の用途のものは、除く
+HARIO_SHOP_EXCLUDE = re.compile(r"セット|サーバー|ケース|スタンド|ポット|ウォータードリッパー|スケール|ケトル|ボトル|ブラシ|リブ|リング|Drip-Assist")
+
+
+def hario_kind(title: str):
+    if HARIO_SHOP_EXCLUDE.search(title):
+        return None
+    if re.search(r"ペーパーフィルター|フィルターペーパー", title):
+        return "paper"
+    if re.search(r"ドリッパー", title) and not re.search(r"グラインダー|ミル", title):
+        return "dripper"
+    if re.search(r"ミル|グラインダー", title):
+        return "grinder"
+    return None
+
+
+def shopify_kind_hario(p: dict):
+    return hario_kind(clean(p.get("title", "")))
+
+
+SHOPIFY = {
+    "hario-shop": dict(maker="HARIO", base="https://shop.hariocorp.co.jp", kind=shopify_kind_hario, merge="sku"),
+    "timemore": dict(maker="TIMEMORE", base="https://www.timemore.com", kind=shopify_kind_en, merge=None),
+    "fellow": dict(maker="Fellow", base="https://fellowproducts.com", kind=shopify_kind_en, merge=None),
+    "origami": dict(maker="ORIGAMI", base="https://origami-kai.com", kind=shopify_kind_en, merge=None),
+}
+
+
+def shopify_items(cfg: dict, records: list):
+    """records: [{"handle", "kind", "js": 商品の.jsのデータ}] からカタログの項目を作る"""
+    items = []
+    for rec in records:
+        js = rec["js"]
+        variants = []
+        for v in js.get("variants", []):
+            gtin = re.sub(r"[\s-]", "", v.get("barcode") or "")
+            if gtin and not valid_gtin(gtin):
+                print(f"  警告: {rec['handle']} {v.get('sku')} のJANが不正のため載せません: {gtin}")
+                gtin = ""
+            label = clean(v.get("title", ""))
+            variants.append({"label": "" if label == "Default Title" else label, "sku": clean(v.get("sku") or ""), "gtin": gtin})
+        if not variants:
+            continue
+        items.append({
+            "id": f"{cfg['maker'].lower()}-shop-{rec['handle']}", "kind": rec["kind"], "maker": cfg["maker"], "name": clean(js.get("title", "")),
+            "variants": variants, "url": f"{cfg['base']}/products/{rec['handle']}", "checkedAt": TODAY,
+        })
+    return items
+
+
+def shopify_list(cfg: dict):
+    """商品の一覧を、全ページ取得する"""
+    out, page = [], 1
+    while page <= 30:
+        data = json.loads(get(f"{cfg['base']}/products.json?limit=250&page={page}"))["products"]
+        if not data:
+            break
+        out += data
+        print(f"  一覧 {page}ページ目: 累計 {len(out)} 件")
+        if len(data) < 250:
+            break
+        page += 1
+        time.sleep(SHOPIFY_DELAY)
+    return out
+
+
+def shopify(key: str):
+    cfg = SHOPIFY[key]
+
+    def run(dry: bool, reuse: bool = False):
+        if reuse:
+            raw = json.loads(sorted((ROOT / "source-archive").glob(f"tools-{key}-2*"))[-1].joinpath("original.bin").read_text(encoding="utf-8"))["records"]
+            return {"maker": cfg["maker"], "sourceUrl": cfg["base"] + "/", "raw": None, "items": shopify_items(cfg, raw), "merge": cfg["merge"]}
+        listing = shopify_list(cfg)
+        picked = [(p["handle"], cfg["kind"](p)) for p in listing]
+        picked = [(h, k) for h, k in picked if k]
+        print(f"{cfg['maker']}: 商品 {len(listing)} 件のうち、対象 {len(picked)} 件")
+        titles = {p["handle"]: p.get("title", "") for p in listing}
+        for h, k in picked:
+            print(f"  {k:8s} {h}  {clean(titles[h])}")
+        if dry:
+            return None
+        records = []
+        for n, (handle, kind) in enumerate(picked, 1):
+            time.sleep(SHOPIFY_DELAY)
+            try:
+                js = json.loads(get(f"{cfg['base']}/products/{handle}.js"))
+            except Exception as e:  # noqa: BLE001
+                print(f"  取得失敗 {handle}: {e}")
+                continue
+            records.append({"handle": handle, "kind": kind, "js": js})
+            print(f"  [{n}/{len(picked)}] {handle}: JAN {sum(1 for v in js.get('variants', []) if v.get('barcode'))}/{len(js.get('variants', []))}")
+        return {"maker": cfg["maker"], "sourceUrl": cfg["base"] + "/", "raw": {"records": records}, "items": shopify_items(cfg, records), "merge": cfg["merge"]}
+
+    return run
+
+
+# 検索用: メーカー名の日本語の読み
+MAKER_ALIAS = {"HARIO": "ハリオ", "Kalita": "カリタ", "Melitta": "メリタ", "1Zpresso": "ワンゼットプレッソ", "TIMEMORE": "タイムモア", "Fellow": "フェロー", "ORIGAMI": "オリガミ"}
+
+MAKERS = {"hario": hario, "kalita": kalita, "melitta": melitta, "1zpresso": z1presso, **{k: shopify(k) for k in SHOPIFY}}
 
 
 def save_raw(maker_key: str, result: dict) -> str:
@@ -270,15 +534,42 @@ def main():
     result = MAKERS[a.maker](a.dry_run, a.reuse) if a.reuse else MAKERS[a.maker](a.dry_run)
     if result is None:
         return
-    source_id = save_raw(a.maker, result) if result["raw"] is not None else sorted(p.name for p in (ROOT / "source-archive").glob(f"tools-{a.maker}-*"))[-1]
+    source_id = save_raw(a.maker, result) if result["raw"] is not None else sorted(p.name for p in (ROOT / "source-archive").glob(f"tools-{a.maker}-2*"))[-1]
     catalog = json.loads(OUT.read_text(encoding="utf-8")) if OUT.exists() else {"version": 1, "items": []}
-    # 同じメーカーの項目は、入れ替える(他のメーカーは、そのまま)
-    catalog["items"] = [i for i in catalog["items"] if i["maker"] != result["maker"]]
-    for item in result["items"]:
-        item["sourceId"] = source_id
-        if result["maker"] in MAKER_ALIAS:
-            item["makerAlias"] = MAKER_ALIAS[result["maker"]]  # 検索用の読み(カタカナ)
-    catalog["items"] += result["items"]
+    if result.get("merge") == "sku":
+        # 既存の項目(別の公式サイトの名前・型番)に、店のJANを、型番(sku)で補う。既存に無い型番の商品は、追加する
+        shop_by_sku = {v["sku"]: (item, v) for item in result["items"] for v in item["variants"] if v["sku"]}
+        known = set()
+        filled = 0
+        for item in catalog["items"]:
+            if item["maker"] != result["maker"]:
+                continue
+            for v in item["variants"]:
+                known.add(v["sku"])
+                hit = shop_by_sku.get(v["sku"])
+                if hit and hit[1]["gtin"] and not v["gtin"]:
+                    v["gtin"] = hit[1]["gtin"]
+                    item["gtinSourceId"] = source_id
+                    filled += 1
+        added = 0
+        for item in result["items"]:
+            if all(v["sku"] in known for v in item["variants"] if v["sku"]) and any(v["sku"] for v in item["variants"]):
+                continue
+            item["sourceId"] = source_id
+            if result["maker"] in MAKER_ALIAS:
+                item["makerAlias"] = MAKER_ALIAS[result["maker"]]
+            catalog["items"].append(item)
+            added += 1
+        print(f"JANを補った型番: {filled} 件 / 追加した製品: {added} 件 / 店に無い型番(補えなかった): "
+              f"{sum(1 for i in catalog['items'] if i['maker'] == result['maker'] for v in i['variants'] if v['sku'] and v['sku'] not in shop_by_sku)} 件")
+    else:
+        # 同じメーカーの項目は、入れ替える(他のメーカーは、そのまま)
+        catalog["items"] = [i for i in catalog["items"] if i["maker"] != result["maker"]]
+        for item in result["items"]:
+            item["sourceId"] = source_id
+            if result["maker"] in MAKER_ALIAS:
+                item["makerAlias"] = MAKER_ALIAS[result["maker"]]  # 検索用の読み(カタカナ)
+        catalog["items"] += result["items"]
     catalog["items"].sort(key=lambda i: (i["maker"], i["kind"], i["name"]))
     catalog["updatedAt"] = TODAY
     OUT.parent.mkdir(parents=True, exist_ok=True)
