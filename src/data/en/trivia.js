@@ -175,6 +175,38 @@ export const DISCOVERY_FACTS_EN = {
     title: "Tanzania has no grading standard of its own",
     text: "Tanzania has no coffee grading standard of its own and uses \"EAS 130:1999,\" the standard common to the East African Community (EAC). The secretariat is actually based in Arusha, Tanzania, but Uganda has also stated in its submission to the ICO that it complies with the same standard, making it a real example of several East African countries sharing a standard.",
   },
+  "「モカ」は港の名前でもある": {
+    title: "\"Mocha\" is also the name of a port",
+    text: "The coffee name \"Mocha\" is also the name of a port in Yemen. A 2023 report by FAO and IFC describes the port of Al Mokha as historically a major hub for coffee exports out of Yemen and says that mocha coffee is associated with this port. The ICO's history of coffee likewise says that Moca, the great port of its time, has a name that is today synonymous with a kind of coffee.",
+  },
+  "コスタリカは独立の年に、貧しい人々へコーヒーの苗を配った": {
+    title: "Costa Rica handed out coffee plants to the poor in the year of independence",
+    text: "According to the geographical-indication specification (Pliego de Condiciones) of ICAFE, the Costa Rican coffee institute, the first seeds arrived at the end of the 18th century, but it is only after 1808 that there is certainty, backed by historical evidence, that an important coffee-growing activity began in Costa Rica. In 1821, the year of independence, the municipal body of San José (the \"corporación josefina\") distributed coffee plants free of charge to the destitute.",
+  },
+  "「AA」はふるいの番号で決まる等級(ケニア・タンザニア)": {
+    title: "\"AA\" is a grade defined by screen size (Kenya and Tanzania)",
+    text: "Under Kenya's coffee regulations (2019), AA is a flat bean that passes through screen 21 and is retained on 18 (7.2 mm). Under Tanzania's Coffee Industry Regulations (2013), AA means at least 90% retained on screen 18 (with at most 8-10% on screen 17). In both, AA is a size grade set by screen number, though it is written differently. The East African Standard (EAS 130:1999) states that grading by size and shape is only a fair estimate of coffee quality.",
+  },
+  "グアテマラの「SHB」は、標高1,370m超のコーヒー": {
+    title: "Guatemalan \"SHB\" means coffee grown above 1,370 m",
+    text: "In a chart by Anacafé, the Guatemalan coffee association, coffee types are divided by altitude. SHB is above 4,500 ft (1,370 m), Semi-Hard / Hard is 3,500-4,500 ft (1,066-1,370 m), and Extra Prime / EPW is 2,500-3,500 ft (764-1,066 m).",
+  },
+  "ルワンダは、アフリカで最初にCOEを開いた国": {
+    title: "Rwanda was the first African country to host a Cup of Excellence",
+    text: "A blog post (August 2018) by the ACE (Alliance for Coffee Excellence), which runs the Cup of Excellence, says that Rwanda was the first African country to host a Cup of Excellence (CoE) competition, with the first CoE there dating back to 2008.",
+  },
+  "コーヒーに「生産の割当」があった時代": {
+    title: "When coffee had production quotas",
+    text: "According to the FAQ of the ICO (International Coffee Organization), the ICO operated a quota system, under which coffee supplies in excess of consumer requirements were withheld from the market, on and off from 1962 to 1989. In 1989 the system was suspended because members failed to agree on quota distribution. The ICO does not currently operate a quota system.",
+  },
+  "エチオピアは2019年に、一部の小農の直接輸出を認めた": {
+    title: "Ethiopia opened direct exports to some smallholders in 2019",
+    text: "According to USDA FAS reports, smallholder farmers account for 90 percent of Ethiopia's coffee production (2026 edition). The Ethiopia Commodity Exchange (ECX) was established in 2008 (2019 edition). A policy reform in 2019 allowed smallholder farmers who own at least two hectares of land to obtain export licenses and sell their coffee directly to international markets (2025 edition).",
+  },
+  "ペルーのCOEは、2022〜2026年の1位がすべてカハマルカ産": {
+    title: "Peru's Cup of Excellence: Cajamarca took first place every year from 2022 to 2026",
+    text: "According to the results pages of the ACE, which runs the Cup of Excellence, first place at Peru's Cup of Excellence (CoE) went to a farm in the Cajamarca region for five years in a row, from 2022 to 2026 (for 2026 these are the jury results; the auction is planned for December). First place in 2017 and 2019 also went to Cajamarca. In 2018 and 2021, first place went to a farm in Cusco.",
+  },
 };
 
 // 淹れ方(src/data/brewGuide.js の BREW_METHODS)。キーは method

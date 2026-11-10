@@ -1,0 +1,475 @@
+{
+  "scope": "new-facts-2026-11-10",
+  "verifiedOn": "2026-11-10",
+  "sources": {
+    "ace-blog-rwanda-coe-2018": {
+      "title": "After Hiatus, Rwanda Cup of Excellence Returns with 340+ Coffee Submissions (2018-08-23)",
+      "org": "Alliance for Coffee Excellence",
+      "url": "https://allianceforcoffeeexcellence.org/blog/2018/08/23/after-hiatus-rwanda-cup-of-excellence-returns-with-340-coffee-submissions/",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-10",
+      "note": "curlでHTML取得。"
+    },
+    "ace-coe-peru-2017": {
+      "title": "Perú 2017 - Cup of Excellence (competition results)",
+      "org": "Alliance for Coffee Excellence (Cup of Excellence)",
+      "url": "https://allianceforcoffeeexcellence.org/peru-2017/",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-10",
+      "note": "curlで取得したHTMLの本文。"
+    },
+    "ace-coe-peru-2018": {
+      "title": "Perú 2018 - Cup of Excellence (competition results)",
+      "org": "Alliance for Coffee Excellence (Cup of Excellence)",
+      "url": "https://allianceforcoffeeexcellence.org/peru-2018/",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-10",
+      "note": "curlで取得したHTMLの本文。"
+    },
+    "ace-coe-peru-2019": {
+      "title": "Perú 2019 - Cup of Excellence (competition results)",
+      "org": "Alliance for Coffee Excellence (Cup of Excellence)",
+      "url": "https://allianceforcoffeeexcellence.org/peru-2019/",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-10",
+      "note": "curlで取得したHTMLの本文。"
+    },
+    "ace-coe-peru-2021": {
+      "title": "Perú 2021 - Cup of Excellence (competition results)",
+      "org": "Alliance for Coffee Excellence (Cup of Excellence)",
+      "url": "https://allianceforcoffeeexcellence.org/peru-2021/",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-10",
+      "note": "curlで取得したHTMLの本文。"
+    },
+    "ace-coe-peru-2022": {
+      "title": "Perú 2022 - Cup of Excellence (competition results)",
+      "org": "Alliance for Coffee Excellence (Cup of Excellence)",
+      "url": "https://allianceforcoffeeexcellence.org/peru-2022/",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-10",
+      "note": "curlで取得したHTMLの本文。"
+    },
+    "ace-coe-peru-2023": {
+      "title": "Perú 2023 - Cup of Excellence (competition results)",
+      "org": "Alliance for Coffee Excellence (Cup of Excellence)",
+      "url": "https://allianceforcoffeeexcellence.org/peru-2023/",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-10",
+      "note": "curlで取得したHTMLの本文。"
+    },
+    "ace-coe-peru-2024": {
+      "title": "Perú 2024 - Cup of Excellence (competition results)",
+      "org": "Alliance for Coffee Excellence (Cup of Excellence)",
+      "url": "https://allianceforcoffeeexcellence.org/peru-2024/",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-10",
+      "note": "curlで取得したHTMLの本文。"
+    },
+    "ace-coe-peru-2025": {
+      "title": "Perú 2025 - Cup of Excellence (competition results)",
+      "org": "Alliance for Coffee Excellence (Cup of Excellence)",
+      "url": "https://allianceforcoffeeexcellence.org/peru-2025/",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-10",
+      "note": "curlで取得したHTMLの本文。"
+    },
+    "ace-coe-peru-2026": {
+      "title": "Perú 2026 - Cup of Excellence (competition results)",
+      "org": "Alliance for Coffee Excellence (Cup of Excellence)",
+      "url": "https://allianceforcoffeeexcellence.org/peru-2026/",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-10",
+      "note": "curlで取得したHTMLの本文。"
+    },
+    "anacafe-gc-altitudes": {
+      "title": "Coffee types(標高別の等級図 types_altitudes.png)",
+      "org": "Anacafé(Guatemalan Coffees)",
+      "url": "https://www.guatemalancoffees.com/main/coffee-types/",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-10",
+      "note": "画像(図/インフォグラフィック)。画像を直接見て内容を確認し、quote はOCR文字起こしで機械照合した。画像URL: https://www.guatemalancoffees.com/media/1095/types_altitudes.png。ページ下部の著作表示は Guatemalan National Coffee Association。"
+    },
+    "eas130-1999": {
+      "title": "EAS 130:1999 Green coffee beans - Specification",
+      "org": "East African Community (EAC)",
+      "url": "https://law.resource.org/pub/eac/ibr/eas.130.1999.html",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-10",
+      "note": "law.resource.org掲載のEAC規格全文(HTMLをcurlで取得)。"
+    },
+    "fao-ifc-yemen-coffee-vc-2023": {
+      "title": "Coffee value chain in Yemen: export potential and investment opportunities",
+      "org": "FAO and IFC",
+      "url": "https://openknowledge.fao.org/server/api/core/bitstreams/1f8cb82b-a8ae-4229-bb4f-0a193b5c620f/content",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-10",
+      "note": "2023年。curlでPDF取得(約12MB)、pypdfで本文抽出"
+    },
+    "icafe-pliego-ig-2008": {
+      "title": "Pliego de Condiciones, Indicación Geográfica 'Café de Costa Rica' (2008)",
+      "org": "Instituto del Café de Costa Rica (ICAFE)",
+      "url": "https://www.icafe.cr/wp-content/uploads/indicacion_geografica/Pliego%20de%20Condiciones.pdf",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-10",
+      "note": "128ページ。歴史の章は研究文献(Hallほか)を引用して書かれたICAFEの文書。pypdfで全文抽出"
+    },
+    "ico-faq": {
+      "title": "FAQs",
+      "org": "International Coffee Organization (ICO)",
+      "url": "https://ico.org/what-we-do/faq/",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-10"
+    },
+    "ico-history-pt": {
+      "title": "A história do café (ICO 旧サイト・ポルトガル語版)",
+      "org": "International Coffee Organization",
+      "url": "http://dev.ico.org/pt/coffee_storyp.asp?section=Sobre_o_cafE9",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-10",
+      "note": "文字コードはlatin-1/cp1252。旧サイト(dev.ico.org)のページ"
+    },
+    "ke-gazette-ln102-2019": {
+      "title": "The Crops (Coffee) (General) Regulations, 2019 (Legal Notice No. 102, Kenya Gazette Supplement No. 100, 1 July 2019)",
+      "org": "Government of Kenya",
+      "url": "https://infotradekenya.go.ke/media/Legal%20Notice%20102%20-%20Coffee%20General%20Regulations.PDF",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-10",
+      "note": "PDF全文をpypdfで抽出。"
+    },
+    "tz-coffee-regs-2013": {
+      "title": "The Coffee Industry Regulations, 2013 (Government Notice No. 385 of 2013)",
+      "org": "United Republic of Tanzania (via FAOLEX)",
+      "url": "https://faolex.fao.org/docs/pdf/tan168710.pdf",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-10",
+      "note": "官報付録のPDF全文をpypdfで抽出(OCR由来の誤字・空白あり)。2013年版であり、その後の改正(GN 65 of 2014 等)は未確認。"
+    },
+    "usda-fas-gain-et2019": {
+      "title": "Coffee Annual (Ethiopia, 2019-05-29)",
+      "org": "USDA Foreign Agricultural Service",
+      "url": "https://apps.fas.usda.gov/newgainapi/api/report/downloadreportbyfilename?filename=Coffee+Annual_Addis+Ababa_Ethiopia_5-29-2019.pdf",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": "pypdf で本文抽出"
+    },
+    "usda-fas-gain-et2025-0014": {
+      "title": "Coffee Annual (Ethiopia, ET2025-0014, 2025-06-03)",
+      "org": "USDA Foreign Agricultural Service",
+      "url": "https://apps.fas.usda.gov/newgainapi/api/report/downloadreportbyfilename?filename=Coffee+Annual_Addis+Ababa_Ethiopia_ET2025-0014.pdf",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": "pypdf で本文抽出"
+    },
+    "usda-fas-gain-et2026-0005": {
+      "title": "Coffee Annual (Ethiopia, ET2026-0005, 2026-05-20)",
+      "org": "USDA Foreign Agricultural Service",
+      "url": "https://apps.fas.usda.gov/newgainapi/api/report/downloadreportbyfilename?filename=Coffee+Annual_Addis+Ababa_Ethiopia_ET2026-0005.pdf",
+      "kind": "primary",
+      "readMethod": "full-text",
+      "accessed": "2026-11-08",
+      "note": "pypdf で本文抽出。www.fas.usda.gov 側のURLは403、apps.fas.usda.gov のAPI経由で取得"
+    }
+  },
+  "entries": {
+    "fact:「モカ」は港の名前でもある": {
+      "status": "verified",
+      "claims": [
+        {
+          "text": "モカ(Al Mokha)港は、歴史的にイエメンからのコーヒー輸出の主要な拠点で、「モカ」コーヒーはこの港と結びつけられている",
+          "status": "verified",
+          "sourceIds": [
+            "fao-ifc-yemen-coffee-vc-2023"
+          ],
+          "quote": "mocha coffee associated with Al Mokha port, historically a major hub for coffee exports out of Yemen",
+          "location": "Executive summary"
+        },
+        {
+          "text": "ICOの歴史解説は、当時の大きな港モカ(Moca)の名が、いまではコーヒーの一種の同義語になっていると記す",
+          "status": "verified",
+          "sourceIds": [
+            "ico-history-pt"
+          ],
+          "quote": "passando pelo grande porto da época, Moca, de nome hoje sinônimo com uma variedade de café",
+          "location": "A história do café(本文)"
+        }
+      ],
+      "note": "豆知識の新規カード(2026-11-10)。既存の産地ガイドの検証済みの主張を、原文で再確認して書いた。"
+    },
+    "fact:コスタリカは独立の年に、貧しい人々へコーヒーの苗を配った": {
+      "status": "verified",
+      "claims": [
+        {
+          "text": "最初の種子は18世紀末に届いたが、コスタリカで重要なコーヒー栽培の活動(una actividad cafetalera importante)が始まったと歴史的な証拠で確実にいえるのは1808年以降",
+          "status": "verified",
+          "sourceIds": [
+            "icafe-pliego-ig-2008"
+          ],
+          "quote": "Aunque las primeras semillas llegaron a fines del siglo XVIII, es hasta después de 1808 que se tiene certeza, apoyada por evidencia histórica, de que en Costa Rica se empezó a desarrollar una actividad",
+          "location": "Pliego p.56",
+          "note": "原文はこの後に「cafetalera importante.」と続く(PDFの抽出で「cafetal era」と分かれるため、引用は手前で止めた)。"
+        },
+        {
+          "text": "独立の年(1821年)に、サンホセの自治体(corporación josefina)が、貧しい人々にコーヒーの苗(matas de café)を無償で配った",
+          "status": "verified",
+          "sourceIds": [
+            "icafe-pliego-ig-2008"
+          ],
+          "quote": "La corporación josefina distribuyó gratuitamente matas de café entre los indigentes en el mismo año de la Independencia (1821).",
+          "location": "Pliego p.56",
+          "note": "「josefina」は、同じ段落の「Siguiendo el ejemplo josefino, el municipio de Cartago」と並ぶ表現で、サンホセ(San José)の自治体を指す文脈(前の文に「en San José」)。"
+        }
+      ],
+      "note": "豆知識の新規カード(2026-11-10)。既存の産地ガイドの検証済みの主張を、原文で再確認して書いた。"
+    },
+    "fact:「AA」はふるいの番号で決まる等級(ケニア・タンザニア)": {
+      "status": "verified",
+      "claims": [
+        {
+          "text": "ケニアの規則では、AAは平豆で、スクリーン21を通過して18に残る豆(7.2mm)",
+          "status": "verified",
+          "sourceIds": [
+            "ke-gazette-ln102-2019"
+          ],
+          "quote": "AA Flat beans Through 21 retained on 18 (7.2 mm)",
+          "location": "Crops (Coffee) (General) Regulations 2019, Fifth Schedule A. Kenya Standards"
+        },
+        {
+          "text": "タンザニアの規則では、AAはスクリーン18に最低90%が残る豆(スクリーン17は最大8〜10%)",
+          "status": "verified",
+          "sourceIds": [
+            "tz-coffee-regs-2013"
+          ],
+          "quote": "AA Retained minimum 90% of screen 18. Maximum 8 - 10% of screen 17",
+          "location": "Coffee Industry Regulations 2013 (GN 385), Sixth Schedule 2.0 Mild Coffee Grading Schedules"
+        },
+        {
+          "text": "東アフリカ規格は、大きさと形による格付けは、品質のおおよその目安にすぎないと述べる",
+          "status": "verified",
+          "sourceIds": [
+            "eas130-1999"
+          ],
+          "quote": "Grading by size and shape is only a fair estimate of coffee quality.",
+          "location": "EAS 130:1999 5.3 Grading by cup quality"
+        }
+      ],
+      "note": "豆知識の新規カード(2026-11-10)。既存の産地ガイドの検証済みの主張を、原文で再確認して書いた。"
+    },
+    "fact:グアテマラの「SHB」は、標高1,370m超のコーヒー": {
+      "status": "verified",
+      "claims": [
+        {
+          "text": "Anacaféの標高別の図は、SHBを標高4,500フィート(1,370m)超、Semi-Hard / Hardを3,500〜4,500フィート(1,066〜1,370m)、Extra Prime / EPWを2,500〜3,500フィート(764〜1,066m)と示す",
+          "status": "verified",
+          "sourceIds": [
+            "anacafe-gc-altitudes"
+          ],
+          "quote": "SHB +4500 ft / +1370 m || Semi-Hard / Hard 3500 - 4500 ft / 1066 - 1370 m || Extra Prime / EPW 2500 - 3500 ft / 764 - 1066 m",
+          "location": "Coffee types(標高別の図 types_altitudes.png)",
+          "note": "画像を2026-11-10にあらためて直接見て、3段の表記を確認した。"
+        }
+      ],
+      "note": "豆知識の新規カード(2026-11-10)。既存の産地ガイドの検証済みの主張を、原文で再確認して書いた。"
+    },
+    "fact:ルワンダは、アフリカで最初にCOEを開いた国": {
+      "status": "verified",
+      "claims": [
+        {
+          "text": "ルワンダはアフリカで最初にカップ・オブ・エクセレンス(COE)を開催した国で、最初のCOEは2008年にさかのぼる",
+          "status": "verified",
+          "sourceIds": [
+            "ace-blog-rwanda-coe-2018"
+          ],
+          "quote": "Rwanda was the first African country to host a CoE competition, led by the Portland, Oregon-based Alliance for Coffee Excellence along with in-country partners, with the first CoE there dating back to 2008.",
+          "location": "ACEブログ 2018-08-23"
+        }
+      ],
+      "note": "豆知識の新規カード(2026-11-10)。既存の産地ガイドの検証済みの主張を、原文で再確認して書いた。"
+    },
+    "fact:コーヒーに「生産の割当」があった時代": {
+      "status": "verified",
+      "claims": [
+        {
+          "text": "ICOは、消費の必要量を超えるコーヒーの供給を市場から保留する割当制度を、1962年から1989年まで断続的に運用した",
+          "status": "verified",
+          "sourceIds": [
+            "ico-faq"
+          ],
+          "quote": "The ICO operated a quota system, whereby coffee supplies in excess of consumer requirements were withheld from the market, on and off from 1962 to 1989, when the system was suspended because of failure to agree on quota distribution.",
+          "location": "FAQs「Does the ICO operate a quota system?」"
+        },
+        {
+          "text": "1989年に、割当の配分で合意できず、制度は停止された",
+          "status": "verified",
+          "sourceIds": [
+            "ico-faq"
+          ],
+          "quote": "when the system was suspended because of failure to agree on quota distribution",
+          "location": "FAQs「Does the ICO operate a quota system?」"
+        },
+        {
+          "text": "現在、ICOは割当制度を運用していない",
+          "status": "verified",
+          "sourceIds": [
+            "ico-faq"
+          ],
+          "quote": "Does the ICO operate a quota system? No.",
+          "location": "FAQs「Does the ICO operate a quota system?」"
+        }
+      ],
+      "note": "豆知識の新規カード(2026-11-10)。既存の産地ガイドの検証済みの主張を、原文で再確認して書いた。"
+    },
+    "fact:エチオピアは2019年に、一部の小農の直接輸出を認めた": {
+      "status": "verified",
+      "claims": [
+        {
+          "text": "小農がエチオピアのコーヒー生産の90%を占める",
+          "status": "verified",
+          "sourceIds": [
+            "usda-fas-gain-et2026-0005"
+          ],
+          "quote": "Smallholder farmers dominate Ethiopia's coffee sector, accounting for 90 percent of total national production.",
+          "location": "ET2026-0005 冒頭",
+          "note": "原文は、2026-11-10はUSDAのサイトに接続できず再取得できなかった。2026-11-09の検証(原文を読んだ引用)を使っている。"
+        },
+        {
+          "text": "エチオピア商品取引所(ECX)は2008年に設立された",
+          "status": "verified",
+          "sourceIds": [
+            "usda-fas-gain-et2019"
+          ],
+          "quote": "The Ethiopia Commodity Exchange (ECX) was established in 2008",
+          "location": "ET 2019年版 Trade",
+          "note": "原文は、2026-11-10は再取得できなかった。2026-11-09の検証を使っている。"
+        },
+        {
+          "text": "2019年の政策改革で、2ha以上の土地を持つ小農が輸出許可を得て、コーヒーを国際市場へ直接販売できるようになった",
+          "status": "verified",
+          "sourceIds": [
+            "usda-fas-gain-et2025-0014"
+          ],
+          "quote": "policy reform in 2019 allowed smallholder farmers who own at least two hectares of land to obtain export licenses and sell their coffee directly to international markets",
+          "location": "ET2025-0014 Policy / Direct Export Policy",
+          "note": "原文は、2026-11-10は再取得できなかった。2026-11-09の検証を使っている。"
+        }
+      ],
+      "note": "豆知識の新規カード(2026-11-10)。既存の産地ガイドの検証済みの主張を、原文で再確認して書いた。"
+    },
+    "fact:ペルーのCOEは、2022〜2026年の1位がすべてカハマルカ産": {
+      "status": "verified",
+      "claims": [
+        {
+          "text": "ペルーCOE 2017年の1位はカハマルカの農園",
+          "status": "verified",
+          "sourceIds": [
+            "ace-coe-peru-2017"
+          ],
+          "quote": "1A 6 La Flor 2017 – {ORG} Juan Heredia Sanchez Jaén, Cajamarca 92.25",
+          "location": "ACE「Perú 2017」COE Results の1位"
+        },
+        {
+          "text": "ペルーCOE 2018年の1位はクスコの農園",
+          "status": "verified",
+          "sourceIds": [
+            "ace-coe-peru-2018"
+          ],
+          "quote": "1a 6 (+1 Partial) Nueva Alianza Dwigth Aguilar Masias Cusco 91.08",
+          "location": "ACE「Perú 2018」COE Results の1位"
+        },
+        {
+          "text": "ペルーCOE 2019年の1位はカハマルカの農園",
+          "status": "verified",
+          "sourceIds": [
+            "ace-coe-peru-2019"
+          ],
+          "quote": "1a 180 La Lucuma Grimanes Morales Lizana Cajamarca 92.28",
+          "location": "ACE「Perú 2019」COE Results の1位"
+        },
+        {
+          "text": "ペルーCOE 2021年の1位はクスコの農園",
+          "status": "verified",
+          "sourceIds": [
+            "ace-coe-peru-2021"
+          ],
+          "quote": "1a 90.2 Nueva Alianza Dwight Aguilar Masías Cusco",
+          "location": "ACE「Perú 2021」COE Results の1位"
+        },
+        {
+          "text": "ペルーCOE 2022年の1位はカハマルカの農園",
+          "status": "verified",
+          "sourceIds": [
+            "ace-coe-peru-2022"
+          ],
+          "quote": "1a 90.39 LA BOLA BLANCA FLOR CORDOVA JIMENEZ CAJAMARCA",
+          "location": "ACE「Perú 2022」COE Results の1位"
+        },
+        {
+          "text": "ペルーCOE 2023年の1位はカハマルカの農園",
+          "status": "verified",
+          "sourceIds": [
+            "ace-coe-peru-2023"
+          ],
+          "quote": "1A 90.74 Alto Mirador Yoniser Mego Silva Cajamarca",
+          "location": "ACE「Perú 2023」COE Results の1位"
+        },
+        {
+          "text": "ペルーCOE 2024年の1位はカハマルカの農園",
+          "status": "verified",
+          "sourceIds": [
+            "ace-coe-peru-2024"
+          ],
+          "quote": "1A 90,54 El Mirador Miguel Padilla Chinguel Caturra, Bourbon, Geisha Washed Cajamarca",
+          "location": "ACE「Perú 2024」COE Results の1位"
+        },
+        {
+          "text": "ペルーCOE 2025年の1位はカハマルカの農園",
+          "status": "verified",
+          "sourceIds": [
+            "ace-coe-peru-2025"
+          ],
+          "quote": "1A 90,64 La Catarata Angel Antonio Manosalva Palomino Geisha Washed Cajamarca",
+          "location": "ACE「Perú 2025」COE Results の1位"
+        },
+        {
+          "text": "ペルーCOE 2026年の1位はカハマルカの農園",
+          "status": "verified",
+          "sourceIds": [
+            "ace-coe-peru-2026"
+          ],
+          "quote": "1 91.71 Finca La Esperanza Fidel Huancas Huancas Washed Geisha Cajamarca",
+          "location": "ACE「Perú 2026」COE Results の1位"
+        },
+        {
+          "text": "2026年は、審査の結果が出ている段階で、オークションは2026年12月8日の予定",
+          "status": "verified",
+          "sourceIds": [
+            "ace-coe-peru-2026"
+          ],
+          "quote": "COE Auction: December 8, 2026 13:00 UTC",
+          "location": "ACE「Perú 2026」"
+        }
+      ],
+      "note": "豆知識の新規カード(2026-11-10)。既存の産地ガイドの検証済みの主張を、原文で再確認して書いた。"
+    }
+  }
+}

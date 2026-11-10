@@ -13,7 +13,7 @@
   "url": "https://allianceforcoffeeexcellence.org/blog/2018/08/23/after-hiatus-rwanda-cup-of-excellence-returns-with-340-coffee-submissions/",
   "kind": "primary",
   "readMethod": "full-text",
-  "accessed": "2026-11-08",
+  "accessed": "2026-11-10",
   "note": "curlでHTML取得。"
  },
  "ace-coe-peru-2017": {
@@ -22,7 +22,7 @@
   "url": "https://allianceforcoffeeexcellence.org/peru-2017/",
   "kind": "primary",
   "readMethod": "full-text",
-  "accessed": "2026-11-09",
+  "accessed": "2026-11-10",
   "note": "curlで取得したHTMLの本文。"
  },
  "ace-coe-peru-2018": {
@@ -31,7 +31,7 @@
   "url": "https://allianceforcoffeeexcellence.org/peru-2018/",
   "kind": "primary",
   "readMethod": "full-text",
-  "accessed": "2026-11-09",
+  "accessed": "2026-11-10",
   "note": "curlで取得したHTMLの本文。"
  },
  "ace-coe-peru-2019": {
@@ -40,7 +40,7 @@
   "url": "https://allianceforcoffeeexcellence.org/peru-2019/",
   "kind": "primary",
   "readMethod": "full-text",
-  "accessed": "2026-11-09",
+  "accessed": "2026-11-10",
   "note": "curlで取得したHTMLの本文。"
  },
  "ace-coe-peru-2021": {
@@ -49,7 +49,7 @@
   "url": "https://allianceforcoffeeexcellence.org/peru-2021/",
   "kind": "primary",
   "readMethod": "full-text",
-  "accessed": "2026-11-09",
+  "accessed": "2026-11-10",
   "note": "curlで取得したHTMLの本文。"
  },
  "ace-coe-peru-2022": {
@@ -58,7 +58,7 @@
   "url": "https://allianceforcoffeeexcellence.org/peru-2022/",
   "kind": "primary",
   "readMethod": "full-text",
-  "accessed": "2026-11-09",
+  "accessed": "2026-11-10",
   "note": "curlで取得したHTMLの本文。"
  },
  "ace-coe-peru-2023": {
@@ -67,7 +67,7 @@
   "url": "https://allianceforcoffeeexcellence.org/peru-2023/",
   "kind": "primary",
   "readMethod": "full-text",
-  "accessed": "2026-11-09",
+  "accessed": "2026-11-10",
   "note": "curlで取得したHTMLの本文。"
  },
  "ace-coe-peru-2024": {
@@ -76,7 +76,7 @@
   "url": "https://allianceforcoffeeexcellence.org/peru-2024/",
   "kind": "primary",
   "readMethod": "full-text",
-  "accessed": "2026-11-09",
+  "accessed": "2026-11-10",
   "note": "curlで取得したHTMLの本文。"
  },
  "ace-coe-peru-2025": {
@@ -85,7 +85,7 @@
   "url": "https://allianceforcoffeeexcellence.org/peru-2025/",
   "kind": "primary",
   "readMethod": "full-text",
-  "accessed": "2026-11-09",
+  "accessed": "2026-11-10",
   "note": "curlで取得したHTMLの本文。"
  },
  "ace-coe-peru-2026": {
@@ -94,7 +94,7 @@
   "url": "https://allianceforcoffeeexcellence.org/peru-2026/",
   "kind": "primary",
   "readMethod": "full-text",
-  "accessed": "2026-11-09",
+  "accessed": "2026-11-10",
   "note": "curlで取得したHTMLの本文。"
  },
  "aeki-sejarah": {
@@ -218,7 +218,7 @@
   "url": "https://www.guatemalancoffees.com/main/coffee-types/",
   "kind": "primary",
   "readMethod": "full-text",
-  "accessed": "2026-11-08",
+  "accessed": "2026-11-10",
   "note": "画像(図/インフォグラフィック)。画像を直接見て内容を確認し、quote はOCR文字起こしで機械照合した。画像URL: https://www.guatemalancoffees.com/media/1095/types_altitudes.png。ページ下部の著作表示は Guatemalan National Coffee Association。"
  },
  "anacafe-gc-regiones": {
@@ -502,7 +502,7 @@
   "url": "https://law.resource.org/pub/eac/ibr/eas.130.1999.html",
   "kind": "primary",
   "readMethod": "full-text",
-  "accessed": "2026-11-09",
+  "accessed": "2026-11-10",
   "note": "law.resource.org掲載のEAC規格全文(HTMLをcurlで取得)。"
  },
  "ecx-coffee-contracts-2010": {
@@ -580,7 +580,7 @@
   "url": "https://openknowledge.fao.org/server/api/core/bitstreams/1f8cb82b-a8ae-4229-bb4f-0a193b5c620f/content",
   "kind": "primary",
   "readMethod": "full-text",
-  "accessed": "2026-11-09",
+  "accessed": "2026-11-10",
   "note": "2023年。curlでPDF取得(約12MB)、pypdfで本文抽出"
  },
  "fao-ocop-yemen-coffee-2025": {
@@ -705,7 +705,7 @@
   "url": "https://www.icafe.cr/wp-content/uploads/indicacion_geografica/Pliego%20de%20Condiciones.pdf",
   "kind": "primary",
   "readMethod": "full-text",
-  "accessed": "2026-11-08",
+  "accessed": "2026-11-10",
   "note": "128ページ。歴史の章は研究文献(Hallほか)を引用して書かれたICAFEの文書。pypdfで全文抽出"
  },
  "icafe-recibos-2-p-3-1": {
@@ -789,7 +789,7 @@
   "url": "https://ico.org/what-we-do/faq/",
   "kind": "primary",
   "readMethod": "full-text",
-  "accessed": "2026-11-09"
+  "accessed": "2026-11-10"
  },
  "ico-fgsc3-definitions-specialty": {
   "title": "FGSC 03/24 Rev.1 Existing definitions of specialty coffee (1 October 2025)",
@@ -815,7 +815,7 @@
   "url": "http://dev.ico.org/pt/coffee_storyp.asp?section=Sobre_o_cafE9",
   "kind": "primary",
   "readMethod": "full-text",
-  "accessed": "2026-11-08",
+  "accessed": "2026-11-10",
   "note": "文字コードはlatin-1/cp1252。旧サイト(dev.ico.org)のページ"
  },
  "ico-icc-124-9-profile-vietnam": {
@@ -1124,7 +1124,7 @@
   "url": "https://infotradekenya.go.ke/media/Legal%20Notice%20102%20-%20Coffee%20General%20Regulations.PDF",
   "kind": "primary",
   "readMethod": "full-text",
-  "accessed": "2026-11-09",
+  "accessed": "2026-11-10",
   "note": "PDF全文をpypdfで抽出。"
  },
  "kilimo-cdms-2024": {
@@ -1811,7 +1811,7 @@
   "url": "https://faolex.fao.org/docs/pdf/tan168710.pdf",
   "kind": "primary",
   "readMethod": "full-text",
-  "accessed": "2026-11-09",
+  "accessed": "2026-11-10",
   "note": "官報付録のPDF全文をpypdfで抽出(OCR由来の誤字・空白あり)。2013年版であり、その後の改正(GN 65 of 2014 等)は未確認。"
  },
  "tz-gn153-2003": {
