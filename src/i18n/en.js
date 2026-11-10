@@ -252,6 +252,8 @@ const UI = {
   "注文時選択": "Chosen when ordering",
   "フレーバーノート": "Flavor notes",
   "風味カテゴリ": "Flavor category",
+  "用語解説で詳しく見る": "See the glossary for details",
+  "特定銘柄の解説で詳しく見る": "See the designated brands page for details",
   "実績": "Achievements",
   "実績を見る": "See achievements",
   "連続で記録": "Recording streak",

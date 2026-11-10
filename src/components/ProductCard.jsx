@@ -4,11 +4,12 @@ import { PUBLISHED_FACTS, factKey } from "../data/published";
 import { SourceLinks } from "./common";
 import { brandName, designatedBrandExplanation, localizeFact, processingExplanation } from "../data/localize";
 import { ORIGIN_GUIDE } from "../data/originGuide";
-import { getGradeExplanation, getGradeExplanationKey } from "../utils/grade";
+import { getGradeExplanation } from "../utils/grade";
 import { analyzeFlavorNotes, flavorTagItems } from "../utils/flavor";
 import { cityFromAddress, formatDate, formatPrice } from "../utils/format";
 import { isNewArrival } from "../utils/productSort";
 import { useT } from "../i18n";
+import { useAppNavigation } from "../hooks/useAppNavigation";
 
 export function DiscoveryFactCard() {
   const t = useT();
@@ -50,7 +51,9 @@ export function DiscoveryFactCard() {
   );
 }
 
-export function HoverExplainTag({ label, category, detail, sourceKeys }) {
+// onMore: 渡すと、ふきだしの下に「用語解説で詳しく見る」のリンクを出す(出典の一覧は、移動先で見る)
+export function HoverExplainTag({ label, category, detail, sourceKeys, moreLabel, onMore }) {
+  const t = useT();
   // マウスホバーで解説をポップ表示するタグ。タッチ端末では代わりにタップで
   // 開閉できるよう、ホバーとクリックの両方をトリガーにしている。
   //
@@ -113,10 +116,23 @@ export function HoverExplainTag({ label, category, detail, sourceKeys }) {
           >
             {detail}
           </p>
-          {sourceKeys && sourceKeys.length > 0 && (
-            <p style={{ marginTop: 6, marginBottom: 0, fontSize: 10, lineHeight: 1.5, color: "#A89880" }}>
-              <SourceLinks keys={sourceKeys} collapse={false} />
-            </p>
+          {onMore ? (
+            <button
+              type="button"
+              onClick={(e) => {
+                e.stopPropagation();
+                onMore();
+              }}
+              style={{ marginTop: 8, padding: 0, background: "none", border: "none", fontSize: 11, color: "#C99A5B", textDecoration: "underline", textUnderlineOffset: 2, cursor: "pointer" }}
+            >
+              {moreLabel ?? t("用語解説で詳しく見る")} →
+            </button>
+          ) : (
+            sourceKeys && sourceKeys.length > 0 && (
+              <p style={{ marginTop: 6, marginBottom: 0, fontSize: 10, lineHeight: 1.5, color: "#A89880" }}>
+                <SourceLinks keys={sourceKeys} collapse={false} />
+              </p>
+            )
           )}
           {/* ふきだしの三角形 */}
           <div
@@ -144,14 +160,12 @@ const FLAVOR_TAG_LIMIT = 6;
 // savedAt: コレクションに保存した日時(コレクション画面でだけ渡す)
 function ProductCardImpl({ product, onOpenMap, onLearnOrigin, isFavorite, onToggleFavorite, onOpenDetail, savedAt }) {
   const t = useT();
+  const navigate = useAppNavigation();
   const processingDetail = product.processingMethod
     ? processingExplanation(product.processingMethod)
     : null;
   const gradeDetail = getGradeExplanation(product.grade, product.originCountry, product.designatedBrand);
-  const gradeKey = gradeDetail ? getGradeExplanationKey(product.grade, product.originCountry, product.designatedBrand) : null;
   const brandExplanation = product.designatedBrand ? designatedBrandExplanation(product.designatedBrand) : null;
-  const brandSourceKeys = brandExplanation ? [`brand:${product.designatedBrand}`] : [];
-  const processingSourceKeys = processingDetail ? [`processing:${product.processingMethod}`] : [];
   const flavorTags = flavorTagItems(analyzeFlavorNotes(product.flavorNotes));
   const flavorTagsShown = flavorTags.slice(0, FLAVOR_TAG_LIMIT);
   // 産地タブに詳細ページが無い国は、ボタン自体は表示したままグレーアウトする
@@ -240,14 +254,15 @@ function ProductCardImpl({ product, onOpenMap, onLearnOrigin, isFavorite, onTogg
           </div>
         </div>
 
-        {(product.designatedBrand || staticTags.length > 0 || product.processingMethod || product.grade || roastTag || product.roastSelectable || flavorCategories.length > 0) && (
+        {(product.designatedBrand || staticTags.length > 0 || product.processingMethod || product.grade || roastTag || product.roastSelectable || flavorTags.length > 0) && (
           <div className="flex flex-wrap gap-1.5">
             {product.designatedBrand && (
               <HoverExplainTag
                 label={brandName(product.designatedBrand)}
                 category={t("特定銘柄")}
                 detail={brandExplanation || t("この銘柄についての解説はまだ用意されていません。")}
-                sourceKeys={brandSourceKeys}
+                moreLabel={t("特定銘柄の解説で詳しく見る")}
+                onMore={() => navigate({ page: "trivia", sub: "brands" })}
               />
             )}
             {product.processingMethod && (
@@ -255,7 +270,7 @@ function ProductCardImpl({ product, onOpenMap, onLearnOrigin, isFavorite, onTogg
                 label={t(product.processingMethod)}
                 category={t("精選方法")}
                 detail={processingDetail || t("この精選方法についての解説はまだ用意されていません。")}
-                sourceKeys={processingSourceKeys}
+                onMore={() => navigate({ page: "trivia", sub: "glossary" })}
               />
             )}
             {product.grade && (
@@ -263,7 +278,7 @@ function ProductCardImpl({ product, onOpenMap, onLearnOrigin, isFavorite, onTogg
                 label={product.grade}
                 category={t("グレード")}
                 detail={gradeDetail}
-                sourceKeys={gradeKey ? [gradeKey] : []}
+                onMore={() => navigate({ page: "trivia", sub: "glossary" })}
               />
             )}
             {roastTag && (

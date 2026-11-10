@@ -46,6 +46,7 @@ import { AchievementsView } from "./components/AchievementsView";
 import { buildDiaryEvents } from "./utils/diary";
 import { achievementParams } from "./utils/achievements";
 import { useAchievements } from "./hooks/useAchievements";
+import { AppNavigationContext } from "./hooks/useAppNavigation";
 import { BottomNav } from "./components/BottomNav";
 import { AdBannerPlaceholder } from "./components/AdBanner";
 import { CompareTray, ComparisonModal } from "./components/Compare";
@@ -618,6 +619,7 @@ export default function CoffeeProductList() {
   }, []);
 
   return (
+    <AppNavigationContext.Provider value={navigateTo}>
     <div className="min-h-full bg-[var(--c-bg)] text-[var(--c-text)]" style={{ paddingBottom: bottomBarHeight }}>
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
@@ -1045,5 +1047,6 @@ export default function CoffeeProductList() {
         />
       </div>
     </div>
+    </AppNavigationContext.Provider>
   );
 }
