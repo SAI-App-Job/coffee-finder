@@ -19,6 +19,7 @@
     "timemore.com": { key: "timemore" },
     "fellowproducts.com": { key: "fellow" },
     "origami-kai.com": { key: "origami" },
+    "oc-shop.co.jp": { key: "ogawa", collection: "coffee-goods" },
   };
   const cfg = MAKERS[host];
   if (!cfg) {
@@ -26,7 +27,7 @@
     return;
   }
   // 候補にする語(ゆるい絞り込み)
-  const CANDIDATE = /ドリッパー|ペーパー|フィルター|ミル|グラインダー|dripper|filter|grinder|\bmill\b/i;
+  const CANDIDATE = /ドリッパー|ペーパー|フィルター|ミル|グラインダー|エアロプレス|サイフォン|フレンチプレス|dripper|filter|grinder|\bmill\b|aeropress/i;
 
   async function getJson(url) {
     for (let i = 0; i < 8; i++) {

@@ -4,10 +4,15 @@ const STORAGE_KEY = "coffee-finder:my-tools";
 
 // 登録できる道具の種類。順番は、設定画面の表示順
 export const TOOL_KINDS = [
-  { id: "dripper", label: "ドリッパー", example: "例: HARIO V60 02 透過ドリッパー" },
+  { id: "dripper", label: "ドリッパー", example: "例: HARIO V60 02 透過ドリッパー", brewer: true },
+  { id: "syphon", label: "サイフォン", example: "例: コーノ式 SKD型 2人用サイフォンセット", brewer: true },
+  { id: "frenchpress", label: "フレンチプレス", example: "例: ボダム CHAMBORD 0.35L", brewer: true },
+  { id: "aeropress", label: "エアロプレス", example: "例: AeroPress オリジナル", brewer: true },
   { id: "paper", label: "ペーパー", example: "例: HARIO V60用ペーパーフィルター 02" },
   { id: "grinder", label: "コーヒーミル", example: "例: タイムモア C3、コマンダンテ C40" },
 ];
+// 「抽出方法」で選べる、抽出の器具の種類(brewer: true)
+export const BREWER_KIND_IDS = TOOL_KINDS.filter((k) => k.brewer).map((k) => k.id);
 const KIND_IDS = TOOL_KINDS.map((k) => k.id);
 
 function generateId() {

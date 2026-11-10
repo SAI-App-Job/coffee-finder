@@ -4,6 +4,7 @@ import { DialInGauge } from "./common";
 import { FlavorChips, FlavorPicker } from "./FlavorPicker";
 import { formatDateTime } from "../utils/format";
 import { INPUT_CLASS } from "./formStyles";
+import { BREWER_KIND_IDS, TOOL_KINDS } from "../hooks/useMyTools";
 import { useT } from "../i18n";
 
 // 記録の場所。"home"=自宅などで自分で淹れた記録(抽出条件+Dial-in Score+ノート)、
@@ -67,16 +68,24 @@ function SourceToggle({ value, onChange }) {
 }
 
 // マイツールから選ぶ欄(1つの種類)
-function ToolSelect({ id, tools, value, onChange, emptyLabel }) {
+// groups を渡すと、種類ごとにまとめて表示する(tools は、まとめない場合)
+function ToolSelect({ id, tools, groups, value, onChange, emptyLabel }) {
   const t = useT();
+  const option = (tool) => (
+    <option key={tool.id} value={tool.id}>
+      {tool.name}
+    </option>
+  );
   return (
     <select id={id} value={value} onChange={(e) => onChange(e.target.value)} className={INPUT_CLASS}>
       <option value="">{t(emptyLabel)}</option>
-      {tools.map((tool) => (
-        <option key={tool.id} value={tool.id}>
-          {tool.name}
-        </option>
-      ))}
+      {groups
+        ? groups.map((g) => (
+            <optgroup key={g.label} label={t(g.label)}>
+              {g.tools.map(option)}
+            </optgroup>
+          ))
+        : tools.map(option)}
     </select>
   );
 }
@@ -151,14 +160,18 @@ export function TastingLogModal({ product, logs, myTools = [], onAddLog, onDelet
 
   if (!product) return null;
 
-  const drippers = myTools.filter((tool) => tool.kind === "dripper");
+  // 抽出の器具(ドリッパー・サイフォン・フレンチプレス・エアロプレス)。種類ごとにまとめて選べる
+  const brewers = myTools.filter((tool) => BREWER_KIND_IDS.includes(tool.kind));
+  const brewerGroups = TOOL_KINDS.filter((k) => k.brewer)
+    .map((k) => ({ label: k.label, tools: myTools.filter((tool) => tool.kind === k.id) }))
+    .filter((g) => g.tools.length > 0);
   const papers = myTools.filter((tool) => tool.kind === "paper");
   const grinders = myTools.filter((tool) => tool.kind === "grinder");
   // マイツールから選んだ内容を、ログに残す文字にする(道具を後で消しても、ログの文字は変わらない)
   const toolName = (list, id) => list.find((tool) => tool.id === id)?.name ?? "";
   const brewMethodText =
     form.brewSource === "tools"
-      ? [toolName(drippers, form.dripperId), toolName(papers, form.paperId)].filter(Boolean).join(" / ")
+      ? [toolName(brewers, form.dripperId), toolName(papers, form.paperId)].filter(Boolean).join(" / ")
       : form.brewMethod.trim();
   const grindSizeText =
     form.grindSource === "tools"
@@ -293,18 +306,18 @@ export function TastingLogModal({ product, logs, myTools = [], onAddLog, onDelet
                   placeholder={t("例: V60、エアロプレス、エスプレッソ")}
                   className={INPUT_CLASS}
                 />
-              ) : drippers.length === 0 && papers.length === 0 ? (
+              ) : brewers.length === 0 && papers.length === 0 ? (
                 <p className="text-[12px] text-[var(--c-text-3)] leading-relaxed">
-                  {t("マイツールにドリッパー・ペーパーの登録がありません。設定の「マイツール」から登録できます。")}
+                  {t("マイツールに抽出の器具(ドリッパー・サイフォン・フレンチプレス・エアロプレス)・ペーパーの登録がありません。設定の「マイツール」から登録できます。")}
                 </p>
               ) : (
                 <div className="flex flex-col gap-2">
                   <ToolSelect
                     id="log-brew-method"
-                    tools={drippers}
+                    groups={brewerGroups}
                     value={form.dripperId}
                     onChange={(v) => setForm((f) => ({ ...f, dripperId: v }))}
-                    emptyLabel="ドリッパーを選ぶ"
+                    emptyLabel="抽出の器具を選ぶ"
                   />
                   <ToolSelect
                     id="log-brew-paper"

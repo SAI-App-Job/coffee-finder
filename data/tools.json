@@ -189,6 +189,1102 @@
    "makerAlias": "ワンゼットプレッソ"
   },
   {
+   "id": "aeropress-shop-4996",
+   "kind": "aeropress",
+   "maker": "AeroPress",
+   "name": "エアロプレス オリジナル コーヒーメーカー No.4996",
+   "variants": [
+    {
+     "label": "",
+     "sku": "4970690994896",
+     "gtin": "4970690994896"
+    }
+   ],
+   "url": "https://oc-shop.co.jp/products/4996",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-ogawa-2026-11-10",
+   "makerAlias": "エアロプレス"
+  },
+  {
+   "id": "aeropress-shop-goods-ap-colors-green",
+   "kind": "aeropress",
+   "maker": "AeroPress",
+   "name": "エアロプレス クリア カラーズ グリーン T007",
+   "variants": [
+    {
+     "label": "",
+     "sku": "085276082400",
+     "gtin": "085276082400",
+     "gtinFrom": "sku"
+    }
+   ],
+   "url": "https://oc-shop.co.jp/products/goods-ap-colors-green",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-ogawa-2026-11-10",
+   "makerAlias": "エアロプレス"
+  },
+  {
+   "id": "aeropress-shop-goods-ap-colors-purple",
+   "kind": "aeropress",
+   "maker": "AeroPress",
+   "name": "エアロプレス クリア カラーズ パープル T005",
+   "variants": [
+    {
+     "label": "",
+     "sku": "085276082417",
+     "gtin": "085276082417",
+     "gtinFrom": "sku"
+    }
+   ],
+   "url": "https://oc-shop.co.jp/products/goods-ap-colors-purple",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-ogawa-2026-11-10",
+   "makerAlias": "エアロプレス"
+  },
+  {
+   "id": "aeropress-shop-goods-ap-colors-pink",
+   "kind": "aeropress",
+   "maker": "AeroPress",
+   "name": "エアロプレス クリア カラーズ ピンク T004",
+   "variants": [
+    {
+     "label": "",
+     "sku": "085276082370",
+     "gtin": "085276082370",
+     "gtinFrom": "sku"
+    }
+   ],
+   "url": "https://oc-shop.co.jp/products/goods-ap-colors-pink",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-ogawa-2026-11-10",
+   "makerAlias": "エアロプレス"
+  },
+  {
+   "id": "aeropress-shop-goods-ap-colors-black",
+   "kind": "aeropress",
+   "maker": "AeroPress",
+   "name": "エアロプレス クリア カラーズ ブラック T002",
+   "variants": [
+    {
+     "label": "",
+     "sku": "085276082387",
+     "gtin": "085276082387",
+     "gtinFrom": "sku"
+    }
+   ],
+   "url": "https://oc-shop.co.jp/products/goods-ap-colors-black",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-ogawa-2026-11-10",
+   "makerAlias": "エアロプレス"
+  },
+  {
+   "id": "aeropress-shop-goods-ap-colors-blue",
+   "kind": "aeropress",
+   "maker": "AeroPress",
+   "name": "エアロプレス クリア カラーズ ブルー T003",
+   "variants": [
+    {
+     "label": "",
+     "sku": "085276082394",
+     "gtin": "085276082394",
+     "gtinFrom": "sku"
+    }
+   ],
+   "url": "https://oc-shop.co.jp/products/goods-ap-colors-blue",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-ogawa-2026-11-10",
+   "makerAlias": "エアロプレス"
+  },
+  {
+   "id": "aeropress-shop-goods-ap-colors-red",
+   "kind": "aeropress",
+   "maker": "AeroPress",
+   "name": "エアロプレス クリア カラーズ レッド T006",
+   "variants": [
+    {
+     "label": "",
+     "sku": "085276082509",
+     "gtin": "085276082509",
+     "gtinFrom": "sku"
+    }
+   ],
+   "url": "https://oc-shop.co.jp/products/goods-ap-colors-red",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-ogawa-2026-11-10",
+   "makerAlias": "エアロプレス"
+  },
+  {
+   "id": "aeropress-shop-5008",
+   "kind": "aeropress",
+   "maker": "AeroPress",
+   "name": "エアロプレス コーヒーメーカー クリア No.5008",
+   "variants": [
+    {
+     "label": "",
+     "sku": "4970690994872",
+     "gtin": "4970690994872",
+     "gtinFrom": "sku"
+    }
+   ],
+   "url": "https://oc-shop.co.jp/products/5008",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-ogawa-2026-11-10",
+   "makerAlias": "エアロプレス"
+  },
+  {
+   "id": "aeropress-shop-5002",
+   "kind": "aeropress",
+   "maker": "AeroPress",
+   "name": "エアロプレス ゴー トラベル コーヒーメーカー No.5002",
+   "variants": [
+    {
+     "label": "",
+     "sku": "4970690994919",
+     "gtin": "4970690994919"
+    }
+   ],
+   "url": "https://oc-shop.co.jp/products/5002",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-ogawa-2026-11-10",
+   "makerAlias": "エアロプレス"
+  },
+  {
+   "id": "aeropress-shop-goods-ap-gpts-cream",
+   "kind": "aeropress",
+   "maker": "AeroPress",
+   "name": "エアロプレス ゴー プラス トラベルシステム クリーム T009",
+   "variants": [
+    {
+     "label": "",
+     "sku": "085276082523",
+     "gtin": "085276082523",
+     "gtinFrom": "sku"
+    }
+   ],
+   "url": "https://oc-shop.co.jp/products/goods-ap-gpts-cream",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-ogawa-2026-11-10",
+   "makerAlias": "エアロプレス"
+  },
+  {
+   "id": "aeropress-shop-goods-ap-gpts-pink",
+   "kind": "aeropress",
+   "maker": "AeroPress",
+   "name": "エアロプレス ゴー プラス トラベルシステム ピンク T010",
+   "variants": [
+    {
+     "label": "",
+     "sku": "085276082691",
+     "gtin": "085276082691",
+     "gtinFrom": "sku"
+    }
+   ],
+   "url": "https://oc-shop.co.jp/products/goods-ap-gpts-pink",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-ogawa-2026-11-10",
+   "makerAlias": "エアロプレス"
+  },
+  {
+   "id": "aeropress-shop-goods-ap-gpts-black",
+   "kind": "aeropress",
+   "maker": "AeroPress",
+   "name": "エアロプレス ゴー プラス トラベルシステム ブラック T008",
+   "variants": [
+    {
+     "label": "",
+     "sku": "085276082424",
+     "gtin": "085276082424",
+     "gtinFrom": "sku"
+    }
+   ],
+   "url": "https://oc-shop.co.jp/products/goods-ap-gpts-black",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-ogawa-2026-11-10",
+   "makerAlias": "エアロプレス"
+  },
+  {
+   "id": "aeropress-shop-goods-ap-filter190",
+   "kind": "paper",
+   "maker": "AeroPress",
+   "name": "エアロプレス用 ペーパーフィルター ナチュラル（190枚） Z010",
+   "variants": [
+    {
+     "label": "",
+     "sku": "4970690330755",
+     "gtin": "4970690330755",
+     "gtinFrom": "sku"
+    }
+   ],
+   "url": "https://oc-shop.co.jp/products/goods-ap-filter190",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-ogawa-2026-11-10",
+   "makerAlias": "エアロプレス"
+  },
+  {
+   "id": "aeropress-shop-goods-ap-filter340",
+   "kind": "paper",
+   "maker": "AeroPress",
+   "name": "エアロプレス用 ペーパーフィルター ホワイト（340枚） Z011",
+   "variants": [
+    {
+     "label": "",
+     "sku": "4970690330656",
+     "gtin": "4970690330656",
+     "gtinFrom": "sku"
+    }
+   ],
+   "url": "https://oc-shop.co.jp/products/goods-ap-filter340",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-ogawa-2026-11-10",
+   "makerAlias": "エアロプレス"
+  },
+  {
+   "id": "bodum-11376-01",
+   "kind": "frenchpress",
+   "maker": "Bodum",
+   "name": "BEAN フレンチプレスコーヒーメーカー, 8 cup, 1.0 l, 34 oz, プラスチック",
+   "variants": [
+    {
+     "label": "ブラック",
+     "sku": "11376-01",
+     "gtin": "699965112578"
+    }
+   ],
+   "url": "https://www.bodum.com/jp/ja/11376-01-bean",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-bodum-2026-11-10",
+   "makerAlias": "ボダム"
+  },
+  {
+   "id": "bodum-11376-913",
+   "kind": "frenchpress",
+   "maker": "Bodum",
+   "name": "BEAN フレンチプレスコーヒーメーカー, 8 cup, 1.0 l, 34 oz, プラスチック",
+   "variants": [
+    {
+     "label": "オフホワイト",
+     "sku": "11376-913",
+     "gtin": "699965112677"
+    }
+   ],
+   "url": "https://www.bodum.com/jp/ja/11376-913-bean",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-bodum-2026-11-10",
+   "makerAlias": "ボダム"
+  },
+  {
+   "id": "bodum-1573-01",
+   "kind": "frenchpress",
+   "maker": "Bodum",
+   "name": "BISTRO NOUVEAU フレンチプレスコーヒーメーカー, 3 cup, 0.35 l, 12 oz",
+   "variants": [
+    {
+     "label": "ブラック",
+     "sku": "1573-01",
+     "gtin": "727015251400"
+    }
+   ],
+   "url": "https://www.bodum.com/jp/ja/1573-01-bistro-nouveau",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-bodum-2026-11-10",
+   "makerAlias": "ボダム"
+  },
+  {
+   "id": "bodum-1578-01",
+   "kind": "frenchpress",
+   "maker": "Bodum",
+   "name": "BISTRO NOUVEAU フレンチプレスコーヒーメーカー, 8 cup, 1.0 l, 34 oz",
+   "variants": [
+    {
+     "label": "ブラック",
+     "sku": "1578-01",
+     "gtin": "727015251448"
+    }
+   ],
+   "url": "https://www.bodum.com/jp/ja/1578-01-bistro-nouveau",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-bodum-2026-11-10",
+   "makerAlias": "ボダム"
+  },
+  {
+   "id": "bodum-1303-16",
+   "kind": "frenchpress",
+   "maker": "Bodum",
+   "name": "BODUM COLUMBIA ダブルウォール, フレンチプレスコーヒーメーカー, 3 cup, 0.35 l, 12 oz, ステンレススチール （艶あり 鏡面仕上げ）",
+   "variants": [
+    {
+     "label": "ステンレス",
+     "sku": "1303-16",
+     "gtin": "727015322513"
+    }
+   ],
+   "url": "https://www.bodum.com/jp/ja/1303-16-bodum-columbia",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-bodum-2026-11-10",
+   "makerAlias": "ボダム"
+  },
+  {
+   "id": "bodum-11055-16",
+   "kind": "frenchpress",
+   "maker": "Bodum",
+   "name": "BODUM COLUMBIA ダブルウォール, フレンチプレスコーヒーメーカー, 4 cup, 0.5 l, 17 oz, ステンレススチール （艶あり 鏡面仕上げ）",
+   "variants": [
+    {
+     "label": "ステンレス",
+     "sku": "11055-16",
+     "gtin": "727015055657"
+    }
+   ],
+   "url": "https://www.bodum.com/jp/ja/11055-16-bodum-columbia",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-bodum-2026-11-10",
+   "makerAlias": "ボダム"
+  },
+  {
+   "id": "bodum-1308-16",
+   "kind": "frenchpress",
+   "maker": "Bodum",
+   "name": "BODUM COLUMBIA ダブルウォール, フレンチプレスコーヒーメーカー, 8 cup, 1.0 l, 34 oz, ステンレススチール （艶あり 鏡面仕上げ）",
+   "variants": [
+    {
+     "label": "ステンレス",
+     "sku": "1308-16",
+     "gtin": "727015302805"
+    }
+   ],
+   "url": "https://www.bodum.com/jp/ja/1308-16-bodum-columbia",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-bodum-2026-11-10",
+   "makerAlias": "ボダム"
+  },
+  {
+   "id": "bodum-1543-01",
+   "kind": "frenchpress",
+   "maker": "Bodum",
+   "name": "BRAZIL フレンチプレスコーヒーメーカー, 0.35 l, 12 oz",
+   "variants": [
+    {
+     "label": "ブラック",
+     "sku": "1543-01",
+     "gtin": "727015251288"
+    }
+   ],
+   "url": "https://www.bodum.com/jp/ja/1543-01-brazil",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-bodum-2026-11-10",
+   "makerAlias": "ボダム"
+  },
+  {
+   "id": "bodum-1548-01",
+   "kind": "frenchpress",
+   "maker": "Bodum",
+   "name": "BRAZIL フレンチプレスコーヒーメーカー, 1.0 l, 34 oz",
+   "variants": [
+    {
+     "label": "ブラック",
+     "sku": "1548-01",
+     "gtin": "727015251325"
+    }
+   ],
+   "url": "https://www.bodum.com/jp/ja/1548-01-brazil",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-bodum-2026-11-10",
+   "makerAlias": "ボダム"
+  },
+  {
+   "id": "bodum-10948-04",
+   "kind": "frenchpress",
+   "maker": "Bodum",
+   "name": "BRAZIL フレンチプレスコーヒーメーカー, 3 cup, 0.35 l, 12 oz",
+   "variants": [
+    {
+     "label": "Basic Red",
+     "sku": "10948-04",
+     "gtin": "699965476434"
+    }
+   ],
+   "url": "https://www.bodum.com/jp/ja/10948-04-brazil",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-bodum-2026-11-10",
+   "makerAlias": "ボダム"
+  },
+  {
+   "id": "bodum-10948-01j",
+   "kind": "frenchpress",
+   "maker": "Bodum",
+   "name": "BRAZIL フレンチプレスコーヒーメーカー, 3 cup, 0.35 l, 12 oz, プラスチック",
+   "variants": [
+    {
+     "label": "ブラック",
+     "sku": "10948-01J",
+     "gtin": "699965090074"
+    }
+   ],
+   "url": "https://www.bodum.com/jp/ja/10948-01j-brazil",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-bodum-2026-11-10",
+   "makerAlias": "ボダム"
+  },
+  {
+   "id": "bodum-10938-913j",
+   "kind": "frenchpress",
+   "maker": "Bodum",
+   "name": "BRAZIL フレンチプレスコーヒーメーカー, 8 cup, 1.0 l, 34 oz",
+   "variants": [
+    {
+     "label": "オフホワイト",
+     "sku": "10938-913J",
+     "gtin": "699965269296"
+    }
+   ],
+   "url": "https://www.bodum.com/jp/ja/10938-913j-brazil",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-bodum-2026-11-10",
+   "makerAlias": "ボダム"
+  },
+  {
+   "id": "bodum-10938-01j",
+   "kind": "frenchpress",
+   "maker": "Bodum",
+   "name": "BRAZIL フレンチプレスコーヒーメーカー, 8 cup, 1.0 l, 34 oz",
+   "variants": [
+    {
+     "label": "ブラック",
+     "sku": "10938-01J",
+     "gtin": "699965269272"
+    }
+   ],
+   "url": "https://www.bodum.com/jp/ja/10938-01j-brazil",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-bodum-2026-11-10",
+   "makerAlias": "ボダム"
+  },
+  {
+   "id": "bodum-1913-01",
+   "kind": "frenchpress",
+   "maker": "Bodum",
+   "name": "CAFFETTIERA フレンチプレスコーヒーメーカー, 3 cup, 0.35 l, 12 oz, ステンレススチール / プラスチックリッド",
+   "variants": [
+    {
+     "label": "ブラック",
+     "sku": "1913-01",
+     "gtin": "727015248523"
+    }
+   ],
+   "url": "https://www.bodum.com/jp/ja/1913-01-caffettiera",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-bodum-2026-11-10",
+   "makerAlias": "ボダム"
+  },
+  {
+   "id": "bodum-1913-913",
+   "kind": "frenchpress",
+   "maker": "Bodum",
+   "name": "CAFFETTIERA フレンチプレスコーヒーメーカー, 3 cup, 0.35 l, 12 oz, ステンレススチール / プラスチックリッド",
+   "variants": [
+    {
+     "label": "オフホワイト",
+     "sku": "1913-913",
+     "gtin": "699965260101"
+    }
+   ],
+   "url": "https://www.bodum.com/jp/ja/1913-913-caffettiera",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-bodum-2026-11-10",
+   "makerAlias": "ボダム"
+  },
+  {
+   "id": "bodum-1918-760-761",
+   "kind": "frenchpress",
+   "maker": "Bodum",
+   "name": "CAFFETTIERA フレンチプレスコーヒーメーカー, 8 cup, 1.0 l, 34 oz",
+   "variants": [
+    {
+     "label": "",
+     "sku": "1918-760-761",
+     "gtin": "699965637705"
+    }
+   ],
+   "url": "https://www.bodum.com/jp/ja/1918-760-761-caffettiera",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-bodum-2026-11-10",
+   "makerAlias": "ボダム"
+  },
+  {
+   "id": "bodum-1918-751-761",
+   "kind": "frenchpress",
+   "maker": "Bodum",
+   "name": "CAFFETTIERA フレンチプレスコーヒーメーカー, 8 cup, 1.0 l, 34 oz",
+   "variants": [
+    {
+     "label": "",
+     "sku": "1918-751-761",
+     "gtin": "699965637767"
+    }
+   ],
+   "url": "https://www.bodum.com/jp/ja/1918-751-761-caffettiera",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-bodum-2026-11-10",
+   "makerAlias": "ボダム"
+  },
+  {
+   "id": "bodum-1918-746-761",
+   "kind": "frenchpress",
+   "maker": "Bodum",
+   "name": "CAFFETTIERA フレンチプレスコーヒーメーカー, 8 cup, 1.0 l, 34 oz",
+   "variants": [
+    {
+     "label": "",
+     "sku": "1918-746-761",
+     "gtin": "699965637729"
+    }
+   ],
+   "url": "https://www.bodum.com/jp/ja/1918-746-761-caffettiera",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-bodum-2026-11-10",
+   "makerAlias": "ボダム"
+  },
+  {
+   "id": "bodum-1918-170-761",
+   "kind": "frenchpress",
+   "maker": "Bodum",
+   "name": "CAFFETTIERA フレンチプレスコーヒーメーカー, 8 cup, 1.0 l, 34 oz",
+   "variants": [
+    {
+     "label": "",
+     "sku": "1918-170-761",
+     "gtin": "699965637743"
+    }
+   ],
+   "url": "https://www.bodum.com/jp/ja/1918-170-761-caffettiera",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-bodum-2026-11-10",
+   "makerAlias": "ボダム"
+  },
+  {
+   "id": "bodum-12312-16-107",
+   "kind": "frenchpress",
+   "maker": "Bodum",
+   "name": "CHAMBORD フレンチプレスコーヒーメーカー, 3 cup, 0.35 l, 12 oz",
+   "variants": [
+    {
+     "label": "ステンレス",
+     "sku": "12312-16-107",
+     "gtin": "699965616663"
+    }
+   ],
+   "url": "https://www.bodum.com/jp/ja/12312-16-107-chambord",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-bodum-2026-11-10",
+   "makerAlias": "ボダム"
+  },
+  {
+   "id": "bodum-12312-16-16",
+   "kind": "frenchpress",
+   "maker": "Bodum",
+   "name": "CHAMBORD フレンチプレスコーヒーメーカー, 3 cup, 0.35 l, 12 oz",
+   "variants": [
+    {
+     "label": "ステンレス",
+     "sku": "12312-16-16",
+     "gtin": "699965616649"
+    }
+   ],
+   "url": "https://www.bodum.com/jp/ja/12312-16-16-chambord",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-bodum-2026-11-10",
+   "makerAlias": "ボダム"
+  },
+  {
+   "id": "bodum-1923-17",
+   "kind": "frenchpress",
+   "maker": "Bodum",
+   "name": "CHAMBORD フレンチプレスコーヒーメーカー, 3 cup, 0.35 l, 12 oz , ステンレススチール",
+   "variants": [
+    {
+     "label": "Gold",
+     "sku": "1923-17",
+     "gtin": "727015272665"
+    }
+   ],
+   "url": "https://www.bodum.com/jp/ja/1923-17-chambord",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-bodum-2026-11-10",
+   "makerAlias": "ボダム"
+  },
+  {
+   "id": "bodum-1923-18",
+   "kind": "frenchpress",
+   "maker": "Bodum",
+   "name": "CHAMBORD フレンチプレスコーヒーメーカー, 3 cup, 0.35 l, 12 oz , ステンレススチール",
+   "variants": [
+    {
+     "label": "銅",
+     "sku": "1923-18",
+     "gtin": "699965287382"
+    }
+   ],
+   "url": "https://www.bodum.com/jp/ja/1923-18-chambord",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-bodum-2026-11-10",
+   "makerAlias": "ボダム"
+  },
+  {
+   "id": "bodum-1923-16j",
+   "kind": "frenchpress",
+   "maker": "Bodum",
+   "name": "CHAMBORD フレンチプレスコーヒーメーカー, 3 cup, 0.35 l, 12 oz, ステンレススチール",
+   "variants": [
+    {
+     "label": "ステンレス",
+     "sku": "1923-16J",
+     "gtin": "727015257532"
+    }
+   ],
+   "url": "https://www.bodum.com/jp/ja/1923-16j-chambord",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-bodum-2026-11-10",
+   "makerAlias": "ボダム"
+  },
+  {
+   "id": "bodum-11813-16-16",
+   "kind": "frenchpress",
+   "maker": "Bodum",
+   "name": "CHAMBORD フレンチプレスコーヒーメーカー, 4 cup, 0.5 l, 17 oz",
+   "variants": [
+    {
+     "label": "ステンレス",
+     "sku": "11813-16-16",
+     "gtin": "699965610623"
+    }
+   ],
+   "url": "https://www.bodum.com/jp/ja/11813-16-16-chambord",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-bodum-2026-11-10",
+   "makerAlias": "ボダム"
+  },
+  {
+   "id": "bodum-11813-16-107",
+   "kind": "frenchpress",
+   "maker": "Bodum",
+   "name": "CHAMBORD フレンチプレスコーヒーメーカー, 4 cup, 0.5 l, 17 oz",
+   "variants": [
+    {
+     "label": "ステンレス",
+     "sku": "11813-16-107",
+     "gtin": "699965521509"
+    }
+   ],
+   "url": "https://www.bodum.com/jp/ja/11813-16-107-chambord",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-bodum-2026-11-10",
+   "makerAlias": "ボダム"
+  },
+  {
+   "id": "bodum-1924-18",
+   "kind": "frenchpress",
+   "maker": "Bodum",
+   "name": "CHAMBORD フレンチプレスコーヒーメーカー, 4 cup, 0.5 l, 17 oz, ステンレススチール",
+   "variants": [
+    {
+     "label": "銅",
+     "sku": "1924-18",
+     "gtin": "699965348274"
+    }
+   ],
+   "url": "https://www.bodum.com/jp/ja/1924-18-chambord",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-bodum-2026-11-10",
+   "makerAlias": "ボダム"
+  },
+  {
+   "id": "bodum-1924-16j",
+   "kind": "frenchpress",
+   "maker": "Bodum",
+   "name": "CHAMBORD フレンチプレスコーヒーメーカー, 4 cup, 0.5 l, 17 oz, ステンレススチール",
+   "variants": [
+    {
+     "label": "ステンレス",
+     "sku": "1924-16J",
+     "gtin": "727015257549"
+    }
+   ],
+   "url": "https://www.bodum.com/jp/ja/1924-16j-chambord",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-bodum-2026-11-10",
+   "makerAlias": "ボダム"
+  },
+  {
+   "id": "bodum-1924-17",
+   "kind": "frenchpress",
+   "maker": "Bodum",
+   "name": "CHAMBORD フレンチプレスコーヒーメーカー, 4 cup, 0.5 l, 17 oz, ステンレススチール",
+   "variants": [
+    {
+     "label": "Gold",
+     "sku": "1924-17",
+     "gtin": "727015272672"
+    }
+   ],
+   "url": "https://www.bodum.com/jp/ja/1924-17-chambord",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-bodum-2026-11-10",
+   "makerAlias": "ボダム"
+  },
+  {
+   "id": "bodum-11652-16-16",
+   "kind": "frenchpress",
+   "maker": "Bodum",
+   "name": "CHAMBORD フレンチプレスコーヒーメーカー, 8 cup, 1.0 l, 34 oz",
+   "variants": [
+    {
+     "label": "ステンレス",
+     "sku": "11652-16-16",
+     "gtin": "699965610401"
+    }
+   ],
+   "url": "https://www.bodum.com/jp/ja/11652-16-16-chambord",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-bodum-2026-11-10",
+   "makerAlias": "ボダム"
+  },
+  {
+   "id": "bodum-11652-16-107",
+   "kind": "frenchpress",
+   "maker": "Bodum",
+   "name": "CHAMBORD フレンチプレスコーヒーメーカー, 8 cup, 1.0 l, 34 oz",
+   "variants": [
+    {
+     "label": "ステンレス",
+     "sku": "11652-16-107",
+     "gtin": "699965515553"
+    }
+   ],
+   "url": "https://www.bodum.com/jp/ja/11652-16-107-chambord",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-bodum-2026-11-10",
+   "makerAlias": "ボダム"
+  },
+  {
+   "id": "bodum-1928-661-80",
+   "kind": "frenchpress",
+   "maker": "Bodum",
+   "name": "CHAMBORD フレンチプレスコーヒーメーカー, 8 cup, 1.0 l, 34 oz",
+   "variants": [
+    {
+     "label": "",
+     "sku": "1928-661-80",
+     "gtin": "699965608781"
+    }
+   ],
+   "url": "https://www.bodum.com/jp/ja/1928-661-80-chambord",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-bodum-2026-11-10",
+   "makerAlias": "ボダム"
+  },
+  {
+   "id": "bodum-1928-658-80",
+   "kind": "frenchpress",
+   "maker": "Bodum",
+   "name": "CHAMBORD フレンチプレスコーヒーメーカー, 8 cup, 1.0 l, 34 oz",
+   "variants": [
+    {
+     "label": "",
+     "sku": "1928-658-80",
+     "gtin": "699965608842"
+    }
+   ],
+   "url": "https://www.bodum.com/jp/ja/1928-658-80-chambord",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-bodum-2026-11-10",
+   "makerAlias": "ボダム"
+  },
+  {
+   "id": "bodum-1928-656-80",
+   "kind": "frenchpress",
+   "maker": "Bodum",
+   "name": "CHAMBORD フレンチプレスコーヒーメーカー, 8 cup, 1.0 l, 34 oz",
+   "variants": [
+    {
+     "label": "",
+     "sku": "1928-656-80",
+     "gtin": "699965608880"
+    }
+   ],
+   "url": "https://www.bodum.com/jp/ja/1928-656-80-chambord",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-bodum-2026-11-10",
+   "makerAlias": "ボダム"
+  },
+  {
+   "id": "bodum-1928-16j",
+   "kind": "frenchpress",
+   "maker": "Bodum",
+   "name": "CHAMBORD フレンチプレスコーヒーメーカー, 8 cup, 1.0 l, 34 oz, ステンレススチール",
+   "variants": [
+    {
+     "label": "ステンレス",
+     "sku": "1928-16J",
+     "gtin": "727015257556"
+    }
+   ],
+   "url": "https://www.bodum.com/jp/ja/1928-16j-chambord",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-bodum-2026-11-10",
+   "makerAlias": "ボダム"
+  },
+  {
+   "id": "bodum-1928-17",
+   "kind": "frenchpress",
+   "maker": "Bodum",
+   "name": "CHAMBORD フレンチプレスコーヒーメーカー, 8 cup, 1.0 l, 34 oz, ステンレススチール",
+   "variants": [
+    {
+     "label": "Gold",
+     "sku": "1928-17",
+     "gtin": "727015272689"
+    }
+   ],
+   "url": "https://www.bodum.com/jp/ja/1928-17-chambord",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-bodum-2026-11-10",
+   "makerAlias": "ボダム"
+  },
+  {
+   "id": "bodum-1928-18",
+   "kind": "frenchpress",
+   "maker": "Bodum",
+   "name": "CHAMBORD フレンチプレスコーヒーメーカー, 8 cup, 1.0 l, 34 oz, ステンレススチール",
+   "variants": [
+    {
+     "label": "銅",
+     "sku": "1928-18",
+     "gtin": "699965287351"
+    }
+   ],
+   "url": "https://www.bodum.com/jp/ja/1928-18-chambord",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-bodum-2026-11-10",
+   "makerAlias": "ボダム"
+  },
+  {
+   "id": "bodum-11196-17",
+   "kind": "frenchpress",
+   "maker": "Bodum",
+   "name": "EILEEN フレンチプレスコーヒーメーカー, 4 cup, 0.5 l, 17 oz, ステンレススチール",
+   "variants": [
+    {
+     "label": "Gold",
+     "sku": "11196-17",
+     "gtin": "699965038205"
+    }
+   ],
+   "url": "https://www.bodum.com/jp/ja/11196-17-eileen",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-bodum-2026-11-10",
+   "makerAlias": "ボダム"
+  },
+  {
+   "id": "bodum-10682-01j",
+   "kind": "frenchpress",
+   "maker": "Bodum",
+   "name": "KENYA フレンチプレスコーヒーメーカー, 3 cup, 0.35 l, 12 oz, プラスチック",
+   "variants": [
+    {
+     "label": "ブラック",
+     "sku": "10682-01J",
+     "gtin": "727015095813"
+    }
+   ],
+   "url": "https://www.bodum.com/jp/ja/10682-01j-kenya",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-bodum-2026-11-10",
+   "makerAlias": "ボダム"
+  },
+  {
+   "id": "bodum-10683-01j",
+   "kind": "frenchpress",
+   "maker": "Bodum",
+   "name": "KENYA フレンチプレスコーヒーメーカー, 4 cup, 0.5 l, 17 oz, プラスチック",
+   "variants": [
+    {
+     "label": "ブラック",
+     "sku": "10683-01J",
+     "gtin": "727015095776"
+    }
+   ],
+   "url": "https://www.bodum.com/jp/ja/10683-01j-kenya",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-bodum-2026-11-10",
+   "makerAlias": "ボダム"
+  },
+  {
+   "id": "bodum-10685-01j",
+   "kind": "frenchpress",
+   "maker": "Bodum",
+   "name": "KENYA フレンチプレスコーヒーメーカー, 8 cup, 1.0 l, 34 oz, プラスチック",
+   "variants": [
+    {
+     "label": "ブラック",
+     "sku": "10685-01J",
+     "gtin": "699965121907"
+    }
+   ],
+   "url": "https://www.bodum.com/jp/ja/10685-01j-kenya",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-bodum-2026-11-10",
+   "makerAlias": "ボダム"
+  },
+  {
+   "id": "comandante-14306",
+   "kind": "grinder",
+   "maker": "Comandante",
+   "name": "Comandante C40 MK4 LAB Series Hammerhead Coffee Grinder",
+   "variants": [
+    {
+     "label": "",
+     "sku": "Crema 14306",
+     "gtin": "4260113439326"
+    }
+   ],
+   "url": "https://www.cremashop.eu/en/products/comandante/c40-mk4-lab-series-hammerhead",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-crema-comandante-2026-11-10",
+   "makerAlias": "コマンダンテ"
+  },
+  {
+   "id": "comandante-14307",
+   "kind": "grinder",
+   "maker": "Comandante",
+   "name": "Comandante C40 MK4 LAB Series Nitro Blade Coffee Grinder",
+   "variants": [
+    {
+     "label": "",
+     "sku": "Crema 14307",
+     "gtin": "4260113439791"
+    }
+   ],
+   "url": "https://www.cremashop.eu/en/products/comandante/c40-mk4-lab-series-blade",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-crema-comandante-2026-11-10",
+   "makerAlias": "コマンダンテ"
+  },
+  {
+   "id": "comandante-14259",
+   "kind": "grinder",
+   "maker": "Comandante",
+   "name": "Comandante C40 MK4 LAB Series Tigershark Coffee Grinder",
+   "variants": [
+    {
+     "label": "",
+     "sku": "Crema 14259",
+     "gtin": "4260113439319"
+    }
+   ],
+   "url": "https://www.cremashop.eu/en/products/comandante/c40-mk4-lab-series-tigershark",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-crema-comandante-2026-11-10",
+   "makerAlias": "コマンダンテ"
+  },
+  {
+   "id": "comandante-10773",
+   "kind": "grinder",
+   "maker": "Comandante",
+   "name": "Comandante C40 MK4 Nitro Blade",
+   "variants": [
+    {
+     "label": "Liquid Amber",
+     "sku": "Crema 10773",
+     "gtin": "4260113437483"
+    },
+    {
+     "label": "Racing Green",
+     "sku": "Crema 11854",
+     "gtin": "4260113438107"
+    },
+    {
+     "label": "Deep Purple",
+     "sku": "Crema 13703",
+     "gtin": "4260113439210"
+    },
+    {
+     "label": "Sunset",
+     "sku": "Crema 11210",
+     "gtin": "4260113437681"
+    },
+    {
+     "label": "Black",
+     "sku": "Crema 3595",
+     "gtin": "4260113435663"
+    },
+    {
+     "label": "American Cherry",
+     "sku": "Crema 2922",
+     "gtin": "4260113431658"
+    }
+   ],
+   "url": "https://www.cremashop.eu/en/products/comandante/c40-mk3-nitro-blade-grinder/10773",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-crema-comandante-2026-11-10",
+   "makerAlias": "コマンダンテ"
+  },
+  {
+   "id": "comandante-14422",
+   "kind": "grinder",
+   "maker": "Comandante",
+   "name": "Comandante C40 MK4 Nitro Blade Coffee Grinder",
+   "variants": [
+    {
+     "label": "Vintage Oak Classic",
+     "sku": "Crema 14422",
+     "gtin": "4260113439890"
+    }
+   ],
+   "url": "https://www.cremashop.eu/en/products/comandante/c40-mk4-nitro-blade-vintage-oak-classic",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-crema-comandante-2026-11-10",
+   "makerAlias": "コマンダンテ"
+  },
+  {
+   "id": "comandante-13381",
+   "kind": "grinder",
+   "maker": "Comandante",
+   "name": "Comandante C60 Baracuda Coffee Grinder",
+   "variants": [
+    {
+     "label": "Nautilus Blue",
+     "sku": "Crema 13381",
+     "gtin": "4260113438893"
+    },
+    {
+     "label": "Stone Washed",
+     "sku": "Crema 13591",
+     "gtin": "4260113439463"
+    }
+   ],
+   "url": "https://www.cremashop.eu/en/products/comandante/c60-baracuda",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-crema-comandante-2026-11-10",
+   "makerAlias": "コマンダンテ"
+  },
+  {
+   "id": "comandante-x25-trailmaster-dune",
+   "kind": "grinder",
+   "maker": "Comandante",
+   "name": "Comandante X25 Trailmaster Hand Coffee Grinder",
+   "variants": [
+    {
+     "label": "Dune",
+     "sku": "",
+     "gtin": "4260113437605"
+    }
+   ],
+   "url": "https://www.wb.coffee/shop/comandante-x25-trailmaster-dune-50234",
+   "checkedAt": "2026-11-11",
+   "sourceId": "tools-comandante-x25-2026-11-11",
+   "makerAlias": "コマンダンテ"
+  },
+  {
    "id": "fellow-shop-staggdripper",
    "kind": "dripper",
    "maker": "Fellow",
@@ -5388,7 +6484,1033 @@
    "checkedAt": "2026-11-10",
    "sourceId": "tools-timemore-2026-11-10",
    "makerAlias": "タイムモア"
+  },
+  {
+   "id": "kono-mdk-20",
+   "kind": "dripper",
+   "maker": "珈琲サイフオン",
+   "name": "MDK型 名門2人用ドリッパーセット",
+   "category": "名門フィルター 名門ドリッパーセット 2人用",
+   "variants": [
+    {
+     "label": "",
+     "sku": "MDK-20",
+     "gtin": "",
+     "siteCode": "220516"
+    }
+   ],
+   "url": "https://coffee-syphon.co.jp/meimon_filter/",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-coffee-syphon-2026-11-10",
+   "makerAlias": "コーノ式 KONO サイフオン"
+  },
+  {
+   "id": "kono-mdk-40",
+   "kind": "dripper",
+   "maker": "珈琲サイフオン",
+   "name": "MDK型 名門4人用ドリッパーセット",
+   "category": "名門フィルター 名門ドリッパーセット 4人用",
+   "variants": [
+    {
+     "label": "",
+     "sku": "MDK-40",
+     "gtin": "",
+     "siteCode": "240514"
+    }
+   ],
+   "url": "https://coffee-syphon.co.jp/meimon_filter/",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-coffee-syphon-2026-11-10",
+   "makerAlias": "コーノ式 KONO サイフオン"
+  },
+  {
+   "id": "kono-md-10",
+   "kind": "dripper",
+   "maker": "珈琲サイフオン",
+   "name": "名門10人用ドリッパーセット（フタなし）",
+   "category": "名門フィルター 名門ドリッパーセット 10人用",
+   "variants": [
+    {
+     "label": "",
+     "sku": "MD-10",
+     "gtin": "",
+     "siteCode": "210029"
+    }
+   ],
+   "url": "https://coffee-syphon.co.jp/meimon_filter/",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-coffee-syphon-2026-11-10",
+   "makerAlias": "コーノ式 KONO サイフオン"
+  },
+  {
+   "id": "kono-mdn-20",
+   "kind": "dripper",
+   "maker": "珈琲サイフオン",
+   "name": "名門2人用ドリッパーセット",
+   "category": "名門フィルター 名門ドリッパーセット 2人用",
+   "variants": [
+    {
+     "label": "",
+     "sku": "MDN-20",
+     "gtin": "",
+     "siteCode": "220035"
+    }
+   ],
+   "url": "https://coffee-syphon.co.jp/meimon_filter/",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-coffee-syphon-2026-11-10",
+   "makerAlias": "コーノ式 KONO サイフオン"
+  },
+  {
+   "id": "kono-mdn-20wd",
+   "kind": "dripper",
+   "maker": "珈琲サイフオン",
+   "name": "名門2人用ドリッパーセット ウッドハンドル",
+   "category": "名門フィルター 名門ドリッパーセット 2人用",
+   "variants": [
+    {
+     "label": "",
+     "sku": "MDN-20WD",
+     "gtin": "",
+     "siteCode": "220066"
+    }
+   ],
+   "url": "https://coffee-syphon.co.jp/meimon_filter/",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-coffee-syphon-2026-11-10",
+   "makerAlias": "コーノ式 KONO サイフオン"
+  },
+  {
+   "id": "kono-mdn-20ye",
+   "kind": "dripper",
+   "maker": "珈琲サイフオン",
+   "name": "名門2人用ドリッパーセット（イエロー）",
+   "category": "名門フィルター 名門ドリッパーセット 2人用",
+   "variants": [
+    {
+     "label": "",
+     "sku": "MDN-20YE",
+     "gtin": "",
+     "siteCode": "220103"
+    }
+   ],
+   "url": "https://coffee-syphon.co.jp/meimon_filter/",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-coffee-syphon-2026-11-10",
+   "makerAlias": "コーノ式 KONO サイフオン"
+  },
+  {
+   "id": "kono-mdn-20cp",
+   "kind": "dripper",
+   "maker": "珈琲サイフオン",
+   "name": "名門2人用ドリッパーセット（チェリーピンク）",
+   "category": "名門フィルター 名門ドリッパーセット 2人用",
+   "variants": [
+    {
+     "label": "",
+     "sku": "MDN-20CP",
+     "gtin": "",
+     "siteCode": "220127"
+    }
+   ],
+   "url": "https://coffee-syphon.co.jp/meimon_filter/",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-coffee-syphon-2026-11-10",
+   "makerAlias": "コーノ式 KONO サイフオン"
+  },
+  {
+   "id": "kono-mdn-20wh",
+   "kind": "dripper",
+   "maker": "珈琲サイフオン",
+   "name": "名門2人用ドリッパーセット（チョコレート）",
+   "category": "名門フィルター 名門ドリッパーセット 2人用",
+   "variants": [
+    {
+     "label": "",
+     "sku": "MDN-20WH",
+     "gtin": "",
+     "siteCode": "220080"
+    }
+   ],
+   "url": "https://coffee-syphon.co.jp/meimon_filter/",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-coffee-syphon-2026-11-10",
+   "makerAlias": "コーノ式 KONO サイフオン"
+  },
+  {
+   "id": "kono-mdn-20bk",
+   "kind": "dripper",
+   "maker": "珈琲サイフオン",
+   "name": "名門2人用ドリッパーセット（ブラック）",
+   "category": "名門フィルター 名門ドリッパーセット 2人用",
+   "variants": [
+    {
+     "label": "",
+     "sku": "MDN-20BK",
+     "gtin": "",
+     "siteCode": "220073"
+    }
+   ],
+   "url": "https://coffee-syphon.co.jp/meimon_filter/",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-coffee-syphon-2026-11-10",
+   "makerAlias": "コーノ式 KONO サイフオン"
+  },
+  {
+   "id": "kono-mdn-20ch",
+   "kind": "dripper",
+   "maker": "珈琲サイフオン",
+   "name": "名門2人用ドリッパーセット（ホワイト）",
+   "category": "名門フィルター 名門ドリッパーセット 2人用",
+   "variants": [
+    {
+     "label": "",
+     "sku": "MDN-20CH",
+     "gtin": "",
+     "siteCode": "220097"
+    }
+   ],
+   "url": "https://coffee-syphon.co.jp/meimon_filter/",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-coffee-syphon-2026-11-10",
+   "makerAlias": "コーノ式 KONO サイフオン"
+  },
+  {
+   "id": "kono-mdn-20lg",
+   "kind": "dripper",
+   "maker": "珈琲サイフオン",
+   "name": "名門2人用ドリッパーセット（ライトグリーン）",
+   "category": "名門フィルター 名門ドリッパーセット 2人用",
+   "variants": [
+    {
+     "label": "",
+     "sku": "MDN-20LG",
+     "gtin": "",
+     "siteCode": "220110"
+    }
+   ],
+   "url": "https://coffee-syphon.co.jp/meimon_filter/",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-coffee-syphon-2026-11-10",
+   "makerAlias": "コーノ式 KONO サイフオン"
+  },
+  {
+   "id": "kono-mdn-20rd",
+   "kind": "dripper",
+   "maker": "珈琲サイフオン",
+   "name": "名門2人用ドリッパーセット（レッド）",
+   "category": "名門フィルター 名門ドリッパーセット 2人用",
+   "variants": [
+    {
+     "label": "",
+     "sku": "MDN-20RD",
+     "gtin": "",
+     "siteCode": "220134"
+    }
+   ],
+   "url": "https://coffee-syphon.co.jp/meimon_filter/",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-coffee-syphon-2026-11-10",
+   "makerAlias": "コーノ式 KONO サイフオン"
+  },
+  {
+   "id": "kono-md-40",
+   "kind": "dripper",
+   "maker": "珈琲サイフオン",
+   "name": "名門4人用ドリッパーセット",
+   "category": "名門フィルター 名門ドリッパーセット 4人用",
+   "variants": [
+    {
+     "label": "",
+     "sku": "MD-40",
+     "gtin": "",
+     "siteCode": "240019"
+    }
+   ],
+   "url": "https://coffee-syphon.co.jp/meimon_filter/",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-coffee-syphon-2026-11-10",
+   "makerAlias": "コーノ式 KONO サイフオン"
+  },
+  {
+   "id": "kono-md-40wd",
+   "kind": "dripper",
+   "maker": "珈琲サイフオン",
+   "name": "名門4人用ドリッパーセット ウッドハンドル",
+   "category": "名門フィルター 名門ドリッパーセット 4人用",
+   "variants": [
+    {
+     "label": "",
+     "sku": "MD-40WD",
+     "gtin": "",
+     "siteCode": "240057"
+    }
+   ],
+   "url": "https://coffee-syphon.co.jp/meimon_filter/",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-coffee-syphon-2026-11-10",
+   "makerAlias": "コーノ式 KONO サイフオン"
+  },
+  {
+   "id": "kono-md-40ye",
+   "kind": "dripper",
+   "maker": "珈琲サイフオン",
+   "name": "名門4人用ドリッパーセット（イエロー）",
+   "category": "名門フィルター 名門ドリッパーセット 4人用",
+   "variants": [
+    {
+     "label": "",
+     "sku": "MD-40YE",
+     "gtin": "",
+     "siteCode": "240101"
+    }
+   ],
+   "url": "https://coffee-syphon.co.jp/meimon_filter/",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-coffee-syphon-2026-11-10",
+   "makerAlias": "コーノ式 KONO サイフオン"
+  },
+  {
+   "id": "kono-md-40ch",
+   "kind": "dripper",
+   "maker": "珈琲サイフオン",
+   "name": "名門4人用ドリッパーセット（チョコレート）",
+   "category": "名門フィルター 名門ドリッパーセット 4人用",
+   "variants": [
+    {
+     "label": "",
+     "sku": "MD-40CH",
+     "gtin": "",
+     "siteCode": "240088"
+    }
+   ],
+   "url": "https://coffee-syphon.co.jp/meimon_filter/",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-coffee-syphon-2026-11-10",
+   "makerAlias": "コーノ式 KONO サイフオン"
+  },
+  {
+   "id": "kono-md-40bk",
+   "kind": "dripper",
+   "maker": "珈琲サイフオン",
+   "name": "名門4人用ドリッパーセット（ブラック）",
+   "category": "名門フィルター 名門ドリッパーセット 4人用",
+   "variants": [
+    {
+     "label": "",
+     "sku": "MD-40BK",
+     "gtin": "",
+     "siteCode": "240071"
+    }
+   ],
+   "url": "https://coffee-syphon.co.jp/meimon_filter/",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-coffee-syphon-2026-11-10",
+   "makerAlias": "コーノ式 KONO サイフオン"
+  },
+  {
+   "id": "kono-md-40wh",
+   "kind": "dripper",
+   "maker": "珈琲サイフオン",
+   "name": "名門4人用ドリッパーセット（ホワイト）",
+   "category": "名門フィルター 名門ドリッパーセット 4人用",
+   "variants": [
+    {
+     "label": "",
+     "sku": "MD-40WH",
+     "gtin": "",
+     "siteCode": "240095"
+    }
+   ],
+   "url": "https://coffee-syphon.co.jp/meimon_filter/",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-coffee-syphon-2026-11-10",
+   "makerAlias": "コーノ式 KONO サイフオン"
+  },
+  {
+   "id": "kono-md-40lg",
+   "kind": "dripper",
+   "maker": "珈琲サイフオン",
+   "name": "名門4人用ドリッパーセット（ライトグリーン）",
+   "category": "名門フィルター 名門ドリッパーセット 4人用",
+   "variants": [
+    {
+     "label": "",
+     "sku": "MD-40LG",
+     "gtin": "",
+     "siteCode": "240118"
+    }
+   ],
+   "url": "https://coffee-syphon.co.jp/meimon_filter/",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-coffee-syphon-2026-11-10",
+   "makerAlias": "コーノ式 KONO サイフオン"
+  },
+  {
+   "id": "kono-md-15",
+   "kind": "paper",
+   "maker": "珈琲サイフオン",
+   "name": "10人用ペーパーフィルター 100枚入",
+   "category": "名門フィルター ペーパーフィルター 10人用",
+   "variants": [
+    {
+     "label": "",
+     "sku": "MD-15",
+     "gtin": "",
+     "siteCode": "215017"
+    }
+   ],
+   "url": "https://coffee-syphon.co.jp/meimon_filter/",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-coffee-syphon-2026-11-10",
+   "makerAlias": "コーノ式 KONO サイフオン"
+  },
+  {
+   "id": "kono-md-26c",
+   "kind": "paper",
+   "maker": "珈琲サイフオン",
+   "name": "2人用コットンペーパー 40枚入",
+   "category": "名門フィルター ペーパーフィルター 2人用",
+   "variants": [
+    {
+     "label": "",
+     "sku": "MD-26C",
+     "gtin": "",
+     "siteCode": "225054"
+    }
+   ],
+   "url": "https://coffee-syphon.co.jp/meimon_filter/",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-coffee-syphon-2026-11-10",
+   "makerAlias": "コーノ式 KONO サイフオン"
+  },
+  {
+   "id": "kono-ms-25",
+   "kind": "paper",
+   "maker": "珈琲サイフオン",
+   "name": "2人用シルキーペーパー 100枚入",
+   "category": "名門フィルター ペーパーフィルター 2人用",
+   "variants": [
+    {
+     "label": "",
+     "sku": "MS-25",
+     "gtin": "",
+     "siteCode": "225061"
+    }
+   ],
+   "url": "https://coffee-syphon.co.jp/meimon_filter/",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-coffee-syphon-2026-11-10",
+   "makerAlias": "コーノ式 KONO サイフオン"
+  },
+  {
+   "id": "kono-ks-20",
+   "kind": "paper",
+   "maker": "珈琲サイフオン",
+   "name": "2人用ペーパーフィルター 40枚入",
+   "category": "名門フィルター ペーパーフィルター 2人用",
+   "variants": [
+    {
+     "label": "",
+     "sku": "KS-20",
+     "gtin": "",
+     "siteCode": "225030"
+    }
+   ],
+   "url": "https://coffee-syphon.co.jp/meimon_filter/",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-coffee-syphon-2026-11-10",
+   "makerAlias": "コーノ式 KONO サイフオン"
+  },
+  {
+   "id": "kono-md-25b",
+   "kind": "paper",
+   "maker": "珈琲サイフオン",
+   "name": "2人用ペーパーフィルター（ブラウン）100枚入",
+   "category": "名門フィルター ペーパーフィルター 2人用",
+   "variants": [
+    {
+     "label": "",
+     "sku": "MD-25B",
+     "gtin": "",
+     "siteCode": "225023"
+    }
+   ],
+   "url": "https://coffee-syphon.co.jp/meimon_filter/",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-coffee-syphon-2026-11-10",
+   "makerAlias": "コーノ式 KONO サイフオン"
+  },
+  {
+   "id": "kono-md-25w",
+   "kind": "paper",
+   "maker": "珈琲サイフオン",
+   "name": "2人用ペーパーフィルター（ホワイト）100枚入",
+   "category": "名門フィルター ペーパーフィルター 2人用",
+   "variants": [
+    {
+     "label": "",
+     "sku": "MD-25W",
+     "gtin": "",
+     "siteCode": "225016"
+    }
+   ],
+   "url": "https://coffee-syphon.co.jp/meimon_filter/",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-coffee-syphon-2026-11-10",
+   "makerAlias": "コーノ式 KONO サイフオン"
+  },
+  {
+   "id": "kono-md-46c",
+   "kind": "paper",
+   "maker": "珈琲サイフオン",
+   "name": "4人用コットンペーパー 40枚入",
+   "category": "名門フィルター ペーパーフィルター 4人用",
+   "variants": [
+    {
+     "label": "",
+     "sku": "MD-46C",
+     "gtin": "",
+     "siteCode": "245052"
+    }
+   ],
+   "url": "https://coffee-syphon.co.jp/meimon_filter/",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-coffee-syphon-2026-11-10",
+   "makerAlias": "コーノ式 KONO サイフオン"
+  },
+  {
+   "id": "kono-ms-45",
+   "kind": "paper",
+   "maker": "珈琲サイフオン",
+   "name": "4人用シルキーペーパー 100枚入",
+   "category": "名門フィルター ペーパーフィルター 4人用",
+   "variants": [
+    {
+     "label": "",
+     "sku": "MS-45",
+     "gtin": "",
+     "siteCode": "245069"
+    }
+   ],
+   "url": "https://coffee-syphon.co.jp/meimon_filter/",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-coffee-syphon-2026-11-10",
+   "makerAlias": "コーノ式 KONO サイフオン"
+  },
+  {
+   "id": "kono-ks-40",
+   "kind": "paper",
+   "maker": "珈琲サイフオン",
+   "name": "4人用ペーパーフィルター 40枚入",
+   "category": "名門フィルター ペーパーフィルター 4人用",
+   "variants": [
+    {
+     "label": "",
+     "sku": "KS-40",
+     "gtin": "",
+     "siteCode": "245038"
+    }
+   ],
+   "url": "https://coffee-syphon.co.jp/meimon_filter/",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-coffee-syphon-2026-11-10",
+   "makerAlias": "コーノ式 KONO サイフオン"
+  },
+  {
+   "id": "kono-md-45b",
+   "kind": "paper",
+   "maker": "珈琲サイフオン",
+   "name": "4人用ペーパーフィルター（ブラウン）100枚入",
+   "category": "名門フィルター ペーパーフィルター 4人用",
+   "variants": [
+    {
+     "label": "",
+     "sku": "MD-45B",
+     "gtin": "",
+     "siteCode": "245021"
+    }
+   ],
+   "url": "https://coffee-syphon.co.jp/meimon_filter/",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-coffee-syphon-2026-11-10",
+   "makerAlias": "コーノ式 KONO サイフオン"
+  },
+  {
+   "id": "kono-md-45w",
+   "kind": "paper",
+   "maker": "珈琲サイフオン",
+   "name": "4人用ペーパーフィルター（ホワイト）100枚入",
+   "category": "名門フィルター ペーパーフィルター 4人用",
+   "variants": [
+    {
+     "label": "",
+     "sku": "MD-45W",
+     "gtin": "",
+     "siteCode": "245014"
+    }
+   ],
+   "url": "https://coffee-syphon.co.jp/meimon_filter/",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-coffee-syphon-2026-11-10",
+   "makerAlias": "コーノ式 KONO サイフオン"
+  },
+  {
+   "id": "kono-pr-2ap",
+   "kind": "syphon",
+   "maker": "珈琲サイフオン",
+   "name": "PR型 2人用サイフォンセット アルコールランプ／ペーパー濾過器用",
+   "category": "コーヒーサイフォン サイフォンセット PR型",
+   "variants": [
+    {
+     "label": "",
+     "sku": "PR-2AP",
+     "gtin": "",
+     "siteCode": "421128"
+    }
+   ],
+   "url": "https://coffee-syphon.co.jp/coffee_syphon/",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-coffee-syphon-2026-11-10",
+   "makerAlias": "コーノ式 KONO サイフオン"
+  },
+  {
+   "id": "kono-pr-2a",
+   "kind": "syphon",
+   "maker": "珈琲サイフオン",
+   "name": "PR型 2人用サイフォンセット アルコールランプ／濾過器用",
+   "category": "コーヒーサイフォン サイフォンセット PR型",
+   "variants": [
+    {
+     "label": "",
+     "sku": "PR-2A",
+     "gtin": "",
+     "siteCode": "421111"
+    }
+   ],
+   "url": "https://coffee-syphon.co.jp/coffee_syphon/",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-coffee-syphon-2026-11-10",
+   "makerAlias": "コーノ式 KONO サイフオン"
+  },
+  {
+   "id": "kono-pr-2gp",
+   "kind": "syphon",
+   "maker": "珈琲サイフオン",
+   "name": "PR型 2人用サイフォンセット ペーパー濾過器用（アルコールランプなし）",
+   "category": "コーヒーサイフォン サイフォンセット PR型",
+   "variants": [
+    {
+     "label": "",
+     "sku": "PR-2GP",
+     "gtin": "",
+     "siteCode": "421142"
+    }
+   ],
+   "url": "https://coffee-syphon.co.jp/coffee_syphon/",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-coffee-syphon-2026-11-10",
+   "makerAlias": "コーノ式 KONO サイフオン"
+  },
+  {
+   "id": "kono-pr-2g",
+   "kind": "syphon",
+   "maker": "珈琲サイフオン",
+   "name": "PR型 2人用サイフォンセット 濾過器用（アルコールランプなし）",
+   "category": "コーヒーサイフォン サイフォンセット PR型",
+   "variants": [
+    {
+     "label": "",
+     "sku": "PR-2G",
+     "gtin": "",
+     "siteCode": "421135"
+    }
+   ],
+   "url": "https://coffee-syphon.co.jp/coffee_syphon/",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-coffee-syphon-2026-11-10",
+   "makerAlias": "コーノ式 KONO サイフオン"
+  },
+  {
+   "id": "kono-pr-3ap",
+   "kind": "syphon",
+   "maker": "珈琲サイフオン",
+   "name": "PR型 3人用サイフォンセット アルコールランプ／ペーパー濾過器用",
+   "category": "コーヒーサイフォン サイフォンセット PR型",
+   "variants": [
+    {
+     "label": "",
+     "sku": "PR-3AP",
+     "gtin": "",
+     "siteCode": "431127"
+    }
+   ],
+   "url": "https://coffee-syphon.co.jp/coffee_syphon/",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-coffee-syphon-2026-11-10",
+   "makerAlias": "コーノ式 KONO サイフオン"
+  },
+  {
+   "id": "kono-pr-3a",
+   "kind": "syphon",
+   "maker": "珈琲サイフオン",
+   "name": "PR型 3人用サイフォンセット アルコールランプ／濾過器用",
+   "category": "コーヒーサイフォン サイフォンセット PR型",
+   "variants": [
+    {
+     "label": "",
+     "sku": "PR-3A",
+     "gtin": "",
+     "siteCode": "431110"
+    }
+   ],
+   "url": "https://coffee-syphon.co.jp/coffee_syphon/",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-coffee-syphon-2026-11-10",
+   "makerAlias": "コーノ式 KONO サイフオン"
+  },
+  {
+   "id": "kono-pr-3gp",
+   "kind": "syphon",
+   "maker": "珈琲サイフオン",
+   "name": "PR型 3人用サイフォンセット ペーパー濾過器用（アルコールランプなし）",
+   "category": "コーヒーサイフォン サイフォンセット PR型",
+   "variants": [
+    {
+     "label": "",
+     "sku": "PR-3GP",
+     "gtin": "",
+     "siteCode": "431141"
+    }
+   ],
+   "url": "https://coffee-syphon.co.jp/coffee_syphon/",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-coffee-syphon-2026-11-10",
+   "makerAlias": "コーノ式 KONO サイフオン"
+  },
+  {
+   "id": "kono-pr-3g",
+   "kind": "syphon",
+   "maker": "珈琲サイフオン",
+   "name": "PR型 3人用サイフォンセット 濾過器用（アルコールランプなし）",
+   "category": "コーヒーサイフォン サイフォンセット PR型",
+   "variants": [
+    {
+     "label": "",
+     "sku": "PR-3G",
+     "gtin": "",
+     "siteCode": "431134"
+    }
+   ],
+   "url": "https://coffee-syphon.co.jp/coffee_syphon/",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-coffee-syphon-2026-11-10",
+   "makerAlias": "コーノ式 KONO サイフオン"
+  },
+  {
+   "id": "kono-pr-4ap",
+   "kind": "syphon",
+   "maker": "珈琲サイフオン",
+   "name": "PR型 4人用サイフォンセット アルコールランプ／ペーパー濾過器用",
+   "category": "コーヒーサイフォン サイフォンセット PR型",
+   "variants": [
+    {
+     "label": "",
+     "sku": "PR-4AP",
+     "gtin": "",
+     "siteCode": "441126"
+    }
+   ],
+   "url": "https://coffee-syphon.co.jp/coffee_syphon/",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-coffee-syphon-2026-11-10",
+   "makerAlias": "コーノ式 KONO サイフオン"
+  },
+  {
+   "id": "kono-pr-4a",
+   "kind": "syphon",
+   "maker": "珈琲サイフオン",
+   "name": "PR型 4人用サイフォンセット アルコールランプ／濾過器用",
+   "category": "コーヒーサイフォン サイフォンセット PR型",
+   "variants": [
+    {
+     "label": "",
+     "sku": "PR-4A",
+     "gtin": "",
+     "siteCode": "441119"
+    }
+   ],
+   "url": "https://coffee-syphon.co.jp/coffee_syphon/",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-coffee-syphon-2026-11-10",
+   "makerAlias": "コーノ式 KONO サイフオン"
+  },
+  {
+   "id": "kono-pr-4gp",
+   "kind": "syphon",
+   "maker": "珈琲サイフオン",
+   "name": "PR型 4人用サイフォンセット ペーパー濾過器用（アルコールランプなし）",
+   "category": "コーヒーサイフォン サイフォンセット PR型",
+   "variants": [
+    {
+     "label": "",
+     "sku": "PR-4GP",
+     "gtin": "",
+     "siteCode": "441140"
+    }
+   ],
+   "url": "https://coffee-syphon.co.jp/coffee_syphon/",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-coffee-syphon-2026-11-10",
+   "makerAlias": "コーノ式 KONO サイフオン"
+  },
+  {
+   "id": "kono-pr-4g",
+   "kind": "syphon",
+   "maker": "珈琲サイフオン",
+   "name": "PR型 4人用サイフォンセット 濾過器用（アルコールランプなし）",
+   "category": "コーヒーサイフォン サイフォンセット PR型",
+   "variants": [
+    {
+     "label": "",
+     "sku": "PR-4G",
+     "gtin": "",
+     "siteCode": "441133"
+    }
+   ],
+   "url": "https://coffee-syphon.co.jp/coffee_syphon/",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-coffee-syphon-2026-11-10",
+   "makerAlias": "コーノ式 KONO サイフオン"
+  },
+  {
+   "id": "kono-sk-2ap",
+   "kind": "syphon",
+   "maker": "珈琲サイフオン",
+   "name": "SKD型 2人用サイフォンセット アルコールランプ／ペーパー濾過器用",
+   "category": "コーヒーサイフォン サイフォンセット SKD型",
+   "variants": [
+    {
+     "label": "",
+     "sku": "SK-2AP",
+     "gtin": "",
+     "siteCode": "421326"
+    }
+   ],
+   "url": "https://coffee-syphon.co.jp/coffee_syphon/",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-coffee-syphon-2026-11-10",
+   "makerAlias": "コーノ式 KONO サイフオン"
+  },
+  {
+   "id": "kono-sk-2a",
+   "kind": "syphon",
+   "maker": "珈琲サイフオン",
+   "name": "SKD型 2人用サイフォンセット アルコールランプ／濾過器用",
+   "category": "コーヒーサイフォン サイフォンセット SKD型",
+   "variants": [
+    {
+     "label": "",
+     "sku": "SK-2A",
+     "gtin": "",
+     "siteCode": "421319"
+    }
+   ],
+   "url": "https://coffee-syphon.co.jp/coffee_syphon/",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-coffee-syphon-2026-11-10",
+   "makerAlias": "コーノ式 KONO サイフオン"
+  },
+  {
+   "id": "kono-sk-2gp",
+   "kind": "syphon",
+   "maker": "珈琲サイフオン",
+   "name": "SKD型 2人用サイフォンセット ペーパー濾過器用（アルコールランプなし）",
+   "category": "コーヒーサイフォン サイフォンセット SKD型",
+   "variants": [
+    {
+     "label": "",
+     "sku": "SK-2GP",
+     "gtin": "",
+     "siteCode": "421340"
+    }
+   ],
+   "url": "https://coffee-syphon.co.jp/coffee_syphon/",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-coffee-syphon-2026-11-10",
+   "makerAlias": "コーノ式 KONO サイフオン"
+  },
+  {
+   "id": "kono-sk-2g",
+   "kind": "syphon",
+   "maker": "珈琲サイフオン",
+   "name": "SKD型 2人用サイフォンセット 濾過器用（アルコールランプなし）",
+   "category": "コーヒーサイフォン サイフォンセット SKD型",
+   "variants": [
+    {
+     "label": "",
+     "sku": "SK-2G",
+     "gtin": "",
+     "siteCode": "421333"
+    }
+   ],
+   "url": "https://coffee-syphon.co.jp/coffee_syphon/",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-coffee-syphon-2026-11-10",
+   "makerAlias": "コーノ式 KONO サイフオン"
+  },
+  {
+   "id": "kono-sk-3ap",
+   "kind": "syphon",
+   "maker": "珈琲サイフオン",
+   "name": "SKD型 3人用サイフォンセット アルコールランプ／ペーパー濾過器用",
+   "category": "コーヒーサイフォン サイフォンセット SKD型",
+   "variants": [
+    {
+     "label": "",
+     "sku": "SK-3AP",
+     "gtin": "",
+     "siteCode": "431325"
+    }
+   ],
+   "url": "https://coffee-syphon.co.jp/coffee_syphon/",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-coffee-syphon-2026-11-10",
+   "makerAlias": "コーノ式 KONO サイフオン"
+  },
+  {
+   "id": "kono-sk-3a",
+   "kind": "syphon",
+   "maker": "珈琲サイフオン",
+   "name": "SKD型 3人用サイフォンセット アルコールランプ／濾過器用",
+   "category": "コーヒーサイフォン サイフォンセット SKD型",
+   "variants": [
+    {
+     "label": "",
+     "sku": "SK-3A",
+     "gtin": "",
+     "siteCode": "431318"
+    }
+   ],
+   "url": "https://coffee-syphon.co.jp/coffee_syphon/",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-coffee-syphon-2026-11-10",
+   "makerAlias": "コーノ式 KONO サイフオン"
+  },
+  {
+   "id": "kono-sk-3gp",
+   "kind": "syphon",
+   "maker": "珈琲サイフオン",
+   "name": "SKD型 3人用サイフォンセット ペーパー濾過器用（アルコールランプなし）",
+   "category": "コーヒーサイフォン サイフォンセット SKD型",
+   "variants": [
+    {
+     "label": "",
+     "sku": "SK-3GP",
+     "gtin": "",
+     "siteCode": "431349"
+    }
+   ],
+   "url": "https://coffee-syphon.co.jp/coffee_syphon/",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-coffee-syphon-2026-11-10",
+   "makerAlias": "コーノ式 KONO サイフオン"
+  },
+  {
+   "id": "kono-sk-3g",
+   "kind": "syphon",
+   "maker": "珈琲サイフオン",
+   "name": "SKD型 3人用サイフォンセット 濾過器用（アルコールランプなし）",
+   "category": "コーヒーサイフォン サイフォンセット SKD型",
+   "variants": [
+    {
+     "label": "",
+     "sku": "SK-3G",
+     "gtin": "",
+     "siteCode": "431332"
+    }
+   ],
+   "url": "https://coffee-syphon.co.jp/coffee_syphon/",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-coffee-syphon-2026-11-10",
+   "makerAlias": "コーノ式 KONO サイフオン"
+  },
+  {
+   "id": "kono-sk-4ap",
+   "kind": "syphon",
+   "maker": "珈琲サイフオン",
+   "name": "SKD型 4人用サイフォンセット アルコールランプ／ペーパー濾過器用",
+   "category": "コーヒーサイフォン サイフォンセット SKD型",
+   "variants": [
+    {
+     "label": "",
+     "sku": "SK-4AP",
+     "gtin": "",
+     "siteCode": "441324"
+    }
+   ],
+   "url": "https://coffee-syphon.co.jp/coffee_syphon/",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-coffee-syphon-2026-11-10",
+   "makerAlias": "コーノ式 KONO サイフオン"
+  },
+  {
+   "id": "kono-sk-4a",
+   "kind": "syphon",
+   "maker": "珈琲サイフオン",
+   "name": "SKD型 4人用サイフォンセット アルコールランプ／濾過器用",
+   "category": "コーヒーサイフォン サイフォンセット SKD型",
+   "variants": [
+    {
+     "label": "",
+     "sku": "SK-4A",
+     "gtin": "",
+     "siteCode": "441317"
+    }
+   ],
+   "url": "https://coffee-syphon.co.jp/coffee_syphon/",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-coffee-syphon-2026-11-10",
+   "makerAlias": "コーノ式 KONO サイフオン"
+  },
+  {
+   "id": "kono-sk-4gp",
+   "kind": "syphon",
+   "maker": "珈琲サイフオン",
+   "name": "SKD型 4人用サイフォンセット ペーパー濾過器用（アルコールランプなし）",
+   "category": "コーヒーサイフォン サイフォンセット SKD型",
+   "variants": [
+    {
+     "label": "",
+     "sku": "SK-4GP",
+     "gtin": "",
+     "siteCode": "441348"
+    }
+   ],
+   "url": "https://coffee-syphon.co.jp/coffee_syphon/",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-coffee-syphon-2026-11-10",
+   "makerAlias": "コーノ式 KONO サイフオン"
+  },
+  {
+   "id": "kono-sk-4g",
+   "kind": "syphon",
+   "maker": "珈琲サイフオン",
+   "name": "SKD型 4人用サイフォンセット 濾過器用（アルコールランプなし）",
+   "category": "コーヒーサイフォン サイフォンセット SKD型",
+   "variants": [
+    {
+     "label": "",
+     "sku": "SK-4G",
+     "gtin": "",
+     "siteCode": "441331"
+    }
+   ],
+   "url": "https://coffee-syphon.co.jp/coffee_syphon/",
+   "checkedAt": "2026-11-10",
+   "sourceId": "tools-coffee-syphon-2026-11-10",
+   "makerAlias": "コーノ式 KONO サイフオン"
   }
  ],
- "updatedAt": "2026-11-10"
+ "updatedAt": "2026-11-11"
 }

@@ -433,7 +433,21 @@ def shopify_kind_hario(p: dict):
     return hario_kind(clean(p.get("title", "")))
 
 
+def shopify_kind_aeropress(p: dict):
+    """小川珈琲オンラインショップの商品のうち、エアロプレス(AeroPress)の本体と専用フィルターだけを載せる"""
+    title = clean(p.get("title", ""))
+    if not re.search(r"エアロプレス|aeropress", title, flags=re.I):
+        return None
+    if re.search(r"ケース|スタンド|ブラシ|ポーチ|バッグ|ケトル|ミル|グラインダー|スケール|クリーナー|ストレーナー|ステンレス|メタル|キャップ|セット|used|中古|シール|カラフェ|フローコントロール|おすすめ|選べる|コーヒー豆|ギフト", title, flags=re.I):
+        return None
+    if re.search(r"フィルター|ペーパー|filter", title, flags=re.I):
+        return "paper"
+    return "aeropress"
+
+
 SHOPIFY = {
+    # 小川珈琲オンラインショップ(販売店)。エアロプレスだけを載せる。JANは、店が入力した値(メーカーの公式の値ではない)
+    "ogawa": dict(maker="AeroPress", base="https://oc-shop.co.jp", kind=shopify_kind_aeropress, merge=None, collection="coffee-goods"),
     "hario-shop": dict(maker="HARIO", base="https://shop.hariocorp.co.jp", kind=shopify_kind_hario, merge="sku", collection="coffee"),
     "timemore": dict(maker="TIMEMORE", base="https://www.timemore.com", kind=shopify_kind_en, merge=None),
     "fellow": dict(maker="Fellow", base="https://fellowproducts.com", kind=shopify_kind_en, merge=None),
@@ -453,7 +467,13 @@ def shopify_items(cfg: dict, records: list):
                 print(f"  警告: {rec['handle']} {v.get('sku')} のJANが不正のため載せません: {gtin}")
                 gtin = ""
             label = clean(v.get("title", ""))
-            variants.append({"label": "" if label == "Default Title" else label, "sku": clean(v.get("sku") or ""), "gtin": gtin})
+            sku = clean(v.get("sku") or "")
+            variant = {"label": "" if label == "Default Title" else label, "sku": sku, "gtin": gtin}
+            # barcode(JAN)が空でも、型番(sku)が、桁数とチェックデジットの合うバーコードの数字のとき(店が、型番にJANを入れている)は、その数字を、JANとして使う。印を付ける
+            if not gtin and re.fullmatch(r"\d{12,13}", sku) and valid_gtin(sku):
+                variant["gtin"] = sku
+                variant["gtinFrom"] = "sku"
+            variants.append(variant)
         if not variants:
             continue
         items.append({
@@ -527,10 +547,197 @@ def shopify(key: str):
     return run
 
 
-# 検索用: メーカー名の日本語の読み
-MAKER_ALIAS = {"HARIO": "ハリオ", "Kalita": "カリタ", "Melitta": "メリタ", "1Zpresso": "ワンゼットプレッソ", "TIMEMORE": "タイムモア", "Fellow": "フェロー", "ORIGAMI": "オリガミ"}
+# ---------------------------------------------------------------- 珈琲サイフオン(コーノ式。公式サイト coffee-syphon.co.jp)
+# 公式サイトの商品ページは、CSV(/csv/<ページ名>.csv)を読み込んで表示している。そのCSVを取る。
+# CSVの「jan」の列は、6桁の数字(例: 421319)で、13桁のJANではない。完全なJANが分からないため、gtinは空にする(推測しない)。
+SYPHON_BASE = "https://coffee-syphon.co.jp"
+SYPHON_PAGES = ["coffee_syphon", "meimon_filter"]
+# (カテゴリー, サブカテゴリー) → 種類。それ以外(ロート・フラスコ・グラスポット・計量カップなどの部品)は、載せない
+SYPHON_KINDS = {
+    ("コーヒーサイフォン", "サイフォンセット"): "syphon",
+    ("名門フィルター", "名門ドリッパーセット"): "dripper",
+    ("名門フィルター", "ペーパーフィルター"): "paper",
+}
 
-MAKERS = {"hario": hario, "kalita": kalita, "melitta": melitta, "1zpresso": z1presso, **{k: shopify(k) for k in SHOPIFY}}
+
+def syphon_items(csvs: dict):
+    import csv as _csv
+    import io
+    items = []
+    for page, text in csvs.items():
+        for row in _csv.DictReader(io.StringIO(text)):
+            kind = SYPHON_KINDS.get((row.get("category", ""), row.get("subCategory", "")))
+            if not kind or not row.get("id") or not row.get("name"):
+                continue
+            items.append({
+                "id": "kono-" + re.sub(r"[^a-z0-9]+", "-", row["id"].lower()).strip("-"), "kind": kind, "maker": "珈琲サイフオン",
+                "name": clean(row["name"]), "category": clean(f"{row['category']} {row['subCategory']} {row.get('categoryClass', '')}"),
+                "variants": [{"label": "", "sku": row["id"].strip(), "gtin": "", "siteCode": (row.get("jan") or "").strip()}],
+                "url": f"{SYPHON_BASE}/{page}/", "checkedAt": TODAY,
+            })
+    return items
+
+
+def coffee_syphon(dry: bool, reuse: bool = False):
+    if reuse:
+        raw = json.loads(sorted((ROOT / "source-archive").glob("tools-coffee-syphon-2*"))[-1].joinpath("original.bin").read_text(encoding="utf-8"))["csv"]
+        return {"maker": "珈琲サイフオン", "sourceUrl": f"{SYPHON_BASE}/", "raw": None, "items": syphon_items(raw)}
+    csvs = {}
+    for page in SYPHON_PAGES:
+        time.sleep(DELAY)
+        csvs[page] = get(f"{SYPHON_BASE}/csv/{page}.csv").decode("utf-8-sig")
+        print(f"珈琲サイフオン: {page}.csv {len(csvs[page].splitlines())}行")
+    items = syphon_items(csvs)
+    print(f"珈琲サイフオン: 対象 {len(items)} 件 (" + ", ".join(f"{k}={sum(1 for i in items if i['kind'] == k)}" for k in ('syphon', 'dripper', 'paper')) + ")")
+    if dry:
+        return None
+    return {"maker": "珈琲サイフオン", "sourceUrl": f"{SYPHON_BASE}/", "raw": {"csv": csvs}, "items": items}
+
+
+# ---------------------------------------------------------------- ボダム(Bodum。公式オンラインショップ www.bodum.com/jp/ja)
+# 商品ページに、「商品番号」と「EAN」が表示される。ただし、ページはスクリプトで描画され、データは、サイトの内部のAPIから取る作りのため、
+# このスクリプトは、サイトにはアクセスしない。ブラウザで商品ページを開いて、表示されている値を読み取った記録(tools-bodum.json)から作る。
+# 使い方: py -X utf8 scripts/build_tools_catalog.py bodum --from-file tools-bodum.json
+def bodum(dry: bool, reuse: bool = False, from_file=None):
+    if from_file:
+        exported = json.loads(Path(from_file).read_text(encoding="utf-8"))
+        records = exported["records"]
+    elif reuse:
+        records = json.loads(sorted((ROOT / "source-archive").glob("tools-bodum-2*"))[-1].joinpath("original.bin").read_text(encoding="utf-8"))["records"]
+        exported = None
+    else:
+        raise SystemExit("bodum は、ブラウザで読み取った記録のファイルから作ります: --from-file tools-bodum.json")
+    items = []
+    for r in records:
+        ean = re.sub(r"[\s-]", "", r.get("ean") or "")
+        if ean and not valid_gtin(ean):
+            print(f"  警告: {r['sku']} のEANが不正のため載せません: {ean}")
+            ean = ""
+        line = clean((r.get("line") or "").replace("®", ""))
+        items.append({
+            "id": "bodum-" + re.sub(r"[^a-z0-9]+", "-", r["sku"].lower()).strip("-"), "kind": "frenchpress", "maker": "Bodum",
+            "name": clean(f"{line} {r.get('subtitle', '')}"),
+            "variants": [{"label": r.get("color") or "", "sku": r["sku"], "gtin": ean}],
+            "url": r["url"], "checkedAt": TODAY,
+        })
+    print(f"Bodum: {len(items)} 商品 / EANあり {sum(1 for i in items if i['variants'][0]['gtin'])}")
+    if dry:
+        return None
+    return {"maker": "Bodum", "sourceUrl": "https://www.bodum.com/jp/ja/", "raw": ({"records": records, "note": exported.get("note", "")} if exported else None), "items": items}
+
+
+# ---------------------------------------------------------------- Comandante(コマンダンテ。販売店 Crema(cremashop.eu。エストニア)の商品ページ)
+# Comandante公式サイトは、この環境から取得できなかった(403)。利用者が指定した販売店 Crema の商品ページを使う。
+# 販売店のため、JANは、店が入力した値(schema.org の gtin13)。Crema の「商品番号」は、メーカーの型番ではない(店の番号)。
+CREMA_BASE = "https://www.cremashop.eu"
+
+
+def crema_parse(page: dict):
+    """商品ページ(url・html の要約)から、カタログの項目を作る。page: {"url", "product"(JSON-LD), "names"(商品番号→表示名)}"""
+    prod = page["product"]
+    offers = prod.get("offers") or []
+    groups = {}
+    for o in offers:
+        sku = str(o.get("sku", ""))
+        full = clean(page["names"].get(sku) or prod.get("name", ""))
+        base, _, label = full.rpartition(", ")
+        if not base:
+            base, label = full, ""
+        gtin = re.sub(r"[\s-]", "", str(o.get("gtin13") or o.get("gtin") or ""))
+        if gtin and not valid_gtin(gtin):
+            print(f"  警告: Crema {sku} のJANが不正のため載せません: {gtin}")
+            gtin = ""
+        g = groups.setdefault(base, {"url": o.get("url") or page["url"], "first": sku, "variants": []})
+        g["variants"].append({"label": label, "sku": f"Crema {sku}", "gtin": gtin})
+    return [{
+        "id": f"comandante-{g['first']}", "kind": "grinder", "maker": "Comandante", "name": base,
+        "variants": g["variants"], "url": g["url"], "checkedAt": TODAY,
+    } for base, g in groups.items()]
+
+
+def crema_comandante(dry: bool, reuse: bool = False):
+    if reuse:
+        raw = json.loads(sorted((ROOT / "source-archive").glob("tools-crema-comandante-2*"))[-1].joinpath("original.bin").read_text(encoding="utf-8"))["pages"]
+        return {"maker": "Comandante", "sourceUrl": f"{CREMA_BASE}/en/shop-by-brand/comandante", "raw": None, "items": [i for pg in raw for i in crema_parse(pg)]}
+    brand = get(f"{CREMA_BASE}/en/shop-by-brand/comandante").decode("utf-8", errors="replace")
+    links = sorted(set(re.findall(r'href="(/en/products/comandante/((?:c40|c60)-[a-z0-9-]+)/(\d+))"', brand)))
+    slugs = {}
+    for path, slug, pid in links:
+        slugs.setdefault(slug, path)  # 同じ商品名の変種は、1ページに全部載っている。最初の1つだけ取る
+    print(f"Comandante(Crema): グラインダーの商品ページ {len(slugs)} 件: {', '.join(slugs)}")
+    if dry:
+        return None
+    pages = []
+    for slug, path in slugs.items():
+        time.sleep(DELAY)
+        body = get(CREMA_BASE + path).decode("utf-8", errors="replace")
+        product = None
+        for m in re.finditer(r'<script[^>]*application/ld\+json[^>]*>(.*?)</script>', body, flags=re.S):
+            try:
+                d = json.loads(m.group(1))
+            except ValueError:
+                continue
+            if d.get("@type") == "Product":
+                product = d
+        if not product:
+            print(f"  警告: {path}: 商品データ(JSON-LD)が見つかりません")
+            continue
+        # 変種の名前は、商品番号が入った、画像の説明文(data-caption)・画像の代替文(alt)・リンクから取る(順番では対応づけない)。
+        # 例: data-caption="Comandante C60 Baracuda Coffee Grinder, Nautilus Blue"(画像のファイル名に商品番号 13381 が入る)
+        names = {}
+        for o in product.get("offers") or []:
+            sku = str(o.get("sku"))
+            cands = []
+            for m in re.finditer(r'(?:data-caption|alt)="([^"]+)"', body):
+                # その属性を持つタグの中(前後の400字)に、「/<商品番号>-」を含む画像のファイル名か、/<商品番号>" のリンクがあるもの
+                ctx = body[max(0, m.start() - 400): m.end() + 400]
+                if re.search(r"/" + re.escape(sku) + r"[-\"]", ctx):
+                    cands.append(clean(__import__("html").unescape(m.group(1))))
+            cands = [c for c in cands if ", " in c and "€" not in c and c.startswith("Comandante")]
+            if cands:
+                names[sku] = max(set(cands), key=cands.count)
+        pages.append({"url": CREMA_BASE + path, "product": product, "names": names})
+        print(f"  {slug}: 変種 {len(product.get('offers') or [])}")
+    items = [i for pg in pages for i in crema_parse(pg)]
+    return {"maker": "Comandante", "sourceUrl": f"{CREMA_BASE}/en/shop-by-brand/comandante", "raw": {"pages": pages}, "items": items}
+
+
+# ---------------------------------------------------------------- Comandante X25 Trailmaster Dune(複数の販売店のページで、同じEANを確認したもの)
+# Crema(cremashop.eu)の一覧には、X25が載っていない。2つの販売店のページに、同じEANがあることを、取得して確かめてから載せる。
+X25_SOURCES = [
+    ("wb.coffee", "https://www.wb.coffee/shop/comandante-x25-trailmaster-dune-50234", "4260113437605"),
+    ("MaxiCoffee", "https://maxicoffee.com/en-eu/coffee-grinder-x25-trailmaster-dune-comandante-p-146419.html", "4260113437605"),
+]
+
+
+def comandante_x25(dry: bool, reuse: bool = False):
+    pages = []
+    for shop, url, ean in X25_SOURCES:
+        time.sleep(DELAY)
+        body = get(url).decode("utf-8", errors="replace")
+        i = body.find(ean)
+        if i < 0:
+            print(f"  警告: {shop}: ページに {ean} が見つかりません")
+            continue
+        pages.append({"shop": shop, "url": url, "ean": ean, "excerpt": clean(re.sub(r"<[^>]+>", " ", body[max(0, i - 200): i + 120]))})
+        print(f"  {shop}: EAN {ean} を確認")
+    if dry:
+        return None
+    eans = {pg["ean"] for pg in pages}
+    if len(pages) < 2 or len(eans) != 1:
+        raise SystemExit("2か所以上の販売店で、同じEANを確認できなかったため、載せません")
+    ean = eans.pop()
+    if not valid_gtin(ean):
+        raise SystemExit(f"EANのチェックデジットが合いません: {ean}")
+    item = {"id": "comandante-x25-trailmaster-dune", "kind": "grinder", "maker": "Comandante", "name": "Comandante X25 Trailmaster Hand Coffee Grinder",
+            "variants": [{"label": "Dune", "sku": "", "gtin": ean}], "url": pages[0]["url"], "checkedAt": TODAY}
+    return {"maker": "Comandante", "sourceUrl": pages[0]["url"], "raw": {"pages": pages}, "items": [item], "merge": "add"}
+
+
+# 検索用: メーカー名の日本語の読み
+MAKER_ALIAS = {"HARIO": "ハリオ", "Kalita": "カリタ", "Melitta": "メリタ", "1Zpresso": "ワンゼットプレッソ", "TIMEMORE": "タイムモア", "Fellow": "フェロー", "ORIGAMI": "オリガミ", "珈琲サイフオン": "コーノ式 KONO サイフオン", "AeroPress": "エアロプレス", "Bodum": "ボダム", "Comandante": "コマンダンテ"}
+
+MAKERS = {"hario": hario, "kalita": kalita, "melitta": melitta, "1zpresso": z1presso, "coffee-syphon": coffee_syphon, "bodum": bodum, "crema-comandante": crema_comandante, "comandante-x25": comandante_x25, **{k: shopify(k) for k in SHOPIFY}}
 
 
 def save_raw(maker_key: str, result: dict) -> str:
@@ -554,8 +761,8 @@ def main():
     ap.add_argument("--from-file", help="ブラウザで書き出したファイル(scripts/shopify-export.js)から作る(Shopify製の公式ショップのみ)")
     ap.add_argument("--reuse", action="store_true", help="取得済みの原文(source-archive)から作り直す。サイトにはアクセスしない(Kalitaのみ)")
     a = ap.parse_args()
-    if a.from_file and a.maker not in SHOPIFY:
-        ap.error("--from-file は、Shopify製の公式ショップ(hario-shop・timemore・fellow・origami)だけで使えます")
+    if a.from_file and a.maker not in SHOPIFY and a.maker != "bodum":
+        ap.error("--from-file は、Shopify製の公式ショップ(hario-shop・timemore・fellow・origami・ogawa)と、bodum だけで使えます")
     if a.from_file:
         result = MAKERS[a.maker](a.dry_run, False, a.from_file)
     else:
@@ -564,7 +771,15 @@ def main():
         return
     source_id = save_raw(a.maker, result) if result["raw"] is not None else sorted(p.name for p in (ROOT / "source-archive").glob(f"tools-{a.maker}-2*"))[-1]
     catalog = json.loads(OUT.read_text(encoding="utf-8")) if OUT.exists() else {"version": 1, "items": []}
-    if result.get("merge") == "sku":
+    if result.get("merge") == "add":
+        ids = {i["id"] for i in result["items"]}
+        catalog["items"] = [i for i in catalog["items"] if i["id"] not in ids]
+        for item in result["items"]:
+            item["sourceId"] = source_id
+            if result["maker"] in MAKER_ALIAS:
+                item["makerAlias"] = MAKER_ALIAS[result["maker"]]
+        catalog["items"] += result["items"]
+    elif result.get("merge") == "sku":
         # 既存の項目(別の公式サイトの名前・型番)に、店のJANを、型番(sku)で補う。既存に無い型番の商品は、追加する
         shop_by_sku = {v["sku"]: (item, v) for item in result["items"] for v in item["variants"] if v["sku"]}
         known = set()

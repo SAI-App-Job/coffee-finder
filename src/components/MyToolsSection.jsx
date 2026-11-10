@@ -312,7 +312,7 @@ export function MyToolsSection({ tools, addTool, updateTool, deleteTool }) {
         <h3 className="text-[14px] font-medium text-[var(--c-text)]">{t("マイツール")}</h3>
       </div>
       <p className="text-[12px] text-[var(--c-text-3)] leading-relaxed">
-        {t("お持ちのドリッパー・ペーパー・コーヒーミルを登録します。テイスティングログの「抽出方法」「挽き目」を書くときに、ここから選べます。登録した内容は、この端末の中だけに保存されます。")}
+        {t("お持ちのドリッパー・サイフォン・フレンチプレス・エアロプレス・ペーパー・コーヒーミルを登録します。テイスティングログの「抽出方法」「挽き目」を書くときに、ここから選べます。登録した内容は、この端末の中だけに保存されます。")}
       </p>
       {TOOL_KINDS.map((kind) => {
         const items = tools.filter((tool) => tool.kind === kind.id);

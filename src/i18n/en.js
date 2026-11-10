@@ -643,6 +643,14 @@ const CONTENT = {
 
 // 設定「マイツール」と、テイスティングログの道具の選択
 const MYTOOLS = {
+  "サイフォン": "Siphon (syphon)",
+  "フレンチプレス": "French press",
+  "エアロプレス": "AeroPress",
+  "例: コーノ式 SKD型 2人用サイフォンセット": "e.g. KONO SKD 2-cup siphon set",
+  "例: ボダム CHAMBORD 0.35L": "e.g. Bodum CHAMBORD 0.35 L",
+  "例: AeroPress オリジナル": "e.g. AeroPress Original",
+  "抽出の器具を選ぶ": "Choose a brewing tool",
+  "マイツールに抽出の器具(ドリッパー・サイフォン・フレンチプレス・エアロプレス)・ペーパーの登録がありません。設定の「マイツール」から登録できます。": "No brewing tools (dripper, siphon, French press, AeroPress) or filter papers are registered in My Tools. You can register them under \"My Tools\" in Settings.",
   "マイツール": "My Tools",
   "手入力": "Type in",
   "ドリッパー": "Dripper",
@@ -674,7 +682,7 @@ const MYTOOLS = {
   "削除する": "Delete",
   "編集": "Edit",
   "追加": "Add",
-  "お持ちのドリッパー・ペーパー・コーヒーミルを登録します。テイスティングログの「抽出方法」「挽き目」を書くときに、ここから選べます。登録した内容は、この端末の中だけに保存されます。": "Register the drippers, filter papers and grinders you own. You can pick from them when you write \"Brew method\" and \"Grind size\" in a tasting log. What you register is stored only on this device.",
+  "お持ちのドリッパー・サイフォン・フレンチプレス・エアロプレス・ペーパー・コーヒーミルを登録します。テイスティングログの「抽出方法」「挽き目」を書くときに、ここから選べます。登録した内容は、この端末の中だけに保存されます。": "Register the drippers, siphons, French presses, AeroPresses, filter papers and grinders you own. You can pick from them when you write \"Brew method\" and \"Grind size\" in a tasting log. What you register is stored only on this device.",
   "マイツールにドリッパー・ペーパーの登録がありません。設定の「マイツール」から登録できます。": "No drippers or filter papers are registered in My Tools. You can register them under \"My Tools\" in Settings.",
   "マイツールにコーヒーミルの登録がありません。設定の「マイツール」から登録できます。": "No grinders are registered in My Tools. You can register them under \"My Tools\" in Settings.",
   "目盛り・クリック数(例: 20クリック)": "Dial / clicks (e.g. 20 clicks)",

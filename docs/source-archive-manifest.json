@@ -986,6 +986,23 @@
     ],
     "note": ""
   },
+  "coffee-syphon-pricelist": {
+    "url": "https://coffee-syphon.co.jp/pdf/pricelist.pdf",
+    "finalUrl": "https://coffee-syphon.co.jp/pdf/pricelist.pdf",
+    "httpStatus": 200,
+    "contentType": "application/pdf",
+    "size": 1154567,
+    "sha256": "7e302dc2ee427e065e24797d229976b4d62af7766fd3a54d5f606e7637c26ce0",
+    "accessed": "2026-11-10",
+    "tool": "urllib(fetch)",
+    "textChars": 4789,
+    "scannedImagesOnly": false,
+    "files": [
+      "original.pdf",
+      "text.txt"
+    ],
+    "note": ""
+  },
   "cornell-lii-har-4-143-6": {
     "url": "https://www.law.cornell.edu/regulations/hawaii/Haw-Code-R-SS-4-143-6",
     "finalUrl": "https://www.law.cornell.edu/regulations/hawaii/Haw-Code-R-SS-4-143-6",
@@ -4097,6 +4114,70 @@
     ],
     "note": "メーカー公式サイトの商品データ(JSON)。器具カタログ(data/tools.json)の根拠"
   },
+  "tools-bodum-2026-11-10": {
+    "url": "https://www.bodum.com/jp/ja/",
+    "finalUrl": "https://www.bodum.com/jp/ja/",
+    "httpStatus": 200,
+    "contentType": "",
+    "size": 12683,
+    "sha256": "9c1b3f0efa215c2e5e0f2a88ba05fa78157e17806e32de534a557e345c36c057",
+    "accessed": "2026-11-10",
+    "tool": "ローカルのファイルを取り込み",
+    "textChars": 0,
+    "scannedImagesOnly": false,
+    "files": [
+      "original.bin"
+    ],
+    "note": "メーカー公式サイトの商品データ(JSON)。器具カタログ(data/tools.json)の根拠"
+  },
+  "tools-coffee-syphon-2026-11-10": {
+    "url": "https://coffee-syphon.co.jp/",
+    "finalUrl": "https://coffee-syphon.co.jp/",
+    "httpStatus": 200,
+    "contentType": "",
+    "size": 116683,
+    "sha256": "54cad4adcd05c3a188d69bdc78baae3bbc2de6cb390d3b06d391380326489546",
+    "accessed": "2026-11-10",
+    "tool": "ローカルのファイルを取り込み",
+    "textChars": 0,
+    "scannedImagesOnly": false,
+    "files": [
+      "original.bin"
+    ],
+    "note": "メーカー公式サイトの商品データ(JSON)。器具カタログ(data/tools.json)の根拠"
+  },
+  "tools-comandante-x25-2026-11-11": {
+    "url": "https://www.wb.coffee/shop/comandante-x25-trailmaster-dune-50234",
+    "finalUrl": "https://www.wb.coffee/shop/comandante-x25-trailmaster-dune-50234",
+    "httpStatus": 200,
+    "contentType": "",
+    "size": 995,
+    "sha256": "69dba67a4a7166b42b4684c1496ca67001c2a9d26c8084794dea67a3118b4cd4",
+    "accessed": "2026-11-11",
+    "tool": "ローカルのファイルを取り込み",
+    "textChars": 0,
+    "scannedImagesOnly": false,
+    "files": [
+      "original.bin"
+    ],
+    "note": "メーカー公式サイトの商品データ(JSON)。器具カタログ(data/tools.json)の根拠"
+  },
+  "tools-crema-comandante-2026-11-10": {
+    "url": "https://www.cremashop.eu/en/shop-by-brand/comandante",
+    "finalUrl": "https://www.cremashop.eu/en/shop-by-brand/comandante",
+    "httpStatus": 200,
+    "contentType": "",
+    "size": 11664,
+    "sha256": "5cfe560f36fcf5a26a1f6990b877e0def460040705b9670c40c341f9712d57b3",
+    "accessed": "2026-11-10",
+    "tool": "ローカルのファイルを取り込み",
+    "textChars": 0,
+    "scannedImagesOnly": false,
+    "files": [
+      "original.bin"
+    ],
+    "note": "メーカー公式サイトの商品データ(JSON)。器具カタログ(data/tools.json)の根拠"
+  },
   "tools-fellow-2026-11-10": {
     "url": "https://fellowproducts.com/",
     "finalUrl": "https://fellowproducts.com/",
@@ -4168,6 +4249,22 @@
     "contentType": "",
     "size": 14445,
     "sha256": "5043cc9cb3773810988e08ba580b507d5f148bd18d11b11d1f1b25c85cfb5396",
+    "accessed": "2026-11-10",
+    "tool": "ローカルのファイルを取り込み",
+    "textChars": 0,
+    "scannedImagesOnly": false,
+    "files": [
+      "original.bin"
+    ],
+    "note": "メーカー公式サイトの商品データ(JSON)。器具カタログ(data/tools.json)の根拠"
+  },
+  "tools-ogawa-2026-11-10": {
+    "url": "https://oc-shop.co.jp/",
+    "finalUrl": "https://oc-shop.co.jp/",
+    "httpStatus": 200,
+    "contentType": "",
+    "size": 98256,
+    "sha256": "a91954c0f49c8a7a32dbfefec479a35721f1376a89f91f59d288f9028a9690bc",
     "accessed": "2026-11-10",
     "tool": "ローカルのファイルを取り込み",
     "textChars": 0,

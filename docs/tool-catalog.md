@@ -64,14 +64,23 @@ py -X utf8 scripts/build_tools_catalog.py hario-shop --from-file tools-hario-sho
 | TIMEMORE | 17製品(36型番) | 28 | 公式オンラインショップ(www.timemore.com。ブラウザで書き出し) | 公式の英語サイトのため、JANは、中国のGS1の番号(6959…)で、日本の店で売る品のJANと違う場合がありうる。JANが空の8型番は、ショップの値が、JANではない社内コード(IF…)のため、載せていない。中古品(USED)・セット品は除外 |
 | Fellow | 4製品(16型番) | 16 | 公式オンラインショップ(fellowproducts.com。ブラウザで書き出し) | 米国向けの店。JANは、米国のUPC/EAN(840…・852…・860…)で、日本の店で売る品の番号と違う場合がありうる。Stagg [X]/[XF]、Ode Gen 2、Opus 2、Stagg専用ペーパー |
 | ORIGAMI | 11製品(47型番) | 47 | 公式オンラインショップ(origami-kai.com。ブラウザで書き出し) | JANは、日本のJAN(4536058…)。オンラインストア限定品を含む。ドリッパー形の照明(Pendant lamp)と、お茶用(Tea Dripper)は除外 |
+| 珈琲サイフオン(コーノ式) | 54製品(サイフォンセット24・名門ドリッパーセット19・ペーパー11) | 0 | 公式サイト(coffee-syphon.co.jp)が読み込むCSV(`/csv/coffee_syphon.csv`・`/csv/meimon_filter.csv`) | CSVの「jan」の列は、**6桁の数字**(例: 421319)で、13桁のJANではない。完全なJANが分からないため、gtinは空(推測しない)。6桁は `siteCode` に残した。ロート・フラスコ・グラスポットなどの部品は載せていない |
+| AeroPress(小川珈琲オンラインショップ) | 14製品(本体・Clear Colors・Go・Go Plus・専用ペーパー) | 14 | 小川珈琲オンラインショップ(oc-shop.co.jp。**販売店**。ブラウザで書き出し) | JANは、店の入力値。**12型番は、barcodeの欄が空で、型番(sku)に、JANの数字(チェックデジットが合うもの)が入っている**ため、その数字を使い、`gtinFrom: "sku"` の印を付けた。シール・カラフェ・フローコントロール・豆とのセットは除外 |
+| Bodum(フレンチプレス) | 41製品 | 41 | 公式オンラインショップ(www.bodum.com/jp/ja)の商品ページに表示される「商品番号」「EAN」を、ブラウザで開いて読み取った記録 | 一覧(coffee-makers 1〜3ページ)の41商品。EANは、12桁(UPC-A。699965…・727015…)で、すべてチェックデジットが合う。ページのAPIは使っていない(ページはスクリプトで描画され、データは、サイトの内部のAPIから取る作り)。作り直すときは、同じ方法で読み取り、`tools-bodum.json` を作って、`bodum --from-file tools-bodum.json` を実行する |
+| Comandante(コーヒーミル) | 7製品(うち X25 Trailmaster Dune は、販売店 wb.coffee と MaxiCoffee の2か所で同じEANを確認して追加。`comandante-x25`)(C40 MK4 Nitro Blade 6色・LAB Series 3種・Vintage Oak Classic・C60 Baracuda 2色。変種を合わせて13型番) | 13 | 販売店 Crema(cremashop.eu。エストニア)の商品ページ。利用者が指定 | **販売店の情報**(Comandante公式サイトは、作業用の端末から403で取得できなかった)。JANは、ページの構造化データ(schema.org の gtin13)の値で、店の入力値。`sku` の「Crema 3595」は、店の商品番号(メーカーの型番ではない)。変種の名前は、商品番号が入った画像の説明文・リンクから対応づけた(順番では対応づけない)。参考: Racing Greenの `4260113438107` は、別の販売店の掲載にも同じ数字がある |
 
 ### 既知の注意
 - Kalitaの公式ページで、**102-D と 102-DL に、同じJAN(4901369503026)が付いている**。公式の記載のまま載せている(`npm run tools:check` が警告を出す)。JANから照合すると、先に見つかった方が出る。
 - Melittaの「オリジナル 1×6 ナチュラルブラウン40枚」のJAN(4006508123834)は、公式ページの記載のまま(ドイツのEAN。チェックデジットは正しい)。
 - HARIOの名前は、公式ページの表記のまま(例: 「V60透過ドリッパ-01クリア」のような表記ゆれも、そのまま)。
 
+### Comandanteの、確認できていないEAN(採用しない)
+「C40の色(Virginia Walnut・Alpine Lagoon・Burgundy・Copper Mountain・Snow Leopard)」「X25 Forest」の番号は、出所が見つからない、または、チェックデジットが合わないため、載せていない(2026-11-11に確認)。出所が見つかったら、追加する。
+
 ## 未収録(次の手)
-- **Comandante**(comandante.de): 403で、作業用の端末では取得できなかった。利用者のPCのブラウザで、公式サイトを開ける場合は、別のアダプターで収録できる(Shopify製かは未確認)。
+- **小川珈琲(エアロプレス)**: 取り込み済み(上の表)。
+- **ボダム(フレンチプレス)**: 取り込み済み(上の表)。
+- **Comandante**: 公式サイトは取得できなかったが、販売店Cremaのページから取り込み済み(上の表)。公式サイトで確認できれば、そちらを優先する。
 - **CAFEC**(cafec.co.jp)・**Kinu**(kinu-grinders.com): 作業用の端末から接続できなかった。
 - Melittaの業務用、1Zpressoの個別の機種(Q・X・ZP6)。
 - 販売店(楽天・Yahoo!・Amazonなど)の情報は、使わない(公式ではないため)。
