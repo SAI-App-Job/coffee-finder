@@ -1,4 +1,6 @@
 import { useCallback, useEffect, useState } from "react";
+import { loadStoredJson } from "../utils/storage";
+import { mergeRatings } from "../utils/backupMerge";
 
 const STORAGE_KEY = "coffee-finder:ratings";
 
@@ -10,13 +12,12 @@ const STORAGE_KEY = "coffee-finder:ratings";
 // 振り返れるようにするため。ノート追加時にストレージキーの分割・
 // 移行が発生しないよう、あらかじめこの構造で揃えている)。
 function loadRatings() {
-  try {
-    const raw = localStorage.getItem(STORAGE_KEY);
-    const parsed = raw ? JSON.parse(raw) : {};
-    return typeof parsed === "object" && parsed !== null && !Array.isArray(parsed) ? parsed : {};
-  } catch {
-    return {};
-  }
+  // 読めなかった・形が違うときは、元の文字列を残してから、空で始める(utils/storage.js)
+  return loadStoredJson(
+    STORAGE_KEY,
+    (parsed) => (parsed === null ? { value: {} } : typeof parsed === "object" && !Array.isArray(parsed) ? { value: parsed } : null),
+    {}
+  );
 }
 
 export function useRatings() {
@@ -46,5 +47,15 @@ export function useRatings() {
     });
   }, []);
 
-  return { ratings, getRating, setRating };
+  // バックアップファイルからの復元用。上書きはせず、無い商品の評価を足す(同じ商品は、日時が新しい方を残す)
+  const importRatings = useCallback(
+    (incoming) => {
+      const result = mergeRatings(ratings, incoming);
+      if (result.added + result.updated > 0) setRatings(result.value);
+      return { added: result.added, updated: result.updated };
+    },
+    [ratings]
+  );
+
+  return { ratings, getRating, setRating, importRatings };
 }

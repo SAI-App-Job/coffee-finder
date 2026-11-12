@@ -18,12 +18,14 @@ export function buildDiaryEvents({
   photoDates,
   productsById,
   shopsByName,
+  snapshots = {}, // 商品データから消えた商品の、名前などの控え(hooks/useProductSnapshots.js)
 }) {
   const userProductById = new Map(userProducts.map((p) => [p.id, p]));
   const userShopById = new Map(userShops.map((s) => [s.id, s]));
   const appProduct = (id) => productsById.get(String(id));
-  const nameOf = (id) => userProductById.get(id)?.name ?? appProduct(id)?.rawName ?? "";
-  const originOf = (id) => userProductById.get(id)?.originCountry || appProduct(id)?.originCountry || "";
+  const nameOf = (id) => userProductById.get(id)?.name ?? appProduct(id)?.rawName ?? snapshots[String(id)]?.name ?? "";
+  const originOf = (id) =>
+    userProductById.get(id)?.originCountry || appProduct(id)?.originCountry || snapshots[String(id)]?.originCountry || "";
   const prefectureOfUserShop = (shop) => {
     if (shop.appShopName) return shopsByName.get(shop.appShopName)?.prefecture ?? "";
     return ALL_PREFECTURES.find((p) => shop.address?.startsWith(p)) ?? "";

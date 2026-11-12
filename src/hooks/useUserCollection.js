@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useState } from "react";
+import { loadStoredJson } from "../utils/storage";
 
 const STORAGE_KEY = "coffee-finder:user-collection";
 
@@ -51,17 +52,21 @@ function sanitizeProduct(raw) {
 }
 
 function load() {
-  try {
-    const parsed = JSON.parse(localStorage.getItem(STORAGE_KEY) ?? "null");
-    const shops = (Array.isArray(parsed?.shops) ? parsed.shops : []).map(sanitizeShop).filter(Boolean);
-    const shopIds = new Set(shops.map((s) => s.id));
-    const products = (Array.isArray(parsed?.products) ? parsed.products : [])
-      .map(sanitizeProduct)
-      .filter((p) => p && shopIds.has(p.shopId));
-    return { shops, products };
-  } catch {
-    return { shops: [], products: [] };
-  }
+  return loadStoredJson(
+    STORAGE_KEY,
+    (parsed) => {
+      if (parsed === null) return { value: { shops: [], products: [] } };
+      if (typeof parsed !== "object" || Array.isArray(parsed)) return null;
+      const rawShops = Array.isArray(parsed.shops) ? parsed.shops : [];
+      const rawProducts = Array.isArray(parsed.products) ? parsed.products : [];
+      const shops = rawShops.map(sanitizeShop).filter(Boolean);
+      const shopIds = new Set(shops.map((s) => s.id));
+      const products = rawProducts.map(sanitizeProduct).filter((p) => p && shopIds.has(p.shopId));
+      // 一部を捨てたときは、元の文字列を残す
+      return { value: { shops, products }, lossy: shops.length !== rawShops.length || products.length !== rawProducts.length };
+    },
+    { shops: [], products: [] }
+  );
 }
 
 // ユーザーが手動で登録した「店舗 → 商品」。アプリ収録の店舗・商品データ(GitHub上のJSON)とは

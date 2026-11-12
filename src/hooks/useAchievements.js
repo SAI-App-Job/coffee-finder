@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { loadStoredJson } from "../utils/storage";
 import { evaluateAchievements } from "../utils/achievements";
 
 const STORAGE_KEY = "coffee-finder:achievements";
@@ -7,13 +8,17 @@ const STORAGE_KEY = "coffee-finder:achievements";
 const FRESH_MS = 5 * 60 * 1000;
 
 function load() {
-  try {
-    const parsed = JSON.parse(localStorage.getItem(STORAGE_KEY) ?? "null");
-    if (!parsed || typeof parsed !== "object" || Array.isArray(parsed)) return {};
-    return Object.fromEntries(Object.entries(parsed).filter(([, v]) => typeof v === "string"));
-  } catch {
-    return {};
-  }
+  return loadStoredJson(
+    STORAGE_KEY,
+    (parsed) => {
+      if (parsed === null) return { value: {} };
+      if (typeof parsed !== "object" || Array.isArray(parsed)) return null;
+      const entries = Object.entries(parsed);
+      const kept = entries.filter(([, v]) => typeof v === "string");
+      return { value: Object.fromEntries(kept), lossy: kept.length !== entries.length };
+    },
+    {}
+  );
 }
 
 // 実績の獲得状況。条件は、記録(events・ratingTimes)から毎回計算する。

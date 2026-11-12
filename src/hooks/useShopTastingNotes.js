@@ -1,15 +1,16 @@
 import { useCallback, useEffect, useState } from "react";
+import { loadStoredJson } from "../utils/storage";
+import { mergeEntries } from "../utils/backupMerge";
 
 const STORAGE_KEY = "coffee-finder:shop-tasting-notes";
 
 function loadNotes() {
-  try {
-    const raw = localStorage.getItem(STORAGE_KEY);
-    const parsed = raw ? JSON.parse(raw) : {};
-    return typeof parsed === "object" && parsed !== null && !Array.isArray(parsed) ? parsed : {};
-  } catch {
-    return {};
-  }
+  // 読めなかった・形が違うときは、元の文字列を残してから、空で始める(utils/storage.js)
+  return loadStoredJson(
+    STORAGE_KEY,
+    (parsed) => (parsed === null ? { value: {} } : typeof parsed === "object" && !Array.isArray(parsed) ? { value: parsed } : null),
+    {}
+  );
 }
 
 function generateId() {
@@ -53,5 +54,15 @@ export function useShopTastingNotes() {
     });
   }, []);
 
-  return { notesByShop, getNotes, addNote, deleteNote };
+  // バックアップファイルからの復元用。上書きはせず、無い記録(idで判断)だけを足す
+  const importNotes = useCallback(
+    (incoming) => {
+      const result = mergeEntries(notesByShop, incoming);
+      if (result.added > 0) setNotesByShop(result.value);
+      return { added: result.added };
+    },
+    [notesByShop]
+  );
+
+  return { notesByShop, getNotes, addNote, deleteNote, importNotes };
 }

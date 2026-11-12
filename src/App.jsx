@@ -18,6 +18,8 @@ import { useViewHistory } from "./hooks/useViewHistory";
 import { useComparison } from "./hooks/useComparison";
 import { useRatings } from "./hooks/useRatings";
 import { useTastingLog } from "./hooks/useTastingLog";
+import { useProductSnapshots } from "./hooks/useProductSnapshots";
+import { requestPersistentStorage } from "./utils/storage";
 import { useProductPhotos } from "./hooks/useProductPhotos";
 import { buildSampleCollection, isSampleId, renderSamplePackage } from "./data/sampleCollection";
 import { useUserCollection } from "./hooks/useUserCollection";
@@ -97,8 +99,8 @@ export default function CoffeeProductList() {
     clearCompare,
     limit: compareLimit,
   } = useComparison(isPremium, showToast);
-  const { ratings, getRating, setRating } = useRatings();
-  const { logsByProduct, getLogs, addLog, deleteLog, clearLogs } = useTastingLog();
+  const { ratings, getRating, setRating, importRatings } = useRatings();
+  const { logsByProduct, getLogs, addLog, deleteLog, clearLogs, importLogs } = useTastingLog();
   const userCollection = useUserCollection();
   const myTools = useMyTools();
   // 商品のパッケージ写真(端末内のIndexedDBに保存。商品IDがキー)
@@ -118,7 +120,7 @@ export default function CoffeeProductList() {
   const [userShopPickerOpen, setUserShopPickerOpen] = useState(false);
   const [userShopForm, setUserShopForm] = useState(null);
   const [userProductForm, setUserProductForm] = useState(null);
-  const { notesByShop, getNotes: getShopNotes, addNote: addShopNote, deleteNote: deleteShopNote } = useShopTastingNotes();
+  const { notesByShop, getNotes: getShopNotes, addNote: addShopNote, deleteNote: deleteShopNote, importNotes } = useShopTastingNotes();
   const [noteFormShop, setNoteFormShop] = useState(null);
 
   // いま開いている画面。下部メニュー(BottomNav)から切り替える。
@@ -364,6 +366,21 @@ export default function CoffeeProductList() {
 
   const productsById = useMemo(() => new Map(products.map((p) => [String(p.id), p])), [products]);
 
+  // 保存・評価・記録した商品の名前の控え(商品データから販売終了で消えても、名前が分かるように)
+  const touchedProductIds = useMemo(() => {
+    const ids = new Set([...favoriteIds, ...Object.keys(ratings), ...Object.keys(logsByProduct)]);
+    return [...ids].filter((id) => !isSampleId(id) && !id.startsWith("user-"));
+  }, [favoriteIds, ratings, logsByProduct]);
+  const { snapshots: productSnapshots, importSnapshots } = useProductSnapshots(touchedProductIds, productsById);
+
+  // 利用者のデータができたら、ブラウザに「自動で消さないで」と求める(空き容量が足りないとき等の自動削除を、受けにくくする)
+  const hasUserData =
+    favoriteIds.length + Object.keys(ratings).length + Object.keys(logsByProduct).length + Object.keys(notesByShop).length +
+    myTools.tools.length + userCollection.userProducts.length > 0;
+  useEffect(() => {
+    if (hasUserData) requestPersistentStorage();
+  }, [hasUserData]);
+
   // 「お気に入り店舗」は独立した機能ではなく、お気に入り商品を扱う店舗を
   // 自動的に導出する派生値(マイマップ用)。店舗側に専用のお気に入りボタンは置かない。
   const favoriteShops = useMemo(() => {
@@ -546,8 +563,9 @@ export default function CoffeeProductList() {
         photoDates,
         productsById,
         shopsByName,
+        snapshots: productSnapshots,
       }),
-    [logsByProduct, notesByShop, userCollection.userProducts, userCollection.userShops, photoIds, photoDates, productsById, shopsByName]
+    [logsByProduct, notesByShop, userCollection.userProducts, userCollection.userShops, photoIds, photoDates, productsById, shopsByName, productSnapshots]
   );
   const ratingTimes = useMemo(
     () =>
@@ -834,16 +852,6 @@ export default function CoffeeProductList() {
           favoriteDates={favoriteDates}
           getRating={getRating}
           shelf={{ items: shelfItems, onOpen: openShelfItem }}
-          backup={{
-            favoriteIds,
-            favoriteDates,
-            importFavorites,
-            isPremium,
-            userShops: userCollection.userShops,
-            userProducts: userCollection.userProducts,
-            importUserCollection: userCollection.importCollection,
-            photos: { count: photoCount, getBytes: getPhotoBytes, exportAll: exportPhotos, importAll: importPhotos },
-          }}
           registered={{
             userShops: userCollection.userShops,
             userProducts: userCollection.userProducts,
@@ -932,6 +940,26 @@ export default function CoffeeProductList() {
           setFavoriteAreaPrefecture={setFavoriteAreaPrefecture}
           setFavoriteAreaCity={setFavoriteAreaCity}
           myTools={myTools}
+          backup={{
+            favoriteIds,
+            favoriteDates,
+            importFavorites,
+            isPremium,
+            userShops: userCollection.userShops,
+            userProducts: userCollection.userProducts,
+            importUserCollection: userCollection.importCollection,
+            photos: { count: photoCount, getBytes: getPhotoBytes, exportAll: exportPhotos, importAll: importPhotos },
+            ratings,
+            importRatings,
+            logsByProduct,
+            importLogs,
+            notesByShop,
+            importNotes,
+            tools: myTools.tools,
+            importTools: myTools.importTools,
+            productSnapshots,
+            importSnapshots,
+          }}
           onOpenAbout={() => setAboutOpen(true)}
         />
       )}

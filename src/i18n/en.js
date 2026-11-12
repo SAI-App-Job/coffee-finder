@@ -75,9 +75,9 @@ const UI = {
     "Your location is used only to sort by distance. It is calculated on your device and is never sent to or stored on a server. You can use the app without allowing it.",
   "表示に必要な外部サービス(商品・店舗データの配信元の GitHub、地図の OpenStreetMap、フォントの Google Fonts)とは通信します。通信の仕組み上、これらのサービスには、お使いの端末のIPアドレス等が届きます。":
     "The app communicates with external services needed for display (GitHub for product and shop data, OpenStreetMap for maps, Google Fonts for fonts). By the nature of internet communication, these services receive information such as your device's IP address.",
-  "ブラウザのサイトデータを削除したり、端末を変更したりすると、これらの記録は失われます。「コレクションのバックアップ」で、ファイルに書き出して保管できます(パッケージ写真は、書き出すときに選んだ場合だけ含まれます)。":
-    "These records are lost if you clear the browser's site data or change devices. You can export them to a file with \"Collection backup\" (package photos are included only if you choose to include them when exporting).",
-  "最終更新: 2026年11月8日": "Last updated: November 8, 2026",
+  "ブラウザのサイトデータを削除したり、端末を変更したりすると、これらの記録は失われます。設定の「データのバックアップ」で、ファイルに書き出して保管できます(パッケージ写真は、書き出すときに選んだ場合だけ含まれます)。":
+    "These records are lost if you clear the browser's site data or change devices. You can export them to a file with \"Data backup\" in Settings (package photos are included only if you choose to include them when exporting).",
+  "最終更新: 2026年11月12日": "Last updated: November 12, 2026",
   "プライバシーポリシー(全文)": "Privacy policy (full text)",
   "掲載店舗の方へ": "For listed shops",
   "内容の修正・削除等のご希望は、こちらのXアカウント(DM)までご連絡ください。":
@@ -136,9 +136,11 @@ const UI = {
   "評価した{n}件の商品のフレーバーノートを、星の数を重みにして集計しています。": "Based on the flavor notes of {n} {n?product:products} you rated, weighted by star rating.",
   "{cats}が好きなあなたにおすすめ": "Recommended for fans of {cats}",
   "・": ", ",
-  "コレクションのバックアップ": "Collection backup",
-  "コレクション(保存した商品と、登録した店舗・商品)は、端末内にのみ保存されています。機種変更前や念のためのバックアップとして、ファイルへの書き出し・読み込みができます(評価とテイスティングログは含まれません。パッケージ写真は、書き出すときに選んだ場合だけ含まれます)。":
-    "Your collection (saved products, and registered shops and products) is stored only on your device. You can export it to a file and import it back, e.g. before changing phones or just in case (ratings and tasting logs are not included; package photos are included only if you choose to include them when exporting).",
+  "データのバックアップ": "Data backup",
+  "コレクション(保存した商品と、登録した店舗・商品)・★評価・テイスティングログ・テイスティングノート・マイツールは、端末内にのみ保存されています。機種変更前や念のためのバックアップとして、1つのファイルへの書き出し・読み込みができます(パッケージ写真は、書き出すときに選んだ場合だけ含まれます)。読み込みは追加のみで、いまのデータは上書きしません。":
+    "Your collection (saved products, and registered shops and products), star ratings, tasting logs, tasting notes and My tools are stored only on your device. You can export them to a single file and import it back, e.g. before changing phones or just in case (package photos are included only if you choose to include them when exporting). Importing only adds data; it never overwrites what you have now.",
+  "ファイルには、あなたのメモや感想が入っています。他の人に渡すときは、ご注意ください。": "The file contains your notes and impressions. Be careful when sharing it with others.",
+  "マイツール{n}件": "{n} My tools",
   "(無料プランは、商品を{n}件までコレクションに保存できます)": " (The free plan lets you save up to {n} products in your collection.)",
   "パッケージ写真も含める({n}枚・ファイルが約{size}増えます)": "Include package photos ({n} photos; the file grows by about {size})",
   "ファイルが大きいと、メールで送れなかったり、読み込みに時間がかかったりすることがあります。":

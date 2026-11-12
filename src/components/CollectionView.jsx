@@ -6,7 +6,6 @@ import { FavoritesView } from "./FavoritesView";
 import { MyMapView } from "./MyMapView";
 import { UserCollectionView } from "./UserCollectionView";
 import { TasteProfile } from "./TasteProfile";
-import { CollectionBackup } from "./CollectionBackup";
 import { PhotoShelf } from "./PhotoShelf";
 
 const SECTIONS = [
@@ -34,7 +33,6 @@ export function CollectionView({
   favoriteShops,
   favoriteDates,
   getRating,
-  backup,
   registered,
   shelf,
 }) {
@@ -112,7 +110,6 @@ export function CollectionView({
 
       <div className="px-5 pb-5 flex flex-col gap-6">
         <TasteProfile products={products} getRating={getRating} onOpenDetail={onOpenDetail} />
-        <CollectionBackup {...backup} />
       </div>
     </div>
   );

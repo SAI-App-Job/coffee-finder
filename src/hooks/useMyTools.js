@@ -1,4 +1,6 @@
 import { useCallback, useEffect, useState } from "react";
+import { loadStoredJson } from "../utils/storage";
+import { mergeTools } from "../utils/backupMerge";
 
 const STORAGE_KEY = "coffee-finder:my-tools";
 
@@ -42,12 +44,16 @@ function normalize(raw) {
 }
 
 function loadTools() {
-  try {
-    const parsed = JSON.parse(localStorage.getItem(STORAGE_KEY) ?? "[]");
-    return Array.isArray(parsed) ? parsed.map(normalize).filter(Boolean) : [];
-  } catch {
-    return [];
-  }
+  return loadStoredJson(
+    STORAGE_KEY,
+    (parsed) => {
+      if (!Array.isArray(parsed)) return null;
+      const tools = parsed.map(normalize).filter(Boolean);
+      // 知らない種類(新しい版で作られたもの等)を捨てたときは、元の文字列を残す
+      return { value: tools, lossy: tools.length !== parsed.length };
+    },
+    []
+  );
 }
 
 // 「マイツール」: 自分の道具(ドリッパー・ペーパー・コーヒーミル(グラインダー)など)の登録。端末内(localStorage)に保存する。
@@ -78,5 +84,16 @@ export function useMyTools() {
     setTools((prev) => prev.filter((tool) => tool.id !== id));
   }, []);
 
-  return { tools, addTool, updateTool, deleteTool };
+  // バックアップファイルからの復元用。上書きはせず、無いもの(idで判断)だけを足す
+  const importTools = useCallback(
+    (incoming) => {
+      const normalized = Array.isArray(incoming) ? incoming.map(normalize).filter(Boolean) : [];
+      const result = mergeTools(tools, normalized);
+      if (result.added > 0) setTools(result.value);
+      return { added: result.added };
+    },
+    [tools]
+  );
+
+  return { tools, addTool, updateTool, deleteTool, importTools };
 }

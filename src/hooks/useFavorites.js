@@ -1,4 +1,5 @@
 import { translate } from "../i18n";
+import { loadStoredJson } from "../utils/storage";
 import { useCallback, useEffect, useRef, useState } from "react";
 
 const STORAGE_KEY = "coffee-finder:favorites";
@@ -9,27 +10,22 @@ export const FREE_FAVORITES_LIMIT = 20;
 // 商品IDは実データ(product_url由来の文字列)とモックデータ(数値)が混在するため、
 // 比較・保存の際は常にStringに揃えて型の不一致による誤判定を防ぐ。
 function loadFavoriteIds() {
-  try {
-    const raw = localStorage.getItem(STORAGE_KEY);
-    if (!raw) return [];
-    const parsed = JSON.parse(raw);
-    return Array.isArray(parsed) ? parsed.map(String) : [];
-  } catch {
-    return [];
-  }
+  return loadStoredJson(STORAGE_KEY, (parsed) => (Array.isArray(parsed) ? { value: parsed.map(String) } : null), []);
 }
 
 const isValidDate = (v) => typeof v === "string" && !Number.isNaN(new Date(v).getTime());
 
 // { [商品ID]: ISO日時 }。日付の記録が始まる前に保存した商品は、日付を持たない(推測で補わない)。
 function loadFavoriteDates() {
-  try {
-    const parsed = JSON.parse(localStorage.getItem(DATES_STORAGE_KEY) ?? "null");
-    if (!parsed || typeof parsed !== "object" || Array.isArray(parsed)) return {};
-    return Object.fromEntries(Object.entries(parsed).filter(([, v]) => isValidDate(v)));
-  } catch {
-    return {};
-  }
+  return loadStoredJson(
+    DATES_STORAGE_KEY,
+    (parsed) => {
+      if (parsed === null) return { value: {} };
+      if (typeof parsed !== "object" || Array.isArray(parsed)) return null;
+      return { value: Object.fromEntries(Object.entries(parsed).filter(([, v]) => isValidDate(v))) };
+    },
+    {}
+  );
 }
 
 export function useFavorites(isPremium, showToast) {

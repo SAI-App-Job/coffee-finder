@@ -4,7 +4,9 @@ import { FREE_FAVORITES_LIMIT } from "../hooks/useFavorites";
 import { resizeImageToBlob } from "../utils/imageResize";
 import { useT } from "../i18n";
 
-const BACKUP_VERSION = 2;
+// 版 1: お気に入りだけ / 版 2: + 登録した店舗・商品・写真 / 版 3: + ★評価・テイスティングログ・店舗のテイスティングノート・マイツール・商品名の控え
+// 古い版のファイルも、読み込める(無い項目は、飛ばす)。docs/user-data-storage.md
+const BACKUP_VERSION = 3;
 // base64 にすると、元のバイト数の約1.33倍になる
 const BASE64_RATIO = 4 / 3;
 // これを超える写真は、取り込む前に縮小する(このアプリが書き出す写真は数百KBなので、通常は該当しない)。
@@ -23,10 +25,11 @@ const blobToDataUrl = (blob) =>
     reader.readAsDataURL(blob);
   });
 
-// コレクション(お気に入り+登録した店舗・商品)のバックアップ(JSONファイルへの書き出し・読み込み)。
-// version 1 のファイル(お気に入りのみ)も読み込める。
+// 利用者のデータ(コレクション・★評価・テイスティングログ・テイスティングノート・マイツール)のバックアップ(JSONファイルへの書き出し・読み込み)。
+// 読み込みは「追加のみ」で、いまのデータは上書きしない(評価だけは、日時が新しい方を残す)。
+// 含めないもの: プレミアムの状態(ファイルの編集で回避できてしまうため)・実績(記録から再計算される)・閲覧履歴・設定。
 // パッケージ写真は大きいので、書き出すときに「写真も含める」を選んだ場合だけ、photos として入れる。
-export function CollectionBackup({
+export function DataBackup({
   favoriteIds,
   favoriteDates,
   importFavorites,
@@ -35,6 +38,16 @@ export function CollectionBackup({
   userProducts,
   importUserCollection,
   photos,
+  ratings,
+  importRatings,
+  logsByProduct,
+  importLogs,
+  notesByShop,
+  importNotes,
+  tools,
+  importTools,
+  productSnapshots,
+  importSnapshots,
 }) {
   const t = useT();
   const fileInputRef = useRef(null);
@@ -42,7 +55,9 @@ export function CollectionBackup({
   const [includePhotos, setIncludePhotos] = useState(false);
   const [photoBytes, setPhotoBytes] = useState(0);
   const [busy, setBusy] = useState(null); // null | "export" | "import"
-  const totalCount = favoriteIds.length + userProducts.length;
+  const countEntries = (byKey) => Object.values(byKey).reduce((n, list) => n + list.length, 0);
+  const totalCount =
+    favoriteIds.length + userProducts.length + Object.keys(ratings).length + countEntries(logsByProduct) + countEntries(notesByShop) + tools.length;
 
   // 写真の合計サイズ(書き出しファイルの大きさの目安)。写真が増減したら計算し直す
   const { count: photoCount, getBytes: getPhotoBytes } = photos;
@@ -73,6 +88,11 @@ export function CollectionBackup({
         favoriteDates: Object.fromEntries(Object.entries(favoriteDates).filter(([id]) => favoriteIds.includes(id))),
         userShops,
         userProducts,
+        ratings,
+        tastingLogs: logsByProduct,
+        shopTastingNotes: notesByShop,
+        myTools: tools,
+        productSnapshots,
       };
       if (withPhotos) {
         const entries = await photos.exportAll();
@@ -85,7 +105,7 @@ export function CollectionBackup({
       const url = URL.createObjectURL(blob);
       const a = document.createElement("a");
       a.href = url;
-      a.download = `coffee-finder-collection-${new Date().toISOString().slice(0, 10)}.json`;
+      a.download = `coffee-finder-backup-${new Date().toISOString().slice(0, 10)}.json`;
       document.body.appendChild(a);
       a.click();
       a.remove();
@@ -127,7 +147,9 @@ export function CollectionBackup({
       const parsed = JSON.parse(await file.text());
       const hasFavorites = Array.isArray(parsed.favorites);
       const hasUserData = Array.isArray(parsed.userShops) || Array.isArray(parsed.userProducts);
-      if (!hasFavorites && !hasUserData) {
+      const isObj = (v) => v !== null && typeof v === "object" && !Array.isArray(v);
+      const hasRecords = isObj(parsed.ratings) || isObj(parsed.tastingLogs) || isObj(parsed.shopTastingNotes) || Array.isArray(parsed.myTools);
+      if (parsed === null || typeof parsed !== "object" || (!hasFavorites && !hasUserData && !hasRecords)) {
         setImportMessage({ type: "error", text: t("対応していないファイル形式です") });
         return;
       }
@@ -135,12 +157,22 @@ export function CollectionBackup({
       const user = hasUserData
         ? importUserCollection({ shops: parsed.userShops, products: parsed.userProducts })
         : { shopsAdded: 0, productsAdded: 0, productIds: userProducts.map((p) => p.id) };
+      // ★評価・ログ・ノート・マイツール・商品名の控え(版 3 から)
+      const rated = isObj(parsed.ratings) ? importRatings(parsed.ratings) : null;
+      const logged = isObj(parsed.tastingLogs) ? importLogs(parsed.tastingLogs) : null;
+      const noted = isObj(parsed.shopTastingNotes) ? importNotes(parsed.shopTastingNotes) : null;
+      const toolResult = Array.isArray(parsed.myTools) ? importTools(parsed.myTools) : null;
+      if (isObj(parsed.productSnapshots)) importSnapshots(parsed.productSnapshots);
       const photoEntries = await parsePhotos(parsed.photos, new Set(user.productIds));
       const photoResult = photoEntries.length > 0 ? await photos.importAll(photoEntries) : null;
 
       const parts = [];
       if (hasFavorites) parts.push(t("保存した商品{total}件中{added}件", { total: fav.total, added: fav.added }));
       if (hasUserData) parts.push(t("店舗{shops}件・商品{products}件", { shops: user.shopsAdded, products: user.productsAdded }));
+      if (rated) parts.push(t("★評価{n}件", { n: rated.added + rated.updated }));
+      if (logged) parts.push(t("テイスティングログ{n}件", { n: logged.added }));
+      if (noted) parts.push(t("テイスティングノート{n}件", { n: noted.added }));
+      if (toolResult) parts.push(t("マイツール{n}件", { n: toolResult.added }));
       if (photoResult) parts.push(t("写真{n}枚", { n: photoResult.added }));
       const failed = photoResult?.failed ?? 0;
       setImportMessage({
@@ -160,11 +192,15 @@ export function CollectionBackup({
     <section className="rounded-2xl bg-[var(--c-surface)] border border-[var(--c-border)] p-4 flex flex-col gap-3">
       <div className="flex items-center gap-1.5">
         <Archive size={14} className="text-[var(--accent)]" strokeWidth={1.75} />
-        <h3 className="text-[14px] font-medium text-[var(--c-text)]">{t("コレクションのバックアップ")}</h3>
+        <h3 className="text-[14px] font-medium text-[var(--c-text)]">{t("データのバックアップ")}</h3>
       </div>
       <p className="text-[12px] text-[var(--c-text-3)] leading-relaxed">
-        {t("コレクション(保存した商品と、登録した店舗・商品)は、端末内にのみ保存されています。機種変更前や念のためのバックアップとして、ファイルへの書き出し・読み込みができます(評価とテイスティングログは含まれません。パッケージ写真は、書き出すときに選んだ場合だけ含まれます)。")}
+        {t("コレクション(保存した商品と、登録した店舗・商品)・★評価・テイスティングログ・テイスティングノート・マイツールは、端末内にのみ保存されています。機種変更前や念のためのバックアップとして、1つのファイルへの書き出し・読み込みができます(パッケージ写真は、書き出すときに選んだ場合だけ含まれます)。読み込みは追加のみで、いまのデータは上書きしません。")}
         {!isPremium && t("(無料プランは、商品を{n}件までコレクションに保存できます)", { n: FREE_FAVORITES_LIMIT })}
+      </p>
+
+      <p className="text-[11px] text-[var(--c-text-3)] leading-relaxed">
+        {t("ファイルには、あなたのメモや感想が入っています。他の人に渡すときは、ご注意ください。")}
       </p>
 
       {photos.count > 0 && (
