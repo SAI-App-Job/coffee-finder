@@ -4130,6 +4130,38 @@
     ],
     "note": "メーカー公式サイトの商品データ(JSON)。器具カタログ(data/tools.json)の根拠"
   },
+  "tools-bodum-grinders-2026-11-12": {
+    "url": "https://www.bodum.com/jp/ja/coffee/coffee-grinders",
+    "finalUrl": "https://www.bodum.com/jp/ja/coffee/coffee-grinders",
+    "httpStatus": 200,
+    "contentType": "",
+    "size": 1539,
+    "sha256": "3265f6a6398066719a570b8fdb36ddfbb24f69e95f89d1c273f8b11bb9ef841e",
+    "accessed": "2026-11-12",
+    "tool": "ローカルのファイルを取り込み",
+    "textChars": 0,
+    "scannedImagesOnly": false,
+    "files": [
+      "original.bin"
+    ],
+    "note": "メーカー公式サイトの商品データ(JSON)。器具カタログ(data/tools.json)の根拠"
+  },
+  "tools-bonmac-2026-11-12": {
+    "url": "https://www.lucky-coffee-machine.co.jp/brands/bonmac/",
+    "finalUrl": "https://www.lucky-coffee-machine.co.jp/brands/bonmac/",
+    "httpStatus": 200,
+    "contentType": "",
+    "size": 73882,
+    "sha256": "d4a76a994df7e7c9f7cfd90511ae3cf4a370330696097cdc786ca63b608f5f1e",
+    "accessed": "2026-11-12",
+    "tool": "ローカルのファイルを取り込み",
+    "textChars": 0,
+    "scannedImagesOnly": false,
+    "files": [
+      "original.bin"
+    ],
+    "note": "メーカー公式サイトの商品データ(JSON)。器具カタログ(data/tools.json)の根拠"
+  },
   "tools-coffee-syphon-2026-11-10": {
     "url": "https://coffee-syphon.co.jp/",
     "finalUrl": "https://coffee-syphon.co.jp/",
@@ -4210,6 +4242,22 @@
     ],
     "note": "メーカー公式サイトの商品データ(JSON)。器具カタログ(data/tools.json)の根拠"
   },
+  "tools-fuji-royal-2026-11-12": {
+    "url": "https://fuji-royal.jp/products/mill/",
+    "finalUrl": "https://fuji-royal.jp/products/mill/",
+    "httpStatus": 200,
+    "contentType": "",
+    "size": 21710,
+    "sha256": "a7bdb971a481908d3dc466e29bdcf4d7ba4520c39f99c61fdf0bf42750eef75d",
+    "accessed": "2026-11-12",
+    "tool": "ローカルのファイルを取り込み",
+    "textChars": 0,
+    "scannedImagesOnly": false,
+    "files": [
+      "original.bin"
+    ],
+    "note": "メーカー公式サイトの商品データ(JSON)。器具カタログ(data/tools.json)の根拠"
+  },
   "tools-hario-2026-11-10": {
     "url": "https://www.hario.com/product/coffee/",
     "finalUrl": "https://www.hario.com/product/coffee/",
@@ -4258,6 +4306,22 @@
     ],
     "note": "メーカー公式サイトの商品データ(JSON)。器具カタログ(data/tools.json)の根拠"
   },
+  "tools-kalita-business-mill-2026-11-12": {
+    "url": "https://www.kalita.co.jp/products/business_mill/",
+    "finalUrl": "https://www.kalita.co.jp/products/business_mill/",
+    "httpStatus": 200,
+    "contentType": "",
+    "size": 48195,
+    "sha256": "bf743ecdf51db85dba3e4acb93ecedb5536cdc013e4e27a9363228d830f84631",
+    "accessed": "2026-11-12",
+    "tool": "ローカルのファイルを取り込み",
+    "textChars": 0,
+    "scannedImagesOnly": false,
+    "files": [
+      "original.bin"
+    ],
+    "note": "メーカー公式サイトの商品データ(JSON)。器具カタログ(data/tools.json)の根拠"
+  },
   "tools-melitta-2026-11-10": {
     "url": "https://www.melitta.co.jp/melitta_hh/",
     "finalUrl": "https://www.melitta.co.jp/melitta_hh/",
@@ -4266,6 +4330,22 @@
     "size": 14445,
     "sha256": "5043cc9cb3773810988e08ba580b507d5f148bd18d11b11d1f1b25c85cfb5396",
     "accessed": "2026-11-10",
+    "tool": "ローカルのファイルを取り込み",
+    "textChars": 0,
+    "scannedImagesOnly": false,
+    "files": [
+      "original.bin"
+    ],
+    "note": "メーカー公式サイトの商品データ(JSON)。器具カタログ(data/tools.json)の根拠"
+  },
+  "tools-melitta-grinders-2026-11-12": {
+    "url": "https://www.melitta.co.jp/mahlkonig/",
+    "finalUrl": "https://www.melitta.co.jp/mahlkonig/",
+    "httpStatus": 200,
+    "contentType": "",
+    "size": 16785,
+    "sha256": "0af176a63ebb711fef65d235170937e16e4caaeb6353728cf9c2122e4b5d97e4",
+    "accessed": "2026-11-12",
     "tool": "ローカルのファイルを取り込み",
     "textChars": 0,
     "scannedImagesOnly": false,

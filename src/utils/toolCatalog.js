@@ -23,7 +23,8 @@ export function flattenToolCatalog(catalog) {
         label: v.label ?? "",
         sku: v.sku ?? "",
         gtin: v.gtin ?? "",
-        url: item.url ?? "",
+        // 販売店のページ(sourceType: "retailer")のURLは、出さない(公式ページではないため)
+        url: item.sourceType === "retailer" ? "" : (item.url ?? ""),
         search: norm([item.maker, item.makerAlias, item.name, v.label, v.sku].filter(Boolean).join(" ")),
       });
     });

@@ -376,7 +376,7 @@ export function TastingLogModal({ product, logs, myTools = [], onAddLog, onDelet
                 />
               ) : grinders.length === 0 ? (
                 <p className="text-[12px] text-[var(--c-text-3)] leading-relaxed">
-                  {t("マイツールにコーヒーミルの登録がありません。設定の「マイツール」から登録できます。")}
+                  {t("マイツールにコーヒーミル（グラインダー）の登録がありません。設定の「マイツール」から登録できます。")}
                 </p>
               ) : (
                 <div className="flex flex-col gap-2">
@@ -385,7 +385,7 @@ export function TastingLogModal({ product, logs, myTools = [], onAddLog, onDelet
                     tools={grinders}
                     value={form.millId}
                     onChange={(v) => setForm((f) => ({ ...f, millId: v }))}
-                    emptyLabel="コーヒーミルを選ぶ"
+                    emptyLabel="コーヒーミル（グラインダー）を選ぶ"
                   />
                   <input
                     type="text"

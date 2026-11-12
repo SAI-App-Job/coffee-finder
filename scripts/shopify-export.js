@@ -20,6 +20,10 @@
     "fellowproducts.com": { key: "fellow" },
     "origami-kai.com": { key: "origami" },
     "oc-shop.co.jp": { key: "ogawa", collection: "coffee-goods" },
+    "wilfa.com": { key: "wilfa" },
+    "nichecoffee.co.uk": { key: "niche" },
+    "www.twinbird.jp": { key: "twinbird" },
+    "twinbird.jp": { key: "twinbird" },
   };
   const cfg = MAKERS[host];
   if (!cfg) {

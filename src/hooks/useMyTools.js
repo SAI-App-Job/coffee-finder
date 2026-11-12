@@ -9,7 +9,7 @@ export const TOOL_KINDS = [
   { id: "frenchpress", label: "フレンチプレス", example: "例: ボダム CHAMBORD 0.35L", brewer: true },
   { id: "aeropress", label: "エアロプレス", example: "例: AeroPress オリジナル", brewer: true },
   { id: "paper", label: "ペーパー", example: "例: HARIO V60用ペーパーフィルター 02" },
-  { id: "grinder", label: "コーヒーミル", example: "例: タイムモア C3、コマンダンテ C40" },
+  { id: "grinder", label: "コーヒーミル（グラインダー）", example: "例: タイムモア C3、コマンダンテ C40、フェロー Ode" },
 ];
 // 「抽出方法」で選べる、抽出の器具の種類(brewer: true)
 export const BREWER_KIND_IDS = TOOL_KINDS.filter((k) => k.brewer).map((k) => k.id);
@@ -49,7 +49,7 @@ function loadTools() {
   }
 }
 
-// 「マイツール」: 自分の道具(ドリッパー・ペーパー・コーヒーミル)の登録。端末内(localStorage)に保存する。
+// 「マイツール」: 自分の道具(ドリッパー・ペーパー・コーヒーミル(グラインダー)など)の登録。端末内(localStorage)に保存する。
 // テイスティングログの「抽出方法」「挽き目」を、ここから選んで書けるようにするためのもの。
 export function useMyTools() {
   const [tools, setTools] = useState(loadTools);

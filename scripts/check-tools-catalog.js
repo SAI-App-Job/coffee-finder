@@ -31,6 +31,7 @@ for (const item of catalog.items) {
   for (const key of ["id", "kind", "maker", "name", "url", "checkedAt", "sourceId"]) {
     if (!item[key]) fail(`${where}: ${key} が空です`);
   }
+  if (!["official", "retailer"].includes(item.sourceType)) fail(`${where}: sourceType が official / retailer ではありません`);
   if (!KINDS.includes(item.kind)) fail(`${where}: 種類が不正です(${item.kind})`);
   if (ids.has(item.id)) fail(`${where}: idが重複しています`);
   ids.add(item.id);

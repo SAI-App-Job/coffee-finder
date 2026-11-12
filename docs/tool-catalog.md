@@ -53,6 +53,8 @@ py -X utf8 scripts/build_tools_catalog.py hario-shop --from-file tools-hario-sho
 
 ## 項目
 `items[]`: `id`・`kind`(dripper / paper / grinder)・`maker`・`makerAlias`(検索用の読み)・`name`・`variants[]`(`label`色・大きさ、`sku`品番、`gtin`)・`url`(公式の製品ページ)・`checkedAt`・`sourceId`(原文の資料ID)。
+- `sourceType`: 情報の出どころの種類。`"official"`(メーカーの公式サイト・公式ショップ)か、`"retailer"`(販売店のページ。現在は Comandante・AeroPress・TIMEMOREの一部)。**`retailer` の項目は、マイツールの登録で、商品ページのURLを入れない**(公式ページではないため。`src/utils/toolCatalog.js`)。新しく販売店から取り込むときは、`RETAILER_MAKERS` / `RETAILER_ID_PREFIXES`(`scripts/build_tools_catalog.py`)に足す。
+- `power`: 電動の印(`"electric"`)。**根拠がある場合だけ**付ける(商品名に「電動」「electric」「automatic」がある、Kalitaの公式の「電動ミル」の一覧にある、電動だけを扱うシリーズ・メーカー、ボダムの「Electric Coffee Grinders」)。印が無いものは、「手挽き」ではなく、「不明」。
 
 ## 収録の状況(2026-11-10)
 | メーカー | 件数 | JAN | 取得元 | メモ |
@@ -69,6 +71,11 @@ py -X utf8 scripts/build_tools_catalog.py hario-shop --from-file tools-hario-sho
 | AeroPress(小川珈琲オンラインショップ) | 14製品(本体・Clear Colors・Go・Go Plus・専用ペーパー) | 14 | 小川珈琲オンラインショップ(oc-shop.co.jp。**販売店**。ブラウザで書き出し) | JANは、店の入力値。**12型番は、barcodeの欄が空で、型番(sku)に、JANの数字(チェックデジットが合うもの)が入っている**ため、その数字を使い、`gtinFrom: "sku"` の印を付けた。シール・カラフェ・フローコントロール・豆とのセットは除外 |
 | Bodum(フレンチプレス) | 41製品 | 41 | 公式オンラインショップ(www.bodum.com/jp/ja)の商品ページに表示される「商品番号」「EAN」を、ブラウザで開いて読み取った記録 | 一覧(coffee-makers 1〜3ページ)の41商品。EANは、12桁(UPC-A。699965…・727015…)で、すべてチェックデジットが合う。ページのAPIは使っていない(ページはスクリプトで描画され、データは、サイトの内部のAPIから取る作り)。作り直すときは、同じ方法で読み取り、`tools-bodum.json` を作って、`bodum --from-file tools-bodum.json` を実行する |
 | Comandante(コーヒーミル) | 7製品(うち X25 Trailmaster Dune は、販売店 wb.coffee と MaxiCoffee の2か所で同じEANを確認して追加。`comandante-x25`)(C40 MK4 Nitro Blade 6色・LAB Series 3種・Vintage Oak Classic・C60 Baracuda 2色。変種を合わせて13型番) | 13 | 販売店 Crema(cremashop.eu。エストニア)の商品ページ。利用者が指定 | **販売店の情報**(Comandante公式サイトは、作業用の端末から403で取得できなかった)。JANは、ページの構造化データ(schema.org の gtin13)の値で、店の入力値。`sku` の「Crema 3595」は、店の商品番号(メーカーの型番ではない)。変種の名前は、商品番号が入った画像の説明文・リンクから対応づけた(順番では対応づけない)。参考: Racing Greenの `4260113438107` は、別の販売店の掲載にも同じ数字がある |
+| Kalita 業務用ミル(電動) | 15製品 | 14 | 公式サイト(kalita.co.jp/products/business_mill/) | ハイカットミル・ナイスカットG・ハイカットG・NEXT G2 など。`kalita-business-mill`。idは `kalita-biz-<番号>` |
+| Mahlkönig・Dalla Corte(電動グラインダー) | 17製品 | 8 | メリタジャパンの公式サイト(melitta.co.jp/mahlkonig/・/dallacorte/)の製品ページ | EK43・EK Omnia・X54・X64・E65・E80・PEAK・DC MAX・DC one など。JANは、家庭用・一部の機種だけ。Sync Scale(スケール)は除外。`melitta-grinders` |
+| Bodum(電動グラインダー) | 5商品 | 3 | 公式オンラインショップの「Electric Coffee Grinders」の商品ページに表示される値を、ブラウザで開いて読み取った記録 | BISTRO(ブレード式3・バー式2)。バー式(10903)は、ページにEANが表示されない。`bodum-grinders --from-file tools-bodum-grinders.json` |
+| フジローヤル(富士珈機。業務用の電動ミル) | 5製品(R-220 みるっこ・R-300・R-440・R-750・FH-750) | 0 | 公式サイト(fuji-royal.jp/products/mill/)の製品ページの仕様表 | 型式・サイズ・重量・粉砕能力・ホッパー容量・電源・定格電力・カラーを、`spec` に保存(JANは、公式サイトに無い)。カラーは、色ごとの型番にした。`fuji-royal`。公式のオンラインストア(fuji-royal.stores.jp)は、この環境から403で取得できなかった |
+| Bonmac(ボンマック。ラッキーコーヒーマシンの自社ブランド) | 24製品(グラインダー6・光サイフォン2・業務用ペーパーフィルター16) | 0 | 公式サイト(lucky-coffee-machine.co.jp)の製品ページ | 製品データの表(電源・消費電力・刃の形状・グラインド能力・寸法・重量・ホッパー容量・杯数・枚数・対応機種など)を、`spec` に保存。製品コードを `sku` に。JANは、公式サイトに無い。「マシンを探す」の一覧は、スクリプトで描画されるため、ブラウザで一覧を開いて確認した商品番号を、スクリプトに書いてある(2026-11-12)。**載せていないもの**: コーヒーブルーワー(BMP-2000Z・BM-2030・BM-2100・BM-3100)・全自動ドリップ式コーヒーマシン(BM-SAD2)・ガラスデカンタ・BM-SAD2のオプション(マイツールの種類に無いため)。`bonmac` |
 
 ### 既知の注意
 - Kalitaの公式ページで、**102-D と 102-DL に、同じJAN(4901369503026)が付いている**。公式の記載のまま載せている(`npm run tools:check` が警告を出す)。JANから照合すると、先に見つかった方が出る。
@@ -80,6 +87,12 @@ py -X utf8 scripts/build_tools_catalog.py hario-shop --from-file tools-hario-sho
 
 ### TIMEMOREの、確認できていないEAN(採用しない)
 2026-11-12に、利用者が挙げた一覧を照合した。**確認できた**: Chestnut C2 MAX(Black)6959493501621(2026-11-12。販売店 Crossroast(ベルギー)と Barista and Espresso(スウェーデン)の2か所で一致。`timemore-extra`)。**未確認**: C2S(Black)6959493507548(別の出どころに、6959493507500 もある)、C3 MAX 6959493502703、Sculptor 064(6959493505940。Crema Finland は、064S を 6959493505964 としていた)。出所が見つかったら追加する。timemore.com の C2 MAX の商品ページは、2026-11-12時点で404(検索結果には残っていたが、削除されていた)。ブラウザの書き出し(`shopify-export.js`)も、同日に再実行したが、一覧は21件のままで、C2 MAX・C3 MAX・C2S は、取れなかった(`EXTRA_HANDLES` で直接取りに行ったが、存在しない)。
+
+## 電動ミル(電動グラインダー)の収録の状況(2026-11-12)
+- カタログのグラインダー: 約112製品のうち、**電動の印があるのは48製品**(Kalita 20・Mahlkönig 16・TIMEMORE 8・HARIO 3・Dalla Corte 2。Bodumの5・フジローヤルの5・Bonmacの6を加えて64)。
+- **次の候補(取得コードは用意済み。利用者のPCで、ブラウザの書き出しが必要)**: Wilfa(wilfa.com)・Niche Zero(nichecoffee.co.uk)・TWINBIRD(twinbird.jp)。`shopify-export.js` に対応済み。実行: `py -X utf8 scripts/build_tools_catalog.py wilfa --from-file tools-wilfa.json --dry-run`(niche・twinbirdも同様)。
+- **公式サイトにJANが載らない国内メーカー**(De'Longhi・Cores・Siroca など): JANは、販売店の掲載(量販店・通販)にあるが、公式ではない。使うかどうかは、利用者の判断(これまでの方針は、公式を優先)。
+- ツインバードの CM-D457B は、ミル内蔵の全自動コーヒーメーカーで、グラインダーではない。
 
 ## 未収録(次の手)
 - **小川珈琲(エアロプレス)**: 取り込み済み(上の表)。

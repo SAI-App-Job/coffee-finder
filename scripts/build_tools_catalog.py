@@ -267,7 +267,7 @@ def kalita(dry: bool, reuse: bool = False):
 # ---------------------------------------------------------------- Melitta(メリタジャパン。公式サイトの製品ページ。家庭用)
 MELITTA_BASE = "https://www.melitta.co.jp"
 MELITTA_DIRS = [("pourover", "dripper"), ("paper", "paper"), ("coffeegrinder", "grinder")]
-MELITTA_EXCLUDE = re.compile(r"ケトル|サーバー|ポット|セット|スケール|ブラシ|ミルク")
+MELITTA_EXCLUDE = re.compile(r"ケトル|サーバー|ポット|セット|スケール|\bScale\b|ブラシ|ミルク")
 SPEC_LABELS = ["製品名", "型番", "品目コード", "JAN", "容量", "寸法", "本体質量", "カラー", "付属品", "そのほか", "関連製品", "材質", "原産国", "サイズ", "質量"]
 
 
@@ -465,7 +465,20 @@ def shopify_kind_aeropress(p: dict):
     return "aeropress"
 
 
+def shopify_kind_grinder_only(p: dict):
+    """ミル・グラインダー本体だけを載せる(英語・日本語)。部品・付属品は載せない"""
+    title = clean(p.get("title", ""))
+    if re.search(r"burr|blade|replacement|spare|\bpart|bin\b|catch|cover|case|brush|cleaning|hopper|funnel|knob|handle|stand|tamper|\bset\b|gift|ミルク|ミルサー|替え刃|カッター刃|部品|パーツ|セット", title, flags=re.I):
+        return None
+    if re.search(r"grinder|\bmill\b|グラインダー|コーヒーミル|電動ミル|ミル\b", title, flags=re.I):
+        return "grinder"
+    return None
+
+
 SHOPIFY = {
+    "wilfa": dict(maker="Wilfa", base="https://wilfa.com", kind=shopify_kind_grinder_only, merge=None),
+    "niche": dict(maker="Niche Zero", base="https://nichecoffee.co.uk", kind=shopify_kind_grinder_only, merge=None),
+    "twinbird": dict(maker="TWINBIRD", base="https://www.twinbird.jp", kind=shopify_kind_grinder_only, merge=None),
     # 小川珈琲オンラインショップ(販売店)。エアロプレスだけを載せる。JANは、店が入力した値(メーカーの公式の値ではない)
     "ogawa": dict(maker="AeroPress", base="https://oc-shop.co.jp", kind=shopify_kind_aeropress, merge=None, collection="coffee-goods"),
     "hario-shop": dict(maker="HARIO", base="https://shop.hariocorp.co.jp", kind=shopify_kind_hario, merge="sku", collection="coffee"),
@@ -893,10 +906,294 @@ def timemore_extra(dry: bool, reuse: bool = False):
     return {"maker": "TIMEMORE", "sourceUrl": TM_EXTRA[0][3][0][1], "raw": {"pages": pages}, "items": new_items, "merge": "variant", "variants": variants}
 
 
-# 検索用: メーカー名の日本語の読み
-MAKER_ALIAS = {"HARIO": "ハリオ", "Kalita": "カリタ", "Melitta": "メリタ", "1Zpresso": "ワンゼットプレッソ", "TIMEMORE": "タイムモア", "Fellow": "フェロー", "ORIGAMI": "オリガミ", "珈琲サイフオン": "コーノ式 KONO サイフオン", "AeroPress": "エアロプレス", "Bodum": "ボダム", "Comandante": "コマンダンテ"}
+# ---------------------------------------------------------------- Kalita 業務用ミル(公式サイト。電動の業務用ミルが多い)
+def kalita_business_mill(dry: bool, reuse: bool = False):
+    if reuse:
+        raw = json.loads(sorted((ROOT / "source-archive").glob("tools-kalita-business-mill-2*"))[-1].joinpath("original.bin").read_text(encoding="utf-8"))["pages"]
+        return {"maker": "Kalita", "sourceUrl": f"{KALITA_BASE}/products/business_mill/", "raw": None,
+                "items": [dict(i, id="kalita-biz-" + pg["url"].rstrip("/").rsplit("/", 1)[-1]) for pg in raw for i in [kalita_parse(pg, "grinder")] if i], "merge": "add"}
+    time.sleep(DELAY)
+    body = get(f"{KALITA_BASE}/products/business_mill/").decode("utf-8", errors="replace")
+    ids = sorted(set(re.findall(r"/products/business_mill/(\d+)", body)))
+    print(f"Kalita 業務用ミル: {len(ids)} ページ")
+    if dry:
+        return None
+    raw, items = [], []
+    for n, pid in enumerate(ids, 1):
+        url = f"{KALITA_BASE}/products/business_mill/{pid}"
+        time.sleep(DELAY)
+        try:
+            page_body = get(url)
+        except Exception as e:  # noqa: BLE001
+            print(f"  取得失敗 {url}: {e}")
+            continue
+        text = html_text(page_body)
+        m = re.search(r"<title>\s*(.*?)\s*(?:\||｜)", page_body.decode("utf-8", errors="replace"), flags=re.S)
+        code = re.search(r"商品コード[:：]\s*([0-9A-Za-z-]+)", text)
+        jan = re.search(r"JANコード[:：]\s*([0-9 ]{8,20})", text)
+        gtin = re.sub(r"\s", "", jan.group(1)) if jan else ""
+        if gtin and not valid_gtin(gtin):
+            print(f"  警告: {url} のJANが不正のため載せません: {gtin}")
+            gtin = ""
+        page = {"url": url, "title": clean(m.group(1)) if m else "", "productCode": code.group(1) if code else "", "jan": gtin, "text": text[:3000]}
+        raw.append(page)
+        item = kalita_parse(page, "grinder")
+        if item:
+            item["id"] = f"kalita-biz-{pid}"  # 一般向けの商品ページの番号と、重ならないようにする
+        print(f"  [{n}/{len(ids)}] {item['kind'] if item else '対象外':8s} {page['title']} JAN={gtin or '-'}")
+        if item:
+            items.append(item)
+    return {"maker": "Kalita", "sourceUrl": f"{KALITA_BASE}/products/business_mill/", "raw": {"pages": raw}, "items": items, "merge": "add"}
 
-MAKERS = {"hario": hario, "kalita": kalita, "melitta": melitta, "1zpresso": z1presso, "coffee-syphon": coffee_syphon, "bodum": bodum, "crema-comandante": crema_comandante, "comandante-x25": comandante_x25, "crema-timemore": crema_timemore, "timemore-extra": timemore_extra, **{k: shopify(k) for k in SHOPIFY}}
+
+# ---------------------------------------------------------------- メリタジャパン取り扱いの電動グラインダー(マールクーニック・ダラコルテ。公式サイトの製品ページ)
+MELITTA_GRINDER_DIRS = ["mahlkonig/hh_coffeegrinder", "mahlkonig/pro_coffeegrinder", "mahlkonig/pro_espressogrinder", "dallacorte/coffeegrinder"]
+MELITTA_GRINDER_MAKER = {"mahlkonig": "Mahlkönig", "dallacorte": "Dalla Corte"}
+
+
+def melitta_grinder_items(pages: list):
+    items = []
+    for pg in pages:
+        spec = pg.get("spec")
+        if not spec or not spec.get("製品名"):
+            continue
+        brand = MELITTA_GRINDER_MAKER[pg["dir"].split("/")[0]]
+        page = {**pg, "kind": "grinder"}
+        for it in melitta_items(page):
+            it["maker"] = brand
+            it["id"] = "melitta-" + pg["dir"].replace("/", "-") + "-" + pg["url"].rstrip("/").rsplit("/", 1)[-1]
+            it["note"] = "メリタジャパンの公式サイトの製品ページ(メリタジャパンが取り扱う、電動グラインダー)"
+            items.append(it)
+    return items
+
+
+def melitta_grinders(dry: bool, reuse: bool = False):
+    if reuse:
+        raw = json.loads(sorted((ROOT / "source-archive").glob("tools-melitta-grinders-2*"))[-1].joinpath("original.bin").read_text(encoding="utf-8"))["pages"]
+        return {"maker": "Mahlkönig", "sourceUrl": f"{MELITTA_BASE}/mahlkonig/", "raw": None, "items": melitta_grinder_items(raw), "merge": "add"}
+    pages = []
+    for d in MELITTA_GRINDER_DIRS:
+        time.sleep(DELAY)
+        body = get(f"{MELITTA_BASE}/{d}/").decode("utf-8", errors="replace")
+        slugs = sorted(set(re.findall(rf'href="{re.escape(MELITTA_BASE)}/{re.escape(d)}/([a-z0-9_-]+)/"', body)) - {"feed"})
+        pages += [{"dir": d, "url": f"{MELITTA_BASE}/{d}/{sl}/"} for sl in slugs]
+        print(f"メリタ取り扱いの電動グラインダー: {d} 累計 {len(pages)} ページ")
+    if dry:
+        return None
+    for n, pg in enumerate(pages, 1):
+        time.sleep(DELAY)
+        try:
+            pg["spec"] = melitta_spec(get(pg["url"]).decode("utf-8", errors="replace"))
+        except Exception as e:  # noqa: BLE001
+            print(f"  取得失敗 {pg['url']}: {e}")
+            pg["spec"] = None
+        names = (pg["spec"] or {}).get("製品名") or []
+        print(f"  [{n}/{len(pages)}] {pg['url'].rstrip('/').rsplit('/', 1)[-1]}: {' '.join(names) or '表なし'}")
+    return {"maker": "Mahlkönig", "sourceUrl": f"{MELITTA_BASE}/mahlkonig/", "raw": {"pages": pages}, "items": melitta_grinder_items(pages), "merge": "add"}
+
+
+# ---------------------------------------------------------------- 電動ミルの印(power: "electric")
+# 付けるのは、根拠がある場合だけ: ①商品名に「電動」「electric」「automatic」がある ②公式サイトの「電動ミル」の一覧に載っている(Kalita)
+# ③電動グラインダーだけを扱うシリーズ・メーカー(メリタジャパン取り扱いのマールクーニック・ダラコルテ、Kalitaの業務用ミル)。根拠が無いものには、付けない。
+KALITA_ELECTRIC_CODES = {"43007", "43011", "43017", "43015", "43041"}  # 公式サイトの「電動ミル」の一覧(kalita.co.jp/products/electricmill/)にある商品コード
+
+
+def tag_power(items: list):
+    n = 0
+    for i in items:
+        if i["kind"] != "grinder" or i.get("power"):
+            continue
+        name = i["name"]
+        skus = {v.get("sku", "") for v in i["variants"]}
+        electric = (
+            re.search(r"電動|electric|automatic|全自動", name, flags=re.I)
+            or i["maker"] in ("Mahlkönig", "Dalla Corte")
+            or i["id"].startswith("kalita-biz-")
+            or (i["maker"] == "Kalita" and skus & KALITA_ELECTRIC_CODES)
+        )
+        if electric:
+            i["power"] = "electric"
+            n += 1
+    return n
+
+
+# ---------------------------------------------------------------- ボダム 電動コーヒーグラインダー(公式オンラインショップの「Electric Coffee Grinders」。ブラウザで読み取った記録から)
+# 使い方: py -X utf8 scripts/build_tools_catalog.py bodum-grinders --from-file tools-bodum-grinders.json
+def bodum_grinders(dry: bool, reuse: bool = False, from_file=None):
+    if from_file:
+        exported = json.loads(Path(from_file).read_text(encoding="utf-8"))
+        records = exported["records"]
+    elif reuse:
+        records = json.loads(sorted((ROOT / "source-archive").glob("tools-bodum-grinders-2*"))[-1].joinpath("original.bin").read_text(encoding="utf-8"))["records"]
+        exported = None
+    else:
+        raise SystemExit("bodum-grinders は、ブラウザで読み取った記録のファイルから作ります: --from-file tools-bodum-grinders.json")
+    items = []
+    for r in records:
+        ean = re.sub(r"[\s-]", "", r.get("ean") or "")
+        if ean and not valid_gtin(ean):
+            print(f"  警告: {r['sku']} のEANが不正のため載せません: {ean}")
+            ean = ""
+        items.append({
+            "id": "bodum-" + re.sub(r"[^a-z0-9]+", "-", r["sku"].lower()).strip("-"), "kind": "grinder", "maker": "Bodum", "power": "electric",
+            "name": clean(r["name"]), "variants": [{"label": r.get("color") or "", "sku": r["sku"], "gtin": ean}],
+            "url": r["url"], "checkedAt": TODAY,
+        })
+    print(f"Bodum 電動グラインダー: {len(items)} 商品 / EANあり {sum(1 for i in items if i['variants'][0]['gtin'])}")
+    if dry:
+        return None
+    return {"maker": "Bodum", "sourceUrl": "https://www.bodum.com/jp/ja/coffee/coffee-grinders", "raw": ({"records": records, "note": exported.get("note", "")} if exported else None), "items": items, "merge": "add"}
+
+
+# ---------------------------------------------------------------- フジローヤル(株式会社富士珈機。公式サイト fuji-royal.jp のコーヒーミル。業務用の電動ミル)
+# 公式の製品ページに、仕様(型式・サイズ・重量・粉砕能力・ホッパー容量・電源・定格電力・カラー)の表がある。JAN(GTIN)は、公式サイトに無いため、空にする。
+FUJI_BASE = "https://fuji-royal.jp"
+
+
+def fuji_tokens(html_body: str):
+    t = re.sub(r"<script.*?</script>|<style.*?</style>", "", html_body, flags=re.S)
+    t = __import__("html").unescape(re.sub(r"<[^>]+>", "|", t))
+    return [clean(x) for x in t.split("|") if clean(x)]
+
+
+def fuji_item(page: dict):
+    toks = page["tokens"]
+    try:
+        i = toks.index("型式", toks.index("仕様"))
+    except ValueError:
+        return None
+    end = toks.index("関連文書", i) if "関連文書" in toks[i:] else min(len(toks), i + 20)
+    seg = toks[i:end]
+    spec = {seg[k]: seg[k + 1] for k in range(0, len(seg) - 1, 2)}
+    model = spec.get("型式", "")
+    name = next((x for x in toks if x.startswith("コーヒーミル ") and model in x and "++" not in x and "フジローヤル" not in x and len(x) < 30), f"コーヒーミル {model}")
+    colors = [c for c in re.split(r"[・、,\s]+", spec.get("カラー", "")) if c]
+    variants = [{"label": c, "sku": model, "gtin": ""} for c in colors] or [{"label": "", "sku": model, "gtin": ""}]
+    return {"id": "fujiroyal-" + re.sub(r"[^a-z0-9]+", "-", model.lower()).strip("-"), "kind": "grinder", "maker": "Fuji Royal", "power": "electric",
+            "name": name, "variants": variants, "url": page["url"], "checkedAt": TODAY,
+            "spec": {k: v for k, v in spec.items() if k not in ("型式", "カラー")}}
+
+
+def fuji_royal(dry: bool, reuse: bool = False):
+    if reuse:
+        raw = json.loads(sorted((ROOT / "source-archive").glob("tools-fuji-royal-2*"))[-1].joinpath("original.bin").read_text(encoding="utf-8"))["pages"]
+        return {"maker": "Fuji Royal", "sourceUrl": f"{FUJI_BASE}/products/mill/", "raw": None, "items": [i for pg in raw for i in [fuji_item(pg)] if i], "merge": "add"}
+    time.sleep(DELAY)
+    listing = get(f"{FUJI_BASE}/products/mill/").decode("utf-8", errors="replace")
+    slugs = [x for x in dict.fromkeys(re.findall(r'href="/products/mill/([a-z0-9]+)/"', listing)) if x != "list"]
+    print(f"フジローヤル コーヒーミル: {len(slugs)} 機種: {', '.join(slugs)}")
+    if dry:
+        return None
+    pages = []
+    for sl in slugs:
+        time.sleep(DELAY)
+        url = f"{FUJI_BASE}/products/mill/{sl}/"
+        pages.append({"url": url, "tokens": fuji_tokens(get(url).decode("utf-8", errors="replace"))})
+    items = [i for pg in pages for i in [fuji_item(pg)] if i]
+    for it in items:
+        print(f"  {it['name']}: {', '.join(f'{k} {v}' for k, v in it['spec'].items())} / カラー {len(it['variants'])}")
+    return {"maker": "Fuji Royal", "sourceUrl": f"{FUJI_BASE}/products/mill/", "raw": {"pages": pages}, "items": items, "merge": "add"}
+
+
+# ---------------------------------------------------------------- ボンマック(BONMAC。ラッキーコーヒーマシン株式会社の自社ブランド。公式サイト lucky-coffee-machine.co.jp)
+# 「マシンを探す」の一覧は、スクリプトで描画されるため、ブラウザで一覧を開いて確認した商品番号を、ここに書く(2026-11-12)。
+# 各製品ページ(/products/<番号>/)は、そのまま取得できる。製品ページに、製品データ(電源・刃の形状・グラインド能力・製品コード・寸法・重量・豆ホッパー容量など)がある。
+# JAN(GTIN)は、公式サイトに無いため、空にする。載せるのは、グラインダー・光サイフォン・ペーパーフィルターだけ
+# (コーヒーブルーワー・全自動ドリップ式コーヒーマシン・ガラスデカンタなどは、マイツールの種類に無いため、載せない)。
+BONMAC_BASE = "https://www.lucky-coffee-machine.co.jp"
+BONMAC_IDS = {
+    # グラインダー(シリーズ: コーヒーミル)
+    "810524": "grinder", "810526": "grinder", "810525": "grinder", "858631": "grinder", "858651": "grinder", "897502": "grinder",
+    # 光サイフォン
+    "898224": "syphon", "898225": "syphon",
+    # ペーパーフィルター
+    "879583": "paper", "879652": "paper", "879651": "paper", "879650": "paper", "879649": "paper", "879648": "paper",
+    "858319": "paper", "897448": "paper", "858318": "paper", "897447": "paper",
+    "816137": "paper", "816133": "paper", "816136": "paper", "816132": "paper", "816135": "paper", "816131": "paper",
+}
+
+
+BONMAC_LABELS = ["電源・消費電力", "刃の形状", "グラインド能力", "製品コード", "寸法", "重量", "豆ホッパー容量", "豆ホッパー数", "ケース入数", "対応機種", "杯数", "枚数"]
+BONMAC_STOP = {"RECOMMEND", "お問い合わせ", "GALLERY", "コーヒーマシンを探す"}
+
+
+def bonmac_item(page: dict):
+    toks = page["tokens"]
+    title = page.get("title", "")
+    try:
+        i = toks.index("製品データ")
+    except ValueError:
+        return None
+    # 製品データの表を、既知のラベルごとに読む(ラベルの次の語が、値)。「2つのコンセントをご用意ください。」のような注記は、直前の値に付ける
+    spec, notes, last = {}, [], None
+    for k in range(i + 1, len(toks)):
+        x = toks[k]
+        if x in BONMAC_STOP:
+            break
+        if x in BONMAC_LABELS:
+            last = x
+            spec[x] = ""
+        elif last is not None and not spec[last]:
+            spec[last] = x
+        elif last is not None:
+            notes.append(x)
+    code = spec.pop("製品コード", page["pid"]) or page["pid"]
+    spec = {k: v for k, v in spec.items() if v}
+    if notes:
+        spec["注記"] = " / ".join(notes)
+    item = {"id": f"bonmac-{page['pid']}", "kind": page["kind"], "maker": "Bonmac", "name": clean(title),
+            "variants": [{"label": "", "sku": code, "gtin": ""}], "url": page["url"], "checkedAt": TODAY, "spec": spec}
+    if page["kind"] == "grinder":
+        item["power"] = "electric"
+    return item
+
+
+def bonmac(dry: bool, reuse: bool = False):
+    if reuse:
+        raw = json.loads(sorted((ROOT / "source-archive").glob("tools-bonmac-2*"))[-1].joinpath("original.bin").read_text(encoding="utf-8"))["pages"]
+        return {"maker": "Bonmac", "sourceUrl": f"{BONMAC_BASE}/brands/bonmac/", "raw": None, "items": [i for pg in raw for i in [bonmac_item(pg)] if i], "merge": "add"}
+    print(f"ボンマック: 製品ページ {len(BONMAC_IDS)} 件(グラインダー {sum(1 for k in BONMAC_IDS.values() if k == 'grinder')}・光サイフォン {sum(1 for k in BONMAC_IDS.values() if k == 'syphon')}・ペーパー {sum(1 for k in BONMAC_IDS.values() if k == 'paper')})")
+    if dry:
+        return None
+    pages = []
+    for pid, kind in BONMAC_IDS.items():
+        time.sleep(DELAY)
+        url = f"{BONMAC_BASE}/products/{pid}/"
+        try:
+            body = get(url).decode("utf-8", errors="replace")
+        except Exception as e:  # noqa: BLE001
+            print(f"  取得失敗 {url}: {e}")
+            continue
+        m = re.search(r"<title>\s*(.*?)\s*\|", body, flags=re.S)
+        pages.append({"pid": pid, "kind": kind, "url": url, "title": clean(m.group(1)) if m else "", "tokens": fuji_tokens(body)})
+        print(f"  {pid}: {pages[-1]['title']}")
+    items = [i for pg in pages for i in [bonmac_item(pg)] if i]
+    return {"maker": "Bonmac", "sourceUrl": f"{BONMAC_BASE}/brands/bonmac/", "raw": {"pages": pages}, "items": items, "merge": "add"}
+
+
+# ---------------------------------------------------------------- 情報の出どころの種類(sourceType)
+# "official": メーカーの公式サイト・公式ショップ・メーカー自身の日本語サイト(ブランド元のラッキーコーヒーマシン等を含む)。
+# "retailer": 販売店のページ(Crema・小川珈琲オンラインショップ・wb.coffee・MaxiCoffee・Crossroast など)。
+# 画面(マイツールの登録)では、"retailer" の項目の商品ページのURLは、出さない(公式ではないため)。
+RETAILER_MAKERS = {"Comandante", "AeroPress"}  # 公式サイトを取得できず、販売店のページから取り込んだメーカー
+RETAILER_ID_PREFIXES = ("timemore-crema", "timemore-extra")  # TIMEMOREのうち、販売店のページから取り込んだ項目
+
+
+def tag_source_type(items: list):
+    n = 0
+    for i in items:
+        retailer = i["maker"] in RETAILER_MAKERS or i["id"].startswith(RETAILER_ID_PREFIXES)
+        t = "retailer" if retailer else "official"
+        if i.get("sourceType") != t:
+            i["sourceType"] = t
+            n += 1
+    return n
+
+
+# 検索用: メーカー名の日本語の読み
+MAKER_ALIAS = {"HARIO": "ハリオ", "Kalita": "カリタ", "Melitta": "メリタ", "1Zpresso": "ワンゼットプレッソ", "TIMEMORE": "タイムモア", "Fellow": "フェロー", "ORIGAMI": "オリガミ", "珈琲サイフオン": "コーノ式 KONO サイフオン", "AeroPress": "エアロプレス", "Bodum": "ボダム", "Comandante": "コマンダンテ", "Mahlkönig": "マールクーニック", "Dalla Corte": "ダラコルテ", "Fuji Royal": "フジローヤル 富士珈機", "Bonmac": "ボンマック", "Wilfa": "ウィルファ", "Niche Zero": "ニッチゼロ ニッチ", "TWINBIRD": "ツインバード"}
+
+MAKERS = {"hario": hario, "kalita": kalita, "melitta": melitta, "1zpresso": z1presso, "coffee-syphon": coffee_syphon, "bodum": bodum, "crema-comandante": crema_comandante, "comandante-x25": comandante_x25, "crema-timemore": crema_timemore, "kalita-business-mill": kalita_business_mill, "melitta-grinders": melitta_grinders, "bodum-grinders": bodum_grinders, "fuji-royal": fuji_royal, "bonmac": bonmac, "timemore-extra": timemore_extra, **{k: shopify(k) for k in SHOPIFY}}
 
 
 def save_raw(maker_key: str, result: dict) -> str:
@@ -920,7 +1217,7 @@ def main():
     ap.add_argument("--from-file", help="ブラウザで書き出したファイル(scripts/shopify-export.js)から作る(Shopify製の公式ショップのみ)")
     ap.add_argument("--reuse", action="store_true", help="取得済みの原文(source-archive)から作り直す。サイトにはアクセスしない(Kalitaのみ)")
     a = ap.parse_args()
-    if a.from_file and a.maker not in SHOPIFY and a.maker != "bodum":
+    if a.from_file and a.maker not in SHOPIFY and a.maker not in ("bodum", "bodum-grinders"):
         ap.error("--from-file は、Shopify製の公式ショップ(hario-shop・timemore・fellow・origami・ogawa)と、bodum だけで使えます")
     if a.from_file:
         result = MAKERS[a.maker](a.dry_run, False, a.from_file)
@@ -978,8 +1275,8 @@ def main():
         catalog["items"] = [i for i in catalog["items"] if i["id"] not in ids]
         for item in result["items"]:
             item["sourceId"] = source_id
-            if result["maker"] in MAKER_ALIAS:
-                item["makerAlias"] = MAKER_ALIAS[result["maker"]]
+            if item["maker"] in MAKER_ALIAS:
+                item["makerAlias"] = MAKER_ALIAS[item["maker"]]
         catalog["items"] += result["items"]
     elif result.get("merge") == "sku":
         # 既存の項目(別の公式サイトの名前・型番)に、店のJANを、型番(sku)で補う。既存に無い型番の商品は、追加する
@@ -1017,6 +1314,7 @@ def main():
             if result["maker"] in MAKER_ALIAS:
                 item["makerAlias"] = MAKER_ALIAS[result["maker"]]  # 検索用の読み(カタカナ)
         catalog["items"] += result["items"]
+    print(f"電動の印を付けた件数: {tag_power(catalog['items'])} / 出どころの種類を付けた件数: {tag_source_type(catalog['items'])}")
     catalog["items"].sort(key=lambda i: (i["maker"], i["kind"], i["name"]))
     catalog["updatedAt"] = TODAY
     OUT.parent.mkdir(parents=True, exist_ok=True)

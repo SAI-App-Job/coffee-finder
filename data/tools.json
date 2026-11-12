@@ -16,7 +16,8 @@
    "url": "https://1zpresso.coffee/diamond-a/",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-1zpresso-2026-11-10",
-   "makerAlias": "ワンゼットプレッソ"
+   "makerAlias": "ワンゼットプレッソ",
+   "sourceType": "official"
   },
   {
    "id": "1zpresso-j",
@@ -33,7 +34,8 @@
    "url": "https://1zpresso.coffee/j/",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-1zpresso-2026-11-10",
-   "makerAlias": "ワンゼットプレッソ"
+   "makerAlias": "ワンゼットプレッソ",
+   "sourceType": "official"
   },
   {
    "id": "1zpresso-j-ultra",
@@ -50,7 +52,8 @@
    "url": "https://1zpresso.coffee/j-ultra/",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-1zpresso-2026-11-10",
-   "makerAlias": "ワンゼットプレッソ"
+   "makerAlias": "ワンゼットプレッソ",
+   "sourceType": "official"
   },
   {
    "id": "1zpresso-jx",
@@ -67,7 +70,8 @@
    "url": "https://1zpresso.coffee/j/",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-1zpresso-2026-11-10",
-   "makerAlias": "ワンゼットプレッソ"
+   "makerAlias": "ワンゼットプレッソ",
+   "sourceType": "official"
   },
   {
    "id": "1zpresso-jx-s",
@@ -84,7 +88,8 @@
    "url": "https://1zpresso.coffee/j/",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-1zpresso-2026-11-10",
-   "makerAlias": "ワンゼットプレッソ"
+   "makerAlias": "ワンゼットプレッソ",
+   "sourceType": "official"
   },
   {
    "id": "1zpresso-k-max",
@@ -101,7 +106,8 @@
    "url": "https://1zpresso.coffee/k/",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-1zpresso-2026-11-10",
-   "makerAlias": "ワンゼットプレッソ"
+   "makerAlias": "ワンゼットプレッソ",
+   "sourceType": "official"
   },
   {
    "id": "1zpresso-k-plus",
@@ -118,7 +124,8 @@
    "url": "https://1zpresso.coffee/k/",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-1zpresso-2026-11-10",
-   "makerAlias": "ワンゼットプレッソ"
+   "makerAlias": "ワンゼットプレッソ",
+   "sourceType": "official"
   },
   {
    "id": "1zpresso-k-pro",
@@ -135,7 +142,8 @@
    "url": "https://1zpresso.coffee/k/",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-1zpresso-2026-11-10",
-   "makerAlias": "ワンゼットプレッソ"
+   "makerAlias": "ワンゼットプレッソ",
+   "sourceType": "official"
   },
   {
    "id": "1zpresso-k-ultra",
@@ -152,7 +160,8 @@
    "url": "https://1zpresso.coffee/k-ultra/",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-1zpresso-2026-11-10",
-   "makerAlias": "ワンゼットプレッソ"
+   "makerAlias": "ワンゼットプレッソ",
+   "sourceType": "official"
   },
   {
    "id": "1zpresso-x-ultra",
@@ -169,7 +178,8 @@
    "url": "https://1zpresso.coffee/x/",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-1zpresso-2026-11-10",
-   "makerAlias": "ワンゼットプレッソ"
+   "makerAlias": "ワンゼットプレッソ",
+   "sourceType": "official"
   },
   {
    "id": "1zpresso-zp6-special",
@@ -186,7 +196,8 @@
    "url": "https://1zpresso.coffee/manual-coffee-grinder/",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-1zpresso-2026-11-10",
-   "makerAlias": "ワンゼットプレッソ"
+   "makerAlias": "ワンゼットプレッソ",
+   "sourceType": "official"
   },
   {
    "id": "aeropress-shop-4996",
@@ -203,7 +214,8 @@
    "url": "https://oc-shop.co.jp/products/4996",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-ogawa-2026-11-10",
-   "makerAlias": "エアロプレス"
+   "makerAlias": "エアロプレス",
+   "sourceType": "retailer"
   },
   {
    "id": "aeropress-shop-goods-ap-colors-green",
@@ -221,7 +233,8 @@
    "url": "https://oc-shop.co.jp/products/goods-ap-colors-green",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-ogawa-2026-11-10",
-   "makerAlias": "エアロプレス"
+   "makerAlias": "エアロプレス",
+   "sourceType": "retailer"
   },
   {
    "id": "aeropress-shop-goods-ap-colors-purple",
@@ -239,7 +252,8 @@
    "url": "https://oc-shop.co.jp/products/goods-ap-colors-purple",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-ogawa-2026-11-10",
-   "makerAlias": "エアロプレス"
+   "makerAlias": "エアロプレス",
+   "sourceType": "retailer"
   },
   {
    "id": "aeropress-shop-goods-ap-colors-pink",
@@ -257,7 +271,8 @@
    "url": "https://oc-shop.co.jp/products/goods-ap-colors-pink",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-ogawa-2026-11-10",
-   "makerAlias": "エアロプレス"
+   "makerAlias": "エアロプレス",
+   "sourceType": "retailer"
   },
   {
    "id": "aeropress-shop-goods-ap-colors-black",
@@ -275,7 +290,8 @@
    "url": "https://oc-shop.co.jp/products/goods-ap-colors-black",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-ogawa-2026-11-10",
-   "makerAlias": "エアロプレス"
+   "makerAlias": "エアロプレス",
+   "sourceType": "retailer"
   },
   {
    "id": "aeropress-shop-goods-ap-colors-blue",
@@ -293,7 +309,8 @@
    "url": "https://oc-shop.co.jp/products/goods-ap-colors-blue",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-ogawa-2026-11-10",
-   "makerAlias": "エアロプレス"
+   "makerAlias": "エアロプレス",
+   "sourceType": "retailer"
   },
   {
    "id": "aeropress-shop-goods-ap-colors-red",
@@ -311,7 +328,8 @@
    "url": "https://oc-shop.co.jp/products/goods-ap-colors-red",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-ogawa-2026-11-10",
-   "makerAlias": "エアロプレス"
+   "makerAlias": "エアロプレス",
+   "sourceType": "retailer"
   },
   {
    "id": "aeropress-shop-5008",
@@ -329,7 +347,8 @@
    "url": "https://oc-shop.co.jp/products/5008",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-ogawa-2026-11-10",
-   "makerAlias": "エアロプレス"
+   "makerAlias": "エアロプレス",
+   "sourceType": "retailer"
   },
   {
    "id": "aeropress-shop-5002",
@@ -346,7 +365,8 @@
    "url": "https://oc-shop.co.jp/products/5002",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-ogawa-2026-11-10",
-   "makerAlias": "エアロプレス"
+   "makerAlias": "エアロプレス",
+   "sourceType": "retailer"
   },
   {
    "id": "aeropress-shop-goods-ap-gpts-cream",
@@ -364,7 +384,8 @@
    "url": "https://oc-shop.co.jp/products/goods-ap-gpts-cream",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-ogawa-2026-11-10",
-   "makerAlias": "エアロプレス"
+   "makerAlias": "エアロプレス",
+   "sourceType": "retailer"
   },
   {
    "id": "aeropress-shop-goods-ap-gpts-pink",
@@ -382,7 +403,8 @@
    "url": "https://oc-shop.co.jp/products/goods-ap-gpts-pink",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-ogawa-2026-11-10",
-   "makerAlias": "エアロプレス"
+   "makerAlias": "エアロプレス",
+   "sourceType": "retailer"
   },
   {
    "id": "aeropress-shop-goods-ap-gpts-black",
@@ -400,7 +422,8 @@
    "url": "https://oc-shop.co.jp/products/goods-ap-gpts-black",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-ogawa-2026-11-10",
-   "makerAlias": "エアロプレス"
+   "makerAlias": "エアロプレス",
+   "sourceType": "retailer"
   },
   {
    "id": "aeropress-shop-goods-ap-filter190",
@@ -418,7 +441,8 @@
    "url": "https://oc-shop.co.jp/products/goods-ap-filter190",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-ogawa-2026-11-10",
-   "makerAlias": "エアロプレス"
+   "makerAlias": "エアロプレス",
+   "sourceType": "retailer"
   },
   {
    "id": "aeropress-shop-goods-ap-filter340",
@@ -436,7 +460,8 @@
    "url": "https://oc-shop.co.jp/products/goods-ap-filter340",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-ogawa-2026-11-10",
-   "makerAlias": "エアロプレス"
+   "makerAlias": "エアロプレス",
+   "sourceType": "retailer"
   },
   {
    "id": "bodum-11376-01",
@@ -453,7 +478,8 @@
    "url": "https://www.bodum.com/jp/ja/11376-01-bean",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-bodum-2026-11-10",
-   "makerAlias": "ボダム"
+   "makerAlias": "ボダム",
+   "sourceType": "official"
   },
   {
    "id": "bodum-11376-913",
@@ -470,7 +496,8 @@
    "url": "https://www.bodum.com/jp/ja/11376-913-bean",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-bodum-2026-11-10",
-   "makerAlias": "ボダム"
+   "makerAlias": "ボダム",
+   "sourceType": "official"
   },
   {
    "id": "bodum-1573-01",
@@ -487,7 +514,8 @@
    "url": "https://www.bodum.com/jp/ja/1573-01-bistro-nouveau",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-bodum-2026-11-10",
-   "makerAlias": "ボダム"
+   "makerAlias": "ボダム",
+   "sourceType": "official"
   },
   {
    "id": "bodum-1578-01",
@@ -504,7 +532,8 @@
    "url": "https://www.bodum.com/jp/ja/1578-01-bistro-nouveau",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-bodum-2026-11-10",
-   "makerAlias": "ボダム"
+   "makerAlias": "ボダム",
+   "sourceType": "official"
   },
   {
    "id": "bodum-1303-16",
@@ -521,7 +550,8 @@
    "url": "https://www.bodum.com/jp/ja/1303-16-bodum-columbia",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-bodum-2026-11-10",
-   "makerAlias": "ボダム"
+   "makerAlias": "ボダム",
+   "sourceType": "official"
   },
   {
    "id": "bodum-11055-16",
@@ -538,7 +568,8 @@
    "url": "https://www.bodum.com/jp/ja/11055-16-bodum-columbia",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-bodum-2026-11-10",
-   "makerAlias": "ボダム"
+   "makerAlias": "ボダム",
+   "sourceType": "official"
   },
   {
    "id": "bodum-1308-16",
@@ -555,7 +586,8 @@
    "url": "https://www.bodum.com/jp/ja/1308-16-bodum-columbia",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-bodum-2026-11-10",
-   "makerAlias": "ボダム"
+   "makerAlias": "ボダム",
+   "sourceType": "official"
   },
   {
    "id": "bodum-1543-01",
@@ -572,7 +604,8 @@
    "url": "https://www.bodum.com/jp/ja/1543-01-brazil",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-bodum-2026-11-10",
-   "makerAlias": "ボダム"
+   "makerAlias": "ボダム",
+   "sourceType": "official"
   },
   {
    "id": "bodum-1548-01",
@@ -589,7 +622,8 @@
    "url": "https://www.bodum.com/jp/ja/1548-01-brazil",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-bodum-2026-11-10",
-   "makerAlias": "ボダム"
+   "makerAlias": "ボダム",
+   "sourceType": "official"
   },
   {
    "id": "bodum-10948-04",
@@ -606,7 +640,8 @@
    "url": "https://www.bodum.com/jp/ja/10948-04-brazil",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-bodum-2026-11-10",
-   "makerAlias": "ボダム"
+   "makerAlias": "ボダム",
+   "sourceType": "official"
   },
   {
    "id": "bodum-10948-01j",
@@ -623,7 +658,8 @@
    "url": "https://www.bodum.com/jp/ja/10948-01j-brazil",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-bodum-2026-11-10",
-   "makerAlias": "ボダム"
+   "makerAlias": "ボダム",
+   "sourceType": "official"
   },
   {
    "id": "bodum-10938-913j",
@@ -640,7 +676,8 @@
    "url": "https://www.bodum.com/jp/ja/10938-913j-brazil",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-bodum-2026-11-10",
-   "makerAlias": "ボダム"
+   "makerAlias": "ボダム",
+   "sourceType": "official"
   },
   {
    "id": "bodum-10938-01j",
@@ -657,7 +694,8 @@
    "url": "https://www.bodum.com/jp/ja/10938-01j-brazil",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-bodum-2026-11-10",
-   "makerAlias": "ボダム"
+   "makerAlias": "ボダム",
+   "sourceType": "official"
   },
   {
    "id": "bodum-1913-01",
@@ -674,7 +712,8 @@
    "url": "https://www.bodum.com/jp/ja/1913-01-caffettiera",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-bodum-2026-11-10",
-   "makerAlias": "ボダム"
+   "makerAlias": "ボダム",
+   "sourceType": "official"
   },
   {
    "id": "bodum-1913-913",
@@ -691,7 +730,8 @@
    "url": "https://www.bodum.com/jp/ja/1913-913-caffettiera",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-bodum-2026-11-10",
-   "makerAlias": "ボダム"
+   "makerAlias": "ボダム",
+   "sourceType": "official"
   },
   {
    "id": "bodum-1918-760-761",
@@ -708,7 +748,8 @@
    "url": "https://www.bodum.com/jp/ja/1918-760-761-caffettiera",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-bodum-2026-11-10",
-   "makerAlias": "ボダム"
+   "makerAlias": "ボダム",
+   "sourceType": "official"
   },
   {
    "id": "bodum-1918-751-761",
@@ -725,7 +766,8 @@
    "url": "https://www.bodum.com/jp/ja/1918-751-761-caffettiera",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-bodum-2026-11-10",
-   "makerAlias": "ボダム"
+   "makerAlias": "ボダム",
+   "sourceType": "official"
   },
   {
    "id": "bodum-1918-746-761",
@@ -742,7 +784,8 @@
    "url": "https://www.bodum.com/jp/ja/1918-746-761-caffettiera",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-bodum-2026-11-10",
-   "makerAlias": "ボダム"
+   "makerAlias": "ボダム",
+   "sourceType": "official"
   },
   {
    "id": "bodum-1918-170-761",
@@ -759,7 +802,8 @@
    "url": "https://www.bodum.com/jp/ja/1918-170-761-caffettiera",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-bodum-2026-11-10",
-   "makerAlias": "ボダム"
+   "makerAlias": "ボダム",
+   "sourceType": "official"
   },
   {
    "id": "bodum-12312-16-107",
@@ -776,7 +820,8 @@
    "url": "https://www.bodum.com/jp/ja/12312-16-107-chambord",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-bodum-2026-11-10",
-   "makerAlias": "ボダム"
+   "makerAlias": "ボダム",
+   "sourceType": "official"
   },
   {
    "id": "bodum-12312-16-16",
@@ -793,7 +838,8 @@
    "url": "https://www.bodum.com/jp/ja/12312-16-16-chambord",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-bodum-2026-11-10",
-   "makerAlias": "ボダム"
+   "makerAlias": "ボダム",
+   "sourceType": "official"
   },
   {
    "id": "bodum-1923-17",
@@ -810,7 +856,8 @@
    "url": "https://www.bodum.com/jp/ja/1923-17-chambord",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-bodum-2026-11-10",
-   "makerAlias": "ボダム"
+   "makerAlias": "ボダム",
+   "sourceType": "official"
   },
   {
    "id": "bodum-1923-18",
@@ -827,7 +874,8 @@
    "url": "https://www.bodum.com/jp/ja/1923-18-chambord",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-bodum-2026-11-10",
-   "makerAlias": "ボダム"
+   "makerAlias": "ボダム",
+   "sourceType": "official"
   },
   {
    "id": "bodum-1923-16j",
@@ -844,7 +892,8 @@
    "url": "https://www.bodum.com/jp/ja/1923-16j-chambord",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-bodum-2026-11-10",
-   "makerAlias": "ボダム"
+   "makerAlias": "ボダム",
+   "sourceType": "official"
   },
   {
    "id": "bodum-11813-16-16",
@@ -861,7 +910,8 @@
    "url": "https://www.bodum.com/jp/ja/11813-16-16-chambord",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-bodum-2026-11-10",
-   "makerAlias": "ボダム"
+   "makerAlias": "ボダム",
+   "sourceType": "official"
   },
   {
    "id": "bodum-11813-16-107",
@@ -878,7 +928,8 @@
    "url": "https://www.bodum.com/jp/ja/11813-16-107-chambord",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-bodum-2026-11-10",
-   "makerAlias": "ボダム"
+   "makerAlias": "ボダム",
+   "sourceType": "official"
   },
   {
    "id": "bodum-1924-18",
@@ -895,7 +946,8 @@
    "url": "https://www.bodum.com/jp/ja/1924-18-chambord",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-bodum-2026-11-10",
-   "makerAlias": "ボダム"
+   "makerAlias": "ボダム",
+   "sourceType": "official"
   },
   {
    "id": "bodum-1924-16j",
@@ -912,7 +964,8 @@
    "url": "https://www.bodum.com/jp/ja/1924-16j-chambord",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-bodum-2026-11-10",
-   "makerAlias": "ボダム"
+   "makerAlias": "ボダム",
+   "sourceType": "official"
   },
   {
    "id": "bodum-1924-17",
@@ -929,7 +982,8 @@
    "url": "https://www.bodum.com/jp/ja/1924-17-chambord",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-bodum-2026-11-10",
-   "makerAlias": "ボダム"
+   "makerAlias": "ボダム",
+   "sourceType": "official"
   },
   {
    "id": "bodum-11652-16-16",
@@ -946,7 +1000,8 @@
    "url": "https://www.bodum.com/jp/ja/11652-16-16-chambord",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-bodum-2026-11-10",
-   "makerAlias": "ボダム"
+   "makerAlias": "ボダム",
+   "sourceType": "official"
   },
   {
    "id": "bodum-11652-16-107",
@@ -963,7 +1018,8 @@
    "url": "https://www.bodum.com/jp/ja/11652-16-107-chambord",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-bodum-2026-11-10",
-   "makerAlias": "ボダム"
+   "makerAlias": "ボダム",
+   "sourceType": "official"
   },
   {
    "id": "bodum-1928-661-80",
@@ -980,7 +1036,8 @@
    "url": "https://www.bodum.com/jp/ja/1928-661-80-chambord",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-bodum-2026-11-10",
-   "makerAlias": "ボダム"
+   "makerAlias": "ボダム",
+   "sourceType": "official"
   },
   {
    "id": "bodum-1928-658-80",
@@ -997,7 +1054,8 @@
    "url": "https://www.bodum.com/jp/ja/1928-658-80-chambord",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-bodum-2026-11-10",
-   "makerAlias": "ボダム"
+   "makerAlias": "ボダム",
+   "sourceType": "official"
   },
   {
    "id": "bodum-1928-656-80",
@@ -1014,7 +1072,8 @@
    "url": "https://www.bodum.com/jp/ja/1928-656-80-chambord",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-bodum-2026-11-10",
-   "makerAlias": "ボダム"
+   "makerAlias": "ボダム",
+   "sourceType": "official"
   },
   {
    "id": "bodum-1928-16j",
@@ -1031,7 +1090,8 @@
    "url": "https://www.bodum.com/jp/ja/1928-16j-chambord",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-bodum-2026-11-10",
-   "makerAlias": "ボダム"
+   "makerAlias": "ボダム",
+   "sourceType": "official"
   },
   {
    "id": "bodum-1928-17",
@@ -1048,7 +1108,8 @@
    "url": "https://www.bodum.com/jp/ja/1928-17-chambord",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-bodum-2026-11-10",
-   "makerAlias": "ボダム"
+   "makerAlias": "ボダム",
+   "sourceType": "official"
   },
   {
    "id": "bodum-1928-18",
@@ -1065,7 +1126,8 @@
    "url": "https://www.bodum.com/jp/ja/1928-18-chambord",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-bodum-2026-11-10",
-   "makerAlias": "ボダム"
+   "makerAlias": "ボダム",
+   "sourceType": "official"
   },
   {
    "id": "bodum-11196-17",
@@ -1082,7 +1144,8 @@
    "url": "https://www.bodum.com/jp/ja/11196-17-eileen",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-bodum-2026-11-10",
-   "makerAlias": "ボダム"
+   "makerAlias": "ボダム",
+   "sourceType": "official"
   },
   {
    "id": "bodum-10682-01j",
@@ -1099,7 +1162,8 @@
    "url": "https://www.bodum.com/jp/ja/10682-01j-kenya",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-bodum-2026-11-10",
-   "makerAlias": "ボダム"
+   "makerAlias": "ボダム",
+   "sourceType": "official"
   },
   {
    "id": "bodum-10683-01j",
@@ -1116,7 +1180,8 @@
    "url": "https://www.bodum.com/jp/ja/10683-01j-kenya",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-bodum-2026-11-10",
-   "makerAlias": "ボダム"
+   "makerAlias": "ボダム",
+   "sourceType": "official"
   },
   {
    "id": "bodum-10685-01j",
@@ -1133,7 +1198,705 @@
    "url": "https://www.bodum.com/jp/ja/10685-01j-kenya",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-bodum-2026-11-10",
-   "makerAlias": "ボダム"
+   "makerAlias": "ボダム",
+   "sourceType": "official"
+  },
+  {
+   "id": "bodum-10903-913jp-3",
+   "kind": "grinder",
+   "maker": "Bodum",
+   "power": "electric",
+   "name": "BISTRO Burr Coffee Grinder 160 W",
+   "variants": [
+    {
+     "label": "オフホワイト",
+     "sku": "10903-913JP-3",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.bodum.com/jp/ja/10903-913jp-3-bistro",
+   "checkedAt": "2026-11-12",
+   "sourceId": "tools-bodum-grinders-2026-11-12",
+   "makerAlias": "ボダム",
+   "sourceType": "official"
+  },
+  {
+   "id": "bodum-10903-01jp-3",
+   "kind": "grinder",
+   "maker": "Bodum",
+   "power": "electric",
+   "name": "BISTRO Burr Coffee Grinder 160 W",
+   "variants": [
+    {
+     "label": "ブラック",
+     "sku": "10903-01JP-3",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.bodum.com/jp/ja/10903-01jp-3-bistro",
+   "checkedAt": "2026-11-12",
+   "sourceId": "tools-bodum-grinders-2026-11-12",
+   "makerAlias": "ボダム",
+   "sourceType": "official"
+  },
+  {
+   "id": "bodum-12041-763jp-moma",
+   "kind": "grinder",
+   "maker": "Bodum",
+   "power": "electric",
+   "name": "BISTRO アジャスタブルブレードコーヒーグラインダー",
+   "variants": [
+    {
+     "label": "",
+     "sku": "12041-763JP-MOMA",
+     "gtin": "699965642402"
+    }
+   ],
+   "url": "https://www.bodum.com/jp/ja/12041-763jp-moma-bistro",
+   "checkedAt": "2026-11-12",
+   "sourceId": "tools-bodum-grinders-2026-11-12",
+   "makerAlias": "ボダム",
+   "sourceType": "official"
+  },
+  {
+   "id": "bodum-11160-01jp-4",
+   "kind": "grinder",
+   "maker": "Bodum",
+   "power": "electric",
+   "name": "BISTRO コーヒーグラインダー",
+   "variants": [
+    {
+     "label": "ブラック",
+     "sku": "11160-01JP-4",
+     "gtin": "699965485764"
+    }
+   ],
+   "url": "https://www.bodum.com/jp/ja/11160-01jp-4-bistro",
+   "checkedAt": "2026-11-12",
+   "sourceId": "tools-bodum-grinders-2026-11-12",
+   "makerAlias": "ボダム",
+   "sourceType": "official"
+  },
+  {
+   "id": "bodum-11160-913jp-3",
+   "kind": "grinder",
+   "maker": "Bodum",
+   "power": "electric",
+   "name": "BISTRO コーヒーグラインダー",
+   "variants": [
+    {
+     "label": "オフホワイト",
+     "sku": "11160-913JP-3",
+     "gtin": "699965372903"
+    }
+   ],
+   "url": "https://www.bodum.com/jp/ja/11160-913jp-3-bistro",
+   "checkedAt": "2026-11-12",
+   "sourceId": "tools-bodum-grinders-2026-11-12",
+   "makerAlias": "ボダム",
+   "sourceType": "official"
+  },
+  {
+   "id": "bonmac-810525",
+   "kind": "grinder",
+   "maker": "Bonmac",
+   "name": "BONMAC コーヒーグラインダー BM-570N",
+   "variants": [
+    {
+     "label": "",
+     "sku": "810525",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.lucky-coffee-machine.co.jp/products/810525/",
+   "checkedAt": "2026-11-12",
+   "spec": {
+    "電源・消費電力": "単相100V・480W",
+    "刃の形状": "コニカル",
+    "グラインド能力": "500g/分",
+    "寸法": "W180×D300×H495mm",
+    "重量": "8.1kg(乾燥重量）",
+    "豆ホッパー容量": "600g",
+    "豆ホッパー数": "1"
+   },
+   "power": "electric",
+   "sourceId": "tools-bonmac-2026-11-12",
+   "makerAlias": "ボンマック",
+   "sourceType": "official"
+  },
+  {
+   "id": "bonmac-810524",
+   "kind": "grinder",
+   "maker": "Bonmac",
+   "name": "BONMAC コーヒーグラインダー BM-570N-B",
+   "variants": [
+    {
+     "label": "",
+     "sku": "810524",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.lucky-coffee-machine.co.jp/products/810524/",
+   "checkedAt": "2026-11-12",
+   "spec": {
+    "電源・消費電力": "単相100V・480W",
+    "刃の形状": "コニカル",
+    "グラインド能力": "500g/分",
+    "寸法": "W180×D300×H495mm",
+    "重量": "8.1kg(乾燥重量）",
+    "豆ホッパー容量": "600g",
+    "豆ホッパー数": "1"
+   },
+   "power": "electric",
+   "sourceId": "tools-bonmac-2026-11-12",
+   "makerAlias": "ボンマック",
+   "sourceType": "official"
+  },
+  {
+   "id": "bonmac-810526",
+   "kind": "grinder",
+   "maker": "Bonmac",
+   "name": "BONMAC コーヒーグラインダー BM-570S",
+   "variants": [
+    {
+     "label": "",
+     "sku": "810526",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.lucky-coffee-machine.co.jp/products/810526/",
+   "checkedAt": "2026-11-12",
+   "spec": {
+    "電源・消費電力": "単相100V・480W",
+    "刃の形状": "コニカル",
+    "グラインド能力": "500g/分",
+    "寸法": "W180×D300×H495mm",
+    "重量": "8.1kg(乾燥重量）",
+    "豆ホッパー容量": "600g",
+    "豆ホッパー数": "1"
+   },
+   "power": "electric",
+   "sourceId": "tools-bonmac-2026-11-12",
+   "makerAlias": "ボンマック",
+   "sourceType": "official"
+  },
+  {
+   "id": "bonmac-897502",
+   "kind": "grinder",
+   "maker": "Bonmac",
+   "name": "BONMAC コーヒーグラインダーBM-450",
+   "variants": [
+    {
+     "label": "",
+     "sku": "897502",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.lucky-coffee-machine.co.jp/products/897502/",
+   "checkedAt": "2026-11-12",
+   "spec": {
+    "電源・消費電力": "単相100V・100W",
+    "刃の形状": "コニカル",
+    "グラインド能力": "120～180g/分",
+    "寸法": "W141×D239×H410㎜",
+    "重量": "3.3㎏（ホッパー含む）",
+    "豆ホッパー容量": "500g"
+   },
+   "power": "electric",
+   "sourceId": "tools-bonmac-2026-11-12",
+   "makerAlias": "ボンマック",
+   "sourceType": "official"
+  },
+  {
+   "id": "bonmac-858651",
+   "kind": "grinder",
+   "maker": "Bonmac",
+   "name": "BONMAC コーヒーミル BM-250N-BK（ブラック）",
+   "variants": [
+    {
+     "label": "",
+     "sku": "858651",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.lucky-coffee-machine.co.jp/products/858651/",
+   "checkedAt": "2026-11-12",
+   "spec": {
+    "電源・消費電力": "単相100V・109-100W",
+    "刃の形状": "フラット",
+    "グラインド能力": "150g/分",
+    "豆ホッパー容量": "250g",
+    "寸法": "W120×D220×H360mm",
+    "重量": "3.3kg",
+    "注記": "50Hz/109W・60Hz/100W / 能力 / 200g/分"
+   },
+   "power": "electric",
+   "sourceId": "tools-bonmac-2026-11-12",
+   "makerAlias": "ボンマック",
+   "sourceType": "official"
+  },
+  {
+   "id": "bonmac-858631",
+   "kind": "grinder",
+   "maker": "Bonmac",
+   "name": "BONMAC コーヒーミル BM-250N-RD（レッド）",
+   "variants": [
+    {
+     "label": "",
+     "sku": "858631",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.lucky-coffee-machine.co.jp/products/858631/",
+   "checkedAt": "2026-11-12",
+   "spec": {
+    "電源・消費電力": "単相100V・109-100W",
+    "刃の形状": "フラット",
+    "グラインド能力": "150g/分",
+    "豆ホッパー容量": "250g",
+    "寸法": "W120×D220×H360mm",
+    "重量": "3.3kg",
+    "注記": "50Hz/109W・60Hz/100W / 能力 / 200g/分"
+   },
+   "power": "electric",
+   "sourceId": "tools-bonmac-2026-11-12",
+   "makerAlias": "ボンマック",
+   "sourceType": "official"
+  },
+  {
+   "id": "bonmac-879648",
+   "kind": "paper",
+   "maker": "Bonmac",
+   "name": "BONMAC 業務用ペーパーフィルター No. 250",
+   "variants": [
+    {
+     "label": "",
+     "sku": "879648",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.lucky-coffee-machine.co.jp/products/879648/",
+   "checkedAt": "2026-11-12",
+   "spec": {
+    "寸法": "250㎜",
+    "ケース入数": "1000（混載5ケース以上）",
+    "対応機種": "BM-1200、BM-3000、BM-3100、BMP-2000Z、BM-2100、BM-2100H、BM-4100、BM-5100、BR901～3、SDI-10C、Axiom-2、CDBCF-TC、VP-17-3、CWTF15・35、ブルワー392、SmartWAVE"
+   },
+   "sourceId": "tools-bonmac-2026-11-12",
+   "makerAlias": "ボンマック",
+   "sourceType": "official"
+  },
+  {
+   "id": "bonmac-879649",
+   "kind": "paper",
+   "maker": "Bonmac",
+   "name": "BONMAC 業務用ペーパーフィルター No. 270",
+   "variants": [
+    {
+     "label": "",
+     "sku": "879649",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.lucky-coffee-machine.co.jp/products/879649/",
+   "checkedAt": "2026-11-12",
+   "spec": {
+    "寸法": "270㎜",
+    "ケース入数": "1000（混載5ケース以上）",
+    "対応機種": "BM-1200、BM-4100、TSC-20D、BM-3100、SDC-5B・10C、URN-20C、TFC-10B、DHM-15A抽出ユニット"
+   },
+   "sourceId": "tools-bonmac-2026-11-12",
+   "makerAlias": "ボンマック",
+   "sourceType": "official"
+  },
+  {
+   "id": "bonmac-879583",
+   "kind": "paper",
+   "maker": "Bonmac",
+   "name": "BONMAC 業務用ペーパーフィルター No. 345",
+   "variants": [
+    {
+     "label": "",
+     "sku": "879583",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.lucky-coffee-machine.co.jp/products/879583/",
+   "checkedAt": "2026-11-12",
+   "spec": {
+    "寸法": "345㎜",
+    "ケース入数": "500（発送単位：混載5ケース以上）",
+    "対応機種": "DBC、ITCB、ICB、ICBB"
+   },
+   "sourceId": "tools-bonmac-2026-11-12",
+   "makerAlias": "ボンマック",
+   "sourceType": "official"
+  },
+  {
+   "id": "bonmac-879651",
+   "kind": "paper",
+   "maker": "Bonmac",
+   "name": "BONMAC 業務用ペーパーフィルター No.250N",
+   "variants": [
+    {
+     "label": "",
+     "sku": "879651",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.lucky-coffee-machine.co.jp/products/879651/",
+   "checkedAt": "2026-11-12",
+   "spec": {
+    "寸法": "250㎜",
+    "ケース入数": "1000（混載5ケース以上）",
+    "対応機種": "BM-1200、BM-3000、BM-3100、BMP-2000Z、BM-2100、BM-2100H、BM-4100、BM-5100、BR901～3、SDI-10C、Axiom-2、CDBCF-TC、VP-17-3、CWTF15・35、ブルワー392、SmartWAVE"
+   },
+   "sourceId": "tools-bonmac-2026-11-12",
+   "makerAlias": "ボンマック",
+   "sourceType": "official"
+  },
+  {
+   "id": "bonmac-879652",
+   "kind": "paper",
+   "maker": "Bonmac",
+   "name": "BONMAC 業務用ペーパーフィルター No.270N",
+   "variants": [
+    {
+     "label": "",
+     "sku": "879652",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.lucky-coffee-machine.co.jp/products/879652/",
+   "checkedAt": "2026-11-12",
+   "spec": {
+    "寸法": "270㎜",
+    "ケース入数": "1000（混載5ケース以上）",
+    "対応機種": "BM-1200、BM-4100、TSC-20D、BM-3100、SDC-5B・10C、URN-20C、TFC-10B、DHM-15A抽出ユニット"
+   },
+   "sourceId": "tools-bonmac-2026-11-12",
+   "makerAlias": "ボンマック",
+   "sourceType": "official"
+  },
+  {
+   "id": "bonmac-879650",
+   "kind": "paper",
+   "maker": "Bonmac",
+   "name": "BONMAC 業務用ペーパーフィルター No.280",
+   "variants": [
+    {
+     "label": "",
+     "sku": "879650",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.lucky-coffee-machine.co.jp/products/879650/",
+   "checkedAt": "2026-11-12",
+   "spec": {
+    "寸法": "280㎜",
+    "ケース入数": "1000（混載5ケース以上）",
+    "対応機種": "COOL DRIPPER、BM-4100、ブルーマック、BM-3100"
+   },
+   "sourceId": "tools-bonmac-2026-11-12",
+   "makerAlias": "ボンマック",
+   "sourceType": "official"
+  },
+  {
+   "id": "bonmac-897448",
+   "kind": "paper",
+   "maker": "Bonmac",
+   "name": "bonmac V型ペーパーフィルター 無漂白 CF-100NV",
+   "variants": [
+    {
+     "label": "",
+     "sku": "897448",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.lucky-coffee-machine.co.jp/products/897448/",
+   "checkedAt": "2026-11-12",
+   "spec": {
+    "寸法": "W175×D125×H55mm",
+    "重量": "0.086㎏",
+    "杯数": "1～2杯用",
+    "枚数": "100枚入",
+    "ケース入数": "20袋×4"
+   },
+   "sourceId": "tools-bonmac-2026-11-12",
+   "makerAlias": "ボンマック",
+   "sourceType": "official"
+  },
+  {
+   "id": "bonmac-858319",
+   "kind": "paper",
+   "maker": "Bonmac",
+   "name": "bonmac V型ペーパーフィルター 無漂白 CF-200NV",
+   "variants": [
+    {
+     "label": "",
+     "sku": "858319",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.lucky-coffee-machine.co.jp/products/858319/",
+   "checkedAt": "2026-11-12",
+   "spec": {
+    "寸法": "W200×D150×H55mm",
+    "重量": "0.118㎏",
+    "杯数": "1～4杯用",
+    "枚数": "100枚入",
+    "ケース入数": "20袋×4"
+   },
+   "sourceId": "tools-bonmac-2026-11-12",
+   "makerAlias": "ボンマック",
+   "sourceType": "official"
+  },
+  {
+   "id": "bonmac-897447",
+   "kind": "paper",
+   "maker": "Bonmac",
+   "name": "bonmac V型ペーパーフィルター 酸素漂白 CF-100SV",
+   "variants": [
+    {
+     "label": "",
+     "sku": "897447",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.lucky-coffee-machine.co.jp/products/897447/",
+   "checkedAt": "2026-11-12",
+   "spec": {
+    "寸法": "W175×D125×H55mm",
+    "重量": "0.086㎏",
+    "杯数": "1～2杯用",
+    "枚数": "100枚入",
+    "ケース入数": "20袋×4"
+   },
+   "sourceId": "tools-bonmac-2026-11-12",
+   "makerAlias": "ボンマック",
+   "sourceType": "official"
+  },
+  {
+   "id": "bonmac-858318",
+   "kind": "paper",
+   "maker": "Bonmac",
+   "name": "bonmac V型ペーパーフィルター 酸素漂白 CF-200SV",
+   "variants": [
+    {
+     "label": "",
+     "sku": "858318",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.lucky-coffee-machine.co.jp/products/858318/",
+   "checkedAt": "2026-11-12",
+   "spec": {
+    "寸法": "W200×D150×H55mm",
+    "重量": "0.118㎏",
+    "杯数": "1～4杯用",
+    "枚数": "100枚入",
+    "ケース入数": "20袋×4"
+   },
+   "sourceId": "tools-bonmac-2026-11-12",
+   "makerAlias": "ボンマック",
+   "sourceType": "official"
+  },
+  {
+   "id": "bonmac-816135",
+   "kind": "paper",
+   "maker": "Bonmac",
+   "name": "扇型ペーパーフィルター 無漂白 NB-100N",
+   "variants": [
+    {
+     "label": "",
+     "sku": "816135",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.lucky-coffee-machine.co.jp/products/816135/",
+   "checkedAt": "2026-11-12",
+   "spec": {
+    "寸法": "W110×D210×H45mm",
+    "重量": "0.077㎏",
+    "杯数": "1～2杯用",
+    "枚数": "100枚入",
+    "ケース入数": "20袋×4"
+   },
+   "sourceId": "tools-bonmac-2026-11-12",
+   "makerAlias": "ボンマック",
+   "sourceType": "official"
+  },
+  {
+   "id": "bonmac-816131",
+   "kind": "paper",
+   "maker": "Bonmac",
+   "name": "扇型ペーパーフィルター 無漂白 NB-1N",
+   "variants": [
+    {
+     "label": "",
+     "sku": "816131",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.lucky-coffee-machine.co.jp/products/816131/",
+   "checkedAt": "2026-11-12",
+   "spec": {
+    "寸法": "W100×D190×H23mm",
+    "重量": "0.032㎏",
+    "杯数": "1～2杯用",
+    "枚数": "40枚入",
+    "ケース入数": "20袋×8"
+   },
+   "sourceId": "tools-bonmac-2026-11-12",
+   "makerAlias": "ボンマック",
+   "sourceType": "official"
+  },
+  {
+   "id": "bonmac-816136",
+   "kind": "paper",
+   "maker": "Bonmac",
+   "name": "扇型ペーパーフィルター 無漂白 NB-200N",
+   "variants": [
+    {
+     "label": "",
+     "sku": "816136",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.lucky-coffee-machine.co.jp/products/816136/",
+   "checkedAt": "2026-11-12",
+   "spec": {
+    "寸法": "W120×D230×H45mm",
+    "重量": "0.117㎏",
+    "杯数": "2～4杯用",
+    "枚数": "100枚入",
+    "ケース入数": "20袋×4"
+   },
+   "sourceId": "tools-bonmac-2026-11-12",
+   "makerAlias": "ボンマック",
+   "sourceType": "official"
+  },
+  {
+   "id": "bonmac-816132",
+   "kind": "paper",
+   "maker": "Bonmac",
+   "name": "扇型ペーパーフィルター 無漂白 NB-2N",
+   "variants": [
+    {
+     "label": "",
+     "sku": "816132",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.lucky-coffee-machine.co.jp/products/816132/",
+   "checkedAt": "2026-11-12",
+   "spec": {
+    "寸法": "W120×D220×H23ｍｍ",
+    "重量": "0.048㎏",
+    "杯数": "2～4杯用",
+    "枚数": "40枚入",
+    "ケース入数": "20袋×12"
+   },
+   "sourceId": "tools-bonmac-2026-11-12",
+   "makerAlias": "ボンマック",
+   "sourceType": "official"
+  },
+  {
+   "id": "bonmac-816137",
+   "kind": "paper",
+   "maker": "Bonmac",
+   "name": "扇型ペーパーフィルター 無漂白 NB-400N",
+   "variants": [
+    {
+     "label": "",
+     "sku": "816137",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.lucky-coffee-machine.co.jp/products/816137/",
+   "checkedAt": "2026-11-12",
+   "spec": {
+    "寸法": "W130×D250×H45mm",
+    "重量": "0.168㎏",
+    "杯数": "4～6杯用",
+    "枚数": "100枚入",
+    "ケース入数": "20袋×3"
+   },
+   "sourceId": "tools-bonmac-2026-11-12",
+   "makerAlias": "ボンマック",
+   "sourceType": "official"
+  },
+  {
+   "id": "bonmac-816133",
+   "kind": "paper",
+   "maker": "Bonmac",
+   "name": "扇型ペーパーフィルター 無漂白 NB-4N",
+   "variants": [
+    {
+     "label": "",
+     "sku": "816133",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.lucky-coffee-machine.co.jp/products/816133/",
+   "checkedAt": "2026-11-12",
+   "spec": {
+    "寸法": "W130×D240×H23mm",
+    "重量": "0.068㎏",
+    "杯数": "4～6杯用",
+    "枚数": "40枚入",
+    "ケース入数": "20袋×6"
+   },
+   "sourceId": "tools-bonmac-2026-11-12",
+   "makerAlias": "ボンマック",
+   "sourceType": "official"
+  },
+  {
+   "id": "bonmac-898224",
+   "kind": "syphon",
+   "maker": "Bonmac",
+   "name": "BONMAC 光サイフォンテーブル フラット HSTF-1031",
+   "variants": [
+    {
+     "label": "",
+     "sku": "898224",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.lucky-coffee-machine.co.jp/products/898224/",
+   "checkedAt": "2026-11-12",
+   "spec": {
+    "電源・消費電力": "単相100V・1210W",
+    "寸法": "W648×D263×H234.3mm",
+    "重量": "13.1kg"
+   },
+   "sourceId": "tools-bonmac-2026-11-12",
+   "makerAlias": "ボンマック",
+   "sourceType": "official"
+  },
+  {
+   "id": "bonmac-898225",
+   "kind": "syphon",
+   "maker": "Bonmac",
+   "name": "BONMAC 光サイフォンテーブルフラット HSTF-1051",
+   "variants": [
+    {
+     "label": "",
+     "sku": "898225",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.lucky-coffee-machine.co.jp/products/898225/",
+   "checkedAt": "2026-11-12",
+   "spec": {
+    "電源・消費電力": "単相100V・2020W",
+    "寸法": "W1050×D263×H234.3mm",
+    "重量": "20.4kg",
+    "注記": "2つのコンセントをご用意ください。"
+   },
+   "sourceId": "tools-bonmac-2026-11-12",
+   "makerAlias": "ボンマック",
+   "sourceType": "official"
   },
   {
    "id": "comandante-14306",
@@ -1150,7 +1913,8 @@
    "url": "https://www.cremashop.eu/en/products/comandante/c40-mk4-lab-series-hammerhead",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-crema-comandante-2026-11-10",
-   "makerAlias": "コマンダンテ"
+   "makerAlias": "コマンダンテ",
+   "sourceType": "retailer"
   },
   {
    "id": "comandante-14307",
@@ -1167,7 +1931,8 @@
    "url": "https://www.cremashop.eu/en/products/comandante/c40-mk4-lab-series-blade",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-crema-comandante-2026-11-10",
-   "makerAlias": "コマンダンテ"
+   "makerAlias": "コマンダンテ",
+   "sourceType": "retailer"
   },
   {
    "id": "comandante-14259",
@@ -1184,7 +1949,8 @@
    "url": "https://www.cremashop.eu/en/products/comandante/c40-mk4-lab-series-tigershark",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-crema-comandante-2026-11-10",
-   "makerAlias": "コマンダンテ"
+   "makerAlias": "コマンダンテ",
+   "sourceType": "retailer"
   },
   {
    "id": "comandante-10773",
@@ -1226,7 +1992,8 @@
    "url": "https://www.cremashop.eu/en/products/comandante/c40-mk3-nitro-blade-grinder/10773",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-crema-comandante-2026-11-10",
-   "makerAlias": "コマンダンテ"
+   "makerAlias": "コマンダンテ",
+   "sourceType": "retailer"
   },
   {
    "id": "comandante-14422",
@@ -1243,7 +2010,8 @@
    "url": "https://www.cremashop.eu/en/products/comandante/c40-mk4-nitro-blade-vintage-oak-classic",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-crema-comandante-2026-11-10",
-   "makerAlias": "コマンダンテ"
+   "makerAlias": "コマンダンテ",
+   "sourceType": "retailer"
   },
   {
    "id": "comandante-13381",
@@ -1265,7 +2033,8 @@
    "url": "https://www.cremashop.eu/en/products/comandante/c60-baracuda",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-crema-comandante-2026-11-10",
-   "makerAlias": "コマンダンテ"
+   "makerAlias": "コマンダンテ",
+   "sourceType": "retailer"
   },
   {
    "id": "comandante-x25-trailmaster-dune",
@@ -1282,7 +2051,48 @@
    "url": "https://www.wb.coffee/shop/comandante-x25-trailmaster-dune-50234",
    "checkedAt": "2026-11-11",
    "sourceId": "tools-comandante-x25-2026-11-11",
-   "makerAlias": "コマンダンテ"
+   "makerAlias": "コマンダンテ",
+   "sourceType": "retailer"
+  },
+  {
+   "id": "melitta-dallacorte-coffeegrinder-dcmax",
+   "kind": "grinder",
+   "maker": "Dalla Corte",
+   "name": "DC MAX",
+   "variants": [
+    {
+     "label": "ブラック",
+     "sku": "",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.melitta.co.jp/dallacorte/coffeegrinder/dcmax/",
+   "checkedAt": "2026-11-12",
+   "note": "メリタジャパンの公式サイトの製品ページ(メリタジャパンが取り扱う、電動グラインダー)",
+   "sourceId": "tools-melitta-grinders-2026-11-12",
+   "makerAlias": "ダラコルテ",
+   "power": "electric",
+   "sourceType": "official"
+  },
+  {
+   "id": "melitta-dallacorte-coffeegrinder-dcone",
+   "kind": "grinder",
+   "maker": "Dalla Corte",
+   "name": "DC one",
+   "variants": [
+    {
+     "label": "ダイナミックグレー",
+     "sku": "",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.melitta.co.jp/dallacorte/coffeegrinder/dcone/",
+   "checkedAt": "2026-11-12",
+   "note": "メリタジャパンの公式サイトの製品ページ(メリタジャパンが取り扱う、電動グラインダー)",
+   "sourceId": "tools-melitta-grinders-2026-11-12",
+   "makerAlias": "ダラコルテ",
+   "power": "electric",
+   "sourceType": "official"
   },
   {
    "id": "fellow-shop-staggdripper",
@@ -1304,7 +2114,8 @@
    "url": "https://fellowproducts.com/products/staggdripper",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-fellow-2026-11-10",
-   "makerAlias": "フェロー"
+   "makerAlias": "フェロー",
+   "sourceType": "official"
   },
   {
    "id": "fellow-shop-ode-brew-grinder-gen-2",
@@ -1336,7 +2147,8 @@
    "url": "https://fellowproducts.com/products/ode-brew-grinder-gen-2",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-fellow-2026-11-10",
-   "makerAlias": "フェロー"
+   "makerAlias": "フェロー",
+   "sourceType": "official"
   },
   {
    "id": "fellow-shop-opus-2-conical-burr-grinder",
@@ -1388,7 +2200,8 @@
    "url": "https://fellowproducts.com/products/opus-2-conical-burr-grinder",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-fellow-2026-11-10",
-   "makerAlias": "フェロー"
+   "makerAlias": "フェロー",
+   "sourceType": "official"
   },
   {
    "id": "fellow-shop-stagg-paper-filters",
@@ -1410,7 +2223,173 @@
    "url": "https://fellowproducts.com/products/stagg-paper-filters",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-fellow-2026-11-10",
-   "makerAlias": "フェロー"
+   "makerAlias": "フェロー",
+   "sourceType": "official"
+  },
+  {
+   "id": "fujiroyal-fh-750",
+   "kind": "grinder",
+   "maker": "Fuji Royal",
+   "power": "electric",
+   "name": "コーヒーミル FH-750",
+   "variants": [
+    {
+     "label": "黒",
+     "sku": "FH-750",
+     "gtin": ""
+    }
+   ],
+   "url": "https://fuji-royal.jp/products/mill/fh750/",
+   "checkedAt": "2026-11-12",
+   "spec": {
+    "サイズ (W × D × H) mm": "226 × 413 × 760",
+    "重量": "36 kg",
+    "粉砕能力": "1 kg / 毎分",
+    "ホッパー容量": "1,250 g",
+    "電源": "単相 100 V",
+    "定格電力": "0.55 kW"
+   },
+   "sourceId": "tools-fuji-royal-2026-11-12",
+   "makerAlias": "フジローヤル 富士珈機",
+   "sourceType": "official"
+  },
+  {
+   "id": "fujiroyal-r-220",
+   "kind": "grinder",
+   "maker": "Fuji Royal",
+   "power": "electric",
+   "name": "コーヒーミル R-220 みるっこ",
+   "variants": [
+    {
+     "label": "赤",
+     "sku": "R-220",
+     "gtin": ""
+    },
+    {
+     "label": "黒",
+     "sku": "R-220",
+     "gtin": ""
+    },
+    {
+     "label": "黄",
+     "sku": "R-220",
+     "gtin": ""
+    }
+   ],
+   "url": "https://fuji-royal.jp/products/mill/r220/",
+   "checkedAt": "2026-11-12",
+   "spec": {
+    "サイズ (W × D × H) mm": "130 × 240 × 362",
+    "重量": "4.6 kg",
+    "粉砕能力": "400 g / 毎分",
+    "ホッパー容量": "200 g",
+    "電源": "単相 100 V",
+    "定格電力": "130 W"
+   },
+   "sourceId": "tools-fuji-royal-2026-11-12",
+   "makerAlias": "フジローヤル 富士珈機",
+   "sourceType": "official"
+  },
+  {
+   "id": "fujiroyal-r-300",
+   "kind": "grinder",
+   "maker": "Fuji Royal",
+   "power": "electric",
+   "name": "コーヒーミル R-300",
+   "variants": [
+    {
+     "label": "赤",
+     "sku": "R-300",
+     "gtin": ""
+    },
+    {
+     "label": "黒",
+     "sku": "R-300",
+     "gtin": ""
+    },
+    {
+     "label": "金",
+     "sku": "R-300",
+     "gtin": ""
+    }
+   ],
+   "url": "https://fuji-royal.jp/products/mill/r300/",
+   "checkedAt": "2026-11-12",
+   "spec": {
+    "サイズ (W × D × H) mm": "170 × 330 × 480",
+    "重量": "17.9 kg",
+    "粉砕能力": "500 g / 毎分",
+    "ホッパー容量": "300 g",
+    "電源": "単相 100 V",
+    "定格電力": "360 W"
+   },
+   "sourceId": "tools-fuji-royal-2026-11-12",
+   "makerAlias": "フジローヤル 富士珈機",
+   "sourceType": "official"
+  },
+  {
+   "id": "fujiroyal-r-440",
+   "kind": "grinder",
+   "maker": "Fuji Royal",
+   "power": "electric",
+   "name": "コーヒーミル R-440",
+   "variants": [
+    {
+     "label": "赤",
+     "sku": "R-440",
+     "gtin": ""
+    },
+    {
+     "label": "黒",
+     "sku": "R-440",
+     "gtin": ""
+    }
+   ],
+   "url": "https://fuji-royal.jp/products/mill/r440/",
+   "checkedAt": "2026-11-12",
+   "spec": {
+    "サイズ (W × D × H) mm": "205 × 330 × 532",
+    "重量": "12.2 kg",
+    "粉砕能力": "500 g / 毎分",
+    "ホッパー容量": "900 g",
+    "電源": "単相 100 V",
+    "定格電力": "360 W"
+   },
+   "sourceId": "tools-fuji-royal-2026-11-12",
+   "makerAlias": "フジローヤル 富士珈機",
+   "sourceType": "official"
+  },
+  {
+   "id": "fujiroyal-r-750",
+   "kind": "grinder",
+   "maker": "Fuji Royal",
+   "power": "electric",
+   "name": "コーヒーミル R-750",
+   "variants": [
+    {
+     "label": "黒",
+     "sku": "R-750",
+     "gtin": ""
+    },
+    {
+     "label": "金",
+     "sku": "R-750",
+     "gtin": ""
+    }
+   ],
+   "url": "https://fuji-royal.jp/products/mill/r750/",
+   "checkedAt": "2026-11-12",
+   "spec": {
+    "サイズ (W × D × H) mm": "323 × 418 × 723",
+    "重量": "27 kg",
+    "粉砕能力": "1 kg / 毎分",
+    "ホッパー容量": "2,500 g",
+    "電源": "単相 100 V",
+    "定格電力": "0.55 kW"
+   },
+   "sourceId": "tools-fuji-royal-2026-11-12",
+   "makerAlias": "フジローヤル 富士珈機",
+   "sourceType": "official"
   },
   {
    "id": "hario-adt-01-b",
@@ -1427,7 +2406,8 @@
    "url": "https://www.hario.com/product/coffee/dripper/ADT.html",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
-   "makerAlias": "ハリオ"
+   "makerAlias": "ハリオ",
+   "sourceType": "official"
   },
   {
    "id": "hario-shop-nr-vdc-02",
@@ -1479,7 +2459,8 @@
    "url": "https://shop.hariocorp.co.jp/products/nr-vdc-02",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-shop-2026-11-10",
-   "makerAlias": "ハリオ"
+   "makerAlias": "ハリオ",
+   "sourceType": "official"
   },
   {
    "id": "hario-shop-t-vdc-02-w",
@@ -1501,7 +2482,8 @@
    "url": "https://shop.hariocorp.co.jp/products/t-vdc-02-w",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-shop-2026-11-10",
-   "makerAlias": "ハリオ"
+   "makerAlias": "ハリオ",
+   "sourceType": "official"
   },
   {
    "id": "hario-shop-t-vdt-02-ob",
@@ -1523,7 +2505,8 @@
    "url": "https://shop.hariocorp.co.jp/products/t-vdt-02-ob",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-shop-2026-11-10",
-   "makerAlias": "ハリオ"
+   "makerAlias": "ハリオ",
+   "sourceType": "official"
   },
   {
    "id": "hario-shop-t-ssdc-200-w-cg",
@@ -1550,7 +2533,8 @@
    "url": "https://shop.hariocorp.co.jp/products/t-ssdc-200-w-cg",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-shop-2026-11-10",
-   "makerAlias": "ハリオ"
+   "makerAlias": "ハリオ",
+   "sourceType": "official"
   },
   {
    "id": "hario-vdmu-02-tb",
@@ -1573,7 +2557,8 @@
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
    "makerAlias": "ハリオ",
-   "gtinSourceId": "tools-hario-shop-2026-11-10"
+   "gtinSourceId": "tools-hario-shop-2026-11-10",
+   "sourceType": "official"
   },
   {
    "id": "hario-vdn-01-b",
@@ -1601,7 +2586,8 @@
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
    "makerAlias": "ハリオ",
-   "gtinSourceId": "tools-hario-shop-2026-11-10"
+   "gtinSourceId": "tools-hario-shop-2026-11-10",
+   "sourceType": "official"
   },
   {
    "id": "hario-vdn-02-b",
@@ -1629,7 +2615,8 @@
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
    "makerAlias": "ハリオ",
-   "gtinSourceId": "tools-hario-shop-2026-11-10"
+   "gtinSourceId": "tools-hario-shop-2026-11-10",
+   "sourceType": "official"
   },
   {
    "id": "hario-vdsu-02-tb",
@@ -1647,7 +2634,8 @@
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
    "makerAlias": "ハリオ",
-   "gtinSourceId": "tools-hario-shop-2026-11-10"
+   "gtinSourceId": "tools-hario-shop-2026-11-10",
+   "sourceType": "official"
   },
   {
    "id": "hario-vdsu-02-tri",
@@ -1665,7 +2653,8 @@
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
    "makerAlias": "ハリオ",
-   "gtinSourceId": "tools-hario-shop-2026-11-10"
+   "gtinSourceId": "tools-hario-shop-2026-11-10",
+   "sourceType": "official"
   },
   {
    "id": "hario-vdsu-02-b＆w",
@@ -1683,7 +2672,8 @@
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
    "makerAlias": "ハリオ",
-   "gtinSourceId": "tools-hario-shop-2026-11-10"
+   "gtinSourceId": "tools-hario-shop-2026-11-10",
+   "sourceType": "official"
   },
   {
    "id": "hario-vdsu-02-nj",
@@ -1701,7 +2691,8 @@
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
    "makerAlias": "ハリオ",
-   "gtinSourceId": "tools-hario-shop-2026-11-10"
+   "gtinSourceId": "tools-hario-shop-2026-11-10",
+   "sourceType": "official"
   },
   {
    "id": "hario-shop-vdsc-200-spb",
@@ -1718,7 +2709,8 @@
    "url": "https://shop.hariocorp.co.jp/products/vdsc-200-spb",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-shop-2026-11-10",
-   "makerAlias": "ハリオ"
+   "makerAlias": "ハリオ",
+   "sourceType": "official"
   },
   {
    "id": "hario-zb-vdf-01b",
@@ -1736,7 +2728,8 @@
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
    "makerAlias": "ハリオ",
-   "gtinSourceId": "tools-hario-shop-2026-11-10"
+   "gtinSourceId": "tools-hario-shop-2026-11-10",
+   "sourceType": "official"
   },
   {
    "id": "hario-zb-vdfp-02b",
@@ -1754,7 +2747,8 @@
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
    "makerAlias": "ハリオ",
-   "gtinSourceId": "tools-hario-shop-2026-11-10"
+   "gtinSourceId": "tools-hario-shop-2026-11-10",
+   "sourceType": "official"
   },
   {
    "id": "hario-shop-o-vdm-02-hsv",
@@ -1771,7 +2765,8 @@
    "url": "https://shop.hariocorp.co.jp/products/o-vdm-02-hsv",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-shop-2026-11-10",
-   "makerAlias": "ハリオ"
+   "makerAlias": "ハリオ",
+   "sourceType": "official"
   },
   {
    "id": "hario-vdgr-01-b",
@@ -1789,7 +2784,8 @@
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
    "makerAlias": "ハリオ",
-   "gtinSourceId": "tools-hario-shop-2026-11-10"
+   "gtinSourceId": "tools-hario-shop-2026-11-10",
+   "sourceType": "official"
   },
   {
    "id": "hario-vdgr-02-b",
@@ -1807,7 +2803,8 @@
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
    "makerAlias": "ハリオ",
-   "gtinSourceId": "tools-hario-shop-2026-11-10"
+   "gtinSourceId": "tools-hario-shop-2026-11-10",
+   "sourceType": "official"
   },
   {
    "id": "hario-vdta-01-t",
@@ -1825,7 +2822,8 @@
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
    "makerAlias": "ハリオ",
-   "gtinSourceId": "tools-hario-shop-2026-11-10"
+   "gtinSourceId": "tools-hario-shop-2026-11-10",
+   "sourceType": "official"
   },
   {
    "id": "hario-vdta-02-t",
@@ -1843,7 +2841,8 @@
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
    "makerAlias": "ハリオ",
-   "gtinSourceId": "tools-hario-shop-2026-11-10"
+   "gtinSourceId": "tools-hario-shop-2026-11-10",
+   "sourceType": "official"
   },
   {
    "id": "hario-shop-vdti",
@@ -1865,7 +2864,8 @@
    "url": "https://shop.hariocorp.co.jp/products/vdti",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-shop-2026-11-10",
-   "makerAlias": "ハリオ"
+   "makerAlias": "ハリオ",
+   "sourceType": "official"
   },
   {
    "id": "hario-shop-vdnc",
@@ -1897,7 +2897,8 @@
    "url": "https://shop.hariocorp.co.jp/products/vdnc",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-shop-2026-11-10",
-   "makerAlias": "ハリオ"
+   "makerAlias": "ハリオ",
+   "sourceType": "official"
   },
   {
    "id": "hario-vdmr-02-hsv",
@@ -1915,7 +2916,8 @@
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
    "makerAlias": "ハリオ",
-   "gtinSourceId": "tools-hario-shop-2026-11-10"
+   "gtinSourceId": "tools-hario-shop-2026-11-10",
+   "sourceType": "official"
   },
   {
    "id": "hario-vdmr-02-mb",
@@ -1933,7 +2935,8 @@
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
    "makerAlias": "ハリオ",
-   "gtinSourceId": "tools-hario-shop-2026-11-10"
+   "gtinSourceId": "tools-hario-shop-2026-11-10",
+   "sourceType": "official"
   },
   {
    "id": "hario-vdgn-03-b",
@@ -1951,7 +2954,8 @@
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
    "makerAlias": "ハリオ",
-   "gtinSourceId": "tools-hario-shop-2026-11-10"
+   "gtinSourceId": "tools-hario-shop-2026-11-10",
+   "sourceType": "official"
   },
   {
    "id": "hario-vdgr-01-ov",
@@ -1969,7 +2973,8 @@
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
    "makerAlias": "ハリオ",
-   "gtinSourceId": "tools-hario-shop-2026-11-10"
+   "gtinSourceId": "tools-hario-shop-2026-11-10",
+   "sourceType": "official"
   },
   {
    "id": "hario-vdgr-02-ov",
@@ -1987,7 +2992,8 @@
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
    "makerAlias": "ハリオ",
-   "gtinSourceId": "tools-hario-shop-2026-11-10"
+   "gtinSourceId": "tools-hario-shop-2026-11-10",
+   "sourceType": "official"
   },
   {
    "id": "hario-vdr-01-t",
@@ -2005,7 +3011,8 @@
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
    "makerAlias": "ハリオ",
-   "gtinSourceId": "tools-hario-shop-2026-11-10"
+   "gtinSourceId": "tools-hario-shop-2026-11-10",
+   "sourceType": "official"
   },
   {
    "id": "hario-vdcr-01-r",
@@ -2023,7 +3030,8 @@
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
    "makerAlias": "ハリオ",
-   "gtinSourceId": "tools-hario-shop-2026-11-10"
+   "gtinSourceId": "tools-hario-shop-2026-11-10",
+   "sourceType": "official"
   },
   {
    "id": "hario-vdcr-01-w",
@@ -2041,7 +3049,8 @@
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
    "makerAlias": "ハリオ",
-   "gtinSourceId": "tools-hario-shop-2026-11-10"
+   "gtinSourceId": "tools-hario-shop-2026-11-10",
+   "sourceType": "official"
   },
   {
    "id": "hario-vdr-01-w",
@@ -2059,7 +3068,8 @@
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
    "makerAlias": "ハリオ",
-   "gtinSourceId": "tools-hario-shop-2026-11-10"
+   "gtinSourceId": "tools-hario-shop-2026-11-10",
+   "sourceType": "official"
   },
   {
    "id": "hario-vdr-01-r",
@@ -2077,7 +3087,8 @@
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
    "makerAlias": "ハリオ",
-   "gtinSourceId": "tools-hario-shop-2026-11-10"
+   "gtinSourceId": "tools-hario-shop-2026-11-10",
+   "sourceType": "official"
   },
   {
    "id": "hario-vdr-02-t",
@@ -2095,7 +3106,8 @@
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
    "makerAlias": "ハリオ",
-   "gtinSourceId": "tools-hario-shop-2026-11-10"
+   "gtinSourceId": "tools-hario-shop-2026-11-10",
+   "sourceType": "official"
   },
   {
    "id": "hario-vdcr-02-r",
@@ -2113,7 +3125,8 @@
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
    "makerAlias": "ハリオ",
-   "gtinSourceId": "tools-hario-shop-2026-11-10"
+   "gtinSourceId": "tools-hario-shop-2026-11-10",
+   "sourceType": "official"
   },
   {
    "id": "hario-vdcr-02-w",
@@ -2131,7 +3144,8 @@
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
    "makerAlias": "ハリオ",
-   "gtinSourceId": "tools-hario-shop-2026-11-10"
+   "gtinSourceId": "tools-hario-shop-2026-11-10",
+   "sourceType": "official"
   },
   {
    "id": "hario-vdr-02-w",
@@ -2149,7 +3163,8 @@
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
    "makerAlias": "ハリオ",
-   "gtinSourceId": "tools-hario-shop-2026-11-10"
+   "gtinSourceId": "tools-hario-shop-2026-11-10",
+   "sourceType": "official"
   },
   {
    "id": "hario-vdr-02-r",
@@ -2167,7 +3182,8 @@
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
    "makerAlias": "ハリオ",
-   "gtinSourceId": "tools-hario-shop-2026-11-10"
+   "gtinSourceId": "tools-hario-shop-2026-11-10",
+   "sourceType": "official"
   },
   {
    "id": "hario-vdr-03-t",
@@ -2185,7 +3201,8 @@
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
    "makerAlias": "ハリオ",
-   "gtinSourceId": "tools-hario-shop-2026-11-10"
+   "gtinSourceId": "tools-hario-shop-2026-11-10",
+   "sourceType": "official"
   },
   {
    "id": "hario-shop-cfod-1b",
@@ -2207,7 +3224,8 @@
    "url": "https://shop.hariocorp.co.jp/products/cfod-1b",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-shop-2026-11-10",
-   "makerAlias": "ハリオ"
+   "makerAlias": "ハリオ",
+   "sourceType": "official"
   },
   {
    "id": "hario-shop-3cfol-1br",
@@ -2224,7 +3242,8 @@
    "url": "https://shop.hariocorp.co.jp/products/3cfol-1br",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-shop-2026-11-10",
-   "makerAlias": "ハリオ"
+   "makerAlias": "ハリオ",
+   "sourceType": "official"
   },
   {
    "id": "hario-shop-bt-cfod-01",
@@ -2241,7 +3260,8 @@
    "url": "https://shop.hariocorp.co.jp/products/bt-cfod-01",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-shop-2026-11-10",
-   "makerAlias": "ハリオ"
+   "makerAlias": "ハリオ",
+   "sourceType": "official"
   },
   {
    "id": "hario-ssdc-200-sun",
@@ -2259,7 +3279,8 @@
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
    "makerAlias": "ハリオ",
-   "gtinSourceId": "tools-hario-shop-2026-11-10"
+   "gtinSourceId": "tools-hario-shop-2026-11-10",
+   "sourceType": "official"
   },
   {
    "id": "hario-shop-vdc-02-spb",
@@ -2276,7 +3297,8 @@
    "url": "https://shop.hariocorp.co.jp/products/vdc-02-spb",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-shop-2026-11-10",
-   "makerAlias": "ハリオ"
+   "makerAlias": "ハリオ",
+   "sourceType": "official"
   },
   {
    "id": "hario-shop-dmd-01-hsv",
@@ -2298,7 +3320,8 @@
    "url": "https://shop.hariocorp.co.jp/products/dmd-01-hsv",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-shop-2026-11-10",
-   "makerAlias": "ハリオ"
+   "makerAlias": "ハリオ",
+   "sourceType": "official"
   },
   {
    "id": "hario-ped-01-t",
@@ -2316,7 +3339,8 @@
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
    "makerAlias": "ハリオ",
-   "gtinSourceId": "tools-hario-shop-2026-11-10"
+   "gtinSourceId": "tools-hario-shop-2026-11-10",
+   "sourceType": "official"
   },
   {
    "id": "hario-ped-01-b",
@@ -2334,7 +3358,8 @@
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
    "makerAlias": "ハリオ",
-   "gtinSourceId": "tools-hario-shop-2026-11-10"
+   "gtinSourceId": "tools-hario-shop-2026-11-10",
+   "sourceType": "official"
   },
   {
    "id": "hario-ped-02-t",
@@ -2352,7 +3377,8 @@
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
    "makerAlias": "ハリオ",
-   "gtinSourceId": "tools-hario-shop-2026-11-10"
+   "gtinSourceId": "tools-hario-shop-2026-11-10",
+   "sourceType": "official"
   },
   {
    "id": "hario-ped-02-b",
@@ -2370,7 +3396,8 @@
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
    "makerAlias": "ハリオ",
-   "gtinSourceId": "tools-hario-shop-2026-11-10"
+   "gtinSourceId": "tools-hario-shop-2026-11-10",
+   "sourceType": "official"
   },
   {
    "id": "hario-ped-03-t",
@@ -2388,7 +3415,8 @@
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
    "makerAlias": "ハリオ",
-   "gtinSourceId": "tools-hario-shop-2026-11-10"
+   "gtinSourceId": "tools-hario-shop-2026-11-10",
+   "sourceType": "official"
   },
   {
    "id": "hario-ped-03-b",
@@ -2406,7 +3434,8 @@
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
    "makerAlias": "ハリオ",
-   "gtinSourceId": "tools-hario-shop-2026-11-10"
+   "gtinSourceId": "tools-hario-shop-2026-11-10",
+   "sourceType": "official"
   },
   {
    "id": "hario-ssdc-200-w",
@@ -2424,7 +3453,8 @@
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
    "makerAlias": "ハリオ",
-   "gtinSourceId": "tools-hario-shop-2026-11-10"
+   "gtinSourceId": "tools-hario-shop-2026-11-10",
+   "sourceType": "official"
   },
   {
    "id": "hario-ssd-200-b",
@@ -2442,7 +3472,8 @@
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
    "makerAlias": "ハリオ",
-   "gtinSourceId": "tools-hario-shop-2026-11-10"
+   "gtinSourceId": "tools-hario-shop-2026-11-10",
+   "sourceType": "official"
   },
   {
    "id": "hario-ssd-360-b",
@@ -2460,7 +3491,8 @@
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
    "makerAlias": "ハリオ",
-   "gtinSourceId": "tools-hario-shop-2026-11-10"
+   "gtinSourceId": "tools-hario-shop-2026-11-10",
+   "sourceType": "official"
   },
   {
    "id": "hario-vdg-02-wn",
@@ -2478,7 +3510,8 @@
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
    "makerAlias": "ハリオ",
-   "gtinSourceId": "tools-hario-shop-2026-11-10"
+   "gtinSourceId": "tools-hario-shop-2026-11-10",
+   "sourceType": "official"
   },
   {
    "id": "hario-cgp-2-b",
@@ -2496,7 +3529,8 @@
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
    "makerAlias": "ハリオ",
-   "gtinSourceId": "tools-hario-shop-2026-11-10"
+   "gtinSourceId": "tools-hario-shop-2026-11-10",
+   "sourceType": "official"
   },
   {
    "id": "hario-ecg-3-b",
@@ -2513,7 +3547,9 @@
    "url": "https://www.hario.com/product/coffee/grinder/ECG.html",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
-   "makerAlias": "ハリオ"
+   "makerAlias": "ハリオ",
+   "power": "electric",
+   "sourceType": "official"
   },
   {
    "id": "hario-shop-o-vmm-1-hsv",
@@ -2530,7 +3566,8 @@
    "url": "https://shop.hariocorp.co.jp/products/o-vmm-1-hsv",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-shop-2026-11-10",
-   "makerAlias": "ハリオ"
+   "makerAlias": "ハリオ",
+   "sourceType": "official"
   },
   {
    "id": "hario-evcn-8-b",
@@ -2548,7 +3585,9 @@
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
    "makerAlias": "ハリオ",
-   "gtinSourceId": "tools-hario-shop-2026-11-10"
+   "gtinSourceId": "tools-hario-shop-2026-11-10",
+   "power": "electric",
+   "sourceType": "official"
   },
   {
    "id": "hario-shop-mxr-2tb",
@@ -2565,7 +3604,8 @@
    "url": "https://shop.hariocorp.co.jp/products/mxr-2tb",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-shop-2026-11-10",
-   "makerAlias": "ハリオ"
+   "makerAlias": "ハリオ",
+   "sourceType": "official"
   },
   {
    "id": "hario-mcg-2-wn",
@@ -2582,7 +3622,8 @@
    "url": "https://www.hario.com/product/coffee/grinder/MCG.html",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
-   "makerAlias": "ハリオ"
+   "makerAlias": "ハリオ",
+   "sourceType": "official"
   },
   {
    "id": "hario-cmcb-2",
@@ -2605,7 +3646,8 @@
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
    "makerAlias": "ハリオ",
-   "gtinSourceId": "tools-hario-shop-2026-11-10"
+   "gtinSourceId": "tools-hario-shop-2026-11-10",
+   "sourceType": "official"
   },
   {
    "id": "hario-cmr-502c",
@@ -2623,7 +3665,8 @@
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
    "makerAlias": "ハリオ",
-   "gtinSourceId": "tools-hario-shop-2026-11-10"
+   "gtinSourceId": "tools-hario-shop-2026-11-10",
+   "sourceType": "official"
   },
   {
    "id": "hario-msgn-2-t",
@@ -2641,7 +3684,8 @@
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
    "makerAlias": "ハリオ",
-   "gtinSourceId": "tools-hario-shop-2026-11-10"
+   "gtinSourceId": "tools-hario-shop-2026-11-10",
+   "sourceType": "official"
   },
   {
    "id": "hario-msgs-2-b",
@@ -2659,7 +3703,8 @@
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
    "makerAlias": "ハリオ",
-   "gtinSourceId": "tools-hario-shop-2026-11-10"
+   "gtinSourceId": "tools-hario-shop-2026-11-10",
+   "sourceType": "official"
   },
   {
    "id": "hario-mss-1tb",
@@ -2677,7 +3722,8 @@
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
    "makerAlias": "ハリオ",
-   "gtinSourceId": "tools-hario-shop-2026-11-10"
+   "gtinSourceId": "tools-hario-shop-2026-11-10",
+   "sourceType": "official"
   },
   {
    "id": "hario-mcd-2",
@@ -2695,7 +3741,8 @@
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
    "makerAlias": "ハリオ",
-   "gtinSourceId": "tools-hario-shop-2026-11-10"
+   "gtinSourceId": "tools-hario-shop-2026-11-10",
+   "sourceType": "official"
   },
   {
    "id": "hario-mmr-2",
@@ -2713,7 +3760,8 @@
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
    "makerAlias": "ハリオ",
-   "gtinSourceId": "tools-hario-shop-2026-11-10"
+   "gtinSourceId": "tools-hario-shop-2026-11-10",
+   "sourceType": "official"
   },
   {
    "id": "hario-mcwn-2-ov",
@@ -2731,7 +3779,8 @@
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
    "makerAlias": "ハリオ",
-   "gtinSourceId": "tools-hario-shop-2026-11-10"
+   "gtinSourceId": "tools-hario-shop-2026-11-10",
+   "sourceType": "official"
   },
   {
    "id": "hario-mscsn-2-b",
@@ -2749,7 +3798,8 @@
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
    "makerAlias": "ハリオ",
-   "gtinSourceId": "tools-hario-shop-2026-11-10"
+   "gtinSourceId": "tools-hario-shop-2026-11-10",
+   "sourceType": "official"
   },
   {
    "id": "hario-zb-cms-b",
@@ -2767,7 +3817,8 @@
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
    "makerAlias": "ハリオ",
-   "gtinSourceId": "tools-hario-shop-2026-11-10"
+   "gtinSourceId": "tools-hario-shop-2026-11-10",
+   "sourceType": "official"
   },
   {
    "id": "hario-shop-emcs-5",
@@ -2789,7 +3840,9 @@
    "url": "https://shop.hariocorp.co.jp/products/emcs-5",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-shop-2026-11-10",
-   "makerAlias": "ハリオ"
+   "makerAlias": "ハリオ",
+   "power": "electric",
+   "sourceType": "official"
   },
   {
    "id": "hario-vcf-01-50-mt",
@@ -2807,7 +3860,8 @@
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
    "makerAlias": "ハリオ",
-   "gtinSourceId": "tools-hario-shop-2026-11-10"
+   "gtinSourceId": "tools-hario-shop-2026-11-10",
+   "sourceType": "official"
   },
   {
    "id": "hario-vcf-02-50-mt",
@@ -2825,7 +3879,8 @@
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
    "makerAlias": "ハリオ",
-   "gtinSourceId": "tools-hario-shop-2026-11-10"
+   "gtinSourceId": "tools-hario-shop-2026-11-10",
+   "sourceType": "official"
   },
   {
    "id": "hario-shop-zb-vcf-01-50w",
@@ -2847,7 +3902,8 @@
    "url": "https://shop.hariocorp.co.jp/products/zb-vcf-01-50w",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-shop-2026-11-10",
-   "makerAlias": "ハリオ"
+   "makerAlias": "ハリオ",
+   "sourceType": "official"
   },
   {
    "id": "hario-vcf-01-100m",
@@ -2865,7 +3921,8 @@
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
    "makerAlias": "ハリオ",
-   "gtinSourceId": "tools-hario-shop-2026-11-10"
+   "gtinSourceId": "tools-hario-shop-2026-11-10",
+   "sourceType": "official"
   },
   {
    "id": "hario-vcf-01-40m",
@@ -2883,7 +3940,8 @@
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
    "makerAlias": "ハリオ",
-   "gtinSourceId": "tools-hario-shop-2026-11-10"
+   "gtinSourceId": "tools-hario-shop-2026-11-10",
+   "sourceType": "official"
   },
   {
    "id": "hario-vcf-01-100w",
@@ -2901,7 +3959,8 @@
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
    "makerAlias": "ハリオ",
-   "gtinSourceId": "tools-hario-shop-2026-11-10"
+   "gtinSourceId": "tools-hario-shop-2026-11-10",
+   "sourceType": "official"
   },
   {
    "id": "hario-vcf-01-40w",
@@ -2919,7 +3978,8 @@
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
    "makerAlias": "ハリオ",
-   "gtinSourceId": "tools-hario-shop-2026-11-10"
+   "gtinSourceId": "tools-hario-shop-2026-11-10",
+   "sourceType": "official"
   },
   {
    "id": "hario-vcf-02-100m",
@@ -2937,7 +3997,8 @@
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
    "makerAlias": "ハリオ",
-   "gtinSourceId": "tools-hario-shop-2026-11-10"
+   "gtinSourceId": "tools-hario-shop-2026-11-10",
+   "sourceType": "official"
   },
   {
    "id": "hario-vcf-02-40m",
@@ -2955,7 +4016,8 @@
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
    "makerAlias": "ハリオ",
-   "gtinSourceId": "tools-hario-shop-2026-11-10"
+   "gtinSourceId": "tools-hario-shop-2026-11-10",
+   "sourceType": "official"
   },
   {
    "id": "hario-vcf-02-40w",
@@ -2973,7 +4035,8 @@
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
    "makerAlias": "ハリオ",
-   "gtinSourceId": "tools-hario-shop-2026-11-10"
+   "gtinSourceId": "tools-hario-shop-2026-11-10",
+   "sourceType": "official"
   },
   {
    "id": "hario-vcf-02-50m-f",
@@ -2990,7 +4053,8 @@
    "url": "https://www.hario.com/product/coffee/paperfilter/VCF.html",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
-   "makerAlias": "ハリオ"
+   "makerAlias": "ハリオ",
+   "sourceType": "official"
   },
   {
    "id": "hario-vcf-03-100m",
@@ -3008,7 +4072,8 @@
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
    "makerAlias": "ハリオ",
-   "gtinSourceId": "tools-hario-shop-2026-11-10"
+   "gtinSourceId": "tools-hario-shop-2026-11-10",
+   "sourceType": "official"
   },
   {
    "id": "hario-vcf-03-40m",
@@ -3026,7 +4091,8 @@
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
    "makerAlias": "ハリオ",
-   "gtinSourceId": "tools-hario-shop-2026-11-10"
+   "gtinSourceId": "tools-hario-shop-2026-11-10",
+   "sourceType": "official"
   },
   {
    "id": "hario-vcf-03-100w",
@@ -3044,7 +4110,8 @@
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
    "makerAlias": "ハリオ",
-   "gtinSourceId": "tools-hario-shop-2026-11-10"
+   "gtinSourceId": "tools-hario-shop-2026-11-10",
+   "sourceType": "official"
   },
   {
    "id": "hario-vcf-03-40w",
@@ -3062,7 +4129,8 @@
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
    "makerAlias": "ハリオ",
-   "gtinSourceId": "tools-hario-shop-2026-11-10"
+   "gtinSourceId": "tools-hario-shop-2026-11-10",
+   "sourceType": "official"
   },
   {
    "id": "hario-vcf-02-100mk",
@@ -3085,7 +4153,8 @@
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
    "makerAlias": "ハリオ",
-   "gtinSourceId": "tools-hario-shop-2026-11-10"
+   "gtinSourceId": "tools-hario-shop-2026-11-10",
+   "sourceType": "official"
   },
   {
    "id": "hario-vcf-02-100w",
@@ -3103,7 +4172,8 @@
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
    "makerAlias": "ハリオ",
-   "gtinSourceId": "tools-hario-shop-2026-11-10"
+   "gtinSourceId": "tools-hario-shop-2026-11-10",
+   "sourceType": "official"
   },
   {
    "id": "hario-vcf-02-100wk",
@@ -3126,7 +4196,8 @@
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
    "makerAlias": "ハリオ",
-   "gtinSourceId": "tools-hario-shop-2026-11-10"
+   "gtinSourceId": "tools-hario-shop-2026-11-10",
+   "sourceType": "official"
   },
   {
    "id": "hario-shop-o-vcf-02-40w",
@@ -3143,7 +4214,8 @@
    "url": "https://shop.hariocorp.co.jp/products/o-vcf-02-40w",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-shop-2026-11-10",
-   "makerAlias": "ハリオ"
+   "makerAlias": "ハリオ",
+   "sourceType": "official"
   },
   {
    "id": "hario-pef-01-100m",
@@ -3161,7 +4233,8 @@
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
    "makerAlias": "ハリオ",
-   "gtinSourceId": "tools-hario-shop-2026-11-10"
+   "gtinSourceId": "tools-hario-shop-2026-11-10",
+   "sourceType": "official"
   },
   {
    "id": "hario-pef-01-100w",
@@ -3179,7 +4252,8 @@
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
    "makerAlias": "ハリオ",
-   "gtinSourceId": "tools-hario-shop-2026-11-10"
+   "gtinSourceId": "tools-hario-shop-2026-11-10",
+   "sourceType": "official"
   },
   {
    "id": "hario-pef-02-100m",
@@ -3197,7 +4271,8 @@
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
    "makerAlias": "ハリオ",
-   "gtinSourceId": "tools-hario-shop-2026-11-10"
+   "gtinSourceId": "tools-hario-shop-2026-11-10",
+   "sourceType": "official"
   },
   {
    "id": "hario-pef-02-100w",
@@ -3215,7 +4290,8 @@
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
    "makerAlias": "ハリオ",
-   "gtinSourceId": "tools-hario-shop-2026-11-10"
+   "gtinSourceId": "tools-hario-shop-2026-11-10",
+   "sourceType": "official"
   },
   {
    "id": "hario-pef-03-100m",
@@ -3233,7 +4309,8 @@
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
    "makerAlias": "ハリオ",
-   "gtinSourceId": "tools-hario-shop-2026-11-10"
+   "gtinSourceId": "tools-hario-shop-2026-11-10",
+   "sourceType": "official"
   },
   {
    "id": "hario-pef-03-100w",
@@ -3251,7 +4328,8 @@
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
    "makerAlias": "ハリオ",
-   "gtinSourceId": "tools-hario-shop-2026-11-10"
+   "gtinSourceId": "tools-hario-shop-2026-11-10",
+   "sourceType": "official"
   },
   {
    "id": "hario-mdf-1",
@@ -3268,7 +4346,8 @@
    "url": "https://www.hario.com/product/coffee/paperfilter/MDF.html",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
-   "makerAlias": "ハリオ"
+   "makerAlias": "ハリオ",
+   "sourceType": "official"
   },
   {
    "id": "kalita-3686",
@@ -3286,7 +4365,8 @@
    "url": "https://www.kalita.co.jp/products/dripper/3686",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-kalita-2026-11-10",
-   "makerAlias": "カリタ"
+   "makerAlias": "カリタ",
+   "sourceType": "official"
   },
   {
    "id": "kalita-3687",
@@ -3304,7 +4384,8 @@
    "url": "https://www.kalita.co.jp/products/dripper/3687",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-kalita-2026-11-10",
-   "makerAlias": "カリタ"
+   "makerAlias": "カリタ",
+   "sourceType": "official"
   },
   {
    "id": "kalita-3118",
@@ -3322,7 +4403,8 @@
    "url": "https://www.kalita.co.jp/products/dripper/3118",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-kalita-2026-11-10",
-   "makerAlias": "カリタ"
+   "makerAlias": "カリタ",
+   "sourceType": "official"
   },
   {
    "id": "kalita-3119",
@@ -3340,7 +4422,8 @@
    "url": "https://www.kalita.co.jp/products/dripper/3119",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-kalita-2026-11-10",
-   "makerAlias": "カリタ"
+   "makerAlias": "カリタ",
+   "sourceType": "official"
   },
   {
    "id": "kalita-3206",
@@ -3358,7 +4441,8 @@
    "url": "https://www.kalita.co.jp/products/waveseries/3206",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-kalita-2026-11-10",
-   "makerAlias": "カリタ"
+   "makerAlias": "カリタ",
+   "sourceType": "official"
   },
   {
    "id": "kalita-3208",
@@ -3376,7 +4460,8 @@
    "url": "https://www.kalita.co.jp/products/waveseries/3208",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-kalita-2026-11-10",
-   "makerAlias": "カリタ"
+   "makerAlias": "カリタ",
+   "sourceType": "official"
   },
   {
    "id": "kalita-3848",
@@ -3394,7 +4479,8 @@
    "url": "https://www.kalita.co.jp/products/waveseries/3848",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-kalita-2026-11-10",
-   "makerAlias": "カリタ"
+   "makerAlias": "カリタ",
+   "sourceType": "official"
   },
   {
    "id": "kalita-3794",
@@ -3412,7 +4498,8 @@
    "url": "https://www.kalita.co.jp/products/waveseries/3794",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-kalita-2026-11-10",
-   "makerAlias": "カリタ"
+   "makerAlias": "カリタ",
+   "sourceType": "official"
   },
   {
    "id": "kalita-3793",
@@ -3430,7 +4517,8 @@
    "url": "https://www.kalita.co.jp/products/waveseries/3793",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-kalita-2026-11-10",
-   "makerAlias": "カリタ"
+   "makerAlias": "カリタ",
+   "sourceType": "official"
   },
   {
    "id": "kalita-3795",
@@ -3448,7 +4536,8 @@
    "url": "https://www.kalita.co.jp/products/waveseries/3795",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-kalita-2026-11-10",
-   "makerAlias": "カリタ"
+   "makerAlias": "カリタ",
+   "sourceType": "official"
   },
   {
    "id": "kalita-3792",
@@ -3466,7 +4555,8 @@
    "url": "https://www.kalita.co.jp/products/waveseries/3792",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-kalita-2026-11-10",
-   "makerAlias": "カリタ"
+   "makerAlias": "カリタ",
+   "sourceType": "official"
   },
   {
    "id": "kalita-3796",
@@ -3484,7 +4574,8 @@
    "url": "https://www.kalita.co.jp/products/waveseries/3796",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-kalita-2026-11-10",
-   "makerAlias": "カリタ"
+   "makerAlias": "カリタ",
+   "sourceType": "official"
   },
   {
    "id": "kalita-3797",
@@ -3502,7 +4593,8 @@
    "url": "https://www.kalita.co.jp/products/waveseries/3797",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-kalita-2026-11-10",
-   "makerAlias": "カリタ"
+   "makerAlias": "カリタ",
+   "sourceType": "official"
   },
   {
    "id": "kalita-3764",
@@ -3520,7 +4612,8 @@
    "url": "https://www.kalita.co.jp/products/waveseries/3764",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-kalita-2026-11-10",
-   "makerAlias": "カリタ"
+   "makerAlias": "カリタ",
+   "sourceType": "official"
   },
   {
    "id": "kalita-3752",
@@ -3538,7 +4631,8 @@
    "url": "https://www.kalita.co.jp/products/waveseries/3752",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-kalita-2026-11-10",
-   "makerAlias": "カリタ"
+   "makerAlias": "カリタ",
+   "sourceType": "official"
   },
   {
    "id": "kalita-3751",
@@ -3556,7 +4650,8 @@
    "url": "https://www.kalita.co.jp/products/waveseries/3751",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-kalita-2026-11-10",
-   "makerAlias": "カリタ"
+   "makerAlias": "カリタ",
+   "sourceType": "official"
   },
   {
    "id": "kalita-3753",
@@ -3574,7 +4669,8 @@
    "url": "https://www.kalita.co.jp/products/waveseries/3753",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-kalita-2026-11-10",
-   "makerAlias": "カリタ"
+   "makerAlias": "カリタ",
+   "sourceType": "official"
   },
   {
    "id": "kalita-3750",
@@ -3592,7 +4688,8 @@
    "url": "https://www.kalita.co.jp/products/waveseries/3750",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-kalita-2026-11-10",
-   "makerAlias": "カリタ"
+   "makerAlias": "カリタ",
+   "sourceType": "official"
   },
   {
    "id": "kalita-3762",
@@ -3610,7 +4707,8 @@
    "url": "https://www.kalita.co.jp/products/waveseries/3762",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-kalita-2026-11-10",
-   "makerAlias": "カリタ"
+   "makerAlias": "カリタ",
+   "sourceType": "official"
   },
   {
    "id": "kalita-3763",
@@ -3628,7 +4726,8 @@
    "url": "https://www.kalita.co.jp/products/waveseries/3763",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-kalita-2026-11-10",
-   "makerAlias": "カリタ"
+   "makerAlias": "カリタ",
+   "sourceType": "official"
   },
   {
    "id": "kalita-3684",
@@ -3646,7 +4745,8 @@
    "url": "https://www.kalita.co.jp/products/dripper/3684",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-kalita-2026-11-10",
-   "makerAlias": "カリタ"
+   "makerAlias": "カリタ",
+   "sourceType": "official"
   },
   {
    "id": "kalita-3685",
@@ -3664,7 +4764,8 @@
    "url": "https://www.kalita.co.jp/products/dripper/3685",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-kalita-2026-11-10",
-   "makerAlias": "カリタ"
+   "makerAlias": "カリタ",
+   "sourceType": "official"
   },
   {
    "id": "kalita-3634",
@@ -3682,7 +4783,8 @@
    "url": "https://www.kalita.co.jp/products/waveseries/3634",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-kalita-2026-11-10",
-   "makerAlias": "カリタ"
+   "makerAlias": "カリタ",
+   "sourceType": "official"
   },
   {
    "id": "kalita-3633",
@@ -3700,7 +4802,8 @@
    "url": "https://www.kalita.co.jp/products/waveseries/3633",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-kalita-2026-11-10",
-   "makerAlias": "カリタ"
+   "makerAlias": "カリタ",
+   "sourceType": "official"
   },
   {
    "id": "kalita-1842",
@@ -3718,7 +4821,8 @@
    "url": "https://www.kalita.co.jp/products/dripper/1842",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-kalita-2026-11-10",
-   "makerAlias": "カリタ"
+   "makerAlias": "カリタ",
+   "sourceType": "official"
   },
   {
    "id": "kalita-2019",
@@ -3736,7 +4840,8 @@
    "url": "https://www.kalita.co.jp/products/dripper/2019",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-kalita-2026-11-10",
-   "makerAlias": "カリタ"
+   "makerAlias": "カリタ",
+   "sourceType": "official"
   },
   {
    "id": "kalita-2022",
@@ -3754,7 +4859,8 @@
    "url": "https://www.kalita.co.jp/products/dripper/2022",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-kalita-2026-11-10",
-   "makerAlias": "カリタ"
+   "makerAlias": "カリタ",
+   "sourceType": "official"
   },
   {
    "id": "kalita-2023",
@@ -3772,7 +4878,8 @@
    "url": "https://www.kalita.co.jp/products/waveseries/2023",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-kalita-2026-11-10",
-   "makerAlias": "カリタ"
+   "makerAlias": "カリタ",
+   "sourceType": "official"
   },
   {
    "id": "kalita-2021",
@@ -3790,7 +4897,8 @@
    "url": "https://www.kalita.co.jp/products/waveseries/2021",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-kalita-2026-11-10",
-   "makerAlias": "カリタ"
+   "makerAlias": "カリタ",
+   "sourceType": "official"
   },
   {
    "id": "kalita-1941",
@@ -3808,7 +4916,8 @@
    "url": "https://www.kalita.co.jp/products/dripper/1941",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-kalita-2026-11-10",
-   "makerAlias": "カリタ"
+   "makerAlias": "カリタ",
+   "sourceType": "official"
   },
   {
    "id": "kalita-1936",
@@ -3826,7 +4935,8 @@
    "url": "https://www.kalita.co.jp/products/dripper/1936",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-kalita-2026-11-10",
-   "makerAlias": "カリタ"
+   "makerAlias": "カリタ",
+   "sourceType": "official"
   },
   {
    "id": "kalita-1937",
@@ -3844,7 +4954,8 @@
    "url": "https://www.kalita.co.jp/products/dripper/1937",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-kalita-2026-11-10",
-   "makerAlias": "カリタ"
+   "makerAlias": "カリタ",
+   "sourceType": "official"
   },
   {
    "id": "kalita-1920",
@@ -3862,7 +4973,8 @@
    "url": "https://www.kalita.co.jp/products/dripper/1920",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-kalita-2026-11-10",
-   "makerAlias": "カリタ"
+   "makerAlias": "カリタ",
+   "sourceType": "official"
   },
   {
    "id": "kalita-1923",
@@ -3880,7 +4992,8 @@
    "url": "https://www.kalita.co.jp/products/dripper/1923",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-kalita-2026-11-10",
-   "makerAlias": "カリタ"
+   "makerAlias": "カリタ",
+   "sourceType": "official"
   },
   {
    "id": "kalita-1922",
@@ -3898,7 +5011,8 @@
    "url": "https://www.kalita.co.jp/products/dripper/1922",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-kalita-2026-11-10",
-   "makerAlias": "カリタ"
+   "makerAlias": "カリタ",
+   "sourceType": "official"
   },
   {
    "id": "kalita-1938",
@@ -3916,7 +5030,8 @@
    "url": "https://www.kalita.co.jp/products/dripper/1938",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-kalita-2026-11-10",
-   "makerAlias": "カリタ"
+   "makerAlias": "カリタ",
+   "sourceType": "official"
   },
   {
    "id": "kalita-1939",
@@ -3934,7 +5049,8 @@
    "url": "https://www.kalita.co.jp/products/dripper/1939",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-kalita-2026-11-10",
-   "makerAlias": "カリタ"
+   "makerAlias": "カリタ",
+   "sourceType": "official"
   },
   {
    "id": "kalita-1940",
@@ -3952,7 +5068,8 @@
    "url": "https://www.kalita.co.jp/products/dripper/1940",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-kalita-2026-11-10",
-   "makerAlias": "カリタ"
+   "makerAlias": "カリタ",
+   "sourceType": "official"
   },
   {
    "id": "kalita-1924",
@@ -3970,7 +5087,8 @@
    "url": "https://www.kalita.co.jp/products/dripper/1924",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-kalita-2026-11-10",
-   "makerAlias": "カリタ"
+   "makerAlias": "カリタ",
+   "sourceType": "official"
   },
   {
    "id": "kalita-1925",
@@ -3988,7 +5106,8 @@
    "url": "https://www.kalita.co.jp/products/dripper/1925",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-kalita-2026-11-10",
-   "makerAlias": "カリタ"
+   "makerAlias": "カリタ",
+   "sourceType": "official"
   },
   {
    "id": "kalita-1927",
@@ -4006,7 +5125,8 @@
    "url": "https://www.kalita.co.jp/products/dripper/1927",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-kalita-2026-11-10",
-   "makerAlias": "カリタ"
+   "makerAlias": "カリタ",
+   "sourceType": "official"
   },
   {
    "id": "kalita-1942",
@@ -4024,7 +5144,8 @@
    "url": "https://www.kalita.co.jp/products/dripper/1942",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-kalita-2026-11-10",
-   "makerAlias": "カリタ"
+   "makerAlias": "カリタ",
+   "sourceType": "official"
   },
   {
    "id": "kalita-1943",
@@ -4042,7 +5163,8 @@
    "url": "https://www.kalita.co.jp/products/dripper/1943",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-kalita-2026-11-10",
-   "makerAlias": "カリタ"
+   "makerAlias": "カリタ",
+   "sourceType": "official"
   },
   {
    "id": "kalita-1945",
@@ -4060,7 +5182,8 @@
    "url": "https://www.kalita.co.jp/products/dripper/1945",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-kalita-2026-11-10",
-   "makerAlias": "カリタ"
+   "makerAlias": "カリタ",
+   "sourceType": "official"
   },
   {
    "id": "kalita-3133",
@@ -4078,7 +5201,8 @@
    "url": "https://www.kalita.co.jp/products/waveseries/3133",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-kalita-2026-11-10",
-   "makerAlias": "カリタ"
+   "makerAlias": "カリタ",
+   "sourceType": "official"
   },
   {
    "id": "kalita-3134",
@@ -4096,7 +5220,8 @@
    "url": "https://www.kalita.co.jp/products/waveseries/3134",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-kalita-2026-11-10",
-   "makerAlias": "カリタ"
+   "makerAlias": "カリタ",
+   "sourceType": "official"
   },
   {
    "id": "kalita-3535",
@@ -4114,7 +5239,8 @@
    "url": "https://www.kalita.co.jp/products/waveseries/3535",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-kalita-2026-11-10",
-   "makerAlias": "カリタ"
+   "makerAlias": "カリタ",
+   "sourceType": "official"
   },
   {
    "id": "kalita-3166",
@@ -4132,7 +5258,8 @@
    "url": "https://www.kalita.co.jp/products/waveseries/3166",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-kalita-2026-11-10",
-   "makerAlias": "カリタ"
+   "makerAlias": "カリタ",
+   "sourceType": "official"
   },
   {
    "id": "kalita-3170",
@@ -4150,7 +5277,8 @@
    "url": "https://www.kalita.co.jp/products/waveseries/3170",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-kalita-2026-11-10",
-   "makerAlias": "カリタ"
+   "makerAlias": "カリタ",
+   "sourceType": "official"
   },
   {
    "id": "kalita-3169",
@@ -4168,7 +5296,8 @@
    "url": "https://www.kalita.co.jp/products/waveseries/3169",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-kalita-2026-11-10",
-   "makerAlias": "カリタ"
+   "makerAlias": "カリタ",
+   "sourceType": "official"
   },
   {
    "id": "kalita-3360",
@@ -4186,7 +5315,8 @@
    "url": "https://www.kalita.co.jp/products/waveseries/3360",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-kalita-2026-11-10",
-   "makerAlias": "カリタ"
+   "makerAlias": "カリタ",
+   "sourceType": "official"
   },
   {
    "id": "kalita-3361",
@@ -4204,7 +5334,8 @@
    "url": "https://www.kalita.co.jp/products/waveseries/3361",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-kalita-2026-11-10",
-   "makerAlias": "カリタ"
+   "makerAlias": "カリタ",
+   "sourceType": "official"
   },
   {
    "id": "kalita-3534",
@@ -4222,7 +5353,8 @@
    "url": "https://www.kalita.co.jp/products/waveseries/3534",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-kalita-2026-11-10",
-   "makerAlias": "カリタ"
+   "makerAlias": "カリタ",
+   "sourceType": "official"
   },
   {
    "id": "kalita-3167",
@@ -4240,7 +5372,8 @@
    "url": "https://www.kalita.co.jp/products/waveseries/3167",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-kalita-2026-11-10",
-   "makerAlias": "カリタ"
+   "makerAlias": "カリタ",
+   "sourceType": "official"
   },
   {
    "id": "kalita-3171",
@@ -4258,7 +5391,8 @@
    "url": "https://www.kalita.co.jp/products/waveseries/3171",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-kalita-2026-11-10",
-   "makerAlias": "カリタ"
+   "makerAlias": "カリタ",
+   "sourceType": "official"
   },
   {
    "id": "kalita-3168",
@@ -4276,7 +5410,8 @@
    "url": "https://www.kalita.co.jp/products/waveseries/3168",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-kalita-2026-11-10",
-   "makerAlias": "カリタ"
+   "makerAlias": "カリタ",
+   "sourceType": "official"
   },
   {
    "id": "kalita-3135",
@@ -4294,7 +5429,8 @@
    "url": "https://www.kalita.co.jp/products/waveseries/3135",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-kalita-2026-11-10",
-   "makerAlias": "カリタ"
+   "makerAlias": "カリタ",
+   "sourceType": "official"
   },
   {
    "id": "kalita-3136",
@@ -4312,7 +5448,8 @@
    "url": "https://www.kalita.co.jp/products/waveseries/3136",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-kalita-2026-11-10",
-   "makerAlias": "カリタ"
+   "makerAlias": "カリタ",
+   "sourceType": "official"
   },
   {
    "id": "kalita-2216",
@@ -4330,7 +5467,8 @@
    "url": "https://www.kalita.co.jp/products/dripper/2216",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-kalita-2026-11-10",
-   "makerAlias": "カリタ"
+   "makerAlias": "カリタ",
+   "sourceType": "official"
   },
   {
    "id": "kalita-2215",
@@ -4348,7 +5486,8 @@
    "url": "https://www.kalita.co.jp/products/dripper/2215",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-kalita-2026-11-10",
-   "makerAlias": "カリタ"
+   "makerAlias": "カリタ",
+   "sourceType": "official"
   },
   {
    "id": "kalita-2214",
@@ -4366,7 +5505,8 @@
    "url": "https://www.kalita.co.jp/products/dripper/2214",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-kalita-2026-11-10",
-   "makerAlias": "カリタ"
+   "makerAlias": "カリタ",
+   "sourceType": "official"
   },
   {
    "id": "kalita-3194",
@@ -4384,7 +5524,8 @@
    "url": "https://www.kalita.co.jp/products/dripper/3194",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-kalita-2026-11-10",
-   "makerAlias": "カリタ"
+   "makerAlias": "カリタ",
+   "sourceType": "official"
   },
   {
    "id": "kalita-3196",
@@ -4402,7 +5543,8 @@
    "url": "https://www.kalita.co.jp/products/dripper/3196",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-kalita-2026-11-10",
-   "makerAlias": "カリタ"
+   "makerAlias": "カリタ",
+   "sourceType": "official"
   },
   {
    "id": "kalita-1883",
@@ -4420,7 +5562,8 @@
    "url": "https://www.kalita.co.jp/products/dripper/1883",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-kalita-2026-11-10",
-   "makerAlias": "カリタ"
+   "makerAlias": "カリタ",
+   "sourceType": "official"
   },
   {
    "id": "kalita-2254",
@@ -4438,7 +5581,8 @@
    "url": "https://www.kalita.co.jp/products/dripper/2254",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-kalita-2026-11-10",
-   "makerAlias": "カリタ"
+   "makerAlias": "カリタ",
+   "sourceType": "official"
   },
   {
    "id": "kalita-2255",
@@ -4456,7 +5600,8 @@
    "url": "https://www.kalita.co.jp/products/dripper/2255",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-kalita-2026-11-10",
-   "makerAlias": "カリタ"
+   "makerAlias": "カリタ",
+   "sourceType": "official"
   },
   {
    "id": "kalita-2253",
@@ -4474,7 +5619,8 @@
    "url": "https://www.kalita.co.jp/products/dripper/2253",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-kalita-2026-11-10",
-   "makerAlias": "カリタ"
+   "makerAlias": "カリタ",
+   "sourceType": "official"
   },
   {
    "id": "kalita-3889",
@@ -4492,7 +5638,8 @@
    "url": "https://www.kalita.co.jp/products/mill/3889",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-kalita-2026-11-10",
-   "makerAlias": "カリタ"
+   "makerAlias": "カリタ",
+   "sourceType": "official"
   },
   {
    "id": "kalita-3734",
@@ -4510,7 +5657,8 @@
    "url": "https://www.kalita.co.jp/products/mill/3734",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-kalita-2026-11-10",
-   "makerAlias": "カリタ"
+   "makerAlias": "カリタ",
+   "sourceType": "official"
   },
   {
    "id": "kalita-3733",
@@ -4528,7 +5676,8 @@
    "url": "https://www.kalita.co.jp/products/mill/3733",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-kalita-2026-11-10",
-   "makerAlias": "カリタ"
+   "makerAlias": "カリタ",
+   "sourceType": "official"
   },
   {
    "id": "kalita-3731",
@@ -4546,7 +5695,8 @@
    "url": "https://www.kalita.co.jp/products/mill/3731",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-kalita-2026-11-10",
-   "makerAlias": "カリタ"
+   "makerAlias": "カリタ",
+   "sourceType": "official"
   },
   {
    "id": "kalita-3732",
@@ -4564,7 +5714,8 @@
    "url": "https://www.kalita.co.jp/products/mill/3732",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-kalita-2026-11-10",
-   "makerAlias": "カリタ"
+   "makerAlias": "カリタ",
+   "sourceType": "official"
   },
   {
    "id": "kalita-3730",
@@ -4582,7 +5733,28 @@
    "url": "https://www.kalita.co.jp/products/mill/3730",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-kalita-2026-11-10",
-   "makerAlias": "カリタ"
+   "makerAlias": "カリタ",
+   "sourceType": "official"
+  },
+  {
+   "id": "kalita-biz-2047",
+   "kind": "grinder",
+   "maker": "Kalita",
+   "name": "クリーンカットミル",
+   "category": "業務用グラインダー",
+   "variants": [
+    {
+     "label": "",
+     "sku": "61073",
+     "gtin": "4901369610731"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/business_mill/2047",
+   "checkedAt": "2026-11-12",
+   "sourceId": "tools-kalita-business-mill-2026-11-12",
+   "makerAlias": "カリタ",
+   "power": "electric",
+   "sourceType": "official"
   },
   {
    "id": "kalita-1987",
@@ -4600,7 +5772,9 @@
    "url": "https://www.kalita.co.jp/products/mill/1987",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-kalita-2026-11-10",
-   "makerAlias": "カリタ"
+   "makerAlias": "カリタ",
+   "power": "electric",
+   "sourceType": "official"
   },
   {
    "id": "kalita-1986",
@@ -4618,7 +5792,9 @@
    "url": "https://www.kalita.co.jp/products/mill/1986",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-kalita-2026-11-10",
-   "makerAlias": "カリタ"
+   "makerAlias": "カリタ",
+   "power": "electric",
+   "sourceType": "official"
   },
   {
    "id": "kalita-3896",
@@ -4636,7 +5812,8 @@
    "url": "https://www.kalita.co.jp/products/mill/3896",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-kalita-2026-11-10",
-   "makerAlias": "カリタ"
+   "makerAlias": "カリタ",
+   "sourceType": "official"
   },
   {
    "id": "kalita-3897",
@@ -4654,7 +5831,28 @@
    "url": "https://www.kalita.co.jp/products/mill/3897",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-kalita-2026-11-10",
-   "makerAlias": "カリタ"
+   "makerAlias": "カリタ",
+   "sourceType": "official"
+  },
+  {
+   "id": "kalita-biz-2050",
+   "kind": "grinder",
+   "maker": "Kalita",
+   "name": "コーヒーミル KDM-300GR",
+   "category": "業務用グラインダー",
+   "variants": [
+    {
+     "label": "",
+     "sku": "61051",
+     "gtin": "4901369610519"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/business_mill/2050",
+   "checkedAt": "2026-11-12",
+   "sourceId": "tools-kalita-business-mill-2026-11-12",
+   "makerAlias": "カリタ",
+   "power": "electric",
+   "sourceType": "official"
   },
   {
    "id": "kalita-3886",
@@ -4672,7 +5870,8 @@
    "url": "https://www.kalita.co.jp/products/mill/3886",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-kalita-2026-11-10",
-   "makerAlias": "カリタ"
+   "makerAlias": "カリタ",
+   "sourceType": "official"
   },
   {
    "id": "kalita-3871",
@@ -4690,7 +5889,8 @@
    "url": "https://www.kalita.co.jp/products/mill/3871",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-kalita-2026-11-10",
-   "makerAlias": "カリタ"
+   "makerAlias": "カリタ",
+   "sourceType": "official"
   },
   {
    "id": "kalita-3877",
@@ -4708,7 +5908,8 @@
    "url": "https://www.kalita.co.jp/products/mill/3877",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-kalita-2026-11-10",
-   "makerAlias": "カリタ"
+   "makerAlias": "カリタ",
+   "sourceType": "official"
   },
   {
    "id": "kalita-3870",
@@ -4726,7 +5927,8 @@
    "url": "https://www.kalita.co.jp/products/mill/3870",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-kalita-2026-11-10",
-   "makerAlias": "カリタ"
+   "makerAlias": "カリタ",
+   "sourceType": "official"
   },
   {
    "id": "kalita-3553",
@@ -4744,7 +5946,189 @@
    "url": "https://www.kalita.co.jp/products/mill/3553",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-kalita-2026-11-10",
-   "makerAlias": "カリタ"
+   "makerAlias": "カリタ",
+   "power": "electric",
+   "sourceType": "official"
+  },
+  {
+   "id": "kalita-biz-3628",
+   "kind": "grinder",
+   "maker": "Kalita",
+   "name": "コーヒーミル NEXT G2 (KAK)",
+   "category": "グラインダー",
+   "variants": [
+    {
+     "label": "",
+     "sku": "61120",
+     "gtin": "4901369611202"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/business_mill/3628",
+   "checkedAt": "2026-11-12",
+   "sourceId": "tools-kalita-business-mill-2026-11-12",
+   "makerAlias": "カリタ",
+   "power": "electric",
+   "sourceType": "official"
+  },
+  {
+   "id": "kalita-biz-3629",
+   "kind": "grinder",
+   "maker": "Kalita",
+   "name": "コーヒーミル NEXT G2 (RB)",
+   "category": "グラインダー",
+   "variants": [
+    {
+     "label": "",
+     "sku": "61122",
+     "gtin": "4901369611226"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/business_mill/3629",
+   "checkedAt": "2026-11-12",
+   "sourceId": "tools-kalita-business-mill-2026-11-12",
+   "makerAlias": "カリタ",
+   "power": "electric",
+   "sourceType": "official"
+  },
+  {
+   "id": "kalita-biz-3569",
+   "kind": "grinder",
+   "maker": "Kalita",
+   "name": "コーヒーミル ナイスカットG (インディアンレッド)",
+   "category": "グラインダー",
+   "variants": [
+    {
+     "label": "",
+     "sku": "61117",
+     "gtin": "4901369611172"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/business_mill/3569",
+   "checkedAt": "2026-11-12",
+   "sourceId": "tools-kalita-business-mill-2026-11-12",
+   "makerAlias": "カリタ",
+   "power": "electric",
+   "sourceType": "official"
+  },
+  {
+   "id": "kalita-biz-3570",
+   "kind": "grinder",
+   "maker": "Kalita",
+   "name": "コーヒーミル ナイスカットG (プレミアムブラウン)",
+   "category": "グラインダー",
+   "variants": [
+    {
+     "label": "",
+     "sku": "61119",
+     "gtin": "4901369611196"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/business_mill/3570",
+   "checkedAt": "2026-11-12",
+   "sourceId": "tools-kalita-business-mill-2026-11-12",
+   "makerAlias": "カリタ",
+   "power": "electric",
+   "sourceType": "official"
+  },
+  {
+   "id": "kalita-biz-3895",
+   "kind": "grinder",
+   "maker": "Kalita",
+   "name": "コーヒーミル ナイスカットG（シルバー）",
+   "category": "業務用グラインダー",
+   "variants": [
+    {
+     "label": "",
+     "sku": "61167",
+     "gtin": "4901369611677"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/business_mill/3895",
+   "checkedAt": "2026-11-12",
+   "sourceId": "tools-kalita-business-mill-2026-11-12",
+   "makerAlias": "カリタ",
+   "power": "electric",
+   "sourceType": "official"
+  },
+  {
+   "id": "kalita-biz-3595",
+   "kind": "grinder",
+   "maker": "Kalita",
+   "name": "コーヒーミル ハイカットG (インディアンレッド)",
+   "category": "業務用グラインダー",
+   "variants": [
+    {
+     "label": "",
+     "sku": "61147",
+     "gtin": "4901369611479"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/business_mill/3595",
+   "checkedAt": "2026-11-12",
+   "sourceId": "tools-kalita-business-mill-2026-11-12",
+   "makerAlias": "カリタ",
+   "power": "electric",
+   "sourceType": "official"
+  },
+  {
+   "id": "kalita-biz-3594",
+   "kind": "grinder",
+   "maker": "Kalita",
+   "name": "コーヒーミル ハイカットG (シルバー)",
+   "category": "業務用グラインダー",
+   "variants": [
+    {
+     "label": "",
+     "sku": "61022",
+     "gtin": "4901369610229"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/business_mill/3594",
+   "checkedAt": "2026-11-12",
+   "sourceId": "tools-kalita-business-mill-2026-11-12",
+   "makerAlias": "カリタ",
+   "power": "electric",
+   "sourceType": "official"
+  },
+  {
+   "id": "kalita-biz-3597",
+   "kind": "grinder",
+   "maker": "Kalita",
+   "name": "コーヒーミル ハイカットG (プレミアムブラウン)",
+   "category": "業務用グラインダー",
+   "variants": [
+    {
+     "label": "",
+     "sku": "61149",
+     "gtin": "4901369611493"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/business_mill/3597",
+   "checkedAt": "2026-11-12",
+   "sourceId": "tools-kalita-business-mill-2026-11-12",
+   "makerAlias": "カリタ",
+   "power": "electric",
+   "sourceType": "official"
+  },
+  {
+   "id": "kalita-biz-3593",
+   "kind": "grinder",
+   "maker": "Kalita",
+   "name": "コーヒーミル ハイカットG (マットブラック)",
+   "category": "業務用グラインダー",
+   "variants": [
+    {
+     "label": "",
+     "sku": "61006",
+     "gtin": "4901369610069"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/business_mill/3593",
+   "checkedAt": "2026-11-12",
+   "sourceId": "tools-kalita-business-mill-2026-11-12",
+   "makerAlias": "カリタ",
+   "power": "electric",
+   "sourceType": "official"
   },
   {
    "id": "kalita-1983",
@@ -4762,7 +6146,9 @@
    "url": "https://www.kalita.co.jp/products/mill/1983",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-kalita-2026-11-10",
-   "makerAlias": "カリタ"
+   "makerAlias": "カリタ",
+   "power": "electric",
+   "sourceType": "official"
   },
   {
    "id": "kalita-1984",
@@ -4780,7 +6166,9 @@
    "url": "https://www.kalita.co.jp/products/mill/1984",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-kalita-2026-11-10",
-   "makerAlias": "カリタ"
+   "makerAlias": "カリタ",
+   "power": "electric",
+   "sourceType": "official"
   },
   {
    "id": "kalita-3188",
@@ -4798,7 +6186,8 @@
    "url": "https://www.kalita.co.jp/products/mill/3188",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-kalita-2026-11-10",
-   "makerAlias": "カリタ"
+   "makerAlias": "カリタ",
+   "sourceType": "official"
   },
   {
    "id": "kalita-3187",
@@ -4816,7 +6205,8 @@
    "url": "https://www.kalita.co.jp/products/mill/3187",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-kalita-2026-11-10",
-   "makerAlias": "カリタ"
+   "makerAlias": "カリタ",
+   "sourceType": "official"
   },
   {
    "id": "kalita-3876",
@@ -4834,7 +6224,88 @@
    "url": "https://www.kalita.co.jp/products/mill/3876",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-kalita-2026-11-10",
-   "makerAlias": "カリタ"
+   "makerAlias": "カリタ",
+   "sourceType": "official"
+  },
+  {
+   "id": "kalita-biz-2196",
+   "kind": "grinder",
+   "maker": "Kalita",
+   "name": "ニューカットミル袋ハサミタイプ",
+   "category": "業務用グラインダー",
+   "variants": [
+    {
+     "label": "",
+     "sku": "61023",
+     "gtin": "4901369520443"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/business_mill/2196",
+   "checkedAt": "2026-11-12",
+   "sourceId": "tools-kalita-business-mill-2026-11-12",
+   "makerAlias": "カリタ",
+   "power": "electric",
+   "sourceType": "official"
+  },
+  {
+   "id": "kalita-biz-2046",
+   "kind": "grinder",
+   "maker": "Kalita",
+   "name": "ハイカットミル",
+   "category": "業務用グラインダー",
+   "variants": [
+    {
+     "label": "",
+     "sku": "61005",
+     "gtin": "4901369520368"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/business_mill/2046",
+   "checkedAt": "2026-11-12",
+   "sourceId": "tools-kalita-business-mill-2026-11-12",
+   "makerAlias": "カリタ",
+   "power": "electric",
+   "sourceType": "official"
+  },
+  {
+   "id": "kalita-biz-2045",
+   "kind": "grinder",
+   "maker": "Kalita",
+   "name": "ハイカットミル タテ型",
+   "category": "業務用グラインダー",
+   "variants": [
+    {
+     "label": "",
+     "sku": "61007",
+     "gtin": "4901369521181"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/business_mill/2045",
+   "checkedAt": "2026-11-12",
+   "sourceId": "tools-kalita-business-mill-2026-11-12",
+   "makerAlias": "カリタ",
+   "power": "electric",
+   "sourceType": "official"
+  },
+  {
+   "id": "kalita-biz-2041",
+   "kind": "grinder",
+   "maker": "Kalita",
+   "name": "パワーカットミル",
+   "category": "業務用グラインダー",
+   "variants": [
+    {
+     "label": "",
+     "sku": "61018",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/business_mill/2041",
+   "checkedAt": "2026-11-12",
+   "sourceId": "tools-kalita-business-mill-2026-11-12",
+   "makerAlias": "カリタ",
+   "power": "electric",
+   "sourceType": "official"
   },
   {
    "id": "kalita-3867",
@@ -4852,7 +6323,8 @@
    "url": "https://www.kalita.co.jp/products/mill/3867",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-kalita-2026-11-10",
-   "makerAlias": "カリタ"
+   "makerAlias": "カリタ",
+   "sourceType": "official"
   },
   {
    "id": "kalita-3872",
@@ -4870,7 +6342,8 @@
    "url": "https://www.kalita.co.jp/products/mill/3872",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-kalita-2026-11-10",
-   "makerAlias": "カリタ"
+   "makerAlias": "カリタ",
+   "sourceType": "official"
   },
   {
    "id": "kalita-1837",
@@ -4888,7 +6361,8 @@
    "url": "https://www.kalita.co.jp/products/coffeefilter/1837",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-kalita-2026-11-10",
-   "makerAlias": "カリタ"
+   "makerAlias": "カリタ",
+   "sourceType": "official"
   },
   {
    "id": "kalita-1836",
@@ -4906,7 +6380,8 @@
    "url": "https://www.kalita.co.jp/products/coffeefilter/1836",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-kalita-2026-11-10",
-   "makerAlias": "カリタ"
+   "makerAlias": "カリタ",
+   "sourceType": "official"
   },
   {
    "id": "kalita-1840",
@@ -4924,7 +6399,8 @@
    "url": "https://www.kalita.co.jp/products/coffeefilter/1840",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-kalita-2026-11-10",
-   "makerAlias": "カリタ"
+   "makerAlias": "カリタ",
+   "sourceType": "official"
   },
   {
    "id": "kalita-1839",
@@ -4942,7 +6418,8 @@
    "url": "https://www.kalita.co.jp/products/coffeefilter/1839",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-kalita-2026-11-10",
-   "makerAlias": "カリタ"
+   "makerAlias": "カリタ",
+   "sourceType": "official"
   },
   {
    "id": "kalita-1847",
@@ -4960,7 +6437,8 @@
    "url": "https://www.kalita.co.jp/products/coffeefilter/1847",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-kalita-2026-11-10",
-   "makerAlias": "カリタ"
+   "makerAlias": "カリタ",
+   "sourceType": "official"
   },
   {
    "id": "kalita-1845",
@@ -4978,7 +6456,8 @@
    "url": "https://www.kalita.co.jp/products/coffeefilter/1845",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-kalita-2026-11-10",
-   "makerAlias": "カリタ"
+   "makerAlias": "カリタ",
+   "sourceType": "official"
   },
   {
    "id": "kalita-1860",
@@ -4996,7 +6475,8 @@
    "url": "https://www.kalita.co.jp/products/coffeefilter/1860",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-kalita-2026-11-10",
-   "makerAlias": "カリタ"
+   "makerAlias": "カリタ",
+   "sourceType": "official"
   },
   {
    "id": "kalita-1858",
@@ -5014,7 +6494,8 @@
    "url": "https://www.kalita.co.jp/products/coffeefilter/1858",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-kalita-2026-11-10",
-   "makerAlias": "カリタ"
+   "makerAlias": "カリタ",
+   "sourceType": "official"
   },
   {
    "id": "kalita-1861",
@@ -5032,7 +6513,8 @@
    "url": "https://www.kalita.co.jp/products/coffeefilter/1861",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-kalita-2026-11-10",
-   "makerAlias": "カリタ"
+   "makerAlias": "カリタ",
+   "sourceType": "official"
   },
   {
    "id": "kalita-1864",
@@ -5050,7 +6532,8 @@
    "url": "https://www.kalita.co.jp/products/coffeefilter/1864",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-kalita-2026-11-10",
-   "makerAlias": "カリタ"
+   "makerAlias": "カリタ",
+   "sourceType": "official"
   },
   {
    "id": "kalita-1862",
@@ -5068,7 +6551,8 @@
    "url": "https://www.kalita.co.jp/products/coffeefilter/1862",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-kalita-2026-11-10",
-   "makerAlias": "カリタ"
+   "makerAlias": "カリタ",
+   "sourceType": "official"
   },
   {
    "id": "kalita-1866",
@@ -5086,7 +6570,8 @@
    "url": "https://www.kalita.co.jp/products/coffeefilter/1866",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-kalita-2026-11-10",
-   "makerAlias": "カリタ"
+   "makerAlias": "カリタ",
+   "sourceType": "official"
   },
   {
    "id": "kalita-1865",
@@ -5104,7 +6589,8 @@
    "url": "https://www.kalita.co.jp/products/coffeefilter/1865",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-kalita-2026-11-10",
-   "makerAlias": "カリタ"
+   "makerAlias": "カリタ",
+   "sourceType": "official"
   },
   {
    "id": "kalita-1877",
@@ -5122,7 +6608,8 @@
    "url": "https://www.kalita.co.jp/products/coffeefilter/1877",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-kalita-2026-11-10",
-   "makerAlias": "カリタ"
+   "makerAlias": "カリタ",
+   "sourceType": "official"
   },
   {
    "id": "kalita-1874",
@@ -5140,7 +6627,8 @@
    "url": "https://www.kalita.co.jp/products/coffeefilter/1874",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-kalita-2026-11-10",
-   "makerAlias": "カリタ"
+   "makerAlias": "カリタ",
+   "sourceType": "official"
   },
   {
    "id": "kalita-1884",
@@ -5158,7 +6646,8 @@
    "url": "https://www.kalita.co.jp/products/coffeefilter/1884",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-kalita-2026-11-10",
-   "makerAlias": "カリタ"
+   "makerAlias": "カリタ",
+   "sourceType": "official"
   },
   {
    "id": "kalita-1881",
@@ -5176,7 +6665,8 @@
    "url": "https://www.kalita.co.jp/products/coffeefilter/1881",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-kalita-2026-11-10",
-   "makerAlias": "カリタ"
+   "makerAlias": "カリタ",
+   "sourceType": "official"
   },
   {
    "id": "kalita-1891",
@@ -5194,7 +6684,8 @@
    "url": "https://www.kalita.co.jp/products/coffeefilter/1891",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-kalita-2026-11-10",
-   "makerAlias": "カリタ"
+   "makerAlias": "カリタ",
+   "sourceType": "official"
   },
   {
    "id": "kalita-1888",
@@ -5212,7 +6703,8 @@
    "url": "https://www.kalita.co.jp/products/coffeefilter/1888",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-kalita-2026-11-10",
-   "makerAlias": "カリタ"
+   "makerAlias": "カリタ",
+   "sourceType": "official"
   },
   {
    "id": "kalita-2132",
@@ -5230,7 +6722,8 @@
    "url": "https://www.kalita.co.jp/products/coffeefilter/2132",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-kalita-2026-11-10",
-   "makerAlias": "カリタ"
+   "makerAlias": "カリタ",
+   "sourceType": "official"
   },
   {
    "id": "kalita-2133",
@@ -5248,7 +6741,8 @@
    "url": "https://www.kalita.co.jp/products/coffeefilter/2133",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-kalita-2026-11-10",
-   "makerAlias": "カリタ"
+   "makerAlias": "カリタ",
+   "sourceType": "official"
   },
   {
    "id": "kalita-1899",
@@ -5266,7 +6760,8 @@
    "url": "https://www.kalita.co.jp/products/coffeefilter/1899",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-kalita-2026-11-10",
-   "makerAlias": "カリタ"
+   "makerAlias": "カリタ",
+   "sourceType": "official"
   },
   {
    "id": "kalita-2134",
@@ -5284,7 +6779,8 @@
    "url": "https://www.kalita.co.jp/products/coffeefilter/2134",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-kalita-2026-11-10",
-   "makerAlias": "カリタ"
+   "makerAlias": "カリタ",
+   "sourceType": "official"
   },
   {
    "id": "kalita-2270",
@@ -5302,7 +6798,8 @@
    "url": "https://www.kalita.co.jp/products/coffeefilter/2270",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-kalita-2026-11-10",
-   "makerAlias": "カリタ"
+   "makerAlias": "カリタ",
+   "sourceType": "official"
   },
   {
    "id": "kalita-3760",
@@ -5320,7 +6817,8 @@
    "url": "https://www.kalita.co.jp/products/coffeefilter/3760",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-kalita-2026-11-10",
-   "makerAlias": "カリタ"
+   "makerAlias": "カリタ",
+   "sourceType": "official"
   },
   {
    "id": "kalita-3761",
@@ -5338,7 +6836,388 @@
    "url": "https://www.kalita.co.jp/products/coffeefilter/3761",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-kalita-2026-11-10",
-   "makerAlias": "カリタ"
+   "makerAlias": "カリタ",
+   "sourceType": "official"
+  },
+  {
+   "id": "melitta-mahlkonig-pro_espressogrinder-e65s",
+   "kind": "grinder",
+   "maker": "Mahlkönig",
+   "name": "E65S",
+   "variants": [
+    {
+     "label": "マットブラック",
+     "sku": "",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.melitta.co.jp/mahlkonig/pro_espressogrinder/e65s/",
+   "checkedAt": "2026-11-12",
+   "note": "メリタジャパンの公式サイトの製品ページ(メリタジャパンが取り扱う、電動グラインダー)",
+   "sourceId": "tools-melitta-grinders-2026-11-12",
+   "makerAlias": "マールクーニック",
+   "power": "electric",
+   "sourceType": "official"
+  },
+  {
+   "id": "melitta-mahlkonig-pro_espressogrinder-e65sgbw",
+   "kind": "grinder",
+   "maker": "Mahlkönig",
+   "name": "E65S GbW",
+   "variants": [
+    {
+     "label": "マットブラック",
+     "sku": "",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.melitta.co.jp/mahlkonig/pro_espressogrinder/e65sgbw/",
+   "checkedAt": "2026-11-12",
+   "note": "メリタジャパンの公式サイトの製品ページ(メリタジャパンが取り扱う、電動グラインダー)",
+   "sourceId": "tools-melitta-grinders-2026-11-12",
+   "makerAlias": "マールクーニック",
+   "power": "electric",
+   "sourceType": "official"
+  },
+  {
+   "id": "melitta-mahlkonig-pro_espressogrinder-e65w_gbs",
+   "kind": "grinder",
+   "maker": "Mahlkönig",
+   "name": "E65W GbS",
+   "variants": [
+    {
+     "label": "ブラック/ホワイト",
+     "sku": "",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.melitta.co.jp/mahlkonig/pro_espressogrinder/e65w_gbs/",
+   "checkedAt": "2026-11-12",
+   "note": "メリタジャパンの公式サイトの製品ページ(メリタジャパンが取り扱う、電動グラインダー)",
+   "sourceId": "tools-melitta-grinders-2026-11-12",
+   "makerAlias": "マールクーニック",
+   "power": "electric",
+   "sourceType": "official"
+  },
+  {
+   "id": "melitta-mahlkonig-pro_espressogrinder-e80supreme",
+   "kind": "grinder",
+   "maker": "Mahlkönig",
+   "name": "E80 Supreme",
+   "variants": [
+    {
+     "label": "マットブラック",
+     "sku": "",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.melitta.co.jp/mahlkonig/pro_espressogrinder/e80supreme/",
+   "checkedAt": "2026-11-12",
+   "note": "メリタジャパンの公式サイトの製品ページ(メリタジャパンが取り扱う、電動グラインダー)",
+   "sourceId": "tools-melitta-grinders-2026-11-12",
+   "makerAlias": "マールクーニック",
+   "power": "electric",
+   "sourceType": "official"
+  },
+  {
+   "id": "melitta-mahlkonig-pro_espressogrinder-e80sgbw",
+   "kind": "grinder",
+   "maker": "Mahlkönig",
+   "name": "E80S GbW",
+   "variants": [
+    {
+     "label": "マットブラック",
+     "sku": "",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.melitta.co.jp/mahlkonig/pro_espressogrinder/e80sgbw/",
+   "checkedAt": "2026-11-12",
+   "note": "メリタジャパンの公式サイトの製品ページ(メリタジャパンが取り扱う、電動グラインダー)",
+   "sourceId": "tools-melitta-grinders-2026-11-12",
+   "makerAlias": "マールクーニック",
+   "power": "electric",
+   "sourceType": "official"
+  },
+  {
+   "id": "melitta-mahlkonig-pro_coffeegrinder-ek-omnia",
+   "kind": "grinder",
+   "maker": "Mahlkönig",
+   "name": "EK Omnia（イーケーオムニア）",
+   "variants": [
+    {
+     "label": "マットブラック",
+     "sku": "",
+     "gtin": "4902717231110"
+    },
+    {
+     "label": "マットホワイト",
+     "sku": "",
+     "gtin": "4902717231127"
+    }
+   ],
+   "url": "https://www.melitta.co.jp/mahlkonig/pro_coffeegrinder/ek-omnia/",
+   "checkedAt": "2026-11-12",
+   "note": "メリタジャパンの公式サイトの製品ページ(メリタジャパンが取り扱う、電動グラインダー)",
+   "sourceId": "tools-melitta-grinders-2026-11-12",
+   "makerAlias": "マールクーニック",
+   "power": "electric",
+   "sourceType": "official"
+  },
+  {
+   "id": "melitta-mahlkonig-pro_coffeegrinder-ek43s_the_icon",
+   "kind": "grinder",
+   "maker": "Mahlkönig",
+   "name": "EK43S限定版 THE ICON",
+   "variants": [
+    {
+     "label": "",
+     "sku": "",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.melitta.co.jp/mahlkonig/pro_coffeegrinder/ek43s_the_icon/",
+   "checkedAt": "2026-11-12",
+   "note": "メリタジャパンの公式サイトの製品ページ(メリタジャパンが取り扱う、電動グラインダー)",
+   "sourceId": "tools-melitta-grinders-2026-11-12",
+   "makerAlias": "マールクーニック",
+   "power": "electric",
+   "sourceType": "official"
+  },
+  {
+   "id": "melitta-mahlkonig-pro_coffeegrinder-ek43s_250hopper",
+   "kind": "grinder",
+   "maker": "Mahlkönig",
+   "name": "EK43S（250gホッパー）",
+   "variants": [
+    {
+     "label": "マットブラック 50Hz",
+     "sku": "",
+     "gtin": "4902717230809"
+    },
+    {
+     "label": "マットブラック 60Hz",
+     "sku": "",
+     "gtin": "4902717230816"
+    },
+    {
+     "label": "マットホワイト 50Hz",
+     "sku": "",
+     "gtin": "4902717230823"
+    },
+    {
+     "label": "マットホワイト 60Hz",
+     "sku": "",
+     "gtin": "4902717230830"
+    }
+   ],
+   "url": "https://www.melitta.co.jp/mahlkonig/pro_coffeegrinder/ek43s_250hopper/",
+   "checkedAt": "2026-11-12",
+   "note": "メリタジャパンの公式サイトの製品ページ(メリタジャパンが取り扱う、電動グラインダー)",
+   "sourceId": "tools-melitta-grinders-2026-11-12",
+   "makerAlias": "マールクーニック",
+   "power": "electric",
+   "sourceType": "official"
+  },
+  {
+   "id": "melitta-mahlkonig-pro_coffeegrinder-ek43s",
+   "kind": "grinder",
+   "maker": "Mahlkönig",
+   "name": "EK43S（800gホッパー）",
+   "variants": [
+    {
+     "label": "マットブラック 50Hz",
+     "sku": "",
+     "gtin": "4902717229384"
+    },
+    {
+     "label": "マットブラック 60Hz",
+     "sku": "",
+     "gtin": "4902717229421"
+    },
+    {
+     "label": "マットホワイト 50Hz",
+     "sku": "",
+     "gtin": "4902717229391"
+    },
+    {
+     "label": "マットホワイト 60Hz",
+     "sku": "",
+     "gtin": "4902717229438"
+    }
+   ],
+   "url": "https://www.melitta.co.jp/mahlkonig/pro_coffeegrinder/ek43s/",
+   "checkedAt": "2026-11-12",
+   "note": "メリタジャパンの公式サイトの製品ページ(メリタジャパンが取り扱う、電動グラインダー)",
+   "sourceId": "tools-melitta-grinders-2026-11-12",
+   "makerAlias": "マールクーニック",
+   "power": "electric",
+   "sourceType": "official"
+  },
+  {
+   "id": "melitta-mahlkonig-pro_coffeegrinder-ek43_1200hopper",
+   "kind": "grinder",
+   "maker": "Mahlkönig",
+   "name": "EK43（1200gホッパー）",
+   "variants": [
+    {
+     "label": "マットブラック 50Hz",
+     "sku": "",
+     "gtin": "4902717230762"
+    },
+    {
+     "label": "マットブラック 60Hz",
+     "sku": "",
+     "gtin": "4902717230779"
+    },
+    {
+     "label": "マットホワイト 50Hz",
+     "sku": "",
+     "gtin": "4902717230786"
+    },
+    {
+     "label": "マットホワイト 60Hz",
+     "sku": "",
+     "gtin": "4902717230793"
+    }
+   ],
+   "url": "https://www.melitta.co.jp/mahlkonig/pro_coffeegrinder/ek43_1200hopper/",
+   "checkedAt": "2026-11-12",
+   "note": "メリタジャパンの公式サイトの製品ページ(メリタジャパンが取り扱う、電動グラインダー)",
+   "sourceId": "tools-melitta-grinders-2026-11-12",
+   "makerAlias": "マールクーニック",
+   "power": "electric",
+   "sourceType": "official"
+  },
+  {
+   "id": "melitta-mahlkonig-pro_coffeegrinder-ek43",
+   "kind": "grinder",
+   "maker": "Mahlkönig",
+   "name": "EK43（1500gホッパー）",
+   "variants": [
+    {
+     "label": "マットブラック 50Hz",
+     "sku": "",
+     "gtin": "4902717229360"
+    },
+    {
+     "label": "マットブラック 60Hz",
+     "sku": "",
+     "gtin": "4902717229407"
+    },
+    {
+     "label": "マットホワイト 50Hz",
+     "sku": "",
+     "gtin": "4902717229377"
+    },
+    {
+     "label": "マットホワイト 60Hz",
+     "sku": "",
+     "gtin": "4902717229414"
+    }
+   ],
+   "url": "https://www.melitta.co.jp/mahlkonig/pro_coffeegrinder/ek43/",
+   "checkedAt": "2026-11-12",
+   "note": "メリタジャパンの公式サイトの製品ページ(メリタジャパンが取り扱う、電動グラインダー)",
+   "sourceId": "tools-melitta-grinders-2026-11-12",
+   "makerAlias": "マールクーニック",
+   "power": "electric",
+   "sourceType": "official"
+  },
+  {
+   "id": "melitta-mahlkonig-pro_espressogrinder-peak",
+   "kind": "grinder",
+   "maker": "Mahlkönig",
+   "name": "PEAK",
+   "variants": [
+    {
+     "label": "マットブラック",
+     "sku": "",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.melitta.co.jp/mahlkonig/pro_espressogrinder/peak/",
+   "checkedAt": "2026-11-12",
+   "note": "メリタジャパンの公式サイトの製品ページ(メリタジャパンが取り扱う、電動グラインダー)",
+   "sourceId": "tools-melitta-grinders-2026-11-12",
+   "makerAlias": "マールクーニック",
+   "power": "electric",
+   "sourceType": "official"
+  },
+  {
+   "id": "melitta-mahlkonig-hh_coffeegrinder-x54_250ghopper",
+   "kind": "grinder",
+   "maker": "Mahlkönig",
+   "name": "X54（250gホッパー）",
+   "variants": [
+    {
+     "label": "マットブラック",
+     "sku": "",
+     "gtin": "4902717230670"
+    },
+    {
+     "label": "ホワイト",
+     "sku": "",
+     "gtin": "4902717230687"
+    },
+    {
+     "label": "クローム",
+     "sku": "",
+     "gtin": "4902717230694"
+    }
+   ],
+   "url": "https://www.melitta.co.jp/mahlkonig/hh_coffeegrinder/x54_250ghopper/",
+   "checkedAt": "2026-11-12",
+   "note": "メリタジャパンの公式サイトの製品ページ(メリタジャパンが取り扱う、電動グラインダー)",
+   "sourceId": "tools-melitta-grinders-2026-11-12",
+   "makerAlias": "マールクーニック",
+   "power": "electric",
+   "sourceType": "official"
+  },
+  {
+   "id": "melitta-mahlkonig-hh_coffeegrinder-x64sd",
+   "kind": "grinder",
+   "maker": "Mahlkönig",
+   "name": "X64 SD",
+   "variants": [
+    {
+     "label": "ブラック",
+     "sku": "",
+     "gtin": "4902717230885"
+    },
+    {
+     "label": "ホワイト",
+     "sku": "",
+     "gtin": "4902717230892"
+    }
+   ],
+   "url": "https://www.melitta.co.jp/mahlkonig/hh_coffeegrinder/x64sd/",
+   "checkedAt": "2026-11-12",
+   "note": "メリタジャパンの公式サイトの製品ページ(メリタジャパンが取り扱う、電動グラインダー)",
+   "sourceId": "tools-melitta-grinders-2026-11-12",
+   "makerAlias": "マールクーニック",
+   "power": "electric",
+   "sourceType": "official"
+  },
+  {
+   "id": "melitta-mahlkonig-pro_coffeegrinder-guatemala",
+   "kind": "grinder",
+   "maker": "Mahlkönig",
+   "name": "ガテマラ",
+   "variants": [
+    {
+     "label": "マットブラック",
+     "sku": "",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.melitta.co.jp/mahlkonig/pro_coffeegrinder/guatemala/",
+   "checkedAt": "2026-11-12",
+   "note": "メリタジャパンの公式サイトの製品ページ(メリタジャパンが取り扱う、電動グラインダー)",
+   "sourceId": "tools-melitta-grinders-2026-11-12",
+   "makerAlias": "マールクーニック",
+   "power": "electric",
+   "sourceType": "official"
   },
   {
    "id": "melitta-edofilter",
@@ -5355,7 +7234,8 @@
    "url": "https://www.melitta.co.jp/melitta_hh/pourover/edofilter/",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-melitta-2026-11-10",
-   "makerAlias": "メリタ"
+   "makerAlias": "メリタ",
+   "sourceType": "official"
   },
   {
    "id": "melitta-aromafilter2",
@@ -5382,7 +7262,8 @@
    "url": "https://www.melitta.co.jp/melitta_hh/pourover/aromafilter2/",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-melitta-2026-11-10",
-   "makerAlias": "メリタ"
+   "makerAlias": "メリタ",
+   "sourceType": "official"
   },
   {
    "id": "melitta-new_cafeleena",
@@ -5399,7 +7280,8 @@
    "url": "https://www.melitta.co.jp/melitta_hh/pourover/new_cafeleena/",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-melitta-2026-11-10",
-   "makerAlias": "メリタ"
+   "makerAlias": "メリタ",
+   "sourceType": "official"
   },
   {
    "id": "melitta-coffeefilter2",
@@ -5421,7 +7303,8 @@
    "url": "https://www.melitta.co.jp/melitta_hh/pourover/coffeefilter2/",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-melitta-2026-11-10",
-   "makerAlias": "メリタ"
+   "makerAlias": "メリタ",
+   "sourceType": "official"
   },
   {
    "id": "melitta-coffeefilter1_6",
@@ -5438,7 +7321,8 @@
    "url": "https://www.melitta.co.jp/melitta_hh/pourover/coffeefilter1_6/",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-melitta-2026-11-10",
-   "makerAlias": "メリタ"
+   "makerAlias": "メリタ",
+   "sourceType": "official"
   },
   {
    "id": "melitta-hasamifilter",
@@ -5460,7 +7344,8 @@
    "url": "https://www.melitta.co.jp/melitta_hh/pourover/hasamifilter/",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-melitta-2026-11-10",
-   "makerAlias": "メリタ"
+   "makerAlias": "メリタ",
+   "sourceType": "official"
   },
   {
    "id": "melitta-ryusokucoffeefilter",
@@ -5477,7 +7362,8 @@
    "url": "https://www.melitta.co.jp/melitta_hh/pourover/ryusokucoffeefilter/",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-melitta-2026-11-10",
-   "makerAlias": "メリタ"
+   "makerAlias": "メリタ",
+   "sourceType": "official"
   },
   {
    "id": "melitta-coffeemill_classic",
@@ -5494,7 +7380,8 @@
    "url": "https://www.melitta.co.jp/melitta_hh/coffeegrinder/coffeemill_classic/",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-melitta-2026-11-10",
-   "makerAlias": "メリタ"
+   "makerAlias": "メリタ",
+   "sourceType": "official"
   },
   {
    "id": "melitta-varie_piazza",
@@ -5511,7 +7398,8 @@
    "url": "https://www.melitta.co.jp/melitta_hh/coffeegrinder/varie_piazza/",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-melitta-2026-11-10",
-   "makerAlias": "メリタ"
+   "makerAlias": "メリタ",
+   "sourceType": "official"
   },
   {
    "id": "melitta-vario_e",
@@ -5528,7 +7416,8 @@
    "url": "https://www.melitta.co.jp/melitta_hh/coffeegrinder/vario_e/",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-melitta-2026-11-10",
-   "makerAlias": "メリタ"
+   "makerAlias": "メリタ",
+   "sourceType": "official"
   },
   {
    "id": "melitta-flatcutter_grinder",
@@ -5545,7 +7434,8 @@
    "url": "https://www.melitta.co.jp/melitta_hh/coffeegrinder/flatcutter_grinder/",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-melitta-2026-11-10",
-   "makerAlias": "メリタ"
+   "makerAlias": "メリタ",
+   "sourceType": "official"
   },
   {
    "id": "melitta-aromagic1_1_nb40",
@@ -5562,7 +7452,8 @@
    "url": "https://www.melitta.co.jp/melitta_hh/paper/aromagic1_1_nb40/",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-melitta-2026-11-10",
-   "makerAlias": "メリタ"
+   "makerAlias": "メリタ",
+   "sourceType": "official"
   },
   {
    "id": "melitta-aromagic1_1_nw100",
@@ -5579,7 +7470,8 @@
    "url": "https://www.melitta.co.jp/melitta_hh/paper/aromagic1_1_nw100/",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-melitta-2026-11-10",
-   "makerAlias": "メリタ"
+   "makerAlias": "メリタ",
+   "sourceType": "official"
   },
   {
    "id": "melitta-aromagic1_1_nw40",
@@ -5596,7 +7488,8 @@
    "url": "https://www.melitta.co.jp/melitta_hh/paper/aromagic1_1_nw40/",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-melitta-2026-11-10",
-   "makerAlias": "メリタ"
+   "makerAlias": "メリタ",
+   "sourceType": "official"
   },
   {
    "id": "melitta-aromagic1_2_nb100",
@@ -5613,7 +7506,8 @@
    "url": "https://www.melitta.co.jp/melitta_hh/paper/aromagic1_2_nb100/",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-melitta-2026-11-10",
-   "makerAlias": "メリタ"
+   "makerAlias": "メリタ",
+   "sourceType": "official"
   },
   {
    "id": "melitta-aromagic1_2_nb40",
@@ -5630,7 +7524,8 @@
    "url": "https://www.melitta.co.jp/melitta_hh/paper/aromagic1_2_nb40/",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-melitta-2026-11-10",
-   "makerAlias": "メリタ"
+   "makerAlias": "メリタ",
+   "sourceType": "official"
   },
   {
    "id": "melitta-aromagic1_2_nw100",
@@ -5647,7 +7542,8 @@
    "url": "https://www.melitta.co.jp/melitta_hh/paper/aromagic1_2_nw100/",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-melitta-2026-11-10",
-   "makerAlias": "メリタ"
+   "makerAlias": "メリタ",
+   "sourceType": "official"
   },
   {
    "id": "melitta-aromagic1_2_nw40",
@@ -5664,7 +7560,8 @@
    "url": "https://www.melitta.co.jp/melitta_hh/paper/aromagic1_2_nw40/",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-melitta-2026-11-10",
-   "makerAlias": "メリタ"
+   "makerAlias": "メリタ",
+   "sourceType": "official"
   },
   {
    "id": "melitta-original1_4_nb",
@@ -5681,7 +7578,8 @@
    "url": "https://www.melitta.co.jp/melitta_hh/paper/original1_4_nb/",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-melitta-2026-11-10",
-   "makerAlias": "メリタ"
+   "makerAlias": "メリタ",
+   "sourceType": "official"
   },
   {
    "id": "melitta-original1_4_nw",
@@ -5698,7 +7596,8 @@
    "url": "https://www.melitta.co.jp/melitta_hh/paper/original1_4_nw/",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-melitta-2026-11-10",
-   "makerAlias": "メリタ"
+   "makerAlias": "メリタ",
+   "sourceType": "official"
   },
   {
    "id": "melitta-original1_6_nb",
@@ -5715,7 +7614,8 @@
    "url": "https://www.melitta.co.jp/melitta_hh/paper/original1_6_nb/",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-melitta-2026-11-10",
-   "makerAlias": "メリタ"
+   "makerAlias": "メリタ",
+   "sourceType": "official"
   },
   {
    "id": "melitta-original_intense1_4_nb",
@@ -5732,7 +7632,8 @@
    "url": "https://www.melitta.co.jp/melitta_hh/paper/original_intense1_4_nb/",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-melitta-2026-11-10",
-   "makerAlias": "メリタ"
+   "makerAlias": "メリタ",
+   "sourceType": "official"
   },
   {
    "id": "origami-shop-origami_dripperair_m",
@@ -5774,7 +7675,8 @@
    "url": "https://origami-kai.com/products/origami_dripperair_m",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-origami-2026-11-10",
-   "makerAlias": "オリガミ"
+   "makerAlias": "オリガミ",
+   "sourceType": "official"
   },
   {
    "id": "origami-shop-origami_dripperair_s",
@@ -5816,7 +7718,8 @@
    "url": "https://origami-kai.com/products/origami_dripperair_s",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-origami-2026-11-10",
-   "makerAlias": "オリガミ"
+   "makerAlias": "オリガミ",
+   "sourceType": "official"
   },
   {
    "id": "origami-shop-origami_dripper_m",
@@ -5888,7 +7791,8 @@
    "url": "https://origami-kai.com/products/origami_dripper_m",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-origami-2026-11-10",
-   "makerAlias": "オリガミ"
+   "makerAlias": "オリガミ",
+   "sourceType": "official"
   },
   {
    "id": "origami-shop-origami_dripper_s",
@@ -5960,7 +7864,8 @@
    "url": "https://origami-kai.com/products/origami_dripper_s",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-origami-2026-11-10",
-   "makerAlias": "オリガミ"
+   "makerAlias": "オリガミ",
+   "sourceType": "official"
   },
   {
    "id": "origami-shop-pinn-dripper",
@@ -5982,7 +7887,8 @@
    "url": "https://origami-kai.com/products/pinn-dripper",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-origami-2026-11-10",
-   "makerAlias": "オリガミ"
+   "makerAlias": "オリガミ",
+   "sourceType": "official"
   },
   {
    "id": "origami-shop-rework-dripper-m",
@@ -5999,7 +7905,8 @@
    "url": "https://origami-kai.com/products/rework-dripper-m",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-origami-2026-11-10",
-   "makerAlias": "オリガミ"
+   "makerAlias": "オリガミ",
+   "sourceType": "official"
   },
   {
    "id": "origami-shop-rework-dripper-s",
@@ -6016,7 +7923,8 @@
    "url": "https://origami-kai.com/products/rework-dripper-s",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-origami-2026-11-10",
-   "makerAlias": "オリガミ"
+   "makerAlias": "オリガミ",
+   "sourceType": "official"
   },
   {
    "id": "origami-shop-online-store-limited-origami-dripper-s-sabi",
@@ -6033,7 +7941,8 @@
    "url": "https://origami-kai.com/products/online-store-limited-origami-dripper-s-sabi",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-origami-2026-11-10",
-   "makerAlias": "オリガミ"
+   "makerAlias": "オリガミ",
+   "sourceType": "official"
   },
   {
    "id": "origami-shop-online-store-limited-origami-x-maruyoshi-kosaka-dripper-s",
@@ -6055,7 +7964,8 @@
    "url": "https://origami-kai.com/products/online-store-limited-origami-x-maruyoshi-kosaka-dripper-s",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-origami-2026-11-10",
-   "makerAlias": "オリガミ"
+   "makerAlias": "オリガミ",
+   "sourceType": "official"
   },
   {
    "id": "origami-shop-origami_paper_filter",
@@ -6077,7 +7987,8 @@
    "url": "https://origami-kai.com/products/origami_paper_filter",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-origami-2026-11-10",
-   "makerAlias": "オリガミ"
+   "makerAlias": "オリガミ",
+   "sourceType": "official"
   },
   {
    "id": "origami-shop-paper-filter-wave",
@@ -6099,7 +8010,8 @@
    "url": "https://origami-kai.com/products/paper-filter-wave",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-origami-2026-11-10",
-   "makerAlias": "オリガミ"
+   "makerAlias": "オリガミ",
+   "sourceType": "official"
   },
   {
    "id": "timemore-shop-timemore-x-matt-winton-crystal-eye-vector-dripper",
@@ -6116,7 +8028,8 @@
    "url": "https://www.timemore.com/products/timemore-x-matt-winton-crystal-eye-vector-dripper",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-timemore-2026-11-10",
-   "makerAlias": "タイムモア"
+   "makerAlias": "タイムモア",
+   "sourceType": "official"
   },
   {
    "id": "timemore-shop-timemore-crystal-eye-b75-dripper-pctg",
@@ -6138,7 +8051,8 @@
    "url": "https://www.timemore.com/products/timemore-crystal-eye-b75-dripper-pctg",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-timemore-2026-11-10",
-   "makerAlias": "タイムモア"
+   "makerAlias": "タイムモア",
+   "sourceType": "official"
   },
   {
    "id": "timemore-shop-timemore-crystal-eye-dripper-02-pctg",
@@ -6166,7 +8080,8 @@
    "url": "https://www.timemore.com/products/timemore-crystal-eye-dripper-02-pctg",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-timemore-2026-11-10",
-   "makerAlias": "タイムモア"
+   "makerAlias": "タイムモア",
+   "sourceType": "official"
   },
   {
    "id": "timemore-shop-timemore-crystal-eye-turbo-dripper-pctg",
@@ -6188,7 +8103,8 @@
    "url": "https://www.timemore.com/products/timemore-crystal-eye-turbo-dripper-pctg",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-timemore-2026-11-10",
-   "makerAlias": "タイムモア"
+   "makerAlias": "タイムモア",
+   "sourceType": "official"
   },
   {
    "id": "timemore-extra-chestnut-c2-max",
@@ -6205,7 +8121,8 @@
    "url": "https://www.crossroast.be/product/timemore-c2-max-zwart/",
    "checkedAt": "2026-11-12",
    "sourceId": "tools-timemore-extra-2026-11-12",
-   "makerAlias": "タイムモア"
+   "makerAlias": "タイムモア",
+   "sourceType": "retailer"
   },
   {
    "id": "timemore-shop-timemore-electric-coffee-grinder-sculptor-064s-gen2",
@@ -6227,7 +8144,9 @@
    "url": "https://www.timemore.com/products/timemore-electric-coffee-grinder-sculptor-064s-gen2",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-timemore-2026-11-10",
-   "makerAlias": "タイムモア"
+   "makerAlias": "タイムモア",
+   "power": "electric",
+   "sourceType": "official"
   },
   {
    "id": "timemore-shop-timemore-electric-coffee-grinder-sculptor-078ssp",
@@ -6249,7 +8168,9 @@
    "url": "https://www.timemore.com/products/timemore-electric-coffee-grinder-sculptor-078ssp",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-timemore-2026-11-10",
-   "makerAlias": "タイムモア"
+   "makerAlias": "タイムモア",
+   "power": "electric",
+   "sourceType": "official"
   },
   {
    "id": "timemore-shop-timemore-electric-coffee-grinder-sculptor-series",
@@ -6291,7 +8212,9 @@
    "url": "https://www.timemore.com/products/timemore-electric-coffee-grinder-sculptor-series",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-timemore-2026-11-10",
-   "makerAlias": "タイムモア"
+   "makerAlias": "タイムモア",
+   "power": "electric",
+   "sourceType": "official"
   },
   {
    "id": "timemore-shop-timemore-manual-coffee-grinder-chestnut-c5-series",
@@ -6324,7 +8247,8 @@
    "url": "https://www.timemore.com/products/timemore-manual-coffee-grinder-chestnut-c5-series",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-timemore-2026-11-10",
-   "makerAlias": "タイムモア"
+   "makerAlias": "タイムモア",
+   "sourceType": "official"
   },
   {
    "id": "timemore-shop-timemore-manual-coffee-grinder-chestnut-nano-3-black",
@@ -6346,7 +8270,8 @@
    "url": "https://www.timemore.com/products/timemore-manual-coffee-grinder-chestnut-nano-3-black",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-timemore-2026-11-10",
-   "makerAlias": "タイムモア"
+   "makerAlias": "タイムモア",
+   "sourceType": "official"
   },
   {
    "id": "timemore-shop-timemore-manual-coffee-grinder-chestnut-s3",
@@ -6371,7 +8296,8 @@
    "url": "https://www.timemore.com/products/timemore-manual-coffee-grinder-chestnut-s3",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-timemore-2026-11-10",
-   "makerAlias": "タイムモア"
+   "makerAlias": "タイムモア",
+   "sourceType": "official"
   },
   {
    "id": "timemore-shop-timemore-manual-coffee-grinder-chestnut-s5-pro",
@@ -6393,7 +8319,8 @@
    "url": "https://www.timemore.com/products/timemore-manual-coffee-grinder-chestnut-s5-pro",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-timemore-2026-11-10",
-   "makerAlias": "タイムモア"
+   "makerAlias": "タイムモア",
+   "sourceType": "official"
   },
   {
    "id": "timemore-shop-timemore-whirly-01s-portable-electric-grinder",
@@ -6413,7 +8340,9 @@
    "url": "https://www.timemore.com/products/timemore-whirly-01s-portable-electric-grinder",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-timemore-2026-11-10",
-   "makerAlias": "タイムモア"
+   "makerAlias": "タイムモア",
+   "power": "electric",
+   "sourceType": "official"
   },
   {
    "id": "timemore-crema-13898",
@@ -6435,7 +8364,9 @@
    "url": "https://www.cremashop.eu/en/products/timemore/brics-01s-electric-grinder/13898",
    "checkedAt": "2026-11-12",
    "sourceId": "tools-crema-timemore-2026-11-12",
-   "makerAlias": "タイムモア"
+   "makerAlias": "タイムモア",
+   "power": "electric",
+   "sourceType": "retailer"
   },
   {
    "id": "timemore-shop-timemore-bricks-01s-electric-coffee-grinder",
@@ -6457,7 +8388,9 @@
    "url": "https://www.timemore.com/products/timemore-bricks-01s-electric-coffee-grinder",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-timemore-2026-11-10",
-   "makerAlias": "タイムモア"
+   "makerAlias": "タイムモア",
+   "power": "electric",
+   "sourceType": "official"
   },
   {
    "id": "timemore-crema-12882",
@@ -6474,7 +8407,8 @@
    "url": "https://www.cremashop.eu/en/products/timemore/chestnut-c3s-max-foldable-handle",
    "checkedAt": "2026-11-12",
    "sourceId": "tools-crema-timemore-2026-11-12",
-   "makerAlias": "タイムモア"
+   "makerAlias": "タイムモア",
+   "sourceType": "retailer"
   },
   {
    "id": "timemore-crema-13025",
@@ -6497,7 +8431,8 @@
    "url": "https://www.cremashop.eu/en/products/timemore/chestnut-c3s-pro-foldable-handle",
    "checkedAt": "2026-11-12",
    "sourceId": "tools-crema-timemore-2026-11-12",
-   "makerAlias": "タイムモア"
+   "makerAlias": "タイムモア",
+   "sourceType": "retailer"
   },
   {
    "id": "timemore-crema-12362",
@@ -6514,7 +8449,8 @@
    "url": "https://www.cremashop.eu/en/products/timemore/sculptor-078-electric-grinder",
    "checkedAt": "2026-11-12",
    "sourceId": "tools-crema-timemore-2026-11-12",
-   "makerAlias": "タイムモア"
+   "makerAlias": "タイムモア",
+   "sourceType": "retailer"
   },
   {
    "id": "timemore-crema-12361",
@@ -6531,7 +8467,9 @@
    "url": "https://www.cremashop.eu/en/products/timemore/sculptor-078s-electric-grinder",
    "checkedAt": "2026-11-12",
    "sourceId": "tools-crema-timemore-2026-11-12",
-   "makerAlias": "タイムモア"
+   "makerAlias": "タイムモア",
+   "power": "electric",
+   "sourceType": "retailer"
   },
   {
    "id": "timemore-shop-timemore-x-millab-m01-coffee-grinder",
@@ -6553,7 +8491,8 @@
    "url": "https://www.timemore.com/products/timemore-x-millab-m01-coffee-grinder",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-timemore-2026-11-10",
-   "makerAlias": "タイムモア"
+   "makerAlias": "タイムモア",
+   "sourceType": "official"
   },
   {
    "id": "timemore-shop-timemore-x-millab-wireless-portable-electric-coffee-grinder",
@@ -6575,7 +8514,9 @@
    "url": "https://www.timemore.com/products/timemore-x-millab-wireless-portable-electric-coffee-grinder",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-timemore-2026-11-10",
-   "makerAlias": "タイムモア"
+   "makerAlias": "タイムモア",
+   "power": "electric",
+   "sourceType": "official"
   },
   {
    "id": "timemore-shop-timemore-basket-paper-filter-01-for-b75",
@@ -6592,7 +8533,8 @@
    "url": "https://www.timemore.com/products/timemore-basket-paper-filter-01-for-b75",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-timemore-2026-11-10",
-   "makerAlias": "タイムモア"
+   "makerAlias": "タイムモア",
+   "sourceType": "official"
   },
   {
    "id": "timemore-shop-timemore-paper-filter-v01-v02-100pcs",
@@ -6614,7 +8556,8 @@
    "url": "https://www.timemore.com/products/timemore-paper-filter-v01-v02-100pcs",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-timemore-2026-11-10",
-   "makerAlias": "タイムモア"
+   "makerAlias": "タイムモア",
+   "sourceType": "official"
   },
   {
    "id": "kono-mdk-20",
@@ -6633,7 +8576,8 @@
    "url": "https://coffee-syphon.co.jp/meimon_filter/",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-coffee-syphon-2026-11-10",
-   "makerAlias": "コーノ式 KONO サイフオン"
+   "makerAlias": "コーノ式 KONO サイフオン",
+   "sourceType": "official"
   },
   {
    "id": "kono-mdk-40",
@@ -6652,7 +8596,8 @@
    "url": "https://coffee-syphon.co.jp/meimon_filter/",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-coffee-syphon-2026-11-10",
-   "makerAlias": "コーノ式 KONO サイフオン"
+   "makerAlias": "コーノ式 KONO サイフオン",
+   "sourceType": "official"
   },
   {
    "id": "kono-md-10",
@@ -6671,7 +8616,8 @@
    "url": "https://coffee-syphon.co.jp/meimon_filter/",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-coffee-syphon-2026-11-10",
-   "makerAlias": "コーノ式 KONO サイフオン"
+   "makerAlias": "コーノ式 KONO サイフオン",
+   "sourceType": "official"
   },
   {
    "id": "kono-mdn-20",
@@ -6690,7 +8636,8 @@
    "url": "https://coffee-syphon.co.jp/meimon_filter/",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-coffee-syphon-2026-11-10",
-   "makerAlias": "コーノ式 KONO サイフオン"
+   "makerAlias": "コーノ式 KONO サイフオン",
+   "sourceType": "official"
   },
   {
    "id": "kono-mdn-20wd",
@@ -6709,7 +8656,8 @@
    "url": "https://coffee-syphon.co.jp/meimon_filter/",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-coffee-syphon-2026-11-10",
-   "makerAlias": "コーノ式 KONO サイフオン"
+   "makerAlias": "コーノ式 KONO サイフオン",
+   "sourceType": "official"
   },
   {
    "id": "kono-mdn-20ye",
@@ -6728,7 +8676,8 @@
    "url": "https://coffee-syphon.co.jp/meimon_filter/",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-coffee-syphon-2026-11-10",
-   "makerAlias": "コーノ式 KONO サイフオン"
+   "makerAlias": "コーノ式 KONO サイフオン",
+   "sourceType": "official"
   },
   {
    "id": "kono-mdn-20cp",
@@ -6747,7 +8696,8 @@
    "url": "https://coffee-syphon.co.jp/meimon_filter/",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-coffee-syphon-2026-11-10",
-   "makerAlias": "コーノ式 KONO サイフオン"
+   "makerAlias": "コーノ式 KONO サイフオン",
+   "sourceType": "official"
   },
   {
    "id": "kono-mdn-20wh",
@@ -6766,7 +8716,8 @@
    "url": "https://coffee-syphon.co.jp/meimon_filter/",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-coffee-syphon-2026-11-10",
-   "makerAlias": "コーノ式 KONO サイフオン"
+   "makerAlias": "コーノ式 KONO サイフオン",
+   "sourceType": "official"
   },
   {
    "id": "kono-mdn-20bk",
@@ -6785,7 +8736,8 @@
    "url": "https://coffee-syphon.co.jp/meimon_filter/",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-coffee-syphon-2026-11-10",
-   "makerAlias": "コーノ式 KONO サイフオン"
+   "makerAlias": "コーノ式 KONO サイフオン",
+   "sourceType": "official"
   },
   {
    "id": "kono-mdn-20ch",
@@ -6804,7 +8756,8 @@
    "url": "https://coffee-syphon.co.jp/meimon_filter/",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-coffee-syphon-2026-11-10",
-   "makerAlias": "コーノ式 KONO サイフオン"
+   "makerAlias": "コーノ式 KONO サイフオン",
+   "sourceType": "official"
   },
   {
    "id": "kono-mdn-20lg",
@@ -6823,7 +8776,8 @@
    "url": "https://coffee-syphon.co.jp/meimon_filter/",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-coffee-syphon-2026-11-10",
-   "makerAlias": "コーノ式 KONO サイフオン"
+   "makerAlias": "コーノ式 KONO サイフオン",
+   "sourceType": "official"
   },
   {
    "id": "kono-mdn-20rd",
@@ -6842,7 +8796,8 @@
    "url": "https://coffee-syphon.co.jp/meimon_filter/",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-coffee-syphon-2026-11-10",
-   "makerAlias": "コーノ式 KONO サイフオン"
+   "makerAlias": "コーノ式 KONO サイフオン",
+   "sourceType": "official"
   },
   {
    "id": "kono-md-40",
@@ -6861,7 +8816,8 @@
    "url": "https://coffee-syphon.co.jp/meimon_filter/",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-coffee-syphon-2026-11-10",
-   "makerAlias": "コーノ式 KONO サイフオン"
+   "makerAlias": "コーノ式 KONO サイフオン",
+   "sourceType": "official"
   },
   {
    "id": "kono-md-40wd",
@@ -6880,7 +8836,8 @@
    "url": "https://coffee-syphon.co.jp/meimon_filter/",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-coffee-syphon-2026-11-10",
-   "makerAlias": "コーノ式 KONO サイフオン"
+   "makerAlias": "コーノ式 KONO サイフオン",
+   "sourceType": "official"
   },
   {
    "id": "kono-md-40ye",
@@ -6899,7 +8856,8 @@
    "url": "https://coffee-syphon.co.jp/meimon_filter/",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-coffee-syphon-2026-11-10",
-   "makerAlias": "コーノ式 KONO サイフオン"
+   "makerAlias": "コーノ式 KONO サイフオン",
+   "sourceType": "official"
   },
   {
    "id": "kono-md-40ch",
@@ -6918,7 +8876,8 @@
    "url": "https://coffee-syphon.co.jp/meimon_filter/",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-coffee-syphon-2026-11-10",
-   "makerAlias": "コーノ式 KONO サイフオン"
+   "makerAlias": "コーノ式 KONO サイフオン",
+   "sourceType": "official"
   },
   {
    "id": "kono-md-40bk",
@@ -6937,7 +8896,8 @@
    "url": "https://coffee-syphon.co.jp/meimon_filter/",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-coffee-syphon-2026-11-10",
-   "makerAlias": "コーノ式 KONO サイフオン"
+   "makerAlias": "コーノ式 KONO サイフオン",
+   "sourceType": "official"
   },
   {
    "id": "kono-md-40wh",
@@ -6956,7 +8916,8 @@
    "url": "https://coffee-syphon.co.jp/meimon_filter/",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-coffee-syphon-2026-11-10",
-   "makerAlias": "コーノ式 KONO サイフオン"
+   "makerAlias": "コーノ式 KONO サイフオン",
+   "sourceType": "official"
   },
   {
    "id": "kono-md-40lg",
@@ -6975,7 +8936,8 @@
    "url": "https://coffee-syphon.co.jp/meimon_filter/",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-coffee-syphon-2026-11-10",
-   "makerAlias": "コーノ式 KONO サイフオン"
+   "makerAlias": "コーノ式 KONO サイフオン",
+   "sourceType": "official"
   },
   {
    "id": "kono-md-15",
@@ -6994,7 +8956,8 @@
    "url": "https://coffee-syphon.co.jp/meimon_filter/",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-coffee-syphon-2026-11-10",
-   "makerAlias": "コーノ式 KONO サイフオン"
+   "makerAlias": "コーノ式 KONO サイフオン",
+   "sourceType": "official"
   },
   {
    "id": "kono-md-26c",
@@ -7013,7 +8976,8 @@
    "url": "https://coffee-syphon.co.jp/meimon_filter/",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-coffee-syphon-2026-11-10",
-   "makerAlias": "コーノ式 KONO サイフオン"
+   "makerAlias": "コーノ式 KONO サイフオン",
+   "sourceType": "official"
   },
   {
    "id": "kono-ms-25",
@@ -7032,7 +8996,8 @@
    "url": "https://coffee-syphon.co.jp/meimon_filter/",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-coffee-syphon-2026-11-10",
-   "makerAlias": "コーノ式 KONO サイフオン"
+   "makerAlias": "コーノ式 KONO サイフオン",
+   "sourceType": "official"
   },
   {
    "id": "kono-ks-20",
@@ -7051,7 +9016,8 @@
    "url": "https://coffee-syphon.co.jp/meimon_filter/",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-coffee-syphon-2026-11-10",
-   "makerAlias": "コーノ式 KONO サイフオン"
+   "makerAlias": "コーノ式 KONO サイフオン",
+   "sourceType": "official"
   },
   {
    "id": "kono-md-25b",
@@ -7070,7 +9036,8 @@
    "url": "https://coffee-syphon.co.jp/meimon_filter/",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-coffee-syphon-2026-11-10",
-   "makerAlias": "コーノ式 KONO サイフオン"
+   "makerAlias": "コーノ式 KONO サイフオン",
+   "sourceType": "official"
   },
   {
    "id": "kono-md-25w",
@@ -7089,7 +9056,8 @@
    "url": "https://coffee-syphon.co.jp/meimon_filter/",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-coffee-syphon-2026-11-10",
-   "makerAlias": "コーノ式 KONO サイフオン"
+   "makerAlias": "コーノ式 KONO サイフオン",
+   "sourceType": "official"
   },
   {
    "id": "kono-md-46c",
@@ -7108,7 +9076,8 @@
    "url": "https://coffee-syphon.co.jp/meimon_filter/",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-coffee-syphon-2026-11-10",
-   "makerAlias": "コーノ式 KONO サイフオン"
+   "makerAlias": "コーノ式 KONO サイフオン",
+   "sourceType": "official"
   },
   {
    "id": "kono-ms-45",
@@ -7127,7 +9096,8 @@
    "url": "https://coffee-syphon.co.jp/meimon_filter/",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-coffee-syphon-2026-11-10",
-   "makerAlias": "コーノ式 KONO サイフオン"
+   "makerAlias": "コーノ式 KONO サイフオン",
+   "sourceType": "official"
   },
   {
    "id": "kono-ks-40",
@@ -7146,7 +9116,8 @@
    "url": "https://coffee-syphon.co.jp/meimon_filter/",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-coffee-syphon-2026-11-10",
-   "makerAlias": "コーノ式 KONO サイフオン"
+   "makerAlias": "コーノ式 KONO サイフオン",
+   "sourceType": "official"
   },
   {
    "id": "kono-md-45b",
@@ -7165,7 +9136,8 @@
    "url": "https://coffee-syphon.co.jp/meimon_filter/",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-coffee-syphon-2026-11-10",
-   "makerAlias": "コーノ式 KONO サイフオン"
+   "makerAlias": "コーノ式 KONO サイフオン",
+   "sourceType": "official"
   },
   {
    "id": "kono-md-45w",
@@ -7184,7 +9156,8 @@
    "url": "https://coffee-syphon.co.jp/meimon_filter/",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-coffee-syphon-2026-11-10",
-   "makerAlias": "コーノ式 KONO サイフオン"
+   "makerAlias": "コーノ式 KONO サイフオン",
+   "sourceType": "official"
   },
   {
    "id": "kono-pr-2ap",
@@ -7203,7 +9176,8 @@
    "url": "https://coffee-syphon.co.jp/coffee_syphon/",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-coffee-syphon-2026-11-10",
-   "makerAlias": "コーノ式 KONO サイフオン"
+   "makerAlias": "コーノ式 KONO サイフオン",
+   "sourceType": "official"
   },
   {
    "id": "kono-pr-2a",
@@ -7222,7 +9196,8 @@
    "url": "https://coffee-syphon.co.jp/coffee_syphon/",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-coffee-syphon-2026-11-10",
-   "makerAlias": "コーノ式 KONO サイフオン"
+   "makerAlias": "コーノ式 KONO サイフオン",
+   "sourceType": "official"
   },
   {
    "id": "kono-pr-2gp",
@@ -7241,7 +9216,8 @@
    "url": "https://coffee-syphon.co.jp/coffee_syphon/",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-coffee-syphon-2026-11-10",
-   "makerAlias": "コーノ式 KONO サイフオン"
+   "makerAlias": "コーノ式 KONO サイフオン",
+   "sourceType": "official"
   },
   {
    "id": "kono-pr-2g",
@@ -7260,7 +9236,8 @@
    "url": "https://coffee-syphon.co.jp/coffee_syphon/",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-coffee-syphon-2026-11-10",
-   "makerAlias": "コーノ式 KONO サイフオン"
+   "makerAlias": "コーノ式 KONO サイフオン",
+   "sourceType": "official"
   },
   {
    "id": "kono-pr-3ap",
@@ -7279,7 +9256,8 @@
    "url": "https://coffee-syphon.co.jp/coffee_syphon/",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-coffee-syphon-2026-11-10",
-   "makerAlias": "コーノ式 KONO サイフオン"
+   "makerAlias": "コーノ式 KONO サイフオン",
+   "sourceType": "official"
   },
   {
    "id": "kono-pr-3a",
@@ -7298,7 +9276,8 @@
    "url": "https://coffee-syphon.co.jp/coffee_syphon/",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-coffee-syphon-2026-11-10",
-   "makerAlias": "コーノ式 KONO サイフオン"
+   "makerAlias": "コーノ式 KONO サイフオン",
+   "sourceType": "official"
   },
   {
    "id": "kono-pr-3gp",
@@ -7317,7 +9296,8 @@
    "url": "https://coffee-syphon.co.jp/coffee_syphon/",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-coffee-syphon-2026-11-10",
-   "makerAlias": "コーノ式 KONO サイフオン"
+   "makerAlias": "コーノ式 KONO サイフオン",
+   "sourceType": "official"
   },
   {
    "id": "kono-pr-3g",
@@ -7336,7 +9316,8 @@
    "url": "https://coffee-syphon.co.jp/coffee_syphon/",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-coffee-syphon-2026-11-10",
-   "makerAlias": "コーノ式 KONO サイフオン"
+   "makerAlias": "コーノ式 KONO サイフオン",
+   "sourceType": "official"
   },
   {
    "id": "kono-pr-4ap",
@@ -7355,7 +9336,8 @@
    "url": "https://coffee-syphon.co.jp/coffee_syphon/",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-coffee-syphon-2026-11-10",
-   "makerAlias": "コーノ式 KONO サイフオン"
+   "makerAlias": "コーノ式 KONO サイフオン",
+   "sourceType": "official"
   },
   {
    "id": "kono-pr-4a",
@@ -7374,7 +9356,8 @@
    "url": "https://coffee-syphon.co.jp/coffee_syphon/",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-coffee-syphon-2026-11-10",
-   "makerAlias": "コーノ式 KONO サイフオン"
+   "makerAlias": "コーノ式 KONO サイフオン",
+   "sourceType": "official"
   },
   {
    "id": "kono-pr-4gp",
@@ -7393,7 +9376,8 @@
    "url": "https://coffee-syphon.co.jp/coffee_syphon/",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-coffee-syphon-2026-11-10",
-   "makerAlias": "コーノ式 KONO サイフオン"
+   "makerAlias": "コーノ式 KONO サイフオン",
+   "sourceType": "official"
   },
   {
    "id": "kono-pr-4g",
@@ -7412,7 +9396,8 @@
    "url": "https://coffee-syphon.co.jp/coffee_syphon/",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-coffee-syphon-2026-11-10",
-   "makerAlias": "コーノ式 KONO サイフオン"
+   "makerAlias": "コーノ式 KONO サイフオン",
+   "sourceType": "official"
   },
   {
    "id": "kono-sk-2ap",
@@ -7431,7 +9416,8 @@
    "url": "https://coffee-syphon.co.jp/coffee_syphon/",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-coffee-syphon-2026-11-10",
-   "makerAlias": "コーノ式 KONO サイフオン"
+   "makerAlias": "コーノ式 KONO サイフオン",
+   "sourceType": "official"
   },
   {
    "id": "kono-sk-2a",
@@ -7450,7 +9436,8 @@
    "url": "https://coffee-syphon.co.jp/coffee_syphon/",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-coffee-syphon-2026-11-10",
-   "makerAlias": "コーノ式 KONO サイフオン"
+   "makerAlias": "コーノ式 KONO サイフオン",
+   "sourceType": "official"
   },
   {
    "id": "kono-sk-2gp",
@@ -7469,7 +9456,8 @@
    "url": "https://coffee-syphon.co.jp/coffee_syphon/",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-coffee-syphon-2026-11-10",
-   "makerAlias": "コーノ式 KONO サイフオン"
+   "makerAlias": "コーノ式 KONO サイフオン",
+   "sourceType": "official"
   },
   {
    "id": "kono-sk-2g",
@@ -7488,7 +9476,8 @@
    "url": "https://coffee-syphon.co.jp/coffee_syphon/",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-coffee-syphon-2026-11-10",
-   "makerAlias": "コーノ式 KONO サイフオン"
+   "makerAlias": "コーノ式 KONO サイフオン",
+   "sourceType": "official"
   },
   {
    "id": "kono-sk-3ap",
@@ -7507,7 +9496,8 @@
    "url": "https://coffee-syphon.co.jp/coffee_syphon/",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-coffee-syphon-2026-11-10",
-   "makerAlias": "コーノ式 KONO サイフオン"
+   "makerAlias": "コーノ式 KONO サイフオン",
+   "sourceType": "official"
   },
   {
    "id": "kono-sk-3a",
@@ -7526,7 +9516,8 @@
    "url": "https://coffee-syphon.co.jp/coffee_syphon/",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-coffee-syphon-2026-11-10",
-   "makerAlias": "コーノ式 KONO サイフオン"
+   "makerAlias": "コーノ式 KONO サイフオン",
+   "sourceType": "official"
   },
   {
    "id": "kono-sk-3gp",
@@ -7545,7 +9536,8 @@
    "url": "https://coffee-syphon.co.jp/coffee_syphon/",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-coffee-syphon-2026-11-10",
-   "makerAlias": "コーノ式 KONO サイフオン"
+   "makerAlias": "コーノ式 KONO サイフオン",
+   "sourceType": "official"
   },
   {
    "id": "kono-sk-3g",
@@ -7564,7 +9556,8 @@
    "url": "https://coffee-syphon.co.jp/coffee_syphon/",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-coffee-syphon-2026-11-10",
-   "makerAlias": "コーノ式 KONO サイフオン"
+   "makerAlias": "コーノ式 KONO サイフオン",
+   "sourceType": "official"
   },
   {
    "id": "kono-sk-4ap",
@@ -7583,7 +9576,8 @@
    "url": "https://coffee-syphon.co.jp/coffee_syphon/",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-coffee-syphon-2026-11-10",
-   "makerAlias": "コーノ式 KONO サイフオン"
+   "makerAlias": "コーノ式 KONO サイフオン",
+   "sourceType": "official"
   },
   {
    "id": "kono-sk-4a",
@@ -7602,7 +9596,8 @@
    "url": "https://coffee-syphon.co.jp/coffee_syphon/",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-coffee-syphon-2026-11-10",
-   "makerAlias": "コーノ式 KONO サイフオン"
+   "makerAlias": "コーノ式 KONO サイフオン",
+   "sourceType": "official"
   },
   {
    "id": "kono-sk-4gp",
@@ -7621,7 +9616,8 @@
    "url": "https://coffee-syphon.co.jp/coffee_syphon/",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-coffee-syphon-2026-11-10",
-   "makerAlias": "コーノ式 KONO サイフオン"
+   "makerAlias": "コーノ式 KONO サイフオン",
+   "sourceType": "official"
   },
   {
    "id": "kono-sk-4g",
@@ -7640,7 +9636,8 @@
    "url": "https://coffee-syphon.co.jp/coffee_syphon/",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-coffee-syphon-2026-11-10",
-   "makerAlias": "コーノ式 KONO サイフオン"
+   "makerAlias": "コーノ式 KONO サイフオン",
+   "sourceType": "official"
   }
  ],
  "updatedAt": "2026-11-12"
