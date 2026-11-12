@@ -79,6 +79,10 @@ const UI = {
     "These records are lost if you clear the browser's site data or change devices. You can export them to a file with \"Data backup\" in Settings (package photos are included only if you choose to include them when exporting).",
   "最終更新: 2026年11月12日": "Last updated: November 12, 2026",
   "利用規約(全文)": "Terms of Use (full text)",
+  "店舗・商品の情報は、各店舗の公式サイトなどの公開情報をもとに、週に1回を目安に自動で更新しています。店舗サイトの変更などで、更新が遅れたり、止まったりすることがあります。一部の店舗は、手作業で確認して入力しており、更新は不定期です。":
+    "The information on shops and products is updated automatically about once a week, based on publicly available information such as each shop's official website. Updates may be delayed or stop when a shop changes its website. Some shops are checked and entered by hand, and are updated irregularly.",
+  "本アプリへの掲載は無料で、広告ではありません。店舗から掲載料などの対価は受け取っておらず、並び順や表示が対価で左右されることもありません。広告や有料の掲載などを始める場合は、事前に、広告であることを明示してお知らせします。":
+    "Listing in the app is free and is not advertising. We receive no listing fees or other compensation from shops, and the order and display of listings are not influenced by compensation. If we start advertising or paid listings, we will announce it in advance and clearly label it as advertising.",
   "プライバシーポリシー(全文)": "Privacy policy (full text)",
   "掲載店舗の方へ": "For listed shops",
   "内容の修正・削除等のご希望は、こちらのXアカウント(DM)までご連絡ください。":

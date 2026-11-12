@@ -55,6 +55,12 @@ export function AboutView({ open, onClose }) {
             <p className="text-[12px] text-[var(--c-text-3)] leading-relaxed">
               {t("個人〜小規模の自家焙煎店を中心に掲載しています。11店舗以上を展開する大手チェーンは対象外です(日本チェーンストア協会の定義に基づく)。ただし11店舗未満の複数拠点展開(例: FUGLEN、PHILOCOFFEA)は対象に含みます。")}
             </p>
+            <p className="text-[12px] text-[var(--c-text-3)] leading-relaxed">
+              {t("店舗・商品の情報は、各店舗の公式サイトなどの公開情報をもとに、週に1回を目安に自動で更新しています。店舗サイトの変更などで、更新が遅れたり、止まったりすることがあります。一部の店舗は、手作業で確認して入力しており、更新は不定期です。")}
+            </p>
+            <p className="text-[12px] text-[var(--c-text-3)] leading-relaxed">
+              {t("本アプリへの掲載は無料で、広告ではありません。店舗から掲載料などの対価は受け取っておらず、並び順や表示が対価で左右されることもありません。広告や有料の掲載などを始める場合は、事前に、広告であることを明示してお知らせします。")}
+            </p>
           </section>
 
           <section className="flex flex-col gap-3">
