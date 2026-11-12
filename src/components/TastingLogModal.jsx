@@ -160,7 +160,7 @@ export function TastingLogModal({ product, logs, myTools = [], onAddLog, onDelet
 
   if (!product) return null;
 
-  // 抽出の器具(ドリッパー・サイフォン・フレンチプレス・エアロプレス)。種類ごとにまとめて選べる
+  // 抽出の器具(ドリッパー・サイフォン・フレンチプレス・エアロプレス・コーヒーメーカー)。種類ごとにまとめて選べる
   const brewers = myTools.filter((tool) => BREWER_KIND_IDS.includes(tool.kind));
   const brewerGroups = TOOL_KINDS.filter((k) => k.brewer)
     .map((k) => ({ label: k.label, tools: myTools.filter((tool) => tool.kind === k.id) }))
@@ -308,7 +308,7 @@ export function TastingLogModal({ product, logs, myTools = [], onAddLog, onDelet
                 />
               ) : brewers.length === 0 && papers.length === 0 ? (
                 <p className="text-[12px] text-[var(--c-text-3)] leading-relaxed">
-                  {t("マイツールに抽出の器具(ドリッパー・サイフォン・フレンチプレス・エアロプレス)・ペーパーの登録がありません。設定の「マイツール」から登録できます。")}
+                  {t("マイツールに抽出の器具(ドリッパー・サイフォン・フレンチプレス・エアロプレス・コーヒーメーカー)・ペーパーの登録がありません。設定の「マイツール」から登録できます。")}
                 </p>
               ) : (
                 <div className="flex flex-col gap-2">

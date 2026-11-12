@@ -4130,6 +4130,22 @@
     ],
     "note": "メーカー公式サイトの商品データ(JSON)。器具カタログ(data/tools.json)の根拠"
   },
+  "tools-bodum-coffeemakers-2026-11-12": {
+    "url": "https://www.bodum.com/jp/ja/coffee/electric-coffee-makers",
+    "finalUrl": "https://www.bodum.com/jp/ja/coffee/electric-coffee-makers",
+    "httpStatus": 200,
+    "contentType": "",
+    "size": 847,
+    "sha256": "e741822a90a74682e11b281de074da9dad0f458c11e2571be43b15fa8d48045c",
+    "accessed": "2026-11-12",
+    "tool": "ローカルのファイルを取り込み",
+    "textChars": 0,
+    "scannedImagesOnly": false,
+    "files": [
+      "original.bin"
+    ],
+    "note": "メーカー公式サイトの商品データ(JSON)。器具カタログ(data/tools.json)の根拠"
+  },
   "tools-bodum-grinders-2026-11-12": {
     "url": "https://www.bodum.com/jp/ja/coffee/coffee-grinders",
     "finalUrl": "https://www.bodum.com/jp/ja/coffee/coffee-grinders",
@@ -4151,8 +4167,8 @@
     "finalUrl": "https://www.lucky-coffee-machine.co.jp/brands/bonmac/",
     "httpStatus": 200,
     "contentType": "",
-    "size": 73882,
-    "sha256": "d4a76a994df7e7c9f7cfd90511ae3cf4a370330696097cdc786ca63b608f5f1e",
+    "size": 93828,
+    "sha256": "2fe8deb39c83e9a9ae23ecdad9c23e45aa3948d9e9c12078f1e3df2e6f7f13ce",
     "accessed": "2026-11-12",
     "tool": "ローカルのファイルを取り込み",
     "textChars": 0,
@@ -4226,6 +4242,22 @@
     ],
     "note": "メーカー公式サイトの商品データ(JSON)。器具カタログ(data/tools.json)の根拠"
   },
+  "tools-delonghi-2026-11-12": {
+    "url": "https://www.delonghi.com/ja-jp/sitemap-ja-jp-product-sitemap-0.xml",
+    "finalUrl": "https://www.delonghi.com/ja-jp/sitemap-ja-jp-product-sitemap-0.xml",
+    "httpStatus": 200,
+    "contentType": "",
+    "size": 36208,
+    "sha256": "6e24461a8e5ec0365373525ecec3b9382c8a9b24932364cb68a37a16fcf6aa32",
+    "accessed": "2026-11-12",
+    "tool": "ローカルのファイルを取り込み",
+    "textChars": 0,
+    "scannedImagesOnly": false,
+    "files": [
+      "original.xml"
+    ],
+    "note": "メーカー公式サイトの商品データ(JSON)。器具カタログ(data/tools.json)の根拠"
+  },
   "tools-fellow-2026-11-10": {
     "url": "https://fellowproducts.com/",
     "finalUrl": "https://fellowproducts.com/",
@@ -4266,6 +4298,22 @@
     "size": 622967,
     "sha256": "36c2dad353c57319de6f8d8f59258b5ab31e0cf8fc6568ca3544c48ec1d92730",
     "accessed": "2026-11-10",
+    "tool": "ローカルのファイルを取り込み",
+    "textChars": 0,
+    "scannedImagesOnly": false,
+    "files": [
+      "original.bin"
+    ],
+    "note": "メーカー公式サイトの商品データ(JSON)。器具カタログ(data/tools.json)の根拠"
+  },
+  "tools-hario-coffeemakers-2026-11-12": {
+    "url": "https://www.hario.com/product/coffee/",
+    "finalUrl": "https://www.hario.com/product/coffee/",
+    "httpStatus": 200,
+    "contentType": "",
+    "size": 99750,
+    "sha256": "25d1b550bc7ae6f0030b4405b1bcd79c3e2f551f41bb7a239c434b9ae0f81108",
+    "accessed": "2026-11-12",
     "tool": "ローカルのファイルを取り込み",
     "textChars": 0,
     "scannedImagesOnly": false,
@@ -4322,6 +4370,22 @@
     ],
     "note": "メーカー公式サイトの商品データ(JSON)。器具カタログ(data/tools.json)の根拠"
   },
+  "tools-kalita-coffeemakers-2026-11-12": {
+    "url": "https://www.kalita.co.jp/products/coffeemaker/",
+    "finalUrl": "https://www.kalita.co.jp/products/coffeemaker/",
+    "httpStatus": 200,
+    "contentType": "",
+    "size": 9384,
+    "sha256": "cbbbf0aced251ddc40e9f6fc9acf4ceded4a6f691c6b0b5bdcf219cf4e4c5ead",
+    "accessed": "2026-11-12",
+    "tool": "ローカルのファイルを取り込み",
+    "textChars": 0,
+    "scannedImagesOnly": false,
+    "files": [
+      "original.bin"
+    ],
+    "note": "メーカー公式サイトの商品データ(JSON)。器具カタログ(data/tools.json)の根拠"
+  },
   "tools-melitta-2026-11-10": {
     "url": "https://www.melitta.co.jp/melitta_hh/",
     "finalUrl": "https://www.melitta.co.jp/melitta_hh/",
@@ -4330,6 +4394,22 @@
     "size": 14445,
     "sha256": "5043cc9cb3773810988e08ba580b507d5f148bd18d11b11d1f1b25c85cfb5396",
     "accessed": "2026-11-10",
+    "tool": "ローカルのファイルを取り込み",
+    "textChars": 0,
+    "scannedImagesOnly": false,
+    "files": [
+      "original.bin"
+    ],
+    "note": "メーカー公式サイトの商品データ(JSON)。器具カタログ(data/tools.json)の根拠"
+  },
+  "tools-melitta-coffeemakers-2026-11-12": {
+    "url": "https://www.melitta.co.jp/melitta_hh/coffeemaker/",
+    "finalUrl": "https://www.melitta.co.jp/melitta_hh/coffeemaker/",
+    "httpStatus": 200,
+    "contentType": "",
+    "size": 7714,
+    "sha256": "137cd567464af3c230250e119928e101ce9eb24ebf31ff49a176d82e4d121375",
+    "accessed": "2026-11-12",
     "tool": "ローカルのファイルを取り込み",
     "textChars": 0,
     "scannedImagesOnly": false,

@@ -464,6 +464,44 @@
    "sourceType": "retailer"
   },
   {
+   "id": "bodum-12095-730jp-moma-1",
+   "kind": "coffeemaker",
+   "maker": "Bodum",
+   "power": "electric",
+   "name": "BISTRO 電動コーヒーメーカー 1.5 L",
+   "variants": [
+    {
+     "label": "",
+     "sku": "12095-730JP-MOMA-1",
+     "gtin": "699965619817"
+    }
+   ],
+   "url": "https://www.bodum.com/jp/ja/12095-730jp-moma-1",
+   "checkedAt": "2026-11-12",
+   "sourceId": "tools-bodum-coffeemakers-2026-11-12",
+   "makerAlias": "ボダム",
+   "sourceType": "official"
+  },
+  {
+   "id": "bodum-12095-763jp-moma-1",
+   "kind": "coffeemaker",
+   "maker": "Bodum",
+   "power": "electric",
+   "name": "BISTRO 電動コーヒーメーカー 1.5 L",
+   "variants": [
+    {
+     "label": "",
+     "sku": "12095-763JP-MOMA-1",
+     "gtin": "699965618117"
+    }
+   ],
+   "url": "https://www.bodum.com/jp/ja/12095-763jp-moma-1-bistro",
+   "checkedAt": "2026-11-12",
+   "sourceId": "tools-bodum-coffeemakers-2026-11-12",
+   "makerAlias": "ボダム",
+   "sourceType": "official"
+  },
+  {
    "id": "bodum-11376-01",
    "kind": "frenchpress",
    "maker": "Bodum",
@@ -1297,6 +1335,143 @@
    "sourceType": "official"
   },
   {
+   "id": "bonmac-858165",
+   "kind": "coffeemaker",
+   "maker": "Bonmac",
+   "name": "BONMAC コーヒーブルーワー BM-2030",
+   "variants": [
+    {
+     "label": "",
+     "sku": "858165",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.lucky-coffee-machine.co.jp/products/858165/",
+   "checkedAt": "2026-11-12",
+   "spec": {
+    "電源・消費電力": "単相100V 910W",
+    "給水": "タンク式",
+    "杯数": "1～3杯用",
+    "水タンク容量": "約1500cc",
+    "寸法": "W204×D425.5×H446mm",
+    "重量": "6kg（乾燥重量）"
+   },
+   "sourceId": "tools-bonmac-2026-11-12",
+   "makerAlias": "ボンマック",
+   "sourceType": "official"
+  },
+  {
+   "id": "bonmac-818621",
+   "kind": "coffeemaker",
+   "maker": "Bonmac",
+   "name": "BONMAC コーヒーブルーワー BM-2100",
+   "variants": [
+    {
+     "label": "",
+     "sku": "818621",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.lucky-coffee-machine.co.jp/products/818621/",
+   "checkedAt": "2026-11-12",
+   "spec": {
+    "電源・消費電力": "単相100V・1050W",
+    "給水": "タンク式",
+    "排水": "排水なし",
+    "寸法": "W204×D425.5×H446mm",
+    "重量": "6kg (乾燥重量）",
+    "ボイラー容量": "3L",
+    "注記": "湯沸かし850W・保温100W×2 / 初動沸き上がり時間 / 約23分"
+   },
+   "sourceId": "tools-bonmac-2026-11-12",
+   "makerAlias": "ボンマック",
+   "sourceType": "official"
+  },
+  {
+   "id": "bonmac-879416",
+   "kind": "coffeemaker",
+   "maker": "Bonmac",
+   "name": "BONMAC ポット式ブルーワー BMP-2000Z",
+   "variants": [
+    {
+     "label": "",
+     "sku": "879416",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.lucky-coffee-machine.co.jp/products/879416/",
+   "checkedAt": "2026-11-12",
+   "spec": {
+    "電源・消費電力": "単相100V・850W",
+    "給水": "タンク式",
+    "寸法": "W254×D409×H655mm",
+    "重量": "8kg(乾燥重量)",
+    "ボイラー容量": "象印 AY-AM25-BA(ガラスまほうびん) 付属"
+   },
+   "sourceId": "tools-bonmac-2026-11-12",
+   "makerAlias": "ボンマック",
+   "sourceType": "official"
+  },
+  {
+   "id": "bonmac-852758",
+   "kind": "coffeemaker",
+   "maker": "Bonmac",
+   "name": "BONMAC 全自動ドリップ式コーヒーマシン BM-SAD2",
+   "variants": [
+    {
+     "label": "",
+     "sku": "852758",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.lucky-coffee-machine.co.jp/products/852758/",
+   "checkedAt": "2026-11-12",
+   "spec": {
+    "電源・消費電力": "単相100V・1059W",
+    "推奨抽出杯数": "80杯/日",
+    "給水": "水道直結式",
+    "排水": "排水なし",
+    "寸法": "W300×D622×H850㎜",
+    "重量": "41kg (乾燥重量)",
+    "豆ホッパー数": "2 (1基追加可能)",
+    "豆ホッパー容量": "700g×2",
+    "カス受け容量": "約30杯",
+    "ボイラー容量": "3.5L",
+    "注記": "50/60Hz共通"
+   },
+   "sourceId": "tools-bonmac-2026-11-12",
+   "makerAlias": "ボンマック",
+   "sourceType": "official"
+  },
+  {
+   "id": "bonmac-879639",
+   "kind": "coffeemaker",
+   "maker": "Bonmac",
+   "name": "BONMAC 温風保温式システム デカンタブルーワー BM-3100 カルド",
+   "variants": [
+    {
+     "label": "",
+     "sku": "879639",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.lucky-coffee-machine.co.jp/products/879639/",
+   "checkedAt": "2026-11-12",
+   "spec": {
+    "電源・消費電力": "単相100V 900W",
+    "給水": "タンク式",
+    "排水": "排水なし",
+    "推奨抽出杯数": "50杯/日",
+    "水タンク容量": "2.7L",
+    "寸法": "W204×D435×H430mm",
+    "重量": "6.7㎏（乾燥重量）",
+    "注記": "タンクヒーター800W＋温風ヒーター100W / 抽出能力 / 9.6L/h"
+   },
+   "sourceId": "tools-bonmac-2026-11-12",
+   "makerAlias": "ボンマック",
+   "sourceType": "official"
+  },
+  {
    "id": "bonmac-810525",
    "kind": "grinder",
    "maker": "Bonmac",
@@ -2095,6 +2270,927 @@
    "sourceType": "official"
   },
   {
+   "id": "delonghi-icm12011j-w",
+   "kind": "coffeemaker",
+   "maker": "De'Longhi",
+   "name": "アクティブ シリーズ ドリップコーヒーメーカー",
+   "variants": [
+    {
+     "label": "トゥルーホワイト",
+     "sku": "ICM12011J-W",
+     "gtin": "4988371024336"
+    },
+    {
+     "label": "インテンスブラック",
+     "sku": "ICM12011J-BK",
+     "gtin": "4988371024343"
+    },
+    {
+     "label": "パッションレッド",
+     "sku": "ICM12011J-R",
+     "gtin": "4988371024329"
+    }
+   ],
+   "url": "https://www.delonghi.com/ja-jp/p/akuteibu-shiri%E3%83%BCzu-icm12011j-w-akuteibu-shiri%E3%83%BCzu-doritsupuko%E3%83%BChi%E3%83%BCme%E3%83%BCka%E3%83%BC-touru%E3%83%BChowaito/ICM12011J-W.html",
+   "checkedAt": "2026-11-12",
+   "category": "ドリップコーヒーメーカー",
+   "spec": {
+    "消費電力（W）": "750 W",
+    "定格周波数(Hz)": "50-60 HzHz",
+    "電圧(V)": "100v",
+    "製品管理番号": "0132301149",
+    "製品の寸法": "幅155×奥行285×高さ275",
+    "操作部": "Button",
+    "アロマレベル": "2"
+   },
+   "power": "electric",
+   "sourceId": "tools-delonghi-2026-11-12",
+   "makerAlias": "デロンギ",
+   "sourceType": "official"
+  },
+  {
+   "id": "delonghi-icm14011j-r",
+   "kind": "coffeemaker",
+   "maker": "De'Longhi",
+   "name": "アクティブ ドリップコーヒーメーカー",
+   "variants": [
+    {
+     "label": "レッド",
+     "sku": "ICM14011J-R",
+     "gtin": "4988371023599"
+    },
+    {
+     "label": "ホワイト",
+     "sku": "ICM14011J-W",
+     "gtin": "4988371023605"
+    },
+    {
+     "label": "ブラック",
+     "sku": "ICM14011J",
+     "gtin": "4988371023025"
+    }
+   ],
+   "url": "https://www.delonghi.com/ja-jp/p/akuteibu-shiri%E3%83%BCzu-icm14011j-r-akuteibu-doritsupuko%E3%83%BChi%E3%83%BCme%E3%83%BCka%E3%83%BC-retsudo/ICM14011J-R.html",
+   "checkedAt": "2026-11-12",
+   "category": "ドリップコーヒーメーカー",
+   "spec": {
+    "定格周波数(Hz)": "50-60 HzHz",
+    "電圧(V)": "100v",
+    "製品管理番号": "0132301112",
+    "製品の寸法": "幅180×奥行200×高さ270",
+    "操作部": "Button",
+    "アロマレベル": "2"
+   },
+   "power": "electric",
+   "sourceId": "tools-delonghi-2026-11-12",
+   "makerAlias": "デロンギ",
+   "sourceType": "official"
+  },
+  {
+   "id": "delonghi-ecam45086t",
+   "kind": "coffeemaker",
+   "maker": "De'Longhi",
+   "name": "エレッタ エクスプロア Wi-Fiモデル 全自動コーヒーマシン",
+   "variants": [
+    {
+     "label": "チタニウムグレー",
+     "sku": "ECAM45086T",
+     "gtin": "4988371024770"
+    }
+   ],
+   "url": "https://www.delonghi.com/ja-jp/p/eretsuta%E3%83%BBekusupuroa-ecam45086t-eretsuta-ekusupuroa-wi-fimoderu-%E5%85%A8%E8%87%AA%E5%8B%95ko%E3%83%BChi%E3%83%BCmashin-chitaniumugure%E3%83%BC/ECAM45086T.html",
+   "checkedAt": "2026-11-12",
+   "category": "全自動コーヒーマシン",
+   "spec": {
+    "ホットコーヒー飲料": "アメリカーノ,カフェ・ジャポーネ,コーヒーポット,ドッピオ＋,エスプレッソ,Over Ice",
+    "ホットミルク飲料": "カフェラテ,カプチーノ,カプチーノMIX,カプチーノ＋,コルタード,エスプレッソマキアート,フラットホワイト,ミルク,ラテマキアート",
+    "その他のレシピ": "給湯",
+    "製品の寸法": "幅260×奥行450×高さ385",
+    "重量": "11.3",
+    "カラー": "Titanium",
+    "仕上げ素材とカラー": "Painted",
+    "水タンク容量（L）": "1.8",
+    "ポンプ圧（最大気圧）": "19",
+    "操作部": "Touch",
+    "電圧(V)": "100v",
+    "消費電力 (W)": "1450",
+    "マイコーヒー設定": "✓Coffee link APPから可能",
+    "マイメニュー設定": "✓4人のプロフィール設定"
+   },
+   "power": "electric",
+   "sourceId": "tools-delonghi-2026-11-12",
+   "makerAlias": "デロンギ",
+   "sourceType": "official"
+  },
+  {
+   "id": "delonghi-ecam46860w",
+   "kind": "coffeemaker",
+   "maker": "De'Longhi",
+   "name": "エレッタ カプチーノ イーヴォ 全自動コーヒーマシン",
+   "variants": [
+    {
+     "label": "ホワイト",
+     "sku": "ECAM46860W",
+     "gtin": "4988371024473"
+    }
+   ],
+   "url": "https://www.delonghi.com/ja-jp/p/eretsuta-kapuchi%E3%83%BCno-i%E3%83%BCvuo-ecam46860w-eretsuta-kapuchi%E3%83%BCno-i%E3%83%BCvuo-%E5%85%A8%E8%87%AA%E5%8B%95ko%E3%83%BChi%E3%83%BCmashin-howaito/ECAM46860W.html",
+   "checkedAt": "2026-11-12",
+   "category": "全自動コーヒーマシン",
+   "spec": {
+    "製品の寸法": "幅260×奥行460×高さ360",
+    "重量": "11.06",
+    "カラー": "ホワイト",
+    "仕上げ素材とカラー": "Glossy",
+    "水タンク容量（L）": "2",
+    "カス受け容量（回分）": "14",
+    "ポンプ圧（最大気圧）": "15",
+    "操作部": "Touch",
+    "電圧(V)": "100v",
+    "消費電力 (W)": "1450"
+   },
+   "power": "electric",
+   "sourceId": "tools-delonghi-2026-11-12",
+   "makerAlias": "デロンギ",
+   "sourceType": "official"
+  },
+  {
+   "id": "delonghi-ecam45760b",
+   "kind": "coffeemaker",
+   "maker": "De'Longhi",
+   "name": "エレッタ カプチーノ トップ 全自動コーヒーマシン",
+   "variants": [
+    {
+     "label": "ブラック",
+     "sku": "ECAM45760B",
+     "gtin": "4988371023155"
+    }
+   ],
+   "url": "https://www.delonghi.com/ja-jp/p/eretsuta-ecam45760b-eretsuta-kapuchi%E3%83%BCno-totsupu-%E5%85%A8%E8%87%AA%E5%8B%95ko%E3%83%BChi%E3%83%BCmashin-buratsuku/ECAM45760B.html",
+   "checkedAt": "2026-11-12",
+   "category": "全自動コーヒーマシン",
+   "spec": {
+    "ホットミルク飲料": "カフェラテ,カプチーノ,エスプレッソマキアート,フラットホワイト,ミルク,ラテマキアート",
+    "その他のレシピ": "給湯",
+    "製品の寸法": "幅260×奥行460×高さ360",
+    "重量": "11.66",
+    "カラー": "ダークグレー",
+    "仕上げ素材とカラー": "Glossy",
+    "水タンク容量（L）": "2",
+    "豆ホッパー容量（g）": "250",
+    "カス受け容量（回分）": "14",
+    "ポンプ圧（最大気圧）": "15",
+    "コーヒー抽出口高さ（最大）（mm）": "140",
+    "操作部": "Touch",
+    "電圧(V)": "100v",
+    "消費電力 (W)": "1450",
+    "マイコーヒー設定": "No",
+    "マイメニュー設定": "n/a",
+    "Bean Adapt テクノロジー": "false"
+   },
+   "power": "electric",
+   "sourceId": "tools-delonghi-2026-11-12",
+   "makerAlias": "デロンギ",
+   "sourceType": "official"
+  },
+  {
+   "id": "delonghi-em450j-w",
+   "kind": "coffeemaker",
+   "maker": "De'Longhi",
+   "name": "クラシック エスプレッソ・カプチーノメーカー",
+   "variants": [
+    {
+     "label": "ホワイト",
+     "sku": "EM450J-W",
+     "gtin": "4988371024992"
+    },
+    {
+     "label": "メタルシルバー",
+     "sku": "EM450J-M",
+     "gtin": "4988371024961"
+    }
+   ],
+   "url": "https://www.delonghi.com/ja-jp/p/de%27longhi-classic-em450j-w-kurashitsuku-esupuretsuso%E3%83%BBkapuchi%E3%83%BCnome%E3%83%BCka%E3%83%BC-howaito/EM450J-W.html",
+   "checkedAt": "2026-11-12",
+   "category": "エスプレッソ・カプチーノメーカー",
+   "spec": {
+    "定格周波数(Hz)": "50-60 HzHz",
+    "電圧(V)": "100v",
+    "製品管理番号": "0132105036",
+    "重量": "4.209",
+    "素材": "Metal",
+    "ミルクシステム": "Adjustable Cappuccino System",
+    "ボイラータイプ": "Thermoblock",
+    "Dose": "0",
+    "操作部": "Button",
+    "ディスプレイ": "No Display"
+   },
+   "power": "electric",
+   "sourceId": "tools-delonghi-2026-11-12",
+   "makerAlias": "デロンギ",
+   "sourceType": "official"
+  },
+  {
+   "id": "delonghi-icm17270j",
+   "kind": "coffeemaker",
+   "maker": "De'Longhi",
+   "name": "クレシドラ ドリップコーヒーメーカー",
+   "variants": [
+    {
+     "label": "シルバー",
+     "sku": "ICM17270J",
+     "gtin": "4988371024299"
+    }
+   ],
+   "url": "https://www.delonghi.com/ja-jp/p/kureshidora-icm17270j-kureshidora-doritsupuko%E3%83%BChi%E3%83%BCme%E3%83%BCka%E3%83%BC-shiruba%E3%83%BC/ICM17270J.html",
+   "checkedAt": "2026-11-12",
+   "category": "ドリップコーヒーメーカー",
+   "spec": {
+    "電圧(V)": "100v",
+    "製品管理番号": "0132301146",
+    "製品の寸法": "幅190×奥行285×高さ335",
+    "操作部": "Button"
+   },
+   "power": "electric",
+   "sourceId": "tools-delonghi-2026-11-12",
+   "makerAlias": "デロンギ",
+   "sourceType": "official"
+  },
+  {
+   "id": "delonghi-cox750j-wh",
+   "kind": "coffeemaker",
+   "maker": "De'Longhi",
+   "name": "ケーミックス ドリップコーヒーメーカー",
+   "variants": [
+    {
+     "label": "クールホワイト",
+     "sku": "COX750J-WH",
+     "gtin": "4988371032249"
+    },
+    {
+     "label": "スパイシーレッド",
+     "sku": "COX750J-RD",
+     "gtin": "4988371032232"
+    },
+    {
+     "label": "リッチブラック",
+     "sku": "COX750J-BK",
+     "gtin": "4988371032256"
+    }
+   ],
+   "url": "https://www.delonghi.com/ja-jp/p/ke%E3%83%BCmitsukusu-cox750j-wh-ke%E3%83%BCmitsukusu-doritsupuko%E3%83%BChi%E3%83%BCme%E3%83%BCka%E3%83%BC-ku%E3%83%BCruhowaito/COX750J-WH.html",
+   "checkedAt": "2026-11-12",
+   "category": "ドリップコーヒーメーカー",
+   "spec": {
+    "電圧(V)": "100v",
+    "製品管理番号": "0W13211037",
+    "製品の寸法": "幅190×奥行255×高さ305"
+   },
+   "power": "electric",
+   "sourceId": "tools-delonghi-2026-11-12",
+   "makerAlias": "デロンギ",
+   "sourceType": "official"
+  },
+  {
+   "id": "delonghi-ec235j-w",
+   "kind": "coffeemaker",
+   "maker": "De'Longhi",
+   "name": "スティローザ エスプレッソ・カプチーノメーカー",
+   "variants": [
+    {
+     "label": "ホワイト",
+     "sku": "EC235J-W",
+     "gtin": "4988371024886"
+    },
+    {
+     "label": "ブラック",
+     "sku": "EC235J-BK",
+     "gtin": "4988371024398"
+    }
+   ],
+   "url": "https://www.delonghi.com/ja-jp/p/suteiro%E3%83%BCza-ec235j-w-suteiro%E3%83%BCza-esupuretsuso%E3%83%BBkapuchi%E3%83%BCnome%E3%83%BCka%E3%83%BC-howaito/EC235J-W.html",
+   "checkedAt": "2026-11-12",
+   "category": "エスプレッソ・カプチーノメーカー",
+   "spec": {
+    "定格周波数(Hz)": "50-60 HzHz",
+    "電圧(V)": "100v",
+    "製品管理番号": "0132104225",
+    "製品の寸法": "幅210×奥行265×高さ300",
+    "重量": "3.598",
+    "素材": "Plastic",
+    "ミルクシステム": "Cappuccino System",
+    "ボイラータイプ": "HS03",
+    "Dose": "3",
+    "操作部": "Dial",
+    "ディスプレイ": "No Display"
+   },
+   "power": "electric",
+   "sourceId": "tools-delonghi-2026-11-12",
+   "makerAlias": "デロンギ",
+   "sourceType": "official"
+  },
+  {
+   "id": "delonghi-icmi011j-bk",
+   "kind": "coffeemaker",
+   "maker": "De'Longhi",
+   "name": "ディスティンタ コレクション ドリップコーヒーメーカー",
+   "variants": [
+    {
+     "label": "エレガンスブラック",
+     "sku": "ICMI011J-BK",
+     "gtin": "4988371023797"
+    },
+    {
+     "label": "ピュアホワイト",
+     "sku": "ICMI011J-W",
+     "gtin": "4988371023780"
+    },
+    {
+     "label": "フューチャーブロンズ",
+     "sku": "ICMI011J-BZ",
+     "gtin": "4988371023773"
+    },
+    {
+     "label": "スタイルコッパー",
+     "sku": "ICMI011J-CP",
+     "gtin": "4988371023766"
+    }
+   ],
+   "url": "https://www.delonghi.com/ja-jp/p/deisuteinta-icmi011j-bk-deisuteinta-korekushiyon-doritsupuko%E3%83%BChi%E3%83%BCme%E3%83%BCka%E3%83%BC-eregansuburatsuku/ICMI011J-BK.html",
+   "checkedAt": "2026-11-12",
+   "category": "ドリップコーヒーメーカー",
+   "spec": {
+    "定格周波数(Hz)": "50-60 HzHz",
+    "電圧(V)": "100v",
+    "製品管理番号": "0132301120",
+    "製品の寸法": "幅170×奥行230×高さ285",
+    "操作部": "Button",
+    "アロマレベル": "2"
+   },
+   "power": "electric",
+   "sourceId": "tools-delonghi-2026-11-12",
+   "makerAlias": "デロンギ",
+   "sourceType": "official"
+  },
+  {
+   "id": "delonghi-ecam35055b",
+   "kind": "coffeemaker",
+   "maker": "De'Longhi",
+   "name": "ディナミカ 全自動コーヒーマシン",
+   "variants": [
+    {
+     "label": "ブラック",
+     "sku": "ECAM35055B",
+     "gtin": "4988371023964"
+    },
+    {
+     "label": "ホワイト",
+     "sku": "ECAM35035W",
+     "gtin": "4988371023957"
+    }
+   ],
+   "url": "https://www.delonghi.com/ja-jp/p/deinamika-ecam35055b-deinamika-%E5%85%A8%E8%87%AA%E5%8B%95ko%E3%83%BChi%E3%83%BCmashin-buratsuku/ECAM35055B.html",
+   "checkedAt": "2026-11-12",
+   "category": "全自動コーヒーマシン",
+   "spec": {
+    "製品の寸法": "幅240×奥行445×高さ360",
+    "重量": "9.86",
+    "カラー": "ブラック",
+    "仕上げ素材とカラー": "Glossy",
+    "水タンク容量（L）": "1.8",
+    "カス受け容量（回分）": "14",
+    "ポンプ圧（最大気圧）": "15",
+    "操作部": "Touch",
+    "電圧(V)": "100v",
+    "消費電力 (W)": "1450",
+    "マイメニュー設定": "マイメニュー"
+   },
+   "power": "electric",
+   "sourceId": "tools-delonghi-2026-11-12",
+   "makerAlias": "デロンギ",
+   "sourceType": "official"
+  },
+  {
+   "id": "delonghi-ec885j-bg",
+   "kind": "coffeemaker",
+   "maker": "De'Longhi",
+   "name": "デディカ アルテ エスプレッソ・カプチーノメーカー",
+   "variants": [
+    {
+     "label": "ベージュ",
+     "sku": "EC885J-BG",
+     "gtin": "4988371024725"
+    },
+    {
+     "label": "グレー",
+     "sku": "EC885J-GY",
+     "gtin": "4988371024732"
+    },
+    {
+     "label": "メタルシルバー",
+     "sku": "EC885J-M",
+     "gtin": "4988371024718"
+    }
+   ],
+   "url": "https://www.delonghi.com/ja-jp/p/dedeika%E3%83%BBmetaritsukusu-esupuretsuso%E3%83%BBkapuchi%E3%83%BCnome%E3%83%BCka%E3%83%BC-ec885j-bg-dedeika-arute-esupuretsuso%E3%83%BBkapuchi%E3%83%BCnome%E3%83%BCka%E3%83%BC-be%E3%83%BCjiyu/EC885J-BG.html",
+   "checkedAt": "2026-11-12",
+   "category": "エスプレッソ・カプチーノメーカー",
+   "spec": {
+    "ポンプ圧（最大気圧）": "15",
+    "水タンク容量": "1.1",
+    "消費電力（W）": "1300",
+    "定格周波数(Hz)": "50-60 HzHz",
+    "電圧(V)": "100v",
+    "製品管理番号": "0132106265",
+    "製品の寸法": "幅150×奥行330×高さ305",
+    "重量": "4.37",
+    "カラー": "ベージュ",
+    "ミルクシステム": "Adjustable Cappuccino System",
+    "Dose": "3",
+    "タンパー": "Coffee tamper"
+   },
+   "power": "electric",
+   "sourceId": "tools-delonghi-2026-11-12",
+   "makerAlias": "デロンギ",
+   "sourceType": "official"
+  },
+  {
+   "id": "delonghi-ec890j-m",
+   "kind": "coffeemaker",
+   "maker": "De'Longhi",
+   "name": "デディカ デュオ エスプレッソ・カプチーノメーカー",
+   "variants": [
+    {
+     "label": "メタルシルバー",
+     "sku": "EC890J-M",
+     "gtin": "4988371024930"
+    },
+    {
+     "label": "ホワイト",
+     "sku": "EC890J-WI",
+     "gtin": "4988371024947"
+    },
+    {
+     "label": "ブラック",
+     "sku": "EC890J-B",
+     "gtin": "4988371024954"
+    }
+   ],
+   "url": "https://www.delonghi.com/ja-jp/p/dedica-duo-ec890j-m-dedeika-deyuo-esupuretsuso%E3%83%BBkapuchi%E3%83%BCnome%E3%83%BCka%E3%83%BC-metarushiruba%E3%83%BC/EC890J-M.html",
+   "checkedAt": "2026-11-12",
+   "category": "エスプレッソ・カプチーノメーカー",
+   "spec": {
+    "定格周波数(Hz)": "50-60 HzHz",
+    "電圧(V)": "100v",
+    "製品管理番号": "0132106365",
+    "重量": "4.7",
+    "素材": "Metal",
+    "ミルクシステム": "MS21",
+    "ボイラータイプ": "Thermoblock",
+    "Dose": "3",
+    "操作部": "Touch",
+    "ディスプレイ": "Icons and LED"
+   },
+   "power": "electric",
+   "sourceId": "tools-delonghi-2026-11-12",
+   "makerAlias": "デロンギ",
+   "sourceType": "official"
+  },
+  {
+   "id": "delonghi-ecam22062b",
+   "kind": "coffeemaker",
+   "maker": "De'Longhi",
+   "name": "マグニフィカ スタート 全自動コーヒーマシン",
+   "variants": [
+    {
+     "label": "ブラック",
+     "sku": "ECAM22062B",
+     "gtin": "4988371024831"
+    },
+    {
+     "label": "ホワイト",
+     "sku": "ECAM22020W",
+     "gtin": "4988371024763"
+    },
+    {
+     "label": "ブラック",
+     "sku": "ECAM22020B",
+     "gtin": "4988371024756"
+    },
+    {
+     "label": "ホワイト",
+     "sku": "ECAM22062W",
+     "gtin": "4988371024848"
+    }
+   ],
+   "url": "https://www.delonghi.com/ja-jp/p/magnifica-start-ecam22062b-magunifuika-suta%E3%83%BCto-%E5%85%A8%E8%87%AA%E5%8B%95ko%E3%83%BChi%E3%83%BCmashin-buratsuku/ECAM22062B.html",
+   "checkedAt": "2026-11-12",
+   "category": "全自動コーヒーマシン",
+   "spec": {
+    "ホットミルク飲料": "カプチーノ",
+    "製品の寸法": "幅240× 奥行440 ✕ 高さ350",
+    "重量": "9.2",
+    "カラー": "ブラック",
+    "仕上げ素材とカラー": "Glossy",
+    "水タンク容量（L）": "1.8",
+    "カス受け容量（回分）": "14",
+    "ポンプ圧（最大気圧）": "15",
+    "操作部": "Touch",
+    "電圧(V)": "100v",
+    "消費電力 (W)": "1450"
+   },
+   "power": "electric",
+   "sourceId": "tools-delonghi-2026-11-12",
+   "makerAlias": "デロンギ",
+   "sourceType": "official"
+  },
+  {
+   "id": "delonghi-ecam25023sb",
+   "kind": "coffeemaker",
+   "maker": "De'Longhi",
+   "name": "マグニフィカS スマート 全自動コーヒーマシン",
+   "variants": [
+    {
+     "label": "シルバーブラック",
+     "sku": "ECAM25023SB",
+     "gtin": "4988371024367"
+    }
+   ],
+   "url": "https://www.delonghi.com/ja-jp/p/magunifuikas-suma%E3%83%BCto-ecam25023sb-magunifuikas-suma%E3%83%BCto-%E5%85%A8%E8%87%AA%E5%8B%95ko%E3%83%BChi%E3%83%BCmashin-shiruba%E3%83%BCburatsuku/ECAM25023SB.html",
+   "checkedAt": "2026-11-12",
+   "category": "全自動コーヒーマシン",
+   "spec": {
+    "製品の寸法": "幅238×奥行440×高さ350",
+    "重量": "9.32",
+    "カラー": "シルバー",
+    "仕上げ素材とカラー": "Painted",
+    "水タンク容量（L）": "1.8",
+    "カス受け容量（回分）": "14",
+    "ポンプ圧（最大気圧）": "15",
+    "操作部": "Button &amp; Dial",
+    "電圧(V)": "100v",
+    "消費電力 (W)": "1450"
+   },
+   "power": "electric",
+   "sourceId": "tools-delonghi-2026-11-12",
+   "makerAlias": "デロンギ",
+   "sourceType": "official"
+  },
+  {
+   "id": "delonghi-ecam22112b",
+   "kind": "coffeemaker",
+   "maker": "De'Longhi",
+   "name": "マグニフィカS 全自動コーヒーマシン",
+   "variants": [
+    {
+     "label": "ブラック",
+     "sku": "ECAM22112B",
+     "gtin": "4988371024176"
+    },
+    {
+     "label": "ホワイト",
+     "sku": "ECAM22112W",
+     "gtin": "4988371024183"
+    }
+   ],
+   "url": "https://www.delonghi.com/ja-jp/p/magunifuikas-ecam22112b-magunifuikas-%E5%85%A8%E8%87%AA%E5%8B%95ko%E3%83%BChi%E3%83%BCmashin-buratsuku/ECAM22112B.html",
+   "checkedAt": "2026-11-12",
+   "category": "全自動コーヒーマシン",
+   "spec": {
+    "製品の寸法": "幅238×奥行430×高さ350",
+    "重量": "9.087",
+    "カラー": "ブラック",
+    "仕上げ素材とカラー": "Glossy",
+    "水タンク容量（L）": "18",
+    "カス受け容量（回分）": "14",
+    "操作部": "Button &amp; Dial",
+    "電圧(V)": "100v",
+    "消費電力 (W)": "1450"
+   },
+   "power": "electric",
+   "sourceId": "tools-delonghi-2026-11-12",
+   "makerAlias": "デロンギ",
+   "sourceType": "official"
+  },
+  {
+   "id": "delonghi-ecam22080gb",
+   "kind": "coffeemaker",
+   "maker": "De'Longhi",
+   "name": "マグニフィカスタート 全自動コーヒーマシン",
+   "variants": [
+    {
+     "label": "",
+     "sku": "ECAM22080GB",
+     "gtin": "4988371024909"
+    }
+   ],
+   "url": "https://www.delonghi.com/ja-jp/p/magnifica-start-ecam22080gb-magunifuikasuta%E3%83%BCto-%E5%85%A8%E8%87%AA%E5%8B%95ko%E3%83%BChi%E3%83%BCmashin/ECAM22080GB.html",
+   "checkedAt": "2026-11-12",
+   "category": "全自動コーヒーマシン",
+   "spec": {
+    "カラー": "Grey and black",
+    "ポンプ圧（最大気圧）": "15",
+    "電圧(V)": "100v",
+    "消費電力 (W)": "1450"
+   },
+   "power": "electric",
+   "sourceId": "tools-delonghi-2026-11-12",
+   "makerAlias": "デロンギ",
+   "sourceType": "official"
+  },
+  {
+   "id": "delonghi-ec9255jn-m",
+   "kind": "coffeemaker",
+   "maker": "De'Longhi",
+   "name": "ラ・スぺシャリスタ・アルテ イーヴォ",
+   "variants": [
+    {
+     "label": "",
+     "sku": "EC9255JN-M",
+     "gtin": "4988371025074"
+    }
+   ],
+   "url": "https://www.delonghi.com/ja-jp/p/la-specialista-arte-ec9255jn-ra%E3%83%BBsu%E3%81%BAshiyarisuta%E3%83%BBarute-i%E3%83%BCvuo/EC9255JN-M.html",
+   "checkedAt": "2026-11-12",
+   "spec": {
+    "定格周波数(Hz)": "50-60 HzHz",
+    "電圧(V)": "100v",
+    "製品管理番号": "0132126178",
+    "重量": "9.76",
+    "カラー": "メタル",
+    "素材": "Metal",
+    "ミルクシステム": "Manual",
+    "ボイラータイプ": "1 Thermoblock + 1 Heating Syst",
+    "Dose": "2",
+    "操作部": "Mechanical",
+    "ディスプレイ": "No Display"
+   },
+   "power": "electric",
+   "sourceId": "tools-delonghi-2026-11-12",
+   "makerAlias": "デロンギ",
+   "sourceType": "official"
+  },
+  {
+   "id": "delonghi-ec9155j-w",
+   "kind": "coffeemaker",
+   "maker": "De'Longhi",
+   "name": "ラ・スペシャリスタ・アルテ グラインダー付き エスプレッソ・カプチーノメーカー",
+   "variants": [
+    {
+     "label": "ホワイト",
+     "sku": "EC9155J-W",
+     "gtin": "4988371024800"
+    },
+    {
+     "label": "ブラックメタル",
+     "sku": "EC9155J-B",
+     "gtin": "4988371024794"
+    }
+   ],
+   "url": "https://www.delonghi.com/ja-jp/p/la-specialista-arte-ec9155j-w-ra%E3%83%BBsupeshiyarisuta%E3%83%BBarute-gurainda%E3%83%BC%E4%BB%98ki-esupuretsuso%E3%83%BBkapuchi%E3%83%BCnome%E3%83%BCka%E3%83%BC-howaito/EC9155J-W.html",
+   "checkedAt": "2026-11-12",
+   "category": "エスプレッソ・カプチーノメーカー",
+   "spec": {
+    "ポンプ圧（最大気圧）": "15",
+    "水タンク容量": "1.7",
+    "消費電力（W）": "1400",
+    "定格周波数(Hz)": "50-60 HzHz",
+    "電圧(V)": "100v",
+    "製品管理番号": "0132126089",
+    "製品の寸法": "幅285×奥行370×高さ400",
+    "重量": "9.76",
+    "カラー": "ホワイト",
+    "素材": "Metal and Plastic",
+    "ミルクシステム": "Manual",
+    "ボイラータイプ": "Thermoblock",
+    "Dose": "3",
+    "挽き目設定": "8",
+    "温度設定機能": "3",
+    "パーソナライズ": "✓",
+    "操作部": "Button &amp; Dial",
+    "タンパー": "Tamping Station"
+   },
+   "power": "electric",
+   "sourceId": "tools-delonghi-2026-11-12",
+   "makerAlias": "デロンギ",
+   "sourceType": "official"
+  },
+  {
+   "id": "delonghi-ec9355j-m",
+   "kind": "coffeemaker",
+   "maker": "De'Longhi",
+   "name": "ラ・スペシャリスタ・プレスティージオ グラインダー付き エスプレッソ・カプチーノメーカー",
+   "variants": [
+    {
+     "label": "メタルシルバー",
+     "sku": "EC9355J-M",
+     "gtin": "4988371024466"
+    }
+   ],
+   "url": "https://www.delonghi.com/ja-jp/p/la-specialista-prestigio-ec9355j-m-ra%E3%83%BBsupeshiyarisuta%E3%83%BBpuresutei%E3%83%BCjio-gurainda%E3%83%BC%E4%BB%98ki-esupuretsuso%E3%83%BBkapuchi%E3%83%BCnome%E3%83%BCka%E3%83%BC-metarushiruba%E3%83%BC/EC9355J-M.html",
+   "checkedAt": "2026-11-12",
+   "category": "エスプレッソ・カプチーノメーカー",
+   "spec": {
+    "水タンク容量": "2",
+    "消費電力（W）": "1450",
+    "定格周波数(Hz)": "50-60 HzHz",
+    "電圧(V)": "100v",
+    "製品管理番号": "0132126050",
+    "製品の寸法": "幅385×奥行370×高さ450",
+    "重量": "13.2",
+    "カラー": "メタル",
+    "素材": "Metal",
+    "ミルクシステム": "Manual",
+    "ボイラータイプ": "Thermoblock",
+    "Dose": "2",
+    "挽き目設定": "8",
+    "温度設定機能": "3",
+    "パーソナライズ": "✓ (MY button)",
+    "操作部": "Button &amp; Dial",
+    "ディスプレイ": "No Display",
+    "タンパー": "Tamping Station"
+   },
+   "power": "electric",
+   "sourceId": "tools-delonghi-2026-11-12",
+   "makerAlias": "デロンギ",
+   "sourceType": "official"
+  },
+  {
+   "id": "delonghi-exam44035b",
+   "kind": "coffeemaker",
+   "maker": "De'Longhi",
+   "name": "リヴェリア 全自動コーヒーマシン",
+   "variants": [
+    {
+     "label": "オニキスブラック",
+     "sku": "EXAM44035B",
+     "gtin": "4988371024855"
+    },
+    {
+     "label": "",
+     "sku": "EXAM44055B",
+     "gtin": "4988371025043"
+    },
+    {
+     "label": "サンドベージュ",
+     "sku": "EXAM44055BG",
+     "gtin": "4988371024879"
+    },
+    {
+     "label": "ペブルグレー",
+     "sku": "EXAM44055G",
+     "gtin": "4988371024862"
+    }
+   ],
+   "url": "https://www.delonghi.com/ja-jp/p/rivelia-exam44035b-rivueria-%E5%85%A8%E8%87%AA%E5%8B%95ko%E3%83%BChi%E3%83%BCmashin-onikisuburatsuku/EXAM44035B.html",
+   "checkedAt": "2026-11-12",
+   "category": "全自動コーヒーマシン",
+   "spec": {
+    "ホットコーヒー飲料": "アメリカーノ,カフェ・ジャポーネ,エスプレッソ,エスプレッソラージ",
+    "その他のレシピ": "給湯",
+    "製品の寸法": "幅250x奥行435x高380",
+    "重量": "9.8",
+    "カラー": "ブラック",
+    "仕上げ素材とカラー": "Matt",
+    "水タンク容量（L）": "1.4",
+    "カス受け容量（回分）": "10",
+    "ポンプ圧（最大気圧）": "19",
+    "操作部": "Touch",
+    "電圧(V)": "100v",
+    "消費電力 (W)": "1450",
+    "マイコーヒー設定": "No",
+    "マイメニュー設定": "4人のプロフィール設定"
+   },
+   "power": "electric",
+   "sourceId": "tools-delonghi-2026-11-12",
+   "makerAlias": "デロンギ",
+   "sourceType": "official"
+  },
+  {
+   "id": "delonghi-kg79jn",
+   "kind": "grinder",
+   "maker": "De'Longhi",
+   "name": "うす式コーヒーグラインダー",
+   "variants": [
+    {
+     "label": "ブラック",
+     "sku": "KG79JN",
+     "gtin": "4988371025036"
+    }
+   ],
+   "url": "https://www.delonghi.com/ja-jp/p/coffee-grinders-kg79j-%E3%81%86%E3%81%99%E5%BC%8Fko%E3%83%BChi%E3%83%BCgurainda%E3%83%BC-buratsuku/KG79JN.html",
+   "checkedAt": "2026-11-12",
+   "category": "コーヒーグラインダー",
+   "spec": {
+    "挽き刃材質": "Stainless Steel",
+    "グラインダー": "Flat burr",
+    "粒度目盛": "1 up to 16",
+    "コーヒーコンテナ（g）": "150",
+    "最大投入容量（カップ数）": "12",
+    "豆ホッパー容量（g）": "120",
+    "付属品含む（kg）": "1.5",
+    "消費電力（W）": "150W",
+    "定格周波数(Hz)": "50-60 HzHz",
+    "電圧(V)": "100v",
+    "製品管理番号": "0177111077",
+    "製品の寸法": "160x130x260"
+   },
+   "power": "electric",
+   "sourceId": "tools-delonghi-2026-11-12",
+   "makerAlias": "デロンギ",
+   "sourceType": "official"
+  },
+  {
+   "id": "delonghi-kg200jn",
+   "kind": "grinder",
+   "maker": "De'Longhi",
+   "name": "カッター式コーヒーグラインダー",
+   "variants": [
+    {
+     "label": "ブラック",
+     "sku": "KG200JN",
+     "gtin": "4988371024787"
+    }
+   ],
+   "url": "https://www.delonghi.com/ja-jp/p/coffee-grinders-kg200jn-katsuta%E3%83%BC%E5%BC%8Fko%E3%83%BChi%E3%83%BCgurainda%E3%83%BC-buratsuku/KG200JN.html",
+   "checkedAt": "2026-11-12",
+   "category": "コーヒーグラインダー",
+   "spec": {
+    "定格周波数(Hz)": "50-60 HzHz",
+    "電圧(V)": "100v",
+    "製品管理番号": "0177111068",
+    "製品の寸法": "幅110 x 奥行110 x 高さ230"
+   },
+   "power": "electric",
+   "sourceId": "tools-delonghi-2026-11-12",
+   "makerAlias": "デロンギ",
+   "sourceType": "official"
+  },
+  {
+   "id": "delonghi-kg366j",
+   "kind": "grinder",
+   "maker": "De'Longhi",
+   "name": "コーン式コーヒーグラインダー",
+   "variants": [
+    {
+     "label": "",
+     "sku": "KG366J",
+     "gtin": "4988371024305"
+    }
+   ],
+   "url": "https://www.delonghi.com/ja-jp/p/coffee-grinders-kg366j-ko%E3%83%BCn%E5%BC%8Fko%E3%83%BChi%E3%83%BCgurainda%E3%83%BC%E3%80%90%E8%B3%BC%E5%85%A5%E5%8D%8A%E5%B9%B4%E4%BB%A5%E5%86%85%E3%81%AEde%27longhifamily%E3%81%94%E7%99%BB%E9%8C%B2%E3%81%A7%EF%BC%93%E5%B9%B4%E4%BF%9D%E8%A8%BC%E3%80%91/KG366J.html",
+   "checkedAt": "2026-11-12",
+   "category": "コーヒーグラインダー",
+   "spec": {
+    "粒度目盛": "Yes",
+    "コーヒーコンテナ（g）": "110",
+    "最大投入容量（カップ数）": "12",
+    "豆ホッパー容量（g）": "310",
+    "付属品含む（kg）": "1.6",
+    "消費電力（W）": "130",
+    "定格周波数(Hz)": "50 / 60 HzHz",
+    "電圧(V)": "100v",
+    "製品管理番号": "0177111051",
+    "製品の寸法": "幅135×奥行195×高さ290"
+   },
+   "power": "electric",
+   "sourceId": "tools-delonghi-2026-11-12",
+   "makerAlias": "デロンギ",
+   "sourceType": "official"
+  },
+  {
+   "id": "delonghi-kg521j-m",
+   "kind": "grinder",
+   "maker": "De'Longhi",
+   "name": "デディカ コーン式コーヒーグラインダー",
+   "variants": [
+    {
+     "label": "メタルシルバー",
+     "sku": "KG521J-M",
+     "gtin": "4988371023971"
+    }
+   ],
+   "url": "https://www.delonghi.com/ja-jp/p/coffee-grinders-kg521j-m-dedeika-ko%E3%83%BCn%E5%BC%8Fko%E3%83%BChi%E3%83%BCgurainda%E3%83%BC-metarushiruba%E3%83%BC/KG521J-M.html",
+   "checkedAt": "2026-11-12",
+   "category": "コーヒーグラインダー",
+   "spec": {
+    "グラインダー": "Conical burr",
+    "粒度目盛": "1 up to 18",
+    "コーヒーコンテナ（g）": "170",
+    "最大投入容量（カップ数）": "14",
+    "豆ホッパー容量（g）": "350",
+    "付属品含む（kg）": "2.75",
+    "定格周波数(Hz)": "50 / 60 HzHz",
+    "電圧(V)": "100v",
+    "製品管理番号": "0177111047",
+    "製品の寸法": "幅155×奥行255×高さ385"
+   },
+   "power": "electric",
+   "sourceId": "tools-delonghi-2026-11-12",
+   "makerAlias": "デロンギ",
+   "sourceType": "official"
+  },
+  {
    "id": "fellow-shop-staggdripper",
    "kind": "dripper",
    "maker": "Fellow",
@@ -2389,6 +3485,101 @@
    },
    "sourceId": "tools-fuji-royal-2026-11-12",
    "makerAlias": "フジローヤル 富士珈機",
+   "sourceType": "official"
+  },
+  {
+   "id": "hario-cm-emc-02-b",
+   "kind": "coffeemaker",
+   "maker": "HARIO",
+   "name": "MUGEN Coffee Maker",
+   "variants": [
+    {
+     "label": "",
+     "sku": "EMC-02-B",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.hario.com/product/coffee/coffeemaker/EMC.html",
+   "checkedAt": "2026-11-12",
+   "power": "electric",
+   "sourceId": "tools-hario-coffeemakers-2026-11-12",
+   "makerAlias": "ハリオ",
+   "sourceType": "official"
+  },
+  {
+   "id": "hario-cm-evs-70sv-bt",
+   "kind": "coffeemaker",
+   "maker": "HARIO",
+   "name": "V60オートプアオーバーSmart7BT",
+   "variants": [
+    {
+     "label": "シルバー",
+     "sku": "EVS-70SV-BT",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.hario.com/product/coffee/coffeemaker/EVS-70SV-BT.html",
+   "checkedAt": "2026-11-12",
+   "power": "electric",
+   "sourceId": "tools-hario-coffeemakers-2026-11-12",
+   "makerAlias": "ハリオ",
+   "sourceType": "official"
+  },
+  {
+   "id": "hario-cm-eqs-110-mgr-bt",
+   "kind": "coffeemaker",
+   "maker": "HARIO",
+   "name": "V60オートプアオーバーSmartQ サマンサ",
+   "variants": [
+    {
+     "label": "メタリックグレー",
+     "sku": "EQS-110-MGR-BT",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.hario.com/product/coffee/coffeemaker/EQS.html",
+   "checkedAt": "2026-11-12",
+   "power": "electric",
+   "sourceId": "tools-hario-coffeemakers-2026-11-12",
+   "makerAlias": "ハリオ",
+   "sourceType": "official"
+  },
+  {
+   "id": "hario-cm-evcm2-5tb",
+   "kind": "coffeemaker",
+   "maker": "HARIO",
+   "name": "V60珈琲王2 コーヒーメーカー",
+   "variants": [
+    {
+     "label": "透明ブラック",
+     "sku": "EVCM2-5TB",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.hario.com/product/coffee/coffeemaker/EVCM2.html",
+   "checkedAt": "2026-11-12",
+   "power": "electric",
+   "sourceId": "tools-hario-coffeemakers-2026-11-12",
+   "makerAlias": "ハリオ",
+   "sourceType": "official"
+  },
+  {
+   "id": "hario-cm-exm-110-mgr-bt",
+   "kind": "coffeemaker",
+   "maker": "HARIO",
+   "name": "スマートX マイスター",
+   "variants": [
+    {
+     "label": "メタリックグレー",
+     "sku": "EXM-110-MGR-BT",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.hario.com/product/coffee/coffeemaker/EXM.html",
+   "checkedAt": "2026-11-12",
+   "power": "electric",
+   "sourceId": "tools-hario-coffeemakers-2026-11-12",
+   "makerAlias": "ハリオ",
    "sourceType": "official"
   },
   {
@@ -4347,6 +5538,82 @@
    "checkedAt": "2026-11-10",
    "sourceId": "tools-hario-2026-11-10",
    "makerAlias": "ハリオ",
+   "sourceType": "official"
+  },
+  {
+   "id": "hario-cm-eca-3-b",
+   "kind": "syphon",
+   "maker": "HARIO",
+   "name": "Electric Coffee Syphon",
+   "variants": [
+    {
+     "label": "ブラック",
+     "sku": "ECA-3-B",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.hario.com/product/coffee/coffeemaker/electric_coffee_syphon.html",
+   "checkedAt": "2026-11-12",
+   "power": "electric",
+   "sourceId": "tools-hario-coffeemakers-2026-11-12",
+   "makerAlias": "ハリオ",
+   "sourceType": "official"
+  },
+  {
+   "id": "kalita-cm-1907",
+   "kind": "coffeemaker",
+   "maker": "Kalita",
+   "name": "ET-102（ブラック）",
+   "category": "コーヒーメーカー",
+   "variants": [
+    {
+     "label": "",
+     "sku": "41005",
+     "gtin": "4901369509097"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/coffeemaker/1907",
+   "checkedAt": "2026-11-12",
+   "sourceId": "tools-kalita-coffeemakers-2026-11-12",
+   "makerAlias": "カリタ",
+   "sourceType": "official"
+  },
+  {
+   "id": "kalita-cm-1909",
+   "kind": "coffeemaker",
+   "maker": "Kalita",
+   "name": "EX-102N",
+   "category": "コーヒーメーカー",
+   "variants": [
+    {
+     "label": "",
+     "sku": "41043",
+     "gtin": "4901369509417"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/coffeemaker/1909",
+   "checkedAt": "2026-11-12",
+   "sourceId": "tools-kalita-coffeemakers-2026-11-12",
+   "makerAlias": "カリタ",
+   "sourceType": "official"
+  },
+  {
+   "id": "kalita-cm-1908",
+   "kind": "coffeemaker",
+   "maker": "Kalita",
+   "name": "MD-102N",
+   "category": "コーヒーメーカー",
+   "variants": [
+    {
+     "label": "",
+     "sku": "41047",
+     "gtin": "4901369509448"
+    }
+   ],
+   "url": "https://www.kalita.co.jp/products/coffeemaker/1908",
+   "checkedAt": "2026-11-12",
+   "sourceId": "tools-kalita-coffeemakers-2026-11-12",
+   "makerAlias": "カリタ",
    "sourceType": "official"
   },
   {
@@ -7217,6 +8484,188 @@
    "sourceId": "tools-melitta-grinders-2026-11-12",
    "makerAlias": "マールクーニック",
    "power": "electric",
+   "sourceType": "official"
+  },
+  {
+   "id": "melitta-cm-jet6",
+   "kind": "coffeemaker",
+   "maker": "Melitta",
+   "name": "JET6",
+   "variants": [
+    {
+     "label": "",
+     "sku": "",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.melitta.co.jp/melitta_pro/filtercoffeemachine/jet6/",
+   "checkedAt": "2026-11-12",
+   "sourceId": "tools-melitta-coffeemakers-2026-11-12",
+   "makerAlias": "メリタ",
+   "sourceType": "official"
+  },
+  {
+   "id": "melitta-cm-m150",
+   "kind": "coffeemaker",
+   "maker": "Melitta",
+   "name": "M150シリーズ",
+   "variants": [
+    {
+     "label": "",
+     "sku": "",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.melitta.co.jp/melitta_pro/filtercoffeemachine/m150/",
+   "checkedAt": "2026-11-12",
+   "sourceId": "tools-melitta-coffeemakers-2026-11-12",
+   "makerAlias": "メリタ",
+   "sourceType": "official"
+  },
+  {
+   "id": "melitta-cm-xt180urn",
+   "kind": "coffeemaker",
+   "maker": "Melitta",
+   "name": "XT180 TWC/TWB(アーンタイプ)",
+   "variants": [
+    {
+     "label": "",
+     "sku": "",
+     "gtin": ""
+    }
+   ],
+   "url": "https://www.melitta.co.jp/melitta_pro/filtercoffeemachine/xt180urn/",
+   "checkedAt": "2026-11-12",
+   "sourceId": "tools-melitta-coffeemakers-2026-11-12",
+   "makerAlias": "メリタ",
+   "sourceType": "official"
+  },
+  {
+   "id": "melitta-cm-new_aromafresh",
+   "kind": "coffeemaker",
+   "maker": "Melitta",
+   "name": "アロマフレッシュ(10杯用) アロマフレッシュ(6杯用)",
+   "variants": [
+    {
+     "label": "ブラック",
+     "sku": "AFG622-1B",
+     "gtin": "4902717229162"
+    }
+   ],
+   "url": "https://www.melitta.co.jp/melitta_hh/coffeemaker/new_aromafresh/",
+   "checkedAt": "2026-11-12",
+   "sourceId": "tools-melitta-coffeemakers-2026-11-12",
+   "makerAlias": "メリタ",
+   "sourceType": "official"
+  },
+  {
+   "id": "melitta-cm-easytop_therm_1002",
+   "kind": "coffeemaker",
+   "maker": "Melitta",
+   "name": "イージートップサーモ",
+   "variants": [
+    {
+     "label": "ブラック",
+     "sku": "LKT1002-B",
+     "gtin": "4902717230519"
+    }
+   ],
+   "url": "https://www.melitta.co.jp/melitta_hh/coffeemaker/easytop_therm_1002/",
+   "checkedAt": "2026-11-12",
+   "sourceId": "tools-melitta-coffeemakers-2026-11-12",
+   "makerAlias": "メリタ",
+   "sourceType": "official"
+  },
+  {
+   "id": "melitta-cm-twist",
+   "kind": "coffeemaker",
+   "maker": "Melitta",
+   "name": "ツイスト",
+   "variants": [
+    {
+     "label": "ジェットブラック",
+     "sku": "SCG58-3B",
+     "gtin": "4902717222880"
+    },
+    {
+     "label": "ステンレス",
+     "sku": "SCG58-1S",
+     "gtin": "4902717222873"
+    },
+    {
+     "label": "ルビーレッド",
+     "sku": "SCG58-5R",
+     "gtin": "4902717222897"
+    }
+   ],
+   "url": "https://www.melitta.co.jp/melitta_hh/coffeemaker/twist/",
+   "checkedAt": "2026-11-12",
+   "sourceId": "tools-melitta-coffeemakers-2026-11-12",
+   "makerAlias": "メリタ",
+   "sourceType": "official"
+  },
+  {
+   "id": "melitta-cm-meus",
+   "kind": "coffeemaker",
+   "maker": "Melitta",
+   "name": "ミアス",
+   "variants": [
+    {
+     "label": "ブラック",
+     "sku": "MKM4101-B",
+     "gtin": "4902717222576"
+    }
+   ],
+   "url": "https://www.melitta.co.jp/melitta_hh/coffeemaker/meus/",
+   "checkedAt": "2026-11-12",
+   "sourceId": "tools-melitta-coffeemakers-2026-11-12",
+   "makerAlias": "メリタ",
+   "sourceType": "official"
+  },
+  {
+   "id": "melitta-cm-allfiplus",
+   "kind": "coffeemaker",
+   "maker": "Melitta",
+   "name": "メリタ オルフィプラス",
+   "variants": [
+    {
+     "label": "ブラック",
+     "sku": "SKT53-1B",
+     "gtin": "4902717229148"
+    },
+    {
+     "label": "ホワイト",
+     "sku": "SKT53-3W",
+     "gtin": "4902717229155"
+    }
+   ],
+   "url": "https://www.melitta.co.jp/melitta_hh/coffeemaker/allfiplus/",
+   "checkedAt": "2026-11-12",
+   "sourceId": "tools-melitta-coffeemakers-2026-11-12",
+   "makerAlias": "メリタ",
+   "sourceType": "official"
+  },
+  {
+   "id": "melitta-cm-noarplus",
+   "kind": "coffeemaker",
+   "maker": "Melitta",
+   "name": "メリタ ノアプラス",
+   "variants": [
+    {
+     "label": "ブラック",
+     "sku": "SKT55-1B",
+     "gtin": "4902717229124"
+    },
+    {
+     "label": "ホワイト",
+     "sku": "SKT55-3W",
+     "gtin": "4902717229131"
+    }
+   ],
+   "url": "https://www.melitta.co.jp/melitta_hh/coffeemaker/noarplus/",
+   "checkedAt": "2026-11-12",
+   "sourceId": "tools-melitta-coffeemakers-2026-11-12",
+   "makerAlias": "メリタ",
    "sourceType": "official"
   },
   {

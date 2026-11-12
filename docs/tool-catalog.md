@@ -1,6 +1,6 @@
 # 器具カタログ(data/tools.json)
 
-設定「マイツール」の追加画面で、ドリッパー・ペーパー・コーヒーミルを、名前の一部やJAN(GTIN)から選んで登録するための、メーカー公式の情報のカタログ。
+設定「マイツール」の追加画面で、ドリッパー・サイフォン・フレンチプレス・エアロプレス・コーヒーメーカー・ペーパー・コーヒーミルを、名前の一部やJAN(GTIN)から選んで登録するための、メーカー公式の情報のカタログ。
 アプリは、追加画面を開いたときに、GitHub上の `data/tools.json` を1回だけ取得する(商品データと同じ配り方)。取得できなければ、候補が出ないだけで、手入力の登録はできる。
 
 ## 方針
@@ -75,7 +75,12 @@ py -X utf8 scripts/build_tools_catalog.py hario-shop --from-file tools-hario-sho
 | Mahlkönig・Dalla Corte(電動グラインダー) | 17製品 | 8 | メリタジャパンの公式サイト(melitta.co.jp/mahlkonig/・/dallacorte/)の製品ページ | EK43・EK Omnia・X54・X64・E65・E80・PEAK・DC MAX・DC one など。JANは、家庭用・一部の機種だけ。Sync Scale(スケール)は除外。`melitta-grinders` |
 | Bodum(電動グラインダー) | 5商品 | 3 | 公式オンラインショップの「Electric Coffee Grinders」の商品ページに表示される値を、ブラウザで開いて読み取った記録 | BISTRO(ブレード式3・バー式2)。バー式(10903)は、ページにEANが表示されない。`bodum-grinders --from-file tools-bodum-grinders.json` |
 | フジローヤル(富士珈機。業務用の電動ミル) | 5製品(R-220 みるっこ・R-300・R-440・R-750・FH-750) | 0 | 公式サイト(fuji-royal.jp/products/mill/)の製品ページの仕様表 | 型式・サイズ・重量・粉砕能力・ホッパー容量・電源・定格電力・カラーを、`spec` に保存(JANは、公式サイトに無い)。カラーは、色ごとの型番にした。`fuji-royal`。公式のオンラインストア(fuji-royal.stores.jp)は、この環境から403で取得できなかった |
-| Bonmac(ボンマック。ラッキーコーヒーマシンの自社ブランド) | 24製品(グラインダー6・光サイフォン2・業務用ペーパーフィルター16) | 0 | 公式サイト(lucky-coffee-machine.co.jp)の製品ページ | 製品データの表(電源・消費電力・刃の形状・グラインド能力・寸法・重量・ホッパー容量・杯数・枚数・対応機種など)を、`spec` に保存。製品コードを `sku` に。JANは、公式サイトに無い。「マシンを探す」の一覧は、スクリプトで描画されるため、ブラウザで一覧を開いて確認した商品番号を、スクリプトに書いてある(2026-11-12)。**載せていないもの**: コーヒーブルーワー(BMP-2000Z・BM-2030・BM-2100・BM-3100)・全自動ドリップ式コーヒーマシン(BM-SAD2)・ガラスデカンタ・BM-SAD2のオプション(マイツールの種類に無いため)。`bonmac` |
+| Bonmac(ボンマック。ラッキーコーヒーマシンの自社ブランド) | 29製品(グラインダー6・光サイフォン2・コーヒーメーカー5・業務用ペーパーフィルター16) | 0 | 公式サイト(lucky-coffee-machine.co.jp)の製品ページ | 製品データの表(電源・消費電力・刃の形状・グラインド能力・寸法・重量・ホッパー容量・杯数・枚数・対応機種など)を、`spec` に保存。製品コードを `sku` に。JANは、公式サイトに無い。「マシンを探す」の一覧は、スクリプトで描画されるため、ブラウザで一覧を開いて確認した商品番号を、スクリプトに書いてある(2026-11-12)。コーヒーブルーワー(BM-2030・BM-2100・BM-3100・BMP-2000Z)と全自動ドリップ式コーヒーマシン(BM-SAD2)は、コーヒーメーカーとして載せた(2026-11-12)。**載せていないもの**: ガラスデカンタ・BM-SAD2のオプション・リフレッシュ品。`bonmac` |
+| コーヒーメーカー: Melitta(家庭用・業務用) | 9製品 | 家庭用の6製品に、JANあり(型番ごと) | メリタジャパンの公式サイト(melitta.co.jp。家庭用 `/melitta_hh/coffeemaker/`・業務用 `/melitta_pro/filtercoffeemachine/`)の製品ページ「スペック」の表 | 家庭用: オルフィプラス・イージートップサーモ・ミアス・アロマフレッシュ・ノアプラス・ツイスト。業務用: JET6・M150・XT180(アーン)。業務用は、型番・JANが表に無いものが多い(XT180のガラス製は、表なし)。JET6専用のショップグラインダーは、グラインダーではなくカタログから除外。`melitta-coffeemakers` |
+| コーヒーメーカー: Kalita | 3製品 | 3 | 公式サイト(kalita.co.jp/products/coffeemaker/)の製品ページ | ET-102・EX-102N・MD-102N。「商品コード」「JANコード」の表記から。`kalita-coffeemakers` |
+| コーヒーメーカー: HARIO | 5製品(+電動コーヒーサイフォン1はサイフォンに) | 0 | 公式サイト(hario.com/product/coffee/coffeemaker/)の製品ページ | EMC-02-B(MUGEN)・EQS-110-MGR-BT(SmartQ)・EVCM2-5TB(珈琲王2)・EVS-70SV-BT(Smart7BT)・EXM-110-MGR-BT(スマートX)。ECA-3-B は電動サイフォンのため種類は「サイフォン」。JANは、公式の製品ページに無い。`hario-coffeemakers` |
+| コーヒーメーカー: Bodum | 2製品(BISTRO 電動コーヒーメーカー 1.5 L・2色) | 2 | 公式オンラインショップの商品ページの「商品番号」「EAN」を、ブラウザで開いて読み取った記録 | `bodum-coffeemakers --from-file tools-bodum-coffeemakers.json`。EANは12桁(UPC-A) |
+| コーヒーメーカー・グラインダー: De'Longhi(デロンギ) | 25製品(49型番。コーヒーメーカー21・グラインダー4。全自動マシン・エスプレッソ・カプチーノメーカーを含む) | 49 | 公式サイト(delonghi.com/ja-jp)の商品ページ。一覧は公式の商品サイトマップ(/ja-jp/sitemap-ja-jp-product-sitemap-0.xml)。robots.txt は商品ページを禁止していない | ページに埋め込まれた商品データの `ean`(JAN。デロンギ日本の 4988371…。全件チェックデジットが合う)・商品名・型番(subModelIdentifier)と、仕様の表(消費電力・電圧・寸法・重量など)を `spec` に保存。色違いは、型番ごとの変種(色の名前は、商品名の末尾から)。取るのは、型番の頭が EC・EM・EXAM・ECAM・ETAM・ICM・ICMI・COX(コーヒーメーカー)と KG(グラインダー)のもの。ミルクコンテナ・ヒーター・豆・カップ・アクセサリーは除外。取得は1.5秒間隔。`delonghi`(`--reuse` で、保存した原文から作り直せる) |
 
 ### 既知の注意
 - Kalitaの公式ページで、**102-D と 102-DL に、同じJAN(4901369503026)が付いている**。公式の記載のまま載せている(`npm run tools:check` が警告を出す)。JANから照合すると、先に見つかった方が出る。
@@ -93,6 +98,13 @@ py -X utf8 scripts/build_tools_catalog.py hario-shop --from-file tools-hario-sho
 - **次の候補(取得コードは用意済み。利用者のPCで、ブラウザの書き出しが必要)**: Wilfa(wilfa.com)・Niche Zero(nichecoffee.co.uk)・TWINBIRD(twinbird.jp)。`shopify-export.js` に対応済み。実行: `py -X utf8 scripts/build_tools_catalog.py wilfa --from-file tools-wilfa.json --dry-run`(niche・twinbirdも同様)。
 - **公式サイトにJANが載らない国内メーカー**(De'Longhi・Cores・Siroca など): JANは、販売店の掲載(量販店・通販)にあるが、公式ではない。使うかどうかは、利用者の判断(これまでの方針は、公式を優先)。
 - ツインバードの CM-D457B は、ミル内蔵の全自動コーヒーメーカーで、グラインダーではない。
+
+## コーヒーメーカーの収録の状況(2026-11-12)
+- 種類 `coffeemaker`(マイツールの「コーヒーメーカー」)。テイスティングログの「抽出方法」でも選べる(抽出の器具として)。
+- 公式サイトから取れたのは、Melitta・Kalita・Bonmac・HARIO・Bodum(上の表)。
+- **次の候補(取得コードは用意済み。利用者のPCで、ブラウザの書き出しが必要)**: Fellow(Aiden)・Wilfa(Svart Precision)・TWINBIRD(ミル付き全自動コーヒーメーカー)など。`shopify-export.js` の候補の判定にコーヒーメーカーの語を足し、`shopify_kind_en`・`shopify_kind_grinder_only` が `coffeemaker` を返すようにした(Fellowは、同じメーカーの項目が入れ替わる方式のため、書き出しを再実行して、`fellow --from-file` を実行し直す)。
+- **De'Longhi**: 取り込み済み(上の表。公式の商品ページにJANあり。2026-11-12)。エスプレッソ・全自動マシンも、種類は「コーヒーメーカー」に入れた。
+- **公式サイトにJANが載らない国内メーカー**(Siroca・パナソニック・象印・タイガー・Cuisinart など): 公式の製品ページに、JANが見当たらなかった(2026-11-12)。JANは、販売店の掲載にあるが、公式ではない。使うかどうかは、利用者の判断。
 
 ## 未収録(次の手)
 - **小川珈琲(エアロプレス)**: 取り込み済み(上の表)。

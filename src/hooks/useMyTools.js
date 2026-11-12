@@ -8,6 +8,7 @@ export const TOOL_KINDS = [
   { id: "syphon", label: "サイフォン", example: "例: コーノ式 SKD型 2人用サイフォンセット", brewer: true },
   { id: "frenchpress", label: "フレンチプレス", example: "例: ボダム CHAMBORD 0.35L", brewer: true },
   { id: "aeropress", label: "エアロプレス", example: "例: AeroPress オリジナル", brewer: true },
+  { id: "coffeemaker", label: "コーヒーメーカー", example: "例: メリタ アロマフレッシュ、ツインバード 全自動コーヒーメーカー", brewer: true },
   { id: "paper", label: "ペーパー", example: "例: HARIO V60用ペーパーフィルター 02" },
   { id: "grinder", label: "コーヒーミル（グラインダー）", example: "例: タイムモア C3、コマンダンテ C40、フェロー Ode" },
 ];

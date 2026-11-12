@@ -430,6 +430,8 @@ def shopify_kind_en(p: dict):
         return "dripper"
     if re.search(r"grinder|coffee mill|\bmill\b", title, flags=re.I):
         return "grinder"
+    if re.search(r"coffee ?maker|coffee brewer|drip brewer|precision brewer|\baiden\b|moccamaster|pour[- ]?over (machine|brewer)", title, flags=re.I):
+        return "coffeemaker"
     return None
 
 
@@ -472,6 +474,9 @@ def shopify_kind_grinder_only(p: dict):
         return None
     if re.search(r"grinder|\bmill\b|グラインダー|コーヒーミル|電動ミル|ミル\b", title, flags=re.I):
         return "grinder"
+    # コーヒーメーカー本体(部品・付属品は、上の除外で、省かれる)
+    if re.search(r"coffee ?maker|coffee brewer|precision brewer|コーヒーメーカー|全自動コーヒー|コーヒーマシン", title, flags=re.I):
+        return "coffeemaker"
     return None
 
 
@@ -1110,10 +1115,13 @@ BONMAC_IDS = {
     "879583": "paper", "879652": "paper", "879651": "paper", "879650": "paper", "879649": "paper", "879648": "paper",
     "858319": "paper", "897448": "paper", "858318": "paper", "897447": "paper",
     "816137": "paper", "816133": "paper", "816136": "paper", "816132": "paper", "816135": "paper", "816131": "paper",
+    # コーヒーブルーワー・全自動ドリップ式コーヒーマシン(BM-SAD2。リフレッシュ品 000048 と、オプション 878213・878214 は、載せない)
+    "879416": "coffeemaker", "858165": "coffeemaker", "818621": "coffeemaker", "879639": "coffeemaker", "852758": "coffeemaker",
 }
 
 
-BONMAC_LABELS = ["電源・消費電力", "刃の形状", "グラインド能力", "製品コード", "寸法", "重量", "豆ホッパー容量", "豆ホッパー数", "ケース入数", "対応機種", "杯数", "枚数"]
+BONMAC_LABELS = ["電源・消費電力", "刃の形状", "グラインド能力", "製品コード", "寸法", "重量", "豆ホッパー容量", "豆ホッパー数", "ケース入数", "対応機種", "杯数", "枚数",
+                 "給水", "排水", "水タンク容量", "推奨抽出杯数", "カス受け容量", "ボイラー容量"]
 BONMAC_STOP = {"RECOMMEND", "お問い合わせ", "GALLERY", "コーヒーマシンを探す"}
 
 
@@ -1152,7 +1160,7 @@ def bonmac(dry: bool, reuse: bool = False):
     if reuse:
         raw = json.loads(sorted((ROOT / "source-archive").glob("tools-bonmac-2*"))[-1].joinpath("original.bin").read_text(encoding="utf-8"))["pages"]
         return {"maker": "Bonmac", "sourceUrl": f"{BONMAC_BASE}/brands/bonmac/", "raw": None, "items": [i for pg in raw for i in [bonmac_item(pg)] if i], "merge": "add"}
-    print(f"ボンマック: 製品ページ {len(BONMAC_IDS)} 件(グラインダー {sum(1 for k in BONMAC_IDS.values() if k == 'grinder')}・光サイフォン {sum(1 for k in BONMAC_IDS.values() if k == 'syphon')}・ペーパー {sum(1 for k in BONMAC_IDS.values() if k == 'paper')})")
+    print(f"ボンマック: 製品ページ {len(BONMAC_IDS)} 件(グラインダー {sum(1 for k in BONMAC_IDS.values() if k == 'grinder')}・光サイフォン {sum(1 for k in BONMAC_IDS.values() if k == 'syphon')}・ペーパー {sum(1 for k in BONMAC_IDS.values() if k == 'paper')}・コーヒーメーカー {sum(1 for k in BONMAC_IDS.values() if k == 'coffeemaker')})")
     if dry:
         return None
     pages = []
@@ -1190,10 +1198,259 @@ def tag_source_type(items: list):
     return n
 
 
-# 検索用: メーカー名の日本語の読み
-MAKER_ALIAS = {"HARIO": "ハリオ", "Kalita": "カリタ", "Melitta": "メリタ", "1Zpresso": "ワンゼットプレッソ", "TIMEMORE": "タイムモア", "Fellow": "フェロー", "ORIGAMI": "オリガミ", "珈琲サイフオン": "コーノ式 KONO サイフオン", "AeroPress": "エアロプレス", "Bodum": "ボダム", "Comandante": "コマンダンテ", "Mahlkönig": "マールクーニック", "Dalla Corte": "ダラコルテ", "Fuji Royal": "フジローヤル 富士珈機", "Bonmac": "ボンマック", "Wilfa": "ウィルファ", "Niche Zero": "ニッチゼロ ニッチ", "TWINBIRD": "ツインバード"}
+# ---------------------------------------------------------------- コーヒーメーカー(kind: coffeemaker)
+# メリタジャパン(家庭用 /melitta_hh/coffeemaker/、業務用 /melitta_pro/filtercoffeemachine/)と、Kalita(/products/coffeemaker/)の公式サイトの製品ページ。
+MELITTA_CM_DIRS = [("melitta_hh/coffeemaker", "メリタ(家庭用)"), ("melitta_pro/filtercoffeemachine", "メリタ(業務用)")]
+# フレンチプレス(frenchpress)のページは、コーヒーメーカーではない
+MELITTA_CM_SKIP = {"feed", "frenchpress"}
 
-MAKERS = {"hario": hario, "kalita": kalita, "melitta": melitta, "1zpresso": z1presso, "coffee-syphon": coffee_syphon, "bodum": bodum, "crema-comandante": crema_comandante, "comandante-x25": comandante_x25, "crema-timemore": crema_timemore, "kalita-business-mill": kalita_business_mill, "melitta-grinders": melitta_grinders, "bodum-grinders": bodum_grinders, "fuji-royal": fuji_royal, "bonmac": bonmac, "timemore-extra": timemore_extra, **{k: shopify(k) for k in SHOPIFY}}
+
+def melitta_coffeemakers(dry: bool, reuse: bool = False):
+    if reuse:
+        raw = json.loads(sorted((ROOT / "source-archive").glob("tools-melitta-coffeemakers-2*"))[-1].joinpath("original.bin").read_text(encoding="utf-8"))["pages"]
+        items = []
+        for pg in raw:
+            if "grinder" in pg["url"]:
+                continue
+            for it in melitta_items({**pg, "kind": "coffeemaker"}):
+                it["id"] = "melitta-cm-" + pg["url"].rstrip("/").rsplit("/", 1)[-1]
+                items.append(it)
+        return {"maker": "Melitta", "sourceUrl": f"{MELITTA_BASE}/melitta_hh/coffeemaker/", "raw": None, "items": items, "merge": "add"}
+    pages = []
+    for d, label in MELITTA_CM_DIRS:
+        time.sleep(DELAY)
+        body = get(f"{MELITTA_BASE}/{d}/").decode("utf-8", errors="replace")
+        slugs = sorted(x for x in set(re.findall(rf'href="{re.escape(MELITTA_BASE)}/{re.escape(d)}/([a-z0-9_-]+)/"', body)) - MELITTA_CM_SKIP if "grinder" not in x)
+        pages += [{"dir": d, "url": f"{MELITTA_BASE}/{d}/{sl}/"} for sl in slugs]
+        print(f"{label}: 累計 {len(pages)} ページ")
+    if dry:
+        return None
+    items = []
+    for n, pg in enumerate(pages, 1):
+        time.sleep(DELAY)
+        try:
+            pg["spec"] = melitta_spec(get(pg["url"]).decode("utf-8", errors="replace"))
+        except Exception as e:  # noqa: BLE001
+            print(f"  取得失敗 {pg['url']}: {e}")
+            pg["spec"] = None
+        got = melitta_items({**pg, "kind": "coffeemaker"})
+        for it in got:
+            it["id"] = "melitta-cm-" + pg["url"].rstrip("/").rsplit("/", 1)[-1]
+        items += got
+        print(f"  [{n}/{len(pages)}] {pg['url'].rstrip('/').rsplit('/', 1)[-1]}: {', '.join(g['name'] + '×' + str(len(g['variants'])) for g in got) or '表なし/対象外'}")
+    return {"maker": "Melitta", "sourceUrl": f"{MELITTA_BASE}/melitta_hh/coffeemaker/", "raw": {"pages": pages}, "items": items, "merge": "add"}
+
+
+def kalita_coffeemakers(dry: bool, reuse: bool = False):
+    if reuse:
+        raw = json.loads(sorted((ROOT / "source-archive").glob("tools-kalita-coffeemakers-2*"))[-1].joinpath("original.bin").read_text(encoding="utf-8"))["pages"]
+        items = [i for pg in raw for i in [kalita_cm_item(pg)] if i]
+        return {"maker": "Kalita", "sourceUrl": f"{KALITA_BASE}/products/coffeemaker/", "raw": None, "items": items, "merge": "add"}
+    time.sleep(DELAY)
+    body = get(f"{KALITA_BASE}/products/coffeemaker/").decode("utf-8", errors="replace")
+    ids = sorted(set(re.findall(r"/products/coffeemaker/(\d+)", body)))
+    print(f"Kalita コーヒーメーカー: {len(ids)} ページ")
+    if dry:
+        return None
+    raw = []
+    for pid in ids:
+        url = f"{KALITA_BASE}/products/coffeemaker/{pid}"
+        time.sleep(DELAY)
+        page_body = get(url)
+        text = html_text(page_body)
+        m = re.search(r"<title>\s*(.*?)\s*(?:\||｜)", page_body.decode("utf-8", errors="replace"), flags=re.S)
+        code = re.search(r"商品コード[:：]\s*([0-9A-Za-z-]+)", text)
+        jan = re.search(r"JANコード[:：]\s*([0-9 ]{8,20})", text)
+        gtin = re.sub(r"\s", "", jan.group(1)) if jan else ""
+        if gtin and not valid_gtin(gtin):
+            print(f"  警告: {url} のJANが不正のため載せません: {gtin}")
+            gtin = ""
+        raw.append({"url": url, "pid": pid, "title": clean(m.group(1)) if m else "", "productCode": code.group(1) if code else "", "jan": gtin, "text": text[:3000]})
+        print(f"  {pid}: {raw[-1]['title']} JAN={gtin or '-'}")
+    items = [i for pg in raw for i in [kalita_cm_item(pg)] if i]
+    return {"maker": "Kalita", "sourceUrl": f"{KALITA_BASE}/products/coffeemaker/", "raw": {"pages": raw}, "items": items, "merge": "add"}
+
+
+def kalita_cm_item(pg: dict):
+    if not pg.get("title"):
+        return None
+    m = re.search(r"ホーム >\s*(.*?)\s*-->", pg["text"])
+    return {"id": f"kalita-cm-{pg['pid']}", "kind": "coffeemaker", "maker": "Kalita", "name": pg["title"], "category": clean(m.group(1)) if m else "",
+            "variants": [{"label": "", "sku": pg.get("productCode", ""), "gtin": pg.get("jan", "")}], "url": pg["url"], "checkedAt": TODAY}
+
+
+# ---------------------------------------------------------------- HARIO コーヒーメーカー(公式サイト hario.com の製品情報。JANは、公式サイトの製品ページに無いため、空にする)
+HARIO_CM_PAGES = [
+    # (ページ名, 種類) 電動サイフォンは、サイフォン(syphon)にする
+    ("EMC", "coffeemaker"), ("EQS", "coffeemaker"), ("EVCM2", "coffeemaker"), ("EVS-70SV-BT", "coffeemaker"), ("EXM", "coffeemaker"),
+    ("electric_coffee_syphon", "syphon"),
+]
+
+
+def hario_cm_items(pages: list):
+    items = []
+    for pg in pages:
+        text = pg["text"]
+        series = pg["title"]
+        groups = {}
+        for name, code, color in hario_blocks(text, series):
+            if "。" in name:
+                name = clean(name.rsplit("。", 1)[-1])
+            if not name or len(name) > 60:
+                name = series
+            groups.setdefault(name, []).append({"label": color, "sku": code, "gtin": ""})
+        for name, variants in groups.items():
+            items.append({"id": f"hario-cm-{variants[0]['sku'].lower()}", "kind": pg["kind"], "maker": "HARIO", "name": name,
+                          "variants": variants, "url": pg["url"], "checkedAt": TODAY, "power": "electric"})
+    return items
+
+
+def hario_coffeemakers(dry: bool, reuse: bool = False):
+    if reuse:
+        raw = json.loads(sorted((ROOT / "source-archive").glob("tools-hario-coffeemakers-2*"))[-1].joinpath("original.bin").read_text(encoding="utf-8"))["pages"]
+        return {"maker": "HARIO", "sourceUrl": f"{HARIO_BASE}/product/coffee/", "raw": None, "items": hario_cm_items(raw), "merge": "add"}
+    print(f"HARIO コーヒーメーカー: 製品ページ {len(HARIO_CM_PAGES)} 件")
+    if dry:
+        return None
+    pages = []
+    for slug, kind in HARIO_CM_PAGES:
+        time.sleep(DELAY)
+        url = f"{HARIO_BASE}/product/coffee/coffeemaker/{slug}.html"
+        body = get(url).decode("utf-8", errors="replace")
+        m = re.search(r"<title>\s*(.*?)\s*(?:\||｜)", body, flags=re.S)
+        pages.append({"url": url, "kind": kind, "title": clean(m.group(1)) if m else "", "text": html_text(body.encode("utf-8"))[:12000]})
+        print(f"  {slug}: {pages[-1]['title']}")
+    items = hario_cm_items(pages)
+    for it in items:
+        print(f"    {it['kind']:11s} {it['name']}: {', '.join(v['sku'] for v in it['variants'])}")
+    return {"maker": "HARIO", "sourceUrl": f"{HARIO_BASE}/product/coffee/", "raw": {"pages": pages}, "items": items, "merge": "add"}
+
+
+# ---------------------------------------------------------------- ボダム 電動コーヒーメーカー(公式オンラインショップの「Electric Coffee Makers」。ブラウザで読み取った記録から)
+# 使い方: py -X utf8 scripts/build_tools_catalog.py bodum-coffeemakers --from-file tools-bodum-coffeemakers.json
+def bodum_coffeemakers(dry: bool, reuse: bool = False, from_file=None):
+    if from_file:
+        exported = json.loads(Path(from_file).read_text(encoding="utf-8"))
+        records = exported["records"]
+    elif reuse:
+        records = json.loads(sorted((ROOT / "source-archive").glob("tools-bodum-coffeemakers-2*"))[-1].joinpath("original.bin").read_text(encoding="utf-8"))["records"]
+        exported = None
+    else:
+        raise SystemExit("bodum-coffeemakers は、ブラウザで読み取った記録のファイルから作ります: --from-file tools-bodum-coffeemakers.json")
+    items = []
+    for r in records:
+        ean = re.sub(r"[\s-]", "", r.get("ean") or "")
+        if ean and not valid_gtin(ean):
+            print(f"  警告: {r['sku']} のEANが不正のため載せません: {ean}")
+            ean = ""
+        items.append({"id": "bodum-" + re.sub(r"[^a-z0-9]+", "-", r["sku"].lower()).strip("-"), "kind": r.get("kind", "coffeemaker"), "maker": "Bodum", "power": "electric",
+                      "name": clean(r["name"]), "variants": [{"label": r.get("color") or "", "sku": r["sku"], "gtin": ean}], "url": r["url"], "checkedAt": TODAY})
+    print(f"Bodum 電動コーヒーメーカー: {len(items)} 商品 / EANあり {sum(1 for i in items if i['variants'][0]['gtin'])}")
+    if dry:
+        return None
+    return {"maker": "Bodum", "sourceUrl": "https://www.bodum.com/jp/ja/coffee/electric-coffee-makers", "raw": ({"records": records, "note": exported.get("note", "")} if exported else None), "items": items, "merge": "add"}
+
+
+# ---------------------------------------------------------------- デロンギ(公式サイト delonghi.com/ja-jp の商品ページ)
+# 商品ページの内容に、「ean」(JAN)・商品名・型番(subModelIdentifier)・仕様の表がある。robots.txt は、商品ページを禁止していない。
+# 商品一覧は、公式の商品サイトマップ(/ja-jp/sitemap-ja-jp-product-sitemap-0.xml)から。型番の頭が、下の表のものだけを取る(ミルクコンテナ・ヒーター・豆などは、取らない)。
+DELONGHI_BASE = "https://www.delonghi.com"
+DELONGHI_SITEMAP = f"{DELONGHI_BASE}/ja-jp/sitemap-ja-jp-product-sitemap-0.xml"
+DELONGHI_KINDS = [  # (型番の頭の正規表現, 種類)
+    (r"^(EC|EM|EXAM|ECAM|ETAM|ICM|ICMI|COX)[0-9]", "coffeemaker"),
+    (r"^KG[0-9]", "grinder"),
+]
+DELONGHI_NOUN = re.compile(r"(全自動コーヒーマシン|ドリップコーヒーメーカー|エスプレッソ・カプチーノメーカー|カプチーノメーカー|コーヒーマシン|コーヒーメーカー|コーヒーグラインダー)")
+
+
+def delonghi_file(url: str) -> str:
+    return url.split("?")[0].rsplit("/", 1)[-1].replace(".html", "")
+
+
+def delonghi_kind(sku: str):
+    for pat, kind in DELONGHI_KINDS:
+        if re.search(pat, sku):
+            return kind
+    return None
+
+
+def delonghi_page(url: str) -> dict:
+    body = get_plain(url).decode("utf-8", errors="replace")
+    ean = re.search(r'"ean":"(\d+)"', body)
+    pid = re.search(r'"ean":"\d+"[^}]{0,200}?"id":"(\d{6,})"', body)
+    name = re.search(r'"minOrderQuantity":1,"name":"(.*?)","price"', body)
+    sub = re.search(r'"subModelIdentifier","values":\[\{"value":"([^"]*)"', body)
+    specs = {}
+    for lab, val in re.findall(r'<h4 class="chakra-text[^"]*">([^<]+)</h4><p class="chakra-text[^"]*">([^<]*)</p>', body):
+        lab, val = clean(lab), clean(val)
+        if lab and val and lab not in specs:
+            specs[lab] = val
+    return {
+        "url": url, "ean": ean.group(1) if ean else "", "pid": pid.group(1) if pid else "",
+        "name": clean(json.loads('"' + name.group(1) + '"')) if name else "", "sku": sub.group(1) if sub else "",
+        "spec": dict(list(specs.items())[:40]),
+    }
+
+
+def delonghi_items(pages: list):
+    groups = {}
+    for pg in pages:
+        sku = pg["sku"] or delonghi_file(pg["url"])
+        kind = delonghi_kind(sku)
+        if not kind or not pg["name"]:
+            continue
+        name = clean(re.sub(r"【[^】]*】", "", pg["name"]))
+        if re.match(r"^[A-Z]{2,5}[0-9][0-9A-Z-]* ", name):  # 商品名の頭の型番は、取る(型番は、variantsのskuに入れる)
+            name = clean(name.split(" ", 1)[1])
+        m = DELONGHI_NOUN.search(name)
+        series, label = (clean(name[: m.end()]), clean(name[m.end():])) if m else (name, "")
+        gtin = pg["ean"] if valid_gtin(pg["ean"]) else ""
+        if pg["ean"] and not gtin:
+            print(f"  警告: {pg['url']} のJANが不正のため載せません: {pg['ean']}")
+        g = groups.setdefault((kind, series), {"pages": [], "variants": []})
+        g["pages"].append(pg)
+        g["variants"].append({"label": label, "sku": sku, "gtin": gtin})
+    items = []
+    for (kind, series), g in groups.items():
+        first = g["pages"][0]
+        item = {"id": f"delonghi-{g['variants'][0]['sku'].lower()}", "kind": kind, "maker": "De'Longhi", "name": series, "variants": g["variants"],
+                "url": first["url"].split("?")[0], "checkedAt": TODAY}
+        m = DELONGHI_NOUN.search(series)
+        if m:
+            item["category"] = m.group(1)
+        if first.get("spec"):
+            item["spec"] = first["spec"]
+        if any(("消費電力" in k or k.startswith("電圧")) for pg in g["pages"] for k in pg.get("spec", {})):
+            item["power"] = "electric"  # 仕様の表に、消費電力(W)・電圧(V)がある(コンセントにつなぐ機器)
+        items.append(item)
+    return items
+
+
+def delonghi(dry: bool, reuse: bool = False):
+    if reuse:
+        raw = json.loads(next(sorted((ROOT / "source-archive").glob("tools-delonghi-2*"))[-1].glob("original.*")).read_text(encoding="utf-8"))["pages"]
+        return {"maker": "De'Longhi", "sourceUrl": DELONGHI_SITEMAP, "raw": None, "items": delonghi_items(raw), "merge": "add"}
+    sitemap = get_plain(DELONGHI_SITEMAP).decode("utf-8", errors="replace")
+    urls = [u for u in re.findall(r"<loc>([^<]*)</loc>", sitemap) if delonghi_kind(delonghi_file(u))]
+    print(f"デロンギ: 商品サイトマップ {len(re.findall('<loc>', sitemap))} 件のうち、対象 {len(urls)} ページ")
+    if dry:
+        for u in urls:
+            print("  ", delonghi_file(u))
+        return None
+    pages = []
+    for n, u in enumerate(urls, 1):
+        time.sleep(1.5)
+        pg = delonghi_page(u)
+        pages.append(pg)
+        print(f"  [{n}/{len(urls)}] {pg['sku']}: {pg['ean'] or '-'} {pg['name'][:40]}", flush=True)
+    items = delonghi_items(pages)
+    return {"maker": "De'Longhi", "sourceUrl": DELONGHI_SITEMAP, "raw": {"pages": pages}, "items": items, "merge": "add"}
+
+
+# 検索用: メーカー名の日本語の読み
+MAKER_ALIAS = {"HARIO": "ハリオ", "Kalita": "カリタ", "Melitta": "メリタ", "1Zpresso": "ワンゼットプレッソ", "TIMEMORE": "タイムモア", "Fellow": "フェロー", "ORIGAMI": "オリガミ", "珈琲サイフオン": "コーノ式 KONO サイフオン", "AeroPress": "エアロプレス", "Bodum": "ボダム", "Comandante": "コマンダンテ", "Mahlkönig": "マールクーニック", "Dalla Corte": "ダラコルテ", "Fuji Royal": "フジローヤル 富士珈機", "Bonmac": "ボンマック", "Wilfa": "ウィルファ", "Niche Zero": "ニッチゼロ ニッチ", "TWINBIRD": "ツインバード", "De'Longhi": "デロンギ"}
+
+MAKERS = {"hario": hario, "kalita": kalita, "melitta": melitta, "1zpresso": z1presso, "coffee-syphon": coffee_syphon, "bodum": bodum, "crema-comandante": crema_comandante, "comandante-x25": comandante_x25, "crema-timemore": crema_timemore, "kalita-business-mill": kalita_business_mill, "melitta-grinders": melitta_grinders, "bodum-grinders": bodum_grinders, "bodum-coffeemakers": bodum_coffeemakers, "fuji-royal": fuji_royal, "bonmac": bonmac, "melitta-coffeemakers": melitta_coffeemakers, "hario-coffeemakers": hario_coffeemakers, "delonghi": delonghi, "kalita-coffeemakers": kalita_coffeemakers, "timemore-extra": timemore_extra, **{k: shopify(k) for k in SHOPIFY}}
 
 
 def save_raw(maker_key: str, result: dict) -> str:
@@ -1217,7 +1474,7 @@ def main():
     ap.add_argument("--from-file", help="ブラウザで書き出したファイル(scripts/shopify-export.js)から作る(Shopify製の公式ショップのみ)")
     ap.add_argument("--reuse", action="store_true", help="取得済みの原文(source-archive)から作り直す。サイトにはアクセスしない(Kalitaのみ)")
     a = ap.parse_args()
-    if a.from_file and a.maker not in SHOPIFY and a.maker not in ("bodum", "bodum-grinders"):
+    if a.from_file and a.maker not in SHOPIFY and a.maker not in ("bodum", "bodum-grinders", "bodum-coffeemakers"):
         ap.error("--from-file は、Shopify製の公式ショップ(hario-shop・timemore・fellow・origami・ogawa)と、bodum だけで使えます")
     if a.from_file:
         result = MAKERS[a.maker](a.dry_run, False, a.from_file)

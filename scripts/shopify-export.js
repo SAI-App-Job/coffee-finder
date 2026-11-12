@@ -31,7 +31,7 @@
     return;
   }
   // 候補にする語(ゆるい絞り込み)
-  const CANDIDATE = /ドリッパー|ペーパー|フィルター|ミル|グラインダー|エアロプレス|サイフォン|フレンチプレス|dripper|filter|grinder|\bmill\b|aeropress/i;
+  const CANDIDATE = /ドリッパー|ペーパー|フィルター|ミル|グラインダー|エアロプレス|サイフォン|フレンチプレス|コーヒーメーカー|コーヒーマシン|全自動|dripper|filter|grinder|\bmill\b|aeropress|coffee ?maker|brewer|aiden|moccamaster/i;
 
   async function getJson(url) {
     for (let i = 0; i < 8; i++) {

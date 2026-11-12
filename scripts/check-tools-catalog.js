@@ -5,7 +5,7 @@
 // - 同じJANが、別の商品に付いていないか(公式の情報でそうなっている場合は、警告として出す)
 import { readFileSync, existsSync } from "node:fs";
 
-const KINDS = ["dripper", "syphon", "frenchpress", "aeropress", "paper", "grinder"];
+const KINDS = ["dripper", "syphon", "frenchpress", "aeropress", "coffeemaker", "paper", "grinder"];
 const catalog = JSON.parse(readFileSync("data/tools.json", "utf8"));
 let errors = 0;
 const warn = (m) => console.log(`  警告: ${m}`);
