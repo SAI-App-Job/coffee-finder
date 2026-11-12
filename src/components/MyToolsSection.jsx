@@ -119,6 +119,9 @@ function ToolFormModal({ target, onSave, onClose }) {
                           {row.maker}
                           {row.gtin ? ` ・ JAN/GTIN ${row.gtin}` : ""}
                         </span>
+                        {row.notListedSince && (
+                          <span className="block text-[10px] text-[var(--c-text-3)]">{t("公式サイトに、現在載っていません({date}に確認)", { date: row.notListedSince })}</span>
+                        )}
                       </button>
                     </li>
                   ))}
@@ -171,6 +174,9 @@ function ToolFormModal({ target, onSave, onClose }) {
                     : t("この番号は、{kind}のものです", { kind: t(gtinMatchKind.label) })}
                 </span>
                 <span className="block break-words">{toolDisplayName(gtinMatch)}</span>
+                {gtinMatch.notListedSince && (
+                  <span className="block text-[10px] text-[var(--c-text-3)]">{t("公式サイトに、現在載っていません({date}に確認)", { date: gtinMatch.notListedSince })}</span>
+                )}
               </button>
             )}
           </div>
@@ -312,7 +318,7 @@ export function MyToolsSection({ tools, addTool, updateTool, deleteTool }) {
         <h3 className="text-[14px] font-medium text-[var(--c-text)]">{t("マイツール")}</h3>
       </div>
       <p className="text-[12px] text-[var(--c-text-3)] leading-relaxed">
-        {t("お持ちのドリッパー・サイフォン・フレンチプレス・エアロプレス・コーヒーメーカー・ペーパー・コーヒーミル（グラインダー）を登録します。テイスティングログの「抽出方法」「挽き目」を書くときに、ここから選べます。登録した内容は、この端末の中だけに保存されます。")}
+        {t("お持ちのコーヒーミル（グラインダー）・ドリッパー・サイフォン・フレンチプレス・エアロプレス・コーヒーメーカー・ペーパーを登録します。テイスティングログの「抽出方法」「挽き目」を書くときに、ここから選べます。登録した内容は、この端末の中だけに保存されます。")}
       </p>
       {TOOL_KINDS.map((kind) => {
         const items = tools.filter((tool) => tool.kind === kind.id);

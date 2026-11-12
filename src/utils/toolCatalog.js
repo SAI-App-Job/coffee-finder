@@ -25,6 +25,8 @@ export function flattenToolCatalog(catalog) {
         gtin: v.gtin ?? "",
         // 販売店のページ(sourceType: "retailer")のURLは、出さない(公式ページではないため)
         url: item.sourceType === "retailer" ? "" : (item.url ?? ""),
+        // 公式サイトに載らなくなった項目・型番(消さずに残している)。値は、載っていないと最初に気づいた日
+        notListedSince: (item.status === "notListed" ? item.notListedSince : v.notListedSince) ?? "",
         search: norm([item.maker, item.makerAlias, item.name, v.label, v.sku].filter(Boolean).join(" ")),
       });
     });
@@ -45,7 +47,8 @@ export function searchToolCatalog(rows, kind, query, limit = 8) {
   const first = tokens[0];
   return rows
     .filter((r) => r.kind === kind && tokens.every((tk) => r.search.includes(tk)))
-    .sort((a, b) => Number(b.search.startsWith(first)) - Number(a.search.startsWith(first))) // 同じ順位は、カタログの並びのまま
+    // 先頭が合うものを先に。同じ順位では、現行のもの(公式サイトに載っているもの)を先に。それ以外は、カタログの並びのまま
+    .sort((a, b) => Number(b.search.startsWith(first)) - Number(a.search.startsWith(first)) || Number(!!a.notListedSince) - Number(!!b.notListedSince))
     .slice(0, limit);
 }
 

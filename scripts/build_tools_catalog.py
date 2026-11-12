@@ -219,7 +219,7 @@ def kalita(dry: bool, reuse: bool = False):
     hints = dict(KALITA_LISTS)
     if reuse:
         # 取得済みの原文(source-archive)から作り直す。サイトには、アクセスしない
-        raw = json.loads(sorted((ROOT / "source-archive").glob("tools-kalita-*"))[-1].joinpath("original.bin").read_text(encoding="utf-8"))["pages"]
+        raw = json.loads(sorted((ROOT / "source-archive").glob("tools-kalita-2*"))[-1].joinpath("original.bin").read_text(encoding="utf-8"))["pages"]
         items = []
         for page in raw:
             lst = re.search(r"/products/([a-z]+)/", page["url"]).group(1)
@@ -331,7 +331,7 @@ def melitta_items(page: dict):
 
 def melitta(dry: bool, reuse: bool = False):
     if reuse:
-        raw = json.loads(sorted((ROOT / "source-archive").glob("tools-melitta-*"))[-1].joinpath("original.bin").read_text(encoding="utf-8"))["pages"]
+        raw = json.loads(sorted((ROOT / "source-archive").glob("tools-melitta-2*"))[-1].joinpath("original.bin").read_text(encoding="utf-8"))["pages"]
         return {"maker": "Melitta", "sourceUrl": f"{MELITTA_BASE}/melitta_hh/", "raw": None, "items": [i for pg in raw for i in melitta_items(pg)]}
     pages = []
     for d, kind in MELITTA_DIRS:
@@ -1453,6 +1453,68 @@ MAKER_ALIAS = {"HARIO": "ハリオ", "Kalita": "カリタ", "Melitta": "メリ�
 MAKERS = {"hario": hario, "kalita": kalita, "melitta": melitta, "1zpresso": z1presso, "coffee-syphon": coffee_syphon, "bodum": bodum, "crema-comandante": crema_comandante, "comandante-x25": comandante_x25, "crema-timemore": crema_timemore, "kalita-business-mill": kalita_business_mill, "melitta-grinders": melitta_grinders, "bodum-grinders": bodum_grinders, "bodum-coffeemakers": bodum_coffeemakers, "fuji-royal": fuji_royal, "bonmac": bonmac, "melitta-coffeemakers": melitta_coffeemakers, "hario-coffeemakers": hario_coffeemakers, "delonghi": delonghi, "kalita-coffeemakers": kalita_coffeemakers, "timemore-extra": timemore_extra, **{k: shopify(k) for k in SHOPIFY}}
 
 
+# ---------------------------------------------------------------- 古い情報を消さない仕組み
+# 公式サイトで、新しい器具が出ると、古い器具のページが消えることがある。利用者は、古い器具を、まだ持っている。
+# そのため、取得し直したときに、今回の取得に載っていない項目・型番は、消さずに残し、印(status: "notListed" / notListedSince)を付ける。
+#   - 項目: status = "notListed"、notListedSince = 最初に、載っていないと気づいた日
+#   - 型番(variants の1件): notListedSince = 同じ
+#   - checkedAt(最後に公式サイトで確認した日)・sourceId(その時の原文)は、そのまま残す。今回の取得で、また載っていれば、印は消える。
+def _vkeys(v: dict) -> set:
+    ks = set()
+    if v.get("sku"):
+        ks.add(("sku", v["sku"]))
+    if v.get("gtin"):
+        ks.add(("gtin", v["gtin"]))
+    return ks or {("label", v.get("label", ""))}
+
+
+def _ikeys(item: dict) -> set:
+    return set().union(*[_vkeys(v) for v in item.get("variants", [])]) if item.get("variants") else set()
+
+
+def reconcile(items: list, maker: str, new_items: list, scope_re=None, by_keys: bool = True):
+    """既存の項目(items)と、今回取得した項目(new_items)を、突き合わせる。
+
+    - 今回の項目と同じもの(id が同じ。by_keys が真なら、型番・JANが重なるものも)は、今回の項目に置き換える。
+      ただし、今回の項目に無い、既存の型番は、notListedSince を付けて残す。
+    - scope_re を渡すと(その取得で、メーカーの全商品が分かる場合)、今回の取得に載っていない、同じ取得元(sourceId が scope_re に合う)の
+      既存の項目は、消さずに、status: "notListed" を付けて残す。他の取得元の項目は、そのまま。
+    戻り値: (項目の一覧, 数の辞書)"""
+    stat = {"replaced": 0, "kept_items": 0, "kept_variants": 0, "revived": 0}
+    old_maker = [i for i in items if i["maker"] == maker]
+    others = [i for i in items if i["maker"] != maker]
+    matched_ids = set()
+    out_new = []
+    for n in new_items:
+        nk = _ikeys(n)
+        hits = [o for o in old_maker if o["id"] == n["id"] or (by_keys and nk & _ikeys(o))]
+        for o in hits:
+            matched_ids.add(o["id"])
+            if o.get("status") == "notListed":
+                stat["revived"] += 1
+            for v in o.get("variants", []):
+                if _vkeys(v) & nk:
+                    continue
+                if any(_vkeys(v) & _vkeys(x) for x in n["variants"]):
+                    continue
+                kept = dict(v)
+                kept.setdefault("notListedSince", TODAY)
+                n["variants"].append(kept)
+                stat["kept_variants"] += 1
+        stat["replaced"] += len(hits)
+        out_new.append(n)
+    keep = []
+    for o in old_maker:
+        if o["id"] in matched_ids:
+            continue
+        if scope_re is not None and re.match(scope_re, o.get("sourceId", "")):
+            o["status"] = "notListed"
+            o.setdefault("notListedSince", TODAY)
+            stat["kept_items"] += 1
+        keep.append(o)
+    return others + keep + out_new, stat
+
+
 def save_raw(maker_key: str, result: dict) -> str:
     """取得した原文(JSON)を、source-archive/ に保存する。資料IDを返す"""
     source_id = f"tools-{maker_key}-{TODAY}"
@@ -1483,6 +1545,10 @@ def main():
     if result is None:
         return
     source_id = save_raw(a.maker, result) if result["raw"] is not None else sorted(p.name for p in (ROOT / "source-archive").glob(f"tools-{a.maker}-2*"))[-1]
+    if result["raw"] is None:
+        # 保存済みの原文から作り直すときは、サイトを確認していない。checkedAt(最後に公式で確認した日)は、原文を取った日にする
+        for item in result["items"]:
+            item["checkedAt"] = source_id[-10:]
     catalog = json.loads(OUT.read_text(encoding="utf-8")) if OUT.exists() else {"version": 1, "items": []}
     if result.get("merge") == "variant":
         # 既存の項目(target)に、型番を足す。同じEANが、すでにあれば、足さない
@@ -1528,13 +1594,17 @@ def main():
                 added += 1
         print(f"既存のEANと一致(照合できた): {confirmed} 型番 / 追加した製品: {added}")
     elif result.get("merge") == "add":
-        ids = {i["id"] for i in result["items"]}
-        catalog["items"] = [i for i in catalog["items"] if i["id"] not in ids]
         for item in result["items"]:
             item["sourceId"] = source_id
             if item["maker"] in MAKER_ALIAS:
                 item["makerAlias"] = MAKER_ALIAS[item["maker"]]
-        catalog["items"] += result["items"]
+        by_maker = {}
+        for item in result["items"]:
+            by_maker.setdefault(item["maker"], []).append(item)
+        for mk, its in by_maker.items():
+            catalog["items"], st = reconcile(catalog["items"], mk, its, scope_re=None, by_keys=False)
+            if st["kept_variants"]:
+                print(f"  今回の取得に無い型番を、残しました(掲載なしの印を付けた): {st['kept_variants']} 件")
     elif result.get("merge") == "sku":
         # 既存の項目(別の公式サイトの名前・型番)に、店のJANを、型番(sku)で補う。既存に無い型番の商品は、追加する
         shop_by_sku = {v["sku"]: (item, v) for item in result["items"] for v in item["variants"] if v["sku"]}
@@ -1564,13 +1634,17 @@ def main():
         print(f"JANを補った型番: {filled} 件 / 追加した製品: {added} 件 / 店に無い型番(補えなかった): "
               f"{sum(1 for i in catalog['items'] if i['maker'] == result['maker'] for v in i['variants'] if v['sku'] and v['sku'] not in shop_by_sku)} 件")
     else:
-        # 同じメーカーの項目は、入れ替える(他のメーカーは、そのまま)
-        catalog["items"] = [i for i in catalog["items"] if i["maker"] != result["maker"]]
+        # 同じ取得元の項目は、今回の取得に置き換える。今回の取得に載っていない項目・型番は、消さずに、掲載なしの印を付けて残す
+        # (公式サイトで、古い器具のページが消えても、利用者は、古い器具を持っている。他の取得元の項目・他のメーカーは、そのまま)
+        if not result["items"]:
+            sys.exit("今回の取得が0件のため、変更しません(サイトの不具合・取得の失敗の可能性があります)")
         for item in result["items"]:
             item["sourceId"] = source_id
             if result["maker"] in MAKER_ALIAS:
                 item["makerAlias"] = MAKER_ALIAS[result["maker"]]  # 検索用の読み(カタカナ)
-        catalog["items"] += result["items"]
+        scope = rf"^tools-{re.escape(a.maker)}-{chr(92)}d{{4}}-{chr(92)}d{{2}}-{chr(92)}d{{2}}$"
+        catalog["items"], st = reconcile(catalog["items"], result["maker"], result["items"], scope_re=scope, by_keys=True)
+        print(f"今回の取得: {len(result['items'])} 製品 / 公式に載らなくなったため、消さずに残した項目: {st['kept_items']} 件 / 型番: {st['kept_variants']} 件 / 再び載った項目: {st['revived']} 件")
     print(f"電動の印を付けた件数: {tag_power(catalog['items'])} / 出どころの種類を付けた件数: {tag_source_type(catalog['items'])}")
     catalog["items"].sort(key=lambda i: (i["maker"], i["kind"], i["name"]))
     catalog["updatedAt"] = TODAY

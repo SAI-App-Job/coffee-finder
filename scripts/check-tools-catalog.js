@@ -32,12 +32,16 @@ for (const item of catalog.items) {
     if (!item[key]) fail(`${where}: ${key} が空です`);
   }
   if (!["official", "retailer"].includes(item.sourceType)) fail(`${where}: sourceType が official / retailer ではありません`);
+  // 公式サイトに載らなくなった項目は、消さずに残す(status: "notListed"。notListedSince は、載っていないと最初に気づいた日)
+  if (item.status !== undefined && item.status !== "notListed") fail(`${where}: status が不正です(${item.status})`);
+  if (item.status === "notListed" && !/^\d{4}-\d{2}-\d{2}$/.test(item.notListedSince ?? "")) fail(`${where}: notListedSince(日付)がありません`);
   if (!KINDS.includes(item.kind)) fail(`${where}: 種類が不正です(${item.kind})`);
   if (ids.has(item.id)) fail(`${where}: idが重複しています`);
   ids.add(item.id);
   if (!/^https:\/\//.test(item.url ?? "")) fail(`${where}: URLが https:// ではありません`);
   if (!Array.isArray(item.variants) || item.variants.length === 0) fail(`${where}: variants がありません`);
   for (const v of item.variants ?? []) {
+    if (v.notListedSince !== undefined && !/^\d{4}-\d{2}-\d{2}$/.test(v.notListedSince)) fail(`${where}: 型番の notListedSince が日付ではありません`);
     if (v.gtin) {
       if (!validGtin(v.gtin)) fail(`${where}: JANが不正です(${v.gtin})`);
       gtins.set(v.gtin, [...(gtins.get(v.gtin) ?? []), `${item.name}${v.label ? " " + v.label : ""}`]);
@@ -58,6 +62,8 @@ for (const item of catalog.items) {
     if (v.gtin) m.gtins++;
   }
 }
+const unlisted = catalog.items.filter((i) => i.status === "notListed").length + catalog.items.reduce((n, i) => n + (i.variants ?? []).filter((v) => v.notListedSince).length, 0);
+if (unlisted) console.log(`公式サイトに載らなくなって、残している項目・型番: ${unlisted} 件`);
 console.log(`器具カタログ: ${catalog.items.length} 件(更新日 ${catalog.updatedAt ?? "不明"})`);
 for (const [maker, m] of Object.entries(byMaker)) console.log(`  ${maker}: ${m.items}製品 / ${m.variants}型番 / JANあり ${m.gtins}`);
 if (errors) {
