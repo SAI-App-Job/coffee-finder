@@ -58,6 +58,19 @@
   const picked = listing.filter((p) => CANDIDATE.test(`${p.title} ${p.product_type ?? ""}`));
   console.log(`商品 ${listing.length} 件のうち、候補 ${picked.length} 件。商品ごとのデータ(JAN)を取ります。`);
 
+  // 一覧(/products.json)に出ない商品(販売終了間近・限定在庫など)でも、ページのアドレスが分かっているものは、直接取る。
+  // 存在しないアドレスは、404になるだけ(警告を出して、とばす)。
+  const EXTRA_HANDLES = {
+    timemore: [
+      "timemore-chestnut-c2-max-manual-coffee-grinder", // 2026-11-12 時点で、公式ページは、404(販売終了で、削除された)。復活したときのために残す
+      "timemore-chestnut-c3-max-manual-coffee-grinder", // 同じ名前の付け方からの推測(無ければ404)
+      "timemore-chestnut-c2s-manual-coffee-grinder", // 同上
+    ],
+  };
+  for (const h of EXTRA_HANDLES[cfg.key] ?? []) {
+    if (!picked.some((p) => p.handle === h)) picked.push({ handle: h, title: h, product_type: "" });
+  }
+
   // 2. 商品ごとのデータ(.js)。型番ごとのJAN(barcode)がある
   const records = [];
   for (let i = 0; i < picked.length; i++) {

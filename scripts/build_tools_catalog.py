@@ -13,6 +13,7 @@
   python scripts/build_tools_catalog.py hario-shop|timemore|fellow|origami  Shopify製の公式ショップから、JANを取る(docs/tool-catalog.md)
 """
 import argparse
+import http.client
 import json
 import re
 import subprocess
@@ -49,7 +50,26 @@ def get(url: str, retries: int = 12) -> bytes:
                 time.sleep(DELAY * (i + 1))
                 continue
             raise
+        except (http.client.HTTPException, ConnectionError, TimeoutError):
+            # 接続を切られた(urllibでは、取得できない)ときは、curl で取る(TLSの検証は、そのまま有効)
+            r = subprocess.run(["curl", "-sL", "-m", "60", "-A", UA, "-w", "\n%{http_code}", url], capture_output=True)
+            body, _, code = r.stdout.rpartition(b"\n")
+            if code.strip() == b"200":
+                return body
+            if i < retries - 1:
+                time.sleep(DELAY * (i + 1))
+                continue
+            raise
     raise RuntimeError(url)
+
+
+def get_plain(url: str) -> bytes:
+    """curl(標準の名乗り)で取る。販売店によっては、ブラウザを名乗ると、接続を切るため。取得できなければ、例外"""
+    r = subprocess.run(["curl", "-sL", "-m", "60", "-w", "\n%{http_code}", url], capture_output=True)
+    body, _, code = r.stdout.rpartition(b"\n")
+    if code.strip() != b"200":
+        raise RuntimeError(f"取得できません(HTTP {code.decode(errors='replace').strip() or '接続失敗'}): {url}")
+    return body
 
 
 def valid_gtin(value: str) -> bool:
@@ -632,8 +652,15 @@ def bodum(dry: bool, reuse: bool = False, from_file=None):
 CREMA_BASE = "https://www.cremashop.eu"
 
 
-def crema_parse(page: dict):
-    """商品ページ(url・html の要約)から、カタログの項目を作る。page: {"url", "product"(JSON-LD), "names"(商品番号→表示名)}"""
+def crema_kind(name: str, default: str):
+    """商品名から種類を決める(Cremaの商品名は、英語)。本体ではないもの・載せないものは None"""
+    if re.search(r"burr|knob|brush|\bbin\b|dosing|hopper|\blid\b|magnet|catch cup|funnel|bellows|tamper|portafilter|\bwdt\b|scale|server|kettle|french press|accessor|\bpucks?\b|pouch|\bbag\b|cleaning|spare|replacement|\bset\b", name, flags=re.I):
+        return None
+    return shopify_kind_en({"title": name})
+
+
+def crema_parse(page: dict, maker="Comandante", prefix="comandante", default_kind="grinder"):
+    """商品ページ(url・商品データ・変種の名前)から、カタログの項目を作る"""
     prod = page["product"]
     offers = prod.get("offers") or []
     groups = {}
@@ -649,10 +676,47 @@ def crema_parse(page: dict):
             gtin = ""
         g = groups.setdefault(base, {"url": o.get("url") or page["url"], "first": sku, "variants": []})
         g["variants"].append({"label": label, "sku": f"Crema {sku}", "gtin": gtin})
-    return [{
-        "id": f"comandante-{g['first']}", "kind": "grinder", "maker": "Comandante", "name": base,
-        "variants": g["variants"], "url": g["url"], "checkedAt": TODAY,
-    } for base, g in groups.items()]
+    out = []
+    for base, g in groups.items():
+        kind = default_kind if maker == "Comandante" else crema_kind(base, default_kind)
+        if not kind:
+            continue
+        out.append({"id": f"{prefix}-{g['first']}", "kind": kind, "maker": maker, "name": base,
+                    "variants": g["variants"], "url": g["url"], "checkedAt": TODAY})
+    return out
+
+
+def crema_fetch_page(path: str, brand_prefix: str, base=CREMA_BASE):
+    """商品ページを取得して、商品データ(JSON-LD)と、変種の名前(商品番号と対応づけ)を返す。取得できなければ None"""
+    try:
+        body = get(base + path).decode("utf-8", errors="replace")
+    except Exception as e:  # noqa: BLE001
+        print(f"  取得できません {base.split('/')[2]}{path}: {e}")
+        return None
+    product = None
+    for m in re.finditer(r'<script[^>]*application/ld\+json[^>]*>(.*?)</script>', body, flags=re.S):
+        try:
+            d = json.loads(m.group(1))
+        except ValueError:
+            continue
+        if d.get("@type") == "Product":
+            product = d
+    if not product:
+        print(f"  警告: {path}: 商品データ(JSON-LD)が見つかりません")
+        return None
+    # 変種の名前は、商品番号が入った、画像の説明文(data-caption)・画像の代替文(alt)・リンクから取る(順番では対応づけない)。
+    names = {}
+    for o in product.get("offers") or []:
+        sku = str(o.get("sku"))
+        cands = []
+        for m in re.finditer(r'(?:data-caption|alt)="([^"]+)"', body):
+            ctx = body[max(0, m.start() - 400): m.end() + 400]
+            if re.search(r"/" + re.escape(sku) + r"[-\"]", ctx):
+                cands.append(clean(__import__("html").unescape(m.group(1))))
+        cands = [c for c in cands if ", " in c and "€" not in c and c.lower().startswith(brand_prefix.lower())]
+        if cands:
+            names[sku] = max(set(cands), key=cands.count)
+    return {"url": base + path, "product": product, "names": names}
 
 
 def crema_comandante(dry: bool, reuse: bool = False):
@@ -670,36 +734,51 @@ def crema_comandante(dry: bool, reuse: bool = False):
     pages = []
     for slug, path in slugs.items():
         time.sleep(DELAY)
-        body = get(CREMA_BASE + path).decode("utf-8", errors="replace")
-        product = None
-        for m in re.finditer(r'<script[^>]*application/ld\+json[^>]*>(.*?)</script>', body, flags=re.S):
-            try:
-                d = json.loads(m.group(1))
-            except ValueError:
-                continue
-            if d.get("@type") == "Product":
-                product = d
-        if not product:
-            print(f"  警告: {path}: 商品データ(JSON-LD)が見つかりません")
-            continue
-        # 変種の名前は、商品番号が入った、画像の説明文(data-caption)・画像の代替文(alt)・リンクから取る(順番では対応づけない)。
-        # 例: data-caption="Comandante C60 Baracuda Coffee Grinder, Nautilus Blue"(画像のファイル名に商品番号 13381 が入る)
-        names = {}
-        for o in product.get("offers") or []:
-            sku = str(o.get("sku"))
-            cands = []
-            for m in re.finditer(r'(?:data-caption|alt)="([^"]+)"', body):
-                # その属性を持つタグの中(前後の400字)に、「/<商品番号>-」を含む画像のファイル名か、/<商品番号>" のリンクがあるもの
-                ctx = body[max(0, m.start() - 400): m.end() + 400]
-                if re.search(r"/" + re.escape(sku) + r"[-\"]", ctx):
-                    cands.append(clean(__import__("html").unescape(m.group(1))))
-            cands = [c for c in cands if ", " in c and "€" not in c and c.startswith("Comandante")]
-            if cands:
-                names[sku] = max(set(cands), key=cands.count)
-        pages.append({"url": CREMA_BASE + path, "product": product, "names": names})
-        print(f"  {slug}: 変種 {len(product.get('offers') or [])}")
+        pg = crema_fetch_page(path, "Comandante")
+        if pg:
+            pages.append(pg)
+            print(f"  {slug}: 変種 {len(pg['product'].get('offers') or [])}")
     items = [i for pg in pages for i in crema_parse(pg)]
     return {"maker": "Comandante", "sourceUrl": f"{CREMA_BASE}/en/shop-by-brand/comandante", "raw": {"pages": pages}, "items": items}
+
+
+# ---------------------------------------------------------------- TIMEMORE(販売店 Crema の商品ページ。timemore.com の項目に、EANの照合と、載っていない製品の追加)
+# Cremaの、TIMEMOREのブランドページ(1ページ)から、グラインダー・ドリッパー・ペーパーの商品ページを取る。
+# 一覧に出ない製品(例: Sculptor 064S)は、別の国のCremaの商品ページ(cremashop.dk/.se・crema.fi)の、同じ路で取る。
+CREMA_TIMEMORE_EXTRA = [
+    "/en/products/timemore/sculptor-064s-electric-grinder",
+]
+CREMA_ALT_BASES = ["https://www.cremashop.dk", "https://www.cremashop.se", "https://www.crema.fi"]
+
+
+def crema_timemore(dry: bool, reuse: bool = False):
+    if reuse:
+        raw = json.loads(sorted((ROOT / "source-archive").glob("tools-crema-timemore-2*"))[-1].joinpath("original.bin").read_text(encoding="utf-8"))["pages"]
+        return {"maker": "TIMEMORE", "sourceUrl": f"{CREMA_BASE}/en/shop-by-brand/timemore", "raw": None, "items": [i for pg in raw for i in crema_parse(pg, "TIMEMORE", "timemore-crema", "grinder")], "merge": "gtin"}
+    brand = get(f"{CREMA_BASE}/en/shop-by-brand/timemore").decode("utf-8", errors="replace")
+    slugs = {}
+    for path, slug, pid in re.findall(r'href="(/en/products/timemore/([a-z0-9-]+)(?:/(\d+))?)"', brand):
+        if re.search(r"chestnut|sculptor|brics|bricks|whirly|crystal|simpledrip|grinder|dripper|filter", slug):
+            slugs.setdefault(slug, path)
+    for extra in CREMA_TIMEMORE_EXTRA:
+        slugs.setdefault(extra.rsplit("/", 1)[-1], extra)
+    print(f"TIMEMORE(Crema): 商品ページ {len(slugs)} 件: {', '.join(slugs)}")
+    if dry:
+        return None
+    pages = []
+    for slug, path in slugs.items():
+        time.sleep(DELAY)
+        pg = None
+        for base in [CREMA_BASE] + CREMA_ALT_BASES:  # 先に、cremashop.eu。無ければ、別の国のCrema
+            pg = crema_fetch_page(path, "Timemore", base)
+            if pg:
+                break
+            time.sleep(DELAY)
+        if pg:
+            pages.append(pg)
+            print(f"  {slug}: 変種 {len(pg['product'].get('offers') or [])} ({pg['url'].split('/')[2]})")
+    items = [i for pg in pages for i in crema_parse(pg, "TIMEMORE", "timemore-crema", "grinder")]
+    return {"maker": "TIMEMORE", "sourceUrl": f"{CREMA_BASE}/en/shop-by-brand/timemore", "raw": {"pages": pages}, "items": items, "merge": "gtin"}
 
 
 # ---------------------------------------------------------------- Comandante X25 Trailmaster Dune(複数の販売店のページで、同じEANを確認したもの)
@@ -734,10 +813,90 @@ def comandante_x25(dry: bool, reuse: bool = False):
     return {"maker": "Comandante", "sourceUrl": pages[0]["url"], "raw": {"pages": pages}, "items": [item], "merge": "add"}
 
 
+# ---------------------------------------------------------------- TIMEMORE: 複数の販売店のページで、同じEANを確認できた型番の追加
+# (対象の項目の id, 追加する型番の色, EAN, [(販売店, ページのURL, ページの中で、そのEANが、その製品の欄にあることを示す正規表現)])
+TM_EXTRA = [
+    ("timemore-crema-13025", "White", "6959493507074", [
+        ("MaxiCoffee", "https://www.maxicoffee.com/en-eu/coffee-grinder-chestnut-c3s-problack-timemore-p-138823.html",
+         r'Chestnut C3S Pro Coffee Grinder White"[^>]{0,200}data-item-ean="6959493507074"'),
+        ("wb.coffee", "https://www.wb.coffee/shop/timemore-chestnut-c3s-pro-grinder-52285",
+         r"EAN/GTIN/barcode: 6959493507074"),
+    ]),
+]
+
+
+# (項目の id, 名前, 種類, 色, EAN, [(販売店, URL, 正規表現)])  ※2か所以上で、同じEANを確認できたものだけ載せる
+TM_NEW = [
+    ("timemore-extra-chestnut-c2-max", "TIMEMORE Chestnut C2 MAX Manual Coffee Grinder", "grinder", "Black", "6959493501621", [
+        ("Crossroast(ベルギー)", "https://www.crossroast.be/product/timemore-c2-max-zwart/",
+         r"Merk Timemore.{0,500}?EAN 6959493501621 Fabrikantcode"),
+        ("Barista and Espresso(スウェーデン)", "https://barista-and-espresso.com/collections/handkvarn/products/grinder-chestnut-c2-max-foldable-black-timemore",
+         r'"barcode":"6959493501621"'),
+    ]),
+]
+
+
+def fetch_and_match(shop: str, url: str, pattern: str, ean: str):
+    """販売店のページを、curl(標準の名乗り)で取って、パターンに一致するかを調べる。取得できない・一致しないときは、警告を出して None"""
+    time.sleep(DELAY)
+    try:
+        raw_body = get_plain(url).decode("utf-8", errors="replace")
+    except Exception as e:  # noqa: BLE001
+        print(f"  警告: {shop}: 取得できませんでした({e})")
+        return None
+    # 販売店によって、番号が、HTMLの中にあるか、表の中の文章にあるかが違うため、両方で探す
+    text_body = clean(re.sub(r"<[^>]+>", " ", re.sub(r"<script.*?</script>|<style.*?</style>", "", raw_body, flags=re.S)))
+    for body in (raw_body, text_body):
+        m = re.search(pattern, body, flags=re.S)
+        if m:
+            return body, m
+    print(f"  警告: {shop}: {ean} が、期待する欄に見つかりません")
+    return None
+
+
+def timemore_extra(dry: bool, reuse: bool = False):
+    pages, variants = [], []
+    new_items = []
+    for item_id, name, kind, label, ean, sources in TM_NEW:
+        ok = []
+        for shop, url, pattern in sources:
+            hit = fetch_and_match(shop, url, pattern, ean)
+            if not hit:
+                continue
+            body, m = hit
+            ok.append(shop)
+            pages.append({"shop": shop, "url": url, "ean": ean, "target": item_id, "label": label,
+                          "excerpt": clean(re.sub(r"<[^>]+>", " ", body[max(0, m.end() - 200): m.end() + 80]))})
+            print(f"  {shop}: {name} {label} EAN {ean} を確認")
+        if len(ok) >= 2 and valid_gtin(ean):
+            new_items.append({"id": item_id, "kind": kind, "maker": "TIMEMORE", "name": name,
+                              "variants": [{"label": label, "sku": "", "gtin": ean}], "url": sources[0][1], "checkedAt": TODAY})
+        else:
+            print(f"  載せません: {name} {ean}(確認できた販売店 {len(ok)} か所)")
+    for target, label, ean, sources in TM_EXTRA:
+        ok = []
+        for shop, url, pattern in sources:
+            hit = fetch_and_match(shop, url, pattern, ean)
+            if not hit:
+                continue
+            body, m = hit
+            ok.append(shop)
+            pages.append({"shop": shop, "url": url, "ean": ean, "target": target, "label": label,
+                          "excerpt": clean(re.sub(r"<[^>]+>", " ", body[max(0, m.start() - 150): m.end() + 80]))})
+            print(f"  {shop}: {label} EAN {ean} を確認")
+        if len(ok) >= 2 and valid_gtin(ean):
+            variants.append((target, {"label": label, "sku": "", "gtin": ean}))
+        else:
+            print(f"  載せません: {target} {label} {ean}(確認できた販売店 {len(ok)} か所)")
+    if dry:
+        return None
+    return {"maker": "TIMEMORE", "sourceUrl": TM_EXTRA[0][3][0][1], "raw": {"pages": pages}, "items": new_items, "merge": "variant", "variants": variants}
+
+
 # 検索用: メーカー名の日本語の読み
 MAKER_ALIAS = {"HARIO": "ハリオ", "Kalita": "カリタ", "Melitta": "メリタ", "1Zpresso": "ワンゼットプレッソ", "TIMEMORE": "タイムモア", "Fellow": "フェロー", "ORIGAMI": "オリガミ", "珈琲サイフオン": "コーノ式 KONO サイフオン", "AeroPress": "エアロプレス", "Bodum": "ボダム", "Comandante": "コマンダンテ"}
 
-MAKERS = {"hario": hario, "kalita": kalita, "melitta": melitta, "1zpresso": z1presso, "coffee-syphon": coffee_syphon, "bodum": bodum, "crema-comandante": crema_comandante, "comandante-x25": comandante_x25, **{k: shopify(k) for k in SHOPIFY}}
+MAKERS = {"hario": hario, "kalita": kalita, "melitta": melitta, "1zpresso": z1presso, "coffee-syphon": coffee_syphon, "bodum": bodum, "crema-comandante": crema_comandante, "comandante-x25": comandante_x25, "crema-timemore": crema_timemore, "timemore-extra": timemore_extra, **{k: shopify(k) for k in SHOPIFY}}
 
 
 def save_raw(maker_key: str, result: dict) -> str:
@@ -771,7 +930,50 @@ def main():
         return
     source_id = save_raw(a.maker, result) if result["raw"] is not None else sorted(p.name for p in (ROOT / "source-archive").glob(f"tools-{a.maker}-2*"))[-1]
     catalog = json.loads(OUT.read_text(encoding="utf-8")) if OUT.exists() else {"version": 1, "items": []}
-    if result.get("merge") == "add":
+    if result.get("merge") == "variant":
+        # 既存の項目(target)に、型番を足す。同じEANが、すでにあれば、足さない
+        for target, variant in result["variants"]:
+            item = next((i for i in catalog["items"] if i["id"] == target), None)
+            if item is None:
+                print(f"  対象の項目がありません: {target}")
+                continue
+            if any(v["gtin"] == variant["gtin"] for v in item["variants"]):
+                print(f"  すでにあります: {target} {variant['gtin']}")
+                continue
+            item["variants"].append({**variant, "sourceId": source_id})
+            print(f"  追加: {item['name']} {variant['label']} {variant['gtin']}")
+        for item in result["items"]:
+            catalog["items"] = [i for i in catalog["items"] if i["id"] != item["id"]]
+            item["sourceId"] = source_id
+            if result["maker"] in MAKER_ALIAS:
+                item["makerAlias"] = MAKER_ALIAS[result["maker"]]
+            catalog["items"].append(item)
+            print(f"  新しい製品: {item['name']} {item['variants'][0]['label']} {item['variants'][0]['gtin']}")
+    elif result.get("merge") == "gtin":
+        # 同じメーカーの既存の項目に、同じEANがあれば、その型番に「alsoIn」(別の出どころでも確認)を付ける。無ければ、新しい項目として追加する
+        existing = {v["gtin"]: v for i in catalog["items"] if i["maker"] == result["maker"] for v in i["variants"] if v["gtin"]}
+        confirmed = added = 0
+        for item in result["items"]:
+            new_variants = []
+            for v in item["variants"]:
+                hit = existing.get(v["gtin"]) if v["gtin"] else None
+                if hit is not None:
+                    hit.setdefault("alsoIn", [])
+                    if source_id not in hit["alsoIn"]:
+                        hit["alsoIn"].append(source_id)
+                    confirmed += 1
+                else:
+                    new_variants.append(v)
+            if new_variants:
+                item["variants"] = new_variants
+                item["sourceId"] = source_id
+                if result["maker"] in MAKER_ALIAS:
+                    item["makerAlias"] = MAKER_ALIAS[result["maker"]]
+                catalog["items"] = [i for i in catalog["items"] if i["id"] != item["id"]]
+                catalog["items"].append(item)
+                added += 1
+        print(f"既存のEANと一致(照合できた): {confirmed} 型番 / 追加した製品: {added}")
+    elif result.get("merge") == "add":
         ids = {i["id"] for i in result["items"]}
         catalog["items"] = [i for i in catalog["items"] if i["id"] not in ids]
         for item in result["items"]:

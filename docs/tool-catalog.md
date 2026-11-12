@@ -62,6 +62,7 @@ py -X utf8 scripts/build_tools_catalog.py hario-shop --from-file tools-hario-sho
 | Melitta | 22製品(26型番) | 26 | 公式サイトの製品ページ(melitta.co.jp。家庭用のハンドドリップ器具・フィルターペーパー・ミル) | ページの「スペック」の表(型番・JAN)から。ケトル・サーバーは除外。メリタでは、ドリッパーを「コーヒーフィルター」「アロマフィルター」と呼ぶ。業務用は未収録 |
 | 1Zpresso | 11機種 | 0 | 公式サイト(1zpresso.coffee) | 公式サイトに、型番・JANの表が無い。機種名は、各シリーズのページの見出しにあるものだけ(スクリプトが、ページにその文言があることを確かめてから載せる)。Q・X・ZP6の個別の機種名は、公式ページの見出しに無いため未収録 |
 | TIMEMORE | 17製品(36型番) | 28 | 公式オンラインショップ(www.timemore.com。ブラウザで書き出し) | 公式の英語サイトのため、JANは、中国のGS1の番号(6959…)で、日本の店で売る品のJANと違う場合がありうる。JANが空の8型番は、ショップの値が、JANではない社内コード(IF…)のため、載せていない。中古品(USED)・セット品は除外 |
+| TIMEMORE(追加分) | 5製品+1型番 | 6 | 販売店 Crema(cremashop.eu)の商品ページ(`crema-timemore`)と、販売店2か所の一致(`timemore-extra`) | Bricks 01S(Black・White)・Chestnut C3S MAX・C3S Pro(Black。Whiteは、MaxiCoffeeとwb.coffeeで同じEANを確認)・Sculptor 078・078S。timemore.comの項目と同じEANは、型番に `alsoIn`(別の出どころでも確認)の印を付けた(6型番)。Sculptor 064SのCremaのページは、2026-11-12に404だった |
 | Fellow | 4製品(16型番) | 16 | 公式オンラインショップ(fellowproducts.com。ブラウザで書き出し) | 米国向けの店。JANは、米国のUPC/EAN(840…・852…・860…)で、日本の店で売る品の番号と違う場合がありうる。Stagg [X]/[XF]、Ode Gen 2、Opus 2、Stagg専用ペーパー |
 | ORIGAMI | 11製品(47型番) | 47 | 公式オンラインショップ(origami-kai.com。ブラウザで書き出し) | JANは、日本のJAN(4536058…)。オンラインストア限定品を含む。ドリッパー形の照明(Pendant lamp)と、お茶用(Tea Dripper)は除外 |
 | 珈琲サイフオン(コーノ式) | 54製品(サイフォンセット24・名門ドリッパーセット19・ペーパー11) | 0 | 公式サイト(coffee-syphon.co.jp)が読み込むCSV(`/csv/coffee_syphon.csv`・`/csv/meimon_filter.csv`) | CSVの「jan」の列は、**6桁の数字**(例: 421319)で、13桁のJANではない。完全なJANが分からないため、gtinは空(推測しない)。6桁は `siteCode` に残した。ロート・フラスコ・グラスポットなどの部品は載せていない |
@@ -76,6 +77,9 @@ py -X utf8 scripts/build_tools_catalog.py hario-shop --from-file tools-hario-sho
 
 ### Comandanteの、確認できていないEAN(採用しない)
 「C40の色(Virginia Walnut・Alpine Lagoon・Burgundy・Copper Mountain・Snow Leopard)」「X25 Forest」の番号は、出所が見つからない、または、チェックデジットが合わないため、載せていない(2026-11-11に確認)。出所が見つかったら、追加する。
+
+### TIMEMOREの、確認できていないEAN(採用しない)
+2026-11-12に、利用者が挙げた一覧を照合した。**確認できた**: Chestnut C2 MAX(Black)6959493501621(2026-11-12。販売店 Crossroast(ベルギー)と Barista and Espresso(スウェーデン)の2か所で一致。`timemore-extra`)。**未確認**: C2S(Black)6959493507548(別の出どころに、6959493507500 もある)、C3 MAX 6959493502703、Sculptor 064(6959493505940。Crema Finland は、064S を 6959493505964 としていた)。出所が見つかったら追加する。timemore.com の C2 MAX の商品ページは、2026-11-12時点で404(検索結果には残っていたが、削除されていた)。ブラウザの書き出し(`shopify-export.js`)も、同日に再実行したが、一覧は21件のままで、C2 MAX・C3 MAX・C2S は、取れなかった(`EXTRA_HANDLES` で直接取りに行ったが、存在しない)。
 
 ## 未収録(次の手)
 - **小川珈琲(エアロプレス)**: 取り込み済み(上の表)。

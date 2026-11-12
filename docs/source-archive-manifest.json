@@ -4178,6 +4178,22 @@
     ],
     "note": "メーカー公式サイトの商品データ(JSON)。器具カタログ(data/tools.json)の根拠"
   },
+  "tools-crema-timemore-2026-11-12": {
+    "url": "https://www.cremashop.eu/en/shop-by-brand/timemore",
+    "finalUrl": "https://www.cremashop.eu/en/shop-by-brand/timemore",
+    "httpStatus": 200,
+    "contentType": "",
+    "size": 16964,
+    "sha256": "a3f8003dfbdf12494e25209b9de95bfecfc77be64d6fc41288a00bf9b7b1a353",
+    "accessed": "2026-11-12",
+    "tool": "ローカルのファイルを取り込み",
+    "textChars": 0,
+    "scannedImagesOnly": false,
+    "files": [
+      "original.bin"
+    ],
+    "note": "メーカー公式サイトの商品データ(JSON)。器具カタログ(data/tools.json)の根拠"
+  },
   "tools-fellow-2026-11-10": {
     "url": "https://fellowproducts.com/",
     "finalUrl": "https://fellowproducts.com/",
@@ -4303,6 +4319,23 @@
     "scannedImagesOnly": false,
     "files": [
       "original.bin"
+    ],
+    "note": "メーカー公式サイトの商品データ(JSON)。器具カタログ(data/tools.json)の根拠"
+  },
+  "tools-timemore-extra-2026-11-12": {
+    "url": "https://www.maxicoffee.com/en-eu/coffee-grinder-chestnut-c3s-problack-timemore-p-138823.html",
+    "finalUrl": "https://www.maxicoffee.com/en-eu/coffee-grinder-chestnut-c3s-problack-timemore-p-138823.html",
+    "httpStatus": 200,
+    "contentType": "",
+    "size": 1982,
+    "sha256": "6194b5e6530df0d25edee57aaefa9a27535f2b5ae02d53ba15af8291944d58ba",
+    "accessed": "2026-11-12",
+    "tool": "ローカルのファイルを取り込み",
+    "textChars": 1883,
+    "scannedImagesOnly": false,
+    "files": [
+      "original.html",
+      "text.txt"
     ],
     "note": "メーカー公式サイトの商品データ(JSON)。器具カタログ(data/tools.json)の根拠"
   },

@@ -6149,12 +6149,18 @@
     {
      "label": "Transparent",
      "sku": "STMUS100120",
-     "gtin": "6959493505162"
+     "gtin": "6959493505162",
+     "alsoIn": [
+      "tools-crema-timemore-2026-11-12"
+     ]
     },
     {
      "label": "Transparent Black",
      "sku": "STMUS100121",
-     "gtin": "6959493502550"
+     "gtin": "6959493502550",
+     "alsoIn": [
+      "tools-crema-timemore-2026-11-12"
+     ]
     }
    ],
    "url": "https://www.timemore.com/products/timemore-crystal-eye-dripper-02-pctg",
@@ -6182,6 +6188,23 @@
    "url": "https://www.timemore.com/products/timemore-crystal-eye-turbo-dripper-pctg",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-timemore-2026-11-10",
+   "makerAlias": "タイムモア"
+  },
+  {
+   "id": "timemore-extra-chestnut-c2-max",
+   "kind": "grinder",
+   "maker": "TIMEMORE",
+   "name": "TIMEMORE Chestnut C2 MAX Manual Coffee Grinder",
+   "variants": [
+    {
+     "label": "Black",
+     "sku": "",
+     "gtin": "6959493501621"
+    }
+   ],
+   "url": "https://www.crossroast.be/product/timemore-c2-max-zwart/",
+   "checkedAt": "2026-11-12",
+   "sourceId": "tools-timemore-extra-2026-11-12",
    "makerAlias": "タイムモア"
   },
   {
@@ -6279,7 +6302,10 @@
     {
      "label": "C5 PRO Black",
      "sku": "6959493517653",
-     "gtin": "6959493517653"
+     "gtin": "6959493517653",
+     "alsoIn": [
+      "tools-crema-timemore-2026-11-12"
+     ]
     },
     {
      "label": "C5 PRO White",
@@ -6289,7 +6315,10 @@
     {
      "label": "C5 ESP PRO Black",
      "sku": "6959493517691",
-     "gtin": "6959493517691"
+     "gtin": "6959493517691",
+     "alsoIn": [
+      "tools-crema-timemore-2026-11-12"
+     ]
     }
    ],
    "url": "https://www.timemore.com/products/timemore-manual-coffee-grinder-chestnut-c5-series",
@@ -6328,7 +6357,10 @@
     {
      "label": "Black",
      "sku": "STMUS100094",
-     "gtin": "6959493510432"
+     "gtin": "6959493510432",
+     "alsoIn": [
+      "tools-crema-timemore-2026-11-12"
+     ]
     },
     {
      "label": "Green",
@@ -6372,12 +6404,37 @@
     {
      "label": "Black",
      "sku": "6959493514188",
-     "gtin": "6959493514188"
+     "gtin": "6959493514188",
+     "alsoIn": [
+      "tools-crema-timemore-2026-11-12"
+     ]
     }
    ],
    "url": "https://www.timemore.com/products/timemore-whirly-01s-portable-electric-grinder",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-timemore-2026-11-10",
+   "makerAlias": "タイムモア"
+  },
+  {
+   "id": "timemore-crema-13898",
+   "kind": "grinder",
+   "maker": "TIMEMORE",
+   "name": "Timemore Bricks 01S Electric Coffee Grinder",
+   "variants": [
+    {
+     "label": "Black",
+     "sku": "Crema 13898",
+     "gtin": "6959493512924"
+    },
+    {
+     "label": "White",
+     "sku": "Crema 13899",
+     "gtin": "6959493512931"
+    }
+   ],
+   "url": "https://www.cremashop.eu/en/products/timemore/brics-01s-electric-grinder/13898",
+   "checkedAt": "2026-11-12",
+   "sourceId": "tools-crema-timemore-2026-11-12",
    "makerAlias": "タイムモア"
   },
   {
@@ -6400,6 +6457,80 @@
    "url": "https://www.timemore.com/products/timemore-bricks-01s-electric-coffee-grinder",
    "checkedAt": "2026-11-10",
    "sourceId": "tools-timemore-2026-11-10",
+   "makerAlias": "タイムモア"
+  },
+  {
+   "id": "timemore-crema-12882",
+   "kind": "grinder",
+   "maker": "TIMEMORE",
+   "name": "Timemore Chestnut C3s Max S2C Coffee Grinder",
+   "variants": [
+    {
+     "label": "Black",
+     "sku": "Crema 12882",
+     "gtin": "6959493506855"
+    }
+   ],
+   "url": "https://www.cremashop.eu/en/products/timemore/chestnut-c3s-max-foldable-handle",
+   "checkedAt": "2026-11-12",
+   "sourceId": "tools-crema-timemore-2026-11-12",
+   "makerAlias": "タイムモア"
+  },
+  {
+   "id": "timemore-crema-13025",
+   "kind": "grinder",
+   "maker": "TIMEMORE",
+   "name": "Timemore Chestnut C3s Pro S2C Coffee Grinder",
+   "variants": [
+    {
+     "label": "Black",
+     "sku": "Crema 13025",
+     "gtin": "6959493506213"
+    },
+    {
+     "label": "White",
+     "sku": "",
+     "gtin": "6959493507074",
+     "sourceId": "tools-timemore-extra-2026-11-12"
+    }
+   ],
+   "url": "https://www.cremashop.eu/en/products/timemore/chestnut-c3s-pro-foldable-handle",
+   "checkedAt": "2026-11-12",
+   "sourceId": "tools-crema-timemore-2026-11-12",
+   "makerAlias": "タイムモア"
+  },
+  {
+   "id": "timemore-crema-12362",
+   "kind": "grinder",
+   "maker": "TIMEMORE",
+   "name": "Timemore Sculptor 078 Coffee Grinder",
+   "variants": [
+    {
+     "label": "Black",
+     "sku": "Crema 12362",
+     "gtin": "6959493504110"
+    }
+   ],
+   "url": "https://www.cremashop.eu/en/products/timemore/sculptor-078-electric-grinder",
+   "checkedAt": "2026-11-12",
+   "sourceId": "tools-crema-timemore-2026-11-12",
+   "makerAlias": "タイムモア"
+  },
+  {
+   "id": "timemore-crema-12361",
+   "kind": "grinder",
+   "maker": "TIMEMORE",
+   "name": "Timemore Sculptor 078s Electric Grinder",
+   "variants": [
+    {
+     "label": "Black",
+     "sku": "Crema 12361",
+     "gtin": "6959493505650"
+    }
+   ],
+   "url": "https://www.cremashop.eu/en/products/timemore/sculptor-078s-electric-grinder",
+   "checkedAt": "2026-11-12",
+   "sourceId": "tools-crema-timemore-2026-11-12",
    "makerAlias": "タイムモア"
   },
   {
@@ -7512,5 +7643,5 @@
    "makerAlias": "コーノ式 KONO サイフオン"
   }
  ],
- "updatedAt": "2026-11-11"
+ "updatedAt": "2026-11-12"
 }
