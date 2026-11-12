@@ -33,7 +33,7 @@ SHOP_INFO = {
 }
 
 BASE_URL = "https://satoyamacoffee.com"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*g")
 
 # handle -> (分類, 産地, 焙煎度, 精製)。商品名が「〜な感じ」で産地等が名前に出ないため、

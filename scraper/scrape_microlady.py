@@ -38,7 +38,7 @@ SHOP_INFO = {
 }
 BASE_URL = "https://microlady.shop-pro.jp/"
 LIST_URL = BASE_URL + "?mode=cate&cbid=1641901&csid=0&sort=n"
-HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 PREFIX_RE = re.compile(r"^【(?:13th/)?(\d+)\s*[gｇ]】\s*")
 NON_BEAN_KEYWORDS = ["ドリップバッグ"]
 COLORME_RE = re.compile(r"var\s+Colorme\s*=\s*(\{.*?\});\s*\n", re.S)

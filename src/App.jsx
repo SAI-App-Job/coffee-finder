@@ -6,7 +6,7 @@ import { SHOPS } from "./data/shops";
 import { EVENTS } from "./data/events";
 import { TRIVIA_SUB_TABS } from "./data/navigation";
 import { ORIGIN_GUIDE } from "./data/originGuide";
-import { analyzeFlavorNotes } from "./utils/flavor";
+import { analyzeProductFlavor } from "./utils/flavor";
 import { loadRemoteData } from "./data/remote";
 import { sortByDistance, sortNewArrivalsFirst, sortByRecency, pickRandomDisplaySet, filterByFavoriteArea, shuffle, sortShopsByDistance, filterShopsByFavoriteArea } from "./utils/productSort";
 import { buildPrefectureRank, sortByPrefecturePopularity } from "./utils/prefectureOrder";
@@ -274,7 +274,7 @@ export default function CoffeeProductList() {
       if (filters.minRating && getRating(p.id) < filters.minRating) return false;
       if (filters.flavor.size) {
         // 大分類(カテゴリ名)・詳細分類(語)のどれかに該当すればヒット
-        const analysis = analyzeFlavorNotes(p.flavorNotes);
+        const analysis = analyzeProductFlavor(p);
         const hasMatch =
           analysis.categories.some((c) => filters.flavor.has(c.ja)) || analysis.terms.some((x) => filters.flavor.has(x.ja));
         if (!hasMatch) return false;

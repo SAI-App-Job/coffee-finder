@@ -44,7 +44,7 @@ EVENT_SOURCE_INFO = {
 
 CRAWL_DELAY_SECONDS = 10
 REQUEST_HEADERS = {
-    "User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"
+    "User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"
 }
 
 # 「2026年5月2日」のような完全な日付、および「〜5月4日」のように年を省略した

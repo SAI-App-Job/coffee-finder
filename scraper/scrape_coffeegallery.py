@@ -42,7 +42,7 @@ SHOP_INFO = {
 }
 
 BASE_URL = "https://coffeegallery.online"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 EXCLUDE_WORDS = ("キャニスター", "ギフト", "セット", "インスタント", "ドリップ", "コールドブリュー", "ラテ", "冷やし")
 ROAST_PATTERN = re.compile(r"[（(](中深煎り|中浅煎り|深煎り|中煎り|浅煎り)[）)]")
 

@@ -65,7 +65,7 @@ SHOP_INFO = {
 
 BASE_URL = "https://mamekobo.ocnk.net"
 REQUEST_HEADERS = {
-    "User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"
+    "User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"
 }
 
 WEIGHT_TAIL_PATTERN = re.compile(r"[\s　]*生豆\s*(\d+)\s*[gｇ]\s*での焙煎\s*(?:税込)?\s*価格\s*$")

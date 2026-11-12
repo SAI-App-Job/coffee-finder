@@ -47,7 +47,7 @@ SHOP_INFO = {
 BASE_URL = "https://shimizucoffee.ocnk.net"
 CATEGORIES = [("1", "blend"), ("2", "single")]
 ROAST_GROUPS = {"1": "深煎り", "2": "中深煎り", "3": "中煎り"}  # product-group/<id>
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 
 NAME_PATTERN = re.compile(r"^(.+?)\s*[(（]\s*(\d+(?:\.\d+)?)\s*(kg|g)\s*[)）]\s*$", re.I)
 

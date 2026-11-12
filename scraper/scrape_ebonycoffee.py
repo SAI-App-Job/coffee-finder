@@ -37,7 +37,7 @@ SHOP_INFO = {
 }
 
 BASE_URL = "https://ebonycoffee.tokyo"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 REQUEST_INTERVAL = 2
 CATEGORIES = [("1052522", "ブレンド"), ("1052523", "ストレート"), ("2426845", "ストレート")]
 

@@ -38,7 +38,7 @@ SHOP_INFO = {
 }
 
 MENU_URL = "https://kushirocoffee.wixsite.com/sansan/blank"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 WEIGHT_G = 100
 # 「●銘柄名   \本体価格   \税込価格」。価格記号は半角バックスラッシュ表記
 ROW_PATTERN = re.compile(r"●\s*([^\\●]+?)\s*[\\¥￥]\s*(\d[\d,]*)\s*[\\¥￥]\s*(\d[\d,]*)")

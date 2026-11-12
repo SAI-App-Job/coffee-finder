@@ -37,7 +37,7 @@ SHOP_INFO = {
 }
 
 API_URL = "https://ec.kouhiiya.jp/wp-json/wc/store/v1/products"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 REQUEST_INTERVAL = 2
 
 # 商品URLのカテゴリ(/product/<cat>/...)から焙煎度。ice は説明文から個別指定

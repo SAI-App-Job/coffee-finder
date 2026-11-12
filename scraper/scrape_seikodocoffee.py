@@ -53,7 +53,7 @@ SHOP_INFO = {
 }
 
 BASE_URL = "https://seikodocoffe.official.ec"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 REQUEST_INTERVAL_SEC = 5.5
 
 # id: 商品ID / name: 表示名 / category: Noneなら自動判定 / blend: ブレンドの構成国(商品説明の「生産国」)

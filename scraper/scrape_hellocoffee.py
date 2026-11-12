@@ -76,7 +76,7 @@ SHOP_INFO = {
 BASE_URL = "https://store.shopping.yahoo.co.jp/hellocoffee-proshop"
 SEARCH_URL = f"{BASE_URL}/search.html?p={quote('自家焙煎')}"
 REQUEST_HEADERS = {
-    "User-Agent": "Mozilla/5.0 (compatible; CoffeeFinderBot/0.1; +contact: your-contact-info-here)"
+    "User-Agent": "Mozilla/5.0 (compatible; CoffeeFinderBot/0.1; +https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"
 }
 
 NON_BEAN_KEYWORDS = ["種類"]

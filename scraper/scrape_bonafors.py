@@ -68,7 +68,7 @@ BASE_URL = "https://bonafors.jp"
 BEAN_CATEGORY_IDS = [7, 8, 9]  # 標準焙煎度 中煎/中深煎/深煎(理由はモジュールdocstring参照)
 ROAST_HINTS = {7: "中煎", 8: "中深煎", 9: "深煎"}
 REQUEST_HEADERS = {
-    "User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"
+    "User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"
 }
 
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")

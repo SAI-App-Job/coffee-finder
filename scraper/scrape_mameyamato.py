@@ -49,7 +49,7 @@ SHOP_INFO = {
 BASE_URL = "https://mameyamato.shop-pro.jp"
 CATEGORY_URL = BASE_URL + "/?mode=cate&cbid=1538105&csid=0&page={page}"
 MAX_PAGES = 8
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 
 ITEM_NAME_PATTERN = re.compile(r'<p class="item_name">\s*<a href="\?pid=(\d+)">(.*?)</a>', re.S)
 PRICE_PATTERN = re.compile(r"([\d,]+)円\(税込\)")

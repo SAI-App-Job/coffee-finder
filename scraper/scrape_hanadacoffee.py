@@ -48,7 +48,7 @@ SHOP_INFO = {
 BASE_URL = "https://hanadacoffee.net/"
 LIST_URL = BASE_URL + "?mode=srh&keyword=&sort=n"
 CRAWL_DELAY_SECONDS = 2.0
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 EXCLUDE_KEYWORDS = (
     "ドリップ", "バッグ", "セット", "リキッド", "水出し", "カフェオレベース", "フィルター", "濾紙", "カリタ", "V60",
     "ドリッパー", "サーバー", "ＫＷＦ", "KWF", "テスト", "クリーナー", "メジャーカップ", "1kg", "100袋",

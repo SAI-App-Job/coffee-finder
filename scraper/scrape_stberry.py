@@ -54,7 +54,7 @@ BASE_URL = "https://www.stberry.net"
 CATEGORY_IDS = [200, 209, 210, 211, 212, 9]
 CRAWL_DELAY_SECONDS = 1
 REQUEST_HEADERS = {
-    "User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"
+    "User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"
 }
 NON_BEAN_KEYWORDS = ["ドリップ", "セット", "水だし", "水出し", "リキッド", "ギフト", "送料", "COLD BREW"]
 

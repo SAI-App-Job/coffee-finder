@@ -51,7 +51,7 @@ SHOP_INFO = {
 
 BASE_URL = "https://hibinocoffee.jp"
 LIST_URLS = [f"{BASE_URL}/view/category/all_items", f"{BASE_URL}/view/category/all_items?page=2"]
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 REQUEST_INTERVAL = 2
 
 NON_BEAN_KEYWORDS = ("ドリップパック", "水出し", "ギフト")

@@ -35,7 +35,7 @@ SHOP_INFO = {
 
 BASE_URL = "https://hoshino-coffee.shop-pro.jp"
 CATEGORIES = [("2926445", "blend"), ("2926446", "single")]
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 MAX_PAGES = 10
 
 WEIGHT_PATTERN = re.compile(r"【\s*(\d+)\s*[gｇ]\s*】")

@@ -38,7 +38,7 @@ SHOP_INFO = {
 }
 
 BASE_URL = "https://kitahirar.base.ec"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 REQUEST_INTERVAL_SEC = 5.5  # BASEは5秒以上
 
 # (商品ID, 商品名, 重量(g), 分類の上書き(Noneなら自動判定), 焙煎度(Noneなら商品名から判定))

@@ -42,7 +42,7 @@ SHOP_INFO = {
 
 BASE_URL = "https://www.mames.jp"
 LIST_URL = f"{BASE_URL}/view/category/0000000108"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 TARGET_CATEGORIES = ("スペシャルティブレンド", "スペシャルティストレート")
 NON_BEAN_KEYWORDS = ("セット", "福袋", "ジャグ", "ドリップ", "ポッド")
 ROAST_PATTERN = re.compile(r"(中深煎り|浅煎り|中煎り|深煎り)")

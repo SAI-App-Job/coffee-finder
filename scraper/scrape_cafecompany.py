@@ -48,7 +48,7 @@ SHOP_INFO = {
 
 SHOP_ID = "cafecom6100"
 ITEM_URL = f"https://item.rakuten.co.jp/{SHOP_ID}/" + "{code}/"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 REQUEST_INTERVAL = 1.5
 
 # (商品コード, 商品名(商品ページ題名の【 】内が取れない場合の既定), 精製(表記があれば))

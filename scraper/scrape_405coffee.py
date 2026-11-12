@@ -78,7 +78,7 @@ SHOP_INFO = {
 CRAWL_DELAY_SECONDS = 1  # robots.txt確認済み(2026-08時点): Crawl-delay指定なし。個人開発の反復スピード
 # 優先だが、小規模個人店が多いためcourtesy設定(間隔を空けること自体)は維持する
 REQUEST_HEADERS = {
-    "User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"
+    "User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"
 }
 
 BASE_URL = "https://405coffee.shop-pro.jp/"

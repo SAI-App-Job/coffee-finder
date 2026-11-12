@@ -35,7 +35,7 @@ SHOP_INFO = {
 }
 
 BASE_URL = "https://store.golpiecoffee.jp"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 WEIGHT_PATTERN = re.compile(r"^\s*(\d+)\s*g")
 ROAST_BRACKET = re.compile(r"〈([^〉]*煎り)〉")
 EXCLUDE_WORDS = ("セット", "詰め合わせ", "ギフト", "ドリップバッグ", "定期便", "水出し")

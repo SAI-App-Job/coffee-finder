@@ -60,7 +60,7 @@ SHOP_INFO = {
 }
 
 REQUEST_HEADERS = {
-    "User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"
+    "User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"
 }
 # 理由はモジュールdocstring参照(送料込みの「お試し」版は同一商品の重複の
 # ため対象外とし、通常版のみをハードコードで指定する)

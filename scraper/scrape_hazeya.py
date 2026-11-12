@@ -69,7 +69,7 @@ SHOP_INFO = {
 BASE_URL = "https://hazeya.shop-pro.jp/"
 LIST_URL = "https://hazeya.shop-pro.jp/?mode=srh&cid=&keyword=&sort=n"
 REQUEST_HEADERS = {
-    "User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"
+    "User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"
 }
 
 ROAST_PREFIX_PATTERN = re.compile(r"^【(浅煎り|中煎り|深煎り)】")

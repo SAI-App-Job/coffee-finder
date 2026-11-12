@@ -35,7 +35,31 @@ export function flavorTagItems(analysis) {
   ];
 }
 
+// 商品の風味の判定。data/products.json には、店舗の長い説明文は載せず、判定済みの結果(flavor_terms・flavor_category_only)を載せている
+// (scripts/reduce-product-text.js)。その結果があれば、それを使う。無い商品(サンプル等)は、説明文から判定する。
+// terms: 判定済みの語 { ja, en, cat, generic, word(説明文に載っていた表記) }
+const TERM_BY_JA = new Map(FLAVOR_TERM_ENTRIES.map((e) => [e.ja, e]));
+const analysisCache = new WeakMap();
+export function analyzeProductFlavor(product) {
+  if (!Array.isArray(product?.flavorTerms)) return analyzeFlavorNotes(product?.flavorNotes);
+  const hit = analysisCache.get(product);
+  if (hit) return hit;
+  const terms = [];
+  for (const [ja, word] of product.flavorTerms) {
+    const e = TERM_BY_JA.get(ja);
+    if (e) terms.push({ ja: e.ja, en: e.en, cat: e.cat, generic: e.generic, word });
+  }
+  const withTerm = new Set(terms.map((t) => t.cat.id));
+  const onlyIds = new Set(Array.isArray(product.flavorCategoryOnly) ? product.flavorCategoryOnly : []);
+  const categories = FLAVOR_CATEGORIES.filter((c) => withTerm.has(c.id) || onlyIds.has(c.id));
+  const categoryOnly = categories.filter((c) => !withTerm.has(c.id));
+  const result = { terms, categories, categoryOnly };
+  analysisCache.set(product, result);
+  return result;
+}
+
 export const categorizeFlavorNotes = (text) => analyzeFlavorNotes(text).categories;
+export const categorizeProduct = (product) => analyzeProductFlavor(product).categories;
 
 // 評価済み商品のflavorNotesを星の数で重み付けして集計し、フレーバー
 // カテゴリごとの好み傾向スコアを算出する。1商品が複数カテゴリに
@@ -45,7 +69,7 @@ export function computeFlavorPreferenceScores(ratedEntries) {
   const scores = new Map();
   ratedEntries.forEach(({ product, rating }) => {
     if (!rating) return;
-    categorizeFlavorNotes(product.flavorNotes).forEach((cat) => {
+    categorizeProduct(product).forEach((cat) => {
       const entry = scores.get(cat.en) ?? { category: cat, score: 0, count: 0 };
       entry.score += rating;
       entry.count += 1;
@@ -65,7 +89,7 @@ export function recommendByFlavorCategories(candidateProducts, topCategoryEns, l
   return candidateProducts
     .filter((product) => product.stockStatus === "販売中")
     .map((product) => {
-      const categories = categorizeFlavorNotes(product.flavorNotes).map((c) => c.en);
+      const categories = categorizeProduct(product).map((c) => c.en);
       const matchCount = categories.filter((en) => topCategoryEns.includes(en)).length;
       return { product, matchCount };
     })

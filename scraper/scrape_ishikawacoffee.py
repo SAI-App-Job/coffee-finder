@@ -47,7 +47,7 @@ SHOP_INFO = {
 }
 
 BASE_URL = "https://ishikawa-coffee.com"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 CATEGORY_IDS = ["1407286", "1407287"]
 EXCLUDE_KEYWORDS = ("セット", "ドリップバッグ", "リキッド", "ギフト")
 

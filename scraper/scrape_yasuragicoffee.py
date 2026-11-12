@@ -37,7 +37,7 @@ SHOP_INFO = {
 }
 
 BASE = "https://www.yasuragi-coffee.jp"
-HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 INTERVAL = 2.0
 EXCLUDE_WORDS = ("業務用", "セット", "ギフト", "水出し", "探訪", "ラッピング", "キット", "ドリップ")
 ROAST_MAP = [

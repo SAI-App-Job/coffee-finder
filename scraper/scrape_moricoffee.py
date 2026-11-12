@@ -81,7 +81,7 @@ CATEGORY_PATHS = [
     "product-group/1", "product-group/3", "product-group/4", "product-group/5",
 ]
 REQUEST_HEADERS = {
-    "User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"
+    "User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"
 }
 
 NON_BEAN_KEYWORDS = ["コーヒーバッグ", "ドリップ", "飲み比べセット", "ギフトBOX"]

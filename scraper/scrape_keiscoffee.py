@@ -38,7 +38,7 @@ SHOP_INFO = {
 }
 
 BASE_URL = "https://www.keiscoffee.com"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 CATEGORY_STRAIGHT = "ct36"
 CATEGORY_BLEND = "ct37"
 CATEGORY_ALL = "ct34"

@@ -63,7 +63,7 @@ SHOP_INFO = {
 BASE_URL = "https://coffee-teramachi.ocnk.net"
 CATEGORY_IDS = ["1", "2"]
 REQUEST_HEADERS = {
-    "User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"
+    "User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"
 }
 
 LABEL_KEYS = ["生産国", "生産地域", "産地", "農園名", "農園", "標高", "産地標高", "品種",

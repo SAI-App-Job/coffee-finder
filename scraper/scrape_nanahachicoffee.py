@@ -39,7 +39,7 @@ SHOP_INFO = {
 BASE_URL = "http://78coffee.shop-pro.jp/"
 LIST_URL = BASE_URL + "?mode=srh&keyword=&sort=n"
 CRAWL_DELAY_SECONDS = 1.5
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 EXCLUDE_KEYWORDS = ("定期便", "ドリップバッグ", "ギフト", "水出し", "セット")
 ROAST_PATTERN = re.compile(r"(中浅|中深|浅|中|深)焙り")
 ROAST_MAP = {"中浅": "中浅煎り", "中深": "中深煎り", "浅": "浅煎り", "中": "中煎り", "深": "深煎り"}

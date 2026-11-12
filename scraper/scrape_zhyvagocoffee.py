@@ -32,7 +32,7 @@ SHOP_INFO = {
 }
 
 BASE_URL = "https://shop.zhyvagocoffeeroastery.coffee"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 BEAN_TYPE = "コーヒー豆"
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*g")
 # インフューズド系(花・果実・ハーブ等を加える共発酵)は除外

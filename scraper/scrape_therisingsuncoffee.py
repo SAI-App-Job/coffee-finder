@@ -40,7 +40,7 @@ SHOP_INFO = {
 }
 
 BASE_URL = "https://therisingsuncoffee.com"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 # 例: "エチオピア・アナソラ【中浅煎り】（200g）" / "アイナハイナブレンド【中煎り】（200g / 1kg）"
 TITLE_PATTERN = re.compile(r"^(?P<name>.+?)【(?P<roast>[^】]*煎り)】\s*（(?P<weight>\d+)\s*g[^）]*）\s*$")
 EXCLUDE_WORDS = ("セット", "ドリップバッグ", "水出し", "アイスコーヒー", "定期便", "GIFT")

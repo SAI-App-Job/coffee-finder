@@ -42,7 +42,7 @@ CATEGORY_URLS = [
     f"{BASE_URL}/category/{quote('銘柄コーヒー豆')}",
     f"{BASE_URL}/category/{quote('ブレンドコーヒー')}",
 ]
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 REQUEST_INTERVAL = 2.0
 LD_PATTERN = re.compile(r'<script type="application/ld\+json"[^>]*>(.*?)</script>', re.S)
 CATEGORY_PRODUCT_PATTERN = re.compile(r'"urlPart":"([^"]+)"[^{}]*?"name":"([^"]+)"')

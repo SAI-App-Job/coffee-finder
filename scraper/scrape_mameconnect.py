@@ -56,7 +56,7 @@ SHOP_INFO = {
 
 BASE_URL = "https://www.mame-connect.com/"
 REQUEST_HEADERS = {
-    "User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"
+    "User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"
 }
 
 PRICE_NOTE = "価格は店舗にお問い合わせください(生豆から選び、注文時に焙煎してもらう量り売り方式のため、価格は一律に掲載されていません)"

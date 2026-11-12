@@ -44,7 +44,7 @@ SHOP_INFO = {
 
 BASE_URL = "https://toki.ocnk.net"
 LIST_URL = f"{BASE_URL}/product-list/1"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 WEIGHT_PATTERN = re.compile(r"-(\d+)\s*g-")
 
 # coffee_parser.pyで検出しにくい商品名からの産地・分類・焙煎度の明示(商品説明で確認済み)

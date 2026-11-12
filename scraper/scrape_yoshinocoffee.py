@@ -37,7 +37,7 @@ SHOP_INFO = {
 
 BASE_URL = "https://yoshino-coffee.ocnk.net"
 LIST_URL = f"{BASE_URL}/product-list/19"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 REQUEST_INTERVAL = 2
 ROAST_MAP = [
     ("フルシティ、シティ", "中深煎り"),

@@ -54,7 +54,7 @@ SHOP_INFO = {
 
 BASE_URL = "https://store.shopping.yahoo.co.jp/mameya-net"
 LIST_URL = f"{BASE_URL}/search.html"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 REQUEST_INTERVAL = 3
 NEXT_DATA_PATTERN = re.compile(r'id="__NEXT_DATA__"[^>]*>(.*?)</script>', re.DOTALL)
 EXCLUDE_KEYWORDS = ("セット",)

@@ -42,7 +42,7 @@ SHOP_INFO = {
 
 BASE_URL = "https://cafedelambre.com"
 PRODUCTS_JSON = f"{BASE_URL}/products.json?limit=250"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 ROAST_HINT_PATTERN = re.compile(r"(中深煎り|浅煎り|中煎り|深煎り)")
 ORIGIN_OVERRIDES = {"スマトラ": "インドネシア"}
 

@@ -52,7 +52,7 @@ SHOP_INFO = {
 BASE_URL = "https://jokicoffee.shop-pro.jp/"
 SEARCH_URL = "https://jokicoffee.shop-pro.jp/?mode=srh&cid=&keyword=&page={page}"
 REQUEST_HEADERS = {
-    "User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"
+    "User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"
 }
 CRAWL_DELAY_SECONDS = 1
 

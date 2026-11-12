@@ -51,7 +51,7 @@ SHOP_INFO = {
 
 LIST_URL = "https://coffee-mart.jp/store/"
 CRAWL_DELAY_SECONDS = 0.7
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 
 NON_BEAN_KEYWORDS = ["ドリップパック", "ドリップバッグ", "セット", "詰め合わせ", "ギフト", "水出し", "ディップ", "アイスコーヒー 無糖"]
 INFUSED_KEYWORDS = ["インフューズド", "インフューズ", "WineYeast"]

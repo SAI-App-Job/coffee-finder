@@ -40,7 +40,7 @@ SHOP_INFO = {
 
 BASE_URL = "https://6340coffee.shop-pro.jp/"
 BEAN_CATEGORIES = ["874882", "874884", "874885", "1186762"]  # ストレート/ブレンド/フレンチ・深煎り/オーガニック
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 EXCLUDE_KEYWORDS = ("ドリップ", "セット", "ギフト", "ティー", "Bag", "Ｂａｇ", "リキッド", "チョコ")
 DELAY = 1
 

@@ -56,7 +56,7 @@ CATEGORY_PATHS = [
     "product-list/84", "product-list/85", "product-list/89",
 ]
 REQUEST_HEADERS = {
-    "User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"
+    "User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"
 }
 
 WEIGHT_BAG_PATTERN = re.compile(r"[（(]\s*\d+\s*[gｇ]\s*袋入\s*[）)]")

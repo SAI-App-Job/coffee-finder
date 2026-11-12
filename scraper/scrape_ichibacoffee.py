@@ -33,7 +33,7 @@ SHOP_INFO = {
 }
 
 BASE_URL = "https://www.ichiba-coffee.com"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 JSONLD_PATTERN = re.compile(r'<script type="application/ld\+json">(.*?)</script>', re.DOTALL)
 SINGLE_BAG_PATTERN = re.compile(r"\(\s*1袋\s*(\d+)\s*g\s*\)")
 EXCLUDE_KEYWORDS = ["セット", "GIFT", "ギフト", "定期", "ドリップ"]

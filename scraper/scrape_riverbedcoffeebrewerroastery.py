@@ -38,7 +38,7 @@ SHOP_INFO = {
 }
 
 BASE_URL = "https://riverbedcoffee-brewer-roastery.com"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*g")
 ROAST_PATTERN = re.compile(r"[(（]\s*(中浅煎り|中深煎り|浅煎り|中煎り|深煎り)\s*[)）]")
 EXCLUDE_KEYWORDS = ["リキッド", "ドリップバッグ", "キャニスター", "HARIO", "ハリオ"]

@@ -42,7 +42,7 @@ SHOP_INFO = {
 
 BASE_URL = "https://www.sanno-coffee.jp"
 LIST_URL = f"{BASE_URL}/various-products"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 REQUEST_INTERVAL_SEC = 2
 
 SECTION_START = "定番コーヒー豆 "   # 商品一覧の見出し(末尾に空白あり)。ナビの「定番コーヒー豆」と区別する

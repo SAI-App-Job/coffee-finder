@@ -1,5 +1,6 @@
 import { ArrowRight, Trash2, X } from "lucide-react";
 import { formatPrice } from "../utils/format";
+import { analyzeProductFlavor } from "../utils/flavor";
 import { useT } from "../i18n";
 
 export function CompareTray({ count, limit, isPremium, onOpen }) {
@@ -91,7 +92,7 @@ export function ComparisonModal({ products, onClose, onRemove, onClearAll, isPre
               <CompareField label={t("精選方法")} value={p.processingMethod} />
               <CompareField label={t("グレード")} value={p.grade} />
               <CompareField label={t("焙煎度")} value={p.roast ? t(p.roast) : p.roastSelectable ? t("注文時選択") : null} />
-              <CompareField label={t("フレーバー")} value={p.flavorNotes} />
+              <CompareField label={t("フレーバー")} value={p.flavorNotes || analyzeProductFlavor(p).terms.map((x) => t(x.ja)).join("、") || null} />
               <CompareField label={t("店舗{ctx}", { ctx: "" })} value={p.shopName} />
             </div>
           ))}

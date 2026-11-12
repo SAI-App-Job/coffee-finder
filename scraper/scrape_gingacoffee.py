@@ -52,7 +52,7 @@ SHOP_INFO = {
 
 BASE_URL = "https://shop.ginga.coffee/"
 LIST_URL = BASE_URL + "?mode=cate&cbid=2651781&csid=0&sort=n"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 REQUEST_INTERVAL = 2.0
 
 EXCLUDE_NAME_KEYWORDS = ["お試しアソート", "セット", "ドリップバッグ", "ギフト", "生豆"]

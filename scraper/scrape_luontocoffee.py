@@ -47,7 +47,7 @@ SHOP_INFO = {
 
 BASE_URL = "https://luontocoffee.com"
 API_URL = f"{BASE_URL}/wp-json/wc/store/v1/products"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 WEIGHT_ATTR = "グラム数"
 EXCLUDE_CATS = ("定期便", "セット商品", "ギフトセット", "箱ギフト", "100%specialtycoffeeドリップバッグ",
                 "お楽しみBOX", "KUTEのおやつ箱", "コーヒー器具", "水出しコーヒー", "ラッピングオプション")

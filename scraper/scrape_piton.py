@@ -53,7 +53,7 @@ SHOP_INFO = {
 BASE_URL = "https://piton.shop-pro.jp"
 # メインカテゴリ(ブレンド・ストレート)を先に処理し、重複する「今月のおすすめ」側を後回しにする
 CATEGORY_IDS = [("1489881", "ブレンド"), ("1524790", "ストレート"), ("1524840", "今月のおすすめ")]
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 
 ITEM_BLOCK_PATTERN = re.compile(r'<div class="coffee cr">(.*?)(?=<div class="coffee cr">|Coffee Goods guide|$)', re.S)
 ITEM_NAME_PATTERN = re.compile(r'<h3><a href="\?pid=(\d+)">(.*?)</a></h3>', re.S)

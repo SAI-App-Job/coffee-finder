@@ -58,7 +58,7 @@ SHOP_ID = "thebeans"
 ITEM_URL = f"https://item.rakuten.co.jp/{SHOP_ID}/" + "{code}/"
 CATEGORY_URL = f"https://item.rakuten.co.jp/{SHOP_ID}/c/" + "{cid}/"
 CATEGORY_IDS = ["0000000326", "0000000327", "0000000328", "0000000351", "0000000304"]
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 EXCLUDE_KEYWORDS = (
     "セット", "福袋", "生豆", "ドリップバッグ", "ドリップパック", "トリオ", "LIVE", "DOCUMENT", "ポッキリ", "個入",
 )

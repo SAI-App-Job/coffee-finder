@@ -49,7 +49,7 @@ SHOP_INFO = {
 }
 
 SHOP_PAGE_URL = "https://42195coffee.wixsite.com/toppage/online-shopping"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 
 PRICE_100G_PATTERN = re.compile(r"^100\s*g\s*([\d,]+)\s*円")
 ROAST_PATTERN = re.compile(r"^(浅|中浅|中|中深|深)煎")

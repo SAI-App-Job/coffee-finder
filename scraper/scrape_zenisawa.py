@@ -41,7 +41,7 @@ SHOP_INFO = {
 }
 
 BASE_URL = "https://zenisawa.ocnk.net"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 LIST_URL = f"{BASE_URL}/product-group/1"
 EXCLUDE_KEYWORDS = ("セット", "ギフト", "BOX", "石けん", "タブレット")
 ORIGIN_OVERRIDES = {"カナリア諸島": "カナリア諸島", "セントヘレナ": "セントヘレナ"}

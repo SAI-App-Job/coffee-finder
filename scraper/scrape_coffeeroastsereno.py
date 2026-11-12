@@ -35,7 +35,7 @@ SHOP_INFO = {
 }
 
 BASE_URL = "https://sereno-etajima.com"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*g")
 EXCLUDE_KEYWORDS = ["セット", "ギフト", "ドリップバッグ", "1杯ドリップ"]
 # 店舗の「ブレンド豆」コレクションに属する商品(商品名に「ブレンド」を含まないものを含む)

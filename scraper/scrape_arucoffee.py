@@ -42,7 +42,7 @@ SHOP_INFO = {
 }
 
 BASE_URL = "https://aru-coffee.myshopify.com"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 EXCLUDE_TITLE_KEYWORDS = ["ドリップパック", "セット", "BOX"]
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]", re.IGNORECASE)
 ROAST_PATTERN = re.compile(r"[(（]\s*(中深煎り|中浅煎り|深煎り|浅煎り|中煎り)\s*[)）]")

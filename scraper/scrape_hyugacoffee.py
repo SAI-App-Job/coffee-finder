@@ -37,7 +37,7 @@ SHOP_INFO = {
 }
 
 BASE_URL = "https://store.hyuga.coffee"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 BEAN_TYPE = "コーヒー"
 SOLD_OUT_CUTOFF = "2025-10-18"  # これ以降に公開した完売品を収録
 EXCLUDE_TITLE = re.compile(r"セット|SET|BOX|福箱|定期便|業務用|COLD BREW|インヒューズド|FOR BUSINESS|ANNIVERSARY", re.I)

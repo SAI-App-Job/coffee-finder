@@ -41,7 +41,7 @@ SHOP_INFO = {
 
 BASE_URL = "https://www.organic-coffee.jp"
 LIST_URL = BASE_URL + "/view/category/ct1"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 REQUEST_INTERVAL = 2
 
 EXCLUDE_TITLE_KEYWORDS = ("セット", "ドリップバッグ", "（粉）", "(粉)")

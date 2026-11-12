@@ -5,7 +5,7 @@ import { SourceLinks } from "./common";
 import { brandName, designatedBrandExplanation, localizeFact, processingExplanation } from "../data/localize";
 import { ORIGIN_GUIDE } from "../data/originGuide";
 import { getGradeExplanation } from "../utils/grade";
-import { analyzeFlavorNotes, flavorTagItems } from "../utils/flavor";
+import { analyzeProductFlavor, flavorTagItems } from "../utils/flavor";
 import { cityFromAddress, formatDate, formatPrice } from "../utils/format";
 import { isNewArrival } from "../utils/productSort";
 import { useT } from "../i18n";
@@ -166,7 +166,7 @@ function ProductCardImpl({ product, onOpenMap, onLearnOrigin, isFavorite, onTogg
     : null;
   const gradeDetail = getGradeExplanation(product.grade, product.originCountry, product.designatedBrand);
   const brandExplanation = product.designatedBrand ? designatedBrandExplanation(product.designatedBrand) : null;
-  const flavorTags = flavorTagItems(analyzeFlavorNotes(product.flavorNotes));
+  const flavorTags = flavorTagItems(analyzeProductFlavor(product));
   const flavorTagsShown = flavorTags.slice(0, FLAVOR_TAG_LIMIT);
   // 産地タブに詳細ページが無い国は、ボタン自体は表示したままグレーアウトする
   // (非表示にすると「情報が無いこと」自体が伝わらないため)。実際の遷移可否・
@@ -300,9 +300,14 @@ function ProductCardImpl({ product, onOpenMap, onLearnOrigin, isFavorite, onTogg
                 }
                 category={t(item.cat.ja)}
                 detail={
-                  item.word
-                    ? t("テイスティングノート「{notes}」に「{word}」の記載があるため、アプリ独自の風味カテゴリ「{cat}」の「{term}」に自動分類。", { notes: product.flavorNotes, word: item.word, cat: t(item.cat.ja), term: t(item.label) })
-                    : t("テイスティングノート「{notes}」から、アプリ独自の風味カテゴリ「{cat}」に該当すると自動分類。", { notes: product.flavorNotes, cat: t(item.cat.ja) })
+                  // 店舗の長い説明文は、アプリに載せていない。短い記述が残っている商品だけ、その原文を引く
+                  product.flavorNotes
+                    ? item.word
+                      ? t("テイスティングノート「{notes}」に「{word}」の記載があるため、アプリ独自の風味カテゴリ「{cat}」の「{term}」に自動分類。", { notes: product.flavorNotes, word: item.word, cat: t(item.cat.ja), term: t(item.label) })
+                      : t("テイスティングノート「{notes}」から、アプリ独自の風味カテゴリ「{cat}」に該当すると自動分類。", { notes: product.flavorNotes, cat: t(item.cat.ja) })
+                    : item.word
+                      ? t("店舗の商品説明に「{word}」の記載があるため、アプリ独自の風味カテゴリ「{cat}」の「{term}」に自動分類。", { word: item.word, cat: t(item.cat.ja), term: t(item.label) })
+                      : t("店舗の商品説明から、アプリ独自の風味カテゴリ「{cat}」に該当すると自動分類。", { cat: t(item.cat.ja) })
                 }
               />
             ))}

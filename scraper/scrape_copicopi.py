@@ -52,7 +52,7 @@ SHOP_INFO = {
 }
 
 BASE_URL = "http://copicopi.cart.fc2.com"
-REQUEST_HEADERS = {"User-Agent": "Mozilla/5.0 (CoffeeFinderBot/0.1; +contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "Mozilla/5.0 (CoffeeFinderBot/0.1; +https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 
 # (item_id, category_prefix) — ドリップパック(ca5)・水だしコーヒーパック(ca10)、
 # および《粉》バリアント(《豆》と重複する銘柄のみ)は除外済み

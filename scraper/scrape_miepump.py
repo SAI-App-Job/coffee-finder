@@ -37,7 +37,7 @@ SHOP_INFO = {
 
 BASE_URL = "http://miepump.shop-pro.jp"
 CATEGORY_URL = BASE_URL + "/?mode=cate&cbid=1599678&csid=0"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 INTERVAL = 1.6
 EXCLUDE = ("ギフト", "包装袋")
 ROAST_RE = re.compile(r"(中深煎り|中浅煎り|浅煎り|中煎り|深煎り)")

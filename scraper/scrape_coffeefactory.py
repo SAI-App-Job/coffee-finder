@@ -60,7 +60,7 @@ SHOP_INFO = {
 }
 
 BASE_URL = "https://coffeefactory.shop-pro.jp/"
-REQUEST_HEADERS = {"User-Agent": "Mozilla/5.0 (CoffeeFinderBot/0.1; +contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "Mozilla/5.0 (CoffeeFinderBot/0.1; +https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 CATEGORY_ID = "1684052"
 
 LABEL_MAP = {"生産地": "生産地", "生産者": "生産者", "標高": "標高", "品種": "品種", "プロセス": "精選方法"}

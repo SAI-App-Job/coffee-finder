@@ -59,7 +59,7 @@ LIST_CATEGORIES = {
 }
 CRAWL_DELAY_SECONDS = 1
 REQUEST_HEADERS = {
-    "User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"
+    "User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"
 }
 
 CLASS_CATEGORIES_PATTERN = re.compile(r"eccube\.classCategories\s*=\s*(\{.*?\});", re.DOTALL)

@@ -39,7 +39,7 @@ SHOP_INFO = {
 }
 
 BASE_URL = "https://mameya-mamekichi.jimdoweb.com"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 
 # (ページのパス, 既定カテゴリ, 先頭商品の説明文開始位置を示す区切り文字列)
 PAGES = [

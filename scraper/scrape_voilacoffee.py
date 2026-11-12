@@ -78,7 +78,7 @@ SHOP_INFO = {
 
 BASE_URL = "https://www.umaicoffee.jp"
 REQUEST_HEADERS = {
-    "User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"
+    "User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"
 }
 
 ORIGIN_LABEL_PATTERN = re.compile(r"【生産国】\s*([^/／\n]+)")

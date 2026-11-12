@@ -32,7 +32,7 @@ SHOP_INFO = {
 }
 
 API_URL = "https://cafe-kokage.com/wp-json/wc/store/v1/products"
-HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 BEAN_CATEGORIES = ("ストレートコーヒー", "ブレンドコーヒー")
 
 

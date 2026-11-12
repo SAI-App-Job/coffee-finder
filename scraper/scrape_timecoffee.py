@@ -49,7 +49,7 @@ SHOP_INFO = {
 
 BASE_URL = "https://timecoffee.cafe"
 LIST_URL = f"{BASE_URL}/coffee_list/"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 DELAY = 1
 EXCLUDE_KEYWORDS = ("セット", "ギフト", "ドリップバッグ", "スタンド")
 # 店の焙煎度欄の表記ゆれを統一する(「浅中煎り」=中浅煎り。「やや深」は商品説明が「中深煎りに焙煎」のため中深煎り)

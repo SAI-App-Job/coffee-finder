@@ -57,7 +57,7 @@ SHOP_INFO = {
 
 BASE_URL = "https://shopingsoniroki.cart.fc2.com"
 LIST_URL = BASE_URL + "/?ca=1&par_page=100"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 
 PRICE_PATTERN = re.compile(r"価格：<b>([\d,]+)円</b>")
 EXCLUDE_KEYWORDS = ["コース", "セット", "包装", "定期"]

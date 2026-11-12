@@ -38,7 +38,7 @@ SHOP_INFO = {
 
 BASE = "https://www.hakubabaisen.com"
 CATEGORY_IDS = [91, 92, 93, 94, 80]
-HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 ROAST_RE = re.compile(r"(極深煎り|中浅煎り|中深煎り|浅煎り|中煎り|深煎り)")
 NON_BEAN = ["ドリップバッグ", "ギフト", "アソート", "セット"]
 

@@ -41,7 +41,7 @@ SHOP_INFO = {
 
 BASE_URL = "https://www.coffee-kyara.com"
 CATEGORIES = [("25266", "single"), ("28985", "blend")]
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 MAX_PAGES = 6
 
 TITLE_PATTERN = re.compile(r"^(.+?)\s*[(（][^)）]*コーヒー[)）]\s*(\d+)\s*g\s*$", re.I)

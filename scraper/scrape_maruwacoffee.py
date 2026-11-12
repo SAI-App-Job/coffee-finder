@@ -38,7 +38,7 @@ SHOP_INFO = {
 }
 
 BASE_URL = "https://maruwa.raku-uru.jp"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 CATEGORY_IDS = {"12643": "ストレート", "12641": "ブレンド"}
 # 水出しパックは豆ではなくパック製品、会員様専用カートは一般販売外のため除外
 EXCLUDE_KEYWORDS = ("水出しコーヒーパック", "会員様専用")

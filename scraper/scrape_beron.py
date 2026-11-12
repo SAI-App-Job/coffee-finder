@@ -30,7 +30,7 @@ SHOP_INFO = {
 }
 
 BASE_URL = "https://beron-coffee.com"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 BEAN_TYPE = "コーヒー"
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*g", re.I)
 ROAST_TAGS = ["中浅煎り", "中深煎り", "浅煎り", "深煎り", "中煎り"]

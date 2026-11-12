@@ -33,7 +33,7 @@ SHOP_INFO = {
 }
 
 BASE_URL = "https://craftcoffeeroastery.com"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*g")
 ORIGIN_PATTERN = re.compile(r"原産国 / origin\s*(.*?)\s*品種")
 PROCESS_PATTERN = re.compile(r"精製方法 / proccess\s*(.*?)\s*焙煎度")

@@ -34,7 +34,7 @@ SHOP_INFO = {
 }
 
 API_URL = "https://www.mamekichi-an.com/wp-json/wc/store/v1/products"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 BEAN_CATEGORY = "珈琲豆"
 EXCLUDE_KEYWORDS = ["セット", "クール便", "ペーパー", "ドリップバッグ"]
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*g")

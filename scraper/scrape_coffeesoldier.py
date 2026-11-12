@@ -36,7 +36,7 @@ SHOP_INFO = {
 
 BASE_URL = "https://coffeesoldier.shop-pro.jp/"
 LIST_URL = BASE_URL + "?mode=cate&cbid=2178457&csid=0"
-HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 INTERVAL = 2.0
 EXCLUDE_WORDS = ("エコバ", "アルミ袋", "ギフト", "ドリップ", "セット", "水出し")
 COLORME_JSON_PATTERN = re.compile(r"var\s+Colorme\s*=\s*(\{.*\});", re.DOTALL)

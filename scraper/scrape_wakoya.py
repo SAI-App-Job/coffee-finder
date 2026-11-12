@@ -33,7 +33,7 @@ SHOP_INFO = {
 }
 
 BASE_URL = "https://shop.wakoya.com"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 BEAN_TYPE = "珈琲豆"
 # 「ℊ」(U+210A)、全角「ｇ」、半角「g」の表記ゆれがある
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇℊ]")

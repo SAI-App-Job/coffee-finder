@@ -35,7 +35,7 @@ SHOP_INFO = {
 }
 
 BASE_URL = "https://gluckcoffeespot.jp"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 VARIANT_PATTERN = re.compile(r"^(\d+)\s*g\s*/\s*豆のまま")
 EXCLUDE_WORDS = ("ギフト", "セット", "Coffee Bag")
 ROAST_BODY_PATTERN = re.compile(r"焙煎度\s*[:：]\s*(中深煎り|中浅煎り|深煎り|中煎り|浅煎り)")

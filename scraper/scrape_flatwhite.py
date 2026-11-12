@@ -85,7 +85,7 @@ BASE_URL = "https://flatwhite.jp"
 COLLECTION_HANDLES = ["singleorigin", "blendcoffee", "cafeless"]
 SHOP_INFO_PAGE_URL = f"{BASE_URL}/pages/shop-info"
 REQUEST_HEADERS = {
-    "User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"
+    "User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"
 }
 CRAWL_DELAY_SECONDS = 1
 

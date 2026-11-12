@@ -45,7 +45,7 @@ SHOP_INFO = {
 }
 
 BASE_URL = "https://tonbi-coffee.shop-pro.jp"
-REQUEST_HEADERS = {"User-Agent": "Mozilla/5.0 (CoffeeFinderBot/0.1; +contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "Mozilla/5.0 (CoffeeFinderBot/0.1; +https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 
 # セット商品2件(170519081, 170517177)は除外済み
 ITEM_IDS = [

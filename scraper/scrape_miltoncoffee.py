@@ -41,7 +41,7 @@ SHOP_INFO = {
 }
 
 BASE_URL = "https://miltoncoffee.com"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 BEAN_TYPE = "コーヒー豆"
 
 # セット・ギフト・お試し(product_type が「コーヒー豆」のまま混在)

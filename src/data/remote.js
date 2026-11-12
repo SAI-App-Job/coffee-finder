@@ -1,7 +1,8 @@
 import { normalizeProcessingMethod } from "../utils/processingMethod";
 import { flattenToolCatalog } from "../utils/toolCatalog";
 
-const BASE_URL = "https://raw.githubusercontent.com/SAI-App-Job/coffee-finder/master/data/";
+// 開発時に、手元の data/ で確かめるときは、.env.local に VITE_DATA_BASE_URL=http://localhost:<ポート>/data/ を書く(公開時は、未設定)
+const BASE_URL = import.meta.env.VITE_DATA_BASE_URL || "https://raw.githubusercontent.com/SAI-App-Job/coffee-finder/master/data/";
 
 async function fetchJSON(path) {
   const res = await fetch(BASE_URL + path, { cache: "no-store" });
@@ -84,8 +85,13 @@ function mapProduct(raw, shopsByName) {
     // 「価格は店舗にお問い合わせください」)。priceが取れなかった場合の表示分岐に使う
     priceNote: raw.price_note ?? null,
     weightG: raw.weight_g,
-    flavorNotes: raw.flavor_notes,
+    // 店舗の長い説明文は載せない。短い風味の記述(60字以内)と、アプリが判定した結果(flavor_terms・flavor_category_only)だけ。scripts/reduce-product-text.js
+    flavorNotes: raw.flavor_notes ?? null,
+    flavorTerms: raw.flavor_terms,
+    flavorCategoryOnly: raw.flavor_category_only,
     mapQuery: raw.map_query,
+    // 店舗の商品ページ(出典。詳しい説明は、こちらで読んでもらう)
+    productUrl: typeof raw.product_url === "string" && /^https?:\/\//.test(raw.product_url) ? raw.product_url : null,
     farmNote: raw.farm_note,
     outOfStock: typeof raw.out_of_stock === "boolean" ? raw.out_of_stock : null,
     // 「販売中」「一時的に品切れ」「終売」の3段階。データに無い場合(モックデータ等)は

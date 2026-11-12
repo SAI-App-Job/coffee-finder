@@ -29,7 +29,7 @@ SHOP_INFO = {
     "robots_txt_status": "未確認(Shopify標準構成)",
 }
 BASE_URL = "https://amenokakucoffee.com"
-HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 WEIGHT_RE = re.compile(r"(\d+)\s*(kg|g)", re.I)
 
 # 焙煎済み豆の handle(URLデコード後)

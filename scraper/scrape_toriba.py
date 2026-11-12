@@ -74,7 +74,7 @@ BASE_URL = "https://www.toribacoffee-online.com"
 CATEGORY_ID = "ct2"  # コーヒー豆。理由はモジュールdocstring参照
 CRAWL_DELAY_SECONDS = 1
 REQUEST_HEADERS = {
-    "User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"
+    "User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"
 }
 
 NON_BEAN_KEYWORDS = [

@@ -49,7 +49,7 @@ CATEGORIES = [
     ("シングルオリジン豆", BASE + "?mode=cate&cbid=2674922&csid=0"),
     ("ブレンド豆", BASE + "?mode=cate&cbid=2674917&csid=0"),
 ]
-HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 DELAY = 2
 COLORME_RE = re.compile(r"var\s+Colorme\s*=\s*(\{.*?\});\s*\n", re.DOTALL)
 ROAST_RE = re.compile(r"(フルシティ|シティ|ハイ|ミディアム|シナモン|ライト|フレンチ|イタリアン)ロースト(?!より|の少し|の手前)")

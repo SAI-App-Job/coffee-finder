@@ -63,7 +63,7 @@ SHOP_INFO = {
 BASE_URL = "https://ebcoffee.shop-pro.jp"
 CATEGORY_IDS = [1864343, 1864973, 1984578, 2075472, 2297631, 2412279, 2434930, 2543154, 2782120]
 REQUEST_HEADERS = {
-    "User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"
+    "User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"
 }
 
 NON_BEAN_KEYWORDS = ["OFF"]  # 理由はモジュールdocstring参照(500g以上のまとめ買い/卸を除外)

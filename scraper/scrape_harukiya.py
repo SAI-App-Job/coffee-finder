@@ -36,7 +36,7 @@ SHOP_INFO = {
 }
 
 BASE_URL = "https://harukiya.com"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 
 # ブレンド商品(商品名に「ブレンド」を含まないものを含む)
 BLEND_HANDLES = {"p-coffee-n", "fujizakura", "furinkazan", "mocabrend-a", "akafuji", "fujiyamabrend", "black"}

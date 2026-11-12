@@ -42,7 +42,7 @@ SHOP_INFO = {
 }
 
 BASE_URL = "https://daisycoffee.base.shop"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 REQUEST_INTERVAL = 5.0
 
 # (商品ID, 商品名, 分類, 焙煎度, 産地)

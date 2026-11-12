@@ -38,7 +38,7 @@ SHOP_INFO = {
 }
 
 API_URL = "https://uchida.coffee/wp-json/wc/store/v1/products"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 PROCESS_MAP = [
     ("mosto anaerobic", "アナエロビック(モスト)"),
     ("pulped natural", "パルプドナチュラル"),

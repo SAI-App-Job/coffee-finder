@@ -124,7 +124,7 @@ BEAN_CATEGORY_ID = 4723287  # コーヒー豆(実データ確認済み: 豆売�
 CRAWL_DELAY_SECONDS = 1  # robots.txt確認済み(2026-08時点): User-agent:*にCrawl-delay指定なし
 # (Bingbotにのみ300秒指定があるが、名指しのBingbot以外には適用されない)
 REQUEST_HEADERS = {
-    "User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"
+    "User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"
 }
 
 EXCLUDE_TITLE_KEYWORDS = ["セット", "おまかせ", "バラエティパック", "記念CD"]

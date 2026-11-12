@@ -95,7 +95,7 @@ BASE_URL = "https://atsugicoffee.com"
 COLLECTION_HANDLE = "beans"
 CRAWL_DELAY_SECONDS = 1  # robots.txt確認済み(2026-08時点): Crawl-delay指定なし
 REQUEST_HEADERS = {
-    "User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"
+    "User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"
 }
 
 EXCLUDE_TITLE_KEYWORDS = ["セット", "定期便", "生豆"]

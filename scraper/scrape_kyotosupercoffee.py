@@ -35,7 +35,7 @@ SHOP_INFO = {
 }
 
 BASE_URL = "https://kyoto-super-coffee.com/"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 EXCLUDE_SKUS = ("gift-set",)
 # 説明文に産地が明記されている単一銘柄(sku -> 産地)。オーガニックは説明文に産地が無いので None
 ORIGIN_BY_SKU = {

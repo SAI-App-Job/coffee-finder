@@ -36,7 +36,7 @@ SHOP_INFO = {
 }
 
 BASE_URL = "https://www.casadocoffee.com"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 
 # id: 商品ID / name: 商品名 / weight: 重量(g) / roast_level: 焙煎度(粗い区分) / roast_hint: 原文の焙煎度表記
 # origin: 産地(商品名から判定できない場合のみ明示) / blend: ブレンドの産地内訳 / category: 分類の上書き

@@ -43,7 +43,7 @@ SHOP_INFO = {
 }
 
 BASE_URL = "https://natural.coffee"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 BEAN_TYPES = {"レギュラーコーヒー", "アイスコーヒー", "コーヒー"}
 EXCLUDE_WORDS = ("業務用", "セット", "ギフト", "ドリップ", "シナモン", "お徳用")
 # N-POST便にしか存在しない銘柄(handle)。それ以外のN-POST便は通常商品の重複なので除外

@@ -47,7 +47,7 @@ SHOP_INFO = {
 }
 
 API_URL = "https://www.heisei-coffee.co.jp/wp-json/wc/store/v1/products"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 EXCLUDE_KEYWORDS = ["ドリップバッグ", "リキッド", "ギフト", "セット", "詰め合わせ", "各一種", "週替わり", "粉"]
 BEAN_MARK = re.compile(r"[【\[（(]\s*豆\s*[】\]）)]")
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gG]")

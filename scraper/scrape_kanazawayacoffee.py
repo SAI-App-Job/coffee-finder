@@ -48,7 +48,7 @@ SHOP_INFO = {
 
 BASE_URL = "https://www.krf.co.jp"
 LIST_URL = f"{BASE_URL}/SHOP/1175349/25386/list.html"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 
 # このストア固有の商品: 商品コード -> (商品名, 焙煎度)
 TARGETS = {

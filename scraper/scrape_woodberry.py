@@ -120,7 +120,7 @@ BASE_URL = "https://woodberrycoffee.com"
 COFFEE_BEANS_COLLECTION_HANDLE = "coffee_beans"
 LOCATION_PAGE_URL = f"{BASE_URL}/pages/location"
 REQUEST_HEADERS = {
-    "User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"
+    "User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"
 }
 CRAWL_DELAY_SECONDS = 1
 

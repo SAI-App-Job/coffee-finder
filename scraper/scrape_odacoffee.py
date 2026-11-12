@@ -40,7 +40,7 @@ SHOP_INFO = {
 
 BASE_URL = "https://www.odacoffee.com/"
 LIST_URL = BASE_URL + "?mode=cate&cbid=377786&csid=0"
-HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 DELAY = 2.0
 COLORME_RE = re.compile(r"var\s+Colorme\s*=\s*(\{.*?\});\s*\n", re.S)
 LABEL_RE = re.compile(r"(原産国|生産地域|規格|品種|精製方法|乾燥方法|標高|収穫時期)：([^\n]+)")

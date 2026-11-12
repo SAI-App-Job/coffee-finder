@@ -50,7 +50,7 @@ SHOP_INFO = {
 BASE_URL = "https://www.coffeefunakura.com/"
 CATEGORY_IDS = ["2798205", "2798206"]
 CRAWL_DELAY_SECONDS = 1
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 NON_BEAN_KEYWORDS = ["セット", "アイス珈琲", "ドリップ", "カップオン", "ギフト", "バラエティ"]
 
 WEIGHT_PATTERN = re.compile(r"[（(]\s*(\d+)\s*[ｇgＧG]\s*[）)]")

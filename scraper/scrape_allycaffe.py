@@ -46,7 +46,7 @@ SHOP_INFO = {
 
 BASE_URL = "https://ally-caffe.ocnk.net"
 CATEGORY_ID = "1"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 BLEND_PIDS = {"127"}  # 金澤珈琲(配合内容: エチオピア、ブラジル。名称に「ブレンド」が無い)
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]\b", re.IGNORECASE)
 COARSE_ROAST_PATTERN = re.compile(r"(極深煎り|中浅煎り|中深煎り|浅煎り|中煎り|深煎り)")

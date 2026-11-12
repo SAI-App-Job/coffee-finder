@@ -42,7 +42,7 @@ SHOP_INFO = {
 }
 
 BASE_URL = "https://bastetcoffee.com"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 REQUEST_INTERVAL = 2
 BEAN_TYPE = "コーヒー豆"
 MIN_SAMPLE_WEIGHT = 50  # これ未満(15g・30g)の試飲小分けは代表にしない

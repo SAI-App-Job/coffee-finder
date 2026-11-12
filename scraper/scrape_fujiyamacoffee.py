@@ -76,7 +76,7 @@ SHOP_INFO = {
 BASE_URL = "https://fujiyamacoffeeroasters.com"
 COFFEE_CATEGORY_URL = f"{BASE_URL}/?mode=cate&cbid=2587668&csid=0"
 REQUEST_HEADERS = {
-    "User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"
+    "User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"
 }
 
 COLORME_PATTERN = re.compile(r"var Colorme\s*=\s*(\{.*?\});", re.DOTALL)

@@ -36,7 +36,7 @@ SHOP_INFO = {
 
 BASE = "https://www.monacacoffee.com"
 LIST_URL = BASE + "/app/searchGoodsList"
-HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 INTERVAL = 2.0
 EXCLUDE_WORDS = ("セット", "定期便", "ドリップ", "水出し", "タオル", "手ぬぐい", "めがね", "拭き", "コールドブリュー")
 

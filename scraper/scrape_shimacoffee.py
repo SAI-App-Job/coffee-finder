@@ -76,7 +76,7 @@ PRODUCT_SLUGS = (
     + [f"mrs-{i:04d}" for i in range(1, 6)]
 )
 REQUEST_HEADERS = {
-    "User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"
+    "User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"
 }
 
 SKU_BLOCK_PATTERN = re.compile(

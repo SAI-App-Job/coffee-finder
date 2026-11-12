@@ -52,7 +52,7 @@ SHOP_INFO = {
 BASE_URL = "https://kugurimon.com"
 CATEGORY_URL = BASE_URL + "/?mode=cate&cbid=1619257&csid=0&page={page}"
 MAX_PAGES = 5
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 
 ITEM_PATTERN = re.compile(r'<p class="itemName"><a href="\?pid=(\d+)">(.*?)</a></p>(.*?)</div>', re.S)
 BOTTLE_PATTERN = re.compile(r"[（(]\s*ペットボトル\s*[:：]?\s*(\d+)\s*g\s*[）)]")

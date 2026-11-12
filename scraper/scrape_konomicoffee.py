@@ -39,7 +39,7 @@ SHOP_INFO = {
 }
 
 BASE = "https://shop.konomi-coffee.biz/"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 REQUEST_INTERVAL = 1.6
 # 豆が登録されているカテゴリ(ブレンド・産地別・カフェインレス)。cbid -> カテゴリ名
 CATEGORIES = {

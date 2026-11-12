@@ -50,7 +50,7 @@ LIST_URLS = [
     BASE_URL + "?mode=grp&gid=2457052&page=2",
 ] + [BASE_URL + f"?mode=cate&cbid={c}&csid=0" for c in
      (2453432, 2453434, 2453435, 2453436, 2453437, 2453438, 2459986)]
-HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 DELAY = 2.0
 COLORME_RE = re.compile(r"var\s+Colorme\s*=\s*(\{.*?\});\s*\n", re.S)
 PACK_RE = re.compile(r"＜\s*(\d+)\s*[gｇ]\s*×\s*(\d+)\s*袋\s*＞")

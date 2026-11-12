@@ -44,7 +44,7 @@ SHOP_INFO = {
 
 BASE_URL = "https://www.daiwacoffee.jp"
 CATEGORIES = [("1", "blend"), ("62", "single"), ("80", "single"), ("96", "single"), ("36", "single")]
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 MAX_PAGES = 12
 
 NAME_PATTERN = re.compile(r"^(.+?)\s*(\d+(?:\.\d+)?)\s*(kg|g)(?:\s*[(（].*[)）])?\s*$", re.I)

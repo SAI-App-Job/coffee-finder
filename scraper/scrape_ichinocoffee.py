@@ -45,7 +45,7 @@ SHOP_INFO = {
 }
 
 BASE_URL = "https://ichino18.base.shop"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 
 # --- 共通ヘルパー(焙煎度・ラベル付き説明文の解析) -----------------------------
 ROAST_JP_PATTERN = re.compile(r"(極深|中深|中浅|深|中|浅)\s*煎り?")

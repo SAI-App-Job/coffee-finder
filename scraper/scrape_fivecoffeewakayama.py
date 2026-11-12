@@ -38,7 +38,7 @@ SHOP_INFO = {
 
 BASE = "https://store.shopping.yahoo.co.jp/5coffee"
 SEARCH_URLS = [BASE + "/search.html", BASE + "/search.html?page=1", BASE + "/search.html?page=2"]
-HEADERS = {"User-Agent": "Mozilla/5.0 (compatible; CoffeeFinderBot/0.1; +contact: your-contact-info-here)"}
+HEADERS = {"User-Agent": "Mozilla/5.0 (compatible; CoffeeFinderBot/0.1; +https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 NEXT_DATA = re.compile(r'id="__NEXT_DATA__"[^>]*>(.*?)</script>', re.S)
 
 EXCLUDE_WORDS = ["詰合せ", "詰め合わせ", "セット", "ドリップバッグ"]

@@ -54,7 +54,7 @@ SHOP_INFO = {
 
 BASE_URL = "https://mameyaito.theshop.jp"
 REQUEST_HEADERS = {
-    "User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"
+    "User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"
 }
 
 # 理由はモジュールdocstring参照(複数銘柄の詰め合わせセットは単一銘柄の

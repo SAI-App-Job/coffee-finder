@@ -49,7 +49,7 @@ SHOP_INFO = {
 }
 
 BASE_URL = "https://mameiri.net"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 REQUEST_INTERVAL = 1.6
 BEAN_CATEGORIES = ("コーヒー豆シングル", "ブレンドコーヒー")
 EXCLUDE_TITLE_KEYWORDS = ("大豆", "小豆", "ヴィンテージ バレル ワイン", "ヴィーニョ ロッソ スペシャル", "ベトナム バレルエイジド", "カシャーサ", "郵送料")

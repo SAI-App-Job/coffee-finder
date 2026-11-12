@@ -39,7 +39,7 @@ SHOP_INFO = {
 }
 
 BASE_URL = "https://fusuku.shop-pro.jp"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 STRAIGHT_CATEGORY = "2878205"
 BLEND_CATEGORIES = ["2882541", "2882542", "2882543"]
 MAX_PAGES = 5

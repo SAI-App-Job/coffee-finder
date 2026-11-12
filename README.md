@@ -46,3 +46,14 @@ scraper/         … 店舗・大会情報のスクレイパー(Python)
 All Rights Reserved。閲覧は自由ですが、著作権者の書面による許可なく複製・
 再配布・改変・商用利用を行うことはできません。詳細は[LICENSE](./LICENSE)を
 参照してください。
+
+## CoffeeFinderBot について(店舗・サイトの運営者の方へ)
+
+このリポジトリのスクレイパー(`scraper/`)は、User-Agent `CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)` を名乗って、各店舗の公式サイトの、公開されている商品ページ・店舗情報を取得します。
+
+- 目的: 近くの自家焙煎店とコーヒー豆の情報を、見やすく表示するアプリ(Coffee Finder)のため。
+- 頻度: 週1回程度(GitHub Actions で実行)。取得するのは、公開されている商品ページ・店舗情報です。
+- robots.txt を確認し、禁止されている店舗は取得しません(確認の記録: `docs/robots-audit.md`)。
+- 載せるのは、名前・価格・産地などの事実と短い記述、アプリが抽出した情報だけです。店舗の長い説明文や写真は、載せません(`docs/coffee-app-data-model.md`)。
+- **取得の停止・掲載内容の修正や削除**をご希望の場合は、X の [@SaiCoffea](https://x.com/SaiCoffea) までDMでご連絡ください。速やかに対応します。
+

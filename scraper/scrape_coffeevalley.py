@@ -27,7 +27,7 @@ from coffee_parser import (
     detect_stock_status, normalize_processing_method,
 )
 
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 REQUEST_INTERVAL_SEC = 1.6
 WEIGHT_RE = re.compile(r"(\d+(?:\.\d+)?)\s*(kg|g)(?![a-z])", re.I)
 LEADING_NUM_RE = re.compile(r"^\s*(\d+)\s*(?:/|$)")

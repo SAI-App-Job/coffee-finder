@@ -35,7 +35,7 @@ SHOP_INFO = {
 }
 
 BASE_URL = "https://ec.honokacoffee.com"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 TITLE_PREFIX = "【コーヒー豆】"
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*g")
 EXCLUDE_KEYWORDS = ("ドリップバッグ", "コーヒーバッグ", "ギフト", "セット", "定期")

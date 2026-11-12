@@ -1,7 +1,7 @@
 import { X, MapPin, ExternalLink, Heart, ArrowLeftRight, Check, Coffee, Sparkles, NotebookPen } from "lucide-react";
 import { brandName, designatedBrandExplanation, processingExplanation } from "../data/localize";
 import { getGradeExplanation, getGradeExplanationKey } from "../utils/grade";
-import { analyzeFlavorNotes } from "../utils/flavor";
+import { analyzeProductFlavor } from "../utils/flavor";
 import { cityFromAddress, formatPrice } from "../utils/format";
 import { isNewArrival } from "../utils/productSort";
 import { StarRating, SourceLinks } from "./common";
@@ -51,7 +51,7 @@ export function ProductDetailModal({
     : null;
   const gradeKey = gradeDetail ? getGradeExplanationKey(product.grade, product.originCountry, product.designatedBrand) : null;
   const brandExplanation = product.designatedBrand ? designatedBrandExplanation(product.designatedBrand) : null;
-  const flavor = analyzeFlavorNotes(product.flavorNotes);
+  const flavor = analyzeProductFlavor(product);
   const flavorCategories = flavor.categories;
   const favorited = isFavorite?.(product.id) ?? false;
   const comparing = isComparing?.(product.id) ?? false;
@@ -167,7 +167,13 @@ export function ProductDetailModal({
           {flavorCategories.length > 0 && (
             <div>
               <p className="text-[11px] tracking-wide text-[var(--accent-label)] uppercase mb-1">{t("フレーバーノート")}</p>
-              <p className="text-[13px] text-[var(--c-text)] mb-1.5">{product.flavorNotes}</p>
+              {product.flavorNotes ? (
+                <p className="text-[13px] text-[var(--c-text)] mb-1.5">{product.flavorNotes}</p>
+              ) : (
+                <p className="text-[11px] text-[var(--c-text-3)] mb-1.5">
+                  {t("店舗の商品説明にある風味の語を、アプリが拾っています。詳しい説明は、店舗の商品ページをご覧ください。")}
+                </p>
+              )}
               <div className="flex flex-col gap-2">
                 {flavorCategories.map((cat) => {
                   const terms = flavor.terms.filter((x) => x.cat.id === cat.id);
@@ -238,6 +244,18 @@ export function ProductDetailModal({
           <span>{product.shopName}</span>
           {product.shopAddress && <span className="text-[var(--c-text-3)]/70">・{cityFromAddress(product.shopAddress)}</span>}
         </div>
+
+        {product.productUrl && (
+          <a
+            href={product.productUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1 text-[12px] text-[var(--accent-label)] hover:text-[var(--accent)] transition-colors underline underline-offset-2 mb-3"
+          >
+            {t("店舗の商品ページを見る(出典)")}
+            <ExternalLink size={11} strokeWidth={1.75} />
+          </a>
+        )}
 
         <div className="flex flex-col gap-2">
           <button

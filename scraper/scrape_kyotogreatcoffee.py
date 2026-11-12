@@ -36,7 +36,7 @@ SHOP_INFO = {
 }
 
 BASE_URL = "https://kyoto-greatcoffee.com"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 KG_PATTERN = re.compile(r"(\d+(?:\.\d+)?)\s*kg", re.I)
 
 EXCLUDE_HANDLES = {"選べる2種のコーヒー豆セット"}

@@ -37,7 +37,7 @@ SHOP_INFO = {
 
 BASE_URL = "https://daphne.shop-pro.jp"
 CATEGORY_ID = "2316654"  # こだわりのコーヒー豆
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 MAX_PAGES = 10
 
 NAME_PATTERN = re.compile(r"^(.+?)\s*(\d+)\s*[gｇ]\s*$")

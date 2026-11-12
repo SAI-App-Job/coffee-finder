@@ -68,7 +68,7 @@ SHOP_INFO = {
 }
 
 BASE_URL = "https://www.nagasawa-coffee.net"
-REQUEST_HEADERS = {"User-Agent": "Mozilla/5.0 (CoffeeFinderBot/0.1; +contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "Mozilla/5.0 (CoffeeFinderBot/0.1; +https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 
 NON_BEAN_KEYWORDS = [
     "ドリップパック", "ドリップバッグ", "コールドブリュー", "ギフト", "セット",

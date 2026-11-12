@@ -36,7 +36,7 @@ SHOP_INFO = {
 BASE = "https://umibouzu-cafe.com/item/"
 SLUGS = ["brasil01", "tanzania01", "guatemala01", "colpmbia0", "hukaumi01", "blend-2"]
 CRAWL_DELAY_SECONDS = 1
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 
 WEIGHT_PATTERN = re.compile(r"[（(]\s*(\d+)\s*[gｇ]\s*[）)]")
 PRICE_PATTERN = re.compile(r"[¥￥]\s*([\d,]+)")

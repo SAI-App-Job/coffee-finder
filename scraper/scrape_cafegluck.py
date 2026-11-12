@@ -42,7 +42,7 @@ SHOP_INFO = {
 
 BASE_URL = "https://www.cafe-gluck.com"
 LIST_URLS = [(f"{BASE_URL}/SHOP/101386/list.html", "ストレート"), (f"{BASE_URL}/SHOP/95179/list.html", "ブレンド")]
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 REQUEST_INTERVAL = 1.6
 EXCLUDE_WORDS = ["セット", "ドリップバッグ", "水出し", "ギフト"]
 ROAST_PATTERN = re.compile(r"(中深煎り|中浅煎り|浅煎り|中煎り|深煎り)\s*$")

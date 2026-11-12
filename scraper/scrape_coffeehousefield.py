@@ -44,7 +44,7 @@ SHOP_INFO = {
 
 BASE_URL = "https://www.espressostore.net"
 LIST_URL = f"{BASE_URL}/view/category/beans"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 EXCLUDE_KEYWORDS = ["ドリップバッグ", "ドリップバック", "GIFT", "ギフト", "セット", "リキッド"]
 ROAST_HINT_PATTERN = re.compile(r"(極深煎り|中深煎り|中浅煎り|浅煎り|中煎り|深煎り)")
 SPEC_PATTERN = re.compile(r"^■\s*(生産国|地域|農園|標高|品種|生産処理|精製)\s*[：:]\s*(.+)$")

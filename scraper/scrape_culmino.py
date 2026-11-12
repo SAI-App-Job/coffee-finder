@@ -55,7 +55,7 @@ SHOP_INFO = {
 }
 
 BASE_URL = "https://cafeculmino.thebase.in"
-REQUEST_HEADERS = {"User-Agent": "Mozilla/5.0 (CoffeeFinderBot/0.1; +contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "Mozilla/5.0 (CoffeeFinderBot/0.1; +https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 
 ITEM_IDS = [
     "145054697",  # エチオピア アリーチャ レラ (SOLD OUT)

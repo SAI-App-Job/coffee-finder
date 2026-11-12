@@ -35,7 +35,7 @@ SHOP_INFO = {
 }
 
 BASE_URL = "https://comeyasu-store.com"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*g")
 EXCLUDE_KEYWORDS = ["ドリップパック", "ギフト", "セット", "本セット"]
 # coffee_parser.pyの国名辞書で検出できない表記(「インディア」「ニューギニア」)の産地を明示する

@@ -41,7 +41,7 @@ SHOP_INFO = {'name': 'マホロバ珈琲堂',
  'last_verified_at': '2026-10-26'}
 
 BASE_URL = "https://mahorobac.official.ec"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 REQUEST_INTERVAL_SEC = 5.0
 
 # 商品ごとの明示情報。

@@ -40,7 +40,7 @@ SHOP_INFO = {
 
 BASE_URL = "https://arovor.com"
 LIST_URL = f"{BASE_URL}/SHOP/182166/list.html"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 CRAWL_DELAY_SECONDS = 1.5
 SPEC_LABELS = ("農園名", "農園主", "産地", "標高", "品種", "精製方法", "処理方法", "風味特性",
                "焙煎度合い", "焙煎度合", "原産国", "ブレンド方法")

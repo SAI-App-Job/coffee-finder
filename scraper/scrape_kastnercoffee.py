@@ -46,7 +46,7 @@ SHOP_INFO = {
 
 SHOP_ID = "cafe-kastner"
 ITEM_URL = f"https://item.rakuten.co.jp/{SHOP_ID}/" + "{code}/"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 REQUEST_INTERVAL = 1.0
 
 # (商品コード, 商品名, ブレンドか, 産地(国名。ブレンドはNone), 焙煎度(記載なしはNone))

@@ -44,7 +44,7 @@ LIST_URLS = [
     "https://www.beans-shop.com/esp/shop?p=1&cid=1",
     "https://www.beans-shop.com/esp/shop?p=2&cid=1",
 ]
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 EXCLUDE_KEYWORDS = ("ギフト", "GIFT", "セット", "G600g")
 
 # 商品名の英字国名から判別できないもの(綴り違い等)

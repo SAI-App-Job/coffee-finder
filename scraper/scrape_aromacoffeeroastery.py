@@ -38,7 +38,7 @@ SHOP_INFO = {
 
 BASE_URL = "https://aroma-coffee.jp"
 LIST_URL = f"{BASE_URL}/SHOP/1089549/list.html"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 EXCLUDE_KEYWORDS = ("セット", "ギフト", "ドリップ", "バッグ", "定期便", "水出し", "ベース", "器具")
 MAX_PAGES = 10
 

@@ -41,7 +41,7 @@ SHOP_INFO = {
 
 BASE_URL = "https://www.baisenmoto-waraku.com"
 LIST_URL = f"{BASE_URL}/category/139/"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 CRAWL_DELAY_SECONDS = 1.5
 
 EXCLUDE_RULES = [

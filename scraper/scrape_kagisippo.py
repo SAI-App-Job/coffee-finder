@@ -78,7 +78,7 @@ BASE_URL = "https://r.goope.jp/kagisippo-coffee"
 BEANS_CATEGORY_ID = "c1121724"  # 自家製焙煎豆(※表示価格は全て税込みです)
 CRAWL_DELAY_SECONDS = 2
 REQUEST_HEADERS = {
-    "User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"
+    "User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"
 }
 
 # 理由はモジュールdocstring参照(実データでは未検証、将来の掲載に備えた防御的な除外)

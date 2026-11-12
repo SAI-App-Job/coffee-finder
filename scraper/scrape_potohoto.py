@@ -41,7 +41,7 @@ LIST_PAGES = [
     ("/shopbrand/006/X/", "ストレート"),
     ("/shopbrand/008/X/", "ブレンド"),
 ]
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 NON_BEAN_KEYWORDS = ("COLD BREW", "水出し", "ギフト", "ドリップ", "セット", "フレンチプレス")
 WEIGHT_TAIL = re.compile(r"\s*(\d+)\s*g\s*$", re.IGNORECASE)
 ROAST_PATTERN = re.compile(r"(中深煎り|中浅煎り|浅煎り|中煎り|深煎り)")

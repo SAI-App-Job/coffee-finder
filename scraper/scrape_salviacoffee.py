@@ -42,7 +42,7 @@ SHOP_INFO = {
 }
 
 LIST_URL = "https://salvia-coffee.com/coffee_beans"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 EXCLUDE_KEYWORDS = ("粉のみ", "ドリップ", "セット", "定期便", "チョコ", "ボトル")
 LIMITED_PREFIX = re.compile(r"^数量[\s　]*限定商品[\s　]*")
 WEIGHT_SUFFIX = re.compile(r"[\s　]*(\d+)\s*[gｇ]\s*$")

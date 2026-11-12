@@ -37,7 +37,7 @@ SHOP_INFO = {
 
 BASE = "https://hakubacoffeestand.com/"
 GROUP_URL = BASE + "?mode=grp&gid=2916336&page=%d"
-HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 NON_BEAN = ["ディップ", "ドリップバッグ", "定期便", "セット", "ギフト", "タオル"]
 COLORME_RE = re.compile(r"var\s+Colorme\s*=\s*")
 SOLD_RE = re.compile(r"SOLD\s*OUT|売り切れ|品切れ|在庫切れ|入荷待ち", re.I)

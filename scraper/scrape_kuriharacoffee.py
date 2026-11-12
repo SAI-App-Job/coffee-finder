@@ -36,7 +36,7 @@ SHOP_INFO = {
 }
 
 BASE_URL = "https://store.kurihara-coffee.jp"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 
 # 重量違い(250g/500g/1kg)の重複・ディップ・器具は除外済み
 ITEM_IDS = [

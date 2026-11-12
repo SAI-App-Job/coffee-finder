@@ -43,7 +43,7 @@ SHOP_INFO = {
 }
 
 BASE_URL = "https://peggycoffee.cart.fc2.com"
-REQUEST_HEADERS = {"User-Agent": "Mozilla/5.0 (CoffeeFinderBot/0.1; +contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "Mozilla/5.0 (CoffeeFinderBot/0.1; +https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 BLEND_CATEGORIES = {"18", "19", "20", "14"}  # ペギー/メロー/アイスブレンドのcaと「ブレンドコーヒー」
 
 NAME_PATTERN = re.compile(r"^(.+?)\s*[／/]\s*(\d+)\s*g$", re.I)

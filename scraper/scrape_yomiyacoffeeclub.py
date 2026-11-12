@@ -47,7 +47,7 @@ SHOP_INFO = {
 }
 
 BASE_URL = "https://shop.yomiyacoffee.club"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 SLEEP_SEC = 5
 
 # 豆でない商品(ドリップバッグ等)は除外

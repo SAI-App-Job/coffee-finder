@@ -73,7 +73,7 @@ BASE_URL = "https://www.yamadacoffee.com"
 CATEGORY_PATHS = ["product-list/47", "product-list/58", "product-list/193", "product-list/194"]
 BLEND_CATEGORY_PATHS = {"product-list/58", "product-list/193", "product-list/194"}
 REQUEST_HEADERS = {
-    "User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"
+    "User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"
 }
 
 NON_BEAN_KEYWORDS: list[str] = []

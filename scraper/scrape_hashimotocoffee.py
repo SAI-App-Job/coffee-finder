@@ -34,7 +34,7 @@ SHOP_INFO = {
 }
 
 BASE_URL = "https://hashimotocoffee.cart.fc2.com"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 INTERVAL = 1.6
 EXCLUDE = ("カップオン", "セット", "ギフト")
 ROAST_RE = re.compile(r"(やや深煎り|やや浅煎り|中深煎り|中浅煎り|浅煎り|中煎り|深煎り)")

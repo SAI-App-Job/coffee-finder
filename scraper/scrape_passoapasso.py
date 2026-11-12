@@ -38,7 +38,7 @@ SHOP_INFO = {
 }
 
 BASE_URL = "http://coffeepasso.cart.fc2.com"
-HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 DELAY = 2.0
 EXCLUDE = ["リキッド", "友の会", "頒布会", "ギフト", "セット", "ドリップバッグ", "水出し"]
 WEIGHT_RE = re.compile(r"【\s*(\d+)\s*[gｇ]\s*】")

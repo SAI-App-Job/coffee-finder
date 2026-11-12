@@ -34,7 +34,7 @@ SHOP_INFO = {
 }
 
 BASE_URL = "https://beanscoffee.jp"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 EXCLUDE_TAGS = {"dripbag", "試飲", "GIFT", "latte"}
 EXCLUDE_TITLE = ("定期便", "テイスティングセット", "お試しサイズ", "ドリップバッグ", "スターターセット")
 FLAVOR_RE = re.compile(r"フレーバー\s*-\s*FLAVOR\s*-\s*(.+?)(?:\s*※|\s*ストーリー|$)")

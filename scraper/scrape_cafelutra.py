@@ -50,7 +50,7 @@ SHOP_INFO = {
 BASE_URL = "https://cafe-lutra.com"
 BEAN_URL = f"{BASE_URL}/bean/"
 UB_URL = f"{BASE_URL}/usual-blendub/"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 
 # 銘柄名から国名が判別できないもの(エチオピア産のモカ系は地域・ステーション名による)
 ORIGIN_OVERRIDES = {

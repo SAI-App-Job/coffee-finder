@@ -29,7 +29,7 @@ SHOP_INFO = {
     "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
 }
 BASE_URL = "https://matsubaisen.official.ec"
-HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 WEIGHT_G = 200
 EXCLUDE_IDS = {"156421516"}  # ドリップバッグコーヒー
 

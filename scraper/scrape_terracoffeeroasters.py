@@ -38,7 +38,7 @@ SHOP_INFO = {
 }
 
 BASE_URL = "https://terracoffeeroasters.jp"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 BEAN_TYPE = "Coffee"
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*g")
 EXCLUDE_KEYWORDS = ("TEST ROAST", "Cold Brew", "Drip Bag", "Set", "セット", "Gift", "Subscription")

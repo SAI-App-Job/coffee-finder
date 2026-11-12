@@ -78,6 +78,7 @@ const UI = {
   "ブラウザのサイトデータを削除したり、端末を変更したりすると、これらの記録は失われます。設定の「データのバックアップ」で、ファイルに書き出して保管できます(パッケージ写真は、書き出すときに選んだ場合だけ含まれます)。":
     "These records are lost if you clear the browser's site data or change devices. You can export them to a file with \"Data backup\" in Settings (package photos are included only if you choose to include them when exporting).",
   "最終更新: 2026年11月12日": "Last updated: November 12, 2026",
+  "利用規約(全文)": "Terms of Use (full text)",
   "プライバシーポリシー(全文)": "Privacy policy (full text)",
   "掲載店舗の方へ": "For listed shops",
   "内容の修正・削除等のご希望は、こちらのXアカウント(DM)までご連絡ください。":
@@ -282,6 +283,13 @@ const UI = {
   "別の話を見る": "See another fact",
   "この精選方法についての解説はまだ用意されていません。": "No explanation is available yet for this processing method.",
   "この銘柄についての解説はまだ用意されていません。": "No explanation is available yet for this brand.",
+  "店舗の商品説明に「{word}」の記載があるため、アプリ独自の風味カテゴリ「{cat}」の「{term}」に自動分類。":
+    "Automatically classified as \"{term}\" in the app's own flavor category \"{cat}\", because the shop's product description mentions \"{word}\".",
+  "店舗の商品説明から、アプリ独自の風味カテゴリ「{cat}」に該当すると自動分類。":
+    "Automatically classified into the app's own flavor category \"{cat}\" based on the shop's product description.",
+  "店舗の商品ページを見る(出典)": "View the shop's product page (source)",
+  "店舗の商品説明にある風味の語を、アプリが拾っています。詳しい説明は、店舗の商品ページをご覧ください。":
+    "The app picks up the flavor words found in the shop's product description. See the shop's product page for the full description.",
   "テイスティングノート「{notes}」から、アプリ独自の風味カテゴリ「{cat}」に該当すると自動分類。":
     "Automatically classified into the app's own flavor category \"{cat}\" based on the tasting note \"{notes}\".",
   "テイスティングノート「{notes}」に「{word}」の記載があるため、アプリ独自の風味カテゴリ「{cat}」の「{term}」に自動分類。":

@@ -39,7 +39,7 @@ SHOP_INFO = {
 }
 
 BASE_URL = "https://www.doppo-coffee.com"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 
 CATEGORY_PAGES = ["/ブレンド-1/", "/ストレート/", "/アイス用/"]
 HEADER_SPLIT = re.compile(r'(?=<div id="cc-m-\d+" class="j-module n j-header)')

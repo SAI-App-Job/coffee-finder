@@ -43,7 +43,7 @@ SHOP_INFO = {
 }
 
 BASE_URL = "https://coffeemame.cart.fc2.com"
-REQUEST_HEADERS = {"User-Agent": "Mozilla/5.0 (CoffeeFinderBot/0.1; +contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "Mozilla/5.0 (CoffeeFinderBot/0.1; +https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 ROAST_RE = r"(中深煎り|中浅煎り|浅煎り|中煎り|深煎り)"
 PAREN_ROAST_PATTERN = re.compile(r"[（(][^）)]*?" + ROAST_RE + r"[^）)]*[）)]")
 ROAST_PATTERN = re.compile(ROAST_RE)

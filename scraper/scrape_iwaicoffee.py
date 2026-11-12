@@ -46,7 +46,7 @@ SHOP_INFO = {
 }
 
 BASE_URL = "https://www.iwaicoffee.com"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 MAX_PAGES = 10
 DESC_STOP_PATTERN = re.compile(r"＿{5,}")
 COARSE_ROAST_PATTERN = re.compile(r"(中深煎り|中浅煎り|浅煎り|中煎り|深煎り)")

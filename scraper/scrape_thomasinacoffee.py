@@ -44,7 +44,7 @@ SHOP_INFO = {
 
 BASE_URL = "https://thomasinacoffee.ocnk.net"
 LIST_URL = BASE_URL + "/product-list/2"
-HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 DELAY = 2.0
 BLEND_NAMES = ("ブレンド",)
 

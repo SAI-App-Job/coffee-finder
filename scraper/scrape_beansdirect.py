@@ -35,7 +35,7 @@ SHOP_INFO = {
 }
 
 PRODUCTS_URL = "http://www.beans-direct.com/products.html"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 
 # 銘柄名から国名が判別できないもの(商品説明・一般的な銘柄の産地による)
 ORIGIN_OVERRIDES = {

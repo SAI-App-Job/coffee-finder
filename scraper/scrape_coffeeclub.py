@@ -44,7 +44,7 @@ SHOP_INFO = {
 BASE_URL = "https://www.coffeeclub.co.jp"
 LIST_URL = f"{BASE_URL}/coffee/"
 BLEND_URL = f"{BASE_URL}/coffee/blend.php?sb=2"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 ORIGIN_FIELD_OVERRIDES = {
     "パプア・ニューギニア": "パプアニューギニア",
     "米国": "アメリカ(ハワイ)",

@@ -37,7 +37,7 @@ SHOP_INFO = {
 }
 
 API_URL = "https://custom-kashiwagi.com/wp-json/wc/store/v1/products"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 BEAN_CATEGORY = "コーヒー豆"
 
 # 銘柄名から国を補完するための対応(商品名に国名が無い場合のみ使う)

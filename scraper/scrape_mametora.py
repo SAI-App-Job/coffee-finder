@@ -44,7 +44,7 @@ SHOP_INFO = {
 }
 
 LIST_URL = "https://www.mametora.jp/shop/category/item/coffee/"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 REQUEST_INTERVAL = 2
 EXCLUDE_KEYWORDS = ["ウヰスキー", "ウイスキー", "ドリップバッグ", "ギフト", "セット"]
 

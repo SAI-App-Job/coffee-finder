@@ -88,6 +88,14 @@ export function AboutView({ open, onClose }) {
             >
               {t("プライバシーポリシー(全文)")}
             </a>
+            <a
+              href={`${import.meta.env.BASE_URL}${getLang() === "en" ? "terms-en.html" : "terms.html"}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 self-start text-[12px] text-[var(--accent-label)] hover:text-[var(--accent)] transition-colors underline underline-offset-2"
+            >
+              {t("利用規約(全文)")}
+            </a>
           </section>
 
           <section className="flex flex-col gap-3">

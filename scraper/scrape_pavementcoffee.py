@@ -34,7 +34,7 @@ SHOP_INFO = {
 }
 
 BASE_URL = "https://pavementroastery.jp"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 WEIGHT_PATTERN = re.compile(r"^\s*(\d+)\s*g?\s*$")
 ROAST_PATTERN = re.compile(r"Roast\s*Level\s*[:：]\s*(浅煎り|中浅煎り|中煎り|中深煎り|深煎り)")
 COUNTRY_PATTERN = re.compile(r"(?:生産国|国)\s*[:：]?\s*([^\s,、/]+)")

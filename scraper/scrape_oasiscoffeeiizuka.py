@@ -44,7 +44,7 @@ SHOP_INFO = {
 BASE_URL = "https://oasiscoffee.co.jp"
 LIST_URL = BASE_URL + "/SHOP/250565/list{n}.html"
 PAGES = [""] + [str(n) for n in range(2, 6)]
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 REQUEST_INTERVAL = 1.6
 
 

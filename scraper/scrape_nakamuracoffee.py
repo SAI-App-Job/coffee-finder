@@ -45,7 +45,7 @@ SHOP_INFO = {
 }
 
 BASE_URL = "https://nakamuracoffee.shop-pro.jp/"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 EXCLUDE_KEYWORDS = ["選べる", "ギフト", "セット", "飲み比べ", "ドリップコーヒー", "リキッド", "水出し",
                     "カフェオレベース", "ティー", "ジュース", "送料"]
 WEIGHT_STRIP = re.compile(r"\s*\(?\s*\d+\s*(?:kg|g)\b.*$", re.IGNORECASE)

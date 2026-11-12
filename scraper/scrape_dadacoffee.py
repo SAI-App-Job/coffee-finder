@@ -39,7 +39,7 @@ SHOP_INFO = {
 }
 
 PAGE_URL = "https://dadacoffee.com/"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 PRICE_PATTERN = re.compile(r"[￥¥]\s*([\d,]+)")
 
 # 商品名・英語名から国名を判別できないもの(表記ゆれ)

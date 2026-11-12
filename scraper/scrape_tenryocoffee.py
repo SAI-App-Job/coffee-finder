@@ -42,7 +42,7 @@ SHOP_INFO = {
 }
 
 BASE_URL = "https://www.tenryo-coffee.com"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 REQUEST_INTERVAL = 2
 NON_BEAN = ("ドリップバッグ", "カフェバッグ", "ギフト", "包装", "のし", "セット", "詰め合わせ")
 BLEND_NAMES = ("ブレンド",)

@@ -55,7 +55,7 @@ SHOP_INFO = {
 }
 
 BASE_URL = "https://annycoffee.shop-pro.jp/"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 CRAWL_DELAY_SECONDS = 1
 
 # 対象の100g商品(200gの同一銘柄は最小重量の100gを代表にするため除外)

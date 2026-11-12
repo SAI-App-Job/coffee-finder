@@ -47,7 +47,7 @@ SHOP_INFO = {
 }
 
 BASE_URL = "http://genzya.shop-pro.jp"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 CRAWL_DELAY_SECONDS = 1
 
 BEAN_CATEGORY_IDS = {"872109", "872110", "872111"}  # コーヒー豆(1)/(2)/(ブレンド)

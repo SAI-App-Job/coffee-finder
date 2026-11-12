@@ -42,7 +42,7 @@ SHOP_INFO = {
 }
 
 BASE_URL = "https://takumacoffee.base.shop"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 REQUEST_INTERVAL_SEC = 0.5
 
 # 商品名(正規化後)にこれらを含む商品は対象外

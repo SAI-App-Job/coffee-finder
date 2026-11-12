@@ -57,7 +57,7 @@ SHOP_INFO = {
 # 「行儀の良いボットへの配慮」を明記しているサイト運営者の意図を尊重して3秒のまま維持する。
 CRAWL_DELAY_SECONDS = 3
 REQUEST_HEADERS = {
-    "User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"
+    "User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"
 }
 
 # 商品説明(pre[data-hook="description"])内のキー=値パターン

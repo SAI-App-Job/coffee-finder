@@ -45,7 +45,7 @@ SHOP_INFO = {
 
 BASE_URL = "https://shirokane-coffee.jp"
 GENRES = ["blend", "straight", "caffeine-less", "special"]
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 EXCLUDE_KEYWORDS = ("カップオン", "コールドブリュー", "水出し", "ギフト", "ラッピング", "福袋", "福豆", "セット", "グッズ", "パック")
 MAX_PAGES = 6
 ROAST_HINT = "注文時に焙煎度(ミディアム〜フレンチの4段階またはおまかせ)を選択(受注焙煎)"

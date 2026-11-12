@@ -80,7 +80,7 @@ SHOP_INFO = {
 
 BASE_URL = "https://lovecoffeejikabaisen.com"
 API_URL = f"{BASE_URL}/wp-json/wc/store/v1/products"
-REQUEST_HEADERS = {"User-Agent": "Mozilla/5.0 (CoffeeFinderBot/0.1; +contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "Mozilla/5.0 (CoffeeFinderBot/0.1; +https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 
 # 商品名に「【¥N／100g】」表記を持つ豆単品のみを対象とする(お試しセット・
 # 定期便・ドリップバッグ単品・水出しパック・フード・ギフト・グッズは除外)。

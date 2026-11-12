@@ -54,7 +54,7 @@ BASE_URL = "https://mameya-coffee.shop-pro.jp/"
 LIST_URL = "https://mameya-coffee.shop-pro.jp/?mode=srh&cid=&keyword="
 CRAWL_DELAY_SECONDS = 1
 REQUEST_HEADERS = {
-    "User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"
+    "User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"
 }
 NON_BEAN_KEYWORDS = ["セット", "ドリップバッグ", "ギフト", "箱のみ"]
 

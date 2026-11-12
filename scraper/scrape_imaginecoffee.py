@@ -45,7 +45,7 @@ SHOP_INFO = {
 }
 
 BASE_URL = "https://imaginecafe.base.shop"
-HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 INTERVAL = 5
 
 # (商品ID, 産地国(説明に明記なしはNone))

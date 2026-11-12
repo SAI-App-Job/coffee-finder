@@ -78,7 +78,7 @@ BASE_URL = "https://store.shopping.yahoo.co.jp/juncoffee"
 # 重量違いの重複として除外する)
 CATEGORY_URL = f"{BASE_URL}/e0dde0eac63.html"
 REQUEST_HEADERS = {
-    "User-Agent": "Mozilla/5.0 (compatible; CoffeeFinderBot/0.1; +contact: your-contact-info-here)"
+    "User-Agent": "Mozilla/5.0 (compatible; CoffeeFinderBot/0.1; +https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"
 }
 
 NEXT_DATA_PATTERN = re.compile(r'id="__NEXT_DATA__"[^>]*>(.*?)</script>', re.DOTALL)

@@ -45,7 +45,7 @@ SHOP_INFO = {
 }
 
 BASE_URL = "https://www.roastingcafe.jp"
-HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 SLEEP = 2.0
 BAG_WEIGHT_G = 200
 EXCLUDE_NAMES = ["ギフト", "ラッピング", "水出し", "ペーパー", "ドリッパー", "サーバー", "ホワイトキャメル"]

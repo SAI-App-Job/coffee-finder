@@ -46,7 +46,7 @@ SHOP_INFO = {
 }
 
 BASE_URL = "https://dimanche.shop-pro.jp"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 CATEGORY_IDS = ["1087531", "1137269", "2031058", "2781946", "2578982", "2811901", "2975062", "2836909"]
 EXCLUDE_KEYWORDS = ("Cap on Cup", "カップオン", "ギフト", "セット", "ドリップバッグ", "ドリップパック")
 RESALE_MARKERS = ("斉藤珈琲",)

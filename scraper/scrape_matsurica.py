@@ -66,7 +66,7 @@ SHOP_INFO = {
 BASE_URL = "https://matsurica1978.jp"
 LIST_URL = f"{BASE_URL}/shopbrand/all_items/"
 REQUEST_HEADERS = {
-    "User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"
+    "User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"
 }
 
 DETAIL_ID_PATTERN = re.compile(r"/shopdetail/([0-9]{12})/")

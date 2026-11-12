@@ -50,7 +50,7 @@ SHOP_INFO = {
 BASE_URL = "https://store.araheam.com/"
 CATEGORY_URL = BASE_URL + "?mode=cate&cbid=2844463&csid=0"
 CRAWL_DELAY_SECONDS = 1
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 NON_BEAN_KEYWORDS = ["Drip Bag", "ドリップバッグ", "SET", "DRIPPER", "クッキー", "syrup", "テリーヌ"]
 
 COLORME_JSON_PATTERN = re.compile(r"var\s+Colorme\s*=\s*(\{.*?\});\s*\n", re.DOTALL)

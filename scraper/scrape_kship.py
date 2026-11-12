@@ -47,7 +47,7 @@ SHOP_INFO = {
 }
 
 BASE_URL = "https://kship.cart.fc2.com"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 REQUEST_INTERVAL = 1.6
 
 # 珈琲豆のカテゴリ(ca番号): 14=限定豆, 15=ブレンド, 16=ストレート, 22=ネット限定豆

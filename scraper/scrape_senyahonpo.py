@@ -38,7 +38,7 @@ SHOP_INFO = {
 
 BASE_URL = "http://www.aromascoffeemarket.com"
 LIST_CATEGORIES = ["1032198", "1032457", "1034574"]  # ストレート、ブレンド、メール便送料無料コーナー
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 REQUEST_INTERVAL = 2
 
 EXCLUDE_TITLE_KEYWORDS = ("飲み比べ", "セット", "水出し", "ドリップ")

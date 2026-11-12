@@ -34,7 +34,7 @@ SHOP_INFO = {
 }
 BASE_URL = "https://www.i-beans.jp"
 CATEGORY_IDS = [10, 11, 12, 29]
-HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 NON_BEAN_KEYWORDS = ["水出し", "カップオン", "ドリップバッグ", "ドリップパック", "セット", "ギフト", "Pack"]
 ROAST_TAGS = ["フレンチロースト", "イタリアンロースト", "フルシティーロースト", "シティーロースト", "ハイロースト", "ミディアムロースト", "ライトロースト", "シナモンロースト"]
 WEIGHT_RE = re.compile(r"重さ[：:]\s*([\d.]+)\s*g")

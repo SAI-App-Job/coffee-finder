@@ -45,7 +45,7 @@ BASE_URL = "https://oshimacoffee.cart.fc2.com"
 CATEGORY_ID = 3  # 焙煎豆
 PAGES = 6
 CRAWL_DELAY_SECONDS = 1.5
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 
 # 商品ID -> 産地(ストレートのみ)。商品説明の【生産国・地域】/農園名で判断。None=ページから判断不能
 ORIGIN = {

@@ -103,7 +103,7 @@ BINDCART_API_URL = "https://shops-api2.bindcart.com/pagep.php"
 BINDCART_SHOP_JSON_URL = "http://higurashi.shops.bindcart.com/JSON/pagep.php"
 
 REQUEST_HEADERS = {
-    "User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"
+    "User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"
 }
 
 NON_BEAN_KEYWORDS = ["セット", "詰め合わせ", "ギフト"]

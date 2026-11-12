@@ -43,7 +43,7 @@ SHOP_INFO = {
 
 BASE_URL = "https://www.cafehanz.com"
 LIST_URLS = [BASE_URL + "/SHOP/267689/t02/list%s.html" % ("" if p == 1 else p) for p in (1, 2, 3)]
-HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 DELAY = 2.0
 EXCLUDE = ["セット", "ギフト", "詰め合わせ", "詰合せ", "飲み比べ", "お試し", "福袋"]
 SPEC_RE = re.compile(r"[＜<]\s*([^：:＞>]+?)\s*[：:]\s*(\d+)\s*[gｇ]\s*[＞>]")

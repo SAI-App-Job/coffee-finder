@@ -31,7 +31,7 @@ SHOP_INFO = {
                           "Store APIは制限対象外)",
 }
 API_URL = "https://shitsuji.coffee/wp-json/wc/store/v1/products"
-HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 BEAN_CATEGORIES = {"レギュラー", "高級豆", "期間限定", "アイスコーヒー"}
 EXCLUDE_KEYWORDS = ["おためしセット", "ギフト", "デルパック", "セット", "ペーパー"]
 ROAST_RE = re.compile(r"(浅煎り|中浅煎り|中煎り|中深煎り|深煎り)")

@@ -42,7 +42,7 @@ SHOP_INFO = {
 
 BASE_URL = "https://akane-coffee.shop-pro.jp/"
 LIST_URL = BASE_URL + "?mode=cate&cbid=1236311&csid=0"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 CRAWL_DELAY_SECONDS = 2
 NON_BEAN_KEYWORDS = ["セット", "飲み比べ", "ドリップバッグ", "ギフト", "ミル"]
 COLORME_JSON_PATTERN = re.compile(r"var\s+Colorme\s*=\s*(\{.*?\});\s*\n", re.DOTALL)

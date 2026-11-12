@@ -50,7 +50,7 @@ SHOP_ID = "kn-coffee"
 ITEM_URL = f"https://item.rakuten.co.jp/{SHOP_ID}/" + "{code}/"
 CATEGORY_URL = f"https://item.rakuten.co.jp/{SHOP_ID}/c/" + "{cid}/"
 CATEGORY_IDS = ["0000000145", "0000000130", "0000000172", "0000000105", "0000000168"]
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 REQUEST_INTERVAL = 0.5
 EXCLUDE_KEYWORDS = ("セット", "詰め合わせ", "詰合せ", "飲み比べ", "お試し", "ドリップバッグ", "ドリップバック",
                     "水出し", "手提げ", "ラッピング", "ギフト", "福袋", "パックセット")

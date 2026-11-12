@@ -71,7 +71,7 @@ BASE_URL = "https://coffee-chaca.com"
 SHOP_ID = "5027"
 CRAWL_DELAY_SECONDS = 1.0
 REQUEST_HEADERS = {
-    "User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"
+    "User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"
 }
 UNIT_WEIGHT_G = 200  # 理由はモジュールdocstring参照
 # 実データ確認済み: category18配下でも「珈琲ギフト」(category22)・

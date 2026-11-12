@@ -36,7 +36,7 @@ SHOP_INFO = {
 
 BASE_URL = "https://cafe-saboroso.com"
 CATEGORIES = [("505644", "ストレート"), ("505645", "ブレンド"), ("517098", "ブレンド")]
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 INTERVAL = 1.6
 ROAST_RE = re.compile(r"(中深煎|中浅煎|浅煎|中煎|深煎)り?")
 COUNTRIES = ["エチオピア", "コロンビア", "ケニア", "ブラジル", "グアテマラ", "コスタリカ", "インドネシア"]

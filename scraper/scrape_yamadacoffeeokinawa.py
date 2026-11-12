@@ -48,7 +48,7 @@ CATEGORIES = [
     (2120828, False),  # COFFEE OF MATERIAL
 ]
 REQUEST_INTERVAL = 2
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 
 EXCLUDE_KEYWORDS = ["セット", "詰め合わせ", "ギフト", "ドリップバッグ", "コーヒーバッグ", "カフェオレ"]
 COLORME_JSON_PATTERN = re.compile(r"var\s+Colorme\s*=\s*(\{.*?\});", re.DOTALL)

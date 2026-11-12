@@ -38,7 +38,7 @@ SHOP_INFO = {
 }
 
 BASE_URL = "https://www.coffee-kurumi.com"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 REQUEST_INTERVAL = 1.6
 LD_PATTERN = re.compile(r'<script type="application/ld\+json"[^>]*>(.*?)</script>', re.S)
 ORIGIN_PATTERN = re.compile(r'"text":"●原材料名：コーヒー豆（(?:原産国|生豆生産国名)：([^"）]*)）')

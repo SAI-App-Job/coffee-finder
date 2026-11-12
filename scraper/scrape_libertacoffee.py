@@ -41,7 +41,7 @@ SHOP_INFO = {
 }
 
 BASE_URL = "https://www.libertacoffeeshop.com"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 EXCLUDE_KEYWORDS = (
     "post便", "ポスト投函", "様", "さま", "卸売", "ドリップ", "水出し", "セット", "プレス", "挽き", "選択なし", "豆のまま",
     "飲み比べ", "のみの方",

@@ -68,7 +68,7 @@ SHOP_INFO = {
 
 PRODUCTS_JSON_URL = "https://cafec.shop/collections/coffee-beans/products.json?limit=250"
 REQUEST_HEADERS = {
-    "User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"
+    "User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"
 }
 
 EXCLUDED_HANDLES = {"deep27set"}

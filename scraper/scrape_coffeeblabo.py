@@ -41,7 +41,7 @@ SHOP_INFO = {
 }
 
 BASE_URL = "https://coffeeblabo.base.shop"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 REQUEST_INTERVAL = 5.2  # BASEは5秒以上
 DESC_PREFIX = ""  # 説明文の先頭に付ける注記(該当商品IDのみ)
 DESC_PREFIX_IDS = []

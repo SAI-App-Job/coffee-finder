@@ -50,7 +50,7 @@ SHOP_INFO = {
 }
 
 LIST_URL = "https://www.946jp.com/vendedor/quickorder.cgi"
-REQUEST_HEADERS = {"User-Agent": "Mozilla/5.0 (CoffeeFinderBot/0.1; +contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "Mozilla/5.0 (CoffeeFinderBot/0.1; +https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 
 PRODUCT_BLOCK_PATTERN = re.compile(
     r'<div class="prdt_ttl">(?P<title>[^<]+)</div>\s*<p>\s*(?P<desc>.*?)\s*</p>.*?'

@@ -47,7 +47,7 @@ SHOP_URL = "https://www.enoyacoffee.tokyo/shop/"
 CATEGORY_IDS = [8, 32, 33, 34, 38, 29, 66, 67, 68, 69]
 # 国別カテゴリ(ブレンドは対象外。商品の記載から国が判明しない場合のみのフォールバック)
 CATEGORY_COUNTRY = {34: "コスタリカ", 38: "ニカラグア", 29: "ブラジル"}
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 EXCLUDE_KEYWORDS = ("セット", "パック", "珈琲缶", "ドリッパー", "Dripper", "ドリップバッグ", "Tシャツ", "Cap", "T サイズ", "手ぬぐい")
 ROAST_MAP = [
     (re.compile(r"FULL\s*CITY", re.I), "フルシティロースト"),

@@ -79,7 +79,7 @@ SHOP_INFO = {
 CART_BASE_URL = "https://auroracoffee.shop-pro.jp"
 SHOP_PAGE_URL = "https://www.auroracoffee.jp/shop/"
 REQUEST_HEADERS = {
-    "User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"
+    "User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"
 }
 
 # 理由はモジュールdocstring参照(焙煎豆単品を扱うセクションのみ対象)

@@ -40,7 +40,7 @@ SHOP_INFO = {
 }
 
 API = "https://connexcoffee.net/shop/wp-json/wc/store/v1/products"
-HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 DELAY = 2
 NON_BEAN = ("ドリップバッグ", "セット")
 

@@ -35,7 +35,7 @@ SHOP_INFO = {
 }
 
 BASE_URL = "https://www.takano-coffee.co.jp/shop"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 CATEGORY_IDS = [29, 30, 31, 32, 39]
 ROAST_PATTERN = re.compile(r"(浅煎り|中浅煎り|中深煎り|中煎り|深煎り|イタリアンロースト|フレンチロースト)")
 

@@ -37,7 +37,7 @@ SHOP_INFO = {
 }
 
 BASE_URL = "https://www.kamoe-coffee.com"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 REQUEST_INTERVAL = 1.6
 LD_PATTERN = re.compile(r'<script type="application/ld\+json"[^>]*>(.*?)</script>', re.S)
 SIZE_PATTERN = re.compile(r"\s*\(\s*(\d+)\s*g\s*\)\s*$")

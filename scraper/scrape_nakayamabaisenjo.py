@@ -40,7 +40,7 @@ SHOP_INFO = {
 }
 
 BASE_URL = "https://www.nakayamacoffee.com/"
-REQUEST_HEADERS = {"User-Agent": "Mozilla/5.0 (CoffeeFinderBot/0.1; +contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "Mozilla/5.0 (CoffeeFinderBot/0.1; +https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 WEIGHT_PREFIX = re.compile(r"^\s*(\d+)\s*g\s+", re.I)
 EXCLUDE_KEYWORDS = ("DRIP BAG", "ドリップバッグ", "LIQUID", "COLD BREW", "おまかせ", "SHOPPING BAG", "WRAPPING", "GIFT")
 ROAST_IN_PAREN = re.compile(r"（([^）]*)）")

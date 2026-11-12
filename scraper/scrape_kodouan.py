@@ -68,7 +68,7 @@ SHOP_INFO = {
 
 BASE_URL = "https://www.kodouan.com"
 REQUEST_HEADERS = {
-    "User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"
+    "User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"
 }
 
 # 理由はモジュールdocstring参照: 単品ストレート豆・ブレンド固有名の

@@ -42,7 +42,7 @@ SHOP_INFO = {
 }
 
 LIST_URL = "https://iru1ban.com/ec/"
-HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 DELAY = 2.0
 EXCLUDE = ["水出し", "カップオン", "セット", "ギフト", "ドリップ"]
 ORIGIN_RE = re.compile(r"[<〈＜]\s*([^<>〈〉＜＞]*?)\s*原産\s*[>〉＞]")

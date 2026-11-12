@@ -44,7 +44,7 @@ SHOP_INFO = {
 BASE_URL = "https://hiroshigecoffee.shop-pro.jp/"
 LIST_URL = BASE_URL + "?mode=srh&keyword=&sort=n"
 CRAWL_DELAY_SECONDS = 2.0
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 EXCLUDE_KEYWORDS = ("ドリップ", "ギフト", "セット", "リキッド", "フィルター")
 COLORME_RE = re.compile(r"var\s+Colorme\s*=\s*")
 WEIGHT_RE = re.compile(r"【\s*(\d+)\s*g\s*】")

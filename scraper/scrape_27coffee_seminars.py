@@ -63,7 +63,7 @@ BASE_URL = "https://27coffee.jp"
 BLOG_URL = f"{BASE_URL}/blogs/school-event"
 CRAWL_DELAY_SECONDS = 1  # scrape_27coffee.pyと同じ(robots.txtにCrawl-delay指定なし)
 REQUEST_HEADERS = {
-    "User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"
+    "User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"
 }
 
 # aggregate_events.pyが他のイベント情報源(WCC/SCAJ/ACE/...)と同じ形式

@@ -36,7 +36,7 @@ SHOP_INFO = {
 }
 
 PAGE_URL = "http://trb-cofe.com/"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 EXCLUDE_KEYWORDS = ("水だし",)
 
 # 銘柄名・説明から産地が判別できないもの(説明文の産地記載による)

@@ -38,7 +38,7 @@ SHOP_INFO = {
 }
 
 BASE_URL = "https://coffee-sora.shop"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 BEAN_TYPES = {"スペシャルティコーヒー", "デカフェ"}
 EXCLUDE_KEYWORDS = ["セット", "ギフト"]
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*g")

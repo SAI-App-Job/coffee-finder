@@ -56,7 +56,7 @@ SHOP_ID = "inuitcoffee"
 ITEM_URL = f"https://item.rakuten.co.jp/{SHOP_ID}/" + "{code}/"
 CATEGORY_URL = f"https://item.rakuten.co.jp/{SHOP_ID}/c/" + "{cid}/"
 CATEGORY_IDS = ["0000000100", "0000000105", "0000000127"]
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 EXCLUDE_KEYWORDS = ("セット", "ギフト", "ドリップバッグ", "水出し", "手提げ", "トライアル", "バラエティ", "飲み比べ")
 
 TITLE_PATTERN = re.compile(r"^スペシャルティコーヒー\s*(\d+)\s*g\s*【\s*(.+?)\s*】")

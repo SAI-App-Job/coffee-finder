@@ -38,7 +38,7 @@ SHOP_INFO = {
 }
 
 LIST_URL = "https://ku-plus-f.com/products/list?category_id=140"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 FIELD_RE = re.compile(r"^【\s*([^】]+?)\s*】\s*(.*)$")
 
 

@@ -80,7 +80,7 @@ SHOP_INFO = {
 BASE_URL = "https://lotuscoffee.shop-pro.jp/"
 LIST_URL = "https://lotuscoffee.shop-pro.jp/?mode=srh&keyword=&sort=n"
 REQUEST_HEADERS = {
-    "User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"
+    "User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"
 }
 
 # 実データ確認済み(2026-09時点): ご贈答用の化粧箱・豆入れ袋・コーヒーサーバー等

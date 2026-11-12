@@ -42,7 +42,7 @@ SHOP_INFO = {
 }
 
 BASE_URL = "https://coffee-labo.raku-uru.jp"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 CRAWL_DELAY_SECONDS = 2
 
 # (カテゴリID, 店側の分類。実際の分類は原材料の生産国数で判定する)

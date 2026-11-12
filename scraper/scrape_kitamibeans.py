@@ -45,7 +45,7 @@ SHOP_INFO = {
 
 BASE_URL = "https://kitami-beanscoffee.com"
 LIST_URL = f"{BASE_URL}/category/item/category-all-item/"
-HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 SLEEP = 2.0
 EXCLUDE = ["水出し", "アイスコーヒー", "セット", "ドリップバッグ", "550g", "まんじゅう", "ギフト"]
 TAG_PATTERN = re.compile(r"【[^】]*】")

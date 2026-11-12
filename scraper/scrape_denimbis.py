@@ -75,7 +75,7 @@ CRAWL_DELAY_SECONDS = 1  # robots.txt確認済み(2026-08時点): Crawl-delay指
 # 全面Disallowのみ)。個人開発の反復スピード優先だが、小規模個人店が多いためcourtesy設定は維持する
 REQUEST_HEADERS = {
     # 収集主体が分かるよう、一般的なブラウザUAではなく素性を示すUAを推奨
-    "User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"
+    "User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"
 }
 
 

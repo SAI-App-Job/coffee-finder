@@ -35,7 +35,7 @@ SHOP_INFO = {
     "robots_txt_status": "実質許可(2026-10確認。/wp-admin/のみDisallow)",
 }
 LIST_URLS = ["https://morino-coffee.net/category/item/", "https://morino-coffee.net/category/item/page/2/"]
-HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 OUT_STATES = ("売切れ", "売り切れ", "入荷待ち", "品切れ")
 
 

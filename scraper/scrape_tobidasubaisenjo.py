@@ -41,7 +41,7 @@ SHOP_INFO = {
 
 BASE = "https://store.shopping.yahoo.co.jp/tobidasu-baisenjo"
 SEARCH_URLS = [BASE + "/search.html"] + [BASE + f"/search.html?page={i}" for i in range(1, 6)]
-HEADERS = {"User-Agent": "Mozilla/5.0 (compatible; CoffeeFinderBot/0.1; +contact: your-contact-info-here)"}
+HEADERS = {"User-Agent": "Mozilla/5.0 (compatible; CoffeeFinderBot/0.1; +https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 NEXT_DATA = re.compile(r'id="__NEXT_DATA__"[^>]*>(.*?)</script>', re.S)
 
 # 商品コード: tbb-<銘柄>-<サイズ> / 7days-<曜日>-<サイズ>g

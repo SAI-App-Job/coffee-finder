@@ -76,7 +76,7 @@ SHOP_INFO = {
 BASE_URL = "http://cafe-tirol.shop-pro.jp/"
 LIST_URL = "http://cafe-tirol.shop-pro.jp/?mode=srh&cid=&keyword=&sort=n"
 REQUEST_HEADERS = {
-    "User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"
+    "User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"
 }
 
 NON_BEAN_KEYWORDS = ["密封ビン"]

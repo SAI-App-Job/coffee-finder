@@ -47,7 +47,7 @@ BASE_URL = "https://roasterymeguro.com"
 STICKY_POSTS_API = f"{BASE_URL}/wp-json/wp/v2/posts?sticky=true"
 CRAWL_DELAY_SECONDS = 10  # robots.txt確認済み(2026-08時点): Crawl-delay指定なし
 REQUEST_HEADERS = {
-    "User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"
+    "User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"
 }
 
 EVENT_SOURCE_INFO = {

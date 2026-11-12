@@ -38,7 +38,7 @@ SHOP_INFO = {
 }
 
 PAGE_URL = "https://www.goemon-7325coffee.com/blank-3"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 WEIGHT_G = 100  # 注文方法欄「コーヒー豆は、100g単位で袋に入ります」
 EXCLUDE_KEYWORDS = ("水出し",)
 PRICE_PATTERN = re.compile(r"(\d[\d,]*)\s*円")

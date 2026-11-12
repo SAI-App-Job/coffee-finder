@@ -36,7 +36,7 @@ SHOP_INFO = {
 }
 
 BASE_URL = "https://www.kamome-tokyo.com"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 
 LD_PATTERN = re.compile(r'<script type="application/ld\+json"[^>]*>(.*?)</script>', re.S)
 SIZE_PATTERN = re.compile(r"\s*コーヒー豆\s*(\d+)\s*g\s*(?:【受注後焙煎】)?\s*$")

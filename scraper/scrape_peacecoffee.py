@@ -37,7 +37,7 @@ SHOP_INFO = {
 }
 
 LIST_URL = "https://peace-coffee.jp/products/%e7%8f%88%e7%90%b2%e8%b1%86/"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 ROAST_PAREN = re.compile(r"[（(]\s*([^（()）]*煎り)\s*[）)]\s*$")
 ORIGIN_OVERRIDES = {"マンデリン": "インドネシア"}
 

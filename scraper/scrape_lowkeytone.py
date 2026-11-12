@@ -45,7 +45,7 @@ SHOP_INFO = {
 
 BASE_URL = "https://lowkeytonecoffee.com"
 CATEGORY_URL = f"{BASE_URL}/?mode=cate&cbid=1604916&csid=0"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 EXCLUDE_KEYWORDS = ("セット", "ドリップパック", "パック入", "水出し", "きんちゃく")
 MAX_PAGES = 6
 

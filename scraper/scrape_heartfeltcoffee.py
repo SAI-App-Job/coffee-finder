@@ -25,7 +25,7 @@ SHOP_INFO = {
     "robots_txt_status": "実質許可(他のBASE系店舗と同一の記述。識別可能なUser-Agentを使用)",
 }
 BASE_URL = "https://heartfeltcof.base.ec"
-HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 
 # 商品ID: 商品名(ブレンドの構成国は商品名の表記どおり)
 ITEMS = {

@@ -42,7 +42,7 @@ SHOP_INFO = {
 }
 
 BASE_URL = "https://shop.pulaucoffeeroaster.com"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 
 NON_BEAN_KEYWORDS = ["セット", "ドリップバッグ", "コーヒーバッグ", "ゼリー", "甘酒", "ナッツ", "水出し", "ギフト"]
 DEFAULT_WEIGHT_G = 200

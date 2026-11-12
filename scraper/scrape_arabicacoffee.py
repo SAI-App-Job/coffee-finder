@@ -72,7 +72,7 @@ LIST_URL_FIRST = f"{BASE_URL}/category/item/"
 LIST_URL_PAGE = f"{BASE_URL}/category/item/page/{{page}}/"
 CRAWL_DELAY_SECONDS = 1.0
 REQUEST_HEADERS = {
-    "User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"
+    "User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"
 }
 
 # 理由はモジュールdocstring参照(生豆・ドリップバッグ/ギフトの除外)

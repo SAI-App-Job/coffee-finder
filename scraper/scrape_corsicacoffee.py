@@ -40,7 +40,7 @@ SHOP_INFO = {
 }
 
 BASE_URL = "https://shop.corsicacoffee.com"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 CRAWL_DELAY_SECONDS = 4
 RETRY_WAIT_SECONDS = 60
 MAX_RETRIES = 5

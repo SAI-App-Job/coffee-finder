@@ -46,7 +46,7 @@ SHOP_INFO = {
 
 BASE_URL = "https://mizu0coffee.base.shop"
 REQUEST_HEADERS = {
-    "User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"
+    "User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"
 }
 
 DIAGRAM_PATTERN = re.compile(r"おすすめ焙煎度[\s　]*\S*[\s　]*浅煎り←[□■\s　]*→深煎り")

@@ -61,7 +61,7 @@ SHOP_INFO = {
 BASE_URL = "https://nest.ocnk.net"
 CATEGORY_URL = f"{BASE_URL}/product-list/3"  # コーヒー豆カテゴリ
 REQUEST_HEADERS = {
-    "User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"
+    "User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"
 }
 
 SHOP_PREFIX_PATTERN = re.compile(r"^【nest coffee】\s*")

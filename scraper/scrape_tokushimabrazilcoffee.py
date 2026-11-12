@@ -42,7 +42,7 @@ SHOP_INFO = {
 }
 
 BASE_URL = "https://www.brazil-coffee.jp/SHOP"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 CRAWL_DELAY_SECONDS = 1
 
 # (ページコード, 商品名, 分類の上書き(Noneなら自動判定), 産地(国名。Noneなら商品名から判定), 焙煎度の補完(欄が無い場合))

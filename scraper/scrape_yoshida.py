@@ -98,7 +98,7 @@ CRAWL_DELAY_SECONDS = 20  # robots.txtのCrawl-delay: 20に従う
 # 組み合わせで判定されていると考えられる)。一般的なブラウザが送る一式の
 # ヘッダーを追加することで通過を試みる。
 REQUEST_HEADERS = {
-    "User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)",
+    "User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)",
     "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
     "Accept-Language": "ja,en-US;q=0.9,en;q=0.8",
 }

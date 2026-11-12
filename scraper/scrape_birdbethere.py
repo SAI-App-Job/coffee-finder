@@ -50,7 +50,7 @@ SHOP_INFO = {
 }
 
 BASE_URL = "https://birdbethere.base.shop"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 ITEM_IDS = ["85037661", "68251745", "92567243", "66399482"]
 WEIGHT_G = 150
 

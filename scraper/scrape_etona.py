@@ -86,7 +86,7 @@ LIST_PAGES = [
     "/shopbrand/sample3/page5/recommend/",
 ]
 REQUEST_HEADERS = {
-    "User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"
+    "User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"
 }
 
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*(kg|ｋｇ|g|ｇ)", re.IGNORECASE)

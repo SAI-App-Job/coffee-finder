@@ -64,7 +64,7 @@ SHOP_INFO = {
 BASE_URL = "https://www.takadacoffee.com"
 BEANS_CATEGORY_URL = f"{BASE_URL}/category/beans-online-shop/"
 REQUEST_HEADERS = {
-    "User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"
+    "User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"
 }
 
 # 理由はモジュールdocstring参照: カテゴリページには会社概要・お問い合わせ等の

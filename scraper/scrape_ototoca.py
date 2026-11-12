@@ -53,7 +53,7 @@ BASE_URL = "https://ototoca.com"
 LIST_URL = BASE_URL + "/products/list?disp_number=2&pageno={page}"
 MAX_PAGES = 5
 DEEP_ROAST_CATEGORY_ID = 6
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 
 ITEM_SPLIT = '<li class="ec-shelfGrid__item">'
 WEIGHT_PATTERN = re.compile(r"[（(]\s*(\d+)\s*g\s*[）)]")

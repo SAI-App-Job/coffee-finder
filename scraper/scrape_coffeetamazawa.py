@@ -40,7 +40,7 @@ SHOP_INFO = {
 
 BASE_URL = "https://coffee-tamazawa.shop"
 CATEGORY_URL = f"{BASE_URL}/?mode=cate&cbid=2767142&csid=0"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 EXCLUDE_KEYWORDS = ("セット", "ドリップバッグ", "ドリップバック", "ギフト", "バッグ")
 
 COLORME_JSON_PATTERN = re.compile(r"var\s+Colorme\s*=\s*(\{.*?\});\s*\n", re.DOTALL)

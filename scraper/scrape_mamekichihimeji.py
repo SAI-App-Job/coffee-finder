@@ -39,7 +39,7 @@ SHOP_INFO = {
 }
 
 BASE_URL = "https://coffee-mamekichi.net/"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 LABEL_RE = re.compile(r"^(生産国|生産地|地域|農園名|等\s*級|品\s*種|精\s*選|標高|認\s*証|生産者|備考)[\s：:]+(.+)$")
 SKIP_LINES = ("価格", "焙煎度合", "注文数", "品切れ", "個", "中煎り", "やや深煎り", "深煎り", "(注)")
 

@@ -45,7 +45,7 @@ SHOP_INFO = {
 
 BASE_URL = "https://www.burg-kaffee.com"
 CATEGORY_URL = f"{BASE_URL}/?mode=cate&cbid=2473138&csid=0"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 EXCLUDE_KEYWORDS = ("セット", "set ", "ギフト", "ドリップバッグ")
 MAX_PAGES = 8
 SIZE_ROW = re.compile(r"^(\d+(?:\.\d+)?)\s*(kg|g)$", re.I)

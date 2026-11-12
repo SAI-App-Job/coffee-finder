@@ -42,7 +42,7 @@ SHOP_INFO = {
 BASE_URL = "https://store.shopping.yahoo.co.jp/hiroshimacoffee"
 CATEGORY_URL = f"{BASE_URL}/bcabb2c8df.html"
 LIST_URLS = [CATEGORY_URL, CATEGORY_URL + "?page=1", CATEGORY_URL + "?page=2"]
-REQUEST_HEADERS = {"User-Agent": "Mozilla/5.0 (compatible; CoffeeFinderBot/0.1; +contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "Mozilla/5.0 (compatible; CoffeeFinderBot/0.1; +https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 CRAWL_DELAY_SECONDS = 1
 NEXT_DATA_PATTERN = re.compile(r'id="__NEXT_DATA__"[^>]*>(.*?)</script>', re.DOTALL)
 

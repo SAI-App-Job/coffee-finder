@@ -49,7 +49,7 @@ CATEGORIES = {
     1608942: "中南米産", 1608943: "アフリカ産", 1608944: "アジア大洋州産",
     1608945: "オリジナルブレンド", 1608946: "デカフェ", 1608948: "その他の商品",
 }
-HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 DELAY = 2.0
 COLORME_RE = re.compile(r"var\s+Colorme\s*=\s*(\{.*?\});\s*\n", re.S)
 EXCLUDE = ["ドリップバッグ", "ギフト", "セット", "詰め合わせ", "詰合せ", "お試し", "飲み比べ", "CD", "グッズ"]

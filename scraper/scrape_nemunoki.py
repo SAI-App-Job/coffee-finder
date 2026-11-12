@@ -33,7 +33,7 @@ SHOP_INFO = {
 }
 
 BASE = "https://www.nemunokicafe.jp/shop/"
-HEADERS = {"User-Agent": "Mozilla/5.0 (compatible; CoffeeFinderBot/0.1; +contact: your-contact-info-here)"}
+HEADERS = {"User-Agent": "Mozilla/5.0 (compatible; CoffeeFinderBot/0.1; +https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 
 STRAIGHT_PAGES = [
     "blue-mountain", "mokha-mattari", "jamaica", "tanzania-kilimanjaro", "hawai-kona",

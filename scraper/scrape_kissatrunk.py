@@ -57,7 +57,7 @@ SHOP_INFO = {
 }
 
 LIST_PAGE_URL = "https://oldcafetrunk.wixsite.com/-site/category-page"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 
 # 一覧中の対象商品(焙煎豆)。商品名に「珈琲豆」を含み、ドリップバッグ・ギフト・ゼリー等は含まないもの
 BEAN_NAME_PATTERN = re.compile(r"珈琲豆|コーヒー豆")

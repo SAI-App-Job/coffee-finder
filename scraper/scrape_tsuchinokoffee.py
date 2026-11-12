@@ -39,7 +39,7 @@ SHOP_INFO = {
 }
 
 BASE_URL = "https://tsuchinokohi.base.shop"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 INTERVAL = 5.5
 
 # (商品ID, 商品名, 重量(g))

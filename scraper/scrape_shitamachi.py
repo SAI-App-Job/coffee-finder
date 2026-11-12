@@ -67,7 +67,7 @@ CANDIDATE_ITEM_CODES = [
 ]
 CRAWL_DELAY_SECONDS = 1
 REQUEST_HEADERS = {
-    "User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"
+    "User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"
 }
 
 TITLE_PATTERN = re.compile(r'<div id="itemDetail01"[^>]*>\s*<h2>([^<]*)</h2>')

@@ -1855,6 +1855,17 @@ jobs:
         working-directory: scraper
         run: python aggregate_shops.py
 
+      # 店舗が書いた長い説明文は、公開データに載せない。アプリが抽出した事実(風味の語など)だけにする
+      # (方針: docs/coffee-app-data-model.md の「公開データの文章の扱い」)
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Reduce shop-written long text to extracted facts
+        run: |
+          node scripts/reduce-product-text.js
+          node scripts/reduce-product-text.js --check
+
       - name: Commit updated data (no-op if unchanged)
         run: |
           git config user.name "coffee-finder-bot"

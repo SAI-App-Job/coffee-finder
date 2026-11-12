@@ -46,7 +46,7 @@ SHOP_ID = "andushcoffee"
 ITEM_URL = f"https://item.rakuten.co.jp/{SHOP_ID}/" + "{code}/"
 CATEGORY_URL = f"https://item.rakuten.co.jp/{SHOP_ID}/c/" + "{cid}/"
 CATEGORY_IDS = ["0000000242", "0000000243", "0000000244", "0000000245"]
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 REQUEST_INTERVAL = 0.5
 EXCLUDE_KEYWORDS = ("セット", "福袋", "お試し", "アソート", "トリオ", "ドリップバッグ", "ドリップバック",
                     "ギフト", "ラッピング", "詰め合わせ", "詰合せ")

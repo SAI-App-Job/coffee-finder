@@ -75,7 +75,7 @@ BASE_URL = "https://www.ash-coffee.jp"
 CATEGORY_IDS = list(range(1, 18))  # 理由はモジュールdocstring参照(1〜17の固定17カテゴリ)
 CRAWL_DELAY_SECONDS = 1.0
 REQUEST_HEADERS = {
-    "User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"
+    "User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"
 }
 
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")

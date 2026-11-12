@@ -43,7 +43,7 @@ SHOP_INFO = {
 }
 
 BASE_URL = "https://bankoku-coffee.ocnk.net"
-HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 SLEEP = 2.0
 CATEGORIES = [("27", "limited"), ("18", "straight_mid"), ("19", "straight_dark"), ("4", "blend"), ("5", "variation"), ("8", "decaf")]
 ROAST_MAP = [("フレンチ", "深煎り"), ("イタリアン", "深煎り"), ("フルシティ", "深煎り"), ("シティ", "中深煎り"), ("ハイ", "中煎り"),

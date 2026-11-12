@@ -25,7 +25,7 @@ SHOP_INFO = {
     "robots_txt_status": "未確認(Shopify標準構成)",
 }
 BASE_URL = "https://narafujiedacoffee.jp"
-HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 
 
 def get_weight(handle):

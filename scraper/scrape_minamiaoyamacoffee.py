@@ -45,7 +45,7 @@ SHOP_INFO = {
 
 SHOP_ID = "minamiaoyamacoffee"
 ITEM_URL = f"https://item.rakuten.co.jp/{SHOP_ID}/" + "{code}/"
-HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 INTERVAL = 3
 
 AVAIL_PATTERN = re.compile(r'itemprop="availability" content="[^"]*/(\w+)"')

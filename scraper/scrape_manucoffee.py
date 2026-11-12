@@ -39,7 +39,7 @@ SHOP_INFO = {
 }
 
 BASE_URL = "https://online.manucoffee.com"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*(kg|g)", re.I)
 
 # 産地がタイトルに無い商品(本文の「内容」「生産国」より確認)

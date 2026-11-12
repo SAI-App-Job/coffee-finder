@@ -82,7 +82,7 @@ SHOP_INFO = {
 PRODUCTS_JSON_URL = "https://waseda-sanae.coffee/products.json?limit=250"
 BASE_PRODUCT_URL = "https://waseda-sanae.coffee/products"
 REQUEST_HEADERS = {
-    "User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"
+    "User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"
 }
 
 EXCLUDE_TITLE_KEYWORDS = ["お試し"]

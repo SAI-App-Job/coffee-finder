@@ -48,7 +48,7 @@ SHOP_INFO = {
 }
 
 BASE_URL = "https://coffee-fam-shop.com"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 BEAN_TYPES = ("コーヒー豆", "デカフェ")
 WEIGHT_PATTERN = re.compile(r"^(\d+)\s*g$")
 BOILERPLATE_PATTERN = re.compile(r"^飲みごろは焙煎から[^。]*。\s*時間の経過による風味の変化をお楽しみください。\s*")

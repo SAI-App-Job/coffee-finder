@@ -54,7 +54,7 @@ SHOP_INFO = {
 
 BASE_URL = "https://shop.hagihara-coffee.com"
 API_URL = f"{BASE_URL}/api/goods.json"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 BEAN_CATEGORY = "コーヒー豆"
 EXCLUDE_KEYWORDS = ["ドリップバッグ", "リキッド", "ギフト", "セット", "水出し"]
 ROAST_HINT_PATTERN = re.compile(r"(極深|深煎り|中煎り|浅煎り)")

@@ -43,7 +43,7 @@ SHOP_INFO = {
 }
 
 BASE_URL = "https://www.honeycoffee.jp"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 MAX_PAGES = 6
 EXCLUDE_KEYWORDS = (
     "定期便", "セット", "がぶ飲み", "コーヒーバッグ", "水出し", "カフェオレベース", "ギフト", "トート", "コースター", "巾着", "淹れ方",

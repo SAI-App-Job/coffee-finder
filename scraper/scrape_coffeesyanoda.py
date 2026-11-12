@@ -42,7 +42,7 @@ SHOP_INFO = {
 
 BASE_URL = "https://noda.shop-pro.jp/"
 CATEGORY_URLS = [BASE_URL + f"?mode=cate&cbid=2979017&csid={c}" for c in (1, 2, 3, 4)]
-HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 DELAY = 2.0
 EXCLUDE = ["テスト", "キャニスター", "ギフト", "ドリップ", "お試し", "セット"]
 COLORME_RE = re.compile(r"var\s+Colorme\s*=\s*(\{.*?\});\s*\n", re.S)

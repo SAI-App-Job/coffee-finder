@@ -60,7 +60,7 @@ SHOP_INFO = {
 }
 
 BASE_URL = "https://destijlkoffie.com"
-REQUEST_HEADERS = {"User-Agent": "Mozilla/5.0 (CoffeeFinderBot/0.1; +contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "Mozilla/5.0 (CoffeeFinderBot/0.1; +https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 
 STRAIGHT_IDS = [
     "859098", "859905", "859920", "859913", "859918", "859921",

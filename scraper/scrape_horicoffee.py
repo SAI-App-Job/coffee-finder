@@ -4,7 +4,7 @@ scrape_horicoffee.py
 
 ホリ珈琲(1968年創業、三重県桑名市中央町2-11 本店ほか計5店舗、公式 https://hori-coffee.co.jp/)の
 コーヒー豆通販の商品情報を取得する。ECは WordPress + Welcart(WooCommerceではない。
-/wp-json/wc/store/v1 は404)。サイトは一部環境で403になることがあるため通常のUser-Agentを付ける。
+/wp-json/wc/store/v1 は404)。識別できるUser-Agentで取得する(2026-11-12に確認。以前は、403を避けるためにブラウザを名乗っていたが、名乗りをやめても200で取得できた。403になる場合は、掲載をやめる)。
 
 【取得方法】post-sitemap.xml から商品ページ(Welcartの商品は投稿として公開)の全URLを集め、
 各ページの h1 / 価格 / 「内容量」 / 「在庫状態」 / 説明文を読む。
@@ -33,7 +33,7 @@ SHOP_INFO = {
 }
 
 HEADERS = {
-    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36",
+    "User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)",
     "Accept-Language": "ja",
 }
 SITEMAP = "https://hori-coffee.co.jp/post-sitemap.xml"

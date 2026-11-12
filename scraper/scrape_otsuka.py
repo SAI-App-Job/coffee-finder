@@ -94,7 +94,7 @@ BASE_URL = "https://otsuka-coffee.raku-uru.jp"
 # 理由はモジュールdocstring参照
 LIST_CATEGORIES = ["36362", "36317", "36318", "36319", "36316", "105383"]
 REQUEST_HEADERS = {
-    "User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"
+    "User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"
 }
 
 LIST_ITEM_PATTERN = re.compile(

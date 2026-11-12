@@ -41,7 +41,7 @@ SHOP_INFO = {
 }
 
 BASE_URL = "https://coffeecyuudoku.shop-pro.jp/"
-REQUEST_HEADERS = {"User-Agent": "Mozilla/5.0 (CoffeeFinderBot/0.1; +contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "Mozilla/5.0 (CoffeeFinderBot/0.1; +https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 UNIT_NOTE = "生豆200g表記(ご注文後に焙煎するため、焙煎後の実重量は目減りする)"
 RECOMMEND_PATTERN = re.compile(r"おすすめは、?\s*([^\s、。で]*?煎り)")
 BOILERPLATE_PREFIXES = ("京都西院に位置する", "ご注文を頂いてから", "ご注文を頂いて")

@@ -95,7 +95,7 @@ SHOP_INFO = {
 BASE_URL = "http://coffeeandtea.shop-pro.jp/"
 CRAWL_DELAY_SECONDS = 0.5
 REQUEST_HEADERS = {
-    "User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"
+    "User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"
 }
 
 # 理由はモジュールdocstring参照。紅茶系4カテゴリ(紅茶/フレーバーティー/

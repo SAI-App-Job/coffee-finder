@@ -63,8 +63,12 @@ if (errors.length) {
   console.log(`OK: カテゴリ ${vocab.categories.length}・語 ${nTerms}・旧い語(legacy) ${Object.keys(vocab.legacy).length}`);
 }
 
-if (existsSync("data/products.json")) {
-  const texts = JSON.parse(readFileSync("data/products.json", "utf8")).map((p) => (p.flavor_notes ?? "").toLowerCase()).filter(Boolean);
+// 第1引数に、説明文の全文を含む商品データのパスを渡すと、そちらで数える。
+// 公開する data/products.json には、店舗の長い説明文を載せていない(scripts/reduce-product-text.js)ため、既定では、短い記述だけが対象になる。
+const productsFile = process.argv[2] ?? "data/products.json";
+if (existsSync(productsFile)) {
+  if (!process.argv[2]) console.log("注意: data/products.json には、短い風味の記述だけが載っています。出現数・カバー率は、目安にとどまります(全文の商品データのパスを、第1引数に渡せます)");
+  const texts = JSON.parse(readFileSync(productsFile, "utf8")).map((p) => (p.flavor_notes ?? "").toLowerCase()).filter(Boolean);
   const hits = new Map();
   let classified = 0;
   for (const text of texts) {

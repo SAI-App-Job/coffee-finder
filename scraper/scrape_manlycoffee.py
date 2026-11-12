@@ -37,7 +37,7 @@ SHOP_INFO = {
 }
 
 BASE_URL = "https://manly-coffee.com"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*([gｇkKｋ])")
 EXCLUDE_TITLE = ("セット", "ギフト", "大袋", "ミルクブリュー", "MILK BREW", "Coffee Bags", "コーヒーバッグ")
 

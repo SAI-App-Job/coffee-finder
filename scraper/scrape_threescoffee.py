@@ -64,7 +64,7 @@ SHOP_INFO = {
 }
 
 BASE_URL = "https://www.threes-coffee.com"
-REQUEST_HEADERS = {"User-Agent": "Mozilla/5.0 (CoffeeFinderBot/0.1; +contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "Mozilla/5.0 (CoffeeFinderBot/0.1; +https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 
 STRAIGHT_CODES = [
     "SS0097", "SS0083", "SS0073", "SS0070", "SS0063", "SS0062", "SS0059",

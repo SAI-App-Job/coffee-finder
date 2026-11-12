@@ -40,7 +40,7 @@ SHOP_INFO = {
 }
 
 LIST_URL = "https://coffee-r-n.com/coffee_list/"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 REGION_HEADINGS = {"アジア", "アフリカ", "太平洋", "カリブ海", "中南米", "南米"}
 PRICE_LINE = re.compile(r"^(\d+)\s*g\s*/\s*([\d,]+)\s*円")
 DISCONTINUED = ("終売", "入荷予定なし")

@@ -56,7 +56,7 @@ SHOP_INFO = {
 BASE_URL = "https://amatistacoffee.shop-pro.jp"
 CATEGORY_IDS = ["2451274", "2491549", "2491553", "2491554"]
 REQUEST_HEADERS = {
-    "User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"
+    "User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"
 }
 
 NON_BEAN_KEYWORDS = ["IRISH CREAM", "ピーチミルク"]

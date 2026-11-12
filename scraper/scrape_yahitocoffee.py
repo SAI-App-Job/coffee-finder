@@ -39,7 +39,7 @@ SHOP_INFO = {
 
 BASE_URL = "https://yahitocoffee.com"
 SHOP_PAGE = f"{BASE_URL}/{urllib.parse.quote('ウェブショッピング')}/"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 EXCLUDE_WORDS = ("水出し", "ドリップバッグ", "セット")
 ROAST_JA = re.compile(r"(極深煎り|中深煎り|中浅煎り|浅煎り|中煎り|深煎り|中煎)")
 ROAST_EN = re.compile(r"(フルシティ|ミディアム|ハイ|シティ|フレンチ|イタリアン|ライト|シナモン)")

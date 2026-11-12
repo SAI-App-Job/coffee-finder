@@ -66,7 +66,7 @@ SHOP_INFO = {
 
 BASE_URL = "https://shop.suzunaricoffee.com"
 REQUEST_HEADERS = {
-    "User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"
+    "User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"
 }
 
 STANDARD_WEIGHT_G = 200  # 実データ確認済み(商品ページ本文「内容量：200g(1袋)」)

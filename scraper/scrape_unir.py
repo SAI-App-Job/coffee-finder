@@ -57,7 +57,7 @@ SHOP_INFO = {
 BASE_URL = "https://unir-coffee.shop"
 CATEGORY_IDS = ["1176135", "1176136", "1176140"]
 REQUEST_HEADERS = {
-    "User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"
+    "User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"
 }
 
 NON_BEAN_KEYWORDS = ["定期便", "ドリップバッグ", "水出しアイスコーヒー", "アイスコーヒーリキッド"]

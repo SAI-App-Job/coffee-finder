@@ -37,7 +37,7 @@ SHOP_INFO = {   'name': 'PO-RT COFFEE',
     'last_verified_at': '2026-10-26'}
 
 BASE_URL = "https://portcoffee.theshop.jp"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 REQUEST_INTERVAL_SEC = 5.5  # BASE系は5秒以上
 
 # 商品ID, 表示名, 重量(g/不明はNone), カテゴリ(None=自動/"ブレンド"), 原産国(ブレンドはNone), 焙煎度(選択式・不明はNone), 精製方法の上書き(Noneなら説明文から検出)

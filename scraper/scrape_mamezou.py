@@ -45,7 +45,7 @@ SHOP_INFO = {
 }
 
 BASE_URL = "https://www.mamezou.co.jp"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 
 CATEGORY_PAGES = ["chunanbei.html", "carib.html", "africa.html", "other.html"]
 ITEM_PATTERN = re.compile(r'data-number="(\d+)" data-name="([^"]*)"[^>]*data-price="(\d+)"')

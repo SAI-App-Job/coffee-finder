@@ -41,7 +41,7 @@ SHOP_INFO = {
 }
 
 PAGE_URL = "https://www.p-mame.com/order.html"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 
 SECTIONS = ("ストレートコーヒー豆", "限定豆", "ブレンドコーヒー豆", "おとく豆")
 CODE_PATTERN = re.compile(r"^[A-Z]{1,3}-\d+$")

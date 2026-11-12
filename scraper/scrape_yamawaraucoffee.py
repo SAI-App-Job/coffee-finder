@@ -35,7 +35,7 @@ SHOP_INFO = {
 
 BASE = "https://www.yamawaraucoffee.com/"
 CATEGORY_URL = BASE + "?mode=cate&cbid=2869083&csid=0&page=%d"
-HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 NON_BEAN = ["ドリップバッグ", "ギフト", "セット", "詰め合わせ", "詰合せ"]
 COLORME_RE = re.compile(r"var\s+Colorme\s*=\s*")
 SOLD_RE = re.compile(r"SOLD\s*OUT|売り切れ|品切れ|在庫切れ", re.I)

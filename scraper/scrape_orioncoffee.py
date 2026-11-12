@@ -50,7 +50,7 @@ SHOP_INFO = {
 
 BASE_URL = "https://orioncoffee.shop-pro.jp/"
 SEARCH_URL = BASE_URL + "?mode=srh&cid=&keyword=&page={page}"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 REQUEST_INTERVAL = 2
 WEIGHT_G = 200
 UNIT_NOTE = "生豆200g基準(焙煎後は15〜20%減)"

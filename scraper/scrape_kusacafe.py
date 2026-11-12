@@ -45,7 +45,7 @@ SHOP_INFO = {
 }
 
 BASE_URL = "https://kusacafe.shop-pro.jp"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 CATEGORY_IDS = ["2571904", "2571905"]  # オリジナルブレンド / シングルオリジン産地別
 MAX_PAGES = 10
 

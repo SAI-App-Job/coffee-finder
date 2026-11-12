@@ -31,7 +31,7 @@ SHOP_INFO = {
     "last_verified_at": "2026-10-21",
 }
 LIST_URL = "https://gorillacoffee-1101.com/products/beans/"
-HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 INTERVAL = 2
 
 

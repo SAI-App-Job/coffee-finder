@@ -41,7 +41,7 @@ SHOP_INFO = {
 }
 
 PAGE_URL = "https://blowercoffee.com/"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 
 ITEM_PATTERN = re.compile(
     r"(\S+)\s+(.+?)\s+([\d,]+)円（税込）／100g\s+([\d,]+)円（税込）／200g"

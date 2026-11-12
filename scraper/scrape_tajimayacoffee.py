@@ -42,7 +42,7 @@ SHOP_INFO = {
 
 BASE_URL = "https://shop.tajimaya-coffeeten.com"
 LIST_URL = f"{BASE_URL}/?mode=grp&gid=2998171"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 EXCLUDE_KEYWORDS = ("お試しセット", "セット", "ギフト", "ドリップバッグ", "水出し")
 BLEND_NAMES = ("アイスコーヒー", "アメリカン", "特撰オリジナルブレンド")
 MAX_PAGES = 5

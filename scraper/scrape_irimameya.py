@@ -53,7 +53,7 @@ SHOP_INFO = {
 BASE_URL = "https://onlinestore.irimameya.co.jp"
 BEAN_CATEGORY_IDS = [10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 33]
 REQUEST_HEADERS = {
-    "User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"
+    "User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"
 }
 
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")

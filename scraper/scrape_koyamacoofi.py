@@ -67,7 +67,7 @@ BASE_URL = "https://koyamacoofi.theshop.jp"
 CATEGORY_IDS = ["205361", "205626"]  # ストレート豆・ブレンド豆(理由はモジュールdocstring参照)
 CRAWL_DELAY_SECONDS = 2
 REQUEST_HEADERS = {
-    "User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"
+    "User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"
 }
 
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")

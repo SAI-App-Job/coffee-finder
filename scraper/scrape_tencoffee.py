@@ -34,7 +34,7 @@ SHOP_INFO = {
 
 LIST_URL = "https://tencoffee.shopinfo.jp/pages/906736/page_201703201746"
 ITEM_URL = "https://tencoffee.shopinfo.jp/shopItems/{}"
-HEADERS = {"User-Agent": "Mozilla/5.0 (compatible; CoffeeFinderBot/0.1; +contact: your-contact-info-here)"}
+HEADERS = {"User-Agent": "Mozilla/5.0 (compatible; CoffeeFinderBot/0.1; +https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 
 DETAIL_RE = re.compile(r"\[\s*([^/\]]+?)\s*/\s*([^/\]]+?)\s*/\s*(\d+)\s*g\s*\]")
 

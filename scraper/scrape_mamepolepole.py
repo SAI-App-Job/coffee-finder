@@ -36,7 +36,7 @@ SHOP_INFO = {
 
 BASE_URL = "https://www.mamepolepole.okinawa"
 CATEGORIES = [("ct70", "ストレート"), ("ct71", "ブレンド"), ("ct72", "ストレート")]
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 NON_BEAN_KEYWORDS = ("ギフト", "セット", "コーヒーバッグ", "バッグ", "カフェオレ", "オーレ", "ドリップ", "Tシャツ")
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*g", re.IGNORECASE)
 ROAST_PATTERN = re.compile(r"(中深煎り|中浅煎り|浅煎り|中煎り|深煎り)")

@@ -40,7 +40,7 @@ SHOP_INFO = {
 }
 
 PAGE_URL = "https://kosuitei.com/category/item/"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 
 FEATURE_PATTERN = re.compile(r"^(.+?)の特徴：(.+)$")
 BEAN_LINE_PATTERN = re.compile(r"^(.+?)（ロースト豆・200g入り）$")

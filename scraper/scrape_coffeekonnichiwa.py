@@ -35,7 +35,7 @@ SHOP_INFO = {
 }
 
 BASE_URL = "https://www.coffee-konnichiwa.com"
-HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 INTERVAL = 1.6
 LD_PATTERN = re.compile(r'<script type="application/ld\+json"[^>]*>(.*?)</script>', re.S)
 EXCLUDE_KEYWORDS = ("セット", "ドリップバッ", "ドリップパ")

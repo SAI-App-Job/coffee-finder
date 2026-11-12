@@ -43,7 +43,7 @@ SHOP_INFO = {
 
 BASE_URL = "https://amenohi-coffee.jp"
 LIST_URL = f"{BASE_URL}/SHOP/105461/list.html"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 EXCLUDE_KEYWORDS = ("セット", "ギフト", "ドリップ", "リキッド", "おまかせ")
 MAX_PAGES = 10
 

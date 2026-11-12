@@ -47,7 +47,7 @@ SHOP_INFO = {
 }
 
 BASE_URL = "https://iwatacoffee.shop-pro.jp"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 CRAWL_DELAY_SECONDS = 1.5
 
 # (豆のまま商品のpid, 商品名(形態表記除去後), 重量(g), ブレンドか, 焙煎度, 産地(ストレートのみ))

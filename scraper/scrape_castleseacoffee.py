@@ -43,7 +43,7 @@ SHOP_INFO = {
 
 BASE_URL = "https://csc-shop.com/"
 CATEGORIES = [(2549115, "ブレンド"), (2920643, "シングル"), (2775992, "期間限定")]
-HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 DELAY = 2.0
 COLORME_RE = re.compile(r"var\s+Colorme\s*=\s*(\{.*?\});\s*\n", re.S)
 EXCLUDE = ["ギフト", "ドリップ", "リキッド", "水出し", "セット", "マグ", "バッグ", "BLOCKHEAD"]

@@ -39,7 +39,7 @@ SHOP_INFO = {
 }
 
 BASE_URL = "https://lavenir.ocnk.net"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 CATEGORIES = [95, 104]
 NAME_PATTERN = re.compile(r"^【(\d+)\s*g】\s*(.+)$")
 PRICE_PATTERN = re.compile(r"([\d,]+)\s*円")

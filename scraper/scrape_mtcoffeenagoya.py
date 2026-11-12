@@ -33,7 +33,7 @@ SHOP_INFO = {
 }
 BASE = "https://mountaincoffee.co.jp"
 CATEGORIES = [("ブレンド", f"{BASE}/shop/product_categories/17"), ("ストレート", f"{BASE}/shop/product_categories/18")]
-HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 INTERVAL = 2
 EXCLUDE_CODES = {"set001_b"}
 

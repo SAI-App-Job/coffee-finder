@@ -36,7 +36,7 @@ SHOP_INFO = {
 
 BASE_URL = "https://satocoffeebeans.ocnk.net"
 CATEGORIES = ["23", "8", "9", "10", "11", "12", "13"]
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 REQUEST_INTERVAL = 2
 ROAST_PATTERN = re.compile(r"(中深煎り|中浅煎り|浅煎り|中煎り|深煎り)")
 BRACKET = re.compile(r"【([^】]*)】\s*")

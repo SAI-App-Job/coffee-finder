@@ -61,7 +61,7 @@ SHOP_INFO = {
 
 BASE_URL = "https://sparkcoffee.thebase.in"
 REQUEST_HEADERS = {
-    "User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"
+    "User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"
 }
 
 # 実データ確認済み(2026-09時点): セット商品・ギフト・コーヒーバッグ等、

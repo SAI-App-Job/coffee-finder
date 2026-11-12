@@ -68,7 +68,7 @@ SHOP_INFO = {
 BASE_URL = "https://www.coulane.jp/"
 CRAWL_DELAY_SECONDS = 1  # robots.txt確認済み(2026-08時点): Crawl-delay指定なし
 REQUEST_HEADERS = {
-    "User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"
+    "User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"
 }
 
 # 豆売り(グラム単位でグラインド方法を選ぶ形式)の4カテゴリのみ対象。

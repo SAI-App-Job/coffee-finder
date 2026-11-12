@@ -60,7 +60,7 @@ SHOP_INFO = {
 
 SITE = "https://www.ateliermaillot.com/"
 SHOP_PATH = "オンラインショップ-1/"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 CRAWL_DELAY = 5
 
 # カテゴリ(パス) -> 産地国 (None は国を商品名から判定、ブレンドは別扱い)

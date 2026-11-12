@@ -31,7 +31,7 @@ SHOP_INFO = {
 }
 
 BASE_URL = "https://laughter-coffee.myshopify.com"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*g", re.I)
 EXCLUDE_KEYWORDS = ("定期便", "ドリップバッグ", "ドリップバック", "ギフト", "セット", "水出し", "green beans", "生豆",
                     "タンブラー", "トート", "ステッカー", "コーヒー缶", "Tシャツ", "マグ")

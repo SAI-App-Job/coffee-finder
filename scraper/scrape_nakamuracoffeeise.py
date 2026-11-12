@@ -39,7 +39,7 @@ SHOP_INFO = {
 
 BASE = "https://store.shopping.yahoo.co.jp/coffee-nakamura"
 SEARCH_URLS = [BASE + "/search.html", BASE + "/search.html?page=1"]
-HEADERS = {"User-Agent": "Mozilla/5.0 (compatible; CoffeeFinderBot/0.1; +contact: your-contact-info-here)"}
+HEADERS = {"User-Agent": "Mozilla/5.0 (compatible; CoffeeFinderBot/0.1; +https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 NEXT_DATA = re.compile(r'id="__NEXT_DATA__"[^>]*>(.*?)</script>', re.S)
 
 EXTRA_BEAN_CODES = {"n000000000074"}  # 「ブラジル 中煎り(ハイロースト)」(名称に「コーヒー豆」が付かない)

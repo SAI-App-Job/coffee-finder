@@ -65,7 +65,7 @@ SHOP_INFO = {
 
 PRODUCT_LIST_URL = "https://rakuen-beans.crayonsite.net/p/2/"
 REQUEST_HEADERS = {
-    "User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"
+    "User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"
 }
 
 # 商品名に「ブレンド」を含まないがブレンド見出し配下に掲載されている商品が

@@ -38,7 +38,7 @@ SHOP_INFO = {
 }
 
 PAGE_URL = "https://naminonecoffee.jimdofree.com/%E7%8F%88%E7%90%B2%E8%B1%86/"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 PRICE_PATTERN = re.compile(r"(\d+)\s*[gｇ]入りで[、,]\s*([\d,]+)\s*円")
 ROAST_HINT = "シティロースト〜フルシティロースト"
 STOP_LINES = ("問い合わせ・注文ページへ", "商品価格・送料ページへ")

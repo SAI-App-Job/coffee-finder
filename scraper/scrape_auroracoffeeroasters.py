@@ -67,7 +67,7 @@ CATEGORY_IDS = [2, 5, 6, 7, 11, 14, 15]
 EXCLUDE_ITEM_IDS = {136, 304, 358, 362, 391, 394, 366}
 CRAWL_DELAY_SECONDS = 1
 REQUEST_HEADERS = {
-    "User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"
+    "User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"
 }
 
 ITEM_URL_PATTERN = re.compile(r"/item/(\d+)/")

@@ -54,7 +54,7 @@ SHOP_INFO = {
 BASE_URL = "https://coffee-mamenoki.jp"
 CATEGORY_IDS = [23, 22, 24, 21, 18]
 REQUEST_HEADERS = {
-    "User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"
+    "User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"
 }
 
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")

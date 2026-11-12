@@ -62,7 +62,7 @@ BASE_URL = "https://sabucoffee.raku-uru.jp"
 # 重複のため対象外、「ギフト」もセット品のため対象外)
 BEAN_CATEGORY_ID = "90842"
 REQUEST_HEADERS = {
-    "User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"
+    "User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"
 }
 
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")

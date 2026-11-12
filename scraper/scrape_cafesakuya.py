@@ -43,7 +43,7 @@ SHOP_INFO = {
 }
 
 BASE_URL = "https://cafesakuya.base.shop"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 REQUEST_INTERVAL = 5.2  # BASEは5秒以上
 DESC_PREFIX = "【オーダー焙煎・価格は生豆200g基準(焙煎後は15〜20%軽くなる。焙煎度・挽き目は購入時に選択)】"  # 説明文の先頭に付ける注記(該当商品IDのみ)
 DESC_PREFIX_IDS = ['111005733', '114347030', '115603582', '123912566', '133314847', '133315060', '144587416', '144587447', '144591241', '155830272', '155830294', '155830307', '66598033', '66621984', '66631642', '66631668', '66631776', '66631792', '66708226', '74854746', '78085655', '82096744', '84229300', '84229374', '85066666']

@@ -49,7 +49,7 @@ SHOP_INFO = {
 
 BASE_URL = "https://www.caravanserai.co.jp"
 CATEGORIES = ["92595", "92232", "93257"]
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 
 EXCLUDE_KEYWORDS = ["ドリップバッグ", "アイスコーヒー", "カフェオレ", "ギフト", "セット", "インスタント", "羊羹", "ゼリー"]
 WEIGHT_PATTERN = re.compile(r"[（(]\s*(\d+)\s*[gｇ]\s*[）)]")

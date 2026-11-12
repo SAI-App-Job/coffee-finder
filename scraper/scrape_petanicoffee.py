@@ -44,7 +44,7 @@ SHOP_INFO = {
 }
 
 BASE_URL = "https://petanicoffee.com"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 LIST_URL = BASE_URL + "/beans/beans_type/beans/"
 MAX_PAGES = 5
 EXCLUDE_KEYWORDS = ("セット", "水出し", "アイスコーヒー", "ドリップ", "ギフト", "生豆", "リキッド")

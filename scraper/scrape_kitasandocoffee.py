@@ -39,7 +39,7 @@ SHOP_INFO = {
 }
 
 BASE_URL = "https://kitasandocoffee.com"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 TYPE_ROAST = {"コーヒー豆浅煎り": "浅煎り", "コーヒー豆中煎り": "中煎り", "コーヒー豆深煎り": "深煎り", "PREMIUM LINE": None}
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*g")
 

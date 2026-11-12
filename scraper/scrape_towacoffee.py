@@ -50,7 +50,7 @@ SHOP_INFO = {
 }
 
 BASE_URL = "https://shop.towa-coffee.com"
-REQUEST_HEADERS = {"User-Agent": "Mozilla/5.0 (CoffeeFinderBot/0.1; +contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "Mozilla/5.0 (CoffeeFinderBot/0.1; +https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 
 NON_BEAN_KEYWORDS = ["セット", "定期便", "ドリップバック", "ドリップバッグ"]
 STAR_RATING_PATTERN = re.compile(r"(香り|苦味|酸味|甘み|コク)[★☆]+")

@@ -68,7 +68,7 @@ SHOP_INFO = {
 BASE_URL = "https://kiyacoffee.shop-pro.jp"
 BEAN_CATEGORY_IDS = ["2202962", "1575545", "1575546"]  # 限定珈琲, ストレート, ブレンド
 REQUEST_HEADERS = {
-    "User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"
+    "User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"
 }
 
 NON_BEAN_KEYWORDS = ["セット", "ドリップバッグ", "ドリップバック", "ギフト", "アソート", "詰め合わせ"]

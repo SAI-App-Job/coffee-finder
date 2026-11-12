@@ -40,7 +40,7 @@ import requests
 
 from coffee_parser import parse_product, apply_category_hint_fallback, detect_country_name
 
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 
 DESC_PATTERN = re.compile(r'<meta property="og:description" content="([^"]*)"')
 TITLE_PATTERN = re.compile(r'<meta property="og:title" content="([^"]*)"')

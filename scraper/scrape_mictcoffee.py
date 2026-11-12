@@ -44,7 +44,7 @@ SHOP_INFO = {
 }
 
 BASE_URL = "https://mict-coffee.com/"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 CRAWL_DELAY_SECONDS = 1
 
 # (商品ID, 商品名, 分類の上書き(Noneなら自動判定), 焙煎度(商品名の【】表記。無ければ説明の明記))

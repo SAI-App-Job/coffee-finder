@@ -49,7 +49,7 @@ SHOP_INFO = {
 }
 
 BASE = "https://tsujimoto-coffee.com"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 CRAWL_DELAY_SECONDS = 1.5
 
 # (商品パス, 表示名, 原産国(Noneはブレンド), 焙煎度(Noneは選択式/不明), 重量g, デカフェ除去方法, 品種)

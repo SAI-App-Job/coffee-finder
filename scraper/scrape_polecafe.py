@@ -31,7 +31,7 @@ SHOP_INFO = {
     "robots_txt_status": "許可(2026-10-12確認。/renewal/wp-admin/以外は制限なし)",
 }
 CRAWL_DELAY_SECONDS = 1
-HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 LIST_URL = "https://pole-cafe.com/category/item/roasted/"
 # ジャクーバードは20g単位販売で価格の基準重量が不明のため除外
 EXCLUDE_KEYWORDS = ["ジャクーバード", "ドリップ", "セット", "ギフト", "詰め合わせ", "生豆", "定期"]

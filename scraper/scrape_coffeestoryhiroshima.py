@@ -61,7 +61,7 @@ SHOP_INFO = {
 BASE_URL = "https://coffee-story.jp/"
 CATEGORY_URL = "https://coffee-story.jp/?mode=cate&cbid=2964235&csid=0&sort=p"
 CRAWL_DELAY_SECONDS = 2
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 
 COLORME_JSON_PATTERN = re.compile(r"var\s+Colorme\s*=\s*(\{.*?\});\s*\n", re.DOTALL)
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")

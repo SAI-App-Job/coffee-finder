@@ -47,7 +47,7 @@ ROAST_CATEGORIES = {
     "深煎": "1168707",
     "極深煎": "1168708",
 }
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 EXCLUDE_KEYWORDS = ("セット", "ギフト", "ドリップ", "ボトル", "ふるさと", "ドリッパー", "CAFEC")
 SIZE_ROW = re.compile(r"(\d+)\s*g\s*(?:[^\d¥(]{0,30}?\s)?¥\s*([\d,]+)\s*\(税込\)\s*([○×△◎]?)")
 

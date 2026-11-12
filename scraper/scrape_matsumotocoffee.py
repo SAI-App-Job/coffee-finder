@@ -43,7 +43,7 @@ SHOP_INFO = {
 }
 
 PAGE_URL = "https://matsumoto-coffee.com/"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 ROAST_MAP = {"Medium": "ミディアムロースト", "Hi": "ハイロースト", "High": "ハイロースト",
              "City": "シティロースト", "French": "フレンチロースト"}
 PRICE_PATTERN = re.compile(r"(\d+)\s*g\s*[／/]\s*([\d,]+)円")

@@ -43,7 +43,7 @@ SHOP_INFO = {
 }
 
 BASE_URL = "https://ashiya-rio.jp"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 BEAN_TYPE = "Beans"
 EXCLUDE_KEYWORDS = [
     "セット", "ギフト", "毎月", "お届け便", "Subscription", "定期", "単品【各500g】",

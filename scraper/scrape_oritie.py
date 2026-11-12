@@ -43,7 +43,7 @@ SHOP_INFO = {
 }
 
 API_URL = "https://cbd.oritie.jp/wp-json/wc/store/v1/products?per_page=100"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 
 EXCLUDE_NAME_KEYWORDS = ("500g", "セット", "豆ガチャ", "ドリップバッグ", "ペーパーフィルター", "フィルター")
 

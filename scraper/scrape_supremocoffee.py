@@ -59,7 +59,7 @@ SHOP_INFO = {
 BASE_URL = "https://www.supremocoffee.jp"
 LIST_URL = BASE_URL + "/online-shop/baisendo/"
 CART_URL = "https://js1.ec-sites.jp/syncro.php?sh={shop}&it={item}&pm=kago_ssl_type:,&sec={sec}"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 
 LIST_ITEM_PATTERN = re.compile(
     r'<div><a href="\s*([^"#][^"]*?)\s*">.*?<h3>(.*?)</h3>.*?<p>(.*?)</p>.*?<div class="price">(.*?)</div>', re.S

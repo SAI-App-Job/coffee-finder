@@ -47,7 +47,7 @@ SHOP_INFO = {
 }
 
 BASE_URL = "https://www.chitose-shop.com"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 CATEGORIES = [("2", "blend"), ("3", "single")]
 ROAST_CATEGORIES = {"16": "中煎り", "17": "深煎り", "18": "浅煎り"}  # ブレンドの焙煎度カテゴリ
 BASE_WEIGHT_G = 100

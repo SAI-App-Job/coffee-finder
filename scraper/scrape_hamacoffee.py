@@ -38,7 +38,7 @@ SHOP_INFO = {
 
 BASE_URL = "https://hama-coffee.ocnk.net"
 CATEGORIES = [("1", "single")]  # (カテゴリID, 区分)。区分は "single" または "blend"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 MAX_PAGES = 15
 DESC_STOP_PATTERN = re.compile(r"■注文焙煎|■一部お支払い方法")
 NOISE_HEADINGS = ("お知らせ", "おことわり", "注文焙煎", "オーダー焙煎", "お支払い", "保存方法", "賞味期限")

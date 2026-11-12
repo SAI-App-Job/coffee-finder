@@ -40,7 +40,7 @@ SHOP_INFO = {
 
 BASE_URL = "https://www.cafe-genic.com"
 CATEGORY_URLS = [f"{BASE_URL}/category/3", f"{BASE_URL}/category/4"]
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 REQUEST_INTERVAL = 1.6
 
 # 商品名の表記ゆれ(誤記含む)を補正した産地。キー=商品ページ上の国名表記

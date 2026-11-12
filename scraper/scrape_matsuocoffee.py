@@ -48,7 +48,7 @@ SHOP_INFO = {
 BASE_URL = "https://www.matsuo-coffee.co.jp"
 CATEGORY_IDS = [3, 24, 8, 16]
 CRAWL_DELAY_SECONDS = 3
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 
 NON_BEAN_KEYWORDS = ["ドリップバッグ", "ギフト", "セット", "詰合せ", "詰め合わせ", "水出し"]
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇGＧ]")

@@ -40,7 +40,7 @@ SHOP_INFO = {
 
 BASE_URL = "http://anchor2fullsail.shop-pro.jp/"
 LIST_URL = BASE_URL + "?mode=cate&cbid=1470303&csid=0&sort=n"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 CRAWL_DELAY_SECONDS = 1
 
 EXCLUDE_KEYWORDS = ["1kg", "セット", "ドリップバッグ", "カップオン"]

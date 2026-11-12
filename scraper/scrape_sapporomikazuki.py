@@ -58,7 +58,7 @@ SHOP_INFO = {
 
 SHOP_PAGE_URL = "https://www.sapporomikazuki.com/%E3%83%8D%E3%83%83%E3%83%88%E3%82%B7%E3%83%A7%E3%83%83%E3%83%97/"
 REQUEST_HEADERS = {
-    "User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"
+    "User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"
 }
 
 # 理由はモジュールdocstring参照(U+210A SCRIPT SMALL G。半角g・全角ｇも念のため許容)

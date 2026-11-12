@@ -38,7 +38,7 @@ SHOP_INFO = {
 
 BASE_URL = "https://shirakami-roast.shop-pro.jp"
 LIST_URL = BASE_URL + "/?mode=srh&keyword=&sort=n"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 CRAWL_DELAY_SECONDS = 1
 
 # コーヒー豆以外(ドリップバッグ・ギフト・セット・飲料ベース・事業者向け大容量等)を除外するキーワード

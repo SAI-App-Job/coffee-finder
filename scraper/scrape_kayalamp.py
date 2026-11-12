@@ -41,7 +41,7 @@ SHOP_INFO = {
 }
 
 BASE_URL = "http://hotarufarm.cart.fc2.com"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 MAX_PAGES = 6
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*(kg|g)", re.I)
 ROAST_PATTERN = re.compile(r"焙煎は[^。]*?(ライト|シナモン|ミディアム|ハイ|フルシティ|シティ|フレンチ|イタリアン)・?ロースト")

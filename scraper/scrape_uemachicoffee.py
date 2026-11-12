@@ -49,7 +49,7 @@ SHOP_INFO = {
 
 BASE_URL = "https://uemachicoffee.shop-pro.jp/"
 LIST_URL = BASE_URL + "?mode=cate&cbid=2673519&csid=0&page={page}"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 CRAWL_DELAY_SECONDS = 1.5
 
 EXCLUDE_KEYWORDS = ["セット", "ギフト", "バッグ", "バック", "まとめ買い", "大袋"]

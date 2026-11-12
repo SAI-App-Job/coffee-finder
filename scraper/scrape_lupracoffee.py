@@ -42,7 +42,7 @@ SHOP_INFO = {
 
 BASE_URL = "http://lupra-coffee.shop-pro.jp"
 CATEGORY_URL = f"{BASE_URL}/?mode=cate&cbid=2945935&csid=0"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 EXCLUDE_KEYWORDS = ("メール便", "セット", "ギフト", "ドリップバッグ", "コーヒーバッグ", "体験", "教室")
 MAX_PAGES = 5
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*(kg|g)", re.I)

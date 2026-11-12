@@ -37,7 +37,7 @@ SHOP_INFO = {
 
 BASE_URL = "https://junkies-cafe.com"
 LIST_URL = BASE_URL + "/onlineshop.html"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 INTERVAL = 1.6
 EXCLUDE = ("セット", "ドリップ", "リキッド", "ギフト", "ジュース", "ベース", "ColdBrew", "ゼリー", "定期")
 ROAST_MAP = {

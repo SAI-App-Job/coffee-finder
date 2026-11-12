@@ -40,7 +40,7 @@ SHOP_INFO = {
 
 BASE_URL = "https://pioneercoffee-factory.co.jp/"
 CAT_URL = BASE_URL + "?mode=cate&cbid=1860592&csid=0&page={page}"
-HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 DELAY = 2.0
 COLORME_RE = re.compile(r"var\s+Colorme\s*=\s*(\{.*?\});\s*\n", re.S)
 EXCLUDE = ["ドリップバッグ", "リキッド", "定期便", "講座", "セット", "ギフト"]

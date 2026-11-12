@@ -46,7 +46,7 @@ SHOP_INFO = {
 }
 
 BASE_URL = "https://kcoffeebeans.shop-pro.jp"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 CATEGORY_IDS = ["2254870", "2415233"]
 EXCLUDE_KEYWORDS = ("レターパック", "名前入り", "セット", "グッズ", "ギフト")
 FORCE_BLEND_NAMES = ("鎌倉珈琲物語", "鎌倉人", "摩訶")

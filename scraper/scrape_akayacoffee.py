@@ -52,7 +52,7 @@ SHOP_INFO = {
 BASE_URL = "http://akayacoffee.shop-pro.jp/"
 LIST_URL = BASE_URL + "?mode=srh&cid=&keyword="
 CRAWL_DELAY_SECONDS = 1
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 NON_BEAN_KEYWORDS = ["ドリップバッグ", "ギフト", "セット", "濾紙", "ろ紙", "フィルター", "ドリッパー"]
 
 COLORME_JSON_PATTERN = re.compile(r"var\s+Colorme\s*=\s*(\{.*?\});\s*\n", re.DOTALL)

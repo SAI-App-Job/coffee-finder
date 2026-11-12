@@ -41,7 +41,7 @@ SHOP_INFO = {
 
 BASE_URL = "https://shop.hillscabo.com"
 CATEGORIES = [("ブレンドコーヒー", "1077157"), ("シングルコーヒー", "1077158")]
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 EXCLUDE_KEYWORDS = ("ドリップバッグ", "ドリップバック", "水出し", "ギフト", "セット", "かりんとう")
 MAX_PAGES = 5
 NAME_PATTERN = re.compile(r"^(?P<base>.+?)(?P<roast>\[[^\]]+\])?\s*[（(](?P<size>\d+(?:\.\d+)?)\s*(?P<unit>kg|g)[）)]\s*(?P<tail>.*)$", re.I)

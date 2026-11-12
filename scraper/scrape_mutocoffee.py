@@ -42,7 +42,7 @@ SHOP_INFO = {
 }
 
 BASE_URL = "https://www.muto-coffee.com/shop"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 CATEGORY_IDS = [1, 2, 7]  # シングルオリジン / オリジナルブレンド / カフェインレス
 ROAST_NAMES = {
     "ミディアム": "ミディアムロースト", "ハイ": "ハイロースト", "シティ": "シティロースト",

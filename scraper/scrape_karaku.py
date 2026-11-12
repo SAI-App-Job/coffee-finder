@@ -43,7 +43,7 @@ SHOP_INFO = {
 }
 
 BASE_URL = "https://karaku.shop-pro.jp/"
-REQUEST_HEADERS = {"User-Agent": "Mozilla/5.0 (CoffeeFinderBot/0.1; +contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "Mozilla/5.0 (CoffeeFinderBot/0.1; +https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 CATEGORY_IDS = ["553525", "558252"]  # ブレンド200g, シングル200g
 
 LABEL_MAP = {"地区": "地区", "地域": "地区", "品種": "品種", "標高": "標高",

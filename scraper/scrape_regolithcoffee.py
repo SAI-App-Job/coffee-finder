@@ -44,7 +44,7 @@ SHOP_INFO = {
 }
 
 BASE_URL = "https://regolith-coffee.com"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 BEAN_TYPE = "コーヒー豆"
 EXCLUDE_TITLE_KEYWORDS = ["定期便", "まとめて購入", "BOX"]
 TITLE_WEIGHT = re.compile(r"[(（]\s*(\d+)\s*g\s*[)）]", re.IGNORECASE)

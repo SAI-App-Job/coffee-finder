@@ -38,7 +38,7 @@ SHOP_INFO = {
 }
 
 BASE_URL = "https://filter-supply.jp"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 BEAN_TYPE = "Beans"
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*g", re.I)
 EXCLUDE_TITLE_KEYWORDS = (

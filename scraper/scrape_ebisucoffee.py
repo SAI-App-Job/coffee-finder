@@ -40,7 +40,7 @@ SHOP_INFO = {
 }
 
 BASE_URL = "https://www.ebisucoffeeroasters.com"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 LD_PATTERN = re.compile(r'<script type="application/ld\+json"[^>]*>(.*?)</script>', re.S)
 UNIT_PATTERN = re.compile(r"(\d+)\s*gごとに")
 BRACKET_PATTERN = re.compile(r"【([^】]*)】")

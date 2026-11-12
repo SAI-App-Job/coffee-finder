@@ -41,7 +41,7 @@ SHOP_INFO = {
 }
 
 API_URL = "https://john-dee.net/wp-json/wc/store/v1/products"
-HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 DELAY = 2.0
 LABEL_RE = re.compile(r"(原産国|標高|精選|品種|農園|地域)\s*[：:]\s*([^\n]+)")
 

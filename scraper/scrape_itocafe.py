@@ -49,7 +49,7 @@ SHOP_INFO = {
 }
 
 BASE_URL = "https://www.ito-cafe.com"
-REQUEST_HEADERS = {"User-Agent": "Mozilla/5.0 (CoffeeFinderBot/0.1; +contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "Mozilla/5.0 (CoffeeFinderBot/0.1; +https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 CRAWL_DELAY = 5
 SECTION_PREFIX = "/コーヒー豆販売/"
 EXCLUDE_KEYWORDS = ("ドリップバッグ", "詰合せ", "詰め合わせ", "セット", "ギフト")

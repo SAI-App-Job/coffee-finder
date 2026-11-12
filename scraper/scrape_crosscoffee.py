@@ -37,7 +37,7 @@ SHOP_INFO = {
 }
 
 BASE_URL = "https://cross-coffee-beans.jp"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 
 CATALOG_PAGES = ["/ec/catalog/1/", "/ec/catalog/2/", "/ec/catalog/3/"]
 PRODUCT_LINK = re.compile(r"/ec/catalog/(\d+)/([A-Za-z]+\d+)/")

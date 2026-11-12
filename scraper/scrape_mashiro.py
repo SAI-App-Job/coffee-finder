@@ -71,7 +71,7 @@ SHOP_INFO = {
 BASE_URL = "https://coffeebeans-mashiro.com"
 CATEGORY_URL = f"{BASE_URL}/shop/product_categories/coffee-beans"
 REQUEST_HEADERS = {
-    "User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"
+    "User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"
 }
 
 TITLE_PREFIX_PATTERN = re.compile(r"^［珈琲豆\s*\d+\s*[gｇ]\s*[~～]\s*］\s*")

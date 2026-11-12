@@ -74,7 +74,7 @@ BASE_URL = "https://www.mamekoubou-takahasi.com/shop/index.php"
 # 理由はモジュールdocstring参照(カテゴリ一覧ページから実データ確認済みの全17件)
 ITEM_IDS = [6, 7, 8, 9, 10, 12, 15, 16, 18, 19, 20, 21, 22, 23, 25, 26, 27]
 REQUEST_HEADERS = {
-    "User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"
+    "User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"
 }
 
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")

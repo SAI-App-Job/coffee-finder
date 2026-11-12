@@ -38,7 +38,7 @@ SHOP_INFO = {
 }
 
 BASE_URL = "http://shop.minamino-coffee-sen.com"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 REQUEST_INTERVAL = 2
 # (カテゴリID, 焙煎度)
 CATEGORIES = [("1996893", "深煎り"), ("1996894", "中深煎り"), ("1996895", "浅煎り")]

@@ -48,7 +48,7 @@ SHOP_INFO = {
 }
 
 BASE_URL = "https://takataniyama.base.shop"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 
 TITLE_PATTERN = re.compile(r'<meta property="og:title" content="([^"]*)"')
 DESC_PATTERN = re.compile(r'<meta property="og:description" content="([^"]*)"')

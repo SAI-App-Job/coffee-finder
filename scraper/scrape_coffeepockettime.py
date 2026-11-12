@@ -34,7 +34,7 @@ SHOP_INFO = {
 }
 
 BASE_URL = "https://coffeepocket-time.com"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 BEAN_TYPES = ("ブレンド", "シングルオリジン", "デカフェ")
 WEIGHT_PATTERN = re.compile(r"(\d+)\s*[gｇ]")
 ORIGIN_DESC_PATTERN = re.compile(r"(?:生豆原産国|生産地)\s*[/:：]\s*([^\s/]+)")

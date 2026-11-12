@@ -39,7 +39,7 @@ SHOP_INFO = {
 BASE_URL = "https://knot-coffee.shop-pro.jp"
 BEAN_CATEGORY_URL = BASE_URL + "/?mode=cate&cbid=2748797&csid=0"
 REQUEST_HEADERS = {
-    "User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"
+    "User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"
 }
 
 NON_BEAN_KEYWORDS = ["ドリップバッグ", "ドリップバック", "ギフト", "セット", "タンブラー", "フィルター"]

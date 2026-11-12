@@ -60,7 +60,7 @@ CATEGORY_URL = BASE_URL + "?mode=cate&cbid=782391&csid=0&page={page}"
 OFFICIAL_SHOP_URL = "https://kariomons.com/onlineshop"
 OFFICIAL_FARM_URL = "https://kariomons.com/farm"
 REQUEST_HEADERS = {
-    "User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"
+    "User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"
 }
 CRAWL_DELAY_SECONDS = 2
 

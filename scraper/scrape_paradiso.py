@@ -58,7 +58,7 @@ SHOP_INFO = {
 }
 
 BASE_URL = "https://paradiso.shop-pro.jp/"
-REQUEST_HEADERS = {"User-Agent": "Mozilla/5.0 (CoffeeFinderBot/0.1; +contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "Mozilla/5.0 (CoffeeFinderBot/0.1; +https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 BEAN_CATEGORY_URL = "https://paradiso.shop-pro.jp/?mode=cate&cbid=2141135&csid=0"
 
 LABEL_MAP = {"生産地": "生産地", "生産者": "生産者", "標高": "標高", "品種": "品種", "精製方法": "精選方法"}

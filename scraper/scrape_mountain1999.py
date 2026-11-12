@@ -85,7 +85,7 @@ SHOP_INFO = {
 PRODUCTS_JSON_URL = "https://mountain1999.com/products.json?limit=250"
 CRAWL_DELAY_SECONDS = 0.5
 REQUEST_HEADERS = {
-    "User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"
+    "User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"
 }
 
 TARGET_PRODUCT_TYPES = {"single origin", "blended", "seasonal"}

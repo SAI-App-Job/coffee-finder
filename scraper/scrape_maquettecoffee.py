@@ -43,7 +43,7 @@ SHOP_INFO = {
 
 BASE_URL = "http://store-maquettecoffee.com"
 CATEGORY_URL = BASE_URL + "/?mode=cate&csid=0&cbid=1970379&page={page}"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 MAX_PAGES = 10
 
 NAME_WEIGHT_PATTERN = re.compile(r"/\s*(\d+)\s*g\s*$", re.I)

@@ -36,7 +36,7 @@ SHOP_INFO = {
 }
 
 PAGE_URL = "https://yamajicoffee.jimdofree.com/"
-HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 NON_BEAN = ["か月", "ヶ月", "ケ月", "セット", "定期"]
 ORIGIN_HINTS = {"シダモ": "エチオピア"}  # 産地欄がシダモ(エチオピア南部の産地名)のみの商品用
 ROAST_RE = re.compile(r"(中浅煎り|中深煎り|浅煎り|中煎り|深煎り)")

@@ -63,7 +63,7 @@ SHOP_INFO = {
 
 BASE_URL = "https://www.adachicoffee.jp"
 REQUEST_HEADERS = {
-    "User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"
+    "User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"
 }
 
 BEAN_LABEL = " [自家焙煎珈琲豆]"

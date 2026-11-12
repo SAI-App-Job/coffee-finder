@@ -46,7 +46,7 @@ SHOP_INFO = {
 BASE_URL = "https://store.shopping.yahoo.co.jp/jikabaisen"
 LIST_URLS = [f"{BASE_URL}/search.html", f"{BASE_URL}/search.html?page=1"]
 REQUEST_HEADERS = {
-    "User-Agent": "Mozilla/5.0 (compatible; CoffeeFinderBot/0.1; +contact: your-contact-info-here)"
+    "User-Agent": "Mozilla/5.0 (compatible; CoffeeFinderBot/0.1; +https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"
 }
 NEXT_DATA_PATTERN = re.compile(r'id="__NEXT_DATA__"[^>]*>(.*?)</script>', re.DOTALL)
 BOILERPLATE = (

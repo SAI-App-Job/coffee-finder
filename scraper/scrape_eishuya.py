@@ -63,7 +63,7 @@ SHOP_INFO = {
 BASE_URL = "https://eishuya.com"
 CATEGORY_IDS = [2215118, 2215290]  # 盈舟屋のブレンド, 盈舟屋のシングルオリジン
 REQUEST_HEADERS = {
-    "User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"
+    "User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"
 }
 
 NON_BEAN_KEYWORDS = ["セット"]

@@ -42,7 +42,7 @@ SHOP_INFO = {
 
 BASE_URL = "https://suzukimasami.jp/shop"
 LIST_URL = BASE_URL + "/products/list?disp_number=60&pageno={page}"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 REQUEST_INTERVAL = 2.0
 
 # 一覧の見出し(h4)に含まれていたら焙煎豆ではないとして取得しない

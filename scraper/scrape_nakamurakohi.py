@@ -46,7 +46,7 @@ CATEGORIES = [
     ("ブレンド", "%83u%83%8C%83%93%83h%E0%DB%E0%E8"),
     ("ストレート", "%83X%83g%83%8C%81%5B%83g%E0%DB%E0%E8"),
 ]
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 REQUEST_INTERVAL = 2
 
 ORIGIN_MAP = {

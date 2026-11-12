@@ -37,7 +37,7 @@ SHOP_INFO = {
     "robots_txt_status": "robots.txtなし(404、2026-10-12確認)",
 }
 BASE = "http://www.horoniga.com/cart/"
-HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 DELAY = 1
 # 過去のブラインド企画・準備中・解説のみ(購入フォーム無し)のページ
 SKIP_PAGES = {

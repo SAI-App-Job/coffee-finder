@@ -42,7 +42,7 @@ SHOP_INFO = {
 }
 
 BASE_URL = "https://popcoffees.com"
-REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+REQUEST_HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 CRAWL_DELAY_SECONDS = 2
 
 # (slug, 商品名, 産地(Noneは不明/ブレンド), ブレンドか, 焙煎度)

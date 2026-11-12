@@ -49,7 +49,7 @@ SHOP_INFO = {
 }
 
 BASE = "https://shop.yamafukucoffee.com"
-HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+contact: your-contact-info-here)"}
+HEADERS = {"User-Agent": "CoffeeFinderBot/0.1 (+https://github.com/SAI-App-Job/coffee-finder; contact: https://x.com/SaiCoffea)"}
 INTERVAL = 2
 EXCLUDE = ("サンプル", "ドリップバッグ", "生豆", "セット")
 CARD = re.compile(r'<article class="card"><a href="(/view/item/\d+)">.*?<h3>(.*?)</h3><div class="price">(.*?)</div>', re.S)
