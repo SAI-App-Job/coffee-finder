@@ -104,7 +104,6 @@ on:
           - hiwahiwa
           - omameya
           - blackhole
-          - bernini
           - thewordcoffee
           - irodori
           - k2cafe
@@ -326,7 +325,6 @@ on:
           - ginsato
           - hattoricoffee
           - immcoffee
-          - juncoffee
           - kappacoffee
           - kurashikicoffeekan
           - littlecourtcoffee
@@ -364,7 +362,6 @@ on:
           - flatwhite
           - fukosha
           - gitanes
-          - hellocoffee
           - inadacoffee
           - lotuscoffee
           - mamebou
@@ -406,7 +403,6 @@ on:
           - renshirocoffee
           - roast227
           - roastermamenoki
-          - roundcoffee
           - safaricoffee
           - sukocoffee
           - suwanocoffee
@@ -441,7 +437,6 @@ on:
           - tokumitsucoffee
           - vaime
           - chanpulucoffee
-          - klatchcoffee
           - kscoffee
           - majyacoffee
           - matayoshicoffee
@@ -740,9 +735,6 @@ jobs:
           - id: blackhole
             script: scrape_blackhole.py
             output: data_blackhole.json
-          - id: bernini
-            script: scrape_bernini.py
-            output: data_bernini.json
           - id: thewordcoffee
             script: scrape_thewordcoffee.py
             output: data_thewordcoffee.json
@@ -968,9 +960,6 @@ jobs:
           - id: immcoffee
             script: scrape_immcoffee.py
             output: data_immcoffee.json
-          - id: juncoffee
-            script: scrape_juncoffee.py
-            output: data_juncoffee.json
           - id: kappacoffee
             script: scrape_kappacoffee.py
             output: data_kappacoffee.json
@@ -1013,9 +1002,6 @@ jobs:
           - id: gitanes
             script: scrape_gitanes.py
             output: data_gitanes.json
-          - id: hellocoffee
-            script: scrape_hellocoffee.py
-            output: data_hellocoffee.json
           - id: inadacoffee
             script: scrape_inadacoffee.py
             output: data_inadacoffee.json
@@ -1115,9 +1101,6 @@ jobs:
           - id: chanpulucoffee
             script: scrape_chanpulucoffee.py
             output: data_chanpulucoffee.json
-          - id: klatchcoffee
-            script: scrape_klatchcoffee.py
-            output: data_klatchcoffee.json
           - id: kscoffee
             script: scrape_kscoffee.py
             output: data_kscoffee.json
@@ -1720,9 +1703,6 @@ jobs:
           - id: roastermamenoki
             script: scrape_roastermamenoki.py
             output: data_roastermamenoki.json
-          - id: roundcoffee
-            script: scrape_roundcoffee.py
-            output: data_roundcoffee.json
           - id: safaricoffee
             script: scrape_safaricoffee.py
             output: data_safaricoffee.json

@@ -71,7 +71,12 @@ shops.json/products.jsonのレコードをそのまま変更せず残す(load_so
       }
     ]
 
-このファイルに載っている店舗名は、毎回のmain()実行時に以下すべてから除外される:
+【商品だけを止める(products_paused.json)】
+店舗そのものは掲載を続け、商品情報だけを出力に含めない店舗は、scraper/products_paused.json に、同じ形式
+([{"name", "reason", "paused_at"}])で登録する。自動取得の許可を確認できていない店舗が対象(店舗サイトの規約・
+取得先の楽天市場/Yahoo!ショッピングの規約。docs/paused-rakuten-yahoo-shops.md)。再開するときは、このファイルから消す。
+
+このファイル(excluded_shops.json)に載っている店舗名は、毎回のmain()実行時に以下すべてから除外される:
 自動スクレイピング対象(SOURCE_FILES)・手動入力店舗(scraper/manual/shops/)・
 今回のスクレイピング対象外だった店舗の既存レコード引き継ぎ・既存shops.jsonの
 並び順維持。これにより、一度削除した店舗が週次の自動スクレイピングやワークフロー
@@ -89,6 +94,7 @@ SCRAPER_DIR = Path(__file__).resolve().parent
 DATA_DIR = SCRAPER_DIR.parent / "data"
 MANUAL_SHOPS_DIR = SCRAPER_DIR / "manual" / "shops"
 EXCLUDED_SHOPS_PATH = SCRAPER_DIR / "excluded_shops.json"
+PAUSED_PRODUCTS_PATH = SCRAPER_DIR / "products_paused.json"
 
 SOURCE_FILES = {
     "Denim bis": "data_denimbis.json",
@@ -1565,6 +1571,14 @@ def load_excluded_shop_names() -> set[str]:
     return {entry["name"] for entry in load_json_list(EXCLUDED_SHOPS_PATH)}
 
 
+def load_paused_product_shop_names() -> set[str]:
+    """商品情報の掲載を一時停止している店舗(products_paused.json)の店舗名の集合を返す。
+    店舗そのもの(名前・住所・営業時間・URL)は、掲載を続け、商品だけを、出力に含めない
+    (店舗サイトの規約・取得先の規約で、自動取得の許可を確認できていない店舗。docs/paused-rakuten-yahoo-shops.md)。
+    形式は excluded_shops.json と同じ: [{"name": 店舗名, "reason": 理由, "paused_at": "YYYY-MM-DD"}]"""
+    return {entry["name"] for entry in load_json_list(PAUSED_PRODUCTS_PATH)}
+
+
 def stabilize_timestamp(new_obj: dict, old_obj: dict | None, field: str) -> None:
     """new_objとold_objが指定フィールド以外まったく同じ内容なら、
     new_obj[field]をold_obj[field]に差し戻す(=前回コミットとの差分をゼロにする)。"""
@@ -1931,6 +1945,9 @@ def main():
     existing_shops = {s["name"]: s for s in existing_shops_list}
     existing_products = {p["id"]: p for p in load_json_list(DATA_DIR / "products.json")}
     excluded_names = load_excluded_shop_names()
+    paused_names = load_paused_product_shop_names()
+    if paused_names:
+        print(f"[info] products_paused.jsonにより、商品を出力しない店舗(店舗は掲載): {len(paused_names)}件")
     if excluded_names:
         print(f"[info] excluded_shops.jsonにより除外: {', '.join(sorted(excluded_names))}")
 
@@ -1955,6 +1972,8 @@ def main():
         covered_shop_names.add(shop_name)
 
         for record in source.get("products", []):
+            if shop_name in paused_names:
+                continue
             # フレーバーコーヒーは産地・精選方法の個性を扱う本アプリの趣旨と異なるため
             # 通常商品一覧には出さない(docs/coffee-app-data-model.md 15章の方針)
             if record.get("is_flavored") or record.get("category") == "フレーバー":
@@ -1981,6 +2000,8 @@ def main():
         covered_shop_names.add(shop_name)
 
         for raw_product in manual_data.get("products", []):
+            if shop_name in paused_names:
+                continue
             manual_product = build_manual_product(
                 raw_product, shop_id, shop_name, manual_shop["map_query"], manual_shop.get("source_note")
             )
@@ -1994,7 +2015,7 @@ def main():
     # 店舗は「対象外だから残す」対象から明確に外し、既存の商品も落とす
     for product in existing_products.values():
         shop_name = product.get("shop_name")
-        if shop_name in excluded_names:
+        if shop_name in excluded_names or shop_name in paused_names:
             continue
         if shop_name not in covered_shop_names:
             all_products.append(product)
