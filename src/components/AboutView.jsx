@@ -85,7 +85,7 @@ export function AboutView({ open, onClose }) {
                 {t("ブラウザのサイトデータを削除したり、端末を変更したりすると、これらの記録は失われます。設定の「データのバックアップ」で、ファイルに書き出して保管できます(パッケージ写真は、書き出すときに選んだ場合だけ含まれます)。")}
               </li>
             </ul>
-            <p className="text-[11px] text-[var(--c-text-3)]">{t("最終更新: 2026年11月12日")}</p>
+            <p className="text-[11px] text-[var(--c-text-3)]">{t("最終更新: 2026年11月15日")}</p>
             <a
               href={`${import.meta.env.BASE_URL}${getLang() === "en" ? "privacy-policy-en.html" : "privacy-policy.html"}`}
               target="_blank"

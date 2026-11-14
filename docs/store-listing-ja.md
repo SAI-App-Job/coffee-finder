@@ -12,11 +12,11 @@
 
 | 項目 | 文字数 / 上限 | 判定 |
 |---|---|---|
-| Google Play: アプリ名 | 27 / 30 | OK |
+| Google Play: アプリ名 | 28 / 30 | OK |
 | Google Play: 簡単な説明 | 36 / 80 | OK |
 | Google Play: 詳しい説明 | 805 / 4000 | OK |
-| App Store: 名前 | 13 / 30 | OK |
-| App Store: サブタイトル | 15 / 30 | OK |
+| App Store: 名前 | 11 / 30 | OK |
+| App Store: サブタイトル | 14 / 30 | OK |
 | App Store: プロモーション用テキスト | 63 / 170 | OK |
 | App Store: 説明 | 805 / 4000 | OK |
 | App Store: キーワード | 60 / 100 | OK |
@@ -25,7 +25,7 @@
 
 ### アプリ名
 ```
-Coffee Finder - 近くの自家焙煎豆を探す
+Coffeection - コーヒーの検索とレシピの記録
 ```
 
 ### 簡単な説明
@@ -81,12 +81,12 @@ Coffee Finder - 近くの自家焙煎豆を探す
 
 ### 名前
 ```
-Coffee Finder
+Coffeection
 ```
 
 ### サブタイトル
 ```
-全国の自家焙煎コーヒー豆を探す
+コーヒーの検索とレシピの記録
 ```
 
 ### プロモーション用テキスト

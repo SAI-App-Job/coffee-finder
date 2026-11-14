@@ -14,8 +14,8 @@ Google Play(Android・TWA)を主、App Store を従として、英語の掲載�
 | Google Play: App name | 29 / 30 | OK |
 | Google Play: Short description | 70 / 80 | OK |
 | Google Play: Full description | 2014 / 4000 | OK |
-| App Store: Name | 13 / 30 | OK |
-| App Store: Subtitle | 27 / 30 | OK |
+| App Store: Name | 11 / 30 | OK |
+| App Store: Subtitle | 30 / 30 | OK |
 | App Store: Promotional text | 145 / 170 | OK |
 | App Store: Description | 2014 / 4000 | OK |
 | App Store: Keywords | 98 / 100 | OK |
@@ -24,7 +24,7 @@ Google Play(Android・TWA)を主、App Store を従として、英語の掲載�
 
 ### App name
 ```
-Coffee Finder: Japan Roasters
+Coffeection: Coffee & Recipes
 ```
 
 ### Short description
@@ -36,7 +36,7 @@ Find home-roasted coffee beans from independent roasters across Japan.
 ```
 Discover your next favorite coffee bean from independent home roasters across Japan.
 
-Coffee Finder brings together more than 1,800 small roasting shops and over 25,000 coffee beans in one place, so you can find beans you wouldn't come across otherwise - by origin, flavor, location, or just by browsing.
+Coffeection brings together more than 1,800 small roasting shops and over 25,000 coffee beans in one place, so you can find beans you wouldn't come across otherwise - by origin, flavor, location, or just by browsing.
 
 FIND
 • Search by product, origin, brand, shop, address, or nearest station
@@ -103,12 +103,12 @@ First release.
 
 ### Name
 ```
-Coffee Finder
+Coffeection
 ```
 
 ### Subtitle
 ```
-Home-roasted beans in Japan
+Coffee search & recipe journal
 ```
 
 ### Promotional text

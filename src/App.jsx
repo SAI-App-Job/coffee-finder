@@ -652,9 +652,9 @@ export default function CoffeeProductList() {
       {adVisible && <AdBannerPlaceholder />}
 
       <header className="px-5 pt-6 pb-3 border-b border-[var(--c-border)] sticky top-0 bg-[var(--c-bg)]/95 backdrop-blur-sm z-10">
-        <p className="text-[11px] tracking-[0.2em] text-[var(--accent-label)] uppercase">Coffee Finder</p>
-        <h1 className="font-serif text-[26px] leading-tight mt-1 text-balance">{t("近くの自家焙煎豆を探す")}</h1>
-        {getLang() === "ja" && <p className="text-[12px] text-[var(--c-text-3)] mt-0.5">Find Local Roasters Near You</p>}
+        <p className="text-[11px] tracking-[0.2em] text-[var(--accent-label)] uppercase">Coffeection</p>
+        <h1 className="font-serif text-[26px] leading-tight mt-1 text-balance">{t("コーヒーの検索とレシピの記録")}</h1>
+        {getLang() === "ja" && <p className="text-[12px] text-[var(--c-text-3)] mt-0.5">Coffee search &amp; recipe journal</p>}
       </header>
 
       {tab === "products" && !selectedShop && (

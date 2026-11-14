@@ -10,7 +10,7 @@ import { FLAVOR_EN } from "../data/flavorVocabulary.js";
 
 const UI = {
   // ---- 商品一覧・共通 ----
-  "近くの自家焙煎豆を探す": "Find home-roasted beans nearby",
+  "コーヒーの検索とレシピの記録": "Search coffee, keep your recipes",
   "{n}件の商品(産地・精選方法・グレードで正規化済み)": "{n} products (origin, processing and grade normalized)",
   "商品名・産地・銘柄・店舗名・住所・駅名で検索": "Search by product, origin, brand, shop, address or station",
   "検索をクリア": "Clear search",
@@ -77,7 +77,7 @@ const UI = {
     "The app communicates with external services needed for display (GitHub for product and shop data, OpenStreetMap for maps, Google Fonts for fonts). By the nature of internet communication, these services receive information such as your device's IP address.",
   "ブラウザのサイトデータを削除したり、端末を変更したりすると、これらの記録は失われます。設定の「データのバックアップ」で、ファイルに書き出して保管できます(パッケージ写真は、書き出すときに選んだ場合だけ含まれます)。":
     "These records are lost if you clear the browser's site data or change devices. You can export them to a file with \"Data backup\" in Settings (package photos are included only if you choose to include them when exporting).",
-  "最終更新: 2026年11月12日": "Last updated: November 12, 2026",
+  "最終更新: 2026年11月15日": "Last updated: November 15, 2026",
   "利用規約(全文)": "Terms of Use (full text)",
   "店舗・商品の情報は、各店舗の公式サイトなどの公開情報をもとに、週に1回を目安に自動で更新しています。店舗サイトの変更などで、更新が遅れたり、止まったりすることがあります。一部の店舗は、手作業で確認して入力しており、更新は不定期です。":
     "The information on shops and products is updated automatically about once a week, based on publicly available information such as each shop's official website. Updates may be delayed or stop when a shop changes its website. Some shops are checked and entered by hand, and are updated irregularly.",
